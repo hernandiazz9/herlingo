@@ -52,7 +52,7 @@ Worktree setup: npm ci
 - Outcome: edge-tts venv pipeline (`npm run audio`, hashed mp3s + manifest, prune), speak() mp3→TTS fallback, --strict-audio · e2ceb65
 
 ## T04 — Lesson player and exercise engine
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T02
 - Goal: The core learning loop: a lesson session that generates mixed exercises from a lesson's items, checks answers leniently, gives immediate feedback with audio, re-queues mistakes and ends with a result.
 - Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (exercise types, iPhone mic limits), content loader and `speak()` from T02. Build against the sample pack; real content arrives in parallel (T05/T06), so never hard-code content ids. Progress persistence is T07: expose a typed `LessonResult` (per-item outcomes, XP earned, duration) via an `onComplete` callback and keep persistence out of this task. Put the answer normalizer and the speech-recognition helper in `src/lib/exercises` / `src/lib/speech` so T08 can reuse them.
@@ -64,7 +64,7 @@ Worktree setup: npm ci
   - Say-it-aloud uses Web Speech recognition (it-IT) when available with a fuzzy similarity threshold; otherwise self-evaluation ("Me ha salido / No me ha salido"). A "No puedo hablar ahora" option disables speaking exercises for 15 minutes.
   - Feedback sheet (green/red) with the correct answer and a play button; wrong items re-queued at the end; progress bar; exit with confirmation; completion screen with XP.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: /leccion/[id] full-screen player, 8 exercise types, lenient check, speech + self-eval fallback, XP completion · b67778b
 
 ## T05 — Content: getting around Sicily and talking with Italians
 - Status: done
@@ -108,7 +108,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T04, T05, T06, T11
 - Goal: Turn lessons into a course: the home path of units, persistent progress with streak and XP, spaced-repetition review, the first-launch placement test and the profile/settings screen.
-- Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (sections, gamification, placement). Lesson player and `LessonResult` from T04; real content from T05/T06 (loaded by glob, never hard-coded). Storage is localStorage with a versioned schema and safe parsing. Keep the `ThemeToggle` from T11 in the profile settings.
+- Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (sections, gamification, placement). Lesson player and `LessonResult` from T04; real content from T05/T06 (loaded by glob, never hard-coded). The lesson page does not pass `onComplete` yet: add a small client wrapper in `src/app/leccion/[id]/page.tsx` to persist `LessonResult`; nothing links to `/leccion/<id>/` yet. Lessons can hold up to ~29 items while a session samples 10–12 exercises: a lesson counts as done after one completion, and the SRS should cover the items not yet practised. Storage is localStorage with a versioned schema and safe parsing. Keep the `ThemeToggle` from T11 in the profile settings.
 - Scope: may touch `src/app/page.tsx` (path), `src/app/repaso/**`, `src/app/perfil/**`, an onboarding route, `src/lib/progress/**`, `src/lib/srs/**`, `src/components/path/**`, `content/it/placement*` (placement questions); may wire `onComplete` in the lesson route / must not change exercise logic in `src/lib/exercises/**` except exporting what it needs.
 - Done when:
   - Home path: units in `order`, lesson nodes locked / available / done, current node highlighted, unit progress, grammar cards and Sicilian expressions reachable as side content.
@@ -173,8 +173,10 @@ Worktree setup: npm ci
 - 2026-09-30 T03: mp3 name = first 16 hex of sha1(voice+text), flat manifest {audioKey: file}; learner options in dialogues use first pack voice not used by native turns; audio plan walks the Pack directly; `.venv` auto-created (Python 3.9.6, edge-tts 7.2.8), 6 parallel jobs, 4 retries; manifest loaded at runtime, TTS until loaded. (agent)
 - 2026-09-30 T08: phrasebook shows phrases only (no vocab/expressions); tap row = play + actions; favourites in localStorage `lang-lern:favorites:<lang>`; Ver texto per bubble; score counts first attempts; voice answer matched to closest option (word overlap ≥0.6); local helpers fold() in components/phrasebook/search.ts and recognition in components/dialogue/recognition.ts. (agent)
 - 2026-09-30 T05: id prefixes move-treno, move-bus, move-strada, talk-chiacchiere, talk-io, dlg.move-*/dlg.talk-* (orders 20, 22, 24, 30, 32); every item placed in a lesson (12–29 items per lesson, relies on the player sampling 10–12 exercises); persona = Hernán, Spanish from Madrid, programmer, travelling alone ~10 days Palermo→Cefalù→Agrigento→Catania→Siracusa (Madrid/job are guesses, Hernán to check); phrases Italians say tagged `te-dicen` with Diego/Isabella voices. (agent)
+- 2026-09-30 T04: order = recognition first, one match, then shuffled production; grammar cards = ungraded "Un apunte" steps; seed = Date.now() (prop overrides); wrong exercise re-queued max 2×; fill-gap uses chips; XP = 10 + 1 per first-try correct + 5 if perfect; lesson is a full-screen overlay; speaking pause in localStorage; helpers checkAnswer/similarity in src/lib/exercises, listenOnce/scoreSpeech in src/lib/speech. (agent)
 
 ## Proposals (new scope)
+- 2026-09-30 T04: move snail/mic icons into src/components/icons.tsx.
 - 2026-09-30 T08: after T04, move fold() and recognition helpers into src/lib/exercises / src/lib/speech (dedupe).
 - 2026-09-30 T01: real app name (Hernán to decide).
 - 2026-09-30 T11: light --lemon-deep (#d9b10f) is hard to read as text on --lemon-soft; adjust light palette.
@@ -197,3 +199,4 @@ Worktree setup: npm ci
 - 2026-09-30 17:44 T03 done · branch worktree-agent-aca7f0cc882e0c93c → e2ceb65
 - 2026-09-30 17:46 T08 done · branch worktree-agent-a321e18356bfddd85 → 541ce3d
 - 2026-09-30 17:55 T05 done · branch worktree-agent-aded81b07fd5834ff → f7b3157
+- 2026-09-30 17:56 T04 done · branch worktree-agent-a0a9ff17219f94c6d → b67778b
