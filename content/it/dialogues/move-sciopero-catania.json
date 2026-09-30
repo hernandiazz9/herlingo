@@ -29,7 +29,7 @@
         { "text": "Ah, perfetto. Grazie.", "es": "Ah, perfecto. Gracias.", "verdict": "wrong", "feedback": "No es perfecto: ¡tu tren no sale! Pregunta si no entiendes." }
       ]
     },
-    { "id": "n3", "speaker": "native", "name": "Impiegato", "text": "Vuol dire cancellato: non parte. Oggi i treni sono garantiti solo dalle sei alle nove e dalle diciotto alle ventuno.", "es": "Quiere decir cancelado: no sale. Hoy los trenes solo están garantizados de seis a nueve y de dieciocho a veintiuna.", "voice": "it-IT-DiegoNeural" },
+    { "id": "n3", "speaker": "native", "name": "Impiegato", "text": "Vuol dire cancellato: non parte. Oggi i treni sono garantiti solo dalle sei alle nove e dalle diciotto alle ventuno.", "es": "Quiere decir cancelado: no sale. Hoy los trenes solo están garantizados de 6 a 9 y de 18 a 21.", "voice": "it-IT-DiegoNeural" },
     {
       "id": "l3",
       "speaker": "learner",

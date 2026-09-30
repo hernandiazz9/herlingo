@@ -8,7 +8,7 @@
     { "id": "sic.bedda", "text": "Bedda!", "es": "¡Guapa! / ¡Qué bonita!", "variety": "Siciliano", "standard": "Bella!", "notes": "En masculino «beddu». «Bedda matri!» = ¡Madre mía!", "tags": ["siciliano"] },
     { "id": "sic.chi-si-dici", "text": "Chi si dici?", "es": "¿Qué se cuenta? / ¿Qué tal?", "variety": "Siciliano", "standard": "Che si dice? / Come va?", "tags": ["siciliano"], "voice": "it-IT-DiegoNeural" },
     { "id": "sic.vossia", "text": "Vossia", "es": "usted", "variety": "Siciliano", "standard": "Lei", "notes": "Tratamiento de respeto de la gente mayor, de «vostra signoria».", "tags": ["siciliano"] },
-    { "id": "sic.sabbinidica", "text": "Sabbinidica!", "es": "¡Bendígame! (saludo a los mayores)", "variety": "Siciliano", "standard": "Mi benedica!", "notes": "Saludo tradicional a los mayores; te contestarán «Santu e riccu!».", "tags": ["siciliano"] },
+    { "id": "sic.sabbinidica", "text": "Sabbinidica!", "es": "¡Bendígame! (saludo a los mayores)", "variety": "Siciliano", "standard": "Mi benedica!", "notes": "Saludo tradicional a los mayores, hoy sobre todo en los pueblos; te contestarán «Santu e riccu!».", "tags": ["siciliano"] },
 
     { "id": "sic.picciriddu", "text": "picciriddu", "es": "niño pequeño", "variety": "Siciliano", "standard": "bambino", "notes": "Plural «picciriddi».", "tags": ["siciliano"] },
     { "id": "sic.picciotto", "text": "picciotto", "es": "chaval, chico joven", "variety": "Siciliano", "standard": "ragazzo", "notes": "Sobre todo en Palermo.", "tags": ["siciliano"] },

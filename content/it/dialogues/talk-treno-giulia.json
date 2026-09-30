@@ -57,7 +57,7 @@
       "speaker": "learner",
       "prompt": "Di, en broma, que ya lo has probado en Palermo y que estaba buenísimo.",
       "options": [
-        { "text": "L'ho già provato a Palermo... buonissima o buonissimo?", "es": "Ya lo he probado en Palermo... ¿buenísima o buenísimo?", "verdict": "correct", "feedback": "¡Genial! Con humor, el mejor tema para charlar en Sicilia." },
+        { "text": "L'ho già provato a Palermo… buonissima o buonissimo?", "es": "Ya lo he probado en Palermo… ¿buenísima o buenísimo?", "verdict": "correct", "feedback": "¡Genial! Con humor, el mejor tema para charlar en Sicilia." },
         { "text": "Sì, buono.", "es": "Sí, bueno.", "verdict": "acceptable", "feedback": "Correcto, aunque corta la charla." },
         { "text": "No, grazie, non ho fame.", "es": "No, gracias, no tengo hambre.", "verdict": "wrong", "feedback": "No te lo ofrece: te recomienda probarlo." }
       ]

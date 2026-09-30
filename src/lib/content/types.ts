@@ -17,7 +17,10 @@ export type PackMeta = z.infer<typeof S.PackMeta>;
 export interface Playable {
   /** Target-language text that is spoken. */
   text: string;
-  /** Stable key; mp3 (T03) lives at `/audio/<lang>/<audioKey>.mp3`. */
+  /**
+   * Stable key derived from ids. `/audio/<lang>/manifest.json` maps it to its mp3
+   * (`/audio/<lang>/<hash of voice + text>.mp3`, written by `npm run audio`).
+   */
   audioKey: string;
   /** Voice name from pack meta (always resolved, never undefined). */
   voice: string;

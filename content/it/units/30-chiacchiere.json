@@ -39,7 +39,7 @@
     { "id": "talk-chiacchiere.piacere-mio", "text": "Piacere mio.", "es": "El gusto es mío.", "register": "neutral", "situation": "presentarse" },
     { "id": "talk-chiacchiere.e-tu", "text": "E tu?", "es": "¿Y tú?", "register": "tu", "situation": "presentarse" },
     { "id": "talk-chiacchiere.e-lei", "text": "E Lei?", "es": "¿Y usted?", "register": "lei", "situation": "presentarse" },
-    { "id": "talk-chiacchiere.possiamo-darci-del-tu", "text": "Possiamo darci del tu?", "es": "¿Nos tuteamos?", "notes": "Entre gente joven se tutea casi siempre desde el principio.", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.possiamo-darci-del-tu", "text": "Possiamo darci del tu?", "es": "¿Nos tuteamos?", "notes": "Entre gente joven se tutea casi siempre desde el principio.", "register": "neutral", "situation": "presentarse" },
     { "id": "talk-chiacchiere.dammi-pure-del-tu", "text": "Dammi pure del tu!", "es": "¡Tutéame, hombre!", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
     { "id": "talk-chiacchiere.sei-qui-in-vacanza", "text": "Sei qui in vacanza?", "es": "¿Estás aquí de vacaciones?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
     { "id": "talk-chiacchiere.di-dove-sei", "text": "Di dove sei?", "es": "¿De dónde eres?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
@@ -112,11 +112,11 @@
     { "id": "talk-chiacchiere.ferie", "word": "ferie", "article": "le", "gender": "f", "es": "las vacaciones (del trabajo)", "notes": "«Sono in ferie» = estoy de vacaciones del trabajo.", "situation": "presentarse" },
     { "id": "talk-chiacchiere.lavoro", "word": "lavoro", "article": "il", "gender": "m", "es": "el trabajo", "situation": "presentarse" },
     { "id": "talk-chiacchiere.paese", "word": "paese", "article": "il", "gender": "m", "es": "el país (o el pueblo)", "notes": "«Il mio paese» puede ser tu país o tu pueblo.", "situation": "presentarse" },
-    { "id": "talk-chiacchiere.citta", "word": "città", "article": "la", "gender": "f", "plural": "le città", "es": "la ciudad", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.citta", "word": "città", "article": "la", "gender": "f", "plural": "città", "es": "la ciudad", "situation": "presentarse" },
     { "id": "talk-chiacchiere.spagna", "word": "Spagna", "article": "la", "gender": "f", "es": "España", "situation": "presentarse" },
     { "id": "talk-chiacchiere.spagnolo", "word": "spagnolo", "es": "español", "notes": "Femenino: «spagnola».", "situation": "presentarse" },
     { "id": "talk-chiacchiere.straniero", "word": "straniero", "article": "lo", "gender": "m", "plural": "stranieri", "es": "el extranjero", "situation": "presentarse" },
-    { "id": "talk-chiacchiere.turista", "word": "turista", "article": "il", "gender": "mf", "plural": "i turisti", "es": "el turista (la turista)", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.turista", "word": "turista", "article": "il", "gender": "mf", "plural": "turisti", "es": "el turista (la turista)", "situation": "presentarse" },
     { "id": "talk-chiacchiere.tempo", "word": "tempo", "article": "il", "gender": "m", "es": "el tiempo", "notes": "Tanto el clima como el tiempo que pasa.", "situation": "presentarse" },
     { "id": "talk-chiacchiere.caldo", "word": "caldo", "article": "il", "gender": "m", "es": "el calor", "example": "talk-chiacchiere.fa-caldo-eh", "situation": "presentarse" },
     { "id": "talk-chiacchiere.sole", "word": "sole", "article": "il", "gender": "m", "es": "el sol", "situation": "presentarse" },
@@ -135,7 +135,7 @@
     { "id": "talk-chiacchiere.numero", "word": "numero", "article": "il", "gender": "m", "plural": "numeri", "es": "el número", "situation": "presentarse" },
     { "id": "talk-chiacchiere.telefono", "word": "telefono", "article": "il", "gender": "m", "es": "el teléfono (el móvil)", "notes": "El móvil es «il cellulare», pero todos dicen «il telefono».", "situation": "presentarse" },
     { "id": "talk-chiacchiere.messaggio", "word": "messaggio", "article": "il", "gender": "m", "plural": "messaggi", "es": "el mensaje", "situation": "presentarse" },
-    { "id": "talk-chiacchiere.foto", "word": "foto", "article": "la", "gender": "f", "plural": "le foto", "es": "la foto", "situation": "presentarse" }
+    { "id": "talk-chiacchiere.foto", "word": "foto", "article": "la", "gender": "f", "plural": "foto", "es": "la foto", "situation": "presentarse" }
   ],
   "qa": [
     {
@@ -154,7 +154,7 @@
     {
       "id": "talk-chiacchiere.qa.diamoci-del-tu",
       "question": "Ma diamoci del tu, dai!",
-      "questionEs": "Pero tutéame, ¡venga!",
+      "questionEs": "¡Venga, tuteémonos!",
       "accepted": [
         { "text": "Va bene! Allora, come ti chiami?", "es": "¡Vale! Entonces, ¿cómo te llamas?" },
         { "text": "Certo! E tu di dove sei?", "es": "¡Claro! ¿Y tú de dónde eres?" }
@@ -198,7 +198,7 @@
       ],
       "register": "tu",
       "situation": "presentarse",
-      "notes": "«Da» + tiempo = desde hace; es lo que se responde a «Da quanto tempo...?».",
+      "notes": "«Da» + tiempo = desde hace; es lo que se responde a «Da quanto tempo…?».",
       "voice": "it-IT-IsabellaNeural"
     },
     {

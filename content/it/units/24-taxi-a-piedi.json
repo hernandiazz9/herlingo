@@ -29,7 +29,7 @@
   ],
   "phrases": [
     { "id": "move-strada.dove-posso-prendere-un-taxi", "text": "Dove posso prendere un taxi?", "es": "¿Dónde puedo coger un taxi?", "register": "neutral", "situation": "taxi" },
-    { "id": "move-strada.mi-chiama-un-taxi", "text": "Mi può chiamare un taxi?", "es": "¿Me puede llamar a un taxi?", "notes": "Útil en el hotel o en el bar: en Sicilia no suelen parar a mano alzada.", "register": "lei", "situation": "taxi" },
+    { "id": "move-strada.mi-chiama-un-taxi", "text": "Mi può chiamare un taxi?", "es": "¿Me puede pedir un taxi?", "notes": "Útil en el hotel o en el bar: en Sicilia no suelen parar a mano alzada.", "register": "lei", "situation": "taxi" },
     { "id": "move-strada.e-libero", "text": "È libero?", "es": "¿Está libre?", "register": "neutral", "situation": "taxi" },
     { "id": "move-strada.dove-la-porto", "text": "Dove La porto?", "es": "¿Adónde le llevo?", "register": "lei", "situation": "taxi", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
     { "id": "move-strada.alla-stazione-centrale", "text": "Alla stazione centrale, per favore.", "es": "A la estación central, por favor.", "register": "neutral", "situation": "taxi" },
@@ -68,7 +68,7 @@
     { "id": "move-strada.dietro-l-angolo", "text": "È proprio dietro l'angolo.", "es": "Está justo a la vuelta de la esquina.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
     { "id": "move-strada.a-cinque-minuti-da-qui", "text": "È a cinque minuti da qui.", "es": "Está a cinco minutos de aquí.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
     { "id": "move-strada.deve-tornare-indietro", "text": "Deve tornare indietro.", "es": "Tiene que volver atrás.", "register": "lei", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
-    { "id": "move-strada.vai-sempre-dritto", "text": "Vai sempre dritto e poi giri a destra.", "es": "Sigue recto y luego gira a la derecha.", "notes": "Así te lo dirá alguien joven, tuteándote.", "register": "tu", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-strada.vai-sempre-dritto", "text": "Vai sempre dritto e poi gira a destra.", "es": "Sigue recto y luego gira a la derecha.", "notes": "Así te lo dirá alguien joven, tuteándote.", "register": "tu", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
     { "id": "move-strada.a-che-ora-apre", "text": "A che ora apre?", "es": "¿A qué hora abre?", "register": "neutral", "situation": "calle" },
     { "id": "move-strada.a-che-ora-chiude", "text": "A che ora chiude?", "es": "¿A qué hora cierra?", "register": "neutral", "situation": "calle" },
     { "id": "move-strada.e-aperto-oggi", "text": "È aperto oggi?", "es": "¿Está abierto hoy?", "register": "neutral", "situation": "calle" },
@@ -84,10 +84,10 @@
     { "id": "move-strada.meglio-la-mattina-presto", "text": "Con questo caldo, meglio andare la mattina presto.", "es": "Con este calor, mejor ir por la mañana temprano.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" }
   ],
   "vocab": [
-    { "id": "move-strada.taxi", "word": "taxi", "article": "il", "gender": "m", "plural": "i taxi", "es": "el taxi", "situation": "taxi" },
+    { "id": "move-strada.taxi", "word": "taxi", "article": "il", "gender": "m", "plural": "taxi", "es": "el taxi", "situation": "taxi" },
     { "id": "move-strada.posteggio-dei-taxi", "word": "posteggio dei taxi", "article": "il", "gender": "m", "es": "la parada de taxis", "situation": "taxi" },
     { "id": "move-strada.indirizzo", "word": "indirizzo", "article": "l'", "gender": "m", "plural": "indirizzi", "es": "la dirección", "example": "move-strada.mi-porta-a-questo-indirizzo", "situation": "taxi" },
-    { "id": "move-strada.tassista", "word": "tassista", "article": "il", "gender": "mf", "plural": "i tassisti", "es": "el taxista", "situation": "taxi" },
+    { "id": "move-strada.tassista", "word": "tassista", "article": "il", "gender": "mf", "plural": "tassisti", "es": "el taxista", "situation": "taxi" },
     { "id": "move-strada.tariffa", "word": "tariffa", "article": "la", "gender": "f", "es": "la tarifa", "situation": "taxi" },
     { "id": "move-strada.tassametro", "word": "tassametro", "article": "il", "gender": "m", "es": "el taxímetro", "example": "move-strada.puo-accendere-il-tassametro", "situation": "taxi" },
     { "id": "move-strada.resto", "word": "resto", "article": "il", "gender": "m", "es": "el cambio (la vuelta)", "example": "move-strada.tenga-il-resto", "situation": "taxi" },
@@ -123,7 +123,7 @@
     { "id": "move-strada.ingresso", "word": "ingresso", "article": "l'", "gender": "m", "es": "la entrada (el acceso)", "notes": "«Ingresso gratuito» = entrada gratis.", "situation": "calle" },
     { "id": "move-strada.ridotto", "word": "ridotto", "es": "reducido (entrada con descuento)", "situation": "calle" },
     { "id": "move-strada.museo", "word": "museo", "article": "il", "gender": "m", "plural": "musei", "es": "el museo", "situation": "calle" },
-    { "id": "move-strada.motorino", "word": "motorino", "article": "il", "gender": "m", "plural": "motorini", "es": "la moto (el scooter)", "situation": "calle" },
+    { "id": "move-strada.motorino", "word": "motorino", "article": "il", "gender": "m", "plural": "motorini", "es": "la moto (el escúter)", "situation": "calle" },
     { "id": "move-strada.marciapiede", "word": "marciapiede", "article": "il", "gender": "m", "es": "la acera", "situation": "calle" },
     { "id": "move-strada.strisce-pedonali", "word": "strisce pedonali", "article": "le", "gender": "f", "es": "el paso de cebra", "situation": "calle" },
     { "id": "move-strada.vicolo", "word": "vicolo", "article": "il", "gender": "m", "es": "el callejón", "situation": "calle" }
@@ -272,7 +272,7 @@
         { "text": "Perfetto, allora entro.", "es": "Perfecto, entonces entro." },
         { "text": "Sì, è aperto.", "es": "Sí, está abierto." }
       ],
-      "register": "neutral",
+      "register": "lei",
       "situation": "calle",
       "voice": "it-IT-DiegoNeural"
     }

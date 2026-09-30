@@ -29,7 +29,7 @@
         { "text": "Solo andata, per favore.", "es": "Solo ida, por favor.", "verdict": "wrong", "feedback": "«Solo andata» es solo ida; tú quieres volver." }
       ]
     },
-    { "id": "n3", "speaker": "native", "name": "Bigliettaia", "text": "Sono dodici euro e venti. Il prossimo parte alle sedici e dieci dal binario cinque.", "es": "Son doce euros con veinte. El próximo sale a las dieciséis y diez del andén cinco.", "voice": "it-IT-IsabellaNeural" },
+    { "id": "n3", "speaker": "native", "name": "Bigliettaia", "text": "Sono quattordici euro e venti. Il prossimo parte alle sedici e dieci dal binario cinque.", "es": "Son catorce euros con veinte. El próximo sale a las dieciséis y diez del andén cinco.", "voice": "it-IT-IsabellaNeural" },
     {
       "id": "l3",
       "speaker": "learner",
@@ -46,12 +46,12 @@
       "speaker": "learner",
       "prompt": "Pregunta si tienes que validar el billete.",
       "options": [
-        { "text": "Grazie. Devo convalidare il biglietto?", "es": "Gracias. ¿Tengo que validar el billete?", "verdict": "correct", "feedback": "¡Perfecto! Con billete de papel, siempre hay que validarlo." },
+        { "text": "Grazie. Devo convalidare il biglietto?", "es": "Gracias. ¿Tengo que validar el billete?", "verdict": "correct", "feedback": "¡Perfecto! El billete regional de papel se valida en la estación antes de subir." },
         { "text": "Devo timbrare?", "es": "¿Tengo que picar?", "verdict": "acceptable", "feedback": "Coloquial pero correcto: «timbrare» = picar el billete." },
         { "text": "Devo cancellare il biglietto?", "es": "¿Tengo que anular el billete?", "verdict": "wrong", "feedback": "«Cancellare» es anular. Validar es «convalidare»." }
       ]
     },
-    { "id": "n5", "speaker": "native", "name": "Bigliettaia", "text": "Sì, nella macchinetta sul binario, prima di salire. Buon viaggio!", "es": "Sí, en la máquina del andén, antes de subir. ¡Buen viaje!", "voice": "it-IT-IsabellaNeural" },
+    { "id": "n5", "speaker": "native", "name": "Bigliettaia", "text": "Sì, nelle macchinette in stazione, prima di salire. Buon viaggio!", "es": "Sí, en las máquinas de la estación, antes de subir. ¡Buen viaje!", "voice": "it-IT-IsabellaNeural" },
     {
       "id": "l5",
       "speaker": "learner",

@@ -203,7 +203,7 @@
 
     { "id": "emer.farmacia", "word": "farmacia", "article": "la", "gender": "f", "es": "la farmacia", "notes": "Busca la cruz verde.", "example": "emer.c-e-una-farmacia", "situation": "emergencias", "tags": ["farmacia"] },
     { "id": "emer.paracetamolo", "word": "paracetamolo", "article": "il", "gender": "m", "es": "el paracetamol", "situation": "emergencias", "tags": ["farmacia"] },
-    { "id": "emer.ibuprofene", "word": "ibuprofene", "article": "l'", "gender": "m", "es": "el ibuprofeno", "notes": "En Italia se vende más caro que en España.", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.ibuprofene", "word": "ibuprofene", "article": "l'", "gender": "m", "es": "el ibuprofeno", "notes": "En dosis bajas se vende sin receta.", "situation": "emergencias", "tags": ["farmacia"] },
     { "id": "emer.compressa", "word": "compressa", "article": "la", "gender": "f", "plural": "compresse", "es": "la pastilla", "situation": "emergencias", "tags": ["farmacia"] },
     { "id": "emer.ricetta", "word": "ricetta", "article": "la", "gender": "f", "es": "la receta", "notes": "También la receta de cocina.", "example": "emer.ci-vuole-la-ricetta", "situation": "emergencias", "tags": ["farmacia"] },
     { "id": "emer.crema-solare", "word": "crema solare", "article": "la", "gender": "f", "es": "la crema solar", "example": "emer.vorrei-crema-solare", "situation": "emergencias", "tags": ["farmacia"] },

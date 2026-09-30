@@ -313,7 +313,7 @@
     { "id": "food.caffe", "word": "caffè", "article": "il", "gender": "m", "es": "el café (expreso)", "example": "food.un-caffe", "situation": "bar" },
     { "id": "food.cappuccino", "word": "cappuccino", "article": "il", "gender": "m", "es": "el capuchino", "notes": "Los italianos solo lo toman por la mañana.", "example": "food.cappuccino-e-cornetto", "situation": "bar" },
     { "id": "food.cornetto", "word": "cornetto", "article": "il", "gender": "m", "es": "el cruasán", "notes": "Vacío («vuoto») o relleno: crema, chocolate, pistacho…", "example": "food.cappuccino-e-cornetto", "situation": "bar" },
-    { "id": "food.latte", "word": "latte", "article": "il", "gender": "m", "es": "la leche", "notes": "«Un latte» es un vaso de leche; el café con leche es «un latte macchiato».", "situation": "bar" },
+    { "id": "food.latte", "word": "latte", "article": "il", "gender": "m", "es": "la leche", "notes": "«Un latte» es un vaso de leche; el café con leche es «un caffellatte».", "situation": "bar" },
     { "id": "food.decaffeinato", "word": "decaffeinato", "article": "il", "gender": "m", "es": "el descafeinado", "notes": "Abreviado: «un deca».", "situation": "bar" },
     { "id": "food.zucchero", "word": "zucchero", "article": "lo", "gender": "m", "es": "el azúcar", "situation": "bar" },
 

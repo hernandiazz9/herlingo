@@ -29,7 +29,7 @@
         { "text": "Sì, solo ritorno.", "es": "Sí, solo vuelta.", "verdict": "wrong", "feedback": "Vas hacia la ciudad: es «andata», la ida." }
       ]
     },
-    { "id": "n3", "speaker": "native", "name": "Autista", "text": "Sono sette euro.", "es": "Son siete euros.", "voice": "it-IT-DiegoNeural" },
+    { "id": "n3", "speaker": "native", "name": "Autista", "text": "Sono sei euro e cinquanta.", "es": "Son seis euros con cincuenta.", "voice": "it-IT-DiegoNeural" },
     {
       "id": "l3",
       "speaker": "learner",

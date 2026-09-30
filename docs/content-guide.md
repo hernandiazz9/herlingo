@@ -19,8 +19,8 @@ Files are discovered by glob: **there is no index to edit**. Adding a unit = add
 parallel tasks never touch the same file. Name files after what they hold, e.g.
 `units/20-tren.json`, `dialogues/tren-biglietteria.json`, `extras/siciliano.json`.
 
-The files whose name contains `sample` (`units/sample-unit.json`, `dialogues/sample-bar.json`,
-`extras/sample-extras.json`) are a small demo pack. Delete them all once real content exists.
+The `sample` demo pack (files whose name contains `sample`) has been removed from `it`; do not
+ship sample files in a real pack.
 
 ## Ids
 
@@ -70,7 +70,8 @@ phrasebook sections in display order). If you need a new situation, add one line
 
 - **Lesson**: `id`, `title`, `items` — ids (at least 1) of phrases, vocab, Q&A, grammar cards or
   expressions, in teaching order. Items may come from any file of the pack. Aim for ~5 minutes:
-  6–12 items.
+  8–30 items (the Italian lessons hold 8–29). Vocab and short phrases are quick, so a lesson
+  can be long; keep it to one situation and end with its Q&A items.
 
 **Items**
 
@@ -78,7 +79,7 @@ phrasebook sections in display order). If you need a new situation, add one line
   it helps), `notes?` (short Spanish usage note), `register` (`tu` | `lei` | `neutral`),
   `situation`, `tags?`, `voice?`.
 - **Vocab**: `id`, `word` (bare), `article?` (`il`, `lo`, `la`, `l'`, `i`, `gli`, `le`),
-  `gender?` (`m` | `f` | `mf`), `plural?`, `es` (with article for nouns: "el billete"), `notes?`,
+  `gender?` (`m` | `f` | `mf`), `plural?` (bare word, no article: "biglietti", "autobus"), `es` (with article for nouns: "el billete"), `notes?`,
   `example?` (a phrase id), `situation?`, `tags?`, `voice?`. It is spoken as article + word
   ("il biglietto", "l'orario").
 - **Q&A** (for "answer" exercises): `id`, `question` (what the Italian asks), `questionEs`,
@@ -106,8 +107,12 @@ plus `placement`:
 
 ## Audio keys
 
-Every playable text gets a stable key derived from ids (`src/lib/content/keys.ts`); mp3s live at
-`public/audio/<lang>/<key>.mp3`:
+Every playable text gets a stable key derived from ids (`src/lib/content/keys.ts`). `npm run audio`
+writes one mp3 per playable, named by a hash of voice + text (`public/audio/<lang>/<hash>.mp3`,
+so identical lines share a file and any text or voice change makes a new one), and maps each key
+to its file in `public/audio/<lang>/manifest.json`. Run it after every content change and commit
+`public/audio/`; `npm run content:check -- --strict-audio` fails if a playable has no current mp3.
+Dialogue learner options are voiced with a pack voice that no native turn of that dialogue uses.
 
 | Playable | Key |
 | --- | --- |
@@ -116,7 +121,8 @@ Every playable text gets a stable key derived from ids (`src/lib/content/keys.ts
 | grammar example n | `<id>--e<n>` |
 | dialogue native turn / learner option n | `<dialogueId>--<turnId>`, `<dialogueId>--<turnId>--<n>` |
 
-`n` is 1-based, so reordering replies or options changes their keys: regenerate audio after that.
+`n` is 1-based, so reordering replies or options changes their keys: run `npm run audio` after that
+(the mp3s themselves are reused; only the manifest changes).
 `voice` must be one of `pack.json` `voices`; when missing, the first one is used.
 
 ## What `content:check` enforces

@@ -51,7 +51,7 @@
         { "text": "Pago dopo la cassa?", "es": "¿Pago después la caja?", "verdict": "wrong", "feedback": "No tiene sentido: «prima» = antes, y se paga «alla cassa»." }
       ]
     },
-    { "id": "n5", "speaker": "native", "name": "Camarero", "text": "No, no, paga dopo, tranquillo.", "es": "No, no, paga después, tranquilo.", "voice": "it-IT-DiegoNeural" },
+    { "id": "n5", "speaker": "native", "name": "Camarero", "text": "No, no, paga dopo, stia tranquillo.", "es": "No, no, paga después, no se preocupe.", "voice": "it-IT-DiegoNeural" },
     {
       "id": "l5",
       "speaker": "learner",
