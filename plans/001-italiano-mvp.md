@@ -1,6 +1,6 @@
 # Plan 001 — Italian trainer MVP for the Sicily trip
 
-Status: active
+Status: done
 Created: 2026-09-30
 Base branch: main
 Goal: Ship fast a personal, mobile-first, offline-capable Next.js PWA to learn spoken Italian for Hernán's trip to Sicily in under two weeks: lesson path with mixed exercises, spaced-repetition review, pocket phrasebook and dialogue simulator, with ~400 phrases, ~300 words and neural audio, all tailored to docs/brief.md. MVP speed over tests: no automated test suites; verification is lint + typecheck + content check + build.
@@ -133,7 +133,7 @@ Worktree setup: npm ci
 - Outcome: 34 fixes (docs/content-review.md), 475 phrases / 332 vocab / 13 dialogues, 1443 mp3s generated, strict-audio passes · 384e072
 
 ## T10 — Offline PWA, install guide and deploy docs
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T07, T08, T09
 - Goal: Make the app installable and fully usable offline on an iPhone, and document how Hernán runs, updates and deploys it.
 - Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (Platform, iPhone with Chrome). Static export from T01. All routes and audio exist by now. Audio: `public/audio/<lang>/manifest.json` (loaded at runtime by src/lib/audio) plus hashed mp3s (~1000 files, ~14 MB): precache both.
@@ -145,7 +145,7 @@ Worktree setup: npm ci
   - README.md: run locally, open on the phone over LAN, regenerate audio, edit the persona file, deploy to Vercel (exact commands for Hernán to run), install on iPhone.
   - `npm run audio` re-run (covers placement questions added by T07) and `npm run content:check -- --strict-audio` → exit 0.
   - `npm run verify` → exit 0, and a manual check: serve `out/`, load once, then offline reload still shows the app (describe how you checked).
-- Outcome:
+- Outcome: hand-written SW precaching 1856 files (23.9 MB incl. 1450 mp3), update banner, manifest + icons, /instalar guide, npm start LAN server, vercel.json, README · 12acfde
 
 ## T11 — Dark mode
 - Status: done
@@ -193,8 +193,10 @@ Worktree setup: npm ci
 - 2026-09-30 T09: airport bus 6.50 € on board, Cefalù return 14.20 €, validators "in stazione"; vocab plural = bare word; "Possiamo darci del tu?" neutral; 112/101 read as numbers; content-guide lesson size 8–30 items. (agent)
 - 2026-09-30 orchestrator: added T12 (dedupe duplicate texts in phrasebook/review + review intro copy), a fix for duplicates found by T09. (orchestrator)
 - 2026-09-30 T12: src/lib/srs/dedupe.ts (textKey ignores accents/case/punctuation); phrasebook keeps the id taught first; favourite if any duplicate id is starred; review answer also recorded for due duplicate ids; review intro copy "Lo que fallaste y lo que toca recordar hoy…". (agent)
+- 2026-09-30 T10: hand-written SW (scripts/pwa/sw.template.js), cache-first, update waits for "Actualizar", mp3/_next/static carried across versions, Range→206 for Safari; manifest generated postbuild from app-config; icons via `npm run pwa:icons`; `npm start` LAN static server; vercel.json + .vercelignore at root; README/CLAUDE.md in English. (agent)
 
 ## Proposals (new scope)
+- 2026-09-30 T10: highlight a tab (Perfil) on /instalar/.
 - 2026-09-30 T12: 49 duplicate texts across phrases/vocab/Q&A/expressions (922 items, 873 unique); merging ids in content/ is still open.
 - 2026-09-30 T07: speaking-pause key uses `lang_lern:` prefix instead of `lang-lern:`.
 - 2026-09-30 T09: seasonal doubts for mid-October (oranges just starting, mulberry granita may be off menu).
@@ -230,3 +232,5 @@ Worktree setup: npm ci
 - 2026-09-30 18:14 T10 launched · attempt 1 · agent a8879b94ee2e7662c
 - 2026-09-30 18:14 T12 launched · attempt 1 · agent a65c34a9a6ebfeee8
 - 2026-09-30 18:16 T12 done · branch worktree-agent-a65c34a9a6ebfeee8 → c6cd59f
+- 2026-09-30 18:25 T10 done · branch worktree-agent-a8879b94ee2e7662c → 12acfde
+- 2026-09-30 18:26 plan 001 done · final verify on main passed
