@@ -6,6 +6,8 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Card, ProgressBar } from "@/components/ui";
 import { DEFAULT_LANG, getPack, getUnit } from "@/lib/content";
 import { cn } from "@/lib/cn";
+import { DialoguesIcon, ReviewIcon } from "@/components/icons";
+import { getTab } from "@/lib/navigation";
 import { canPersist, currentStreak, dueItemIds, getProgress } from "@/lib/progress";
 import { buildPath, lessonHref, type PathLesson, type PathUnit } from "@/lib/progress/path";
 import { useNow, useProgress } from "@/lib/progress/use-progress";
@@ -13,6 +15,9 @@ import { BoltIcon, CheckIcon, FlameIcon, LockIcon, PlayIcon } from "./icons";
 import { ExpressionView, GrammarCardView, SideSheet } from "./SideSheet";
 
 export const WELCOME_HREF = "/bienvenida/";
+
+const review = getTab("review");
+const dialogues = getTab("dialogues");
 
 /** Home: stats, the next lesson, units with their lesson nodes, and side content. */
 export function PathView({ lang = DEFAULT_LANG }: { lang?: string }) {
@@ -38,16 +43,9 @@ export function PathView({ lang = DEFAULT_LANG }: { lang?: string }) {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-2 gap-2">
         <Stat icon={<FlameIcon className="size-5 text-terracotta-deep" />} value={streak} label={streak === 1 ? "día seguido" : "días seguidos"} />
         <Stat icon={<BoltIcon className="size-5 text-lemon-deep" />} value={progress.xp} label="XP" />
-        <Link
-          href="/repaso/"
-          className="flex flex-col items-center gap-0.5 rounded-card border-2 border-line bg-surface px-2 py-3 text-center focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
-        >
-          <span className={cn("text-2xl font-extrabold", due ? "text-sea-deep" : "text-ink")}>{due}</span>
-          <span className="text-xs font-bold text-ink-muted">para repasar</span>
-        </Link>
       </div>
 
       <Card tone="lemon" className="flex flex-col gap-3">
@@ -81,6 +79,22 @@ export function PathView({ lang = DEFAULT_LANG }: { lang?: string }) {
           </p>
         </div>
       </Card>
+
+      <div className="grid grid-cols-2 gap-3">
+        <SectionCard
+          href="/repaso/"
+          icon={<ReviewIcon className="size-7" />}
+          title={review.title}
+          detail={due ? `${due} para repasar` : "¡Todo al día!"}
+          highlight={due > 0}
+        />
+        <SectionCard
+          href="/dialogos/"
+          icon={<DialoguesIcon className="size-7" />}
+          title={dialogues.title}
+          detail={`${pack.dialogues.length} ${pack.dialogues.length === 1 ? "conversación" : "conversaciones"}`}
+        />
+      </div>
 
       {main.map((u) => (
         <UnitSection key={u.unit.id} entry={u} />
@@ -141,6 +155,23 @@ function Stat({ icon, value, label }: { icon: ReactNode; value: number; label: s
       </span>
       <span className="text-xs font-bold text-ink-muted">{label}</span>
     </div>
+  );
+}
+
+/** Link card to a section that has no tab of its own (Repaso, Diálogos). */
+function SectionCard({ href, icon, title, detail, highlight = false }: { href: string; icon: ReactNode; title: string; detail: string; highlight?: boolean }) {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "pressable flex flex-col items-start gap-1 rounded-card border-2 p-4 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
+        highlight ? "border-sea bg-sea-soft [--ledge:var(--sea-ledge)]" : "border-line bg-surface [--ledge:var(--line)]",
+      )}
+    >
+      <span className={highlight ? "text-sea-deep" : "text-ink-muted"}>{icon}</span>
+      <span className="text-lg font-extrabold text-ink">{title}</span>
+      <span className={cn("text-sm font-bold", highlight ? "text-sea-deep" : "text-ink-muted")}>{detail}</span>
+    </Link>
   );
 }
 

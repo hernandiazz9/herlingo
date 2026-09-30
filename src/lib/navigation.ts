@@ -1,31 +1,47 @@
 /**
- * The bottom tab bar. Single source of truth for the main sections: the TabBar and the page
- * headings read from here. Framework-free (no React imports).
+ * App sections and the bottom tab bar. Single source of truth: the TabBar and the page headings
+ * read from here. Framework-free (no React imports).
  */
-export type TabId = "path" | "review" | "phrasebook" | "dialogues" | "profile";
 
-export interface Tab {
-  id: TabId;
+/** Sections with their own button in the tab bar, in bar order. */
+export type TabId = "path" | "stories" | "play" | "phrasebook" | "profile";
+/** Every section with a heading: the tabs plus the ones reached from another tab's page. */
+export type SectionId = TabId | "review" | "dialogues";
+
+export interface Section {
+  id: SectionId;
   /** Route, without trailing slash. */
   href: string;
-  /** Short label under the icon. */
+  /** Short label (under the icon in the tab bar). */
   label: string;
   /** Page heading (h1). */
   title: string;
 }
 
+export interface Tab extends Section {
+  id: TabId;
+  /** The big raised button in the middle of the bar. */
+  central?: boolean;
+}
+
 export const TABS: readonly Tab[] = [
   { id: "path", href: "/", label: "Ruta", title: "Tu ruta" },
-  { id: "review", href: "/repaso", label: "Repaso", title: "Repaso" },
+  { id: "stories", href: "/historias", label: "Historias", title: "Historias" },
+  { id: "play", href: "/jugar", label: "Jugar", title: "Jugar", central: true },
   { id: "phrasebook", href: "/frasario", label: "Frases", title: "Frasario" },
-  { id: "dialogues", href: "/dialogos", label: "Diálogos", title: "Diálogos" },
   { id: "profile", href: "/perfil", label: "Perfil", title: "Tu perfil" },
 ];
 
-export function getTab(id: TabId): Tab {
-  const tab = TABS.find((t) => t.id === id);
-  if (!tab) throw new Error(`Unknown tab: ${id}`);
-  return tab;
+/** Sections without a tab: reached from cards on another tab's page, which stays highlighted. */
+const NESTED: readonly (Section & { parent: TabId })[] = [
+  { id: "review", href: "/repaso", label: "Repaso", title: "Repaso", parent: "path" },
+  { id: "dialogues", href: "/dialogos", label: "Diálogos", title: "Diálogos", parent: "path" },
+];
+
+export function getTab(id: SectionId): Section {
+  const section = TABS.find((t) => t.id === id) ?? NESTED.find((s) => s.id === id);
+  if (!section) throw new Error(`Unknown section: ${id}`);
+  return section;
 }
 
 /** Strips the trailing slash that `trailingSlash: true` adds (except for the root). */
@@ -34,10 +50,18 @@ export function normalizePath(pathname: string): string {
   return pathname;
 }
 
-/** The tab that owns a pathname: exact match for "/", prefix match for the rest. */
+function owns(href: string, path: string): boolean {
+  return href === "/" ? path === "/" : path === href || path.startsWith(`${href}/`);
+}
+
+/**
+ * The tab that owns a pathname: exact match for "/", prefix match for the rest.
+ * Nested sections (Repaso, Diálogos) light up their parent tab.
+ */
 export function activeTabFor(pathname: string): Tab | undefined {
   const path = normalizePath(pathname);
-  return TABS.find((t) =>
-    t.href === "/" ? path === "/" : path === t.href || path.startsWith(`${t.href}/`),
-  );
+  const tab = TABS.find((t) => owns(t.href, path));
+  if (tab) return tab;
+  const nested = NESTED.find((s) => owns(s.href, path));
+  return nested ? TABS.find((t) => t.id === nested.parent) : undefined;
 }

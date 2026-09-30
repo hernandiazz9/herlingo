@@ -27,8 +27,8 @@ check UI changes by hand with `npm run dev` or `npm run build && npm start` (off
 ## Folder layout
 
 ```
-src/app/               Routes (App Router). One folder per section: / (ruta), repaso, frasario, dialogos, perfil;
-                       instalar = iPhone install guide + offline status (linked from /perfil).
+src/app/               Routes (App Router). One folder per section: / (ruta), historias, jugar, frasario, perfil;
+                       repaso and dialogos (cards on Ruta); instalar = iPhone install guide (linked from /perfil).
                        layout.tsx = app shell (centred mobile column + bottom TabBar); globals.css = design tokens.
 src/components/ui/     Base components: Button, IconButton, Card, ProgressBar (import from "@/components/ui").
 src/components/shell/  App shell pieces: TabBar, PageHeader, ComingSoon placeholder, ThemeToggle, ThemeSync.
@@ -74,8 +74,9 @@ plans/                 Orchestrator plans. Never edit.
 - **Mobile shell:** the app is a column capped at `--column-width` (480px), centred on desktop. The
   tab bar is fixed to the bottom and pads with `env(safe-area-inset-bottom)` (`viewport-fit=cover`).
   Pages render inside `<main>`; start each with `<PageHeader title=… />`.
-- **Tabs:** add or rename sections only in `src/lib/navigation.ts` (`TABS`); TabBar and page
-  headings read from it.
+- **Tabs:** add or rename sections only in `src/lib/navigation.ts` (`TABS`, plus `NESTED` for
+  sections without a tab that light up a parent tab); TabBar and page headings read from it.
+  `central: true` = the raised Jugar button.
 - **If tests are added later, they never hard-code content ids or counts**: derive expectations
   from the source (import `TABS`, the content loader, etc.).
 - **Content** is read only through `@/lib/content` (`getPack()`, `getAllLessons()`, `getLesson()`,
