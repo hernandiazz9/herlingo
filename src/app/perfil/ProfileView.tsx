@@ -78,6 +78,18 @@ export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
             Repetir la prueba de nivel
           </Link>
         </Card>
+        <Card className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <h3 className="text-lg font-bold text-ink">Instalar en el iPhone</h3>
+            <p className="text-sm text-ink-muted">Añádela a la pantalla de inicio y úsala sin conexión.</p>
+          </div>
+          <Link
+            href="/instalar/"
+            className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
+          >
+            Cómo instalarla
+          </Link>
+        </Card>
         <Card tone="terracotta" className="flex flex-col gap-3">
           <div className="flex flex-col gap-1">
             <h3 className="text-lg font-bold text-ink">Borrar progreso</h3>

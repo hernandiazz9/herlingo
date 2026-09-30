@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { TabBar } from "@/components/shell/TabBar";
 import { ThemeSync } from "@/components/shell/ThemeSync";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/app-config";
+import { APPLE_TOUCH_ICON, MANIFEST_PATH } from "@/lib/pwa/manifest";
+import { UpdatePrompt } from "@/lib/pwa/UpdatePrompt";
 import { THEME_COLORS, THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
   title: { default: APP_NAME, template: `%s · ${APP_NAME}` },
   description: APP_DESCRIPTION,
   applicationName: APP_NAME,
+  // Installable PWA: manifest and sw.js are written into out/ by scripts/pwa/build.ts (postbuild).
+  manifest: MANIFEST_PATH,
+  // Setting `icons` replaces the file-based app/icon.svg link, so it is listed here too.
+  icons: { icon: [{ url: "/icon.svg", type: "image/svg+xml" }], apple: APPLE_TOUCH_ICON },
   appleWebApp: { capable: true, title: APP_NAME, statusBarStyle: "default" },
   formatDetection: { telephone: false },
 };
@@ -50,6 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             {children}
           </main>
           <TabBar />
+          <UpdatePrompt />
         </div>
       </body>
     </html>
