@@ -54,3 +54,60 @@ comment in `src/lib/content/types.ts` now describes the manifest too.
   changed) later.
 - The persona (Madrid, programmer, solo trip by train and bus) is the generic one in
   `units/32-persona-sobre-mi.json`, meant to be edited by Hernán.
+
+# Stories and explanations review (T21)
+
+Native-teacher review, done on 2026-09-30, of the 12 Historias (`content/it/stories/`, every
+sentence, translation, key word, question and gap) and of the phrase `explanation`s added by T15
+and T16 (all 475 checked mechanically for length, "tú" and Spain Spanish, respelling scheme; about
+80 read in full, spread over every unit). Checked: Italian naturalness and register, A1–A2 level,
+voices (narrator Elsa, Hernán Diego, women Isabella, other men the narrator), the trip narrative
+(Palermo 3 nights → Cefalù → Agrigento → Catania → Siracusa → flight home from Catania) and the
+persona, facts, and the Spain-Spanish translations with "tú". A second reviewer (subagent) read
+the same stories independently; its findings are merged below. No id was renamed or deleted.
+
+Overall the stories were already good: natural, current Italian at A1–A2, consistent persona and
+recurring character (Chiara), exactly one right option per question. Word counts stay within
+80–150 (`content:check`: 0 warnings).
+
+## Story fixes by category (17)
+
+| Category | Count | What changed |
+| --- | --- | --- |
+| Italian register and grammar | 2 | `story.giornata-a-cefalu` s6 "poi giri a sinistra" → "poi gira" (the girl uses tu; same fix as T09 in `move-strada.vai-sempre-dritto`). `story.ultimo-giorno` s5 the B&B host "torna presto" → "torni presto" (staff use Lei, like the Palermo host). |
+| Naturalness and narrative logic | 2 | `story.valle-dei-templi` s10 "Anche Chiara… va a Siracusa" (Hernán had only said Catania) → "Tra qualche giorno Chiara va a Siracusa, come lui." `story.pullman-per-agrigento` s11 "dura due ore e passa" (reads as "more than two hours", against q4) → "dura due ore, tra colline…". |
+| Facts and season | 2 | `story.in-treno-per-cefalu` Palermo–Cefalù single "sei euro e dieci" → "sette euro e dieci" (s3 and q1), matching the €7.10 fare / €14.20 return used since T09. `story.pescheria-di-catania` "un chilo di arance" → "un chilo d'uva" (s11, q4, and the callback option in `story.ultimo-giorno` q1): Sicilian oranges are not in season in mid October, grapes are. |
+| Voice | 1 | `story.pescheria-di-catania` s6, the fishmonger's shout, had Hernán's voice (Diego) → narrator. |
+| Brief (Sicilian = recognition only) | 1 | `story.pescheria-di-catania` s5: Hernán no longer says "Mizzica!"; a man next to him does, so Hernán hears it instead of producing it. |
+| Spanish translations | 4 | "te ponen una multa" → "le ponen" (the lady speaks usted); "En el chiringuito de playa coge una sombrilla" → "En la playa de pago alquila…" (a lido is a pay beach, not a beach bar); "Por la noche… mira la puesta de sol" → "Al atardecer…"; "en la via Maqueda" → "en la Via Maqueda". |
+| Gap distractors | 5 | Absurd or ill-formed chips replaced by plausible wrong ones: ritardo `binario/biglietto` → `anticipo/sosta`; granita alla `valigia/farmacia` → `fragola/pesca`; con la `cipolla/carne` → `cannella/granella`; crema `pistacchio/limone` (not a valid form) → `solare/idratante`; il `museo/negozio` parte in orario → `treno/traghetto`. |
+
+## Explanation fixes by category (28)
+
+| Category | Count | What changed |
+| --- | --- | --- |
+| Pronunciation tip wrong | 4 | `surv.buonasera` one stress, not two: "buo-na-SE-ra". `move-treno.sono-sei-euro-e-dieci` "euro" has two syllables (EU-ro), not three. `talk-chiacchiere.parli-inglese` and `move-treno.posso-usare-lo-stesso-biglietto` respelled the s as "z" (a Spaniard reads /θ/) → "in-GLE-se", "u-SA-re" (and in Sicily that s is voiceless anyway). |
+| Vowel claims wrong | 4 | "fermare" and "solo" have a closed vowel, not an open one: `move-bus.si-ferma-a`, `move-strada.si-fermi-qui`, `talk-chiacchiere.quanto-ti-fermi`, `talk-chiacchiere.sei-da-solo` now give the stress instead ("Acento en «fer»: FER-ma"). |
+| Spanish | 1 | `gram.darci-del-tu` "proponer tutearos a alguien" (ungrammatical) → "proponerle a alguien de confianza que os tuteéis". |
+| Respelling scheme | 19 | "dj" → "dy" ("DJOR-no" → "DYOR-no", "OD-dji" → "OD-dyi"…), the scheme the other explanations use; a Spaniard may read "j" as a jota. |
+
+The rest of the sample was right: usage notes match the register and situation, stress positions
+are correct (bi-LLET-to, ca-TA-nia, far-ma-CHI-a, che-fa-LÙ…), no explanation is missing or longer
+than 200 characters, and the Spanish is Spain Spanish with "tú".
+
+Docs: `docs/content-guide.md` no longer mentions the deleted `stories/sample-story.json`.
+
+Audio: `npm run audio` generated 363 mp3 (353 for the new stories and inline key words, 10 for the
+fixed lines) and pruned 9; `content:check -- --strict-audio` passes.
+
+## Remaining doubts
+
+- **Duplicate key word**: `story-ritorno-chiave` (story 12) repeats "la chiave" already defined as
+  `story-palermo-chiave` (story 2). It shares the mp3 but shows twice in review; removing it means
+  deleting an id, left for a later decision like the 35 duplicates listed above.
+- **Season** (trip in mid October): many Cefalù lidi close at the end of September and the
+  swordfish season is mostly over; story 5 (lido, swimming) and story 9 (pesce spada) were kept as
+  plausible. Sea urchins are in season.
+- **Bus operators**: Palermo–Agrigento is run mainly by Cuffaro and Camilleri; story 6 keeps
+  AST (on strike) and SAIS (running), the operators named in the brief. Prices (bus, granita
+  €4.50, pharmacy €12, olives €8/kg) are plausible fiction.

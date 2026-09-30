@@ -81,8 +81,8 @@
   ],
   "gaps": [
     { "id": "g1", "sentence": "s4", "answer": "food.banco", "distractors": ["binario", "mare"] },
-    { "id": "g2", "sentence": "s6", "answer": "food.mandorla", "distractors": ["valigia", "farmacia"] },
-    { "id": "g3", "sentence": "s7", "answer": "food.panna", "distractors": ["cipolla", "carne"] },
+    { "id": "g2", "sentence": "s6", "answer": "food.mandorla", "distractors": ["fragola", "pesca"] },
+    { "id": "g3", "sentence": "s7", "answer": "food.panna", "distractors": ["cannella", "granella"] },
     { "id": "g4", "sentence": "s9", "answer": "story-catania-inzuppare", "gap": "inzuppa", "distractors": ["lava", "vende"] },
     { "id": "g5", "sentence": "s11", "answer": "food.cassa", "distractors": ["stazione", "farmacia"] },
     { "id": "g6", "sentence": "s12", "answer": "food.gusto", "distractors": ["treno", "conto"] }

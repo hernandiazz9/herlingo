@@ -17,7 +17,7 @@
     { "id": "s7", "text": "La ragazza si chiama Chiara, è di Milano e fa l'insegnante.", "es": "La chica se llama Chiara, es de Milán y es profesora." },
     { "id": "s8", "text": "«Sei qui in vacanza?», chiede Chiara.", "es": "«¿Estás aquí de vacaciones?», pregunta Chiara.", "voice": "it-IT-IsabellaNeural" },
     { "id": "s9", "text": "«Sì, viaggio da solo. Domani vado a Catania.»", "es": "«Sí, viajo solo. Mañana me voy a Catania.»", "voice": "it-IT-DiegoNeural" },
-    { "id": "s10", "text": "Anche Chiara, tra qualche giorno, va a Siracusa.", "es": "Chiara también va a Siracusa dentro de unos días." },
+    { "id": "s10", "text": "Tra qualche giorno Chiara va a Siracusa, come lui.", "es": "Dentro de unos días Chiara va a Siracusa, como él." },
     { "id": "s11", "text": "Allora si danno il numero di telefono.", "es": "Así que se dan el número de teléfono." },
     { "id": "s12", "text": "Poi Hernán visita gli altri templi, sotto il sole.", "es": "Luego Hernán visita los otros templos, bajo el sol." }
   ],

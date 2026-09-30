@@ -21,8 +21,7 @@ parallel tasks never touch the same file. Name files after what they hold, e.g.
 `units/20-tren.json`, `dialogues/tren-biglietteria.json`, `extras/siciliano.json`.
 
 The `sample` demo pack (files whose name contains `sample`) has been removed from `it`; do not
-ship sample files in a real pack. Exception, temporary: `stories/sample-story.json` lets the
-Historias UI be built before the real stories exist; the task that adds stories 1–6 deletes it.
+ship sample files in a real pack.
 
 ## Ids
 
@@ -117,12 +116,12 @@ plus `placement`:
 - **Placement question**: `id`, `prompt` (Spanish), `text?` (target text shown and played),
   `options` (≥ 2), `answer` (0-based index), `lessons` (lesson ids marked done if correct).
 
-**Story file** (`stories/*.json`, one per file; see `stories/sample-story.json`):
+**Story file** (`stories/*.json`, one per file; e.g. `stories/01-arrivo-a-palermo.json`):
 
 | Field | Meaning |
 | --- | --- |
 | `id` | `story.<slug>` |
-| `order` | Trip order, unique among stories (1, 2, 3…; 0 = sample only). Name the file `NN-<slug>.json`. |
+| `order` | Trip order, unique among stories (1, 2, 3…). Name the file `NN-<slug>.json`. |
 | `title` / `titleEs` | Title in the target language / in Spanish. |
 | `description?`, `emoji?` | One Spanish line for the list; one emoji. |
 | `situation` | Situation id from pack.json. |

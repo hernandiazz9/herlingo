@@ -8,7 +8,7 @@
   "situation": "alojamiento",
   "level": "A1",
   "sentences": [
-    { "id": "s1", "text": "Dalla stazione Hernán va a piedi al B&B, in via Maqueda.", "es": "Desde la estación Hernán va andando al B&B, en la via Maqueda." },
+    { "id": "s1", "text": "Dalla stazione Hernán va a piedi al B&B, in via Maqueda.", "es": "Desde la estación Hernán va andando al B&B, en la Via Maqueda." },
     { "id": "s2", "text": "Suona il campanello e una signora apre il portone.", "es": "Llama al timbre y una señora abre el portal." },
     { "id": "s3", "text": "«Salve! Ho una prenotazione per tre notti.»", "es": "«¡Hola! Tengo una reserva para tres noches.»", "voice": "it-IT-DiegoNeural" },
     { "id": "s4", "text": "«Benvenuto! Mi dà un documento, per favore?»", "es": "«¡Bienvenido! ¿Me da un documento de identidad, por favor?»", "voice": "it-IT-IsabellaNeural" },

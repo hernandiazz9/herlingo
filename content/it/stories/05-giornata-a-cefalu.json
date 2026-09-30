@@ -13,13 +13,13 @@
     { "id": "s3", "text": "Poi vuole andare in spiaggia, ma non sa la strada.", "es": "Luego quiere ir a la playa, pero no sabe el camino." },
     { "id": "s4", "text": "Chiede a una ragazza con un cane.", "es": "Le pregunta a una chica que va con un perro." },
     { "id": "s5", "text": "«Scusa, per andare alla spiaggia?»", "es": "«Perdona, ¿para ir a la playa?»", "voice": "it-IT-DiegoNeural" },
-    { "id": "s6", "text": "«Vai sempre dritto, poi giri a sinistra. È vicino!»", "es": "«Sigue todo recto y luego gira a la izquierda. ¡Está cerca!»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s6", "text": "«Vai sempre dritto, poi gira a sinistra. È vicino!»", "es": "«Sigue todo recto y luego gira a la izquierda. ¡Está cerca!»", "voice": "it-IT-IsabellaNeural" },
     { "id": "s7", "text": "«Grazie mille, sei gentilissima!»", "es": "«¡Muchas gracias, eres muy amable!»", "voice": "it-IT-DiegoNeural" },
     { "id": "s8", "text": "In cinque minuti arriva al lungomare.", "es": "En cinco minutos llega al paseo marítimo." },
-    { "id": "s9", "text": "Al lido prende un ombrellone e un lettino per il pomeriggio.", "es": "En el chiringuito de playa coge una sombrilla y una tumbona para la tarde." },
+    { "id": "s9", "text": "Al lido prende un ombrellone e un lettino per il pomeriggio.", "es": "En la playa de pago alquila una sombrilla y una tumbona para la tarde." },
     { "id": "s10", "text": "L'acqua è fresca e trasparente, e Hernán nuota tanto.", "es": "El agua está fresquita y transparente, y Hernán nada mucho." },
     { "id": "s11", "text": "Mette anche la crema solare, perché il sole è forte.", "es": "También se pone crema solar, porque el sol pega fuerte." },
-    { "id": "s12", "text": "La sera mangia una pizza sul lungomare e guarda il tramonto.", "es": "Por la noche se come una pizza en el paseo marítimo y mira la puesta de sol." },
+    { "id": "s12", "text": "La sera mangia una pizza sul lungomare e guarda il tramonto.", "es": "Al atardecer se come una pizza en el paseo marítimo y mira la puesta de sol." },
     { "id": "s13", "text": "Domani parte per Agrigento: è stata una giornata perfetta.", "es": "Mañana se va a Agrigento: ha sido un día perfecto." }
   ],
   "keywords": [

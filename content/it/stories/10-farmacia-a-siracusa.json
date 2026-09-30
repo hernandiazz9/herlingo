@@ -83,7 +83,7 @@
     { "id": "g1", "sentence": "s2", "answer": "emer.schiena", "distractors": ["gola", "caviglia"] },
     { "id": "g2", "sentence": "s3", "answer": "emer.puntura", "gap": "punture", "distractors": ["compresse", "ricette"] },
     { "id": "g3", "sentence": "s4", "answer": "emer.farmacia", "distractors": ["pizzeria", "chiesa"] },
-    { "id": "g4", "sentence": "s7", "answer": "story-siracusa-doposole", "distractors": ["pistacchio", "limone"] },
+    { "id": "g4", "sentence": "s7", "answer": "story-siracusa-doposole", "distractors": ["solare", "idratante"] },
     { "id": "g5", "sentence": "s9", "answer": "story-siracusa-ombra", "distractors": ["aperto", "uscita"] },
     { "id": "g6", "sentence": "s10", "answer": "emer.ricetta", "distractors": ["prenotazione", "multa"] }
   ]

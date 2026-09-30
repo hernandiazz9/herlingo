@@ -12,7 +12,7 @@
     { "id": "s2", "text": "Prende un caffè al bar e guarda il mare di Ortigia.", "es": "Se toma un café en el bar y mira el mar de Ortigia." },
     { "id": "s3", "text": "Poi lascia le chiavi della camera alla signora del B&B.", "es": "Luego le deja las llaves de la habitación a la señora del B&B." },
     { "id": "s4", "text": "La saluta e le dice: «Grazie di tutto! È stato un piacere!»", "es": "Se despide de ella y le dice: «¡Gracias por todo! ¡Ha sido un placer!»", "voice": "it-IT-DiegoNeural" },
-    { "id": "s5", "text": "«Buon viaggio, e torna presto!», risponde lei.", "es": "«¡Buen viaje, y vuelve pronto!», responde ella.", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s5", "text": "«Buon viaggio, e torni presto!», risponde lei.", "es": "«¡Buen viaje, y vuelva pronto!», responde ella.", "voice": "it-IT-IsabellaNeural" },
     { "id": "s6", "text": "Alla fermata prende il pullman Interbus per l'aeroporto di Catania.", "es": "En la parada coge el autobús de Interbus al aeropuerto de Catania." },
     { "id": "s7", "text": "Il viaggio dura circa un'ora.", "es": "El viaje dura más o menos una hora." },
     { "id": "s8", "text": "Sul pullman scrive a Chiara: «Ciao! Ci vediamo a Madrid o a Milano?»", "es": "En el autobús le escribe a Chiara: «¡Hola! ¿Nos vemos en Madrid o en Milán?»" },
@@ -41,7 +41,7 @@
       "options": [
         { "text": "Le chiavi della camera.", "es": "Las llaves de la habitación." },
         { "text": "La valigia.", "es": "La maleta." },
-        { "text": "Un chilo di arance.", "es": "Un kilo de naranjas." }
+        { "text": "Un chilo d'uva.", "es": "Un kilo de uva." }
       ],
       "correct": 0
     },
@@ -84,6 +84,6 @@
     { "id": "g2", "sentence": "s4", "answer": "story-ritorno-salutare", "gap": "saluta", "distractors": ["chiude", "vende"] },
     { "id": "g3", "sentence": "s6", "answer": "move-bus.pullman", "distractors": ["traghetto", "motorino"] },
     { "id": "g4", "sentence": "s9", "answer": "talk-chiacchiere.magari", "gap": "Magari", "distractors": ["Aiuto", "Permesso"] },
-    { "id": "g5", "sentence": "s11", "answer": "move-bus.volo", "distractors": ["museo", "negozio"] }
+    { "id": "g5", "sentence": "s11", "answer": "move-bus.volo", "distractors": ["treno", "traghetto"] }
   ]
 }
