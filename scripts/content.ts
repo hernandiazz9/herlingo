@@ -4,12 +4,14 @@
  *
  *   npm run content:check   validate only; exit 1 on any error
  *   npm run content:build   validate + write src/lib/content/generated/packs.json
+ *   npm run content:check -- --strict-audio   also fail when a playable has no mp3 (npm run audio)
  *
  * Layout per pack: pack.json, units/*.json, dialogues/*.json, extras/*.json (see docs/content-guide.md).
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
 import { buildPack, packStats, type SourceFile } from "../src/lib/content/build";
+import { checkAudio } from "./audio/plan";
 import type { Pack } from "../src/lib/content/types";
 
 // npm scripts always run from the repo root.
@@ -18,6 +20,7 @@ const CONTENT = join(ROOT, "content");
 const OUT = join(ROOT, "src/lib/content/generated/packs.json");
 
 const mode = process.argv[2] ?? "check";
+const strictAudio = process.argv.includes("--strict-audio");
 if (mode !== "check" && mode !== "build") {
   console.error(`Unknown mode "${mode}". Use "check" or "build".`);
   process.exit(2);
@@ -68,7 +71,7 @@ for (const lang of langs) {
     dialogues: readDir(join(dir, "dialogues"), readErrors),
     extras: readDir(join(dir, "extras"), readErrors),
   });
-  const all = [...readErrors, ...errors];
+  const all = [...readErrors, ...errors, ...(pack && strictAudio ? checkAudio(pack, ROOT) : [])];
   if (all.length || !pack) {
     failed = true;
     console.error(`✗ content/${lang}: ${all.length} error(s)`);

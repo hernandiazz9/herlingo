@@ -6,16 +6,19 @@
  *   <button onClick={() => speak(phrase, { slow: true })}>…</button>
  *   speak("Buongiorno!")                                       // free text (TTS only)
  *
- * Contract (stable; T03 adds pre-generated mp3 behind it without changing callers):
+ * Contract (stable):
  * - `speak()` stops whatever is playing, then plays. It returns a promise that resolves when
  *   playback ends, fails or is interrupted; it never rejects. Call it directly inside a user
  *   gesture handler (iOS), do not `await` anything before calling it.
- * - A Playable (`{ text, audioKey, voice }`) may use its mp3 (`/audio/<lang>/<audioKey>.mp3`)
- *   once T03 lands; plain strings and missing mp3s use browser speechSynthesis in the pack's
- *   `speechLocale`.
- * - `slow: true` plays at `SLOW_RATE`.
+ * - A Playable (`{ text, audioKey, voice }`) plays its neural mp3 when
+ *   `public/audio/<lang>/manifest.json` lists its key (`npm run audio`). Plain strings, keys
+ *   without mp3, a manifest not loaded yet, or an mp3 that fails to load/play use browser
+ *   speechSynthesis in the pack's `speechLocale`.
+ * - `slow: true` plays at `SLOW_RATE` (mp3 keeps its pitch).
+ * - The first tap/key anywhere unlocks audio for iOS (see `unlockOnFirstGesture`).
  */
-import { getPack, type Playable } from "@/lib/content";
+import { DEFAULT_LANG, getPack, type Playable } from "@/lib/content";
+import { mp3Available, mp3Play, mp3Stop, mp3Url, preloadManifest, unlockOnFirstGesture } from "./mp3";
 import { ttsAvailable, ttsSpeak, ttsStop } from "./speech-synthesis";
 
 export type SpeakInput = Playable | string;
@@ -27,21 +30,38 @@ export interface SpeakOptions {
   lang?: string;
 }
 
-/** Playback rate for slow mode (speech and, later, mp3). */
+/** Playback rate for slow mode (mp3 and speech). */
 export const SLOW_RATE = 0.7;
 
+/** Bumped by every speak()/stop(), so a late mp3 failure never starts a stale fallback. */
+let generation = 0;
+
+if (mp3Available()) {
+  preloadManifest(DEFAULT_LANG);
+  unlockOnFirstGesture();
+}
+
 export function speak(input: SpeakInput, options: SpeakOptions = {}): Promise<void> {
+  stop();
+  const my = generation;
+  const { meta } = getPack(options.lang);
   const text = typeof input === "string" ? input : input.text;
-  const locale = getPack(options.lang).meta.speechLocale;
-  return ttsSpeak(text, locale, options.slow ? SLOW_RATE : 1);
+  const rate = options.slow ? SLOW_RATE : 1;
+  const url = typeof input === "string" ? undefined : mp3Url(meta.lang, input.audioKey);
+  if (!url) return ttsSpeak(text, meta.speechLocale, rate);
+  return mp3Play(url, rate).then((result) => {
+    if (result === "failed" && my === generation) return ttsSpeak(text, meta.speechLocale, rate);
+  });
 }
 
 /** Stops any audio that is playing. */
 export function stop(): void {
+  generation++;
+  mp3Stop();
   ttsStop();
 }
 
 /** True when some audio output is possible in this browser. */
 export function canSpeak(): boolean {
-  return ttsAvailable();
+  return mp3Available() || ttsAvailable();
 }
