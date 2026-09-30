@@ -14,10 +14,12 @@
  *   `public/audio/<lang>/manifest.json` lists its key (`npm run audio`). Plain strings, keys
  *   without mp3, a manifest not loaded yet, or an mp3 that fails to load/play use browser
  *   speechSynthesis in the pack's `speechLocale`.
- * - `slow: true` plays at `SLOW_RATE` (mp3 keeps its pitch).
+ * - `slow: true` plays at `SLOW_RATE` (mp3 keeps its pitch). With the "Audio lento" setting on
+ *   (`@/lib/progress/settings`), everything plays slow.
  * - The first tap/key anywhere unlocks audio for iOS (see `unlockOnFirstGesture`).
  */
 import { DEFAULT_LANG, getPack, type Playable } from "@/lib/content";
+import { getSettings } from "@/lib/progress/settings";
 import { mp3Available, mp3Play, mp3Stop, mp3Url, preloadManifest, unlockOnFirstGesture } from "./mp3";
 import { ttsAvailable, ttsSpeak, ttsStop } from "./speech-synthesis";
 
@@ -46,7 +48,7 @@ export function speak(input: SpeakInput, options: SpeakOptions = {}): Promise<vo
   const my = generation;
   const { meta } = getPack(options.lang);
   const text = typeof input === "string" ? input : input.text;
-  const rate = options.slow ? SLOW_RATE : 1;
+  const rate = options.slow || getSettings().slowAudio ? SLOW_RATE : 1;
   const url = typeof input === "string" ? undefined : mp3Url(meta.lang, input.audioKey);
   if (!url) return ttsSpeak(text, meta.speechLocale, rate);
   return mp3Play(url, rate).then((result) => {

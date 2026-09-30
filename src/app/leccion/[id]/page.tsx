@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LessonPlayer } from "@/components/lesson";
 import { getAllLessons, getLesson } from "@/lib/content";
+import { LessonRoute } from "./LessonRoute";
 
 // Static export: one page per lesson, nothing else.
 export const dynamicParams = false;
@@ -16,10 +16,10 @@ export async function generateMetadata({ params }: PageProps<"/leccion/[id]">): 
   return { title: lesson?.title ?? "Lección" };
 }
 
-/** Lesson session. Progress persistence (T07) plugs in through `LessonPlayer`'s `onComplete`. */
+/** Lesson session; the result is saved on the device (`LessonRoute`). */
 export default async function LessonPage({ params }: PageProps<"/leccion/[id]">) {
   const { id } = await params;
   const lesson = getLesson(decodeURIComponent(id));
   if (!lesson) notFound();
-  return <LessonPlayer lessonId={lesson.id} />;
+  return <LessonRoute lessonId={lesson.id} />;
 }

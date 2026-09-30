@@ -1,0 +1,96 @@
+{
+  "placement": [
+    {
+      "id": "placement.saludos",
+      "prompt": "¿Qué significa?",
+      "text": "Grazie mille, buona giornata!",
+      "options": ["¡Muchas gracias, que vaya bien el día!", "¡Mil perdones, buenos días!", "Gracias, hasta mañana.", "¡Muchas gracias, buenas noches!"],
+      "answer": 0,
+      "lessons": ["surv.l.cortesia"]
+    },
+    {
+      "id": "placement.non-capisco",
+      "prompt": "¿Qué significa?",
+      "text": "Può ripetere più piano, per favore?",
+      "options": ["¿Puede hablar más alto, por favor?", "¿Puede repetir más despacio, por favor?", "¿Puedo repetir otra vez, por favor?", "¿Puede escribirlo, por favor?"],
+      "answer": 1,
+      "lessons": ["surv.l.non-capisco"]
+    },
+    {
+      "id": "placement.prezzo",
+      "prompt": "Escucha: ¿cuánto cuesta?",
+      "text": "Sono diciassette euro.",
+      "options": ["7 €", "70 €", "17 €", "16 €"],
+      "answer": 2,
+      "lessons": ["surv.l.numeri", "surv.l.pagare"]
+    },
+    {
+      "id": "placement.orario",
+      "prompt": "¿Qué significa?",
+      "text": "Domani pomeriggio, alle tre e mezza.",
+      "options": ["Mañana por la tarde, a las tres y media.", "Mañana por la mañana, a las tres y media.", "Hoy por la tarde, a las tres menos cuarto.", "Pasado mañana, a las dos y media."],
+      "answer": 0,
+      "lessons": ["surv.l.orari", "surv.l.giorni"]
+    },
+    {
+      "id": "placement.farmacia",
+      "prompt": "En la farmacia quieres algo para el dolor de cabeza. ¿Qué dices?",
+      "options": ["Ha qualcosa per il mal di pancia?", "C'è una farmacia qui vicino?", "Mi fa male la gola.", "Ha qualcosa per il mal di testa?"],
+      "answer": 3,
+      "lessons": ["emer.l.farmacia", "emer.l.dolori"]
+    },
+    {
+      "id": "placement.biglietto",
+      "prompt": "Quieres un billete de ida y vuelta a Cefalù. ¿Qué dices?",
+      "options": ["Un biglietto solo andata per Cefalù, per favore.", "Un biglietto andata e ritorno per Cefalù, per favore.", "Un binario per Cefalù, per favore.", "Un ritorno da Cefalù, per favore."],
+      "answer": 1,
+      "lessons": ["move-treno.l.biglietto"]
+    },
+    {
+      "id": "placement.binario",
+      "prompt": "Oyes este aviso en la estación. ¿Qué dice?",
+      "text": "Il regionale per Siracusa parte dal binario tre con dieci minuti di ritardo.",
+      "options": ["El regional para Siracusa sale del andén tres con diez minutos de retraso.", "El regional para Siracusa llega al andén diez con tres minutos de retraso.", "El regional para Siracusa sale a las tres y diez del andén uno.", "El regional para Siracusa está cancelado; hay un bus en el andén tres."],
+      "answer": 0,
+      "lessons": ["move-treno.l.binario", "move-treno.l.ritardo"]
+    },
+    {
+      "id": "placement.fermata",
+      "prompt": "¿Cómo preguntas dónde está la parada del autobús?",
+      "options": ["Dove si compra il biglietto dell'autobus?", "Quando arriva l'autobus?", "Dov'è la fermata dell'autobus?", "Dov'è l'autostazione?"],
+      "answer": 2,
+      "lessons": ["move-bus.l.urbano"]
+    },
+    {
+      "id": "placement.indicazioni",
+      "prompt": "Preguntas el camino y te contestan. ¿Qué te dicen?",
+      "text": "Vada sempre dritto e al semaforo giri a destra.",
+      "options": ["Siga todo recto y en el semáforo gire a la izquierda.", "Gire a la derecha y siga recto hasta el semáforo.", "Siga todo recto y en el semáforo gire a la derecha.", "Está a la derecha, justo después del semáforo."],
+      "answer": 2,
+      "lessons": ["move-strada.l.capire", "move-strada.l.chiedere"]
+    },
+    {
+      "id": "placement.di-dove",
+      "prompt": "Un italiano te pregunta esto. ¿Qué le contestas?",
+      "text": "Di dove sei?",
+      "options": ["Sto bene, grazie.", "Sono di Madrid.", "Vado a Siracusa.", "Sono qui da ieri."],
+      "answer": 1,
+      "lessons": ["talk-chiacchiere.l.presentarsi", "talk-chiacchiere.l.domande"]
+    },
+    {
+      "id": "placement.bar",
+      "prompt": "En la barra quieres un capuchino y un cruasán. ¿Qué dices?",
+      "options": ["Un caffè e una brioche, per favore.", "Un cappuccino e un cannolo, per favore.", "Un cappuccino e un cornetto, per favore.", "Un cornetto al cappuccino, per favore."],
+      "answer": 2,
+      "lessons": ["food.l.caffe", "food.l.banco"]
+    },
+    {
+      "id": "placement.conto",
+      "prompt": "¿Qué significa?",
+      "text": "Ci porta il conto, per favore?",
+      "options": ["¿Nos trae la carta, por favor?", "¿Nos cobra el cubierto, por favor?", "¿Nos trae la cuenta, por favor?", "¿Nos cuenta algo, por favor?"],
+      "answer": 2,
+      "lessons": ["food.l.conto"]
+    }
+  ]
+}

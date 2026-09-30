@@ -1,0 +1,159 @@
+"use client";
+
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState, type ReactNode } from "react";
+import { ThemeToggle } from "@/components/shell/ThemeToggle";
+import { Button, Card } from "@/components/ui";
+import { DEFAULT_LANG, getAllLessons, getPack } from "@/lib/content";
+import { cn } from "@/lib/cn";
+import { currentStreak, resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
+import { useProgress, useSettings } from "@/lib/progress/use-progress";
+
+/** Destructive button: error colours, same shape and press animation as `Button`. */
+const DANGER =
+  "pressable inline-flex items-center justify-center rounded-button border-2 border-error bg-surface px-5 font-bold tracking-wide text-error-deep [--ledge:var(--error-ledge)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
+
+/** Stats (XP, streak, words, lessons) and settings. */
+export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
+  const router = useRouter();
+  const pack = getPack(lang);
+  const progress = useProgress(lang);
+  const settings = useSettings();
+  const [confirmReset, setConfirmReset] = useState(false);
+
+  const lessonsTotal = getAllLessons(pack).length;
+  const lessonsDone = getAllLessons(pack).filter((l) => l.id in progress.lessons).length;
+
+  const reset = () => {
+    resetProgress(lang);
+    setConfirmReset(false);
+    router.push("/");
+  };
+
+  return (
+    <>
+      <div className="grid grid-cols-2 gap-3">
+        <Stat value={progress.xp} label="XP" />
+        <Stat value={currentStreak(progress)} label="días seguidos" note={`Récord: ${progress.streak.best}`} />
+        <Stat value={wordsLearned(progress, pack)} label="palabras aprendidas" />
+        <Stat value={`${lessonsDone}/${lessonsTotal}`} label="lecciones hechas" />
+      </div>
+
+      <section aria-labelledby="settings-title" className="flex flex-col gap-3">
+        <h2 id="settings-title" className="text-2xl font-extrabold tracking-tight text-ink">
+          Ajustes
+        </h2>
+        <Card className="flex flex-col gap-4">
+          <Toggle
+            label="Audio lento por defecto"
+            hint="Todo el audio suena más despacio."
+            checked={settings.slowAudio}
+            onChange={(v) => updateSettings({ slowAudio: v })}
+          />
+          <div className="h-0.5 bg-line" />
+          <Toggle
+            label="Ejercicios de hablar"
+            hint="Decir frases en voz alta en lecciones y repasos."
+            checked={settings.speaking}
+            onChange={(v) => updateSettings({ speaking: v })}
+          />
+        </Card>
+        <Card className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <h3 className="text-lg font-bold text-ink">Tema</h3>
+            <p className="text-sm text-ink-muted">Sistema sigue el modo claro u oscuro de tu móvil.</p>
+          </div>
+          <ThemeToggle />
+        </Card>
+        <Card className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <h3 className="text-lg font-bold text-ink">Prueba de nivel</h3>
+            <p className="text-sm text-ink-muted">Unos 3 minutos. Marca como hechas las lecciones que ya dominas.</p>
+          </div>
+          <Link
+            href="/bienvenida/prueba/"
+            className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
+          >
+            Repetir la prueba de nivel
+          </Link>
+        </Card>
+        <Card tone="terracotta" className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <h3 className="text-lg font-bold text-ink">Borrar progreso</h3>
+            <p className="text-sm text-ink">Lecciones, XP, racha y repasos de este móvil. No se puede deshacer.</p>
+          </div>
+          <button type="button" onClick={() => setConfirmReset(true)} className={cn(DANGER, "min-h-12 text-base")}>
+            Borrar mi progreso
+          </button>
+        </Card>
+      </section>
+
+      {confirmReset ? (
+        <div className="fixed inset-0 z-[60] flex items-end justify-center bg-backdrop/80 p-4 pb-[calc(var(--safe-bottom)+1rem)]">
+          <div
+            role="alertdialog"
+            aria-modal="true"
+            aria-labelledby="reset-title"
+            aria-describedby="reset-desc"
+            className="flex w-full max-w-[calc(var(--column-width)-2rem)] flex-col gap-4 rounded-card border-2 border-line bg-surface p-5 shadow-[0_12px_40px_-12px_var(--shadow)]"
+          >
+            <h2 id="reset-title" className="text-2xl font-extrabold text-ink">
+              ¿Borrar tu progreso?
+            </h2>
+            <p id="reset-desc" className="text-base text-ink-muted">
+              Perderás {progress.xp} XP, tu racha y las {lessonsDone} lecciones hechas. Volverás a la bienvenida.
+            </p>
+            <Button fullWidth autoFocus onClick={() => setConfirmReset(false)}>
+              Cancelar
+            </Button>
+            <button type="button" onClick={reset} className={cn(DANGER, "min-h-14 w-full text-lg")}>
+              Sí, borrar todo
+            </button>
+          </div>
+        </div>
+      ) : null}
+    </>
+  );
+}
+
+function Stat({ value, label, note }: { value: ReactNode; label: string; note?: string }) {
+  return (
+    <Card className="flex flex-col gap-0.5 p-4">
+      <span className="text-3xl font-extrabold text-ink">{value}</span>
+      <span className="text-sm font-bold text-ink-muted">{label}</span>
+      {note ? <span className="text-xs text-ink-muted">{note}</span> : null}
+    </Card>
+  );
+}
+
+function Toggle({ label, hint, checked, onChange }: { label: string; hint: string; checked: boolean; onChange: (v: boolean) => void }) {
+  return (
+    <button
+      type="button"
+      role="switch"
+      aria-checked={checked}
+      onClick={() => onChange(!checked)}
+      className="flex w-full items-center gap-4 text-left focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-lemon-deep"
+    >
+      <span className="flex min-w-0 flex-1 flex-col gap-0.5">
+        <span className="text-lg font-bold text-ink">{label}</span>
+        <span className="text-sm text-ink-muted">{hint}</span>
+      </span>
+      <span
+        aria-hidden="true"
+        className={cn(
+          "relative inline-flex h-8 w-14 shrink-0 rounded-full border-2 transition-colors motion-reduce:transition-none",
+          checked ? "border-sea bg-sea" : "border-line bg-sand",
+        )}
+      >
+        <span
+          className={cn(
+            "absolute top-0.5 size-6 rounded-full bg-surface shadow-[0_1px_2px_var(--shadow)] transition-[left] motion-reduce:transition-none",
+            checked ? "left-[1.625rem]" : "left-0.5",
+          )}
+        />
+      </span>
+    </button>
+  );
+}

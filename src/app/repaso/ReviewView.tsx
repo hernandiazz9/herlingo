@@ -1,0 +1,117 @@
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { LessonPlayer } from "@/components/lesson";
+import { Button, Card } from "@/components/ui";
+import { DEFAULT_LANG, getItem, getPack, type Lesson } from "@/lib/content";
+import { defaultSessionSize } from "@/lib/exercises";
+import { dueItemIds, recordReviewResult } from "@/lib/progress";
+import { startOfDay } from "@/lib/progress/dates";
+import { useHydrated, useNow, useProgress } from "@/lib/progress/use-progress";
+import { REVIEW_SIZE, nextDue } from "@/lib/srs";
+
+/** Due items (spaced repetition) and a review session through the lesson player. */
+export function ReviewView({ lang = DEFAULT_LANG }: { lang?: string }) {
+  const pack = getPack(lang);
+  const progress = useProgress(lang);
+  const now = useNow();
+  const hydrated = useHydrated();
+  const [session, setSession] = useState<Lesson | null>(null);
+
+  if (!hydrated || !now) return null;
+
+  const due = dueItemIds(progress, pack, now);
+  const wrong = due.filter((id) => (progress.srs[id]?.box ?? 0) >= 1 && (progress.srs[id]?.lapses ?? 0) > 0).length;
+  const fresh = due.filter((id) => progress.srs[id]?.box === 0).length;
+  const next = nextDue(progress.srs, now);
+
+  const start = () => {
+    const items = due.slice(0, REVIEW_SIZE);
+    setSession({ id: "review", title: `Repaso: ${items.length} ${items.length === 1 ? "cosa" : "cosas"}`, items, unitId: "", index: 0 });
+  };
+
+  if (session) {
+    // Short reviews stay short: about two exercises per item.
+    const size = Math.min(defaultSessionSize(session.items.length), Math.max(4, session.items.length * 2));
+    return (
+      <LessonPlayer lang={lang} lesson={session} sessionSize={size} onComplete={recordReviewResult} onExit={() => setSession(null)} />
+    );
+  }
+
+  if (!due.length) {
+    const tracked = Object.keys(progress.srs).length;
+    return (
+      <Card tone="sea" className="flex flex-col gap-3">
+        <p aria-hidden="true" className="text-5xl">
+          {tracked ? "✅" : "🌱"}
+        </p>
+        <p className="text-xl font-extrabold text-ink">{tracked ? "¡Todo al día!" : "Todavía no hay nada que repasar"}</p>
+        <p className="text-base text-ink">
+          {tracked
+            ? `Lo siguiente vuelve ${whenLabel(next, now)}. Mientras, sigue con tu ruta.`
+            : "Cuando hagas lecciones, aquí volverá lo que falles y lo que te quede por practicar."}
+        </p>
+        <Link
+          href="/"
+          className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
+        >
+          Ir a la ruta
+        </Link>
+      </Card>
+    );
+  }
+
+  const preview = due.slice(0, REVIEW_SIZE).map((id) => getItem(id, pack)).filter((i) => !!i);
+
+  return (
+    <>
+      <Card tone="lemon" className="flex flex-col gap-4">
+        <div className="flex flex-col gap-1">
+          <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">Para repasar hoy</p>
+          <p className="text-3xl font-extrabold text-ink">{due.length}</p>
+          <p className="text-base text-ink">
+            {[wrong ? `${wrong} que fallaste` : "", fresh ? `${fresh} sin practicar aún` : "", due.length - wrong - fresh > 0 ? `${due.length - wrong - fresh} a punto de olvidar` : ""]
+              .filter(Boolean)
+              .join(" · ")}
+          </p>
+        </div>
+        <Button fullWidth onClick={start}>
+          Empezar repaso
+        </Button>
+        {due.length > REVIEW_SIZE ? (
+          <p className="text-sm text-ink-muted">Cada repaso toma {REVIEW_SIZE}; puedes encadenar varios.</p>
+        ) : null}
+      </Card>
+      <section aria-labelledby="review-next" className="flex flex-col gap-2">
+        <h2 id="review-next" className="text-lg font-bold text-ink">
+          En este repaso
+        </h2>
+        <ul className="flex flex-col gap-2">
+          {preview.map((item) => (
+            <li key={item.id} className="rounded-card border-2 border-line bg-surface px-4 py-3">
+              {item.kind === "grammar" ? (
+                <span className="font-bold text-ink">{item.title}</span>
+              ) : (
+                <>
+                  <span lang={pack.meta.lang} className="font-bold text-ink">
+                    {item.text}
+                  </span>
+                  <span className="text-ink-muted"> · {item.kind === "qa" ? item.questionEs : item.es}</span>
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
+    </>
+  );
+}
+
+function whenLabel(due: number | undefined, now: number): string {
+  if (!due) return "más adelante";
+  const days = Math.round((startOfDay(due) - startOfDay(now)) / 86_400_000);
+  if (days <= 0) return "hoy mismo";
+  if (days === 1) return "mañana";
+  return `dentro de ${days} días`;
+}

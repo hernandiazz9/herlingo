@@ -5,7 +5,7 @@ import { useRef, useState, useSyncExternalStore } from "react";
 import { CloseIcon, ExerciseView, GrammarTip, LessonLangContext } from "@/components/exercises";
 import { Button, Card, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { DEFAULT_LANG, getLesson, getPack, getUnit } from "@/lib/content";
+import { DEFAULT_LANG, getLesson, getPack, getUnit, type Lesson } from "@/lib/content";
 import {
   buildResult,
   generateSession,
@@ -15,6 +15,7 @@ import {
   type LessonResult,
   type SessionStep,
 } from "@/lib/exercises";
+import { getSettings } from "@/lib/progress/settings";
 import {
   isSpeakingPaused,
   pauseSpeaking,
@@ -29,7 +30,9 @@ import { FeedbackSheet } from "./FeedbackSheet";
 export const MAX_RETRIES = 2;
 
 export interface LessonPlayerProps {
-  lessonId: string;
+  lessonId?: string;
+  /** Ad-hoc lesson (e.g. a review session) instead of `lessonId`. */
+  lesson?: Lesson;
   lang?: string;
   /** Fixed seed (same session every time); by default each start gets a new one. */
   seed?: string;
@@ -37,6 +40,10 @@ export interface LessonPlayerProps {
   onComplete?: (result: LessonResult) => void;
   /** Where "exit" and the final "Continuar" go. */
   exitHref?: string;
+  /** Called instead of navigating to `exitHref`. */
+  onExit?: () => void;
+  /** Graded exercises wanted (default: by lesson size). */
+  sessionSize?: number;
 }
 
 interface Entry {
@@ -60,10 +67,10 @@ const noPause = () => 0;
 const now = () => Date.now();
 
 /** Full-screen lesson session: intro → exercises with feedback → result with XP. */
-export function LessonPlayer({ lessonId, lang = DEFAULT_LANG, seed, onComplete, exitHref = "/" }: LessonPlayerProps) {
+export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, seed, onComplete, exitHref = "/", onExit, sessionSize }: LessonPlayerProps) {
   const router = useRouter();
   const pack = getPack(lang);
-  const lesson = getLesson(lessonId, pack);
+  const lesson = adHoc ?? (lessonId ? getLesson(lessonId, pack) : undefined);
   const unit = lesson ? getUnit(lesson.unitId, pack) : undefined;
 
   const [phase, setPhase] = useState<Phase>({ name: "intro" });
@@ -92,7 +99,7 @@ export function LessonPlayer({ lessonId, lang = DEFAULT_LANG, seed, onComplete, 
 
   const start = () => {
     const s = seed ?? String(now());
-    const steps = generateSession(lesson, pack, { seed: s, speaking: !isSpeakingPaused() });
+    const steps = generateSession(lesson, pack, { seed: s, speaking: getSettings().speaking && !isSpeakingPaused(), size: sessionSize });
     const q = steps.map((step) => ({ step, attempt: 0, uid: step.key }));
     run.current = { seed: s, startedAt: now(), firstTry: new Set(), items: new Map() };
     setQueue(q);
@@ -170,7 +177,8 @@ export function LessonPlayer({ lessonId, lang = DEFAULT_LANG, seed, onComplete, 
 
   const leave = () => {
     stop();
-    router.push(exitHref);
+    if (onExit) onExit();
+    else router.push(exitHref);
   };
 
   const requestExit = () => (phase.name === "run" ? setConfirmExit(true) : leave());

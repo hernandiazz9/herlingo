@@ -34,6 +34,8 @@ src/lib/               Framework-free logic. navigation.ts = the tab list (singl
                        theme/ = light/dark choice (localStorage), inline pre-paint script, theme-color.
 src/lib/content/       Content contract: schema.ts (zod, source JSON), types.ts (runtime types), index.ts (loader).
 src/lib/audio/         speak() / stop(): the only way to play target-language audio.
+src/lib/progress/      On-device progress (`lang-lern:progress:<lang>`, versioned, tolerant parsing), settings,
+                       path model; hooks in use-progress.ts. src/lib/srs/ = Leitner spaced repetition.
 content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/. Only `it` exists.
                        Format, ids, order ranges and quality rules: docs/content-guide.md.
                        Code never hard-codes content.
