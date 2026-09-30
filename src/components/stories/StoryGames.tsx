@@ -228,6 +228,8 @@ export function StoryGames({ story, lang, onExit }: { story: Story; lang: string
           ) : null}
           {confirmExit ? (
             <ExitDialog
+              title="¿Salir de la historia?"
+              description="Si sales ahora, perderás lo que llevas de esta historia."
               onStay={() => setConfirmExit(false)}
               onLeave={() => {
                 setConfirmExit(false);

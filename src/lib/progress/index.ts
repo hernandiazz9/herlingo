@@ -9,6 +9,8 @@
  */
 import { getItem, getLesson, getLessonItems, getPack, type Pack } from "@/lib/content";
 import type { LessonResult } from "@/lib/exercises";
+import { clearGame } from "@/lib/game/storage";
+import { clearStoriesDone } from "@/lib/stories/done";
 import { dueIds, newEntry, parseEntry, schedule, type SrsEntry } from "@/lib/srs";
 import { addDays, dayKey, isDayKey } from "./dates";
 
@@ -242,12 +244,17 @@ export function completeOnboarding(lang: string): Progress {
   });
 }
 
-/** Deletes all progress of the pack (settings are kept). The welcome shows again. */
+/**
+ * Deletes all progress of the pack, plus its game records/known phrases and finished stories
+ * (settings are kept). The welcome shows again.
+ */
 export function resetProgress(lang: string): void {
   try {
     window.localStorage.removeItem(key(lang));
   } catch {
     // Nothing stored.
   }
+  clearGame(lang);
+  clearStoriesDone(lang);
   window.dispatchEvent(new Event(EVENT));
 }

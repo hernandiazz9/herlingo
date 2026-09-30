@@ -57,6 +57,16 @@ export function markStoryDone(lang: string, storyId: string, now = Date.now()): 
   window.dispatchEvent(new Event(EVENT));
 }
 
+/** Forgets which stories were finished (part of "Borrar progreso"). */
+export function clearStoriesDone(lang: string): void {
+  try {
+    window.localStorage.removeItem(key(lang));
+  } catch {
+    // Nothing stored.
+  }
+  window.dispatchEvent(new Event(EVENT));
+}
+
 function subscribe(onChange: () => void): () => void {
   const onStorage = (e: StorageEvent) => {
     if (e.key === null || e.key.startsWith(PREFIX)) onChange();

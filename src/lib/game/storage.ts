@@ -85,3 +85,13 @@ export function markKnown(lang: string, phraseId: string): void {
   state.known.push(phraseId);
   save(lang, state);
 }
+
+/** Deletes the pack's game records and "La sé" phrases (part of "Borrar progreso"). */
+export function clearGame(lang: string): void {
+  try {
+    window.localStorage.removeItem(key(lang));
+  } catch {
+    // Nothing stored.
+  }
+  window.dispatchEvent(new Event(EVENT));
+}
