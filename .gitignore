@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.venv/
+.env*
+!.env.example
+.DS_Store
+.claude/worktrees/
+.orchestrator/logs/
+test-results/
+playwright-report/
