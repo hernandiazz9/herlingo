@@ -38,7 +38,7 @@ Worktree setup: npm ci
 - Outcome: phrase `explanation?`, Story schema + getStories/getStory/getStoryKeywords, stories in listPlayables/audio plan, content:check story validation, sample story · 9d1e54e
 
 ## T15 — Explanations for getting-around and talking phrases
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T14
 - Goal: Write the `explanation` for every phrase in units ordered 20–39 (move-*, talk-*): when to use it and one pronunciation tip.
 - Context: docs/brief.md (learner: Spain Spanish "tú", A1, Sicily trip), docs/content-guide.md (explanation rules from T14). Files `content/it/units/2*.json` and `3*.json`. Keep each explanation 1–2 short lines, concrete ("Se lo dices al revisor cuando…"; "«gli» suena como una «ll» suave"). Don't change Italian texts or ids.
@@ -46,7 +46,7 @@ Worktree setup: npm ci
 - Done when:
   - Every phrase in those units has an explanation (count reported).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 260/260 phrases in move/talk units have explanations · 69e85f9
 
 ## T16 — Explanations for survival, emergencies and food phrases
 - Status: done
@@ -131,6 +131,7 @@ Worktree setup: npm ci
 - 2026-09-30 T14: story fields `text` (sentences/options), `title` + `titleEs`, question `es`, `correct` 0-based; ids story.<slug>, inline keywords story-<slug>, local s1/q1/g1; keywords may reference vocab, phrase or expression; gaps have optional `gap` form + built before/after; gap chips no audio; narrator voice = story voice or default; content:check warns outside 80–150 words, 8–10 keywords, 3–4 questions, 4–6 gaps; story order unique, sample uses 0. (agent)
 - 2026-09-30 orchestrator: run all 6 ready tasks (T15–T20) at once, per Hernán's max-speed request. (orchestrator)
 - 2026-09-30 T16: pronunciation respelling scheme: stressed syllable in capitals, gi/ge→dy, ci/ce→chi/che, z→ts/dz, gli→soft ll, gn→ñ, doubles marked, silent h. (agent)
+- 2026-09-30 T15: explanation inserted before register; for phrases the learner hears (announcements, inspector) the tip says where you hear it and what to do. (agent)
 
 ## Proposals (new scope)
 
@@ -147,3 +148,4 @@ Worktree setup: npm ci
 - 2026-09-30 20:23 T19 launched · attempt 1 · agent adc312cab832b2d6f
 - 2026-09-30 20:23 T20 launched · attempt 1 · agent a34289261fb6eccd3
 - 2026-09-30 T16 done · branch worktree-agent-a647d201261a0ed35 → bb95c64
+- 2026-09-30 T15 done · branch worktree-agent-aaf6fced4038653b6 → 69e85f9
