@@ -110,7 +110,7 @@ Worktree setup: npm ci
 - Outcome: /historias list + /historias/[id] reader (tap-to-hear, translations, Escuchar todo, keyword popovers) and 4 games, XP/streak/SRS, done state · 7fd21d4
 
 ## T21 — Story review and final audio
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T15, T16, T17, T18
 - Goal: Native-level review of the 12 stories (Italian naturalness, level A1–A2, consistency of the trip narrative and persona, Spain-Spanish translations with "tú") and of a sample of the new explanations, then generate audio for every new playable.
 - Context: docs/brief.md, docs/content-guide.md, docs/content-review.md (style of the previous review). Never rename or delete ids. Also remove the stale mentions of the deleted `stories/sample-story.json` in docs/content-guide.md (T17). Story voices: narrator Elsa, Hernán Diego, women Isabella (T17/T18). `npm run audio` creates .venv itself and needs internet.
@@ -119,7 +119,7 @@ Worktree setup: npm ci
   - Fixes applied in place and appended to docs/content-review.md (categories with counts).
   - `npm run audio` run, mp3s committed; `npm run content:check -- --strict-audio` → exit 0.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 45 fixes (17 stories, 28 explanations) in docs/content-review.md; 354 new mp3s, strict-audio passes · db66985
 
 ## T22 — Small fixes: reset progress, exit dialog copy
 - Status: done
@@ -150,8 +150,10 @@ Worktree setup: npm ci
 - 2026-09-30 T20: kept T19 recordActivity; stories send every practised keyword (wrong→box 1, right→up), game sends only wrong ones; done state in lang-lern:stories:<lang>; XP 10 + 1 per first-try right; order game up to 5 sentences; summary counts as finished; keyword matching by word/article/plural/gap/stem. (agent)
 - 2026-09-30 orchestrator: added T22 (small fixes left by T19/T20). (orchestrator)
 - 2026-09-30 T22: clearGame/clearStoriesDone imported directly (no heavy/circular imports); game does not use ExitDialog. (agent)
+- 2026-09-30 T21: Cefalù fare 7.10 € each way; oranges→grapes (mid-October); fishmonger voice→narrator; Hernán no longer says Sicilian expressions; 19 respellings dj→dy. (agent)
 
 ## Proposals (new scope)
+- 2026-09-30 T21: Palermo–Agrigento buses are mostly Cuffaro/Camilleri, not AST/SAIS (story 6 unchanged); story-ritorno-chiave duplicates story-palermo-chiave; seasonal doubts (Cefalù lidi, swordfish) listed in content-review.md.
 - 2026-09-30 T20: resetProgress on /perfil does not clear stories/game keys; ExitDialog says '¿Salir de la lección?' in stories; lesson components hard-code lang="it"; one keyword in story.pullman-per-agrigento is never highlighted.
 - 2026-09-30 T17: docs/content-guide.md still mentions deleted stories/sample-story.json (lines 24, 120).
 - 2026-09-30 T19: check game mode in light theme by eye.
@@ -178,3 +180,4 @@ Worktree setup: npm ci
 - 2026-09-30 T20 done · branch worktree-agent-a34289261fb6eccd3 → 7fd21d4
 - 2026-09-30 20:33 T22 launched · attempt 1 · agent a5514bc74a3bd77fb
 - 2026-09-30 T22 done · branch worktree-agent-a5514bc74a3bd77fb → e3abe1d
+- 2026-09-30 T21 done · branch worktree-agent-af162457e0fd6a83d → db66985
