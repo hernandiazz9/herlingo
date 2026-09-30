@@ -10,7 +10,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T01 — Project scaffold, Sicilian theme and mobile shell
-- Status: running (attempt 1)
+- Status: done
 - Depends on: none
 - Goal: Create the Next.js app every other task builds on: tooling, Sicilian design system, mobile app shell with bottom navigation and the `npm run verify` command.
 - Context: docs/brief.md (all product decisions). The repo only has docs/ and plans/. Use the latest stable Next.js (App Router), TypeScript strict, Tailwind, ESLint, `output: 'export'` (static export, no server runtime). Layout: `src/app`, `src/components`, `src/lib`, `content/<lang>/`, `scripts/`. No test frameworks (no Vitest, no Playwright).
@@ -20,10 +20,10 @@ Worktree setup: npm ci
   - Design tokens as CSS variables (lemon yellow, sea blue, terracotta, neutrals, success/error) and base components: big rounded primary/secondary Button, Card, ProgressBar, IconButton, with a light press animation.
   - `npm run verify` runs lint, typecheck, build → exit 0; `out/index.html` exists after it.
   - CLAUDE.md documents the commands, folder layout and conventions (UI copy in Spain Spanish with "tú", language-agnostic code, content under `content/<lang>/`, no automated tests in the MVP).
-- Outcome:
+- Outcome: Next.js 16 + Tailwind 4 static export, Sicilian tokens, 5-tab shell, verify = lint+typecheck+build · 419e2cf
 
 ## T02 — Content model, loader, validator and basic speech
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T01
 - Goal: Define the typed, language-agnostic data contract for a language pack, the loader the UI uses, a validator, a small sample pack, and a minimal `speak()` audio interface so UI and content tasks can all start in parallel right after this one.
 - Context: docs/brief.md (content types, registers, exercise types, volumes). CLAUDE.md from T01. Right after this task, five tasks start in parallel: T03 (mp3 audio behind the same interface), T04 (lesson player), T05/T06 (real content), T08 (phrasebook and dialogues). Keep the contract clear and stable.
@@ -152,8 +152,14 @@ Worktree setup: npm ci
 - 2026-09-30 plan: no automated tests (Vitest/Playwright dropped); verify = lint + typecheck + content check + build. (Hernán)
 - 2026-09-30 plan: up to 5 agents in parallel; T02 ships a speechSynthesis `speak()` so T03/T04/T05/T06/T08 all start right after T02; content tasks don't generate audio, T09 does. (Hernán + orchestrator)
 
+- 2026-09-30 T01: Next.js 16.3.7, React 19.2.8, Tailwind 4, ESLint 9; trailingSlash export; lint/tsconfig/Tailwind ignore .claude/** (nested worktrees); tab labels Ruta/Repaso/Frases/Diálogos/Perfil; placeholder app name "Lang Lern" in src/lib/app-config.ts; light theme only; system font. (agent)
+- 2026-09-30 orchestrator: integration runs `npm ci && npm run verify` so dependency changes are picked up in main. (orchestrator)
+
 ## Proposals (new scope)
+- 2026-09-30 T01: real app name and dark mode (Hernán to decide).
 
 ## Log
 - 2026-09-30 17:20 T01 launched · attempt 1 · agent ad7263c44e095d704
 - 2026-09-30 17:30 plan revised: tests dropped, parallelism raised to 5 (T01 notified via SendMessage)
+- 2026-09-30 17:27 T01 integration tests_failed (ESLint scanned nested .claude/worktrees) · reverted 3f7df65 · fix sent to same agent
+- 2026-09-30 17:28 T01 done · branch worktree-agent-ad7263c44e095d704 → 419e2cf
