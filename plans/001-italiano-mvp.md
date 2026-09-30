@@ -23,7 +23,7 @@ Worktree setup: npm ci
 - Outcome: Next.js 16 + Tailwind 4 static export, Sicilian tokens, 5-tab shell, verify = lint+typecheck+build · 419e2cf
 
 ## T02 — Content model, loader, validator and basic speech
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T01
 - Goal: Define the typed, language-agnostic data contract for a language pack, the loader the UI uses, a validator, a small sample pack, and a minimal `speak()` audio interface so UI and content tasks can all start in parallel right after this one.
 - Context: docs/brief.md (content types, registers, exercise types, volumes). CLAUDE.md from T01. Right after this task, five tasks start in parallel: T03 (mp3 audio behind the same interface), T04 (lesson player), T05/T06 (real content), T08 (phrasebook and dialogues). Keep the contract clear and stable.
@@ -36,10 +36,10 @@ Worktree setup: npm ci
   - `src/lib/audio` exposes a small interface (e.g. `speak(item | text, { slow })`, `stop()`) implemented with browser `speechSynthesis` using the pack's locale; T03 will add mp3 playback behind the same interface without changing callers.
   - `docs/content-guide.md` explains the schema, id conventions, file layout, order ranges and quality rules for content authors.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: zod schemas, glob-discovered packs bundled to src/lib/content/generated (git-ignored), content:check in verify, sample pack, speechSynthesis speak() · ddf0eb8
 
 ## T03 — Neural mp3 audio pipeline
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T02
 - Goal: Upgrade audio to natural neural voices: an idempotent edge-tts generation script, an audio manifest, and mp3 playback behind the existing `speak()` interface with speechSynthesis fallback and slow mode.
 - Context: docs/brief.md (Audio, iPhone constraints), docs/content-guide.md, loader and `src/lib/audio` from T02. edge-tts is NOT installed on this machine: install it in a project-local Python venv (`.venv`, git-ignored) with a pinned `requirements.txt`. edge-tts needs internet at generation time only. Content is being written in parallel by T05/T06; generate audio for whatever exists now — T09 regenerates for the final content.
@@ -52,7 +52,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T04 — Lesson player and exercise engine
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T02
 - Goal: The core learning loop: a lesson session that generates mixed exercises from a lesson's items, checks answers leniently, gives immediate feedback with audio, re-queues mistakes and ends with a result.
 - Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (exercise types, iPhone mic limits), content loader and `speak()` from T02. Build against the sample pack; real content arrives in parallel (T05/T06), so never hard-code content ids. Progress persistence is T07: expose a typed `LessonResult` (per-item outcomes, XP earned, duration) via an `onComplete` callback and keep persistence out of this task. Put the answer normalizer and the speech-recognition helper in `src/lib/exercises` / `src/lib/speech` so T08 can reuse them.
@@ -67,7 +67,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T05 — Content: getting around Sicily and talking with Italians
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T02
 - Goal: Write the two highest-priority content areas with natural, current spoken Italian: getting around by train, bus, taxi and on foot in Sicily, and talking with Italians. Delete the sample pack content from T02.
 - Context: docs/brief.md (priorities 1 and 2, registers, persona), docs/content-guide.md (schema, order ranges 20–29 and 30–39). Translations in Spain Spanish with "tú". Real Sicilian context: Palermo Centrale, Catania Centrale, Siracusa, Agrigento, Cefalù, Taormina; Trenitalia regionale, AST/SAIS/Interbus, Prestia e Comandè, Alibus; "convalidare", "binario", "ritardo", "sciopero", "fermata", "capolinea". Include what Italians SAY to him (ticket inspector, driver, station staff, people asking where he's from) so he learns to understand and answer. Audio is generated later (T03/T09): do not generate mp3s here.
@@ -81,7 +81,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T06 — Content: survival, food, grammar cards and Sicilian expressions
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T02
 - Goal: Write the remaining content: survival basics, basic food, minimal grammar cards and recognition-only Sicilian expressions.
 - Context: docs/brief.md (priorities 3–6), docs/content-guide.md (order ranges 10–19, 40–49, 90+). The learner already knows greetings and numbers at A1: go quickly past them and focus on what he will hear and need (not understanding, asking to repeat, prices, time, emergencies, pharmacy). Food: bar (caffè, cornetto, granita e brioche, arancini/arancine) and restaurant (table, ordering, allergies, bill, "coperto"). Grammar cards: tu vs Lei, "vorrei", present of essere, avere, volere, potere, andare. Sicilian: ~25 common words/expressions to recognise, with standard Italian equivalent. Audio is generated later (T03/T09): do not generate mp3s here.
@@ -93,7 +93,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T08 — Pocket phrasebook and dialogue simulator
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T02
 - Goal: The two trip-time tools: a fast phrasebook to find and play phrases on the spot, and a dialogue simulator to practise understanding and answering real conversations.
 - Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (Phrasebook, Dialogues). Loader and `speak()` from T02. T04 runs in parallel and owns `src/lib/exercises` and `src/lib/speech`: do not edit them; if you need answer normalisation or speech recognition before T04 lands, keep a small local helper inside your own folders. Never hard-code content ids.
@@ -169,6 +169,7 @@ Worktree setup: npm ci
 - 2026-09-30 T01: Next.js 16.3.7, React 19.2.8, Tailwind 4, ESLint 9; trailingSlash export; lint/tsconfig/Tailwind ignore .claude/** (nested worktrees); tab labels Ruta/Repaso/Frases/Diálogos/Perfil; placeholder app name "Lang Lern" in src/lib/app-config.ts; light theme only; system font. (agent)
 - 2026-09-30 orchestrator: integration runs `npm ci && npm run verify` so dependency changes are picked up in main. (orchestrator)
 - 2026-09-30 T11: new tokens -ledge, --on-accent/--on-lemon, --shadow; dark uses lighter accents with dark text on filled buttons; theme stored as localStorage `lang-lern:theme` ("Sistema" clears it); ThemeToggle in src/components/shell/. (agent)
+- 2026-09-30 T02: content bundled by `scripts/content.ts build` into git-ignored src/lib/content/generated/packs.json (rebuilt before dev/typecheck/build); added zod + tsx; one id namespace per pack, ids never contain `--`, audio key = id (+ `--part`); 16 situations predefined in content/it/pack.json; unit order unique, 0–9 = sample; sample files units/sample-unit.json, dialogues/sample-bar.json, extras/sample-extras.json; audio API speak(item|text,{slow,lang}), stop(), canSpeak(), SLOW_RATE 0.7, listPlayables(). (agent)
 
 ## Proposals (new scope)
 - 2026-09-30 T01: real app name (Hernán to decide).
@@ -183,3 +184,4 @@ Worktree setup: npm ci
 - 2026-09-30 17:29 T02 launched · attempt 1 · agent aaa442c049f27e641
 - 2026-09-30 17:32 T11 launched · attempt 1 · agent a3be29bf937ae5eef
 - 2026-09-30 17:36 T11 done · branch worktree-agent-a3be29bf937ae5eef → 64a4bbd
+- 2026-09-30 17:38 T02 done (after CLAUDE.md conflict fix) · branch worktree-agent-aaa442c049f27e641 → ddf0eb8
