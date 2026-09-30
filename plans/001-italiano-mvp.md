@@ -105,7 +105,7 @@ Worktree setup: npm ci
 - Outcome: /frasario (search, favourites, Mostrar) and /dialogos/[id] simulator (hidden text, pick/say answer, transcript) · 541ce3d
 
 ## T07 — Path, progress, spaced repetition, placement test and profile
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T04, T05, T06, T11
 - Goal: Turn lessons into a course: the home path of units, persistent progress with streak and XP, spaced-repetition review, the first-launch placement test and the profile/settings screen.
 - Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (sections, gamification, placement). Lesson player and `LessonResult` from T04; real content from T05/T06 (loaded by glob, never hard-coded). The lesson page does not pass `onComplete` yet: add a small client wrapper in `src/app/leccion/[id]/page.tsx` to persist `LessonResult`; nothing links to `/leccion/<id>/` yet. Lessons can hold up to ~29 items while a session samples 10–12 exercises: a lesson counts as done after one completion, and the SRS should cover the items not yet practised. Storage is localStorage with a versioned schema and safe parsing. Keep the `ThemeToggle` from T11 in the profile settings.
@@ -117,10 +117,10 @@ Worktree setup: npm ci
   - Placement: first launch shows a short welcome and a ~12-question, ~3-minute placement test across units; mastered lessons are marked done; retakeable from the profile.
   - Profile: XP, streak, words learned, settings (slow audio default, speaking exercises on/off, reset progress with confirmation, retake placement).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: path with side content, progress/streak/XP store, Leitner SRS /repaso, /bienvenida placement (12 q), profile settings · 9516e54
 
 ## T09 — Italian content quality review and final audio
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T03, T05, T06
 - Goal: A native-level review of all Italian content so Hernán learns correct, natural, current spoken Italian, then generate the final audio for everything.
 - Context: docs/brief.md, docs/content-guide.md, everything under `content/it/`. Never rename or delete existing ids (T07 references them in parallel): fix texts in place, add new items with new ids. Review as a native Italian teacher who knows Sicily: grammar, articles and gender, naturalness, register (Lei vs tu) consistency, realistic dialogues, correct Sicilian place and transport names, Spain-Spanish translations with "tú". Also double-check the less common Sicilian items (`sic.sabbinidica`, `sic.babbiare`) and how the TTS reads "112" (T06). Recheck facts flagged by T05: prices (Cefalù train €6.10, airport bus €7) and "validators on the platform". Update docs/content-guide.md's "6–12 items per lesson" rule to match reality (T05 lessons hold 12–29 items). Audio pipeline from T03 (`npm run audio` creates .venv itself; hashed file names + `public/audio/<lang>/manifest.json`). Also fix `docs/content-guide.md` "Audio keys" section and the `Playable` comment in `src/lib/content/types.ts`, which still say mp3s are `<audioKey>.mp3`.
@@ -130,10 +130,10 @@ Worktree setup: npm ci
   - Totals are at least ~380 phrases, ~280 vocab items and 10 dialogues (fill gaps if short); no sample content remains.
   - `npm run audio` run, mp3s committed; `npm run content:check -- --strict-audio` → exit 0.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 34 fixes (docs/content-review.md), 475 phrases / 332 vocab / 13 dialogues, 1443 mp3s generated, strict-audio passes · 384e072
 
 ## T10 — Offline PWA, install guide and deploy docs
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T07, T08, T09
 - Goal: Make the app installable and fully usable offline on an iPhone, and document how Hernán runs, updates and deploys it.
 - Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (Platform, iPhone with Chrome). Static export from T01. All routes and audio exist by now. Audio: `public/audio/<lang>/manifest.json` (loaded at runtime by src/lib/audio) plus hashed mp3s (~1000 files, ~14 MB): precache both.
@@ -161,6 +161,19 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome: dark tokens (system + data-theme), no-flash script, ThemeToggle on /perfil · 64a4bbd
 
+## T12 — Remove duplicate phrases from phrasebook and review, small copy fixes
+- Status: running (attempt 1)
+- Depends on: T07, T09
+- Goal: 35 Italian texts exist under two ids (e.g. "Sei di qui?", "il bagno"), so the phrasebook and review show them twice; fix it at display/queue time without deleting ids. Also fix two small leftovers.
+- Context: T09 found the duplicates (docs/content-review.md); ids must not be deleted because lessons, placement and SRS reference them. Phrasebook code in src/components/phrasebook/** and src/app/frasario/**; SRS/review in src/lib/srs/** and src/app/repaso/**. The lesson intro says "Unos 5 minutos…" also for review sessions. T10 runs in parallel (PWA, layout, public/): stay out of its files.
+- Scope: may touch `src/components/phrasebook/**`, `src/app/frasario/**`, `src/lib/srs/**`, `src/app/repaso/**`, `src/components/lesson/**` (intro copy only) / must not touch `content/**`, `public/**`, `src/app/layout.tsx`, PWA files.
+- Done when:
+  - Phrasebook lists each Italian text once (dedupe by normalised Italian text, keep the first by unit order; favourites keyed on the kept id still work).
+  - A review session never asks the same Italian text twice (dedupe the queue by normalised text).
+  - Review sessions show review-appropriate intro copy, not "Unos 5 minutos…".
+  - `npm run verify` → exit 0.
+- Outcome:
+
 ## Decisions
 - 2026-09-30 plan: T01 has no green baseline to check against (empty repo); the main-branch check runs after T01 is integrated. (orchestrator)
 - 2026-09-30 plan: content split into two parallel tasks with disjoint unit order ranges; units discovered by glob so they never share an index file. (orchestrator)
@@ -176,8 +189,13 @@ Worktree setup: npm ci
 - 2026-09-30 T05: id prefixes move-treno, move-bus, move-strada, talk-chiacchiere, talk-io, dlg.move-*/dlg.talk-* (orders 20, 22, 24, 30, 32); every item placed in a lesson (12–29 items per lesson, relies on the player sampling 10–12 exercises); persona = Hernán, Spanish from Madrid, programmer, travelling alone ~10 days Palermo→Cefalù→Agrigento→Catania→Siracusa (Madrid/job are guesses, Hernán to check); phrases Italians say tagged `te-dicen` with Diego/Isabella voices. (agent)
 - 2026-09-30 T04: order = recognition first, one match, then shuffled production; grammar cards = ungraded "Un apunte" steps; seed = Date.now() (prop overrides); wrong exercise re-queued max 2×; fill-gap uses chips; XP = 10 + 1 per first-try correct + 5 if perfect; lesson is a full-screen overlay; speaking pause in localStorage; helpers checkAnswer/similarity in src/lib/exercises, listenOnce/scoreSpeech in src/lib/speech. (agent)
 - 2026-09-30 T06: units surv (10), emer (14), food (40, single unit with 10 lessons), gram (90), sic (95); grammar in extras/gramatica.json, expressions in extras/siciliano.json; ~20% over target volume kept; "voi" questions marked neutral; Palermo arancina / Catania arancino. (agent)
+- 2026-09-30 T07: units order ≥90 are side content ("Para saber más"), always open; first lesson of every main unit open, lessons within a unit unlock in order; Leitner 1/2/4/7/14 days, mistake → box 1; unpractised lesson items enter as new; keys `lang-lern:progress:<lang>` v1 and `lang-lern:settings`; placement masters a lesson only if all its questions are right, retake never touches played lessons, no XP; small additive edits to LessonPlayer props and speak() slow setting. (agent)
+- 2026-09-30 T09: airport bus 6.50 € on board, Cefalù return 14.20 €, validators "in stazione"; vocab plural = bare word; "Possiamo darci del tu?" neutral; 112/101 read as numbers; content-guide lesson size 8–30 items. (agent)
+- 2026-09-30 orchestrator: added T12 (dedupe duplicate texts in phrasebook/review + review intro copy), a fix for duplicates found by T09. (orchestrator)
 
 ## Proposals (new scope)
+- 2026-09-30 T07: speaking-pause key uses `lang_lern:` prefix instead of `lang-lern:`.
+- 2026-09-30 T09: seasonal doubts for mid-October (oranges just starting, mulberry granita may be off menu).
 - 2026-09-30 T04: move snail/mic icons into src/components/icons.tsx.
 - 2026-09-30 T08: after T04, move fold() and recognition helpers into src/lib/exercises / src/lib/speech (dedupe).
 - 2026-09-30 T01: real app name (Hernán to decide).
@@ -203,3 +221,7 @@ Worktree setup: npm ci
 - 2026-09-30 17:55 T05 done · branch worktree-agent-aded81b07fd5834ff → f7b3157
 - 2026-09-30 17:56 T04 done · branch worktree-agent-a0a9ff17219f94c6d → b67778b
 - 2026-09-30 17:59 T06 done · branch worktree-agent-ad1ff0cf0c0fcc3fb → ef7b48d
+- 2026-09-30 18:01 T07 launched · attempt 1 · agent a0c24a87e45145f6e
+- 2026-09-30 18:01 T09 launched · attempt 1 · agent ae8eb6b9ed05bf4c9
+- 2026-09-30 18:12 T07 done · branch worktree-agent-a0c24a87e45145f6e → 9516e54
+- 2026-09-30 18:12 T09 done · branch worktree-agent-ae8eb6b9ed05bf4c9 → 384e072
