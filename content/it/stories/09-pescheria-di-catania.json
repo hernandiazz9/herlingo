@@ -1,0 +1,89 @@
+{
+  "id": "story.pescheria-di-catania",
+  "order": 9,
+  "title": "Al mercato del pesce di Catania",
+  "titleEs": "En el mercado de pescado de Catania",
+  "description": "Gritos, pez espada y un erizo de mar en la Pescheria de Catania.",
+  "emoji": "🐟",
+  "situation": "compras",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Dopo colazione, Hernán va alla Pescheria, il mercato del pesce di Catania.", "es": "Después del desayuno, Hernán va a la Pescheria, el mercado de pescado de Catania." },
+    { "id": "s2", "text": "È dietro Piazza Duomo, e si sente da lontano.", "es": "Está detrás de la Piazza Duomo y se oye desde lejos." },
+    { "id": "s3", "text": "I pescivendoli gridano, ridono e chiamano i clienti.", "es": "Los pescaderos gritan, se ríen y llaman a los clientes." },
+    { "id": "s4", "text": "Sui banchi ci sono sarde, gamberi, polpi e un pesce spada enorme.", "es": "En los puestos hay sardinas, gambas, pulpos y un pez espada enorme." },
+    { "id": "s5", "text": "«Mizzica!», dice Hernán, e fa una foto.", "es": "«¡Madre mía!», dice Hernán, y hace una foto." },
+    { "id": "s6", "text": "Un pescivendolo gli grida: «Talè, talè! Pesce fresco, freschissimo!»", "es": "Un pescadero le grita: «¡Mira, mira! ¡Pescado fresco, fresquísimo!»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s7", "text": "Hernán non può cucinare, ma vuole assaggiare qualcosa.", "es": "Hernán no puede cocinar, pero quiere probar algo." },
+    { "id": "s8", "text": "Il pescivendolo apre un riccio di mare e lo dà a Hernán.", "es": "El pescadero abre un erizo de mar y se lo da a Hernán." },
+    { "id": "s9", "text": "Hernán lo assaggia con un po' di limone: è buonissimo!", "es": "Hernán lo prueba con un poco de limón: ¡está buenísimo!" },
+    { "id": "s10", "text": "Poi chiede il prezzo del pesce spada: venti euro al chilo.", "es": "Luego pregunta el precio del pez espada: veinte euros el kilo." },
+    { "id": "s11", "text": "Alla fine compra solo un chilo di arance e torna al B&B.", "es": "Al final solo compra un kilo de naranjas y vuelve al B&B." }
+  ],
+  "keywords": [
+    "surv.mercato",
+    "food.pesce",
+    { "id": "story-catania-pescivendolo", "word": "pescivendolo", "article": "il", "gender": "m", "plural": "pescivendoli", "es": "el pescadero", "notes": "La pescadera es «la pescivendola».", "situation": "compras" },
+    "sic.mizzica",
+    "sic.tale",
+    { "id": "story-catania-fresco", "word": "fresco", "es": "fresco", "notes": "«Pesce fresco, freschissimo!»: el grito típico del mercado. Femenino: «fresca».", "situation": "compras" },
+    { "id": "story-catania-riccio-di-mare", "word": "riccio di mare", "article": "il", "gender": "m", "plural": "ricci di mare", "es": "el erizo de mar", "notes": "En Sicilia se comen crudos, con pan o con pasta.", "situation": "compras" },
+    "food.limone",
+    "food.pesce-spada",
+    "surv.chilo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Che cos'è la Pescheria?",
+      "es": "¿Qué es la Pescheria?",
+      "options": [
+        { "text": "Il mercato del pesce di Catania.", "es": "El mercado de pescado de Catania." },
+        { "text": "Una chiesa vicino al Duomo.", "es": "Una iglesia cerca de la catedral." },
+        { "text": "Un ristorante di pesce.", "es": "Un restaurante de pescado." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Cosa assaggia Hernán?",
+      "es": "¿Qué prueba Hernán?",
+      "options": [
+        { "text": "Un'arancina.", "es": "Una arancina." },
+        { "text": "Un riccio di mare.", "es": "Un erizo de mar." },
+        { "text": "Un pezzo di pesce spada.", "es": "Un trozo de pez espada." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Quanto costa il pesce spada?",
+      "es": "¿Cuánto cuesta el pez espada?",
+      "options": [
+        { "text": "Dieci euro al chilo.", "es": "Diez euros el kilo." },
+        { "text": "Quindici euro al chilo.", "es": "Quince euros el kilo." },
+        { "text": "Venti euro al chilo.", "es": "Veinte euros el kilo." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Cosa compra Hernán alla fine?",
+      "es": "¿Qué compra Hernán al final?",
+      "options": [
+        { "text": "Un chilo di arance.", "es": "Un kilo de naranjas." },
+        { "text": "Un pesce spada.", "es": "Un pez espada." },
+        { "text": "Due etti di olive.", "es": "Doscientos gramos de aceitunas." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "surv.mercato", "distractors": ["museo", "duomo"] },
+    { "id": "g2", "sentence": "s3", "answer": "story-catania-pescivendolo", "gap": "pescivendoli", "distractors": ["turisti", "bambini"] },
+    { "id": "g3", "sentence": "s6", "answer": "story-catania-fresco", "distractors": ["caro", "vecchio"] },
+    { "id": "g4", "sentence": "s8", "answer": "story-catania-riccio-di-mare", "distractors": ["panino", "cannolo"] },
+    { "id": "g5", "sentence": "s9", "answer": "food.limone", "distractors": ["zucchero", "latte"] },
+    { "id": "g6", "sentence": "s10", "answer": "surv.chilo", "distractors": ["litro", "metro"] }
+  ]
+}

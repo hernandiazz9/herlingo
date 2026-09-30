@@ -1,0 +1,90 @@
+{
+  "id": "story.granita-a-catania",
+  "order": 8,
+  "title": "Granita e brioche a Catania",
+  "titleEs": "Granizado y brioche en Catania",
+  "description": "Primer desayuno en Catania: granizado de almendra con brioche, como los de allí.",
+  "emoji": "🍧",
+  "situation": "bar",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Hernán è a Catania da ieri sera e stamattina ha fame.", "es": "Hernán está en Catania desde anoche y esta mañana tiene hambre." },
+    { "id": "s2", "text": "La signora del B&B gli consiglia un bar vicino al Duomo.", "es": "La señora del B&B le recomienda un bar cerca de la catedral." },
+    { "id": "s3", "text": "«Qui a colazione si mangia la granita con la brioche!»", "es": "«¡Aquí para desayunar se toma granizado con brioche!»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s4", "text": "Il bar è pieno di gente e Hernán aspetta al banco.", "es": "El bar está lleno de gente y Hernán espera en la barra." },
+    { "id": "s5", "text": "«Buongiorno! Cosa prende?», chiede la barista.", "es": "«¡Buenos días! ¿Qué va a tomar?», pregunta la camarera.", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s6", "text": "«Una granita alla mandorla con la brioche, per favore.»", "es": "«Un granizado de almendra con brioche, por favor.»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s7", "text": "La barista chiede se la vuole con la panna, e Hernán dice di sì.", "es": "La camarera le pregunta si lo quiere con nata, y Hernán dice que sí." },
+    { "id": "s8", "text": "La granita è fredda e cremosa, e la brioche è ancora calda.", "es": "El granizado está frío y cremoso, y el brioche todavía está caliente." },
+    { "id": "s9", "text": "Hernán inzuppa la brioche nella granita, come fanno i catanesi.", "es": "Hernán moja el brioche en el granizado, como hacen los cataneses." },
+    { "id": "s10", "text": "«È buonissima!», dice alla barista.", "es": "«¡Está buenísimo!», le dice a la camarera.", "voice": "it-IT-DiegoNeural" },
+    { "id": "s11", "text": "Poi paga alla cassa: quattro euro e cinquanta.", "es": "Luego paga en la caja: cuatro euros con cincuenta." },
+    { "id": "s12", "text": "Domani vuole provare il gusto al pistacchio.", "es": "Mañana quiere probar el sabor de pistacho." }
+  ],
+  "keywords": [
+    "food.granita",
+    "food.brioche",
+    "food.mandorla",
+    "food.banco",
+    "food.panna",
+    { "id": "story-catania-inzuppare", "word": "inzuppare", "es": "mojar (en un líquido)", "notes": "«Inzuppo il cornetto nel cappuccino»: mojo el cruasán en el capuchino.", "situation": "bar" },
+    "food.e-buonissima",
+    "food.cassa",
+    "food.gusto",
+    "food.pistacchio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Cosa mangia Hernán a colazione?",
+      "es": "¿Qué desayuna Hernán?",
+      "options": [
+        { "text": "La granita con la brioche.", "es": "Granizado con brioche." },
+        { "text": "Un cornetto e un cappuccino.", "es": "Un cruasán y un capuchino." },
+        { "text": "Un'arancina al ragù.", "es": "Una arancina de ragú." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Che gusto di granita prende oggi?",
+      "es": "¿De qué sabor pide hoy el granizado?",
+      "options": [
+        { "text": "Al pistacchio.", "es": "De pistacho." },
+        { "text": "Alla mandorla.", "es": "De almendra." },
+        { "text": "Al limone.", "es": "De limón." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Dove paga Hernán?",
+      "es": "¿Dónde paga Hernán?",
+      "options": [
+        { "text": "Al tavolino.", "es": "En la mesa." },
+        { "text": "Al banco.", "es": "En la barra." },
+        { "text": "Alla cassa.", "es": "En la caja." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Quanto paga?",
+      "es": "¿Cuánto paga?",
+      "options": [
+        { "text": "Quattro euro e cinquanta.", "es": "Cuatro euros con cincuenta." },
+        { "text": "Due euro.", "es": "Dos euros." },
+        { "text": "Sei euro e venti.", "es": "Seis euros con veinte." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "food.banco", "distractors": ["binario", "mare"] },
+    { "id": "g2", "sentence": "s6", "answer": "food.mandorla", "distractors": ["valigia", "farmacia"] },
+    { "id": "g3", "sentence": "s7", "answer": "food.panna", "distractors": ["cipolla", "carne"] },
+    { "id": "g4", "sentence": "s9", "answer": "story-catania-inzuppare", "gap": "inzuppa", "distractors": ["lava", "vende"] },
+    { "id": "g5", "sentence": "s11", "answer": "food.cassa", "distractors": ["stazione", "farmacia"] },
+    { "id": "g6", "sentence": "s12", "answer": "food.gusto", "distractors": ["treno", "conto"] }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "story.cena-a-ortigia",
+  "order": 11,
+  "title": "Una cena a Ortigia",
+  "titleEs": "Una cena en Ortigia",
+  "description": "Hernán reserva mesa para cenar con Chiara: alergias, pez espada y la cuenta.",
+  "emoji": "🍝",
+  "situation": "restaurante",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Chiara, la ragazza della Valle dei Templi, adesso è a Siracusa.", "es": "Chiara, la chica del Valle de los Templos, ahora está en Siracusa." },
+    { "id": "s2", "text": "Scrive a Hernán su WhatsApp: «Ceniamo insieme stasera?»", "es": "Le escribe a Hernán por WhatsApp: «¿Cenamos juntos esta noche?»" },
+    { "id": "s3", "text": "Hernán telefona a una trattoria di Ortigia per prenotare un tavolo.", "es": "Hernán llama a una trattoria de Ortigia para reservar una mesa." },
+    { "id": "s4", "text": "Il ristorante è piccolo, con i tavoli fuori, in una piazzetta.", "es": "El restaurante es pequeño, con las mesas fuera, en una placita." },
+    { "id": "s5", "text": "«Buonasera, ho prenotato per due, a nome Hernán.»", "es": "«Buenas noches, tengo una reserva para dos, a nombre de Hernán.»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s6", "text": "Il cameriere chiede se hanno allergie o intolleranze.", "es": "El camarero pregunta si tienen alergias o intolerancias." },
+    { "id": "s7", "text": "«Io sono allergica alla frutta secca», dice Chiara.", "es": "«Yo soy alérgica a los frutos secos», dice Chiara.", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s8", "text": "Allora niente pistacchio per lei: prende gli spaghetti alle vongole.", "es": "Así que nada de pistacho para ella: pide espaguetis con almejas." },
+    { "id": "s9", "text": "Hernán prende il pesce spada con un contorno di melanzane.", "es": "Hernán pide el pez espada con guarnición de berenjenas." },
+    { "id": "s10", "text": "Parlano di viaggi, di lavoro e di Madrid fino a tardi.", "es": "Hablan de viajes, de trabajo y de Madrid hasta tarde." },
+    { "id": "s11", "text": "Alla fine Hernán chiede al cameriere: «Ci porta il conto, per favore?»", "es": "Al final Hernán le pide al camarero: «¿Nos trae la cuenta, por favor?»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s12", "text": "Il coperto è due euro a persona, e pagano alla romana.", "es": "El cubierto son dos euros por persona, y pagan a medias." },
+    { "id": "s13", "text": "«Era tutto buonissimo, grazie!», dice Chiara al cameriere.", "es": "«¡Estaba todo buenísimo, gracias!», le dice Chiara al camarero.", "voice": "it-IT-IsabellaNeural" }
+  ],
+  "keywords": [
+    { "id": "story-ortigia-prenotare", "word": "prenotare", "es": "reservar", "notes": "«Vorrei prenotare un tavolo per due»: quería reservar una mesa para dos. «Ho prenotato»: tengo reserva.", "situation": "restaurante" },
+    "food.tavolo",
+    { "id": "story-ortigia-a-nome", "word": "a nome", "es": "a nombre de", "notes": "«Ho prenotato a nome Hernán»: tengo una reserva a nombre de Hernán. También «a nome di».", "situation": "restaurante" },
+    "food.allergia",
+    "food.frutta-secca",
+    "food.contorno",
+    "food.conto",
+    "food.coperto",
+    "food.alla-romana",
+    "food.era-tutto-buonissimo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Con chi cena Hernán?",
+      "es": "¿Con quién cena Hernán?",
+      "options": [
+        { "text": "Con Chiara.", "es": "Con Chiara." },
+        { "text": "Da solo.", "es": "Solo." },
+        { "text": "Con la signora del B&B.", "es": "Con la señora del B&B." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "A cosa è allergica Chiara?",
+      "es": "¿A qué es alérgica Chiara?",
+      "options": [
+        { "text": "Al pesce.", "es": "Al pescado." },
+        { "text": "Al glutine.", "es": "Al gluten." },
+        { "text": "Alla frutta secca.", "es": "A los frutos secos." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "Cosa mangia Hernán?",
+      "es": "¿Qué come Hernán?",
+      "options": [
+        { "text": "Gli spaghetti alle vongole.", "es": "Espaguetis con almejas." },
+        { "text": "Il pesce spada con le melanzane.", "es": "Pez espada con berenjenas." },
+        { "text": "La pasta al pistacchio.", "es": "Pasta con pistacho." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Come pagano il conto?",
+      "es": "¿Cómo pagan la cuenta?",
+      "options": [
+        { "text": "Paga tutto Hernán.", "es": "Lo paga todo Hernán." },
+        { "text": "Alla romana: metà ciascuno.", "es": "A medias: la mitad cada uno." },
+        { "text": "Paga tutto Chiara.", "es": "Lo paga todo Chiara." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "story-ortigia-prenotare", "distractors": ["pagare", "chiudere"] },
+    { "id": "g2", "sentence": "s6", "answer": "food.allergia", "gap": "allergie", "distractors": ["domande", "biglietti"] },
+    { "id": "g3", "sentence": "s7", "answer": "food.frutta-secca", "distractors": ["pasta", "carne"] },
+    { "id": "g4", "sentence": "s9", "answer": "food.contorno", "distractors": ["conto", "coperto"] },
+    { "id": "g5", "sentence": "s11", "answer": "food.conto", "distractors": ["binario", "biglietto"] },
+    { "id": "g6", "sentence": "s12", "answer": "food.coperto", "distractors": ["contorno", "biglietto"] }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "story.ultimo-giorno",
+  "order": 12,
+  "title": "L'ultimo giorno: saluti e ritorno",
+  "titleEs": "El último día: despedidas y vuelta",
+  "description": "Hernán se despide de Siracusa, coge el autobús al aeropuerto de Catania y vuelve a casa.",
+  "emoji": "🛫",
+  "situation": "saludos",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "È l'ultimo giorno in Sicilia e Hernán si sveglia presto.", "es": "Es el último día en Sicilia y Hernán se despierta temprano." },
+    { "id": "s2", "text": "Prende un caffè al bar e guarda il mare di Ortigia.", "es": "Se toma un café en el bar y mira el mar de Ortigia." },
+    { "id": "s3", "text": "Poi lascia le chiavi della camera alla signora del B&B.", "es": "Luego le deja las llaves de la habitación a la señora del B&B." },
+    { "id": "s4", "text": "La saluta e le dice: «Grazie di tutto! È stato un piacere!»", "es": "Se despide de ella y le dice: «¡Gracias por todo! ¡Ha sido un placer!»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s5", "text": "«Buon viaggio, e torna presto!», risponde lei.", "es": "«¡Buen viaje, y vuelve pronto!», responde ella.", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s6", "text": "Alla fermata prende il pullman Interbus per l'aeroporto di Catania.", "es": "En la parada coge el autobús de Interbus al aeropuerto de Catania." },
+    { "id": "s7", "text": "Il viaggio dura circa un'ora.", "es": "El viaje dura más o menos una hora." },
+    { "id": "s8", "text": "Sul pullman scrive a Chiara: «Ciao! Ci vediamo a Madrid o a Milano?»", "es": "En el autobús le escribe a Chiara: «¡Hola! ¿Nos vemos en Madrid o en Milán?»" },
+    { "id": "s9", "text": "Chiara risponde subito: «Magari! A presto!»", "es": "Chiara contesta enseguida: «¡Ojalá! ¡Hasta pronto!»" },
+    { "id": "s10", "text": "In aeroporto Hernán fa il check-in e passa i controlli.", "es": "En el aeropuerto Hernán factura y pasa el control de seguridad." },
+    { "id": "s11", "text": "Il volo parte in orario, alle tre del pomeriggio.", "es": "El vuelo sale a su hora, a las tres de la tarde." },
+    { "id": "s12", "text": "Dal finestrino vede l'Etna e il mare, e pensa: «Tornerò!»", "es": "Por la ventanilla ve el Etna y el mar, y piensa: «¡Volveré!»" }
+  ],
+  "keywords": [
+    { "id": "story-ritorno-chiave", "word": "chiave", "article": "la", "gender": "f", "plural": "chiavi", "es": "la llave", "notes": "«Le chiavi della camera»: las llaves de la habitación.", "situation": "alojamiento" },
+    { "id": "story-ritorno-salutare", "word": "salutare", "es": "despedirse de; saludar", "notes": "«La saluta»: se despide de ella (o la saluda). «Saluti!»: ¡saludos!", "situation": "saludos" },
+    "talk-chiacchiere.e-stato-un-piacere",
+    "talk-chiacchiere.buon-viaggio",
+    "move-bus.pullman",
+    "move-bus.aeroporto",
+    "talk-chiacchiere.magari",
+    "talk-chiacchiere.a-presto",
+    "move-bus.volo",
+    "move-treno.in-orario"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Cosa lascia Hernán alla signora del B&B?",
+      "es": "¿Qué le deja Hernán a la señora del B&B?",
+      "options": [
+        { "text": "Le chiavi della camera.", "es": "Las llaves de la habitación." },
+        { "text": "La valigia.", "es": "La maleta." },
+        { "text": "Un chilo di arance.", "es": "Un kilo de naranjas." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Come va all'aeroporto di Catania?",
+      "es": "¿Cómo va al aeropuerto de Catania?",
+      "options": [
+        { "text": "In taxi.", "es": "En taxi." },
+        { "text": "In pullman.", "es": "En autobús." },
+        { "text": "In treno.", "es": "En tren." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Cosa risponde Chiara?",
+      "es": "¿Qué contesta Chiara?",
+      "options": [
+        { "text": "«No, grazie.»", "es": "«No, gracias.»" },
+        { "text": "«Non lo so.»", "es": "«No lo sé.»" },
+        { "text": "«Magari! A presto!»", "es": "«¡Ojalá! ¡Hasta pronto!»" }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "A che ora parte il volo?",
+      "es": "¿A qué hora sale el vuelo?",
+      "options": [
+        { "text": "Alle tre del pomeriggio.", "es": "A las tres de la tarde." },
+        { "text": "Alle nove di sera.", "es": "A las nueve de la noche." },
+        { "text": "A mezzogiorno.", "es": "A mediodía." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "story-ritorno-chiave", "gap": "chiavi", "distractors": ["valigie", "foto"] },
+    { "id": "g2", "sentence": "s4", "answer": "story-ritorno-salutare", "gap": "saluta", "distractors": ["chiude", "vende"] },
+    { "id": "g3", "sentence": "s6", "answer": "move-bus.pullman", "distractors": ["traghetto", "motorino"] },
+    { "id": "g4", "sentence": "s9", "answer": "talk-chiacchiere.magari", "gap": "Magari", "distractors": ["Aiuto", "Permesso"] },
+    { "id": "g5", "sentence": "s11", "answer": "move-bus.volo", "distractors": ["museo", "negozio"] }
+  ]
+}

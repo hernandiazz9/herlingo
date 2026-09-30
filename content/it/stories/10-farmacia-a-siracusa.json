@@ -1,0 +1,90 @@
+{
+  "id": "story.farmacia-a-siracusa",
+  "order": 10,
+  "title": "In farmacia a Siracusa",
+  "titleEs": "En la farmacia en Siracusa",
+  "description": "Demasiado sol y picaduras de mosquito: Hernán pide consejo en una farmacia.",
+  "emoji": "💊",
+  "situation": "emergencias",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Hernán arriva a Siracusa in treno e passa il pomeriggio al mare.", "es": "Hernán llega a Siracusa en tren y pasa la tarde en la playa." },
+    { "id": "s2", "text": "La sera ha la schiena tutta rossa: ha preso troppo sole.", "es": "Por la noche tiene la espalda toda roja: le ha dado demasiado el sol." },
+    { "id": "s3", "text": "Ha anche tre punture di zanzara sulle gambe.", "es": "Además tiene tres picaduras de mosquito en las piernas." },
+    { "id": "s4", "text": "Cerca una farmacia aperta e ne trova una vicino al ponte per Ortigia.", "es": "Busca una farmacia abierta y encuentra una cerca del puente de Ortigia." },
+    { "id": "s5", "text": "«Buonasera, mi dica», dice la farmacista.", "es": "«Buenas tardes, dígame», dice la farmacéutica.", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s6", "text": "«Buonasera. Ho una scottatura. Cosa mi consiglia?»", "es": "«Buenas tardes. Me he quemado con el sol. ¿Qué me recomienda?»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s7", "text": "La farmacista gli dà una crema doposole e una crema per le punture.", "es": "La farmacéutica le da una crema aftersun y una crema para las picaduras." },
+    { "id": "s8", "text": "«Le metta due volte al giorno, dopo la doccia.»", "es": "«Póngaselas dos veces al día, después de la ducha.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s9", "text": "«E domani usi la crema solare e stia all'ombra nelle ore calde.»", "es": "«Y mañana use crema solar y quédese a la sombra en las horas de más calor.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s10", "text": "Hernán chiede se ci vuole la ricetta, ma non serve.", "es": "Hernán pregunta si hace falta receta, pero no es necesaria." },
+    { "id": "s11", "text": "Paga dodici euro alla cassa.", "es": "Paga doce euros en la caja." },
+    { "id": "s12", "text": "«Grazie mille, buona serata!»", "es": "«¡Muchas gracias, buenas noches!»", "voice": "it-IT-DiegoNeural" }
+  ],
+  "keywords": [
+    "emer.farmacia",
+    "emer.schiena",
+    "emer.scottatura",
+    "emer.puntura",
+    "emer.zanzara",
+    { "id": "story-siracusa-doposole", "word": "doposole", "article": "il", "gender": "m", "es": "el aftersun", "notes": "«Una crema doposole»: una crema para después del sol.", "situation": "emergencias" },
+    "emer.crema-solare",
+    { "id": "story-siracusa-ombra", "word": "ombra", "article": "l'", "gender": "f", "es": "la sombra", "notes": "«Stare all'ombra»: estar a la sombra.", "situation": "emergencias" },
+    "emer.ricetta",
+    "surv.buona-serata"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Perché Hernán va in farmacia?",
+      "es": "¿Por qué va Hernán a la farmacia?",
+      "options": [
+        { "text": "Perché ha la febbre.", "es": "Porque tiene fiebre." },
+        { "text": "Perché ha preso troppo sole.", "es": "Porque le ha dado demasiado el sol." },
+        { "text": "Perché ha perso il passaporto.", "es": "Porque ha perdido el pasaporte." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Cosa gli dà la farmacista?",
+      "es": "¿Qué le da la farmacéutica?",
+      "options": [
+        { "text": "Una crema doposole e una crema per le punture.", "es": "Una crema aftersun y una crema para las picaduras." },
+        { "text": "Una scatola di paracetamolo.", "es": "Una caja de paracetamol." },
+        { "text": "Uno sciroppo per la tosse.", "es": "Un jarabe para la tos." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Quante volte al giorno deve mettere le creme?",
+      "es": "¿Cuántas veces al día se tiene que poner las cremas?",
+      "options": [
+        { "text": "Tre volte.", "es": "Tres veces." },
+        { "text": "Una volta.", "es": "Una vez." },
+        { "text": "Due volte.", "es": "Dos veces." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Ci vuole la ricetta?",
+      "es": "¿Hace falta receta?",
+      "options": [
+        { "text": "Sì, per tutte e due le creme.", "es": "Sí, para las dos cremas." },
+        { "text": "No, non serve.", "es": "No, no hace falta." },
+        { "text": "Sì, ma solo per la crema solare.", "es": "Sí, pero solo para la crema solar." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "emer.schiena", "distractors": ["gola", "caviglia"] },
+    { "id": "g2", "sentence": "s3", "answer": "emer.puntura", "gap": "punture", "distractors": ["compresse", "ricette"] },
+    { "id": "g3", "sentence": "s4", "answer": "emer.farmacia", "distractors": ["pizzeria", "chiesa"] },
+    { "id": "g4", "sentence": "s7", "answer": "story-siracusa-doposole", "distractors": ["pistacchio", "limone"] },
+    { "id": "g5", "sentence": "s9", "answer": "story-siracusa-ombra", "distractors": ["aperto", "uscita"] },
+    { "id": "g6", "sentence": "s10", "answer": "emer.ricetta", "distractors": ["prenotazione", "multa"] }
+  ]
+}

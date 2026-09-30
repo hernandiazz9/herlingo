@@ -1,0 +1,90 @@
+{
+  "id": "story.valle-dei-templi",
+  "order": 7,
+  "title": "La Valle dei Templi e una chiacchierata",
+  "titleEs": "El Valle de los Templos y una charla",
+  "description": "Hernán visita los templos de Agrigento y conoce a Chiara, una profesora de Milán.",
+  "emoji": "🏛️",
+  "situation": "presentarse",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "La mattina presto Hernán prende l'autobus per la Valle dei Templi.", "es": "Por la mañana temprano, Hernán coge el autobús al Valle de los Templos." },
+    { "id": "s2", "text": "All'ingresso compra il biglietto e prende una mappa del parco.", "es": "Al llegar, compra la entrada y coge un mapa del parque." },
+    { "id": "s3", "text": "Fa già caldo e il sole è molto forte.", "es": "Ya hace calor y el sol pega muy fuerte." },
+    { "id": "s4", "text": "Davanti al Tempio della Concordia, una ragazza gli chiede aiuto.", "es": "Delante del Templo de la Concordia, una chica le pide ayuda." },
+    { "id": "s5", "text": "«Scusa, mi fai una foto?»", "es": "«Perdona, ¿me haces una foto?»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s6", "text": "Hernán fa la foto e poi chiacchierano un po'.", "es": "Hernán le hace la foto y luego charlan un rato." },
+    { "id": "s7", "text": "La ragazza si chiama Chiara, è di Milano e fa l'insegnante.", "es": "La chica se llama Chiara, es de Milán y es profesora." },
+    { "id": "s8", "text": "«Sei qui in vacanza?», chiede Chiara.", "es": "«¿Estás aquí de vacaciones?», pregunta Chiara.", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s9", "text": "«Sì, viaggio da solo. Domani vado a Catania.»", "es": "«Sí, viajo solo. Mañana me voy a Catania.»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s10", "text": "Anche Chiara, tra qualche giorno, va a Siracusa.", "es": "Chiara también va a Siracusa dentro de unos días." },
+    { "id": "s11", "text": "Allora si danno il numero di telefono.", "es": "Así que se dan el número de teléfono." },
+    { "id": "s12", "text": "Poi Hernán visita gli altri templi, sotto il sole.", "es": "Luego Hernán visita los otros templos, bajo el sol." }
+  ],
+  "keywords": [
+    { "id": "story-agrigento-tempio", "word": "tempio", "article": "il", "gender": "m", "plural": "templi", "es": "el templo", "notes": "Plural irregular: «i templi» (la Valle dei Templi).", "situation": "calle" },
+    "move-strada.ingresso",
+    "move-strada.mappa",
+    "talk-chiacchiere.caldo",
+    "talk-chiacchiere.foto",
+    { "id": "story-agrigento-chiacchierare", "word": "chiacchierare", "es": "charlar", "notes": "«Chiacchieriamo un po'»: charlamos un rato. La charla es «la chiacchierata».", "situation": "presentarse" },
+    "talk-chiacchiere.sei-qui-in-vacanza",
+    "talk-io.viaggio-da-solo",
+    "talk-chiacchiere.numero",
+    { "id": "story-agrigento-insegnante", "word": "insegnante", "article": "l'", "gender": "mf", "es": "el profesor, la profesora", "notes": "«Faccio l'insegnante»: soy profesor o profesora (de colegio o instituto).", "situation": "presentarse" }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Dove va Hernán la mattina presto?",
+      "es": "¿Adónde va Hernán por la mañana temprano?",
+      "options": [
+        { "text": "Alla Valle dei Templi.", "es": "Al Valle de los Templos." },
+        { "text": "Al mercato del pesce.", "es": "Al mercado de pescado." },
+        { "text": "Alla spiaggia.", "es": "A la playa." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Cosa chiede la ragazza a Hernán?",
+      "es": "¿Qué le pide la chica a Hernán?",
+      "options": [
+        { "text": "Una mappa del parco.", "es": "Un mapa del parque." },
+        { "text": "Una foto.", "es": "Una foto." },
+        { "text": "L'orario dell'autobus.", "es": "El horario del autobús." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Di dov'è Chiara?",
+      "es": "¿De dónde es Chiara?",
+      "options": [
+        { "text": "Di Palermo.", "es": "De Palermo." },
+        { "text": "Di Madrid.", "es": "De Madrid." },
+        { "text": "Di Milano.", "es": "De Milán." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Dove va Hernán domani?",
+      "es": "¿Adónde va Hernán mañana?",
+      "options": [
+        { "text": "A Cefalù.", "es": "A Cefalù." },
+        { "text": "A Catania.", "es": "A Catania." },
+        { "text": "A Milano.", "es": "A Milán." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "move-strada.ingresso", "distractors": ["aeroporto", "ospedale"] },
+    { "id": "g2", "sentence": "s3", "answer": "talk-chiacchiere.caldo", "distractors": ["freddo", "buio"] },
+    { "id": "g3", "sentence": "s5", "answer": "talk-chiacchiere.foto", "distractors": ["pizza", "multa"] },
+    { "id": "g4", "sentence": "s6", "answer": "story-agrigento-chiacchierare", "gap": "chiacchierano", "distractors": ["dormono", "nuotano"] },
+    { "id": "g5", "sentence": "s11", "answer": "talk-chiacchiere.numero", "distractors": ["nome", "biglietto"] },
+    { "id": "g6", "sentence": "s12", "answer": "story-agrigento-tempio", "gap": "templi", "distractors": ["mercati", "treni"] }
+  ]
+}
