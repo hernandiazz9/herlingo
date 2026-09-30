@@ -1,0 +1,55 @@
+{
+  "id": "dlg.move-indicazioni",
+  "title": "Preguntar el camino en Palermo",
+  "description": "De los Quattro Canti al Teatro Massimo: preguntas, pides que repitan y compruebas.",
+  "situation": "calle",
+  "unit": "move-strada",
+  "order": 26,
+  "register": "lei",
+  "turns": [
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Para a una señora y pregunta cómo ir al Teatro Massimo.",
+      "options": [
+        { "text": "Scusi, signora, per andare al Teatro Massimo?", "es": "Perdone, señora, ¿para ir al Teatro Massimo?", "verdict": "correct", "feedback": "¡Perfecto! Fórmula rápida y educada." },
+        { "text": "Teatro Massimo?", "es": "¿Teatro Massimo?", "verdict": "acceptable", "feedback": "Se entiende, pero empieza con «Scusi»." },
+        { "text": "Ciao, dov'è il Teatro Massimo?", "es": "Hola, ¿dónde está el Teatro Massimo?", "verdict": "wrong", "feedback": "Con una señora desconocida, «Scusi» y no «Ciao»." }
+      ]
+    },
+    { "id": "n1", "speaker": "native", "name": "Signora", "text": "Il Massimo? È facile. Vada sempre dritto per via Maqueda, sette, otto minuti a piedi.", "es": "¿El Massimo? Es fácil. Siga todo recto por la via Maqueda, siete u ocho minutos andando.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Has entendido los minutos pero no la calle. Pide que te lo repita.",
+      "options": [
+        { "text": "Scusi, per quale via? Può ripetere?", "es": "Perdone, ¿por qué calle? ¿Puede repetir?", "verdict": "correct", "feedback": "¡Muy bien! Preguntas justo lo que te falta." },
+        { "text": "Come, scusi?", "es": "¿Cómo dice?", "verdict": "acceptable", "feedback": "Funciona; te lo repetirá todo." },
+        { "text": "Sette euro? Grazie.", "es": "¿Siete euros? Gracias.", "verdict": "wrong", "feedback": "Ha dicho «minuti», no «euro»: son minutos andando." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Signora", "text": "Via Maqueda, questa qui, quella pedonale. Sempre dritto, e alla fine trova il teatro, in piazza Verdi.", "es": "Via Maqueda, esta de aquí, la peatonal. Todo recto, y al final encuentra el teatro, en la piazza Verdi.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Comprueba que lo has entendido.",
+      "options": [
+        { "text": "Quindi sempre dritto fino a piazza Verdi?", "es": "Entonces, ¿todo recto hasta la piazza Verdi?", "verdict": "correct", "feedback": "¡Genial! Repetir la indicación es la mejor comprobación." },
+        { "text": "Sempre dritto, va bene.", "es": "Todo recto, vale.", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Quindi giro a destra?", "es": "Entonces, ¿giro a la derecha?", "verdict": "wrong", "feedback": "Ha dicho «sempre dritto»: todo recto, sin girar." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Signora", "text": "Esatto! Ma stia attento ai motorini, eh!", "es": "¡Exacto! Pero cuidado con las motos, ¿eh?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias.",
+      "options": [
+        { "text": "Grazie mille, gentilissima!", "es": "¡Muchas gracias, muy amable!", "verdict": "correct", "feedback": "¡Perfecto! «Gentilissima» porque es una mujer." },
+        { "text": "Grazie.", "es": "Gracias.", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Prego, signora!", "es": "¡De nada, señora!", "verdict": "wrong", "feedback": "«Prego» es «de nada»: te toca dar las gracias." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Signora", "text": "Si figuri! Buona passeggiata!", "es": "¡Faltaría más! ¡Buen paseo!", "voice": "it-IT-IsabellaNeural" }
+  ]
+}

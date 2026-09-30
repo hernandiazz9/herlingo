@@ -1,0 +1,326 @@
+{
+  "id": "move-treno",
+  "order": 20,
+  "title": "En tren",
+  "description": "Billetes, andenes, validar, retrasos y huelgas en los regionales de Trenitalia.",
+  "emoji": "🚆",
+  "situation": "tren",
+  "lessons": [
+    {
+      "id": "move-treno.l.biglietto",
+      "title": "Comprar el billete",
+      "items": ["move-treno.biglietto", "move-treno.vorrei-un-biglietto-per", "move-treno.andata", "move-treno.solo-andata", "move-treno.ritorno", "move-treno.andata-e-ritorno", "move-treno.due-biglietti-per", "move-treno.quanto-costa-il-biglietto", "move-treno.biglietteria", "move-treno.macchinetta", "move-treno.dove-si-comprano-i-biglietti", "move-treno.posso-pagare-con-la-carta", "move-treno.treno", "move-treno.regionale", "move-treno.a-che-ora-parte", "move-treno.orario", "move-treno.stazione", "move-treno.c-e-un-treno-diretto", "move-treno.devo-cambiare", "move-treno.coincidenza", "move-treno.andata-o-andata-e-ritorno", "move-treno.per-che-giorno", "move-treno.sono-sei-euro-e-dieci", "move-treno.qa.andata", "move-treno.qa.dove-deve-andare", "move-treno.qa.come-paga"]
+    },
+    {
+      "id": "move-treno.l.binario",
+      "title": "En la estación: andenes y avisos",
+      "items": ["move-treno.binario", "move-treno.da-che-binario", "move-treno.dov-e-il-binario-quattro", "move-treno.questo-treno-va-a", "move-treno.e-questo-il-treno-per", "move-treno.partenza", "move-treno.arrivo", "move-treno.a-che-ora-arriva", "move-treno.fermata", "move-treno.quante-fermate-mancano", "move-treno.mi-dice-quando-scendere", "move-treno.tabellone", "move-treno.guardi-il-tabellone", "move-treno.sala-d-attesa", "move-treno.sottopassaggio", "move-treno.carrozza", "move-treno.direzione", "move-treno.in-partenza", "move-treno.in-arrivo", "move-treno.allontanarsi-dalla-linea-gialla", "move-treno.qa.che-binario", "move-treno.qa.dove-scende"]
+    },
+    {
+      "id": "move-treno.l.convalidare",
+      "title": "Validar el billete y el revisor",
+      "items": ["move-treno.convalidare", "move-treno.devo-convalidare", "move-treno.dove-si-convalida", "move-treno.obliteratrice", "move-treno.timbrare", "move-treno.la-macchinetta-non-funziona", "move-treno.l-ho-comprato-online", "move-treno.ecco-il-biglietto", "move-treno.non-sapevo", "move-treno.posso-fare-il-biglietto-a-bordo", "move-treno.controllore", "move-treno.capotreno", "move-treno.biglietto-prego", "move-treno.non-e-convalidato", "move-treno.ha-fatto-il-check-in", "move-treno.documento-per-favore", "move-treno.documento", "move-treno.deve-pagare-una-multa", "move-treno.multa", "move-treno.tutto-a-posto", "move-treno.qa.biglietto-prego", "move-treno.qa.ha-convalidato"]
+    },
+    {
+      "id": "move-treno.l.ritardo",
+      "title": "Retrasos, cancelaciones y huelgas",
+      "items": ["move-treno.ritardo", "move-treno.il-treno-e-in-ritardo", "move-treno.quanto-ritardo-ha", "move-treno.in-orario", "move-treno.ritardo-di-venti-minuti", "move-treno.e-stato-cancellato", "move-treno.soppresso", "move-treno.il-treno-e-stato-soppresso", "move-treno.cambio-di-binario", "move-treno.sciopero", "move-treno.oggi-c-e-sciopero", "move-treno.treni-garantiti", "move-treno.c-e-un-autobus-sostitutivo", "move-treno.guasto", "move-treno.lavori", "move-treno.ho-perso-la-coincidenza", "move-treno.qual-e-il-prossimo-treno", "move-treno.posso-usare-lo-stesso-biglietto", "move-treno.rimborso", "move-treno.annuncio", "move-treno.qa.e-in-ritardo", "move-treno.qa.sciopero"]
+    },
+    {
+      "id": "move-treno.l.a-bordo",
+      "title": "En el tren y al bajar",
+      "items": ["move-treno.e-libero-questo-posto", "move-treno.posto", "move-treno.libero", "move-treno.occupato", "move-treno.e-occupato", "move-treno.posso-sedermi-qui", "move-treno.questo-e-il-mio-posto", "move-treno.valigia", "move-treno.zaino", "move-treno.bagaglio", "move-treno.dove-posso-mettere-la-valigia", "move-treno.mi-aiuta-con-la-valigia", "move-treno.qual-e-la-prossima-fermata", "move-treno.prossima-fermata", "move-treno.prossimo", "move-treno.scendo-alla-prossima", "move-treno.scendere", "move-treno.salire", "move-treno.scende-alla-prossima", "move-treno.permesso", "move-treno.porta", "move-treno.c-e-un-bagno", "move-treno.bagno", "move-treno.qa.e-libero", "move-treno.qa.scende"]
+    }
+  ],
+  "phrases": [
+    { "id": "move-treno.vorrei-un-biglietto-per", "text": "Vorrei un biglietto per Cefalù.", "es": "Quería un billete para Cefalù.", "literal": "Querría un billete para Cefalù.", "notes": "«Vorrei» es la forma educada de pedir; «voglio» suena brusco.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.solo-andata", "text": "Solo andata, per favore.", "es": "Solo ida, por favor.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.andata-e-ritorno", "text": "Andata e ritorno, per favore.", "es": "Ida y vuelta, por favor.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.due-biglietti-per", "text": "Due biglietti per Agrigento, per favore.", "es": "Dos billetes para Agrigento, por favor.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.quanto-costa-il-biglietto", "text": "Quanto costa il biglietto?", "es": "¿Cuánto cuesta el billete?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.dove-si-comprano-i-biglietti", "text": "Dove si comprano i biglietti?", "es": "¿Dónde se compran los billetes?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.posso-pagare-con-la-carta", "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.a-che-ora-parte", "text": "A che ora parte il prossimo treno per Catania?", "es": "¿A qué hora sale el próximo tren para Catania?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.c-e-un-treno-diretto", "text": "C'è un treno diretto?", "es": "¿Hay un tren directo?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.devo-cambiare", "text": "Devo cambiare treno?", "es": "¿Tengo que hacer transbordo?", "literal": "¿Debo cambiar de tren?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.andata-o-andata-e-ritorno", "text": "Andata o andata e ritorno?", "es": "¿Ida o ida y vuelta?", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.per-che-giorno", "text": "Per che giorno?", "es": "¿Para qué día?", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.sono-sei-euro-e-dieci", "text": "Sono sei euro e dieci.", "es": "Son seis euros con diez.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.da-che-binario", "text": "Da che binario parte il treno per Siracusa?", "es": "¿De qué andén sale el tren para Siracusa?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.dov-e-il-binario-quattro", "text": "Dov'è il binario quattro?", "es": "¿Dónde está el andén cuatro?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.questo-treno-va-a", "text": "Questo treno va a Palermo Centrale?", "es": "¿Este tren va a Palermo Centrale?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.e-questo-il-treno-per", "text": "È questo il treno per Taormina?", "es": "¿Es este el tren para Taormina?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.a-che-ora-arriva", "text": "A che ora arriva a Siracusa?", "es": "¿A qué hora llega a Siracusa?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.quante-fermate-mancano", "text": "Quante fermate mancano per Cefalù?", "es": "¿Cuántas paradas quedan para Cefalù?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.mi-dice-quando-scendere", "text": "Mi può dire quando devo scendere?", "es": "¿Me puede decir cuándo me tengo que bajar?", "register": "lei", "situation": "tren" },
+    { "id": "move-treno.guardi-il-tabellone", "text": "Guardi il tabellone delle partenze.", "es": "Mire el panel de salidas.", "register": "lei", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.in-partenza", "text": "Il regionale per Agrigento Centrale è in partenza dal binario due.", "es": "El regional para Agrigento Centrale está a punto de salir del andén dos.", "notes": "Aviso por megafonía: fíjate en el destino y el «binario».", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-treno.in-arrivo", "text": "Il treno è in arrivo al binario tre.", "es": "El tren está llegando al andén tres.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-treno.allontanarsi-dalla-linea-gialla", "text": "Allontanarsi dalla linea gialla.", "es": "Aléjense de la línea amarilla.", "notes": "Aviso típico cuando pasa un tren sin parar.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-treno.devo-convalidare", "text": "Devo convalidare il biglietto?", "es": "¿Tengo que validar el billete?", "notes": "El billete de papel se valida antes de subir; si no, multa.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.dove-si-convalida", "text": "Dove si convalida il biglietto?", "es": "¿Dónde se valida el billete?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.la-macchinetta-non-funziona", "text": "La macchinetta non funziona.", "es": "La máquina no funciona.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.l-ho-comprato-online", "text": "L'ho comprato online.", "es": "Lo he comprado por internet.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.ecco-il-biglietto", "text": "Ecco il biglietto.", "es": "Aquí tiene el billete.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.non-sapevo", "text": "Scusi, non sapevo di doverlo convalidare.", "es": "Perdone, no sabía que había que validarlo.", "register": "lei", "situation": "tren" },
+    { "id": "move-treno.posso-fare-il-biglietto-a-bordo", "text": "Posso fare il biglietto a bordo?", "es": "¿Puedo sacar el billete en el tren?", "notes": "A bordo suele tener recargo: mejor sácalo antes.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.biglietto-prego", "text": "Biglietto, prego.", "es": "Billete, por favor.", "notes": "Lo dice el revisor al pasar por el vagón.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.non-e-convalidato", "text": "Il biglietto non è convalidato.", "es": "El billete no está validado.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.ha-fatto-il-check-in", "text": "Ha fatto il check-in?", "es": "¿Ha hecho el check-in?", "notes": "Un billete regional digital sin tren fijo se activa en la app antes de subir.", "register": "lei", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.documento-per-favore", "text": "Un documento, per favore.", "es": "Documentación, por favor.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.deve-pagare-una-multa", "text": "Deve pagare una multa.", "es": "Tiene que pagar una multa.", "register": "lei", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.tutto-a-posto", "text": "Tutto a posto, grazie.", "es": "Todo en orden, gracias.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.il-treno-e-in-ritardo", "text": "Il treno è in ritardo?", "es": "¿El tren va con retraso?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.quanto-ritardo-ha", "text": "Quanto ritardo ha?", "es": "¿Cuánto retraso lleva?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.ritardo-di-venti-minuti", "text": "Il treno viaggia con un ritardo di venti minuti.", "es": "El tren circula con veinte minutos de retraso.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-treno.e-stato-cancellato", "text": "Il treno è stato cancellato?", "es": "¿Han cancelado el tren?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.il-treno-e-stato-soppresso", "text": "Il treno è stato soppresso.", "es": "El tren ha sido suprimido.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-treno.cambio-di-binario", "text": "Cambio di binario: il treno partirà dal binario sette.", "es": "Cambio de andén: el tren saldrá del andén siete.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-treno.oggi-c-e-sciopero", "text": "Oggi c'è sciopero?", "es": "¿Hoy hay huelga?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.treni-garantiti", "text": "Sono garantiti i treni dalle sei alle nove.", "es": "Están garantizados los trenes de seis a nueve.", "notes": "En huelga hay franjas garantizadas: de 6 a 9 y de 18 a 21 los días laborables.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-treno.c-e-un-autobus-sostitutivo", "text": "C'è un autobus sostitutivo?", "es": "¿Hay un autobús que sustituya al tren?", "notes": "Con obras o averías, Trenitalia pone «bus sostitutivi».", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.ho-perso-la-coincidenza", "text": "Ho perso la coincidenza.", "es": "He perdido el enlace.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.qual-e-il-prossimo-treno", "text": "Qual è il prossimo treno per Palermo?", "es": "¿Cuál es el próximo tren para Palermo?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.posso-usare-lo-stesso-biglietto", "text": "Posso usare lo stesso biglietto?", "es": "¿Puedo usar el mismo billete?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.e-libero-questo-posto", "text": "È libero questo posto?", "es": "¿Está libre este asiento?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.e-occupato", "text": "È occupato.", "es": "Está ocupado.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.posso-sedermi-qui", "text": "Posso sedermi qui?", "es": "¿Me puedo sentar aquí?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.questo-e-il-mio-posto", "text": "Scusi, questo è il mio posto.", "es": "Perdone, este es mi asiento.", "register": "lei", "situation": "tren" },
+    { "id": "move-treno.dove-posso-mettere-la-valigia", "text": "Dove posso mettere la valigia?", "es": "¿Dónde puedo poner la maleta?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.mi-aiuta-con-la-valigia", "text": "Mi può aiutare con la valigia?", "es": "¿Me puede ayudar con la maleta?", "register": "lei", "situation": "tren" },
+    { "id": "move-treno.qual-e-la-prossima-fermata", "text": "Qual è la prossima fermata?", "es": "¿Cuál es la próxima parada?", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.prossima-fermata", "text": "Prossima fermata: Cefalù.", "es": "Próxima parada: Cefalù.", "register": "neutral", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-treno.scendo-alla-prossima", "text": "Scendo alla prossima.", "es": "Me bajo en la próxima.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.scende-alla-prossima", "text": "Scende alla prossima?", "es": "¿Se baja en la próxima?", "notes": "Te lo preguntan para pasar hacia la puerta.", "register": "lei", "situation": "tren", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-treno.permesso", "text": "Permesso!", "es": "¡Con permiso!", "notes": "Para abrirte paso al bajar.", "register": "neutral", "situation": "tren" },
+    { "id": "move-treno.c-e-un-bagno", "text": "C'è un bagno sul treno?", "es": "¿Hay baño en el tren?", "register": "neutral", "situation": "tren" }
+  ],
+  "vocab": [
+    { "id": "move-treno.biglietto", "word": "biglietto", "article": "il", "gender": "m", "plural": "biglietti", "es": "el billete", "example": "move-treno.vorrei-un-biglietto-per", "situation": "tren" },
+    { "id": "move-treno.andata", "word": "andata", "article": "l'", "gender": "f", "es": "la ida", "example": "move-treno.solo-andata", "situation": "tren" },
+    { "id": "move-treno.ritorno", "word": "ritorno", "article": "il", "gender": "m", "es": "la vuelta", "example": "move-treno.andata-e-ritorno", "situation": "tren" },
+    { "id": "move-treno.biglietteria", "word": "biglietteria", "article": "la", "gender": "f", "es": "la taquilla", "notes": "La de las máquinas es la «biglietteria self-service».", "situation": "tren" },
+    { "id": "move-treno.macchinetta", "word": "macchinetta", "article": "la", "gender": "f", "es": "la maquinita (de billetes o de validar)", "notes": "Así llama todo el mundo a las máquinas: de billetes, de validar o de café.", "situation": "tren" },
+    { "id": "move-treno.treno", "word": "treno", "article": "il", "gender": "m", "plural": "treni", "es": "el tren", "situation": "tren" },
+    { "id": "move-treno.regionale", "word": "regionale", "article": "il", "gender": "m", "es": "el tren regional", "notes": "Los trenes que usarás en Sicilia; no se reserva asiento.", "situation": "tren" },
+    { "id": "move-treno.orario", "word": "orario", "article": "l'", "gender": "m", "plural": "orari", "es": "el horario", "situation": "tren" },
+    { "id": "move-treno.stazione", "word": "stazione", "article": "la", "gender": "f", "plural": "stazioni", "es": "la estación", "situation": "tren" },
+    { "id": "move-treno.coincidenza", "word": "coincidenza", "article": "la", "gender": "f", "es": "el enlace (con otro tren)", "notes": "«Perdere la coincidenza» = perder el enlace.", "situation": "tren" },
+    { "id": "move-treno.binario", "word": "binario", "article": "il", "gender": "m", "plural": "binari", "es": "el andén (la vía)", "notes": "Se dice el número de vía: «binario 3».", "example": "move-treno.da-che-binario", "situation": "tren" },
+    { "id": "move-treno.partenza", "word": "partenza", "article": "la", "gender": "f", "plural": "partenze", "es": "la salida", "situation": "tren" },
+    { "id": "move-treno.arrivo", "word": "arrivo", "article": "l'", "gender": "m", "plural": "arrivi", "es": "la llegada", "situation": "tren" },
+    { "id": "move-treno.fermata", "word": "fermata", "article": "la", "gender": "f", "plural": "fermate", "es": "la parada", "example": "move-treno.quante-fermate-mancano", "situation": "tren" },
+    { "id": "move-treno.tabellone", "word": "tabellone", "article": "il", "gender": "m", "es": "el panel de salidas y llegadas", "situation": "tren" },
+    { "id": "move-treno.sala-d-attesa", "word": "sala d'attesa", "article": "la", "gender": "f", "es": "la sala de espera", "situation": "tren" },
+    { "id": "move-treno.sottopassaggio", "word": "sottopassaggio", "article": "il", "gender": "m", "es": "el paso subterráneo", "notes": "Para cambiar de andén en muchas estaciones sicilianas.", "situation": "tren" },
+    { "id": "move-treno.carrozza", "word": "carrozza", "article": "la", "gender": "f", "plural": "carrozze", "es": "el vagón (el coche)", "situation": "tren" },
+    { "id": "move-treno.direzione", "word": "direzione", "article": "la", "gender": "f", "es": "la dirección", "situation": "tren" },
+    { "id": "move-treno.convalidare", "word": "convalidare", "es": "validar", "notes": "También oirás «obliterare» o, coloquial, «timbrare».", "example": "move-treno.devo-convalidare", "situation": "tren" },
+    { "id": "move-treno.obliteratrice", "word": "obliteratrice", "article": "l'", "gender": "f", "es": "la máquina validadora", "notes": "La cajita del andén donde metes el billete de papel.", "situation": "tren" },
+    { "id": "move-treno.timbrare", "word": "timbrare", "es": "picar (el billete)", "notes": "Coloquial: «Hai timbrato?» = ¿Has picado el billete?", "situation": "tren" },
+    { "id": "move-treno.controllore", "word": "controllore", "article": "il", "gender": "m", "plural": "controllori", "es": "el revisor", "situation": "tren" },
+    { "id": "move-treno.capotreno", "word": "capotreno", "article": "il", "gender": "m", "es": "el jefe de tren", "notes": "En los regionales suele ser quien revisa los billetes.", "situation": "tren" },
+    { "id": "move-treno.documento", "word": "documento", "article": "il", "gender": "m", "es": "el documento de identidad", "notes": "Te lo piden si hay multa: lleva el DNI o el pasaporte.", "situation": "tren" },
+    { "id": "move-treno.multa", "word": "multa", "article": "la", "gender": "f", "es": "la multa", "situation": "tren" },
+    { "id": "move-treno.ritardo", "word": "ritardo", "article": "il", "gender": "m", "es": "el retraso", "example": "move-treno.il-treno-e-in-ritardo", "situation": "tren" },
+    { "id": "move-treno.in-orario", "word": "in orario", "es": "a su hora (puntual)", "situation": "tren" },
+    { "id": "move-treno.soppresso", "word": "soppresso", "es": "suprimido (cancelado)", "notes": "En los avisos: «treno soppresso» = no va a salir.", "situation": "tren" },
+    { "id": "move-treno.sciopero", "word": "sciopero", "article": "lo", "gender": "m", "plural": "scioperi", "es": "la huelga", "example": "move-treno.oggi-c-e-sciopero", "situation": "tren" },
+    { "id": "move-treno.guasto", "word": "guasto", "article": "il", "gender": "m", "es": "la avería", "situation": "tren" },
+    { "id": "move-treno.lavori", "word": "lavori", "article": "i", "gender": "m", "es": "las obras", "notes": "«Lavori in corso» = obras en curso.", "situation": "tren" },
+    { "id": "move-treno.rimborso", "word": "rimborso", "article": "il", "gender": "m", "es": "el reembolso", "situation": "tren" },
+    { "id": "move-treno.annuncio", "word": "annuncio", "article": "l'", "gender": "m", "es": "el aviso (por megafonía)", "situation": "tren" },
+    { "id": "move-treno.posto", "word": "posto", "article": "il", "gender": "m", "plural": "posti", "es": "el asiento (la plaza)", "example": "move-treno.e-libero-questo-posto", "situation": "tren" },
+    { "id": "move-treno.libero", "word": "libero", "es": "libre", "situation": "tren" },
+    { "id": "move-treno.occupato", "word": "occupato", "es": "ocupado", "situation": "tren" },
+    { "id": "move-treno.valigia", "word": "valigia", "article": "la", "gender": "f", "plural": "valigie", "es": "la maleta", "example": "move-treno.dove-posso-mettere-la-valigia", "situation": "tren" },
+    { "id": "move-treno.zaino", "word": "zaino", "article": "lo", "gender": "m", "es": "la mochila", "situation": "tren" },
+    { "id": "move-treno.bagaglio", "word": "bagaglio", "article": "il", "gender": "m", "plural": "bagagli", "es": "el equipaje", "situation": "tren" },
+    { "id": "move-treno.prossimo", "word": "prossimo", "es": "próximo, siguiente", "notes": "«La prossima» = la próxima (parada).", "situation": "tren" },
+    { "id": "move-treno.scendere", "word": "scendere", "es": "bajar(se)", "notes": "«Scendere dal treno» = bajarse del tren.", "situation": "tren" },
+    { "id": "move-treno.salire", "word": "salire", "es": "subir(se)", "notes": "¡Ojo! «Salire» es subir, no salir; salir es «uscire».", "situation": "tren" },
+    { "id": "move-treno.porta", "word": "porta", "article": "la", "gender": "f", "es": "la puerta", "situation": "tren" },
+    { "id": "move-treno.bagno", "word": "bagno", "article": "il", "gender": "m", "es": "el baño (el aseo)", "situation": "tren" }
+  ],
+  "qa": [
+    {
+      "id": "move-treno.qa.andata",
+      "question": "Solo andata o andata e ritorno?",
+      "questionEs": "¿Solo ida o ida y vuelta?",
+      "accepted": [
+        { "text": "Andata e ritorno, per favore.", "es": "Ida y vuelta, por favor." },
+        { "text": "Solo andata, grazie.", "es": "Solo ida, gracias." }
+      ],
+      "distractors": [
+        { "text": "Al binario tre.", "es": "En el andén tres." },
+        { "text": "Sì, per favore.", "es": "Sí, por favor." }
+      ],
+      "register": "neutral",
+      "situation": "tren",
+      "notes": "Es una pregunta de «o esto o lo otro»: «sì» no responde.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-treno.qa.dove-deve-andare",
+      "question": "Buongiorno, dove deve andare?",
+      "questionEs": "Buenos días, ¿adónde tiene que ir?",
+      "accepted": [
+        { "text": "A Cefalù, per favore.", "es": "A Cefalù, por favor." },
+        { "text": "Un biglietto per Cefalù, per favore.", "es": "Un billete para Cefalù, por favor." }
+      ],
+      "distractors": [
+        { "text": "Sono spagnolo.", "es": "Soy español." },
+        { "text": "Alle dieci e mezza.", "es": "A las diez y media." }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-treno.qa.come-paga",
+      "question": "Come paga? Contanti o carta?",
+      "questionEs": "¿Cómo paga? ¿Efectivo o tarjeta?",
+      "accepted": [
+        { "text": "Con la carta, grazie.", "es": "Con tarjeta, gracias." },
+        { "text": "In contanti.", "es": "En efectivo." }
+      ],
+      "distractors": [
+        { "text": "Sei euro e dieci.", "es": "Seis euros con diez." },
+        { "text": "Solo andata.", "es": "Solo ida." }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-treno.qa.che-binario",
+      "question": "Scusi, sa da che binario parte il treno per Catania?",
+      "questionEs": "Perdone, ¿sabe de qué andén sale el tren para Catania?",
+      "accepted": [
+        { "text": "Dal binario due, credo.", "es": "Del andén dos, creo." },
+        { "text": "Mi dispiace, non lo so.", "es": "Lo siento, no lo sé." }
+      ],
+      "distractors": [
+        { "text": "Alle due.", "es": "A las dos." },
+        { "text": "Due biglietti, per favore.", "es": "Dos billetes, por favor." }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "move-treno.qa.dove-scende",
+      "question": "Lei dove scende?",
+      "questionEs": "¿Usted dónde se baja?",
+      "accepted": [
+        { "text": "Scendo a Cefalù.", "es": "Me bajo en Cefalù." },
+        { "text": "A Cefalù.", "es": "En Cefalù." }
+      ],
+      "distractors": [
+        { "text": "Salgo a Cefalù.", "es": "Subo en Cefalù." },
+        { "text": "Sono sceso.", "es": "Me he bajado." }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "notes": "¡Ojo! «Salire» es subir; bajarse es «scendere».",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-treno.qa.biglietto-prego",
+      "question": "Buongiorno, biglietto prego.",
+      "questionEs": "Buenos días, billete, por favor.",
+      "accepted": [
+        { "text": "Ecco a Lei.", "es": "Aquí tiene." },
+        { "text": "Ecco il biglietto.", "es": "Aquí tiene el billete." }
+      ],
+      "distractors": [
+        { "text": "Un biglietto per Cefalù, grazie.", "es": "Un billete para Cefalù, gracias." },
+        { "text": "Prego!", "es": "¡De nada!" }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "notes": "El revisor quiere ver tu billete; no te lo está vendiendo.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-treno.qa.ha-convalidato",
+      "question": "Ha convalidato il biglietto?",
+      "questionEs": "¿Ha validado el billete?",
+      "accepted": [
+        { "text": "Sì, l'ho convalidato in stazione.", "es": "Sí, lo he validado en la estación." },
+        { "text": "No, scusi, la macchinetta non funzionava.", "es": "No, perdone, la máquina no funcionaba." }
+      ],
+      "distractors": [
+        { "text": "Sì, sono convalidato.", "es": "Sí, estoy validado." },
+        { "text": "No, grazie.", "es": "No, gracias." }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-treno.qa.e-in-ritardo",
+      "question": "Scusi, sa se il treno per Catania è in ritardo?",
+      "questionEs": "Perdone, ¿sabe si el tren para Catania va con retraso?",
+      "accepted": [
+        { "text": "Sì, di venti minuti.", "es": "Sí, veinte minutos." },
+        { "text": "Credo di sì. Guardi il tabellone.", "es": "Creo que sí. Mire el panel." }
+      ],
+      "distractors": [
+        { "text": "Sì, sono in ritardo.", "es": "Sí, llego tarde." },
+        { "text": "No, sono in anticipo.", "es": "No, llego pronto." }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "move-treno.qa.sciopero",
+      "question": "Guardi, oggi c'è sciopero: il treno non parte.",
+      "questionEs": "Mire, hoy hay huelga: el tren no sale.",
+      "accepted": [
+        { "text": "E come posso arrivare a Siracusa?", "es": "¿Y cómo puedo llegar a Siracusa?" },
+        { "text": "C'è un pullman?", "es": "¿Hay algún autobús?" }
+      ],
+      "distractors": [
+        { "text": "Perfetto, grazie!", "es": "¡Perfecto, gracias!" },
+        { "text": "Allora aspetto al binario.", "es": "Entonces espero en el andén." }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-treno.qa.e-libero",
+      "question": "È libero questo posto?",
+      "questionEs": "¿Está libre este asiento?",
+      "accepted": [
+        { "text": "Sì, prego!", "es": "¡Sí, adelante!" },
+        { "text": "No, mi dispiace, è occupato.", "es": "No, lo siento, está ocupado." }
+      ],
+      "distractors": [
+        { "text": "Sì, sono libero.", "es": "Sí, estoy libre." },
+        { "text": "Grazie, anche a Lei.", "es": "Gracias, igualmente." }
+      ],
+      "register": "neutral",
+      "situation": "tren",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "move-treno.qa.scende",
+      "question": "Scende alla prossima?",
+      "questionEs": "¿Se baja en la próxima?",
+      "accepted": [
+        { "text": "Sì, scendo.", "es": "Sí, me bajo." },
+        { "text": "No, prego, passi pure.", "es": "No, pase, pase." }
+      ],
+      "distractors": [
+        { "text": "Sì, salgo.", "es": "Sí, subo." },
+        { "text": "Alla prossima!", "es": "¡Hasta la próxima!" }
+      ],
+      "register": "lei",
+      "situation": "tren",
+      "voice": "it-IT-DiegoNeural"
+    }
+  ]
+}

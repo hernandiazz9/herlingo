@@ -1,0 +1,265 @@
+{
+  "id": "move-bus",
+  "order": 22,
+  "title": "Autobús y aeropuerto",
+  "description": "Autobuses urbanos, pullman entre ciudades (AST, SAIS, Interbus) y los buses del aeropuerto.",
+  "emoji": "🚌",
+  "situation": "bus",
+  "lessons": [
+    {
+      "id": "move-bus.l.urbano",
+      "title": "El autobús urbano",
+      "items": ["move-bus.autobus", "move-bus.dov-e-la-fermata", "move-treno.fermata", "move-bus.dove-si-compra-il-biglietto", "move-bus.tabaccheria", "move-bus.tabaccaio", "move-bus.lo-trova-dal-tabaccaio", "move-bus.un-biglietto-per-l-autobus", "move-bus.si-puo-fare-a-bordo", "move-bus.si-timbra-a-bordo", "move-bus.quanto-dura-il-biglietto", "move-bus.che-autobus-devo-prendere", "move-bus.linea", "move-bus.passa-da-qui-il-101", "move-bus.ogni-quanto-passa", "move-bus.passa-ogni-venti-minuti", "move-bus.l-autobus-e-gia-passato", "move-bus.corsa", "move-bus.capolinea", "move-bus.centro", "move-bus.qa.quanti-biglietti", "move-bus.qa.prenda-il-101"]
+    },
+    {
+      "id": "move-bus.l.dentro",
+      "title": "Dentro del autobús",
+      "items": ["move-bus.questo-autobus-va-in-centro", "move-bus.mi-dice-quando-arriviamo", "move-bus.dove-devo-scendere-per", "move-bus.e-questa-la-fermata-per", "move-treno.scendo-alla-prossima", "move-bus.posso-passare", "move-treno.permesso", "move-bus.autista", "move-bus.mi-fa-scendere", "move-bus.prenoti-la-fermata", "move-bus.pulsante", "move-bus.deve-scendere-alla-prossima", "move-bus.capolinea-si-scende", "move-bus.si-sposti-avanti", "move-bus.questo-non-ci-va", "move-bus.sedile", "move-bus.uscita", "move-bus.entrata", "move-bus.pieno", "move-bus.avanti", "move-bus.dietro", "move-bus.qa.dove-deve-scendere", "move-bus.qa.capolinea"]
+    },
+    {
+      "id": "move-bus.l.pullman",
+      "title": "Pullman entre ciudades",
+      "items": ["move-bus.pullman", "move-bus.corriera", "move-bus.da-dove-parte-il-pullman", "move-bus.autostazione", "move-bus.dov-e-l-autostazione", "move-bus.parte-di-fronte-alla-stazione", "move-bus.a-bordo-o-in-biglietteria", "move-bus.si-fa-in-biglietteria", "move-bus.il-primo-pullman", "move-bus.a-che-ora-parte-l-ultimo", "move-bus.quanto-ci-mette", "move-bus.si-ferma-a", "move-bus.e-diretto", "move-bus.la-domenica-ci-sono-corse", "move-bus.feriale", "move-bus.festivo", "move-bus.bagagliaio", "move-bus.la-valigia-nel-bagagliaio", "move-bus.la-valigia-va-sotto", "move-bus.il-pullman-e-pieno", "move-bus.viaggio", "move-bus.durata", "move-bus.sosta", "move-bus.prenotazione", "move-bus.qa.per-dove", "move-bus.qa.quale-orario", "move-bus.qa.ha-bagagli"]
+    },
+    {
+      "id": "move-bus.l.aeroporto",
+      "title": "Del aeropuerto a la ciudad",
+      "items": ["move-bus.aeroporto", "move-bus.volo", "move-bus.dov-e-il-ritiro-bagagli", "move-bus.ritiro-bagagli", "move-bus.la-mia-valigia-non-e-arrivata", "move-bus.dov-e-l-uscita", "move-bus.gli-arrivi-sono-al-piano-terra", "move-bus.piano-terra", "move-bus.carrello", "move-bus.autobus-per-il-centro", "move-bus.fermata-dell-alibus", "move-bus.pullman-per-palermo-centrale", "move-bus.navetta", "move-bus.c-e-un-treno-per-la-citta", "move-bus.quanto-ci-vuole-per-il-centro", "move-bus.ogni-quanto-passa", "move-bus.si-paga-all-autista", "move-bus.il-biglietto-lo-fa-sul-pullman", "move-bus.parte-fra-dieci-minuti", "move-bus.politeama-o-centrale", "move-bus.passaporto", "move-bus.carta-d-identita", "move-bus.qa.dove-va", "move-bus.qa.solo-contanti"]
+    }
+  ],
+  "phrases": [
+    { "id": "move-bus.dov-e-la-fermata", "text": "Dov'è la fermata dell'autobus?", "es": "¿Dónde está la parada del autobús?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.dove-si-compra-il-biglietto", "text": "Dove si compra il biglietto dell'autobus?", "es": "¿Dónde se compra el billete de autobús?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.lo-trova-dal-tabaccaio", "text": "Lo trova dal tabaccaio.", "es": "Lo encuentra en el estanco.", "register": "lei", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.un-biglietto-per-l-autobus", "text": "Un biglietto per l'autobus, per favore.", "es": "Un billete de autobús, por favor.", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.si-puo-fare-a-bordo", "text": "Si può fare il biglietto a bordo?", "es": "¿Se puede sacar el billete en el autobús?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.si-timbra-a-bordo", "text": "Il biglietto si timbra a bordo.", "es": "El billete se valida dentro del autobús.", "register": "neutral", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.quanto-dura-il-biglietto", "text": "Quanto dura il biglietto?", "es": "¿Cuánto tiempo vale el billete?", "literal": "¿Cuánto dura el billete?", "notes": "Muchos billetes urbanos valen 90 minutos desde que los validas.", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.che-autobus-devo-prendere", "text": "Che autobus devo prendere per la stazione?", "es": "¿Qué autobús tengo que coger para la estación?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.passa-da-qui-il-101", "text": "Passa da qui il 101?", "es": "¿Pasa por aquí el 101?", "notes": "Las líneas se dicen como números: «il centouno».", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.ogni-quanto-passa", "text": "Ogni quanto passa?", "es": "¿Cada cuánto pasa?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.passa-ogni-venti-minuti", "text": "Passa ogni venti minuti, più o meno.", "es": "Pasa cada veinte minutos, más o menos.", "register": "neutral", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.l-autobus-e-gia-passato", "text": "L'autobus è già passato?", "es": "¿Ya ha pasado el autobús?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.questo-autobus-va-in-centro", "text": "Questo autobus va in centro?", "es": "¿Este autobús va al centro?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.mi-dice-quando-arriviamo", "text": "Mi dice quando arriviamo alla Cattedrale?", "es": "¿Me avisa cuando lleguemos a la Catedral?", "register": "lei", "situation": "bus" },
+    { "id": "move-bus.dove-devo-scendere-per", "text": "Dove devo scendere per Ballarò?", "es": "¿Dónde me tengo que bajar para Ballarò?", "notes": "Ballarò es el mercado más popular de Palermo.", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.e-questa-la-fermata-per", "text": "È questa la fermata per Ortigia?", "es": "¿Es esta la parada para Ortigia?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.posso-passare", "text": "Posso passare?", "es": "¿Puedo pasar?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.mi-fa-scendere", "text": "Scusi, mi fa scendere qui?", "es": "Perdone, ¿me deja bajar aquí?", "register": "lei", "situation": "bus" },
+    { "id": "move-bus.prenoti-la-fermata", "text": "Prenoti la fermata.", "es": "Pida la parada.", "notes": "Pulsa el botón de «prenotazione fermata»; si no, el bus no para.", "register": "lei", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.deve-scendere-alla-prossima", "text": "Deve scendere alla prossima.", "es": "Tiene que bajarse en la próxima.", "register": "lei", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.capolinea-si-scende", "text": "Capolinea, si scende.", "es": "Final de trayecto, hay que bajar.", "register": "neutral", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.si-sposti-avanti", "text": "Si sposti un po' più avanti, per favore.", "es": "Échese un poco más adelante, por favor.", "register": "lei", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.questo-non-ci-va", "text": "Questo non ci va, deve prendere un altro autobus.", "es": "Este no va allí, tiene que coger otro autobús.", "register": "lei", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.da-dove-parte-il-pullman", "text": "Da dove parte il pullman per Siracusa?", "es": "¿De dónde sale el autobús para Siracusa?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.dov-e-l-autostazione", "text": "Dov'è l'autostazione?", "es": "¿Dónde está la estación de autobuses?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.parte-di-fronte-alla-stazione", "text": "Il pullman parte da lì, di fronte alla stazione.", "es": "El autobús sale de ahí, enfrente de la estación.", "register": "neutral", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.a-bordo-o-in-biglietteria", "text": "Si compra a bordo o in biglietteria?", "es": "¿Se compra a bordo o en taquilla?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.si-fa-in-biglietteria", "text": "Il biglietto si fa in biglietteria, non a bordo.", "es": "El billete se saca en taquilla, no a bordo.", "register": "neutral", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.il-primo-pullman", "text": "A che ora c'è il primo pullman per Agrigento?", "es": "¿A qué hora sale el primer autobús para Agrigento?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.a-che-ora-parte-l-ultimo", "text": "A che ora parte l'ultimo?", "es": "¿A qué hora sale el último?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.quanto-ci-mette", "text": "Quanto ci mette ad arrivare a Taormina?", "es": "¿Cuánto tarda en llegar a Taormina?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.si-ferma-a", "text": "Si ferma a Taormina?", "es": "¿Para en Taormina?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.e-diretto", "text": "È diretto o fa fermate?", "es": "¿Es directo o hace paradas?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.la-domenica-ci-sono-corse", "text": "La domenica ci sono corse?", "es": "¿Los domingos hay autobuses?", "notes": "Los domingos y festivos hay muchos menos servicios.", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.la-valigia-nel-bagagliaio", "text": "Posso mettere la valigia nel bagagliaio?", "es": "¿Puedo meter la maleta en el maletero?", "register": "neutral", "situation": "bus" },
+    { "id": "move-bus.la-valigia-va-sotto", "text": "La valigia va sotto, nel bagagliaio.", "es": "La maleta va abajo, en el maletero.", "register": "neutral", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.il-pullman-e-pieno", "text": "Il pullman è pieno, deve aspettare il prossimo.", "es": "El autobús está lleno, tiene que esperar al siguiente.", "register": "lei", "situation": "bus", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.dov-e-il-ritiro-bagagli", "text": "Dov'è il ritiro bagagli?", "es": "¿Dónde está la recogida de equipajes?", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.la-mia-valigia-non-e-arrivata", "text": "La mia valigia non è arrivata.", "es": "Mi maleta no ha llegado.", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.dov-e-l-uscita", "text": "Dov'è l'uscita?", "es": "¿Dónde está la salida?", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.gli-arrivi-sono-al-piano-terra", "text": "Gli arrivi sono al piano terra.", "es": "Las llegadas están en la planta baja.", "register": "neutral", "situation": "aeropuerto", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-bus.autobus-per-il-centro", "text": "Dove si prende l'autobus per il centro?", "es": "¿Dónde se coge el autobús para el centro?", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.fermata-dell-alibus", "text": "Dov'è la fermata dell'Alibus?", "es": "¿Dónde está la parada del Alibus?", "notes": "El Alibus une el aeropuerto de Catania con el centro y la estación.", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.pullman-per-palermo-centrale", "text": "Questo è il pullman per Palermo Centrale?", "es": "¿Este es el autobús para Palermo Centrale?", "notes": "Del aeropuerto de Palermo: bus de Prestia e Comandè o tren Trinacria Express.", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.c-e-un-treno-per-la-citta", "text": "C'è un treno per la città?", "es": "¿Hay un tren a la ciudad?", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.quanto-ci-vuole-per-il-centro", "text": "Quanto ci vuole per arrivare in centro?", "es": "¿Cuánto se tarda en llegar al centro?", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.si-paga-all-autista", "text": "Si paga all'autista?", "es": "¿Se le paga al conductor?", "register": "neutral", "situation": "aeropuerto" },
+    { "id": "move-bus.il-biglietto-lo-fa-sul-pullman", "text": "Il biglietto lo fa direttamente sul pullman.", "es": "El billete lo saca directamente en el autobús.", "register": "lei", "situation": "aeropuerto", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.parte-fra-dieci-minuti", "text": "Parte fra dieci minuti.", "es": "Sale dentro de diez minutos.", "register": "neutral", "situation": "aeropuerto", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-bus.politeama-o-centrale", "text": "Scende a Politeama o alla Stazione Centrale?", "es": "¿Se baja en Politeama o en la Estación Central?", "notes": "Dos paradas típicas del bus del aeropuerto de Palermo.", "register": "lei", "situation": "aeropuerto", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" }
+  ],
+  "vocab": [
+    { "id": "move-bus.autobus", "word": "autobus", "article": "l'", "gender": "m", "plural": "gli autobus", "es": "el autobús", "notes": "También se dice «il bus».", "situation": "bus" },
+    { "id": "move-bus.tabaccheria", "word": "tabaccheria", "article": "la", "gender": "f", "es": "el estanco", "notes": "Busca el cartel con una «T». Allí venden billetes de bus urbano.", "situation": "bus" },
+    { "id": "move-bus.tabaccaio", "word": "tabaccaio", "article": "il", "gender": "m", "es": "el estanquero (el estanco)", "notes": "«Dal tabaccaio» = en el estanco.", "situation": "bus" },
+    { "id": "move-bus.linea", "word": "linea", "article": "la", "gender": "f", "es": "la línea", "situation": "bus" },
+    { "id": "move-bus.corsa", "word": "corsa", "article": "la", "gender": "f", "es": "el servicio (cada viaje de la línea)", "notes": "«L'ultima corsa» = el último autobús del día.", "situation": "bus" },
+    { "id": "move-bus.capolinea", "word": "capolinea", "article": "il", "gender": "m", "plural": "i capolinea", "es": "la cabecera (el final de línea)", "notes": "La primera o la última parada de la línea.", "situation": "bus" },
+    { "id": "move-bus.centro", "word": "centro", "article": "il", "gender": "m", "es": "el centro", "situation": "bus" },
+    { "id": "move-bus.autista", "word": "autista", "article": "l'", "gender": "mf", "plural": "gli autisti", "es": "el conductor (la conductora)", "situation": "bus" },
+    { "id": "move-bus.pulsante", "word": "pulsante", "article": "il", "gender": "m", "es": "el botón", "situation": "bus" },
+    { "id": "move-bus.sedile", "word": "sedile", "article": "il", "gender": "m", "es": "el asiento", "situation": "bus" },
+    { "id": "move-bus.uscita", "word": "uscita", "article": "l'", "gender": "f", "es": "la salida", "situation": "bus" },
+    { "id": "move-bus.entrata", "word": "entrata", "article": "l'", "gender": "f", "es": "la entrada", "situation": "bus" },
+    { "id": "move-bus.pieno", "word": "pieno", "es": "lleno", "notes": "«È pienissimo» = va hasta arriba.", "situation": "bus" },
+    { "id": "move-bus.avanti", "word": "avanti", "es": "adelante", "situation": "bus" },
+    { "id": "move-bus.dietro", "word": "dietro", "es": "detrás", "situation": "bus" },
+    { "id": "move-bus.pullman", "word": "pullman", "article": "il", "gender": "m", "plural": "i pullman", "es": "el autobús de línea (interurbano)", "notes": "Entre ciudades: AST, SAIS o Interbus. También «la corriera».", "situation": "bus" },
+    { "id": "move-bus.corriera", "word": "corriera", "article": "la", "gender": "f", "es": "el autobús de línea (coloquial)", "situation": "bus" },
+    { "id": "move-bus.autostazione", "word": "autostazione", "article": "l'", "gender": "f", "es": "la estación de autobuses", "situation": "bus" },
+    { "id": "move-bus.feriale", "word": "feriale", "es": "laborable", "notes": "En los horarios: «feriale» = de lunes a sábado.", "situation": "bus" },
+    { "id": "move-bus.festivo", "word": "festivo", "es": "festivo (domingos y fiestas)", "situation": "bus" },
+    { "id": "move-bus.bagagliaio", "word": "bagagliaio", "article": "il", "gender": "m", "es": "el maletero", "example": "move-bus.la-valigia-nel-bagagliaio", "situation": "bus" },
+    { "id": "move-bus.viaggio", "word": "viaggio", "article": "il", "gender": "m", "plural": "viaggi", "es": "el viaje", "situation": "bus" },
+    { "id": "move-bus.durata", "word": "durata", "article": "la", "gender": "f", "es": "la duración", "situation": "bus" },
+    { "id": "move-bus.sosta", "word": "sosta", "article": "la", "gender": "f", "es": "la parada (el descanso)", "notes": "En ruta: «dieci minuti di sosta».", "situation": "bus" },
+    { "id": "move-bus.prenotazione", "word": "prenotazione", "article": "la", "gender": "f", "es": "la reserva", "situation": "bus" },
+    { "id": "move-bus.aeroporto", "word": "aeroporto", "article": "l'", "gender": "m", "es": "el aeropuerto", "situation": "aeropuerto" },
+    { "id": "move-bus.volo", "word": "volo", "article": "il", "gender": "m", "plural": "voli", "es": "el vuelo", "situation": "aeropuerto" },
+    { "id": "move-bus.ritiro-bagagli", "word": "ritiro bagagli", "article": "il", "gender": "m", "es": "la recogida de equipajes", "situation": "aeropuerto" },
+    { "id": "move-bus.piano-terra", "word": "piano terra", "article": "il", "gender": "m", "es": "la planta baja", "situation": "aeropuerto" },
+    { "id": "move-bus.carrello", "word": "carrello", "article": "il", "gender": "m", "es": "el carrito", "situation": "aeropuerto" },
+    { "id": "move-bus.navetta", "word": "navetta", "article": "la", "gender": "f", "es": "el autobús lanzadera", "situation": "aeropuerto" },
+    { "id": "move-bus.passaporto", "word": "passaporto", "article": "il", "gender": "m", "es": "el pasaporte", "situation": "aeropuerto" },
+    { "id": "move-bus.carta-d-identita", "word": "carta d'identità", "article": "la", "gender": "f", "es": "el DNI (el carné de identidad)", "situation": "aeropuerto" }
+  ],
+  "qa": [
+    {
+      "id": "move-bus.qa.quanti-biglietti",
+      "question": "Quanti biglietti?",
+      "questionEs": "¿Cuántos billetes?",
+      "accepted": [
+        { "text": "Due, per favore.", "es": "Dos, por favor." },
+        { "text": "Uno, grazie.", "es": "Uno, gracias." }
+      ],
+      "distractors": [
+        { "text": "Per la stazione.", "es": "Para la estación." },
+        { "text": "Novanta minuti.", "es": "Noventa minutos." }
+      ],
+      "register": "neutral",
+      "situation": "bus",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-bus.qa.prenda-il-101",
+      "question": "Per la stazione? Prenda il 101.",
+      "questionEs": "¿Para la estación? Coja el 101.",
+      "accepted": [
+        { "text": "Grazie! E dove lo prendo?", "es": "¡Gracias! ¿Y dónde lo cojo?" },
+        { "text": "Il 101? Grazie mille.", "es": "¿El 101? Muchas gracias." }
+      ],
+      "distractors": [
+        { "text": "No, grazie, non prendo niente.", "es": "No, gracias, no voy a tomar nada." },
+        { "text": "Sì, costa centouno euro.", "es": "Sí, cuesta ciento un euros." }
+      ],
+      "register": "lei",
+      "situation": "bus",
+      "notes": "«Prendere» es coger (el bus) y también tomar (algo en el bar).",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-bus.qa.dove-deve-scendere",
+      "question": "Dove deve scendere?",
+      "questionEs": "¿Dónde tiene que bajarse?",
+      "accepted": [
+        { "text": "Alla Cattedrale.", "es": "En la Catedral." },
+        { "text": "Alla stazione centrale.", "es": "En la estación central." }
+      ],
+      "distractors": [
+        { "text": "Devo salire.", "es": "Tengo que subir." },
+        { "text": "Alle tre.", "es": "A las tres." }
+      ],
+      "register": "lei",
+      "situation": "bus",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-bus.qa.capolinea",
+      "question": "Capolinea! Si scende.",
+      "questionEs": "¡Final de trayecto! Hay que bajar.",
+      "accepted": [
+        { "text": "Ah, scusi. Per la stazione come faccio?", "es": "Ah, perdone. ¿Cómo llego a la estación?" },
+        { "text": "Va bene, grazie!", "es": "¡Vale, gracias!" }
+      ],
+      "distractors": [
+        { "text": "Sì, salgo qui.", "es": "Sí, subo aquí." },
+        { "text": "Un biglietto, per favore.", "es": "Un billete, por favor." }
+      ],
+      "register": "lei",
+      "situation": "bus",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-bus.qa.per-dove",
+      "question": "Per dove?",
+      "questionEs": "¿Para dónde?",
+      "accepted": [
+        { "text": "Per Siracusa, solo andata.", "es": "Para Siracusa, solo ida." },
+        { "text": "Per Siracusa, andata e ritorno.", "es": "Para Siracusa, ida y vuelta." }
+      ],
+      "distractors": [
+        { "text": "Per favore.", "es": "Por favor." },
+        { "text": "Da Catania.", "es": "Desde Catania." }
+      ],
+      "register": "neutral",
+      "situation": "bus",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-bus.qa.quale-orario",
+      "question": "Quello delle dieci o quello delle undici e mezza?",
+      "questionEs": "¿El de las diez o el de las once y media?",
+      "accepted": [
+        { "text": "Quello delle dieci, grazie.", "es": "El de las diez, gracias." },
+        { "text": "Quello delle undici e mezza.", "es": "El de las once y media." }
+      ],
+      "distractors": [
+        { "text": "Sì, alle dieci.", "es": "Sí, a las diez." },
+        { "text": "Dieci euro.", "es": "Diez euros." }
+      ],
+      "register": "neutral",
+      "situation": "bus",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-bus.qa.ha-bagagli",
+      "question": "Ha bagagli?",
+      "questionEs": "¿Lleva equipaje?",
+      "accepted": [
+        { "text": "Sì, una valigia.", "es": "Sí, una maleta." },
+        { "text": "No, solo lo zaino.", "es": "No, solo la mochila." }
+      ],
+      "distractors": [
+        { "text": "Sì, ho prenotato.", "es": "Sí, he reservado." },
+        { "text": "Sì, ho il biglietto.", "es": "Sí, tengo el billete." }
+      ],
+      "register": "lei",
+      "situation": "bus",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-bus.qa.dove-va",
+      "question": "Buongiorno! Dove va?",
+      "questionEs": "¡Buenos días! ¿Adónde va?",
+      "accepted": [
+        { "text": "Alla Stazione Centrale, per favore.", "es": "A la estación central, por favor." },
+        { "text": "In centro, a Politeama.", "es": "Al centro, a Politeama." }
+      ],
+      "distractors": [
+        { "text": "Vado bene, grazie.", "es": "Voy bien, gracias." },
+        { "text": "In aereo.", "es": "En avión." }
+      ],
+      "register": "lei",
+      "situation": "aeropuerto",
+      "notes": "«Dove va?» = ¿adónde va?, no «¿qué tal?».",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-bus.qa.solo-contanti",
+      "question": "Solo contanti, eh.",
+      "questionEs": "Solo efectivo, ¿eh?",
+      "accepted": [
+        { "text": "Va bene, ecco.", "es": "Vale, aquí tiene." },
+        { "text": "Ah, non ho contanti. C'è un bancomat?", "es": "Ah, no llevo efectivo. ¿Hay un cajero?" }
+      ],
+      "distractors": [
+        { "text": "Sì, con la carta.", "es": "Sí, con tarjeta." },
+        { "text": "No, grazie, sono contento.", "es": "No, gracias, estoy contento." }
+      ],
+      "register": "neutral",
+      "situation": "aeropuerto",
+      "voice": "it-IT-DiegoNeural"
+    }
+  ]
+}

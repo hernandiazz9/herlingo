@@ -1,0 +1,280 @@
+{
+  "id": "move-strada",
+  "order": 24,
+  "title": "Taxi y a pie",
+  "description": "Coger un taxi y preguntar (y entender) el camino por Palermo, Catania y Siracusa.",
+  "emoji": "🧭",
+  "situation": "calle",
+  "lessons": [
+    {
+      "id": "move-strada.l.taxi",
+      "title": "Coger un taxi",
+      "items": ["move-strada.taxi", "move-strada.dove-posso-prendere-un-taxi", "move-strada.posteggio-dei-taxi", "move-strada.mi-chiama-un-taxi", "move-strada.e-libero", "move-strada.dove-la-porto", "move-strada.alla-stazione-centrale", "move-strada.mi-porta-a-questo-indirizzo", "move-strada.indirizzo", "move-strada.ha-l-indirizzo", "move-strada.tassista", "move-strada.quanto-costa-fino-a", "move-strada.tariffa-fissa", "move-strada.tariffa", "move-strada.tassametro", "move-strada.puo-accendere-il-tassametro", "move-strada.si-fermi-qui", "move-strada.non-posso-entrare", "move-strada.sono-venticinque-euro", "move-strada.quanto-le-devo", "move-strada.tenga-il-resto", "move-strada.resto", "move-strada.mi-fa-la-ricevuta", "move-strada.ricevuta", "move-strada.contanti", "move-strada.bancomat", "move-strada.pos", "move-strada.qa.dove-la-porto", "move-strada.qa.diciotto-euro"]
+    },
+    {
+      "id": "move-strada.l.chiedere",
+      "title": "Preguntar el camino",
+      "items": ["move-strada.scusi-per-andare-a", "move-strada.dov-e-la-stazione", "move-strada.sto-cercando", "move-strada.e-lontano", "move-strada.vicino", "move-strada.lontano", "move-strada.ci-si-puo-andare-a-piedi", "move-strada.a-piedi", "move-strada.quanto-ci-vuole-a-piedi", "move-strada.c-e-un-bancomat-qui-vicino", "move-strada.me-lo-indica-sulla-mappa", "move-strada.mappa", "move-strada.mi-sono-perso", "move-strada.e-questa-la-strada-per", "move-strada.da-che-parte-e", "move-strada.grazie-gentilissimo", "move-strada.strada", "move-strada.via", "move-strada.piazza", "move-strada.corso", "move-strada.centro-storico", "move-strada.duomo", "move-strada.chiesa", "move-strada.mercato", "move-strada.qa.dove-deve-andare", "move-strada.qa.venti-minuti-a-piedi", "move-strada.qa.ha-bisogno-di-aiuto"]
+    },
+    {
+      "id": "move-strada.l.capire",
+      "title": "Entender las indicaciones",
+      "items": ["move-strada.vada-sempre-dritto", "move-strada.dritto", "move-strada.giri-a-destra", "move-strada.destra", "move-strada.al-semaforo-giri-a-sinistra", "move-strada.sinistra", "move-strada.semaforo", "move-strada.prenda-la-prima-a-destra", "move-strada.la-seconda-a-sinistra", "move-strada.incrocio", "move-strada.attraversi-la-piazza", "move-strada.in-fondo-alla-strada", "move-strada.di-fronte-alla-chiesa", "move-strada.accanto-al-bar", "move-strada.dietro-l-angolo", "move-strada.angolo", "move-strada.a-cinque-minuti-da-qui", "move-strada.deve-tornare-indietro", "move-strada.vai-sempre-dritto", "move-strada.ponte", "move-strada.salita", "move-strada.scalinata", "move-strada.lungomare", "move-strada.qa.ha-capito", "move-strada.qa.secondo-incrocio"]
+    },
+    {
+      "id": "move-strada.l.in-giro",
+      "title": "De paseo por la ciudad",
+      "items": ["move-strada.a-che-ora-apre", "move-strada.a-che-ora-chiude", "move-strada.e-aperto-oggi", "move-strada.aperto", "move-strada.chiuso", "move-strada.oggi-e-chiuso", "move-strada.riapre-alle-quattro", "move-strada.orario-di-apertura", "move-strada.dove-si-fa-il-biglietto", "move-strada.ingresso", "move-strada.un-intero", "move-strada.ridotto", "move-strada.museo", "move-strada.come-si-chiama-questa-piazza", "move-strada.c-e-un-bagno-pubblico", "move-strada.mi-fa-una-foto", "move-strada.vorrei-andare-a-piedi", "move-strada.attenzione-ai-motorini", "move-strada.motorino", "move-strada.marciapiede", "move-strada.strisce-pedonali", "move-strada.vicolo", "move-strada.meglio-la-mattina-presto", "move-strada.qa.ci-fa-una-foto", "move-strada.qa.oggi-e-chiuso"]
+    }
+  ],
+  "phrases": [
+    { "id": "move-strada.dove-posso-prendere-un-taxi", "text": "Dove posso prendere un taxi?", "es": "¿Dónde puedo coger un taxi?", "register": "neutral", "situation": "taxi" },
+    { "id": "move-strada.mi-chiama-un-taxi", "text": "Mi può chiamare un taxi?", "es": "¿Me puede llamar a un taxi?", "notes": "Útil en el hotel o en el bar: en Sicilia no suelen parar a mano alzada.", "register": "lei", "situation": "taxi" },
+    { "id": "move-strada.e-libero", "text": "È libero?", "es": "¿Está libre?", "register": "neutral", "situation": "taxi" },
+    { "id": "move-strada.dove-la-porto", "text": "Dove La porto?", "es": "¿Adónde le llevo?", "register": "lei", "situation": "taxi", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.alla-stazione-centrale", "text": "Alla stazione centrale, per favore.", "es": "A la estación central, por favor.", "register": "neutral", "situation": "taxi" },
+    { "id": "move-strada.mi-porta-a-questo-indirizzo", "text": "Mi porta a questo indirizzo, per favore?", "es": "¿Me lleva a esta dirección, por favor?", "register": "lei", "situation": "taxi" },
+    { "id": "move-strada.ha-l-indirizzo", "text": "Ha l'indirizzo?", "es": "¿Tiene la dirección?", "register": "lei", "situation": "taxi", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.quanto-costa-fino-a", "text": "Quanto costa più o meno fino a Ortigia?", "es": "¿Cuánto cuesta más o menos hasta Ortigia?", "register": "neutral", "situation": "taxi" },
+    { "id": "move-strada.tariffa-fissa", "text": "C'è una tariffa fissa per l'aeroporto?", "es": "¿Hay tarifa fija al aeropuerto?", "notes": "Pregunta el precio antes de subir.", "register": "neutral", "situation": "taxi" },
+    { "id": "move-strada.puo-accendere-il-tassametro", "text": "Può accendere il tassametro?", "es": "¿Puede poner el taxímetro?", "register": "lei", "situation": "taxi" },
+    { "id": "move-strada.si-fermi-qui", "text": "Si fermi qui, per favore.", "es": "Pare aquí, por favor.", "register": "lei", "situation": "taxi" },
+    { "id": "move-strada.non-posso-entrare", "text": "In centro storico non posso entrare, La lascio qui.", "es": "En el casco antiguo no puedo entrar, le dejo aquí.", "notes": "Muchos cascos antiguos son ZTL: zona de tráfico limitado.", "register": "lei", "situation": "taxi", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.sono-venticinque-euro", "text": "Sono venticinque euro.", "es": "Son veinticinco euros.", "register": "neutral", "situation": "taxi", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.quanto-le-devo", "text": "Quanto Le devo?", "es": "¿Cuánto le debo?", "register": "lei", "situation": "taxi" },
+    { "id": "move-strada.tenga-il-resto", "text": "Tenga il resto.", "es": "Quédese con el cambio.", "register": "lei", "situation": "taxi" },
+    { "id": "move-strada.mi-fa-la-ricevuta", "text": "Mi fa la ricevuta?", "es": "¿Me hace un recibo?", "register": "lei", "situation": "taxi" },
+    { "id": "move-strada.scusi-per-andare-a", "text": "Scusi, per andare alla Cattedrale?", "es": "Perdone, ¿para ir a la Catedral?", "notes": "La forma más rápida y natural de preguntar un camino.", "register": "lei", "situation": "calle" },
+    { "id": "move-strada.dov-e-la-stazione", "text": "Dov'è la stazione?", "es": "¿Dónde está la estación?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.sto-cercando", "text": "Sto cercando il Teatro Massimo.", "es": "Estoy buscando el Teatro Massimo.", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.e-lontano", "text": "È lontano?", "es": "¿Está lejos?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.ci-si-puo-andare-a-piedi", "text": "Ci si può andare a piedi?", "es": "¿Se puede ir andando?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.quanto-ci-vuole-a-piedi", "text": "Quanto ci vuole a piedi?", "es": "¿Cuánto se tarda andando?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.c-e-un-bancomat-qui-vicino", "text": "C'è un bancomat qui vicino?", "es": "¿Hay un cajero por aquí cerca?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.me-lo-indica-sulla-mappa", "text": "Me lo può indicare sulla mappa?", "es": "¿Me lo puede señalar en el mapa?", "register": "lei", "situation": "calle" },
+    { "id": "move-strada.mi-sono-perso", "text": "Mi sono perso.", "es": "Me he perdido.", "notes": "Si eres mujer: «Mi sono persa».", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.e-questa-la-strada-per", "text": "È questa la strada per Ortigia?", "es": "¿Es este el camino a Ortigia?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.da-che-parte-e", "text": "Da che parte è il Duomo?", "es": "¿Hacia dónde queda el Duomo?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.grazie-gentilissimo", "text": "Grazie, gentilissimo!", "es": "¡Gracias, muy amable!", "notes": "A una mujer: «gentilissima».", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.vada-sempre-dritto", "text": "Vada sempre dritto.", "es": "Siga todo recto.", "register": "lei", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.giri-a-destra", "text": "Giri a destra.", "es": "Gire a la derecha.", "register": "lei", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.al-semaforo-giri-a-sinistra", "text": "Al semaforo giri a sinistra.", "es": "En el semáforo gire a la izquierda.", "register": "lei", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-strada.prenda-la-prima-a-destra", "text": "Prenda la prima a destra.", "es": "Coja la primera a la derecha.", "register": "lei", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.la-seconda-a-sinistra", "text": "La seconda strada a sinistra.", "es": "La segunda calle a la izquierda.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-strada.attraversi-la-piazza", "text": "Attraversi la piazza.", "es": "Cruce la plaza.", "register": "lei", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.in-fondo-alla-strada", "text": "È in fondo alla strada.", "es": "Está al final de la calle.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-strada.di-fronte-alla-chiesa", "text": "È di fronte alla chiesa.", "es": "Está enfrente de la iglesia.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.accanto-al-bar", "text": "È accanto al bar.", "es": "Está al lado del bar.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-strada.dietro-l-angolo", "text": "È proprio dietro l'angolo.", "es": "Está justo a la vuelta de la esquina.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.a-cinque-minuti-da-qui", "text": "È a cinque minuti da qui.", "es": "Está a cinco minutos de aquí.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-strada.deve-tornare-indietro", "text": "Deve tornare indietro.", "es": "Tiene que volver atrás.", "register": "lei", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.vai-sempre-dritto", "text": "Vai sempre dritto e poi giri a destra.", "es": "Sigue recto y luego gira a la derecha.", "notes": "Así te lo dirá alguien joven, tuteándote.", "register": "tu", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-strada.a-che-ora-apre", "text": "A che ora apre?", "es": "¿A qué hora abre?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.a-che-ora-chiude", "text": "A che ora chiude?", "es": "¿A qué hora cierra?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.e-aperto-oggi", "text": "È aperto oggi?", "es": "¿Está abierto hoy?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.oggi-e-chiuso", "text": "Oggi è chiuso, è lunedì.", "es": "Hoy está cerrado, es lunes.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.riapre-alle-quattro", "text": "Riapre alle quattro.", "es": "Vuelve a abrir a las cuatro.", "notes": "Muchas iglesias y tiendas cierran a mediodía.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "move-strada.dove-si-fa-il-biglietto", "text": "Dove si fa il biglietto per entrare?", "es": "¿Dónde se saca la entrada?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.un-intero", "text": "Un intero, per favore.", "es": "Una entrada normal, por favor.", "notes": "«Intero» = entrada completa; «ridotto» = reducida.", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.come-si-chiama-questa-piazza", "text": "Come si chiama questa piazza?", "es": "¿Cómo se llama esta plaza?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.c-e-un-bagno-pubblico", "text": "C'è un bagno pubblico qui vicino?", "es": "¿Hay un baño público por aquí cerca?", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.mi-fa-una-foto", "text": "Mi può fare una foto?", "es": "¿Me puede hacer una foto?", "register": "lei", "situation": "calle" },
+    { "id": "move-strada.vorrei-andare-a-piedi", "text": "Vorrei andare a Ortigia a piedi.", "es": "Quiero ir a Ortigia andando.", "register": "neutral", "situation": "calle" },
+    { "id": "move-strada.attenzione-ai-motorini", "text": "Attenzione, passano i motorini!", "es": "¡Cuidado, que pasan motos!", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "move-strada.meglio-la-mattina-presto", "text": "Con questo caldo, meglio andare la mattina presto.", "es": "Con este calor, mejor ir por la mañana temprano.", "register": "neutral", "situation": "calle", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" }
+  ],
+  "vocab": [
+    { "id": "move-strada.taxi", "word": "taxi", "article": "il", "gender": "m", "plural": "i taxi", "es": "el taxi", "situation": "taxi" },
+    { "id": "move-strada.posteggio-dei-taxi", "word": "posteggio dei taxi", "article": "il", "gender": "m", "es": "la parada de taxis", "situation": "taxi" },
+    { "id": "move-strada.indirizzo", "word": "indirizzo", "article": "l'", "gender": "m", "plural": "indirizzi", "es": "la dirección", "example": "move-strada.mi-porta-a-questo-indirizzo", "situation": "taxi" },
+    { "id": "move-strada.tassista", "word": "tassista", "article": "il", "gender": "mf", "plural": "i tassisti", "es": "el taxista", "situation": "taxi" },
+    { "id": "move-strada.tariffa", "word": "tariffa", "article": "la", "gender": "f", "es": "la tarifa", "situation": "taxi" },
+    { "id": "move-strada.tassametro", "word": "tassametro", "article": "il", "gender": "m", "es": "el taxímetro", "example": "move-strada.puo-accendere-il-tassametro", "situation": "taxi" },
+    { "id": "move-strada.resto", "word": "resto", "article": "il", "gender": "m", "es": "el cambio (la vuelta)", "example": "move-strada.tenga-il-resto", "situation": "taxi" },
+    { "id": "move-strada.ricevuta", "word": "ricevuta", "article": "la", "gender": "f", "es": "el recibo", "situation": "taxi" },
+    { "id": "move-strada.contanti", "word": "contanti", "article": "i", "gender": "m", "es": "el efectivo", "notes": "Siempre en plural: «pagare in contanti».", "situation": "taxi" },
+    { "id": "move-strada.bancomat", "word": "bancomat", "article": "il", "gender": "m", "es": "el cajero (y la tarjeta de débito)", "notes": "«Pago con il bancomat» = pago con tarjeta de débito.", "situation": "taxi" },
+    { "id": "move-strada.pos", "word": "POS", "article": "il", "gender": "m", "es": "el datáfono", "notes": "La maquinita para pagar con tarjeta: «C'è il POS?».", "situation": "taxi" },
+    { "id": "move-strada.vicino", "word": "vicino", "es": "cerca", "notes": "«Qui vicino» = aquí cerca.", "situation": "calle" },
+    { "id": "move-strada.lontano", "word": "lontano", "es": "lejos", "situation": "calle" },
+    { "id": "move-strada.a-piedi", "word": "a piedi", "es": "a pie (andando)", "situation": "calle" },
+    { "id": "move-strada.mappa", "word": "mappa", "article": "la", "gender": "f", "es": "el mapa", "situation": "calle" },
+    { "id": "move-strada.strada", "word": "strada", "article": "la", "gender": "f", "plural": "strade", "es": "la calle (el camino)", "situation": "calle" },
+    { "id": "move-strada.via", "word": "via", "article": "la", "gender": "f", "es": "la calle", "notes": "Delante del nombre: «via Etnea», «via Maqueda».", "situation": "calle" },
+    { "id": "move-strada.piazza", "word": "piazza", "article": "la", "gender": "f", "plural": "piazze", "es": "la plaza", "situation": "calle" },
+    { "id": "move-strada.corso", "word": "corso", "article": "il", "gender": "m", "es": "la avenida (calle principal)", "notes": "«Corso Vittorio Emanuele» en Palermo, «Corso Umberto» en Taormina.", "situation": "calle" },
+    { "id": "move-strada.centro-storico", "word": "centro storico", "article": "il", "gender": "m", "es": "el casco antiguo", "situation": "calle" },
+    { "id": "move-strada.duomo", "word": "duomo", "article": "il", "gender": "m", "es": "la catedral", "notes": "Oirás tanto «il Duomo» como «la Cattedrale».", "situation": "calle" },
+    { "id": "move-strada.chiesa", "word": "chiesa", "article": "la", "gender": "f", "plural": "chiese", "es": "la iglesia", "situation": "calle" },
+    { "id": "move-strada.mercato", "word": "mercato", "article": "il", "gender": "m", "es": "el mercado", "notes": "Ballarò y la Vucciria en Palermo; la Pescheria en Catania.", "situation": "calle" },
+    { "id": "move-strada.dritto", "word": "dritto", "es": "recto", "notes": "«Sempre dritto» = todo recto.", "situation": "calle" },
+    { "id": "move-strada.destra", "word": "destra", "article": "la", "gender": "f", "es": "la derecha", "situation": "calle" },
+    { "id": "move-strada.sinistra", "word": "sinistra", "article": "la", "gender": "f", "es": "la izquierda", "situation": "calle" },
+    { "id": "move-strada.semaforo", "word": "semaforo", "article": "il", "gender": "m", "es": "el semáforo", "situation": "calle" },
+    { "id": "move-strada.incrocio", "word": "incrocio", "article": "l'", "gender": "m", "es": "el cruce", "situation": "calle" },
+    { "id": "move-strada.angolo", "word": "angolo", "article": "l'", "gender": "m", "es": "la esquina", "situation": "calle" },
+    { "id": "move-strada.ponte", "word": "ponte", "article": "il", "gender": "m", "es": "el puente", "notes": "A Ortigia (Siracusa) se entra cruzando un puente.", "situation": "calle" },
+    { "id": "move-strada.salita", "word": "salita", "article": "la", "gender": "f", "es": "la cuesta (arriba)", "notes": "Taormina y Cefalù están llenas de «salite».", "situation": "calle" },
+    { "id": "move-strada.scalinata", "word": "scalinata", "article": "la", "gender": "f", "es": "la escalinata", "situation": "calle" },
+    { "id": "move-strada.lungomare", "word": "lungomare", "article": "il", "gender": "m", "es": "el paseo marítimo", "situation": "calle" },
+    { "id": "move-strada.aperto", "word": "aperto", "es": "abierto", "situation": "calle" },
+    { "id": "move-strada.chiuso", "word": "chiuso", "es": "cerrado", "situation": "calle" },
+    { "id": "move-strada.orario-di-apertura", "word": "orario di apertura", "article": "l'", "gender": "m", "es": "el horario de apertura", "situation": "calle" },
+    { "id": "move-strada.ingresso", "word": "ingresso", "article": "l'", "gender": "m", "es": "la entrada (el acceso)", "notes": "«Ingresso gratuito» = entrada gratis.", "situation": "calle" },
+    { "id": "move-strada.ridotto", "word": "ridotto", "es": "reducido (entrada con descuento)", "situation": "calle" },
+    { "id": "move-strada.museo", "word": "museo", "article": "il", "gender": "m", "plural": "musei", "es": "el museo", "situation": "calle" },
+    { "id": "move-strada.motorino", "word": "motorino", "article": "il", "gender": "m", "plural": "motorini", "es": "la moto (el scooter)", "situation": "calle" },
+    { "id": "move-strada.marciapiede", "word": "marciapiede", "article": "il", "gender": "m", "es": "la acera", "situation": "calle" },
+    { "id": "move-strada.strisce-pedonali", "word": "strisce pedonali", "article": "le", "gender": "f", "es": "el paso de cebra", "situation": "calle" },
+    { "id": "move-strada.vicolo", "word": "vicolo", "article": "il", "gender": "m", "es": "el callejón", "situation": "calle" }
+  ],
+  "qa": [
+    {
+      "id": "move-strada.qa.dove-la-porto",
+      "question": "Buonasera! Dove La porto?",
+      "questionEs": "¡Buenas tardes! ¿Adónde le llevo?",
+      "accepted": [
+        { "text": "A questo indirizzo, per favore.", "es": "A esta dirección, por favor." },
+        { "text": "Alla stazione centrale, per favore.", "es": "A la estación central, por favor." }
+      ],
+      "distractors": [
+        { "text": "Porto una valigia.", "es": "Llevo una maleta." },
+        { "text": "Sì, sono libero.", "es": "Sí, estoy libre." }
+      ],
+      "register": "lei",
+      "situation": "taxi",
+      "notes": "«Dove La porto?» = ¿adónde le llevo? Responde con el destino.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-strada.qa.diciotto-euro",
+      "question": "Sono diciotto euro.",
+      "questionEs": "Son dieciocho euros.",
+      "accepted": [
+        { "text": "Ecco a Lei. Tenga il resto.", "es": "Aquí tiene. Quédese con el cambio." },
+        { "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?" }
+      ],
+      "distractors": [
+        { "text": "Otto euro? Ecco.", "es": "¿Ocho euros? Aquí tiene." },
+        { "text": "Diciotto anni?", "es": "¿Dieciocho años?" }
+      ],
+      "register": "lei",
+      "situation": "taxi",
+      "notes": "«Diciotto» (18) y «otto» (8) se confunden al oído.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-strada.qa.dove-deve-andare",
+      "question": "Dove deve andare?",
+      "questionEs": "¿Adónde tiene que ir?",
+      "accepted": [
+        { "text": "Alla Cattedrale.", "es": "A la Catedral." },
+        { "text": "Sto cercando via Etnea.", "es": "Estoy buscando la via Etnea." }
+      ],
+      "distractors": [
+        { "text": "A piedi.", "es": "Andando." },
+        { "text": "Sì, devo andare.", "es": "Sí, tengo que ir." }
+      ],
+      "register": "lei",
+      "situation": "calle",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "move-strada.qa.venti-minuti-a-piedi",
+      "question": "È un po' lontano, sono venti minuti a piedi.",
+      "questionEs": "Está un poco lejos, son veinte minutos andando.",
+      "accepted": [
+        { "text": "Ah, allora prendo un taxi.", "es": "Ah, entonces cojo un taxi." },
+        { "text": "Va bene, vado a piedi. Grazie!", "es": "Vale, voy andando. ¡Gracias!" }
+      ],
+      "distractors": [
+        { "text": "Venti euro? Ecco.", "es": "¿Veinte euros? Aquí tiene." },
+        { "text": "Sì, ho venti minuti.", "es": "Sí, tengo veinte minutos." }
+      ],
+      "register": "neutral",
+      "situation": "calle",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-strada.qa.ha-bisogno-di-aiuto",
+      "question": "Ha bisogno di aiuto?",
+      "questionEs": "¿Necesita ayuda?",
+      "accepted": [
+        { "text": "Sì, grazie. Cerco la stazione.", "es": "Sí, gracias. Busco la estación." },
+        { "text": "No, grazie, sono a posto.", "es": "No, gracias, estoy bien." }
+      ],
+      "distractors": [
+        { "text": "Sì, aiuto!", "es": "¡Sí, socorro!" },
+        { "text": "No, grazie, ho già mangiato.", "es": "No, gracias, ya he comido." }
+      ],
+      "register": "lei",
+      "situation": "calle",
+      "notes": "«Aiuto!» a secas es un grito de socorro.",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "move-strada.qa.ha-capito",
+      "question": "Ha capito?",
+      "questionEs": "¿Lo ha entendido?",
+      "accepted": [
+        { "text": "Sì, sempre dritto e poi a destra. Grazie!", "es": "Sí, todo recto y luego a la derecha. ¡Gracias!" },
+        { "text": "Scusi, può ripetere più piano?", "es": "Perdone, ¿puede repetirlo más despacio?" }
+      ],
+      "distractors": [
+        { "text": "Sì, sono capito.", "es": "Sí, estoy entendido." },
+        { "text": "No, grazie.", "es": "No, gracias." }
+      ],
+      "register": "lei",
+      "situation": "calle",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-strada.qa.secondo-incrocio",
+      "question": "Al secondo incrocio giri a sinistra.",
+      "questionEs": "En el segundo cruce gire a la izquierda.",
+      "accepted": [
+        { "text": "Al secondo incrocio a sinistra. Grazie!", "es": "En el segundo cruce a la izquierda. ¡Gracias!" }
+      ],
+      "distractors": [
+        { "text": "Al secondo semaforo a destra, grazie.", "es": "En el segundo semáforo a la derecha, gracias." },
+        { "text": "Alle due a sinistra.", "es": "A las dos a la izquierda." }
+      ],
+      "register": "lei",
+      "situation": "calle",
+      "notes": "Repetir la indicación en voz alta es la mejor forma de comprobarla.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "move-strada.qa.ci-fa-una-foto",
+      "question": "Scusi, ci può fare una foto?",
+      "questionEs": "Perdone, ¿nos puede hacer una foto?",
+      "accepted": [
+        { "text": "Certo! Sorridete!", "es": "¡Claro! ¡Sonreíd!" },
+        { "text": "Sì, certo. Pronti?", "es": "Sí, claro. ¿Listos?" }
+      ],
+      "distractors": [
+        { "text": "Certo! Mi fate una foto?", "es": "¡Claro! ¿Me hacéis una foto?" },
+        { "text": "No, è chiuso.", "es": "No, está cerrado." }
+      ],
+      "register": "lei",
+      "situation": "calle",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "move-strada.qa.oggi-e-chiuso",
+      "question": "Guardi che oggi è chiuso.",
+      "questionEs": "Mire que hoy está cerrado.",
+      "accepted": [
+        { "text": "Ah, e domani a che ora apre?", "es": "Ah, ¿y mañana a qué hora abre?" },
+        { "text": "Peccato! Grazie lo stesso.", "es": "¡Qué pena! Gracias de todas formas." }
+      ],
+      "distractors": [
+        { "text": "Perfetto, allora entro.", "es": "Perfecto, entonces entro." },
+        { "text": "Sì, è aperto.", "es": "Sí, está abierto." }
+      ],
+      "register": "neutral",
+      "situation": "calle",
+      "voice": "it-IT-DiegoNeural"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "dlg.move-taxi",
+  "title": "Taxi en Catania",
+  "description": "De la estación a piazza Duomo: precio, tarjeta y una palabra nueva.",
+  "situation": "taxi",
+  "unit": "move-strada",
+  "order": 25,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Tassista", "text": "Buonasera! Dove La porto?", "es": "¡Buenas tardes! ¿Adónde le llevo?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que vas a piazza Duomo.",
+      "options": [
+        { "text": "Buonasera! In piazza Duomo, per favore.", "es": "¡Buenas tardes! A la plaza del Duomo, por favor.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Piazza Duomo.", "es": "Plaza del Duomo.", "verdict": "acceptable", "feedback": "Se entiende; saludar no cuesta nada." },
+        { "text": "Buonasera! Porto una valigia.", "es": "¡Buenas tardes! Llevo una maleta.", "verdict": "wrong", "feedback": "«Dove La porto?» es «¿adónde le llevo?»: dile el destino." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Tassista", "text": "Va bene, salga pure.", "es": "Vale, suba.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta cuánto costará más o menos.",
+      "options": [
+        { "text": "Quanto costa più o meno?", "es": "¿Cuánto cuesta más o menos?", "verdict": "correct", "feedback": "¡Genial! Mejor saberlo antes." },
+        { "text": "Quanto?", "es": "¿Cuánto?", "verdict": "acceptable", "feedback": "Se entiende, aunque suena brusco." },
+        { "text": "Quanto costa il tassametro?", "es": "¿Cuánto cuesta el taxímetro?", "verdict": "wrong", "feedback": "Preguntas el precio del aparato, no del viaje." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Tassista", "text": "Più o meno dodici, quindici euro. Dipende dal traffico.", "es": "Más o menos doce, quince euros. Depende del tráfico.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes pagar con tarjeta.",
+      "options": [
+        { "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Carta va bene?", "es": "¿Vale tarjeta?", "verdict": "acceptable", "feedback": "Se entiende." },
+        { "text": "Posso pagare con la carta d'identità?", "es": "¿Puedo pagar con el DNI?", "verdict": "wrong", "feedback": "«Carta d'identità» es el DNI: para pagar, «la carta» a secas." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Tassista", "text": "Sì, sì, ho il POS.", "es": "Sí, sí, tengo datáfono.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "No sabes qué es «il POS». Pregunta.",
+      "options": [
+        { "text": "Scusi, cos'è il POS?", "es": "Perdone, ¿qué es el POS?", "verdict": "correct", "feedback": "¡Muy bien! Preguntar es la mejor forma de aprender." },
+        { "text": "POS?", "es": "¿POS?", "verdict": "acceptable", "feedback": "Vale: repetir la palabra también funciona." },
+        { "text": "Ah, perfetto, pago in contanti.", "es": "Ah, perfecto, pago en efectivo.", "verdict": "wrong", "feedback": "Te está diciendo que puedes pagar con tarjeta: pregunta si no entiendes." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Tassista", "text": "La macchinetta per la carta! In piazza non posso entrare, La lascio all'angolo, va bene?", "es": "¡La maquinita de la tarjeta! En la plaza no puedo entrar, le dejo en la esquina, ¿vale?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Di que vale y que pare ahí.",
+      "options": [
+        { "text": "Va bene, si fermi pure lì.", "es": "Vale, pare ahí.", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "Sì, va bene.", "es": "Sí, vale.", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "No, entri pure in piazza.", "es": "No, entre en la plaza.", "verdict": "wrong", "feedback": "Te acaba de decir que no puede entrar (zona de tráfico limitado)." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Tassista", "text": "Ecco, sono tredici euro.", "es": "Ya estamos, son trece euros.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l6",
+      "speaker": "learner",
+      "prompt": "Paga con un billete de 15 y dile que se quede con el cambio.",
+      "options": [
+        { "text": "Ecco quindici euro. Tenga il resto.", "es": "Aquí tiene quince euros. Quédese con el cambio.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Ecco, grazie.", "es": "Tenga, gracias.", "verdict": "acceptable", "feedback": "Correcto, aunque quizá te devuelva el cambio." },
+        { "text": "Ecco tredici euro. Tenga il resto.", "es": "Aquí tiene trece euros. Quédese con el cambio.", "verdict": "wrong", "feedback": "Con el importe exacto no hay cambio que dejar." }
+      ]
+    },
+    { "id": "n7", "speaker": "native", "name": "Tassista", "text": "Grazie mille! Buona serata!", "es": "¡Muchas gracias! ¡Buenas noches!", "voice": "it-IT-DiegoNeural" }
+  ]
+}

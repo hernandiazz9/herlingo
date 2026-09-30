@@ -1,0 +1,319 @@
+{
+  "id": "talk-chiacchiere",
+  "order": 30,
+  "title": "Charlar con italianos",
+  "description": "Entender las preguntas típicas que te harán, reaccionar y mantener una charla corta.",
+  "emoji": "💬",
+  "situation": "presentarse",
+  "lessons": [
+    {
+      "id": "talk-chiacchiere.l.presentarsi",
+      "title": "Presentarte",
+      "items": ["talk-chiacchiere.come-ti-chiami", "talk-chiacchiere.come-si-chiama", "talk-chiacchiere.piacere", "talk-chiacchiere.piacere-mio", "talk-chiacchiere.e-tu", "talk-chiacchiere.e-lei", "talk-chiacchiere.possiamo-darci-del-tu", "talk-chiacchiere.dammi-pure-del-tu", "talk-chiacchiere.sei-qui-in-vacanza", "talk-chiacchiere.nome", "talk-chiacchiere.cognome", "talk-chiacchiere.amico", "talk-chiacchiere.amica", "talk-chiacchiere.ragazzo", "talk-chiacchiere.ragazza", "talk-chiacchiere.signore", "talk-chiacchiere.signora", "talk-chiacchiere.qa.piacere", "talk-chiacchiere.qa.diamoci-del-tu"]
+    },
+    {
+      "id": "talk-chiacchiere.l.domande",
+      "title": "Las preguntas que te harán",
+      "items": ["talk-chiacchiere.di-dove-sei", "talk-chiacchiere.di-dov-e", "talk-chiacchiere.sei-spagnolo", "talk-chiacchiere.e-la-prima-volta-in-sicilia", "talk-chiacchiere.da-quanto-tempo-sei-qui", "talk-chiacchiere.quanto-ti-fermi", "talk-chiacchiere.che-lavoro-fai", "talk-chiacchiere.che-lavoro-fa", "talk-chiacchiere.dove-sei-stato-finora", "talk-chiacchiere.dove-alloggi", "talk-chiacchiere.sei-da-solo", "talk-chiacchiere.parli-bene-l-italiano", "talk-chiacchiere.ti-piace-la-sicilia", "talk-chiacchiere.vacanza", "talk-chiacchiere.ferie", "talk-chiacchiere.lavoro", "talk-chiacchiere.paese", "talk-chiacchiere.citta", "talk-chiacchiere.spagna", "talk-chiacchiere.spagnolo", "talk-chiacchiere.straniero", "talk-chiacchiere.turista", "talk-chiacchiere.qa.quanto-ti-fermi", "talk-chiacchiere.qa.da-quanto-tempo"]
+    },
+    {
+      "id": "talk-chiacchiere.l.small-talk",
+      "title": "Charla ligera: tiempo, comida y consejos",
+      "items": ["talk-chiacchiere.che-caldo-oggi", "talk-chiacchiere.fa-caldo-eh", "talk-chiacchiere.a-ottobre-fa-ancora-caldo", "talk-chiacchiere.domani-dicono-che-piove", "talk-chiacchiere.e-bellissimo-qui", "talk-chiacchiere.sei-di-qui", "talk-chiacchiere.lei-e-di-qui", "talk-chiacchiere.cosa-mi-consigli", "talk-chiacchiere.cosa-mi-consiglia", "talk-chiacchiere.dove-si-mangia-bene", "talk-chiacchiere.devi-provare-la-granita", "talk-chiacchiere.sei-stato-a-ortigia", "talk-chiacchiere.arancina-o-arancino", "talk-chiacchiere.in-spagna-si-mangia-bene-pure", "talk-chiacchiere.tempo", "talk-chiacchiere.caldo", "talk-chiacchiere.sole", "talk-chiacchiere.pioggia", "talk-chiacchiere.mare", "talk-chiacchiere.spiaggia", "talk-chiacchiere.cibo", "talk-chiacchiere.consiglio", "talk-chiacchiere.qa.ti-piace-palermo", "talk-chiacchiere.qa.hai-provato-la-granita", "talk-chiacchiere.qa.ortigia-al-tramonto"]
+    },
+    {
+      "id": "talk-chiacchiere.l.capirsi",
+      "title": "Entenderse en la charla",
+      "items": ["talk-chiacchiere.scusa-non-ho-capito", "talk-chiacchiere.puoi-ripetere-piu-piano", "talk-chiacchiere.puo-ripetere", "talk-chiacchiere.parlo-troppo-veloce", "talk-chiacchiere.piano", "talk-chiacchiere.veloce", "talk-chiacchiere.come-si-dice", "talk-chiacchiere.cosa-vuol-dire", "talk-chiacchiere.parola", "talk-chiacchiere.significato", "talk-chiacchiere.me-lo-scrivi", "talk-chiacchiere.parli-inglese", "talk-chiacchiere.te-lo-dico-in-inglese", "talk-chiacchiere.mi-capisci-se-parlo-spagnolo", "talk-chiacchiere.si-somigliano", "talk-chiacchiere.non-ti-preoccupare", "talk-chiacchiere.ah-ho-capito", "talk-chiacchiere.lingua", "talk-chiacchiere.italiano", "talk-chiacchiere.inglese", "talk-chiacchiere.qa.hai-capito", "talk-chiacchiere.qa.parlo-troppo-veloce"]
+    },
+    {
+      "id": "talk-chiacchiere.l.reazioni",
+      "title": "Reacciones y despedidas",
+      "items": ["talk-chiacchiere.ma-dai", "talk-chiacchiere.davvero", "talk-chiacchiere.che-bello", "talk-chiacchiere.magari", "talk-chiacchiere.boh-non-lo-so", "talk-chiacchiere.meno-male", "talk-chiacchiere.figurati", "talk-chiacchiere.si-figuri", "talk-chiacchiere.mi-dai-il-tuo-numero", "talk-chiacchiere.hai-instagram", "talk-chiacchiere.ti-scrivo-su-whatsapp", "talk-chiacchiere.e-stato-un-piacere", "talk-chiacchiere.ci-vediamo", "talk-chiacchiere.a-presto", "talk-chiacchiere.buon-viaggio", "talk-chiacchiere.divertiti", "talk-chiacchiere.numero", "talk-chiacchiere.telefono", "talk-chiacchiere.messaggio", "talk-chiacchiere.foto", "talk-chiacchiere.qa.buon-viaggio", "talk-chiacchiere.qa.mi-lasci-il-numero"]
+    }
+  ],
+  "phrases": [
+    { "id": "talk-chiacchiere.come-ti-chiami", "text": "Come ti chiami?", "es": "¿Cómo te llamas?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.come-si-chiama", "text": "Come si chiama?", "es": "¿Cómo se llama usted?", "register": "lei", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.piacere", "text": "Piacere!", "es": "¡Encantado!", "notes": "Vale para hombres y mujeres; se dice al dar la mano.", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.piacere-mio", "text": "Piacere mio.", "es": "El gusto es mío.", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.e-tu", "text": "E tu?", "es": "¿Y tú?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.e-lei", "text": "E Lei?", "es": "¿Y usted?", "register": "lei", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.possiamo-darci-del-tu", "text": "Possiamo darci del tu?", "es": "¿Nos tuteamos?", "notes": "Entre gente joven se tutea casi siempre desde el principio.", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.dammi-pure-del-tu", "text": "Dammi pure del tu!", "es": "¡Tutéame, hombre!", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.sei-qui-in-vacanza", "text": "Sei qui in vacanza?", "es": "¿Estás aquí de vacaciones?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.di-dove-sei", "text": "Di dove sei?", "es": "¿De dónde eres?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.di-dov-e", "text": "Di dov'è?", "es": "¿De dónde es usted?", "register": "lei", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.sei-spagnolo", "text": "Sei spagnolo?", "es": "¿Eres español?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.e-la-prima-volta-in-sicilia", "text": "È la prima volta in Sicilia?", "es": "¿Es la primera vez que vienes a Sicilia?", "register": "neutral", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.da-quanto-tempo-sei-qui", "text": "Da quanto tempo sei in Sicilia?", "es": "¿Cuánto tiempo llevas en Sicilia?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.quanto-ti-fermi", "text": "Quanto ti fermi?", "es": "¿Cuánto tiempo te quedas?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.che-lavoro-fai", "text": "Che lavoro fai?", "es": "¿A qué te dedicas?", "literal": "¿Qué trabajo haces?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.che-lavoro-fa", "text": "Che lavoro fa?", "es": "¿A qué se dedica usted?", "register": "lei", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.dove-sei-stato-finora", "text": "Dove sei stato finora?", "es": "¿Dónde has estado hasta ahora?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.dove-alloggi", "text": "Dove alloggi?", "es": "¿Dónde te alojas?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.sei-da-solo", "text": "Sei da solo?", "es": "¿Viajas solo?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.parli-bene-l-italiano", "text": "Parli bene l'italiano!", "es": "¡Hablas bien italiano!", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.ti-piace-la-sicilia", "text": "Ti piace la Sicilia?", "es": "¿Te gusta Sicilia?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.che-caldo-oggi", "text": "Che caldo oggi!", "es": "¡Qué calor hace hoy!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.fa-caldo-eh", "text": "Fa caldo, eh?", "es": "Hace calor, ¿eh?", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.a-ottobre-fa-ancora-caldo", "text": "Qui a ottobre fa ancora caldo.", "es": "Aquí en octubre todavía hace calor.", "register": "neutral", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.domani-dicono-che-piove", "text": "Domani dicono che piove.", "es": "Dicen que mañana llueve.", "register": "neutral", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.e-bellissimo-qui", "text": "È bellissimo qui!", "es": "¡Esto es precioso!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.sei-di-qui", "text": "Sei di qui?", "es": "¿Eres de aquí?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.lei-e-di-qui", "text": "Lei è di qui?", "es": "¿Usted es de aquí?", "register": "lei", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.cosa-mi-consigli", "text": "Cosa mi consigli di vedere?", "es": "¿Qué me recomiendas ver?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.cosa-mi-consiglia", "text": "Cosa mi consiglia di mangiare?", "es": "¿Qué me recomienda comer?", "register": "lei", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.dove-si-mangia-bene", "text": "Dove si mangia bene qui?", "es": "¿Dónde se come bien por aquí?", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.devi-provare-la-granita", "text": "Devi assolutamente provare la granita!", "es": "¡Tienes que probar la granita sí o sí!", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.sei-stato-a-ortigia", "text": "Sei stato a Ortigia? È bellissima.", "es": "¿Has estado en Ortigia? Es preciosa.", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.arancina-o-arancino", "text": "Si dice arancina o arancino?", "es": "¿Se dice arancina o arancino?", "notes": "Pregunta trampa: en Palermo «arancina», en Catania «arancino». Da charla para rato.", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.in-spagna-si-mangia-bene-pure", "text": "In Spagna si mangia bene pure, eh!", "es": "En España también se come bien, ¿eh?", "notes": "«Pure» = también; muy usado en el sur.", "register": "neutral", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.scusa-non-ho-capito", "text": "Scusa, non ho capito.", "es": "Perdona, no te he entendido.", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.puoi-ripetere-piu-piano", "text": "Puoi ripetere più piano?", "es": "¿Puedes repetirlo más despacio?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.puo-ripetere", "text": "Può ripetere, per favore?", "es": "¿Puede repetir, por favor?", "register": "lei", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.parlo-troppo-veloce", "text": "Parlo troppo veloce?", "es": "¿Hablo demasiado rápido?", "register": "neutral", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.come-si-dice", "text": "Come si dice «maleta» in italiano?", "es": "¿Cómo se dice «maleta» en italiano?", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.cosa-vuol-dire", "text": "Cosa vuol dire «amunì»?", "es": "¿Qué significa «amunì»?", "notes": "«Amunì» es siciliano: «¡vamos!».", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.me-lo-scrivi", "text": "Me lo scrivi?", "es": "¿Me lo escribes?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.parli-inglese", "text": "Parli inglese?", "es": "¿Hablas inglés?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.te-lo-dico-in-inglese", "text": "Te lo dico in inglese?", "es": "¿Te lo digo en inglés?", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.mi-capisci-se-parlo-spagnolo", "text": "Mi capisci se parlo spagnolo?", "es": "¿Me entiendes si hablo en español?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.si-somigliano", "text": "Lo spagnolo e l'italiano si somigliano molto.", "es": "El español y el italiano se parecen mucho.", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.non-ti-preoccupare", "text": "Non ti preoccupare, ti capisco.", "es": "No te preocupes, te entiendo.", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.ah-ho-capito", "text": "Ah, ho capito!", "es": "¡Ah, vale, ya lo pillo!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.ma-dai", "text": "Ma dai!", "es": "¡No me digas!", "notes": "Sorpresa. «Dai!» solo = ¡venga!", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.davvero", "text": "Davvero?", "es": "¿De verdad?", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.che-bello", "text": "Che bello!", "es": "¡Qué bien! / ¡Qué bonito!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.magari", "text": "Magari!", "es": "¡Ojalá!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.boh-non-lo-so", "text": "Boh, non lo so.", "es": "Ni idea.", "notes": "Muy coloquial, con amigos.", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.meno-male", "text": "Meno male!", "es": "¡Menos mal!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.figurati", "text": "Figurati!", "es": "¡No hay de qué!", "notes": "Con usted: «Si figuri!».", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.si-figuri", "text": "Si figuri!", "es": "¡Faltaría más!", "register": "lei", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-DiegoNeural" },
+    { "id": "talk-chiacchiere.mi-dai-il-tuo-numero", "text": "Mi dai il tuo numero?", "es": "¿Me das tu número?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.hai-instagram", "text": "Hai Instagram?", "es": "¿Tienes Instagram?", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.ti-scrivo-su-whatsapp", "text": "Ti scrivo su WhatsApp.", "es": "Te escribo por WhatsApp.", "register": "tu", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.e-stato-un-piacere", "text": "È stato un piacere!", "es": "¡Ha sido un placer!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.ci-vediamo", "text": "Ci vediamo!", "es": "¡Nos vemos!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.a-presto", "text": "A presto!", "es": "¡Hasta pronto!", "register": "neutral", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.buon-viaggio", "text": "Buon viaggio!", "es": "¡Buen viaje!", "register": "neutral", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "talk-chiacchiere.divertiti", "text": "Divertiti!", "es": "¡Pásalo bien!", "register": "tu", "situation": "presentarse", "tags": ["te-dicen"], "voice": "it-IT-IsabellaNeural" }
+  ],
+  "vocab": [
+    { "id": "talk-chiacchiere.nome", "word": "nome", "article": "il", "gender": "m", "es": "el nombre", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.cognome", "word": "cognome", "article": "il", "gender": "m", "es": "el apellido", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.amico", "word": "amico", "article": "l'", "gender": "m", "plural": "amici", "es": "el amigo", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.amica", "word": "amica", "article": "l'", "gender": "f", "plural": "amiche", "es": "la amiga", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.ragazzo", "word": "ragazzo", "article": "il", "gender": "m", "es": "el chico", "notes": "«Il mio ragazzo» = mi novio.", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.ragazza", "word": "ragazza", "article": "la", "gender": "f", "es": "la chica", "notes": "«La mia ragazza» = mi novia.", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.signore", "word": "signore", "article": "il", "gender": "m", "es": "el señor", "notes": "Delante del apellido pierde la -e: «il signor Russo».", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.signora", "word": "signora", "article": "la", "gender": "f", "es": "la señora", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.vacanza", "word": "vacanza", "article": "la", "gender": "f", "plural": "vacanze", "es": "las vacaciones", "notes": "Se dice en singular: «sono in vacanza».", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.ferie", "word": "ferie", "article": "le", "gender": "f", "es": "las vacaciones (del trabajo)", "notes": "«Sono in ferie» = estoy de vacaciones del trabajo.", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.lavoro", "word": "lavoro", "article": "il", "gender": "m", "es": "el trabajo", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.paese", "word": "paese", "article": "il", "gender": "m", "es": "el país (o el pueblo)", "notes": "«Il mio paese» puede ser tu país o tu pueblo.", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.citta", "word": "città", "article": "la", "gender": "f", "plural": "le città", "es": "la ciudad", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.spagna", "word": "Spagna", "article": "la", "gender": "f", "es": "España", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.spagnolo", "word": "spagnolo", "es": "español", "notes": "Femenino: «spagnola».", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.straniero", "word": "straniero", "article": "lo", "gender": "m", "plural": "stranieri", "es": "el extranjero", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.turista", "word": "turista", "article": "il", "gender": "mf", "plural": "i turisti", "es": "el turista (la turista)", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.tempo", "word": "tempo", "article": "il", "gender": "m", "es": "el tiempo", "notes": "Tanto el clima como el tiempo que pasa.", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.caldo", "word": "caldo", "article": "il", "gender": "m", "es": "el calor", "example": "talk-chiacchiere.fa-caldo-eh", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.sole", "word": "sole", "article": "il", "gender": "m", "es": "el sol", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.pioggia", "word": "pioggia", "article": "la", "gender": "f", "es": "la lluvia", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.mare", "word": "mare", "article": "il", "gender": "m", "es": "el mar", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.spiaggia", "word": "spiaggia", "article": "la", "gender": "f", "plural": "spiagge", "es": "la playa", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.cibo", "word": "cibo", "article": "il", "gender": "m", "es": "la comida", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.consiglio", "word": "consiglio", "article": "il", "gender": "m", "plural": "consigli", "es": "el consejo (la recomendación)", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.piano", "word": "piano", "es": "despacio (y bajito)", "notes": "«Più piano» = más despacio.", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.veloce", "word": "veloce", "es": "rápido", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.parola", "word": "parola", "article": "la", "gender": "f", "plural": "parole", "es": "la palabra", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.significato", "word": "significato", "article": "il", "gender": "m", "es": "el significado", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.lingua", "word": "lingua", "article": "la", "gender": "f", "es": "la lengua (el idioma)", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.italiano", "word": "italiano", "article": "l'", "gender": "m", "es": "el italiano", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.inglese", "word": "inglese", "article": "l'", "gender": "m", "es": "el inglés", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.numero", "word": "numero", "article": "il", "gender": "m", "plural": "numeri", "es": "el número", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.telefono", "word": "telefono", "article": "il", "gender": "m", "es": "el teléfono (el móvil)", "notes": "El móvil es «il cellulare», pero todos dicen «il telefono».", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.messaggio", "word": "messaggio", "article": "il", "gender": "m", "plural": "messaggi", "es": "el mensaje", "situation": "presentarse" },
+    { "id": "talk-chiacchiere.foto", "word": "foto", "article": "la", "gender": "f", "plural": "le foto", "es": "la foto", "situation": "presentarse" }
+  ],
+  "qa": [
+    {
+      "id": "talk-chiacchiere.qa.piacere",
+      "question": "Piacere, Giulia.",
+      "questionEs": "Encantada, soy Giulia.",
+      "accepted": [
+        { "text": "Piacere mio!", "es": "¡El gusto es mío!" },
+        { "text": "Piacere!", "es": "¡Encantado!" }
+      ],
+      "distractors": [{ "text": "Per piacere.", "es": "Por favor." }, { "text": "Mi piace.", "es": "Me gusta." }],
+      "register": "neutral",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.diamoci-del-tu",
+      "question": "Ma diamoci del tu, dai!",
+      "questionEs": "Pero tutéame, ¡venga!",
+      "accepted": [
+        { "text": "Va bene! Allora, come ti chiami?", "es": "¡Vale! Entonces, ¿cómo te llamas?" },
+        { "text": "Certo! E tu di dove sei?", "es": "¡Claro! ¿Y tú de dónde eres?" }
+      ],
+      "distractors": [
+        { "text": "Va bene! Come si chiama?", "es": "¡Vale! ¿Cómo se llama usted?" },
+        { "text": "Sì, Le do del tu.", "es": "Sí, le tuteo." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Si te proponen el «tu», cambia a «tu» del todo.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.quanto-ti-fermi",
+      "question": "Quanto ti fermi?",
+      "questionEs": "¿Cuánto tiempo te quedas?",
+      "accepted": [
+        { "text": "Ancora una settimana.", "es": "Una semana más." },
+        { "text": "Fino a domenica.", "es": "Hasta el domingo." }
+      ],
+      "distractors": [
+        { "text": "Mi fermo alla prossima.", "es": "Me bajo en la próxima." },
+        { "text": "Da una settimana.", "es": "Desde hace una semana." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.da-quanto-tempo",
+      "question": "Da quanto tempo sei in Sicilia?",
+      "questionEs": "¿Cuánto tiempo llevas en Sicilia?",
+      "accepted": [
+        { "text": "Da tre giorni.", "es": "Desde hace tres días." },
+        { "text": "Sono arrivato ieri.", "es": "Llegué ayer." }
+      ],
+      "distractors": [
+        { "text": "Per tre giorni.", "es": "Durante tres días." },
+        { "text": "Tre giorni fa.", "es": "Hace tres días." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "«Da» + tiempo = desde hace; es lo que se responde a «Da quanto tempo...?».",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.ti-piace-palermo",
+      "question": "Allora, ti piace Palermo?",
+      "questionEs": "Bueno, ¿te gusta Palermo?",
+      "accepted": [
+        { "text": "Sì, moltissimo! È bellissima.", "es": "¡Sí, muchísimo! Es preciosa." },
+        { "text": "Sì, tanto! Un po' caotica, ma bella.", "es": "¡Sí, mucho! Un poco caótica, pero bonita." }
+      ],
+      "distractors": [
+        { "text": "Sì, mi piaccio.", "es": "Sí, me gusto." },
+        { "text": "Sì, ti piace.", "es": "Sí, te gusta." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.hai-provato-la-granita",
+      "question": "Hai già provato la granita?",
+      "questionEs": "¿Ya has probado la granita?",
+      "accepted": [
+        { "text": "Sì, con la brioche. Buonissima!", "es": "Sí, con brioche. ¡Buenísima!" },
+        { "text": "Non ancora! Dove mi consigli di andare?", "es": "¡Todavía no! ¿Adónde me recomiendas ir?" }
+      ],
+      "distractors": [
+        { "text": "No, grazie, adesso non ho sete.", "es": "No, gracias, ahora no tengo sed." },
+        { "text": "Sì, ho provata.", "es": "Sí, he probada." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "No te la está ofreciendo: te pregunta si ya la has probado.",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.ortigia-al-tramonto",
+      "question": "Se vai a Siracusa, vai a Ortigia al tramonto.",
+      "questionEs": "Si vas a Siracusa, ve a Ortigia al atardecer.",
+      "accepted": [
+        { "text": "Grazie del consiglio!", "es": "¡Gracias por el consejo!" },
+        { "text": "Che bello! Ci vado domani.", "es": "¡Qué bien! Voy mañana." }
+      ],
+      "distractors": [
+        { "text": "Grazie, anche a te!", "es": "¡Gracias, igualmente!" },
+        { "text": "Prego, figurati.", "es": "De nada, no hay de qué." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.hai-capito",
+      "question": "Hai capito?",
+      "questionEs": "¿Lo has entendido?",
+      "accepted": [
+        { "text": "Sì, ho capito, grazie!", "es": "¡Sí, lo he entendido, gracias!" },
+        { "text": "Non tutto. Puoi ripetere più piano?", "es": "No todo. ¿Puedes repetirlo más despacio?" }
+      ],
+      "distractors": [
+        { "text": "Sì, capisci.", "es": "Sí, entiendes." },
+        { "text": "Sì, ripeto.", "es": "Sí, repito." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.parlo-troppo-veloce",
+      "question": "Scusa, parlo troppo veloce?",
+      "questionEs": "Perdona, ¿hablo demasiado rápido?",
+      "accepted": [
+        { "text": "Un po'! Puoi parlare più piano?", "es": "¡Un poco! ¿Puedes hablar más despacio?" },
+        { "text": "No, no, ti capisco bene.", "es": "No, no, te entiendo bien." }
+      ],
+      "distractors": [
+        { "text": "Sì, parlo veloce.", "es": "Sí, hablo rápido." },
+        { "text": "Sì, sei troppo piano.", "es": "Sí, eres demasiado despacio." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.buon-viaggio",
+      "question": "Allora buon viaggio, eh!",
+      "questionEs": "Bueno, ¡buen viaje!",
+      "accepted": [
+        { "text": "Grazie! È stato un piacere.", "es": "¡Gracias! Ha sido un placer." },
+        { "text": "Grazie mille, ciao!", "es": "¡Muchas gracias, adiós!" }
+      ],
+      "distractors": [
+        { "text": "Anche a me!", "es": "¡A mí también!" },
+        { "text": "Sì, il viaggio è buono.", "es": "Sí, el viaje es bueno." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-chiacchiere.qa.mi-lasci-il-numero",
+      "question": "Mi lasci il tuo numero?",
+      "questionEs": "¿Me dejas tu número?",
+      "accepted": [
+        { "text": "Certo! Te lo scrivo.", "es": "¡Claro! Te lo escribo." },
+        { "text": "Sì, ti scrivo su WhatsApp.", "es": "Sí, te escribo por WhatsApp." }
+      ],
+      "distractors": [
+        { "text": "Sì, il numero quattro.", "es": "Sí, el número cuatro." },
+        { "text": "Certo, Le do il mio numero.", "es": "Claro, le doy mi número." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Si te tutean, contesta con «tu»: «Le» es de usted.",
+      "voice": "it-IT-IsabellaNeural"
+    }
+  ]
+}

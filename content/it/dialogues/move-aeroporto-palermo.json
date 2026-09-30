@@ -1,0 +1,67 @@
+{
+  "id": "dlg.move-aeroporto",
+  "title": "Del aeropuerto de Palermo al centro",
+  "description": "Coges el bus de Prestia e Comandè y no entiendes una pregunta del conductor.",
+  "situation": "aeropuerto",
+  "unit": "move-bus",
+  "order": 24,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Autista", "text": "Buongiorno! Dove va?", "es": "¡Buenos días! ¿Adónde va?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pregunta si este autobús va a la Estación Central.",
+      "options": [
+        { "text": "Buongiorno, questo va alla Stazione Centrale?", "es": "Buenos días, ¿este va a la Estación Central?", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Stazione Centrale?", "es": "¿Estación Central?", "verdict": "acceptable", "feedback": "Se entiende, aunque falta un saludo." },
+        { "text": "Buongiorno, vado bene, grazie.", "es": "Buenos días, voy bien, gracias.", "verdict": "wrong", "feedback": "«Dove va?» es «¿adónde va?», no «¿qué tal?»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Autista", "text": "Sì, sì. Il biglietto lo fa qui, a bordo. Solo andata?", "es": "Sí, sí. El billete lo saca aquí, a bordo. ¿Solo ida?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí, solo ida.",
+      "options": [
+        { "text": "Sì, solo andata, per favore.", "es": "Sí, solo ida, por favor.", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "Sì.", "es": "Sí.", "verdict": "acceptable", "feedback": "Correcto, aunque muy escueto." },
+        { "text": "Sì, solo ritorno.", "es": "Sí, solo vuelta.", "verdict": "wrong", "feedback": "Vas hacia la ciudad: es «andata», la ida." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Autista", "text": "Sono sette euro.", "es": "Son siete euros.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes pagar con tarjeta.",
+      "options": [
+        { "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Carta va bene?", "es": "¿Vale tarjeta?", "verdict": "acceptable", "feedback": "Se entiende." },
+        { "text": "Posso pagare in carta?", "es": "¿Puedo pagar en tarjeta?", "verdict": "wrong", "feedback": "Se dice «con la carta»; «in» va con «contanti»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Autista", "text": "Certo. Scende a Politeama o alla Centrale?", "es": "Claro. ¿Se baja en Politeama o en la Central?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "No lo has entendido. Pide que lo repita.",
+      "options": [
+        { "text": "Scusi, può ripetere?", "es": "Perdone, ¿puede repetir?", "verdict": "correct", "feedback": "¡Muy bien!" },
+        { "text": "Come?", "es": "¿Cómo?", "verdict": "acceptable", "feedback": "Vale, aunque «Come, scusi?» suena más educado." },
+        { "text": "Sì, grazie.", "es": "Sí, gracias.", "verdict": "wrong", "feedback": "Te ha hecho una pregunta de «esto o lo otro»: «sì» no responde." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Autista", "text": "Politeama o Stazione Centrale? Sono due fermate diverse.", "es": "¿Politeama o Estación Central? Son dos paradas distintas.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Di que a la Central y pídele que te avise.",
+      "options": [
+        { "text": "Alla Stazione Centrale. Mi avvisa quando arriviamo?", "es": "A la Estación Central. ¿Me avisa cuando lleguemos?", "verdict": "correct", "feedback": "¡Genial! Pedir que te avisen es muy útil." },
+        { "text": "Centrale, grazie.", "es": "Central, gracias.", "verdict": "acceptable", "feedback": "Suficiente para que te entienda." },
+        { "text": "Politeama, grazie.", "es": "Politeama, gracias.", "verdict": "wrong", "feedback": "Tú vas a la estación: es «Stazione Centrale»." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Autista", "text": "Non si preoccupi, è il capolinea.", "es": "No se preocupe, es la última parada.", "voice": "it-IT-DiegoNeural" }
+  ]
+}

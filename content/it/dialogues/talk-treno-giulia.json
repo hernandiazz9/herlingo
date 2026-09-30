@@ -1,0 +1,88 @@
+{
+  "id": "dlg.talk-treno",
+  "title": "Charla en el tren con Giulia",
+  "description": "Una chica de Catania te oye hablar español y empieza a charlar (de tú).",
+  "situation": "presentarse",
+  "unit": "talk-chiacchiere",
+  "order": 30,
+  "register": "tu",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Giulia", "text": "Scusa, sei spagnolo? Ti ho sentito parlare al telefono.", "es": "Perdona, ¿eres español? Te he oído hablar por teléfono.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, de Madrid, y pregunta si ella es de aquí.",
+      "options": [
+        { "text": "Sì, sono spagnolo, di Madrid. E tu, sei di qui?", "es": "Sí, soy español, de Madrid. ¿Y tú eres de aquí?", "verdict": "correct", "feedback": "¡Perfecto! Respondes y devuelves la pregunta." },
+        { "text": "Sì, di Madrid.", "es": "Sí, de Madrid.", "verdict": "acceptable", "feedback": "Correcto, pero devolver la pregunta anima la charla." },
+        { "text": "Sì, sono di spagnolo.", "es": "Sí, soy de español.", "verdict": "wrong", "feedback": "Es «sono spagnolo» o «sono di Madrid»: «di» va con la ciudad." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Giulia", "text": "Sono di Catania, ma studio a Palermo. Quanto ti fermi in Sicilia?", "es": "Soy de Catania, pero estudio en Palermo. ¿Cuánto tiempo te quedas en Sicilia?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que unos diez días.",
+      "options": [
+        { "text": "Una decina di giorni.", "es": "Unos diez días.", "verdict": "correct", "feedback": "¡Genial! «Una decina» = unos diez." },
+        { "text": "Dieci giorni.", "es": "Diez días.", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Da dieci giorni.", "es": "Desde hace diez días.", "verdict": "wrong", "feedback": "«Da dieci giorni» es desde hace diez días; ella pregunta cuánto te quedas." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Giulia", "text": "Che bello! E dove sei stato finora?", "es": "¡Qué bien! ¿Y dónde has estado hasta ahora?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que en Palermo y en Cefalù.",
+      "options": [
+        { "text": "A Palermo e a Cefalù. Bellissime!", "es": "En Palermo y en Cefalù. ¡Preciosas!", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Palermo, Cefalù.", "es": "Palermo, Cefalù.", "verdict": "acceptable", "feedback": "Se entiende." },
+        { "text": "Sono stato bene, grazie.", "es": "He estado bien, gracias.", "verdict": "wrong", "feedback": "Te pregunta «dónde», no «cómo» has estado." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Giulia", "text": "Allora a Catania devi provare l'arancino. Da noi si dice arancino, eh, non arancina!", "es": "Pues en Catania tienes que probar el arancino. Aquí se dice arancino, ¿eh?, ¡no arancina!", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Habla muy rápido. Pídele que hable más despacio.",
+      "options": [
+        { "text": "Scusa, puoi parlare più piano?", "es": "Perdona, ¿puedes hablar más despacio?", "verdict": "correct", "feedback": "¡Muy bien! Y con «tu», como ella." },
+        { "text": "Scusi, può parlare più piano?", "es": "Perdone, ¿puede hablar más despacio?", "verdict": "acceptable", "feedback": "Correcto, pero ella te tutea: usa «puoi»." },
+        { "text": "Sì, arancino, grazie.", "es": "Sí, un arancino, gracias.", "verdict": "wrong", "feedback": "No te está ofreciendo uno: si no entiendes, pide que lo repita." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Giulia", "text": "Scusa! Dicevo: a Catania prova l'arancino. A Palermo lo chiamano «arancina».", "es": "¡Perdona! Decía: en Catania prueba el arancino. En Palermo lo llaman «arancina».", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Di, en broma, que ya lo has probado en Palermo y que estaba buenísimo.",
+      "options": [
+        { "text": "L'ho già provato a Palermo... buonissima o buonissimo?", "es": "Ya lo he probado en Palermo... ¿buenísima o buenísimo?", "verdict": "correct", "feedback": "¡Genial! Con humor, el mejor tema para charlar en Sicilia." },
+        { "text": "Sì, buono.", "es": "Sí, bueno.", "verdict": "acceptable", "feedback": "Correcto, aunque corta la charla." },
+        { "text": "No, grazie, non ho fame.", "es": "No, gracias, no tengo hambre.", "verdict": "wrong", "feedback": "No te lo ofrece: te recomienda probarlo." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Giulia", "text": "Ahah, bravo! Senti, se vuoi ti do qualche consiglio su Catania. Mi dai il tuo numero?", "es": "¡Jaja, muy bien! Oye, si quieres te doy algún consejo sobre Catania. ¿Me das tu número?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l6",
+      "speaker": "learner",
+      "prompt": "Acepta y di que le escribes por WhatsApp.",
+      "options": [
+        { "text": "Certo! Ti scrivo su WhatsApp.", "es": "¡Claro! Te escribo por WhatsApp.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Sì, ecco.", "es": "Sí, toma.", "verdict": "acceptable", "feedback": "Correcto, le enseñas el número." },
+        { "text": "Certo, Le scrivo su WhatsApp.", "es": "Claro, le escribo por WhatsApp.", "verdict": "wrong", "feedback": "«Le» es de usted: con Giulia, «ti scrivo»." }
+      ]
+    },
+    { "id": "n7", "speaker": "native", "name": "Giulia", "text": "Perfetto! Oh, questa è la mia fermata. Buon viaggio, eh!", "es": "¡Perfecto! Anda, esta es mi parada. ¡Buen viaje!", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l7",
+      "speaker": "learner",
+      "prompt": "Despídete.",
+      "options": [
+        { "text": "Grazie, è stato un piacere! Ciao!", "es": "¡Gracias, ha sido un placer! ¡Adiós!", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "Ciao!", "es": "¡Adiós!", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Arrivederci, signora!", "es": "¡Adiós, señora!", "verdict": "wrong", "feedback": "Demasiado formal con una chica joven que te tutea." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "dlg.move-controllore",
+  "title": "El revisor en el regional a Agrigento",
+  "description": "Se te ha olvidado validar el billete y el revisor habla rápido.",
+  "situation": "tren",
+  "unit": "move-treno",
+  "order": 21,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Controllore", "text": "Buongiorno, biglietto prego.", "es": "Buenos días, billete, por favor.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Enséñale el billete.",
+      "options": [
+        { "text": "Buongiorno, ecco a Lei.", "es": "Buenos días, aquí tiene.", "verdict": "correct", "feedback": "¡Perfecto! «Ecco a Lei» es lo más natural." },
+        { "text": "Ecco.", "es": "Tome.", "verdict": "acceptable", "feedback": "Vale, aunque un saludo no sobra." },
+        { "text": "Prego, un biglietto per Agrigento.", "es": "Por favor, un billete para Agrigento.", "verdict": "wrong", "feedback": "No te lo vende: quiere ver el billete que ya tienes." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Controllore", "text": "Il biglietto non è convalidato.", "es": "El billete no está validado.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "No lo has entendido bien. Pide que lo repita más despacio.",
+      "options": [
+        { "text": "Scusi, non ho capito. Può ripetere più piano?", "es": "Perdone, no he entendido. ¿Puede repetirlo más despacio?", "verdict": "correct", "feedback": "¡Genial! Así pides tiempo sin problema." },
+        { "text": "Come, scusi?", "es": "¿Cómo dice?", "verdict": "acceptable", "feedback": "Correcto, aunque quizá lo repita igual de rápido." },
+        { "text": "Sì, grazie.", "es": "Sí, gracias.", "verdict": "wrong", "feedback": "Si no lo entiendes, no digas que sí: pide que lo repita." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Controllore", "text": "Non ha convalidato il biglietto. Doveva timbrarlo prima di salire.", "es": "No ha validado el billete. Tenía que picarlo antes de subir.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Explica que no lo sabías y que eres turista.",
+      "options": [
+        { "text": "Mi scusi, non lo sapevo. Sono turista.", "es": "Perdone, no lo sabía. Soy turista.", "verdict": "correct", "feedback": "¡Muy bien! Disculparte con educación ayuda mucho." },
+        { "text": "Non lo sapevo.", "es": "No lo sabía.", "verdict": "acceptable", "feedback": "Correcto, pero añade «mi scusi» para suavizarlo." },
+        { "text": "Sì, lo so. Sono turista.", "es": "Sí, lo sé. Soy turista.", "verdict": "wrong", "feedback": "«Lo so» es «lo sé»: estarías admitiendo que lo sabías." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Controllore", "text": "Va bene, per questa volta glielo convalido io. Un documento, per favore.", "es": "Vale, por esta vez se lo valido yo. Documentación, por favor.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale tu documento de identidad.",
+      "options": [
+        { "text": "Ecco la carta d'identità.", "es": "Aquí tiene el DNI.", "verdict": "correct", "feedback": "¡Perfecto! Con el DNI español basta." },
+        { "text": "Documento? Ecco il passaporto.", "es": "¿Documentación? Aquí tiene el pasaporte.", "verdict": "acceptable", "feedback": "Vale igual; el pasaporte también sirve." },
+        { "text": "Ecco il biglietto.", "es": "Aquí tiene el billete.", "verdict": "wrong", "feedback": "El billete ya lo ha visto: ahora te pide un documento de identidad." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Controllore", "text": "Perfetto. La prossima volta lo convalidi prima di salire, eh.", "es": "Perfecto. La próxima vez valídelo antes de subir, ¿eh?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Dale las gracias y pregunta a qué hora llegáis a Agrigento.",
+      "options": [
+        { "text": "Certo, grazie! A che ora arriviamo ad Agrigento?", "es": "¡Claro, gracias! ¿A qué hora llegamos a Agrigento?", "verdict": "correct", "feedback": "¡Genial! Y fíjate: «ad Agrigento» con d ante vocal." },
+        { "text": "Grazie. Agrigento a che ora?", "es": "Gracias. ¿Agrigento a qué hora?", "verdict": "acceptable", "feedback": "Se entiende, aunque suena telegráfico." },
+        { "text": "Grazie! A che ora parte ad Agrigento?", "es": "¡Gracias! ¿A qué hora sale a Agrigento?", "verdict": "wrong", "feedback": "«Partire» es salir; para llegar se usa «arrivare»." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Controllore", "text": "Alle undici e quaranta. È il capolinea, non si può sbagliare.", "es": "A las once y cuarenta. Es el final de trayecto, no tiene pérdida.", "voice": "it-IT-DiegoNeural" }
+  ]
+}

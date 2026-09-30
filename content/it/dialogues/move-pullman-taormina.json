@@ -1,0 +1,67 @@
+{
+  "id": "dlg.move-pullman",
+  "title": "Autobús de Catania a Taormina",
+  "description": "Sacas billete para el pullman y confundes la hora de salida.",
+  "situation": "bus",
+  "unit": "move-bus",
+  "order": 23,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Bigliettaio", "text": "Prego!", "es": "¡Dígame!", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide un billete para Taormina.",
+      "options": [
+        { "text": "Buongiorno, un biglietto per Taormina, per favore.", "es": "Buenos días, un billete para Taormina, por favor.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Taormina, uno.", "es": "Taormina, uno.", "verdict": "acceptable", "feedback": "Se entiende, pero suena seco." },
+        { "text": "Buongiorno, un bagaglio per Taormina.", "es": "Buenos días, un equipaje para Taormina.", "verdict": "wrong", "feedback": "«Bagaglio» es equipaje; el billete es «biglietto»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Bigliettaio", "text": "L'andata e ritorno costa meno. La vuole?", "es": "La ida y vuelta sale más barata. ¿La quiere?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí, que quieres ida y vuelta.",
+      "options": [
+        { "text": "Sì, andata e ritorno, grazie.", "es": "Sí, ida y vuelta, gracias.", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "Sì, va bene.", "es": "Sí, vale.", "verdict": "acceptable", "feedback": "Correcto: aceptas la propuesta." },
+        { "text": "Sì, costa meno.", "es": "Sí, cuesta menos.", "verdict": "wrong", "feedback": "Repites lo que dice pero no respondes: di «andata e ritorno»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Bigliettaio", "text": "Sono otto euro e cinquanta. Il prossimo parte alle dodici e un quarto.", "es": "Son ocho euros con cincuenta. El próximo sale a las doce y cuarto.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Te ha parecido oír «dos y cuarto». Comprueba la hora.",
+      "options": [
+        { "text": "Scusi, alle dodici o alle due?", "es": "Perdone, ¿a las doce o a las dos?", "verdict": "correct", "feedback": "¡Muy bien! Comprobar evita perder el autobús." },
+        { "text": "Può ripetere l'ora, per favore?", "es": "¿Puede repetir la hora, por favor?", "verdict": "acceptable", "feedback": "También funciona." },
+        { "text": "Perfetto, alle due.", "es": "Perfecto, a las dos.", "verdict": "wrong", "feedback": "Ha dicho «dodici» (12), no «due» (2): comprueba siempre las horas." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Bigliettaio", "text": "Alle dodici e un quarto, fra venti minuti. È quello lì in fondo, con scritto Taormina.", "es": "A las doce y cuarto, dentro de veinte minutos. Es aquel del fondo, el que pone Taormina.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si para en el centro de Taormina.",
+      "options": [
+        { "text": "Si ferma in centro a Taormina?", "es": "¿Para en el centro de Taormina?", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Taormina centro?", "es": "¿Taormina centro?", "verdict": "acceptable", "feedback": "Se entiende." },
+        { "text": "Si ferma alla stazione di Catania?", "es": "¿Para en la estación de Catania?", "verdict": "wrong", "feedback": "Preguntas por Catania, pero tú vas a Taormina." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Bigliettaio", "text": "Sì, il capolinea è in centro, vicino a Porta Messina.", "es": "Sí, la última parada está en el centro, cerca de Porta Messina.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Ya en el autobús: pregunta al conductor dónde pones la maleta.",
+      "options": [
+        { "text": "Scusi, dove metto la valigia?", "es": "Perdone, ¿dónde pongo la maleta?", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "E la valigia?", "es": "¿Y la maleta?", "verdict": "acceptable", "feedback": "Se entiende por el contexto." },
+        { "text": "Scusi, dove compro la valigia?", "es": "Perdone, ¿dónde compro la maleta?", "verdict": "wrong", "feedback": "No quieres comprarla: pregunta dónde «metto» (pongo) la maleta." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Autista", "text": "La valigia va sotto, nel bagagliaio. Salga pure!", "es": "La maleta va abajo, en el maletero. ¡Suba!", "voice": "it-IT-IsabellaNeural" }
+  ]
+}

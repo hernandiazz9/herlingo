@@ -1,0 +1,66 @@
+{
+  "id": "dlg.move-biglietteria",
+  "title": "En la taquilla de Palermo Centrale",
+  "description": "Compras un billete de ida y vuelta a Cefalù y no pillas la hora a la primera.",
+  "situation": "tren",
+  "unit": "move-treno",
+  "order": 20,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Bigliettaia", "text": "Buongiorno, mi dica.", "es": "Buenos días, dígame.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y pide un billete para Cefalù.",
+      "options": [
+        { "text": "Buongiorno! Un biglietto per Cefalù, per favore.", "es": "¡Buenos días! Un billete para Cefalù, por favor.", "verdict": "correct", "feedback": "¡Perfecto! Saludo, destino y «per favore»." },
+        { "text": "Cefalù, per favore.", "es": "Cefalù, por favor.", "verdict": "acceptable", "feedback": "Se entiende, pero saludar primero queda mucho mejor." },
+        { "text": "Buongiorno! Voglio un biglietto a Cefalù.", "es": "¡Buenos días! Quiero un billete a Cefalù.", "verdict": "wrong", "feedback": "«Voglio» suena brusco y el destino va con «per»: «un biglietto per Cefalù»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Bigliettaia", "text": "Solo andata o andata e ritorno?", "es": "¿Solo ida o ida y vuelta?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Quieres ida y vuelta: vuelves esta noche.",
+      "options": [
+        { "text": "Andata e ritorno, per favore. Torno stasera.", "es": "Ida y vuelta, por favor. Vuelvo esta noche.", "verdict": "correct", "feedback": "¡Genial! Claro y educado." },
+        { "text": "Andata e ritorno.", "es": "Ida y vuelta.", "verdict": "acceptable", "feedback": "Correcto, aunque con «per favore» suena más amable." },
+        { "text": "Solo andata, per favore.", "es": "Solo ida, por favor.", "verdict": "wrong", "feedback": "«Solo andata» es solo ida; tú quieres volver." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Bigliettaia", "text": "Sono dodici euro e venti. Il prossimo parte alle sedici e dieci dal binario cinque.", "es": "Son doce euros con veinte. El próximo sale a las dieciséis y diez del andén cinco.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "No has pillado la hora. Pide que te la repita.",
+      "options": [
+        { "text": "Scusi, può ripetere l'orario?", "es": "Perdone, ¿puede repetir el horario?", "verdict": "correct", "feedback": "¡Muy bien! Pedir que repitan es normalísimo." },
+        { "text": "Come, scusi?", "es": "¿Cómo dice?", "verdict": "acceptable", "feedback": "Funciona; te lo repetirá todo." },
+        { "text": "Sì, sì, grazie.", "es": "Sí, sí, gracias.", "verdict": "wrong", "feedback": "No finjas que lo has entendido: pide que te lo repitan." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Bigliettaia", "text": "Alle sedici e dieci, cioè le quattro e dieci. Binario cinque.", "es": "A las dieciséis y diez, o sea, las cuatro y diez. Andén cinco.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si tienes que validar el billete.",
+      "options": [
+        { "text": "Grazie. Devo convalidare il biglietto?", "es": "Gracias. ¿Tengo que validar el billete?", "verdict": "correct", "feedback": "¡Perfecto! Con billete de papel, siempre hay que validarlo." },
+        { "text": "Devo timbrare?", "es": "¿Tengo que picar?", "verdict": "acceptable", "feedback": "Coloquial pero correcto: «timbrare» = picar el billete." },
+        { "text": "Devo cancellare il biglietto?", "es": "¿Tengo que anular el billete?", "verdict": "wrong", "feedback": "«Cancellare» es anular. Validar es «convalidare»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Bigliettaia", "text": "Sì, nella macchinetta sul binario, prima di salire. Buon viaggio!", "es": "Sí, en la máquina del andén, antes de subir. ¡Buen viaje!", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Despídete.",
+      "options": [
+        { "text": "Grazie, buona giornata!", "es": "¡Gracias, que tenga un buen día!", "verdict": "correct", "feedback": "¡Genial! La despedida estándar con el personal." },
+        { "text": "Grazie, ciao!", "es": "¡Gracias, adiós!", "verdict": "acceptable", "feedback": "Se entiende, pero «ciao» es demasiado informal con una empleada." },
+        { "text": "Prego, arrivederci!", "es": "¡De nada, adiós!", "verdict": "wrong", "feedback": "«Prego» es «de nada»: aquí te toca a ti dar las gracias." }
+      ]
+    }
+  ]
+}

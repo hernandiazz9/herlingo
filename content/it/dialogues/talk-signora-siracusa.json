@@ -1,0 +1,77 @@
+{
+  "id": "dlg.talk-signora",
+  "title": "Una señora en un bar de Siracusa",
+  "description": "Una señora mayor te pregunta de dónde eres y a qué te dedicas (de usted).",
+  "situation": "presentarse",
+  "unit": "talk-io",
+  "order": 31,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Signora", "text": "Lei non è di qui, vero?", "es": "Usted no es de aquí, ¿verdad?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que no, que eres español, de Madrid.",
+      "options": [
+        { "text": "No, sono spagnolo, di Madrid.", "es": "No, soy español, de Madrid.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "No, Spagna.", "es": "No, España.", "verdict": "acceptable", "feedback": "Se entiende, aunque muy corto." },
+        { "text": "No, non sono qui.", "es": "No, no estoy aquí.", "verdict": "wrong", "feedback": "«Di qui» = de aquí: di de dónde eres." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Signora", "text": "Ah, la Spagna! Mio figlio lavora a Barcellona. È in vacanza?", "es": "¡Ah, España! Mi hijo trabaja en Barcelona. ¿Está de vacaciones?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí y que es tu primera vez en Sicilia.",
+      "options": [
+        { "text": "Sì, sono in vacanza. È la prima volta in Sicilia.", "es": "Sí, estoy de vacaciones. Es la primera vez en Sicilia.", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "Sì, vacanza.", "es": "Sí, vacaciones.", "verdict": "acceptable", "feedback": "Se entiende." },
+        { "text": "Sì, sono vacanza.", "es": "Sí, soy vacaciones.", "verdict": "wrong", "feedback": "Falta «in»: «sono in vacanza»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Signora", "text": "E cosa fa di bello nella vita?", "es": "¿Y a qué se dedica?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "No has entendido la pregunta. Pide que la repita.",
+      "options": [
+        { "text": "Scusi, può ripetere? Non ho capito.", "es": "Perdone, ¿puede repetir? No lo he entendido.", "verdict": "correct", "feedback": "¡Muy bien!" },
+        { "text": "Come, scusi?", "es": "¿Cómo dice?", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Sì, grazie, sto bene.", "es": "Sí, gracias, estoy bien.", "verdict": "wrong", "feedback": "No te pregunta cómo estás: pide que lo repita." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Signora", "text": "Che lavoro fa? Il Suo lavoro.", "es": "¿En qué trabaja? Su trabajo.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que eres programador.",
+      "options": [
+        { "text": "Ah! Sono programmatore.", "es": "¡Ah! Soy programador.", "verdict": "correct", "feedback": "¡Perfecto! Sin artículo: «sono programmatore»." },
+        { "text": "Informatica.", "es": "Informática.", "verdict": "acceptable", "feedback": "Se entiende." },
+        { "text": "Sì, fa caldo.", "es": "Sí, hace calor.", "verdict": "wrong", "feedback": "«Che lavoro fa?» es sobre tu trabajo, no sobre el tiempo." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Signora", "text": "Bravo! E Siracusa Le piace?", "es": "¡Muy bien! ¿Y le gusta Siracusa?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Di que muchísimo, sobre todo Ortigia.",
+      "options": [
+        { "text": "Moltissimo! Soprattutto Ortigia.", "es": "¡Muchísimo! Sobre todo Ortigia.", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "Sì, bella.", "es": "Sí, bonita.", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Sì, mi piaccio Ortigia.", "es": "Sí, me gusto Ortigia.", "verdict": "wrong", "feedback": "Es «mi piace Ortigia»: «mi piaccio» es «me gusto (yo)»." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Signora", "text": "Ortigia è un gioiello. Se ha tempo, vada anche a Noto: ci si arriva in pullman.", "es": "Ortigia es una joya. Si tiene tiempo, vaya también a Noto: se llega en autobús.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l6",
+      "speaker": "learner",
+      "prompt": "Agradece el consejo y despídete.",
+      "options": [
+        { "text": "Grazie del consiglio, signora! Buona giornata.", "es": "¡Gracias por el consejo, señora! Que tenga un buen día.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Grazie, ciao!", "es": "¡Gracias, adiós!", "verdict": "acceptable", "feedback": "Se entiende, pero con una señora mayor mejor «buona giornata»." },
+        { "text": "Figurati, buona giornata!", "es": "¡No hay de qué, buen día!", "verdict": "wrong", "feedback": "«Figurati» es «de nada» y de tú: aquí agradeces tú." }
+      ]
+    }
+  ]
+}

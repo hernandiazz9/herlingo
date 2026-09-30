@@ -1,0 +1,66 @@
+{
+  "id": "dlg.move-sciopero",
+  "title": "Huelga en Catania Centrale",
+  "description": "Tu tren a Siracusa no sale por huelga: entiendes el aviso y buscas alternativa.",
+  "situation": "tren",
+  "unit": "move-treno",
+  "order": 22,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Impiegato", "text": "Buongiorno, dica.", "es": "Buenos días, dígame.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pregunta si sale el tren de las 10:20 para Siracusa.",
+      "options": [
+        { "text": "Buongiorno. Il treno delle dieci e venti per Siracusa parte?", "es": "Buenos días. ¿Sale el tren de las diez y veinte para Siracusa?", "verdict": "correct", "feedback": "¡Perfecto! Tren, hora y destino." },
+        { "text": "Treno per Siracusa, dieci e venti?", "es": "¿Tren para Siracusa, diez y veinte?", "verdict": "acceptable", "feedback": "Se entiende, aunque es muy telegráfico." },
+        { "text": "Ciao! Il treno per Siracusa?", "es": "¡Hola! ¿El tren para Siracusa?", "verdict": "wrong", "feedback": "Con el personal, «Buongiorno»; y di qué tren, que hay varios." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Impiegato", "text": "No, mi dispiace. Oggi c'è sciopero e il treno è stato soppresso.", "es": "No, lo siento. Hoy hay huelga y el tren ha sido suprimido.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "No conoces la palabra «soppresso». Pregunta qué significa.",
+      "options": [
+        { "text": "Scusi, cosa vuol dire «soppresso»?", "es": "Perdone, ¿qué significa «soppresso»?", "verdict": "correct", "feedback": "¡Muy bien! Preguntar el significado es clave." },
+        { "text": "Soppresso?", "es": "¿Suprimido?", "verdict": "acceptable", "feedback": "Funciona: repetir la palabra con tono de pregunta también sirve." },
+        { "text": "Ah, perfetto. Grazie.", "es": "Ah, perfecto. Gracias.", "verdict": "wrong", "feedback": "No es perfecto: ¡tu tren no sale! Pregunta si no entiendes." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Impiegato", "text": "Vuol dire cancellato: non parte. Oggi i treni sono garantiti solo dalle sei alle nove e dalle diciotto alle ventuno.", "es": "Quiere decir cancelado: no sale. Hoy los trenes solo están garantizados de seis a nueve y de dieciocho a veintiuna.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta cómo puedes llegar a Siracusa.",
+      "options": [
+        { "text": "E come posso arrivare a Siracusa?", "es": "¿Y cómo puedo llegar a Siracusa?", "verdict": "correct", "feedback": "¡Genial! La pregunta justa." },
+        { "text": "C'è un autobus?", "es": "¿Hay algún autobús?", "verdict": "acceptable", "feedback": "Buena idea; mejor si dices adónde." },
+        { "text": "Allora aspetto il treno qui.", "es": "Entonces espero el tren aquí.", "verdict": "wrong", "feedback": "El tren está suprimido: esperar no sirve." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Impiegato", "text": "Può prendere il pullman dell'Interbus. Parte qui di fronte, più o meno ogni ora.", "es": "Puede coger el autobús de Interbus. Sale aquí enfrente, más o menos cada hora.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes usar el billete de tren en el autobús.",
+      "options": [
+        { "text": "Posso usare il biglietto del treno sul pullman?", "es": "¿Puedo usar el billete del tren en el autobús?", "verdict": "correct", "feedback": "¡Perfecto! Buena pregunta." },
+        { "text": "Il biglietto va bene?", "es": "¿El billete vale?", "verdict": "acceptable", "feedback": "Se entiende por el contexto." },
+        { "text": "Posso comprare il treno sul pullman?", "es": "¿Puedo comprar el tren en el autobús?", "verdict": "wrong", "feedback": "No compras «il treno»: preguntas si vale «il biglietto del treno»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Impiegato", "text": "No, è un'altra azienda, deve fare un altro biglietto. Per il treno può chiedere il rimborso.", "es": "No, es otra empresa, tiene que sacar otro billete. Por el tren puede pedir el reembolso.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Da las gracias por la ayuda.",
+      "options": [
+        { "text": "Va bene, grazie mille per l'aiuto.", "es": "Vale, muchas gracias por la ayuda.", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "Ok, grazie.", "es": "Vale, gracias.", "verdict": "acceptable", "feedback": "Correcto, aunque algo seco." },
+        { "text": "Prego, grazie a Lei.", "es": "De nada, gracias a usted.", "verdict": "wrong", "feedback": "«Prego» es «de nada»: aquí eres tú quien agradece." }
+      ]
+    }
+  ]
+}

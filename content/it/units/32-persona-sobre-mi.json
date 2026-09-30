@@ -1,0 +1,262 @@
+{
+  "id": "talk-io",
+  "order": 32,
+  "title": "Sobre mí (tu perfil)",
+  "description": "Tu presentación como viajero español: nombre, ciudad, trabajo y ruta. Pensada para cambiarla por tus datos reales.",
+  "emoji": "🙋",
+  "situation": "presentarse",
+  "lessons": [
+    {
+      "id": "talk-io.l.chi-sono",
+      "title": "Quién soy y de dónde vengo",
+      "items": ["talk-io.mi-chiamo", "talk-io.sono-spagnolo", "talk-io.sono-di-madrid", "talk-io.vengo-dalla-spagna", "talk-io.abito-a-madrid", "talk-io.madrid-e-la-capitale", "talk-io.capitale", "talk-io.nord", "talk-io.sud", "talk-io.qa.di-dove-sei", "talk-io.qa.di-dov-e", "talk-io.qa.come-ti-chiami"]
+    },
+    {
+      "id": "talk-io.l.lavoro",
+      "title": "A qué me dedico",
+      "items": ["talk-io.lavoro-nell-informatica", "talk-io.sono-programmatore", "talk-io.faccio-il-programmatore", "talk-io.lavoro-da-casa", "talk-io.adesso-sono-in-ferie", "talk-chiacchiere.che-lavoro-fai", "talk-io.informatica", "talk-io.programmatore", "talk-io.computer", "talk-io.ufficio", "talk-io.azienda", "talk-io.qa.che-lavoro-fai", "talk-io.qa.che-lavoro-fa"]
+    },
+    {
+      "id": "talk-io.l.viaggio",
+      "title": "Mi viaje por Sicilia",
+      "items": ["talk-io.sono-in-vacanza", "talk-io.e-la-prima-volta-che-vengo", "talk-io.resto-una-decina-di-giorni", "talk-io.sono-arrivato-ieri", "talk-io.viaggio-da-solo", "talk-io.mi-muovo-in-treno", "talk-io.non-ho-la-macchina", "talk-io.il-mio-giro", "talk-io.dopo-palermo-vado-a-catania", "talk-io.sono-stato-a-cefalu", "talk-io.torno-in-spagna", "talk-io.giro", "talk-io.macchina", "talk-io.giorno", "talk-io.settimana", "talk-io.ieri", "talk-io.domani", "talk-io.dopodomani", "talk-io.qa.prima-volta", "talk-io.qa.quanto-resti", "talk-io.qa.sei-da-solo", "talk-io.qa.dove-sei-stato"]
+    },
+    {
+      "id": "talk-io.l.gusti",
+      "title": "Mi italiano y lo que me gusta",
+      "items": ["talk-io.parlo-solo-un-po", "talk-io.sto-imparando", "talk-io.studio-con-un-app", "talk-io.capisco-piu-di-quanto-parlo", "talk-io.mi-piace-la-cucina-siciliana", "talk-io.adoro-la-granita", "talk-io.mi-piace-il-mare", "talk-io.mi-piacciono-i-mercati", "talk-io.cucina", "talk-io.app", "talk-io.imparare", "talk-io.studiare", "talk-io.capire", "talk-io.qa.parli-bene", "talk-io.qa.cosa-ti-piace"]
+    }
+  ],
+  "phrases": [
+    { "id": "talk-io.mi-chiamo", "text": "Mi chiamo Hernán.", "es": "Me llamo Hernán.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.sono-spagnolo", "text": "Sono spagnolo.", "es": "Soy español.", "notes": "Si eres mujer: «Sono spagnola».", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.sono-di-madrid", "text": "Sono di Madrid.", "es": "Soy de Madrid.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.vengo-dalla-spagna", "text": "Vengo dalla Spagna, da Madrid.", "es": "Vengo de España, de Madrid.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.abito-a-madrid", "text": "Abito a Madrid.", "es": "Vivo en Madrid.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.madrid-e-la-capitale", "text": "Madrid è la capitale, al centro della Spagna.", "es": "Madrid es la capital, en el centro de España.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.lavoro-nell-informatica", "text": "Lavoro nell'informatica.", "es": "Trabajo en informática.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.sono-programmatore", "text": "Sono programmatore.", "es": "Soy programador.", "notes": "Sin artículo: «sono programmatore», «sono ingegnere».", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.faccio-il-programmatore", "text": "Faccio il programmatore.", "es": "Trabajo de programador.", "literal": "Hago el programador.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.lavoro-da-casa", "text": "Lavoro con il computer, da casa.", "es": "Trabajo con el ordenador, desde casa.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.adesso-sono-in-ferie", "text": "Adesso sono in ferie.", "es": "Ahora estoy de vacaciones.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.sono-in-vacanza", "text": "Sono in vacanza.", "es": "Estoy de vacaciones.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.e-la-prima-volta-che-vengo", "text": "È la prima volta che vengo in Sicilia.", "es": "Es la primera vez que vengo a Sicilia.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.resto-una-decina-di-giorni", "text": "Resto una decina di giorni.", "es": "Me quedo unos diez días.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.sono-arrivato-ieri", "text": "Sono arrivato a Palermo ieri.", "es": "Llegué ayer a Palermo.", "notes": "Si eres mujer: «Sono arrivata».", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.viaggio-da-solo", "text": "Viaggio da solo.", "es": "Viajo solo.", "notes": "Si eres mujer: «da sola».", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.mi-muovo-in-treno", "text": "Mi muovo in treno e in autobus.", "es": "Me muevo en tren y en autobús.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.non-ho-la-macchina", "text": "Non ho la macchina.", "es": "No tengo coche.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.il-mio-giro", "text": "Faccio Palermo, Cefalù, Agrigento, Catania e Siracusa.", "es": "Hago Palermo, Cefalù, Agrigento, Catania y Siracusa.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.dopo-palermo-vado-a-catania", "text": "Dopo Palermo vado a Catania.", "es": "Después de Palermo voy a Catania.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.sono-stato-a-cefalu", "text": "Sono stato a Cefalù, bellissima!", "es": "He estado en Cefalù, ¡preciosa!", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.torno-in-spagna", "text": "Torno in Spagna la settimana prossima.", "es": "Vuelvo a España la semana que viene.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.parlo-solo-un-po", "text": "Parlo solo un po' d'italiano.", "es": "Solo hablo un poco de italiano.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.sto-imparando", "text": "Sto imparando l'italiano per questo viaggio.", "es": "Estoy aprendiendo italiano para este viaje.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.studio-con-un-app", "text": "Studio con un'app sul telefono.", "es": "Estudio con una app en el móvil.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.capisco-piu-di-quanto-parlo", "text": "Capisco più di quanto parlo.", "es": "Entiendo más de lo que hablo.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.mi-piace-la-cucina-siciliana", "text": "Mi piace tantissimo la cucina siciliana.", "es": "Me encanta la cocina siciliana.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.adoro-la-granita", "text": "Adoro la granita con la brioche.", "es": "Me encanta la granita con brioche.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.mi-piace-il-mare", "text": "Mi piace il mare.", "es": "Me gusta el mar.", "register": "neutral", "situation": "presentarse", "tags": ["persona"] },
+    { "id": "talk-io.mi-piacciono-i-mercati", "text": "Mi piacciono molto i mercati.", "es": "Me gustan mucho los mercados.", "notes": "Con plural: «mi piacciono».", "register": "neutral", "situation": "presentarse", "tags": ["persona"] }
+  ],
+  "vocab": [
+    { "id": "talk-io.capitale", "word": "capitale", "article": "la", "gender": "f", "es": "la capital", "situation": "presentarse" },
+    { "id": "talk-io.nord", "word": "nord", "article": "il", "gender": "m", "es": "el norte", "situation": "presentarse" },
+    { "id": "talk-io.sud", "word": "sud", "article": "il", "gender": "m", "es": "el sur", "situation": "presentarse" },
+    { "id": "talk-io.informatica", "word": "informatica", "article": "l'", "gender": "f", "es": "la informática", "example": "talk-io.lavoro-nell-informatica", "situation": "presentarse" },
+    { "id": "talk-io.programmatore", "word": "programmatore", "article": "il", "gender": "m", "es": "el programador", "example": "talk-io.sono-programmatore", "situation": "presentarse" },
+    { "id": "talk-io.computer", "word": "computer", "article": "il", "gender": "m", "plural": "i computer", "es": "el ordenador", "situation": "presentarse" },
+    { "id": "talk-io.ufficio", "word": "ufficio", "article": "l'", "gender": "m", "es": "la oficina", "situation": "presentarse" },
+    { "id": "talk-io.azienda", "word": "azienda", "article": "l'", "gender": "f", "es": "la empresa", "situation": "presentarse" },
+    { "id": "talk-io.giro", "word": "giro", "article": "il", "gender": "m", "es": "la vuelta (el recorrido)", "notes": "«Faccio un giro» = doy una vuelta.", "situation": "presentarse" },
+    { "id": "talk-io.macchina", "word": "macchina", "article": "la", "gender": "f", "es": "el coche", "example": "talk-io.non-ho-la-macchina", "situation": "presentarse" },
+    { "id": "talk-io.giorno", "word": "giorno", "article": "il", "gender": "m", "plural": "giorni", "es": "el día", "situation": "presentarse" },
+    { "id": "talk-io.settimana", "word": "settimana", "article": "la", "gender": "f", "es": "la semana", "situation": "presentarse" },
+    { "id": "talk-io.ieri", "word": "ieri", "es": "ayer", "situation": "presentarse" },
+    { "id": "talk-io.domani", "word": "domani", "es": "mañana", "situation": "presentarse" },
+    { "id": "talk-io.dopodomani", "word": "dopodomani", "es": "pasado mañana", "situation": "presentarse" },
+    { "id": "talk-io.cucina", "word": "cucina", "article": "la", "gender": "f", "es": "la cocina", "situation": "presentarse" },
+    { "id": "talk-io.app", "word": "app", "article": "l'", "gender": "f", "plural": "le app", "es": "la app", "situation": "presentarse" },
+    { "id": "talk-io.imparare", "word": "imparare", "es": "aprender", "situation": "presentarse" },
+    { "id": "talk-io.studiare", "word": "studiare", "es": "estudiar", "situation": "presentarse" },
+    { "id": "talk-io.capire", "word": "capire", "es": "entender", "notes": "«Capisco» = entiendo; «ho capito» = lo he entendido.", "situation": "presentarse" }
+  ],
+  "qa": [
+    {
+      "id": "talk-io.qa.di-dove-sei",
+      "question": "Di dove sei?",
+      "questionEs": "¿De dónde eres?",
+      "accepted": [
+        { "text": "Sono spagnolo, di Madrid.", "es": "Soy español, de Madrid." },
+        { "text": "Sono di Madrid, in Spagna.", "es": "Soy de Madrid, en España." }
+      ],
+      "distractors": [
+        { "text": "Sono a Palermo.", "es": "Estoy en Palermo." },
+        { "text": "Vado a Madrid.", "es": "Voy a Madrid." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-io.qa.di-dov-e",
+      "question": "E Lei, di dov'è?",
+      "questionEs": "¿Y usted de dónde es?",
+      "accepted": [
+        { "text": "Sono spagnolo, di Madrid. E Lei?", "es": "Soy español, de Madrid. ¿Y usted?" },
+        { "text": "Di Madrid.", "es": "De Madrid." }
+      ],
+      "distractors": [
+        { "text": "Sto bene, grazie.", "es": "Estoy bien, gracias." },
+        { "text": "È a Madrid.", "es": "Está en Madrid." }
+      ],
+      "register": "lei",
+      "situation": "presentarse",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "talk-io.qa.come-ti-chiami",
+      "question": "Ciao! Come ti chiami?",
+      "questionEs": "¡Hola! ¿Cómo te llamas?",
+      "accepted": [
+        { "text": "Mi chiamo Hernán. E tu?", "es": "Me llamo Hernán. ¿Y tú?" },
+        { "text": "Hernán, piacere!", "es": "Hernán, ¡encantado!" }
+      ],
+      "distractors": [
+        { "text": "Mi chiama Hernán.", "es": "Me llama Hernán." },
+        { "text": "Ti chiami Hernán.", "es": "Te llamas Hernán." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-io.qa.che-lavoro-fai",
+      "question": "E che lavoro fai?",
+      "questionEs": "¿Y a qué te dedicas?",
+      "accepted": [
+        { "text": "Sono programmatore. E tu?", "es": "Soy programador. ¿Y tú?" },
+        { "text": "Lavoro nell'informatica.", "es": "Trabajo en informática." }
+      ],
+      "distractors": [
+        { "text": "Sì, lavoro.", "es": "Sí, trabajo." },
+        { "text": "Faccio colazione.", "es": "Desayuno." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-io.qa.che-lavoro-fa",
+      "question": "Lei che lavoro fa?",
+      "questionEs": "¿Usted a qué se dedica?",
+      "accepted": [
+        { "text": "Sono programmatore.", "es": "Soy programador." },
+        { "text": "Lavoro nell'informatica.", "es": "Trabajo en informática." }
+      ],
+      "distractors": [
+        { "text": "Fa caldo.", "es": "Hace calor." },
+        { "text": "Lavoro bene, grazie.", "es": "Trabajo bien, gracias." }
+      ],
+      "register": "lei",
+      "situation": "presentarse",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "talk-io.qa.prima-volta",
+      "question": "È la prima volta in Sicilia?",
+      "questionEs": "¿Es la primera vez que vienes a Sicilia?",
+      "accepted": [
+        { "text": "Sì, è la prima volta!", "es": "¡Sí, es la primera vez!" },
+        { "text": "Sì, e mi piace tantissimo.", "es": "Sí, y me encanta." }
+      ],
+      "distractors": [
+        { "text": "Sì, alla prima a destra.", "es": "Sí, la primera a la derecha." },
+        { "text": "No, è la prima volta.", "es": "No, es la primera vez." }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "talk-io.qa.quanto-resti",
+      "question": "Quanto resti?",
+      "questionEs": "¿Cuánto te quedas?",
+      "accepted": [
+        { "text": "Una decina di giorni.", "es": "Unos diez días." },
+        { "text": "Fino alla settimana prossima.", "es": "Hasta la semana que viene." }
+      ],
+      "distractors": [
+        { "text": "Resto a Palermo.", "es": "Me quedo en Palermo." },
+        { "text": "Dieci euro.", "es": "Diez euros." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-io.qa.sei-da-solo",
+      "question": "Sei da solo?",
+      "questionEs": "¿Viajas solo?",
+      "accepted": [
+        { "text": "Sì, viaggio da solo.", "es": "Sí, viajo solo." },
+        { "text": "Sì, da solo.", "es": "Sí, solo." }
+      ],
+      "distractors": [
+        { "text": "Sì, sono solo spagnolo.", "es": "Sí, solo soy español." },
+        { "text": "No, sono da Madrid.", "es": "No, soy desde Madrid." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-io.qa.dove-sei-stato",
+      "question": "Dove sei stato finora?",
+      "questionEs": "¿Dónde has estado hasta ahora?",
+      "accepted": [
+        { "text": "A Palermo e a Cefalù.", "es": "En Palermo y en Cefalù." },
+        { "text": "Sono stato a Palermo e a Cefalù.", "es": "He estado en Palermo y en Cefalù." }
+      ],
+      "distractors": [
+        { "text": "Sono stato bene.", "es": "He estado bien." },
+        { "text": "Domani vado a Catania.", "es": "Mañana voy a Catania." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-io.qa.parli-bene",
+      "question": "Ma parli bene l'italiano!",
+      "questionEs": "¡Pero si hablas bien italiano!",
+      "accepted": [
+        { "text": "Grazie! Sto imparando, parlo solo un po'.", "es": "¡Gracias! Estoy aprendiendo, solo hablo un poco." },
+        { "text": "Grazie, sei gentile! Capisco più di quanto parlo.", "es": "¡Gracias, eres muy amable! Entiendo más de lo que hablo." }
+      ],
+      "distractors": [
+        { "text": "Prego!", "es": "¡De nada!" },
+        { "text": "Sì, parli bene.", "es": "Sí, hablas bien." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "talk-io.qa.cosa-ti-piace",
+      "question": "Cosa ti piace di più della Sicilia?",
+      "questionEs": "¿Qué es lo que más te gusta de Sicilia?",
+      "accepted": [
+        { "text": "Il mare e la cucina!", "es": "¡El mar y la comida!" },
+        { "text": "La gente e la granita!", "es": "¡La gente y la granita!" }
+      ],
+      "distractors": [
+        { "text": "Sì, mi piace.", "es": "Sí, me gusta." },
+        { "text": "Mi piacciono il mare.", "es": "Me gustan el mar." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "voice": "it-IT-IsabellaNeural"
+    }
+  ]
+}
