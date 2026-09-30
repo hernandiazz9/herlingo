@@ -67,7 +67,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T05 — Content: getting around Sicily and talking with Italians
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T02
 - Goal: Write the two highest-priority content areas with natural, current spoken Italian: getting around by train, bus, taxi and on foot in Sicily, and talking with Italians. Delete the sample pack content from T02.
 - Context: docs/brief.md (priorities 1 and 2, registers, persona), docs/content-guide.md (schema, order ranges 20–29 and 30–39). Translations in Spain Spanish with "tú". Real Sicilian context: Palermo Centrale, Catania Centrale, Siracusa, Agrigento, Cefalù, Taormina; Trenitalia regionale, AST/SAIS/Interbus, Prestia e Comandè, Alibus; "convalidare", "binario", "ritardo", "sciopero", "fermata", "capolinea". Include what Italians SAY to him (ticket inspector, driver, station staff, people asking where he's from) so he learns to understand and answer. Audio is generated later (T03/T09): do not generate mp3s here.
@@ -78,7 +78,7 @@ Worktree setup: npm ci
   - Every phrase has register and a Spain-Spanish translation; dialogues include realistic misunderstandings ("Può ripetere?").
   - Sample pack files from T02 are deleted.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 5 units / 22 lessons, 260 phrases, 177 vocab, 51 Q&A, 9 dialogues; persona in units/32-persona-sobre-mi.json; sample deleted · f7b3157
 
 ## T06 — Content: survival, food, grammar cards and Sicilian expressions
 - Status: running (attempt 1)
@@ -123,7 +123,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T03, T05, T06
 - Goal: A native-level review of all Italian content so Hernán learns correct, natural, current spoken Italian, then generate the final audio for everything.
-- Context: docs/brief.md, docs/content-guide.md, everything under `content/it/`. Review as a native Italian teacher who knows Sicily: grammar, articles and gender, naturalness, register (Lei vs tu) consistency, realistic dialogues, correct Sicilian place and transport names, Spain-Spanish translations with "tú". Audio pipeline from T03 (`npm run audio` creates .venv itself; hashed file names + `public/audio/<lang>/manifest.json`). Also fix `docs/content-guide.md` "Audio keys" section and the `Playable` comment in `src/lib/content/types.ts`, which still say mp3s are `<audioKey>.mp3`.
+- Context: docs/brief.md, docs/content-guide.md, everything under `content/it/`. Review as a native Italian teacher who knows Sicily: grammar, articles and gender, naturalness, register (Lei vs tu) consistency, realistic dialogues, correct Sicilian place and transport names, Spain-Spanish translations with "tú". Recheck facts flagged by T05: prices (Cefalù train €6.10, airport bus €7) and "validators on the platform". Update docs/content-guide.md's "6–12 items per lesson" rule to match reality (T05 lessons hold 12–29 items). Audio pipeline from T03 (`npm run audio` creates .venv itself; hashed file names + `public/audio/<lang>/manifest.json`). Also fix `docs/content-guide.md` "Audio keys" section and the `Playable` comment in `src/lib/content/types.ts`, which still say mp3s are `<audioKey>.mp3`.
 - Scope: may touch `content/it/**` (except placement files), `public/audio/it/**`, `docs/content-review.md`, `docs/content-guide.md`, the `Playable` comment in `src/lib/content/types.ts` / must not touch `src/**`, schemas.
 - Done when:
   - Every error found is fixed in place; `docs/content-review.md` lists the categories of fixes with counts and any remaining doubts.
@@ -172,6 +172,7 @@ Worktree setup: npm ci
 - 2026-09-30 T02: content bundled by `scripts/content.ts build` into git-ignored src/lib/content/generated/packs.json (rebuilt before dev/typecheck/build); added zod + tsx; one id namespace per pack, ids never contain `--`, audio key = id (+ `--part`); 16 situations predefined in content/it/pack.json; unit order unique, 0–9 = sample; sample files units/sample-unit.json, dialogues/sample-bar.json, extras/sample-extras.json; audio API speak(item|text,{slow,lang}), stop(), canSpeak(), SLOW_RATE 0.7, listPlayables(). (agent)
 - 2026-09-30 T03: mp3 name = first 16 hex of sha1(voice+text), flat manifest {audioKey: file}; learner options in dialogues use first pack voice not used by native turns; audio plan walks the Pack directly; `.venv` auto-created (Python 3.9.6, edge-tts 7.2.8), 6 parallel jobs, 4 retries; manifest loaded at runtime, TTS until loaded. (agent)
 - 2026-09-30 T08: phrasebook shows phrases only (no vocab/expressions); tap row = play + actions; favourites in localStorage `lang-lern:favorites:<lang>`; Ver texto per bubble; score counts first attempts; voice answer matched to closest option (word overlap ≥0.6); local helpers fold() in components/phrasebook/search.ts and recognition in components/dialogue/recognition.ts. (agent)
+- 2026-09-30 T05: id prefixes move-treno, move-bus, move-strada, talk-chiacchiere, talk-io, dlg.move-*/dlg.talk-* (orders 20, 22, 24, 30, 32); every item placed in a lesson (12–29 items per lesson, relies on the player sampling 10–12 exercises); persona = Hernán, Spanish from Madrid, programmer, travelling alone ~10 days Palermo→Cefalù→Agrigento→Catania→Siracusa (Madrid/job are guesses, Hernán to check); phrases Italians say tagged `te-dicen` with Diego/Isabella voices. (agent)
 
 ## Proposals (new scope)
 - 2026-09-30 T08: after T04, move fold() and recognition helpers into src/lib/exercises / src/lib/speech (dedupe).
@@ -195,3 +196,4 @@ Worktree setup: npm ci
 - 2026-09-30 17:40 T08 launched · attempt 1 · agent a321e18356bfddd85
 - 2026-09-30 17:44 T03 done · branch worktree-agent-aca7f0cc882e0c93c → e2ceb65
 - 2026-09-30 17:46 T08 done · branch worktree-agent-a321e18356bfddd85 → 541ce3d
+- 2026-09-30 17:55 T05 done · branch worktree-agent-aded81b07fd5834ff → f7b3157
