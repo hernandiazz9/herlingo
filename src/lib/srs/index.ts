@@ -9,6 +9,8 @@
  */
 import { startOfDay } from "@/lib/progress/dates";
 
+export { dedupeByText, textKey, type Deduped } from "./dedupe";
+
 export interface SrsEntry {
   /** 0 = new (not practised), 1–5 = Leitner box. */
   box: number;

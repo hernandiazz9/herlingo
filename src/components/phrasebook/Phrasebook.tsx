@@ -4,8 +4,9 @@ import { useCallback, useDeferredValue, useMemo, useState } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { speak } from "@/lib/audio";
 import { cn } from "@/lib/cn";
-import { getPack, type Phrase } from "@/lib/content";
+import { getAllLessons, getPack, type Pack, type Phrase } from "@/lib/content";
 import { useFavorites } from "@/lib/favorites/use-favorites";
+import { dedupeByText } from "@/lib/srs/dedupe";
 import { CloseIcon, ExpandIcon, SearchIcon, SlowIcon, StarIcon } from "./icons";
 import { fold, matches } from "./search";
 import { ShowMode } from "./ShowMode";
@@ -14,7 +15,41 @@ type Filter = { kind: "all" } | { kind: "fav" } | { kind: "situation"; id: strin
 
 interface Entry {
   phrase: Phrase;
+  /** `phrase.id` first, then other ids with the same Italian text (hidden duplicates). */
+  ids: string[];
   haystack: string;
+}
+
+/**
+ * One entry per Italian text: of several ids with the same text, the one taught first on the
+ * path wins (unused phrases after); entries keep the pack order.
+ */
+function buildEntries(pack: Pack): Entry[] {
+  const rank = new Map<string, number>();
+  getAllLessons(pack).forEach((lesson, i) => lesson.items.forEach((id) => rank.has(id) || rank.set(id, i)));
+  const byId = new Map(pack.phrases.map((p) => [p.id, p]));
+  const byPath = pack.phrases
+    .map((p, i) => ({ id: p.id, key: rank.get(p.id) ?? Number.MAX_SAFE_INTEGER, i }))
+    .sort((a, b) => a.key - b.key || a.i - b.i)
+    .map((x) => x.id);
+  const { ids: kept, aliases } = dedupeByText(byPath, (id) => byId.get(id)?.text);
+  const keep = new Set(kept);
+  return pack.phrases
+    .filter((phrase) => keep.has(phrase.id))
+    .map((phrase) => {
+      const ids = [phrase.id, ...(aliases.get(phrase.id) ?? [])];
+      const all = ids.map((id) => byId.get(id)).filter((p): p is Phrase => !!p);
+      return {
+        phrase,
+        ids,
+        haystack: fold(
+          all
+            .flatMap((p) => [p.text, p.es, p.literal, p.notes, ...(p.tags ?? [])])
+            .filter(Boolean)
+            .join(" "),
+        ),
+      };
+    });
 }
 
 /** Pocket phrasebook: every phrase of the pack grouped by situation, searchable, tap to play. */
@@ -28,16 +63,15 @@ export function Phrasebook({ lang }: { lang?: string }) {
   const [shown, setShown] = useState<Phrase | null>(null);
   const closeShow = useCallback(() => setShown(null), []);
 
-  const entries = useMemo<Entry[]>(
-    () =>
-      pack.phrases.map((phrase) => ({
-        phrase,
-        haystack: fold(
-          [phrase.text, phrase.es, phrase.literal, phrase.notes, ...(phrase.tags ?? [])].filter(Boolean).join(" "),
-        ),
-      })),
-    [pack],
-  );
+  const entries = useMemo(() => buildEntries(pack), [pack]);
+  // A phrase is a favourite when any of its ids is (a favourite saved on a now hidden duplicate).
+  const isFav = useCallback((e: Entry) => e.ids.some((id) => favorites.has(id)), [favorites]);
+  const favCount = useMemo(() => entries.filter(isFav).length, [entries, isFav]);
+  const toggleFav = (e: Entry) => {
+    const on = e.ids.filter((id) => favorites.has(id));
+    if (on.length) on.forEach(toggle);
+    else toggle(e.phrase.id);
+  };
 
   const situations = useMemo(
     () => pack.meta.situations.filter((s) => entries.some((e) => e.phrase.situation === s.id)),
@@ -48,20 +82,20 @@ export function Phrasebook({ lang }: { lang?: string }) {
     const visible = entries.filter(
       (e) =>
         (filter.kind === "all" ||
-          (filter.kind === "fav" && favorites.has(e.phrase.id)) ||
+          (filter.kind === "fav" && isFav(e)) ||
           (filter.kind === "situation" && e.phrase.situation === filter.id)) &&
         matches(e.haystack, deferredQuery),
     );
     return situations
-      .map((s) => ({ situation: s, phrases: visible.filter((e) => e.phrase.situation === s.id).map((e) => e.phrase) }))
-      .filter((g) => g.phrases.length > 0);
-  }, [entries, situations, filter, favorites, deferredQuery]);
+      .map((s) => ({ situation: s, entries: visible.filter((e) => e.phrase.situation === s.id) }))
+      .filter((g) => g.entries.length > 0);
+  }, [entries, situations, filter, isFav, deferredQuery]);
 
-  const total = groups.reduce((n, g) => n + g.phrases.length, 0);
+  const total = groups.reduce((n, g) => n + g.entries.length, 0);
 
   const chips: Array<{ key: string; label: string; filter: Filter; active: boolean }> = [
     { key: "all", label: "Todas", filter: { kind: "all" }, active: filter.kind === "all" },
-    { key: "fav", label: `★ Favoritas (${favorites.size})`, filter: { kind: "fav" }, active: filter.kind === "fav" },
+    { key: "fav", label: `★ Favoritas (${favCount})`, filter: { kind: "fav" }, active: filter.kind === "fav" },
     ...situations.map((s) => ({
       key: s.id,
       label: s.emoji ? `${s.emoji} ${s.title}` : s.title,
@@ -122,31 +156,31 @@ export function Phrasebook({ lang }: { lang?: string }) {
 
       {total === 0 ? (
         <p className="rounded-card border-2 border-dashed border-line p-6 text-center text-ink-muted">
-          {filter.kind === "fav" && favorites.size === 0
+          {filter.kind === "fav" && favCount === 0
             ? "Aún no tienes favoritas. Toca la estrella de una frase para guardarla aquí."
             : "No hay frases que coincidan. Prueba con otra palabra."}
         </p>
       ) : null}
 
-      {groups.map(({ situation, phrases }) => (
+      {groups.map(({ situation, entries: rows }) => (
         <section key={situation.id} className="flex flex-col gap-2">
           <h2 className="text-lg font-extrabold text-ink">
             {situation.emoji ? <span aria-hidden="true">{situation.emoji} </span> : null}
             {situation.title}
           </h2>
           <ul className="flex flex-col gap-2">
-            {phrases.map((phrase) => (
+            {rows.map((entry) => (
               <PhraseRow
-                key={phrase.id}
-                phrase={phrase}
-                open={openId === phrase.id}
-                favorite={favorites.has(phrase.id)}
+                key={entry.phrase.id}
+                phrase={entry.phrase}
+                open={openId === entry.phrase.id}
+                favorite={isFav(entry)}
                 onPlay={() => {
-                  speak(phrase);
-                  setOpenId(phrase.id);
+                  speak(entry.phrase);
+                  setOpenId(entry.phrase.id);
                 }}
-                onToggleFavorite={() => toggle(phrase.id)}
-                onShow={() => setShown(phrase)}
+                onToggleFavorite={() => toggleFav(entry)}
+                onShow={() => setShown(entry.phrase)}
               />
             ))}
           </ul>

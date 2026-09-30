@@ -5,11 +5,11 @@ import { useState } from "react";
 import { LessonPlayer } from "@/components/lesson";
 import { Button, Card } from "@/components/ui";
 import { DEFAULT_LANG, getItem, getPack, type Lesson } from "@/lib/content";
-import { defaultSessionSize } from "@/lib/exercises";
+import { defaultSessionSize, type LessonResult } from "@/lib/exercises";
 import { dueItemIds, recordReviewResult } from "@/lib/progress";
 import { startOfDay } from "@/lib/progress/dates";
 import { useHydrated, useNow, useProgress } from "@/lib/progress/use-progress";
-import { REVIEW_SIZE, nextDue } from "@/lib/srs";
+import { REVIEW_SIZE, dedupeByText, nextDue } from "@/lib/srs";
 
 /** Due items (spaced repetition) and a review session through the lesson player. */
 export function ReviewView({ lang = DEFAULT_LANG }: { lang?: string }) {
@@ -21,7 +21,16 @@ export function ReviewView({ lang = DEFAULT_LANG }: { lang?: string }) {
 
   if (!hydrated || !now) return null;
 
-  const due = dueItemIds(progress, pack, now);
+  // Same Italian text under two ids: ask it once; the answer counts for both ids.
+  const { ids: due, aliases } = dedupeByText(dueItemIds(progress, pack, now), (id) => {
+    const item = getItem(id, pack);
+    return item && item.kind !== "grammar" ? item.text : undefined;
+  });
+  const complete = (result: LessonResult) =>
+    recordReviewResult({
+      ...result,
+      items: result.items.flatMap((o) => [o, ...(aliases.get(o.itemId) ?? []).map((itemId) => ({ ...o, itemId }))]),
+    });
   const wrong = due.filter((id) => (progress.srs[id]?.box ?? 0) >= 1 && (progress.srs[id]?.lapses ?? 0) > 0).length;
   const fresh = due.filter((id) => progress.srs[id]?.box === 0).length;
   const next = nextDue(progress.srs, now);
@@ -35,7 +44,14 @@ export function ReviewView({ lang = DEFAULT_LANG }: { lang?: string }) {
     // Short reviews stay short: about two exercises per item.
     const size = Math.min(defaultSessionSize(session.items.length), Math.max(4, session.items.length * 2));
     return (
-      <LessonPlayer lang={lang} lesson={session} sessionSize={size} onComplete={recordReviewResult} onExit={() => setSession(null)} />
+      <LessonPlayer
+        lang={lang}
+        lesson={session}
+        sessionSize={size}
+        intro="Lo que fallaste y lo que toca recordar hoy: escucha, responde y dilo en voz alta. Los fallos vuelven al final."
+        onComplete={complete}
+        onExit={() => setSession(null)}
+      />
     );
   }
 

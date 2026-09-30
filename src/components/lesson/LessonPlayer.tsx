@@ -44,6 +44,8 @@ export interface LessonPlayerProps {
   onExit?: () => void;
   /** Graded exercises wanted (default: by lesson size). */
   sessionSize?: number;
+  /** Intro copy under the title (default: the lesson one). */
+  intro?: string;
 }
 
 interface Entry {
@@ -67,7 +69,7 @@ const noPause = () => 0;
 const now = () => Date.now();
 
 /** Full-screen lesson session: intro → exercises with feedback → result with XP. */
-export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, seed, onComplete, exitHref = "/", onExit, sessionSize }: LessonPlayerProps) {
+export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, seed, onComplete, exitHref = "/", onExit, sessionSize, intro }: LessonPlayerProps) {
   const router = useRouter();
   const pack = getPack(lang);
   const lesson = adHoc ?? (lessonId ? getLesson(lessonId, pack) : undefined);
@@ -214,8 +216,8 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, see
                 </p>
                 <h1 className="text-3xl font-extrabold tracking-tight text-ink">{lesson.title}</h1>
                 <p className="text-lg text-ink-muted">
-                  Unos 5 minutos: escuchar, entender, construir frases y decirlas en voz alta. Los fallos vuelven
-                  al final.
+                  {intro ??
+                    "Unos 5 minutos: escuchar, entender, construir frases y decirlas en voz alta. Los fallos vuelven al final."}
                 </p>
                 {pausedUntil ? (
                   <Card tone="lemon" className="flex flex-col gap-3">
