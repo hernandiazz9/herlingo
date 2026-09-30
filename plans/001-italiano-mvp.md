@@ -93,7 +93,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T08 — Pocket phrasebook and dialogue simulator
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T02
 - Goal: The two trip-time tools: a fast phrasebook to find and play phrases on the spot, and a dialogue simulator to practise understanding and answering real conversations.
 - Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (Phrasebook, Dialogues). Loader and `speak()` from T02. T04 runs in parallel and owns `src/lib/exercises` and `src/lib/speech`: do not edit them; if you need answer normalisation or speech recognition before T04 lands, keep a small local helper inside your own folders. Never hard-code content ids.
@@ -102,7 +102,7 @@ Worktree setup: npm ci
   - Phrasebook: phrases grouped by situation, accent-insensitive search in Italian or Spanish, favourites stored locally, tap to play, slow-play button, and a full-screen "Mostrar" mode with big text to show an Italian.
   - Dialogues: list by situation; the simulator plays each native line (after a user gesture), text hidden by default with a "Ver texto" toggle and replay; the learner picks or says the answer; feedback per turn; final transcript with translations and play buttons.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: /frasario (search, favourites, Mostrar) and /dialogos/[id] simulator (hidden text, pick/say answer, transcript) · 541ce3d
 
 ## T07 — Path, progress, spaced repetition, placement test and profile
 - Status: pending
@@ -171,8 +171,10 @@ Worktree setup: npm ci
 - 2026-09-30 T11: new tokens -ledge, --on-accent/--on-lemon, --shadow; dark uses lighter accents with dark text on filled buttons; theme stored as localStorage `lang-lern:theme` ("Sistema" clears it); ThemeToggle in src/components/shell/. (agent)
 - 2026-09-30 T02: content bundled by `scripts/content.ts build` into git-ignored src/lib/content/generated/packs.json (rebuilt before dev/typecheck/build); added zod + tsx; one id namespace per pack, ids never contain `--`, audio key = id (+ `--part`); 16 situations predefined in content/it/pack.json; unit order unique, 0–9 = sample; sample files units/sample-unit.json, dialogues/sample-bar.json, extras/sample-extras.json; audio API speak(item|text,{slow,lang}), stop(), canSpeak(), SLOW_RATE 0.7, listPlayables(). (agent)
 - 2026-09-30 T03: mp3 name = first 16 hex of sha1(voice+text), flat manifest {audioKey: file}; learner options in dialogues use first pack voice not used by native turns; audio plan walks the Pack directly; `.venv` auto-created (Python 3.9.6, edge-tts 7.2.8), 6 parallel jobs, 4 retries; manifest loaded at runtime, TTS until loaded. (agent)
+- 2026-09-30 T08: phrasebook shows phrases only (no vocab/expressions); tap row = play + actions; favourites in localStorage `lang-lern:favorites:<lang>`; Ver texto per bubble; score counts first attempts; voice answer matched to closest option (word overlap ≥0.6); local helpers fold() in components/phrasebook/search.ts and recognition in components/dialogue/recognition.ts. (agent)
 
 ## Proposals (new scope)
+- 2026-09-30 T08: after T04, move fold() and recognition helpers into src/lib/exercises / src/lib/speech (dedupe).
 - 2026-09-30 T01: real app name (Hernán to decide).
 - 2026-09-30 T11: light --lemon-deep (#d9b10f) is hard to read as text on --lemon-soft; adjust light palette.
 - 2026-09-30 T11: dark mode added to the plan, follows system + manual toggle in profile. (Hernán)
@@ -192,3 +194,4 @@ Worktree setup: npm ci
 - 2026-09-30 17:40 T06 launched · attempt 1 · agent ad1ff0cf0c0fcc3fb
 - 2026-09-30 17:40 T08 launched · attempt 1 · agent a321e18356bfddd85
 - 2026-09-30 17:44 T03 done · branch worktree-agent-aca7f0cc882e0c93c → e2ceb65
+- 2026-09-30 17:46 T08 done · branch worktree-agent-a321e18356bfddd85 → 541ce3d
