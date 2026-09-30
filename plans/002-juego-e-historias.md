@@ -49,7 +49,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T16 — Explanations for survival, emergencies and food phrases
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T14
 - Goal: Write the `explanation` for every phrase in units ordered 10–19 and 40–49 (surv, emer, food) and any phrase in 90+ units: when to use it and one pronunciation tip.
 - Context: same as T15. Files `content/it/units/1*.json`, `4*.json`, `9*.json`. Don't change Italian texts or ids.
@@ -57,7 +57,7 @@ Worktree setup: npm ci
 - Done when:
   - Every phrase in those units has an explanation (count reported).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 215/215 phrases in surv/emer/food/gram have explanations · bb95c64
 
 ## T17 — Stories 1–6: arriving and moving around
 - Status: running (attempt 1)
@@ -130,6 +130,7 @@ Worktree setup: npm ci
 - 2026-09-30 T13: navigation.ts NESTED list (repaso, dialogos → parent path), `central: true` for Jugar; new icons in src/components/shell/icons.tsx; Ruta top stats reduced to streak + XP. (agent)
 - 2026-09-30 T14: story fields `text` (sentences/options), `title` + `titleEs`, question `es`, `correct` 0-based; ids story.<slug>, inline keywords story-<slug>, local s1/q1/g1; keywords may reference vocab, phrase or expression; gaps have optional `gap` form + built before/after; gap chips no audio; narrator voice = story voice or default; content:check warns outside 80–150 words, 8–10 keywords, 3–4 questions, 4–6 gaps; story order unique, sample uses 0. (agent)
 - 2026-09-30 orchestrator: run all 6 ready tasks (T15–T20) at once, per Hernán's max-speed request. (orchestrator)
+- 2026-09-30 T16: pronunciation respelling scheme: stressed syllable in capitals, gi/ge→dy, ci/ce→chi/che, z→ts/dz, gli→soft ll, gn→ñ, doubles marked, silent h. (agent)
 
 ## Proposals (new scope)
 
@@ -139,3 +140,10 @@ Worktree setup: npm ci
 - 2026-09-30 T13 done · branch worktree-agent-af774e91af56fba92 → 6b57eef
 - 2026-09-30 T14 stalled (watchdog) · resumed same agent via SendMessage
 - 2026-09-30 20:21 T14 done · branch worktree-agent-a12dc90909565ae69 → 9d1e54e
+- 2026-09-30 20:23 T15 launched · attempt 1 · agent aaf6fced4038653b6
+- 2026-09-30 20:23 T16 launched · attempt 1 · agent a647d201261a0ed35
+- 2026-09-30 20:23 T17 launched · attempt 1 · agent a0b08ee802ecd9d4b
+- 2026-09-30 20:23 T18 launched · attempt 1 · agent acd02c29fc0662347
+- 2026-09-30 20:23 T19 launched · attempt 1 · agent adc312cab832b2d6f
+- 2026-09-30 20:23 T20 launched · attempt 1 · agent a34289261fb6eccd3
+- 2026-09-30 T16 done · branch worktree-agent-a647d201261a0ed35 → bb95c64
