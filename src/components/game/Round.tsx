@@ -1,0 +1,320 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import { CloseIcon, MiniPlay, PlayControls } from "@/components/exercises/shared";
+import { Button, Card, IconButton, ProgressBar } from "@/components/ui";
+import { speak, stop } from "@/lib/audio";
+import { getPack, type Phrase } from "@/lib/content";
+import { cn } from "@/lib/cn";
+import type { Rng } from "@/lib/exercises";
+import { POINTS, ROUND_MS, makeQuestion, multiplier, roundXp, saveRecord, setupRound, type Question, type TopicPool } from "@/lib/game";
+import { recordActivity } from "@/lib/progress/activity";
+
+interface Result {
+  /** Record before this round. */
+  prev: number;
+  xp: number;
+}
+
+interface RoundState {
+  phase: "intro" | "playing" | "end";
+  deadline: number;
+  cursor: number;
+  question: Question | null;
+  /** Id of the option tapped for the current question (feedback showing). */
+  picked: string | null;
+  score: number;
+  combo: number;
+  bestCombo: number;
+  right: number;
+  answered: number;
+  wrong: Phrase[];
+  result: Result | null;
+}
+
+const initial: RoundState = {
+  phase: "intro",
+  deadline: 0,
+  cursor: 0,
+  question: null,
+  picked: null,
+  score: 0,
+  combo: 0,
+  bestCombo: 0,
+  right: 0,
+  answered: 0,
+  wrong: [],
+  result: null,
+};
+
+const FEEDBACK_RIGHT_MS = 450;
+const FEEDBACK_WRONG_MS = 1300;
+
+/** 60-second "Escucha y elige" round with combo multiplier, then the end screen. */
+export function Round({
+  lang,
+  pool,
+  deck,
+  record,
+  onExit,
+}: {
+  lang: string;
+  pool: TopicPool;
+  deck: Phrase[];
+  /** Current record of the topic. */
+  record: number;
+  onExit: () => void;
+}) {
+  const pack = getPack(lang);
+  const { topic, aliases } = pool;
+  const [g, setG] = useState<RoundState>(initial);
+  const [now, setNow] = useState(0);
+  const rng = useRef<Rng | null>(null);
+  const order = useRef<Phrase[]>([]);
+  const timeout = useRef<number | undefined>(undefined);
+  const live = useRef(false);
+
+  const questionAt = (cursor: number): Question => {
+    const r = rng.current!;
+    return makeQuestion(order.current[cursor % order.current.length], topic.phrases, pack, r);
+  };
+
+  const ask = (q: Question) => {
+    if (q.kind === "listen") speak(q.phrase, { lang });
+    else stop();
+  };
+
+  const start = () => {
+    const setup = setupRound(topic.id, topic.phrases, deck);
+    rng.current = setup.rng;
+    order.current = setup.order;
+    const question = questionAt(0);
+    ask(question);
+    live.current = true;
+    setNow(setup.startedAt);
+    setG({ ...initial, phase: "playing", deadline: setup.deadline, question });
+    window.scrollTo(0, 0);
+  };
+
+  const finish = (s: RoundState) => {
+    live.current = false;
+    window.clearTimeout(timeout.current);
+    stop();
+    const xp = s.answered > 0 ? roundXp(s.right) : 0;
+    if (s.answered > 0) {
+      const outcomes = s.wrong.flatMap((p) => [p.id, ...(aliases.get(p.id) ?? [])]).map((itemId) => ({ itemId, correct: false }));
+      recordActivity({ lang, xp, outcomes });
+    }
+    const prev = saveRecord(lang, topic.id, s.score);
+    setG({ ...s, phase: "end", picked: null, result: { prev, xp } });
+  };
+
+  // Clock: redraws the timer and ends the round when time is up.
+  useEffect(() => {
+    if (g.phase !== "playing") return;
+    const id = window.setInterval(() => {
+      const t = Date.now();
+      if (t >= g.deadline) finish(g);
+      else setNow(t);
+    }, 200);
+    return () => window.clearInterval(id);
+  });
+
+  useEffect(
+    () => () => {
+      live.current = false;
+      window.clearTimeout(timeout.current);
+      stop();
+    },
+    [],
+  );
+
+  const answer = (option: Phrase) => {
+    const q = g.question;
+    if (!q || g.picked || g.phase !== "playing") return;
+    const correct = option.id === q.phrase.id;
+    const combo = correct ? g.combo + 1 : 0;
+    const next: RoundState = {
+      ...g,
+      picked: option.id,
+      score: g.score + (correct ? POINTS * multiplier(g.combo) : 0),
+      combo,
+      bestCombo: Math.max(g.bestCombo, combo),
+      right: g.right + (correct ? 1 : 0),
+      answered: g.answered + 1,
+      wrong: correct || g.wrong.some((p) => p.id === q.phrase.id) ? g.wrong : [...g.wrong, q.phrase],
+    };
+    setG(next);
+    if (!correct && q.kind === "reverse") speak(q.phrase, { lang });
+    const cursor = g.cursor + 1;
+    const question = questionAt(cursor);
+    timeout.current = window.setTimeout(
+      () => {
+        if (!live.current) return;
+        ask(question);
+        setG((s) => (s.phase === "playing" ? { ...s, cursor, question, picked: null } : s));
+      },
+      correct ? FEEDBACK_RIGHT_MS : FEEDBACK_WRONG_MS,
+    );
+  };
+
+  if (g.phase === "intro") {
+    return (
+      <div className="flex flex-col gap-5 pb-6">
+        <Card tone="terracotta" className="flex flex-col gap-3">
+          <p className="text-sm font-bold uppercase tracking-wide text-terracotta-deep">
+            {topic.emoji ? `${topic.emoji} ` : ""}
+            {topic.title}
+          </p>
+          <h2 className="text-2xl font-extrabold text-ink">Ronda rápida: 60 segundos</h2>
+          <p className="text-base text-ink">
+            Escucha y elige qué significa, o lee en español y elige la frase en italiano. Encadena aciertos para
+            multiplicar los puntos.
+          </p>
+          <p className="text-sm font-bold text-ink-muted">{record ? `Récord: ${record}` : "Aún sin récord"}</p>
+        </Card>
+        <Button onClick={start}>Empezar</Button>
+        <Button variant="secondary" size="md" onClick={onExit}>
+          Cambiar de tema
+        </Button>
+      </div>
+    );
+  }
+
+  if (g.phase === "end" && g.result) {
+    const newRecord = g.score > g.result.prev && g.score > 0;
+    return (
+      <div className="flex flex-col gap-5 pb-6">
+        <Card tone={newRecord ? "lemon" : "default"} className="flex flex-col items-center gap-2 text-center">
+          <p className="text-lg font-bold text-ink-muted">¡Tiempo!</p>
+          <p className="text-5xl font-extrabold tabular-nums text-ink">{g.score}</p>
+          <p className="text-base font-bold text-ink">puntos</p>
+          <p className={cn("text-base font-bold", newRecord ? "text-terracotta-deep" : "text-ink-muted")}>
+            {newRecord ? "¡Nuevo récord!" : `Récord: ${g.result.prev}`}
+          </p>
+        </Card>
+        <dl className="grid grid-cols-3 gap-3 text-center">
+          <Stat label="Aciertos" value={`${g.right}/${g.answered}`} />
+          <Stat label="Mejor racha" value={String(g.bestCombo)} />
+          <Stat label="XP" value={`+${g.result.xp}`} />
+        </dl>
+        {g.wrong.length ? (
+          <section className="flex flex-col gap-3">
+            <h2 className="text-lg font-extrabold text-ink">Para repasar</h2>
+            <p className="text-sm text-ink-muted">Irán a tu repaso.</p>
+            <ul className="flex flex-col gap-2">
+              {g.wrong.map((p) => (
+                <li key={p.id} className="flex items-center gap-3 rounded-card border-2 border-line bg-surface p-3">
+                  <MiniPlay audio={p} label={`Escuchar: ${p.text}`} />
+                  <span className="flex flex-col">
+                    <span lang="it" className="font-bold text-sea-deep">
+                      {p.text}
+                    </span>
+                    <span className="text-sm text-ink-muted">{p.es}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+        <Button onClick={start}>Otra ronda</Button>
+        <Button variant="secondary" size="md" onClick={onExit}>
+          Cambiar de tema
+        </Button>
+      </div>
+    );
+  }
+
+  const q = g.question;
+  if (!q) return null;
+  const left = Math.max(0, g.deadline - now);
+  const mult = multiplier(g.combo);
+
+  return (
+    <div className="flex flex-col gap-5 pb-6">
+      <div className="flex items-center gap-3">
+        <IconButton
+          label="Salir de la ronda"
+          icon={<CloseIcon />}
+          onClick={() => {
+            live.current = false;
+            window.clearTimeout(timeout.current);
+            stop();
+            onExit();
+          }}
+        />
+        <ProgressBar value={left} max={ROUND_MS} label="Tiempo restante" tone={left < 10_000 ? "lemon" : "sea"} className="flex-1" />
+        <span className="w-8 text-right text-lg font-extrabold tabular-nums text-ink" aria-hidden="true">
+          {Math.ceil(left / 1000)}
+        </span>
+      </div>
+
+      <div className="flex items-center justify-between">
+        <p className="text-lg font-extrabold tabular-nums text-ink" aria-live="polite">
+          {g.score} <span className="text-sm font-bold text-ink-muted">puntos</span>
+        </p>
+        <p
+          className={cn(
+            "rounded-full px-3 py-1 text-sm font-extrabold tabular-nums",
+            mult > 1 ? "bg-terracotta text-on-accent" : "bg-sand text-ink-muted",
+          )}
+        >
+          x{mult} · racha {g.combo}
+        </p>
+      </div>
+
+      {q.kind === "listen" ? (
+        <>
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink">Escucha y elige qué significa</h2>
+          <PlayControls audio={q.phrase} />
+        </>
+      ) : (
+        <>
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink">¿Cómo se dice en italiano?</h2>
+          <p className="text-2xl font-bold text-sea-deep">{q.phrase.es}</p>
+        </>
+      )}
+
+      <ul className="flex flex-col gap-3">
+        {q.options.map((option) => {
+          const isRight = option.id === q.phrase.id;
+          const reveal = g.picked !== null && isRight;
+          const isPicked = g.picked === option.id;
+          const label = q.kind === "listen" ? option.es : option.text;
+          return (
+            <li key={option.id} className="flex items-center gap-2">
+              <button
+                type="button"
+                disabled={g.picked !== null}
+                onClick={() => answer(option)}
+                lang={q.kind === "reverse" ? "it" : undefined}
+                className={cn(
+                  "pressable min-h-14 flex-1 rounded-button border-2 px-4 py-3 text-left text-lg font-bold",
+                  "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
+                  reveal
+                    ? "border-success bg-success-soft text-success-deep [--ledge:var(--success)]"
+                    : isPicked
+                      ? "border-error bg-error-soft text-error-deep [--ledge:var(--error)]"
+                      : "border-line bg-surface text-ink [--ledge:var(--line)]",
+                  g.picked !== null && !reveal && !isPicked && "opacity-60",
+                )}
+              >
+                {label}
+              </button>
+              {q.kind === "reverse" ? <MiniPlay audio={option} label={`Escuchar: ${option.text}`} /> : null}
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+function Stat({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex flex-col gap-1 rounded-card border-2 border-line bg-surface p-3">
+      <dt className="text-xs font-bold uppercase tracking-wide text-ink-muted">{label}</dt>
+      <dd className="text-xl font-extrabold tabular-nums text-ink">{value}</dd>
+    </div>
+  );
+}
