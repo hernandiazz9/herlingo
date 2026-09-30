@@ -162,7 +162,7 @@ Worktree setup: npm ci
 - Outcome: dark tokens (system + data-theme), no-flash script, ThemeToggle on /perfil · 64a4bbd
 
 ## T12 — Remove duplicate phrases from phrasebook and review, small copy fixes
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T07, T09
 - Goal: 35 Italian texts exist under two ids (e.g. "Sei di qui?", "il bagno"), so the phrasebook and review show them twice; fix it at display/queue time without deleting ids. Also fix two small leftovers.
 - Context: T09 found the duplicates (docs/content-review.md); ids must not be deleted because lessons, placement and SRS reference them. Phrasebook code in src/components/phrasebook/** and src/app/frasario/**; SRS/review in src/lib/srs/** and src/app/repaso/**. The lesson intro says "Unos 5 minutos…" also for review sessions. T10 runs in parallel (PWA, layout, public/): stay out of its files.
@@ -172,7 +172,7 @@ Worktree setup: npm ci
   - A review session never asks the same Italian text twice (dedupe the queue by normalised text).
   - Review sessions show review-appropriate intro copy, not "Unos 5 minutos…".
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: phrasebook 459 unique rows, review queue deduped by text, review intro copy · c6cd59f
 
 ## Decisions
 - 2026-09-30 plan: T01 has no green baseline to check against (empty repo); the main-branch check runs after T01 is integrated. (orchestrator)
@@ -192,8 +192,10 @@ Worktree setup: npm ci
 - 2026-09-30 T07: units order ≥90 are side content ("Para saber más"), always open; first lesson of every main unit open, lessons within a unit unlock in order; Leitner 1/2/4/7/14 days, mistake → box 1; unpractised lesson items enter as new; keys `lang-lern:progress:<lang>` v1 and `lang-lern:settings`; placement masters a lesson only if all its questions are right, retake never touches played lessons, no XP; small additive edits to LessonPlayer props and speak() slow setting. (agent)
 - 2026-09-30 T09: airport bus 6.50 € on board, Cefalù return 14.20 €, validators "in stazione"; vocab plural = bare word; "Possiamo darci del tu?" neutral; 112/101 read as numbers; content-guide lesson size 8–30 items. (agent)
 - 2026-09-30 orchestrator: added T12 (dedupe duplicate texts in phrasebook/review + review intro copy), a fix for duplicates found by T09. (orchestrator)
+- 2026-09-30 T12: src/lib/srs/dedupe.ts (textKey ignores accents/case/punctuation); phrasebook keeps the id taught first; favourite if any duplicate id is starred; review answer also recorded for due duplicate ids; review intro copy "Lo que fallaste y lo que toca recordar hoy…". (agent)
 
 ## Proposals (new scope)
+- 2026-09-30 T12: 49 duplicate texts across phrases/vocab/Q&A/expressions (922 items, 873 unique); merging ids in content/ is still open.
 - 2026-09-30 T07: speaking-pause key uses `lang_lern:` prefix instead of `lang-lern:`.
 - 2026-09-30 T09: seasonal doubts for mid-October (oranges just starting, mulberry granita may be off menu).
 - 2026-09-30 T04: move snail/mic icons into src/components/icons.tsx.
@@ -225,3 +227,6 @@ Worktree setup: npm ci
 - 2026-09-30 18:01 T09 launched · attempt 1 · agent ae8eb6b9ed05bf4c9
 - 2026-09-30 18:12 T07 done · branch worktree-agent-a0c24a87e45145f6e → 9516e54
 - 2026-09-30 18:12 T09 done · branch worktree-agent-ae8eb6b9ed05bf4c9 → 384e072
+- 2026-09-30 18:14 T10 launched · attempt 1 · agent a8879b94ee2e7662c
+- 2026-09-30 18:14 T12 launched · attempt 1 · agent a65c34a9a6ebfeee8
+- 2026-09-30 18:16 T12 done · branch worktree-agent-a65c34a9a6ebfeee8 → c6cd59f
