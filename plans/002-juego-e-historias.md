@@ -60,7 +60,7 @@ Worktree setup: npm ci
 - Outcome: 215/215 phrases in surv/emer/food/gram have explanations · bb95c64
 
 ## T17 — Stories 1–6: arriving and moving around
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T14
 - Goal: Write the first six stories of Hernán's trip, A1–A2, 80–150 words each, natural current Italian, with Spain-Spanish translation per sentence, 8–10 key words/expressions, 3–4 comprehension questions and 4–6 gap items each.
 - Context: docs/brief.md (persona in content/it/units/32-persona-sobre-mi.json: Hernán, Spanish traveller, alone, ~10 days, Palermo → Cefalù → Agrigento → Catania → Siracusa), docs/content-guide.md (story format from T14). Stories: 1 Arrivo a Palermo (airport, Prestia e Comandè bus to the centre), 2 In ostello / B&B check-in, 3 Il mercato di Ballarò, 4 In treno per Cefalù (ticket, convalidare, ritardo), 5 Una giornata a Cefalù (spiaggia, chiedere indicazioni), 6 Il pullman per Agrigento (AST/SAIS, fermata, sciopero). Reuse existing vocab/phrase ids as key words where they exist (look them up), new ones inline with `story-` prefix. Order values 1–6. Delete `content/it/stories/sample-story.json`.
@@ -68,7 +68,7 @@ Worktree setup: npm ci
 - Done when:
   - 6 story files, each within 80–150 words, with the counts above (report them).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 6 stories (104–131 words, 9–10 keywords, 4 questions, 5–6 gaps), 0 warnings; sample deleted · aecfb6b
 
 ## T18 — Stories 7–12: Sicily encounters
 - Status: running (attempt 1)
@@ -133,8 +133,10 @@ Worktree setup: npm ci
 - 2026-09-30 T16: pronunciation respelling scheme: stressed syllable in capitals, gi/ge→dy, ci/ce→chi/che, z→ts/dz, gli→soft ll, gn→ñ, doubles marked, silent h. (agent)
 - 2026-09-30 T15: explanation inserted before register; for phrases the learner hears (announcements, inspector) the tip says where you hear it and what to do. (agent)
 - 2026-09-30 T19: recordActivity({lang?, xp, outcomes:{itemId,correct}[]}) wraps recordReviewResult(); only wrong items to SRS (+same-text ids); deck = 10 cards, unknown first, 'La sé' stored in lang-lern:game:<lang>; 10 pts × combo (x2@3, x3@6, x4@9); XP = 5 + 1 per right answer; card shows translation + explanation directly; round intro screen. (agent)
+- 2026-09-30 T17: voices: narrator Elsa, Hernán Diego, other characters Isabella; inline keywords story-palermo-*/story-cefalu-*/story-pullman-agrigento-*; story 6 route Cefalù→Palermo train then pullman, AST strike/SAIS runs; prices plausible fiction; levels A1 (1,2,3,5) and A2 (4,6). (agent)
 
 ## Proposals (new scope)
+- 2026-09-30 T17: docs/content-guide.md still mentions deleted stories/sample-story.json (lines 24, 120).
 - 2026-09-30 T19: check game mode in light theme by eye.
 
 ## Log
@@ -152,3 +154,4 @@ Worktree setup: npm ci
 - 2026-09-30 T16 done · branch worktree-agent-a647d201261a0ed35 → bb95c64
 - 2026-09-30 T15 done · branch worktree-agent-aaf6fced4038653b6 → 69e85f9
 - 2026-09-30 T19 done · branch worktree-agent-adc312cab832b2d6f → 92dfcd4
+- 2026-09-30 T17 done · branch worktree-agent-a0b08ee802ecd9d4b → aecfb6b
