@@ -16,7 +16,10 @@ export interface Activity {
   /** Defaults to the default pack. */
   lang?: string;
   xp: number;
-  /** Items to schedule in SRS (send only the ones that should move). Repeated ids merge. */
+  /**
+   * Items to schedule in SRS (send only the ones that should move). Repeated ids merge.
+   * Game mode sends only the wrong ones; stories send every practised key word.
+   */
   outcomes: ActivityOutcome[];
 }
 
