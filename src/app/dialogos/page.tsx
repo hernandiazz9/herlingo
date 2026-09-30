@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ComingSoon } from "@/components/shell/ComingSoon";
+import { DialogueList } from "@/components/dialogue/DialogueList";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { getTab } from "@/lib/navigation";
 
@@ -11,7 +11,7 @@ export default function DialoguesPage() {
   return (
     <>
       <PageHeader title={tab.title} subtitle="Practica conversaciones como las que vas a tener." />
-      <ComingSoon tone="sea">Te hablarán, escucharás y elegirás o dirás tu respuesta.</ComingSoon>
+      <DialogueList />
     </>
   );
 }
