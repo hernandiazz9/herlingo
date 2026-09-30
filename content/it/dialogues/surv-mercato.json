@@ -1,0 +1,67 @@
+{
+  "id": "dlg.surv-mercato",
+  "title": "En el mercado: ¿cuánto has dicho?",
+  "description": "Compras naranjas en Ballarò, no pillas el precio a la primera y pagas sin suelto.",
+  "situation": "compras",
+  "unit": "surv",
+  "order": 10,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Frutero", "text": "Buongiorno! Cosa Le do?", "es": "¡Buenos días! ¿Qué le pongo?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Señala unas naranjas y pregunta cuánto cuestan.",
+      "options": [
+        { "text": "Quanto costano queste?", "es": "¿Cuánto cuestan estas?", "verdict": "correct", "feedback": "¡Perfecto! Plural: «costano»." },
+        { "text": "Quant'è?", "es": "¿Cuánto es?", "verdict": "acceptable", "feedback": "Se entiende, pero «Quant'è?» se usa más al pagar el total." },
+        { "text": "Quanto costa queste?", "es": "¿Cuánto cuesta estas?", "verdict": "wrong", "feedback": "«Queste» es plural: el verbo va en plural, «costano»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Frutero", "text": "Due e cinquanta al chilo, sono buonissime!", "es": "Dos cincuenta el kilo, ¡están buenísimas!", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Lo ha dicho muy rápido: pide que lo repita más despacio.",
+      "options": [
+        { "text": "Scusi, può ripetere più piano?", "es": "Perdone, ¿puede repetir más despacio?", "verdict": "correct", "feedback": "¡Genial! Educado y clarísimo." },
+        { "text": "Come?", "es": "¿Cómo?", "verdict": "acceptable", "feedback": "Funciona, pero queda seco: mejor «Come, scusi?»." },
+        { "text": "Non capisci.", "es": "No entiendes.", "verdict": "wrong", "feedback": "Eso es «no entiendes». Tú eres quien no entiende: «Non capisco»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Frutero", "text": "Due euro e cinquanta al chilo. Quante ne vuole?", "es": "Dos euros cincuenta el kilo. ¿Cuántas quiere?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pide un kilo.",
+      "options": [
+        { "text": "Un chilo, per favore.", "es": "Un kilo, por favor.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Voglio un chilo.", "es": "Quiero un kilo.", "verdict": "acceptable", "feedback": "Se entiende, pero «voglio» suena brusco: añade «per favore»." },
+        { "text": "Un chilo, prego.", "es": "Un kilo, de nada.", "verdict": "wrong", "feedback": "«Prego» es «de nada» o «adelante»; para pedir, «per favore»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Frutero", "text": "Ecco qua. Sono due e cinquanta. Ha spiccioli?", "es": "Aquí tiene. Son dos cincuenta. ¿Tiene suelto?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que no tienes suelto, que solo tienes un billete de diez.",
+      "options": [
+        { "text": "No, mi dispiace. Ho solo dieci euro.", "es": "No, lo siento. Solo tengo diez euros.", "verdict": "correct", "feedback": "¡Muy bien! Explicas el problema con amabilidad." },
+        { "text": "No, non ho spiccioli.", "es": "No, no tengo suelto.", "verdict": "acceptable", "feedback": "Correcto; con un «mi dispiace» suena más amable." },
+        { "text": "Sì, ecco dieci euro.", "es": "Sí, aquí tiene diez euros.", "verdict": "wrong", "feedback": "Te pregunta si tienes suelto: si solo tienes un billete, la respuesta es «no»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Frutero", "text": "Non si preoccupi. Ecco il resto: sette e cinquanta.", "es": "No se preocupe. Aquí tiene la vuelta: siete cincuenta.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Da las gracias y despídete.",
+      "options": [
+        { "text": "Grazie mille, buona giornata!", "es": "¡Muchas gracias, que vaya bien el día!", "verdict": "correct", "feedback": "¡Perfecto! Así se despide uno en Sicilia." },
+        { "text": "Grazie, ciao!", "es": "Gracias, ¡adiós!", "verdict": "acceptable", "feedback": "En el mercado pasa, pero con desconocidos mejor «arrivederci» o «buona giornata»." },
+        { "text": "Prego, arrivederci!", "es": "De nada, ¡adiós!", "verdict": "wrong", "feedback": "«Prego» es «de nada»: aquí te toca dar las gracias, «grazie»." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Frutero", "text": "Grazie a Lei! Arrivederci!", "es": "¡Gracias a usted! ¡Adiós!", "voice": "it-IT-DiegoNeural" }
+  ]
+}

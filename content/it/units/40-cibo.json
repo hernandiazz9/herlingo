@@ -1,0 +1,620 @@
+{
+  "id": "food",
+  "order": 40,
+  "title": "Comer y beber",
+  "description": "Del café en la barra a la granita con brioche, las arancine y la cena con cuenta y «coperto».",
+  "emoji": "🍝",
+  "situation": "bar",
+  "lessons": [
+    {
+      "id": "food.l.caffe",
+      "title": "El café en la barra",
+      "items": [
+        "food.caffe",
+        "food.un-caffe",
+        "food.cappuccino",
+        "food.cornetto",
+        "food.cappuccino-e-cornetto",
+        "food.caffe-macchiato",
+        "food.latte",
+        "food.decaffeinato",
+        "food.zucchero",
+        "food.cosa-prende",
+        "food.ecco-a-lei",
+        "food.altro",
+        "food.basta-cosi",
+        "food.bicchiere-d-acqua",
+        "food.qa.cosa-prende",
+        "food.qa.altro"
+      ]
+    },
+    {
+      "id": "food.l.banco",
+      "title": "Barra, caja y tique",
+      "items": [
+        "food.banco",
+        "food.al-banco",
+        "food.cassa",
+        "food.si-paga-prima",
+        "food.scontrino",
+        "food.ecco-lo-scontrino",
+        "food.quanto-le-devo",
+        "food.tavolino",
+        "food.ci-possiamo-sedere",
+        "food.spremuta",
+        "food.una-spremuta",
+        "food.qa.scontrino"
+      ]
+    },
+    {
+      "id": "food.l.granita",
+      "title": "Granita con brioche",
+      "items": [
+        "food.granita",
+        "food.brioche",
+        "food.mandorla",
+        "food.granita-e-brioche",
+        "food.gusto",
+        "food.che-gusti",
+        "food.pistacchio",
+        "food.gelsi",
+        "food.limone",
+        "food.meta-e-meta",
+        "food.panna",
+        "food.con-panna",
+        "food.senza-panna",
+        "food.e-buonissima",
+        "food.qa.che-gusto",
+        "food.qa.panna"
+      ]
+    },
+    {
+      "id": "food.l.dolci",
+      "title": "Cannoli y helados",
+      "items": [
+        "food.pasticceria",
+        "food.cannolo",
+        "food.ricotta",
+        "food.un-cannolo",
+        "food.cassata",
+        "food.cosa-mi-consiglia",
+        "surv.posso-assaggiare",
+        "food.gelato",
+        "food.brioche-col-gelato",
+        "food.coppetta",
+        "food.cono",
+        "food.coppetta-o-cono",
+        "food.coppetta-piccola",
+        "food.qa.coppetta"
+      ]
+    },
+    {
+      "id": "food.l.arancine",
+      "title": "Arancine y comida de calle",
+      "items": [
+        "food.arancina",
+        "food.ragu",
+        "food.arancina-al-ragu",
+        "food.burro",
+        "food.arancino-al-burro",
+        "food.cosa-c-e-dentro",
+        "food.e-piccante",
+        "food.me-la-riscalda",
+        "food.da-portare-via",
+        "food.mangio-qui",
+        "food.sfincione",
+        "food.un-pezzo-di-sfincione",
+        "food.panino",
+        "food.panelle",
+        "food.panino-con-panelle",
+        "food.qa.qui-o-via",
+        "food.qa.riscaldo"
+      ]
+    },
+    {
+      "id": "food.l.bere",
+      "title": "Agua, cerveza y vino",
+      "items": [
+        "food.acqua",
+        "food.bottiglia",
+        "food.bottiglietta-d-acqua",
+        "food.frizzante",
+        "food.naturale",
+        "food.frizzante-o-naturale",
+        "food.birra",
+        "food.birra-piccola",
+        "food.vino",
+        "food.mezzo-litro-di-vino",
+        "food.bicchiere",
+        "food.bicchiere-di-bianco",
+        "food.salute",
+        "food.qa.frizzante"
+      ]
+    },
+    {
+      "id": "food.l.tavolo",
+      "title": "Pedir mesa",
+      "items": [
+        "food.tavolo",
+        "food.tavolo-per-due",
+        "food.c-e-un-tavolo-libero",
+        "food.prenotazione",
+        "food.ho-prenotato",
+        "food.dentro-o-fuori",
+        "food.possiamo-sederci-fuori",
+        "food.cameriere",
+        "food.menu",
+        "food.ci-porta-il-menu",
+        "food.forchetta",
+        "food.coltello",
+        "food.cucchiaio",
+        "food.un-altra-forchetta",
+        "food.buon-appetito",
+        "food.qa.quanti-siete"
+      ]
+    },
+    {
+      "id": "food.l.ordinare",
+      "title": "Pedir la comida",
+      "items": [
+        "food.ha-deciso",
+        "food.non-ancora",
+        "food.cosa-ci-consiglia",
+        "food.specialita",
+        "food.antipasto",
+        "food.antipasto-da-dividere",
+        "food.caponata",
+        "food.primo",
+        "food.melanzane",
+        "food.per-me-la-norma",
+        "food.come-primo",
+        "food.secondo",
+        "food.pesce",
+        "food.carne",
+        "food.pesce-spada",
+        "food.come-secondo",
+        "food.contorno",
+        "food.dolce",
+        "food.qa.come-primo"
+      ]
+    },
+    {
+      "id": "food.l.allergie",
+      "title": "Alergias y preferencias",
+      "items": [
+        "food.allergia",
+        "food.frutta-secca",
+        "food.allergico-frutta-secca",
+        "food.glutine",
+        "food.sono-celiaco",
+        "food.senza-glutine",
+        "food.lattosio",
+        "food.intollerante-lattosio",
+        "food.sono-vegetariano",
+        "food.frutti-di-mare",
+        "food.contiene-frutti-di-mare",
+        "food.uova",
+        "food.cipolla",
+        "food.senza-cipolla",
+        "food.qa.allergie"
+      ]
+    },
+    {
+      "id": "food.l.conto",
+      "title": "La cuenta y el «coperto»",
+      "items": [
+        "food.dolce-o-caffe",
+        "food.conto",
+        "food.il-conto",
+        "food.ci-porta-il-conto",
+        "food.coperto",
+        "food.cos-e-il-coperto",
+        "food.il-coperto-e",
+        "food.servizio",
+        "food.servizio-incluso",
+        "food.pagare-separatamente",
+        "food.alla-romana",
+        "food.mancia",
+        "food.tenga-il-resto",
+        "food.ricevuta",
+        "food.c-e-un-errore",
+        "food.era-tutto-buonissimo",
+        "food.qa.dolce-o-caffe",
+        "food.qa.tutto-bene"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "food.un-caffe", "text": "Un caffè, per favore.", "es": "Un café, por favor.", "notes": "En Italia «un caffè» es un expreso corto.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.cappuccino-e-cornetto", "text": "Un cappuccino e un cornetto, per favore.", "es": "Un capuchino y un cruasán, por favor.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.caffe-macchiato", "text": "Un caffè macchiato, per favore.", "es": "Un cortado, por favor.", "literal": "Un café manchado, por favor.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.cosa-prende", "text": "Cosa prende?", "es": "¿Qué va a tomar?", "register": "lei", "situation": "bar", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.ecco-a-lei", "text": "Ecco a Lei.", "es": "Aquí tiene.", "register": "lei", "situation": "bar", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.altro", "text": "Altro?", "es": "¿Algo más?", "register": "neutral", "situation": "bar", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.basta-cosi", "text": "Basta così, grazie.", "es": "Nada más, gracias.", "literal": "Basta así, gracias.", "register": "neutral", "situation": "bar" },
+    { "id": "food.bicchiere-d-acqua", "text": "Un bicchiere d'acqua, per favore.", "es": "Un vaso de agua, por favor.", "notes": "Muchos italianos lo piden junto con el café.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+
+    { "id": "food.al-banco", "text": "Lo prendo al banco.", "es": "Me lo tomo en la barra.", "notes": "En la barra es más barato que sentado a la mesa.", "register": "neutral", "situation": "bar" },
+    { "id": "food.si-paga-prima", "text": "Si paga prima alla cassa?", "es": "¿Se paga antes en caja?", "notes": "En muchos bares pagas primero y das el tique en la barra.", "register": "neutral", "situation": "bar", "tags": ["pagar"] },
+    { "id": "food.ecco-lo-scontrino", "text": "Ecco lo scontrino.", "es": "Aquí tiene el tique.", "register": "neutral", "situation": "bar", "tags": ["pagar"] },
+    { "id": "food.quanto-le-devo", "text": "Quanto Le devo?", "es": "¿Cuánto le debo?", "register": "lei", "situation": "bar", "tags": ["pagar"] },
+    { "id": "food.ci-possiamo-sedere", "text": "Ci possiamo sedere a un tavolino?", "es": "¿Nos podemos sentar en una mesa?", "notes": "Sentado suele costar algo más que en la barra.", "register": "neutral", "situation": "bar" },
+    { "id": "food.una-spremuta", "text": "Una spremuta d'arancia, per favore.", "es": "Un zumo de naranja natural, por favor.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+
+    { "id": "food.granita-e-brioche", "text": "Una granita alla mandorla con brioche, per favore.", "es": "Un granizado de almendra con brioche, por favor.", "notes": "El desayuno siciliano de verano por excelencia.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.che-gusti", "text": "Che gusti ci sono?", "es": "¿Qué sabores hay?", "register": "neutral", "situation": "bar" },
+    { "id": "food.meta-e-meta", "text": "Posso avere metà mandorla e metà gelsi?", "es": "¿Me la pone mitad almendra y mitad mora?", "literal": "¿Puedo tener mitad almendra y mitad moras?", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.con-panna", "text": "Con la panna?", "es": "¿Con nata?", "register": "neutral", "situation": "bar", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.senza-panna", "text": "Senza panna, grazie.", "es": "Sin nata, gracias.", "register": "neutral", "situation": "bar" },
+    { "id": "food.e-buonissima", "text": "È buonissima!", "es": "¡Está buenísima!", "register": "neutral", "situation": "bar" },
+
+    { "id": "food.un-cannolo", "text": "Un cannolo, per favore.", "es": "Un cannolo, por favor.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.cosa-mi-consiglia", "text": "Cosa mi consiglia?", "es": "¿Qué me recomienda?", "register": "lei", "situation": "bar" },
+    { "id": "food.brioche-col-gelato", "text": "Una brioche col gelato: pistacchio e cioccolato.", "es": "Un brioche con helado: pistacho y chocolate.", "notes": "En Sicilia el helado se toma también dentro de un brioche.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.coppetta-o-cono", "text": "Coppetta o cono?", "es": "¿Tarrina o cucurucho?", "register": "neutral", "situation": "bar", "tags": ["escuchar"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "food.coppetta-piccola", "text": "Una coppetta piccola, per favore.", "es": "Una tarrina pequeña, por favor.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+
+    { "id": "food.arancina-al-ragu", "text": "Un'arancina al ragù, per favore.", "es": "Una arancina de ragú, por favor.", "notes": "En Palermo se dice «l'arancina», en femenino.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.arancino-al-burro", "text": "Un arancino al burro, per favore.", "es": "Un arancino de jamón y queso, por favor.", "notes": "En Catania es «l'arancino»; «al burro» lleva jamón, mozzarella y bechamel.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.cosa-c-e-dentro", "text": "Cosa c'è dentro?", "es": "¿Qué lleva dentro?", "register": "neutral", "situation": "bar" },
+    { "id": "food.e-piccante", "text": "È piccante?", "es": "¿Pica?", "register": "neutral", "situation": "bar" },
+    { "id": "food.me-la-riscalda", "text": "Me la riscalda, per favore?", "es": "¿Me la calienta, por favor?", "register": "lei", "situation": "bar" },
+    { "id": "food.da-portare-via", "text": "Da portare via, grazie.", "es": "Para llevar, gracias.", "register": "neutral", "situation": "bar" },
+    { "id": "food.mangio-qui", "text": "Mangio qui, grazie.", "es": "Me lo como aquí, gracias.", "register": "neutral", "situation": "bar" },
+    { "id": "food.un-pezzo-di-sfincione", "text": "Un pezzo di sfincione, per favore.", "es": "Un trozo de sfincione, por favor.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.panino-con-panelle", "text": "Un panino con panelle e crocchè.", "es": "Un bocadillo de panelle y croquetas.", "notes": "El bocadillo callejero de Palermo: buñuelos de garbanzo y croquetas de patata.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+
+    { "id": "food.bottiglietta-d-acqua", "text": "Una bottiglietta d'acqua naturale, per favore.", "es": "Una botellita de agua sin gas, por favor.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.frizzante-o-naturale", "text": "Frizzante o naturale?", "es": "¿Con gas o sin gas?", "register": "neutral", "situation": "restaurante", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.birra-piccola", "text": "Una birra piccola, per favore.", "es": "Una caña, por favor.", "literal": "Una cerveza pequeña, por favor.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "food.mezzo-litro-di-vino", "text": "Mezzo litro di vino rosso della casa.", "es": "Medio litro de vino tinto de la casa.", "notes": "El vino de la casa se pide en jarras de cuarto, medio o un litro.", "register": "neutral", "situation": "restaurante", "tags": ["pedir"] },
+    { "id": "food.bicchiere-di-bianco", "text": "Un bicchiere di vino bianco, per favore.", "es": "Una copa de vino blanco, por favor.", "register": "neutral", "situation": "restaurante", "tags": ["pedir"] },
+    { "id": "food.salute", "text": "Salute!", "es": "¡Salud!", "notes": "También oirás «Cin cin!».", "register": "neutral", "situation": "restaurante" },
+
+    { "id": "food.tavolo-per-due", "text": "Un tavolo per due, per favore.", "es": "Una mesa para dos, por favor.", "register": "neutral", "situation": "restaurante" },
+    { "id": "food.c-e-un-tavolo-libero", "text": "C'è un tavolo libero?", "es": "¿Hay alguna mesa libre?", "register": "neutral", "situation": "restaurante" },
+    { "id": "food.ho-prenotato", "text": "Ho prenotato per le nove.", "es": "He reservado para las nueve.", "notes": "En Sicilia se cena tarde: a las 21 h es lo normal.", "register": "neutral", "situation": "restaurante" },
+    { "id": "food.dentro-o-fuori", "text": "Dentro o fuori?", "es": "¿Dentro o fuera?", "register": "neutral", "situation": "restaurante", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.possiamo-sederci-fuori", "text": "Possiamo sederci fuori?", "es": "¿Podemos sentarnos fuera?", "register": "neutral", "situation": "restaurante" },
+    { "id": "food.ci-porta-il-menu", "text": "Ci porta il menù, per favore?", "es": "¿Nos trae la carta, por favor?", "register": "lei", "situation": "restaurante" },
+    { "id": "food.un-altra-forchetta", "text": "Mi porta un'altra forchetta, per favore?", "es": "¿Me trae otro tenedor, por favor?", "register": "lei", "situation": "restaurante" },
+    { "id": "food.buon-appetito", "text": "Buon appetito!", "es": "¡Que aproveche!", "register": "neutral", "situation": "restaurante" },
+
+    { "id": "food.ha-deciso", "text": "Ha già deciso?", "es": "¿Ya ha decidido?", "register": "lei", "situation": "restaurante", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.non-ancora", "text": "Non ancora, un attimo.", "es": "Todavía no, un momento.", "register": "neutral", "situation": "restaurante" },
+    { "id": "food.cosa-ci-consiglia", "text": "Cosa ci consiglia?", "es": "¿Qué nos recomienda?", "register": "lei", "situation": "restaurante" },
+    { "id": "food.specialita", "text": "Qual è la specialità della casa?", "es": "¿Cuál es la especialidad de la casa?", "register": "neutral", "situation": "restaurante" },
+    { "id": "food.antipasto-da-dividere", "text": "Un antipasto da dividere, per favore.", "es": "Un entrante para compartir, por favor.", "register": "neutral", "situation": "restaurante", "tags": ["pedir"] },
+    { "id": "food.per-me-la-norma", "text": "Per me la pasta alla Norma.", "es": "Para mí, la pasta alla Norma.", "notes": "Pasta de Catania con berenjena frita, tomate y ricotta salada.", "register": "neutral", "situation": "restaurante", "tags": ["pedir"] },
+    { "id": "food.come-primo", "text": "Come primo, la pasta con le sarde.", "es": "De primero, la pasta con sardinas.", "notes": "Clásico de Palermo: sardinas, hinojo silvestre, pasas y piñones.", "register": "neutral", "situation": "restaurante", "tags": ["pedir"] },
+    { "id": "food.come-secondo", "text": "Come secondo, il pesce spada.", "es": "De segundo, el pez espada.", "register": "neutral", "situation": "restaurante", "tags": ["pedir"] },
+
+    { "id": "food.allergico-frutta-secca", "text": "Sono allergico alla frutta secca.", "es": "Soy alérgico a los frutos secos.", "notes": "Ojo: pistacho y almendra están en muchísimos dulces sicilianos.", "register": "neutral", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.sono-celiaco", "text": "Sono celiaco.", "es": "Soy celíaco.", "register": "neutral", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.senza-glutine", "text": "Ci sono piatti senza glutine?", "es": "¿Hay platos sin gluten?", "notes": "Italia está muy preparada: busca «senza glutine».", "register": "neutral", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.intollerante-lattosio", "text": "Sono intollerante al lattosio.", "es": "Soy intolerante a la lactosa.", "register": "neutral", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.sono-vegetariano", "text": "Sono vegetariano.", "es": "Soy vegetariano.", "register": "neutral", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.contiene-frutti-di-mare", "text": "Questo piatto contiene frutti di mare?", "es": "¿Este plato lleva marisco?", "register": "neutral", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.senza-cipolla", "text": "Senza cipolla, per favore.", "es": "Sin cebolla, por favor.", "register": "neutral", "situation": "restaurante", "tags": ["alergias"] },
+
+    { "id": "food.dolce-o-caffe", "text": "Un dolce? Un caffè?", "es": "¿Algún postre? ¿Un café?", "register": "neutral", "situation": "restaurante", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.il-conto", "text": "Il conto, per favore.", "es": "La cuenta, por favor.", "register": "neutral", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.ci-porta-il-conto", "text": "Ci porta il conto, per favore?", "es": "¿Nos trae la cuenta, por favor?", "register": "lei", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.cos-e-il-coperto", "text": "Cos'è il coperto?", "es": "¿Qué es el «coperto»?", "register": "neutral", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.il-coperto-e", "text": "Il coperto è due euro a persona.", "es": "El cubierto son dos euros por persona.", "register": "neutral", "situation": "restaurante", "tags": ["pagar", "escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "food.servizio-incluso", "text": "Il servizio è incluso?", "es": "¿El servicio está incluido?", "register": "neutral", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.pagare-separatamente", "text": "Possiamo pagare separatamente?", "es": "¿Podemos pagar por separado?", "register": "neutral", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.alla-romana", "text": "Facciamo alla romana?", "es": "¿Pagamos a escote?", "notes": "Dividir la cuenta a partes iguales, sin mirar qué ha tomado cada uno.", "register": "neutral", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.tenga-il-resto", "text": "Tenga il resto.", "es": "Quédese con la vuelta.", "register": "lei", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.c-e-un-errore", "text": "Scusi, credo che ci sia un errore nel conto.", "es": "Perdone, creo que hay un error en la cuenta.", "register": "lei", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.era-tutto-buonissimo", "text": "Era tutto buonissimo, grazie!", "es": "¡Estaba todo buenísimo, gracias!", "register": "neutral", "situation": "restaurante" }
+  ],
+  "vocab": [
+    { "id": "food.caffe", "word": "caffè", "article": "il", "gender": "m", "es": "el café (expreso)", "example": "food.un-caffe", "situation": "bar" },
+    { "id": "food.cappuccino", "word": "cappuccino", "article": "il", "gender": "m", "es": "el capuchino", "notes": "Los italianos solo lo toman por la mañana.", "example": "food.cappuccino-e-cornetto", "situation": "bar" },
+    { "id": "food.cornetto", "word": "cornetto", "article": "il", "gender": "m", "es": "el cruasán", "notes": "Vacío («vuoto») o relleno: crema, chocolate, pistacho…", "example": "food.cappuccino-e-cornetto", "situation": "bar" },
+    { "id": "food.latte", "word": "latte", "article": "il", "gender": "m", "es": "la leche", "notes": "«Un latte» es un vaso de leche; el café con leche es «un latte macchiato».", "situation": "bar" },
+    { "id": "food.decaffeinato", "word": "decaffeinato", "article": "il", "gender": "m", "es": "el descafeinado", "notes": "Abreviado: «un deca».", "situation": "bar" },
+    { "id": "food.zucchero", "word": "zucchero", "article": "lo", "gender": "m", "es": "el azúcar", "situation": "bar" },
+
+    { "id": "food.banco", "word": "banco", "article": "il", "gender": "m", "es": "la barra", "notes": "También «il bancone».", "example": "food.al-banco", "situation": "bar" },
+    { "id": "food.cassa", "word": "cassa", "article": "la", "gender": "f", "es": "la caja", "example": "food.si-paga-prima", "situation": "bar" },
+    { "id": "food.scontrino", "word": "scontrino", "article": "lo", "gender": "m", "es": "el tique de caja", "example": "food.ecco-lo-scontrino", "situation": "bar" },
+    { "id": "food.tavolino", "word": "tavolino", "article": "il", "gender": "m", "es": "la mesita (del bar o la terraza)", "example": "food.ci-possiamo-sedere", "situation": "bar" },
+    { "id": "food.spremuta", "word": "spremuta", "article": "la", "gender": "f", "es": "el zumo natural", "example": "food.una-spremuta", "situation": "bar" },
+
+    { "id": "food.granita", "word": "granita", "article": "la", "gender": "f", "es": "el granizado", "notes": "En Sicilia es cremosa y se desayuna con brioche.", "example": "food.granita-e-brioche", "situation": "bar" },
+    { "id": "food.brioche", "word": "brioche", "article": "la", "gender": "f", "es": "el brioche", "notes": "El siciliano lleva «tuppo», el moñito de arriba.", "example": "food.granita-e-brioche", "situation": "bar" },
+    { "id": "food.mandorla", "word": "mandorla", "article": "la", "gender": "f", "es": "la almendra", "example": "food.granita-e-brioche", "situation": "bar" },
+    { "id": "food.gusto", "word": "gusto", "article": "il", "gender": "m", "es": "el sabor", "example": "food.che-gusti", "situation": "bar" },
+    { "id": "food.pistacchio", "word": "pistacchio", "article": "il", "gender": "m", "es": "el pistacho", "notes": "El de Bronte, en las faldas del Etna, es famoso.", "situation": "bar" },
+    { "id": "food.gelsi", "word": "gelsi", "article": "i", "gender": "m", "es": "las moras (de morera)", "notes": "Sabor clásico de granita en verano.", "example": "food.meta-e-meta", "situation": "bar" },
+    { "id": "food.limone", "word": "limone", "article": "il", "gender": "m", "es": "el limón", "situation": "bar" },
+    { "id": "food.panna", "word": "panna", "article": "la", "gender": "f", "es": "la nata", "example": "food.con-panna", "situation": "bar" },
+
+    { "id": "food.pasticceria", "word": "pasticceria", "article": "la", "gender": "f", "es": "la pastelería", "situation": "bar" },
+    { "id": "food.cannolo", "word": "cannolo", "article": "il", "gender": "m", "plural": "cannoli", "es": "el cannolo", "notes": "Barquillo frito relleno de ricotta; mejor si lo rellenan al momento.", "example": "food.un-cannolo", "situation": "bar" },
+    { "id": "food.ricotta", "word": "ricotta", "article": "la", "gender": "f", "es": "el requesón (ricotta)", "situation": "bar" },
+    { "id": "food.cassata", "word": "cassata", "article": "la", "gender": "f", "es": "la cassata (tarta siciliana de ricotta)", "situation": "bar" },
+    { "id": "food.gelato", "word": "gelato", "article": "il", "gender": "m", "es": "el helado", "example": "food.brioche-col-gelato", "situation": "bar" },
+    { "id": "food.coppetta", "word": "coppetta", "article": "la", "gender": "f", "es": "la tarrina", "example": "food.coppetta-piccola", "situation": "bar" },
+    { "id": "food.cono", "word": "cono", "article": "il", "gender": "m", "es": "el cucurucho", "example": "food.coppetta-o-cono", "situation": "bar" },
+
+    { "id": "food.arancina", "word": "arancina", "article": "l'", "gender": "f", "plural": "arancine", "es": "la arancina (bola de arroz frita)", "notes": "«Arancina» en Palermo, «arancino» en Catania: mejor no meterse en esa guerra.", "example": "food.arancina-al-ragu", "situation": "bar" },
+    { "id": "food.ragu", "word": "ragù", "article": "il", "gender": "m", "es": "el ragú (salsa de carne)", "example": "food.arancina-al-ragu", "situation": "bar" },
+    { "id": "food.burro", "word": "burro", "article": "il", "gender": "m", "es": "la mantequilla", "notes": "Ojo: no es un animal.", "example": "food.arancino-al-burro", "situation": "bar" },
+    { "id": "food.sfincione", "word": "sfincione", "article": "lo", "gender": "m", "es": "el sfincione (pizza gruesa palermitana)", "example": "food.un-pezzo-di-sfincione", "situation": "bar" },
+    { "id": "food.panino", "word": "panino", "article": "il", "gender": "m", "es": "el bocadillo", "notes": "No es un panecillo: es un bocadillo.", "example": "food.panino-con-panelle", "situation": "bar" },
+    { "id": "food.panelle", "word": "panelle", "article": "le", "gender": "f", "es": "los buñuelos de garbanzo", "example": "food.panino-con-panelle", "situation": "bar" },
+
+    { "id": "food.acqua", "word": "acqua", "article": "l'", "gender": "f", "es": "el agua", "example": "food.bottiglietta-d-acqua", "situation": "bar" },
+    { "id": "food.bottiglia", "word": "bottiglia", "article": "la", "gender": "f", "es": "la botella", "notes": "«Bottiglietta» = botellita.", "situation": "restaurante" },
+    { "id": "food.frizzante", "word": "frizzante", "es": "con gas", "example": "food.frizzante-o-naturale", "situation": "restaurante" },
+    { "id": "food.naturale", "word": "naturale", "es": "sin gas", "notes": "También «liscia».", "example": "food.frizzante-o-naturale", "situation": "restaurante" },
+    { "id": "food.birra", "word": "birra", "article": "la", "gender": "f", "es": "la cerveza", "example": "food.birra-piccola", "situation": "bar" },
+    { "id": "food.vino", "word": "vino", "article": "il", "gender": "m", "es": "el vino", "notes": "Tinto = «rosso», blanco = «bianco».", "example": "food.mezzo-litro-di-vino", "situation": "restaurante" },
+    { "id": "food.bicchiere", "word": "bicchiere", "article": "il", "gender": "m", "es": "el vaso / la copa", "example": "food.bicchiere-di-bianco", "situation": "restaurante" },
+
+    { "id": "food.tavolo", "word": "tavolo", "article": "il", "gender": "m", "es": "la mesa", "example": "food.tavolo-per-due", "situation": "restaurante" },
+    { "id": "food.prenotazione", "word": "prenotazione", "article": "la", "gender": "f", "es": "la reserva", "example": "food.ho-prenotato", "situation": "restaurante" },
+    { "id": "food.cameriere", "word": "cameriere", "article": "il", "gender": "m", "es": "el camarero", "situation": "restaurante" },
+    { "id": "food.menu", "word": "menù", "article": "il", "gender": "m", "es": "la carta", "notes": "También «la carta».", "example": "food.ci-porta-il-menu", "situation": "restaurante" },
+    { "id": "food.forchetta", "word": "forchetta", "article": "la", "gender": "f", "es": "el tenedor", "example": "food.un-altra-forchetta", "situation": "restaurante" },
+    { "id": "food.coltello", "word": "coltello", "article": "il", "gender": "m", "es": "el cuchillo", "situation": "restaurante" },
+    { "id": "food.cucchiaio", "word": "cucchiaio", "article": "il", "gender": "m", "es": "la cuchara", "situation": "restaurante" },
+
+    { "id": "food.antipasto", "word": "antipasto", "article": "l'", "gender": "m", "es": "el entrante", "example": "food.antipasto-da-dividere", "situation": "restaurante" },
+    { "id": "food.caponata", "word": "caponata", "article": "la", "gender": "f", "es": "la caponata (verduras agridulces)", "notes": "Berenjena, apio, aceitunas y alcaparras en agridulce.", "situation": "restaurante" },
+    { "id": "food.primo", "word": "primo", "article": "il", "gender": "m", "es": "el primer plato", "notes": "Normalmente pasta o risotto.", "example": "food.come-primo", "situation": "restaurante" },
+    { "id": "food.melanzane", "word": "melanzane", "article": "le", "gender": "f", "es": "las berenjenas", "notes": "Singular: «la melanzana».", "situation": "restaurante" },
+    { "id": "food.secondo", "word": "secondo", "article": "il", "gender": "m", "es": "el segundo plato", "notes": "Carne o pescado, normalmente sin guarnición.", "example": "food.come-secondo", "situation": "restaurante" },
+    { "id": "food.pesce", "word": "pesce", "article": "il", "gender": "m", "es": "el pescado", "notes": "También «el pez».", "situation": "restaurante" },
+    { "id": "food.carne", "word": "carne", "article": "la", "gender": "f", "es": "la carne", "situation": "restaurante" },
+    { "id": "food.pesce-spada", "word": "pesce spada", "article": "il", "gender": "m", "es": "el pez espada", "example": "food.come-secondo", "situation": "restaurante" },
+    { "id": "food.contorno", "word": "contorno", "article": "il", "gender": "m", "es": "la guarnición", "notes": "Se pide aparte: ensalada, patatas, verduras.", "situation": "restaurante" },
+    { "id": "food.dolce", "word": "dolce", "article": "il", "gender": "m", "es": "el postre", "notes": "Como adjetivo, «dulce».", "example": "food.dolce-o-caffe", "situation": "restaurante" },
+
+    { "id": "food.allergia", "word": "allergia", "article": "l'", "gender": "f", "es": "la alergia", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.frutta-secca", "word": "frutta secca", "article": "la", "gender": "f", "es": "los frutos secos", "example": "food.allergico-frutta-secca", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.glutine", "word": "glutine", "article": "il", "gender": "m", "es": "el gluten", "example": "food.senza-glutine", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.lattosio", "word": "lattosio", "article": "il", "gender": "m", "es": "la lactosa", "example": "food.intollerante-lattosio", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.frutti-di-mare", "word": "frutti di mare", "article": "i", "gender": "m", "es": "el marisco", "example": "food.contiene-frutti-di-mare", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.uova", "word": "uova", "article": "le", "gender": "f", "es": "los huevos", "notes": "Singular masculino: «l'uovo».", "situation": "restaurante", "tags": ["alergias"] },
+    { "id": "food.cipolla", "word": "cipolla", "article": "la", "gender": "f", "es": "la cebolla", "example": "food.senza-cipolla", "situation": "restaurante", "tags": ["alergias"] },
+
+    { "id": "food.conto", "word": "conto", "article": "il", "gender": "m", "es": "la cuenta", "example": "food.il-conto", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.coperto", "word": "coperto", "article": "il", "gender": "m", "es": "el cubierto (cargo fijo por persona)", "notes": "Pan y servicio de mesa; es legal y va aparte en la cuenta.", "example": "food.il-coperto-e", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.servizio", "word": "servizio", "article": "il", "gender": "m", "es": "el servicio", "example": "food.servizio-incluso", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.mancia", "word": "mancia", "article": "la", "gender": "f", "es": "la propina", "notes": "No es obligatoria; se suele redondear.", "situation": "restaurante", "tags": ["pagar"] },
+    { "id": "food.ricevuta", "word": "ricevuta", "article": "la", "gender": "f", "es": "el recibo", "situation": "restaurante", "tags": ["pagar"] }
+  ],
+  "qa": [
+    {
+      "id": "food.qa.cosa-prende",
+      "question": "Buongiorno! Cosa prende?",
+      "questionEs": "¡Buenos días! ¿Qué va a tomar?",
+      "accepted": [
+        { "text": "Un caffè e un cornetto, per favore.", "es": "Un café y un cruasán, por favor." },
+        { "text": "Un cappuccino, grazie.", "es": "Un capuchino, gracias." }
+      ],
+      "distractors": [
+        { "text": "Ecco a Lei.", "es": "Aquí tiene." },
+        { "text": "Basta così, grazie.", "es": "Nada más, gracias." }
+      ],
+      "register": "lei",
+      "situation": "bar",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.altro",
+      "question": "Altro?",
+      "questionEs": "¿Algo más?",
+      "accepted": [
+        { "text": "No, basta così, grazie.", "es": "No, nada más, gracias." },
+        { "text": "Sì, anche un bicchiere d'acqua.", "es": "Sí, también un vaso de agua." }
+      ],
+      "distractors": [
+        { "text": "Prego, buongiorno.", "es": "De nada, buenos días." },
+        { "text": "Sì, altro.", "es": "Sí, otro." }
+      ],
+      "register": "neutral",
+      "situation": "bar",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.scontrino",
+      "question": "Ha già fatto lo scontrino?",
+      "questionEs": "¿Ya ha pagado en caja?",
+      "accepted": [
+        { "text": "Non ancora. Pago alla cassa?", "es": "Todavía no. ¿Pago en caja?" },
+        { "text": "Sì, eccolo.", "es": "Sí, aquí lo tiene." }
+      ],
+      "distractors": [
+        { "text": "No, lo prendo al banco.", "es": "No, me lo tomo en la barra." },
+        { "text": "Sì, un caffè.", "es": "Sí, un café." }
+      ],
+      "register": "lei",
+      "situation": "bar",
+      "notes": "«Fare lo scontrino» = pagar en caja y coger el tique.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.che-gusto",
+      "question": "Che gusto vuole?",
+      "questionEs": "¿De qué sabor la quiere?",
+      "accepted": [
+        { "text": "Mandorla, per favore.", "es": "De almendra, por favor." },
+        { "text": "Metà pistacchio e metà gelsi.", "es": "Mitad pistacho y mitad mora." }
+      ],
+      "distractors": [
+        { "text": "Sì, mi piace.", "es": "Sí, me gusta." },
+        { "text": "Buonissima, grazie.", "es": "Buenísima, gracias." }
+      ],
+      "register": "lei",
+      "situation": "bar",
+      "notes": "«Gusto» aquí es «sabor», no «me gusta».",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.panna",
+      "question": "La vuole con la panna?",
+      "questionEs": "¿La quiere con nata?",
+      "accepted": [
+        { "text": "Sì, grazie!", "es": "¡Sí, gracias!" },
+        { "text": "No, senza panna, grazie.", "es": "No, sin nata, gracias." }
+      ],
+      "distractors": [
+        { "text": "Con la carta, grazie.", "es": "Con tarjeta, gracias." },
+        { "text": "No, non ho panna.", "es": "No, no tengo nata." }
+      ],
+      "register": "lei",
+      "situation": "bar",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.coppetta",
+      "question": "Coppetta, cono o brioche?",
+      "questionEs": "¿Tarrina, cucurucho o brioche?",
+      "accepted": [
+        { "text": "Nella brioche, per favore.", "es": "En brioche, por favor." },
+        { "text": "Una coppetta piccola, grazie.", "es": "Una tarrina pequeña, gracias." }
+      ],
+      "distractors": [
+        { "text": "Sì, grazie.", "es": "Sí, gracias." },
+        { "text": "Con la panna, grazie.", "es": "Con nata, gracias." }
+      ],
+      "register": "neutral",
+      "situation": "bar",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "food.qa.qui-o-via",
+      "question": "Per mangiare qui o da portare via?",
+      "questionEs": "¿Para tomar aquí o para llevar?",
+      "accepted": [
+        { "text": "Da portare via, grazie.", "es": "Para llevar, gracias." },
+        { "text": "Mangio qui, grazie.", "es": "Me lo como aquí, gracias." }
+      ],
+      "distractors": [
+        { "text": "Sì, grazie.", "es": "Sí, gracias." },
+        { "text": "Al ragù, per favore.", "es": "De ragú, por favor." }
+      ],
+      "register": "neutral",
+      "situation": "bar",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.riscaldo",
+      "question": "Gliela scaldo?",
+      "questionEs": "¿Se la caliento?",
+      "accepted": [
+        { "text": "Sì, grazie.", "es": "Sí, gracias." },
+        { "text": "No, va bene così.", "es": "No, así está bien." }
+      ],
+      "distractors": [
+        { "text": "Sì, ho caldo.", "es": "Sí, tengo calor." },
+        { "text": "No, è piccante.", "es": "No, pica." }
+      ],
+      "register": "lei",
+      "situation": "bar",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.frizzante",
+      "question": "L'acqua la vuole frizzante o naturale?",
+      "questionEs": "El agua, ¿la quiere con gas o sin gas?",
+      "accepted": [
+        { "text": "Naturale, grazie.", "es": "Sin gas, gracias." },
+        { "text": "Frizzante, per favore.", "es": "Con gas, por favor." }
+      ],
+      "distractors": [
+        { "text": "Sì, grazie.", "es": "Sí, gracias." },
+        { "text": "No, non bevo.", "es": "No, no bebo." }
+      ],
+      "register": "lei",
+      "situation": "restaurante",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.quanti-siete",
+      "question": "Buonasera! Quanti siete?",
+      "questionEs": "¡Buenas noches! ¿Cuántos sois?",
+      "accepted": [
+        { "text": "Siamo in due.", "es": "Somos dos." },
+        { "text": "Due, grazie.", "es": "Dos, gracias." }
+      ],
+      "distractors": [
+        { "text": "Sono due.", "es": "Son dos." },
+        { "text": "Per due ore.", "es": "Para dos horas." }
+      ],
+      "register": "neutral",
+      "situation": "restaurante",
+      "notes": "Para decir cuántos sois: «siamo in due», «siamo in tre».",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.come-primo",
+      "question": "Cosa prende come primo?",
+      "questionEs": "¿Qué va a tomar de primero?",
+      "accepted": [
+        { "text": "La pasta alla Norma, per favore.", "es": "La pasta alla Norma, por favor." },
+        { "text": "Per me la pasta con le sarde.", "es": "Para mí, la pasta con sardinas." }
+      ],
+      "distractors": [
+        { "text": "Un tavolo per due.", "es": "Una mesa para dos." },
+        { "text": "Il conto, per favore.", "es": "La cuenta, por favor." }
+      ],
+      "register": "lei",
+      "situation": "restaurante",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.allergie",
+      "question": "Ha allergie o intolleranze?",
+      "questionEs": "¿Tiene alergias o intolerancias?",
+      "accepted": [
+        { "text": "Sì, sono allergico alla frutta secca.", "es": "Sí, soy alérgico a los frutos secos." },
+        { "text": "No, nessuna.", "es": "No, ninguna." }
+      ],
+      "distractors": [
+        { "text": "No, non ho allergico.", "es": "No, no tengo alérgico." },
+        { "text": "Sì, senza.", "es": "Sí, sin." }
+      ],
+      "register": "lei",
+      "situation": "restaurante",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "food.qa.dolce-o-caffe",
+      "question": "Un dolce? Un caffè?",
+      "questionEs": "¿Algún postre? ¿Un café?",
+      "accepted": [
+        { "text": "No, grazie. Solo il conto.", "es": "No, gracias. Solo la cuenta." },
+        { "text": "Sì, un caffè, grazie.", "es": "Sí, un café, gracias." }
+      ],
+      "distractors": [
+        { "text": "Sì, sono dolce.", "es": "Sí, soy dulce." },
+        { "text": "Il coperto, per favore.", "es": "El cubierto, por favor." }
+      ],
+      "register": "neutral",
+      "situation": "restaurante",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "food.qa.tutto-bene",
+      "question": "Tutto bene? Le è piaciuto?",
+      "questionEs": "¿Todo bien? ¿Le ha gustado?",
+      "accepted": [
+        { "text": "Sì, era tutto buonissimo!", "es": "¡Sí, estaba todo buenísimo!" },
+        { "text": "Buonissimo, grazie. Il conto, per favore.", "es": "Buenísimo, gracias. La cuenta, por favor." }
+      ],
+      "distractors": [
+        { "text": "Sì, sono buonissimo.", "es": "Sí, soy buenísimo." },
+        { "text": "Sì, mi è piaciuta Lei.", "es": "Sí, me ha gustado usted." }
+      ],
+      "register": "lei",
+      "situation": "restaurante",
+      "voice": "it-IT-DiegoNeural"
+    }
+  ]
+}

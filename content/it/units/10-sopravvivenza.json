@@ -1,0 +1,466 @@
+{
+  "id": "surv",
+  "order": 10,
+  "title": "Lo imprescindible",
+  "description": "Cortesía exprés, qué decir cuando no entiendes, números, precios y horas.",
+  "emoji": "🧰",
+  "situation": "no-entiendo",
+  "lessons": [
+    {
+      "id": "surv.l.cortesia",
+      "title": "Saludos y cortesía, repaso exprés",
+      "items": [
+        "surv.buongiorno",
+        "surv.buonasera",
+        "surv.salve",
+        "surv.buona-giornata",
+        "surv.buona-serata",
+        "surv.grazie-mille",
+        "surv.prego",
+        "surv.si-figuri",
+        "surv.mi-scusi",
+        "surv.permesso",
+        "surv.mi-dispiace",
+        "surv.va-bene",
+        "surv.volentieri",
+        "gram.tu-lei",
+        "surv.qa.come-sta"
+      ]
+    },
+    {
+      "id": "surv.l.non-capisco",
+      "title": "Cuando no entiendes",
+      "items": [
+        "surv.non-capisco",
+        "surv.non-ho-capito",
+        "surv.come-scusi",
+        "surv.puo-ripetere",
+        "surv.puoi-ripetere",
+        "surv.piu-piano",
+        "surv.parlo-poco",
+        "surv.parla-inglese",
+        "surv.parla-spagnolo",
+        "surv.cosa-vuol-dire",
+        "surv.come-si-dice",
+        "surv.me-lo-scrive",
+        "surv.un-attimo",
+        "surv.non-lo-so",
+        "surv.qa.ha-capito",
+        "surv.qa.parla-italiano"
+      ]
+    },
+    {
+      "id": "surv.l.numeri",
+      "title": "Números que vas a oír",
+      "items": [
+        "surv.dodici",
+        "surv.quindici",
+        "surv.sedici",
+        "surv.diciassette",
+        "surv.diciotto",
+        "surv.diciannove",
+        "surv.venti",
+        "surv.trenta",
+        "surv.quaranta",
+        "surv.cinquanta",
+        "surv.cento",
+        "surv.fanno-sedici-euro",
+        "surv.diciotto-e-cinquanta",
+        "surv.sono-tre-euro-e-venti",
+        "surv.qa.diciassette"
+      ]
+    },
+    {
+      "id": "surv.l.pagare",
+      "title": "Precios y pagar",
+      "items": [
+        "surv.quanto-costa",
+        "surv.quanto-costano",
+        "surv.quant-e",
+        "surv.euro",
+        "surv.centesimo",
+        "surv.posso-pagare-con-la-carta",
+        "surv.carta",
+        "surv.bancomat",
+        "surv.solo-contanti",
+        "surv.contanti",
+        "surv.ha-spiccioli",
+        "surv.non-ho-spiccioli",
+        "surv.spiccioli",
+        "surv.ecco-il-resto",
+        "surv.resto",
+        "surv.c-e-un-bancomat",
+        "surv.qa.come-paga"
+      ]
+    },
+    {
+      "id": "surv.l.mercato",
+      "title": "En el mercado y las tiendas",
+      "items": [
+        "surv.mercato",
+        "surv.quanto-costano-queste",
+        "surv.posso-assaggiare",
+        "surv.solo-guardando",
+        "surv.chilo",
+        "surv.etto",
+        "surv.mezzo-chilo",
+        "surv.due-etti",
+        "surv.olive",
+        "surv.arance",
+        "surv.frutta",
+        "surv.caro",
+        "surv.e-un-po-caro",
+        "surv.lo-prendo",
+        "surv.quanto-ne-vuole",
+        "surv.qa.quanto-ne-vuole"
+      ]
+    },
+    {
+      "id": "surv.l.orari",
+      "title": "La hora y los horarios",
+      "items": [
+        "surv.che-ore-sono",
+        "surv.ora",
+        "surv.sono-le-tre",
+        "surv.e-l-una",
+        "surv.mezzogiorno",
+        "surv.e-mezzogiorno",
+        "surv.alle-otto-e-mezza",
+        "surv.alle-sette-meno-un-quarto",
+        "surv.minuto",
+        "surv.tra-dieci-minuti",
+        "surv.tra-un-quarto-d-ora",
+        "surv.aperto",
+        "surv.chiuso",
+        "surv.a-che-ora-apre",
+        "surv.a-che-ora-chiude",
+        "surv.riapriamo-alle-cinque",
+        "surv.qa.che-ore-sono"
+      ]
+    },
+    {
+      "id": "surv.l.giorni",
+      "title": "Hoy, mañana y los días",
+      "items": [
+        "surv.oggi",
+        "surv.domani",
+        "surv.ieri",
+        "surv.mattina",
+        "surv.pomeriggio",
+        "surv.sera",
+        "surv.stasera",
+        "surv.sabato",
+        "surv.domenica",
+        "surv.feriale",
+        "surv.festivo",
+        "surv.oggi-e-chiuso",
+        "surv.la-domenica-siamo-chiusi",
+        "surv.a-domani",
+        "surv.ci-vediamo-stasera",
+        "surv.qa.fino-a-domenica"
+      ]
+    },
+    {
+      "id": "surv.l.piccole-cose",
+      "title": "Baño, wifi y cosas pequeñas",
+      "items": [
+        "surv.bagno",
+        "surv.dov-e-il-bagno",
+        "surv.posso-usare-il-bagno",
+        "surv.c-e-il-wifi",
+        "surv.qual-e-la-password",
+        "surv.cellulare",
+        "surv.caricabatterie",
+        "surv.presa",
+        "surv.posso-caricare",
+        "surv.sacchetto",
+        "surv.mi-da-un-sacchetto",
+        "emer.zaino",
+        "surv.posso-lasciare-lo-zaino",
+        "surv.supermercato",
+        "surv.c-e-un-supermercato",
+        "surv.qa.posso-aiutarla"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "surv.buongiorno", "text": "Buongiorno!", "es": "¡Buenos días!", "notes": "Hasta media tarde; con desconocidos es el saludo seguro.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "surv.buonasera", "text": "Buonasera!", "es": "¡Buenas tardes! / ¡Buenas noches!", "notes": "Desde media tarde (hacia las 16–17 h) y también al llegar por la noche.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "surv.salve", "text": "Salve!", "es": "¡Hola!", "notes": "Un «hola» educado que vale con cualquiera, a cualquier hora.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "surv.buona-giornata", "text": "Buona giornata!", "es": "¡Que vaya bien el día!", "notes": "Para despedirte por la mañana o a mediodía.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "surv.buona-serata", "text": "Buona serata!", "es": "¡Que vaya bien la noche!", "notes": "Para despedirte a partir de media tarde.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "surv.grazie-mille", "text": "Grazie mille!", "es": "¡Muchas gracias!", "literal": "¡Mil gracias!", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "surv.prego", "text": "Prego.", "es": "De nada. / Adelante.", "notes": "También lo oirás como «¿qué desea?» o «pase usted».", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "surv.si-figuri", "text": "Si figuri!", "es": "¡No hay de qué!", "notes": "Respuesta a «grazie» de usted; con amigos, «Figurati!».", "register": "lei", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "surv.mi-scusi", "text": "Mi scusi!", "es": "¡Perdone!", "notes": "Para llamar la atención de alguien o pedir perdón, de usted.", "register": "lei", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "surv.permesso", "text": "Permesso!", "es": "¡Con permiso!", "notes": "Para abrirte paso en el bus o el mercado, o al entrar en una casa.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "surv.mi-dispiace", "text": "Mi dispiace.", "es": "Lo siento.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "surv.va-bene", "text": "Va bene.", "es": "Vale. / De acuerdo.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "surv.volentieri", "text": "Volentieri!", "es": "¡Con mucho gusto!", "notes": "Para aceptar una invitación o una propuesta.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+
+    { "id": "surv.non-capisco", "text": "Non capisco.", "es": "No entiendo.", "register": "neutral", "situation": "no-entiendo" },
+    { "id": "surv.non-ho-capito", "text": "Non ho capito.", "es": "No lo he entendido.", "notes": "En la conversación es más frecuente que «non capisco».", "register": "neutral", "situation": "no-entiendo" },
+    { "id": "surv.come-scusi", "text": "Come, scusi?", "es": "¿Cómo dice?", "notes": "La reacción más natural cuando no has pillado algo.", "register": "lei", "situation": "no-entiendo" },
+    { "id": "surv.puo-ripetere", "text": "Può ripetere, per favore?", "es": "¿Puede repetir, por favor?", "register": "lei", "situation": "no-entiendo" },
+    { "id": "surv.puoi-ripetere", "text": "Puoi ripetere?", "es": "¿Puedes repetir?", "register": "tu", "situation": "no-entiendo" },
+    { "id": "surv.piu-piano", "text": "Più piano, per favore.", "es": "Más despacio, por favor.", "notes": "Aquí «piano» significa «despacio».", "register": "neutral", "situation": "no-entiendo" },
+    { "id": "surv.parlo-poco", "text": "Parlo solo un po' d'italiano.", "es": "Solo hablo un poco de italiano.", "register": "neutral", "situation": "no-entiendo" },
+    { "id": "surv.parla-inglese", "text": "Parla inglese?", "es": "¿Habla inglés?", "register": "lei", "situation": "no-entiendo" },
+    { "id": "surv.parla-spagnolo", "text": "Parla spagnolo?", "es": "¿Habla español?", "register": "lei", "situation": "no-entiendo" },
+    { "id": "surv.cosa-vuol-dire", "text": "Cosa vuol dire?", "es": "¿Qué significa?", "literal": "¿Qué quiere decir?", "register": "neutral", "situation": "no-entiendo" },
+    { "id": "surv.come-si-dice", "text": "Come si dice in italiano?", "es": "¿Cómo se dice en italiano?", "register": "neutral", "situation": "no-entiendo" },
+    { "id": "surv.me-lo-scrive", "text": "Me lo può scrivere?", "es": "¿Me lo puede escribir?", "notes": "Salvavidas con precios, horas y andenes.", "register": "lei", "situation": "no-entiendo" },
+    { "id": "surv.un-attimo", "text": "Un attimo, per favore.", "es": "Un momento, por favor.", "register": "neutral", "situation": "no-entiendo" },
+    { "id": "surv.non-lo-so", "text": "Non lo so.", "es": "No lo sé.", "register": "neutral", "situation": "no-entiendo" },
+
+    { "id": "surv.fanno-sedici-euro", "text": "Fanno sedici euro.", "es": "Son dieciséis euros.", "literal": "Hacen dieciséis euros.", "notes": "«Fanno» es muy típico al cobrar.", "register": "neutral", "situation": "numeros", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "surv.diciotto-e-cinquanta", "text": "Diciotto e cinquanta.", "es": "Dieciocho cincuenta.", "notes": "Los céntimos se dicen sin «euro» ni «centesimi».", "register": "neutral", "situation": "numeros", "tags": ["escuchar"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "surv.sono-tre-euro-e-venti", "text": "Sono tre euro e venti.", "es": "Son tres euros con veinte.", "register": "neutral", "situation": "numeros", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+
+    { "id": "surv.quanto-costa", "text": "Quanto costa?", "es": "¿Cuánto cuesta?", "register": "neutral", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.quanto-costano", "text": "Quanto costano?", "es": "¿Cuánto cuestan?", "register": "neutral", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.quant-e", "text": "Quant'è?", "es": "¿Cuánto es?", "notes": "Para preguntar el total cuando vas a pagar.", "register": "neutral", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.posso-pagare-con-la-carta", "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?", "register": "neutral", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.solo-contanti", "text": "Solo contanti.", "es": "Solo en efectivo.", "notes": "Todavía pasa en mercados, quioscos y algún bar.", "register": "neutral", "situation": "compras", "tags": ["pagar", "escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "surv.ha-spiccioli", "text": "Ha spiccioli?", "es": "¿Tiene suelto?", "notes": "Te lo preguntarán si pagas con un billete grande.", "register": "lei", "situation": "compras", "tags": ["pagar", "escuchar"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "surv.non-ho-spiccioli", "text": "Non ho spiccioli, mi dispiace.", "es": "No tengo suelto, lo siento.", "register": "neutral", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.ecco-il-resto", "text": "Ecco il resto.", "es": "Aquí tiene la vuelta.", "register": "neutral", "situation": "compras", "tags": ["pagar", "escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "surv.c-e-un-bancomat", "text": "C'è un bancomat qui vicino?", "es": "¿Hay un cajero por aquí cerca?", "register": "neutral", "situation": "compras", "tags": ["pagar"] },
+
+    { "id": "surv.quanto-costano-queste", "text": "Quanto costano queste?", "es": "¿Cuánto cuestan estas?", "register": "neutral", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.posso-assaggiare", "text": "Posso assaggiare?", "es": "¿Puedo probar?", "notes": "En los mercados de Palermo y Catania suelen dejarte probar.", "register": "neutral", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.solo-guardando", "text": "Sto solo guardando, grazie.", "es": "Solo estoy mirando, gracias.", "register": "neutral", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.mezzo-chilo", "text": "Mezzo chilo, per favore.", "es": "Medio kilo, por favor.", "register": "neutral", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.due-etti", "text": "Due etti di olive, per favore.", "es": "Doscientos gramos de aceitunas, por favor.", "notes": "Un «etto» son 100 gramos: así se pide en el mercado.", "register": "neutral", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.e-un-po-caro", "text": "È un po' caro.", "es": "Es un poco caro.", "register": "neutral", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.lo-prendo", "text": "Lo prendo.", "es": "Me lo llevo.", "literal": "Lo cojo.", "register": "neutral", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.quanto-ne-vuole", "text": "Quanto ne vuole?", "es": "¿Cuánto quiere?", "notes": "«Ne» = «de eso»: te pregunta la cantidad.", "register": "lei", "situation": "compras", "tags": ["mercado", "escuchar"], "voice": "it-IT-DiegoNeural" },
+
+    { "id": "surv.che-ore-sono", "text": "Che ore sono?", "es": "¿Qué hora es?", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.sono-le-tre", "text": "Sono le tre.", "es": "Son las tres.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.e-l-una", "text": "È l'una.", "es": "Es la una.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.e-mezzogiorno", "text": "È mezzogiorno.", "es": "Son las doce del mediodía.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.alle-otto-e-mezza", "text": "Alle otto e mezza.", "es": "A las ocho y media.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.alle-sette-meno-un-quarto", "text": "Alle sette meno un quarto.", "es": "A las siete menos cuarto.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.tra-dieci-minuti", "text": "Tra dieci minuti.", "es": "Dentro de diez minutos.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.tra-un-quarto-d-ora", "text": "Tra un quarto d'ora.", "es": "Dentro de un cuarto de hora.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.a-che-ora-apre", "text": "A che ora apre?", "es": "¿A qué hora abre?", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.a-che-ora-chiude", "text": "A che ora chiude?", "es": "¿A qué hora cierra?", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.riapriamo-alle-cinque", "text": "Riapriamo alle cinque.", "es": "Volvemos a abrir a las cinco.", "notes": "En Sicilia muchas tiendas cierran de 13 a 16–17 h.", "register": "neutral", "situation": "numeros", "tags": ["hora", "escuchar"], "voice": "it-IT-IsabellaNeural" },
+
+    { "id": "surv.oggi-e-chiuso", "text": "Oggi è chiuso.", "es": "Hoy está cerrado.", "register": "neutral", "situation": "numeros", "tags": ["dias", "escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "surv.la-domenica-siamo-chiusi", "text": "La domenica siamo chiusi.", "es": "Los domingos cerramos.", "register": "neutral", "situation": "numeros", "tags": ["dias", "escuchar"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "surv.a-domani", "text": "A domani!", "es": "¡Hasta mañana!", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "surv.ci-vediamo-stasera", "text": "Ci vediamo stasera?", "es": "¿Nos vemos esta noche?", "register": "neutral", "situation": "presentarse", "tags": ["dias"] },
+
+    { "id": "surv.dov-e-il-bagno", "text": "Dov'è il bagno, per favore?", "es": "¿Dónde está el baño, por favor?", "notes": "En un bar, lo educado es tomar algo antes.", "register": "neutral", "situation": "bar" },
+    { "id": "surv.posso-usare-il-bagno", "text": "Posso usare il bagno?", "es": "¿Puedo usar el baño?", "register": "neutral", "situation": "bar" },
+    { "id": "surv.c-e-il-wifi", "text": "C'è il wifi?", "es": "¿Hay wifi?", "notes": "Se pronuncia «uai-fai».", "register": "neutral", "situation": "alojamiento" },
+    { "id": "surv.qual-e-la-password", "text": "Qual è la password del wifi?", "es": "¿Cuál es la contraseña del wifi?", "register": "neutral", "situation": "alojamiento" },
+    { "id": "surv.posso-caricare", "text": "Posso caricare il telefono qui?", "es": "¿Puedo cargar el móvil aquí?", "register": "neutral", "situation": "alojamiento" },
+    { "id": "surv.mi-da-un-sacchetto", "text": "Mi dà un sacchetto, per favore?", "es": "¿Me da una bolsa, por favor?", "notes": "Las bolsas se pagan: unos céntimos.", "register": "lei", "situation": "compras" },
+    { "id": "surv.posso-lasciare-lo-zaino", "text": "Posso lasciare lo zaino qui?", "es": "¿Puedo dejar la mochila aquí?", "notes": "Útil el día que dejas el alojamiento y tu tren sale tarde.", "register": "neutral", "situation": "alojamiento" },
+    { "id": "surv.c-e-un-supermercato", "text": "C'è un supermercato qui vicino?", "es": "¿Hay un súper por aquí cerca?", "register": "neutral", "situation": "compras" }
+  ],
+  "vocab": [
+    { "id": "surv.dodici", "word": "dodici", "es": "doce", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.quindici", "word": "quindici", "es": "quince", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.sedici", "word": "sedici", "es": "dieciséis", "notes": "Hasta el 16 el «-dici» va al final.", "example": "surv.fanno-sedici-euro", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.diciassette", "word": "diciassette", "es": "diecisiete", "notes": "Del 17 al 19 el «dici-» va delante, como en español.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.diciotto", "word": "diciotto", "es": "dieciocho", "example": "surv.diciotto-e-cinquanta", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.diciannove", "word": "diciannove", "es": "diecinueve", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.venti", "word": "venti", "es": "veinte", "notes": "Con 1 y 8 pierde la vocal: «ventuno», «ventotto».", "example": "surv.sono-tre-euro-e-venti", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.trenta", "word": "trenta", "es": "treinta", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.quaranta", "word": "quaranta", "es": "cuarenta", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.cinquanta", "word": "cinquanta", "es": "cincuenta", "example": "surv.diciotto-e-cinquanta", "situation": "numeros", "tags": ["numero"] },
+    { "id": "surv.cento", "word": "cento", "es": "cien", "situation": "numeros", "tags": ["numero"] },
+
+    { "id": "surv.euro", "word": "euro", "article": "l'", "gender": "m", "plural": "euro", "es": "el euro", "notes": "No cambia en plural: «dieci euro».", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.centesimo", "word": "centesimo", "article": "il", "gender": "m", "plural": "centesimi", "es": "el céntimo", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.carta", "word": "carta", "article": "la", "gender": "f", "es": "la tarjeta", "notes": "También significa «papel».", "example": "surv.posso-pagare-con-la-carta", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.bancomat", "word": "bancomat", "article": "il", "gender": "m", "es": "el cajero automático", "notes": "También la tarjeta de débito: «pago col bancomat».", "example": "surv.c-e-un-bancomat", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.contanti", "word": "contanti", "article": "i", "gender": "m", "es": "el efectivo", "notes": "Siempre en plural: «in contanti».", "example": "surv.solo-contanti", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.spiccioli", "word": "spiccioli", "article": "gli", "gender": "m", "es": "el suelto", "example": "surv.ha-spiccioli", "situation": "compras", "tags": ["pagar"] },
+    { "id": "surv.resto", "word": "resto", "article": "il", "gender": "m", "es": "la vuelta", "example": "surv.ecco-il-resto", "situation": "compras", "tags": ["pagar"] },
+
+    { "id": "surv.mercato", "word": "mercato", "article": "il", "gender": "m", "es": "el mercado", "notes": "Ballarò y la Vucciria en Palermo, la Pescheria en Catania, Ortigia en Siracusa.", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.chilo", "word": "chilo", "article": "il", "gender": "m", "es": "el kilo", "example": "surv.mezzo-chilo", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.etto", "word": "etto", "article": "l'", "gender": "m", "es": "los cien gramos", "notes": "«Due etti» = 200 g.", "example": "surv.due-etti", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.olive", "word": "olive", "article": "le", "gender": "f", "es": "las aceitunas", "notes": "Singular: «l'oliva».", "example": "surv.due-etti", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.arance", "word": "arance", "article": "le", "gender": "f", "es": "las naranjas", "notes": "Las sanguinas sicilianas son «arance rosse».", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.frutta", "word": "frutta", "article": "la", "gender": "f", "es": "la fruta", "situation": "compras", "tags": ["mercado"] },
+    { "id": "surv.caro", "word": "caro", "es": "caro", "notes": "Barato se dice «economico».", "example": "surv.e-un-po-caro", "situation": "compras", "tags": ["mercado"] },
+
+    { "id": "surv.ora", "word": "ora", "article": "l'", "gender": "f", "es": "la hora", "notes": "«Ora» sin artículo también significa «ahora».", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.minuto", "word": "minuto", "article": "il", "gender": "m", "es": "el minuto", "example": "surv.tra-dieci-minuti", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.mezzogiorno", "word": "mezzogiorno", "gender": "m", "es": "el mediodía", "example": "surv.e-mezzogiorno", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.aperto", "word": "aperto", "es": "abierto", "situation": "numeros", "tags": ["hora"] },
+    { "id": "surv.chiuso", "word": "chiuso", "es": "cerrado", "example": "surv.oggi-e-chiuso", "situation": "numeros", "tags": ["hora"] },
+
+    { "id": "surv.oggi", "word": "oggi", "es": "hoy", "example": "surv.oggi-e-chiuso", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.domani", "word": "domani", "es": "mañana", "example": "surv.a-domani", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.ieri", "word": "ieri", "es": "ayer", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.mattina", "word": "mattina", "article": "la", "gender": "f", "es": "la mañana", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.pomeriggio", "word": "pomeriggio", "article": "il", "gender": "m", "es": "la tarde", "notes": "Más o menos de 14 a 18 h.", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.sera", "word": "sera", "article": "la", "gender": "f", "es": "la tarde-noche", "notes": "Desde las 18 h hasta que te vas a dormir.", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.stasera", "word": "stasera", "es": "esta noche", "example": "surv.ci-vediamo-stasera", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.sabato", "word": "sabato", "es": "sábado", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.domenica", "word": "domenica", "es": "domingo", "example": "surv.la-domenica-siamo-chiusi", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.feriale", "word": "feriale", "es": "laborable", "notes": "En los horarios de trenes y buses: de lunes a sábado.", "situation": "numeros", "tags": ["dias"] },
+    { "id": "surv.festivo", "word": "festivo", "es": "festivo", "notes": "Domingos y festivos: hay muchos menos trenes y autobuses.", "situation": "numeros", "tags": ["dias"] },
+
+    { "id": "surv.bagno", "word": "bagno", "article": "il", "gender": "m", "es": "el baño", "example": "surv.dov-e-il-bagno", "situation": "bar" },
+    { "id": "surv.cellulare", "word": "cellulare", "article": "il", "gender": "m", "es": "el móvil", "notes": "También «il telefono».", "situation": "alojamiento" },
+    { "id": "surv.caricabatterie", "word": "caricabatterie", "article": "il", "gender": "m", "es": "el cargador", "situation": "alojamiento" },
+    { "id": "surv.presa", "word": "presa", "article": "la", "gender": "f", "es": "el enchufe", "situation": "alojamiento" },
+    { "id": "surv.sacchetto", "word": "sacchetto", "article": "il", "gender": "m", "es": "la bolsa", "example": "surv.mi-da-un-sacchetto", "situation": "compras" },
+    { "id": "surv.supermercato", "word": "supermercato", "article": "il", "gender": "m", "es": "el supermercado", "example": "surv.c-e-un-supermercato", "situation": "compras" }
+  ],
+  "qa": [
+    {
+      "id": "surv.qa.come-sta",
+      "question": "Buongiorno! Come sta?",
+      "questionEs": "¡Buenos días! ¿Cómo está?",
+      "accepted": [
+        { "text": "Bene, grazie. E Lei?", "es": "Bien, gracias. ¿Y usted?" },
+        { "text": "Tutto bene, grazie!", "es": "Todo bien, ¡gracias!" }
+      ],
+      "distractors": [
+        { "text": "Bene, grazie. E tu?", "es": "Bien, gracias. ¿Y tú?" },
+        { "text": "Sto bene, prego.", "es": "Estoy bien, de nada." }
+      ],
+      "register": "lei",
+      "situation": "saludos",
+      "notes": "Te ha hablado de Lei («Come sta?»): responde también de Lei.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "surv.qa.ha-capito",
+      "question": "Ha capito?",
+      "questionEs": "¿Lo ha entendido?",
+      "accepted": [
+        { "text": "Non del tutto. Può ripetere, per favore?", "es": "No del todo. ¿Puede repetir, por favor?" },
+        { "text": "Sì, ho capito. Grazie!", "es": "Sí, lo he entendido. ¡Gracias!" }
+      ],
+      "distractors": [
+        { "text": "Sì, sono capito.", "es": "Sí, estoy entendido." },
+        { "text": "No, non parla.", "es": "No, no habla." }
+      ],
+      "register": "lei",
+      "situation": "no-entiendo",
+      "notes": "«Capire» va con «avere»: «ho capito».",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "surv.qa.parla-italiano",
+      "question": "Parla italiano?",
+      "questionEs": "¿Habla italiano?",
+      "accepted": [
+        { "text": "Un po'. Più piano, per favore.", "es": "Un poco. Más despacio, por favor." },
+        { "text": "Solo un pochino.", "es": "Solo un poquito." }
+      ],
+      "distractors": [
+        { "text": "Sì, parla italiano.", "es": "Sí, habla italiano." },
+        { "text": "No, non capito.", "es": "No, no entendido." }
+      ],
+      "register": "lei",
+      "situation": "no-entiendo",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "surv.qa.diciassette",
+      "question": "Allora, sono diciassette euro.",
+      "questionEs": "Bueno, son diecisiete euros.",
+      "accepted": [{ "text": "Ecco venti euro.", "es": "Aquí tiene veinte euros." }],
+      "distractors": [
+        { "text": "Ecco sette euro.", "es": "Aquí tiene siete euros." },
+        { "text": "Ecco dieci euro.", "es": "Aquí tiene diez euros." }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "17 = «diciassette»: pagas con 20 y te dan la vuelta.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "surv.qa.come-paga",
+      "question": "Paga con la carta o in contanti?",
+      "questionEs": "¿Paga con tarjeta o en efectivo?",
+      "accepted": [
+        { "text": "Con la carta, grazie.", "es": "Con tarjeta, gracias." },
+        { "text": "In contanti.", "es": "En efectivo." }
+      ],
+      "distractors": [
+        { "text": "Sì, grazie.", "es": "Sí, gracias." },
+        { "text": "Ecco il resto.", "es": "Aquí tiene la vuelta." }
+      ],
+      "register": "lei",
+      "situation": "compras",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "surv.qa.quanto-ne-vuole",
+      "question": "Quanto ne vuole?",
+      "questionEs": "¿Cuánto quiere?",
+      "accepted": [
+        { "text": "Mezzo chilo, per favore.", "es": "Medio kilo, por favor." },
+        { "text": "Due etti, grazie.", "es": "Doscientos gramos, gracias." }
+      ],
+      "distractors": [
+        { "text": "Mezzo euro, per favore.", "es": "Medio euro, por favor." },
+        { "text": "Sì, lo voglio.", "es": "Sí, lo quiero." }
+      ],
+      "register": "lei",
+      "situation": "compras",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "surv.qa.che-ore-sono",
+      "question": "Scusi, sa che ore sono?",
+      "questionEs": "Perdone, ¿sabe qué hora es?",
+      "accepted": [
+        { "text": "Sono le tre e mezza.", "es": "Son las tres y media." },
+        { "text": "Sì, è l'una.", "es": "Sí, es la una." }
+      ],
+      "distractors": [
+        { "text": "Alle tre.", "es": "A las tres." },
+        { "text": "Sono tre ore.", "es": "Son tres horas." }
+      ],
+      "register": "lei",
+      "situation": "numeros",
+      "notes": "«Alle tre» responde a «¿a qué hora?», no a «¿qué hora es?».",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "surv.qa.fino-a-domenica",
+      "question": "Resta fino a domenica?",
+      "questionEs": "¿Se queda hasta el domingo?",
+      "accepted": [
+        { "text": "Sì, fino a domenica.", "es": "Sí, hasta el domingo." },
+        { "text": "No, solo fino a domani.", "es": "No, solo hasta mañana." }
+      ],
+      "distractors": [
+        { "text": "Sì, oggi è domenica.", "es": "Sí, hoy es domingo." },
+        { "text": "No, ieri.", "es": "No, ayer." }
+      ],
+      "register": "lei",
+      "situation": "alojamiento",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "surv.qa.posso-aiutarla",
+      "question": "Buongiorno, posso aiutarLa?",
+      "questionEs": "Buenos días, ¿le puedo ayudar?",
+      "accepted": [
+        { "text": "Sì, grazie. Dov'è il bagno?", "es": "Sí, gracias. ¿Dónde está el baño?" },
+        { "text": "Sì: c'è un supermercato qui vicino?", "es": "Sí: ¿hay un súper por aquí cerca?" }
+      ],
+      "distractors": [
+        { "text": "Sì, posso aiutarLa.", "es": "Sí, le puedo ayudar." },
+        { "text": "Prego, si figuri.", "es": "De nada, no hay de qué." }
+      ],
+      "register": "lei",
+      "situation": "alojamiento",
+      "voice": "it-IT-IsabellaNeural"
+    }
+  ]
+}

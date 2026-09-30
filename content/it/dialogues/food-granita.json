@@ -1,0 +1,67 @@
+{
+  "id": "dlg.food-granita",
+  "title": "Desayuno siciliano: granita y brioche",
+  "description": "En un bar de Catania pides granita de almendra con brioche, sin nata, y preguntas cómo se paga.",
+  "situation": "bar",
+  "unit": "food",
+  "order": 40,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Camarero", "text": "Buongiorno! Prego, mi dica.", "es": "¡Buenos días! Dígame.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pregunta qué sabores de granita hay.",
+      "options": [
+        { "text": "Buongiorno! Che gusti di granita ci sono?", "es": "¡Buenos días! ¿Qué sabores de granizado hay?", "verdict": "correct", "feedback": "¡Perfecto! Saludo y pregunta en una sola frase." },
+        { "text": "Che gusti?", "es": "¿Qué sabores?", "verdict": "acceptable", "feedback": "Se entiende, pero añade un «buongiorno»." },
+        { "text": "Che gusto ha la granita?", "es": "¿A qué sabe el granizado?", "verdict": "wrong", "feedback": "Así preguntas a qué sabe, no qué sabores hay: «Che gusti ci sono?»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Camarero", "text": "Mandorla, pistacchio, gelsi, limone, caffè e cioccolato.", "es": "Almendra, pistacho, mora, limón, café y chocolate.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pide una de almendra con brioche.",
+      "options": [
+        { "text": "Una granita alla mandorla con brioche, per favore.", "es": "Un granizado de almendra con brioche, por favor.", "verdict": "correct", "feedback": "¡Genial! El desayuno siciliano por excelencia." },
+        { "text": "Mandorla con brioche.", "es": "Almendra con brioche.", "verdict": "acceptable", "feedback": "En la barra se entiende; con «per favore» queda perfecto." },
+        { "text": "Una mandorla granita con brioche.", "es": "Una almendra granizado con brioche.", "verdict": "wrong", "feedback": "En italiano el sustantivo va primero: «una granita alla mandorla»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Camarero", "text": "Con la panna sopra?", "es": "¿Con nata por encima?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sin nata, gracias.",
+      "options": [
+        { "text": "No, senza panna, grazie.", "es": "No, sin nata, gracias.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Senza, grazie.", "es": "Sin, gracias.", "verdict": "acceptable", "feedback": "Muy natural en la barra; la frase completa es más clara." },
+        { "text": "No, con panna, grazie.", "es": "No, con nata, gracias.", "verdict": "wrong", "feedback": "¡Así te la ponen con nata! «Senza» = sin." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Camarero", "text": "Si accomodi pure, gliela porto al tavolo.", "es": "Siéntese, se la llevo a la mesa.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si se paga antes en caja.",
+      "options": [
+        { "text": "Si paga prima alla cassa?", "es": "¿Se paga antes en caja?", "verdict": "correct", "feedback": "¡Muy bien! En muchos bares se paga primero." },
+        { "text": "Pago prima?", "es": "¿Pago antes?", "verdict": "acceptable", "feedback": "Correcto y corto; «alla cassa» lo deja más claro." },
+        { "text": "Pago dopo la cassa?", "es": "¿Pago después la caja?", "verdict": "wrong", "feedback": "No tiene sentido: «prima» = antes, y se paga «alla cassa»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Camarero", "text": "No, no, paga dopo, tranquillo.", "es": "No, no, paga después, tranquilo.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Pruebas la granita: di que está buenísima.",
+      "options": [
+        { "text": "Mmm, è buonissima!", "es": "¡Mmm, está buenísima!", "verdict": "correct", "feedback": "¡Perfecto! Y el camarero, encantado." },
+        { "text": "Buonissimo!", "es": "¡Buenísimo!", "verdict": "acceptable", "feedback": "Se entiende; «granita» es femenino: «buonissima»." },
+        { "text": "Sono buonissima!", "es": "¡Soy buenísima!", "verdict": "wrong", "feedback": "«Sono» es «soy»: la granita «è buonissima»." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Camarero", "text": "Grazie! Buona colazione!", "es": "¡Gracias! ¡Buen desayuno!", "voice": "it-IT-DiegoNeural" }
+  ]
+}

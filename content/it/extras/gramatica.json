@@ -1,0 +1,177 @@
+{
+  "grammar": [
+    {
+      "id": "gram.tu-lei",
+      "title": "Tú o Lei",
+      "summary": "Con desconocidos y personal (camareros, revisores, farmacéuticos) se habla de «Lei», en tercera persona, como nuestro «usted». Con gente de tu edad en plan informal, «tu».",
+      "points": [
+        "«Lei» usa el verbo como «él/ella»: «Lei è di qui?», «Come sta?».",
+        "Si alguien te tutea («Di dove sei?»), puedes tutearle tú también.",
+        "En la duda, «Lei»: nunca queda mal.",
+        "«Possiamo darci del tu?» = ¿nos tuteamos?"
+      ],
+      "table": [
+        ["", "tu", "Lei"],
+        ["¿cómo estás / está?", "Come stai?", "Come sta?"],
+        ["¿de dónde eres / es?", "Di dove sei?", "Di dov'è?"],
+        ["perdona / perdone", "Scusa!", "Scusi!"],
+        ["oye / oiga", "Senti…", "Senta…"],
+        ["gracias a ti / a usted", "Grazie a te!", "Grazie a Lei!"]
+      ],
+      "examples": [
+        { "text": "Come sta?", "es": "¿Cómo está (usted)?" },
+        { "text": "Come stai?", "es": "¿Cómo estás?" },
+        { "text": "Senta, scusi…", "es": "Oiga, perdone…" }
+      ],
+      "tags": ["registro"]
+    },
+    {
+      "id": "gram.vorrei",
+      "title": "«Vorrei»: la palabra mágica para pedir",
+      "summary": "«Vorrei» (querría) es la forma educada de pedir cualquier cosa. «Voglio» (quiero) suena exigente cuando le pides algo a alguien.",
+      "points": [
+        "Vorrei + cosa: «Vorrei un caffè».",
+        "Vorrei + infinitivo: «Vorrei pagare», «Vorrei prenotare».",
+        "Si sois dos o más: «Vorremmo…».",
+        "Igual de educados: «Mi dà…?» (¿me da…?) y «Posso avere…?» (¿me pone…?)."
+      ],
+      "table": [
+        ["persona", "volere (condicional)", "español"],
+        ["io", "vorrei", "querría / quería"],
+        ["tu", "vorresti", "querrías"],
+        ["lui / lei / Lei", "vorrebbe", "querría"],
+        ["noi", "vorremmo", "querríamos"],
+        ["voi", "vorreste", "querríais"],
+        ["loro", "vorrebbero", "querrían"]
+      ],
+      "examples": [
+        { "text": "Vorrei un biglietto per Catania.", "es": "Quería un billete para Catania." },
+        { "text": "Vorremmo un tavolo per due.", "es": "Queríamos una mesa para dos." }
+      ],
+      "tags": ["pedir"]
+    },
+    {
+      "id": "gram.essere",
+      "title": "Essere (ser / estar)",
+      "summary": "«Essere» es ser y, muchas veces, estar: «sono stanco» (estoy cansado), «è chiuso» (está cerrado). Para «¿cómo estás?» se usa «stare»: «Come stai?».",
+      "points": [
+        "Origen: «Sono spagnolo», «Sono di Madrid».",
+        "Dónde está algo: «Dov'è la stazione?».",
+        "«C'è» = hay (singular); «ci sono» = hay (plural)."
+      ],
+      "table": [
+        ["persona", "essere", "español"],
+        ["io", "sono", "soy / estoy"],
+        ["tu", "sei", "eres / estás"],
+        ["lui / lei / Lei", "è", "es / está"],
+        ["noi", "siamo", "somos / estamos"],
+        ["voi", "siete", "sois / estáis"],
+        ["loro", "sono", "son / están"]
+      ],
+      "examples": [
+        { "text": "Sono in vacanza.", "es": "Estoy de vacaciones." },
+        { "text": "È lontano?", "es": "¿Está lejos?" },
+        { "text": "C'è un bagno?", "es": "¿Hay un baño?" }
+      ],
+      "tags": ["verbo"]
+    },
+    {
+      "id": "gram.avere",
+      "title": "Avere (tener / haber)",
+      "summary": "«Avere» es tener. Como en español, el hambre, la sed, el calor y el frío se «tienen»: «ho fame», «ho caldo».",
+      "points": [
+        "La «h» nunca suena: «ho» se dice «o».",
+        "También forma el pasado: «ho capito», «ho perso il treno».",
+        "«Ce l'ho» = lo tengo; «Ce l'ha?» = ¿lo tiene?",
+        "La edad va con «avere»: «Ho trent'anni»."
+      ],
+      "table": [
+        ["persona", "avere", "español"],
+        ["io", "ho", "tengo / he"],
+        ["tu", "hai", "tienes / has"],
+        ["lui / lei / Lei", "ha", "tiene / ha"],
+        ["noi", "abbiamo", "tenemos / hemos"],
+        ["voi", "avete", "tenéis / habéis"],
+        ["loro", "hanno", "tienen / han"]
+      ],
+      "examples": [
+        { "text": "Ho fame.", "es": "Tengo hambre." },
+        { "text": "Ha spiccioli?", "es": "¿Tiene suelto?" },
+        { "text": "Ho perso il treno.", "es": "He perdido el tren." }
+      ],
+      "tags": ["verbo"]
+    },
+    {
+      "id": "gram.volere",
+      "title": "Volere (querer)",
+      "summary": "«Volere» es querer. Úsalo para planes y deseos; para pedirle algo a alguien, mejor «vorrei».",
+      "points": [
+        "Planes: «Domani voglio andare al mare».",
+        "Te lo preguntarán: «Vuole lo scontrino?», «Vuoi venire?».",
+        "«Voglio un caffè» a un camarero suena brusco: di «Vorrei un caffè»."
+      ],
+      "table": [
+        ["persona", "volere", "español"],
+        ["io", "voglio", "quiero"],
+        ["tu", "vuoi", "quieres"],
+        ["lui / lei / Lei", "vuole", "quiere"],
+        ["noi", "vogliamo", "queremos"],
+        ["voi", "volete", "queréis"],
+        ["loro", "vogliono", "quieren"]
+      ],
+      "examples": [
+        { "text": "Vuole lo scontrino?", "es": "¿Quiere el tique?" },
+        { "text": "Vuoi venire con noi?", "es": "¿Quieres venir con nosotros?" }
+      ],
+      "tags": ["verbo"]
+    },
+    {
+      "id": "gram.potere",
+      "title": "Potere (poder)",
+      "summary": "«Potere» + infinitivo sirve para pedir permiso y favores: «Posso…?» (¿puedo…?), «Può…?» (¿puede…?, de Lei).",
+      "points": [
+        "Permiso: «Posso pagare con la carta?».",
+        "Favor de Lei: «Può ripetere?»; de tú: «Puoi ripetere?».",
+        "«Si può…?» = ¿se puede…?: «Si può entrare?»."
+      ],
+      "table": [
+        ["persona", "potere", "español"],
+        ["io", "posso", "puedo"],
+        ["tu", "puoi", "puedes"],
+        ["lui / lei / Lei", "può", "puede"],
+        ["noi", "possiamo", "podemos"],
+        ["voi", "potete", "podéis"],
+        ["loro", "possono", "pueden"]
+      ],
+      "examples": [
+        { "text": "Posso entrare?", "es": "¿Puedo entrar?" },
+        { "text": "Mi può fare una foto?", "es": "¿Me puede hacer una foto?" }
+      ],
+      "tags": ["verbo"]
+    },
+    {
+      "id": "gram.andare",
+      "title": "Andare (ir)",
+      "summary": "«Andare» es ir: «Vado a Palermo» (voy a Palermo), «Andiamo!» (¡vamos!). Con transportes se usa «in»: «in treno», «in autobus».",
+      "points": [
+        "Ciudades con «a»: «vado a Siracusa»; países con «in»: «in Spagna».",
+        "«Com'è andata?» = ¿qué tal ha ido?",
+        "«Va bene» = vale, de acuerdo."
+      ],
+      "table": [
+        ["persona", "andare", "español"],
+        ["io", "vado", "voy"],
+        ["tu", "vai", "vas"],
+        ["lui / lei / Lei", "va", "va"],
+        ["noi", "andiamo", "vamos"],
+        ["voi", "andate", "vais"],
+        ["loro", "vanno", "van"]
+      ],
+      "examples": [
+        { "text": "Domani vado a Palermo.", "es": "Mañana voy a Palermo." },
+        { "text": "Vado in treno.", "es": "Voy en tren." }
+      ],
+      "tags": ["verbo"]
+    }
+  ]
+}

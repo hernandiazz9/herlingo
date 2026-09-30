@@ -1,0 +1,34 @@
+{
+  "expressions": [
+    { "id": "sic.amuni", "text": "Amunì!", "es": "¡Vamos! / ¡Venga!", "variety": "Siciliano", "standard": "Andiamo! / Dai!", "notes": "La oirás a todas horas, para irse o para animar.", "tags": ["siciliano"] },
+    { "id": "sic.tale", "text": "Talè!", "es": "¡Mira!", "variety": "Siciliano", "standard": "Guarda!", "notes": "También «talìa». Muy de Palermo.", "tags": ["siciliano"] },
+    { "id": "sic.aspe", "text": "Aspè!", "es": "¡Espera!", "variety": "Siciliano", "standard": "Aspetta!", "notes": "Muy común en todo el sur, también hablando italiano.", "tags": ["siciliano"] },
+    { "id": "sic.mizzica", "text": "Mizzica!", "es": "¡Anda! / ¡Madre mía!", "variety": "Siciliano", "standard": "Caspita! / Accidenti!", "notes": "Sorpresa o admiración; es la versión fina de «minchia».", "tags": ["siciliano"] },
+    { "id": "sic.minchia", "text": "Minchia!", "es": "¡Joder!", "variety": "Siciliano", "standard": "Accidenti!", "notes": "Frecuentísimo pero vulgar: entiéndelo, no lo uses.", "tags": ["siciliano", "vulgar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "sic.bedda", "text": "Bedda!", "es": "¡Guapa! / ¡Qué bonita!", "variety": "Siciliano", "standard": "Bella!", "notes": "En masculino «beddu». «Bedda matri!» = ¡Madre mía!", "tags": ["siciliano"] },
+    { "id": "sic.chi-si-dici", "text": "Chi si dici?", "es": "¿Qué se cuenta? / ¿Qué tal?", "variety": "Siciliano", "standard": "Che si dice? / Come va?", "tags": ["siciliano"], "voice": "it-IT-DiegoNeural" },
+    { "id": "sic.vossia", "text": "Vossia", "es": "usted", "variety": "Siciliano", "standard": "Lei", "notes": "Tratamiento de respeto de la gente mayor, de «vostra signoria».", "tags": ["siciliano"] },
+    { "id": "sic.sabbinidica", "text": "Sabbinidica!", "es": "¡Bendígame! (saludo a los mayores)", "variety": "Siciliano", "standard": "Mi benedica!", "notes": "Saludo tradicional a los mayores; te contestarán «Santu e riccu!».", "tags": ["siciliano"] },
+
+    { "id": "sic.picciriddu", "text": "picciriddu", "es": "niño pequeño", "variety": "Siciliano", "standard": "bambino", "notes": "Plural «picciriddi».", "tags": ["siciliano"] },
+    { "id": "sic.picciotto", "text": "picciotto", "es": "chaval, chico joven", "variety": "Siciliano", "standard": "ragazzo", "notes": "Sobre todo en Palermo.", "tags": ["siciliano"] },
+    { "id": "sic.carusu", "text": "carusu", "es": "chico, chaval", "variety": "Siciliano", "standard": "ragazzo", "notes": "Típico de Catania y el este; «carusa» = chica.", "tags": ["siciliano"] },
+    { "id": "sic.nicu", "text": "nicu", "es": "pequeño", "variety": "Siciliano", "standard": "piccolo", "notes": "En femenino «nica».", "tags": ["siciliano"] },
+    { "id": "sic.picciuli", "text": "picciuli", "es": "dinero, pasta", "variety": "Siciliano", "standard": "soldi", "tags": ["siciliano"] },
+    { "id": "sic.travagghiu", "text": "travagghiu", "es": "trabajo", "variety": "Siciliano", "standard": "lavoro", "notes": "Trabajar: «travagghiari».", "tags": ["siciliano"] },
+    { "id": "sic.manciari", "text": "manciari", "es": "comer", "variety": "Siciliano", "standard": "mangiare", "notes": "«Amunì a manciari!» = ¡Vamos a comer!", "tags": ["siciliano"] },
+    { "id": "sic.nuddu", "text": "nuddu", "es": "nadie", "variety": "Siciliano", "standard": "nessuno", "tags": ["siciliano"] },
+    { "id": "sic.nenti", "text": "nenti", "es": "nada", "variety": "Siciliano", "standard": "niente", "tags": ["siciliano"] },
+    { "id": "sic.ciauru", "text": "Chi ciàuru!", "es": "¡Qué bien huele!", "variety": "Siciliano", "standard": "Che profumo!", "notes": "«Ciàuru» = olor, aroma.", "tags": ["siciliano"] },
+    { "id": "sic.unni", "text": "Unni?", "es": "¿Dónde?", "variety": "Siciliano", "standard": "Dove?", "notes": "«Unn'è?» = ¿dónde está?", "tags": ["siciliano"] },
+
+    { "id": "sic.camurria", "text": "Chi camurrìa!", "es": "¡Qué rollo! / ¡Qué lata!", "variety": "Siciliano", "standard": "Che seccatura!", "tags": ["siciliano"] },
+    { "id": "sic.mischinu", "text": "Mischinu!", "es": "¡Pobrecito!", "variety": "Siciliano", "standard": "Poverino!", "notes": "En femenino «mischina».", "tags": ["siciliano"] },
+    { "id": "sic.babbiare", "text": "Sto babbiando!", "es": "¡Que es broma!", "variety": "Siciliano", "standard": "Sto scherzando!", "notes": "Del siciliano «babbiari» (bromear); muy usado en el italiano de Sicilia.", "tags": ["siciliano"] },
+    { "id": "sic.futtitinni", "text": "Futtitinni!", "es": "¡Pasa de todo!", "variety": "Siciliano", "standard": "Fregatene!", "notes": "Famosa filosofía siciliana; vulgar, solo para entenderla.", "tags": ["siciliano", "vulgar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "sic.accussi", "text": "accussì", "es": "así", "variety": "Siciliano", "standard": "così", "tags": ["siciliano"] },
+    { "id": "sic.macari", "text": "macari", "es": "también", "variety": "Siciliano", "standard": "anche", "notes": "«Macari iu» = yo también.", "tags": ["siciliano"] },
+    { "id": "sic.assai", "text": "Grazie assai!", "es": "¡Muchas gracias!", "variety": "Siciliano", "standard": "Grazie mille!", "notes": "«Assai» = mucho; lo oirás también en italiano del sur.", "tags": ["siciliano"] },
+    { "id": "sic.chi-fu", "text": "Chi fu?", "es": "¿Qué ha pasado?", "variety": "Siciliano", "standard": "Cos'è successo?", "tags": ["siciliano"], "voice": "it-IT-DiegoNeural" }
+  ]
+}

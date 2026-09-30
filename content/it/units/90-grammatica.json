@@ -1,0 +1,190 @@
+{
+  "id": "gram",
+  "order": 90,
+  "title": "Gramática mínima",
+  "description": "Solo lo que desbloquea frases: tú o Lei, «vorrei» y cinco verbos clave.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "gram.l.tu-lei",
+      "title": "Tú o Lei",
+      "items": [
+        "gram.tu-lei",
+        "gram.lei-e-di-qui",
+        "gram.sei-di-qui",
+        "gram.senta-scusi",
+        "gram.senti",
+        "gram.grazie-a-lei",
+        "gram.grazie-a-te",
+        "gram.darci-del-tu",
+        "gram.qa.in-vacanza"
+      ]
+    },
+    {
+      "id": "gram.l.volere",
+      "title": "Vorrei y volere",
+      "items": [
+        "gram.vorrei",
+        "gram.vorrei-prenotare",
+        "gram.vorremmo-due-caffe",
+        "gram.volere",
+        "gram.voglio-andare-al-mare",
+        "gram.vuole-lo-scontrino",
+        "gram.vuoi-venire",
+        "gram.qa.vuole-acqua"
+      ]
+    },
+    {
+      "id": "gram.l.essere-avere",
+      "title": "Essere y avere",
+      "items": [
+        "gram.essere",
+        "gram.vacanza",
+        "gram.sono-in-vacanza",
+        "gram.e-lontano",
+        "gram.sono-stanco",
+        "gram.avere",
+        "gram.fame",
+        "gram.ho-fame",
+        "gram.sete",
+        "gram.ho-sete",
+        "gram.caldo",
+        "gram.ho-caldo",
+        "gram.ce-l-ha-piu-piccolo",
+        "gram.non-ce-l-ho",
+        "gram.qa.fame"
+      ]
+    },
+    {
+      "id": "gram.l.potere-andare",
+      "title": "Potere y andare",
+      "items": [
+        "gram.potere",
+        "gram.posso-entrare",
+        "gram.foto",
+        "gram.mi-puo-fare-una-foto",
+        "gram.mi-fai-una-foto",
+        "gram.non-posso",
+        "gram.andare",
+        "gram.vado-a-palermo",
+        "gram.vado-in-treno",
+        "gram.dove-vai-stasera",
+        "gram.mare",
+        "gram.andiamo-al-mare",
+        "gram.qa.dove-va"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "gram.lei-e-di-qui", "text": "Lei è di qui?", "es": "¿Usted es de aquí?", "register": "lei", "situation": "presentarse", "tags": ["registro"] },
+    { "id": "gram.sei-di-qui", "text": "Sei di qui?", "es": "¿Eres de aquí?", "register": "tu", "situation": "presentarse", "tags": ["registro"] },
+    { "id": "gram.senta-scusi", "text": "Senta, scusi…", "es": "Oiga, perdone…", "notes": "Para llamar a un camarero o preguntar algo a un desconocido.", "register": "lei", "situation": "saludos", "tags": ["registro"] },
+    { "id": "gram.senti", "text": "Senti, una domanda.", "es": "Oye, una pregunta.", "register": "tu", "situation": "presentarse", "tags": ["registro"] },
+    { "id": "gram.grazie-a-lei", "text": "Grazie a Lei!", "es": "¡Gracias a usted!", "register": "lei", "situation": "saludos", "tags": ["registro"] },
+    { "id": "gram.grazie-a-te", "text": "Grazie a te!", "es": "¡Gracias a ti!", "register": "tu", "situation": "saludos", "tags": ["registro"] },
+    { "id": "gram.darci-del-tu", "text": "Possiamo darci del tu?", "es": "¿Nos tuteamos?", "literal": "¿Podemos darnos el tú?", "register": "neutral", "situation": "presentarse", "tags": ["registro"] },
+
+    { "id": "gram.vorrei-prenotare", "text": "Vorrei prenotare un tavolo per stasera.", "es": "Quería reservar una mesa para esta noche.", "register": "neutral", "situation": "restaurante", "tags": ["pedir"] },
+    { "id": "gram.vorremmo-due-caffe", "text": "Vorremmo due caffè, per favore.", "es": "Queríamos dos cafés, por favor.", "notes": "«Caffè» no cambia en plural.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "gram.voglio-andare-al-mare", "text": "Domani voglio andare al mare.", "es": "Mañana quiero ir a la playa.", "literal": "Mañana quiero ir al mar.", "register": "neutral", "situation": "presentarse" },
+    { "id": "gram.vuole-lo-scontrino", "text": "Vuole lo scontrino?", "es": "¿Quiere el tique?", "register": "lei", "situation": "compras", "tags": ["escuchar"], "voice": "it-IT-DiegoNeural" },
+    { "id": "gram.vuoi-venire", "text": "Vuoi venire con noi?", "es": "¿Quieres venir con nosotros?", "register": "tu", "situation": "presentarse", "voice": "it-IT-IsabellaNeural" },
+
+    { "id": "gram.sono-in-vacanza", "text": "Sono in vacanza.", "es": "Estoy de vacaciones.", "register": "neutral", "situation": "presentarse" },
+    { "id": "gram.e-lontano", "text": "È lontano?", "es": "¿Está lejos?", "register": "neutral", "situation": "calle" },
+    { "id": "gram.sono-stanco", "text": "Sono stanco.", "es": "Estoy cansado.", "register": "neutral", "situation": "presentarse" },
+    { "id": "gram.ho-fame", "text": "Ho fame.", "es": "Tengo hambre.", "register": "neutral", "situation": "restaurante" },
+    { "id": "gram.ho-sete", "text": "Ho sete.", "es": "Tengo sed.", "register": "neutral", "situation": "bar" },
+    { "id": "gram.ho-caldo", "text": "Ho caldo.", "es": "Tengo calor.", "register": "neutral", "situation": "presentarse" },
+    { "id": "gram.ce-l-ha-piu-piccolo", "text": "Ce l'ha più piccolo?", "es": "¿Lo tiene más pequeño?", "register": "lei", "situation": "compras" },
+    { "id": "gram.non-ce-l-ho", "text": "Non ce l'ho.", "es": "No lo tengo.", "register": "neutral", "situation": "compras" },
+
+    { "id": "gram.posso-entrare", "text": "Posso entrare?", "es": "¿Puedo entrar?", "register": "neutral", "situation": "calle" },
+    { "id": "gram.mi-puo-fare-una-foto", "text": "Mi può fare una foto, per favore?", "es": "¿Me puede hacer una foto, por favor?", "register": "lei", "situation": "calle" },
+    { "id": "gram.mi-fai-una-foto", "text": "Mi fai una foto?", "es": "¿Me haces una foto?", "register": "tu", "situation": "calle" },
+    { "id": "gram.non-posso", "text": "Non posso, mi dispiace.", "es": "No puedo, lo siento.", "register": "neutral", "situation": "presentarse" },
+    { "id": "gram.vado-a-palermo", "text": "Domani vado a Palermo.", "es": "Mañana voy a Palermo.", "register": "neutral", "situation": "presentarse" },
+    { "id": "gram.vado-in-treno", "text": "Vado in treno.", "es": "Voy en tren.", "register": "neutral", "situation": "tren" },
+    { "id": "gram.dove-vai-stasera", "text": "Dove vai stasera?", "es": "¿Adónde vas esta noche?", "register": "tu", "situation": "presentarse", "voice": "it-IT-IsabellaNeural" },
+    { "id": "gram.andiamo-al-mare", "text": "Andiamo al mare?", "es": "¿Vamos a la playa?", "register": "neutral", "situation": "presentarse" }
+  ],
+  "vocab": [
+    { "id": "gram.vacanza", "word": "vacanza", "article": "la", "gender": "f", "es": "las vacaciones", "notes": "«Sono in vacanza» = estoy de vacaciones.", "example": "gram.sono-in-vacanza", "situation": "presentarse" },
+    { "id": "gram.fame", "word": "fame", "article": "la", "gender": "f", "es": "el hambre", "example": "gram.ho-fame", "situation": "restaurante" },
+    { "id": "gram.sete", "word": "sete", "article": "la", "gender": "f", "es": "la sed", "example": "gram.ho-sete", "situation": "bar" },
+    { "id": "gram.caldo", "word": "caldo", "article": "il", "gender": "m", "es": "el calor", "notes": "Como adjetivo, «caliente».", "example": "gram.ho-caldo", "situation": "presentarse" },
+    { "id": "gram.foto", "word": "foto", "article": "la", "gender": "f", "plural": "foto", "es": "la foto", "example": "gram.mi-fai-una-foto", "situation": "calle" },
+    { "id": "gram.mare", "word": "mare", "article": "il", "gender": "m", "es": "el mar", "notes": "«Andare al mare» = ir a la playa.", "example": "gram.andiamo-al-mare", "situation": "presentarse" }
+  ],
+  "qa": [
+    {
+      "id": "gram.qa.in-vacanza",
+      "question": "Ciao! Sei qui in vacanza?",
+      "questionEs": "¡Hola! ¿Estás aquí de vacaciones?",
+      "accepted": [
+        { "text": "Sì, sono in vacanza. E tu?", "es": "Sí, estoy de vacaciones. ¿Y tú?" },
+        { "text": "Sì, per una settimana.", "es": "Sí, una semana." }
+      ],
+      "distractors": [
+        { "text": "Sì, sei in vacanza.", "es": "Sí, estás de vacaciones." },
+        { "text": "Sì, è in vacanza.", "es": "Sí, está de vacaciones." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Te pregunta con «sei» (tú); tú respondes con «sono» (yo).",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "gram.qa.vuole-acqua",
+      "question": "Vuole anche dell'acqua?",
+      "questionEs": "¿Quiere también agua?",
+      "accepted": [
+        { "text": "Sì, grazie, vorrei un'acqua naturale.", "es": "Sí, gracias, quería un agua sin gas." },
+        { "text": "No, grazie.", "es": "No, gracias." }
+      ],
+      "distractors": [
+        { "text": "Sì, vuole.", "es": "Sí, quiere." },
+        { "text": "No, non vuole.", "es": "No, no quiere." }
+      ],
+      "register": "lei",
+      "situation": "restaurante",
+      "notes": "Te pregunta «vuole» (usted quiere); respondes en primera persona: «vorrei».",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "gram.qa.fame",
+      "question": "Hai fame?",
+      "questionEs": "¿Tienes hambre?",
+      "accepted": [
+        { "text": "Sì, ho una fame da lupi!", "es": "¡Sí, tengo un hambre de lobo!" },
+        { "text": "No, non ancora.", "es": "No, todavía no." }
+      ],
+      "distractors": [
+        { "text": "Sì, sono fame.", "es": "Sí, soy hambre." },
+        { "text": "Sì, ho sete.", "es": "Sí, tengo sed." }
+      ],
+      "register": "tu",
+      "situation": "restaurante",
+      "notes": "El hambre se tiene: «ho fame».",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "gram.qa.dove-va",
+      "question": "Dove va oggi?",
+      "questionEs": "¿Adónde va hoy?",
+      "accepted": [
+        { "text": "Vado a Siracusa.", "es": "Voy a Siracusa." },
+        { "text": "Vado al mare.", "es": "Voy a la playa." }
+      ],
+      "distractors": [
+        { "text": "Va a Siracusa.", "es": "Va a Siracusa." },
+        { "text": "Sono di Siracusa.", "es": "Soy de Siracusa." }
+      ],
+      "register": "lei",
+      "situation": "presentarse",
+      "notes": "«Va» es «usted va»; tú dices «vado».",
+      "voice": "it-IT-DiegoNeural"
+    }
+  ]
+}

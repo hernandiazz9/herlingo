@@ -1,0 +1,67 @@
+{
+  "id": "dlg.emer-farmacia",
+  "title": "En la farmacia: dolor de cabeza y sol",
+  "description": "Pides algo para el dolor de cabeza, preguntas por la receta y compras crema solar.",
+  "situation": "emergencias",
+  "unit": "emer",
+  "order": 14,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Farmacéutica", "text": "Buongiorno, mi dica.", "es": "Buenos días, dígame.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y pide algo para el dolor de cabeza.",
+      "options": [
+        { "text": "Buongiorno. Ha qualcosa per il mal di testa?", "es": "Buenos días. ¿Tiene algo para el dolor de cabeza?", "verdict": "correct", "feedback": "¡Perfecto! Educado y preciso." },
+        { "text": "Voglio una medicina per la testa.", "es": "Quiero una medicina para la cabeza.", "verdict": "acceptable", "feedback": "Se entiende, pero «Ha qualcosa per il mal di testa?» suena mucho mejor." },
+        { "text": "Ho mal la testa.", "es": "Tengo mal la cabeza.", "verdict": "wrong", "feedback": "Es «ho mal di testa» o «mi fa male la testa»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Farmacéutica", "text": "Certo. Una Tachipirina da cinquecento va bene?", "es": "Claro. ¿Le va bien un paracetamol de 500?", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí y pregunta si hace falta receta.",
+      "options": [
+        { "text": "Sì, grazie. Ci vuole la ricetta?", "es": "Sí, gracias. ¿Hace falta receta?", "verdict": "correct", "feedback": "¡Genial! «Ci vuole» = hace falta." },
+        { "text": "Sì. Ricetta?", "es": "Sí. ¿Receta?", "verdict": "acceptable", "feedback": "Te entenderá, pero la frase completa es más amable." },
+        { "text": "Sì. C'è la ricetta?", "es": "Sí. ¿Hay la receta?", "verdict": "wrong", "feedback": "Así preguntas si hay receta, no si hace falta: «Ci vuole la ricetta?»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Farmacéutica", "text": "No, non serve. Ne prenda una ogni otto ore, massimo tre al giorno.", "es": "No, no hace falta. Tómese una cada ocho horas, como máximo tres al día.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "No lo has pillado todo: pide que lo repita.",
+      "options": [
+        { "text": "Scusi, può ripetere più piano?", "es": "Perdone, ¿puede repetir más despacio?", "verdict": "correct", "feedback": "¡Perfecto! Con medicinas, mejor asegurarse." },
+        { "text": "Come, scusi?", "es": "¿Cómo dice?", "verdict": "acceptable", "feedback": "Funciona, aunque no le pides que vaya más despacio." },
+        { "text": "Può ripeti?", "es": "¿Puede repites?", "verdict": "wrong", "feedback": "Después de «può» va el infinitivo: «può ripetere»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Farmacéutica", "text": "Certo: una compressa ogni otto ore. Massimo tre al giorno.", "es": "Claro: una pastilla cada ocho horas. Como máximo tres al día.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pide también una crema solar de protección alta.",
+      "options": [
+        { "text": "Grazie. Vorrei anche una crema solare con protezione alta.", "es": "Gracias. Quería también una crema solar de protección alta.", "verdict": "correct", "feedback": "¡Muy bien! «Vorrei» es la forma educada de pedir." },
+        { "text": "Anche una crema per il sole, per favore.", "es": "También una crema para el sol, por favor.", "verdict": "acceptable", "feedback": "Se entiende; lo habitual es «crema solare»." },
+        { "text": "Vorrei anche una crema solare con protezione alto.", "es": "Quería también una crema solar de protección alto.", "verdict": "wrong", "feedback": "«Protezione» es femenino: «protezione alta»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Farmacéutica", "text": "Ecco. In tutto sono quattordici euro e venti.", "es": "Aquí tiene. En total son catorce euros con veinte.", "voice": "it-IT-IsabellaNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes pagar con tarjeta.",
+      "options": [
+        { "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Carta va bene?", "es": "¿Tarjeta vale?", "verdict": "acceptable", "feedback": "Se entiende, pero es muy telegráfico." },
+        { "text": "Posso pagato con la carta?", "es": "¿Puedo pagado con tarjeta?", "verdict": "wrong", "feedback": "Después de «posso» va el infinitivo: «pagare»." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Farmacéutica", "text": "Certo, prego. Si rimetta presto!", "es": "Claro, adelante. ¡Que se mejore!", "voice": "it-IT-IsabellaNeural" }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "id": "emer",
+  "order": 14,
+  "title": "Emergencias y farmacia",
+  "description": "Pedir ayuda, robos y pérdidas, explicar qué te duele y apañarte en la farmacia.",
+  "emoji": "🚑",
+  "situation": "emergencias",
+  "lessons": [
+    {
+      "id": "emer.l.aiuto",
+      "title": "Pedir ayuda",
+      "items": [
+        "emer.aiuto",
+        "emer.e-un-emergenza",
+        "emer.chiami-il-112",
+        "emer.ambulanza",
+        "emer.chiami-un-ambulanza",
+        "emer.polizia",
+        "emer.chiami-la-polizia",
+        "emer.mi-puo-aiutare",
+        "emer.sto-male",
+        "emer.ospedale",
+        "emer.pronto-soccorso",
+        "emer.dov-e-l-ospedale",
+        "emer.attenzione",
+        "emer.qa.tutto-bene"
+      ]
+    },
+    {
+      "id": "emer.l.perso",
+      "title": "Robos y pérdidas",
+      "items": [
+        "emer.al-ladro",
+        "emer.ladro",
+        "emer.portafoglio",
+        "emer.mi-hanno-rubato",
+        "emer.passaporto",
+        "emer.ho-perso-il-passaporto",
+        "emer.ho-perso-il-telefono",
+        "emer.borsa",
+        "emer.zaino",
+        "emer.mi-sono-perso",
+        "emer.carabinieri",
+        "emer.denuncia",
+        "emer.dove-denuncia",
+        "emer.qa.cosa-e-successo"
+      ]
+    },
+    {
+      "id": "emer.l.medico",
+      "title": "Me encuentro mal",
+      "items": [
+        "emer.non-mi-sento-bene",
+        "emer.medico",
+        "emer.ho-bisogno-di-un-medico",
+        "emer.guardia-medica",
+        "emer.c-e-una-guardia-medica",
+        "emer.febbre",
+        "emer.ho-la-febbre",
+        "emer.ho-preso-troppo-sole",
+        "emer.da-quando",
+        "emer.da-ieri",
+        "emer.sono-allergico-penicillina",
+        "emer.qa.allergico"
+      ]
+    },
+    {
+      "id": "emer.l.dolori",
+      "title": "Qué te duele",
+      "items": [
+        "emer.dove-le-fa-male",
+        "emer.testa",
+        "emer.mi-fa-male-la-testa",
+        "emer.pancia",
+        "emer.mi-fa-male-la-pancia",
+        "emer.gola",
+        "emer.ho-mal-di-gola",
+        "emer.schiena",
+        "emer.piede",
+        "emer.caviglia",
+        "emer.mi-sono-fatto-male",
+        "emer.dente",
+        "emer.medusa",
+        "emer.mi-ha-punto-una-medusa",
+        "emer.qa.dove-le-fa-male"
+      ]
+    },
+    {
+      "id": "emer.l.farmacia",
+      "title": "En la farmacia",
+      "items": [
+        "emer.farmacia",
+        "emer.c-e-una-farmacia",
+        "emer.farmacia-di-turno",
+        "emer.mi-dica",
+        "emer.ha-qualcosa-per-il-mal-di-testa",
+        "emer.paracetamolo",
+        "emer.tachipirina",
+        "emer.ibuprofene",
+        "emer.compressa",
+        "emer.ricetta",
+        "emer.ci-vuole-la-ricetta",
+        "emer.senza-ricetta",
+        "emer.quante-volte",
+        "emer.due-volte-al-giorno",
+        "emer.qa.ricetta"
+      ]
+    },
+    {
+      "id": "emer.l.sole-zanzare",
+      "title": "Sol, mosquitos y tiritas",
+      "items": [
+        "emer.crema-solare",
+        "emer.vorrei-crema-solare",
+        "emer.scottatura",
+        "emer.ho-una-scottatura",
+        "emer.zanzara",
+        "emer.puntura",
+        "emer.punture-di-zanzara",
+        "emer.cerotto",
+        "emer.vorrei-dei-cerotti",
+        "emer.tosse",
+        "emer.sciroppo",
+        "emer.sciroppo-per-la-tosse",
+        "emer.qa.cosa-le-serve"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "emer.aiuto", "text": "Aiuto!", "es": "¡Socorro! / ¡Ayuda!", "register": "neutral", "situation": "emergencias", "tags": ["urgente"] },
+    { "id": "emer.e-un-emergenza", "text": "È un'emergenza!", "es": "¡Es una emergencia!", "register": "neutral", "situation": "emergencias", "tags": ["urgente"] },
+    { "id": "emer.chiami-il-112", "text": "Chiami il 112!", "es": "¡Llame al 112!", "notes": "El 112 es el número único de emergencias, como en España.", "register": "lei", "situation": "emergencias", "tags": ["urgente"] },
+    { "id": "emer.chiami-un-ambulanza", "text": "Chiami un'ambulanza!", "es": "¡Llame a una ambulancia!", "register": "lei", "situation": "emergencias", "tags": ["urgente"] },
+    { "id": "emer.chiami-la-polizia", "text": "Chiami la polizia!", "es": "¡Llame a la policía!", "register": "lei", "situation": "emergencias", "tags": ["urgente"] },
+    { "id": "emer.mi-puo-aiutare", "text": "Mi può aiutare, per favore?", "es": "¿Me puede ayudar, por favor?", "register": "lei", "situation": "emergencias" },
+    { "id": "emer.sto-male", "text": "Sto male.", "es": "Me encuentro mal.", "register": "neutral", "situation": "emergencias" },
+    { "id": "emer.dov-e-l-ospedale", "text": "Dov'è l'ospedale più vicino?", "es": "¿Dónde está el hospital más cercano?", "register": "neutral", "situation": "emergencias" },
+    { "id": "emer.attenzione", "text": "Attenzione!", "es": "¡Cuidado!", "register": "neutral", "situation": "emergencias" },
+
+    { "id": "emer.al-ladro", "text": "Al ladro!", "es": "¡Al ladrón!", "register": "neutral", "situation": "emergencias", "tags": ["urgente"] },
+    { "id": "emer.mi-hanno-rubato", "text": "Mi hanno rubato il portafoglio.", "es": "Me han robado la cartera.", "register": "neutral", "situation": "emergencias" },
+    { "id": "emer.ho-perso-il-passaporto", "text": "Ho perso il passaporto.", "es": "He perdido el pasaporte.", "register": "neutral", "situation": "emergencias" },
+    { "id": "emer.ho-perso-il-telefono", "text": "Ho perso il telefono.", "es": "He perdido el móvil.", "register": "neutral", "situation": "emergencias" },
+    { "id": "emer.mi-sono-perso", "text": "Mi sono perso.", "es": "Me he perdido.", "register": "neutral", "situation": "emergencias" },
+    { "id": "emer.dove-denuncia", "text": "Dove posso fare una denuncia?", "es": "¿Dónde puedo poner una denuncia?", "notes": "Te mandarán a la «questura» (policía) o a los carabinieri.", "register": "neutral", "situation": "emergencias" },
+
+    { "id": "emer.non-mi-sento-bene", "text": "Non mi sento bene.", "es": "No me encuentro bien.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.ho-bisogno-di-un-medico", "text": "Ho bisogno di un medico.", "es": "Necesito un médico.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.c-e-una-guardia-medica", "text": "C'è una guardia medica qui vicino?", "es": "¿Hay un médico de guardia por aquí cerca?", "notes": "En verano hay «guardia medica turistica» para visitantes.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.ho-la-febbre", "text": "Ho la febbre.", "es": "Tengo fiebre.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.ho-preso-troppo-sole", "text": "Ho preso troppo sole.", "es": "Me ha dado demasiado el sol.", "literal": "He cogido demasiado sol.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.da-quando", "text": "Da quando?", "es": "¿Desde cuándo?", "register": "neutral", "situation": "emergencias", "tags": ["salud", "escuchar"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "emer.da-ieri", "text": "Da ieri.", "es": "Desde ayer.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.sono-allergico-penicillina", "text": "Sono allergico alla penicillina.", "es": "Soy alérgico a la penicilina.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+
+    { "id": "emer.dove-le-fa-male", "text": "Dove Le fa male?", "es": "¿Dónde le duele?", "register": "lei", "situation": "emergencias", "tags": ["salud", "escuchar"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "emer.mi-fa-male-la-testa", "text": "Mi fa male la testa.", "es": "Me duele la cabeza.", "notes": "Con plural: «mi fanno male i piedi».", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.mi-fa-male-la-pancia", "text": "Mi fa male la pancia.", "es": "Me duele la barriga.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.ho-mal-di-gola", "text": "Ho mal di gola.", "es": "Me duele la garganta.", "literal": "Tengo mal de garganta.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.mi-sono-fatto-male", "text": "Mi sono fatto male alla caviglia.", "es": "Me he hecho daño en el tobillo.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.mi-ha-punto-una-medusa", "text": "Mi ha punto una medusa.", "es": "Me ha picado una medusa.", "register": "neutral", "situation": "emergencias", "tags": ["salud"] },
+
+    { "id": "emer.c-e-una-farmacia", "text": "C'è una farmacia qui vicino?", "es": "¿Hay una farmacia por aquí cerca?", "register": "neutral", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.farmacia-di-turno", "text": "Qual è la farmacia di turno?", "es": "¿Cuál es la farmacia de guardia?", "notes": "La lista está colgada en la puerta de cualquier farmacia.", "register": "neutral", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.mi-dica", "text": "Buongiorno, mi dica.", "es": "Buenos días, dígame.", "register": "lei", "situation": "emergencias", "tags": ["farmacia", "escuchar"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "emer.ha-qualcosa-per-il-mal-di-testa", "text": "Ha qualcosa per il mal di testa?", "es": "¿Tiene algo para el dolor de cabeza?", "register": "lei", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.tachipirina", "text": "Una Tachipirina, per favore.", "es": "Un paracetamol, por favor.", "notes": "Tachipirina es la marca de paracetamol que todo el mundo pide.", "register": "neutral", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.ci-vuole-la-ricetta", "text": "Ci vuole la ricetta?", "es": "¿Hace falta receta?", "register": "neutral", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.senza-ricetta", "text": "Senza ricetta non posso darglielo.", "es": "Sin receta no se lo puedo dar.", "register": "lei", "situation": "emergencias", "tags": ["farmacia", "escuchar"], "voice": "it-IT-IsabellaNeural" },
+    { "id": "emer.quante-volte", "text": "Quante volte al giorno?", "es": "¿Cuántas veces al día?", "register": "neutral", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.due-volte-al-giorno", "text": "Due volte al giorno, dopo i pasti.", "es": "Dos veces al día, después de las comidas.", "register": "neutral", "situation": "emergencias", "tags": ["farmacia", "escuchar"], "voice": "it-IT-IsabellaNeural" },
+
+    { "id": "emer.vorrei-crema-solare", "text": "Vorrei una crema solare con protezione alta.", "es": "Quería una crema solar de protección alta.", "register": "neutral", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.ho-una-scottatura", "text": "Ho una scottatura. Cosa mi consiglia?", "es": "Me he quemado con el sol. ¿Qué me recomienda?", "register": "lei", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.punture-di-zanzara", "text": "Mi serve qualcosa per le punture di zanzara.", "es": "Necesito algo para las picaduras de mosquito.", "register": "neutral", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.vorrei-dei-cerotti", "text": "Vorrei dei cerotti, per favore.", "es": "Quería unas tiritas, por favor.", "register": "neutral", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.sciroppo-per-la-tosse", "text": "Ha uno sciroppo per la tosse?", "es": "¿Tiene un jarabe para la tos?", "register": "lei", "situation": "emergencias", "tags": ["farmacia"] }
+  ],
+  "vocab": [
+    { "id": "emer.ambulanza", "word": "ambulanza", "article": "l'", "gender": "f", "es": "la ambulancia", "example": "emer.chiami-un-ambulanza", "situation": "emergencias" },
+    { "id": "emer.polizia", "word": "polizia", "article": "la", "gender": "f", "es": "la policía", "example": "emer.chiami-la-polizia", "situation": "emergencias" },
+    { "id": "emer.ospedale", "word": "ospedale", "article": "l'", "gender": "m", "es": "el hospital", "example": "emer.dov-e-l-ospedale", "situation": "emergencias" },
+    { "id": "emer.pronto-soccorso", "word": "pronto soccorso", "article": "il", "gender": "m", "es": "las urgencias", "notes": "Así se llama el servicio de urgencias del hospital.", "situation": "emergencias" },
+    { "id": "emer.ladro", "word": "ladro", "article": "il", "gender": "m", "es": "el ladrón", "example": "emer.al-ladro", "situation": "emergencias" },
+    { "id": "emer.portafoglio", "word": "portafoglio", "article": "il", "gender": "m", "es": "la cartera", "example": "emer.mi-hanno-rubato", "situation": "emergencias" },
+    { "id": "emer.passaporto", "word": "passaporto", "article": "il", "gender": "m", "es": "el pasaporte", "example": "emer.ho-perso-il-passaporto", "situation": "emergencias" },
+    { "id": "emer.borsa", "word": "borsa", "article": "la", "gender": "f", "es": "el bolso", "situation": "emergencias" },
+    { "id": "emer.zaino", "word": "zaino", "article": "lo", "gender": "m", "es": "la mochila", "example": "surv.posso-lasciare-lo-zaino", "situation": "emergencias" },
+    { "id": "emer.carabinieri", "word": "carabinieri", "article": "i", "gender": "m", "es": "los carabinieri", "notes": "Policía militar, como la Guardia Civil; también recogen denuncias.", "situation": "emergencias" },
+    { "id": "emer.denuncia", "word": "denuncia", "article": "la", "gender": "f", "es": "la denuncia", "example": "emer.dove-denuncia", "situation": "emergencias" },
+
+    { "id": "emer.medico", "word": "medico", "article": "il", "gender": "m", "es": "el médico", "example": "emer.ho-bisogno-di-un-medico", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.guardia-medica", "word": "guardia medica", "article": "la", "gender": "f", "es": "el médico de guardia", "notes": "Servicio médico de noche y festivos, para lo que no es grave.", "example": "emer.c-e-una-guardia-medica", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.febbre", "word": "febbre", "article": "la", "gender": "f", "es": "la fiebre", "example": "emer.ho-la-febbre", "situation": "emergencias", "tags": ["salud"] },
+    { "id": "emer.testa", "word": "testa", "article": "la", "gender": "f", "es": "la cabeza", "example": "emer.mi-fa-male-la-testa", "situation": "emergencias", "tags": ["cuerpo"] },
+    { "id": "emer.pancia", "word": "pancia", "article": "la", "gender": "f", "es": "la barriga", "example": "emer.mi-fa-male-la-pancia", "situation": "emergencias", "tags": ["cuerpo"] },
+    { "id": "emer.gola", "word": "gola", "article": "la", "gender": "f", "es": "la garganta", "example": "emer.ho-mal-di-gola", "situation": "emergencias", "tags": ["cuerpo"] },
+    { "id": "emer.schiena", "word": "schiena", "article": "la", "gender": "f", "es": "la espalda", "situation": "emergencias", "tags": ["cuerpo"] },
+    { "id": "emer.piede", "word": "piede", "article": "il", "gender": "m", "plural": "piedi", "es": "el pie", "situation": "emergencias", "tags": ["cuerpo"] },
+    { "id": "emer.caviglia", "word": "caviglia", "article": "la", "gender": "f", "es": "el tobillo", "example": "emer.mi-sono-fatto-male", "situation": "emergencias", "tags": ["cuerpo"] },
+    { "id": "emer.dente", "word": "dente", "article": "il", "gender": "m", "plural": "denti", "es": "el diente", "notes": "«Ho mal di denti» = me duelen las muelas.", "situation": "emergencias", "tags": ["cuerpo"] },
+    { "id": "emer.medusa", "word": "medusa", "article": "la", "gender": "f", "es": "la medusa", "example": "emer.mi-ha-punto-una-medusa", "situation": "emergencias", "tags": ["salud"] },
+
+    { "id": "emer.farmacia", "word": "farmacia", "article": "la", "gender": "f", "es": "la farmacia", "notes": "Busca la cruz verde.", "example": "emer.c-e-una-farmacia", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.paracetamolo", "word": "paracetamolo", "article": "il", "gender": "m", "es": "el paracetamol", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.ibuprofene", "word": "ibuprofene", "article": "l'", "gender": "m", "es": "el ibuprofeno", "notes": "En Italia se vende más caro que en España.", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.compressa", "word": "compressa", "article": "la", "gender": "f", "plural": "compresse", "es": "la pastilla", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.ricetta", "word": "ricetta", "article": "la", "gender": "f", "es": "la receta", "notes": "También la receta de cocina.", "example": "emer.ci-vuole-la-ricetta", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.crema-solare", "word": "crema solare", "article": "la", "gender": "f", "es": "la crema solar", "example": "emer.vorrei-crema-solare", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.scottatura", "word": "scottatura", "article": "la", "gender": "f", "es": "la quemadura", "notes": "Sobre todo la del sol.", "example": "emer.ho-una-scottatura", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.zanzara", "word": "zanzara", "article": "la", "gender": "f", "plural": "zanzare", "es": "el mosquito", "example": "emer.punture-di-zanzara", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.puntura", "word": "puntura", "article": "la", "gender": "f", "es": "la picadura", "notes": "También «la inyección».", "example": "emer.punture-di-zanzara", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.cerotto", "word": "cerotto", "article": "il", "gender": "m", "plural": "cerotti", "es": "la tirita", "example": "emer.vorrei-dei-cerotti", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.tosse", "word": "tosse", "article": "la", "gender": "f", "es": "la tos", "example": "emer.sciroppo-per-la-tosse", "situation": "emergencias", "tags": ["farmacia"] },
+    { "id": "emer.sciroppo", "word": "sciroppo", "article": "lo", "gender": "m", "es": "el jarabe", "example": "emer.sciroppo-per-la-tosse", "situation": "emergencias", "tags": ["farmacia"] }
+  ],
+  "qa": [
+    {
+      "id": "emer.qa.tutto-bene",
+      "question": "Tutto bene? Ha bisogno di aiuto?",
+      "questionEs": "¿Todo bien? ¿Necesita ayuda?",
+      "accepted": [
+        { "text": "Sì, sto male. Chiami un'ambulanza, per favore!", "es": "Sí, me encuentro mal. ¡Llame a una ambulancia, por favor!" },
+        { "text": "No, grazie, va tutto bene.", "es": "No, gracias, todo va bien." }
+      ],
+      "distractors": [
+        { "text": "Sì, ha bisogno di aiuto.", "es": "Sí, necesita ayuda." },
+        { "text": "Prego, si figuri.", "es": "De nada, no hay de qué." }
+      ],
+      "register": "lei",
+      "situation": "emergencias",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "emer.qa.cosa-e-successo",
+      "question": "Cos'è successo?",
+      "questionEs": "¿Qué ha pasado?",
+      "accepted": [
+        { "text": "Mi hanno rubato il portafoglio.", "es": "Me han robado la cartera." },
+        { "text": "Ho perso il passaporto.", "es": "He perdido el pasaporte." }
+      ],
+      "distractors": [
+        { "text": "Ho rubato il portafoglio.", "es": "He robado la cartera." },
+        { "text": "Sono perso il passaporto.", "es": "Estoy perdido el pasaporte." }
+      ],
+      "register": "neutral",
+      "situation": "emergencias",
+      "notes": "«Ho rubato» significa que el ladrón eres tú: di «mi hanno rubato».",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "emer.qa.allergico",
+      "question": "È allergico a qualche medicinale?",
+      "questionEs": "¿Es alérgico a algún medicamento?",
+      "accepted": [
+        { "text": "Sì, alla penicillina.", "es": "Sí, a la penicilina." },
+        { "text": "No, a nessuno.", "es": "No, a ninguno." }
+      ],
+      "distractors": [
+        { "text": "Sì, ho la febbre.", "es": "Sí, tengo fiebre." },
+        { "text": "No, non ho allergico.", "es": "No, no tengo alérgico." }
+      ],
+      "register": "lei",
+      "situation": "emergencias",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "emer.qa.dove-le-fa-male",
+      "question": "Dove Le fa male?",
+      "questionEs": "¿Dónde le duele?",
+      "accepted": [
+        { "text": "Mi fa male la pancia.", "es": "Me duele la barriga." },
+        { "text": "Qui, alla caviglia.", "es": "Aquí, en el tobillo." }
+      ],
+      "distractors": [
+        { "text": "Da ieri.", "es": "Desde ayer." },
+        { "text": "Mi fa male il testa.", "es": "Me duele el cabeza." }
+      ],
+      "register": "lei",
+      "situation": "emergencias",
+      "notes": "«Testa» es femenino: «la testa».",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "emer.qa.ricetta",
+      "question": "Ha la ricetta del medico?",
+      "questionEs": "¿Tiene la receta del médico?",
+      "accepted": [
+        { "text": "No, non ce l'ho.", "es": "No, no la tengo." },
+        { "text": "Sì, eccola.", "es": "Sí, aquí la tiene." }
+      ],
+      "distractors": [
+        { "text": "Due volte al giorno.", "es": "Dos veces al día." },
+        { "text": "No, non ho fame.", "es": "No, no tengo hambre." }
+      ],
+      "register": "lei",
+      "situation": "emergencias",
+      "voice": "it-IT-IsabellaNeural"
+    },
+    {
+      "id": "emer.qa.cosa-le-serve",
+      "question": "Buongiorno, cosa Le serve?",
+      "questionEs": "Buenos días, ¿qué necesita?",
+      "accepted": [
+        { "text": "Vorrei dei cerotti, per favore.", "es": "Quería unas tiritas, por favor." },
+        { "text": "Mi serve qualcosa per le punture di zanzara.", "es": "Necesito algo para las picaduras de mosquito." }
+      ],
+      "distractors": [
+        { "text": "Mi serve la zanzara.", "es": "Necesito el mosquito." },
+        { "text": "Due volte al giorno, grazie.", "es": "Dos veces al día, gracias." }
+      ],
+      "register": "lei",
+      "situation": "emergencias",
+      "voice": "it-IT-IsabellaNeural"
+    }
+  ]
+}

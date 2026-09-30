@@ -1,0 +1,112 @@
+{
+  "id": "sic",
+  "order": 95,
+  "title": "Siciliano para entender",
+  "description": "Palabras que oirás por la calle. Solo para reconocerlas: pista, el artículo es «u» y «a» («u trenu», «a spiaggia»).",
+  "emoji": "🍋",
+  "situation": "siciliano",
+  "lessons": [
+    {
+      "id": "sic.l.strada",
+      "title": "Exclamaciones de la calle",
+      "items": [
+        "sic.amuni",
+        "sic.tale",
+        "sic.aspe",
+        "sic.mizzica",
+        "sic.minchia",
+        "sic.bedda",
+        "sic.chi-si-dici",
+        "sic.vossia",
+        "sic.sabbinidica",
+        "sic.qa.amuni"
+      ]
+    },
+    {
+      "id": "sic.l.gente",
+      "title": "Gente, comida y dinero",
+      "items": [
+        "sic.picciriddu",
+        "sic.picciotto",
+        "sic.carusu",
+        "sic.nicu",
+        "sic.picciuli",
+        "sic.travagghiu",
+        "sic.manciari",
+        "sic.ciauru",
+        "sic.nuddu",
+        "sic.nenti",
+        "sic.unni",
+        "sic.qa.manciari"
+      ]
+    },
+    {
+      "id": "sic.l.frasi",
+      "title": "Frases con actitud",
+      "items": [
+        "sic.camurria",
+        "sic.mischinu",
+        "sic.babbiare",
+        "sic.futtitinni",
+        "sic.accussi",
+        "sic.macari",
+        "sic.assai",
+        "sic.chi-fu",
+        "sic.qa.camurria"
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "id": "sic.qa.amuni",
+      "question": "Amunì! Talè, u trenu arriva!",
+      "questionEs": "¡Vamos! ¡Mira, llega el tren!",
+      "accepted": [
+        { "text": "Sì, andiamo!", "es": "¡Sí, vamos!" },
+        { "text": "Arrivo, aspetta!", "es": "¡Ya voy, espera!" }
+      ],
+      "distractors": [
+        { "text": "No, grazie, non ho fame.", "es": "No, gracias, no tengo hambre." },
+        { "text": "Sì, lo guardo domani.", "es": "Sí, lo miro mañana." }
+      ],
+      "register": "tu",
+      "situation": "siciliano",
+      "notes": "«Amunì» = andiamo; «talè» = guarda.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "sic.qa.manciari",
+      "question": "Chi si dici? Amunì a manciari?",
+      "questionEs": "¿Qué tal? ¿Vamos a comer?",
+      "accepted": [
+        { "text": "Sì, volentieri! Ho fame.", "es": "¡Sí, encantado! Tengo hambre." },
+        { "text": "Sì, andiamo a mangiare!", "es": "¡Sí, vamos a comer!" }
+      ],
+      "distractors": [
+        { "text": "Sì, domani vado a Palermo.", "es": "Sí, mañana voy a Palermo." },
+        { "text": "Grazie a Lei, arrivederci!", "es": "¡Gracias a usted, adiós!" }
+      ],
+      "register": "tu",
+      "situation": "siciliano",
+      "notes": "«Manciari» = mangiare.",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "sic.qa.camurria",
+      "question": "Chi camurrìa! U bus nun passa!",
+      "questionEs": "¡Qué rollo! ¡El autobús no pasa!",
+      "accepted": [
+        { "text": "Eh sì, che seccatura!", "es": "¡Pues sí, qué rollo!" },
+        { "text": "Davvero? Aspettiamo ancora un po'.", "es": "¿En serio? Esperemos un poco más." }
+      ],
+      "distractors": [
+        { "text": "Grazie, molto gentile!", "es": "¡Gracias, muy amable!" },
+        { "text": "Sì, è bellissimo!", "es": "¡Sí, es precioso!" }
+      ],
+      "register": "tu",
+      "situation": "siciliano",
+      "notes": "«Camurrìa» = seccatura, un fastidio.",
+      "voice": "it-IT-IsabellaNeural"
+    }
+  ]
+}

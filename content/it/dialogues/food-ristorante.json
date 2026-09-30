@@ -1,0 +1,100 @@
+{
+  "id": "dlg.food-ristorante",
+  "title": "Cena en Ortigia: mesa, alergia y cuenta",
+  "description": "Pides mesa fuera, avisas de tu alergia, sigues la recomendación del camarero y preguntas por el «coperto».",
+  "situation": "restaurante",
+  "unit": "food",
+  "order": 44,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Camarero", "text": "Buonasera! Quanti siete?", "es": "¡Buenas noches! ¿Cuántos sois?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sois dos.",
+      "options": [
+        { "text": "Buonasera! Siamo in due.", "es": "¡Buenas noches! Somos dos.", "verdict": "correct", "feedback": "¡Perfecto! «Siamo in due» es la fórmula." },
+        { "text": "Due, grazie.", "es": "Dos, gracias.", "verdict": "acceptable", "feedback": "Muy normal; la frase completa es «siamo in due»." },
+        { "text": "Sono due.", "es": "Son dos.", "verdict": "wrong", "feedback": "«Sono due» es «son dos»; tú estás incluido: «siamo in due»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Camarero", "text": "Dentro o fuori?", "es": "¿Dentro o fuera?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pide sentaros fuera.",
+      "options": [
+        { "text": "Fuori, grazie.", "es": "Fuera, gracias.", "verdict": "correct", "feedback": "¡Perfecto! Corto y educado." },
+        { "text": "Fuori.", "es": "Fuera.", "verdict": "acceptable", "feedback": "Correcto, pero con «grazie» queda mejor." },
+        { "text": "Fuori è bene.", "es": "Fuera es bien.", "verdict": "wrong", "feedback": "Se dice «fuori va bene»: con «bene» se usa «andare»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Camarero", "text": "Prego, accomodatevi. Ecco il menù.", "es": "Adelante, sentaos. Aquí tenéis la carta.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta qué os recomienda.",
+      "options": [
+        { "text": "Cosa ci consiglia?", "es": "¿Qué nos recomienda?", "verdict": "correct", "feedback": "¡Genial! De Lei y en plural: «ci»." },
+        { "text": "Qual è la specialità della casa?", "es": "¿Cuál es la especialidad de la casa?", "verdict": "acceptable", "feedback": "Buena pregunta también, aunque no pide su consejo." },
+        { "text": "Cosa mi consigli?", "es": "¿Qué me recomiendas?", "verdict": "wrong", "feedback": "«Consigli» es de tú; al camarero, de Lei: «Cosa ci consiglia?»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Camarero", "text": "La pasta con le sarde è la nostra specialità. E il pesce spada è freschissimo.", "es": "La pasta con sardinas es nuestra especialidad. Y el pez espada está fresquísimo.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pide la pasta con sardinas y avisa de que eres alérgico a los frutos secos.",
+      "options": [
+        { "text": "Per me la pasta con le sarde. Sono allergico alla frutta secca.", "es": "Para mí, la pasta con sardinas. Soy alérgico a los frutos secos.", "verdict": "correct", "feedback": "¡Muy bien! Avisar de la alergia es lo primero." },
+        { "text": "La pasta con le sarde. Ho un'allergia.", "es": "La pasta con sardinas. Tengo una alergia.", "verdict": "acceptable", "feedback": "Bien, pero di a qué: «alla frutta secca»." },
+        { "text": "Per me la pasta con le sarde. Sono allergia alla frutta secca.", "es": "Para mí, la pasta con sardinas. Soy alergia a los frutos secos.", "verdict": "wrong", "feedback": "«Allergia» es el sustantivo; di «sono allergico»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Camarero", "text": "Attenzione: nella pasta con le sarde ci sono i pinoli. Le consiglio la pasta alla Norma.", "es": "Cuidado: la pasta con sardinas lleva piñones. Le recomiendo la pasta alla Norma.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Acepta la recomendación.",
+      "options": [
+        { "text": "Va bene, allora la pasta alla Norma.", "es": "Vale, entonces la pasta alla Norma.", "verdict": "correct", "feedback": "¡Perfecto! «Allora» = entonces." },
+        { "text": "Sì, la Norma, grazie.", "es": "Sí, la Norma, gracias.", "verdict": "acceptable", "feedback": "Se entiende perfectamente; «va bene, allora…» suena más natural." },
+        { "text": "Va bene, allora la pasta con le sarde.", "es": "Vale, entonces la pasta con sardinas.", "verdict": "wrong", "feedback": "¡Lleva piñones y eres alérgico! Pide la Norma." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Camarero", "text": "Ottima scelta! Arriva subito.", "es": "¡Muy buena elección! Enseguida sale.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l6",
+      "speaker": "learner",
+      "prompt": "Ya habéis cenado: pide la cuenta.",
+      "options": [
+        { "text": "Scusi, ci porta il conto, per favore?", "es": "Perdone, ¿nos trae la cuenta, por favor?", "verdict": "correct", "feedback": "¡Perfecto! Educado y de Lei." },
+        { "text": "Il conto, per favore.", "es": "La cuenta, por favor.", "verdict": "acceptable", "feedback": "Correcto y muy usado, solo más corto." },
+        { "text": "Quanto costa il conto?", "es": "¿Cuánto cuesta la cuenta?", "verdict": "wrong", "feedback": "Suena raro: pide «il conto» y ya verás el total." }
+      ]
+    },
+    { "id": "n7", "speaker": "native", "name": "Camarero", "text": "Subito. Sono trentotto euro, con il coperto.", "es": "Enseguida. Son treinta y ocho euros, con el cubierto.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l7",
+      "speaker": "learner",
+      "prompt": "Pregunta qué es el «coperto».",
+      "options": [
+        { "text": "Scusi, cos'è il coperto?", "es": "Perdone, ¿qué es el «coperto»?", "verdict": "correct", "feedback": "¡Muy bien! Preguntar no es de mala educación." },
+        { "text": "Coperto?", "es": "¿«Coperto»?", "verdict": "acceptable", "feedback": "Se entiende, pero la pregunta completa es más amable." },
+        { "text": "Dov'è il coperto?", "es": "¿Dónde está el «coperto»?", "verdict": "wrong", "feedback": "Así preguntas dónde está, no qué es: «Cos'è il coperto?»." }
+      ]
+    },
+    { "id": "n8", "speaker": "native", "name": "Camarero", "text": "È il servizio al tavolo: pane, tovaglia… Due euro a testa.", "es": "Es el servicio de mesa: pan, mantel… Dos euros por cabeza.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l8",
+      "speaker": "learner",
+      "prompt": "Di que pagas con tarjeta y que estaba todo buenísimo.",
+      "options": [
+        { "text": "Pago con la carta. Era tutto buonissimo!", "es": "Pago con tarjeta. ¡Estaba todo buenísimo!", "verdict": "correct", "feedback": "¡Perfecto! Final redondo." },
+        { "text": "Pago con la carta. È tutto buonissimo.", "es": "Pago con tarjeta. Está todo buenísimo.", "verdict": "acceptable", "feedback": "Se entiende; como ya habéis terminado, mejor «era»." },
+        { "text": "Pago con la carta. Ero tutto buonissimo!", "es": "Pago con tarjeta. ¡Yo era todo buenísimo!", "verdict": "wrong", "feedback": "«Ero» es «yo era»; para la comida, «era tutto buonissimo»." }
+      ]
+    },
+    { "id": "n9", "speaker": "native", "name": "Camarero", "text": "Grazie, gentilissimi! Buona serata!", "es": "¡Gracias, sois muy amables! ¡Buenas noches!", "voice": "it-IT-DiegoNeural" }
+  ]
+}
