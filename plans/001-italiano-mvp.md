@@ -81,7 +81,7 @@ Worktree setup: npm ci
 - Outcome: 5 units / 22 lessons, 260 phrases, 177 vocab, 51 Q&A, 9 dialogues; persona in units/32-persona-sobre-mi.json; sample deleted · f7b3157
 
 ## T06 — Content: survival, food, grammar cards and Sicilian expressions
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T02
 - Goal: Write the remaining content: survival basics, basic food, minimal grammar cards and recognition-only Sicilian expressions.
 - Context: docs/brief.md (priorities 3–6), docs/content-guide.md (order ranges 10–19, 40–49, 90+). The learner already knows greetings and numbers at A1: go quickly past them and focus on what he will hear and need (not understanding, asking to repeat, prices, time, emergencies, pharmacy). Food: bar (caffè, cornetto, granita e brioche, arancini/arancine) and restaurant (table, ordering, allergies, bill, "coperto"). Grammar cards: tu vs Lei, "vorrei", present of essere, avere, volere, potere, andare. Sicilian: ~25 common words/expressions to recognise, with standard Italian equivalent. Audio is generated later (T03/T09): do not generate mp3s here.
@@ -90,7 +90,7 @@ Worktree setup: npm ci
   - About 180 phrases, 140 vocab items, 4 dialogues, Q&A pairs for every lesson, grammar cards and ~25 Sicilian expressions, in 4–5 units.
   - Every phrase has register and a Spain-Spanish translation.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units surv/emer/food/gram/sic, 31 lessons, 215 phrases, 155 vocab, 36 Q&A, 4 dialogues, 7 grammar cards, 28 Sicilian expressions · ef7b48d
 
 ## T08 — Pocket phrasebook and dialogue simulator
 - Status: done
@@ -105,7 +105,7 @@ Worktree setup: npm ci
 - Outcome: /frasario (search, favourites, Mostrar) and /dialogos/[id] simulator (hidden text, pick/say answer, transcript) · 541ce3d
 
 ## T07 — Path, progress, spaced repetition, placement test and profile
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T04, T05, T06, T11
 - Goal: Turn lessons into a course: the home path of units, persistent progress with streak and XP, spaced-repetition review, the first-launch placement test and the profile/settings screen.
 - Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (sections, gamification, placement). Lesson player and `LessonResult` from T04; real content from T05/T06 (loaded by glob, never hard-coded). The lesson page does not pass `onComplete` yet: add a small client wrapper in `src/app/leccion/[id]/page.tsx` to persist `LessonResult`; nothing links to `/leccion/<id>/` yet. Lessons can hold up to ~29 items while a session samples 10–12 exercises: a lesson counts as done after one completion, and the SRS should cover the items not yet practised. Storage is localStorage with a versioned schema and safe parsing. Keep the `ThemeToggle` from T11 in the profile settings.
@@ -120,10 +120,10 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T09 — Italian content quality review and final audio
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T03, T05, T06
 - Goal: A native-level review of all Italian content so Hernán learns correct, natural, current spoken Italian, then generate the final audio for everything.
-- Context: docs/brief.md, docs/content-guide.md, everything under `content/it/`. Review as a native Italian teacher who knows Sicily: grammar, articles and gender, naturalness, register (Lei vs tu) consistency, realistic dialogues, correct Sicilian place and transport names, Spain-Spanish translations with "tú". Recheck facts flagged by T05: prices (Cefalù train €6.10, airport bus €7) and "validators on the platform". Update docs/content-guide.md's "6–12 items per lesson" rule to match reality (T05 lessons hold 12–29 items). Audio pipeline from T03 (`npm run audio` creates .venv itself; hashed file names + `public/audio/<lang>/manifest.json`). Also fix `docs/content-guide.md` "Audio keys" section and the `Playable` comment in `src/lib/content/types.ts`, which still say mp3s are `<audioKey>.mp3`.
+- Context: docs/brief.md, docs/content-guide.md, everything under `content/it/`. Review as a native Italian teacher who knows Sicily: grammar, articles and gender, naturalness, register (Lei vs tu) consistency, realistic dialogues, correct Sicilian place and transport names, Spain-Spanish translations with "tú". Also double-check the less common Sicilian items (`sic.sabbinidica`, `sic.babbiare`) and how the TTS reads "112" (T06). Recheck facts flagged by T05: prices (Cefalù train €6.10, airport bus €7) and "validators on the platform". Update docs/content-guide.md's "6–12 items per lesson" rule to match reality (T05 lessons hold 12–29 items). Audio pipeline from T03 (`npm run audio` creates .venv itself; hashed file names + `public/audio/<lang>/manifest.json`). Also fix `docs/content-guide.md` "Audio keys" section and the `Playable` comment in `src/lib/content/types.ts`, which still say mp3s are `<audioKey>.mp3`.
 - Scope: may touch `content/it/**` (except placement files), `public/audio/it/**`, `docs/content-review.md`, `docs/content-guide.md`, the `Playable` comment in `src/lib/content/types.ts` / must not touch `src/**`, schemas.
 - Done when:
   - Every error found is fixed in place; `docs/content-review.md` lists the categories of fixes with counts and any remaining doubts.
@@ -174,6 +174,7 @@ Worktree setup: npm ci
 - 2026-09-30 T08: phrasebook shows phrases only (no vocab/expressions); tap row = play + actions; favourites in localStorage `lang-lern:favorites:<lang>`; Ver texto per bubble; score counts first attempts; voice answer matched to closest option (word overlap ≥0.6); local helpers fold() in components/phrasebook/search.ts and recognition in components/dialogue/recognition.ts. (agent)
 - 2026-09-30 T05: id prefixes move-treno, move-bus, move-strada, talk-chiacchiere, talk-io, dlg.move-*/dlg.talk-* (orders 20, 22, 24, 30, 32); every item placed in a lesson (12–29 items per lesson, relies on the player sampling 10–12 exercises); persona = Hernán, Spanish from Madrid, programmer, travelling alone ~10 days Palermo→Cefalù→Agrigento→Catania→Siracusa (Madrid/job are guesses, Hernán to check); phrases Italians say tagged `te-dicen` with Diego/Isabella voices. (agent)
 - 2026-09-30 T04: order = recognition first, one match, then shuffled production; grammar cards = ungraded "Un apunte" steps; seed = Date.now() (prop overrides); wrong exercise re-queued max 2×; fill-gap uses chips; XP = 10 + 1 per first-try correct + 5 if perfect; lesson is a full-screen overlay; speaking pause in localStorage; helpers checkAnswer/similarity in src/lib/exercises, listenOnce/scoreSpeech in src/lib/speech. (agent)
+- 2026-09-30 T06: units surv (10), emer (14), food (40, single unit with 10 lessons), gram (90), sic (95); grammar in extras/gramatica.json, expressions in extras/siciliano.json; ~20% over target volume kept; "voi" questions marked neutral; Palermo arancina / Catania arancino. (agent)
 
 ## Proposals (new scope)
 - 2026-09-30 T04: move snail/mic icons into src/components/icons.tsx.
@@ -200,3 +201,4 @@ Worktree setup: npm ci
 - 2026-09-30 17:46 T08 done · branch worktree-agent-a321e18356bfddd85 → 541ce3d
 - 2026-09-30 17:55 T05 done · branch worktree-agent-aded81b07fd5834ff → f7b3157
 - 2026-09-30 17:56 T04 done · branch worktree-agent-a0a9ff17219f94c6d → b67778b
+- 2026-09-30 17:59 T06 done · branch worktree-agent-ad1ff0cf0c0fcc3fb → ef7b48d
