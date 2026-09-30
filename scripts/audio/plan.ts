@@ -60,6 +60,14 @@ export function planAudio(pack: Pack): AudioJob[] {
     }
   }
   for (const q of pack.placement) add(q.audio);
+  // Story key words are pack vocab / phrases / expressions (planned above).
+  for (const s of pack.stories) {
+    s.sentences.forEach((p) => add(p));
+    for (const q of s.questions) {
+      add(q);
+      q.options.forEach((p) => add(p));
+    }
+  }
   return [...jobs.values()].sort((a, b) => a.key.localeCompare(b.key));
 }
 

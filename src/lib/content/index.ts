@@ -8,7 +8,7 @@
  * build and typecheck; git-ignored). Never import JSON from `content/` directly.
  */
 import bundle from "./generated/packs.json";
-import type { Dialogue, Lesson, LessonItem, Pack, Playable, Situation, Unit } from "./types";
+import type { Dialogue, Lesson, LessonItem, Pack, Playable, Situation, Story, StoryKeyword, Unit } from "./types";
 
 export type * from "./types";
 export { audioKey } from "./keys";
@@ -38,6 +38,7 @@ interface Index {
   lessons: Map<string, Lesson>;
   units: Map<string, Unit>;
   dialogues: Map<string, Dialogue>;
+  stories: Map<string, Story>;
   situations: Map<string, Situation>;
 }
 
@@ -55,6 +56,7 @@ function index(pack: Pack): Index {
       lessons: new Map(pack.units.flatMap((u) => u.lessons.map((l) => [l.id, l] as const))),
       units: new Map(pack.units.map((u) => [u.id, u])),
       dialogues: new Map(pack.dialogues.map((d) => [d.id, d])),
+      stories: new Map(pack.stories.map((s) => [s.id, s])),
       situations: new Map(pack.meta.situations.map((s) => [s.id, s])),
     };
     indexes.set(pack, idx);
@@ -119,5 +121,32 @@ export function listPlayables(pack: Pack = getPack()): Playable[] {
     }
   }
   for (const q of pack.placement) add(q.audio);
+  for (const s of pack.stories) {
+    s.sentences.forEach(add);
+    for (const q of s.questions) {
+      add(q);
+      q.options.forEach(add);
+    }
+  }
   return [...out.values()];
+}
+
+/** Every story, in trip order (`order`). */
+export function getStories(pack: Pack = getPack()): Story[] {
+  return pack.stories;
+}
+
+export function getStory(id: string, pack: Pack = getPack()): Story | undefined {
+  return index(pack).stories.get(id);
+}
+
+/**
+ * The story's key words, resolved (vocab / phrase / expression, each playable with `text` and
+ * `es`), in story order. Their ids are normal item ids: record SRS outcomes on them.
+ */
+export function getStoryKeywords(story: Story, pack: Pack = getPack()): StoryKeyword[] {
+  const items = index(pack).items;
+  return story.keywords
+    .map((id) => items.get(id))
+    .filter((x): x is StoryKeyword => x !== undefined && (x.kind === "vocab" || x.kind === "phrase" || x.kind === "expression"));
 }

@@ -14,9 +14,35 @@ import type {
   Phrase,
   PlacementQuestion,
   QA,
+  Story,
+  StoryGap,
+  StoryKeyword,
   Unit,
   Vocab,
 } from "./types";
+
+/** Story guidelines: outside these ranges `content:check` warns (never fails). */
+export const STORY_GUIDE = {
+  words: [80, 150],
+  keywords: [8, 10],
+  questions: [3, 4],
+  gaps: [4, 6],
+} as const;
+
+/** Prefix required on vocab items defined inline in a story file. */
+export const STORY_VOCAB_PREFIX = "story-";
+
+/** Words in a text: whitespace-separated tokens that contain a letter or digit. */
+export function countWords(text: string): number {
+  return text.split(/\s+/).filter((t) => /[\p{L}\p{N}]/u.test(t)).length;
+}
+
+/** Index of the first whole-word, case-insensitive occurrence of `word` in `text`, or -1. */
+function findWord(text: string, word: string): number {
+  const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const m = new RegExp(`(?<![\\p{L}\\p{N}])${escaped}(?![\\p{L}\\p{N}])`, "iu").exec(text);
+  return m ? m.index : -1;
+}
 
 export interface SourceFile {
   /** Path relative to the repo root, used in error messages. */
@@ -30,11 +56,14 @@ export interface PackSources {
   units: SourceFile[];
   dialogues: SourceFile[];
   extras: SourceFile[];
+  stories: SourceFile[];
 }
 
 export interface BuildResult {
   pack: Pack | null;
   errors: string[];
+  /** Guideline misses (e.g. story length): reported, never fatal. */
+  warnings: string[];
 }
 
 function parse<T extends z.ZodType>(schema: T, src: SourceFile, errors: string[]): z.infer<T> | null {
@@ -50,7 +79,8 @@ export function buildPack(src: PackSources): BuildResult {
   const errors: string[] = [];
   const schemaErrors: string[] = [];
   const meta = parse(S.PackMeta, src.meta, schemaErrors);
-  if (!meta) return { pack: null, errors: schemaErrors };
+  const warnings: string[] = [];
+  if (!meta) return { pack: null, errors: schemaErrors, warnings };
   if (meta.lang !== src.lang) errors.push(`${src.meta.file}: lang "${meta.lang}" must equal folder name "${src.lang}"`);
 
   const defaultVoice = meta.voices[0];
@@ -62,7 +92,7 @@ export function buildPack(src: PackSources): BuildResult {
 
   // One id namespace for everything in the pack.
   const owners = new Map<string, string>();
-  const kinds = new Map<string, LessonItemKind | "unit" | "lesson" | "dialogue" | "placement">();
+  const kinds = new Map<string, LessonItemKind | "unit" | "lesson" | "dialogue" | "placement" | "story">();
   const claim = (id: string, kind: Parameters<typeof kinds.set>[1], file: string) => {
     const prev = owners.get(id);
     if (prev) errors.push(`${file}: duplicate id "${id}" (already used in ${prev})`);
@@ -86,6 +116,19 @@ export function buildPack(src: PackSources): BuildResult {
   const expressions: Expression[] = [];
   const placement: PlacementQuestion[] = [];
 
+  const addVocab = (file: string, v: z.infer<typeof S.Vocab>) => {
+    const where = `${file}: vocab "${v.id}"`;
+    claim(v.id, "vocab", file);
+    checkSituation(v.situation, where);
+    vocab.push({
+      ...v,
+      kind: "vocab",
+      text: vocabText(v.word, v.article),
+      audioKey: audioKey(v.id),
+      voice: checkVoice(v.voice, where),
+    });
+  };
+
   const addItems = (file: string, f: z.infer<typeof S.ExtrasFile> | z.infer<typeof S.UnitFile>) => {
     for (const p of f.phrases) {
       const where = `${file}: phrase "${p.id}"`;
@@ -93,18 +136,7 @@ export function buildPack(src: PackSources): BuildResult {
       checkSituation(p.situation, where);
       phrases.push({ ...p, kind: "phrase", audioKey: audioKey(p.id), voice: checkVoice(p.voice, where) });
     }
-    for (const v of f.vocab) {
-      const where = `${file}: vocab "${v.id}"`;
-      claim(v.id, "vocab", file);
-      checkSituation(v.situation, where);
-      vocab.push({
-        ...v,
-        kind: "vocab",
-        text: vocabText(v.word, v.article),
-        audioKey: audioKey(v.id),
-        voice: checkVoice(v.voice, where),
-      });
-    }
+    for (const v of f.vocab) addVocab(file, v);
     for (const q of f.qa) {
       const where = `${file}: qa "${q.id}"`;
       claim(q.id, "qa", file);
@@ -200,9 +232,74 @@ export function buildPack(src: PackSources): BuildResult {
     dialogues.push({ ...d, turns });
   }
 
+  // Stories (gaps and key word refs are resolved below, once every item is registered).
+  const stories: Story[] = [];
+  const rawStories: { file: string; story: Story; raw: z.infer<typeof S.StoryFile> }[] = [];
+  const storyOrders = new Map<number, string>();
+  for (const s of src.stories) {
+    const st = parse(S.StoryFile, s, schemaErrors);
+    if (!st) continue;
+    const where = `${s.file}: story "${st.id}"`;
+    claim(st.id, "story", s.file);
+    checkSituation(st.situation, where);
+    const clash = storyOrders.get(st.order);
+    if (clash) errors.push(`${where}: order ${st.order} already used by story "${clash}"`);
+    storyOrders.set(st.order, st.id);
+    const voice = checkVoice(st.voice, where);
+    const localIds = new Set<string>();
+    const local = (id: string) => {
+      if (localIds.has(id)) errors.push(`${where}: duplicate local id "${id}" (sentences, questions and gaps share one namespace)`);
+      localIds.add(id);
+    };
+    const keywords = st.keywords.map((k) => {
+      if (typeof k === "string") return k;
+      if (!k.id.startsWith(STORY_VOCAB_PREFIX)) {
+        errors.push(`${where}: inline key word "${k.id}" must have an id starting with "${STORY_VOCAB_PREFIX}"`);
+      }
+      addVocab(s.file, k);
+      return k.id;
+    });
+    if (new Set(keywords).size !== keywords.length) errors.push(`${where}: repeated key word`);
+    const sentences = st.sentences.map((x) => {
+      local(x.id);
+      const v = x.voice ? checkVoice(x.voice, `${where} sentence "${x.id}"`) : voice;
+      return { ...x, audioKey: audioKey(st.id, x.id), voice: v };
+    });
+    const questions = st.questions.map((q) => {
+      local(q.id);
+      if (q.correct >= q.options.length) errors.push(`${where}: question "${q.id}": correct ${q.correct} is out of range`);
+      return {
+        ...q,
+        text: q.question,
+        audioKey: audioKey(st.id, q.id),
+        voice,
+        options: q.options.map((o, i) => ({ ...o, audioKey: audioKey(st.id, q.id, i + 1), voice })),
+      };
+    });
+    for (const g of st.gaps) local(g.id);
+    const story: Story = {
+      id: st.id,
+      order: st.order,
+      title: st.title,
+      titleEs: st.titleEs,
+      description: st.description,
+      emoji: st.emoji,
+      situation: st.situation,
+      level: st.level,
+      voice,
+      sentences,
+      keywords,
+      questions,
+      gaps: [],
+      wordCount: sentences.reduce((n, x) => n + countWords(x.text), 0),
+    };
+    stories.push(story);
+    rawStories.push({ file: s.file, story, raw: st });
+  }
+
   // A file that failed its schema was skipped: checking references now would only add
   // misleading "unknown id" errors. Fix the schema errors first.
-  if (schemaErrors.length) return { pack: null, errors: [...schemaErrors, ...errors] };
+  if (schemaErrors.length) return { pack: null, errors: [...schemaErrors, ...errors], warnings };
 
   // References (after everything is registered).
   const allowedInLesson = new Set<string>(S.LESSON_ITEM_KINDS);
@@ -233,11 +330,68 @@ export function buildPack(src: PackSources): BuildResult {
     });
   }
 
+  const keywordItems = new Map<string, StoryKeyword>();
+  for (const list of [vocab, phrases, expressions]) for (const i of list) keywordItems.set(i.id, i);
+  for (const { file, story, raw } of rawStories) {
+    const where = `${file}: story "${story.id}"`;
+    for (const k of story.keywords) {
+      if (!keywordItems.has(k)) {
+        const kind = kinds.get(k);
+        errors.push(`${where}: key word "${k}" ${kind ? `is a ${kind}, not a vocab, phrase or expression` : "is unknown"}`);
+      }
+    }
+    const sentences = new Map(story.sentences.map((x) => [x.id, x]));
+    for (const g of raw.gaps) {
+      const at = `${where}: gap "${g.id}"`;
+      const sentence = sentences.get(g.sentence);
+      if (!sentence) {
+        errors.push(`${at}: unknown sentence "${g.sentence}"`);
+        continue;
+      }
+      if (!story.keywords.includes(g.answer)) {
+        errors.push(`${at}: answer "${g.answer}" is not one of the story key words`);
+        continue;
+      }
+      const item = keywordItems.get(g.answer);
+      if (!item) continue; // already reported above
+      const gap = g.gap ?? (item.kind === "vocab" ? item.word : item.text);
+      const start = findWord(sentence.text, gap);
+      if (start < 0) {
+        errors.push(`${at}: "${gap}" is not in sentence "${g.sentence}" (set "gap" to the exact form used)`);
+        continue;
+      }
+      const lower = g.distractors.map((d) => d.toLowerCase());
+      if (lower.includes(gap.toLowerCase())) errors.push(`${at}: a distractor equals the answer "${gap}"`);
+      if (new Set(lower).size !== lower.length) errors.push(`${at}: repeated distractor`);
+      const gapItem: StoryGap = {
+        id: g.id,
+        sentence: g.sentence,
+        answer: g.answer,
+        gap: sentence.text.slice(start, start + gap.length),
+        before: sentence.text.slice(0, start),
+        after: sentence.text.slice(start + gap.length),
+        distractors: g.distractors,
+      };
+      story.gaps.push(gapItem);
+    }
+    const counts = {
+      words: story.wordCount,
+      keywords: story.keywords.length,
+      questions: story.questions.length,
+      gaps: raw.gaps.length,
+    };
+    const misses = (Object.keys(STORY_GUIDE) as (keyof typeof STORY_GUIDE)[])
+      .filter((k) => counts[k] < STORY_GUIDE[k][0] || counts[k] > STORY_GUIDE[k][1])
+      .map((k) => `${counts[k]} ${k} (guideline ${STORY_GUIDE[k][0]}–${STORY_GUIDE[k][1]})`);
+    if (misses.length) warnings.push(`${where}: ${misses.join(", ")}`);
+  }
+
   units.sort((a, b) => a.order - b.order);
   dialogues.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
+  stories.sort((a, b) => a.order - b.order);
 
-  const pack: Pack = { meta, units, dialogues, phrases, vocab, qa, grammar, expressions, placement };
-  return { pack: errors.length ? null : pack, errors };
+  const pack: Pack = { meta, units, dialogues, stories, phrases, vocab, qa, grammar, expressions, placement };
+  return { pack: errors.length ? null : pack, errors, warnings };
 }
 
 /** Counts for the content:check summary. */
@@ -252,5 +406,7 @@ export function packStats(p: Pack) {
     expressions: p.expressions.length,
     dialogues: p.dialogues.length,
     placement: p.placement.length,
+    stories: p.stories.length,
+    explanations: p.phrases.filter((x) => x.explanation).length,
   };
 }

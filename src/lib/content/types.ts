@@ -80,6 +80,60 @@ export type PlacementQuestion = Omit<z.infer<typeof S.PlacementQuestion>, "voice
   audio?: Playable;
 };
 
+export type Level = z.infer<typeof S.Level>;
+
+/** Audio key `<storyId>--<sentenceId>`; voice = sentence voice or story voice. */
+export type StorySentence = Omit<z.infer<typeof S.StorySentence>, "voice"> & Playable;
+
+/**
+ * `text`/`audioKey` (`<storyId>--<questionId>`)/`voice` refer to the question. Options are
+ * playable (`<storyId>--<questionId>--<n>`, n 1-based); `correct` is the 0-based right option.
+ */
+export type StoryQuestion = Omit<z.infer<typeof S.StoryQuestion>, "options"> &
+  Playable & { options: Reply[] };
+
+/** Fill-the-gap item: `before + gap + after` is exactly the sentence text. */
+export interface StoryGap {
+  id: string;
+  /** Sentence id inside the story. */
+  sentence: string;
+  /** Key word id that fills the gap (resolve with `getItem()`); record SRS outcomes on it. */
+  answer: string;
+  /** Right chip, as written in the sentence. */
+  gap: string;
+  /** Sentence text before / after the gap. */
+  before: string;
+  after: string;
+  /** Wrong chips (≥ 2). */
+  distractors: string[];
+}
+
+/** What a story key word resolves to: a playable pack item with `text` and `es`. */
+export type StoryKeyword = Vocab | Phrase | Expression;
+
+export interface Story {
+  id: string;
+  /** Trip order (stories are sorted by it). */
+  order: number;
+  /** Target-language title. */
+  title: string;
+  /** Spanish title. */
+  titleEs: string;
+  description?: string;
+  emoji?: string;
+  situation: string;
+  level: Level;
+  /** Narrator voice (resolved). */
+  voice: string;
+  sentences: StorySentence[];
+  /** Key word item ids (vocab / phrase / expression); resolve with `getStoryKeywords(story)`. */
+  keywords: string[];
+  questions: StoryQuestion[];
+  gaps: StoryGap[];
+  /** Words in all sentences (guideline 80–150). */
+  wordCount: number;
+}
+
 /** A whole language pack, normalised and validated. Arrays are sorted for display. */
 export interface Pack {
   meta: PackMeta;
@@ -87,6 +141,8 @@ export interface Pack {
   units: Unit[];
   /** Sorted by `order`, then id. */
   dialogues: Dialogue[];
+  /** Sorted by `order`. Inline story key words are in `vocab`. */
+  stories: Story[];
   phrases: Phrase[];
   vocab: Vocab[];
   qa: QA[];

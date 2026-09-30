@@ -40,7 +40,7 @@ src/lib/audio/         speak() / stop(): the only way to play target-language au
 src/lib/pwa/           Web app manifest (manifest.ts), SW registration + update prompt (register.ts, UpdatePrompt.tsx).
 src/lib/progress/      On-device progress (`lang-lern:progress:<lang>`, versioned, tolerant parsing), settings,
                        path model; hooks in use-progress.ts. src/lib/srs/ = Leitner spaced repetition.
-content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/. Only `it` exists.
+content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`). Only `it` exists.
                        Format, ids, order ranges and quality rules: docs/content-guide.md.
                        Code never hard-codes content.
 scripts/               Node scripts (content tools, audio generation, pwa/ = SW + manifest + icons, serve.ts).

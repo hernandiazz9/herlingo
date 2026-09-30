@@ -61,6 +61,11 @@ export const Phrase = z.object({
   literal: Text.optional(),
   /** Short usage note in Spanish. */
   notes: Text.optional(),
+  /**
+   * Spanish ("tú"), 1–2 short lines: when to use it + one pronunciation tip
+   * ("Se lo dices al revisor cuando…; «gli» suena como una «ll» suave."). Shown on game cards.
+   */
+  explanation: Text.optional(),
   register: Register,
   /** Situation id from pack.json. */
   situation: Id,
@@ -244,7 +249,85 @@ export const DialogueFile = z.object({
   turns: z.array(z.discriminatedUnion("speaker", [NativeTurn, LearnerTurn])).min(2),
 });
 
+// ---------------------------------------------------------------------------------------------
+// Stories: content/<lang>/stories/*.json
+// ---------------------------------------------------------------------------------------------
+
+/** CEFR level of a story. */
+export const Level = z.enum(["A1", "A2", "B1"]);
+
+export const StorySentence = z.object({
+  /** Local id, unique inside the story: `s1`, `s2`… */
+  id: Id,
+  /** Target-language sentence, as spoken. */
+  text: Text,
+  /** Natural Spain-Spanish translation (shown on demand). */
+  es: Text,
+  /** Voice for this sentence (e.g. a character's line); defaults to the story voice. */
+  voice: Text.optional(),
+});
+
+/**
+ * A key word is either the id of an existing vocab / phrase / expression of the pack, or a new
+ * vocab item defined inline (its id must start with `story-`). Inline items become normal pack
+ * vocab: same id namespace, reusable from other stories by id, SRS works by id.
+ */
+export const StoryKeyword = z.union([Id, Vocab]);
+
+export const StoryQuestion = z.object({
+  /** Local id, unique inside the story: `q1`, `q2`… */
+  id: Id,
+  /** Target-language comprehension question ("Dove va Hernán?"). */
+  question: Text,
+  /** Spanish translation of the question. */
+  es: Text,
+  /** Target-language answers `{ text, es }` (≥ 3), exactly one right. */
+  options: z.array(Reply).min(3),
+  /** 0-based index of the right option. */
+  correct: z.number().int().min(0),
+});
+
+export const StoryGap = z.object({
+  /** Local id, unique inside the story: `g1`, `g2`… */
+  id: Id,
+  /** Id of the sentence of this story that holds the gap. */
+  sentence: Id,
+  /** Key word id (one of the story `keywords`) that fills the gap. */
+  answer: Id,
+  /**
+   * Exact text blanked in the sentence (case-insensitive, first occurrence). Defaults to the key
+   * word's bare `word` (vocab) or `text` (phrase / expression). Set it when the sentence uses
+   * another form ("biglietti", "stazione" without article).
+   */
+  gap: Text.optional(),
+  /** Wrong chips in the same form as the gap (≥ 2, all different from it). */
+  distractors: z.array(Text).min(2),
+});
+
+/** content/<lang>/stories/*.json — one story per file. */
+export const StoryFile = z.object({
+  id: Id,
+  /** Trip order (1, 2, 3…), unique among stories. */
+  order: z.number().int().min(0),
+  /** Target-language title ("Arrivo a Palermo"). */
+  title: Text,
+  /** Spanish title ("Llegada a Palermo"). */
+  titleEs: Text,
+  /** One-line Spanish description shown in the list. */
+  description: Text.optional(),
+  emoji: Text.optional(),
+  situation: Id,
+  level: Level,
+  /** Narrator voice (sentences, questions, options); defaults to the first pack voice. */
+  voice: Text.optional(),
+  sentences: z.array(StorySentence).min(1),
+  keywords: z.array(StoryKeyword).min(1),
+  questions: z.array(StoryQuestion).default([]),
+  gaps: z.array(StoryGap).default([]),
+});
+
 export type PackMetaInput = z.infer<typeof PackMeta>;
 export type UnitFileInput = z.infer<typeof UnitFile>;
 export type ExtrasFileInput = z.infer<typeof ExtrasFile>;
 export type DialogueFileInput = z.infer<typeof DialogueFile>;
+export type StoryFileInput = z.infer<typeof StoryFile>;

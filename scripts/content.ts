@@ -6,7 +6,8 @@
  *   npm run content:build   validate + write src/lib/content/generated/packs.json
  *   npm run content:check -- --strict-audio   also fail when a playable has no mp3 (npm run audio)
  *
- * Layout per pack: pack.json, units/*.json, dialogues/*.json, extras/*.json (see docs/content-guide.md).
+ * Layout per pack: pack.json, units/*.json, dialogues/*.json, extras/*.json, stories/*.json
+ * (see docs/content-guide.md). Guideline misses (story length, counts) print as ⚠ warnings only.
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
@@ -64,13 +65,15 @@ for (const lang of langs) {
   const dir = join(CONTENT, lang);
   const readErrors: string[] = [];
   const meta = read(join(dir, "pack.json"), readErrors);
-  const { pack, errors } = buildPack({
+  const { pack, errors, warnings } = buildPack({
     lang,
     meta,
     units: readDir(join(dir, "units"), readErrors),
     dialogues: readDir(join(dir, "dialogues"), readErrors),
     extras: readDir(join(dir, "extras"), readErrors),
+    stories: readDir(join(dir, "stories"), readErrors),
   });
+  for (const w of warnings) console.warn(`⚠ ${w}`);
   const all = [...readErrors, ...errors, ...(pack && strictAudio ? checkAudio(pack, ROOT) : [])];
   if (all.length || !pack) {
     failed = true;
