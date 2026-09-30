@@ -1,0 +1,23 @@
+{
+  "expressions": [
+    {
+      "id": "sic.sample-amuni",
+      "text": "Amunì!",
+      "es": "¡Vamos!",
+      "variety": "Siciliano",
+      "standard": "Andiamo!",
+      "notes": "Lo oirás a todas horas en Sicilia. Solo para entenderlo.",
+      "tags": ["siciliano"]
+    }
+  ],
+  "placement": [
+    {
+      "id": "placement.sample-grazie",
+      "prompt": "¿Qué significa?",
+      "text": "Grazie mille!",
+      "options": ["¡Muchas gracias!", "¡Mil euros!", "¡Hasta luego!"],
+      "answer": 0,
+      "lessons": ["sample.l.saludar"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "lang": "it",
+  "name": "Italiano",
+  "nativeName": "Italiano",
+  "speechLocale": "it-IT",
+  "voices": ["it-IT-ElsaNeural", "it-IT-DiegoNeural", "it-IT-IsabellaNeural"],
+  "situations": [
+    { "id": "saludos", "title": "Saludos y cortesía", "emoji": "👋" },
+    { "id": "no-entiendo", "title": "Cuando no entiendes", "emoji": "❓" },
+    { "id": "numeros", "title": "Números, precios y horas", "emoji": "🔢" },
+    { "id": "emergencias", "title": "Emergencias y farmacia", "emoji": "🚑" },
+    { "id": "tren", "title": "Tren", "emoji": "🚆" },
+    { "id": "bus", "title": "Autobús", "emoji": "🚌" },
+    { "id": "aeropuerto", "title": "Aeropuerto", "emoji": "✈️" },
+    { "id": "taxi", "title": "Taxi", "emoji": "🚕" },
+    { "id": "calle", "title": "Por la calle", "emoji": "🧭" },
+    { "id": "alojamiento", "title": "Alojamiento", "emoji": "🏨" },
+    { "id": "presentarse", "title": "Presentarte y charlar", "emoji": "🙂" },
+    { "id": "compras", "title": "Tiendas y mercado", "emoji": "🛍️" },
+    { "id": "bar", "title": "En el bar", "emoji": "☕" },
+    { "id": "restaurante", "title": "En el restaurante", "emoji": "🍝" },
+    { "id": "siciliano", "title": "Siciliano", "emoji": "🍋" },
+    { "id": "gramatica", "title": "Gramática", "emoji": "📘" }
+  ]
+}

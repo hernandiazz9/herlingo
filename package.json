@@ -6,16 +6,22 @@
     "node": ">=20.19"
   },
   "scripts": {
+    "predev": "npm run content:build",
     "dev": "next dev",
+    "prebuild": "npm run content:build",
     "build": "next build",
     "lint": "eslint .",
+    "pretypecheck": "npm run content:build",
     "typecheck": "next typegen && tsc --noEmit",
-    "verify": "npm run lint && npm run typecheck && npm run build"
+    "content:check": "tsx scripts/content.ts check",
+    "content:build": "tsx scripts/content.ts build",
+    "verify": "npm run lint && npm run content:check && npm run typecheck && npm run build"
   },
   "dependencies": {
     "next": "16.3.7",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -25,6 +31,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.3.7",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

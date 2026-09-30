@@ -1,0 +1,45 @@
+{
+  "id": "dlg.sample-bar",
+  "title": "Un café en la barra (muestra)",
+  "description": "Pides un café, preguntas el precio y pagas con tarjeta.",
+  "situation": "bar",
+  "unit": "sample",
+  "order": 1,
+  "register": "lei",
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Barista", "text": "Buongiorno! Cosa prende?", "es": "¡Buenos días! ¿Qué va a tomar?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y pide un café.",
+      "options": [
+        { "text": "Buongiorno! Un caffè, per favore.", "es": "¡Buenos días! Un café, por favor.", "verdict": "correct", "feedback": "¡Perfecto! Saludo y pedido en una sola frase." },
+        { "text": "Un caffè.", "es": "Un café.", "verdict": "acceptable", "feedback": "Se entiende, pero añade «per favore»: suena mucho más amable." },
+        { "text": "Ciao! Voglio un caffè.", "es": "¡Hola! Quiero un café.", "verdict": "wrong", "feedback": "«Voglio» suena brusco; usa «per favore» o «vorrei». Y con desconocidos, mejor «Buongiorno»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Barista", "text": "Ecco a Lei. Altro?", "es": "Aquí tiene. ¿Algo más?", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que no y pregunta cuánto es.",
+      "options": [
+        { "text": "No, grazie. Quanto costa?", "es": "No, gracias. ¿Cuánto cuesta?", "verdict": "correct", "feedback": "¡Genial! Claro y educado." },
+        { "text": "No, grazie. Il conto, per favore.", "es": "No, gracias. La cuenta, por favor.", "verdict": "acceptable", "feedback": "Funciona, aunque «il conto» se usa más en el restaurante. En la barra, «Quanto costa?»." },
+        { "text": "Prego, arrivederci!", "es": "De nada, ¡adiós!", "verdict": "wrong", "feedback": "«Prego» es «de nada»… ¡y todavía no has pagado!" }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Barista", "text": "Un euro e venti.", "es": "Un euro con veinte.", "voice": "it-IT-DiegoNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes pagar con tarjeta.",
+      "options": [
+        { "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Carta?", "es": "¿Tarjeta?", "verdict": "acceptable", "feedback": "Te entenderán, pero la frase completa es más amable." },
+        { "text": "Posso pagare il carta?", "es": "¿Puedo pagar el tarjeta?", "verdict": "wrong", "feedback": "Es «con la carta»: «carta» es femenino y se paga «con» algo." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Barista", "text": "Certo! Grazie e buona giornata!", "es": "¡Claro! Gracias y que pase un buen día.", "voice": "it-IT-DiegoNeural" }
+  ]
+}

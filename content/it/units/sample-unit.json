@@ -1,0 +1,144 @@
+{
+  "id": "sample",
+  "order": 1,
+  "title": "Primeros pasos (muestra)",
+  "description": "Unidad de ejemplo: saludar y pedir en el bar.",
+  "emoji": "☕",
+  "situation": "bar",
+  "lessons": [
+    {
+      "id": "sample.l.saludar",
+      "title": "Saludar y dar las gracias",
+      "items": [
+        "sample.buongiorno",
+        "sample.buonasera",
+        "sample.ciao",
+        "sample.grazie-mille",
+        "sample.prego",
+        "sample.per-favore",
+        "sample.scusi",
+        "sample.scusa",
+        "sample.arrivederci",
+        "sample.qa.come-stai",
+        "gram.sample-tu-lei"
+      ]
+    },
+    {
+      "id": "sample.l.bar",
+      "title": "Pedir en el bar",
+      "items": [
+        "sample.caffe",
+        "sample.cornetto",
+        "sample.granita",
+        "sample.brioche",
+        "sample.acqua",
+        "sample.un-caffe",
+        "sample.vorrei-un-cornetto",
+        "sample.quanto-costa",
+        "sample.il-conto",
+        "sample.conto",
+        "sample.carta",
+        "sample.posso-pagare-con-la-carta",
+        "sample.da-portare-via",
+        "sample.bicchiere",
+        "sample.zucchero",
+        "sample.scontrino",
+        "sample.qa.cosa-prende",
+        "sample.qa.altro",
+        "sic.sample-amuni"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "sample.buongiorno", "text": "Buongiorno!", "es": "¡Buenos días!", "notes": "Se usa hasta media tarde; con desconocidos es el saludo seguro.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "sample.buonasera", "text": "Buonasera!", "es": "¡Buenas tardes!", "notes": "Desde media tarde (hacia las 16–17 h) y por la noche al llegar.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "sample.ciao", "text": "Ciao!", "es": "¡Hola! / ¡Adiós!", "notes": "Solo con amigos o gente de tu edad; con el camarero o el revisor, mejor «Buongiorno».", "register": "tu", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "sample.grazie-mille", "text": "Grazie mille!", "es": "¡Muchas gracias!", "literal": "¡Mil gracias!", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "sample.prego", "text": "Prego.", "es": "De nada. / Adelante.", "notes": "También lo oirás como «¿qué desea?» o «pase usted».", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "sample.per-favore", "text": "Per favore.", "es": "Por favor.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "sample.scusi", "text": "Scusi!", "es": "¡Perdone!", "notes": "Para llamar la atención de un desconocido o pedir perdón (de usted).", "register": "lei", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "sample.scusa", "text": "Scusa!", "es": "¡Perdona!", "register": "tu", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "sample.arrivederci", "text": "Arrivederci!", "es": "¡Adiós!", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "sample.un-caffe", "text": "Un caffè, per favore.", "es": "Un café, por favor.", "notes": "En Italia «un caffè» es un expreso corto.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "sample.vorrei-un-cornetto", "text": "Vorrei un cornetto.", "es": "Quería un cruasán.", "literal": "Querría un cruasán.", "register": "neutral", "situation": "bar", "tags": ["pedir"] },
+    { "id": "sample.quanto-costa", "text": "Quanto costa?", "es": "¿Cuánto cuesta?", "register": "neutral", "situation": "bar", "tags": ["pagar"] },
+    { "id": "sample.il-conto", "text": "Il conto, per favore.", "es": "La cuenta, por favor.", "register": "neutral", "situation": "bar", "tags": ["pagar"] },
+    { "id": "sample.posso-pagare-con-la-carta", "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?", "register": "neutral", "situation": "bar", "tags": ["pagar"] },
+    { "id": "sample.da-portare-via", "text": "Da portare via, grazie.", "es": "Para llevar, gracias.", "register": "neutral", "situation": "bar", "tags": ["pedir"] }
+  ],
+  "vocab": [
+    { "id": "sample.caffe", "word": "caffè", "article": "il", "gender": "m", "es": "el café", "example": "sample.un-caffe", "situation": "bar" },
+    { "id": "sample.cornetto", "word": "cornetto", "article": "il", "gender": "m", "es": "el cruasán", "example": "sample.vorrei-un-cornetto", "situation": "bar" },
+    { "id": "sample.granita", "word": "granita", "article": "la", "gender": "f", "es": "el granizado", "notes": "En Sicilia se desayuna con brioche.", "situation": "bar" },
+    { "id": "sample.brioche", "word": "brioche", "article": "la", "gender": "f", "es": "el bollo brioche", "situation": "bar" },
+    { "id": "sample.acqua", "word": "acqua", "article": "l'", "gender": "f", "es": "el agua", "situation": "bar" },
+    { "id": "sample.conto", "word": "conto", "article": "il", "gender": "m", "es": "la cuenta", "example": "sample.il-conto", "situation": "bar" },
+    { "id": "sample.carta", "word": "carta", "article": "la", "gender": "f", "es": "la tarjeta", "notes": "También significa «papel».", "example": "sample.posso-pagare-con-la-carta", "situation": "bar" },
+    { "id": "sample.bicchiere", "word": "bicchiere", "article": "il", "gender": "m", "es": "el vaso", "situation": "bar" },
+    { "id": "sample.zucchero", "word": "zucchero", "article": "lo", "gender": "m", "es": "el azúcar", "situation": "bar" },
+    { "id": "sample.scontrino", "word": "scontrino", "article": "lo", "gender": "m", "es": "el tique de caja", "notes": "En muchos bares pagas primero en caja y das el «scontrino» en la barra.", "situation": "bar" }
+  ],
+  "qa": [
+    {
+      "id": "sample.qa.come-stai",
+      "question": "Ciao, come stai?",
+      "questionEs": "Hola, ¿qué tal estás?",
+      "accepted": [{ "text": "Bene, grazie! E tu?", "es": "¡Bien, gracias! ¿Y tú?" }],
+      "distractors": [
+        { "text": "Un caffè, per favore.", "es": "Un café, por favor." },
+        { "text": "Il conto, per favore.", "es": "La cuenta, por favor." }
+      ],
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "sample.qa.cosa-prende",
+      "question": "Buongiorno, cosa prende?",
+      "questionEs": "Buenos días, ¿qué va a tomar?",
+      "accepted": [
+        { "text": "Un caffè, per favore.", "es": "Un café, por favor." },
+        { "text": "Vorrei un cornetto.", "es": "Quería un cruasán." }
+      ],
+      "distractors": [
+        { "text": "Arrivederci!", "es": "¡Adiós!" },
+        { "text": "Prego.", "es": "De nada." }
+      ],
+      "register": "lei",
+      "situation": "bar",
+      "voice": "it-IT-DiegoNeural"
+    },
+    {
+      "id": "sample.qa.altro",
+      "question": "Altro?",
+      "questionEs": "¿Algo más?",
+      "accepted": [
+        { "text": "No, grazie. Basta così.", "es": "No, gracias. Nada más." },
+        { "text": "Sì, anche un'acqua, per favore.", "es": "Sí, también un agua, por favor." }
+      ],
+      "distractors": [
+        { "text": "Buongiorno!", "es": "¡Buenos días!" },
+        { "text": "Scusa!", "es": "¡Perdona!" }
+      ],
+      "register": "lei",
+      "situation": "bar",
+      "voice": "it-IT-DiegoNeural"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.sample-tu-lei",
+      "title": "Tú y Lei",
+      "summary": "Con desconocidos y personal (camareros, revisores) se habla de «Lei», en tercera persona, como nuestro «usted». Con gente de tu edad, «tu».",
+      "points": ["«Scusi» = perdone (Lei); «Scusa» = perdona (tu).", "«E Lei?» = ¿y usted?; «E tu?» = ¿y tú?"],
+      "table": [
+        ["", "tu", "Lei"],
+        ["perdona / perdone", "scusa", "scusi"],
+        ["¿cómo estás / está?", "come stai?", "come sta?"]
+      ],
+      "examples": [
+        { "text": "Come sta?", "es": "¿Cómo está (usted)?" },
+        { "text": "Come stai?", "es": "¿Cómo estás?" }
+      ]
+    }
+  ]
+}
