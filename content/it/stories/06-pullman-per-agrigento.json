@@ -1,0 +1,107 @@
+{
+  "id": "story.pullman-per-agrigento",
+  "order": 6,
+  "title": "Il pullman per Agrigento",
+  "titleEs": "El autobús a Agrigento",
+  "description": "Huelga en la estación de autobuses de Palermo: ¿sale el autobús a Agrigento?",
+  "emoji": "🚌",
+  "situation": "bus",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Oggi Hernán lascia Cefalù e va ad Agrigento.", "es": "Hoy Hernán se va de Cefalù y viaja a Agrigento." },
+    { "id": "s2", "text": "Prima prende il treno per Palermo, poi il pullman.", "es": "Primero coge el tren a Palermo y luego el autobús." },
+    { "id": "s3", "text": "All'autostazione di Palermo c'è un avviso: oggi c'è sciopero.", "es": "En la estación de autobuses de Palermo hay un aviso: hoy hay huelga." },
+    { "id": "s4", "text": "Hernán è preoccupato e va alla biglietteria.", "es": "Hernán está preocupado y va a la taquilla." },
+    { "id": "s5", "text": "«Buongiorno, oggi c'è sciopero? Parte il pullman per Agrigento?»", "es": "«Buenos días, ¿hoy hay huelga? ¿Sale el autobús a Agrigento?»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s6", "text": "«Gli autobus dell'AST sono fermi, ma i pullman della SAIS partono.»", "es": "«Los autobuses de AST no circulan, pero los de SAIS sí salen.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s7", "text": "«Il prossimo parte alle dieci e mezza.»", "es": "«El próximo sale a las diez y media.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s8", "text": "Hernán compra un biglietto di solo andata e aspetta alla fermata.", "es": "Hernán compra un billete de solo ida y espera en la parada." },
+    { "id": "s9", "text": "Il pullman arriva con dieci minuti di ritardo, ma c'è posto.", "es": "El autobús llega con diez minutos de retraso, pero hay sitio." },
+    { "id": "s10", "text": "L'autista mette la valigia nel bagagliaio.", "es": "El conductor mete la maleta en el maletero." },
+    { "id": "s11", "text": "Il viaggio dura due ore e passa tra colline gialle e piccoli paesi.", "es": "El viaje dura dos horas y pasa entre colinas amarillas y pueblos pequeños." },
+    { "id": "s12", "text": "A metà strada c'è una breve sosta in un bar.", "es": "A mitad de camino hay una parada corta en un bar." },
+    { "id": "s13", "text": "Hernán prende un caffè al banco e risale subito.", "es": "Hernán se toma un café en la barra y vuelve a subir enseguida." },
+    { "id": "s14", "text": "Verso l'una arriva ad Agrigento e vede i templi da lontano.", "es": "Hacia la una llega a Agrigento y ve los templos a lo lejos." }
+  ],
+  "keywords": [
+    "move-bus.autostazione",
+    {
+      "id": "story-pullman-agrigento-avviso",
+      "word": "avviso",
+      "article": "l'",
+      "gender": "m",
+      "plural": "avvisi",
+      "es": "el aviso (el cartel)",
+      "notes": "Los avisos de huelga o de cambios se cuelgan en paradas, estaciones y webs de las compañías.",
+      "situation": "bus"
+    },
+    "move-treno.sciopero",
+    "move-treno.oggi-c-e-sciopero",
+    "move-treno.biglietteria",
+    {
+      "id": "story-pullman-agrigento-fermo",
+      "word": "fermo",
+      "es": "parado (sin servicio)",
+      "notes": "«Gli autobus sono fermi»: no circulan, por huelga o avería.",
+      "situation": "bus"
+    },
+    "move-treno.prossimo",
+    "move-bus.viaggio",
+    "move-bus.sosta",
+    "food.banco"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Perché Hernán è preoccupato?",
+      "es": "¿Por qué está preocupado Hernán?",
+      "options": [
+        { "text": "Perché oggi c'è sciopero.", "es": "Porque hoy hay huelga." },
+        { "text": "Perché ha perso il treno.", "es": "Porque ha perdido el tren." },
+        { "text": "Perché non trova la valigia.", "es": "Porque no encuentra la maleta." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Quali pullman partono oggi?",
+      "es": "¿Qué autobuses salen hoy?",
+      "options": [
+        { "text": "Quelli dell'AST.", "es": "Los de AST." },
+        { "text": "Quelli della SAIS.", "es": "Los de SAIS." },
+        { "text": "Nessuno.", "es": "Ninguno." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "A che ora parte il prossimo pullman?",
+      "es": "¿A qué hora sale el próximo autobús?",
+      "options": [
+        { "text": "Alle nove.", "es": "A las nueve." },
+        { "text": "Alle dieci e mezza.", "es": "A las diez y media." },
+        { "text": "All'una.", "es": "A la una." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Quanto dura il viaggio in pullman?",
+      "es": "¿Cuánto dura el viaje en autobús?",
+      "options": [
+        { "text": "Un'ora.", "es": "Una hora." },
+        { "text": "Due ore.", "es": "Dos horas." },
+        { "text": "Quattro ore.", "es": "Cuatro horas." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "move-treno.sciopero", "distractors": ["ritardo", "mercato"] },
+    { "id": "g2", "sentence": "s4", "answer": "move-treno.biglietteria", "distractors": ["spiaggia", "farmacia"] },
+    { "id": "g3", "sentence": "s6", "answer": "story-pullman-agrigento-fermo", "gap": "fermi", "distractors": ["pieni", "nuovi"] },
+    { "id": "g4", "sentence": "s11", "answer": "move-bus.viaggio", "distractors": ["biglietto", "caffè"] },
+    { "id": "g5", "sentence": "s12", "answer": "move-bus.sosta", "distractors": ["multa", "lezione"] },
+    { "id": "g6", "sentence": "s13", "answer": "food.banco", "distractors": ["binario", "semaforo"] }
+  ]
+}

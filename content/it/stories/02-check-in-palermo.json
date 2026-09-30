@@ -1,0 +1,131 @@
+{
+  "id": "story.check-in-palermo",
+  "order": 2,
+  "title": "Il check-in al B&B",
+  "titleEs": "El check-in en el B&B",
+  "description": "Hernán llega a su B&B de Palermo: documento, tasa turística, llaves y desayuno.",
+  "emoji": "🏨",
+  "situation": "alojamiento",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Dalla stazione Hernán va a piedi al B&B, in via Maqueda.", "es": "Desde la estación Hernán va andando al B&B, en la via Maqueda." },
+    { "id": "s2", "text": "Suona il campanello e una signora apre il portone.", "es": "Llama al timbre y una señora abre el portal." },
+    { "id": "s3", "text": "«Salve! Ho una prenotazione per tre notti.»", "es": "«¡Hola! Tengo una reserva para tres noches.»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s4", "text": "«Benvenuto! Mi dà un documento, per favore?»", "es": "«¡Bienvenido! ¿Me da un documento de identidad, por favor?»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s5", "text": "Hernán le dà il passaporto e paga la tassa di soggiorno.", "es": "Hernán le da el pasaporte y paga la tasa turística." },
+    { "id": "s6", "text": "«Sono sei euro: due a notte, in contanti.»", "es": "«Son seis euros: dos por noche, en efectivo.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s7", "text": "Poi la signora gli dà le chiavi della camera.", "es": "Luego la señora le da las llaves de la habitación." },
+    { "id": "s8", "text": "«La camera è al terzo piano. Non c'è l'ascensore, mi dispiace.»", "es": "«La habitación está en el tercer piso. No hay ascensor, lo siento.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s9", "text": "«Non si preoccupi. A che ora è la colazione?»", "es": "«No se preocupe. ¿A qué hora es el desayuno?»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s10", "text": "«Dalle otto alle dieci. La password del wifi è sul tavolo.»", "es": "«De ocho a diez. La contraseña del wifi está en la mesa.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s11", "text": "La camera è piccola ma pulita, con un balcone sulla strada.", "es": "La habitación es pequeña pero limpia, con un balcón a la calle." },
+    { "id": "s12", "text": "Hernán apre la finestra: sente i motorini e la musica del quartiere.", "es": "Hernán abre la ventana: oye las motos y la música del barrio." }
+  ],
+  "keywords": [
+    "move-bus.prenotazione",
+    "move-treno.documento",
+    "move-bus.passaporto",
+    {
+      "id": "story-palermo-tassa-di-soggiorno",
+      "word": "tassa di soggiorno",
+      "article": "la",
+      "gender": "f",
+      "es": "la tasa turística",
+      "notes": "Se paga al llegar al alojamiento, por persona y noche; a menudo en efectivo.",
+      "situation": "alojamiento"
+    },
+    "surv.contanti",
+    {
+      "id": "story-palermo-chiave",
+      "word": "chiave",
+      "article": "la",
+      "gender": "f",
+      "plural": "chiavi",
+      "es": "la llave",
+      "notes": "«Mi dà le chiavi?»: ¿me da las llaves?",
+      "situation": "alojamiento"
+    },
+    {
+      "id": "story-palermo-camera",
+      "word": "camera",
+      "article": "la",
+      "gender": "f",
+      "plural": "camere",
+      "es": "la habitación",
+      "notes": "Ojo: «camera» es la habitación; la cámara de fotos es «la macchina fotografica».",
+      "situation": "alojamiento"
+    },
+    {
+      "id": "story-palermo-ascensore",
+      "word": "ascensore",
+      "article": "l'",
+      "gender": "m",
+      "plural": "ascensori",
+      "es": "el ascensor",
+      "situation": "alojamiento"
+    },
+    {
+      "id": "story-palermo-colazione",
+      "word": "colazione",
+      "article": "la",
+      "gender": "f",
+      "es": "el desayuno",
+      "notes": "«Fare colazione»: desayunar. En Sicilia, a menudo granita con brioche.",
+      "situation": "alojamiento"
+    },
+    "surv.mi-dispiace"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quante notti resta Hernán al B&B?",
+      "es": "¿Cuántas noches se queda Hernán en el B&B?",
+      "options": [
+        { "text": "Una notte.", "es": "Una noche." },
+        { "text": "Tre notti.", "es": "Tres noches." },
+        { "text": "Dieci notti.", "es": "Diez noches." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Che cosa dà Hernán alla signora?",
+      "es": "¿Qué le da Hernán a la señora?",
+      "options": [
+        { "text": "Il passaporto.", "es": "El pasaporte." },
+        { "text": "La valigia.", "es": "La maleta." },
+        { "text": "Le chiavi.", "es": "Las llaves." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "A che piano è la camera?",
+      "es": "¿En qué piso está la habitación?",
+      "options": [
+        { "text": "Al primo piano.", "es": "En el primer piso." },
+        { "text": "Al piano terra.", "es": "En la planta baja." },
+        { "text": "Al terzo piano.", "es": "En el tercer piso." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Com'è la camera?",
+      "es": "¿Cómo es la habitación?",
+      "options": [
+        { "text": "Grande e silenziosa.", "es": "Grande y tranquila." },
+        { "text": "Piccola ma pulita.", "es": "Pequeña pero limpia." },
+        { "text": "Grande ma sporca.", "es": "Grande pero sucia." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "move-bus.prenotazione", "distractors": ["ricevuta", "multa"] },
+    { "id": "g2", "sentence": "s5", "answer": "story-palermo-tassa-di-soggiorno", "distractors": ["multa", "mancia"] },
+    { "id": "g3", "sentence": "s7", "answer": "story-palermo-chiave", "gap": "chiavi", "distractors": ["mappe", "ricevute"] },
+    { "id": "g4", "sentence": "s8", "answer": "story-palermo-ascensore", "distractors": ["armadio", "orologio"] },
+    { "id": "g5", "sentence": "s9", "answer": "story-palermo-colazione", "distractors": ["messa", "piscina"] }
+  ]
+}

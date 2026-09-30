@@ -1,0 +1,92 @@
+{
+  "id": "story.in-treno-per-cefalu",
+  "order": 4,
+  "title": "In treno per Cefalù",
+  "titleEs": "En tren a Cefalù",
+  "description": "Billete en la máquina, validarlo a tiempo y un poco de retraso camino de Cefalù.",
+  "emoji": "🚆",
+  "situation": "tren",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Dopo tre giorni a Palermo, Hernán va a Cefalù in treno.", "es": "Después de tres días en Palermo, Hernán va a Cefalù en tren." },
+    { "id": "s2", "text": "Alla Stazione Centrale compra il biglietto alla macchinetta.", "es": "En la Estación Central compra el billete en la máquina." },
+    { "id": "s3", "text": "Un biglietto di solo andata costa sei euro e dieci.", "es": "Un billete de solo ida cuesta seis euros con diez." },
+    { "id": "s4", "text": "Sul tabellone legge: ritardo di quindici minuti.", "es": "En el panel lee: retraso de quince minutos." },
+    { "id": "s5", "text": "Hernán aspetta al binario tre e compra una bottiglia d'acqua.", "es": "Hernán espera en el andén tres y se compra una botella de agua." },
+    { "id": "s6", "text": "Una signora vicino a lui gli fa una domanda.", "es": "Una señora que está a su lado le hace una pregunta." },
+    { "id": "s7", "text": "«Scusi, ha convalidato il biglietto?»", "es": "«Perdone, ¿ha validado el billete?»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s8", "text": "«No. Devo convalidare il biglietto?»", "es": "«No. ¿Tengo que validar el billete?»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s9", "text": "«Sì, in quella macchinetta lì, se no c'è la multa.»", "es": "«Sí, en esa máquina de ahí; si no, te ponen una multa.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s10", "text": "Hernán convalida il biglietto e ringrazia la signora.", "es": "Hernán valida el billete y le da las gracias a la señora." },
+    { "id": "s11", "text": "Il treno arriva: Hernán sale e trova un posto libero vicino al finestrino.", "es": "Llega el tren: Hernán sube y encuentra un asiento libre junto a la ventanilla." },
+    { "id": "s12", "text": "Dopo un po' passa il controllore e guarda i biglietti.", "es": "Al rato pasa el revisor y mira los billetes." },
+    { "id": "s13", "text": "Il biglietto è a posto e Hernán guarda il mare.", "es": "El billete está en regla y Hernán mira el mar." },
+    { "id": "s14", "text": "Un'ora dopo, il treno arriva a Cefalù.", "es": "Una hora después, el tren llega a Cefalù." }
+  ],
+  "keywords": [
+    "move-treno.macchinetta",
+    "move-treno.andata",
+    "move-treno.tabellone",
+    "move-treno.ritardo",
+    "move-treno.binario",
+    "move-treno.convalidare",
+    "move-treno.devo-convalidare",
+    "move-treno.multa",
+    "move-treno.posto",
+    "move-treno.controllore"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quanto costa il biglietto per Cefalù?",
+      "es": "¿Cuánto cuesta el billete a Cefalù?",
+      "options": [
+        { "text": "Sei euro e dieci.", "es": "Seis euros con diez." },
+        { "text": "Quindici euro.", "es": "Quince euros." },
+        { "text": "Tre euro e sessanta.", "es": "Tres euros con sesenta." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Quanto ritardo ha il treno?",
+      "es": "¿Cuánto retraso lleva el tren?",
+      "options": [
+        { "text": "Cinque minuti.", "es": "Cinco minutos." },
+        { "text": "Quindici minuti.", "es": "Quince minutos." },
+        { "text": "Un'ora.", "es": "Una hora." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Che cosa deve fare Hernán prima di salire?",
+      "es": "¿Qué tiene que hacer Hernán antes de subir?",
+      "options": [
+        { "text": "Deve convalidare il biglietto.", "es": "Tiene que validar el billete." },
+        { "text": "Deve cambiare binario.", "es": "Tiene que cambiar de andén." },
+        { "text": "Deve pagare una multa.", "es": "Tiene que pagar una multa." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Quanto dura il viaggio fino a Cefalù?",
+      "es": "¿Cuánto dura el viaje hasta Cefalù?",
+      "options": [
+        { "text": "Mezz'ora.", "es": "Media hora." },
+        { "text": "Un'ora.", "es": "Una hora." },
+        { "text": "Tre ore.", "es": "Tres horas." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "move-treno.macchinetta", "distractors": ["farmacia", "pasticceria"] },
+    { "id": "g2", "sentence": "s4", "answer": "move-treno.ritardo", "distractors": ["binario", "biglietto"] },
+    { "id": "g3", "sentence": "s5", "answer": "move-treno.binario", "distractors": ["piano", "tavolo"] },
+    { "id": "g4", "sentence": "s9", "answer": "move-treno.multa", "distractors": ["coincidenza", "fermata"] },
+    { "id": "g5", "sentence": "s10", "answer": "move-treno.convalidare", "gap": "convalida", "distractors": ["compra", "perde"] },
+    { "id": "g6", "sentence": "s12", "answer": "move-treno.controllore", "distractors": ["tassista", "cameriere"] }
+  ]
+}

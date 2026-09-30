@@ -1,0 +1,117 @@
+{
+  "id": "story.giornata-a-cefalu",
+  "order": 5,
+  "title": "Una giornata a Cefalù",
+  "titleEs": "Un día en Cefalù",
+  "description": "Catedral, preguntar el camino a la playa, sombrilla y puesta de sol.",
+  "emoji": "🏖️",
+  "situation": "calle",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Cefalù è piccola e bellissima, con una spiaggia lunga e il mare blu.", "es": "Cefalù es pequeña y preciosa, con una playa larga y el mar azul." },
+    { "id": "s2", "text": "La mattina Hernán visita il Duomo, in piazza.", "es": "Por la mañana Hernán visita la catedral, en la plaza." },
+    { "id": "s3", "text": "Poi vuole andare in spiaggia, ma non sa la strada.", "es": "Luego quiere ir a la playa, pero no sabe el camino." },
+    { "id": "s4", "text": "Chiede a una ragazza con un cane.", "es": "Le pregunta a una chica que va con un perro." },
+    { "id": "s5", "text": "«Scusa, per andare alla spiaggia?»", "es": "«Perdona, ¿para ir a la playa?»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s6", "text": "«Vai sempre dritto, poi giri a sinistra. È vicino!»", "es": "«Sigue todo recto y luego gira a la izquierda. ¡Está cerca!»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s7", "text": "«Grazie mille, sei gentilissima!»", "es": "«¡Muchas gracias, eres muy amable!»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s8", "text": "In cinque minuti arriva al lungomare.", "es": "En cinco minutos llega al paseo marítimo." },
+    { "id": "s9", "text": "Al lido prende un ombrellone e un lettino per il pomeriggio.", "es": "En el chiringuito de playa coge una sombrilla y una tumbona para la tarde." },
+    { "id": "s10", "text": "L'acqua è fresca e trasparente, e Hernán nuota tanto.", "es": "El agua está fresquita y transparente, y Hernán nada mucho." },
+    { "id": "s11", "text": "Mette anche la crema solare, perché il sole è forte.", "es": "También se pone crema solar, porque el sol pega fuerte." },
+    { "id": "s12", "text": "La sera mangia una pizza sul lungomare e guarda il tramonto.", "es": "Por la noche se come una pizza en el paseo marítimo y mira la puesta de sol." },
+    { "id": "s13", "text": "Domani parte per Agrigento: è stata una giornata perfetta.", "es": "Mañana se va a Agrigento: ha sido un día perfecto." }
+  ],
+  "keywords": [
+    "talk-chiacchiere.spiaggia",
+    "move-strada.duomo",
+    "move-strada.dritto",
+    "move-strada.sinistra",
+    "move-strada.vicino",
+    "move-strada.lungomare",
+    {
+      "id": "story-cefalu-ombrellone",
+      "word": "ombrellone",
+      "article": "l'",
+      "gender": "m",
+      "plural": "ombrelloni",
+      "es": "la sombrilla (de playa)",
+      "notes": "En los «lidi» (playas con servicio) se alquila con las tumbonas por día o por tarde.",
+      "situation": "calle"
+    },
+    {
+      "id": "story-cefalu-lettino",
+      "word": "lettino",
+      "article": "il",
+      "gender": "m",
+      "plural": "lettini",
+      "es": "la tumbona",
+      "situation": "calle"
+    },
+    "emer.crema-solare",
+    {
+      "id": "story-cefalu-tramonto",
+      "word": "tramonto",
+      "article": "il",
+      "gender": "m",
+      "plural": "tramonti",
+      "es": "la puesta de sol",
+      "notes": "«Guardare il tramonto»: ver la puesta de sol.",
+      "situation": "calle"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Che cosa visita Hernán la mattina?",
+      "es": "¿Qué visita Hernán por la mañana?",
+      "options": [
+        { "text": "Il Duomo.", "es": "La catedral." },
+        { "text": "Il museo.", "es": "El museo." },
+        { "text": "Il mercato.", "es": "El mercado." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "A chi chiede la strada per la spiaggia?",
+      "es": "¿A quién le pregunta el camino a la playa?",
+      "options": [
+        { "text": "A un poliziotto.", "es": "A un policía." },
+        { "text": "A una ragazza con un cane.", "es": "A una chica con un perro." },
+        { "text": "A un tassista.", "es": "A un taxista." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Com'è l'acqua?",
+      "es": "¿Cómo está el agua?",
+      "options": [
+        { "text": "Calda e sporca.", "es": "Caliente y sucia." },
+        { "text": "Fresca e trasparente.", "es": "Fresquita y transparente." },
+        { "text": "Fredda e scura.", "es": "Fría y oscura." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Dove va Hernán domani?",
+      "es": "¿Adónde va Hernán mañana?",
+      "options": [
+        { "text": "A Palermo.", "es": "A Palermo." },
+        { "text": "A Catania.", "es": "A Catania." },
+        { "text": "Ad Agrigento.", "es": "A Agrigento." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "talk-chiacchiere.spiaggia", "distractors": ["stazione", "farmacia"] },
+    { "id": "g2", "sentence": "s6", "answer": "move-strada.dritto", "distractors": ["lontano", "dietro"] },
+    { "id": "g3", "sentence": "s8", "answer": "move-strada.lungomare", "distractors": ["binario", "capolinea"] },
+    { "id": "g4", "sentence": "s9", "answer": "story-cefalu-ombrellone", "distractors": ["cornetto", "biglietto"] },
+    { "id": "g5", "sentence": "s11", "answer": "emer.crema-solare", "distractors": ["giacca", "felpa"] },
+    { "id": "g6", "sentence": "s12", "answer": "story-cefalu-tramonto", "distractors": ["treno", "semaforo"] }
+  ]
+}

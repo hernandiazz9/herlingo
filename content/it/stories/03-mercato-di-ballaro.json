@@ -1,0 +1,104 @@
+{
+  "id": "story.mercato-di-ballaro",
+  "order": 3,
+  "title": "Il mercato di Ballarò",
+  "titleEs": "El mercado de Ballarò",
+  "description": "Aceitunas, gritos y un bocadillo de panelle en el mercado más famoso de Palermo.",
+  "emoji": "🫒",
+  "situation": "compras",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "La mattina Hernán va a piedi al mercato di Ballarò.", "es": "Por la mañana Hernán va andando al mercado de Ballarò." },
+    { "id": "s2", "text": "Le strade sono piene di colori, di voci e di profumi.", "es": "Las calles están llenas de colores, de voces y de olores." },
+    { "id": "s3", "text": "I venditori gridano i prezzi ad alta voce, anche in siciliano.", "es": "Los vendedores gritan los precios en voz alta, también en siciliano." },
+    { "id": "s4", "text": "Hernán si ferma davanti a una bancarella di olive.", "es": "Hernán se para delante de un puesto de aceitunas." },
+    { "id": "s5", "text": "«Quanto costano queste?»", "es": "«¿Cuánto cuestan estas?»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s6", "text": "«Otto euro al chilo. Vuole assaggiare?»", "es": "«Ocho euros el kilo. ¿Quiere probar?»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s7", "text": "Hernán assaggia un'oliva: è molto saporita.", "es": "Hernán prueba una aceituna: tiene mucho sabor." },
+    { "id": "s8", "text": "«Buonissima! Due etti di olive, per favore.»", "es": "«¡Buenísima! Doscientos gramos de aceitunas, por favor.»", "voice": "it-IT-DiegoNeural" },
+    { "id": "s9", "text": "«Sono un euro e sessanta.»", "es": "«Son un euro con sesenta.»", "voice": "it-IT-IsabellaNeural" },
+    { "id": "s10", "text": "Hernán paga in contanti e la signora gli dà il resto.", "es": "Hernán paga en efectivo y la señora le da la vuelta." },
+    { "id": "s11", "text": "Poi a un chiosco compra un panino con le panelle.", "es": "Luego, en un quiosco, se compra un bocadillo de panelle." },
+    { "id": "s12", "text": "Costa solo due euro ed è caldo e croccante.", "es": "Cuesta solo dos euros y está caliente y crujiente." },
+    { "id": "s13", "text": "Mangia camminando tra le bancarelle, felice.", "es": "Se lo come paseando entre los puestos, feliz." }
+  ],
+  "keywords": [
+    "surv.mercato",
+    {
+      "id": "story-palermo-bancarella",
+      "word": "bancarella",
+      "article": "la",
+      "gender": "f",
+      "plural": "bancarelle",
+      "es": "el puesto (del mercado)",
+      "notes": "El puesto de un mercado o de la calle; «il banco» también se usa.",
+      "situation": "compras"
+    },
+    "surv.olive",
+    "surv.quanto-costano-queste",
+    "surv.chilo",
+    {
+      "id": "story-palermo-assaggiare",
+      "word": "assaggiare",
+      "es": "probar (comida o bebida)",
+      "notes": "«Posso assaggiare?»: ¿puedo probar? En el mercado casi siempre te dicen que sí.",
+      "situation": "compras"
+    },
+    "surv.due-etti",
+    "surv.resto",
+    "food.panelle"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quando va al mercato Hernán?",
+      "es": "¿Cuándo va Hernán al mercado?",
+      "options": [
+        { "text": "La mattina.", "es": "Por la mañana." },
+        { "text": "La sera.", "es": "Por la noche." },
+        { "text": "Il pomeriggio.", "es": "Por la tarde." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Quanto costano le olive?",
+      "es": "¿Cuánto cuestan las aceitunas?",
+      "options": [
+        { "text": "Due euro al chilo.", "es": "Dos euros el kilo." },
+        { "text": "Otto euro al chilo.", "es": "Ocho euros el kilo." },
+        { "text": "Sedici euro al chilo.", "es": "Dieciséis euros el kilo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Quante olive compra Hernán?",
+      "es": "¿Cuántas aceitunas compra Hernán?",
+      "options": [
+        { "text": "Un chilo.", "es": "Un kilo." },
+        { "text": "Mezzo chilo.", "es": "Medio kilo." },
+        { "text": "Due etti.", "es": "Doscientos gramos." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Che cosa mangia dopo?",
+      "es": "¿Qué come después?",
+      "options": [
+        { "text": "Un panino con le panelle.", "es": "Un bocadillo de panelle." },
+        { "text": "Una granita al limone.", "es": "Un granizado de limón." },
+        { "text": "Un'arancina al ragù.", "es": "Una arancina de ragú." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "story-palermo-bancarella", "distractors": ["pasticceria", "tabaccheria"] },
+    { "id": "g2", "sentence": "s6", "answer": "surv.chilo", "distractors": ["litro", "metro"] },
+    { "id": "g3", "sentence": "s7", "answer": "story-palermo-assaggiare", "gap": "assaggia", "distractors": ["vende", "chiude"] },
+    { "id": "g4", "sentence": "s10", "answer": "surv.resto", "distractors": ["conto", "biglietto"] },
+    { "id": "g5", "sentence": "s11", "answer": "food.panelle", "distractors": ["uova", "melanzane"] }
+  ]
+}
