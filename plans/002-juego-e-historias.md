@@ -96,7 +96,7 @@ Worktree setup: npm ci
 - Outcome: /jugar topic grid + Mezcla, Descubrir decks of 10, 60 s listen-and-pick round with combo x1–x4 and records, recordActivity · 92dfcd4
 
 ## T20 — Stories reader and story games
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T13, T14
 - Goal: The Historias section: list of the 12 stories in trip order with progress, a sentence-by-sentence reader with audio and Spanish on demand, then four games on the story (key words, fill the gaps, comprehension, order the story).
 - Context: CLAUDE.md (tokens only, light + dark; audio via `speak()`; content via `@/lib/content` `getStories()/getStory()`; never hard-code ids). Build against the sample story; real stories arrive in parallel (T17/T18). Reuse answer checking from `src/lib/exercises` where it fits. Progress: same `recordActivity({ xp, outcomes })` helper as T19 in `src/lib/progress/activity.ts` — if it does not exist yet in your branch, create it with exactly that name and signature (additive, tolerant); the orchestrator resolves any merge overlap.
@@ -107,14 +107,14 @@ Worktree setup: npm ci
   - Games after reading (each skippable, then a summary): key words (match pairs + listen and pick), fill the gaps (chips), comprehension (3–4 questions with audio), order the story (tap sentences in order).
   - Finishing records XP, streak and wrong key words to SRS; story marked done locally.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: /historias list + /historias/[id] reader (tap-to-hear, translations, Escuchar todo, keyword popovers) and 4 games, XP/streak/SRS, done state · 7fd21d4
 
 ## T21 — Story review and final audio
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T15, T16, T17, T18
 - Goal: Native-level review of the 12 stories (Italian naturalness, level A1–A2, consistency of the trip narrative and persona, Spain-Spanish translations with "tú") and of a sample of the new explanations, then generate audio for every new playable.
-- Context: docs/brief.md, docs/content-guide.md, docs/content-review.md (style of the previous review). Never rename or delete ids. `npm run audio` creates .venv itself and needs internet.
-- Scope: may touch `content/it/**`, `public/audio/it/**`, `docs/content-review.md` / must not touch `src/**`.
+- Context: docs/brief.md, docs/content-guide.md, docs/content-review.md (style of the previous review). Never rename or delete ids. Also remove the stale mentions of the deleted `stories/sample-story.json` in docs/content-guide.md (T17). Story voices: narrator Elsa, Hernán Diego, women Isabella (T17/T18). `npm run audio` creates .venv itself and needs internet.
+- Scope: may touch `content/it/**`, `public/audio/it/**`, `docs/content-review.md`, `docs/content-guide.md` / must not touch `src/**`.
 - Done when:
   - Fixes applied in place and appended to docs/content-review.md (categories with counts).
   - `npm run audio` run, mp3s committed; `npm run content:check -- --strict-audio` → exit 0.
@@ -135,8 +135,10 @@ Worktree setup: npm ci
 - 2026-09-30 T19: recordActivity({lang?, xp, outcomes:{itemId,correct}[]}) wraps recordReviewResult(); only wrong items to SRS (+same-text ids); deck = 10 cards, unknown first, 'La sé' stored in lang-lern:game:<lang>; 10 pts × combo (x2@3, x3@6, x4@9); XP = 5 + 1 per right answer; card shows translation + explanation directly; round intro screen. (agent)
 - 2026-09-30 T17: voices: narrator Elsa, Hernán Diego, other characters Isabella; inline keywords story-palermo-*/story-cefalu-*/story-pullman-agrigento-*; story 6 route Cefalù→Palermo train then pullman, AST strike/SAIS runs; prices plausible fiction; levels A1 (1,2,3,5) and A2 (4,6). (agent)
 - 2026-09-30 T18: recurring character Chiara (teacher from Milan, frutta secca allergy) in 7, 11, 12; route Agrigento→Catania→Siracusa→Interbus to Catania airport; Hernán Diego, women Isabella, other men narrator; keyword prefixes story-agrigento/catania/siracusa/ortigia/ritorno-*. (agent)
+- 2026-09-30 T20: kept T19 recordActivity; stories send every practised keyword (wrong→box 1, right→up), game sends only wrong ones; done state in lang-lern:stories:<lang>; XP 10 + 1 per first-try right; order game up to 5 sentences; summary counts as finished; keyword matching by word/article/plural/gap/stem. (agent)
 
 ## Proposals (new scope)
+- 2026-09-30 T20: resetProgress on /perfil does not clear stories/game keys; ExitDialog says '¿Salir de la lección?' in stories; lesson components hard-code lang="it"; one keyword in story.pullman-per-agrigento is never highlighted.
 - 2026-09-30 T17: docs/content-guide.md still mentions deleted stories/sample-story.json (lines 24, 120).
 - 2026-09-30 T19: check game mode in light theme by eye.
 
@@ -157,3 +159,6 @@ Worktree setup: npm ci
 - 2026-09-30 T19 done · branch worktree-agent-adc312cab832b2d6f → 92dfcd4
 - 2026-09-30 T17 done · branch worktree-agent-a0b08ee802ecd9d4b → aecfb6b
 - 2026-09-30 T18 done · branch worktree-agent-acd02c29fc0662347 → dfee50d
+- 2026-09-30 20:31 T20 integration conflict (activity.ts) · conflict message sent to same agent
+- 2026-09-30 20:32 T21 launched · attempt 1 · agent af162457e0fd6a83d
+- 2026-09-30 T20 done · branch worktree-agent-a34289261fb6eccd3 → 7fd21d4
