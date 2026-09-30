@@ -10,7 +10,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T13 — Navigation: central Jugar button and Historias tab
-- Status: pending
+- Status: done
 - Depends on: none
 - Goal: Restructure the tab bar to Ruta · Historias · JUGAR (big central button) · Frases · Perfil, and move Repaso and Diálogos into cards on the Ruta home so nothing is lost.
 - Context: CLAUDE.md (tabs live only in `src/lib/navigation.ts`, TabBar reads from it; tokens only, light + dark). Existing routes `/repaso/` and `/dialogos/` must keep working (deep links, SW precache). New routes `/jugar/` and `/historias/` are placeholders here; T18 and T19 fill them. Keep the central button visually distinct (raised, lemon or terracotta, press animation) and safe-area aware.
@@ -20,10 +20,10 @@ Worktree setup: npm ci
   - Ruta home has a Repaso card (items due) and a Diálogos card linking to the existing pages.
   - `/jugar/` and `/historias/` exist as placeholders with Spain-Spanish copy.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: tabs Ruta · Historias · Jugar (raised terracotta) · Frases · Perfil; Repaso/Diálogos cards on Ruta; placeholders · 6b57eef
 
 ## T14 — Content model: phrase explanations and stories
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: none
 - Goal: Extend the language-pack contract so content tasks and UI tasks can work in parallel: an optional `explanation` on phrases, and a Story type with sentences, key words, comprehension questions and gap sentences; loader functions and audio coverage.
 - Context: CLAUDE.md, docs/content-guide.md, `src/lib/content/{schema,types,index}.ts`, `scripts/content.ts`, `scripts/audio/plan.ts` (audio plan walks the Pack). Stories live in `content/<lang>/stories/*.json` (glob). Key words must be SRS-able: each key word references an existing vocab or phrase id, or defines a new vocab item inside the story file with its own id (prefix `story-`), so the Leitner store (ids) works unchanged. Every Italian string (sentences, key words, questions, answers) is a playable with audio key and voice.
@@ -127,7 +127,11 @@ Worktree setup: npm ci
 - 2026-09-30 plan: explanation per phrase = when to use + pronunciation tip. (Hernán)
 - 2026-09-30 plan: 12 trip stories, 80–150 words, read sentence by sentence; games: key words, fill the gaps, comprehension, order. Games and stories give XP, streak and feed SRS. (Hernán)
 - 2026-09-30 plan: T19 and T20 share `recordActivity({ xp, outcomes })` in src/lib/progress/activity.ts; overlap resolved at integration. Up to 5 agents in parallel. (orchestrator)
+- 2026-09-30 T13: navigation.ts NESTED list (repaso, dialogos → parent path), `central: true` for Jugar; new icons in src/components/shell/icons.tsx; Ruta top stats reduced to streak + XP. (agent)
 
 ## Proposals (new scope)
 
 ## Log
+- 2026-09-30 19:20 T13 launched · attempt 1 · agent af774e91af56fba92
+- 2026-09-30 19:20 T14 launched · attempt 1 · agent a12dc90909565ae69
+- 2026-09-30 T13 done · branch worktree-agent-af774e91af56fba92 → 6b57eef
