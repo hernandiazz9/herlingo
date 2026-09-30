@@ -121,6 +121,18 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome:
 
+## T22 — Small fixes: reset progress, exit dialog copy
+- Status: running (attempt 1)
+- Depends on: T19, T20
+- Goal: Fix two leftovers from T19/T20: "Borrar progreso" must also clear the game and stories keys, and the exit dialog reused in stories (and the game, if used) must not say "¿Salir de la lección?".
+- Context: CLAUDE.md. `resetProgress` in `src/lib/progress/**`; game key `lang-lern:game:<lang>` (src/lib/game), stories key `lang-lern:stories:<lang>` (src/lib/stories/done.ts); `ExitDialog` in `src/components/lesson`. T21 runs in parallel on content only.
+- Scope: may touch `src/lib/progress/**`, `src/lib/game/**`, `src/lib/stories/**`, `src/components/lesson/ExitDialog*` (add an optional copy prop), `src/components/stories/**`, `src/components/game/**` / must not touch `content/**`, `public/**`.
+- Done when:
+  - Reset progress on /perfil clears progress, game records/known cards and stories done state (settings stay, as today).
+  - Exit dialog in stories says "¿Salir de la historia?" (and the game, if it uses it, "¿Salir del juego?"); lessons unchanged.
+  - `npm run verify` → exit 0.
+- Outcome:
+
 ## Decisions
 - 2026-09-30 plan: tabs become Ruta · Historias · Jugar (central) · Frases · Perfil; Repaso and Diálogos move into cards on Ruta. (Hernán)
 - 2026-09-30 plan: game mode = Descubrir cards + 60 s round; the round uses only "Escucha y elige" (both directions). (Hernán)
@@ -136,6 +148,7 @@ Worktree setup: npm ci
 - 2026-09-30 T17: voices: narrator Elsa, Hernán Diego, other characters Isabella; inline keywords story-palermo-*/story-cefalu-*/story-pullman-agrigento-*; story 6 route Cefalù→Palermo train then pullman, AST strike/SAIS runs; prices plausible fiction; levels A1 (1,2,3,5) and A2 (4,6). (agent)
 - 2026-09-30 T18: recurring character Chiara (teacher from Milan, frutta secca allergy) in 7, 11, 12; route Agrigento→Catania→Siracusa→Interbus to Catania airport; Hernán Diego, women Isabella, other men narrator; keyword prefixes story-agrigento/catania/siracusa/ortigia/ritorno-*. (agent)
 - 2026-09-30 T20: kept T19 recordActivity; stories send every practised keyword (wrong→box 1, right→up), game sends only wrong ones; done state in lang-lern:stories:<lang>; XP 10 + 1 per first-try right; order game up to 5 sentences; summary counts as finished; keyword matching by word/article/plural/gap/stem. (agent)
+- 2026-09-30 orchestrator: added T22 (small fixes left by T19/T20). (orchestrator)
 
 ## Proposals (new scope)
 - 2026-09-30 T20: resetProgress on /perfil does not clear stories/game keys; ExitDialog says '¿Salir de la lección?' in stories; lesson components hard-code lang="it"; one keyword in story.pullman-per-agrigento is never highlighted.
