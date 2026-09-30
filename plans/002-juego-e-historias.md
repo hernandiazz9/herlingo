@@ -82,7 +82,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T19 — Game mode
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T13, T14
 - Goal: The quick game mode behind the central Jugar button: pick a topic, discover its phrases with audio and explanation, then a 60-second listen-and-pick round with combo, points and a record per topic.
 - Context: CLAUDE.md (tokens only, light + dark; audio via `speak()` from a user gesture; content via `@/lib/content`, never hard-coded ids). Topics = situations in the pack that have phrases (`getSituation()`), with phrase count and personal record. Explanations arrive in parallel (T15/T16): show `explanation` when present, fall back to `notes` or nothing. Progress: use the existing store in `src/lib/progress/**` and SRS in `src/lib/srs/**` (add small exported helpers if needed: award XP, mark streak day, record item outcomes) — T20 runs in parallel and needs the same, so keep helpers additive in a new file `src/lib/progress/activity.ts` and coordinate by name: `recordActivity({ xp, outcomes })`.
@@ -93,7 +93,7 @@ Worktree setup: npm ci
   - Ronda rápida: 60 s, "Escucha y elige" questions (audio → pick the Spanish meaning among 4; and the reverse: Spanish → pick the Italian among 4, each playable), combo multiplier, score, end screen with record per topic stored locally.
   - XP and streak recorded, wrong items sent to SRS via `recordActivity`.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: /jugar topic grid + Mezcla, Descubrir decks of 10, 60 s listen-and-pick round with combo x1–x4 and records, recordActivity · 92dfcd4
 
 ## T20 — Stories reader and story games
 - Status: running (attempt 1)
@@ -132,8 +132,10 @@ Worktree setup: npm ci
 - 2026-09-30 orchestrator: run all 6 ready tasks (T15–T20) at once, per Hernán's max-speed request. (orchestrator)
 - 2026-09-30 T16: pronunciation respelling scheme: stressed syllable in capitals, gi/ge→dy, ci/ce→chi/che, z→ts/dz, gli→soft ll, gn→ñ, doubles marked, silent h. (agent)
 - 2026-09-30 T15: explanation inserted before register; for phrases the learner hears (announcements, inspector) the tip says where you hear it and what to do. (agent)
+- 2026-09-30 T19: recordActivity({lang?, xp, outcomes:{itemId,correct}[]}) wraps recordReviewResult(); only wrong items to SRS (+same-text ids); deck = 10 cards, unknown first, 'La sé' stored in lang-lern:game:<lang>; 10 pts × combo (x2@3, x3@6, x4@9); XP = 5 + 1 per right answer; card shows translation + explanation directly; round intro screen. (agent)
 
 ## Proposals (new scope)
+- 2026-09-30 T19: check game mode in light theme by eye.
 
 ## Log
 - 2026-09-30 19:20 T13 launched · attempt 1 · agent af774e91af56fba92
@@ -149,3 +151,4 @@ Worktree setup: npm ci
 - 2026-09-30 20:23 T20 launched · attempt 1 · agent a34289261fb6eccd3
 - 2026-09-30 T16 done · branch worktree-agent-a647d201261a0ed35 → bb95c64
 - 2026-09-30 T15 done · branch worktree-agent-aaf6fced4038653b6 → 69e85f9
+- 2026-09-30 T19 done · branch worktree-agent-adc312cab832b2d6f → 92dfcd4
