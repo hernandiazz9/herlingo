@@ -1,6 +1,6 @@
 # Plan 002 — Game mode and short stories
 
-Status: active
+Status: done
 Created: 2026-09-30
 Base branch: main
 Goal: Help Hernán get familiar with a lot of Italian fast before the Sicily trip, then polish details: a central "Jugar" button that opens a quick game mode by topic (discover cards with audio and a short explanation, then a 60-second listen-and-pick round), and a "Historias" section with 12 short stories following his trip, read sentence by sentence with Spanish on demand, followed by games on the story's words and expressions. Both feed XP, streak and spaced review. MVP speed: no automated tests; verification is lint + typecheck + content check + build.
@@ -181,3 +181,4 @@ Worktree setup: npm ci
 - 2026-09-30 20:33 T22 launched · attempt 1 · agent a5514bc74a3bd77fb
 - 2026-09-30 T22 done · branch worktree-agent-a5514bc74a3bd77fb → e3abe1d
 - 2026-09-30 T21 done · branch worktree-agent-af162457e0fd6a83d → db66985
+- 2026-09-30 plan 002 done · final verify on main passed
