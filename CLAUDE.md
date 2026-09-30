@@ -25,9 +25,10 @@ check UI changes by hand with `npm run dev` or by serving `out/` with any static
 src/app/               Routes (App Router). One folder per section: / (ruta), repaso, frasario, dialogos, perfil.
                        layout.tsx = app shell (centred mobile column + bottom TabBar); globals.css = design tokens.
 src/components/ui/     Base components: Button, IconButton, Card, ProgressBar (import from "@/components/ui").
-src/components/shell/  App shell pieces: TabBar, PageHeader, ComingSoon placeholder.
+src/components/shell/  App shell pieces: TabBar, PageHeader, ComingSoon placeholder, ThemeToggle, ThemeSync.
 src/components/icons.tsx  Inline SVG icons (no icon library).
 src/lib/               Framework-free logic. navigation.ts = the tab list (single source of truth).
+                       theme/ = light/dark choice (localStorage), inline pre-paint script, theme-color.
 content/<lang>/        Learning content per language. Only `it` exists. Code never hard-codes content.
 scripts/               Node scripts (content tools, audio generation...).
 public/                Static assets (later: audio under public/audio/<lang>/, PWA manifest and icons).
@@ -44,9 +45,17 @@ plans/                 Orchestrator plans. Never edit.
 - **Static export only.** No server runtime, API routes, `cookies()`/`headers()`, or runtime env
   secrets. Progress lives on the device (localStorage).
 - **Design tokens** are CSS variables in `src/app/globals.css` (`--lemon`, `--sea`, `--terracotta`,
-  neutrals, `--success`, `--error`, each with `-deep`/`-soft` variants) exposed to Tailwind as
-  `bg-sea`, `text-ink`, `border-line`, `rounded-card`, `rounded-button`... Use tokens, never raw hex.
-- **Press animation:** add the `pressable` class and set `[--ledge:<colour>]` for the ledge colour.
+  neutrals, `--success`, `--error`, each with `-deep`/`-soft`/`-ledge` variants, plus `--on-accent`,
+  `--on-lemon`, `--shadow`) exposed to Tailwind as `bg-sea`, `text-ink`, `border-line`,
+  `text-on-accent`, `rounded-card`, `rounded-button`...
+- **Light and dark themes.** Every colour token has a dark value (system setting by default, or the
+  Sistema/Claro/Oscuro choice on /perfil, stored on the device as `data-theme` on `<html>`).
+  **UI code uses tokens only, never hard-coded colours** (no hex/rgb, no `text-white`/`bg-black`,
+  no `dark:` variants), so both themes work. Token roles: `-deep` = strong text/emphasis readable on
+  surfaces and `-soft` backgrounds (lighter in dark); `-ledge` = the darker press ledge; text on a
+  filled accent uses `text-on-accent` (sea/terracotta/success/error) or `text-on-lemon`. Check new
+  UI in both themes.
+- **Press animation:** add the `pressable` class and set `[--ledge:var(--sea-ledge)]` (a `-ledge` token).
   Respect `prefers-reduced-motion`.
 - **Mobile shell:** the app is a column capped at `--column-width` (480px), centred on desktop. The
   tab bar is fixed to the bottom and pads with `env(safe-area-inset-bottom)` (`viewport-fit=cover`).

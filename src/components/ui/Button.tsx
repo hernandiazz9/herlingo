@@ -11,7 +11,7 @@ export interface ButtonProps extends ComponentPropsWithRef<"button"> {
 }
 
 const VARIANTS: Record<ButtonVariant, string> = {
-  primary: "bg-sea text-white [--ledge:var(--sea-deep)] hover:brightness-105",
+  primary: "bg-sea text-on-accent [--ledge:var(--sea-ledge)] hover:brightness-105",
   secondary: "bg-surface text-sea border-2 border-line [--ledge:var(--line)] hover:bg-sea-soft/40",
 };
 

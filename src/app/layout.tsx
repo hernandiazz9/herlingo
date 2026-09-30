@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { TabBar } from "@/components/shell/TabBar";
-import { APP_DESCRIPTION, APP_NAME, THEME_COLOR } from "@/lib/app-config";
+import { ThemeSync } from "@/components/shell/ThemeSync";
+import { APP_DESCRIPTION, APP_NAME } from "@/lib/app-config";
+import { THEME_COLORS, THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,16 +18,26 @@ export const viewport: Viewport = {
   initialScale: 1,
   // Lets the layout extend under the notch / home indicator; the shell pads with env(safe-area-inset-*).
   viewportFit: "cover",
-  themeColor: THEME_COLOR,
+  // Follows the system theme; the inline script / ThemeSync override it when the user picks one.
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: THEME_COLORS.light },
+    { media: "(prefers-color-scheme: dark)", color: THEME_COLORS.dark },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className="h-full antialiased">
+    // suppressHydrationWarning: the inline theme script sets data-theme on <html> before React hydrates.
+    <html lang="es" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        {/* Applies the stored Sistema/Claro/Oscuro choice before first paint (no flash). */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body className="min-h-full">
+        <ThemeSync />
         {/* Centred mobile-width column: full width on phones, a phone-sized column on desktop. */}
         <div
-          className="relative mx-auto flex min-h-dvh w-full max-w-[var(--column-width)] flex-col bg-cream shadow-[0_0_0_1px_var(--line),0_12px_40px_-12px_rgb(30_41_53/0.25)]"
+          className="relative mx-auto flex min-h-dvh w-full max-w-[var(--column-width)] flex-col bg-cream shadow-[0_0_0_1px_var(--line),0_12px_40px_-12px_var(--shadow)]"
         >
           {/* Sicilian ribbon: lemon, sea and terracotta. Sits under the status bar. */}
           <div

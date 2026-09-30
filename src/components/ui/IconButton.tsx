@@ -11,7 +11,7 @@ export interface IconButtonProps extends Omit<ComponentPropsWithRef<"button">, "
 }
 
 const VARIANTS: Record<IconButtonVariant, string> = {
-  primary: "bg-sea text-white [--ledge:var(--sea-deep)]",
+  primary: "bg-sea text-on-accent [--ledge:var(--sea-ledge)]",
   secondary: "bg-surface text-sea border-2 border-line [--ledge:var(--line)]",
 };
 

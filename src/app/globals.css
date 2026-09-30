@@ -7,22 +7,26 @@
 /*
  * Sicilian design tokens. Components use these through the Tailwind utilities
  * mapped in @theme below (bg-sea, text-ink, border-line...), never raw hex values.
+ * Every colour token has a dark value below, so token-only UI works in both themes.
  */
 :root {
   /* Lemon yellow */
   --lemon: #f7d23e;
   --lemon-deep: #d9b10f;
   --lemon-soft: #fff5c7;
+  --lemon-ledge: #d9b10f;
 
   /* Sea blue */
   --sea: #1768a6;
   --sea-deep: #0c4a7a;
   --sea-soft: #dcecf8;
+  --sea-ledge: #0c4a7a;
 
   /* Terracotta */
   --terracotta: #c4583c;
   --terracotta-deep: #9c3f27;
   --terracotta-soft: #f7e0d7;
+  --terracotta-ledge: #9c3f27;
 
   /* Neutrals */
   --cream: #fffaf0;
@@ -32,14 +36,21 @@
   --ink: #1e2935;
   --ink-muted: #5d6a77;
   --backdrop: #efe6d3;
+  --shadow: rgb(30 41 53 / 0.25);
+
+  /* Text on filled accents: on-accent for sea/terracotta/success/error, on-lemon for lemon. */
+  --on-accent: #ffffff;
+  --on-lemon: #1e2935;
 
   /* Feedback */
   --success: #2c9a58;
   --success-deep: #1f7442;
   --success-soft: #dcf3e5;
+  --success-ledge: #1f7442;
   --error: #d24343;
   --error-deep: #a42e2e;
   --error-soft: #fbe1e1;
+  --error-ledge: #a42e2e;
 
   /* Motion */
   --press-depth: 4px;
@@ -52,6 +63,84 @@
   --safe-bottom: env(safe-area-inset-bottom, 0px);
 
   color-scheme: light;
+}
+
+/*
+ * Dark theme. Same token names, so components need no dark: variants.
+ * Applied when the system is dark (unless the user chose Claro) or when the user chose Oscuro.
+ * Keep both blocks below identical: edit one, copy to the other.
+ * In dark, accents are lighter (readable as text on dark surfaces) and filled accents carry dark
+ * text (--on-accent); -deep stays "strongest contrast against the background" (lighter here),
+ * while -ledge stays the darker shade the pressable ledge needs.
+ */
+:root[data-theme="dark"] {
+  --lemon: #f5cf3a;
+  --lemon-deep: #ffe07a;
+  --lemon-soft: #342d14;
+  --lemon-ledge: #b8960c;
+  --sea: #5aaef0;
+  --sea-deep: #9fd0f7;
+  --sea-soft: #173049;
+  --sea-ledge: #2f7cbd;
+  --terracotta: #e8805f;
+  --terracotta-deep: #f5b39c;
+  --terracotta-soft: #3d241b;
+  --terracotta-ledge: #b0543a;
+  --cream: #141c24;
+  --surface: #1c2631;
+  --sand: #27323e;
+  --line: #34424f;
+  --ink: #eef2f6;
+  --ink-muted: #a3b0bd;
+  --backdrop: #0b1016;
+  --shadow: rgb(0 0 0 / 0.6);
+  --on-accent: #0f1720;
+  --on-lemon: #1e2935;
+  --success: #4cc47d;
+  --success-deep: #8fe0b0;
+  --success-soft: #15321f;
+  --success-ledge: #2a8a50;
+  --error: #f07171;
+  --error-deep: #f8a9a9;
+  --error-soft: #3d1b1d;
+  --error-ledge: #b23b3b;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --lemon: #f5cf3a;
+    --lemon-deep: #ffe07a;
+    --lemon-soft: #342d14;
+    --lemon-ledge: #b8960c;
+    --sea: #5aaef0;
+    --sea-deep: #9fd0f7;
+    --sea-soft: #173049;
+    --sea-ledge: #2f7cbd;
+    --terracotta: #e8805f;
+    --terracotta-deep: #f5b39c;
+    --terracotta-soft: #3d241b;
+    --terracotta-ledge: #b0543a;
+    --cream: #141c24;
+    --surface: #1c2631;
+    --sand: #27323e;
+    --line: #34424f;
+    --ink: #eef2f6;
+    --ink-muted: #a3b0bd;
+    --backdrop: #0b1016;
+    --shadow: rgb(0 0 0 / 0.6);
+    --on-accent: #0f1720;
+    --on-lemon: #1e2935;
+    --success: #4cc47d;
+    --success-deep: #8fe0b0;
+    --success-soft: #15321f;
+    --success-ledge: #2a8a50;
+    --error: #f07171;
+    --error-deep: #f8a9a9;
+    --error-soft: #3d1b1d;
+    --error-ledge: #b23b3b;
+    color-scheme: dark;
+  }
 }
 
 @theme inline {
@@ -77,6 +166,13 @@
   --color-error: var(--error);
   --color-error-deep: var(--error-deep);
   --color-error-soft: var(--error-soft);
+  --color-lemon-ledge: var(--lemon-ledge);
+  --color-sea-ledge: var(--sea-ledge);
+  --color-terracotta-ledge: var(--terracotta-ledge);
+  --color-success-ledge: var(--success-ledge);
+  --color-error-ledge: var(--error-ledge);
+  --color-on-accent: var(--on-accent);
+  --color-on-lemon: var(--on-lemon);
 }
 
 /* Shape and type tokens (emitted as CSS variables too: --radius-card, --font-sans...). */
