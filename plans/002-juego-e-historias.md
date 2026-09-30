@@ -71,7 +71,7 @@ Worktree setup: npm ci
 - Outcome: 6 stories (104–131 words, 9–10 keywords, 4 questions, 5–6 gaps), 0 warnings; sample deleted · aecfb6b
 
 ## T18 — Stories 7–12: Sicily encounters
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T14
 - Goal: Write the last six stories of the trip, same format and level as T17.
 - Context: same as T17. Stories: 7 La Valle dei Templi e una chiacchierata, 8 Granita e brioche a Catania, 9 Al mercato del pesce di Catania, 10 In farmacia a Siracusa, 11 Una cena a Ortigia (prenotare, allergie, il conto), 12 L'ultimo giorno: saluti e ritorno. Order values 7–12. T17 deletes the sample story; do not touch it.
@@ -79,7 +79,7 @@ Worktree setup: npm ci
 - Done when:
   - 6 story files, each within 80–150 words, with the counts above (report them).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 6 stories (103–127 words, 10 keywords, 4 questions, 5–6 gaps), 0 warnings · dfee50d
 
 ## T19 — Game mode
 - Status: done
@@ -134,6 +134,7 @@ Worktree setup: npm ci
 - 2026-09-30 T15: explanation inserted before register; for phrases the learner hears (announcements, inspector) the tip says where you hear it and what to do. (agent)
 - 2026-09-30 T19: recordActivity({lang?, xp, outcomes:{itemId,correct}[]}) wraps recordReviewResult(); only wrong items to SRS (+same-text ids); deck = 10 cards, unknown first, 'La sé' stored in lang-lern:game:<lang>; 10 pts × combo (x2@3, x3@6, x4@9); XP = 5 + 1 per right answer; card shows translation + explanation directly; round intro screen. (agent)
 - 2026-09-30 T17: voices: narrator Elsa, Hernán Diego, other characters Isabella; inline keywords story-palermo-*/story-cefalu-*/story-pullman-agrigento-*; story 6 route Cefalù→Palermo train then pullman, AST strike/SAIS runs; prices plausible fiction; levels A1 (1,2,3,5) and A2 (4,6). (agent)
+- 2026-09-30 T18: recurring character Chiara (teacher from Milan, frutta secca allergy) in 7, 11, 12; route Agrigento→Catania→Siracusa→Interbus to Catania airport; Hernán Diego, women Isabella, other men narrator; keyword prefixes story-agrigento/catania/siracusa/ortigia/ritorno-*. (agent)
 
 ## Proposals (new scope)
 - 2026-09-30 T17: docs/content-guide.md still mentions deleted stories/sample-story.json (lines 24, 120).
@@ -155,3 +156,4 @@ Worktree setup: npm ci
 - 2026-09-30 T15 done · branch worktree-agent-aaf6fced4038653b6 → 69e85f9
 - 2026-09-30 T19 done · branch worktree-agent-adc312cab832b2d6f → 92dfcd4
 - 2026-09-30 T17 done · branch worktree-agent-a0b08ee802ecd9d4b → aecfb6b
+- 2026-09-30 T18 done · branch worktree-agent-acd02c29fc0662347 → dfee50d
