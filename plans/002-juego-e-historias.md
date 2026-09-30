@@ -23,7 +23,7 @@ Worktree setup: npm ci
 - Outcome: tabs Ruta · Historias · Jugar (raised terracotta) · Frases · Perfil; Repaso/Diálogos cards on Ruta; placeholders · 6b57eef
 
 ## T14 — Content model: phrase explanations and stories
-- Status: running (attempt 1)
+- Status: done
 - Depends on: none
 - Goal: Extend the language-pack contract so content tasks and UI tasks can work in parallel: an optional `explanation` on phrases, and a Story type with sentences, key words, comprehension questions and gap sentences; loader functions and audio coverage.
 - Context: CLAUDE.md, docs/content-guide.md, `src/lib/content/{schema,types,index}.ts`, `scripts/content.ts`, `scripts/audio/plan.ts` (audio plan walks the Pack). Stories live in `content/<lang>/stories/*.json` (glob). Key words must be SRS-able: each key word references an existing vocab or phrase id, or defines a new vocab item inside the story file with its own id (prefix `story-`), so the Leitner store (ids) works unchanged. Every Italian string (sentences, key words, questions, answers) is a playable with audio key and voice.
@@ -35,10 +35,10 @@ Worktree setup: npm ci
   - One sample story `content/it/stories/sample-story.json` (5 sentences, 4 keywords, 2 questions, 2 gaps) so UI tasks can build before real stories land; later story tasks delete it.
   - docs/content-guide.md documents explanations and stories (format, ids, voices, word count, number of keywords/questions/gaps).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: phrase `explanation?`, Story schema + getStories/getStory/getStoryKeywords, stories in listPlayables/audio plan, content:check story validation, sample story · 9d1e54e
 
 ## T15 — Explanations for getting-around and talking phrases
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T14
 - Goal: Write the `explanation` for every phrase in units ordered 20–39 (move-*, talk-*): when to use it and one pronunciation tip.
 - Context: docs/brief.md (learner: Spain Spanish "tú", A1, Sicily trip), docs/content-guide.md (explanation rules from T14). Files `content/it/units/2*.json` and `3*.json`. Keep each explanation 1–2 short lines, concrete ("Se lo dices al revisor cuando…"; "«gli» suena como una «ll» suave"). Don't change Italian texts or ids.
@@ -49,7 +49,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T16 — Explanations for survival, emergencies and food phrases
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T14
 - Goal: Write the `explanation` for every phrase in units ordered 10–19 and 40–49 (surv, emer, food) and any phrase in 90+ units: when to use it and one pronunciation tip.
 - Context: same as T15. Files `content/it/units/1*.json`, `4*.json`, `9*.json`. Don't change Italian texts or ids.
@@ -60,7 +60,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T17 — Stories 1–6: arriving and moving around
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T14
 - Goal: Write the first six stories of Hernán's trip, A1–A2, 80–150 words each, natural current Italian, with Spain-Spanish translation per sentence, 8–10 key words/expressions, 3–4 comprehension questions and 4–6 gap items each.
 - Context: docs/brief.md (persona in content/it/units/32-persona-sobre-mi.json: Hernán, Spanish traveller, alone, ~10 days, Palermo → Cefalù → Agrigento → Catania → Siracusa), docs/content-guide.md (story format from T14). Stories: 1 Arrivo a Palermo (airport, Prestia e Comandè bus to the centre), 2 In ostello / B&B check-in, 3 Il mercato di Ballarò, 4 In treno per Cefalù (ticket, convalidare, ritardo), 5 Una giornata a Cefalù (spiaggia, chiedere indicazioni), 6 Il pullman per Agrigento (AST/SAIS, fermata, sciopero). Reuse existing vocab/phrase ids as key words where they exist (look them up), new ones inline with `story-` prefix. Order values 1–6. Delete `content/it/stories/sample-story.json`.
@@ -71,7 +71,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T18 — Stories 7–12: Sicily encounters
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T14
 - Goal: Write the last six stories of the trip, same format and level as T17.
 - Context: same as T17. Stories: 7 La Valle dei Templi e una chiacchierata, 8 Granita e brioche a Catania, 9 Al mercato del pesce di Catania, 10 In farmacia a Siracusa, 11 Una cena a Ortigia (prenotare, allergie, il conto), 12 L'ultimo giorno: saluti e ritorno. Order values 7–12. T17 deletes the sample story; do not touch it.
@@ -82,7 +82,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T19 — Game mode
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T13, T14
 - Goal: The quick game mode behind the central Jugar button: pick a topic, discover its phrases with audio and explanation, then a 60-second listen-and-pick round with combo, points and a record per topic.
 - Context: CLAUDE.md (tokens only, light + dark; audio via `speak()` from a user gesture; content via `@/lib/content`, never hard-coded ids). Topics = situations in the pack that have phrases (`getSituation()`), with phrase count and personal record. Explanations arrive in parallel (T15/T16): show `explanation` when present, fall back to `notes` or nothing. Progress: use the existing store in `src/lib/progress/**` and SRS in `src/lib/srs/**` (add small exported helpers if needed: award XP, mark streak day, record item outcomes) — T20 runs in parallel and needs the same, so keep helpers additive in a new file `src/lib/progress/activity.ts` and coordinate by name: `recordActivity({ xp, outcomes })`.
@@ -96,7 +96,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T20 — Stories reader and story games
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T13, T14
 - Goal: The Historias section: list of the 12 stories in trip order with progress, a sentence-by-sentence reader with audio and Spanish on demand, then four games on the story (key words, fill the gaps, comprehension, order the story).
 - Context: CLAUDE.md (tokens only, light + dark; audio via `speak()`; content via `@/lib/content` `getStories()/getStory()`; never hard-code ids). Build against the sample story; real stories arrive in parallel (T17/T18). Reuse answer checking from `src/lib/exercises` where it fits. Progress: same `recordActivity({ xp, outcomes })` helper as T19 in `src/lib/progress/activity.ts` — if it does not exist yet in your branch, create it with exactly that name and signature (additive, tolerant); the orchestrator resolves any merge overlap.
@@ -128,6 +128,8 @@ Worktree setup: npm ci
 - 2026-09-30 plan: 12 trip stories, 80–150 words, read sentence by sentence; games: key words, fill the gaps, comprehension, order. Games and stories give XP, streak and feed SRS. (Hernán)
 - 2026-09-30 plan: T19 and T20 share `recordActivity({ xp, outcomes })` in src/lib/progress/activity.ts; overlap resolved at integration. Up to 5 agents in parallel. (orchestrator)
 - 2026-09-30 T13: navigation.ts NESTED list (repaso, dialogos → parent path), `central: true` for Jugar; new icons in src/components/shell/icons.tsx; Ruta top stats reduced to streak + XP. (agent)
+- 2026-09-30 T14: story fields `text` (sentences/options), `title` + `titleEs`, question `es`, `correct` 0-based; ids story.<slug>, inline keywords story-<slug>, local s1/q1/g1; keywords may reference vocab, phrase or expression; gaps have optional `gap` form + built before/after; gap chips no audio; narrator voice = story voice or default; content:check warns outside 80–150 words, 8–10 keywords, 3–4 questions, 4–6 gaps; story order unique, sample uses 0. (agent)
+- 2026-09-30 orchestrator: run all 6 ready tasks (T15–T20) at once, per Hernán's max-speed request. (orchestrator)
 
 ## Proposals (new scope)
 
@@ -135,3 +137,5 @@ Worktree setup: npm ci
 - 2026-09-30 19:20 T13 launched · attempt 1 · agent af774e91af56fba92
 - 2026-09-30 19:20 T14 launched · attempt 1 · agent a12dc90909565ae69
 - 2026-09-30 T13 done · branch worktree-agent-af774e91af56fba92 → 6b57eef
+- 2026-09-30 T14 stalled (watchdog) · resumed same agent via SendMessage
+- 2026-09-30 20:21 T14 done · branch worktree-agent-a12dc90909565ae69 → 9d1e54e
