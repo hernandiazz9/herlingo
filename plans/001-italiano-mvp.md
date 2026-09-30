@@ -55,7 +55,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T02
 - Goal: The core learning loop: a lesson session that generates mixed exercises from a lesson's items, checks answers leniently, gives immediate feedback with audio, re-queues mistakes and ends with a result.
-- Context: docs/brief.md (exercise types, iPhone mic limits), content loader and `speak()` from T02. Build against the sample pack; real content arrives in parallel (T05/T06), so never hard-code content ids. Progress persistence is T07: expose a typed `LessonResult` (per-item outcomes, XP earned, duration) via an `onComplete` callback and keep persistence out of this task. Put the answer normalizer and the speech-recognition helper in `src/lib/exercises` / `src/lib/speech` so T08 can reuse them.
+- Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (exercise types, iPhone mic limits), content loader and `speak()` from T02. Build against the sample pack; real content arrives in parallel (T05/T06), so never hard-code content ids. Progress persistence is T07: expose a typed `LessonResult` (per-item outcomes, XP earned, duration) via an `onComplete` callback and keep persistence out of this task. Put the answer normalizer and the speech-recognition helper in `src/lib/exercises` / `src/lib/speech` so T08 can reuse them.
 - Scope: may touch `src/app/leccion/**`, `src/components/exercises/**`, `src/components/lesson/**`, `src/lib/exercises/**`, `src/lib/speech/**` / must not touch `content/**`, `src/lib/audio/**`, `src/lib/content/**`, other routes.
 - Done when:
   - Route `/leccion/[id]` statically generated for every lesson; a session of ~10–12 exercises generated with a seeded, deterministic generator from the lesson items.
@@ -96,7 +96,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T02
 - Goal: The two trip-time tools: a fast phrasebook to find and play phrases on the spot, and a dialogue simulator to practise understanding and answering real conversations.
-- Context: docs/brief.md (Phrasebook, Dialogues). Loader and `speak()` from T02. T04 runs in parallel and owns `src/lib/exercises` and `src/lib/speech`: do not edit them; if you need answer normalisation or speech recognition before T04 lands, keep a small local helper inside your own folders. Never hard-code content ids.
+- Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (Phrasebook, Dialogues). Loader and `speak()` from T02. T04 runs in parallel and owns `src/lib/exercises` and `src/lib/speech`: do not edit them; if you need answer normalisation or speech recognition before T04 lands, keep a small local helper inside your own folders. Never hard-code content ids.
 - Scope: may touch `src/app/frasario/**`, `src/app/dialogos/**`, `src/components/phrasebook/**`, `src/components/dialogue/**`, `src/lib/favorites/**` / must not touch `content/**`, `src/lib/exercises/**`, `src/lib/speech/**`, `src/lib/audio/**`, `src/lib/content/**`, other routes.
 - Done when:
   - Phrasebook: phrases grouped by situation, accent-insensitive search in Italian or Spanish, favourites stored locally, tap to play, slow-play button, and a full-screen "Mostrar" mode with big text to show an Italian.
@@ -106,9 +106,9 @@ Worktree setup: npm ci
 
 ## T07 — Path, progress, spaced repetition, placement test and profile
 - Status: pending
-- Depends on: T04, T05, T06
+- Depends on: T04, T05, T06, T11
 - Goal: Turn lessons into a course: the home path of units, persistent progress with streak and XP, spaced-repetition review, the first-launch placement test and the profile/settings screen.
-- Context: docs/brief.md (sections, gamification, placement). Lesson player and `LessonResult` from T04; real content from T05/T06 (loaded by glob, never hard-coded). Storage is localStorage with a versioned schema and safe parsing.
+- Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (sections, gamification, placement). Lesson player and `LessonResult` from T04; real content from T05/T06 (loaded by glob, never hard-coded). Storage is localStorage with a versioned schema and safe parsing. Keep the `ThemeToggle` from T11 in the profile settings.
 - Scope: may touch `src/app/page.tsx` (path), `src/app/repaso/**`, `src/app/perfil/**`, an onboarding route, `src/lib/progress/**`, `src/lib/srs/**`, `src/components/path/**`, `content/it/placement*` (placement questions); may wire `onComplete` in the lesson route / must not change exercise logic in `src/lib/exercises/**` except exporting what it needs.
 - Done when:
   - Home path: units in `order`, lesson nodes locked / available / done, current node highlighted, unit progress, grammar cards and Sicilian expressions reachable as side content.
@@ -136,7 +136,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T07, T08, T09
 - Goal: Make the app installable and fully usable offline on an iPhone, and document how Hernán runs, updates and deploys it.
-- Context: docs/brief.md (Platform, iPhone with Chrome). Static export from T01. All routes and audio exist by now.
+- Context: Use design tokens only, never hard-coded colours (light and dark themes, T11). docs/brief.md (Platform, iPhone with Chrome). Static export from T01. All routes and audio exist by now.
 - Scope: may touch `public/**` (manifest, icons, service worker; not audio files), `src/app/layout.tsx`, an install-guide route, `src/lib/pwa/**`, `scripts/**`, README.md, CLAUDE.md, next config / must not touch `content/**`, feature logic of other sections.
 - Done when:
   - Web app manifest (name, Sicilian theme colours, standalone) and icons (including apple-touch-icon); iOS meta tags.
@@ -146,6 +146,20 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0, and a manual check: serve `out/`, load once, then offline reload still shows the app (describe how you checked).
 - Outcome:
 
+## T11 — Dark mode
+- Status: done
+- Depends on: T01
+- Goal: Add a dark theme to the Sicilian design system: follows the system setting by default, with a System / Light / Dark choice stored on the device.
+- Context: docs/brief.md (Visual style). Design tokens are CSS variables in `src/app/globals.css` (T01). T02 runs in parallel (content/lib only). Later UI tasks (T04, T07, T08, T10) will be told to use tokens only, never hard-coded colours.
+- Scope: may touch `src/app/globals.css`, `src/app/layout.tsx`, `src/components/**` existing base components and shell, `src/lib/theme/**`, `src/app/perfil/page.tsx` (only to place the toggle), CLAUDE.md / must not touch `content/**`, `src/lib/content/**`, `src/lib/audio/**`, other routes.
+- Done when:
+  - Dark values for every token (lemon, sea, terracotta adjusted for contrast on dark, neutrals, success/error, surfaces, text) under `prefers-color-scheme: dark` and under an explicit `data-theme` attribute on `<html>`.
+  - An inline script in the layout applies the stored choice before paint (no flash); `ThemeToggle` component (Sistema / Claro / Oscuro) stored in localStorage, placed on the `/perfil` placeholder; `theme-color` meta follows the theme.
+  - Base components and the shell (tab bar, ribbon) use tokens only and look right in both themes.
+  - CLAUDE.md states: UI code uses tokens only, never hard-coded colours, so both themes work.
+  - `npm run verify` → exit 0.
+- Outcome: dark tokens (system + data-theme), no-flash script, ThemeToggle on /perfil · 64a4bbd
+
 ## Decisions
 - 2026-09-30 plan: T01 has no green baseline to check against (empty repo); the main-branch check runs after T01 is integrated. (orchestrator)
 - 2026-09-30 plan: content split into two parallel tasks with disjoint unit order ranges; units discovered by glob so they never share an index file. (orchestrator)
@@ -154,12 +168,18 @@ Worktree setup: npm ci
 
 - 2026-09-30 T01: Next.js 16.3.7, React 19.2.8, Tailwind 4, ESLint 9; trailingSlash export; lint/tsconfig/Tailwind ignore .claude/** (nested worktrees); tab labels Ruta/Repaso/Frases/Diálogos/Perfil; placeholder app name "Lang Lern" in src/lib/app-config.ts; light theme only; system font. (agent)
 - 2026-09-30 orchestrator: integration runs `npm ci && npm run verify` so dependency changes are picked up in main. (orchestrator)
+- 2026-09-30 T11: new tokens -ledge, --on-accent/--on-lemon, --shadow; dark uses lighter accents with dark text on filled buttons; theme stored as localStorage `lang-lern:theme` ("Sistema" clears it); ThemeToggle in src/components/shell/. (agent)
 
 ## Proposals (new scope)
-- 2026-09-30 T01: real app name and dark mode (Hernán to decide).
+- 2026-09-30 T01: real app name (Hernán to decide).
+- 2026-09-30 T11: light --lemon-deep (#d9b10f) is hard to read as text on --lemon-soft; adjust light palette.
+- 2026-09-30 T11: dark mode added to the plan, follows system + manual toggle in profile. (Hernán)
 
 ## Log
 - 2026-09-30 17:20 T01 launched · attempt 1 · agent ad7263c44e095d704
 - 2026-09-30 17:30 plan revised: tests dropped, parallelism raised to 5 (T01 notified via SendMessage)
 - 2026-09-30 17:27 T01 integration tests_failed (ESLint scanned nested .claude/worktrees) · reverted 3f7df65 · fix sent to same agent
 - 2026-09-30 17:28 T01 done · branch worktree-agent-ad7263c44e095d704 → 419e2cf
+- 2026-09-30 17:29 T02 launched · attempt 1 · agent aaa442c049f27e641
+- 2026-09-30 17:32 T11 launched · attempt 1 · agent a3be29bf937ae5eef
+- 2026-09-30 17:36 T11 done · branch worktree-agent-a3be29bf937ae5eef → 64a4bbd
