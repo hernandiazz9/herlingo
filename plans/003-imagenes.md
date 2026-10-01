@@ -113,7 +113,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T31 — Speaker avatars in dialogues
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T23
 - Goal: Every native speaker in the dialogues gets a Fluent Emoji Flat avatar (revisore, barista, farmacista…) shown next to their speech bubble.
 - Context: T23 API: `listVocab({ situation?, withImage? })` (withImage → `PicturedVocab[]`), `getVocab(id)`, `hasImage(item)`, `getDialogueSpeakers(dialogue)`, `ImageRef { src; dark? }`; `<Picture image alt size="grid"|"intro"|"avatar" bordered? className? />` from `@/components/ui`. Sample pictured words: food.caffe, cornetto, limone, panino (bar), food.vino, pesce, melanzane, uova (restaurante). CLAUDE.md, docs/content-guide.md (avatar key from T23), `content/it/dialogues/*.json`, dialogue UI in `src/components/dialogue/**` and `src/app/dialogos/**`, `Picture` (small size) from T23. T23 put avatars at dialogue level: `"avatars": { "<native turn name>": "fluent:<icon>" }` (one dialogue has two native speakers); read them with `getDialogueSpeakers(dialogue)` / `NativeTurn.avatar`. Pick people emoji that match role and gender (e.g. `fluent:man-police-officer`, `fluent:woman-cook`); the learner's side has no avatar. Run `npm run images` so the avatar files exist.
@@ -121,13 +121,13 @@ Worktree setup: npm ci
 - Done when:
   - Every native speaker in every dialogue has an avatar shown beside their bubble in both themes.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 13 dialogues / 14 speakers with Fluent avatars (12 SVGs), WithAvatar beside bubbles and transcript · 6b8268e
 
 ## T32 — Picture review and final images
 - Status: pending
 - Depends on: T24, T25, T26, T27, T28, T29, T30, T31
 - Goal: Make the whole picture set consistent and correct, then generate and commit every final image.
-- Context: docs/content-guide.md, docs/content-review.md (style of previous reviews), `plans/003-image-coverage.json`, Decisions of T24–T27 in this plan (words switched to custom, shared icons, words left without picture). Run `npm run images`, then render a contact sheet PNG (outside the repo) of every referenced picture with its Italian word, on light and dark surfaces, and look at it with the Read tool: fix wrong or misleading mappings, redraw custom SVGs that clash with the Fluent style or do not read at 80px, draw any custom key still missing (or remove that `image`), and flag near-black pictures for the dark backdrop if the pipeline missed them. Also: draw `custom:move-treno-sciopero` (switched from Fluent by T24); slugs for the same word on several ids (contanti, mercato, aperto, chiuso, passaporto) were drawn twice — keep one drawing and point both ids to it if they differ; docs/content-guide.md uses "il conto" as an example of a word without picture but it now has fluent:receipt — reword. Never rename or delete ids.
+- Context: docs/content-guide.md, docs/content-review.md (style of previous reviews), `plans/003-image-coverage.json`, Decisions of T24–T27 in this plan (words switched to custom, shared icons, words left without picture). Run `npm run images`, then render a contact sheet PNG (outside the repo) of every referenced picture with its Italian word, on light and dark surfaces, and look at it with the Read tool: fix wrong or misleading mappings, redraw custom SVGs that clash with the Fluent style or do not read at 80px, draw any custom key still missing (or remove that `image`), and flag near-black pictures for the dark backdrop if the pipeline missed them. Also review the dialogue avatars chosen by T31 (e.g. Autista = man-pilot, Controllore = man-police-officer) and swap any that mislead. Also: draw `custom:move-treno-sciopero` (switched from Fluent by T24); slugs for the same word on several ids (contanti, mercato, aperto, chiuso, passaporto) were drawn twice — keep one drawing and point both ids to it if they differ; docs/content-guide.md uses "il conto" as an example of a word without picture but it now has fluent:receipt — reword. Never rename or delete ids.
 - Scope: may touch `content/it/**` (only `image`/avatar fields), `assets/images/custom/**`, `assets/images/backdrop.json` (manual dark/light backdrop overrides), `public/images/**`, `docs/content-review.md`, `docs/content-guide.md` / must not touch `src/**`.
 - Done when:
   - Fixes applied and appended to docs/content-review.md (categories with counts; total pictured words; final size of `public/images/`).
@@ -151,6 +151,8 @@ Worktree setup: npm ci
 
 - 2026-10-01 T24: signore/signora → old-man/old-woman, telefono → telephone, sciopero → custom (T32 draws it); 43 other unsure kept (ragazzo=boy, strada=motorway, binario=railway-track, conto=receipt…). Shared icons: receipt (conto, scontrino, ricevuta ×2), luggage (valigia, bagaglio), soft-ice-cream (gelato, cono), identification-card (documento, carta d'identità), seat (posto, sedile), plus same word on several ids. (agent)
 
+- 2026-10-01 T31: avatars: farmacéutica woman-health-worker, camareros man-cook / man-in-tuxedo, autista man-pilot, bigliettaia/o + impiegato office workers, controllore man-police-officer, signora woman / old-woman, tassista man-beard, frutero man-farmer, Giulia woman-curly-hair; 40px avatar left of native bubbles and transcript lines, empty alt. (agent)
+
 ## Proposals (new scope)
 
 ## Log
@@ -165,3 +167,4 @@ Worktree setup: npm ci
 - 2026-10-01 16:26 T30 launched · attempt 1 · agent acfe4d2f3a7bd6810
 - 2026-10-01 16:26 T31 launched · attempt 1 · agent a652261d7b5224990
 - 2026-10-01 16:30 T24 done · branch worktree-agent-ab92b2a3d19487b73 → 5cb6080
+- 2026-10-01 16:31 T31 done · branch worktree-agent-a652261d7b5224990 → 6b8268e
