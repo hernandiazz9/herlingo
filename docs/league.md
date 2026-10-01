@@ -230,60 +230,6 @@ group if it becomes empty) and profile. `true` if there was a profile. The auth 
 auth user completely, delete it in the dashboard (Authentication → Users): everything cascades.
 Errors: `not_authenticated`.
 
-## Client (`src/lib/league/`)
-
-Framework-free modules plus one hook; nothing outside `/liga/` imports supabase-js statically.
-
-| File | What |
-| --- | --- |
-| `config.ts` | `leagueEnabled()` (both env vars set at build), `supabaseConfig()`, `AUTH_STORAGE_KEY`, `LEAGUE_PATH` (`/liga/`), `leagueRedirectUrl()`. |
-| `client.ts` | `getLeagueClient()`: creates the client once via dynamic `import("@supabase/supabase-js")` (own chunk, never in a route's first-load JS); `leagueRpc<T>(fn, args)` calls a `league_*` RPC and throws `LeagueError`; `hasAuthCallbackInUrl()`, `authCallbackResult()`. |
-| `errors.ts` | `LeagueError` with `code`: the RPC tokens above plus `disabled`, `offline`, `network`, `not_joined`, `anonymous_disabled`, `email_invalid`, `email_taken`, `email_not_found`, `email_not_authorized`, `rate_limited`, `link_expired`, `link_invalid`, `unknown`. UI maps codes to copy. |
-| `account.ts` | Account state + actions (below). |
-| `use-league-account.ts` | `useLeagueAccount(lang?)` → the account snapshot + actions (`join`, `updateProfile`, `linkEmail`, `signInWithEmail`, `signOut`, `deleteMe`, `refresh`, `clearLinkError`). |
-
-**Account state.** `{ status, profile, email?, pendingEmail?, userId?, online, linkError? }`.
-`status`: `loading` (server render/hydration, or checking a session the device has no profile
-for), `disabled` (no env vars: hide every Liga entry point), `offline` (not joined and no
-connection), `none` (online, not joined), `joined` (has a profile; also offline). The account is
-cached in localStorage `lang-lern:league-account` (`{ v: 1, userId, profile, email, pendingEmail }`,
-tolerant parsing), so `isLeagueJoined()` / `getLeagueAccount()` answer synchronously and offline;
-`refreshLeagueAccount()` re-reads it from the server (`getSession` + `league_me`), throttled to
-once a minute, on screen mount and when the device comes back online. supabase-js is only loaded
-when there is something to check (cached account, stored session or a magic link in the URL) or
-for an action, so users who never open Liga never download it.
-
-**Change event.** Every change dispatches `lang-lern:league-account-change` on `window` (a
-`CustomEvent` whose `detail` is the reason); subscribe with `subscribeLeagueAccount(cb)`:
-`joined` (profile created, or signed in on a device to an account that has one: flush + send
-stats), `updated`, `user_changed` (another user signed in: drop per-user local state), `signed_out`,
-`deleted` (after `deleteMe`: clear all local Liga state), `status` (connectivity, loading, link error).
-
-**Auth.**
-- Session: supabase-js in localStorage under `lang-lern:league-auth`, auto-refreshed while the
-  client is loaded. **Implicit flow** (`flowType: "implicit"`, `detectSessionInUrl: true`): the magic
-  link returns to `/liga/#access_token=…&type=magiclink|email_change`; supabase-js reads the
-  fragment when the client is created, stores the session and clears the URL. PKCE is not used
-  because it only works in the browser that asked for the link (it keeps a code verifier there).
-- `join(nickname, emoji)`: `signInAnonymously()` if there is no session, then `league_set_profile`.
-  If the profile call fails, the anonymous session is kept and reused on the next try.
-- `linkEmail(email)`: `updateUser({ email }, { emailRedirectTo: <origin>/liga/ })`; `pendingEmail`
-  until the link is opened, then `email`. The anonymous user becomes a permanent one with the same id.
-- `signInWithEmail(email)`: `signInWithOtp({ email, options: { shouldCreateUser: false,
-  emailRedirectTo } })`. Opening the link replaces this device's session (`user_changed` / `joined`).
-- `signOut()`: `signOut({ scope: "local" })`, works offline. An anonymous account without a linked
-  email cannot be recovered afterwards (its server data stays until deleted in the dashboard).
-- `deleteMe()`: `league_delete_me`, then local sign-out (`deleted`). Needs a connection.
-- A rejected link (`#error_code=otp_expired…`) sets `linkError` (`link_expired` / `link_invalid`);
-  the fragment is removed from the address bar.
-- Known limit: on an iPhone home-screen app the email link opens in Safari, whose storage is not
-  the app's, so the session lands in Safari. Linking/sign-in by link works best in the browser
-  where the app is used; a 6-digit code typed in the app (`verifyOtp`) would remove the limit.
-
-Verified for T34 without a real project: a static build pointed at a local mock of `/auth/v1/user`
-and `/rest/v1/rpc/league_me`, opened at `/liga/#access_token=…&type=magiclink`, ends `joined` with
-the mock profile and a clean URL; `#error_code=otp_expired` shows the expired-link message.
-
 ## Setup (Hernán, once)
 
 1. **Create the project.** <https://supabase.com/dashboard> → sign in → **New project**: name
