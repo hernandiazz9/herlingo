@@ -23,11 +23,11 @@
   "keywords": [
     "surv.mercato",
     "food.pesce",
-    { "id": "story-catania-pescivendolo", "word": "pescivendolo", "article": "il", "gender": "m", "plural": "pescivendoli", "es": "el pescadero", "notes": "La pescadera es «la pescivendola».", "situation": "compras" },
+    { "id": "story-catania-pescivendolo", "word": "pescivendolo", "article": "il", "gender": "m", "plural": "pescivendoli", "es": "el pescadero", "notes": "La pescadera es «la pescivendola».", "situation": "compras", "image": "custom:story-catania-pescivendolo" },
     "sic.mizzica",
     "sic.tale",
     { "id": "story-catania-fresco", "word": "fresco", "es": "fresco", "notes": "«Pesce fresco, freschissimo!»: el grito típico del mercado. Femenino: «fresca».", "situation": "compras" },
-    { "id": "story-catania-riccio-di-mare", "word": "riccio di mare", "article": "il", "gender": "m", "plural": "ricci di mare", "es": "el erizo de mar", "notes": "En Sicilia se comen crudos, con pan o con pasta.", "situation": "compras" },
+    { "id": "story-catania-riccio-di-mare", "word": "riccio di mare", "article": "il", "gender": "m", "plural": "ricci di mare", "es": "el erizo de mar", "notes": "En Sicilia se comen crudos, con pan o con pasta.", "situation": "compras", "image": "custom:story-catania-riccio-di-mare" },
     "food.limone",
     "food.pesce-spada",
     "surv.chilo"

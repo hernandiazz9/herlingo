@@ -1,0 +1,3010 @@
+[
+  {
+    "id": "surv.dodici",
+    "text": "dodici",
+    "es": "doce",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.quindici",
+    "text": "quindici",
+    "es": "quince",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.sedici",
+    "text": "sedici",
+    "es": "dieciséis",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.diciassette",
+    "text": "diciassette",
+    "es": "diecisiete",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.diciotto",
+    "text": "diciotto",
+    "es": "dieciocho",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.diciannove",
+    "text": "diciannove",
+    "es": "diecinueve",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.venti",
+    "text": "venti",
+    "es": "veinte",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.trenta",
+    "text": "trenta",
+    "es": "treinta",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.quaranta",
+    "text": "quaranta",
+    "es": "cuarenta",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.cinquanta",
+    "text": "cinquanta",
+    "es": "cincuenta",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.cento",
+    "text": "cento",
+    "es": "cien",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.euro",
+    "text": "l'euro",
+    "es": "el euro",
+    "situation": "compras",
+    "class": "A",
+    "image": "fluent:euro-banknote"
+  },
+  {
+    "id": "surv.centesimo",
+    "text": "il centesimo",
+    "es": "el céntimo",
+    "situation": "compras",
+    "class": "B",
+    "image": "custom:surv-centesimo",
+    "drawTask": "T25",
+    "note": "a small cent coin; fluent coin is generic"
+  },
+  {
+    "id": "surv.carta",
+    "text": "la carta",
+    "es": "la tarjeta",
+    "situation": "compras",
+    "class": "A",
+    "image": "fluent:credit-card"
+  },
+  {
+    "id": "surv.bancomat",
+    "text": "il bancomat",
+    "es": "el cajero automático",
+    "situation": "compras",
+    "class": "A",
+    "image": "fluent:atm-sign",
+    "unsure": true,
+    "note": "ATM sign, not the machine"
+  },
+  {
+    "id": "surv.contanti",
+    "text": "i contanti",
+    "es": "el efectivo",
+    "situation": "compras",
+    "class": "B",
+    "image": "custom:surv-contanti",
+    "drawTask": "T25",
+    "note": "cash (notes+coins); euro-banknote taken by l'euro"
+  },
+  {
+    "id": "surv.spiccioli",
+    "text": "gli spiccioli",
+    "es": "el suelto",
+    "situation": "compras",
+    "class": "A",
+    "image": "fluent:coin",
+    "unsure": true
+  },
+  {
+    "id": "surv.resto",
+    "text": "il resto",
+    "es": "la vuelta",
+    "situation": "compras",
+    "class": "C"
+  },
+  {
+    "id": "surv.mercato",
+    "text": "il mercato",
+    "es": "el mercado",
+    "situation": "compras",
+    "class": "B",
+    "image": "custom:surv-mercato",
+    "drawTask": "T25",
+    "note": "market stall"
+  },
+  {
+    "id": "surv.chilo",
+    "text": "il chilo",
+    "es": "el kilo",
+    "situation": "compras",
+    "class": "C"
+  },
+  {
+    "id": "surv.etto",
+    "text": "l'etto",
+    "es": "los cien gramos",
+    "situation": "compras",
+    "class": "C"
+  },
+  {
+    "id": "surv.olive",
+    "text": "le olive",
+    "es": "las aceitunas",
+    "situation": "compras",
+    "class": "A",
+    "image": "fluent:olive"
+  },
+  {
+    "id": "surv.arance",
+    "text": "le arance",
+    "es": "las naranjas",
+    "situation": "compras",
+    "class": "A",
+    "image": "fluent:tangerine"
+  },
+  {
+    "id": "surv.frutta",
+    "text": "la frutta",
+    "es": "la fruta",
+    "situation": "compras",
+    "class": "B",
+    "image": "custom:surv-frutta",
+    "drawTask": "T25",
+    "reference": "openmoji:half-orange-fruit",
+    "note": "fruit bowl; single fruits clash with arance/limone; alt is only a partial match"
+  },
+  {
+    "id": "surv.caro",
+    "text": "caro",
+    "es": "caro",
+    "situation": "compras",
+    "class": "C"
+  },
+  {
+    "id": "surv.ora",
+    "text": "l'ora",
+    "es": "la hora",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.minuto",
+    "text": "il minuto",
+    "es": "el minuto",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.mezzogiorno",
+    "text": "mezzogiorno",
+    "es": "el mediodía",
+    "situation": "numeros",
+    "class": "B",
+    "image": "custom:surv-mezzogiorno",
+    "drawTask": "T27",
+    "note": "sun at zenith + 12:00 (twelve-oclock also = midnight)"
+  },
+  {
+    "id": "surv.aperto",
+    "text": "aperto",
+    "es": "abierto",
+    "situation": "numeros",
+    "class": "B",
+    "image": "custom:surv-aperto",
+    "drawTask": "T27",
+    "note": "open shop door (state; avoid text sign)"
+  },
+  {
+    "id": "surv.chiuso",
+    "text": "chiuso",
+    "es": "cerrado",
+    "situation": "numeros",
+    "class": "B",
+    "image": "custom:surv-chiuso",
+    "drawTask": "T27",
+    "note": "closed shutter/door"
+  },
+  {
+    "id": "surv.oggi",
+    "text": "oggi",
+    "es": "hoy",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.domani",
+    "text": "domani",
+    "es": "mañana",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.ieri",
+    "text": "ieri",
+    "es": "ayer",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.mattina",
+    "text": "la mattina",
+    "es": "la mañana",
+    "situation": "numeros",
+    "class": "A",
+    "image": "fluent:sunrise",
+    "unsure": true
+  },
+  {
+    "id": "surv.pomeriggio",
+    "text": "il pomeriggio",
+    "es": "la tarde",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.sera",
+    "text": "la sera",
+    "es": "la tarde-noche",
+    "situation": "numeros",
+    "class": "A",
+    "image": "fluent:cityscape-at-dusk",
+    "unsure": true
+  },
+  {
+    "id": "surv.stasera",
+    "text": "stasera",
+    "es": "esta noche",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.sabato",
+    "text": "sabato",
+    "es": "sábado",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.domenica",
+    "text": "domenica",
+    "es": "domingo",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.feriale",
+    "text": "feriale",
+    "es": "laborable",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.festivo",
+    "text": "festivo",
+    "es": "festivo",
+    "situation": "numeros",
+    "class": "C"
+  },
+  {
+    "id": "surv.bagno",
+    "text": "il bagno",
+    "es": "el baño",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:toilet"
+  },
+  {
+    "id": "surv.cellulare",
+    "text": "il cellulare",
+    "es": "el móvil",
+    "situation": "alojamiento",
+    "class": "A",
+    "image": "fluent:mobile-phone"
+  },
+  {
+    "id": "surv.caricabatterie",
+    "text": "il caricabatterie",
+    "es": "el cargador",
+    "situation": "alojamiento",
+    "class": "A",
+    "image": "fluent:electric-plug",
+    "unsure": true,
+    "note": "plug with cable"
+  },
+  {
+    "id": "surv.presa",
+    "text": "la presa",
+    "es": "el enchufe",
+    "situation": "alojamiento",
+    "class": "B",
+    "image": "custom:surv-presa",
+    "drawTask": "T26",
+    "reference": "openmoji:outlet"
+  },
+  {
+    "id": "surv.sacchetto",
+    "text": "il sacchetto",
+    "es": "la bolsa",
+    "situation": "compras",
+    "class": "A",
+    "image": "fluent:shopping-bags",
+    "unsure": true,
+    "note": "paper shopping bags, not a plastic bag"
+  },
+  {
+    "id": "surv.supermercato",
+    "text": "il supermercato",
+    "es": "el supermercado",
+    "situation": "compras",
+    "class": "A",
+    "image": "fluent:shopping-cart",
+    "unsure": true
+  },
+  {
+    "id": "emer.ambulanza",
+    "text": "l'ambulanza",
+    "es": "la ambulancia",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:ambulance"
+  },
+  {
+    "id": "emer.polizia",
+    "text": "la polizia",
+    "es": "la policía",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:police-car"
+  },
+  {
+    "id": "emer.ospedale",
+    "text": "l'ospedale",
+    "es": "el hospital",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:hospital"
+  },
+  {
+    "id": "emer.pronto-soccorso",
+    "text": "il pronto soccorso",
+    "es": "las urgencias",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-pronto-soccorso",
+    "drawTask": "T27",
+    "reference": "openmoji:first-aid",
+    "note": "ER entrance; hospital/ambulance already used"
+  },
+  {
+    "id": "emer.ladro",
+    "text": "il ladro",
+    "es": "el ladrón",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-ladro",
+    "drawTask": "T27",
+    "note": "masked thief"
+  },
+  {
+    "id": "emer.portafoglio",
+    "text": "il portafoglio",
+    "es": "la cartera",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:purse",
+    "unsure": true,
+    "note": "purse/coin purse; no wallet emoji"
+  },
+  {
+    "id": "emer.passaporto",
+    "text": "il passaporto",
+    "es": "el pasaporte",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-passaporto",
+    "drawTask": "T27",
+    "note": "passport booklet (fluent passport-control is a customs sign)"
+  },
+  {
+    "id": "emer.borsa",
+    "text": "la borsa",
+    "es": "el bolso",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:handbag"
+  },
+  {
+    "id": "emer.zaino",
+    "text": "lo zaino",
+    "es": "la mochila",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:backpack"
+  },
+  {
+    "id": "emer.carabinieri",
+    "text": "i carabinieri",
+    "es": "los carabinieri",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-carabinieri",
+    "drawTask": "T27",
+    "note": "carabiniere uniform; police-officer used for generic police"
+  },
+  {
+    "id": "emer.denuncia",
+    "text": "la denuncia",
+    "es": "la denuncia",
+    "situation": "emergencias",
+    "class": "C"
+  },
+  {
+    "id": "emer.medico",
+    "text": "il medico",
+    "es": "el médico",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:health-worker"
+  },
+  {
+    "id": "emer.guardia-medica",
+    "text": "la guardia medica",
+    "es": "el médico de guardia",
+    "situation": "emergencias",
+    "class": "C"
+  },
+  {
+    "id": "emer.febbre",
+    "text": "la febbre",
+    "es": "la fiebre",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:face-with-thermometer"
+  },
+  {
+    "id": "emer.testa",
+    "text": "la testa",
+    "es": "la cabeza",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-testa",
+    "drawTask": "T27",
+    "reference": "openmoji:headache",
+    "note": "head (body part); alt is only a partial match"
+  },
+  {
+    "id": "emer.pancia",
+    "text": "la pancia",
+    "es": "la barriga",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-pancia",
+    "drawTask": "T27",
+    "note": "belly"
+  },
+  {
+    "id": "emer.gola",
+    "text": "la gola",
+    "es": "la garganta",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-gola",
+    "drawTask": "T27",
+    "note": "throat"
+  },
+  {
+    "id": "emer.schiena",
+    "text": "la schiena",
+    "es": "la espalda",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-schiena",
+    "drawTask": "T27",
+    "reference": "openmoji:backache",
+    "note": "back; alt is only a partial match"
+  },
+  {
+    "id": "emer.piede",
+    "text": "il piede",
+    "es": "el pie",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:foot"
+  },
+  {
+    "id": "emer.caviglia",
+    "text": "la caviglia",
+    "es": "el tobillo",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-caviglia",
+    "drawTask": "T27",
+    "note": "ankle"
+  },
+  {
+    "id": "emer.dente",
+    "text": "il dente",
+    "es": "el diente",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:tooth"
+  },
+  {
+    "id": "emer.medusa",
+    "text": "la medusa",
+    "es": "la medusa",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:jellyfish"
+  },
+  {
+    "id": "emer.farmacia",
+    "text": "la farmacia",
+    "es": "la farmacia",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-farmacia",
+    "drawTask": "T27",
+    "note": "green cross pharmacy sign (medical-symbol is Aesculapius staff)"
+  },
+  {
+    "id": "emer.paracetamolo",
+    "text": "il paracetamolo",
+    "es": "el paracetamol",
+    "situation": "emergencias",
+    "class": "C"
+  },
+  {
+    "id": "emer.ibuprofene",
+    "text": "l'ibuprofene",
+    "es": "el ibuprofeno",
+    "situation": "emergencias",
+    "class": "C"
+  },
+  {
+    "id": "emer.compressa",
+    "text": "la compressa",
+    "es": "la pastilla",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:pill"
+  },
+  {
+    "id": "emer.ricetta",
+    "text": "la ricetta",
+    "es": "la receta",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-ricetta",
+    "drawTask": "T27",
+    "reference": "openmoji:patient-file",
+    "note": "prescription form; alt is only a partial match"
+  },
+  {
+    "id": "emer.crema-solare",
+    "text": "la crema solare",
+    "es": "la crema solar",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:lotion-bottle",
+    "unsure": true
+  },
+  {
+    "id": "emer.scottatura",
+    "text": "la scottatura",
+    "es": "la quemadura",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-scottatura",
+    "drawTask": "T27",
+    "note": "sunburnt skin"
+  },
+  {
+    "id": "emer.zanzara",
+    "text": "la zanzara",
+    "es": "el mosquito",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:mosquito"
+  },
+  {
+    "id": "emer.puntura",
+    "text": "la puntura",
+    "es": "la picadura",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-puntura",
+    "drawTask": "T27",
+    "note": "bite bump on arm"
+  },
+  {
+    "id": "emer.cerotto",
+    "text": "il cerotto",
+    "es": "la tirita",
+    "situation": "emergencias",
+    "class": "A",
+    "image": "fluent:adhesive-bandage"
+  },
+  {
+    "id": "emer.tosse",
+    "text": "la tosse",
+    "es": "la tos",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-tosse",
+    "drawTask": "T27",
+    "reference": "openmoji:person-sneezing-into-elbow",
+    "note": "cough; alt is only a partial match"
+  },
+  {
+    "id": "emer.sciroppo",
+    "text": "lo sciroppo",
+    "es": "el jarabe",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:emer-sciroppo",
+    "drawTask": "T27",
+    "note": "syrup bottle + spoon"
+  },
+  {
+    "id": "move-treno.biglietto",
+    "text": "il biglietto",
+    "es": "el billete",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:ticket"
+  },
+  {
+    "id": "move-treno.andata",
+    "text": "l'andata",
+    "es": "la ida",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.ritorno",
+    "text": "il ritorno",
+    "es": "la vuelta",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.biglietteria",
+    "text": "la biglietteria",
+    "es": "la taquilla",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-biglietteria",
+    "drawTask": "T26",
+    "note": "ticket office window"
+  },
+  {
+    "id": "move-treno.macchinetta",
+    "text": "la macchinetta",
+    "es": "la máquina (de billetes o de validar)",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-macchinetta",
+    "drawTask": "T26",
+    "note": "ticket machine"
+  },
+  {
+    "id": "move-treno.treno",
+    "text": "il treno",
+    "es": "el tren",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:train"
+  },
+  {
+    "id": "move-treno.regionale",
+    "text": "il regionale",
+    "es": "el tren regional",
+    "situation": "tren",
+    "class": "C",
+    "note": "not visually distinct from treno"
+  },
+  {
+    "id": "move-treno.orario",
+    "text": "l'orario",
+    "es": "el horario",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.stazione",
+    "text": "la stazione",
+    "es": "la estación",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:station"
+  },
+  {
+    "id": "move-treno.coincidenza",
+    "text": "la coincidenza",
+    "es": "el enlace (con otro tren)",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.binario",
+    "text": "il binario",
+    "es": "el andén (la vía)",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:railway-track",
+    "unsure": true,
+    "note": "binario = track/platform"
+  },
+  {
+    "id": "move-treno.partenza",
+    "text": "la partenza",
+    "es": "la salida",
+    "situation": "tren",
+    "class": "C",
+    "note": "airplane-departure would mislead"
+  },
+  {
+    "id": "move-treno.arrivo",
+    "text": "l'arrivo",
+    "es": "la llegada",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.fermata",
+    "text": "la fermata",
+    "es": "la parada",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:bus-stop"
+  },
+  {
+    "id": "move-treno.tabellone",
+    "text": "il tabellone",
+    "es": "el panel de salidas y llegadas",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-tabellone",
+    "drawTask": "T26",
+    "note": "departure board"
+  },
+  {
+    "id": "move-treno.sala-d-attesa",
+    "text": "la sala d'attesa",
+    "es": "la sala de espera",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-sala-d-attesa",
+    "drawTask": "T26",
+    "note": "waiting room benches"
+  },
+  {
+    "id": "move-treno.sottopassaggio",
+    "text": "il sottopassaggio",
+    "es": "el paso subterráneo",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-sottopassaggio",
+    "drawTask": "T26",
+    "note": "underpass"
+  },
+  {
+    "id": "move-treno.carrozza",
+    "text": "la carrozza",
+    "es": "el vagón (el coche)",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:railway-car"
+  },
+  {
+    "id": "move-treno.direzione",
+    "text": "la direzione",
+    "es": "la dirección",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.convalidare",
+    "text": "convalidare",
+    "es": "validar",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.obliteratrice",
+    "text": "l'obliteratrice",
+    "es": "la máquina validadora",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-obliteratrice",
+    "drawTask": "T26",
+    "note": "validating machine"
+  },
+  {
+    "id": "move-treno.timbrare",
+    "text": "timbrare",
+    "es": "picar (el billete)",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.controllore",
+    "text": "il controllore",
+    "es": "el revisor",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-controllore",
+    "drawTask": "T26",
+    "note": "ticket inspector"
+  },
+  {
+    "id": "move-treno.capotreno",
+    "text": "il capotreno",
+    "es": "el jefe de tren",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-capotreno",
+    "drawTask": "T26",
+    "note": "train conductor"
+  },
+  {
+    "id": "move-treno.documento",
+    "text": "il documento",
+    "es": "el documento de identidad",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:identification-card"
+  },
+  {
+    "id": "move-treno.multa",
+    "text": "la multa",
+    "es": "la multa",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-multa",
+    "drawTask": "T26",
+    "note": "fine slip"
+  },
+  {
+    "id": "move-treno.ritardo",
+    "text": "il ritardo",
+    "es": "el retraso",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.in-orario",
+    "text": "in orario",
+    "es": "a su hora (puntual)",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.soppresso",
+    "text": "soppresso",
+    "es": "suprimido (cancelado)",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.sciopero",
+    "text": "lo sciopero",
+    "es": "la huelga",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:placard",
+    "unsure": true,
+    "note": "protest sign"
+  },
+  {
+    "id": "move-treno.guasto",
+    "text": "il guasto",
+    "es": "la avería",
+    "situation": "tren",
+    "class": "B",
+    "image": "custom:move-treno-guasto",
+    "drawTask": "T26",
+    "note": "broken-down train"
+  },
+  {
+    "id": "move-treno.lavori",
+    "text": "i lavori",
+    "es": "las obras",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:construction"
+  },
+  {
+    "id": "move-treno.rimborso",
+    "text": "il rimborso",
+    "es": "el reembolso",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.annuncio",
+    "text": "l'annuncio",
+    "es": "el aviso (por megafonía)",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:loudspeaker",
+    "unsure": true
+  },
+  {
+    "id": "move-treno.posto",
+    "text": "il posto",
+    "es": "el asiento (la plaza)",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:seat"
+  },
+  {
+    "id": "move-treno.libero",
+    "text": "libero",
+    "es": "libre",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.occupato",
+    "text": "occupato",
+    "es": "ocupado",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.valigia",
+    "text": "la valigia",
+    "es": "la maleta",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:luggage"
+  },
+  {
+    "id": "move-treno.zaino",
+    "text": "lo zaino",
+    "es": "la mochila",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:backpack"
+  },
+  {
+    "id": "move-treno.bagaglio",
+    "text": "il bagaglio",
+    "es": "el equipaje",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:luggage",
+    "unsure": true,
+    "note": "same icon as valigia"
+  },
+  {
+    "id": "move-treno.prossimo",
+    "text": "prossimo",
+    "es": "próximo, siguiente",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.scendere",
+    "text": "scendere",
+    "es": "bajar(se)",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.salire",
+    "text": "salire",
+    "es": "subir(se)",
+    "situation": "tren",
+    "class": "C"
+  },
+  {
+    "id": "move-treno.porta",
+    "text": "la porta",
+    "es": "la puerta",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:door"
+  },
+  {
+    "id": "move-treno.bagno",
+    "text": "il bagno",
+    "es": "el baño (el aseo)",
+    "situation": "tren",
+    "class": "A",
+    "image": "fluent:toilet"
+  },
+  {
+    "id": "move-bus.autobus",
+    "text": "l'autobus",
+    "es": "el autobús",
+    "situation": "bus",
+    "class": "A",
+    "image": "fluent:bus"
+  },
+  {
+    "id": "move-bus.tabaccheria",
+    "text": "la tabaccheria",
+    "es": "el estanco",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-tabaccheria",
+    "drawTask": "T26",
+    "note": "Italian T tobacco sign"
+  },
+  {
+    "id": "move-bus.tabaccaio",
+    "text": "il tabaccaio",
+    "es": "el estanquero (el estanco)",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-tabaccaio",
+    "drawTask": "T26",
+    "note": "tobacconist"
+  },
+  {
+    "id": "move-bus.linea",
+    "text": "la linea",
+    "es": "la línea",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.corsa",
+    "text": "la corsa",
+    "es": "el servicio (cada viaje de la línea)",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.capolinea",
+    "text": "il capolinea",
+    "es": "la cabecera (el final de línea)",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.centro",
+    "text": "il centro",
+    "es": "el centro",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.autista",
+    "text": "l'autista",
+    "es": "el conductor (la conductora)",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-autista",
+    "drawTask": "T26",
+    "note": "bus driver"
+  },
+  {
+    "id": "move-bus.pulsante",
+    "text": "il pulsante",
+    "es": "el botón",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-pulsante",
+    "drawTask": "T26",
+    "note": "stop button"
+  },
+  {
+    "id": "move-bus.sedile",
+    "text": "il sedile",
+    "es": "el asiento",
+    "situation": "bus",
+    "class": "A",
+    "image": "fluent:seat"
+  },
+  {
+    "id": "move-bus.uscita",
+    "text": "l'uscita",
+    "es": "la salida",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-uscita",
+    "drawTask": "T26",
+    "reference": "openmoji:exit",
+    "note": "exit pictogram"
+  },
+  {
+    "id": "move-bus.entrata",
+    "text": "l'entrata",
+    "es": "la entrada",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.pieno",
+    "text": "pieno",
+    "es": "lleno",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.avanti",
+    "text": "avanti",
+    "es": "adelante",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.dietro",
+    "text": "dietro",
+    "es": "detrás",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.pullman",
+    "text": "il pullman",
+    "es": "el autobús de línea (interurbano)",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-pullman",
+    "drawTask": "T26",
+    "note": "coach; bus taken by autobus"
+  },
+  {
+    "id": "move-bus.corriera",
+    "text": "la corriera",
+    "es": "el autobús de línea (coloquial)",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-corriera",
+    "drawTask": "T26",
+    "note": "coach (same as pullman)"
+  },
+  {
+    "id": "move-bus.autostazione",
+    "text": "l'autostazione",
+    "es": "la estación de autobuses",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-autostazione",
+    "drawTask": "T26",
+    "note": "bus station"
+  },
+  {
+    "id": "move-bus.feriale",
+    "text": "feriale",
+    "es": "laborable",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.festivo",
+    "text": "festivo",
+    "es": "festivo (domingos y fiestas)",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.bagagliaio",
+    "text": "il bagagliaio",
+    "es": "el maletero",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:move-bus-bagagliaio",
+    "drawTask": "T26",
+    "note": "coach luggage hold"
+  },
+  {
+    "id": "move-bus.viaggio",
+    "text": "il viaggio",
+    "es": "el viaje",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.durata",
+    "text": "la durata",
+    "es": "la duración",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.sosta",
+    "text": "la sosta",
+    "es": "la parada (el descanso)",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.prenotazione",
+    "text": "la prenotazione",
+    "es": "la reserva",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.aeroporto",
+    "text": "l'aeroporto",
+    "es": "el aeropuerto",
+    "situation": "aeropuerto",
+    "class": "A",
+    "image": "fluent:airplane-departure",
+    "unsure": true
+  },
+  {
+    "id": "move-bus.volo",
+    "text": "il volo",
+    "es": "el vuelo",
+    "situation": "aeropuerto",
+    "class": "A",
+    "image": "fluent:airplane"
+  },
+  {
+    "id": "move-bus.ritiro-bagagli",
+    "text": "il ritiro bagagli",
+    "es": "la recogida de equipajes",
+    "situation": "aeropuerto",
+    "class": "A",
+    "image": "fluent:baggage-claim"
+  },
+  {
+    "id": "move-bus.piano-terra",
+    "text": "il piano terra",
+    "es": "la planta baja",
+    "situation": "aeropuerto",
+    "class": "C"
+  },
+  {
+    "id": "move-bus.carrello",
+    "text": "il carrello",
+    "es": "el carrito",
+    "situation": "aeropuerto",
+    "class": "B",
+    "image": "custom:move-bus-carrello",
+    "drawTask": "T26",
+    "note": "luggage trolley"
+  },
+  {
+    "id": "move-bus.navetta",
+    "text": "la navetta",
+    "es": "el autobús lanzadera",
+    "situation": "aeropuerto",
+    "class": "A",
+    "image": "fluent:minibus",
+    "unsure": true
+  },
+  {
+    "id": "move-bus.passaporto",
+    "text": "il passaporto",
+    "es": "el pasaporte",
+    "situation": "aeropuerto",
+    "class": "B",
+    "image": "custom:move-bus-passaporto",
+    "drawTask": "T26",
+    "note": "passport booklet (fluent passport-control is a customs sign)"
+  },
+  {
+    "id": "move-bus.carta-d-identita",
+    "text": "la carta d'identità",
+    "es": "el DNI (el carné de identidad)",
+    "situation": "aeropuerto",
+    "class": "A",
+    "image": "fluent:identification-card"
+  },
+  {
+    "id": "move-strada.taxi",
+    "text": "il taxi",
+    "es": "el taxi",
+    "situation": "taxi",
+    "class": "A",
+    "image": "fluent:taxi"
+  },
+  {
+    "id": "move-strada.posteggio-dei-taxi",
+    "text": "il posteggio dei taxi",
+    "es": "la parada de taxis",
+    "situation": "taxi",
+    "class": "B",
+    "image": "custom:move-strada-posteggio-dei-taxi",
+    "drawTask": "T26",
+    "note": "taxi rank sign"
+  },
+  {
+    "id": "move-strada.indirizzo",
+    "text": "l'indirizzo",
+    "es": "la dirección",
+    "situation": "taxi",
+    "class": "C"
+  },
+  {
+    "id": "move-strada.tassista",
+    "text": "il tassista",
+    "es": "el taxista",
+    "situation": "taxi",
+    "class": "B",
+    "image": "custom:move-strada-tassista",
+    "drawTask": "T26",
+    "note": "taxi driver"
+  },
+  {
+    "id": "move-strada.tariffa",
+    "text": "la tariffa",
+    "es": "la tarifa",
+    "situation": "taxi",
+    "class": "C"
+  },
+  {
+    "id": "move-strada.tassametro",
+    "text": "il tassametro",
+    "es": "el taxímetro",
+    "situation": "taxi",
+    "class": "B",
+    "image": "custom:move-strada-tassametro",
+    "drawTask": "T26",
+    "note": "taximeter"
+  },
+  {
+    "id": "move-strada.resto",
+    "text": "il resto",
+    "es": "el cambio (la vuelta)",
+    "situation": "taxi",
+    "class": "C"
+  },
+  {
+    "id": "move-strada.ricevuta",
+    "text": "la ricevuta",
+    "es": "el recibo",
+    "situation": "taxi",
+    "class": "A",
+    "image": "fluent:receipt"
+  },
+  {
+    "id": "move-strada.contanti",
+    "text": "i contanti",
+    "es": "el efectivo",
+    "situation": "taxi",
+    "class": "B",
+    "image": "custom:move-strada-contanti",
+    "drawTask": "T26",
+    "note": "cash"
+  },
+  {
+    "id": "move-strada.bancomat",
+    "text": "il bancomat",
+    "es": "el cajero (y la tarjeta de débito)",
+    "situation": "taxi",
+    "class": "A",
+    "image": "fluent:atm-sign",
+    "unsure": true
+  },
+  {
+    "id": "move-strada.pos",
+    "text": "il POS",
+    "es": "el datáfono",
+    "situation": "taxi",
+    "class": "B",
+    "image": "custom:move-strada-pos",
+    "drawTask": "T26",
+    "note": "card terminal"
+  },
+  {
+    "id": "move-strada.vicino",
+    "text": "vicino",
+    "es": "cerca",
+    "situation": "calle",
+    "class": "C"
+  },
+  {
+    "id": "move-strada.lontano",
+    "text": "lontano",
+    "es": "lejos",
+    "situation": "calle",
+    "class": "C"
+  },
+  {
+    "id": "move-strada.a-piedi",
+    "text": "a piedi",
+    "es": "a pie (andando)",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:person-walking"
+  },
+  {
+    "id": "move-strada.mappa",
+    "text": "la mappa",
+    "es": "el mapa",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:world-map",
+    "unsure": true
+  },
+  {
+    "id": "move-strada.strada",
+    "text": "la strada",
+    "es": "la calle (el camino)",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:motorway",
+    "unsure": true,
+    "note": "highway rather than a town street"
+  },
+  {
+    "id": "move-strada.via",
+    "text": "la via",
+    "es": "la calle",
+    "situation": "calle",
+    "class": "C",
+    "note": "synonym of strada"
+  },
+  {
+    "id": "move-strada.piazza",
+    "text": "la piazza",
+    "es": "la plaza",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-piazza",
+    "drawTask": "T27",
+    "note": "square with fountain (fluent fountain alone?)"
+  },
+  {
+    "id": "move-strada.corso",
+    "text": "il corso",
+    "es": "la avenida (calle principal)",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-corso",
+    "drawTask": "T27",
+    "note": "main avenue"
+  },
+  {
+    "id": "move-strada.centro-storico",
+    "text": "il centro storico",
+    "es": "el casco antiguo",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-centro-storico",
+    "drawTask": "T27",
+    "note": "old town"
+  },
+  {
+    "id": "move-strada.duomo",
+    "text": "il duomo",
+    "es": "la catedral",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-duomo",
+    "drawTask": "T27",
+    "note": "cathedral; church icon is a small chapel"
+  },
+  {
+    "id": "move-strada.chiesa",
+    "text": "la chiesa",
+    "es": "la iglesia",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:church"
+  },
+  {
+    "id": "move-strada.mercato",
+    "text": "il mercato",
+    "es": "el mercado",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-mercato",
+    "drawTask": "T27",
+    "note": "market stall"
+  },
+  {
+    "id": "move-strada.dritto",
+    "text": "dritto",
+    "es": "recto",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:up-arrow",
+    "unsure": true
+  },
+  {
+    "id": "move-strada.destra",
+    "text": "la destra",
+    "es": "la derecha",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:right-arrow",
+    "unsure": true
+  },
+  {
+    "id": "move-strada.sinistra",
+    "text": "la sinistra",
+    "es": "la izquierda",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:left-arrow",
+    "unsure": true
+  },
+  {
+    "id": "move-strada.semaforo",
+    "text": "il semaforo",
+    "es": "el semáforo",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:vertical-traffic-light"
+  },
+  {
+    "id": "move-strada.incrocio",
+    "text": "l'incrocio",
+    "es": "el cruce",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-incrocio",
+    "drawTask": "T27",
+    "note": "crossroads"
+  },
+  {
+    "id": "move-strada.angolo",
+    "text": "l'angolo",
+    "es": "la esquina",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-angolo",
+    "drawTask": "T27",
+    "note": "street corner"
+  },
+  {
+    "id": "move-strada.ponte",
+    "text": "il ponte",
+    "es": "el puente",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:bridge-at-night",
+    "unsure": true
+  },
+  {
+    "id": "move-strada.salita",
+    "text": "la salita",
+    "es": "la cuesta (arriba)",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-salita",
+    "drawTask": "T27",
+    "note": "uphill street"
+  },
+  {
+    "id": "move-strada.scalinata",
+    "text": "la scalinata",
+    "es": "la escalinata",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-scalinata",
+    "drawTask": "T27",
+    "reference": "openmoji:stairway"
+  },
+  {
+    "id": "move-strada.lungomare",
+    "text": "il lungomare",
+    "es": "el paseo marítimo",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-lungomare",
+    "drawTask": "T27",
+    "note": "seafront promenade"
+  },
+  {
+    "id": "move-strada.aperto",
+    "text": "aperto",
+    "es": "abierto",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-aperto",
+    "drawTask": "T27",
+    "note": "open shop door"
+  },
+  {
+    "id": "move-strada.chiuso",
+    "text": "chiuso",
+    "es": "cerrado",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-chiuso",
+    "drawTask": "T27",
+    "note": "closed shop"
+  },
+  {
+    "id": "move-strada.orario-di-apertura",
+    "text": "l'orario di apertura",
+    "es": "el horario de apertura",
+    "situation": "calle",
+    "class": "C"
+  },
+  {
+    "id": "move-strada.ingresso",
+    "text": "l'ingresso",
+    "es": "la entrada (el acceso)",
+    "situation": "calle",
+    "class": "C"
+  },
+  {
+    "id": "move-strada.ridotto",
+    "text": "ridotto",
+    "es": "reducido (entrada con descuento)",
+    "situation": "calle",
+    "class": "C"
+  },
+  {
+    "id": "move-strada.museo",
+    "text": "il museo",
+    "es": "el museo",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-museo",
+    "drawTask": "T27",
+    "note": "museum; classical-building assigned to tempio"
+  },
+  {
+    "id": "move-strada.motorino",
+    "text": "il motorino",
+    "es": "la moto (el escúter)",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:motor-scooter"
+  },
+  {
+    "id": "move-strada.marciapiede",
+    "text": "il marciapiede",
+    "es": "la acera",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-marciapiede",
+    "drawTask": "T27",
+    "note": "sidewalk"
+  },
+  {
+    "id": "move-strada.strisce-pedonali",
+    "text": "le strisce pedonali",
+    "es": "el paso de cebra",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-strisce-pedonali",
+    "drawTask": "T27",
+    "note": "zebra crossing (children-crossing is a warning sign)"
+  },
+  {
+    "id": "move-strada.vicolo",
+    "text": "il vicolo",
+    "es": "el callejón",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:move-strada-vicolo",
+    "drawTask": "T27",
+    "note": "narrow alley"
+  },
+  {
+    "id": "talk-chiacchiere.nome",
+    "text": "il nome",
+    "es": "el nombre",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.cognome",
+    "text": "il cognome",
+    "es": "el apellido",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.amico",
+    "text": "l'amico",
+    "es": "el amigo",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.amica",
+    "text": "l'amica",
+    "es": "la amiga",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.ragazzo",
+    "text": "il ragazzo",
+    "es": "el chico",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:boy",
+    "unsure": true,
+    "note": "emoji boy is a child"
+  },
+  {
+    "id": "talk-chiacchiere.ragazza",
+    "text": "la ragazza",
+    "es": "la chica",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:girl",
+    "unsure": true,
+    "note": "emoji girl is a child"
+  },
+  {
+    "id": "talk-chiacchiere.signore",
+    "text": "il signore",
+    "es": "el señor",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:man",
+    "unsure": true
+  },
+  {
+    "id": "talk-chiacchiere.signora",
+    "text": "la signora",
+    "es": "la señora",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:woman",
+    "unsure": true
+  },
+  {
+    "id": "talk-chiacchiere.vacanza",
+    "text": "la vacanza",
+    "es": "las vacaciones",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.ferie",
+    "text": "le ferie",
+    "es": "las vacaciones (del trabajo)",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.lavoro",
+    "text": "il lavoro",
+    "es": "el trabajo",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:briefcase",
+    "unsure": true
+  },
+  {
+    "id": "talk-chiacchiere.paese",
+    "text": "il paese",
+    "es": "el país (o el pueblo)",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.citta",
+    "text": "la città",
+    "es": "la ciudad",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:cityscape"
+  },
+  {
+    "id": "talk-chiacchiere.spagna",
+    "text": "la Spagna",
+    "es": "España",
+    "situation": "presentarse",
+    "class": "B",
+    "image": "custom:talk-chiacchiere-spagna",
+    "drawTask": "T27",
+    "reference": "twemoji:flag-spain",
+    "note": "fluent-emoji-flat has no country flags (openmoji:flag-spain too)"
+  },
+  {
+    "id": "talk-chiacchiere.spagnolo",
+    "text": "spagnolo",
+    "es": "español",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.straniero",
+    "text": "lo straniero",
+    "es": "el extranjero",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.turista",
+    "text": "il turista",
+    "es": "el turista (la turista)",
+    "situation": "presentarse",
+    "class": "B",
+    "image": "custom:talk-chiacchiere-turista",
+    "drawTask": "T27",
+    "note": "tourist with camera"
+  },
+  {
+    "id": "talk-chiacchiere.tempo",
+    "text": "il tempo",
+    "es": "el tiempo",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.caldo",
+    "text": "il caldo",
+    "es": "el calor",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:hot-face",
+    "unsure": true
+  },
+  {
+    "id": "talk-chiacchiere.sole",
+    "text": "il sole",
+    "es": "el sol",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:sun"
+  },
+  {
+    "id": "talk-chiacchiere.pioggia",
+    "text": "la pioggia",
+    "es": "la lluvia",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:cloud-with-rain"
+  },
+  {
+    "id": "talk-chiacchiere.mare",
+    "text": "il mare",
+    "es": "el mar",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:water-wave",
+    "unsure": true
+  },
+  {
+    "id": "talk-chiacchiere.spiaggia",
+    "text": "la spiaggia",
+    "es": "la playa",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:beach-with-umbrella"
+  },
+  {
+    "id": "talk-chiacchiere.cibo",
+    "text": "il cibo",
+    "es": "la comida",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:fork-and-knife-with-plate",
+    "unsure": true
+  },
+  {
+    "id": "talk-chiacchiere.consiglio",
+    "text": "il consiglio",
+    "es": "el consejo (la recomendación)",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.piano",
+    "text": "piano",
+    "es": "despacio (y bajito)",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.veloce",
+    "text": "veloce",
+    "es": "rápido",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.parola",
+    "text": "la parola",
+    "es": "la palabra",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.significato",
+    "text": "il significato",
+    "es": "el significado",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.lingua",
+    "text": "la lingua",
+    "es": "la lengua (el idioma)",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.italiano",
+    "text": "l'italiano",
+    "es": "el italiano",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.inglese",
+    "text": "l'inglese",
+    "es": "el inglés",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.numero",
+    "text": "il numero",
+    "es": "el número",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-chiacchiere.telefono",
+    "text": "il telefono",
+    "es": "el teléfono (el móvil)",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:telephone-receiver",
+    "unsure": true,
+    "note": "cellulare already uses mobile-phone"
+  },
+  {
+    "id": "talk-chiacchiere.messaggio",
+    "text": "il messaggio",
+    "es": "el mensaje",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:speech-balloon",
+    "unsure": true
+  },
+  {
+    "id": "talk-chiacchiere.foto",
+    "text": "la foto",
+    "es": "la foto",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:framed-picture",
+    "unsure": true
+  },
+  {
+    "id": "talk-io.capitale",
+    "text": "la capitale",
+    "es": "la capital",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.nord",
+    "text": "il nord",
+    "es": "el norte",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.sud",
+    "text": "il sud",
+    "es": "el sur",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.informatica",
+    "text": "l'informatica",
+    "es": "la informática",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.programmatore",
+    "text": "il programmatore",
+    "es": "el programador",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:technologist"
+  },
+  {
+    "id": "talk-io.computer",
+    "text": "il computer",
+    "es": "el ordenador",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:laptop"
+  },
+  {
+    "id": "talk-io.ufficio",
+    "text": "l'ufficio",
+    "es": "la oficina",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:office-building"
+  },
+  {
+    "id": "talk-io.azienda",
+    "text": "l'azienda",
+    "es": "la empresa",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.giro",
+    "text": "il giro",
+    "es": "la vuelta (el recorrido)",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.macchina",
+    "text": "la macchina",
+    "es": "el coche",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:automobile"
+  },
+  {
+    "id": "talk-io.giorno",
+    "text": "il giorno",
+    "es": "el día",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.settimana",
+    "text": "la settimana",
+    "es": "la semana",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.ieri",
+    "text": "ieri",
+    "es": "ayer",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.domani",
+    "text": "domani",
+    "es": "mañana",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.dopodomani",
+    "text": "dopodomani",
+    "es": "pasado mañana",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.cucina",
+    "text": "la cucina",
+    "es": "la cocina",
+    "situation": "presentarse",
+    "class": "B",
+    "image": "custom:talk-io-cucina",
+    "drawTask": "T27",
+    "note": "kitchen room (cooking = frying pan)"
+  },
+  {
+    "id": "talk-io.app",
+    "text": "l'app",
+    "es": "la app",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.imparare",
+    "text": "imparare",
+    "es": "aprender",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.studiare",
+    "text": "studiare",
+    "es": "estudiar",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "talk-io.capire",
+    "text": "capire",
+    "es": "entender",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "food.caffe",
+    "text": "il caffè",
+    "es": "el café (expreso)",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:hot-beverage"
+  },
+  {
+    "id": "food.cappuccino",
+    "text": "il cappuccino",
+    "es": "el capuchino",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-cappuccino",
+    "drawTask": "T25",
+    "reference": "openmoji:latte-macchiato",
+    "note": "cup with foam; hot-beverage taken by caffè; alt is only a partial match"
+  },
+  {
+    "id": "food.cornetto",
+    "text": "il cornetto",
+    "es": "el cruasán",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:croissant"
+  },
+  {
+    "id": "food.latte",
+    "text": "il latte",
+    "es": "la leche",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:glass-of-milk"
+  },
+  {
+    "id": "food.decaffeinato",
+    "text": "il decaffeinato",
+    "es": "el descafeinado",
+    "situation": "bar",
+    "class": "C"
+  },
+  {
+    "id": "food.zucchero",
+    "text": "lo zucchero",
+    "es": "el azúcar",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-zucchero",
+    "drawTask": "T25",
+    "note": "sugar (no emoji)"
+  },
+  {
+    "id": "food.banco",
+    "text": "il banco",
+    "es": "la barra",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-banco",
+    "drawTask": "T25",
+    "note": "bar counter"
+  },
+  {
+    "id": "food.cassa",
+    "text": "la cassa",
+    "es": "la caja",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-cassa",
+    "drawTask": "T25",
+    "note": "till / cash register"
+  },
+  {
+    "id": "food.scontrino",
+    "text": "lo scontrino",
+    "es": "el tique de caja",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:receipt"
+  },
+  {
+    "id": "food.tavolino",
+    "text": "il tavolino",
+    "es": "la mesita (del bar o la terraza)",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-tavolino",
+    "drawTask": "T25",
+    "note": "small terrace table (no table emoji)"
+  },
+  {
+    "id": "food.spremuta",
+    "text": "la spremuta",
+    "es": "el zumo natural",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-spremuta",
+    "drawTask": "T25",
+    "note": "glass of fresh orange juice"
+  },
+  {
+    "id": "food.granita",
+    "text": "la granita",
+    "es": "el granizado",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:shaved-ice",
+    "unsure": true,
+    "note": "Japanese kakigori, close enough"
+  },
+  {
+    "id": "food.brioche",
+    "text": "la brioche",
+    "es": "el brioche",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-brioche",
+    "drawTask": "T25",
+    "note": "brioche col tuppo"
+  },
+  {
+    "id": "food.mandorla",
+    "text": "la mandorla",
+    "es": "la almendra",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-mandorla",
+    "drawTask": "T25",
+    "note": "almond (no emoji)"
+  },
+  {
+    "id": "food.gusto",
+    "text": "il gusto",
+    "es": "el sabor",
+    "situation": "bar",
+    "class": "C"
+  },
+  {
+    "id": "food.pistacchio",
+    "text": "il pistacchio",
+    "es": "el pistacho",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-pistacchio",
+    "drawTask": "T25",
+    "note": "pistachio (no emoji)"
+  },
+  {
+    "id": "food.gelsi",
+    "text": "i gelsi",
+    "es": "las moras (de morera)",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-gelsi",
+    "drawTask": "T25",
+    "note": "mulberries"
+  },
+  {
+    "id": "food.limone",
+    "text": "il limone",
+    "es": "el limón",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:lemon"
+  },
+  {
+    "id": "food.panna",
+    "text": "la panna",
+    "es": "la nata",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-panna",
+    "drawTask": "T25",
+    "note": "whipped cream"
+  },
+  {
+    "id": "food.pasticceria",
+    "text": "la pasticceria",
+    "es": "la pastelería",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-pasticceria",
+    "drawTask": "T25",
+    "note": "pastry shop"
+  },
+  {
+    "id": "food.cannolo",
+    "text": "il cannolo",
+    "es": "el cannolo",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-cannolo",
+    "drawTask": "T25",
+    "note": "cannolo"
+  },
+  {
+    "id": "food.ricotta",
+    "text": "la ricotta",
+    "es": "el requesón (ricotta)",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-ricotta",
+    "drawTask": "T25",
+    "note": "ricotta"
+  },
+  {
+    "id": "food.cassata",
+    "text": "la cassata",
+    "es": "la cassata (tarta siciliana de ricotta)",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-cassata",
+    "drawTask": "T25",
+    "note": "cassata"
+  },
+  {
+    "id": "food.gelato",
+    "text": "il gelato",
+    "es": "el helado",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:soft-ice-cream",
+    "unsure": true
+  },
+  {
+    "id": "food.coppetta",
+    "text": "la coppetta",
+    "es": "la tarrina",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:ice-cream",
+    "unsure": true,
+    "note": "🍨 = ice cream in a cup"
+  },
+  {
+    "id": "food.cono",
+    "text": "il cono",
+    "es": "el cucurucho",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:soft-ice-cream",
+    "unsure": true,
+    "note": "same icon as gelato"
+  },
+  {
+    "id": "food.arancina",
+    "text": "l'arancina",
+    "es": "la arancina (bola de arroz frita)",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-arancina",
+    "drawTask": "T25",
+    "note": "arancina (rice-ball is onigiri)"
+  },
+  {
+    "id": "food.ragu",
+    "text": "il ragù",
+    "es": "el ragú (salsa de carne)",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-ragu",
+    "drawTask": "T25",
+    "note": "meat sauce"
+  },
+  {
+    "id": "food.burro",
+    "text": "il burro",
+    "es": "la mantequilla",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:butter"
+  },
+  {
+    "id": "food.sfincione",
+    "text": "lo sfincione",
+    "es": "el sfincione (pizza gruesa palermitana)",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-sfincione",
+    "drawTask": "T25",
+    "note": "thick pizza slice (pizza would read as la pizza)"
+  },
+  {
+    "id": "food.panino",
+    "text": "il panino",
+    "es": "el bocadillo",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:sandwich"
+  },
+  {
+    "id": "food.panelle",
+    "text": "le panelle",
+    "es": "los buñuelos de garbanzo",
+    "situation": "bar",
+    "class": "B",
+    "image": "custom:food-panelle",
+    "drawTask": "T25",
+    "note": "chickpea fritters"
+  },
+  {
+    "id": "food.acqua",
+    "text": "l'acqua",
+    "es": "el agua",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:droplet",
+    "unsure": true
+  },
+  {
+    "id": "food.bottiglia",
+    "text": "la bottiglia",
+    "es": "la botella",
+    "situation": "restaurante",
+    "class": "B",
+    "image": "custom:food-bottiglia",
+    "drawTask": "T25",
+    "reference": "openmoji:glass-bottle"
+  },
+  {
+    "id": "food.frizzante",
+    "text": "frizzante",
+    "es": "con gas",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.naturale",
+    "text": "naturale",
+    "es": "sin gas",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.birra",
+    "text": "la birra",
+    "es": "la cerveza",
+    "situation": "bar",
+    "class": "A",
+    "image": "fluent:beer-mug"
+  },
+  {
+    "id": "food.vino",
+    "text": "il vino",
+    "es": "el vino",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:wine-glass"
+  },
+  {
+    "id": "food.bicchiere",
+    "text": "il bicchiere",
+    "es": "el vaso / la copa",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:tumbler-glass"
+  },
+  {
+    "id": "food.tavolo",
+    "text": "il tavolo",
+    "es": "la mesa",
+    "situation": "restaurante",
+    "class": "B",
+    "image": "custom:food-tavolo",
+    "drawTask": "T25",
+    "note": "table (no emoji)"
+  },
+  {
+    "id": "food.prenotazione",
+    "text": "la prenotazione",
+    "es": "la reserva",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.cameriere",
+    "text": "il cameriere",
+    "es": "el camarero",
+    "situation": "restaurante",
+    "class": "B",
+    "image": "custom:food-cameriere",
+    "drawTask": "T25",
+    "note": "waiter"
+  },
+  {
+    "id": "food.menu",
+    "text": "il menù",
+    "es": "la carta",
+    "situation": "restaurante",
+    "class": "B",
+    "image": "custom:food-menu",
+    "drawTask": "T25",
+    "note": "menu card"
+  },
+  {
+    "id": "food.forchetta",
+    "text": "la forchetta",
+    "es": "el tenedor",
+    "situation": "restaurante",
+    "class": "B",
+    "image": "custom:food-forchetta",
+    "drawTask": "T25",
+    "note": "fork alone (fork-and-knife clashes with coltello)"
+  },
+  {
+    "id": "food.coltello",
+    "text": "il coltello",
+    "es": "el cuchillo",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:kitchen-knife"
+  },
+  {
+    "id": "food.cucchiaio",
+    "text": "il cucchiaio",
+    "es": "la cuchara",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:spoon"
+  },
+  {
+    "id": "food.antipasto",
+    "text": "l'antipasto",
+    "es": "el entrante",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.caponata",
+    "text": "la caponata",
+    "es": "la caponata (verduras agridulces)",
+    "situation": "restaurante",
+    "class": "B",
+    "image": "custom:food-caponata",
+    "drawTask": "T25",
+    "note": "caponata"
+  },
+  {
+    "id": "food.primo",
+    "text": "il primo",
+    "es": "el primer plato",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.melanzane",
+    "text": "le melanzane",
+    "es": "las berenjenas",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:eggplant"
+  },
+  {
+    "id": "food.secondo",
+    "text": "il secondo",
+    "es": "el segundo plato",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.pesce",
+    "text": "il pesce",
+    "es": "el pescado",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:fish"
+  },
+  {
+    "id": "food.carne",
+    "text": "la carne",
+    "es": "la carne",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:cut-of-meat"
+  },
+  {
+    "id": "food.pesce-spada",
+    "text": "il pesce spada",
+    "es": "el pez espada",
+    "situation": "restaurante",
+    "class": "B",
+    "image": "custom:food-pesce-spada",
+    "drawTask": "T25",
+    "note": "swordfish"
+  },
+  {
+    "id": "food.contorno",
+    "text": "il contorno",
+    "es": "la guarnición",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.dolce",
+    "text": "il dolce",
+    "es": "el postre",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:shortcake",
+    "unsure": true
+  },
+  {
+    "id": "food.allergia",
+    "text": "l'allergia",
+    "es": "la alergia",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.frutta-secca",
+    "text": "la frutta secca",
+    "es": "los frutos secos",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:peanuts",
+    "unsure": true
+  },
+  {
+    "id": "food.glutine",
+    "text": "il glutine",
+    "es": "el gluten",
+    "situation": "restaurante",
+    "class": "B",
+    "image": "custom:food-glutine",
+    "drawTask": "T25",
+    "note": "wheat ear (sheaf-of-rice is rice)"
+  },
+  {
+    "id": "food.lattosio",
+    "text": "il lattosio",
+    "es": "la lactosa",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.frutti-di-mare",
+    "text": "i frutti di mare",
+    "es": "el marisco",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:shrimp",
+    "unsure": true
+  },
+  {
+    "id": "food.uova",
+    "text": "le uova",
+    "es": "los huevos",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:egg"
+  },
+  {
+    "id": "food.cipolla",
+    "text": "la cipolla",
+    "es": "la cebolla",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:onion"
+  },
+  {
+    "id": "food.conto",
+    "text": "il conto",
+    "es": "la cuenta",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:receipt",
+    "unsure": true,
+    "note": "same icon as scontrino/ricevuta"
+  },
+  {
+    "id": "food.coperto",
+    "text": "il coperto",
+    "es": "el cubierto (cargo fijo por persona)",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.servizio",
+    "text": "il servizio",
+    "es": "el servicio",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.mancia",
+    "text": "la mancia",
+    "es": "la propina",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "food.ricevuta",
+    "text": "la ricevuta",
+    "es": "el recibo",
+    "situation": "restaurante",
+    "class": "A",
+    "image": "fluent:receipt"
+  },
+  {
+    "id": "gram.vacanza",
+    "text": "la vacanza",
+    "es": "las vacaciones",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "gram.fame",
+    "text": "la fame",
+    "es": "el hambre",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "gram.sete",
+    "text": "la sete",
+    "es": "la sed",
+    "situation": "bar",
+    "class": "C"
+  },
+  {
+    "id": "gram.caldo",
+    "text": "il caldo",
+    "es": "el calor",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:hot-face",
+    "unsure": true
+  },
+  {
+    "id": "gram.foto",
+    "text": "la foto",
+    "es": "la foto",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:framed-picture",
+    "unsure": true
+  },
+  {
+    "id": "gram.mare",
+    "text": "il mare",
+    "es": "el mar",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:water-wave",
+    "unsure": true
+  },
+  {
+    "id": "story-palermo-finestrino",
+    "text": "il finestrino",
+    "es": "la ventanilla",
+    "situation": "bus",
+    "class": "B",
+    "image": "custom:story-palermo-finestrino",
+    "drawTask": "T26",
+    "note": "train/bus window (fluent window is a house window)"
+  },
+  {
+    "id": "story-palermo-tassa-di-soggiorno",
+    "text": "la tassa di soggiorno",
+    "es": "la tasa turística",
+    "situation": "alojamiento",
+    "class": "C"
+  },
+  {
+    "id": "story-palermo-chiave",
+    "text": "la chiave",
+    "es": "la llave",
+    "situation": "alojamiento",
+    "class": "A",
+    "image": "fluent:key"
+  },
+  {
+    "id": "story-palermo-camera",
+    "text": "la camera",
+    "es": "la habitación",
+    "situation": "alojamiento",
+    "class": "A",
+    "image": "fluent:bed",
+    "unsure": true
+  },
+  {
+    "id": "story-palermo-ascensore",
+    "text": "l'ascensore",
+    "es": "el ascensor",
+    "situation": "alojamiento",
+    "class": "A",
+    "image": "fluent:elevator"
+  },
+  {
+    "id": "story-palermo-colazione",
+    "text": "la colazione",
+    "es": "el desayuno",
+    "situation": "alojamiento",
+    "class": "B",
+    "image": "custom:story-palermo-colazione",
+    "drawTask": "T26",
+    "note": "breakfast set (coffee + cornetto)"
+  },
+  {
+    "id": "story-palermo-bancarella",
+    "text": "la bancarella",
+    "es": "el puesto (del mercado)",
+    "situation": "compras",
+    "class": "B",
+    "image": "custom:story-palermo-bancarella",
+    "drawTask": "T25",
+    "note": "market stall"
+  },
+  {
+    "id": "story-palermo-assaggiare",
+    "text": "assaggiare",
+    "es": "probar (comida o bebida)",
+    "situation": "compras",
+    "class": "C"
+  },
+  {
+    "id": "story-cefalu-ombrellone",
+    "text": "l'ombrellone",
+    "es": "la sombrilla (de playa)",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:umbrella-on-ground"
+  },
+  {
+    "id": "story-cefalu-lettino",
+    "text": "il lettino",
+    "es": "la tumbona",
+    "situation": "calle",
+    "class": "B",
+    "image": "custom:story-cefalu-lettino",
+    "drawTask": "T27",
+    "note": "sun lounger"
+  },
+  {
+    "id": "story-cefalu-tramonto",
+    "text": "il tramonto",
+    "es": "la puesta de sol",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:sunset"
+  },
+  {
+    "id": "story-pullman-agrigento-avviso",
+    "text": "l'avviso",
+    "es": "el aviso (el cartel)",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "story-pullman-agrigento-fermo",
+    "text": "fermo",
+    "es": "parado (sin servicio)",
+    "situation": "bus",
+    "class": "C"
+  },
+  {
+    "id": "story-agrigento-tempio",
+    "text": "il tempio",
+    "es": "el templo",
+    "situation": "calle",
+    "class": "A",
+    "image": "fluent:classical-building"
+  },
+  {
+    "id": "story-agrigento-chiacchierare",
+    "text": "chiacchierare",
+    "es": "charlar",
+    "situation": "presentarse",
+    "class": "C"
+  },
+  {
+    "id": "story-agrigento-insegnante",
+    "text": "l'insegnante",
+    "es": "el profesor, la profesora",
+    "situation": "presentarse",
+    "class": "A",
+    "image": "fluent:teacher"
+  },
+  {
+    "id": "story-catania-inzuppare",
+    "text": "inzuppare",
+    "es": "mojar (en un líquido)",
+    "situation": "bar",
+    "class": "C"
+  },
+  {
+    "id": "story-catania-pescivendolo",
+    "text": "il pescivendolo",
+    "es": "el pescadero",
+    "situation": "compras",
+    "class": "B",
+    "image": "custom:story-catania-pescivendolo",
+    "drawTask": "T25",
+    "note": "fishmonger"
+  },
+  {
+    "id": "story-catania-fresco",
+    "text": "fresco",
+    "es": "fresco",
+    "situation": "compras",
+    "class": "C"
+  },
+  {
+    "id": "story-catania-riccio-di-mare",
+    "text": "il riccio di mare",
+    "es": "el erizo de mar",
+    "situation": "compras",
+    "class": "B",
+    "image": "custom:story-catania-riccio-di-mare",
+    "drawTask": "T25",
+    "note": "sea urchin"
+  },
+  {
+    "id": "story-siracusa-doposole",
+    "text": "il doposole",
+    "es": "el aftersun",
+    "situation": "emergencias",
+    "class": "B",
+    "image": "custom:story-siracusa-doposole",
+    "drawTask": "T27",
+    "note": "after-sun bottle (lotion-bottle taken by crema solare)"
+  },
+  {
+    "id": "story-siracusa-ombra",
+    "text": "l'ombra",
+    "es": "la sombra",
+    "situation": "emergencias",
+    "class": "C"
+  },
+  {
+    "id": "story-ortigia-prenotare",
+    "text": "prenotare",
+    "es": "reservar",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "story-ortigia-a-nome",
+    "text": "a nome",
+    "es": "a nombre de",
+    "situation": "restaurante",
+    "class": "C"
+  },
+  {
+    "id": "story-ritorno-chiave",
+    "text": "la chiave",
+    "es": "la llave",
+    "situation": "alojamiento",
+    "class": "A",
+    "image": "fluent:key"
+  },
+  {
+    "id": "story-ritorno-salutare",
+    "text": "salutare",
+    "es": "despedirse de; saludar",
+    "situation": "saludos",
+    "class": "A",
+    "image": "fluent:waving-hand",
+    "unsure": true
+  }
+]

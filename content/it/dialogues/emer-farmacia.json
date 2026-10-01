@@ -6,6 +6,7 @@
   "unit": "emer",
   "order": 14,
   "register": "lei",
+  "avatars": { "Farmacéutica": "fluent:woman-health-worker" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Farmacéutica", "text": "Buongiorno, mi dica.", "es": "Buenos días, dígame.", "voice": "it-IT-IsabellaNeural" },
     {

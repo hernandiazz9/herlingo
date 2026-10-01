@@ -91,8 +91,8 @@ phrasebook sections in display order). If you need a new situation, add one line
   `"Lo dices en la taquilla o a la máquina de billetes. «gli» suena como una «ll» suave: bi-LLE-tto."`
 - **Vocab**: `id`, `word` (bare), `article?` (`il`, `lo`, `la`, `l'`, `i`, `gli`, `le`),
   `gender?` (`m` | `f` | `mf`), `plural?` (bare word, no article: "biglietti", "autobus"), `es` (with article for nouns: "el billete"), `notes?`,
-  `example?` (a phrase id), `situation?`, `tags?`, `voice?`. It is spoken as article + word
-  ("il biglietto", "l'orario").
+  `example?` (a phrase id), `situation?`, `tags?`, `voice?`, `image?` (picture key, see
+  "Pictures"). It is spoken as article + word ("il biglietto", "l'orario").
 - **Q&A** (for "answer" exercises): `id`, `question` (what the Italian asks), `questionEs`,
   `accepted` (≥ 1 `{ text, es }`; the first is the model answer), `distractors` (≥ 2 `{ text, es }`,
   plausible but wrong), `register`, `situation`, `notes?`, `tags?`, `voice?` (of the question).
@@ -102,7 +102,8 @@ phrasebook sections in display order). If you need a new situation, add one line
   `standard?` (standard Italian equivalent), `notes?`, `tags?`, `voice?`.
 
 **Dialogue file** (`dialogues/*.json`): `id`, `title`, `description?`, `situation`, `unit?`
-(unit id it belongs with), `order?` (sort key), `register`, `turns` (≥ 2, at least one learner turn).
+(unit id it belongs with), `order?` (sort key), `register`, `avatars?` (native speaker `name` →
+picture key, see "Pictures"), `turns` (≥ 2, at least one learner turn).
 Turn ids must be unique inside the dialogue (`n1`, `l1`, `n2`…).
 
 - Native turn: `{ id, speaker: "native", name?, text, es, voice? }`.
@@ -166,6 +167,80 @@ Gap chips are not voiced (play the whole sentence instead).
 (the mp3s themselves are reused; only the manifest changes).
 `voice` must be one of `pack.json` `voices`; when missing, the first one is used.
 
+## Pictures
+
+Drawable words get a flat illustration (Duolingo-style picture exercises, game cards, Frasario
+"Palabras", story popovers); dialogue speakers can get an avatar. Abstract words (numbers,
+adjectives, "il ritardo" / "la coincidenza"-type concepts that no picture makes clear) have **no**
+picture.
+
+**Image keys** (same format everywhere):
+
+| Key | Source | Written to |
+| --- | --- | --- |
+| `fluent:<icon>` | Microsoft Fluent Emoji Flat (MIT), icon name as in `node_modules/@iconify-json/fluent-emoji-flat/icons.json` (e.g. `fluent:hot-beverage`, `fluent:man-cook`) | `public/images/fluent/<icon>.svg` |
+| `custom:<slug>` | our drawing `assets/images/custom/<slug>.svg`; slug = vocab id with dots → dashes (`food.cannolo` → `custom:food-cannolo`); the same word on several ids shares one drawing (`move-strada.mercato` → `custom:surv-mercato`) | `public/images/custom/<slug>.svg` |
+
+- **Vocab** (units, extras and inline story key words): optional `"image": "fluent:croissant"`.
+  A picture must clearly evoke the word for a learner; several words may share one icon (the UI
+  never puts two options with the same picture in one question).
+- **Dialogue avatars**: optional `"avatars": { "<name>": "<key>" }` at dialogue level, keyed by
+  the native turns' `name` (`{ "Camarero": "fluent:man-cook" }`); a dialogue with two speakers
+  lists both. Every key must be a `name` used by a native turn. The learner has no avatar.
+- **Coverage**: `plans/003-image-coverage.json` (read only) classifies every vocab item: `A` =
+  fitting Fluent icon (`image` given), `B` = custom drawing needed (`image: "custom:<slug>"`,
+  `drawTask` says who draws it), `C` = not drawable (no `image`). `unsure` entries have a `note`.
+
+**Runtime** (`@/lib/content`): a vocab item has `image: { src, dark? }` **only when the file exists
+in `public/images/`** (a key whose file is missing = no picture, never a broken image); `imageKey`
+keeps the source key. `listVocab({ situation?, withImage? })` (pack order), `getVocab(id)`,
+`hasImage(item)`; native dialogue turns have `avatar`, and `getDialogueSpeakers(dialogue)` lists
+`{ name, avatar? }`. Show pictures with `<Picture image={…} alt={…} size="grid" | "intro" | "avatar" />`
+from `@/components/ui`.
+
+**Dark theme**: pictures keep their colours on a `surface` card. `npm run images` renders each
+picture and marks it `data-backdrop="dark"` when ≥ 60 % of its painted area is near-black; then
+`image.dark` is true and `Picture` puts a soft light disc behind it in dark theme. If the
+detection is wrong for a picture, list its key in `assets/images/backdrop.json`
+(`{ "dark": ["fluent:top-hat"], "light": ["custom:…"] }`, both optional) and re-run `npm run images`.
+
+**Commands**
+
+- `npm run images`: writes every referenced picture to `public/images/` (Fluent from the
+  devDependency, custom drawings minified), deterministic names, only changed files rewritten,
+  unreferenced files deleted; referenced custom drawings that do not exist yet are skipped with a
+  ⚠. Then refreshes the content bundle. **Commit `public/images/`** (like audio).
+- `npm run content:check`: errors on a malformed key, an unknown Fluent icon, a bad avatar name,
+  a custom file that is not a valid `<slug>.svg`; ⚠ warns on referenced custom drawings that do
+  not exist yet and on style-guide misses in any file of `assets/images/custom/`.
+- `npm run content:check -- --strict-images`: also fails when a referenced picture is missing from
+  `public/images/` or stale (differs from its source), or a file there is unreferenced.
+
+### Custom drawing style guide
+
+Custom SVGs must sit next to Fluent Emoji Flat icons without looking foreign:
+
+- `viewBox="0 0 32 32"` (like Fluent), no `width`/`height` needed; subject centred with ~2px
+  margin (draw inside 2…30).
+- **Flat solid fills** only (`fill="#…"`); no gradients, filters, shadows or blur. **No outlines**
+  (no strokes around shapes; shape edges are colour changes, as in Fluent). A thin stroke is only
+  acceptable for something that is really a line (a straw, fork tines) — prefer a thin filled shape.
+- **Rounded, friendly shapes**: rounded corners and ends, slightly chunky proportions, 2–4 tones
+  per material (base, lighter highlight, darker shade), 3/4 or front view like the emoji.
+- **No text**, letters, numbers or logos inside the picture; no raster `<image>`; no scripts.
+- **Fluent-like palette** (most used Fluent fills): whites/greys `#ffffff` `#f4f4f4` `#e6e6e6`
+  `#d3d3d3` `#9b9b9b` `#636363`; "black" is dark purple `#533566` / `#321b41` (avoid pure
+  `#000` areas); browns `#7d4533` `#a56953` `#593b39`; yellows/oranges `#ffc83d` `#fcd53f`
+  `#f9c23c` `#ffb02e` `#ff6723`; reds `#f8312f` `#f92f60`; blue `#00a6ed`; purple `#8b62bf`; skin
+  `#ffd7c2` `#eebfaa`; greens: take them from a Fluent food icon (e.g. `green-salad`, `cucumber`).
+- **Recognisable at 80px**: one clear subject, few details; check it on a light and on a dark
+  surface next to a few Fluent icons.
+- **< 6 KB** after minification (`content:check` warns above that); one file per slug, file name
+  exactly `<slug>.svg`. Hand-written or exported SVG is fine: `npm run images` strips the XML
+  prolog, comments, metadata and editor attributes.
+- Draw only original artwork (Fluent icons may be used as style reference and as parts, since they
+  are MIT; never copy non-MIT icon sets).
+
 ## What `content:check` enforces
 
 Schema (types, required fields, non-empty text, id format), unique ids across the pack, unique
@@ -175,7 +250,9 @@ have a correct option, placement answers in range and lessons that exist. Storie
 `order`, unique local ids, inline key words prefixed `story-`, key words that exist and are vocab /
 phrase / expression (no repeats), question `correct` in range, gap sentence and answer (a key word
 of the story) that exist, gap text found in the sentence, distractors different from the answer
-and from each other. Guideline misses (story length and counts) are ⚠ warnings.
+and from each other. Pictures: well-formed keys, known Fluent icons, avatar names that exist,
+valid custom files (see "Pictures"). Guideline misses (story length and counts) and custom
+drawings not drawn yet are ⚠ warnings.
 
 ## Quality rules
 

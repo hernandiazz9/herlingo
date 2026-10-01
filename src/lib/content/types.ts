@@ -26,10 +26,30 @@ export interface Playable {
   voice: string;
 }
 
+/**
+ * A picture ready to show (pass it to `<Picture image={…} />` from `@/components/ui`). Present on
+ * an item only when its file exists in `public/images/` (written by `npm run images`), so the UI
+ * never shows a broken image: no `image` = show text only.
+ */
+export interface ImageRef {
+  /** Absolute URL of the SVG ("/images/fluent/hot-beverage.svg"); precached for offline use. */
+  src: string;
+  /** Mostly near-black picture: `Picture` adds a soft light round backdrop in dark theme. */
+  dark?: boolean;
+}
+
 export type Phrase = Omit<z.infer<typeof S.Phrase>, "voice"> & Playable & { kind: "phrase" };
 
-/** `text` = article + word as spoken ("il biglietto", "l'orario"); `word` = bare word. */
-export type Vocab = Omit<z.infer<typeof S.Vocab>, "voice"> & Playable & { kind: "vocab" };
+/**
+ * `text` = article + word as spoken ("il biglietto", "l'orario"); `word` = bare word.
+ * `imageKey` = the source picture key (`fluent:…` | `custom:…`) when the content sets one;
+ * `image` = the resolved picture, only when its file exists (use `image`, not `imageKey`, in UI).
+ */
+export type Vocab = Omit<z.infer<typeof S.Vocab>, "voice" | "image"> &
+  Playable & { kind: "vocab"; imageKey?: string; image?: ImageRef };
+
+/** A vocab item that has a picture (see `listVocab({ withImage: true })`, `hasImage()`). */
+export type PicturedVocab = Vocab & { image: ImageRef };
 
 export type Reply = z.infer<typeof S.Reply> & Playable;
 
@@ -68,11 +88,16 @@ export interface Unit {
   lessons: Lesson[];
 }
 
-export type NativeTurn = Omit<z.infer<typeof S.NativeTurn>, "voice"> & Playable;
+/** `avatar` = the speaker's picture (dialogue `avatars[name]`), only when its file exists. */
+export type NativeTurn = Omit<z.infer<typeof S.NativeTurn>, "voice"> & Playable & { avatar?: ImageRef };
 export type LearnerOption = z.infer<typeof S.LearnerOption> & Playable;
 export type LearnerTurn = Omit<z.infer<typeof S.LearnerTurn>, "options"> & { options: LearnerOption[] };
 export type DialogueTurn = NativeTurn | LearnerTurn;
 
+/**
+ * `avatars` keeps the source keys (speaker name → picture key) for the image pipeline; the UI
+ * reads the resolved `avatar` on each native turn instead.
+ */
 export type Dialogue = Omit<z.infer<typeof S.DialogueFile>, "turns"> & { turns: DialogueTurn[] };
 
 export type PlacementQuestion = Omit<z.infer<typeof S.PlacementQuestion>, "voice"> & {

@@ -32,7 +32,8 @@
       "plural": "bancarelle",
       "es": "el puesto (del mercado)",
       "notes": "El puesto de un mercado o de la calle; «il banco» también se usa.",
-      "situation": "compras"
+      "situation": "compras",
+      "image": "custom:story-palermo-bancarella"
     },
     "surv.olive",
     "surv.quanto-costano-queste",

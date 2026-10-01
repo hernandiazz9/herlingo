@@ -6,6 +6,7 @@
   "unit": "move-treno",
   "order": 20,
   "register": "lei",
+  "avatars": { "Bigliettaia": "fluent:woman-office-worker" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Bigliettaia", "text": "Buongiorno, mi dica.", "es": "Buenos días, dígame.", "voice": "it-IT-IsabellaNeural" },
     {

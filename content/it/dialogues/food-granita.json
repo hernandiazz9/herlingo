@@ -6,6 +6,7 @@
   "unit": "food",
   "order": 40,
   "register": "lei",
+  "avatars": { "Camarero": "custom:food-cameriere" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Camarero", "text": "Buongiorno! Prego, mi dica.", "es": "¡Buenos días! Dígame.", "voice": "it-IT-DiegoNeural" },
     {

@@ -5,6 +5,7 @@ import { ChoiceExercise } from "./ChoiceExercise";
 import { DictationExercise } from "./DictationExercise";
 import { FillGapExercise } from "./FillGapExercise";
 import { MatchExercise } from "./MatchExercise";
+import { PictureChoiceExercise } from "./PictureChoiceExercise";
 import { SpeakExercise } from "./SpeakExercise";
 import { TilesExercise } from "./TilesExercise";
 
@@ -30,6 +31,9 @@ export function ExerciseView({ exercise, answered, onAnswer, onCannotSpeak }: Ex
       return <DictationExercise exercise={exercise} answered={answered} onAnswer={onAnswer} />;
     case "match":
       return <MatchExercise exercise={exercise} answered={answered} onAnswer={onAnswer} />;
+    case "picture-choice":
+    case "picture-listen":
+      return <PictureChoiceExercise exercise={exercise} answered={answered} onAnswer={onAnswer} />;
     case "speak":
       return <SpeakExercise exercise={exercise} answered={answered} onAnswer={onAnswer} onCannotSpeak={onCannotSpeak} />;
   }

@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { type ReactNode, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { EyeIcon, MicIcon, SlowIcon } from "@/components/phrasebook/icons";
-import { Button } from "@/components/ui";
+import { Button, Picture } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import {
@@ -14,6 +14,7 @@ import {
   type LearnerOption,
   type LearnerTurn,
   type NativeTurn,
+  type ImageRef,
   type Playable,
 } from "@/lib/content";
 import { bestMatch, canRecognize, listen } from "./recognition";
@@ -204,7 +205,9 @@ export function DialogueSimulator({ id, lang }: { id: string; lang?: string }) {
           {turns.map((turn) =>
             turn.speaker === "native" ? (
               <li key={turn.id}>
-                <TranscriptLine who={turn.name ?? "Italiano"} item={turn} es={turn.es} side="left" />
+                <WithAvatar avatar={turn.avatar} compact>
+                  <TranscriptLine who={turn.name ?? "Italiano"} item={turn} es={turn.es} side="left" />
+                </WithAvatar>
               </li>
             ) : (
               <li key={turn.id} className="flex flex-col gap-2">
@@ -238,7 +241,9 @@ export function DialogueSimulator({ id, lang }: { id: string; lang?: string }) {
           if (turn.speaker === "native") {
             return (
               <li key={turn.id}>
-                <NativeBubble turn={turn} shown={revealed.has(turn.id)} onToggle={() => toggleReveal(turn.id)} />
+                <WithAvatar avatar={turn.avatar}>
+                  <NativeBubble turn={turn} shown={revealed.has(turn.id)} onToggle={() => toggleReveal(turn.id)} />
+                </WithAvatar>
               </li>
             );
           }
@@ -332,6 +337,20 @@ function PlayButtons({ item }: { item: Playable }) {
         <SlowIcon width={22} height={22} />
       </button>
     </span>
+  );
+}
+
+/**
+ * The native speaker's avatar beside their bubble (left, top-aligned). Decorative: the speaker's
+ * name is written in the bubble. No avatar = the bubble alone, as before.
+ */
+function WithAvatar({ avatar, compact, children }: { avatar?: ImageRef; compact?: boolean; children: ReactNode }) {
+  if (!avatar) return children;
+  return (
+    <div className="flex items-start gap-2">
+      <Picture image={avatar} alt="" size="avatar" className={compact ? "mt-1" : "mt-2"} />
+      <div className="min-w-0 flex-1">{children}</div>
+    </div>
   );
 }
 

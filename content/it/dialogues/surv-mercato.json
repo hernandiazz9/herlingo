@@ -6,6 +6,7 @@
   "unit": "surv",
   "order": 10,
   "register": "lei",
+  "avatars": { "Frutero": "fluent:man-farmer" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Frutero", "text": "Buongiorno! Cosa Le do?", "es": "¡Buenos días! ¿Qué le pongo?", "voice": "it-IT-DiegoNeural" },
     {

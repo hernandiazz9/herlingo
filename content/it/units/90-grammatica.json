@@ -113,9 +113,9 @@
     { "id": "gram.vacanza", "word": "vacanza", "article": "la", "gender": "f", "es": "las vacaciones", "notes": "«Sono in vacanza» = estoy de vacaciones.", "example": "gram.sono-in-vacanza", "situation": "presentarse" },
     { "id": "gram.fame", "word": "fame", "article": "la", "gender": "f", "es": "el hambre", "example": "gram.ho-fame", "situation": "restaurante" },
     { "id": "gram.sete", "word": "sete", "article": "la", "gender": "f", "es": "la sed", "example": "gram.ho-sete", "situation": "bar" },
-    { "id": "gram.caldo", "word": "caldo", "article": "il", "gender": "m", "es": "el calor", "notes": "Como adjetivo, «caliente».", "example": "gram.ho-caldo", "situation": "presentarse" },
-    { "id": "gram.foto", "word": "foto", "article": "la", "gender": "f", "plural": "foto", "es": "la foto", "example": "gram.mi-fai-una-foto", "situation": "calle" },
-    { "id": "gram.mare", "word": "mare", "article": "il", "gender": "m", "es": "el mar", "notes": "«Andare al mare» = ir a la playa.", "example": "gram.andiamo-al-mare", "situation": "presentarse" }
+    { "id": "gram.caldo", "word": "caldo", "article": "il", "gender": "m", "es": "el calor", "notes": "Como adjetivo, «caliente».", "example": "gram.ho-caldo", "situation": "presentarse", "image": "fluent:hot-face" },
+    { "id": "gram.foto", "word": "foto", "article": "la", "gender": "f", "plural": "foto", "es": "la foto", "example": "gram.mi-fai-una-foto", "situation": "calle", "image": "fluent:framed-picture" },
+    { "id": "gram.mare", "word": "mare", "article": "il", "gender": "m", "es": "el mar", "notes": "«Andare al mare» = ir a la playa.", "example": "gram.andiamo-al-mare", "situation": "presentarse", "image": "fluent:water-wave" }
   ],
   "qa": [
     {

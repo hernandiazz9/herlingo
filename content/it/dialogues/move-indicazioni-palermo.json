@@ -6,6 +6,7 @@
   "unit": "move-strada",
   "order": 26,
   "register": "lei",
+  "avatars": { "Signora": "fluent:woman" },
   "turns": [
     {
       "id": "l1",

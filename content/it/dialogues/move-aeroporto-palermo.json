@@ -6,6 +6,7 @@
   "unit": "move-bus",
   "order": 24,
   "register": "lei",
+  "avatars": { "Autista": "custom:move-bus-autista" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Autista", "text": "Buongiorno! Dove va?", "es": "¡Buenos días! ¿Adónde va?", "voice": "it-IT-DiegoNeural" },
     {
