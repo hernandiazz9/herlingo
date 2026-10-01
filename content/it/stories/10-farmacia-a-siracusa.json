@@ -27,7 +27,7 @@
     "emer.scottatura",
     "emer.puntura",
     "emer.zanzara",
-    { "id": "story-siracusa-doposole", "word": "doposole", "article": "il", "gender": "m", "es": "el aftersun", "notes": "«Una crema doposole»: una crema para después del sol.", "situation": "emergencias" },
+    { "id": "story-siracusa-doposole", "word": "doposole", "article": "il", "gender": "m", "es": "el aftersun", "notes": "«Una crema doposole»: una crema para después del sol.", "situation": "emergencias", "image": "custom:story-siracusa-doposole" },
     "emer.crema-solare",
     { "id": "story-siracusa-ombra", "word": "ombra", "article": "l'", "gender": "f", "es": "la sombra", "notes": "«Stare all'ombra»: estar a la sombra.", "situation": "emergencias" },
     "emer.ricetta",

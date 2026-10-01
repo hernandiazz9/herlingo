@@ -22,7 +22,7 @@
     { "id": "s12", "text": "Poi Hernán visita gli altri templi, sotto il sole.", "es": "Luego Hernán visita los otros templos, bajo el sol." }
   ],
   "keywords": [
-    { "id": "story-agrigento-tempio", "word": "tempio", "article": "il", "gender": "m", "plural": "templi", "es": "el templo", "notes": "Plural irregular: «i templi» (la Valle dei Templi).", "situation": "calle" },
+    { "id": "story-agrigento-tempio", "word": "tempio", "article": "il", "gender": "m", "plural": "templi", "es": "el templo", "notes": "Plural irregular: «i templi» (la Valle dei Templi).", "situation": "calle", "image": "fluent:classical-building" },
     "move-strada.ingresso",
     "move-strada.mappa",
     "talk-chiacchiere.caldo",
@@ -31,7 +31,7 @@
     "talk-chiacchiere.sei-qui-in-vacanza",
     "talk-io.viaggio-da-solo",
     "talk-chiacchiere.numero",
-    { "id": "story-agrigento-insegnante", "word": "insegnante", "article": "l'", "gender": "mf", "es": "el profesor, la profesora", "notes": "«Faccio l'insegnante»: soy profesor o profesora (de colegio o instituto).", "situation": "presentarse" }
+    { "id": "story-agrigento-insegnante", "word": "insegnante", "article": "l'", "gender": "mf", "es": "el profesor, la profesora", "notes": "«Faccio l'insegnante»: soy profesor o profesora (de colegio o instituto).", "situation": "presentarse", "image": "fluent:teacher" }
   ],
   "questions": [
     {

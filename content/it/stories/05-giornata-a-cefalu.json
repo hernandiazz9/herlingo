@@ -37,7 +37,8 @@
       "plural": "ombrelloni",
       "es": "la sombrilla (de playa)",
       "notes": "En los «lidi» (playas con servicio) se alquila con las tumbonas por día o por tarde.",
-      "situation": "calle"
+      "situation": "calle",
+      "image": "fluent:umbrella-on-ground"
     },
     {
       "id": "story-cefalu-lettino",
@@ -46,7 +47,8 @@
       "gender": "m",
       "plural": "lettini",
       "es": "la tumbona",
-      "situation": "calle"
+      "situation": "calle",
+      "image": "custom:story-cefalu-lettino"
     },
     "emer.crema-solare",
     {
@@ -57,7 +59,8 @@
       "plural": "tramonti",
       "es": "la puesta de sol",
       "notes": "«Guardare il tramonto»: ver la puesta de sol.",
-      "situation": "calle"
+      "situation": "calle",
+      "image": "fluent:sunset"
     }
   ],
   "questions": [

@@ -39,7 +39,8 @@
       "plural": "finestrini",
       "es": "la ventanilla",
       "notes": "La ventana del autobús, del tren o del coche; la de casa es «la finestra».",
-      "situation": "bus"
+      "situation": "bus",
+      "image": "custom:story-palermo-finestrino"
     }
   ],
   "questions": [

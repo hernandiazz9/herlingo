@@ -22,8 +22,8 @@
     { "id": "s12", "text": "Dal finestrino vede l'Etna e il mare, e pensa: «Tornerò!»", "es": "Por la ventanilla ve el Etna y el mar, y piensa: «¡Volveré!»" }
   ],
   "keywords": [
-    { "id": "story-ritorno-chiave", "word": "chiave", "article": "la", "gender": "f", "plural": "chiavi", "es": "la llave", "notes": "«Le chiavi della camera»: las llaves de la habitación.", "situation": "alojamiento" },
-    { "id": "story-ritorno-salutare", "word": "salutare", "es": "despedirse de; saludar", "notes": "«La saluta»: se despide de ella (o la saluda). «Saluti!»: ¡saludos!", "situation": "saludos" },
+    { "id": "story-ritorno-chiave", "word": "chiave", "article": "la", "gender": "f", "plural": "chiavi", "es": "la llave", "notes": "«Le chiavi della camera»: las llaves de la habitación.", "situation": "alojamiento", "image": "fluent:key" },
+    { "id": "story-ritorno-salutare", "word": "salutare", "es": "despedirse de; saludar", "notes": "«La saluta»: se despide de ella (o la saluda). «Saluti!»: ¡saludos!", "situation": "saludos", "image": "fluent:waving-hand" },
     "talk-chiacchiere.e-stato-un-piacere",
     "talk-chiacchiere.buon-viaggio",
     "move-bus.pullman",

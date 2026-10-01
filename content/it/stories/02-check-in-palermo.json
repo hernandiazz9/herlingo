@@ -43,7 +43,8 @@
       "plural": "chiavi",
       "es": "la llave",
       "notes": "«Mi dà le chiavi?»: ¿me da las llaves?",
-      "situation": "alojamiento"
+      "situation": "alojamiento",
+      "image": "fluent:key"
     },
     {
       "id": "story-palermo-camera",
@@ -53,7 +54,8 @@
       "plural": "camere",
       "es": "la habitación",
       "notes": "Ojo: «camera» es la habitación; la cámara de fotos es «la macchina fotografica».",
-      "situation": "alojamiento"
+      "situation": "alojamiento",
+      "image": "fluent:bed"
     },
     {
       "id": "story-palermo-ascensore",
@@ -62,7 +64,8 @@
       "gender": "m",
       "plural": "ascensori",
       "es": "el ascensor",
-      "situation": "alojamiento"
+      "situation": "alojamiento",
+      "image": "fluent:elevator"
     },
     {
       "id": "story-palermo-colazione",
@@ -71,7 +74,8 @@
       "gender": "f",
       "es": "el desayuno",
       "notes": "«Fare colazione»: desayunar. En Sicilia, a menudo granita con brioche.",
-      "situation": "alojamiento"
+      "situation": "alojamiento",
+      "image": "custom:story-palermo-colazione"
     },
     "surv.mi-dispiace"
   ],
