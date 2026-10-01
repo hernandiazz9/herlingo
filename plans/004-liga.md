@@ -51,11 +51,11 @@ Worktree setup: npm ci
 - Outcome: lazy supabase-js chunk (only loaded for Liga actions/sessions), `useLeagueAccount()` with cached offline state + change event, implicit-flow magic link handled on /liga/, placeholder LeagueView → 96ffc72
 
 ## T35 — XP outbox and sync
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T34
 - Goal: Every XP award made while the user has joined Liga is queued on the device and sent to `league_record_xp` when online, so weekly rankings fill up without ever blocking the offline app.
 - Context: Shared contract; docs/league.md; `src/lib/progress/` (where XP is added: `update()`, `recordActivity` in activity.ts) and every caller that awards XP (lessons, review, game, stories); `src/lib/league/` from T34 (account state + change event).
-- Scope: may touch `src/lib/league/outbox.ts`, `src/lib/league/sync.ts` (new), a minimal hook point in `src/lib/progress/**` (one place where XP awards are reported, not scattered edits), docs/league.md (sync section) / must not touch `src/components/**`, `src/app/**`, `supabase/**`, `src/lib/game/**`, `src/lib/exercises/**`.
+- Scope: may touch `src/lib/league/outbox.ts`, `src/lib/league/sync.ts` (new), a minimal hook point in `src/lib/progress/**` (one place where XP awards are reported, not scattered edits), docs/league.md (sync section), a new `src/components/league/LeagueSync.tsx` (renders nothing, starts the sync) mounted with one line in `src/app/layout.tsx` / must not touch other `src/components/**`, other `src/app/**`, `supabase/**`, `src/lib/game/**`, `src/lib/exercises/**`.
 - Done when:
   - Outbox in localStorage (`lang-lern:league-outbox:<lang>`, versioned, tolerant parsing, capped size) receives `{ id, lang, amount, source, earnedAt }` for each XP award only while joined; nothing is queued when Liga is disabled or the user has not joined.
   - Flush on join, on app start, on `online` and on `visibilitychange` to visible; idempotent (ids), removes only acknowledged events, backs off on errors, never throws into the UI.
@@ -64,11 +64,11 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T36 — Join flow and Liga account screen
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T34
 - Goal: On /liga/: the join flow for users without an account (pick nickname + emoji, join) and the account section for joined users (edit nickname/emoji, link email, sign in with email on a new device, leave and delete my data), with offline and error states.
 - Context: Shared contract; docs/league.md; `src/lib/league/` hooks (T34); CLAUDE.md UI conventions (tokens only, both themes, `pressable`, PageHeader, Spain Spanish "tú"); `src/components/ui/`; `src/app/perfil/ProfileView.tsx` for the settings/confirm-dialog style to reuse.
-- Scope: may touch `src/app/liga/**`, `src/components/league/**` (join + account components; leave a clear slot for the ranking that T38 fills), `src/lib/league/emoji.ts` (fixed avatar list) / must not touch `src/lib/progress/**`, `src/lib/league/outbox.ts`/`sync.ts`, `src/components/ui/**`, other routes, `supabase/**`.
+- Scope: may touch `src/app/liga/**`, `src/components/league/**` (join + account components; leave a clear slot for the ranking that T38 fills), `src/lib/league/emoji.ts` (fixed avatar list) / must not touch `src/lib/progress/**`, `src/lib/league/outbox.ts`/`sync.ts`, `src/components/league/LeagueSync.tsx`, `src/app/layout.tsx`, `src/components/ui/**`, other routes, `supabase/**`.
 - Done when:
   - Not joined: nickname field with live validation (length, server errors like "ese apodo ya está cogido"), emoji grid, "Unirme a la Liga" button; offline → clear message, no crash.
   - Joined: shows nickname + emoji, edit, "Vincular email" (sends magic link, explains it), "Entrar con mi email" for the not-joined state, "Salir de la Liga y borrar mis datos" with confirmation.
@@ -78,7 +78,7 @@ Worktree setup: npm ci
 
 ## T37 — Groups: create, join by code or link, leave
 - Status: pending
-- Depends on: T36
+- Depends on: T36, T41, T42
 - Goal: One group per person: create a group with a name, share its code/link, join by typing a code or opening `/liga/unirse/?codigo=…`, see the group name and members count, leave it.
 - Context: Shared contract; docs/league.md; T34/T36 code in `src/lib/league/` and `src/components/league/`; Web Share API with copy-to-clipboard fallback.
 - Scope: may touch `src/app/liga/**` (including new `unirse/`), `src/components/league/**`, `src/lib/league/groups.ts` (new) / must not touch `src/lib/progress/**`, `src/components/ui/**`, other routes, `supabase/**`.
@@ -130,14 +130,29 @@ Worktree setup: npm ci
 
 ## T41 — Bring main (plan 003, pictures) into the Liga branch
 - Status: pending
-- Depends on: T40
+- Depends on: T35, T36
 - Goal: Merge the current `main` (plan 003's pictures work) into the integration branch and resolve conflicts keeping both intents, so the branch can be fast-forwarded into main.
-- Context: `git log main` for plan 003's commits; likely conflicts: `package.json`/`package-lock.json` (regenerate the lock with `npm install` after merging package.json), CLAUDE.md, docs, `src/lib/navigation.ts`, `src/components/ui/index.ts`. Only run when plan 003 is finished on main (its plan file says `Status: done`); otherwise stop with STATUS: blocked.
+- Context: `git log main` for plan 003's commits; likely conflicts: `package.json`/`package-lock.json` (regenerate the lock with `npm install` after merging package.json), CLAUDE.md, docs, `src/lib/navigation.ts`, `src/components/ui/index.ts`. Plan 003 is finished on main (`Status: done`). Other sessions may have added more commits to main; merge whatever main has.
 - Scope: may touch any file only to resolve merge conflicts / must not add features or refactor.
 - Done when:
   - `git merge main` completed with no conflict markers left (`git grep -n '<<<<<<<'` → nothing).
   - `npm run content:check`, `npm run db:check` and `npm run verify` → exit 0.
   - Liga still hidden without env vars; pictures (plan 003) still render (spot-check one lesson and Jugar by hand).
+  - Note: T42 may land before or after this task; the merge only resolves conflicts.
+- Outcome:
+
+## T42 — Local fake Supabase with fake players
+- Status: pending
+- Depends on: none
+- Goal: Let Hernán and the agents try Liga end to end with fake users before the real Supabase project exists: a small local server that imitates the parts of Supabase the app uses, backed by the local Postgres with the real migrations, plus a seed of fake players.
+- Context: Shared contract; docs/league.md (RPC contract, Local SQL check); `scripts/db/` (db:check, auth-stub.sql: reuse it); `src/lib/league/client.ts` and `account.ts` (exactly which supabase-js auth and rest endpoints the client calls: anonymous sign-up, token refresh, get user, update user/email, sign-in OTP, sign-out, `/rest/v1/rpc/<fn>`). No Docker on this Mac; Postgres 17 runs locally.
+- Scope: may touch `scripts/league-local/**` (new), `package.json` (scripts only, no new dependencies unless tiny and dev-only), docs/league.md (a "Try it locally" section), CLAUDE.md (commands table rows), `.env.example` (comment showing the local values) / must not touch `src/**`, `supabase/migrations/**`, `content/**`.
+- Done when:
+  - `npm run league:local` creates (or resets with `--reset`) a dedicated local database `lang_lern_league_local` (never touches other databases), applies auth-stub + migrations, and serves on http://localhost:54321 the endpoints supabase-js uses: anonymous sign-up issuing a signed JWT (HS256, local secret) with refresh, get/update user (email linking simulated: no email is sent; the magic link URL is printed to the console so it can be opened by hand), sign-out, and `POST /rest/v1/rpc/<league_*>` executed as role `authenticated` with the JWT `sub` (like PostgREST), returning Supabase-shaped JSON and errors; CORS for localhost:3000 and :4173. It prints the two env values to use.
+  - `npm run league:seed` adds ~15 fake players (clearly fake nicknames, emojis from the fixed list) with XP events spread over this week and last week, two of them plus a few others in a group with a printed join code, so the global/group rankings and last week's podium have content. Idempotent (`--reset` wipes and reseeds).
+  - With `NEXT_PUBLIC_SUPABASE_URL=http://localhost:54321` + the printed anon key in the shell, `npm run dev` lets a browser join Liga, and a small scripted check (`npm run league:local:check` or similar) proves sign-up → set_profile → record_xp → leaderboard → delete_me over HTTP with two users.
+  - docs/league.md "Try it locally" explains the 3 commands and how to play as several users (separate browser profiles / private windows).
+  - `npm run verify` → exit 0.
 - Outcome:
 
 ## Decisions
@@ -148,6 +163,9 @@ Worktree setup: npm ci
 - 2026-10-01 T33: tables in private `league` schema (RLS on, no grants); clients only call 9 `public.league_*` RPCs (authenticated only); caps 100 XP/event, 2500 XP/user/lang/Madrid day, 200 events/batch; events before join rejected (`before_join`); profile stats sent via `league_record_xp(events, stats)`; every per-event status is final so the client drops every returned id; errors = P0001 with token message (e.g. `nickname_taken`); leaderboard rows have `is_me`, no user ids, ties share rank; group scope lists all members, global lists players with XP + caller; fixed list of 24 emojis in docs/league.md (T36 must copy it); editable blocklist table; empty group deleted when last member leaves; `league_delete_me` keeps the anonymous auth user; added supabase/config.toml (agent)
 - 2026-10-01 T34: extra account status `loading`; implicit auth flow (PKCE only works in the requesting browser); account cached on device as `lang-lern:league-account`; change event `lang-lern:league-account-change` with reason joined/updated/user_changed/signed_out/deleted/status; hook also exposes updateProfile/refresh/linkError/pendingEmail/online; supabase-js 2.117.2 pinned; /liga/ placeholder in `src/app/liga/LeagueView.tsx` (agent)
 - 2026-10-01 T34: first integration reverted only because the integration checkout lacked the new dependency; ran `npm ci` there and re-integrated (orchestrator)
+- 2026-10-01 T35: scope widened to a `LeagueSync` mount in layout.tsx so the sync can start on app start (orchestrator)
+- 2026-10-01 plan: T35/T36 orphaned by a session restart; WIP committed (e17cdb0, de3d16e) and relaunched as continuations (orchestrator)
+- 2026-10-01 plan: new T42 local fake Supabase + fake players so Liga can be tried before the real project; T41 (merge main) moved up to right after T35/T36 since plan 003 is done; T37 now depends on T41 and T42 (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-01 T33: custom SMTP (e.g. Resend) so friends can link their email; fill the real Vercel domain in docs/league.md
@@ -158,3 +176,8 @@ Worktree setup: npm ci
 - 2026-10-01 16:31 T33 done · branch worktree-agent-a1d5ff0695d0cd3a0 → 819a45d
 - 2026-10-01 16:32 T34 launched · attempt 1 · agent aab5f5c3059dcbe63
 - 2026-10-01 16:41 T34 done · branch worktree-agent-aab5f5c3059dcbe63 → 96ffc72 (first attempt 24da942 reverted by 050a742: missing deps in integration checkout)
+- 2026-10-01 16:44 T35 launched · attempt 1 · agent aaedbb5286e79fc64
+- 2026-10-01 16:44 T36 launched · attempt 1 · agent a800f3382a1ab7473
+- 2026-10-01 T35/T36 orphaned (session restart) · WIP e17cdb0 / de3d16e
+- 2026-10-01 T35 relaunched (interrupted continuation) · attempt 1 · agent ac830d833ddf8d34c · old branch worktree-agent-aaedbb5286e79fc64
+- 2026-10-01 T36 relaunched (interrupted continuation) · attempt 1 · agent a2fbb57240abcaf4f · old branch worktree-agent-a800f3382a1ab7473
