@@ -142,7 +142,7 @@ Worktree setup: npm ci
 - Outcome: real merge of main 01832a7 (plan 003 done), no conflicts; content:check, db:check, verify green; pictures and hidden Liga spot-checked → 0b2524d
 
 ## T42 — Local fake Supabase with fake players
-- Status: running (attempt 1)
+- Status: done
 - Depends on: none
 - Goal: Let Hernán and the agents try Liga end to end with fake users before the real Supabase project exists: a small local server that imitates the parts of Supabase the app uses, backed by the local Postgres with the real migrations, plus a seed of fake players.
 - Context: Shared contract; docs/league.md (RPC contract, Local SQL check); `scripts/db/` (db:check, auth-stub.sql: reuse it); `src/lib/league/client.ts` and `account.ts` (exactly which supabase-js auth and rest endpoints the client calls: anonymous sign-up, token refresh, get user, update user/email, sign-in OTP, sign-out, `/rest/v1/rpc/<fn>`). No Docker on this Mac; Postgres 17 runs locally.
@@ -153,7 +153,7 @@ Worktree setup: npm ci
   - With `NEXT_PUBLIC_SUPABASE_URL=http://localhost:54321` + the printed anon key in the shell, `npm run dev` lets a browser join Liga, and a small scripted check (`npm run league:local:check` or similar) proves sign-up → set_profile → record_xp → leaderboard → delete_me over HTTP with two users.
   - docs/league.md "Try it locally" explains the 3 commands and how to play as several users (separate browser profiles / private windows).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Node built-ins + psql only; GoTrue/PostgREST-shaped endpoints, magic links printed; 15 bots + group PRUEBA; league:local:check 23 checks and db:check 171 green on Postgres 16; `npm run verify` NOT run (cloud env cannot reach the npm registry) → 6909ec2
 
 ## Decisions
 - 2026-10-01 plan: runs on integration branch `claude/usuarios-competencia-puntajes-3caa9b`, in parallel with plan 003 on main; T41 merges main back (Hernán)
@@ -169,6 +169,9 @@ Worktree setup: npm ci
 - 2026-10-01 T35: hook point = `saveResult()` in progress/index.ts dispatches window event `lang-lern:xp-award` (progress never imports Liga); XP `source` derived from route (/jugar/ → game, /historias/ → story, else activity); outbox cleared only on signed_out/deleted/user_changed; stats rejected as `stats_invalid` are dropped so events still pass; backoff 5 s → 10 min ±20 % (agent)
 - 2026-10-01 T36: "Cerrar sesión en este móvil" only shown once an email is linked (an anonymous account could never be recovered); link-error copy in copy.ts with "Entendido" (agent)
 - 2026-10-01 T41: integrated as a real merge (not squash) so main's history becomes an ancestor of the Liga branch and the final merge into main is clean (orchestrator)
+
+- 2026-10-01 T42: fake server in `scripts/league-local/` with fixed local JWT secret (stable anon key, also in .env.example as a comment); extra schema `local_auth` (refresh tokens, links, applied migrations, seed users) only in the local DB; seed writes straight into `league.*` as superuser (record_xp would reject backdated events); `--reset` also works as `npm run x --reset` (agent)
+- 2026-10-01 T42: cloud session has Postgres 16 (not 17) and no npm registry access; db:check passes on 16; verify must be run by Hernán (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-01 T33: custom SMTP (e.g. Resend) so friends can link their email; fill the real Vercel domain in docs/league.md
@@ -189,3 +192,5 @@ Worktree setup: npm ci
 - 2026-10-01 17:36 T36 done · branch worktree-agent-a2fbb57240abcaf4f → 9ed886b
 - 2026-10-01 17:37 T41 launched · attempt 1 · agent a8db55a71f4cd5046
 - 2026-10-01 17:39 T41 done · fast-forwarded to merge commit 0b2524d (parents ed57436 + main 01832a7)
+- 2026-10-01 T42 attempt 1 stalled (unpushed) · restarted directly in a cloud session
+- 2026-10-01 T42 done · 6909ec2 (verify pending: no npm registry in the cloud env)
