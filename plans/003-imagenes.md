@@ -50,7 +50,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T26 — Custom drawings: transport and lodging
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T23
 - Goal: Draw the custom SVGs for the coverage entries with `drawTask: "T26"` (29 words: pullman, corriera, autostazione, biglietteria, macchinetta, obliteratrice, tabellone, controllore, capotreno, tassista, tassametro, POS, carrello, passaporto…).
 - Context: same as T25.
@@ -58,7 +58,7 @@ Worktree setup: npm ci
 - Done when:
   - One SVG per T26 entry, each valid, within the style guide and < 6 KB (report count, sizes, and any word you think should stay without a picture).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 29/29 custom SVGs (0.6–2.6 KB), checked on light/dark contact sheet · e7840a9
 
 ## T27 — Custom drawings: health, streets and the rest
 - Status: running (attempt 1)
@@ -155,6 +155,8 @@ Worktree setup: npm ci
 
 - 2026-10-01 T30: Phrasebook split into PhraseList/WordList/SearchHeader; view stored in lang-lern:phrasebook-view; no Favoritas chip in Palabras; 3-col picture grid + 2-col text cards; duplicate Italian text in a topic shown once; subtitle "Toca una frase o una palabra para escucharla."; 80px picture in story popover. (agent)
 
+- 2026-10-01 T26: tabaccheria/tabaccaio = blue "T" sign drawn as rectangles; pullman/corriera same coach (blue vs red stripe); some parts reuse simplified Fluent shapes (MIT); thin white strokes only on uscita and pulsante. (agent)
+
 ## Proposals (new scope)
 - 2026-10-01 T30: PhraseList still hard-codes lang="it" on phrase text (pre-existing).
 
@@ -172,3 +174,4 @@ Worktree setup: npm ci
 - 2026-10-01 16:30 T24 done · branch worktree-agent-ab92b2a3d19487b73 → 5cb6080
 - 2026-10-01 16:31 T31 done · branch worktree-agent-a652261d7b5224990 → 6b8268e
 - 2026-10-01 16:33 T30 done · branch worktree-agent-acfe4d2f3a7bd6810 → d8c88b6
+- 2026-10-01 16:34 T26 done · branch worktree-agent-a17fc5850203554b5 → e7840a9
