@@ -6,3 +6,5 @@ export { IconButton } from "./IconButton";
 export type { IconButtonProps, IconButtonVariant } from "./IconButton";
 export { ProgressBar } from "./ProgressBar";
 export type { ProgressBarProps, ProgressTone } from "./ProgressBar";
+export { Picture } from "./Picture";
+export type { PictureProps, PictureSize } from "./Picture";
