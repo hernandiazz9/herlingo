@@ -129,7 +129,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T41 — Bring main (plan 003, pictures) into the Liga branch
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T35, T36
 - Goal: Merge the current `main` (plan 003's pictures work) into the integration branch and resolve conflicts keeping both intents, so the branch can be fast-forwarded into main.
 - Context: `git log main` for plan 003's commits; likely conflicts: `package.json`/`package-lock.json` (regenerate the lock with `npm install` after merging package.json), CLAUDE.md, docs, `src/lib/navigation.ts`, `src/components/ui/index.ts`. Plan 003 is finished on main (`Status: done`). Other sessions may have added more commits to main; merge whatever main has.
@@ -139,7 +139,7 @@ Worktree setup: npm ci
   - `npm run content:check`, `npm run db:check` and `npm run verify` → exit 0.
   - Liga still hidden without env vars; pictures (plan 003) still render (spot-check one lesson and Jugar by hand).
   - Note: T42 may land before or after this task; the merge only resolves conflicts.
-- Outcome:
+- Outcome: real merge of main 01832a7 (plan 003 done), no conflicts; content:check, db:check, verify green; pictures and hidden Liga spot-checked → 0b2524d
 
 ## T42 — Local fake Supabase with fake players
 - Status: running (attempt 1)
@@ -168,6 +168,7 @@ Worktree setup: npm ci
 - 2026-10-01 plan: new T42 local fake Supabase + fake players so Liga can be tried before the real project; T41 (merge main) moved up to right after T35/T36 since plan 003 is done; T37 now depends on T41 and T42 (Hernán)
 - 2026-10-01 T35: hook point = `saveResult()` in progress/index.ts dispatches window event `lang-lern:xp-award` (progress never imports Liga); XP `source` derived from route (/jugar/ → game, /historias/ → story, else activity); outbox cleared only on signed_out/deleted/user_changed; stats rejected as `stats_invalid` are dropped so events still pass; backoff 5 s → 10 min ±20 % (agent)
 - 2026-10-01 T36: "Cerrar sesión en este móvil" only shown once an email is linked (an anonymous account could never be recovered); link-error copy in copy.ts with "Entendido" (agent)
+- 2026-10-01 T41: integrated as a real merge (not squash) so main's history becomes an ancestor of the Liga branch and the final merge into main is clean (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-01 T33: custom SMTP (e.g. Resend) so friends can link their email; fill the real Vercel domain in docs/league.md
@@ -186,3 +187,5 @@ Worktree setup: npm ci
 - 2026-10-01 17:34 T35 done · branch worktree-agent-ac830d833ddf8d34c → 69099df
 - 2026-10-01 17:35 T42 launched · attempt 1 · agent a7da1ef41206a92d0
 - 2026-10-01 17:36 T36 done · branch worktree-agent-a2fbb57240abcaf4f → 9ed886b
+- 2026-10-01 17:37 T41 launched · attempt 1 · agent a8db55a71f4cd5046
+- 2026-10-01 17:39 T41 done · fast-forwarded to merge commit 0b2524d (parents ed57436 + main 01832a7)
