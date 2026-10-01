@@ -2,14 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { CloseIcon, PlayControls } from "@/components/exercises/shared";
-import { Button, Card, IconButton, ProgressBar } from "@/components/ui";
+import { Button, Card, IconButton, Picture, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import type { Phrase } from "@/lib/content";
-import { explain, markKnown, type Topic } from "@/lib/game";
+import { explain, isWord, markKnown, type GameCard, type Topic } from "@/lib/game";
 
 /**
- * Discovery: one card per phrase of the deck. "La sé" marks it known; "Otra vez" sends it to the
- * end. Each new card plays on arrival (from the tap that brought it). Skippable to the round.
+ * Discovery: one card per word or phrase of the deck (pictured words first: big picture, word,
+ * Spanish). "La sé" marks it known; "Otra vez" sends it to the end. Each new card plays on arrival
+ * (from the tap that brought it). Skippable to the round.
  */
 export function Discover({
   lang,
@@ -20,7 +20,7 @@ export function Discover({
 }: {
   lang: string;
   topic: Topic;
-  deck: Phrase[];
+  deck: GameCard[];
   onDone: () => void;
   onExit: () => void;
 }) {
@@ -30,7 +30,7 @@ export function Discover({
 
   useEffect(() => () => stop(), []);
 
-  const advance = (next: Phrase[]) => {
+  const advance = (next: GameCard[]) => {
     setQueue(next);
     if (next.length) speak(next[0], { lang });
     else {
@@ -54,7 +54,7 @@ export function Discover({
     <div className="flex flex-col gap-5 pb-6">
       <div className="flex items-center gap-3">
         <IconButton label="Salir al menú de temas" icon={<CloseIcon />} onClick={onExit} />
-        <ProgressBar value={known} max={deck.length} label="Frases descubiertas" className="flex-1" />
+        <ProgressBar value={known} max={deck.length} label="Tarjetas descubiertas" className="flex-1" />
         <span className="text-sm font-bold text-ink-muted tabular-nums">
           {known}/{deck.length}
         </span>
@@ -65,12 +65,13 @@ export function Discover({
       </p>
 
       <Card className="flex flex-col gap-4">
+        {isWord(card) ? <Picture key={card.id} image={card.image} alt="" size="intro" className="self-center" /> : null}
         <PlayControls audio={card} />
         <p lang="it" className="text-3xl font-extrabold leading-tight text-sea-deep">
           {card.text}
         </p>
         <p className="text-xl font-bold text-ink">{card.es}</p>
-        {card.literal ? <p className="text-sm text-ink-muted">Literal: «{card.literal}»</p> : null}
+        {!isWord(card) && card.literal ? <p className="text-sm text-ink-muted">Literal: «{card.literal}»</p> : null}
         {explanation ? <p className="rounded-button bg-lemon-soft px-4 py-3 text-base text-ink">{explanation}</p> : null}
       </Card>
 

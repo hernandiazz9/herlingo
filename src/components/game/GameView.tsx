@@ -3,22 +3,46 @@
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { LessonLangContext } from "@/components/exercises/shared";
 import { speak } from "@/lib/audio";
-import { DEFAULT_LANG, getPack, type Phrase } from "@/lib/content";
+import { DEFAULT_LANG, getPack } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import { createRng } from "@/lib/exercises";
-import { MIX, buildDeck, getTopicPool, listTopics, parseGameState, readGameRaw, subscribeGame, type Topic, type TopicPool } from "@/lib/game";
+import {
+  MIX,
+  buildDeck,
+  getTopicPool,
+  listTopics,
+  parseGameState,
+  readGameRaw,
+  subscribeGame,
+  type GameCard,
+  type Topic,
+  type TopicPool,
+} from "@/lib/game";
 import { Discover } from "./Discover";
 import { Round } from "./Round";
 
-type Stage = { step: "topics" } | { step: "discover" | "round"; pool: TopicPool; deck: Phrase[] };
+type Stage = { step: "topics" } | { step: "discover" | "round"; pool: TopicPool; deck: GameCard[] };
 
 const empty = () => "";
+
+/** "12 frases · 4 palabras": phrase and pictured-word counts of a topic (non-zero ones only). */
+function countLabel(topic: Topic): string {
+  const parts: string[] = [];
+  const p = topic.phrases.length;
+  const w = topic.words.length;
+  if (p) parts.push(`${p} ${p === 1 ? "frase" : "frases"}`);
+  if (w) parts.push(`${w} ${w === 1 ? "palabra" : "palabras"}`);
+  return parts.join(" · ");
+}
 
 /** /jugar: topic grid → discovery cards → 60-second round. */
 export function GameView({ lang = DEFAULT_LANG }: { lang?: string }) {
   const pack = getPack(lang);
   const topics = useMemo(() => listTopics(pack), [pack]);
-  const mixCount = useMemo(() => getTopicPool(MIX, pack)?.topic.phrases.length ?? 0, [pack]);
+  const mixDetail = useMemo(() => {
+    const mix = getTopicPool(MIX, pack)?.topic;
+    return mix ? countLabel(mix) : "";
+  }, [pack]);
   const raw = useSyncExternalStore(subscribeGame, () => readGameRaw(lang), empty);
   const game = useMemo(() => parseGameState(raw), [raw]);
   const [stage, setStage] = useState<Stage>({ step: "topics" });
@@ -30,8 +54,9 @@ export function GameView({ lang = DEFAULT_LANG }: { lang?: string }) {
 
   const open = (id: string) => {
     const pool = getTopicPool(id, pack);
-    if (!pool || !pool.topic.phrases.length) return;
-    const deck = buildDeck(pool.topic.phrases, new Set(game.known), createRng(`${id}:${Date.now()}`));
+    if (!pool) return;
+    const deck = buildDeck(pool.topic, new Set(game.known), createRng(`${id}:${Date.now()}`));
+    if (!deck.length) return;
     // Called from the tap: the first card plays at once (iOS needs the gesture).
     speak(deck[0], { lang });
     go({ step: "discover", pool, deck });
@@ -53,7 +78,7 @@ export function GameView({ lang = DEFAULT_LANG }: { lang?: string }) {
       ) : stage.step === "round" ? (
         <Round lang={lang} pool={stage.pool} deck={stage.deck} record={game.records[stage.pool.topic.id] ?? 0} onExit={toTopics} />
       ) : (
-        <TopicGrid topics={topics} mixCount={mixCount} records={game.records} onOpen={open} />
+        <TopicGrid topics={topics} mixDetail={mixDetail} records={game.records} onOpen={open} />
       )}
     </LessonLangContext.Provider>
   );
@@ -61,25 +86,25 @@ export function GameView({ lang = DEFAULT_LANG }: { lang?: string }) {
 
 function TopicGrid({
   topics,
-  mixCount,
+  mixDetail,
   records,
   onOpen,
 }: {
   topics: Topic[];
-  mixCount: number;
+  mixDetail: string;
   records: Record<string, number>;
   onOpen: (id: string) => void;
 }) {
   return (
     <div className="flex flex-col gap-4 pb-6">
       <p className="text-base text-ink-muted">
-        Elige un tema: descubre sus frases con audio y luego juega una ronda de 60 segundos.
+        Elige un tema: descubre sus palabras y frases con audio y luego juega una ronda de 60 segundos.
       </p>
       <TopicButton
         tone="terracotta"
         emoji="🎲"
         title="Mezcla"
-        detail={`Todos los temas · ${mixCount} frases`}
+        detail={`Todos los temas · ${mixDetail}`}
         record={records[MIX]}
         onClick={() => onOpen(MIX)}
         wide
@@ -90,7 +115,7 @@ function TopicGrid({
             <TopicButton
               emoji={t.emoji}
               title={t.title}
-              detail={`${t.phrases.length} ${t.phrases.length === 1 ? "frase" : "frases"}`}
+              detail={countLabel(t)}
               record={records[t.id]}
               onClick={() => onOpen(t.id)}
             />

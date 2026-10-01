@@ -1,6 +1,6 @@
 /**
  * Game mode data on the device (localStorage `lang-lern:game:<lang>`): best score per topic and
- * phrases marked "La sé" (they go to the end of the next discovery decks). Tolerant parsing;
+ * cards (phrases, pictured words) marked "La sé" (they go to the end of the next discovery decks). Tolerant parsing;
  * nothing here throws.
  */
 const PREFIX = "lang-lern:game:";
@@ -9,7 +9,7 @@ const EVENT = "lang-lern:game-change";
 export interface GameState {
   /** Topic id → best round score. */
   records: Record<string, number>;
-  /** Phrase ids marked "La sé". */
+  /** Card ids (phrases, pictured words) marked "La sé". */
   known: string[];
 }
 
