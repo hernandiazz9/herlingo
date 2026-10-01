@@ -25,7 +25,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T33 — Supabase schema, RPCs and local SQL check
-- Status: pending
+- Status: done
 - Depends on: none
 - Goal: Create the whole database side of Liga as migrations (tables, RLS, RPCs, caps, week logic) plus `npm run db:check`, and document setup and the RPC contract so the client tasks can build on it.
 - Context: the plan's Shared contract; CLAUDE.md; `src/lib/progress/` (index.ts, activity.ts) and `src/lib/game/`, `src/lib/exercises/result.ts` to derive XP caps; `scripts/` for script style (tsx). Supabase skill `supabase-postgres-best-practices` for RLS/RPC patterns. Local Postgres 17 is running (`pg_isready` OK, `psql` in /opt/homebrew/bin).
@@ -35,7 +35,7 @@ Worktree setup: npm ci
   - Every table has RLS enabled; no table is writable except through RPCs.
   - docs/league.md documents the contract, caps and Hernán's setup steps.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: private `league` schema + 9 security-definer `public.league_*` RPCs, caps 100 XP/event and 2500/day, db:check 171 checks green → 819a45d
 
 ## T34 — Supabase client, account and auth layer
 - Status: pending
@@ -145,7 +145,11 @@ Worktree setup: npm ci
 - 2026-10-01 plan: Supabase; account optional; groups (one per person, minimal) + one global table; weekly XP (Monday Europe/Madrid); only XP events in the cloud; nickname + emoji; magic link (default SMTP for now, only Hernán's email works); reasonable server-side limits against cheating; Hernán applies migrations (Hernán)
 - 2026-10-01 plan: Liga lives at /liga/ under Perfil plus a Ruta card, no new tab (Hernán)
 - 2026-10-01 plan: only XP earned after joining counts for the weekly ranking; rankings per language; top 50 + me; delete-my-data included; SQL validated on local Postgres via `npm run db:check` (orchestrator)
+- 2026-10-01 T33: tables in private `league` schema (RLS on, no grants); clients only call 9 `public.league_*` RPCs (authenticated only); caps 100 XP/event, 2500 XP/user/lang/Madrid day, 200 events/batch; events before join rejected (`before_join`); profile stats sent via `league_record_xp(events, stats)`; every per-event status is final so the client drops every returned id; errors = P0001 with token message (e.g. `nickname_taken`); leaderboard rows have `is_me`, no user ids, ties share rank; group scope lists all members, global lists players with XP + caller; fixed list of 24 emojis in docs/league.md (T36 must copy it); editable blocklist table; empty group deleted when last member leaves; `league_delete_me` keeps the anonymous auth user; added supabase/config.toml (agent)
 
 ## Proposals (new scope)
+- 2026-10-01 T33: custom SMTP (e.g. Resend) so friends can link their email; fill the real Vercel domain in docs/league.md
 
 ## Log
+- 2026-10-01 16:20 T33 launched · attempt 1 · agent a1d5ff0695d0cd3a0
+- 2026-10-01 16:31 T33 done · branch worktree-agent-a1d5ff0695d0cd3a0 → 819a45d
