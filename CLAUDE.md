@@ -19,6 +19,7 @@ Sicily. **Read `docs/brief.md` before any task**: it holds every product decisio
 | `npm run content:build` | Validate + write `src/lib/content/generated/packs.json` (git-ignored). Runs automatically before dev, typecheck and build; re-run it after editing content while `dev` is running. |
 | `npm run audio` | Neural mp3 (edge-tts, needs internet; creates `.venv` from `scripts/audio/requirements.txt` on first run) for every playable → `public/audio/<lang>/<hash>.mp3` + `manifest.json`; only new/changed lines, prunes unused files. Run after content changes and commit `public/audio/`. `npm run content:check -- --strict-audio` fails if any playable lacks an mp3. |
 | `npm run pwa:icons` | Redraws `public/icons/*.png` (same design as `src/app/icon.svg`). Only if the icon changes. |
+| `npm run db:check` | Liga SQL check on the local Postgres (`psql` on the default socket): throwaway database ← `scripts/db/auth-stub.sql` + every `supabase/migrations/*.sql` + `scripts/db/smoke.sql`, then dropped. Exit 1 on any failure. Not part of `verify`; run it after any SQL change. |
 | `npm run verify` | lint → content:check → typecheck → build. Must exit 0 before a task is done. |
 
 **There are no automated tests in the MVP** (speed over tests). Verification is `npm run verify`;
@@ -58,6 +59,10 @@ plans/                 Orchestrator plans. Never edit.
   under `content/<lang>/`. Adding a language means adding content, not changing code.
 - **Static export only.** No server runtime, API routes, `cookies()`/`headers()`, or runtime env
   secrets. Progress lives on the device (localStorage).
+- **Liga (Supabase)** is the one cloud feature: the client only calls the `public.league_*` RPCs
+  (contract, caps and setup in `docs/league.md`); tables live in the private `league` schema with
+  RLS and no grants. SQL changes = a new file in `supabase/migrations/` + `npm run db:check`;
+  never edit an applied migration and never touch the real project (Hernán runs `db push`).
 - **Design tokens** are CSS variables in `src/app/globals.css` (`--lemon`, `--sea`, `--terracotta`,
   neutrals, `--success`, `--error`, each with `-deep`/`-soft`/`-ledge` variants, plus `--on-accent`,
   `--on-lemon`, `--shadow`) exposed to Tailwind as `bg-sea`, `text-ink`, `border-line`,

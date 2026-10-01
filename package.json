@@ -19,6 +19,7 @@
     "content:build": "tsx scripts/content.ts build",
     "audio": "tsx scripts/audio/generate.ts",
     "pwa:icons": "tsx scripts/pwa/icons.ts",
+    "db:check": "tsx scripts/db/check.ts",
     "verify": "npm run lint && npm run content:check && npm run typecheck && npm run build"
   },
   "dependencies": {
