@@ -100,7 +100,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T30 — "Palabras" view in the Frasario and pictures in story keywords
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T23
 - Goal: A visual vocabulary view inside the Frasario and the word picture in the story keyword popover.
 - Context: T23 API: `listVocab({ situation?, withImage? })` (withImage → `PicturedVocab[]`), `getVocab(id)`, `hasImage(item)`, `getDialogueSpeakers(dialogue)`, `ImageRef { src; dark? }`; `<Picture image alt size="grid"|"intro"|"avatar" bordered? className? />` from `@/components/ui`. Sample pictured words: food.caffe, cornetto, limone, panino (bar), food.vino, pesce, melanzane, uova (restaurante). CLAUDE.md, `src/components/phrasebook/{Phrasebook,ShowMode,search}.tsx` (phrases grouped by situation, chips, search, tap-to-play), `src/app/frasario/page.tsx`, story reader keyword popover in `src/components/stories/**`, `listVocab()` and `Picture` from T23. Decided with Hernán: a "Frases | Palabras" segmented switch at the top of the Frasario (remember the choice locally); Palabras groups words by situation (same chips and search, matching Italian or Spanish), shows a grid of picture cards (picture + Italian word); tapping a card plays its audio and shows the word with article and the Spanish translation; words without a picture follow at the end of each topic as text cards. No full-screen show mode for words. In stories, the keyword popover shows the picture when the word has one.
@@ -110,7 +110,7 @@ Worktree setup: npm ci
   - Story keyword popovers show pictures when present.
   - Both themes checked by eye on `npm run dev`.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Frasario Frases|Palabras switch (remembered), picture grid + text cards per topic, shared search/chips; story keyword popover picture · d8c88b6
 
 ## T31 — Speaker avatars in dialogues
 - Status: done
@@ -153,7 +153,10 @@ Worktree setup: npm ci
 
 - 2026-10-01 T31: avatars: farmacéutica woman-health-worker, camareros man-cook / man-in-tuxedo, autista man-pilot, bigliettaia/o + impiegato office workers, controllore man-police-officer, signora woman / old-woman, tassista man-beard, frutero man-farmer, Giulia woman-curly-hair; 40px avatar left of native bubbles and transcript lines, empty alt. (agent)
 
+- 2026-10-01 T30: Phrasebook split into PhraseList/WordList/SearchHeader; view stored in lang-lern:phrasebook-view; no Favoritas chip in Palabras; 3-col picture grid + 2-col text cards; duplicate Italian text in a topic shown once; subtitle "Toca una frase o una palabra para escucharla."; 80px picture in story popover. (agent)
+
 ## Proposals (new scope)
+- 2026-10-01 T30: PhraseList still hard-codes lang="it" on phrase text (pre-existing).
 
 ## Log
 - 2026-10-01 16:10 T23 launched · attempt 1 · agent a4034505d63a1bf0f
@@ -168,3 +171,4 @@ Worktree setup: npm ci
 - 2026-10-01 16:26 T31 launched · attempt 1 · agent a652261d7b5224990
 - 2026-10-01 16:30 T24 done · branch worktree-agent-ab92b2a3d19487b73 → 5cb6080
 - 2026-10-01 16:31 T31 done · branch worktree-agent-a652261d7b5224990 → 6b8268e
+- 2026-10-01 16:33 T30 done · branch worktree-agent-acfe4d2f3a7bd6810 → d8c88b6
