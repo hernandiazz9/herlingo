@@ -77,7 +77,7 @@ Worktree setup: npm ci
 - Outcome: join form (live validation, server errors, 24-emoji grid), account section (edit, link email, sign in by email, sign out only with linked email, delete with confirmation), offline states; hand-checked both themes at 375 px → 9ed886b
 
 ## T37 — Groups: create, join by code or link, leave
-- Status: pending
+- Status: done
 - Depends on: T36, T41, T42
 - Goal: One group per person: create a group with a name, share its code/link, join by typing a code or opening `/liga/unirse/?codigo=…`, see the group name and members count, leave it.
 - Context: Shared contract; docs/league.md; T34/T36 code in `src/lib/league/` and `src/components/league/`; Web Share API with copy-to-clipboard fallback.
@@ -86,7 +86,7 @@ Worktree setup: npm ci
   - Create → shows code + "Compartir" (Web Share, else copy); join by code with validation and errors (unknown code, already in a group → offer to leave first); leave with confirmation.
   - `/liga/unirse/?codigo=XXXXXX` works in the static export: if not joined, it sends the user through the join flow first and then into the group; offline-safe.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: `groups.ts` (cache `lang-lern:league-group`, invite `lang-lern:league-invite`, create/join/leave/switch), GroupSection on /liga/, `/liga/unirse/?codigo=` (join Liga → auto-join group; switch with confirmation); e2e with 2 browser users on the local fake Supabase, both themes at 375 px → fc09e61
 
 ## T38 — Weekly leaderboards
 - Status: pending
@@ -172,6 +172,8 @@ Worktree setup: npm ci
 
 - 2026-10-01 T42: fake server in `scripts/league-local/` with fixed local JWT secret (stable anon key, also in .env.example as a comment); extra schema `local_auth` (refresh tokens, links, applied migrations, seed users) only in the local DB; seed writes straight into `league.*` as superuser (record_xp would reject backdated events); `--reset` also works as `npm run x --reset` (agent)
 - 2026-10-01 T42: cloud session has Postgres 16 (not 17) and no npm registry access; db:check passes on 16; verify must be run by Hernán (orchestrator)
+- 2026-10-01 T42: later cloud session had npm access: `npm run verify` green on the T42 code (orchestrator)
+- 2026-10-01 T37: group cached per user id; invite code kept on device so it survives the join flow and the email-sign-in redirect; JoinFlow got an `onJoined` callback for the invite page; checked by a Playwright script (2 users: create, invite link → join Liga → auto-join, switch to PRUEBA, leave last member deletes group, unknown/deleted code errors, invalid link) (agent)
 
 ## Proposals (new scope)
 - 2026-10-01 T33: custom SMTP (e.g. Resend) so friends can link their email; fill the real Vercel domain in docs/league.md
@@ -194,3 +196,4 @@ Worktree setup: npm ci
 - 2026-10-01 17:39 T41 done · fast-forwarded to merge commit 0b2524d (parents ed57436 + main 01832a7)
 - 2026-10-01 T42 attempt 1 stalled (unpushed) · restarted directly in a cloud session
 - 2026-10-01 T42 done · 6909ec2 (verify pending: no npm registry in the cloud env)
+- 2026-10-01 T37 done · fc09e61 (cloud session)
