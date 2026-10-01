@@ -111,7 +111,7 @@
     { "id": "move-bus.piano-terra", "word": "piano terra", "article": "il", "gender": "m", "es": "la planta baja", "situation": "aeropuerto" },
     { "id": "move-bus.carrello", "word": "carrello", "article": "il", "gender": "m", "es": "el carrito", "situation": "aeropuerto", "image": "custom:move-bus-carrello" },
     { "id": "move-bus.navetta", "word": "navetta", "article": "la", "gender": "f", "es": "el autobús lanzadera", "situation": "aeropuerto", "image": "fluent:minibus" },
-    { "id": "move-bus.passaporto", "word": "passaporto", "article": "il", "gender": "m", "es": "el pasaporte", "situation": "aeropuerto", "image": "custom:move-bus-passaporto" },
+    { "id": "move-bus.passaporto", "word": "passaporto", "article": "il", "gender": "m", "es": "el pasaporte", "situation": "aeropuerto", "image": "custom:emer-passaporto" },
     { "id": "move-bus.carta-d-identita", "word": "carta d'identità", "article": "la", "gender": "f", "es": "el DNI (el carné de identidad)", "situation": "aeropuerto", "image": "fluent:identification-card" }
   ],
   "qa": [

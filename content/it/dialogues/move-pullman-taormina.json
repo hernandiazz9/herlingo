@@ -6,7 +6,7 @@
   "unit": "move-bus",
   "order": 23,
   "register": "lei",
-  "avatars": { "Bigliettaio": "fluent:man-office-worker", "Autista": "fluent:man-pilot" },
+  "avatars": { "Bigliettaio": "fluent:man-office-worker", "Autista": "custom:move-bus-autista" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Bigliettaio", "text": "Prego!", "es": "¡Dígame!", "voice": "it-IT-DiegoNeural" },
     {

@@ -111,3 +111,64 @@ fixed lines) and pruned 9; `content:check -- --strict-audio` passes.
 - **Bus operators**: Palermo–Agrigento is run mainly by Cuffaro and Camilleri; story 6 keeps
   AST (on strike) and SAIS (running), the operators named in the brief. Prices (bus, granita
   €4.50, pharmacy €12, olives €8/kg) are plausible fiction.
+
+# Picture review (T32)
+
+Review, done on 2026-10-01, of every picture the Italian pack references (vocab `image` and
+dialogue `avatars`, T24–T27 and T31). After `npm run images`, a contact sheet of every key with
+its Italian word(s) was rendered on the light and the dark surface (80px card, dark backdrop as in
+`Picture`), and every doubtful one again at 200px. Checked: the picture evokes the word for a
+learner, custom drawings sit next to Fluent Emoji Flat without clashing and read at 80px, no two
+drawings for the same word, near-black pictures get the dark backdrop. No id was renamed or
+deleted; only `image` / `avatars` values changed.
+
+## Totals after the review
+
+224 of 358 vocab items have a picture (120 Fluent, 104 custom); 134 stay without one (numbers,
+times, adjectives, abstract nouns). 213 distinct pictures (114 Fluent, 99 custom drawings), dialogue
+avatars included. `public/images/`: 213 files, 319 KB (326,719 bytes). Build: 2496 files precached
+(90 pages, 1804 audio), 30.8 MB.
+
+## Picture fixes by category (12)
+
+| Category | Count | What changed |
+| --- | --- | --- |
+| Misleading mapping | 1 | `emer.portafoglio` "il portafoglio" (wallet) showed `fluent:purse`, a pink clasp purse easy to take for "la borsa" → new drawing `custom:emer-portafoglio` (brown bifold wallet with banknotes). Fluent has no wallet. |
+| Missing drawing | 1 | `custom:move-treno-sciopero` (switched from `fluent:placard` by T24) drawn: a protest placard with a crossed-out train. |
+| Redrawn (did not read at 80px) | 1 | `custom:move-strada-strisce-pedonali` was a top-down grey block with white bars (read as a grille) → street in perspective with the zebra crossing and the blue crossing sign. |
+| Same word drawn twice | 5 | One drawing kept per word, both ids point to it; the other source deleted: `surv.contanti` → `custom:move-strada-contanti` (notes + coins; the other note looked like a bank card), `move-strada.mercato` → `custom:surv-mercato` (two stalls; the single stall looked like "la bancarella"), `move-strada.aperto` / `move-strada.chiuso` → `custom:surv-aperto` / `custom:surv-chiuso` (identical files), `move-bus.passaporto` → `custom:emer-passaporto` (globe emblem, the usual passport sign). |
+| Dialogue avatars | 4 | Autista (`move-aeroporto-palermo`, `move-pullman-taormina`): `fluent:man-pilot` (airline pilot) → `custom:move-bus-autista` (driver at the wheel). Controllore (`move-controllore`): `fluent:man-police-officer` → `custom:move-treno-controllore` (conductor with ticket). Camarero at the granita bar (`food-granita`): `fluent:man-cook` (a cook, not a waiter) → `custom:food-cameriere` (waiter with tray). |
+
+Docs: `docs/content-guide.md` used "il conto" as an example of a word without picture (it has
+`fluent:receipt`) → "il ritardo" / "la coincidenza"; it also says that the same word on several
+ids shares one drawing.
+
+## Checked and left as is
+
+- **Doubtful ones from T25/T27**: `food.glutine` (ear of wheat, the usual gluten sign),
+  `food.panelle` (golden chickpea squares with a lemon wedge), `food.ricotta` (white dome with the
+  basket marks on a plate), `move-strada.marciapiede` (pavement between a façade and the road,
+  street lamp), `move-strada.corso` (wide tree-lined avenue): all read at 80px and are distinct from
+  their neighbours (strada, piazza, vicolo).
+- **T24 unsure Fluent choices kept**: strada = motorway, binario = railway track, conto /
+  scontrino / ricevuta = receipt, ragazzo / ragazza = boy / girl, arance = tangerine, frutta secca
+  = peanuts, bicchiere = tumbler glass, la foto = framed picture, spiccioli = coin, il dolce =
+  shortcake. Each is the closest Fluent icon and does not suggest another word of the same topic.
+- **Other avatars**: Tassista = man with beard, Frutero = farmer, Farmacéutica = health worker,
+  office workers for Bigliettaia / Bigliettaio / Impiegato, Signora = woman / old woman, Giulia =
+  curly hair, restaurant Camarero = tuxedo: none misleads.
+- **Dark theme**: the automatic detection flags 6 pictures (`custom:emer-ladro`,
+  `custom:move-strada-tassametro`, `custom:move-treno-tabellone`,
+  `custom:story-catania-riccio-di-mare`, `fluent:electric-plug`, `fluent:vertical-traffic-light`);
+  every other picture has enough light or coloured area on the dark card, so
+  `assets/images/backdrop.json` is not needed.
+- **Style**: the custom drawings use the Fluent palette, flat fills and no outlines; no
+  `content:check` style warning.
+
+## Remaining doubts
+
+- `move-treno.controllore` and `move-treno.capotreno` are both uniformed men (ticket in hand vs
+  signal paddle); they can be options in the same picture question, where they are told apart only
+  by that detail. The Italian roles overlap too, so it was kept.
+- `move-strada.strada` = motorway is an extra-urban road; a city street would be closer, but every
+  street picture is already taken by corso, vicolo, marciapiede and incrocio.

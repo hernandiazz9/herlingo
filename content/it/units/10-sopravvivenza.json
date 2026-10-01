@@ -279,7 +279,7 @@
     { "id": "surv.centesimo", "word": "centesimo", "article": "il", "gender": "m", "plural": "centesimi", "es": "el céntimo", "situation": "compras", "tags": ["pagar"], "image": "custom:surv-centesimo" },
     { "id": "surv.carta", "word": "carta", "article": "la", "gender": "f", "es": "la tarjeta", "notes": "También significa «papel».", "example": "surv.posso-pagare-con-la-carta", "situation": "compras", "tags": ["pagar"], "image": "fluent:credit-card" },
     { "id": "surv.bancomat", "word": "bancomat", "article": "il", "gender": "m", "es": "el cajero automático", "notes": "También la tarjeta de débito: «pago col bancomat».", "example": "surv.c-e-un-bancomat", "situation": "compras", "tags": ["pagar"], "image": "fluent:atm-sign" },
-    { "id": "surv.contanti", "word": "contanti", "article": "i", "gender": "m", "es": "el efectivo", "notes": "Siempre en plural: «in contanti».", "example": "surv.solo-contanti", "situation": "compras", "tags": ["pagar"], "image": "custom:surv-contanti" },
+    { "id": "surv.contanti", "word": "contanti", "article": "i", "gender": "m", "es": "el efectivo", "notes": "Siempre en plural: «in contanti».", "example": "surv.solo-contanti", "situation": "compras", "tags": ["pagar"], "image": "custom:move-strada-contanti" },
     { "id": "surv.spiccioli", "word": "spiccioli", "article": "gli", "gender": "m", "es": "el suelto", "example": "surv.ha-spiccioli", "situation": "compras", "tags": ["pagar"], "image": "fluent:coin" },
     { "id": "surv.resto", "word": "resto", "article": "il", "gender": "m", "es": "la vuelta", "example": "surv.ecco-il-resto", "situation": "compras", "tags": ["pagar"] },
 

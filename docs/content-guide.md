@@ -171,14 +171,15 @@ Gap chips are not voiced (play the whole sentence instead).
 
 Drawable words get a flat illustration (Duolingo-style picture exercises, game cards, Frasario
 "Palabras", story popovers); dialogue speakers can get an avatar. Abstract words (numbers,
-adjectives, "il conto"-type concepts that no picture makes clear) have **no** picture.
+adjectives, "il ritardo" / "la coincidenza"-type concepts that no picture makes clear) have **no**
+picture.
 
 **Image keys** (same format everywhere):
 
 | Key | Source | Written to |
 | --- | --- | --- |
 | `fluent:<icon>` | Microsoft Fluent Emoji Flat (MIT), icon name as in `node_modules/@iconify-json/fluent-emoji-flat/icons.json` (e.g. `fluent:hot-beverage`, `fluent:man-cook`) | `public/images/fluent/<icon>.svg` |
-| `custom:<slug>` | our drawing `assets/images/custom/<slug>.svg`; slug = vocab id with dots → dashes (`food.cannolo` → `custom:food-cannolo`) | `public/images/custom/<slug>.svg` |
+| `custom:<slug>` | our drawing `assets/images/custom/<slug>.svg`; slug = vocab id with dots → dashes (`food.cannolo` → `custom:food-cannolo`); the same word on several ids shares one drawing (`move-strada.mercato` → `custom:surv-mercato`) | `public/images/custom/<slug>.svg` |
 
 - **Vocab** (units, extras and inline story key words): optional `"image": "fluent:croissant"`.
   A picture must clearly evoke the word for a learner; several words may share one icon (the UI

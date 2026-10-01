@@ -182,7 +182,7 @@
     { "id": "emer.ospedale", "word": "ospedale", "article": "l'", "gender": "m", "es": "el hospital", "example": "emer.dov-e-l-ospedale", "situation": "emergencias", "image": "fluent:hospital" },
     { "id": "emer.pronto-soccorso", "word": "pronto soccorso", "article": "il", "gender": "m", "es": "las urgencias", "notes": "Así se llama el servicio de urgencias del hospital.", "situation": "emergencias", "image": "custom:emer-pronto-soccorso" },
     { "id": "emer.ladro", "word": "ladro", "article": "il", "gender": "m", "es": "el ladrón", "example": "emer.al-ladro", "situation": "emergencias", "image": "custom:emer-ladro" },
-    { "id": "emer.portafoglio", "word": "portafoglio", "article": "il", "gender": "m", "es": "la cartera", "example": "emer.mi-hanno-rubato", "situation": "emergencias", "image": "fluent:purse" },
+    { "id": "emer.portafoglio", "word": "portafoglio", "article": "il", "gender": "m", "es": "la cartera", "example": "emer.mi-hanno-rubato", "situation": "emergencias", "image": "custom:emer-portafoglio" },
     { "id": "emer.passaporto", "word": "passaporto", "article": "il", "gender": "m", "es": "el pasaporte", "example": "emer.ho-perso-il-passaporto", "situation": "emergencias", "image": "custom:emer-passaporto" },
     { "id": "emer.borsa", "word": "borsa", "article": "la", "gender": "f", "es": "el bolso", "situation": "emergencias", "image": "fluent:handbag" },
     { "id": "emer.zaino", "word": "zaino", "article": "lo", "gender": "m", "es": "la mochila", "example": "surv.posso-lasciare-lo-zaino", "situation": "emergencias", "image": "fluent:backpack" },
