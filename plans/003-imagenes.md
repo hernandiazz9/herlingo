@@ -72,7 +72,7 @@ Worktree setup: npm ci
 - Outcome: 39/39 custom SVGs (0.4–1.9 KB, 41 KB total), 0 lint warnings · 243a017
 
 ## T28 — Picture exercises and new-word intro in lessons
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T23
 - Goal: Three new lesson steps generated automatically from the content: "Elige la imagen" (both directions), "Empareja" with pictures (Hernán's sketch), and a new-word intro card.
 - Context: T23 API: `listVocab({ situation?, withImage? })` (withImage → `PicturedVocab[]`), `getVocab(id)`, `hasImage(item)`, `getDialogueSpeakers(dialogue)`, `ImageRef { src; dark? }`; `<Picture image alt size="grid"|"intro"|"avatar" bordered? className? />` from `@/components/ui`. Sample pictured words: food.caffe, cornetto, limone, panino (bar), food.vino, pesce, melanzane, uova (restaurante). CLAUDE.md (tokens only, light + dark; audio via `speak()` from a user gesture; content only via `@/lib/content`; never hard-code ids), `src/lib/exercises/{types,generate}.ts` (8 types, `generateSession()`), `src/components/exercises/**` (ExerciseView switch, Choice, Match, shared), `src/components/lesson/{LessonPlayer,FeedbackSheet}.tsx`, `src/lib/progress/**` + `src/lib/srs/**` (to know whether a word was seen before), `Picture` from T23. Build against T23's 8 sample words; the rest arrive in parallel (T24). Decided with Hernán:
@@ -85,7 +85,7 @@ Worktree setup: npm ci
   - A lesson with sample words shows the intro card for new words and the three picture steps; answers record outcomes like the other types; lessons without pictured words behave as before.
   - Both themes checked by eye on `npm run dev` (describe what you saw).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: new `picture-choice`/`picture-listen` types, picture pairs in `match`, ungraded `intro` step for unseen words; lessons without pictures unchanged · 403e66c
 
 ## T29 — Pictures in game mode
 - Status: done
@@ -124,7 +124,7 @@ Worktree setup: npm ci
 - Outcome: 13 dialogues / 14 speakers with Fluent avatars (12 SVGs), WithAvatar beside bubbles and transcript · 6b8268e
 
 ## T32 — Picture review and final images
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T24, T25, T26, T27, T28, T29, T30, T31
 - Goal: Make the whole picture set consistent and correct, then generate and commit every final image.
 - Context: docs/content-guide.md, docs/content-review.md (style of previous reviews), `plans/003-image-coverage.json`, Decisions of T24–T27 in this plan (words switched to custom, shared icons, words left without picture). Run `npm run images`, then render a contact sheet PNG (outside the repo) of every referenced picture with its Italian word, on light and dark surfaces, and look at it with the Read tool: fix wrong or misleading mappings, redraw custom SVGs that clash with the Fluent style or do not read at 80px, draw any custom key still missing (or remove that `image`), and flag near-black pictures for the dark backdrop if the pipeline missed them. Also judge the doubtful ones: T25 glutine (wheat ear), panelle, ricotta; T27 marciapiede, corso. Also review the dialogue avatars chosen by T31 (e.g. Autista = man-pilot, Controllore = man-police-officer) and swap any that mislead. Also: draw `custom:move-treno-sciopero` (switched from Fluent by T24); slugs for the same word on several ids (contanti, mercato, aperto, chiuso, passaporto) were drawn twice — keep one drawing and point both ids to it if they differ; docs/content-guide.md uses "il conto" as an example of a word without picture but it now has fluent:receipt — reword. Never rename or delete ids.
@@ -163,7 +163,10 @@ Worktree setup: npm ci
 
 - 2026-10-01 T27: aperto/chiuso shared drawings for surv-* and move-strada-* (open lit shop + green tick / shutter + padlock + red disc); body parts in Fluent yellow skin with red pain marks; reused Fluent sun/mosquito/fountain; thin strokes only for small marks; la Spagna plain flag. (agent)
 
+- 2026-10-01 T28: "seen" = SRS entry or word in a done lesson (incl. placement), so Repaso shows no intros; listen-only variant plays no audio on card tap; text match puts pictured words last; picture types also replace the single-word recognition fallback; intro step is ungraded and outside the progress bar. (agent)
+
 ## Proposals (new scope)
+- 2026-10-01 T28: intro cards come right before each word's first exercise, so a text match with 4–5 new words shows 4–5 intro cards in a row; spreading them out would change session building.
 - 2026-10-01 T30: PhraseList still hard-codes lang="it" on phrase text (pre-existing).
 
 ## Log
@@ -184,3 +187,4 @@ Worktree setup: npm ci
 - 2026-10-01 16:35 T29 done · branch worktree-agent-a4dd3c936af9cf64f → 2111249
 - 2026-10-01 16:40 T25 done · branch worktree-agent-ae238ce77ffb2ad52 → b76df8e
 - 2026-10-01 16:41 T27 done · branch worktree-agent-abf82a7abf6250070 → 243a017
+- 2026-10-01 16:48 T28 done · branch worktree-agent-af989718f56f4f97a → 403e66c
