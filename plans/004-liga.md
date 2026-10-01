@@ -51,7 +51,7 @@ Worktree setup: npm ci
 - Outcome: lazy supabase-js chunk (only loaded for Liga actions/sessions), `useLeagueAccount()` with cached offline state + change event, implicit-flow magic link handled on /liga/, placeholder LeagueView → 96ffc72
 
 ## T35 — XP outbox and sync
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T34
 - Goal: Every XP award made while the user has joined Liga is queued on the device and sent to `league_record_xp` when online, so weekly rankings fill up without ever blocking the offline app.
 - Context: Shared contract; docs/league.md; `src/lib/progress/` (where XP is added: `update()`, `recordActivity` in activity.ts) and every caller that awards XP (lessons, review, game, stories); `src/lib/league/` from T34 (account state + change event).
@@ -61,7 +61,7 @@ Worktree setup: npm ci
   - Flush on join, on app start, on `online` and on `visibilitychange` to visible; idempotent (ids), removes only acknowledged events, backs off on errors, never throws into the UI.
   - On join and on each flush the profile stats (total XP, streak count/best) are sent as defined in docs/league.md.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: localStorage outbox (≤500 events, ≤8 days), `lang-lern:xp-award` event from `saveResult()`, flush on start/join/online/visible/1 s after award with backoff, stats on every call, LeagueSync in layout → 69099df
 
 ## T36 — Join flow and Liga account screen
 - Status: running (attempt 1)
@@ -166,6 +166,7 @@ Worktree setup: npm ci
 - 2026-10-01 T35: scope widened to a `LeagueSync` mount in layout.tsx so the sync can start on app start (orchestrator)
 - 2026-10-01 plan: T35/T36 orphaned by a session restart; WIP committed (e17cdb0, de3d16e) and relaunched as continuations (orchestrator)
 - 2026-10-01 plan: new T42 local fake Supabase + fake players so Liga can be tried before the real project; T41 (merge main) moved up to right after T35/T36 since plan 003 is done; T37 now depends on T41 and T42 (Hernán)
+- 2026-10-01 T35: hook point = `saveResult()` in progress/index.ts dispatches window event `lang-lern:xp-award` (progress never imports Liga); XP `source` derived from route (/jugar/ → game, /historias/ → story, else activity); outbox cleared only on signed_out/deleted/user_changed; stats rejected as `stats_invalid` are dropped so events still pass; backoff 5 s → 10 min ±20 % (agent)
 
 ## Proposals (new scope)
 - 2026-10-01 T33: custom SMTP (e.g. Resend) so friends can link their email; fill the real Vercel domain in docs/league.md
@@ -181,3 +182,4 @@ Worktree setup: npm ci
 - 2026-10-01 T35/T36 orphaned (session restart) · WIP e17cdb0 / de3d16e
 - 2026-10-01 T35 relaunched (interrupted continuation) · attempt 1 · agent ac830d833ddf8d34c · old branch worktree-agent-aaedbb5286e79fc64
 - 2026-10-01 T36 relaunched (interrupted continuation) · attempt 1 · agent a2fbb57240abcaf4f · old branch worktree-agent-a800f3382a1ab7473
+- 2026-10-01 17:34 T35 done · branch worktree-agent-ac830d833ddf8d34c → 69099df
