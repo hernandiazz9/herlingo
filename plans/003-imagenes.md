@@ -39,7 +39,7 @@ Worktree setup: npm ci
 - Outcome: 224/224 drawable words pictured (121 fluent, 103 custom), 107 Fluent SVGs; 4 mappings changed · 5cb6080
 
 ## T25 — Custom drawings: bar, restaurant and shopping
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T23
 - Goal: Draw the custom SVGs for the coverage entries with `drawTask: "T25"` (34 words: cannolo, arancina, granita, brioche, cassata, panelle, sfincione, pistacchio, banco, cassa, cameriere, menù, forchetta…).
 - Context: docs/content-guide.md (custom drawing style guide from T23), `plans/003-image-coverage.json` (file name = the `custom:<slug>` key; `reference` = a related icon in another set, for ideas only — never copy non-MIT artwork), Fluent Emoji Flat icons in `node_modules/@iconify-json/fluent-emoji-flat/icons.json` as the style reference (same viewBox, palette, level of detail). Each drawing must be recognisable at 80px, with no text inside. To check your work, render a contact sheet to PNG in a temp folder (e.g. with `npx @resvg/resvg-js-cli` or any SVG renderer you install outside the repo) on a light and a dark background next to a few Fluent icons, and look at it with the Read tool; redraw what does not read well.
@@ -47,7 +47,7 @@ Worktree setup: npm ci
 - Done when:
   - One SVG per T25 entry, each valid, within the style guide and < 6 KB (report count, sizes, and any word you think should stay without a picture).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 34/34 custom SVGs (0.6–4.6 KB, 61 KB total), 0 lint warnings, redrawn after contact-sheet review · b76df8e
 
 ## T26 — Custom drawings: transport and lodging
 - Status: done
@@ -127,7 +127,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T24, T25, T26, T27, T28, T29, T30, T31
 - Goal: Make the whole picture set consistent and correct, then generate and commit every final image.
-- Context: docs/content-guide.md, docs/content-review.md (style of previous reviews), `plans/003-image-coverage.json`, Decisions of T24–T27 in this plan (words switched to custom, shared icons, words left without picture). Run `npm run images`, then render a contact sheet PNG (outside the repo) of every referenced picture with its Italian word, on light and dark surfaces, and look at it with the Read tool: fix wrong or misleading mappings, redraw custom SVGs that clash with the Fluent style or do not read at 80px, draw any custom key still missing (or remove that `image`), and flag near-black pictures for the dark backdrop if the pipeline missed them. Also review the dialogue avatars chosen by T31 (e.g. Autista = man-pilot, Controllore = man-police-officer) and swap any that mislead. Also: draw `custom:move-treno-sciopero` (switched from Fluent by T24); slugs for the same word on several ids (contanti, mercato, aperto, chiuso, passaporto) were drawn twice — keep one drawing and point both ids to it if they differ; docs/content-guide.md uses "il conto" as an example of a word without picture but it now has fluent:receipt — reword. Never rename or delete ids.
+- Context: docs/content-guide.md, docs/content-review.md (style of previous reviews), `plans/003-image-coverage.json`, Decisions of T24–T27 in this plan (words switched to custom, shared icons, words left without picture). Run `npm run images`, then render a contact sheet PNG (outside the repo) of every referenced picture with its Italian word, on light and dark surfaces, and look at it with the Read tool: fix wrong or misleading mappings, redraw custom SVGs that clash with the Fluent style or do not read at 80px, draw any custom key still missing (or remove that `image`), and flag near-black pictures for the dark backdrop if the pipeline missed them. Also judge T25's doubtful ones (glutine as a wheat ear; panelle and ricotta weakest at 80px). Also review the dialogue avatars chosen by T31 (e.g. Autista = man-pilot, Controllore = man-police-officer) and swap any that mislead. Also: draw `custom:move-treno-sciopero` (switched from Fluent by T24); slugs for the same word on several ids (contanti, mercato, aperto, chiuso, passaporto) were drawn twice — keep one drawing and point both ids to it if they differ; docs/content-guide.md uses "il conto" as an example of a word without picture but it now has fluent:receipt — reword. Never rename or delete ids.
 - Scope: may touch `content/it/**` (only `image`/avatar fields), `assets/images/custom/**`, `assets/images/backdrop.json` (manual dark/light backdrop overrides), `public/images/**`, `docs/content-review.md`, `docs/content-guide.md` / must not touch `src/**`.
 - Done when:
   - Fixes applied and appended to docs/content-review.md (categories with counts; total pictured words; final size of `public/images/`).
@@ -159,6 +159,8 @@ Worktree setup: npm ci
 
 - 2026-10-01 T29: deck = up to 5 pictured words first (more if few phrases), unknown first; pictured words always get a picture question (text fallback if < 4 distinct pictures); options never repeat image/text; Italian word revealed under right/tapped picture after answering; aria labels never give the answer; 2×2 grid max 320px; topic shows "N frases · M palabras"; copy tweaks in grid/round intro and progress label. (agent)
 
+- 2026-10-01 T25: cameriere/forchetta/pescivendolo reuse MIT Fluent parts; mercato (two stalls) vs bancarella (cart) made distinct; arancina round Palermo style cut open; glutine = ear of wheat. (agent)
+
 ## Proposals (new scope)
 - 2026-10-01 T30: PhraseList still hard-codes lang="it" on phrase text (pre-existing).
 
@@ -178,3 +180,4 @@ Worktree setup: npm ci
 - 2026-10-01 16:33 T30 done · branch worktree-agent-acfe4d2f3a7bd6810 → d8c88b6
 - 2026-10-01 16:34 T26 done · branch worktree-agent-a17fc5850203554b5 → e7840a9
 - 2026-10-01 16:35 T29 done · branch worktree-agent-a4dd3c936af9cf64f → 2111249
+- 2026-10-01 16:40 T25 done · branch worktree-agent-ae238ce77ffb2ad52 → b76df8e
