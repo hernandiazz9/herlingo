@@ -241,6 +241,7 @@ Framework-free modules plus one hook; nothing outside `/liga/` imports supabase-
 | `errors.ts` | `LeagueError` with `code`: the RPC tokens above plus `disabled`, `offline`, `network`, `not_joined`, `anonymous_disabled`, `email_invalid`, `email_taken`, `email_not_found`, `email_not_authorized`, `rate_limited`, `link_expired`, `link_invalid`, `unknown`. UI maps codes to copy. |
 | `account.ts` | Account state + actions (below). |
 | `use-league-account.ts` | `useLeagueAccount(lang?)` → the account snapshot + actions (`join`, `updateProfile`, `linkEmail`, `signInWithEmail`, `signOut`, `deleteMe`, `refresh`, `clearLinkError`). |
+| `groups.ts` | The caller's group (below): `useLeagueGroup()`, `createLeagueGroup(name)`, `joinLeagueGroup(code)`, `leaveLeagueGroup()`, `switchLeagueGroup(code)`, invite code helpers. |
 
 **Account state.** `{ status, profile, email?, pendingEmail?, userId?, online, linkError? }`.
 `status`: `loading` (server render/hydration, or checking a session the device has no profile
@@ -279,6 +280,18 @@ stats), `updated`, `user_changed` (another user signed in: drop per-user local s
 - Known limit: on an iPhone home-screen app the email link opens in Safari, whose storage is not
   the app's, so the session lands in Safari. Linking/sign-in by link works best in the browser
   where the app is used; a 6-digit code typed in the app (`verifyOtp`) would remove the limit.
+
+**Groups.** `useLeagueGroup()` → `{ status: "unknown" | "ready", group: { code, name, members } | null,
+refreshing, invite }`. The group is cached in localStorage `lang-lern:league-group`
+(`{ v: 1, userId, group }`; only used when `userId` is the joined user) and re-read from `league_me`
+on screen mount, after joining or signing in and when back online; sign-out, delete and user change
+drop it. Actions (`not_joined`/`offline` checked first) store the server's answer; an
+`already_in_group` error triggers a refresh (the cache was stale). The share link is
+`<origin>/liga/unirse/?codigo=<code>` (Web Share, else copied to the clipboard). That static page
+reads the code on the client and remembers it in `lang-lern:league-invite`: not joined → the join
+flow, then straight into the group; joined without a group → "Unirme al grupo"; in another group →
+leave and join (confirmation). The remembered invite is offered again on /liga/ (e.g. after an
+email sign-in, which redirects to /liga/) until it is used or dismissed ("Ahora no").
 
 ### Sync (XP outbox)
 

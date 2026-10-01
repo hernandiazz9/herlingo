@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AccountSection } from "@/components/league/AccountSection";
+import { GroupSection } from "@/components/league/GroupSection";
 import { JoinFlow } from "@/components/league/JoinFlow";
 import { ProfileCard } from "@/components/league/ProfileCard";
 import { leagueErrorMessage, TEXT_BUTTON } from "@/components/league/copy";
@@ -58,7 +59,9 @@ export function LeagueView() {
         <>
           <ProfileCard profile={account.profile} account={account} />
 
-          {/* Ranking slot: T38 replaces this placeholder with the weekly leaderboards (and T37 adds groups). */}
+          <GroupSection account={account} />
+
+          {/* Ranking slot: T38 replaces this placeholder with the weekly leaderboards. */}
           <section aria-labelledby="league-ranking-title" className="flex flex-col gap-3">
             <h2 id="league-ranking-title" className="text-2xl font-extrabold tracking-tight text-ink">
               Clasificación

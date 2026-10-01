@@ -10,6 +10,8 @@ import { ProfileForm } from "./ProfileForm";
 
 export interface JoinFlowProps {
   account: UseLeagueAccount;
+  /** Called (not awaited) right after joining, e.g. to join the group of an invite link. */
+  onJoined?: () => void;
 }
 
 function randomEmoji(): string {
@@ -20,7 +22,7 @@ function randomEmoji(): string {
  * Not joined (status `none` or `offline`): pick nickname + emoji and join, or sign in with the
  * email of an account made on another device.
  */
-export function JoinFlow({ account }: JoinFlowProps) {
+export function JoinFlow({ account, onJoined }: JoinFlowProps) {
   // Only rendered on the client after the account check (never server-rendered): random is safe.
   const [initialEmoji] = useState(randomEmoji);
   const online = account.status !== "offline" && account.online;
@@ -41,6 +43,7 @@ export function JoinFlow({ account }: JoinFlowProps) {
           pendingLabel="Uniéndote…"
           onSubmit={async (nickname, emoji) => {
             await account.join(nickname, emoji);
+            onJoined?.();
           }}
           online={online}
         />

@@ -3,6 +3,7 @@
  * (mirrors `league_set_profile`, docs/league.md → "Nicknames") and shared class strings.
  */
 import { isLeagueError, type LeagueErrorCode } from "@/lib/league/errors";
+import { GROUP_NAME_MAX } from "@/lib/league/groups";
 
 export const NICKNAME_MIN = 3;
 export const NICKNAME_MAX = 20;
@@ -32,6 +33,19 @@ export function nicknameProblem(raw: string): string | null {
   return null;
 }
 
+/** What is wrong with a group name before asking the server, or null when it looks fine. */
+export function groupNameProblem(raw: string): string | null {
+  const length = [...raw.trim().replace(/\s+/g, " ")].length;
+  if (length === 0) return "Escribe un nombre para el grupo.";
+  if (length > GROUP_NAME_MAX) return `Máximo ${GROUP_NAME_MAX} caracteres.`;
+  return null;
+}
+
+/** "1 miembro", "4 miembros". */
+export function membersLabel(count: number): string {
+  return `${count} ${count === 1 ? "miembro" : "miembros"}`;
+}
+
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Same shape check as the account layer, to answer before sending anything. */
@@ -58,6 +72,11 @@ const MESSAGES: Partial<Record<LeagueErrorCode, string>> = {
   rate_limited: "Demasiados intentos. Espera unos minutos y vuelve a probar.",
   link_expired: "Ese enlace ha caducado o ya se usó.",
   link_invalid: "No hemos podido usar ese enlace.",
+  group_name_invalid: "Usa de 1 a 30 caracteres para el nombre del grupo.",
+  group_name_blocked: "Ese nombre de grupo no está permitido. Prueba otro.",
+  already_in_group: "Ya estás en un grupo. Sal de él para crear o unirte a otro.",
+  group_not_found: "No hay ningún grupo con ese código. Revísalo.",
+  try_again: "No hemos podido crear el grupo. Vuelve a intentarlo.",
 };
 
 /** Copy for any error thrown by the league layer (falls back to a generic message). */
