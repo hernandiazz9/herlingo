@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { LeagueSync } from "@/components/league/LeagueSync";
 import { TabBar } from "@/components/shell/TabBar";
 import { ThemeSync } from "@/components/shell/ThemeSync";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/app-config";
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-full">
         <ThemeSync />
+        <LeagueSync />
         {/* Centred mobile-width column: full width on phones, a phone-sized column on desktop. */}
         <div
           className="relative mx-auto flex min-h-dvh w-full max-w-[var(--column-width)] flex-col bg-cream shadow-[0_0_0_1px_var(--line),0_12px_40px_-12px_var(--shadow)]"

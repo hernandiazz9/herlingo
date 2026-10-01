@@ -280,6 +280,41 @@ stats), `updated`, `user_changed` (another user signed in: drop per-user local s
   the app's, so the session lands in Safari. Linking/sign-in by link works best in the browser
   where the app is used; a 6-digit code typed in the app (`verifyOtp`) would remove the limit.
 
+### Sync (XP outbox)
+
+Files: `src/lib/league/outbox.ts` (storage), `src/lib/league/sync.ts` (sending),
+`src/components/league/LeagueSync.tsx` (mounted once in the root layout; renders nothing).
+
+- **Hook point.** Every XP award goes through `saveResult()` in `src/lib/progress/index.ts`
+  (`recordLessonResult` → `lesson`, `recordReviewResult` → `review`, `recordActivity` → `game` on
+  `/jugar/`, `story` on `/historias/`, else `activity`). After saving progress it dispatches
+  `lang-lern:xp-award` (`{ lang, amount, source, earnedAt }`); `subscribeXpAwards(cb)` listens.
+  The progress module knows nothing about Liga.
+- **Lazy.** `LeagueSync` does nothing when `leagueEnabled()` is false; otherwise it loads
+  `sync.ts` with a dynamic `import()` after hydration. supabase-js is only fetched when there is
+  something to send (joined device).
+- **Outbox.** localStorage `lang-lern:league-outbox:<lang>` =
+  `{ v: 1, userId, events: [{ id, lang, amount, source, earnedAt }], sentStats }` (`id` = uuid from
+  the device, `earnedAt` ISO). Tolerant parsing (bad entries dropped, other versions ignored),
+  capped at **500** events (oldest dropped) and events older than 8 days dropped (the server would
+  answer `too_old`). An award is queued **only while joined** (cached account has a profile); the
+  events belong to `userId` and are never sent for another user. Signing out, `deleteMe` and
+  switching user clear every outbox.
+- **When it flushes:** on app start (any page), on `joined` / `user_changed`, on `online`, on
+  `visibilitychange` to visible, and 1 s after each award (several quick awards share a call).
+  Concurrent flushes coalesce; offline or not joined = no-op.
+- **What it sends:** per language, `league_record_xp(events, stats)` in batches of ≤ 200 events,
+  oldest first. Every call carries `stats` = `{ lang, total_xp, streak_count, streak_best }` from the
+  device's progress (`streak_count` is the current streak, 0 once lapsed). With nothing queued, a
+  call with `events: []` is made only when the stats differ from the last ones the server stored
+  (`sentStats`), or on join / account switch. If the server answers `stats_invalid`, those stats are
+  skipped and the events are sent without them.
+- **Acknowledgement:** only ids listed in `results` leave the outbox (every status is final). A
+  failed call keeps everything; ids make the resend a `duplicate`.
+- **Errors:** never reach the UI. Failures back off exponentially (5 s → 10 min, ±20 % jitter);
+  coming back online or an account change resets the back-off. `not_authenticated` / `no_profile`
+  trigger an account re-check (which may sign out and clear the outbox).
+
 Verified for T34 without a real project: a static build pointed at a local mock of `/auth/v1/user`
 and `/rest/v1/rpc/league_me`, opened at `/liga/#access_token=…&type=magiclink`, ends `joined` with
 the mock profile and a clean URL; `#error_code=otp_expired` shows the expired-link message.

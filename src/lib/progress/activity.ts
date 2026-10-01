@@ -5,7 +5,7 @@
  */
 import { DEFAULT_LANG } from "@/lib/content";
 import type { ItemOutcome } from "@/lib/exercises";
-import { recordReviewResult, type Progress } from "./index";
+import { recordReviewResult, type Progress, type XpSource } from "./index";
 
 export interface ActivityOutcome {
   itemId: string;
@@ -21,9 +21,19 @@ export interface Activity {
    * Game mode sends only the wrong ones; stories send every practised key word.
    */
   outcomes: ActivityOutcome[];
+  /** What earned the XP (Liga event source). Defaults to the current screen: /jugar/ → game, /historias/ → story. */
+  source?: XpSource;
 }
 
-export function recordActivity({ lang = DEFAULT_LANG, xp, outcomes }: Activity): Progress {
+/** Source of an activity whose caller did not say: guessed from the route it was played on. */
+function sourceFromRoute(): XpSource {
+  const path = typeof window === "undefined" ? "" : window.location.pathname;
+  if (path.startsWith("/jugar")) return "game";
+  if (path.startsWith("/historias")) return "story";
+  return "activity";
+}
+
+export function recordActivity({ lang = DEFAULT_LANG, xp, outcomes, source }: Activity): Progress {
   const items = new Map<string, ItemOutcome>();
   for (const { itemId, correct } of outcomes) {
     const o = items.get(itemId) ?? { itemId, attempts: 0, mistakes: 0 };
@@ -43,5 +53,5 @@ export function recordActivity({ lang = DEFAULT_LANG, xp, outcomes }: Activity):
     exercises: outcomes.length,
     firstTryCorrect: outcomes.filter((o) => o.correct).length,
     items: [...items.values()],
-  });
+  }, source ?? sourceFromRoute());
 }
