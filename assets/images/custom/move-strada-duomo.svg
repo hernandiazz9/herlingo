@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect x="15.2" y="1.5" width="1.6" height="3" rx=".5" fill="#ffc83d"/>
+  <path fill="#ff822d" d="M9.5 12.5c0-4.6 2.9-8 6.5-8s6.5 3.4 6.5 8z"/>
+  <path fill="#d3883e" d="M15.5 4.5h1v8h-1zm-3.6 1.6l.8.5c-1 1.6-1.6 3.6-1.6 5.9h-1c0-2.4.7-4.7 1.8-6.4zm8.2 0l-.8.5c1 1.6 1.6 3.6 1.6 5.9h1c0-2.4-.7-4.7-1.8-6.4z"/>
+  <rect x="2.5" y="9" width="6" height="21" fill="#e6e6e6"/>
+  <path fill="#9b9b9b" d="M2 9.5l3.5-5l3.5 5z"/>
+  <rect x="23.5" y="9" width="6" height="21" fill="#e6e6e6"/>
+  <path fill="#9b9b9b" d="M23 9.5l3.5-5l3.5 5z"/>
+  <path fill="#14a085" d="M4.5 12h2v3.5h-2zm0 6h2v3.5h-2zm21-6h2v3.5h-2zm0 6h2v3.5h-2z"/>
+  <path fill="#f4f4f4" d="M8.5 16.5L16 11l7.5 5.5V30h-15z"/>
+  <circle cx="16" cy="18" r="2.8" fill="#14a085"/>
+  <circle cx="16" cy="18" r="1.6" fill="#fcd53f"/>
+  <path fill="#7d4533" d="M13 30v-5a3 3 0 0 1 6 0v5z"/>
+  <path fill="#d3d3d3" d="M8.5 16.5L16 11l7.5 5.5v1.2L16 12.2l-7.5 5.5zM2 29h28v1H2z"/>
+</svg>

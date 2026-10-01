@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <path fill="#d3d3d3" d="M16 26.5L2 23v3.5L16 30l14-3.5V23z"/>
+  <path fill="#9b9b9b" d="M2 26.5L16 30l14-3.5v1L16 31l-14-3.5z"/>
+  <path fill="#f3c07b" d="M16 4.5L3 7.5v15.5l13 3.5z"/>
+  <path fill="#e19747" d="M16 4.5l13 3v15.5l-13 3.5z"/>
+  <path fill="#ff822d" d="M16 2.5L2.5 6v2L16 4.5zm0 0L29.5 6v2L16 4.5z"/>
+  <path fill="#14a085" d="M5 10.5l3-.6v4l-3 .6zm6-1.3l3-.6v4l-3 .6zM5 17.5l3-.5v4l-3 .5zm22-7l-3-.6v4l3 .6zm-6-1.3l-3-.6v4l3 .6zm6 8.3l-3-.5v4l3 .5z"/>
+  <path fill="#7d4533" d="M11 25.2v-6l3.5-.5v7.4z"/>
+  <path fill="#00a6ed" d="M12.5 15.5l3-.6v2.2l-3 .6z"/>
+  <path fill="#00a6ed" d="M16.5 14.9l3 .6v2.2l-3-.6z"/>
+</svg>
