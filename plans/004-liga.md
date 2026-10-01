@@ -64,7 +64,7 @@ Worktree setup: npm ci
 - Outcome: localStorage outbox (≤500 events, ≤8 days), `lang-lern:xp-award` event from `saveResult()`, flush on start/join/online/visible/1 s after award with backoff, stats on every call, LeagueSync in layout → 69099df
 
 ## T36 — Join flow and Liga account screen
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T34
 - Goal: On /liga/: the join flow for users without an account (pick nickname + emoji, join) and the account section for joined users (edit nickname/emoji, link email, sign in with email on a new device, leave and delete my data), with offline and error states.
 - Context: Shared contract; docs/league.md; `src/lib/league/` hooks (T34); CLAUDE.md UI conventions (tokens only, both themes, `pressable`, PageHeader, Spain Spanish "tú"); `src/components/ui/`; `src/app/perfil/ProfileView.tsx` for the settings/confirm-dialog style to reuse.
@@ -74,7 +74,7 @@ Worktree setup: npm ci
   - Joined: shows nickname + emoji, edit, "Vincular email" (sends magic link, explains it), "Entrar con mi email" for the not-joined state, "Salir de la Liga y borrar mis datos" with confirmation.
   - Checked by hand in both themes at 375 px (describe what was checked in DECISIONS).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: join form (live validation, server errors, 24-emoji grid), account section (edit, link email, sign in by email, sign out only with linked email, delete with confirmation), offline states; hand-checked both themes at 375 px → 9ed886b
 
 ## T37 — Groups: create, join by code or link, leave
 - Status: pending
@@ -129,7 +129,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T41 — Bring main (plan 003, pictures) into the Liga branch
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T35, T36
 - Goal: Merge the current `main` (plan 003's pictures work) into the integration branch and resolve conflicts keeping both intents, so the branch can be fast-forwarded into main.
 - Context: `git log main` for plan 003's commits; likely conflicts: `package.json`/`package-lock.json` (regenerate the lock with `npm install` after merging package.json), CLAUDE.md, docs, `src/lib/navigation.ts`, `src/components/ui/index.ts`. Plan 003 is finished on main (`Status: done`). Other sessions may have added more commits to main; merge whatever main has.
@@ -142,7 +142,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T42 — Local fake Supabase with fake players
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: none
 - Goal: Let Hernán and the agents try Liga end to end with fake users before the real Supabase project exists: a small local server that imitates the parts of Supabase the app uses, backed by the local Postgres with the real migrations, plus a seed of fake players.
 - Context: Shared contract; docs/league.md (RPC contract, Local SQL check); `scripts/db/` (db:check, auth-stub.sql: reuse it); `src/lib/league/client.ts` and `account.ts` (exactly which supabase-js auth and rest endpoints the client calls: anonymous sign-up, token refresh, get user, update user/email, sign-in OTP, sign-out, `/rest/v1/rpc/<fn>`). No Docker on this Mac; Postgres 17 runs locally.
@@ -167,6 +167,7 @@ Worktree setup: npm ci
 - 2026-10-01 plan: T35/T36 orphaned by a session restart; WIP committed (e17cdb0, de3d16e) and relaunched as continuations (orchestrator)
 - 2026-10-01 plan: new T42 local fake Supabase + fake players so Liga can be tried before the real project; T41 (merge main) moved up to right after T35/T36 since plan 003 is done; T37 now depends on T41 and T42 (Hernán)
 - 2026-10-01 T35: hook point = `saveResult()` in progress/index.ts dispatches window event `lang-lern:xp-award` (progress never imports Liga); XP `source` derived from route (/jugar/ → game, /historias/ → story, else activity); outbox cleared only on signed_out/deleted/user_changed; stats rejected as `stats_invalid` are dropped so events still pass; backoff 5 s → 10 min ±20 % (agent)
+- 2026-10-01 T36: "Cerrar sesión en este móvil" only shown once an email is linked (an anonymous account could never be recovered); link-error copy in copy.ts with "Entendido" (agent)
 
 ## Proposals (new scope)
 - 2026-10-01 T33: custom SMTP (e.g. Resend) so friends can link their email; fill the real Vercel domain in docs/league.md
@@ -183,3 +184,5 @@ Worktree setup: npm ci
 - 2026-10-01 T35 relaunched (interrupted continuation) · attempt 1 · agent ac830d833ddf8d34c · old branch worktree-agent-aaedbb5286e79fc64
 - 2026-10-01 T36 relaunched (interrupted continuation) · attempt 1 · agent a2fbb57240abcaf4f · old branch worktree-agent-a800f3382a1ab7473
 - 2026-10-01 17:34 T35 done · branch worktree-agent-ac830d833ddf8d34c → 69099df
+- 2026-10-01 17:35 T42 launched · attempt 1 · agent a7da1ef41206a92d0
+- 2026-10-01 17:36 T36 done · branch worktree-agent-a2fbb57240abcaf4f → 9ed886b
