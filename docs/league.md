@@ -365,3 +365,45 @@ PostgREST (`set role authenticated|anon` + the JWT `sub`) and covers profiles, b
 `record_xp` statuses and caps, the Madrid week boundary, leaderboards, podium, deletion and the
 RLS/privilege denials. `DB_CHECK_VERBOSE=1` lists every check; libpq variables (`PGHOST`, `PGPORT`,
 `PGUSER`) pick another server.
+
+## Try it locally (fake Supabase)
+
+Before the real project exists (or to play with fake friends), `scripts/league-local/` imitates the
+parts of Supabase the app uses, on the local Postgres (same requirements as `db:check`: Postgres on
+the default socket and `psql`; Node built-ins only, no Docker). It uses its own database
+`lang_lern_league_local` and never touches any other one.
+
+1. **`npm run league:local`** (add `-- --reset` to start from an empty database): creates the
+   database if missing (auth stub + `scripts/league-local/local-auth.sql` + every migration; new
+   migration files are applied on the next start) and serves <http://localhost:54321>. It prints
+   the two env values; the anon key is a fixed local JWT, the same on every machine:
+   ```bash
+   NEXT_PUBLIC_SUPABASE_URL=http://localhost:54321
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=<printed by league:local>
+   ```
+   Put them in `.env.local` (keep the real keys commented out) and restart `npm run dev` (or
+   `npm run build && npm start`; both origins are allowed by CORS).
+2. **`npm run league:seed`** (`-- --reset` to reseed): 15 fake players "Bot …" with XP spread over
+   this week and last week in every content language, and the group **Amici di prova** (code
+   `PRUEBA`) with 5 of them, so the global and group tables and last week's podium have content.
+   Does nothing if the bots already exist; `--reset` deletes the bots and the `PRUEBA` group (real
+   members leave it too).
+3. **`npm run league:local:check`**: proves it over HTTP with two throwaway users (CORS, anonymous
+   sign-up, refresh, set_profile, record_xp statuses, groups, leaderboards, league_me, email linking,
+   sign in by email, sign-out, delete_me) on its own free port, then deletes them. Exit 1 on failure.
+
+What it serves: GoTrue-shaped `POST /auth/v1/signup` (anonymous only), `POST /auth/v1/token?grant_type=refresh_token`
+(rotating refresh tokens), `GET|PUT /auth/v1/user`, `POST /auth/v1/otp`, `GET /auth/v1/verify`,
+`POST /auth/v1/logout`; and PostgREST-shaped `POST /rest/v1/rpc/league_*`, run as role
+`authenticated` (or `anon` with only the anon key) with `request.jwt.claims` set like PostgREST,
+errors as `{ code, message, details, hint }` (P0001 → 400, permission denied → 401/403). JWTs are
+HS256 with a local secret, valid for 1 hour (`LEAGUE_LOCAL_JWT_SECONDS` to shorten them and watch
+the refresh). **No email is sent:** "Vincular email" and "Entrar con mi email" print the magic link
+in the `league:local` terminal; open it in the same browser and it lands on `/liga/#access_token=…`
+like the real one.
+
+**Playing as several users:** each browser profile or private window is a different device (its
+own localStorage), so open the app in a normal window, a private window and another browser, join
+with different nicknames and use code `PRUEBA` to share a group. To start over in one window,
+"Salir de la Liga y borrar mis datos". Inspect the data with
+`psql lang_lern_league_local -c 'select * from league.profiles;'`.

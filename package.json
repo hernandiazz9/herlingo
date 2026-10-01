@@ -21,6 +21,9 @@
     "images": "tsx scripts/images/generate.ts",
     "pwa:icons": "tsx scripts/pwa/icons.ts",
     "db:check": "tsx scripts/db/check.ts",
+    "league:local": "tsx scripts/league-local/local.ts",
+    "league:seed": "tsx scripts/league-local/seed.ts",
+    "league:local:check": "tsx scripts/league-local/check.ts",
     "verify": "npm run lint && npm run content:check && npm run typecheck && npm run build"
   },
   "dependencies": {

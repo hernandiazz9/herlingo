@@ -21,6 +21,9 @@ Sicily. **Read `docs/brief.md` before any task**: it holds every product decisio
 | `npm run images` | Writes every referenced picture (vocab `image`, dialogue `avatars`: `fluent:<icon>` from the `@iconify-json/fluent-emoji-flat` devDependency, `custom:<slug>` from `assets/images/custom/`) minified to `public/images/{fluent,custom}/`; prunes unused files, flags near-black ones for the dark backdrop, skips custom drawings not drawn yet. Run after image changes and commit `public/images/`. `npm run content:check -- --strict-images` fails if any is missing or stale. |
 | `npm run pwa:icons` | Redraws `public/icons/*.png` (same design as `src/app/icon.svg`). Only if the icon changes. |
 | `npm run db:check` | Liga SQL check on the local Postgres (`psql` on the default socket): throwaway database ← `scripts/db/auth-stub.sql` + every `supabase/migrations/*.sql` + `scripts/db/smoke.sql`, then dropped. Exit 1 on any failure. Not part of `verify`; run it after any SQL change. |
+| `npm run league:local` | Local fake Supabase on http://localhost:54321 (database `lang_lern_league_local`, `-- --reset` to recreate); prints the two env values for `.env.local`. Magic links are printed, never emailed. docs/league.md, "Try it locally". |
+| `npm run league:seed` | 15 fake players with XP this week and last week + group code `PRUEBA` in the local fake Supabase (`-- --reset` to reseed). |
+| `npm run league:local:check` | HTTP check of the local fake Supabase with two throwaway users (sign-up → profile → XP → groups → rankings → email link → delete). Exit 1 on failure. |
 | `npm run verify` | lint → content:check → typecheck → build. Must exit 0 before a task is done. |
 
 **There are no automated tests in the MVP** (speed over tests). Verification is `npm run verify`;
