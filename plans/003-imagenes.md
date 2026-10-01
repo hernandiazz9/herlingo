@@ -10,7 +10,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T23 — Content model and pipeline for pictures
-- Status: pending
+- Status: done
 - Depends on: none
 - Goal: Give the language pack an image contract and a build pipeline so content, drawing and UI tasks can work in parallel: an optional `image` on vocabulary (units and inline story keywords), an optional avatar on dialogue speakers, `npm run images`, content checks, loader helpers and one shared `Picture` component.
 - Context: CLAUDE.md, docs/content-guide.md, `src/lib/content/{schema,types,build,index,keys}.ts`, `scripts/content.ts`, `scripts/audio/plan.ts` (pattern to copy: plan → files → strict check), `scripts/pwa/build.ts` (precaches all of `out/`, so `public/images/` is offline automatically). `plans/003-image-coverage.json` (read only) classifies all 358 vocab items: class A = fitting Fluent Emoji Flat icon (`image: "fluent:<icon>"`, 122), B = needs a custom drawing (`image: "custom:<slug>"`, slug = vocab id with dots → dashes, 102, split into drawTask T25/T26/T27), C = not drawable (134, no image).
@@ -24,7 +24,7 @@ Worktree setup: npm ci
   - The 8 sample words show images after `npm run images`; files committed.
   - docs/content-guide.md documents image keys, the coverage file, the custom drawing style guide (viewBox 0 0 32 32 like Fluent, flat solid fills, rounded shapes, no outlines, no text, Fluent-like palette, centered with ~2px margin, < 6 KB) and the commands; CLAUDE.md gets the `npm run images` row and one convention line.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: image key on vocab + dialogue `avatars` map, npm run images (Fluent via iconify + resvg dark detection), --strict-images, listVocab/getVocab/hasImage/getDialogueSpeakers, Picture (grid/intro/avatar), 8 sample words · 0a37a7e
 
 ## T24 — Assign pictures to vocabulary
 - Status: pending
@@ -75,7 +75,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T23
 - Goal: Three new lesson steps generated automatically from the content: "Elige la imagen" (both directions), "Empareja" with pictures (Hernán's sketch), and a new-word intro card.
-- Context: CLAUDE.md (tokens only, light + dark; audio via `speak()` from a user gesture; content only via `@/lib/content`; never hard-code ids), `src/lib/exercises/{types,generate}.ts` (8 types, `generateSession()`), `src/components/exercises/**` (ExerciseView switch, Choice, Match, shared), `src/components/lesson/{LessonPlayer,FeedbackSheet}.tsx`, `src/lib/progress/**` + `src/lib/srs/**` (to know whether a word was seen before), `Picture` from T23. Build against T23's 8 sample words; the rest arrive in parallel (T24). Decided with Hernán:
+- Context: T23 API: `listVocab({ situation?, withImage? })` (withImage → `PicturedVocab[]`), `getVocab(id)`, `hasImage(item)`, `getDialogueSpeakers(dialogue)`, `ImageRef { src; dark? }`; `<Picture image alt size="grid"|"intro"|"avatar" bordered? className? />` from `@/components/ui`. Sample pictured words: food.caffe, cornetto, limone, panino (bar), food.vino, pesce, melanzane, uova (restaurante). CLAUDE.md (tokens only, light + dark; audio via `speak()` from a user gesture; content only via `@/lib/content`; never hard-code ids), `src/lib/exercises/{types,generate}.ts` (8 types, `generateSession()`), `src/components/exercises/**` (ExerciseView switch, Choice, Match, shared), `src/components/lesson/{LessonPlayer,FeedbackSheet}.tsx`, `src/lib/progress/**` + `src/lib/srs/**` (to know whether a word was seen before), `Picture` from T23. Build against T23's 8 sample words; the rest arrive in parallel (T24). Decided with Hernán:
   - Pick the picture: 4 square cards in a 2×2 grid, each with the picture and the Italian word below; tapping a card plays its audio and selects it; "Comprobar" then the green/red sheet. Variant A: prompt "¿Cuál es «el café»?" (Spanish). Variant B: Italian audio only (big play button, no text), the cards show pictures without the Italian word until checked.
   - Match with pictures: pictures in one column, Italian words (tap = audio) in the other, shuffled, 3–4 pairs.
   - New-word intro: the first time any vocab word appears (never seen in progress/SRS), show a card with its picture if it has one, Italian word with audio (auto-play from the tap that advanced), Spanish translation, "Continuar"; then it is asked as usual. Words already seen are not introduced again.
@@ -91,7 +91,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T23
 - Goal: Bring pictured words into the game: word cards in Descubrir and picture questions in the 60-second round.
-- Context: CLAUDE.md, `src/lib/game/index.ts` (topics = situations with phrases, `buildDeck`, `makeQuestion`, known cards in `lang-lern:game:<lang>`), `src/components/game/{GameView,Discover,Round}.tsx`, `recordActivity` in `src/lib/progress/activity.ts`, `listVocab({ situation, withImage: true })` and `Picture` from T23. Decided with Hernán: inside each topic (and Mezcla) Descubrir deals the topic's pictured words first (card: big picture, Italian word with audio, Spanish), then phrases, same "La sé" / "Otra vez"; the round adds two question kinds for pictured words — "Escucha y elige la imagen" (audio → 2×2 pictures) and "¿Cuál es «el café»?" (Spanish → 2×2 pictures) — mixed with the existing ones; options never share the same image `src`. A topic with pictured words but no phrases becomes playable. Build against T23's sample words.
+- Context: T23 API: `listVocab({ situation?, withImage? })` (withImage → `PicturedVocab[]`), `getVocab(id)`, `hasImage(item)`, `getDialogueSpeakers(dialogue)`, `ImageRef { src; dark? }`; `<Picture image alt size="grid"|"intro"|"avatar" bordered? className? />` from `@/components/ui`. Sample pictured words: food.caffe, cornetto, limone, panino (bar), food.vino, pesce, melanzane, uova (restaurante). CLAUDE.md, `src/lib/game/index.ts` (topics = situations with phrases, `buildDeck`, `makeQuestion`, known cards in `lang-lern:game:<lang>`), `src/components/game/{GameView,Discover,Round}.tsx`, `recordActivity` in `src/lib/progress/activity.ts`, `listVocab({ situation, withImage: true })` and `Picture` from T23. Decided with Hernán: inside each topic (and Mezcla) Descubrir deals the topic's pictured words first (card: big picture, Italian word with audio, Spanish), then phrases, same "La sé" / "Otra vez"; the round adds two question kinds for pictured words — "Escucha y elige la imagen" (audio → 2×2 pictures) and "¿Cuál es «el café»?" (Spanish → 2×2 pictures) — mixed with the existing ones; options never share the same image `src`. A topic with pictured words but no phrases becomes playable. Build against T23's sample words.
 - Scope: may touch `src/lib/game/**`, `src/components/game/**`, `src/app/jugar/**` / must not touch `content/**`, `src/lib/content/**`, `src/components/ui/**`, other routes.
 - Done when:
   - Descubrir and the round show picture cards/questions for topics with pictured words; scoring, combo, records, XP and SRS outcomes work for them like for phrases.
@@ -103,7 +103,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T23
 - Goal: A visual vocabulary view inside the Frasario and the word picture in the story keyword popover.
-- Context: CLAUDE.md, `src/components/phrasebook/{Phrasebook,ShowMode,search}.tsx` (phrases grouped by situation, chips, search, tap-to-play), `src/app/frasario/page.tsx`, story reader keyword popover in `src/components/stories/**`, `listVocab()` and `Picture` from T23. Decided with Hernán: a "Frases | Palabras" segmented switch at the top of the Frasario (remember the choice locally); Palabras groups words by situation (same chips and search, matching Italian or Spanish), shows a grid of picture cards (picture + Italian word); tapping a card plays its audio and shows the word with article and the Spanish translation; words without a picture follow at the end of each topic as text cards. No full-screen show mode for words. In stories, the keyword popover shows the picture when the word has one.
+- Context: T23 API: `listVocab({ situation?, withImage? })` (withImage → `PicturedVocab[]`), `getVocab(id)`, `hasImage(item)`, `getDialogueSpeakers(dialogue)`, `ImageRef { src; dark? }`; `<Picture image alt size="grid"|"intro"|"avatar" bordered? className? />` from `@/components/ui`. Sample pictured words: food.caffe, cornetto, limone, panino (bar), food.vino, pesce, melanzane, uova (restaurante). CLAUDE.md, `src/components/phrasebook/{Phrasebook,ShowMode,search}.tsx` (phrases grouped by situation, chips, search, tap-to-play), `src/app/frasario/page.tsx`, story reader keyword popover in `src/components/stories/**`, `listVocab()` and `Picture` from T23. Decided with Hernán: a "Frases | Palabras" segmented switch at the top of the Frasario (remember the choice locally); Palabras groups words by situation (same chips and search, matching Italian or Spanish), shows a grid of picture cards (picture + Italian word); tapping a card plays its audio and shows the word with article and the Spanish translation; words without a picture follow at the end of each topic as text cards. No full-screen show mode for words. In stories, the keyword popover shows the picture when the word has one.
 - Scope: may touch `src/components/phrasebook/**`, `src/app/frasario/**`, the keyword popover in `src/components/stories/**` / must not touch `content/**`, `src/lib/content/**`, `src/components/ui/**`, other routes.
 - Done when:
   - `/frasario/` switches between Frases (unchanged) and Palabras as described; search and chips work in both.
@@ -116,7 +116,7 @@ Worktree setup: npm ci
 - Status: pending
 - Depends on: T23
 - Goal: Every native speaker in the dialogues gets a Fluent Emoji Flat avatar (revisore, barista, farmacista…) shown next to their speech bubble.
-- Context: CLAUDE.md, docs/content-guide.md (avatar key from T23), `content/it/dialogues/*.json`, dialogue UI in `src/components/dialogue/**` and `src/app/dialogos/**`, `Picture` (small size) from T23. Pick people emoji that match role and gender (e.g. `fluent:man-police-officer`, `fluent:woman-cook`); the learner's side has no avatar. Run `npm run images` so the avatar files exist.
+- Context: T23 API: `listVocab({ situation?, withImage? })` (withImage → `PicturedVocab[]`), `getVocab(id)`, `hasImage(item)`, `getDialogueSpeakers(dialogue)`, `ImageRef { src; dark? }`; `<Picture image alt size="grid"|"intro"|"avatar" bordered? className? />` from `@/components/ui`. Sample pictured words: food.caffe, cornetto, limone, panino (bar), food.vino, pesce, melanzane, uova (restaurante). CLAUDE.md, docs/content-guide.md (avatar key from T23), `content/it/dialogues/*.json`, dialogue UI in `src/components/dialogue/**` and `src/app/dialogos/**`, `Picture` (small size) from T23. T23 put avatars at dialogue level: `"avatars": { "<native turn name>": "fluent:<icon>" }` (one dialogue has two native speakers); read them with `getDialogueSpeakers(dialogue)` / `NativeTurn.avatar`. Pick people emoji that match role and gender (e.g. `fluent:man-police-officer`, `fluent:woman-cook`); the learner's side has no avatar. Run `npm run images` so the avatar files exist.
 - Scope: may touch `content/it/dialogues/**` (only adding avatar keys), `src/components/dialogue/**`, the dialogue route, `public/images/fluent/**` / must not touch other content, `src/lib/content/**`, `src/components/ui/**`.
 - Done when:
   - Every native speaker in every dialogue has an avatar shown beside their bubble in both themes.
@@ -128,7 +128,7 @@ Worktree setup: npm ci
 - Depends on: T24, T25, T26, T27, T28, T29, T30, T31
 - Goal: Make the whole picture set consistent and correct, then generate and commit every final image.
 - Context: docs/content-guide.md, docs/content-review.md (style of previous reviews), `plans/003-image-coverage.json`, Decisions of T24–T27 in this plan (words switched to custom, shared icons, words left without picture). Run `npm run images`, then render a contact sheet PNG (outside the repo) of every referenced picture with its Italian word, on light and dark surfaces, and look at it with the Read tool: fix wrong or misleading mappings, redraw custom SVGs that clash with the Fluent style or do not read at 80px, draw any custom key still missing (or remove that `image`), and flag near-black pictures for the dark backdrop if the pipeline missed them. Never rename or delete ids.
-- Scope: may touch `content/it/**` (only `image`/avatar fields), `assets/images/custom/**`, `public/images/**`, `docs/content-review.md`, `docs/content-guide.md` / must not touch `src/**`.
+- Scope: may touch `content/it/**` (only `image`/avatar fields), `assets/images/custom/**`, `assets/images/backdrop.json` (manual dark/light backdrop overrides), `public/images/**`, `docs/content-review.md`, `docs/content-guide.md` / must not touch `src/**`.
 - Done when:
   - Fixes applied and appended to docs/content-review.md (categories with counts; total pictured words; final size of `public/images/`).
   - `npm run content:check -- --strict-images` → exit 0 and `npm run content:check -- --strict-audio` → exit 0.
@@ -146,6 +146,11 @@ Worktree setup: npm ci
 - 2026-10-01 plan: precache grows < 0.5 MB (measured: 122 Fluent icons ≈ 140 KB raw); everything precached, no cap. (orchestrator)
 - 2026-10-01 plan: coverage file `plans/003-image-coverage.json` (read only for agents) fixes the custom slugs so T24 and T25–T27 run in parallel without coordination; drawing tasks never run `npm run images` (T32 does). Run every ready task at once (max speed). (orchestrator)
 
+- 2026-10-01 T23: no image manifest; near-black detection via @resvg/resvg-js (≥60% painted area luminance < 0.07) writes `data-backdrop="dark"` into the SVG, manual overrides in assets/images/backdrop.json; dialogue avatars as dialogue-level `avatars` map keyed by native turn name; content:check validates every file in assets/images/custom (bad name/non-SVG/scripts = error; viewBox/text/raster/>6 KB = warning); --strict-images also errors on unreferenced public/images files; dark backdrop = bg-ink/45 + mix-blend-screen on bg-surface. (agent)
+- 2026-10-01 orchestrator: T23 first integration failed only because main lacked the new devDependencies; installed them on main and merged. Added assets/images/backdrop.json to T32 scope. (orchestrator)
+
 ## Proposals (new scope)
 
 ## Log
+- 2026-10-01 16:10 T23 launched · attempt 1 · agent a4034505d63a1bf0f
+- 2026-10-01 16:24 T23 done · branch worktree-agent-a4034505d63a1bf0f → 0a37a7e
