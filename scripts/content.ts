@@ -5,6 +5,12 @@
  *   npm run content:check   validate only; exit 1 on any error
  *   npm run content:build   validate + write src/lib/content/generated/packs.json
  *   npm run content:check -- --strict-audio   also fail when a playable has no mp3 (npm run audio)
+ *   npm run content:check -- --strict-images  also fail when a referenced picture is missing from
+ *                                             public/images/ or stale (npm run images)
+ *
+ * Pictures: vocab `image` / dialogue `avatars` resolve to `{ src, dark? }` only when the file
+ * exists in public/images/ (scripts/images/plan.ts). Unknown Fluent icons are errors; custom
+ * drawings that do not exist yet are ⚠ warnings.
  *
  * Layout per pack: pack.json, units/*.json, dialogues/*.json, extras/*.json, stories/*.json
  * (see docs/content-guide.md). Guideline misses (story length, counts) print as ⚠ warnings only.
@@ -13,6 +19,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import { join, relative } from "node:path";
 import { buildPack, packStats, type SourceFile } from "../src/lib/content/build";
 import { checkAudio } from "./audio/plan";
+import { checkImageKeys, checkImages, imageResolver } from "./images/plan";
 import type { Pack } from "../src/lib/content/types";
 
 // npm scripts always run from the repo root.
@@ -22,6 +29,7 @@ const OUT = join(ROOT, "src/lib/content/generated/packs.json");
 
 const mode = process.argv[2] ?? "check";
 const strictAudio = process.argv.includes("--strict-audio");
+const strictImages = process.argv.includes("--strict-images");
 if (mode !== "check" && mode !== "build") {
   console.error(`Unknown mode "${mode}". Use "check" or "build".`);
   process.exit(2);
@@ -72,9 +80,17 @@ for (const lang of langs) {
     dialogues: readDir(join(dir, "dialogues"), readErrors),
     extras: readDir(join(dir, "extras"), readErrors),
     stories: readDir(join(dir, "stories"), readErrors),
+    resolveImage: imageResolver(ROOT),
   });
-  for (const w of warnings) console.warn(`⚠ ${w}`);
-  const all = [...readErrors, ...errors, ...(pack && strictAudio ? checkAudio(pack, ROOT) : [])];
+  const images = pack ? checkImageKeys(pack, ROOT) : { errors: [], warnings: [] };
+  for (const w of [...warnings, ...images.warnings]) console.warn(`⚠ ${w}`);
+  const all = [
+    ...readErrors,
+    ...errors,
+    ...images.errors,
+    ...(pack && strictAudio ? checkAudio(pack, ROOT) : []),
+    ...(pack && strictImages ? checkImages(pack, ROOT) : []),
+  ];
   if (all.length || !pack) {
     failed = true;
     console.error(`✗ content/${lang}: ${all.length} error(s)`);

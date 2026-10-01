@@ -3,12 +3,29 @@
  *
  *   import { getPack, getLesson, getLessonItems } from "@/lib/content";
  *
+ * Pictures: `listVocab({ situation, withImage: true })`, `getVocab(id)`, `hasImage(item)`; each
+ * pictured vocab has `image: { src, dark? }` (pass it to `<Picture>` from `@/components/ui`).
+ * Dialogue speakers: `turn.avatar` on native turns, or `getDialogueSpeakers(dialogue)`.
+ *
  * Works in server and client components (synchronous, no fetch). The data comes from
  * `./generated/packs.json`, written by `npm run content:build` (runs automatically before dev,
  * build and typecheck; git-ignored). Never import JSON from `content/` directly.
  */
 import bundle from "./generated/packs.json";
-import type { Dialogue, Lesson, LessonItem, Pack, Playable, Situation, Story, StoryKeyword, Unit } from "./types";
+import type {
+  Dialogue,
+  ImageRef,
+  Lesson,
+  LessonItem,
+  Pack,
+  PicturedVocab,
+  Playable,
+  Situation,
+  Story,
+  StoryKeyword,
+  Unit,
+  Vocab,
+} from "./types";
 
 export type * from "./types";
 export { audioKey } from "./keys";
@@ -149,4 +166,59 @@ export function getStoryKeywords(story: Story, pack: Pack = getPack()): StoryKey
   return story.keywords
     .map((id) => items.get(id))
     .filter((x): x is StoryKeyword => x !== undefined && (x.kind === "vocab" || x.kind === "phrase" || x.kind === "expression"));
+}
+
+// ---------------------------------------------------------------------------------------------
+// Vocabulary and pictures
+// ---------------------------------------------------------------------------------------------
+
+export interface ListVocabOptions {
+  /** Only words of this situation id (pack.json `situations`). */
+  situation?: string;
+  /** Only words that have a picture (`image` present: its file exists in public/images/). */
+  withImage?: boolean;
+}
+
+/**
+ * Vocabulary in pack order (unit files by name, then extras, then inline story key words),
+ * optionally filtered by situation and/or to pictured words. With `withImage: true` the result is
+ * typed `PicturedVocab[]` (`image` is guaranteed). Several words may share one picture: compare
+ * `image.src` when you need options that look different.
+ *
+ *   listVocab({ situation: "bar", withImage: true })
+ */
+export function listVocab(options: ListVocabOptions & { withImage: true }, pack?: Pack): PicturedVocab[];
+export function listVocab(options?: ListVocabOptions, pack?: Pack): Vocab[];
+export function listVocab({ situation, withImage }: ListVocabOptions = {}, pack: Pack = getPack()): Vocab[] {
+  return pack.vocab.filter((v) => (!situation || v.situation === situation) && (!withImage || v.image));
+}
+
+/** Vocab item by id (with its `image` when it has one), or undefined for unknown / non-vocab ids. */
+export function getVocab(id: string, pack: Pack = getPack()): Vocab | undefined {
+  const item = index(pack).items.get(id);
+  return item?.kind === "vocab" ? item : undefined;
+}
+
+/**
+ * Type guard: the item is vocab with a picture. Works on any lesson item / story key word, e.g.
+ * `getLessonItems(lesson).filter(hasImage)` → `PicturedVocab[]`.
+ */
+export function hasImage(item: LessonItem | StoryKeyword | undefined): item is PicturedVocab {
+  return item?.kind === "vocab" && item.image !== undefined;
+}
+
+export interface DialogueSpeaker {
+  /** Native turn `name` ("Camarero"). */
+  name: string;
+  /** Avatar picture, when the dialogue sets one and its file exists. */
+  avatar?: ImageRef;
+}
+
+/** The dialogue's named native speakers in order of appearance, each with its avatar if any. */
+export function getDialogueSpeakers(dialogue: Dialogue): DialogueSpeaker[] {
+  const out = new Map<string, DialogueSpeaker>();
+  for (const t of dialogue.turns) {
+    if (t.speaker === "native" && t.name && !out.has(t.name)) out.set(t.name, { name: t.name, avatar: t.avatar });
+  }
+  return [...out.values()];
 }
