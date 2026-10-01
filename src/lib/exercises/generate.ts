@@ -6,11 +6,27 @@
  * teaching order, then one "match the pairs", then production (tiles, fill the gap, dictation,
  * say it aloud) in shuffled order. Grammar cards become ungraded tip steps. Sicilian expressions
  * are recognition-only.
+ *
+ * Pictures: vocab words with an `image` can also get "pick the picture" exercises (Spanish prompt or
+ * Italian audio only), and the match uses pictures when >= 3 lesson words have one. With `known`,
+ * a new-word card comes before the first exercise of each vocab word never seen before.
  */
-import { getLessonItems, type Expression, type Lesson, type LessonItem, type Pack, type Phrase, type QA, type Vocab } from "@/lib/content";
+import {
+  getLessonItems,
+  hasImage,
+  listVocab,
+  type Expression,
+  type Lesson,
+  type LessonItem,
+  type Pack,
+  type Phrase,
+  type PicturedVocab,
+  type QA,
+  type Vocab,
+} from "@/lib/content";
 import { normalizeAnswer, toTiles } from "./normalize";
 import { createRng, type Rng } from "./random";
-import type { ChoiceOption, Exercise, ExerciseType, GrammarStep, MatchPair, SessionStep } from "./types";
+import type { ChoiceOption, Exercise, ExerciseType, GrammarStep, IntroStep, MatchPair, PictureOption, SessionStep } from "./types";
 
 export interface GenerateOptions {
   seed: string;
@@ -18,6 +34,11 @@ export interface GenerateOptions {
   speaking?: boolean;
   /** Graded exercises wanted; defaults to 10 (short lessons) or 12. */
   size?: number;
+  /**
+   * Whether the learner has seen an item before (progress / SRS). When given, each vocab word
+   * that is not known gets a new-word intro step before its first exercise.
+   */
+  known?: (itemId: string) => boolean;
 }
 
 type Meaningful = Phrase | Vocab | Expression;
@@ -27,6 +48,11 @@ const MAX_TILE_WORDS = 10;
 const MAX_DICTATION_WORDS = 7;
 const MATCH_PAIRS = 5;
 const MIN_MATCH_PAIRS = 4;
+const PICTURE_MATCH_PAIRS = 4;
+const MIN_PICTURE_MATCH_PAIRS = 3;
+/** Picture cards per picture-choice exercise (2x2). */
+const PICTURE_OPTIONS = 4;
+const PICTURE_TYPES: ExerciseType[] = ["picture-choice", "picture-listen"];
 
 const wordsOf = (text: string) => toTiles(text).length;
 const isMeaningful = (i: LessonItem): i is Meaningful =>
@@ -47,12 +73,14 @@ export function generateSession(lesson: Lesson, pack: Pack, options: GenerateOpt
   const ctx = new Ctx(rng, pack, items);
   const target = options.size ?? defaultSessionSize(items.length);
 
-  // 1. Match the pairs: vocab first, then short phrases/expressions.
+  // 1. Match the pairs: with pictures when >= 3 lesson words have one; else vocab first, then
+  // short phrases/expressions, then pictured vocab (left for the picture exercises when possible).
   const matchPool = [
-    ...items.filter((i): i is Vocab => i.kind === "vocab"),
+    ...items.filter((i): i is Vocab => i.kind === "vocab" && !hasImage(i)),
     ...items.filter((i): i is Meaningful => (i.kind === "phrase" || i.kind === "expression") && wordsOf(i.text) <= 3),
+    ...items.filter(hasImage),
   ];
-  const match = ctx.match(matchPool);
+  const match = ctx.pictureMatch(items.filter(hasImage)) ?? ctx.match(matchPool);
   const matched = new Set(match?.itemIds ?? []);
   const slots = Math.max(1, target - (match ? 1 : 0));
 
@@ -90,7 +118,25 @@ export function generateSession(lesson: Lesson, pack: Pack, options: GenerateOpt
     const step: GrammarStep = { type: "grammar", key: `grammar:${card.id}`, card };
     steps.splice(insert, 0, step);
   }
-  return steps;
+
+  // 5. New words: an intro card before the first exercise that practises each unseen vocab word.
+  if (!options.known) return steps;
+  const vocab = new Map(items.filter((i): i is Vocab => i.kind === "vocab").map((i) => [i.id, i]));
+  const introduced = new Set<string>();
+  const out: SessionStep[] = [];
+  for (const step of steps) {
+    if (step.type !== "grammar" && step.type !== "intro") {
+      for (const id of step.itemIds) {
+        const word = vocab.get(id);
+        if (!word || introduced.has(id) || options.known(id)) continue;
+        introduced.add(id);
+        const intro: IntroStep = { type: "intro", key: `intro:${id}`, item: word };
+        out.push(intro);
+      }
+    }
+    out.push(step);
+  }
+  return out;
 }
 
 /** Generation state: rng, distractor pools and type counters (for variety). */
@@ -100,12 +146,19 @@ class Ctx {
   private n = 0;
   private meaningPool: Meaningful[];
   private wordPool: string[];
+  /** Pictured words for picture options: the lesson's, then the rest of the pack. */
+  private lessonPictured: PicturedVocab[];
+  private packPictured: PicturedVocab[];
 
   constructor(
     private rng: Rng,
     pack: Pack,
     private items: Practisable[],
   ) {
+    const lessonPicturedIds = new Set(items.filter(hasImage).map((i) => i.id));
+    this.lessonPictured = rng.shuffle(items.filter(hasImage));
+    // Not shuffled here (shuffled per use), so lessons without pictures get the same sessions as before.
+    this.packPictured = listVocab({ withImage: true }, pack).filter((v) => !lessonPicturedIds.has(v.id));
     const lessonMeaningful = items.filter(isMeaningful);
     const lessonIds = new Set(items.map((i) => i.id));
     const packMeaningful = [...pack.phrases, ...pack.vocab, ...pack.expressions].filter((i) => !lessonIds.has(i.id));
@@ -142,9 +195,14 @@ class Ctx {
     return shuffled.reduce((best, t) => (score(t) < score(best) ? t : best), shuffled[0]);
   }
 
+  /** Picture types for pictured vocab that has enough distinct pictures for the options. */
+  private pictureTypes(item: Practisable): ExerciseType[] {
+    return hasImage(item) && this.pictureDistractors(item).length >= PICTURE_OPTIONS - 1 ? PICTURE_TYPES : [];
+  }
+
   recognition(item: Practisable): Exercise {
     if (item.kind === "qa") return this.answer(item);
-    return this.build(item, this.choose(item, ["listen-meaning", "read-meaning"]));
+    return this.build(item, this.choose(item, ["listen-meaning", "read-meaning", ...this.pictureTypes(item)]));
   }
 
   production(item: Practisable, speaking: boolean): Exercise {
@@ -161,7 +219,7 @@ class Ctx {
       if (words <= MAX_DICTATION_WORDS) types.push("dictation");
       if (speaking) types.push("speak");
       // Single words: add recognition so the session stays varied.
-      if (types.length < 3) types.push("listen-meaning", "read-meaning");
+      if (types.length < 3) types.push("listen-meaning", "read-meaning", ...this.pictureTypes(item));
     }
     const type = this.choose(item, types);
     return item.kind === "qa" ? (type === "speak" ? this.speakQa(item) : this.answer(item)) : this.build(item, type);
@@ -222,9 +280,57 @@ class Ctx {
       }
       case "speak":
         return { type, key: this.key(type, ids), itemIds: ids, solution, audio: item, es: item.es };
+      case "picture-choice":
+      case "picture-listen": {
+        const distractors = hasImage(item) ? this.pictureDistractors(item) : [];
+        if (!hasImage(item) || distractors.length < PICTURE_OPTIONS - 1) return this.build(item, "read-meaning");
+        // Lesson distractors vary between exercises.
+        this.lessonPictured = rotate(this.lessonPictured, 1);
+        const option = (v: PicturedVocab, correct: boolean): PictureOption => ({
+          id: v.id,
+          text: v.text,
+          es: v.es,
+          image: v.image,
+          audio: v,
+          correct,
+        });
+        return {
+          type,
+          key: this.key(type, ids),
+          itemIds: ids,
+          solution,
+          audio: item,
+          es: item.es,
+          options: this.rng.shuffle([option(item, true), ...distractors.map((d) => option(d, false))]),
+        };
+      }
       default:
         return this.build(item, "read-meaning");
     }
+  }
+
+  /**
+   * Up to 3 pictured words that can stand next to `item` in a picture choice: same lesson first,
+   * then the same situation, then the pack; never the same picture, Italian text or meaning twice.
+   */
+  private pictureDistractors(item: PicturedVocab): PicturedVocab[] {
+    const srcs = new Set([item.image.src]);
+    const texts = new Set([normalizeAnswer(item.text, true)]);
+    const meanings = new Set([normalizeAnswer(item.es, true)]);
+    const sameSituation = this.packPictured.filter((v) => v.situation === item.situation);
+    const rest = this.packPictured.filter((v) => v.situation !== item.situation);
+    const out: PicturedVocab[] = [];
+    for (const v of [...this.lessonPictured, ...this.rng.shuffle(sameSituation), ...this.rng.shuffle(rest)]) {
+      if (out.length >= PICTURE_OPTIONS - 1) break;
+      const t = normalizeAnswer(v.text, true);
+      const m = normalizeAnswer(v.es, true);
+      if (v.id === item.id || srcs.has(v.image.src) || texts.has(t) || meanings.has(m)) continue;
+      srcs.add(v.image.src);
+      texts.add(t);
+      meanings.add(m);
+      out.push(v);
+    }
+    return out;
   }
 
   private meaningOptions(item: Meaningful): ChoiceOption[] {
@@ -272,6 +378,32 @@ class Ctx {
       solution: { text: reply.text, es: reply.es, audio: reply },
       audio: reply,
       es: reply.es,
+    };
+  }
+
+  /** Italian words and pictures: 3-4 pairs from the lesson's pictured words (distinct pictures). */
+  pictureMatch(pool: PicturedVocab[]): Exercise | undefined {
+    const pairs: MatchPair[] = [];
+    const srcs = new Set<string>();
+    const its = new Set<string>();
+    for (const item of this.rng.shuffle(pool)) {
+      if (pairs.length >= PICTURE_MATCH_PAIRS) break;
+      const it = normalizeAnswer(item.text, true);
+      if (srcs.has(item.image.src) || its.has(it)) continue;
+      srcs.add(item.image.src);
+      its.add(it);
+      pairs.push({ id: item.id, it: item.text, es: item.es, audio: item, image: item.image });
+    }
+    if (pairs.length < MIN_PICTURE_MATCH_PAIRS) return undefined;
+    const ids = pairs.map((p) => p.id);
+    return {
+      type: "match",
+      key: this.key("match", ids),
+      itemIds: ids,
+      solution: { text: pairs.map((p) => `${p.it} = ${p.es}`).join(" · ") },
+      pairs,
+      itOrder: this.rng.shuffle(ids),
+      esOrder: this.rng.shuffle(ids),
     };
   }
 

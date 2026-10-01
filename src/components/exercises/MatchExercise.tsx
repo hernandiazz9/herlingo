@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { Picture } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { MatchExercise as Match } from "@/lib/exercises";
 import { Prompt, usePlay, type ExerciseProps } from "./shared";
@@ -13,7 +14,10 @@ interface Pick {
 
 const FLASH_MS = 600;
 
-/** Tap an Italian word and its Spanish meaning (either order). Mistakes are recorded per item. */
+/**
+ * Tap an Italian word and its Spanish meaning (either order). Mistakes are recorded per item.
+ * When every pair has an `image`, the right column shows the pictures instead of the meanings.
+ */
 export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Match>) {
   const [selected, setSelected] = useState<Pick | null>(null);
   const [done, setDone] = useState<string[]>([]);
@@ -21,6 +25,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
   const mistakes = useRef(new Set<string>());
   const play = usePlay();
   const pairs = new Map(exercise.pairs.map((p) => [p.id, p]));
+  const pictures = exercise.pairs.every((p) => p.image);
 
   const tap = (pick: Pick) => {
     if (answered || done.includes(pick.id)) return;
@@ -46,6 +51,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
   };
 
   const cell = (side: Side, id: string, label: string) => {
+    const image = side === "es" && pictures ? pairs.get(id)!.image : undefined;
     const isDone = done.includes(id);
     const isSelected = selected?.side === side && selected.id === id;
     const isWrong = wrong.some((w) => w.side === side && w.id === id);
@@ -56,9 +62,11 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
         lang={side === "it" ? "it" : undefined}
         disabled={answered || isDone}
         aria-pressed={isSelected}
+        aria-label={image ? label : undefined}
         onClick={() => tap({ side, id })}
         className={cn(
-          "pressable min-h-16 rounded-button border-2 px-3 py-2 text-base font-bold leading-tight transition-colors",
+          "pressable rounded-button border-2 px-3 py-2 text-base font-bold leading-tight transition-colors",
+          pictures ? "flex min-h-28 items-center justify-center py-1" : "min-h-16",
           "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
           isDone && "border-success bg-success-soft text-success-deep opacity-60 [--ledge:transparent]",
           !isDone && isWrong && "border-error bg-error-soft text-error-deep [--ledge:var(--error)]",
@@ -66,14 +74,14 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
           !isDone && !isWrong && !isSelected && "border-line bg-surface text-ink [--ledge:var(--line)]",
         )}
       >
-        {label}
+        {image ? <Picture image={image} alt="" bordered={false} className="max-w-24" /> : label}
       </button>
     );
   };
 
   return (
     <div className="flex flex-col gap-6">
-      <Prompt>Une las parejas</Prompt>
+      <Prompt>{pictures ? "Une cada palabra con su imagen" : "Une las parejas"}</Prompt>
       <div className="grid grid-cols-2 gap-3">
         <div className="flex flex-col gap-3">{exercise.itOrder.map((id) => cell("it", id, pairs.get(id)!.it))}</div>
         <div className="flex flex-col gap-3">{exercise.esOrder.map((id) => cell("es", id, pairs.get(id)!.es))}</div>

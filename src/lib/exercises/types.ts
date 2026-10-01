@@ -1,4 +1,4 @@
-import type { GrammarCard, Playable } from "@/lib/content";
+import type { GrammarCard, ImageRef, Playable, Vocab } from "@/lib/content";
 
 export type ExerciseType =
   | "listen-meaning"
@@ -8,7 +8,9 @@ export type ExerciseType =
   | "dictation"
   | "answer"
   | "match"
-  | "speak";
+  | "speak"
+  | "picture-choice"
+  | "picture-listen";
 
 /** What the feedback sheet shows as the right answer. */
 export interface Solution {
@@ -92,9 +94,11 @@ export interface MatchPair {
   it: string;
   es: string;
   audio: Playable;
+  /** Set on every pair of a picture match: the right column shows pictures instead of `es`. */
+  image?: ImageRef;
 }
 
-/** Match Italian and Spanish pairs. */
+/** Match Italian and Spanish pairs (or Italian words and pictures, when the pairs have `image`). */
 export interface MatchExercise extends Base {
   type: "match";
   pairs: MatchPair[];
@@ -110,6 +114,29 @@ export interface SpeakExercise extends Base {
   es: string;
 }
 
+/** A picture card of a picture-choice exercise (a pictured vocab word). */
+export interface PictureOption {
+  id: string;
+  /** Italian word as spoken ("il caffè"), written under the picture. */
+  text: string;
+  es: string;
+  image: ImageRef;
+  audio: Playable;
+  correct: boolean;
+}
+
+/**
+ * Pick the picture among 4 (2×2). `picture-choice`: prompt in Spanish, cards show picture +
+ * Italian word (tap = audio). `picture-listen`: Italian audio only, the words show once checked.
+ */
+export interface PictureChoiceExercise extends Base {
+  type: "picture-choice" | "picture-listen";
+  /** The word asked (Italian audio). */
+  audio: Playable;
+  es: string;
+  options: PictureOption[];
+}
+
 export type Exercise =
   | ListenMeaningExercise
   | ReadMeaningExercise
@@ -118,7 +145,8 @@ export type Exercise =
   | DictationExercise
   | AnswerExercise
   | MatchExercise
-  | SpeakExercise;
+  | SpeakExercise
+  | PictureChoiceExercise;
 
 /** Ungraded tip shown inside the session (lesson grammar cards). */
 export interface GrammarStep {
@@ -127,7 +155,14 @@ export interface GrammarStep {
   card: GrammarCard;
 }
 
-export type SessionStep = Exercise | GrammarStep;
+/** Ungraded new-word card shown before the first exercise that practises a vocab word never seen before. */
+export interface IntroStep {
+  type: "intro";
+  key: string;
+  item: Vocab;
+}
+
+export type SessionStep = Exercise | GrammarStep | IntroStep;
 
 /** What an exercise reports when answered. */
 export interface ExerciseOutcome {

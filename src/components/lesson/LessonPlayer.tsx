@@ -2,10 +2,10 @@
 
 import { useRouter } from "next/navigation";
 import { useRef, useState, useSyncExternalStore } from "react";
-import { CloseIcon, ExerciseView, GrammarTip, LessonLangContext } from "@/components/exercises";
+import { CloseIcon, ExerciseView, GrammarTip, LessonLangContext, WordIntro } from "@/components/exercises";
 import { Button, Card, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { DEFAULT_LANG, getLesson, getPack, getUnit, type Lesson } from "@/lib/content";
+import { DEFAULT_LANG, getLesson, getPack, getUnit, type Lesson, type Pack } from "@/lib/content";
 import {
   buildResult,
   generateSession,
@@ -15,6 +15,7 @@ import {
   type LessonResult,
   type SessionStep,
 } from "@/lib/exercises";
+import { getProgress, type Progress } from "@/lib/progress";
 import { getSettings } from "@/lib/progress/settings";
 import {
   isSpeakingPaused,
@@ -95,13 +96,20 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, see
   const autoplay = (e: Entry | undefined) => {
     const s = e?.step;
     if (!s) return;
-    if (s.type === "listen-meaning" || s.type === "dictation") void speak(s.audio, { lang });
+    if (s.type === "listen-meaning" || s.type === "dictation" || s.type === "picture-listen") void speak(s.audio, { lang });
     else if (s.type === "answer") void speak(s.question, { lang });
+    else if (s.type === "intro") void speak(s.item, { lang });
   };
 
   const start = () => {
     const s = seed ?? String(now());
-    const steps = generateSession(lesson, pack, { seed: s, speaking: getSettings().speaking && !isSpeakingPaused(), size: sessionSize });
+    const known = knownItems(getProgress(lang), pack);
+    const steps = generateSession(lesson, pack, {
+      seed: s,
+      speaking: getSettings().speaking && !isSpeakingPaused(),
+      size: sessionSize,
+      known: (id) => known.has(id),
+    });
     const q = steps.map((step) => ({ step, attempt: 0, uid: step.key }));
     run.current = { seed: s, startedAt: now(), firstTry: new Set(), items: new Map() };
     setQueue(q);
@@ -146,7 +154,7 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, see
   };
 
   const answer = (o: ExerciseOutcome) => {
-    if (!entry || entry.step.type === "grammar" || outcome) return;
+    if (!entry || entry.step.type === "grammar" || entry.step.type === "intro" || outcome) return;
     const step = entry.step;
     recordOutcome(run.current.items, step, o);
     if (entry.attempt === 0 && o.correct && !o.wrongItemIds?.length) run.current.firstTry.add(step.key);
@@ -244,6 +252,8 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, see
             {entry ? (
               entry.step.type === "grammar" ? (
                 <GrammarTip key={entry.uid} card={entry.step.card} onContinue={() => advance(queue, pos + 1)} />
+              ) : entry.step.type === "intro" ? (
+                <WordIntro key={entry.uid} item={entry.step.item} onContinue={() => advance(queue, pos + 1)} />
               ) : (
                 <>
                   {entry.attempt > 0 ? (
@@ -266,7 +276,7 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, see
             {phase.name === "done" ? <LessonDone result={phase.result} onContinue={leave} onRepeat={start} /> : null}
           </div>
 
-          {entry && entry.step.type !== "grammar" && outcome ? (
+          {entry && entry.step.type !== "grammar" && entry.step.type !== "intro" && outcome ? (
             <FeedbackSheet exercise={entry.step} outcome={outcome} seq={pos} onContinue={next} />
           ) : null}
           {confirmExit ? (
@@ -288,11 +298,24 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, see
 function countedKeys(q: Entry[], skipped: string[], resolved: string[]): Set<string> {
   const keys = new Set<string>();
   for (const e of q) {
-    if (e.step.type === "grammar") continue;
+    if (e.step.type === "grammar" || e.step.type === "intro") continue;
     if (skipped.includes(e.step.key) && !resolved.includes(e.step.key)) continue;
     keys.add(e.step.key);
   }
   return keys;
+}
+
+/**
+ * Items the learner has already met: anything with a spaced-repetition entry (practised, or in a
+ * lesson played to the end) plus the items of lessons marked done (e.g. by the placement test).
+ */
+function knownItems(p: Progress, pack: Pack): Set<string> {
+  const known = new Set(Object.keys(p.srs));
+  for (const id of Object.keys(p.lessons)) {
+    const done = getLesson(id, pack);
+    if (done) for (const itemId of done.items) known.add(itemId);
+  }
+  return known;
 }
 
 function formatDuration(ms: number): string {
