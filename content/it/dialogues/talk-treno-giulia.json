@@ -6,6 +6,7 @@
   "unit": "talk-chiacchiere",
   "order": 30,
   "register": "tu",
+  "avatars": { "Giulia": "fluent:woman-curly-hair" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Giulia", "text": "Scusa, sei spagnolo? Ti ho sentito parlare al telefono.", "es": "Perdona, ¿eres español? Te he oído hablar por teléfono.", "voice": "it-IT-IsabellaNeural" },
     {

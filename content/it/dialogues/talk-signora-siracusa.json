@@ -6,6 +6,7 @@
   "unit": "talk-io",
   "order": 31,
   "register": "lei",
+  "avatars": { "Signora": "fluent:old-woman" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Signora", "text": "Lei non è di qui, vero?", "es": "Usted no es de aquí, ¿verdad?", "voice": "it-IT-IsabellaNeural" },
     {

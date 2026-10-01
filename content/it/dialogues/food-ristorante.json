@@ -6,6 +6,7 @@
   "unit": "food",
   "order": 44,
   "register": "lei",
+  "avatars": { "Camarero": "fluent:man-in-tuxedo" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Camarero", "text": "Buonasera! Quanti siete?", "es": "¡Buenas noches! ¿Cuántos sois?", "voice": "it-IT-DiegoNeural" },
     {

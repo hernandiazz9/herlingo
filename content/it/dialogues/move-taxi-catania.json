@@ -6,6 +6,7 @@
   "unit": "move-strada",
   "order": 25,
   "register": "lei",
+  "avatars": { "Tassista": "fluent:man-beard" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Tassista", "text": "Buonasera! Dove La porto?", "es": "¡Buenas tardes! ¿Adónde le llevo?", "voice": "it-IT-DiegoNeural" },
     {

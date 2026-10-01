@@ -6,6 +6,7 @@
   "unit": "move-treno",
   "order": 21,
   "register": "lei",
+  "avatars": { "Controllore": "fluent:man-police-officer" },
   "turns": [
     { "id": "n1", "speaker": "native", "name": "Controllore", "text": "Buongiorno, biglietto prego.", "es": "Buenos días, billete, por favor.", "voice": "it-IT-DiegoNeural" },
     {
