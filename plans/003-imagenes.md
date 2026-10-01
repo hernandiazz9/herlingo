@@ -88,7 +88,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T29 — Pictures in game mode
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T23
 - Goal: Bring pictured words into the game: word cards in Descubrir and picture questions in the 60-second round.
 - Context: T23 API: `listVocab({ situation?, withImage? })` (withImage → `PicturedVocab[]`), `getVocab(id)`, `hasImage(item)`, `getDialogueSpeakers(dialogue)`, `ImageRef { src; dark? }`; `<Picture image alt size="grid"|"intro"|"avatar" bordered? className? />` from `@/components/ui`. Sample pictured words: food.caffe, cornetto, limone, panino (bar), food.vino, pesce, melanzane, uova (restaurante). CLAUDE.md, `src/lib/game/index.ts` (topics = situations with phrases, `buildDeck`, `makeQuestion`, known cards in `lang-lern:game:<lang>`), `src/components/game/{GameView,Discover,Round}.tsx`, `recordActivity` in `src/lib/progress/activity.ts`, `listVocab({ situation, withImage: true })` and `Picture` from T23. Decided with Hernán: inside each topic (and Mezcla) Descubrir deals the topic's pictured words first (card: big picture, Italian word with audio, Spanish), then phrases, same "La sé" / "Otra vez"; the round adds two question kinds for pictured words — "Escucha y elige la imagen" (audio → 2×2 pictures) and "¿Cuál es «el café»?" (Spanish → 2×2 pictures) — mixed with the existing ones; options never share the same image `src`. A topic with pictured words but no phrases becomes playable. Build against T23's sample words.
@@ -97,7 +97,7 @@ Worktree setup: npm ci
   - Descubrir and the round show picture cards/questions for topics with pictured words; scoring, combo, records, XP and SRS outcomes work for them like for phrases.
   - Both themes checked by eye on `npm run dev`.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Descubrir deals pictured words first; round adds audio→picture and «¿Cuál es…?» 2×2 questions; XP/records/SRS for vocab · 2111249
 
 ## T30 — "Palabras" view in the Frasario and pictures in story keywords
 - Status: done
@@ -157,6 +157,8 @@ Worktree setup: npm ci
 
 - 2026-10-01 T26: tabaccheria/tabaccaio = blue "T" sign drawn as rectangles; pullman/corriera same coach (blue vs red stripe); some parts reuse simplified Fluent shapes (MIT); thin white strokes only on uscita and pulsante. (agent)
 
+- 2026-10-01 T29: deck = up to 5 pictured words first (more if few phrases), unknown first; pictured words always get a picture question (text fallback if < 4 distinct pictures); options never repeat image/text; Italian word revealed under right/tapped picture after answering; aria labels never give the answer; 2×2 grid max 320px; topic shows "N frases · M palabras"; copy tweaks in grid/round intro and progress label. (agent)
+
 ## Proposals (new scope)
 - 2026-10-01 T30: PhraseList still hard-codes lang="it" on phrase text (pre-existing).
 
@@ -175,3 +177,4 @@ Worktree setup: npm ci
 - 2026-10-01 16:31 T31 done · branch worktree-agent-a652261d7b5224990 → 6b8268e
 - 2026-10-01 16:33 T30 done · branch worktree-agent-acfe4d2f3a7bd6810 → d8c88b6
 - 2026-10-01 16:34 T26 done · branch worktree-agent-a17fc5850203554b5 → e7840a9
+- 2026-10-01 16:35 T29 done · branch worktree-agent-a4dd3c936af9cf64f → 2111249
