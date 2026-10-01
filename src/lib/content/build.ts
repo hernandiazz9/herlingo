@@ -9,7 +9,6 @@ import type {
   Dialogue,
   Expression,
   GrammarCard,
-  ImageRef,
   LessonItemKind,
   Pack,
   Phrase,
@@ -58,12 +57,6 @@ export interface PackSources {
   dialogues: SourceFile[];
   extras: SourceFile[];
   stories: SourceFile[];
-  /**
-   * Resolves a picture key to its public file (`scripts/content.ts` reads
-   * `public/images/manifest.json`). Returns undefined when the file does not exist yet: the item
-   * then simply has no `image`. Omitted = no pictures resolved.
-   */
-  resolveImage?: (key: string) => ImageRef | undefined;
 }
 
 export interface BuildResult {
@@ -123,21 +116,16 @@ export function buildPack(src: PackSources): BuildResult {
   const expressions: Expression[] = [];
   const placement: PlacementQuestion[] = [];
 
-  const resolveImage = (key: string | undefined) => (key ? src.resolveImage?.(key) : undefined);
-
   const addVocab = (file: string, v: z.infer<typeof S.Vocab>) => {
     const where = `${file}: vocab "${v.id}"`;
     claim(v.id, "vocab", file);
     checkSituation(v.situation, where);
-    const { image: imageKey, ...rest } = v;
     vocab.push({
-      ...rest,
+      ...v,
       kind: "vocab",
       text: vocabText(v.word, v.article),
       audioKey: audioKey(v.id),
       voice: checkVoice(v.voice, where),
-      imageKey,
-      image: resolveImage(imageKey),
     });
   };
 
@@ -230,12 +218,7 @@ export function buildPack(src: PackSources): BuildResult {
       if (turnIds.has(t.id)) errors.push(`${where}: duplicate turn id "${t.id}"`);
       turnIds.add(t.id);
       if (t.speaker === "native") {
-        return {
-          ...t,
-          audioKey: audioKey(d.id, t.id),
-          voice: checkVoice(t.voice, `${where} turn "${t.id}"`),
-          avatar: resolveImage(t.name ? d.avatars?.[t.name] : undefined),
-        };
+        return { ...t, audioKey: audioKey(d.id, t.id), voice: checkVoice(t.voice, `${where} turn "${t.id}"`) };
       }
       if (!t.options.some((o) => o.verdict === "correct")) {
         errors.push(`${where}: learner turn "${t.id}" needs at least one "correct" option`);
@@ -246,10 +229,6 @@ export function buildPack(src: PackSources): BuildResult {
       };
     });
     if (!turns.some((t) => t.speaker === "learner")) errors.push(`${where}: needs at least one learner turn`);
-    const names = new Set(d.turns.flatMap((t) => (t.speaker === "native" && t.name ? [t.name] : [])));
-    for (const name of Object.keys(d.avatars ?? {})) {
-      if (!names.has(name)) errors.push(`${where}: avatar for "${name}", which is not the name of a native turn`);
-    }
     dialogues.push({ ...d, turns });
   }
 
@@ -429,6 +408,5 @@ export function packStats(p: Pack) {
     placement: p.placement.length,
     stories: p.stories.length,
     explanations: p.phrases.filter((x) => x.explanation).length,
-    pictures: p.vocab.filter((x) => x.image).length,
   };
 }
