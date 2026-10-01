@@ -8,7 +8,6 @@
  * See docs/content-guide.md for the human-readable version of this contract.
  */
 import { z } from "zod";
-import { IMAGE_KEY_PATTERN } from "./keys";
 
 /** Stable id: lowercase ascii, words joined by single "-" or "." (e.g. `tren.biglietto-per`). */
 export const ID_PATTERN = /^[a-z0-9]+(?:[-.][a-z0-9]+)*$/;
@@ -17,14 +16,6 @@ export const Id = z.string().regex(ID_PATTERN, "id must be lowercase a-z0-9 join
 /** Non-empty text after trimming. */
 export const Text = z.string().trim().min(1, "must not be empty");
 export const Tags = z.array(Id).default([]);
-
-/**
- * Picture key: `fluent:<icon>` (Fluent Emoji Flat icon name) or `custom:<slug>` (drawing in
- * `assets/images/custom/<slug>.svg`). See docs/content-guide.md, "Pictures".
- */
-export const ImageKey = z
-  .string()
-  .regex(IMAGE_KEY_PATTERN, 'image must be "fluent:<icon-name>" or "custom:<slug>" (lowercase a-z0-9 joined by single "-")');
 
 /** Italian (target-language) register: tu = informal, lei = formal, neutral = either. */
 export const Register = z.enum(["tu", "lei", "neutral"]);
@@ -102,8 +93,6 @@ export const Vocab = z.object({
   situation: Id.optional(),
   tags: Tags,
   voice: Text.optional(),
-  /** Picture key (`fluent:<icon>` | `custom:<slug>`), only for drawable words. */
-  image: ImageKey.optional(),
 });
 
 export const Reply = z.object({
@@ -257,11 +246,6 @@ export const DialogueFile = z.object({
   /** Sort key inside the dialogues list (defaults to 0, ties sorted by id). */
   order: z.number().int().min(0).default(0),
   register: Register,
-  /**
-   * Speaker avatars: native turn `name` → picture key (`fluent:man-cook`). Every key must be the
-   * `name` of a native turn of this dialogue. The learner has no avatar.
-   */
-  avatars: z.record(z.string().min(1), ImageKey).optional(),
   turns: z.array(z.discriminatedUnion("speaker", [NativeTurn, LearnerTurn])).min(2),
 });
 

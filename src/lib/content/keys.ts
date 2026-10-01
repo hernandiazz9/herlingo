@@ -22,25 +22,3 @@ export function vocabText(word: string, article?: string): string {
   if (!article) return word;
   return article.endsWith("'") || article.endsWith("’") ? `${article}${word}` : `${article} ${word}`;
 }
-
-/**
- * Picture keys (vocab `image`, dialogue `avatars`): `fluent:<icon>` (Microsoft Fluent Emoji Flat
- * icon name, e.g. `fluent:hot-beverage`) or `custom:<slug>` (our own drawing,
- * `assets/images/custom/<slug>.svg`; slug = vocab id with dots → dashes, e.g. `custom:food-cannolo`).
- * `npm run images` writes the file to `public/images/<source>/<name>.svg`.
- */
-export const IMAGE_SOURCES = ["fluent", "custom"] as const;
-export type ImageSource = (typeof IMAGE_SOURCES)[number];
-export const IMAGE_KEY_PATTERN = /^(fluent|custom):([a-z0-9]+(?:-[a-z0-9]+)*)$/;
-
-/** `{ source, name }` of a picture key, or null if it is malformed. */
-export function parseImageKey(key: string): { source: ImageSource; name: string } | null {
-  const m = IMAGE_KEY_PATTERN.exec(key);
-  return m ? { source: m[1] as ImageSource, name: m[2] } : null;
-}
-
-/** Path of a picture inside `public/images/` ("fluent/hot-beverage.svg"), or null if malformed. */
-export function imageFile(key: string): string | null {
-  const k = parseImageKey(key);
-  return k ? `${k.source}/${k.name}.svg` : null;
-}

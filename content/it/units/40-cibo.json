@@ -310,9 +310,9 @@
     { "id": "food.era-tutto-buonissimo", "text": "Era tutto buonissimo, grazie!", "es": "¡Estaba todo buenísimo, gracias!", "explanation": "Al despedirte del camarero o del cocinero. Marca las dobles: TUT-to buo-NIS-si-mo.", "register": "neutral", "situation": "restaurante" }
   ],
   "vocab": [
-    { "id": "food.caffe", "word": "caffè", "article": "il", "gender": "m", "es": "el café (expreso)", "example": "food.un-caffe", "situation": "bar", "image": "fluent:hot-beverage" },
+    { "id": "food.caffe", "word": "caffè", "article": "il", "gender": "m", "es": "el café (expreso)", "example": "food.un-caffe", "situation": "bar" },
     { "id": "food.cappuccino", "word": "cappuccino", "article": "il", "gender": "m", "es": "el capuchino", "notes": "Los italianos solo lo toman por la mañana.", "example": "food.cappuccino-e-cornetto", "situation": "bar" },
-    { "id": "food.cornetto", "word": "cornetto", "article": "il", "gender": "m", "es": "el cruasán", "notes": "Vacío («vuoto») o relleno: crema, chocolate, pistacho…", "example": "food.cappuccino-e-cornetto", "situation": "bar", "image": "fluent:croissant" },
+    { "id": "food.cornetto", "word": "cornetto", "article": "il", "gender": "m", "es": "el cruasán", "notes": "Vacío («vuoto») o relleno: crema, chocolate, pistacho…", "example": "food.cappuccino-e-cornetto", "situation": "bar" },
     { "id": "food.latte", "word": "latte", "article": "il", "gender": "m", "es": "la leche", "notes": "«Un latte» es un vaso de leche; el café con leche es «un caffellatte».", "situation": "bar" },
     { "id": "food.decaffeinato", "word": "decaffeinato", "article": "il", "gender": "m", "es": "el descafeinado", "notes": "Abreviado: «un deca».", "situation": "bar" },
     { "id": "food.zucchero", "word": "zucchero", "article": "lo", "gender": "m", "es": "el azúcar", "situation": "bar" },
@@ -329,7 +329,7 @@
     { "id": "food.gusto", "word": "gusto", "article": "il", "gender": "m", "es": "el sabor", "example": "food.che-gusti", "situation": "bar" },
     { "id": "food.pistacchio", "word": "pistacchio", "article": "il", "gender": "m", "es": "el pistacho", "notes": "El de Bronte, en las faldas del Etna, es famoso.", "situation": "bar" },
     { "id": "food.gelsi", "word": "gelsi", "article": "i", "gender": "m", "es": "las moras (de morera)", "notes": "Sabor clásico de granita en verano.", "example": "food.meta-e-meta", "situation": "bar" },
-    { "id": "food.limone", "word": "limone", "article": "il", "gender": "m", "es": "el limón", "situation": "bar", "image": "fluent:lemon" },
+    { "id": "food.limone", "word": "limone", "article": "il", "gender": "m", "es": "el limón", "situation": "bar" },
     { "id": "food.panna", "word": "panna", "article": "la", "gender": "f", "es": "la nata", "example": "food.con-panna", "situation": "bar" },
 
     { "id": "food.pasticceria", "word": "pasticceria", "article": "la", "gender": "f", "es": "la pastelería", "situation": "bar" },
@@ -344,7 +344,7 @@
     { "id": "food.ragu", "word": "ragù", "article": "il", "gender": "m", "es": "el ragú (salsa de carne)", "example": "food.arancina-al-ragu", "situation": "bar" },
     { "id": "food.burro", "word": "burro", "article": "il", "gender": "m", "es": "la mantequilla", "notes": "Ojo: no es un animal.", "example": "food.arancino-al-burro", "situation": "bar" },
     { "id": "food.sfincione", "word": "sfincione", "article": "lo", "gender": "m", "es": "el sfincione (pizza gruesa palermitana)", "example": "food.un-pezzo-di-sfincione", "situation": "bar" },
-    { "id": "food.panino", "word": "panino", "article": "il", "gender": "m", "es": "el bocadillo", "notes": "No es un panecillo: es un bocadillo.", "example": "food.panino-con-panelle", "situation": "bar", "image": "fluent:sandwich" },
+    { "id": "food.panino", "word": "panino", "article": "il", "gender": "m", "es": "el bocadillo", "notes": "No es un panecillo: es un bocadillo.", "example": "food.panino-con-panelle", "situation": "bar" },
     { "id": "food.panelle", "word": "panelle", "article": "le", "gender": "f", "es": "los buñuelos de garbanzo", "example": "food.panino-con-panelle", "situation": "bar" },
 
     { "id": "food.acqua", "word": "acqua", "article": "l'", "gender": "f", "es": "el agua", "example": "food.bottiglietta-d-acqua", "situation": "bar" },
@@ -352,7 +352,7 @@
     { "id": "food.frizzante", "word": "frizzante", "es": "con gas", "example": "food.frizzante-o-naturale", "situation": "restaurante" },
     { "id": "food.naturale", "word": "naturale", "es": "sin gas", "notes": "También «liscia».", "example": "food.frizzante-o-naturale", "situation": "restaurante" },
     { "id": "food.birra", "word": "birra", "article": "la", "gender": "f", "es": "la cerveza", "example": "food.birra-piccola", "situation": "bar" },
-    { "id": "food.vino", "word": "vino", "article": "il", "gender": "m", "es": "el vino", "notes": "Tinto = «rosso», blanco = «bianco».", "example": "food.mezzo-litro-di-vino", "situation": "restaurante", "image": "fluent:wine-glass" },
+    { "id": "food.vino", "word": "vino", "article": "il", "gender": "m", "es": "el vino", "notes": "Tinto = «rosso», blanco = «bianco».", "example": "food.mezzo-litro-di-vino", "situation": "restaurante" },
     { "id": "food.bicchiere", "word": "bicchiere", "article": "il", "gender": "m", "es": "el vaso / la copa", "example": "food.bicchiere-di-bianco", "situation": "restaurante" },
 
     { "id": "food.tavolo", "word": "tavolo", "article": "il", "gender": "m", "es": "la mesa", "example": "food.tavolo-per-due", "situation": "restaurante" },
@@ -366,9 +366,9 @@
     { "id": "food.antipasto", "word": "antipasto", "article": "l'", "gender": "m", "es": "el entrante", "example": "food.antipasto-da-dividere", "situation": "restaurante" },
     { "id": "food.caponata", "word": "caponata", "article": "la", "gender": "f", "es": "la caponata (verduras agridulces)", "notes": "Berenjena, apio, aceitunas y alcaparras en agridulce.", "situation": "restaurante" },
     { "id": "food.primo", "word": "primo", "article": "il", "gender": "m", "es": "el primer plato", "notes": "Normalmente pasta o risotto.", "example": "food.come-primo", "situation": "restaurante" },
-    { "id": "food.melanzane", "word": "melanzane", "article": "le", "gender": "f", "es": "las berenjenas", "notes": "Singular: «la melanzana».", "situation": "restaurante", "image": "fluent:eggplant" },
+    { "id": "food.melanzane", "word": "melanzane", "article": "le", "gender": "f", "es": "las berenjenas", "notes": "Singular: «la melanzana».", "situation": "restaurante" },
     { "id": "food.secondo", "word": "secondo", "article": "il", "gender": "m", "es": "el segundo plato", "notes": "Carne o pescado, normalmente sin guarnición.", "example": "food.come-secondo", "situation": "restaurante" },
-    { "id": "food.pesce", "word": "pesce", "article": "il", "gender": "m", "es": "el pescado", "notes": "También «el pez».", "situation": "restaurante", "image": "fluent:fish" },
+    { "id": "food.pesce", "word": "pesce", "article": "il", "gender": "m", "es": "el pescado", "notes": "También «el pez».", "situation": "restaurante" },
     { "id": "food.carne", "word": "carne", "article": "la", "gender": "f", "es": "la carne", "situation": "restaurante" },
     { "id": "food.pesce-spada", "word": "pesce spada", "article": "il", "gender": "m", "es": "el pez espada", "example": "food.come-secondo", "situation": "restaurante" },
     { "id": "food.contorno", "word": "contorno", "article": "il", "gender": "m", "es": "la guarnición", "notes": "Se pide aparte: ensalada, patatas, verduras.", "situation": "restaurante" },
@@ -379,7 +379,7 @@
     { "id": "food.glutine", "word": "glutine", "article": "il", "gender": "m", "es": "el gluten", "example": "food.senza-glutine", "situation": "restaurante", "tags": ["alergias"] },
     { "id": "food.lattosio", "word": "lattosio", "article": "il", "gender": "m", "es": "la lactosa", "example": "food.intollerante-lattosio", "situation": "restaurante", "tags": ["alergias"] },
     { "id": "food.frutti-di-mare", "word": "frutti di mare", "article": "i", "gender": "m", "es": "el marisco", "example": "food.contiene-frutti-di-mare", "situation": "restaurante", "tags": ["alergias"] },
-    { "id": "food.uova", "word": "uova", "article": "le", "gender": "f", "es": "los huevos", "notes": "Singular masculino: «l'uovo».", "situation": "restaurante", "tags": ["alergias"], "image": "fluent:egg" },
+    { "id": "food.uova", "word": "uova", "article": "le", "gender": "f", "es": "los huevos", "notes": "Singular masculino: «l'uovo».", "situation": "restaurante", "tags": ["alergias"] },
     { "id": "food.cipolla", "word": "cipolla", "article": "la", "gender": "f", "es": "la cebolla", "example": "food.senza-cipolla", "situation": "restaurante", "tags": ["alergias"] },
 
     { "id": "food.conto", "word": "conto", "article": "il", "gender": "m", "es": "la cuenta", "example": "food.il-conto", "situation": "restaurante", "tags": ["pagar"] },
