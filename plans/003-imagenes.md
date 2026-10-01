@@ -1,6 +1,6 @@
 # Plan 003 — Pictures for vocabulary
 
-Status: active
+Status: done
 Created: 2026-10-01
 Base branch: main
 Goal: Learn vocabulary faster with Duolingo-style pictures: flat illustrations for every drawable word (Microsoft Fluent Emoji Flat, MIT, plus custom SVGs drawn in the same style for the ~100 words it lacks), used in new lesson exercises (pick the picture from Spanish text or Italian audio, match pictures to Italian words, new-word intro card), in game mode (word cards in Descubrir, picture questions in the quick round), in a visual "Palabras" view inside the Frasario, in story keyword popovers, and as speaker avatars in dialogues. Everything stays offline (images precached, < 0.5 MB). MVP speed: no automated tests; verification is lint + content check + typecheck + build.
@@ -124,7 +124,7 @@ Worktree setup: npm ci
 - Outcome: 13 dialogues / 14 speakers with Fluent avatars (12 SVGs), WithAvatar beside bubbles and transcript · 6b8268e
 
 ## T32 — Picture review and final images
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T24, T25, T26, T27, T28, T29, T30, T31
 - Goal: Make the whole picture set consistent and correct, then generate and commit every final image.
 - Context: docs/content-guide.md, docs/content-review.md (style of previous reviews), `plans/003-image-coverage.json`, Decisions of T24–T27 in this plan (words switched to custom, shared icons, words left without picture). Run `npm run images`, then render a contact sheet PNG (outside the repo) of every referenced picture with its Italian word, on light and dark surfaces, and look at it with the Read tool: fix wrong or misleading mappings, redraw custom SVGs that clash with the Fluent style or do not read at 80px, draw any custom key still missing (or remove that `image`), and flag near-black pictures for the dark backdrop if the pipeline missed them. Also judge the doubtful ones: T25 glutine (wheat ear), panelle, ricotta; T27 marciapiede, corso. Also review the dialogue avatars chosen by T31 (e.g. Autista = man-pilot, Controllore = man-police-officer) and swap any that mislead. Also: draw `custom:move-treno-sciopero` (switched from Fluent by T24); slugs for the same word on several ids (contanti, mercato, aperto, chiuso, passaporto) were drawn twice — keep one drawing and point both ids to it if they differ; docs/content-guide.md uses "il conto" as an example of a word without picture but it now has fluent:receipt — reword. Never rename or delete ids.
@@ -133,7 +133,7 @@ Worktree setup: npm ci
   - Fixes applied and appended to docs/content-review.md (categories with counts; total pictured words; final size of `public/images/`).
   - `npm run content:check -- --strict-images` → exit 0 and `npm run content:check -- --strict-audio` → exit 0.
   - `npm run verify` → exit 0 and the build log shows the precache total.
-- Outcome:
+- Outcome: 12 fixes (sciopero + wallet + crossing drawn, duplicates merged, 3 avatars → custom), 224/358 words pictured, public/images 213 files / 319 KB, strict-images + strict-audio pass · 6f2b5c9
 
 ## Decisions
 - 2026-10-01 plan: image source = Microsoft Fluent Emoji Flat (MIT, via @iconify-json/fluent-emoji-flat at build time) + custom SVGs drawn by agents in the same style for all 102 drawable words it lacks; no AI images, no runtime keys. (Hernán)
@@ -165,6 +165,8 @@ Worktree setup: npm ci
 
 - 2026-10-01 T28: "seen" = SRS entry or word in a done lesson (incl. placement), so Repaso shows no intros; listen-only variant plays no audio on card tap; text match puts pictured words last; picture types also replace the single-word recognition fallback; intro step is ungraded and outside the progress bar. (agent)
 
+- 2026-10-01 T32: drew sciopero (placard + crossed train) and emer-portafoglio (wallet, replaces purse); redrew strisce pedonali; duplicate drawings merged (contanti, mercato, aperto, chiuso, passaporto); avatars autista/controllore/camarero granita → custom drawings; kept glutine, panelle, ricotta, marciapiede, corso and T24 unsure icons; dark detection flagged 6, none missed; content-guide example → il ritardo / la coincidenza. (agent)
+
 ## Proposals (new scope)
 - 2026-10-01 T28: intro cards come right before each word's first exercise, so a text match with 4–5 new words shows 4–5 intro cards in a row; spreading them out would change session building.
 - 2026-10-01 T30: PhraseList still hard-codes lang="it" on phrase text (pre-existing).
@@ -188,3 +190,6 @@ Worktree setup: npm ci
 - 2026-10-01 16:40 T25 done · branch worktree-agent-ae238ce77ffb2ad52 → b76df8e
 - 2026-10-01 16:41 T27 done · branch worktree-agent-abf82a7abf6250070 → 243a017
 - 2026-10-01 16:48 T28 done · branch worktree-agent-af989718f56f4f97a → 403e66c
+- 2026-10-01 17:03 T32 launched · attempt 1 · agent ab816da6580a9b832
+- 2026-10-01 17:11 T32 done · branch worktree-agent-ab816da6580a9b832 → 6f2b5c9
+- 2026-10-01 17:12 plan 003 done · final verify on main passed (strict-images, strict-audio pass)
