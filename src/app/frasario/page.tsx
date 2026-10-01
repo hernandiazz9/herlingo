@@ -10,7 +10,7 @@ export const metadata: Metadata = { title: tab.title };
 export default function PhrasebookPage() {
   return (
     <>
-      <PageHeader title={tab.title} subtitle="Toca una frase para escucharla o enséñasela en grande." />
+      <PageHeader title={tab.title} subtitle="Toca una frase o una palabra para escucharla." />
       <Phrasebook />
     </>
   );

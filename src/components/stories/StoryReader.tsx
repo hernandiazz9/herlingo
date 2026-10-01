@@ -2,10 +2,10 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SpeakerIcon } from "@/components/icons";
-import { Button, Card } from "@/components/ui";
+import { Button, Card, Picture } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
-import { getPack, getStoryKeywords, type Story, type StoryKeyword } from "@/lib/content";
+import { getPack, getStoryKeywords, hasImage, type Story, type StoryKeyword } from "@/lib/content";
 import { segmentStory } from "@/lib/stories";
 
 /** Pause between sentences in "Escuchar todo". */
@@ -155,6 +155,11 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
                     <span className="text-base text-ink">{kw.es}</span>
                     {kw.notes ? <span className="mt-1 text-sm text-ink-muted">{kw.notes}</span> : null}
                   </div>
+                  {hasImage(kw) ? (
+                    <div className="ml-auto w-20 shrink-0">
+                      <Picture image={kw.image} alt="" />
+                    </div>
+                  ) : null}
                 </Card>
               ) : null}
               {es ? <p className="text-base text-ink-muted">{s.es}</p> : null}
