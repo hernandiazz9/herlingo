@@ -1,26 +1,37 @@
 "use client";
 
+import { useState } from "react";
+import { AccountSection } from "@/components/league/AccountSection";
+import { JoinFlow } from "@/components/league/JoinFlow";
+import { ProfileCard } from "@/components/league/ProfileCard";
+import { leagueErrorMessage, TEXT_BUTTON } from "@/components/league/copy";
 import { ComingSoon } from "@/components/shell/ComingSoon";
 import { Card } from "@/components/ui";
 import { useLeagueAccount } from "@/lib/league/use-league-account";
 
 /**
- * Liga screen skeleton (T34): account state only. The join flow and account section (T36), groups
- * (T37) and rankings (T38) replace the placeholders.
+ * The Liga screen. Not joined: join flow (nickname + emoji, or sign in with email). Joined: profile,
+ * the ranking slot (T38) and the account section (email, sign out, leave and delete my data).
  */
 export function LeagueView() {
   const account = useLeagueAccount();
+  const [notice, setNotice] = useState<string | null>(null);
 
   return (
     <>
       {account.linkError ? (
         <Card tone="terracotta" role="alert" className="flex flex-col gap-1">
-          <p className="text-base font-bold text-ink">
-            {account.linkError.code === "link_expired"
-              ? "Ese enlace ha caducado o ya se usó."
-              : "No hemos podido usar ese enlace."}
-          </p>
+          <p className="text-base font-bold text-ink">{leagueErrorMessage(account.linkError)}</p>
           <p className="text-base text-ink-muted">Pide uno nuevo y ábrelo en este dispositivo.</p>
+          <button type="button" className={TEXT_BUTTON} onClick={account.clearLinkError}>
+            Entendido
+          </button>
+        </Card>
+      ) : null}
+
+      {notice && account.status !== "joined" ? (
+        <Card tone="sea" role="status" className="text-base font-bold text-ink">
+          {notice}
         </Card>
       ) : null}
 
@@ -33,28 +44,33 @@ export function LeagueView() {
       ) : null}
 
       {account.status === "offline" ? (
-        <Card className="flex flex-col gap-1">
+        <Card tone="lemon" role="status" className="flex flex-col gap-1">
           <p className="text-lg font-bold text-ink">Sin conexión</p>
-          <p className="text-base text-ink-muted">Conéctate a internet para unirte a la Liga.</p>
+          <p className="text-base text-ink">
+            Puedes elegir tu apodo y tu emoji, pero necesitas internet para unirte a la Liga.
+          </p>
         </Card>
       ) : null}
 
-      {account.status === "none" ? (
-        <ComingSoon>Pronto podrás elegir un apodo y un emoji para unirte a la Liga.</ComingSoon>
-      ) : null}
+      {account.status === "none" || account.status === "offline" ? <JoinFlow account={account} /> : null}
 
       {account.status === "joined" && account.profile ? (
-        <Card className="flex items-center gap-4">
-          <span aria-hidden="true" className="text-4xl leading-none">
-            {account.profile.emoji}
-          </span>
-          <div className="flex min-w-0 flex-col">
-            <p className="truncate text-lg font-bold text-ink">{account.profile.nickname}</p>
-            <p className="text-sm text-ink-muted">
-              {account.online ? "Ya estás en la Liga." : "Ya estás en la Liga · sin conexión"}
-            </p>
-          </div>
-        </Card>
+        <>
+          <ProfileCard profile={account.profile} account={account} />
+
+          {/* Ranking slot: T38 replaces this placeholder with the weekly leaderboards (and T37 adds groups). */}
+          <section aria-labelledby="league-ranking-title" className="flex flex-col gap-3">
+            <h2 id="league-ranking-title" className="text-2xl font-extrabold tracking-tight text-ink">
+              Clasificación
+            </h2>
+            <ComingSoon>Aquí verás la clasificación semanal de tu grupo y la global.</ComingSoon>
+          </section>
+
+          <AccountSection
+            account={account}
+            onDeleted={() => setNotice("Has salido de la Liga y hemos borrado tus datos.")}
+          />
+        </>
       ) : null}
     </>
   );
