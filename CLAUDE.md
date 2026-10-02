@@ -45,6 +45,8 @@ src/lib/coach/         Prepárate client: API client + typed errors (CoachApiErr
                        buildLearnerContext(), usage (`lang-lern:coach:*`); hooks in use-coach.ts. docs/coach.md "Client".
 src/lib/progress/      On-device progress (`lang-lern:progress:<lang>`, versioned, tolerant parsing), settings,
                        path model; hooks in use-progress.ts. src/lib/srs/ = Leitner spaced repetition.
+src/lib/backup/        Perfil "Copia de seguridad": export/import every `lang-lern:*` key (except the coach access code)
+                       as a JSON file; validates before writing, rolls back on a failed write.
 content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`). Only `it` exists.
                        Format, ids, order ranges and quality rules: docs/content-guide.md.
                        Code never hard-codes content.

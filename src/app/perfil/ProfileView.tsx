@@ -9,6 +9,7 @@ import { DEFAULT_LANG, getAllLessons, getPack } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import { currentStreak, resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
 import { useProgress, useSettings } from "@/lib/progress/use-progress";
+import { BackupSection } from "./BackupSection";
 import { CoachSections } from "./CoachSections";
 
 /** Destructive button: error colours, same shape and press animation as `Button`. */
@@ -103,6 +104,8 @@ export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
           </button>
         </Card>
       </section>
+
+      <BackupSection lang={lang} />
 
       {confirmReset ? (
         <div className="fixed inset-0 z-[60] flex items-end justify-center bg-backdrop/80 p-4 pb-[calc(var(--safe-bottom)+1rem)]">
