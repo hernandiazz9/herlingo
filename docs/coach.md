@@ -24,6 +24,7 @@ api/_lib/            shared server modules; the leading "_" keeps them from beco
   schema.ts          zod schemas: pack, learner profile, requests, interview (the only pack schema)
   claude.ts          the only Claude call: structured output, cached system prompt, fallbacks
   generators.ts      pack / interview generators (fake or real); prompts
+  tts.ts             neural voice: edge-tts through `msedge-tts` (see "Voice (TTS)")
   fake.ts            fake-mode fixtures and the silent mp3
   access.ts          x-coach-code check
   ledger.ts, store.ts  spend ledger and limits (Upstash Redis or in-memory)
@@ -130,10 +131,13 @@ type Assessment = {
 
 ### `POST /api/coach/tts/`
 
-`{ text (1–300 chars), voice }` → `200 audio/mpeg` (`Cache-Control: private, max-age=31536000,
-immutable`). `voice` must be one of the `voices` of a content pack; packs carry the two to use in
-`pack.voices`. Fake mode: a ~0.26 s silent mp3. Real edge-tts: T44 (until then 503
-`tts_unavailable`; the client falls back to the device voice). Does not count as a generation.
+`{ text (1–300 chars, trimmed), voice }` → `200 audio/mpeg` (`Cache-Control: private,
+max-age=31536000, immutable`: a line never changes, the client caches it by voice + text).
+`voice` must be one of the `voices` of a content pack, else 400; packs carry the two to use in
+`pack.voices`. The mp3 is read by that Microsoft neural voice (see "Voice (TTS)"); if the voice
+service fails → 503 `tts_unavailable` and the client falls back to the device voice
+(`speechSynthesis`). Fake mode: a ~0.26 s silent mp3, no network. Requires the code; does not
+count as a generation and costs nothing.
 
 ### `GET /api/coach/usage/` and `PUT /api/coach/usage/`
 
@@ -203,6 +207,50 @@ system prompt as a cached block (byte-stable: per-request data goes in the user 
 written to the ledger before anything else, so refused or invalid answers are billed too; then
 `stop_reason` `refusal` / `max_tokens` and invalid JSON become 502. Prompts: `generators.ts`
 (first version; T43 refines them and measures the cost per pack).
+
+## Voice (TTS)
+
+`api/_lib/tts.ts` reads a line with Microsoft Edge's read-aloud voices (edge-tts: free, no key,
+a WebSocket to `speech.platform.bing.com`), the same service `npm run audio` uses for the static
+content.
+
+- **Same voices and settings as `npm run audio`** (`scripts/audio/tts.py`, Python edge-tts
+  defaults): output `audio-24khz-48kbitrate-mono-mp3`, rate `+0%`, pitch `+0Hz`, volume `+0%`,
+  text escaped the same way (control characters → spaces, `& < >` as entities; the input is
+  never read as SSML). The voices are the content pack's: native turns and key phrases use
+  `pack.voices.native`, learner options `pack.voices.learner` (different, like the static
+  dialogues). The endpoint accepts only voices some `content/<lang>/pack.json` declares.
+- One WebSocket per request (no shared state between invocations), 10 s timeout per attempt, 2
+  attempts, empty audio counts as a failure. Then 503 `tts_unavailable` (logged as
+  `[coach] edge-tts failed`) and the client plays the line with the device voice. Worst case
+  ≈ 20 s, inside the functions' 60 s.
+- The service is unofficial (no SLA, no key): Microsoft may throttle it or change the handshake.
+  If it stops working everywhere, update `msedge-tts` (`npm i msedge-tts@latest`), the same fix
+  as bumping `edge-tts` in `scripts/audio/requirements.txt`. The app keeps working meanwhile
+  (device voice).
+- Locally the real voice needs fake mode off (`ANTHROPIC_API_KEY` set in `.env.local`, no
+  `COACH_FAKE`); fake mode answers the silent mp3. In production it needs no env var.
+
+**Package: `msedge-tts`** (MIT, ^2.0.8). Chosen on 2026-10-02 among the Node edge-tts ports:
+
+| Package | Verdict |
+| --- | --- |
+| `msedge-tts` 2.0.8 | **Chosen.** Actively maintained (7 releases in 2026, last 2026-09-24; ~230 k downloads/month), returns a `Readable` (no temp files in the function), reports a socket closed before `turn.end` as an error instead of a truncated mp3, Sec-MS-GEC token built in. Cost: 39 packages / ~5 MB installed (axios is only used by `getVoices()`, never called), ~1.5 MB bundled; fine for a function |
+| `node-edge-tts` 1.2.10 | Smaller (22 packages / 1.7 MB, most of it `yargs` for its CLI) and very popular, but it only writes to a file path (temp file per request), a timeout leaves the socket open, a dropped socket hangs until the timeout; last release 2026-02 |
+| `edge-tts-universal`, `@travisvn/edge-tts` | AGPL-3.0 |
+| `@andresaya/edge-tts`, `edge-tts` (npm) | GPL-3.0 / CC BY-NC-SA |
+| `edge-tts-node` | Stale fork of `msedge-tts` (last release 2024) |
+
+**Verified on 2026-10-02 (cloud session, outbound through the egress proxy):** the service is
+reachable (WebSocket upgrade 101). `npm run dev:coach` with fake mode off + curl: 200
+`audio/mpeg`, `file` → "MPEG ADTS, layer III, v2, 48 kbps, 24 kHz, Monaural" (the same format as
+`public/audio/`), real speech (4.75 s for a 70-character line, ~1–2 s per request, 5 parallel
+requests fine, a 300-character line 96 KB); the same three lines as static content files came
+out with the same byte length (the service is not byte-for-byte deterministic between runs).
+Disallowed voice / 301 characters / blank text → 400; no or wrong code → 401; unknown voice
+name, DNS failure and a hung connection → 503 (the hung case after 2 × 10 s), the process stays
+healthy. Fake mode with DNS blocked: 200, 4170-byte silent mp3, no lookups. The esbuild bundle
+of `api/coach/tts.ts` run with production env (no `COACH_DEV`, no Anthropic key) → 200 mp3.
 
 ## Limits and ledger
 
