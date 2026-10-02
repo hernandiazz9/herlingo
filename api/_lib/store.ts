@@ -10,7 +10,8 @@ export interface Store {
   incrby(key: string, by: number, ttlSeconds?: number): Promise<number>;
   get(key: string): Promise<number | null>;
   mget(keys: string[]): Promise<(number | null)[]>;
-  set(key: string, value: number): Promise<void>;
+  /** Overwrites `key`; with `ttlSeconds` it expires like an `incrby` counter. */
+  set(key: string, value: number, ttlSeconds?: number): Promise<void>;
 }
 
 function toNumber(value: unknown): number | null {
@@ -35,8 +36,9 @@ class UpstashStore implements Store {
     if (keys.length === 0) return [];
     return (await this.redis.mget<unknown[]>(...keys)).map(toNumber);
   }
-  async set(key: string, value: number) {
-    await this.redis.set(key, value);
+  async set(key: string, value: number, ttlSeconds?: number) {
+    if (ttlSeconds) await this.redis.set(key, value, { ex: ttlSeconds });
+    else await this.redis.set(key, value);
   }
 }
 
@@ -64,8 +66,8 @@ class MemoryStore implements Store {
   async mget(keys: string[]) {
     return Promise.all(keys.map((k) => this.get(k)));
   }
-  async set(key: string, value: number) {
-    this.data.set(key, { value });
+  async set(key: string, value: number, ttlSeconds?: number) {
+    this.data.set(key, { value, expires: ttlSeconds ? Date.now() + ttlSeconds * 1000 : undefined });
   }
 }
 

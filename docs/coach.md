@@ -12,7 +12,8 @@ Packs are saved on the device, so practising them again is free and works offlin
   enforce spending limits and keep a cost ledger. The site stays `output: "export"` in `out/`;
   every other section keeps working offline. Only generating needs internet.
 - Model: `claude-sonnet-5-5`. Monthly cap 5 USD (owner-editable), 10 generations per day per
-  code, 3 refinements per pack, description ≤ 500 characters.
+  code, 3 refinements per pack, description ≤ 500 characters. Every limit is enforced on the
+  server from its own ledger, never from counts the client sends (see "Limits and ledger").
 
 ## Architecture
 
@@ -56,7 +57,8 @@ npm run start:coach   # http://localhost:4173: built out/ (offline SW) + /api/co
   token numbers, so the usage panel and the 429s can be tested.
 - With no `COACH_ACCESS_CODES` the dev server uses `dev-owner` (owner, named `hernan`) and
   `dev-guest`.
-- No Upstash variables (or fake mode) → in-memory ledger, reset on restart.
+- No Upstash variables (or fake mode) → in-memory ledger, reset on restart (packs made before a
+  restart can no longer be refined: 409 `unknown_pack`).
 - Changes under `api/` need a restart of the dev server (modules are loaded once).
 - `PORT` changes the port; `next dev` itself runs on `PORT + 1` behind the proxy.
 
@@ -79,6 +81,8 @@ show it as is.
 | 429 | `daily_limit` | "Has llegado al límite de hoy. Vuelve mañana." |
 | 429 | `budget` | "Se ha agotado el presupuesto de este mes." |
 | 429 | `refine_limit` | "Ya has ajustado esta situación 3 veces." |
+| 429 | `tts_limit` | "Has llegado al límite de audio de hoy. Vuelve mañana." (the client uses `speechSynthesis`) |
+| 409 | `unknown_pack` | Refinement of a pack id this server never issued to this code (or older than 180 days): "No puedo ajustar esta situación. Prepara una nueva." |
 | 502 | `generation_failed` | Claude refused, hit `max_tokens`, returned invalid JSON, or API error. Nothing is stored |
 | 503 | `not_configured` | No access codes or no Anthropic key in production |
 | 503 | `tts_unavailable` | Real TTS not available → the client uses `speechSynthesis` |
@@ -102,10 +106,12 @@ show it as is.
 → `200 { pack: Pack, usage: { costUsd, tokens: { input, output, cacheWrite, cacheRead },
 remainingUsd, today: { used, limit } } }`.
 
-A new pack gets a new `id` and `refinements: 0`; a refinement keeps the `id` and returns
-`refinements = previous.refinements + 1` (the device replaces the stored pack). Every call (new
-or refinement) takes one of the code's daily generations. The server counts refinements per
-`packId` itself (and also trusts a higher `previous.refinements`): the 4th → 429 `refine_limit`.
+A new pack gets a new server-issued `id` and `refinements: 0`; the server records that id for the
+caller's code. A refinement keeps the `id` and returns `refinements` = the server's own count for
+that pack (the device replaces the stored pack). Every call (new or refinement) takes one of the
+code's daily generations. Refinements are counted per code and pack id on the server only
+(`previous.refinements` is ignored): an id this server never issued to the code → 409
+`unknown_pack`; the 4th refinement → 429 `refine_limit`.
 
 ### `POST /api/coach/interview/`
 
@@ -115,7 +121,9 @@ or refinement) takes one of the code's daily generations. The server counts refi
 
 `history` holds the answered questions (≤ 10). → `200 { done: false, question: InterviewQuestion,
 turn: n, usage }` or `200 { done: true, assessment: Assessment, usage }`. The first step (empty
-history) takes one daily generation; the following steps are only billed. After 10 answers the
+history) takes one daily generation. Every step, the first included, also takes one of the
+code's daily interview steps (10 generations × 11 steps = 110 by default; the client's `history`
+is not trusted for this), over it → 429 `daily_limit`. After 10 answers the
 server asks for the final assessment. Fake mode: 3 questions, then an A1 assessment.
 
 ```ts
@@ -138,7 +146,10 @@ max-age=31536000, immutable`: a line never changes, the client caches it by voic
 `pack.voices`. The mp3 is read by that Microsoft neural voice (see "Voice (TTS)"); if the voice
 service fails → 503 `tts_unavailable` and the client falls back to the device voice
 (`speechSynthesis`). Fake mode: a ~0.26 s silent mp3, no network. Requires the code; does not
-count as a generation and costs nothing.
+count as a generation and costs nothing, but every request (also a failed one) counts as one of
+the code's daily voice lines (`COACH_TTS_DAILY_LIMIT`, default 500): over it → 429 `tts_limit`
+and the client reads the line with the device voice. The client caches each line, so 500 is far
+above normal use.
 
 ### `GET /api/coach/usage/` and `PUT /api/coach/usage/`
 
@@ -311,8 +322,10 @@ One non-streaming `client.beta.messages.create` per generation:
 Billing comes first: as soon as a response arrives its tokens go to the ledger, per model
 attempt (a fallback-served response is billed from `usage.iterations`, the declined attempt at
 Sonnet 5.5 prices and the serving one at Sonnet 5's; otherwise top-level `usage` and the model
-that answered). Then every failure is a 502 `generation_failed` with a Spanish message, nothing
-is stored and the daily slot (and refinement) is refunded:
+that answered). Then every failure is a 502 `generation_failed` with a Spanish message and
+nothing is stored. Slots (daily generation, interview step, refinement) are given back only when
+nothing was billed (no response: deadline, network or API error); a response that arrived and was
+then rejected (refusal, `max_tokens`, invalid JSON) was paid, so its slots stay used:
 
 | Cause | Message (shown as is) |
 | --- | --- |
@@ -417,7 +430,7 @@ line, 6 of 53 lessons). Costs are the ledger's (price table in `api/_lib/model.t
   options that are real Spanish-speaker mistakes («Voglio», a calque), 9 turns.
 - Budget: at ~0.03 USD per pack and refinement the default 5 USD cap is ~150 generations a month,
   well above the 10/day/code limit for one or two people.
-- A rejected answer is still paid (billed before parsing, as designed) and refunds the daily slot.
+- A rejected answer is still paid (billed before parsing, as designed) and keeps its daily slot.
   The one seen in T49 had more than 10 dialogue turns, caused by the prompt asking for "8 turns" while
   opening and closing with the native speaker; the prompt now asks for 7 or 9.
 - The T49 run spent 0.107971 USD in total (6 Claude calls), and `GET /usage/` reported exactly
@@ -470,8 +483,27 @@ of `api/coach/tts.ts` run with production env (no `COACH_DEV`, no Anthropic key)
 ## Limits and ledger
 
 Checked in this order on every generation: access code → body → monthly budget (spent ≥ cap →
-429) → daily generations of the code (`incr`; over 10 → refund + 429) → refinements of the pack
-→ Claude. A failed generation refunds the daily slot and the refinement.
+429) → daily counters of the code → refinements of the pack → Claude. Each counter is an `incr`;
+over its limit → undo + 429.
+
+| Limit | Counted per | Default | Applies to |
+| --- | --- | --- | --- |
+| Monthly budget | all codes | 5 USD (`COACH_MONTHLY_CAP_USD`, then the owner's setting) | every Claude call |
+| Generations | code, day | 10 (`COACH_DAILY_LIMIT`) | new pack, refinement, first interview step |
+| Interview steps | code, day | generations × 11 = 110 | every interview step (10 questions + the assessment per interview), whatever `history` says |
+| Refinements | code, pack id | 3 | refinements of a pack id the server issued to that code (unknown id → 409) |
+| Voice lines | code, day | 500 (`COACH_TTS_DAILY_LIMIT`) | every `POST /tts/` (free, but must not be abused) |
+
+**Refunds.** A failed call gives its slots back only if no charge was recorded for it (no
+response from Claude: deadline, network, API error, or a refusal before calling Claude such as
+`unknown_pack`). Once a response is in the ledger it was paid, so the slots stay used even if
+the answer is then rejected. Voice lines are never refunded.
+
+**Budget overshoot.** The budget check reads this month's spend and then calls Claude (read, then
+act; no reservation): calls that start at the same time all pass the check, so the month can end
+above the cap by about (concurrent calls × one call's cost), i.e. a few cents with one or two
+people (~0.03 USD per pack). The next call after that gets 429 `budget`. The Anthropic console
+spend limit is the hard stop above it.
 
 Money is integer micro-dollars (1 USD = 1 000 000), added with `incrby`. Cost of a call =
 `input × input price + output × output price + cache write × write price + cache read × read
@@ -486,7 +518,9 @@ Days and months are counted in `COACH_TIMEZONE` (default Europe/Madrid).
 | `<YYYY-MM>:tokens:<input\|output\|cacheWrite\|cacheRead>` | tokens this month |
 | `<YYYY-MM>:packs` / `<YYYY-MM>:packSpend` | new packs and their cost (for the average) |
 | `<YYYY-MM-DD>:gen:<name>` | generations today by a code (expires after 2 days) |
-| `refine:<packId>` | refinements of a pack (expires after 180 days) |
+| `<YYYY-MM-DD>:steps:<name>` | interview steps today by a code (expires after 2 days) |
+| `<YYYY-MM-DD>:tts:<name>` | voice lines today by a code (expires after 2 days) |
+| `pack:<name>:<packId>` | a pack issued to a code; value = its refinements (expires after 180 days) |
 
 Upstash Redis REST when `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are set and fake
 mode is off; otherwise an in-memory map (per process; local dev only). The `langlern:` prefix
@@ -502,7 +536,8 @@ lets the database be shared with another project.
 | `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` | production | Ledger database |
 | `COACH_FAKE` | no | `1` = canned data everywhere |
 | `COACH_MONTHLY_CAP_USD` | no | Initial cap (default 5) until the owner sets one |
-| `COACH_DAILY_LIMIT` | no | Generations per day per code (default 10) |
+| `COACH_DAILY_LIMIT` | no | Generations per day per code (default 10; interview steps = 11 × this) |
+| `COACH_TTS_DAILY_LIMIT` | no | Voice lines per day per code (default 500) |
 | `COACH_TIMEZONE` | no | Time zone of days and months (default `Europe/Madrid`) |
 
 Local: `.env.local` (git-ignored; `.env.example` lists the names). Production: Vercel project

@@ -4,7 +4,15 @@ import { authenticate } from "../_lib/access";
 import { generatePack } from "../_lib/generators";
 import { CoachError, json, readBody, route } from "../_lib/http";
 import { getLanguage, packVoices } from "../_lib/languages";
-import { assertBudget, readUsage, recordCall, reserveGeneration, reserveRefinement } from "../_lib/ledger";
+import {
+  assertBudget,
+  readUsage,
+  recordCall,
+  registerPack,
+  reserveGeneration,
+  reserveRefinement,
+  type Refund,
+} from "../_lib/ledger";
 import { sumUsage, type Charge } from "../_lib/model";
 import { Pack, PackRequest } from "../_lib/schema";
 
@@ -18,14 +26,21 @@ export default route({
     }
     await assertBudget();
 
-    const refunds = [await reserveGeneration(caller)];
+    const refunds: Refund[] = [await reserveGeneration(caller)];
+    let refinement = 0;
     let costMicro = 0;
     let charges: Charge[] = [];
+    let charged = false;
     try {
-      if (body.refine) refunds.push(await reserveRefinement(body.refine.packId, body.refine.previous.refinements));
+      if (body.refine) {
+        const slot = await reserveRefinement(caller, body.refine.packId);
+        refunds.push(slot.refund);
+        refinement = slot.count;
+      }
       const generated = await generatePack(
         { meta, description: body.description, profile: body.profile, refine: body.refine },
         async (call) => {
+          charged = true;
           charges = call;
           costMicro += await recordCall(caller, body.refine ? "refine" : "pack", call);
         },
@@ -41,8 +56,9 @@ export default route({
           title: generated.dialogue.title,
           turns: generated.dialogue.turns.map((turn, i) => ({ ...turn, id: `t${i + 1}` })),
         },
-        refinements: body.refine ? body.refine.previous.refinements + 1 : 0,
+        refinements: refinement,
       });
+      if (!body.refine) await registerPack(caller, pack.id);
       const summary = await readUsage(caller);
       return json({
         pack,
@@ -54,7 +70,8 @@ export default route({
         },
       });
     } catch (error) {
-      await Promise.all(refunds.map((refund) => refund()));
+      // A billed call keeps its slots: only a call that cost nothing (no response) gives them back.
+      if (!charged) await Promise.all(refunds.map((refund) => refund()));
       throw error;
     }
   },

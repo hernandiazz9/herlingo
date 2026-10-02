@@ -9,10 +9,16 @@
  *   langlern:coach:<YYYY-MM>:packs              new packs generated (refinements excluded)
  *   langlern:coach:<YYYY-MM>:packSpend          what those packs cost
  *   langlern:coach:<YYYY-MM-DD>:gen:<name>      generations today by one code (expires in 2 days)
- *   langlern:coach:refine:<packId>              refinements of one pack (expires in 180 days)
+ *   langlern:coach:<YYYY-MM-DD>:steps:<name>    interview steps today by one code (expires in 2 days)
+ *   langlern:coach:<YYYY-MM-DD>:tts:<name>      voice lines today by one code (expires in 2 days)
+ *   langlern:coach:pack:<name>:<packId>         a pack this server issued to one code, and its
+ *                                               refinements (expires in 180 days)
+ *
+ * A slot (generation, step, refinement) is given back only when the call failed before Claude
+ * billed anything: once a response has been charged, the slot stays used.
  */
 import type { Caller } from "./access";
-import { dailyLimit, defaultCapUsd, timeZone } from "./config";
+import { dailyLimit, defaultCapUsd, timeZone, ttsDailyLimit } from "./config";
 import { CoachError } from "./http";
 import { costMicroUsd, sumUsage, type Charge } from "./model";
 import { LIMITS } from "./schema";
@@ -44,7 +50,9 @@ const keys = {
   packs: (month: string) => `${PREFIX}:${month}:packs`,
   packSpend: (month: string) => `${PREFIX}:${month}:packSpend`,
   generations: (day: string, name: string) => `${PREFIX}:${day}:gen:${name}`,
-  refinements: (packId: string) => `${PREFIX}:refine:${packId}`,
+  steps: (day: string, name: string) => `${PREFIX}:${day}:steps:${name}`,
+  tts: (day: string, name: string) => `${PREFIX}:${day}:tts:${name}`,
+  pack: (name: string, packId: string) => `${PREFIX}:pack:${name}:${packId}`,
 };
 
 const toUsd = (micro: number) => Math.round(micro) / MICRO;
@@ -66,30 +74,68 @@ export async function assertBudget(): Promise<void> {
   }
 }
 
-/** Takes one of today's generations for this code (429 when none is left). Returns a refund. */
-export async function reserveGeneration(caller: Caller): Promise<() => Promise<void>> {
+export type Refund = () => Promise<void>;
+
+const DAILY_LIMIT_MESSAGE = "Has llegado al límite de hoy. Vuelve mañana.";
+
+/** `incrby` a counter by one; over `limit` → undo + 429. Returns the new count and its undo. */
+async function take(key: string, limit: number, ttl: number, error: () => CoachError): Promise<{ count: number; refund: Refund }> {
   const store = getStore();
-  const key = keys.generations(periods().day, caller.name);
-  const used = await store.incrby(key, 1, DAY_TTL);
+  const count = await store.incrby(key, 1, ttl);
   const refund = async () => void (await store.incrby(key, -1));
-  if (used > dailyLimit()) {
+  if (count > limit) {
     await refund();
-    throw new CoachError(429, "daily_limit", "Has llegado al límite de hoy. Vuelve mañana.");
+    throw error();
   }
-  return refund;
+  return { count, refund };
 }
 
-/** Takes one of the pack's refinements (server count, or the pack's own if higher). */
-export async function reserveRefinement(packId: string, previousCount: number): Promise<() => Promise<void>> {
-  const store = getStore();
-  const key = keys.refinements(packId);
-  const stored = await store.incrby(key, 1, REFINE_TTL);
-  const refund = async () => void (await store.incrby(key, -1));
-  if (Math.max(stored, previousCount + 1) > LIMITS.refinementsPerPack) {
-    await refund();
-    throw new CoachError(429, "refine_limit", "Ya has ajustado esta situación 3 veces.");
+const dailyLimitError = () => new CoachError(429, "daily_limit", DAILY_LIMIT_MESSAGE);
+
+/** Takes one of today's generations for this code (429 when none is left). Returns a refund. */
+export async function reserveGeneration(caller: Caller): Promise<Refund> {
+  return (await take(keys.generations(periods().day, caller.name), dailyLimit(), DAY_TTL, dailyLimitError)).refund;
+}
+
+/** Billed interview steps a code may take per day: one whole interview (questions + assessment) per generation. */
+export const interviewStepsPerDay = (): number => dailyLimit() * (LIMITS.interviewTurns + 1);
+
+/**
+ * Takes one of today's interview steps for this code, whatever `history` the client sends: every
+ * step is a billed Claude call. 429 when none is left. Returns a refund.
+ */
+export async function reserveInterviewStep(caller: Caller): Promise<Refund> {
+  return (await take(keys.steps(periods().day, caller.name), interviewStepsPerDay(), DAY_TTL, dailyLimitError)).refund;
+}
+
+/** Records a pack id this server just issued to the code: only those can be refined. */
+export async function registerPack(caller: Caller, packId: string): Promise<void> {
+  await getStore().set(keys.pack(caller.name, packId), 0, REFINE_TTL);
+}
+
+/**
+ * Takes one of the refinements of a pack this server issued to the code. Unknown id (never issued
+ * to this code, or older than 180 days) → 409 `unknown_pack`; over the limit → 429. Returns the
+ * refinement number it took (1–3) and a refund. The count sent by the client is never trusted.
+ */
+export async function reserveRefinement(caller: Caller, packId: string): Promise<{ count: number; refund: Refund }> {
+  const key = keys.pack(caller.name, packId);
+  if ((await getStore().get(key)) === null) {
+    throw new CoachError(409, "unknown_pack", "No puedo ajustar esta situación. Prepara una nueva.");
   }
-  return refund;
+  return take(
+    key,
+    LIMITS.refinementsPerPack,
+    REFINE_TTL,
+    () => new CoachError(429, "refine_limit", `Ya has ajustado esta situación ${LIMITS.refinementsPerPack} veces.`),
+  );
+}
+
+/** Counts one voice line for the code today (429 `tts_limit` when the day's allowance is used up). */
+export async function reserveTts(caller: Caller): Promise<void> {
+  await take(keys.tts(periods().day, caller.name), ttsDailyLimit(), DAY_TTL, () => {
+    return new CoachError(429, "tts_limit", "Has llegado al límite de audio de hoy. Vuelve mañana.");
+  });
 }
 
 /** Adds one Claude call (every model attempt in it) to the ledger. Returns its cost in micro-dollars. */

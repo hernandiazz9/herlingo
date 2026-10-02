@@ -35,6 +35,7 @@ export function ownerName(): string | undefined {
 
 export const DEFAULT_CAP_USD = 5;
 export const DAILY_GENERATIONS = 10;
+export const DAILY_TTS_LINES = 500;
 
 /** Initial monthly cap until the owner changes it from the app. */
 export function defaultCapUsd(): number {
@@ -45,6 +46,12 @@ export function defaultCapUsd(): number {
 export function dailyLimit(): number {
   const value = Number(process.env.COACH_DAILY_LIMIT);
   return Number.isInteger(value) && value > 0 ? value : DAILY_GENERATIONS;
+}
+
+/** Lines the voice endpoint reads per day per code (it costs nothing, but must not be abused). */
+export function ttsDailyLimit(): number {
+  const value = Number(process.env.COACH_TTS_DAILY_LIMIT);
+  return Number.isInteger(value) && value > 0 ? value : DAILY_TTS_LINES;
 }
 
 /** Days and months of the limits and the ledger are counted in this time zone. */
