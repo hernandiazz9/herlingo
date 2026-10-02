@@ -33,7 +33,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T42 — Coach backend skeleton: functions, access codes, limits, ledger, fake mode
-- Status: pending
+- Status: done
 - Depends on: none
 - Goal: The whole server side of Prepárate except the real Claude prompts and the real TTS: Vercel functions for every endpoint in the contract, access-code check, limits, Upstash ledger with in-memory fallback, price table, fake mode returning canned data for every endpoint, local dev command, deploy config, and docs/coach.md with the full API contract and pack schema, so client tasks can start against fake mode.
 - Context: the plan's Shared contract; CLAUDE.md; vercel.json; next.config.ts; scripts/serve.ts; /Users/heralc/Desktop/HDDev/andrevallenails/lib/gasto/ (ledger, price table, caps pattern; read only); Vercel docs for Node functions in `api/` with a static output directory (WebFetch); `claude-api` skill for SDK usage, structured outputs, pricing.
@@ -43,7 +43,7 @@ Worktree setup: npm ci
   - The pack schema (zod) and the price table exist in exactly one place each; the app bundle (`src/`) does not import zod or server code.
   - `npm run build` still writes the static export to `out/`; `npm run verify` → exit 0 with no env vars set.
   - docs/coach.md documents the contract and the setup steps.
-- Outcome:
+- Outcome: Integrated as 0813a9d. All endpoints in api/coach/ (pack, interview, tts, usage) with api/_lib/ (model, schema, price table, ledger with Upstash + in-memory fallback, access codes, limits, fake mode). `npm run dev:coach` (next dev + /api on :3000) and `npm run start:coach` (out/ + /api on :4173). Every Done-when checked with curl in fake mode (200/401/429/403, usage reflects calls); verify exit 0. Endpoint URLs end in a slash. Dev codes without env: dev-owner (owner "hernan"), dev-guest. HMR websocket through the dev proxy not checked by hand.
 
 ## T43 — Claude generation: pack, refinement and level interview
 - Status: pending
@@ -154,6 +154,10 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
 - 2026-10-02 plan: Hernán asked to reuse the andrevallenails `.env` keys. Only `ANTHROPIC_API_KEY`, `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` would be needed (never the other secrets in that file). Reusing that Upstash database instead of a new one is fine because every key is prefixed `langlern:`; to be confirmed by Hernán when the keys are set up. Nothing has been copied yet. (orchestrator)
 - 2026-10-02 plan: Hernán moved the work to a cloud session before approval. `.env.local` is git-ignored and does not travel; in the cloud the keys must be set as environment variables of the cloud environment, or T43/T44/T49 report what they could not verify. (orchestrator)
+- 2026-10-02 T42: endpoint URLs end in "/" (trailingSlash; Vercel would 308); functions use Web-standard `export default { fetch }` with relative imports (Vercel ignores tsconfig paths); vercel.json gives api/coach/*.ts 60 s and bundles content/*/pack.json, read for language name/locale/voices. (T42)
+- 2026-10-02 T42: pack gets an extra `voices: { native, learner }`; turns use `speaker: "native"|"learner"` with server ids t1…tn; a refinement keeps the pack id; empty instruction = "Generar otra vez"; server keeps its own refinement count (180-day expiry). (T42)
+- 2026-10-02 T42: interview takes a daily slot only on its first step; history [{question, answer}] ≤10, assessment forced after 10. Ledger keys `langlern:coach:*` in micro-dollars, days/months in COACH_TIMEZONE (default Europe/Madrid); a failed generation gives its slot back; every Claude response is billed before checks; unknown model priced at the most expensive entry. (T42)
+- 2026-10-02 T42: fake mode always uses the in-memory ledger; without COACH_ACCESS_CODES local dev uses dev-owner/dev-guest; production without codes or key → 503 not_configured; TTS outside fake → 503 until T44; ESLint no-restricted-imports keeps zod runtime, SDK, Upstash and api/ out of src/; usage has extra `mineUsd`. First-version prompts in generators.ts never ran against Claude (T43 replaces them). (T42)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
@@ -164,3 +168,4 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 plan written from the interview; not approved yet
 - 2026-10-02 Hernán: code reviews and other token-heavy checks are deferred to the PC (section "Deferred to the PC")
 - 2026-10-02 approved by Hernán; base branch is the cloud session branch claude/game-ai-chat-claude-1907dd-pmtpbd
+- 2026-10-02 T42 done (0813a9d); verify exit 0; launching T44 and T45
