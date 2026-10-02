@@ -59,7 +59,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T44 — Neural TTS endpoint (edge-tts)
-- Status: pending
+- Status: done
 - Depends on: T42
 - Goal: `POST /api/coach/tts` returns a real mp3 for a line of target-language text using edge-tts from Node, with the voice allowlist taken from the pack's voices (native and learner voices differ), input limits, the access-code check, and strong cache headers.
 - Context: Shared contract; docs/coach.md; `scripts/audio/` (which voices and settings `npm run audio` uses); `src/lib/content/` for the pack's voice metadata; candidate Node packages for edge-tts (evaluate maintenance and size; pick one and record why).
@@ -69,7 +69,7 @@ Worktree setup: npm ci
   - Fake mode returns a short mp3 without network.
   - If the edge-tts service is unreachable from this environment, the endpoint returns 503 and the docs say the client falls back to device voice; record what was verified in DECISIONS.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Integrated as 04ba4b2. `POST /api/coach/tts/` returns real neural mp3 via msedge-tts (24 kHz 48 kbps mono, same settings as scripts/audio); edge-tts reachable from the cloud. Checked with curl: 200 audio/mpeg (file: MPEG ADTS layer III), bad voice / >300 chars / blank → 400, no or wrong code → 401, service failures → 503 tts_unavailable (2 × 10 s), fake mode → 0.26 s silent mp3 with no network; production-like bundle works. verify exit 0.
 
 ## T45 — Client coach layer: API client, saved packs, audio cache, learner profile
 - Status: pending
@@ -158,6 +158,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T42: pack gets an extra `voices: { native, learner }`; turns use `speaker: "native"|"learner"` with server ids t1…tn; a refinement keeps the pack id; empty instruction = "Generar otra vez"; server keeps its own refinement count (180-day expiry). (T42)
 - 2026-10-02 T42: interview takes a daily slot only on its first step; history [{question, answer}] ≤10, assessment forced after 10. Ledger keys `langlern:coach:*` in micro-dollars, days/months in COACH_TIMEZONE (default Europe/Madrid); a failed generation gives its slot back; every Claude response is billed before checks; unknown model priced at the most expensive entry. (T42)
 - 2026-10-02 T42: fake mode always uses the in-memory ledger; without COACH_ACCESS_CODES local dev uses dev-owner/dev-guest; production without codes or key → 503 not_configured; TTS outside fake → 503 until T44; ESLint no-restricted-imports keeps zod runtime, SDK, Upstash and api/ out of src/; usage has extra `mineUsd`. First-version prompts in generators.ts never ran against Claude (T43 replaces them). (T42)
+- 2026-10-02 T44: msedge-tts (MIT, active, streams audio, reports cut-off streams) over node-edge-tts (file-only, hangs on timeouts) and copyleft ports; ~1.5 MB bundled. One WebSocket per request, 10 s × 2 attempts, empty audio = failure → 503 and the client falls back to device voice. Fake mode keeps the silent mp3, so hearing the real voice locally needs ANTHROPIC_API_KEY set (even a placeholder); documented in docs/coach.md. TTS does not count as a generation. (T44)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
@@ -169,3 +170,4 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 Hernán: code reviews and other token-heavy checks are deferred to the PC (section "Deferred to the PC")
 - 2026-10-02 approved by Hernán; base branch is the cloud session branch claude/game-ai-chat-claude-1907dd-pmtpbd
 - 2026-10-02 T42 done (0813a9d); verify exit 0; launching T44 and T45
+- 2026-10-02 T44 done (04ba4b2); verify exit 0
