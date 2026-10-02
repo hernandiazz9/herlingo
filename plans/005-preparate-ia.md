@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 19:11Z 💻
-- Writer: 💻 desktop · since 17:57Z
-- Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: only T50 left (after plan 004 lands in main); Hernán: visual queue by hand; optional review of T56–T57.
+- Updated: 2026-10-02 19:17Z 💻
+- Writer: released
+- Branch: main (plan merged 2026-10-02)
+- Next step: all tasks done; Hernán: visual queue by hand, optional reviews; COACH_* + ANTHROPIC_API_KEY + UPSTASH_* in Vercel for the live coach
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 - Needs Hernán: COACH_ACCESS_CODES (+ COACH_OWNER) in .env.local for npm run dev:coach with real keys (else COACH_FAKE=1); same names needed in Vercel
 
@@ -143,7 +143,7 @@ Worktree setup: npm ci
 - Outcome: Real flow green: 2 packs (1 rejected → prompt fix 7/9 turns), 1 refinement, 3 TTS, interview to assessment; ledger 0.107971 USD = sum of calls, persisted in Upstash; costs in docs/coach.md (pack ~0.030, refinement ~0.027, interview ~0.02–0.03 USD) · 5c03681 · verify ✓ 💻 · not checked: voice quality by ear, usage panel in browser
 
 ## T50 — Bring main into the Prepárate branch
-- Status: pending
+- Status: done
 - Depends on: T49
 - Goal: Merge the current main into this branch, resolve conflicts (navigation, GameView, ProfileView, CLAUDE.md, package.json are the likely ones), and make sure Prepárate and everything from main work together.
 - Context: `git log main` since the branch point; CLAUDE.md; docs/coach.md.
@@ -151,7 +151,7 @@ Worktree setup: npm ci
 - Done when:
   - `git merge main` committed with conflicts resolved; `npm run verify` → exit 0.
   - /preparar/, /jugar/ and /perfil/ checked by hand in fake mode after the merge.
-- Outcome:
+- Outcome: merge commit ae03f86; conflicts in .env.example, CLAUDE.md, package.json/lock, navigation.ts resolved keeping both; npm run verify green; not checked: /preparar/, /jugar/, /perfil/, /liga/ by hand → Visual queue
 
 ## T51 — Fix: server-side limits can be bypassed or refunded after billing
 - Status: done
@@ -260,6 +260,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [x] T55 @199c29c — code review (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
 - [ ] T56 @ef7208e — code review (queued 2026-10-02 💻)
 - [ ] T57 @5b1545c — code review (queued 2026-10-02 💻)
+- [ ] T50 @ae03f86: merge resolution (CLAUDE.md wording, navigation.ts) (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (after fake mode on the same origin run clearGeneratedAudio(); never clear site data: it wipes progress); header-only moment while loading (queued 2026-10-02 ☁️)
@@ -271,6 +272,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [ ] T55 @199c29c — Ajustar card 'ya no se puede ajustar' in light + dark; tab bar highlights on every tab after the href slash change (queued 2026-10-02 💻)
 - [ ] T56 @ef7208e — iPhone installed app: Exportar → share sheet → Archivos; import on the Mac browser and back; Copia de seguridad in light + dark (queued 2026-10-02 💻)
 - [ ] T57 @5b1545c — 'lista, pero no he podido guardarla' notice with Descartar + confirm in light + dark; delete dialog focus on iPhone (queued 2026-10-02 💻)
+- [ ] T50 @ae03f86: after the Liga merge, /preparar/, /jugar/, /perfil/ (backup + Liga link) and /liga/ in fake mode, light + dark (queued 2026-10-02 💻)
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -338,3 +340,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 19:09Z 💻 review T51–T55 on 💻: 1 med + 3 low → T57
 - 2026-10-02 19:09Z 💻 T57 launched · attempt 1 · agent abf91b00f1a8bcfa2
 - 2026-10-02 19:11Z 💻 T57 done · worktree-agent-abf91b00f1a8bcfa2 → 5b1545c · verify ✓
+- 2026-10-02 19:17Z 💻 T50 done · ae03f86; plan merged into main (Hernán OK)
