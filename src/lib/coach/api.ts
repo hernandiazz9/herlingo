@@ -13,6 +13,8 @@ import { COACH_LIMITS, type CoachPack, type CoachUsage, type InterviewResult, ty
 export const COACH_API_BASE = "/api/coach/";
 /** Generations may take up to the function's 60 s limit. */
 const TIMEOUT_MS = 75_000;
+/** One spoken line: past this the caller plays the device voice instead of waiting. */
+const SPEECH_TIMEOUT_MS = 7_000;
 
 export type CoachErrorKind =
   /** No connection, server unreachable or too slow. */
@@ -52,6 +54,7 @@ const MESSAGES = {
   invalid: "La respuesta del servidor no es válida. Inténtalo de nuevo.",
   generic: "Algo ha fallado. Inténtalo de nuevo.",
   refineLimit: `Ya has ajustado esta situación ${COACH_LIMITS.refinementsPerPack} veces.`,
+  codeNotSaved: "No se ha podido guardar el código en este dispositivo",
 };
 
 /** `e` as a `CoachApiError` (anything else becomes kind "other" with a generic message): for catch blocks. */
@@ -95,10 +98,19 @@ interface CallOptions {
   /** Code to send instead of the stored one (checking a new code). */
   code?: string;
   signal?: AbortSignal;
+  /** Deadline for the whole request, body included. */
+  timeoutMs?: number;
 }
 
-/** One request to `/api/coach/<path>/`: the Response when 2xx, else a `CoachApiError`. */
-async function call(path: string, { method = "GET", body, code = getAccessCode() ?? "", signal }: CallOptions = {}): Promise<Response> {
+/**
+ * One request to `/api/coach/<path>/`: `read(res)` of the 2xx response, else a `CoachApiError`.
+ * The body is read inside the same deadline and abort handling, so a stalled body still settles.
+ */
+async function call<T>(
+  path: string,
+  read: (res: Response) => Promise<T>,
+  { method = "GET", body, code = getAccessCode() ?? "", signal, timeoutMs = TIMEOUT_MS }: CallOptions = {},
+): Promise<T> {
   if (!code) throw new CoachApiError("unauthorized", MESSAGES.noCode, 0, "no_code");
   // A header value must be Latin-1; real codes are printable ASCII.
   if (/[^\x20-\x7e]/.test(code)) throw new CoachApiError("unauthorized", MESSAGES.badCode, 0, "bad_code");
@@ -109,7 +121,7 @@ async function call(path: string, { method = "GET", body, code = getAccessCode()
   const timer = setTimeout(() => {
     timedOut = true;
     ctrl.abort();
-  }, TIMEOUT_MS);
+  }, timeoutMs);
   const onAbort = () => ctrl.abort();
   signal?.addEventListener("abort", onAbort);
   try {
@@ -121,7 +133,7 @@ async function call(path: string, { method = "GET", body, code = getAccessCode()
       signal: ctrl.signal,
     });
     if (!res.ok) throw await errorFrom(res, code);
-    return res;
+    return await read(res);
   } catch (e) {
     if (e instanceof CoachApiError) throw e;
     if (signal?.aborted) throw new CoachApiError("aborted", "", 0);
@@ -135,12 +147,19 @@ async function call(path: string, { method = "GET", body, code = getAccessCode()
 }
 
 async function callJson(path: string, options?: CallOptions): Promise<unknown> {
-  const res = await call(path, options);
-  try {
-    return await res.json();
-  } catch {
-    throw new CoachApiError("other", MESSAGES.invalid, res.status, "invalid_response");
-  }
+  return call(
+    path,
+    async (res) => {
+      // A body lost, timed out or aborted midway rejects here and `call` maps it.
+      const text = await res.text();
+      try {
+        return JSON.parse(text) as unknown;
+      } catch {
+        throw new CoachApiError("other", MESSAGES.invalid, res.status, "invalid_response");
+      }
+    },
+    options,
+  );
 }
 
 const invalid = () => new CoachApiError("other", MESSAGES.invalid, 200, "invalid_response");
@@ -221,15 +240,23 @@ export async function checkAccessCode(code: string, opts: { signal?: AbortSignal
   const data = await callJson("usage", { code: trimmed, signal: opts.signal });
   const usage = parseUsage(data);
   if (!usage) throw invalid();
-  setAccessCode(trimmed);
+  if (!setAccessCode(trimmed)) throw new CoachApiError("other", MESSAGES.codeNotSaved, 0, "storage");
   storeUsage(usage);
   return usage;
 }
 
-/** The mp3 of one line (`POST /api/coach/tts/`); rejects on any failure (the caller uses the device voice). */
+/**
+ * The mp3 of one line (`POST /api/coach/tts/`) within `SPEECH_TIMEOUT_MS`, body included; rejects
+ * on any failure (the caller uses the device voice).
+ */
 export async function fetchSpeech(text: string, voice: string, signal?: AbortSignal): Promise<Blob> {
-  const res = await call("tts", { method: "POST", body: { text, voice }, signal });
-  const type = res.headers.get("Content-Type") ?? "";
-  if (!type.startsWith("audio/")) throw invalid();
-  return res.blob();
+  return call(
+    "tts",
+    async (res) => {
+      const type = res.headers.get("Content-Type") ?? "";
+      if (!type.startsWith("audio/")) throw invalid();
+      return res.blob();
+    },
+    { method: "POST", body: { text, voice }, signal, timeoutMs: SPEECH_TIMEOUT_MS },
+  );
 }

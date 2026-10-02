@@ -20,13 +20,25 @@ const CACHE_PATH = "/coach-audio/";
 /** Object URLs kept in memory (least recently used dropped first). */
 const MEMO_SIZE = 64;
 const PREFETCH_CONCURRENCY = 3;
+/**
+ * Upper bound for one line's cache lookup + download: past it the job settles empty (the player
+ * falls back to the device voice) and the download is aborted, even if a source never settles.
+ */
+const LOAD_DEADLINE_MS = 8_000;
 
 /** Fetches the mp3 of one line; rejects when it cannot (the caller falls back to the device voice). */
 export type GeneratedAudioSource = (text: string, voice: string, signal?: AbortSignal) => Promise<Blob>;
 
 let source: GeneratedAudioSource | undefined;
 const memo = new Map<string, string>();
-const inflight = new Map<string, Promise<Blob | undefined>>();
+/** One shared job per line, aborted once every caller has given up (a player never gives up). */
+interface Job {
+  promise: Promise<Blob | undefined>;
+  ctrl: AbortController;
+  /** Callers still waiting: players (no signal) and callers whose signal has not aborted. */
+  waiting: number;
+}
+const inflight = new Map<string, Job>();
 
 /** Registers where generated mp3s come from (`@/lib/coach` registers the coach TTS endpoint). */
 export function setGeneratedAudioSource(fn: GeneratedAudioSource | undefined): void {
@@ -91,19 +103,56 @@ async function download(p: Playable, cache: Cache | undefined, signal?: AbortSig
   return blob;
 }
 
-/** The mp3 of a line: Cache Storage, else one download (deduplicated while in flight). */
+function startJob(p: Playable): Job {
+  const ctrl = new AbortController();
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const deadline = new Promise<undefined>((resolve) => {
+    timer = setTimeout(() => {
+      ctrl.abort();
+      resolve(undefined);
+    }, LOAD_DEADLINE_MS);
+  });
+  const work = (async () => {
+    const cache = await openCache();
+    return (await cachedBlob(cache, p.audioKey)) ?? (await download(p, cache, ctrl.signal));
+  })().catch(() => undefined);
+  const job: Job = { ctrl, waiting: 0, promise: Promise.race([work, deadline]) };
+  void job.promise.then(() => {
+    clearTimeout(timer);
+    if (inflight.get(p.audioKey) === job) inflight.delete(p.audioKey);
+  });
+  return job;
+}
+
+/**
+ * The mp3 of a line: Cache Storage, else one download (deduplicated while in flight, bounded by
+ * `LOAD_DEADLINE_MS`). With `signal`, this caller stops waiting (undefined) when it aborts; the
+ * shared download is aborted only once no caller waits for it any more.
+ */
 function loadBlob(p: Playable, signal?: AbortSignal): Promise<Blob | undefined> {
+  if (signal?.aborted) return Promise.resolve(undefined);
   let job = inflight.get(p.audioKey);
   if (!job) {
-    job = (async () => {
-      const cache = await openCache();
-      return (await cachedBlob(cache, p.audioKey)) ?? (await download(p, cache, signal));
-    })()
-      .catch(() => undefined)
-      .finally(() => inflight.delete(p.audioKey));
+    job = startJob(p);
     inflight.set(p.audioKey, job);
   }
-  return job;
+  const shared = job;
+  shared.waiting++;
+  if (!signal) return shared.promise;
+  return new Promise((resolve) => {
+    const onAbort = () => {
+      if (--shared.waiting === 0) {
+        shared.ctrl.abort();
+        if (inflight.get(p.audioKey) === shared) inflight.delete(p.audioKey);
+      }
+      resolve(undefined);
+    };
+    signal.addEventListener("abort", onAbort, { once: true });
+    void shared.promise.then((blob) => {
+      signal.removeEventListener("abort", onAbort);
+      resolve(blob);
+    });
+  });
 }
 
 function remembered(key: string): string | undefined {

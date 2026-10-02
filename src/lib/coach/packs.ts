@@ -49,14 +49,52 @@ export function pruneCoachAudio(): Promise<void> {
   return pruneGenerated(keep);
 }
 
+/** The background audio download of each saved pack (by language + id) while it runs. */
+const prefetches = new Map<string, { ctrl: AbortController; done: Promise<unknown> }>();
+const prefetchId = (lang: string, id: string) => `${lang}\n${id}`;
+
+/** Aborts the pack's running audio download; resolves once it has settled (at once if none). */
+function stopPrefetch(lang: string, id: string): Promise<unknown> {
+  const running = prefetches.get(prefetchId(lang, id));
+  if (!running) return Promise.resolve();
+  prefetches.delete(prefetchId(lang, id));
+  running.ctrl.abort();
+  return running.done;
+}
+
+/**
+ * Downloads the pack's audio in the background and aborts the download of its older version
+ * (after starting the new one, so lines both share keep their download). Resolves once the old
+ * download has settled.
+ */
+function startPrefetch(pack: CoachPack): Promise<unknown> {
+  const key = prefetchId(pack.lang, pack.id);
+  const old = prefetches.get(key);
+  const ctrl = new AbortController();
+  const done = cachePackAudio(pack, ctrl.signal);
+  prefetches.set(key, { ctrl, done });
+  void done.then(() => {
+    if (prefetches.get(key)?.ctrl === ctrl) prefetches.delete(key);
+  });
+  if (!old) return Promise.resolve();
+  old.ctrl.abort();
+  return old.done;
+}
+
+/** Tidies the audio cache once the pack's old download has stopped (it can no longer add files). */
+function pruneAfter(stopped: Promise<unknown>): void {
+  void stopped.then(pruneCoachAudio);
+}
+
 /** Saves a pack at the top of the list (a pack with the same id is replaced). False if storage failed. */
 export function savePack(pack: CoachPack): boolean {
   const packs = getSavedPacks(pack.lang);
   const replaced = packs.some((p) => p.id === pack.id);
   const ok = write(pack.lang, [pack, ...packs.filter((p) => p.id !== pack.id)]);
-  if (replaced) void pruneCoachAudio();
-  void cachePackAudio(pack);
-  return ok;
+  if (!ok) return false;
+  const oldStopped = startPrefetch(pack);
+  if (replaced) pruneAfter(oldStopped);
+  return true;
 }
 
 /** Replaces the saved pack with the same id in place (a refinement); saves it at the top if absent. */
@@ -65,13 +103,12 @@ export function replacePack(pack: CoachPack): boolean {
   const i = packs.findIndex((p) => p.id === pack.id);
   if (i < 0) return savePack(pack);
   packs[i] = pack;
-  const ok = write(pack.lang, packs);
-  void pruneCoachAudio();
-  void cachePackAudio(pack);
-  return ok;
+  if (!write(pack.lang, packs)) return false;
+  pruneAfter(startPrefetch(pack));
+  return true;
 }
 
 export function deletePack(lang: string, id: string): void {
   write(lang, getSavedPacks(lang).filter((p) => p.id !== id));
-  void pruneCoachAudio();
+  pruneAfter(stopPrefetch(lang, id));
 }
