@@ -5,6 +5,12 @@
   "buildCommand": "npm run build",
   "outputDirectory": "out",
   "trailingSlash": true,
+  "functions": {
+    "api/coach/*.ts": {
+      "maxDuration": 60,
+      "includeFiles": "content/*/pack.json"
+    }
+  },
   "headers": [
     {
       "source": "/sw.js",

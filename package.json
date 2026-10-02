@@ -8,10 +8,12 @@
   "scripts": {
     "predev": "npm run content:build",
     "dev": "next dev",
+    "dev:coach": "tsx scripts/coach/dev.ts",
     "prebuild": "npm run content:build",
     "build": "next build",
     "postbuild": "tsx scripts/pwa/build.ts",
     "start": "tsx scripts/serve.ts",
+    "start:coach": "tsx scripts/coach/dev.ts --out",
     "lint": "eslint .",
     "pretypecheck": "npm run content:build",
     "typecheck": "next typegen && tsc --noEmit",
@@ -23,6 +25,8 @@
     "verify": "npm run lint && npm run content:check && npm run typecheck && npm run build"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "@upstash/redis": "^1.39.0",
     "next": "16.3.7",
     "react": "19.2.8",
     "react-dom": "19.2.8",
