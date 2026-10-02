@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState, useSyncExternalStore } from "react";
+import { EntryCard } from "@/components/coach/EntryCard";
 import { LessonLangContext } from "@/components/exercises/shared";
 import { speak } from "@/lib/audio";
 import { DEFAULT_LANG, getPack } from "@/lib/content";
@@ -97,6 +98,7 @@ function TopicGrid({
 }) {
   return (
     <div className="flex flex-col gap-4 pb-6">
+      <EntryCard />
       <p className="text-base text-ink-muted">
         Elige un tema: descubre sus palabras y frases con audio y luego juega una ronda de 60 segundos.
       </p>
