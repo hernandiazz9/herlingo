@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-02 19:03Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: all tasks but T50 done; Hernán: visual queue by hand; optional light review of T51–T55; T50 after plan 004 lands in main.
+- Next step: integrate T56; turn the T51–T55 review into fix tasks; Hernán: visual queue; T50 after plan 004 lands in main.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 - Needs Hernán: COACH_ACCESS_CODES (+ COACH_OWNER) in .env.local for npm run dev:coach with real keys (else COACH_FAKE=1); same names needed in Vercel
 
@@ -217,7 +217,7 @@ Worktree setup: npm ci
 - Outcome: unknown_pack disables Ajustar with 'Esta situación ya no se puede ajustar; crea una nueva.' (in-memory canRefine); tts_limit → device voice, no retries that session; all section hrefs end in / (owns() strips it); form cleared after ready notice; docs: no clear-site-data advice · 199c29c · verify ✓ 💻 · not checked: light/dark screens, device voice after 429 on iPhone
 
 ## T56 — Backup: export and import on-device progress in Perfil
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent af4dc92a94e38738d · since 19:03Z)
 - Depends on: T55
 - Where: any
 - Goal: Until accounts exist, Hernán can save all his on-device data to a file and restore it on the same or another phone, so a wiped browser or a new phone never loses progress.
@@ -316,3 +316,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:37Z 💻 T54 done · worktree-agent-a7f117a2bfae5aa17 → 85faaf9 · verify ✓
 - 2026-10-02 18:38Z 💻 T55 launched · attempt 1 · agent ae5bdd50791a8e7e5
 - 2026-10-02 18:42Z 💻 T55 done · worktree-agent-ae5bdd50791a8e7e5 → 199c29c · verify ✓
+- 2026-10-02 19:03Z 💻 T56 launched · attempt 1 · agent af4dc92a94e38738d; review of T51–T55 started (read-only agent)
