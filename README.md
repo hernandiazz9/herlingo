@@ -63,7 +63,8 @@ current name, city, job and route are placeholders to check). Some dialogues reu
 
 ## Deploy to Vercel
 
-Vercel builds from source with the settings in `vercel.json` (plain static site from `out/`).
+Vercel builds from source with the settings in `vercel.json` (static site from `out/`, plus
+Prepárate's functions in `api/coach/`, see below).
 The first time, from the repo folder:
 
 ```bash
@@ -80,6 +81,25 @@ npx vercel@latest --prod
 
 The installed app notices the new version the next time you open it and shows
 "Hay una versión nueva de la app" → **Actualizar**.
+
+### Prepárate (AI coach) environment variables
+
+The site itself needs no variables. Prepárate's functions in `api/coach/` (deployed next to `out/`
+with the settings in `vercel.json`) need these in Vercel → Project → Settings → Environment
+Variables (Production), then a new deploy:
+
+| Name | Required |
+| --- | --- |
+| `ANTHROPIC_API_KEY` | yes |
+| `UPSTASH_REDIS_REST_URL` | yes |
+| `UPSTASH_REDIS_REST_TOKEN` | yes |
+| `COACH_ACCESS_CODES` | yes |
+| `COACH_OWNER` | yes |
+| `COACH_MONTHLY_CAP_USD`, `COACH_DAILY_LIMIT`, `COACH_TIMEZONE` | no |
+
+Where each value comes from (Anthropic key and spend limit, Upstash database, access codes) and
+how to check the deploy: [docs/coach.md → Setup steps](docs/coach.md#setup-steps-hernán). Without
+them the rest of the app works as before; Prepárate answers "not configured".
 
 Optional: connect the GitHub repo in the Vercel dashboard (Project → Settings → Git) to deploy on
 every push to `main` instead of running the command.

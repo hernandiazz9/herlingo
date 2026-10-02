@@ -146,7 +146,7 @@ count as a generation and costs nothing.
 {
   "month": "2026-10", "spentUsd": 0.29, "capUsd": 5, "remainingUsd": 4.71,
   "tokens": { "input": 14900, "output": 26350, "cacheRead": 22800, "cacheWrite": 0 },
-  "packs": 7,                 // new packs this month (refinements excluded)
+  "packs": 7,                 // new-pack calls billed this month (refinements excluded; a failed attempt counts, since it was paid)
   "avgPackUsd": 0.029,
   "today": { "used": 10, "limit": 10 },   // the caller's code
   "isOwner": false,
@@ -360,9 +360,11 @@ dialogues' style:
   steps in order, practical, with the local customs that matter; 8–10 key phrases (≤ 10 words,
   two thirds to say, one third to understand, reused in the dialogue; the note says who says
   it or gives a pronunciation tip, never repeats the translation).
-- Dialogue: 8 turns (6–10), alternating, never two learner turns in a row, usually opened by
-  the native speaker and closed by a short native line; one native speaker (one TTS voice
-  reads all native lines) named by role in Spanish; native lines ≤ 20 words, slightly above the
+- Dialogue: 7 or 9 turns (hard limits 6–10, each native line and each learner turn counts as
+  one), alternating, never two learner turns in a row, usually opened by the native speaker and
+  closed by a short native line (an even count cannot both open and close with the native
+  speaker: with "8" the first real call in T49 came back with more than 10); one native
+  speaker (one TTS voice reads all native lines) named by role in Spanish; native lines ≤ 20 words, slightly above the
   learner's level, with one realistic complication; learner prompts say what to express without
   the target words; 3 options: one correct, usually one acceptable and one wrong (a typical
   Spanish speaker's mistake, plausible, never also correct), clearly different wording for
@@ -386,28 +388,40 @@ strengths and weak points, up to 8 facts the learner said. Steps use the `Interv
 after 10 answers the server switches to the `Assessment` schema, so the last step cannot be
 another question.
 
-### Token use and cost per call — estimate, not measured
+### Token use and cost per call — measured
 
-No API key was available when the prompts were written (T43), so these numbers are an
-**estimate** from the prompt sizes (characters ÷ ~3 for the Sonnet 5.x tokenizer) × the price
-table; T49 replaces them with the `usage` of real calls.
+Measured on 2026-10-02 (T49) against the real API (`claude-sonnet-5-5`, effort `low`) through
+`npm run dev:coach` with the Upstash ledger, one learner context of a beginner ("Sobre mí" one
+line, 6 of 53 lessons). Costs are the ledger's (price table in `api/_lib/model.ts`).
 
-| Call | Input | Output (incl. low-effort thinking) | Estimated cost |
-| --- | --- | --- | --- |
-| New pack | system ~1.9k + schema ~0.8k (cached after the first call) + user ~0.3k | ~1.5k–3k | ~0.02–0.04 USD |
-| Refinement | as a pack + previous pack ~1.2k | ~1.5k–3k | ~0.02–0.04 USD |
-| Interview step | system ~1.1k + schema ~0.4k (cached) + user 0.25k → 0.7k | ~0.05k–0.5k | ~0.002–0.008 USD |
-| Whole interview (~9 calls) | | | ~0.03–0.05 USD |
+| Call | Input | Cache write | Cache read | Output | Cost | Latency |
+| --- | --- | --- | --- | --- | --- | --- |
+| New pack (first call in 5 min) | 167 | 3 536 | 0 | 2 060 | **0.030 USD** | 15 s |
+| Refinement, same pack, 1 min later | 2 307 | 0 | 3 536 | 2 118 | **0.027 USD** | 13 s |
+| Interview, first question | — | — | — | — | **0.0059 USD** | 5 s |
+| Interview, second question | — | — | — | — | **0.0016 USD** | 2 s |
+| Interview, final assessment (forced: 10 answers) | — | — | — | — | **0.0098 USD** | 6 s |
+| The 3 interview calls together (their responses carry only `costUsd`; tokens from the ledger) | 1 148 | 3 647 | 1 959 | 549 | 0.017 USD | |
+| Pack rejected by the schema (see below) | 167 | 3 486 | 0 | 2 535 | 0.034 USD | 20 s |
 
-Output dominates (10 USD/MTok against 2 input and 0.20 cache read). At ~0.03 USD per pack the
-default 5 USD cap is roughly 150 packs a month. Sizes measured on 2026-10-02: `PACK_SYSTEM`
-5.9k characters, `INTERVIEW_SYSTEM` 3.3k, pack schema 2.3k, step schema 1.3k, a pack user turn
-0.8k (4.3k with a previous pack), a fixture-sized pack 3.4k characters of JSON.
-
-**For T49 to measure:** real cost per pack, refinement and interview (write them here, replacing
-the estimate); `cache_read_input_tokens` > 0 on a refinement made within 5 minutes; pack latency
-(must stay well under the 50 s deadline: if it is fast and quality needs it, try `effort:
-"medium"` for packs in `generators.ts`); a pack's quality against docs/content-guide.md.
+- A pack is ~2k output tokens (low-effort thinking included); output is ~80 % of its cost. The
+  system prompt + schema prefix (~3.5k tokens) is written to the cache on the first call and read
+  by the next pack or refinement within 5 minutes (`cache_read_input_tokens` 3 536 on the
+  refinement). A refinement adds the previous pack (~2k input tokens).
+- Interview: the step schema and the assessment schema are different prefixes, so each is written
+  to the cache once. A whole interview (~8 questions + the assessment) ≈ 0.006 + 7 × ~0.002 +
+  ~0.005 ≈ **0.02–0.03 USD**.
+- Latency is far inside the 50 s deadline, so `effort: "medium"` for packs is affordable if
+  quality ever needs it (more thinking tokens: expect ~1.5–2× the output cost). Quality at `low`
+  was good: natural Italian, honest register, a realistic complication (almond sold out), wrong
+  options that are real Spanish-speaker mistakes («Voglio», a calque), 9 turns.
+- Budget: at ~0.03 USD per pack and refinement the default 5 USD cap is ~150 generations a month,
+  well above the 10/day/code limit for one or two people.
+- A rejected answer is still paid (billed before parsing, as designed) and refunds the daily slot.
+  The one seen in T49 had more than 10 dialogue turns, caused by the prompt asking for "8 turns" while
+  opening and closing with the native speaker; the prompt now asks for 7 or 9.
+- The T49 run spent 0.107971 USD in total (6 Claude calls), and `GET /usage/` reported exactly
+  that sum of the calls' `usage.costUsd`.
 
 ## Voice (TTS)
 
@@ -496,17 +510,52 @@ settings. Never in the repo or in client code.
 
 ## Setup steps (Hernán)
 
-1. **Anthropic:** in https://platform.claude.com create an API key for this project (Settings →
-   API keys). Set a monthly **spend limit** in Settings → Limits (for example 10 USD) as a
-   safety net above the app's own cap.
-2. **Upstash:** create a Redis database at https://console.upstash.com (free plan, region near
-   the Vercel functions, e.g. eu-west), or reuse an existing one (every key starts with
-   `langlern:`). Copy the **REST URL** and **REST token**.
-3. **Access codes:** pick one long random code per person (e.g. `openssl rand -base64 18`), and
-   write them as `hernan:<code>,<name>:<code>`. `COACH_OWNER=hernan`.
-4. **Vercel:** Project → Settings → Environment Variables (Production, and Preview if wanted):
-   `ANTHROPIC_API_KEY`, `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`,
-   `COACH_ACCESS_CODES`, `COACH_OWNER`. Then deploy again (`npx vercel@latest --prod`): the
-   functions in `api/coach/` deploy next to the static `out/` with the settings in vercel.json
-   (`functions`: 60 s max duration, `content/*/pack.json` included).
-5. On the phone, open Prepárate and enter your code once (stored on the device).
+Nothing here is done by agents: the real Vercel project and its variables are Hernán's.
+
+1. **Anthropic** (https://platform.claude.com):
+   - Settings → API keys → **Create key** (name it `lang-lern-coach`). Copy it once.
+   - Settings → Limits: set a monthly **spend limit** (e.g. 10 USD) as a safety net above the
+     app's own 5 USD cap (a call cut by the 50 s deadline is not in the app's ledger).
+2. **Upstash** (https://console.upstash.com):
+   - **Create Database** → Redis, type Regional, free plan. Region: the same as the Vercel
+     functions. Vercel runs them in Washington D.C. (`iad1`) unless you change Project → Settings
+     → Functions → Function Region; then pick AWS `us-east-1` (or `eu-central-1` if you set the
+     functions to Frankfurt `fra1`). Eviction off. An existing database works too: every key of
+     this app starts with `langlern:`.
+   - In the database page, **REST API** section: copy `UPSTASH_REDIS_REST_URL` and
+     `UPSTASH_REDIS_REST_TOKEN` (the read-write token, not the read-only one).
+3. **Access codes:** one random code per person, easy to type on a phone, e.g.
+   `openssl rand -hex 8` (16 characters). Write them as `hernan:<code>,<name>:<code>` (no spaces;
+   names are ledger keys: lowercase letters). The owner entry's name goes in `COACH_OWNER`.
+4. **Vercel** → the lang_lern project → Settings → **Environment Variables**, environment
+   **Production** (also Preview only if you want preview deploys to spend), each marked
+   *Sensitive*:
+
+   | Name | Value |
+   | --- | --- |
+   | `ANTHROPIC_API_KEY` | the key from step 1 |
+   | `UPSTASH_REDIS_REST_URL` | from step 2 |
+   | `UPSTASH_REDIS_REST_TOKEN` | from step 2 |
+   | `COACH_ACCESS_CODES` | from step 3 |
+   | `COACH_OWNER` | `hernan` |
+
+   Optional: `COACH_MONTHLY_CAP_USD`, `COACH_DAILY_LIMIT`, `COACH_TIMEZONE` (see the table
+   above). Never set `COACH_FAKE` in production.
+5. **Function config** needs no dashboard change: `vercel.json` already declares the functions
+   (`"functions": { "api/coach/*.ts": { "maxDuration": 60, "includeFiles": "content/*/pack.json" } }`,
+   Node.js runtime, Web-standard `export default { fetch }` handlers). 60 s fits the Hobby plan.
+   The leading `_` keeps `api/_lib/` from becoming routes.
+6. **Deploy** after `npm run verify`: `npx vercel@latest --prod` (variables only reach new
+   deployments, so redeploy after changing any of them).
+7. **Check** from a terminal (the code is typed at the prompt, not saved in history):
+   `read -s CODE; curl -s -H "x-coach-code: $CODE" https://<your-app>.vercel.app/api/coach/usage/`
+   → JSON with `"isOwner": true`. A 503 `not_configured` means a variable is missing; 401 a
+   wrong code.
+8. On the phone, open Jugar → **Prepárate**, enter your code once (stored on the device), and
+   check the usage panel.
+
+**Local dev with real keys** (`.env.local` with the Anthropic and Upstash variables, no
+`COACH_FAKE`): `npm run dev:coach` then talks to the real API and writes to the **same Upstash
+ledger as production**, so local calls count towards the real monthly cap (without `COACH_ACCESS_CODES`
+the dev codes use the owner name `hernan`, so they also share its daily count). Leave the Upstash variables out of
+`.env.local` for an in-memory ledger.
