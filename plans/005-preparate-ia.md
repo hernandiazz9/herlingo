@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-02 19:09Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: integrate T56; turn the T51–T55 review into fix tasks; Hernán: visual queue; T50 after plan 004 lands in main.
+- Next step: integrate T57; Hernán: visual queue; T50 after plan 004 lands in main.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 - Needs Hernán: COACH_ACCESS_CODES (+ COACH_OWNER) in .env.local for npm run dev:coach with real keys (else COACH_FAKE=1); same names needed in Vercel
 
@@ -230,7 +230,7 @@ Worktree setup: npm ci
 - Outcome: Perfil 'Copia de seguridad': export all lang-lern:* keys except the access code to JSON (share sheet on touch devices, download elsewhere); import validates, confirms, offers the previous copy, rolls back on write failure, keeps access code/theme; hooks refresh via storage event · ef7208e · verify ✓ 💻 · not checked: iPhone share sheet → Archivos, Mac ↔ iPhone round-trip, light theme
 
 ## T57 — Fix: deleted pack resurrected by a late refinement; refine count after 502; dialog focus on iOS; unsaved result overwritten
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent abf91b00f1a8bcfa2 · since 19:09Z)
 - Depends on: T56
 - Where: any
 - Goal: Background generations never undo the learner's own actions or silently drop a paid result.
@@ -333,3 +333,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 19:03Z 💻 T56 launched · attempt 1 · agent af4dc92a94e38738d; review of T51–T55 started (read-only agent)
 - 2026-10-02 19:09Z 💻 T56 done · worktree-agent-af4dc92a94e38738d → ef7208e · verify ✓
 - 2026-10-02 19:09Z 💻 review T51–T55 on 💻: 1 med + 3 low → T57
+- 2026-10-02 19:09Z 💻 T57 launched · attempt 1 · agent abf91b00f1a8bcfa2
