@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 18:05Z 💻
+- Updated: 2026-10-02 18:25Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: drain the Review (T42–T49) and Visual checks queues on 💻; T50 after plan 004 merges into main.
+- Next step: run T51+T53, then T52+T54 (≤2 agents); T50 after plan 004 lands in main; visual queue by hand.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 - Needs Hernán: T50: run now as a no-op, or wait until plan 004 (Liga) lands in main (default: wait)
 
@@ -153,18 +153,69 @@ Worktree setup: npm ci
   - /preparar/, /jugar/ and /perfil/ checked by hand in fake mode after the merge.
 - Outcome:
 
+## T51 — Fix: server-side limits can be bypassed or refunded after billing
+- Status: pending
+- Depends on: T49
+- Where: any
+- Goal: Every billed Claude call counts against the limits the server enforces, independent of what the client sends.
+- Context: review of T42–T43 @0813a9d/@a69de29 (💻 2026-10-02). (1) `api/coach/interview.ts:19` takes a daily slot only when `history` is empty, and the client controls `history`, so a guest code can loop billed interview steps without limit: count every step (e.g. a per-code daily step counter in the ledger, ≤11 steps per interview × 10). (2) `api/coach/pack.ts:56-57`, `api/coach/interview.ts:35-36` give back the daily and refinement slots on every failure, even after billing: refund only when no charge was recorded (network/timeout/API error). (3) `api/coach/pack.ts:16,25` + `api/_lib/ledger.ts:83-88` key the 3-refinement limit on the client-sent `packId`/`previous.refinements`: record each server-issued pack id in the ledger at creation (per code, with its own refinement count) and refuse refinements of unknown ids. (4) `api/coach/tts.ts` has no limit: add a cheap per-code daily counter (default 500 lines, env override). (5) `api/_lib/ledger.ts:61-67` budget check is read-then-act: document the possible overshoot (≈ concurrent calls × one call's cost) in docs/coach.md; no reservation needed.
+- Scope: may touch `api/coach/**`, `api/_lib/ledger.ts`, `api/_lib/store.ts`, `api/_lib/fake*`, `docs/coach.md`, `.env.example` / must not touch `plans/`, `src/**`, `content/**`, `docs/brief.md`.
+- Done when:
+  - Each of (1)–(4) is enforced on the server and works in fake mode (in-memory ledger); 429 messages in Spain Spanish like the existing ones.
+  - docs/coach.md describes the limits, refunds and the overshoot note.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T52 — Fix: generated-pack validation, prompt quoting, dev server exposure, price row
+- Status: pending
+- Depends on: T49
+- Where: any
+- Goal: Malformed model output is rejected, all client-sent interview text is quoted as data, the dev server can't spend real money for anyone on the LAN, and the price table is right.
+- Context: review of T42–T43 @0813a9d/@a69de29 (💻 2026-10-02). (1) `api/_lib/schema.ts:38-42,54` checks counts only: add a zod `superRefine` on the generated pack requiring exactly one `verdict: "correct"` option per learner turn (the player's `correctOption` falls back to `options[0]`, `src/components/dialogue/DialoguePlayer.tsx:39-41`) and the native/learner alternation the prompt asks for; a failure maps to the existing `invalid` → 502. (2) `api/_lib/prompts.ts:126-127`: wrap the interview history's `q.prompt` and `q.text` in `quote()` like `answer`. (3) `scripts/coach/dev.ts:27-29,124`: use the default dev codes only in fake mode (refuse to start with a real key and no `COACH_ACCESS_CODES`), and listen on 127.0.0.1 unless an env var asks for the LAN. (4) `api/_lib/model.ts:22`: the `claude-opus-5-5` cacheRead price looks off (0.05× input vs 0.1× elsewhere); check every row against the official Anthropic pricing page and update the source/review date.
+- Scope: may touch `api/_lib/schema.ts`, `api/_lib/prompts.ts`, `api/_lib/model.ts`, `scripts/coach/**`, `docs/coach.md`, CLAUDE.md (dev:coach line only) / must not touch `plans/`, `src/**`, `content/**`, `docs/brief.md`, `api/coach/**`, `api/_lib/ledger.ts`.
+- Done when:
+  - (1)–(4) done; fake fixtures still pass the stricter schema.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T53 — Fix: generated audio fetch can hang; stray prefetches; silent code-save failure
+- Status: pending
+- Depends on: T49
+- Where: any
+- Goal: Tapping a generated line always plays something within a few seconds, and background audio work never outlives its pack.
+- Context: review of T45 @b31148c (💻 2026-10-02). (1) `src/lib/audio/generated.ts:129-130` with `src/lib/coach/api.ts:15`: an uncached line waits on TTS with only the 75 s pack timeout: give speech fetches their own ~6–8 s deadline, then fall back to `speechSynthesis`. (2) `src/lib/coach/api.ts:131-134,234` (and `generated.ts:95-105`): `call()` clears the timeout and abort listener once headers arrive, so a stalled body never settles and its `inflight` entry blocks that line for the session: read the body inside the guarded section and bound the shared in-flight job. (3) `src/lib/coach/packs.ts:53-77`: `deletePack`/`replacePack` don't stop `savePack`'s prefetch: one AbortController per pack id, abort on delete/replace, prune after it settles. (4) `packs.ts:56-59`: prefetch only when the localStorage write succeeded. (5) `src/lib/coach/api.ts:224`: `checkAccessCode` ignores `setAccessCode`'s false: throw a `CoachApiError` "No se ha podido guardar el código en este dispositivo".
+- Scope: may touch `src/lib/coach/**`, `src/lib/audio/generated.ts` / must not touch `plans/`, `api/**`, `src/components/**`, `content/**`, `docs/brief.md`.
+- Done when:
+  - (1)–(5) done; static content audio unchanged.
+  - `npm run verify` → exit 0.
+  - Hand check (PC): with network throttled to "slow 3G" in fake mode, an uncached generated line falls back to the device voice within ~8 s.
+- Outcome:
+
+## T54 — Fix: leaving during a generation throws away a paid result; draft lost on 401; focus; links
+- Status: pending
+- Depends on: T49, T53
+- Where: any
+- Goal: A generation the user already paid for is never silently discarded, and the Prepárate screens behave well with keyboard and screen readers.
+- Context: review of T46–T48 @473bd35/@6b219b2/@4e366e1 (💻 2026-10-02). (1) `src/components/coach/SituationForm.tsx:46`, `RefineCard.tsx:38` abort the request on unmount while the server still bills it; "Mis situaciones" stays clickable during generation (`CoachView.tsx:125`): don't abort on unmount — let the request finish and save the pack (refinement: replace) from the store layer, or hide the list and say clearly that cancelling still counts; pick the simpler robust option. (2) `CoachView.tsx:102-123` + `SituationForm.tsx:64`: a 401 swaps the form for the code card and loses the typed description: keep the draft in CoachView (or sessionStorage). (3) `src/components/coach/nav.ts:23-38`, `CoachView.tsx:58-91`, `ConfirmDialog.tsx:45`: move focus to the PageHeader h1 (tabIndex -1) after open/close/created; ConfirmDialog traps focus and returns it to its trigger. (4) `src/components/dialogue/DialogueSimulator.tsx:39` and `src/app/dialogos/[id]/page.tsx:26`: `/dialogos` → `/dialogos/`. (Not a fix: /preparar/nivel/ lighting Jugar from Perfil is the T48 decision.)
+- Scope: may touch `src/components/coach/**`, `src/lib/coach/packs.ts`, `src/lib/coach/api.ts` (only for (1)), `src/components/dialogue/DialogueSimulator.tsx`, `src/app/dialogos/**`, `src/app/preparar/**`, `src/components/shell/PageHeader.tsx` / must not touch `plans/`, `api/**`, `content/**`, `docs/brief.md`.
+- Done when:
+  - (1)–(4) done; UI copy Spain Spanish with "tú"; tokens only.
+  - `npm run verify` → exit 0.
+  - Hand check (PC): start a generation, open a saved pack, come back: the new pack appears in Mis situaciones; keyboard-only delete dialog.
+- Outcome:
+
 ## Deferred to the PC
 Moved to the Review queue and Visual checks queue below (hybrid skill). Token-heavy work (code reviews, visual checks, live-key checks) runs on the PC and never blocks the cloud.
 
 ## Review queue
-- [ ] T42 @0813a9d — code review (queued 2026-10-02 ☁️)
-- [ ] T43 @a69de29 — code review (queued 2026-10-02 ☁️)
-- [ ] T44 @04ba4b2 — code review (queued 2026-10-02 ☁️)
-- [ ] T45 @b31148c — code review (queued 2026-10-02 ☁️)
-- [ ] T46 @473bd35 — code review (queued 2026-10-02 ☁️)
-- [ ] T47 @6b219b2 — code review (queued 2026-10-02 ☁️)
-- [ ] T48 @4e366e1 — code review (queued 2026-10-02 ☁️)
-- [ ] T49 @5c03681 — code review (prompt fix + docs) (queued 2026-10-02 💻)
+- [x] T42 @0813a9d — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T51, T52
+- [x] T43 @a69de29 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T51, T52
+- [x] T44 @04ba4b2 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02, no findings beyond T51(4)
+- [x] T45 @b31148c — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T53
+- [x] T46 @473bd35 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T54
+- [x] T47 @6b219b2 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T54 (static dialogues unaffected)
+- [x] T48 @4e366e1 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T54
+- [x] T49 @5c03681 — code review (prompt fix + docs) (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode); header-only moment while loading (queued 2026-10-02 ☁️)
@@ -217,3 +268,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 17:58Z 💻 T49 launched · attempt 1 · agent ac06e17fe757188a3
 - 2026-10-02 18:05Z 💻 T49 done · worktree-agent-ac06e17fe757188a3 → 5c03681 · verify ✓ (main checkout needed npm ci: new deps)
 - 2026-10-02 18:05Z 💻 T50 checked: main (01832a7) has 0 commits missing here; plan 004 (Liga) is not in main yet, so the merge would be a no-op
+- 2026-10-02 18:25Z 💻 review T42–T49 on 💻 (3 read-only agents): 3 med + 14 low findings → T51–T54
