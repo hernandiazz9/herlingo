@@ -11,8 +11,9 @@ Worktree setup: npm ci
 - Updated: 2026-10-02 18:05Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: T50 (merge main into this branch, fake-mode hand check), then drain the Review and Visual checks queues.
+- Next step: drain the Review (T42–T49) and Visual checks queues on 💻; T50 after plan 004 merges into main.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
+- Needs Hernán: T50: run now as a no-op, or wait until plan 004 (Liga) lands in main (default: wait)
 
 ## Shared contract (all tasks read this)
 
@@ -215,3 +216,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 17:57Z 💻 keys for T49 copied into .env.local on 💻 (names only checked)
 - 2026-10-02 17:58Z 💻 T49 launched · attempt 1 · agent ac06e17fe757188a3
 - 2026-10-02 18:05Z 💻 T49 done · worktree-agent-ac06e17fe757188a3 → 5c03681 · verify ✓ (main checkout needed npm ci: new deps)
+- 2026-10-02 18:05Z 💻 T50 checked: main (01832a7) has 0 commits missing here; plan 004 (Liga) is not in main yet, so the merge would be a no-op
