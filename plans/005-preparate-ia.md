@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 18:37Z 💻
+- Updated: 2026-10-02 18:38Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: integrate T52/T54 as they finish, then T55; T50 after plan 004 lands in main; visual queue by hand.
+- Next step: integrate T55; then review T51–T55 and the visual queue on 💻; T50 after plan 004 lands in main.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 - Needs Hernán: COACH_ACCESS_CODES (+ COACH_OWNER) in .env.local for npm run dev:coach with real keys (else COACH_FAKE=1); same names needed in Vercel
 
@@ -205,7 +205,7 @@ Worktree setup: npm ci
 - Outcome: generations live in a module store (generation.ts) that saves the result even if the screen is left; Cancelar warns it still counts; draft kept across 401; focus to h1 on open/close/create, ConfirmDialog traps and returns focus; /dialogos/ links · 85faaf9 · verify ✓ 💻 · not checked: real phone, VoiceOver/TalkBack
 
 ## T55 — Fix: client handling of the new T51 refusals (unknown_pack, tts_limit)
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ae5bdd50791a8e7e5 · since 18:38Z)
 - Depends on: T51, T54
 - Where: any
 - Goal: The app reacts sensibly to the server refusals added in T51.
@@ -297,3 +297,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:30Z 💻 T52 launched · attempt 1 · agent ab45752e37f116e3a
 - 2026-10-02 18:35Z 💻 T52 done · worktree-agent-ab45752e37f116e3a → 1c18474 · verify ✓
 - 2026-10-02 18:37Z 💻 T54 done · worktree-agent-a7f117a2bfae5aa17 → 85faaf9 · verify ✓
+- 2026-10-02 18:38Z 💻 T55 launched · attempt 1 · agent ae5bdd50791a8e7e5
