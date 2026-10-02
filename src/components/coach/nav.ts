@@ -7,7 +7,7 @@ import { getTab } from "@/lib/navigation";
 
 const section = getTab("prepare");
 
-export const PREPARE_HREF = `${section.href}/`;
+export const PREPARE_HREF = section.href;
 export const PREPARE_TITLE = section.title;
 export const PREPARE_SUBTITLE = "Cuéntame qué vas a hacer y te preparo los pasos, las frases clave y un diálogo para practicar.";
 export const PACK_PARAM = "pack";

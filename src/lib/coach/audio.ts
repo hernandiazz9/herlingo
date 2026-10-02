@@ -5,10 +5,22 @@
  */
 import { generatedPlayable, prefetchGenerated, setGeneratedAudioSource, type PrefetchResult } from "@/lib/audio";
 import { getPack, type Playable } from "@/lib/content";
-import { fetchSpeech } from "./api";
+import { CoachApiError, fetchSpeech } from "./api";
 import type { CoachPack, InterviewQuestion } from "./types";
 
-setGeneratedAudioSource(fetchSpeech);
+/**
+ * The coach TTS endpoint as the generated-audio source. Over the day's voice allowance (429
+ * `tts_limit`) the line is declined for the session: the device voice plays it silently, without
+ * asking the server again for that line.
+ */
+setGeneratedAudioSource(async (text, voice, signal) => {
+  try {
+    return await fetchSpeech(text, voice, signal);
+  } catch (e) {
+    if (e instanceof CoachApiError && e.code === "tts_limit") return null;
+    throw e;
+  }
+});
 
 /** Voices a pack of `lang` gets (same rule as the server): native = first, learner = second. */
 export function coachVoices(lang: string): { native: string; learner: string } {

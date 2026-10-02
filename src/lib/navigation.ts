@@ -10,7 +10,7 @@ export type SectionId = TabId | "review" | "dialogues" | "prepare";
 
 export interface Section {
   id: SectionId;
-  /** Route, without trailing slash. */
+  /** Route, with the trailing slash every link uses (`trailingSlash: true`). */
   href: string;
   /** Short label (under the icon in the tab bar). */
   label: string;
@@ -26,17 +26,17 @@ export interface Tab extends Section {
 
 export const TABS: readonly Tab[] = [
   { id: "path", href: "/", label: "Ruta", title: "Tu ruta" },
-  { id: "stories", href: "/historias", label: "Historias", title: "Historias" },
-  { id: "play", href: "/jugar", label: "Jugar", title: "Jugar", central: true },
-  { id: "phrasebook", href: "/frasario", label: "Frases", title: "Frasario" },
-  { id: "profile", href: "/perfil", label: "Perfil", title: "Tu perfil" },
+  { id: "stories", href: "/historias/", label: "Historias", title: "Historias" },
+  { id: "play", href: "/jugar/", label: "Jugar", title: "Jugar", central: true },
+  { id: "phrasebook", href: "/frasario/", label: "Frases", title: "Frasario" },
+  { id: "profile", href: "/perfil/", label: "Perfil", title: "Tu perfil" },
 ];
 
 /** Sections without a tab: reached from cards on another tab's page, which stays highlighted. */
 const NESTED: readonly (Section & { parent: TabId })[] = [
-  { id: "review", href: "/repaso", label: "Repaso", title: "Repaso", parent: "path" },
-  { id: "dialogues", href: "/dialogos", label: "Diálogos", title: "Diálogos", parent: "path" },
-  { id: "prepare", href: "/preparar", label: "Prepárate", title: "Prepárate", parent: "play" },
+  { id: "review", href: "/repaso/", label: "Repaso", title: "Repaso", parent: "path" },
+  { id: "dialogues", href: "/dialogos/", label: "Diálogos", title: "Diálogos", parent: "path" },
+  { id: "prepare", href: "/preparar/", label: "Prepárate", title: "Prepárate", parent: "play" },
 ];
 
 export function getTab(id: SectionId): Section {
@@ -52,7 +52,8 @@ export function normalizePath(pathname: string): string {
 }
 
 function owns(href: string, path: string): boolean {
-  return href === "/" ? path === "/" : path === href || path.startsWith(`${href}/`);
+  const base = normalizePath(href);
+  return base === "/" ? path === "/" : path === base || path.startsWith(`${base}/`);
 }
 
 /**

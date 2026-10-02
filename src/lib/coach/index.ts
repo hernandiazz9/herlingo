@@ -7,10 +7,12 @@
  *   speak(packLine(pack, pack.keyPhrases[0].text), { lang: pack.lang });  // @/lib/audio
  *
  * Storage keys `lang-lern:coach:*` (./store.ts). Errors: `CoachApiError` with `kind` offline |
- * unauthorized | limit | failed | aborted | other and a Spanish `message` to show as is.
+ * unauthorized | limit | failed | aborted | other, a server `code` (`unknown_pack`, `tts_limit`…)
+ * and a Spanish `message` to show as is.
  */
 export {
   checkAccessCode,
+  canRefine,
   COACH_API_BASE,
   CoachApiError,
   fetchSpeech,

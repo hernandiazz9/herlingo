@@ -85,8 +85,8 @@ show it as is.
 | 429 | `daily_limit` | "Has llegado al límite de hoy. Vuelve mañana." |
 | 429 | `budget` | "Se ha agotado el presupuesto de este mes." |
 | 429 | `refine_limit` | "Ya has ajustado esta situación 3 veces." |
-| 429 | `tts_limit` | "Has llegado al límite de audio de hoy. Vuelve mañana." (the client uses `speechSynthesis`) |
-| 409 | `unknown_pack` | Refinement of a pack id this server never issued to this code (or older than 180 days): "No puedo ajustar esta situación. Prepara una nueva." |
+| 429 | `tts_limit` | "Has llegado al límite de audio de hoy. Vuelve mañana." The client never shows it: that line plays with `speechSynthesis` and is not requested again this session |
+| 409 | `unknown_pack` | Refinement of a pack id this server never issued to this code (or older than 180 days): "No puedo ajustar esta situación. Prepara una nueva." The client shows "Esta situación ya no se puede ajustar; crea una nueva." in the Ajustar card and disables it for that pack this session (`canRefine(pack)`); the pack still plays and practises |
 | 502 | `generation_failed` | Claude refused, hit `max_tokens`, returned invalid JSON, or API error. Nothing is stored |
 | 503 | `not_configured` | No access codes or no Anthropic key in production |
 | 503 | `tts_unavailable` | Real TTS not available → the client uses `speechSynthesis` |
@@ -288,14 +288,18 @@ voice for interview lines). `speak()` then:
 4. and falls back to `speechSynthesis` in the pack's `speechLocale` on any failure (no mp3, TTS
    503/400/401, playback error). Cases 2–4 start after an async step on the audio element that
    the first tap unlocked (iOS), like the existing fallback.
+5. Over the day's voice allowance (429 `tts_limit`) the coach source resolves `null`: that line
+   is declined for the session (in memory), so later taps go straight to `speechSynthesis` inside
+   the gesture, with no request and no message.
 
 `savePack` and `replacePack` download every line of the pack in the background
 (`cachePackAudio`, 3 at a time, deduplicated with taps in flight), so a saved pack plays offline.
 `replacePack` and `deletePack` delete cached mp3s no saved pack uses any more. Cache Storage only
 exists in secure contexts (https, localhost): over plain http on a LAN address nothing is cached
-and each line is fetched again per session. After testing in fake mode (silent mp3s), clear the
-site data or call `clearGeneratedAudio()` from `@/lib/audio` before testing real voices on the
-same origin.
+and each line is fetched again per session. After testing in fake mode (silent mp3s), call
+`clearGeneratedAudio()` from `@/lib/audio` before testing real voices on the same origin. Do not
+clear the site data for this: it also wipes the learner's progress, saved situations and access
+code from the device.
 
 ### Service worker
 

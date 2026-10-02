@@ -6,7 +6,9 @@
  * ("gen:<hash of voice + text>"), so it travels through the same types as content playables.
  * Its mp3 is looked up in memory, then in Cache Storage (`GENERATED_AUDIO_CACHE`, which the
  * service worker never deletes), then fetched once through the source and cached. No mp3 →
- * the caller falls back to speechSynthesis.
+ * the caller falls back to speechSynthesis. A line the source declines (`null`, e.g. the day's
+ * voice allowance is used up) is not asked for again this session: it goes straight to the
+ * device voice, inside the gesture.
  */
 import type { Playable } from "@/lib/content";
 import { mp3Play } from "./mp3";
@@ -26,11 +28,17 @@ const PREFETCH_CONCURRENCY = 3;
  */
 const LOAD_DEADLINE_MS = 8_000;
 
-/** Fetches the mp3 of one line; rejects when it cannot (the caller falls back to the device voice). */
-export type GeneratedAudioSource = (text: string, voice: string, signal?: AbortSignal) => Promise<Blob>;
+/**
+ * Fetches the mp3 of one line; rejects when it cannot this time (the caller falls back to the
+ * device voice and a later tap tries again), resolves `null` when it will not this session (the
+ * line then always uses the device voice, without asking the source again).
+ */
+export type GeneratedAudioSource = (text: string, voice: string, signal?: AbortSignal) => Promise<Blob | null>;
 
 let source: GeneratedAudioSource | undefined;
 const memo = new Map<string, string>();
+/** Keys of lines the source declined (`null`): device voice for the rest of the session. */
+const declined = new Set<string>();
 /** One shared job per line, aborted once every caller has given up (a player never gives up). */
 interface Job {
   promise: Promise<Blob | undefined>;
@@ -97,6 +105,10 @@ async function cachedBlob(cache: Cache | undefined, key: string): Promise<Blob |
 async function download(p: Playable, cache: Cache | undefined, signal?: AbortSignal): Promise<Blob | undefined> {
   if (!source || (typeof navigator !== "undefined" && navigator.onLine === false)) return undefined;
   const blob = await source(p.text, p.voice, signal);
+  if (blob === null) {
+    declined.add(p.audioKey);
+    return undefined;
+  }
   if (!blob.size) return undefined;
   const headers = { "Content-Type": blob.type || "audio/mpeg" };
   await cache?.put(cacheUrl(p.audioKey), new Response(blob, { headers })).catch(() => {});
@@ -130,7 +142,7 @@ function startJob(p: Playable): Job {
  * shared download is aborted only once no caller waits for it any more.
  */
 function loadBlob(p: Playable, signal?: AbortSignal): Promise<Blob | undefined> {
-  if (signal?.aborted) return Promise.resolve(undefined);
+  if (signal?.aborted || declined.has(p.audioKey)) return Promise.resolve(undefined);
   let job = inflight.get(p.audioKey);
   if (!job) {
     job = startJob(p);
@@ -201,7 +213,7 @@ export function playGenerated(
     });
   };
   const hit = remembered(p.audioKey);
-  if (hit) return Promise.resolve(play(hit));
+  if (hit || declined.has(p.audioKey)) return Promise.resolve(play(hit));
   return generatedUrl(p).then(play);
 }
 
@@ -247,6 +259,7 @@ export async function pruneGenerated(keep: ReadonlySet<string>): Promise<void> {
 export async function clearGeneratedAudio(): Promise<void> {
   for (const url of memo.values()) URL.revokeObjectURL(url);
   memo.clear();
+  declined.clear();
   if (typeof caches === "undefined") return;
   await caches.delete(GENERATED_AUDIO_CACHE).catch(() => false);
 }

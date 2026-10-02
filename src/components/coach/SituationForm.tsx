@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, type Dispatch, type FormEvent, type SetStateAction } from "react";
+import { useEffect, useId, type Dispatch, type FormEvent, type SetStateAction } from "react";
 import { MicIcon } from "@/components/phrasebook/icons";
 import { Button, Card } from "@/components/ui";
 import { COACH_LIMITS, type CoachPack } from "@/lib/coach";
@@ -48,6 +48,13 @@ export function SituationForm({ lang, draft: text, setDraft: setText, onCreated 
   const error = job?.status === "error" && job.error.kind !== "unauthorized" ? job.error : null;
   const blocked = error?.kind === "limit";
 
+  // A pack that finished while you were elsewhere: once its notice shows, the description it was
+  // made from leaves the form (something typed since stays).
+  const readyInput = job?.status === "done" ? job.input : null;
+  useEffect(() => {
+    if (readyInput !== null) setText((prev) => (prev.trim() === readyInput ? "" : prev));
+  }, [readyInput, setText]);
+
   const edit = (value: string) => {
     setText(value);
     if (job?.status === "error") clearGeneration(key);
@@ -71,7 +78,6 @@ export function SituationForm({ lang, draft: text, setDraft: setText, onCreated 
           saved={job.saved}
           onOpen={() => {
             clearGeneration(key);
-            if (text.trim() === job.input) setText("");
             onCreated(job.pack, job.saved);
           }}
         />

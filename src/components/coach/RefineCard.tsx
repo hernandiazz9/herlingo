@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { Button, Card } from "@/components/ui";
-import { COACH_LIMITS, type CoachPack } from "@/lib/coach";
+import { canRefine, COACH_LIMITS, type CoachPack } from "@/lib/coach";
 import { useCoachAccess } from "@/lib/coach/use-coach";
 import { cn } from "@/lib/cn";
 import { AccessCard } from "./AccessCard";
@@ -10,8 +10,11 @@ import { cancelGeneration, clearGeneration, refineJob, startRefine, useGeneratio
 import { FIELD, FOCUS, Notice, Spinner } from "./shared";
 
 const MAX = COACH_LIMITS.refinementsPerPack;
+/** The server no longer knows this pack (409 `unknown_pack`): it can be practised, not refined. */
+const GONE = "Esta situación ya no se puede ajustar; crea una nueva.";
 
-function remainingText(left: number): string {
+function remainingText(left: number, gone: boolean): string {
+  if (gone) return GONE;
   if (left <= 0) return `Ya has ajustado esta situación ${MAX} veces.`;
   return `Puedes ajustarla ${left} ${left === 1 ? "vez" : "veces"} más (de ${MAX}).`;
 }
@@ -34,10 +37,12 @@ export function RefineCard({ pack, onRefined }: RefineCardProps) {
   });
   const pending = job?.status === "pending" ? (job.input ? "adjust" : "again") : null;
   const error = job?.status === "error" ? job.error : null;
-  const blocked = error?.kind === "limit";
+  const gone = error?.code === "unknown_pack" || !canRefine(pack);
+  const blocked = error?.kind === "limit" || gone;
   const accessNotice = error?.kind === "unauthorized" ? error.message : null;
   const left = Math.max(0, MAX - pack.refinements);
-  const disabled = pending !== null || blocked || left === 0;
+  const closed = left === 0 || gone;
+  const disabled = pending !== null || blocked || closed;
 
   // A version that arrived while this pack was closed: it is already saved; show it as new.
   const finished = job?.status === "done" ? job : null;
@@ -76,19 +81,19 @@ export function RefineCard({ pack, onRefined }: RefineCardProps) {
     <Card className="flex flex-col gap-3">
       <div className="flex flex-col gap-1">
         <h2 className="text-xl font-extrabold text-ink">¿No es lo que buscabas?</h2>
-        <p className={cn("text-sm", left ? "text-ink-muted" : "font-bold text-ink")}>{remainingText(left)}</p>
+        <p className={cn("text-sm", closed ? "font-bold text-ink" : "text-ink-muted")}>{remainingText(left, gone)}</p>
       </div>
       <form onSubmit={submit} className="flex flex-col gap-3">
         <label htmlFor={id} className="text-base font-bold text-ink">
           Qué quieres cambiar
         </label>
-        <div className={cn(FIELD, "flex min-h-12 items-center px-3", left === 0 && "opacity-50")}>
+        <div className={cn(FIELD, "flex min-h-12 items-center px-3", closed && "opacity-50")}>
           <input
             id={id}
             value={instruction}
             onChange={(e) => edit(e.target.value)}
             maxLength={COACH_LIMITS.instruction}
-            disabled={left === 0}
+            disabled={closed}
             placeholder="Ej.: más corta, con trato de tú"
             enterKeyHint="send"
             className="min-w-0 flex-1 bg-transparent py-2 text-base text-ink outline-none placeholder:text-ink-muted"
@@ -119,7 +124,7 @@ export function RefineCard({ pack, onRefined }: RefineCardProps) {
           </button>
         </div>
       ) : null}
-      {error && !accessNotice ? <Notice>{error.message}</Notice> : null}
+      {error && !accessNotice && !gone ? <Notice>{error.message}</Notice> : null}
     </Card>
   );
 }

@@ -27,7 +27,10 @@ export type CoachErrorKind =
   | "failed"
   /** The caller aborted the request: show nothing. */
   | "aborted"
-  /** Anything else (400, 403, 5xx, no backend on this server, invalid response). */
+  /**
+   * Anything else (400, 403, 5xx, no backend on this server, invalid response). Code
+   * `unknown_pack` (409): the server no longer knows this pack, so it can never be refined.
+   */
   | "other";
 
 export class CoachApiError extends Error {
@@ -55,6 +58,7 @@ const MESSAGES = {
   generic: "Algo ha fallado. Inténtalo de nuevo.",
   refineLimit: `Ya has ajustado esta situación ${COACH_LIMITS.refinementsPerPack} veces.`,
   codeNotSaved: "No se ha podido guardar el código en este dispositivo",
+  unknownPack: "Esta situación ya no se puede ajustar; crea una nueva.",
 };
 
 /** `e` as a `CoachApiError` (anything else becomes kind "other" with a generic message): for catch blocks. */
@@ -179,21 +183,45 @@ export async function generatePack(lang: string, description: string, opts: { si
 }
 
 /**
+ * Pack ids the server refused to refine with 409 `unknown_pack` (created before the server kept a
+ * record of its packs, or by an in-memory dev server since restarted). In memory: no point asking
+ * again this session; the stored pack is left as it is (it still plays and practises).
+ */
+const unrefinable = new Set<string>();
+
+const unknownPack = () => new CoachApiError("other", MESSAGES.unknownPack, 409, "unknown_pack");
+
+/** False once the server said this pack can never be refined (this session). */
+export function canRefine(pack: CoachPack): boolean {
+  return !unrefinable.has(pack.id);
+}
+
+/**
  * "Ajustar" (`instruction`) or "Generar otra vez" (`instruction` empty): the same pack id with
  * `refinements + 1`. At most `COACH_LIMITS.refinementsPerPack` (checked here and on the server).
+ * A pack the server does not know rejects with code `unknown_pack` (see `canRefine`).
  * Not saved: see `replacePack`.
  */
 export async function refinePack(previous: CoachPack, instruction: string, opts: { signal?: AbortSignal } = {}): Promise<PackResult> {
   if (previous.refinements >= COACH_LIMITS.refinementsPerPack) {
     throw new CoachApiError("limit", MESSAGES.refineLimit, 0, "refine_limit");
   }
+  if (!canRefine(previous)) throw unknownPack();
   const body = {
     lang: previous.lang,
     description: previous.description,
     profile: buildLearnerContext(previous.lang),
     refine: { packId: previous.id, instruction: instruction.trim(), previous },
   };
-  return packResult(await callJson("pack", { method: "POST", body, signal: opts.signal }), false);
+  try {
+    return packResult(await callJson("pack", { method: "POST", body, signal: opts.signal }), false);
+  } catch (e) {
+    if (e instanceof CoachApiError && e.code === "unknown_pack") {
+      unrefinable.add(previous.id);
+      throw unknownPack();
+    }
+    throw e;
+  }
 }
 
 /**
