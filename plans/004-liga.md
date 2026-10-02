@@ -2,15 +2,16 @@
 
 Status: active
 Created: 2026-10-01
-Base branch: main
+Base branch: plan-004-liga-t38
+Previous: main @ 12d6ad9 (frozen)
 Goal: Let friends compete: an optional account (nickname + emoji, anonymous Supabase user, optionally linked to an email by magic link), one group per person (join by code or link), and a weekly XP ranking (Monday 00:00 Europe/Madrid reset) per group and global, shown on a new "Liga" screen (/liga/, opened from Perfil and from a card on Ruta). Supabase (Auth + Postgres + RLS + RPC) is called from the client with the public anon key, so the app stays a static export; without Supabase env vars the app builds and Liga is simply hidden. The app keeps working fully offline and without an account: only XP events go to the cloud (queued offline), progress stays on the device. This batch runs on its own integration branch in parallel with plan 003 (pictures) on main; the last task merges main back in. MVP speed: no automated tests; verification is `npm run verify` (+ `npm run db:check` for SQL).
 Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 19:15Z 💻
-- Writer: released
-- Branch: main (T33–T37, T41, T42 merged 2026-10-02)
+- Updated: 2026-10-02 19:26Z 💻
+- Writer: 💻 session (this one)
+- Branch: plan-004-liga-t38 (from main @ 12d6ad9)
 - Next step: T38 weekly leaderboards, then T39 entry points, then T40 real Supabase check; start a new work branch from main
 - Needs Hernán: real Supabase project URL + anon key (Vercel env + .env.local) for T40
 
@@ -207,3 +208,4 @@ Worktree setup: npm ci
 - 2026-10-01 T37 done · fc09e61 (cloud session)
 - 2026-10-02 T42 verify green after network access was opened; supabase-js smoke against league:local OK
 - 2026-10-02 19:15Z 💻 plan merged into main up to T37 (T38–T40 pending); old cloud branches superseded
+- 2026-10-02 19:26Z 💻 writer taken on 💻, new work branch from main
