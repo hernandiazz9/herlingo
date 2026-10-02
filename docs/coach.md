@@ -198,6 +198,93 @@ type LearnerProfile = {
 };
 ```
 
+## Client (`src/lib/coach/`)
+
+Framework-free modules exported from `@/lib/coach`; React hooks in `@/lib/coach/use-coach`. The
+types (`CoachPack`, `CoachUsage`, `CoachAssessment`, `LearnerContext`, `InterviewQuestion`…) are
+written by hand from the schemas above; `COACH_LIMITS` mirrors the server's `LIMITS`. Change one
+side, change the other.
+
+| Module | Contents |
+| --- | --- |
+| `api.ts` | `generatePack(lang, description)`, `refinePack(previous, instruction)`, `interviewStep(lang, history)`, `fetchUsage()`, `updateMonthlyCap(capUsd)`, `checkAccessCode(code)`, `fetchSpeech(text, voice)`; `CoachApiError`, `toCoachApiError(e)` |
+| `access.ts` | the access code on the device (`getAccessCode`, `setAccessCode`, `clearAccessCode`) |
+| `packs.ts` | "Mis situaciones": `getSavedPacks`, `getSavedPack`, `savePack`, `replacePack`, `deletePack`, `pruneCoachAudio` |
+| `profile.ts` | "Sobre mí" + interview results (`setAbout`, `saveAssessment`, `clearAssessments`) and `buildLearnerContext(lang)` |
+| `usage.ts` | last usage summary seen (`getStoredUsage`), `formatUsd(3.2)` → "3,20 $" |
+| `audio.ts` | generated playables: `packLine(pack, text, speaker)`, `packPlayables`, `questionPlayable`, `cachePackAudio`, `coachVoices` |
+| `parse.ts`, `store.ts` | hand-written shape checks; storage keys and the change event |
+
+- **Requests** go to `/api/coach/<endpoint>/` on the same origin with the stored code in
+  `x-coach-code`, `cache: "no-store"` and a 75 s timeout. `generatePack`, `refinePack` and
+  `interviewStep` add `profile: buildLearnerContext(lang)` themselves (progress numbers from
+  `@/lib/progress`: lessons done/total, words learned, XP, placement test date and lessons it
+  marked; the latest assessment; the "Sobre mí" notes). Responses are shape-checked; nothing is
+  saved automatically: call `savePack` / `replacePack` / `saveAssessment`.
+- **Errors**: every call rejects with a `CoachApiError` (`kind`, `status`, `code`, `message`).
+  `message` is Spain Spanish, the server's own when it sent one: show it as is.
+
+  | `kind` | When | UI |
+  | --- | --- | --- |
+  | `offline` | `navigator.onLine` false, server unreachable, or timeout | offline message; saved packs still work |
+  | `unauthorized` | 401 or no code stored (`code: "no_code"`) | the stored code is forgotten on a 401, so `useCoachAccess().code` turns null: show the code screen |
+  | `limit` | 429 (`daily_limit`, `budget`, `refine_limit`); `refinePack` also refuses a 4th refinement without a request | show the message, disable the action |
+  | `failed` | 502: Claude could not produce a valid answer | "try again" |
+  | `aborted` | the caller's `AbortSignal` fired | show nothing |
+  | `other` | 400, 403, 5xx, 404 (no backend: "Prepárate no está disponible en este servidor."), invalid response | show the message |
+
+- **Storage** (localStorage, versioned `{ v: 1, … }`, tolerant parsing: a corrupt value or an
+  invalid pack is dropped, never thrown; one change event `lang-lern:coach-change`):
+
+  | Key | Value |
+  | --- | --- |
+  | `lang-lern:coach:access` | `{ v, code }` (all languages) |
+  | `lang-lern:coach:usage` | `{ v, at, usage }`: last `GET /usage/`, patched by each generation's `usage`; forgotten with the code |
+  | `lang-lern:coach:packs:<lang>` | `{ v, packs }`: saved packs, newest first, unique ids |
+  | `lang-lern:coach:profile:<lang>` | `{ v, about, assessments }`: notes (≤ 1000) and the last 5 assessments with their date, newest first |
+
+- **Hooks** (`useSyncExternalStore` on the raw value, like `useProgress`; empty on the server and
+  during hydration):
+
+  | Hook | Returns |
+  | --- | --- |
+  | `useCoachAccess()` | `{ code, hasCode, verify(code), clear() }`: `verify` checks the code (`GET /usage/`) and stores it when valid |
+  | `useSavedPacks(lang)` | `{ packs, get(id), save(pack), replace(pack), remove(id) }` |
+  | `useLearnerProfile(lang)` | `{ profile: { about, assessments }, latest, setAbout, saveAssessment, clearAssessments }` |
+  | `useCoachUsage({ refreshOnMount = true })` | `{ usage, updatedAt, loading, error, refresh(), setCap(capUsd) }`: the stored summary, refreshed on mount when a code is stored |
+
+### Generated audio
+
+Generated lines play through `speak()` from `@/lib/audio`, like content audio, and still start
+from a user gesture. A generated playable is a plain `Playable` whose `audioKey` is
+`gen:<64-bit hash of voice + text>` (`generatedPlayable(text, voice)` in
+`src/lib/audio/generated.ts`; the coach helpers pick the voice: `pack.voices.native` for key
+phrases and native turns, `pack.voices.learner` for learner options, the pack language's first
+voice for interview lines). `speak()` then:
+
+1. plays the object URL kept in memory (synchronously, inside the gesture), else
+2. reads the mp3 from Cache Storage `lang-lern-coach-audio` (entries `/coach-audio/<hash>.mp3`,
+   never requested over the network), else
+3. fetches it once from `POST /api/coach/tts/` (skipped offline or without a code) and caches it,
+4. and falls back to `speechSynthesis` in the pack's `speechLocale` on any failure (no mp3, TTS
+   503/400/401, playback error). Cases 2–4 start after an async step on the audio element that
+   the first tap unlocked (iOS), like the existing fallback.
+
+`savePack` and `replacePack` download every line of the pack in the background
+(`cachePackAudio`, 3 at a time, deduplicated with taps in flight), so a saved pack plays offline.
+`replacePack` and `deletePack` delete cached mp3s no saved pack uses any more. Cache Storage only
+exists in secure contexts (https, localhost): over plain http on a LAN address nothing is cached
+and each line is fetched again per session. After testing in fake mode (silent mp3s), clear the
+site data or call `clearGeneratedAudio()` from `@/lib/audio` before testing real voices on the
+same origin.
+
+### Service worker
+
+`out/sw.js` (scripts/pwa/sw.template.js) returns early for every `/api/` request, so the
+backend is never cached or intercepted, and its `activate` step keeps the caches in `KEEP`
+(`scripts/pwa/build.ts` injects `GENERATED_AUDIO_CACHE` from `src/lib/audio/generated.ts`): the
+coach audio survives every app update.
+
 ## Claude calls
 
 `api/_lib/claude.ts`: `client.beta.messages.create` with `model: COACH_MODEL`, structured output

@@ -14,14 +14,31 @@
  *   `public/audio/<lang>/manifest.json` lists its key (`npm run audio`). Plain strings, keys
  *   without mp3, a manifest not loaded yet, or an mp3 that fails to load/play use browser
  *   speechSynthesis in the pack's `speechLocale`.
+ * - A generated playable (`generatedPlayable(text, voice)`: Prepárate lines, `audioKey` "gen:…")
+ *   plays its mp3 from Cache Storage, else downloads it once through the registered source (the
+ *   coach TTS endpoint, see `./generated`) and caches it; no mp3 → speechSynthesis.
  * - `slow: true` plays at `SLOW_RATE` (mp3 keeps its pitch). With the "Audio lento" setting on
  *   (`@/lib/progress/settings`), everything plays slow.
  * - The first tap/key anywhere unlocks audio for iOS (see `unlockOnFirstGesture`).
  */
 import { DEFAULT_LANG, getPack, type Playable } from "@/lib/content";
 import { getSettings } from "@/lib/progress/settings";
+import { isGenerated, playGenerated } from "./generated";
 import { mp3Available, mp3Play, mp3Stop, mp3Url, preloadManifest, unlockOnFirstGesture } from "./mp3";
 import { ttsAvailable, ttsSpeak, ttsStop } from "./speech-synthesis";
+
+export {
+  clearGeneratedAudio,
+  GENERATED_AUDIO_CACHE,
+  generatedKey,
+  generatedPlayable,
+  isGenerated,
+  prefetchGenerated,
+  pruneGenerated,
+  setGeneratedAudioSource,
+  type GeneratedAudioSource,
+  type PrefetchResult,
+} from "./generated";
 
 export type SpeakInput = Playable | string;
 
@@ -49,6 +66,9 @@ export function speak(input: SpeakInput, options: SpeakOptions = {}): Promise<vo
   const { meta } = getPack(options.lang);
   const text = typeof input === "string" ? input : input.text;
   const rate = options.slow || getSettings().slowAudio ? SLOW_RATE : 1;
+  if (typeof input !== "string" && isGenerated(input)) {
+    return playGenerated(input, rate, () => my === generation, () => ttsSpeak(text, meta.speechLocale, rate));
+  }
   const url = typeof input === "string" ? undefined : mp3Url(meta.lang, input.audioKey);
   if (!url) return ttsSpeak(text, meta.speechLocale, rate);
   return mp3Play(url, rate).then((result) => {

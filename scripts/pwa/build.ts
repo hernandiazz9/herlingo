@@ -4,10 +4,12 @@
  *   out/sw.js                 service worker (scripts/pwa/sw.template.js) precaching every file
  *                             in out/: pages, RSC payloads, JS/CSS, icons and all audio.
  * The SW version is a hash of every file, so any change ships a new SW (and the update prompt).
+ * It never handles /api/ and keeps the generated-audio cache (src/lib/audio/generated.ts).
  */
 import { createHash } from "node:crypto";
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join, relative, sep } from "node:path";
+import { GENERATED_AUDIO_CACHE } from "../../src/lib/audio/generated";
 import { webManifest, MANIFEST_PATH } from "../../src/lib/pwa/manifest";
 
 const ROOT = process.cwd();
@@ -45,13 +47,14 @@ const urls = files.map((file) => {
 const version = hash.digest("hex").slice(0, 16);
 
 const template = readFileSync(join(ROOT, "scripts/pwa/sw.template.js"), "utf8");
-if (!template.includes("/* __PRECACHE__ */ []") || !template.includes('"__VERSION__"')) {
+if (!["/* __PRECACHE__ */ []", "/* __KEEP__ */ []", '"__VERSION__"'].every((p) => template.includes(p))) {
   console.error("scripts/pwa/sw.template.js: placeholders not found.");
   process.exit(1);
 }
 const sw = template
   .replace('"__VERSION__"', JSON.stringify(version))
-  .replace("/* __PRECACHE__ */ []", JSON.stringify(urls));
+  .replace("/* __PRECACHE__ */ []", JSON.stringify(urls))
+  .replace("/* __KEEP__ */ []", JSON.stringify([GENERATED_AUDIO_CACHE]));
 writeFileSync(join(OUT, "sw.js"), sw);
 
 const pages = urls.filter((u) => u.endsWith("/")).length;

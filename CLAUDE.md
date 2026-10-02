@@ -38,8 +38,11 @@ src/components/icons.tsx  Inline SVG icons (no icon library).
 src/lib/               Framework-free logic. navigation.ts = the tab list (single source of truth).
                        theme/ = light/dark choice (localStorage), inline pre-paint script, theme-color.
 src/lib/content/       Content contract: schema.ts (zod, source JSON), types.ts (runtime types), index.ts (loader).
-src/lib/audio/         speak() / stop(): the only way to play target-language audio.
+src/lib/audio/         speak() / stop(): the only way to play target-language audio (content mp3s; generated.ts =
+                       Prepárate lines: Cache Storage, else /api/coach/tts/ once, else speechSynthesis).
 src/lib/pwa/           Web app manifest (manifest.ts), SW registration + update prompt (register.ts, UpdatePrompt.tsx).
+src/lib/coach/         Prepárate client: API client + typed errors (CoachApiError), saved packs, learner profile and
+                       buildLearnerContext(), usage (`lang-lern:coach:*`); hooks in use-coach.ts. docs/coach.md "Client".
 src/lib/progress/      On-device progress (`lang-lern:progress:<lang>`, versioned, tolerant parsing), settings,
                        path model; hooks in use-progress.ts. src/lib/srs/ = Leitner spaced repetition.
 content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`). Only `it` exists.
