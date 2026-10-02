@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 18:25Z 💻
+- Updated: 2026-10-02 18:29Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
 - Next step: run T51+T53, then T52+T54 (≤2 agents); T50 after plan 004 lands in main; visual queue by hand.
@@ -179,7 +179,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T53 — Fix: generated audio fetch can hang; stray prefetches; silent code-save failure
-- Status: running (attempt 1 · 💻 · agent ae3e9216378bad2c9 · since 18:25Z)
+- Status: done
 - Depends on: T49
 - Where: any
 - Goal: Tapping a generated line always plays something within a few seconds, and background audio work never outlives its pack.
@@ -189,7 +189,7 @@ Worktree setup: npm ci
   - (1)–(5) done; static content audio unchanged.
   - `npm run verify` → exit 0.
   - Hand check (PC): with network throttled to "slow 3G" in fake mode, an uncached generated line falls back to the device voice within ~8 s.
-- Outcome:
+- Outcome: 7 s speech deadline + 8 s per-line cap then device voice; body read inside timeout; per-pack prefetch AbortController, prune after settle; prefetch only on successful save; code-save failure surfaced · c3c915e · verify ✓ 💻 · not checked: slow-3G hand check
 
 ## T54 — Fix: leaving during a generation throws away a paid result; draft lost on 401; focus; links
 - Status: pending
@@ -216,12 +216,14 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [x] T47 @6b219b2 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T54 (static dialogues unaffected)
 - [x] T48 @4e366e1 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T54
 - [x] T49 @5c03681 — code review (prompt fix + docs) (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
+- [ ] T53 @c3c915e — code review (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode); header-only moment while loading (queued 2026-10-02 ☁️)
 - [ ] T47 @6b219b2 — "Practicar el diálogo" card enabled/disabled; practice header, back link, intro card; summary +XP line and "ya has ganado" note; "Repetir | Volver" side by side; a static dialogue in dark; real mic and voice (queued 2026-10-02 ☁️)
 - [ ] T48 @4e366e1 — interview intro/question/waiting/error/result screens; the three /perfil coach sections; owner cap editor; LevelHint inside Prepárate (wired at integration, not seen); dictation with a real mic; question audio with real voice (queued 2026-10-02 ☁️)
 - [ ] T49 @5c03681 — real neural voices by ear in a generated pack; Uso de IA panel shows real Upstash spend (queued 2026-10-02 💻)
+- [ ] T53 @c3c915e — slow 3G in fake mode: uncached generated line falls back to device voice within ~8 s (queued 2026-10-02 💻)
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -271,3 +273,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:25Z 💻 review T42–T49 on 💻 (3 read-only agents): 3 med + 14 low findings → T51–T54
 - 2026-10-02 18:25Z 💻 T51 launched · attempt 1 · agent aee7c561233822a21
 - 2026-10-02 18:25Z 💻 T53 launched · attempt 1 · agent ae3e9216378bad2c9
+- 2026-10-02 18:29Z 💻 T53 done · worktree-agent-ae3e9216378bad2c9 → c3c915e · verify ✓
