@@ -7,6 +7,7 @@ import { Card, ProgressBar } from "@/components/ui";
 import { DEFAULT_LANG, getPack, getUnit } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import { DialoguesIcon, ReviewIcon } from "@/components/icons";
+import { RutaLeagueCard } from "@/components/league/RutaCard";
 import { getTab } from "@/lib/navigation";
 import { canPersist, currentStreak, dueItemIds, getProgress } from "@/lib/progress";
 import { buildPath, lessonHref, type PathLesson, type PathUnit } from "@/lib/progress/path";
@@ -95,6 +96,8 @@ export function PathView({ lang = DEFAULT_LANG }: { lang?: string }) {
           detail={`${pack.dialogues.length} ${pack.dialogues.length === 1 ? "conversación" : "conversaciones"}`}
         />
       </div>
+
+      <RutaLeagueCard lang={lang} />
 
       {main.map((u) => (
         <UnitSection key={u.unit.id} entry={u} />

@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 import { useState, type ReactNode } from "react";
 import { ThemeToggle } from "@/components/shell/ThemeToggle";
 import { Button, Card } from "@/components/ui";
+import { leagueEnabled, LEAGUE_PATH } from "@/lib/league/config";
+import { useLeagueAccount } from "@/lib/league/use-league-account";
 import { DEFAULT_LANG, getAllLessons, getPack } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import { currentStreak, resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
@@ -41,6 +43,8 @@ export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
         <Stat value={wordsLearned(progress, pack)} label="palabras aprendidas" />
         <Stat value={`${lessonsDone}/${lessonsTotal}`} label="lecciones hechas" />
       </div>
+
+      {leagueEnabled() ? <LeagueLink lang={lang} /> : null}
 
       <CoachSections lang={lang} />
 
@@ -132,6 +136,28 @@ export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
         </div>
       ) : null}
     </>
+  );
+}
+
+/** Perfil row that opens /liga/ (only rendered when Liga is configured). */
+function LeagueLink({ lang }: { lang: string }) {
+  const account = useLeagueAccount(lang);
+  const joined = account.status === "joined";
+  return (
+    <Card className="flex flex-col gap-3">
+      <div className="flex flex-col gap-1">
+        <h3 className="text-lg font-bold text-ink">🏆 Liga</h3>
+        <p className="text-sm text-ink-muted">
+          {joined ? "Mira tu puesto de la semana y tu grupo." : "Compite con tus amigos por el XP de cada semana."}
+        </p>
+      </div>
+      <Link
+        href={LEAGUE_PATH}
+        className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
+      >
+        {joined ? "Abrir la Liga" : "Conocer la Liga"}
+      </Link>
+    </Card>
   );
 }
 
