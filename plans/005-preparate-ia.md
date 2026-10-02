@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 18:42Z 💻
+- Updated: 2026-10-02 19:03Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
 - Next step: all tasks but T50 done; Hernán: visual queue by hand; optional light review of T51–T55; T50 after plan 004 lands in main.
@@ -216,6 +216,19 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome: unknown_pack disables Ajustar with 'Esta situación ya no se puede ajustar; crea una nueva.' (in-memory canRefine); tts_limit → device voice, no retries that session; all section hrefs end in / (owns() strips it); form cleared after ready notice; docs: no clear-site-data advice · 199c29c · verify ✓ 💻 · not checked: light/dark screens, device voice after 429 on iPhone
 
+## T56 — Backup: export and import on-device progress in Perfil
+- Status: pending
+- Depends on: T55
+- Where: any
+- Goal: Until accounts exist, Hernán can save all his on-device data to a file and restore it on the same or another phone, so a wiped browser or a new phone never loses progress.
+- Context: CLAUDE.md rule "Never lose the learner's on-device data"; every stored key is `lang-lern:*` in localStorage (progress, settings, game, stories, favorites, phrasebook view, theme, coach: packs, Sobre mí, assessments, last usage; see the header comments of each storage module, e.g. `src/lib/coach/store.ts`). Perfil lives in `src/app/perfil/ProfileView.tsx` (+ `CoachSections.tsx`), next to "Borrar progreso". Design: a framework-free module (e.g. `src/lib/backup/`) builds `{ app: "lang-lern", format: 1, exportedAt, data: { <key>: <raw string> } }` from every `lang-lern:*` key except the coach access code (`lang-lern:coach:access`) and transient test keys. Export: share the .json file with `navigator.share({ files })` when `navigator.canShare` allows it (iOS installed app), else download via a Blob link; filename `lang-lern-copia-YYYY-MM-DD.json`. Import: file input (accept .json) → validate shape (app, format, string values, only `lang-lern:` keys, size sanity) → confirm dialog "Esto reemplazará el progreso de este dispositivo" → before writing, keep the current data as an in-memory export the user can download from the result notice ("Descargar la copia anterior") → write the keys (remove local `lang-lern:*` keys absent from the file, except the access code and theme) → fire the existing `*-change` events or reload so every hook re-reads. Existing parsers stay tolerant, so older backups load through the normal versioned parsing. Saved packs' audio is not in the file: it is fetched again on first play (say so in the copy). UI copy Spain Spanish "tú", tokens only, pressable buttons; section title "Copia de seguridad" with one line explaining it is the only copy until there are accounts.
+- Scope: may touch `src/lib/backup/**` (new), `src/app/perfil/**`, `src/components/ui/**` (only if a small shared piece is needed), `src/components/coach/ConfirmDialog.tsx` (reuse, move to ui if needed), CLAUDE.md (folder layout line) / must not touch `plans/`, `api/**`, `content/**`, `docs/brief.md`, any existing storage key or stored shape.
+- Done when:
+  - Export → import round-trip restores identical `lang-lern:*` values (headless check in the built app or a tsx script with a fake localStorage); a malformed or foreign file is rejected with a clear message and changes nothing.
+  - `npm run verify` → exit 0.
+  - Hand check (PC): export on the iPhone (installed app: share sheet → Archivos), import on the Mac browser and back; light + dark.
+- Outcome:
+
 ## Deferred to the PC
 Moved to the Review queue and Visual checks queue below (hybrid skill). Token-heavy work (code reviews, visual checks, live-key checks) runs on the PC and never blocks the cloud.
 
@@ -261,6 +274,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 plan: hybrid push policy: the cloud pushes its session branch after every integrated task; never main, no PR or deploy without OK. (Hernán)
 - 2026-10-02 plan: reuse the andrevallenails ANTHROPIC_API_KEY and Upstash database (only these three names copied into .env.local on the Mac; keys prefixed langlern:). (Hernán)
 - 2026-10-02 plan: never lose the learner's on-device data (localStorage lang-lern:* and coach Cache Storage) while building; no key renames/drops, versioned migrations only, no clear-site-data advice; rule in CLAUDE.md. Accounts with cloud save come in a later plan and must import the on-device data. (Hernán)
+- 2026-10-02 plan: add an on-device backup (export/import in Perfil) before accounts exist. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
