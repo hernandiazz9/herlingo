@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 18:30Z 💻
+- Updated: 2026-10-02 18:32Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
 - Next step: integrate T52/T54 as they finish, then T55; T50 after plan 004 lands in main; visual queue by hand.
@@ -209,8 +209,8 @@ Worktree setup: npm ci
 - Depends on: T51, T54
 - Where: any
 - Goal: The app reacts sensibly to the server refusals added in T51.
-- Context: T51 outcome. `src/lib/coach/api.ts` maps 409 `unknown_pack` to a generic "other" error, so the pack view shows the message but leaves "Ajustar" enabled; `tts_limit` (429) should fall back to the device voice silently, without retries for that line during the session. Packs created before T51 (or before a local in-memory restart) can no longer be refined: the Ajustar card should explain it ("Esta situación ya no se puede ajustar; crea una nueva") and disable itself.
-- Scope: may touch `src/lib/coach/**`, `src/lib/audio/generated.ts`, `src/components/coach/**` / must not touch `plans/`, `api/**`, `content/**`, `docs/brief.md`.
+- Context: T51 outcome. `src/lib/coach/api.ts` maps 409 `unknown_pack` to a generic "other" error, so the pack view shows the message but leaves "Ajustar" enabled; `tts_limit` (429) should fall back to the device voice silently, without retries for that line during the session. Packs created before T51 (or before a local in-memory restart) can no longer be refined: the Ajustar card should explain it ("Esta situación ya no se puede ajustar; crea una nueva") and disable itself. Also docs/coach.md (~line 290): drop the "clear the site data" advice, keep only `clearGeneratedAudio()` and warn that clearing site data wipes progress (CLAUDE.md rule "Never lose the learner's on-device data").
+- Scope: may touch `src/lib/coach/**`, `src/lib/audio/generated.ts`, `src/components/coach/**`, `docs/coach.md` / must not touch `plans/`, `api/**`, `content/**`, `docs/brief.md`.
 - Done when:
   - unknown_pack disables Ajustar with that copy; tts_limit falls back to device voice; Spain Spanish "tú"; tokens only.
   - `npm run verify` → exit 0.
@@ -232,7 +232,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [ ] T51 @62ba623 — code review (queued 2026-10-02 💻)
 
 ## Visual checks queue
-- [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode); header-only moment while loading (queued 2026-10-02 ☁️)
+- [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (after fake mode on the same origin run clearGeneratedAudio(); never clear site data: it wipes progress); header-only moment while loading (queued 2026-10-02 ☁️)
 - [ ] T47 @6b219b2 — "Practicar el diálogo" card enabled/disabled; practice header, back link, intro card; summary +XP line and "ya has ganado" note; "Repetir | Volver" side by side; a static dialogue in dark; real mic and voice (queued 2026-10-02 ☁️)
 - [ ] T48 @4e366e1 — interview intro/question/waiting/error/result screens; the three /perfil coach sections; owner cap editor; LevelHint inside Prepárate (wired at integration, not seen); dictation with a real mic; question audio with real voice (queued 2026-10-02 ☁️)
 - [ ] T49 @5c03681 — real neural voices by ear in a generated pack; Uso de IA panel shows real Upstash spend (queued 2026-10-02 💻)
@@ -255,6 +255,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 T47: practice on its own static page /preparar/dialogo/?pack=<id> (no clash with the pack view or T46's files); a pack that could not be saved shows the practice button disabled; back returns via history when it came from the pack view; XP = 5 + first answers that are not wrong (matches "Has acertado X de N"), marker keeps only today's ids; the player takes the language name from the pack instead of a hard-coded "Italiano". (T47)
 - 2026-10-02 plan: hybrid push policy: the cloud pushes its session branch after every integrated task; never main, no PR or deploy without OK. (Hernán)
 - 2026-10-02 plan: reuse the andrevallenails ANTHROPIC_API_KEY and Upstash database (only these three names copied into .env.local on the Mac; keys prefixed langlern:). (Hernán)
+- 2026-10-02 plan: never lose the learner's on-device data (localStorage lang-lern:* and coach Cache Storage) while building; no key renames/drops, versioned migrations only, no clear-site-data advice; rule in CLAUDE.md. Accounts with cloud save come in a later plan and must import the on-device data. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).

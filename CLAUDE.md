@@ -73,6 +73,14 @@ plans/                 Orchestrator plans. Never edit.
   functions in `api/` (secrets, access codes, limits, cost ledger; docs/coach.md). The app itself
   stays `output: "export"`; `src/` reaches them only over `fetch("/api/coach/…/")` and never imports
   `api/`, `@anthropic-ai/sdk`, `@upstash/redis` or runtime zod (ESLint enforces it).
+- **Never lose the learner's on-device data.** Hernán uses the deployed app daily while we build;
+  until accounts exist, localStorage (`lang-lern:*` keys) and the coach Cache Storage are the only
+  copy of his progress, saved packs, Sobre mí and assessments. Never rename or drop a stored key,
+  never change a stored shape without a migration that reads the old version (bump the version,
+  keep tolerant parsing), never call `localStorage.clear()`, and never let a SW update delete
+  anything but its own precache. Only explicit user actions ("Borrar progreso", deleting a pack)
+  remove data. Never tell Hernán to "clear site data" on the production origin; to reset fake
+  audio use `clearGeneratedAudio()`.
 - **Design tokens** are CSS variables in `src/app/globals.css` (`--lemon`, `--sea`, `--terracotta`,
   neutrals, `--success`, `--error`, each with `-deep`/`-soft`/`-ledge` variants, plus `--on-accent`,
   `--on-lemon`, `--shadow`) exposed to Tailwind as `bg-sea`, `text-ink`, `border-line`,
