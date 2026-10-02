@@ -2,10 +2,17 @@
 
 Status: active
 Created: 2026-10-01
-Base branch: claude/usuarios-competencia-puntajes-3caa9b
+Base branch: main
 Goal: Let friends compete: an optional account (nickname + emoji, anonymous Supabase user, optionally linked to an email by magic link), one group per person (join by code or link), and a weekly XP ranking (Monday 00:00 Europe/Madrid reset) per group and global, shown on a new "Liga" screen (/liga/, opened from Perfil and from a card on Ruta). Supabase (Auth + Postgres + RLS + RPC) is called from the client with the public anon key, so the app stays a static export; without Supabase env vars the app builds and Liga is simply hidden. The app keeps working fully offline and without an account: only XP events go to the cloud (queued offline), progress stays on the device. This batch runs on its own integration branch in parallel with plan 003 (pictures) on main; the last task merges main back in. MVP speed: no automated tests; verification is `npm run verify` (+ `npm run db:check` for SQL).
 Test command: npm run verify
 Worktree setup: npm ci
+
+## Now
+- Updated: 2026-10-02 19:15Z 💻
+- Writer: released
+- Branch: main (T33–T37, T41, T42 merged 2026-10-02)
+- Next step: T38 weekly leaderboards, then T39 entry points, then T40 real Supabase check; start a new work branch from main
+- Needs Hernán: real Supabase project URL + anon key (Vercel env + .env.local) for T40
 
 ## Shared contract (all tasks read this)
 
@@ -153,7 +160,7 @@ Worktree setup: npm ci
   - With `NEXT_PUBLIC_SUPABASE_URL=http://localhost:54321` + the printed anon key in the shell, `npm run dev` lets a browser join Liga, and a small scripted check (`npm run league:local:check` or similar) proves sign-up → set_profile → record_xp → leaderboard → delete_me over HTTP with two users.
   - docs/league.md "Try it locally" explains the 3 commands and how to play as several users (separate browser profiles / private windows).
   - `npm run verify` → exit 0.
-- Outcome: Node built-ins + psql only; GoTrue/PostgREST-shaped endpoints, magic links printed; 15 bots + group PRUEBA; league:local:check 23 checks and db:check 171 green on Postgres 16; `npm run verify` NOT run (cloud env cannot reach the npm registry) → 6909ec2
+- Outcome: Node built-ins + psql only; GoTrue/PostgREST-shaped endpoints, magic links printed; 15 bots + group PRUEBA; league:local:check 23 checks and db:check 171 green on Postgres 16; real supabase-js verified against it (anon sign-in, RPCs, errors, updateUser, otp, refresh); `npm run verify` green → 6909ec2
 
 ## Decisions
 - 2026-10-01 plan: runs on integration branch `claude/usuarios-competencia-puntajes-3caa9b`, in parallel with plan 003 on main; T41 merges main back (Hernán)
@@ -174,6 +181,7 @@ Worktree setup: npm ci
 - 2026-10-01 T42: cloud session has Postgres 16 (not 17) and no npm registry access; db:check passes on 16; verify must be run by Hernán (orchestrator)
 - 2026-10-01 T42: later cloud session had npm access: `npm run verify` green on the T42 code (orchestrator)
 - 2026-10-01 T37: group cached per user id; invite code kept on device so it survives the join flow and the email-sign-in redirect; JoinFlow got an `onJoined` callback for the invite page; checked by a Playwright script (2 users: create, invite link → join Liga → auto-join, switch to PRUEBA, leave last member deletes group, unknown/deleted code errors, invalid link) (agent)
+- 2026-10-02 plan: merged into main before T38 so plan 005 (Prepárate) can land; Liga stays hidden without Supabase env vars (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-01 T33: custom SMTP (e.g. Resend) so friends can link their email; fill the real Vercel domain in docs/league.md
@@ -197,3 +205,5 @@ Worktree setup: npm ci
 - 2026-10-01 T42 attempt 1 stalled (unpushed) · restarted directly in a cloud session
 - 2026-10-01 T42 done · 6909ec2 (verify pending: no npm registry in the cloud env)
 - 2026-10-01 T37 done · fc09e61 (cloud session)
+- 2026-10-02 T42 verify green after network access was opened; supabase-js smoke against league:local OK
+- 2026-10-02 19:15Z 💻 plan merged into main up to T37 (T38–T40 pending); old cloud branches superseded
