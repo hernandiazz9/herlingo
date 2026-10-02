@@ -97,11 +97,15 @@ export function savePack(pack: CoachPack): boolean {
   return true;
 }
 
-/** Replaces the saved pack with the same id in place (a refinement); saves it at the top if absent. */
+/**
+ * Replaces the saved pack with the same id in place (a refinement). False (nothing stored, no
+ * audio) when no saved pack has that id: a refinement that arrives after its pack was deleted
+ * never brings it back.
+ */
 export function replacePack(pack: CoachPack): boolean {
   const packs = getSavedPacks(pack.lang);
   const i = packs.findIndex((p) => p.id === pack.id);
-  if (i < 0) return savePack(pack);
+  if (i < 0) return false;
   packs[i] = pack;
   if (!write(pack.lang, packs)) return false;
   pruneAfter(startPrefetch(pack));

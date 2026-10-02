@@ -40,7 +40,10 @@ export function RefineCard({ pack, onRefined }: RefineCardProps) {
   const gone = error?.code === "unknown_pack" || !canRefine(pack);
   const blocked = error?.kind === "limit" || gone;
   const accessNotice = error?.kind === "unauthorized" ? error.message : null;
-  const left = Math.max(0, MAX - pack.refinements);
+  // 429 `refine_limit`: the server counted refinements this pack never stored (a billed 502, a
+  // client timeout), so it has none left whatever `pack.refinements` says.
+  const spent = error?.code === "refine_limit";
+  const left = spent ? 0 : Math.max(0, MAX - pack.refinements);
   const closed = left === 0 || gone;
   const disabled = pending !== null || blocked || closed;
 
@@ -124,7 +127,7 @@ export function RefineCard({ pack, onRefined }: RefineCardProps) {
           </button>
         </div>
       ) : null}
-      {error && !accessNotice && !gone ? <Notice>{error.message}</Notice> : null}
+      {error && !accessNotice && !gone && !spent ? <Notice>{error.message}</Notice> : null}
     </Card>
   );
 }

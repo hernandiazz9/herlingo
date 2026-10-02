@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useId, type Dispatch, type FormEvent, type SetStateAction } from "react";
+import { useEffect, useId, useState, type Dispatch, type FormEvent, type SetStateAction } from "react";
 import { MicIcon } from "@/components/phrasebook/icons";
 import { Button, Card } from "@/components/ui";
 import { COACH_LIMITS, type CoachPack } from "@/lib/coach";
 import { cn } from "@/lib/cn";
+import { ConfirmDialog } from "./ConfirmDialog";
 import { cancelGeneration, clearGeneration, newPackJob, startNewPack, useGeneration } from "./generation";
 import { SparklesIcon } from "./icons";
 import { FIELD, FOCUS, Notice, Spinner } from "./shared";
@@ -46,7 +47,11 @@ export function SituationForm({ lang, draft: text, setDraft: setText, onCreated 
     setText((prev) => (prev.trim() ? `${prev.trim()} ${heard}` : heard).slice(0, LIMIT)),
   );
   const error = job?.status === "error" && job.error.kind !== "unauthorized" ? job.error : null;
-  const blocked = error?.kind === "limit";
+  // A paid pack the device could not store lives only in memory: no new request until it is opened
+  // or dismissed (a new one would overwrite it).
+  const unsaved = job?.status === "done" && !job.saved ? job.pack : null;
+  const blocked = error?.kind === "limit" || unsaved !== null;
+  const [confirmDismiss, setConfirmDismiss] = useState(false);
 
   // A pack that finished while you were elsewhere: once its notice shows, the description it was
   // made from leaves the form (something typed since stays).
@@ -80,7 +85,22 @@ export function SituationForm({ lang, draft: text, setDraft: setText, onCreated 
             clearGeneration(key);
             onCreated(job.pack, job.saved);
           }}
+          onDismiss={() => setConfirmDismiss(true)}
         />
+      ) : null}
+      {unsaved && confirmDismiss ? (
+        <ConfirmDialog
+          title="¿Descartar esta situación?"
+          confirmLabel="Sí, descartar"
+          onCancel={() => setConfirmDismiss(false)}
+          fallbackFocus={() => document.getElementById(id)}
+          onConfirm={() => {
+            setConfirmDismiss(false);
+            clearGeneration(key);
+          }}
+        >
+          «{unsaved.title}» no está guardada en este móvil: si la descartas, se perderá. No se puede deshacer.
+        </ConfirmDialog>
       ) : null}
       <label htmlFor={id} className="text-xl font-extrabold text-ink">
         ¿Qué vas a hacer?
@@ -145,13 +165,19 @@ export function SituationForm({ lang, draft: text, setDraft: setText, onCreated 
       <Button type="submit" fullWidth disabled={!text.trim() || blocked}>
         <SparklesIcon width={22} height={22} /> Preparar
       </Button>
+      {unsaved ? (
+        <p className="text-sm text-ink-muted">Abre o descarta «{unsaved.title}» antes de preparar otra situación.</p>
+      ) : null}
       {error ? <Notice>{error.message}</Notice> : null}
     </form>
   );
 }
 
-/** A pack that finished while you were elsewhere (it is already in Mis situaciones when `saved`). */
-function Ready({ pack, saved, onOpen }: { pack: CoachPack; saved: boolean; onOpen: () => void }) {
+/**
+ * A pack that finished while you were elsewhere (it is already in Mis situaciones when `saved`;
+ * otherwise it can be opened or dismissed).
+ */
+function Ready({ pack, saved, onOpen, onDismiss }: { pack: CoachPack; saved: boolean; onOpen: () => void; onDismiss: () => void }) {
   return (
     <Notice tone={saved ? "success" : "info"} className="flex flex-col gap-3">
       <p>
@@ -162,6 +188,11 @@ function Ready({ pack, saved, onOpen }: { pack: CoachPack; saved: boolean; onOpe
       <Button size="md" onClick={onOpen}>
         Abrir
       </Button>
+      {saved ? null : (
+        <Button variant="secondary" size="md" onClick={onDismiss}>
+          Descartar
+        </Button>
+      )}
     </Notice>
   );
 }

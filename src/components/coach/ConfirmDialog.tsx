@@ -29,9 +29,13 @@ export function ConfirmDialog({ title, children, confirmLabel, onConfirm, onCanc
   const dialog = useRef<HTMLDivElement>(null);
   const cancel = useRef<HTMLButtonElement>(null);
   // The control that opened the dialog: read while rendering, before focus moves into the dialog.
-  const [trigger] = useState(() =>
-    typeof document !== "undefined" && document.activeElement instanceof HTMLElement ? document.activeElement : null,
-  );
+  // Safari/iOS does not focus a tapped button, so the active element is `<body>`: that is no
+  // trigger (focus then goes to `fallbackFocus`).
+  const [trigger] = useState(() => {
+    if (typeof document === "undefined") return null;
+    const active = document.activeElement;
+    return active instanceof HTMLElement && active !== document.body ? active : null;
+  });
   const fallback = useRef(fallbackFocus);
   useEffect(() => {
     fallback.current = fallbackFocus;

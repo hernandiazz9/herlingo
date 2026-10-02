@@ -78,8 +78,14 @@ function run(key: string, input: string, request: (signal: AbortSignal) => Promi
   );
 }
 
-/** Starts a new pack for `description` (no-op while one is running for `lang`). */
+/**
+ * Starts a new pack for `description`. No-op while one is running for `lang`, and while a finished
+ * one the device could not store waits to be opened or dismissed (`clearGeneration`): it is paid
+ * for and exists nowhere else, so a new request must not overwrite it.
+ */
 export function startNewPack(lang: string, description: string): void {
+  const job = jobs.get(newPackJob(lang));
+  if (job?.status === "done" && !job.saved) return;
   run(newPackJob(lang), description, (signal) => generatePack(lang, description, { signal }), savePack);
 }
 
@@ -95,6 +101,16 @@ export function cancelGeneration(key: string): void {
   jobs.delete(key);
   job.ctrl.abort();
   notify();
+}
+
+/**
+ * The pack was deleted: its running refinement is aborted (its answer would have nowhere to go;
+ * `replacePack` never stores a version of a deleted pack) and a finished one is forgotten.
+ */
+export function forgetRefine(pack: CoachPack): void {
+  const key = refineJob(pack);
+  cancelGeneration(key);
+  clearGeneration(key);
 }
 
 /** Forgets a finished job (shown or delivered). */

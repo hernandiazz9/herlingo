@@ -5,6 +5,7 @@ import type { CoachPack } from "@/lib/coach";
 import { useSavedPacks } from "@/lib/coach/use-coach";
 import { cn } from "@/lib/cn";
 import { ConfirmDialog } from "./ConfirmDialog";
+import { forgetRefine } from "./generation";
 import { TrashIcon } from "./icons";
 import { packHref } from "./nav";
 import { FOCUS } from "./shared";
@@ -78,6 +79,7 @@ export function SavedPacks({ lang, onOpen }: { lang: string; onOpen: (id: string
           onCancel={() => setToDelete(null)}
           fallbackFocus={() => document.getElementById("saved-title")}
           onConfirm={() => {
+            forgetRefine(toDelete);
             remove(toDelete.id);
             setToDelete(null);
           }}
