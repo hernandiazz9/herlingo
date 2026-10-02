@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-02 18:30Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: run T51+T53, then T52+T54 (≤2 agents); T50 after plan 004 lands in main; visual queue by hand.
+- Next step: integrate T52/T54 as they finish, then T55; T50 after plan 004 lands in main; visual queue by hand.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 - Needs Hernán: T50: run now as a no-op, or wait until plan 004 (Liga) lands in main (default: wait)
 
@@ -167,7 +167,7 @@ Worktree setup: npm ci
 - Outcome: per-code daily interview step counter (limit×11); refunds only when nothing billed; server-issued pack ids per code, refinements counted server-side (409 unknown_pack); TTS daily counter 500 (COACH_TTS_DAILY_LIMIT); docs limits table + overshoot note · 62ba623 · verify ✓ 💻 · not checked: refund after a real billed failure, UI for new refusals
 
 ## T52 — Fix: generated-pack validation, prompt quoting, dev server exposure, price row
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ab45752e37f116e3a · since 18:30Z)
 - Depends on: T49
 - Where: any
 - Goal: Malformed model output is rejected, all client-sent interview text is quoted as data, the dev server can't spend real money for anyone on the LAN, and the price table is right.
@@ -290,3 +290,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:29Z 💻 T53 done · worktree-agent-ae3e9216378bad2c9 → c3c915e · verify ✓
 - 2026-10-02 18:29Z 💻 T54 launched · attempt 1 · agent a7f117a2bfae5aa17
 - 2026-10-02 18:30Z 💻 T51 done · worktree-agent-aee7c561233822a21 → 62ba623 · verify ✓
+- 2026-10-02 18:30Z 💻 T52 launched · attempt 1 · agent ab45752e37f116e3a
