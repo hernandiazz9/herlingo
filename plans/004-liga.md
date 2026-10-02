@@ -9,9 +9,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Writer: 💻 session (this one)
+- Updated: 2026-10-02 19:33Z 💻
+- Writer: released
 - Branch: plan-004-liga-t38 (from main @ 12d6ad9)
-- Next step: T39 entry points, then T40
+- Next step: T40 needs Hernán's real Supabase URL + anon key; nothing else runnable
 - Needs Hernán: real Supabase project URL + anon key (Vercel env + .env.local) for T40
 
 ## Shared contract (all tasks read this)
@@ -111,7 +112,7 @@ Worktree setup: npm ci
 - Outcome: Grupo/Global leaderboard, podium, countdown, last-week podium, offline cache. Refresh on XP-award event (+3s) since sync.ts is out of scope. not checked: Grupo table with real group, offline banner, me-outside-top-50 separator, light Global podium.
 
 ## T39 — Entry points: Ruta card and Perfil link
-- Status: pending
+- Status: done
 - Depends on: T38
 - Goal: Make Liga discoverable: a card on Ruta (joined: weekly rank + XP this week in group/global, taps to /liga/; not joined: a dismissible "Compite con tus amigos" invite) and a Liga row on Perfil; all hidden when Liga is disabled.
 - Context: Shared contract; `src/app/page.tsx` and the Ruta components (cards for repaso/diálogos as the style to follow); `src/app/perfil/ProfileView.tsx`; `src/lib/league/` hooks and the leaderboard cache (T38).
@@ -121,7 +122,7 @@ Worktree setup: npm ci
   - Nothing Liga-related appears when the env vars are missing.
   - Checked by hand in both themes at 375 px.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: RutaLeagueCard (cache-first, dismissible invite, key lang-lern:league-invite-dismissed) + Perfil Liga card; hidden when Liga disabled. Small layout shift if invite is hidden after the placeholder. not checked: any hand check at 375 px in both themes, joined/not-joined/dismiss/offline states.
 
 ## T40 — End-to-end check against the real Supabase project
 - Status: pending
@@ -164,9 +165,11 @@ Worktree setup: npm ci
 
 ## Review queue
 - [ ] T38 @f329004 (queued 2026-10-02 💻)
+- [ ] T39 @7f21c79 (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T38: /liga/ leaderboard in both themes at 375 px (Grupo with group, offline banner, me outside top 50) (queued 2026-10-02 💻)
+- [ ] T39: Ruta card (joined, invite, dismissed, offline) and Perfil Liga row, both themes at 375 px; nothing Liga without env vars (queued 2026-10-02 💻)
 
 ## Decisions
 - 2026-10-01 plan: runs on integration branch `claude/usuarios-competencia-puntajes-3caa9b`, in parallel with plan 003 on main; T41 merges main back (Hernán)
@@ -215,3 +218,4 @@ Worktree setup: npm ci
 - 2026-10-02 19:15Z 💻 plan merged into main up to T37 (T38–T40 pending); old cloud branches superseded
 - 2026-10-02 19:26Z 💻 writer taken on 💻, new work branch from main
 - 2026-10-02 19:31Z 💻 T38 done @f329004
+- 2026-10-02 19:33Z 💻 T39 done @7f21c79
