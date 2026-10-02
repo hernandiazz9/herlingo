@@ -7,6 +7,14 @@ Goal: A new "Prepárate" section, entered from Jugar, where the learner describe
 Test command: npm run verify
 Worktree setup: npm ci
 
+## Now
+- Updated: 2026-10-02 17:50Z ☁️
+- Writer: ☁️ session_01E8RPAijcTHsJkNmB3yjqp6 · since 2026-10-02
+- Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
+- Needs Hernán: ANTHROPIC_API_KEY, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN for T49 (cloud env vars, or run T49 on the PC with .env.local) · decide where T49 runs
+- Next step: T49 (real end-to-end), then T50 (merge main). PC: drain the Review and Visual checks queues without blocking.
+- Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
+
 ## Shared contract (all tasks read this)
 
 - Brief override (Hernán, 2026-10-01): docs/brief.md says "static export (no server runtime, no API keys)". That is superseded for this feature only: one Vercel function backend for Prepárate. The site itself stays `output: "export"`; everything else stays serverless and offline. docs/brief.md stays untouched; the decision is recorded in `docs/coach.md`.
@@ -123,6 +131,8 @@ Worktree setup: npm ci
 ## T49 — Real end-to-end check and setup docs
 - Status: pending
 - Depends on: T43, T44, T46, T47, T48
+- Where: pc (real keys), or the cloud once the env vars are set
+- Needs: ANTHROPIC_API_KEY, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN
 - Goal: Run the whole flow once against the real services with the keys in `.env.local` (a few cents): generate a pack, refine it, play its audio, run an interview, check the ledger and the usage panel; fix what breaks; finish docs/coach.md with the exact setup steps for Vercel and Upstash and the measured costs.
 - Context: Shared contract; docs/coach.md; `.env.local` in the worktree (copied through `.worktreeinclude`, or provided as environment variables in the cloud); every Done-when of T42–T48.
 - Scope: may touch any file of this batch to fix integration bugs (record each fix in DECISIONS), docs/coach.md, README.md (deploy section: new env vars) / must not touch `content/**`, `docs/brief.md`, the real Vercel project settings, deploys.
@@ -143,15 +153,22 @@ Worktree setup: npm ci
   - /preparar/, /jugar/ and /perfil/ checked by hand in fake mode after the merge.
 - Outcome:
 
-## Deferred to the PC (token-heavy work, Hernán 2026-10-02)
-The cloud session implements each task and integrates it only if `npm run verify` passes. Token-heavy work is left for Hernán's Mac (orchestrator skill, `.env.local` with the keys):
-- Code review (`/code-review`) of each integrated task, T42–T48, plus a final review of the whole batch before T50.
-- Hand UI checks in both themes at 375 px (T46, T47, T48), if the cloud agents only checked them partially; each task's Outcome says what was checked.
-- T49 (real end-to-end with keys), unless the keys are set as cloud environment variables first.
-- Pending reviews: T42, T43, T44, T45, T46, T47, T48 (remove each one here once it has been reviewed).
-- Visual checks pending (both themes, 375 px, iPhone): T46 code card, situation form, generating card, pack view, Ajustar card (screenshots only); delete confirmation sheet on iPhone (safe area); every message box in dark; red "Se ha agotado el presupuesto" line; Jugar entry card in light; dictation button with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode first); header-only moment while loading.
-- Visual checks pending: T48 interview intro/question/waiting/error/result screens, the three /perfil coach sections, owner cap editor, LevelHint inside Prepárate (wired at integration, not seen yet), dictation with a real mic, question audio with real voice.
-- Visual checks pending: T47 "Practicar el diálogo" card (enabled/disabled), practice page header, back link and intro card, summary +XP line and "ya has ganado" note, whether "Repetir | Volver" fit side by side, a static dialogue in dark, real mic and real voice.
+## Deferred to the PC
+Moved to the Review queue and Visual checks queue below (hybrid skill). Token-heavy work (code reviews, visual checks, live-key checks) runs on the PC and never blocks the cloud.
+
+## Review queue
+- [ ] T42 @0813a9d — code review (queued 2026-10-02 ☁️)
+- [ ] T43 @a69de29 — code review (queued 2026-10-02 ☁️)
+- [ ] T44 @04ba4b2 — code review (queued 2026-10-02 ☁️)
+- [ ] T45 @b31148c — code review (queued 2026-10-02 ☁️)
+- [ ] T46 @473bd35 — code review (queued 2026-10-02 ☁️)
+- [ ] T47 @6b219b2 — code review (queued 2026-10-02 ☁️)
+- [ ] T48 @4e366e1 — code review (queued 2026-10-02 ☁️)
+
+## Visual checks queue
+- [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode); header-only moment while loading (queued 2026-10-02 ☁️)
+- [ ] T47 @6b219b2 — "Practicar el diálogo" card enabled/disabled; practice header, back link, intro card; summary +XP line and "ya has ganado" note; "Repetir | Volver" side by side; a static dialogue in dark; real mic and voice (queued 2026-10-02 ☁️)
+- [ ] T48 @4e366e1 — interview intro/question/waiting/error/result screens; the three /perfil coach sections; owner cap editor; LevelHint inside Prepárate (wired at integration, not seen); dictation with a real mic; question audio with real voice (queued 2026-10-02 ☁️)
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -168,6 +185,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T46: an open pack is /preparar/?pack=<id> (client navigation, works offline, back button); Mis situaciones visible without a code, the code card replaces the form (and the Ajustar card on a pack); after a 429 the action stays disabled until reload, a 502 leaves Preparar enabled; chips are generic Spanish situations; dictation in es-ES; Next's experimental useOffline not used. (T46)
 - 2026-10-02 T48: interview at /preparar/nivel/ (lights Jugar even from Perfil, via the NESTED prefix); UI says "entrevista de nivel" to avoid clashing with Perfil's placement "Prueba de nivel"; comprehension questions hide the target text behind "Ver el texto"; no autoplay (iOS gesture rule); dictation language follows the expected answer; billing link owner-only; "Cambiar de código" in the usage panel; AiUsagePanel keeps its own inline code form (could reuse T46's AccessCard later). (T48)
 - 2026-10-02 T47: practice on its own static page /preparar/dialogo/?pack=<id> (no clash with the pack view or T46's files); a pack that could not be saved shows the practice button disabled; back returns via history when it came from the pack view; XP = 5 + first answers that are not wrong (matches "Has acertado X de N"), marker keeps only today's ids; the player takes the language name from the pack instead of a hard-coded "Italiano". (T47)
+- 2026-10-02 plan: hybrid push policy: the cloud pushes its session branch after every integrated task; never main, no PR or deploy without OK. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
@@ -185,3 +203,4 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T46 done (473bd35); verify exit 0; T48 running; launching T47
 - 2026-10-02 T48 done (4e366e1); verify exit 0; T47 running
 - 2026-10-02 T47 done (6b219b2); verify exit 0. T42–T48 done. T49 needs real keys (none in the cloud env) → waits for the PC or for cloud env vars; T50 after T49
+- 2026-10-02 17:50Z ☁️ adopted hybrid blocks (Now, Review queue, Visual checks queue); T49 waits for keys
