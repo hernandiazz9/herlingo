@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type FormEvent } from "react";
+import { useEffect, useId, useState, type FormEvent } from "react";
 import { Button, Card } from "@/components/ui";
-import { COACH_LIMITS, refinePack, toCoachApiError, type CoachApiError, type CoachPack } from "@/lib/coach";
-import { useCoachAccess, useSavedPacks } from "@/lib/coach/use-coach";
+import { COACH_LIMITS, type CoachPack } from "@/lib/coach";
+import { useCoachAccess } from "@/lib/coach/use-coach";
 import { cn } from "@/lib/cn";
 import { AccessCard } from "./AccessCard";
-import { FIELD, Notice, Spinner } from "./shared";
+import { cancelGeneration, clearGeneration, refineJob, startRefine, useGeneration } from "./generation";
+import { FIELD, FOCUS, Notice, Spinner } from "./shared";
 
 const MAX = COACH_LIMITS.refinementsPerPack;
 
@@ -25,46 +26,41 @@ export interface RefineCardProps {
 export function RefineCard({ pack, onRefined }: RefineCardProps) {
   const id = useId();
   const { hasCode } = useCoachAccess();
-  const { replace } = useSavedPacks(pack.lang);
+  const key = refineJob(pack);
   const [instruction, setInstruction] = useState("");
-  const [pending, setPending] = useState<"adjust" | "again" | null>(null);
-  const [error, setError] = useState<CoachApiError | null>(null);
-  const [blocked, setBlocked] = useState(false);
-  const [accessNotice, setAccessNotice] = useState<string | null>(null);
-  const request = useRef<AbortController | null>(null);
+  const job = useGeneration(key, ({ pack: next, saved }) => {
+    setInstruction("");
+    onRefined(next, saved);
+  });
+  const pending = job?.status === "pending" ? (job.input ? "adjust" : "again") : null;
+  const error = job?.status === "error" ? job.error : null;
+  const blocked = error?.kind === "limit";
+  const accessNotice = error?.kind === "unauthorized" ? error.message : null;
   const left = Math.max(0, MAX - pack.refinements);
   const disabled = pending !== null || blocked || left === 0;
 
-  useEffect(() => () => request.current?.abort(), []);
+  // A version that arrived while this pack was closed: it is already saved; show it as new.
+  const finished = job?.status === "done" ? job : null;
+  useEffect(() => {
+    if (!finished) return;
+    clearGeneration(key);
+    onRefined(finished.pack, finished.saved);
+  }, [finished, key, onRefined]);
 
-  const run = async (kind: "adjust" | "again") => {
+  const edit = (value: string) => {
+    setInstruction(value);
+    if (error) clearGeneration(key);
+  };
+
+  const run = (kind: "adjust" | "again") => {
     const text = kind === "adjust" ? instruction.trim() : "";
     if (disabled || (kind === "adjust" && !text)) return;
-    const ctrl = new AbortController();
-    request.current = ctrl;
-    setPending(kind);
-    setError(null);
-    try {
-      const { pack: next } = await refinePack(pack, text, { signal: ctrl.signal });
-      const saved = replace(next);
-      setInstruction("");
-      onRefined(next, saved);
-    } catch (err) {
-      const apiError = toCoachApiError(err);
-      if (apiError.kind === "unauthorized") setAccessNotice(apiError.message);
-      else if (apiError.kind !== "aborted") {
-        if (apiError.kind === "limit") setBlocked(true);
-        setError(apiError);
-      }
-    } finally {
-      if (request.current === ctrl) request.current = null;
-      setPending(null);
-    }
+    startRefine(pack, text);
   };
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
-    void run("adjust");
+    run("adjust");
   };
 
   if (!hasCode) {
@@ -90,7 +86,7 @@ export function RefineCard({ pack, onRefined }: RefineCardProps) {
           <input
             id={id}
             value={instruction}
-            onChange={(e) => setInstruction(e.target.value)}
+            onChange={(e) => edit(e.target.value)}
             maxLength={COACH_LIMITS.instruction}
             disabled={left === 0}
             placeholder="Ej.: más corta, con trato de tú"
@@ -102,7 +98,7 @@ export function RefineCard({ pack, onRefined }: RefineCardProps) {
           <Button type="submit" size="md" disabled={disabled || !instruction.trim()}>
             {pending === "adjust" ? "Ajustando…" : "Ajustar"}
           </Button>
-          <Button variant="secondary" size="md" disabled={disabled} onClick={() => void run("again")}>
+          <Button variant="secondary" size="md" disabled={disabled} onClick={() => run("again")}>
             {pending === "again" ? "Generando…" : "Generar otra vez"}
           </Button>
         </div>
@@ -110,13 +106,20 @@ export function RefineCard({ pack, onRefined }: RefineCardProps) {
       {pending ? (
         <div role="status" className="flex items-center gap-3">
           <Spinner />
-          <p className="flex-1 text-sm text-ink-muted">Preparando la nueva versión. Puede tardar hasta un minuto.</p>
-          <button type="button" onClick={() => request.current?.abort()} className="text-sm font-bold text-sea underline">
+          <p className="flex-1 text-sm text-ink-muted">
+            Preparando la nueva versión. Puede tardar hasta un minuto; si sales, se guardará igual. Si cancelas, cuenta
+            igual para tu límite y tu gasto.
+          </p>
+          <button
+            type="button"
+            onClick={() => cancelGeneration(key)}
+            className={cn("min-h-11 text-sm font-bold text-sea underline", FOCUS)}
+          >
             Cancelar
           </button>
         </div>
       ) : null}
-      {error ? <Notice>{error.message}</Notice> : null}
+      {error && !accessNotice ? <Notice>{error.message}</Notice> : null}
     </Card>
   );
 }

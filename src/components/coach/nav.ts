@@ -36,3 +36,11 @@ export function closePack(): void {
   window.history.replaceState(null, "", PREPARE_HREF);
   window.scrollTo(0, 0);
 }
+
+/**
+ * Moves keyboard and screen-reader focus to the page heading (PageHeader's h1, `tabIndex={-1}`)
+ * after the view changed in place (pack opened, closed, created or refined). Call after rendering.
+ */
+export function focusPageHeading(): void {
+  document.querySelector<HTMLElement>("main h1")?.focus({ preventScroll: true });
+}

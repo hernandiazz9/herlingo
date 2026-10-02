@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Button } from "@/components/ui";
 import type { CoachPack } from "@/lib/coach";
@@ -11,7 +11,8 @@ import { useHydrated } from "@/lib/progress/use-progress";
 import { AccessCard } from "./AccessCard";
 import { BudgetLine } from "./BudgetLine";
 import { LevelHint } from "./LevelHint";
-import { closePack, openPack, PACK_PARAM, PREPARE_SUBTITLE, PREPARE_TITLE } from "./nav";
+import { newPackJob, useGeneration } from "./generation";
+import { closePack, focusPageHeading, openPack, PACK_PARAM, PREPARE_SUBTITLE, PREPARE_TITLE } from "./nav";
 import { PackView } from "./PackView";
 import { SavedPacks } from "./SavedPacks";
 import { Notice, useOnline } from "./shared";
@@ -42,7 +43,18 @@ export function CoachView({ lang = DEFAULT_LANG }: { lang?: string }) {
   const online = useOnline();
   const [fresh, setFresh] = useState<CoachPack | null>(null);
   const [notice, setNotice] = useState<PackNotice | null>(null);
-  const [accessNotice, setAccessNotice] = useState<string | null>(null);
+  /** The description being typed: survives the form being swapped for the code card (401). */
+  const [draft, setDraft] = useState("");
+  const job = useGeneration(newPackJob(lang));
+  const accessNotice = job?.status === "error" && job.error.kind === "unauthorized" ? job.error.message : null;
+
+  // Opening or closing a pack (taps, the back button) swaps the view in place: move focus to its title.
+  const shownPack = useRef(packId);
+  useEffect(() => {
+    if (shownPack.current === packId) return;
+    shownPack.current = packId;
+    focusPageHeading();
+  }, [packId]);
 
   if (!hydrated) return <PageHeader title={PREPARE_TITLE} subtitle={PREPARE_SUBTITLE} />;
 
@@ -85,6 +97,7 @@ export function CoachView({ lang = DEFAULT_LANG }: { lang?: string }) {
               : "Esta es la nueva versión, pero no he podido guardarla en este móvil.",
           });
           window.scrollTo({ top: 0 });
+          requestAnimationFrame(focusPageHeading);
         }}
       />
     );
@@ -105,7 +118,8 @@ export function CoachView({ lang = DEFAULT_LANG }: { lang?: string }) {
           <LevelHint lang={lang} />
           <SituationForm
             lang={lang}
-            onUnauthorized={setAccessNotice}
+            draft={draft}
+            setDraft={setDraft}
             onCreated={(pack, saved) => {
               setFresh(pack);
               open(pack.id);

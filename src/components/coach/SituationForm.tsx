@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type FormEvent } from "react";
+import { useId, type Dispatch, type FormEvent, type SetStateAction } from "react";
 import { MicIcon } from "@/components/phrasebook/icons";
 import { Button, Card } from "@/components/ui";
-import { COACH_LIMITS, generatePack, toCoachApiError, type CoachApiError, type CoachPack } from "@/lib/coach";
-import { useSavedPacks } from "@/lib/coach/use-coach";
+import { COACH_LIMITS, type CoachPack } from "@/lib/coach";
 import { cn } from "@/lib/cn";
+import { cancelGeneration, clearGeneration, newPackJob, startNewPack, useGeneration } from "./generation";
 import { SparklesIcon } from "./icons";
 import { FIELD, FOCUS, Notice, Spinner } from "./shared";
 import { useDictation } from "./use-dictation";
@@ -24,58 +24,58 @@ const EXAMPLES = [
 
 export interface SituationFormProps {
   lang: string;
-  /** A new pack arrived (`saved`: false when the device could not store it). */
+  /** The description being typed: kept by the parent so it survives a 401 (code asked again). */
+  draft: string;
+  setDraft: Dispatch<SetStateAction<string>>;
+  /** A new pack arrived (`saved`: false when the device could not store it): show it. */
   onCreated: (pack: CoachPack, saved: boolean) => void;
-  /** The server rejected the stored code (it is forgotten, so the parent asks for it again). */
-  onUnauthorized: (message: string) => void;
 }
 
-/** "¿Qué vas a hacer?": description (typed, dictated or from an example) → a new pack. */
-export function SituationForm({ lang, onCreated, onUnauthorized }: SituationFormProps) {
+/**
+ * "¿Qué vas a hacer?": description (typed, dictated or from an example) → a new pack. The request
+ * runs in `./generation`: leaving this screen does not throw it away (it is saved when it arrives).
+ */
+export function SituationForm({ lang, draft: text, setDraft: setText, onCreated }: SituationFormProps) {
   const id = useId();
-  const { save } = useSavedPacks(lang);
-  const [text, setText] = useState("");
-  const [pending, setPending] = useState<string | null>(null);
-  const [error, setError] = useState<CoachApiError | null>(null);
-  const [blocked, setBlocked] = useState(false);
-  const request = useRef<AbortController | null>(null);
+  const key = newPackJob(lang);
+  const job = useGeneration(key, ({ pack, saved }) => {
+    setText("");
+    onCreated(pack, saved);
+  });
   const dictation = useDictation((heard) =>
     setText((prev) => (prev.trim() ? `${prev.trim()} ${heard}` : heard).slice(0, LIMIT)),
   );
+  const error = job?.status === "error" && job.error.kind !== "unauthorized" ? job.error : null;
+  const blocked = error?.kind === "limit";
 
-  useEffect(() => () => request.current?.abort(), []);
-
-  const submit = async (e: FormEvent) => {
-    e.preventDefault();
-    const description = text.trim();
-    if (!description || pending || blocked) return;
-    dictation.cancel();
-    const ctrl = new AbortController();
-    request.current = ctrl;
-    setPending(description);
-    setError(null);
-    try {
-      const { pack } = await generatePack(lang, description, { signal: ctrl.signal });
-      const saved = save(pack);
-      setText("");
-      onCreated(pack, saved);
-    } catch (err) {
-      const apiError = toCoachApiError(err);
-      if (apiError.kind === "unauthorized") onUnauthorized(apiError.message);
-      else if (apiError.kind !== "aborted") {
-        if (apiError.kind === "limit") setBlocked(true);
-        setError(apiError);
-      }
-    } finally {
-      if (request.current === ctrl) request.current = null;
-      setPending(null);
-    }
+  const edit = (value: string) => {
+    setText(value);
+    if (job?.status === "error") clearGeneration(key);
   };
 
-  if (pending) return <Generating description={pending} onCancel={() => request.current?.abort()} />;
+  const submit = (e: FormEvent) => {
+    e.preventDefault();
+    const description = text.trim();
+    if (!description || job?.status === "pending" || blocked) return;
+    dictation.cancel();
+    startNewPack(lang, description);
+  };
+
+  if (job?.status === "pending") return <Generating description={job.input} onCancel={() => cancelGeneration(key)} />;
 
   return (
     <form onSubmit={submit} className="flex flex-col gap-3">
+      {job?.status === "done" ? (
+        <Ready
+          pack={job.pack}
+          saved={job.saved}
+          onOpen={() => {
+            clearGeneration(key);
+            if (text.trim() === job.input) setText("");
+            onCreated(job.pack, job.saved);
+          }}
+        />
+      ) : null}
       <label htmlFor={id} className="text-xl font-extrabold text-ink">
         ¿Qué vas a hacer?
       </label>
@@ -83,7 +83,7 @@ export function SituationForm({ lang, onCreated, onUnauthorized }: SituationForm
         <textarea
           id={id}
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => edit(e.target.value)}
           maxLength={LIMIT}
           rows={3}
           placeholder="Por ejemplo: comprar un billete de tren y preguntar de qué andén sale"
@@ -125,7 +125,7 @@ export function SituationForm({ lang, onCreated, onUnauthorized }: SituationForm
           <button
             key={ex.label}
             type="button"
-            onClick={() => setText(ex.text)}
+            onClick={() => edit(ex.text)}
             className={cn(
               "pressable rounded-full border-2 border-line bg-surface px-3 py-1.5 text-sm font-bold text-ink [--ledge:var(--line)]",
               FOCUS,
@@ -144,6 +144,22 @@ export function SituationForm({ lang, onCreated, onUnauthorized }: SituationForm
   );
 }
 
+/** A pack that finished while you were elsewhere (it is already in Mis situaciones when `saved`). */
+function Ready({ pack, saved, onOpen }: { pack: CoachPack; saved: boolean; onOpen: () => void }) {
+  return (
+    <Notice tone={saved ? "success" : "info"} className="flex flex-col gap-3">
+      <p>
+        {saved
+          ? `«${pack.title}» ya está lista y guardada en Mis situaciones.`
+          : `«${pack.title}» ya está lista, pero no he podido guardarla en este móvil: ábrela ahora o se perderá.`}
+      </p>
+      <Button size="md" onClick={onOpen}>
+        Abrir
+      </Button>
+    </Notice>
+  );
+}
+
 function Generating({ description, onCancel }: { description: string; onCancel: () => void }) {
   return (
     <Card tone="sea" role="status" className="flex flex-col gap-3">
@@ -153,12 +169,13 @@ function Generating({ description, onCancel }: { description: string; onCancel: 
       </div>
       <p className="text-base text-ink">«{description}»</p>
       <p className="text-sm text-ink-muted">
-        Escribo los pasos, las frases clave y un diálogo para practicar. Puede tardar hasta un minuto: no cierres esta
-        pantalla.
+        Escribo los pasos, las frases clave y un diálogo para practicar. Puede tardar hasta un minuto. Mientras tanto
+        puedes repasar tus situaciones guardadas: la nueva aparecerá en Mis situaciones (no cierres la app).
       </p>
       <Button variant="secondary" size="md" onClick={onCancel}>
         Cancelar
       </Button>
+      <p className="text-sm text-ink-muted">Si cancelas, se pierde, pero cuenta igual para tu límite y tu gasto.</p>
     </Card>
   );
 }

@@ -23,7 +23,7 @@ export default async function DialoguePage({ params }: PageProps<"/dialogos/[id]
   if (!dialogue) notFound();
   return (
     <>
-      <Link href="/dialogos" className="self-start text-sm font-bold text-sea">
+      <Link href="/dialogos/" className="self-start text-sm font-bold text-sea">
         ← Diálogos
       </Link>
       <PageHeader title={dialogue.title} />

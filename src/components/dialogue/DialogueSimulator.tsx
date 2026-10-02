@@ -36,7 +36,7 @@ export function DialogueSimulator({ id, lang }: { id: string; lang?: string }) {
       }
       exit={
         <Link
-          href="/dialogos"
+          href="/dialogos/"
           className="pressable inline-flex min-h-14 items-center justify-center rounded-button bg-sea px-4 text-lg font-bold text-on-accent [--ledge:var(--sea-ledge)]"
         >
           Otros diálogos

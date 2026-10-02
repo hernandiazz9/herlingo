@@ -28,7 +28,7 @@ export function SavedPacks({ lang, onOpen }: { lang: string; onOpen: (id: string
   return (
     <section aria-labelledby="saved-title" className="flex flex-col gap-3 pt-2">
       <div className="flex flex-col gap-1">
-        <h2 id="saved-title" className="text-2xl font-extrabold tracking-tight text-ink">
+        <h2 id="saved-title" tabIndex={-1} className="text-2xl font-extrabold tracking-tight text-ink outline-none">
           Mis situaciones
         </h2>
         <p className="text-sm text-ink-muted">Se guardan en este móvil: repasarlas no gasta nada y funcionan sin conexión.</p>
@@ -76,6 +76,7 @@ export function SavedPacks({ lang, onOpen }: { lang: string; onOpen: (id: string
           title="¿Borrar esta situación?"
           confirmLabel="Sí, borrar"
           onCancel={() => setToDelete(null)}
+          fallbackFocus={() => document.getElementById("saved-title")}
           onConfirm={() => {
             remove(toDelete.id);
             setToDelete(null);
