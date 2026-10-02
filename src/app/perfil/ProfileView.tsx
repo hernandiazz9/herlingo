@@ -9,12 +9,13 @@ import { DEFAULT_LANG, getAllLessons, getPack } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import { currentStreak, resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
 import { useProgress, useSettings } from "@/lib/progress/use-progress";
+import { CoachSections } from "./CoachSections";
 
 /** Destructive button: error colours, same shape and press animation as `Button`. */
 const DANGER =
   "pressable inline-flex items-center justify-center rounded-button border-2 border-error bg-surface px-5 font-bold tracking-wide text-error-deep [--ledge:var(--error-ledge)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
 
-/** Stats (XP, streak, words, lessons) and settings. */
+/** Stats (XP, streak, words, lessons), the AI coach sections and settings. */
 export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
   const router = useRouter();
   const pack = getPack(lang);
@@ -39,6 +40,8 @@ export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
         <Stat value={wordsLearned(progress, pack)} label="palabras aprendidas" />
         <Stat value={`${lessonsDone}/${lessonsTotal}`} label="lecciones hechas" />
       </div>
+
+      <CoachSections lang={lang} />
 
       <section aria-labelledby="settings-title" className="flex flex-col gap-3">
         <h2 id="settings-title" className="text-2xl font-extrabold tracking-tight text-ink">
