@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 19:09Z 💻
+- Updated: 2026-10-02 19:11Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: integrate T57; Hernán: visual queue; T50 after plan 004 lands in main.
+- Next step: only T50 left (after plan 004 lands in main); Hernán: visual queue by hand; optional review of T56–T57.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 - Needs Hernán: COACH_ACCESS_CODES (+ COACH_OWNER) in .env.local for npm run dev:coach with real keys (else COACH_FAKE=1); same names needed in Vercel
 
@@ -230,7 +230,7 @@ Worktree setup: npm ci
 - Outcome: Perfil 'Copia de seguridad': export all lang-lern:* keys except the access code to JSON (share sheet on touch devices, download elsewhere); import validates, confirms, offers the previous copy, rolls back on write failure, keeps access code/theme; hooks refresh via storage event · ef7208e · verify ✓ 💻 · not checked: iPhone share sheet → Archivos, Mac ↔ iPhone round-trip, light theme
 
 ## T57 — Fix: deleted pack resurrected by a late refinement; refine count after 502; dialog focus on iOS; unsaved result overwritten
-- Status: running (attempt 1 · 💻 · agent abf91b00f1a8bcfa2 · since 19:09Z)
+- Status: done
 - Depends on: T56
 - Where: any
 - Goal: Background generations never undo the learner's own actions or silently drop a paid result.
@@ -239,7 +239,7 @@ Worktree setup: npm ci
 - Done when:
   - (1)–(4) done; Spain Spanish "tú"; tokens only.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: replacePack only replaces an existing pack + deletePack forgets its refine job; refine_limit closes the Ajustar card (session-only); body not a dialog trigger; Preparar blocked while an unsaved result shows, with Descartar + confirm · 5b1545c · verify ✓ 💻 · not checked: iPhone focus, Descartar in light/dark, late refinement with real backend
 
 ## Deferred to the PC
 Moved to the Review queue and Visual checks queue below (hybrid skill). Token-heavy work (code reviews, visual checks, live-key checks) runs on the PC and never blocks the cloud.
@@ -259,6 +259,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [x] T54 @85faaf9 — code review (queued 2026-10-02 💻) · reviewed 💻 2026-10-02 → T57(1,3,4)
 - [x] T55 @199c29c — code review (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
 - [ ] T56 @ef7208e — code review (queued 2026-10-02 💻)
+- [ ] T57 @5b1545c — code review (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (after fake mode on the same origin run clearGeneratedAudio(); never clear site data: it wipes progress); header-only moment while loading (queued 2026-10-02 ☁️)
@@ -269,6 +270,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [ ] T54 @85faaf9 — iPhone: start a generation, open a saved pack, come back (ready notice + Abrir); Cancelar copy; VoiceOver focus on pack open/close; delete dialog focus (queued 2026-10-02 💻)
 - [ ] T55 @199c29c — Ajustar card 'ya no se puede ajustar' in light + dark; tab bar highlights on every tab after the href slash change (queued 2026-10-02 💻)
 - [ ] T56 @ef7208e — iPhone installed app: Exportar → share sheet → Archivos; import on the Mac browser and back; Copia de seguridad in light + dark (queued 2026-10-02 💻)
+- [ ] T57 @5b1545c — 'lista, pero no he podido guardarla' notice with Descartar + confirm in light + dark; delete dialog focus on iPhone (queued 2026-10-02 💻)
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -300,6 +302,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 T49: local dev with real keys writes the production Upstash ledger (same 'hernan' name); consider a dev key prefix
 - 2026-10-02 T51: packs from the T49 smoke test (and any pre-T51 pack) can no longer be refined; in-memory dev ledger forgets packs on restart
 - 2026-10-02 T55: PathView hard-codes /repaso/ and /dialogos/ instead of getTab().href
+- 2026-10-02 T57: remember refine_limit per pack across restarts in src/lib/coach/api.ts (like unknown_pack)
 
 ## Log
 - 2026-10-02 plan written from the interview; not approved yet
@@ -334,3 +337,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 19:09Z 💻 T56 done · worktree-agent-af4dc92a94e38738d → ef7208e · verify ✓
 - 2026-10-02 19:09Z 💻 review T51–T55 on 💻: 1 med + 3 low → T57
 - 2026-10-02 19:09Z 💻 T57 launched · attempt 1 · agent abf91b00f1a8bcfa2
+- 2026-10-02 19:11Z 💻 T57 done · worktree-agent-abf91b00f1a8bcfa2 → 5b1545c · verify ✓
