@@ -6,6 +6,7 @@
  *   lang-lern:coach:usage            { v, at, usage }              last usage summary seen
  *   lang-lern:coach:packs:<lang>     { v, packs: CoachPack[] }     "Mis situaciones", newest first
  *   lang-lern:coach:profile:<lang>   { v, about, assessments }     "Sobre mí" + interview results
+ *   lang-lern:coach:practice:<lang>  { v, day, packs: id[] }       packs whose role-play earned XP that day
  */
 export const COACH_PREFIX = "lang-lern:coach:";
 const EVENT = "lang-lern:coach-change";
@@ -15,6 +16,7 @@ export const COACH_KEYS = {
   usage: `${COACH_PREFIX}usage`,
   packs: (lang: string) => `${COACH_PREFIX}packs:${lang}`,
   profile: (lang: string) => `${COACH_PREFIX}profile:${lang}`,
+  practice: (lang: string) => `${COACH_PREFIX}practice:${lang}`,
 };
 
 /** Raw stored value ("" when none or unreadable): a stable snapshot for useSyncExternalStore. */

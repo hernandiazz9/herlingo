@@ -25,6 +25,7 @@ export {
 export { clearAccessCode, getAccessCode, setAccessCode } from "./access";
 export { cachePackAudio, coachVoices, packLine, packPlayables, questionPlayable } from "./audio";
 export { deletePack, getSavedPack, getSavedPacks, pruneCoachAudio, replacePack, savePack } from "./packs";
+export { awardPracticeXp, packDialogue } from "./practice";
 export {
   buildLearnerContext,
   clearAssessments,
