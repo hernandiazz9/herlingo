@@ -85,7 +85,7 @@ Worktree setup: npm ci
 - Outcome: Integrated as b31148c. src/lib/coach/ (api client with typed errors offline/401/429/502/aborted/other, access code, saved packs, usage, learner profile, buildLearnerContext, hooks useCoachAccess/useSavedPacks/useCoachUsage/useLearnerProfile) and src/lib/audio/generated.ts; keys lang-lern:coach:{access,usage,packs:<lang>,profile:<lang>}. 45 scripted checks against dev:coach fake mode passed (not committed). speak() caches each generated line once and falls back to device voice; static audio unchanged. Built sw.js skips /api/ and keeps cache "lang-lern-coach-audio" on activate (checked in a sandbox). verify exit 0.
 
 ## T46 — Prepárate screens: entry card, access, form, pack view, Mis situaciones
-- Status: pending
+- Status: done
 - Depends on: T45
 - Goal: `/preparar/` end to end against fake mode: Jugar entry card, access-code screen, the form (text box ≤500 chars, dictation in Spanish when the browser supports it, example chips), generating state, the pack view (title, guide steps, key phrases with normal and slow audio and translations), "Ajustar" with one instruction and "Generar otra vez" (counter of the 3 allowed), "Mis situaciones" list (open, delete with confirmation), the remaining-budget line ("Te quedan 3,20 $ este mes"), and offline/limit/error states. Leave a clear "Practicar el diálogo" slot for T47.
 - Context: Shared contract; docs/coach.md; `src/lib/coach/` hooks (T45); `src/components/game/GameView.tsx` (where the entry card goes); `src/lib/navigation.ts` (`NESTED`); CLAUDE.md UI conventions (tokens only, both themes, `pressable`, PageHeader, Spain Spanish "tú", trailing slashes); `src/components/ui/`; `src/lib/speech/` for dictation; `node_modules/next/dist/docs/` for anything Next-specific.
@@ -94,7 +94,7 @@ Worktree setup: npm ci
   - With the local dev command in fake mode: enter code → describe → pack appears → audio plays → adjust works up to 3 times then the button disables → the pack is in Mis situaciones after a reload → delete works; wrong code, 429 and offline show their Spanish messages.
   - /preparar/ lights up the Jugar tab; checked by hand in both themes at 375 px (describe what was checked in DECISIONS).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Integrated as 473bd35. /preparar/ (CoachView: AccessCard, SituationForm with chips + es-ES dictation, PackView with normal/slow audio, RefineCard 3 max, SavedPacks with ConfirmDialog, BudgetLine), Jugar EntryCard, NESTED "prepare" under Jugar. Headless Chromium at 375 px, 39 checks in dev:coach and again in the built export (start:coach): full flow, 3 refinements then disabled, reload keeps the pack, delete with confirm, wrong code / 429 / offline / 502 / budget messages, Jugar tab aria-current, saved pack + audio offline with the SW. Only screenshots for visuals: hand check on the PC (see Deferred to the PC). Slots: PracticeDialogue({ pack }) for T47, LevelHint (shown once LEVEL_TEST_HREF is set) for T48. verify exit 0.
 
 ## T47 — Role-play of the generated dialogue + XP
 - Status: pending
@@ -149,6 +149,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - Hand UI checks in both themes at 375 px (T46, T47, T48), if the cloud agents only checked them partially; each task's Outcome says what was checked.
 - T49 (real end-to-end with keys), unless the keys are set as cloud environment variables first.
 - Pending reviews: T42, T43, T44, T45, T46, T47, T48 (remove each one here once it has been reviewed).
+- Visual checks pending (both themes, 375 px, iPhone): T46 code card, situation form, generating card, pack view, Ajustar card (screenshots only); delete confirmation sheet on iPhone (safe area); every message box in dark; red "Se ha agotado el presupuesto" line; Jugar entry card in light; dictation button with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode first); header-only moment while loading.
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -162,6 +163,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T45: a generated line is a normal Playable with audioKey "gen:…" (T47 reuses content types); @/lib/audio does not import coach code (coach registers the TTS source on import); cache name defined once in generated.ts and copied into the SW keep list; savePack/replacePack prefetch audio in the background, replace/delete prune unused audio; API functions never save on their own; a 401 clears the stored code; refinePack refuses a 4th refinement client-side; 75 s timeout; non-ASCII codes rejected; Sobre mí/assessments per language; last usage stored for offline budget line. After fake-mode testing, cached silent mp3s shadow real voices on the same origin: clear site data or clearGeneratedAudio(). (T45)
 - 2026-10-02 orchestrator: integrating T45 failed with "unrelated histories" because .git/shallow listed the branch HEAD (35d6b49) as a shallow boundary; removed that entry (backup in the session scratchpad) and the squash merge went through. Agents must never run shallow fetches in the main checkout. (orchestrator)
 - 2026-10-02 T43: effort low for packs too (60 s function limit; T49 may raise it in generators.ts); 50 s deadline for the whole call incl. retries (a cut-off call is not in the ledger; the Anthropic console spend limit covers it); billing per attempt when a fallback model answers (recordCall takes a list of charges); claude-sonnet-5 added to the price table (fallback model); betaZodOutputFormat kept, our zod check enforces lengths/enums → 502; final interview step uses the Assessment schema; prompts language-agnostic, learner text quoted as data; neutral Spanish examples; failed pack attempts still count in packs/avgPackUsd. No API key in the cloud env: real check moved to T49. (T43)
+- 2026-10-02 T46: an open pack is /preparar/?pack=<id> (client navigation, works offline, back button); Mis situaciones visible without a code, the code card replaces the form (and the Ajustar card on a pack); after a 429 the action stays disabled until reload, a 502 leaves Preparar enabled; chips are generic Spanish situations; dictation in es-ES; Next's experimental useOffline not used. (T46)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
@@ -176,3 +178,4 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T44 done (04ba4b2); verify exit 0
 - 2026-10-02 T45 done (b31148c); verify exit 0; T43 running; launching T46 and, after it, T47/T48
 - 2026-10-02 T43 done (a69de29); verify exit 0; T46 running; launching T48
+- 2026-10-02 T46 done (473bd35); verify exit 0; T48 running; launching T47
