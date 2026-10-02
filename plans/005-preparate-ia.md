@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 18:38Z 💻
+- Updated: 2026-10-02 18:42Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: integrate T55; then review T51–T55 and the visual queue on 💻; T50 after plan 004 lands in main.
+- Next step: all tasks but T50 done; Hernán: visual queue by hand; optional light review of T51–T55; T50 after plan 004 lands in main.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 - Needs Hernán: COACH_ACCESS_CODES (+ COACH_OWNER) in .env.local for npm run dev:coach with real keys (else COACH_FAKE=1); same names needed in Vercel
 
@@ -205,7 +205,7 @@ Worktree setup: npm ci
 - Outcome: generations live in a module store (generation.ts) that saves the result even if the screen is left; Cancelar warns it still counts; draft kept across 401; focus to h1 on open/close/create, ConfirmDialog traps and returns focus; /dialogos/ links · 85faaf9 · verify ✓ 💻 · not checked: real phone, VoiceOver/TalkBack
 
 ## T55 — Fix: client handling of the new T51 refusals (unknown_pack, tts_limit)
-- Status: running (attempt 1 · 💻 · agent ae5bdd50791a8e7e5 · since 18:38Z)
+- Status: done
 - Depends on: T51, T54
 - Where: any
 - Goal: The app reacts sensibly to the server refusals added in T51.
@@ -214,7 +214,7 @@ Worktree setup: npm ci
 - Done when:
   - unknown_pack disables Ajustar with that copy; tts_limit falls back to device voice; Spain Spanish "tú"; tokens only.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: unknown_pack disables Ajustar with 'Esta situación ya no se puede ajustar; crea una nueva.' (in-memory canRefine); tts_limit → device voice, no retries that session; all section hrefs end in / (owns() strips it); form cleared after ready notice; docs: no clear-site-data advice · 199c29c · verify ✓ 💻 · not checked: light/dark screens, device voice after 429 on iPhone
 
 ## Deferred to the PC
 Moved to the Review queue and Visual checks queue below (hybrid skill). Token-heavy work (code reviews, visual checks, live-key checks) runs on the PC and never blocks the cloud.
@@ -232,6 +232,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [ ] T51 @62ba623 — code review (queued 2026-10-02 💻)
 - [ ] T52 @1c18474 — code review (queued 2026-10-02 💻)
 - [ ] T54 @85faaf9 — code review (queued 2026-10-02 💻)
+- [ ] T55 @199c29c — code review (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (after fake mode on the same origin run clearGeneratedAudio(); never clear site data: it wipes progress); header-only moment while loading (queued 2026-10-02 ☁️)
@@ -240,6 +241,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [ ] T49 @5c03681 — real neural voices by ear in a generated pack; Uso de IA panel shows real Upstash spend (queued 2026-10-02 💻)
 - [ ] T53 @c3c915e — slow 3G in fake mode: uncached generated line falls back to device voice within ~8 s (queued 2026-10-02 💻)
 - [ ] T54 @85faaf9 — iPhone: start a generation, open a saved pack, come back (ready notice + Abrir); Cancelar copy; VoiceOver focus on pack open/close; delete dialog focus (queued 2026-10-02 💻)
+- [ ] T55 @199c29c — Ajustar card 'ya no se puede ajustar' in light + dark; tab bar highlights on every tab after the href slash change (queued 2026-10-02 💻)
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -269,6 +271,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 T49: native voice is female (it-IT-ElsaNeural) for a male 'Camarero'; pick voice by speaker role
 - 2026-10-02 T49: local dev with real keys writes the production Upstash ledger (same 'hernan' name); consider a dev key prefix
 - 2026-10-02 T51: packs from the T49 smoke test (and any pre-T51 pack) can no longer be refined; in-memory dev ledger forgets packs on restart
+- 2026-10-02 T55: PathView hard-codes /repaso/ and /dialogos/ instead of getTab().href
 
 ## Log
 - 2026-10-02 plan written from the interview; not approved yet
@@ -298,3 +301,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:35Z 💻 T52 done · worktree-agent-ab45752e37f116e3a → 1c18474 · verify ✓
 - 2026-10-02 18:37Z 💻 T54 done · worktree-agent-a7f117a2bfae5aa17 → 85faaf9 · verify ✓
 - 2026-10-02 18:38Z 💻 T55 launched · attempt 1 · agent ae5bdd50791a8e7e5
+- 2026-10-02 18:42Z 💻 T55 done · worktree-agent-ae5bdd50791a8e7e5 → 199c29c · verify ✓
