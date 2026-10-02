@@ -7,16 +7,12 @@ import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import type { z } from "zod";
 import { requireAnthropicKey } from "./config";
 import { CoachError } from "./http";
-import { COACH_MODEL, type TokenUsage } from "./model";
+import { COACH_MODEL, type Charge } from "./model";
 
 let client: Anthropic | undefined;
 
-export interface StructuredResult<T> {
-  data: T;
-  /** Model that actually answered (differs from COACH_MODEL after a server-side fallback). */
-  model: string;
-  usage: TokenUsage;
-}
+/** Whole call, SDK retries included: the functions are stopped at 60 s (vercel.json). */
+const DEADLINE_MS = 50_000;
 
 export interface StructuredRequest<T extends z.ZodType> {
   /** Stable across calls (cached): never put per-request data here. */
@@ -26,52 +22,109 @@ export interface StructuredRequest<T extends z.ZodType> {
   effort: "low" | "medium";
   maxTokens: number;
   /** Called as soon as a response arrives, also when it is then rejected: every call is billed. */
-  onUsage: (model: string, usage: TokenUsage) => Promise<unknown>;
+  onUsage: (charges: Charge[]) => Promise<unknown>;
 }
 
-const failed = (detail: string) =>
-  new CoachError(502, "generation_failed", `No he podido preparar la respuesta (${detail}). Inténtalo de nuevo.`);
+type Reason = "refusal" | "max_tokens" | "invalid" | "timeout" | "busy" | "api";
 
-export async function generateStructured<T extends z.ZodType>(req: StructuredRequest<T>): Promise<StructuredResult<z.infer<T>>> {
+const MESSAGES: Record<Reason, string> = {
+  refusal: "No puedo preparar esto. Prueba a contarlo de otra forma.",
+  max_tokens: "La respuesta ha salido demasiado larga. Inténtalo de nuevo.",
+  invalid: "La respuesta ha llegado con errores. Inténtalo de nuevo.",
+  timeout: "La IA ha tardado demasiado. Inténtalo de nuevo.",
+  busy: "La IA está saturada ahora mismo. Inténtalo en unos minutos.",
+  api: "No he podido hablar con la IA. Inténtalo de nuevo.",
+};
+
+const failed = (reason: Reason) => new CoachError(502, "generation_failed", MESSAGES[reason]);
+
+/**
+ * Tokens per model attempt. Top-level `usage` covers only the attempt that produced the message,
+ * so a response served by a fallback model is billed from `usage.iterations`.
+ */
+function chargesOf(response: Anthropic.Beta.Messages.BetaMessage): Charge[] {
+  const iterations = response.usage.iterations ?? [];
+  if (iterations.some((it) => it.type === "fallback_message")) {
+    return iterations.flatMap((it) =>
+      it.type === "message" || it.type === "fallback_message"
+        ? [
+            {
+              model: it.model ?? COACH_MODEL,
+              usage: {
+                input: it.input_tokens,
+                output: it.output_tokens,
+                cacheWrite: it.cache_creation_input_tokens,
+                cacheRead: it.cache_read_input_tokens,
+              },
+            },
+          ]
+        : [],
+    );
+  }
+  const u = response.usage;
+  return [
+    {
+      model: response.model,
+      usage: {
+        input: u.input_tokens,
+        output: u.output_tokens,
+        cacheWrite: u.cache_creation_input_tokens ?? 0,
+        cacheRead: u.cache_read_input_tokens ?? 0,
+      },
+    },
+  ];
+}
+
+export async function generateStructured<T extends z.ZodType>(req: StructuredRequest<T>): Promise<z.infer<T>> {
   requireAnthropicKey();
   client ??= new Anthropic();
   let response;
   try {
-    response = await client.beta.messages.create({
-      model: COACH_MODEL,
-      max_tokens: req.maxTokens,
-      betas: ["server-side-fallback-2026-07-01"],
-      fallbacks: "default",
-      system: [{ type: "text", text: req.system, cache_control: { type: "ephemeral" } }],
-      messages: [{ role: "user", content: req.user }],
-      output_config: { effort: req.effort, format: betaZodOutputFormat(req.schema) },
-    });
+    response = await client.beta.messages.create(
+      {
+        model: COACH_MODEL,
+        max_tokens: req.maxTokens,
+        betas: ["server-side-fallback-2026-07-01"],
+        fallbacks: "default",
+        system: [{ type: "text", text: req.system, cache_control: { type: "ephemeral" } }],
+        messages: [{ role: "user", content: req.user }],
+        output_config: { effort: req.effort, format: betaZodOutputFormat(req.schema) },
+      },
+      { signal: AbortSignal.timeout(DEADLINE_MS) },
+    );
   } catch (error) {
-    if (error instanceof Anthropic.RateLimitError) throw failed("servicio saturado");
+    if (error instanceof Anthropic.APIUserAbortError || error instanceof Anthropic.APIConnectionTimeoutError) {
+      console.error("[coach] Claude call timed out");
+      throw failed("timeout");
+    }
     if (error instanceof Anthropic.APIError) {
       console.error("[coach] Anthropic API error", error.status, error.message);
-      throw failed(`error ${error.status ?? "de red"}`);
+      throw failed(error instanceof Anthropic.RateLimitError || error.status === 529 ? "busy" : "api");
     }
     throw error;
   }
-  const u = response.usage;
-  const usage: TokenUsage = {
-    input: u.input_tokens,
-    output: u.output_tokens,
-    cacheWrite: u.cache_creation_input_tokens ?? 0,
-    cacheRead: u.cache_read_input_tokens ?? 0,
-  };
-  await req.onUsage(response.model, usage);
-  if (response.stop_reason === "refusal") throw failed("rechazada");
-  if (response.stop_reason === "max_tokens") throw failed("demasiado larga");
+  await req.onUsage(chargesOf(response));
+  if (response.stop_reason === "refusal") {
+    console.error("[coach] refusal", response.model, response.stop_details?.category ?? null);
+    throw failed("refusal");
+  }
+  if (response.stop_reason === "max_tokens") {
+    console.error("[coach] max_tokens", response.model, response.usage.output_tokens);
+    throw failed("max_tokens");
+  }
   const text = response.content.flatMap((block) => (block.type === "text" ? [block.text] : [])).join("");
   let raw: unknown;
   try {
     raw = JSON.parse(text);
   } catch {
-    throw failed("formato no válido");
+    console.error("[coach] output is not JSON", response.model, text.length);
+    throw failed("invalid");
   }
   const parsed = req.schema.safeParse(raw);
-  if (!parsed.success) throw failed("formato no válido");
-  return { data: parsed.data, model: response.model, usage };
+  if (!parsed.success) {
+    const issue = parsed.error.issues[0];
+    console.error("[coach] output does not match the schema", issue?.path.join("."), issue?.message);
+    throw failed("invalid");
+  }
+  return parsed.data;
 }

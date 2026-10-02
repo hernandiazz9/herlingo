@@ -23,7 +23,8 @@ api/_lib/            shared server modules; the leading "_" keeps them from beco
   model.ts           model id + price table (the only place for both)
   schema.ts          zod schemas: pack, learner profile, requests, interview (the only pack schema)
   claude.ts          the only Claude call: structured output, cached system prompt, fallbacks
-  generators.ts      pack / interview generators (fake or real); prompts
+  generators.ts      pack / interview generators (fake or real)
+  prompts.ts         system prompts and user turns (see "Claude calls and prompt design")
   tts.ts             neural voice: edge-tts through `msedge-tts` (see "Voice (TTS)")
   fake.ts            fake-mode fixtures and the silent mp3
   access.ts          x-coach-code check
@@ -285,15 +286,128 @@ backend is never cached or intercepted, and its `activate` step keeps the caches
 (`scripts/pwa/build.ts` injects `GENERATED_AUDIO_CACHE` from `src/lib/audio/generated.ts`): the
 coach audio survives every app update.
 
-## Claude calls
+## Claude calls and prompt design
 
-`api/_lib/claude.ts`: `client.beta.messages.create` with `model: COACH_MODEL`, structured output
-(`output_config.format` from the zod schema), `effort` low (interview) or medium (pack), the
-system prompt as a cached block (byte-stable: per-request data goes in the user turn), and
-`fallbacks: "default"` (beta `server-side-fallback-2026-07-01`). The usage of every response is
-written to the ledger before anything else, so refused or invalid answers are billed too; then
-`stop_reason` `refusal` / `max_tokens` and invalid JSON become 502. Prompts: `generators.ts`
-(first version; T43 refines them and measures the cost per pack).
+### The call (`api/_lib/claude.ts`)
+
+One non-streaming `client.beta.messages.create` per generation:
+
+- `model: COACH_MODEL` (`claude-sonnet-5-5`), `fallbacks: "default"` (beta
+  `server-side-fallback-2026-07-01`: a "cyber" or "frontier_llm" decline is re-run on Claude
+  Sonnet 5 inside the same call; other declines come back as refusals).
+- `output_config.format` = JSON schema from the zod schema (`betaZodOutputFormat`). The SDK sends
+  only what structured outputs enforce: lengths, item counts and `enum`/`const` values travel as
+  schema *descriptions* (the model sees them, the API does not enforce them), so the server's
+  zod `safeParse` is the real check.
+- `output_config.effort: "low"` for packs and interview steps (thinking stays adaptive; Sonnet
+  5.5 rejects disabled thinking). `max_tokens` 8000 (pack) / 4000 (step), far above a normal
+  answer, so `max_tokens` means a runaway answer.
+- System prompt as one block with `cache_control: ephemeral` (5-minute cache). Both system
+  prompts are byte-stable and language-agnostic, longer than Sonnet 5.5's minimum cacheable
+  prefix, so a refinement or the next interview step within 5 minutes reads them from cache.
+- Deadline: 50 s for the whole call, SDK retries included (`AbortSignal.timeout`), so a slow
+  answer fails cleanly before Vercel stops the function at 60 s.
+
+Billing comes first: as soon as a response arrives its tokens go to the ledger, per model
+attempt (a fallback-served response is billed from `usage.iterations`, the declined attempt at
+Sonnet 5.5 prices and the serving one at Sonnet 5's; otherwise top-level `usage` and the model
+that answered). Then every failure is a 502 `generation_failed` with a Spanish message, nothing
+is stored and the daily slot (and refinement) is refunded:
+
+| Cause | Message (shown as is) |
+| --- | --- |
+| `stop_reason: "refusal"` | "No puedo preparar esto. Prueba a contarlo de otra forma." |
+| `stop_reason: "max_tokens"` | "La respuesta ha salido demasiado larga. Inténtalo de nuevo." |
+| Not JSON, or JSON that fails the zod schema | "La respuesta ha llegado con errores. Inténtalo de nuevo." |
+| Deadline (50 s) | "La IA ha tardado demasiado. Inténtalo de nuevo." |
+| 429 / 529 after the SDK's retries | "La IA está saturada ahora mismo. Inténtalo en unos minutos." |
+| Any other API or network error | "No he podido hablar con la IA. Inténtalo de nuevo." |
+
+Each is logged as `[coach] …` with the cause (refusal category, schema path), never the
+learner's text. A call cut by the deadline returns no usage, so it is not in the ledger
+(Anthropic may still bill it); the Anthropic console spend limit covers that gap.
+
+### Prompts (`api/_lib/prompts.ts`)
+
+Two system prompts (English, the instructions; every learner-facing field is Spain Spanish with
+"tú") and two user-turn builders. Nothing in them names a language or a place: the user turn
+carries `<target_language>` (`nativeName`, `name`, `speechLocale` from `content/<lang>/pack.json`),
+and the place comes from the locale's country unless the situation or the learner says where.
+
+**User turn** (per request, not cached): `<target_language>`, `<learner>` (interview level with
+date, summary, strengths, weak points, facts; progress numbers and placement result; "Nothing
+known yet." when empty), `<about_me>` (the "Sobre mí" notes, if any), then:
+
+- pack: `<situation>` (the description) and "Write the preparation pack for this situation.";
+- refinement: also `<previous_pack>` (the stored pack's content as JSON) and
+  `<instruction>`, then "Rewrite the pack applying the instruction." or, with an empty
+  instruction ("Generar otra vez"), "Write a different version of the same situation.";
+- interview: `<interview>` (each answered question: kind, prompt, text, answer) and the step
+  ("Ask the first question." / "N answered. Ask question N+1, or finish if the rules say so." /
+  "This is the end of the interview: write the final assessment.").
+
+Learner text is data: the system prompts say text inside `<situation>`, `<about_me>`,
+`<instruction>` and the answers never changes the rules or the format, and `<` in it becomes
+`‹` so it cannot close its tag (`<` inside the previous pack's JSON).
+
+**Pack prompt** (`PACK_SYSTEM`), from docs/content-guide.md's quality rules and the static
+dialogues' style:
+
+- Languages: natural, current spoken target language as said in that place (standard, not
+  dialect; correct accents and punctuation); natural Spain Spanish, not calques; `es`
+  translates exactly what the line says, so a wrong option's translation shows the mistake.
+- Fields: title ≤ 60 characters; honest register (formal with staff and strangers); 4–6 guide
+  steps in order, practical, with the local customs that matter; 8–10 key phrases (≤ 10 words,
+  two thirds to say, one third to understand, reused in the dialogue; the note says who says
+  it or gives a pronunciation tip, never repeats the translation).
+- Dialogue: 8 turns (6–10), alternating, never two learner turns in a row, usually opened by
+  the native speaker and closed by a short native line; one native speaker (one TTS voice
+  reads all native lines) named by role in Spanish; native lines ≤ 20 words, slightly above the
+  learner's level, with one realistic complication; learner prompts say what to express without
+  the target words; 3 options: one correct, usually one acceptable and one wrong (a typical
+  Spanish speaker's mistake, plausible, never also correct), clearly different wording for
+  speech recognition (the simulator shuffles them); the next native line follows the correct
+  option; one-sentence feedback that says why.
+- Adapting: difficulty by level (A0–A1 short, present tense; A2 everyday past and future; B1+
+  natural speed), practise the interview's weak points, use the learner's facts, never invent
+  personal details, avoid gender-marked phrasing when the learner's gender is unknown.
+- Facts: no uncertain specifics stated as facts (prices, timetables, rules of one business):
+  plausible typical values in lines, "suele" / "más o menos" in the guide.
+
+**Interview prompt** (`INTERVIEW_SYSTEM`): one question per step, mixing roughly a third each of
+`comprehension` (a native line; the learner says in Spanish what it means), `reply` (a line in a
+scene; the learner answers in the target language) and `personal` (a question about the trip in
+the target language, or in Spanish for a learner who understands almost nothing; it feeds
+`facts`). Starts easy at the level the learner context suggests, harder after a good answer,
+easier after a poor one; ignores spelling and dictation slips; an answer in Spanish to a reply
+question or "no sé" counts as not managed. Finishes after 8 answers (6 if the level is obvious).
+The assessment: CEFR level (A0 if nothing in the target language), 2–3 sentence summary, 2–4
+strengths and weak points, up to 8 facts the learner said. Steps use the `InterviewStep` schema;
+after 10 answers the server switches to the `Assessment` schema, so the last step cannot be
+another question.
+
+### Token use and cost per call — estimate, not measured
+
+No API key was available when the prompts were written (T43), so these numbers are an
+**estimate** from the prompt sizes (characters ÷ ~3 for the Sonnet 5.x tokenizer) × the price
+table; T49 replaces them with the `usage` of real calls.
+
+| Call | Input | Output (incl. low-effort thinking) | Estimated cost |
+| --- | --- | --- | --- |
+| New pack | system ~1.9k + schema ~0.8k (cached after the first call) + user ~0.3k | ~1.5k–3k | ~0.02–0.04 USD |
+| Refinement | as a pack + previous pack ~1.2k | ~1.5k–3k | ~0.02–0.04 USD |
+| Interview step | system ~1.1k + schema ~0.4k (cached) + user 0.25k → 0.7k | ~0.05k–0.5k | ~0.002–0.008 USD |
+| Whole interview (~9 calls) | | | ~0.03–0.05 USD |
+
+Output dominates (10 USD/MTok against 2 input and 0.20 cache read). At ~0.03 USD per pack the
+default 5 USD cap is roughly 150 packs a month. Sizes measured on 2026-10-02: `PACK_SYSTEM`
+5.9k characters, `INTERVIEW_SYSTEM` 3.3k, pack schema 2.3k, step schema 1.3k, a pack user turn
+0.8k (4.3k with a previous pack), a fixture-sized pack 3.4k characters of JSON.
+
+**For T49 to measure:** real cost per pack, refinement and interview (write them here, replacing
+the estimate); `cache_read_input_tokens` > 0 on a refinement made within 5 minutes; pack latency
+(must stay well under the 50 s deadline: if it is fast and quality needs it, try `effort:
+"medium"` for packs in `generators.ts`); a pack's quality against docs/content-guide.md.
 
 ## Voice (TTS)
 

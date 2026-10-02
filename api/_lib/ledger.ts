@@ -14,7 +14,7 @@
 import type { Caller } from "./access";
 import { dailyLimit, defaultCapUsd, timeZone } from "./config";
 import { CoachError } from "./http";
-import { costMicroUsd, type TokenUsage } from "./model";
+import { costMicroUsd, sumUsage, type Charge } from "./model";
 import { LIMITS } from "./schema";
 import { getStore } from "./store";
 
@@ -92,11 +92,12 @@ export async function reserveRefinement(packId: string, previousCount: number): 
   return refund;
 }
 
-/** Adds one Claude call to the ledger. Returns its cost in micro-dollars. */
-export async function recordCall(caller: Caller, kind: CallKind, model: string, usage: TokenUsage): Promise<number> {
+/** Adds one Claude call (every model attempt in it) to the ledger. Returns its cost in micro-dollars. */
+export async function recordCall(caller: Caller, kind: CallKind, charges: Charge[]): Promise<number> {
   const store = getStore();
   const { month } = periods();
-  const cost = costMicroUsd(model, usage);
+  const cost = charges.reduce((sum, c) => sum + costMicroUsd(c.model, c.usage), 0);
+  const usage = sumUsage(charges);
   const writes: Promise<number>[] = [
     store.incrby(keys.spend(month), cost),
     store.incrby(keys.spendBy(month, caller.name), cost),

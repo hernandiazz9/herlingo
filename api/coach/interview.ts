@@ -19,8 +19,8 @@ export default route({
     const refund = body.history.length === 0 ? await reserveGeneration(caller) : undefined;
     let costMicro = 0;
     try {
-      const step = await generateInterviewStep(body, meta, async (model, usage) => {
-        costMicro += await recordCall(caller, "interview", model, usage);
+      const step = await generateInterviewStep(body, meta, async (charges) => {
+        costMicro += await recordCall(caller, "interview", charges);
       });
       if (step.done ? !step.assessment : !step.question) {
         throw new CoachError(502, "generation_failed", "No he podido preparar la siguiente pregunta. Inténtalo de nuevo.");

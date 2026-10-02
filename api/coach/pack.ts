@@ -5,6 +5,7 @@ import { generatePack } from "../_lib/generators";
 import { CoachError, json, readBody, route } from "../_lib/http";
 import { getLanguage, packVoices } from "../_lib/languages";
 import { assertBudget, readUsage, recordCall, reserveGeneration, reserveRefinement } from "../_lib/ledger";
+import { sumUsage, type Charge } from "../_lib/model";
 import { Pack, PackRequest } from "../_lib/schema";
 
 export default route({
@@ -19,14 +20,14 @@ export default route({
 
     const refunds = [await reserveGeneration(caller)];
     let costMicro = 0;
-    let tokens = { input: 0, output: 0, cacheWrite: 0, cacheRead: 0 };
+    let charges: Charge[] = [];
     try {
       if (body.refine) refunds.push(await reserveRefinement(body.refine.packId, body.refine.previous.refinements));
       const generated = await generatePack(
         { meta, description: body.description, profile: body.profile, refine: body.refine },
-        async (model, usage) => {
-          tokens = usage;
-          costMicro += await recordCall(caller, body.refine ? "refine" : "pack", model, usage);
+        async (call) => {
+          charges = call;
+          costMicro += await recordCall(caller, body.refine ? "refine" : "pack", call);
         },
       );
       const pack = Pack.parse({
@@ -47,7 +48,7 @@ export default route({
         pack,
         usage: {
           costUsd: costMicro / 1_000_000,
-          tokens,
+          tokens: sumUsage(charges),
           remainingUsd: summary.remainingUsd,
           today: summary.today,
         },
