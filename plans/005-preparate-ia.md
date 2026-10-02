@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 19:03Z 💻
+- Updated: 2026-10-02 19:09Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
 - Next step: integrate T56; turn the T51–T55 review into fix tasks; Hernán: visual queue; T50 after plan 004 lands in main.
@@ -217,7 +217,7 @@ Worktree setup: npm ci
 - Outcome: unknown_pack disables Ajustar with 'Esta situación ya no se puede ajustar; crea una nueva.' (in-memory canRefine); tts_limit → device voice, no retries that session; all section hrefs end in / (owns() strips it); form cleared after ready notice; docs: no clear-site-data advice · 199c29c · verify ✓ 💻 · not checked: light/dark screens, device voice after 429 on iPhone
 
 ## T56 — Backup: export and import on-device progress in Perfil
-- Status: running (attempt 1 · 💻 · agent af4dc92a94e38738d · since 19:03Z)
+- Status: done
 - Depends on: T55
 - Where: any
 - Goal: Until accounts exist, Hernán can save all his on-device data to a file and restore it on the same or another phone, so a wiped browser or a new phone never loses progress.
@@ -227,6 +227,18 @@ Worktree setup: npm ci
   - Export → import round-trip restores identical `lang-lern:*` values (headless check in the built app or a tsx script with a fake localStorage); a malformed or foreign file is rejected with a clear message and changes nothing.
   - `npm run verify` → exit 0.
   - Hand check (PC): export on the iPhone (installed app: share sheet → Archivos), import on the Mac browser and back; light + dark.
+- Outcome: Perfil 'Copia de seguridad': export all lang-lern:* keys except the access code to JSON (share sheet on touch devices, download elsewhere); import validates, confirms, offers the previous copy, rolls back on write failure, keeps access code/theme; hooks refresh via storage event · ef7208e · verify ✓ 💻 · not checked: iPhone share sheet → Archivos, Mac ↔ iPhone round-trip, light theme
+
+## T57 — Fix: deleted pack resurrected by a late refinement; refine count after 502; dialog focus on iOS; unsaved result overwritten
+- Status: pending
+- Depends on: T56
+- Where: any
+- Goal: Background generations never undo the learner's own actions or silently drop a paid result.
+- Context: review of T51–T55 (💻 2026-10-02). (1) [med] `src/lib/coach/packs.ts:104` via `src/components/coach/generation.ts:88`: `replacePack` falls back to `savePack`, so a refinement finishing after the pack was deleted brings it back and re-downloads its audio: a refinement only replaces a pack that still exists (else `saved:false`, no audio), or `deletePack` cancels/marks the pack's refine job. (2) `api/coach/pack.ts:74` + `src/components/coach/RefineCard.tsx:43`: after a billed 502 or a client timeout the server count moved but the stored pack's did not, so the card offers a refinement that gets 429 `refine_limit`: on `refine_limit` show the card closed ("Ya has ajustado esta situación 3 veces"). (3) `src/components/coach/ConfirmDialog.tsx:32-48`: on Safari/iOS the remembered trigger is `<body>`, so `fallbackFocus` is never used: treat `document.body` as no trigger. (4) `src/components/coach/SituationForm.tsx:63-68` + `generation.ts:47-53`: while "lista, pero no he podido guardarla" shows, a new submit overwrites the paid, unsaved result: block submit until that result is opened or dismissed.
+- Scope: may touch `src/lib/coach/packs.ts`, `src/components/coach/**` / must not touch `plans/`, `api/**`, `content/**`, `docs/brief.md`, any storage key or stored shape.
+- Done when:
+  - (1)–(4) done; Spain Spanish "tú"; tokens only.
+  - `npm run verify` → exit 0.
 - Outcome:
 
 ## Deferred to the PC
@@ -241,11 +253,12 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [x] T47 @6b219b2 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T54 (static dialogues unaffected)
 - [x] T48 @4e366e1 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T54
 - [x] T49 @5c03681 — code review (prompt fix + docs) (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
-- [ ] T53 @c3c915e — code review (queued 2026-10-02 💻)
-- [ ] T51 @62ba623 — code review (queued 2026-10-02 💻)
-- [ ] T52 @1c18474 — code review (queued 2026-10-02 💻)
-- [ ] T54 @85faaf9 — code review (queued 2026-10-02 💻)
-- [ ] T55 @199c29c — code review (queued 2026-10-02 💻)
+- [x] T53 @c3c915e — code review (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
+- [x] T51 @62ba623 — code review (queued 2026-10-02 💻) · reviewed 💻 2026-10-02 → T57(2)
+- [x] T52 @1c18474 — code review (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
+- [x] T54 @85faaf9 — code review (queued 2026-10-02 💻) · reviewed 💻 2026-10-02 → T57(1,3,4)
+- [x] T55 @199c29c — code review (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
+- [ ] T56 @ef7208e — code review (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (after fake mode on the same origin run clearGeneratedAudio(); never clear site data: it wipes progress); header-only moment while loading (queued 2026-10-02 ☁️)
@@ -255,6 +268,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [ ] T53 @c3c915e — slow 3G in fake mode: uncached generated line falls back to device voice within ~8 s (queued 2026-10-02 💻)
 - [ ] T54 @85faaf9 — iPhone: start a generation, open a saved pack, come back (ready notice + Abrir); Cancelar copy; VoiceOver focus on pack open/close; delete dialog focus (queued 2026-10-02 💻)
 - [ ] T55 @199c29c — Ajustar card 'ya no se puede ajustar' in light + dark; tab bar highlights on every tab after the href slash change (queued 2026-10-02 💻)
+- [ ] T56 @ef7208e — iPhone installed app: Exportar → share sheet → Archivos; import on the Mac browser and back; Copia de seguridad in light + dark (queued 2026-10-02 💻)
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -317,3 +331,5 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:38Z 💻 T55 launched · attempt 1 · agent ae5bdd50791a8e7e5
 - 2026-10-02 18:42Z 💻 T55 done · worktree-agent-ae5bdd50791a8e7e5 → 199c29c · verify ✓
 - 2026-10-02 19:03Z 💻 T56 launched · attempt 1 · agent af4dc92a94e38738d; review of T51–T55 started (read-only agent)
+- 2026-10-02 19:09Z 💻 T56 done · worktree-agent-af4dc92a94e38738d → ef7208e · verify ✓
+- 2026-10-02 19:09Z 💻 review T51–T55 on 💻: 1 med + 3 low → T57
