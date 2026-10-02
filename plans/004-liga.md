@@ -9,10 +9,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 19:26Z 💻
 - Writer: 💻 session (this one)
 - Branch: plan-004-liga-t38 (from main @ 12d6ad9)
-- Next step: T38 weekly leaderboards, then T39 entry points, then T40 real Supabase check; start a new work branch from main
+- Next step: T39 entry points, then T40
 - Needs Hernán: real Supabase project URL + anon key (Vercel env + .env.local) for T40
 
 ## Shared contract (all tasks read this)
@@ -97,7 +96,7 @@ Worktree setup: npm ci
 - Outcome: `groups.ts` (cache `lang-lern:league-group`, invite `lang-lern:league-invite`, create/join/leave/switch), GroupSection on /liga/, `/liga/unirse/?codigo=` (join Liga → auto-join group; switch with confirmation); e2e with 2 browser users on the local fake Supabase, both themes at 375 px → fc09e61
 
 ## T38 — Weekly leaderboards
-- Status: pending
+- Status: done
 - Depends on: T35, T37
 - Goal: The heart of /liga/: weekly XP ranking with a Grupo / Global switch, podium for the top 3, the user's row highlighted (top 50 + me), time left until the Monday reset, and last week's podium; cached for offline viewing.
 - Context: Shared contract; docs/league.md (`league_leaderboard`, `league_last_week_podium`, `league_me`); T34–T37 code; design tokens and existing cards (`src/components/ui`), ProgressBar etc.
@@ -109,7 +108,7 @@ Worktree setup: npm ci
   - Offline: last cached table with "Sin conexión · actualizado hace …".
   - Checked by hand in both themes at 375 px.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Grupo/Global leaderboard, podium, countdown, last-week podium, offline cache. Refresh on XP-award event (+3s) since sync.ts is out of scope. not checked: Grupo table with real group, offline banner, me-outside-top-50 separator, light Global podium.
 
 ## T39 — Entry points: Ruta card and Perfil link
 - Status: pending
@@ -163,6 +162,12 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome: Node built-ins + psql only; GoTrue/PostgREST-shaped endpoints, magic links printed; 15 bots + group PRUEBA; league:local:check 23 checks and db:check 171 green on Postgres 16; real supabase-js verified against it (anon sign-in, RPCs, errors, updateUser, otp, refresh); `npm run verify` green → 6909ec2
 
+## Review queue
+- [ ] T38 @f329004 (queued 2026-10-02 💻)
+
+## Visual checks queue
+- [ ] T38: /liga/ leaderboard in both themes at 375 px (Grupo with group, offline banner, me outside top 50) (queued 2026-10-02 💻)
+
 ## Decisions
 - 2026-10-01 plan: runs on integration branch `claude/usuarios-competencia-puntajes-3caa9b`, in parallel with plan 003 on main; T41 merges main back (Hernán)
 - 2026-10-01 plan: Supabase; account optional; groups (one per person, minimal) + one global table; weekly XP (Monday Europe/Madrid); only XP events in the cloud; nickname + emoji; magic link (default SMTP for now, only Hernán's email works); reasonable server-side limits against cheating; Hernán applies migrations (Hernán)
@@ -209,3 +214,4 @@ Worktree setup: npm ci
 - 2026-10-02 T42 verify green after network access was opened; supabase-js smoke against league:local OK
 - 2026-10-02 19:15Z 💻 plan merged into main up to T37 (T38–T40 pending); old cloud branches superseded
 - 2026-10-02 19:26Z 💻 writer taken on 💻, new work branch from main
+- 2026-10-02 19:31Z 💻 T38 done @f329004
