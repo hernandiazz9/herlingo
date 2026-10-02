@@ -154,7 +154,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T51 — Fix: server-side limits can be bypassed or refunded after billing
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent aee7c561233822a21 · since 18:25Z)
 - Depends on: T49
 - Where: any
 - Goal: Every billed Claude call counts against the limits the server enforces, independent of what the client sends.
@@ -179,7 +179,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T53 — Fix: generated audio fetch can hang; stray prefetches; silent code-save failure
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ae3e9216378bad2c9 · since 18:25Z)
 - Depends on: T49
 - Where: any
 - Goal: Tapping a generated line always plays something within a few seconds, and background audio work never outlives its pack.
@@ -269,3 +269,5 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:05Z 💻 T49 done · worktree-agent-ac06e17fe757188a3 → 5c03681 · verify ✓ (main checkout needed npm ci: new deps)
 - 2026-10-02 18:05Z 💻 T50 checked: main (01832a7) has 0 commits missing here; plan 004 (Liga) is not in main yet, so the merge would be a no-op
 - 2026-10-02 18:25Z 💻 review T42–T49 on 💻 (3 read-only agents): 3 med + 14 low findings → T51–T54
+- 2026-10-02 18:25Z 💻 T51 launched · attempt 1 · agent aee7c561233822a21
+- 2026-10-02 18:25Z 💻 T53 launched · attempt 1 · agent ae3e9216378bad2c9
