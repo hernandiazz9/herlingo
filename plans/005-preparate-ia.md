@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 17:57Z 💻
+- Updated: 2026-10-02 17:58Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: T49 on 💻 with .env.local once the keys are in, then T50; drain the Review and Visual checks queues meanwhile.
+- Next step: integrate T49 when it finishes, then T50; drain the Review and Visual checks queues.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 
 ## Shared contract (all tasks read this)
@@ -128,7 +128,7 @@ Worktree setup: npm ci
 - Outcome: Integrated as 4e366e1. /preparar/nivel/ (LevelInterview), /perfil sections (CoachSections: interview result + link, AboutMeCard, AiUsagePanel with owner-only cap editor and billing link). Headless Playwright at 375 px in fake mode: 35/35 main flow, 12/12 error states; assessment and "Sobre mí" present in the next pack request body; Sobre mí survives reload; usage numbers match GET usage; cap editor only for dev-owner. At integration the orchestrator wired T46's LevelHint to LEVEL_INTERVIEW_HREF (copy "Haz la entrevista de nivel", hidden until hydrated) and dropped T48's unused LevelTestPrompt. verify exit 0.
 
 ## T49 — Real end-to-end check and setup docs
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ac06e17fe757188a3 · since 17:58Z)
 - Depends on: T43, T44, T46, T47, T48
 - Where: pc (real keys), or the cloud once the env vars are set
 - Needs: ANTHROPIC_API_KEY, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN
@@ -207,3 +207,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 17:53Z ☁️ handoff ☁️ → 💻; skill committed at .claude/skills/hybrid for the Mac install
 - 2026-10-02 17:57Z 💻 resume on 💻 desktop · writer taken (released by ☁️ session_01E8RPAijcTHsJkNmB3yjqp6) · hybrid skill installed in ~/.claude/skills
 - 2026-10-02 17:57Z 💻 keys for T49 copied into .env.local on 💻 (names only checked)
+- 2026-10-02 17:58Z 💻 T49 launched · attempt 1 · agent ac06e17fe757188a3
