@@ -4,15 +4,15 @@ import { useState } from "react";
 import { AccountSection } from "@/components/league/AccountSection";
 import { GroupSection } from "@/components/league/GroupSection";
 import { JoinFlow } from "@/components/league/JoinFlow";
+import { Leaderboard } from "@/components/league/Leaderboard";
 import { ProfileCard } from "@/components/league/ProfileCard";
 import { leagueErrorMessage, TEXT_BUTTON } from "@/components/league/copy";
-import { ComingSoon } from "@/components/shell/ComingSoon";
 import { Card } from "@/components/ui";
 import { useLeagueAccount } from "@/lib/league/use-league-account";
 
 /**
  * The Liga screen. Not joined: join flow (nickname + emoji, or sign in with email). Joined: profile,
- * the ranking slot (T38) and the account section (email, sign out, leave and delete my data).
+ * the weekly ranking and the account section (email, sign out, leave and delete my data).
  */
 export function LeagueView() {
   const account = useLeagueAccount();
@@ -61,13 +61,7 @@ export function LeagueView() {
 
           <GroupSection account={account} />
 
-          {/* Ranking slot: T38 replaces this placeholder with the weekly leaderboards. */}
-          <section aria-labelledby="league-ranking-title" className="flex flex-col gap-3">
-            <h2 id="league-ranking-title" className="text-2xl font-extrabold tracking-tight text-ink">
-              Clasificación
-            </h2>
-            <ComingSoon>Aquí verás la clasificación semanal de tu grupo y la global.</ComingSoon>
-          </section>
+          <Leaderboard online={account.online} />
 
           <AccountSection
             account={account}
