@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 17:53Z ☁️
-- Writer: released 17:53Z by ☁️ session_01E8RPAijcTHsJkNmB3yjqp6 → continue on 💻
+- Updated: 2026-10-02 17:57Z 💻
+- Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Needs Hernán: ANTHROPIC_API_KEY, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN for T49 (cloud env vars, or run T49 on the PC with .env.local) · decide where T49 runs
-- Next step: on the Mac: install the skill (cp -R .claude/skills/hybrid ~/.claude/skills/), then T49 with .env.local, then T50. Drain the Review and Visual checks queues.
+- Needs Hernán: OK to copy ANTHROPIC_API_KEY, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN from andrevallenails/.env.local into .env.local (all three present there; shared Upstash, keys prefixed langlern:)
+- Next step: T49 on 💻 with .env.local once the keys are in, then T50; drain the Review and Visual checks queues meanwhile.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 
 ## Shared contract (all tasks read this)
@@ -205,3 +205,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 T47 done (6b219b2); verify exit 0. T42–T48 done. T49 needs real keys (none in the cloud env) → waits for the PC or for cloud env vars; T50 after T49
 - 2026-10-02 17:50Z ☁️ adopted hybrid blocks (Now, Review queue, Visual checks queue); T49 waits for keys
 - 2026-10-02 17:53Z ☁️ handoff ☁️ → 💻; skill committed at .claude/skills/hybrid for the Mac install
+- 2026-10-02 17:57Z 💻 resume on 💻 desktop · writer taken (released by ☁️ session_01E8RPAijcTHsJkNmB3yjqp6) · hybrid skill installed in ~/.claude/skills
