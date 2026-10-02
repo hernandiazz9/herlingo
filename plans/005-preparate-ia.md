@@ -109,7 +109,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T48 — Level interview, "Sobre mí" and "Uso de IA" in Perfil
-- Status: pending
+- Status: done
 - Depends on: T45
 - Goal: In /perfil: a "Tu nivel para la IA" section that runs the AI level interview (question by question, typed answers, dictation where supported; result shown as level, strengths, weak points; repeatable) and stores the assessment; a "Sobre mí" card with editable notes; an "Uso de IA" panel (spent this month, cap, remaining, tokens, average cost per pack, today's generations, link to Anthropic billing; the owner can edit the cap). Prepárate offers the interview when no assessment exists yet (a link, never blocking).
 - Context: Shared contract; docs/coach.md; `src/lib/coach/` hooks (T45); `src/app/perfil/ProfileView.tsx` (settings and confirm-dialog style); CLAUDE.md UI conventions.
@@ -118,7 +118,7 @@ Worktree setup: npm ci
   - In fake mode: the interview runs to the end and the assessment appears in /perfil and in the learner context sent with the next pack request (check the request body in the dev tools or a log); "Sobre mí" persists after a reload; the usage panel shows the fake numbers, and the cap editor appears only for the owner code.
   - Checked by hand in both themes at 375 px (describe what was checked in DECISIONS).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Integrated as 4e366e1. /preparar/nivel/ (LevelInterview), /perfil sections (CoachSections: interview result + link, AboutMeCard, AiUsagePanel with owner-only cap editor and billing link). Headless Playwright at 375 px in fake mode: 35/35 main flow, 12/12 error states; assessment and "Sobre mí" present in the next pack request body; Sobre mí survives reload; usage numbers match GET usage; cap editor only for dev-owner. At integration the orchestrator wired T46's LevelHint to LEVEL_INTERVIEW_HREF (copy "Haz la entrevista de nivel", hidden until hydrated) and dropped T48's unused LevelTestPrompt. verify exit 0.
 
 ## T49 — Real end-to-end check and setup docs
 - Status: pending
@@ -150,6 +150,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - T49 (real end-to-end with keys), unless the keys are set as cloud environment variables first.
 - Pending reviews: T42, T43, T44, T45, T46, T47, T48 (remove each one here once it has been reviewed).
 - Visual checks pending (both themes, 375 px, iPhone): T46 code card, situation form, generating card, pack view, Ajustar card (screenshots only); delete confirmation sheet on iPhone (safe area); every message box in dark; red "Se ha agotado el presupuesto" line; Jugar entry card in light; dictation button with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode first); header-only moment while loading.
+- Visual checks pending: T48 interview intro/question/waiting/error/result screens, the three /perfil coach sections, owner cap editor, LevelHint inside Prepárate (wired at integration, not seen yet), dictation with a real mic, question audio with real voice.
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -164,6 +165,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 orchestrator: integrating T45 failed with "unrelated histories" because .git/shallow listed the branch HEAD (35d6b49) as a shallow boundary; removed that entry (backup in the session scratchpad) and the squash merge went through. Agents must never run shallow fetches in the main checkout. (orchestrator)
 - 2026-10-02 T43: effort low for packs too (60 s function limit; T49 may raise it in generators.ts); 50 s deadline for the whole call incl. retries (a cut-off call is not in the ledger; the Anthropic console spend limit covers it); billing per attempt when a fallback model answers (recordCall takes a list of charges); claude-sonnet-5 added to the price table (fallback model); betaZodOutputFormat kept, our zod check enforces lengths/enums → 502; final interview step uses the Assessment schema; prompts language-agnostic, learner text quoted as data; neutral Spanish examples; failed pack attempts still count in packs/avgPackUsd. No API key in the cloud env: real check moved to T49. (T43)
 - 2026-10-02 T46: an open pack is /preparar/?pack=<id> (client navigation, works offline, back button); Mis situaciones visible without a code, the code card replaces the form (and the Ajustar card on a pack); after a 429 the action stays disabled until reload, a 502 leaves Preparar enabled; chips are generic Spanish situations; dictation in es-ES; Next's experimental useOffline not used. (T46)
+- 2026-10-02 T48: interview at /preparar/nivel/ (lights Jugar even from Perfil, via the NESTED prefix); UI says "entrevista de nivel" to avoid clashing with Perfil's placement "Prueba de nivel"; comprehension questions hide the target text behind "Ver el texto"; no autoplay (iOS gesture rule); dictation language follows the expected answer; billing link owner-only; "Cambiar de código" in the usage panel; AiUsagePanel keeps its own inline code form (could reuse T46's AccessCard later). (T48)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
@@ -179,3 +181,4 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T45 done (b31148c); verify exit 0; T43 running; launching T46 and, after it, T47/T48
 - 2026-10-02 T43 done (a69de29); verify exit 0; T46 running; launching T48
 - 2026-10-02 T46 done (473bd35); verify exit 0; T48 running; launching T47
+- 2026-10-02 T48 done (4e366e1); verify exit 0; T47 running
