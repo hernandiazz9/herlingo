@@ -46,7 +46,7 @@ Worktree setup: npm ci
 - Outcome: Integrated as 0813a9d. All endpoints in api/coach/ (pack, interview, tts, usage) with api/_lib/ (model, schema, price table, ledger with Upstash + in-memory fallback, access codes, limits, fake mode). `npm run dev:coach` (next dev + /api on :3000) and `npm run start:coach` (out/ + /api on :4173). Every Done-when checked with curl in fake mode (200/401/429/403, usage reflects calls); verify exit 0. Endpoint URLs end in a slash. Dev codes without env: dev-owner (owner "hernan"), dev-guest. HMR websocket through the dev proxy not checked by hand.
 
 ## T43 — Claude generation: pack, refinement and level interview
-- Status: pending
+- Status: done
 - Depends on: T42
 - Goal: Replace the fake generators with real Claude calls: the pack prompt (guide, key phrases, role-play dialogue, adapted to the learner context and register), refinement with one instruction (max 3 per pack), and the adaptive level interview (about 8 questions mixing comprehension, "how would you answer" and personal questions about the trip, then a final assessment).
 - Context: Shared contract; docs/coach.md (T42); `claude-api` skill (Sonnet 5.5, structured outputs, prompt caching, refusal handling, fallbacks); docs/content-guide.md (quality rules for phrases and dialogues: natural spoken register, Spain Spanish translations, verdicts and feedback style); a few `content/it/dialogues/*.json` as style examples; `getPack()` metadata for language/region.
@@ -56,7 +56,7 @@ Worktree setup: npm ci
   - With a real key (if `.env.local` has one in this environment): one real pack, one refinement and one full interview validate against the schemas, each call is recorded in the ledger with its cost, and the measured cost per pack is written in docs/coach.md. If no key is available here, say so in DECISIONS and leave the real check to T49.
   - Refusal, max_tokens and invalid JSON return a clean 502 with a Spanish message, never a crash; no partial pack is stored.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Integrated as a69de29 (docs/coach.md conflict with T45 resolved by hand). Real prompts in api/_lib/prompts.ts; claude.ts/generators.ts call claude-sonnet-5-5 with structured outputs, cached system block, low effort, fallbacks "default". Fake mode unchanged (same fixtures and ledger numbers). Against a local mock of the Anthropic API (51 checks): refusal, max_tokens, invalid JSON, schema mismatch, 429/400 → 502 with Spanish messages, no pack returned, slot refunded, ledger still records; 50 s deadline. NO real key here: real pack/refinement/interview and measured cost are left to T49 (estimate in docs: ~$0.02–0.04 per pack, ~$0.03–0.05 per interview). verify exit 0.
 
 ## T44 — Neural TTS endpoint (edge-tts)
 - Status: done
@@ -161,6 +161,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T44: msedge-tts (MIT, active, streams audio, reports cut-off streams) over node-edge-tts (file-only, hangs on timeouts) and copyleft ports; ~1.5 MB bundled. One WebSocket per request, 10 s × 2 attempts, empty audio = failure → 503 and the client falls back to device voice. Fake mode keeps the silent mp3, so hearing the real voice locally needs ANTHROPIC_API_KEY set (even a placeholder); documented in docs/coach.md. TTS does not count as a generation. (T44)
 - 2026-10-02 T45: a generated line is a normal Playable with audioKey "gen:…" (T47 reuses content types); @/lib/audio does not import coach code (coach registers the TTS source on import); cache name defined once in generated.ts and copied into the SW keep list; savePack/replacePack prefetch audio in the background, replace/delete prune unused audio; API functions never save on their own; a 401 clears the stored code; refinePack refuses a 4th refinement client-side; 75 s timeout; non-ASCII codes rejected; Sobre mí/assessments per language; last usage stored for offline budget line. After fake-mode testing, cached silent mp3s shadow real voices on the same origin: clear site data or clearGeneratedAudio(). (T45)
 - 2026-10-02 orchestrator: integrating T45 failed with "unrelated histories" because .git/shallow listed the branch HEAD (35d6b49) as a shallow boundary; removed that entry (backup in the session scratchpad) and the squash merge went through. Agents must never run shallow fetches in the main checkout. (orchestrator)
+- 2026-10-02 T43: effort low for packs too (60 s function limit; T49 may raise it in generators.ts); 50 s deadline for the whole call incl. retries (a cut-off call is not in the ledger; the Anthropic console spend limit covers it); billing per attempt when a fallback model answers (recordCall takes a list of charges); claude-sonnet-5 added to the price table (fallback model); betaZodOutputFormat kept, our zod check enforces lengths/enums → 502; final interview step uses the Assessment schema; prompts language-agnostic, learner text quoted as data; neutral Spanish examples; failed pack attempts still count in packs/avgPackUsd. No API key in the cloud env: real check moved to T49. (T43)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
@@ -174,3 +175,4 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T42 done (0813a9d); verify exit 0; launching T44 and T45
 - 2026-10-02 T44 done (04ba4b2); verify exit 0
 - 2026-10-02 T45 done (b31148c); verify exit 0; T43 running; launching T46 and, after it, T47/T48
+- 2026-10-02 T43 done (a69de29); verify exit 0; T46 running; launching T48
