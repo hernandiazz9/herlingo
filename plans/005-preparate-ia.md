@@ -192,7 +192,7 @@ Worktree setup: npm ci
 - Outcome: 7 s speech deadline + 8 s per-line cap then device voice; body read inside timeout; per-pack prefetch AbortController, prune after settle; prefetch only on successful save; code-save failure surfaced · c3c915e · verify ✓ 💻 · not checked: slow-3G hand check
 
 ## T54 — Fix: leaving during a generation throws away a paid result; draft lost on 401; focus; links
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a7f117a2bfae5aa17 · since 18:29Z)
 - Depends on: T49, T53
 - Where: any
 - Goal: A generation the user already paid for is never silently discarded, and the Prepárate screens behave well with keyboard and screen readers.
@@ -274,3 +274,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:25Z 💻 T51 launched · attempt 1 · agent aee7c561233822a21
 - 2026-10-02 18:25Z 💻 T53 launched · attempt 1 · agent ae3e9216378bad2c9
 - 2026-10-02 18:29Z 💻 T53 done · worktree-agent-ae3e9216378bad2c9 → c3c915e · verify ✓
+- 2026-10-02 18:29Z 💻 T54 launched · attempt 1 · agent a7f117a2bfae5aa17
