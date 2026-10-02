@@ -6,7 +6,7 @@
 /** Sections with their own button in the tab bar, in bar order. */
 export type TabId = "path" | "stories" | "play" | "phrasebook" | "profile";
 /** Every section with a heading: the tabs plus the ones reached from another tab's page. */
-export type SectionId = TabId | "review" | "dialogues" | "prepare";
+export type SectionId = TabId | "review" | "dialogues" | "prepare" | "league";
 
 export interface Section {
   id: SectionId;
@@ -37,6 +37,7 @@ const NESTED: readonly (Section & { parent: TabId })[] = [
   { id: "review", href: "/repaso/", label: "Repaso", title: "Repaso", parent: "path" },
   { id: "dialogues", href: "/dialogos/", label: "Diálogos", title: "Diálogos", parent: "path" },
   { id: "prepare", href: "/preparar/", label: "Prepárate", title: "Prepárate", parent: "play" },
+  { id: "league", href: "/liga/", label: "Liga", title: "Liga", parent: "profile" },
 ];
 
 export function getTab(id: SectionId): Section {
@@ -58,7 +59,7 @@ function owns(href: string, path: string): boolean {
 
 /**
  * The tab that owns a pathname: exact match for "/", prefix match for the rest.
- * Nested sections (Repaso, Diálogos, Prepárate) light up their parent tab.
+ * Nested sections (Repaso, Diálogos, Prepárate, Liga) light up their parent tab.
  */
 export function activeTabFor(pathname: string): Tab | undefined {
   const path = normalizePath(pathname);

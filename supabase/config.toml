@@ -1,0 +1,20 @@
+# Supabase CLI settings (only the parts lang_lern relies on; the CLI fills in the rest).
+# Used by `npx supabase link` / `npx supabase db push` (docs/league.md) and by a local
+# `npx supabase start` if you ever want one. The real project's Auth settings are set in the
+# dashboard; the values below mirror them.
+project_id = "lang_lern"
+
+[api]
+# `league` (the Liga tables) is deliberately NOT exposed: clients only call public.league_* RPCs.
+schemas = ["public", "graphql_public"]
+
+[db]
+major_version = 17
+
+[auth]
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/liga/", "http://localhost:4173/liga/"]
+enable_anonymous_sign_ins = true
+
+[auth.email]
+enable_signup = true

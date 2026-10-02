@@ -1,0 +1,4 @@
+# Supabase CLI local state (created by `npx supabase link`).
+.branches
+.temp
+.env

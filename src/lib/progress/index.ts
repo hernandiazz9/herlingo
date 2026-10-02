@@ -147,6 +147,44 @@ export function subscribeProgress(onChange: () => void): () => void {
 }
 
 // ---------------------------------------------------------------------------------------------
+// XP awards (the one place where awards are reported; Liga queues them, docs/league.md → Sync)
+
+const XP_EVENT = "lang-lern:xp-award";
+
+/** What earned XP. Liga sends it as the event `source` (`^[a-z][a-z_-]{0,19}$`). */
+export type XpSource = "lesson" | "review" | "game" | "story" | "activity";
+
+/** One XP award, reported after the progress holding it has been saved. */
+export interface XpAward {
+  lang: string;
+  /** XP added (> 0). */
+  amount: number;
+  source: XpSource;
+  /** Epoch ms when it was earned. */
+  earnedAt: number;
+}
+
+function reportXp(award: XpAward): void {
+  if (award.amount <= 0 || typeof window === "undefined") return;
+  window.dispatchEvent(new CustomEvent<XpAward>(XP_EVENT, { detail: award }));
+}
+
+/** Calls `onAward` after every XP award saved in this tab. Returns the unsubscribe. */
+export function subscribeXpAwards(onAward: (award: XpAward) => void): () => void {
+  const listener = (e: Event) => {
+    const award = (e as CustomEvent<XpAward>).detail;
+    if (!award) return;
+    try {
+      onAward(award);
+    } catch {
+      // A listener must never break saving progress.
+    }
+  };
+  window.addEventListener(XP_EVENT, listener);
+  return () => window.removeEventListener(XP_EVENT, listener);
+}
+
+// ---------------------------------------------------------------------------------------------
 // Derived values
 
 /** Current streak: 0 once a whole day has passed without practice. */
@@ -201,14 +239,26 @@ function applyResult(p: Progress, result: LessonResult, pack: Pack, now: number)
   }
 }
 
+/**
+ * Every XP award goes through here: saves the result (plus `extra` changes) and then reports the
+ * award (`subscribeXpAwards`).
+ */
+function saveResult(result: LessonResult, source: XpSource, now: number, extra?: (p: Progress, pack: Pack) => void): Progress {
+  const pack = getPack(result.lang);
+  const p = update(result.lang, (p) => {
+    applyResult(p, result, pack, now);
+    extra?.(p, pack);
+  });
+  reportXp({ lang: result.lang, amount: Math.max(0, Math.round(result.xp)), source, earnedAt: now });
+  return p;
+}
+
 /** A lesson played to the end: done, XP, streak, SRS (practised items + the rest as new). */
 export function recordLessonResult(result: LessonResult): Progress {
-  const pack = getPack(result.lang);
   const now = result.finishedAt || Date.now();
-  return update(result.lang, (p) => {
+  return saveResult(result, "lesson", now, (p, pack) => {
     const prev = p.lessons[result.lessonId];
     p.lessons[result.lessonId] = { doneAt: prev?.doneAt || now, plays: (prev?.plays ?? 0) + 1 };
-    applyResult(p, result, pack, now);
     const lesson = getLesson(result.lessonId, pack);
     if (!lesson) return;
     for (const item of getLessonItems(lesson, pack)) {
@@ -217,10 +267,9 @@ export function recordLessonResult(result: LessonResult): Progress {
   });
 }
 
-/** A review session played to the end: XP, streak and SRS only. */
-export function recordReviewResult(result: LessonResult): Progress {
-  const pack = getPack(result.lang);
-  return update(result.lang, (p) => applyResult(p, result, pack, result.finishedAt || Date.now()));
+/** A review session played to the end (or practice outside lessons, `source`): XP, streak and SRS only. */
+export function recordReviewResult(result: LessonResult, source: XpSource = "review"): Progress {
+  return saveResult(result, source, result.finishedAt || Date.now());
 }
 
 /**

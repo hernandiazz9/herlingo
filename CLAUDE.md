@@ -21,6 +21,10 @@ Sicily. **Read `docs/brief.md` before any task**: it holds every product decisio
 | `npm run audio` | Neural mp3 (edge-tts, needs internet; creates `.venv` from `scripts/audio/requirements.txt` on first run) for every playable → `public/audio/<lang>/<hash>.mp3` + `manifest.json`; only new/changed lines, prunes unused files. Run after content changes and commit `public/audio/`. `npm run content:check -- --strict-audio` fails if any playable lacks an mp3. |
 | `npm run images` | Writes every referenced picture (vocab `image`, dialogue `avatars`: `fluent:<icon>` from the `@iconify-json/fluent-emoji-flat` devDependency, `custom:<slug>` from `assets/images/custom/`) minified to `public/images/{fluent,custom}/`; prunes unused files, flags near-black ones for the dark backdrop, skips custom drawings not drawn yet. Run after image changes and commit `public/images/`. `npm run content:check -- --strict-images` fails if any is missing or stale. |
 | `npm run pwa:icons` | Redraws `public/icons/*.png` (same design as `src/app/icon.svg`). Only if the icon changes. |
+| `npm run db:check` | Liga SQL check on the local Postgres (`psql` on the default socket): throwaway database ← `scripts/db/auth-stub.sql` + every `supabase/migrations/*.sql` + `scripts/db/smoke.sql`, then dropped. Exit 1 on any failure. Not part of `verify`; run it after any SQL change. |
+| `npm run league:local` | Local fake Supabase on http://localhost:54321 (database `lang_lern_league_local`, `-- --reset` to recreate); prints the two env values for `.env.local`. Magic links are printed, never emailed. docs/league.md, "Try it locally". |
+| `npm run league:seed` | 15 fake players with XP this week and last week + group code `PRUEBA` in the local fake Supabase (`-- --reset` to reseed). |
+| `npm run league:local:check` | HTTP check of the local fake Supabase with two throwaway users (sign-up → profile → XP → groups → rankings → email link → delete). Exit 1 on failure. |
 | `npm run verify` | lint → content:check → typecheck → build. Must exit 0 before a task is done. |
 
 **There are no automated tests in the MVP** (speed over tests). Verification is `npm run verify`;
@@ -47,6 +51,8 @@ src/lib/progress/      On-device progress (`lang-lern:progress:<lang>`, versione
                        path model; hooks in use-progress.ts. src/lib/srs/ = Leitner spaced repetition.
 src/lib/backup/        Perfil "Copia de seguridad": export/import every `lang-lern:*` key (except the coach access code)
                        as a JSON file; validates before writing, rolls back on a failed write.
+src/lib/league/        Liga (docs/league.md): config.ts (`leagueEnabled()`), client.ts (lazy supabase-js, `leagueRpc`),
+                       account.ts (cached account, actions, change event), use-league-account.ts. Route /liga/ (under Perfil).
 content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`). Only `it` exists.
                        Format, ids, order ranges and quality rules: docs/content-guide.md.
                        Code never hard-codes content.
@@ -71,9 +77,9 @@ plans/                 Orchestrator plans. Never edit.
 - **Language-agnostic code.** Nothing in `src/` is specific to Italian: all learning content lives
   under `content/<lang>/`. Adding a language means adding content, not changing code.
 - **Static export only.** No server runtime, API routes, `cookies()`/`headers()`, or runtime env
-  secrets. Progress lives on the device (localStorage). **One exception:** Prepárate's Vercel
-  functions in `api/` (secrets, access codes, limits, cost ledger; docs/coach.md). The app itself
-  stays `output: "export"`; `src/` reaches them only over `fetch("/api/coach/…/")` and never imports
+  secrets. Progress lives on the device (localStorage). **Two exceptions:** Prepárate's Vercel
+  functions in `api/` (secrets, access codes, limits, cost ledger; docs/coach.md) and Liga (Supabase,
+  below). The app itself stays `output: "export"`; `src/` reaches them only over `fetch("/api/coach/…/")` and never imports
   `api/`, `@anthropic-ai/sdk`, `@upstash/redis` or runtime zod (ESLint enforces it).
 - **Never lose the learner's on-device data.** Hernán uses the deployed app daily while we build;
   until accounts exist, localStorage (`lang-lern:*` keys) and the coach Cache Storage are the only
@@ -83,6 +89,10 @@ plans/                 Orchestrator plans. Never edit.
   anything but its own precache. Only explicit user actions ("Borrar progreso", deleting a pack)
   remove data. Never tell Hernán to "clear site data" on the production origin; to reset fake
   audio use `clearGeneratedAudio()`.
+- **Liga (Supabase)** is the other cloud feature: the client only calls the `public.league_*` RPCs
+  (contract, caps and setup in `docs/league.md`); tables live in the private `league` schema with
+  RLS and no grants. SQL changes = a new file in `supabase/migrations/` + `npm run db:check`;
+  never edit an applied migration and never touch the real project (Hernán runs `db push`).
 - **Design tokens** are CSS variables in `src/app/globals.css` (`--lemon`, `--sea`, `--terracotta`,
   neutrals, `--success`, `--error`, each with `-deep`/`-soft`/`-ledge` variants, plus `--on-accent`,
   `--on-lemon`, `--shadow`) exposed to Tailwind as `bg-sea`, `text-ink`, `border-line`,
