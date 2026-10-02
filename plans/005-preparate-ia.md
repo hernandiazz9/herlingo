@@ -143,6 +143,13 @@ Worktree setup: npm ci
   - /preparar/, /jugar/ and /perfil/ checked by hand in fake mode after the merge.
 - Outcome:
 
+## Deferred to the PC (token-heavy work, Hernán 2026-10-02)
+The cloud session implements each task and integrates it only if `npm run verify` passes. Token-heavy work is left for Hernán's Mac (orchestrator skill, `.env.local` with the keys):
+- Code review (`/code-review`) of each integrated task, T42–T48, plus a final review of the whole batch before T50.
+- Hand UI checks in both themes at 375 px (T46, T47, T48), if the cloud agents only checked them partially; each task's Outcome says what was checked.
+- T49 (real end-to-end with keys), unless the keys are set as cloud environment variables first.
+- Pending reviews: T42, T43, T44, T45, T46, T47, T48 (remove each one here once it has been reviewed).
+
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
 - 2026-10-02 plan: Hernán asked to reuse the andrevallenails `.env` keys. Only `ANTHROPIC_API_KEY`, `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` would be needed (never the other secrets in that file). Reusing that Upstash database instead of a new one is fine because every key is prefixed `langlern:`; to be confirmed by Hernán when the keys are set up. Nothing has been copied yet. (orchestrator)
@@ -155,4 +162,5 @@ Worktree setup: npm ci
 
 ## Log
 - 2026-10-02 plan written from the interview; not approved yet
+- 2026-10-02 Hernán: code reviews and other token-heavy checks are deferred to the PC (section "Deferred to the PC")
 - 2026-10-02 approved by Hernán; base branch is the cloud session branch claude/game-ai-chat-claude-1907dd-pmtpbd
