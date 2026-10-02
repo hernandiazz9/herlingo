@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 18:32Z 💻
+- Updated: 2026-10-02 18:35Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
 - Next step: integrate T52/T54 as they finish, then T55; T50 after plan 004 lands in main; visual queue by hand.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
-- Needs Hernán: T50: run now as a no-op, or wait until plan 004 (Liga) lands in main (default: wait)
+- Needs Hernán: COACH_ACCESS_CODES (+ COACH_OWNER) in .env.local for npm run dev:coach with real keys (else COACH_FAKE=1); same names needed in Vercel
 
 ## Shared contract (all tasks read this)
 
@@ -167,7 +167,7 @@ Worktree setup: npm ci
 - Outcome: per-code daily interview step counter (limit×11); refunds only when nothing billed; server-issued pack ids per code, refinements counted server-side (409 unknown_pack); TTS daily counter 500 (COACH_TTS_DAILY_LIMIT); docs limits table + overshoot note · 62ba623 · verify ✓ 💻 · not checked: refund after a real billed failure, UI for new refusals
 
 ## T52 — Fix: generated-pack validation, prompt quoting, dev server exposure, price row
-- Status: running (attempt 1 · 💻 · agent ab45752e37f116e3a · since 18:30Z)
+- Status: done
 - Depends on: T49
 - Where: any
 - Goal: Malformed model output is rejected, all client-sent interview text is quoted as data, the dev server can't spend real money for anyone on the LAN, and the price table is right.
@@ -176,7 +176,7 @@ Worktree setup: npm ci
 - Done when:
   - (1)–(4) done; fake fixtures still pass the stricter schema.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: generated pack must alternate turns and have exactly one correct option per learner turn (→502); interview q.prompt/q.text quoted; dev:coach dev codes only in fake mode, refuses real key without COACH_ACCESS_CODES, binds 127.0.0.1 (COACH_LAN=1 for LAN); prices checked against the official page, all rows correct (Opus 5.5 cache read 0.05× is the documented exception) · 1c18474 · verify ✓ 💻 · not checked: hot reload via proxy in a browser
 
 ## T53 — Fix: generated audio fetch can hang; stray prefetches; silent code-save failure
 - Status: done
@@ -230,6 +230,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [x] T49 @5c03681 — code review (prompt fix + docs) (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
 - [ ] T53 @c3c915e — code review (queued 2026-10-02 💻)
 - [ ] T51 @62ba623 — code review (queued 2026-10-02 💻)
+- [ ] T52 @1c18474 — code review (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (after fake mode on the same origin run clearGeneratedAudio(); never clear site data: it wipes progress); header-only moment while loading (queued 2026-10-02 ☁️)
@@ -292,3 +293,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:29Z 💻 T54 launched · attempt 1 · agent a7f117a2bfae5aa17
 - 2026-10-02 18:30Z 💻 T51 done · worktree-agent-aee7c561233822a21 → 62ba623 · verify ✓
 - 2026-10-02 18:30Z 💻 T52 launched · attempt 1 · agent ab45752e37f116e3a
+- 2026-10-02 18:35Z 💻 T52 done · worktree-agent-ab45752e37f116e3a → 1c18474 · verify ✓
