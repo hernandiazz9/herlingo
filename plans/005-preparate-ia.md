@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 17:58Z 💻
+- Updated: 2026-10-02 18:05Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Next step: integrate T49 when it finishes, then T50; drain the Review and Visual checks queues.
+- Next step: T50 (merge main into this branch, fake-mode hand check), then drain the Review and Visual checks queues.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 
 ## Shared contract (all tasks read this)
@@ -128,7 +128,7 @@ Worktree setup: npm ci
 - Outcome: Integrated as 4e366e1. /preparar/nivel/ (LevelInterview), /perfil sections (CoachSections: interview result + link, AboutMeCard, AiUsagePanel with owner-only cap editor and billing link). Headless Playwright at 375 px in fake mode: 35/35 main flow, 12/12 error states; assessment and "Sobre mí" present in the next pack request body; Sobre mí survives reload; usage numbers match GET usage; cap editor only for dev-owner. At integration the orchestrator wired T46's LevelHint to LEVEL_INTERVIEW_HREF (copy "Haz la entrevista de nivel", hidden until hydrated) and dropped T48's unused LevelTestPrompt. verify exit 0.
 
 ## T49 — Real end-to-end check and setup docs
-- Status: running (attempt 1 · 💻 · agent ac06e17fe757188a3 · since 17:58Z)
+- Status: done
 - Depends on: T43, T44, T46, T47, T48
 - Where: pc (real keys), or the cloud once the env vars are set
 - Needs: ANTHROPIC_API_KEY, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN
@@ -139,7 +139,7 @@ Worktree setup: npm ci
   - With real keys: one pack + one refinement + 3 audio lines + one interview succeed; the ledger total matches the sum of the calls' costs within rounding; at most ~10 real API calls in total.
   - If keys or network are unavailable in this environment, report exactly what was not verified and stop (status blocked) instead of guessing.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Real flow green: 2 packs (1 rejected → prompt fix 7/9 turns), 1 refinement, 3 TTS, interview to assessment; ledger 0.107971 USD = sum of calls, persisted in Upstash; costs in docs/coach.md (pack ~0.030, refinement ~0.027, interview ~0.02–0.03 USD) · 5c03681 · verify ✓ 💻 · not checked: voice quality by ear, usage panel in browser
 
 ## T50 — Bring main into the Prepárate branch
 - Status: pending
@@ -163,11 +163,13 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [ ] T46 @473bd35 — code review (queued 2026-10-02 ☁️)
 - [ ] T47 @6b219b2 — code review (queued 2026-10-02 ☁️)
 - [ ] T48 @4e366e1 — code review (queued 2026-10-02 ☁️)
+- [ ] T49 @5c03681 — code review (prompt fix + docs) (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode); header-only moment while loading (queued 2026-10-02 ☁️)
 - [ ] T47 @6b219b2 — "Practicar el diálogo" card enabled/disabled; practice header, back link, intro card; summary +XP line and "ya has ganado" note; "Repetir | Volver" side by side; a static dialogue in dark; real mic and voice (queued 2026-10-02 ☁️)
 - [ ] T48 @4e366e1 — interview intro/question/waiting/error/result screens; the three /perfil coach sections; owner cap editor; LevelHint inside Prepárate (wired at integration, not seen); dictation with a real mic; question audio with real voice (queued 2026-10-02 ☁️)
+- [ ] T49 @5c03681 — real neural voices by ear in a generated pack; Uso de IA panel shows real Upstash spend (queued 2026-10-02 💻)
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -191,6 +193,10 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
 - 2026-10-01 plan: "Añadir al repaso": generated phrases into the Leitner SRS with their own ids.
 - 2026-10-01 plan: cultural tips and "what they'll say to you" sections in the pack; mini exercises before the dialogue.
+- 2026-10-02 T49: usage 'packs' counts billed failed attempts (documented, not changed)
+- 2026-10-02 T49: interview responses report costUsd only, no token counts like pack responses
+- 2026-10-02 T49: native voice is female (it-IT-ElsaNeural) for a male 'Camarero'; pick voice by speaker role
+- 2026-10-02 T49: local dev with real keys writes the production Upstash ledger (same 'hernan' name); consider a dev key prefix
 
 ## Log
 - 2026-10-02 plan written from the interview; not approved yet
@@ -208,3 +214,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 17:57Z 💻 resume on 💻 desktop · writer taken (released by ☁️ session_01E8RPAijcTHsJkNmB3yjqp6) · hybrid skill installed in ~/.claude/skills
 - 2026-10-02 17:57Z 💻 keys for T49 copied into .env.local on 💻 (names only checked)
 - 2026-10-02 17:58Z 💻 T49 launched · attempt 1 · agent ac06e17fe757188a3
+- 2026-10-02 18:05Z 💻 T49 done · worktree-agent-ac06e17fe757188a3 → 5c03681 · verify ✓ (main checkout needed npm ci: new deps)
