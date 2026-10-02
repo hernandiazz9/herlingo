@@ -97,7 +97,7 @@ Worktree setup: npm ci
 - Outcome: Integrated as 473bd35. /preparar/ (CoachView: AccessCard, SituationForm with chips + es-ES dictation, PackView with normal/slow audio, RefineCard 3 max, SavedPacks with ConfirmDialog, BudgetLine), Jugar EntryCard, NESTED "prepare" under Jugar. Headless Chromium at 375 px, 39 checks in dev:coach and again in the built export (start:coach): full flow, 3 refinements then disabled, reload keeps the pack, delete with confirm, wrong code / 429 / offline / 502 / budget messages, Jugar tab aria-current, saved pack + audio offline with the SW. Only screenshots for visuals: hand check on the PC (see Deferred to the PC). Slots: PracticeDialogue({ pack }) for T47, LevelHint (shown once LEVEL_TEST_HREF is set) for T48. verify exit 0.
 
 ## T47 — Role-play of the generated dialogue + XP
-- Status: pending
+- Status: done
 - Depends on: T46
 - Goal: Practise the pack's dialogue in the existing dialogue simulator (refactor it to accept a dialogue object, keeping `/dialogos/[id]` unchanged), with generated audio, speech recognition where available, and XP on finishing (first time per day per pack).
 - Context: Shared contract; `src/components/dialogue/DialogueSimulator.tsx` and `recognition.ts`; `src/lib/content/types.ts` (Dialogue runtime type); `src/lib/progress/activity.ts` (`recordActivity`); `src/lib/game/index.ts` (`roundXp`); `src/lib/coach/` (T45); the "Practicar el diálogo" slot from T46.
@@ -106,7 +106,7 @@ Worktree setup: npm ci
   - A static dialogue in /dialogos/ still plays as before (checked by hand).
   - A generated pack's dialogue plays with audio, options, feedback and recognition fallback; finishing awards XP once per day per pack (visible in /perfil XP).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Integrated as 6b219b2. DialogueSimulator split into a loader + DialoguePlayer (takes a Dialogue); practice page /preparar/dialogo/?pack=<id> (PackPractice); src/lib/coach/practice.ts (packDialogue adapter, awardPracticeXp once per day per pack, key lang-lern:coach:practice:<lang>). Static dialogues: old vs new simulator compared step by step with the same seed for all 13 dialogues, identical. Generated dialogue in dev:coach fake mode: 52/52 checks (audio, options, feedback, retry, recognition fallback and a mocked it-IT recognition). XP: +8 first finish, nothing on the second the same day, again the next day, per pack. Built export offline works after audio is cached. docs/coach.md does not list the practice route/key yet (T49). verify exit 0.
 
 ## T48 — Level interview, "Sobre mí" and "Uso de IA" in Perfil
 - Status: done
@@ -151,6 +151,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - Pending reviews: T42, T43, T44, T45, T46, T47, T48 (remove each one here once it has been reviewed).
 - Visual checks pending (both themes, 375 px, iPhone): T46 code card, situation form, generating card, pack view, Ajustar card (screenshots only); delete confirmation sheet on iPhone (safe area); every message box in dark; red "Se ha agotado el presupuesto" line; Jugar entry card in light; dictation button with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode first); header-only moment while loading.
 - Visual checks pending: T48 interview intro/question/waiting/error/result screens, the three /perfil coach sections, owner cap editor, LevelHint inside Prepárate (wired at integration, not seen yet), dictation with a real mic, question audio with real voice.
+- Visual checks pending: T47 "Practicar el diálogo" card (enabled/disabled), practice page header, back link and intro card, summary +XP line and "ya has ganado" note, whether "Repetir | Volver" fit side by side, a static dialogue in dark, real mic and real voice.
 
 ## Decisions
 - 2026-10-01 plan: Hernán's interview answers: Vercel function holds the secrets; guide + scripted role-play, no live chat this batch; base branch claude/game-ai-chat-claude-1907dd with main merged at the end; Sonnet 5.5; route /preparar/ "Prepárate" from Jugar; saved packs on the device; edge-tts through the function; text + dictation + example chips; pack = guide + key phrases + role-play dialogue; AI level interview + "Sobre mí"; regenerations limited; ledger like andrevallenails in a new Upstash database; limits 5 USD/month, 10/day, 3 refinements; usage in /perfil and /preparar with an owner-only cap; XP on finishing the dialogue; generated phrases to Repaso deferred; agents may make a few real calls with keys in .env.local. (Hernán)
@@ -166,6 +167,7 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T43: effort low for packs too (60 s function limit; T49 may raise it in generators.ts); 50 s deadline for the whole call incl. retries (a cut-off call is not in the ledger; the Anthropic console spend limit covers it); billing per attempt when a fallback model answers (recordCall takes a list of charges); claude-sonnet-5 added to the price table (fallback model); betaZodOutputFormat kept, our zod check enforces lengths/enums → 502; final interview step uses the Assessment schema; prompts language-agnostic, learner text quoted as data; neutral Spanish examples; failed pack attempts still count in packs/avgPackUsd. No API key in the cloud env: real check moved to T49. (T43)
 - 2026-10-02 T46: an open pack is /preparar/?pack=<id> (client navigation, works offline, back button); Mis situaciones visible without a code, the code card replaces the form (and the Ajustar card on a pack); after a 429 the action stays disabled until reload, a 502 leaves Preparar enabled; chips are generic Spanish situations; dictation in es-ES; Next's experimental useOffline not used. (T46)
 - 2026-10-02 T48: interview at /preparar/nivel/ (lights Jugar even from Perfil, via the NESTED prefix); UI says "entrevista de nivel" to avoid clashing with Perfil's placement "Prueba de nivel"; comprehension questions hide the target text behind "Ver el texto"; no autoplay (iOS gesture rule); dictation language follows the expected answer; billing link owner-only; "Cambiar de código" in the usage panel; AiUsagePanel keeps its own inline code form (could reuse T46's AccessCard later). (T48)
+- 2026-10-02 T47: practice on its own static page /preparar/dialogo/?pack=<id> (no clash with the pack view or T46's files); a pack that could not be saved shows the practice button disabled; back returns via history when it came from the pack view; XP = 5 + first answers that are not wrong (matches "Has acertado X de N"), marker keeps only today's ids; the player takes the language name from the pack instead of a hard-coded "Italiano". (T47)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
@@ -182,3 +184,4 @@ The cloud session implements each task and integrates it only if `npm run verify
 - 2026-10-02 T43 done (a69de29); verify exit 0; T46 running; launching T48
 - 2026-10-02 T46 done (473bd35); verify exit 0; T48 running; launching T47
 - 2026-10-02 T48 done (4e366e1); verify exit 0; T47 running
+- 2026-10-02 T47 done (6b219b2); verify exit 0. T42–T48 done. T49 needs real keys (none in the cloud env) → waits for the PC or for cloud env vars; T50 after T49
