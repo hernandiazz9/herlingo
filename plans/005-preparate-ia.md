@@ -11,7 +11,6 @@ Worktree setup: npm ci
 - Updated: 2026-10-02 17:57Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
-- Needs Hernán: OK to copy ANTHROPIC_API_KEY, UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN from andrevallenails/.env.local into .env.local (all three present there; shared Upstash, keys prefixed langlern:)
 - Next step: T49 on 💻 with .env.local once the keys are in, then T50; drain the Review and Visual checks queues meanwhile.
 - Gotchas: .git/shallow once listed the branch HEAD and broke merges ("unrelated histories"); never shallow-fetch in the main checkout.
 
@@ -186,6 +185,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 T48: interview at /preparar/nivel/ (lights Jugar even from Perfil, via the NESTED prefix); UI says "entrevista de nivel" to avoid clashing with Perfil's placement "Prueba de nivel"; comprehension questions hide the target text behind "Ver el texto"; no autoplay (iOS gesture rule); dictation language follows the expected answer; billing link owner-only; "Cambiar de código" in the usage panel; AiUsagePanel keeps its own inline code form (could reuse T46's AccessCard later). (T48)
 - 2026-10-02 T47: practice on its own static page /preparar/dialogo/?pack=<id> (no clash with the pack view or T46's files); a pack that could not be saved shows the practice button disabled; back returns via history when it came from the pack view; XP = 5 + first answers that are not wrong (matches "Has acertado X de N"), marker keeps only today's ids; the player takes the language name from the pack instead of a hard-coded "Italiano". (T47)
 - 2026-10-02 plan: hybrid push policy: the cloud pushes its session branch after every integrated task; never main, no PR or deploy without OK. (Hernán)
+- 2026-10-02 plan: reuse the andrevallenails ANTHROPIC_API_KEY and Upstash database (only these three names copied into .env.local on the Mac; keys prefixed langlern:). (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-01 plan: live free chat with Claude playing the Italian side, with short corrections and a "¿Qué digo?" hint (prompt caching of the pack, ~20-turn cap).
@@ -206,3 +206,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 17:50Z ☁️ adopted hybrid blocks (Now, Review queue, Visual checks queue); T49 waits for keys
 - 2026-10-02 17:53Z ☁️ handoff ☁️ → 💻; skill committed at .claude/skills/hybrid for the Mac install
 - 2026-10-02 17:57Z 💻 resume on 💻 desktop · writer taken (released by ☁️ session_01E8RPAijcTHsJkNmB3yjqp6) · hybrid skill installed in ~/.claude/skills
+- 2026-10-02 17:57Z 💻 keys for T49 copied into .env.local on 💻 (names only checked)
