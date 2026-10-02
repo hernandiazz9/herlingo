@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 18:29Z 💻
+- Updated: 2026-10-02 18:30Z 💻
 - Writer: 💻 desktop · since 17:57Z
 - Branch: claude/game-ai-chat-claude-1907dd-pmtpbd · pushed
 - Next step: run T51+T53, then T52+T54 (≤2 agents); T50 after plan 004 lands in main; visual queue by hand.
@@ -154,7 +154,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T51 — Fix: server-side limits can be bypassed or refunded after billing
-- Status: running (attempt 1 · 💻 · agent aee7c561233822a21 · since 18:25Z)
+- Status: done
 - Depends on: T49
 - Where: any
 - Goal: Every billed Claude call counts against the limits the server enforces, independent of what the client sends.
@@ -164,7 +164,7 @@ Worktree setup: npm ci
   - Each of (1)–(4) is enforced on the server and works in fake mode (in-memory ledger); 429 messages in Spain Spanish like the existing ones.
   - docs/coach.md describes the limits, refunds and the overshoot note.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: per-code daily interview step counter (limit×11); refunds only when nothing billed; server-issued pack ids per code, refinements counted server-side (409 unknown_pack); TTS daily counter 500 (COACH_TTS_DAILY_LIMIT); docs limits table + overshoot note · 62ba623 · verify ✓ 💻 · not checked: refund after a real billed failure, UI for new refusals
 
 ## T52 — Fix: generated-pack validation, prompt quoting, dev server exposure, price row
 - Status: pending
@@ -204,6 +204,18 @@ Worktree setup: npm ci
   - Hand check (PC): start a generation, open a saved pack, come back: the new pack appears in Mis situaciones; keyboard-only delete dialog.
 - Outcome:
 
+## T55 — Fix: client handling of the new T51 refusals (unknown_pack, tts_limit)
+- Status: pending
+- Depends on: T51, T54
+- Where: any
+- Goal: The app reacts sensibly to the server refusals added in T51.
+- Context: T51 outcome. `src/lib/coach/api.ts` maps 409 `unknown_pack` to a generic "other" error, so the pack view shows the message but leaves "Ajustar" enabled; `tts_limit` (429) should fall back to the device voice silently, without retries for that line during the session. Packs created before T51 (or before a local in-memory restart) can no longer be refined: the Ajustar card should explain it ("Esta situación ya no se puede ajustar; crea una nueva") and disable itself.
+- Scope: may touch `src/lib/coach/**`, `src/lib/audio/generated.ts`, `src/components/coach/**` / must not touch `plans/`, `api/**`, `content/**`, `docs/brief.md`.
+- Done when:
+  - unknown_pack disables Ajustar with that copy; tts_limit falls back to device voice; Spain Spanish "tú"; tokens only.
+  - `npm run verify` → exit 0.
+- Outcome:
+
 ## Deferred to the PC
 Moved to the Review queue and Visual checks queue below (hybrid skill). Token-heavy work (code reviews, visual checks, live-key checks) runs on the PC and never blocks the cloud.
 
@@ -217,6 +229,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - [x] T48 @4e366e1 — code review (queued 2026-10-02 ☁️) · reviewed 💻 2026-10-02 → T54
 - [x] T49 @5c03681 — code review (prompt fix + docs) (queued 2026-10-02 💻) · reviewed 💻 2026-10-02, no findings
 - [ ] T53 @c3c915e — code review (queued 2026-10-02 💻)
+- [ ] T51 @62ba623 — code review (queued 2026-10-02 💻)
 
 ## Visual checks queue
 - [ ] T46 @473bd35 — light + dark, 375 px, iPhone: code card, situation form, generating card, pack view, Ajustar card; delete sheet on iPhone (safe area); message boxes in dark; red budget line; Jugar entry card in light; dictation with a real mic (hidden in iOS Chrome); real neural voice (clear site data after fake mode); header-only moment while loading (queued 2026-10-02 ☁️)
@@ -251,6 +264,7 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 T49: interview responses report costUsd only, no token counts like pack responses
 - 2026-10-02 T49: native voice is female (it-IT-ElsaNeural) for a male 'Camarero'; pick voice by speaker role
 - 2026-10-02 T49: local dev with real keys writes the production Upstash ledger (same 'hernan' name); consider a dev key prefix
+- 2026-10-02 T51: packs from the T49 smoke test (and any pre-T51 pack) can no longer be refined; in-memory dev ledger forgets packs on restart
 
 ## Log
 - 2026-10-02 plan written from the interview; not approved yet
@@ -275,3 +289,4 @@ Moved to the Review queue and Visual checks queue below (hybrid skill). Token-he
 - 2026-10-02 18:25Z 💻 T53 launched · attempt 1 · agent ae3e9216378bad2c9
 - 2026-10-02 18:29Z 💻 T53 done · worktree-agent-ae3e9216378bad2c9 → c3c915e · verify ✓
 - 2026-10-02 18:29Z 💻 T54 launched · attempt 1 · agent a7f117a2bfae5aa17
+- 2026-10-02 18:30Z 💻 T51 done · worktree-agent-aee7c561233822a21 → 62ba623 · verify ✓
