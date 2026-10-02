@@ -3,7 +3,9 @@
  *
  * Prices in USD per million tokens, Claude API first-party rates.
  * Source: https://platform.claude.com/docs/en/about-claude/pricing
- * Reviewed: 2026-10-02. Cache write = 5-minute TTL (1.25 × input); cache read as listed there.
+ * Reviewed: 2026-10-02 (every row checked against that page). Cache write = 5-minute TTL
+ * (1.25 × input); cache read = "Cache hits and refreshes" column: 0.1 × input, except Opus 5.5 at
+ * 0.05 × input (a footnote there), so its 0.2 is right.
  */
 export const COACH_MODEL = "claude-sonnet-5-5";
 
@@ -19,7 +21,7 @@ export const PRICES: Record<string, ModelPrice> = {
   // Possible server-side fallback targets (`fallbacks: "default"`), so a rescued call is not undercounted.
   // Sonnet 5.5 falls back to Sonnet 5 for "cyber" and "frontier_llm" declines.
   "claude-sonnet-5": { input: 2, output: 10, cacheWrite: 2.5, cacheRead: 0.2 },
-  "claude-opus-5-5": { input: 4, output: 20, cacheWrite: 5, cacheRead: 0.2 },
+  "claude-opus-5-5": { input: 4, output: 20, cacheWrite: 5, cacheRead: 0.2 }, // cache read 0.05 × input (official)
   "claude-opus-4-8": { input: 5, output: 25, cacheWrite: 6.25, cacheRead: 0.5 },
 };
 

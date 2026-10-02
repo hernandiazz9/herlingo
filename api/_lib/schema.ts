@@ -41,6 +41,27 @@ export const GeneratedLearnerTurn = z.object({
   options: z.array(GeneratedOption).min(2).max(3),
 });
 
+type GeneratedTurn = z.infer<typeof GeneratedNativeTurn> | z.infer<typeof GeneratedLearnerTurn>;
+
+/**
+ * What the counts cannot say: speakers alternate (never two native or two learner turns in a row)
+ * and every learner turn has exactly one "correct" option (the player marks that one as the answer).
+ */
+function checkTurns(turns: GeneratedTurn[], ctx: z.RefinementCtx): void {
+  turns.forEach((turn, i) => {
+    if (i > 0 && turns[i - 1].speaker === turn.speaker) {
+      ctx.addIssue({ code: "custom", path: [i, "speaker"], message: `two ${turn.speaker} turns in a row` });
+    }
+    if (turn.speaker === "learner") {
+      const correct = turn.options.filter((o) => o.verdict === "correct").length;
+      if (correct !== 1) {
+        ctx.addIssue({ code: "custom", path: [i, "options"], message: `${correct} correct options, expected 1` });
+      }
+    }
+  });
+}
+
+/** Only the generated pack is checked: packs already on the device are not rejected on refine. */
 export const GeneratedPack = z.object({
   title: z.string().min(1).max(80),
   register: z.enum(["formal", "informal"]),
@@ -51,7 +72,11 @@ export const GeneratedPack = z.object({
     .max(12),
   dialogue: z.object({
     title: z.string().min(1).max(80),
-    turns: z.array(z.discriminatedUnion("speaker", [GeneratedNativeTurn, GeneratedLearnerTurn])).min(6).max(10),
+    turns: z
+      .array(z.discriminatedUnion("speaker", [GeneratedNativeTurn, GeneratedLearnerTurn]))
+      .min(6)
+      .max(10)
+      .superRefine(checkTurns),
   }),
 });
 export type GeneratedPack = z.infer<typeof GeneratedPack>;

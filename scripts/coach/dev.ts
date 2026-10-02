@@ -7,7 +7,9 @@
  * `/api/<path>` runs `api/<path>.ts` (the same Web-standard handler Vercel deploys); everything
  * else goes to `next dev` (proxied, HMR websocket included) or to out/. Reads `.env.local`. Fake
  * mode when `COACH_FAKE=1` or `ANTHROPIC_API_KEY` is missing; dev access codes when
- * `COACH_ACCESS_CODES` is missing.
+ * `COACH_ACCESS_CODES` is missing, in fake mode only (with a real key it refuses to start, so a
+ * known code can never spend real money). Listens on 127.0.0.1 only; `COACH_LAN=1` opens it to
+ * the local network (to try it on the phone).
  */
 import { spawn, spawnSync } from "node:child_process";
 import { existsSync } from "node:fs";
@@ -21,11 +23,23 @@ const ROOT = process.cwd();
 const STATIC = process.argv.includes("--out");
 const PORT = Number(process.env.PORT ?? (STATIC ? 4173 : 3000));
 const NEXT_PORT = Number(process.env.NEXT_PORT ?? PORT + 1);
+const LAN = process.env.COACH_LAN === "1";
+const HOST = LAN ? "0.0.0.0" : "127.0.0.1";
 
 if (existsSync(join(ROOT, ".env.local"))) process.loadEnvFile(join(ROOT, ".env.local"));
 process.env.COACH_DEV = "1";
+/** Same rule as `isFake()` in api/_lib/config.ts (COACH_DEV is set). */
+const FAKE = process.env.COACH_FAKE === "1" || !process.env.ANTHROPIC_API_KEY;
+const DEV_CODES = "hernan:dev-owner,invitado:dev-guest";
 if (!process.env.COACH_ACCESS_CODES) {
-  process.env.COACH_ACCESS_CODES = "hernan:dev-owner,invitado:dev-guest";
+  if (!FAKE) {
+    console.error(
+      "ANTHROPIC_API_KEY is set but COACH_ACCESS_CODES is not: the dev codes only work in fake mode.\n" +
+        "Add COACH_ACCESS_CODES (and COACH_OWNER) to .env.local, or set COACH_FAKE=1.",
+    );
+    process.exit(1);
+  }
+  process.env.COACH_ACCESS_CODES = DEV_CODES;
   process.env.COACH_OWNER = "hernan";
 }
 
@@ -89,7 +103,7 @@ if (STATIC && !existsSync(join(ROOT, "out"))) {
 
 if (!STATIC) {
   spawnSync("npm", ["run", "content:build"], { stdio: "inherit" });
-  const next = spawn(join(ROOT, "node_modules/.bin/next"), ["dev", "-p", String(NEXT_PORT)], { stdio: "inherit" });
+  const next = spawn(join(ROOT, "node_modules/.bin/next"), ["dev", "-p", String(NEXT_PORT), "-H", "127.0.0.1"], { stdio: "inherit" });
   const stop = () => next.kill("SIGTERM");
   process.on("SIGINT", () => (stop(), process.exit(0)));
   process.on("SIGTERM", () => (stop(), process.exit(0)));
@@ -125,10 +139,11 @@ server.on("upgrade", (req, socket, head) => {
   socket.on("error", () => upstream.destroy());
 });
 
-server.listen(PORT, () => {
-  const mode = process.env.COACH_FAKE === "1" || !process.env.ANTHROPIC_API_KEY ? "fake" : "real Claude";
+server.listen(PORT, HOST, () => {
+  const mode = FAKE ? "fake" : "real Claude";
   console.log(`Prepárate dev server at http://localhost:${PORT} (${STATIC ? "out/" : "next dev"}, /api in ${mode} mode)`);
-  if (process.env.COACH_ACCESS_CODES === "hernan:dev-owner,invitado:dev-guest") {
+  console.log(LAN ? "  also on the local network (COACH_LAN=1)" : "  this computer only (COACH_LAN=1 opens it to the LAN)");
+  if (process.env.COACH_ACCESS_CODES === DEV_CODES) {
     console.log("  dev access codes: dev-owner (owner), dev-guest");
   }
 });

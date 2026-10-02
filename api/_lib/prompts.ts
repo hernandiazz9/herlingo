@@ -123,8 +123,8 @@ export function interviewUserPrompt(meta: LanguageMeta, req: InterviewRequest, f
   const answered = req.history.length;
   const history = req.history.map(({ question: q, answer }, i) =>
     [
-      `${i + 1}. [${q.kind}] prompt: ${q.prompt}`,
-      q.text ? `   text: ${q.text}` : "",
+      `${i + 1}. [${q.kind}] prompt: ${quote(q.prompt)}`,
+      q.text ? `   text: ${quote(q.text)}` : "",
       `   answer: ${answer.trim() ? quote(answer) : "(empty)"}`,
     ]
       .filter(Boolean)

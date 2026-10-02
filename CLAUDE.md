@@ -11,7 +11,7 @@ Sicily. **Read `docs/brief.md` before any task**: it holds every product decisio
 | --- | --- |
 | `npm ci` | Setup in a fresh checkout. |
 | `npm run dev` | Dev server (http://localhost:3000). |
-| `npm run dev:coach` | Dev server plus working `/api/coach/*` (Prepárate) on http://localhost:3000. Reads `.env.local`; fake mode (canned data, no network) when `ANTHROPIC_API_KEY` is missing or `COACH_FAKE=1`; dev codes `dev-owner`/`dev-guest` when `COACH_ACCESS_CODES` is missing. Restart after editing `api/`. `npm run start:coach` = same with the built `out/` on :4173. See docs/coach.md. |
+| `npm run dev:coach` | Dev server plus working `/api/coach/*` (Prepárate) on http://localhost:3000. Reads `.env.local`; fake mode (canned data, no network) when `ANTHROPIC_API_KEY` is missing or `COACH_FAKE=1`; dev codes `dev-owner`/`dev-guest` when `COACH_ACCESS_CODES` is missing (fake mode only: with a real key it refuses to start without `COACH_ACCESS_CODES`). Listens on 127.0.0.1; `COACH_LAN=1` for the LAN. Restart after editing `api/`. `npm run start:coach` = same with the built `out/` on :4173. See docs/coach.md. |
 | `npm run lint` | ESLint (Next core-web-vitals + TypeScript rules). |
 | `npm run typecheck` | `next typegen` (route types, `LayoutProps`/`PageProps`) + `tsc --noEmit`. |
 | `npm run build` | Static export to `out/` (`output: "export"`, `trailingSlash: true`), then `postbuild` (scripts/pwa/build.ts) writes `out/manifest.webmanifest` and `out/sw.js`. |

@@ -56,7 +56,11 @@ npm run start:coach   # http://localhost:4173: built out/ (offline SW) + /api/co
   silent mp3. Fake calls are still counted in the (in-memory) ledger and limits with realistic
   token numbers, so the usage panel and the 429s can be tested.
 - With no `COACH_ACCESS_CODES` the dev server uses `dev-owner` (owner, named `hernan`) and
-  `dev-guest`.
+  `dev-guest`, in fake mode only: with a real `ANTHROPIC_API_KEY` (and no `COACH_FAKE=1`) it
+  refuses to start until `COACH_ACCESS_CODES` (and `COACH_OWNER`) are set, so a well-known code
+  can never spend real money.
+- It listens on 127.0.0.1 only (`next dev` behind it too). `COACH_LAN=1` opens it to the local
+  network, e.g. to try it on the phone (anyone on that network with a code can then use it).
 - No Upstash variables (or fake mode) → in-memory ledger, reset on restart (packs made before a
   restart can no longer be refined: 409 `unknown_pack`).
 - Changes under `api/` need a restart of the dev server (modules are loaded once).
@@ -197,6 +201,9 @@ type Pack = {
 ```
 
 Turn ids are `t1…tn`, assigned by the server. `speaker` matches the static dialogues' format.
+Beyond the counts, the server rejects a generated pack (502 `generation_failed`, "La respuesta ha
+llegado con errores") unless speakers alternate (never two native or two learner turns in a row)
+and every learner turn has exactly one `correct` option.
 
 ### Learner context (`profile`)
 
@@ -591,6 +598,7 @@ Nothing here is done by agents: the real Vercel project and its variables are He
 
 **Local dev with real keys** (`.env.local` with the Anthropic and Upstash variables, no
 `COACH_FAKE`): `npm run dev:coach` then talks to the real API and writes to the **same Upstash
-ledger as production**, so local calls count towards the real monthly cap (without `COACH_ACCESS_CODES`
-the dev codes use the owner name `hernan`, so they also share its daily count). Leave the Upstash variables out of
-`.env.local` for an in-memory ledger.
+ledger as production**, so local calls count towards the real monthly cap (and, with the same
+code names as production, towards their daily counts). Leave the Upstash variables out of
+`.env.local` for an in-memory ledger. It also needs your own `COACH_ACCESS_CODES` (and
+`COACH_OWNER`) in `.env.local`: the dev codes are refused with a real key.
