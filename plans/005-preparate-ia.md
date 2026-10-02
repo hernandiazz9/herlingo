@@ -1,8 +1,8 @@
 # Plan 005 — Prepárate: AI situation coach
 
-Status: draft (interview done 2026-10-01; awaiting Hernán's approval before anything runs)
+Status: active
 Created: 2026-10-02
-Base branch: claude/game-ai-chat-claude-1907dd
+Base branch: claude/game-ai-chat-claude-1907dd-pmtpbd
 Goal: A new "Prepárate" section, entered from Jugar, where the learner describes a real-life situation in Spanish (typed or dictated, e.g. "pedir un granizado en Catania") and Claude generates a preparation pack: a step-by-step guide, key phrases and a scripted role-play dialogue played in the existing dialogue simulator, all with neural Italian audio. Packs are saved on the device ("Mis situaciones"), so practising them again is free and works offline. A short AI level interview plus a "Sobre mí" card give Claude context about the learner. A small Vercel function holds the secrets (Anthropic key, Upstash), checks access codes, enforces spending limits and keeps a cost ledger, shown in an "Uso de IA" panel. The rest of the app stays a static export and keeps working offline; only Prepárate needs internet to generate. This batch runs on its own branch in parallel with plan 004 (Liga, other branch); the last task merges main back in. MVP speed: no automated tests; verification is `npm run verify`.
 Test command: npm run verify
 Worktree setup: npm ci
@@ -155,3 +155,4 @@ Worktree setup: npm ci
 
 ## Log
 - 2026-10-02 plan written from the interview; not approved yet
+- 2026-10-02 approved by Hernán; base branch is the cloud session branch claude/game-ai-chat-claude-1907dd-pmtpbd
