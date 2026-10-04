@@ -332,6 +332,16 @@ Verified for T34 without a real project: a static build pointed at a local mock 
 and `/rest/v1/rpc/league_me`, opened at `/liga/#access_token=…&type=magiclink`, ends `joined` with
 the mock profile and a clean URL; `#error_code=otp_expired` shows the expired-link message.
 
+Verified for T40 against the real project (2026-10-04, throwaway users `ZZ-test-*`, all deleted with
+`league_delete_me`): anonymous sign-in, `set_profile` (duplicate nickname → `nickname_taken`),
+`record_xp` (accepted, `duplicate`, `too_big`, `future`, `too_old`, `invalid`, daily cap 2500 →
+`capped`), groups (create, join by code, bad code), global and group rankings with the right weekly
+XP, `league_me`, direct table access denied, and the client outbox (`sync.ts`: queued offline,
+flushed after `online`). Known limits: the last-week podium could not be exercised (events before
+joining are rejected, so a fresh player has no last-week XP); the magic-link email is untested
+(the default SMTP only reaches team members); deleted players leave an empty anonymous auth user
+(remove it under Authentication → Users).
+
 ## Setup (Hernán, once)
 
 1. **Create the project.** <https://supabase.com/dashboard> → sign in → **New project**: name
