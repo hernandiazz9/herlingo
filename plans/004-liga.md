@@ -9,11 +9,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-02 19:33Z 💻
-- Writer: released
+- Updated: 2026-10-04 17:04Z 💻
+- Writer: 💻 session (this one)
 - Branch: plan-004-liga-t38 (from main @ 12d6ad9)
-- Next step: T40 needs Hernán's real Supabase URL + anon key; nothing else runnable
-- Needs Hernán: real Supabase project URL + anon key (Vercel env + .env.local) for T40
+- Next step: T40 running
 
 ## Shared contract (all tasks read this)
 
@@ -125,7 +124,7 @@ Worktree setup: npm ci
 - Outcome: RutaLeagueCard (cache-first, dismissible invite, key lang-lern:league-invite-dismissed) + Perfil Liga card; hidden when Liga disabled. Small layout shift if invite is hidden after the placeholder. not checked: any hand check at 375 px in both themes, joined/not-joined/dismiss/offline states.
 
 ## T40 — End-to-end check against the real Supabase project
-- Status: pending
+- Status: running (attempt 1 · 💻 agent)
 - Depends on: T39
 - Goal: Prove the whole flow on Hernán's real Supabase project (migrations already applied by him, keys in `.env.local`): join, XP sync, groups, leaderboards, magic-link linking redirect, delete; fix what breaks in the client code.
 - Context: docs/league.md; the real keys live in the main checkout's `/Users/heralc/Desktop/HDDev/lang_lern/.env.local` (read them from there if the worktree has none; never print or commit them). If the migrations are not applied or the keys are missing, stop with STATUS: blocked and say exactly what Hernán must do. Use the built-in browser (`npm run build && npm start`, or `npm run dev`) and/or a small throwaway script with the anon key; test users must be clearly named test accounts and deleted at the end via `league_delete_me`.
@@ -219,3 +218,4 @@ Worktree setup: npm ci
 - 2026-10-02 19:26Z 💻 writer taken on 💻, new work branch from main
 - 2026-10-02 19:31Z 💻 T38 done @f329004
 - 2026-10-02 19:33Z 💻 T39 done @7f21c79
+- 2026-10-04 17:04Z 💻 Supabase keys loaded in .env.local + Vercel Production (migrations up to date); T40 launched
