@@ -9,11 +9,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-04 17:05Z 💻
-- Writer: released
+- Updated: 2026-10-04 17:07Z 💻
+- Writer: released 17:07Z by 💻 → continue on ☁️
 - Branch: plan-004-liga-t38 (from main @ 12d6ad9)
-- Next step: T40 blocked on anonymous sign-ins
-- Needs Hernán: Supabase dashboard: Authentication → Sign In / Providers → enable 'Allow anonymous sign-ins' (and no CAPTCHA on sign-ups); then relaunch T40 (script in scratchpad e2e.mjs)
+- Next step: T40 real check: blocked until Hernán enables anonymous sign-ins; needs real keys (.env.local on Mac, cloud has no API-credential vars) so it likely returns to 💻; nothing else runnable
+- Needs Hernán: 1) Supabase dashboard: Authentication → Sign In / Providers → enable 'Allow anonymous sign-ins', no CAPTCHA. 2) NEXT_PUBLIC_SUPABASE_URL + NEXT_PUBLIC_SUPABASE_ANON_KEY already in .env.local and Vercel Production; Vercel needs a redeploy (his OK). 3) merge plan-004-liga-t38 into main only with his OK
 
 ## Shared contract (all tasks read this)
 
@@ -221,3 +221,4 @@ Worktree setup: npm ci
 - 2026-10-02 19:33Z 💻 T39 done @7f21c79
 - 2026-10-04 17:04Z 💻 Supabase keys loaded in .env.local + Vercel Production (migrations up to date); T40 launched
 - 2026-10-04 17:05Z 💻 T40 blocked: anonymous sign-ins disabled on real project; nothing created
+- 2026-10-04 17:07Z 💻 handoff 💻 → ☁️ · plan-004-liga-t38 @ 41f02c9
