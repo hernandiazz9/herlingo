@@ -9,11 +9,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-04 17:11Z 💻
-- Writer: 💻 session (this one)
+- Updated: 2026-10-04 17:14Z 💻
+- Writer: released
 - Branch: plan-004-liga-t38 (from main @ 12d6ad9)
-- Next step: T40 real check: blocked until Hernán enables anonymous sign-ins; needs real keys (.env.local on Mac, cloud has no API-credential vars) so it likely returns to 💻; nothing else runnable
-- Needs Hernán: 1) Supabase dashboard: Authentication → Sign In / Providers → enable 'Allow anonymous sign-ins', no CAPTCHA. 2) NEXT_PUBLIC_SUPABASE_URL + NEXT_PUBLIC_SUPABASE_ANON_KEY already in .env.local and Vercel Production; Vercel needs a redeploy (his OK). 3) merge plan-004-liga-t38 into main only with his OK
+- Next step: all tasks done. Hernán: enable by hand checks, redeploy Vercel (env vars), OK to merge plan-004-liga-t38 into main; delete leftover anonymous auth users
+- Needs Hernán: magic-link check + Supabase URL Configuration incl. /liga/; Vercel redeploy; OK to merge into main
 
 ## Shared contract (all tasks read this)
 
@@ -125,7 +125,7 @@ Worktree setup: npm ci
 - Outcome: RutaLeagueCard (cache-first, dismissible invite, key lang-lern:league-invite-dismissed) + Perfil Liga card; hidden when Liga disabled. Small layout shift if invite is hidden after the placeholder. not checked: any hand check at 375 px in both themes, joined/not-joined/dismiss/offline states.
 
 ## T40 — End-to-end check against the real Supabase project
-- Status: pending
+- Status: done
 - Depends on: T39
 - Goal: Prove the whole flow on Hernán's real Supabase project (migrations already applied by him, keys in `.env.local`): join, XP sync, groups, leaderboards, magic-link linking redirect, delete; fix what breaks in the client code.
 - Context: docs/league.md; the real keys live in the main checkout's `/Users/heralc/Desktop/HDDev/lang_lern/.env.local` (read them from there if the worktree has none; never print or commit them). If the migrations are not applied or the keys are missing, stop with STATUS: blocked and say exactly what Hernán must do. Use the built-in browser (`npm run build && npm start`, or `npm run dev`) and/or a small throwaway script with the anon key; test users must be clearly named test accounts and deleted at the end via `league_delete_me`.
@@ -134,7 +134,7 @@ Worktree setup: npm ci
   - With two test users: join, earn XP in a lesson and in a game round, see both in the global and group rankings with the right weekly XP; duplicate/cap rejection observed once; offline earn → online flush works.
   - Magic link to Hernán's email is NOT sent by the agent (outward-facing); instead the redirect handling is verified by the documented path and listed for Hernán to try by hand.
   - Test users deleted; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Real project: anon sign-in, join, nickname_taken, XP lesson+game, duplicate/cap/invalid rejections, group create/join, global+group boards, league_me, offline queue flush via sync.ts, delete (3 test users). not checked: last-week podium (empty), magic-link email (not sent), redirect URL config.
 
 ## T41 — Bring main (plan 003, pictures) into the Liga branch
 - Status: done
@@ -166,10 +166,12 @@ Worktree setup: npm ci
 ## Review queue
 - [ ] T38 @f329004 (queued 2026-10-02 💻)
 - [ ] T39 @7f21c79 (queued 2026-10-02 💻)
+- [ ] T40 @2247110 (docs only) (queued 2026-10-04 💻)
 
 ## Visual checks queue
 - [ ] T38: /liga/ leaderboard in both themes at 375 px (Grupo with group, offline banner, me outside top 50) (queued 2026-10-02 💻)
 - [ ] T39: Ruta card (joined, invite, dismissed, offline) and Perfil Liga row, both themes at 375 px; nothing Liga without env vars (queued 2026-10-02 💻)
+- [ ] T40 by hand: vincular email with own address (Supabase URL Configuration must include /liga/); on deployed app earn XP in lesson+game and check ranking; last-week podium on Monday (queued 2026-10-04 💻)
 
 ## Decisions
 - 2026-10-01 plan: runs on integration branch `claude/usuarios-competencia-puntajes-3caa9b`, in parallel with plan 003 on main; T41 merges main back (Hernán)
@@ -223,3 +225,4 @@ Worktree setup: npm ci
 - 2026-10-04 17:05Z 💻 T40 blocked: anonymous sign-ins disabled on real project; nothing created
 - 2026-10-04 17:07Z 💻 handoff 💻 → ☁️ · plan-004-liga-t38 @ 41f02c9
 - 2026-10-04 17:11Z 💻 handoff cancelled: continuing on 💻
+- 2026-10-04 17:14Z 💻 T40 done @2247110; plan 004 all tasks done
