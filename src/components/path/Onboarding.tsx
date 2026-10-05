@@ -8,6 +8,10 @@ import { speak, stop } from "@/lib/audio";
 import { DEFAULT_LANG, getLesson, getPack, type PlacementQuestion } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import { applyPlacement, completeOnboarding } from "@/lib/progress";
+import { recordActivity } from "@/lib/progress/activity";
+
+/** XP for finishing the placement test, plus one per right answer. */
+const XP_PLACEMENT = 10;
 
 type Phase = { name: "welcome" } | { name: "test"; index: number; answers: boolean[] } | { name: "result"; right: number; lessons: string[] };
 
@@ -56,7 +60,9 @@ export function Onboarding({ lang = DEFAULT_LANG, retake = false }: { lang?: str
     stop();
     const lessons = masteredLessons(questions, answers);
     applyPlacement(lang, lessons);
-    setPhase({ name: "result", right: answers.filter(Boolean).length, lessons });
+    const rightCount = answers.filter(Boolean).length;
+    recordActivity({ lang, xp: XP_PLACEMENT + rightCount, outcomes: [], source: "placement" });
+    setPhase({ name: "result", right: rightCount, lessons });
   };
 
   if (phase.name === "welcome") {
@@ -103,6 +109,7 @@ export function Onboarding({ lang = DEFAULT_LANG, retake = false }: { lang?: str
         <h1 className="text-3xl font-extrabold tracking-tight text-ink">
           {phase.right} de {questions.length} bien
         </h1>
+        <p className="text-xl font-extrabold text-success-deep">+{XP_PLACEMENT + phase.right} XP</p>
         {titles.length ? (
           <Card tone="sea" className="flex flex-col gap-2">
             <p className="text-base font-bold text-ink">

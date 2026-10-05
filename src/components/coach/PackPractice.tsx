@@ -19,7 +19,7 @@ const REGISTER: Record<CoachPack["register"], string> = { formal: "Trato de uste
 
 /**
  * /preparar/dialogo/?pack=<id>: the role-play of a saved pack in the dialogue player, with XP on
- * finishing (first time per day per pack). Uses `useSearchParams`: render inside Suspense.
+ * finishing (half on repeats of the same pack today). Uses `useSearchParams`: render inside Suspense.
  */
 export function PackPractice({ lang = DEFAULT_LANG }: { lang?: string }) {
   const hydrated = useHydrated();
@@ -50,7 +50,7 @@ export function PackPractice({ lang = DEFAULT_LANG }: { lang?: string }) {
 function Practice({ pack }: { pack: CoachPack }) {
   const router = useRouter();
   const dialogue = useMemo(() => packDialogue(pack), [pack]);
-  const [xp, setXp] = useState<number | null>(null);
+  const [xp, setXp] = useState<{ xp: number; repeat: boolean } | null>(null);
   const answers = dialogue.turns.filter((t) => t.speaker === "learner").length;
   const back = () => leavePractice(pack.id, (href) => router.replace(href));
 
@@ -75,10 +75,11 @@ function Practice({ pack }: { pack: CoachPack }) {
         exit={<Button onClick={back}>Volver</Button>}
         onFinish={({ firstTry }) => setXp(awardPracticeXp(pack, firstTry))}
         summary={
-          xp === null ? null : xp > 0 ? (
-            <p className="mt-2 text-xl font-extrabold text-success-deep">+{xp} XP</p>
-          ) : (
-            <p className="mt-2 text-sm text-ink-muted">Hoy ya has ganado XP con este diálogo. Mañana podrás ganar más.</p>
+          xp === null ? null : (
+            <>
+              <p className="mt-2 text-xl font-extrabold text-success-deep">+{xp.xp} XP</p>
+              {xp.repeat ? <p className="text-sm text-ink-muted">Ya lo habías hecho hoy: la mitad de XP.</p> : null}
+            </>
           )
         }
       />

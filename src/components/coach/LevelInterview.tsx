@@ -19,8 +19,12 @@ import {
 import { useCoachAccess, useCoachUsage, useLearnerProfile } from "@/lib/coach/use-coach";
 import { DEFAULT_LANG, getPack } from "@/lib/content";
 import { cn } from "@/lib/cn";
+import { recordActivity } from "@/lib/progress/activity";
 import { canRecognize, listenOnce, type RecognitionSession } from "@/lib/speech";
 import { CoachCodeForm, useHydrated } from "./AiUsagePanel";
+
+/** XP for finishing the level interview. */
+const XP_INTERVIEW = 15;
 
 /** Route of the interview (linked from /perfil and Prepárate). */
 export const LEVEL_INTERVIEW_HREF = "/preparar/nivel/";
@@ -125,6 +129,7 @@ export function LevelInterview({ lang = DEFAULT_LANG }: { lang?: string }) {
         if (ctrl.signal.aborted) return;
         if (result.done) {
           saveAssessment(result.assessment);
+          recordActivity({ lang, xp: XP_INTERVIEW, outcomes: [], source: "coach" });
           setPhase({ name: "done", assessment: result.assessment });
         } else {
           setPhase({ name: "question", history, question: result.question, turn: result.turn });
@@ -218,6 +223,7 @@ export function LevelInterview({ lang = DEFAULT_LANG }: { lang?: string }) {
     return (
       <div className="flex flex-1 flex-col gap-5">
         <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">Entrevista terminada</p>
+        <p className="text-xl font-extrabold text-success-deep">+{XP_INTERVIEW} XP</p>
         <Card tone="sea">
           <AssessmentDetails assessment={phase.assessment} />
         </Card>

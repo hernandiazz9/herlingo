@@ -12,6 +12,7 @@ import type { LessonResult } from "@/lib/exercises";
 import { clearGame } from "@/lib/game/storage";
 import { clearStoriesDone } from "@/lib/stories/done";
 import { dueIds, newEntry, parseEntry, schedule, type SrsEntry } from "@/lib/srs";
+import { clearDaily } from "./daily";
 import { addDays, dayKey, isDayKey } from "./dates";
 
 export { addDays, dayKey } from "./dates";
@@ -152,7 +153,17 @@ export function subscribeProgress(onChange: () => void): () => void {
 const XP_EVENT = "lang-lern:xp-award";
 
 /** What earned XP. Liga sends it as the event `source` (`^[a-z][a-z_-]{0,19}$`). */
-export type XpSource = "lesson" | "review" | "game" | "story" | "dialogue" | "activity";
+export type XpSource =
+  | "lesson"
+  | "review"
+  | "game"
+  | "story"
+  | "dialogue"
+  | "listen"
+  | "discover"
+  | "placement"
+  | "coach"
+  | "activity";
 
 /** One XP award, reported after the progress holding it has been saved. */
 export interface XpAward {
@@ -294,8 +305,8 @@ export function completeOnboarding(lang: string): Progress {
 }
 
 /**
- * Deletes all progress of the pack, plus its game records/known phrases and finished stories
- * (settings are kept). The welcome shows again.
+ * Deletes all progress of the pack, plus its game records/known phrases, finished stories and
+ * today's XP bookkeeping (settings are kept). The welcome shows again.
  */
 export function resetProgress(lang: string): void {
   try {
@@ -305,5 +316,6 @@ export function resetProgress(lang: string): void {
   }
   clearGame(lang);
   clearStoriesDone(lang);
+  clearDaily(lang);
   window.dispatchEvent(new Event(EVENT));
 }

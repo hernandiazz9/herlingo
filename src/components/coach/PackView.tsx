@@ -8,6 +8,7 @@ import { Card } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { packLine, type CoachKeyPhrase, type CoachPack } from "@/lib/coach";
 import { cn } from "@/lib/cn";
+import { recordListen } from "@/lib/progress/activity";
 import { PracticeDialogue } from "./PracticeDialogue";
 import { RefineCard } from "./RefineCard";
 import { FOCUS } from "./shared";
@@ -85,7 +86,10 @@ function KeyPhraseRow({ pack, phrase }: { pack: CoachPack; phrase: CoachKeyPhras
     <li className="flex items-start gap-1 rounded-card border-2 border-line bg-surface p-2 pl-4">
       <button
         type="button"
-        onClick={() => speak(line, { lang: pack.lang })}
+        onClick={() => {
+          speak(line, { lang: pack.lang });
+          recordListen(line.audioKey, pack.lang);
+        }}
         className={cn("flex min-h-12 flex-1 items-start gap-3 py-1.5 text-left", FOCUS)}
       >
         <span className="flex-1">
@@ -99,7 +103,10 @@ function KeyPhraseRow({ pack, phrase }: { pack: CoachPack; phrase: CoachKeyPhras
       </button>
       <button
         type="button"
-        onClick={() => speak(line, { lang: pack.lang, slow: true })}
+        onClick={() => {
+          speak(line, { lang: pack.lang, slow: true });
+          recordListen(line.audioKey, pack.lang);
+        }}
         aria-label="Escuchar despacio"
         title="Escuchar despacio"
         className={cn("inline-flex size-12 shrink-0 items-center justify-center rounded-full text-sea", FOCUS)}

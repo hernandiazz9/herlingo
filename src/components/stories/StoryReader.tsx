@@ -6,6 +6,7 @@ import { Button, Card, Picture } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import { getPack, getStoryKeywords, hasImage, type Story, type StoryKeyword } from "@/lib/content";
+import { recordListen } from "@/lib/progress/activity";
 import { segmentStory } from "@/lib/stories";
 
 /** Pause between sentences in "Escuchar todo". */
@@ -16,7 +17,10 @@ interface Open {
   keyword: string;
 }
 
-/** Sentence-by-sentence reader: tap to hear, Spanish on demand, key words with their meaning. */
+/**
+ * Sentence-by-sentence reader: tap to hear, Spanish on demand, key words with their meaning.
+ * Every sentence or key word heard earns listening XP (`recordListen`).
+ */
 export function StoryReader({ story, lang, onPlay }: { story: Story; lang: string; onPlay: () => void }) {
   const pack = getPack(lang);
   const keywords = useMemo(() => getStoryKeywords(story, pack), [story, pack]);
@@ -48,6 +52,7 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
     cancelAll();
     setCurrent(i);
     const token = run.current;
+    recordListen(story.sentences[i].audioKey, lang);
     void speak(story.sentences[i], { lang }).then(() => {
       if (run.current === token) setCurrent(null);
     });
@@ -73,7 +78,9 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
       setCurrent(i);
       refs.current[i]?.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
       void speak(story.sentences[i], { lang }).then(() => {
-        if (run.current === token) window.setTimeout(() => step(i + 1), GAP_MS);
+        if (run.current !== token) return;
+        recordListen(story.sentences[i].audioKey, lang);
+        window.setTimeout(() => step(i + 1), GAP_MS);
       });
     };
     step(0);
@@ -86,6 +93,7 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
     setCurrent(null);
     if (!keepOpen) setOpen(open?.sentence === sentence && open.keyword === id ? null : { sentence, keyword: id });
     void speak(k, { lang });
+    recordListen(k.audioKey, lang);
   };
 
   const toggleAll = () => {
