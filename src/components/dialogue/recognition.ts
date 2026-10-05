@@ -3,6 +3,7 @@
  * Optional feature: always feature-detect with `canRecognize()` and keep the tap-to-pick path.
  */
 import { fold } from "@/components/phrasebook/search";
+import { spellNumbers } from "@/lib/exercises";
 
 interface RecognitionResultEvent {
   results: ArrayLike<ArrayLike<{ transcript: string }>>;
@@ -68,13 +69,21 @@ function similarity(a: string, b: string): number {
   return (2 * common) / (wa.length + wb.size);
 }
 
-/** Index of the option that best matches what was heard, or -1 when nothing is close enough. */
-export function bestMatch(heard: string[], options: string[], threshold = 0.6): number {
+/**
+ * Index of the option that best matches what was heard, or -1 when nothing is close enough.
+ * Digits are written out with `numberWords` (pack `meta.numberWords`): "40" matches "quaranta".
+ */
+export function bestMatch(
+  heard: string[],
+  options: string[],
+  numberWords?: Readonly<Record<string, string>>,
+  threshold = 0.6,
+): number {
   let best = -1;
   let score = threshold;
   for (const h of heard) {
     options.forEach((o, i) => {
-      const s = similarity(h, o);
+      const s = similarity(spellNumbers(h, numberWords), spellNumbers(o, numberWords));
       if (s >= score) {
         score = s;
         best = i;

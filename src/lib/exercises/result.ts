@@ -10,6 +10,13 @@ export function lessonXp(exercises: number, firstTryCorrect: number): number {
   return XP_LESSON + firstTryCorrect * XP_PER_FIRST_TRY + (perfect ? XP_PERFECT_BONUS : 0);
 }
 
+/** XP for finishing a scripted dialogue, plus one per answer not wrong at the first try. */
+export const XP_DIALOGUE = 10;
+
+export function dialogueXp(firstTry: number): number {
+  return XP_DIALOGUE + Math.max(0, firstTry) * XP_PER_FIRST_TRY;
+}
+
 /** Accumulates per-item outcomes while a session runs. */
 export function recordOutcome(
   items: Map<string, ItemOutcome>,

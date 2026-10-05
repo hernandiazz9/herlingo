@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { MiniPlay } from "@/components/exercises";
 import { cn } from "@/lib/cn";
-import type { Exercise, ExerciseOutcome } from "@/lib/exercises";
+import { diffWords, type DiffWord, type Exercise, type ExerciseOutcome } from "@/lib/exercises";
 
 const PRAISE = ["¡Genial!", "¡Muy bien!", "¡Perfecto!", "¡Eso es!", "¡Bravo!"];
 
@@ -15,13 +15,39 @@ export interface FeedbackSheetProps {
   onContinue: () => void;
 }
 
-/** Green/red sheet after each answer: verdict, right answer with a play button, Continuar. */
+/** The words of a sentence, the `wrong` ones highlighted. */
+function Highlighted({ words, tone }: { words: DiffWord[]; tone: "fix" | "mistake" }) {
+  return words.map((w, i) => (
+    <span key={i}>
+      {i > 0 ? " " : null}
+      {w.wrong ? (
+        <mark
+          className={cn(
+            "rounded px-0.5",
+            tone === "fix" ? "bg-success-soft text-success-deep underline decoration-2" : "bg-error-soft text-error-deep line-through",
+          )}
+        >
+          {w.text}
+        </mark>
+      ) : (
+        w.text
+      )}
+    </span>
+  ));
+}
+
+/**
+ * Green/red sheet after each answer: verdict, right answer with a play button, Continuar.
+ * Yellow when right with a small typo: the words to fix are highlighted.
+ */
 export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSheetProps) {
   const { correct } = outcome;
   const { solution } = exercise;
   const isMatch = exercise.type === "match";
   const matchMistakes = isMatch ? (outcome.wrongItemIds?.length ?? 0) : 0;
-  const title = !correct ? "Casi…" : matchMistakes > 0 ? "¡Hecho!" : PRAISE[seq % PRAISE.length];
+  const typo = correct && outcome.typo === true && !!outcome.given;
+  const diff = typo && outcome.given ? diffWords(outcome.given, solution.text) : null;
+  const title = !correct ? "Casi…" : typo ? "¡Casi perfecto!" : matchMistakes > 0 ? "¡Hecho!" : PRAISE[seq % PRAISE.length];
   const button = useRef<HTMLButtonElement>(null);
   // Focus Continuar (keyboard: Enter goes on) without scrolling the lesson.
   useEffect(() => button.current?.focus({ preventScroll: true }), []);
@@ -46,10 +72,21 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
         "absolute inset-x-0 bottom-0 z-10 flex flex-col gap-3 rounded-t-card border-t-4 px-5 pt-5",
         "pb-[calc(var(--safe-bottom)+1.25rem)] shadow-[0_-8px_24px_-12px_var(--shadow)]",
         "transition-transform duration-200 ease-out starting:translate-y-full motion-reduce:transition-none",
-        correct ? "border-success bg-success-soft" : "border-error bg-error-soft",
+        typo ? "border-lemon bg-lemon-soft" : correct ? "border-success bg-success-soft" : "border-error bg-error-soft",
       )}
     >
-      <p className={cn("text-2xl font-extrabold", correct ? "text-success-deep" : "text-error-deep")}>{title}</p>
+      <p className={cn("text-2xl font-extrabold", typo ? "text-ink" : correct ? "text-success-deep" : "text-error-deep")}>
+        {title}
+      </p>
+
+      {diff ? (
+        <p className="text-base text-ink">
+          Te cuenta como bien, pero tienes un fallo de letra:{" "}
+          <span lang="it" className="font-bold">
+            <Highlighted words={diff.given} tone="mistake" />
+          </span>
+        </p>
+      ) : null}
 
       {outcome.accentNote ? (
         <p className="text-base font-bold text-ink">Cuidado con el acento: fíjate en cómo se escribe.</p>
@@ -66,7 +103,7 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
           <div className="flex min-w-0 flex-col">
             {!correct ? <span className="text-sm font-bold uppercase tracking-wider text-error-deep">Solución</span> : null}
             <span lang="it" className="text-xl font-bold text-ink">
-              {solution.text}
+              {diff ? <Highlighted words={diff.expected} tone="fix" /> : solution.text}
             </span>
             {solution.es ? <span className="text-base text-ink-muted">{solution.es}</span> : null}
             {solution.note ? <span className="mt-1 text-sm text-ink-muted">{solution.note}</span> : null}
@@ -90,9 +127,13 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
         ref={button}
         onClick={onContinue}
         className={cn(
-          "pressable mt-1 min-h-14 w-full rounded-button px-6 text-lg font-bold tracking-wide text-on-accent",
+          "pressable mt-1 min-h-14 w-full rounded-button px-6 text-lg font-bold tracking-wide",
           "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
-          correct ? "bg-success [--ledge:var(--success-ledge)]" : "bg-error [--ledge:var(--error-ledge)]",
+          typo
+            ? "bg-lemon text-on-lemon [--ledge:var(--lemon-ledge)]"
+            : correct
+              ? "bg-success text-on-accent [--ledge:var(--success-ledge)]"
+              : "bg-error text-on-accent [--ledge:var(--error-ledge)]",
         )}
       >
         Continuar

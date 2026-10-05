@@ -169,6 +169,8 @@ export interface ExerciseOutcome {
   correct: boolean;
   /** Right but with missing/wrong accents. */
   accentNote?: boolean;
+  /** Right with a small typo (typed answers): the sheet shows "almost" and highlights it. */
+  typo?: boolean;
   /** Items answered wrong (match); defaults to all `itemIds` when incorrect. */
   wrongItemIds?: string[];
   /** What the learner gave (typed text, recognised speech...), for the feedback sheet. */

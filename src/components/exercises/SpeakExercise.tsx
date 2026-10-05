@@ -38,7 +38,8 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
       return;
     }
     stop();
-    const s = listenOnce(getPack(lang).meta.speechLocale);
+    const { meta } = getPack(lang);
+    const s = listenOnce(meta.speechLocale);
     session.current = s;
     setListening(true);
     setNotice(null);
@@ -60,7 +61,7 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
         );
         return;
       }
-      const score = scoreSpeech(r.transcripts, exercise.audio.text);
+      const score = scoreSpeech(r.transcripts, exercise.audio.text, meta.numberWords);
       setHeard(score.heard);
       const used = tries + 1;
       setTries(used);

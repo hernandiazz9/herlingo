@@ -77,6 +77,7 @@ Derived from the XP rules in the code (2026-10-01):
 | Review | same formula, `REVIEW_SIZE` 10 items (`src/lib/srs`) | ~25 |
 | Story | `XP_STORY` 10 + 1 per first-try game answer (`src/lib/stories/games.ts`); stories have ≤ 16 steps | ~26 |
 | Game round | `XP_ROUND` 5 + 1 per right answer in a 60 s round (`src/lib/game`) | ~40 realistic, ~65 at one answer per second |
+| Dialogue | `XP_DIALOGUE` 10 + 1 per learner turn not wrong at the first try (`src/lib/exercises/result.ts`), every finish of a `/dialogos/` dialogue | ~20 |
 
 | Limit | Value | Where |
 | --- | --- | --- |
@@ -300,7 +301,7 @@ Files: `src/lib/league/outbox.ts` (storage), `src/lib/league/sync.ts` (sending),
 
 - **Hook point.** Every XP award goes through `saveResult()` in `src/lib/progress/index.ts`
   (`recordLessonResult` → `lesson`, `recordReviewResult` → `review`, `recordActivity` → `game` on
-  `/jugar/`, `story` on `/historias/`, else `activity`). After saving progress it dispatches
+  `/jugar/`, `story` on `/historias/`, `dialogue` from the dialogue simulator, else `activity`). After saving progress it dispatches
   `lang-lern:xp-award` (`{ lang, amount, source, earnedAt }`); `subscribeXpAwards(cb)` listens.
   The progress module knows nothing about Liga.
 - **Lazy.** `LeagueSync` does nothing when `leagueEnabled()` is false; otherwise it loads

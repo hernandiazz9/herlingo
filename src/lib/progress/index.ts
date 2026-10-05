@@ -152,7 +152,7 @@ export function subscribeProgress(onChange: () => void): () => void {
 const XP_EVENT = "lang-lern:xp-award";
 
 /** What earned XP. Liga sends it as the event `source` (`^[a-z][a-z_-]{0,19}$`). */
-export type XpSource = "lesson" | "review" | "game" | "story" | "activity";
+export type XpSource = "lesson" | "review" | "game" | "story" | "dialogue" | "activity";
 
 /** One XP award, reported after the progress holding it has been saved. */
 export interface XpAward {

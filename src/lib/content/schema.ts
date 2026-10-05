@@ -52,6 +52,11 @@ export const PackMeta = z.object({
   speechLocale: z.string().regex(/^[a-z]{2,3}-[A-Z]{2}$/),
   /** Neural voices available for pre-generated mp3 (edge-tts names). First = default. */
   voices: z.array(Text).min(1),
+  /**
+   * Numbers written out ("40" → "quaranta"): speech recognition often returns digits, so spoken
+   * answers are compared with the digits replaced by these words.
+   */
+  numberWords: z.record(z.string().regex(/^\d+$/), Text).optional(),
   /** Situations used by phrases, units and dialogues (phrasebook sections), in display order. */
   situations: z.array(Situation).min(1),
 });

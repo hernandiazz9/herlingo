@@ -68,7 +68,9 @@ leave gaps:
 `?` = optional. All text fields must be non-empty. Spanish is **Spain Spanish with "tú"**.
 
 **pack.json**: `lang` (= folder name), `name`, `nativeName`, `speechLocale` (`it-IT`),
-`voices` (edge-tts voice names; the first is the default), `situations` (`{ id, title, emoji? }`,
+`voices` (edge-tts voice names; the first is the default), `numberWords` (optional,
+`{ "40": "quaranta", … }`: speech recognition often returns digits, so spoken answers are compared
+with digits written out with these words), `situations` (`{ id, title, emoji? }`,
 phrasebook sections in display order). If you need a new situation, add one line here.
 
 **Unit file** (`units/*.json`): `id`, `order`, `title`, `description?`, `emoji?`, `situation`,
