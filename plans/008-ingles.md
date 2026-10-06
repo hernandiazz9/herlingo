@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 11:52Z 💻
+- Updated: 2026-10-06 11:54Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 7683f96
+- Branch: plan-008-ingles @ f81dc63
 - Next step: integrate T91/T92, then A2 units T93–T96
 - Needs Hernán: -
 
@@ -55,7 +55,7 @@ Worktree setup: npm ci
 - Outcome: level.ts (get/set/subscribe/suggestLevel) + useLevel, LevelChips; Ruta filtered by level (side units order%100>=90), Perfil 'Tu nivel', Diálogos/Historias/Frasario view filters, placement suggests level, stored on 'Ir a mi ruta'; only new key lang-lern:level:<lang> · 7683f96 · verify ✓ 💻 · not checked: UI light/dark 375 px
 
 ## T92 — English A2: hello, numbers and A2 grammar
-- Status: running (attempt 1 · 💻 · agent adea40484a0eb938e · since 11:45Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-hello` (10), `a2-numbers` (12) and `a2-grammar` (90) with the 10 A2 grammar cards, per docs/brief-en.md: ~5-minute lessons ending with their Q&A, pronunciation tips for a Spanish speaker, US dates, prices and tipping, phone numbers and years.
@@ -65,7 +65,7 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, ~10 grammar cards, 10–12 lessons in these three units, all `level: "A2"`.
   - Every phrase has `register` and an `explanation`; ids follow brief-en ("Ids").
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units a2-hello, a2-numbers, a2-grammar (10 gram.en-a2-* cards in the unit's grammar array): 12 lessons, 97 phrases, 72 vocab, 19 Q&A; numbers/years/prices as words · f81dc63 · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T93 — English A2: about me, daily life
 - Status: running (attempt 1 · 💻 · agent a82a20e7ade54cab9 · since 11:52Z)
@@ -80,7 +80,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T94 — English A2: airport, hotel
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a2b5e82c901d31a33 · since 11:54Z)
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-airport` (30) and `a2-hotel` (32) per docs/brief-en.md.
@@ -157,8 +157,8 @@ Worktree setup: npm ci
 - Depends on: T90
 - Where: any
 - Goal: Units `b1-friends` (110), `b1-plans` (112) and `b1-grammar` (190) with the 10 B1 grammar cards, per docs/brief-en.md; phrasal verbs explained in `notes`.
-- Context: as T92; the A2 units and `content/en/extras/grammar-a2.json` once landed (reuse, don't duplicate).
-- Scope: may touch `content/en/units/110-*.json`, `content/en/units/112-*.json`, `content/en/units/190-*.json`, `content/en/extras/grammar-b1.json` / must not touch other `content/**` files, `src/**`, `public/**`, `plans/`.
+- Context: as T92; the A2 units and `content/en/units/90-a2-grammar.json` (its `grammar` array holds the A2 cards) once landed (reuse, don't duplicate).
+- Scope: may touch `content/en/units/110-*.json`, `content/en/units/112-*.json`, `content/en/units/190-*.json` (the B1 grammar cards go in the `grammar` array of `190-b1-grammar.json`, like A2, so they get the B1 level) / must not touch other `content/**` files, `src/**`, `public/**`, `plans/`.
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~60 vocab, ~16 Q&A, ~10 grammar cards, 10–12 lessons, `level: "B1"`.
   - `npm run verify` → exit 0
@@ -290,6 +290,7 @@ Worktree setup: npm ci
 ## Review queue
 - [ ] T90 @a048f4c — code review (schema, build.ts levels) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T91 @7683f96 — code review (path.ts, level store) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T92 @f81dc63 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -305,6 +306,7 @@ Worktree setup: npm ci
 - 2026-10-06 plan: Prepárate and Liga need nothing for English (already per language). (Hernán)
 - 2026-10-06 plan: contractions matched through generic `pack.json` `equivalents` (survey: normalizeAnswer splits "don't" into "don t"; "I am" vs "I'm" would fail); the matching code waits for plan 007 voice (T110). (orchestrator)
 - 2026-10-06 plan: Base branch `plan-008-ingles` from main @ 1c8aab4, in its own worktree `.claude/worktrees/plan-008`: plan 006 (main checkout) and plan 007 voice (`.claude/worktrees/plan-007`, T76–T84) run in other sessions at the same time; this plan was drafted as 007 and renumbered to 008 / T90+ to avoid collisions. Hybrid push policy: the writer pushes the plan branch after every integrated task; never main, no PR, merge or deploy without Hernán's OK. (orchestrator)
+- 2026-10-06 T92: grammar cards live in the grammar unit's own grammar array (not extras) so they get the level; T100 scope updated accordingly. (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
@@ -318,3 +320,5 @@ Worktree setup: npm ci
 - 2026-10-06 11:45Z 💻 T92 launched · attempt 1 · agent adea40484a0eb938e
 - 2026-10-06 11:52Z 💻 T91 done · worktree-agent-abe7cc49ff9a9bd1b → 7683f96 · verify ✓
 - 2026-10-06 11:52Z 💻 T93 launched · attempt 1 · agent a82a20e7ade54cab9
+- 2026-10-06 11:54Z 💻 T92 done · worktree-agent-adea40484a0eb938e → f81dc63 · verify ✓
+- 2026-10-06 11:54Z 💻 T94 launched · attempt 1 · agent a2b5e82c901d31a33
