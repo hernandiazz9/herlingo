@@ -19,6 +19,15 @@ export {
   speakingPausedUntil,
   subscribeSpeakingPause,
 } from "./pause";
+export {
+  SPEECH_PASS_THRESHOLD,
+  bestOption,
+  scoreHeard,
+  type NumberWords,
+  type ScoredWord,
+  type SpeechScore,
+  type WordStatus,
+} from "./score";
 
 /** Similarity (0–1, accents/case/punctuation ignored) from which a spoken answer counts as right. */
 export const SPEECH_MATCH_THRESHOLD = 0.7;
