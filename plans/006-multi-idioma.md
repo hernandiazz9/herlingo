@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 10:05Z 💻
+- Updated: 2026-10-06 10:06Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T70/T72; then T73 (audio + images) on the Mac
+- Next step: integrate T72; then T73 (audio + images) on the Mac
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -193,7 +193,7 @@ Worktree setup: npm ci
 - Outcome: units ville (5 lessons, Lyon) + sante (5): 90 phrases, 61 vocab, 17 Q&A · 6729cca · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T70 — French content: 12 dialogues and the placement test
-- Status: running (attempt 1 · 💻 · agent ad5fd9b2e670aff2f · since 09:58Z)
+- Status: done
 - Depends on: T65, T66, T67, T68, T69
 - Where: any
 - Goal: The 12 dialogues listed in docs/brief-fr.md (avatars, `unit`, register-honest options with Spanish feedback) and 12 placement questions spread over the units, each marking the lessons it proves.
@@ -203,7 +203,7 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓; 12 dialogues (6–10 turns, ≥ 3 learner turns, 3 options each), 12 placement questions covering every unit except `grammaire`.
   - `npm run verify` → exit 0
   - Hand check (PC): play two dialogues and the placement in French with device voices.
-- Outcome:
+- Outcome: 12 dialogues (8–9 turns, 4 learner turns, 3 options with feedback) + 12 placement questions over every unit but grammaire · 70795f1 · verify ✓ 💻 · not checked: playing them with device voices, avatar images (T73)
 
 ## T71 — French content: stories 1–6
 - Status: done
@@ -257,6 +257,7 @@ Worktree setup: npm ci
 - [ ] T68 @311c7ee — French language review (queued 2026-10-06 💻)
 - [ ] T69 @6729cca — French language review (queued 2026-10-06 💻)
 - [ ] T71 @2fad6dd — French language review (queued 2026-10-06 💻)
+- [ ] T70 @70795f1 — French language review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -264,6 +265,7 @@ Worktree setup: npm ci
 - [ ] T64 @9a6d848 — Liga with several groups (tabs, Tus grupos, invite, 10-group limit): light + dark, 375 px (queued 2026-10-06 💻)
 - [ ] T60 @c5f60f6 — picker, Ruta switch, Perfil section, welcome: dark + light 375 px; first launch on installed PWA; picker audio state (queued 2026-10-06 💻)
 - [ ] T62 @c191bba — Ruta and Perfil points/streak: light + dark, 375 px, with Hernán's real data (queued 2026-10-06 💻)
+- [ ] T70 @70795f1 — play two French dialogues and the French placement with device voices (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: multi-language app; French (`fr`) is the second pack; adding a language stays content only; active-language picker on first launch and in Perfil, stored on the device; every page uses the active pack; static params for all packs with ids unique across packs; SW precaches only the active language's audio; never lose on-device data (every `lang-lern:*:<lang>` key and shape kept, Italian progress untouched). (Hernán)
@@ -314,3 +316,4 @@ Worktree setup: npm ci
 - 2026-10-06 09:58Z 💻 T71 launched · attempt 1 · agent a874c68c42dcdc95b
 - 2026-10-06 10:05Z 💻 T71 done · worktree-agent-a874c68c42dcdc95b → 2fad6dd · verify ✓
 - 2026-10-06 10:05Z 💻 T72 launched · attempt 1 · agent aa287685dcb08c962
+- 2026-10-06 10:06Z 💻 T70 done · worktree-agent-ad5fd9b2e670aff2f → 70795f1 · verify ✓
