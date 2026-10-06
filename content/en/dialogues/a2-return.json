@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-return",
+  "title": "Devolver ropa",
+  "description": "Vuelves a la tienda a devolver una camisa que te queda pequeña y pides que te devuelvan el dinero.",
+  "situation": "compras",
+  "unit": "a2-shopping",
+  "order": 9,
+  "register": "formal",
+  "level": "A2",
+  "avatars": { "Dependiente": "fluent:man" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Dependiente", "text": "Hi, how can I help you today?", "es": "Hola, ¿en qué puedo ayudarle?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que te gustaría devolver esta camisa.",
+      "options": [
+        { "text": "Hi, I'd like to return this shirt.", "es": "Hola, quería devolver esta camisa.", "verdict": "correct", "feedback": "¡Bien! «return» = devolver algo a la tienda." },
+        { "text": "I want to give back this shirt.", "es": "Quiero devolver esta camisa.", "verdict": "acceptable", "feedback": "Se entiende, pero en una tienda se dice «return», y «I'd like» suena más educado." },
+        { "text": "Hi, I'd like to devolve this shirt.", "es": "Hola, quería devolver esta camisa.", "verdict": "wrong", "feedback": "Falso amigo: «devolve» es delegar; devolver en una tienda es «return»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Dependiente", "text": "Sure. Is there anything wrong with it?", "es": "Claro. ¿Le pasa algo?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que te queda pequeña.",
+      "options": [
+        { "text": "It's too small for me.", "es": "Me queda pequeña.", "verdict": "correct", "feedback": "¡Perfecto! «too small» = demasiado pequeña." },
+        { "text": "It's small.", "es": "Es pequeña.", "verdict": "acceptable", "feedback": "Se entiende; con «too small» queda claro que no te sirve." },
+        { "text": "It stays small on me.", "es": "Me queda pequeña.", "verdict": "wrong", "feedback": "Calco de «me queda pequeña»: se dice «It's too small»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Dependiente", "text": "I'm sorry about that. Do you have the receipt?", "es": "Vaya, lo siento. ¿Tiene el tíquet?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Dáselo y pregunta con educación si te pueden devolver el dinero.",
+      "options": [
+        { "text": "Yes, here it is. Could I get a refund, please?", "es": "Sí, aquí está. ¿Me podrían devolver el dinero, por favor?", "verdict": "correct", "feedback": "¡Muy bien! «refund» = reembolso." },
+        { "text": "Here. I want my money back.", "es": "Tome. Quiero que me devuelvan el dinero.", "verdict": "acceptable", "feedback": "Se entiende, pero suena exigente: mejor «Could I get a refund?»." },
+        { "text": "Yes, here it is. Could you return me the money, please?", "es": "Sí, aquí está. ¿Me podría devolver el dinero, por favor?", "verdict": "wrong", "feedback": "«Return me the money» no es natural: pide «a refund»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Dependiente", "text": "Of course. Or would you like to try a bigger size instead?", "es": "Por supuesto. ¿O prefiere probar una talla más grande?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que no, gracias, que prefieres el reembolso.",
+      "options": [
+        { "text": "No, thanks. I'd rather have the refund.", "es": "No, gracias. Prefiero el reembolso.", "verdict": "correct", "feedback": "¡Perfecto! «I'd rather…» = prefiero." },
+        { "text": "No, the money.", "es": "No, el dinero.", "verdict": "acceptable", "feedback": "Se entiende, pero suena muy seco: mejor «I'd rather have the refund»." },
+        { "text": "No, thanks. I'd rather to have the refund.", "es": "No, gracias. Prefiero el reembolso.", "verdict": "wrong", "feedback": "Tras «I'd rather» va el verbo sin «to»: «I'd rather have…»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Dependiente", "text": "No problem. The money goes back on your card in three to five days. Have a nice day!", "es": "Sin problema. El dinero vuelve a su tarjeta en tres a cinco días. ¡Que tenga un buen día!", "voice": "en-US-AndrewNeural" }
+  ]
+}

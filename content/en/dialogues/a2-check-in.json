@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-check-in",
+  "title": "Facturar en el aeropuerto",
+  "description": "En el mostrador de la aerolínea: entregas el pasaporte, facturas la maleta y eliges asiento.",
+  "situation": "viajes",
+  "unit": "a2-airport",
+  "order": 2,
+  "register": "formal",
+  "level": "A2",
+  "avatars": { "Agente": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Agente", "text": "Good morning! Where are you flying to today?", "es": "¡Buenos días! ¿Adónde vuela hoy?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que vas a Nueva York y dale tu pasaporte.",
+      "options": [
+        { "text": "To New York. Here's my passport.", "es": "A Nueva York. Aquí tiene mi pasaporte.", "verdict": "correct", "feedback": "¡Bien! «Here's…» es lo que se dice al entregar algo." },
+        { "text": "New York. Passport.", "es": "Nueva York. Pasaporte.", "verdict": "acceptable", "feedback": "Se entiende, pero suena seco: añade «Here's my passport»." },
+        { "text": "I go to New York. Have my passport.", "es": "Voy a Nueva York. Tenga mi pasaporte.", "verdict": "wrong", "feedback": "«Have my passport» no significa «tenga»: al dar algo se dice «Here's my passport»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Agente", "text": "Thank you. Are you checking any bags today?", "es": "Gracias. ¿Va a facturar alguna maleta?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que una maleta y pregunta con educación si puedes llevar la mochila como equipaje de mano.",
+      "options": [
+        { "text": "Yes, one bag. Could I take this backpack as a carry-on?", "es": "Sí, una maleta. ¿Podría llevar esta mochila como equipaje de mano?", "verdict": "correct", "feedback": "¡Perfecto! «carry-on» es el equipaje de mano, y «Could I…?» suena educado." },
+        { "text": "Yes, one bag. And this backpack goes with me.", "es": "Sí, una maleta. Y esta mochila va conmigo.", "verdict": "acceptable", "feedback": "Se entiende, pero queda mejor preguntar: «Could I take this as a carry-on?»." },
+        { "text": "Yes, one valise. Could I take this backpack as a carry-on?", "es": "Sí, una valija. ¿Podría llevar esta mochila como equipaje de mano?", "verdict": "wrong", "feedback": "«Valise» casi no se usa: la maleta es «bag» o «suitcase»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Agente", "text": "Sure, that's fine. Would you like a window or an aisle seat?", "es": "Claro, no hay problema. ¿Prefiere ventanilla o pasillo?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pide ventanilla, con educación.",
+      "options": [
+        { "text": "I'd like a window seat, please.", "es": "Quería ventanilla, por favor.", "verdict": "correct", "feedback": "¡Muy bien! «I'd like» es la forma educada de pedir." },
+        { "text": "Window.", "es": "Ventanilla.", "verdict": "acceptable", "feedback": "Vale como respuesta rápida, pero con «please» suena mejor." },
+        { "text": "I'd like a window sit, please.", "es": "Quería una ventanilla sentarse, por favor.", "verdict": "wrong", "feedback": "Cuidado: «seat» (asiento, «i» larga) y «sit» (sentarse, «i» corta) son palabras distintas." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Agente", "text": "Here's your boarding pass. You're at gate twenty-two, and boarding starts at nine fifteen.", "es": "Aquí tiene su tarjeta de embarque. Su puerta es la veintidós y el embarque empieza a las nueve y cuarto.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias y pregunta si el vuelo sale puntual.",
+      "options": [
+        { "text": "Thank you. Is the flight on time?", "es": "Gracias. ¿El vuelo sale puntual?", "verdict": "correct", "feedback": "¡Perfecto! «on time» = puntual, a su hora." },
+        { "text": "Thanks. The flight is on time?", "es": "Gracias. ¿El vuelo sale puntual?", "verdict": "acceptable", "feedback": "Se entiende por la entonación, pero la pregunta invierte el verbo: «Is the flight on time?»." },
+        { "text": "Thank you. Is the flight in hour?", "es": "Gracias. ¿El vuelo va en hora?", "verdict": "wrong", "feedback": "Calco de «en hora»: en inglés es «on time»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Agente", "text": "Yes, it is. Have a great flight!", "es": "Sí. ¡Que tenga buen vuelo!", "voice": "en-US-AndrewNeural" }
+  ]
+}

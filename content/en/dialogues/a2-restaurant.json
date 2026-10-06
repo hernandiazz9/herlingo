@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-restaurant",
+  "title": "Cenar en un restaurante",
+  "description": "Pides agua y una hamburguesa, dices cómo quieres la carne y preguntas por la propina al pagar.",
+  "situation": "comida",
+  "unit": "a2-food",
+  "order": 6,
+  "register": "formal",
+  "level": "A2",
+  "avatars": { "Camarera": "fluent:woman-red-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Camarera", "text": "Hi, I'm Jessica and I'll be your server tonight. Can I start you off with something to drink?", "es": "Hola, soy Jessica y esta noche le atiendo yo. ¿Le traigo algo de beber para empezar?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide con educación un vaso de agua del grifo.",
+      "options": [
+        { "text": "Could I have a glass of tap water, please?", "es": "¿Me podría traer un vaso de agua del grifo, por favor?", "verdict": "correct", "feedback": "¡Muy bien! El agua del grifo es «tap water» y es gratis." },
+        { "text": "Water, please.", "es": "Agua, por favor.", "verdict": "acceptable", "feedback": "Vale, aunque te pueden preguntar si la quieres embotellada." },
+        { "text": "Could I have a vase of water, please?", "es": "¿Me podría traer un jarrón de agua, por favor?", "verdict": "wrong", "feedback": "«Vase» es un jarrón: un vaso de agua es «a glass of water»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Camarera", "text": "Sure. Are you ready to order, or do you need a minute?", "es": "Claro. ¿Ya sabe qué va a pedir o necesita un minuto?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pide la hamburguesa con patatas fritas.",
+      "options": [
+        { "text": "I'd like the burger with fries, please.", "es": "Quería la hamburguesa con patatas fritas, por favor.", "verdict": "correct", "feedback": "¡Perfecto! En EE. UU. las patatas fritas son «fries»." },
+        { "text": "Burger with fries.", "es": "Hamburguesa con patatas.", "verdict": "acceptable", "feedback": "Se entiende, pero con «I'd like…, please» suena más amable." },
+        { "text": "I'd like the burger with chips, please.", "es": "Quería la hamburguesa con patatas de bolsa, por favor.", "verdict": "wrong", "feedback": "En EE. UU. «chips» son patatas de bolsa; las fritas son «fries»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Camarera", "text": "Good choice. How would you like it cooked?", "es": "Buena elección. ¿Cómo quiere la carne?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que al punto.",
+      "options": [
+        { "text": "Medium, please.", "es": "Al punto, por favor.", "verdict": "correct", "feedback": "¡Bien! «medium» = al punto; «rare» = poco hecha; «well done» = muy hecha." },
+        { "text": "Normal, please.", "es": "Normal, por favor.", "verdict": "acceptable", "feedback": "Más o menos te entenderán, pero di el punto: «medium», «well done»…" },
+        { "text": "To the point, please.", "es": "Al punto, por favor.", "verdict": "wrong", "feedback": "Calco de «al punto»: la carne al punto es «medium»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Camarera", "text": "Here's your check. No rush.", "es": "Aquí tiene la cuenta. Sin prisa.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias y pregunta si la propina está incluida.",
+      "options": [
+        { "text": "Thank you. Is the tip included?", "es": "Gracias. ¿La propina está incluida?", "verdict": "correct", "feedback": "¡Muy bien! En EE. UU. casi nunca lo está: se deja entre un 18 y un 20 %." },
+        { "text": "Thanks. The tip is included?", "es": "Gracias. ¿La propina está incluida?", "verdict": "acceptable", "feedback": "Se entiende por la entonación, pero la pregunta invierte el verbo: «Is the tip included?»." },
+        { "text": "Thank you. Is the propine included?", "es": "Gracias. ¿La propina está incluida?", "verdict": "wrong", "feedback": "La propina en inglés es «tip»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Camarera", "text": "No, it's not. You can add it on the card reader. Thanks so much!", "es": "No, no lo está. Puede añadirla en el datáfono. ¡Muchas gracias!", "voice": "en-US-EmmaNeural" }
+  ]
+}

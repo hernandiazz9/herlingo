@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-neighbor",
+  "title": "Tu nueva vecina",
+  "description": "Te cruzas con la vecina de enfrente: te presentas, le dices de dónde eres y a qué te dedicas.",
+  "situation": "presentarse",
+  "unit": "a2-about-me",
+  "order": 1,
+  "register": "tu",
+  "level": "A2",
+  "avatars": { "Vecina": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Vecina", "text": "Hi there! Did you just move in?", "es": "¡Hola! ¿Te acabas de mudar?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, que te mudaste la semana pasada, y preséntate.",
+      "options": [
+        { "text": "Yes, I moved in last week. I'm Hernán.", "es": "Sí, me mudé la semana pasada. Soy Hernán.", "verdict": "correct", "feedback": "¡Muy bien! «move in» = instalarte en tu nueva casa." },
+        { "text": "Yes. Last week. Hernán.", "es": "Sí. La semana pasada. Hernán.", "verdict": "acceptable", "feedback": "Se entiende, pero suena telegráfico: mejor una frase completa." },
+        { "text": "Yes, I have moved in last week. I'm Hernán.", "es": "Sí, me he mudado la semana pasada. Soy Hernán.", "verdict": "wrong", "feedback": "Con «last week» va el pasado simple: «I moved in», no «I have moved in»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Vecina", "text": "Nice to meet you! I'm Linda. I live right across the hall.", "es": "¡Encantada! Soy Linda. Vivo justo enfrente.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Dile que encantado y cuéntale que eres de España.",
+      "options": [
+        { "text": "Nice to meet you too. I'm from Spain.", "es": "Encantado también. Soy de España.", "verdict": "correct", "feedback": "¡Perfecto! El «too» del final le devuelve el saludo." },
+        { "text": "Hi, Linda. I'm from Spain.", "es": "Hola, Linda. Soy de España.", "verdict": "acceptable", "feedback": "Correcto, aunque te faltó devolverle el «Nice to meet you»." },
+        { "text": "Nice to meet you too. I'm from Spanish.", "es": "Encantado también. Soy de español.", "verdict": "wrong", "feedback": "«Spanish» es el idioma o la nacionalidad; el país es «Spain»: «I'm from Spain»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Vecina", "text": "Oh, wow! So what do you do?", "es": "¡Anda! ¿Y a qué te dedicas?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Cuéntale que trabajas de programador, desde casa.",
+      "options": [
+        { "text": "I work as a programmer. I work from home.", "es": "Trabajo de programador. Trabajo desde casa.", "verdict": "correct", "feedback": "¡Genial! Profesión con «as a»: «I work as a programmer»." },
+        { "text": "I'm a programmer. I work in my house.", "es": "Soy programador. Trabajo en mi casa.", "verdict": "acceptable", "feedback": "Se entiende, pero para el teletrabajo se dice «I work from home»." },
+        { "text": "I work of programmer. I work from home.", "es": "Trabajo de programador. Trabajo desde casa.", "verdict": "wrong", "feedback": "Calco de «trabajo de»: en inglés es «I work as a programmer»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Vecina", "text": "That's great. If you need anything, just knock on my door.", "es": "Qué bien. Si necesitas algo, llama a mi puerta.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias por ser tan amable y despídete hasta otra.",
+      "options": [
+        { "text": "Thanks, that's really nice of you. See you around!", "es": "Gracias, eres muy amable. ¡Nos vemos!", "verdict": "correct", "feedback": "¡Muy natural! «See you around» = ya nos veremos por aquí." },
+        { "text": "Thank you very much. Goodbye.", "es": "Muchas gracias. Adiós.", "verdict": "acceptable", "feedback": "Correcto, pero «Goodbye» suena muy definitivo entre vecinos: mejor «See you around!»." },
+        { "text": "Thanks, you're very sympathetic. See you around!", "es": "Gracias, eres muy comprensiva. ¡Nos vemos!", "verdict": "wrong", "feedback": "Falso amigo: «sympathetic» es comprensivo o compasivo; simpático es «nice» o «friendly»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Vecina", "text": "See you around, Hernán!", "es": "¡Hasta luego, Hernán!", "voice": "en-US-EmmaNeural" }
+  ]
+}

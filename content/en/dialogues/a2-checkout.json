@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-checkout",
+  "title": "En la caja del súper",
+  "description": "Pagas la compra: rechazas la bolsa, pagas sin contacto con la tarjeta y pides el tíquet.",
+  "situation": "compras",
+  "unit": "a2-shopping",
+  "order": 8,
+  "register": "neutral",
+  "level": "A2",
+  "avatars": { "Cajera": "fluent:woman" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Cajera", "text": "Hi there! Did you find everything okay?", "es": "¡Hola! ¿Has encontrado todo bien?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, gracias.",
+      "options": [
+        { "text": "Yes, I did, thanks.", "es": "Sí, gracias.", "verdict": "correct", "feedback": "¡Bien! Se responde con el mismo auxiliar: «Did you…?» → «Yes, I did»." },
+        { "text": "Yes, all.", "es": "Sí, todo.", "verdict": "acceptable", "feedback": "Se entiende, pero suena raro: mejor «Yes, I did, thanks»." },
+        { "text": "Yes, I found, thanks.", "es": "Sí, encontré, gracias.", "verdict": "wrong", "feedback": "«Find» necesita complemento; responde con el auxiliar: «Yes, I did»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Cajera", "text": "Great. Do you need a bag? They're ten cents each.", "es": "Genial. ¿Necesitas bolsa? Son diez centavos cada una.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que no, gracias, que llevas tu propia bolsa.",
+      "options": [
+        { "text": "No, thanks. I have my own bag.", "es": "No, gracias. Llevo mi propia bolsa.", "verdict": "correct", "feedback": "¡Perfecto! «my own» = mi propia." },
+        { "text": "No. I have bag.", "es": "No. Tengo bolsa.", "verdict": "acceptable", "feedback": "Se entiende, pero falta el posesivo: «I have my own bag»." },
+        { "text": "No, thanks. I have my proper bag.", "es": "No, gracias. Llevo mi bolsa adecuada.", "verdict": "wrong", "feedback": "«Proper» significa adecuado; tu propia bolsa es «my own bag»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Cajera", "text": "Okay. Your total is twenty-three forty. Cash or card?", "es": "Vale. Son 23,40 dólares. ¿Efectivo o tarjeta?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que con tarjeta y pregunta si puedes pagar sin contacto.",
+      "options": [
+        { "text": "Card. Can I just tap it?", "es": "Con tarjeta. ¿Puedo pagar sin contacto?", "verdict": "correct", "feedback": "¡Muy bien! «tap» = acercar la tarjeta para pagar sin contacto." },
+        { "text": "Card, please. Without contact?", "es": "Con tarjeta, por favor. ¿Sin contacto?", "verdict": "acceptable", "feedback": "Se entiende, pero pagar sin contacto se dice «tap»: «Can I just tap it?»." },
+        { "text": "With credit. Can I just tap it?", "es": "A crédito. ¿Puedo pagar sin contacto?", "verdict": "wrong", "feedback": "«With credit» no es pagar con tarjeta: di «Card» o «By card»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Cajera", "text": "Sure, go ahead... You're all set. Do you want your receipt?", "es": "Claro, adelante... Ya está. ¿Quieres el tíquet?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí, por favor.",
+      "options": [
+        { "text": "Yes, please.", "es": "Sí, por favor.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Yes.", "es": "Sí.", "verdict": "acceptable", "feedback": "Vale, aunque con «please» suena más amable." },
+        { "text": "Yes, please. Give me the ticket.", "es": "Sí, por favor. Dame el tíquet.", "verdict": "wrong", "feedback": "El tíquet de compra es «receipt»; «ticket» es una entrada, un billete o una multa." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Cajera", "text": "Here you go. Have a good one!", "es": "Aquí tienes. ¡Que vaya bien!", "voice": "en-US-AvaNeural" }
+  ]
+}

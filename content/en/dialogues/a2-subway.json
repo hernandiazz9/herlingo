@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-subway",
+  "title": "Cómo llegar en el metro",
+  "description": "En una estación del L de Chicago le preguntas a una pasajera cómo llegar a Millennium Park.",
+  "situation": "ciudad",
+  "unit": "a2-city",
+  "order": 10,
+  "register": "neutral",
+  "level": "A2",
+  "avatars": { "Pasajera": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Pasajera", "text": "You look a little lost. Can I help?", "es": "Pareces un poco perdido. ¿Te ayudo?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, por favor, y pregunta cómo llegar a Millennium Park.",
+      "options": [
+        { "text": "Yes, please. How do I get to Millennium Park?", "es": "Sí, por favor. ¿Cómo llego a Millennium Park?", "verdict": "correct", "feedback": "¡Bien! «How do I get to…?» = ¿cómo llego a…?" },
+        { "text": "Millennium Park? Where?", "es": "¿Millennium Park? ¿Dónde?", "verdict": "acceptable", "feedback": "Se entiende, pero mejor una pregunta completa: «How do I get to…?»." },
+        { "text": "Yes, please. How can I arrive to Millennium Park?", "es": "Sí, por favor. ¿Cómo puedo llegar a Millennium Park?", "verdict": "wrong", "feedback": "Para «llegar a un sitio» se usa «get to»; «arrive» va con «at» o «in», no con «to»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Pasajera", "text": "Take the Red Line to Lake. It's three stops from here.", "es": "Coge la línea roja hasta Lake. Son tres paradas desde aquí.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta dónde puedes comprar un billete.",
+      "options": [
+        { "text": "Where can I buy a ticket?", "es": "¿Dónde puedo comprar un billete?", "verdict": "correct", "feedback": "¡Perfecto! El billete de transporte es «ticket»." },
+        { "text": "Ticket? Where?", "es": "¿Billete? ¿Dónde?", "verdict": "acceptable", "feedback": "Se entiende, aunque suena telegráfico." },
+        { "text": "Where can I buy a bill?", "es": "¿Dónde puedo comprar un billete?", "verdict": "wrong", "feedback": "«Bill» es una factura o un billete de dinero; el de transporte es «ticket»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Pasajera", "text": "At the machine over there. Or you can just tap your card at the turnstile.", "es": "En la máquina de ahí. O puedes pasar la tarjeta sin contacto en el torniquete.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si tienes que ir hacia el norte o hacia el sur.",
+      "options": [
+        { "text": "Do I go north or south?", "es": "¿Voy hacia el norte o hacia el sur?", "verdict": "correct", "feedback": "¡Muy bien! Pregunta con «do» delante." },
+        { "text": "North or south?", "es": "¿Norte o sur?", "verdict": "acceptable", "feedback": "Se entiende, aunque la pregunta completa es más clara." },
+        { "text": "I go to north or to south?", "es": "¿Voy al norte o al sur?", "verdict": "wrong", "feedback": "Las preguntas llevan auxiliar delante y los puntos cardinales van sin «to»: «Do I go north or south?»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Pasajera", "text": "South. Look for the sign that says southbound.", "es": "Hacia el sur. Busca el cartel que pone «southbound».", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias por su ayuda.",
+      "options": [
+        { "text": "Thanks so much for your help!", "es": "¡Muchas gracias por tu ayuda!", "verdict": "correct", "feedback": "¡Perfecto! «for your help» = por tu ayuda." },
+        { "text": "Thank you.", "es": "Gracias.", "verdict": "acceptable", "feedback": "Correcto, aunque añadir «for your help» queda más cálido." },
+        { "text": "Thanks so much for your helping!", "es": "¡Muchas gracias por tu ayuda!", "verdict": "wrong", "feedback": "La ayuda es el nombre «help»: «for your help»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Pasajera", "text": "No problem. Enjoy the park!", "es": "De nada. ¡Que disfrutes del parque!", "voice": "en-US-EmmaNeural" }
+  ]
+}

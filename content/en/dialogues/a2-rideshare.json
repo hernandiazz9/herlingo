@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-rideshare",
+  "title": "Charla con el conductor de Uber",
+  "description": "Te subes a un Uber y el conductor te da conversación: de dónde eres, qué te parece Chicago, el deporte.",
+  "situation": "ciudad",
+  "unit": "a2-city",
+  "order": 11,
+  "register": "tu",
+  "level": "A2",
+  "avatars": { "Conductor": "fluent:man-beard" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Conductor", "text": "Hey! Hernán? Going to Wicker Park?", "es": "¡Hola! ¿Hernán? ¿Vas a Wicker Park?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, que eres tú.",
+      "options": [
+        { "text": "Yep, that's me!", "es": "¡Sí, soy yo!", "verdict": "correct", "feedback": "¡Bien! «That's me» = soy yo." },
+        { "text": "Yes, I am Hernán.", "es": "Sí, soy Hernán.", "verdict": "acceptable", "feedback": "Correcto, aunque aquí lo natural es «Yep, that's me!»." },
+        { "text": "Yes, I'm.", "es": "Sí, lo soy.", "verdict": "wrong", "feedback": "Al final de la frase no se contrae: «Yes, I am» o «That's me»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Conductor", "text": "Cool. So, where are you from?", "es": "Genial. ¿Y de dónde eres?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que eres de España y que estás de visita.",
+      "options": [
+        { "text": "I'm from Spain. I'm just visiting.", "es": "Soy de España. Estoy de visita.", "verdict": "correct", "feedback": "¡Muy bien! «just visiting» = solo de visita." },
+        { "text": "Spain. Visiting.", "es": "España. De visita.", "verdict": "acceptable", "feedback": "Se entiende, pero suena muy telegráfico." },
+        { "text": "I'm from Spain. I'm of visit.", "es": "Soy de España. Estoy de visita.", "verdict": "wrong", "feedback": "Calco de «estoy de visita»: «I'm visiting» o «I'm just visiting»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Conductor", "text": "Nice! How do you like Chicago so far?", "es": "¡Qué bien! ¿Qué te está pareciendo Chicago?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que te encanta, pero que hace mucho viento.",
+      "options": [
+        { "text": "I love it, but it's really windy!", "es": "¡Me encanta, pero hace mucho viento!", "verdict": "correct", "feedback": "¡Perfecto! «windy» = que hace viento." },
+        { "text": "I like it. Much wind.", "es": "Me gusta. Mucho viento.", "verdict": "acceptable", "feedback": "Se entiende, pero lo natural es «it's really windy»." },
+        { "text": "I love it, but it makes a lot of wind!", "es": "¡Me encanta, pero hace mucho viento!", "verdict": "wrong", "feedback": "Para el tiempo no se usa «make»: «it's windy»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Conductor", "text": "Ha, yeah, it's the Windy City! Are you into sports?", "es": "¡Ja, sí, es la Ciudad del Viento! ¿Te gusta el deporte?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí, que te gusta el fútbol, y pregúntale a él.",
+      "options": [
+        { "text": "Yeah, I like soccer. What about you?", "es": "Sí, me gusta el fútbol. ¿Y a ti?", "verdict": "correct", "feedback": "¡Genial! En EE. UU. el fútbol es «soccer»; «football» es el americano." },
+        { "text": "Yes, football. And you?", "es": "Sí, el fútbol. ¿Y tú?", "verdict": "acceptable", "feedback": "Te entenderá, pero allí «football» es el fútbol americano: di «soccer»." },
+        { "text": "Yeah, I like the soccer. What about you?", "es": "Sí, me gusta el fútbol. ¿Y a ti?", "verdict": "wrong", "feedback": "Los deportes en general van sin artículo: «I like soccer»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Conductor", "text": "I'm a big Cubs fan. Baseball! Okay, here we are. Have a good one!", "es": "Yo soy muy de los Cubs. ¡Béisbol! Bueno, ya hemos llegado. ¡Que vaya bien!", "voice": "en-US-BrianNeural" }
+  ]
+}

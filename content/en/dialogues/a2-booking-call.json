@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-booking-call",
+  "title": "Reservar mesa por teléfono",
+  "description": "Llamas a un restaurante para reservar mesa para cuatro el sábado y das tu nombre y tu número.",
+  "situation": "comida",
+  "unit": "a2-food",
+  "order": 7,
+  "register": "formal",
+  "level": "A2",
+  "avatars": { "Encargado": "fluent:man-in-tuxedo" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Encargado", "text": "Good evening, Rosa's Kitchen. How can I help you?", "es": "Buenas tardes, Rosa's Kitchen. ¿En qué puedo ayudarle?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que quieres reservar una mesa para cuatro el sábado.",
+      "options": [
+        { "text": "Hi, I'd like to book a table for four on Saturday.", "es": "Hola, quería reservar una mesa para cuatro el sábado.", "verdict": "correct", "feedback": "¡Perfecto! «book a table» = reservar mesa; los días van con «on»." },
+        { "text": "A table for four, Saturday.", "es": "Una mesa para cuatro, el sábado.", "verdict": "acceptable", "feedback": "Se entiende, pero al teléfono queda mejor una frase completa." },
+        { "text": "Hi, I'd like to book a table for four in Saturday.", "es": "Hola, quería reservar una mesa para cuatro el sábado.", "verdict": "wrong", "feedback": "Con los días de la semana se usa «on»: «on Saturday»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Encargado", "text": "Sure. What time would you like?", "es": "Claro. ¿A qué hora le gustaría?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta si tienen algo a las siete y media.",
+      "options": [
+        { "text": "Do you have anything at seven thirty?", "es": "¿Tienen algo a las siete y media?", "verdict": "correct", "feedback": "¡Bien! «at» + hora; 7:30 = «seven thirty»." },
+        { "text": "Seven thirty?", "es": "¿A las siete y media?", "verdict": "acceptable", "feedback": "Vale al teléfono, aunque la pregunta completa suena más educada." },
+        { "text": "Do you have anything at the seven and half?", "es": "¿Tienen algo a las siete y media?", "verdict": "wrong", "feedback": "Las horas no llevan «the», y 7:30 se dice «seven thirty» o «half past seven»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Encargado", "text": "Let me check... Sorry, we're full at seven thirty. We have a table at eight.", "es": "Déjeme mirar... Lo siento, a las siete y media estamos llenos. Tenemos mesa a las ocho.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que las ocho te va bien.",
+      "options": [
+        { "text": "Eight is fine, thanks.", "es": "A las ocho está bien, gracias.", "verdict": "correct", "feedback": "¡Perfecto! Corto y natural." },
+        { "text": "Okay, eight.", "es": "Vale, a las ocho.", "verdict": "acceptable", "feedback": "Vale, aunque un «thanks» queda más amable." },
+        { "text": "Eight is well, thanks.", "es": "A las ocho está bien, gracias.", "verdict": "wrong", "feedback": "«Well» es un adverbio; para decir que algo te va bien: «Eight is fine» o «Eight works»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Encargado", "text": "Great. Can I get a name and a phone number?", "es": "Estupendo. ¿Me da un nombre y un número de teléfono?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que te llamas Hernán y que tu número es el 312 555 0148.",
+      "options": [
+        { "text": "It's Hernán, and my number is three one two, five five five, oh one four eight.", "es": "Hernán, y mi número es el 312 555 0148.", "verdict": "correct", "feedback": "¡Muy bien! En los números de teléfono el 0 se dice «oh»." },
+        { "text": "Hernán. Three one two, five five five, zero one four eight.", "es": "Hernán. 312 555 0148.", "verdict": "acceptable", "feedback": "Correcto, aunque en los teléfonos lo habitual es decir «oh» por el cero." },
+        { "text": "I call myself Hernán, and my number is three one two, five five five, oh one four eight.", "es": "Me llamo Hernán y mi número es el 312 555 0148.", "verdict": "wrong", "feedback": "«Me llamo» no se traduce palabra por palabra: «It's Hernán» o «My name is Hernán»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Encargado", "text": "Perfect, Hernán. A table for four, Saturday at eight. See you then!", "es": "Perfecto, Hernán. Mesa para cuatro, el sábado a las ocho. ¡Hasta entonces!", "voice": "en-US-AndrewNeural" }
+  ]
+}

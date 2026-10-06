@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-passport-control",
+  "title": "Control de pasaportes",
+  "description": "Al llegar a Chicago, el agente de inmigración te pregunta a qué vienes, cuánto te quedas y dónde.",
+  "situation": "viajes",
+  "unit": "a2-airport",
+  "order": 3,
+  "register": "neutral",
+  "level": "A2",
+  "avatars": { "Agente": "fluent:man-police-officer" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Agente", "text": "Next, please. Passport, please. What's the purpose of your visit?", "es": "Siguiente, por favor. El pasaporte, por favor. ¿Cuál es el motivo de su visita?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que vienes de vacaciones.",
+      "options": [
+        { "text": "I'm here on vacation.", "es": "Estoy de vacaciones.", "verdict": "correct", "feedback": "¡Bien! En EE. UU. se dice «vacation»; «holiday» es británico." },
+        { "text": "Tourism.", "es": "Turismo.", "verdict": "acceptable", "feedback": "Vale, es lo que pone en los formularios, aunque una frase completa queda mejor." },
+        { "text": "I'm here for make tourism.", "es": "Vengo a hacer turismo.", "verdict": "wrong", "feedback": "En inglés no se «hace» turismo: «I'm here on vacation»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Agente", "text": "How long are you staying?", "es": "¿Cuánto tiempo se va a quedar?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que dos semanas.",
+      "options": [
+        { "text": "For two weeks.", "es": "Dos semanas.", "verdict": "correct", "feedback": "¡Perfecto! «for» + periodo de tiempo." },
+        { "text": "Two weeks, more or less.", "es": "Dos semanas, más o menos.", "verdict": "acceptable", "feedback": "Se entiende, pero en inmigración conviene dar una respuesta clara: «For two weeks»." },
+        { "text": "During two weeks.", "es": "Durante dos semanas.", "verdict": "wrong", "feedback": "«During» va con un momento o evento («during the flight»); para la duración, «for two weeks»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Agente", "text": "And where are you staying?", "es": "¿Y dónde se va a alojar?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que en un hotel del centro, en el Loop.",
+      "options": [
+        { "text": "At a hotel downtown, in the Loop.", "es": "En un hotel del centro, en el Loop.", "verdict": "correct", "feedback": "¡Muy bien! «downtown» = en el centro, sin preposición." },
+        { "text": "In a hotel in the center.", "es": "En un hotel en el centro.", "verdict": "acceptable", "feedback": "Se entiende, pero en EE. UU. el centro de la ciudad es «downtown»." },
+        { "text": "At an hotel downtown, in the Loop.", "es": "En un hotel del centro, en el Loop.", "verdict": "wrong", "feedback": "«Hotel» empieza por el sonido /h/, así que es «a hotel», no «an hotel»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Agente", "text": "Do you have a return ticket?", "es": "¿Tiene billete de vuelta?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí, que lo tienes en el móvil.",
+      "options": [
+        { "text": "Yes, I have it on my phone.", "es": "Sí, lo tengo en el móvil.", "verdict": "correct", "feedback": "¡Perfecto! Con pantallas y móviles se dice «on»: «on my phone»." },
+        { "text": "Yes, it's on my mobile.", "es": "Sí, está en mi móvil.", "verdict": "acceptable", "feedback": "Se entiende, pero en EE. UU. el móvil es «phone» o «cell phone»; «mobile» es británico." },
+        { "text": "Yes, I have it in my phone.", "es": "Sí, lo tengo en mi móvil.", "verdict": "wrong", "feedback": "Con móviles y pantallas se usa «on», no «in»: «on my phone»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Agente", "text": "Okay. Welcome to the United States. Enjoy your stay.", "es": "Muy bien. Bienvenido a Estados Unidos. Disfrute de su estancia.", "voice": "en-US-BrianNeural" }
+  ]
+}

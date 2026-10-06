@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-coffee-shop",
+  "title": "Pedir en la cafetería",
+  "description": "Pides un café con leche para llevar y le dices tu nombre al barista para el pedido.",
+  "situation": "comida",
+  "unit": "a2-food",
+  "order": 5,
+  "register": "neutral",
+  "level": "A2",
+  "avatars": { "Barista": "fluent:man-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Barista", "text": "Hi! What can I get for you?", "es": "¡Hola! ¿Qué te pongo?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide un café con leche mediano.",
+      "options": [
+        { "text": "Can I get a medium latte, please?", "es": "¿Me pones un café con leche mediano, por favor?", "verdict": "correct", "feedback": "¡Muy bien! Así se pide en una cafetería: «Can I get…?»." },
+        { "text": "A medium latte.", "es": "Un café con leche mediano.", "verdict": "acceptable", "feedback": "Vale, pero añade «please»: sin él suena seco." },
+        { "text": "Give me a latte medium, please.", "es": "Dame un café con leche mediano, por favor.", "verdict": "wrong", "feedback": "El adjetivo va delante del nombre («a medium latte») y «Give me» suena brusco." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Barista", "text": "Sure. Hot or iced? And what kind of milk?", "es": "Claro. ¿Caliente o con hielo? ¿Y con qué leche?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que caliente y con leche de avena.",
+      "options": [
+        { "text": "Hot, with oat milk, please.", "es": "Caliente, con leche de avena, por favor.", "verdict": "correct", "feedback": "¡Perfecto! «oat milk» = leche de avena." },
+        { "text": "Hot. Oat.", "es": "Caliente. Avena.", "verdict": "acceptable", "feedback": "Se entiende en la barra, aunque «with oat milk, please» queda mejor." },
+        { "text": "Hot, with avena milk, please.", "es": "Caliente, con leche de avena, por favor.", "verdict": "wrong", "feedback": "La avena en inglés es «oat»: «oat milk»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Barista", "text": "Got it. Is that for here or to go?", "es": "Vale. ¿Para tomar aquí o para llevar?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que es para llevar.",
+      "options": [
+        { "text": "To go, please.", "es": "Para llevar, por favor.", "verdict": "correct", "feedback": "¡Bien! «to go» = para llevar." },
+        { "text": "Takeaway, please.", "es": "Para llevar, por favor.", "verdict": "acceptable", "feedback": "Te entenderán, pero en EE. UU. se dice «to go»; «takeaway» es británico." },
+        { "text": "For carry, please.", "es": "Para llevar, por favor.", "verdict": "wrong", "feedback": "Calco de «para llevar»: se dice «to go»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Barista", "text": "Can I get a name for the order?", "es": "¿Me dices un nombre para el pedido?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dile tu nombre: Hernán.",
+      "options": [
+        { "text": "It's Hernán.", "es": "Hernán.", "verdict": "correct", "feedback": "¡Perfecto! Para el pedido basta con «It's…»." },
+        { "text": "My name is Hernán.", "es": "Me llamo Hernán.", "verdict": "acceptable", "feedback": "Correcto, aunque en la barra lo más natural es «It's Hernán»." },
+        { "text": "Is Hernán.", "es": "Es Hernán.", "verdict": "wrong", "feedback": "En inglés el sujeto no se omite: «It's Hernán»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Barista", "text": "Thanks, Hernán. That's five twenty-five. Your latte will be ready at the end of the counter.", "es": "Gracias, Hernán. Son 5,25 dólares. Tu café estará listo al final de la barra.", "voice": "en-US-BrianNeural" }
+  ]
+}

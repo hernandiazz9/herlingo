@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-a2-hotel",
+  "title": "Check-in en el hotel",
+  "description": "Llegas al hotel: das tu nombre, preguntas por el desayuno y pides que te despierten.",
+  "situation": "alojamiento",
+  "unit": "a2-hotel",
+  "order": 4,
+  "register": "formal",
+  "level": "A2",
+  "avatars": { "Recepcionista": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Recepcionista", "text": "Hi, welcome to the Lakeview Hotel! How can I help you?", "es": "¡Hola, bienvenido al hotel Lakeview! ¿En qué puedo ayudarle?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que quieres hacer el check-in y que tienes una reserva a nombre de Díaz.",
+      "options": [
+        { "text": "Hi, I'd like to check in. I have a reservation under Díaz.", "es": "Hola, quería hacer el check-in. Tengo una reserva a nombre de Díaz.", "verdict": "correct", "feedback": "¡Perfecto! «a reservation under…» = una reserva a nombre de…" },
+        { "text": "Check-in, please. The name is Díaz.", "es": "El check-in, por favor. El nombre es Díaz.", "verdict": "acceptable", "feedback": "Se entiende, aunque una frase con «I'd like to…» suena más amable." },
+        { "text": "Hi, I'd like to check in. I have a reserve under Díaz.", "es": "Hola, quería hacer el check-in. Tengo una reserva a nombre de Díaz.", "verdict": "wrong", "feedback": "La reserva de hotel es «reservation»; «reserve» es otra cosa (una reserva natural, unas reservas)." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Recepcionista", "text": "Let me see... Yes, three nights. Can I see your ID and a credit card, please?", "es": "A ver... Sí, tres noches. ¿Me deja su documento y una tarjeta de crédito, por favor?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Dáselos y pregunta si el desayuno está incluido.",
+      "options": [
+        { "text": "Here you go. Is breakfast included?", "es": "Aquí tiene. ¿El desayuno está incluido?", "verdict": "correct", "feedback": "¡Muy bien! «Here you go» al entregar algo." },
+        { "text": "Here. Breakfast is included?", "es": "Tome. ¿El desayuno está incluido?", "verdict": "acceptable", "feedback": "Se entiende, pero la pregunta invierte el verbo: «Is breakfast included?»." },
+        { "text": "Here you go. Is the breakfast include?", "es": "Aquí tiene. ¿El desayuno está incluido?", "verdict": "wrong", "feedback": "Falta la -ed: «included». Y las comidas van sin «the»: «Is breakfast included?»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Recepcionista", "text": "Yes, it's from seven to ten in the lobby. You're in room five twelve, on the fifth floor.", "es": "Sí, de siete a diez en el vestíbulo. Tiene la habitación 512, en la quinta planta.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Dale las gracias y pregunta dónde está el ascensor.",
+      "options": [
+        { "text": "Thank you. Where's the elevator?", "es": "Gracias. ¿Dónde está el ascensor?", "verdict": "correct", "feedback": "¡Bien! En EE. UU. es «elevator»; «lift» es británico." },
+        { "text": "Thanks. Where is the lift?", "es": "Gracias. ¿Dónde está el ascensor?", "verdict": "acceptable", "feedback": "Te entenderán, pero en EE. UU. se dice «elevator»." },
+        { "text": "Thank you. Where is the ascensor?", "es": "Gracias. ¿Dónde está el ascensor?", "verdict": "wrong", "feedback": "«Ascensor» no existe en inglés: es «elevator»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Recepcionista", "text": "It's right over there, on your left. Here's your key card. The Wi-Fi password is on it.", "es": "Está ahí mismo, a su izquierda. Aquí tiene su tarjeta. La contraseña del wifi viene en ella.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pide con educación que te despierten a las siete.",
+      "options": [
+        { "text": "Could I get a wake-up call at seven, please?", "es": "¿Podrían despertarme a las siete, por favor?", "verdict": "correct", "feedback": "¡Perfecto! «Could I get…?» es una petición educada; «wake-up call» = llamada para despertar." },
+        { "text": "I want a wake-up call at seven.", "es": "Quiero que me despierten a las siete.", "verdict": "acceptable", "feedback": "Se entiende, pero «I want» suena brusco: mejor «Could I get…?»." },
+        { "text": "Could you wake up me at seven, please?", "es": "¿Podría despertarme a las siete, por favor?", "verdict": "wrong", "feedback": "Con pronombre, el «up» va detrás: «Could you wake me up at seven?»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Recepcionista", "text": "Of course. Seven a.m. Enjoy your stay!", "es": "Por supuesto. A las siete. ¡Disfrute de su estancia!", "voice": "en-US-AvaNeural" }
+  ]
+}
