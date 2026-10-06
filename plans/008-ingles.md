@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 11:45Z 💻
+- Updated: 2026-10-06 11:52Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ a048f4c
+- Branch: plan-008-ingles @ 7683f96
 - Next step: integrate T91/T92, then A2 units T93–T96
 - Needs Hernán: -
 
@@ -41,7 +41,7 @@ Worktree setup: npm ci
 - Outcome: schema: formal register, Level A1–C2, optional levels/equivalents, level rules in content:check, derived item levels, getLevels(); en/pack.json (en-US, a/an, A2+B1, 18 situations, numberWords, 29 equivalents); dialogue badge Registro formal/informal · a048f4c · verify ✓ 💻 · not checked: badge in UI
 
 ## T91 — Level selector: Ruta, Perfil, Diálogos, Historias, Frasario, placement suggestion
-- Status: running (attempt 1 · 💻 · agent abe7cc49ff9a9bd1b · since 11:45Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: The learner chooses a CEFR level per language for packs with `levels`, per the Shared contract ("Level selector"): new key `lang-lern:level:<lang>`, `getLevel`/`setLevel`/`useLevel`, level chips on Ruta and Perfil, Ruta filtered to the level, Diálogos/Historias defaulting to it with "Todos", Frasario level filter, placement result suggesting a level. Packs without `levels` (it, fr) render exactly as before. Spain Spanish copy with "tú" ("Tu nivel", "Cambiar nivel", "Te recomendamos el nivel B1").
@@ -52,7 +52,7 @@ Worktree setup: npm ci
   - Only `lang-lern:level:<lang>` is new in localStorage; no other key renamed or rewritten.
   - `npm run verify` → exit 0
   - Hand check (PC): level chips on Ruta and Perfil, Diálogos/Historias/Frasario filters, placement suggestion, in light and dark at 375 px; Italian Ruta unchanged.
-- Outcome:
+- Outcome: level.ts (get/set/subscribe/suggestLevel) + useLevel, LevelChips; Ruta filtered by level (side units order%100>=90), Perfil 'Tu nivel', Diálogos/Historias/Frasario view filters, placement suggests level, stored on 'Ir a mi ruta'; only new key lang-lern:level:<lang> · 7683f96 · verify ✓ 💻 · not checked: UI light/dark 375 px
 
 ## T92 — English A2: hello, numbers and A2 grammar
 - Status: running (attempt 1 · 💻 · agent adea40484a0eb938e · since 11:45Z)
@@ -68,7 +68,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T93 — English A2: about me, daily life
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a82a20e7ade54cab9 · since 11:52Z)
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-about-me` (20) and `a2-daily` (22) per docs/brief-en.md (persona: Hernán, from Madrid, programmer).
@@ -289,8 +289,10 @@ Worktree setup: npm ci
 
 ## Review queue
 - [ ] T90 @a048f4c — code review (schema, build.ts levels) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T91 @7683f96 — code review (path.ts, level store) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
+- [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: English (`en`) is the third pack, American English (en-US voices and speechLocale, US spelling and formats); content only, generic code where the schema needs it; product note in docs/brief-en.md (docs/brief.md not edited); never lose on-device data, it/fr content and audio byte-identical. (Hernán)
@@ -306,6 +308,7 @@ Worktree setup: npm ci
 
 ## Proposals (new scope)
 - 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
+- 2026-10-06 T91: docs/content-guide.md should document the order%100>=90 side-unit rule for levelled packs
 
 ## Log
 - 2026-10-06 11:30Z 💻 plan written from the interview; not approved yet
@@ -313,3 +316,5 @@ Worktree setup: npm ci
 - 2026-10-06 11:45Z 💻 T90 done · worktree-agent-aab34ce7c5a906ee7 → a048f4c · verify ✓
 - 2026-10-06 11:45Z 💻 T91 launched · attempt 1 · agent abe7cc49ff9a9bd1b
 - 2026-10-06 11:45Z 💻 T92 launched · attempt 1 · agent adea40484a0eb938e
+- 2026-10-06 11:52Z 💻 T91 done · worktree-agent-abe7cc49ff9a9bd1b → 7683f96 · verify ✓
+- 2026-10-06 11:52Z 💻 T93 launched · attempt 1 · agent a82a20e7ade54cab9
