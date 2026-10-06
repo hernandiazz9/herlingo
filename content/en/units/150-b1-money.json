@@ -1,0 +1,372 @@
+{
+  "id": "b1-money",
+  "order": 150,
+  "title": "Banco y dinero: cuenta, pagos, devoluciones y quejas",
+  "description": "Abrir una cuenta, sacar dinero, pagar entre amigos, resolver problemas con el banco y reclamar un pedido o un reembolso.",
+  "emoji": "🏦",
+  "situation": "dinero",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-money.l.account",
+      "title": "Abrir una cuenta",
+      "items": [
+        "b1-money.bank",
+        "b1-money.branch",
+        "b1-money.bank-account",
+        "b1-money.checking-account",
+        "b1-money.savings-account",
+        "b1-money.id-like-to-open-a-checking-account",
+        "b1-money.what-do-i-need-to-open-an-account",
+        "b1-money.do-i-need-a-social-security-number",
+        "b1-money.heres-my-passport-and-proof-of-address",
+        "b1-money.fee",
+        "b1-money.are-there-any-monthly-fees",
+        "b1-money.balance",
+        "b1-money.is-there-a-minimum-balance",
+        "b1-money.can-i-set-up-online-banking",
+        "b1-money.paycheck",
+        "b1-money.i-get-paid-every-two-weeks",
+        "b1-money.qa.how-can-i-help",
+        "b1-money.qa.photo-id"
+      ]
+    },
+    {
+      "id": "b1-money.l.cash-and-cards",
+      "title": "Efectivo, tarjetas y cajeros",
+      "items": [
+        "a2-grammar.money",
+        "a2-numbers.dollar",
+        "b1-money.coin",
+        "b1-money.teller",
+        "b1-money.id-like-to-deposit-this-check",
+        "b1-money.withdraw",
+        "b1-money.i-need-to-withdraw-three-hundred-dollars",
+        "b1-money.could-you-tell-me-my-balance",
+        "b1-money.atm",
+        "b1-money.is-there-an-atm-around-here",
+        "b1-money.is-there-a-fee-for-using-this-atm",
+        "b1-money.pin",
+        "b1-money.i-forgot-my-pin",
+        "b1-money.the-atm-kept-my-card",
+        "a2-shopping.debit-card",
+        "a2-hotel.credit-card",
+        "b1-money.credit-or-debit",
+        "b1-money.my-card-was-declined",
+        "b1-money.could-you-try-it-again",
+        "b1-money.qa.how-much-withdraw",
+        "b1-money.qa.card-declined"
+      ]
+    },
+    {
+      "id": "b1-money.l.paying-friends",
+      "title": "Pagar, prestar y ahorrar",
+      "items": [
+        "b1-money.lets-split-the-bill",
+        "b1-money.its-on-me",
+        "b1-money.can-i-just-venmo-you",
+        "b1-money.bucks",
+        "b1-money.owe",
+        "b1-money.i-owe-you-twenty-bucks",
+        "b1-money.pay-back",
+        "b1-money.ill-pay-you-back-tomorrow",
+        "b1-money.transfer",
+        "b1-money.i-sent-you-the-money-this-morning",
+        "b1-money.go-through",
+        "b1-money.the-transfer-hasnt-gone-through-yet",
+        "b1-money.how-long-does-an-international-transfer-take",
+        "b1-money.exchange-rate",
+        "b1-money.whats-the-exchange-rate-today",
+        "b1-money.rent",
+        "b1-money.i-have-to-pay-my-rent-by-friday",
+        "b1-money.budget",
+        "b1-money.im-trying-to-save-money",
+        "b1-money.afford",
+        "b1-money.i-cant-afford-it-right-now",
+        "b1-money.loan",
+        "b1-money.interest",
+        "b1-money.qa.split"
+      ]
+    },
+    {
+      "id": "b1-money.l.bank-problems",
+      "title": "Problemas con el banco",
+      "items": [
+        "b1-money.wallet",
+        "b1-money.i-lost-my-wallet",
+        "b1-money.id-like-to-report-a-stolen-card",
+        "b1-money.can-you-freeze-my-card",
+        "b1-money.when-will-the-new-card-arrive",
+        "b1-money.statement",
+        "b1-money.charge",
+        "b1-money.theres-a-charge-i-dont-recognize",
+        "b1-money.purchase",
+        "b1-money.i-was-charged-twice",
+        "b1-money.fraud",
+        "b1-money.someone-used-my-card",
+        "b1-money.id-like-to-dispute-this-charge",
+        "b1-grammar.can-you-look-into-it",
+        "b1-money.how-long-until-i-get-my-money-back",
+        "b1-money.ive-been-on-hold-for-forty-minutes",
+        "b1-money.qa.whats-the-problem"
+      ]
+    },
+    {
+      "id": "b1-money.l.returns-complaints",
+      "title": "Devoluciones y quejas",
+      "items": [
+        "b1-money.order",
+        "b1-money.package",
+        "b1-money.i-ordered-it-online-but-it-arrived-damaged",
+        "b1-money.this-isnt-what-i-ordered",
+        "b1-money.the-package-never-arrived",
+        "a2-shopping.receipt",
+        "a2-shopping.refund",
+        "b1-money.replacement",
+        "b1-money.can-i-return-it-without-the-box",
+        "b1-money.customer-service",
+        "b1-money.complaint",
+        "b1-money.id-like-to-make-a-complaint",
+        "b1-money.could-i-speak-to-a-manager",
+        "b1-money.i-was-promised-a-full-refund",
+        "b1-money.i-still-havent-received-my-refund",
+        "b1-money.this-is-the-third-time-ive-called",
+        "b1-money.i-know-its-not-your-fault",
+        "b1-money.id-appreciate-it-if-you-could-fix-this-today",
+        "b1-money.sort-out",
+        "b1-money.thanks-for-sorting-it-out",
+        "b1-money.qa.whats-wrong-with-your-order",
+        "b1-money.qa.refund-or-replacement"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "b1-money.id-like-to-open-a-checking-account", "text": "I'd like to open a checking account.", "es": "Quería abrir una cuenta corriente.", "notes": "«checking account» = cuenta corriente; «savings account» = cuenta de ahorro.", "explanation": "En el mostrador del banco, para empezar. «checking» lleva «ch» como en «chico»: «CHE-king».", "register": "formal", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.what-do-i-need-to-open-an-account", "text": "What do I need to open an account?", "es": "¿Qué necesito para abrir una cuenta?", "explanation": "Antes de ir al banco o en la primera visita. «need to» se une: «NII-də», con la «o» débil.", "register": "neutral", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.do-i-need-a-social-security-number", "text": "Do I need a Social Security number?", "es": "¿Necesito un número de la Seguridad Social?", "notes": "En EE. UU. el «SSN» sirve casi como documento de identidad.", "explanation": "Al abrir una cuenta en EE. UU. como extranjero. «Security» con «t» suave: «si-KIU-ri-ri».", "register": "neutral", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.heres-my-passport-and-proof-of-address", "text": "Here's my passport and proof of address.", "es": "Aquí tienes mi pasaporte y un justificante de domicilio.", "notes": "«proof of address» = un recibo o contrato con tu dirección.", "explanation": "Cuando te piden documentación. «address» lleva el acento al principio en EE. UU.: «Æ-dres».", "register": "neutral", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.are-there-any-monthly-fees", "text": "Are there any monthly fees?", "es": "¿Hay alguna comisión mensual?", "notes": "«fee» = comisión, tarifa por un servicio.", "explanation": "Para preguntar lo que te cobra el banco. «monthly» lleva «th» con la lengua entre los dientes: «MANZ-li».", "register": "neutral", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.is-there-a-minimum-balance", "text": "Is there a minimum balance?", "es": "¿Hay un saldo mínimo?", "explanation": "Para saber cuánto dinero tienes que dejar en la cuenta. «balance» lleva el acento en «BA»: «BÆ-ləns».", "register": "neutral", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.id-like-to-deposit-this-check", "text": "I'd like to deposit this check, please.", "es": "Quería ingresar este cheque, por favor.", "notes": "«check» aquí es el cheque; en un restaurante es la cuenta.", "explanation": "En la ventanilla del banco. «deposit» suena «di-PA-zit», con la «s» como una «z» zumbante.", "register": "formal", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.i-need-to-withdraw-three-hundred-dollars", "text": "I need to withdraw three hundred dollars.", "es": "Necesito sacar trescientos dólares.", "explanation": "En la ventanilla, para sacar efectivo. «three» con «th» suave, la lengua entre los dientes, no «tri».", "register": "neutral", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.could-you-tell-me-my-balance", "text": "Could you tell me my current balance?", "es": "¿Podría decirme mi saldo actual?", "explanation": "Al cajero del banco o por teléfono. «Could you» se une: «KU-yu», sin pronunciar la «l».", "register": "formal", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.can-i-set-up-online-banking", "text": "Can I set up online banking on my phone?", "es": "¿Puedo configurar la banca online en el móvil?", "notes": "«set up» = configurar, dejar preparado.", "explanation": "Al terminar de abrir la cuenta. «set up» se une y la «t» suena casi como una «r» suave: «se-RAP».", "register": "neutral", "situation": "dinero", "tags": ["banco"]},
+    {"id": "b1-money.i-get-paid-every-two-weeks", "text": "I get paid every two weeks.", "es": "Cobro cada dos semanas.", "notes": "En EE. UU. es muy común cobrar cada dos semanas, no a fin de mes.", "explanation": "Para hablar de tu sueldo. «paid» acaba en /d/ suave, una sola sílaba: «peid».", "register": "neutral", "situation": "dinero"},
+    {"id": "b1-money.is-there-an-atm-around-here", "text": "Is there an ATM around here?", "es": "¿Hay un cajero por aquí?", "explanation": "Por la calle, a cualquiera. «ATM» se deletrea: «ei-ti-EM», con el acento al final.", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.is-there-a-fee-for-using-this-atm", "text": "Is there a fee for using this ATM?", "es": "¿Cobran comisión por usar este cajero?", "explanation": "Antes de sacar dinero en un cajero de otro banco. Tras «for» va -ing: «for using», no «for use».", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.the-atm-kept-my-card", "text": "The ATM kept my card.", "es": "El cajero se ha tragado mi tarjeta.", "notes": "En la calle también oirás «The ATM ate my card».", "explanation": "Al llamar al banco o en la oficina. «kept» acaba en dos consonantes: pronuncia la «p» y la «t», «kept».", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.i-forgot-my-pin", "text": "I forgot my PIN.", "es": "Se me ha olvidado el PIN.", "explanation": "En el banco o al cajero. «PIN» suena «pin», con «i» corta, no «piin».", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.my-card-was-declined", "text": "My card was declined.", "es": "Me han rechazado la tarjeta.", "notes": "Pasiva: «was declined» = fue rechazada.", "explanation": "Cuando el datáfono no acepta tu tarjeta. «declined» acaba en /d/: «di-KLAIND», sin «e» al final.", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.could-you-try-it-again", "text": "Could you try it again, please?", "es": "¿Podrías intentarlo otra vez, por favor?", "explanation": "Al cajero, cuando la tarjeta falla. «try it again» se une: «trai-yi-rə-GEN».", "register": "formal", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.credit-or-debit", "text": "Credit or debit?", "es": "¿Crédito o débito?", "explanation": "Te lo preguntan al pagar con tarjeta. «debit» suena «DE-bit», con la «t» final suave.", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.i-lost-my-wallet", "text": "I lost my wallet, so I need to cancel my cards.", "es": "He perdido la cartera, así que tengo que cancelar las tarjetas.", "explanation": "Al llamar al banco tras perder la cartera. «wallet» suena «WA-lət», con «a» abierta.", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.id-like-to-report-a-stolen-card", "text": "I'd like to report a stolen card.", "es": "Quería denunciar el robo de una tarjeta.", "notes": "«steal» (robar algo) → «stolen»; «rob» es robar a una persona o un lugar.", "explanation": "Al llamar al servicio de atención del banco. «stolen» empieza con «st» sin «e» delante: «STOU-lən».", "register": "formal", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.can-you-freeze-my-card", "text": "Can you freeze my card for now?", "es": "¿Puedes bloquearme la tarjeta de momento?", "notes": "«freeze» = congelar, bloquear de forma temporal.", "explanation": "Cuando no sabes si la has perdido o te la han robado. «freeze» con «z» zumbante y «ii» larga: «FRIIZ».", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.when-will-the-new-card-arrive", "text": "When will the new card arrive?", "es": "¿Cuándo me llegará la tarjeta nueva?", "explanation": "Al final de la llamada al banco. «arrive» lleva el acento al final: «ə-RAIV», con «v» de labio.", "register": "neutral", "situation": "dinero", "tags": ["tarjeta"]},
+    {"id": "b1-money.can-i-just-venmo-you", "text": "Can I just Venmo you?", "es": "¿Te lo paso por Venmo?", "notes": "Venmo y Zelle son apps de pago entre personas; «Venmo» se usa como verbo.", "explanation": "Entre amigos, para pagar tu parte. «Venmo» suena «VEN-mou», con la «v» apoyando el labio en los dientes.", "register": "tu", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.lets-split-the-bill", "text": "Let's split the bill.", "es": "Paguemos a medias.", "notes": "«split» = dividir; «split the bill» = pagar a medias.", "explanation": "En un bar o restaurante con amigos. «split» empieza con «sp» sin «e» delante: «split», no «esplit».", "register": "tu", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.its-on-me", "text": "Don't worry, it's on me.", "es": "Tranquilo, invito yo.", "notes": "Nunca «I invite you»: suena a invitación a un evento, no a pagar.", "explanation": "Cuando quieres invitar. «on me» se une: «ON-mi», el acento en «on».", "register": "tu", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.i-owe-you-twenty-bucks", "text": "I owe you twenty bucks.", "es": "Te debo veinte pavos.", "notes": "«bucks» = dólares, coloquial (como «pavos»).", "explanation": "Con amigos, para recordar una deuda. «owe» suena igual que «oh»: «ou».", "register": "tu", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.ill-pay-you-back-tomorrow", "text": "I'll pay you back tomorrow.", "es": "Mañana te lo devuelvo.", "notes": "«pay back» = devolver dinero prestado.", "explanation": "Cuando un amigo te presta dinero. «I'll» suena «ail», con la «l» oscura al final.", "register": "tu", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.i-sent-you-the-money-this-morning", "text": "I sent you the money this morning.", "es": "Te mandé el dinero esta mañana.", "explanation": "Para confirmar un pago. «sent» acaba en «nt»: pronuncia la «t», no «sen».", "register": "neutral", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.the-transfer-hasnt-gone-through-yet", "text": "The transfer hasn't gone through yet.", "es": "La transferencia todavía no se ha hecho efectiva.", "notes": "«go through» = completarse, procesarse (un pago).", "explanation": "Cuando el dinero aún no ha llegado. «through» suena «zruu», con «th» entre los dientes.", "register": "neutral", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.how-long-does-an-international-transfer-take", "text": "How long does an international transfer take?", "es": "¿Cuánto tarda una transferencia internacional?", "explanation": "Al banco, si mandas dinero a España. «international» con «t» suave: «in-nər-NÆ-shə-nəl».", "register": "neutral", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.whats-the-exchange-rate-today", "text": "What's the exchange rate today?", "es": "¿A cuánto está el cambio hoy?", "explanation": "En el banco o en una casa de cambio. «exchange» suena «iks-CHEINDZH», con el acento al final.", "register": "neutral", "situation": "dinero", "tags": ["pagar"]},
+    {"id": "b1-money.i-have-to-pay-my-rent-by-friday", "text": "I have to pay my rent by Friday.", "es": "Tengo que pagar el alquiler antes del viernes.", "notes": "«by Friday» = como muy tarde el viernes.", "explanation": "Para hablar de plazos de pago. «have to» suena «HÆF-tə», con «f», no con «v».", "register": "neutral", "situation": "dinero"},
+    {"id": "b1-money.im-trying-to-save-money", "text": "I'm trying to save money for a trip.", "es": "Estoy intentando ahorrar para un viaje.", "notes": "«save money» = ahorrar.", "explanation": "Para explicar por qué no gastas. «save» con «v» de labio y dientes, distinta de la «b».", "register": "neutral", "situation": "dinero"},
+    {"id": "b1-money.i-cant-afford-it-right-now", "text": "I can't afford it right now.", "es": "Ahora mismo no me lo puedo permitir.", "notes": "«afford» = poder permitirse algo.", "explanation": "Para decir con educación que algo es demasiado caro. «can't» lleva una «a» larga y abierta: «kænt».", "register": "neutral", "situation": "dinero"},
+    {"id": "b1-money.theres-a-charge-i-dont-recognize", "text": "There's a charge on my statement I don't recognize.", "es": "Hay un cargo en mi extracto que no reconozco.", "notes": "Sin pronombre extra: «I don't recognize», no «I don't recognize it».", "explanation": "Al llamar al banco por un cargo raro. «recognize» lleva el acento al principio: «RE-kəg-naiz».", "register": "neutral", "situation": "dinero", "tags": ["problemas"]},
+    {"id": "b1-money.i-was-charged-twice", "text": "I was charged twice for the same purchase.", "es": "Me han cobrado dos veces la misma compra.", "notes": "«charge» = cobrar (un importe).", "explanation": "Al banco o a la tienda. «charged» acaba en /d/, una sola sílaba: «chardzhd».", "register": "neutral", "situation": "dinero", "tags": ["problemas"]},
+    {"id": "b1-money.someone-used-my-card", "text": "I think someone used my card without permission.", "es": "Creo que alguien ha usado mi tarjeta sin permiso.", "explanation": "Para avisar de un posible fraude. «used» acaba en /d/: «iuzd», una sílaba.", "register": "neutral", "situation": "dinero", "tags": ["problemas"]},
+    {"id": "b1-money.id-like-to-dispute-this-charge", "text": "I'd like to dispute this charge.", "es": "Quería reclamar este cargo.", "notes": "«dispute a charge» = reclamar un cargo al banco.", "explanation": "Al banco, para que anule un cargo. «dispute» lleva el acento al final: «di-SPIUT».", "register": "formal", "situation": "dinero", "tags": ["problemas"]},
+    {"id": "b1-money.how-long-until-i-get-my-money-back", "text": "How long will it take to get my money back?", "es": "¿Cuánto tardaré en recuperar mi dinero?", "explanation": "Al final de una reclamación. «money» suena «MA-ni», con «a» breve y relajada.", "register": "neutral", "situation": "dinero", "tags": ["problemas"]},
+    {"id": "b1-money.ive-been-on-hold-for-forty-minutes", "text": "I've been on hold for forty minutes.", "es": "Llevo cuarenta minutos en espera.", "notes": "«on hold» = en espera (al teléfono).", "explanation": "Cuando por fin te atienden por teléfono. «forty» con «t» suave americana: «FOR-ri».", "register": "neutral", "situation": "dinero", "tags": ["problemas"]},
+    {"id": "b1-money.i-ordered-it-online-but-it-arrived-damaged", "text": "I ordered it online, but it arrived damaged.", "es": "Lo pedí por internet, pero llegó dañado.", "explanation": "Al servicio de atención al cliente. «ordered» y «arrived» acaban en /d/, sin sílaba extra: «OR-dərd».", "register": "neutral", "situation": "dinero", "tags": ["devoluciones"]},
+    {"id": "b1-money.this-isnt-what-i-ordered", "text": "This isn't what I ordered.", "es": "Esto no es lo que pedí.", "explanation": "En una tienda, un restaurante o al abrir un paquete. «isn't» suena «IZ-ənt», con «z».", "register": "neutral", "situation": "dinero", "tags": ["devoluciones"]},
+    {"id": "b1-money.the-package-never-arrived", "text": "The package never arrived.", "es": "El paquete nunca llegó.", "explanation": "En el chat de atención al cliente. «package» suena «PÆ-kidzh», con el acento en «pack».", "register": "neutral", "situation": "dinero", "tags": ["devoluciones"]},
+    {"id": "b1-money.can-i-return-it-without-the-box", "text": "Can I return it without the original box?", "es": "¿Puedo devolverlo sin la caja original?", "explanation": "Antes de devolver algo en la tienda. «original» lleva el acento en «RI»: «ə-RI-dzhə-nəl».", "register": "neutral", "situation": "dinero", "tags": ["devoluciones"]},
+    {"id": "b1-money.id-like-to-make-a-complaint", "text": "I'd like to make a complaint.", "es": "Quería poner una reclamación.", "notes": "Se dice «make a complaint», no «do a complaint».", "explanation": "En una tienda, un hotel o por teléfono. «complaint» lleva el acento al final: «kəm-PLEINT».", "register": "formal", "situation": "dinero", "tags": ["quejas"]},
+    {"id": "b1-money.could-i-speak-to-a-manager", "text": "Could I speak to a manager, please?", "es": "¿Podría hablar con un encargado, por favor?", "explanation": "Cuando el empleado no puede ayudarte. «manager» suena «MÆ-nə-dzhər», con el acento al principio.", "register": "formal", "situation": "dinero", "tags": ["quejas"]},
+    {"id": "b1-money.i-was-promised-a-full-refund", "text": "I was promised a full refund two weeks ago.", "es": "Me prometieron el reembolso completo hace dos semanas.", "notes": "Pasiva: «I was promised» = me prometieron.", "explanation": "Para reclamar algo pendiente. «promised» acaba en /t/: «PRA-mist», dos sílabas.", "register": "neutral", "situation": "dinero", "tags": ["quejas"]},
+    {"id": "b1-money.i-still-havent-received-my-refund", "text": "I still haven't received my refund.", "es": "Todavía no he recibido el reembolso.", "explanation": "Al volver a llamar o escribir. «received» acaba en /d/: «ri-SIIVD», con «ii» larga.", "register": "neutral", "situation": "dinero", "tags": ["quejas"]},
+    {"id": "b1-money.this-is-the-third-time-ive-called", "text": "This is the third time I've called about this.", "es": "Es la tercera vez que llamo por esto.", "notes": "Tras «the first/second/third time» va present perfect: «I've called».", "explanation": "Para mostrar que estás harto, sin perder la educación. «third» con «th» entre los dientes: «zerd».", "register": "neutral", "situation": "dinero", "tags": ["quejas"]},
+    {"id": "b1-money.id-appreciate-it-if-you-could-fix-this-today", "text": "I'd appreciate it if you could fix this today.", "es": "Le agradecería que lo solucionara hoy.", "explanation": "Para pedir algo con firmeza y educación. «appreciate» suena «ə-PRII-shi-eit», con «sh».", "register": "formal", "situation": "dinero", "tags": ["quejas"]},
+    {"id": "b1-money.i-know-its-not-your-fault", "text": "I know it's not your fault.", "es": "Sé que no es culpa tuya.", "explanation": "Para suavizar una queja con quien te atiende. «fault» suena «folt», con «l» oscura.", "register": "neutral", "situation": "dinero", "tags": ["quejas"]},
+    {"id": "b1-money.thanks-for-sorting-it-out", "text": "Thanks for sorting it out so quickly.", "es": "Gracias por solucionarlo tan rápido.", "notes": "«sort out» = solucionar, arreglar un problema.", "explanation": "Al final, cuando ya te lo han arreglado. «sorting it out» se une: «SOR-ri-ni-RAUT».", "register": "neutral", "situation": "dinero", "tags": ["quejas"]}
+  ],
+  "vocab": [
+    {"id": "b1-money.bank", "word": "bank", "article": "a", "plural": "banks", "es": "el banco", "situation": "dinero", "image": "fluent:bank"},
+    {"id": "b1-money.branch", "word": "branch", "article": "a", "plural": "branches", "es": "la sucursal", "notes": "Suena «brænch», una sílaba.", "situation": "dinero"},
+    {"id": "b1-money.bank-account", "word": "bank account", "article": "a", "plural": "bank accounts", "es": "la cuenta bancaria", "situation": "dinero"},
+    {"id": "b1-money.checking-account", "word": "checking account", "article": "a", "plural": "checking accounts", "es": "la cuenta corriente", "example": "b1-money.id-like-to-open-a-checking-account", "situation": "dinero"},
+    {"id": "b1-money.savings-account", "word": "savings account", "article": "a", "plural": "savings accounts", "es": "la cuenta de ahorro", "situation": "dinero"},
+    {"id": "b1-money.balance", "word": "balance", "article": "a", "plural": "balances", "es": "el saldo", "notes": "Suena «BÆ-ləns».", "example": "b1-money.could-you-tell-me-my-balance", "situation": "dinero"},
+    {"id": "b1-money.fee", "word": "fee", "article": "a", "plural": "fees", "es": "la comisión", "example": "b1-money.are-there-any-monthly-fees", "situation": "dinero"},
+    {"id": "b1-money.teller", "word": "teller", "article": "a", "plural": "tellers", "es": "el cajero (de banco)", "notes": "La persona de la ventanilla; el cajero automático es «ATM».", "situation": "dinero"},
+    {"id": "b1-money.atm", "word": "ATM", "article": "an", "plural": "ATMs", "es": "el cajero automático", "notes": "«an» porque «ATM» empieza por sonido de vocal: «an ei-ti-EM».", "example": "b1-money.is-there-an-atm-around-here", "situation": "dinero", "image": "fluent:atm-sign"},
+    {"id": "b1-money.pin", "word": "PIN", "article": "a", "plural": "PINs", "es": "el PIN", "example": "b1-money.i-forgot-my-pin", "situation": "dinero"},
+    {"id": "b1-money.wallet", "word": "wallet", "article": "a", "plural": "wallets", "es": "la cartera", "example": "b1-money.i-lost-my-wallet", "situation": "dinero"},
+    {"id": "b1-money.coin", "word": "coin", "article": "a", "plural": "coins", "es": "la moneda", "situation": "dinero", "image": "fluent:coin"},
+    {"id": "b1-money.bucks", "word": "bucks", "es": "los pavos (dólares)", "notes": "Coloquial: «twenty bucks» = veinte dólares.", "example": "b1-money.i-owe-you-twenty-bucks", "situation": "dinero", "image": "fluent:dollar-banknote"},
+    {"id": "b1-money.transfer", "word": "transfer", "article": "a", "plural": "transfers", "es": "la transferencia", "example": "b1-money.the-transfer-hasnt-gone-through-yet", "situation": "dinero"},
+    {"id": "b1-money.exchange-rate", "word": "exchange rate", "article": "an", "plural": "exchange rates", "es": "el tipo de cambio", "example": "b1-money.whats-the-exchange-rate-today", "situation": "dinero", "image": "fluent:currency-exchange"},
+    {"id": "b1-money.loan", "word": "loan", "article": "a", "plural": "loans", "es": "el préstamo", "notes": "Suena «loun».", "situation": "dinero"},
+    {"id": "b1-money.interest", "word": "interest", "es": "los intereses", "notes": "Incontable: «the interest is high».", "situation": "dinero"},
+    {"id": "b1-money.budget", "word": "budget", "article": "a", "plural": "budgets", "es": "el presupuesto", "notes": "Suena «BA-dzhit».", "situation": "dinero"},
+    {"id": "b1-money.rent", "word": "rent", "es": "el alquiler", "notes": "Se dice «pay the rent» o «pay my rent».", "example": "b1-money.i-have-to-pay-my-rent-by-friday", "situation": "dinero"},
+    {"id": "b1-money.paycheck", "word": "paycheck", "article": "a", "plural": "paychecks", "es": "la nómina", "notes": "El dinero que cobras cada vez.", "situation": "dinero"},
+    {"id": "b1-money.statement", "word": "statement", "article": "a", "plural": "statements", "es": "el extracto", "notes": "«bank statement» = extracto bancario.", "situation": "dinero"},
+    {"id": "b1-money.charge", "word": "charge", "article": "a", "plural": "charges", "es": "el cargo", "example": "b1-money.theres-a-charge-i-dont-recognize", "situation": "dinero"},
+    {"id": "b1-money.purchase", "word": "purchase", "article": "a", "plural": "purchases", "es": "la compra", "notes": "Suena «PER-chəs»; más formal que «buy».", "example": "b1-money.i-was-charged-twice", "situation": "dinero"},
+    {"id": "b1-money.fraud", "word": "fraud", "es": "el fraude", "notes": "Suena «frod».", "situation": "dinero"},
+    {"id": "b1-money.package", "word": "package", "article": "a", "plural": "packages", "es": "el paquete", "example": "b1-money.the-package-never-arrived", "situation": "dinero", "image": "fluent:package"},
+    {"id": "b1-money.order", "word": "order", "article": "an", "plural": "orders", "es": "el pedido", "notes": "«an» porque empieza por sonido de vocal.", "situation": "dinero"},
+    {"id": "b1-money.complaint", "word": "complaint", "article": "a", "plural": "complaints", "es": "la reclamación, la queja", "example": "b1-money.id-like-to-make-a-complaint", "situation": "dinero"},
+    {"id": "b1-money.replacement", "word": "replacement", "article": "a", "plural": "replacements", "es": "el producto de reemplazo", "notes": "Lo que te dan a cambio de algo defectuoso.", "situation": "dinero"},
+    {"id": "b1-money.customer-service", "word": "customer service", "es": "la atención al cliente", "situation": "dinero"},
+    {"id": "b1-money.afford", "word": "afford", "es": "permitirse (pagar)", "notes": "Verbo: «I can't afford it» = no me lo puedo permitir.", "example": "b1-money.i-cant-afford-it-right-now", "situation": "dinero"},
+    {"id": "b1-money.owe", "word": "owe", "es": "deber (dinero)", "notes": "Verbo; suena como «oh».", "example": "b1-money.i-owe-you-twenty-bucks", "situation": "dinero"},
+    {"id": "b1-money.withdraw", "word": "withdraw", "es": "sacar (dinero)", "notes": "Verbo: «withdraw money from an ATM». Pasado: «withdrew».", "example": "b1-money.i-need-to-withdraw-three-hundred-dollars", "situation": "dinero"},
+    {"id": "b1-money.pay-back", "word": "pay back", "es": "devolver (dinero)", "notes": "Phrasal verb: devolver lo que te prestaron.", "example": "b1-money.ill-pay-you-back-tomorrow", "situation": "dinero"},
+    {"id": "b1-money.sort-out", "word": "sort out", "es": "solucionar, arreglar", "notes": "Phrasal verb: resolver un problema.", "example": "b1-money.thanks-for-sorting-it-out", "situation": "dinero"},
+    {"id": "b1-money.go-through", "word": "go through", "es": "hacerse efectivo (un pago)", "notes": "Phrasal verb: un pago o una transferencia que se completa.", "example": "b1-money.the-transfer-hasnt-gone-through-yet", "situation": "dinero"}
+  ],
+  "qa": [
+    {
+      "id": "b1-money.qa.how-can-i-help",
+      "question": "Good morning. How can I help you today?",
+      "questionEs": "Buenos días. ¿En qué puedo ayudarle hoy?",
+      "accepted": [
+        {"text": "I'd like to open a checking account, please.", "es": "Quería abrir una cuenta corriente, por favor."},
+        {"text": "Hi, I need to deposit this check.", "es": "Hola, necesito ingresar este cheque."}
+      ],
+      "distractors": [
+        {"text": "I come to open an account.", "es": "Vengo a abrir una cuenta."},
+        {"text": "I want open a checking account.", "es": "Quiero abrir una cuenta corriente."}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "«Vengo a…» no se traduce con «I come to»; y tras «want» va «to»: «want to open».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-money.qa.photo-id",
+      "question": "Do you have a photo ID with you?",
+      "questionEs": "¿Lleva encima un documento con foto?",
+      "accepted": [
+        {"text": "Yes, here's my passport.", "es": "Sí, aquí tiene mi pasaporte."},
+        {"text": "Sure. I have my passport and my driver's license.", "es": "Claro. Tengo el pasaporte y el carnet de conducir."}
+      ],
+      "distractors": [
+        {"text": "Yes, here you have.", "es": "Sí, aquí tiene."},
+        {"text": "Yes, I bring my passport.", "es": "Sí, traigo el pasaporte."}
+      ],
+      "register": "neutral",
+      "situation": "dinero",
+      "notes": "«Aquí tiene» es «Here you are» o «Here's…», no «here you have»; «I bring» no significa «lo llevo encima».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-money.qa.how-much-withdraw",
+      "question": "How much would you like to withdraw?",
+      "questionEs": "¿Cuánto quiere sacar?",
+      "accepted": [
+        {"text": "Three hundred dollars, please.", "es": "Trescientos dólares, por favor."},
+        {"text": "Two hundred, in twenties if possible.", "es": "Doscientos, en billetes de veinte si puede ser."}
+      ],
+      "distractors": [
+        {"text": "Three hundreds dollars, please.", "es": "Trescientos dólares, por favor."},
+        {"text": "Three hundred dollar, please.", "es": "Trescientos dólares, por favor."}
+      ],
+      "register": "neutral",
+      "situation": "dinero",
+      "notes": "«hundred» no lleva -s tras un número, pero «dollars» sí va en plural.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-money.qa.card-declined",
+      "question": "I'm sorry, your card was declined. Do you have another one?",
+      "questionEs": "Lo siento, han rechazado su tarjeta. ¿Tiene otra?",
+      "accepted": [
+        {"text": "That's strange. Could you try it again?", "es": "Qué raro. ¿Podría intentarlo otra vez?"},
+        {"text": "Sure, I'll pay with my credit card.", "es": "Claro, pago con la tarjeta de crédito."}
+      ],
+      "distractors": [
+        {"text": "Sorry, I don't have other.", "es": "Lo siento, no tengo otra."},
+        {"text": "Can I pay in effective?", "es": "¿Puedo pagar en efectivo?"}
+      ],
+      "register": "neutral",
+      "situation": "dinero",
+      "notes": "«otra» es «another one»; «en efectivo» es «in cash», nunca «in effective».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-money.qa.split",
+      "question": "Dinner was great! How do you want to split it?",
+      "questionEs": "¡La cena estuvo genial! ¿Cómo quieres que lo paguemos?",
+      "accepted": [
+        {"text": "Let's just split it in half.", "es": "Vamos a medias."},
+        {"text": "Don't worry, it's on me tonight.", "es": "Tranquilo, hoy invito yo."}
+      ],
+      "distractors": [
+        {"text": "Let's divide the account.", "es": "Dividamos la cuenta."},
+        {"text": "Don't worry, I invite you.", "es": "Tranquilo, te invito."}
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "La cuenta del restaurante es «the bill» o «the check» (no «account»); «invito yo» es «it's on me».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-money.qa.whats-the-problem",
+      "question": "Thanks for calling. What seems to be the problem?",
+      "questionEs": "Gracias por llamar. ¿Cuál es el problema?",
+      "accepted": [
+        {"text": "There's a charge on my statement I don't recognize.", "es": "Hay un cargo en mi extracto que no reconozco."},
+        {"text": "I was charged twice for the same purchase.", "es": "Me han cobrado dos veces la misma compra."}
+      ],
+      "distractors": [
+        {"text": "There's a charge that I don't recognize it.", "es": "Hay un cargo que no reconozco."},
+        {"text": "Somebody robbed my card.", "es": "Alguien me ha robado la tarjeta."}
+      ],
+      "register": "neutral",
+      "situation": "dinero",
+      "notes": "Tras «that» no se repite el objeto («it»); a una cosa se le aplica «steal»: «Someone stole my card».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-money.qa.whats-wrong-with-your-order",
+      "question": "I'm sorry to hear that. What's wrong with your order?",
+      "questionEs": "Siento oír eso. ¿Qué problema tiene su pedido?",
+      "accepted": [
+        {"text": "It arrived damaged, and one item is missing.", "es": "Llegó dañado y falta un artículo."},
+        {"text": "It isn't what I ordered. I got the wrong size.", "es": "No es lo que pedí. Me llegó la talla equivocada."}
+      ],
+      "distractors": [
+        {"text": "Arrived damaged.", "es": "Llegó dañado."},
+        {"text": "It's not what I have ordered yesterday.", "es": "No es lo que pedí ayer."}
+      ],
+      "register": "neutral",
+      "situation": "dinero",
+      "notes": "En inglés el sujeto es obligatorio («It arrived»); con «yesterday» va pasado simple: «what I ordered».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-money.qa.refund-or-replacement",
+      "question": "Would you prefer a refund or a replacement?",
+      "questionEs": "¿Prefiere un reembolso o que se lo cambiemos?",
+      "accepted": [
+        {"text": "A full refund, please.", "es": "El reembolso completo, por favor."},
+        {"text": "A replacement is fine, thanks.", "es": "Que me lo cambien está bien, gracias."}
+      ],
+      "distractors": [
+        {"text": "I would prefer the devolution.", "es": "Preferiría la devolución."},
+        {"text": "I prefer that you return me the money.", "es": "Prefiero que me devuelvan el dinero."}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "«devolución» de dinero es «refund», no «devolution»; «return» se usa para el producto, no para el dinero.",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "id": "b1-stories",
+  "order": 152,
+  "title": "Contar lo que pasó: experiencias, anécdotas, sentimientos",
+  "description": "Contar una anécdota con orden, mezclar pasado simple y continuo, decir cómo te sentiste y reaccionar a lo que te cuentan.",
+  "emoji": "💬",
+  "situation": "social",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-stories.l.what-happened",
+      "title": "¿Qué pasó?",
+      "items": [
+        "b1-stories.story",
+        "b1-stories.anecdote",
+        "b1-stories.you-wont-believe-what-happened",
+        "b1-stories.guess-what",
+        "b1-stories.what-happened",
+        "b1-stories.how-was-your-weekend",
+        "b1-stories.how-did-it-go",
+        "b1-stories.actually",
+        "b1-stories.it-went-really-well",
+        "b1-stories.disaster",
+        "b1-stories.it-was-a-total-disaster",
+        "b1-stories.did-i-ever-tell-you-about-my-trip",
+        "b1-stories.long-story-short",
+        "b1-stories.qa.how-was-your-weekend",
+        "b1-stories.qa.you-look-tired"
+      ]
+    },
+    {
+      "id": "b1-stories.l.telling-a-story",
+      "title": "Contar una anécdota paso a paso",
+      "items": [
+        "b1-stories.at-first-i-didnt-understand",
+        "b1-stories.after-that-we-went-to-a-bar",
+        "b1-stories.suddenly",
+        "b1-stories.suddenly-the-lights-went-out",
+        "b1-stories.luckily",
+        "b1-stories.luckily-a-stranger-helped-us",
+        "b1-stories.unfortunately",
+        "b1-stories.unfortunately-the-museum-was-closed",
+        "b1-stories.as-soon-as-i-got-home",
+        "b1-stories.by-the-time-we-got-there",
+        "b1-stories.turn-out",
+        "b1-stories.it-turned-out-he-was-mayas-cousin",
+        "b1-stories.coincidence",
+        "b1-stories.eventually",
+        "b1-stories.in-the-end-everything-was-fine",
+        "b1-stories.qa.what-happened-next"
+      ]
+    },
+    {
+      "id": "b1-stories.l.while",
+      "title": "Lo que estaba pasando",
+      "items": [
+        "gram.en-b1-past-continuous",
+        "b1-grammar.i-was-walking-home",
+        "b1-stories.i-was-waiting-for-the-bus-when",
+        "b1-stories.run-into",
+        "b1-friends.i-ran-into-jordan",
+        "b1-stories.smoke-alarm",
+        "b1-stories.go-off",
+        "b1-stories.while-i-was-cooking-the-alarm-went-off",
+        "b1-stories.we-were-having-dinner-when-the-phone-rang",
+        "b1-stories.it-was-snowing",
+        "b1-stories.i-wasnt-paying-attention",
+        "b1-stories.i-was-about-to-leave-when-my-boss-called",
+        "b1-stories.i-dropped-my-phone",
+        "b1-stories.get-lost",
+        "b1-stories.i-got-lost-on-the-way",
+        "b1-stories.qa.power-went-out"
+      ]
+    },
+    {
+      "id": "b1-stories.l.feelings",
+      "title": "Cómo te sentiste",
+      "items": [
+        "b1-stories.embarrassed",
+        "b1-stories.i-was-so-embarrassed",
+        "b1-stories.nervous",
+        "b1-stories.i-was-really-nervous-before-the-interview",
+        "b1-stories.bored",
+        "b1-stories.boring",
+        "b1-stories.the-movie-was-so-boring",
+        "b1-stories.excited",
+        "b1-stories.i-was-so-excited-about-the-trip",
+        "b1-stories.homesick",
+        "b1-stories.i-felt-a-bit-homesick",
+        "b1-stories.surprised",
+        "b1-stories.i-was-really-surprised-to-see-her",
+        "b1-stories.relieved",
+        "b1-stories.i-was-so-relieved",
+        "b1-stories.disappointed",
+        "b1-stories.i-was-a-little-disappointed",
+        "b1-stories.scared",
+        "b1-stories.worried",
+        "b1-stories.upset",
+        "b1-stories.exhausted",
+        "b1-stories.proud",
+        "b1-stories.im-so-proud-of-you",
+        "b1-stories.qa.first-day-feelings"
+      ]
+    },
+    {
+      "id": "b1-stories.l.reacting",
+      "title": "Reaccionar y contar experiencias",
+      "items": [
+        "b1-stories.no-way-are-you-serious",
+        "b1-stories.that-sounds-amazing",
+        "b1-stories.oh-no-that-sounds-awful",
+        "b1-stories.im-so-sorry-to-hear-that",
+        "b1-stories.and-then-what-happened",
+        "gram.en-b1-present-perfect-past-simple",
+        "b1-stories.experience",
+        "b1-stories.ive-never-done-anything-like-that",
+        "b1-stories.adventure",
+        "b1-stories.it-was-the-best-trip-ive-ever-been-on",
+        "b1-stories.moment",
+        "b1-stories.one-of-the-scariest-moments-of-my-life",
+        "b1-stories.memory",
+        "b1-stories.ill-never-forget-it",
+        "b1-stories.surprise",
+        "b1-stories.i-learned-a-lot-from-that-experience",
+        "b1-stories.qa.ever-lost-passport",
+        "b1-stories.qa.broke-my-arm",
+        "b1-stories.qa.got-the-job"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "b1-stories.you-wont-believe-what-happened", "text": "You won't believe what happened to me today.", "es": "No te vas a creer lo que me ha pasado hoy.", "explanation": "Para empezar a contarle algo a un amigo. «won't» suena «wount», distinto de «want» («wont»).", "register": "tu", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.guess-what", "text": "Guess what? I got the job!", "es": "¿A que no sabes qué? ¡Me han dado el trabajo!", "explanation": "Para dar una buena noticia a un amigo. «Guess» suena «ges», la «u» no se pronuncia.", "register": "tu", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.what-happened", "text": "What happened?", "es": "¿Qué pasó?", "notes": "En la pregunta no va «did»: «What happened?», no «What did happen?».", "explanation": "Cuando alguien parece preocupado o empieza una historia. «happened» acaba en /d/: «HÆ-pənd», dos sílabas.", "register": "neutral", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.how-did-it-go", "text": "So, how did it go?", "es": "Bueno, ¿qué tal fue?", "explanation": "Para preguntar por una entrevista, un examen o una cita. «did it» se une: «di-rit».", "register": "neutral", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.how-was-your-weekend", "text": "How was your weekend?", "es": "¿Qué tal el fin de semana?", "explanation": "El lunes, a un compañero o a un amigo. «weekend» lleva el acento en «WIIK», con «ii» larga.", "register": "neutral", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.it-went-really-well", "text": "It went really well, actually.", "es": "La verdad es que fue muy bien.", "notes": "«actually» = en realidad, la verdad; no es «actualmente».", "explanation": "Para responder a «How did it go?». «actually» suena «ÆK-chu-ə-li».", "register": "neutral", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.it-was-a-total-disaster", "text": "Honestly, it was a total disaster.", "es": "La verdad, fue un desastre total.", "explanation": "Para contar algo que salió fatal. «Honestly» empieza sin «h»: «A-nəst-li».", "register": "neutral", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.did-i-ever-tell-you-about-my-trip", "text": "Did I ever tell you about my trip to Boston?", "es": "¿Te he contado alguna vez mi viaje a Boston?", "explanation": "Para empezar una anécdota en una conversación. «tell you» se une: «TE-liu».", "register": "neutral", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.long-story-short", "text": "Long story short, we missed the train.", "es": "Resumiendo, perdimos el tren.", "notes": "Expresión fija: «para no alargarme». «miss the train» = perder el tren.", "explanation": "Para saltarte detalles e ir al final. «missed» acaba en /t/: «mist», una sílaba.", "register": "tu", "situation": "social", "tags": ["contar"]},
+    {"id": "b1-stories.at-first-i-didnt-understand", "text": "At first, I didn't understand anything.", "es": "Al principio no entendía nada.", "notes": "«at first» = al principio (luego cambió).", "explanation": "Para contar cómo empezó algo. «At first» se une: «ə-FERST», con la «t» de «at» casi muda.", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.after-that-we-went-to-a-bar", "text": "After that, we went to a little bar downtown.", "es": "Después de eso, fuimos a un barecito del centro.", "explanation": "Para encadenar lo que pasó. «little» con «t» suave americana: «LI-rəl».", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.suddenly-the-lights-went-out", "text": "Suddenly, the lights went out.", "es": "De repente, se fue la luz.", "notes": "«go out» (la luz, el fuego) = apagarse.", "explanation": "Para el momento clave de la historia. «Suddenly» suena «SA-dən-li», con «a» breve.", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.luckily-a-stranger-helped-us", "text": "Luckily, a stranger helped us.", "es": "Por suerte, un desconocido nos ayudó.", "explanation": "Para el giro bueno de la historia. «helped» acaba en /t/: «helpt», una sílaba.", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.unfortunately-the-museum-was-closed", "text": "Unfortunately, the museum was closed.", "es": "Por desgracia, el museo estaba cerrado.", "explanation": "Para el giro malo de la historia. «closed» acaba en /d/: «klouzd», una sílaba.", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.as-soon-as-i-got-home", "text": "As soon as I got home, I went to bed.", "es": "En cuanto llegué a casa, me fui a la cama.", "explanation": "Para decir qué pasó justo después. «As soon as» se une: «ə-SUU-nəz».", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.by-the-time-we-got-there", "text": "By the time we got there, the show was over.", "es": "Para cuando llegamos, el espectáculo ya había terminado.", "notes": "«be over» = haber terminado.", "explanation": "Para contar que llegaste tarde. «got there» con «th» suave y la «t» de «got» casi muda.", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.it-turned-out-he-was-mayas-cousin", "text": "It turned out he was Maya's cousin.", "es": "Resultó que era el primo de Maya.", "notes": "«turn out» = resultar (al final se descubre algo).", "explanation": "Para la sorpresa final. «turned» acaba en /d/: «ternd», una sílaba.", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.in-the-end-everything-was-fine", "text": "In the end, everything was fine.", "es": "Al final, todo salió bien.", "notes": "«in the end» = al final (de la historia); «at the end of» = al final de algo concreto.", "explanation": "Para cerrar la historia. «everything» con «th» entre los dientes: «EV-ri-zing».", "register": "neutral", "situation": "social", "tags": ["secuencia"]},
+    {"id": "b1-stories.i-was-waiting-for-the-bus-when", "text": "I was waiting for the bus when I saw Jordan.", "es": "Estaba esperando el bus cuando vi a Jordan.", "notes": "Pasado continuo (fondo) + pasado simple (lo que pasó).", "explanation": "Para la escena de fondo y lo que la interrumpe. «waiting» con «t» suave: «WEI-ring».", "register": "neutral", "situation": "social", "tags": ["mientras"]},
+    {"id": "b1-stories.while-i-was-cooking-the-alarm-went-off", "text": "While I was cooking, the smoke alarm went off.", "es": "Mientras cocinaba, saltó la alarma de humo.", "notes": "«go off» (una alarma) = saltar, sonar.", "explanation": "Para una anécdota en casa. «alarm» lleva el acento al final: «ə-LARM».", "register": "neutral", "situation": "social", "tags": ["mientras"]},
+    {"id": "b1-stories.we-were-having-dinner-when-the-phone-rang", "text": "We were having dinner when the phone rang.", "es": "Estábamos cenando cuando sonó el teléfono.", "notes": "«ring» → «rang» (pasado irregular).", "explanation": "Para contar una interrupción. «rang» acaba en «ng» nasal, sin «g» fuerte: «ræng».", "register": "neutral", "situation": "social", "tags": ["mientras"]},
+    {"id": "b1-stories.it-was-snowing", "text": "It was snowing, and everybody was wearing big coats.", "es": "Estaba nevando y todo el mundo llevaba abrigos gordos.", "explanation": "Para describir el ambiente al empezar una historia. «snowing» suena «SNOU-ing», sin «e» delante.", "register": "neutral", "situation": "social", "tags": ["mientras"]},
+    {"id": "b1-stories.i-wasnt-paying-attention", "text": "I wasn't paying attention, so I missed my stop.", "es": "No estaba atento, así que me pasé de parada.", "notes": "«pay attention» = prestar atención.", "explanation": "Para explicar un despiste. «attention» suena «ə-TEN-shən», con «sh».", "register": "neutral", "situation": "social", "tags": ["mientras"]},
+    {"id": "b1-stories.i-was-about-to-leave-when-my-boss-called", "text": "I was about to leave when my boss called.", "es": "Estaba a punto de irme cuando me llamó mi jefe.", "notes": "«be about to» = estar a punto de.", "explanation": "Para algo que te pilló justo al salir. «about to» se une: «ə-BAU-tə».", "register": "neutral", "situation": "social", "tags": ["mientras"]},
+    {"id": "b1-stories.i-dropped-my-phone", "text": "I dropped my phone, and the screen cracked.", "es": "Se me cayó el móvil y se rompió la pantalla.", "notes": "En inglés lo dice el que lo tira: «I dropped it» = se me cayó.", "explanation": "Para contar un pequeño accidente. «dropped» y «cracked» acaban en /t/: «drapt», «krækt».", "register": "neutral", "situation": "social", "tags": ["mientras"]},
+    {"id": "b1-stories.i-got-lost-on-the-way", "text": "I got lost on the way to the party.", "es": "Me perdí de camino a la fiesta.", "notes": "«get lost» = perderse.", "explanation": "Para explicar por qué llegaste tarde. «got lost» se une; la «t» de «got» casi no suena.", "register": "neutral", "situation": "social", "tags": ["mientras"]},
+    {"id": "b1-stories.i-was-so-embarrassed", "text": "I was so embarrassed!", "es": "¡Qué vergüenza pasé!", "notes": "Falso amigo: «embarrassed» = avergonzado; «embarazada» es «pregnant».", "explanation": "Al contar un momento incómodo. «embarrassed» suena «im-BÆ-rəst», acaba en /t/.", "register": "neutral", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.i-was-really-nervous-before-the-interview", "text": "I was really nervous before the interview.", "es": "Estaba muy nervioso antes de la entrevista.", "explanation": "Para hablar de cómo te sentías. «nervous» suena «NER-vəs», con «v» de labio.", "register": "neutral", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.the-movie-was-so-boring", "text": "The movie was so boring that I fell asleep.", "es": "La peli era tan aburrida que me quedé dormido.", "notes": "«boring» = aburrido (la cosa); «bored» = aburrido (tú).", "explanation": "Para opinar de algo que viste. «boring» suena «BO-ring», con «r» americana.", "register": "neutral", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.i-was-so-excited-about-the-trip", "text": "I was so excited about the trip.", "es": "Tenía muchísimas ganas del viaje.", "notes": "«excited» = ilusionado, con ganas; no significa «excitado».", "explanation": "Para contar la ilusión antes de algo. «excited» acaba en /ɪd/: «ik-SAI-rid», tres sílabas.", "register": "neutral", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.i-felt-a-bit-homesick", "text": "I felt a bit homesick the first month.", "es": "El primer mes eché un poco de menos mi casa.", "notes": "«homesick» = con morriña, añorando tu casa.", "explanation": "Para hablar de vivir fuera. «felt» acaba en «lt»: pronuncia las dos, «felt».", "register": "neutral", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.i-was-really-surprised-to-see-her", "text": "I was really surprised to see her there.", "es": "Me sorprendió mucho verla allí.", "explanation": "Para un encuentro inesperado. «surprised» acaba en /d/: «sər-PRAIZD».", "register": "neutral", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.i-was-so-relieved", "text": "I was so relieved when they found my bag.", "es": "Qué alivio cuando encontraron mi bolsa.", "notes": "«relieved» = aliviado.", "explanation": "Para el final de un mal rato. «relieved» suena «ri-LIIVD», con «ii» larga.", "register": "neutral", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.i-was-a-little-disappointed", "text": "I was a little disappointed with the food.", "es": "La comida me decepcionó un poco.", "notes": "«disappointed» = decepcionado.", "explanation": "Para una crítica suave. «disappointed» acaba en /ɪd/: «di-sə-POIN-tid».", "register": "neutral", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.im-so-proud-of-you", "text": "I'm so proud of you!", "es": "¡Estoy muy orgulloso de ti!", "notes": "Se dice «proud of», no «proud for».", "explanation": "Para felicitar a un amigo por un logro. «proud» suena «praud», con «au» como en «causa».", "register": "tu", "situation": "social", "tags": ["sentimientos"]},
+    {"id": "b1-stories.no-way-are-you-serious", "text": "No way! Are you serious?", "es": "¡Venga ya! ¿En serio?", "notes": "«No way!» = ¡no me digas!, ¡imposible!", "explanation": "Para reaccionar a una noticia increíble. «serious» suena «SII-ri-əs», con «ii» larga.", "register": "tu", "situation": "social", "tags": ["reaccionar"]},
+    {"id": "b1-stories.oh-no-that-sounds-awful", "text": "Oh no, that sounds awful!", "es": "¡Ay, no, qué horror!", "explanation": "Cuando alguien te cuenta algo malo. «awful» suena «A-fəl», con «a» abierta.", "register": "neutral", "situation": "social", "tags": ["reaccionar"]},
+    {"id": "b1-stories.that-sounds-amazing", "text": "That sounds amazing!", "es": "¡Qué pasada!", "explanation": "Cuando alguien te cuenta algo bueno. «amazing» suena «ə-MEI-zing», con «z» zumbante.", "register": "neutral", "situation": "social", "tags": ["reaccionar"]},
+    {"id": "b1-stories.im-so-sorry-to-hear-that", "text": "I'm so sorry to hear that.", "es": "Siento mucho oír eso.", "explanation": "Ante una mala noticia, con cualquiera. «hear» suena «hiər», igual que «here».", "register": "neutral", "situation": "social", "tags": ["reaccionar"]},
+    {"id": "b1-stories.and-then-what-happened", "text": "And then what happened?", "es": "¿Y entonces qué pasó?", "explanation": "Para animar a alguien a seguir contando. «then» con «th» suave, como una «d» entre los dientes.", "register": "neutral", "situation": "social", "tags": ["reaccionar"]},
+    {"id": "b1-stories.ive-never-done-anything-like-that", "text": "I've never done anything like that before.", "es": "Nunca había hecho nada parecido.", "notes": "Present perfect con «never» para experiencias de tu vida.", "explanation": "Para contar una experiencia nueva. «done» suena «dan», con «a» breve.", "register": "neutral", "situation": "social", "tags": ["experiencias"]},
+    {"id": "b1-stories.it-was-the-best-trip-ive-ever-been-on", "text": "It was the best trip I've ever been on.", "es": "Fue el mejor viaje de mi vida.", "notes": "Superlativo + present perfect con «ever» = «el mejor que he…».", "explanation": "Para hablar de un viaje genial. «ever» suena «E-vər», con «v» de labio.", "register": "neutral", "situation": "social", "tags": ["experiencias"]},
+    {"id": "b1-stories.one-of-the-scariest-moments-of-my-life", "text": "It was one of the scariest moments of my life.", "es": "Fue uno de los momentos de más miedo de mi vida.", "explanation": "Para una anécdota de susto. «scariest» empieza con «sk» sin «e» delante: «SKE-ri-əst».", "register": "neutral", "situation": "social", "tags": ["experiencias"]},
+    {"id": "b1-stories.ill-never-forget-it", "text": "I'll never forget it.", "es": "Nunca lo olvidaré.", "explanation": "Para cerrar una historia importante. «forget it» se une: «fər-GE-rit».", "register": "neutral", "situation": "social", "tags": ["experiencias"]},
+    {"id": "b1-stories.i-learned-a-lot-from-that-experience", "text": "I learned a lot from that experience.", "es": "Aprendí mucho de esa experiencia.", "explanation": "Para sacar una conclusión. «learned» acaba en /d/: «lernd», una sílaba.", "register": "neutral", "situation": "social", "tags": ["experiencias"]}
+  ],
+  "vocab": [
+    {"id": "b1-stories.story", "word": "story", "article": "a", "plural": "stories", "es": "la historia", "situation": "social", "image": "fluent:open-book"},
+    {"id": "b1-stories.anecdote", "word": "anecdote", "article": "an", "plural": "anecdotes", "es": "la anécdota", "notes": "Suena «Æ-nik-dout».", "situation": "social"},
+    {"id": "b1-stories.experience", "word": "experience", "article": "an", "plural": "experiences", "es": "la experiencia", "example": "b1-stories.i-learned-a-lot-from-that-experience", "situation": "social"},
+    {"id": "b1-stories.memory", "word": "memory", "article": "a", "plural": "memories", "es": "el recuerdo", "situation": "social"},
+    {"id": "b1-stories.moment", "word": "moment", "article": "a", "plural": "moments", "es": "el momento", "example": "b1-stories.one-of-the-scariest-moments-of-my-life", "situation": "social"},
+    {"id": "b1-stories.surprise", "word": "surprise", "article": "a", "plural": "surprises", "es": "la sorpresa", "situation": "social"},
+    {"id": "b1-stories.coincidence", "word": "coincidence", "article": "a", "plural": "coincidences", "es": "la casualidad", "notes": "«What a coincidence!» = ¡qué casualidad!", "situation": "social"},
+    {"id": "b1-stories.adventure", "word": "adventure", "article": "an", "plural": "adventures", "es": "la aventura", "situation": "social"},
+    {"id": "b1-stories.disaster", "word": "disaster", "article": "a", "plural": "disasters", "es": "el desastre", "example": "b1-stories.it-was-a-total-disaster", "situation": "social"},
+    {"id": "b1-stories.smoke-alarm", "word": "smoke alarm", "article": "a", "plural": "smoke alarms", "es": "la alarma de humo", "example": "b1-stories.while-i-was-cooking-the-alarm-went-off", "situation": "social"},
+    {"id": "b1-stories.embarrassed", "word": "embarrassed", "es": "avergonzado", "notes": "Falso amigo: no es «embarazada» («pregnant»).", "example": "b1-stories.i-was-so-embarrassed", "situation": "social", "image": "fluent:flushed-face"},
+    {"id": "b1-stories.nervous", "word": "nervous", "es": "nervioso", "example": "b1-stories.i-was-really-nervous-before-the-interview", "situation": "social", "image": "fluent:anxious-face-with-sweat"},
+    {"id": "b1-stories.bored", "word": "bored", "es": "aburrido (tú)", "notes": "«I'm bored» = me aburro; «I'm boring» = soy aburrido.", "situation": "social", "image": "fluent:yawning-face"},
+    {"id": "b1-stories.boring", "word": "boring", "es": "aburrido (algo)", "notes": "Para cosas: «a boring movie».", "example": "b1-stories.the-movie-was-so-boring", "situation": "social"},
+    {"id": "b1-stories.excited", "word": "excited", "es": "ilusionado, con ganas", "notes": "No significa «excitado».", "example": "b1-stories.i-was-so-excited-about-the-trip", "situation": "social"},
+    {"id": "b1-stories.surprised", "word": "surprised", "es": "sorprendido", "example": "b1-stories.i-was-really-surprised-to-see-her", "situation": "social", "image": "fluent:astonished-face"},
+    {"id": "b1-stories.relieved", "word": "relieved", "es": "aliviado", "example": "b1-stories.i-was-so-relieved", "situation": "social", "image": "fluent:relieved-face"},
+    {"id": "b1-stories.disappointed", "word": "disappointed", "es": "decepcionado", "example": "b1-stories.i-was-a-little-disappointed", "situation": "social", "image": "fluent:disappointed-face"},
+    {"id": "b1-stories.proud", "word": "proud", "es": "orgulloso", "notes": "Se dice «proud of».", "example": "b1-stories.im-so-proud-of-you", "situation": "social"},
+    {"id": "b1-stories.homesick", "word": "homesick", "es": "con morriña", "example": "b1-stories.i-felt-a-bit-homesick", "situation": "social"},
+    {"id": "b1-stories.scared", "word": "scared", "es": "asustado", "situation": "social", "image": "fluent:fearful-face"},
+    {"id": "b1-stories.upset", "word": "upset", "es": "disgustado, molesto", "notes": "Suena «ap-SET».", "situation": "social"},
+    {"id": "b1-stories.worried", "word": "worried", "es": "preocupado", "situation": "social", "image": "fluent:worried-face"},
+    {"id": "b1-stories.exhausted", "word": "exhausted", "es": "agotado", "notes": "Suena «ig-ZOS-tid».", "situation": "social", "image": "fluent:tired-face"},
+    {"id": "b1-stories.suddenly", "word": "suddenly", "es": "de repente", "example": "b1-stories.suddenly-the-lights-went-out", "situation": "social"},
+    {"id": "b1-stories.luckily", "word": "luckily", "es": "por suerte", "example": "b1-stories.luckily-a-stranger-helped-us", "situation": "social"},
+    {"id": "b1-stories.unfortunately", "word": "unfortunately", "es": "por desgracia", "example": "b1-stories.unfortunately-the-museum-was-closed", "situation": "social"},
+    {"id": "b1-stories.eventually", "word": "eventually", "es": "al final, finalmente", "notes": "Falso amigo: no es «eventualmente».", "situation": "social"},
+    {"id": "b1-stories.actually", "word": "actually", "es": "en realidad, la verdad", "notes": "Falso amigo: no es «actualmente» («currently»).", "example": "b1-stories.it-went-really-well", "situation": "social"},
+    {"id": "b1-stories.turn-out", "word": "turn out", "es": "resultar", "notes": "Phrasal verb: «It turned out (that)…» = resultó que…", "example": "b1-stories.it-turned-out-he-was-mayas-cousin", "situation": "social"},
+    {"id": "b1-stories.go-off", "word": "go off", "es": "saltar, sonar (una alarma)", "notes": "Phrasal verb: «The alarm went off».", "example": "b1-stories.while-i-was-cooking-the-alarm-went-off", "situation": "social"},
+    {"id": "b1-stories.run-into", "word": "run into", "es": "encontrarse con alguien (por casualidad)", "notes": "Phrasal verb: «I ran into Jordan» = me encontré con Jordan.", "example": "b1-friends.i-ran-into-jordan", "situation": "social"},
+    {"id": "b1-stories.get-lost", "word": "get lost", "es": "perderse", "notes": "«I got lost» = me perdí; entre amigos, «Get lost!» es «¡Lárgate!».", "example": "b1-stories.i-got-lost-on-the-way", "situation": "social"}
+  ],
+  "qa": [
+    {
+      "id": "b1-stories.qa.how-was-your-weekend",
+      "question": "Hey! How was your weekend?",
+      "questionEs": "¡Hola! ¿Qué tal el fin de semana?",
+      "accepted": [
+        {"text": "It was great! We went hiking by the lake.", "es": "¡Genial! Fuimos de excursión cerca del lago."},
+        {"text": "Pretty quiet. I stayed home and watched a movie.", "es": "Bastante tranquilo. Me quedé en casa y vi una peli."}
+      ],
+      "distractors": [
+        {"text": "It was great! We have gone hiking on Saturday.", "es": "¡Genial! Fuimos de excursión el sábado."},
+        {"text": "Was great. We go to the lake.", "es": "Genial. Fuimos al lago."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Con un momento terminado («on Saturday») va pasado simple; y el sujeto («It was») no se omite.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-stories.qa.you-look-tired",
+      "question": "You look tired. What happened?",
+      "questionEs": "Pareces cansado. ¿Qué te pasó?",
+      "accepted": [
+        {"text": "I missed the last train and had to walk home.", "es": "Perdí el último tren y tuve que volver andando."},
+        {"text": "My neighbor's dog was barking all night.", "es": "El perro del vecino estuvo ladrando toda la noche."}
+      ],
+      "distractors": [
+        {"text": "I lost the last train and I must walk home.", "es": "Perdí el último tren y tuve que volver andando."},
+        {"text": "I didn't slept well.", "es": "No dormí bien."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Un tren se «miss», no se «lose»; en pasado, «had to» (no «must»); tras «didn't» va el verbo base: «didn't sleep».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-stories.qa.power-went-out",
+      "question": "Where were you when the power went out?",
+      "questionEs": "¿Dónde estabas cuando se fue la luz?",
+      "accepted": [
+        {"text": "I was taking a shower, actually!", "es": "¡Pues me estaba duchando!"},
+        {"text": "I was at work, so I didn't notice.", "es": "Estaba en el trabajo, así que no me di cuenta."}
+      ],
+      "distractors": [
+        {"text": "I was take a shower.", "es": "Me estaba duchando."},
+        {"text": "I was in the work, so I didn't notice.", "es": "Estaba en el trabajo, así que no me di cuenta."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Pasado continuo = «was» + -ing («was taking»); «en el trabajo» es «at work», sin «the».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-stories.qa.first-day-feelings",
+      "question": "How did you feel on your first day at the new job?",
+      "questionEs": "¿Cómo te sentiste el primer día en el trabajo nuevo?",
+      "accepted": [
+        {"text": "I was really nervous, but everyone was nice.", "es": "Estaba muy nervioso, pero todo el mundo fue muy majo."},
+        {"text": "A little lost at first, but excited.", "es": "Un poco perdido al principio, pero con ganas."}
+      ],
+      "distractors": [
+        {"text": "I was very boring. I had nothing to do.", "es": "Estaba muy aburrido. No tenía nada que hacer."},
+        {"text": "I was nervous and very exciting.", "es": "Estaba nervioso y con muchas ganas."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Para cómo te sientes tú se usa -ed («bored», «excited»); con -ing («boring», «exciting») hablas de cómo eres o es algo.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-stories.qa.ever-lost-passport",
+      "question": "Have you ever lost your passport?",
+      "questionEs": "¿Alguna vez has perdido el pasaporte?",
+      "accepted": [
+        {"text": "No, never, thank goodness.", "es": "No, nunca, menos mal."},
+        {"text": "Yes, once. It was a nightmare!", "es": "Sí, una vez. ¡Fue una pesadilla!"}
+      ],
+      "distractors": [
+        {"text": "Yes, I have lost it last year.", "es": "Sí, lo perdí el año pasado."},
+        {"text": "No, I haven't lost it never.", "es": "No, nunca lo he perdido."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Con «last year» va pasado simple («I lost it»); en inglés no hay doble negación: «I've never lost it».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-stories.qa.broke-my-arm",
+      "question": "I fell off my bike and broke my arm last week.",
+      "questionEs": "Me caí de la bici y me rompí el brazo la semana pasada.",
+      "accepted": [
+        {"text": "Oh no! I'm so sorry. Are you okay now?", "es": "¡Ay, no! Cuánto lo siento. ¿Ya estás bien?"},
+        {"text": "Ouch! That sounds awful. How did it happen?", "es": "¡Uf! Qué horror. ¿Cómo pasó?"}
+      ],
+      "distractors": [
+        {"text": "Oh, how bad! Are you good now?", "es": "¡Ay, qué mal! ¿Ya estás bien?"},
+        {"text": "I'm sorry. How did it happened?", "es": "Lo siento. ¿Cómo pasó?"}
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«¡Qué mal!» no es «How bad!»: di «Oh no!» o «That sounds awful!»; tras «did» va el verbo base: «did it happen».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-stories.qa.got-the-job",
+      "question": "Guess what? I got the job at the startup!",
+      "questionEs": "¿A que no sabes qué? ¡Me han dado el trabajo en la startup!",
+      "accepted": [
+        {"text": "No way! Congratulations!", "es": "¡No me digas! ¡Enhorabuena!"},
+        {"text": "That's amazing! I'm so happy for you.", "es": "¡Qué pasada! Me alegro muchísimo por ti."}
+      ],
+      "distractors": [
+        {"text": "What a news! Congratulation!", "es": "¡Qué noticia! ¡Enhorabuena!"},
+        {"text": "That's amazing! I'm so proud for you.", "es": "¡Qué pasada! Estoy muy orgulloso de ti."}
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«news» es incontable («What great news!») y «Congratulations» siempre lleva -s; se dice «proud of you».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-stories.qa.what-happened-next",
+      "question": "And then what happened?",
+      "questionEs": "¿Y entonces qué pasó?",
+      "accepted": [
+        {"text": "Luckily, a stranger helped us find the hotel.", "es": "Por suerte, un desconocido nos ayudó a encontrar el hotel."},
+        {"text": "In the end, we took a taxi and got there on time.", "es": "Al final, cogimos un taxi y llegamos a tiempo."}
+      ],
+      "distractors": [
+        {"text": "Luckily, a stranger help us to find the hotel.", "es": "Por suerte, un desconocido nos ayudó a encontrar el hotel."},
+        {"text": "At the end, we took a taxi and got there on time.", "es": "Al final, cogimos un taxi y llegamos a tiempo."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "En pasado, «helped» lleva -ed; «al final» de una historia es «in the end» («at the end» necesita «of…»).",
+      "voice": "en-US-BrianNeural"
+    }
+  ]
+}
