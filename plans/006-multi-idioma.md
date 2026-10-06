@@ -257,7 +257,7 @@ Worktree setup: npm ci
 - Outcome: merged origin/main (XP everywhere, numbers in the mic, voice dictation) with 9 conflicts resolved for multi-language; recordListen lang required; Borrar progreso also clears daily-xp:<lang>; French numberWords 0–100, hundreds, 1000 · 2b18669 · verify ✓ strict ✓ 💻 · not checked: new UI from main in both themes, mic numbers on device
 
 ## T75 — Fix: Prepárate functions crash on Vercel (ES module load)
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent acec2518d18aaec3b · since 11:10Z)
 - Depends on: T74
 - Where: any
 - Goal: Production `/api/coach/*` answers 500 FUNCTION_INVOCATION_FAILED; Vercel logs: "Failed to load the ES module: /var/task/api/coach/usage.js. Make sure to set "type": "module" in the nearest package.json file or use the .mjs extension". Make every coach function load on Vercel's Node runtime (e.g. `api/package.json` with `"type": "module"` plus `.js` extensions on relative imports in `api/**`, or another documented fix), keeping `npm run dev:coach`/`start:coach` working.
@@ -358,3 +358,4 @@ Worktree setup: npm ci
 - 2026-10-06 10:39Z 💻 Hernán applied 20261006000000_league_multi.sql to the real project (db push)
 - 2026-10-06 10:40Z 💻 T74 launched · attempt 1 · agent a175ea6da93433afd
 - 2026-10-06 10:44Z 💻 T74 done · worktree-agent-a175ea6da93433afd → 2b18669 (merge) · verify ✓
+- 2026-10-06 11:10Z 💻 T75 launched · attempt 1 · agent acec2518d18aaec3b (prod /api/coach/* 500: ESM load failure)
