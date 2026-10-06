@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:11Z 💻
+- Updated: 2026-10-06 09:13Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T63/T59; then T61 and French units
-- Needs Hernán: -
+- Next step: integrate T59/T65; then T61, T64 and French units
+- Needs Hernán: npx supabase db push for 20261006000000_league_multi.sql only when T64 ships (old app keeps working either way)
 
 ## Shared contract (all tasks read this)
 
@@ -105,7 +105,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T63 — Liga SQL: global weekly sum, global daily cap, up to 10 groups
-- Status: running (attempt 1 · 💻 · agent a0e011abed6b45031 · since 09:05Z)
+- Status: done
 - Depends on: none
 - Where: pc (local Postgres for `npm run db:check` and `league:local`)
 - Goal: A new migration that ranks on the sum of all languages, caps daily XP across languages, and lets a player be in up to 10 groups, with new RPCs for the multi-group client and the old RPCs kept working for installed app versions.
@@ -115,7 +115,7 @@ Worktree setup: npm ci
   - `npm run db:check` → exit 0; smoke covers: join up to 10 groups and `too_many_groups` on the 11th, leave one group by code, weekly XP summed over it+fr, daily cap 2500 across languages, group/global rankings and podium with the new RPCs, old RPCs still answering (summed XP, earliest group), streak = max over stats, delete_me removes every membership.
   - `npm run league:local -- --reset && npm run league:seed && npm run league:local:check` → exit 0.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: migration 20261006000000_league_multi.sql: summed weekly XP, global daily cap, ≤10 groups (too_many_groups, not_in_group), league_status/ranking/podium, leave_group(code), old RPCs compatible; seed/check + docs · d1b5666 · verify ✓ db:check 214 ✓ league:local:check ✓ 💻 · not checked: real project (Hernán runs db push)
 
 ## T64 — Liga client: several groups and global rankings
 - Status: pending
@@ -132,7 +132,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T65 — French content: greetings, numbers and grammar cards
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent afbf6bfca2c5bb23b · since 09:13Z)
 - Depends on: T58
 - Where: any
 - Goal: Units `salut` (10) and `nombres` (12), the grammar cards and the grammar unit `grammaire` (90), per docs/brief-fr.md: basic everyday French, ~5-minute lessons ending with their Q&A, pronunciation tips for a Spanish speaker, numbers 70–99 and prices in their own lesson.
@@ -245,6 +245,7 @@ Worktree setup: npm ci
 
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
+- [ ] T63 @d1b5666 — code review (SQL) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 
@@ -268,3 +269,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:05Z 💻 T63 launched · attempt 1 · agent a0e011abed6b45031
 - 2026-10-06 09:11Z 💻 T58 done · worktree-agent-a8f0c979cd1939402 → 197c3ac · verify ✓
 - 2026-10-06 09:11Z 💻 T59 launched · attempt 1 · agent a6de474c4d54e2790
+- 2026-10-06 09:13Z 💻 T63 done · worktree-agent-a0e011abed6b45031 → d1b5666 · verify ✓
+- 2026-10-06 09:13Z 💻 T65 launched · attempt 1 · agent afbf6bfca2c5bb23b
