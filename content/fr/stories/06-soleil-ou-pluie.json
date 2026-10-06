@@ -1,0 +1,89 @@
+{
+  "id": "story.fr-soleil-ou-pluie",
+  "order": 6,
+  "title": "Soleil ou pluie?",
+  "titleEs": "¿Sol o lluvia?",
+  "description": "Los tres amigos planean el fin de semana según el tiempo.",
+  "emoji": "⛅",
+  "situation": "ocio",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Vendredi soir, les trois amis parlent du week-end dans la cuisine.", "es": "El viernes por la noche, los tres amigos hablan del fin de semana en la cocina." },
+    { "id": "s2", "text": "«Demain, il va faire beau. Ça vous dit, une randonnée?»", "es": "«Mañana va a hacer bueno. ¿Os apetece una excursión a pie?»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s3", "text": "«Bonne idée! J'adore la montagne.»", "es": "«¡Buena idea! Me encanta la montaña.»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s4", "text": "Pablo, lui, n'est pas très sportif. «Et s'il pleut?»", "es": "Pablo, en cambio, no es muy deportista. «¿Y si llueve?»" },
+    { "id": "s5", "text": "Camille regarde la météo sur son téléphone.", "es": "Camille mira el tiempo en el móvil." },
+    { "id": "s6", "text": "«Samedi, soleil et vingt degrés. Dimanche, pluie et vent.»", "es": "«El sábado, sol y veinte grados. El domingo, lluvia y viento.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s7", "text": "«D'accord pour samedi! Et dimanche, on va au cinéma?»", "es": "«¡Vale para el sábado! Y el domingo, ¿vamos al cine?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s8", "text": "«Parfait! Il y a un film espagnol au cinéma du quartier.»", "es": "«¡Perfecto! Ponen una película española en el cine del barrio.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s9", "text": "Samedi, ils marchent cinq heures sous un beau soleil.", "es": "El sábado caminan cinco horas bajo un sol espléndido." },
+    { "id": "s10", "text": "Le soir, Pablo est très fatigué, mais il est content.", "es": "Por la noche, Pablo está muy cansado, pero contento." },
+    { "id": "s11", "text": "Dimanche, il pleut toute la journée, comme prévu.", "es": "El domingo llueve todo el día, como estaba previsto." },
+    { "id": "s12", "text": "Au cinéma, Pablo comprend tout le film… parce qu'il est en espagnol!", "es": "En el cine, Pablo entiende toda la película… ¡porque es en español!" }
+  ],
+  "keywords": [
+    "loisirs.demain-il-va-faire-beau",
+    "loisirs.randonnee",
+    "loisirs.bonne-idee",
+    "loisirs.je-ne-suis-pas-tres-sportif",
+    "loisirs.soleil",
+    "loisirs.pluie",
+    "loisirs.vent",
+    "loisirs.cinema",
+    "loisirs.film",
+    "loisirs.il-pleut"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Il fait quel temps samedi?",
+      "es": "¿Qué tiempo hace el sábado?",
+      "options": [
+        { "text": "Il pleut.", "es": "Llueve." },
+        { "text": "Il fait beau.", "es": "Hace bueno." },
+        { "text": "Il neige.", "es": "Nieva." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Qu'est-ce que les amis font samedi?",
+      "es": "¿Qué hacen los amigos el sábado?",
+      "options": [
+        { "text": "Ils font une randonnée.", "es": "Hacen una excursión a pie." },
+        { "text": "Ils vont au cinéma.", "es": "Van al cine." },
+        { "text": "Ils jouent au foot.", "es": "Juegan al fútbol." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Ils marchent combien d'heures?",
+      "es": "¿Cuántas horas caminan?",
+      "options": [
+        { "text": "Deux heures.", "es": "Dos horas." },
+        { "text": "Cinq heures.", "es": "Cinco horas." },
+        { "text": "Vingt heures.", "es": "Veinte horas." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Pourquoi est-ce que Pablo comprend tout le film?",
+      "es": "¿Por qué Pablo entiende toda la película?",
+      "options": [
+        { "text": "Camille traduit tout.", "es": "Camille se lo traduce todo." },
+        { "text": "Le film est très court.", "es": "La película es muy corta." },
+        { "text": "Le film est en espagnol.", "es": "La película es en español." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "loisirs.randonnee", "distractors": ["guitare", "douche"] },
+    { "id": "g2", "sentence": "s6", "answer": "loisirs.soleil", "distractors": ["neige", "orage"] },
+    { "id": "g3", "sentence": "s7", "answer": "loisirs.cinema", "distractors": ["musée", "concert"] },
+    { "id": "g4", "sentence": "s11", "answer": "loisirs.il-pleut", "gap": "il pleut", "distractors": ["il neige", "il fait chaud"] },
+    { "id": "g5", "sentence": "s12", "answer": "loisirs.film", "distractors": ["livre", "menu"] }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "story.fr-julien-nest-pas-du-matin",
+  "order": 5,
+  "title": "Julien n'est pas du matin",
+  "titleEs": "Julien no es de mañanas",
+  "description": "Un día normal de Julien, del despertador al sofá.",
+  "emoji": "⏰",
+  "situation": "casa",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Julien habite avec Camille dans un petit appartement à la Croix-Rousse.", "es": "Julien vive con Camille en un piso pequeño en la Croix-Rousse." },
+    { "id": "s2", "text": "Il est infirmier à l'hôpital, et il n'est pas du matin.", "es": "Es enfermero en el hospital, y no es de mañanas." },
+    { "id": "s3", "text": "Son réveil sonne à six heures et demie, mais il reste au lit.", "es": "Su despertador suena a las seis y media, pero se queda en la cama." },
+    { "id": "s4", "text": "Camille, elle, se lève toujours tôt et prend une douche.", "es": "Camille, en cambio, siempre se levanta temprano y se ducha." },
+    { "id": "s5", "text": "«Julien, debout! Il est sept heures!»", "es": "«¡Julien, arriba! ¡Son las siete!»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s6", "text": "Il se lève enfin, s'habille vite et boit un café dans la cuisine.", "es": "Por fin se levanta, se viste deprisa y se toma un café en la cocina." },
+    { "id": "s7", "text": "Il part au travail à sept heures et quart, à vélo.", "es": "Sale para el trabajo a las siete y cuarto, en bici." },
+    { "id": "s8", "text": "Le soir, il rentre vers dix-neuf heures, très fatigué.", "es": "Por la tarde vuelve a casa hacia las siete, muy cansado." },
+    { "id": "s9", "text": "Camille fait la cuisine, et ils dînent ensemble devant la télé.", "es": "Camille cocina y cenan juntos delante de la tele." },
+    { "id": "s10", "text": "«Ce soir, c'est ton tour de faire la vaisselle!»", "es": "«¡Esta noche te toca fregar los platos!»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s11", "text": "«D'accord… Mais d'abord, cinq minutes sur le canapé!»", "es": "«Vale… ¡Pero primero, cinco minutos en el sofá!»", "voice": "fr-FR-HenriNeural" }
+  ],
+  "keywords": [
+    "maison.appartement",
+    "maison.je-ne-suis-pas-du-matin",
+    "maison.reveil",
+    "maison.lit",
+    "maison.toujours",
+    "maison.tot",
+    "maison.douche",
+    "maison.cuisine",
+    "maison.vaisselle",
+    "maison.canape"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Julien travaille où?",
+      "es": "¿Dónde trabaja Julien?",
+      "options": [
+        { "text": "À la librairie.", "es": "En la librería." },
+        { "text": "À l'hôpital.", "es": "En el hospital." },
+        { "text": "De chez lui.", "es": "Desde casa." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Qui se lève toujours tôt?",
+      "es": "¿Quién se levanta siempre temprano?",
+      "options": [
+        { "text": "Julien.", "es": "Julien." },
+        { "text": "Camille.", "es": "Camille." },
+        { "text": "Pablo.", "es": "Pablo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Comment est-ce que Julien va au travail?",
+      "es": "¿Cómo va Julien al trabajo?",
+      "options": [
+        { "text": "En bus.", "es": "En autobús." },
+        { "text": "À pied.", "es": "A pie." },
+        { "text": "À vélo.", "es": "En bici." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Qu'est-ce que Julien doit faire ce soir?",
+      "es": "¿Qué tiene que hacer Julien esta noche?",
+      "options": [
+        { "text": "La vaisselle.", "es": "Fregar los platos." },
+        { "text": "La cuisine.", "es": "Cocinar." },
+        { "text": "Les courses.", "es": "La compra." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "maison.appartement", "distractors": ["bureau", "restaurant"] },
+    { "id": "g2", "sentence": "s3", "answer": "maison.reveil", "distractors": ["canapé", "café"] },
+    { "id": "g3", "sentence": "s4", "answer": "maison.tot", "distractors": ["tard", "lentement"] },
+    { "id": "g4", "sentence": "s6", "answer": "maison.cuisine", "distractors": ["chambre", "salle de bain"] },
+    { "id": "g5", "sentence": "s10", "answer": "maison.vaisselle", "distractors": ["porte", "chaise"] },
+    { "id": "g6", "sentence": "s11", "answer": "maison.canape", "distractors": ["réveil", "café"] }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "story.fr-les-photos-de-madame-martin",
+  "order": 4,
+  "title": "Les photos de Madame Martin",
+  "titleEs": "Las fotos de Madame Martin",
+  "description": "Madame Martin le enseña a Pablo las fotos de su familia.",
+  "emoji": "🖼️",
+  "situation": "familia",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Dimanche après-midi, Madame Martin invite Pablo à prendre un thé.", "es": "El domingo por la tarde, Madame Martin invita a Pablo a tomar un té." },
+    { "id": "s2", "text": "Sur le mur du salon, il y a beaucoup de photos de famille.", "es": "En la pared del salón hay muchas fotos de familia." },
+    { "id": "s3", "text": "«Regardez, c'est mon fils, Thomas. Il habite à Paris.»", "es": "«Mire, este es mi hijo, Thomas. Vive en París.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s4", "text": "Thomas est grand et brun, et il porte des lunettes.", "es": "Thomas es alto y moreno, y lleva gafas." },
+    { "id": "s5", "text": "«Et voici ma petite-fille, Chloé. Elle a huit ans.»", "es": "«Y esta es mi nieta, Chloé. Tiene ocho años.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s6", "text": "Chloé est petite et blonde, avec de grands yeux bleus.", "es": "Chloé es bajita y rubia, con unos ojos azules muy grandes." },
+    { "id": "s7", "text": "«Elle est très drôle et très bavarde, comme sa grand-mère!»", "es": "«¡Es muy graciosa y muy habladora, como su abuela!»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s8", "text": "«Et vous, Pablo, vous avez des frères et sœurs?»", "es": "«Y usted, Pablo, ¿tiene hermanos?»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s9", "text": "«Oui, j'ai un frère et une sœur. Ils habitent à Séville.»", "es": "«Sí, tengo un hermano y una hermana. Viven en Sevilla.»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s10", "text": "Pablo montre une photo de ses parents sur son téléphone.", "es": "Pablo enseña una foto de sus padres en el móvil." },
+    { "id": "s11", "text": "«Ma famille me manque un peu.»", "es": "«Echo un poco de menos a mi familia.»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s12", "text": "«C'est normal. Mais maintenant, vous avez des voisins à Lyon!»", "es": "«Es normal. ¡Pero ahora tiene vecinos en Lyon!»", "voice": "fr-FR-EloiseNeural" }
+  ],
+  "keywords": [
+    "famille.fils",
+    "famille.lunettes",
+    {
+      "id": "story-fr-petite-fille",
+      "word": "petite-fille",
+      "article": "la",
+      "gender": "f",
+      "plural": "petites-filles",
+      "es": "la nieta",
+      "notes": "El nieto es «le petit-fils» y los nietos, «les petits-enfants». Ojo: «la petite fille», sin guion, es «la niña pequeña».",
+      "situation": "familia"
+    },
+    "famille.blond",
+    "famille.yeux",
+    "famille.bavard",
+    "famille.frere",
+    "famille.parents",
+    "famille.ma-famille-me-manque",
+    "famille.voisin"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Où habite Thomas?",
+      "es": "¿Dónde vive Thomas?",
+      "options": [
+        { "text": "À Lyon.", "es": "En Lyon." },
+        { "text": "À Paris.", "es": "En París." },
+        { "text": "À Séville.", "es": "En Sevilla." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Chloé a quel âge?",
+      "es": "¿Cuántos años tiene Chloé?",
+      "options": [
+        { "text": "Huit ans.", "es": "Ocho años." },
+        { "text": "Dix-huit ans.", "es": "Dieciocho años." },
+        { "text": "Quatre-vingts ans.", "es": "Ochenta años." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Pablo a combien de frères et sœurs?",
+      "es": "¿Cuántos hermanos tiene Pablo?",
+      "options": [
+        { "text": "Un frère.", "es": "Un hermano." },
+        { "text": "Deux sœurs.", "es": "Dos hermanas." },
+        { "text": "Un frère et une sœur.", "es": "Un hermano y una hermana." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Qu'est-ce que Madame Martin et Pablo boivent?",
+      "es": "¿Qué toman Madame Martin y Pablo?",
+      "options": [
+        { "text": "Un café.", "es": "Un café." },
+        { "text": "Un thé.", "es": "Un té." },
+        { "text": "Un chocolat chaud.", "es": "Un chocolate caliente." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "famille.fils", "distractors": ["frère", "père"] },
+    { "id": "g2", "sentence": "s4", "answer": "famille.lunettes", "distractors": ["chaussettes", "casquettes"] },
+    { "id": "g3", "sentence": "s5", "answer": "story-fr-petite-fille", "distractors": ["grand-mère", "voisine"] },
+    { "id": "g4", "sentence": "s6", "answer": "famille.blond", "gap": "blonde", "distractors": ["brune", "rousse"] },
+    { "id": "g5", "sentence": "s11", "answer": "famille.ma-famille-me-manque", "gap": "Ma famille me manque", "distractors": ["Ma famille me plaît", "Mon travail me manque"] }
+  ]
+}

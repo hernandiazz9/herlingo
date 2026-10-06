@@ -1,0 +1,101 @@
+{
+  "id": "story.fr-la-librairie-de-camille",
+  "order": 2,
+  "title": "La librairie de Camille",
+  "titleEs": "La librería de Camille",
+  "description": "Pablo visita la librería de Camille: horarios, precios y un número de teléfono.",
+  "emoji": "📚",
+  "situation": "numeros",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Mardi, Pablo va à la librairie de Camille, dans le centre.", "es": "El martes, Pablo va a la librería de Camille, en el centro." },
+    { "id": "s2", "text": "Il est neuf heures et demie, et la librairie est encore fermée.", "es": "Son las nueve y media y la librería todavía está cerrada." },
+    { "id": "s3", "text": "«Excusez-moi, madame, ça ouvre à quelle heure?»", "es": "«Perdone, señora, ¿a qué hora abre?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s4", "text": "«À dix heures, et ça ferme à dix-neuf heures.»", "es": "«A las diez, y cierra a las siete de la tarde.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s5", "text": "Pablo attend un quart d'heure au café d'en face.", "es": "Pablo espera un cuarto de hora en el café de enfrente." },
+    { "id": "s6", "text": "À dix heures, Camille ouvre la porte avec un grand sourire.", "es": "A las diez, Camille abre la puerta con una gran sonrisa." },
+    { "id": "s7", "text": "«Bonjour, Camille! Je voudrais un livre facile en français.»", "es": "«¡Buenos días, Camille! Querría un libro fácil en francés.»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s8", "text": "Camille lui montre un petit roman pour les étudiants.", "es": "Camille le enseña una novela corta para estudiantes." },
+    { "id": "s9", "text": "«Il est parfait! Ça coûte combien?»", "es": "«¡Es perfecta! ¿Cuánto cuesta?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s10", "text": "«Quatorze euros cinquante. Tu paies par carte ou en espèces?»", "es": "«Catorce euros con cincuenta. ¿Pagas con tarjeta o en efectivo?»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s11", "text": "«Par carte. Et c'est quoi, ton numéro de téléphone?»", "es": "«Con tarjeta. Y oye, ¿cuál es tu número de teléfono?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s12", "text": "Camille écrit son numéro dans le livre: zéro six, vingt-deux, quinze…", "es": "Camille escribe su número en el libro: cero seis, veintidós, quince…" },
+    { "id": "s13", "text": "«Samedi, on dîne chez nous à vingt heures. Tu viens?»", "es": "«El sábado cenamos en casa a las ocho. ¿Te vienes?»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s14", "text": "«Avec plaisir! À samedi!»", "es": "«¡Con mucho gusto! ¡Hasta el sábado!»", "voice": "fr-FR-HenriNeural" }
+  ],
+  "keywords": [
+    {
+      "id": "story-fr-librairie",
+      "word": "librairie",
+      "article": "la",
+      "gender": "f",
+      "plural": "librairies",
+      "es": "la librería",
+      "notes": "Ojo: «la librairie» es la tienda donde compras libros; la biblioteca es «la bibliothèque».",
+      "situation": "compras",
+      "image": "fluent:books"
+    },
+    "nombres.ca-ouvre-a-quelle-heure",
+    "nombres.quart",
+    "nombres.ca-coute-combien",
+    "nombres.euro",
+    "nombres.carte",
+    "nombres.en-especes",
+    "nombres.cest-quoi-ton-numero",
+    "nombres.samedi",
+    "salut.avec-plaisir"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "À quelle heure ouvre la librairie?",
+      "es": "¿A qué hora abre la librería?",
+      "options": [
+        { "text": "À neuf heures et demie.", "es": "A las nueve y media." },
+        { "text": "À dix heures.", "es": "A las diez." },
+        { "text": "À dix-neuf heures.", "es": "A las siete de la tarde." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Qu'est-ce que Pablo achète?",
+      "es": "¿Qué compra Pablo?",
+      "options": [
+        { "text": "Un livre facile en français.", "es": "Un libro fácil en francés." },
+        { "text": "Un café et un croissant.", "es": "Un café y un cruasán." },
+        { "text": "Un dictionnaire d'espagnol.", "es": "Un diccionario de español." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Le livre coûte combien?",
+      "es": "¿Cuánto cuesta el libro?",
+      "options": [
+        { "text": "Quatre euros cinquante.", "es": "Cuatro euros con cincuenta." },
+        { "text": "Quarante euros.", "es": "Cuarenta euros." },
+        { "text": "Quatorze euros cinquante.", "es": "Catorce euros con cincuenta." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Quand est-ce que Pablo dîne chez Camille?",
+      "es": "¿Cuándo cena Pablo en casa de Camille?",
+      "options": [
+        { "text": "Mardi soir.", "es": "El martes por la noche." },
+        { "text": "Samedi soir.", "es": "El sábado por la noche." },
+        { "text": "Dimanche midi.", "es": "El domingo a mediodía." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "nombres.ca-ouvre-a-quelle-heure", "gap": "ça ouvre à quelle heure", "distractors": ["ça coûte combien", "il fait quel temps"] },
+    { "id": "g2", "sentence": "s5", "answer": "nombres.quart", "distractors": ["jour", "mois"] },
+    { "id": "g3", "sentence": "s10", "answer": "nombres.euro", "gap": "euros", "distractors": ["heures", "minutes"] },
+    { "id": "g4", "sentence": "s11", "answer": "nombres.carte", "distractors": ["chaise", "porte"] },
+    { "id": "g5", "sentence": "s14", "answer": "nombres.samedi", "distractors": ["hier", "midi"] }
+  ]
+}
