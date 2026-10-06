@@ -9,10 +9,10 @@ Worktree setup: npm ci
 
 ## Now
 - Updated: 2026-10-06 12:15Z 💻
-- Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 2ce823e
-- Next step: T97 still running (agent af3986671c9ff79ca) — integrate it; then T99 + B1 units T100–T104
-- Needs Hernán: usage limit reached 2026-10-06; resume later
+- Writer: released 12:15Z by 💻 desktop (usage limit)
+- Branch: plan-008-ingles @ d91ede2
+- Next step: launch T99 (A2 stories 7–12) + B1 units T100–T104
+- Needs Hernán: resume when usage resets
 
 ## Shared contract (all tasks read this)
 
@@ -116,7 +116,7 @@ Worktree setup: npm ci
 - Outcome: units a2-city (Chicago: Ventra, 'L', Uber) + a2-health (drugstore, urgent care vs ER, 911): 10 lessons, 91 phrases, 61 vocab, 18 Q&A · 0987f5c · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T97 — English A2: 12 dialogues
-- Status: running (attempt 1 · 💻 · agent af3986671c9ff79ca · since 12:09Z)
+- Status: done
 - Depends on: T92, T93, T94, T95, T96
 - Where: any
 - Goal: The 12 A2 dialogues listed in docs/brief-en.md (`level: "A2"`, `unit`, avatars, register-honest options with Spanish feedback).
@@ -126,7 +126,7 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓; 12 A2 dialogues (6–10 turns, ≥ 3 learner turns, 3 options each).
   - `npm run verify` → exit 0
   - Hand check (PC): play two English dialogues with device voices.
-- Outcome:
+- Outcome: 12 A2 dialogues (9 turns, 4 learner turns × 3 options, Spanish-speaker mistakes as distractors) · d91ede2 · verify ✓ 💻 · not checked: playing with device voices, avatars (T109)
 
 ## T98 — English A2: stories 1–6
 - Status: done
@@ -296,9 +296,11 @@ Worktree setup: npm ci
 - [ ] T96 @0987f5c — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T95 @ffa24c6 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T98 @2ce823e — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T97 @d91ede2 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T97 @d91ede2 — play two English A2 dialogues with device voices (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: English (`en`) is the third pack, American English (en-US voices and speechLocale, US spelling and formats); content only, generic code where the schema needs it; product note in docs/brief-en.md (docs/brief.md not edited); never lose on-device data, it/fr content and audio byte-identical. (Hernán)
@@ -337,3 +339,4 @@ Worktree setup: npm ci
 - 2026-10-06 12:09Z 💻 T97 launched · attempt 1 · agent af3986671c9ff79ca
 - 2026-10-06 12:09Z 💻 T98 launched · attempt 1 · agent a5ade6dd27df593cd
 - 2026-10-06 12:15Z 💻 T98 done · worktree-agent-a5ade6dd27df593cd → 2ce823e · verify ✓
+- 2026-10-06 12:15Z 💻 T97 done · worktree-agent-af3986671c9ff79ca → d91ede2 · verify ✓; usage limit, writer released
