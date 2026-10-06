@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 12:15Z 💻
-- Writer: released 12:15Z by 💻 desktop (usage limit)
+- Updated: 2026-10-06 13:09Z 💻
+- Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
 - Branch: plan-008-ingles @ d91ede2
-- Next step: launch T99 (A2 stories 7–12) + B1 units T100–T104
-- Needs Hernán: resume when usage resets
+- Next step: integrate T99/T100; then B1 units T101–T104
+- Needs Hernán: -
 
 ## Shared contract (all tasks read this)
 
@@ -141,7 +141,7 @@ Worktree setup: npm ci
 - Outcome: A2 stories 1–6 (Pablo García visits Maya and Jordan in Logan Square), no ⚠; T99 outline in Decisions · 2ce823e · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T99 — English A2: stories 7–12
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent aff36bf9f0b5fb64f · since 13:09Z)
 - Depends on: T98
 - Where: any
 - Goal: A2 stories 7–12 (past simple in the last ones), continuing T98's cast and reusing its inline key words by id.
@@ -153,7 +153,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T100 — English B1: friends, plans and B1 grammar
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a31a5f0d322050405 · since 13:09Z)
 - Depends on: T90
 - Where: any
 - Goal: Units `b1-friends` (110), `b1-plans` (112) and `b1-grammar` (190) with the 10 B1 grammar cards, per docs/brief-en.md; phrasal verbs explained in `notes`.
@@ -315,6 +315,7 @@ Worktree setup: npm ci
 - 2026-10-06 plan: Base branch `plan-008-ingles` from main @ 1c8aab4, in its own worktree `.claude/worktrees/plan-008`: plan 006 (main checkout) and plan 007 voice (`.claude/worktrees/plan-007`, T76–T84) run in other sessions at the same time; this plan was drafted as 007 and renumbered to 008 / T90+ to avoid collisions. Hybrid push policy: the writer pushes the plan branch after every integrated task; never main, no PR, merge or deploy without Hernán's OK. (orchestrator)
 - 2026-10-06 T92: grammar cards live in the grammar unit's own grammar array (not extras) so they get the level; T100 scope updated accordingly. (orchestrator)
 - 2026-10-06 T98: outline for A2 stories 7–12 (T99): 7 coffee shop + deep-dish pizza, tip; 8 winter coat + returning a sweater; 9 L train to the Loop, lost, the lake; 10 cold, pharmacy via Mrs. Carter; 11 urgent care + telling his week (past simple); 12 goodbye at O'Hare (past simple), sets up B1. Voices: narrator Ava, Pablo Andrew, Maya/Mrs. Carter Emma (never together), Jordan Brian. (agent)
+- 2026-10-06 plan: Hernán: plan 008 runs entirely on the Mac (this session), not in the cloud. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
@@ -340,3 +341,4 @@ Worktree setup: npm ci
 - 2026-10-06 12:09Z 💻 T98 launched · attempt 1 · agent a5ade6dd27df593cd
 - 2026-10-06 12:15Z 💻 T98 done · worktree-agent-a5ade6dd27df593cd → 2ce823e · verify ✓
 - 2026-10-06 12:15Z 💻 T97 done · worktree-agent-af3986671c9ff79ca → d91ede2 · verify ✓; usage limit, writer released
+- 2026-10-06 13:09Z 💻 resumed on 💻 (Hernán: all on the Mac); T99 launched · agent aff36bf9f0b5fb64f; T100 launched · agent a31a5f0d322050405
