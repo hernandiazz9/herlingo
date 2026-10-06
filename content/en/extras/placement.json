@@ -1,0 +1,107 @@
+{
+  "placement": [
+    {
+      "id": "placement.en-a2-repeat",
+      "level": "A2",
+      "prompt": "En una tienda no has oído bien el precio. ¿Qué significa?",
+      "text": "Sorry, could you repeat that? Is it thirteen or thirty dollars?",
+      "options": ["Perdona, ¿puedes hablar más despacio? ¿Son tres o treinta dólares?", "Perdona, ¿puedes repetirlo? ¿Son trece o treinta dólares?", "Perdona, no entiendo. ¿Son treinta o trescientos dólares?", "Perdona, ¿puedes repetirlo? ¿Son quince o cincuenta dólares?"],
+      "answer": 1,
+      "lessons": ["a2-hello.l.repeat", "a2-numbers.l.zero-twenty", "a2-numbers.l.age-phone", "a2-numbers.l.prices"]
+    },
+    {
+      "id": "placement.en-a2-about-me",
+      "level": "A2",
+      "prompt": "¿Cómo dices que eres programador, que trabajas desde casa y que te levantas a las siete?",
+      "options": ["I am programmer. I work from home and I get up at seven.", "I'm a programmer. I work from home and I go to bed at seven.", "I'm a programmer. I work from home and I get up at seven.", "I'm a programmer. I'm working from house and I get up to seven."],
+      "answer": 2,
+      "lessons": ["a2-about-me.l.work", "a2-daily.l.morning"]
+    },
+    {
+      "id": "placement.en-a2-check",
+      "level": "A2",
+      "prompt": "Has terminado de cenar en un restaurante de Chicago. ¿Cómo pides la cuenta?",
+      "options": ["Can we get the account, please?", "Can we get the menu, please?", "Can we get a box, please?", "Can we get the check, please?"],
+      "answer": 3,
+      "lessons": ["a2-food.l.check-tip"]
+    },
+    {
+      "id": "placement.en-a2-grocery-store",
+      "level": "A2",
+      "prompt": "Preguntas por un supermercado y te contestan. ¿Qué significa?",
+      "text": "Excuse me, is there a grocery store near here? Yes, go straight for two blocks. It's on your left.",
+      "options": ["Perdona, ¿hay un supermercado cerca? Sí, sigue recto dos manzanas. Está a tu izquierda.", "Perdona, ¿hay una farmacia cerca? Sí, sigue recto dos manzanas. Está a tu derecha.", "Perdona, ¿dónde está el supermercado? Gira a la izquierda en la segunda calle.", "Perdona, ¿hay un supermercado cerca? Sí, gira a la izquierda en el semáforo. Está en la esquina."],
+      "answer": 0,
+      "lessons": ["a2-shopping.l.supermarket", "a2-city.l.asking-the-way", "a2-city.l.directions"]
+    },
+    {
+      "id": "placement.en-a2-late-check-in",
+      "level": "A2",
+      "prompt": "Llamas al hotel desde el aeropuerto. ¿Qué significa?",
+      "text": "My flight is delayed, so I'll arrive late. Can I still check in tonight?",
+      "options": ["Mi vuelo está cancelado, así que llegaré mañana. ¿Puedo hacer el check-in esta noche?", "Mi vuelo va con retraso, así que llegaré tarde. ¿Puedo dejar la habitación esta noche?", "Mi vuelo va con retraso, así que llegaré tarde. ¿Puedo hacer el check-in esta noche igualmente?", "Mi vuelo sale antes, así que llegaré pronto. ¿Puedo hacer el check-in ya?"],
+      "answer": 2,
+      "lessons": ["a2-airport.l.gate", "a2-hotel.l.check-in"]
+    },
+    {
+      "id": "placement.en-a2-sore-throat",
+      "level": "A2",
+      "prompt": "En el médico: ¿cómo dices que te duele la garganta y que tienes fiebre?",
+      "options": ["It hurts me the throat and I have a fever.", "I have a sore throat and a fever.", "I have a sore throat and a cough.", "I have a sour throat and I am fever."],
+      "answer": 1,
+      "lessons": ["a2-health.l.body", "a2-health.l.feeling-sick"]
+    },
+    {
+      "id": "placement.en-b1-hang-out",
+      "level": "B1",
+      "prompt": "Una chica que has conocido en una fiesta te dice esto. ¿Qué significa?",
+      "text": "We should hang out sometime! Are you free on Saturday night?",
+      "options": ["¡Deberíamos quedar algún día! ¿Estás libre el sábado por la noche?", "¡Deberíamos irnos ya! ¿Estás libre el sábado por la noche?", "¡Deberíamos quedar algún día! ¿Estás libre el domingo por la mañana?", "¡Deberíamos llamarnos más! ¿Trabajas el sábado por la noche?"],
+      "answer": 0,
+      "lessons": ["b1-friends.l.keep-in-touch", "b1-plans.l.invite"]
+    },
+    {
+      "id": "placement.en-b1-standup",
+      "level": "B1",
+      "prompt": "En la videollamada del daily, un compañero dice esto. ¿Qué significa?",
+      "text": "Sorry, I was on mute. Yesterday I finished the login page, and today I'm going to fix the checkout bug.",
+      "options": ["Perdón, se me cortó la conexión. Ayer empecé la página de login y hoy voy a probar el pago.", "Perdón, tenía el micro apagado. Ayer terminé la página de login y hoy voy a arreglar el fallo del pago.", "Perdón, tenía el micro apagado. Hoy termino la página de login y mañana arreglo el fallo del pago.", "Perdón, tenía la cámara apagada. Ayer terminé la página de login y hoy voy a revisar el fallo del pago."],
+      "answer": 1,
+      "lessons": ["b1-office.l.standup", "b1-calls.l.video"]
+    },
+    {
+      "id": "placement.en-b1-crashing",
+      "level": "B1",
+      "prompt": "Llamas a soporte técnico. ¿Cómo dices que la app se cierra todo el rato y que ayer funcionaba bien?",
+      "options": ["The app keeps to crash. It worked fine tomorrow.", "The app is always crashing. It has worked fine yesterday.", "The app keeps crashing. It's working fine since yesterday.", "The app keeps crashing. It was working fine yesterday."],
+      "answer": 3,
+      "lessons": ["b1-tech.l.problem", "b1-tech.l.support"]
+    },
+    {
+      "id": "placement.en-b1-bank-account",
+      "level": "B1",
+      "prompt": "En el banco, recién llegado a Chicago. ¿Qué significa?",
+      "text": "I just moved here, so I'd like to open a checking account. Here's my lease as proof of address.",
+      "options": ["Acabo de mudarme aquí, así que querría abrir una cuenta corriente. Aquí tienes mi contrato de alquiler como justificante de domicilio.", "Me voy a mudar pronto, así que querría cerrar mi cuenta corriente. Aquí tienes mi contrato de alquiler.", "Acabo de mudarme aquí, así que querría abrir una cuenta de ahorro. Aquí tienes mi pasaporte como justificante de domicilio.", "Acabo de mudarme aquí, así que querría pedir un préstamo. Aquí tienes mi contrato de alquiler como garantía."],
+      "answer": 0,
+      "lessons": ["b1-money.l.account", "b1-renting.l.lease"]
+    },
+    {
+      "id": "placement.en-b1-experience",
+      "level": "B1",
+      "prompt": "En una entrevista de trabajo: ¿cómo dices que llevas seis años trabajando como desarrollador?",
+      "options": ["I'm a software developer since six years.", "I've been a software developer since six years.", "I've been a software developer for six years.", "I was a software developer for six years ago."],
+      "answer": 2,
+      "lessons": ["b1-interview.l.about-you"]
+    },
+    {
+      "id": "placement.en-b1-canceled-flight",
+      "level": "B1",
+      "prompt": "Un amigo te cuenta su viaje. ¿Qué le pasó?",
+      "text": "I was waiting at the gate when they canceled my flight. Luckily, they rebooked me on the next one.",
+      "options": ["Iba de camino a la puerta cuando le cancelaron el vuelo, y tuvo que comprar otro billete.", "Estaba esperando en la puerta cuando le retrasaron el vuelo, y por suerte salió al día siguiente.", "Esperó en la puerta hasta que le cancelaron el vuelo, y no había más vuelos ese día.", "Estaba esperando en la puerta de embarque cuando le cancelaron el vuelo, y por suerte le cambiaron al siguiente."],
+      "answer": 3,
+      "lessons": ["b1-trips.l.delays", "b1-trips.l.rebooking", "b1-stories.l.while", "b1-stories.l.telling-a-story"]
+    }
+  ]
+}
