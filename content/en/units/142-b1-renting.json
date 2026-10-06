@@ -1,0 +1,524 @@
+{
+  "id": "b1-renting",
+  "order": 142,
+  "title": "Vivienda: alquilar, facturas, averías y vecinos",
+  "description": "Buscar piso en Chicago, entender el contrato y la fianza, dar de alta servicios, avisar de averías al casero y convivir con los vecinos.",
+  "emoji": "🔑",
+  "situation": "vivienda",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-renting.l.apartment-hunting",
+      "title": "Buscar piso",
+      "items": [
+        "a2-daily.apartment",
+        "b1-renting.listing",
+        "b1-renting.im-looking-for-a-one-bedroom",
+        "b1-renting.studio",
+        "b1-renting.landlord",
+        "b1-renting.im-calling-about-the-apartment",
+        "b1-renting.is-it-still-available",
+        "b1-renting.rent",
+        "b1-renting.how-much-is-the-rent",
+        "b1-renting.utilities",
+        "b1-renting.are-utilities-included",
+        "b1-renting.when-can-i-come-and-see-it",
+        "b1-renting.furniture",
+        "b1-renting.is-it-furnished",
+        "b1-renting.pet",
+        "b1-renting.are-pets-allowed",
+        "b1-renting.laundry-room",
+        "b1-renting.is-there-laundry-in-the-building",
+        "b1-renting.how-far-is-it-from-the-l",
+        "a2-shopping.ill-take-it",
+        "b1-renting.qa.calling-about-the-listing",
+        "b1-renting.qa.what-kind-of-place"
+      ]
+    },
+    {
+      "id": "b1-renting.l.lease",
+      "title": "El contrato y la fianza",
+      "items": [
+        "b1-renting.lease",
+        "b1-renting.tenant",
+        "b1-renting.how-long-is-the-lease",
+        "b1-renting.is-it-a-twelve-month-lease",
+        "b1-renting.security-deposit",
+        "b1-renting.how-much-is-the-security-deposit",
+        "b1-renting.when-is-the-rent-due",
+        "b1-renting.application",
+        "b1-renting.credit-check",
+        "b1-renting.do-you-need-a-credit-check",
+        "b1-renting.i-dont-have-a-credit-history-yet",
+        "b1-renting.pay-stub",
+        "b1-renting.can-i-read-the-lease-before-i-sign",
+        "b1-renting.move-in",
+        "b1-renting.when-can-i-move-in",
+        "b1-renting.move-out",
+        "b1-renting.will-i-get-my-deposit-back",
+        "b1-renting.qa.when-would-you-like-to-move-in",
+        "b1-renting.qa.credit-check"
+      ]
+    },
+    {
+      "id": "b1-renting.l.bills",
+      "title": "Facturas, internet y servicios",
+      "items": [
+        "a2-hotel.bill",
+        "b1-renting.electricity",
+        "b1-renting.who-pays-for-electricity",
+        "b1-renting.how-much-is-the-electric-bill",
+        "b1-renting.internet-provider",
+        "b1-grammar.set-up",
+        "b1-renting.i-need-to-set-up-the-internet",
+        "b1-renting.technician",
+        "b1-renting.when-can-the-technician-come",
+        "b1-renting.charge",
+        "b1-renting.my-bill-is-much-higher-than-usual",
+        "b1-renting.i-think-ive-been-charged-twice",
+        "a2-hotel.wifi-isnt-working",
+        "b1-renting.the-internet-keeps-cutting-out",
+        "b1-renting.power-outage",
+        "b1-renting.the-power-went-out-last-night",
+        "b1-renting.qa.internet-company",
+        "b1-renting.qa.everything-ok-with-your-bill"
+      ]
+    },
+    {
+      "id": "b1-renting.l.repairs",
+      "title": "Averías y reparaciones",
+      "items": [
+        "b1-renting.repair",
+        "b1-renting.heating",
+        "b1-renting.the-heating-isnt-working",
+        "a2-hotel.sink",
+        "b1-renting.leak",
+        "b1-renting.the-kitchen-sink-is-leaking",
+        "a2-hotel.toilet",
+        "b1-renting.plumber",
+        "b1-renting.the-toilet-is-clogged",
+        "b1-renting.ceiling",
+        "b1-renting.theres-water-coming-through-the-ceiling",
+        "b1-renting.fridge",
+        "b1-renting.the-fridge-stopped-working",
+        "b1-renting.smoke-detector",
+        "b1-renting.the-smoke-detector-keeps-beeping",
+        "b1-renting.could-you-send-someone-to-fix-it",
+        "b1-renting.when-can-someone-come-and-take-a-look",
+        "b1-renting.ive-reported-it-twice",
+        "b1-renting.super",
+        "b1-renting.come-by",
+        "b1-renting.the-super-will-come-by",
+        "b1-renting.qa.landlord-message",
+        "b1-renting.qa.will-you-be-home"
+      ]
+    },
+    {
+      "id": "b1-renting.l.neighbors",
+      "title": "Los vecinos",
+      "items": [
+        "a2-daily.neighbor",
+        "b1-renting.hi-i-just-moved-in-next-door",
+        "b1-renting.let-me-know-if-you-ever-need-anything",
+        "b1-renting.stairs",
+        "b1-renting.upstairs",
+        "b1-renting.the-neighbors-upstairs-are-really-noisy",
+        "a2-hotel.noise",
+        "b1-renting.sorry-to-bother-you",
+        "b1-renting.could-you-keep-it-down",
+        "b1-renting.sorry-i-didnt-realize-it-was-so-loud",
+        "b1-renting.mailbox",
+        "b1-renting.package",
+        "b1-renting.a-package-came-for-you",
+        "b1-renting.plant",
+        "b1-renting.could-you-water-my-plants",
+        "b1-renting.trash",
+        "b1-renting.when-is-trash-day",
+        "b1-renting.recycling",
+        "b1-renting.where-do-i-put-the-recycling",
+        "b1-renting.qa.new-neighbor",
+        "b1-renting.qa.music-too-loud"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b1-renting.im-looking-for-a-one-bedroom", "text": "I'm looking for a one-bedroom apartment.", "es": "Busco un piso de un dormitorio.", "explanation": "Para empezar a hablar con una agencia o un casero. «apartment» = «ə-PART-mənt», acento en «PART».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.im-calling-about-the-apartment", "text": "Hi, I'm calling about the apartment on Halsted Street.", "es": "Hola, llamo por el piso de Halsted Street.", "notes": "Se dice «calling about», no «calling for».", "explanation": "Para responder por teléfono a un anuncio. «calling» con «l» oscura: «KAA-ling».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.is-it-still-available", "text": "Is it still available?", "es": "¿Sigue disponible?", "explanation": "La primera pregunta al ver un anuncio. «available» = «ə-VEI-lə-bəl», acento en «VEI».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.how-much-is-the-rent", "text": "How much is the rent per month?", "es": "¿Cuánto es el alquiler al mes?", "explanation": "Para preguntar el precio. «rent» con «e» corta y la «nt» final bien clara.", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.are-utilities-included", "text": "Are utilities included in the rent?", "es": "¿Los gastos están incluidos en el alquiler?", "notes": "«utilities» = luz, agua, gas y a veces la basura.", "explanation": "Pregunta clave antes de alquilar. «utilities» = «iu-TI-lə-riz», con «t» suave.", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.when-can-i-come-and-see-it", "text": "When can I come and see it?", "es": "¿Cuándo puedo ir a verlo?", "notes": "Se dice «come», no «go», cuando vas a donde está la otra persona.", "explanation": "Para concertar una visita. «come and see» se une: «KAM-ən-SII».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.is-it-furnished", "text": "Is it furnished?", "es": "¿Está amueblado?", "explanation": "Muchos pisos en EE. UU. se alquilan vacíos. «furnished» = «FER-nisht»: la «-ed» suena /t/.", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.are-pets-allowed", "text": "Are pets allowed in the building?", "es": "¿Se admiten mascotas en el edificio?", "explanation": "Pregúntalo si tienes perro o gato. «allowed» = «ə-LAUD», rima con «loud».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.is-there-laundry-in-the-building", "text": "Is there laundry in the building?", "es": "¿Hay lavandería en el edificio?", "notes": "En EE. UU. es normal una lavandería compartida en el sótano.", "explanation": "Pregunta típica al visitar un piso. «laundry» = «LAAN-dri».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.how-far-is-it-from-the-l", "text": "How far is it from the nearest L station?", "es": "¿A qué distancia está de la estación de la L más cercana?", "notes": "«the L» = el tren elevado de Chicago.", "explanation": "En Chicago, vivir cerca de la «L» cambia mucho las cosas. «far» con «r» americana: «faar».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.how-long-is-the-lease", "text": "How long is the lease?", "es": "¿Cuánto dura el contrato?", "notes": "«lease» = contrato de alquiler.", "explanation": "Lo normal en EE. UU. es un año. «lease» con «i» larga y «s» sorda: «liis».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.is-it-a-twelve-month-lease", "text": "Is it a twelve-month lease?", "es": "¿Es un contrato de doce meses?", "notes": "«twelve-month» va sin «s» porque funciona como adjetivo.", "explanation": "Para confirmar la duración antes de firmar. «twelve» acaba en «lv»: «tuelv».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.how-much-is-the-security-deposit", "text": "How much is the security deposit?", "es": "¿Cuánto es la fianza?", "explanation": "Pregunta clave antes de firmar. «deposit» = «di-PA-zit», acento en «PA».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.when-is-the-rent-due", "text": "When is the rent due each month?", "es": "¿Qué día hay que pagar el alquiler cada mes?", "notes": "«due» = que vence, que toca pagar.", "explanation": "Para no pagar con retraso. «due» suena «du».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.do-you-need-a-credit-check", "text": "Do you need to run a credit check?", "es": "¿Tienen que comprobar mi historial crediticio?", "notes": "En EE. UU. suelen revisar tu historial de crédito antes de alquilarte.", "explanation": "Pregúntalo si acabas de llegar al país. «credit» = «KRE-rit», con «t» suave.", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.i-dont-have-a-credit-history-yet", "text": "I just moved here, so I don't have a credit history yet.", "es": "Acabo de mudarme, así que aún no tengo historial crediticio.", "explanation": "Para explicar tu situación con sinceridad. «moved» es una sílaba: «muuvd».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.can-i-read-the-lease-before-i-sign", "text": "Can I read the lease carefully before I sign?", "es": "¿Puedo leer bien el contrato antes de firmar?", "explanation": "Nunca firmes con prisas. «sign» no suena la «g»: «sain».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.when-can-i-move-in", "text": "When can I move in?", "es": "¿Cuándo puedo entrar a vivir?", "notes": "«move in» = instalarte en una casa; «move out» = dejarla.", "explanation": "Al cerrar el trato con el casero. «move in» se encadena: «MUU-vin».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.will-i-get-my-deposit-back", "text": "Will I get my deposit back when I move out?", "es": "¿Me devolverán la fianza cuando me vaya?", "notes": "«get something back» = recuperar algo.", "explanation": "Pregunta lógica antes de firmar. «back» con «æ» abierta, entre «a» y «e».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.who-pays-for-electricity", "text": "Who pays for electricity, me or the landlord?", "es": "¿Quién paga la luz, yo o el casero?", "notes": "«pay for» + lo que pagas: «pay for electricity».", "explanation": "Para dejar claro qué gastos te tocan. «electricity» = «i-lek-TRI-sə-ri».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.how-much-is-the-electric-bill", "text": "How much is the electric bill usually?", "es": "¿Cuánto suele ser la factura de la luz?", "notes": "«bill» = factura; la cuenta del restaurante es «check».", "explanation": "Para calcular tus gastos del mes. «bill» con «i» corta y «l» oscura.", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.i-need-to-set-up-the-internet", "text": "I need to set up the internet in my new apartment.", "es": "Tengo que dar de alta internet en mi piso nuevo.", "notes": "«set up» = instalar, dar de alta.", "explanation": "Al llamar a una compañía de internet. «set up» se encadena: «SE-rap».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.when-can-the-technician-come", "text": "When can the technician come?", "es": "¿Cuándo puede venir el técnico?", "explanation": "Para concertar la instalación. «technician» = «tek-NI-shən»: la «ch» suena «k».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.my-bill-is-much-higher-than-usual", "text": "My bill is much higher than usual this month.", "es": "Este mes mi factura es mucho más alta de lo normal.", "explanation": "Para reclamar a la compañía. «higher» = «HAI-ər»: la «gh» no suena.", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.i-think-ive-been-charged-twice", "text": "I think I've been charged twice.", "es": "Creo que me han cobrado dos veces.", "notes": "«charge» = cobrar.", "explanation": "Para reclamar un cobro duplicado. «charged» es una sílaba: «charchd».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-internet-keeps-cutting-out", "text": "The internet keeps cutting out.", "es": "Internet se corta todo el rato.", "notes": "«keep» + -ing = no parar de; «cut out» = cortarse.", "explanation": "Al llamar al servicio técnico. «cutting out» se encadena: «KA-ring-AUT».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-power-went-out-last-night", "text": "The power went out last night.", "es": "Anoche se fue la luz.", "notes": "«go out» = apagarse; «power» = la corriente.", "explanation": "Para contar un apagón al casero o a un vecino. «power» = «PAU-ər».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-heating-isnt-working", "text": "The heating isn't working.", "es": "La calefacción no funciona.", "explanation": "Un problema serio en invierno en Chicago. «heating» con «i» larga y «t» suave: «HII-ring».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-kitchen-sink-is-leaking", "text": "The kitchen sink is leaking.", "es": "El fregadero de la cocina pierde agua.", "explanation": "Para avisar al casero. «leaking» con «i» larga; con «i» corta sonaría a «licking» (lamer).", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-toilet-is-clogged", "text": "The toilet is clogged.", "es": "El váter está atascado.", "explanation": "Para pedir que venga un fontanero. «clogged» es una sílaba: «klagd».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.theres-water-coming-through-the-ceiling", "text": "There's water coming through the ceiling.", "es": "Está entrando agua por el techo.", "explanation": "Una urgencia: llama al casero enseguida. «ceiling» = «SII-ling», con «s» al principio.", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-fridge-stopped-working", "text": "The fridge stopped working yesterday.", "es": "La nevera dejó de funcionar ayer.", "notes": "«stop» + -ing = dejar de hacer algo.", "explanation": "Para explicar desde cuándo pasa. «stopped» es una sílaba: «stapt».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-smoke-detector-keeps-beeping", "text": "The smoke detector keeps beeping.", "es": "El detector de humo no para de pitar.", "notes": "Suele ser la pila: hay que cambiarla.", "explanation": "Problema típico en los pisos de EE. UU. «beeping» con «i» larga: «BII-ping».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.could-you-send-someone-to-fix-it", "text": "Could you send someone to fix it?", "es": "¿Podría mandar a alguien a arreglarlo?", "explanation": "Petición educada al casero o a la administración. «fix it» se encadena: «FIK-sit».", "register": "formal", "situation": "vivienda" },
+    { "id": "b1-renting.when-can-someone-come-and-take-a-look", "text": "When can someone come and take a look?", "es": "¿Cuándo puede venir alguien a echar un vistazo?", "explanation": "Para concertar la visita de un técnico. «take a look» se encadena: «TEI-kə-LUK».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.ive-reported-it-twice", "text": "I've reported it twice, but nobody has come.", "es": "Lo he avisado dos veces, pero no ha venido nadie.", "explanation": "Para insistir cuando no te hacen caso. «nobody» = «NOU-ba-di».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-super-will-come-by", "text": "The super will come by this afternoon.", "es": "El encargado del edificio se pasará esta tarde.", "notes": "«super» = superintendent, el encargado del edificio; «come by» = pasarse.", "explanation": "Lo que te dice el casero cuando avisas de una avería. «super» = «SUU-pər».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.hi-i-just-moved-in-next-door", "text": "Hi, I just moved in next door. I'm Hernán.", "es": "Hola, acabo de mudarme al piso de al lado. Soy Hernán.", "explanation": "Para presentarte a un vecino en el pasillo. «next door» se une: «NEKS-dor».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.let-me-know-if-you-ever-need-anything", "text": "Let me know if you ever need anything.", "es": "Si alguna vez necesitas algo, dímelo.", "explanation": "Una frase amable entre vecinos. «anything» lleva «th» como la «z» de España: «E-ni-zing».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.sorry-to-bother-you", "text": "Sorry to bother you, but the music is a bit loud.", "es": "Perdona que te moleste, pero la música está un poco alta.", "explanation": "Para quejarte del ruido sin crear tensión. En «bother», la «th» suena como la «d» suave de «nada».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.could-you-keep-it-down", "text": "Could you keep it down a little after ten?", "es": "¿Podrías no hacer tanto ruido a partir de las diez?", "notes": "«keep it down» = no hacer tanto ruido.", "explanation": "Petición educada a un vecino ruidoso. «keep it down» se encadena: «KII-pi-DAUN».", "register": "formal", "situation": "vivienda" },
+    { "id": "b1-renting.sorry-i-didnt-realize-it-was-so-loud", "text": "Sorry, I didn't realize it was so loud.", "es": "Perdona, no me di cuenta de que estaba tan alto.", "notes": "«realize» = darse cuenta; «realizar» es «carry out» o «do».", "explanation": "Lo que respondes si el ruido lo haces tú. «realize» = «RII-ə-laiz».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.a-package-came-for-you", "text": "A package came for you while you were out.", "es": "Te llegó un paquete mientras no estabas.", "explanation": "Para avisar a un vecino. «package» = «PÆ-kich»: la segunda «a» suena casi «i».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.could-you-water-my-plants", "text": "Could you water my plants while I'm away?", "es": "¿Podrías regarme las plantas mientras estoy fuera?", "explanation": "Un favor típico entre vecinos. «water» con «t» suave americana: «WAA-rər».", "register": "formal", "situation": "vivienda" },
+    { "id": "b1-renting.where-do-i-put-the-recycling", "text": "Where do I put the recycling?", "es": "¿Dónde dejo el reciclaje?", "explanation": "Pregunta típica en un edificio nuevo. «recycling» = «ri-SAI-kling».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.when-is-trash-day", "text": "When is trash day?", "es": "¿Qué día pasan a recoger la basura?", "notes": "En EE. UU. la basura se recoge un día fijo a la semana.", "explanation": "Para no sacar la basura el día equivocado. «trash» con «æ» abierta: «træsh».", "register": "neutral", "situation": "vivienda" },
+    { "id": "b1-renting.the-neighbors-upstairs-are-really-noisy", "text": "The neighbors upstairs are really noisy.", "es": "Los vecinos de arriba hacen mucho ruido.", "explanation": "Para quejarte al casero o contárselo a un amigo. «noisy» = «NOI-zi», con «z» sonora.", "register": "neutral", "situation": "vivienda" }
+  ],
+  "vocab": [
+    { "id": "b1-renting.landlord", "word": "landlord", "article": "a", "plural": "landlords", "es": "el casero, la casera", "notes": "Para una mujer también se dice «landlord» o «landlady».", "situation": "vivienda" },
+    { "id": "b1-renting.tenant", "word": "tenant", "article": "a", "plural": "tenants", "es": "el inquilino", "situation": "vivienda" },
+    { "id": "b1-renting.rent", "word": "rent", "es": "el alquiler (lo que pagas)", "notes": "Incontable: «the rent», «pay rent».", "example": "b1-renting.how-much-is-the-rent", "situation": "vivienda" },
+    { "id": "b1-renting.studio", "word": "studio", "article": "a", "plural": "studios", "es": "el estudio", "notes": "Un piso de una sola habitación con cocina.", "situation": "vivienda" },
+    { "id": "b1-renting.listing", "word": "listing", "article": "a", "plural": "listings", "es": "el anuncio (de un piso)", "situation": "vivienda" },
+    { "id": "b1-renting.utilities", "word": "utilities", "es": "los gastos (luz, agua, gas)", "notes": "Siempre en plural en este sentido.", "example": "b1-renting.are-utilities-included", "situation": "vivienda" },
+    { "id": "b1-renting.furniture", "word": "furniture", "es": "los muebles", "notes": "Incontable: «some furniture», nunca «furnitures».", "situation": "vivienda", "image": "fluent:couch-and-lamp" },
+    { "id": "b1-renting.pet", "word": "pet", "article": "a", "plural": "pets", "es": "la mascota", "example": "b1-renting.are-pets-allowed", "situation": "vivienda", "image": "fluent:dog" },
+    { "id": "b1-renting.laundry-room", "word": "laundry room", "article": "a", "plural": "laundry rooms", "es": "la lavandería (del edificio)", "situation": "vivienda" },
+    { "id": "b1-renting.lease", "word": "lease", "article": "a", "plural": "leases", "es": "el contrato de alquiler", "example": "b1-renting.how-long-is-the-lease", "situation": "vivienda", "image": "fluent:page-with-curl" },
+    { "id": "b1-renting.security-deposit", "word": "security deposit", "article": "a", "plural": "security deposits", "es": "la fianza", "example": "b1-renting.how-much-is-the-security-deposit", "situation": "vivienda" },
+    { "id": "b1-renting.credit-check", "word": "credit check", "article": "a", "plural": "credit checks", "es": "la comprobación del historial crediticio", "example": "b1-renting.do-you-need-a-credit-check", "situation": "vivienda" },
+    { "id": "b1-renting.application", "word": "application", "article": "an", "plural": "applications", "es": "la solicitud", "situation": "vivienda", "image": "fluent:memo" },
+    { "id": "b1-renting.pay-stub", "word": "pay stub", "article": "a", "plural": "pay stubs", "es": "la nómina", "notes": "Te la pueden pedir para demostrar tus ingresos.", "situation": "vivienda" },
+    { "id": "b1-renting.move-in", "word": "move in", "es": "mudarse (a una casa)", "notes": "Phrasal verb: «We moved in last week» = nos mudamos la semana pasada.", "example": "b1-renting.when-can-i-move-in", "situation": "vivienda", "tags": ["phrasal-verb"] },
+    { "id": "b1-renting.move-out", "word": "move out", "es": "dejar la casa, mudarse (de una casa)", "notes": "Phrasal verb: «I'm moving out in May» = dejo el piso en mayo.", "example": "b1-renting.will-i-get-my-deposit-back", "situation": "vivienda", "tags": ["phrasal-verb"] },
+    { "id": "b1-renting.electricity", "word": "electricity", "es": "la electricidad, la luz", "example": "b1-renting.who-pays-for-electricity", "situation": "vivienda", "image": "fluent:high-voltage" },
+    { "id": "b1-renting.internet-provider", "word": "internet provider", "article": "an", "plural": "internet providers", "es": "la compañía de internet", "situation": "vivienda", "image": "fluent:globe-with-meridians" },
+    { "id": "b1-renting.technician", "word": "technician", "article": "a", "plural": "technicians", "es": "el técnico", "example": "b1-renting.when-can-the-technician-come", "situation": "vivienda" },
+    { "id": "b1-renting.charge", "word": "charge", "article": "a", "plural": "charges", "es": "el cargo, el cobro", "situation": "vivienda" },
+    { "id": "b1-renting.power-outage", "word": "power outage", "article": "a", "plural": "power outages", "es": "el apagón", "example": "b1-renting.the-power-went-out-last-night", "situation": "vivienda" },
+    { "id": "b1-renting.heating", "word": "heating", "es": "la calefacción", "example": "b1-renting.the-heating-isnt-working", "situation": "vivienda" },
+    { "id": "b1-renting.leak", "word": "leak", "article": "a", "plural": "leaks", "es": "la fuga, la gotera", "situation": "vivienda", "image": "fluent:droplet" },
+    { "id": "b1-renting.ceiling", "word": "ceiling", "article": "a", "plural": "ceilings", "es": "el techo (de una habitación)", "notes": "El tejado de fuera es «roof».", "example": "b1-renting.theres-water-coming-through-the-ceiling", "situation": "vivienda" },
+    { "id": "b1-renting.fridge", "word": "fridge", "article": "a", "plural": "fridges", "es": "la nevera", "example": "b1-renting.the-fridge-stopped-working", "situation": "vivienda" },
+    { "id": "b1-renting.smoke-detector", "word": "smoke detector", "article": "a", "plural": "smoke detectors", "es": "el detector de humo", "example": "b1-renting.the-smoke-detector-keeps-beeping", "situation": "vivienda" },
+    { "id": "b1-renting.plumber", "word": "plumber", "article": "a", "plural": "plumbers", "es": "el fontanero", "notes": "La «b» no suena: «PLA-mər».", "situation": "vivienda", "image": "fluent:plunger" },
+    { "id": "b1-renting.super", "word": "super", "article": "a", "plural": "supers", "es": "el encargado del edificio", "notes": "Abreviatura de «superintendent».", "example": "b1-renting.the-super-will-come-by", "situation": "vivienda" },
+    { "id": "b1-renting.repair", "word": "repair", "article": "a", "plural": "repairs", "es": "la reparación", "situation": "vivienda", "image": "fluent:hammer-and-wrench" },
+    { "id": "b1-renting.come-by", "word": "come by", "es": "pasarse (por un sitio)", "notes": "Phrasal verb: «Come by after work» = pásate después del trabajo.", "example": "b1-renting.the-super-will-come-by", "situation": "vivienda", "tags": ["phrasal-verb"] },
+    { "id": "b1-renting.package", "word": "package", "article": "a", "plural": "packages", "es": "el paquete", "example": "b1-renting.a-package-came-for-you", "situation": "vivienda", "image": "fluent:package" },
+    { "id": "b1-renting.mailbox", "word": "mailbox", "article": "a", "plural": "mailboxes", "es": "el buzón", "situation": "vivienda", "image": "fluent:closed-mailbox-with-raised-flag" },
+    { "id": "b1-renting.stairs", "word": "stairs", "es": "las escaleras", "notes": "Siempre en plural.", "situation": "vivienda" },
+    { "id": "b1-renting.trash", "word": "trash", "es": "la basura", "notes": "Incontable; en Reino Unido dicen «rubbish».", "example": "b1-renting.when-is-trash-day", "situation": "vivienda", "image": "fluent:wastebasket" },
+    { "id": "b1-renting.recycling", "word": "recycling", "es": "el reciclaje", "example": "b1-renting.where-do-i-put-the-recycling", "situation": "vivienda", "image": "fluent:recycling-symbol" },
+    { "id": "b1-renting.plant", "word": "plant", "article": "a", "plural": "plants", "es": "la planta", "example": "b1-renting.could-you-water-my-plants", "situation": "vivienda", "image": "fluent:potted-plant" },
+    { "id": "b1-renting.upstairs", "word": "upstairs", "es": "arriba (en el piso de arriba)", "example": "b1-renting.the-neighbors-upstairs-are-really-noisy", "situation": "vivienda" }
+  ],
+  "qa": [
+    {
+      "id": "b1-renting.qa.calling-about-the-listing",
+      "question": "Hello, Lakeview Rentals. How can I help you?",
+      "questionEs": "Hola, Lakeview Rentals. ¿En qué puedo ayudarle?",
+      "accepted": [
+        {
+          "text": "Hi, I'm calling about the apartment on Halsted Street. Is it still available?",
+          "es": "Hola, llamo por el piso de Halsted Street. ¿Sigue disponible?"
+        },
+        {
+          "text": "Hi, I saw your listing for the one-bedroom. Can I come and see it?",
+          "es": "Hola, he visto su anuncio del piso de un dormitorio. ¿Puedo ir a verlo?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Hi, I call for the apartment on Halsted Street.",
+          "es": "Hola, llamo por el piso de Halsted Street."
+        },
+        {
+          "text": "Hi, I saw your listing. It's still available?",
+          "es": "Hola, he visto su anuncio. ¿Sigue disponible?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "vivienda",
+      "notes": "Para lo que haces ahora mismo va el continuo con «about»: «I'm calling about»; y en la pregunta se invierte: «Is it still available?».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-renting.qa.what-kind-of-place",
+      "question": "So, what kind of place are you looking for?",
+      "questionEs": "Bueno, ¿qué tipo de piso buscas?",
+      "accepted": [
+        {
+          "text": "A one-bedroom close to an L station.",
+          "es": "Un piso de un dormitorio cerca de una estación de la L."
+        },
+        {
+          "text": "Something furnished, if possible, near the lake.",
+          "es": "Algo amueblado, si es posible, cerca del lago."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "A apartment with one bedroom near the L.",
+          "es": "Un piso de un dormitorio cerca de la L."
+        },
+        {
+          "text": "Something with furnitures near the lake.",
+          "es": "Algo con muebles cerca del lago."
+        }
+      ],
+      "register": "neutral",
+      "situation": "vivienda",
+      "notes": "Delante de sonido vocal va «an» («an apartment»); «furniture» es incontable y no lleva «s».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-renting.qa.when-would-you-like-to-move-in",
+      "question": "The apartment is available from November first. When would you like to move in?",
+      "questionEs": "El piso está disponible desde el uno de noviembre. ¿Cuándo le gustaría entrar a vivir?",
+      "accepted": [
+        {
+          "text": "November first would be perfect.",
+          "es": "El uno de noviembre sería perfecto."
+        },
+        {
+          "text": "Could I move in on the fifteenth instead?",
+          "es": "¿Podría entrar el día quince, mejor?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I would like to move on November first.",
+          "es": "Me gustaría mudarme el uno de noviembre."
+        },
+        {
+          "text": "Could I move in the fifteenth instead?",
+          "es": "¿Podría entrar el día quince, mejor?"
+        }
+      ],
+      "register": "formal",
+      "situation": "vivienda",
+      "notes": "Mudarse a una casa es «move in» («move on» es pasar página); con fechas va «on»: «on the fifteenth».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-renting.qa.credit-check",
+      "question": "We'll need to run a credit check. Is that OK?",
+      "questionEs": "Tendremos que comprobar tu historial crediticio. ¿Te parece bien?",
+      "accepted": [
+        {
+          "text": "Sure. But I just moved here, so I don't have a credit history yet.",
+          "es": "Claro. Pero acabo de mudarme, así que aún no tengo historial crediticio."
+        },
+        {
+          "text": "That's fine. I can also show you my pay stubs.",
+          "es": "Me parece bien. También puedo enseñarte mis nóminas."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sure. But I've just moved here last month.",
+          "es": "Claro. Pero me mudé aquí el mes pasado."
+        },
+        {
+          "text": "That's fine. I can also show you my payroll.",
+          "es": "Me parece bien. También puedo enseñarte mis nóminas."
+        }
+      ],
+      "register": "neutral",
+      "situation": "vivienda",
+      "notes": "Con «last month» va pasado simple, no present perfect; la nómina es «pay stub» («payroll» es la plantilla de pagos de la empresa).",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-renting.qa.internet-company",
+      "question": "Thanks for calling. How can I help you today?",
+      "questionEs": "Gracias por llamar. ¿En qué puedo ayudarle hoy?",
+      "accepted": [
+        {
+          "text": "I need to set up the internet in my new apartment.",
+          "es": "Tengo que dar de alta internet en mi piso nuevo."
+        },
+        {
+          "text": "Hi. I think I've been charged twice this month.",
+          "es": "Hola. Creo que este mes me han cobrado dos veces."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I need to install me the internet in my new apartment.",
+          "es": "Necesito que me instalen internet en mi piso nuevo."
+        },
+        {
+          "text": "Hi. I think you charged me two times the last month.",
+          "es": "Hola. Creo que el mes pasado me cobraron dos veces."
+        }
+      ],
+      "register": "neutral",
+      "situation": "vivienda",
+      "notes": "En inglés no se añade «me» como en «instalarme»; «el mes pasado» es «last month», sin «the».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-renting.qa.everything-ok-with-your-bill",
+      "question": "Is everything OK with your bill?",
+      "questionEs": "¿Va todo bien con tu factura?",
+      "accepted": [
+        {
+          "text": "Not really. It's much higher than usual.",
+          "es": "La verdad es que no. Es mucho más alta de lo normal."
+        },
+        {
+          "text": "No, it's higher than last month.",
+          "es": "No, es más alta que la del mes pasado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Not really. It's much more high than usual.",
+          "es": "La verdad es que no. Es mucho más alta de lo normal."
+        },
+        {
+          "text": "No, it's higher that last month.",
+          "es": "No, es más alta que la del mes pasado."
+        }
+      ],
+      "register": "neutral",
+      "situation": "vivienda",
+      "notes": "«high» hace «higher», no «more high»; en las comparaciones va «than», no «that».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-renting.qa.landlord-message",
+      "question": "Hi, this is your landlord. You left a message about a problem?",
+      "questionEs": "Hola, soy tu casero. ¿Me dejaste un mensaje por un problema?",
+      "accepted": [
+        {
+          "text": "Yes. The heating isn't working, and it's freezing in here.",
+          "es": "Sí. La calefacción no funciona y aquí dentro hace un frío horrible."
+        },
+        {
+          "text": "Yes, the kitchen sink is leaking. Could you send someone to fix it?",
+          "es": "Sí, el fregadero pierde agua. ¿Podría mandar a alguien a arreglarlo?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes. The heating doesn't work since Monday.",
+          "es": "Sí. La calefacción no funciona desde el lunes."
+        },
+        {
+          "text": "Yes, the kitchen sink is dropping.",
+          "es": "Sí, el fregadero gotea."
+        }
+      ],
+      "register": "neutral",
+      "situation": "vivienda",
+      "notes": "Con «since» va present perfect: «hasn't worked since Monday»; gotear es «leak» o «drip», no «drop».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-renting.qa.will-you-be-home",
+      "question": "I can send someone tomorrow between nine and noon. Will you be home?",
+      "questionEs": "Puedo mandar a alguien mañana entre las nueve y las doce. ¿Estarás en casa?",
+      "accepted": [
+        {
+          "text": "Yes, I'll be home all morning.",
+          "es": "Sí, estaré en casa toda la mañana."
+        },
+        {
+          "text": "I'll be at work, but my roommate will be there.",
+          "es": "Estaré trabajando, pero estará mi compañero de piso."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I'll be in home all morning.",
+          "es": "Sí, estaré en casa toda la mañana."
+        },
+        {
+          "text": "I'll be in the work, but my roommate will be there.",
+          "es": "Estaré en el trabajo, pero estará mi compañero de piso."
+        }
+      ],
+      "register": "neutral",
+      "situation": "vivienda",
+      "notes": "Se dice «be home» o «be at home», sin «in»; y «at work», sin artículo.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-renting.qa.new-neighbor",
+      "question": "Hi! Are you the new neighbor in three B?",
+      "questionEs": "¡Hola! ¿Eres el vecino nuevo del tres B?",
+      "accepted": [
+        {
+          "text": "Yes, I just moved in. I'm Hernán.",
+          "es": "Sí, acabo de mudarme. Soy Hernán."
+        },
+        {
+          "text": "That's me! Nice to meet you. I'm Hernán.",
+          "es": "¡Ese soy yo! Encantado. Soy Hernán."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I'm living here since last week.",
+          "es": "Sí, vivo aquí desde la semana pasada."
+        },
+        {
+          "text": "Yes, I've moved in last week.",
+          "es": "Sí, me mudé la semana pasada."
+        }
+      ],
+      "register": "tu",
+      "situation": "vivienda",
+      "notes": "Con «since» va present perfect («I've lived here since…»); con «last week», pasado simple: «I moved in last week».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-renting.qa.music-too-loud",
+      "question": "Hey, sorry to bother you, but the music is a bit loud.",
+      "questionEs": "Oye, perdona que te moleste, pero la música está un poco alta.",
+      "accepted": [
+        {
+          "text": "Oh, sorry! I didn't realize. I'll turn it down.",
+          "es": "¡Ay, perdona! No me había dado cuenta. Ahora la bajo."
+        },
+        {
+          "text": "Sorry about that! I'll keep it down.",
+          "es": "¡Perdona! Haré menos ruido."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Oh, sorry! I didn't realize. I'll turn it low.",
+          "es": "¡Ay, perdona! No me había dado cuenta. Ahora la bajo."
+        },
+        {
+          "text": "Sorry! I didn't notice me.",
+          "es": "¡Perdona! No me di cuenta."
+        }
+      ],
+      "register": "tu",
+      "situation": "vivienda",
+      "notes": "Bajar el volumen es «turn it down»; «darse cuenta» no lleva «me»: «I didn't notice» o «I didn't realize».",
+      "voice": "en-US-BrianNeural"
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "id": "b1-trips",
+  "order": 140,
+  "title": "Problemas de viaje: retrasos, equipaje perdido, reclamar, cambiar vuelo",
+  "description": "Cuando el viaje se tuerce: vuelos retrasados o cancelados, conexiones perdidas, maletas que no llegan, reclamaciones educadas y el coche de alquiler.",
+  "emoji": "🧳",
+  "situation": "viajes",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-trips.l.delays",
+      "title": "Retrasos y cancelaciones",
+      "items": [
+        "a2-airport.delay",
+        "a2-airport.my-flight-is-delayed",
+        "b1-trips.our-flight-has-been-delayed",
+        "b1-trips.announcement",
+        "b1-trips.cancellation",
+        "b1-trips.my-flight-was-canceled",
+        "b1-trips.do-you-know-why-its-delayed",
+        "b1-trips.storm",
+        "b1-trips.its-due-to-bad-weather",
+        "b1-trips.whats-the-new-departure-time",
+        "b1-trips.how-long-will-we-have-to-wait",
+        "b1-trips.compensation",
+        "b1-trips.will-we-get-any-compensation",
+        "b1-trips.voucher",
+        "b1-trips.can-i-get-a-meal-voucher",
+        "b1-trips.connection",
+        "b1-trips.im-worried-i-might-miss-my-connection",
+        "b1-trips.qa.delayed-three-hours",
+        "b1-trips.qa.you-look-worried"
+      ]
+    },
+    {
+      "id": "b1-trips.l.rebooking",
+      "title": "Perder la conexión y cambiar de vuelo",
+      "items": [
+        "a2-airport.connecting-flight",
+        "b1-trips.i-missed-my-connecting-flight",
+        "b1-trips.gate-agent",
+        "b1-trips.could-you-rebook-me",
+        "b1-trips.is-there-an-earlier-flight",
+        "b1-trips.direct-flight",
+        "b1-trips.id-prefer-a-direct-flight",
+        "b1-trips.are-there-any-seats-left",
+        "b1-trips.standby-list",
+        "b1-trips.can-you-put-me-on-standby",
+        "b1-trips.will-my-bag-be-transferred",
+        "b1-trips.change-fee",
+        "b1-trips.do-i-have-to-pay-a-change-fee",
+        "b1-trips.itinerary",
+        "b1-trips.will-the-airline-cover-the-hotel",
+        "b1-trips.i-really-need-to-get-to-chicago-tonight",
+        "a2-airport.layover",
+        "b1-trips.qa.next-please",
+        "b1-trips.qa.next-available"
+      ]
+    },
+    {
+      "id": "b1-trips.l.lost-luggage",
+      "title": "Equipaje perdido o dañado",
+      "items": [
+        "a2-airport.baggage-claim",
+        "a2-airport.bag-didnt-arrive",
+        "b1-trips.where-do-i-report-a-missing-bag",
+        "b1-trips.my-suitcase-still-hasnt-come-out",
+        "a2-airport.suitcase",
+        "b1-trips.its-a-large-black-suitcase",
+        "b1-trips.claim-tag",
+        "b1-trips.heres-my-claim-tag",
+        "b1-trips.reference-number",
+        "b1-trips.how-long-does-it-usually-take",
+        "b1-trips.can-you-deliver-it-to-my-hotel",
+        "b1-trips.essentials",
+        "b1-trips.toiletries",
+        "b1-trips.can-i-get-reimbursed-for-essentials",
+        "b1-trips.handle",
+        "b1-trips.my-suitcase-got-damaged",
+        "b1-trips.qa.describe-your-bag",
+        "b1-trips.qa.where-should-we-deliver-it"
+      ]
+    },
+    {
+      "id": "b1-trips.l.complaints",
+      "title": "Reclamar con educación",
+      "items": [
+        "b1-trips.complaint",
+        "b1-trips.id-like-to-make-a-complaint",
+        "b1-trips.booking",
+        "b1-trips.this-isnt-what-i-booked",
+        "b1-trips.the-room-was-dirty-when-we-arrived",
+        "b1-trips.i-was-told-breakfast-was-included",
+        "b1-trips.ive-been-waiting-for-over-an-hour",
+        "b1-trips.im-sorry-but-this-isnt-acceptable",
+        "a2-hotel.manager",
+        "b1-trips.could-i-speak-to-the-manager",
+        "b1-trips.customer-service",
+        "b1-trips.what-can-you-do-about-it",
+        "a2-shopping.refund",
+        "b1-trips.id-like-a-full-refund",
+        "b1-trips.discount",
+        "b1-trips.would-you-mind-giving-us-a-discount",
+        "b1-trips.sort-out",
+        "b1-trips.thanks-for-sorting-it-out",
+        "b1-trips.review",
+        "b1-trips.qa.what-can-i-do-for-you",
+        "b1-trips.qa.how-long-waiting"
+      ]
+    },
+    {
+      "id": "b1-trips.l.on-the-road",
+      "title": "Coche de alquiler e imprevistos",
+      "items": [
+        "b1-trips.rental-car",
+        "b1-trips.i-have-a-car-reserved",
+        "b1-trips.drivers-license",
+        "b1-trips.is-insurance-included",
+        "b1-trips.gas",
+        "b1-trips.do-i-have-to-return-it-with-a-full-tank",
+        "b1-trips.scratch",
+        "b1-trips.theres-already-a-scratch-on-the-door",
+        "b1-trips.highway",
+        "b1-trips.break-down",
+        "b1-trips.our-car-broke-down-on-the-highway",
+        "b1-trips.flat-tire",
+        "b1-trips.i-think-i-have-a-flat-tire",
+        "b1-trips.roadside-assistance",
+        "b1-trips.gas-station",
+        "b1-trips.wheres-the-nearest-gas-station",
+        "b1-plans.traffic",
+        "b1-trips.we-got-stuck-in-traffic",
+        "b1-trips.the-trip-was-a-disaster",
+        "b1-trips.qa.check-the-car",
+        "b1-trips.qa.roadside-assistance"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b1-trips.our-flight-has-been-delayed", "text": "Our flight has been delayed by two hours.", "es": "Nuestro vuelo lleva dos horas de retraso.", "notes": "Pasiva en present perfect: «has been delayed»; «by» marca cuánto.", "explanation": "Para avisar a quien te espera o comentarlo en la puerta. «delayed» acaba en /d/: «di-LEID», solo dos sílabas.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.my-flight-was-canceled", "text": "My flight was canceled this morning.", "es": "Me han cancelado el vuelo esta mañana.", "notes": "En EE. UU. se escribe «canceled», con una sola «l».", "explanation": "Para explicar tu problema en el mostrador de la aerolínea. «canceled» = «KÆN-səld», la «-ed» suena /d/.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.do-you-know-why-its-delayed", "text": "Do you know why it's delayed?", "es": "¿Sabes por qué va con retraso?", "notes": "Pregunta indirecta: tras «Do you know why…» va el orden normal, «why it's», no «why is it».", "explanation": "Para preguntar al personal de la puerta o a otro pasajero. «why» suena «uai», con la «w» bien marcada.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.its-due-to-bad-weather", "text": "It's due to bad weather in Denver.", "es": "Es por el mal tiempo en Denver.", "notes": "«due to» = debido a, por culpa de.", "explanation": "La explicación típica del personal o de la megafonía. «due» suena «du» en inglés americano, no «diu».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.whats-the-new-departure-time", "text": "What's the new departure time?", "es": "¿Cuál es la nueva hora de salida?", "explanation": "En la puerta de embarque, cuando cambian el horario. «departure» = «di-PAR-chər»: la «t» suena «ch».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.how-long-will-we-have-to-wait", "text": "How long will we have to wait?", "es": "¿Cuánto tendremos que esperar?", "explanation": "Para pedir una estimación al personal. «will we» se encadena: «wil-wi», sin pausa.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.will-we-get-any-compensation", "text": "Will we get any compensation for the delay?", "es": "¿Nos darán alguna compensación por el retraso?", "explanation": "Para reclamar en el mostrador de la aerolínea. «compensation» lleva el acento en «SEI»: «kam-pən-SEI-shən».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.can-i-get-a-meal-voucher", "text": "Can I get a meal voucher?", "es": "¿Me dan un vale para comer?", "notes": "Con retrasos largos, muchas aerolíneas dan vales de comida.", "explanation": "Pídelo en el mostrador cuando el retraso es largo. «voucher» = «VAU-chər».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.im-worried-i-might-miss-my-connection", "text": "I'm worried I might miss my connection.", "es": "Me preocupa perder la conexión.", "notes": "«perder» un vuelo, tren o bus es «miss», no «lose».", "explanation": "Para avisar al personal antes de que sea tarde. «miss» con «i» corta, como en «mis»; no la alargues.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.i-missed-my-connecting-flight", "text": "I missed my connecting flight.", "es": "He perdido el vuelo de conexión.", "explanation": "Lo primero que dices en el mostrador de transbordos. «missed» es una sola sílaba: «mist».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.could-you-rebook-me", "text": "Could you rebook me on the next flight?", "es": "¿Podría cambiarme al siguiente vuelo?", "notes": "«rebook» = volver a reservar, cambiar a otro vuelo.", "explanation": "Al agente de la aerolínea, con educación. «rebook» = «ri-BUK», con «u» corta como en «book».", "register": "formal", "situation": "viajes" },
+    { "id": "b1-trips.is-there-an-earlier-flight", "text": "Is there an earlier flight?", "es": "¿Hay algún vuelo antes?", "explanation": "Cuando te ofrecen un vuelo demasiado tarde. «earlier» = «ER-li-ər», con «r» americana.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.id-prefer-a-direct-flight", "text": "I'd prefer a direct flight, if possible.", "es": "Preferiría un vuelo directo, si es posible.", "explanation": "Para pedir algo concreto con educación. «prefer» lleva el acento al final: «pri-FER».", "register": "formal", "situation": "viajes" },
+    { "id": "b1-trips.are-there-any-seats-left", "text": "Are there any seats left on the next one?", "es": "¿Quedan asientos en el siguiente?", "notes": "«left» = que queda, que sobra.", "explanation": "Para preguntar si hay sitio. «seats» con «i» larga: no lo confundas con «sits».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.can-you-put-me-on-standby", "text": "Can you put me on the standby list?", "es": "¿Me puede poner en la lista de espera?", "notes": "«standby» = esperar en la puerta por si queda un asiento libre.", "explanation": "Cuando el siguiente vuelo está lleno. «standby» lleva el acento en «STAND», sin «e» delante.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.will-my-bag-be-transferred", "text": "Will my bag be transferred automatically?", "es": "¿Mi maleta pasará automáticamente al otro vuelo?", "notes": "Pasiva en futuro: «will be» + participio.", "explanation": "Pregúntalo siempre al cambiar de vuelo. «transferred» con acento al final: «trans-FERD».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.do-i-have-to-pay-a-change-fee", "text": "Do I have to pay a change fee?", "es": "¿Tengo que pagar por el cambio?", "explanation": "Cuando el cambio lo pides tú. «fee» con «i» larga: «fii».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.will-the-airline-cover-the-hotel", "text": "Will the airline cover the hotel tonight?", "es": "¿La aerolínea paga el hotel esta noche?", "notes": "«cover» = cubrir, hacerse cargo de un gasto.", "explanation": "Si te quedas tirado de noche por culpa de la aerolínea. «cover» = «KA-vər», con «a» corta.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.i-really-need-to-get-to-chicago-tonight", "text": "I really need to get to Chicago tonight.", "es": "Necesito llegar a Chicago esta noche sí o sí.", "explanation": "Para dejar clara tu prioridad al agente. «get to» se encadena con «t» suave: «GE-rə».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.where-do-i-report-a-missing-bag", "text": "Where do I report a missing bag?", "es": "¿Dónde aviso de una maleta perdida?", "explanation": "Al ver que tu maleta no sale por la cinta. «report» lleva el acento en «PORT»: «ri-PORT».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.my-suitcase-still-hasnt-come-out", "text": "My suitcase still hasn't come out.", "es": "Mi maleta todavía no ha salido.", "notes": "«still» + negativa = todavía no, con impaciencia.", "explanation": "En la cinta de equipaje, al personal. «suitcase» = «SUUT-keis».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.its-a-large-black-suitcase", "text": "It's a large black suitcase with a red tag.", "es": "Es una maleta negra grande con una etiqueta roja.", "notes": "En inglés, el tamaño va antes que el color: «large black».", "explanation": "Para describir tu maleta. «black» con «æ» abierta, entre «a» y «e»; no suena como «block».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.heres-my-claim-tag", "text": "Here's my baggage claim tag.", "es": "Aquí tiene el resguardo de mi equipaje.", "notes": "El resguardo es la pegatina con código que te dan al facturar.", "explanation": "Al poner la reclamación. «baggage» = «BÆ-gich»: la segunda «a» suena casi «i».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.how-long-does-it-usually-take", "text": "How long does it usually take to find it?", "es": "¿Cuánto suelen tardar en encontrarla?", "explanation": "Para saber cuánto vas a esperar. «usually» = «IUU-zhu-ə-li», con «zh» como la «j» francesa.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.can-you-deliver-it-to-my-hotel", "text": "Can you deliver it to my hotel?", "es": "¿Me la pueden llevar al hotel?", "explanation": "Lo normal es que te la entreguen donde te alojas. «deliver» = «di-LI-vər», acento en «LI».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.can-i-get-reimbursed-for-essentials", "text": "Can I get reimbursed for essentials?", "es": "¿Me reembolsan lo básico que compre?", "notes": "«essentials» = lo imprescindible: cepillo de dientes, ropa interior, un cargador…", "explanation": "Pregúntalo antes de comprar nada. «reimbursed» = «ri-im-BURST»: la «-ed» suena /t/.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.my-suitcase-got-damaged", "text": "My suitcase got damaged. The handle is broken.", "es": "Mi maleta ha llegado dañada. El asa está rota.", "notes": "«get» + participio = pasiva informal: «got damaged» = se dañó.", "explanation": "En el mostrador de equipaje, antes de salir del aeropuerto. «damaged» = «DÆ-michd», dos sílabas.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.id-like-to-make-a-complaint", "text": "I'd like to make a complaint.", "es": "Quería poner una reclamación.", "explanation": "En el mostrador o en recepción, con calma. «complaint» = «kəm-PLEINT»: la primera sílaba es débil.", "register": "formal", "situation": "viajes" },
+    { "id": "b1-trips.this-isnt-what-i-booked", "text": "This isn't what I booked.", "es": "Esto no es lo que reservé.", "explanation": "Cuando la habitación o el coche no coinciden con tu reserva. «booked» es una sílaba: «bukt».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.the-room-was-dirty-when-we-arrived", "text": "The room was dirty when we arrived.", "es": "La habitación estaba sucia cuando llegamos.", "explanation": "Para explicar el problema con hechos. «dirty» = «DER-ri», con la «t» suave americana.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.i-was-told-breakfast-was-included", "text": "I was told breakfast was included.", "es": "Me dijeron que el desayuno estaba incluido.", "notes": "Pasiva: «I was told» = me dijeron.", "explanation": "Para recordar lo que te prometieron al reservar. «told» con «l» oscura: «tould».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.ive-been-waiting-for-over-an-hour", "text": "I've been waiting for over an hour.", "es": "Llevo más de una hora esperando.", "notes": "«have been» + -ing = llevar un tiempo haciendo algo.", "explanation": "Para quejarte de una espera. «hour» no tiene «h»: «AU-ər», por eso es «an hour».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.im-sorry-but-this-isnt-acceptable", "text": "I'm sorry, but this isn't acceptable.", "es": "Lo siento, pero esto no es aceptable.", "explanation": "Firme pero educado: empieza con «I'm sorry, but». «acceptable» = «ək-SEP-tə-bəl».", "register": "formal", "situation": "viajes" },
+    { "id": "b1-trips.could-i-speak-to-the-manager", "text": "Could I speak to the manager, please?", "es": "¿Podría hablar con el encargado, por favor?", "explanation": "Si el problema no se resuelve en el mostrador. «manager» = «MÆ-nə-chər», acento en «MÆ».", "register": "formal", "situation": "viajes" },
+    { "id": "b1-trips.what-can-you-do-about-it", "text": "What can you do about it?", "es": "¿Qué pueden hacer al respecto?", "explanation": "Para pedir una solución concreta. «about it» se encadena: «ə-BAU-rit».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.id-like-a-full-refund", "text": "I'd like a full refund, please.", "es": "Quiero que me devuelvan todo el dinero, por favor.", "explanation": "Cuando el servicio no se ha prestado. «refund» como sustantivo lleva el acento en «RI»: «RI-fand».", "register": "formal", "situation": "viajes" },
+    { "id": "b1-trips.would-you-mind-giving-us-a-discount", "text": "Would you mind giving us a discount?", "es": "¿Le importaría hacernos un descuento?", "notes": "«Would you mind» + -ing = ¿le importaría…?", "explanation": "Una petición muy educada para compensar un problema. «discount» con acento en «DIS»: «DIS-kaunt».", "register": "formal", "situation": "viajes" },
+    { "id": "b1-trips.thanks-for-sorting-it-out", "text": "Thanks for sorting it out so quickly.", "es": "Gracias por solucionarlo tan rápido.", "notes": "«sort out» = solucionar, arreglar un problema.", "explanation": "Para cerrar bien una queja. «sorting it out» se encadena: «SOR-ring-i-RAUT».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.i-have-a-car-reserved", "text": "I have a car reserved under Díaz.", "es": "Tengo un coche reservado a nombre de Díaz.", "explanation": "En el mostrador de alquiler de coches. «reserved» = «ri-ZERVD», con «z» sonora.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.is-insurance-included", "text": "Is insurance included in the price?", "es": "¿El seguro está incluido en el precio?", "explanation": "Pregúntalo siempre antes de firmar. «insurance» = «in-SHU-rəns», acento en «SHU».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.do-i-have-to-return-it-with-a-full-tank", "text": "Do I have to return it with a full tank?", "es": "¿Tengo que devolverlo con el depósito lleno?", "explanation": "Para evitar cargos extra al devolver el coche. «full» con «u» corta; «fool» la lleva larga.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.theres-already-a-scratch-on-the-door", "text": "There's already a scratch on the door.", "es": "Ya hay un arañazo en la puerta.", "notes": "Avísalo antes de salir para que no te lo cobren.", "explanation": "Al revisar el coche con el empleado, antes de salir. «scratch» sin «e» delante: «skræch».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.our-car-broke-down-on-the-highway", "text": "Our car broke down on the highway.", "es": "Se nos ha averiado el coche en la autopista.", "notes": "«break down» = averiarse (un coche, una máquina).", "explanation": "Al llamar a asistencia en carretera. «broke down» = «brouk-DAUN».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.i-think-i-have-a-flat-tire", "text": "I think I have a flat tire.", "es": "Creo que tengo una rueda pinchada.", "notes": "En EE. UU. se escribe «tire»; en Reino Unido, «tyre».", "explanation": "Lo dices al llamar a asistencia o en una gasolinera. «tire» = «TAI-ər».", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.wheres-the-nearest-gas-station", "text": "Where's the nearest gas station?", "es": "¿Dónde está la gasolinera más cercana?", "notes": "En EE. UU. la gasolina es «gas», no «petrol».", "explanation": "Para preguntar en la carretera. «nearest» = «NI-rəst», con «r» americana.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.we-got-stuck-in-traffic", "text": "We got stuck in traffic for two hours.", "es": "Nos quedamos atascados en el tráfico dos horas.", "explanation": "Para explicar por qué llegas tarde. «stuck» = «stak», con «a» corta y sin «e» delante.", "register": "neutral", "situation": "viajes" },
+    { "id": "b1-trips.the-trip-was-a-disaster", "text": "The trip was a disaster, but it's a good story now.", "es": "El viaje fue un desastre, pero ahora es una buena anécdota.", "explanation": "Para contar el viaje con humor a tus amigos. «disaster» = «di-ZÆS-tər», con «z» sonora.", "register": "neutral", "situation": "viajes" }
+  ],
+  "vocab": [
+    { "id": "b1-trips.cancellation", "word": "cancellation", "article": "a", "plural": "cancellations", "es": "la cancelación", "notes": "«cancellation» lleva dos «l», aunque «canceled» lleve una.", "situation": "viajes" },
+    { "id": "b1-trips.compensation", "word": "compensation", "es": "la compensación, la indemnización", "example": "b1-trips.will-we-get-any-compensation", "situation": "viajes" },
+    { "id": "b1-trips.voucher", "word": "voucher", "article": "a", "plural": "vouchers", "es": "el vale", "example": "b1-trips.can-i-get-a-meal-voucher", "situation": "viajes" },
+    { "id": "b1-trips.connection", "word": "connection", "article": "a", "plural": "connections", "es": "la conexión (de un vuelo)", "example": "b1-trips.im-worried-i-might-miss-my-connection", "situation": "viajes" },
+    { "id": "b1-trips.storm", "word": "storm", "article": "a", "plural": "storms", "es": "la tormenta", "situation": "viajes", "image": "fluent:cloud-with-lightning-and-rain" },
+    { "id": "b1-trips.announcement", "word": "announcement", "article": "an", "plural": "announcements", "es": "el anuncio (por megafonía)", "situation": "viajes", "image": "fluent:loudspeaker" },
+    { "id": "b1-trips.standby-list", "word": "standby list", "article": "a", "plural": "standby lists", "es": "la lista de espera", "example": "b1-trips.can-you-put-me-on-standby", "situation": "viajes" },
+    { "id": "b1-trips.change-fee", "word": "change fee", "article": "a", "plural": "change fees", "es": "el cargo por cambio", "example": "b1-trips.do-i-have-to-pay-a-change-fee", "situation": "viajes" },
+    { "id": "b1-trips.direct-flight", "word": "direct flight", "article": "a", "plural": "direct flights", "es": "el vuelo directo", "example": "b1-trips.id-prefer-a-direct-flight", "situation": "viajes" },
+    { "id": "b1-trips.gate-agent", "word": "gate agent", "article": "a", "plural": "gate agents", "es": "el agente de la puerta de embarque", "situation": "viajes" },
+    { "id": "b1-trips.itinerary", "word": "itinerary", "article": "an", "plural": "itineraries", "es": "el itinerario", "notes": "Suena «ai-TI-nə-re-ri».", "situation": "viajes" },
+    { "id": "b1-trips.claim-tag", "word": "claim tag", "article": "a", "plural": "claim tags", "es": "el resguardo del equipaje", "example": "b1-trips.heres-my-claim-tag", "situation": "viajes", "image": "fluent:label" },
+    { "id": "b1-trips.handle", "word": "handle", "article": "a", "plural": "handles", "es": "el asa", "example": "b1-trips.my-suitcase-got-damaged", "situation": "viajes" },
+    { "id": "b1-trips.essentials", "word": "essentials", "es": "lo imprescindible", "notes": "Siempre en plural.", "example": "b1-trips.can-i-get-reimbursed-for-essentials", "situation": "viajes" },
+    { "id": "b1-trips.toiletries", "word": "toiletries", "es": "los artículos de aseo", "notes": "Siempre en plural.", "situation": "viajes", "image": "fluent:lotion-bottle" },
+    { "id": "b1-trips.reference-number", "word": "reference number", "article": "a", "plural": "reference numbers", "es": "el número de referencia", "situation": "viajes" },
+    { "id": "b1-trips.complaint", "word": "complaint", "article": "a", "plural": "complaints", "es": "la queja, la reclamación", "example": "b1-trips.id-like-to-make-a-complaint", "situation": "viajes" },
+    { "id": "b1-trips.customer-service", "word": "customer service", "es": "la atención al cliente", "situation": "viajes" },
+    { "id": "b1-trips.discount", "word": "discount", "article": "a", "plural": "discounts", "es": "el descuento", "example": "b1-trips.would-you-mind-giving-us-a-discount", "situation": "viajes" },
+    { "id": "b1-trips.booking", "word": "booking", "article": "a", "plural": "bookings", "es": "la reserva", "notes": "«booking» y «reservation» significan lo mismo.", "situation": "viajes" },
+    { "id": "b1-trips.review", "word": "review", "article": "a", "plural": "reviews", "es": "la reseña, la opinión", "situation": "viajes", "image": "fluent:star" },
+    { "id": "b1-trips.sort-out", "word": "sort out", "es": "solucionar, arreglar", "notes": "Phrasal verb: «Let's sort it out» = vamos a solucionarlo.", "example": "b1-trips.thanks-for-sorting-it-out", "situation": "viajes", "tags": ["phrasal-verb"] },
+    { "id": "b1-trips.rental-car", "word": "rental car", "article": "a", "plural": "rental cars", "es": "el coche de alquiler", "example": "b1-trips.i-have-a-car-reserved", "situation": "viajes", "image": "fluent:oncoming-automobile" },
+    { "id": "b1-trips.drivers-license", "word": "driver's license", "article": "a", "plural": "driver's licenses", "es": "el carné de conducir", "situation": "viajes", "image": "fluent:identification-card" },
+    { "id": "b1-trips.gas", "word": "gas", "es": "la gasolina", "notes": "En EE. UU. «gas» es la gasolina; incontable.", "situation": "viajes" },
+    { "id": "b1-trips.gas-station", "word": "gas station", "article": "a", "plural": "gas stations", "es": "la gasolinera", "example": "b1-trips.wheres-the-nearest-gas-station", "situation": "viajes", "image": "fluent:fuel-pump" },
+    { "id": "b1-trips.highway", "word": "highway", "article": "a", "plural": "highways", "es": "la autopista", "example": "b1-trips.our-car-broke-down-on-the-highway", "situation": "viajes", "image": "fluent:motorway" },
+    { "id": "b1-trips.flat-tire", "word": "flat tire", "article": "a", "plural": "flat tires", "es": "la rueda pinchada", "example": "b1-trips.i-think-i-have-a-flat-tire", "situation": "viajes" },
+    { "id": "b1-trips.scratch", "word": "scratch", "article": "a", "plural": "scratches", "es": "el arañazo", "example": "b1-trips.theres-already-a-scratch-on-the-door", "situation": "viajes" },
+    { "id": "b1-trips.roadside-assistance", "word": "roadside assistance", "es": "la asistencia en carretera", "situation": "viajes" },
+    { "id": "b1-trips.break-down", "word": "break down", "es": "averiarse", "notes": "Phrasal verb: «The car broke down» = el coche se averió.", "example": "b1-trips.our-car-broke-down-on-the-highway", "situation": "viajes", "tags": ["phrasal-verb"] }
+  ],
+  "qa": [
+    {
+      "id": "b1-trips.qa.delayed-three-hours",
+      "question": "I'm sorry, your flight has been delayed by three hours.",
+      "questionEs": "Lo siento, su vuelo lleva tres horas de retraso.",
+      "accepted": [
+        {
+          "text": "Oh no. Do you know why it's delayed?",
+          "es": "Vaya. ¿Sabe por qué va con retraso?"
+        },
+        {
+          "text": "Three hours? Can I get a meal voucher?",
+          "es": "¿Tres horas? ¿Me dan un vale para comer?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Oh no. Do you know why is it delayed?",
+          "es": "Vaya. ¿Sabe por qué va con retraso?"
+        },
+        {
+          "text": "Three hours? How much time we have to wait?",
+          "es": "¿Tres horas? ¿Cuánto tenemos que esperar?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "En la pregunta indirecta no se invierte («why it's delayed»); en la directa falta el auxiliar: «How long do we have to wait?».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-trips.qa.you-look-worried",
+      "question": "Is everything OK? You look worried.",
+      "questionEs": "¿Va todo bien? Pareces preocupado.",
+      "accepted": [
+        {
+          "text": "I'm worried I might miss my connection.",
+          "es": "Me preocupa perder la conexión."
+        },
+        {
+          "text": "My flight was canceled, and I don't know what to do.",
+          "es": "Me han cancelado el vuelo y no sé qué hacer."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I'm worried I might lose my connection.",
+          "es": "Me preocupa perder la conexión."
+        },
+        {
+          "text": "My flight has been canceled yesterday.",
+          "es": "Me cancelaron el vuelo ayer."
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "«Perder» un vuelo es «miss», no «lose»; con «yesterday» va pasado simple, no present perfect.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-trips.qa.next-please",
+      "question": "Next, please! How can I help you?",
+      "questionEs": "¡El siguiente, por favor! ¿En qué puedo ayudarle?",
+      "accepted": [
+        {
+          "text": "I missed my connecting flight. Could you rebook me?",
+          "es": "He perdido el vuelo de conexión. ¿Podría cambiarme?"
+        },
+        {
+          "text": "My flight was canceled. Is there another flight to Chicago today?",
+          "es": "Me han cancelado el vuelo. ¿Hay otro vuelo a Chicago hoy?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I lost my connecting flight. Could you rebook me?",
+          "es": "He perdido el vuelo de conexión. ¿Podría cambiarme?"
+        },
+        {
+          "text": "I've missed my flight two hours ago.",
+          "es": "He perdido el vuelo hace dos horas."
+        }
+      ],
+      "register": "formal",
+      "situation": "viajes",
+      "notes": "Un vuelo se «miss», no se «lose»; con «ago» va pasado simple: «I missed my flight two hours ago».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-trips.qa.next-available",
+      "question": "The next available flight leaves tomorrow at seven a.m.",
+      "questionEs": "El siguiente vuelo disponible sale mañana a las siete.",
+      "accepted": [
+        {
+          "text": "Is there anything earlier? I really need to get there tonight.",
+          "es": "¿No hay nada antes? Necesito llegar esta noche sí o sí."
+        },
+        {
+          "text": "OK. Will the airline cover the hotel tonight?",
+          "es": "Vale. ¿La aerolínea paga el hotel esta noche?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Is there anything more early?",
+          "es": "¿No hay nada antes?"
+        },
+        {
+          "text": "OK. Will the airline pay me the hotel tonight?",
+          "es": "Vale. ¿La aerolínea me paga el hotel esta noche?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "«early» hace «earlier», no «more early»; «pagarme el hotel» es «pay for my hotel» o «cover the hotel».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-trips.qa.describe-your-bag",
+      "question": "Can you describe your bag, please?",
+      "questionEs": "¿Puede describir su maleta, por favor?",
+      "accepted": [
+        {
+          "text": "It's a large black suitcase with a red tag.",
+          "es": "Es una maleta negra grande con una etiqueta roja."
+        },
+        {
+          "text": "Sure. It's a small blue carry-on with wheels.",
+          "es": "Claro. Es una maleta de mano azul pequeña con ruedas."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "It's a black large suitcase with a red tag.",
+          "es": "Es una maleta negra grande con una etiqueta roja."
+        },
+        {
+          "text": "Sure. It's a suitcase blue and small.",
+          "es": "Claro. Es una maleta azul y pequeña."
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "El adjetivo va delante del nombre y el tamaño antes que el color: «a large black suitcase».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-trips.qa.where-should-we-deliver-it",
+      "question": "We'll call you when we find it. Where should we deliver it?",
+      "questionEs": "Le llamaremos cuando la encontremos. ¿Dónde se la llevamos?",
+      "accepted": [
+        {
+          "text": "To my hotel, please. Here's the address.",
+          "es": "A mi hotel, por favor. Aquí tiene la dirección."
+        },
+        {
+          "text": "Can you deliver it to my apartment in Chicago?",
+          "es": "¿Me la pueden llevar a mi piso de Chicago?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "To my hotel, please. Here's the direction.",
+          "es": "A mi hotel, por favor. Aquí tiene la dirección."
+        },
+        {
+          "text": "Can you deliver me it to my apartment?",
+          "es": "¿Me la pueden llevar a mi piso?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "«La dirección» de una casa es «address»; «direction» es el sentido o la orientación.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-trips.qa.what-can-i-do-for-you",
+      "question": "I'm sorry to hear that. What can I do for you?",
+      "questionEs": "Siento oír eso. ¿Qué puedo hacer por usted?",
+      "accepted": [
+        {
+          "text": "I'd like a full refund, please.",
+          "es": "Quiero que me devuelvan todo el dinero, por favor."
+        },
+        {
+          "text": "Could I speak to the manager, please?",
+          "es": "¿Podría hablar con el encargado, por favor?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I want that you give me a refund.",
+          "es": "Quiero que me devuelvan el dinero."
+        },
+        {
+          "text": "Could I speak to the responsible, please?",
+          "es": "¿Podría hablar con el responsable, por favor?"
+        }
+      ],
+      "register": "formal",
+      "situation": "viajes",
+      "notes": "«Quiero que…» no se traduce con «want that»; «el responsable» es «the manager» o «the person in charge».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-trips.qa.how-long-waiting",
+      "question": "Sorry for the wait. How long have you been waiting?",
+      "questionEs": "Perdone la espera. ¿Cuánto tiempo lleva esperando?",
+      "accepted": [
+        {
+          "text": "I've been waiting for over an hour.",
+          "es": "Llevo más de una hora esperando."
+        },
+        {
+          "text": "For about forty-five minutes.",
+          "es": "Unos cuarenta y cinco minutos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I'm waiting since an hour.",
+          "es": "Llevo una hora esperando."
+        },
+        {
+          "text": "Since forty-five minutes.",
+          "es": "Desde hace cuarenta y cinco minutos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "Una duración va con «for»; «since» marca el momento de inicio («since ten o'clock»).",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-trips.qa.check-the-car",
+      "question": "Before you go, did you check the car for damage?",
+      "questionEs": "Antes de irse, ¿ha revisado si el coche tiene algún daño?",
+      "accepted": [
+        {
+          "text": "Yes. There's already a scratch on the door.",
+          "es": "Sí. Ya hay un arañazo en la puerta."
+        },
+        {
+          "text": "Yes, everything looks fine.",
+          "es": "Sí, todo parece estar bien."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes. There's already a scratch in the door.",
+          "es": "Sí. Ya hay un arañazo en la puerta."
+        },
+        {
+          "text": "Yes. It has already a scratch on the door.",
+          "es": "Sí. Ya tiene un arañazo en la puerta."
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "Algo en una superficie va con «on»; «already» va antes del verbo principal: «It already has».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-trips.qa.roadside-assistance",
+      "question": "Roadside assistance, how can I help you?",
+      "questionEs": "Asistencia en carretera, ¿en qué puedo ayudarle?",
+      "accepted": [
+        {
+          "text": "Our car broke down on the highway.",
+          "es": "Se nos ha averiado el coche en la autopista."
+        },
+        {
+          "text": "I think I have a flat tire.",
+          "es": "Creo que tengo una rueda pinchada."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Our car broke up on the highway.",
+          "es": "Se nos ha averiado el coche en la autopista."
+        },
+        {
+          "text": "I think my wheel is pinched.",
+          "es": "Creo que tengo la rueda pinchada."
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "Averiarse es «break down» («break up» es romper una relación); una rueda pinchada es «a flat tire».",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}
