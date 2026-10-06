@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 10:40Z 💻
-- Writer: 💻 desktop
-- Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T74, then fast-forward main and push (Hernán OK'd)
-- Needs Hernán: OK for merge to main / deploy; visual + review queues
+- Updated: 2026-10-06 10:44Z 💻
+- Writer: released 10:44Z by 💻 desktop
+- Branch: main @ 2b18669 (plan merged 2026-10-06)
+- Next step: all tasks done; Hernán: visual + review queues on the deployed app
+- Needs Hernán: -
 
 ## Shared contract (all tasks read this)
 
@@ -21,7 +21,7 @@ Worktree setup: npm ci
 - **Never lose on-device data.** Every existing `lang-lern:*` key keeps its name and shape (`progress:<lang>`, `favorites:<lang>`, `game:<lang>`, `stories:<lang>`, `coach:*:<lang>`, `league-*`, `settings`…). New state goes in new keys only: `lang-lern:active-lang` (T58), `lang-lern:activity` (T62), `lang-lern:league-groups` and new board cache keys (T64). Old keys a feature stops using are left in place, never deleted. Switching languages never reads, rewrites or clears another language's keys. Only explicit user actions remove data. New keys are versioned (`{ v: 1, … }`) with tolerant parsing and are covered by the Perfil backup automatically (`lang-lern:*`).
 - **Default and active language.** Exactly one pack is the default: `pack.json` `"default": true` (Italian). `scripts/content.ts` writes it as `defaultLang` (today it is the first folder alphabetically, which would become `fr`). The active language = `lang-lern:active-lang` `{ v: 1, lang }` if it names an existing pack; else the first pack whose `lang-lern:progress:<lang>` is onboarded, default pack first (so Hernán's phone resolves to Italian with no prompt); else none = first launch, the picker shows. API (T58, `src/lib/content/active.ts` or similar, framework-free + one hook): `getActiveLang(): string | null`, `setActiveLang(lang)`, `subscribeActiveLang(cb)` (window event `lang-lern:active-lang-change`), `useActiveLang()` → `{ ready, lang, pack, setLang }` (`ready` false during server render/hydration; lang-dependent UI waits for it, no flash of the wrong language). `listPacks()` → every pack's meta, sorted with the default first.
 - **Routes.** `/leccion/[id]/`, `/dialogos/[id]/`, `/historias/[id]/` generate params for every pack; a page finds the pack that owns the id (`findLessonPack(id)` etc.) and uses it. Ids (units, lessons, items, dialogues, stories, placement) are unique across all packs; `content:check` enforces it. Situation ids are per pack.
-- **Schema (T58).** `pack.json` gains `default?: true`, `emoji?` (flag shown by the picker), `formalRegister: "lei" | "vous"` and `articles: string[]` (allowed vocab articles; Italian `il lo la l' i gli le`, French `le la l' les`). `Register` = `tu | lei | vous | neutral`; `content:check` allows only `tu`, `neutral` and the pack's `formalRegister`, and only the pack's `articles`. Italian content files stay byte-identical (only `content/it/pack.json` gets the new fields). There is no `numberWords` in the app (Hernán assumed one; numbers are content: French 70–99 is taught in unit `nombres`).
+- **Schema (T58).** `pack.json` gains `default?: true`, `emoji?` (flag shown by the picker), `formalRegister: "lei" | "vous"` and `articles: string[]` (allowed vocab articles; Italian `il lo la l' i gli le`, French `le la l' les`). `Register` = `tu | lei | vous | neutral`; `content:check` allows only `tu`, `neutral` and the pack's `formalRegister`, and only the pack's `articles`. Italian content files stay byte-identical (only `content/it/pack.json` gets the new fields). `numberWords` (added on main by a434e34) maps digits to words for mic matching; French has its own since T74; French 70–99 is also taught in unit `nombres`.
 - **Audio offline (T61).** The SW precache no longer holds `/audio/<lang>/**`. Audio lives in one SW-owned cache per language, `lang-lern-audio-<lang>` (no build version: mp3 names are content hashes), filled with the active language's files from the build's audio list; files no longer listed are removed from it; filled first from any older cache that already holds the file (today's precache), then the network. The page tells the SW the active language (`postMessage`) at start and on every switch; after a switch has fully downloaded, the other languages' audio caches are deleted. Coach Cache Storage and the precache rules in CLAUDE.md stay as they are. A small client API reports progress (`{ lang, total, cached, state }`) for the picker.
 - **App points (T62).** New key `lang-lern:activity` `{ v: 1, days: { "YYYY-MM-DD": { <lang>: xp } }, best }` (device-local dates, `src/lib/progress/dates.ts`), written by `saveResult()` for every award (0-XP activity marks the day too). Monthly XP = sum of the current local calendar month, all languages (resets on day 1; the first month counts from the update). Lifetime XP = Σ `progress:<lang>.xp` over every pack (never resets). **Streak is global** (Hernán): consecutive active days in `activity`, seeded on first run from each language's stored `streak { count, last }` so today's Italian streak carries over; `best` = max(seeded per-language bests, computed). Per-language `progress.streak` keeps being updated as today (Liga stats, backups). "Borrar progreso" of a language also removes that language's entries from `activity`.
 - **Liga (T63 SQL, T64 client).** Hernán 2026-10-06: weekly XP = sum over all languages (Monday 00:00 Europe/Madrid, unchanged), `lang` still recorded on every event and stat; **daily cap 2500 per player per Madrid day across all languages**; a player can be in **up to 10 groups** at once (`too_many_groups`) plus the general table; joining another group no longer requires leaving. Leaderboard streak = max of the player's per-language stats (the device sends the global streak). New RPCs (names may be refined in T63, documented in docs/league.md): `league_status()` (profile, groups[], week, weekly_xp, global rank), `league_ranking(scope 'global'|'group', code)` and `league_podium(scope, code)`, `league_leave_group(code)`. The old RPCs (`league_me(lang)`, `league_leaderboard(lang, scope)`, `league_last_week_podium(lang, scope)`, `league_leave_group()`) keep working for app versions still installed (summed XP, "the group" = the earliest joined one) until a later cleanup migration. SQL changes = a new file in `supabase/migrations/` + `npm run db:check`; never edit the applied migration, never touch the real project (Hernán runs `db push`).
@@ -244,7 +244,7 @@ Worktree setup: npm ci
 - Outcome: fr-FR audio 1732 mp3 (29 MB) + 109 Fluent pictures; minuit/midi without article; strict image check now counts pictures referenced by any pack; SW: audio lists fr+it per language, no mp3 precached · 1c894c7 · verify ✓ strict audio+images ✓ 💻 · not checked: iPhone PWA French offline
 
 ## T74 — Bring main (XP everywhere, numbers in the mic) into plan 006 + French numberWords
-- Status: running (attempt 1 · 💻 · agent a175ea6da93433afd · since 10:40Z)
+- Status: done
 - Depends on: T73
 - Where: any
 - Goal: main gained a434e34 and 3e54007 (another session): XP in dialogues/listening/Descubrir/placement/interview with an XpToast and `src/lib/progress/daily.ts`, numbers spoken in the mic compared through `pack.json` `numberWords`, dictation by voice with typo tolerance. Merge origin/main into this branch keeping both sides: every new feature must follow the plan's Shared contract (active pack, no Italian hard-coded, new stored keys only, global XP via `saveResult()` so `lang-lern:activity` and the Liga outbox see every award). Add `numberWords` to `content/fr/pack.json` (0–100 at least, French spelling: soixante-dix, quatre-vingts, quatre-vingt-dix…, same coverage as Italian).
@@ -254,7 +254,7 @@ Worktree setup: npm ci
   - `git merge-base --is-ancestor origin/main HEAD` → true; no conflict markers.
   - `grep -rnE 'DEFAULT_LANG|lang="it"|italiano' src api` → only the loader and explanatory comments.
   - `npm run content:check -- --strict-audio --strict-images` and `npm run verify` → exit 0.
-- Outcome:
+- Outcome: merged origin/main (XP everywhere, numbers in the mic, voice dictation) with 9 conflicts resolved for multi-language; recordListen lang required; Borrar progreso also clears daily-xp:<lang>; French numberWords 0–100, hundreds, 1000 · 2b18669 · verify ✓ strict ✓ 💻 · not checked: new UI from main in both themes, mic numbers on device
 
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
@@ -273,6 +273,7 @@ Worktree setup: npm ci
 - [ ] T70 @70795f1 — French language review (queued 2026-10-06 💻)
 - [ ] T72 @b23c31a — French language review (queued 2026-10-06 💻)
 - [ ] T73 @1c894c7 — code review (scripts/content.ts, scripts/images/plan.ts) (queued 2026-10-06 💻)
+- [ ] T74 @2b18669 — code review of the merge resolutions (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -282,6 +283,7 @@ Worktree setup: npm ci
 - [ ] T62 @c191bba — Ruta and Perfil points/streak: light + dark, 375 px, with Hernán's real data (queued 2026-10-06 💻)
 - [ ] T70 @70795f1 — play two French dialogues and the French placement with device voices (queued 2026-10-06 💻)
 - [ ] T73 @1c894c7 — installed PWA, French active, airplane mode: lesson, dialogue, story play neural audio; audio cache switch it↔fr (queued 2026-10-06 💻)
+- [ ] T74 @2b18669 — +N XP toast, yellow 'almost' sheet, dictation mic: light + dark 375 px; say numbers in fr and it (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: multi-language app; French (`fr`) is the second pack; adding a language stays content only; active-language picker on first launch and in Perfil, stored on the device; every page uses the active pack; static params for all packs with ids unique across packs; SW precaches only the active language's audio; never lose on-device data (every `lang-lern:*:<lang>` key and shape kept, Italian progress untouched). (Hernán)
@@ -295,6 +297,7 @@ Worktree setup: npm ci
 - 2026-10-06 T60: scope extended by orchestrator: SW keeps other languages' audio caches while the new active language has no audio (fr before T73), and OfflineStatus copy names the active language's audio
 - 2026-10-06 T73: scope extended by orchestrator: fix checkImages to use pictures referenced by all packs; drop article on nombres.midi like minuit
 - 2026-10-06 plan: Hernán OK'd merging plan 006 into main for deploy (2026-10-06); main had moved (a434e34, 3e54007), so T74 brings it in first
+- 2026-10-06 plan: numberWords exists after all (main a434e34); contract line corrected; French numberWords added in T74. (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-06 T58: listLangs() now returns the default pack first (sync.ts, coach/packs.ts iterate it, fr)
@@ -341,3 +344,4 @@ Worktree setup: npm ci
 - 2026-10-06 10:20Z 💻 T73 done · worktree-agent-ae4d7048a936ed7f7 → 1c894c7 · verify ✓
 - 2026-10-06 10:39Z 💻 Hernán applied 20261006000000_league_multi.sql to the real project (db push)
 - 2026-10-06 10:40Z 💻 T74 launched · attempt 1 · agent a175ea6da93433afd
+- 2026-10-06 10:44Z 💻 T74 done · worktree-agent-a175ea6da93433afd → 2b18669 (merge) · verify ✓
