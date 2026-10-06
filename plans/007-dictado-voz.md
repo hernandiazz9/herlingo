@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 💻
 - Writer: orchestrator (desktop)
 - Branch: plan-007-dictado-voz (from main @ a5f51c1)
-- Next step: T76 + T78 running; then T77
+- Next step: T77 running; then T79–T83 (2 at a time), T84
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -38,7 +38,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T76 — Speech engine: one reliable listen session
-- Status: running (attempt 1)
+- Status: done
 - Depends on: none
 - Goal: Replace the two recognition helpers with the engine in the Shared contract: explicit states, live interim text, silence auto-stop, hard caps, guaranteed settle, error kinds with Spanish messages, diagnostics log. Old `listenOnce` stays exported as a thin wrapper over the new session so current screens keep working until they migrate.
 - Context: src/lib/speech/recognition.ts, src/lib/speech/index.ts, src/components/dialogue/recognition.ts (for behaviour to absorb, do not delete it yet), src/components/coach/use-dictation.ts, docs/brief.md speech lines. Web Speech API on iOS Safari: `onspeechend` unreliable, `onend` may never fire, `service-not-allowed` common in standalone PWAs.
@@ -47,10 +47,10 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0
   - `grep -rn "webkitSpeechRecognition\|SpeechRecognition" src --include=*.ts --include=*.tsx | grep -v "src/lib/speech/\|src/components/dialogue/recognition.ts"` → no output except existing callers of feature detection that import from @/lib/speech
   - docs/speech.md documents states, timings, error kinds and the `lang-lern:speech-log` format
-- Outcome:
+- Outcome: createListenSession() in src/lib/speech/session.ts + messages.ts, log.ts, platform.ts; docs/speech.md → b21d6fb
 
 ## T77 — Shared mic UI: useListen, MicButton, LiveTranscript
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T76
 - Goal: The one mic UI in the Shared contract, over the engine: tap to start, auto-stop on silence, tap to finish, Cancelar, visible states with Spanish aria-live copy, live text, countdown to the cap, error + Reintentar. Both themes, reduced motion, 44px touch targets.
 - Context: Shared contract (mic UI section), src/components/ui (Button, IconButton), src/components/icons.tsx, src/app/globals.css tokens, the current mic buttons in SpeakExercise, DialoguePlayer, SituationForm for look and feel.
@@ -149,6 +149,7 @@ Worktree setup: npm ci
 - 2026-10-06: Errors in lessons: concrete message + Reintentar, never a permanent self-eval switch (Hernán)
 - 2026-10-06: No level meter (second mic stream breaks iOS recognition), no start/stop sounds, log keeps 50 entries without transcript text (orchestrator)
 - 2026-10-06 T78: threshold 0.7 (3 of 4 words passes, 1–2 word phrases must be fully right); score = ok / (expected + 0.5 × extra words); one-letter slip in 5+ letter words = ok; joined/split words match ("dove" = "dov'è"); levenshtein exported from normalize.ts (agent)
+- 2026-10-06 T76: engine files session.ts / messages.ts / log.ts / platform.ts (only platform.ts touches the recognition globals); legacy listenOnce keeps its shape (audio-capture, start-timeout → other; timeoutMs > 10 s → long mode); continuous false for phrase, true for long; speechstart without words → no-speech after max(silenceMs, noSpeechMs); finish() before listening = cancel(); an error after words heard settles as done; browser "aborted" ignored; extra overrides startTimeoutMs/endGraceMs/maxAlternatives; log stores raw browser error code (agent)
 
 ## Proposals (new scope)
 - 2026-10-06: "Grabarme": record your voice and play it next to the native audio (separate from recognition) (Hernán, later)
@@ -159,3 +160,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:45 T76 launched · attempt 1 · agent aed9f2545c1076095
 - 2026-10-06 13:45 T78 launched · attempt 1 · agent abd7c09a2e9924704
 - 2026-10-06 13:41 T78 done · branch worktree-agent-abd7c09a2e9924704 → 434e0f2
+- 2026-10-06 13:42 T76 done · branch worktree-agent-aed9f2545c1076095 → b21d6fb
