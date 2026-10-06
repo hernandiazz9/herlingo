@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:05Z 💻
+- Updated: 2026-10-06 09:11Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: T58 + T63 running; then T59/T61 and French units
+- Next step: integrate T63/T59; then T61 and French units
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -31,7 +31,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T58 — Multi-pack foundation: default pack, active language, schema, routes
-- Status: running (attempt 1 · 💻 · agent a8f0c979cd1939402 · since 09:05Z)
+- Status: done
 - Depends on: none
 - Where: any
 - Goal: The plumbing every other task builds on: an explicit default pack, the active-language store and hook, `listPacks()`, the per-pack schema rules (register, articles), ids unique across packs, static params for every pack on the three dynamic routes, and a meta-only `content/fr/pack.json` so the code runs with two packs.
@@ -43,10 +43,10 @@ Worktree setup: npm ci
   - `getActiveLang()` resolves: stored key → onboarded progress (default pack first) → null; setting it fires the change event; the hook's `ready` is false on the server.
   - `out/leccion/`, `out/dialogos/`, `out/historias/` contain every Italian id as before.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: default pack flag, active-lang store + hook, listPacks, per-pack register/articles, ids unique across packs, static params for all packs, fr pack.json meta · 197c3ac · verify ✓ 💻
 
 ## T59 — Every screen on the active pack
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a6de474c4d54e2790 · since 09:11Z)
 - Depends on: T58
 - Where: any
 - Goal: Replace every implicit Italian with the active (or owning) pack: the ~25 `DEFAULT_LANG` uses and the silent `lang?` fallbacks, the ~25 `lang="it"` attributes, the Spanish copy that says "italiano", the `it`-named fields, the audio manifest preload, the league client's module-level `lang`, and the Italian-only coach fake pack. Behaviour with Italian active must not change.
@@ -244,6 +244,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## Review queue
+- [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 
@@ -258,9 +259,12 @@ Worktree setup: npm ci
 - 2026-10-06 orchestrator: probe: `npm run verify` on main @ c970ea6 → exit 0. (orchestrator)
 
 ## Proposals (new scope)
+- 2026-10-06 T58: listLangs() now returns the default pack first (sync.ts, coach/packs.ts iterate it, fr)
 
 ## Log
 - 2026-10-06 💻 plan written from the interview; not approved yet
 - 2026-10-06 09:05Z 💻 plan approved by Hernán
 - 2026-10-06 09:05Z 💻 T58 launched · attempt 1 · agent a8f0c979cd1939402
 - 2026-10-06 09:05Z 💻 T63 launched · attempt 1 · agent a0e011abed6b45031
+- 2026-10-06 09:11Z 💻 T58 done · worktree-agent-a8f0c979cd1939402 → 197c3ac · verify ✓
+- 2026-10-06 09:11Z 💻 T59 launched · attempt 1 · agent a6de474c4d54e2790
