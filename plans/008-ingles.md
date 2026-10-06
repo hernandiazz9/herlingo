@@ -1,6 +1,6 @@
 # Plan 008 — Inglés: English pack by CEFR level (A2 + B1), level selector
 
-Status: active
+Status: done
 Created: 2026-10-06
 Base branch: plan-008-ingles (worktree .claude/worktrees/plan-008)
 Goal: Add English (`en`, American English) as the third pack, the first one split by CEFR level. Packs gain optional generic `levels`; units, dialogues, stories and placement questions carry a `level`; the learner picks a level per language (stored on the device in a new key) and Ruta shows only that level's units, while the placement test suggests a level. This plan builds the foundation (levels, a generic `formal` register, contraction-aware answer matching, `content/en/pack.json`) and the full French-sized course for **A2 and B1** (each: 10 units + grammar, ~420 phrases, ~320 vocab, ~80 Q&A, 12 dialogues, 12 stories), 12 placement questions, then en-US neural audio and pictures on the Mac. B2 and C1 follow in a later plan with the same molds. Italian and French content and every on-device key stay untouched. MVP speed: no automated tests; verification is `npm run verify`.
@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:58Z 💻
-- Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 7bae2c5
-- Next step: integrate T110 (last task); then Hernán: OK to ff main + deploy
-- Needs Hernán: -
+- Updated: 2026-10-06 14:02Z 💻
+- Writer: released 14:02Z by 💻 desktop (plan done)
+- Branch: plan-008-ingles @ ba12a7e · ff of main possible
+- Next step: Hernán: OK to fast-forward main + push, then deploy; review/visual queues on the PC
+- Needs Hernán: OK for main + deploy; 'situaciones del viaje' copy (proposal)
 
 ## Shared contract (all tasks read this)
 
@@ -276,7 +276,7 @@ Worktree setup: npm ci
 - Outcome: en-US audio 3449 mp3 (54 MB, 4 voices OK), 113 Fluent pictures; it/fr audio untouched; strict audio+images ✓; SW audio lists en/fr/it · 48ff88b · verify ✓ 💻 · not checked: iPhone PWA English offline, it↔en switch
 
 ## T110 — Contraction-aware answer and speech matching (`equivalents`)
-- Status: running (attempt 1 · 💻 · agent a3355539786c37382 · since 13:58Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Answer matching and speech scoring (whatever plan 007 voice leaves in place) expand the active pack's `pack.json` `equivalents` on both sides, so "I'm" and "I am", "don't" and "do not" count as equal, and hyphenated number words ("twenty-one") match. Generic: packs without `equivalents` (it, fr) behave exactly as before.
@@ -285,7 +285,7 @@ Worktree setup: npm ci
 - Done when:
   - A scratch check (not committed) shows `I'm from Madrid` ↔ `I am from Madrid` pass both ways with the en pack and fail with the it pack; "twenty-one" matches 21.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: expandEquivalents in normalize.ts; checkAnswer {equivalents}; scoreHeard/bestOption take Matching {numberWords, equivalents}; I'm ↔ I am, don't ↔ do not, 21 ↔ twenty-one; it/fr unchanged; docs/speech.md · ba12a7e · verify ✓ strict ✓ 💻 · not checked: mic on device in English
 
 ## Review queue
 - [ ] T90 @a048f4c — code review (schema, build.ts levels) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -308,6 +308,7 @@ Worktree setup: npm ci
 - [ ] T107 @2e8fa42 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T108 @80e939f — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T109 @48ff88b — skim the generated en manifest (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T110 @ba12a7e — code review (normalize.ts, speech score) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -315,6 +316,7 @@ Worktree setup: npm ci
 - [ ] T105 @e4df5b6 — play two English B1 dialogues (formal + tu badge) with device voices (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T108 @80e939f — English placement: answered well → suggests B1, poorly → A2; light + dark 375 px (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T109 @48ff88b — installed PWA, English active, airplane mode: A2 lesson, B1 dialogue, story play neural audio; it↔en switch keeps progress (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T110 @ba12a7e — say 'I am from Madrid' for 'I'm from Madrid' and a number in English with the mic (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: English (`en`) is the third pack, American English (en-US voices and speechLocale, US spelling and formats); content only, generic code where the schema needs it; product note in docs/brief-en.md (docs/brief.md not edited); never lose on-device data, it/fr content and audio byte-identical. (Hernán)
@@ -337,6 +339,7 @@ Worktree setup: npm ci
 - 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
 - 2026-10-06 T91: docs/content-guide.md should document the order%100>=90 side-unit rule for levelled packs
 - 2026-10-06 T108: Ruta subtitle (src/app/page.tsx:10) and Onboarding.tsx:127 say 'situaciones del viaje' for every pack; English/French have no trip — make it generic ('por situaciones') or per pack
+- 2026-10-06 T110: typed 'can not' doesn't match "can't" (→ cannot)
 
 ## Log
 - 2026-10-06 11:30Z 💻 plan written from the interview; not approved yet
@@ -379,3 +382,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:45Z 💻 T109 launched · attempt 1 · agent a4fd31c836beead18
 - 2026-10-06 13:57Z 💻 T109 done · worktree-agent-a4fd31c836beead18 → 48ff88b · verify ✓ strict ✓
 - 2026-10-06 13:58Z 💻 merged origin/main (plan 007 voice) → 7bae2c5 · verify ✓; T110 launched · attempt 1 · agent a3355539786c37382
+- 2026-10-06 14:02Z 💻 T110 done · worktree-agent-a3355539786c37382 → ba12a7e · verify ✓ strict ✓; plan 008 done
