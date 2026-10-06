@@ -1,0 +1,88 @@
+{
+  "id": "story.en-a2-happy-birthday-mrs-carter",
+  "order": 4,
+  "title": "Happy birthday, Mrs. Carter!",
+  "titleEs": "¡Feliz cumpleaños, Mrs. Carter!",
+  "description": "En la fiesta de la vecina, Pablo se presenta a David, su hijo.",
+  "emoji": "🎂",
+  "situation": "presentarse",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "On Saturday, Mrs. Carter has a small birthday party in her apartment.", "es": "El sábado, Mrs. Carter hace una pequeña fiesta de cumpleaños en su piso." },
+    { "id": "s2", "text": "Pablo brings the chocolate cake, and everyone says «Happy birthday!»", "es": "Pablo lleva la tarta de chocolate y todos dicen «¡Feliz cumpleaños!»" },
+    { "id": "s3", "text": "Then a tall man comes over and says hello.", "es": "Luego un hombre alto se acerca y lo saluda." },
+    { "id": "s4", "text": "«Hi, I'm David, Mrs. Carter's son. What's your name?»", "es": "«Hola, soy David, el hijo de Mrs. Carter. ¿Cómo te llamas?»", "voice": "en-US-BrianNeural" },
+    { "id": "s5", "text": "«My name is Pablo. I'm from Spain, from Valencia.»", "es": "«Me llamo Pablo. Soy de España, de Valencia.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«Oh, cool! So what do you do?»", "es": "«¡Ah, qué guay! ¿Y a qué te dedicas?»", "voice": "en-US-BrianNeural" },
+    { "id": "s7", "text": "«I'm a programmer. I work from home for a small company.»", "es": "«Soy programador. Trabajo desde casa para una empresa pequeña.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "«Really? I'm an engineer. Your English is really good!»", "es": "«¿En serio? Yo soy ingeniero. ¡Hablas muy bien inglés!»", "voice": "en-US-BrianNeural" },
+    { "id": "s9", "text": "«Thanks! I'm learning English. Please correct me if I make a mistake.»", "es": "«¡Gracias! Estoy aprendiendo inglés. Corrígeme si me equivoco, por favor.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«Don't worry, Pablo. In this apartment, I'm the teacher!»", "es": "«Tranquilo, Pablo. ¡En este piso, la profesora soy yo!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "Everyone laughs, and Pablo eats a big piece of his cake.", "es": "Todos se ríen y Pablo se come un buen trozo de su tarta." }
+  ],
+  "keywords": [
+    "a2-about-me.whats-your-name",
+    "a2-about-me.my-name-is",
+    "a2-about-me.im-from-spain",
+    "a2-about-me.what-do-you-do",
+    "a2-about-me.im-a-programmer",
+    "a2-about-me.i-work-from-home",
+    "a2-about-me.engineer",
+    "a2-about-me.your-english-is-really-good",
+    "a2-about-me.im-learning-english",
+    "a2-about-me.please-correct-me"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Who is David?",
+      "es": "¿Quién es David?",
+      "options": [
+        { "text": "Jordan's brother.", "es": "El hermano de Jordan." },
+        { "text": "Mrs. Carter's son.", "es": "El hijo de Mrs. Carter." },
+        { "text": "Maya's coworker.", "es": "Un compañero de trabajo de Maya." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What does David do?",
+      "es": "¿A qué se dedica David?",
+      "options": [
+        { "text": "He's an engineer.", "es": "Es ingeniero." },
+        { "text": "He's a programmer.", "es": "Es programador." },
+        { "text": "He's a teacher.", "es": "Es profesor." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Where does Pablo work?",
+      "es": "¿Dónde trabaja Pablo?",
+      "options": [
+        { "text": "In an office in Valencia.", "es": "En una oficina en Valencia." },
+        { "text": "At a coffee shop.", "es": "En una cafetería." },
+        { "text": "From home.", "es": "Desde casa." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "What does Pablo ask David to do?",
+      "es": "¿Qué le pide Pablo a David?",
+      "options": [
+        { "text": "To speak Spanish.", "es": "Que hable español." },
+        { "text": "To correct his mistakes.", "es": "Que le corrija los errores." },
+        { "text": "To bring a cake.", "es": "Que traiga una tarta." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "a2-about-me.whats-your-name", "gap": "What's your name", "distractors": ["What time is it", "How much is it"] },
+    { "id": "g2", "sentence": "s6", "answer": "a2-about-me.what-do-you-do", "gap": "what do you do", "distractors": ["where do you live", "how old are you"] },
+    { "id": "g3", "sentence": "s7", "answer": "a2-about-me.im-a-programmer", "gap": "programmer", "distractors": ["nurse", "doctor"] },
+    { "id": "g4", "sentence": "s8", "answer": "a2-about-me.engineer", "distractors": ["actor", "artist"] },
+    { "id": "g5", "sentence": "s9", "answer": "a2-about-me.please-correct-me", "gap": "correct me", "distractors": ["call me", "text me"] }
+  ]
+}

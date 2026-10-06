@@ -1,0 +1,96 @@
+{
+  "id": "story.en-a2-four-a-m",
+  "order": 3,
+  "title": "Four a.m.",
+  "titleEs": "Las cuatro de la mañana",
+  "description": "Jet lag, una fecha importante y una tarta en la cafetería de Jordan.",
+  "emoji": "⏰",
+  "situation": "numeros",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Pablo wakes up and looks at his phone: it's four a.m.!", "es": "Pablo se despierta y mira el móvil: ¡son las cuatro de la mañana!" },
+    { "id": "s2", "text": "In Valencia, it's eleven in the morning. Jet lag is terrible!", "es": "En Valencia son las once de la mañana. ¡El jet lag es horrible!" },
+    { "id": "s3", "text": "At a quarter to eight, Maya comes into the kitchen.", "es": "A las ocho menos cuarto, Maya entra en la cocina." },
+    { "id": "s4", "text": "«Good morning! You're up early. Do you want some coffee?»", "es": "«¡Buenos días! Qué pronto te has levantado. ¿Quieres un café?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«Yes, please! By the way, what's the date today?»", "es": "«¡Sí, por favor! Por cierto, ¿qué día es hoy?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«It's October eighth. Why?»", "es": "«Es 8 de octubre. ¿Por qué?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "«Mrs. Carter's birthday is on October tenth. I want to buy her a cake.»", "es": "«El cumpleaños de Mrs. Carter es el 10 de octubre. Quiero comprarle una tarta.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "Later, Pablo goes to the coffee shop where Jordan works.", "es": "Más tarde, Pablo va a la cafetería donde trabaja Jordan." },
+    { "id": "s9", "text": "«This chocolate cake looks great! How much is it?»", "es": "«¡Qué buena pinta tiene esta tarta de chocolate! ¿Cuánto cuesta?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«That's twenty-four fifty.»", "es": "«Son veinticuatro con cincuenta.»", "voice": "en-US-BrianNeural" },
+    { "id": "s11", "text": "«OK. Can I pay by card?»", "es": "«Vale. ¿Puedo pagar con tarjeta?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«Sure! And your coffee is free today, buddy.»", "es": "«¡Claro! Y hoy el café te sale gratis, colega.»", "voice": "en-US-BrianNeural" },
+    { "id": "s13", "text": "Pablo pays for the cake and puts a dollar in the tip jar.", "es": "Pablo paga la tarta y echa un dólar en el bote de las propinas." }
+  ],
+  "keywords": [
+    "a2-numbers.four",
+    "a2-numbers.eleven",
+    {
+      "id": "story-en-jet-lag",
+      "word": "jet lag",
+      "es": "el jet lag",
+      "notes": "Incontable: «I have jet lag» (sin «a»). Es el cansancio y el sueño cambiado después de un vuelo largo.",
+      "situation": "viajes"
+    },
+    "a2-numbers.whats-the-date",
+    "a2-numbers.today",
+    "a2-numbers.october",
+    "a2-numbers.how-much-is-it",
+    "a2-numbers.can-i-pay-by-card",
+    "a2-numbers.dollar",
+    "a2-numbers.tip"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What time does Pablo wake up?",
+      "es": "¿A qué hora se despierta Pablo?",
+      "options": [
+        { "text": "At seven a.m.", "es": "A las siete de la mañana." },
+        { "text": "At eleven a.m.", "es": "A las once de la mañana." },
+        { "text": "At four a.m.", "es": "A las cuatro de la mañana." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "When is Mrs. Carter's birthday?",
+      "es": "¿Cuándo es el cumpleaños de Mrs. Carter?",
+      "options": [
+        { "text": "On October tenth.", "es": "El 10 de octubre." },
+        { "text": "On October eighth.", "es": "El 8 de octubre." },
+        { "text": "On November tenth.", "es": "El 10 de noviembre." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "How much is the chocolate cake?",
+      "es": "¿Cuánto cuesta la tarta de chocolate?",
+      "options": [
+        { "text": "Fourteen fifty.", "es": "Catorce con cincuenta." },
+        { "text": "Twenty-four fifty.", "es": "Veinticuatro con cincuenta." },
+        { "text": "Four fifty.", "es": "Cuatro con cincuenta." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "How much does Pablo pay for his coffee?",
+      "es": "¿Cuánto paga Pablo por su café?",
+      "options": [
+        { "text": "Nothing. It's free.", "es": "Nada. Es gratis." },
+        { "text": "One dollar.", "es": "Un dólar." },
+        { "text": "Three fifty.", "es": "Tres con cincuenta." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "a2-numbers.four", "distractors": ["nine", "ten"] },
+    { "id": "g2", "sentence": "s2", "answer": "story-en-jet-lag", "gap": "Jet lag", "distractors": ["Coffee", "Music"] },
+    { "id": "g3", "sentence": "s6", "answer": "a2-numbers.october", "distractors": ["July", "December"] },
+    { "id": "g4", "sentence": "s9", "answer": "a2-numbers.how-much-is-it", "gap": "How much is it", "distractors": ["What time is it", "Where is it"] },
+    { "id": "g5", "sentence": "s13", "answer": "a2-numbers.tip", "distractors": ["receipt", "coupon"] }
+  ]
+}

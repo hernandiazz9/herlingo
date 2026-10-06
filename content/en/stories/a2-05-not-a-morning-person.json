@@ -1,0 +1,90 @@
+{
+  "id": "story.en-a2-not-a-morning-person",
+  "order": 5,
+  "title": "Not a morning person",
+  "titleEs": "No es de mañanas",
+  "description": "Un día normal en el piso de Maya y Jordan, y el tiempo de Chicago.",
+  "emoji": "🏠",
+  "situation": "casa",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Maya and Jordan have an apartment in Logan Square, a neighborhood in Chicago.", "es": "Maya y Jordan tienen un piso en Logan Square, un barrio de Chicago." },
+    { "id": "s2", "text": "It has two bedrooms, so Pablo sleeps on the couch.", "es": "Tiene dos dormitorios, así que Pablo duerme en el sofá." },
+    { "id": "s3", "text": "Maya usually wakes up early, at six thirty.", "es": "Maya suele levantarse temprano, a las seis y media." },
+    { "id": "s4", "text": "She takes a shower, has coffee and toast, and goes to work.", "es": "Se ducha, desayuna café con tostadas y se va a trabajar." },
+    { "id": "s5", "text": "Jordan is the opposite: he's not a morning person.", "es": "Jordan es todo lo contrario: no es de mañanas." },
+    { "id": "s6", "text": "«Please don't talk to me before ten!»", "es": "«¡Por favor, no me habléis antes de las diez!»", "voice": "en-US-BrianNeural" },
+    { "id": "s7", "text": "In the afternoon he works at the coffee shop, and at night he plays guitar.", "es": "Por la tarde trabaja en la cafetería y por la noche toca la guitarra." },
+    { "id": "s8", "text": "Today, Pablo wants to go running in the park.", "es": "Hoy Pablo quiere ir a correr al parque." },
+    { "id": "s9", "text": "«Maya, what's the weather like today?»", "es": "«Maya, ¿qué tiempo hace hoy?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«It's really cold today. Forty degrees!»", "es": "«Hoy hace muchísimo frío. ¡Cuarenta grados!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "«Forty? Oh, right, Fahrenheit!»", "es": "«¿Cuarenta? ¡Ah, claro, Fahrenheit!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«And it's going to rain this afternoon. Take an umbrella!»", "es": "«Y va a llover esta tarde. ¡Llévate un paraguas!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s13", "text": "Pablo looks out the window and stays on the couch with a movie.", "es": "Pablo mira por la ventana y se queda en el sofá con una peli." }
+  ],
+  "keywords": [
+    "a2-daily.apartment",
+    "a2-daily.couch",
+    "a2-daily.shower",
+    "a2-daily.im-not-a-morning-person",
+    "a2-daily.guitar",
+    "a2-daily.whats-the-weather-like",
+    "a2-daily.its-really-cold-today",
+    "a2-daily.degree",
+    "a2-daily.its-going-to-rain",
+    "a2-daily.umbrella"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Where does Pablo sleep?",
+      "es": "¿Dónde duerme Pablo?",
+      "options": [
+        { "text": "On the couch.", "es": "En el sofá." },
+        { "text": "In Jordan's bedroom.", "es": "En el dormitorio de Jordan." },
+        { "text": "At a hotel.", "es": "En un hotel." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "What time does Maya wake up?",
+      "es": "¿A qué hora se levanta Maya?",
+      "options": [
+        { "text": "At ten.", "es": "A las diez." },
+        { "text": "At six thirty.", "es": "A las seis y media." },
+        { "text": "At eight.", "es": "A las ocho." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "What does Jordan do at night?",
+      "es": "¿Qué hace Jordan por la noche?",
+      "options": [
+        { "text": "He goes running.", "es": "Sale a correr." },
+        { "text": "He works at the coffee shop.", "es": "Trabaja en la cafetería." },
+        { "text": "He plays guitar.", "es": "Toca la guitarra." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Why doesn't Pablo go running?",
+      "es": "¿Por qué Pablo no sale a correr?",
+      "options": [
+        { "text": "It's cold, and it's going to rain.", "es": "Hace frío y va a llover." },
+        { "text": "He has to work.", "es": "Tiene que trabajar." },
+        { "text": "The park is closed.", "es": "El parque está cerrado." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "a2-daily.couch", "distractors": ["balcony", "roof"] },
+    { "id": "g2", "sentence": "s4", "answer": "a2-daily.shower", "distractors": ["guitar", "umbrella"] },
+    { "id": "g3", "sentence": "s5", "answer": "a2-daily.im-not-a-morning-person", "gap": "morning person", "distractors": ["night person", "nice person"] },
+    { "id": "g4", "sentence": "s9", "answer": "a2-daily.whats-the-weather-like", "gap": "weather", "distractors": ["time", "date"] },
+    { "id": "g5", "sentence": "s10", "answer": "a2-daily.degree", "gap": "degrees", "distractors": ["dollars", "miles"] }
+  ]
+}

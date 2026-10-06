@@ -1,0 +1,90 @@
+{
+  "id": "story.en-a2-welcome-to-chicago",
+  "order": 1,
+  "title": "Welcome to Chicago",
+  "titleEs": "Bienvenido a Chicago",
+  "description": "Pablo aterriza en O'Hare, pasa inmigración y Maya lo espera en llegadas.",
+  "emoji": "✈️",
+  "situation": "viajes",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "It's Friday afternoon, and Pablo's flight lands at O'Hare Airport in Chicago.", "es": "Es viernes por la tarde y el vuelo de Pablo aterriza en el aeropuerto O'Hare de Chicago." },
+    { "id": "s2", "text": "It's his first time in the US, and he's a little nervous.", "es": "Es su primera vez en Estados Unidos y está un poco nervioso." },
+    { "id": "s3", "text": "At immigration, an officer looks at his passport.", "es": "En inmigración, un agente le mira el pasaporte." },
+    { "id": "s4", "text": "«Are you here for work or on vacation?»", "es": "«¿Viene por trabajo o de vacaciones?»", "voice": "en-US-BrianNeural" },
+    { "id": "s5", "text": "«I'm here on vacation. I'm staying for two weeks.»", "es": "«Vengo de vacaciones. Me quedo dos semanas.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "Then he goes to baggage claim, but his suitcase isn't there.", "es": "Luego va a la recogida de equipajes, pero su maleta no está." },
+    { "id": "s7", "text": "After twenty minutes, he finally sees his big red suitcase.", "es": "Después de veinte minutos, por fin ve su maleta roja grande." },
+    { "id": "s8", "text": "At arrivals, his friend Maya is waiting with a sign: «Welcome, Pablo!»", "es": "En llegadas, su amiga Maya lo espera con un cartel: «¡Bienvenido, Pablo!»" },
+    { "id": "s9", "text": "«Pablo! Hi! How was the flight?»", "es": "«¡Pablo! ¡Hola! ¿Qué tal el vuelo?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "«Long, but OK! Thank you so much for coming.»", "es": "«¡Largo, pero bien! Muchísimas gracias por venir.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "«No problem! Come on, Jordan is waiting in the car.»", "es": "«¡No hay de qué! Vamos, Jordan nos espera en el coche.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s12", "text": "Outside, it's cold and windy, but Pablo is happy: he's in Chicago!", "es": "Fuera hace frío y viento, pero Pablo está contento: ¡está en Chicago!" }
+  ],
+  "keywords": [
+    "a2-airport.flight",
+    "a2-airport.immigration",
+    "a2-airport.passport",
+    "a2-airport.here-on-vacation",
+    "a2-airport.staying-two-weeks",
+    "a2-airport.baggage-claim",
+    "a2-airport.suitcase",
+    "a2-airport.arrivals",
+    "a2-hello.thank-you-so-much",
+    "a2-hello.no-problem"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Is this Pablo's first time in the US?",
+      "es": "¿Es la primera vez que Pablo va a Estados Unidos?",
+      "options": [
+        { "text": "No, it's his second time.", "es": "No, es la segunda vez." },
+        { "text": "Yes, it is.", "es": "Sí." },
+        { "text": "No, he lives in Chicago.", "es": "No, vive en Chicago." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "How long is Pablo staying?",
+      "es": "¿Cuánto tiempo se queda Pablo?",
+      "options": [
+        { "text": "For two days.", "es": "Dos días." },
+        { "text": "For a month.", "es": "Un mes." },
+        { "text": "For two weeks.", "es": "Dos semanas." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "What happens at baggage claim?",
+      "es": "¿Qué pasa en la recogida de equipajes?",
+      "options": [
+        { "text": "His suitcase isn't there at first.", "es": "Al principio su maleta no está." },
+        { "text": "He loses his passport.", "es": "Pierde el pasaporte." },
+        { "text": "He meets Jordan.", "es": "Conoce a Jordan." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Where is Jordan?",
+      "es": "¿Dónde está Jordan?",
+      "options": [
+        { "text": "At arrivals, with a sign.", "es": "En llegadas, con un cartel." },
+        { "text": "In the car.", "es": "En el coche." },
+        { "text": "At home, in bed.", "es": "En casa, en la cama." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "a2-airport.flight", "distractors": ["train", "bus"] },
+    { "id": "g2", "sentence": "s3", "answer": "a2-airport.passport", "distractors": ["blanket", "pillow"] },
+    { "id": "g3", "sentence": "s5", "answer": "a2-airport.here-on-vacation", "gap": "on vacation", "distractors": ["for work", "for school"] },
+    { "id": "g4", "sentence": "s6", "answer": "a2-airport.baggage-claim", "distractors": ["security", "the gate"] },
+    { "id": "g5", "sentence": "s8", "answer": "a2-airport.arrivals", "distractors": ["departures", "security"] },
+    { "id": "g6", "sentence": "s10", "answer": "a2-hello.thank-you-so-much", "gap": "Thank you so much", "distractors": ["Bless you", "Excuse me"] }
+  ]
+}

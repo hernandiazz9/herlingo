@@ -1,0 +1,91 @@
+{
+  "id": "story.en-a2-no-hot-water",
+  "order": 6,
+  "title": "No hot water",
+  "titleEs": "No hay agua caliente",
+  "description": "Pablo pasa dos noches en un hotel del centro y la ducha no funciona.",
+  "emoji": "🏨",
+  "situation": "alojamiento",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Jordan's parents are coming to Chicago for the weekend.", "es": "Los padres de Jordan vienen a Chicago a pasar el fin de semana." },
+    { "id": "s2", "text": "The apartment is small, so Pablo books a hotel downtown for two nights.", "es": "El piso es pequeño, así que Pablo reserva un hotel en el centro para dos noches." },
+    { "id": "s3", "text": "«Hi, I'd like to check in, please. I have a reservation under García.»", "es": "«Hola, quería hacer el check-in, por favor. Tengo una reserva a nombre de García.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "«Welcome! Can I see your passport and a credit card?»", "es": "«¡Bienvenido! ¿Me enseña su pasaporte y una tarjeta de crédito?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«Sure. Is breakfast included?»", "es": "«Claro. ¿El desayuno está incluido?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«Yes, from seven to ten. Your room is on the twelfth floor.»", "es": "«Sí, de siete a diez. Su habitación está en la planta doce.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "The room is really nice, with a big window over the river.", "es": "La habitación es muy bonita, con una ventana grande que da al río." },
+    { "id": "s8", "text": "But in the shower, there's no hot water.", "es": "Pero en la ducha no hay agua caliente." },
+    { "id": "s9", "text": "Pablo calls the front desk.", "es": "Pablo llama a recepción." },
+    { "id": "s10", "text": "«Hi, there's a problem with my room. Can someone come and look at it?»", "es": "«Hola, hay un problema en mi habitación. ¿Puede venir alguien a mirarlo?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "Ten minutes later, a man from maintenance fixes it.", "es": "Diez minutos después, un hombre de mantenimiento lo arregla." },
+    { "id": "s12", "text": "«Thanks for fixing it so fast!»", "es": "«¡Gracias por arreglarlo tan rápido!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s13", "text": "That night, Pablo sleeps very well in a big, comfortable bed.", "es": "Esa noche, Pablo duerme muy bien en una cama grande y cómoda." }
+  ],
+  "keywords": [
+    "a2-hotel.id-like-to-check-in",
+    "a2-hotel.reservation",
+    "a2-hotel.is-breakfast-included",
+    "a2-hotel.floor",
+    "a2-hotel.room-is-really-nice",
+    "a2-hotel.no-hot-water",
+    "a2-hotel.front-desk",
+    "a2-hotel.problem-with-my-room",
+    "a2-hotel.maintenance",
+    "a2-hotel.thanks-for-fixing-it"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why does Pablo go to a hotel?",
+      "es": "¿Por qué va Pablo a un hotel?",
+      "options": [
+        { "text": "He doesn't like the couch.", "es": "No le gusta el sofá." },
+        { "text": "Jordan's parents are visiting, and the apartment is small.", "es": "Vienen los padres de Jordan y el piso es pequeño." },
+        { "text": "He's going back to Spain.", "es": "Vuelve a España." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What floor is Pablo's room on?",
+      "es": "¿En qué planta está la habitación de Pablo?",
+      "options": [
+        { "text": "The twelfth floor.", "es": "En la planta doce." },
+        { "text": "The second floor.", "es": "En la segunda planta." },
+        { "text": "The twentieth floor.", "es": "En la planta veinte." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What is the problem with the room?",
+      "es": "¿Qué problema tiene la habitación?",
+      "options": [
+        { "text": "The Wi-Fi isn't working.", "es": "El wifi no funciona." },
+        { "text": "The room is very noisy.", "es": "La habitación es muy ruidosa." },
+        { "text": "There's no hot water.", "es": "No hay agua caliente." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "When does the man from maintenance fix it?",
+      "es": "¿Cuándo lo arregla el hombre de mantenimiento?",
+      "options": [
+        { "text": "The next morning.", "es": "A la mañana siguiente." },
+        { "text": "Ten minutes later.", "es": "Diez minutos después." },
+        { "text": "Two hours later.", "es": "Dos horas después." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "a2-hotel.reservation", "distractors": ["problem", "bill"] },
+    { "id": "g2", "sentence": "s5", "answer": "a2-hotel.is-breakfast-included", "gap": "breakfast", "distractors": ["parking", "the minibar"] },
+    { "id": "g3", "sentence": "s6", "answer": "a2-hotel.floor", "distractors": ["street", "block"] },
+    { "id": "g4", "sentence": "s8", "answer": "a2-hotel.no-hot-water", "gap": "hot water", "distractors": ["Wi-Fi", "TV"] },
+    { "id": "g5", "sentence": "s9", "answer": "a2-hotel.front-desk", "distractors": ["airport", "coffee shop"] },
+    { "id": "g6", "sentence": "s11", "answer": "a2-hotel.maintenance", "distractors": ["security", "customs"] }
+  ]
+}

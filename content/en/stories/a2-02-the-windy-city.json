@@ -1,0 +1,91 @@
+{
+  "id": "story.en-a2-the-windy-city",
+  "order": 2,
+  "title": "The Windy City",
+  "titleEs": "La Ciudad del Viento",
+  "description": "Pablo conoce a Mrs. Carter, la vecina, que habla muy deprisa.",
+  "emoji": "👋",
+  "situation": "saludos",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "On Saturday morning, Pablo meets an older woman on the stairs.", "es": "El sábado por la mañana, Pablo se encuentra con una señora mayor en la escalera." },
+    { "id": "s2", "text": "«Good morning! You must be Maya's friend from Spain.»", "es": "«¡Buenos días! Tú debes de ser el amigo español de Maya.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s3", "text": "«Yes, hi! I'm Pablo. Nice to meet you.»", "es": "«¡Sí, hola! Soy Pablo. Encantado de conocerla.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "Her name is Mrs. Carter, and she's their neighbor on the third floor.", "es": "Se llama Mrs. Carter y es su vecina del tercero." },
+    { "id": "s5", "text": "She's a retired teacher, and she talks very fast.", "es": "Es una profesora jubilada y habla muy deprisa." },
+    { "id": "s6", "text": "«Welcome to the Windy City, dear! Bring a warm coat!»", "es": "«¡Bienvenido a la Ciudad del Viento, cielo! ¡Tráete un abrigo calentito!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "«Sorry, I don't understand. Could you speak more slowly, please?»", "es": "«Perdone, no entiendo. ¿Podría hablar más despacio, por favor?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "She smiles and says it again, word by word.", "es": "Ella sonríe y lo repite, palabra por palabra." },
+    { "id": "s9", "text": "«The Windy City? What does that mean?»", "es": "«¿La Ciudad del Viento? ¿Qué significa eso?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«It's Chicago's nickname. It's very windy here in winter!»", "es": "«Es el apodo de Chicago. ¡Aquí hace mucho viento en invierno!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "«Oh, I see! Thank you.»", "es": "«¡Ah, ya veo! Gracias.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "Then Jordan comes down the stairs with his guitar.", "es": "Entonces Jordan baja la escalera con su guitarra." },
+    { "id": "s13", "text": "«Good morning, Mrs. Carter! Have a nice day!»", "es": "«¡Buenos días, Mrs. Carter! ¡Que tenga un buen día!»", "voice": "en-US-BrianNeural" },
+    { "id": "s14", "text": "«Thanks, you too! Take care, boys!»", "es": "«¡Gracias, igualmente! ¡Cuidaos, chicos!»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "a2-hello.good-morning",
+    "a2-hello.nice-to-meet-you",
+    "a2-hello.neighbor",
+    "a2-hello.sorry-i-dont-understand",
+    "a2-hello.more-slowly",
+    "a2-hello.what-does-that-mean",
+    "a2-hello.oh-i-see",
+    "a2-hello.have-a-nice-day",
+    "a2-hello.you-too",
+    "a2-hello.take-care"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Where does Pablo meet Mrs. Carter?",
+      "es": "¿Dónde se encuentra Pablo con Mrs. Carter?",
+      "options": [
+        { "text": "At the airport.", "es": "En el aeropuerto." },
+        { "text": "On the stairs.", "es": "En la escalera." },
+        { "text": "At a coffee shop.", "es": "En una cafetería." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Why doesn't Pablo understand Mrs. Carter?",
+      "es": "¿Por qué Pablo no entiende a Mrs. Carter?",
+      "options": [
+        { "text": "She talks very fast.", "es": "Habla muy deprisa." },
+        { "text": "She speaks Spanish.", "es": "Habla español." },
+        { "text": "Jordan is playing the guitar.", "es": "Jordan está tocando la guitarra." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What is \"the Windy City\"?",
+      "es": "¿Qué es «the Windy City»?",
+      "options": [
+        { "text": "A neighborhood in Chicago.", "es": "Un barrio de Chicago." },
+        { "text": "A coffee shop.", "es": "Una cafetería." },
+        { "text": "Chicago's nickname.", "es": "El apodo de Chicago." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "What was Mrs. Carter's job?",
+      "es": "¿A qué se dedicaba Mrs. Carter?",
+      "options": [
+        { "text": "She was a teacher.", "es": "Era profesora." },
+        { "text": "She was a doctor.", "es": "Era médica." },
+        { "text": "She was a musician.", "es": "Era música." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "a2-hello.neighbor", "distractors": ["boss", "sister"] },
+    { "id": "g2", "sentence": "s7", "answer": "a2-hello.sorry-i-dont-understand", "gap": "I don't understand", "distractors": ["I don't like it", "I don't work"] },
+    { "id": "g3", "sentence": "s9", "answer": "a2-hello.what-does-that-mean", "gap": "What does that mean", "distractors": ["How much is that", "Where is that"] },
+    { "id": "g4", "sentence": "s13", "answer": "a2-hello.have-a-nice-day", "gap": "Have a nice day", "distractors": ["Good night", "Nice to meet you"] },
+    { "id": "g5", "sentence": "s14", "answer": "a2-hello.take-care", "gap": "Take care", "distractors": ["Bless you", "Excuse me"] }
+  ]
+}
