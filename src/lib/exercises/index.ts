@@ -7,6 +7,7 @@ export * from "./types";
 export {
   checkAnswer,
   diffWords,
+  expandEquivalents,
   normalizeAnswer,
   similarity,
   spellNumbers,
@@ -14,6 +15,7 @@ export {
   typoAllowance,
   type AnswerCheck,
   type CheckOptions,
+  type Equivalents,
   type DiffWord,
 } from "./normalize";
 export { createRng, hashSeed, type Rng } from "./random";

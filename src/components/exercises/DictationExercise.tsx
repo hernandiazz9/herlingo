@@ -29,7 +29,7 @@ export function DictationExercise({ exercise, answered, onAnswer }: ExerciseProp
   const check = () => {
     if (answered || listen.active || !text.trim()) return;
     listen.reset();
-    const result = checkAnswer(text, exercise.accepted, { typos: true });
+    const result = checkAnswer(text, exercise.accepted, { typos: true, equivalents: meta.equivalents });
     onAnswer({ correct: result.correct, accentNote: result.accentNote, typo: result.typo, given: text.trim() });
   };
 

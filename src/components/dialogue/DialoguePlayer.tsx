@@ -98,7 +98,7 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
       const { index, result } = bestOption(
         turn.options.map((o) => o.text),
         r.alternatives.length ? r.alternatives : [r.transcript],
-        meta.numberWords,
+        meta,
       );
       if (index >= 0) answer(turn, index, result?.heard || r.transcript);
       else setMiss(result);

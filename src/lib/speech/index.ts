@@ -39,6 +39,7 @@ export {
   SPEECH_PASS_THRESHOLD,
   bestOption,
   scoreHeard,
+  type Matching,
   type NumberWords,
   type ScoredWord,
   type SpeechScore,

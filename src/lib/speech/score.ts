@@ -4,7 +4,8 @@
  * Word-level alignment of the expected text against every alternative the recogniser returned:
  * - Normalisation from `@/lib/exercises/normalize`: case, punctuation and accents are ignored,
  *   apostrophes split words ("dov'è" = "dov è").
- * - Digits on both sides are written out with the pack's `numberWords` ("40" heard = "quaranta").
+ * - The pack's `equivalents` are written out on both sides ("i'm" = "i am"), then digits on both
+ *   sides with the pack's `numberWords` ("40" heard = "quaranta", "21" = "twenty-one").
  * - Words written together or apart match ("buon giorno" = "buongiorno", "dove" = "dov'è").
  * - A one-letter slip in a word of 5+ letters counts as right: the recogniser's spelling, not the
  *   learner's pronunciation, is usually at fault.
@@ -13,7 +14,7 @@
  * else heard). Score = right words / (expected words + half a word per extra word heard), in [0, 1];
  * the attempt passes from `SPEECH_PASS_THRESHOLD`.
  */
-import { levenshtein, normalizeAnswer, spellNumbers } from "@/lib/exercises/normalize";
+import { expandEquivalents, levenshtein, normalizeAnswer, spellNumbers, type Equivalents } from "@/lib/exercises/normalize";
 
 /**
  * Score (0–1) from which a spoken answer counts as right: 0.7 = 3 of 4 words right passes,
@@ -52,6 +53,12 @@ export interface SpeechScore {
 
 export type NumberWords = Readonly<Record<string, string>> | undefined;
 
+/** The pack's matching fields: pass the pack's `meta` as is. Missing = plain comparison. */
+export interface Matching {
+  numberWords?: NumberWords;
+  equivalents?: Equivalents;
+}
+
 interface Token {
   key: string;
   /** Lower case, accents kept: for display. */
@@ -60,8 +67,8 @@ interface Token {
   word: number;
 }
 
-function tokens(text: string, numberWords: NumberWords, word = -1): Token[] {
-  const spelled = spellNumbers(text, numberWords);
+function tokens(text: string, matching: Matching, word = -1): Token[] {
+  const spelled = spellNumbers(expandEquivalents(text, matching.equivalents), matching.numberWords);
   const keys = normalizeAnswer(spelled, true).split(" ").filter(Boolean);
   const shown = normalizeAnswer(spelled).split(" ").filter(Boolean);
   return keys.map((key, i) => ({ key, shown: shown[i] ?? key, word }));
@@ -76,10 +83,10 @@ type Op = "match" | "sub" | "missing" | "extra" | "merge-expected" | "merge-hear
 const COST: Record<Op, number> = { match: 0, sub: 1, missing: 1, extra: EXTRA_WORD_PENALTY, "merge-expected": 0, "merge-heard": 0 };
 
 /** Scores one heard text against one expected text. */
-function scoreOne(heard: string, expected: string, numberWords: NumberWords): SpeechScore {
+function scoreOne(heard: string, expected: string, matching: Matching): SpeechScore {
   const written = expected.split(/\s+/).filter(Boolean);
-  const e = written.flatMap((w, i) => tokens(w, numberWords, i));
-  const h = tokens(heard, numberWords);
+  const e = written.flatMap((w, i) => tokens(w, matching, i));
+  const h = tokens(heard, matching);
   const n = e.length;
   const m = h.length;
 
@@ -162,7 +169,7 @@ function scoreOne(heard: string, expected: string, numberWords: NumberWords): Sp
 export function scoreHeard(
   transcripts: readonly string[],
   expected: string | readonly string[],
-  numberWords?: NumberWords,
+  matching: Matching = {},
 ): SpeechScore {
   const targets = typeof expected === "string" ? [expected] : expected;
   const heards = transcripts.map((t) => t.trim()).filter(Boolean);
@@ -170,7 +177,7 @@ export function scoreHeard(
   let best: SpeechScore | null = null;
   for (const heard of heards) {
     for (const target of targets.length ? targets : [""]) {
-      const r = scoreOne(heard, target, numberWords);
+      const r = scoreOne(heard, target, matching);
       if (!best || r.score > best.score) best = r;
     }
   }
@@ -186,12 +193,12 @@ export function scoreHeard(
 export function bestOption(
   options: readonly string[],
   transcripts: readonly string[],
-  numberWords?: NumberWords,
+  matching: Matching = {},
 ): { index: number; result: SpeechScore | null } {
   let index = -1;
   let result: SpeechScore | null = null;
   options.forEach((o, i) => {
-    const r = scoreHeard(transcripts, o, numberWords);
+    const r = scoreHeard(transcripts, o, matching);
     if (!result || r.score > result.score) {
       result = r;
       index = i;

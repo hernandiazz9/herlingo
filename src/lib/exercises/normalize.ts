@@ -8,6 +8,8 @@
  *   "cuidado con el acento".
  * - Typed answers (`{ typos: true }`) also accept a small typo (one letter, two in long answers),
  *   reported (`typo`) so the UI can show it as "almost" and highlight the words to fix.
+ * - With the pack's `equivalents` (`{ equivalents }`), equivalent spellings are written out on both
+ *   sides first ("i'm" → "i am"), so either form matches the other.
  */
 
 const APOSTROPHES = /['’‘`´ʼ]/g;
@@ -19,6 +21,50 @@ export function normalizeAnswer(text: string, stripAccents = false): string {
   let out = text.normalize("NFC").toLowerCase().replace(APOSTROPHES, " ").replace(PUNCTUATION, " ");
   if (stripAccents) out = out.normalize("NFD").replace(/\p{M}/gu, "");
   return out.replace(/\s+/g, " ").trim();
+}
+
+/** The pack's `meta.equivalents`: lower-case spelling → its equivalent (`"i'm": "i am"`). */
+export type Equivalents = Readonly<Record<string, string>> | undefined;
+
+interface CompiledEquivalents {
+  pattern: RegExp;
+  map: Map<string, string>;
+}
+
+const compiledEquivalents = new WeakMap<object, CompiledEquivalents | null>();
+
+function unifyApostrophes(text: string): string {
+  return text.normalize("NFC").replace(APOSTROPHES, "'");
+}
+
+function compileEquivalents(equivalents: NonNullable<Equivalents>): CompiledEquivalents | null {
+  const cached = compiledEquivalents.get(equivalents);
+  if (cached !== undefined) return cached;
+  const map = new Map<string, string>();
+  for (const [from, to] of Object.entries(equivalents)) {
+    const key = unifyApostrophes(from).toLowerCase().trim();
+    if (key) map.set(key, to);
+  }
+  // Longest first, so a key that contains another one wins.
+  const keys = [...map.keys()].sort((a, b) => b.length - a.length);
+  const escaped = keys.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  // Whole words only: no letter, number or apostrophe right before or after.
+  const compiled = keys.length
+    ? { pattern: new RegExp(`(?<![\\p{L}\\p{N}'])(?:${escaped.join("|")})(?![\\p{L}\\p{N}'])`, "giu"), map }
+    : null;
+  compiledEquivalents.set(equivalents, compiled);
+  return compiled;
+}
+
+/**
+ * Writes out the pack's `equivalents` in a text, whole words only, ignoring case and apostrophe
+ * variants ("I’m here" → "i am here"). Without `equivalents` the text is returned as it is.
+ */
+export function expandEquivalents(text: string, equivalents: Equivalents): string {
+  if (!equivalents) return text;
+  const compiled = compileEquivalents(equivalents);
+  if (!compiled) return text;
+  return unifyApostrophes(text).replace(compiled.pattern, (m) => compiled.map.get(m.toLowerCase()) ?? m);
 }
 
 export interface AnswerCheck {
@@ -34,6 +80,8 @@ export interface AnswerCheck {
 export interface CheckOptions {
   /** Accept a small typo (typed answers): see `typoAllowance`. */
   typos?: boolean;
+  /** The pack's `meta.equivalents`: equivalent spellings match ("i'm" = "i am"). */
+  equivalents?: Equivalents;
 }
 
 /** Letters that may be wrong in a typed answer: none under 4, one, two from 12 (accents ignored). */
@@ -45,17 +93,21 @@ export function typoAllowance(expected: string): number {
 /** Compares a typed/built answer with one or more accepted answers. */
 export function checkAnswer(given: string, accepted: string | readonly string[], options: CheckOptions = {}): AnswerCheck {
   const list = typeof accepted === "string" ? [accepted] : accepted;
-  const g = normalizeAnswer(given);
-  for (const a of list) if (normalizeAnswer(a) === g) return { correct: true, accentNote: false, typo: false, expected: a };
-  const gs = normalizeAnswer(given, true);
-  for (const a of list) {
-    if (normalizeAnswer(a, true) === gs) return { correct: true, accentNote: true, typo: false, expected: a };
+  const forms = list.map((a) => expandEquivalents(a, options.equivalents));
+  const givenForm = expandEquivalents(given, options.equivalents);
+  const g = normalizeAnswer(givenForm);
+  for (let k = 0; k < list.length; k++) {
+    if (normalizeAnswer(forms[k]) === g) return { correct: true, accentNote: false, typo: false, expected: list[k] };
+  }
+  const gs = normalizeAnswer(givenForm, true);
+  for (let k = 0; k < list.length; k++) {
+    if (normalizeAnswer(forms[k], true) === gs) return { correct: true, accentNote: true, typo: false, expected: list[k] };
   }
   if (options.typos && gs) {
-    for (const a of list) {
-      const allowed = typoAllowance(a);
-      if (allowed > 0 && levenshtein(normalizeAnswer(a, true), gs) <= allowed) {
-        return { correct: true, accentNote: false, typo: true, expected: a };
+    for (let k = 0; k < list.length; k++) {
+      const allowed = typoAllowance(list[k]);
+      if (allowed > 0 && levenshtein(normalizeAnswer(forms[k], true), gs) <= allowed) {
+        return { correct: true, accentNote: false, typo: true, expected: list[k] };
       }
     }
   }

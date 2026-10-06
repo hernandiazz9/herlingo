@@ -35,7 +35,7 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
     locale: meta.speechLocale,
     onResult: (r) => {
       if (answered) return;
-      const s = scoreHeard(r.alternatives, exercise.audio.text, meta.numberWords);
+      const s = scoreHeard(r.alternatives, exercise.audio.text, meta);
       setScore(s);
       const used = tries + 1;
       setTries(used);

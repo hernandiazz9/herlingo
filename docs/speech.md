@@ -138,15 +138,19 @@ const listen = useListen({ locale: meta.speechLocale, onResult: (r) => check(r.a
 One scoring for lessons and dialogues (it replaced the old Levenshtein ≥ 0.7 `scoreSpeech` and the
 dialogue Dice ≥ 0.6 match).
 
-- `scoreHeard(alternatives, expected | expected[], numberWords?)` → `SpeechScore`
+- `scoreHeard(alternatives, expected | expected[], matching?)` → `SpeechScore`
   `{ words, score, passed, heard, expected, extra }`: the best result over every alternative heard
   and every accepted text. Each expected word (as written, punctuation kept) is `ok`, `missing`
   (nothing heard in its place) or `wrong` (`heard` = what was said instead).
-- `bestOption(options, alternatives, numberWords?)` → `{ index, result }`: the dialogue option said;
+- `bestOption(options, alternatives, matching?)` → `{ index, result }`: the dialogue option said;
   `index` = -1 when even the best one does not pass, `result` is still its word feedback.
 - Word-level alignment with `normalizeAnswer` from `src/lib/exercises/normalize.ts`: case,
-  punctuation and accents ignored, apostrophes split words ("dov'è" = "dov è"). Digits on both sides
-  are written out with the pack's `meta.numberWords` ("40" heard = "quaranta").
+  punctuation and accents ignored, apostrophes split words ("dov'è" = "dov è"). `matching` is the
+  pack's `meta` (`{ numberWords?, equivalents? }`): its `equivalents` are written out on both sides
+  first ("I'm" = "I am", "don't" = "do not"; whole words, case and apostrophe variants ignored), then
+  digits on both sides with `numberWords` ("40" heard = "quaranta", "21" = "twenty-one"). Typed
+  dictation (`checkAnswer(…, { equivalents })`) expands the same `equivalents`. Packs without them
+  compare as before.
 - Words written together or apart match ("buon giorno" = "buongiorno", "dove" = "dov'è").
 - A one-letter slip in a word of 5+ letters counts as `ok` (usually the recogniser's spelling).
 - Score = `ok` words / (expected words + 0.5 × extra words heard), in [0, 1].
