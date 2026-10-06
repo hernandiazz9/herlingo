@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 💻
 - Writer: orchestrator (desktop)
 - Branch: plan-007-dictado-voz (from main @ a5f51c1)
-- Next step: T81 + T83 running; then T84
+- Next step: T83 running; then T84
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -94,7 +94,7 @@ Worktree setup: npm ci
 - Outcome: DictationExercise on useListen (phrase, speechLocale), live text in a read-only textarea, editable after → 7a9b9bc
 
 ## T81 — Dialogues: speak your turn on the new engine
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T76, T77, T78
 - Goal: DialoguePlayer's learner turn uses the shared mic UI and `bestOption()`: live text, finishing keeps what was said (no more abort discarding speech), errors distinguished from silence, word feedback on a miss, tapping an option always works. Delete src/components/dialogue/recognition.ts.
 - Context: src/components/dialogue/DialoguePlayer.tsx (lines ~150-176, ~305-322), src/components/dialogue/recognition.ts, docs/coach.md line ~399 (dialogue options said aloud), Shared contract.
@@ -102,7 +102,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run verify` → exit 0
   - `test ! -f src/components/dialogue/recognition.ts` → exit 0
-- Outcome:
+- Outcome: DialoguePlayer on useListen + SpeakPanel + bestOption, miss card with WordFeedback, recognition.ts deleted → c1ec2c2
 
 ## T82 — Prepárate dictation on the new engine
 - Status: done
@@ -156,6 +156,7 @@ Worktree setup: npm ci
 - 2026-10-06 orchestrator: T82 launched before T81 so T81 can reuse the word-feedback component T79 creates
 - 2026-10-06 T79: only scored results count as tries (MAX_TRIES 2, same XP); errors don't count and never switch to self mode; miss card "Casi. Te queda un intento." + word feedback + Reintentar / Escuchar la frase, stays after answering; "Prefiero evaluarme yo" always shown in mic mode, self mode gets "Usar el micrófono" to go back; missing words struck through, wrong words wavy underline with heard word below, per-word aria labels (agent)
 - 2026-10-06 T82: dictated text appended and cut at the field limit; mic disabled at the limit; submit / "No lo sé" cancel an open session; dictation clears an earlier generation error like typing; labels "Dictar en español" / "Dictar en <idioma>" kept; added a "Dictation" bullet to docs/coach.md Client (agent)
+- 2026-10-06 T81: SpeakPanel under the options ("O dilo en voz alta" / "Toca y dilo otra vez" after a miss); miss card "He oído «…», que no se parece bastante… La más cercana:" + WordFeedback of the closest option; tapping an option resets the mic first so a tap always works; miss card hidden while the mic is open (agent)
 
 ## Proposals (new scope)
 - 2026-10-06: "Grabarme": record your voice and play it next to the native audio (separate from recognition) (Hernán, later)
@@ -176,3 +177,5 @@ Worktree setup: npm ci
 - 2026-10-06 13:50 T79 done · branch worktree-agent-a8ab439f1fa452413 → c2bcd2d
 - 2026-10-06 13:51 T81 launched · attempt 1 · agent a54c724831e21baa1
 - 2026-10-06 13:52 T82 done · branch worktree-agent-a08696eeef89402db → 6a1a92a
+- 2026-10-06 13:53 T83 launched · attempt 1 · agent af91ad46e4780737f
+- 2026-10-06 13:54 T81 done · branch worktree-agent-a54c724831e21baa1 → c1ec2c2
