@@ -23,7 +23,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import { join, relative } from "node:path";
 import { buildPack, packStats, type SourceFile } from "../src/lib/content/build";
 import { checkAudio } from "./audio/plan";
-import { checkImageKeys, checkImages, imageResolver } from "./images/plan";
+import { checkImageKeys, checkImages, checkUnusedImages, imageResolver } from "./images/plan";
 import type { Pack } from "../src/lib/content/types";
 
 // npm scripts always run from the repo root.
@@ -79,6 +79,8 @@ const packs: Record<string, Pack> = {};
 /** Id → `<file>` of every pack checked so far, to reject an id reused by another pack. */
 const globalIds = new Map<string, string>();
 const defaults: string[] = [];
+/** Every pack that built (even with errors), for the cross-pack unused-picture check. */
+const builtPacks: Pack[] = [];
 
 if (langs.length === 0) {
   console.error("No packs found: expected content/<lang>/pack.json");
@@ -105,6 +107,7 @@ for (const lang of langs) {
     else globalIds.set(id, file);
   }
   if (pack?.meta.default) defaults.push(lang);
+  if (pack) builtPacks.push(pack);
   const images = pack ? checkImageKeys(pack, ROOT) : { errors: [], warnings: [] };
   for (const w of [...warnings, ...images.warnings]) console.warn(`⚠ ${w}`);
   const all = [
@@ -127,6 +130,16 @@ for (const lang of langs) {
     .join(", ");
   const empty = pack.units.length === 0 ? " (empty: no units yet)" : "";
   console.log(`✓ content/${lang}${pack.meta.default ? " (default)" : ""}: ${stats}${empty}`);
+}
+
+if (strictImages) {
+  // A picture is unused only when no pack references it (checked once, across every pack).
+  const unused = checkUnusedImages(builtPacks, ROOT);
+  if (unused.length) {
+    failed = true;
+    console.error(`✗ public/images: ${unused.length} error(s)`);
+    for (const e of unused) console.error(`  - ${e}`);
+  }
 }
 
 if (!failed && defaults.length !== 1) {

@@ -240,16 +240,15 @@ export function checkImageKeys(pack: Pack, root: string): { errors: string[]; wa
 }
 
 /**
- * `content:check --strict-images`: errors for every referenced picture missing from
- * public/images/ or out of date with its source, and for files there that nothing references.
+ * `content:check --strict-images`, per pack: errors for every picture the pack references that is
+ * missing from public/images/ or out of date with its source. Files nothing references are
+ * reported across all packs by checkUnusedImages().
  */
 export function checkImages(pack: Pack, root: string): string[] {
   const errors: string[] = [];
-  const wanted = new Set<string>();
   for (const [key, usedBy] of referencedImages(pack)) {
     const file = imageFile(key);
     if (!file) continue;
-    wanted.add(file);
     const by = usedBy.slice(0, 3).join(", ") + (usedBy.length > 3 ? "…" : "");
     const path = join(root, PUBLIC_IMAGES, file);
     const expected = sourceSvg(root, key);
@@ -259,13 +258,30 @@ export function checkImages(pack: Pack, root: string): string[] {
     } else if (!existsSync(path)) errors.push(`image "${key}" (${by}): missing ${PUBLIC_IMAGES}/${file}`);
     else if (withDarkMarker(readFileSync(path, "utf8"), false) !== expected) errors.push(`image "${key}": ${PUBLIC_IMAGES}/${file} is stale`);
   }
+  if (errors.length) errors.push(`${errors.length} picture problem(s): run \`npm run images\``);
+  return errors;
+}
+
+/**
+ * `content:check --strict-images`, across packs: errors for files in public/images/ that no pack
+ * references (a picture used by any language is kept).
+ */
+export function checkUnusedImages(packs: Pack[], root: string): string[] {
+  const errors: string[] = [];
+  const wanted = new Set<string>();
+  for (const pack of packs) {
+    for (const key of referencedImages(pack).keys()) {
+      const file = imageFile(key);
+      if (file) wanted.add(file);
+    }
+  }
   for (const source of ["fluent", "custom"]) {
     const dir = join(root, PUBLIC_IMAGES, source);
     if (!existsSync(dir)) continue;
     for (const f of readdirSync(dir)) {
-      if (!wanted.has(`${source}/${f}`)) errors.push(`${PUBLIC_IMAGES}/${source}/${f}: not referenced by any content`);
+      if (!wanted.has(`${source}/${f}`)) errors.push(`${PUBLIC_IMAGES}/${source}/${f}: not referenced by any pack`);
     }
   }
-  if (errors.length) errors.push(`${errors.length} picture problem(s): run \`npm run images\``);
+  if (errors.length) errors.push(`${errors.length} unused picture(s): run \`npm run images\``);
   return errors;
 }
