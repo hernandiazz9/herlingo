@@ -1,0 +1,80 @@
+{
+  "id": "story.en-b1-a-place-of-my-own",
+  "order": 107,
+  "title": "A place of my own",
+  "titleEs": "Un piso para mí solo",
+  "description": "Pablo busca su propio piso en Halsted Street: alquiler, fianza y un contrato que hay que leer bien.",
+  "emoji": "🔑",
+  "situation": "vivienda",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "After two months on Maya's couch, Pablo wanted a place of his own.", "es": "Después de dos meses en el sofá de Maya, Pablo quería un piso para él solo." },
+    { "id": "s2", "text": "One night, he found a listing for a one-bedroom apartment on Halsted Street.", "es": "Una noche, encontró un anuncio de un piso de un dormitorio en Halsted Street." },
+    { "id": "s3", "text": "«Hi, I'm calling about the apartment on Halsted Street. Is it still available?»", "es": "«Hola, llamo por el piso de Halsted Street. ¿Sigue disponible?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "The next day, the landlord showed him around.", "es": "Al día siguiente, el casero le enseñó el piso." },
+    { "id": "s5", "text": "It was small, but it had big windows and a laundry room downstairs.", "es": "Era pequeño, pero tenía ventanas grandes y una lavandería abajo." },
+    { "id": "s6", "text": "«How much is the rent per month?»", "es": "«¿Cuánto es el alquiler al mes?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "«Fourteen hundred dollars. Utilities aren't included.»", "es": "«Mil cuatrocientos dólares. Los suministros no están incluidos.»", "voice": "en-US-BrianNeural" },
+    { "id": "s8", "text": "«And how much is the security deposit?»", "es": "«¿Y cuánto es la fianza?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "«One month's rent. I'll also need to run a credit check.»", "es": "«Un mes de alquiler. También tendré que comprobar tu historial de crédito.»", "voice": "en-US-BrianNeural" },
+    { "id": "s10", "text": "That was a problem: Pablo didn't have a credit history in the US yet.", "es": "Eso era un problema: Pablo todavía no tenía historial de crédito en EE. UU." },
+    { "id": "s11", "text": "Luckily, his pay stubs from the startup and a letter from Maya helped.", "es": "Por suerte, sus nóminas de la startup y una carta de Maya ayudaron." },
+    { "id": "s12", "text": "Pablo read the lease carefully before he signed it.", "es": "Pablo leyó el contrato con atención antes de firmarlo." },
+    { "id": "s13", "text": "«Welcome to the building! You can move in on the first.»", "es": "«¡Bienvenido al edificio! Puedes mudarte el día uno.»", "voice": "en-US-BrianNeural" }
+  ],
+  "keywords": [
+    "b1-renting.listing",
+    "b1-renting.im-calling-about-the-apartment",
+    "b1-renting.landlord",
+    "b1-renting.how-much-is-the-rent",
+    "b1-renting.utilities",
+    "b1-renting.security-deposit",
+    "b1-renting.credit-check",
+    "b1-renting.pay-stub",
+    "b1-renting.lease",
+    "b1-renting.move-in"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Where is the apartment?",
+      "es": "¿Dónde está el piso?",
+      "options": [
+        { "text": "In the Loop, near Maya's office.", "es": "En el Loop, cerca de la oficina de Maya." },
+        { "text": "On Halsted Street.", "es": "En Halsted Street." },
+        { "text": "Next to the lake.", "es": "Al lado del lago." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Why was the credit check a problem for Pablo?",
+      "es": "¿Por qué era un problema la comprobación de crédito para Pablo?",
+      "options": [
+        { "text": "He didn't have a credit history in the US yet.", "es": "Todavía no tenía historial de crédito en EE. UU." },
+        { "text": "He forgot his passport at home.", "es": "Se dejó el pasaporte en casa." },
+        { "text": "He had too much debt.", "es": "Tenía demasiadas deudas." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What did Pablo do before he signed the lease?",
+      "es": "¿Qué hizo Pablo antes de firmar el contrato?",
+      "options": [
+        { "text": "He paid six months of rent.", "es": "Pagó seis meses de alquiler." },
+        { "text": "He called his family in Valencia.", "es": "Llamó a su familia en Valencia." },
+        { "text": "He read it carefully.", "es": "Lo leyó con atención." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "b1-renting.listing", "distractors": ["recipe", "ticket"] },
+    { "id": "g2", "sentence": "s4", "answer": "b1-renting.landlord", "distractors": ["dentist", "barista"] },
+    { "id": "g3", "sentence": "s7", "answer": "b1-renting.utilities", "distractors": ["Desserts", "Flights"] },
+    { "id": "g4", "sentence": "s9", "answer": "b1-renting.credit-check", "distractors": ["dance class", "fire drill"] },
+    { "id": "g5", "sentence": "s12", "answer": "b1-renting.lease", "distractors": ["menu", "newspaper"] },
+    { "id": "g6", "sentence": "s13", "answer": "b1-renting.move-in", "distractors": ["give up", "take off"] }
+  ]
+}

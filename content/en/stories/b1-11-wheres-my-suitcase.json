@@ -1,0 +1,80 @@
+{
+  "id": "story.en-b1-wheres-my-suitcase",
+  "order": 111,
+  "title": "Where's my suitcase?",
+  "titleEs": "¿Dónde está mi maleta?",
+  "description": "La maleta de Pablo no aparece en O'Hare, y esa noche le cuenta a Jordan todo el desastre del viaje.",
+  "emoji": "🧳",
+  "situation": "viajes",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "At O'Hare, Maya's bag came out first, but Pablo's suitcase never did.", "es": "En O'Hare, la bolsa de Maya salió la primera, pero la maleta de Pablo no salió nunca." },
+    { "id": "s2", "text": "After forty minutes at baggage claim, he went to the airline's desk.", "es": "Después de cuarenta minutos en la recogida de equipajes, fue al mostrador de la aerolínea." },
+    { "id": "s3", "text": "«Hi. Where do I report a missing bag?»", "es": "«Hola. ¿Dónde puedo denunciar la pérdida de una maleta?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "«Right here. Do you have your claim tag?»", "es": "«Aquí mismo. ¿Tiene el resguardo de la maleta?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«Yes, here it is. It's a big red suitcase.»", "es": "«Sí, aquí tiene. Es una maleta grande y roja.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«We'll deliver it to your apartment as soon as we find it.»", "es": "«Se la llevaremos a su piso en cuanto la encontremos.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "That evening, Jordan came by with some tacos.", "es": "Esa noche, Jordan se pasó con unos tacos." },
+    { "id": "s8", "text": "«So, how did it go?»", "es": "«¿Y qué tal fue?»", "voice": "en-US-BrianNeural" },
+    { "id": "s9", "text": "«The meeting was great, but the trip back was a total disaster.»", "es": "«La reunión fue genial, pero la vuelta fue un desastre total.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«We were waiting at the gate when they announced a delay.»", "es": "«Estábamos esperando en la puerta de embarque cuando anunciaron un retraso.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "«And while we were landing in Kansas City, our next flight was taking off!»", "es": "«¡Y mientras aterrizábamos en Kansas City, nuestro siguiente vuelo estaba despegando!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«No way! Are you serious? And then what happened?»", "es": "«¡No me digas! ¿En serio? ¿Y luego qué pasó?»", "voice": "en-US-BrianNeural" },
+    { "id": "s13", "text": "Two days later, Pablo was working from home when someone knocked on the door.", "es": "Dos días después, Pablo estaba trabajando desde casa cuando alguien llamó a la puerta." },
+    { "id": "s14", "text": "It was a delivery driver with his red suitcase, and Pablo felt so relieved.", "es": "Era un repartidor con su maleta roja, y Pablo sintió un alivio enorme." }
+  ],
+  "keywords": [
+    "a2-airport.suitcase",
+    "a2-airport.baggage-claim",
+    "b1-trips.where-do-i-report-a-missing-bag",
+    "b1-trips.claim-tag",
+    "b1-stories.how-did-it-go",
+    "b1-stories.it-was-a-total-disaster",
+    "b1-stories.no-way-are-you-serious",
+    "b1-stories.and-then-what-happened",
+    "b1-grammar.i-was-walking-home",
+    "b1-stories.relieved"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does Pablo's suitcase look like?",
+      "es": "¿Cómo es la maleta de Pablo?",
+      "options": [
+        { "text": "It's small and black.", "es": "Es pequeña y negra." },
+        { "text": "It's big and red.", "es": "Es grande y roja." },
+        { "text": "It's blue, with a red tag.", "es": "Es azul, con una etiqueta roja." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What was happening while they were landing in Kansas City?",
+      "es": "¿Qué estaba pasando mientras aterrizaban en Kansas City?",
+      "options": [
+        { "text": "Their flight to Chicago was taking off.", "es": "Su vuelo a Chicago estaba despegando." },
+        { "text": "It was snowing in Chicago.", "es": "Estaba nevando en Chicago." },
+        { "text": "Maya was talking to Mr. Park.", "es": "Maya estaba hablando con Mr. Park." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "How did Pablo get his suitcase back?",
+      "es": "¿Cómo recuperó Pablo su maleta?",
+      "options": [
+        { "text": "He went back to the airport.", "es": "Volvió al aeropuerto." },
+        { "text": "Jordan picked it up for him.", "es": "Jordan la recogió por él." },
+        { "text": "A driver brought it to his apartment.", "es": "Un repartidor se la llevó a su piso." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "a2-airport.suitcase", "distractors": ["sandwich", "umbrella"] },
+    { "id": "g2", "sentence": "s2", "answer": "a2-airport.baggage-claim", "distractors": ["the gym", "the beach"] },
+    { "id": "g3", "sentence": "s4", "answer": "b1-trips.claim-tag", "distractors": ["wedding ring", "library card"] },
+    { "id": "g4", "sentence": "s9", "answer": "b1-stories.it-was-a-total-disaster", "gap": "disaster", "distractors": ["success", "dream"] },
+    { "id": "g5", "sentence": "s14", "answer": "b1-stories.relieved", "distractors": ["bored", "angry"] }
+  ]
+}

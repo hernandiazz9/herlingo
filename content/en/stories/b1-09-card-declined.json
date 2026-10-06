@@ -1,0 +1,92 @@
+{
+  "id": "story.en-b1-card-declined",
+  "order": 109,
+  "title": "Card declined",
+  "titleEs": "Tarjeta rechazada",
+  "description": "Pablo abre una cuenta en el banco y, una semana después, su tarjeta no funciona en el súper.",
+  "emoji": "💳",
+  "situation": "dinero",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "With his first paycheck, Pablo went to the bank near his new apartment.", "es": "Con su primera nómina, Pablo fue al banco que hay cerca de su piso nuevo." },
+    { "id": "s2", "text": "«Hi. I'd like to open a checking account.»", "es": "«Hola. Quería abrir una cuenta corriente.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s3", "text": "The teller asked for his passport and proof of address.", "es": "La cajera le pidió el pasaporte y un justificante de domicilio." },
+    { "id": "s4", "text": "Twenty minutes later, he had a new account and a debit card.", "es": "Veinte minutos después, tenía una cuenta nueva y una tarjeta de débito." },
+    { "id": "s5", "text": "A week later, he was paying for groceries when something embarrassing happened.", "es": "Una semana después, estaba pagando la compra cuando pasó algo vergonzoso." },
+    { "id": "s6", "text": "«Sorry, sir. Your card was declined.»", "es": "«Lo siento, señor. Su tarjeta ha sido rechazada.»", "voice": "en-US-BrianNeural" },
+    { "id": "s7", "text": "Pablo checked his balance on his phone: it was almost zero!", "es": "Pablo miró su saldo en el móvil: ¡estaba casi a cero!" },
+    { "id": "s8", "text": "There was a charge he didn't recognize, from an online store in Miami.", "es": "Había un cargo que no reconocía, de una tienda online de Miami." },
+    { "id": "s9", "text": "He called customer service and waited on hold for forty minutes.", "es": "Llamó a atención al cliente y estuvo cuarenta minutos esperando al teléfono." },
+    { "id": "s10", "text": "«I think someone used my card without permission.»", "es": "«Creo que alguien ha usado mi tarjeta sin permiso.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "«Don't worry. I'll freeze your card and send you a new one.»", "es": "«No se preocupe. Bloquearé su tarjeta y le enviaré una nueva.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s12", "text": "«How long will it take to get my money back?»", "es": "«¿Cuánto tardaré en recuperar mi dinero?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s13", "text": "«Usually about ten days.»", "es": "«Normalmente, unos diez días.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s14", "text": "That night, Jordan paid for the pizza and said it was on him.", "es": "Esa noche, Jordan pagó la pizza y dijo que invitaba él." }
+  ],
+  "keywords": [
+    "b1-money.paycheck",
+    "b1-money.checking-account",
+    "b1-money.teller",
+    "b1-money.my-card-was-declined",
+    "b1-money.balance",
+    "b1-money.charge",
+    "b1-money.customer-service",
+    "b1-money.someone-used-my-card",
+    "b1-money.how-long-until-i-get-my-money-back",
+    "b1-money.its-on-me"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What did Pablo open at the bank?",
+      "es": "¿Qué abrió Pablo en el banco?",
+      "options": [
+        { "text": "A savings account.", "es": "Una cuenta de ahorro." },
+        { "text": "A checking account.", "es": "Una cuenta corriente." },
+        { "text": "A business account for the startup.", "es": "Una cuenta de empresa para la startup." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Why was his card declined?",
+      "es": "¿Por qué rechazaron su tarjeta?",
+      "options": [
+        { "text": "He forgot his PIN.", "es": "Se le olvidó el PIN." },
+        { "text": "The store didn't take cards.", "es": "La tienda no aceptaba tarjetas." },
+        { "text": "Someone used his card, and his balance was almost zero.", "es": "Alguien usó su tarjeta y su saldo estaba casi a cero." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "How long did he wait on hold?",
+      "es": "¿Cuánto tiempo esperó al teléfono?",
+      "options": [
+        { "text": "Forty minutes.", "es": "Cuarenta minutos." },
+        { "text": "Ten days.", "es": "Diez días." },
+        { "text": "Twenty minutes.", "es": "Veinte minutos." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Who paid for dinner that night?",
+      "es": "¿Quién pagó la cena esa noche?",
+      "options": [
+        { "text": "Pablo.", "es": "Pablo." },
+        { "text": "Jordan.", "es": "Jordan." },
+        { "text": "The bank.", "es": "El banco." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "b1-money.paycheck", "distractors": ["vacation", "haircut"] },
+    { "id": "g2", "sentence": "s2", "answer": "b1-money.checking-account", "distractors": ["window", "restaurant"] },
+    { "id": "g3", "sentence": "s6", "answer": "b1-money.my-card-was-declined", "gap": "declined", "distractors": ["invited", "painted"] },
+    { "id": "g4", "sentence": "s7", "answer": "b1-money.balance", "distractors": ["horoscope", "playlist"] },
+    { "id": "g5", "sentence": "s8", "answer": "b1-money.charge", "distractors": ["song", "joke"] },
+    { "id": "g6", "sentence": "s9", "answer": "b1-money.customer-service", "distractors": ["his barber", "the pizza place"] }
+  ]
+}

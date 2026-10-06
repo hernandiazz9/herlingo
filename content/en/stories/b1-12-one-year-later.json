@@ -1,0 +1,80 @@
+{
+  "id": "story.en-b1-one-year-later",
+  "order": 112,
+  "title": "One year later",
+  "titleEs": "Un año después",
+  "description": "Pablo celebra su primer año en Chicago con una fiesta en casa y toma una gran decisión.",
+  "emoji": "🥂",
+  "situation": "social",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "In January, Pablo had lived in Chicago for exactly one year.", "es": "En enero, Pablo llevaba exactamente un año viviendo en Chicago." },
+    { "id": "s2", "text": "To celebrate, he sent a message to all his friends.", "es": "Para celebrarlo, mandó un mensaje a todos sus amigos." },
+    { "id": "s3", "text": "«I'm having a few people over on Friday. Just bring yourself!»", "es": "«El viernes vienen unos amigos a casa. ¡No traigas nada, solo ven!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "Maya and Jordan came early, and Mrs. Carter brought an apple pie.", "es": "Maya y Jordan llegaron pronto, y Mrs. Carter trajo una tarta de manzana." },
+    { "id": "s5", "text": "Nina played some jazz on her bass in the living room.", "es": "Nina tocó algo de jazz con su bajo en el salón." },
+    { "id": "s6", "text": "Even Sam, Priya and Kevin from IT showed up.", "es": "Hasta Sam, Priya y Kevin, el de informática, se presentaron." },
+    { "id": "s7", "text": "At midnight, Jordan raised his glass.", "es": "A medianoche, Jordan levantó su copa." },
+    { "id": "s8", "text": "«To Pablo! So, are you staying, or are you going back to Valencia?»", "es": "«¡Por Pablo! Bueno, ¿te quedas o vuelves a Valencia?»", "voice": "en-US-BrianNeural" },
+    { "id": "s9", "text": "Pablo looked around the room: his friends, his team, his new home.", "es": "Pablo miró a su alrededor: sus amigos, su equipo, su nueva casa." },
+    { "id": "s10", "text": "«Sometimes I feel homesick, and the winters here are tough.»", "es": "«A veces echo de menos mi casa, y los inviernos aquí son duros.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "«But I've decided to stay. I'm not going anywhere!»", "es": "«Pero he decidido quedarme. ¡No me voy a ninguna parte!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "Everybody cheered, and Maya gave him a big hug.", "es": "Todos aplaudieron, y Maya le dio un abrazo enorme." },
+    { "id": "s13", "text": "«I'm so proud of you, Pablo. Your English is amazing now!»", "es": "«Estoy muy orgullosa de ti, Pablo. ¡Ahora tu inglés es increíble!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s14", "text": "«Thanks, guys. I'll never forget this year.»", "es": "«Gracias, chicos. Nunca olvidaré este año.»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "b1-plans.im-having-a-few-people-over",
+    "b1-plans.just-bring-yourself",
+    "b1-friends.jazz",
+    "b1-grammar.show-up",
+    "b1-stories.homesick",
+    "b1-friends.its-amazing-but-winters-are-tough",
+    "b1-grammar.i-decided-to-stay",
+    "b1-stories.im-so-proud-of-you",
+    "b1-stories.ill-never-forget-it"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why did Pablo have a party?",
+      "es": "¿Por qué hizo Pablo una fiesta?",
+      "options": [
+        { "text": "It was his birthday.", "es": "Era su cumpleaños." },
+        { "text": "He had a new job.", "es": "Tenía un trabajo nuevo." },
+        { "text": "He had lived in Chicago for one year.", "es": "Llevaba un año viviendo en Chicago." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "What did Mrs. Carter bring?",
+      "es": "¿Qué trajo Mrs. Carter?",
+      "options": [
+        { "text": "An apple pie.", "es": "Una tarta de manzana." },
+        { "text": "A plant.", "es": "Una planta." },
+        { "text": "A pot of soup.", "es": "Una olla de sopa." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What did Pablo decide?",
+      "es": "¿Qué decidió Pablo?",
+      "options": [
+        { "text": "To go back to Valencia.", "es": "Volver a Valencia." },
+        { "text": "To stay in Chicago.", "es": "Quedarse en Chicago." },
+        { "text": "To move to Denver.", "es": "Mudarse a Denver." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s5", "answer": "b1-friends.jazz", "distractors": ["tennis", "chess"] },
+    { "id": "g2", "sentence": "s6", "answer": "b1-grammar.show-up", "gap": "showed up", "distractors": ["gave up", "ran out"] },
+    { "id": "g3", "sentence": "s10", "answer": "b1-stories.homesick", "distractors": ["hungry", "sleepy"] },
+    { "id": "g4", "sentence": "s11", "answer": "b1-grammar.i-decided-to-stay", "gap": "decided", "distractors": ["forgotten", "refused"] },
+    { "id": "g5", "sentence": "s13", "answer": "b1-stories.im-so-proud-of-you", "gap": "proud", "distractors": ["tired", "jealous"] },
+    { "id": "g6", "sentence": "s14", "answer": "b1-stories.ill-never-forget-it", "gap": "never forget", "distractors": ["always forget", "never remember"] }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "story.en-b1-moving-day",
+  "order": 108,
+  "title": "Moving day",
+  "titleEs": "Día de mudanza",
+  "description": "La primera semana en el piso nuevo: sin calefacción, una fuga y unos vecinos muy ruidosos.",
+  "emoji": "📦",
+  "situation": "vivienda",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "On the first of March, Jordan helped Pablo carry his boxes up the stairs.", "es": "El uno de marzo, Jordan ayudó a Pablo a subir sus cajas por las escaleras." },
+    { "id": "s2", "text": "Mrs. Carter came too, with a plant and a big pot of soup.", "es": "Mrs. Carter también vino, con una planta y una olla grande de sopa." },
+    { "id": "s3", "text": "That night it was freezing, and the heating wasn't working.", "es": "Esa noche hacía un frío helador y la calefacción no funcionaba." },
+    { "id": "s4", "text": "The next morning, Pablo found a leak under the kitchen sink.", "es": "A la mañana siguiente, Pablo encontró una fuga debajo del fregadero." },
+    { "id": "s5", "text": "He called the landlord, who said the super would come by that afternoon.", "es": "Llamó al casero, que le dijo que el conserje pasaría esa tarde." },
+    { "id": "s6", "text": "The super, a quiet man named Luis, fixed everything in an hour.", "es": "El conserje, un hombre callado llamado Luis, lo arregló todo en una hora." },
+    { "id": "s7", "text": "But at midnight, the neighbors upstairs started playing loud music.", "es": "Pero a medianoche, los vecinos de arriba empezaron a poner música alta." },
+    { "id": "s8", "text": "Pablo didn't know what to do, so he texted Mrs. Carter.", "es": "Pablo no sabía qué hacer, así que le escribió a Mrs. Carter." },
+    { "id": "s9", "text": "«Go up and talk to them. Be nice, but be clear.»", "es": "«Sube y habla con ellos. Sé amable, pero claro.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "So he went upstairs and knocked on their door.", "es": "Así que subió y llamó a su puerta." },
+    { "id": "s11", "text": "«Sorry to bother you, but the music is a bit loud.»", "es": "«Siento molestar, pero la música está un poco alta.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«Oh, sorry, I didn't realize it was so loud!»", "es": "«¡Uy, perdona, no me había dado cuenta de que estaba tan alta!»", "voice": "en-US-BrianNeural" },
+    { "id": "s13", "text": "The next weekend, they invited him to a barbecue on the roof.", "es": "El fin de semana siguiente, lo invitaron a una barbacoa en la azotea." }
+  ],
+  "keywords": [
+    "b1-renting.stairs",
+    "b1-renting.plant",
+    "b1-renting.heating",
+    "b1-renting.leak",
+    "b1-renting.come-by",
+    "b1-renting.super",
+    "b1-renting.upstairs",
+    "b1-renting.sorry-to-bother-you",
+    "b1-renting.sorry-i-didnt-realize-it-was-so-loud",
+    "b1-plans.barbecue"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What problem did Pablo find in the kitchen?",
+      "es": "¿Qué problema encontró Pablo en la cocina?",
+      "options": [
+        { "text": "The fridge wasn't working.", "es": "La nevera no funcionaba." },
+        { "text": "There was a leak under the sink.", "es": "Había una fuga debajo del fregadero." },
+        { "text": "The lights went out.", "es": "Se fue la luz." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Who fixed the heating and the leak?",
+      "es": "¿Quién arregló la calefacción y la fuga?",
+      "options": [
+        { "text": "The super.", "es": "El conserje." },
+        { "text": "Jordan.", "es": "Jordan." },
+        { "text": "Mrs. Carter.", "es": "Mrs. Carter." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What did Mrs. Carter tell Pablo to do about the music?",
+      "es": "¿Qué le dijo Mrs. Carter a Pablo que hiciera con la música?",
+      "options": [
+        { "text": "To call the police.", "es": "Llamar a la policía." },
+        { "text": "To wear earplugs and sleep.", "es": "Ponerse tapones y dormir." },
+        { "text": "To go up and talk to the neighbors.", "es": "Subir y hablar con los vecinos." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How did the neighbors react?",
+      "es": "¿Cómo reaccionaron los vecinos?",
+      "options": [
+        { "text": "They apologized and later invited him to a barbecue.", "es": "Pidieron perdón y después lo invitaron a una barbacoa." },
+        { "text": "They got angry and closed the door.", "es": "Se enfadaron y cerraron la puerta." },
+        { "text": "They played the music even louder.", "es": "Pusieron la música todavía más alta." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "b1-renting.stairs", "distractors": ["hills", "trees"] },
+    { "id": "g2", "sentence": "s3", "answer": "b1-renting.heating", "distractors": ["doorbell", "radio"] },
+    { "id": "g3", "sentence": "s4", "answer": "b1-renting.leak", "distractors": ["cat", "guitar"] },
+    { "id": "g4", "sentence": "s5", "answer": "b1-renting.come-by", "distractors": ["give up", "run out"] },
+    { "id": "g5", "sentence": "s6", "answer": "b1-renting.super", "distractors": ["mayor", "pilot"] },
+    { "id": "g6", "sentence": "s7", "answer": "b1-renting.upstairs", "distractors": ["downtown", "online"] }
+  ]
+}
