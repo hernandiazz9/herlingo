@@ -68,6 +68,11 @@ export interface PackSources {
 
 export interface BuildResult {
   pack: Pack | null;
+  /**
+   * Every id the pack claims (units, lessons, items, dialogues, stories, placement) → the file
+   * that defines it. Ids must be unique across packs: `scripts/content.ts` compares these maps.
+   */
+  ids: Map<string, string>;
   errors: string[];
   /** Guideline misses (e.g. story length): reported, never fatal. */
   warnings: string[];
@@ -87,7 +92,7 @@ export function buildPack(src: PackSources): BuildResult {
   const schemaErrors: string[] = [];
   const meta = parse(S.PackMeta, src.meta, schemaErrors);
   const warnings: string[] = [];
-  if (!meta) return { pack: null, errors: schemaErrors, warnings };
+  if (!meta) return { pack: null, ids: new Map(), errors: schemaErrors, warnings };
   if (meta.lang !== src.lang) errors.push(`${src.meta.file}: lang "${meta.lang}" must equal folder name "${src.lang}"`);
 
   const defaultVoice = meta.voices[0];
@@ -115,6 +120,18 @@ export function buildPack(src: PackSources): BuildResult {
   const checkSituation = (situation: string | undefined, where: string) => {
     if (situation && !situations.has(situation)) errors.push(`${where}: unknown situation "${situation}"`);
   };
+  const registers = new Set<string>(["tu", "neutral", meta.formalRegister]);
+  const checkRegister = (register: string, where: string) => {
+    if (!registers.has(register)) {
+      errors.push(`${where}: register "${register}" is not allowed in this pack (use ${[...registers].map((r) => `"${r}"`).join(", ")})`);
+    }
+  };
+  const articles = new Set(meta.articles);
+  const checkArticle = (article: string | undefined, where: string) => {
+    if (article !== undefined && !articles.has(article)) {
+      errors.push(`${where}: article "${article}" is not in pack.json articles (${meta.articles.map((a) => `"${a}"`).join(", ")})`);
+    }
+  };
 
   const phrases: Phrase[] = [];
   const vocab: Vocab[] = [];
@@ -129,6 +146,7 @@ export function buildPack(src: PackSources): BuildResult {
     const where = `${file}: vocab "${v.id}"`;
     claim(v.id, "vocab", file);
     checkSituation(v.situation, where);
+    checkArticle(v.article, where);
     const { image: imageKey, ...rest } = v;
     vocab.push({
       ...rest,
@@ -146,6 +164,7 @@ export function buildPack(src: PackSources): BuildResult {
       const where = `${file}: phrase "${p.id}"`;
       claim(p.id, "phrase", file);
       checkSituation(p.situation, where);
+      checkRegister(p.register, where);
       phrases.push({ ...p, kind: "phrase", audioKey: audioKey(p.id), voice: checkVoice(p.voice, where) });
     }
     for (const v of f.vocab) addVocab(file, v);
@@ -153,6 +172,7 @@ export function buildPack(src: PackSources): BuildResult {
       const where = `${file}: qa "${q.id}"`;
       claim(q.id, "qa", file);
       checkSituation(q.situation, where);
+      checkRegister(q.register, where);
       const voice = checkVoice(q.voice, where);
       qa.push({
         ...q,
@@ -224,6 +244,7 @@ export function buildPack(src: PackSources): BuildResult {
     const where = `${s.file}: dialogue "${d.id}"`;
     claim(d.id, "dialogue", s.file);
     checkSituation(d.situation, where);
+    checkRegister(d.register, where);
     rawDialogueUnits.push({ file: s.file, id: d.id, unit: d.unit });
     const turnIds = new Set<string>();
     const turns: Dialogue["turns"] = d.turns.map((t) => {
@@ -320,7 +341,7 @@ export function buildPack(src: PackSources): BuildResult {
 
   // A file that failed its schema was skipped: checking references now would only add
   // misleading "unknown id" errors. Fix the schema errors first.
-  if (schemaErrors.length) return { pack: null, errors: [...schemaErrors, ...errors], warnings };
+  if (schemaErrors.length) return { pack: null, ids: owners, errors: [...schemaErrors, ...errors], warnings };
 
   // References (after everything is registered).
   const allowedInLesson = new Set<string>(S.LESSON_ITEM_KINDS);
@@ -412,7 +433,7 @@ export function buildPack(src: PackSources): BuildResult {
   stories.sort((a, b) => a.order - b.order);
 
   const pack: Pack = { meta, units, dialogues, stories, phrases, vocab, qa, grammar, expressions, placement };
-  return { pack: errors.length ? null : pack, errors, warnings };
+  return { pack: errors.length ? null : pack, ids: owners, errors, warnings };
 }
 
 /** Counts for the content:check summary. */

@@ -1,0 +1,24 @@
+{
+  "lang": "fr",
+  "name": "Francés",
+  "nativeName": "Français",
+  "speechLocale": "fr-FR",
+  "emoji": "🇫🇷",
+  "formalRegister": "vous",
+  "articles": ["le", "la", "l'", "les"],
+  "voices": ["fr-FR-DeniseNeural", "fr-FR-HenriNeural", "fr-FR-EloiseNeural"],
+  "situations": [
+    { "id": "saludos", "title": "Saludos y cortesía", "emoji": "👋" },
+    { "id": "no-entiendo", "title": "Cuando no entiendes", "emoji": "❓" },
+    { "id": "numeros", "title": "Números, hora y fechas", "emoji": "🔢" },
+    { "id": "presentarse", "title": "Presentarte", "emoji": "🙂" },
+    { "id": "familia", "title": "Familia y amigos", "emoji": "👨‍👩‍👧" },
+    { "id": "casa", "title": "Casa y rutina", "emoji": "🏠" },
+    { "id": "ocio", "title": "Tiempo libre y clima", "emoji": "⚽" },
+    { "id": "comida", "title": "Comer y beber", "emoji": "🥐" },
+    { "id": "compras", "title": "Compras", "emoji": "🛒" },
+    { "id": "ciudad", "title": "Por la ciudad", "emoji": "🚇" },
+    { "id": "salud", "title": "Salud y emergencias", "emoji": "💊" },
+    { "id": "gramatica", "title": "Gramática", "emoji": "📘" }
+  ]
+}

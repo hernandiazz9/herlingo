@@ -26,8 +26,14 @@ export const ImageKey = z
   .string()
   .regex(IMAGE_KEY_PATTERN, 'image must be "fluent:<icon-name>" or "custom:<slug>" (lowercase a-z0-9 joined by single "-")');
 
-/** Italian (target-language) register: tu = informal, lei = formal, neutral = either. */
-export const Register = z.enum(["tu", "lei", "neutral"]);
+/**
+ * Target-language register: tu = informal, lei / vous = formal (each pack allows only its own
+ * `formalRegister`, checked by `content:check`), neutral = either.
+ */
+export const Register = z.enum(["tu", "lei", "vous", "neutral"]);
+
+/** Formal register of a pack (`pack.json` `formalRegister`): Italian `lei`, French `vous`. */
+export const FormalRegister = z.enum(["lei", "vous"]);
 
 // ---------------------------------------------------------------------------------------------
 // Pack meta: content/<lang>/pack.json
@@ -42,6 +48,11 @@ export const Situation = z.object({
 });
 
 export const PackMeta = z.object({
+  /**
+   * The default pack (exactly one pack sets `"default": true`): the app's fallback language and
+   * the first one in pickers.
+   */
+  default: z.literal(true).optional(),
   /** ISO 639-1 code, equals the folder name (`it`). */
   lang: z.string().regex(/^[a-z]{2,3}$/),
   /** Name of the language in Spanish ("Italiano"). */
@@ -54,6 +65,12 @@ export const PackMeta = z.object({
   voices: z.array(Text).min(1),
   /** Situations used by phrases, units and dialogues (phrasebook sections), in display order. */
   situations: z.array(Situation).min(1),
+  /** Flag emoji shown by the language picker ("🇮🇹"). */
+  emoji: Text.optional(),
+  /** The only formal register this pack's items may use (besides `tu` and `neutral`). */
+  formalRegister: FormalRegister,
+  /** Definite articles allowed in vocab `article`, as written ("il", "l'", …). */
+  articles: z.array(Text).min(1),
 });
 
 // ---------------------------------------------------------------------------------------------
@@ -89,7 +106,7 @@ export const Vocab = z.object({
   id: Id,
   /** Bare word without article ("biglietto"). */
   word: Text,
-  /** Definite article as it is written before the word: "il", "lo", "la", "l'", "i", "gli", "le". */
+  /** Definite article as written before the word; must be one of pack.json `articles` ("il", "l'", "le"…). */
   article: Text.optional(),
   gender: Gender.optional(),
   /** Plural form when irregular or useful. */

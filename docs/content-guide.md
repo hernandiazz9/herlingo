@@ -8,7 +8,8 @@ change: it must print `✓ content/<lang>: …` and exit 0.
 
 ```
 content/<lang>/
-  pack.json            Pack meta: language, speech locale, voices, situations. Rarely edited.
+  pack.json            Pack meta: language, flag, speech locale, voices, situations, register,
+                       articles, default flag. Rarely edited.
   units/*.json         One unit per file, self-contained: its lessons AND the items they teach.
   dialogues/*.json     One dialogue per file.
   extras/*.json        Items that belong to no unit (phrasebook-only phrases, Sicilian
@@ -20,6 +21,11 @@ Files are discovered by glob: **there is no index to edit**. Adding a unit = add
 parallel tasks never touch the same file. Name files after what they hold, e.g.
 `units/20-tren.json`, `dialogues/tren-biglietteria.json`, `extras/siciliano.json`.
 
+**Several packs.** Each language is one folder (`content/it/`, `content/fr/`…). Exactly one
+`pack.json` sets `"default": true` (Italian): it is the app's fallback language and comes first
+in the language picker; `content:check` fails with zero or several defaults. A pack with no units
+yet is accepted (`content:check` reports it as empty). Situations are per pack.
+
 The `sample` demo pack (files whose name contains `sample`) has been removed from `it`; do not
 ship sample files in a real pack.
 
@@ -27,8 +33,12 @@ ship sample files in a real pack.
 
 - Format: lowercase `a-z0-9` words joined by a single `-` or `.` (`tren.un-biglietto-per`).
   `--` is forbidden (it is reserved for audio keys).
-- **One namespace per pack**: units, lessons, phrases, vocab, Q&A, grammar cards, expressions,
-  dialogues and placement questions must all have different ids.
+- **One namespace across every pack**: units, lessons, phrases, vocab, Q&A, grammar cards,
+  expressions, dialogues, stories (and inline story key words) and placement questions must all
+  have different ids, in this pack and in every other pack (routes like `/leccion/<id>/` are shared
+  by all packs). Use the pack's own slugs (French: `salut.bonjour`, `gram.fr-etre`,
+  `dlg.fr-boulangerie`, `story.fr-<slug>`, `story-fr-<slug>`; see docs/brief-fr.md).
+  Situation ids are per pack.
 - **Stable**: progress (localStorage) and audio files are keyed by id. Never rename an id once
   shipped; fix the text instead.
 - Conventions:
@@ -67,9 +77,13 @@ leave gaps:
 
 `?` = optional. All text fields must be non-empty. Spanish is **Spain Spanish with "tú"**.
 
-**pack.json**: `lang` (= folder name), `name`, `nativeName`, `speechLocale` (`it-IT`),
-`voices` (edge-tts voice names; the first is the default), `situations` (`{ id, title, emoji? }`,
-phrasebook sections in display order). If you need a new situation, add one line here.
+**pack.json**: `default?` (`true` on exactly one pack), `lang` (= folder name), `name` (in
+Spanish, "Francés"), `nativeName` ("Français"), `emoji?` (flag shown by the language picker, 🇫🇷),
+`speechLocale` (`it-IT`), `voices` (edge-tts voice names; the first is the default),
+`formalRegister` (`lei` | `vous`: the formal register this pack's items use), `articles` (definite
+articles allowed in vocab `article`: Italian `il lo la l' i gli le`, French `le la l' les`),
+`situations` (`{ id, title, emoji? }`, phrasebook sections in display order). If you need a new
+situation, add one line here.
 
 **Unit file** (`units/*.json`): `id`, `order`, `title`, `description?`, `emoji?`, `situation`,
 `lessons`, plus the item arrays `phrases`, `vocab`, `qa`, `grammar`, `expressions` (each optional).
@@ -83,13 +97,14 @@ phrasebook sections in display order). If you need a new situation, add one line
 
 - **Phrase**: `id`, `text` (target language, as spoken), `es`, `literal?` (word for word, only when
   it helps), `notes?` (short Spanish usage note), `explanation?` (see below), `register`
-  (`tu` | `lei` | `neutral`), `situation`, `tags?`, `voice?`.
+  (`tu` | `neutral` | the pack's `formalRegister`: `lei` in Italian, `vous` in French),
+  `situation`, `tags?`, `voice?`.
 - **Phrase `explanation`** (shown on the Jugar discovery cards; the UI falls back to `notes`):
   Spain Spanish with "tú", **1–2 short lines, max ~200 characters**: (1) when you use it, concrete
   (who you say it to, where), and (2) one pronunciation tip for the tricky sound, written for a
   Spanish speaker. Don't repeat the translation. Example for "Vorrei un biglietto per Catania.":
   `"Lo dices en la taquilla o a la máquina de billetes. «gli» suena como una «ll» suave: bi-LLE-tto."`
-- **Vocab**: `id`, `word` (bare), `article?` (`il`, `lo`, `la`, `l'`, `i`, `gli`, `le`),
+- **Vocab**: `id`, `word` (bare), `article?` (one of pack.json `articles`: `il`, `lo`, `la`, `l'`, `i`, `gli`, `le` in Italian),
   `gender?` (`m` | `f` | `mf`), `plural?` (bare word, no article: "biglietti", "autobus"), `es` (with article for nouns: "el billete"), `notes?`,
   `example?` (a phrase id), `situation?`, `tags?`, `voice?`, `image?` (picture key, see
   "Pictures"). It is spoken as article + word ("il biglietto", "l'orario").
@@ -243,8 +258,9 @@ Custom SVGs must sit next to Fluent Emoji Flat icons without looking foreign:
 
 ## What `content:check` enforces
 
-Schema (types, required fields, non-empty text, id format), unique ids across the pack, unique
-unit `order`, known situations and voices, lesson items that exist and are lesson-item kinds,
+Schema (types, required fields, non-empty text, id format), unique ids across every pack,
+exactly one default pack, `register` limited to `tu`, `neutral` and the pack's `formalRegister`,
+vocab `article` limited to the pack's `articles`, unique unit `order`, known situations and voices, lesson items that exist and are lesson-item kinds,
 non-empty lessons and units, `vocab.example` is a phrase, `dialogue.unit` is a unit, learner turns
 have a correct option, placement answers in range and lessons that exist. Stories: unique
 `order`, unique local ids, inline key words prefixed `story-`, key words that exist and are vocab /

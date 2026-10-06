@@ -53,7 +53,8 @@ src/lib/backup/        Perfil "Copia de seguridad": export/import every `lang-le
                        as a JSON file; validates before writing, rolls back on a failed write.
 src/lib/league/        Liga (docs/league.md): config.ts (`leagueEnabled()`), client.ts (lazy supabase-js, `leagueRpc`),
                        account.ts (cached account, actions, change event), use-league-account.ts. Route /liga/ (under Perfil).
-content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`). Only `it` exists.
+content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`).
+                       `it` (default pack, `"default": true`) and `fr` (docs/brief-fr.md). Ids are unique across packs.
                        Format, ids, order ranges and quality rules: docs/content-guide.md.
                        Code never hard-codes content.
 api/                   Prepárate backend only: Vercel functions (coach/*.ts, one per endpoint) + api/_lib/ (server modules,
@@ -118,6 +119,13 @@ plans/                 Orchestrator plans. Never edit.
   `getLessonItems()`, `getItem()`, `getDialogue()`, `getSituation()`, `listPlayables()`), never
   by importing `content/` JSON. Synchronous; works in server and client components. The app
   never imports zod (only `scripts/content.ts` does).
+- **Several packs.** `listPacks()` = every pack's meta, default first (`DEFAULT_LANG` = the pack
+  with `"default": true`). The learner's language is the **active** one: `getActiveLang()` /
+  `setActiveLang()` / `subscribeActiveLang()` from `@/lib/content/active` (`lang-lern:active-lang`,
+  else the first onboarded pack, else null = first launch) and `useActiveLang()` →
+  `{ ready, lang, pack, setLang }` from `@/lib/content/use-active-lang` (wait for `ready`).
+  `/leccion/[id]/`, `/dialogos/[id]/`, `/historias/[id]/` are generated for every pack and find
+  the owner with `findLessonPack(id)` / `findDialoguePack(id)` / `findStoryPack(id)`.
 - **Audio** goes through `@/lib/audio`: `speak(playable | text, { slow })`, `stop()`, `canSpeak()`.
   Every playable (phrase, vocab, Q&A question and replies, dialogue turns and options, grammar
   examples, placement `audio`) has `text`, `audioKey` and `voice`: pass it as is. It plays

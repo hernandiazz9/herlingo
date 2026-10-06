@@ -1,8 +1,12 @@
 {
+  "default": true,
   "lang": "it",
   "name": "Italiano",
   "nativeName": "Italiano",
   "speechLocale": "it-IT",
+  "emoji": "🇮🇹",
+  "formalRegister": "lei",
+  "articles": ["il", "lo", "la", "l'", "i", "gli", "le"],
   "voices": ["it-IT-ElsaNeural", "it-IT-DiegoNeural", "it-IT-IsabellaNeural"],
   "situations": [
     { "id": "saludos", "title": "Saludos y cortesía", "emoji": "👋" },

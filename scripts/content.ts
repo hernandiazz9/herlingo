@@ -14,6 +14,10 @@
  *
  * Layout per pack: pack.json, units/*.json, dialogues/*.json, extras/*.json, stories/*.json
  * (see docs/content-guide.md). Guideline misses (story length, counts) print as ⚠ warnings only.
+ *
+ * Several packs: ids are unique across every pack (routes like /leccion/<id>/ are shared), and
+ * exactly one pack.json sets `"default": true` (written to the bundle as `defaultLang`). A pack
+ * with no units yet is accepted (reported as empty).
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
@@ -60,9 +64,21 @@ const langs = existsSync(CONTENT)
       .map((d) => d.name)
       .sort()
   : [];
+// Default pack first, so an id reused across packs is reported on the newer pack, not the default.
+const isDefault = (lang: string) => {
+  try {
+    return JSON.parse(readFileSync(join(CONTENT, lang, "pack.json"), "utf8"))?.default === true;
+  } catch {
+    return false;
+  }
+};
+langs.sort((a, b) => Number(isDefault(b)) - Number(isDefault(a)));
 
 let failed = false;
 const packs: Record<string, Pack> = {};
+/** Id → `<file>` of every pack checked so far, to reject an id reused by another pack. */
+const globalIds = new Map<string, string>();
+const defaults: string[] = [];
 
 if (langs.length === 0) {
   console.error("No packs found: expected content/<lang>/pack.json");
@@ -73,7 +89,7 @@ for (const lang of langs) {
   const dir = join(CONTENT, lang);
   const readErrors: string[] = [];
   const meta = read(join(dir, "pack.json"), readErrors);
-  const { pack, errors, warnings } = buildPack({
+  const { pack, errors, warnings, ids } = buildPack({
     lang,
     meta,
     units: readDir(join(dir, "units"), readErrors),
@@ -82,11 +98,19 @@ for (const lang of langs) {
     stories: readDir(join(dir, "stories"), readErrors),
     resolveImage: imageResolver(ROOT),
   });
+  const crossPack: string[] = [];
+  for (const [id, file] of ids) {
+    const prev = globalIds.get(id);
+    if (prev) crossPack.push(`${file}: id "${id}" is already used by another pack (${prev}); ids must be unique across every pack`);
+    else globalIds.set(id, file);
+  }
+  if (pack?.meta.default) defaults.push(lang);
   const images = pack ? checkImageKeys(pack, ROOT) : { errors: [], warnings: [] };
   for (const w of [...warnings, ...images.warnings]) console.warn(`⚠ ${w}`);
   const all = [
     ...readErrors,
     ...errors,
+    ...crossPack,
     ...images.errors,
     ...(pack && strictAudio ? checkAudio(pack, ROOT) : []),
     ...(pack && strictImages ? checkImages(pack, ROOT) : []),
@@ -101,13 +125,23 @@ for (const lang of langs) {
   const stats = Object.entries(packStats(pack))
     .map(([k, v]) => `${v} ${k}`)
     .join(", ");
-  console.log(`✓ content/${lang}: ${stats}`);
+  const empty = pack.units.length === 0 ? " (empty: no units yet)" : "";
+  console.log(`✓ content/${lang}${pack.meta.default ? " (default)" : ""}: ${stats}${empty}`);
+}
+
+if (!failed && defaults.length !== 1) {
+  failed = true;
+  console.error(
+    defaults.length === 0
+      ? `✗ no default pack: set "default": true in exactly one content/<lang>/pack.json`
+      : `✗ ${defaults.length} default packs (${defaults.join(", ")}): only one pack.json may set "default": true`,
+  );
 }
 
 if (failed) process.exit(1);
 
 if (mode === "build") {
   mkdirSync(join(OUT, ".."), { recursive: true });
-  writeFileSync(OUT, JSON.stringify({ defaultLang: langs[0], packs }));
+  writeFileSync(OUT, JSON.stringify({ defaultLang: defaults[0], packs }));
   console.log(`→ ${relative(ROOT, OUT)}`);
 }

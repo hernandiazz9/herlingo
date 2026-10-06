@@ -18,6 +18,7 @@ import type {
   Lesson,
   LessonItem,
   Pack,
+  PackMeta,
   PicturedVocab,
   Playable,
   Situation,
@@ -37,11 +38,30 @@ interface Bundle {
 
 const data = bundle as unknown as Bundle;
 
-/** Language used when none is given (first pack alphabetically; today the only one: `it`). */
+/**
+ * The default pack's language (`pack.json` `"default": true`): used when none is given. The
+ * learner's current language is the active one (`getActiveLang()` from `@/lib/content/active`).
+ */
 export const DEFAULT_LANG = data.defaultLang;
 
+/** Every pack's language, default first. */
 export function listLangs(): string[] {
-  return Object.keys(data.packs);
+  return listPacks().map((m) => m.lang);
+}
+
+let packMetas: PackMeta[] | undefined;
+
+/** Every pack's meta (name, flag `emoji`, voices…), sorted with the default pack first. */
+export function listPacks(): PackMeta[] {
+  packMetas ??= Object.values(data.packs)
+    .map((p) => p.meta)
+    .sort((a, b) => (a.lang === DEFAULT_LANG ? -1 : b.lang === DEFAULT_LANG ? 1 : a.lang.localeCompare(b.lang)));
+  return packMetas;
+}
+
+/** True when a pack exists for `lang`. */
+export function hasPack(lang: string): boolean {
+  return Object.prototype.hasOwnProperty.call(data.packs, lang);
 }
 
 export function getPack(lang: string = DEFAULT_LANG): Pack {
@@ -107,6 +127,32 @@ export function getAllLessons(pack: Pack = getPack()): Lesson[] {
 
 export function getDialogue(id: string, pack: Pack = getPack()): Dialogue | undefined {
   return index(pack).dialogues.get(id);
+}
+
+// Ids are unique across packs (`content:check`), so an id names at most one pack. Routes shared
+// by every pack (/leccion/<id>/, /dialogos/<id>/, /historias/<id>/) use these to find it.
+
+function findPack(has: (idx: Index) => boolean): Pack | undefined {
+  for (const lang of listLangs()) {
+    const pack = data.packs[lang];
+    if (has(index(pack))) return pack;
+  }
+  return undefined;
+}
+
+/** The pack that owns lesson `id`, or undefined. */
+export function findLessonPack(id: string): Pack | undefined {
+  return findPack((idx) => idx.lessons.has(id));
+}
+
+/** The pack that owns dialogue `id`, or undefined. */
+export function findDialoguePack(id: string): Pack | undefined {
+  return findPack((idx) => idx.dialogues.has(id));
+}
+
+/** The pack that owns story `id`, or undefined. */
+export function findStoryPack(id: string): Pack | undefined {
+  return findPack((idx) => idx.stories.has(id));
 }
 
 export function getSituation(id: string, pack: Pack = getPack()): Situation | undefined {
