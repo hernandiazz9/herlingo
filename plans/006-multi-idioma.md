@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:58Z 💻
+- Updated: 2026-10-06 10:05Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T70/T71; then T72; T73 (audio) needs the Mac
+- Next step: integrate T70/T72; then T73 (audio + images) on the Mac
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -206,7 +206,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T71 — French content: stories 1–6
-- Status: running (attempt 1 · 💻 · agent a874c68c42dcdc95b · since 09:58Z)
+- Status: done
 - Depends on: T65, T66, T67, T68, T69
 - Where: any
 - Goal: Stories 1–6 with the brief-fr cast (Camille, Julien, Madame Martin, Pablo) in Lyon, A1, following the units' order; key words reuse unit items by id where possible.
@@ -215,10 +215,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings (80–150 words, 8–10 key words, 3–4 questions, 4–6 gaps).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: stories 1–6 (Lyon cast: Pablo from Seville, Camille, Julien, Madame Martin, Léa), 108–125 words, 10 key words, 4 questions, 5–6 gaps, no ⚠ · 2fad6dd · verify ✓ 💻 · not checked: native review, audio (T73)
 
 ## T72 — French content: stories 7–12
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent aa287685dcb08c962 · since 10:05Z)
 - Depends on: T71
 - Where: any
 - Goal: Stories 7–12 (A1, the last ones A1–A2), continuing T71's cast and reusing its inline key words by id.
@@ -256,6 +256,7 @@ Worktree setup: npm ci
 - [ ] T67 @cdee444 — French language review (queued 2026-10-06 💻)
 - [ ] T68 @311c7ee — French language review (queued 2026-10-06 💻)
 - [ ] T69 @6729cca — French language review (queued 2026-10-06 💻)
+- [ ] T71 @2fad6dd — French language review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -311,3 +312,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:58Z 💻 T69 done · worktree-agent-aba579a428944ec60 → 6729cca · verify ✓
 - 2026-10-06 09:58Z 💻 T70 launched · attempt 1 · agent ad5fd9b2e670aff2f
 - 2026-10-06 09:58Z 💻 T71 launched · attempt 1 · agent a874c68c42dcdc95b
+- 2026-10-06 10:05Z 💻 T71 done · worktree-agent-a874c68c42dcdc95b → 2fad6dd · verify ✓
+- 2026-10-06 10:05Z 💻 T72 launched · attempt 1 · agent aa287685dcb08c962
