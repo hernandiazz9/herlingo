@@ -1,6 +1,7 @@
 /**
  * The one place that calls Claude: structured output (JSON schema from zod), cached stable system
- * prompt, low/medium effort, server-side fallbacks, and `stop_reason` checks before parsing.
+ * prompt, low/medium effort, server-side fallbacks, `stop_reason` checks before parsing, and an
+ * optional normalizer that trims recoverable overflows before the zod check.
  */
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
@@ -21,6 +22,8 @@ export interface StructuredRequest<T extends z.ZodType> {
   schema: T;
   effort: "low" | "medium";
   maxTokens: number;
+  /** Fixes recoverable overflows in the parsed JSON before the zod check (normalize.ts); logs what it changed. */
+  normalize?: (raw: unknown) => unknown;
   /** Called as soon as a response arrives, also when it is then rejected: every call is billed. */
   onUsage: (charges: Charge[]) => Promise<unknown>;
 }
@@ -120,7 +123,7 @@ export async function generateStructured<T extends z.ZodType>(req: StructuredReq
     console.error("[coach] output is not JSON", response.model, text.length);
     throw failed("invalid");
   }
-  const parsed = req.schema.safeParse(raw);
+  const parsed = req.schema.safeParse(req.normalize ? req.normalize(raw) : raw);
   if (!parsed.success) {
     const issue = parsed.error.issues[0];
     console.error("[coach] output does not match the schema", issue?.path.join("."), issue?.message);

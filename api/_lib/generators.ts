@@ -4,6 +4,7 @@ import { isFake } from "./config.js";
 import { FAKE_INTERVIEW_USAGE, FAKE_PACK_USAGE, fakeInterviewStep, fakePack } from "./fake.js";
 import type { LanguageMeta } from "./languages.js";
 import { COACH_MODEL, type Charge } from "./model.js";
+import { normalizeAssessment, normalizeInterviewStep, normalizePack } from "./normalize.js";
 import { INTERVIEW_SYSTEM, PACK_SYSTEM, interviewUserPrompt, packUserPrompt, type PackInput } from "./prompts.js";
 import { Assessment, GeneratedPack, InterviewStep, LIMITS, type InterviewRequest } from "./schema.js";
 
@@ -21,7 +22,7 @@ export async function generatePack(input: PackInput, onUsage: OnUsage): Promise<
     await onUsage([{ model: COACH_MODEL, usage: FAKE_PACK_USAGE }]);
     return fakePack(input.meta, input.description, input.refine?.instruction);
   }
-  return generateStructured({ ...PACK, system: PACK_SYSTEM, user: packUserPrompt(input), schema: GeneratedPack, onUsage });
+  return generateStructured({ ...PACK, system: PACK_SYSTEM, user: packUserPrompt(input), schema: GeneratedPack, normalize: normalizePack, onUsage });
 }
 
 export async function generateInterviewStep(req: InterviewRequest, meta: LanguageMeta, onUsage: OnUsage): Promise<InterviewStep> {
@@ -31,6 +32,6 @@ export async function generateInterviewStep(req: InterviewRequest, meta: Languag
   }
   const final = req.history.length >= LIMITS.interviewTurns;
   const common = { ...INTERVIEW, system: INTERVIEW_SYSTEM, user: interviewUserPrompt(meta, req, final), onUsage };
-  if (final) return { done: true, assessment: await generateStructured({ ...common, schema: Assessment }) };
-  return generateStructured({ ...common, schema: InterviewStep });
+  if (final) return { done: true, assessment: await generateStructured({ ...common, schema: Assessment, normalize: normalizeAssessment }) };
+  return generateStructured({ ...common, schema: InterviewStep, normalize: normalizeInterviewStep });
 }
