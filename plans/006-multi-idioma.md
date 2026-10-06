@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 11:32Z 💻
-- Writer: 💻 desktop
-- Branch: main @ fc87971
-- Next step: T76 makes pack generation tolerant; push main (auto-deploy)
+- Updated: 2026-10-06 11:37Z 💻
+- Writer: released 11:37Z by 💻 desktop
+- Branch: main @ 23e46da
+- Next step: Hernán: try Prepárate in production; visual + review queues
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -270,7 +270,7 @@ Worktree setup: npm ci
 - Outcome: api/package.json type module + .js on relative imports in api/; .vercel ignored by ESLint; local vercel build: all 4 functions load and answer 401 · fc87971 · verify ✓ 💻 · not checked: production deploy
 
 ## T76 — Fix: generated packs rejected for too many dialogue turns (paid 502)
-- Status: running (attempt 1 · 💻 · agent ad832a1994cd87e05 · since 11:32Z)
+- Status: done
 - Depends on: T75
 - Where: any
 - Goal: In production every pack generation fails with "La respuesta ha llegado con errores": Vercel logs `[coach] output does not match the schema dialogue.turns Too big: expected array to have <=10 items`. The call is billed and the learner gets nothing. Make generation robust: tell the model the limits precisely (prompt + JSON schema where structured outputs support it) and, on the server, normalize recoverable overflows instead of failing (e.g. too many turns/phrases/steps → trim to the limit keeping the dialogue coherent: end on a native turn or a learner turn with a correct option, keep ≥ 1 learner turn; too few still fails). Same tolerance for the refine and interview paths and for every array with a max in the pack schema. Log what was trimmed.
@@ -280,7 +280,7 @@ Worktree setup: npm ci
   - A unit-style script (tsx, not committed or under scripts/coach/) feeds the validator a pack with 14 turns, 15 key phrases and 9 guide steps → normalized valid pack; a pack with 1 turn still fails.
   - `COACH_FAKE=1 npm run dev:coach` still returns 200 for POST /api/coach/pack/ with a dev code.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: limits stated in prompt + schema descriptions (API ignores maxItems); api/_lib/normalize.ts trims overflowing guide/keyPhrases/options/turns (coherent ending) and assessment lists before zod, logs trims · 23e46da · verify ✓ fake ✓ 💻 · not checked: real Claude call; long strings still fail
 
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
@@ -301,6 +301,7 @@ Worktree setup: npm ci
 - [ ] T73 @1c894c7 — code review (scripts/content.ts, scripts/images/plan.ts) (queued 2026-10-06 💻)
 - [ ] T74 @2b18669 — code review of the merge resolutions (queued 2026-10-06 💻)
 - [ ] T75 @fc87971 — code review (queued 2026-10-06 💻)
+- [ ] T76 @23e46da — code review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -332,6 +333,7 @@ Worktree setup: npm ci
 - 2026-10-06 T65: later French units reuse existing basics (grammaire.lait, nombres.carte, salut.francais) instead of duplicating
 - 2026-10-06 T64: sign-out/delete leave the old league-board:* caches on the device (harmless, unused)
 - 2026-10-06 T67: docs/content-guide.md order ranges and quality rules are still Italy-only; point them to per-pack briefs
+- 2026-10-06 T76: over-long strings (title >80 chars) still fail the pack check; consider trimming them too
 
 ## Log
 - 2026-10-06 💻 plan written from the interview; not approved yet
@@ -375,3 +377,4 @@ Worktree setup: npm ci
 - 2026-10-06 11:10Z 💻 T75 launched · attempt 1 · agent acec2518d18aaec3b (prod /api/coach/* 500: ESM load failure)
 - 2026-10-06 11:17Z 💻 T75 done · worktree-agent-acec2518d18aaec3b → fc87971 · verify ✓
 - 2026-10-06 11:32Z 💻 T76 launched · attempt 1 · agent ad832a1994cd87e05
+- 2026-10-06 11:37Z 💻 T76 done · worktree-agent-ad832a1994cd87e05 → 23e46da · verify ✓
