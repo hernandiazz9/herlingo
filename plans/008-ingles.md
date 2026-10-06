@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:25Z 💻
+- Updated: 2026-10-06 13:32Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ fbd3ec5
-- Next step: integrate T103/T104; then T105 dialogues, T106 stories, T108 placement
+- Branch: plan-008-ingles @ edc33c4
+- Next step: T104 running; then T105, T106, T108
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -189,7 +189,7 @@ Worktree setup: npm ci
 - Outcome: units b1-interview + b1-tech (5 lessons each): 92 phrases, 68 vocab, 18 Q&A, new phrasal verbs tagged · fbd3ec5 · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T103 — English B1: travel problems, renting
-- Status: running (attempt 1 · 💻 · agent a4c5260f9084f5cfc · since 13:23Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Units `b1-trips` (140) and `b1-renting` (142) per docs/brief-en.md (delays, lost luggage, complaints, rebooking; renting, bills, repairs, neighbours).
@@ -198,7 +198,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "B1"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units b1-trips (delays, rebooking, lost luggage, complaints, on the road) + b1-renting (5 lessons each): 94 phrases, 68 vocab, 20 Q&A · edc33c4 · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T104 — English B1: bank and money, telling what happened
 - Status: running (attempt 1 · 💻 · agent aac01f4b40eee4d97 · since 13:25Z)
@@ -301,6 +301,7 @@ Worktree setup: npm ci
 - [ ] T100 @0f454fe — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T101 @08fdeb0 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T102 @fbd3ec5 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T103 @edc33c4 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -354,3 +355,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:23Z 💻 T103 launched · attempt 1 · agent a4c5260f9084f5cfc
 - 2026-10-06 13:25Z 💻 T102 done · worktree-agent-a564d131cc1effd2d → fbd3ec5 · verify ✓
 - 2026-10-06 13:25Z 💻 T104 launched · attempt 1 · agent aac01f4b40eee4d97
+- 2026-10-06 13:32Z 💻 T103 done · worktree-agent-a4c5260f9084f5cfc → edc33c4 · verify ✓
