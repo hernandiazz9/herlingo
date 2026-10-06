@@ -12,4 +12,4 @@ export { PictureChoiceExercise } from "./PictureChoiceExercise";
 export { SpeakExercise, type SpeakExerciseProps } from "./SpeakExercise";
 export { TilesExercise } from "./TilesExercise";
 export { WordIntro } from "./WordIntro";
-export { CloseIcon, LessonLangContext, MicIcon, MiniPlay, PlayControls, Prompt, SlowIcon, useLessonLang, usePlay, type ExerciseProps } from "./shared";
+export { CloseIcon, LessonLangContext, MiniPlay, PlayControls, Prompt, SlowIcon, useLessonLang, usePlay, type ExerciseProps } from "./shared";

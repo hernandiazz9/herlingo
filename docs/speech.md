@@ -7,7 +7,11 @@ lesson is never impossible without a microphone (docs/brief.md). Audio output is
 ## Engine (`src/lib/speech/`)
 
 `src/lib/speech/` is the only code in `src/` that touches `SpeechRecognition` /
-`webkitSpeechRecognition` (in `platform.ts`). Everything is imported from `@/lib/speech`.
+`webkitSpeechRecognition` (in `platform.ts`). ESLint enforces it: outside `src/lib/speech/`,
+`no-restricted-globals` and `no-restricted-syntax` reject any identifier or string starting with
+`SpeechRecognition` / `webkitSpeechRecognition` (globals, `window.…`, `"…" in window`, DOM types).
+Screens use `useListen` from `@/components/speech`; framework-free code uses `createListenSession`.
+Everything else is imported from `@/lib/speech`.
 
 | File | Contents |
 | --- | --- |
@@ -15,8 +19,8 @@ lesson is never impossible without a microphone (docs/brief.md). Audio output is
 | `messages.ts` | `ListenErrorKind`, `LISTEN_ERROR_MESSAGES` (the one Spanish message table), `listenErrorMessage()`. |
 | `log.ts` | Diagnostics log: `readSpeechLog()`, `clearSpeechLog()`, `subscribeSpeechLog()`, `SPEECH_LOG_KEY`. |
 | `platform.ts` | `canRecognize()`, `isStandalone()`, `browserFamily()`, the recognizer constructor. |
-| `recognition.ts` | Legacy `listenOnce(locale, timeoutMs?)`, a thin wrapper over a session (deprecated). |
-| `pause.ts` | "No puedo hablar ahora" pause. |
+| `score.ts` | `scoreHeard()`, `bestOption()`, `SPEECH_PASS_THRESHOLD` (see "Scoring"). |
+| `pause.ts` | "No puedo hablar ahora": speaking exercises off for `SPEAKING_PAUSE_MINUTES` (15) on this device (existing key `lang_lern:speaking-paused-until`). |
 
 ```ts
 const session = createListenSession({ locale: "it-IT", mode: "phrase" });
@@ -85,10 +89,6 @@ Each kind has one Spanish message with a concrete fix in `LISTEN_ERROR_MESSAGES`
 arrives after words were heard settles as `done` with those words. The browser's own `aborted`
 error is ignored (the timers or `onend` settle the session).
 
-The legacy `listenOnce()` maps `audio-capture` and `start-timeout` to `other` and returns
-`transcripts` = `alternatives` (so `transcripts[0]` is the full best transcript). A `timeoutMs`
-becomes `maxMs`; above 10 s it uses the `long` mode.
-
 ## Mic UI (`src/components/speech/`)
 
 The one mic UI over the engine; screens never create sessions themselves. Import from
@@ -101,6 +101,7 @@ The one mic UI over the engine; screens never create sessions themselves. Import
 | `<LiveTranscript listen lang? idleHint? showResult? errorActions? align? />` | State line (`role="status"`, aria-live), live text, countdown bar + seconds, "Cancelar", and on error the engine message + "Reintentar" (+ `errorActions`). |
 | `<SpeakPanel listen lang? idleLabel? showResult? errorActions? disabled? />` | `MicButton` + `LiveTranscript`, centred: for "say this phrase" screens. |
 | `useListenRemaining(listen)` | Ms left before the cap while listening (null otherwise). |
+| `<WordFeedback words lang? heard? />` | The expected phrase word by word from `scoreHeard(...).words` (ok / missing / wrong) + "He entendido: «…»". Lessons and dialogues. |
 
 Behaviour:
 
@@ -131,6 +132,37 @@ const listen = useListen({ locale: meta.speechLocale, onResult: (r) => check(r.a
 // Prepárate (long Spanish answer appended): mode "long", locale "es-ES",
 // onResult: (r) => setText((t) => (t.trim() ? `${t.trimEnd()} ${r.transcript}` : r.transcript))
 ```
+
+## Scoring (`src/lib/speech/score.ts`)
+
+One scoring for lessons and dialogues (it replaced the old Levenshtein ≥ 0.7 `scoreSpeech` and the
+dialogue Dice ≥ 0.6 match).
+
+- `scoreHeard(alternatives, expected | expected[], numberWords?)` → `SpeechScore`
+  `{ words, score, passed, heard, expected, extra }`: the best result over every alternative heard
+  and every accepted text. Each expected word (as written, punctuation kept) is `ok`, `missing`
+  (nothing heard in its place) or `wrong` (`heard` = what was said instead).
+- `bestOption(options, alternatives, numberWords?)` → `{ index, result }`: the dialogue option said;
+  `index` = -1 when even the best one does not pass, `result` is still its word feedback.
+- Word-level alignment with `normalizeAnswer` from `src/lib/exercises/normalize.ts`: case,
+  punctuation and accents ignored, apostrophes split words ("dov'è" = "dov è"). Digits on both sides
+  are written out with the pack's `meta.numberWords` ("40" heard = "quaranta").
+- Words written together or apart match ("buon giorno" = "buongiorno", "dove" = "dov'è").
+- A one-letter slip in a word of 5+ letters counts as `ok` (usually the recogniser's spelling).
+- Score = `ok` words / (expected words + 0.5 × extra words heard), in [0, 1].
+- **`SPEECH_PASS_THRESHOLD` = 0.7**, the only threshold: 3 of 4 words right passes, 2 of 3 does
+  not; a one- or two-word phrase must be fully right.
+
+## Screens
+
+| Screen | Mode, locale | Behaviour |
+| --- | --- | --- |
+| Lesson "Dilo en voz alta" (`SpeakExercise`) | `phrase`, pack `speechLocale` | `<SpeakPanel>`; `scoreHeard` on the result. Only scored attempts count as tries (2); a miss shows "Casi. Te queda un intento." + `<WordFeedback>` + Reintentar / Escuchar la frase. Errors show the engine message + Reintentar and never switch to self mode; "Prefiero evaluarme yo" is always offered, self mode offers "Usar el micrófono". No recognizer → starts in self mode. |
+| Lesson dictation (`DictationExercise`) | `phrase`, pack `speechLocale` | Small `<MicButton>` + `<LiveTranscript>` by the textarea: read-only with the live text while the mic is open, then the final transcript (digits spelled) replaces the answer and stays editable. Comprobar / Enter disabled while listening; mic hidden once answered. |
+| Dialogue turn (`DialoguePlayer`) | `phrase`, pack `speechLocale` | `<SpeakPanel>` under the options ("O dilo en voz alta"); `bestOption` picks the option. A miss shows what was heard and `<WordFeedback>` of the closest option; tapping an option resets the mic first. |
+| Prepárate situation (`SituationForm`) | `long`, `es-ES` | "Dictar en español": text appended to what is typed, cut at the field limit, editable. Submit / "No lo sé" cancel an open session. |
+| Prepárate level interview (`LevelInterview`) | `long`, `es-ES` or the pack locale | Same as the situation, per answer ("Dictar en <idioma>"). |
+| Probar micrófono (`/microfono/`) | `phrase`, pack locale and `es-ES` | Below. |
 
 ## Diagnostics log: `lang-lern:speech-log`
 
@@ -174,3 +206,29 @@ entry; the last 15 log entries in plain Spanish (newest first); "Copiar registro
 `{ key, copiedAt, supported, standalone, browser, entries }`, with a read-only textarea fallback
 when the clipboard fails); "Borrar registro" (confirm, then `clearSpeechLog()`: only
 `lang-lern:speech-log`); iPhone tips. The log is read live through `subscribeSpeechLog`.
+
+## Hand checks (iPhone)
+
+Para Hernán, en su iPhone. Hazlas dos veces: con la **app instalada** (pantalla de inicio) y en
+**Safari**. Si algo falla, abre Perfil → Probar micrófono → "Copiar registro" y pégalo en el chat.
+
+- [ ] **Probar micrófono** (Perfil): dice si hay reconocimiento y si es app instalada o Safari; las
+      dos pruebas (idioma del curso y español) muestran cada paso (Abriendo el micrófono…, Habla
+      ahora, Te escucho…, Un momento…) con sus tiempos; el registro lista los intentos.
+- [ ] **Dilo en voz alta** (lección): dila bien → aprobada; dila mal → palabras marcadas, "He
+      entendido: «…»", Reintentar y Escuchar la frase funcionan; "Prefiero evaluarme yo" sigue ahí.
+- [ ] **Dictado** (lección): el texto aparece mientras hablas, luego queda en el campo y se puede
+      editar; Comprobar no se activa mientras escucha.
+- [ ] **Diálogo**: di una opción → la elige; di otra cosa → "He oído «…»" y la opción más cercana
+      palabra por palabra; tocar una opción sigue funcionando.
+- [ ] **Prepárate, situación**: "Dictar en español" añade el texto al que ya había escrito; se edita.
+- [ ] **Prepárate, entrevista de nivel**: igual en cada respuesta, en español y en el idioma del curso.
+- [ ] **Permiso denegado**: deniega el micrófono (Ajustes → Safari → Micrófono, o al preguntar) →
+      mensaje claro de cómo permitirlo + Reintentar; la lección sigue (evaluarte tú).
+- [ ] **Modo avión**: el mensaje dice que no hay conexión (o lo que pase, anótalo); nada se cuelga.
+- [ ] **Quedarte callado**: toca el micro y no digas nada → a los ~4 s "No te oigo" + Reintentar.
+- [ ] **Pausa larga**: habla, calla ~2 s (frase) o ~3 s (Prepárate) → termina solo con lo dicho.
+- [ ] **Terminar antes**: toca el micro otra vez mientras hablas → se queda lo dicho.
+- [ ] **Cancelar**: toca "Cancelar" → no se guarda nada y vuelve al estado inicial.
+- [ ] **Límite**: habla sin parar → se corta a los 10 s (frase) o 45 s (Prepárate); la cuenta atrás se ve.
+- [ ] **Tema claro y oscuro**: el botón, la cuenta atrás y las palabras marcadas se leen bien en los dos.
