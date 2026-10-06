@@ -1,0 +1,1134 @@
+{
+  "id": "b1-tech",
+  "order": 132,
+  "title": "Tecnología: ordenador, apps, explicar un problema, soporte",
+  "description": "Hablar de tus aparatos y apps, explicar qué falla, seguir las instrucciones de soporte técnico y contar en qué trabajas.",
+  "emoji": "💻",
+  "situation": "tecnologia",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-tech.l.devices",
+      "title": "El ordenador y los aparatos",
+      "items": [
+        "a2-airport.laptop",
+        "b1-tech.keyboard",
+        "b1-tech.mouse",
+        "b1-tech.monitor",
+        "a2-airport.screen",
+        "b1-tech.webcam",
+        "b1-tech.headphones",
+        "b1-tech.printer",
+        "b1-tech.cable",
+        "b1-tech.charger",
+        "b1-plans.battery",
+        "b1-tech.my-laptop-has-been-slow",
+        "b1-tech.the-battery-dies-really-fast",
+        "b1-tech.can-i-borrow-your-charger",
+        "b1-tech.plug-in",
+        "b1-tech.is-it-plugged-in",
+        "b1-tech.my-headphones-wont-connect",
+        "b1-tech.the-printer-is-out-of-paper",
+        "a2-hotel.wifi",
+        "a2-hotel.wifi-isnt-working",
+        "b1-tech.qa.borrow-charger"
+      ]
+    },
+    {
+      "id": "b1-tech.l.apps",
+      "title": "Apps y cuentas",
+      "items": [
+        "a2-about-me.app",
+        "b1-tech.download",
+        "b1-tech.have-you-downloaded-the-app",
+        "b1-tech.account",
+        "b1-tech.username",
+        "a2-hotel.password",
+        "b1-tech.you-have-to-create-an-account",
+        "b1-tech.i-forgot-my-password",
+        "b1-tech.log-in",
+        "b1-tech.i-cant-log-in",
+        "b1-tech.i-got-locked-out",
+        "b1-tech.link",
+        "b1-tech.click-on-the-reset-link",
+        "b1-tech.verification-code",
+        "b1-tech.check-your-email-for-the-code",
+        "b1-tech.settings",
+        "b1-tech.notification",
+        "b1-tech.turn-on-notifications",
+        "b1-tech.update",
+        "b1-tech.did-you-update-to-the-latest-version",
+        "b1-tech.qa.verification-code"
+      ]
+    },
+    {
+      "id": "b1-tech.l.problem",
+      "title": "Explicar un problema",
+      "items": [
+        "b1-tech.its-not-working-at-all",
+        "b1-tech.issue",
+        "b1-tech.bug",
+        "b1-tech.i-think-its-a-bug",
+        "b1-tech.crash",
+        "b1-tech.the-app-keeps-crashing",
+        "b1-tech.freeze",
+        "b1-tech.my-screen-froze",
+        "b1-tech.error-message",
+        "b1-tech.i-get-an-error-message",
+        "b1-tech.it-was-working-fine-yesterday",
+        "b1-tech.nothing-happens-when-i-click",
+        "b1-tech.since-the-last-update",
+        "b1-tech.it-only-happens-on-my-phone",
+        "b1-tech.screenshot",
+        "b1-tech.i-took-a-screenshot",
+        "b1-grammar.figure-out",
+        "b1-tech.qa.when-did-it-start",
+        "b1-tech.qa.error-message"
+      ]
+    },
+    {
+      "id": "b1-tech.l.support",
+      "title": "Llamar a soporte técnico",
+      "items": [
+        "b1-tech.it-support",
+        "b1-tech.im-calling-about-a-problem",
+        "b1-tech.could-you-describe-the-problem",
+        "b1-tech.could-you-send-me-a-screenshot",
+        "b1-tech.can-you-share-your-screen",
+        "b1-tech.restart",
+        "b1-tech.have-you-tried-turning-it-off",
+        "b1-tech.i-already-restarted-it",
+        "b1-tech.walk-through",
+        "b1-tech.let-me-walk-you-through-it",
+        "b1-tech.try-clearing-the-cache",
+        "b1-tech.yes-that-fixed-it",
+        "b1-grammar.can-you-look-into-it",
+        "b1-tech.support-ticket",
+        "b1-tech.ill-open-a-ticket",
+        "b1-tech.the-issue-has-been-fixed",
+        "b1-tech.is-there-anything-else",
+        "b1-tech.qa.whats-wrong",
+        "b1-tech.qa.tried-restarting",
+        "b1-tech.qa.share-screen",
+        "b1-tech.qa.did-that-work"
+      ]
+    },
+    {
+      "id": "b1-tech.l.my-work",
+      "title": "Hablar de tu trabajo de programador",
+      "items": [
+        "a2-about-me.i-write-code",
+        "b1-tech.code",
+        "b1-tech.website",
+        "b1-tech.the-website-is-down",
+        "b1-tech.server",
+        "b1-tech.database",
+        "b1-tech.user",
+        "b1-tech.feature",
+        "b1-tech.im-working-on-a-new-feature",
+        "b1-grammar.set-up",
+        "b1-tech.can-you-test-it-on-your-phone",
+        "b1-tech.deploy",
+        "b1-tech.ill-deploy-the-fix",
+        "b1-tech.backup",
+        "b1-tech.back-up-your-files",
+        "b1-tech.it-works-on-my-machine",
+        "b1-tech.qa.working-on"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "b1-tech.my-laptop-has-been-slow",
+      "text": "My laptop has been really slow lately.",
+      "es": "Mi portátil va muy lento últimamente.",
+      "notes": "Present perfect + «lately» = últimamente.",
+      "explanation": "Para empezar a explicar un problema. «lately»: «LEIT-li», la «t» casi no suena.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.the-battery-dies-really-fast",
+      "text": "The battery dies really fast.",
+      "es": "La batería se gasta muy rápido.",
+      "notes": "«die» = agotarse (una batería).",
+      "explanation": "Para quejarte de un móvil o un portátil. «dies» suena «dais», con «z» final.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.can-i-borrow-your-charger",
+      "text": "Can I borrow your charger for a minute?",
+      "es": "¿Me dejas tu cargador un momento?",
+      "notes": "«borrow» = pedir prestado; «lend» = prestar.",
+      "explanation": "Se lo pides a un compañero. «charger»: «CHAR-yer», la «g» suena como «y» fuerte.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.is-it-plugged-in",
+      "text": "Is it plugged in?",
+      "es": "¿Está enchufado?",
+      "notes": "«plug in» = enchufar.",
+      "explanation": "La primera pregunta ante un aparato que no enciende. «plugged in» se une: «plag-DIN».",
+      "register": "neutral",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.my-headphones-wont-connect",
+      "text": "My headphones won't connect to my laptop.",
+      "es": "Mis auriculares no se conectan al portátil.",
+      "notes": "«won't» + verbo = no hay manera de que funcione.",
+      "explanation": "Para un problema de Bluetooth. «won't» suena «wount», distinto de «want».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.the-printer-is-out-of-paper",
+      "text": "The printer is out of paper again.",
+      "es": "La impresora se ha vuelto a quedar sin papel.",
+      "notes": "«be out of» = haberse quedado sin.",
+      "explanation": "Un clásico de oficina. «paper»: «PEI-per», con «r» americana.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.have-you-downloaded-the-app",
+      "text": "Have you downloaded the app yet?",
+      "es": "¿Ya te has descargado la app?",
+      "notes": "«yet» al final de una pregunta = ya.",
+      "explanation": "En «downloaded» la «-ed» suena «id» después de «d»: «daun-LOU-did».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.you-have-to-create-an-account",
+      "text": "You have to create an account first.",
+      "es": "Primero tienes que crearte una cuenta.",
+      "explanation": "Para explicar cómo empezar a usar una app. «create» tiene dos sílabas: «kri-EIT».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.i-forgot-my-password",
+      "text": "I forgot my password again.",
+      "es": "He vuelto a olvidar la contraseña.",
+      "explanation": "Para pedir ayuda con una cuenta. «forgot»: «fər-GOT», acento al final.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.i-cant-log-in",
+      "text": "I can't log in to my account.",
+      "es": "No puedo entrar en mi cuenta.",
+      "notes": "«log in» = iniciar sesión; «log out» = cerrar sesión.",
+      "explanation": "«can't» en EE. UU. suena «kænt», con «a» abierta y la «t» muy suave.",
+      "register": "neutral",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.i-got-locked-out",
+      "text": "I got locked out of my account.",
+      "es": "Me han bloqueado la cuenta.",
+      "notes": "«get locked out» = quedarse sin acceso.",
+      "explanation": "Después de demasiados intentos. «locked out» se une y la «-ed» suena «t»: «lok-TAUT».",
+      "register": "neutral",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.click-on-the-reset-link",
+      "text": "Click on the reset link and follow the steps.",
+      "es": "Haz clic en el enlace para restablecerla y sigue los pasos.",
+      "explanation": "Instrucción típica de soporte. «link» con «i» corta: «link», no «liink».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.check-your-email-for-the-code",
+      "text": "Check your email for the verification code.",
+      "es": "Mira tu correo para ver el código de verificación.",
+      "explanation": "Al entrar en una cuenta nueva. «code» suena «koud», con «ou».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.turn-on-notifications",
+      "text": "You can turn on notifications in the settings.",
+      "es": "Puedes activar las notificaciones en los ajustes.",
+      "notes": "«turn on / turn off» = activar / desactivar.",
+      "explanation": "Para explicar cómo configurar una app. «turn on» se une: «ter-NON».",
+      "register": "neutral",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.did-you-update-to-the-latest-version",
+      "text": "Did you update to the latest version?",
+      "es": "¿Has actualizado a la última versión?",
+      "notes": "«update» verbo lleva el acento al final: «up-DEIT».",
+      "explanation": "Pregunta típica de soporte. «latest»: «LEI-test».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.its-not-working-at-all",
+      "text": "It's not working at all.",
+      "es": "No funciona nada de nada.",
+      "notes": "«at all» refuerza la negación.",
+      "explanation": "Para decir que algo ha dejado de funcionar del todo. «at all» se une: «a-DOL».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.i-think-its-a-bug",
+      "text": "I think it's a bug in the new version.",
+      "es": "Creo que es un fallo de la nueva versión.",
+      "explanation": "Para avisar al equipo o a soporte. «bug» tiene una vocal corta parecida a la «a»: casi «bag».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.the-app-keeps-crashing",
+      "text": "The app keeps crashing.",
+      "es": "La app se cierra todo el rato.",
+      "notes": "«keep» + -ing = no parar de.",
+      "explanation": "Para describir un fallo que se repite. «crashing»: «KRA-shing», sin «e» delante.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.my-screen-froze",
+      "text": "My screen froze in the middle of a call.",
+      "es": "Se me quedó congelada la pantalla en mitad de una llamada.",
+      "notes": "«froze» = pasado de «freeze».",
+      "explanation": "Para contar qué pasó. «froze» suena «frouz», con «z» final.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.i-get-an-error-message",
+      "text": "I get an error message when I open it.",
+      "es": "Me sale un mensaje de error al abrirla.",
+      "notes": "«I get…» = me sale…",
+      "explanation": "«error»: «E-rer», con «r» americana; «message»: «ME-sich».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.it-was-working-fine-yesterday",
+      "text": "It was working fine yesterday.",
+      "es": "Ayer funcionaba bien.",
+      "notes": "Past continuous: algo que estaba en marcha en el pasado.",
+      "explanation": "Para dar contexto al técnico. «yesterday»: «YES-ter-dei».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.nothing-happens-when-i-click",
+      "text": "Nothing happens when I click the button.",
+      "es": "No pasa nada cuando hago clic en el botón.",
+      "explanation": "«button»: «BA-tn», la «t» se corta en la garganta.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.since-the-last-update",
+      "text": "Since the last update, everything has been really slow.",
+      "es": "Desde la última actualización, todo va muy lento.",
+      "notes": "«since» + momento pide present perfect: «has been».",
+      "explanation": "«update» como nombre lleva el acento al principio: «UP-deit».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.it-only-happens-on-my-phone",
+      "text": "It only happens on my phone, not on my laptop.",
+      "es": "Solo pasa en el móvil, no en el portátil.",
+      "explanation": "Para acotar el problema. «happens»: «HA-pənz», con «z» final.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.i-took-a-screenshot",
+      "text": "I took a screenshot of the error.",
+      "es": "He hecho una captura del error.",
+      "notes": "«take a screenshot» = hacer una captura de pantalla.",
+      "explanation": "«screenshot»: «SKRIN-shot», sin «e» delante.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.im-calling-about-a-problem",
+      "text": "Hi, I'm calling about a problem with my work laptop.",
+      "es": "Hola, llamo por un problema con el portátil del trabajo.",
+      "explanation": "Para empezar una llamada a soporte. «calling about» se une: «KO-lin-ga-BAUT».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.could-you-describe-the-problem",
+      "text": "Could you describe the problem in more detail?",
+      "es": "¿Podrías describir el problema con más detalle?",
+      "explanation": "Lo dice el técnico. «describe»: «di-SKRAIB», sin «e» delante de la «s».",
+      "register": "formal",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.could-you-send-me-a-screenshot",
+      "text": "Could you send me a screenshot, please?",
+      "es": "¿Podrías enviarme una captura de pantalla?",
+      "explanation": "Petición educada de soporte. «send me» se une: «SEN-mi».",
+      "register": "formal",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.can-you-share-your-screen",
+      "text": "Can you share your screen so I can take a look?",
+      "es": "¿Puedes compartir pantalla para que le eche un vistazo?",
+      "notes": "«take a look» = echar un vistazo.",
+      "explanation": "Típico en una videollamada de soporte. «share» suena «sher».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.have-you-tried-turning-it-off",
+      "text": "Have you tried turning it off and on again?",
+      "es": "¿Has probado a apagarlo y volver a encenderlo?",
+      "notes": "«try» + -ing = probar a hacer algo.",
+      "explanation": "El consejo clásico de soporte. «turning it off» se une: «TER-ning-i-DOF».",
+      "register": "neutral",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.i-already-restarted-it",
+      "text": "I already restarted it twice.",
+      "es": "Ya lo he reiniciado dos veces.",
+      "notes": "En EE. UU. es normal «already» con pasado simple.",
+      "explanation": "En «restarted» la «-ed» suena «id» después de «t»: «ri-STAR-tid».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.let-me-walk-you-through-it",
+      "text": "Let me walk you through it.",
+      "es": "Te lo explico paso a paso.",
+      "notes": "«walk someone through» = guiar a alguien paso a paso.",
+      "explanation": "Lo dice quien te guía por teléfono. «through» suena «zru»: «th» de «zeta» y la «gh» no suena.",
+      "register": "neutral",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.try-clearing-the-cache",
+      "text": "Try clearing the cache and logging in again.",
+      "es": "Prueba a borrar la caché y a entrar otra vez.",
+      "explanation": "Consejo típico con una web o una app. «cache» se dice «kash», igual que «cash».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.yes-that-fixed-it",
+      "text": "Yes, that fixed it. Thanks so much!",
+      "es": "Sí, ya está arreglado. ¡Muchas gracias!",
+      "explanation": "Cuando el consejo funciona. «fixed» es una sílaba: «fikst».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.ill-open-a-ticket",
+      "text": "I'll open a ticket, and someone will contact you.",
+      "es": "Abriré una incidencia y alguien se pondrá en contacto contigo.",
+      "explanation": "Lo dice soporte cuando no lo puede resolver al momento. «I'll» es una sílaba: «ail».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.the-issue-has-been-fixed",
+      "text": "The issue has been fixed in the latest update.",
+      "es": "El problema se ha solucionado en la última actualización.",
+      "notes": "Pasiva con present perfect: «has been fixed».",
+      "explanation": "Mensaje típico de soporte o de un equipo. «issue»: «I-shu».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.is-there-anything-else",
+      "text": "Is there anything else I can help you with?",
+      "es": "¿Puedo ayudarte en algo más?",
+      "explanation": "El cierre típico del técnico. «anything else» se une: «E-ni-zing-ELS».",
+      "register": "formal",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.the-website-is-down",
+      "text": "The website is down.",
+      "es": "La web está caída.",
+      "notes": "«be down» = no funcionar (una web, un servidor).",
+      "explanation": "Para avisar de una caída. «down» suena «daun».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.im-working-on-a-new-feature",
+      "text": "I'm working on a new feature for our app.",
+      "es": "Estoy trabajando en una nueva función para nuestra app.",
+      "notes": "«work on» + tarea = estar con algo.",
+      "explanation": "Para contar en qué estás. «feature»: «FII-cher», con «i» larga.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.can-you-test-it-on-your-phone",
+      "text": "Can you test it on your phone?",
+      "es": "¿Puedes probarlo en tu móvil?",
+      "explanation": "Para pedir ayuda a un compañero. «test it» se une: «TES-tit».",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.ill-deploy-the-fix",
+      "text": "I'll deploy the fix this afternoon.",
+      "es": "Subiré el arreglo a producción esta tarde.",
+      "notes": "«deploy» = desplegar, subir a producción.",
+      "explanation": "Frase de programador. «deploy»: «di-PLOI», acento al final.",
+      "register": "neutral",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.back-up-your-files",
+      "text": "Always back up your files before you update.",
+      "es": "Haz siempre copia de seguridad antes de actualizar.",
+      "notes": "«back up» (verbo) = hacer copia; «backup» (nombre) = la copia.",
+      "explanation": "Consejo de siempre. «back up» se une: «ba-KAP».",
+      "register": "neutral",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.it-works-on-my-machine",
+      "text": "Well, it works on my machine!",
+      "es": "Pues en mi ordenador funciona.",
+      "notes": "Se dice en broma cuando un fallo solo le pasa a otro.",
+      "explanation": "La broma clásica entre programadores. «machine»: «mə-SHIN», acento al final.",
+      "register": "tu",
+      "situation": "tecnologia"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "b1-tech.keyboard",
+      "word": "keyboard",
+      "article": "a",
+      "plural": "keyboards",
+      "es": "el teclado",
+      "notes": "Suena «KII-bord».",
+      "situation": "tecnologia",
+      "image": "fluent:keyboard"
+    },
+    {
+      "id": "b1-tech.mouse",
+      "word": "mouse",
+      "article": "a",
+      "plural": "mice",
+      "es": "el ratón",
+      "notes": "Plural irregular: «mice».",
+      "situation": "tecnologia",
+      "image": "fluent:computer-mouse"
+    },
+    {
+      "id": "b1-tech.monitor",
+      "word": "monitor",
+      "article": "a",
+      "plural": "monitors",
+      "es": "el monitor",
+      "notes": "Suena «MA-ni-ter».",
+      "situation": "tecnologia",
+      "image": "fluent:desktop-computer"
+    },
+    {
+      "id": "b1-tech.webcam",
+      "word": "webcam",
+      "article": "a",
+      "plural": "webcams",
+      "es": "la webcam",
+      "situation": "tecnologia",
+      "image": "fluent:video-camera"
+    },
+    {
+      "id": "b1-tech.headphones",
+      "word": "headphones",
+      "es": "los auriculares",
+      "notes": "Siempre en plural.",
+      "example": "b1-tech.my-headphones-wont-connect",
+      "situation": "tecnologia",
+      "image": "fluent:headphone"
+    },
+    {
+      "id": "b1-tech.printer",
+      "word": "printer",
+      "article": "a",
+      "plural": "printers",
+      "es": "la impresora",
+      "example": "b1-tech.the-printer-is-out-of-paper",
+      "situation": "tecnologia",
+      "image": "fluent:printer"
+    },
+    {
+      "id": "b1-tech.cable",
+      "word": "cable",
+      "article": "a",
+      "plural": "cables",
+      "es": "el cable",
+      "notes": "Suena «KEI-bəl».",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.charger",
+      "word": "charger",
+      "article": "a",
+      "plural": "chargers",
+      "es": "el cargador",
+      "example": "b1-tech.can-i-borrow-your-charger",
+      "situation": "tecnologia",
+      "image": "fluent:electric-plug"
+    },
+    {
+      "id": "b1-tech.plug-in",
+      "word": "plug in",
+      "es": "enchufar",
+      "notes": "Phrasal verb: «Is it plugged in?» = ¿está enchufado?",
+      "example": "b1-tech.is-it-plugged-in",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.download",
+      "word": "download",
+      "es": "descargar",
+      "notes": "También nombre: «a download» = una descarga.",
+      "example": "b1-tech.have-you-downloaded-the-app",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.account",
+      "word": "account",
+      "article": "an",
+      "plural": "accounts",
+      "es": "la cuenta",
+      "example": "b1-tech.you-have-to-create-an-account",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.username",
+      "word": "username",
+      "article": "a",
+      "plural": "usernames",
+      "es": "el nombre de usuario",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.log-in",
+      "word": "log in",
+      "es": "iniciar sesión, entrar",
+      "notes": "Phrasal verb: «log in to your account»; «log out» = salir.",
+      "example": "b1-tech.i-cant-log-in",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.link",
+      "word": "link",
+      "article": "a",
+      "plural": "links",
+      "es": "el enlace",
+      "example": "b1-tech.click-on-the-reset-link",
+      "situation": "tecnologia",
+      "image": "fluent:link"
+    },
+    {
+      "id": "b1-tech.verification-code",
+      "word": "verification code",
+      "article": "a",
+      "plural": "verification codes",
+      "es": "el código de verificación",
+      "example": "b1-tech.check-your-email-for-the-code",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.settings",
+      "word": "settings",
+      "es": "los ajustes",
+      "notes": "Siempre en plural en una app.",
+      "example": "b1-tech.turn-on-notifications",
+      "situation": "tecnologia",
+      "image": "fluent:gear"
+    },
+    {
+      "id": "b1-tech.notification",
+      "word": "notification",
+      "article": "a",
+      "plural": "notifications",
+      "es": "la notificación",
+      "example": "b1-tech.turn-on-notifications",
+      "situation": "tecnologia",
+      "image": "fluent:bell"
+    },
+    {
+      "id": "b1-tech.update",
+      "word": "update",
+      "article": "an",
+      "plural": "updates",
+      "es": "la actualización",
+      "notes": "Nombre: «UP-deit»; verbo: «up-DEIT».",
+      "example": "b1-tech.since-the-last-update",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.issue",
+      "word": "issue",
+      "article": "an",
+      "plural": "issues",
+      "es": "el problema, la incidencia",
+      "notes": "Más neutro que «problem» en el trabajo.",
+      "example": "b1-tech.the-issue-has-been-fixed",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.bug",
+      "word": "bug",
+      "article": "a",
+      "plural": "bugs",
+      "es": "el fallo (de software)",
+      "notes": "También «bicho»: de ahí el nombre.",
+      "example": "b1-tech.i-think-its-a-bug",
+      "situation": "tecnologia",
+      "image": "fluent:lady-beetle"
+    },
+    {
+      "id": "b1-tech.crash",
+      "word": "crash",
+      "es": "colgarse, cerrarse de golpe",
+      "notes": "«The app crashed» = la app se cerró sola.",
+      "example": "b1-tech.the-app-keeps-crashing",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.freeze",
+      "word": "freeze",
+      "es": "congelarse, quedarse colgado",
+      "notes": "Irregular: freeze, froze, frozen.",
+      "example": "b1-tech.my-screen-froze",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.error-message",
+      "word": "error message",
+      "article": "an",
+      "plural": "error messages",
+      "es": "el mensaje de error",
+      "example": "b1-tech.i-get-an-error-message",
+      "situation": "tecnologia",
+      "image": "fluent:warning"
+    },
+    {
+      "id": "b1-tech.screenshot",
+      "word": "screenshot",
+      "article": "a",
+      "plural": "screenshots",
+      "es": "la captura de pantalla",
+      "example": "b1-tech.i-took-a-screenshot",
+      "situation": "tecnologia",
+      "image": "fluent:camera"
+    },
+    {
+      "id": "b1-tech.it-support",
+      "word": "IT support",
+      "es": "el soporte técnico",
+      "notes": "«IT» se dice «ai-TI»: information technology.",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.restart",
+      "word": "restart",
+      "es": "reiniciar",
+      "notes": "Suena «ri-START».",
+      "example": "b1-tech.i-already-restarted-it",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.walk-through",
+      "word": "walk through",
+      "es": "guiar paso a paso",
+      "notes": "Phrasal verb: «walk someone through something».",
+      "example": "b1-tech.let-me-walk-you-through-it",
+      "situation": "tecnologia",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-tech.support-ticket",
+      "word": "support ticket",
+      "article": "a",
+      "plural": "support tickets",
+      "es": "la incidencia (de soporte)",
+      "notes": "Se abre («open») y se cierra («close»).",
+      "example": "b1-tech.ill-open-a-ticket",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.code",
+      "word": "code",
+      "es": "el código",
+      "notes": "Incontable: «I write code», nunca «a code» en este sentido.",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.website",
+      "word": "website",
+      "article": "a",
+      "plural": "websites",
+      "es": "la web, el sitio web",
+      "example": "b1-tech.the-website-is-down",
+      "situation": "tecnologia",
+      "image": "fluent:globe-with-meridians"
+    },
+    {
+      "id": "b1-tech.server",
+      "word": "server",
+      "article": "a",
+      "plural": "servers",
+      "es": "el servidor",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.database",
+      "word": "database",
+      "article": "a",
+      "plural": "databases",
+      "es": "la base de datos",
+      "notes": "Suena «DEI-tə-beis».",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.user",
+      "word": "user",
+      "article": "a",
+      "plural": "users",
+      "es": "el usuario",
+      "notes": "Empieza con «y»: «YU-zer».",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.feature",
+      "word": "feature",
+      "article": "a",
+      "plural": "features",
+      "es": "la función, la funcionalidad",
+      "example": "b1-tech.im-working-on-a-new-feature",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.deploy",
+      "word": "deploy",
+      "es": "desplegar, subir a producción",
+      "example": "b1-tech.ill-deploy-the-fix",
+      "situation": "tecnologia"
+    },
+    {
+      "id": "b1-tech.backup",
+      "word": "backup",
+      "article": "a",
+      "plural": "backups",
+      "es": "la copia de seguridad",
+      "notes": "El verbo se escribe separado: «back up».",
+      "example": "b1-tech.back-up-your-files",
+      "situation": "tecnologia"
+    }
+  ],
+  "qa": [
+    {
+      "id": "b1-tech.qa.borrow-charger",
+      "question": "My battery's dead. Can I borrow your charger?",
+      "questionEs": "Me he quedado sin batería. ¿Me dejas tu cargador?",
+      "accepted": [
+        {
+          "text": "Sure, here you go.",
+          "es": "Claro, toma."
+        },
+        {
+          "text": "Sure, it's in my bag.",
+          "es": "Claro, está en mi mochila."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sure, I borrow you it.",
+          "es": "Claro, te lo presto."
+        },
+        {
+          "text": "Yes, you can lend it.",
+          "es": "Sí, puedes prestarlo."
+        }
+      ],
+      "register": "tu",
+      "situation": "tecnologia",
+      "notes": "Tú prestas = «lend»; el otro pide prestado = «borrow». Para dar algo: «Here you go».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-tech.qa.verification-code",
+      "question": "Did you get the verification code?",
+      "questionEs": "¿Te ha llegado el código de verificación?",
+      "accepted": [
+        {
+          "text": "Yes, I just got it.",
+          "es": "Sí, me acaba de llegar."
+        },
+        {
+          "text": "Not yet. Can you send it again?",
+          "es": "Todavía no. ¿Puedes enviarlo otra vez?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I just have got it.",
+          "es": "Sí, lo acabo de tener."
+        },
+        {
+          "text": "No, it didn't arrived.",
+          "es": "No, no llegó."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Después de «didn't» el verbo va en infinitivo: «it didn't arrive».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-tech.qa.when-did-it-start",
+      "question": "When did the problem start?",
+      "questionEs": "¿Cuándo empezó el problema?",
+      "accepted": [
+        {
+          "text": "After the last update.",
+          "es": "Después de la última actualización."
+        },
+        {
+          "text": "It was working fine until yesterday.",
+          "es": "Funcionaba bien hasta ayer."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Since two days.",
+          "es": "Desde hace dos días."
+        },
+        {
+          "text": "It starts tomorrow.",
+          "es": "Empieza mañana."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«desde hace dos días» = «two days ago» o «for two days», nunca «since two days».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-tech.qa.error-message",
+      "question": "Do you get an error message?",
+      "questionEs": "¿Te sale algún mensaje de error?",
+      "accepted": [
+        {
+          "text": "Yes, I took a screenshot of it.",
+          "es": "Sí, le he hecho una captura."
+        },
+        {
+          "text": "No, nothing happens when I click.",
+          "es": "No, no pasa nada cuando hago clic."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I made a screenshot.",
+          "es": "Sí, hice una captura."
+        },
+        {
+          "text": "Yes, it gives me a mistake.",
+          "es": "Sí, me da una equivocación."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Una captura se «take» («take a screenshot»); un fallo del programa es «error», no «mistake».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-tech.qa.whats-wrong",
+      "question": "IT support, this is Brian. How can I help you?",
+      "questionEs": "Soporte técnico, soy Brian. ¿En qué puedo ayudarte?",
+      "accepted": [
+        {
+          "text": "Hi, my laptop keeps crashing.",
+          "es": "Hola, mi portátil se cuelga todo el rato."
+        },
+        {
+          "text": "Hi, I can't log in to my account.",
+          "es": "Hola, no puedo entrar en mi cuenta."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Hi, my laptop is crashing always.",
+          "es": "Hola, mi portátil se está colgando siempre."
+        },
+        {
+          "text": "Hello, I have a broken in my laptop.",
+          "es": "Hola, tengo una rotura en mi portátil."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Para algo que se repite: «keep» + -ing («keeps crashing»).",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-tech.qa.tried-restarting",
+      "question": "Have you tried turning it off and on again?",
+      "questionEs": "¿Has probado a apagarlo y volver a encenderlo?",
+      "accepted": [
+        {
+          "text": "Yes, I already restarted it twice.",
+          "es": "Sí, ya lo he reiniciado dos veces."
+        },
+        {
+          "text": "Yes, but it didn't help.",
+          "es": "Sí, pero no ha servido."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I already restart it.",
+          "es": "Sí, ya lo reinicio."
+        },
+        {
+          "text": "No, I didn't tried.",
+          "es": "No, no lo probé."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Hablas de algo hecho: pasado («restarted») o present perfect. Tras «didn't», infinitivo.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-tech.qa.share-screen",
+      "question": "Can you share your screen, please?",
+      "questionEs": "¿Puedes compartir pantalla, por favor?",
+      "accepted": [
+        {
+          "text": "Sure, just a second.",
+          "es": "Claro, un segundo."
+        },
+        {
+          "text": "Of course. Can you see it now?",
+          "es": "Claro. ¿La ves ahora?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sure, I share it now.",
+          "es": "Claro, la comparto ahora."
+        },
+        {
+          "text": "Yes, I can divide my screen.",
+          "es": "Sí, puedo dividir mi pantalla."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Para algo que vas a hacer ya: «I'll share it now». «divide» es partir en trozos.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-tech.qa.did-that-work",
+      "question": "Try clearing the cache. Did that work?",
+      "questionEs": "Prueba a borrar la caché. ¿Ha funcionado?",
+      "accepted": [
+        {
+          "text": "Yes, that fixed it. Thanks!",
+          "es": "Sí, ya está arreglado. ¡Gracias!"
+        },
+        {
+          "text": "No, it's still not working.",
+          "es": "No, sigue sin funcionar."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, it functioned.",
+          "es": "Sí, funcionó."
+        },
+        {
+          "text": "No, it still doesn't works.",
+          "es": "No, sigue sin funcionar."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Funcionar = «work» («function» casi no se usa así). Tras «doesn't», infinitivo: «doesn't work».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-tech.qa.working-on",
+      "question": "What are you working on right now?",
+      "questionEs": "¿En qué estás trabajando ahora mismo?",
+      "accepted": [
+        {
+          "text": "I'm working on a new feature for our app.",
+          "es": "Estoy con una nueva función para nuestra app."
+        },
+        {
+          "text": "I'm fixing a bug on the payment page.",
+          "es": "Estoy arreglando un fallo en la página de pago."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I work in a new feature now.",
+          "es": "Trabajo en una nueva función ahora."
+        },
+        {
+          "text": "I'm working at a new feature.",
+          "es": "Estoy trabajando en una nueva función."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Ahora mismo = present continuous. Trabajar en una tarea = «work on», no «in» ni «at».",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

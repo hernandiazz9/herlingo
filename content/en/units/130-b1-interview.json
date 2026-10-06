@@ -1,0 +1,1126 @@
+{
+  "id": "b1-interview",
+  "order": 130,
+  "title": "Entrevista de trabajo: experiencia, habilidades, preguntas",
+  "description": "Presentarte a un puesto de programador, hablar de tu experiencia y tus puntos fuertes, hacer tus preguntas y responder a una oferta.",
+  "emoji": "🤝",
+  "situation": "trabajo",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-interview.l.applying",
+      "title": "Buscar trabajo y presentarte",
+      "items": [
+        "b1-interview.job-posting",
+        "b1-interview.i-saw-the-job-posting",
+        "b1-interview.position",
+        "b1-interview.apply-for",
+        "b1-interview.id-like-to-apply",
+        "b1-interview.resume",
+        "b1-interview.cover-letter",
+        "b1-interview.ive-attached-my-resume",
+        "b1-interview.recruiter",
+        "b1-interview.startup",
+        "b1-interview.job-interview",
+        "b1-interview.i-have-an-interview-on-thursday",
+        "b1-interview.is-the-position-remote",
+        "b1-interview.remote-work",
+        "b1-interview.hr",
+        "b1-interview.coding-challenge",
+        "b1-interview.then-theres-a-coding-challenge",
+        "b1-interview.im-a-bit-nervous",
+        "b1-interview.good-luck-youll-do-great",
+        "b1-interview.qa.how-did-you-hear"
+      ]
+    },
+    {
+      "id": "b1-interview.l.about-you",
+      "title": "Hablar de ti y de tu experiencia",
+      "items": [
+        "b1-interview.tell-me-about-yourself",
+        "b1-interview.ive-been-a-developer-for-six-years",
+        "b1-interview.experience",
+        "b1-interview.i-currently-work-at",
+        "a2-about-me.company",
+        "b1-interview.im-responsible-for-the-backend",
+        "b1-interview.before-that-i-worked-as",
+        "b1-interview.i-led-a-team",
+        "b1-friends.team",
+        "b1-interview.manager",
+        "b1-interview.i-built-an-app-from-scratch",
+        "b1-grammar.ive-worked-here-since-march",
+        "b1-interview.why-do-you-want-to-leave",
+        "b1-interview.quit",
+        "b1-interview.im-looking-for-a-new-challenge",
+        "b1-interview.challenge",
+        "b1-interview.why-do-you-want-to-work-for-us",
+        "b1-interview.id-like-to-grow-with-the-company",
+        "b1-interview.qa.tell-me-about-yourself",
+        "b1-interview.qa.how-long-developer",
+        "b1-interview.qa.why-leave"
+      ]
+    },
+    {
+      "id": "b1-interview.l.skills",
+      "title": "Habilidades, puntos fuertes y débiles",
+      "items": [
+        "b1-interview.skill",
+        "b1-interview.strength",
+        "b1-interview.what-are-your-strengths",
+        "b1-interview.im-good-at-solving-problems",
+        "b1-interview.im-a-fast-learner",
+        "b1-interview.i-work-well-under-pressure",
+        "b1-grammar.i-enjoy-working-with-people",
+        "b1-interview.i-have-experience-with",
+        "b1-interview.im-not-an-expert-but",
+        "b1-interview.weakness",
+        "b1-interview.take-on",
+        "b1-interview.my-biggest-weakness",
+        "b1-interview.can-you-give-me-an-example",
+        "b1-interview.deadline",
+        "b1-interview.we-had-a-tight-deadline",
+        "b1-interview.in-the-end-we-delivered-on-time",
+        "b1-interview.qa.strengths",
+        "b1-interview.qa.weakness"
+      ]
+    },
+    {
+      "id": "b1-interview.l.your-questions",
+      "title": "Tus preguntas al final",
+      "items": [
+        "b1-interview.do-you-have-any-questions",
+        "b1-interview.what-does-a-typical-day-look-like",
+        "b1-interview.how-big-is-the-team",
+        "b1-interview.tech-stack",
+        "b1-interview.what-tech-stack-do-you-use",
+        "b1-interview.is-there-flexibility",
+        "a2-about-me.i-work-from-home",
+        "b1-interview.salary",
+        "b1-interview.could-you-tell-me-about-the-salary",
+        "b1-interview.benefits",
+        "b1-interview.health-insurance",
+        "b1-interview.what-are-the-next-steps",
+        "b1-interview.when-would-you-be-able-to-start",
+        "b1-interview.i-could-start-in-two-weeks",
+        "b1-interview.employer",
+        "b1-interview.notice",
+        "b1-interview.i-need-to-give-notice",
+        "b1-interview.qa.questions-for-us",
+        "b1-interview.qa.when-start"
+      ]
+    },
+    {
+      "id": "b1-interview.l.after",
+      "title": "Después: la respuesta y la oferta",
+      "items": [
+        "b1-interview.thank-you-for-your-time",
+        "b1-interview.i-look-forward-to-hearing-from-you",
+        "b1-interview.im-really-excited-about-this-opportunity",
+        "b1-interview.get-back-to",
+        "b1-interview.well-get-back-to-you-by-friday",
+        "b1-interview.reference",
+        "b1-interview.hire",
+        "b1-interview.job-offer",
+        "b1-interview.wed-like-to-offer-you-the-job",
+        "b1-interview.can-i-think-about-it",
+        "b1-interview.contract",
+        "b1-interview.im-happy-to-accept-the-offer",
+        "b1-grammar.turn-down",
+        "b1-interview.candidate",
+        "b1-interview.weve-decided-to-go-with-another-candidate",
+        "b1-interview.guess-what-i-got-the-job",
+        "b1-interview.congratulations-you-deserve-it",
+        "b1-interview.qa.how-did-it-go"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "b1-interview.i-saw-the-job-posting",
+      "text": "I saw the job posting on LinkedIn.",
+      "es": "Vi la oferta de trabajo en LinkedIn.",
+      "notes": "«job posting» = anuncio de empleo.",
+      "explanation": "Para explicar cómo te enteraste del puesto. «saw» suena «so», con una «o» abierta y larga.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.id-like-to-apply",
+      "text": "I'd like to apply for the backend developer position.",
+      "es": "Me gustaría presentarme al puesto de desarrollador backend.",
+      "notes": "«apply for» + puesto = presentarse a un puesto.",
+      "explanation": "En un email o una llamada a la empresa. «apply» lleva el acento al final: «a-PLAI».",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.ive-attached-my-resume",
+      "text": "I've attached my résumé and a cover letter.",
+      "es": "Adjunto mi currículum y una carta de presentación.",
+      "notes": "«résumé» en EE. UU.; en Reino Unido se dice «CV».",
+      "explanation": "La frase típica de un email de candidatura. «résumé» tiene tres sílabas: «RE-zu-mei».",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-have-an-interview-on-thursday",
+      "text": "I have an interview on Thursday morning.",
+      "es": "Tengo una entrevista el jueves por la mañana.",
+      "notes": "Días de la semana con «on».",
+      "explanation": "Para contar tus planes a un amigo. «Thursday» empieza con «th» de «zeta»: «ZERS-dei».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.is-the-position-remote",
+      "text": "Is the position remote or in the office?",
+      "es": "¿El puesto es en remoto o en la oficina?",
+      "explanation": "Pregunta clave antes de seguir con el proceso. «remote»: «ri-MOUT», acento en la segunda sílaba.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.then-theres-a-coding-challenge",
+      "text": "After that, there's a coding challenge.",
+      "es": "Después hay una prueba técnica de programación.",
+      "notes": "«coding challenge» = prueba práctica de programar.",
+      "explanation": "Para explicar las fases del proceso. «challenge»: «CHA-lench», la «ch» como en español.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.im-a-bit-nervous",
+      "text": "I'm a bit nervous about the interview.",
+      "es": "Estoy un poco nervioso por la entrevista.",
+      "notes": "«nervous about» + algo.",
+      "explanation": "Para contarle a un amigo cómo te sientes. «nervous»: «NER-vəs», la «ou» final es una vocal neutra.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.good-luck-youll-do-great",
+      "text": "Good luck! You'll do great.",
+      "es": "¡Suerte! Te va a ir genial.",
+      "explanation": "Lo que te dicen los amigos antes de una entrevista. «You'll» es una sola sílaba: «yul».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.tell-me-about-yourself",
+      "text": "So, tell me a little about yourself.",
+      "es": "Bueno, háblame un poco de ti.",
+      "notes": "Casi siempre la primera pregunta: resume tu carrera en un minuto.",
+      "explanation": "Lo dice el entrevistador al empezar. «about yourself» se une: «a-BAU-chor-SELF».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.ive-been-a-developer-for-six-years",
+      "text": "I've been a software developer for six years.",
+      "es": "Soy desarrollador de software desde hace seis años.",
+      "notes": "Present perfect + «for» para algo que empezó y sigue.",
+      "explanation": "La primera frase de tu presentación. «six years»: la «x» suena «ks» y «years» empieza como «yi».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-currently-work-at",
+      "text": "I currently work at a small tech company in Madrid.",
+      "es": "Ahora trabajo en una pequeña empresa tecnológica de Madrid.",
+      "notes": "«currently» = actualmente; «actually» significa «en realidad».",
+      "explanation": "Para situar tu trabajo actual. «currently»: «KU-rənt-li», acento en la primera sílaba.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.im-responsible-for-the-backend",
+      "text": "I'm responsible for the backend and the database.",
+      "es": "Me encargo del backend y de la base de datos.",
+      "notes": "«responsible for» + nombre o verbo con -ing.",
+      "explanation": "Para explicar tus tareas. «responsible»: «ri-SPON-sə-bəl», sin «e» delante de la «s».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.before-that-i-worked-as",
+      "text": "Before that, I worked as a web developer for an agency.",
+      "es": "Antes de eso, trabajé de desarrollador web para una agencia.",
+      "notes": "«work as» + profesión = trabajar de.",
+      "explanation": "Para hablar de tu trabajo anterior. «worked» es una sílaba y acaba en «t»: «workt».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-led-a-team",
+      "text": "I led a small team of three developers.",
+      "es": "Dirigí un pequeño equipo de tres desarrolladores.",
+      "notes": "«led» = pasado de «lead» (dirigir).",
+      "explanation": "Para destacar experiencia como líder. «led» con «e» corta, igual que «red» pero con «l».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-built-an-app-from-scratch",
+      "text": "I built a booking app from scratch.",
+      "es": "Hice una app de reservas desde cero.",
+      "notes": "«from scratch» = desde cero.",
+      "explanation": "Para dar un ejemplo concreto de tu trabajo. «scratch» sin «e» delante: «skrach», nunca «escrach».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.why-do-you-want-to-leave",
+      "text": "Why do you want to leave your current job?",
+      "es": "¿Por qué quieres dejar tu trabajo actual?",
+      "explanation": "Pregunta típica: responde en positivo, sin criticar a tu empresa. «leave» con «i» larga: «liiv», no «live».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.im-looking-for-a-new-challenge",
+      "text": "I'm looking for a new challenge.",
+      "es": "Busco un nuevo reto.",
+      "notes": "«look for» = buscar.",
+      "explanation": "Respuesta diplomática para explicar un cambio. «looking for» se une: «LU-king-for».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.why-do-you-want-to-work-for-us",
+      "text": "Why do you want to work for us?",
+      "es": "¿Por qué quieres trabajar con nosotros?",
+      "explanation": "La pregunta para ver si conoces la empresa. «work» con «r» americana: «uerk», sin «o».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.id-like-to-grow-with-the-company",
+      "text": "I love your product, and I'd like to grow with the company.",
+      "es": "Me encanta vuestro producto y me gustaría crecer con la empresa.",
+      "explanation": "Respuesta positiva y concreta. «grow» suena «grou», con la «r» americana.",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.what-are-your-strengths",
+      "text": "What would you say are your greatest strengths?",
+      "es": "¿Cuáles dirías que son tus mayores puntos fuertes?",
+      "notes": "«strengths» = puntos fuertes.",
+      "explanation": "Pregunta clásica de entrevista. «strengths» es difícil: «strengkz», sin vocal de apoyo al principio.",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.im-good-at-solving-problems",
+      "text": "I'm good at solving problems.",
+      "es": "Se me da bien resolver problemas.",
+      "notes": "«good at» + verbo con -ing.",
+      "explanation": "Para hablar de lo que se te da bien. «solving»: «SOL-ving», con una «v» de labio y dientes.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.im-a-fast-learner",
+      "text": "I'm a fast learner.",
+      "es": "Aprendo rápido.",
+      "literal": "Soy un aprendiz rápido.",
+      "explanation": "Útil cuando te falta alguna tecnología. «learner»: «LER-ner», con «r» americana.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-work-well-under-pressure",
+      "text": "I work well under pressure.",
+      "es": "Trabajo bien bajo presión.",
+      "explanation": "Para mostrar que no te bloqueas con los plazos. «pressure»: «PRE-sher».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-have-experience-with",
+      "text": "I have a lot of experience with React and Node.",
+      "es": "Tengo mucha experiencia con React y Node.",
+      "notes": "«experience» aquí es incontable: sin «an».",
+      "explanation": "Para nombrar tus tecnologías. «experience»: «ik-SPI-ri-əns», acento en la segunda sílaba.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.im-not-an-expert-but",
+      "text": "I'm not an expert in Python, but I'm learning.",
+      "es": "No soy experto en Python, pero estoy aprendiendo.",
+      "explanation": "Para ser sincero sin cerrar la puerta. «expert»: «EKS-pert», acento en la primera sílaba.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.my-biggest-weakness",
+      "text": "My biggest weakness is that I sometimes take on too much.",
+      "es": "Mi mayor punto débil es que a veces asumo demasiadas cosas.",
+      "notes": "«take on» = asumir (trabajo, responsabilidades).",
+      "explanation": "Respuesta sincera a «What's your biggest weakness?». «weakness» con «i» larga: «UIIK-nəs».",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-interview.can-you-give-me-an-example",
+      "text": "Can you give me an example?",
+      "es": "¿Puedes darme un ejemplo?",
+      "explanation": "El entrevistador quiere un caso real: cuenta situación, acción y resultado. «example»: «ig-ZAM-pəl».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.we-had-a-tight-deadline",
+      "text": "We had a really tight deadline for the launch.",
+      "es": "Teníamos un plazo muy ajustado para el lanzamiento.",
+      "notes": "«tight deadline» = plazo ajustado.",
+      "explanation": "Para empezar a contar un reto. «tight» suena «tait»: la «gh» no se pronuncia.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.in-the-end-we-delivered-on-time",
+      "text": "In the end, we delivered on time.",
+      "es": "Al final, lo entregamos a tiempo.",
+      "notes": "«on time» = a tiempo; «in the end» = al final.",
+      "explanation": "Para cerrar tu ejemplo con el resultado. En «delivered» la «-ed» suena «d»: «di-LI-verd».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.do-you-have-any-questions",
+      "text": "Do you have any questions for us?",
+      "es": "¿Tienes alguna pregunta para nosotros?",
+      "explanation": "Llega al final: ten siempre dos o tres preguntas preparadas. «questions»: «KUES-chənz».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.what-does-a-typical-day-look-like",
+      "text": "What does a typical day look like?",
+      "es": "¿Cómo es un día normal?",
+      "literal": "¿Cómo se ve un día típico?",
+      "explanation": "Buena pregunta para entender el puesto. «typical»: «TI-pi-kəl», con «i» corta.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.how-big-is-the-team",
+      "text": "How big is the team, and who would I report to?",
+      "es": "¿Cómo de grande es el equipo y quién sería mi jefe?",
+      "notes": "«report to» = depender de alguien en la empresa.",
+      "explanation": "Para saber con quién vas a trabajar. «report to» se une: «ri-POR-tu».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.what-tech-stack-do-you-use",
+      "text": "What tech stack do you use?",
+      "es": "¿Qué tecnologías usáis?",
+      "explanation": "La pregunta de programador por excelencia. «stack» sin «e» delante: «stak», con «a» abierta.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.is-there-flexibility",
+      "text": "Is there any flexibility to work from home?",
+      "es": "¿Hay flexibilidad para teletrabajar?",
+      "explanation": "Pregunta educada sobre el teletrabajo. «flexibility»: «flek-sə-BI-lə-ti», acento en «BI».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.could-you-tell-me-about-the-salary",
+      "text": "Could you tell me about the salary range?",
+      "es": "¿Podrías decirme la banda salarial?",
+      "notes": "«salary range» = horquilla salarial.",
+      "explanation": "Forma educada de hablar de dinero. «salary»: «SA-lə-ri», acento en la primera sílaba.",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.what-are-the-next-steps",
+      "text": "What are the next steps in the process?",
+      "es": "¿Cuáles son los siguientes pasos del proceso?",
+      "explanation": "Para cerrar la entrevista sabiendo qué viene. «next steps» sin «e» de apoyo: «nekst steps».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.when-would-you-be-able-to-start",
+      "text": "When would you be able to start?",
+      "es": "¿Cuándo podrías empezar?",
+      "explanation": "Buena señal: la empresa ya piensa en ti. «able»: «EI-bəl».",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-could-start-in-two-weeks",
+      "text": "I could start in two weeks.",
+      "es": "Podría empezar dentro de dos semanas.",
+      "notes": "«in» + tiempo = dentro de; no «after two weeks».",
+      "explanation": "Respuesta concreta a «When can you start?». «could» no suena la «l»: «kud».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-need-to-give-notice",
+      "text": "I need to give my current employer one month's notice.",
+      "es": "Tengo que avisar a mi empresa actual con un mes de antelación.",
+      "notes": "«give notice» = presentar el preaviso.",
+      "explanation": "Para explicar cuándo puedes incorporarte. «notice»: «NOU-tis».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.thank-you-for-your-time",
+      "text": "Thank you for your time today.",
+      "es": "Gracias por tu tiempo hoy.",
+      "explanation": "Para despedirte al acabar la entrevista. «Thank» con «th» de «zeta»: «zank».",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.i-look-forward-to-hearing-from-you",
+      "text": "I look forward to hearing from you.",
+      "es": "Quedo a la espera de tus noticias.",
+      "notes": "«look forward to» + verbo con -ing, nunca infinitivo.",
+      "explanation": "Cierre típico de un email o una entrevista. «forward»: «FOR-uərd», la «w» casi no suena.",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.im-really-excited-about-this-opportunity",
+      "text": "I'm really excited about this opportunity.",
+      "es": "Me ilusiona mucho esta oportunidad.",
+      "notes": "«excited» = ilusionado; no significa «excitado».",
+      "explanation": "Para mostrar interés al final. «opportunity»: «a-pər-TU-nə-ti», acento en «TU».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.well-get-back-to-you-by-friday",
+      "text": "We'll get back to you by Friday.",
+      "es": "Te diremos algo antes del viernes.",
+      "notes": "«get back to someone» = responder más tarde; «by» = como muy tarde.",
+      "explanation": "Lo dice la empresa al despedirse. «We'll» es una sola sílaba: «wil».",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-interview.wed-like-to-offer-you-the-job",
+      "text": "We'd like to offer you the job.",
+      "es": "Nos gustaría ofrecerte el puesto.",
+      "explanation": "¡La frase que quieres oír! «We'd like» suena «wid laik», la «d» casi se pierde.",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.can-i-think-about-it",
+      "text": "Can I think about it and get back to you?",
+      "es": "¿Puedo pensarlo y te digo algo?",
+      "explanation": "Para no responder a una oferta en caliente. «think about it» se une: «zing-ka-BAU-dit».",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-interview.im-happy-to-accept-the-offer",
+      "text": "I'm happy to accept the offer.",
+      "es": "Acepto encantado la oferta.",
+      "explanation": "Para aceptar una oferta por teléfono o por email. «accept»: «ək-SEPT»; no lo confundas con «except».",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.weve-decided-to-go-with-another-candidate",
+      "text": "Unfortunately, we've decided to go with another candidate.",
+      "es": "Lamentablemente, hemos decidido seguir con otro candidato.",
+      "notes": "«go with» = elegir, quedarse con.",
+      "explanation": "El email de rechazo típico. «candidate»: «KAN-di-deit», acento en la primera sílaba.",
+      "register": "formal",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.guess-what-i-got-the-job",
+      "text": "Guess what? I got the job!",
+      "es": "¿A que no sabes qué? ¡Me han dado el trabajo!",
+      "notes": "«get the job» = conseguir el puesto.",
+      "explanation": "Para dar la buena noticia a tus amigos. «got the» se une y la «t» casi no suena: «GA-ðə».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.congratulations-you-deserve-it",
+      "text": "Congratulations! You totally deserve it.",
+      "es": "¡Enhorabuena! Te lo mereces de verdad.",
+      "explanation": "Cuando un amigo consigue algo. «congratulations»: «kən-gra-chə-LEI-shənz».",
+      "register": "tu",
+      "situation": "trabajo"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "b1-interview.job-posting",
+      "word": "job posting",
+      "article": "a",
+      "plural": "job postings",
+      "es": "la oferta de empleo",
+      "notes": "También «job ad» o «job listing».",
+      "example": "b1-interview.i-saw-the-job-posting",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.position",
+      "word": "position",
+      "article": "a",
+      "plural": "positions",
+      "es": "el puesto",
+      "example": "b1-interview.id-like-to-apply",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.apply-for",
+      "word": "apply for",
+      "es": "presentarse a, solicitar",
+      "notes": "«apply for a job» = presentarte a un puesto.",
+      "example": "b1-interview.id-like-to-apply",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.resume",
+      "word": "résumé",
+      "article": "a",
+      "plural": "résumés",
+      "es": "el currículum",
+      "notes": "Suena «RE-zu-mei». En Reino Unido, «CV».",
+      "example": "b1-interview.ive-attached-my-resume",
+      "situation": "trabajo",
+      "image": "fluent:page-facing-up"
+    },
+    {
+      "id": "b1-interview.cover-letter",
+      "word": "cover letter",
+      "article": "a",
+      "plural": "cover letters",
+      "es": "la carta de presentación",
+      "example": "b1-interview.ive-attached-my-resume",
+      "situation": "trabajo",
+      "image": "fluent:memo"
+    },
+    {
+      "id": "b1-interview.recruiter",
+      "word": "recruiter",
+      "article": "a",
+      "plural": "recruiters",
+      "es": "el reclutador",
+      "notes": "Suena «ri-KRU-ter».",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.startup",
+      "word": "startup",
+      "article": "a",
+      "plural": "startups",
+      "es": "la startup",
+      "situation": "trabajo",
+      "image": "fluent:rocket"
+    },
+    {
+      "id": "b1-interview.job-interview",
+      "word": "job interview",
+      "article": "a",
+      "plural": "job interviews",
+      "es": "la entrevista de trabajo",
+      "example": "b1-interview.i-have-an-interview-on-thursday",
+      "situation": "trabajo",
+      "image": "fluent:handshake"
+    },
+    {
+      "id": "b1-interview.remote-work",
+      "word": "remote work",
+      "es": "el teletrabajo",
+      "notes": "Incontable. «I work remotely» = teletrabajo.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.hr",
+      "word": "HR",
+      "es": "Recursos Humanos",
+      "notes": "Human Resources. Se dice «eich-AR».",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.coding-challenge",
+      "word": "coding challenge",
+      "article": "a",
+      "plural": "coding challenges",
+      "es": "la prueba técnica de programación",
+      "example": "b1-interview.then-theres-a-coding-challenge",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.experience",
+      "word": "experience",
+      "es": "la experiencia",
+      "notes": "Incontable en el trabajo: «a lot of experience».",
+      "example": "b1-interview.i-have-experience-with",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.manager",
+      "word": "manager",
+      "article": "a",
+      "plural": "managers",
+      "es": "el jefe, la responsable",
+      "notes": "Suena «MA-ni-yer».",
+      "situation": "trabajo",
+      "image": "fluent:man-office-worker"
+    },
+    {
+      "id": "b1-interview.challenge",
+      "word": "challenge",
+      "article": "a",
+      "plural": "challenges",
+      "es": "el reto",
+      "example": "b1-interview.im-looking-for-a-new-challenge",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.quit",
+      "word": "quit",
+      "es": "dejar (un trabajo)",
+      "notes": "Irregular: quit, quit. «I quit my job» = dejé mi trabajo.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.skill",
+      "word": "skill",
+      "article": "a",
+      "plural": "skills",
+      "es": "la habilidad",
+      "notes": "Sin «e» delante: «skil».",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.strength",
+      "word": "strength",
+      "article": "a",
+      "plural": "strengths",
+      "es": "el punto fuerte",
+      "example": "b1-interview.what-are-your-strengths",
+      "situation": "trabajo",
+      "image": "fluent:flexed-biceps"
+    },
+    {
+      "id": "b1-interview.weakness",
+      "word": "weakness",
+      "article": "a",
+      "plural": "weaknesses",
+      "es": "el punto débil",
+      "example": "b1-interview.my-biggest-weakness",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.take-on",
+      "word": "take on",
+      "es": "asumir (trabajo, responsabilidades)",
+      "notes": "Phrasal verb: «take on a new project» = asumir un proyecto nuevo.",
+      "example": "b1-interview.my-biggest-weakness",
+      "situation": "trabajo",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-interview.deadline",
+      "word": "deadline",
+      "article": "a",
+      "plural": "deadlines",
+      "es": "el plazo, la fecha límite",
+      "example": "b1-interview.we-had-a-tight-deadline",
+      "situation": "trabajo",
+      "image": "fluent:hourglass-done"
+    },
+    {
+      "id": "b1-interview.tech-stack",
+      "word": "tech stack",
+      "article": "a",
+      "plural": "tech stacks",
+      "es": "las tecnologías (de un proyecto)",
+      "notes": "El conjunto de lenguajes y herramientas que usa un equipo.",
+      "example": "b1-interview.what-tech-stack-do-you-use",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.salary",
+      "word": "salary",
+      "article": "a",
+      "plural": "salaries",
+      "es": "el sueldo",
+      "notes": "Sueldo anual fijo; «wage» = sueldo por horas.",
+      "example": "b1-interview.could-you-tell-me-about-the-salary",
+      "situation": "trabajo",
+      "image": "fluent:money-bag"
+    },
+    {
+      "id": "b1-interview.benefits",
+      "word": "benefits",
+      "es": "los beneficios sociales",
+      "notes": "Seguro médico, vacaciones, etc. En EE. UU. el seguro médico suele ir con el trabajo.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.health-insurance",
+      "word": "health insurance",
+      "es": "el seguro médico",
+      "notes": "Incontable: «Does the job include health insurance?»",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.employer",
+      "word": "employer",
+      "article": "an",
+      "plural": "employers",
+      "es": "la empresa (que te contrata)",
+      "notes": "«employee» = el empleado.",
+      "example": "b1-interview.i-need-to-give-notice",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.notice",
+      "word": "notice",
+      "es": "el preaviso",
+      "notes": "«two weeks' notice» es lo habitual en EE. UU.",
+      "example": "b1-interview.i-need-to-give-notice",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.get-back-to",
+      "word": "get back to",
+      "es": "responder (más tarde) a alguien",
+      "notes": "Phrasal verb: «I'll get back to you» = ya te digo algo.",
+      "example": "b1-interview.well-get-back-to-you-by-friday",
+      "situation": "trabajo",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-interview.reference",
+      "word": "reference",
+      "article": "a",
+      "plural": "references",
+      "es": "la referencia",
+      "notes": "Alguien que habla bien de ti a la nueva empresa.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.hire",
+      "word": "hire",
+      "es": "contratar",
+      "notes": "«We're hiring!» = ¡Buscamos gente!",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.job-offer",
+      "word": "job offer",
+      "article": "a",
+      "plural": "job offers",
+      "es": "la oferta de trabajo",
+      "notes": "La propuesta concreta tras el proceso; el anuncio es «job posting».",
+      "example": "b1-interview.wed-like-to-offer-you-the-job",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-interview.contract",
+      "word": "contract",
+      "article": "a",
+      "plural": "contracts",
+      "es": "el contrato",
+      "situation": "trabajo",
+      "image": "fluent:page-with-curl"
+    },
+    {
+      "id": "b1-interview.candidate",
+      "word": "candidate",
+      "article": "a",
+      "plural": "candidates",
+      "es": "el candidato",
+      "example": "b1-interview.weve-decided-to-go-with-another-candidate",
+      "situation": "trabajo"
+    }
+  ],
+  "qa": [
+    {
+      "id": "b1-interview.qa.how-did-you-hear",
+      "question": "How did you hear about this position?",
+      "questionEs": "¿Cómo te enteraste de este puesto?",
+      "accepted": [
+        {
+          "text": "I saw the job posting on LinkedIn.",
+          "es": "Vi la oferta en LinkedIn."
+        },
+        {
+          "text": "A recruiter contacted me.",
+          "es": "Me contactó una reclutadora."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I heard it in the internet.",
+          "es": "Lo oí en internet."
+        },
+        {
+          "text": "I listened about it on LinkedIn.",
+          "es": "Lo escuché en LinkedIn."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«hear about» = enterarse de; «listen» es escuchar con atención. Y es «on the internet».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-interview.qa.tell-me-about-yourself",
+      "question": "So, Hernán, tell me a little about yourself.",
+      "questionEs": "Bueno, Hernán, háblame un poco de ti.",
+      "accepted": [
+        {
+          "text": "I'm a software developer from Madrid, with six years of experience.",
+          "es": "Soy desarrollador de software de Madrid, con seis años de experiencia."
+        },
+        {
+          "text": "I'm a backend developer, and I've worked in tech for six years.",
+          "es": "Soy desarrollador backend y llevo seis años en el sector tecnológico."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I have thirty-four years and I live in Madrid.",
+          "es": "Tengo treinta y cuatro años y vivo en Madrid."
+        },
+        {
+          "text": "Yes, I'm very good.",
+          "es": "Sí, soy muy bueno."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Resume tu perfil profesional. La edad se dice con «be»: «I'm thirty-four», nunca «I have thirty-four years».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-interview.qa.how-long-developer",
+      "question": "How long have you been a developer?",
+      "questionEs": "¿Cuánto tiempo llevas como desarrollador?",
+      "accepted": [
+        {
+          "text": "For about six years now.",
+          "es": "Ya unos seis años."
+        },
+        {
+          "text": "I've been a developer for six years.",
+          "es": "Llevo seis años como desarrollador."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I am a developer since six years.",
+          "es": "Soy desarrollador desde hace seis años."
+        },
+        {
+          "text": "I was a developer six years ago.",
+          "es": "Era desarrollador hace seis años."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«desde hace» + tiempo = present perfect con «for». «since six years» es un calco.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-interview.qa.why-leave",
+      "question": "Why do you want to leave your current job?",
+      "questionEs": "¿Por qué quieres dejar tu trabajo actual?",
+      "accepted": [
+        {
+          "text": "I'm looking for a new challenge.",
+          "es": "Busco un nuevo reto."
+        },
+        {
+          "text": "I'd like to work on bigger projects.",
+          "es": "Me gustaría trabajar en proyectos más grandes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Because I search a new challenge.",
+          "es": "Porque busco un nuevo reto."
+        },
+        {
+          "text": "I want to leave it tomorrow.",
+          "es": "Quiero dejarlo mañana."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«buscar» = «look for»; «search» es buscar dentro de algo («search the web»).",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-interview.qa.strengths",
+      "question": "What would you say are your greatest strengths?",
+      "questionEs": "¿Cuáles dirías que son tus mayores puntos fuertes?",
+      "accepted": [
+        {
+          "text": "I'm good at solving problems, and I'm a fast learner.",
+          "es": "Se me da bien resolver problemas y aprendo rápido."
+        },
+        {
+          "text": "I work well under pressure.",
+          "es": "Trabajo bien bajo presión."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I'm good in solve problems.",
+          "es": "Soy bueno en resolver problemas."
+        },
+        {
+          "text": "My strengths is the problems.",
+          "es": "Mis puntos fuertes es los problemas."
+        }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "«good at» + verbo con -ing: «good at solving».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-interview.qa.weakness",
+      "question": "And what's your biggest weakness?",
+      "questionEs": "¿Y cuál es tu mayor punto débil?",
+      "accepted": [
+        {
+          "text": "I sometimes take on too much, but I'm working on it.",
+          "es": "A veces asumo demasiado, pero estoy en ello."
+        },
+        {
+          "text": "My English, but I'm improving every day.",
+          "es": "Mi inglés, pero mejoro cada día."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "My weak is the English.",
+          "es": "Mi débil es el inglés."
+        },
+        {
+          "text": "I take too much on me.",
+          "es": "Me tomo demasiado encima."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Di algo real y cómo lo mejoras. «weak» es adjetivo; el nombre es «weakness».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-interview.qa.questions-for-us",
+      "question": "Do you have any questions for us?",
+      "questionEs": "¿Tienes alguna pregunta para nosotros?",
+      "accepted": [
+        {
+          "text": "Yes. What does a typical day look like?",
+          "es": "Sí. ¿Cómo es un día normal?"
+        },
+        {
+          "text": "Yes, how big is the team?",
+          "es": "Sí, ¿cómo de grande es el equipo?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, I don't have questions any.",
+          "es": "No, no tengo preguntas ningunas."
+        },
+        {
+          "text": "Yes, how is a typical day like?",
+          "es": "Sí, ¿cómo es un día normal?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Pregunta siempre algo. Es «What… look like?» o «What is… like?», nunca «How is… like?».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-interview.qa.when-start",
+      "question": "When would you be able to start?",
+      "questionEs": "¿Cuándo podrías empezar?",
+      "accepted": [
+        {
+          "text": "I could start in two weeks.",
+          "es": "Podría empezar dentro de dos semanas."
+        },
+        {
+          "text": "I need to give one month's notice, so in early December.",
+          "es": "Tengo que dar un mes de preaviso, así que a principios de diciembre."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I could start after two weeks.",
+          "es": "Podría empezar después de dos semanas."
+        },
+        {
+          "text": "I start since Monday.",
+          "es": "Empiezo desde el lunes."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«dentro de» + tiempo = «in»: «in two weeks».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-interview.qa.how-did-it-go",
+      "question": "Hey! So, how did the interview go?",
+      "questionEs": "¡Ey! Bueno, ¿qué tal fue la entrevista?",
+      "accepted": [
+        {
+          "text": "Really well! I got the job!",
+          "es": "¡Muy bien! ¡Me han dado el trabajo!"
+        },
+        {
+          "text": "I think it went well. They'll get back to me by Friday.",
+          "es": "Creo que fue bien. Me dirán algo antes del viernes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "It was very good, I think I win it.",
+          "es": "Fue muy bien, creo que lo gano."
+        },
+        {
+          "text": "It goes good.",
+          "es": "Va bien."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Pregunta en pasado, respuesta en pasado: «it went well». «well» es adverbio; «good», adjetivo.",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}
