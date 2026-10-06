@@ -1,0 +1,1064 @@
+{
+  "id": "a2-daily",
+  "order": 22,
+  "title": "Casa, rutina, tiempo libre y el tiempo",
+  "description": "Hablar de tu piso, de tu día a día, de lo que haces en tu tiempo libre y del tiempo que hace.",
+  "emoji": "🏠",
+  "situation": "casa",
+  "level": "A2",
+  "lessons": [
+    {
+      "id": "a2-daily.l.home",
+      "title": "Tu casa",
+      "items": [
+        "a2-daily.i-live-in-an-apartment",
+        "a2-daily.apartment",
+        "a2-daily.house",
+        "a2-daily.it-has-two-bedrooms",
+        "a2-daily.bedroom",
+        "a2-daily.bathroom",
+        "a2-daily.kitchen",
+        "a2-daily.couch",
+        "a2-daily.balcony",
+        "a2-daily.the-kitchen-is-pretty-small",
+        "a2-daily.theres-a-balcony",
+        "a2-daily.i-live-alone",
+        "a2-daily.i-have-a-roommate",
+        "a2-daily.roommate",
+        "a2-daily.neighbor",
+        "a2-daily.key",
+        "a2-daily.come-on-in",
+        "a2-daily.wheres-the-bathroom",
+        "a2-daily.qa.house-or-apartment"
+      ]
+    },
+    {
+      "id": "a2-daily.l.morning",
+      "title": "Tu mañana",
+      "items": [
+        "a2-daily.i-wake-up-early",
+        "a2-daily.i-get-up-at-seven",
+        "a2-daily.alarm-clock",
+        "a2-daily.what-time-do-you-get-up",
+        "a2-daily.i-take-a-shower",
+        "a2-daily.shower",
+        "a2-daily.i-have-breakfast-at-home",
+        "a2-daily.breakfast",
+        "a2-daily.i-have-coffee-and-toast",
+        "a2-daily.coffee",
+        "a2-daily.toast",
+        "a2-daily.im-not-a-morning-person",
+        "a2-daily.morning",
+        "a2-daily.i-start-work-at-nine",
+        "a2-daily.qa.get-up"
+      ]
+    },
+    {
+      "id": "a2-daily.l.day",
+      "title": "Tu día y tu semana",
+      "items": [
+        "a2-daily.i-have-lunch-at-one",
+        "a2-daily.lunch",
+        "a2-daily.dinner",
+        "a2-daily.we-have-dinner-at-seven",
+        "a2-daily.i-usually-cook-at-home",
+        "a2-daily.i-go-grocery-shopping",
+        "a2-daily.groceries",
+        "a2-daily.i-do-the-laundry",
+        "a2-daily.i-go-to-bed-around-midnight",
+        "a2-daily.week",
+        "a2-daily.weekend",
+        "a2-daily.how-was-your-day",
+        "a2-daily.it-was-a-long-day",
+        "a2-daily.qa.how-was-your-day",
+        "a2-daily.qa.weekend"
+      ]
+    },
+    {
+      "id": "a2-daily.l.free-time",
+      "title": "Tiempo libre y gustos",
+      "items": [
+        "a2-daily.what-do-you-do-in-your-free-time",
+        "a2-daily.free-time",
+        "a2-daily.i-like-reading-and-watching-movies",
+        "a2-daily.movie",
+        "a2-daily.book",
+        "a2-daily.music",
+        "a2-daily.i-love-cooking",
+        "a2-daily.i-go-to-the-gym",
+        "a2-daily.gym",
+        "a2-daily.i-go-running-in-the-park",
+        "a2-daily.park",
+        "a2-daily.i-play-soccer",
+        "a2-daily.soccer",
+        "a2-daily.im-really-into-video-games",
+        "a2-daily.video-game",
+        "a2-daily.guitar",
+        "a2-daily.what-kind-of-music",
+        "a2-daily.me-too",
+        "a2-daily.do-you-want-to-watch-a-movie",
+        "a2-daily.sounds-good",
+        "a2-daily.qa.free-time",
+        "a2-daily.qa.movie-tonight"
+      ]
+    },
+    {
+      "id": "a2-daily.l.weather",
+      "title": "El tiempo",
+      "items": [
+        "a2-daily.whats-the-weather-like",
+        "a2-daily.weather",
+        "a2-daily.its-sunny-and-warm",
+        "a2-daily.its-really-cold-today",
+        "a2-daily.its-raining",
+        "a2-daily.rain",
+        "a2-daily.its-going-to-rain",
+        "a2-daily.take-an-umbrella",
+        "a2-daily.umbrella",
+        "a2-daily.its-windy-and-cloudy",
+        "a2-daily.cloud",
+        "a2-daily.snow",
+        "a2-daily.its-seventy-degrees",
+        "a2-daily.degree",
+        "a2-daily.summers-are-very-hot",
+        "a2-daily.winter",
+        "a2-daily.qa.weather-madrid",
+        "a2-daily.qa.freezing"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "a2-daily.i-live-in-an-apartment",
+      "text": "I live in an apartment downtown.",
+      "es": "Vivo en un piso en el centro.",
+      "notes": "«downtown» = en el centro de la ciudad, sin «in».",
+      "explanation": "«apartment» es lo americano («flat» es británico). Acento en la segunda: a-PART-ment.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.it-has-two-bedrooms",
+      "text": "It has two bedrooms and one bathroom.",
+      "es": "Tiene dos dormitorios y un baño.",
+      "explanation": "Para describir un piso. «bedrooms» con la «d» unida: «BED-rumz».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.the-kitchen-is-pretty-small",
+      "text": "The kitchen is pretty small.",
+      "es": "La cocina es bastante pequeña.",
+      "explanation": "«pretty» delante de un adjetivo = bastante. Las «tt» suenan como una «r» suave: «PRI-ri».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.theres-a-balcony",
+      "text": "There's a balcony with a view.",
+      "es": "Hay un balcón con vistas.",
+      "explanation": "«There's» = «there is» (hay). Pon la lengua entre los dientes, como una «d» suave: «dherz».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-live-alone",
+      "text": "I live alone.",
+      "es": "Vivo solo.",
+      "explanation": "Para decir que vives solo. «alone» se acentúa en la segunda: a-LOUN.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-have-a-roommate",
+      "text": "I have a roommate.",
+      "es": "Comparto piso.",
+      "literal": "Tengo un compañero de piso.",
+      "explanation": "Para decir que compartes piso. «roommate» une «room» y «mate»: «RUUM-meit».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.come-on-in",
+      "text": "Come on in!",
+      "es": "¡Pasa, pasa!",
+      "explanation": "Al recibir a alguien en casa. Todo va unido: «ka-mo-NIN».",
+      "register": "tu",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.wheres-the-bathroom",
+      "text": "Where's the bathroom?",
+      "es": "¿Dónde está el baño?",
+      "explanation": "En una casa se dice «bathroom»; en un restaurante, «restroom». La «th» es como la «z» de España: «BAZ-rum».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-wake-up-early",
+      "text": "I usually wake up early.",
+      "es": "Normalmente me despierto temprano.",
+      "notes": "«wake up» = despertarse; «get up» = levantarse.",
+      "explanation": "«usually» va antes del verbo. Suena «IU-zhua-li», con una «s» zumbante.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-get-up-at-seven",
+      "text": "I get up at seven.",
+      "es": "Me levanto a las siete.",
+      "explanation": "«at» va con la hora. «get up» se une con una «t» suave, casi «r»: «ge-RAP».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.what-time-do-you-get-up",
+      "text": "What time do you get up?",
+      "es": "¿A qué hora te levantas?",
+      "explanation": "Para preguntar por la rutina de alguien. «What time» se une: «ua-TAIM».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-take-a-shower",
+      "text": "I take a shower and get dressed.",
+      "es": "Me ducho y me visto.",
+      "explanation": "En inglés te «tomas» la ducha: «take a shower». «shower» suena «SHAU-er».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-have-breakfast-at-home",
+      "text": "I have breakfast at home.",
+      "es": "Desayuno en casa.",
+      "explanation": "«have breakfast» = desayunar. «breakfast» suena «BREK-fest», con «e» corta.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-have-coffee-and-toast",
+      "text": "I have coffee and some toast.",
+      "es": "Me tomo un café y unas tostadas.",
+      "explanation": "«toast» es incontable: «some toast», nunca «a toast». Suena «toust».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.im-not-a-morning-person",
+      "text": "I'm not a morning person.",
+      "es": "Me cuesta madrugar.",
+      "literal": "No soy una persona de mañanas.",
+      "explanation": "Frase muy común y con humor. «morning» con la «r» americana: «MOR-ning».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-start-work-at-nine",
+      "text": "I start work at nine.",
+      "es": "Empiezo a trabajar a las nueve.",
+      "explanation": "Para contar tu horario. «start» sin «e» delante: «start», nunca «estart».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-have-lunch-at-one",
+      "text": "I have lunch at one.",
+      "es": "Como a la una.",
+      "notes": "«lunch» es la comida de mediodía; «dinner», la cena.",
+      "explanation": "En EE. UU. se come pronto, sobre las 12. «lunch» suena «lanch», con «a» corta.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.we-have-dinner-at-seven",
+      "text": "We have dinner at seven.",
+      "es": "Cenamos a las siete.",
+      "explanation": "Lo normal en EE. UU.: cenan entre las 6 y las 8. «dinner» suena «DI-ner», con «i» corta.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-usually-cook-at-home",
+      "text": "I usually cook at home.",
+      "es": "Normalmente cocino en casa.",
+      "explanation": "Para hablar de tus hábitos. «cook» lleva una «u» corta: «kuk», no «kuuk».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-go-grocery-shopping",
+      "text": "I go grocery shopping on Saturdays.",
+      "es": "Hago la compra los sábados.",
+      "explanation": "«on» va con los días. «grocery» suena «GROU-se-ri», tres sílabas.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-do-the-laundry",
+      "text": "I do the laundry on Sundays.",
+      "es": "Pongo la lavadora los domingos.",
+      "literal": "Hago la colada los domingos.",
+      "explanation": "«do the laundry» = lavar la ropa. «laundry» suena «LON-dri».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-go-to-bed-around-midnight",
+      "text": "I go to bed around midnight.",
+      "es": "Me acuesto sobre medianoche.",
+      "explanation": "«go to bed» = acostarse, sin «the». «midnight» suena «MID-nait».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.how-was-your-day",
+      "text": "How was your day?",
+      "es": "¿Qué tal el día?",
+      "explanation": "Lo que te preguntan al llegar a casa o al final de la jornada. «was» suena «uaz».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.it-was-a-long-day",
+      "text": "It was a long day.",
+      "es": "Ha sido un día largo.",
+      "explanation": "Para decir que estás cansado. «long» con «o» abierta y «ng» sin «g» final: «long».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.what-do-you-do-in-your-free-time",
+      "text": "What do you do in your free time?",
+      "es": "¿Qué haces en tu tiempo libre?",
+      "explanation": "La pregunta típica para conocer a alguien. «free» con «i» larga: «frii».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-like-reading-and-watching-movies",
+      "text": "I like reading and watching movies.",
+      "es": "Me gusta leer y ver películas.",
+      "explanation": "Detrás de «like» va el verbo con «-ing». «movies» suena «MUU-viz».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-love-cooking",
+      "text": "I love cooking for my friends.",
+      "es": "Me encanta cocinar para mis amigos.",
+      "explanation": "«love» para lo que te encanta. «love» suena «lav», con «v» de labio y dientes.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-go-to-the-gym",
+      "text": "I go to the gym three times a week.",
+      "es": "Voy al gimnasio tres veces por semana.",
+      "explanation": "«gym» suena «yim». «three» con «th» como la «z» de España: «zrii».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-go-running-in-the-park",
+      "text": "I go running in the park.",
+      "es": "Salgo a correr al parque.",
+      "explanation": "«go» + verbo con «-ing» para deportes y actividades: go running, go swimming. «park» con la «r» americana.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.i-play-soccer",
+      "text": "I play soccer on Sundays.",
+      "es": "Juego al fútbol los domingos.",
+      "explanation": "En EE. UU. el fútbol es «soccer»; «football» es el americano. Sin «the»: «play soccer».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.im-really-into-video-games",
+      "text": "I'm really into video games.",
+      "es": "Me flipan los videojuegos.",
+      "explanation": "Entre amigos: «be into» = ser muy aficionado a algo. «video» suena «VI-di-ou».",
+      "register": "tu",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.what-kind-of-music",
+      "text": "What kind of music do you like?",
+      "es": "¿Qué tipo de música te gusta?",
+      "explanation": "Para sacar conversación. «kind of» se une: «KAIN-dov».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.me-too",
+      "text": "Me too!",
+      "es": "¡Yo también!",
+      "notes": "Con algo negativo se dice «Me neither».",
+      "explanation": "Para estar de acuerdo con algo positivo. «too» con «u» larga: «tuu».",
+      "register": "tu",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.do-you-want-to-watch-a-movie",
+      "text": "Do you want to watch a movie tonight?",
+      "es": "¿Quieres ver una peli esta noche?",
+      "explanation": "Para proponer un plan a un amigo. «want to» se dice rápido, casi «uana», pero se escribe completo.",
+      "register": "tu",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.sounds-good",
+      "text": "Sounds good!",
+      "es": "¡Me parece bien!",
+      "literal": "¡Suena bien!",
+      "explanation": "Para aceptar un plan con amigos. La «s» inicial va directa, sin «e»: «saundz gud».",
+      "register": "tu",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.whats-the-weather-like",
+      "text": "What's the weather like today?",
+      "es": "¿Qué tiempo hace hoy?",
+      "explanation": "Para preguntar por el tiempo. «weather» con «th» suave entre los dientes: «UE-dher».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.its-sunny-and-warm",
+      "text": "It's sunny and warm.",
+      "es": "Hace sol y calor.",
+      "explanation": "En inglés el tiempo «es»: «It's sunny». «warm» suena «uorm», con «o».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.its-really-cold-today",
+      "text": "It's really cold today.",
+      "es": "Hoy hace mucho frío.",
+      "explanation": "Nunca «It makes cold». «cold» lleva «ou»: «kould».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.its-raining",
+      "text": "It's raining.",
+      "es": "Está lloviendo.",
+      "explanation": "Para la lluvia de ahora mismo. «raining» suena «REI-ning».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.its-going-to-rain",
+      "text": "It's going to rain this afternoon.",
+      "es": "Va a llover esta tarde.",
+      "explanation": "Para el pronóstico. «going to» se dice rápido: «GOU-in-tu».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.take-an-umbrella",
+      "text": "Take an umbrella, just in case.",
+      "es": "Llévate un paraguas, por si acaso.",
+      "explanation": "Para aconsejar a alguien que sale. «umbrella» con «a» al principio: am-BRE-la.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.its-windy-and-cloudy",
+      "text": "It's windy and cloudy.",
+      "es": "Hace viento y está nublado.",
+      "explanation": "«-y» convierte el nombre en adjetivo: wind → windy, cloud → cloudy. «cloudy» suena «KLAU-di».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.its-seventy-degrees",
+      "text": "It's seventy degrees.",
+      "es": "Hace unos veintiún grados.",
+      "literal": "Hace setenta grados.",
+      "notes": "Para pasar de °F a °C: resta 30 y divide entre 2 (aproximado).",
+      "explanation": "En EE. UU. usan grados Fahrenheit: 70 °F son unos 21 °C. «degrees» suena «di-GRIIZ».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.summers-are-very-hot",
+      "text": "In Madrid, summers are very hot.",
+      "es": "En Madrid, los veranos son muy calurosos.",
+      "explanation": "Para comparar con el clima de tu ciudad. «summers» lleva «a» corta: «SA-merz».",
+      "register": "neutral",
+      "situation": "casa"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "a2-daily.apartment",
+      "word": "apartment",
+      "article": "an",
+      "plural": "apartments",
+      "es": "el piso",
+      "example": "a2-daily.i-live-in-an-apartment",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.house",
+      "word": "house",
+      "article": "a",
+      "plural": "houses",
+      "es": "la casa",
+      "notes": "«house» es el edificio; «home» es tu hogar: «I'm at home».",
+      "situation": "casa",
+      "image": "fluent:house"
+    },
+    {
+      "id": "a2-daily.bedroom",
+      "word": "bedroom",
+      "article": "a",
+      "plural": "bedrooms",
+      "es": "el dormitorio",
+      "example": "a2-daily.it-has-two-bedrooms",
+      "situation": "casa",
+      "image": "fluent:bed"
+    },
+    {
+      "id": "a2-daily.bathroom",
+      "word": "bathroom",
+      "article": "a",
+      "plural": "bathrooms",
+      "es": "el baño",
+      "example": "a2-daily.wheres-the-bathroom",
+      "situation": "casa",
+      "image": "fluent:bathtub"
+    },
+    {
+      "id": "a2-daily.kitchen",
+      "word": "kitchen",
+      "article": "a",
+      "plural": "kitchens",
+      "es": "la cocina",
+      "notes": "«kitchen» es el cuarto; «cooking» es la actividad de cocinar.",
+      "example": "a2-daily.the-kitchen-is-pretty-small",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.couch",
+      "word": "couch",
+      "article": "a",
+      "plural": "couches",
+      "es": "el sofá",
+      "situation": "casa",
+      "image": "fluent:couch-and-lamp"
+    },
+    {
+      "id": "a2-daily.balcony",
+      "word": "balcony",
+      "article": "a",
+      "plural": "balconies",
+      "es": "el balcón",
+      "example": "a2-daily.theres-a-balcony",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.roommate",
+      "word": "roommate",
+      "article": "a",
+      "plural": "roommates",
+      "es": "el compañero de piso",
+      "example": "a2-daily.i-have-a-roommate",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.neighbor",
+      "word": "neighbor",
+      "article": "a",
+      "plural": "neighbors",
+      "es": "el vecino",
+      "notes": "Ortografía de EE. UU.: «neighbor», sin «u». La «gh» no suena: «NEI-ber».",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.key",
+      "word": "key",
+      "article": "a",
+      "plural": "keys",
+      "es": "la llave",
+      "situation": "casa",
+      "image": "fluent:key"
+    },
+    {
+      "id": "a2-daily.alarm-clock",
+      "word": "alarm clock",
+      "article": "an",
+      "plural": "alarm clocks",
+      "es": "el despertador",
+      "situation": "casa",
+      "image": "fluent:alarm-clock"
+    },
+    {
+      "id": "a2-daily.shower",
+      "word": "shower",
+      "article": "a",
+      "plural": "showers",
+      "es": "la ducha",
+      "example": "a2-daily.i-take-a-shower",
+      "situation": "casa",
+      "image": "fluent:shower"
+    },
+    {
+      "id": "a2-daily.breakfast",
+      "word": "breakfast",
+      "es": "el desayuno",
+      "notes": "Las comidas van sin artículo: «have breakfast», «have lunch».",
+      "example": "a2-daily.i-have-breakfast-at-home",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.coffee",
+      "word": "coffee",
+      "es": "el café",
+      "notes": "Incontable en general; en una cafetería sí se pide «a coffee».",
+      "example": "a2-daily.i-have-coffee-and-toast",
+      "situation": "casa",
+      "image": "fluent:hot-beverage"
+    },
+    {
+      "id": "a2-daily.toast",
+      "word": "toast",
+      "es": "las tostadas",
+      "notes": "Incontable: «some toast», «a piece of toast».",
+      "example": "a2-daily.i-have-coffee-and-toast",
+      "situation": "casa",
+      "image": "fluent:bread"
+    },
+    {
+      "id": "a2-daily.morning",
+      "word": "morning",
+      "article": "a",
+      "plural": "mornings",
+      "es": "la mañana",
+      "notes": "«in the morning» = por la mañana.",
+      "situation": "casa",
+      "image": "fluent:sunrise"
+    },
+    {
+      "id": "a2-daily.lunch",
+      "word": "lunch",
+      "es": "la comida (de mediodía)",
+      "example": "a2-daily.i-have-lunch-at-one",
+      "situation": "casa",
+      "image": "fluent:fork-and-knife-with-plate"
+    },
+    {
+      "id": "a2-daily.dinner",
+      "word": "dinner",
+      "es": "la cena",
+      "example": "a2-daily.we-have-dinner-at-seven",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.groceries",
+      "word": "groceries",
+      "es": "la compra (los alimentos)",
+      "example": "a2-daily.i-go-grocery-shopping",
+      "situation": "casa",
+      "image": "fluent:shopping-cart"
+    },
+    {
+      "id": "a2-daily.week",
+      "word": "week",
+      "article": "a",
+      "plural": "weeks",
+      "es": "la semana",
+      "situation": "casa",
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "a2-daily.weekend",
+      "word": "weekend",
+      "article": "a",
+      "plural": "weekends",
+      "es": "el fin de semana",
+      "notes": "En EE. UU.: «on the weekend».",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.free-time",
+      "word": "free time",
+      "es": "el tiempo libre",
+      "example": "a2-daily.what-do-you-do-in-your-free-time",
+      "situation": "casa"
+    },
+    {
+      "id": "a2-daily.movie",
+      "word": "movie",
+      "article": "a",
+      "plural": "movies",
+      "es": "la película",
+      "notes": "En EE. UU. «movie»; «film» suena más culto.",
+      "situation": "casa",
+      "image": "fluent:clapper-board"
+    },
+    {
+      "id": "a2-daily.book",
+      "word": "book",
+      "article": "a",
+      "plural": "books",
+      "es": "el libro",
+      "situation": "casa",
+      "image": "fluent:closed-book"
+    },
+    {
+      "id": "a2-daily.music",
+      "word": "music",
+      "es": "la música",
+      "example": "a2-daily.what-kind-of-music",
+      "situation": "casa",
+      "image": "fluent:musical-notes"
+    },
+    {
+      "id": "a2-daily.gym",
+      "word": "gym",
+      "article": "a",
+      "plural": "gyms",
+      "es": "el gimnasio",
+      "example": "a2-daily.i-go-to-the-gym",
+      "situation": "casa",
+      "image": "fluent:person-lifting-weights"
+    },
+    {
+      "id": "a2-daily.park",
+      "word": "park",
+      "article": "a",
+      "plural": "parks",
+      "es": "el parque",
+      "example": "a2-daily.i-go-running-in-the-park",
+      "situation": "casa",
+      "image": "fluent:deciduous-tree"
+    },
+    {
+      "id": "a2-daily.soccer",
+      "word": "soccer",
+      "es": "el fútbol",
+      "example": "a2-daily.i-play-soccer",
+      "situation": "casa",
+      "image": "fluent:soccer-ball"
+    },
+    {
+      "id": "a2-daily.video-game",
+      "word": "video game",
+      "article": "a",
+      "plural": "video games",
+      "es": "el videojuego",
+      "example": "a2-daily.im-really-into-video-games",
+      "situation": "casa",
+      "image": "fluent:video-game"
+    },
+    {
+      "id": "a2-daily.guitar",
+      "word": "guitar",
+      "article": "a",
+      "plural": "guitars",
+      "es": "la guitarra",
+      "notes": "Se dice «play the guitar», con «the».",
+      "situation": "casa",
+      "image": "fluent:guitar"
+    },
+    {
+      "id": "a2-daily.weather",
+      "word": "weather",
+      "es": "el tiempo (meteorológico)",
+      "notes": "Incontable: «nice weather», nunca «a nice weather».",
+      "example": "a2-daily.whats-the-weather-like",
+      "situation": "casa",
+      "image": "fluent:sun-behind-cloud"
+    },
+    {
+      "id": "a2-daily.rain",
+      "word": "rain",
+      "es": "la lluvia",
+      "example": "a2-daily.its-raining",
+      "situation": "casa",
+      "image": "fluent:cloud-with-rain"
+    },
+    {
+      "id": "a2-daily.umbrella",
+      "word": "umbrella",
+      "article": "an",
+      "plural": "umbrellas",
+      "es": "el paraguas",
+      "example": "a2-daily.take-an-umbrella",
+      "situation": "casa",
+      "image": "fluent:closed-umbrella"
+    },
+    {
+      "id": "a2-daily.cloud",
+      "word": "cloud",
+      "article": "a",
+      "plural": "clouds",
+      "es": "la nube",
+      "situation": "casa",
+      "image": "fluent:cloud"
+    },
+    {
+      "id": "a2-daily.snow",
+      "word": "snow",
+      "es": "la nieve",
+      "notes": "El verbo: «It's snowing» = está nevando.",
+      "situation": "casa",
+      "image": "fluent:snowflake"
+    },
+    {
+      "id": "a2-daily.degree",
+      "word": "degree",
+      "article": "a",
+      "plural": "degrees",
+      "es": "el grado",
+      "example": "a2-daily.its-seventy-degrees",
+      "situation": "casa",
+      "image": "fluent:thermometer"
+    },
+    {
+      "id": "a2-daily.winter",
+      "word": "winter",
+      "es": "el invierno",
+      "notes": "En EE. UU. la «t» de «winter» casi desaparece: «UI-ner».",
+      "situation": "casa",
+      "image": "fluent:snowman"
+    }
+  ],
+  "qa": [
+    {
+      "id": "a2-daily.qa.house-or-apartment",
+      "question": "Do you live in a house or an apartment?",
+      "questionEs": "¿Vives en una casa o en un piso?",
+      "accepted": [
+        {
+          "text": "In an apartment downtown.",
+          "es": "En un piso en el centro."
+        },
+        {
+          "text": "I live in a small apartment.",
+          "es": "Vivo en un piso pequeño."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I live in a apartment.",
+          "es": "Vivo en un piso."
+        },
+        {
+          "text": "Yes, I live.",
+          "es": "Sí, vivo."
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "Delante de vocal va «an»: «an apartment». Es una pregunta de elegir, no de sí o no.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "a2-daily.qa.get-up",
+      "question": "What time do you get up on weekdays?",
+      "questionEs": "¿A qué hora te levantas entre semana?",
+      "accepted": [
+        {
+          "text": "I get up at seven.",
+          "es": "Me levanto a las siete."
+        },
+        {
+          "text": "Around seven.",
+          "es": "Sobre las siete."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I get up in seven.",
+          "es": "Me levanto en siete."
+        },
+        {
+          "text": "I go to bed at seven.",
+          "es": "Me acuesto a las siete."
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "La hora va con «at»; «go to bed» es acostarse, no levantarse.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "a2-daily.qa.how-was-your-day",
+      "question": "Hi! How was your day?",
+      "questionEs": "¡Hola! ¿Qué tal el día?",
+      "accepted": [
+        {
+          "text": "Pretty good, thanks.",
+          "es": "Bastante bien, gracias."
+        },
+        {
+          "text": "It was a long day.",
+          "es": "Ha sido un día largo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "It's Monday.",
+          "es": "Es lunes."
+        },
+        {
+          "text": "I'm fine, and you?",
+          "es": "Bien, ¿y tú?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "Te preguntan por tu día: «It was…». «I'm fine» contesta a «How are you?».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-daily.qa.weekend",
+      "question": "What do you usually do on the weekend?",
+      "questionEs": "¿Qué sueles hacer el fin de semana?",
+      "accepted": [
+        {
+          "text": "I sleep in and do the laundry.",
+          "es": "Duermo hasta tarde y pongo la lavadora."
+        },
+        {
+          "text": "I go grocery shopping and relax.",
+          "es": "Hago la compra y descanso."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I usually do the weekend.",
+          "es": "Normalmente hago el fin de semana."
+        },
+        {
+          "text": "I work from nine to six.",
+          "es": "Trabajo de nueve a seis."
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "Cuenta lo que haces el fin de semana, en presente; el horario de trabajo no responde.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "a2-daily.qa.free-time",
+      "question": "What do you do in your free time?",
+      "questionEs": "¿Qué haces en tu tiempo libre?",
+      "accepted": [
+        {
+          "text": "I like reading and going to the gym.",
+          "es": "Me gusta leer e ir al gimnasio."
+        },
+        {
+          "text": "I watch movies and cook.",
+          "es": "Veo películas y cocino."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I like read books.",
+          "es": "Me gusta leer libros."
+        },
+        {
+          "text": "I have free time on Sundays.",
+          "es": "Tengo tiempo libre los domingos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "Detrás de «like» va «-ing» («like reading»); te preguntan qué haces, no cuándo.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "a2-daily.qa.movie-tonight",
+      "question": "Hey, do you want to watch a movie tonight?",
+      "questionEs": "Oye, ¿quieres ver una peli esta noche?",
+      "accepted": [
+        {
+          "text": "Sounds good!",
+          "es": "¡Me parece bien!"
+        },
+        {
+          "text": "Sure! What time?",
+          "es": "¡Claro! ¿A qué hora?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Me too!",
+          "es": "¡Yo también!"
+        },
+        {
+          "text": "Yes, I watched it.",
+          "es": "Sí, la vi."
+        }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "Te proponen un plan: acéptalo con «Sounds good!» o «Sure!». «Me too» responde a otra cosa.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "a2-daily.qa.weather-madrid",
+      "question": "What's the weather like in Madrid in summer?",
+      "questionEs": "¿Qué tiempo hace en Madrid en verano?",
+      "accepted": [
+        {
+          "text": "It's very hot and sunny.",
+          "es": "Hace mucho calor y sol."
+        },
+        {
+          "text": "It's really hot.",
+          "es": "Hace muchísimo calor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "It makes very hot.",
+          "es": "Hace mucho calor."
+        },
+        {
+          "text": "Is very hot.",
+          "es": "Es muy caliente."
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "El tiempo va con «It's»: nunca «It makes», y el sujeto «it» no se omite.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-daily.qa.freezing",
+      "question": "It's freezing today, isn't it?",
+      "questionEs": "Hoy hace un frío que pela, ¿verdad?",
+      "accepted": [
+        {
+          "text": "Yes, it's really cold.",
+          "es": "Sí, hace mucho frío."
+        },
+        {
+          "text": "I know! I'm freezing.",
+          "es": "¡Ya ves! Me estoy helando."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I have a cold.",
+          "es": "Sí, estoy resfriado."
+        },
+        {
+          "text": "Yes, it's sunny and warm.",
+          "es": "Sí, hace sol y calor."
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "«have a cold» es estar resfriado; para el frío usa «It's cold» o «I'm cold».",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

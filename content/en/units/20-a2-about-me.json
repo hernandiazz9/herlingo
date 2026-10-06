@@ -1,0 +1,1091 @@
+{
+  "id": "a2-about-me",
+  "order": 20,
+  "title": "Presentarte: origen, trabajo, idiomas y familia",
+  "description": "Decir cómo te llamas, de dónde eres, a qué te dedicas, qué idiomas hablas y cómo es tu familia.",
+  "emoji": "🙂",
+  "situation": "presentarse",
+  "level": "A2",
+  "lessons": [
+    {
+      "id": "a2-about-me.l.name",
+      "title": "Cómo te llamas",
+      "items": [
+        "a2-about-me.hi-im-hernan",
+        "a2-about-me.my-name-is",
+        "a2-about-me.whats-your-name",
+        "a2-about-me.may-i-have-your-name",
+        "a2-about-me.name",
+        "a2-about-me.first-name",
+        "a2-about-me.last-name",
+        "a2-about-me.my-last-name-is",
+        "a2-about-me.how-do-you-spell-that",
+        "a2-about-me.its-spelled",
+        "a2-about-me.nice-to-meet-you",
+        "a2-about-me.nice-to-meet-you-too",
+        "a2-about-me.its-a-pleasure",
+        "a2-about-me.qa.whats-your-name",
+        "a2-about-me.qa.spell"
+      ]
+    },
+    {
+      "id": "a2-about-me.l.origin",
+      "title": "De dónde eres y dónde vives",
+      "items": [
+        "a2-about-me.where-are-you-from",
+        "a2-about-me.im-from-spain",
+        "a2-about-me.im-spanish",
+        "a2-about-me.spain",
+        "a2-about-me.country",
+        "a2-about-me.im-from-madrid",
+        "a2-about-me.madrid-is-the-capital",
+        "a2-about-me.city",
+        "a2-about-me.i-live-in-madrid",
+        "a2-about-me.where-do-you-live",
+        "a2-about-me.neighborhood",
+        "a2-about-me.have-you-been-to-spain",
+        "a2-about-me.qa.where-from"
+      ]
+    },
+    {
+      "id": "a2-about-me.l.work",
+      "title": "A qué te dedicas",
+      "items": [
+        "a2-about-me.what-do-you-do",
+        "a2-about-me.im-a-programmer",
+        "a2-about-me.im-a-software-developer",
+        "a2-about-me.programmer",
+        "a2-about-me.i-work-from-home",
+        "a2-about-me.computer",
+        "a2-about-me.i-write-code",
+        "a2-about-me.app",
+        "a2-about-me.where-do-you-work",
+        "a2-about-me.i-work-for-a-small-company",
+        "a2-about-me.company",
+        "a2-about-me.job",
+        "a2-about-me.coworker",
+        "a2-about-me.i-like-my-job",
+        "a2-about-me.what-about-you",
+        "a2-about-me.qa.what-do-you-do"
+      ]
+    },
+    {
+      "id": "a2-about-me.l.jobs",
+      "title": "Profesiones",
+      "items": [
+        "a2-about-me.teacher",
+        "a2-about-me.doctor",
+        "a2-about-me.nurse",
+        "a2-about-me.engineer",
+        "a2-about-me.student",
+        "a2-about-me.shes-a-nurse",
+        "a2-about-me.hes-an-engineer",
+        "a2-about-me.what-does-she-do",
+        "a2-about-me.qa.job-of-sister"
+      ]
+    },
+    {
+      "id": "a2-about-me.l.languages",
+      "title": "Idiomas y por qué aprendes inglés",
+      "items": [
+        "a2-about-me.what-languages-do-you-speak",
+        "a2-about-me.language",
+        "a2-about-me.english",
+        "a2-about-me.spanish",
+        "a2-about-me.french",
+        "a2-about-me.i-speak-spanish-and-english",
+        "a2-about-me.im-learning-english",
+        "a2-about-me.i-need-english-for-work",
+        "a2-about-me.my-english-isnt-very-good",
+        "a2-about-me.your-english-is-really-good",
+        "a2-about-me.please-correct-me",
+        "a2-about-me.mistake",
+        "a2-about-me.qa.languages",
+        "a2-about-me.qa.why-english",
+        "a2-about-me.qa.your-english-is-good"
+      ]
+    },
+    {
+      "id": "a2-about-me.l.family",
+      "title": "Tu familia",
+      "items": [
+        "a2-about-me.family",
+        "a2-about-me.parents",
+        "a2-about-me.mom",
+        "a2-about-me.dad",
+        "a2-about-me.brother",
+        "a2-about-me.sister",
+        "a2-about-me.kids",
+        "a2-about-me.grandparents",
+        "a2-about-me.do-you-have-brothers-or-sisters",
+        "a2-about-me.i-have-a-sister",
+        "a2-about-me.im-an-only-child",
+        "a2-about-me.my-parents-live-in-madrid",
+        "a2-about-me.my-sister-is-a-teacher",
+        "a2-about-me.do-you-have-kids",
+        "a2-about-me.how-old-is-she",
+        "a2-about-me.shes-thirty",
+        "a2-about-me.qa.siblings",
+        "a2-about-me.qa.how-old"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "a2-about-me.hi-im-hernan",
+      "text": "Hi, I'm Hernán.",
+      "es": "Hola, soy Hernán.",
+      "notes": "Cambia el nombre por el tuyo.",
+      "explanation": "La forma más habitual de presentarte cara a cara. «I'm» es una sola sílaba: «aim», con la «m» bien cerrada.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.my-name-is",
+      "text": "My name is Hernán.",
+      "es": "Me llamo Hernán.",
+      "literal": "Mi nombre es Hernán.",
+      "explanation": "Un poco más formal que «I'm…»: en clase, en el trabajo o al teléfono. «name» suena «neim», con «m» final clara.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.whats-your-name",
+      "text": "What's your name?",
+      "es": "¿Cómo te llamas?",
+      "explanation": "Para preguntar el nombre a alguien que acabas de conocer. «What's» une la «t» y la «s»: «uats».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.may-i-have-your-name",
+      "text": "May I have your name, please?",
+      "es": "¿Me dice su nombre, por favor?",
+      "explanation": "Lo oirás en recepciones, hoteles y consultas. «May I» va unido: «mei-ai».",
+      "register": "formal",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.my-last-name-is",
+      "text": "My last name is Díaz.",
+      "es": "Mi apellido es Díaz.",
+      "explanation": "En formularios, hoteles o por teléfono. «last» lleva una «a» abierta y la «t» casi no suena: «las-NEIM».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.how-do-you-spell-that",
+      "text": "How do you spell that?",
+      "es": "¿Cómo se escribe?",
+      "explanation": "Cuando un nombre no te suena y necesitas escribirlo. «spell» empieza directamente: «spel», nunca «espel».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.its-spelled",
+      "text": "It's D-I-A-Z.",
+      "es": "Se escribe D-I-A-Z.",
+      "notes": "Practica tu nombre y apellido letra a letra.",
+      "explanation": "Para deletrear. Ojo con las letras: la I se dice «ai», la A «ei»; la Z es «zii», con una «z» zumbante, como una abeja.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.nice-to-meet-you",
+      "text": "Nice to meet you.",
+      "es": "Encantado de conocerte.",
+      "explanation": "Justo después de presentarte. «meet» lleva una «i» larga: «miit», no «mit».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.nice-to-meet-you-too",
+      "text": "Nice to meet you, too.",
+      "es": "Igualmente.",
+      "literal": "Encantado de conocerte también.",
+      "explanation": "La respuesta a «Nice to meet you». «too» es una «u» larga: «tuu».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.its-a-pleasure",
+      "text": "It's a pleasure to meet you.",
+      "es": "Es un placer conocerle.",
+      "explanation": "En una reunión de trabajo o con alguien mayor. En «pleasure» la «s» suena como la «ll» argentina: «PLE-zher».",
+      "register": "formal",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.where-are-you-from",
+      "text": "Where are you from?",
+      "es": "¿De dónde eres?",
+      "explanation": "La pregunta típica al conocer a alguien. «from» lleva una «o» corta, casi «a», y «m» final: «fram».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.im-from-spain",
+      "text": "I'm from Spain.",
+      "es": "Soy de España.",
+      "explanation": "La respuesta más natural. «Spain» sin «e» delante: «spein», nunca «espein».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.im-spanish",
+      "text": "I'm Spanish.",
+      "es": "Soy español.",
+      "notes": "Nacionalidad con mayúscula: Spanish, American, French.",
+      "explanation": "Para decir tu nacionalidad. Las nacionalidades van con mayúscula. «Spanish» empieza con «sp» directo: «SPA-nish».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.im-from-madrid",
+      "text": "I'm from Madrid.",
+      "es": "Soy de Madrid.",
+      "explanation": "Cuando te preguntan la ciudad. Los americanos dicen «ma-DRID» con su «r» suave, sin vibrar.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.madrid-is-the-capital",
+      "text": "Madrid is the capital, in the center of Spain.",
+      "es": "Madrid es la capital, en el centro de España.",
+      "explanation": "Para situar tu ciudad a quien no la conoce. En EE. UU. se escribe «center» y la «t» casi desaparece: «SEN-er».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.i-live-in-madrid",
+      "text": "I live in Madrid.",
+      "es": "Vivo en Madrid.",
+      "explanation": "Para decir dónde vives ahora. «live» lleva una «i» corta: «liv», no «laiv».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.where-do-you-live",
+      "text": "Where do you live?",
+      "es": "¿Dónde vives?",
+      "explanation": "Para preguntar por la ciudad o el barrio. «do you» se une y suena casi «de-ye».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.have-you-been-to-spain",
+      "text": "Have you ever been to Spain?",
+      "es": "¿Has estado alguna vez en España?",
+      "explanation": "Para devolver la pregunta y seguir la charla. En EE. UU. «been» suena «bin».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.what-do-you-do",
+      "text": "What do you do?",
+      "es": "¿A qué te dedicas?",
+      "literal": "¿Qué haces?",
+      "notes": "Pregunta por tu trabajo, no por lo que haces ahora mismo.",
+      "explanation": "La pregunta típica sobre el trabajo en EE. UU. Todo va unido: «ua-de-ye-DU».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.im-a-programmer",
+      "text": "I'm a programmer.",
+      "es": "Soy programador.",
+      "notes": "Delante de una profesión siempre va «a» o «an».",
+      "explanation": "Para decir tu profesión. No olvides «a»: «I'm a programmer», nunca «I'm programmer».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.im-a-software-developer",
+      "text": "I'm a software developer.",
+      "es": "Soy desarrollador de software.",
+      "explanation": "Lo más común en el sector. «developer» lleva el acento en la segunda sílaba: de-VE-lo-per.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.i-work-from-home",
+      "text": "I work from home.",
+      "es": "Trabajo desde casa.",
+      "explanation": "Para explicar que teletrabajas. «home» suena «joum», con una «h» suave, como un suspiro.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.i-write-code",
+      "text": "I write code for websites and apps.",
+      "es": "Escribo código para webs y aplicaciones.",
+      "explanation": "Para explicar en qué consiste tu trabajo. «code» lleva «ou»: «koud»; distinto de «cold» («kould»).",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.where-do-you-work",
+      "text": "Where do you work?",
+      "es": "¿Dónde trabajas?",
+      "explanation": "Para preguntar por la empresa o el lugar. «work» suena «uerk»; «walk» (caminar) suena «uok».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.i-work-for-a-small-company",
+      "text": "I work for a small company.",
+      "es": "Trabajo para una empresa pequeña.",
+      "explanation": "«for» con la empresa, «at» con el lugar: «I work at a café». «company» acentúa la primera: KAM-pa-ni.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.i-like-my-job",
+      "text": "I like my job a lot.",
+      "es": "Me gusta mucho mi trabajo.",
+      "explanation": "Para hablar bien de tu trabajo. «job» suena «yab», con la «j» de «John».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.what-about-you",
+      "text": "What about you?",
+      "es": "¿Y tú?",
+      "explanation": "Para devolver cualquier pregunta. Se une con una «t» suave, casi «d»: «ua-da-BAUT».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.shes-a-nurse",
+      "text": "She's a nurse.",
+      "es": "Es enfermera.",
+      "explanation": "Para hablar del trabajo de otra persona. «nurse» suena «ners», con la «r» americana y sin «u».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.hes-an-engineer",
+      "text": "He's an engineer.",
+      "es": "Es ingeniero.",
+      "explanation": "«an» delante de vocal. Acento al final: en-yi-NIR.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.what-does-she-do",
+      "text": "What does she do?",
+      "es": "¿A qué se dedica ella?",
+      "explanation": "Para preguntar por el trabajo de otra persona: «does» con «he» y «she». Suena «daz».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.what-languages-do-you-speak",
+      "text": "What languages do you speak?",
+      "es": "¿Qué idiomas hablas?",
+      "explanation": "Para preguntar por idiomas. «languages»: LAN-gui-yiz; la «g» del final suena como una «y» fuerte.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.i-speak-spanish-and-english",
+      "text": "I speak Spanish and a little English.",
+      "es": "Hablo español y un poco de inglés.",
+      "explanation": "Para decir qué idiomas hablas. «a little» va unido, con «t» suave: «a-LI-del».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.im-learning-english",
+      "text": "I'm learning English.",
+      "es": "Estoy aprendiendo inglés.",
+      "explanation": "«learning» suena «LER-ning», con la «r» americana; la «ea» no se lee «e-a».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.i-need-english-for-work",
+      "text": "I need English for work.",
+      "es": "Necesito el inglés para el trabajo.",
+      "explanation": "Para explicar por qué estudias. Sin artículo: «English», nunca «the English». «need» con «i» larga: «niid».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.my-english-isnt-very-good",
+      "text": "My English isn't very good.",
+      "es": "Mi inglés no es muy bueno.",
+      "explanation": "Para avisar al empezar a hablar. «isn't» suena «IZ-ent», casi sin la «t» final.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.your-english-is-really-good",
+      "text": "Your English is really good!",
+      "es": "¡Hablas muy bien inglés!",
+      "literal": "¡Tu inglés es muy bueno!",
+      "explanation": "Lo que te dirán a menudo; contesta «Thanks!». «really» tiene dos sílabas: «RI-li».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.please-correct-me",
+      "text": "Please correct me if I make a mistake.",
+      "es": "Corrígeme si me equivoco, por favor.",
+      "explanation": "Para pedir que te corrijan. «mistake» sin «e» delante de la «s»: mis-TEIK.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.do-you-have-brothers-or-sisters",
+      "text": "Do you have any brothers or sisters?",
+      "es": "¿Tienes hermanos?",
+      "notes": "«siblings» (hermanos) existe, pero suena más formal.",
+      "explanation": "La pregunta típica sobre la familia. «brothers» lleva «th» suave: pon la lengua entre los dientes, «BRA-dhers».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.i-have-a-sister",
+      "text": "I have one sister and no brothers.",
+      "es": "Tengo una hermana y ningún hermano.",
+      "notes": "Cambia los datos por los de tu familia.",
+      "explanation": "Para hablar de tus hermanos. «sister» lleva una «s» sorda, como en español, y la «r» americana al final: «SIS-ter».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.im-an-only-child",
+      "text": "I'm an only child.",
+      "es": "Soy hijo único.",
+      "explanation": "Si no tienes hermanos. «only» suena «OUN-li», y «child» «chaild».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.my-parents-live-in-madrid",
+      "text": "My parents live in Madrid.",
+      "es": "Mis padres viven en Madrid.",
+      "explanation": "Para hablar de tus padres. «parents» se acentúa en la primera: PE-rents, y la «s» final se oye.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.my-sister-is-a-teacher",
+      "text": "My sister is a teacher.",
+      "es": "Mi hermana es profesora.",
+      "explanation": "Para contar a qué se dedica alguien de tu familia. «teacher» con «i» larga: «TII-cher».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.do-you-have-kids",
+      "text": "Do you have kids?",
+      "es": "¿Tienes hijos?",
+      "explanation": "Pregunta habitual al conocerse un poco más. «kids» termina en «dz»: «kidz».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.how-old-is-she",
+      "text": "How old is she?",
+      "es": "¿Cuántos años tiene?",
+      "explanation": "En inglés la edad se «es», no se «tiene». «old» suena «ould».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.shes-thirty",
+      "text": "She's thirty.",
+      "es": "Tiene treinta años.",
+      "explanation": "Nunca «She has thirty». «thirty» con «th» como la «z» de España y flap t: «ZER-di».",
+      "register": "neutral",
+      "situation": "presentarse"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "a2-about-me.name",
+      "word": "name",
+      "article": "a",
+      "plural": "names",
+      "es": "el nombre",
+      "example": "a2-about-me.my-name-is",
+      "situation": "presentarse",
+      "image": "fluent:name-badge"
+    },
+    {
+      "id": "a2-about-me.first-name",
+      "word": "first name",
+      "article": "a",
+      "plural": "first names",
+      "es": "el nombre de pila",
+      "notes": "En los formularios: «first name» (nombre) y «last name» (apellido).",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.last-name",
+      "word": "last name",
+      "article": "a",
+      "plural": "last names",
+      "es": "el apellido",
+      "example": "a2-about-me.my-last-name-is",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.spain",
+      "word": "Spain",
+      "es": "España",
+      "notes": "Los países no llevan artículo: «I'm from Spain».",
+      "example": "a2-about-me.im-from-spain",
+      "situation": "presentarse",
+      "tags": [
+        "paises"
+      ]
+    },
+    {
+      "id": "a2-about-me.country",
+      "word": "country",
+      "article": "a",
+      "plural": "countries",
+      "es": "el país",
+      "situation": "presentarse",
+      "image": "fluent:globe-showing-europe-africa"
+    },
+    {
+      "id": "a2-about-me.city",
+      "word": "city",
+      "article": "a",
+      "plural": "cities",
+      "es": "la ciudad",
+      "situation": "presentarse",
+      "image": "fluent:cityscape"
+    },
+    {
+      "id": "a2-about-me.neighborhood",
+      "word": "neighborhood",
+      "article": "a",
+      "plural": "neighborhoods",
+      "es": "el barrio",
+      "notes": "Ortografía de EE. UU.: «neighborhood», sin «u».",
+      "situation": "presentarse",
+      "image": "fluent:houses"
+    },
+    {
+      "id": "a2-about-me.programmer",
+      "word": "programmer",
+      "article": "a",
+      "plural": "programmers",
+      "es": "el programador",
+      "example": "a2-about-me.im-a-programmer",
+      "situation": "presentarse",
+      "image": "fluent:technologist"
+    },
+    {
+      "id": "a2-about-me.computer",
+      "word": "computer",
+      "article": "a",
+      "plural": "computers",
+      "es": "el ordenador",
+      "notes": "Un portátil es «a laptop».",
+      "example": "a2-about-me.i-write-code",
+      "situation": "presentarse",
+      "image": "fluent:laptop"
+    },
+    {
+      "id": "a2-about-me.app",
+      "word": "app",
+      "article": "an",
+      "plural": "apps",
+      "es": "la aplicación",
+      "example": "a2-about-me.i-write-code",
+      "situation": "presentarse",
+      "image": "fluent:mobile-phone"
+    },
+    {
+      "id": "a2-about-me.company",
+      "word": "company",
+      "article": "a",
+      "plural": "companies",
+      "es": "la empresa",
+      "example": "a2-about-me.i-work-for-a-small-company",
+      "situation": "presentarse",
+      "image": "fluent:office-building"
+    },
+    {
+      "id": "a2-about-me.job",
+      "word": "job",
+      "article": "a",
+      "plural": "jobs",
+      "es": "el trabajo (el empleo)",
+      "notes": "«job» es tu empleo; «work» es el trabajo en general (incontable).",
+      "example": "a2-about-me.i-like-my-job",
+      "situation": "presentarse",
+      "image": "fluent:briefcase"
+    },
+    {
+      "id": "a2-about-me.coworker",
+      "word": "coworker",
+      "article": "a",
+      "plural": "coworkers",
+      "es": "el compañero de trabajo",
+      "situation": "presentarse",
+      "image": "fluent:busts-in-silhouette"
+    },
+    {
+      "id": "a2-about-me.teacher",
+      "word": "teacher",
+      "article": "a",
+      "plural": "teachers",
+      "es": "el profesor",
+      "example": "a2-about-me.my-sister-is-a-teacher",
+      "situation": "presentarse",
+      "image": "fluent:teacher"
+    },
+    {
+      "id": "a2-about-me.doctor",
+      "word": "doctor",
+      "article": "a",
+      "plural": "doctors",
+      "es": "el médico",
+      "situation": "presentarse",
+      "image": "fluent:health-worker"
+    },
+    {
+      "id": "a2-about-me.nurse",
+      "word": "nurse",
+      "article": "a",
+      "plural": "nurses",
+      "es": "el enfermero",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.engineer",
+      "word": "engineer",
+      "article": "an",
+      "plural": "engineers",
+      "es": "el ingeniero",
+      "notes": "Empieza por vocal: «an engineer».",
+      "example": "a2-about-me.hes-an-engineer",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.student",
+      "word": "student",
+      "article": "a",
+      "plural": "students",
+      "es": "el estudiante",
+      "situation": "presentarse",
+      "image": "fluent:student"
+    },
+    {
+      "id": "a2-about-me.language",
+      "word": "language",
+      "article": "a",
+      "plural": "languages",
+      "es": "el idioma",
+      "example": "a2-about-me.what-languages-do-you-speak",
+      "situation": "presentarse",
+      "image": "fluent:speaking-head"
+    },
+    {
+      "id": "a2-about-me.english",
+      "word": "English",
+      "es": "el inglés",
+      "notes": "Los idiomas van con mayúscula y sin artículo.",
+      "example": "a2-about-me.im-learning-english",
+      "situation": "presentarse",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "a2-about-me.spanish",
+      "word": "Spanish",
+      "es": "el español",
+      "example": "a2-about-me.i-speak-spanish-and-english",
+      "situation": "presentarse",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "a2-about-me.french",
+      "word": "French",
+      "es": "el francés",
+      "situation": "presentarse",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "a2-about-me.mistake",
+      "word": "mistake",
+      "article": "a",
+      "plural": "mistakes",
+      "es": "el error",
+      "notes": "Se dice «make a mistake», no «do a mistake».",
+      "example": "a2-about-me.please-correct-me",
+      "situation": "presentarse",
+      "image": "fluent:cross-mark"
+    },
+    {
+      "id": "a2-about-me.family",
+      "word": "family",
+      "article": "a",
+      "plural": "families",
+      "es": "la familia",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.parents",
+      "word": "parents",
+      "es": "los padres",
+      "notes": "«parents» son padre y madre; «relatives» son los parientes.",
+      "example": "a2-about-me.my-parents-live-in-madrid",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.mom",
+      "word": "mom",
+      "article": "a",
+      "es": "la madre (mamá)",
+      "notes": "«mom» es lo normal hablando; «mother» es más formal.",
+      "situation": "presentarse",
+      "image": "fluent:woman"
+    },
+    {
+      "id": "a2-about-me.dad",
+      "word": "dad",
+      "article": "a",
+      "es": "el padre (papá)",
+      "notes": "«dad» es lo normal hablando; «father» es más formal.",
+      "situation": "presentarse",
+      "image": "fluent:man"
+    },
+    {
+      "id": "a2-about-me.brother",
+      "word": "brother",
+      "article": "a",
+      "plural": "brothers",
+      "es": "el hermano",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.sister",
+      "word": "sister",
+      "article": "a",
+      "plural": "sisters",
+      "es": "la hermana",
+      "example": "a2-about-me.my-sister-is-a-teacher",
+      "situation": "presentarse"
+    },
+    {
+      "id": "a2-about-me.kids",
+      "word": "kids",
+      "es": "los hijos (los niños)",
+      "notes": "«kids» es lo habitual hablando; «children» es más formal.",
+      "situation": "presentarse",
+      "image": "fluent:child"
+    },
+    {
+      "id": "a2-about-me.grandparents",
+      "word": "grandparents",
+      "es": "los abuelos",
+      "situation": "presentarse",
+      "image": "fluent:old-woman"
+    }
+  ],
+  "qa": [
+    {
+      "id": "a2-about-me.qa.whats-your-name",
+      "question": "Hi, I'm Maya. What's your name?",
+      "questionEs": "Hola, soy Maya. ¿Cómo te llamas?",
+      "accepted": [
+        {
+          "text": "I'm Hernán. Nice to meet you.",
+          "es": "Soy Hernán. Encantado."
+        },
+        {
+          "text": "My name is Hernán.",
+          "es": "Me llamo Hernán."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Your name is Hernán.",
+          "es": "Tu nombre es Hernán."
+        },
+        {
+          "text": "I'm fine, thanks.",
+          "es": "Estoy bien, gracias."
+        }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "Hablas de ti: «my name», no «your name»; «I'm fine» contesta a «How are you?».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "a2-about-me.qa.spell",
+      "question": "Could you spell your last name, please?",
+      "questionEs": "¿Podría deletrear su apellido, por favor?",
+      "accepted": [
+        {
+          "text": "Sure. It's D-I-A-Z.",
+          "es": "Claro. Es D-I-A-Z."
+        },
+        {
+          "text": "D-I-A-Z, Díaz.",
+          "es": "D-I-A-Z, Díaz."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "My last name is Hernán.",
+          "es": "Mi apellido es Hernán."
+        },
+        {
+          "text": "Yes, I can spell.",
+          "es": "Sí, sé deletrear."
+        }
+      ],
+      "register": "formal",
+      "situation": "presentarse",
+      "notes": "Te piden las letras: deletréalas. «Hernán» es el nombre, no el apellido.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-about-me.qa.where-from",
+      "question": "So, where are you from?",
+      "questionEs": "Bueno, ¿de dónde eres?",
+      "accepted": [
+        {
+          "text": "I'm from Spain, from Madrid.",
+          "es": "Soy de España, de Madrid."
+        },
+        {
+          "text": "I'm Spanish. I'm from Madrid.",
+          "es": "Soy español. Soy de Madrid."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I'm from Spanish.",
+          "es": "Soy de español."
+        },
+        {
+          "text": "I'm going to Spain.",
+          "es": "Voy a España."
+        }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "«from» va con el país (Spain); «Spanish» es la nacionalidad, sin «from».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "a2-about-me.qa.what-do-you-do",
+      "question": "And what do you do, Hernán?",
+      "questionEs": "¿Y tú a qué te dedicas, Hernán?",
+      "accepted": [
+        {
+          "text": "I'm a programmer. I work from home.",
+          "es": "Soy programador. Trabajo desde casa."
+        },
+        {
+          "text": "I'm a software developer.",
+          "es": "Soy desarrollador de software."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I'm programmer.",
+          "es": "Soy programador."
+        },
+        {
+          "text": "I'm doing my homework.",
+          "es": "Estoy haciendo los deberes."
+        }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "Con la profesión va «a»: «I'm a programmer». «What do you do?» pregunta por tu trabajo.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-about-me.qa.job-of-sister",
+      "question": "What does your sister do?",
+      "questionEs": "¿A qué se dedica tu hermana?",
+      "accepted": [
+        {
+          "text": "She's a teacher.",
+          "es": "Es profesora."
+        },
+        {
+          "text": "She's a nurse in Madrid.",
+          "es": "Es enfermera en Madrid."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "She's teacher.",
+          "es": "Es profesora."
+        },
+        {
+          "text": "He's a teacher.",
+          "es": "Él es profesor."
+        }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "Hablas de tu hermana: «she», y la profesión con «a».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "a2-about-me.qa.languages",
+      "question": "What languages do you speak?",
+      "questionEs": "¿Qué idiomas hablas?",
+      "accepted": [
+        {
+          "text": "Spanish and some English.",
+          "es": "Español y algo de inglés."
+        },
+        {
+          "text": "I speak Spanish and a little English.",
+          "es": "Hablo español y un poco de inglés."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I speak Spain and English.",
+          "es": "Hablo España e inglés."
+        },
+        {
+          "text": "I'm from Spain.",
+          "es": "Soy de España."
+        }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "El idioma es «Spanish»; «Spain» es el país.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "a2-about-me.qa.why-english",
+      "question": "Why are you learning English?",
+      "questionEs": "¿Por qué aprendes inglés?",
+      "accepted": [
+        {
+          "text": "I need it for work.",
+          "es": "Lo necesito para el trabajo."
+        },
+        {
+          "text": "For work, and to travel more.",
+          "es": "Por trabajo y para viajar más."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Because I'm English.",
+          "es": "Porque soy inglés."
+        },
+        {
+          "text": "I learn English since a year.",
+          "es": "Aprendo inglés desde hace un año."
+        }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "Te preguntan el motivo; «since a year» es un error típico (se dice «for a year»).",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "a2-about-me.qa.your-english-is-good",
+      "question": "Wow, your English is really good!",
+      "questionEs": "¡Vaya, hablas muy bien inglés!",
+      "accepted": [
+        {
+          "text": "Thanks! I'm trying.",
+          "es": "¡Gracias! Lo intento."
+        },
+        {
+          "text": "Thank you, that's very kind.",
+          "es": "Gracias, muy amable."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "You're welcome.",
+          "es": "De nada."
+        },
+        {
+          "text": "Yes, I'm very good.",
+          "es": "Sí, soy muy bueno."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "A un cumplido se responde «Thanks!»; «You're welcome» contesta a «Thank you».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "a2-about-me.qa.siblings",
+      "question": "Do you have any brothers or sisters?",
+      "questionEs": "¿Tienes hermanos?",
+      "accepted": [
+        {
+          "text": "Yes, I have one sister.",
+          "es": "Sí, tengo una hermana."
+        },
+        {
+          "text": "No, I'm an only child.",
+          "es": "No, soy hijo único."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I have two brother.",
+          "es": "Sí, tengo dos hermano."
+        },
+        {
+          "text": "My parents live in Madrid.",
+          "es": "Mis padres viven en Madrid."
+        }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "El plural lleva «-s»: «two brothers». Te preguntan por hermanos, no por tus padres.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "a2-about-me.qa.how-old",
+      "question": "How old is your sister?",
+      "questionEs": "¿Cuántos años tiene tu hermana?",
+      "accepted": [
+        {
+          "text": "She's thirty.",
+          "es": "Tiene treinta años."
+        },
+        {
+          "text": "She's thirty years old.",
+          "es": "Tiene treinta años."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "She has thirty years.",
+          "es": "Tiene treinta años."
+        },
+        {
+          "text": "He's thirty.",
+          "es": "Él tiene treinta años."
+        }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "La edad va con «be»: «She's thirty». Hablas de tu hermana: «she».",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}
