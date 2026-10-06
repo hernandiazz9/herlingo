@@ -7,10 +7,15 @@ import { dialogueXp } from "@/lib/exercises";
 import { countPlay, recordActivity, repeatXp } from "@/lib/progress/activity";
 import { DialoguePlayer } from "./DialoguePlayer";
 
-/** "Trato de tú", or "Trato de usted (Lei)" / "(Vous)" for the pack's formal register; neutral = none. */
-function registerLabel(register: string): string {
-  if (register === "tu") return "Trato de tú";
+/**
+ * "Trato de tú", or "Trato de usted (Lei)" / "(Vous)" for the pack's formal register; a pack whose
+ * formal register is the generic `formal` (no polite pronoun) says "Registro informal" /
+ * "Registro formal"; neutral = none.
+ */
+function registerLabel(register: string, formalRegister: string): string {
   if (register === "neutral") return "";
+  if (formalRegister === "formal") return register === "tu" ? "Registro informal" : "Registro formal";
+  if (register === "tu") return "Trato de tú";
   return `Trato de usted (${register.charAt(0).toUpperCase()}${register.slice(1)})`;
 }
 
@@ -53,7 +58,7 @@ export function DialogueSimulator({ id, lang }: { id: string; lang: string }) {
           ) : null}
           {dialogue.description ? <p className="text-lg text-ink">{dialogue.description}</p> : null}
           <p className="text-sm text-ink-muted">
-            {[registerLabel(dialogue.register), `${answers} respuestas`].filter(Boolean).join(" · ")}
+            {[registerLabel(dialogue.register, pack.meta.formalRegister), `${answers} respuestas`].filter(Boolean).join(" · ")}
           </p>
         </>
       }

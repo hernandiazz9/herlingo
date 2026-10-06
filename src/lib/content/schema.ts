@@ -27,13 +27,22 @@ export const ImageKey = z
   .regex(IMAGE_KEY_PATTERN, 'image must be "fluent:<icon-name>" or "custom:<slug>" (lowercase a-z0-9 joined by single "-")');
 
 /**
- * Target-language register: tu = informal, lei / vous = formal (each pack allows only its own
- * `formalRegister`, checked by `content:check`), neutral = either.
+ * Target-language register: tu = informal, lei / vous / formal = formal (each pack allows only its
+ * own `formalRegister`, checked by `content:check`), neutral = either.
  */
-export const Register = z.enum(["tu", "lei", "vous", "neutral"]);
+export const Register = z.enum(["tu", "lei", "vous", "formal", "neutral"]);
 
-/** Formal register of a pack (`pack.json` `formalRegister`): Italian `lei`, French `vous`. */
-export const FormalRegister = z.enum(["lei", "vous"]);
+/**
+ * Formal register of a pack (`pack.json` `formalRegister`): Italian `lei`, French `vous`;
+ * `formal` for a language without a polite pronoun (polite or formal wording instead).
+ */
+export const FormalRegister = z.enum(["lei", "vous", "formal"]);
+
+/** CEFR level (stories; units, dialogues and placement questions of a pack with `levels`). */
+export const Level = z.enum(["A1", "A2", "B1", "B2", "C1", "C2"]);
+
+/** Lower-case text (`equivalents` keys and values are compared after lower-casing the answer). */
+const LowerText = Text.refine((s) => s === s.toLocaleLowerCase(), "must be lower case");
 
 // ---------------------------------------------------------------------------------------------
 // Pack meta: content/<lang>/pack.json
@@ -76,6 +85,17 @@ export const PackMeta = z.object({
   formalRegister: FormalRegister,
   /** Definite articles allowed in vocab `article`, as written ("il", "l'", …). */
   articles: z.array(Text).min(1),
+  /**
+   * CEFR levels of a pack split by level, in order (`["A2", "B1"]`). With `levels`, every unit,
+   * dialogue, story and placement question has a `level` from this list; without it (one course),
+   * units, dialogues and placement questions have no `level`.
+   */
+  levels: z.array(Level).min(1).optional(),
+  /**
+   * Equivalent spellings for answer and speech matching, lower case: contracted → full form
+   * (`"i'm": "i am"`). Applied to both sides before comparing.
+   */
+  equivalents: z.record(LowerText, LowerText).optional(),
 });
 
 // ---------------------------------------------------------------------------------------------
@@ -216,6 +236,8 @@ export const UnitFile = z.object({
   description: Text.optional(),
   emoji: Text.optional(),
   situation: Id,
+  /** CEFR level: required when pack.json has `levels` (one of them), not allowed otherwise. */
+  level: Level.optional(),
   lessons: z.array(Lesson).min(1, "a unit needs at least one lesson"),
   ...ItemArrays,
 });
@@ -233,6 +255,8 @@ export const PlacementQuestion = z.object({
   /** Lesson ids marked as done when the learner answers correctly. */
   lessons: z.array(Id).min(1),
   voice: Text.optional(),
+  /** CEFR level: required when pack.json has `levels` (one of them), not allowed otherwise. */
+  level: Level.optional(),
 });
 
 /** content/<lang>/extras/*.json — items not owned by a unit (phrasebook-only, Sicilian, placement). */
@@ -279,6 +303,8 @@ export const DialogueFile = z.object({
   /** Sort key inside the dialogues list (defaults to 0, ties sorted by id). */
   order: z.number().int().min(0).default(0),
   register: Register,
+  /** CEFR level: required when pack.json has `levels` (one of them), not allowed otherwise. */
+  level: Level.optional(),
   /**
    * Speaker avatars: native turn `name` → picture key (`fluent:man-cook`). Every key must be the
    * `name` of a native turn of this dialogue. The learner has no avatar.
@@ -290,9 +316,6 @@ export const DialogueFile = z.object({
 // ---------------------------------------------------------------------------------------------
 // Stories: content/<lang>/stories/*.json
 // ---------------------------------------------------------------------------------------------
-
-/** CEFR level of a story. */
-export const Level = z.enum(["A1", "A2", "B1"]);
 
 export const StorySentence = z.object({
   /** Local id, unique inside the story: `s1`, `s2`… */
@@ -355,6 +378,7 @@ export const StoryFile = z.object({
   description: Text.optional(),
   emoji: Text.optional(),
   situation: Id,
+  /** CEFR level; with pack.json `levels`, one of them. */
   level: Level,
   /** Narrator voice (sentences, questions, options); defaults to the first pack voice. */
   voice: Text.optional(),

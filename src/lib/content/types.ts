@@ -12,6 +12,15 @@ import type * as S from "./schema";
 export type Register = z.infer<typeof S.Register>;
 export type Situation = z.infer<typeof S.Situation>;
 export type PackMeta = z.infer<typeof S.PackMeta>;
+export type Level = z.infer<typeof S.Level>;
+
+/**
+ * Derived CEFR level of an item: the level of the unit that defines it (or of the story, for an
+ * inline story key word) in a pack with `levels`. Absent in packs without levels and for extras.
+ */
+export interface Levelled {
+  level?: Level;
+}
 
 /** Anything that can be spoken: pass it to `speak()`. */
 export interface Playable {
@@ -38,7 +47,7 @@ export interface ImageRef {
   dark?: boolean;
 }
 
-export type Phrase = Omit<z.infer<typeof S.Phrase>, "voice"> & Playable & { kind: "phrase" };
+export type Phrase = Omit<z.infer<typeof S.Phrase>, "voice"> & Playable & Levelled & { kind: "phrase" };
 
 /**
  * `text` = article + word as spoken ("il biglietto", "l'orario"); `word` = bare word.
@@ -46,7 +55,8 @@ export type Phrase = Omit<z.infer<typeof S.Phrase>, "voice"> & Playable & { kind
  * `image` = the resolved picture, only when its file exists (use `image`, not `imageKey`, in UI).
  */
 export type Vocab = Omit<z.infer<typeof S.Vocab>, "voice" | "image"> &
-  Playable & { kind: "vocab"; imageKey?: string; image?: ImageRef };
+  Playable &
+  Levelled & { kind: "vocab"; imageKey?: string; image?: ImageRef };
 
 /** A vocab item that has a picture (see `listVocab({ withImage: true })`, `hasImage()`). */
 export type PicturedVocab = Vocab & { image: ImageRef };
@@ -55,14 +65,16 @@ export type Reply = z.infer<typeof S.Reply> & Playable;
 
 /** `text`/`audioKey`/`voice` refer to the question. Replies are playable too. */
 export type QA = Omit<z.infer<typeof S.QA>, "voice" | "accepted" | "distractors"> &
-  Playable & { kind: "qa"; accepted: Reply[]; distractors: Reply[] };
+  Playable &
+  Levelled & { kind: "qa"; accepted: Reply[]; distractors: Reply[] };
 
-export type GrammarCard = Omit<z.infer<typeof S.GrammarCard>, "examples"> & {
+export type GrammarCard = Omit<z.infer<typeof S.GrammarCard>, "examples"> &
+  Levelled & {
   kind: "grammar";
   examples: Reply[];
 };
 
-export type Expression = Omit<z.infer<typeof S.Expression>, "voice"> & Playable & { kind: "expression" };
+export type Expression = Omit<z.infer<typeof S.Expression>, "voice"> & Playable & Levelled & { kind: "expression" };
 
 export type LessonItem = Phrase | Vocab | QA | GrammarCard | Expression;
 export type LessonItemKind = LessonItem["kind"];
@@ -85,6 +97,8 @@ export interface Unit {
   description?: string;
   emoji?: string;
   situation: string;
+  /** CEFR level (packs with `levels` only). */
+  level?: Level;
   lessons: Lesson[];
 }
 
@@ -104,8 +118,6 @@ export type PlacementQuestion = Omit<z.infer<typeof S.PlacementQuestion>, "voice
   /** Present only when the question has `text`. */
   audio?: Playable;
 };
-
-export type Level = z.infer<typeof S.Level>;
 
 /** Audio key `<storyId>--<sentenceId>`; voice = sentence voice or story voice. */
 export type StorySentence = Omit<z.infer<typeof S.StorySentence>, "voice"> & Playable;

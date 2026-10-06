@@ -80,15 +80,31 @@ leave gaps:
 **pack.json**: `default?` (`true` on exactly one pack), `lang` (= folder name), `name` (in
 Spanish, "Francés"), `nativeName` ("Français"), `emoji?` (flag shown by the language picker, 🇫🇷),
 `speechLocale` (`it-IT`), `voices` (edge-tts voice names; the first is the default),
-`formalRegister` (`lei` | `vous`: the formal register this pack's items use), `articles` (definite
-articles allowed in vocab `article`: Italian `il lo la l' i gli le`, French `le la l' les`),
+`formalRegister` (`lei` | `vous` | `formal`: the formal register this pack's items use; `formal`
+is the generic value for a language with no polite pronoun, like English, where it marks polite
+or formal wording), `articles` (articles allowed in vocab `article`: Italian `il lo la l' i gli
+le`, French `le la l' les`, English `a an`),
 `numberWords` (optional, `{ "40": "quaranta", … }`: speech recognition often returns digits, so
 spoken answers are compared with digits written out with these words), `situations`
 (`{ id, title, emoji? }`, phrasebook sections in display order). If you need a new situation, add
 one line here.
 
+- `levels?`: CEFR levels of a pack **split by level**, in order (`["A2", "B1"]`; values `A1` `A2`
+  `B1` `B2` `C1` `C2`). With `levels`, every unit, dialogue, story and placement question must
+  have a `level` from this list, and the learner picks a level per language. A phrase / vocab /
+  Q&A / grammar card's level is the level of the unit that defines it (derived, never written;
+  inline story key words take the story's level). Without `levels` the pack is one course and
+  units, dialogues and placement questions must **not** have `level` (stories keep theirs).
+  Only English uses it today (docs/brief-en.md: levels, unit ids and order ranges per level).
+- `equivalents?`: `{ "i'm": "i am", "don't": "do not", … }`, lower case, contracted form → full
+  form. Answer and speech matching apply it to both sides, so "I am" and "I'm" count as the same.
+
+A pack with no units yet is valid (`content:check` reports it as empty) and stays hidden from the
+language picker until it has a unit.
+
 **Unit file** (`units/*.json`): `id`, `order`, `title`, `description?`, `emoji?`, `situation`,
-`lessons`, plus the item arrays `phrases`, `vocab`, `qa`, `grammar`, `expressions` (each optional).
+`level` (only in a pack with `levels`, see above), `lessons`, plus the item arrays `phrases`,
+`vocab`, `qa`, `grammar`, `expressions` (each optional).
 
 - **Lesson**: `id`, `title`, `items` — ids (at least 1) of phrases, vocab, Q&A, grammar cards or
   expressions, in teaching order. Items may come from any file of the pack. Aim for ~5 minutes:
@@ -99,7 +115,8 @@ one line here.
 
 - **Phrase**: `id`, `text` (target language, as spoken), `es`, `literal?` (word for word, only when
   it helps), `notes?` (short Spanish usage note), `explanation?` (see below), `register`
-  (`tu` | `neutral` | the pack's `formalRegister`: `lei` in Italian, `vous` in French),
+  (`tu` | `neutral` | the pack's `formalRegister`: `lei` in Italian, `vous` in French, `formal`
+  in English),
   `situation`, `tags?`, `voice?`.
 - **Phrase `explanation`** (shown on the Jugar discovery cards; the UI falls back to `notes`):
   Spain Spanish with "tú", **1–2 short lines, max ~200 characters**: (1) when you use it, concrete
@@ -119,7 +136,8 @@ one line here.
   `standard?` (standard Italian equivalent), `notes?`, `tags?`, `voice?`.
 
 **Dialogue file** (`dialogues/*.json`): `id`, `title`, `description?`, `situation`, `unit?`
-(unit id it belongs with), `order?` (sort key), `register`, `avatars?` (native speaker `name` →
+(unit id it belongs with), `order?` (sort key), `register`, `level` (only in a pack with
+`levels`), `avatars?` (native speaker `name` →
 picture key, see "Pictures"), `turns` (≥ 2, at least one learner turn).
 Turn ids must be unique inside the dialogue (`n1`, `l1`, `n2`…).
 
@@ -132,7 +150,8 @@ Turn ids must be unique inside the dialogue (`n1`, `l1`, `n2`…).
 plus `placement`:
 
 - **Placement question**: `id`, `prompt` (Spanish), `text?` (target text shown and played),
-  `options` (≥ 2), `answer` (0-based index), `lessons` (lesson ids marked done if correct).
+  `options` (≥ 2), `answer` (0-based index), `lessons` (lesson ids marked done if correct),
+  `level` (only in a pack with `levels`: the level the question tests).
 
 **Story file** (`stories/*.json`, one per file; e.g. `stories/01-arrivo-a-palermo.json`):
 
@@ -143,7 +162,7 @@ plus `placement`:
 | `title` / `titleEs` | Title in the target language / in Spanish. |
 | `description?`, `emoji?` | One Spanish line for the list; one emoji. |
 | `situation` | Situation id from pack.json. |
-| `level` | `A1` \| `A2` \| `B1`. |
+| `level` | `A1` \| `A2` \| `B1` \| `B2` \| `C1` \| `C2`; in a pack with `levels`, one of them. |
 | `voice?` | Narrator voice (sentences, questions, options); default = first pack voice. |
 | `sentences` | `[{ id, text, es, voice? }]` in reading order. `text` = one target-language sentence (≤ ~15 words); `es` = natural Spain-Spanish translation; `voice?` for a character's line (a pack voice other than the narrator's). |
 | `keywords` | Key words/expressions. Each entry is either **an existing item id** (vocab, phrase or expression anywhere in the pack: look it up and reuse it) or **a new vocab item written inline** (same fields as Vocab, id `story-<slug>`). Inline items become normal pack vocab: another story reuses them by id. |
@@ -262,7 +281,9 @@ Custom SVGs must sit next to Fluent Emoji Flat icons without looking foreign:
 
 Schema (types, required fields, non-empty text, id format), unique ids across every pack,
 exactly one default pack, `register` limited to `tu`, `neutral` and the pack's `formalRegister`,
-vocab `article` limited to the pack's `articles`, unique unit `order`, known situations and voices, lesson items that exist and are lesson-item kinds,
+vocab `article` limited to the pack's `articles`, `level` required on units, dialogues, stories
+and placement questions of a pack with `levels` (one of them) and not allowed on units, dialogues
+and placement questions of a pack without them, unique unit `order`, known situations and voices, lesson items that exist and are lesson-item kinds,
 non-empty lessons and units, `vocab.example` is a phrase, `dialogue.unit` is a unit, learner turns
 have a correct option, placement answers in range and lessons that exist. Stories: unique
 `order`, unique local ids, inline key words prefixed `story-`, key words that exist and are vocab /
@@ -280,6 +301,9 @@ drawings not drawn yet are ⚠ warnings.
   Correct accents and apostrophes (`caffè`, `perché`, `un'acqua`, `l'orario`).
 - **Register is honest**: `lei` with strangers and staff, `tu` with peers, `neutral` only when the
   phrase has no verb/pronoun marking. Q&A replies and dialogue options match the register.
+  English (`formal`): mostly `neutral`, `formal` for polite or formal wording ("Could you…",
+  "I would like…"), `tu` for casual wording with friends; see docs/brief-en.md. The dialogue badge
+  then says "Registro formal" / "Registro informal" instead of "Trato de usted" / "Trato de tú".
 - **Spanish** is natural Spain Spanish ("billete", "coger el tren", "vale"), not a calque; put
   the calque in `literal` if it helps.
 - **Distractors and wrong options are plausible** (typical learner mistakes), never absurd, and

@@ -17,6 +17,7 @@ import type {
   ImageRef,
   Lesson,
   LessonItem,
+  Level,
   Pack,
   PackMeta,
   PicturedVocab,
@@ -73,6 +74,15 @@ export function getPack(lang: string = DEFAULT_LANG): Pack {
 /** The pack's language name to use inside a Spanish sentence: "italiano", "francés". */
 export function languageName(lang: string): string {
   return getPack(lang).meta.name.toLocaleLowerCase("es");
+}
+
+/**
+ * The pack's CEFR levels in order (`pack.json` `levels`), or [] for a pack that is one course.
+ * In a levelled pack, units, dialogues, stories, placement questions and items carry `level`
+ * (an item's level is the level of the unit that defines it, derived by `content:build`).
+ */
+export function getLevels(pack: Pack = getPack()): Level[] {
+  return pack.meta.levels ?? [];
 }
 
 interface Index {

@@ -11,6 +11,7 @@ import type {
   GrammarCard,
   ImageRef,
   LessonItemKind,
+  Level,
   Pack,
   Phrase,
   PlacementQuestion,
@@ -126,6 +127,23 @@ export function buildPack(src: PackSources): BuildResult {
       errors.push(`${where}: register "${register}" is not allowed in this pack (use ${[...registers].map((r) => `"${r}"`).join(", ")})`);
     }
   };
+  // Levels: a pack with `levels` puts a level on every unit, dialogue, story and placement
+  // question; a pack without them is one course (stories keep their own informative level).
+  const levels = new Set<string>(meta.levels ?? []);
+  if (meta.levels && levels.size !== meta.levels.length) errors.push(`${src.meta.file}: duplicate level in "levels"`);
+  const levelList = (meta.levels ?? []).map((l) => `"${l}"`).join(", ");
+  /** Checks `level` and returns the level to store (undefined in a pack without levels). */
+  const checkLevel = (level: Level | undefined, where: string, optionalWithoutLevels = false): Level | undefined => {
+    if (!meta.levels) {
+      if (level !== undefined && !optionalWithoutLevels) {
+        errors.push(`${where}: "level" is only allowed when pack.json has "levels"`);
+      }
+      return undefined;
+    }
+    if (level === undefined) errors.push(`${where}: "level" is required (pack.json levels: ${levelList})`);
+    else if (!levels.has(level)) errors.push(`${where}: level "${level}" is not in pack.json levels (${levelList})`);
+    return level;
+  };
   const articles = new Set(meta.articles);
   const checkArticle = (article: string | undefined, where: string) => {
     if (article !== undefined && !articles.has(article)) {
@@ -142,7 +160,7 @@ export function buildPack(src: PackSources): BuildResult {
 
   const resolveImage = (key: string | undefined) => (key ? src.resolveImage?.(key) : undefined);
 
-  const addVocab = (file: string, v: z.infer<typeof S.Vocab>) => {
+  const addVocab = (file: string, v: z.infer<typeof S.Vocab>, level?: Level) => {
     const where = `${file}: vocab "${v.id}"`;
     claim(v.id, "vocab", file);
     checkSituation(v.situation, where);
@@ -150,6 +168,7 @@ export function buildPack(src: PackSources): BuildResult {
     const { image: imageKey, ...rest } = v;
     vocab.push({
       ...rest,
+      ...(level ? { level } : {}),
       kind: "vocab",
       text: vocabText(v.word, v.article),
       audioKey: audioKey(v.id),
@@ -159,15 +178,17 @@ export function buildPack(src: PackSources): BuildResult {
     });
   };
 
-  const addItems = (file: string, f: z.infer<typeof S.ExtrasFile> | z.infer<typeof S.UnitFile>) => {
+  /** Registers a file's items; `level` = the defining unit's level (packs with `levels`). */
+  const addItems = (file: string, f: z.infer<typeof S.ExtrasFile> | z.infer<typeof S.UnitFile>, level?: Level) => {
+    const lv = level ? { level } : {};
     for (const p of f.phrases) {
       const where = `${file}: phrase "${p.id}"`;
       claim(p.id, "phrase", file);
       checkSituation(p.situation, where);
       checkRegister(p.register, where);
-      phrases.push({ ...p, kind: "phrase", audioKey: audioKey(p.id), voice: checkVoice(p.voice, where) });
+      phrases.push({ ...p, ...lv, kind: "phrase", audioKey: audioKey(p.id), voice: checkVoice(p.voice, where) });
     }
-    for (const v of f.vocab) addVocab(file, v);
+    for (const v of f.vocab) addVocab(file, v, level);
     for (const q of f.qa) {
       const where = `${file}: qa "${q.id}"`;
       claim(q.id, "qa", file);
@@ -176,6 +197,7 @@ export function buildPack(src: PackSources): BuildResult {
       const voice = checkVoice(q.voice, where);
       qa.push({
         ...q,
+        ...lv,
         kind: "qa",
         text: q.question,
         audioKey: audioKey(q.id, "q"),
@@ -188,6 +210,7 @@ export function buildPack(src: PackSources): BuildResult {
       claim(g.id, "grammar", file);
       grammar.push({
         ...g,
+        ...lv,
         kind: "grammar",
         examples: g.examples.map((e, i) => ({ ...e, audioKey: audioKey(g.id, `e${i + 1}`), voice: defaultVoice })),
       });
@@ -195,7 +218,7 @@ export function buildPack(src: PackSources): BuildResult {
     for (const x of f.expressions) {
       const where = `${file}: expression "${x.id}"`;
       claim(x.id, "expression", file);
-      expressions.push({ ...x, kind: "expression", audioKey: audioKey(x.id), voice: checkVoice(x.voice, where) });
+      expressions.push({ ...x, ...lv, kind: "expression", audioKey: audioKey(x.id), voice: checkVoice(x.voice, where) });
     }
   };
 
@@ -207,11 +230,12 @@ export function buildPack(src: PackSources): BuildResult {
     if (!u) continue;
     claim(u.id, "unit", s.file);
     checkSituation(u.situation, `${s.file}: unit "${u.id}"`);
+    const level = checkLevel(u.level, `${s.file}: unit "${u.id}"`);
     const clash = unitOrders.get(u.order);
     if (clash) errors.push(`${s.file}: unit order ${u.order} already used by unit "${clash}"`);
     unitOrders.set(u.order, u.id);
     for (const l of u.lessons) claim(l.id, "lesson", s.file);
-    addItems(s.file, u);
+    addItems(s.file, u, level);
     units.push({
       id: u.id,
       order: u.order,
@@ -219,6 +243,7 @@ export function buildPack(src: PackSources): BuildResult {
       description: u.description,
       emoji: u.emoji,
       situation: u.situation,
+      ...(level ? { level } : {}),
       lessons: u.lessons.map((l, index) => ({ ...l, unitId: u.id, index })),
     });
   }
@@ -245,6 +270,7 @@ export function buildPack(src: PackSources): BuildResult {
     claim(d.id, "dialogue", s.file);
     checkSituation(d.situation, where);
     checkRegister(d.register, where);
+    checkLevel(d.level, where);
     rawDialogueUnits.push({ file: s.file, id: d.id, unit: d.unit });
     const turnIds = new Set<string>();
     const turns: Dialogue["turns"] = d.turns.map((t) => {
@@ -284,6 +310,7 @@ export function buildPack(src: PackSources): BuildResult {
     const where = `${s.file}: story "${st.id}"`;
     claim(st.id, "story", s.file);
     checkSituation(st.situation, where);
+    const storyLevel = checkLevel(st.level, where, true);
     const clash = storyOrders.get(st.order);
     if (clash) errors.push(`${where}: order ${st.order} already used by story "${clash}"`);
     storyOrders.set(st.order, st.id);
@@ -298,7 +325,7 @@ export function buildPack(src: PackSources): BuildResult {
       if (!k.id.startsWith(STORY_VOCAB_PREFIX)) {
         errors.push(`${where}: inline key word "${k.id}" must have an id starting with "${STORY_VOCAB_PREFIX}"`);
       }
-      addVocab(s.file, k);
+      addVocab(s.file, k, storyLevel);
       return k.id;
     });
     if (new Set(keywords).size !== keywords.length) errors.push(`${where}: repeated key word`);
@@ -364,6 +391,7 @@ export function buildPack(src: PackSources): BuildResult {
   for (const { file, q } of rawPlacement) {
     const where = `${file}: placement "${q.id}"`;
     if (q.answer >= q.options.length) errors.push(`${where}: answer ${q.answer} is out of range`);
+    checkLevel(q.level, where);
     for (const l of q.lessons) if (kinds.get(l) !== "lesson") errors.push(`${where}: unknown lesson "${l}"`);
     const { voice, ...rest } = q;
     placement.push({
