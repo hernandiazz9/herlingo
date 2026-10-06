@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 12:00Z 💻
+- Updated: 2026-10-06 12:09Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 56781fd
-- Next step: integrate T95/T96, then A2 dialogues + stories (T97, T98)
+- Branch: plan-008-ingles @ ffa24c6
+- Next step: integrate T97/T98; then T99 + B1 units
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -92,7 +92,7 @@ Worktree setup: npm ci
 - Outcome: units a2-airport + a2-hotel (5 lessons each): 87 phrases, 70 vocab, 19 Q&A; formal for I'd like/Could you · 56781fd · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T95 — English A2: food, shopping
-- Status: running (attempt 1 · 💻 · agent ae9ae727412ff8139 · since 12:00Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-food` (40) and `a2-shopping` (42) per docs/brief-en.md (coffee shop, restaurant, tip; supermarket, clothes, returns).
@@ -101,10 +101,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~90 phrases, ~70 vocab, ~16 Q&A, 10–12 lessons, `level: "A2"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units a2-food (6 lessons) + a2-shopping (5): 98 phrases, 73 vocab, 18 Q&A, reuses earlier items by id · ffa24c6 · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T96 — English A2: city, health
-- Status: running (attempt 1 · 💻 · agent a2c3dd70602ba7d52 · since 12:00Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-city` (50) and `a2-health` (52) per docs/brief-en.md (subway/bus/rideshare, directions; pharmacy, doctor, 911).
@@ -113,10 +113,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~60 vocab, ~16 Q&A, 9–11 lessons, `level: "A2"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units a2-city (Chicago: Ventra, 'L', Uber) + a2-health (drugstore, urgent care vs ER, 911): 10 lessons, 91 phrases, 61 vocab, 18 Q&A · 0987f5c · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T97 — English A2: 12 dialogues
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent af3986671c9ff79ca · since 12:09Z)
 - Depends on: T92, T93, T94, T95, T96
 - Where: any
 - Goal: The 12 A2 dialogues listed in docs/brief-en.md (`level: "A2"`, `unit`, avatars, register-honest options with Spanish feedback).
@@ -129,7 +129,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T98 — English A2: stories 1–6
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a5ade6dd27df593cd · since 12:09Z)
 - Depends on: T92, T93, T94, T95, T96
 - Where: any
 - Goal: A2 stories 1–6 with the brief-en cast in Chicago (Pablo's visit), `level: "A2"`, following the A2 units' order; key words reuse unit items by id where possible.
@@ -293,6 +293,8 @@ Worktree setup: npm ci
 - [ ] T92 @f81dc63 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T93 @7356c8b — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T94 @56781fd — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T96 @0987f5c — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T95 @ffa24c6 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -328,3 +330,7 @@ Worktree setup: npm ci
 - 2026-10-06 12:00Z 💻 T95 launched · attempt 1 · agent ae9ae727412ff8139
 - 2026-10-06 12:00Z 💻 T94 done · worktree-agent-a2b5e82c901d31a33 → 56781fd · verify ✓
 - 2026-10-06 12:00Z 💻 T96 launched · attempt 1 · agent a2c3dd70602ba7d52
+- 2026-10-06 12:09Z 💻 T96 done · worktree-agent-a2c3dd70602ba7d52 → 0987f5c · verify ✓
+- 2026-10-06 12:09Z 💻 T95 done · worktree-agent-ae9ae727412ff8139 → ffa24c6 · verify ✓
+- 2026-10-06 12:09Z 💻 T97 launched · attempt 1 · agent af3986671c9ff79ca
+- 2026-10-06 12:09Z 💻 T98 launched · attempt 1 · agent a5ade6dd27df593cd
