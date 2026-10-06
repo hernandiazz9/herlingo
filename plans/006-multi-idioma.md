@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:22Z 💻
+- Updated: 2026-10-06 09:23Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T65/T61; then T60, T64 and French units
+- Next step: integrate T61/T64; then T60 and French units T66–T69
 - Needs Hernán: npx supabase db push for 20261006000000_league_multi.sql only when T64 ships (old app keeps working either way)
 
 ## Shared contract (all tasks read this)
@@ -118,7 +118,7 @@ Worktree setup: npm ci
 - Outcome: migration 20261006000000_league_multi.sql: summed weekly XP, global daily cap, ≤10 groups (too_many_groups, not_in_group), league_status/ranking/podium, leave_group(code), old RPCs compatible; seed/check + docs · d1b5666 · verify ✓ db:check 214 ✓ league:local:check ✓ 💻 · not checked: real project (Hernán runs db push)
 
 ## T64 — Liga client: several groups and global rankings
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ab9c51c64c5870d41 · since 09:23Z)
 - Depends on: T59, T63
 - Where: pc (local fake Supabase for the hand check)
 - Goal: The Liga screens use the new RPCs: "Tus grupos" (up to 10: create, join by code or link without leaving the others, leave one with confirmation), rankings with General + one tab per group, podium per tab, the RutaCard showing the global weekly XP and rank ("todos los idiomas"). The outbox keeps sending every language's events and stats.
@@ -132,7 +132,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T65 — French content: greetings, numbers and grammar cards
-- Status: running (attempt 1 · 💻 · agent afbf6bfca2c5bb23b · since 09:13Z)
+- Status: done
 - Depends on: T58
 - Where: any
 - Goal: Units `salut` (10) and `nombres` (12), the grammar cards and the grammar unit `grammaire` (90), per docs/brief-fr.md: basic everyday French, ~5-minute lessons ending with their Q&A, pronunciation tips for a Spanish speaker, numbers 70–99 and prices in their own lesson.
@@ -142,7 +142,7 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓ for both packs; ~85 phrases, ~65 vocab, ~16 Q&A, ~10 grammar cards, 10–12 lessons in these three units.
   - Every phrase has `register` and an `explanation`; ids follow brief-fr ("Ids").
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units salut (4 lessons), nombres (5 incl. 70–100 + prices), grammaire (3) + 10 gram.fr-* cards: 105 phrases, 68 vocab, 16 Q&A · 3507bfd · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T66 — French content: introducing yourself, family and friends
 - Status: pending
@@ -247,6 +247,7 @@ Worktree setup: npm ci
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
 - [ ] T63 @d1b5666 — code review (SQL) (queued 2026-10-06 💻)
 - [ ] T59 @214521a — code review (queued 2026-10-06 💻)
+- [ ] T65 @3507bfd — French language review (native-level) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -264,6 +265,7 @@ Worktree setup: npm ci
 ## Proposals (new scope)
 - 2026-10-06 T58: listLangs() now returns the default pack first (sync.ts, coach/packs.ts iterate it, fr)
 - 2026-10-06 T59: Jugar on an empty pack shows 'Todos los temas ·' with a stray dot
+- 2026-10-06 T65: later French units reuse existing basics (grammaire.lait, nombres.carte, salut.francais) instead of duplicating
 
 ## Log
 - 2026-10-06 💻 plan written from the interview; not approved yet
@@ -276,3 +278,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:13Z 💻 T65 launched · attempt 1 · agent afbf6bfca2c5bb23b
 - 2026-10-06 09:22Z 💻 T59 done · worktree-agent-a6de474c4d54e2790 → 214521a · verify ✓
 - 2026-10-06 09:22Z 💻 T61 launched · attempt 1 · agent acc11bf7897385ebd
+- 2026-10-06 09:23Z 💻 T65 done · worktree-agent-afbf6bfca2c5bb23b → 3507bfd · verify ✓
+- 2026-10-06 09:23Z 💻 T64 launched · attempt 1 · agent ab9c51c64c5870d41
