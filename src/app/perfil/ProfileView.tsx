@@ -7,11 +7,12 @@ import { ThemeToggle } from "@/components/shell/ThemeToggle";
 import { Button, Card } from "@/components/ui";
 import { leagueEnabled, LEAGUE_PATH } from "@/lib/league/config";
 import { useLeagueAccount } from "@/lib/league/use-league-account";
-import { getAllLessons, getPack } from "@/lib/content";
+import { getAllLessons, getPack, languageName } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import { currentStreak, resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
 import { useProgress, useSettings } from "@/lib/progress/use-progress";
+import { LanguagePicker, pickablePacks, useChooseLanguage } from "@/components/language/LanguagePicker";
 import { BackupSection } from "./BackupSection";
 import { CoachSections } from "./CoachSections";
 
@@ -49,6 +50,8 @@ function Profile({ lang }: { lang: string }) {
         <Stat value={wordsLearned(progress, pack)} label="palabras aprendidas" />
         <Stat value={`${lessonsDone}/${lessonsTotal}`} label="lecciones hechas" />
       </div>
+
+      {pickablePacks().length > 1 ? <LanguageSection lang={lang} /> : null}
 
       {leagueEnabled() ? <LeagueLink /> : null}
 
@@ -107,7 +110,9 @@ function Profile({ lang }: { lang: string }) {
         <Card tone="terracotta" className="flex flex-col gap-3">
           <div className="flex flex-col gap-1">
             <h3 className="text-lg font-bold text-ink">Borrar progreso</h3>
-            <p className="text-sm text-ink">Lecciones, XP, racha y repasos de este móvil. No se puede deshacer.</p>
+            <p className="text-sm text-ink">
+              Lecciones, XP, racha y repasos de {languageName(lang)} en este móvil. No se puede deshacer.
+            </p>
           </div>
           <button type="button" onClick={() => setConfirmReset(true)} className={cn(DANGER, "min-h-12 text-base")}>
             Borrar mi progreso
@@ -115,7 +120,7 @@ function Profile({ lang }: { lang: string }) {
         </Card>
       </section>
 
-      <BackupSection lang={lang} />
+      <BackupSection />
 
       {confirmReset ? (
         <div className="fixed inset-0 z-[60] flex items-end justify-center bg-backdrop/80 p-4 pb-[calc(var(--safe-bottom)+1rem)]">
@@ -142,6 +147,22 @@ function Profile({ lang }: { lang: string }) {
         </div>
       ) : null}
     </>
+  );
+}
+
+/** "Idioma que estudias": switch at any time; a language never started opens its welcome. */
+function LanguageSection({ lang }: { lang: string }) {
+  const choose = useChooseLanguage();
+  return (
+    <section aria-labelledby="language-title" className="flex flex-col gap-3">
+      <div className="flex flex-col gap-1">
+        <h2 id="language-title" className="text-2xl font-extrabold tracking-tight text-ink">
+          Idioma que estudias
+        </h2>
+        <p className="text-sm text-ink-muted">Cada idioma guarda su propio progreso: cambiar no borra nada.</p>
+      </div>
+      <LanguagePicker current={lang} onChoose={choose} label="Idioma que estudias" />
+    </section>
   );
 }
 

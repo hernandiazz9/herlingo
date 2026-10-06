@@ -12,7 +12,8 @@
  *   at start and on every switch (src/lib/pwa/audio-cache.ts); the SW fills that cache from the
  *   build's list (AUDIO_LIST_DIR + lang + ".json"): files no longer listed are removed, missing
  *   ones are copied from any older cache that holds them, else downloaded. Once it is complete,
- *   the other languages' audio caches are deleted. Progress goes to every page as
+ *   the other languages' audio caches are deleted (only for a language with audio files: one
+ *   without any, e.g. not recorded yet, keeps the others' caches). Progress goes to every page as
  *   { type: AUDIO_PROGRESS, lang, total, cached, state }.
  * - A new version waits until the page asks it to take over (SKIP_WAITING, from the "Actualizar"
  *   prompt), so a running lesson never switches code mid-way.
@@ -160,14 +161,14 @@ function setAudioLang(lang) {
 
 async function fillAudio(lang) {
   const list = await audioList(lang);
-  if (!list) {
-    // No audio for this language (speech only): nothing to download.
+  const want = list ? listed(list) : [];
+  if (!want.length) {
+    // No audio for this language (speech only, or not recorded yet): nothing to download. The
+    // other languages' audio caches stay: they only go once a language with audio is complete.
     await report({ lang, total: 0, cached: 0, state: "ready" });
-    if (activeLang === lang) await dropOtherAudio(lang);
     return;
   }
   const cache = await caches.open(AUDIO_PREFIX + lang);
-  const want = listed(list);
   const wanted = new Set(want);
   const have = await cachedPaths(cache);
   // Files no longer listed (content changed) leave the cache.

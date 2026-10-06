@@ -9,6 +9,8 @@ import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import { DialoguesIcon, ReviewIcon } from "@/components/icons";
 import { RutaLeagueCard } from "@/components/league/RutaCard";
+import { WELCOME_HREF } from "@/components/language/LanguagePicker";
+import { LanguageSwitch } from "@/components/language/LanguageSwitch";
 import { getTab } from "@/lib/navigation";
 import { canPersist, currentStreak, dueItemIds, getProgress } from "@/lib/progress";
 import { buildPath, lessonHref, type PathLesson, type PathUnit } from "@/lib/progress/path";
@@ -16,7 +18,7 @@ import { useNow, useProgress } from "@/lib/progress/use-progress";
 import { BoltIcon, CheckIcon, FlameIcon, LockIcon, PlayIcon } from "./icons";
 import { ExpressionView, GrammarCardView, SideSheet } from "./SideSheet";
 
-export const WELCOME_HREF = "/bienvenida/";
+export { WELCOME_HREF };
 
 const review = getTab("review");
 const dialogues = getTab("dialogues");
@@ -50,6 +52,8 @@ function Path({ lang }: { lang: string }) {
 
   return (
     <>
+      <LanguageSwitch lang={lang} />
+
       <div className="grid grid-cols-2 gap-2">
         <Stat icon={<FlameIcon className="size-5 text-terracotta-deep" />} value={streak} label={streak === 1 ? "día seguido" : "días seguidos"} />
         <Stat icon={<BoltIcon className="size-5 text-lemon-deep" />} value={progress.xp} label="XP" />

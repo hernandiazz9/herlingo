@@ -6,9 +6,11 @@ import { CloseIcon, PlayControls } from "@/components/exercises";
 import { Button, Card, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { getLesson, getPack, type PlacementQuestion } from "@/lib/content";
-import { useScreenLang } from "@/lib/content/use-active-lang";
+import { setActiveLang } from "@/lib/content/active";
+import { useActiveLang, useScreenLang } from "@/lib/content/use-active-lang";
+import { LanguagePicker, pickablePacks } from "@/components/language/LanguagePicker";
 import { cn } from "@/lib/cn";
-import { applyPlacement, completeOnboarding } from "@/lib/progress";
+import { applyPlacement, completeOnboarding, getProgress } from "@/lib/progress";
 
 type Phase = { name: "welcome" } | { name: "test"; index: number; answers: boolean[] } | { name: "result"; right: number; lessons: string[] };
 
@@ -26,11 +28,48 @@ function masteredLessons(questions: PlacementQuestion[], answers: boolean[]): st
  * the lessons you already master as done. `retake` starts straight at the test (from /perfil).
  */
 export function Onboarding({ retake = false }: { retake?: boolean }) {
+  const router = useRouter();
+  const { ready, lang: active } = useActiveLang();
   const lang = useScreenLang();
-  return lang ? <Placement key={lang} lang={lang} retake={retake} /> : null;
+  // Chosen here: also covers a browser that cannot store the choice (the picker would loop).
+  const [chosen, setChosen] = useState<string | null>(null);
+  const [picking, setPicking] = useState(false);
+  const canPick = !retake && pickablePacks().length > 1;
+
+  if (!ready || !lang) return null;
+  // First launch (no language yet) or "Cambiar de idioma": the picker comes before the welcome.
+  if (canPick && (picking || (!active && !chosen))) {
+    return (
+      <LanguageChoice
+        current={active ?? chosen}
+        onChoose={(l) => {
+          setActiveLang(l);
+          // Already studying it: straight to its route.
+          if (getProgress(l).onboarded) return router.replace("/");
+          setChosen(l);
+          setPicking(false);
+        }}
+      />
+    );
+  }
+  const shown = active ?? chosen ?? lang;
+  return <Placement key={shown} lang={shown} retake={retake} onChangeLanguage={canPick ? () => setPicking(true) : undefined} />;
 }
 
-function Placement({ lang, retake }: { lang: string; retake: boolean }) {
+function LanguageChoice({ current, onChoose }: { current: string | null; onChoose: (lang: string) => void }) {
+  return (
+    <div className="flex flex-1 flex-col gap-5">
+      <p aria-hidden="true" className="pt-4 text-6xl">
+        🌍
+      </p>
+      <h1 className="text-3xl font-extrabold tracking-tight text-ink">¿Qué idioma quieres aprender?</h1>
+      <p className="text-lg text-ink">Elige uno para empezar. Puedes cambiarlo cuando quieras desde tu perfil o tu ruta.</p>
+      <LanguagePicker current={current} onChoose={onChoose} label="Idiomas que puedes estudiar" />
+    </div>
+  );
+}
+
+function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: boolean; onChangeLanguage?: () => void }) {
   const router = useRouter();
   const pack = getPack(lang);
   const questions = pack.placement;
@@ -94,6 +133,11 @@ function Placement({ lang, retake }: { lang: string; retake: boolean }) {
           <Button fullWidth variant={questions.length ? "secondary" : "primary"} onClick={skip}>
             Empezar desde cero
           </Button>
+          {onChangeLanguage ? (
+            <Button fullWidth variant="secondary" onClick={onChangeLanguage}>
+              {pack.meta.emoji ? `${pack.meta.emoji} ` : ""}Cambiar de idioma
+            </Button>
+          ) : null}
         </div>
       </div>
     );

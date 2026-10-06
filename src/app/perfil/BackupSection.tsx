@@ -15,6 +15,7 @@ import {
   type Backup,
 } from "@/lib/backup";
 import { saveFile } from "@/lib/backup/file";
+import { languageName, listPacks } from "@/lib/content";
 import { parseProgress } from "@/lib/progress";
 
 type Notice = { kind: "error" | "info"; text: string } | { kind: "restored"; previous: Backup };
@@ -22,7 +23,7 @@ type Notice = { kind: "error" | "info"; text: string } | { kind: "restored"; pre
 const dateFormat = new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" });
 
 /** Perfil → "Copia de seguridad": save everything on the device to a file, or restore one. */
-export function BackupSection({ lang }: { lang: string }) {
+export function BackupSection() {
   const input = useRef<HTMLInputElement>(null);
   const [pending, setPending] = useState<Backup | null>(null);
   const [notice, setNotice] = useState<Notice | null>(null);
@@ -83,7 +84,7 @@ export function BackupSection({ lang }: { lang: string }) {
     void saveFile(serializeBackup(previous), backupFileName(new Date(previous.exportedAt), "anterior"));
   };
 
-  const pendingXp = pending ? parseProgress(pending.data[`lang-lern:progress:${lang}`] ?? "").xp : 0;
+  const pendingSummary = pending ? summarize(pending) : "";
 
   return (
     <section aria-labelledby="backup-title" className="flex flex-col gap-3">
@@ -156,11 +157,24 @@ export function BackupSection({ lang }: { lang: string }) {
       {pending ? (
         <ConfirmDialog title="¿Restaurar esta copia?" confirmLabel="Sí, reemplazar" onConfirm={restore} onCancel={() => setPending(null)}>
           Esto reemplazará el progreso de este dispositivo por la copia del {formatDate(pending.exportedAt)}
-          {pendingXp > 0 ? ` (${pendingXp} XP)` : ""}. Podrás descargar lo que hay ahora justo después.
+          {pendingSummary ? ` (${pendingSummary})` : ""}. Podrás descargar lo que hay ahora justo después.
         </ConfirmDialog>
       ) : null}
     </section>
   );
+}
+
+/** Every language with progress in the backup: "italiano: 1200 XP, francés: 40 XP". */
+function summarize(backup: Backup): string {
+  return listPacks()
+    .flatMap((meta) => {
+      const raw = backup.data[`lang-lern:progress:${meta.lang}`];
+      if (!raw) return [];
+      const p = parseProgress(raw);
+      if (!p.onboarded && p.xp === 0) return [];
+      return [`${languageName(meta.lang)}: ${p.xp} XP`];
+    })
+    .join(", ");
 }
 
 function formatDate(iso: string): string {
