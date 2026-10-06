@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:57Z 💻
+- Updated: 2026-10-06 13:58Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 80e939f
-- Next step: T109 audio + pictures running on the Mac; then end of plan (T110 waits for plan 007 voice)
+- Branch: plan-008-ingles @ 7bae2c5
+- Next step: integrate T110 (last task); then Hernán: OK to ff main + deploy
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -276,7 +276,7 @@ Worktree setup: npm ci
 - Outcome: en-US audio 3449 mp3 (54 MB, 4 voices OK), 113 Fluent pictures; it/fr audio untouched; strict audio+images ✓; SW audio lists en/fr/it · 48ff88b · verify ✓ 💻 · not checked: iPhone PWA English offline, it↔en switch
 
 ## T110 — Contraction-aware answer and speech matching (`equivalents`)
-- Status: blocked (waits for plan 007 voice merged into main, then main merged into plan-008-ingles)
+- Status: running (attempt 1 · 💻 · agent a3355539786c37382 · since 13:58Z)
 - Depends on: T90
 - Where: any
 - Goal: Answer matching and speech scoring (whatever plan 007 voice leaves in place) expand the active pack's `pack.json` `equivalents` on both sides, so "I'm" and "I am", "don't" and "do not" count as equal, and hyphenated number words ("twenty-one") match. Generic: packs without `equivalents` (it, fr) behave exactly as before.
@@ -331,6 +331,7 @@ Worktree setup: npm ci
 - 2026-10-06 T98: outline for A2 stories 7–12 (T99): 7 coffee shop + deep-dish pizza, tip; 8 winter coat + returning a sweater; 9 L train to the Loop, lost, the lake; 10 cold, pharmacy via Mrs. Carter; 11 urgent care + telling his week (past simple); 12 goodbye at O'Hare (past simple), sets up B1. Voices: narrator Ava, Pablo Andrew, Maya/Mrs. Carter Emma (never together), Jordan Brian. (agent)
 - 2026-10-06 plan: Hernán: plan 008 runs entirely on the Mac (this session), not in the cloud. (Hernán)
 - 2026-10-06 T106: outline for B1 stories 7–12 (T107): 107 one-bedroom on Halsted (lease, deposit, utilities); 108 moving in (leak/heating, the super, noisy neighbors, Mrs. Carter helps); 109 checking account, card declined, unknown charge; 110 work trip to Denver, delay, missed connection, rebooked; 111 lost suitcase + telling it back with past continuous; 112 one year in Chicago, party, Pablo decides to stay. Jordan now works at a recording studio. Voices: side characters reuse a non-speaking cast member's voice (Sam/Mr. Park/Kevin Brian, Nina Emma). (agent)
+- 2026-10-06 plan: plan 007 voice done and in main (9ef22ee); merged origin/main into plan-008-ingles (7bae2c5, clean, strict checks + verify ✓); T110 unblocked. (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
@@ -377,3 +378,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:45Z 💻 T108 done · worktree-agent-ab71d946f3971ca84 → 80e939f · verify ✓
 - 2026-10-06 13:45Z 💻 T109 launched · attempt 1 · agent a4fd31c836beead18
 - 2026-10-06 13:57Z 💻 T109 done · worktree-agent-a4fd31c836beead18 → 48ff88b · verify ✓ strict ✓
+- 2026-10-06 13:58Z 💻 merged origin/main (plan 007 voice) → 7bae2c5 · verify ✓; T110 launched · attempt 1 · agent a3355539786c37382
