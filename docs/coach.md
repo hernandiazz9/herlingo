@@ -209,6 +209,18 @@ Beyond the counts, the server rejects a generated pack (502 `generation_failed`,
 llegado con errores") unless speakers alternate (never two native or two learner turns in a row)
 and every learner turn has exactly one `correct` option.
 
+**Overflows are trimmed, not rejected** (`api/_lib/normalize.ts`, before the zod check, for new
+packs, refinements and interview answers): the call is already paid, so an array longer than its
+maximum is cut to it. `guide` → first 7, `keyPhrases` → first 12, a learner turn's `options` → 3
+(the `correct` one always kept, original order), assessment `strengths`/`weakPoints` → 8 and
+`facts` → 10. `dialogue.turns` → a prefix of at most 10 turns, so each native line still follows
+its learner turn: the longest one (10 or 9) that ends on a native line, else one that ends on a
+learner turn with a `correct` option, always with ≥ 6 turns and ≥ 1 learner turn. Each trim is
+logged as `[coach] trimmed pack overflow guide: 9→7, dialogue.turns: 14→9, …` (paths and counts,
+never text). Too few items, wrong shapes, broken alternation or a wrong number of `correct`
+options still fail. The limits live in `PACK_ARRAY_LIMITS` / `ASSESSMENT_ARRAY_LIMITS`
+(`api/_lib/schema.ts`).
+
 ### Learner context (`profile`)
 
 Built on the device, short, nothing beyond what the learner typed in "Sobre mí":
@@ -323,8 +335,10 @@ One non-streaming `client.beta.messages.create` per generation:
   Sonnet 5 inside the same call; other declines come back as refusals).
 - `output_config.format` = JSON schema from the zod schema (`betaZodOutputFormat`). The SDK sends
   only what structured outputs enforce: lengths, item counts and `enum`/`const` values travel as
-  schema *descriptions* (the model sees them, the API does not enforce them), so the server's
-  zod `safeParse` is the real check.
+  schema *descriptions* (the model sees them, the API does not enforce them; only `minItems` 0/1
+  is enforced), so the server's zod `safeParse` is the real check. Arrays with a maximum also
+  carry a plain-words description ("7 or 9 entries in total … never more than 10"), the prompt
+  repeats the limits, and an overflow is trimmed before the check (see "Pack schema").
 - `output_config.effort: "low"` for packs and interview steps (thinking stays adaptive; Sonnet
   5.5 rejects disabled thinking). `max_tokens` 8000 (pack) / 4000 (step), far above a normal
   answer, so `max_tokens` means a runaway answer.
@@ -346,7 +360,7 @@ then rejected (refusal, `max_tokens`, invalid JSON) was paid, so its slots stay 
 | --- | --- |
 | `stop_reason: "refusal"` | "No puedo preparar esto. Prueba a contarlo de otra forma." |
 | `stop_reason: "max_tokens"` | "La respuesta ha salido demasiado larga. Inténtalo de nuevo." |
-| Not JSON, or JSON that fails the zod schema | "La respuesta ha llegado con errores. Inténtalo de nuevo." |
+| Not JSON, or JSON that fails the zod schema after trimming overflows | "La respuesta ha llegado con errores. Inténtalo de nuevo." |
 | Deadline (50 s) | "La IA ha tardado demasiado. Inténtalo de nuevo." |
 | 429 / 529 after the SDK's retries | "La IA está saturada ahora mismo. Inténtalo en unos minutos." |
 | Any other API or network error | "No he podido hablar con la IA. Inténtalo de nuevo." |
@@ -447,7 +461,10 @@ line, 6 of 53 lessons). Costs are the ledger's (price table in `api/_lib/model.t
   well above the 10/day/code limit for one or two people.
 - A rejected answer is still paid (billed before parsing, as designed) and keeps its daily slot.
   The one seen in T49 had more than 10 dialogue turns, caused by the prompt asking for "8 turns" while
-  opening and closing with the native speaker; the prompt now asks for 7 or 9.
+  opening and closing with the native speaker; the prompt now asks for 7 or 9. In production
+  (2026-10-06) every pack still failed with `dialogue.turns Too big: expected array to have <=10
+  items`; since T76 the prompt and the schema descriptions spell out every maximum and the server
+  trims overflows instead of rejecting a paid answer.
 - The T49 run spent 0.107971 USD in total (6 Claude calls), and `GET /usage/` reported exactly
   that sum of the calls' `usage.costUsd`.
 

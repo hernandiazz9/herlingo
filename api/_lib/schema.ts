@@ -14,6 +14,21 @@ export const LIMITS = {
   interviewTurns: 10,
 } as const;
 
+/**
+ * Item counts of the generated pack and the assessment. Structured outputs do not enforce a
+ * maximum, so the counts are also in the prompts and the schema descriptions, and normalize.ts
+ * trims an overflow to these limits before the zod check.
+ */
+export const PACK_ARRAY_LIMITS = {
+  guide: 7,
+  keyPhrases: 12,
+  options: 3,
+  turns: { min: 6, max: 10 },
+} as const;
+export const ASSESSMENT_ARRAY_LIMITS = { strengths: 8, weakPoints: 8, facts: 10 } as const;
+const P = PACK_ARRAY_LIMITS;
+const A = ASSESSMENT_ARRAY_LIMITS;
+
 const es = z.string().min(1).max(400);
 const line = z.string().min(1).max(300);
 
@@ -38,7 +53,11 @@ export const GeneratedNativeTurn = z.object({
 export const GeneratedLearnerTurn = z.object({
   speaker: z.literal("learner"),
   prompt: es,
-  options: z.array(GeneratedOption).min(2).max(3),
+  options: z
+    .array(GeneratedOption)
+    .min(2)
+    .max(P.options)
+    .describe(`2 or ${P.options} options, exactly one "correct"; never more than ${P.options}.`),
 });
 
 type GeneratedTurn = z.infer<typeof GeneratedNativeTurn> | z.infer<typeof GeneratedLearnerTurn>;
@@ -65,18 +84,26 @@ function checkTurns(turns: GeneratedTurn[], ctx: z.RefinementCtx): void {
 export const GeneratedPack = z.object({
   title: z.string().min(1).max(80),
   register: z.enum(["formal", "informal"]),
-  guide: z.array(z.object({ es })).min(3).max(7),
+  guide: z
+    .array(z.object({ es }))
+    .min(3)
+    .max(P.guide)
+    .describe(`4 to 6 steps; never more than ${P.guide}.`),
   keyPhrases: z
     .array(z.object({ text: line, es, note: z.string().max(200).optional() }))
     .min(8)
-    .max(12),
+    .max(P.keyPhrases)
+    .describe(`8 to 10 phrases; never more than ${P.keyPhrases}.`),
   dialogue: z.object({
     title: z.string().min(1).max(80),
     turns: z
       .array(z.discriminatedUnion("speaker", [GeneratedNativeTurn, GeneratedLearnerTurn]))
-      .min(6)
-      .max(10)
-      .superRefine(checkTurns),
+      .min(P.turns.min)
+      .max(P.turns.max)
+      .superRefine(checkTurns)
+      .describe(
+        `7 or 9 entries in total (each native line and each learner turn is one entry), alternating; never fewer than ${P.turns.min} or more than ${P.turns.max}.`,
+      ),
   }),
 });
 export type GeneratedPack = z.infer<typeof GeneratedPack>;
@@ -95,7 +122,7 @@ export const Pack = GeneratedPack.extend({
   voices: z.object({ native: z.string().min(1), learner: z.string().min(1) }),
   dialogue: z.object({
     title: z.string().min(1).max(80),
-    turns: z.array(z.discriminatedUnion("speaker", [NativeTurn, LearnerTurn])).min(6).max(10),
+    turns: z.array(z.discriminatedUnion("speaker", [NativeTurn, LearnerTurn])).min(P.turns.min).max(P.turns.max),
   }),
   refinements: z.number().int().min(0),
 });
@@ -108,9 +135,9 @@ export const Level = z.enum(["A0", "A1", "A2", "B1", "B2", "C1", "C2"]);
 export const Assessment = z.object({
   level: Level,
   summary: z.string().min(1).max(600),
-  strengths: z.array(z.string().max(200)).max(8),
-  weakPoints: z.array(z.string().max(200)).max(8),
-  facts: z.array(z.string().max(200)).max(10),
+  strengths: z.array(z.string().max(200)).max(A.strengths).describe(`2 to 4 items; never more than ${A.strengths}.`),
+  weakPoints: z.array(z.string().max(200)).max(A.weakPoints).describe(`2 to 4 items; never more than ${A.weakPoints}.`),
+  facts: z.array(z.string().max(200)).max(A.facts).describe(`Up to 8 items; never more than ${A.facts}.`),
 });
 export type Assessment = z.infer<typeof Assessment>;
 
