@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 10:40Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: all 16 tasks done; Hernán: review + visual queues, then OK to merge into main / deploy
+- Next step: integrate T74, then fast-forward main and push (Hernán OK'd)
 - Needs Hernán: OK for merge to main / deploy; visual + review queues
 
 ## Shared contract (all tasks read this)
@@ -244,7 +244,7 @@ Worktree setup: npm ci
 - Outcome: fr-FR audio 1732 mp3 (29 MB) + 109 Fluent pictures; minuit/midi without article; strict image check now counts pictures referenced by any pack; SW: audio lists fr+it per language, no mp3 precached · 1c894c7 · verify ✓ strict audio+images ✓ 💻 · not checked: iPhone PWA French offline
 
 ## T74 — Bring main (XP everywhere, numbers in the mic) into plan 006 + French numberWords
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a175ea6da93433afd · since 10:40Z)
 - Depends on: T73
 - Where: any
 - Goal: main gained a434e34 and 3e54007 (another session): XP in dialogues/listening/Descubrir/placement/interview with an XpToast and `src/lib/progress/daily.ts`, numbers spoken in the mic compared through `pack.json` `numberWords`, dictation by voice with typo tolerance. Merge origin/main into this branch keeping both sides: every new feature must follow the plan's Shared contract (active pack, no Italian hard-coded, new stored keys only, global XP via `saveResult()` so `lang-lern:activity` and the Liga outbox see every award). Add `numberWords` to `content/fr/pack.json` (0–100 at least, French spelling: soixante-dix, quatre-vingts, quatre-vingt-dix…, same coverage as Italian).
@@ -340,3 +340,4 @@ Worktree setup: npm ci
 - 2026-10-06 10:18Z 💻 T73 agent blocked: strict image check is per pack (other pack's pictures flagged unused); scope extended to scripts/images/plan.ts + scripts/content.ts, sent back to the same agent
 - 2026-10-06 10:20Z 💻 T73 done · worktree-agent-ae4d7048a936ed7f7 → 1c894c7 · verify ✓
 - 2026-10-06 10:39Z 💻 Hernán applied 20261006000000_league_multi.sql to the real project (db push)
+- 2026-10-06 10:40Z 💻 T74 launched · attempt 1 · agent a175ea6da93433afd
