@@ -270,7 +270,7 @@ Worktree setup: npm ci
 - Outcome: api/package.json type module + .js on relative imports in api/; .vercel ignored by ESLint; local vercel build: all 4 functions load and answer 401 · fc87971 · verify ✓ 💻 · not checked: production deploy
 
 ## T76 — Fix: generated packs rejected for too many dialogue turns (paid 502)
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ad832a1994cd87e05 · since 11:32Z)
 - Depends on: T75
 - Where: any
 - Goal: In production every pack generation fails with "La respuesta ha llegado con errores": Vercel logs `[coach] output does not match the schema dialogue.turns Too big: expected array to have <=10 items`. The call is billed and the learner gets nothing. Make generation robust: tell the model the limits precisely (prompt + JSON schema where structured outputs support it) and, on the server, normalize recoverable overflows instead of failing (e.g. too many turns/phrases/steps → trim to the limit keeping the dialogue coherent: end on a native turn or a learner turn with a correct option, keep ≥ 1 learner turn; too few still fails). Same tolerance for the refine and interview paths and for every array with a max in the pack schema. Log what was trimmed.
@@ -374,3 +374,4 @@ Worktree setup: npm ci
 - 2026-10-06 10:44Z 💻 T74 done · worktree-agent-a175ea6da93433afd → 2b18669 (merge) · verify ✓
 - 2026-10-06 11:10Z 💻 T75 launched · attempt 1 · agent acec2518d18aaec3b (prod /api/coach/* 500: ESM load failure)
 - 2026-10-06 11:17Z 💻 T75 done · worktree-agent-acec2518d18aaec3b → fc87971 · verify ✓
+- 2026-10-06 11:32Z 💻 T76 launched · attempt 1 · agent ad832a1994cd87e05
