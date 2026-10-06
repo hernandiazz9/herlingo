@@ -89,6 +89,49 @@ The legacy `listenOnce()` maps `audio-capture` and `start-timeout` to `other` an
 `transcripts` = `alternatives` (so `transcripts[0]` is the full best transcript). A `timeoutMs`
 becomes `maxMs`; above 10 s it uses the `long` mode.
 
+## Mic UI (`src/components/speech/`)
+
+The one mic UI over the engine; screens never create sessions themselves. Import from
+`@/components/speech`.
+
+| Export | What it is |
+| --- | --- |
+| `useListen({ locale, mode?, onResult?, onError?, ...timing overrides })` | One mic per screen. Returns `ListenControls`: `supported`, `status`, `active`, `interim`, `listeningAt`, `result`, `error`, `mode`, `timings`, `start()`, `finish()`, `cancel()`, `toggle()`, `reset()`. |
+| `<MicButton listen size? idleLabel? disabled? />` | `size="lg"` (default): 96px round button with a countdown ring; `size="sm"`: 44px pill with text ("Dictar" → "Terminar · 38 s") for a text field. |
+| `<LiveTranscript listen lang? idleHint? showResult? errorActions? align? />` | State line (`role="status"`, aria-live), live text, countdown bar + seconds, "Cancelar", and on error the engine message + "Reintentar" (+ `errorActions`). |
+| `<SpeakPanel listen lang? idleLabel? showResult? errorActions? disabled? />` | `MicButton` + `LiveTranscript`, centred: for "say this phrase" screens. |
+| `useListenRemaining(listen)` | Ms left before the cap while listening (null otherwise). |
+
+Behaviour:
+
+- Tap the mic → `start()` (call it in the tap handler: iOS needs the gesture). It stops by itself
+  on silence; tapping again → `finish()` keeps what was said; "Cancelar" → `cancel()` discards.
+  `start()` stops any playing audio first. Unmounting cancels the open session.
+- `onResult(result)` gets `{ transcript, alternatives, durationMs }` once (never empty);
+  `onError(error)` gets every error except `aborted` (cancel, a newer session, page hidden), which
+  just returns to idle. Callbacks and options are read when the session starts/settles, so inline
+  functions are fine.
+- After an error the state stays `error` (message + "Reintentar") until `start()` or `reset()`;
+  after words it stays `done` (`result`) until the next `start()`/`reset()`.
+- Copy: starting "Abriendo el micrófono…", listening "Habla ahora", hearing "Te escucho…" + live
+  text, processing "Un momento…". No sounds (the mic would capture them).
+- Every component renders nothing when `supported` is false: the screen keeps its own fallback
+  (self-evaluation, typing). Tokens only; pulses and the ring transition stop with
+  `prefers-reduced-motion`; touch targets are at least 44px.
+
+Usage per screen:
+
+```tsx
+// Lesson phrase (SpeakExercise): score in onResult (scoreHeard), feedback rendered by the screen.
+const listen = useListen({ locale: meta.speechLocale, onResult: (r) => check(r.alternatives) });
+<SpeakPanel listen={listen} lang={lang} errorActions={<SelfEvalLink />} />
+// Dialogue turn (DialoguePlayer): same, onResult → bestOption(options, r.alternatives).
+// Dictation into a textarea (DictationExercise): onResult: (r) => setAnswer(r.transcript)
+<MicButton listen={listen} size="sm" /> <LiveTranscript listen={listen} lang={lang} align="start" />
+// Prepárate (long Spanish answer appended): mode "long", locale "es-ES",
+// onResult: (r) => setText((t) => (t.trim() ? `${t.trimEnd()} ${r.transcript}` : r.transcript))
+```
+
 ## Diagnostics log: `lang-lern:speech-log`
 
 Every started session appends one entry on settle. localStorage, `{ v: 1, entries: [...] }`,
