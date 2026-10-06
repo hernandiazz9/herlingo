@@ -7,11 +7,11 @@ import { ThemeToggle } from "@/components/shell/ThemeToggle";
 import { Button, Card } from "@/components/ui";
 import { leagueEnabled, LEAGUE_PATH } from "@/lib/league/config";
 import { useLeagueAccount } from "@/lib/league/use-league-account";
-import { getAllLessons, getPack, languageName } from "@/lib/content";
+import { getAllLessons, getPack, languageName, listPacks } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
-import { currentStreak, resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
-import { useProgress, useSettings } from "@/lib/progress/use-progress";
+import { resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
+import { useAppPoints, useProgress, useSettings, type AppPoints } from "@/lib/progress/use-progress";
 import { LanguagePicker, pickablePacks, useChooseLanguage } from "@/components/language/LanguagePicker";
 import { BackupSection } from "./BackupSection";
 import { CoachSections } from "./CoachSections";
@@ -31,6 +31,7 @@ function Profile({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const progress = useProgress(lang);
   const settings = useSettings();
+  const points = useAppPoints();
   const [confirmReset, setConfirmReset] = useState(false);
 
   const lessonsTotal = getAllLessons(pack).length;
@@ -45,10 +46,15 @@ function Profile({ lang }: { lang: string }) {
   return (
     <>
       <div className="grid grid-cols-2 gap-3">
-        <Stat value={progress.xp} label="XP" />
-        <Stat value={currentStreak(progress)} label="días seguidos" note={`Récord: ${progress.streak.best}`} />
-        <Stat value={wordsLearned(progress, pack)} label="palabras aprendidas" />
-        <Stat value={`${lessonsDone}/${lessonsTotal}`} label="lecciones hechas" />
+        <Stat value={points.monthXp} label={points.month ? `XP de ${points.month}` : "XP del mes"} note="Todos los idiomas" />
+        <Stat value={points.streak} label={points.streak === 1 ? "día seguido" : "días seguidos"} note={`Récord: ${points.best}`} />
+      </div>
+
+      <LifetimeCard points={points} current={lang} />
+
+      <div className="grid grid-cols-2 gap-3">
+        <Stat value={wordsLearned(progress, pack)} label="palabras aprendidas" note={`De ${languageName(lang)}`} />
+        <Stat value={`${lessonsDone}/${lessonsTotal}`} label="lecciones hechas" note={`De ${languageName(lang)}`} />
       </div>
 
       {pickablePacks().length > 1 ? <LanguageSection lang={lang} /> : null}
@@ -111,7 +117,8 @@ function Profile({ lang }: { lang: string }) {
           <div className="flex flex-col gap-1">
             <h3 className="text-lg font-bold text-ink">Borrar progreso</h3>
             <p className="text-sm text-ink">
-              Lecciones, XP, racha y repasos de {languageName(lang)} en este móvil. No se puede deshacer.
+              Lecciones, XP, días de práctica y repasos de {languageName(lang)} en este móvil. Los demás idiomas no se
+              tocan. No se puede deshacer.
             </p>
           </div>
           <button type="button" onClick={() => setConfirmReset(true)} className={cn(DANGER, "min-h-12 text-base")}>
@@ -135,7 +142,8 @@ function Profile({ lang }: { lang: string }) {
               ¿Borrar tu progreso?
             </h2>
             <p id="reset-desc" className="text-base text-ink-muted">
-              Perderás {progress.xp} XP, tu racha y las {lessonsDone} lecciones hechas. Volverás a la bienvenida.
+              Perderás {progress.xp} XP de {languageName(lang)}, sus días de práctica y las {lessonsDone} lecciones hechas.
+              Volverás a la bienvenida.
             </p>
             <Button fullWidth autoFocus onClick={() => setConfirmReset(false)}>
               Cancelar
@@ -184,6 +192,36 @@ function LeagueLink() {
       >
         {joined ? "Abrir la Liga" : "Conocer la Liga"}
       </Link>
+    </Card>
+  );
+}
+
+/** Lifetime XP (never resets) with the XP of each language. */
+function LifetimeCard({ points, current }: { points: AppPoints; current: string }) {
+  const metas = new Map(listPacks().map((m) => [m.lang, m]));
+  const rows = points.byLang.filter((l) => l.xp > 0 || l.lang === current);
+  return (
+    <Card className="flex flex-col gap-3 p-4">
+      <div className="flex flex-col gap-0.5">
+        <span className="text-3xl font-extrabold text-ink">{points.lifetimeXp}</span>
+        <span className="text-sm font-bold text-ink-muted">XP en total</span>
+      </div>
+      {points.byLang.length > 1 ? (
+        <ul className="flex flex-col gap-1.5 border-t-2 border-line pt-3" aria-label="XP por idioma">
+          {rows.map(({ lang, xp }) => {
+            const meta = metas.get(lang);
+            return (
+              <li key={lang} className="flex items-center justify-between gap-3 text-base">
+                <span className="flex items-center gap-2 font-bold text-ink">
+                  {meta?.emoji ? <span aria-hidden="true">{meta.emoji}</span> : null}
+                  {meta?.name ?? lang}
+                </span>
+                <span className="font-bold text-ink-muted">{xp} XP</span>
+              </li>
+            );
+          })}
+        </ul>
+      ) : null}
     </Card>
   );
 }

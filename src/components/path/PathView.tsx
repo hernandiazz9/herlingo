@@ -12,9 +12,9 @@ import { RutaLeagueCard } from "@/components/league/RutaCard";
 import { WELCOME_HREF } from "@/components/language/LanguagePicker";
 import { LanguageSwitch } from "@/components/language/LanguageSwitch";
 import { getTab } from "@/lib/navigation";
-import { canPersist, currentStreak, dueItemIds, getProgress } from "@/lib/progress";
+import { canPersist, dueItemIds, getProgress } from "@/lib/progress";
 import { buildPath, lessonHref, type PathLesson, type PathUnit } from "@/lib/progress/path";
-import { useNow, useProgress } from "@/lib/progress/use-progress";
+import { useAppPoints, useNow, useProgress } from "@/lib/progress/use-progress";
 import { BoltIcon, CheckIcon, FlameIcon, LockIcon, PlayIcon } from "./icons";
 import { ExpressionView, GrammarCardView, SideSheet } from "./SideSheet";
 
@@ -42,7 +42,7 @@ function Path({ lang }: { lang: string }) {
     if (canPersist() && !getProgress(lang).onboarded) router.replace(WELCOME_HREF);
   }, [lang, router]);
 
-  const streak = currentStreak(progress);
+  const points = useAppPoints();
   const due = now ? dueItemIds(progress, pack, now).length : 0;
   const current = path.current;
   const currentUnit = current ? getUnit(current.unitId, pack) : undefined;
@@ -55,8 +55,8 @@ function Path({ lang }: { lang: string }) {
       <LanguageSwitch lang={lang} />
 
       <div className="grid grid-cols-2 gap-2">
-        <Stat icon={<FlameIcon className="size-5 text-terracotta-deep" />} value={streak} label={streak === 1 ? "día seguido" : "días seguidos"} />
-        <Stat icon={<BoltIcon className="size-5 text-lemon-deep" />} value={progress.xp} label="XP" />
+        <Stat icon={<FlameIcon className="size-5 text-terracotta-deep" />} value={points.streak} label={points.streak === 1 ? "día seguido" : "días seguidos"} />
+        <Stat icon={<BoltIcon className="size-5 text-lemon-deep" />} value={points.monthXp} label={points.month ? `XP de ${points.month}` : "XP"} />
       </div>
 
       <Card tone="lemon" className="flex flex-col gap-3">
@@ -84,9 +84,9 @@ function Path({ lang }: { lang: string }) {
           <p className="text-xl font-extrabold text-ink">¡Has terminado la ruta! Repasa y practica con los diálogos.</p>
         )}
         <div className="flex flex-col gap-1">
-          <ProgressBar value={path.done} max={path.total} label="Progreso de la ruta" />
+          <ProgressBar value={path.allDone} max={path.allTotal} label="Progreso de la ruta" />
           <p className="text-sm font-bold text-ink-muted">
-            {path.done} de {path.total} lecciones
+            {path.allDone} de {path.allTotal} lecciones
           </p>
         </div>
       </Card>

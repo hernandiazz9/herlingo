@@ -7,12 +7,22 @@
  * Parsing is tolerant: empty, corrupt or partly invalid values give an empty progress or drop
  * just the bad entries. Nothing here throws.
  */
-import { getItem, getLesson, getLessonItems, getPack, type Pack } from "@/lib/content";
+import { getItem, getLesson, getLessonItems, getPack, listLangs, type Pack } from "@/lib/content";
 import type { LessonResult } from "@/lib/exercises";
 import { clearGame } from "@/lib/game/storage";
 import { clearStoriesDone } from "@/lib/stories/done";
 import { dueIds, newEntry, parseEntry, schedule, type SrsEntry } from "@/lib/srs";
 import { addDays, dayKey, isDayKey } from "./dates";
+import {
+  addActivity,
+  ensureActivity,
+  globalBest,
+  globalStreak,
+  readActivityRaw,
+  removeActivityLang,
+  resolveActivity,
+  type LangStreak,
+} from "./points";
 
 export { addDays, dayKey } from "./dates";
 export * from "./settings";
@@ -146,6 +156,24 @@ export function subscribeProgress(onChange: () => void): () => void {
   };
 }
 
+/** Every pack's stored streak (seed and best-streak source of the global activity log). */
+export function langStreaks(): LangStreak[] {
+  if (typeof window === "undefined") return [];
+  return listLangs().map((lang) => ({ lang, ...getProgress(lang).streak }));
+}
+
+/** Global streak (any language) and best, as stored on the device now. */
+export function getGlobalStreak(today = dayKey()): { count: number; best: number } {
+  if (typeof window === "undefined") return { count: 0, best: 0 };
+  const log = resolveActivity(readActivityRaw(), langStreaks);
+  return { count: globalStreak(log, today), best: globalBest(log, today) };
+}
+
+/** Writes `lang-lern:activity` from the stored streaks if it does not exist yet (first run). */
+export function ensureAppPoints(): void {
+  ensureActivity(langStreaks);
+}
+
 // ---------------------------------------------------------------------------------------------
 // XP awards (the one place where awards are reported; Liga queues them, docs/league.md → Sync)
 
@@ -249,6 +277,8 @@ function saveResult(result: LessonResult, source: XpSource, now: number, extra?:
     applyResult(p, result, pack, now);
     extra?.(p, pack);
   });
+  // Global day log (monthly XP, global streak); 0 XP still marks the day.
+  addActivity(result.lang, Math.max(0, Math.round(result.xp)), dayKey(new Date(now)), langStreaks);
   reportXp({ lang: result.lang, amount: Math.max(0, Math.round(result.xp)), source, earnedAt: now });
   return p;
 }
@@ -294,10 +324,12 @@ export function completeOnboarding(lang: string): Progress {
 }
 
 /**
- * Deletes all progress of the pack, plus its game records/known phrases and finished stories
- * (settings are kept). The welcome shows again.
+ * Deletes all progress of the pack, plus its game records/known phrases, finished stories and its
+ * days in the global activity log (settings and other languages are kept). The welcome shows again.
  */
 export function resetProgress(lang: string): void {
+  // Seed first (if needed) so the other languages' streak days survive the removal below.
+  ensureAppPoints();
   try {
     window.localStorage.removeItem(key(lang));
   } catch {
@@ -305,5 +337,6 @@ export function resetProgress(lang: string): void {
   }
   clearGame(lang);
   clearStoriesDone(lang);
+  removeActivityLang(lang, langStreaks);
   window.dispatchEvent(new Event(EVENT));
 }

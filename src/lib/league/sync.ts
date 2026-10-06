@@ -9,7 +9,7 @@
  * exponentially. Nothing here throws: the offline app never waits for or notices the sync.
  */
 import { listLangs } from "@/lib/content";
-import { currentStreak, getProgress, subscribeXpAwards } from "@/lib/progress";
+import { getGlobalStreak, getProgress, subscribeXpAwards } from "@/lib/progress";
 import { getLeagueAccount, refreshLeagueAccount, subscribeLeagueAccount, type LeagueAccountChange } from "./account";
 import { leagueRpc } from "./client";
 import { leagueEnabled } from "./config";
@@ -56,10 +56,14 @@ function online(): boolean {
   return typeof navigator === "undefined" || navigator.onLine !== false;
 }
 
-/** The device's totals for `lang`: total XP, current streak (0 once lapsed), best streak. */
+/**
+ * The device's totals for `lang`: its total XP, and the global streak (any language; 0 once
+ * lapsed) and global best, the same in every language's stats.
+ */
 function statsFor(lang: string): LeagueStats {
   const p = getProgress(lang);
-  return { lang, total_xp: p.xp, streak_count: currentStreak(p), streak_best: p.streak.best };
+  const streak = getGlobalStreak();
+  return { lang, total_xp: p.xp, streak_count: streak.count, streak_best: streak.best };
 }
 
 const signature = (s: LeagueStats) => `${s.total_xp}|${s.streak_count}|${s.streak_best}`;

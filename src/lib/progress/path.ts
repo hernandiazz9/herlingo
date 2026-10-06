@@ -32,6 +32,9 @@ export interface PathModel {
   /** Main path totals. */
   done: number;
   total: number;
+  /** Every lesson of the pack, side units included (same count as Perfil and the picker). */
+  allDone: number;
+  allTotal: number;
 }
 
 export function buildPath(pack: Pack, progress: Progress): PathModel {
@@ -54,6 +57,8 @@ export function buildPath(pack: Pack, progress: Progress): PathModel {
     current,
     done: mainUnits.reduce((n, u) => n + u.done, 0),
     total: mainUnits.reduce((n, u) => n + u.lessons.length, 0),
+    allDone: units.reduce((n, u) => n + u.done, 0),
+    allTotal: units.reduce((n, u) => n + u.lessons.length, 0),
   };
 }
 
