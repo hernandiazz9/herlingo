@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 10:20Z 💻
+- Updated: 2026-10-06 10:39Z 💻
 - Writer: released 10:20Z by 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
 - Next step: all 16 tasks done; Hernán: review + visual queues, then OK to merge into main / deploy
-- Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying; OK for merge to main
+- Needs Hernán: OK for merge to main / deploy; visual + review queues
 
 ## Shared contract (all tasks read this)
 
@@ -325,3 +325,4 @@ Worktree setup: npm ci
 - 2026-10-06 10:12Z 💻 T73 launched · attempt 1 · agent ae4d7048a936ed7f7
 - 2026-10-06 10:18Z 💻 T73 agent blocked: strict image check is per pack (other pack's pictures flagged unused); scope extended to scripts/images/plan.ts + scripts/content.ts, sent back to the same agent
 - 2026-10-06 10:20Z 💻 T73 done · worktree-agent-ae4d7048a936ed7f7 → 1c894c7 · verify ✓
+- 2026-10-06 10:39Z 💻 Hernán applied 20261006000000_league_multi.sql to the real project (db push)
