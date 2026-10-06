@@ -31,7 +31,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T58 — Multi-pack foundation: default pack, active language, schema, routes
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a8f0c979cd1939402 · since 09:05Z)
 - Depends on: none
 - Where: any
 - Goal: The plumbing every other task builds on: an explicit default pack, the active-language store and hook, `listPacks()`, the per-pack schema rules (register, articles), ids unique across packs, static params for every pack on the three dynamic routes, and a meta-only `content/fr/pack.json` so the code runs with two packs.
@@ -105,7 +105,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T63 — Liga SQL: global weekly sum, global daily cap, up to 10 groups
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a0e011abed6b45031 · since 09:05Z)
 - Depends on: none
 - Where: pc (local Postgres for `npm run db:check` and `league:local`)
 - Goal: A new migration that ranks on the sum of all languages, caps daily XP across languages, and lets a player be in up to 10 groups, with new RPCs for the multi-group client and the old RPCs kept working for installed app versions.
@@ -262,3 +262,5 @@ Worktree setup: npm ci
 ## Log
 - 2026-10-06 💻 plan written from the interview; not approved yet
 - 2026-10-06 09:05Z 💻 plan approved by Hernán
+- 2026-10-06 09:05Z 💻 T58 launched · attempt 1 · agent a8f0c979cd1939402
+- 2026-10-06 09:05Z 💻 T63 launched · attempt 1 · agent a0e011abed6b45031
