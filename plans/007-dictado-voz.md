@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 💻
 - Writer: orchestrator (desktop)
 - Branch: plan-007-dictado-voz (from main @ a5f51c1)
-- Next step: T79 + T80 running; then T81, T82, T83, T84
+- Next step: T79 + T82 running; then T81, T83, T84
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -83,7 +83,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T80 — Lessons dictation exercise on the new engine
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T76, T77
 - Goal: DictationExercise uses the shared mic UI (phrase mode, pack `speechLocale`): live text fills the answer as it is heard, stays editable, concrete errors + Reintentar. Checking stays `checkAnswer` with typo tolerance.
 - Context: src/components/exercises/DictationExercise.tsx, Shared contract.
@@ -91,7 +91,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run verify` → exit 0
   - `grep -n "listenOnce" src/components/exercises/DictationExercise.tsx` → no output
-- Outcome:
+- Outcome: DictationExercise on useListen (phrase, speechLocale), live text in a read-only textarea, editable after → 7a9b9bc
 
 ## T81 — Dialogues: speak your turn on the new engine
 - Status: pending
@@ -105,7 +105,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T82 — Prepárate dictation on the new engine
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T76, T77
 - Goal: SituationForm and LevelInterview use the shared mic UI in long mode (es-ES or pack locale as today): live text, appended to what is typed, editable, Cancelar, concrete errors. Remove the duplicate `DictateButton` and `use-dictation.ts` if nothing else uses it.
 - Context: src/components/coach/SituationForm.tsx, src/components/coach/LevelInterview.tsx (~365-418, `SPANISH_LOCALE`), src/components/coach/use-dictation.ts, docs/coach.md (Client section).
@@ -152,6 +152,8 @@ Worktree setup: npm ci
 - 2026-10-06 T76: engine files session.ts / messages.ts / log.ts / platform.ts (only platform.ts touches the recognition globals); legacy listenOnce keeps its shape (audio-capture, start-timeout → other; timeoutMs > 10 s → long mode); continuous false for phrase, true for long; speechstart without words → no-speech after max(silenceMs, noSpeechMs); finish() before listening = cancel(); an error after words heard settles as done; browser "aborted" ignored; extra overrides startTimeoutMs/endGraceMs/maxAlternatives; log stores raw browser error code (agent)
 - 2026-10-06 T77: added composed <SpeakPanel>; cancel/aborted → idle without message; error/done states persist until start()/reset(); start() stops target audio first; components render nothing when unsupported (screens keep their fallback); "hearing" copy "Te escucho…"; countdown ring on big button, "· N s" on small pill + ProgressBar "Tiempo para hablar"; new MicIcon/MicOffIcon/MicStopIcon in icons.tsx (agent)
 - 2026-10-06 orchestrator: duplicate MicIcon in src/components/exercises/shared.tsx and use-dictation.ts retirement → T79/T80 must not edit shared.tsx (parallel), T82 retires use-dictation, T84 removes the shared.tsx MicIcon
+- 2026-10-06 T80: textarea read-only with live text while the mic is open, final transcript (spellNumbers) replaces the answer and is editable; Comprobar/Enter disabled while listening; mic UI hidden once answered; old custom notices replaced by engine messages (agent)
+- 2026-10-06 orchestrator: T82 launched before T81 so T81 can reuse the word-feedback component T79 creates
 
 ## Proposals (new scope)
 - 2026-10-06: "Grabarme": record your voice and play it next to the native audio (separate from recognition) (Hernán, later)
@@ -165,3 +167,6 @@ Worktree setup: npm ci
 - 2026-10-06 13:42 T76 done · branch worktree-agent-aed9f2545c1076095 → b21d6fb
 - 2026-10-06 13:43 T77 launched · attempt 1 · agent a2c08c3ec5a570f6f
 - 2026-10-06 13:46 T77 done · branch worktree-agent-a2c08c3ec5a570f6f → 3d8c77f
+- 2026-10-06 13:47 T79 launched · attempt 1 · agent a8ab439f1fa452413
+- 2026-10-06 13:47 T80 launched · attempt 1 · agent ac77027cde8a91689
+- 2026-10-06 13:49 T80 done · branch worktree-agent-ac77027cde8a91689 → 7a9b9bc
