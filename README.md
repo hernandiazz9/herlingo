@@ -24,6 +24,11 @@ npm run build   # writes out/, then out/sw.js and out/manifest.webmanifest
 npm start       # serves out/ at http://localhost:4173 (PORT=4000 npm start to change it)
 ```
 
+Offline audio: the service worker keeps the audio of the **active language only** (one cache
+per language, `lang-lern-audio-<lang>`, filled in the background after the first load or a
+language switch; switching drops the other language's audio once the new one is complete). The
+rest of the app is precached as before. Details: `scripts/pwa/sw.template.js`.
+
 Before committing: `npm run verify` (lint, content check, typecheck, build) must exit 0.
 
 ## Open it on the phone over the LAN

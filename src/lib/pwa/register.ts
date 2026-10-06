@@ -4,6 +4,9 @@
  * `next dev` we unregister any SW left over from serving out/ on the same port.
  */
 
+import { getActiveLang } from "@/lib/content/active";
+import { getAudioProgress } from "./audio-cache";
+
 export const SW_URL = "/sw.js";
 
 let started = false;
@@ -58,12 +61,15 @@ export function registerServiceWorker(onUpdate: (apply: () => void) => void): vo
 
 export type OfflineStatus = "ready" | "downloading" | "unavailable";
 
-/** Whether the whole app (pages + audio) is stored for offline use on this device. */
+/**
+ * Whether the app (pages) and the active language's audio are stored for offline use on this
+ * device. Other languages' audio is not kept (see `./audio-cache`).
+ */
 export async function offlineStatus(): Promise<OfflineStatus> {
   if (typeof navigator === "undefined" || !("serviceWorker" in navigator)) return "unavailable";
   const reg = await navigator.serviceWorker.getRegistration();
   if (!reg) return "unavailable";
   // A SW only becomes active once its install (the full precache) succeeded.
-  if (reg.active) return "ready";
+  if (reg.active) return getAudioProgress().state === "ready" || !getActiveLang() ? "ready" : "downloading";
   return reg.installing || reg.waiting ? "downloading" : "unavailable";
 }

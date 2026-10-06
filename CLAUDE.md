@@ -138,9 +138,13 @@ plans/                 Orchestrator plans. Never edit.
   from `@/components/ui`, with the resolved `image` / `avatar` (`{ src, dark? }`) from `@/lib/content`
   (`listVocab({ situation, withImage })`, `getVocab()`, `hasImage()`); absent = no picture, show text.
   Keys, coverage and the drawing style guide: docs/content-guide.md, "Pictures".
-- **Offline PWA.** `out/sw.js` precaches every file of the export (pages by their `/route/` URL,
-  RSC `.txt` payloads, JS/CSS, icons, all audio), so new routes and content are offline
-  automatically. Cache first, query strings ignored; audio Range requests answered with 206. A new
+- **Offline PWA.** `out/sw.js` precaches every file of the export except audio (pages by their
+  `/route/` URL, RSC `.txt` payloads, JS/CSS, icons, `/sw-audio/<lang>.json` audio lists), so new
+  routes and content are offline automatically. Audio is offline for the **active language only**:
+  one SW-owned cache per language, `lang-lern-audio-<lang>`, filled from the build's list (older
+  caches first, then the network) after the page posts the language (`src/lib/pwa/audio-cache.ts`,
+  progress `{ lang, total, cached, state }`); once a switch has fully downloaded, the other
+  languages' audio caches go. Cache first, query strings ignored; audio Range requests answered with 206. A new
   build = new SW version; it waits until the user taps "Actualizar" (UpdatePrompt). The SW only
   exists in the export: `next dev` unregisters it. Links between pages use trailing slashes.
 - TypeScript strict; import from `@/…` (maps to `src/`).

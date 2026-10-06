@@ -2,14 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui";
+import { startAudioSync } from "./audio-cache";
 import { registerServiceWorker } from "./register";
 
-/** Registers the service worker and, when a new version is ready, offers to reload into it. */
+/**
+ * Registers the service worker, keeps the active language's audio offline (`startAudioSync`) and,
+ * when a new version is ready, offers to reload into it.
+ */
 export function UpdatePrompt() {
   const [apply, setApply] = useState<(() => void) | null>(null);
 
   useEffect(() => {
     registerServiceWorker((fn) => setApply(() => fn));
+    startAudioSync();
   }, []);
 
   if (!apply) return null;
