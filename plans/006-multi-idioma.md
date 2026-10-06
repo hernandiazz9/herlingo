@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:41Z 💻
+- Updated: 2026-10-06 09:43Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T66/T67; then T68, T69, then T70–T72
+- Next step: integrate T67/T68; then T69, then T70–T72
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -145,7 +145,7 @@ Worktree setup: npm ci
 - Outcome: units salut (4 lessons), nombres (5 incl. 70–100 + prices), grammaire (3) + 10 gram.fr-* cards: 105 phrases, 68 vocab, 16 Q&A · 3507bfd · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T66 — French content: introducing yourself, family and friends
-- Status: running (attempt 1 · 💻 · agent ad96a505c474bf6a2 · since 09:34Z)
+- Status: done
 - Depends on: T58
 - Where: any
 - Goal: Units `presenter` (20) and `famille` (22) per docs/brief-fr.md.
@@ -154,7 +154,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~80 phrases, ~60 vocab, ~16 Q&A, 9–11 lessons.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units presenter (6 lessons) + famille (5): 87 phrases, 69 vocab, 18 Q&A, reuses salut/nombres/grammaire items; persona Hernán (Madrid, programmer) · a68dc23 · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T67 — French content: home and routine, free time and weather
 - Status: running (attempt 1 · 💻 · agent a2578ade40af140b3 · since 09:41Z)
@@ -169,7 +169,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T68 — French content: eating and drinking, shopping
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ab47370f46b265ec9 · since 09:43Z)
 - Depends on: T58
 - Where: any
 - Goal: Units `manger` (40) and `courses` (42) per docs/brief-fr.md (café, boulangerie, restaurant; supermarket, market, clothes).
@@ -252,6 +252,7 @@ Worktree setup: npm ci
 - [ ] T64 @9a6d848 — code review (queued 2026-10-06 💻)
 - [ ] T60 @c5f60f6 — code review (queued 2026-10-06 💻)
 - [ ] T62 @c191bba — code review (queued 2026-10-06 💻)
+- [ ] T66 @a68dc23 — French language review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -298,3 +299,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:36Z 💻 T62 launched · attempt 1 · agent a382ef15404b4341a
 - 2026-10-06 09:41Z 💻 T62 done · worktree-agent-a382ef15404b4341a → c191bba · verify ✓
 - 2026-10-06 09:41Z 💻 T67 launched · attempt 1 · agent a2578ade40af140b3
+- 2026-10-06 09:43Z 💻 T66 done · worktree-agent-ad96a505c474bf6a2 → a68dc23 · verify ✓
+- 2026-10-06 09:43Z 💻 T68 launched · attempt 1 · agent ab47370f46b265ec9
