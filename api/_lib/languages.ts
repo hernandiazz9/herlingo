@@ -6,7 +6,7 @@
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
-import { CoachError } from "./http";
+import { CoachError } from "./http.js";
 
 const PackMeta = z.object({
   lang: z.string(),

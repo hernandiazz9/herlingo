@@ -3,14 +3,14 @@
  * returns a short silent mp3 with no network; if the voice service fails → 503 and the client
  * falls back to the device voice. Every request counts against the code's daily voice lines.
  */
-import { authenticate } from "../_lib/access";
-import { isFake } from "../_lib/config";
-import { CoachError, readBody, route } from "../_lib/http";
-import { allowedVoices } from "../_lib/languages";
-import { reserveTts } from "../_lib/ledger";
-import { TtsRequest } from "../_lib/schema";
-import { silentMp3 } from "../_lib/fake";
-import { synthesize } from "../_lib/tts";
+import { authenticate } from "../_lib/access.js";
+import { isFake } from "../_lib/config.js";
+import { CoachError, readBody, route } from "../_lib/http.js";
+import { allowedVoices } from "../_lib/languages.js";
+import { reserveTts } from "../_lib/ledger.js";
+import { TtsRequest } from "../_lib/schema.js";
+import { silentMp3 } from "../_lib/fake.js";
+import { synthesize } from "../_lib/tts.js";
 
 export default route({
   async POST(request) {

@@ -1,11 +1,11 @@
 /** Pack and interview generators: fake (canned) or real (Claude, prompts in prompts.ts). */
-import { generateStructured } from "./claude";
-import { isFake } from "./config";
-import { FAKE_INTERVIEW_USAGE, FAKE_PACK_USAGE, fakeInterviewStep, fakePack } from "./fake";
-import type { LanguageMeta } from "./languages";
-import { COACH_MODEL, type Charge } from "./model";
-import { INTERVIEW_SYSTEM, PACK_SYSTEM, interviewUserPrompt, packUserPrompt, type PackInput } from "./prompts";
-import { Assessment, GeneratedPack, InterviewStep, LIMITS, type InterviewRequest } from "./schema";
+import { generateStructured } from "./claude.js";
+import { isFake } from "./config.js";
+import { FAKE_INTERVIEW_USAGE, FAKE_PACK_USAGE, fakeInterviewStep, fakePack } from "./fake.js";
+import type { LanguageMeta } from "./languages.js";
+import { COACH_MODEL, type Charge } from "./model.js";
+import { INTERVIEW_SYSTEM, PACK_SYSTEM, interviewUserPrompt, packUserPrompt, type PackInput } from "./prompts.js";
+import { Assessment, GeneratedPack, InterviewStep, LIMITS, type InterviewRequest } from "./schema.js";
 
 export type OnUsage = (charges: Charge[]) => Promise<unknown>;
 

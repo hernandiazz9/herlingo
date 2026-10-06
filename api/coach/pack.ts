@@ -1,9 +1,9 @@
 /** POST /api/coach/pack/: generate a preparation pack, or refine one (docs/coach.md). */
 import { randomUUID } from "node:crypto";
-import { authenticate } from "../_lib/access";
-import { generatePack } from "../_lib/generators";
-import { CoachError, json, readBody, route } from "../_lib/http";
-import { getLanguage, packVoices } from "../_lib/languages";
+import { authenticate } from "../_lib/access.js";
+import { generatePack } from "../_lib/generators.js";
+import { CoachError, json, readBody, route } from "../_lib/http.js";
+import { getLanguage, packVoices } from "../_lib/languages.js";
 import {
   assertBudget,
   readUsage,
@@ -12,9 +12,9 @@ import {
   reserveGeneration,
   reserveRefinement,
   type Refund,
-} from "../_lib/ledger";
-import { sumUsage, type Charge } from "../_lib/model";
-import { Pack, PackRequest } from "../_lib/schema";
+} from "../_lib/ledger.js";
+import { sumUsage, type Charge } from "../_lib/model.js";
+import { Pack, PackRequest } from "../_lib/schema.js";
 
 export default route({
   async POST(request) {

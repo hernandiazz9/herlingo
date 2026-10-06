@@ -1,6 +1,6 @@
 import { timingSafeEqual } from "node:crypto";
-import { accessEntries, ownerName } from "./config";
-import { CoachError } from "./http";
+import { accessEntries, ownerName } from "./config.js";
+import { CoachError } from "./http.js";
 
 export interface Caller {
   /** Name of the `COACH_ACCESS_CODES` entry; keys the per-code ledger and daily limit. */

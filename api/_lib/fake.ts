@@ -2,9 +2,9 @@
  * Fake mode (`COACH_FAKE=1`, or no Anthropic key in local dev): canned answers, no network.
  * Fixtures are test data keyed by language; a language without one gets placeholder lines.
  */
-import type { LanguageMeta } from "./languages";
-import type { TokenUsage } from "./model";
-import type { Assessment, GeneratedPack, InterviewQuestion, InterviewStep } from "./schema";
+import type { LanguageMeta } from "./languages.js";
+import type { TokenUsage } from "./model.js";
+import type { Assessment, GeneratedPack, InterviewQuestion, InterviewStep } from "./schema.js";
 
 /** Plausible token counts of a real call, so the ledger and the usage panel show real-looking numbers. */
 export const FAKE_PACK_USAGE: TokenUsage = { input: 1400, output: 2600, cacheWrite: 0, cacheRead: 2100 };

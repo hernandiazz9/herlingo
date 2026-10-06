@@ -5,7 +5,7 @@
  * falls back to the device voice.
  */
 import { MsEdgeTTS, OUTPUT_FORMAT } from "msedge-tts";
-import { CoachError } from "./http";
+import { CoachError } from "./http.js";
 
 const ATTEMPTS = 2;
 const TIMEOUT_MS = 10_000;

@@ -3,8 +3,8 @@
  * language-agnostic (cached; the same for every learner and language); everything per request
  * (language, learner context, the learner's words) goes in the user turn.
  */
-import type { LanguageMeta } from "./languages";
-import type { InterviewRequest, LearnerProfile, Pack } from "./schema";
+import type { LanguageMeta } from "./languages.js";
+import type { InterviewRequest, LearnerProfile, Pack } from "./schema.js";
 
 export interface PackInput {
   meta: LanguageMeta;

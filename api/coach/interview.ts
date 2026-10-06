@@ -3,12 +3,12 @@
  * Every step takes one of the code's daily interview steps (the client's `history` is not
  * trusted for that); the first step (empty history) also takes one of today's generations.
  */
-import { authenticate } from "../_lib/access";
-import { generateInterviewStep } from "../_lib/generators";
-import { CoachError, json, readBody, route } from "../_lib/http";
-import { getLanguage } from "../_lib/languages";
-import { assertBudget, readUsage, recordCall, reserveGeneration, reserveInterviewStep, type Refund } from "../_lib/ledger";
-import { InterviewRequest } from "../_lib/schema";
+import { authenticate } from "../_lib/access.js";
+import { generateInterviewStep } from "../_lib/generators.js";
+import { CoachError, json, readBody, route } from "../_lib/http.js";
+import { getLanguage } from "../_lib/languages.js";
+import { assertBudget, readUsage, recordCall, reserveGeneration, reserveInterviewStep, type Refund } from "../_lib/ledger.js";
+import { InterviewRequest } from "../_lib/schema.js";
 
 export default route({
   async POST(request) {

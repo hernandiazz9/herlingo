@@ -5,9 +5,9 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import type { z } from "zod";
-import { requireAnthropicKey } from "./config";
-import { CoachError } from "./http";
-import { COACH_MODEL, type Charge } from "./model";
+import { requireAnthropicKey } from "./config.js";
+import { CoachError } from "./http.js";
+import { COACH_MODEL, type Charge } from "./model.js";
 
 let client: Anthropic | undefined;
 

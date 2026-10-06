@@ -17,12 +17,12 @@
  * A slot (generation, step, refinement) is given back only when the call failed before Claude
  * billed anything: once a response has been charged, the slot stays used.
  */
-import type { Caller } from "./access";
-import { dailyLimit, defaultCapUsd, timeZone, ttsDailyLimit } from "./config";
-import { CoachError } from "./http";
-import { costMicroUsd, sumUsage, type Charge } from "./model";
-import { LIMITS } from "./schema";
-import { getStore } from "./store";
+import type { Caller } from "./access.js";
+import { dailyLimit, defaultCapUsd, timeZone, ttsDailyLimit } from "./config.js";
+import { CoachError } from "./http.js";
+import { costMicroUsd, sumUsage, type Charge } from "./model.js";
+import { LIMITS } from "./schema.js";
+import { getStore } from "./store.js";
 
 const PREFIX = "langlern:coach";
 const MICRO = 1_000_000;

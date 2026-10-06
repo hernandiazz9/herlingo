@@ -3,7 +3,7 @@
  * (local dev; lost on restart). Fake mode always uses memory so canned calls never touch real data.
  */
 import { Redis } from "@upstash/redis";
-import { isFake, upstashConfig } from "./config";
+import { isFake, upstashConfig } from "./config.js";
 
 export interface Store {
   readonly kind: "upstash" | "memory";

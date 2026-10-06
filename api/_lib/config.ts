@@ -1,5 +1,5 @@
 /** Environment of the coach functions. Read lazily so the local dev server can set env first. */
-import { CoachError } from "./http";
+import { CoachError } from "./http.js";
 
 export interface AccessEntry {
   name: string;

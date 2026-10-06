@@ -41,7 +41,11 @@ scripts/coach/dev.ts local server: app + /api on one origin (npm run dev:coach /
 - Language-agnostic: the prompts get the language name, locale and voices from
   `content/<lang>/pack.json` (bundled into the functions with `includeFiles` in vercel.json).
   Fake-mode fixtures are test data keyed by language (placeholders for a language without one).
-- `api/` uses relative imports only (Vercel's TypeScript build ignores `paths`).
+- `api/` uses relative imports only (Vercel's TypeScript build ignores `paths`), always with a `.js`
+  extension (`from "../_lib/http.js"`), and `api/package.json` sets `"type": "module"`. Vercel
+  compiles each `.ts` file to an ES module as is: without both, Node cannot load the function
+  (500 FUNCTION_INVOCATION_FAILED, "Failed to load the ES module"). Check with
+  `npx vercel build --prod` and import `.vercel/output/functions/api/coach/*.func/api/coach/*.js`.
 - The service worker must never cache or intercept `/api/` (handled in `scripts/pwa/`, T45).
 
 ## Local development
