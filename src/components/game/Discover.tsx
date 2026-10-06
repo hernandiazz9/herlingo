@@ -5,11 +5,16 @@ import { CloseIcon, PlayControls } from "@/components/exercises/shared";
 import { Button, Card, IconButton, Picture, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { explain, isWord, markKnown, type GameCard, type Topic } from "@/lib/game";
+import { recordActivity } from "@/lib/progress/activity";
+
+/** XP for each card marked "La sé" for the first time. */
+export const XP_DISCOVER_CARD = 1;
 
 /**
  * Discovery: one card per word or phrase of the deck (pictured words first: big picture, word,
  * Spanish). "La sé" marks it known; "Otra vez" sends it to the end. Each new card plays on arrival
- * (from the tap that brought it). Skippable to the round.
+ * (from the tap that brought it). Skippable to the round. A card known for the first time earns
+ * `XP_DISCOVER_CARD`.
  */
 export function Discover({
   lang,
@@ -40,7 +45,7 @@ export function Discover({
   };
 
   const knowIt = () => {
-    markKnown(lang, card.id);
+    if (markKnown(lang, card.id)) recordActivity({ lang, xp: XP_DISCOVER_CARD, outcomes: [], source: "discover" });
     setKnown((n) => n + 1);
     advance(queue.slice(1));
   };

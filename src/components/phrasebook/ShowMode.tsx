@@ -5,6 +5,7 @@ import { SpeakerIcon } from "@/components/icons";
 import { Button } from "@/components/ui";
 import type { Playable } from "@/lib/content";
 import { speak, stop } from "@/lib/audio";
+import { recordListen } from "@/lib/progress/activity";
 import { CloseIcon, SlowIcon } from "./icons";
 import { useLessonLang } from "@/components/exercises";
 
@@ -23,6 +24,11 @@ export function ShowMode({ item, onClose }: ShowModeProps) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [onClose]);
+
+  const play = (slow = false) => {
+    speak(item, { lang, slow });
+    recordListen(item.audioKey, lang);
+  };
 
   const close = () => {
     stop();
@@ -49,7 +55,7 @@ export function ShowMode({ item, onClose }: ShowModeProps) {
       </div>
       <button
         type="button"
-        onClick={() => speak(item, { lang })}
+        onClick={() => play()}
         className="flex flex-1 flex-col items-center justify-center gap-6 text-center"
         aria-label={`Escuchar: ${item.text}`}
       >
@@ -59,10 +65,10 @@ export function ShowMode({ item, onClose }: ShowModeProps) {
         <p className="text-xl text-ink-muted">{item.es}</p>
       </button>
       <div className="mx-auto grid w-full max-w-[var(--column-width)] grid-cols-2 gap-3">
-        <Button onClick={() => speak(item, { lang })}>
+        <Button onClick={() => play()}>
           <SpeakerIcon /> Escuchar
         </Button>
-        <Button variant="secondary" onClick={() => speak(item, { lang, slow: true })}>
+        <Button variant="secondary" onClick={() => play(true)}>
           <SlowIcon /> Lento
         </Button>
       </div>

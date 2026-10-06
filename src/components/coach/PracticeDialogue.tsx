@@ -39,7 +39,7 @@ export function PracticeDialogue({ pack }: { pack: CoachPack }) {
           >
             Practicar el diálogo
           </Link>
-          <p className="text-sm text-ink-muted">Escucha, responde y gana XP al terminar (una vez al día).</p>
+          <p className="text-sm text-ink-muted">Escucha, responde y gana XP al terminar (si lo repites hoy, la mitad).</p>
         </>
       ) : (
         <>

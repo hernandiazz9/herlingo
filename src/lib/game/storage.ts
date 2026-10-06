@@ -79,11 +79,13 @@ export function saveRecord(lang: string, topicId: string, score: number): number
   return prev;
 }
 
-export function markKnown(lang: string, phraseId: string): void {
+/** Marks a card "La sé". Returns true when it was not known yet. */
+export function markKnown(lang: string, phraseId: string): boolean {
   const state = getGameState(lang);
-  if (state.known.includes(phraseId)) return;
+  if (state.known.includes(phraseId)) return false;
   state.known.push(phraseId);
   save(lang, state);
+  return true;
 }
 
 /** Deletes the pack's game records and "La sé" phrases (part of "Borrar progreso"). */

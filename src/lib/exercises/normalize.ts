@@ -6,6 +6,8 @@
  *   so "un'acqua", "un’acqua", "un' acqua" and "un acqua" are equal.
  * - Missing or wrong accents are accepted, but reported (`accentNote`) so the UI can say
  *   "cuidado con el acento".
+ * - Typed answers (`{ typos: true }`) also accept a small typo (one letter, two in long answers),
+ *   reported (`typo`) so the UI can show it as "almost" and highlight the words to fix.
  */
 
 const APOSTROPHES = /['’‘`´ʼ]/g;
@@ -23,20 +25,88 @@ export interface AnswerCheck {
   correct: boolean;
   /** Correct except for accents: show "cuidado con el acento". */
   accentNote: boolean;
+  /** Accepted with a small typo (only with `typos`): show it as "almost" and highlight it. */
+  typo: boolean;
   /** The accepted answer it matched (or the first one when wrong). */
   expected: string;
 }
 
+export interface CheckOptions {
+  /** Accept a small typo (typed answers): see `typoAllowance`. */
+  typos?: boolean;
+}
+
+/** Letters that may be wrong in a typed answer: none under 4, one, two from 12 (accents ignored). */
+export function typoAllowance(expected: string): number {
+  const n = normalizeAnswer(expected, true).replace(/ /g, "").length;
+  return n < 4 ? 0 : n < 12 ? 1 : 2;
+}
+
 /** Compares a typed/built answer with one or more accepted answers. */
-export function checkAnswer(given: string, accepted: string | readonly string[]): AnswerCheck {
+export function checkAnswer(given: string, accepted: string | readonly string[], options: CheckOptions = {}): AnswerCheck {
   const list = typeof accepted === "string" ? [accepted] : accepted;
   const g = normalizeAnswer(given);
-  for (const a of list) if (normalizeAnswer(a) === g) return { correct: true, accentNote: false, expected: a };
+  for (const a of list) if (normalizeAnswer(a) === g) return { correct: true, accentNote: false, typo: false, expected: a };
   const gs = normalizeAnswer(given, true);
   for (const a of list) {
-    if (normalizeAnswer(a, true) === gs) return { correct: true, accentNote: true, expected: a };
+    if (normalizeAnswer(a, true) === gs) return { correct: true, accentNote: true, typo: false, expected: a };
   }
-  return { correct: false, accentNote: false, expected: list[0] ?? "" };
+  if (options.typos && gs) {
+    for (const a of list) {
+      const allowed = typoAllowance(a);
+      if (allowed > 0 && levenshtein(normalizeAnswer(a, true), gs) <= allowed) {
+        return { correct: true, accentNote: false, typo: true, expected: a };
+      }
+    }
+  }
+  return { correct: false, accentNote: false, typo: false, expected: list[0] ?? "" };
+}
+
+/** A word of a sentence, `wrong` when it has no exact (accent-insensitive) match in the other one. */
+export interface DiffWord {
+  text: string;
+  wrong: boolean;
+}
+
+/**
+ * Word-level diff (longest common subsequence, accents/case/punctuation ignored): both sentences
+ * split into their words, marking the ones that differ.
+ */
+export function diffWords(given: string, expected: string): { given: DiffWord[]; expected: DiffWord[] } {
+  const a = given.split(/\s+/).filter(Boolean);
+  const b = expected.split(/\s+/).filter(Boolean);
+  const na = a.map((w) => normalizeAnswer(w, true));
+  const nb = b.map((w) => normalizeAnswer(w, true));
+  const lcs = Array.from({ length: a.length + 1 }, () => new Array<number>(b.length + 1).fill(0));
+  for (let i = a.length - 1; i >= 0; i--) {
+    for (let j = b.length - 1; j >= 0; j--) {
+      lcs[i][j] = na[i] === nb[j] ? lcs[i + 1][j + 1] + 1 : Math.max(lcs[i + 1][j], lcs[i][j + 1]);
+    }
+  }
+  const okA = new Set<number>();
+  const okB = new Set<number>();
+  let i = 0;
+  let j = 0;
+  while (i < a.length && j < b.length) {
+    if (na[i] === nb[j]) {
+      okA.add(i++);
+      okB.add(j++);
+    } else if (lcs[i + 1][j] >= lcs[i][j + 1]) i++;
+    else j++;
+  }
+  return {
+    given: a.map((text, k) => ({ text, wrong: !okA.has(k) && na[k] !== "" })),
+    expected: b.map((text, k) => ({ text, wrong: !okB.has(k) && nb[k] !== "" })),
+  };
+}
+
+/**
+ * Writes out the numbers of a text with `words` ("alle 11:40" → "alle undici:quaranta"): speech
+ * recognition often returns digits. Numbers without a word are left as they are.
+ */
+export function spellNumbers(text: string, words: Readonly<Record<string, string>> | undefined): string {
+  if (!words) return text;
+  return text.replace(/\d+/g, (n) => words[String(Number(n))] ?? n);
 }
 
 function levenshtein(a: string, b: string): number {
