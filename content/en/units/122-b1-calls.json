@@ -1,0 +1,370 @@
+{
+  "id": "b1-calls",
+  "order": 122,
+  "title": "Email, chat, llamadas y videollamadas",
+  "description": "Escribir emails de trabajo, moverte por el chat del equipo, llamar por teléfono, sobrevivir a una videollamada y quedar para reuniones.",
+  "emoji": "📧",
+  "situation": "comunicacion",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-calls.l.email",
+      "title": "Escribir emails",
+      "items": [
+        "b1-calls.email",
+        "b1-calls.inbox",
+        "b1-calls.subject-line",
+        "b1-calls.dear-ms-lee",
+        "b1-calls.im-writing-to-ask",
+        "b1-calls.thanks-for-getting-back-to-me",
+        "b1-calls.sorry-for-the-late-reply",
+        "b1-calls.reply",
+        "b1-calls.attachment",
+        "b1-calls.please-find-the-report-attached",
+        "b1-calls.ive-attached-the-latest-version",
+        "b1-calls.ive-copied-maya",
+        "b1-calls.im-just-following-up",
+        "b1-calls.let-me-know-if-you-have-any-questions",
+        "b1-calls.i-look-forward-to-hearing-from-you",
+        "b1-calls.best-regards",
+        "b1-calls.signature",
+        "b1-calls.typo",
+        "b1-calls.qa.did-you-get-my-email"
+      ]
+    },
+    {
+      "id": "b1-calls.l.chat",
+      "title": "El chat del equipo",
+      "items": [
+        "b1-calls.message",
+        "b1-calls.channel",
+        "b1-calls.thread",
+        "b1-calls.notification",
+        "b1-calls.hey-do-you-have-a-minute",
+        "b1-calls.can-you-take-a-look-at-my-pull-request",
+        "b1-calls.pull-request",
+        "b1-calls.let-me-check-and-get-back-to-you",
+        "b1-calls.just-a-heads-up",
+        "b1-calls.link",
+        "b1-calls.ive-just-sent-you-the-link",
+        "b1-calls.ill-ping-you-when-its-ready",
+        "b1-calls.no-rush",
+        "b1-calls.sounds-good-thanks",
+        "b1-calls.qa.take-a-look"
+      ]
+    },
+    {
+      "id": "b1-calls.l.phone",
+      "title": "Llamadas de teléfono",
+      "items": [
+        "b1-calls.phone-call",
+        "b1-calls.cell-phone",
+        "b1-calls.hi-this-is-hernan",
+        "b1-calls.could-i-speak-to-ms-lee",
+        "b1-calls.may-i-ask-whos-calling",
+        "b1-calls.receptionist",
+        "b1-calls.hold-on-a-second",
+        "b1-calls.ill-put-you-through",
+        "b1-calls.extension",
+        "b1-calls.im-afraid-shes-not-available",
+        "b1-calls.can-i-leave-a-message",
+        "b1-calls.could-you-ask-her-to-call-me-back",
+        "b1-calls.voicemail",
+        "b1-calls.sorry-i-missed-your-call",
+        "b1-calls.im-returning-your-call",
+        "a2-hello.could-you-repeat",
+        "a2-hello.more-slowly",
+        "b1-calls.qa.whos-calling",
+        "b1-calls.qa.leave-a-message"
+      ]
+    },
+    {
+      "id": "b1-calls.l.video",
+      "title": "Videollamadas",
+      "items": [
+        "b1-calls.video-call",
+        "b1-calls.lets-get-started",
+        "b1-calls.can-you-hear-me-okay",
+        "b1-calls.microphone",
+        "b1-calls.i-think-youre-on-mute",
+        "b1-calls.camera",
+        "b1-calls.ill-turn-my-camera-on",
+        "b1-calls.connection",
+        "b1-calls.youre-breaking-up",
+        "b1-calls.the-audio-cut-out",
+        "b1-calls.my-connection-dropped",
+        "b1-calls.background-noise",
+        "b1-calls.headphones",
+        "b1-calls.screen",
+        "b1-calls.let-me-share-my-screen",
+        "b1-calls.can-everyone-see-my-screen",
+        "b1-calls.recording",
+        "b1-calls.qa.can-you-hear-me",
+        "b1-calls.qa.are-you-there",
+        "b1-calls.qa.share-screen"
+      ]
+    },
+    {
+      "id": "b1-calls.l.scheduling",
+      "title": "Reuniones: proponer, mover y cancelar",
+      "items": [
+        "b1-calls.calendar",
+        "b1-calls.invite",
+        "b1-calls.does-thursday-at-ten-work-for-you",
+        "b1-calls.would-you-be-available-on-monday",
+        "b1-calls.ill-send-you-a-calendar-invite",
+        "b1-calls.time-zone",
+        "b1-calls.can-we-push-the-meeting-to-three",
+        "b1-calls.something-came-up",
+        "b1-calls.i-have-to-cancel-todays-call",
+        "b1-calls.im-running-five-minutes-late",
+        "a2-grammar.ill-call-you-later",
+        "b1-calls.agenda",
+        "b1-calls.lets-wrap-up",
+        "b1-calls.summary",
+        "b1-calls.ill-send-a-quick-summary",
+        "b1-calls.client",
+        "b1-calls.qa.reschedule",
+        "b1-calls.qa.available-monday"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b1-calls.dear-ms-lee", "text": "Dear Ms. Lee,", "es": "Estimada Sra. Lee:", "notes": "«Ms.» (miz) sirve para cualquier mujer, casada o no.", "explanation": "Para empezar un email formal a alguien que no conoces. «Ms.» suena «miz», con «z» zumbante.", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.im-writing-to-ask", "text": "I'm writing to ask about the project timeline.", "es": "Te escribo para preguntar por el calendario del proyecto.", "explanation": "La primera frase de un email formal: va directo al motivo. En «writing» la «w» inicial suena y la «t» es suave: «RAI-ring».", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.thanks-for-getting-back-to-me", "text": "Thanks for getting back to me so quickly.", "es": "Gracias por responderme tan rápido.", "notes": "«get back to someone» = responder a alguien, volver a contactar.", "explanation": "Para empezar tu respuesta a un email o mensaje. «getting» con «t» suave americana: «GE-ring».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.sorry-for-the-late-reply", "text": "Sorry for the late reply.", "es": "Perdona por tardar en responder.", "explanation": "Al contestar un email o mensaje con retraso. «reply» lleva el acento al final: «ri-PLAI».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.please-find-the-report-attached", "text": "Please find the report attached.", "es": "Le adjunto el informe.", "explanation": "Fórmula de email formal para enviar un archivo. «attached» acaba en /t/: «ə-TÆCHT», una sola sílaba al final.", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.ive-attached-the-latest-version", "text": "I've attached the latest version.", "es": "Te adjunto la última versión.", "explanation": "La forma neutra de mandar un archivo por email. «latest» con «t» suave: «LEI-rist».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.ive-copied-maya", "text": "I've copied Maya on this email.", "es": "He puesto a Maya en copia en este correo.", "notes": "«copy someone on» = poner en copia (CC).", "explanation": "Para avisar de que alguien más lee el hilo. «copied» acaba en /d/: «KA-pid».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.im-just-following-up", "text": "I'm just following up on my last email.", "es": "Te escribo para retomar mi último correo.", "notes": "«follow up on» = retomar un tema pendiente. Educado para recordar algo sin presionar.", "explanation": "Cuando no te han contestado. «following» suena «FA-lou-ing», con «a» abierta.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.let-me-know-if-you-have-any-questions", "text": "Let me know if you have any questions.", "es": "Si tienes cualquier pregunta, dime.", "explanation": "Cierre típico de un email o un mensaje. «Let me» se une y la «t» casi desaparece: «le-mi».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.i-look-forward-to-hearing-from-you", "text": "I look forward to hearing from you.", "es": "Quedo a la espera de su respuesta.", "notes": "Tras «look forward to» va -ing: «to hearing», no «to hear».", "explanation": "Cierre de email formal. «forward» suena «FOR-wərd», con dos «r» americanas.", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.best-regards", "text": "Best regards,", "es": "Un saludo,", "explanation": "Despedida estándar de un email de trabajo, antes de tu nombre. «regards» suena «ri-GARDZ».", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.hey-do-you-have-a-minute", "text": "Hey, do you have a minute?", "es": "Oye, ¿tienes un momento?", "explanation": "Para abrir una conversación con un compañero por chat o en persona. «minute» suena «MI-nit», no «mai-NIUT».", "register": "tu", "situation": "comunicacion" },
+    { "id": "b1-calls.can-you-take-a-look-at-my-pull-request", "text": "Can you take a look at my pull request?", "es": "¿Puedes echarle un vistazo a mi pull request?", "notes": "«take a look at» = echar un vistazo a algo.", "explanation": "Para pedir una revisión por chat. «pull» lleva una «u» corta, distinta de «pool» (larga).", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.let-me-check-and-get-back-to-you", "text": "Let me check and get back to you.", "es": "Déjame mirarlo y te digo algo.", "notes": "«get back to you» = volver a contactarte con la respuesta.", "explanation": "Cuando no sabes la respuesta todavía. «get back» se une: «ge-BÆK».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.just-a-heads-up", "text": "Just a heads-up: the build is broken.", "es": "Un aviso: la build está rota.", "notes": "«a heads-up» = un aviso para que alguien esté atento.", "explanation": "Para avisar al equipo en un canal. «heads-up» suena «JEDZ-ap», con la «h» aspirada suave.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.ive-just-sent-you-the-link", "text": "I've just sent you the link.", "es": "Te acabo de mandar el enlace.", "explanation": "Por chat o en una llamada. «sent you» se une: «SEN-chu».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.ill-ping-you-when-its-ready", "text": "I'll ping you when it's ready.", "es": "Te escribo cuando esté listo.", "notes": "«ping someone» = mandarle un mensaje rápido.", "explanation": "Con compañeros, por chat. Tras «when» va presente: «when it's ready», no «when it will be».", "register": "tu", "situation": "comunicacion" },
+    { "id": "b1-calls.no-rush", "text": "No rush. Whenever you have time.", "es": "Sin prisa. Cuando puedas.", "explanation": "Para quitar presión a un compañero. «rush» con «a» breve y «sh» final: «rash».", "register": "tu", "situation": "comunicacion" },
+    { "id": "b1-calls.sounds-good-thanks", "text": "Sounds good, thanks!", "es": "¡Perfecto, gracias!", "explanation": "Respuesta rápida y casual por chat. «sounds» acaba en «ndz»: «saundz», sin «e» final.", "register": "tu", "situation": "comunicacion" },
+    { "id": "b1-calls.hi-this-is-hernan", "text": "Hi, this is Hernán. I'm calling about the invoice.", "es": "Hola, soy Hernán. Llamo por la factura.", "notes": "Al teléfono te presentas con «This is…», no con «I am…».", "explanation": "Para empezar una llamada. «calling» con «o» abierta: «KO-ling».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.could-i-speak-to-ms-lee", "text": "Could I speak to Ms. Lee, please?", "es": "¿Podría hablar con la Sra. Lee, por favor?", "explanation": "Para pedir por alguien al llamar a una empresa. «speak» empieza con «s» directa: «spiik», nunca «espik».", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.may-i-ask-whos-calling", "text": "May I ask who's calling?", "es": "¿De parte de quién?", "explanation": "Lo oirás en recepción antes de pasarte con alguien. «who's» suena «huuz», con «z» final.", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.hold-on-a-second", "text": "Hold on a second, please.", "es": "Un momento, por favor.", "notes": "«hold on» = esperar (sobre todo al teléfono).", "explanation": "Para pedir que esperen al teléfono. «hold on» se une: «HOUL-don».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.ill-put-you-through", "text": "I'll put you through.", "es": "Le paso con ella.", "notes": "«put someone through» = pasar una llamada a otra persona.", "explanation": "Lo dice la recepcionista antes de transferirte. «through» suena «zruu», con «th» sorda.", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.im-afraid-shes-not-available", "text": "I'm afraid she's not available right now.", "es": "Lo siento, ahora mismo no está disponible.", "notes": "«I'm afraid…» suaviza una mala noticia: «me temo que…».", "explanation": "Lo oirás si la persona no puede atenderte. «available» tiene el acento en «VEI»: «ə-VEI-lə-bəl».", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.can-i-leave-a-message", "text": "Can I leave a message?", "es": "¿Puedo dejarle un mensaje?", "explanation": "Cuando la persona no está. «leave» con «i» larga: «liiv», distinta de «live».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.could-you-ask-her-to-call-me-back", "text": "Could you ask her to call me back?", "es": "¿Le podría decir que me devuelva la llamada?", "notes": "«call back» = devolver la llamada.", "explanation": "Para dejar recado al teléfono. «ask her» se une y la «h» desaparece: «ÆS-kər».", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.sorry-i-missed-your-call", "text": "Sorry, I missed your call. I was in a meeting.", "es": "Perdona, no pude cogerte la llamada. Estaba en una reunión.", "explanation": "Al devolver una llamada o por mensaje. «missed» acaba en /t/: «mist», una sílaba.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.im-returning-your-call", "text": "I'm returning your call from this morning.", "es": "Te devuelvo la llamada de esta mañana.", "explanation": "Para devolver una llamada de forma profesional. «returning» con la «r» americana: «ri-TER-ning».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.lets-get-started", "text": "Let's get started. Is everyone here?", "es": "Empecemos. ¿Estamos todos?", "explanation": "Para abrir una reunión o videollamada. «get started» se une: «ge-STAR-rid».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.can-you-hear-me-okay", "text": "Can you hear me okay?", "es": "¿Me oyes bien?", "explanation": "Al empezar una videollamada. «hear» suena «jir», con «h» aspirada suave, distinta de «here» solo en la escritura.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.i-think-youre-on-mute", "text": "I think you're on mute.", "es": "Creo que tienes el micro silenciado.", "notes": "«be on mute» = tener el micrófono silenciado.", "explanation": "La frase más repetida en las videollamadas. «mute» suena «miut», con «u» larga.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.ill-turn-my-camera-on", "text": "I'll turn my camera on.", "es": "Voy a encender la cámara.", "notes": "«turn on / turn off» = encender / apagar.", "explanation": "Al empezar una videollamada. «camera» tiene dos sílabas en inglés americano rápido: «KÆM-rə».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.youre-breaking-up", "text": "Sorry, you're breaking up.", "es": "Perdona, se te corta la voz.", "notes": "«break up» = cortarse (el audio, la conexión).", "explanation": "Cuando el audio de otra persona llega cortado. «breaking» con «ei»: «BREI-king».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.the-audio-cut-out", "text": "Sorry, the audio cut out. Could you say that again?", "es": "Perdona, se ha cortado el audio. ¿Puedes repetirlo?", "notes": "«cut out» = cortarse de golpe (sonido, motor).", "explanation": "Para pedir que repitan en una llamada. «cut out» se une: «ka-RAUT».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.my-connection-dropped", "text": "Sorry, my connection dropped. What did I miss?", "es": "Perdón, se me cayó la conexión. ¿Qué me he perdido?", "explanation": "Al volver a entrar a una llamada. «dropped» acaba en /t/: «dropt», una sílaba.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.let-me-share-my-screen", "text": "Let me share my screen.", "es": "Voy a compartir pantalla.", "explanation": "Antes de enseñar algo en una videollamada. «screen» empieza con «s» directa: «skriin», sin «e» delante.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.can-everyone-see-my-screen", "text": "Can everyone see my screen?", "es": "¿Veis todos mi pantalla?", "explanation": "Para comprobar que se ve lo que compartes. «everyone» suena «EV-rii-wan», tres sílabas.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.does-thursday-at-ten-work-for-you", "text": "Does Thursday at ten work for you?", "es": "¿Te va bien el jueves a las diez?", "notes": "«Does … work for you?» = ¿te viene bien…?", "explanation": "Para proponer una hora de reunión. «Thursday» empieza con «th» sorda: «ZERZ-dei».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.would-you-be-available-on-monday", "text": "Would you be available on Monday morning?", "es": "¿Estaría disponible el lunes por la mañana?", "explanation": "Para proponer una reunión a un cliente o a alguien de fuera. «Would you» se une: «WU-dʒu».", "register": "formal", "situation": "comunicacion" },
+    { "id": "b1-calls.ill-send-you-a-calendar-invite", "text": "I'll send you a calendar invite.", "es": "Te mando una invitación en el calendario.", "notes": "«invite» como sustantivo (acento en IN) es habitual en el trabajo.", "explanation": "Para cerrar la hora de una reunión. «calendar» suena «KÆ-lən-dər», acento al principio.", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.can-we-push-the-meeting-to-three", "text": "Can we push the meeting to three?", "es": "¿Podemos pasar la reunión a las tres?", "notes": "«push (back)» = retrasar una reunión o un plazo.", "explanation": "Para retrasar una reunión. «push» lleva una «u» corta y «sh» final: «push».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.something-came-up", "text": "Something came up. Can we reschedule?", "es": "Me ha surgido algo. ¿Podemos cambiar la reunión?", "notes": "«come up» = surgir (un imprevisto).", "explanation": "Para mover una cita sin dar detalles. «reschedule» en EE. UU.: «ri-SKE-dʒul».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.i-have-to-cancel-todays-call", "text": "I'm sorry, I have to cancel today's call.", "es": "Lo siento, tengo que cancelar la llamada de hoy.", "explanation": "Para cancelar con educación. «have to» suena «HÆF-tə», con «f».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.im-running-five-minutes-late", "text": "I'm running five minutes late. Start without me.", "es": "Llego cinco minutos tarde. Empezad sin mí.", "notes": "«be running late» = ir con retraso.", "explanation": "Por chat antes de una reunión. «without» con «th» suave: «wi-ÐAUT».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.lets-wrap-up", "text": "Let's wrap up. Thanks, everyone.", "es": "Vamos terminando. Gracias a todos.", "notes": "«wrap up» = terminar, cerrar (una reunión, una tarea).", "explanation": "Para cerrar una reunión. La «w» de «wrap» no suena: «ræp».", "register": "neutral", "situation": "comunicacion" },
+    { "id": "b1-calls.ill-send-a-quick-summary", "text": "I'll send a quick summary after the call.", "es": "Mandaré un resumen rápido después de la llamada.", "explanation": "Al final de una reunión. «summary» suena «SA-mə-ri», con «a» breve.", "register": "neutral", "situation": "comunicacion" }
+  ],
+  "vocab": [
+    { "id": "b1-calls.email", "word": "email", "article": "an", "plural": "emails", "es": "el correo electrónico", "notes": "«an» porque empieza por sonido de vocal: «an IImeil».", "situation": "comunicacion", "image": "fluent:e-mail" },
+    { "id": "b1-calls.inbox", "word": "inbox", "article": "an", "plural": "inboxes", "es": "la bandeja de entrada", "situation": "comunicacion", "image": "fluent:inbox-tray" },
+    { "id": "b1-calls.subject-line", "word": "subject line", "article": "a", "plural": "subject lines", "es": "el asunto (de un email)", "situation": "comunicacion" },
+    { "id": "b1-calls.reply", "word": "reply", "article": "a", "plural": "replies", "es": "la respuesta", "example": "b1-calls.sorry-for-the-late-reply", "situation": "comunicacion" },
+    { "id": "b1-calls.attachment", "word": "attachment", "article": "an", "plural": "attachments", "es": "el archivo adjunto", "situation": "comunicacion", "image": "fluent:paperclip" },
+    { "id": "b1-calls.signature", "word": "signature", "article": "a", "plural": "signatures", "es": "la firma", "notes": "Suena «SIG-nə-chər».", "situation": "comunicacion" },
+    { "id": "b1-calls.typo", "word": "typo", "article": "a", "plural": "typos", "es": "la errata", "notes": "Suena «TAI-pou».", "situation": "comunicacion" },
+    { "id": "b1-calls.message", "word": "message", "article": "a", "plural": "messages", "es": "el mensaje", "notes": "Suena «ME-sidʒ».", "example": "b1-calls.can-i-leave-a-message", "situation": "comunicacion", "image": "fluent:speech-balloon" },
+    { "id": "b1-calls.channel", "word": "channel", "article": "a", "plural": "channels", "es": "el canal", "situation": "comunicacion" },
+    { "id": "b1-calls.thread", "word": "thread", "article": "a", "plural": "threads", "es": "el hilo (de mensajes)", "notes": "«th» sorda, como la «z» de España: «zred».", "situation": "comunicacion" },
+    { "id": "b1-calls.notification", "word": "notification", "article": "a", "plural": "notifications", "es": "la notificación", "situation": "comunicacion", "image": "fluent:bell" },
+    { "id": "b1-calls.pull-request", "word": "pull request", "article": "a", "plural": "pull requests", "es": "la pull request (petición de cambios)", "notes": "Se abrevia «PR».", "example": "b1-calls.can-you-take-a-look-at-my-pull-request", "situation": "comunicacion" },
+    { "id": "b1-calls.link", "word": "link", "article": "a", "plural": "links", "es": "el enlace", "example": "b1-calls.ive-just-sent-you-the-link", "situation": "comunicacion", "image": "fluent:link" },
+    { "id": "b1-calls.phone-call", "word": "phone call", "article": "a", "plural": "phone calls", "es": "la llamada", "situation": "comunicacion", "image": "fluent:telephone-receiver" },
+    { "id": "b1-calls.cell-phone", "word": "cell phone", "article": "a", "plural": "cell phones", "es": "el móvil", "notes": "En EE. UU. «cell phone» o simplemente «phone».", "situation": "comunicacion", "image": "fluent:mobile-phone" },
+    { "id": "b1-calls.receptionist", "word": "receptionist", "article": "a", "plural": "receptionists", "es": "el recepcionista", "situation": "comunicacion" },
+    { "id": "b1-calls.extension", "word": "extension", "article": "an", "plural": "extensions", "es": "la extensión (de teléfono)", "situation": "comunicacion" },
+    { "id": "b1-calls.voicemail", "word": "voicemail", "article": "a", "plural": "voicemails", "es": "el mensaje de voz, el buzón de voz", "situation": "comunicacion" },
+    { "id": "b1-calls.video-call", "word": "video call", "article": "a", "plural": "video calls", "es": "la videollamada", "situation": "comunicacion", "image": "fluent:video-camera" },
+    { "id": "b1-calls.microphone", "word": "microphone", "article": "a", "plural": "microphones", "es": "el micrófono", "notes": "Se dice «mic» (maik) para abreviar.", "situation": "comunicacion", "image": "fluent:microphone" },
+    { "id": "b1-calls.camera", "word": "camera", "article": "a", "plural": "cameras", "es": "la cámara", "example": "b1-calls.ill-turn-my-camera-on", "situation": "comunicacion", "image": "fluent:movie-camera" },
+    { "id": "b1-calls.connection", "word": "connection", "article": "a", "plural": "connections", "es": "la conexión", "example": "b1-calls.my-connection-dropped", "situation": "comunicacion" },
+    { "id": "b1-calls.background-noise", "word": "background noise", "es": "el ruido de fondo", "notes": "Incontable: «there's a lot of background noise».", "situation": "comunicacion" },
+    { "id": "b1-calls.headphones", "word": "headphones", "es": "los auriculares", "notes": "Siempre en plural, sin «a».", "situation": "comunicacion", "image": "fluent:headphone" },
+    { "id": "b1-calls.screen", "word": "screen", "article": "a", "plural": "screens", "es": "la pantalla", "example": "b1-calls.let-me-share-my-screen", "situation": "comunicacion", "image": "fluent:desktop-computer" },
+    { "id": "b1-calls.recording", "word": "recording", "article": "a", "plural": "recordings", "es": "la grabación", "situation": "comunicacion" },
+    { "id": "b1-calls.calendar", "word": "calendar", "article": "a", "plural": "calendars", "es": "el calendario", "situation": "comunicacion", "image": "fluent:spiral-calendar" },
+    { "id": "b1-calls.invite", "word": "invite", "article": "an", "plural": "invites", "es": "la invitación", "notes": "Como sustantivo, acento en IN: «IN-vait».", "example": "b1-calls.ill-send-you-a-calendar-invite", "situation": "comunicacion", "image": "fluent:envelope" },
+    { "id": "b1-calls.time-zone", "word": "time zone", "article": "a", "plural": "time zones", "es": "la zona horaria", "situation": "comunicacion", "image": "fluent:globe-with-meridians" },
+    { "id": "b1-calls.agenda", "word": "agenda", "article": "an", "plural": "agendas", "es": "el orden del día", "notes": "Falso amigo: no es la agenda donde apuntas cosas (eso es «planner» o «calendar»).", "situation": "comunicacion" },
+    { "id": "b1-calls.summary", "word": "summary", "article": "a", "plural": "summaries", "es": "el resumen", "example": "b1-calls.ill-send-a-quick-summary", "situation": "comunicacion", "image": "fluent:memo" },
+    { "id": "b1-calls.client", "word": "client", "article": "a", "plural": "clients", "es": "el cliente", "notes": "Suena «KLAI-ənt».", "situation": "comunicacion" }
+  ],
+  "qa": [
+    {
+      "id": "b1-calls.qa.did-you-get-my-email",
+      "question": "Did you get my email about the meeting?",
+      "questionEs": "¿Te llegó mi correo sobre la reunión?",
+      "accepted": [
+        { "text": "Yes, I got it. Thanks!", "es": "Sí, me llegó. ¡Gracias!" },
+        { "text": "Sorry, I haven't seen it yet. I'll check now.", "es": "Perdona, todavía no lo he visto. Lo miro ahora." }
+      ],
+      "distractors": [
+        { "text": "Yes, I've got it yesterday.", "es": "Sí, me llegó ayer." },
+        { "text": "No, I haven't seen it already.", "es": "No, todavía no lo he visto." }
+      ],
+      "register": "neutral",
+      "situation": "comunicacion",
+      "notes": "Con «yesterday» va pasado simple; en negativa, «todavía no» es «yet», no «already».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-calls.qa.take-a-look",
+      "question": "Hey, can you take a look at my pull request?",
+      "questionEs": "Oye, ¿puedes echarle un vistazo a mi pull request?",
+      "accepted": [
+        { "text": "Sure, I'll take a look after lunch.", "es": "Claro, le echo un vistazo después de comer." },
+        { "text": "Sure! Give me ten minutes.", "es": "¡Claro! Dame diez minutos." }
+      ],
+      "distractors": [
+        { "text": "Sure, I'll take a look on it.", "es": "Claro, le echo un vistazo." },
+        { "text": "Sure, I took a look tomorrow.", "es": "Claro, le eché un vistazo mañana." }
+      ],
+      "register": "tu",
+      "situation": "comunicacion",
+      "notes": "Se dice «take a look at», no «on»; para el futuro, «I'll», no el pasado.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-calls.qa.whos-calling",
+      "question": "Good morning. May I ask who's calling?",
+      "questionEs": "Buenos días. ¿De parte de quién?",
+      "accepted": [
+        { "text": "Yes, this is Hernán Díaz.", "es": "Sí, soy Hernán Díaz." },
+        { "text": "It's Hernán, from the dev team.", "es": "Soy Hernán, del equipo de desarrollo." }
+      ],
+      "distractors": [
+        { "text": "Speaks Hernán Díaz.", "es": "Habla Hernán Díaz." },
+        { "text": "I'm calling Hernán Díaz.", "es": "Llamo a Hernán Díaz." }
+      ],
+      "register": "formal",
+      "situation": "comunicacion",
+      "notes": "Al teléfono te identificas con «This is…» o «It's…»; «I'm calling X» significa que llamas a X.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-calls.qa.leave-a-message",
+      "question": "I'm afraid she's in a meeting. Would you like to leave a message?",
+      "questionEs": "Me temo que está en una reunión. ¿Quiere dejarle un mensaje?",
+      "accepted": [
+        { "text": "Yes, please. Could you ask her to call me back?", "es": "Sí, por favor. ¿Le podría decir que me devuelva la llamada?" },
+        { "text": "No, thank you. I'll call back later.", "es": "No, gracias. Volveré a llamar más tarde." }
+      ],
+      "distractors": [
+        { "text": "Yes, please. Could you say her to call me back?", "es": "Sí, por favor. ¿Le podría decir que me llame?" },
+        { "text": "No, thank you. I called back later.", "es": "No, gracias. Volví a llamar más tarde." }
+      ],
+      "register": "formal",
+      "situation": "comunicacion",
+      "notes": "«say» no lleva persona detrás: «ask her» o «tell her to…»; y «later» va con futuro.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-calls.qa.can-you-hear-me",
+      "question": "Can you hear me okay?",
+      "questionEs": "¿Me oyes bien?",
+      "accepted": [
+        { "text": "Yes, loud and clear.", "es": "Sí, perfectamente." },
+        { "text": "Sorry, you're breaking up a little.", "es": "Perdona, se te corta un poco." }
+      ],
+      "distractors": [
+        { "text": "Yes, I can listen you.", "es": "Sí, te escucho." },
+        { "text": "Yes, I'm hearing you.", "es": "Sí, te estoy oyendo." }
+      ],
+      "register": "neutral",
+      "situation": "comunicacion",
+      "notes": "«hear» no va en continua («I can hear you»); «listen» necesita «to» y es escuchar con atención.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-calls.qa.are-you-there",
+      "question": "Hello? Hernán, are you still there?",
+      "questionEs": "¿Hola? Hernán, ¿sigues ahí?",
+      "accepted": [
+        { "text": "Sorry, I was on mute. Can you hear me now?", "es": "Perdón, tenía el micro silenciado. ¿Me oyes ahora?" },
+        { "text": "Yes, sorry! My connection dropped.", "es": "¡Sí, perdón! Se me cayó la conexión." }
+      ],
+      "distractors": [
+        { "text": "Sorry, I was in mute.", "es": "Perdón, estaba en silencio." },
+        { "text": "Yes, I'm here since five minutes.", "es": "Sí, estoy aquí desde hace cinco minutos." }
+      ],
+      "register": "neutral",
+      "situation": "comunicacion",
+      "notes": "Se dice «on mute», no «in mute»; «desde hace» se dice «I've been here for…».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-calls.qa.share-screen",
+      "question": "Could you share your screen, please?",
+      "questionEs": "¿Podrías compartir pantalla, por favor?",
+      "accepted": [
+        { "text": "Sure. Can everyone see it?", "es": "Claro. ¿Lo veis todos?" },
+        { "text": "Of course, just a second.", "es": "Claro, un segundo." }
+      ],
+      "distractors": [
+        { "text": "Sure, I share it now.", "es": "Claro, la comparto ahora." },
+        { "text": "Sure, I'll divide my screen.", "es": "Claro, divido la pantalla." }
+      ],
+      "register": "formal",
+      "situation": "comunicacion",
+      "notes": "Para una decisión en el momento se usa «I'll»: «I'll share it now»; compartir pantalla es «share», no «divide».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-calls.qa.reschedule",
+      "question": "Something came up. Can we reschedule?",
+      "questionEs": "Me ha surgido algo. ¿Podemos cambiar la reunión?",
+      "accepted": [
+        { "text": "Sure, no problem. Does Thursday work for you?", "es": "Claro, sin problema. ¿Te va bien el jueves?" },
+        { "text": "Of course. How about tomorrow at ten?", "es": "Claro. ¿Qué tal mañana a las diez?" }
+      ],
+      "distractors": [
+        { "text": "Sure. Is good for you the Thursday?", "es": "Claro. ¿Te va bien el jueves?" },
+        { "text": "Sure, let's make it in Thursday.", "es": "Claro, hagámoslo el jueves." }
+      ],
+      "register": "neutral",
+      "situation": "comunicacion",
+      "notes": "Los días van con «on» (on Thursday) y sin «the»; «¿te va bien?» = «Does … work for you?».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-calls.qa.available-monday",
+      "question": "Would you be available on Monday morning?",
+      "questionEs": "¿Estaría disponible el lunes por la mañana?",
+      "accepted": [
+        { "text": "Yes, I'm free after nine. I'll send you an invite.", "es": "Sí, estoy libre a partir de las nueve. Le mando una invitación." },
+        { "text": "I'm afraid I'm not. Would Tuesday work?", "es": "Me temo que no. ¿Le iría bien el martes?" }
+      ],
+      "distractors": [
+        { "text": "Yes, I'm free in Monday morning.", "es": "Sí, estoy libre el lunes por la mañana." },
+        { "text": "Yes, I'm available since nine.", "es": "Sí, estoy disponible desde las nueve." }
+      ],
+      "register": "formal",
+      "situation": "comunicacion",
+      "notes": "«on Monday morning», no «in»; «a partir de las nueve» es «after nine» o «from nine», no «since».",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}

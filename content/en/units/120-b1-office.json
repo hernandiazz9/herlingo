@@ -1,0 +1,376 @@
+{
+  "id": "b1-office",
+  "order": 120,
+  "title": "Primeros días en el trabajo: equipo, oficina y rutinas",
+  "description": "Presentarte al equipo, entender quién hace qué, moverte por la oficina, hablar en el stand-up y pedir ayuda con los plazos.",
+  "emoji": "💼",
+  "situation": "trabajo",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-office.l.first-day",
+      "title": "Tu primer día",
+      "items": [
+        "b1-office.its-my-first-day",
+        "b1-office.new-hire",
+        "b1-office.ive-just-joined",
+        "b1-office.welcome-aboard",
+        "b1-office.onboarding",
+        "b1-office.ive-been-a-developer-for-six-years",
+        "b1-office.i-used-to-work-for-a-bank",
+        "b1-office.how-long-have-you-worked-here",
+        "b1-office.ive-already-set-up-my-laptop",
+        "a2-airport.laptop",
+        "b1-office.i-havent-received-my-login-yet",
+        "a2-hotel.password",
+        "b1-office.could-you-show-me-around",
+        "b1-office.qa.are-you-new",
+        "b1-office.qa.how-long-developer",
+        "b1-office.qa.before-this-job",
+        "b1-office.qa.show-around"
+      ]
+    },
+    {
+      "id": "b1-office.l.team",
+      "title": "El equipo y quién hace qué",
+      "items": [
+        "b1-office.team",
+        "a2-about-me.coworker",
+        "b1-office.let-me-introduce-you",
+        "b1-office.this-is-maya",
+        "b1-office.team-lead",
+        "b1-office.manager",
+        "b1-office.developer",
+        "b1-office.designer",
+        "b1-office.intern",
+        "b1-office.what-team-are-you-on",
+        "b1-office.im-on-the-mobile-team",
+        "b1-office.who-do-i-report-to",
+        "b1-office.whos-in-charge-of-the-release",
+        "b1-office.release",
+        "b1-office.she-manages-the-frontend-team",
+        "b1-office.she-was-promoted",
+        "b1-office.who-should-i-ask-about-the-database",
+        "b1-office.ill-be-working-on-payments",
+        "b1-office.feature",
+        "b1-office.qa.what-team"
+      ]
+    },
+    {
+      "id": "b1-office.l.workplace",
+      "title": "La oficina y tus cosas",
+      "items": [
+        "b1-office.office",
+        "b1-office.floor",
+        "b1-office.elevator",
+        "b1-office.desk",
+        "b1-office.monitor",
+        "b1-office.keyboard",
+        "b1-office.mouse",
+        "b1-office.headset",
+        "b1-office.printer",
+        "b1-office.badge",
+        "b1-office.my-badge-doesnt-open-the-door",
+        "b1-office.meeting-room",
+        "b1-office.how-do-i-book-a-meeting-room",
+        "b1-office.break-room",
+        "b1-office.is-there-a-kitchen-on-this-floor",
+        "b1-office.where-can-i-get-a-second-monitor",
+        "b1-office.is-this-seat-taken",
+        "b1-office.schedule",
+        "b1-office.were-hybrid",
+        "b1-office.do-people-work-from-home-on-fridays",
+        "b1-office.lunch-break",
+        "b1-office.we-usually-grab-lunch-together",
+        "b1-office.qa.work-from-home"
+      ]
+    },
+    {
+      "id": "b1-office.l.standup",
+      "title": "El daily stand-up",
+      "items": [
+        "b1-office.stand-up",
+        "b1-office.meeting",
+        "b1-office.sprint",
+        "b1-office.ticket",
+        "b1-office.task",
+        "b1-office.yesterday-i-worked-on-the-login-page",
+        "b1-office.today-im-going-to-fix-the-checkout-bug",
+        "b1-office.bug",
+        "b1-office.ive-finished-the-new-endpoint",
+        "b1-office.i-was-fixing-a-bug-when",
+        "b1-office.im-blocked",
+        "b1-office.no-blockers",
+        "b1-office.its-taking-longer-than-i-expected",
+        "b1-office.repo",
+        "b1-office.branch",
+        "b1-office.ive-pushed-my-changes",
+        "b1-office.code-review",
+        "b1-office.lets-take-this-offline",
+        "b1-office.ill-follow-up-with-qa",
+        "b1-office.qa.yesterday",
+        "b1-office.qa.blockers"
+      ]
+    },
+    {
+      "id": "b1-office.l.help",
+      "title": "Pedir ayuda y hablar de plazos",
+      "items": [
+        "b1-office.could-you-walk-me-through-the-code",
+        "b1-office.ive-run-into-a-problem",
+        "b1-office.im-stuck-on-this",
+        "b1-office.feedback",
+        "b1-office.any-feedback-is-welcome",
+        "b1-office.deadline",
+        "b1-office.whens-the-deadline",
+        "b1-office.its-due-on-friday",
+        "b1-office.i-dont-think-ill-make-it",
+        "b1-office.could-i-have-a-couple-more-days",
+        "b1-office.well-figure-it-out",
+        "b1-office.that-was-really-helpful",
+        "b1-office.qa.deadline"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b1-office.its-my-first-day", "text": "Hi, it's my first day. I'm the new developer.", "es": "Hola, es mi primer día. Soy el nuevo desarrollador.", "explanation": "Al llegar a la oficina o en tu primera reunión. «first» lleva la «r» americana y la «t» final suave: «ferst DEI».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.ive-just-joined", "text": "I've just joined the backend team.", "es": "Acabo de entrar en el equipo de backend.", "notes": "«have just» + participio = acabar de hacer algo.", "explanation": "Para presentarte en un canal o en una reunión de equipo. «I've just» va unido: «aiv-YAST», con la «v» suave.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.welcome-aboard", "text": "Welcome aboard! We're glad to have you.", "es": "¡Bienvenido al equipo! Nos alegra tenerte aquí.", "notes": "«Welcome aboard» (literalmente «bienvenido a bordo») es la bienvenida típica a alguien nuevo.", "explanation": "Te lo dirán tus compañeros el primer día. «aboard» empieza con una schwa débil: «ə-BORD».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.ive-been-a-developer-for-six-years", "text": "I've been a developer for six years.", "es": "Llevo seis años como desarrollador.", "notes": "Para algo que empezó y sigue: present perfect + «for» con la duración.", "explanation": "Cuando te preguntan por tu experiencia. «been» suena «bin», corto; «years» con «y» inicial: «yirs», no «iers».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.i-used-to-work-for-a-bank", "text": "I used to work for a bank in Madrid.", "es": "Antes trabajaba para un banco en Madrid.", "notes": "«used to» + infinitivo = lo que hacías antes y ya no.", "explanation": "Para contar tu trabajo anterior. «used to» se dice «IUS-tə», con «s» sorda, nunca «iused tu».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.how-long-have-you-worked-here", "text": "How long have you worked here?", "es": "¿Cuánto tiempo llevas trabajando aquí?", "explanation": "Pregunta fácil para charlar con un compañero. «worked» acaba en /t/: «werkt», sin «e» extra.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.ive-already-set-up-my-laptop", "text": "I've already set up my laptop.", "es": "Ya he configurado el portátil.", "notes": "«set up» = configurar, preparar (algo nuevo).", "explanation": "Cuando te preguntan cómo vas con la configuración. Une «set up»: «se-TAP», con la «t» como una «r» suave.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.i-havent-received-my-login-yet", "text": "I haven't received my login details yet.", "es": "Todavía no me han llegado los datos de acceso.", "notes": "«yet» va al final en negativas y preguntas: «todavía».", "explanation": "Para avisar a IT o a tu responsable. «received» acaba en /d/: «ri-SIIVD», con «i» larga.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.could-you-show-me-around", "text": "Could you show me around the office?", "es": "¿Me podrías enseñar la oficina?", "notes": "«show around» = enseñar un lugar, hacer de guía.", "explanation": "Petición educada a quien te recibe. «Could you» se une: «KU-dʒu», casi «cuyu».", "register": "formal", "situation": "trabajo" },
+    { "id": "b1-office.let-me-introduce-you", "text": "Let me introduce you to the team.", "es": "Deja que te presente al equipo.", "explanation": "Lo dice quien te recibe antes de las presentaciones. Acento en «du»: «in-trə-DUUS».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.this-is-maya", "text": "This is Maya. She's our tech lead.", "es": "Te presento a Maya. Es nuestra responsable técnica.", "notes": "Para presentar a alguien se dice «This is…», no «She is…».", "explanation": "Para presentar a alguien a otra persona. «This» con «th» suave: la lengua entre los dientes, como una «d» floja.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.what-team-are-you-on", "text": "What team are you on?", "es": "¿En qué equipo estás?", "notes": "En EE. UU. estás «on a team», no «in a team».", "explanation": "Para situar a un compañero nuevo. «team» con «i» larga: «tiim».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.im-on-the-mobile-team", "text": "I'm on the mobile team.", "es": "Estoy en el equipo de móvil.", "explanation": "Respuesta a «What team are you on?». En EE. UU. «mobile» suena «MOU-bəl».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.who-do-i-report-to", "text": "Who do I report to?", "es": "¿Quién es mi responsable directo?", "notes": "«report to» = depender de alguien, ser tu jefe directo.", "explanation": "Para aclarar quién es tu jefe directo. Acento en «port»: «ri-PORT», con la «r» americana.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.whos-in-charge-of-the-release", "text": "Who's in charge of the release?", "es": "¿Quién se encarga de la versión?", "notes": "«be in charge of» = ser el responsable de algo.", "explanation": "Para saber a quién preguntar. «charge» empieza con «ch» como en «chico» y acaba en «dʒ»: «charch» suave.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.she-manages-the-frontend-team", "text": "She manages the frontend team.", "es": "Ella dirige el equipo de frontend.", "explanation": "Para explicar los roles del equipo. «manages» tiene tres sílabas: «MÆ-nə-dʒiz».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.she-was-promoted", "text": "She was promoted to team lead last year.", "es": "La ascendieron a jefa de equipo el año pasado.", "notes": "Pasiva: «was promoted» = la ascendieron (no importa quién).", "explanation": "Para hablar de la trayectoria de alguien. «promoted» acaba en /ɪd/: «prə-MOU-tid».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.who-should-i-ask-about-the-database", "text": "Who should I ask about the database?", "es": "¿A quién le pregunto por la base de datos?", "explanation": "Cuando no sabes a quién acudir. En «should» la «l» no suena: «shud».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.ill-be-working-on-payments", "text": "I'll be working on the payments feature.", "es": "Voy a estar trabajando en la funcionalidad de pagos.", "explanation": "Para explicar en qué vas a trabajar las próximas semanas. «feature» suena «FII-chər».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.my-badge-doesnt-open-the-door", "text": "My badge doesn't open the door.", "es": "Mi tarjeta no abre la puerta.", "explanation": "Para recepción o seguridad. «badge» lleva una «a» abierta, entre «a» y «e»: «bædʒ».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.how-do-i-book-a-meeting-room", "text": "How do I book a meeting room?", "es": "¿Cómo reservo una sala de reuniones?", "notes": "«book» = reservar (sala, mesa, hotel).", "explanation": "Pregunta típica de los primeros días. «book» tiene una «u» corta, distinta de la «uu» larga de «food».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.is-there-a-kitchen-on-this-floor", "text": "Is there a kitchen on this floor?", "es": "¿Hay cocina en esta planta?", "explanation": "Para orientarte en la oficina. «floor» suena «flor», con la «r» americana al final.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.where-can-i-get-a-second-monitor", "text": "Where can I get a second monitor?", "es": "¿Dónde puedo conseguir un segundo monitor?", "explanation": "Para pedir equipo a IT u office manager. «can» va débil: «kən»; acento en «MO» de «monitor».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.is-this-seat-taken", "text": "Is this seat taken?", "es": "¿Está ocupado este sitio?", "explanation": "Antes de sentarte en una mesa compartida. «seat» lleva «i» larga: «siit», distinta de «sit».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.were-hybrid", "text": "We're hybrid: three days in the office, two at home.", "es": "Trabajamos en híbrido: tres días en la oficina y dos en casa.", "explanation": "Para explicar cómo trabaja tu equipo. «hybrid» suena «JAI-brid», con «h» aspirada suave.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.do-people-work-from-home-on-fridays", "text": "Do people here work from home on Fridays?", "es": "¿Aquí la gente teletrabaja los viernes?", "explanation": "Para conocer las costumbres de la oficina. «work» suena «werk», con la «r» americana; no «uork».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.we-usually-grab-lunch-together", "text": "We usually grab lunch together on Fridays.", "es": "Los viernes solemos comer juntos.", "notes": "«grab lunch» = comer algo (informal, sin mucha ceremonia).", "explanation": "Una invitación indirecta a sumarte. «lunch» con «a» breve y oscura: «lanch».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.yesterday-i-worked-on-the-login-page", "text": "Yesterday I worked on the login page.", "es": "Ayer trabajé en la página de login.", "notes": "Pasado simple con «yesterday»: nunca present perfect.", "explanation": "La primera parte de tu turno en el stand-up. «worked» suena «werkt», una sola sílaba.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.today-im-going-to-fix-the-checkout-bug", "text": "Today I'm going to fix the checkout bug.", "es": "Hoy voy a arreglar el fallo del checkout.", "explanation": "La segunda parte de tu turno en el stand-up. «going to» se reduce al hablar rápido: «GOU-ing-tə».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.ive-finished-the-new-endpoint", "text": "I've finished the new API endpoint.", "es": "He terminado el nuevo endpoint de la API.", "notes": "Present perfect: el resultado importa ahora, sin decir cuándo.", "explanation": "Para dar una buena noticia en el stand-up. «finished» acaba en /t/: «FI-nisht».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.i-was-fixing-a-bug-when", "text": "I was fixing a bug when the server went down.", "es": "Estaba arreglando un fallo cuando se cayó el servidor.", "notes": "«go down» = caerse (un servidor, una web). Pasado continuo + pasado simple.", "explanation": "Para contar qué pasó ayer. «was» va débil: «wəz»; «went down» se une: «wen-DAUN».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.im-blocked", "text": "I'm blocked. I'm waiting for the designs.", "es": "Estoy bloqueado: estoy esperando los diseños.", "notes": "Se dice «wait for» algo, no «wait» algo.", "explanation": "Para pedir ayuda en el stand-up. «blocked» acaba en /t/: «blokt», una sílaba.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.no-blockers", "text": "No blockers for me.", "es": "Por mi parte, ningún bloqueo.", "explanation": "Para cerrar tu turno en el stand-up. «blockers» suena «BLO-kərz», con «z» final.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.its-taking-longer-than-i-expected", "text": "It's taking longer than I expected.", "es": "Me está llevando más tiempo de lo que pensaba.", "explanation": "Para avisar de un retraso sin dramatizar. «than» con «th» suave y vocal débil: «ðən».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.ive-pushed-my-changes", "text": "I've pushed my changes. Can someone review them?", "es": "He subido mis cambios. ¿Alguien los puede revisar?", "notes": "«push» = subir tus commits al repositorio.", "explanation": "En el stand-up o en el chat del equipo. «pushed» acaba en /t/: «pusht», una sílaba.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.lets-take-this-offline", "text": "Let's take this offline after the stand-up.", "es": "Hablémoslo aparte después del stand-up.", "notes": "«take something offline» = tratar un tema aparte, fuera de la reunión.", "explanation": "Cuando un tema se alarga en una reunión. Acento en «off»: «of-LAIN».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.ill-follow-up-with-qa", "text": "I'll follow up with the QA team later.", "es": "Luego lo hablo con el equipo de QA.", "notes": "«follow up with someone» = retomar un tema con alguien, hacer seguimiento.", "explanation": "Para cerrar un tema pendiente. «I'll» suena «ail»; QA se lee letra a letra: «kiu-EI».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.could-you-walk-me-through-the-code", "text": "Could you walk me through the code?", "es": "¿Me podrías explicar el código paso a paso?", "notes": "«walk someone through» = explicar algo paso a paso.", "explanation": "Para pedir una explicación a un compañero. En «walk» la «l» no suena: «wok»; «through» con «th» sorda.", "register": "formal", "situation": "trabajo" },
+    { "id": "b1-office.ive-run-into-a-problem", "text": "I've run into a problem with the tests.", "es": "Me he topado con un problema con los tests.", "notes": "«run into» = encontrarte con (un problema, una persona) sin esperarlo.", "explanation": "Para pedir ayuda sin rodeos. «run into» se une: «ra-NIN-tu».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.im-stuck-on-this", "text": "I've been stuck on this for an hour.", "es": "Llevo una hora atascado con esto.", "notes": "«be stuck on» = estar atascado con algo.", "explanation": "Para pedir una mano a un compañero. «stuck» empieza directamente con «s»: «stak», nunca «estak».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.any-feedback-is-welcome", "text": "Any feedback is welcome.", "es": "Cualquier comentario es bienvenido.", "notes": "«feedback» es incontable: nunca «a feedback» ni «feedbacks».", "explanation": "Al compartir tu trabajo con el equipo. «feedback» con «i» larga: «FIID-bæk».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.whens-the-deadline", "text": "When's the deadline for this?", "es": "¿Para cuándo es esto?", "explanation": "Para aclarar el plazo de una tarea. «deadline» suena «DED-lain», con la primera «e» corta.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.its-due-on-friday", "text": "It's due on Friday.", "es": "Hay que entregarlo el viernes.", "notes": "«be due» = tener que estar listo, vencer.", "explanation": "Respuesta típica sobre plazos. «due» suena «duu», con «u» larga.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.i-dont-think-ill-make-it", "text": "I don't think I'll make it by Friday.", "es": "No creo que llegue para el viernes.", "notes": "«make it» = llegar a tiempo, conseguirlo. «by Friday» = como muy tarde el viernes.", "explanation": "Para avisar con tiempo de un retraso. «think» con «th» sorda: la lengua entre los dientes, como la «z» de España.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.could-i-have-a-couple-more-days", "text": "Could I have a couple more days?", "es": "¿Me podrías dar un par de días más?", "explanation": "Petición educada a tu responsable. «couple» suena «KA-pəl», con «a» breve.", "register": "formal", "situation": "trabajo" },
+    { "id": "b1-office.well-figure-it-out", "text": "Don't worry, we'll figure it out.", "es": "No te preocupes, ya lo resolveremos.", "notes": "«figure out» = averiguar, dar con la solución.", "explanation": "Para tranquilizar a un compañero. «figure it out» se une: «FI-gyə-ri-DAUT».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b1-office.that-was-really-helpful", "text": "Thanks, that was really helpful.", "es": "Gracias, me ha ayudado mucho.", "explanation": "Para agradecer una explicación. «helpful» suena «JELP-fəl», con «h» aspirada suave.", "register": "neutral", "situation": "trabajo" }
+  ],
+  "vocab": [
+    { "id": "b1-office.new-hire", "word": "new hire", "article": "a", "plural": "new hires", "es": "la nueva incorporación", "notes": "Persona recién contratada.", "example": "b1-office.its-my-first-day", "situation": "trabajo" },
+    { "id": "b1-office.onboarding", "word": "onboarding", "es": "la incorporación (formación inicial)", "notes": "Incontable: el proceso de acogida de alguien nuevo.", "situation": "trabajo" },
+    { "id": "b1-office.team", "word": "team", "article": "a", "plural": "teams", "es": "el equipo", "example": "b1-office.what-team-are-you-on", "situation": "trabajo", "image": "fluent:busts-in-silhouette" },
+    { "id": "b1-office.team-lead", "word": "team lead", "article": "a", "plural": "team leads", "es": "el jefe de equipo", "situation": "trabajo" },
+    { "id": "b1-office.manager", "word": "manager", "article": "a", "plural": "managers", "es": "el responsable, el mánager", "notes": "Acento al principio: MÆ-nə-dʒər.", "situation": "trabajo", "image": "fluent:office-worker" },
+    { "id": "b1-office.developer", "word": "developer", "article": "a", "plural": "developers", "es": "el desarrollador", "notes": "Acento en «VEL»: di-VEL-ə-pər.", "example": "b1-office.ive-been-a-developer-for-six-years", "situation": "trabajo", "image": "fluent:man-technologist" },
+    { "id": "b1-office.designer", "word": "designer", "article": "a", "plural": "designers", "es": "el diseñador", "notes": "La «g» no suena: di-ZAI-nər.", "situation": "trabajo", "image": "fluent:artist-palette" },
+    { "id": "b1-office.intern", "word": "intern", "article": "an", "plural": "interns", "es": "el becario", "situation": "trabajo" },
+    { "id": "b1-office.release", "word": "release", "article": "a", "plural": "releases", "es": "la versión, el lanzamiento", "example": "b1-office.whos-in-charge-of-the-release", "situation": "trabajo" },
+    { "id": "b1-office.feature", "word": "feature", "article": "a", "plural": "features", "es": "la funcionalidad", "example": "b1-office.ill-be-working-on-payments", "situation": "trabajo" },
+    { "id": "b1-office.office", "word": "office", "article": "an", "plural": "offices", "es": "la oficina", "situation": "trabajo", "image": "fluent:office-building" },
+    { "id": "b1-office.floor", "word": "floor", "article": "a", "plural": "floors", "es": "la planta, el piso", "notes": "En EE. UU. la planta baja es el «first floor».", "example": "b1-office.is-there-a-kitchen-on-this-floor", "situation": "trabajo" },
+    { "id": "b1-office.elevator", "word": "elevator", "article": "an", "plural": "elevators", "es": "el ascensor", "notes": "Americano; en Reino Unido, «lift».", "situation": "trabajo", "image": "fluent:elevator" },
+    { "id": "b1-office.desk", "word": "desk", "article": "a", "plural": "desks", "es": "el escritorio, la mesa de trabajo", "notes": "Plural «desks»: pronuncia la «s» final.", "situation": "trabajo" },
+    { "id": "b1-office.monitor", "word": "monitor", "article": "a", "plural": "monitors", "es": "el monitor", "example": "b1-office.where-can-i-get-a-second-monitor", "situation": "trabajo", "image": "fluent:desktop-computer" },
+    { "id": "b1-office.keyboard", "word": "keyboard", "article": "a", "plural": "keyboards", "es": "el teclado", "situation": "trabajo", "image": "fluent:keyboard" },
+    { "id": "b1-office.mouse", "word": "mouse", "article": "a", "plural": "mice", "es": "el ratón", "notes": "El plural es irregular: «mice».", "situation": "trabajo", "image": "fluent:computer-mouse" },
+    { "id": "b1-office.headset", "word": "headset", "article": "a", "plural": "headsets", "es": "los auriculares con micro", "situation": "trabajo", "image": "fluent:headphone" },
+    { "id": "b1-office.printer", "word": "printer", "article": "a", "plural": "printers", "es": "la impresora", "situation": "trabajo", "image": "fluent:printer" },
+    { "id": "b1-office.badge", "word": "badge", "article": "a", "plural": "badges", "es": "la tarjeta de acceso, la acreditación", "example": "b1-office.my-badge-doesnt-open-the-door", "situation": "trabajo", "image": "fluent:identification-card" },
+    { "id": "b1-office.meeting-room", "word": "meeting room", "article": "a", "plural": "meeting rooms", "es": "la sala de reuniones", "example": "b1-office.how-do-i-book-a-meeting-room", "situation": "trabajo" },
+    { "id": "b1-office.break-room", "word": "break room", "article": "a", "plural": "break rooms", "es": "la sala de descanso", "situation": "trabajo", "image": "fluent:hot-beverage" },
+    { "id": "b1-office.schedule", "word": "schedule", "article": "a", "plural": "schedules", "es": "el horario, la agenda", "notes": "En EE. UU. suena «SKE-dʒul».", "situation": "trabajo", "image": "fluent:spiral-calendar" },
+    { "id": "b1-office.lunch-break", "word": "lunch break", "article": "a", "plural": "lunch breaks", "es": "la pausa para comer", "situation": "trabajo" },
+    { "id": "b1-office.stand-up", "word": "stand-up", "article": "a", "plural": "stand-ups", "es": "la reunión diaria (de pie)", "notes": "Reunión corta de cada mañana: qué hiciste, qué harás, qué te bloquea.", "situation": "trabajo" },
+    { "id": "b1-office.meeting", "word": "meeting", "article": "a", "plural": "meetings", "es": "la reunión", "situation": "trabajo" },
+    { "id": "b1-office.sprint", "word": "sprint", "article": "a", "plural": "sprints", "es": "el sprint (ciclo de trabajo)", "situation": "trabajo" },
+    { "id": "b1-office.ticket", "word": "ticket", "article": "a", "plural": "tickets", "es": "el ticket, la incidencia", "situation": "trabajo" },
+    { "id": "b1-office.task", "word": "task", "article": "a", "plural": "tasks", "es": "la tarea", "situation": "trabajo", "image": "fluent:clipboard" },
+    { "id": "b1-office.bug", "word": "bug", "article": "a", "plural": "bugs", "es": "el fallo, el bug", "notes": "«bug» también es «bicho»: de ahí el nombre.", "example": "b1-office.today-im-going-to-fix-the-checkout-bug", "situation": "trabajo", "image": "fluent:bug" },
+    { "id": "b1-office.repo", "word": "repo", "article": "a", "plural": "repos", "es": "el repositorio", "notes": "Abreviatura de «repository».", "situation": "trabajo" },
+    { "id": "b1-office.branch", "word": "branch", "article": "a", "plural": "branches", "es": "la rama", "situation": "trabajo" },
+    { "id": "b1-office.code-review", "word": "code review", "article": "a", "plural": "code reviews", "es": "la revisión de código", "situation": "trabajo" },
+    { "id": "b1-office.feedback", "word": "feedback", "es": "los comentarios, la opinión", "notes": "Incontable: «some feedback», nunca «a feedback».", "example": "b1-office.any-feedback-is-welcome", "situation": "trabajo" },
+    { "id": "b1-office.deadline", "word": "deadline", "article": "a", "plural": "deadlines", "es": "la fecha límite, el plazo", "example": "b1-office.whens-the-deadline", "situation": "trabajo" }
+  ],
+  "qa": [
+    {
+      "id": "b1-office.qa.are-you-new",
+      "question": "Hi! Are you new here?",
+      "questionEs": "¡Hola! ¿Eres nuevo aquí?",
+      "accepted": [
+        { "text": "Yes, it's my first day. I've just joined the backend team.", "es": "Sí, es mi primer día. Acabo de entrar en el equipo de backend." },
+        { "text": "Yes, I started today. I'm the new developer.", "es": "Sí, he empezado hoy. Soy el nuevo desarrollador." }
+      ],
+      "distractors": [
+        { "text": "Yes, I've started yesterday.", "es": "Sí, empecé ayer." },
+        { "text": "Yes, I'm here since Monday.", "es": "Sí, estoy aquí desde el lunes." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Con «yesterday» va pasado simple (I started); «desde el lunes» es «I've been here since Monday».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-office.qa.how-long-developer",
+      "question": "How long have you been a developer?",
+      "questionEs": "¿Cuánto tiempo llevas como desarrollador?",
+      "accepted": [
+        { "text": "I've been a developer for six years.", "es": "Llevo seis años como desarrollador." },
+        { "text": "For about six years now.", "es": "Unos seis años ya." }
+      ],
+      "distractors": [
+        { "text": "I'm a developer for six years.", "es": "Soy desarrollador desde hace seis años." },
+        { "text": "Since six years.", "es": "Desde hace seis años." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«Llevar X tiempo» = present perfect + «for»; «since» va con un punto de inicio (since 2019).",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-office.qa.before-this-job",
+      "question": "What did you do before this job?",
+      "questionEs": "¿Qué hacías antes de este trabajo?",
+      "accepted": [
+        { "text": "I used to work for a bank in Madrid.", "es": "Antes trabajaba para un banco en Madrid." },
+        { "text": "I was a developer at a bank in Madrid.", "es": "Era desarrollador en un banco de Madrid." }
+      ],
+      "distractors": [
+        { "text": "I use to work for a bank in Madrid.", "es": "Suelo trabajar para un banco en Madrid." },
+        { "text": "I'm used to work for a bank in Madrid.", "es": "Estoy acostumbrado a trabajar para un banco." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Para el pasado es «used to» + infinitivo; «be used to» significa «estar acostumbrado».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-office.qa.show-around",
+      "question": "Would you like me to show you around?",
+      "questionEs": "¿Quiere que le enseñe la oficina?",
+      "accepted": [
+        { "text": "Yes, please. That would be great.", "es": "Sí, por favor. Sería genial." },
+        { "text": "I'd love that, thank you.", "es": "Me encantaría, gracias." }
+      ],
+      "distractors": [
+        { "text": "Yes, I'd like that you show me.", "es": "Sí, me gustaría que me enseñes." },
+        { "text": "Yes, please show me around you.", "es": "Sí, enséñame alrededor de ti." }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "En inglés no se dice «I'd like that you…»: basta con «That would be great» o «I'd love that».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-office.qa.what-team",
+      "question": "So, what team are you on?",
+      "questionEs": "Entonces, ¿en qué equipo estás?",
+      "accepted": [
+        { "text": "I'm on the mobile team.", "es": "Estoy en el equipo de móvil." },
+        { "text": "The backend team. I'll be working on payments.", "es": "En el de backend. Voy a trabajar en pagos." }
+      ],
+      "distractors": [
+        { "text": "I'm on the third floor.", "es": "Estoy en la tercera planta." },
+        { "text": "I work in the team since two weeks.", "es": "Trabajo en el equipo desde hace dos semanas." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Te preguntan por el equipo, no por la planta; «desde hace» se dice con present perfect + «for».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-office.qa.work-from-home",
+      "question": "Do you work from home at all?",
+      "questionEs": "¿Teletrabajas algún día?",
+      "accepted": [
+        { "text": "Yes, we're hybrid: three days in the office, two at home.", "es": "Sí, trabajamos en híbrido: tres días en la oficina y dos en casa." },
+        { "text": "Sometimes. I usually work from home on Fridays.", "es": "A veces. Suelo teletrabajar los viernes." }
+      ],
+      "distractors": [
+        { "text": "Yes, I work from house on Fridays.", "es": "Sí, trabajo desde casa los viernes." },
+        { "text": "Yes, I'm working from home every Friday.", "es": "Sí, teletrabajo todos los viernes." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Se dice «from home», no «from house»; para una costumbre, presente simple, no continuo.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-office.qa.yesterday",
+      "question": "Hernán, what did you work on yesterday?",
+      "questionEs": "Hernán, ¿en qué trabajaste ayer?",
+      "accepted": [
+        { "text": "I worked on the login page.", "es": "Trabajé en la página de login." },
+        { "text": "I fixed two bugs in the checkout.", "es": "Arreglé dos fallos en el checkout." }
+      ],
+      "distractors": [
+        { "text": "I have worked on the login page yesterday.", "es": "He trabajado en la página de login ayer." },
+        { "text": "I'm working on the login page yesterday.", "es": "Estoy trabajando en la página de login ayer." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Con «yesterday» siempre pasado simple: «I worked», nunca «I have worked».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-office.qa.blockers",
+      "question": "Any blockers?",
+      "questionEs": "¿Algún bloqueo?",
+      "accepted": [
+        { "text": "No blockers for me.", "es": "Por mi parte, ningún bloqueo." },
+        { "text": "Yes, I'm blocked. I'm waiting for the designs.", "es": "Sí, estoy bloqueado: espero los diseños." }
+      ],
+      "distractors": [
+        { "text": "Yes, I'm waiting the designs.", "es": "Sí, espero los diseños." },
+        { "text": "No, I didn't block anybody.", "es": "No, no he bloqueado a nadie." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Se dice «wait for» algo; y te preguntan si algo te bloquea a ti, no si bloqueas a alguien.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-office.qa.deadline",
+      "question": "Can you finish it by Friday?",
+      "questionEs": "¿Puedes terminarlo para el viernes?",
+      "accepted": [
+        { "text": "I think so. I've almost finished it.", "es": "Creo que sí. Casi lo he terminado." },
+        { "text": "I don't think I'll make it. Could I have until Monday?", "es": "No creo que llegue. ¿Me das hasta el lunes?" }
+      ],
+      "distractors": [
+        { "text": "Yes, I finished it on Friday.", "es": "Sí, lo terminé el viernes." },
+        { "text": "Yes, I'll make it until Friday.", "es": "Sí, lo tendré hasta el viernes." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«by Friday» = como muy tarde el viernes; «until» indica que algo dura hasta entonces.",
+      "voice": "en-US-AndrewNeural"
+    }
+  ]
+}
