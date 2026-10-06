@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:54Z 💻
+- Updated: 2026-10-06 09:58Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T69; then T70 + T71, then T72
+- Next step: integrate T70/T71; then T72; T73 (audio) needs the Mac
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -181,7 +181,7 @@ Worktree setup: npm ci
 - Outcome: units manger (7 lessons) + courses (5): 107 phrases, 81 vocab, 18 Q&A, ~40 picture keys, reuses grammaire/nombres items · 311c7ee · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T69 — French content: around town, health and emergencies
-- Status: running (attempt 1 · 💻 · agent aba579a428944ec60 · since 09:49Z)
+- Status: done
 - Depends on: T58
 - Where: any
 - Goal: Units `ville` (50) and `sante` (52) per docs/brief-fr.md (metro/bus/tram tickets, directions on foot; doctor, pharmacy, emergencies).
@@ -190,10 +190,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~60 vocab, ~16 Q&A, 9–11 lessons.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units ville (5 lessons, Lyon) + sante (5): 90 phrases, 61 vocab, 17 Q&A · 6729cca · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T70 — French content: 12 dialogues and the placement test
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ad5fd9b2e670aff2f · since 09:58Z)
 - Depends on: T65, T66, T67, T68, T69
 - Where: any
 - Goal: The 12 dialogues listed in docs/brief-fr.md (avatars, `unit`, register-honest options with Spanish feedback) and 12 placement questions spread over the units, each marking the lessons it proves.
@@ -206,7 +206,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T71 — French content: stories 1–6
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a874c68c42dcdc95b · since 09:58Z)
 - Depends on: T65, T66, T67, T68, T69
 - Where: any
 - Goal: Stories 1–6 with the brief-fr cast (Camille, Julien, Madame Martin, Pablo) in Lyon, A1, following the units' order; key words reuse unit items by id where possible.
@@ -255,6 +255,7 @@ Worktree setup: npm ci
 - [ ] T66 @a68dc23 — French language review (queued 2026-10-06 💻)
 - [ ] T67 @cdee444 — French language review (queued 2026-10-06 💻)
 - [ ] T68 @311c7ee — French language review (queued 2026-10-06 💻)
+- [ ] T69 @6729cca — French language review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -307,3 +308,6 @@ Worktree setup: npm ci
 - 2026-10-06 09:49Z 💻 T67 done · worktree-agent-a2578ade40af140b3 → cdee444 · verify ✓
 - 2026-10-06 09:49Z 💻 T69 launched · attempt 1 · agent aba579a428944ec60
 - 2026-10-06 09:54Z 💻 T68 done · worktree-agent-ab47370f46b265ec9 → 311c7ee · verify ✓
+- 2026-10-06 09:58Z 💻 T69 done · worktree-agent-aba579a428944ec60 → 6729cca · verify ✓
+- 2026-10-06 09:58Z 💻 T70 launched · attempt 1 · agent ad5fd9b2e670aff2f
+- 2026-10-06 09:58Z 💻 T71 launched · attempt 1 · agent a874c68c42dcdc95b
