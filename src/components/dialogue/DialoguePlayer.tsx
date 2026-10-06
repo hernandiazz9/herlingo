@@ -1,8 +1,9 @@
 "use client";
 
-import { type ReactNode, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 import { SpeakerIcon } from "@/components/icons";
-import { EyeIcon, MicIcon, SlowIcon } from "@/components/phrasebook/icons";
+import { EyeIcon, SlowIcon } from "@/components/phrasebook/icons";
+import { SpeakPanel, useListen, WordFeedback } from "@/components/speech";
 import { Button, Picture } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
@@ -15,7 +16,7 @@ import {
   type ImageRef,
   type Playable,
 } from "@/lib/content";
-import { bestMatch, canRecognize, listen } from "./recognition";
+import { bestOption, type SpeechScore } from "@/lib/speech";
 
 type Verdict = LearnerOption["verdict"];
 
@@ -24,8 +25,6 @@ const VERDICT: Record<Verdict, { title: string; box: string; titleClass: string 
   acceptable: { title: "Se entiende", box: "border-lemon bg-lemon-soft", titleClass: "text-ink" },
   wrong: { title: "Mejor no", box: "border-error bg-error-soft", titleClass: "text-error-deep" },
 };
-
-const noSubscribe = () => () => {};
 
 function shuffled(n: number): number[] {
   const a = Array.from({ length: n }, (_, i) => i);
@@ -85,23 +84,34 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
   const [orders, setOrders] = useState<Record<string, number[]>>({});
   const [attempts, setAttempts] = useState<Record<string, Attempt[]>>({});
   const [revealed, setRevealed] = useState<Set<string>>(() => new Set());
-  const [listening, setListening] = useState(false);
-  const [micMessage, setMicMessage] = useState<string | null>(null);
-  const cancelListen = useRef<(() => void) | null>(null);
+  /** The closest option when what was said matched none (word feedback), for the current turn. */
+  const [miss, setMiss] = useState<SpeechScore | null>(null);
   const bottom = useRef<HTMLDivElement>(null);
-  const micAvailable = useSyncExternalStore(noSubscribe, canRecognize, () => false);
+
+  // One mic for the learner's turn: the option that scores best (and passes) is the answer.
+  // Options are read when the session settles, so this always sees the current turn.
+  const listen = useListen({
+    locale,
+    onResult: (r) => {
+      const turn = turns[pos];
+      if (phase !== "running" || turn?.speaker !== "learner") return;
+      const { index, result } = bestOption(
+        turn.options.map((o) => o.text),
+        r.alternatives.length ? r.alternatives : [r.transcript],
+        meta.numberWords,
+      );
+      if (index >= 0) answer(turn, index, result?.heard || r.transcript);
+      else setMiss(result);
+    },
+  });
+  const micAvailable = listen.supported;
 
   useEffect(() => {
     if (phase === "running") bottom.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-  }, [phase, pos, attempts]);
+  }, [phase, pos, attempts, miss]);
 
-  useEffect(
-    () => () => {
-      cancelListen.current?.();
-      stop();
-    },
-    [],
-  );
+  // useListen cancels its own session on unmount.
+  useEffect(() => () => stop(), []);
 
   const learnerTurns = turns.filter((t): t is LearnerTurn => t.speaker === "learner");
   const current = turns[pos];
@@ -109,7 +119,8 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
 
   /** Moves past turn `i`, playing the next native line (call from a gesture). */
   function advanceFrom(i: number) {
-    setMicMessage(null);
+    listen.reset();
+    setMiss(null);
     const j = i + 1;
     if (j >= turns.length) {
       stop();
@@ -137,43 +148,21 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
   }
 
   function answer(turn: LearnerTurn, option: number, heard?: string) {
-    if (!heard) speak(turn.options[option], { lang });
-    setMicMessage(null);
+    // A tap always works: it discards any open mic session first.
+    if (!heard) {
+      listen.reset();
+      speak(turn.options[option], { lang });
+    }
+    setMiss(null);
     setAttempts((prev) => ({ ...prev, [turn.id]: [...(prev[turn.id] ?? []), { option, heard }] }));
   }
 
   function retry(turn: LearnerTurn) {
     stop();
+    listen.reset();
+    setMiss(null);
     // Keep the attempts (the score counts the first one); an undefined option re-opens the choices.
     setAttempts((prev) => ({ ...prev, [turn.id]: [...(prev[turn.id] ?? []), { option: -1 }] }));
-  }
-
-  function mic(turn: LearnerTurn) {
-    if (listening) {
-      cancelListen.current?.();
-      return;
-    }
-    stop();
-    setMicMessage(null);
-    setListening(true);
-    const { result, cancel } = listen(locale);
-    cancelListen.current = cancel;
-    void result.then((heard) => {
-      cancelListen.current = null;
-      setListening(false);
-      const idx = bestMatch(
-        heard,
-        turn.options.map((o) => o.text),
-        meta.numberWords,
-      );
-      if (idx >= 0) answer(turn, idx, heard[0]);
-      else
-        setMicMessage(
-          heard[0]
-            ? `He oído «${heard[0]}», que no se parece a ninguna respuesta. Prueba otra vez o elige una.`
-            : "No te he oído bien. Prueba otra vez o elige una respuesta.",
-        );
-    });
   }
 
   const toggleReveal = (turnId: string) =>
@@ -301,26 +290,22 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
               </button>
             ))}
           </div>
-          {micAvailable ? (
-            <button
-              type="button"
-              onClick={() => mic(current)}
-              aria-pressed={listening}
-              className={cn(
-                "pressable inline-flex min-h-12 items-center justify-center gap-2 rounded-button px-4 font-bold",
-                listening
-                  ? "bg-terracotta text-on-accent [--ledge:var(--terracotta-ledge)]"
-                  : "border-2 border-line bg-surface text-terracotta-deep [--ledge:var(--line)]",
-              )}
-            >
-              <MicIcon width={20} height={20} /> {listening ? "Escuchando… (toca para parar)" : "O dilo en voz alta"}
-            </button>
+          {miss && !listen.active ? (
+            <div className="flex flex-col gap-2 rounded-card border-2 border-line bg-sand p-3" role="status">
+              <p className="text-base text-ink">
+                He oído «<span lang={meta.lang}>{miss.heard}</span>», que no se parece bastante a ninguna
+                respuesta. La más cercana:
+              </p>
+              <WordFeedback words={miss.words} lang={meta.lang} />
+              <p className="text-sm text-ink-muted">Prueba otra vez o toca una respuesta.</p>
+            </div>
           ) : null}
-          {micMessage ? (
-            <p className="text-sm text-ink-muted" role="status">
-              {micMessage}
-            </p>
-          ) : null}
+          <SpeakPanel
+            listen={listen}
+            lang={meta.lang}
+            idleLabel={miss ? "Toca y dilo otra vez" : "O dilo en voz alta"}
+            className="pt-1"
+          />
         </div>
       ) : null}
 
