@@ -1,0 +1,258 @@
+{
+  "grammar": [
+    {
+      "id": "gram.fr-tu-vous",
+      "title": "Tu o vous",
+      "summary": "«Vous» es el «usted» francés: con desconocidos, dependientes, el médico y gente mayor. «Tu», con amigos, familia, niños y gente de tu edad en plan informal.",
+      "points": [
+        "«Vous» también es «vosotros»: sirve para un grupo, aunque sean amigos.",
+        "Con «vous» el verbo acaba casi siempre en «-ez»: «vous parlez», «vous pouvez».",
+        "En la duda, «vous»: nunca queda mal. Si te tutean, puedes tutear tú también.",
+        "«On se tutoie?» = ¿nos tuteamos?"
+      ],
+      "table": [
+        ["", "tu", "vous"],
+        ["¿qué tal? / ¿cómo está?", "Ça va?", "Comment allez-vous?"],
+        ["¿y tú? / ¿y usted?", "Et toi?", "Et vous?"],
+        ["por favor", "S'il te plaît.", "S'il vous plaît."],
+        ["perdona / perdone", "Excuse-moi.", "Excusez-moi."],
+        ["¿puedes / puede repetir?", "Tu peux répéter?", "Vous pouvez répéter?"]
+      ],
+      "examples": [
+        { "text": "Tu es d'ici?", "es": "¿Eres de aquí?" },
+        { "text": "Vous êtes d'ici?", "es": "¿Es usted de aquí?" },
+        { "text": "On se tutoie?", "es": "¿Nos tuteamos?" }
+      ],
+      "tags": ["registro"]
+    },
+    {
+      "id": "gram.fr-articles",
+      "title": "Artículos y género",
+      "summary": "Como en español, todo nombre es masculino o femenino, y casi siempre va con artículo. Apréndete cada palabra con el suyo: el género no siempre coincide con el español.",
+      "points": [
+        "Delante de vocal o «h» muda, «le» y «la» se convierten en «l'»: «l'eau», «l'hôtel».",
+        "En plural, «les» y «des» sirven para los dos géneros. Delante de vocal se ligan con «z»: «les‿amis» (le-za-MI).",
+        "«de + le» = «du», «de + les» = «des»; «à + le» = «au», «à + les» = «aux».",
+        "Ojo con los falsos amigos de género: «le lait» (la leche), «la mer» (el mar), «le nez» (la nariz)."
+      ],
+      "table": [
+        ["", "masculino", "femenino", "plural"],
+        ["el / la / los", "le (l')", "la (l')", "les"],
+        ["un / una / unos", "un", "une", "des"],
+        ["del / de la / de los", "du", "de la", "des"],
+        ["al / a la / a los", "au", "à la", "aux"]
+      ],
+      "examples": [
+        { "text": "Le lait et la mer.", "es": "La leche y el mar." },
+        { "text": "Une baguette, s'il vous plaît.", "es": "Una barra de pan, por favor." },
+        { "text": "Les enfants sont à l'école.", "es": "Los niños están en el colegio." }
+      ],
+      "tags": ["articulos"]
+    },
+    {
+      "id": "gram.fr-etre",
+      "title": "Être: ser y estar",
+      "summary": "«Être» hace de «ser» y de «estar» a la vez: «Je suis espagnol» (soy español), «Je suis fatigué» (estoy cansado). Un verbo menos que aprender.",
+      "points": [
+        "«C'est…» = es / está: «C'est loin?» (¿está lejos?), «C'est bon!» (¡está rico!).",
+        "Para la edad no se usa «être», sino «avoir»: «J'ai trente ans».",
+        "«On» (nosotros, coloquial) va con la forma de «il»: «On est deux»."
+      ],
+      "table": [
+        ["persona", "être", "español"],
+        ["je", "suis", "soy / estoy"],
+        ["tu", "es", "eres / estás"],
+        ["il / elle / on", "est", "es / está"],
+        ["nous", "sommes", "somos / estamos"],
+        ["vous", "êtes", "sois / es usted"],
+        ["ils / elles", "sont", "son / están"]
+      ],
+      "examples": [
+        { "text": "Je suis à la maison.", "es": "Estoy en casa." },
+        { "text": "C'est loin?", "es": "¿Está lejos?" },
+        { "text": "Vous êtes d'ici?", "es": "¿Es usted de aquí?" }
+      ],
+      "tags": ["verbos"]
+    },
+    {
+      "id": "gram.fr-avoir",
+      "title": "Avoir: tener (y la edad)",
+      "summary": "«Avoir» es «tener», y como en español sirve para el hambre, la sed, el frío y la edad: «J'ai faim», «J'ai trente ans».",
+      "points": [
+        "«Je» + vocal = «j'»: «j'ai» (shé).",
+        "«Il y a» = hay: «Il y a une pharmacie près d'ici?».",
+        "Con la edad, nunca «je suis… ans»: siempre «j'ai… ans».",
+        "En plural se liga con «z»: «nous‿avons», «vous‿avez», «ils‿ont»."
+      ],
+      "table": [
+        ["persona", "avoir", "español"],
+        ["je", "ai (j'ai)", "tengo"],
+        ["tu", "as", "tienes"],
+        ["il / elle / on", "a", "tiene"],
+        ["nous", "avons", "tenemos"],
+        ["vous", "avez", "tenéis / tiene usted"],
+        ["ils / elles", "ont", "tienen"]
+      ],
+      "examples": [
+        { "text": "J'ai faim.", "es": "Tengo hambre." },
+        { "text": "Tu as le temps?", "es": "¿Tienes tiempo?" },
+        { "text": "Il y a une pharmacie près d'ici?", "es": "¿Hay una farmacia cerca de aquí?" }
+      ],
+      "tags": ["verbos"]
+    },
+    {
+      "id": "gram.fr-aller",
+      "title": "Aller e «ir a + infinitivo»",
+      "summary": "«Aller» es «ir». Con un infinitivo detrás hace el futuro más usado al hablar, igual que nuestro «voy a…»: «Je vais manger».",
+      "points": [
+        "Futuro próximo = aller + infinitivo: «Demain, je vais travailler».",
+        "«à» + ciudad: «Je vais à Lyon»; «au» + sitio masculino: «au cinéma»; «à la» + femenino: «à la boulangerie».",
+        "«On y va?» = ¿vamos?"
+      ],
+      "table": [
+        ["persona", "aller", "español"],
+        ["je", "vais", "voy"],
+        ["tu", "vas", "vas"],
+        ["il / elle / on", "va", "va"],
+        ["nous", "allons", "vamos"],
+        ["vous", "allez", "vais / va usted"],
+        ["ils / elles", "vont", "van"]
+      ],
+      "examples": [
+        { "text": "Je vais à la boulangerie.", "es": "Voy a la panadería." },
+        { "text": "Demain, je vais travailler.", "es": "Mañana voy a trabajar." },
+        { "text": "On va au cinéma ce soir?", "es": "¿Vamos al cine esta noche?" }
+      ],
+      "tags": ["verbos"]
+    },
+    {
+      "id": "gram.fr-faire",
+      "title": "Faire: hacer",
+      "summary": "«Faire» es «hacer» y aparece en mil expresiones de cada día: el tiempo que hace, la compra, deporte, planes.",
+      "points": [
+        "El tiempo: «Il fait beau» (hace bueno), «Il fait froid» (hace frío).",
+        "«Faire les courses» = hacer la compra; «faire la bise» = dar besos al saludar.",
+        "«Qu'est-ce que tu fais?» = ¿qué haces?",
+        "Ojo: «vous faites», no «vous faisez»."
+      ],
+      "table": [
+        ["persona", "faire", "español"],
+        ["je", "fais", "hago"],
+        ["tu", "fais", "haces"],
+        ["il / elle / on", "fait", "hace"],
+        ["nous", "faisons", "hacemos"],
+        ["vous", "faites", "hacéis / hace usted"],
+        ["ils / elles", "font", "hacen"]
+      ],
+      "examples": [
+        { "text": "Il fait beau aujourd'hui.", "es": "Hoy hace bueno." },
+        { "text": "Je fais les courses.", "es": "Hago la compra." },
+        { "text": "Qu'est-ce que tu fais ce week-end?", "es": "¿Qué haces este fin de semana?" }
+      ],
+      "tags": ["verbos"]
+    },
+    {
+      "id": "gram.fr-vouloir-pouvoir",
+      "title": "«Je voudrais» y «je peux»",
+      "summary": "Para pedir con educación, «je voudrais» (querría). «Je veux» (quiero) suena exigente con desconocidos. «Pouvoir» (poder) sirve para pedir permiso y favores.",
+      "points": [
+        "Je voudrais + cosa: «Je voudrais un café». + infinitivo: «Je voudrais réserver».",
+        "¿Puedo…? = «Je peux…?»: «Je peux entrer?».",
+        "¿Puede…? = «Vous pouvez…?»: «Vous pouvez m'aider?».",
+        "Ojo: «je peux» y «je veux» acaban en «-x», que no suena."
+      ],
+      "table": [
+        ["persona", "vouloir", "pouvoir"],
+        ["je", "veux (voudrais)", "peux"],
+        ["tu", "veux", "peux"],
+        ["il / elle / on", "veut", "peut"],
+        ["nous", "voulons", "pouvons"],
+        ["vous", "voulez", "pouvez"],
+        ["ils / elles", "veulent", "peuvent"]
+      ],
+      "examples": [
+        { "text": "Je voudrais un café, s'il vous plaît.", "es": "Querría un café, por favor." },
+        { "text": "Vous pouvez m'aider?", "es": "¿Me puede ayudar?" },
+        { "text": "Tu veux venir avec nous?", "es": "¿Quieres venir con nosotros?" }
+      ],
+      "tags": ["verbos", "pedir"]
+    },
+    {
+      "id": "gram.fr-negation",
+      "title": "La negación: ne … pas",
+      "summary": "Para negar, el verbo va entre «ne» y «pas»: «Je ne comprends pas». Delante de vocal, «ne» se convierte en «n'»: «Je n'aime pas».",
+      "points": [
+        "«ne» va antes del verbo y «pas» justo después: «Ce n'est pas loin».",
+        "Hablando, el «ne» casi siempre se cae: «C'est pas grave», «Je sais pas». Entiéndelo, pero escribe el «ne».",
+        "«Pas de» + nombre: «Pas de problème», «Je n'ai pas de voiture».",
+        "Otras: «ne … plus» (ya no), «ne … jamais» (nunca), «ne … rien» (nada)."
+      ],
+      "table": [
+        ["sí", "no"],
+        ["Je comprends.", "Je ne comprends pas."],
+        ["J'aime le café.", "Je n'aime pas le café."],
+        ["C'est loin.", "Ce n'est pas loin."],
+        ["J'ai une voiture.", "Je n'ai pas de voiture."]
+      ],
+      "examples": [
+        { "text": "Je ne peux pas, désolé.", "es": "No puedo, lo siento." },
+        { "text": "Je n'aime pas le café.", "es": "No me gusta el café." },
+        { "text": "Ce n'est pas loin.", "es": "No está lejos." }
+      ],
+      "tags": ["negacion"]
+    },
+    {
+      "id": "gram.fr-questions",
+      "title": "Hacer preguntas",
+      "summary": "Lo más fácil y lo más oído: la frase normal con tono de pregunta, como en español («Tu es d'ici?»). «Est-ce que…» delante también la convierte en pregunta, sin cambiar nada más.",
+      "points": [
+        "Entonación: «Vous avez une table?» (sube el tono al final).",
+        "Est-ce que + frase: «Est-ce que vous avez du pain?».",
+        "¿Qué…? = «Qu'est-ce que…?»: «Qu'est-ce que tu fais?», «Qu'est-ce que c'est?».",
+        "Hablando, la palabra interrogativa va mucho al final: «Tu habites où?», «C'est combien?»."
+      ],
+      "table": [
+        ["español", "francés"],
+        ["¿dónde?", "où?"],
+        ["¿cuándo?", "quand?"],
+        ["¿cuánto?", "combien?"],
+        ["¿cómo?", "comment?"],
+        ["¿por qué?", "pourquoi?"],
+        ["¿qué?", "qu'est-ce que…? / quoi?"],
+        ["¿quién?", "qui?"]
+      ],
+      "examples": [
+        { "text": "Est-ce que vous avez du pain?", "es": "¿Tiene pan?" },
+        { "text": "Qu'est-ce que c'est?", "es": "¿Qué es esto?" },
+        { "text": "Tu habites où?", "es": "¿Dónde vives?" }
+      ],
+      "tags": ["preguntas"]
+    },
+    {
+      "id": "gram.fr-verbes-er",
+      "title": "Verbos en -er en presente",
+      "summary": "La mayoría de los verbos acaban en «-er» (parler, habiter, aimer, travailler) y van todos igual. Buena noticia: «je parle», «tu parles», «il parle» e «ils parlent» suenan exactamente igual.",
+      "points": [
+        "Quita «-er» y añade: -e, -es, -e, -ons, -ez, -ent.",
+        "Las terminaciones «-e», «-es» y «-ent» no suenan: solo oyes «parl».",
+        "«Je» + vocal = «j'»: «j'aime», «j'habite».",
+        "Hablando, «on parle» sustituye casi siempre a «nous parlons»."
+      ],
+      "table": [
+        ["persona", "parler", "suena"],
+        ["je", "parle", "parl"],
+        ["tu", "parles", "parl"],
+        ["il / elle / on", "parle", "parl"],
+        ["nous", "parlons", "par-LON"],
+        ["vous", "parlez", "par-LÉ"],
+        ["ils / elles", "parlent", "parl"]
+      ],
+      "examples": [
+        { "text": "J'habite à Lyon.", "es": "Vivo en Lyon." },
+        { "text": "Je travaille dans une librairie.", "es": "Trabajo en una librería." },
+        { "text": "On mange ensemble ce soir?", "es": "¿Cenamos juntos esta noche?" }
+      ],
+      "tags": ["verbos"]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "id": "grammaire",
+  "order": 90,
+  "title": "Gramática mínima",
+  "description": "Solo lo que desbloquea frases: tu o vous, los artículos, cinco verbos clave, negar y preguntar.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "grammaire.l.tu-vous-articles",
+      "title": "Tu o vous, y los artículos",
+      "items": [
+        "gram.fr-tu-vous",
+        "grammaire.vous-etes-dici",
+        "grammaire.tu-es-dici",
+        "grammaire.on-se-tutoie",
+        "gram.fr-articles",
+        "grammaire.lait",
+        "grammaire.mer",
+        "grammaire.nez",
+        "grammaire.une-baguette",
+        "grammaire.les-enfants",
+        "grammaire.qa.vous-etes-dici"
+      ]
+    },
+    {
+      "id": "grammaire.l.etre-avoir-aller",
+      "title": "Être, avoir, aller y faire",
+      "items": [
+        "gram.fr-etre",
+        "grammaire.je-suis-a-la-maison",
+        "grammaire.cest-loin",
+        "salut.je-suis-fatigue",
+        "gram.fr-avoir",
+        "grammaire.jai-faim",
+        "nombres.jai-trente-deux-ans",
+        "grammaire.il-y-a-une-pharmacie",
+        "gram.fr-aller",
+        "grammaire.je-vais-a-la-boulangerie",
+        "grammaire.demain-je-vais-travailler",
+        "gram.fr-faire",
+        "grammaire.il-fait-beau",
+        "grammaire.quest-ce-que-tu-fais",
+        "grammaire.qa.faim"
+      ]
+    },
+    {
+      "id": "grammaire.l.pedir-negar-preguntar",
+      "title": "Pedir, negar y preguntar",
+      "items": [
+        "gram.fr-vouloir-pouvoir",
+        "grammaire.je-voudrais-un-cafe",
+        "grammaire.vous-pouvez-maider",
+        "grammaire.tu-veux-venir",
+        "gram.fr-negation",
+        "salut.je-ne-comprends-pas",
+        "grammaire.je-ne-peux-pas",
+        "grammaire.je-naime-pas-le-cafe",
+        "salut.ce-nest-pas-grave",
+        "gram.fr-questions",
+        "grammaire.est-ce-que-vous-avez-du-pain",
+        "salut.ca-veut-dire-quoi",
+        "grammaire.tu-habites-ou",
+        "gram.fr-verbes-er",
+        "grammaire.jhabite-a-lyon",
+        "grammaire.qa.voudrais",
+        "grammaire.qa.habites"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "grammaire.vous-etes-dici", "text": "Vous êtes d'ici?", "es": "¿Es usted de aquí?", "explanation": "Para preguntar a un desconocido o a alguien mayor. «vous‿êtes» se liga con «z»: vu-ZET di-SI?", "register": "vous", "situation": "presentarse", "tags": ["registro"] },
+    { "id": "grammaire.tu-es-dici", "text": "Tu es d'ici?", "es": "¿Eres de aquí?", "explanation": "Para preguntar a alguien de tu edad en un ambiente informal. «tu» lleva la «u» francesa: tü E di-SI?", "register": "tu", "situation": "presentarse", "tags": ["registro"] },
+    { "id": "grammaire.on-se-tutoie", "text": "On se tutoie?", "es": "¿Nos tuteamos?", "notes": "Lo propone normalmente la persona mayor o la que tiene más confianza.", "explanation": "Cuando ya hay confianza con alguien a quien tratabas de «vous». «tutoie» suena tü-TUA: on s'tü-TUA?", "register": "tu", "situation": "presentarse", "tags": ["registro"] },
+    { "id": "grammaire.une-baguette", "text": "Une baguette, s'il vous plaît.", "es": "Una barra de pan, por favor.", "notes": "«baguette» es femenino: «une», no «un».", "explanation": "En la panadería, lo que más vas a pedir. «gue» suena «gue» como en español: ün ba-GUET.", "register": "vous", "situation": "comida", "tags": ["articulos"] },
+    { "id": "grammaire.les-enfants", "text": "Les enfants sont à l'école.", "es": "Los niños están en el colegio.", "explanation": "Para hablar de los niños de la familia o de los vecinos. «les‿enfants» se liga con «z»: le-zan-FAN.", "register": "neutral", "situation": "familia", "tags": ["articulos"] },
+    { "id": "grammaire.je-suis-a-la-maison", "text": "Je suis à la maison.", "es": "Estoy en casa.", "notes": "«être» = ser y estar.", "explanation": "Para decir dónde estás, por teléfono o en un mensaje. «suis‿à» se liga: sh'swi-za la me-ZON.", "register": "neutral", "situation": "casa", "tags": ["verbos"] },
+    { "id": "grammaire.cest-loin", "text": "C'est loin?", "es": "¿Está lejos?", "notes": "«C'est» sirve para «es» y para «está».", "explanation": "Cuando te indican un sitio y quieres saber si vas andando. «loin» es nasal, suena «luan»: se LUAN?", "register": "neutral", "situation": "ciudad", "tags": ["verbos"] },
+    { "id": "grammaire.jai-faim", "text": "J'ai faim.", "es": "Tengo hambre.", "notes": "Igual: «J'ai soif» (sed), «J'ai froid» (frío), «J'ai chaud» (calor).", "explanation": "Para decir que tienes hambre, en casa o con amigos. «faim» es nasal, sin «m»: shé FAN.", "register": "neutral", "situation": "comida", "tags": ["verbos"] },
+    { "id": "grammaire.il-y-a-une-pharmacie", "text": "Il y a une pharmacie près d'ici?", "es": "¿Hay una farmacia cerca de aquí?", "notes": "«Il y a» = hay.", "explanation": "A un transeúnte, cuando necesitas una farmacia. «il y a» va todo junto: i-lia-ün far-ma-SI?", "register": "neutral", "situation": "ciudad", "tags": ["verbos"] },
+    { "id": "grammaire.je-vais-a-la-boulangerie", "text": "Je vais à la boulangerie.", "es": "Voy a la panadería.", "explanation": "Para decir adónde vas. «boulangerie» tiene una «an» nasal y la «g» suave: bu-lan-sh'-RI.", "register": "neutral", "situation": "casa", "tags": ["verbos"] },
+    { "id": "grammaire.demain-je-vais-travailler", "text": "Demain, je vais travailler.", "es": "Mañana voy a trabajar.", "notes": "aller + infinitivo = futuro de todos los días.", "explanation": "Para contar tus planes. «travailler» suena tra-va-YÉ: la «ill» es una «y».", "register": "neutral", "situation": "casa", "tags": ["verbos", "futuro"] },
+    { "id": "grammaire.il-fait-beau", "text": "Il fait beau aujourd'hui.", "es": "Hoy hace bueno.", "notes": "El tiempo va con «faire»: «Il fait froid», «Il fait chaud».", "explanation": "Para comentar el tiempo con un vecino o un amigo. «fait» suena «fe» y «beau» suena «bo»: il fe BO.", "register": "neutral", "situation": "ocio", "tags": ["verbos"] },
+    { "id": "grammaire.quest-ce-que-tu-fais", "text": "Qu'est-ce que tu fais ce week-end?", "es": "¿Qué haces este fin de semana?", "explanation": "A un amigo, para proponer un plan. «Qu'est-ce que» suena «kes-k'»: kes-k'tü FE s'ui-KEND?", "register": "tu", "situation": "ocio", "tags": ["verbos", "preguntas"] },
+    { "id": "grammaire.je-voudrais-un-cafe", "text": "Je voudrais un café, s'il vous plaît.", "es": "Querría un café, por favor.", "notes": "«Je voudrais» es la forma educada de pedir; «je veux» suena exigente.", "explanation": "En la barra de un café o en cualquier tienda. «voudrais» suena vu-DRE: sh'vu-DRE an ka-FÉ.", "register": "vous", "situation": "comida", "tags": ["pedir"] },
+    { "id": "grammaire.vous-pouvez-maider", "text": "Vous pouvez m'aider, s'il vous plaît?", "es": "¿Me puede ayudar, por favor?", "explanation": "A un desconocido o a un dependiente cuando necesitas una mano. «m'aider» suena me-DÉ: vu pu-VÉ me-DÉ?", "register": "vous", "situation": "ciudad", "tags": ["pedir"] },
+    { "id": "grammaire.tu-veux-venir", "text": "Tu veux venir avec nous?", "es": "¿Quieres venir con nosotros?", "explanation": "Para invitar a un amigo a un plan. «veux» con labios redondos, «vö», y «venir» casi sin la primera «e»: tü vö v'NIR?", "register": "tu", "situation": "ocio", "tags": ["pedir"] },
+    { "id": "grammaire.je-ne-peux-pas", "text": "Je ne peux pas, désolé.", "es": "No puedo, lo siento.", "explanation": "Para rechazar un plan con amabilidad. Hablando, suena casi «sh'pö pa»: sh'n'pö PA, dé-zo-LÉ.", "register": "neutral", "situation": "ocio", "tags": ["negacion"] },
+    { "id": "grammaire.je-naime-pas-le-cafe", "text": "Je n'aime pas le café.", "es": "No me gusta el café.", "notes": "«aimer» lleva sujeto «je», al revés que «gustar».", "explanation": "Para decir lo que no te gusta. «n'aime» suena «nem»: sh'nem pa l'ka-FÉ.", "register": "neutral", "situation": "comida", "tags": ["negacion"] },
+    { "id": "grammaire.est-ce-que-vous-avez-du-pain", "text": "Est-ce que vous avez du pain?", "es": "¿Tiene pan?", "notes": "«Est-ce que» convierte la frase en pregunta, sin cambiar nada más.", "explanation": "En una tienda pequeña o la panadería. «Est-ce que» suena «es-k'» y «pain» es nasal: es-k'vu-za-VÉ dü PAN?", "register": "vous", "situation": "comida", "tags": ["preguntas"] },
+    { "id": "grammaire.tu-habites-ou", "text": "Tu habites où?", "es": "¿Dónde vives?", "notes": "Más formal: «Où est-ce que vous habitez?».", "explanation": "A un amigo nuevo o un compañero. La «h» no suena y «où» suena «u»: tü a-BIT U?", "register": "tu", "situation": "presentarse", "tags": ["preguntas"] },
+    { "id": "grammaire.jhabite-a-lyon", "text": "J'habite à Lyon.", "es": "Vivo en Lyon.", "notes": "Ciudad = «à»: «J'habite à Madrid».", "explanation": "Para decir dónde vives. «J'habite» va junto, sin «h»: sha-BIT a LION, con la «on» final nasal.", "register": "neutral", "situation": "presentarse", "tags": ["verbos"] }
+  ],
+  "vocab": [
+    { "id": "grammaire.lait", "word": "lait", "article": "le", "gender": "m", "es": "la leche", "notes": "Masculino en francés. Suena «le».", "situation": "gramatica", "tags": ["genero"], "image": "fluent:glass-of-milk" },
+    { "id": "grammaire.mer", "word": "mer", "article": "la", "gender": "f", "es": "el mar", "notes": "Femenino en francés. Suena «mer».", "situation": "gramatica", "tags": ["genero"], "image": "fluent:water-wave" },
+    { "id": "grammaire.nez", "word": "nez", "article": "le", "gender": "m", "es": "la nariz", "notes": "Masculino en francés. La «z» no suena: «né».", "situation": "gramatica", "tags": ["genero"], "image": "fluent:nose" }
+  ],
+  "qa": [
+    {
+      "id": "grammaire.qa.vous-etes-dici",
+      "question": "Bonjour! Vous êtes d'ici?",
+      "questionEs": "¡Hola! ¿Es usted de aquí?",
+      "accepted": [
+        { "text": "Non, je suis espagnol. Et vous?", "es": "No, soy español. ¿Y usted?" },
+        { "text": "Non, je suis de Madrid.", "es": "No, soy de Madrid." }
+      ],
+      "distractors": [
+        { "text": "Non, je suis espagnol. Et toi?", "es": "No, soy español. ¿Y tú?" },
+        { "text": "Non, vous êtes espagnol.", "es": "No, usted es español." }
+      ],
+      "register": "vous",
+      "situation": "presentarse",
+      "notes": "Te hablan de «vous»: responde con «je suis» y devuelve la pregunta con «Et vous?».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "grammaire.qa.faim",
+      "question": "Tu as faim?",
+      "questionEs": "¿Tienes hambre?",
+      "accepted": [
+        { "text": "Oui, j'ai très faim!", "es": "¡Sí, tengo mucha hambre!" },
+        { "text": "Non, merci, ça va.", "es": "No, gracias, estoy bien." }
+      ],
+      "distractors": [
+        { "text": "Oui, je suis très faim!", "es": "¡Sí, soy mucha hambre!" },
+        { "text": "Oui, tu as très faim!", "es": "¡Sí, tienes mucha hambre!" }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "El hambre va con «avoir»: «j'ai faim». Hablas de ti: «j'ai», no «tu as».",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "grammaire.qa.voudrais",
+      "question": "Bonjour! Qu'est-ce que je vous sers?",
+      "questionEs": "¡Hola! ¿Qué le pongo?",
+      "accepted": [
+        { "text": "Je voudrais un café, s'il vous plaît.", "es": "Querría un café, por favor." },
+        { "text": "Un café, s'il vous plaît.", "es": "Un café, por favor." }
+      ],
+      "distractors": [
+        { "text": "Je voudrais un café, s'il te plaît.", "es": "Querría un café, por favor (de tú)." },
+        { "text": "J'ai un café, s'il vous plaît.", "es": "Tengo un café, por favor." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "Al camarero se le habla de «vous»: «s'il vous plaît». Para pedir, «je voudrais».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "grammaire.qa.habites",
+      "question": "Et toi, tu habites où?",
+      "questionEs": "Y tú, ¿dónde vives?",
+      "accepted": [
+        { "text": "J'habite à Lyon, et toi?", "es": "Vivo en Lyon, ¿y tú?" },
+        { "text": "À Lyon, près de la gare.", "es": "En Lyon, cerca de la estación." }
+      ],
+      "distractors": [
+        { "text": "Je habite à Lyon.", "es": "Vivo en Lyon (sin elisión)." },
+        { "text": "J'habites à Lyon.", "es": "Vivo en Lyon (terminación de «tu»)." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "«je» + vocal = «j'», y con «je» el verbo acaba en «-e»: «j'habite».",
+      "voice": "fr-FR-EloiseNeural"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "id": "salut",
+  "order": 10,
+  "title": "Saludos, cortesía y «no entiendo»",
+  "description": "Saludar y despedirte, preguntar qué tal, dar las gracias, pedir perdón y salir del paso cuando no entiendes.",
+  "emoji": "👋",
+  "situation": "saludos",
+  "lessons": [
+    {
+      "id": "salut.l.bonjour",
+      "title": "Hola y adiós",
+      "items": [
+        "salut.bonjour",
+        "salut.monsieur",
+        "salut.madame",
+        "salut.bonjour-madame",
+        "salut.bonsoir",
+        "salut.salut",
+        "salut.au-revoir",
+        "salut.bonne-journee",
+        "salut.bonne-soiree",
+        "salut.bonne-nuit",
+        "salut.a-bientot",
+        "salut.a-demain",
+        "salut.a-plus",
+        "salut.bienvenue",
+        "salut.qa.au-revoir"
+      ]
+    },
+    {
+      "id": "salut.l.ca-va",
+      "title": "¿Qué tal?",
+      "items": [
+        "salut.ca-va",
+        "salut.ca-va-bien",
+        "salut.et-toi",
+        "salut.comment-ca-va",
+        "salut.comment-allez-vous",
+        "salut.tres-bien-merci",
+        "salut.et-vous",
+        "salut.pas-mal",
+        "salut.bof",
+        "salut.je-suis-fatigue",
+        "salut.enchante",
+        "gram.fr-tu-vous",
+        "salut.bise",
+        "salut.on-se-fait-la-bise",
+        "salut.qa.ca-va",
+        "salut.qa.comment-allez-vous"
+      ]
+    },
+    {
+      "id": "salut.l.politesse",
+      "title": "Por favor, gracias y perdón",
+      "items": [
+        "salut.merci",
+        "salut.merci-beaucoup",
+        "salut.de-rien",
+        "salut.je-vous-en-prie",
+        "salut.sil-vous-plait",
+        "salut.sil-te-plait",
+        "salut.oui-merci",
+        "salut.non-merci",
+        "salut.excusez-moi",
+        "salut.excuse-moi",
+        "salut.pardon",
+        "salut.desole",
+        "salut.ce-nest-pas-grave",
+        "salut.pas-de-probleme",
+        "salut.daccord",
+        "salut.avec-plaisir",
+        "salut.qa.merci"
+      ]
+    },
+    {
+      "id": "salut.l.comprendre",
+      "title": "Cuando no entiendes",
+      "items": [
+        "salut.je-ne-comprends-pas",
+        "salut.vous-pouvez-repeter",
+        "salut.tu-peux-repeter",
+        "salut.plus-lentement",
+        "salut.francais",
+        "salut.espagnol",
+        "salut.anglais",
+        "salut.je-parle-un-peu-francais",
+        "salut.je-ne-parle-pas-bien",
+        "salut.vous-parlez-espagnol",
+        "salut.vous-parlez-anglais",
+        "salut.mot",
+        "salut.ca-veut-dire-quoi",
+        "salut.comment-on-dit",
+        "salut.vous-pouvez-lecrire",
+        "salut.je-ne-sais-pas",
+        "salut.jai-compris",
+        "salut.qa.vous-parlez-francais",
+        "salut.qa.vous-comprenez"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "salut.bonjour", "text": "Bonjour!", "es": "¡Hola! / ¡Buenos días!", "notes": "Vale todo el día hasta el atardecer, con cualquiera.", "explanation": "Al entrar en una tienda, la panadería o el ascensor: en Francia no saludar queda fatal. «on» es nasal, sin «n»: bon-YUR, con una «y» suave como la argentina.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.bonjour-madame", "text": "Bonjour, madame.", "es": "Buenos días, señora.", "notes": "Añadir «madame» o «monsieur» suena mucho más educado.", "explanation": "Al entrar en una tienda o al dirigirte a una señora que no conoces. «ma-DAM»: la «e» final no suena.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.bonsoir", "text": "Bonsoir!", "es": "¡Buenas tardes! / ¡Buenas noches!", "notes": "Al llegar a partir de las 18 h más o menos; no es para irte a dormir.", "explanation": "Al entrar en un sitio o saludar a alguien a última hora de la tarde. «oi» suena «ua»: bon-SUAR, con la «r» en la garganta.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.salut", "text": "Salut!", "es": "¡Hola! / ¡Chao!", "notes": "Informal: sirve para saludar y para despedirte.", "explanation": "Con amigos, familia o compañeros, nunca con el panadero. La «t» final no suena y la «u» se dice con los labios de «u» y la lengua de «i»: sa-LÜ.", "register": "tu", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.au-revoir", "text": "Au revoir!", "es": "¡Adiós!", "notes": "La despedida estándar, educada con cualquiera.", "explanation": "Al salir de una tienda, del médico o de cualquier sitio. «au» suena «o» y la primera «e» casi desaparece: o-R'VUAR.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "salut.bonne-journee", "text": "Bonne journée!", "es": "¡Que tengas un buen día!", "notes": "Muy típico al despedirte por la mañana o a mediodía.", "explanation": "Lo dices y te lo dicen al pagar y salir de una tienda. «j» suena como la «y» argentina: bon yur-NÉ.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "salut.bonne-soiree", "text": "Bonne soirée!", "es": "¡Que pases buena tarde-noche!", "notes": "Para despedirte a partir de media tarde.", "explanation": "Al despedirte de alguien por la tarde, cuando aún queda noche por delante. «oi» suena «ua»: bon sua-RÉ.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "salut.bonne-nuit", "text": "Bonne nuit!", "es": "¡Buenas noches! (al irte a dormir)", "notes": "Solo antes de dormir; para saludar de noche se dice «Bonsoir».", "explanation": "En casa antes de irte a la cama. «nuit» es una sola sílaba: «nü» deslizado a «i», NÜI, y la «t» no suena.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "salut.a-bientot", "text": "À bientôt!", "es": "¡Hasta pronto!", "explanation": "Al despedirte de alguien que vas a volver a ver, como la vecina o el de la tienda de siempre. «bien» es nasal, sin «n»: a bian-TÓ.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "salut.a-demain", "text": "À demain!", "es": "¡Hasta mañana!", "explanation": "Al despedirte de compañeros o amigos que verás al día siguiente. «main» es nasal, sin «n»: a d'MAN, con la boca abierta.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "salut.a-plus", "text": "À plus!", "es": "¡Hasta luego!", "notes": "Coloquial; por escrito se abrevia «A+».", "explanation": "Con amigos, al despedirte o al final de un mensaje. Aquí la «s» sí suena: a PLÜS.", "register": "tu", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "salut.bienvenue", "text": "Bienvenue!", "es": "¡Bienvenido! / ¡Bienvenida!", "notes": "Igual para hombre, mujer o grupo al hablar.", "explanation": "Lo oirás al llegar a casa de alguien o a un sitio nuevo. «bien» es nasal y «nue» se dice con la «u» francesa: bian-v'NÜ.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.ca-va", "text": "Ça va?", "es": "¿Qué tal?", "notes": "Informal; la respuesta típica es otro «Ça va».", "explanation": "Con amigos, compañeros o vecinos de confianza, justo después de «Salut». Se dice tal cual: sa VA, subiendo el tono al final.", "register": "tu", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.ca-va-bien", "text": "Ça va bien, merci.", "es": "Bien, gracias.", "explanation": "Para responder a «Ça va?» o «Comment ça va?». «bien» es nasal, sin «n» final: sa va BIAN, mer-SI.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.et-toi", "text": "Et toi?", "es": "¿Y tú?", "explanation": "Para devolver la pregunta a un amigo después de responder. «et» suena «e» (la «t» no suena) y «toi» suena «tua»: e TUA?", "register": "tu", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.comment-ca-va", "text": "Comment ça va?", "es": "¿Cómo estás? / ¿Cómo va?", "notes": "Un poco más completo que «Ça va?»; sirve con casi todos.", "explanation": "Para preguntar qué tal a alguien conocido. «Comment» termina en nasal y la «t» no suena: ko-MAN sa VA?", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.comment-allez-vous", "text": "Comment allez-vous?", "es": "¿Cómo está usted?", "explanation": "Con alguien mayor, un vecino al que tratas de usted o en el trabajo. Aquí la «t» de «comment» se une a «allez»: ko-man-TA-lé-VU.", "register": "vous", "situation": "saludos", "tags": ["saludo", "registro"] },
+    { "id": "salut.tres-bien-merci", "text": "Très bien, merci.", "es": "Muy bien, gracias.", "explanation": "La respuesta educada a «Comment allez-vous?». «Très» suena «tre», con la «r» de garganta y la «s» muda: tre BIAN, mer-SI.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.et-vous", "text": "Et vous?", "es": "¿Y usted?", "notes": "También vale para «¿y vosotros?».", "explanation": "Para devolver la pregunta a alguien a quien tratas de usted. «vous» suena «vu», la «s» no se pronuncia: e VU?", "register": "vous", "situation": "saludos", "tags": ["saludo", "registro"] },
+    { "id": "salut.pas-mal", "text": "Pas mal, et toi?", "es": "Nada mal, ¿y tú?", "explanation": "Con amigos, cuando te preguntan «Ça va?». La «s» de «pas» no suena: pa MAL, e TUA?", "register": "tu", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.bof", "text": "Bof, ça va.", "es": "Bah, tirando.", "notes": "«Bof» = ni bien ni mal; muy francés, en plan familiar.", "explanation": "Con amigos cuando el día no va genial. Acompáñalo de un encogimiento de hombros: BOF, sa VA.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.je-suis-fatigue", "text": "Je suis un peu fatigué.", "es": "Estoy un poco cansado.", "notes": "Si eres mujer, «fatiguée»: suena exactamente igual.", "explanation": "Cuando te preguntan qué tal y estás cansado. «un peu» se dice an PÖ, con una «e» de labios redondos: un-pö-fa-ti-GUÉ.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.enchante", "text": "Enchanté!", "es": "¡Encantado!", "notes": "Si eres mujer se escribe «Enchantée», pero suena igual.", "explanation": "Cuando te presentan a alguien. Las dos «en/an» son nasales, sin «n»: an-shan-TÉ.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "salut.on-se-fait-la-bise", "text": "On se fait la bise?", "es": "¿Nos damos dos besos?", "notes": "«Faire la bise» = saludar con besos en la mejilla; el número cambia según la región.", "explanation": "Entre amigos o conocidos jóvenes, cuando dudas si dar besos o la mano. «On» es nasal: on s'fe la BIS.", "register": "tu", "situation": "saludos", "tags": ["saludo", "cultura"] },
+    { "id": "salut.merci", "text": "Merci!", "es": "¡Gracias!", "explanation": "Al recibir el cambio, el pan o cualquier favor. La «r» se hace al fondo de la garganta, como una «j» muy suave: mer-SI.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.merci-beaucoup", "text": "Merci beaucoup!", "es": "¡Muchas gracias!", "explanation": "Cuando alguien te ayuda de verdad. «eau» suena «o» y «coup» suena «ku»: mer-SI bo-KU.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.de-rien", "text": "De rien!", "es": "¡De nada!", "notes": "La respuesta normal a «merci»; con amigos y desconocidos.", "explanation": "Cuando alguien te da las gracias por algo pequeño. «rien» acaba en nasal, sin «n»: d'RIAN.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.je-vous-en-prie", "text": "Je vous en prie.", "es": "No hay de qué. / Adelante.", "notes": "Más formal que «De rien»; también sirve para ceder el paso.", "explanation": "Al responder a un «merci» de alguien a quien tratas de usted, o al dejarle pasar primero. Liga «vous‿en»: sh'vu-zan-PRI.", "register": "vous", "situation": "saludos", "tags": ["cortesia", "registro"] },
+    { "id": "salut.sil-vous-plait", "text": "S'il vous plaît.", "es": "Por favor.", "explanation": "Al pedir algo en una tienda, un café o a cualquier desconocido. La «t» final no suena: sil vu PLE.", "register": "vous", "situation": "saludos", "tags": ["cortesia", "registro"] },
+    { "id": "salut.sil-te-plait", "text": "S'il te plaît.", "es": "Por favor.", "notes": "La versión de «tú»: con amigos y familia.", "explanation": "Al pedirle algo a un amigo o a alguien de la familia. La «e» de «te» casi no suena: sil t'PLE.", "register": "tu", "situation": "saludos", "tags": ["cortesia", "registro"] },
+    { "id": "salut.oui-merci", "text": "Oui, merci.", "es": "Sí, gracias.", "explanation": "Para aceptar algo que te ofrecen: una bolsa, el ticket, más pan. «oui» suena «uí», una sola sílaba: UI, mer-SI.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.non-merci", "text": "Non, merci.", "es": "No, gracias.", "explanation": "Para rechazar algo con educación. «non» es nasal: la «n» final no se pronuncia del todo, el sonido sale por la nariz: NON, mer-SI.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.excusez-moi", "text": "Excusez-moi.", "es": "Perdone. / Disculpe.", "notes": "Para llamar la atención de un desconocido o pedir paso.", "explanation": "Para parar a alguien por la calle o llamar al camarero. «-sez» suena «sé» y «moi» suena «mua»: ex-kü-sé-MUA.", "register": "vous", "situation": "saludos", "tags": ["cortesia", "registro"] },
+    { "id": "salut.excuse-moi", "text": "Excuse-moi.", "es": "Perdona.", "explanation": "Para interrumpir o pedir algo a un amigo o compañero. La «e» final de «excuse» no suena: ex-küs-MUA.", "register": "tu", "situation": "saludos", "tags": ["cortesia", "registro"] },
+    { "id": "salut.pardon", "text": "Pardon!", "es": "¡Perdón!", "notes": "Al chocar con alguien o para pasar; «Pardon?» también es «¿cómo?».", "explanation": "Cuando rozas a alguien en el metro o quieres pasar. La «on» final es nasal, sin «n»: par-DON.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.desole", "text": "Désolé!", "es": "¡Lo siento!", "notes": "Si eres mujer, «désolée»: suena igual.", "explanation": "Para disculparte de verdad: llegas tarde, te equivocas. La «s» entre vocales suena como una «z» zumbada: dé-zo-LÉ.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.ce-nest-pas-grave", "text": "Ce n'est pas grave.", "es": "No pasa nada.", "notes": "Hablando se suele decir «C'est pas grave».", "explanation": "Para quitar importancia cuando alguien te pide perdón. «n'est» suena «ne»: s'ne pa GRAV.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.pas-de-probleme", "text": "Pas de problème.", "es": "Sin problema.", "explanation": "Cuando alguien te pide un pequeño favor o se disculpa. La «s» de «pas» no suena: pa d'pro-BLEM.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.daccord", "text": "D'accord.", "es": "Vale. / De acuerdo.", "notes": "Hablando, a menudo solo «D'acc».", "explanation": "Para decir que sí a un plan o a lo que te explican. La «d» se pega a «accord» y la «d» final no suena: da-KOR.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.avec-plaisir", "text": "Avec plaisir!", "es": "¡Con mucho gusto!", "explanation": "Para aceptar una invitación o responder a un «merci» con simpatía. La «s» de «plaisir» suena «z»: a-vek ple-ZIR.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "salut.je-ne-comprends-pas", "text": "Je ne comprends pas.", "es": "No entiendo.", "explanation": "Cuando te hablan y te pierdes; mejor si añades «désolé». «comprends» es nasal y la «ds» no suena: sh'n'kom-PRAN-pa.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprender"] },
+    { "id": "salut.vous-pouvez-repeter", "text": "Vous pouvez répéter, s'il vous plaît?", "es": "¿Puede repetir, por favor?", "explanation": "Al dependiente, al médico o a cualquier desconocido que habla rápido. «pouvez» suena «puvé»: vu pu-VÉ ré-pé-TÉ.", "register": "vous", "situation": "no-entiendo", "tags": ["comprender"] },
+    { "id": "salut.tu-peux-repeter", "text": "Tu peux répéter?", "es": "¿Puedes repetir?", "explanation": "A un amigo o compañero. «peux» suena con una «e» de labios redondos, como «pö»: tü pö ré-pé-TÉ.", "register": "tu", "situation": "no-entiendo", "tags": ["comprender"] },
+    { "id": "salut.plus-lentement", "text": "Plus lentement, s'il vous plaît.", "es": "Más despacio, por favor.", "explanation": "Cuando entiendes un poco pero te hablan demasiado rápido. Aquí «plus» no lleva «s» sonora y las «en» son nasales: plü lant-MAN.", "register": "vous", "situation": "no-entiendo", "tags": ["comprender"] },
+    { "id": "salut.je-parle-un-peu-francais", "text": "Je parle un peu français.", "es": "Hablo un poco de francés.", "notes": "Sin «de»: «un peu français».", "explanation": "Para avisar de tu nivel al empezar una conversación. «ç» suena «s» y la «s» final no suena: fran-SE.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprender", "idiomas"] },
+    { "id": "salut.je-ne-parle-pas-bien", "text": "Désolé, je ne parle pas bien français.", "es": "Lo siento, no hablo bien francés.", "explanation": "Para pedir paciencia antes de una pregunta. La «e» de «je» y «ne» casi desaparece: sh'n'parl pa BIAN.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprender", "idiomas"] },
+    { "id": "salut.vous-parlez-espagnol", "text": "Vous parlez espagnol?", "es": "¿Habla español?", "explanation": "Cuando ya no te apañas y quieres probar suerte. «gnol» suena como «ñol»: es-pa-ÑOL.", "register": "vous", "situation": "no-entiendo", "tags": ["comprender", "idiomas"] },
+    { "id": "salut.vous-parlez-anglais", "text": "Vous parlez anglais?", "es": "¿Habla inglés?", "explanation": "Como plan B con un desconocido. «-ez» suena «é» y «anglais» empieza nasal: vu par-LÉ an-GLE?", "register": "vous", "situation": "no-entiendo", "tags": ["comprender", "idiomas"] },
+    { "id": "salut.ca-veut-dire-quoi", "text": "Ça veut dire quoi?", "es": "¿Qué significa eso?", "explanation": "Cuando oyes o lees una palabra que no conoces. «veut» se dice con labios redondos, «vö», y «quoi» suena «kua»: sa vö dir KUA?", "register": "neutral", "situation": "no-entiendo", "tags": ["comprender"] },
+    { "id": "salut.comment-on-dit", "text": "Comment on dit ça en français?", "es": "¿Cómo se dice eso en francés?", "explanation": "Señalando algo cuando no sabes la palabra. Liga «comment‿on»: ko-man-TON di sa an fran-SE.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprender"] },
+    { "id": "salut.vous-pouvez-lecrire", "text": "Vous pouvez l'écrire, s'il vous plaît?", "es": "¿Me lo puede escribir, por favor?", "explanation": "Con una dirección, un precio o un nombre que no pillas al oído. «l'écrire» va todo junto: lé-KRIR.", "register": "vous", "situation": "no-entiendo", "tags": ["comprender"] },
+    { "id": "salut.je-ne-sais-pas", "text": "Je ne sais pas.", "es": "No lo sé.", "notes": "Hablando se oye mucho «Je sais pas», casi «shé pa».", "explanation": "Cuando te preguntan algo que no sabes, como una calle. «sais» suena «se»: sh'n'se PA.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprender"] },
+    { "id": "salut.jai-compris", "text": "Ah, d'accord, j'ai compris!", "es": "¡Ah, vale, ya lo entiendo!", "explanation": "Cuando por fin entiendes lo que te explican. «j'ai» suena «yé» con «y» argentina y «compris» empieza nasal: shé kom-PRI.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprender"] }
+  ],
+  "vocab": [
+    { "id": "salut.monsieur", "word": "monsieur", "gender": "m", "es": "señor", "notes": "Para dirigirte a un hombre: «Bonjour, monsieur». Se dice «mö-SIÖ».", "situation": "saludos", "image": "fluent:man" },
+    { "id": "salut.madame", "word": "madame", "gender": "f", "es": "señora", "notes": "Para dirigirte a una mujer: «Bonjour, madame».", "example": "salut.bonjour-madame", "situation": "saludos", "image": "fluent:woman" },
+    { "id": "salut.bise", "word": "bise", "article": "la", "gender": "f", "es": "el beso (en la mejilla)", "notes": "«Faire la bise» = saludar con besos; «Bises!» al final de un mensaje = besos.", "example": "salut.on-se-fait-la-bise", "situation": "saludos", "image": "fluent:face-blowing-a-kiss" },
+    { "id": "salut.francais", "word": "français", "article": "le", "gender": "m", "es": "el francés (idioma)", "notes": "Los idiomas van en minúscula y son masculinos.", "example": "salut.je-parle-un-peu-francais", "situation": "no-entiendo", "tags": ["idiomas"] },
+    { "id": "salut.espagnol", "word": "espagnol", "article": "l'", "gender": "m", "es": "el español (idioma)", "example": "salut.vous-parlez-espagnol", "situation": "no-entiendo", "tags": ["idiomas"] },
+    { "id": "salut.anglais", "word": "anglais", "article": "l'", "gender": "m", "es": "el inglés (idioma)", "example": "salut.vous-parlez-anglais", "situation": "no-entiendo", "tags": ["idiomas"] },
+    { "id": "salut.mot", "word": "mot", "article": "le", "gender": "m", "plural": "mots", "es": "la palabra", "notes": "La «t» no suena: «mo».", "situation": "no-entiendo" }
+  ],
+  "qa": [
+    {
+      "id": "salut.qa.au-revoir",
+      "question": "Merci, au revoir! Bonne journée!",
+      "questionEs": "¡Gracias, adiós! ¡Que tenga un buen día!",
+      "accepted": [
+        { "text": "Merci, vous aussi! Au revoir!", "es": "¡Gracias, igualmente! ¡Adiós!" },
+        { "text": "Merci, bonne journée!", "es": "¡Gracias, buen día!" }
+      ],
+      "distractors": [
+        { "text": "Bonne nuit, madame!", "es": "¡Buenas noches (al irse a dormir), señora!" },
+        { "text": "Bonjour! Ça va?", "es": "¡Hola! ¿Qué tal?" }
+      ],
+      "register": "vous",
+      "situation": "saludos",
+      "notes": "Al salir de una tienda devuelves el deseo: «vous aussi» = igualmente.",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "salut.qa.ca-va",
+      "question": "Salut! Ça va?",
+      "questionEs": "¡Hola! ¿Qué tal?",
+      "accepted": [
+        { "text": "Ça va bien, et toi?", "es": "Bien, ¿y tú?" },
+        { "text": "Pas mal, merci!", "es": "¡Nada mal, gracias!" }
+      ],
+      "distractors": [
+        { "text": "Très bien, et vous?", "es": "Muy bien, ¿y usted?" },
+        { "text": "De rien, et toi?", "es": "De nada, ¿y tú?" }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "«Salut» y «Ça va?» son de tú: responde también de tú («et toi?»).",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "salut.qa.comment-allez-vous",
+      "question": "Bonjour! Comment allez-vous?",
+      "questionEs": "¡Buenos días! ¿Cómo está usted?",
+      "accepted": [
+        { "text": "Très bien, merci. Et vous?", "es": "Muy bien, gracias. ¿Y usted?" },
+        { "text": "Bien, merci!", "es": "¡Bien, gracias!" }
+      ],
+      "distractors": [
+        { "text": "Ça va bien, et toi?", "es": "Bien, ¿y tú?" },
+        { "text": "Je vous en prie. Et vous?", "es": "No hay de qué. ¿Y usted?" }
+      ],
+      "register": "vous",
+      "situation": "saludos",
+      "notes": "Te han hablado de usted («allez-vous»): devuélvela con «Et vous?».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "salut.qa.merci",
+      "question": "Merci beaucoup, monsieur!",
+      "questionEs": "¡Muchas gracias, señor!",
+      "accepted": [
+        { "text": "Je vous en prie.", "es": "No hay de qué." },
+        { "text": "De rien, madame!", "es": "¡De nada, señora!" }
+      ],
+      "distractors": [
+        { "text": "S'il vous plaît.", "es": "Por favor." },
+        { "text": "Pardon, madame!", "es": "¡Perdón, señora!" }
+      ],
+      "register": "vous",
+      "situation": "saludos",
+      "notes": "A un «merci» se responde «De rien» o «Je vous en prie»; «S'il vous plaît» es «por favor».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "salut.qa.vous-parlez-francais",
+      "question": "Bonjour! Vous parlez français?",
+      "questionEs": "¡Hola! ¿Habla francés?",
+      "accepted": [
+        { "text": "Oui, un peu. Plus lentement, s'il vous plaît.", "es": "Sí, un poco. Más despacio, por favor." },
+        { "text": "Un peu, oui.", "es": "Un poco, sí." }
+      ],
+      "distractors": [
+        { "text": "Oui, tu parles un peu français.", "es": "Sí, tú hablas un poco de francés." },
+        { "text": "De rien, merci.", "es": "De nada, gracias." }
+      ],
+      "register": "vous",
+      "situation": "no-entiendo",
+      "notes": "Hablas de ti: «je parle»; «tu parles» sería «tú hablas».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "salut.qa.vous-comprenez",
+      "question": "Vous comprenez?",
+      "questionEs": "¿Me entiende?",
+      "accepted": [
+        { "text": "Pas très bien. Vous pouvez répéter?", "es": "No muy bien. ¿Puede repetir?" },
+        { "text": "Oui, merci, j'ai compris.", "es": "Sí, gracias, lo he entendido." }
+      ],
+      "distractors": [
+        { "text": "Oui, je ne comprends pas.", "es": "Sí, no entiendo." },
+        { "text": "Pas très bien. Tu peux répéter?", "es": "No muy bien. ¿Puedes repetir?" }
+      ],
+      "register": "vous",
+      "situation": "no-entiendo",
+      "notes": "Te tratan de usted: pide que repita con «vous pouvez», no con «tu peux».",
+      "voice": "fr-FR-EloiseNeural"
+    }
+  ]
+}
