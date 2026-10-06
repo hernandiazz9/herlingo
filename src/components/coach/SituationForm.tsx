@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useState, type Dispatch, type FormEvent, type SetStateAction } from "react";
-import { MicIcon } from "@/components/phrasebook/icons";
+import { LiveTranscript, MicButton, useListen } from "@/components/speech";
 import { Button, Card } from "@/components/ui";
 import { COACH_LIMITS, type CoachPack } from "@/lib/coach";
 import { cn } from "@/lib/cn";
@@ -9,9 +9,10 @@ import { ConfirmDialog } from "./ConfirmDialog";
 import { cancelGeneration, clearGeneration, newPackJob, startNewPack, useGeneration } from "./generation";
 import { SparklesIcon } from "./icons";
 import { FIELD, FOCUS, Notice, Spinner } from "./shared";
-import { useDictation } from "./use-dictation";
 
 const LIMIT = COACH_LIMITS.description;
+/** The learner describes situations in their own language, the language of the UI copy. */
+const DICTATION_LOCALE = "es-ES";
 
 /** Example situations (the learner's words, in Spanish: valid for any target language). */
 const EXAMPLES = [
@@ -43,9 +44,15 @@ export function SituationForm({ lang, draft: text, setDraft: setText, onCreated 
     setText("");
     onCreated(pack, saved);
   });
-  const dictation = useDictation((heard) =>
-    setText((prev) => (prev.trim() ? `${prev.trim()} ${heard}` : heard).slice(0, LIMIT)),
-  );
+  // Dictation (long mode): what is heard is appended to what is typed and stays editable.
+  const listen = useListen({
+    locale: DICTATION_LOCALE,
+    mode: "long",
+    onResult: (r) => {
+      setText((prev) => (prev.trim() ? `${prev.trimEnd()} ${r.transcript}` : r.transcript).slice(0, LIMIT));
+      if (job?.status === "error") clearGeneration(key);
+    },
+  });
   const error = job?.status === "error" && job.error.kind !== "unauthorized" ? job.error : null;
   // A paid pack the device could not store lives only in memory: no new request until it is opened
   // or dismissed (a new one would overwrite it).
@@ -69,7 +76,7 @@ export function SituationForm({ lang, draft: text, setDraft: setText, onCreated 
     e.preventDefault();
     const description = text.trim();
     if (!description || job?.status === "pending" || blocked) return;
-    dictation.cancel();
+    listen.cancel();
     startNewPack(lang, description);
   };
 
@@ -119,29 +126,10 @@ export function SituationForm({ lang, draft: text, setDraft: setText, onCreated 
           <span className={cn("text-sm", text.length >= LIMIT ? "font-bold text-error-deep" : "text-ink-muted")}>
             {text.length}/{LIMIT}
           </span>
-          {dictation.available ? (
-            <button
-              type="button"
-              onClick={dictation.toggle}
-              aria-pressed={dictation.listening}
-              className={cn(
-                "pressable inline-flex min-h-11 items-center gap-2 rounded-full px-4 text-sm font-bold",
-                FOCUS,
-                dictation.listening
-                  ? "bg-terracotta text-on-accent [--ledge:var(--terracotta-ledge)]"
-                  : "border-2 border-line bg-surface text-terracotta-deep [--ledge:var(--line)]",
-              )}
-            >
-              <MicIcon width={18} height={18} /> {dictation.listening ? "Escuchando… (toca para parar)" : "Dictar"}
-            </button>
-          ) : null}
+          <MicButton listen={listen} size="sm" disabled={!listen.active && text.length >= LIMIT} />
         </div>
       </div>
-      {dictation.message ? (
-        <p role="status" className="text-sm text-ink-muted">
-          {dictation.message}
-        </p>
-      ) : null}
+      <LiveTranscript listen={listen} lang="es" align="start" />
 
       <div role="group" aria-labelledby={`${id}-ideas`} className="flex flex-wrap gap-2">
         <span id={`${id}-ideas`} className="w-full text-sm font-bold text-ink-muted">
