@@ -1,0 +1,887 @@
+{
+  "id": "b1-friends",
+  "order": 110,
+  "title": "Hacer amigos: conversación, gustos y opiniones",
+  "description": "Conocer gente en una fiesta, hablar de tus aficiones, dar tu opinión con matices y seguir en contacto.",
+  "emoji": "🗣️",
+  "situation": "social",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-friends.l.meeting-people",
+      "title": "Conocer gente en una fiesta",
+      "items": [
+        "b1-friends.party",
+        "b1-friends.guest",
+        "b1-friends.host",
+        "b1-friends.stranger",
+        "b1-friends.acquaintance",
+        "b1-friends.i-dont-think-weve-met",
+        "b1-friends.how-do-you-know-maya",
+        "b1-friends.we-met-at-work",
+        "b1-friends.how-long-have-you-known-each-other",
+        "b1-friends.since-college",
+        "b1-friends.college",
+        "b1-friends.have-you-lived-here-long",
+        "b1-friends.ive-been-here-for-three-months",
+        "b1-friends.what-brings-you-to-chicago",
+        "b1-friends.i-moved-here-for-work",
+        "b1-friends.nice-talking-to-you",
+        "b1-friends.qa.how-do-you-know",
+        "b1-friends.qa.how-long-here"
+      ]
+    },
+    {
+      "id": "b1-friends.l.likes",
+      "title": "Gustos y aficiones",
+      "items": [
+        "b1-friends.what-do-you-like-to-do-on-weekends",
+        "a2-daily.what-do-you-do-in-your-free-time",
+        "b1-friends.hobby",
+        "b1-friends.im-really-into-hiking",
+        "b1-friends.hiking",
+        "a2-daily.im-really-into-video-games",
+        "b1-friends.ive-been-getting-into-jazz",
+        "b1-friends.jazz",
+        "b1-friends.concert",
+        "b1-friends.podcast",
+        "b1-friends.im-not-a-big-fan-of-horror-movies",
+        "b1-friends.horror-movie",
+        "b1-friends.fan",
+        "b1-friends.i-cant-stand-waiting-in-line",
+        "b1-friends.i-used-to-play-in-a-band",
+        "b1-friends.band",
+        "b1-friends.board-game",
+        "b1-friends.tv-show",
+        "b1-friends.have-you-ever-tried-rock-climbing",
+        "b1-friends.rock-climbing",
+        "b1-friends.do-you-play-any-sports",
+        "b1-friends.baseball",
+        "b1-friends.team",
+        "b1-friends.we-have-a-lot-in-common",
+        "a2-daily.me-too",
+        "b1-friends.qa.free-time"
+      ]
+    },
+    {
+      "id": "b1-friends.l.opinions",
+      "title": "Dar tu opinión",
+      "items": [
+        "b1-friends.what-do-you-think-of-chicago",
+        "b1-friends.its-amazing-but-winters-are-tough",
+        "b1-friends.in-my-opinion",
+        "b1-friends.opinion",
+        "b1-friends.i-totally-agree",
+        "b1-friends.i-see-your-point-but",
+        "b1-friends.thats-a-good-point",
+        "b1-friends.point",
+        "b1-friends.it-depends",
+        "b1-friends.to-be-honest",
+        "b1-friends.way-better-than-i-expected",
+        "b1-friends.its-not-my-thing",
+        "b1-friends.qa.what-think",
+        "b1-friends.qa.agree"
+      ]
+    },
+    {
+      "id": "b1-friends.l.keep-in-touch",
+      "title": "Seguir en contacto",
+      "items": [
+        "b1-friends.we-should-hang-out",
+        "b1-friends.can-i-get-your-number",
+        "b1-friends.are-you-on-social-media",
+        "b1-friends.social-media",
+        "b1-friends.ill-text-you",
+        "b1-friends.text",
+        "b1-friends.we-get-along-really-well",
+        "b1-friends.best-friend",
+        "b1-friends.i-ran-into-jordan",
+        "b1-friends.i-havent-heard-from-her",
+        "b1-friends.we-lost-touch-after-college",
+        "b1-friends.it-was-great-catching-up",
+        "b1-friends.lets-keep-in-touch",
+        "b1-friends.say-hi-to-maya",
+        "a2-hello.take-care",
+        "b1-friends.qa.hang-out",
+        "b1-friends.qa.catching-up"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "b1-friends.i-dont-think-weve-met",
+      "text": "I don't think we've met. I'm Hernán.",
+      "es": "Creo que no nos conocemos. Soy Hernán.",
+      "notes": "Present perfect: «we've met» = nos hemos conocido (alguna vez).",
+      "explanation": "Para presentarte tú mismo en una fiesta o en el trabajo. «we've» es una sílaba: «uiv», con «v» suave.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.how-do-you-know-maya",
+      "text": "So, how do you know Maya?",
+      "es": "Y tú, ¿de qué conoces a Maya?",
+      "notes": "No se dice «from where do you know».",
+      "explanation": "La pregunta típica en una fiesta para empezar a hablar con alguien. «know» no suena la «k»: «nou».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.we-met-at-work",
+      "text": "We met at work a couple of years ago.",
+      "es": "Nos conocimos en el trabajo hace un par de años.",
+      "notes": "Pasado simple con «ago»: un momento terminado.",
+      "explanation": "Para contar de qué conoces a alguien. «met» con «e» corta y «t» final suave; «a couple of» se une: «a-CA-pləv».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.how-long-have-you-known-each-other",
+      "text": "How long have you known each other?",
+      "es": "¿Cuánto hace que os conocéis?",
+      "notes": "«each other» = el uno al otro. Present perfect porque se siguen conociendo.",
+      "explanation": "Para preguntar por una amistad o una pareja. «known» = «noun», sin «k»; «each other» se une: «ii-CHA-ðər».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.since-college",
+      "text": "We've known each other since college.",
+      "es": "Nos conocemos desde la universidad.",
+      "notes": "«since» + el momento en que empezó; «college» = universidad en EE. UU.",
+      "explanation": "Respuesta natural sobre un amigo de siempre. «since» suena «sins», con «s» final, sin «e» de apoyo.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.have-you-lived-here-long",
+      "text": "Have you lived here long?",
+      "es": "¿Llevas mucho tiempo viviendo aquí?",
+      "literal": "¿Has vivido aquí mucho?",
+      "explanation": "Charla con un vecino o alguien que acabas de conocer. «lived» acaba en /d/: «livd», sin «-ed» como sílaba.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.ive-been-here-for-three-months",
+      "text": "I've been here for about three months.",
+      "es": "Llevo aquí unos tres meses.",
+      "notes": "Llevar + tiempo = present perfect + «for».",
+      "explanation": "Para decir cuánto tiempo llevas en una ciudad. «three» con «th» de «zeta»: «zrii», lengua entre los dientes.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.what-brings-you-to-chicago",
+      "text": "So, what brings you to Chicago?",
+      "es": "¿Y qué te trae por Chicago?",
+      "notes": "Más natural que «Why are you in Chicago?», que suena brusco.",
+      "explanation": "Pregunta amable a alguien de fuera. «brings» acaba en «-ngz»: no añadas vocal al final.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.i-moved-here-for-work",
+      "text": "I moved here for work last spring.",
+      "es": "Me mudé aquí por trabajo la primavera pasada.",
+      "notes": "«move» = mudarse; «last spring», sin «the».",
+      "explanation": "Para contar por qué vives en la ciudad. «moved» = «muuvd», una sílaba, con «v» de verdad (labio y dientes).",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.nice-talking-to-you",
+      "text": "It was really nice talking to you.",
+      "es": "Ha sido un placer hablar contigo.",
+      "notes": "Al conocer a alguien: «Nice to meet you»; al despedirte: «Nice talking to you».",
+      "explanation": "Para despedirte de alguien que acabas de conocer. «talking» sin «l»: «TOO-king».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.what-do-you-like-to-do-on-weekends",
+      "text": "What do you like to do on weekends?",
+      "es": "¿Qué te gusta hacer los fines de semana?",
+      "notes": "En EE. UU. se dice «on weekends»; «at the weekend» es británico.",
+      "explanation": "Para sacar tema con alguien nuevo. «weekends» acaba en «-ndz»: «UII-kendz».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.im-really-into-hiking",
+      "text": "I'm really into hiking these days.",
+      "es": "Últimamente me encanta hacer senderismo.",
+      "notes": "«be into something» = gustarte mucho, estar enganchado a algo.",
+      "explanation": "Para hablar de una afición del momento. «hiking» con «h» aspirada suave, no «j» española: «HAI-king».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.ive-been-getting-into-jazz",
+      "text": "Lately I've been getting into jazz.",
+      "es": "Últimamente me está empezando a gustar el jazz.",
+      "notes": "«get into something» = aficionarte a algo poco a poco.",
+      "explanation": "Para contar una afición nueva. «jazz» empieza con «y» fuerte, como «dy»: «dyaz».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.im-not-a-big-fan-of-horror-movies",
+      "text": "I'm not a big fan of horror movies.",
+      "es": "No me van mucho las pelis de miedo.",
+      "notes": "Más educado que «I hate…».",
+      "explanation": "Forma suave de decir que algo no te gusta. «horror» con «r» americana, sin vibrar: «JOR-ər».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.i-cant-stand-waiting-in-line",
+      "text": "I can't stand waiting in line.",
+      "es": "No soporto hacer cola.",
+      "notes": "«can't stand» + verbo en -ing = no soportar.",
+      "explanation": "Para quejarte con humor de algo que odias. «can't» con «a» abierta y «t» casi muda: «kænt».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.i-used-to-play-in-a-band",
+      "text": "I used to play the guitar in a band.",
+      "es": "Antes tocaba la guitarra en un grupo.",
+      "notes": "«used to» = solía (ya no lo hago).",
+      "explanation": "Para contar algo que hacías antes y ya no. «used to» suena «IUUS-tə», con «s», no «z».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.have-you-ever-tried-rock-climbing",
+      "text": "Have you ever tried rock climbing?",
+      "es": "¿Has probado alguna vez la escalada?",
+      "notes": "«ever» = alguna vez; va con present perfect.",
+      "explanation": "Para proponer o preguntar por una actividad. «climbing» sin «b»: «KLAI-ming».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.do-you-play-any-sports",
+      "text": "Do you play any sports?",
+      "es": "¿Haces algún deporte?",
+      "notes": "«play» con deportes de pelota; «go» con -ing: «go running».",
+      "explanation": "Pregunta típica para conocer a alguien. «sports» sin «e» delante: «sports», no «esports».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.we-have-a-lot-in-common",
+      "text": "We have a lot in common!",
+      "es": "¡Tenemos muchas cosas en común!",
+      "explanation": "Cuando descubres gustos compartidos. «a lot in» se une con «t» suave americana: «a-LA-din».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.what-do-you-think-of-chicago",
+      "text": "What do you think of Chicago so far?",
+      "es": "¿Qué te parece Chicago de momento?",
+      "notes": "«so far» = hasta ahora.",
+      "explanation": "Te lo preguntarán mucho siendo de fuera. «think» con «th» de «zeta»: «zink», no «sink».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.its-amazing-but-winters-are-tough",
+      "text": "It's an amazing city, but the winters are tough.",
+      "es": "Es una ciudad increíble, pero los inviernos son duros.",
+      "notes": "«tough» = duro, difícil.",
+      "explanation": "Para dar una opinión con matiz. «tough» suena «taf»: la «gh» final es una «f».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.in-my-opinion",
+      "text": "In my opinion, the food here is great.",
+      "es": "En mi opinión, aquí se come muy bien.",
+      "notes": "En charla se dice más «I think…».",
+      "explanation": "Para dar tu opinión con un poco de formalidad. «opinion» acento en la segunda: «ə-PI-niən».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.i-totally-agree",
+      "text": "I totally agree.",
+      "es": "Estoy totalmente de acuerdo.",
+      "notes": "«agree» es verbo: «I agree», «I don't agree».",
+      "explanation": "Para apoyar lo que dice otro. «agree» es un verbo: nunca «I'm agree». Acento al final: «ə-GRII».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.i-see-your-point-but",
+      "text": "I see your point, but I don't agree.",
+      "es": "Entiendo lo que dices, pero no estoy de acuerdo.",
+      "notes": "Primero reconoces la idea del otro y luego das la tuya.",
+      "explanation": "Para discrepar sin sonar brusco. «point» acaba en «nt»: no te comas la «t».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.thats-a-good-point",
+      "text": "That's a good point.",
+      "es": "Buena observación.",
+      "literal": "Ese es un buen punto.",
+      "explanation": "Cuando alguien dice algo que te hace pensar. «good» con «u» corta, como en «full».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.it-depends",
+      "text": "It depends on the weather.",
+      "es": "Depende del tiempo.",
+      "notes": "Siempre «depend on».",
+      "explanation": "Para no dar un sí o un no tajante. Ojo: «depends on», no «depends of». «weather» con «th» suave: «UE-ðər».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.to-be-honest",
+      "text": "To be honest, I didn't like the movie.",
+      "es": "La verdad, no me gustó la peli.",
+      "notes": "«To be honest» suaviza una crítica.",
+      "explanation": "Para dar una opinión negativa con suavidad. «honest» no tiene «h»: «A-nəst».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.way-better-than-i-expected",
+      "text": "It was way better than I expected.",
+      "es": "Fue mucho mejor de lo que esperaba.",
+      "notes": "«way» delante de un comparativo = mucho (informal).",
+      "explanation": "Para decir que algo te sorprendió para bien. «better» con «t» americana como «r» suave: «BE-rər».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.its-not-my-thing",
+      "text": "It's not really my thing.",
+      "es": "No es lo mío.",
+      "explanation": "Para rechazar un plan o un gusto sin ofender. «thing» con «th» de «zeta» y «ng» nasal: «zing».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.we-should-hang-out",
+      "text": "We should hang out sometime!",
+      "es": "¡Deberíamos quedar algún día!",
+      "notes": "«hang out» = quedar, pasar el rato. Ojo: «hang up» = colgar el teléfono.",
+      "explanation": "Para proponer volver a verse con alguien que te cae bien. «hang out» se une: «HAN-gaut».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.can-i-get-your-number",
+      "text": "Can I get your number?",
+      "es": "¿Me das tu número?",
+      "explanation": "Para seguir en contacto después de una fiesta. «get your» se une: «GE-chor».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.are-you-on-social-media",
+      "text": "Are you on social media?",
+      "es": "¿Estás en redes sociales?",
+      "notes": "«social media» es incontable: sin «a».",
+      "explanation": "Para seguir a alguien en redes. «social» = «SOU-shəl», «media» = «MII-diə».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.ill-text-you",
+      "text": "I'll text you later.",
+      "es": "Luego te escribo.",
+      "notes": "«text» = mandar un mensaje por el móvil.",
+      "explanation": "Al despedirte de un amigo. «text» acaba en «-kst»: no añadas vocal, «tekst».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.we-get-along-really-well",
+      "text": "We get along really well.",
+      "es": "Nos llevamos muy bien.",
+      "notes": "«get along (with)» = llevarse bien (con).",
+      "explanation": "Para hablar de un amigo, un compañero o tu compañero de piso. «get along» se une: «ge-də-LONG».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.i-ran-into-jordan",
+      "text": "I ran into Jordan at the store.",
+      "es": "Me encontré a Jordan en la tienda.",
+      "notes": "«run into somebody» = encontrarse a alguien por casualidad (pasado: «ran into»).",
+      "explanation": "Para contar que viste a alguien por casualidad. «ran» con «a» abierta: «ræn».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.i-havent-heard-from-her",
+      "text": "I haven't heard from her in a while.",
+      "es": "Hace tiempo que no sé nada de ella.",
+      "notes": "«hear from somebody» = tener noticias de alguien.",
+      "explanation": "Para preguntar o hablar de alguien que no da señales. «heard» = «jerd», con «r» americana.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.we-lost-touch-after-college",
+      "text": "We lost touch after college.",
+      "es": "Perdimos el contacto después de la universidad.",
+      "notes": "«lose touch» = perder el contacto; «keep in touch» = seguir en contacto.",
+      "explanation": "Para hablar de un viejo amigo. «touch» acaba en «ch»: «tach».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.it-was-great-catching-up",
+      "text": "It was great catching up!",
+      "es": "¡Me ha encantado ponernos al día!",
+      "notes": "«catch up» = ponerse al día.",
+      "explanation": "Al despedirte de un amigo al que no veías hace tiempo. «catching up» se une: «KA-chin-gap».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.lets-keep-in-touch",
+      "text": "Let's keep in touch!",
+      "es": "¡Seguimos en contacto!",
+      "notes": "«keep in touch» = mantener el contacto.",
+      "explanation": "Para despedirte de alguien que quieres volver a ver. «keep in» se une: «KII-pin».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.say-hi-to-maya",
+      "text": "Say hi to Maya for me!",
+      "es": "¡Saluda a Maya de mi parte!",
+      "explanation": "Al despedirte, para mandar saludos a alguien. «hi» con «h» suave aspirada, no «j».",
+      "register": "tu",
+      "situation": "social"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "b1-friends.party",
+      "word": "party",
+      "article": "a",
+      "plural": "parties",
+      "es": "la fiesta",
+      "example": "b1-friends.how-do-you-know-maya",
+      "situation": "social",
+      "image": "fluent:party-popper"
+    },
+    {
+      "id": "b1-friends.guest",
+      "word": "guest",
+      "article": "a",
+      "plural": "guests",
+      "es": "el invitado",
+      "notes": "La «u» no suena: «gest».",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.host",
+      "word": "host",
+      "article": "a",
+      "plural": "hosts",
+      "es": "el anfitrión",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.stranger",
+      "word": "stranger",
+      "article": "a",
+      "plural": "strangers",
+      "es": "el desconocido",
+      "notes": "No significa «extranjero» («foreigner»).",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.college",
+      "word": "college",
+      "article": "a",
+      "plural": "colleges",
+      "es": "la universidad",
+      "notes": "En EE. UU., «college» es la universidad; no es «colegio».",
+      "example": "b1-friends.since-college",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.acquaintance",
+      "word": "acquaintance",
+      "article": "an",
+      "plural": "acquaintances",
+      "es": "el conocido",
+      "notes": "Alguien que conoces, pero no es amigo íntimo. La «c» no suena: «ə-KWEIN-təns».",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.jazz",
+      "word": "jazz",
+      "es": "el jazz",
+      "example": "b1-friends.ive-been-getting-into-jazz",
+      "situation": "social",
+      "image": "fluent:saxophone"
+    },
+    {
+      "id": "b1-friends.horror-movie",
+      "word": "horror movie",
+      "article": "a",
+      "plural": "horror movies",
+      "es": "la peli de miedo",
+      "example": "b1-friends.im-not-a-big-fan-of-horror-movies",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.hobby",
+      "word": "hobby",
+      "article": "a",
+      "plural": "hobbies",
+      "es": "la afición",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.hiking",
+      "word": "hiking",
+      "es": "el senderismo",
+      "example": "b1-friends.im-really-into-hiking",
+      "situation": "social",
+      "image": "fluent:hiking-boot"
+    },
+    {
+      "id": "b1-friends.rock-climbing",
+      "word": "rock climbing",
+      "es": "la escalada",
+      "situation": "social",
+      "image": "fluent:person-climbing"
+    },
+    {
+      "id": "b1-friends.concert",
+      "word": "concert",
+      "article": "a",
+      "plural": "concerts",
+      "es": "el concierto",
+      "situation": "social",
+      "image": "fluent:microphone"
+    },
+    {
+      "id": "b1-friends.band",
+      "word": "band",
+      "article": "a",
+      "plural": "bands",
+      "es": "el grupo (de música)",
+      "example": "b1-friends.i-used-to-play-in-a-band",
+      "situation": "social",
+      "image": "fluent:guitar"
+    },
+    {
+      "id": "b1-friends.board-game",
+      "word": "board game",
+      "article": "a",
+      "plural": "board games",
+      "es": "el juego de mesa",
+      "situation": "social",
+      "image": "fluent:game-die"
+    },
+    {
+      "id": "b1-friends.podcast",
+      "word": "podcast",
+      "article": "a",
+      "plural": "podcasts",
+      "es": "el pódcast",
+      "situation": "social",
+      "image": "fluent:studio-microphone"
+    },
+    {
+      "id": "b1-friends.tv-show",
+      "word": "TV show",
+      "article": "a",
+      "plural": "TV shows",
+      "es": "la serie",
+      "notes": "«show» o «series» = serie de tele.",
+      "situation": "social",
+      "image": "fluent:television"
+    },
+    {
+      "id": "b1-friends.baseball",
+      "word": "baseball",
+      "es": "el béisbol",
+      "situation": "social",
+      "image": "fluent:baseball"
+    },
+    {
+      "id": "b1-friends.team",
+      "word": "team",
+      "article": "a",
+      "plural": "teams",
+      "es": "el equipo",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.fan",
+      "word": "fan",
+      "article": "a",
+      "plural": "fans",
+      "es": "el aficionado",
+      "example": "b1-friends.im-not-a-big-fan-of-horror-movies",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.opinion",
+      "word": "opinion",
+      "article": "an",
+      "plural": "opinions",
+      "es": "la opinión",
+      "example": "b1-friends.in-my-opinion",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.point",
+      "word": "point",
+      "article": "a",
+      "plural": "points",
+      "es": "el argumento",
+      "notes": "«a good point» = una buena observación.",
+      "example": "b1-friends.thats-a-good-point",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.text",
+      "word": "text",
+      "article": "a",
+      "plural": "texts",
+      "es": "el mensaje (de móvil)",
+      "example": "b1-friends.ill-text-you",
+      "situation": "social",
+      "image": "fluent:mobile-phone"
+    },
+    {
+      "id": "b1-friends.social-media",
+      "word": "social media",
+      "es": "las redes sociales",
+      "notes": "Incontable: sin artículo.",
+      "example": "b1-friends.are-you-on-social-media",
+      "situation": "social"
+    },
+    {
+      "id": "b1-friends.best-friend",
+      "word": "best friend",
+      "article": "a",
+      "plural": "best friends",
+      "es": "el mejor amigo",
+      "situation": "social",
+      "image": "fluent:people-hugging"
+    }
+  ],
+  "qa": [
+    {
+      "id": "b1-friends.qa.how-do-you-know",
+      "question": "So, how do you know Jordan?",
+      "questionEs": "Y tú, ¿de qué conoces a Jordan?",
+      "accepted": [
+        {
+          "text": "We met at a concert last year.",
+          "es": "Nos conocimos en un concierto el año pasado."
+        },
+        {
+          "text": "He's my roommate's friend.",
+          "es": "Es amigo de mi compañera de piso."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I know Jordan since two years.",
+          "es": "Conozco a Jordan desde hace dos años."
+        },
+        {
+          "text": "Yes, I know him.",
+          "es": "Sí, lo conozco."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Te preguntan cómo os conocisteis, no si lo conoces. «since two years» es un error: «for two years».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-friends.qa.how-long-here",
+      "question": "How long have you been in Chicago?",
+      "questionEs": "¿Cuánto tiempo llevas en Chicago?",
+      "accepted": [
+        {
+          "text": "I've been here for about three months.",
+          "es": "Llevo aquí unos tres meses."
+        },
+        {
+          "text": "About three months now.",
+          "es": "Ya unos tres meses."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I am here since three months.",
+          "es": "Estoy aquí desde hace tres meses."
+        },
+        {
+          "text": "I'm going to stay for three months.",
+          "es": "Me voy a quedar tres meses."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Llevar + tiempo = «I've been here for…». «I am here since» es un calco del español.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-friends.qa.free-time",
+      "question": "What do you like to do on weekends?",
+      "questionEs": "¿Qué te gusta hacer los fines de semana?",
+      "accepted": [
+        {
+          "text": "I'm really into hiking these days.",
+          "es": "Últimamente me encanta hacer senderismo."
+        },
+        {
+          "text": "I like going to concerts and cooking for friends.",
+          "es": "Me gusta ir a conciertos y cocinar para mis amigos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I like to do my weekends.",
+          "es": "Me gusta hacer mis fines de semana."
+        },
+        {
+          "text": "Yes, I have a lot of free time.",
+          "es": "Sí, tengo mucho tiempo libre."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Te preguntan qué actividades haces; contesta con aficiones concretas.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-friends.qa.what-think",
+      "question": "What do you think of Chicago so far?",
+      "questionEs": "¿Qué te parece Chicago de momento?",
+      "accepted": [
+        {
+          "text": "It's an amazing city, but the winters are tough.",
+          "es": "Es una ciudad increíble, pero los inviernos son duros."
+        },
+        {
+          "text": "I love it! The people are really friendly.",
+          "es": "¡Me encanta! La gente es muy simpática."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I think about Chicago every day.",
+          "es": "Pienso en Chicago todos los días."
+        },
+        {
+          "text": "I'm agree, it's great.",
+          "es": "Estoy de acuerdo, es genial."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«think of» aquí pide tu opinión. «I'm agree» no existe: «agree» es un verbo.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-friends.qa.agree",
+      "question": "Deep-dish pizza is the best pizza in the world.",
+      "questionEs": "La pizza de molde es la mejor pizza del mundo.",
+      "accepted": [
+        {
+          "text": "I see your point, but I prefer thin crust.",
+          "es": "Entiendo lo que dices, pero prefiero la masa fina."
+        },
+        {
+          "text": "I totally agree!",
+          "es": "¡Estoy totalmente de acuerdo!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I'm agree with you.",
+          "es": "Estoy de acuerdo contigo."
+        },
+        {
+          "text": "Yes, it's the most best.",
+          "es": "Sí, es la más mejor."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Para opinar: «I agree» o «I see your point, but…». Nunca «I'm agree» ni «most best».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-friends.qa.hang-out",
+      "question": "We should hang out sometime!",
+      "questionEs": "¡Deberíamos quedar algún día!",
+      "accepted": [
+        {
+          "text": "Definitely! Can I get your number?",
+          "es": "¡Claro! ¿Me das tu número?"
+        },
+        {
+          "text": "Sure, I'd love that.",
+          "es": "Claro, me encantaría."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, we should hang up sometime.",
+          "es": "Sí, deberíamos colgar algún día."
+        },
+        {
+          "text": "No, I'm not hanging.",
+          "es": "No, no estoy colgando."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«hang out» = quedar; «hang up» = colgar el teléfono. Acepta con «Definitely!» o «Sure».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-friends.qa.catching-up",
+      "question": "Hey! I haven't seen you in ages. How have you been?",
+      "questionEs": "¡Hola! Hace siglos que no te veo. ¿Qué tal te va?",
+      "accepted": [
+        {
+          "text": "Pretty good! I moved here for work last spring.",
+          "es": "¡Bastante bien! Me mudé aquí por trabajo la primavera pasada."
+        },
+        {
+          "text": "Great, thanks! We should catch up.",
+          "es": "¡Genial, gracias! Tenemos que ponernos al día."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I have been in my house.",
+          "es": "He estado en mi casa."
+        },
+        {
+          "text": "I'm fine, I go to the gym tomorrow.",
+          "es": "Estoy bien, voy al gimnasio mañana."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«How have you been?» pregunta cómo te ha ido: cuenta algo de estos meses.",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

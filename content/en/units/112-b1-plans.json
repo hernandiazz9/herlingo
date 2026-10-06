@@ -1,0 +1,887 @@
+{
+  "id": "b1-plans",
+  "order": 112,
+  "title": "Planes e invitaciones: quedar, cambiar, cancelar, llamar",
+  "description": "Proponer un plan, aceptar o rechazar con educación, concretar hora y lugar, cambiarlo o cancelarlo y llamar por teléfono.",
+  "emoji": "📅",
+  "situation": "social",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "b1-plans.l.invite",
+      "title": "Invitar y aceptar",
+      "items": [
+        "b1-plans.what-are-you-up-to-this-weekend",
+        "b1-plans.are-you-free-on-saturday",
+        "b1-plans.i-dont-have-any-plans-yet",
+        "b1-plans.plan",
+        "b1-plans.want-to-grab-a-drink",
+        "b1-plans.drink",
+        "b1-plans.bar",
+        "b1-plans.a-few-of-us-are-going-out",
+        "b1-plans.im-having-a-few-people-over",
+        "b1-plans.barbecue",
+        "b1-plans.picnic",
+        "b1-plans.brunch",
+        "b1-plans.game-night",
+        "b1-plans.would-you-like-to-come-to-my-party",
+        "b1-plans.birthday-party",
+        "b1-plans.invitation",
+        "b1-plans.id-love-to-what-time",
+        "b1-plans.count-me-in",
+        "a2-daily.sounds-good",
+        "b1-plans.should-i-bring-anything",
+        "b1-plans.just-bring-yourself",
+        "b1-plans.qa.up-to",
+        "b1-plans.qa.free-saturday",
+        "b1-plans.qa.come-party"
+      ]
+    },
+    {
+      "id": "b1-plans.l.arrange",
+      "title": "Concretar: día, hora y lugar",
+      "items": [
+        "b1-plans.what-time-works-for-you",
+        "b1-plans.does-seven-work-for-you",
+        "b1-plans.how-about-thursday-instead",
+        "b1-plans.weeknight",
+        "b1-plans.where-should-we-meet",
+        "b1-plans.lets-meet-in-front-of-the-theater",
+        "b1-plans.theater",
+        "b1-plans.movie-theater",
+        "b1-plans.ticket",
+        "b1-plans.ill-pick-you-up-at-eight",
+        "b1-plans.let-me-check-and-get-back-to-you",
+        "b1-plans.calendar",
+        "b1-plans.date",
+        "b1-plans.ill-book-a-table",
+        "b1-plans.its-a-plan",
+        "b1-plans.see-you-there",
+        "b1-plans.qa.what-time",
+        "b1-plans.qa.where-meet"
+      ]
+    },
+    {
+      "id": "b1-plans.l.change-cancel",
+      "title": "Cambiar y cancelar",
+      "items": [
+        "b1-plans.something-came-up",
+        "b1-plans.i-have-to-cancel-tonight",
+        "b1-plans.im-afraid-i-cant-make-it",
+        "b1-plans.excuse",
+        "b1-plans.can-we-push-it-back",
+        "a2-numbers.im-running-late",
+        "b1-plans.im-running-fifteen-minutes-late",
+        "b1-plans.traffic",
+        "b1-plans.no-worries-maybe-next-time",
+        "b1-plans.are-we-still-on-for-tomorrow",
+        "b1-plans.i-totally-forgot",
+        "b1-plans.let-me-make-it-up-to-you",
+        "b1-plans.dont-worry-about-it",
+        "b1-plans.qa.reschedule",
+        "b1-plans.qa.still-on"
+      ]
+    },
+    {
+      "id": "b1-plans.l.calls",
+      "title": "Llamar y dejar mensajes",
+      "items": [
+        "b1-plans.phone-call",
+        "b1-plans.hi-its-hernan-is-maya-there",
+        "b1-plans.missed-call",
+        "b1-plans.sorry-i-missed-your-call",
+        "b1-plans.you-didnt-pick-up",
+        "b1-plans.can-you-call-me-back",
+        "b1-plans.voicemail",
+        "a2-grammar.im-working-right-now",
+        "b1-plans.youre-breaking-up",
+        "b1-plans.signal",
+        "b1-plans.battery",
+        "b1-plans.hold-on-a-second",
+        "b1-plans.ill-text-you-the-details",
+        "b1-plans.details",
+        "b1-plans.qa.missed-call"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "b1-plans.what-are-you-up-to-this-weekend",
+      "text": "What are you up to this weekend?",
+      "es": "¿Qué planes tienes este finde?",
+      "notes": "«be up to» = estar haciendo, tener entre manos.",
+      "explanation": "Para tantear a un amigo antes de proponer algo. «up to» se une con «t» suave: «A-pə-tə».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.are-you-free-on-saturday",
+      "text": "Are you free on Saturday night?",
+      "es": "¿Estás libre el sábado por la noche?",
+      "notes": "«on» con los días: «on Saturday», «on Friday night».",
+      "explanation": "Para proponer un plan. «Saturday» con «t» americana suave: «SA-rər-dei».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.i-dont-have-any-plans-yet",
+      "text": "I don't have any plans yet.",
+      "es": "Todavía no tengo planes.",
+      "notes": "«yet» al final de una negación = todavía.",
+      "explanation": "Para dejar la puerta abierta a un plan. «yet» empieza con «y» suave: «iet».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.want-to-grab-a-drink",
+      "text": "Do you want to grab a drink after work?",
+      "es": "¿Te apetece tomar algo después del trabajo?",
+      "notes": "«grab» = coger; «grab a drink / a bite» = tomar algo rápido.",
+      "explanation": "Para proponer algo informal a un compañero o amigo. «grab a» se une: «GRA-bə».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.a-few-of-us-are-going-out",
+      "text": "A few of us are going out for dinner. Want to come?",
+      "es": "Unos cuantos vamos a salir a cenar. ¿Te vienes?",
+      "notes": "«go out» = salir (a cenar, de fiesta). Presente continuo para planes ya decididos.",
+      "explanation": "Para invitar a alguien a sumarse a un grupo. «going out» se une: «GOU-in-gaut».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.im-having-a-few-people-over",
+      "text": "I'm having a few people over on Friday.",
+      "es": "El viernes vienen unos amigos a casa.",
+      "notes": "«have people over» = invitar gente a casa.",
+      "explanation": "Para invitar a casa sin dar mucha importancia. «over» con «v» de verdad: «OU-vər».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.would-you-like-to-come-to-my-party",
+      "text": "Would you like to come to my birthday party?",
+      "es": "¿Te gustaría venir a mi fiesta de cumpleaños?",
+      "explanation": "Invitación amable y algo formal. «Would you» se une: «WU-dyu»; la «l» de «would» no suena.",
+      "register": "formal",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.id-love-to-what-time",
+      "text": "I'd love to! What time?",
+      "es": "¡Me encantaría! ¿A qué hora?",
+      "notes": "«I'd love to» = me encantaría (no hace falta repetir el verbo).",
+      "explanation": "Para aceptar con ganas. «I'd» se reduce a «aid», con la «d» casi pegada a «love».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.count-me-in",
+      "text": "Sounds great. Count me in!",
+      "es": "Suena genial. ¡Cuenta conmigo!",
+      "notes": "«Count me in» = apúntame; «Count me out» = no cuentes conmigo.",
+      "explanation": "Para apuntarte a un plan con amigos. «count» con «au»: «kaunt».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.should-i-bring-anything",
+      "text": "Should I bring anything?",
+      "es": "¿Llevo algo?",
+      "notes": "«should» para ofrecerte o pedir consejo.",
+      "explanation": "Lo normal al ir a casa de alguien. «should» sin «l»: «shud».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.just-bring-yourself",
+      "text": "Just bring yourself!",
+      "es": "¡Solo trae tus ganas!",
+      "literal": "Solo tráete a ti mismo.",
+      "explanation": "La respuesta típica del anfitrión: no hace falta nada. «yourself» acento al final: «yor-SELF».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.what-time-works-for-you",
+      "text": "What time works for you?",
+      "es": "¿A qué hora te va bien?",
+      "notes": "«work for» = venirle bien a alguien.",
+      "explanation": "Para cuadrar una hora con alguien. «works» con «er» americana: «werks».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.does-seven-work-for-you",
+      "text": "Does seven work for you?",
+      "es": "¿Te va bien a las siete?",
+      "notes": "Con una hora, «work» lleva «does»: «Does seven work?».",
+      "explanation": "Para proponer una hora concreta. «seven» con «v» suave, no «b»: «SE-vən».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.how-about-thursday-instead",
+      "text": "How about Thursday instead?",
+      "es": "¿Y si mejor el jueves?",
+      "notes": "«instead» = en su lugar.",
+      "explanation": "Para proponer otro día. «Thursday» con «th» de «zeta» y «er»: «ZERZ-dei».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.where-should-we-meet",
+      "text": "Where should we meet?",
+      "es": "¿Dónde quedamos?",
+      "notes": "«meet» = quedar con alguien, encontrarse.",
+      "explanation": "Para fijar el punto de encuentro. «meet» con «i» larga: «miit», no «mit».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.lets-meet-in-front-of-the-theater",
+      "text": "Let's meet in front of the theater.",
+      "es": "Quedamos delante del teatro.",
+      "notes": "«in front of» = delante de. EE. UU. escribe «theater».",
+      "explanation": "Para dar el punto de encuentro. «theater» con «th» de «zeta»: «ZII-ə-rər».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.ill-pick-you-up-at-eight",
+      "text": "I'll pick you up at eight.",
+      "es": "Te recojo a las ocho.",
+      "notes": "«pick somebody up» = recoger a alguien.",
+      "explanation": "Cuando vas en coche a buscar a alguien. «pick you up» se une: «PI-kiu-ap».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.let-me-check-and-get-back-to-you",
+      "text": "Let me check my calendar and get back to you.",
+      "es": "Déjame mirar la agenda y te digo algo.",
+      "notes": "«get back to somebody» = volver a contactar con alguien con una respuesta.",
+      "explanation": "Para no comprometerte todavía, con amigos o en el trabajo. «get back» se une: «ge-BAK».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.ill-book-a-table",
+      "text": "I'll book a table for four.",
+      "es": "Reservo mesa para cuatro.",
+      "notes": "«book» = reservar.",
+      "explanation": "Cuando te encargas tú de la reserva. «book» con «u» corta: «buk».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.its-a-plan",
+      "text": "It's a plan!",
+      "es": "¡Hecho!",
+      "literal": "Es un plan.",
+      "explanation": "Para cerrar un plan con un amigo. «It's a» se une: «it-sə PLAN».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.see-you-there",
+      "text": "See you there!",
+      "es": "¡Nos vemos allí!",
+      "explanation": "Para despedirte cuando ya habéis quedado. «there» con «th» suave, como la «d» de «nada».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.something-came-up",
+      "text": "Something came up. Can we reschedule?",
+      "es": "Me ha surgido algo. ¿Lo cambiamos de día?",
+      "notes": "«come up» = surgir (un imprevisto).",
+      "explanation": "Para cambiar un plan sin dar detalles. «reschedule» = «rii-SKE-dyuul», con «sk».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.i-have-to-cancel-tonight",
+      "text": "I'm so sorry, I have to cancel tonight.",
+      "es": "Lo siento mucho, tengo que cancelar lo de esta noche.",
+      "notes": "«have to» = tener que.",
+      "explanation": "Para cancelar con un amigo pidiendo perdón. «have to» suena «HAF-tə».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.im-afraid-i-cant-make-it",
+      "text": "I'm afraid I can't make it.",
+      "es": "Me temo que no voy a poder ir.",
+      "notes": "«make it» = conseguir ir, llegar a tiempo.",
+      "explanation": "Forma educada de decir que no vas, también en el trabajo. «afraid» = «ə-FREID».",
+      "register": "formal",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.can-we-push-it-back",
+      "text": "Can we push it back to next week?",
+      "es": "¿Podemos pasarlo a la semana que viene?",
+      "notes": "«push back» = retrasar; «move up» = adelantar.",
+      "explanation": "Para retrasar un plan o una reunión. «push it» se une: «PU-shit»; «next week» sin pausa.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.im-running-fifteen-minutes-late",
+      "text": "I'm running about fifteen minutes late.",
+      "es": "Llego unos quince minutos tarde.",
+      "notes": "«run late» = ir con retraso.",
+      "explanation": "Mensaje rápido cuando vas con retraso. «fifteen» acento al final: «fif-TIIN» (no «FIF-ti»).",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.no-worries-maybe-next-time",
+      "text": "No worries, maybe next time.",
+      "es": "Tranquilo, otra vez será.",
+      "explanation": "Para responder sin dar importancia a una cancelación. «worries» = «UE-riz».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.are-we-still-on-for-tomorrow",
+      "text": "Are we still on for tomorrow?",
+      "es": "¿Sigue en pie lo de mañana?",
+      "notes": "«be on» = seguir en pie (un plan).",
+      "explanation": "Para confirmar un plan el día antes. «still on» se une: «sti-LON».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.i-totally-forgot",
+      "text": "I totally forgot! I'm so sorry.",
+      "es": "¡Se me olvidó por completo! Lo siento mucho.",
+      "notes": "«forget» → «forgot» (pasado irregular).",
+      "explanation": "Cuando olvidas una cita. «forgot» acento al final: «fər-GAT».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.let-me-make-it-up-to-you",
+      "text": "Let me make it up to you. Dinner's on me.",
+      "es": "Déjame compensártelo. La cena corre de mi cuenta.",
+      "notes": "«make it up to somebody» = compensar a alguien; «It's on me» = invito yo.",
+      "explanation": "Para compensar a alguien después de fallarle. «make it up» se une: «mei-ki-TAP».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.dont-worry-about-it",
+      "text": "Don't worry about it. These things happen.",
+      "es": "No te preocupes. Son cosas que pasan.",
+      "notes": "Respuesta amable a una disculpa.",
+      "explanation": "Para quitar hierro a un fallo de otro. «worry» con «er»: «UE-ri», no «uori».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.hi-its-hernan-is-maya-there",
+      "text": "Hi, it's Hernán. Is Maya there?",
+      "es": "Hola, soy Hernán. ¿Está Maya?",
+      "notes": "Por teléfono: «It's Hernán» / «This is Hernán».",
+      "explanation": "Al teléfono te presentas con «it's», no con «I am». «there» con «th» suave.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.sorry-i-missed-your-call",
+      "text": "Sorry, I missed your call.",
+      "es": "Perdona, no pude cogerte la llamada.",
+      "notes": "«miss a call» = tener una llamada perdida.",
+      "explanation": "Al devolver una llamada perdida. «missed» = «mist», una sílaba con /t/.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.you-didnt-pick-up",
+      "text": "I tried to call you, but you didn't pick up.",
+      "es": "Te intenté llamar, pero no lo cogiste.",
+      "notes": "«pick up» = coger el teléfono (también «recoger» a alguien).",
+      "explanation": "Para explicar que llamaste. «tried» = «traid», «d» final suave.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.can-you-call-me-back",
+      "text": "Can you call me back when you get this?",
+      "es": "¿Me puedes llamar cuando escuches esto?",
+      "notes": "«call back» = devolver la llamada.",
+      "explanation": "Para dejar un mensaje de voz. «call me back» se une: «KOL-mi-BAK».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.youre-breaking-up",
+      "text": "You're breaking up. I can't hear you.",
+      "es": "Se corta. No te oigo.",
+      "notes": "«break up» = cortarse (la llamada); con una pareja, «romper».",
+      "explanation": "Cuando hay mala cobertura. «breaking» = «BREI-king»; «hear» con «h» suave y «r» americana.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.hold-on-a-second",
+      "text": "Hold on a second.",
+      "es": "Espera un segundo.",
+      "notes": "«hold on» = esperar un momento.",
+      "explanation": "Para pedir que esperen al teléfono o en persona. «hold on a» se une: «HOUL-da-nə».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.ill-text-you-the-details",
+      "text": "I'll text you the details.",
+      "es": "Te paso los detalles por mensaje.",
+      "explanation": "Al terminar una llamada en la que habéis quedado. «details» acento al principio en EE. UU.: «DII-teilz».",
+      "register": "tu",
+      "situation": "social"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "b1-plans.plan",
+      "word": "plan",
+      "article": "a",
+      "plural": "plans",
+      "es": "el plan",
+      "example": "b1-plans.i-dont-have-any-plans-yet",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.invitation",
+      "word": "invitation",
+      "article": "an",
+      "plural": "invitations",
+      "es": "la invitación",
+      "situation": "social",
+      "image": "fluent:envelope"
+    },
+    {
+      "id": "b1-plans.birthday-party",
+      "word": "birthday party",
+      "article": "a",
+      "plural": "birthday parties",
+      "es": "la fiesta de cumpleaños",
+      "example": "b1-plans.would-you-like-to-come-to-my-party",
+      "situation": "social",
+      "image": "fluent:birthday-cake"
+    },
+    {
+      "id": "b1-plans.drink",
+      "word": "drink",
+      "article": "a",
+      "plural": "drinks",
+      "es": "la copa, la bebida",
+      "example": "b1-plans.want-to-grab-a-drink",
+      "situation": "social",
+      "image": "fluent:clinking-beer-mugs"
+    },
+    {
+      "id": "b1-plans.bar",
+      "word": "bar",
+      "article": "a",
+      "plural": "bars",
+      "es": "el bar",
+      "situation": "social",
+      "image": "fluent:cocktail-glass"
+    },
+    {
+      "id": "b1-plans.barbecue",
+      "word": "barbecue",
+      "article": "a",
+      "plural": "barbecues",
+      "es": "la barbacoa",
+      "notes": "También «BBQ» o «cookout».",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.brunch",
+      "word": "brunch",
+      "es": "el brunch",
+      "notes": "Desayuno-comida de fin de semana, muy típico en EE. UU.",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.game-night",
+      "word": "game night",
+      "article": "a",
+      "plural": "game nights",
+      "es": "la noche de juegos (de mesa)",
+      "situation": "social",
+      "image": "fluent:game-die"
+    },
+    {
+      "id": "b1-plans.picnic",
+      "word": "picnic",
+      "article": "a",
+      "plural": "picnics",
+      "es": "el pícnic",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.movie-theater",
+      "word": "movie theater",
+      "article": "a",
+      "plural": "movie theaters",
+      "es": "el cine",
+      "notes": "«go to the movies» = ir al cine.",
+      "situation": "social",
+      "image": "fluent:popcorn"
+    },
+    {
+      "id": "b1-plans.theater",
+      "word": "theater",
+      "article": "a",
+      "plural": "theaters",
+      "es": "el teatro",
+      "example": "b1-plans.lets-meet-in-front-of-the-theater",
+      "situation": "social",
+      "image": "fluent:performing-arts"
+    },
+    {
+      "id": "b1-plans.ticket",
+      "word": "ticket",
+      "article": "a",
+      "plural": "tickets",
+      "es": "la entrada",
+      "situation": "social",
+      "image": "fluent:admission-tickets"
+    },
+    {
+      "id": "b1-plans.calendar",
+      "word": "calendar",
+      "article": "a",
+      "plural": "calendars",
+      "es": "la agenda, el calendario",
+      "example": "b1-plans.let-me-check-and-get-back-to-you",
+      "situation": "social",
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "b1-plans.date",
+      "word": "date",
+      "article": "a",
+      "plural": "dates",
+      "es": "la cita, la fecha",
+      "notes": "«a date» también es una cita romántica.",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.weeknight",
+      "word": "weeknight",
+      "article": "a",
+      "plural": "weeknights",
+      "es": "la noche entre semana",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.excuse",
+      "word": "excuse",
+      "article": "an",
+      "plural": "excuses",
+      "es": "la excusa",
+      "notes": "El nombre acaba en /s/ («ik-SKIUS»); el verbo, en /z/.",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.traffic",
+      "word": "traffic",
+      "es": "el tráfico",
+      "notes": "Incontable: «a lot of traffic».",
+      "situation": "social",
+      "image": "fluent:automobile"
+    },
+    {
+      "id": "b1-plans.phone-call",
+      "word": "phone call",
+      "article": "a",
+      "plural": "phone calls",
+      "es": "la llamada",
+      "situation": "social",
+      "image": "fluent:telephone-receiver"
+    },
+    {
+      "id": "b1-plans.missed-call",
+      "word": "missed call",
+      "article": "a",
+      "plural": "missed calls",
+      "es": "la llamada perdida",
+      "example": "b1-plans.sorry-i-missed-your-call",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.voicemail",
+      "word": "voicemail",
+      "article": "a",
+      "plural": "voicemails",
+      "es": "el buzón de voz, el mensaje de voz",
+      "situation": "social"
+    },
+    {
+      "id": "b1-plans.battery",
+      "word": "battery",
+      "article": "a",
+      "plural": "batteries",
+      "es": "la batería",
+      "notes": "«My battery is dying» = me quedo sin batería.",
+      "situation": "social",
+      "image": "fluent:battery"
+    },
+    {
+      "id": "b1-plans.signal",
+      "word": "signal",
+      "es": "la cobertura",
+      "notes": "«I don't have any signal» = no tengo cobertura.",
+      "situation": "social",
+      "image": "fluent:antenna-bars"
+    },
+    {
+      "id": "b1-plans.details",
+      "word": "details",
+      "es": "los detalles",
+      "example": "b1-plans.ill-text-you-the-details",
+      "situation": "social"
+    }
+  ],
+  "qa": [
+    {
+      "id": "b1-plans.qa.up-to",
+      "question": "What are you up to this weekend?",
+      "questionEs": "¿Qué planes tienes este finde?",
+      "accepted": [
+        {
+          "text": "Nothing much yet. Why?",
+          "es": "Nada especial todavía. ¿Por qué?"
+        },
+        {
+          "text": "I'm having a few people over on Friday. Want to come?",
+          "es": "El viernes vienen unos amigos a casa. ¿Te vienes?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I'm up to the fifth floor.",
+          "es": "Estoy hasta el quinto piso."
+        },
+        {
+          "text": "I was at home last weekend.",
+          "es": "Estuve en casa el finde pasado."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«What are you up to?» pregunta por tus planes; contesta con planes de este fin de semana.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-plans.qa.free-saturday",
+      "question": "Are you free on Saturday night?",
+      "questionEs": "¿Estás libre el sábado por la noche?",
+      "accepted": [
+        {
+          "text": "Yeah, I think so. What's the plan?",
+          "es": "Sí, creo que sí. ¿Cuál es el plan?"
+        },
+        {
+          "text": "Sorry, I already have plans.",
+          "es": "Lo siento, ya tengo planes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, it's free, no money.",
+          "es": "Sí, es gratis, sin dinero."
+        },
+        {
+          "text": "Yes, I was free on Saturday.",
+          "es": "Sí, estuve libre el sábado."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«free» aquí es «libre», no «gratis», y el plan es futuro: no uses el pasado.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-plans.qa.come-party",
+      "question": "Would you like to come to my birthday party on Friday?",
+      "questionEs": "¿Te gustaría venir a mi fiesta de cumpleaños el viernes?",
+      "accepted": [
+        {
+          "text": "I'd love to! Should I bring anything?",
+          "es": "¡Me encantaría! ¿Llevo algo?"
+        },
+        {
+          "text": "Thank you, but I'm afraid I can't make it.",
+          "es": "Gracias, pero me temo que no voy a poder ir."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I would like that you come.",
+          "es": "Sí, me gustaría que vinieras."
+        },
+        {
+          "text": "I'd love to come last Friday.",
+          "es": "Me encantaría ir el viernes pasado."
+        }
+      ],
+      "register": "formal",
+      "situation": "social",
+      "notes": "Acepta con «I'd love to» o rechaza con «I'm afraid I can't make it». «like that you come» es un calco.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-plans.qa.what-time",
+      "question": "What time works for you?",
+      "questionEs": "¿A qué hora te va bien?",
+      "accepted": [
+        {
+          "text": "Seven works for me.",
+          "es": "A las siete me va bien."
+        },
+        {
+          "text": "Any time after six is fine.",
+          "es": "Cualquier hora después de las seis me va bien."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I work from nine to five.",
+          "es": "Trabajo de nueve a cinco."
+        },
+        {
+          "text": "It works at seven o'clock.",
+          "es": "Funciona a las siete."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«work for you» = venirte bien, no tu horario de trabajo. Contesta con una hora.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-plans.qa.where-meet",
+      "question": "Where should we meet?",
+      "questionEs": "¿Dónde quedamos?",
+      "accepted": [
+        {
+          "text": "Let's meet in front of the theater.",
+          "es": "Quedamos delante del teatro."
+        },
+        {
+          "text": "How about the coffee shop on the corner?",
+          "es": "¿Qué tal en la cafetería de la esquina?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "We should meet at seven.",
+          "es": "Deberíamos quedar a las siete."
+        },
+        {
+          "text": "Let's meet us at the theater.",
+          "es": "Quedemos nosotros en el teatro."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Te preguntan dónde, no cuándo. «Let's meet», sin «us».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-plans.qa.reschedule",
+      "question": "Something came up at work. Can we reschedule?",
+      "questionEs": "Me ha surgido algo en el trabajo. ¿Lo cambiamos de día?",
+      "accepted": [
+        {
+          "text": "Sure, no problem. How about Sunday?",
+          "es": "Claro, sin problema. ¿Qué tal el domingo?"
+        },
+        {
+          "text": "No worries. Just let me know when you're free.",
+          "es": "Tranquilo. Dime cuándo estás libre."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sure, what came out?",
+          "es": "Claro, ¿qué salió?"
+        },
+        {
+          "text": "Yes, we rescheduled yesterday.",
+          "es": "Sí, lo cambiamos ayer."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«came up» = surgió; propone otro día o di que te avise.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-plans.qa.still-on",
+      "question": "Are we still on for tomorrow?",
+      "questionEs": "¿Sigue en pie lo de mañana?",
+      "accepted": [
+        {
+          "text": "Yes! See you at seven.",
+          "es": "¡Sí! Nos vemos a las siete."
+        },
+        {
+          "text": "Actually, can we push it back to Sunday?",
+          "es": "Pues, ¿lo podemos pasar al domingo?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I'm on the bus.",
+          "es": "Sí, estoy en el autobús."
+        },
+        {
+          "text": "I'm still at tomorrow.",
+          "es": "Sigo en mañana."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«be on» = seguir en pie un plan: confirma o propón otro día.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b1-plans.qa.missed-call",
+      "question": "Hey, I called you earlier. Where were you?",
+      "questionEs": "Oye, te llamé antes. ¿Dónde estabas?",
+      "accepted": [
+        {
+          "text": "Sorry, I missed your call. I was at the gym.",
+          "es": "Perdona, no pude cogerlo. Estaba en el gimnasio."
+        },
+        {
+          "text": "Sorry! I was driving. What's up?",
+          "es": "¡Perdona! Iba conduciendo. ¿Qué pasa?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sorry, I was miss your call.",
+          "es": "Perdona, estaba perder tu llamada."
+        },
+        {
+          "text": "I'm at the gym right now.",
+          "es": "Ahora mismo estoy en el gimnasio."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "Te preguntan por antes: pasado («I was…»), no presente.",
+      "voice": "en-US-AndrewNeural"
+    }
+  ]
+}

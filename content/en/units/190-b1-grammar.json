@@ -1,0 +1,964 @@
+{
+  "id": "b1-grammar",
+  "order": 190,
+  "level": "B1",
+  "title": "Gramática B1",
+  "description": "Contar el pasado con matices, hablar de condiciones y obligaciones, unir ideas en frases más largas y los phrasal verbs que más oirás.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "b1-grammar.l.past",
+      "title": "Contar el pasado",
+      "items": [
+        "gram.en-b1-present-perfect-past-simple",
+        "b1-grammar.ive-just-finished-the-report",
+        "b1-grammar.have-you-sent-it-yet",
+        "b1-grammar.ive-worked-here-since-march",
+        "b1-friends.ive-been-here-for-three-months",
+        "gram.en-b1-past-continuous",
+        "b1-grammar.i-was-walking-home",
+        "b1-grammar.what-were-you-doing",
+        "gram.en-b1-used-to",
+        "b1-grammar.i-used-to-live-in-valencia",
+        "b1-friends.i-used-to-play-in-a-band",
+        "b1-grammar.qa.how-long-work",
+        "b1-grammar.qa.what-were-you-doing"
+      ]
+    },
+    {
+      "id": "b1-grammar.l.if-must",
+      "title": "Condiciones, consejos y obligaciones",
+      "items": [
+        "gram.en-b1-conditionals",
+        "b1-grammar.if-it-rains-well-stay-home",
+        "b1-grammar.if-i-had-more-time",
+        "b1-grammar.if-i-were-you",
+        "gram.en-b1-should-must-have-to",
+        "b1-grammar.you-should-try-it",
+        "b1-grammar.i-have-to-work-on-saturday",
+        "b1-grammar.you-dont-have-to-come",
+        "b1-plans.should-i-bring-anything",
+        "b1-grammar.qa.free-day"
+      ]
+    },
+    {
+      "id": "b1-grammar.l.longer-sentences",
+      "title": "Frases más largas: pasiva, relativos y estilo indirecto",
+      "items": [
+        "gram.en-b1-passive",
+        "b1-grammar.the-meeting-has-been-canceled",
+        "b1-grammar.this-building-was-built",
+        "gram.en-b1-relative-clauses",
+        "b1-grammar.shes-the-friend-who-lives-in-pilsen",
+        "b1-grammar.thats-the-app-i-told-you-about",
+        "gram.en-b1-reported-speech",
+        "b1-grammar.she-said-she-was-tired",
+        "b1-grammar.he-told-me-hed-call",
+        "gram.en-b1-gerund-infinitive",
+        "b1-grammar.i-enjoy-working-with-people",
+        "b1-grammar.i-decided-to-stay",
+        "b1-friends.i-cant-stand-waiting-in-line",
+        "b1-grammar.qa.what-did-she-say"
+      ]
+    },
+    {
+      "id": "b1-grammar.l.phrasal-verbs",
+      "title": "Phrasal verbs del trabajo",
+      "items": [
+        "gram.en-b1-phrasal-verbs-work",
+        "b1-grammar.figure-out",
+        "b1-grammar.look-into",
+        "b1-grammar.can-you-look-into-it",
+        "b1-grammar.set-up",
+        "b1-grammar.follow-up",
+        "b1-grammar.ill-follow-up-by-email",
+        "b1-grammar.come-up-with",
+        "b1-grammar.run-out-of",
+        "b1-grammar.we-ran-out-of-coffee",
+        "b1-grammar.find-out",
+        "b1-grammar.show-up",
+        "b1-grammar.turn-down",
+        "b1-grammar.put-off",
+        "b1-grammar.give-up",
+        "b1-grammar.work-out"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "b1-grammar.ive-just-finished-the-report",
+      "text": "I've just finished the report.",
+      "es": "Acabo de terminar el informe.",
+      "notes": "«just» = acabo de; va entre «have» y el participio.",
+      "explanation": "Para decir que algo está recién hecho. «just» con «a» corta y «y» fuerte: «dyast».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "present-perfect"
+      ]
+    },
+    {
+      "id": "b1-grammar.have-you-sent-it-yet",
+      "text": "Have you sent it yet?",
+      "es": "¿Ya lo has enviado?",
+      "notes": "«yet» al final de una pregunta = ya.",
+      "explanation": "Para preguntar si algo está hecho. «sent it» se une: «SEN-tit».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "present-perfect"
+      ]
+    },
+    {
+      "id": "b1-grammar.ive-worked-here-since-march",
+      "text": "I've worked here since March.",
+      "es": "Trabajo aquí desde marzo.",
+      "notes": "Sigues trabajando ahí: present perfect + «since».",
+      "explanation": "Para hablar de tu trabajo actual. «worked» = «werkt», una sílaba con /t/.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "present-perfect"
+      ]
+    },
+    {
+      "id": "b1-grammar.i-was-walking-home",
+      "text": "I was walking home when it started to rain.",
+      "es": "Volvía a casa andando cuando empezó a llover.",
+      "notes": "Escena de fondo (was walking) + lo que pasó (started).",
+      "explanation": "Para empezar una anécdota. «started» acaba en /ɪd/: «STAR-rid», con «t» americana suave.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "b1-grammar.what-were-you-doing",
+      "text": "What were you doing at eight last night?",
+      "es": "¿Qué estabas haciendo anoche a las ocho?",
+      "explanation": "Para preguntar qué hacía alguien en un momento. «were» en forma débil: «wər».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "b1-grammar.i-used-to-live-in-valencia",
+      "text": "I used to live in Valencia.",
+      "es": "Antes vivía en Valencia.",
+      "notes": "«used to» = antes (ya no).",
+      "explanation": "Para contar tu vida de antes. «Valencia» en inglés: «və-LEN-siə», acento en la segunda.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "b1-grammar.if-it-rains-well-stay-home",
+      "text": "If it rains, we'll stay home.",
+      "es": "Si llueve, nos quedamos en casa.",
+      "notes": "Primer condicional: if + presente, will + verbo.",
+      "explanation": "Para un plan que depende de algo. «we'll» suena «uil», una sílaba.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "condicional"
+      ]
+    },
+    {
+      "id": "b1-grammar.if-i-had-more-time",
+      "text": "If I had more time, I'd learn to play the piano.",
+      "es": "Si tuviera más tiempo, aprendería a tocar el piano.",
+      "notes": "Segundo condicional: if + pasado, would + verbo.",
+      "explanation": "Para hablar de deseos o situaciones imaginarias. «I'd» = «aid», casi pegado a «learn».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "condicional"
+      ]
+    },
+    {
+      "id": "b1-grammar.if-i-were-you",
+      "text": "If I were you, I'd take the train.",
+      "es": "Yo que tú, cogería el tren.",
+      "notes": "«If I were you» = yo que tú.",
+      "explanation": "Para dar un consejo a un amigo. «were» débil: «wər»; en charla se oye también «if I was you».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "condicional"
+      ]
+    },
+    {
+      "id": "b1-grammar.you-should-try-it",
+      "text": "You should try the deep-dish pizza.",
+      "es": "Deberías probar la pizza de molde.",
+      "notes": "«should» = consejo.",
+      "explanation": "Para recomendar algo a alguien de fuera. «should» sin «l»: «shud».",
+      "register": "neutral",
+      "situation": "comida",
+      "tags": [
+        "obligacion"
+      ]
+    },
+    {
+      "id": "b1-grammar.i-have-to-work-on-saturday",
+      "text": "I have to work on Saturday.",
+      "es": "El sábado tengo que trabajar.",
+      "notes": "«have to» = obligación real.",
+      "explanation": "Para explicar por qué no puedes quedar. «have to» suena «HAF-tə».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "obligacion"
+      ]
+    },
+    {
+      "id": "b1-grammar.you-dont-have-to-come",
+      "text": "You don't have to come if you're busy.",
+      "es": "No hace falta que vengas si estás liado.",
+      "notes": "«don't have to» = no hace falta (no es «no debes»).",
+      "explanation": "Para quitar presión a alguien. «don't have to» = «DOUN-haf-tə».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "obligacion"
+      ]
+    },
+    {
+      "id": "b1-grammar.the-meeting-has-been-canceled",
+      "text": "The meeting has been canceled.",
+      "es": "Han cancelado la reunión.",
+      "notes": "Pasiva: no importa quién la canceló.",
+      "explanation": "Típico en avisos y emails del trabajo. «canceled» = «KAN-sld», con una sola «l» en EE. UU.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "pasiva"
+      ]
+    },
+    {
+      "id": "b1-grammar.this-building-was-built",
+      "text": "This building was built in nineteen twenty.",
+      "es": "Este edificio se construyó en mil novecientos veinte.",
+      "notes": "Pasiva en pasado: was + participio.",
+      "explanation": "Lo oirás en visitas guiadas por Chicago. «built» = «bilt», la «u» no suena.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "pasiva"
+      ]
+    },
+    {
+      "id": "b1-grammar.shes-the-friend-who-lives-in-pilsen",
+      "text": "She's the friend who lives in Pilsen.",
+      "es": "Es la amiga que vive en Pilsen.",
+      "notes": "«who» para personas.",
+      "explanation": "Para aclarar de quién hablas. «who» suena «ju», con «h» suave aspirada.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "relativos"
+      ]
+    },
+    {
+      "id": "b1-grammar.thats-the-app-i-told-you-about",
+      "text": "That's the app that I told you about.",
+      "es": "Esa es la app de la que te hablé.",
+      "notes": "La preposición va al final: «told you about».",
+      "explanation": "Para retomar algo de una charla anterior. «told you» se une: «TOUL-dyu».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "relativos"
+      ]
+    },
+    {
+      "id": "b1-grammar.she-said-she-was-tired",
+      "text": "She said she was tired.",
+      "es": "Dijo que estaba cansada.",
+      "notes": "«I'm tired» → «she was tired»: el verbo va un paso atrás.",
+      "explanation": "Para contar lo que dijo otra persona. «said» = «sed», no «seid».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "estilo-indirecto"
+      ]
+    },
+    {
+      "id": "b1-grammar.he-told-me-hed-call",
+      "text": "He told me he'd call later.",
+      "es": "Me dijo que llamaría más tarde.",
+      "notes": "«tell» lleva persona: «told me»; «will» → «would».",
+      "explanation": "Para pasar un recado. «he'd» = «jiid», una sílaba.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "estilo-indirecto"
+      ]
+    },
+    {
+      "id": "b1-grammar.i-enjoy-working-with-people",
+      "text": "I enjoy working with people.",
+      "es": "Me gusta trabajar con gente.",
+      "notes": "«enjoy» + -ing, nunca «enjoy to work».",
+      "explanation": "Frase útil para hablar de ti o en una entrevista. «enjoy» acento al final: «in-YOI».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "verbos"
+      ]
+    },
+    {
+      "id": "b1-grammar.i-decided-to-stay",
+      "text": "I decided to stay another week.",
+      "es": "Decidí quedarme otra semana.",
+      "notes": "«decide» + to + verbo.",
+      "explanation": "Para contar una decisión. «decided» acaba en /ɪd/: «di-SAI-did».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "verbos"
+      ]
+    },
+    {
+      "id": "b1-grammar.can-you-look-into-it",
+      "text": "Can you look into it?",
+      "es": "¿Puedes mirarlo?",
+      "notes": "«look into» = investigar, revisar.",
+      "explanation": "Para pedir a un compañero que revise un problema. «look into it» se une: «lu-KIN-tu-it».",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-grammar.ill-follow-up-by-email",
+      "text": "I'll follow up by email.",
+      "es": "Te escribo un email para hacer seguimiento.",
+      "notes": "«follow up» = hacer seguimiento.",
+      "explanation": "Al acabar una reunión o llamada de trabajo. «follow» = «FA-lou», con «a» abierta.",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "b1-grammar.we-ran-out-of-coffee",
+      "text": "We ran out of coffee at the office.",
+      "es": "Nos hemos quedado sin café en la oficina.",
+      "notes": "«run out of» = quedarse sin.",
+      "explanation": "Para avisar de que algo se acabó. «ran out of» se une: «ra-NAU-təv».",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "b1-grammar.figure-out",
+      "word": "figure out",
+      "es": "averiguar, resolver",
+      "notes": "Phrasal verb: «I can't figure out the bug» = no doy con el fallo.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.look-into",
+      "word": "look into",
+      "es": "investigar, revisar",
+      "notes": "Phrasal verb: «I'll look into it» = lo miro.",
+      "example": "b1-grammar.can-you-look-into-it",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.set-up",
+      "word": "set up",
+      "es": "organizar, configurar",
+      "notes": "Phrasal verb: «set up a meeting» (organizar), «set up the laptop» (configurar).",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.follow-up",
+      "word": "follow up",
+      "es": "hacer seguimiento",
+      "notes": "Phrasal verb: volver sobre un tema para ver cómo va.",
+      "example": "b1-grammar.ill-follow-up-by-email",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.come-up-with",
+      "word": "come up with",
+      "es": "proponer, idear",
+      "notes": "Phrasal verb: «come up with an idea» = tener una idea.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.run-out-of",
+      "word": "run out of",
+      "es": "quedarse sin",
+      "notes": "Phrasal verb: «We ran out of time» = nos quedamos sin tiempo.",
+      "example": "b1-grammar.we-ran-out-of-coffee",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.find-out",
+      "word": "find out",
+      "es": "enterarse, descubrir",
+      "notes": "Phrasal verb: «I found out yesterday» = me enteré ayer.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.show-up",
+      "word": "show up",
+      "es": "presentarse, aparecer",
+      "notes": "Phrasal verb: «He didn't show up» = no apareció.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.turn-down",
+      "word": "turn down",
+      "es": "rechazar; bajar (el volumen)",
+      "notes": "Phrasal verb: «turn down an offer» = rechazar una oferta.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.put-off",
+      "word": "put off",
+      "es": "aplazar",
+      "notes": "Phrasal verb: «Don't put it off» = no lo dejes para luego.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.give-up",
+      "word": "give up",
+      "es": "rendirse, dejar (un hábito)",
+      "notes": "Phrasal verb: «give up coffee» = dejar el café.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "b1-grammar.work-out",
+      "word": "work out",
+      "es": "salir bien; hacer ejercicio",
+      "notes": "Phrasal verb: «It worked out» = salió bien; «I work out» = hago ejercicio.",
+      "situation": "trabajo"
+    }
+  ],
+  "qa": [
+    {
+      "id": "b1-grammar.qa.how-long-work",
+      "question": "How long have you worked at your company?",
+      "questionEs": "¿Cuánto tiempo llevas trabajando en tu empresa?",
+      "accepted": [
+        {
+          "text": "I've worked there for two years.",
+          "es": "Llevo dos años trabajando allí."
+        },
+        {
+          "text": "Since twenty twenty-four.",
+          "es": "Desde dos mil veinticuatro."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I work there since two years.",
+          "es": "Trabajo allí desde hace dos años."
+        },
+        {
+          "text": "I worked there two years ago.",
+          "es": "Trabajé allí hace dos años."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Sigue siendo verdad: present perfect + «for» o solo «Since…». «since two years» es un calco.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b1-grammar.qa.what-were-you-doing",
+      "question": "I called you at eight. What were you doing?",
+      "questionEs": "Te llamé a las ocho. ¿Qué estabas haciendo?",
+      "accepted": [
+        {
+          "text": "I was cooking dinner, sorry.",
+          "es": "Estaba haciendo la cena, perdona."
+        },
+        {
+          "text": "I was working out at the gym.",
+          "es": "Estaba haciendo ejercicio en el gimnasio."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I cook dinner.",
+          "es": "Hago la cena."
+        },
+        {
+          "text": "I'm cooking dinner right now.",
+          "es": "Ahora mismo estoy haciendo la cena."
+        }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "Te preguntan por un momento del pasado: «I was + -ing».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b1-grammar.qa.free-day",
+      "question": "What would you do if you had a free day?",
+      "questionEs": "¿Qué harías si tuvieras un día libre?",
+      "accepted": [
+        {
+          "text": "I'd go to the lake and read a book.",
+          "es": "Iría al lago y leería un libro."
+        },
+        {
+          "text": "I'd sleep late and then go hiking.",
+          "es": "Dormiría hasta tarde y luego iría de senderismo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "If I would have time, I go to the lake.",
+          "es": "Si tendría tiempo, voy al lago."
+        },
+        {
+          "text": "I went to the lake.",
+          "es": "Fui al lago."
+        }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "Segundo condicional: contesta con «I'd + verbo». Tras «if» nunca va «would».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b1-grammar.qa.what-did-she-say",
+      "question": "Maya called. She said she was running late.",
+      "questionEs": "Ha llamado Maya. Ha dicho que llegaba tarde.",
+      "accepted": [
+        {
+          "text": "OK, thanks. Did she say what time she'd be here?",
+          "es": "Vale, gracias. ¿Dijo a qué hora llegaría?"
+        },
+        {
+          "text": "No problem. Thanks for telling me.",
+          "es": "No pasa nada. Gracias por decírmelo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Did she say you that she was late?",
+          "es": "¿Te dijo que llegaba tarde?"
+        },
+        {
+          "text": "What did she tell?",
+          "es": "¿Qué contó?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "«say» sin persona; «tell» con persona: «Did she tell you…?», «What did she say?».",
+      "voice": "en-US-EmmaNeural"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.en-b1-present-perfect-past-simple",
+      "title": "Present perfect o pasado simple",
+      "summary": "Pasado simple para un momento terminado y dicho («yesterday», «in May», «ago»). Present perfect (have/has + participio) cuando el momento no importa o llega hasta ahora.",
+      "points": [
+        "Con «for» (duración) y «since» (punto de inicio) para lo que sigue: «I've lived here since March».",
+        "«just» = acabo de; «already» = ya; «yet» = ya / todavía, en preguntas y negaciones, al final.",
+        "Si dices cuándo, pasado simple: «I saw it yesterday», no «I've seen it yesterday».",
+        "En EE. UU. se oye a menudo pasado simple con «just» y «already»: «I just ate»."
+      ],
+      "table": [
+        [
+          "",
+          "pasado simple",
+          "present-perfect"
+        ],
+        [
+          "cuándo",
+          "yesterday, last week, ago",
+          "ever, never, for, since"
+        ],
+        [
+          "ejemplo",
+          "I worked there in twenty twenty.",
+          "I've worked here for two years."
+        ],
+        [
+          "pregunta",
+          "When did you arrive?",
+          "How long have you been here?"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "I've just finished the report.",
+          "es": "Acabo de terminar el informe."
+        },
+        {
+          "text": "Have you sent it yet?",
+          "es": "¿Ya lo has enviado?"
+        },
+        {
+          "text": "I sent it an hour ago.",
+          "es": "Lo envié hace una hora."
+        }
+      ],
+      "tags": [
+        "pasado",
+        "present-perfect"
+      ]
+    },
+    {
+      "id": "gram.en-b1-past-continuous",
+      "title": "Pasado continuo (was/were + -ing)",
+      "summary": "Para lo que estaba pasando en un momento del pasado, o la escena de fondo cuando ocurrió algo («I was walking home when it started to rain»).",
+      "points": [
+        "«was» con I/he/she/it; «were» con you/we/they.",
+        "Acción larga en pasado continuo + acción corta en pasado simple, unidas con «when» o «while».",
+        "Perfecto para contar anécdotas: primero la escena, luego lo que pasó."
+      ],
+      "table": [
+        [
+          "",
+          "afirmativo",
+          "pregunta"
+        ],
+        [
+          "I / he / she",
+          "I was working",
+          "Was she working?"
+        ],
+        [
+          "you / we / they",
+          "we were waiting",
+          "Were you waiting?"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "I was walking home when it started to rain.",
+          "es": "Volvía a casa andando cuando empezó a llover."
+        },
+        {
+          "text": "What were you doing at eight?",
+          "es": "¿Qué estabas haciendo a las ocho?"
+        }
+      ],
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "gram.en-b1-used-to",
+      "title": "used to: lo que hacías antes",
+      "summary": "«used to» + verbo = costumbres o situaciones del pasado que ya no son así. Es como el «solía» o el imperfecto español.",
+      "points": [
+        "Negativo y pregunta sin «d»: «I didn't use to», «Did you use to…?».",
+        "Se pronuncia «IUUS-tə», con /s/.",
+        "No confundas con «be used to + -ing» = estar acostumbrado: «I'm used to the cold»."
+      ],
+      "examples": [
+        {
+          "text": "I used to live in Valencia.",
+          "es": "Antes vivía en Valencia."
+        },
+        {
+          "text": "Did you use to play any sports?",
+          "es": "¿Hacías algún deporte de pequeño?"
+        }
+      ],
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "gram.en-b1-conditionals",
+      "title": "Condicionales: primero y segundo",
+      "summary": "Primer condicional para algo posible (if + presente, will + verbo). Segundo condicional para algo imaginario o poco probable (if + pasado, would + verbo).",
+      "points": [
+        "Tras «if» nunca va «will»: «If it rains», no «If it will rain».",
+        "En el segundo, «If I were you…» sirve para dar consejos.",
+        "«I'd» puede ser «I would» o «I had»: el verbo que sigue te lo dice."
+      ],
+      "table": [
+        [
+          "",
+          "si…",
+          "entonces…"
+        ],
+        [
+          "1.º (posible)",
+          "If it rains,",
+          "we'll stay home."
+        ],
+        [
+          "2.º (imaginario)",
+          "If I had more time,",
+          "I'd learn the piano."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "If it rains, we'll stay home.",
+          "es": "Si llueve, nos quedaremos en casa."
+        },
+        {
+          "text": "If I had more time, I'd learn to play the piano.",
+          "es": "Si tuviera más tiempo, aprendería a tocar el piano."
+        },
+        {
+          "text": "If I were you, I'd take the train.",
+          "es": "Yo que tú, cogería el tren."
+        }
+      ],
+      "tags": [
+        "condicional"
+      ]
+    },
+    {
+      "id": "gram.en-b1-should-must-have-to",
+      "title": "should, must y have to",
+      "summary": "«should» da un consejo; «have to» es una obligación real (normas, trabajo); «must» es obligación fuerte, más escrita o formal.",
+      "points": [
+        "«don't have to» = no hace falta; «can't» o «mustn't» = está prohibido.",
+        "En EE. UU. se habla con «have to» y «can't»; «must» se ve en carteles y normas.",
+        "Para el pasado: «had to» («I had to work late»)."
+      ],
+      "table": [
+        [
+          "",
+          "significa",
+          "ejemplo"
+        ],
+        [
+          "should",
+          "consejo",
+          "You should try it."
+        ],
+        [
+          "have to",
+          "obligacion",
+          "I have to work on Saturday."
+        ],
+        [
+          "don't have to",
+          "no es necesario",
+          "You don't have to come."
+        ],
+        [
+          "can't / mustn't",
+          "prohibido",
+          "You can't park here."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "You should try the deep-dish pizza.",
+          "es": "Deberías probar la pizza de molde."
+        },
+        {
+          "text": "You don't have to come if you're busy.",
+          "es": "No hace falta que vengas si estás liado."
+        }
+      ],
+      "tags": [
+        "obligacion"
+      ]
+    },
+    {
+      "id": "gram.en-b1-passive",
+      "title": "La pasiva (introducción)",
+      "summary": "be + participio cuando importa lo que pasa, no quién lo hace: «The meeting has been canceled». Muy común en avisos, noticias y trabajo.",
+      "points": [
+        "Presente: «is made»; pasado: «was built»; present perfect: «has been canceled».",
+        "Quién lo hace, con «by» y solo si importa: «It was designed by Maya».",
+        "Equivale a muchas frases con «se» en español: «Se habla español» = «Spanish is spoken»."
+      ],
+      "examples": [
+        {
+          "text": "The building was built in nineteen twenty.",
+          "es": "El edificio se construyó en mil novecientos veinte."
+        },
+        {
+          "text": "The meeting has been canceled.",
+          "es": "Han cancelado la reunión."
+        }
+      ],
+      "tags": [
+        "pasiva"
+      ]
+    },
+    {
+      "id": "gram.en-b1-relative-clauses",
+      "title": "Relativos: who, which, that",
+      "summary": "Para unir dos ideas sobre la misma cosa o persona: «who» para personas, «which» para cosas, «that» para las dos (lo más común al hablar).",
+      "points": [
+        "«where» para lugares: «the bar where we met».",
+        "Si el relativo es el objeto, puedes quitarlo: «the app (that) I told you about».",
+        "La preposición suele ir al final: «the friend I was talking about»."
+      ],
+      "examples": [
+        {
+          "text": "She's the friend who lives in Pilsen.",
+          "es": "Es la amiga que vive en Pilsen."
+        },
+        {
+          "text": "That's the app that I told you about.",
+          "es": "Esa es la app de la que te hablé."
+        }
+      ],
+      "tags": [
+        "relativos"
+      ]
+    },
+    {
+      "id": "gram.en-b1-reported-speech",
+      "title": "Contar lo que dijo otro",
+      "summary": "Con «said» o «told me», el verbo suele ir un paso atrás en el pasado: «I'm tired» → «She said she was tired».",
+      "points": [
+        "«say» sin persona; «tell» con persona: «He said…», «He told me…».",
+        "will → would; can → could; am/is → was.",
+        "Para preguntas: «She asked if I was coming»."
+      ],
+      "table": [
+        [
+          "dijo",
+          "lo cuentas"
+        ],
+        [
+          "\"I'm tired.\"",
+          "She said she was tired."
+        ],
+        [
+          "\"I'll call later.\"",
+          "He told me he'd call later."
+        ],
+        [
+          "\"Are you coming?\"",
+          "She asked if I was coming."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "She said she was tired.",
+          "es": "Dijo que estaba cansada."
+        },
+        {
+          "text": "He told me he'd call later.",
+          "es": "Me dijo que llamaría más tarde."
+        }
+      ],
+      "tags": [
+        "estilo-indirecto"
+      ]
+    },
+    {
+      "id": "gram.en-b1-gerund-infinitive",
+      "title": "Gerundio (-ing) o infinitivo (to)",
+      "summary": "Algunos verbos van con -ing (enjoy, mind, finish, can't stand) y otros con «to» (want, decide, hope, need). Apréndelos en bloque.",
+      "points": [
+        "Tras una preposición, siempre -ing: «I'm good at cooking», «before leaving».",
+        "«like», «love», «hate», «start» admiten las dos formas.",
+        "«stop smoking» (dejar de fumar) ≠ «stop to smoke» (parar para fumar)."
+      ],
+      "table": [
+        [
+          "+ -ing",
+          "+ to"
+        ],
+        [
+          "enjoy, mind, finish",
+          "want, need, decide"
+        ],
+        [
+          "can't stand, avoid",
+          "hope, plan, forget"
+        ],
+        [
+          "I enjoy working.",
+          "I decided to stay."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "I enjoy working with people.",
+          "es": "Me gusta trabajar con gente."
+        },
+        {
+          "text": "I decided to stay another week.",
+          "es": "Decidí quedarme otra semana."
+        }
+      ],
+      "tags": [
+        "verbos"
+      ]
+    },
+    {
+      "id": "gram.en-b1-phrasal-verbs-work",
+      "title": "Phrasal verbs del trabajo",
+      "summary": "Verbo + partícula con un significado nuevo, muy usados al hablar: «look into» = investigar, «figure out» = averiguar. Apréndelos como palabras.",
+      "points": [
+        "Si llevan objeto, a menudo puede ir en medio: «set up the meeting» o «set it up» (con pronombre, siempre en medio).",
+        "La partícula se acentúa: «fi-gyer-OUT», «fo-lou-AP».",
+        "En un email formal puedes usar el verbo «serio»: «investigate» en vez de «look into»."
+      ],
+      "table": [
+        [
+          "phrasal verb",
+          "significa"
+        ],
+        [
+          "figure out",
+          "averiguar, entender"
+        ],
+        [
+          "look into",
+          "investigar, mirar"
+        ],
+        [
+          "set up",
+          "organizar, configurar"
+        ],
+        [
+          "follow up",
+          "hacer seguimiento"
+        ],
+        [
+          "come up with",
+          "proponer, idear"
+        ],
+        [
+          "run out of",
+          "quedarse sin"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Can you look into it?",
+          "es": "¿Puedes mirarlo?"
+        },
+        {
+          "text": "I'll follow up by email.",
+          "es": "Te escribo un email para hacer seguimiento."
+        }
+      ],
+      "tags": [
+        "phrasal-verbs",
+        "trabajo"
+      ]
+    }
+  ]
+}
