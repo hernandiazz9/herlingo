@@ -1,0 +1,334 @@
+{
+  "id": "sante",
+  "order": 52,
+  "title": "Salud: médico, farmacia, emergencias",
+  "description": "Decir qué te duele y cómo te encuentras, pedir cita y entender al médico, comprar en la farmacia y pedir ayuda en una emergencia.",
+  "emoji": "💊",
+  "situation": "salud",
+  "lessons": [
+    {
+      "id": "sante.l.corps",
+      "title": "El cuerpo: ¿dónde te duele?",
+      "items": [
+        "sante.tete",
+        "sante.ventre",
+        "sante.dos",
+        "sante.gorge",
+        "sante.dent",
+        "sante.oreille",
+        "sante.oeil",
+        "grammaire.nez",
+        "sante.bras",
+        "sante.main",
+        "sante.jambe",
+        "sante.pied",
+        "sante.jai-mal-a-la-tete",
+        "sante.jai-mal-au-ventre",
+        "sante.jai-mal-a-la-gorge",
+        "sante.jai-mal-au-dos",
+        "sante.jai-mal-aux-dents",
+        "sante.ca-me-fait-mal-ici",
+        "sante.je-me-suis-fait-mal-au-pied",
+        "sante.qa.mal"
+      ]
+    },
+    {
+      "id": "sante.l.malade",
+      "title": "Cuando estás malo",
+      "items": [
+        "sante.fievre",
+        "sante.rhume",
+        "sante.toux",
+        "sante.grippe",
+        "sante.je-suis-malade",
+        "sante.je-ne-me-sens-pas-bien",
+        "salut.je-suis-fatigue",
+        "sante.jai-de-la-fievre",
+        "sante.je-suis-enrhume",
+        "sante.je-tousse-beaucoup",
+        "sante.jai-le-nez-qui-coule",
+        "sante.tu-nas-pas-lair-en-forme",
+        "sante.soigne-toi-bien",
+        "sante.bon-retablissement",
+        "sante.qa.forme"
+      ]
+    },
+    {
+      "id": "sante.l.medecin",
+      "title": "En el médico",
+      "items": [
+        "presenter.medecin",
+        "sante.rendez-vous",
+        "sante.ordonnance",
+        "sante.allergie",
+        "sante.je-voudrais-prendre-rendez-vous",
+        "sante.cest-urgent",
+        "sante.quest-ce-qui-ne-va-pas",
+        "sante.depuis-quand",
+        "sante.depuis-deux-jours",
+        "sante.vous-avez-des-allergies",
+        "sante.je-suis-allergique-a-la-penicilline",
+        "sante.je-ne-prends-pas-de-medicaments",
+        "sante.je-vous-fais-une-ordonnance",
+        "sante.jai-la-carte-europeenne",
+        "sante.qa.rendez-vous",
+        "sante.qa.depuis",
+        "sante.qa.allergies"
+      ]
+    },
+    {
+      "id": "sante.l.pharmacie",
+      "title": "En la farmacia",
+      "items": [
+        "sante.pharmacie",
+        "sante.medicament",
+        "sante.comprime",
+        "sante.sirop",
+        "sante.pansement",
+        "grammaire.il-y-a-une-pharmacie",
+        "sante.ou-est-la-pharmacie-de-garde",
+        "sante.vous-avez-quelque-chose-contre-le-mal-de-gorge",
+        "sante.cest-sans-ordonnance",
+        "sante.il-faut-une-ordonnance",
+        "sante.trois-fois-par-jour",
+        "sante.je-voudrais-des-pansements",
+        "sante.qa.pharmacie",
+        "sante.qa.ordonnance"
+      ]
+    },
+    {
+      "id": "sante.l.urgences",
+      "title": "Emergencias",
+      "items": [
+        "sante.urgences",
+        "sante.hopital",
+        "sante.ambulance",
+        "sante.pompiers",
+        "sante.police",
+        "sante.accident",
+        "sante.au-secours",
+        "sante.cest-une-urgence",
+        "sante.appelez-une-ambulance",
+        "sante.appelez-le-quinze",
+        "sante.il-y-a-eu-un-accident",
+        "sante.ne-bougez-pas",
+        "sante.je-dois-aller-aux-urgences",
+        "sante.ou-est-lhopital-le-plus-proche",
+        "sante.au-voleur",
+        "sante.on-ma-vole-mon-portefeuille",
+        "sante.qa.urgence"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "sante.jai-mal-a-la-tete", "text": "J'ai mal à la tête.", "es": "Me duele la cabeza.", "literal": "Tengo mal a la cabeza.", "notes": "«avoir mal à» + parte del cuerpo = doler.", "explanation": "En el médico, en la farmacia o con amigos. «tête» lleva «ê» abierta: shé MAL a la TÈT.", "register": "neutral", "situation": "salud", "tags": ["cuerpo", "dolor"] },
+    { "id": "sante.jai-mal-au-ventre", "text": "J'ai mal au ventre.", "es": "Me duele la tripa.", "notes": "«à + le» = «au»: au ventre, au dos.", "explanation": "Para el dolor de estómago o de tripa. «ventre» es nasal: shé MAL o VANTR'.", "register": "neutral", "situation": "salud", "tags": ["cuerpo", "dolor"] },
+    { "id": "sante.jai-mal-a-la-gorge", "text": "J'ai mal à la gorge.", "es": "Me duele la garganta.", "explanation": "Con un resfriado, en la farmacia. «gorge» acaba en «sh» sonora: shé MAL a la GORSH.", "register": "neutral", "situation": "salud", "tags": ["cuerpo", "dolor"] },
+    { "id": "sante.jai-mal-au-dos", "text": "J'ai mal au dos.", "es": "Me duele la espalda.", "explanation": "Para el dolor de espalda. «dos» suena DO, la «s» no suena: shé MAL o DO.", "register": "neutral", "situation": "salud", "tags": ["cuerpo", "dolor"] },
+    { "id": "sante.jai-mal-aux-dents", "text": "J'ai mal aux dents.", "es": "Me duelen las muelas.", "notes": "«à + les» = «aux». Para el dentista: «le dentiste».", "explanation": "Para llamar al dentista o explicar un dolor de muelas. «aux dents» se dice o DAN, nasal y sin «ts».", "register": "neutral", "situation": "salud", "tags": ["cuerpo", "dolor"] },
+    { "id": "sante.ca-me-fait-mal-ici", "text": "Ça me fait mal ici.", "es": "Me duele aquí.", "explanation": "Señalando el sitio, cuando no sabes el nombre. «fait» suena «fè»: sa m' fè MAL i-SI.", "register": "neutral", "situation": "salud", "tags": ["cuerpo", "dolor"] },
+    { "id": "sante.je-me-suis-fait-mal-au-pied", "text": "Je me suis fait mal au pied.", "es": "Me he hecho daño en el pie.", "explanation": "Tras una caída o un golpe. Dilo seguido: sh' m' süi fè MAL o PIÉ.", "register": "neutral", "situation": "salud", "tags": ["cuerpo", "dolor"] },
+    { "id": "sante.je-suis-malade", "text": "Je suis malade.", "es": "Estoy malo.", "notes": "«malade» = enfermo, para hombre y mujer.", "explanation": "Para avisar al trabajo o cancelar un plan. «malade» suena ma-LAD, con la «d» final.", "register": "neutral", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.je-ne-me-sens-pas-bien", "text": "Je ne me sens pas bien.", "es": "No me encuentro bien.", "explanation": "Cuando te notas mal, antes de saber qué tienes. «sens» suena SAN, nasal: sh' n' m' san pa BIAN.", "register": "neutral", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.jai-de-la-fievre", "text": "J'ai de la fièvre.", "es": "Tengo fiebre.", "notes": "En francés se dice «de la fièvre», con artículo.", "explanation": "En el médico o para avisar a alguien. «fièvre» lleva «è» abierta y «v» de labio: shé d' la FIÈVR'.", "register": "neutral", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.je-suis-enrhume", "text": "Je suis enrhumé.", "es": "Estoy resfriado.", "notes": "Si eres mujer: «enrhumée» (suena igual).", "explanation": "Para explicar tus mocos y estornudos. La «h» no suena y empieza nasal: sh' süi zan-rü-MÉ.", "register": "neutral", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.je-tousse-beaucoup", "text": "Je tousse beaucoup.", "es": "Toso mucho.", "explanation": "En el médico o en la farmacia. «tousse» suena TUS, con «s» sorda: sh' TUS bo-KU.", "register": "neutral", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.jai-le-nez-qui-coule", "text": "J'ai le nez qui coule.", "es": "Me moquea la nariz.", "literal": "Tengo la nariz que gotea.", "explanation": "En la farmacia, para pedir algo para el resfriado. «nez» suena NÉ, sin «z»: shé l' NÉ ki KUL.", "register": "neutral", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.tu-nas-pas-lair-en-forme", "text": "Tu n'as pas l'air en forme.", "es": "No tienes buena cara.", "literal": "No tienes el aire en forma.", "notes": "Entre amigos se oye sin «ne»: «T'as pas l'air en forme».", "explanation": "A un amigo o compañero que ves cansado. Se liga «l'air‿en»: tü na pa lè-ran FORM.", "register": "tu", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.soigne-toi-bien", "text": "Soigne-toi bien!", "es": "¡Cuídate mucho!", "explanation": "A un amigo que está enfermo. «soigne» suena «suañ», con «ñ»: SUAÑ-tua BIAN!", "register": "tu", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.bon-retablissement", "text": "Bon rétablissement!", "es": "¡Que te mejores!", "notes": "Sirve con «tu» y con «vous»: también es «¡que se mejore!».", "explanation": "A alguien enfermo o que sale del hospital. Es largo, dilo por partes: bon ré-ta-blis-MAN.", "register": "neutral", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.je-voudrais-prendre-rendez-vous", "text": "Je voudrais prendre rendez-vous avec le médecin.", "es": "Quería pedir cita con el médico.", "notes": "«prendre rendez-vous» = pedir cita.", "explanation": "Por teléfono o en la consulta. «rendez-vous» suena ran-dé-VU, la «z» y la «s» no suenan.", "register": "neutral", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.cest-urgent", "text": "C'est urgent.", "es": "Es urgente.", "explanation": "Para que te den cita hoy mismo. Se liga y la «u» es francesa: se-tür-SHAN.", "register": "neutral", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.quest-ce-qui-ne-va-pas", "text": "Qu'est-ce qui ne va pas?", "es": "¿Qué le pasa?", "literal": "¿Qué es lo que no va?", "explanation": "Lo primero que te preguntará el médico. Va todo seguido: kes-ki n' va PA?", "register": "neutral", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.depuis-quand", "text": "Depuis quand?", "es": "¿Desde cuándo?", "explanation": "El médico quiere saber cuánto tiempo llevas así. «depuis» suena d'-PÜI, «quand» es nasal: KAN.", "register": "neutral", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.depuis-deux-jours", "text": "Depuis deux jours.", "es": "Desde hace dos días.", "notes": "«depuis» + tiempo = desde hace.", "explanation": "Tu respuesta al médico. «jours» empieza con «sh» sonora: d'-püi dö SHUR.", "register": "neutral", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.vous-avez-des-allergies", "text": "Vous avez des allergies?", "es": "¿Tiene alguna alergia?", "explanation": "Te lo preguntarán el médico y el farmacéutico. Se liga dos veces: vu-za-vé dé-za-lèr-SHI?", "register": "vous", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.je-suis-allergique-a-la-penicilline", "text": "Je suis allergique à la pénicilline.", "es": "Soy alérgico a la penicilina.", "explanation": "Imprescindible si tienes una alergia. «allergique» se liga con «suis»: sh' süi-za-lèr-SHIK.", "register": "neutral", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.je-ne-prends-pas-de-medicaments", "text": "Je ne prends pas de médicaments.", "es": "No tomo ningún medicamento.", "notes": "Tras la negación, «des» pasa a «de».", "explanation": "Cuando el médico te pregunta si tomas algo. «médicaments» acaba nasal: mé-di-ka-MAN.", "register": "neutral", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.je-vous-fais-une-ordonnance", "text": "Je vous fais une ordonnance.", "es": "Le hago una receta.", "notes": "La receta del médico es «l'ordonnance»; la de cocina, «la recette».", "explanation": "Lo dice el médico al final de la consulta. Se liga «une‿ordonnance»: ü-nor-do-NANS.", "register": "vous", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.jai-la-carte-europeenne", "text": "J'ai la carte européenne d'assurance maladie.", "es": "Tengo la tarjeta sanitaria europea.", "notes": "Con ella te atienden en Francia como a un asegurado de allí.", "explanation": "En la consulta o en el hospital, al dar tus datos. «européenne» suena ö-ro-pé-ÈN.", "register": "neutral", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.ou-est-la-pharmacie-de-garde", "text": "Où est la pharmacie de garde?", "es": "¿Dónde está la farmacia de guardia?", "explanation": "De noche o en domingo, cuando las demás están cerradas. «garde» suena GARD: far-ma-SI d' GARD.", "register": "neutral", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.vous-avez-quelque-chose-contre-le-mal-de-gorge", "text": "Vous avez quelque chose contre le mal de gorge?", "es": "¿Tiene algo para el dolor de garganta?", "notes": "También se dice «pour»: quelque chose pour la toux.", "explanation": "Al farmacéutico, al entrar. «quelque chose» se dice kèl-k' SHOS.", "register": "vous", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.cest-sans-ordonnance", "text": "C'est sans ordonnance?", "es": "¿Se vende sin receta?", "explanation": "Para saber si puedes comprar un medicamento sin ir al médico. Se liga: san-zor-do-NANS.", "register": "neutral", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.il-faut-une-ordonnance", "text": "Pour ça, il faut une ordonnance.", "es": "Para eso hace falta receta.", "explanation": "Te lo puede decir el farmacéutico. «il faut» = hace falta: il fo ü-nor-do-NANS.", "register": "neutral", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.trois-fois-par-jour", "text": "Trois fois par jour, après les repas.", "es": "Tres veces al día, después de las comidas.", "explanation": "Así te explican cómo tomar un medicamento. «trois fois» suena trua FUA.", "register": "neutral", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.je-voudrais-des-pansements", "text": "Je voudrais des pansements, s'il vous plaît.", "es": "Quería unas tiritas, por favor.", "explanation": "En la farmacia, para una herida pequeña. «pansements» tiene dos nasales: pans-MAN.", "register": "vous", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.au-secours", "text": "Au secours!", "es": "¡Socorro!", "explanation": "Para pedir ayuda a gritos en un peligro. La «s» final no suena: o s'-KUR!", "register": "neutral", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.cest-une-urgence", "text": "C'est une urgence!", "es": "¡Es una emergencia!", "explanation": "Para que te atiendan enseguida, en persona o por teléfono. Se liga: se-tü-nür-SHANS!", "register": "neutral", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.appelez-une-ambulance", "text": "Appelez une ambulance!", "es": "¡Llame a una ambulancia!", "explanation": "A quien esté cerca, si alguien está herido. Se liga: a-pé-LÉ ü-nan-bü-LANS!", "register": "vous", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.appelez-le-quinze", "text": "Appelez le 15!", "es": "¡Llame al 15!", "notes": "En Francia: 15 urgencias médicas (SAMU), 18 bomberos, 17 policía; el 112 funciona en toda Europa.", "explanation": "Para pedir que alguien llame a urgencias. «quinze» suena KANZ, nasal: a-pé-LÉ l' KANZ!", "register": "vous", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.il-y-a-eu-un-accident", "text": "Il y a eu un accident.", "es": "Ha habido un accidente.", "explanation": "Al llamar a urgencias o avisar a alguien. «eu» suena «ü»: i-lia-Ü a-nak-si-DAN.", "register": "neutral", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.ne-bougez-pas", "text": "Ne bougez pas.", "es": "No se mueva.", "explanation": "A un herido, mientras llega la ayuda. «bougez» suena bu-SHÉ: n' bu-SHÉ PA.", "register": "vous", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.je-dois-aller-aux-urgences", "text": "Je dois aller aux urgences.", "es": "Tengo que ir a urgencias.", "explanation": "Cuando necesitas el hospital ya. Se liga «aux‿urgences»: o-zür-SHANS.", "register": "neutral", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.ou-est-lhopital-le-plus-proche", "text": "Où est l'hôpital le plus proche?", "es": "¿Dónde está el hospital más cercano?", "explanation": "A un transeúnte o a un taxista. La «h» no suena: lo-pi-TAL l' plü PROSH.", "register": "neutral", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.au-voleur", "text": "Au voleur!", "es": "¡Al ladrón!", "explanation": "Si te roban y quieres que la gente reaccione. «voleur» lleva «eu» de labios redondos: o vo-LÖR!", "register": "neutral", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.on-ma-vole-mon-portefeuille", "text": "On m'a volé mon portefeuille.", "es": "Me han robado la cartera.", "notes": "Para denunciarlo, ve a la comisaría: «le commissariat».", "explanation": "A la policía o a quien te ayude. «portefeuille» acaba en «ll» suave: port'-FÖY.", "register": "neutral", "situation": "salud", "tags": ["emergencias"] }
+  ],
+  "vocab": [
+    { "id": "sante.tete", "word": "tête", "article": "la", "gender": "f", "plural": "têtes", "es": "la cabeza", "example": "sante.jai-mal-a-la-tete", "situation": "salud", "tags": ["cuerpo"] },
+    { "id": "sante.ventre", "word": "ventre", "article": "le", "gender": "m", "plural": "ventres", "es": "la tripa, la barriga", "example": "sante.jai-mal-au-ventre", "situation": "salud", "tags": ["cuerpo"] },
+    { "id": "sante.dos", "word": "dos", "article": "le", "gender": "m", "plural": "dos", "es": "la espalda", "notes": "No es el número dos: la «s» no suena.", "example": "sante.jai-mal-au-dos", "situation": "salud", "tags": ["cuerpo"] },
+    { "id": "sante.gorge", "word": "gorge", "article": "la", "gender": "f", "plural": "gorges", "es": "la garganta", "example": "sante.jai-mal-a-la-gorge", "situation": "salud", "tags": ["cuerpo"] },
+    { "id": "sante.dent", "word": "dent", "article": "la", "gender": "f", "plural": "dents", "es": "el diente, la muela", "notes": "Femenino en francés.", "example": "sante.jai-mal-aux-dents", "situation": "salud", "tags": ["cuerpo"], "image": "fluent:tooth" },
+    { "id": "sante.oreille", "word": "oreille", "article": "l'", "gender": "f", "plural": "oreilles", "es": "la oreja, el oído", "situation": "salud", "tags": ["cuerpo"], "image": "fluent:ear" },
+    { "id": "sante.oeil", "word": "œil", "article": "l'", "gender": "m", "plural": "yeux", "es": "el ojo", "notes": "Plural irregular: «les yeux» (lé-ZIÖ).", "situation": "salud", "tags": ["cuerpo"], "image": "fluent:eye" },
+    { "id": "sante.bras", "word": "bras", "article": "le", "gender": "m", "plural": "bras", "es": "el brazo", "notes": "La «s» no suena: «bra».", "situation": "salud", "tags": ["cuerpo"], "image": "fluent:flexed-biceps" },
+    { "id": "sante.main", "word": "main", "article": "la", "gender": "f", "plural": "mains", "es": "la mano", "notes": "Nasal: suena «man».", "situation": "salud", "tags": ["cuerpo"], "image": "fluent:raised-hand" },
+    { "id": "sante.jambe", "word": "jambe", "article": "la", "gender": "f", "plural": "jambes", "es": "la pierna", "situation": "salud", "tags": ["cuerpo"], "image": "fluent:leg" },
+    { "id": "sante.pied", "word": "pied", "article": "le", "gender": "m", "plural": "pieds", "es": "el pie", "notes": "«à pied» = andando.", "example": "sante.je-me-suis-fait-mal-au-pied", "situation": "salud", "tags": ["cuerpo"], "image": "fluent:foot" },
+    { "id": "sante.fievre", "word": "fièvre", "article": "la", "gender": "f", "plural": "fièvres", "es": "la fiebre", "example": "sante.jai-de-la-fievre", "situation": "salud", "tags": ["enfermedad"], "image": "fluent:face-with-thermometer" },
+    { "id": "sante.rhume", "word": "rhume", "article": "le", "gender": "m", "plural": "rhumes", "es": "el resfriado", "notes": "«Je suis enrhumé» = estoy resfriado.", "situation": "salud", "tags": ["enfermedad"], "image": "fluent:sneezing-face" },
+    { "id": "sante.toux", "word": "toux", "article": "la", "gender": "f", "plural": "toux", "es": "la tos", "notes": "La «x» no suena: «tu».", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.grippe", "word": "grippe", "article": "la", "gender": "f", "plural": "grippes", "es": "la gripe", "notes": "«J'ai la grippe» = tengo la gripe.", "situation": "salud", "tags": ["enfermedad"] },
+    { "id": "sante.allergie", "word": "allergie", "article": "l'", "gender": "f", "plural": "allergies", "es": "la alergia", "example": "sante.vous-avez-des-allergies", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.rendez-vous", "word": "rendez-vous", "article": "le", "gender": "m", "plural": "rendez-vous", "es": "la cita", "notes": "Para el médico, el banco o una cita con alguien.", "example": "sante.je-voudrais-prendre-rendez-vous", "situation": "salud", "tags": ["medico"] },
+    { "id": "sante.ordonnance", "word": "ordonnance", "article": "l'", "gender": "f", "plural": "ordonnances", "es": "la receta (médica)", "example": "sante.je-vous-fais-une-ordonnance", "situation": "salud", "tags": ["medico", "farmacia"] },
+    { "id": "sante.pharmacie", "word": "pharmacie", "article": "la", "gender": "f", "plural": "pharmacies", "es": "la farmacia", "notes": "Se reconoce por la cruz verde luminosa.", "example": "sante.ou-est-la-pharmacie-de-garde", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.medicament", "word": "médicament", "article": "le", "gender": "m", "plural": "médicaments", "es": "el medicamento", "example": "sante.je-ne-prends-pas-de-medicaments", "situation": "salud", "tags": ["farmacia"], "image": "fluent:pill" },
+    { "id": "sante.comprime", "word": "comprimé", "article": "le", "gender": "m", "plural": "comprimés", "es": "la pastilla, el comprimido", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.sirop", "word": "sirop", "article": "le", "gender": "m", "plural": "sirops", "es": "el jarabe", "notes": "La «p» no suena: «si-ró».", "situation": "salud", "tags": ["farmacia"] },
+    { "id": "sante.pansement", "word": "pansement", "article": "le", "gender": "m", "plural": "pansements", "es": "la tirita, el apósito", "example": "sante.je-voudrais-des-pansements", "situation": "salud", "tags": ["farmacia"], "image": "fluent:adhesive-bandage" },
+    { "id": "sante.urgences", "word": "urgences", "article": "les", "gender": "f", "es": "urgencias (del hospital)", "notes": "Siempre en plural: «aller aux urgences».", "example": "sante.je-dois-aller-aux-urgences", "situation": "salud", "tags": ["emergencias"] },
+    { "id": "sante.hopital", "word": "hôpital", "article": "l'", "gender": "m", "plural": "hôpitaux", "es": "el hospital", "example": "sante.ou-est-lhopital-le-plus-proche", "situation": "salud", "tags": ["emergencias"], "image": "fluent:hospital" },
+    { "id": "sante.ambulance", "word": "ambulance", "article": "l'", "gender": "f", "plural": "ambulances", "es": "la ambulancia", "example": "sante.appelez-une-ambulance", "situation": "salud", "tags": ["emergencias"], "image": "fluent:ambulance" },
+    { "id": "sante.pompiers", "word": "pompiers", "article": "les", "gender": "m", "es": "los bomberos", "notes": "En Francia también acuden a las urgencias médicas. Teléfono: 18.", "situation": "salud", "tags": ["emergencias"], "image": "fluent:fire-engine" },
+    { "id": "sante.police", "word": "police", "article": "la", "gender": "f", "es": "la policía", "notes": "Teléfono: 17. La comisaría es «le commissariat».", "situation": "salud", "tags": ["emergencias"], "image": "fluent:police-officer" },
+    { "id": "sante.accident", "word": "accident", "article": "l'", "gender": "m", "plural": "accidents", "es": "el accidente", "example": "sante.il-y-a-eu-un-accident", "situation": "salud", "tags": ["emergencias"] }
+  ],
+  "qa": [
+    {
+      "id": "sante.qa.mal",
+      "question": "Où est-ce que vous avez mal?",
+      "questionEs": "¿Dónde le duele?",
+      "accepted": [
+        { "text": "J'ai mal à la gorge.", "es": "Me duele la garganta." },
+        { "text": "Ici, au ventre.", "es": "Aquí, en la tripa." }
+      ],
+      "distractors": [
+        { "text": "J'ai mal la gorge.", "es": "Tengo mal la garganta." },
+        { "text": "Je suis mal au dos.", "es": "Estoy mal de la espalda." }
+      ],
+      "register": "vous",
+      "situation": "salud",
+      "notes": "Doler = «avoir mal à»: «j'ai mal à la gorge», «j'ai mal au dos».",
+      "tags": ["cuerpo", "dolor"]
+    },
+    {
+      "id": "sante.qa.forme",
+      "question": "Ça va? Tu n'as pas l'air en forme.",
+      "questionEs": "¿Estás bien? No tienes buena cara.",
+      "accepted": [
+        { "text": "Non, je ne me sens pas bien.", "es": "No, no me encuentro bien." },
+        { "text": "Bof, j'ai mal à la tête.", "es": "Psé, me duele la cabeza." }
+      ],
+      "distractors": [
+        { "text": "Non, je suis mal.", "es": "No, estoy mal." },
+        { "text": "Oui, je suis malade, merci.", "es": "Sí, estoy malo, gracias." }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": "«Estoy mal» no se dice «je suis mal»: «je ne me sens pas bien».",
+      "tags": ["enfermedad"]
+    },
+    {
+      "id": "sante.qa.rendez-vous",
+      "question": "Cabinet médical, bonjour. Je vous écoute.",
+      "questionEs": "Consulta médica, buenos días. Dígame.",
+      "accepted": [
+        { "text": "Bonjour, je voudrais prendre rendez-vous.", "es": "Buenos días, quería pedir cita." },
+        { "text": "Bonjour, c'est urgent, j'ai beaucoup de fièvre.", "es": "Buenos días, es urgente, tengo mucha fiebre." }
+      ],
+      "distractors": [
+        { "text": "Bonjour, je voudrais faire un rendez-vous.", "es": "Buenos días, quería hacer una cita." },
+        { "text": "Bonjour, tu as un rendez-vous?", "es": "Hola, ¿tienes cita?" }
+      ],
+      "register": "vous",
+      "situation": "salud",
+      "notes": "Pedir cita = «prendre rendez-vous».",
+      "tags": ["medico"]
+    },
+    {
+      "id": "sante.qa.depuis",
+      "question": "Vous avez de la fièvre depuis quand?",
+      "questionEs": "¿Desde cuándo tiene fiebre?",
+      "accepted": [
+        { "text": "Depuis hier soir.", "es": "Desde anoche." },
+        { "text": "Depuis deux jours.", "es": "Desde hace dos días." }
+      ],
+      "distractors": [
+        { "text": "Depuis demain.", "es": "Desde mañana." },
+        { "text": "Trois fois par jour.", "es": "Tres veces al día." }
+      ],
+      "register": "vous",
+      "situation": "salud",
+      "tags": ["medico"]
+    },
+    {
+      "id": "sante.qa.allergies",
+      "question": "Vous avez des allergies?",
+      "questionEs": "¿Tiene alguna alergia?",
+      "accepted": [
+        { "text": "Oui, je suis allergique à la pénicilline.", "es": "Sí, soy alérgico a la penicilina." },
+        { "text": "Non, aucune.", "es": "No, ninguna." }
+      ],
+      "distractors": [
+        { "text": "Oui, j'ai allergique à la pénicilline.", "es": "Sí, tengo alérgico a la penicilina." },
+        { "text": "Non, je suis malade.", "es": "No, estoy malo." }
+      ],
+      "register": "vous",
+      "situation": "salud",
+      "notes": "«allergique» va con «être»: «je suis allergique à…».",
+      "tags": ["medico"]
+    },
+    {
+      "id": "sante.qa.pharmacie",
+      "question": "Bonjour, je peux vous aider?",
+      "questionEs": "Buenos días, ¿le puedo ayudar?",
+      "accepted": [
+        { "text": "Oui, vous avez quelque chose contre la toux?", "es": "Sí, ¿tiene algo para la tos?" },
+        { "text": "Oui, je voudrais des pansements, s'il vous plaît.", "es": "Sí, quería unas tiritas, por favor." }
+      ],
+      "distractors": [
+        { "text": "Oui, tu as quelque chose contre la toux?", "es": "Sí, ¿tienes algo para la tos?" },
+        { "text": "Oui, je voudrais une ordonnance, s'il vous plaît.", "es": "Sí, quería una receta, por favor." }
+      ],
+      "register": "vous",
+      "situation": "salud",
+      "notes": "Al farmacéutico se le habla de «vous»; la receta te la hace el médico.",
+      "tags": ["farmacia"]
+    },
+    {
+      "id": "sante.qa.ordonnance",
+      "question": "Vous avez une ordonnance?",
+      "questionEs": "¿Tiene receta?",
+      "accepted": [
+        { "text": "Oui, la voici.", "es": "Sí, aquí la tiene." },
+        { "text": "Non, je n'en ai pas.", "es": "No, no tengo." }
+      ],
+      "distractors": [
+        { "text": "Non, je n'ai pas de rendez-vous.", "es": "No, no tengo cita." },
+        { "text": "Oui, trois fois par jour.", "es": "Sí, tres veces al día." }
+      ],
+      "register": "vous",
+      "situation": "salud",
+      "tags": ["farmacia"]
+    },
+    {
+      "id": "sante.qa.urgence",
+      "question": "SAMU, bonjour. Qu'est-ce qui se passe?",
+      "questionEs": "Urgencias, buenos días. ¿Qué ocurre?",
+      "accepted": [
+        { "text": "Il y a eu un accident, il y a un blessé.", "es": "Ha habido un accidente, hay un herido." },
+        { "text": "Mon ami ne se sent pas bien, il a très mal au ventre.", "es": "Mi amigo no se encuentra bien, le duele mucho la tripa." }
+      ],
+      "distractors": [
+        { "text": "Je voudrais prendre rendez-vous, s'il vous plaît.", "es": "Quería pedir cita, por favor." },
+        { "text": "Il y a un accident demain.", "es": "Hay un accidente mañana." }
+      ],
+      "register": "neutral",
+      "situation": "salud",
+      "notes": "El SAMU (15) es el número de urgencias médicas en Francia.",
+      "tags": ["emergencias"]
+    }
+  ]
+}

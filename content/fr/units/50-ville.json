@@ -1,0 +1,374 @@
+{
+  "id": "ville",
+  "order": 50,
+  "title": "Por la ciudad: transporte y direcciones",
+  "description": "Moverte en metro, bus y tranvía, comprar y validar el billete, y preguntar (y entender) cómo llegar andando a un sitio.",
+  "emoji": "🚇",
+  "situation": "ciudad",
+  "lessons": [
+    {
+      "id": "ville.l.transports",
+      "title": "Metro, bus y tranvía",
+      "items": [
+        "ville.metro",
+        "ville.bus",
+        "ville.tram",
+        "ville.ligne",
+        "ville.station",
+        "ville.arret",
+        "ville.taxi",
+        "ville.voiture",
+        "loisirs.velo",
+        "ville.je-prends-le-metro",
+        "ville.on-y-va-en-bus",
+        "ville.jy-vais-a-pied",
+        "ville.il-y-a-un-bus-pour-la-gare",
+        "ville.le-bus-passe-toutes-les-dix-minutes",
+        "ville.le-prochain-bus-est-a-quelle-heure",
+        "ville.il-y-a-une-greve",
+        "ville.qa.comment-tu-viens"
+      ]
+    },
+    {
+      "id": "ville.l.tickets",
+      "title": "Comprar el billete",
+      "items": [
+        "ville.ticket",
+        "ville.distributeur",
+        "nombres.carte",
+        "nombres.euro",
+        "ville.ou-est-ce-quon-achete-les-tickets",
+        "ville.au-distributeur-la-bas",
+        "ville.un-ticket-sil-vous-plait",
+        "ville.je-voudrais-deux-tickets",
+        "ville.combien-coute-un-ticket",
+        "ville.le-ticket-est-valable-une-heure",
+        "ville.un-ticket-pour-toute-la-journee",
+        "ville.je-peux-acheter-un-ticket-dans-le-bus",
+        "ville.la-machine-ne-prend-pas-ma-carte",
+        "ville.il-faut-valider-le-ticket",
+        "ville.qa.ticket",
+        "ville.qa.combien"
+      ]
+    },
+    {
+      "id": "ville.l.trajet",
+      "title": "En el metro y en el bus",
+      "items": [
+        "ville.direction",
+        "ville.correspondance",
+        "ville.sortie",
+        "ville.cest-quelle-ligne-pour-bellecour",
+        "ville.prenez-la-ligne-b",
+        "ville.quelle-direction-pour-part-dieu",
+        "ville.cest-direct",
+        "ville.il-faut-changer-a-saxe-gambetta",
+        "ville.ce-bus-va-a-la-gare",
+        "ville.pour-le-musee-je-descends-ou",
+        "ville.cest-le-prochain-arret",
+        "ville.pardon-vous-descendez",
+        "ville.cette-place-est-libre",
+        "ville.ou-est-la-sortie",
+        "ville.on-se-retrouve-a-la-sortie-du-metro",
+        "ville.qa.prochain-arret",
+        "ville.qa.station"
+      ]
+    },
+    {
+      "id": "ville.l.chemin",
+      "title": "Preguntar el camino",
+      "items": [
+        "presenter.rue",
+        "ville.a-gauche",
+        "ville.a-droite",
+        "ville.tout-droit",
+        "ville.feu",
+        "ville.carrefour",
+        "ville.coin",
+        "ville.pont",
+        "ville.pres",
+        "ville.loin",
+        "ville.plan",
+        "ville.excusez-moi-je-cherche-la-gare",
+        "ville.pour-aller-place-bellecour",
+        "ville.cest-par-ou",
+        "grammaire.cest-loin",
+        "ville.allez-tout-droit",
+        "ville.tournez-a-gauche",
+        "ville.prenez-la-deuxieme-rue-a-droite",
+        "ville.au-feu-tournez-a-droite",
+        "ville.traversez-le-pont",
+        "ville.cest-au-coin-de-la-rue",
+        "ville.cest-a-cinq-minutes-a-pied",
+        "ville.cest-juste-a-cote",
+        "ville.vous-pouvez-me-montrer-sur-le-plan",
+        "ville.je-crois-que-je-me-suis-perdu",
+        "ville.desole-je-ne-suis-pas-dici",
+        "ville.qa.chercher",
+        "ville.qa.musee",
+        "ville.qa.loin"
+      ]
+    },
+    {
+      "id": "ville.l.lieux",
+      "title": "Sitios de la ciudad",
+      "items": [
+        "ville.centre-ville",
+        "maison.quartier",
+        "ville.place",
+        "ville.gare",
+        "ville.mairie",
+        "ville.poste",
+        "ville.banque",
+        "ville.eglise",
+        "ville.parc",
+        "loisirs.musee",
+        "ville.office-de-tourisme",
+        "grammaire.il-y-a-une-pharmacie",
+        "ville.il-y-a-une-banque-par-ici",
+        "ville.ou-est-loffice-de-tourisme",
+        "ville.cest-en-face-de-la-poste",
+        "ville.cest-sur-la-place-a-cote-de-leglise",
+        "ville.la-poste-ferme-a-quelle-heure",
+        "ville.qa.parc"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "ville.je-prends-le-metro", "text": "Je prends le métro.", "es": "Cojo el metro.", "notes": "Con transporte se usa «prendre»: prendre le bus, le tram, un taxi.", "explanation": "Para contar cómo vas a trabajar o al centro. «prends» suena «pran», sin «d» ni «s»: sh' pran l' mé-TRO.", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.on-y-va-en-bus", "text": "On y va en bus?", "es": "¿Vamos en bus?", "notes": "«On» = nosotros, en la conversación.", "explanation": "Con amigos, al decidir cómo ir a un sitio. «On y va» se liga: o-ni-VA an BÜS, con la «u» francesa.", "register": "tu", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.jy-vais-a-pied", "text": "J'y vais à pied.", "es": "Voy andando.", "notes": "«à pied» = andando, a pie; nunca «en pied».", "explanation": "Cuando el sitio está cerca y no coges nada. «pied» suena «pié», la «d» no suena: shi vé a PIÉ.", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.il-y-a-un-bus-pour-la-gare", "text": "Il y a un bus pour la gare?", "es": "¿Hay algún bus que vaya a la estación?", "notes": "«la gare» es la estación de tren; la de metro es «la station».", "explanation": "En la parada o a un transeúnte. «gare» acaba en «r» francesa, de garganta: i-lia-an BÜS pur la GAR?", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.le-bus-passe-toutes-les-dix-minutes", "text": "Le bus passe toutes les dix minutes.", "es": "El bus pasa cada diez minutos.", "literal": "El bus pasa todos los diez minutos.", "explanation": "Lo oirás al preguntar la frecuencia. «dix» delante de consonante suena «di»: tut lé di mi-NÜT.", "register": "neutral", "situation": "ciudad", "tags": ["transporte", "horarios"] },
+    { "id": "ville.le-prochain-bus-est-a-quelle-heure", "text": "Le prochain bus est à quelle heure?", "es": "¿A qué hora pasa el próximo bus?", "explanation": "En la parada, si no hay pantalla. Se liga «quelle‿heure»: kè-LÖR. «prochain» acaba en nasal: pro-SHAN.", "register": "neutral", "situation": "ciudad", "tags": ["transporte", "horarios"] },
+    { "id": "ville.il-y-a-une-greve", "text": "Aujourd'hui, il y a une grève.", "es": "Hoy hay huelga.", "notes": "En Francia las huelgas de transporte son frecuentes: mira la web antes de salir.", "explanation": "Para explicar por qué no hay metro ni bus. «grève» tiene «è» abierta: o-shur-DÜI, i-lia-ün GRÈV.", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.ou-est-ce-quon-achete-les-tickets", "text": "Où est-ce qu'on achète les tickets?", "es": "¿Dónde se compran los billetes?", "notes": "«on» también es el «se» impersonal: ¿dónde se compran?", "explanation": "En la estación o a un empleado. Se liga «qu'on‿achète»: u-és-ko-na-SHÈT lé ti-KÉ.", "register": "neutral", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.au-distributeur-la-bas", "text": "Au distributeur, là-bas.", "es": "En la máquina, allí.", "explanation": "La respuesta típica cuando preguntas dónde comprar el billete. «distributeur» tiene dos «u» francesas: dis-tri-bü-TÖR.", "register": "neutral", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.un-ticket-sil-vous-plait", "text": "Un ticket, s'il vous plaît.", "es": "Un billete, por favor.", "notes": "Para bus, metro y tranvía se dice «ticket»; para tren o avión, «billet».", "explanation": "En la taquilla o al conductor del bus. «ticket» se pronuncia ti-KÉ, sin «t» final.", "register": "vous", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.je-voudrais-deux-tickets", "text": "Je voudrais deux tickets.", "es": "Quería dos billetes.", "explanation": "En la taquilla, para ti y otra persona. «deux» tiene la «eu» de labios redondos: sh' vu-DRÉ dö ti-KÉ.", "register": "neutral", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.combien-coute-un-ticket", "text": "Combien coûte un ticket?", "es": "¿Cuánto cuesta un billete?", "explanation": "Antes de comprar, en la taquilla. «combien» tiene dos nasales: kon-BIAN kut an ti-KÉ?", "register": "neutral", "situation": "ciudad", "tags": ["billetes", "precios"] },
+    { "id": "ville.le-ticket-est-valable-une-heure", "text": "Le ticket est valable une heure.", "es": "El billete vale para una hora.", "notes": "En muchas ciudades puedes cambiar de línea con el mismo billete durante ese tiempo.", "explanation": "Te lo dirán al comprar un billete sencillo. Se liga «une‿heure»: ü-NÖR.", "register": "neutral", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.un-ticket-pour-toute-la-journee", "text": "Je voudrais un ticket pour toute la journée.", "es": "Quería un billete para todo el día.", "explanation": "Si vas a moverte mucho en un día de turismo. «journée» empieza con «sh» sonora: shur-NÉ.", "register": "neutral", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.je-peux-acheter-un-ticket-dans-le-bus", "text": "Je peux acheter un ticket dans le bus?", "es": "¿Puedo comprar el billete en el bus?", "explanation": "Al conductor o a alguien en la parada. «acheter» se dice ash-TÉ, la «e» del medio casi desaparece.", "register": "neutral", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.la-machine-ne-prend-pas-ma-carte", "text": "La machine ne prend pas ma carte.", "es": "La máquina no me acepta la tarjeta.", "literal": "La máquina no toma mi tarjeta.", "explanation": "Para pedir ayuda a un empleado o a otro viajero. «machine» suena ma-SHIN, con «sh».", "register": "neutral", "situation": "ciudad", "tags": ["billetes", "problemas"] },
+    { "id": "ville.il-faut-valider-le-ticket", "text": "Il faut valider le ticket.", "es": "Hay que validar el billete.", "notes": "Sin validar te pueden multar aunque lo hayas comprado.", "explanation": "Lo verás en carteles y te lo recordarán al subir. «Il faut» = hay que: il FO va-li-DÉ.", "register": "neutral", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.cest-quelle-ligne-pour-bellecour", "text": "C'est quelle ligne pour aller à Bellecour?", "es": "¿Qué línea es para ir a Bellecour?", "notes": "Bellecour es la gran plaza del centro de Lyon.", "explanation": "En la estación, a un empleado o a otro viajero. «ligne» acaba en «ñ»: se kèl LIÑ.", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.prenez-la-ligne-b", "text": "Prenez la ligne B jusqu'à Part-Dieu.", "es": "Coja la línea B hasta Part-Dieu.", "notes": "La letra B se dice «bé».", "explanation": "La respuesta típica que te dará un empleado. «jusqu'à» suena «shüs-KA», con «u» francesa.", "register": "vous", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.quelle-direction-pour-part-dieu", "text": "Quelle direction pour Part-Dieu?", "es": "¿Qué dirección para Part-Dieu?", "notes": "En el metro, los andenes se indican con la última estación de la línea: «direction …».", "explanation": "En el andén, para no coger el metro al revés. «direction» suena di-rek-SION, nasal al final.", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.cest-direct", "text": "C'est direct?", "es": "¿Es directo?", "notes": "O sea: ¿hay que hacer transbordo?", "explanation": "Para saber si tendrás que cambiar de línea. Aquí la «t» final sí suena: se di-REKT?", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.il-faut-changer-a-saxe-gambetta", "text": "Non, il faut changer à Saxe-Gambetta.", "es": "No, hay que hacer transbordo en Saxe-Gambetta.", "notes": "El transbordo es «la correspondance».", "explanation": "Te lo dirán si tu trayecto no es directo. «changer» suena shan-SHÉ: nasal y dos «sh».", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.ce-bus-va-a-la-gare", "text": "Ce bus va à la gare?", "es": "¿Este bus va a la estación?", "explanation": "Al conductor, antes de subir. «ce bus» suena s' BÜS, con la «u» francesa (labios de «u», lengua de «i»).", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.pour-le-musee-je-descends-ou", "text": "Pour le musée, je descends où?", "es": "Para el museo, ¿dónde me bajo?", "notes": "«descendre» = bajarse; «monter» = subirse.", "explanation": "Al conductor o a quien tengas al lado. «descends» suena dé-SAN, sin «d» ni «s» final.", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.cest-le-prochain-arret", "text": "C'est le prochain arrêt.", "es": "Es la próxima parada.", "explanation": "Te lo dirá quien te ayude a no pasarte de parada. Se liga «prochain‿arrêt»: pro-shè-na-RÈ.", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.pardon-vous-descendez", "text": "Pardon, vous descendez?", "es": "Perdone, ¿se baja?", "explanation": "En un metro lleno, para que te dejen pasar hacia la puerta. «Pardon» acaba en nasal, sin «n»: par-DON vu dé-san-DÉ?", "register": "vous", "situation": "ciudad", "tags": ["transporte", "cortesia"] },
+    { "id": "ville.cette-place-est-libre", "text": "Cette place est libre?", "es": "¿Está libre este sitio?", "notes": "«la place» es también el asiento.", "explanation": "En el bus o en el tranvía, antes de sentarte. Se liga «place‿est»: sèt pla-sé LIBR'?", "register": "neutral", "situation": "ciudad", "tags": ["transporte", "cortesia"] },
+    { "id": "ville.ou-est-la-sortie", "text": "Où est la sortie?", "es": "¿Dónde está la salida?", "explanation": "En una estación grande de metro. «Où est» se dice todo seguido: u-É la sor-TI?", "register": "neutral", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.on-se-retrouve-a-la-sortie-du-metro", "text": "On se retrouve à la sortie du métro?", "es": "¿Quedamos a la salida del metro?", "explanation": "Con un amigo, para quedar en un punto fácil. «retrouve» lleva la «r» de garganta dos veces: on s' r'-TRUV.", "register": "tu", "situation": "ciudad", "tags": ["transporte", "planes"] },
+    { "id": "ville.excusez-moi-je-cherche-la-gare", "text": "Excusez-moi, je cherche la gare.", "es": "Perdone, estoy buscando la estación.", "explanation": "Para parar a un transeúnte y pedir indicaciones. «cherche» suena SHÈRSH: sh' SHÈRSH la GAR.", "register": "vous", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.pour-aller-place-bellecour", "text": "Pour aller place Bellecour, s'il vous plaît?", "es": "¿Para ir a la plaza Bellecour, por favor?", "notes": "Con plazas y calles se suele omitir «à la»: «aller place Bellecour».", "explanation": "La forma más rápida de preguntar el camino. Se liga «pour‿aller»: pu-ra-LÉ plas bèl-KUR.", "register": "vous", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.cest-par-ou", "text": "C'est par où?", "es": "¿Por dónde es?", "explanation": "Cuando ya sabes el sitio pero no hacia dónde ir. Se dice seguido: se pa-RU?", "register": "neutral", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.allez-tout-droit", "text": "Allez tout droit.", "es": "Siga recto.", "notes": "«tout droit» = recto; «à droite» = a la derecha. ¡No los confundas!", "explanation": "La indicación que más oirás. «droit» suena «drua», sin «t»: a-LÉ tu DRUA.", "register": "vous", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.tournez-a-gauche", "text": "Tournez à gauche.", "es": "Gire a la izquierda.", "explanation": "Indicación de un transeúnte. «gauche» suena GOSH, con «o» cerrada: tur-NÉ a GOSH.", "register": "vous", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.prenez-la-deuxieme-rue-a-droite", "text": "Prenez la deuxième rue à droite.", "es": "Coja la segunda calle a la derecha.", "explanation": "Indicación típica para llegar a pie. «rue» lleva la «u» francesa: dö-ZIÈM RÜ a DRUAT.", "register": "vous", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.au-feu-tournez-a-droite", "text": "Au feu, tournez à droite.", "es": "En el semáforo, gire a la derecha.", "notes": "«le feu» es el semáforo (y también el fuego).", "explanation": "Indicación de un transeúnte. «feu» tiene la «eu» de labios redondos: o FÖ.", "register": "vous", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.traversez-le-pont", "text": "Traversez le pont, puis c'est à gauche.", "es": "Cruce el puente y luego es a la izquierda.", "explanation": "En Lyon hay que cruzar muchos puentes. «pont» es nasal, sin «t»: tra-vèr-SÉ l' PON.", "register": "vous", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.cest-au-coin-de-la-rue", "text": "C'est au coin de la rue.", "es": "Está en la esquina.", "explanation": "Para decir que algo está muy cerca, en la esquina. «coin» suena «kuan», nasal: se-to KUAN.", "register": "neutral", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.cest-a-cinq-minutes-a-pied", "text": "C'est à cinq minutes à pied.", "es": "Está a cinco minutos andando.", "explanation": "Para decir la distancia en tiempo. «cinq» delante de consonante suena «san»: se-ta san mi-NÜT a PIÉ.", "register": "neutral", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.cest-juste-a-cote", "text": "C'est juste à côté.", "es": "Está justo al lado.", "explanation": "Para tranquilizar a alguien: está aquí mismo. «juste» empieza con «sh» sonora y «u» francesa: SHÜST a ko-TÉ.", "register": "neutral", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.vous-pouvez-me-montrer-sur-le-plan", "text": "Vous pouvez me montrer sur le plan?", "es": "¿Me lo puede enseñar en el plano?", "explanation": "Cuando no entiendes bien las indicaciones. «montrer» empieza nasal: m' mon-TRÉ sür l' PLAN.", "register": "vous", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.je-crois-que-je-me-suis-perdu", "text": "Je crois que je me suis perdu.", "es": "Creo que me he perdido.", "notes": "Si eres mujer: «perdue» (suena igual).", "explanation": "Para pedir ayuda en la calle. «crois» suena «crua»: sh' CRUA k' sh' m' süi pèr-DÜ.", "register": "neutral", "situation": "ciudad", "tags": ["direcciones", "problemas"] },
+    { "id": "ville.desole-je-ne-suis-pas-dici", "text": "Désolé, je ne suis pas d'ici.", "es": "Lo siento, no soy de aquí.", "notes": "Si eres mujer: «Désolée» (suena igual).", "explanation": "Cuando alguien te pregunta el camino y no lo sabes. «d'ici» suena di-SI: dé-zo-LÉ, sh' n' süi pa di-SI.", "register": "neutral", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.il-y-a-une-banque-par-ici", "text": "Il y a une banque par ici?", "es": "¿Hay algún banco por aquí?", "explanation": "Cuando buscas un banco o un cajero. «banque» es nasal: ün BANK pa-ri-SI?", "register": "neutral", "situation": "ciudad", "tags": ["lugares"] },
+    { "id": "ville.ou-est-loffice-de-tourisme", "text": "Où est l'office de tourisme?", "es": "¿Dónde está la oficina de turismo?", "explanation": "Al llegar a una ciudad nueva, para pedir un plano. «tourisme» suena tu-RISM, con «s» sonora.", "register": "neutral", "situation": "ciudad", "tags": ["lugares"] },
+    { "id": "ville.cest-en-face-de-la-poste", "text": "C'est en face de la poste.", "es": "Está enfrente de Correos.", "explanation": "Para situar un sitio con una referencia conocida. «en face» se liga: se-tan FAS d' la POST.", "register": "neutral", "situation": "ciudad", "tags": ["lugares", "direcciones"] },
+    { "id": "ville.cest-sur-la-place-a-cote-de-leglise", "text": "C'est sur la place, à côté de l'église.", "es": "Está en la plaza, al lado de la iglesia.", "notes": "«sur la place» = en la plaza (no «dans»).", "explanation": "Para dar una referencia clara en el centro. «église» suena é-GLIS, con «s» sonora.", "register": "neutral", "situation": "ciudad", "tags": ["lugares", "direcciones"] },
+    { "id": "ville.la-poste-ferme-a-quelle-heure", "text": "La poste ferme à quelle heure?", "es": "¿A qué hora cierra Correos?", "explanation": "Antes de ir a enviar un paquete. «ferme» lleva «è» abierta: la POST fèr-ma kè-LÖR?", "register": "neutral", "situation": "ciudad", "tags": ["lugares", "horarios"] }
+  ],
+  "vocab": [
+    { "id": "ville.metro", "word": "métro", "article": "le", "gender": "m", "plural": "métros", "es": "el metro", "example": "ville.je-prends-le-metro", "situation": "ciudad", "tags": ["transporte"], "image": "fluent:metro" },
+    { "id": "ville.bus", "word": "bus", "article": "le", "gender": "m", "plural": "bus", "es": "el autobús, el bus", "notes": "La «s» final sí suena: «büs».", "example": "ville.ce-bus-va-a-la-gare", "situation": "ciudad", "tags": ["transporte"], "image": "fluent:bus" },
+    { "id": "ville.tram", "word": "tram", "article": "le", "gender": "m", "plural": "trams", "es": "el tranvía", "notes": "Forma corta de «le tramway».", "situation": "ciudad", "tags": ["transporte"], "image": "fluent:tram" },
+    { "id": "ville.ligne", "word": "ligne", "article": "la", "gender": "f", "plural": "lignes", "es": "la línea", "example": "ville.cest-quelle-ligne-pour-bellecour", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.station", "word": "station", "article": "la", "gender": "f", "plural": "stations", "es": "la estación (de metro)", "notes": "La de tren es «la gare».", "situation": "ciudad", "tags": ["transporte"], "image": "fluent:station" },
+    { "id": "ville.arret", "word": "arrêt", "article": "l'", "gender": "m", "plural": "arrêts", "es": "la parada", "notes": "Masculino: «le prochain arrêt».", "example": "ville.cest-le-prochain-arret", "situation": "ciudad", "tags": ["transporte"], "image": "fluent:bus-stop" },
+    { "id": "ville.taxi", "word": "taxi", "article": "le", "gender": "m", "plural": "taxis", "es": "el taxi", "situation": "ciudad", "tags": ["transporte"], "image": "fluent:oncoming-taxi" },
+    { "id": "ville.voiture", "word": "voiture", "article": "la", "gender": "f", "plural": "voitures", "es": "el coche", "notes": "«en voiture» = en coche.", "situation": "ciudad", "tags": ["transporte"], "image": "fluent:automobile" },
+    { "id": "ville.ticket", "word": "ticket", "article": "le", "gender": "m", "plural": "tickets", "es": "el billete (de bus, metro, tranvía)", "notes": "Para el tren o el avión: «le billet».", "example": "ville.un-ticket-sil-vous-plait", "situation": "ciudad", "tags": ["billetes"], "image": "fluent:ticket" },
+    { "id": "ville.distributeur", "word": "distributeur", "article": "le", "gender": "m", "plural": "distributeurs", "es": "la máquina expendedora", "notes": "También el cajero automático: «le distributeur de billets».", "example": "ville.au-distributeur-la-bas", "situation": "ciudad", "tags": ["billetes"] },
+    { "id": "ville.direction", "word": "direction", "article": "la", "gender": "f", "plural": "directions", "es": "la dirección (sentido)", "example": "ville.quelle-direction-pour-part-dieu", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.correspondance", "word": "correspondance", "article": "la", "gender": "f", "plural": "correspondances", "es": "el transbordo", "notes": "En los carteles del metro indica dónde cambiar de línea.", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.sortie", "word": "sortie", "article": "la", "gender": "f", "plural": "sorties", "es": "la salida", "notes": "La entrada es «l'entrée».", "example": "ville.ou-est-la-sortie", "situation": "ciudad", "tags": ["transporte"] },
+    { "id": "ville.a-gauche", "word": "à gauche", "es": "a la izquierda", "example": "ville.tournez-a-gauche", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.a-droite", "word": "à droite", "es": "a la derecha", "notes": "La «t» suena: «a druat».", "example": "ville.prenez-la-deuxieme-rue-a-droite", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.tout-droit", "word": "tout droit", "es": "todo recto", "notes": "Sin «t» final: «tu drua».", "example": "ville.allez-tout-droit", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.feu", "word": "feu", "article": "le", "gender": "m", "plural": "feux", "es": "el semáforo", "notes": "También significa «el fuego».", "example": "ville.au-feu-tournez-a-droite", "situation": "ciudad", "tags": ["direcciones"], "image": "fluent:vertical-traffic-light" },
+    { "id": "ville.carrefour", "word": "carrefour", "article": "le", "gender": "m", "plural": "carrefours", "es": "el cruce", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.coin", "word": "coin", "article": "le", "gender": "m", "plural": "coins", "es": "la esquina", "notes": "«dans le coin» = por la zona.", "example": "ville.cest-au-coin-de-la-rue", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.pont", "word": "pont", "article": "le", "gender": "m", "plural": "ponts", "es": "el puente", "example": "ville.traversez-le-pont", "situation": "ciudad", "tags": ["direcciones"], "image": "fluent:bridge-at-night" },
+    { "id": "ville.pres", "word": "près", "es": "cerca", "notes": "«près d'ici» = cerca de aquí.", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.loin", "word": "loin", "es": "lejos", "notes": "Nasal: suena «luan».", "example": "grammaire.cest-loin", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.plan", "word": "plan", "article": "le", "gender": "m", "plural": "plans", "es": "el plano", "notes": "Nasal: la «n» final no suena.", "example": "ville.vous-pouvez-me-montrer-sur-le-plan", "situation": "ciudad", "tags": ["direcciones"] },
+    { "id": "ville.centre-ville", "word": "centre-ville", "article": "le", "gender": "m", "plural": "centres-villes", "es": "el centro (de la ciudad)", "situation": "ciudad", "tags": ["lugares"], "image": "fluent:cityscape" },
+    { "id": "ville.place", "word": "place", "article": "la", "gender": "f", "plural": "places", "es": "la plaza", "notes": "También «el sitio, el asiento».", "example": "ville.cest-sur-la-place-a-cote-de-leglise", "situation": "ciudad", "tags": ["lugares"] },
+    { "id": "ville.gare", "word": "gare", "article": "la", "gender": "f", "plural": "gares", "es": "la estación de tren", "example": "ville.excusez-moi-je-cherche-la-gare", "situation": "ciudad", "tags": ["lugares", "transporte"], "image": "fluent:high-speed-train" },
+    { "id": "ville.mairie", "word": "mairie", "article": "la", "gender": "f", "plural": "mairies", "es": "el ayuntamiento", "situation": "ciudad", "tags": ["lugares"], "image": "fluent:classical-building" },
+    { "id": "ville.poste", "word": "poste", "article": "la", "gender": "f", "plural": "postes", "es": "Correos (la oficina)", "example": "ville.la-poste-ferme-a-quelle-heure", "situation": "ciudad", "tags": ["lugares"], "image": "fluent:post-office" },
+    { "id": "ville.banque", "word": "banque", "article": "la", "gender": "f", "plural": "banques", "es": "el banco", "notes": "El banco para sentarse es «le banc».", "example": "ville.il-y-a-une-banque-par-ici", "situation": "ciudad", "tags": ["lugares"], "image": "fluent:bank" },
+    { "id": "ville.eglise", "word": "église", "article": "l'", "gender": "f", "plural": "églises", "es": "la iglesia", "situation": "ciudad", "tags": ["lugares"], "image": "fluent:church" },
+    { "id": "ville.parc", "word": "parc", "article": "le", "gender": "m", "plural": "parcs", "es": "el parque", "situation": "ciudad", "tags": ["lugares"], "image": "fluent:national-park" },
+    { "id": "ville.office-de-tourisme", "word": "office de tourisme", "article": "l'", "gender": "m", "plural": "offices de tourisme", "es": "la oficina de turismo", "example": "ville.ou-est-loffice-de-tourisme", "situation": "ciudad", "tags": ["lugares"] }
+  ],
+  "qa": [
+    {
+      "id": "ville.qa.comment-tu-viens",
+      "question": "Tu viens comment? En métro?",
+      "questionEs": "¿Cómo vienes? ¿En metro?",
+      "accepted": [
+        { "text": "Non, je viens à pied.", "es": "No, vengo andando." },
+        { "text": "Oui, je prends la ligne B.", "es": "Sí, cojo la línea B." }
+      ],
+      "distractors": [
+        { "text": "Non, je viens en pied.", "es": "No, vengo en pie." },
+        { "text": "Oui, je monte le métro.", "es": "Sí, subo el metro." }
+      ],
+      "register": "tu",
+      "situation": "ciudad",
+      "notes": "Andando es «à pied»; con transporte, «prendre le métro».",
+      "tags": ["transporte"]
+    },
+    {
+      "id": "ville.qa.ticket",
+      "question": "Bonjour, qu'est-ce qu'il vous faut?",
+      "questionEs": "Buenos días, ¿qué necesita?",
+      "accepted": [
+        { "text": "Deux tickets, s'il vous plaît.", "es": "Dos billetes, por favor." },
+        { "text": "Un ticket pour toute la journée, s'il vous plaît.", "es": "Un billete para todo el día, por favor." }
+      ],
+      "distractors": [
+        { "text": "Deux tickets, s'il te plaît.", "es": "Dos billetes, porfa." },
+        { "text": "J'ai deux tickets.", "es": "Tengo dos billetes." }
+      ],
+      "register": "vous",
+      "situation": "ciudad",
+      "notes": "Al empleado se le habla de «vous»: «s'il vous plaît».",
+      "tags": ["billetes"]
+    },
+    {
+      "id": "ville.qa.combien",
+      "question": "Tu sais combien coûte un ticket?",
+      "questionEs": "¿Sabes cuánto cuesta un billete?",
+      "accepted": [
+        { "text": "Deux euros, je crois.", "es": "Dos euros, creo." },
+        { "text": "Je ne sais pas, regarde sur la machine.", "es": "No lo sé, mira en la máquina." }
+      ],
+      "distractors": [
+        { "text": "Il est valable une heure.", "es": "Vale para una hora." },
+        { "text": "Deux heures, je crois.", "es": "Dos horas, creo." }
+      ],
+      "register": "tu",
+      "situation": "ciudad",
+      "tags": ["billetes", "precios"]
+    },
+    {
+      "id": "ville.qa.prochain-arret",
+      "question": "Pardon, vous descendez au prochain arrêt?",
+      "questionEs": "Perdone, ¿se baja en la próxima parada?",
+      "accepted": [
+        { "text": "Oui, je descends.", "es": "Sí, me bajo." },
+        { "text": "Non, pas encore. Passez, je vous en prie.", "es": "No, todavía no. Pase, por favor." }
+      ],
+      "distractors": [
+        { "text": "Oui, je monte.", "es": "Sí, me subo." },
+        { "text": "Non, je descends ici.", "es": "No, me bajo aquí." }
+      ],
+      "register": "vous",
+      "situation": "ciudad",
+      "notes": "«descendre» = bajarse; «monter» = subirse.",
+      "tags": ["transporte"]
+    },
+    {
+      "id": "ville.qa.station",
+      "question": "On se retrouve où, demain?",
+      "questionEs": "¿Dónde quedamos mañana?",
+      "accepted": [
+        { "text": "À la sortie du métro, à Bellecour.", "es": "A la salida del metro, en Bellecour." },
+        { "text": "À la station Hôtel de Ville, à dix heures.", "es": "En la estación Hôtel de Ville, a las diez." }
+      ],
+      "distractors": [
+        { "text": "À la gare de métro, à Bellecour.", "es": "En la estación de tren del metro, en Bellecour." },
+        { "text": "Sur le métro, à dix heures.", "es": "Encima del metro, a las diez." }
+      ],
+      "register": "tu",
+      "situation": "ciudad",
+      "notes": "La estación de metro es «la station»; «la gare» es la de tren. «En el metro» = «dans le métro».",
+      "tags": ["transporte", "planes"]
+    },
+    {
+      "id": "ville.qa.chercher",
+      "question": "Bonjour, vous cherchez quelque chose?",
+      "questionEs": "Hola, ¿busca algo?",
+      "accepted": [
+        { "text": "Oui, je cherche la gare.", "es": "Sí, estoy buscando la estación." },
+        { "text": "Oui, la place Bellecour, s'il vous plaît.", "es": "Sí, la plaza Bellecour, por favor." }
+      ],
+      "distractors": [
+        { "text": "Oui, je cherche à la gare.", "es": "Sí, busco en la estación." },
+        { "text": "Non, je suis d'ici.", "es": "No, soy de aquí." }
+      ],
+      "register": "vous",
+      "situation": "ciudad",
+      "notes": "«chercher» lleva el sitio directamente, sin «à»: «je cherche la gare».",
+      "tags": ["direcciones"]
+    },
+    {
+      "id": "ville.qa.musee",
+      "question": "Pardon, pour aller au musée, s'il vous plaît?",
+      "questionEs": "Perdone, ¿para ir al museo, por favor?",
+      "accepted": [
+        { "text": "Allez tout droit, puis tournez à gauche.", "es": "Siga recto y luego gire a la izquierda." },
+        { "text": "Désolé, je ne suis pas d'ici.", "es": "Lo siento, no soy de aquí." }
+      ],
+      "distractors": [
+        { "text": "Va tout droit, puis tourne à gauche.", "es": "Sigue recto y luego gira a la izquierda." },
+        { "text": "Tournez tout droit.", "es": "Gire recto." }
+      ],
+      "register": "vous",
+      "situation": "ciudad",
+      "notes": "A un desconocido, de «vous»: «allez», «tournez».",
+      "tags": ["direcciones"]
+    },
+    {
+      "id": "ville.qa.loin",
+      "question": "Excusez-moi, la poste, c'est loin?",
+      "questionEs": "Perdone, Correos, ¿está lejos?",
+      "accepted": [
+        { "text": "Non, c'est à cinq minutes à pied.", "es": "No, está a cinco minutos andando." },
+        { "text": "Non, c'est juste à côté.", "es": "No, está justo al lado." }
+      ],
+      "distractors": [
+        { "text": "Oui, c'est juste à côté.", "es": "Sí, está justo al lado." },
+        { "text": "Non, c'est à cinq heures à pied.", "es": "No, está a cinco horas andando." }
+      ],
+      "register": "vous",
+      "situation": "ciudad",
+      "tags": ["direcciones"]
+    },
+    {
+      "id": "ville.qa.parc",
+      "question": "Il y a un parc près d'ici?",
+      "questionEs": "¿Hay algún parque cerca de aquí?",
+      "accepted": [
+        { "text": "Oui, au bout de la rue, à droite.", "es": "Sí, al final de la calle, a la derecha." },
+        { "text": "Oui, en face de la mairie.", "es": "Sí, enfrente del ayuntamiento." }
+      ],
+      "distractors": [
+        { "text": "Oui, il y a un parc loin d'ici.", "es": "Sí, hay un parque lejos de aquí." },
+        { "text": "Oui, en face la mairie.", "es": "Sí, enfrente el ayuntamiento." }
+      ],
+      "register": "neutral",
+      "situation": "ciudad",
+      "notes": "«en face de» necesita el «de»: «en face de la mairie».",
+      "tags": ["lugares", "direcciones"]
+    }
+  ]
+}
