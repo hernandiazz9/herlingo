@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:49Z 💻
+- Updated: 2026-10-06 09:54Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T68/T69; then T70 + T71, then T72
+- Next step: integrate T69; then T70 + T71, then T72
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -169,7 +169,7 @@ Worktree setup: npm ci
 - Outcome: units maison (6 lessons) + loisirs (4): 85 phrases, 65 vocab, 16 Q&A, 44 picture keys, reuses earlier items · cdee444 · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T68 — French content: eating and drinking, shopping
-- Status: running (attempt 1 · 💻 · agent ab47370f46b265ec9 · since 09:43Z)
+- Status: done
 - Depends on: T58
 - Where: any
 - Goal: Units `manger` (40) and `courses` (42) per docs/brief-fr.md (café, boulangerie, restaurant; supermarket, market, clothes).
@@ -178,7 +178,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~90 phrases, ~70 vocab, ~16 Q&A, 10–12 lessons.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units manger (7 lessons) + courses (5): 107 phrases, 81 vocab, 18 Q&A, ~40 picture keys, reuses grammaire/nombres items · 311c7ee · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T69 — French content: around town, health and emergencies
 - Status: running (attempt 1 · 💻 · agent aba579a428944ec60 · since 09:49Z)
@@ -254,6 +254,7 @@ Worktree setup: npm ci
 - [ ] T62 @c191bba — code review (queued 2026-10-06 💻)
 - [ ] T66 @a68dc23 — French language review (queued 2026-10-06 💻)
 - [ ] T67 @cdee444 — French language review (queued 2026-10-06 💻)
+- [ ] T68 @311c7ee — French language review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -305,3 +306,4 @@ Worktree setup: npm ci
 - 2026-10-06 09:43Z 💻 T68 launched · attempt 1 · agent ab47370f46b265ec9
 - 2026-10-06 09:49Z 💻 T67 done · worktree-agent-a2578ade40af140b3 → cdee444 · verify ✓
 - 2026-10-06 09:49Z 💻 T69 launched · attempt 1 · agent aba579a428944ec60
+- 2026-10-06 09:54Z 💻 T68 done · worktree-agent-ab47370f46b265ec9 → 311c7ee · verify ✓
