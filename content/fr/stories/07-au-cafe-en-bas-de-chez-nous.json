@@ -1,0 +1,96 @@
+{
+  "id": "story.fr-au-cafe-en-bas-de-chez-nous",
+  "order": 7,
+  "title": "Au café, en bas de chez nous",
+  "titleEs": "En el bar de debajo de casa",
+  "description": "Pablo y Camille desayunan en la terraza: el pedido, un lío con el azúcar y la cuenta.",
+  "emoji": "☕",
+  "situation": "comida",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Dimanche matin, Pablo et Camille descendent au café en bas de l'immeuble.", "es": "El domingo por la mañana, Pablo y Camille bajan al bar de debajo del edificio." },
+    { "id": "s2", "text": "«Il fait beau! On peut se mettre en terrasse?»", "es": "«¡Hace bueno! ¿Nos ponemos en la terraza?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s3", "text": "La serveuse arrive avec le sourire: «Bonjour! Qu'est-ce que je vous sers?»", "es": "La camarera llega sonriendo: «¡Buenos días! ¿Qué os pongo?»" },
+    { "id": "s4", "text": "«Un café crème et un croissant, s'il vous plaît.»", "es": "«Un café con leche y un cruasán, por favor.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s5", "text": "«Pour moi, un chocolat chaud et deux pains au chocolat!»", "es": "«¡Para mí, un chocolate caliente y dos napolitanas de chocolate!»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s6", "text": "«Deux? Tu as faim, ce matin!»", "es": "«¿Dos? ¡Qué hambre tienes esta mañana!»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s7", "text": "Pablo veut être gentil: il met deux sucres dans le café de Camille.", "es": "Pablo quiere ser amable: le echa dos azucarillos al café de Camille." },
+    { "id": "s8", "text": "«Oh non! Moi, je le prends toujours sans sucre!»", "es": "«¡Ay, no! ¡Yo siempre lo tomo sin azúcar!»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s9", "text": "La serveuse rit et apporte un autre café crème.", "es": "La camarera se ríe y trae otro café con leche." },
+    { "id": "s10", "text": "À la fin, Pablo demande: «Je vous dois combien?»", "es": "Al final, Pablo pregunta: «¿Cuánto le debo?»" },
+    { "id": "s11", "text": "«Douze euros. Le deuxième café est offert!»", "es": "«Doce euros. ¡El segundo café corre por cuenta de la casa!»" },
+    { "id": "s12", "text": "«Merci! Voilà treize euros. Gardez la monnaie.»", "es": "«¡Gracias! Aquí tiene trece euros. Quédese con el cambio.»", "voice": "fr-FR-HenriNeural" }
+  ],
+  "keywords": [
+    "manger.terrasse",
+    "manger.quest-ce-que-je-vous-sers",
+    "manger.cafe",
+    "manger.croissant",
+    "manger.chocolat-chaud",
+    "manger.pain-au-chocolat",
+    "manger.sucre",
+    "manger.je-vous-dois-combien",
+    {
+      "id": "story-fr-offert",
+      "word": "offert",
+      "es": "gratis, invita la casa",
+      "notes": "«C'est offert»: no lo pagas, te invitan. En femenino, «offerte»: «la boisson est offerte».",
+      "situation": "comida"
+    },
+    "manger.gardez-la-monnaie"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Où est-ce que Pablo et Camille prennent le petit-déjeuner?",
+      "es": "¿Dónde desayunan Pablo y Camille?",
+      "options": [
+        { "text": "Dans la cuisine de Camille.", "es": "En la cocina de Camille." },
+        { "text": "En terrasse, au café en bas de l'immeuble.", "es": "En la terraza del bar de debajo del edificio." },
+        { "text": "À la boulangerie du centre.", "es": "En la panadería del centro." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Qu'est-ce que Pablo commande?",
+      "es": "¿Qué pide Pablo?",
+      "options": [
+        { "text": "Un chocolat chaud et deux pains au chocolat.", "es": "Un chocolate caliente y dos napolitanas de chocolate." },
+        { "text": "Un café crème et un croissant.", "es": "Un café con leche y un cruasán." },
+        { "text": "Un thé et une part de tarte.", "es": "Un té y un trozo de tarta." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Pourquoi est-ce que Camille dit «Oh non!»?",
+      "es": "¿Por qué dice Camille «¡Ay, no!»?",
+      "options": [
+        { "text": "Son café est froid.", "es": "Su café está frío." },
+        { "text": "La serveuse oublie son croissant.", "es": "La camarera se olvida de su cruasán." },
+        { "text": "Pablo met du sucre dans son café.", "es": "Pablo le echa azúcar al café." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Le petit-déjeuner coûte combien?",
+      "es": "¿Cuánto cuesta el desayuno?",
+      "options": [
+        { "text": "Treize euros.", "es": "Trece euros." },
+        { "text": "Douze euros.", "es": "Doce euros." },
+        { "text": "Deux euros.", "es": "Dos euros." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "manger.terrasse", "distractors": ["cuisine", "boulangerie"] },
+    { "id": "g2", "sentence": "s5", "answer": "manger.pain-au-chocolat", "gap": "pains au chocolat", "distractors": ["croissants", "sandwichs"] },
+    { "id": "g3", "sentence": "s8", "answer": "manger.sucre", "distractors": ["lait", "café"] },
+    { "id": "g4", "sentence": "s10", "answer": "manger.je-vous-dois-combien", "gap": "Je vous dois combien", "distractors": ["Qu'est-ce que je vous sers", "Vous avez choisi"] },
+    { "id": "g5", "sentence": "s11", "answer": "story-fr-offert", "distractors": ["fermé", "complet"] },
+    { "id": "g6", "sentence": "s12", "answer": "manger.gardez-la-monnaie", "gap": "Gardez la monnaie", "distractors": ["Bon appétit", "À la tienne"] }
+  ]
+}

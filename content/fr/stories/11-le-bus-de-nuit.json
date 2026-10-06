@@ -1,0 +1,96 @@
+{
+  "id": "story.fr-le-bus-de-nuit",
+  "order": 11,
+  "title": "Le bus de nuit",
+  "titleEs": "El autobús nocturno",
+  "description": "Julien y Pablo vuelven de un concierto: la máquina de billetes, el bus que se escapa y el paseo a casa.",
+  "emoji": "🚌",
+  "situation": "ciudad",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Vendredi soir, Julien et Pablo sortent d'un concert, à l'autre bout de la ville.", "es": "El viernes por la noche, Julien y Pablo salen de un concierto, en la otra punta de la ciudad." },
+    { "id": "s2", "text": "Il est une heure du matin, et ils sont très fatigués.", "es": "Es la una de la madrugada y están muy cansados." },
+    { "id": "s3", "text": "«Regarde, il y a un bus de nuit pour la Croix-Rousse!»", "es": "«¡Mira, hay un autobús nocturno para la Croix-Rousse!»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s4", "text": "À l'arrêt, Pablo essaie d'acheter deux tickets au distributeur.", "es": "En la parada, Pablo intenta comprar dos billetes en la máquina." },
+    { "id": "s5", "text": "«Zut! La machine ne prend pas ma carte!»", "es": "«¡Vaya! ¡La máquina no me coge la tarjeta!»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s6", "text": "Julien essaie avec sa carte, et ça marche.", "es": "Julien lo intenta con su tarjeta, y funciona." },
+    { "id": "s7", "text": "Mais pendant ce temps, le bus arrive… et repart sans eux!", "es": "Pero mientras tanto, el bus llega… ¡y se va sin ellos!" },
+    { "id": "s8", "text": "«Oh non! Le prochain bus est à quelle heure?»", "es": "«¡Ay, no! ¿A qué hora pasa el siguiente?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s9", "text": "Julien regarde l'écran: le prochain passe dans quarante-cinq minutes.", "es": "Julien mira la pantalla: el siguiente pasa dentro de cuarenta y cinco minutos." },
+    { "id": "s10", "text": "«Bon, on rentre à pied? C'est à trente minutes.»", "es": "«Bueno, ¿volvemos andando? Está a media hora.»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s11", "text": "Alors ils traversent le centre-ville, calme et presque vide.", "es": "Así que cruzan el centro, tranquilo y casi vacío." },
+    { "id": "s12", "text": "À deux heures, ils sont enfin arrivés à la maison.", "es": "A las dos, por fin han llegado a casa." },
+    { "id": "s13", "text": "«On a raté le bus, mais on a vu Lyon la nuit. C'était beau!»", "es": "«Hemos perdido el bus, pero hemos visto Lyon de noche. ¡Qué bonito!»", "voice": "fr-FR-HenriNeural" }
+  ],
+  "keywords": [
+    "loisirs.concert",
+    "ville.bus",
+    "ville.arret",
+    "ville.ticket",
+    "ville.distributeur",
+    "ville.la-machine-ne-prend-pas-ma-carte",
+    "ville.le-prochain-bus-est-a-quelle-heure",
+    "ville.centre-ville",
+    {
+      "id": "story-fr-rater",
+      "word": "rater",
+      "es": "perder (el bus, el tren)",
+      "notes": "«J'ai raté le bus»: he perdido el autobús. Muy coloquial y habitual; también «manquer le bus».",
+      "situation": "ciudad"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "D'où sortent Julien et Pablo?",
+      "es": "¿De dónde salen Julien y Pablo?",
+      "options": [
+        { "text": "D'un restaurant.", "es": "De un restaurante." },
+        { "text": "D'un concert.", "es": "De un concierto." },
+        { "text": "Du cinéma.", "es": "Del cine." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Quel est le problème au distributeur?",
+      "es": "¿Qué problema hay en la máquina?",
+      "options": [
+        { "text": "La machine ne prend pas la carte de Pablo.", "es": "La máquina no acepta la tarjeta de Pablo." },
+        { "text": "Il n'y a plus de tickets.", "es": "Ya no quedan billetes." },
+        { "text": "Le ticket est trop cher.", "es": "El billete es demasiado caro." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Le prochain bus passe dans combien de temps?",
+      "es": "¿Dentro de cuánto pasa el siguiente bus?",
+      "options": [
+        { "text": "Dans quinze minutes.", "es": "Dentro de quince minutos." },
+        { "text": "Dans trente minutes.", "es": "Dentro de treinta minutos." },
+        { "text": "Dans quarante-cinq minutes.", "es": "Dentro de cuarenta y cinco minutos." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Comment est-ce qu'ils rentrent à la maison?",
+      "es": "¿Cómo vuelven a casa?",
+      "options": [
+        { "text": "En taxi.", "es": "En taxi." },
+        { "text": "À pied.", "es": "A pie." },
+        { "text": "En bus de nuit.", "es": "En el autobús nocturno." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "loisirs.concert", "distractors": ["musée", "marché"] },
+    { "id": "g2", "sentence": "s4", "answer": "ville.distributeur", "distractors": ["cinéma", "musée"] },
+    { "id": "g3", "sentence": "s5", "answer": "ville.la-machine-ne-prend-pas-ma-carte", "gap": "La machine ne prend pas ma carte", "distractors": ["Le ticket est valable une heure", "Il faut valider le ticket"] },
+    { "id": "g4", "sentence": "s8", "answer": "ville.le-prochain-bus-est-a-quelle-heure", "gap": "Le prochain bus est à quelle heure", "distractors": ["Combien coûte un ticket", "Où est la sortie"] },
+    { "id": "g5", "sentence": "s11", "answer": "ville.centre-ville", "distractors": ["parc", "marché"] },
+    { "id": "g6", "sentence": "s13", "answer": "story-fr-rater", "gap": "raté", "distractors": ["pris", "conduit"] }
+  ]
+}

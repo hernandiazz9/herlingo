@@ -1,0 +1,92 @@
+{
+  "id": "story.fr-le-marche-de-la-croix-rousse",
+  "order": 8,
+  "title": "Le marché de la Croix-Rousse",
+  "titleEs": "El mercado de la Croix-Rousse",
+  "description": "Compras del sábado con Madame Martin: fruta al kilo, precios con setenta y ochenta, y un jersey.",
+  "emoji": "🧺",
+  "situation": "compras",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Samedi matin, Pablo va au marché de la Croix-Rousse avec Madame Martin.", "es": "El sábado por la mañana, Pablo va al mercado de la Croix-Rousse con Madame Martin." },
+    { "id": "s2", "text": "Elle a un grand panier, et lui, un sac.", "es": "Ella lleva una cesta grande, y él, una bolsa." },
+    { "id": "s3", "text": "Au stand de fruits, le marchand demande: «Qu'est-ce que je vous mets?»", "es": "En el puesto de fruta, el vendedor pregunta: «¿Qué le pongo?»" },
+    { "id": "s4", "text": "«Un kilo de pommes et une barquette de fraises, s'il vous plaît.»", "es": "«Un kilo de manzanas y una tarrina de fresas, por favor.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s5", "text": "«Ça fait sept euros quatre-vingts.»", "es": "«Son siete euros con ochenta.»" },
+    { "id": "s6", "text": "Plus loin, Pablo voit un stand de vêtements avec des pulls en solde.", "es": "Más adelante, Pablo ve un puesto de ropa con jerséis rebajados." },
+    { "id": "s7", "text": "«Il est beau, ce pull bleu! Je peux l'essayer?»", "es": "«¡Qué bonito este jersey azul! ¿Me lo puedo probar?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s8", "text": "Il n'y a pas de cabine, alors Pablo l'essaie devant un petit miroir.", "es": "No hay probador, así que Pablo se lo prueba delante de un espejito." },
+    { "id": "s9", "text": "«Il vous va très bien, Pablo!»", "es": "«¡Le sienta muy bien, Pablo!»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s10", "text": "Sur l'étiquette, le prix est de soixante-quinze euros.", "es": "En la etiqueta, el precio es de setenta y cinco euros." },
+    { "id": "s11", "text": "«Oh là là, c'est un peu cher!»", "es": "«¡Uf, es un poco caro!»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s12", "text": "Madame Martin connaît bien le vendeur: c'est son cousin!", "es": "Madame Martin conoce bien al vendedor: ¡es su primo!" },
+    { "id": "s13", "text": "«Bon, pour un ami de ma cousine, c'est soixante-dix euros!»", "es": "«Bueno, para un amigo de mi prima, son setenta euros.»" },
+    { "id": "s14", "text": "«Parfait, je le prends!»", "es": "«¡Perfecto, me lo llevo!»", "voice": "fr-FR-HenriNeural" }
+  ],
+  "keywords": [
+    "courses.marche",
+    "courses.quest-ce-que-je-vous-mets",
+    "courses.kilo",
+    "courses.fraise",
+    "nombres.quatre-vingts",
+    "courses.pull",
+    "courses.je-peux-lessayer",
+    "nombres.cest-un-peu-cher",
+    "nombres.soixante-dix",
+    "courses.je-le-prends"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Avec qui est-ce que Pablo va au marché?",
+      "es": "¿Con quién va Pablo al mercado?",
+      "options": [
+        { "text": "Avec Camille.", "es": "Con Camille." },
+        { "text": "Avec Madame Martin.", "es": "Con Madame Martin." },
+        { "text": "Avec Julien.", "es": "Con Julien." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Qu'est-ce que Madame Martin achète au stand de fruits?",
+      "es": "¿Qué compra Madame Martin en el puesto de fruta?",
+      "options": [
+        { "text": "Un kilo de pommes et des fraises.", "es": "Un kilo de manzanas y fresas." },
+        { "text": "Deux kilos de tomates.", "es": "Dos kilos de tomates." },
+        { "text": "Des bananes et des citrons.", "es": "Plátanos y limones." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Sur l'étiquette, le pull coûte combien?",
+      "es": "En la etiqueta, ¿cuánto cuesta el jersey?",
+      "options": [
+        { "text": "Soixante-dix euros.", "es": "Setenta euros." },
+        { "text": "Quatre-vingts euros.", "es": "Ochenta euros." },
+        { "text": "Soixante-quinze euros.", "es": "Setenta y cinco euros." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Pourquoi est-ce que le vendeur baisse le prix?",
+      "es": "¿Por qué baja el precio el vendedor?",
+      "options": [
+        { "text": "Le pull est trop petit.", "es": "El jersey es demasiado pequeño." },
+        { "text": "C'est le cousin de Madame Martin.", "es": "Es el primo de Madame Martin." },
+        { "text": "Pablo paie en espèces.", "es": "Pablo paga en efectivo." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "courses.quest-ce-que-je-vous-mets", "gap": "Qu'est-ce que je vous mets", "distractors": ["Je peux vous aider", "Vous voulez un sac"] },
+    { "id": "g2", "sentence": "s4", "answer": "courses.kilo", "distractors": ["litre", "verre"] },
+    { "id": "g3", "sentence": "s5", "answer": "nombres.quatre-vingts", "distractors": ["soixante", "vingt-quatre"] },
+    { "id": "g4", "sentence": "s7", "answer": "courses.je-peux-lessayer", "gap": "Je peux l'essayer", "distractors": ["Je peux goûter", "Je vais réfléchir"] },
+    { "id": "g5", "sentence": "s11", "answer": "nombres.cest-un-peu-cher", "gap": "c'est un peu cher", "distractors": ["c'est trop petit", "c'est en solde"] },
+    { "id": "g6", "sentence": "s13", "answer": "nombres.soixante-dix", "distractors": ["soixante", "quatre-vingt-dix"] }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "story.fr-un-gros-rhume",
+  "order": 12,
+  "title": "Un gros rhume",
+  "titleEs": "Un buen resfriado",
+  "description": "Madame Martin está resfriada: Julien la cuida y Pablo va solo a la farmacia.",
+  "emoji": "🤧",
+  "situation": "salud",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Lundi matin, Pablo croise Madame Martin dans l'escalier.", "es": "El lunes por la mañana, Pablo se cruza con Madame Martin en la escalera." },
+    { "id": "s2", "text": "Elle tousse beaucoup, et elle a le nez tout rouge.", "es": "Tose mucho y tiene la nariz muy roja." },
+    { "id": "s3", "text": "«Vous n'avez pas l'air en forme, madame!»", "es": "«¡No tiene usted buena cara, señora!»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s4", "text": "«Je suis enrhumée, et j'ai mal à la gorge depuis hier.»", "es": "«Estoy resfriada y me duele la garganta desde ayer.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s5", "text": "Le soir, Julien passe chez elle avec son thermomètre.", "es": "Por la tarde, Julien pasa por su casa con su termómetro." },
+    { "id": "s6", "text": "«Trente-huit de fièvre. Il faut rester au lit, Madame Martin!»", "es": "«Treinta y ocho de fiebre. ¡Tiene que quedarse en la cama, Madame Martin!»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s7", "text": "Il écrit une petite liste: du sirop et du paracétamol.", "es": "Escribe una pequeña lista: jarabe y paracetamol." },
+    { "id": "s8", "text": "Mais Julien travaille de nuit, alors Pablo va seul à la pharmacie.", "es": "Pero Julien trabaja de noche, así que Pablo va solo a la farmacia." },
+    { "id": "s9", "text": "«Bonjour! Vous avez quelque chose contre le mal de gorge?»", "es": "«¡Buenos días! ¿Tiene algo para el dolor de garganta?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s10", "text": "La pharmacienne lui donne un sirop et des comprimés, sans ordonnance.", "es": "La farmacéutica le da un jarabe y unas pastillas, sin receta." },
+    { "id": "s11", "text": "«Une cuillère trois fois par jour, après les repas.»", "es": "«Una cucharada tres veces al día, después de las comidas.»" },
+    { "id": "s12", "text": "Pablo est fier: il a tout compris et il a tout dit en français!", "es": "Pablo está orgulloso: ¡lo ha entendido todo y lo ha dicho todo en francés!" },
+    { "id": "s13", "text": "«Merci, Pablo! Vous êtes un ange.»", "es": "«¡Gracias, Pablo! Es usted un ángel.»", "voice": "fr-FR-EloiseNeural" },
+    { "id": "s14", "text": "«De rien! Bon rétablissement, madame!»", "es": "«¡De nada! ¡Que se mejore, señora!»", "voice": "fr-FR-HenriNeural" }
+  ],
+  "keywords": [
+    "sante.je-suis-enrhume",
+    "sante.jai-mal-a-la-gorge",
+    "sante.fievre",
+    "sante.sirop",
+    "sante.pharmacie",
+    "sante.vous-avez-quelque-chose-contre-le-mal-de-gorge",
+    "sante.comprime",
+    "sante.ordonnance",
+    "sante.trois-fois-par-jour",
+    "sante.bon-retablissement"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Qu'est-ce qu'elle a, Madame Martin?",
+      "es": "¿Qué le pasa a Madame Martin?",
+      "options": [
+        { "text": "Elle a mal au dos.", "es": "Le duele la espalda." },
+        { "text": "Elle a un gros rhume.", "es": "Tiene un buen resfriado." },
+        { "text": "Elle a mal aux dents.", "es": "Le duelen las muelas." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Qui prend la température de Madame Martin?",
+      "es": "¿Quién le toma la temperatura a Madame Martin?",
+      "options": [
+        { "text": "Julien.", "es": "Julien." },
+        { "text": "Pablo.", "es": "Pablo." },
+        { "text": "La pharmacienne.", "es": "La farmacéutica." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Pourquoi est-ce que Pablo va seul à la pharmacie?",
+      "es": "¿Por qué va Pablo solo a la farmacia?",
+      "options": [
+        { "text": "Camille est malade aussi.", "es": "Camille también está enferma." },
+        { "text": "Julien travaille de nuit.", "es": "Julien trabaja de noche." },
+        { "text": "Madame Martin dort.", "es": "Madame Martin está durmiendo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Le sirop, c'est combien de fois par jour?",
+      "es": "El jarabe, ¿cuántas veces al día?",
+      "options": [
+        { "text": "Une fois par jour.", "es": "Una vez al día." },
+        { "text": "Deux fois par jour.", "es": "Dos veces al día." },
+        { "text": "Trois fois par jour.", "es": "Tres veces al día." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "sante.jai-mal-a-la-gorge", "gap": "j'ai mal à la gorge", "distractors": ["j'ai mal au dos", "j'ai mal aux dents"] },
+    { "id": "g2", "sentence": "s6", "answer": "sante.fievre", "distractors": ["toux", "gorge"] },
+    { "id": "g3", "sentence": "s8", "answer": "sante.pharmacie", "distractors": ["boulangerie", "poste"] },
+    { "id": "g4", "sentence": "s10", "answer": "sante.comprime", "gap": "comprimés", "distractors": ["pansements", "tickets"] },
+    { "id": "g5", "sentence": "s11", "answer": "sante.trois-fois-par-jour", "gap": "trois fois par jour", "distractors": ["deux fois par semaine", "une fois par mois"] },
+    { "id": "g6", "sentence": "s14", "answer": "sante.bon-retablissement", "gap": "Bon rétablissement", "distractors": ["Bon appétit", "Bonne nuit"] }
+  ]
+}

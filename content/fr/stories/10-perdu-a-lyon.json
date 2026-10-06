@@ -1,0 +1,110 @@
+{
+  "id": "story.fr-perdu-a-lyon",
+  "order": 10,
+  "title": "Perdu à Lyon",
+  "titleEs": "Perdido en Lyon",
+  "description": "Pablo coge el metro en la dirección equivocada, pregunta el camino y sube en funicular a Fourvière.",
+  "emoji": "🚇",
+  "situation": "ciudad",
+  "level": "A1",
+  "sentences": [
+    { "id": "s1", "text": "Dimanche, Pablo veut voir la basilique de Fourvière, en haut de la colline.", "es": "El domingo, Pablo quiere ver la basílica de Fourvière, en lo alto de la colina." },
+    { "id": "s2", "text": "À Bellecour, il prend la ligne D du métro, sans regarder la direction.", "es": "En Bellecour, coge la línea D del metro sin mirar la dirección." },
+    { "id": "s3", "text": "Après trois stations, il ne reconnaît rien: c'est la mauvaise direction!", "es": "Tres estaciones después, no reconoce nada: ¡es la dirección equivocada!" },
+    { "id": "s4", "text": "Il descend et demande de l'aide à une dame sur le quai.", "es": "Se baja y le pide ayuda a una señora en el andén." },
+    { "id": "s5", "text": "«Excusez-moi, je crois que je me suis perdu. Pour aller à Fourvière?»", "es": "«Perdone, creo que me he perdido. ¿Para ir a Fourvière?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s6", "text": "«Reprenez la ligne D dans l'autre sens, direction Gare de Vaise.»", "es": "«Vuelva a coger la línea D en el otro sentido, dirección Gare de Vaise.»" },
+    { "id": "s7", "text": "«Descendez à Vieux Lyon, et là, prenez le funiculaire.»", "es": "«Bájese en Vieux Lyon y allí coja el funicular.»" },
+    { "id": "s8", "text": "«Le funiculaire? C'est loin de la station?»", "es": "«¿El funicular? ¿Está lejos de la estación?»", "voice": "fr-FR-HenriNeural" },
+    { "id": "s9", "text": "«Non, c'est juste à côté. Et votre ticket est valable!»", "es": "«No, está justo al lado. ¡Y su billete vale!»" },
+    { "id": "s10", "text": "Vingt minutes plus tard, Pablo monte enfin dans le funiculaire.", "es": "Veinte minutos después, Pablo por fin se sube al funicular." },
+    { "id": "s11", "text": "En haut, il voit tout Lyon: les toits, les ponts et les deux fleuves.", "es": "Arriba, ve todo Lyon: los tejados, los puentes y los dos ríos." },
+    { "id": "s12", "text": "Il envoie une photo à Camille: «Perdu, mais très content!»", "es": "Le manda una foto a Camille: «¡Perdido, pero muy contento!»" }
+  ],
+  "keywords": [
+    "ville.metro",
+    "ville.ligne",
+    "ville.direction",
+    "ville.station",
+    {
+      "id": "story-fr-quai",
+      "word": "quai",
+      "article": "le",
+      "gender": "m",
+      "plural": "quais",
+      "es": "el andén",
+      "notes": "En Lyon, «les quais» son también las orillas del Ródano y del Saona.",
+      "situation": "ciudad",
+      "image": "fluent:station"
+    },
+    "ville.je-crois-que-je-me-suis-perdu",
+    {
+      "id": "story-fr-funiculaire",
+      "word": "funiculaire",
+      "article": "le",
+      "gender": "m",
+      "plural": "funiculaires",
+      "es": "el funicular",
+      "notes": "En Lyon lo llaman «la ficelle» (el cordel); sube a Fourvière y a Saint-Just con el mismo billete que el metro.",
+      "situation": "ciudad",
+      "image": "fluent:mountain-railway"
+    },
+    "ville.loin",
+    "ville.cest-juste-a-cote",
+    "ville.pont"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Où est-ce que Pablo veut aller?",
+      "es": "¿Adónde quiere ir Pablo?",
+      "options": [
+        { "text": "À la gare de la Part-Dieu.", "es": "A la estación de la Part-Dieu." },
+        { "text": "À la basilique de Fourvière.", "es": "A la basílica de Fourvière." },
+        { "text": "À la place Bellecour.", "es": "A la plaza Bellecour." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Quel est le problème de Pablo?",
+      "es": "¿Qué problema tiene Pablo?",
+      "options": [
+        { "text": "Il prend le métro dans la mauvaise direction.", "es": "Coge el metro en la dirección equivocada." },
+        { "text": "Il n'a pas de ticket.", "es": "No tiene billete." },
+        { "text": "Le métro est en grève.", "es": "El metro está en huelga." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Comment est-ce que Pablo monte à Fourvière?",
+      "es": "¿Cómo sube Pablo a Fourvière?",
+      "options": [
+        { "text": "En taxi.", "es": "En taxi." },
+        { "text": "À pied.", "es": "A pie." },
+        { "text": "En funiculaire.", "es": "En funicular." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Qu'est-ce que Pablo envoie à Camille?",
+      "es": "¿Qué le manda Pablo a Camille?",
+      "options": [
+        { "text": "Un plan de la ville.", "es": "Un plano de la ciudad." },
+        { "text": "Une photo.", "es": "Una foto." },
+        { "text": "Un ticket de métro.", "es": "Un billete de metro." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "ville.ligne", "distractors": ["sortie", "place"] },
+    { "id": "g2", "sentence": "s3", "answer": "ville.direction", "distractors": ["sortie", "station"] },
+    { "id": "g3", "sentence": "s4", "answer": "story-fr-quai", "distractors": ["pont", "toit"] },
+    { "id": "g4", "sentence": "s5", "answer": "ville.je-crois-que-je-me-suis-perdu", "gap": "je crois que je me suis perdu", "distractors": ["c'est le prochain arrêt", "je prends le métro"] },
+    { "id": "g5", "sentence": "s8", "answer": "ville.loin", "distractors": ["libre", "direct"] },
+    { "id": "g6", "sentence": "s10", "answer": "story-fr-funiculaire", "distractors": ["taxi", "bus"] }
+  ]
+}
