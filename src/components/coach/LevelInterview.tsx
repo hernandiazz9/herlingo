@@ -17,7 +17,8 @@ import {
   type InterviewTurn,
 } from "@/lib/coach";
 import { useCoachAccess, useCoachUsage, useLearnerProfile } from "@/lib/coach/use-coach";
-import { DEFAULT_LANG, getPack } from "@/lib/content";
+import { getPack } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import { canRecognize, listenOnce, type RecognitionSession } from "@/lib/speech";
 import { CoachCodeForm, useHydrated } from "./AiUsagePanel";
@@ -90,7 +91,12 @@ type Phase =
  * The AI level interview, question by question: typed answers (dictation where the browser
  * supports it), then the assessment, stored on the device for the next pack requests. Repeatable.
  */
-export function LevelInterview({ lang = DEFAULT_LANG }: { lang?: string }) {
+export function LevelInterview() {
+  const lang = useScreenLang();
+  return lang ? <Interview key={lang} lang={lang} /> : null;
+}
+
+function Interview({ lang }: { lang: string }) {
   const router = useRouter();
   const hydrated = useHydrated();
   const { hasCode } = useCoachAccess();

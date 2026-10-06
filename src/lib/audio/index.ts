@@ -21,7 +21,8 @@
  *   (`@/lib/progress/settings`), everything plays slow.
  * - The first tap/key anywhere unlocks audio for iOS (see `unlockOnFirstGesture`).
  */
-import { DEFAULT_LANG, getPack, type Playable } from "@/lib/content";
+import { getPack, type Playable } from "@/lib/content";
+import { getActiveLang, subscribeActiveLang } from "@/lib/content/active";
 import { getSettings } from "@/lib/progress/settings";
 import { isGenerated, playGenerated } from "./generated";
 import { mp3Available, mp3Play, mp3Stop, mp3Url, preloadManifest, unlockOnFirstGesture } from "./mp3";
@@ -45,7 +46,7 @@ export type SpeakInput = Playable | string;
 export interface SpeakOptions {
   /** Slower playback for learners. */
   slow?: boolean;
-  /** Language pack whose locale/audio to use; defaults to the default pack. */
+  /** Language pack whose locale/audio to use; defaults to the active language (else the default pack). */
   lang?: string;
 }
 
@@ -56,14 +57,17 @@ export const SLOW_RATE = 0.7;
 let generation = 0;
 
 if (mp3Available()) {
-  preloadManifest(DEFAULT_LANG);
+  // The active language's manifest, now and after every switch (the default pack's on first launch).
+  const preloadActive = () => preloadManifest(getPack(getActiveLang() ?? undefined).meta.lang);
+  preloadActive();
+  subscribeActiveLang(preloadActive);
   unlockOnFirstGesture();
 }
 
 export function speak(input: SpeakInput, options: SpeakOptions = {}): Promise<void> {
   stop();
   const my = generation;
-  const { meta } = getPack(options.lang);
+  const { meta } = getPack(options.lang ?? getActiveLang() ?? undefined);
   const text = typeof input === "string" ? input : input.text;
   const rate = options.slow || getSettings().slowAudio ? SLOW_RATE : 1;
   if (typeof input !== "string" && isGenerated(input)) {

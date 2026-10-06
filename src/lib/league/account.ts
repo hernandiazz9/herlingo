@@ -11,10 +11,10 @@
  *   `LeagueAccountChange`); other modules use `subscribeLeagueAccount()`.
  */
 import type { Session } from "@supabase/supabase-js";
-import { DEFAULT_LANG } from "@/lib/content";
 import { authCallbackResult, getLeagueClient, hasAuthCallbackInUrl, leagueRpc } from "./client";
 import { AUTH_STORAGE_KEY, leagueEnabled, leagueRedirectUrl } from "./config";
 import { fromAuthError, isLeagueError, LeagueError } from "./errors";
+import { leagueLang } from "./lang";
 
 const KEY = "lang-lern:league-account";
 const VERSION = 1;
@@ -233,7 +233,6 @@ export function clearLeagueLinkError() {
 // ---------------------------------------------------------------------------------------------
 // Session sync
 
-let lang = DEFAULT_LANG;
 let listening = false;
 let started = false;
 let lastRefresh = 0;
@@ -329,7 +328,7 @@ async function doRefresh() {
       if (prev) writeStored(null, "signed_out");
       return;
     }
-    const me = await leagueRpc<MeResponse>("league_me", { lang });
+    const me = await leagueRpc<MeResponse>("league_me", { lang: leagueLang() });
     if (busy > 0 || generation !== gen) return;
     const next = { ...fromSession(session, prev), profile: toProfile(me.profile) };
     const change: LeagueAccountChange =
@@ -370,13 +369,12 @@ export function refreshLeagueAccount(options: { force?: boolean } = {}): Promise
 }
 
 /**
- * Starts the account layer for a screen (idempotent): sets the pack language used for
- * `league_me`, checks the session in the background (completes a magic-link redirect) and
- * re-checks when the device comes back online.
+ * Starts the account layer for a screen (idempotent; call again after a language switch):
+ * `league_me` reads the active language (`leagueLang()`). Checks the session in the background
+ * (completes a magic-link redirect) and re-checks when the device comes back online.
  */
-export function startLeagueAccount(packLang: string = DEFAULT_LANG) {
+export function startLeagueAccount() {
   if (typeof window === "undefined" || !leagueEnabled()) return;
-  lang = packLang;
   if (!started) {
     started = true;
     window.addEventListener("online", () => void refreshLeagueAccount());

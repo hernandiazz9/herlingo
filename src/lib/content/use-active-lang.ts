@@ -2,7 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import { getActiveLang, setActiveLang, subscribeActiveLang } from "./active";
-import { getPack } from "./index";
+import { DEFAULT_LANG, getPack } from "./index";
 import type { Pack } from "./types";
 
 export interface ActiveLang {
@@ -28,4 +28,14 @@ export function useActiveLang(): ActiveLang {
   const ready = useSyncExternalStore(noop, yes, no);
   const lang = useSyncExternalStore(subscribeActiveLang, getActiveLang, none);
   return { ready, lang, pack: lang ? getPack(lang) : null, setLang: setActiveLang };
+}
+
+/**
+ * The language a screen shows: the active one, or the default pack when none is chosen yet (first
+ * launch). Null until `ready`: render nothing (or a placeholder) until then, so the server render
+ * and hydration never show the wrong language.
+ */
+export function useScreenLang(): string | null {
+  const { ready, lang } = useActiveLang();
+  return ready ? (lang ?? DEFAULT_LANG) : null;
 }

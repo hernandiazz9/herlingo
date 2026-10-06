@@ -2,10 +2,11 @@
 
 import { Button, Card } from "@/components/ui";
 import type { GrammarCard } from "@/lib/content";
-import { MiniPlay } from "./shared";
+import { MiniPlay, useLessonLang } from "./shared";
 
 /** Ungraded grammar card shown inside a lesson. */
 export function GrammarTip({ card, onContinue }: { card: GrammarCard; onContinue: () => void }) {
+  const lang = useLessonLang();
   const [header, ...rows] = card.table ?? [];
   return (
     <div className="flex flex-1 flex-col gap-5">
@@ -35,7 +36,7 @@ export function GrammarTip({ card, onContinue }: { card: GrammarCard; onContinue
               {rows.map((row, r) => (
                 <tr key={r} className="border-t border-line">
                   {row.map((c, i) => (
-                    <td key={i} lang={i > 0 ? "it" : undefined} className="px-2 py-1 text-ink">
+                    <td key={i} lang={i > 0 ? lang : undefined} className="px-2 py-1 text-ink">
                       {c}
                     </td>
                   ))}
@@ -51,7 +52,7 @@ export function GrammarTip({ card, onContinue }: { card: GrammarCard; onContinue
             <li key={ex.audioKey} className="flex items-center gap-3">
               <MiniPlay audio={ex} />
               <span>
-                <span lang="it" className="font-bold text-ink">
+                <span lang={lang} className="font-bold text-ink">
                   {ex.text}
                 </span>{" "}
                 <span className="text-ink-muted">· {ex.es}</span>

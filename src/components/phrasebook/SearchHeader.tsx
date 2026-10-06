@@ -1,7 +1,8 @@
 "use client";
 
 import { cn } from "@/lib/cn";
-import type { Situation } from "@/lib/content";
+import { useLessonLang } from "@/components/exercises";
+import { languageName, type Situation } from "@/lib/content";
 import { CloseIcon, SearchIcon } from "./icons";
 
 export type Filter = { kind: "all" } | { kind: "fav" } | { kind: "situation"; id: string };
@@ -34,6 +35,7 @@ interface SearchHeaderProps {
 
 /** Sticky search field plus the row of filter chips (shared by Frases and Palabras). */
 export function SearchHeader({ query, onQuery, label, chips, onFilter }: SearchHeaderProps) {
+  const lang = useLessonLang();
   return (
     <div className="sticky top-0 z-10 -mx-5 flex flex-col gap-3 bg-cream px-5 pt-[calc(0.5rem+var(--safe-top))] pb-2">
       <label className="flex min-h-12 items-center gap-2 rounded-button border-2 border-line bg-surface px-3 focus-within:border-sea">
@@ -43,7 +45,7 @@ export function SearchHeader({ query, onQuery, label, chips, onFilter }: SearchH
           type="search"
           value={query}
           onChange={(e) => onQuery(e.target.value)}
-          placeholder="Busca en italiano o en español"
+          placeholder={`Busca en ${languageName(lang)} o en español`}
           enterKeyHint="search"
           autoComplete="off"
           autoCorrect="off"

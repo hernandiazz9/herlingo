@@ -8,12 +8,13 @@
  * harmless; only events listed in the server's `results` leave the outbox; failures back off
  * exponentially. Nothing here throws: the offline app never waits for or notices the sync.
  */
-import { DEFAULT_LANG, listLangs } from "@/lib/content";
+import { listLangs } from "@/lib/content";
 import { currentStreak, getProgress, subscribeXpAwards } from "@/lib/progress";
 import { getLeagueAccount, refreshLeagueAccount, subscribeLeagueAccount, type LeagueAccountChange } from "./account";
 import { leagueRpc } from "./client";
 import { leagueEnabled } from "./config";
 import { isLeagueError, LeagueError } from "./errors";
+import { leagueLang } from "./lang";
 import { acknowledge, clearOutboxes, enqueueXp, outboxLangs, pendingEvents, sentStats, type OutboxEvent } from "./outbox";
 
 /** `league.max_batch()` on the server. */
@@ -65,7 +66,7 @@ const signature = (s: LeagueStats) => `${s.total_xp}|${s.streak_count}|${s.strea
 
 /** Packs with progress on this device, the default pack, and any pack with queued events. */
 function langsToSync(): string[] {
-  const langs = new Set([DEFAULT_LANG, ...outboxLangs()]);
+  const langs = new Set([leagueLang(), ...outboxLangs()]);
   for (const lang of listLangs()) {
     const p = getProgress(lang);
     if (p.xp > 0 || p.streak.best > 0) langs.add(lang);

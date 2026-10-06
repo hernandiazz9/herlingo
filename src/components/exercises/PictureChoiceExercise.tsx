@@ -4,15 +4,16 @@ import { useState } from "react";
 import { Button, Picture } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { PictureChoiceExercise as PictureChoice, PictureOption } from "@/lib/exercises";
-import { PlayControls, Prompt, usePlay, type ExerciseProps } from "./shared";
+import { PlayControls, Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
 /**
  * Pick the picture among 4 cards (2×2), then "Comprobar".
- * - `picture-choice`: Spanish prompt; each card shows its picture and Italian word, tap = audio + select.
- * - `picture-listen`: Italian audio only; cards show pictures alone (tap = select, no audio, or the
+ * - `picture-choice`: Spanish prompt; each card shows its picture and target-language word, tap = audio + select.
+ * - `picture-listen`: target-language audio only; cards show pictures alone (tap = select, no audio, or the
  *   sounds would give the answer away) and reveal their words once checked.
  */
 export function PictureChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<PictureChoice>) {
+  const lang = useLessonLang();
   const [picked, setPicked] = useState<string | null>(null);
   const play = usePlay();
   const listen = exercise.type === "picture-listen";
@@ -71,7 +72,7 @@ export function PictureChoiceExercise({ exercise, answered, onAnswer }: Exercise
               >
                 <Picture image={option.image} alt="" bordered={false} className="max-w-36" />
                 <span
-                  lang="it"
+                  lang={lang}
                   className={cn("min-h-7 text-center text-lg font-bold leading-tight", !showWord && "invisible")}
                   aria-hidden={!showWord}
                 >

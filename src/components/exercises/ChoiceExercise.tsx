@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { cn } from "@/lib/cn";
 import type { AnswerExercise, ChoiceOption, ListenMeaningExercise, ReadMeaningExercise } from "@/lib/exercises";
-import { MiniPlay, PlayControls, Prompt, usePlay, type ExerciseProps } from "./shared";
+import { MiniPlay, PlayControls, Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
 type ChoiceKind = ListenMeaningExercise | ReadMeaningExercise | AnswerExercise;
 
 /** Listen and pick the meaning / read and pick the meaning / answer the question. */
 export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<ChoiceKind>) {
+  const lang = useLessonLang();
   const [picked, setPicked] = useState<string | null>(null);
   const [showQuestion, setShowQuestion] = useState(false);
   const play = usePlay();
@@ -33,7 +34,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
           <Prompt>¿Qué significa?</Prompt>
           <div className="flex items-center gap-3">
             <MiniPlay audio={exercise.audio} />
-            <p lang="it" className="text-2xl font-bold text-sea-deep">
+            <p lang={lang} className="text-2xl font-bold text-sea-deep">
               {exercise.audio.text}
             </p>
           </div>
@@ -44,7 +45,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
           <Prompt>Te preguntan… ¿qué respondes?</Prompt>
           <PlayControls audio={exercise.question} />
           {showQuestion || answered ? (
-            <p lang="it" className="text-xl font-bold text-sea-deep">
+            <p lang={lang} className="text-xl font-bold text-sea-deep">
               «{exercise.question.text}»
             </p>
           ) : (
@@ -69,7 +70,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
                 type="button"
                 disabled={answered}
                 onClick={() => choose(option)}
-                lang={exercise.type === "answer" ? "it" : undefined}
+                lang={exercise.type === "answer" ? lang : undefined}
                 className={cn(
                   "pressable min-h-14 flex-1 rounded-button border-2 px-4 py-3 text-left text-lg font-bold",
                   "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",

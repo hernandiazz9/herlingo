@@ -6,7 +6,7 @@ import { PageHeader } from "@/components/shell/PageHeader";
 import { Button } from "@/components/ui";
 import type { CoachPack } from "@/lib/coach";
 import { useCoachAccess, useCoachUsage, useSavedPacks } from "@/lib/coach/use-coach";
-import { DEFAULT_LANG } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useHydrated } from "@/lib/progress/use-progress";
 import { AccessCard } from "./AccessCard";
 import { BudgetLine } from "./BudgetLine";
@@ -34,7 +34,12 @@ function newest(saved: CoachPack | undefined, fresh: CoachPack | undefined): Coa
  * /preparar/: the home (access code or the situation form, the budget line, Mis situaciones) or,
  * with `?pack=<id>`, one pack. Uses `useSearchParams`: render inside a Suspense boundary.
  */
-export function CoachView({ lang = DEFAULT_LANG }: { lang?: string }) {
+export function CoachView() {
+  const lang = useScreenLang();
+  return lang ? <Coach key={lang} lang={lang} /> : <PageHeader title={PREPARE_TITLE} subtitle={PREPARE_SUBTITLE} />;
+}
+
+function Coach({ lang }: { lang: string }) {
   const hydrated = useHydrated();
   const packId = useSearchParams().get(PACK_PARAM);
   const { packs } = useSavedPacks(lang);

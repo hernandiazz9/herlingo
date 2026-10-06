@@ -4,10 +4,16 @@ import Link from "next/link";
 import { ProgressBar } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack, getSituation, getStories } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { storyHref, useStoriesDone } from "@/lib/stories";
 
 /** Every story in trip order, with its situation and whether it is done on this device. */
-export function StoryList({ lang }: { lang?: string }) {
+export function StoryList() {
+  const lang = useScreenLang();
+  return lang ? <PackStories key={lang} lang={lang} /> : null;
+}
+
+function PackStories({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const stories = getStories(pack);
   const done = useStoriesDone(pack.meta.lang);

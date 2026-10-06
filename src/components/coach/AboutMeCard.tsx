@@ -4,10 +4,9 @@ import { useState, type FormEvent } from "react";
 import { Button, Card } from "@/components/ui";
 import { COACH_LIMITS } from "@/lib/coach";
 import { useLearnerProfile } from "@/lib/coach/use-coach";
-import { DEFAULT_LANG } from "@/lib/content";
 
 /** "Sobre mí": free notes for the AI, sent with every pack and interview request. */
-export function AboutMeCard({ lang = DEFAULT_LANG }: { lang?: string }) {
+export function AboutMeCard({ lang }: { lang: string }) {
   const { profile, setAbout } = useLearnerProfile(lang);
   const [draft, setDraft] = useState<string | null>(null);
   const [status, setStatus] = useState<{ ok: boolean; text: string } | null>(null);

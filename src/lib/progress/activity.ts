@@ -3,7 +3,6 @@
  * Built only on `recordReviewResult()` (same rules as /repaso): XP added, today marked as
  * practised, each outcome scheduled in the Leitner boxes (wrong → box 1, due at once).
  */
-import { DEFAULT_LANG } from "@/lib/content";
 import type { ItemOutcome } from "@/lib/exercises";
 import { recordReviewResult, type Progress, type XpSource } from "./index";
 
@@ -13,8 +12,8 @@ export interface ActivityOutcome {
 }
 
 export interface Activity {
-  /** Defaults to the default pack. */
-  lang?: string;
+  /** The pack the activity belongs to. */
+  lang: string;
   xp: number;
   /**
    * Items to schedule in SRS (send only the ones that should move). Repeated ids merge.
@@ -33,7 +32,7 @@ function sourceFromRoute(): XpSource {
   return "activity";
 }
 
-export function recordActivity({ lang = DEFAULT_LANG, xp, outcomes, source }: Activity): Progress {
+export function recordActivity({ lang, xp, outcomes, source }: Activity): Progress {
   const items = new Map<string, ItemOutcome>();
   for (const { itemId, correct } of outcomes) {
     const o = items.get(itemId) ?? { itemId, attempts: 0, mistakes: 0 };

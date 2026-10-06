@@ -5,7 +5,7 @@ import { useRef, useState, useSyncExternalStore } from "react";
 import { CloseIcon, ExerciseView, GrammarTip, LessonLangContext, WordIntro } from "@/components/exercises";
 import { Button, Card, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { DEFAULT_LANG, getLesson, getPack, getUnit, type Lesson, type Pack } from "@/lib/content";
+import { getLesson, getPack, getUnit, type Lesson, type Pack } from "@/lib/content";
 import {
   buildResult,
   generateSession,
@@ -34,7 +34,8 @@ export interface LessonPlayerProps {
   lessonId?: string;
   /** Ad-hoc lesson (e.g. a review session) instead of `lessonId`. */
   lesson?: Lesson;
-  lang?: string;
+  /** The pack the lesson belongs to. */
+  lang: string;
   /** Fixed seed (same session every time); by default each start gets a new one. */
   seed?: string;
   /** Called once when the lesson is finished. Persist progress here (T07). */
@@ -70,7 +71,7 @@ const noPause = () => 0;
 const now = () => Date.now();
 
 /** Full-screen lesson session: intro → exercises with feedback → result with XP. */
-export function LessonPlayer({ lessonId, lesson: adHoc, lang = DEFAULT_LANG, seed, onComplete, exitHref = "/", onExit, sessionSize, intro }: LessonPlayerProps) {
+export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, exitHref = "/", onExit, sessionSize, intro }: LessonPlayerProps) {
   const router = useRouter();
   const pack = getPack(lang);
   const lesson = adHoc ?? (lessonId ? getLesson(lessonId, pack) : undefined);

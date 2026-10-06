@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { LessonPlayer } from "@/components/lesson";
 import { Button, Card } from "@/components/ui";
-import { DEFAULT_LANG, getItem, getPack, type Lesson } from "@/lib/content";
+import { getItem, getPack, type Lesson } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { defaultSessionSize, type LessonResult } from "@/lib/exercises";
 import { dueItemIds, recordReviewResult } from "@/lib/progress";
 import { startOfDay } from "@/lib/progress/dates";
@@ -12,7 +13,12 @@ import { useHydrated, useNow, useProgress } from "@/lib/progress/use-progress";
 import { REVIEW_SIZE, dedupeByText, nextDue } from "@/lib/srs";
 
 /** Due items (spaced repetition) and a review session through the lesson player. */
-export function ReviewView({ lang = DEFAULT_LANG }: { lang?: string }) {
+export function ReviewView() {
+  const lang = useScreenLang();
+  return lang ? <Review key={lang} lang={lang} /> : null;
+}
+
+function Review({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const progress = useProgress(lang);
   const now = useNow();
@@ -21,7 +27,7 @@ export function ReviewView({ lang = DEFAULT_LANG }: { lang?: string }) {
 
   if (!hydrated || !now) return null;
 
-  // Same Italian text under two ids: ask it once; the answer counts for both ids.
+  // Same target-language text under two ids: ask it once; the answer counts for both ids.
   const { ids: due, aliases } = dedupeByText(dueItemIds(progress, pack, now), (id) => {
     const item = getItem(id, pack);
     return item && item.kind !== "grammar" ? item.text : undefined;

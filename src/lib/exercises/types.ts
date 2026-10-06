@@ -23,10 +23,10 @@ export interface Solution {
 
 export interface ChoiceOption {
   id: string;
-  /** Shown text (Spanish meaning, or Italian reply). */
+  /** Shown text (Spanish meaning, or target-language reply). */
   label: string;
   correct: boolean;
-  /** Italian option that can be played (Q&A replies). */
+  /** Target-language option that can be played (Q&A replies). */
   audio?: Playable;
 }
 
@@ -38,21 +38,21 @@ interface Base {
   solution: Solution;
 }
 
-/** Hear Italian, pick the Spanish meaning. */
+/** Hear the target language, pick the Spanish meaning. */
 export interface ListenMeaningExercise extends Base {
   type: "listen-meaning";
   audio: Playable;
   options: ChoiceOption[];
 }
 
-/** Read Italian (with a play button), pick the Spanish meaning. */
+/** Read the target language (with a play button), pick the Spanish meaning. */
 export interface ReadMeaningExercise extends Base {
   type: "read-meaning";
   audio: Playable;
   options: ChoiceOption[];
 }
 
-/** Spanish → Italian by tapping word tiles (answer words + distractors, shuffled). */
+/** Spanish → target language by tapping word tiles (answer words + distractors, shuffled). */
 export interface TilesExercise extends Base {
   type: "tiles";
   es: string;
@@ -61,7 +61,7 @@ export interface TilesExercise extends Base {
   audio: Playable;
 }
 
-/** Italian sentence with one word missing; pick the word. */
+/** Target-language sentence with one word missing; pick the word. */
 export interface FillGapExercise extends Base {
   type: "fill-gap";
   es: string;
@@ -72,7 +72,7 @@ export interface FillGapExercise extends Base {
   audio: Playable;
 }
 
-/** Hear Italian, type it. */
+/** Hear the target language, type it. */
 export interface DictationExercise extends Base {
   type: "dictation";
   audio: Playable;
@@ -91,19 +91,20 @@ export interface AnswerExercise extends Base {
 
 export interface MatchPair {
   id: string;
-  it: string;
+  /** Target-language text (the left column). */
+  text: string;
   es: string;
   audio: Playable;
   /** Set on every pair of a picture match: the right column shows pictures instead of `es`. */
   image?: ImageRef;
 }
 
-/** Match Italian and Spanish pairs (or Italian words and pictures, when the pairs have `image`). */
+/** Match target-language and Spanish pairs (or target-language words and pictures, when the pairs have `image`). */
 export interface MatchExercise extends Base {
   type: "match";
   pairs: MatchPair[];
   /** Pair ids in display order for each column. */
-  itOrder: string[];
+  textOrder: string[];
   esOrder: string[];
 }
 
@@ -117,7 +118,7 @@ export interface SpeakExercise extends Base {
 /** A picture card of a picture-choice exercise (a pictured vocab word). */
 export interface PictureOption {
   id: string;
-  /** Italian word as spoken ("il caffè"), written under the picture. */
+  /** Target-language word as spoken ("il caffè"), written under the picture. */
   text: string;
   es: string;
   image: ImageRef;
@@ -127,11 +128,12 @@ export interface PictureOption {
 
 /**
  * Pick the picture among 4 (2×2). `picture-choice`: prompt in Spanish, cards show picture +
- * Italian word (tap = audio). `picture-listen`: Italian audio only, the words show once checked.
+ * target-language word (tap = audio). `picture-listen`: target-language audio only, the words
+ * show once checked.
  */
 export interface PictureChoiceExercise extends Base {
   type: "picture-choice" | "picture-listen";
-  /** The word asked (Italian audio). */
+  /** The word asked (target-language audio). */
   audio: Playable;
   es: string;
   options: PictureOption[];

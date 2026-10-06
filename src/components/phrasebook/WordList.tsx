@@ -22,7 +22,7 @@ interface WordGroup {
 
 /**
  * Words grouped by situation in pack order; inside each topic, pictured words first, then the
- * rest. One card per Italian text within a topic (a pictured duplicate wins).
+ * rest. One card per target-language text within a topic (a pictured duplicate wins).
  */
 function buildGroups(pack: Pack): WordGroup[] {
   const groups = new Map<string, WordEntry[]>();
@@ -87,7 +87,7 @@ export function WordList({ pack, query, onQuery, filter: rawFilter, onFilter }: 
   ];
 
   const play = (vocab: Vocab) => {
-    speak(vocab);
+    speak(vocab, { lang: pack.meta.lang });
     setOpenId(vocab.id);
   };
 

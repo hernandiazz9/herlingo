@@ -3,6 +3,7 @@
 import { useState, useSyncExternalStore } from "react";
 import { cn } from "@/lib/cn";
 import { getPack } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { PhraseList } from "./PhraseList";
 import type { Filter } from "./SearchHeader";
 import { readView, serverView, setView, subscribeView, type PhrasebookView } from "./view";
@@ -17,7 +18,12 @@ const VIEWS: Array<{ id: PhrasebookView; label: string }> = [
  * Pocket phrasebook: a "Frases | Palabras" switch (remembered on the device) over the phrase list
  * and the picture vocabulary. Search text and topic filter carry over between the two.
  */
-export function Phrasebook({ lang }: { lang?: string }) {
+export function Phrasebook() {
+  const lang = useScreenLang();
+  return lang ? <PackPhrasebook key={lang} lang={lang} /> : null;
+}
+
+function PackPhrasebook({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const view = useSyncExternalStore(subscribeView, readView, serverView);
   const [query, setQuery] = useState("");

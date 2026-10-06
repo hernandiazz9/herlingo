@@ -4,7 +4,7 @@
  * topic). A card is a phrase or a pictured word; cards with the same text under two ids are shown
  * once and `aliases` gives the other ids (for SRS).
  */
-import { getPack, getSituation, listVocab, type Pack, type Phrase, type PicturedVocab } from "@/lib/content";
+import { getSituation, listVocab, type Pack, type Phrase, type PicturedVocab } from "@/lib/content";
 import { createRng, type Rng } from "@/lib/exercises";
 import { dedupeByText, textKey } from "@/lib/srs";
 
@@ -66,13 +66,13 @@ function pool(id: string, title: string, emoji: string | undefined, words: Pictu
 }
 
 /** Situations with phrases or pictured words (pack order), then "Mezcla" is `getTopicPool(MIX)`. */
-export function listTopics(pack: Pack = getPack()): Topic[] {
+export function listTopics(pack: Pack): Topic[] {
   return pack.meta.situations
     .map((s) => getTopicPool(s.id, pack)?.topic)
     .filter((t): t is Topic => !!t && t.phrases.length + t.words.length > 0);
 }
 
-export function getTopicPool(id: string, pack: Pack = getPack()): TopicPool | undefined {
+export function getTopicPool(id: string, pack: Pack): TopicPool | undefined {
   if (id === MIX) return pool(MIX, "Mezcla", "🎲", listVocab({ withImage: true }, pack), pack.phrases);
   const situation = getSituation(id, pack);
   if (!situation) return undefined;
@@ -130,8 +130,8 @@ export function setupRound(topic: Topic, deck: GameCard[]): RoundSetup {
 }
 
 /**
- * listen: hear the Italian, pick the Spanish meaning (text options). reverse: read the Spanish,
- * pick the Italian (text options). listen-picture: hear the word, pick its picture. es-picture:
+ * listen: hear the target language, pick the Spanish meaning (text options). reverse: read the Spanish,
+ * pick the target language (text options). listen-picture: hear the word, pick its picture. es-picture:
  * read the Spanish ("¿Cuál es «el café»?"), pick the picture.
  */
 export type QuestionKind = "listen" | "reverse" | "listen-picture" | "es-picture";
@@ -150,7 +150,7 @@ export function isPictureQuestion(kind: QuestionKind): kind is "listen-picture" 
   return kind === "listen-picture" || kind === "es-picture";
 }
 
-/** Right card + distractors from each list in turn; no two share a Spanish or Italian text, or a `key`. */
+/** Right card + distractors from each list in turn; no two share a Spanish or target-language text, or a `key`. */
 function fillOptions<T extends GameCard>(right: T, lists: T[][], rng: Rng, key?: (c: T) => string): T[] {
   const seenEs = new Set([textKey(right.es)]);
   const seenIt = new Set([textKey(right.text)]);

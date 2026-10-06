@@ -7,8 +7,10 @@
  * free port against `lang_lern_league_local` (created if missing) and removes its users at the end.
  */
 import { randomUUID } from "node:crypto";
+import { readFileSync } from "node:fs";
 import type { AddressInfo } from "node:net";
-import { ANON_KEY, contentLangs, DB, ensureDatabase, mustRun, signJwt } from "./shared";
+import { join } from "node:path";
+import { ANON_KEY, contentLangs, DB, ensureDatabase, mustRun, ROOT, signJwt } from "./shared";
 import { createLeagueServer } from "./server";
 
 type Json = null | boolean | number | string | Json[] | { [key: string]: Json };
@@ -270,6 +272,21 @@ async function run(lang: string) {
   ok(leftover === "0", "delete_me removes every membership");
 }
 
+/** The language the check plays: the default pack (`pack.json` `"default": true`), else the first one. */
+function checkLang(): string {
+  const langs = contentLangs();
+  const isDefault = (lang: string) => {
+    try {
+      return (JSON.parse(readFileSync(join(ROOT, "content", lang, "pack.json"), "utf8")) as { default?: unknown }).default === true;
+    } catch {
+      return false;
+    }
+  };
+  const lang = langs.find(isDefault) ?? langs[0];
+  if (!lang) throw new Error("No content pack found under content/.");
+  return lang;
+}
+
 async function main() {
   process.env.LEAGUE_LOCAL_QUIET = "1";
   await ensureDatabase(false);
@@ -278,7 +295,7 @@ async function main() {
   base = `http://127.0.0.1:${(server.address() as AddressInfo).port}`;
   let failed = false;
   try {
-    await run(contentLangs()[0] ?? "it");
+    await run(checkLang());
   } catch (error) {
     failed = true;
     if (!(error instanceof Error) || !error.message) console.error(error);

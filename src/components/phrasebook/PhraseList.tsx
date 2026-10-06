@@ -11,16 +11,17 @@ import { ExpandIcon, SlowIcon, StarIcon } from "./icons";
 import { fold, matches } from "./search";
 import { SearchHeader, situationChips, type Chip, type Filter } from "./SearchHeader";
 import { ShowMode } from "./ShowMode";
+import { useLessonLang } from "@/components/exercises";
 
 interface Entry {
   phrase: Phrase;
-  /** `phrase.id` first, then other ids with the same Italian text (hidden duplicates). */
+  /** `phrase.id` first, then other ids with the same target-language text (hidden duplicates). */
   ids: string[];
   haystack: string;
 }
 
 /**
- * One entry per Italian text: of several ids with the same text, the one taught first on the
+ * One entry per target-language text: of several ids with the same text, the one taught first on the
  * path wins (unused phrases after); entries keep the pack order.
  */
 function buildEntries(pack: Pack): Entry[] {
@@ -139,7 +140,7 @@ export function PhraseList({ pack, query, onQuery, filter: rawFilter, onFilter }
                 open={openId === entry.phrase.id}
                 favorite={isFav(entry)}
                 onPlay={() => {
-                  speak(entry.phrase);
+                  speak(entry.phrase, { lang: pack.meta.lang });
                   setOpenId(entry.phrase.id);
                 }}
                 onToggleFavorite={() => toggleFav(entry)}
@@ -165,6 +166,7 @@ interface PhraseRowProps {
 }
 
 function PhraseRow({ phrase, open, favorite, onPlay, onToggleFavorite, onShow }: PhraseRowProps) {
+  const lang = useLessonLang();
   return (
     <li className={cn("rounded-card border-2 bg-surface", open ? "border-sea" : "border-line")}>
       <div className="flex items-start gap-1 p-2 pl-4">
@@ -175,7 +177,7 @@ function PhraseRow({ phrase, open, favorite, onPlay, onToggleFavorite, onShow }:
           className="flex min-h-12 flex-1 items-start gap-3 py-1.5 text-left"
         >
           <span className="flex-1">
-            <span lang="it" className="block text-lg leading-snug font-bold text-ink">
+            <span lang={lang} className="block text-lg leading-snug font-bold text-ink">
               {phrase.text}
             </span>
             <span className="block text-base text-ink-muted">{phrase.es}</span>
@@ -206,7 +208,7 @@ function PhraseRow({ phrase, open, favorite, onPlay, onToggleFavorite, onShow }:
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
-              onClick={() => speak(phrase, { slow: true })}
+              onClick={() => speak(phrase, { lang, slow: true })}
               className="pressable inline-flex min-h-12 items-center justify-center gap-2 rounded-button border-2 border-line bg-surface font-bold text-sea [--ledge:var(--line)]"
             >
               <SlowIcon width={20} height={20} /> Lento

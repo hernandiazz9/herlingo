@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { MiniPlay } from "@/components/exercises";
+import { MiniPlay, useLessonLang } from "@/components/exercises";
 import { cn } from "@/lib/cn";
 import type { Exercise, ExerciseOutcome } from "@/lib/exercises";
 
@@ -17,6 +17,7 @@ export interface FeedbackSheetProps {
 
 /** Green/red sheet after each answer: verdict, right answer with a play button, Continuar. */
 export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSheetProps) {
+  const lang = useLessonLang();
   const { correct } = outcome;
   const { solution } = exercise;
   const isMatch = exercise.type === "match";
@@ -65,7 +66,7 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
           {solution.audio ? <MiniPlay audio={solution.audio} label="Escuchar la respuesta" /> : null}
           <div className="flex min-w-0 flex-col">
             {!correct ? <span className="text-sm font-bold uppercase tracking-wider text-error-deep">Solución</span> : null}
-            <span lang="it" className="text-xl font-bold text-ink">
+            <span lang={lang} className="text-xl font-bold text-ink">
               {solution.text}
             </span>
             {solution.es ? <span className="text-base text-ink-muted">{solution.es}</span> : null}

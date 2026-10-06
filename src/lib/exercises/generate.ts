@@ -8,7 +8,7 @@
  * are recognition-only.
  *
  * Pictures: vocab words with an `image` can also get "pick the picture" exercises (Spanish prompt or
- * Italian audio only), and the match uses pictures when >= 3 lesson words have one. With `known`,
+ * target-language audio only), and the match uses pictures when >= 3 lesson words have one. With `known`,
  * a new-word card comes before the first exercise of each vocab word never seen before.
  */
 import {
@@ -311,7 +311,7 @@ class Ctx {
 
   /**
    * Up to 3 pictured words that can stand next to `item` in a picture choice: same lesson first,
-   * then the same situation, then the pack; never the same picture, Italian text or meaning twice.
+   * then the same situation, then the pack; never the same picture, target-language text or meaning twice.
    */
   private pictureDistractors(item: PicturedVocab): PicturedVocab[] {
     const srcs = new Set([item.image.src]);
@@ -381,7 +381,7 @@ class Ctx {
     };
   }
 
-  /** Italian words and pictures: 3-4 pairs from the lesson's pictured words (distinct pictures). */
+  /** Target-language words and pictures: 3-4 pairs from the lesson's pictured words (distinct pictures). */
   pictureMatch(pool: PicturedVocab[]): Exercise | undefined {
     const pairs: MatchPair[] = [];
     const srcs = new Set<string>();
@@ -392,7 +392,7 @@ class Ctx {
       if (srcs.has(item.image.src) || its.has(it)) continue;
       srcs.add(item.image.src);
       its.add(it);
-      pairs.push({ id: item.id, it: item.text, es: item.es, audio: item, image: item.image });
+      pairs.push({ id: item.id, text: item.text, es: item.es, audio: item, image: item.image });
     }
     if (pairs.length < MIN_PICTURE_MATCH_PAIRS) return undefined;
     const ids = pairs.map((p) => p.id);
@@ -400,9 +400,9 @@ class Ctx {
       type: "match",
       key: this.key("match", ids),
       itemIds: ids,
-      solution: { text: pairs.map((p) => `${p.it} = ${p.es}`).join(" · ") },
+      solution: { text: pairs.map((p) => `${p.text} = ${p.es}`).join(" · ") },
       pairs,
-      itOrder: this.rng.shuffle(ids),
+      textOrder: this.rng.shuffle(ids),
       esOrder: this.rng.shuffle(ids),
     };
   }
@@ -418,7 +418,7 @@ class Ctx {
       if (its.has(it) || ess.has(es)) continue;
       its.add(it);
       ess.add(es);
-      pairs.push({ id: item.id, it: item.text, es: item.es, audio: item });
+      pairs.push({ id: item.id, text: item.text, es: item.es, audio: item });
     }
     if (pairs.length < MIN_MATCH_PAIRS || this.items.length < MIN_MATCH_PAIRS) return undefined;
     const ids = pairs.map((p) => p.id);
@@ -426,9 +426,9 @@ class Ctx {
       type: "match",
       key: this.key("match", ids),
       itemIds: ids,
-      solution: { text: pairs.map((p) => `${p.it} = ${p.es}`).join(" · ") },
+      solution: { text: pairs.map((p) => `${p.text} = ${p.es}`).join(" · ") },
       pairs,
-      itOrder: this.rng.shuffle(ids),
+      textOrder: this.rng.shuffle(ids),
       esOrder: this.rng.shuffle(ids),
     };
   }

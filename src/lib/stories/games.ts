@@ -3,7 +3,7 @@
  * Exercises reuse the lesson types from `@/lib/exercises` so the same components and feedback
  * sheet work; `itemIds` are key word ids (SRS), empty for comprehension and ordering.
  */
-import { getPack, getStoryKeywords, type Pack, type Story, type StorySentence } from "@/lib/content";
+import { getStoryKeywords, type Pack, type Story, type StorySentence } from "@/lib/content";
 import { createRng, type AnswerExercise, type Exercise, type Rng } from "@/lib/exercises";
 
 export type StoryGameId = "keywords" | "gaps" | "questions" | "order";
@@ -38,14 +38,14 @@ function keywordGame(story: Story, pack: Pack, rng: Rng): StoryStep[] {
   const steps: StoryStep[] = [];
   const matched = rng.shuffle(words).slice(0, MAX_MATCH);
   if (matched.length >= 2) {
-    const pairs = matched.map((w) => ({ id: w.id, it: w.text, es: w.es, audio: w }));
+    const pairs = matched.map((w) => ({ id: w.id, text: w.text, es: w.es, audio: w }));
     steps.push({
       type: "match",
       key: "kw-match",
       itemIds: matched.map((w) => w.id),
       solution: { text: "" },
       pairs,
-      itOrder: rng.shuffle(pairs.map((p) => p.id)),
+      textOrder: rng.shuffle(pairs.map((p) => p.id)),
       esOrder: rng.shuffle(pairs.map((p) => p.id)),
     });
   }
@@ -115,7 +115,7 @@ function orderGame(story: Story, rng: Rng): StoryStep[] {
 }
 
 /** The games of a story, in play order; games with nothing to play are left out. */
-export function buildStoryGames(story: Story, seed: string, pack: Pack = getPack()): StoryGame[] {
+export function buildStoryGames(story: Story, seed: string, pack: Pack): StoryGame[] {
   const rng = createRng(`${story.id}:${seed}`);
   const games: StoryGame[] = [
     { id: "keywords", title: "Palabras clave", description: "Une las parejas y elige lo que oyes.", steps: keywordGame(story, pack, rng) },

@@ -9,7 +9,7 @@ import { Button } from "@/components/ui";
 import { awardPracticeXp, packDialogue, type CoachPack } from "@/lib/coach";
 import { useSavedPacks } from "@/lib/coach/use-coach";
 import { cn } from "@/lib/cn";
-import { DEFAULT_LANG } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useHydrated } from "@/lib/progress/use-progress";
 import { PACK_PARAM, PREPARE_HREF } from "./nav";
 import { leavePractice, PRACTICE_TITLE } from "./practice-nav";
@@ -21,7 +21,12 @@ const REGISTER: Record<CoachPack["register"], string> = { formal: "Trato de uste
  * /preparar/dialogo/?pack=<id>: the role-play of a saved pack in the dialogue player, with XP on
  * finishing (first time per day per pack). Uses `useSearchParams`: render inside Suspense.
  */
-export function PackPractice({ lang = DEFAULT_LANG }: { lang?: string }) {
+export function PackPractice() {
+  const lang = useScreenLang();
+  return lang ? <SavedPractice key={lang} lang={lang} /> : <PageHeader title={PRACTICE_TITLE} />;
+}
+
+function SavedPractice({ lang }: { lang: string }) {
   const hydrated = useHydrated();
   const id = useSearchParams().get(PACK_PARAM);
   const { get } = useSavedPacks(lang);

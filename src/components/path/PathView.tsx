@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Card, ProgressBar } from "@/components/ui";
-import { DEFAULT_LANG, getPack, getUnit } from "@/lib/content";
+import { getPack, getUnit } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import { DialoguesIcon, ReviewIcon } from "@/components/icons";
 import { RutaLeagueCard } from "@/components/league/RutaCard";
@@ -21,7 +22,12 @@ const review = getTab("review");
 const dialogues = getTab("dialogues");
 
 /** Home: stats, the next lesson, units with their lesson nodes, and side content. */
-export function PathView({ lang = DEFAULT_LANG }: { lang?: string }) {
+export function PathView() {
+  const lang = useScreenLang();
+  return lang ? <Path key={lang} lang={lang} /> : null;
+}
+
+function Path({ lang }: { lang: string }) {
   const router = useRouter();
   const pack = getPack(lang);
   const progress = useProgress(lang);

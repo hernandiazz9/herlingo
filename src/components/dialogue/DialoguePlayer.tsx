@@ -62,7 +62,7 @@ function score(turns: LearnerTurn[], attempts: Record<string, Attempt[]>): Dialo
 export interface DialoguePlayerProps {
   dialogue: Dialogue;
   /** Language pack for audio, speech recognition and the native speaker's default name. */
-  lang?: string;
+  lang: string;
   /** Contents of the intro card (what the dialogue is about). */
   intro: ReactNode;
   /** The summary's second button, beside "Repetir". */

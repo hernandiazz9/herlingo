@@ -3,10 +3,11 @@
 import { useState } from "react";
 import { cn } from "@/lib/cn";
 import { checkAnswer, type FillGapExercise as FillGap } from "@/lib/exercises";
-import { MiniPlay, Prompt, type ExerciseProps } from "./shared";
+import { MiniPlay, Prompt, useLessonLang, type ExerciseProps } from "./shared";
 
-/** Italian sentence with a missing word: pick the word. */
+/** Target-language sentence with a missing word: pick the word. */
 export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<FillGap>) {
+  const lang = useLessonLang();
   const [picked, setPicked] = useState<string | null>(null);
 
   const choose = (word: string) => {
@@ -23,7 +24,7 @@ export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<
       <p className="text-lg text-ink-muted">{exercise.es}</p>
       <div className="flex items-start gap-3">
         {answered ? <MiniPlay audio={exercise.audio} /> : null}
-        <p lang="it" className="whitespace-pre-wrap text-2xl font-bold leading-relaxed text-ink">
+        <p lang={lang} className="whitespace-pre-wrap text-2xl font-bold leading-relaxed text-ink">
           {exercise.before}
           <span
             className={cn(
@@ -38,7 +39,7 @@ export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<
           {exercise.after}
         </p>
       </div>
-      <div lang="it" className="grid grid-cols-2 gap-3">
+      <div lang={lang} className="grid grid-cols-2 gap-3">
         {exercise.options.map((word) => (
           <button
             key={word}

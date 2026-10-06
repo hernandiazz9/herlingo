@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Card } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { DEFAULT_LANG } from "@/lib/content";
 import { LEAGUE_PATH } from "@/lib/league/config";
 import { useLeagueGroup } from "@/lib/league/groups";
 import { dismissLeagueInvite, useLeagueInviteDismissed } from "@/lib/league/invite-dismiss";
@@ -17,8 +16,8 @@ const BOX = "min-h-[6.25rem]";
  * the cached board, refreshed in the background; never blocks offline). Not joined: a dismissible
  * invite. A placeholder of the same height holds the place while the account is read.
  */
-export function RutaLeagueCard({ lang = DEFAULT_LANG }: { lang?: string }) {
-  const account = useLeagueAccount(lang);
+export function RutaLeagueCard({ lang }: { lang: string }) {
+  const account = useLeagueAccount();
   const dismissed = useLeagueInviteDismissed();
 
   if (account.status === "disabled") return null;
@@ -52,7 +51,7 @@ export function RutaLeagueCard({ lang = DEFAULT_LANG }: { lang?: string }) {
 }
 
 function JoinedCard({ lang }: { lang: string }) {
-  const group = useLeagueGroup(lang);
+  const group = useLeagueGroup();
   const inGroup = group.status === "ready" && group.group !== null;
   const scope = inGroup ? "group" : "global";
   const { board, loading } = useLeaderboard(lang, scope, true);

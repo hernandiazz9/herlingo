@@ -3,14 +3,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { languageName } from "@/lib/content";
 import { checkAnswer, type TilesExercise as Tiles } from "@/lib/exercises";
-import { Prompt, type ExerciseProps } from "./shared";
+import { Prompt, useLessonLang, type ExerciseProps } from "./shared";
 
 const TILE =
   "pressable min-h-12 rounded-xl border-2 border-line bg-surface px-3.5 text-lg font-bold text-ink [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
 
-/** Spanish → Italian by tapping word tiles. */
+/** Spanish → target language by tapping word tiles. */
 export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Tiles>) {
+  const lang = useLessonLang();
   // Indexes into exercise.tiles, in the order chosen.
   const [chosen, setChosen] = useState<number[]>([]);
 
@@ -24,11 +26,11 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      <Prompt>Tradúcelo al italiano</Prompt>
+      <Prompt>Tradúcelo al {languageName(lang)}</Prompt>
       <p className="text-xl font-bold text-ink">{exercise.es}</p>
 
       <div
-        lang="it"
+        lang={lang}
         aria-label="Tu respuesta"
         className="flex min-h-28 flex-wrap content-start gap-2 border-b-2 border-line pb-3"
       >
@@ -39,7 +41,7 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
         ))}
       </div>
 
-      <div lang="it" className="flex flex-wrap justify-center gap-2">
+      <div lang={lang} className="flex flex-wrap justify-center gap-2">
         {exercise.tiles.map((word, i) => {
           const used = chosen.includes(i);
           return (

@@ -3,7 +3,7 @@
  * and the XP for finishing it (like a game round, only the first time per day per pack; the
  * marker is `lang-lern:coach:practice:<lang>`).
  */
-import type { Dialogue, DialogueTurn } from "@/lib/content";
+import { getPack, type Dialogue, type DialogueTurn } from "@/lib/content";
 import { roundXp } from "@/lib/game";
 import { dayKey } from "@/lib/progress";
 import { recordActivity } from "@/lib/progress/activity";
@@ -24,7 +24,7 @@ export function packDialogue(pack: CoachPack): Dialogue {
     title: pack.dialogue.title,
     situation: "",
     order: 0,
-    register: pack.register === "formal" ? "lei" : "tu",
+    register: pack.register === "formal" ? getPack(pack.lang).meta.formalRegister : "tu",
     turns,
   };
 }

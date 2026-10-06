@@ -6,14 +6,16 @@ import { Button } from "@/components/ui";
 import type { Playable } from "@/lib/content";
 import { speak, stop } from "@/lib/audio";
 import { CloseIcon, SlowIcon } from "./icons";
+import { useLessonLang } from "@/components/exercises";
 
 export interface ShowModeProps {
   item: Playable & { es: string };
   onClose: () => void;
 }
 
-/** Full-screen "show it to the Italian" view: the phrase in huge type, with play buttons. */
+/** Full-screen "show it to a native speaker" view: the phrase in huge type, with play buttons. */
 export function ShowMode({ item, onClose }: ShowModeProps) {
+  const lang = useLessonLang();
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -47,20 +49,20 @@ export function ShowMode({ item, onClose }: ShowModeProps) {
       </div>
       <button
         type="button"
-        onClick={() => speak(item)}
+        onClick={() => speak(item, { lang })}
         className="flex flex-1 flex-col items-center justify-center gap-6 text-center"
         aria-label={`Escuchar: ${item.text}`}
       >
-        <p lang="it" className="text-[clamp(2.25rem,11vw,4.5rem)] leading-tight font-extrabold break-words text-ink">
+        <p lang={lang} className="text-[clamp(2.25rem,11vw,4.5rem)] leading-tight font-extrabold break-words text-ink">
           {item.text}
         </p>
         <p className="text-xl text-ink-muted">{item.es}</p>
       </button>
       <div className="mx-auto grid w-full max-w-[var(--column-width)] grid-cols-2 gap-3">
-        <Button onClick={() => speak(item)}>
+        <Button onClick={() => speak(item, { lang })}>
           <SpeakerIcon /> Escuchar
         </Button>
-        <Button variant="secondary" onClick={() => speak(item, { slow: true })}>
+        <Button variant="secondary" onClick={() => speak(item, { lang, slow: true })}>
           <SlowIcon /> Lento
         </Button>
       </div>

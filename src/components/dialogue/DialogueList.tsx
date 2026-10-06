@@ -1,8 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import { getPack } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 
-/** Every dialogue of the pack, grouped by situation (pack order). Server or client. */
-export function DialogueList({ lang }: { lang?: string }) {
+/** Every dialogue of the active pack, grouped by situation (pack order). */
+export function DialogueList() {
+  const lang = useScreenLang();
+  return lang ? <PackDialogues lang={lang} /> : null;
+}
+
+function PackDialogues({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const groups = pack.meta.situations
     .map((situation) => ({ situation, dialogues: pack.dialogues.filter((d) => d.situation === situation.id) }))

@@ -5,7 +5,8 @@ import { useState } from "react";
 import { CloseIcon, PlayControls } from "@/components/exercises";
 import { Button, Card, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { DEFAULT_LANG, getLesson, getPack, type PlacementQuestion } from "@/lib/content";
+import { getLesson, getPack, type PlacementQuestion } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import { applyPlacement, completeOnboarding } from "@/lib/progress";
 
@@ -24,7 +25,12 @@ function masteredLessons(questions: PlacementQuestion[], answers: boolean[]): st
  * First launch: a short welcome, then the placement test (~12 questions, ~3 minutes) that marks
  * the lessons you already master as done. `retake` starts straight at the test (from /perfil).
  */
-export function Onboarding({ lang = DEFAULT_LANG, retake = false }: { lang?: string; retake?: boolean }) {
+export function Onboarding({ retake = false }: { retake?: boolean }) {
+  const lang = useScreenLang();
+  return lang ? <Placement key={lang} lang={lang} retake={retake} /> : null;
+}
+
+function Placement({ lang, retake }: { lang: string; retake: boolean }) {
   const router = useRouter();
   const pack = getPack(lang);
   const questions = pack.placement;

@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { DEFAULT_LANG, getPack, getStory } from "@/lib/content";
+import { getPack, getStory } from "@/lib/content";
 import { StoryGames } from "./StoryGames";
 import { StoryReader } from "./StoryReader";
 
 /** A story page: the reader, then the games (full screen) with their summary. */
-export function StoryView({ id, lang = DEFAULT_LANG }: { id: string; lang?: string }) {
+export function StoryView({ id, lang }: { id: string; lang: string }) {
   const story = getStory(id, getPack(lang));
   const [playing, setPlaying] = useState(false);
   // New key per round: a fresh set of games every time.

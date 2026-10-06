@@ -67,7 +67,7 @@ export function Discover({
       <Card className="flex flex-col gap-4">
         {isWord(card) ? <Picture key={card.id} image={card.image} alt="" size="intro" className="self-center" /> : null}
         <PlayControls audio={card} />
-        <p lang="it" className="text-3xl font-extrabold leading-tight text-sea-deep">
+        <p lang={lang} className="text-3xl font-extrabold leading-tight text-sea-deep">
           {card.text}
         </p>
         <p className="text-xl font-bold text-ink">{card.es}</p>

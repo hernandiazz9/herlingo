@@ -7,7 +7,8 @@ import { ThemeToggle } from "@/components/shell/ThemeToggle";
 import { Button, Card } from "@/components/ui";
 import { leagueEnabled, LEAGUE_PATH } from "@/lib/league/config";
 import { useLeagueAccount } from "@/lib/league/use-league-account";
-import { DEFAULT_LANG, getAllLessons, getPack } from "@/lib/content";
+import { getAllLessons, getPack } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import { currentStreak, resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
 import { useProgress, useSettings } from "@/lib/progress/use-progress";
@@ -19,7 +20,12 @@ const DANGER =
   "pressable inline-flex items-center justify-center rounded-button border-2 border-error bg-surface px-5 font-bold tracking-wide text-error-deep [--ledge:var(--error-ledge)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
 
 /** Stats (XP, streak, words, lessons), the AI coach sections and settings. */
-export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
+export function ProfileView() {
+  const lang = useScreenLang();
+  return lang ? <Profile key={lang} lang={lang} /> : null;
+}
+
+function Profile({ lang }: { lang: string }) {
   const router = useRouter();
   const pack = getPack(lang);
   const progress = useProgress(lang);
@@ -44,7 +50,7 @@ export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
         <Stat value={`${lessonsDone}/${lessonsTotal}`} label="lecciones hechas" />
       </div>
 
-      {leagueEnabled() ? <LeagueLink lang={lang} /> : null}
+      {leagueEnabled() ? <LeagueLink /> : null}
 
       <CoachSections lang={lang} />
 
@@ -140,8 +146,8 @@ export function ProfileView({ lang = DEFAULT_LANG }: { lang?: string }) {
 }
 
 /** Perfil row that opens /liga/ (only rendered when Liga is configured). */
-function LeagueLink({ lang }: { lang: string }) {
-  const account = useLeagueAccount(lang);
+function LeagueLink() {
+  const account = useLeagueAccount();
   const joined = account.status === "joined";
   return (
     <Card className="flex flex-col gap-3">

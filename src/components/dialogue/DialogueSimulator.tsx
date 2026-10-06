@@ -4,10 +4,15 @@ import Link from "next/link";
 import { getDialogue, getPack, getSituation } from "@/lib/content";
 import { DialoguePlayer } from "./DialoguePlayer";
 
-const REGISTER: Record<string, string> = { lei: "Trato de usted (Lei)", tu: "Trato de tú", neutral: "" };
+/** "Trato de tú", or "Trato de usted (Lei)" / "(Vous)" for the pack's formal register; neutral = none. */
+function registerLabel(register: string): string {
+  if (register === "tu") return "Trato de tú";
+  if (register === "neutral") return "";
+  return `Trato de usted (${register.charAt(0).toUpperCase()}${register.slice(1)})`;
+}
 
 /** Plays a scripted dialogue of the content pack (see `DialoguePlayer`). */
-export function DialogueSimulator({ id, lang }: { id: string; lang?: string }) {
+export function DialogueSimulator({ id, lang }: { id: string; lang: string }) {
   const pack = getPack(lang);
   const dialogue = getDialogue(id, pack);
 
@@ -30,7 +35,7 @@ export function DialogueSimulator({ id, lang }: { id: string; lang?: string }) {
           ) : null}
           {dialogue.description ? <p className="text-lg text-ink">{dialogue.description}</p> : null}
           <p className="text-sm text-ink-muted">
-            {[REGISTER[dialogue.register], `${answers} respuestas`].filter(Boolean).join(" · ")}
+            {[registerLabel(dialogue.register), `${answers} respuestas`].filter(Boolean).join(" · ")}
           </p>
         </>
       }

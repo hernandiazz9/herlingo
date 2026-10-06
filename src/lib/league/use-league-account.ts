@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useSyncExternalStore } from "react";
-import { DEFAULT_LANG } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import {
   clearLeagueLinkError,
   deleteLeagueAccount,
@@ -55,10 +55,12 @@ const actions = {
  * session in the background (and completes a magic-link redirect to `/liga/`), without loading
  * supabase-js for users who never joined.
  */
-export function useLeagueAccount(lang: string = DEFAULT_LANG): UseLeagueAccount {
+export function useLeagueAccount(): UseLeagueAccount {
+  const lang = useScreenLang();
   const account = useSyncExternalStore(subscribeLeagueAccount, getLeagueAccount, getServerLeagueAccount);
   useEffect(() => {
-    startLeagueAccount(lang);
+    // Again after a language switch: `league_me` is per language.
+    if (lang) startLeagueAccount();
   }, [lang]);
   return useMemo(() => ({ ...account, ...actions }), [account]);
 }

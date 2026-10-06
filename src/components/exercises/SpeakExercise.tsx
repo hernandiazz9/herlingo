@@ -73,7 +73,7 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
     <div className="flex flex-1 flex-col gap-6">
       <Prompt>Dilo en voz alta</Prompt>
       <div className="flex flex-col gap-2">
-        <p lang="it" className="text-2xl font-bold text-sea-deep">
+        <p lang={lang} className="text-2xl font-bold text-sea-deep">
           {exercise.audio.text}
         </p>
         <p className="text-lg text-ink-muted">{exercise.es}</p>
@@ -104,7 +104,7 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
           </p>
           {heard && !answered ? (
             <p className="text-base text-ink-muted">
-              He entendido: <span lang="it" className="font-bold text-ink">«{heard}»</span>
+              He entendido: <span lang={lang} className="font-bold text-ink">«{heard}»</span>
             </p>
           ) : null}
           {!answered ? (

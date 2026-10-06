@@ -11,11 +11,12 @@
  *   switching users drops the cache; joining (or signing in) re-reads it.
  */
 import { useEffect, useSyncExternalStore } from "react";
-import { DEFAULT_LANG } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { getLeagueAccount, subscribeLeagueAccount } from "./account";
 import { leagueRpc } from "./client";
 import { LEAGUE_PATH, leagueEnabled } from "./config";
 import { isLeagueError, LeagueError } from "./errors";
+import { leagueLang } from "./lang";
 
 const KEY = "lang-lern:league-group";
 const INVITE_KEY = "lang-lern:league-invite";
@@ -205,7 +206,6 @@ interface MeGroupResponse {
   group: unknown;
 }
 
-let lang = DEFAULT_LANG;
 let started = false;
 let pending: Promise<void> | null = null;
 /** Bumped by every action so a background refresh that overlaps one is discarded. */
@@ -224,7 +224,7 @@ export function refreshLeagueGroup(): Promise<void> {
   pending = (async () => {
     try {
       const userId = joinedUser();
-      const me = await leagueRpc<MeGroupResponse>("league_me", { lang });
+      const me = await leagueRpc<MeGroupResponse>("league_me", { lang: leagueLang() });
       if (gen !== generation || !userId || joinedUser() !== userId) return;
       storeGroup(userId, parseGroup(me.group));
     } catch {
@@ -241,9 +241,8 @@ export function refreshLeagueGroup(): Promise<void> {
  * Starts the group layer for a screen (idempotent): follows account changes (drops the cache on
  * sign-out/delete/user change, re-reads after joining) and refreshes now and when back online.
  */
-export function startLeagueGroup(packLang: string = DEFAULT_LANG) {
+export function startLeagueGroup() {
   if (typeof window === "undefined" || !leagueEnabled()) return;
-  lang = packLang;
   if (!started) {
     started = true;
     subscribeLeagueAccount((change) => {
@@ -323,10 +322,12 @@ export async function switchLeagueGroup(code: string): Promise<LeagueGroup> {
 // Hook
 
 /** The caller's group, live (cached, refreshed in the background). */
-export function useLeagueGroup(packLang: string = DEFAULT_LANG): LeagueGroupState {
+export function useLeagueGroup(): LeagueGroupState {
+  const lang = useScreenLang();
   const state = useSyncExternalStore(subscribeLeagueGroup, getLeagueGroup, () => SERVER_SNAPSHOT);
   useEffect(() => {
-    startLeagueGroup(packLang);
-  }, [packLang]);
+    // Again after a language switch: `league_me` is per language.
+    if (lang) startLeagueGroup();
+  }, [lang]);
   return state;
 }

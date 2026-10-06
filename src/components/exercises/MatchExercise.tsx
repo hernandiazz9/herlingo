@@ -4,9 +4,9 @@ import { useRef, useState } from "react";
 import { Picture } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { MatchExercise as Match } from "@/lib/exercises";
-import { Prompt, usePlay, type ExerciseProps } from "./shared";
+import { Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
-type Side = "it" | "es";
+type Side = "target" | "es";
 interface Pick {
   side: Side;
   id: string;
@@ -15,7 +15,7 @@ interface Pick {
 const FLASH_MS = 600;
 
 /**
- * Tap an Italian word and its Spanish meaning (either order). Mistakes are recorded per item.
+ * Tap a target-language word and its Spanish meaning (either order). Mistakes are recorded per item.
  * When every pair has an `image`, the right column shows the pictures instead of the meanings.
  */
 export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Match>) {
@@ -24,12 +24,13 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
   const [wrong, setWrong] = useState<Pick[]>([]);
   const mistakes = useRef(new Set<string>());
   const play = usePlay();
+  const lang = useLessonLang();
   const pairs = new Map(exercise.pairs.map((p) => [p.id, p]));
   const pictures = exercise.pairs.every((p) => p.image);
 
   const tap = (pick: Pick) => {
     if (answered || done.includes(pick.id)) return;
-    if (pick.side === "it") play(pairs.get(pick.id)!.audio);
+    if (pick.side === "target") play(pairs.get(pick.id)!.audio);
     if (!selected || selected.side === pick.side) {
       setSelected(pick);
       return;
@@ -42,8 +43,8 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
         onAnswer({ correct: true, wrongItemIds: [...mistakes.current] });
       }
     } else {
-      // The Italian item of the wrong pair counts as a mistake.
-      mistakes.current.add(selected.side === "it" ? selected.id : pick.id);
+      // The target-language item of the wrong pair counts as a mistake.
+      mistakes.current.add(selected.side === "target" ? selected.id : pick.id);
       const flash = [selected, pick];
       setWrong(flash);
       setTimeout(() => setWrong((w) => (w === flash ? [] : w)), FLASH_MS);
@@ -59,7 +60,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
       <button
         key={`${side}:${id}`}
         type="button"
-        lang={side === "it" ? "it" : undefined}
+        lang={side === "target" ? lang : undefined}
         disabled={answered || isDone}
         aria-pressed={isSelected}
         aria-label={image ? label : undefined}
@@ -83,7 +84,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
     <div className="flex flex-col gap-6">
       <Prompt>{pictures ? "Une cada palabra con su imagen" : "Une las parejas"}</Prompt>
       <div className="grid grid-cols-2 gap-3">
-        <div className="flex flex-col gap-3">{exercise.itOrder.map((id) => cell("it", id, pairs.get(id)!.it))}</div>
+        <div className="flex flex-col gap-3">{exercise.textOrder.map((id) => cell("target", id, pairs.get(id)!.text))}</div>
         <div className="flex flex-col gap-3">{exercise.esOrder.map((id) => cell("es", id, pairs.get(id)!.es))}</div>
       </div>
     </div>

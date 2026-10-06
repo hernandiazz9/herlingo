@@ -70,6 +70,11 @@ export function getPack(lang: string = DEFAULT_LANG): Pack {
   return pack;
 }
 
+/** The pack's language name to use inside a Spanish sentence: "italiano", "francés". */
+export function languageName(lang: string): string {
+  return getPack(lang).meta.name.toLocaleLowerCase("es");
+}
+
 interface Index {
   items: Map<string, LessonItem>;
   lessons: Map<string, Lesson>;

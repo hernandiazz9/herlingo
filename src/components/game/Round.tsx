@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { CloseIcon, MiniPlay, PlayControls } from "@/components/exercises/shared";
 import { Button, Card, IconButton, Picture, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { getPack } from "@/lib/content";
+import { getPack, languageName } from "@/lib/content";
 import { cn } from "@/lib/cn";
 import type { Rng } from "@/lib/exercises";
 import {
@@ -185,8 +185,8 @@ export function Round({
             {!topic.phrases.length
               ? "Escucha la palabra o léela en español y elige su imagen."
               : topic.words.length
-                ? "Escucha y elige qué significa, lee en español y elige la frase en italiano, o elige la imagen de cada palabra."
-                : "Escucha y elige qué significa, o lee en español y elige la frase en italiano."}{" "}
+                ? `Escucha y elige qué significa, lee en español y elige la frase en ${languageName(lang)}, o elige la imagen de cada palabra.`
+                : `Escucha y elige qué significa, o lee en español y elige la frase en ${languageName(lang)}.`}{" "}
             Encadena aciertos para multiplicar los puntos.
           </p>
           <p className="text-sm font-bold text-ink-muted">{record ? `Récord: ${record}` : "Aún sin récord"}</p>
@@ -226,7 +226,7 @@ export function Round({
                   <MiniPlay audio={p} label={`Escuchar: ${p.text}`} />
                   {isWord(p) ? <Picture image={p.image} alt="" size="avatar" /> : null}
                   <span className="flex flex-col">
-                    <span lang="it" className="font-bold text-sea-deep">
+                    <span lang={lang} className="font-bold text-sea-deep">
                       {p.text}
                     </span>
                     <span className="text-sm text-ink-muted">{p.es}</span>
@@ -295,7 +295,7 @@ export function Round({
         </h2>
       ) : (
         <>
-          <h2 className="text-2xl font-extrabold tracking-tight text-ink">¿Cómo se dice en italiano?</h2>
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink">¿Cómo se dice en {languageName(lang)}?</h2>
           <p className="text-2xl font-bold text-sea-deep">{q.card.es}</p>
         </>
       )}
@@ -323,11 +323,11 @@ export function Round({
                     g.picked !== null && !reveal && !isPicked && "opacity-60",
                   )}
                 >
-                  {/* Listening: the Spanish name; reading the Spanish: the Italian word (the answer stays a test). */}
+                  {/* Listening: the Spanish name; reading the Spanish: the target-language word (the answer stays a test). */}
                   <Picture image={option.image} alt={q.kind === "listen-picture" ? option.es : option.text} bordered={false} />
                   {reveal || isPicked ? (
                     <span
-                      lang="it"
+                      lang={lang}
                       aria-hidden="true"
                       className={cn(
                         "absolute inset-x-0 bottom-0 px-2 py-1.5 text-center text-base font-bold",
@@ -355,7 +355,7 @@ export function Round({
                   type="button"
                   disabled={g.picked !== null}
                   onClick={() => answer(option)}
-                  lang={q.kind === "reverse" ? "it" : undefined}
+                  lang={q.kind === "reverse" ? lang : undefined}
                   className={cn(
                     "pressable min-h-14 flex-1 rounded-button border-2 px-4 py-3 text-left text-lg font-bold",
                     "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",

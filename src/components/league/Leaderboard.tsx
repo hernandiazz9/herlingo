@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Card } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { DEFAULT_LANG } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useLeagueGroup } from "@/lib/league/groups";
 import {
   agoLabel,
@@ -29,7 +29,8 @@ export function Leaderboard({ online }: { online: boolean }) {
   const [choice, setChoice] = useState<LeaderboardScope | null>(null);
   const scope: LeaderboardScope = choice ?? (hasGroup ? "group" : "global");
   const groupMissing = scope === "group" && !hasGroup;
-  const state = useLeaderboard(DEFAULT_LANG, scope, !groupMissing);
+  const lang = useScreenLang();
+  const state = useLeaderboard(lang ?? "", scope, lang !== null && !groupMissing);
   const { board, loading, failed, now } = state;
 
   const rows = board?.rows ?? [];

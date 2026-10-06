@@ -55,9 +55,9 @@ export const PackMeta = z.object({
   default: z.literal(true).optional(),
   /** ISO 639-1 code, equals the folder name (`it`). */
   lang: z.string().regex(/^[a-z]{2,3}$/),
-  /** Name of the language in Spanish ("Italiano"). */
+  /** Name of the language in Spanish ("Italiano", "Francés"). */
   name: Text,
-  /** Name of the language in itself ("Italiano"). */
+  /** Name of the language in itself ("Italiano", "Français"). */
   nativeName: Text,
   /** BCP-47 locale for speechSynthesis and speech recognition ("it-IT"). */
   speechLocale: z.string().regex(/^[a-z]{2,3}-[A-Z]{2}$/),
@@ -133,7 +133,7 @@ export const Reply = z.object({
 /** Q&A pair for "answer" exercises: hear a typical question, pick or say a good reply. */
 export const QA = z.object({
   id: Id,
-  /** What the Italian says/asks ("Di dove sei?"). */
+  /** What the native speaker says/asks ("Di dove sei?"). */
   question: Text,
   /** Spanish translation of the question. */
   questionEs: Text,
@@ -145,7 +145,7 @@ export const QA = z.object({
   situation: Id,
   notes: Text.optional(),
   tags: Tags,
-  /** Voice for the question (the Italian speaker). */
+  /** Voice for the question (the native speaker). */
   voice: Text.optional(),
 });
 

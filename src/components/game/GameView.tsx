@@ -4,7 +4,8 @@ import { useMemo, useState, useSyncExternalStore } from "react";
 import { EntryCard } from "@/components/coach/EntryCard";
 import { LessonLangContext } from "@/components/exercises/shared";
 import { speak } from "@/lib/audio";
-import { DEFAULT_LANG, getPack } from "@/lib/content";
+import { getPack } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import { createRng } from "@/lib/exercises";
 import {
@@ -37,7 +38,12 @@ function countLabel(topic: Topic): string {
 }
 
 /** /jugar: topic grid → discovery cards → 60-second round. */
-export function GameView({ lang = DEFAULT_LANG }: { lang?: string }) {
+export function GameView() {
+  const lang = useScreenLang();
+  return lang ? <Game key={lang} lang={lang} /> : null;
+}
+
+function Game({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const topics = useMemo(() => listTopics(pack), [pack]);
   const mixDetail = useMemo(() => {

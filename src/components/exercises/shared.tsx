@@ -3,15 +3,19 @@
 import { createContext, useContext, type ReactNode, type SVGProps } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { speak } from "@/lib/audio";
-import { DEFAULT_LANG, type Playable } from "@/lib/content";
+import { getPack, type Playable } from "@/lib/content";
+import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import type { Exercise, ExerciseOutcome } from "@/lib/exercises";
 
-/** Language pack of the running session (for audio and speech recognition). */
-export const LessonLangContext = createContext<string>(DEFAULT_LANG);
+/** Language pack of the running session (for audio, speech recognition and `lang` attributes). */
+export const LessonLangContext = createContext<string | null>(null);
 
+/** The session's language; outside a session, the screen's (active) language, else the default pack. */
 export function useLessonLang(): string {
-  return useContext(LessonLangContext);
+  const session = useContext(LessonLangContext);
+  const screen = useScreenLang();
+  return session ?? screen ?? getPack().meta.lang;
 }
 
 /** Plays a playable in the session language. Call it directly in a click handler (iOS). */
