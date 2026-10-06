@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 10:44Z 💻
-- Writer: released 10:44Z by 💻 desktop
+- Updated: 2026-10-06 11:10Z 💻
+- Writer: 💻 desktop
 - Branch: main @ 2b18669 (plan merged 2026-10-06)
-- Next step: all tasks done; Hernán: visual + review queues on the deployed app
+- Next step: T75 fixes the coach functions; then ff main, push, Hernán deploys
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -255,6 +255,19 @@ Worktree setup: npm ci
   - `grep -rnE 'DEFAULT_LANG|lang="it"|italiano' src api` → only the loader and explanatory comments.
   - `npm run content:check -- --strict-audio --strict-images` and `npm run verify` → exit 0.
 - Outcome: merged origin/main (XP everywhere, numbers in the mic, voice dictation) with 9 conflicts resolved for multi-language; recordListen lang required; Borrar progreso also clears daily-xp:<lang>; French numberWords 0–100, hundreds, 1000 · 2b18669 · verify ✓ strict ✓ 💻 · not checked: new UI from main in both themes, mic numbers on device
+
+## T75 — Fix: Prepárate functions crash on Vercel (ES module load)
+- Status: pending
+- Depends on: T74
+- Where: any
+- Goal: Production `/api/coach/*` answers 500 FUNCTION_INVOCATION_FAILED; Vercel logs: "Failed to load the ES module: /var/task/api/coach/usage.js. Make sure to set "type": "module" in the nearest package.json file or use the .mjs extension". Make every coach function load on Vercel's Node runtime (e.g. `api/package.json` with `"type": "module"` plus `.js` extensions on relative imports in `api/**`, or another documented fix), keeping `npm run dev:coach`/`start:coach` working.
+- Context: vercel.json; api/coach/*.ts, api/_lib/*.ts (relative imports without extensions); scripts/coach/dev.ts; docs/coach.md; Vercel Node functions docs (WebFetch).
+- Scope: may touch `api/**`, `vercel.json`, `tsconfig*.json`, `eslint.config.*`, `scripts/coach/**`, docs/coach.md / must not touch `src/**`, `content/**`, `public/**`, `plans/`.
+- Done when:
+  - `npx vercel@latest build --prod` (local, no deploy) succeeds and each built coach function loads in Node with no ESM error (import its entry from `.vercel/output/functions/...` and call it with a request lacking `x-coach-code` → 401 JSON, not a crash).
+  - `COACH_FAKE=1 npm run dev:coach` still serves POST /api/coach/pack/ (200 with a dev code, 401 without).
+  - `npm run verify` → exit 0
+- Outcome:
 
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
