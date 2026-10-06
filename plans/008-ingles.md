@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:09Z 💻
+- Updated: 2026-10-06 13:15Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ d91ede2
+- Branch: plan-008-ingles @ 4c1c036
 - Next step: integrate T99/T100; then B1 units T101–T104
 - Needs Hernán: -
 
@@ -141,7 +141,7 @@ Worktree setup: npm ci
 - Outcome: A2 stories 1–6 (Pablo García visits Maya and Jordan in Logan Square), no ⚠; T99 outline in Decisions · 2ce823e · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T99 — English A2: stories 7–12
-- Status: running (attempt 1 · 💻 · agent aff36bf9f0b5fb64f · since 13:09Z)
+- Status: done
 - Depends on: T98
 - Where: any
 - Goal: A2 stories 7–12 (past simple in the last ones), continuing T98's cast and reusing its inline key words by id.
@@ -150,7 +150,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: A2 stories 7–12 per T98 outline (11–12 past simple; 12 sets up B1: Maya offers Pablo a job at her startup), new inline word story-en-deep-dish-pizza, no ⚠ · 4c1c036 · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T100 — English B1: friends, plans and B1 grammar
 - Status: running (attempt 1 · 💻 · agent a31a5f0d322050405 · since 13:09Z)
@@ -165,7 +165,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T101 — English B1: office, email and calls
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent af79a9ac470fd9c2c · since 13:15Z)
 - Depends on: T90
 - Where: any
 - Goal: Units `b1-office` (120) and `b1-calls` (122) per docs/brief-en.md (first days at work, team, stand-ups; email, chat, phone and video calls).
@@ -297,6 +297,7 @@ Worktree setup: npm ci
 - [ ] T95 @ffa24c6 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T98 @2ce823e — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T97 @d91ede2 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T99 @4c1c036 — English language review (gap distractors) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -342,3 +343,5 @@ Worktree setup: npm ci
 - 2026-10-06 12:15Z 💻 T98 done · worktree-agent-a5ade6dd27df593cd → 2ce823e · verify ✓
 - 2026-10-06 12:15Z 💻 T97 done · worktree-agent-af3986671c9ff79ca → d91ede2 · verify ✓; usage limit, writer released
 - 2026-10-06 13:09Z 💻 resumed on 💻 (Hernán: all on the Mac); T99 launched · agent aff36bf9f0b5fb64f; T100 launched · agent a31a5f0d322050405
+- 2026-10-06 13:15Z 💻 T99 done · worktree-agent-aff36bf9f0b5fb64f → 4c1c036 · verify ✓
+- 2026-10-06 13:15Z 💻 T101 launched · attempt 1 · agent af79a9ac470fd9c2c
