@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 11:17Z 💻
-- Writer: released 11:17Z by 💻 desktop
+- Updated: 2026-10-06 11:32Z 💻
+- Writer: 💻 desktop
 - Branch: main @ fc87971
-- Next step: Hernán: check Prepárate on the deployed app; visual + review queues
+- Next step: T76 makes pack generation tolerant; push main (auto-deploy)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -268,6 +268,19 @@ Worktree setup: npm ci
   - `COACH_FAKE=1 npm run dev:coach` still serves POST /api/coach/pack/ (200 with a dev code, 401 without).
   - `npm run verify` → exit 0
 - Outcome: api/package.json type module + .js on relative imports in api/; .vercel ignored by ESLint; local vercel build: all 4 functions load and answer 401 · fc87971 · verify ✓ 💻 · not checked: production deploy
+
+## T76 — Fix: generated packs rejected for too many dialogue turns (paid 502)
+- Status: pending
+- Depends on: T75
+- Where: any
+- Goal: In production every pack generation fails with "La respuesta ha llegado con errores": Vercel logs `[coach] output does not match the schema dialogue.turns Too big: expected array to have <=10 items`. The call is billed and the learner gets nothing. Make generation robust: tell the model the limits precisely (prompt + JSON schema where structured outputs support it) and, on the server, normalize recoverable overflows instead of failing (e.g. too many turns/phrases/steps → trim to the limit keeping the dialogue coherent: end on a native turn or a learner turn with a correct option, keep ≥ 1 learner turn; too few still fails). Same tolerance for the refine and interview paths and for every array with a max in the pack schema. Log what was trimmed.
+- Context: api/_lib/schema.ts (pack zod schema, limits), api/_lib/generators.ts, api/_lib/prompts.ts, api/_lib/claude.ts (structured outputs), docs/coach.md (pack schema); production log above.
+- Scope: may touch `api/**`, docs/coach.md / must not touch `src/**`, `content/**`, `public/**`, `plans/`.
+- Done when:
+  - A unit-style script (tsx, not committed or under scripts/coach/) feeds the validator a pack with 14 turns, 15 key phrases and 9 guide steps → normalized valid pack; a pack with 1 turn still fails.
+  - `COACH_FAKE=1 npm run dev:coach` still returns 200 for POST /api/coach/pack/ with a dev code.
+  - `npm run verify` → exit 0
+- Outcome:
 
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
