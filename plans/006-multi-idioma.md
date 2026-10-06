@@ -1,6 +1,6 @@
 # Plan 006 — Multi-idioma: French pack, global points, multi-group Liga
 
-Status: draft (interview done 2026-10-06; awaiting Hernán's approval before anything runs)
+Status: active
 Created: 2026-10-06
 Base branch: plan-006-multi-idioma
 Goal: Turn the Italian trainer into a multi-language app where adding a language stays "content only". The learner picks the language they are studying (first launch and Perfil), stored on the device, and every screen uses that pack; Italian progress and every other on-device key survive untouched. French (`fr`) becomes the second pack: an everyday-life course from a basic level (docs/brief-fr.md), same format and volume as Italian, with fr-FR neural audio. Points become global: app XP adds every language, is always shown, resets on the 1st of each month and keeps a lifetime total; the streak is global. Liga XP is the weekly sum over all languages (still recorded per language), and a player can be in up to 10 groups at once plus the general table. The service worker keeps only the active language's audio offline. Order: code foundation first, then points and Liga, French content unit by unit in parallel slots, audio last on the Mac. MVP speed: no automated tests; verification is `npm run verify`.
@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 💻
+- Updated: 2026-10-06 09:05Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: Hernán approves the plan; then launch T58 and T63 (no overlap).
-- Needs Hernán: plan approval.
+- Next step: T58 + T63 running; then T59/T61 and French units
+- Needs Hernán: -
 
 ## Shared contract (all tasks read this)
 
@@ -261,3 +261,4 @@ Worktree setup: npm ci
 
 ## Log
 - 2026-10-06 💻 plan written from the interview; not approved yet
+- 2026-10-06 09:05Z 💻 plan approved by Hernán
