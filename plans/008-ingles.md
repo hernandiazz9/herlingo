@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:45Z 💻
+- Updated: 2026-10-06 13:57Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
 - Branch: plan-008-ingles @ 80e939f
 - Next step: T109 audio + pictures running on the Mac; then end of plan (T110 waits for plan 007 voice)
@@ -262,7 +262,7 @@ Worktree setup: npm ci
 - Outcome: 12 placement questions (6 A2 + 6 B1, easy→hard, cover all 20 non-grammar units); suggestLevel: all right → B1, A2 only → A2 · 80e939f · verify ✓ 💻 · not checked: placement screen on device
 
 ## T109 — English audio and pictures, final offline check
-- Status: running (attempt 1 · 💻 · agent a4fd31c836beead18 · since 13:45Z)
+- Status: done
 - Depends on: T97, T99, T105, T107, T108
 - Where: pc (edge-tts needs the Mac's internet; on-device check)
 - Goal: Generate en-US neural mp3 for every English playable and the English pictures, commit them, and prove the English course (A2 and B1) works offline with only its audio cached.
@@ -273,7 +273,7 @@ Worktree setup: npm ci
   - `npm run content:check -- --strict-audio --strict-images` → exit 0.
   - `npm run verify` → exit 0
   - Hand check (PC): installed PWA with English active, airplane mode: an A2 lesson, a B1 dialogue and a story play neural audio; switching it ↔ en keeps each language's progress.
-- Outcome:
+- Outcome: en-US audio 3449 mp3 (54 MB, 4 voices OK), 113 Fluent pictures; it/fr audio untouched; strict audio+images ✓; SW audio lists en/fr/it · 48ff88b · verify ✓ 💻 · not checked: iPhone PWA English offline, it↔en switch
 
 ## T110 — Contraction-aware answer and speech matching (`equivalents`)
 - Status: blocked (waits for plan 007 voice merged into main, then main merged into plan-008-ingles)
@@ -307,12 +307,14 @@ Worktree setup: npm ci
 - [ ] T105 @e4df5b6 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T107 @2e8fa42 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T108 @80e939f — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T109 @48ff88b — skim the generated en manifest (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T97 @d91ede2 — play two English A2 dialogues with device voices (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T105 @e4df5b6 — play two English B1 dialogues (formal + tu badge) with device voices (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T108 @80e939f — English placement: answered well → suggests B1, poorly → A2; light + dark 375 px (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T109 @48ff88b — installed PWA, English active, airplane mode: A2 lesson, B1 dialogue, story play neural audio; it↔en switch keeps progress (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: English (`en`) is the third pack, American English (en-US voices and speechLocale, US spelling and formats); content only, generic code where the schema needs it; product note in docs/brief-en.md (docs/brief.md not edited); never lose on-device data, it/fr content and audio byte-identical. (Hernán)
@@ -374,3 +376,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:44Z 💻 T107 done · worktree-agent-a5e325762b5aa14eb → 2e8fa42 · verify ✓
 - 2026-10-06 13:45Z 💻 T108 done · worktree-agent-ab71d946f3971ca84 → 80e939f · verify ✓
 - 2026-10-06 13:45Z 💻 T109 launched · attempt 1 · agent a4fd31c836beead18
+- 2026-10-06 13:57Z 💻 T109 done · worktree-agent-a4fd31c836beead18 → 48ff88b · verify ✓ strict ✓
