@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:38Z 💻
+- Updated: 2026-10-06 13:39Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
 - Branch: plan-008-ingles @ 4bb405e
-- Next step: integrate T105/T106; then T108 placement, T107 stories
+- Next step: integrate T105/T107; then T108 placement; then T109 audio on the Mac
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -237,7 +237,7 @@ Worktree setup: npm ci
 - Outcome: B1 stories 101–106 (office, party/Nina, cancelled plans, video call with Mr. Park, Jordan's studio interview, IT bug), side cast Sam/Priya/Nina/Mr. Park/Kevin, no ⚠ · 4bb405e · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T107 — English B1: stories 7–12
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a5e325762b5aa14eb · since 13:39Z)
 - Depends on: T106
 - Where: any
 - Goal: B1 stories 7–12 continuing T106.
@@ -362,3 +362,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:33Z 💻 T104 done · worktree-agent-aac01f4b40eee4d97 → 7aa62c2 · verify ✓
 - 2026-10-06 13:33Z 💻 T105 launched · agent a2fac5b84b0da1e21; T106 launched · agent ab9c8ed4cb82f5db9
 - 2026-10-06 13:38Z 💻 T106 done · worktree-agent-ab9c8ed4cb82f5db9 → 4bb405e · verify ✓
+- 2026-10-06 13:39Z 💻 T107 launched · attempt 1 · agent a5e325762b5aa14eb
