@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 12:09Z 💻
+- Updated: 2026-10-06 12:15Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ ffa24c6
-- Next step: integrate T97/T98; then T99 + B1 units
-- Needs Hernán: -
+- Branch: plan-008-ingles @ 2ce823e
+- Next step: T97 still running (agent af3986671c9ff79ca) — integrate it; then T99 + B1 units T100–T104
+- Needs Hernán: usage limit reached 2026-10-06; resume later
 
 ## Shared contract (all tasks read this)
 
@@ -129,7 +129,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T98 — English A2: stories 1–6
-- Status: running (attempt 1 · 💻 · agent a5ade6dd27df593cd · since 12:09Z)
+- Status: done
 - Depends on: T92, T93, T94, T95, T96
 - Where: any
 - Goal: A2 stories 1–6 with the brief-en cast in Chicago (Pablo's visit), `level: "A2"`, following the A2 units' order; key words reuse unit items by id where possible.
@@ -138,7 +138,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings (80–150 words, 8–10 key words, 3–4 questions, 4–6 gaps).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: A2 stories 1–6 (Pablo García visits Maya and Jordan in Logan Square), no ⚠; T99 outline in Decisions · 2ce823e · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T99 — English A2: stories 7–12
 - Status: pending
@@ -295,6 +295,7 @@ Worktree setup: npm ci
 - [ ] T94 @56781fd — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T96 @0987f5c — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T95 @ffa24c6 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T98 @2ce823e — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -311,6 +312,7 @@ Worktree setup: npm ci
 - 2026-10-06 plan: contractions matched through generic `pack.json` `equivalents` (survey: normalizeAnswer splits "don't" into "don t"; "I am" vs "I'm" would fail); the matching code waits for plan 007 voice (T110). (orchestrator)
 - 2026-10-06 plan: Base branch `plan-008-ingles` from main @ 1c8aab4, in its own worktree `.claude/worktrees/plan-008`: plan 006 (main checkout) and plan 007 voice (`.claude/worktrees/plan-007`, T76–T84) run in other sessions at the same time; this plan was drafted as 007 and renumbered to 008 / T90+ to avoid collisions. Hybrid push policy: the writer pushes the plan branch after every integrated task; never main, no PR, merge or deploy without Hernán's OK. (orchestrator)
 - 2026-10-06 T92: grammar cards live in the grammar unit's own grammar array (not extras) so they get the level; T100 scope updated accordingly. (orchestrator)
+- 2026-10-06 T98: outline for A2 stories 7–12 (T99): 7 coffee shop + deep-dish pizza, tip; 8 winter coat + returning a sweater; 9 L train to the Loop, lost, the lake; 10 cold, pharmacy via Mrs. Carter; 11 urgent care + telling his week (past simple); 12 goodbye at O'Hare (past simple), sets up B1. Voices: narrator Ava, Pablo Andrew, Maya/Mrs. Carter Emma (never together), Jordan Brian. (agent)
 
 ## Proposals (new scope)
 - 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
@@ -334,3 +336,4 @@ Worktree setup: npm ci
 - 2026-10-06 12:09Z 💻 T95 done · worktree-agent-ae9ae727412ff8139 → ffa24c6 · verify ✓
 - 2026-10-06 12:09Z 💻 T97 launched · attempt 1 · agent af3986671c9ff79ca
 - 2026-10-06 12:09Z 💻 T98 launched · attempt 1 · agent a5ade6dd27df593cd
+- 2026-10-06 12:15Z 💻 T98 done · worktree-agent-a5ade6dd27df593cd → 2ce823e · verify ✓
