@@ -32,7 +32,7 @@ export function AccountSection({ account, onDeleted }: AccountSectionProps) {
         <div className="flex flex-col gap-1">
           <h3 className="text-lg font-bold text-ink">Salir de la Liga</h3>
           <p className="text-sm text-ink">
-            Borra tu apodo, tu grupo y tu experiencia de la Liga. Tu progreso en este móvil no se toca.
+            Borra tu apodo, tus grupos y tu experiencia de la Liga. Tu progreso en este móvil no se toca.
           </p>
         </div>
         <button type="button" onClick={() => setDialog("delete")} className={cn(DANGER, "min-h-12 py-2 text-base")}>
@@ -54,7 +54,7 @@ export function AccountSection({ account, onDeleted }: AccountSectionProps) {
           }}
         >
           <p>
-            Borraremos tu apodo, tu grupo y toda tu experiencia de la Liga. No se puede deshacer, y dejarás de aparecer
+            Borraremos tu apodo, tus grupos y toda tu experiencia de la Liga. No se puede deshacer, y dejarás de aparecer
             en la clasificación.
           </p>
           <p>Tus lecciones, tu racha y tu XP en este móvil se quedan como están.</p>

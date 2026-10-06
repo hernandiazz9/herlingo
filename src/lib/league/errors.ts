@@ -14,6 +14,8 @@ export const SERVER_ERROR_CODES = [
   "group_name_invalid",
   "group_name_blocked",
   "already_in_group",
+  "too_many_groups",
+  "not_in_group",
   "group_not_found",
   "try_again",
   "lang_invalid",

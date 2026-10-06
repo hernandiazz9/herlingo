@@ -303,7 +303,8 @@ Framework-free modules plus one hook; nothing outside `/liga/` imports supabase-
 | `errors.ts` | `LeagueError` with `code`: the RPC tokens above plus `disabled`, `offline`, `network`, `not_joined`, `anonymous_disabled`, `email_invalid`, `email_taken`, `email_not_found`, `email_not_authorized`, `rate_limited`, `link_expired`, `link_invalid`, `unknown`. UI maps codes to copy. |
 | `account.ts` | Account state + actions (below). |
 | `use-league-account.ts` | `useLeagueAccount(lang?)` → the account snapshot + actions (`join`, `updateProfile`, `linkEmail`, `signInWithEmail`, `signOut`, `deleteMe`, `refresh`, `clearLinkError`). |
-| `groups.ts` | The caller's group (below): `useLeagueGroup()`, `createLeagueGroup(name)`, `joinLeagueGroup(code)`, `leaveLeagueGroup()`, `switchLeagueGroup(code)`, invite code helpers. |
+| `groups.ts` | The caller's groups and weekly standing (below): `useLeagueGroups()`, `createLeagueGroup(name)`, `joinLeagueGroup(code)`, `leaveLeagueGroup(code)`, `refreshLeagueGroups()`, invite code helpers. |
+| `leaderboard.ts` | Rankings per tab (`BoardTab` = `{ scope: "global" }` or `{ scope: "group", code }`): `fetchBoard(tab)` (`league_ranking` + `league_podium`), `useLeaderboard(tab, enabled)`, the Madrid week helpers. |
 
 **Account state.** `{ status, profile, email?, pendingEmail?, userId?, online, linkError? }`.
 `status`: `loading` (server render/hydration, or checking a session the device has no profile
@@ -311,8 +312,10 @@ for), `disabled` (no env vars: hide every Liga entry point), `offline` (not join
 connection), `none` (online, not joined), `joined` (has a profile; also offline). The account is
 cached in localStorage `lang-lern:league-account` (`{ v: 1, userId, profile, email, pendingEmail }`,
 tolerant parsing), so `isLeagueJoined()` / `getLeagueAccount()` answer synchronously and offline;
-`refreshLeagueAccount()` re-reads it from the server (`getSession` + `league_me`), throttled to
-once a minute, on screen mount and when the device comes back online. supabase-js is only loaded
+`refreshLeagueAccount()` re-reads it from the server (`getSession` + `league_status`), throttled to
+once a minute, on screen mount and when the device comes back online. The account refresh reads
+`league_status` (no language: the Liga is the same for every pack) and hands the answer to the
+groups layer (`subscribeLeagueStatus`), so a screen mount costs one call. supabase-js is only loaded
 when there is something to check (cached account, stored session or a magic link in the URL) or
 for an action, so users who never open Liga never download it.
 
@@ -343,17 +346,34 @@ stats), `updated`, `user_changed` (another user signed in: drop per-user local s
   the app's, so the session lands in Safari. Linking/sign-in by link works best in the browser
   where the app is used; a 6-digit code typed in the app (`verifyOtp`) would remove the limit.
 
-**Groups.** `useLeagueGroup()` → `{ status: "unknown" | "ready", group: { code, name, members } | null,
-refreshing, invite }`. The group is cached in localStorage `lang-lern:league-group`
-(`{ v: 1, userId, group }`; only used when `userId` is the joined user) and re-read from `league_me`
-on screen mount, after joining or signing in and when back online; sign-out, delete and user change
-drop it. Actions (`not_joined`/`offline` checked first) store the server's answer; an
-`already_in_group` error triggers a refresh (the cache was stale). The share link is
-`<origin>/liga/unirse/?codigo=<code>` (Web Share, else copied to the clipboard). That static page
-reads the code on the client and remembers it in `lang-lern:league-invite`: not joined → the join
-flow, then straight into the group; joined without a group → "Unirme al grupo"; in another group →
-leave and join (confirmation). The remembered invite is offered again on /liga/ (e.g. after an
-email sign-in, which redirects to /liga/) until it is used or dismissed ("Ahora no").
+**Groups (up to 10) and weekly standing.** `useLeagueGroups()` → `{ status: "unknown" | "ready",
+groups: [{ code, name, members, rank }], maxGroups, weeklyXp, globalRank, weekEnd, updatedAt,
+refreshing, invite }`, from `league_status` (`weeklyXp` = every language this week; `rank` = the
+caller's rank in that group). Cached in localStorage `lang-lern:league-groups`
+(`{ v: 1, userId, groups, maxGroups, weeklyXp, globalRank, weekEnd, updatedAt }`, tolerant parsing;
+only used when `userId` is the joined user) and re-read on screen mount, after joining or signing in,
+when back online, when the app becomes visible (8 s throttle) and 3 s after each XP award; sign-out,
+delete and user change drop it. The old one-group cache `lang-lern:league-group` is no longer read or
+written (left in place). Actions (`not_joined`/`offline` checked first) apply the server's answer
+to the cache, then re-read the status: create/join add the group without leaving the others (a
+client-side `too_many_groups` check at `maxGroups` avoids a call), `leaveLeagueGroup(code)` removes
+that one (and its cached ranking). The share link is `<origin>/liga/unirse/?codigo=<code>` (Web
+Share, else copied to the clipboard). That static page reads the code on the client and remembers
+it in `lang-lern:league-invite`: not joined → the join flow, then straight into the group; already
+in it → "Ya estás"; at the limit → the limit message; else "Unirme al grupo" (the other groups are
+kept). The remembered invite is offered again on /liga/ (e.g. after an email sign-in, which
+redirects to /liga/) until it is used or dismissed ("Ahora no").
+
+**Screens.** /liga/: profile, "Tus grupos" (one card per group: name, members, this week's rank,
+code, "Compartir enlace", "Salir" with confirmation; create / join by code until the limit, then
+the limit message), "Clasificación" with tabs **General** + one per group (scrolls sideways; a group
+left elsewhere falls back to General), each with this week's podium and table and last week's
+podium. Ruta's Liga card shows the rank in the general table and the weekly XP of every language
+("En la general · todos los idiomas"), from the cached status.
+
+**Rankings cache.** `lang-lern:league-ranking:global` and `lang-lern:league-ranking:group:<code>`
+(`{ v: 1, userId, updatedAt, rows, lastWeek }`, ignored once the week is over). The old per-language
+caches `lang-lern:league-board:<lang>:<scope>` are no longer read or written (left in place).
 
 ### Sync (XP outbox)
 

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { ConfirmDialog } from "@/components/league/ConfirmDialog";
 import { JoinFlow } from "@/components/league/JoinFlow";
 import { leagueErrorMessage, membersLabel } from "@/components/league/copy";
 import { Button, Card } from "@/components/ui";
@@ -11,8 +10,7 @@ import {
   joinLeagueGroup,
   normalizeGroupCode,
   rememberGroupInvite,
-  switchLeagueGroup,
-  useLeagueGroup,
+  useLeagueGroups,
   type LeagueGroup,
 } from "@/lib/league/groups";
 import { useLeagueAccount } from "@/lib/league/use-league-account";
@@ -44,19 +42,20 @@ function Skeleton() {
   );
 }
 
-type JoinState = { kind: "idle" } | { kind: "pending" } | { kind: "error"; message: string } | { kind: "done"; group: LeagueGroup };
+type JoinState =
+  { kind: "idle" } | { kind: "pending" } | { kind: "error"; message: string } | { kind: "done"; group: LeagueGroup };
 
 /**
  * `/liga/unirse/?codigo=XXXXXX`: not joined → join the Liga first, then straight into the group;
- * joined → join (or leave the current group and join this one). The code is also remembered on
- * the device, so /liga/ offers it again after an email sign-in or if the user leaves this page.
+ * joined → join it, keeping the other groups (or the limit message when already in the maximum).
+ * The code is also remembered on the device, so /liga/ offers it again after an email sign-in or
+ * if the user leaves this page.
  */
 export function JoinGroupView() {
   const code = useInviteCode();
   const account = useLeagueAccount();
-  const group = useLeagueGroup();
+  const groups = useLeagueGroups();
   const [join, setJoin] = useState<JoinState>({ kind: "idle" });
-  const [switching, setSwitching] = useState(false);
 
   useEffect(() => {
     if (code) rememberGroupInvite(code);
@@ -96,9 +95,7 @@ export function JoinGroupView() {
       <>
         <Card tone="sea" className="flex flex-col gap-1">
           <p className="text-lg font-bold text-ink">Te han invitado a un grupo</p>
-          <p className="text-base text-ink">
-            Código {codeLabel}. Primero únete a la Liga y te meteremos en el grupo.
-          </p>
+          <p className="text-base text-ink">Código {codeLabel}. Primero únete a la Liga y te meteremos en el grupo.</p>
         </Card>
         {account.status === "offline" ? (
           <Card tone="lemon" role="status" className="text-base text-ink">
@@ -126,7 +123,7 @@ export function JoinGroupView() {
 
   if (join.kind === "pending") return <Skeleton />;
 
-  const current = group.group;
+  const current = groups.groups.find((g) => g.code === code);
   const offlineNote = account.online ? null : (
     <p role="status" className="text-base font-bold text-terracotta-deep">
       Sin conexión. Conéctate a internet para unirte.
@@ -139,9 +136,9 @@ export function JoinGroupView() {
       </p>
     ) : null;
 
-  if (group.status === "unknown" && account.online) return <Skeleton />;
+  if (groups.status === "unknown" && account.online) return <Skeleton />;
 
-  if (current && current.code === code) {
+  if (current) {
     return (
       <Card className="flex flex-col gap-3">
         <div className="flex flex-col gap-1">
@@ -155,40 +152,18 @@ export function JoinGroupView() {
     );
   }
 
-  if (current) {
+  if (groups.status === "ready" && groups.groups.length >= groups.maxGroups) {
     return (
       <Card className="flex flex-col gap-3">
         <div className="flex flex-col gap-1">
-          <p className="text-lg font-bold text-ink">Ya estás en «{current.name}»</p>
+          <p className="text-lg font-bold text-ink">Ya estás en {groups.maxGroups} grupos</p>
           <p className="text-base text-ink-muted">
-            Solo puedes estar en un grupo. Para unirte al grupo {codeLabel}, sal primero del tuyo.
+            Es el máximo. Para unirte al grupo {codeLabel}, sal antes de alguno de los tuyos en la Liga.
           </p>
         </div>
-        {errorNote}
-        {offlineNote}
-        <Button size="md" fullWidth onClick={() => setSwitching(true)} disabled={!account.online}>
-          Cambiarme a este grupo
-        </Button>
         <Link href="/liga/" className={LINK}>
-          Quedarme en «{current.name}»
+          Ir a la Liga
         </Link>
-        {switching ? (
-          <ConfirmDialog
-            title={`¿Salir de «${current.name}»?`}
-            confirmLabel="Sí, cambiar de grupo"
-            pendingLabel="Cambiando…"
-            blockedNote={account.online ? undefined : "Sin conexión. Conéctate a internet para hacerlo."}
-            onClose={() => setSwitching(false)}
-            onConfirm={async () => {
-              const next = await switchLeagueGroup(code);
-              setSwitching(false);
-              setJoin({ kind: "done", group: next });
-            }}
-          >
-            <p>Dejarás «{current.name}» y entrarás en el grupo {code}.</p>
-            {current.members === 1 ? <p>Eres el último miembro de «{current.name}»: se borrará.</p> : null}
-          </ConfirmDialog>
-        ) : null}
       </Card>
     );
   }
@@ -197,7 +172,9 @@ export function JoinGroupView() {
     <Card className="flex flex-col gap-3">
       <div className="flex flex-col gap-1">
         <p className="text-lg font-bold text-ink">Unirte al grupo</p>
-        <p className="text-base text-ink-muted">Código {codeLabel}. Competiréis cada semana por la experiencia.</p>
+        <p className="text-base text-ink-muted">
+          Código {codeLabel}. Competiréis cada semana por la experiencia. Sigues en tus otros grupos.
+        </p>
       </div>
       {errorNote}
       {offlineNote}

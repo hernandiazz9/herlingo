@@ -12,7 +12,7 @@ import { useLeagueAccount } from "@/lib/league/use-league-account";
 
 /**
  * The Liga screen. Not joined: join flow (nickname + emoji, or sign in with email). Joined: profile,
- * the weekly ranking and the account section (email, sign out, leave and delete my data).
+ * your groups, the weekly rankings (general + one per group) and the account section (email, sign out, leave and delete my data).
  */
 export function LeagueView() {
   const account = useLeagueAccount();

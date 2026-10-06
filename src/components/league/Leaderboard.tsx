@@ -3,34 +3,41 @@
 import { useState } from "react";
 import { Card } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { useScreenLang } from "@/lib/content/use-active-lang";
-import { useLeagueGroup } from "@/lib/league/groups";
+import { useLeagueGroups } from "@/lib/league/groups";
 import {
   agoLabel,
   countdownLabel,
+  GLOBAL_TAB,
   nextWeekReset,
+  tabKey,
   useLeaderboard,
+  type BoardTab,
   type LeaderboardRow,
-  type LeaderboardScope,
 } from "@/lib/league/leaderboard";
 import { TEXT_BUTTON } from "./copy";
 
 const MEDALS = ["🥇", "🥈", "🥉"];
 
 const TAB =
-  "min-h-11 flex-1 rounded-button px-3 text-base font-bold focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
+  "min-h-11 max-w-[12rem] shrink-0 truncate rounded-button px-4 text-base font-bold focus-visible:outline-3 focus-visible:outline-offset-[-3px] focus-visible:outline-lemon-deep";
 
 const xpLabel = (xp: number) => `${xp.toLocaleString("es-ES")} XP`;
 
-/** Weekly ranking: Grupo / Global switch, podium, the table (top 50 + me), countdown and last week. */
+/**
+ * Weekly ranking (every language together): tabs General + one per group, podium, the table
+ * (top 50 + me), countdown and last week's podium of the selected tab.
+ */
 export function Leaderboard({ online }: { online: boolean }) {
-  const group = useLeagueGroup();
-  const hasGroup = group.group !== null;
-  const [choice, setChoice] = useState<LeaderboardScope | null>(null);
-  const scope: LeaderboardScope = choice ?? (hasGroup ? "group" : "global");
-  const groupMissing = scope === "group" && !hasGroup;
-  const lang = useScreenLang();
-  const state = useLeaderboard(lang ?? "", scope, lang !== null && !groupMissing);
+  const { groups } = useLeagueGroups();
+  const [choice, setChoice] = useState<string>(tabKey(GLOBAL_TAB));
+  const tabs: { tab: BoardTab; label: string }[] = [
+    { tab: GLOBAL_TAB, label: "General" },
+    ...groups.map((g) => ({ tab: { scope: "group" as const, code: g.code }, label: g.name })),
+  ];
+  // A group left (here or on another device) falls back to the general table.
+  const selected = tabs.find((t) => tabKey(t.tab) === choice) ?? tabs[0];
+  const selectedKey = tabKey(selected.tab);
+  const state = useLeaderboard(selected.tab, true);
   const { board, loading, failed, now } = state;
 
   const rows = board?.rows ?? [];
@@ -48,90 +55,93 @@ export function Leaderboard({ online }: { online: boolean }) {
         <p className="text-sm font-bold text-ink-muted">{countdownLabel(nextWeekReset(now) - now)}</p>
       </div>
 
-      <div role="tablist" aria-label="Tipo de clasificación" className="flex gap-1 rounded-button bg-sand p-1">
-        {(["group", "global"] as const).map((s) => (
-          <button
-            key={s}
-            type="button"
-            role="tab"
-            id={`league-tab-${s}`}
-            aria-selected={scope === s}
-            aria-controls="league-board"
-            className={cn(TAB, scope === s ? "bg-surface text-sea-deep shadow-sm" : "text-ink-muted hover:text-ink")}
-            onClick={() => setChoice(s)}
-          >
-            {s === "group" ? "Grupo" : "Global"}
-          </button>
-        ))}
-      </div>
+      {tabs.length > 1 ? (
+        <div
+          role="tablist"
+          aria-label="Clasificaciones"
+          className="flex gap-1 overflow-x-auto rounded-button bg-sand p-1 [scrollbar-width:none]"
+        >
+          {tabs.map(({ tab, label }) => {
+            const key = tabKey(tab);
+            const active = key === selectedKey;
+            return (
+              <button
+                key={key}
+                type="button"
+                role="tab"
+                id={`league-tab-${key}`}
+                aria-selected={active}
+                aria-controls="league-board"
+                title={label}
+                className={cn(TAB, active ? "bg-surface text-sea-deep shadow-sm" : "text-ink-muted hover:text-ink")}
+                onClick={() => setChoice(key)}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+      ) : (
+        <p className="text-sm text-ink-muted">General · XP de esta semana en todos tus idiomas.</p>
+      )}
 
-      <div id="league-board" role="tabpanel" aria-labelledby={`league-tab-${scope}`} className="flex flex-col gap-3">
-        {groupMissing ? (
-          <Card tone="sea" className="flex flex-col gap-1">
-            <p className="text-lg font-bold text-ink">Aún no tienes grupo</p>
-            <p className="text-base text-ink">
-              Crea uno o únete con un código en «Tu grupo» y compite solo con tus amigos.
-            </p>
-            <button type="button" className={TEXT_BUTTON} onClick={() => setChoice("global")}>
-              Ver la clasificación global
-            </button>
+      <div
+        id="league-board"
+        {...(tabs.length > 1 ? { role: "tabpanel", "aria-labelledby": `league-tab-${selectedKey}` } : {})}
+        className="flex flex-col gap-3"
+      >
+        {board && offline ? (
+          <p role="status" className="text-sm font-bold text-ink-muted">
+            Sin conexión · actualizado {agoLabel(now - board.updatedAt)}
+          </p>
+        ) : null}
+
+        {loading ? (
+          <Card aria-busy="true" className="flex flex-col gap-3">
+            {[0, 1, 2].map((i) => (
+              <span key={i} className="h-10 rounded-button bg-line motion-safe:animate-pulse" />
+            ))}
+            <span className="sr-only">Cargando la clasificación…</span>
+          </Card>
+        ) : !board ? (
+          <Card tone="lemon" role="status" className="text-base text-ink">
+            {offline
+              ? "Sin conexión. Conéctate a internet para ver la clasificación."
+              : "No hemos podido cargar la clasificación."}{" "}
+            {!offline ? (
+              <button type="button" className={TEXT_BUTTON} onClick={state.refresh}>
+                Reintentar
+              </button>
+            ) : null}
           </Card>
         ) : (
           <>
-            {board && offline ? (
-              <p role="status" className="text-sm font-bold text-ink-muted">
-                Sin conexión · actualizado {agoLabel(now - board.updatedAt)}
-              </p>
-            ) : null}
-
-            {loading ? (
-              <Card aria-busy="true" className="flex flex-col gap-3">
-                {[0, 1, 2].map((i) => (
-                  <span key={i} className="h-10 rounded-button bg-line motion-safe:animate-pulse" />
-                ))}
-                <span className="sr-only">Cargando la clasificación…</span>
-              </Card>
-            ) : !board ? (
-              <Card tone="lemon" role="status" className="text-base text-ink">
-                {offline
-                  ? "Sin conexión. Conéctate a internet para ver la clasificación."
-                  : "No hemos podido cargar la clasificación."}{" "}
-                {!offline ? (
-                  <button type="button" className={TEXT_BUTTON} onClick={state.refresh}>
-                    Reintentar
-                  </button>
-                ) : null}
-              </Card>
+            {podium.length > 0 ? (
+              <Podium rows={podium} />
             ) : (
-              <>
-                {podium.length > 0 ? (
-                  <Podium rows={podium} />
-                ) : (
-                  <Card tone="lemon" className="text-base text-ink">
-                    Nadie ha sumado XP esta semana. ¡Haz una lección y sé el primero!
-                  </Card>
-                )}
-
-                {rest.length > 0 ? (
-                  <ol className="flex flex-col gap-2" aria-label="Resto de la clasificación">
-                    {rest.map((row, i) => (
-                      <li key={`${row.rank}-${row.nickname}-${i}`}>
-                        {i > 0 && row.rank - rest[i - 1].rank > 1 && row.isMe ? (
-                          <p aria-hidden="true" className="pb-1 text-center text-ink-muted">
-                            ···
-                          </p>
-                        ) : null}
-                        <Row row={row} />
-                      </li>
-                    ))}
-                  </ol>
-                ) : null}
-              </>
+              <Card tone="lemon" className="text-base text-ink">
+                Nadie ha sumado XP esta semana. ¡Haz una lección y sé el primero!
+              </Card>
             )}
 
-            {board && board.lastWeek.length > 0 ? <LastWeek rows={board.lastWeek} /> : null}
+            {rest.length > 0 ? (
+              <ol className="flex flex-col gap-2" aria-label="Resto de la clasificación">
+                {rest.map((row, i) => (
+                  <li key={`${row.rank}-${row.nickname}-${i}`}>
+                    {i > 0 && row.rank - rest[i - 1].rank > 1 && row.isMe ? (
+                      <p aria-hidden="true" className="pb-1 text-center text-ink-muted">
+                        ···
+                      </p>
+                    ) : null}
+                    <Row row={row} />
+                  </li>
+                ))}
+              </ol>
+            ) : null}
           </>
         )}
+
+        {board && board.lastWeek.length > 0 ? <LastWeek rows={board.lastWeek} /> : null}
       </div>
     </section>
   );
@@ -179,7 +189,11 @@ function Podium({ rows }: { rows: LeaderboardRow[] }) {
             className={cn(
               "flex flex-col items-center gap-1 rounded-card border-2 px-2 py-3 text-center",
               place === 0 ? "pb-5 pt-5" : "",
-              row.isMe ? "border-sea bg-sea-soft" : place === 0 ? "border-lemon bg-lemon-soft" : "border-line bg-surface",
+              row.isMe
+                ? "border-sea bg-sea-soft"
+                : place === 0
+                  ? "border-lemon bg-lemon-soft"
+                  : "border-line bg-surface",
             )}
           >
             <span aria-hidden="true" className="text-xl">

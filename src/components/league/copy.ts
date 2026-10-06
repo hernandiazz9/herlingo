@@ -3,7 +3,7 @@
  * (mirrors `league_set_profile`, docs/league.md → "Nicknames") and shared class strings.
  */
 import { isLeagueError, type LeagueErrorCode } from "@/lib/league/errors";
-import { GROUP_NAME_MAX } from "@/lib/league/groups";
+import { DEFAULT_MAX_GROUPS, GROUP_NAME_MAX } from "@/lib/league/groups";
 
 export const NICKNAME_MIN = 3;
 export const NICKNAME_MAX = 20;
@@ -74,7 +74,9 @@ const MESSAGES: Partial<Record<LeagueErrorCode, string>> = {
   link_invalid: "No hemos podido usar ese enlace.",
   group_name_invalid: "Usa de 1 a 30 caracteres para el nombre del grupo.",
   group_name_blocked: "Ese nombre de grupo no está permitido. Prueba otro.",
-  already_in_group: "Ya estás en un grupo. Sal de él para crear o unirte a otro.",
+  already_in_group: "Ya estás en ese grupo.",
+  too_many_groups: `Ya estás en ${DEFAULT_MAX_GROUPS} grupos, el máximo. Sal de uno para crear o unirte a otro.`,
+  not_in_group: "Ya no estás en ese grupo.",
   group_not_found: "No hay ningún grupo con ese código. Revísalo.",
   try_again: "No hemos podido crear el grupo. Vuelve a intentarlo.",
 };

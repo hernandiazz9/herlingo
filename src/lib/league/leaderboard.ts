@@ -1,9 +1,12 @@
 /**
- * Liga weekly leaderboards (docs/league.md → `league_leaderboard`, `league_last_week_podium`).
+ * Liga weekly leaderboards (docs/league.md → `league_ranking`, `league_podium`): the general table
+ * and one per group, XP summed over every language.
  *
- * `fetchBoard()` reads the current ranking and last week's podium for one scope; the last good
- * answer is cached on the device (`lang-lern:league-board:<lang>:<scope>`, tied to the user id) so
- * /liga/ still shows it offline. `useLeaderboard()` keeps it fresh: on mount, on focus / when the
+ * `fetchBoard()` reads the current ranking and last week's podium for one tab; the last good
+ * answer is cached on the device (`lang-lern:league-ranking:global`,
+ * `lang-lern:league-ranking:group:<code>`, tied to the user id) so /liga/ still shows it offline.
+ * The old per-language caches `lang-lern:league-board:<lang>:<scope>` are no longer read (left in
+ * place). `useLeaderboard()` keeps it fresh: on mount, on focus / when the
  * app becomes visible, when the device comes back online, shortly after an XP award (the sync of
  * `sync.ts` flushes 1 s after it) and when the week resets. Also the Madrid week helpers.
  */
@@ -13,6 +16,14 @@ import { getLeagueAccount, subscribeLeagueAccount } from "./account";
 import { leagueRpc } from "./client";
 
 export type LeaderboardScope = "group" | "global";
+
+/** One table: the general one, or one of the caller's groups. */
+export type BoardTab = { scope: "global" } | { scope: "group"; code: string };
+
+export const GLOBAL_TAB: BoardTab = { scope: "global" };
+
+/** Stable id of a tab ("global", "group:K7PX2M"). */
+export const tabKey = (tab: BoardTab) => (tab.scope === "global" ? "global" : `group:${tab.code}`);
 
 export interface LeaderboardRow {
   rank: number;
@@ -32,7 +43,7 @@ export interface Board {
   updatedAt: number;
 }
 
-const PREFIX = "lang-lern:league-board:";
+const PREFIX = "lang-lern:league-ranking:";
 const VERSION = 1;
 const TIME_ZONE = "Europe/Madrid";
 const DAY = 86_400_000;
@@ -124,15 +135,21 @@ function parseRows(value: unknown): LeaderboardRow[] {
   return rows;
 }
 
-const cacheKey = (lang: string, scope: LeaderboardScope) => `${PREFIX}${lang}:${scope}`;
+const cacheKey = (tab: BoardTab) => `${PREFIX}${tabKey(tab)}`;
 
 /** The cached board of this user, or null (none, another user's, bad data, or from a past week). */
-export function readCachedBoard(lang: string, scope: LeaderboardScope, userId: string | undefined): Board | null {
+export function readCachedBoard(tab: BoardTab, userId: string | undefined): Board | null {
   if (!userId) return null;
   try {
-    const raw = window.localStorage.getItem(cacheKey(lang, scope));
+    const raw = window.localStorage.getItem(cacheKey(tab));
     if (!raw) return null;
-    const data = JSON.parse(raw) as { v?: unknown; userId?: unknown; updatedAt?: unknown; rows?: unknown; lastWeek?: unknown };
+    const data = JSON.parse(raw) as {
+      v?: unknown;
+      userId?: unknown;
+      updatedAt?: unknown;
+      rows?: unknown;
+      lastWeek?: unknown;
+    };
     if (!data || data.v !== VERSION || data.userId !== userId || typeof data.updatedAt !== "number") return null;
     // Totals of a finished week are no longer "this week" (1 h of slack for DST).
     if (data.updatedAt < nextWeekReset() - 7 * DAY - 3_600_000) return null;
@@ -142,16 +159,38 @@ export function readCachedBoard(lang: string, scope: LeaderboardScope, userId: s
   }
 }
 
-function writeCachedBoard(lang: string, scope: LeaderboardScope, userId: string, board: Board) {
+function writeCachedBoard(tab: BoardTab, userId: string, board: Board) {
   try {
     const wire = (rows: LeaderboardRow[]) =>
-      rows.map((r) => ({ rank: r.rank, nickname: r.nickname, emoji: r.emoji, weekly_xp: r.weeklyXp, streak: r.streak, is_me: r.isMe }));
+      rows.map((r) => ({
+        rank: r.rank,
+        nickname: r.nickname,
+        emoji: r.emoji,
+        weekly_xp: r.weeklyXp,
+        streak: r.streak,
+        is_me: r.isMe,
+      }));
     window.localStorage.setItem(
-      cacheKey(lang, scope),
-      JSON.stringify({ v: VERSION, userId, updatedAt: board.updatedAt, rows: wire(board.rows), lastWeek: wire(board.lastWeek) }),
+      cacheKey(tab),
+      JSON.stringify({
+        v: VERSION,
+        userId,
+        updatedAt: board.updatedAt,
+        rows: wire(board.rows),
+        lastWeek: wire(board.lastWeek),
+      }),
     );
   } catch {
     // Storage full or unavailable: the board just is not cached.
+  }
+}
+
+/** Drops one cached board (after leaving that group). */
+export function clearCachedBoard(tab: BoardTab) {
+  try {
+    window.localStorage.removeItem(cacheKey(tab));
+  } catch {
+    // Nothing to clear.
   }
 }
 
@@ -170,16 +209,21 @@ export function clearCachedBoards() {
 }
 
 /** Reads this week's ranking and last week's podium from the server. Throws `LeagueError`. */
-export async function fetchBoard(lang: string, scope: LeaderboardScope): Promise<Board> {
+export async function fetchBoard(tab: BoardTab): Promise<Board> {
+  const args = tab.scope === "global" ? { scope: "global" } : { scope: "group", code: tab.code };
   const [rows, lastWeek] = await Promise.all([
-    leagueRpc<unknown>("league_leaderboard", { lang, scope }),
-    leagueRpc<unknown>("league_last_week_podium", { lang, scope }),
+    leagueRpc<unknown>("league_ranking", args),
+    leagueRpc<unknown>("league_podium", args),
   ]);
   return { rows: parseRows(rows), lastWeek: parseRows(lastWeek), updatedAt: Date.now() };
 }
 
 // ---------------------------------------------------------------------------------------------
 // Hook
+
+function tabFromKey(key: string): BoardTab {
+  return key.startsWith("group:") ? { scope: "group", code: key.slice(6) } : GLOBAL_TAB;
+}
 
 export interface LeaderboardState {
   board: Board | null;
@@ -195,11 +239,11 @@ export interface LeaderboardState {
 }
 
 /**
- * The board for `lang` / `scope`, cached and kept fresh. `enabled` = joined and `scope` usable
- * (e.g. false for the group scope without a group).
+ * The board of `tab`, cached and kept fresh. `enabled` = joined and the tab usable (e.g. false for
+ * a group the caller is no longer in).
  */
-export function useLeaderboard(lang: string, scope: LeaderboardScope, enabled: boolean): LeaderboardState {
-  const key = `${lang}:${scope}`;
+export function useLeaderboard(tab: BoardTab, enabled: boolean): LeaderboardState {
+  const key = tabKey(tab);
   /** The latest server answer (or failure) and which board it was for. */
   const [result, setResult] = useState<{ key: string; board: Board | null; failed: boolean } | null>(null);
   const [refreshing, setRefreshing] = useState(false);
@@ -210,8 +254,8 @@ export function useLeaderboard(lang: string, scope: LeaderboardScope, enabled: b
 
   // The cached board shows straight away (this component only mounts on the client, joined).
   const cached = useMemo(
-    () => (enabled ? readCachedBoard(lang, scope, getLeagueAccount().userId) : null),
-    [lang, scope, enabled],
+    () => (enabled ? readCachedBoard(tabFromKey(key), getLeagueAccount().userId) : null),
+    [key, enabled],
   );
   const current = result?.key === key ? result : null;
   const board = current?.board ?? cached;
@@ -233,9 +277,9 @@ export function useLeaderboard(lang: string, scope: LeaderboardScope, enabled: b
       lastRun.current = Date.now();
       setRefreshing(true);
       try {
-        const fresh = await fetchBoard(lang, scope);
+        const fresh = await fetchBoard(tabFromKey(key));
         if (id !== request.current || getLeagueAccount().userId !== userId) return;
-        writeCachedBoard(lang, scope, userId, fresh);
+        writeCachedBoard(tabFromKey(key), userId, fresh);
         setResult({ key, board: fresh, failed: false });
       } catch {
         if (id !== request.current) return;
@@ -247,10 +291,10 @@ export function useLeaderboard(lang: string, scope: LeaderboardScope, enabled: b
         }
       }
     },
-    [lang, scope, enabled, key],
+    [enabled, key],
   );
 
-  // New lang / scope: read the server (the answer of the previous one is ignored).
+  // New tab: read the server (the answer of the previous one is ignored).
   useEffect(() => {
     inFlight.current = false;
     lastRun.current = 0;

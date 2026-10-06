@@ -14,7 +14,6 @@ import type { Session } from "@supabase/supabase-js";
 import { authCallbackResult, getLeagueClient, hasAuthCallbackInUrl, leagueRpc } from "./client";
 import { AUTH_STORAGE_KEY, leagueEnabled, leagueRedirectUrl } from "./config";
 import { fromAuthError, isLeagueError, LeagueError } from "./errors";
-import { leagueLang } from "./lang";
 
 const KEY = "lang-lern:league-account";
 const VERSION = 1;
@@ -305,8 +304,20 @@ async function currentSession(createAnonymous: boolean): Promise<Session | null>
   return signIn.data.session;
 }
 
-interface MeResponse {
+interface StatusResponse {
   profile: { nickname: string; emoji: string; joined_at: string } | null;
+}
+
+type StatusListener = (userId: string, status: unknown) => void;
+const statusListeners = new Set<StatusListener>();
+
+/**
+ * Every `league_status` answer read by the account refresh, with the user it belongs to (the
+ * groups layer stores it, so a screen mount needs one call, not two).
+ */
+export function subscribeLeagueStatus(listener: StatusListener): () => void {
+  statusListeners.add(listener);
+  return () => statusListeners.delete(listener);
 }
 
 function toProfile(p: { nickname: string; emoji: string; joined_at: string } | null): LeagueProfile | null {
@@ -328,13 +339,14 @@ async function doRefresh() {
       if (prev) writeStored(null, "signed_out");
       return;
     }
-    const me = await leagueRpc<MeResponse>("league_me", { lang: leagueLang() });
+    const me = await leagueRpc<StatusResponse>("league_status");
     if (busy > 0 || generation !== gen) return;
     const next = { ...fromSession(session, prev), profile: toProfile(me.profile) };
     const change: LeagueAccountChange =
       prev && prev.userId !== next.userId ? "user_changed" : !prev?.profile && next.profile ? "joined" : "updated";
     if (!sameStored(prev, next)) writeStored(next, change);
     lastRefresh = Date.now();
+    if (next.profile) for (const listener of statusListeners) listener(next.userId, me);
   } catch (error) {
     if (busy > 0 || generation !== gen) return;
     // Background check: keep the cache on network errors; an invalid session means signed out.
@@ -349,7 +361,7 @@ async function doRefresh() {
 }
 
 /**
- * Re-reads the account from the server (session + `league_me`). Never throws. Skipped when Liga
+ * Re-reads the account from the server (session + `league_status`). Never throws. Skipped when Liga
  * is disabled, offline, or there is nothing to check (no cache, no session, no magic link), so
  * supabase-js is not loaded for users who never used Liga. Throttled unless `force`.
  */
@@ -369,8 +381,7 @@ export function refreshLeagueAccount(options: { force?: boolean } = {}): Promise
 }
 
 /**
- * Starts the account layer for a screen (idempotent; call again after a language switch):
- * `league_me` reads the active language (`leagueLang()`). Checks the session in the background
+ * Starts the account layer for a screen (idempotent). Checks the session in the background
  * (completes a magic-link redirect) and re-checks when the device comes back online.
  */
 export function startLeagueAccount() {
