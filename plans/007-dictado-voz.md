@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 💻
 - Writer: orchestrator (desktop)
 - Branch: plan-007-dictado-voz (from main @ a5f51c1)
-- Next step: T81 + T82 running; then T83, T84
+- Next step: T81 + T83 running; then T84
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -105,7 +105,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T82 — Prepárate dictation on the new engine
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T76, T77
 - Goal: SituationForm and LevelInterview use the shared mic UI in long mode (es-ES or pack locale as today): live text, appended to what is typed, editable, Cancelar, concrete errors. Remove the duplicate `DictateButton` and `use-dictation.ts` if nothing else uses it.
 - Context: src/components/coach/SituationForm.tsx, src/components/coach/LevelInterview.tsx (~365-418, `SPANISH_LOCALE`), src/components/coach/use-dictation.ts, docs/coach.md (Client section).
@@ -113,10 +113,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run verify` → exit 0
   - `grep -rn "listenOnce\|DictateButton" src/components/coach` → no output
-- Outcome:
+- Outcome: SituationForm + LevelInterview on useListen (long), use-dictation.ts and DictateButton removed → 6a1a92a
 
 ## T83 — "Probar micrófono" diagnostics screen under Perfil
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T76, T77
 - Goal: The screen in the Shared contract: support check, try target locale and es-ES with live states and timings, last attempts from `lang-lern:speech-log` in plain Spanish, Copiar registro, Borrar registro, iPhone tips. Linked from /perfil.
 - Context: src/lib/navigation.ts (`NESTED`), src/app/perfil/ (how other Perfil links like /liga/ and /instalar/ are done), src/components/shell/PageHeader, Shared contract.
@@ -155,6 +155,7 @@ Worktree setup: npm ci
 - 2026-10-06 T80: textarea read-only with live text while the mic is open, final transcript (spellNumbers) replaces the answer and is editable; Comprobar/Enter disabled while listening; mic UI hidden once answered; old custom notices replaced by engine messages (agent)
 - 2026-10-06 orchestrator: T82 launched before T81 so T81 can reuse the word-feedback component T79 creates
 - 2026-10-06 T79: only scored results count as tries (MAX_TRIES 2, same XP); errors don't count and never switch to self mode; miss card "Casi. Te queda un intento." + word feedback + Reintentar / Escuchar la frase, stays after answering; "Prefiero evaluarme yo" always shown in mic mode, self mode gets "Usar el micrófono" to go back; missing words struck through, wrong words wavy underline with heard word below, per-word aria labels (agent)
+- 2026-10-06 T82: dictated text appended and cut at the field limit; mic disabled at the limit; submit / "No lo sé" cancel an open session; dictation clears an earlier generation error like typing; labels "Dictar en español" / "Dictar en <idioma>" kept; added a "Dictation" bullet to docs/coach.md Client (agent)
 
 ## Proposals (new scope)
 - 2026-10-06: "Grabarme": record your voice and play it next to the native audio (separate from recognition) (Hernán, later)
@@ -173,3 +174,5 @@ Worktree setup: npm ci
 - 2026-10-06 13:49 T80 done · branch worktree-agent-ac77027cde8a91689 → 7a9b9bc
 - 2026-10-06 13:50 T82 launched · attempt 1 · agent a08696eeef89402db
 - 2026-10-06 13:50 T79 done · branch worktree-agent-a8ab439f1fa452413 → c2bcd2d
+- 2026-10-06 13:51 T81 launched · attempt 1 · agent a54c724831e21baa1
+- 2026-10-06 13:52 T82 done · branch worktree-agent-a08696eeef89402db → 6a1a92a
