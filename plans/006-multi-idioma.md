@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:13Z 💻
+- Updated: 2026-10-06 09:22Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T59/T65; then T61, T64 and French units
+- Next step: integrate T65/T61; then T60, T64 and French units
 - Needs Hernán: npx supabase db push for 20261006000000_league_multi.sql only when T64 ships (old app keeps working either way)
 
 ## Shared contract (all tasks read this)
@@ -46,7 +46,7 @@ Worktree setup: npm ci
 - Outcome: default pack flag, active-lang store + hook, listPacks, per-pack register/articles, ids unique across packs, static params for all packs, fr pack.json meta · 197c3ac · verify ✓ 💻
 
 ## T59 — Every screen on the active pack
-- Status: running (attempt 1 · 💻 · agent a6de474c4d54e2790 · since 09:11Z)
+- Status: done
 - Depends on: T58
 - Where: any
 - Goal: Replace every implicit Italian with the active (or owning) pack: the ~25 `DEFAULT_LANG` uses and the silent `lang?` fallbacks, the ~25 `lang="it"` attributes, the Spanish copy that says "italiano", the `it`-named fields, the audio manifest preload, the league client's module-level `lang`, and the Italian-only coach fake pack. Behaviour with Italian active must not change.
@@ -58,7 +58,7 @@ Worktree setup: npm ci
   - With a temporary `lang-lern:active-lang` = fr in the browser, Ruta, Repaso, Frasario, Jugar, Historias, Diálogos, Perfil and Prepárate render the (empty) French pack without crashing; back to it everything is as before.
   - `npm run verify` → exit 0
   - Hand check (PC): Italian lesson, game round, phrasebook, story and dialogue look and sound as before, light and dark, 375 px.
-- Outcome:
+- Outcome: useScreenLang (waits for ready), owning pack on [id] routes, lang attrs + languageName() copy, match fields renamed, audio/league/coach follow active lang, fake coach per lang · 214521a · verify ✓ 💻 · not checked: Italian audio/themes on device, full game round
 
 ## T60 — Language picker: first launch, Perfil, Ruta
 - Status: pending
@@ -75,7 +75,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T61 — Service worker: offline audio for the active language only
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent acc11bf7897385ebd · since 09:22Z)
 - Depends on: T58
 - Where: any
 - Goal: Stop precaching every language's audio (+~30 MB per language). The precache keeps the app; audio goes to one SW-owned cache per language filled for the active language, reusing files already cached by the current SW so the update does not re-download Italian.
@@ -246,8 +246,10 @@ Worktree setup: npm ci
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
 - [ ] T63 @d1b5666 — code review (SQL) (queued 2026-10-06 💻)
+- [ ] T59 @214521a — code review (queued 2026-10-06 💻)
 
 ## Visual checks queue
+- [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: multi-language app; French (`fr`) is the second pack; adding a language stays content only; active-language picker on first launch and in Perfil, stored on the device; every page uses the active pack; static params for all packs with ids unique across packs; SW precaches only the active language's audio; never lose on-device data (every `lang-lern:*:<lang>` key and shape kept, Italian progress untouched). (Hernán)
@@ -261,6 +263,7 @@ Worktree setup: npm ci
 
 ## Proposals (new scope)
 - 2026-10-06 T58: listLangs() now returns the default pack first (sync.ts, coach/packs.ts iterate it, fr)
+- 2026-10-06 T59: Jugar on an empty pack shows 'Todos los temas ·' with a stray dot
 
 ## Log
 - 2026-10-06 💻 plan written from the interview; not approved yet
@@ -271,3 +274,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:11Z 💻 T59 launched · attempt 1 · agent a6de474c4d54e2790
 - 2026-10-06 09:13Z 💻 T63 done · worktree-agent-a0e011abed6b45031 → d1b5666 · verify ✓
 - 2026-10-06 09:13Z 💻 T65 launched · attempt 1 · agent afbf6bfca2c5bb23b
+- 2026-10-06 09:22Z 💻 T59 done · worktree-agent-a6de474c4d54e2790 → 214521a · verify ✓
+- 2026-10-06 09:22Z 💻 T61 launched · attempt 1 · agent acc11bf7897385ebd
