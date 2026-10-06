@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-office",
+  "title": "Primer día en la oficina",
+  "description": "Tu primer día: una compañera te enseña la oficina, preguntas por las salas y por tus datos de acceso.",
+  "situation": "trabajo",
+  "unit": "b1-office",
+  "order": 101,
+  "register": "neutral",
+  "level": "B1",
+  "avatars": { "Compañera": "fluent:woman-technologist" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Compañera", "text": "Hi! You must be Hernán, the new developer. I'm Sarah, the tech lead. Welcome aboard!", "es": "¡Hola! Tú debes de ser Hernán, el nuevo desarrollador. Soy Sarah, la jefa técnica. ¡Bienvenido al equipo!", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Salúdala, di que te alegra mucho estar aquí y que acabas de terminar de configurar tu portátil.",
+      "options": [
+        { "text": "Hi, Sarah! I'm really happy to be here. I've just finished setting up my laptop.", "es": "¡Hola, Sarah! Me alegra mucho estar aquí. Acabo de terminar de configurar mi portátil.", "verdict": "correct", "feedback": "¡Muy bien! «I've just + participio» = acabo de…, y tras «finish» va -ing." },
+        { "text": "Hi! Thanks. My laptop is ready now.", "es": "¡Hola! Gracias. Ya tengo el portátil listo.", "verdict": "acceptable", "feedback": "Se entiende, pero queda seco: di también que te alegra estar aquí." },
+        { "text": "Hi, Sarah! I'm really happy to be here. I just have finished to set up my laptop.", "es": "¡Hola, Sarah! Me alegra mucho estar aquí. Acabo de terminar de configurar mi portátil.", "verdict": "wrong", "feedback": "El orden es «I've just finished», y tras «finish» va -ing: «finished setting up»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Compañera", "text": "Great. Let me show you around. This is the kitchen, and the meeting rooms are down the hall. We're hybrid, so most people work from home on Fridays.", "es": "Genial. Te enseño la oficina. Esta es la cocina, y las salas de reuniones están al fondo del pasillo. Somos híbridos, así que casi todos teletrabajan los viernes.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta cómo se reserva una sala de reuniones.",
+      "options": [
+        { "text": "How do I book a meeting room?", "es": "¿Cómo reservo una sala de reuniones?", "verdict": "correct", "feedback": "¡Perfecto! «book» = reservar (salas, mesas, vuelos)." },
+        { "text": "Can I book a room for meetings?", "es": "¿Puedo reservar una sala para reuniones?", "verdict": "acceptable", "feedback": "Se entiende; lo habitual es decir «a meeting room»." },
+        { "text": "How do I reserve a reunion room?", "es": "¿Cómo reservo una sala de reuniones?", "verdict": "wrong", "feedback": "«Reunion» es un reencuentro (de antiguos alumnos, por ejemplo); una reunión de trabajo es «meeting»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Compañera", "text": "In the calendar app. Just pick a room and add it to your invite. Oh, and have you received your login details yet?", "es": "Desde la app del calendario: eliges una sala y la añades a la convocatoria. Ah, ¿ya te han llegado tus datos de acceso?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que todavía no te han llegado y pregunta a quién deberías preguntar.",
+      "options": [
+        { "text": "No, I haven't received them yet. Who should I ask about that?", "es": "No, todavía no me han llegado. ¿A quién debería preguntar?", "verdict": "correct", "feedback": "¡Bien! «yet» va al final en las negativas con present perfect." },
+        { "text": "No, not yet. Who can help me?", "es": "No, todavía no. ¿Quién me puede ayudar?", "verdict": "acceptable", "feedback": "Correcto, aunque «Who should I ask?» es la pregunta más típica." },
+        { "text": "No, I didn't receive them still. Who should I ask about that?", "es": "No, todavía no me han llegado. ¿A quién debería preguntar?", "verdict": "wrong", "feedback": "Calco de «todavía no»: se dice «I haven't received them yet»; «still» no va así en negativas." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Compañera", "text": "Ask Tom from IT. He sits by the window. And we usually grab lunch together on Thursdays, if you're in the office.", "es": "Pregúntale a Tom, de informática. Se sienta junto a la ventana. Y los jueves solemos comer juntos, si estás en la oficina.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que te encantaría y pregunta a qué hora suelen ir.",
+      "options": [
+        { "text": "I'd love to! What time do you usually go?", "es": "¡Me encantaría! ¿A qué hora soléis ir?", "verdict": "correct", "feedback": "¡Genial! «usually» va antes del verbo: «do you usually go»." },
+        { "text": "Okay, sure. What time?", "es": "Vale, claro. ¿A qué hora?", "verdict": "acceptable", "feedback": "Vale, pero «I'd love to!» suena más entusiasta en tu primer día." },
+        { "text": "I'd love to! At what hour do you use to go?", "es": "¡Me encantaría! ¿A qué hora soléis ir?", "verdict": "wrong", "feedback": "«use to» no sirve para el presente: «What time do you usually go?». «At what hour» suena a traducción." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Compañera", "text": "Around twelve thirty. I'll send you an invite. Okay, let's go meet the rest of the team!", "es": "Sobre las doce y media. Te mando una invitación. ¡Venga, vamos a conocer al resto del equipo!", "voice": "en-US-EmmaNeural" }
+  ]
+}

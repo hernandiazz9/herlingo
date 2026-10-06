@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-standup",
+  "title": "La reunión diaria (stand-up)",
+  "description": "En el stand-up cuentas qué hiciste ayer, qué harás hoy y qué te bloquea.",
+  "situation": "trabajo",
+  "unit": "b1-office",
+  "order": 102,
+  "register": "neutral",
+  "level": "B1",
+  "avatars": { "Jefa de equipo": "fluent:woman-blonde-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Jefa de equipo", "text": "Good morning, everyone. Let's get started. Hernán, do you want to go first?", "es": "Buenos días a todos. Empecemos. Hernán, ¿quieres empezar tú?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Cuenta que ayer trabajaste en la página de inicio de sesión y que ya has terminado el nuevo endpoint de la API.",
+      "options": [
+        { "text": "Sure. Yesterday I worked on the login page, and I've already finished the new API endpoint.", "es": "Claro. Ayer trabajé en la página de inicio de sesión y ya he terminado el nuevo endpoint de la API.", "verdict": "correct", "feedback": "¡Muy bien! Pasado simple con «yesterday» y present perfect para lo que ya está hecho." },
+        { "text": "Sure. Login page yesterday. The API endpoint is finished.", "es": "Claro. Ayer, la página de inicio de sesión. El endpoint de la API está terminado.", "verdict": "acceptable", "feedback": "Se entiende, pero es telegráfico: en el stand-up usa frases completas." },
+        { "text": "Sure. Yesterday I have worked on the login page, and I finished already the new API endpoint.", "es": "Claro. Ayer trabajé en la página de inicio de sesión y ya he terminado el nuevo endpoint de la API.", "verdict": "wrong", "feedback": "Con «yesterday» va el pasado simple («I worked»), y «already» va antes del participio: «I've already finished»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Jefa de equipo", "text": "Nice work. What are you going to work on today?", "es": "Buen trabajo. ¿En qué vas a trabajar hoy?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que hoy vas a arreglar el error del pago, pero que te está llevando más tiempo del que esperabas.",
+      "options": [
+        { "text": "Today I'm going to fix the checkout bug, but it's taking longer than I expected.", "es": "Hoy voy a arreglar el error del pago, pero me está llevando más tiempo del que esperaba.", "verdict": "correct", "feedback": "¡Perfecto! «It's taking longer than I expected» = me está llevando más de lo previsto." },
+        { "text": "Today I'm going to fix the checkout bug. It's difficult.", "es": "Hoy voy a arreglar el error del pago. Es difícil.", "verdict": "acceptable", "feedback": "Correcto, pero no dice que vas con retraso, que es lo útil en un stand-up." },
+        { "text": "Today I'm going to fix the checkout bug, but it's taking more time that I expected.", "es": "Hoy voy a arreglar el error del pago, pero me está llevando más tiempo del que esperaba.", "verdict": "wrong", "feedback": "Tras un comparativo va «than», no «that»: «longer than I expected»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Jefa de equipo", "text": "Okay. Any blockers?", "es": "Vale. ¿Algún bloqueo?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que estás bloqueado porque esperas los diseños de la nueva pantalla.",
+      "options": [
+        { "text": "Yes, I'm blocked. I'm waiting for the designs for the new screen.", "es": "Sí, estoy bloqueado. Estoy esperando los diseños de la nueva pantalla.", "verdict": "correct", "feedback": "¡Bien! «wait for» lleva «for» delante de lo que esperas." },
+        { "text": "Yes. I don't have the designs yet.", "es": "Sí. Todavía no tengo los diseños.", "verdict": "acceptable", "feedback": "Se entiende; decir «I'm blocked» deja claro que no puedes avanzar." },
+        { "text": "Yes, I'm blocked. I'm waiting the designs for the new screen.", "es": "Sí, estoy bloqueado. Estoy esperando los diseños de la nueva pantalla.", "verdict": "wrong", "feedback": "«wait» necesita «for»: «I'm waiting for the designs»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Jefa de equipo", "text": "Thanks for letting me know. I'll ask the design team this morning. Anything else?", "es": "Gracias por avisar. Esta mañana se lo pregunto al equipo de diseño. ¿Algo más?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que has subido tus cambios y pregunta si alguien puede revisarlos.",
+      "options": [
+        { "text": "Just one thing. I've pushed my changes. Can someone review them?", "es": "Solo una cosa. He subido mis cambios. ¿Alguien puede revisarlos?", "verdict": "correct", "feedback": "¡Genial! «push» = subir cambios al repositorio; «review» = revisar." },
+        { "text": "I've pushed my changes, so they're ready for review.", "es": "He subido mis cambios, así que están listos para revisar.", "verdict": "acceptable", "feedback": "Correcto, aunque pedirlo directamente con «Can someone review them?» es más claro." },
+        { "text": "Just one thing. I've pushed my changes. Can someone revise them?", "es": "Solo una cosa. He subido mis cambios. ¿Alguien puede revisarlos?", "verdict": "wrong", "feedback": "«revise» es corregir o reescribir un texto; revisar código es «review»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Jefa de equipo", "text": "I can take a look after the stand-up. Okay, thanks, Hernán. Who's next?", "es": "Yo le echo un vistazo después del stand-up. Vale, gracias, Hernán. ¿Quién sigue?", "voice": "en-US-AvaNeural" }
+  ]
+}

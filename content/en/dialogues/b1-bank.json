@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-bank",
+  "title": "Abrir una cuenta en el banco",
+  "description": "Abres una cuenta corriente: documentos, comisiones y la nómina.",
+  "situation": "dinero",
+  "unit": "b1-money",
+  "order": 110,
+  "register": "formal",
+  "level": "B1",
+  "avatars": { "Empleado": "fluent:man-bald" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Empleado", "text": "Good morning. What can I do for you today?", "es": "Buenos días. ¿Qué puedo hacer por usted hoy?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que te gustaría abrir una cuenta corriente.",
+      "options": [
+        { "text": "Good morning. I'd like to open a checking account.", "es": "Buenos días. Me gustaría abrir una cuenta corriente.", "verdict": "correct", "feedback": "¡Muy bien! En EE. UU. la cuenta corriente es «checking account»." },
+        { "text": "Hi. I want to open an account.", "es": "Hola. Quiero abrir una cuenta.", "verdict": "acceptable", "feedback": "Se entiende, aunque «I'd like to…» suena más educado." },
+        { "text": "Good morning. I'd like open a checking account.", "es": "Buenos días. Me gustaría abrir una cuenta corriente.", "verdict": "wrong", "feedback": "Tras «I'd like» va «to»: «I'd like to open»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Empleado", "text": "Sure. Do you have a Social Security number?", "es": "Claro. ¿Tiene número de la Seguridad Social?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que acabas de mudarte y todavía no tienes, pero que traes el pasaporte y un justificante de domicilio.",
+      "options": [
+        { "text": "I just moved here, so I don't have one yet. But I have my passport and proof of address.", "es": "Acabo de mudarme aquí, así que todavía no tengo. Pero tengo el pasaporte y un justificante de domicilio.", "verdict": "correct", "feedback": "¡Perfecto! «proof of address» = justificante de domicilio." },
+        { "text": "No. Only my passport. And a bill with my address.", "es": "No. Solo el pasaporte. Y una factura con mi dirección.", "verdict": "acceptable", "feedback": "Se entiende; explicar que acabas de llegar ayuda." },
+        { "text": "I just moved here, so I don't have yet. But I have my passport and proof of address.", "es": "Acabo de mudarme aquí, así que todavía no tengo. Pero tengo el pasaporte y un justificante de domicilio.", "verdict": "wrong", "feedback": "«have» necesita objeto: «I don't have one yet»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Empleado", "text": "That's fine. We can open it with your passport. Here's a form. Are you interested in online banking as well?", "es": "No pasa nada. Podemos abrirla con su pasaporte. Aquí tiene un formulario. ¿Le interesa también la banca online?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sí y pregunta si hay alguna comisión mensual.",
+      "options": [
+        { "text": "Yes, please. Are there any monthly fees?", "es": "Sí, por favor. ¿Hay alguna comisión mensual?", "verdict": "correct", "feedback": "¡Bien! Las comisiones del banco son «fees»." },
+        { "text": "Yes. Do I pay something every month?", "es": "Sí. ¿Pago algo cada mes?", "verdict": "acceptable", "feedback": "Se entiende, pero la palabra clave es «fees»." },
+        { "text": "Yes, please. Are there any monthly commissions?", "es": "Sí, por favor. ¿Hay alguna comisión mensual?", "verdict": "wrong", "feedback": "«commission» es lo que cobra un vendedor por venta; las comisiones del banco son «fees»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Empleado", "text": "There's a twelve-dollar monthly fee, but it's free if you keep a minimum balance of fifteen hundred dollars or set up direct deposit.", "es": "Hay una comisión de doce dólares al mes, pero es gratis si mantiene un saldo mínimo de mil quinientos dólares o domicilia la nómina.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que entonces domiciliarás la nómina y que cobras cada dos semanas.",
+      "options": [
+        { "text": "I'll set up direct deposit, then. I get paid every two weeks.", "es": "Entonces domiciliaré la nómina. Cobro cada dos semanas.", "verdict": "correct", "feedback": "¡Genial! «I get paid» = cobro; «direct deposit» = nómina domiciliada." },
+        { "text": "Okay, direct deposit. My salary comes every two weeks.", "es": "Vale, nómina domiciliada. Mi sueldo llega cada dos semanas.", "verdict": "acceptable", "feedback": "Se entiende; «I get paid every two weeks» es lo más natural." },
+        { "text": "I'll set up direct deposit, then. I charge every two weeks.", "es": "Entonces domiciliaré la nómina. Cobro cada dos semanas.", "verdict": "wrong", "feedback": "Calco de «cobrar»: «I charge» es cobrarle a alguien; recibir tu sueldo es «I get paid»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Empleado", "text": "Perfect. Your debit card will arrive by mail in seven to ten days.", "es": "Perfecto. Su tarjeta de débito le llegará por correo en un plazo de siete a diez días.", "voice": "en-US-AndrewNeural" }
+  ]
+}

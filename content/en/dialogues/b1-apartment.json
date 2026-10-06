@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-apartment",
+  "title": "Visita a un piso",
+  "description": "Ves un piso con el casero: preguntas por el alquiler, la fianza, las mascotas y el transporte.",
+  "situation": "vivienda",
+  "unit": "b1-renting",
+  "order": 108,
+  "register": "formal",
+  "level": "B1",
+  "avatars": { "Casero": "fluent:man-white-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Casero", "text": "Hi, you must be Hernán. Come on in. So, this is the living room, and the kitchen is right there.", "es": "Hola, usted debe de ser Hernán. Pase, pase. Bueno, este es el salón, y la cocina está justo ahí.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que es muy luminoso y pregunta cuánto es el alquiler al mes.",
+      "options": [
+        { "text": "It's really bright. How much is the rent per month?", "es": "Es muy luminoso. ¿Cuánto es el alquiler al mes?", "verdict": "correct", "feedback": "¡Muy bien! «rent» = alquiler; «per month» = al mes." },
+        { "text": "Nice. What's the price?", "es": "Qué bonito. ¿Cuál es el precio?", "verdict": "acceptable", "feedback": "Se entiende, pero para pisos lo normal es preguntar por «the rent»." },
+        { "text": "It's very luminous. How much is the rent for month?", "es": "Es muy luminoso. ¿Cuánto es el alquiler al mes?", "verdict": "wrong", "feedback": "«luminous» suena raro para un piso: se dice «bright». Y es «per month» o «a month»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Casero", "text": "It's sixteen fifty a month, plus utilities. The lease is for twelve months.", "es": "Son mil seiscientos cincuenta al mes, más suministros. El contrato es de doce meses.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta cuánto es la fianza y si se permiten mascotas en el edificio.",
+      "options": [
+        { "text": "How much is the security deposit? And are pets allowed in the building?", "es": "¿Cuánto es la fianza? ¿Y se permiten mascotas en el edificio?", "verdict": "correct", "feedback": "¡Perfecto! «security deposit» = fianza; «are pets allowed» = se permiten mascotas." },
+        { "text": "And the deposit? Can I have a cat?", "es": "¿Y la fianza? ¿Puedo tener un gato?", "verdict": "acceptable", "feedback": "Se entiende y suena natural; la primera opción es más completa." },
+        { "text": "How much is the bail? And are the pets permitted in the building?", "es": "¿Cuánto es la fianza? ¿Y se permiten mascotas en el edificio?", "verdict": "wrong", "feedback": "«bail» es la fianza para salir de la cárcel: la de un piso es «security deposit». Y en general va sin «the»: «are pets allowed»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Casero", "text": "The deposit is one month's rent, and small pets are okay. Do you have any questions about the neighborhood?", "es": "La fianza es un mes de alquiler, y las mascotas pequeñas están permitidas. ¿Tiene alguna pregunta sobre el barrio?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta a qué distancia está la estación de la L más cercana.",
+      "options": [
+        { "text": "How far is it from the nearest L station?", "es": "¿A qué distancia está de la estación de la L más cercana?", "verdict": "correct", "feedback": "¡Bien! «How far…?» pregunta por la distancia; la L es el metro de Chicago." },
+        { "text": "Is there a train station near here?", "es": "¿Hay una estación de tren cerca?", "verdict": "acceptable", "feedback": "Correcto, aunque en Chicago lo normal es hablar de la «L»." },
+        { "text": "How much far is the nearest L station?", "es": "¿A qué distancia está la estación de la L más cercana?", "verdict": "wrong", "feedback": "Para distancias no se usa «much»: «How far is…?»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Casero", "text": "It's about a five-minute walk. There's also a grocery store on the corner. So, what do you think?", "es": "Está a unos cinco minutos andando. También hay un supermercado en la esquina. Bueno, ¿qué le parece?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que te gusta mucho, pero que te gustaría leer el contrato con calma antes de firmar.",
+      "options": [
+        { "text": "I really like it, but I'd like to read the lease carefully before I sign.", "es": "Me gusta mucho, pero me gustaría leer el contrato con calma antes de firmar.", "verdict": "correct", "feedback": "¡Genial! «lease» = contrato de alquiler; después de «before» va presente, no futuro." },
+        { "text": "I like it. Can I read the contract first?", "es": "Me gusta. ¿Puedo leer el contrato primero?", "verdict": "acceptable", "feedback": "Se entiende; para un alquiler lo habitual es «lease»." },
+        { "text": "I really like it, but I'd like to read the lease carefully before I will sign.", "es": "Me gusta mucho, pero me gustaría leer el contrato con calma antes de firmar.", "verdict": "wrong", "feedback": "Tras «before» no se usa «will»: «before I sign»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Casero", "text": "Of course, take your time. I'll email you a copy tonight.", "es": "Por supuesto, tómese su tiempo. Le mando una copia por email esta noche.", "voice": "en-US-BrianNeural" }
+  ]
+}

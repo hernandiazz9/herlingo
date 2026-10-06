@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-rebooking",
+  "title": "Cambiar un vuelo retrasado",
+  "description": "Tu vuelo va con retraso y pierdes la conexión: pides otra opción, un asiento y preguntas por la maleta.",
+  "situation": "viajes",
+  "unit": "b1-trips",
+  "order": 107,
+  "register": "formal",
+  "level": "B1",
+  "avatars": { "Agente": "fluent:man-blonde-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Agente", "text": "Next, please. Hi there. How can I help you?", "es": "El siguiente, por favor. Hola. ¿En qué puedo ayudarle?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que tu vuelo a Nueva York va con tres horas de retraso y que vas a perder la conexión a Madrid.",
+      "options": [
+        { "text": "Hi. My flight to New York is delayed three hours, so I'm going to miss my connection to Madrid.", "es": "Hola. Mi vuelo a Nueva York va con tres horas de retraso, así que voy a perder la conexión a Madrid.", "verdict": "correct", "feedback": "¡Muy bien! Un vuelo «is delayed», y una conexión se «miss»." },
+        { "text": "Hi. Flight to New York, three hours late. My connection...", "es": "Hola. Vuelo a Nueva York, tres horas tarde. Mi conexión...", "verdict": "acceptable", "feedback": "Se entiende, pero dilo con una frase completa." },
+        { "text": "Hi. My flight to New York has three hours of delay, so I'm going to lose my connection to Madrid.", "es": "Hola. Mi vuelo a Nueva York va con tres horas de retraso, así que voy a perder la conexión a Madrid.", "verdict": "wrong", "feedback": "Calcos del español: se dice «is delayed three hours», y un vuelo se «miss», no se «lose»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Agente", "text": "Let me take a look. Okay, the next flight to Madrid leaves tomorrow morning at nine fifteen. I can put you on that one.", "es": "Déjeme ver. Vale, el próximo vuelo a Madrid sale mañana a las nueve y cuarto. Puedo ponerle en ese.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta si hay alguna otra opción esta noche, aunque sea con escala.",
+      "options": [
+        { "text": "Is there any other option tonight, even with a layover?", "es": "¿Hay alguna otra opción esta noche, aunque sea con escala?", "verdict": "correct", "feedback": "¡Perfecto! «layover» = escala; «even with» = aunque sea con." },
+        { "text": "Is there a flight tonight?", "es": "¿Hay algún vuelo esta noche?", "verdict": "acceptable", "feedback": "Correcto, pero sin decir que aceptas escalas puede que te diga que no." },
+        { "text": "Is there any other option this night, even with a scale?", "es": "¿Hay alguna otra opción esta noche, aunque sea con escala?", "verdict": "wrong", "feedback": "Es «tonight», no «this night», y escala es «layover» (o «stop»), no «scale»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Agente", "text": "I'm afraid tonight's flights are all full. But since the delay was our fault, we'll give you a hotel voucher and a meal voucher.", "es": "Me temo que los vuelos de esta noche están completos. Pero como el retraso ha sido culpa nuestra, le daremos un vale de hotel y otro de comida.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Acepta el vuelo de mañana y pide un asiento de pasillo.",
+      "options": [
+        { "text": "Okay, I'll take the morning flight. Could I get an aisle seat, please?", "es": "Vale, me quedo con el vuelo de la mañana. ¿Podría darme un asiento de pasillo, por favor?", "verdict": "correct", "feedback": "¡Bien! «aisle» se pronuncia «ail»: la «s» no suena." },
+        { "text": "Okay, tomorrow is fine. Aisle seat, please.", "es": "Vale, mañana me va bien. Pasillo, por favor.", "verdict": "acceptable", "feedback": "Se entiende; «Could I get…?» es más amable." },
+        { "text": "Okay, I take the morning flight. Could I get a corridor seat, please?", "es": "Vale, me quedo con el vuelo de la mañana. ¿Podría darme un asiento de pasillo, por favor?", "verdict": "wrong", "feedback": "Al decidir en el momento se usa «I'll take», y el asiento de pasillo es «aisle seat», no «corridor»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Agente", "text": "Sure, seat twenty-two C. Here's your new boarding pass and your vouchers. The hotel shuttle leaves from door four.", "es": "Claro, asiento 22C. Aquí tiene su nueva tarjeta de embarque y los vales. El autobús del hotel sale de la puerta cuatro.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si tu maleta irá directa a Madrid o si tienes que recogerla.",
+      "options": [
+        { "text": "Will my bag go straight to Madrid, or do I have to pick it up?", "es": "¿Mi maleta irá directa a Madrid o tengo que recogerla?", "verdict": "correct", "feedback": "¡Genial! «pick it up» = recogerla; con pronombre, «it» va en medio." },
+        { "text": "And my bag? Madrid or here?", "es": "¿Y mi maleta? ¿Madrid o aquí?", "verdict": "acceptable", "feedback": "Se entiende, pero es muy telegráfico." },
+        { "text": "Will my bag go straight to Madrid, or do I have to pick up it?", "es": "¿Mi maleta irá directa a Madrid o tengo que recogerla?", "verdict": "wrong", "feedback": "Con pronombre, el «up» va detrás: «pick it up»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Agente", "text": "It's checked through to Madrid, so you don't need to do anything. Sorry again for the delay.", "es": "Va facturada hasta Madrid, así que no tiene que hacer nada. Disculpe de nuevo el retraso.", "voice": "en-US-AndrewNeural" }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-reschedule",
+  "title": "Cambiar de planes con un amigo",
+  "description": "Un amigo te llama para confirmar la cena: le explicas que no puedes y buscáis otro día.",
+  "situation": "social",
+  "unit": "b1-plans",
+  "order": 112,
+  "register": "tu",
+  "level": "B1",
+  "avatars": { "Amigo": "fluent:man-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Amigo", "text": "Hey, Hernán! What's up? Are we still on for dinner tomorrow?", "es": "¡Hola, Hernán! ¿Qué tal? ¿Seguimos con lo de cenar mañana?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Dile que lo sientes mucho, pero que te ha surgido algo, y pregunta si podéis cambiar el día.",
+      "options": [
+        { "text": "Hey! I'm so sorry, but something came up. Can we reschedule?", "es": "¡Hola! Lo siento mucho, pero me ha surgido algo. ¿Podemos cambiar el día?", "verdict": "correct", "feedback": "¡Muy bien! «Something came up» = me ha surgido algo; «reschedule» = cambiar la fecha." },
+        { "text": "Sorry, I can't tomorrow. Another day?", "es": "Lo siento, mañana no puedo. ¿Otro día?", "verdict": "acceptable", "feedback": "Se entiende, pero es un poco seco para cancelar a un amigo." },
+        { "text": "Hey! I'm so sorry, but something has surged. Can we reschedule?", "es": "¡Hola! Lo siento mucho, pero me ha surgido algo. ¿Podemos cambiar el día?", "verdict": "wrong", "feedback": "«surge» no significa surgir en este sentido: se dice «something came up»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Amigo", "text": "Oh, no worries. These things happen. Is everything okay?", "es": "Ah, no te preocupes. Son cosas que pasan. ¿Va todo bien?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que tienes que acabar un proyecto para un cliente y que mañana trabajarás hasta tarde.",
+      "options": [
+        { "text": "Yeah, I have to finish a project for a client, so I'll be working late tomorrow.", "es": "Sí, tengo que acabar un proyecto para un cliente, así que mañana trabajaré hasta tarde.", "verdict": "correct", "feedback": "¡Perfecto! «have to» = tener que; «work late» = trabajar hasta tarde." },
+        { "text": "Yes. Work. A big project.", "es": "Sí. Trabajo. Un proyecto grande.", "verdict": "acceptable", "feedback": "Se entiende, pero queda muy cortado." },
+        { "text": "Yeah, I must to finish a project for a client, so I'll be working late tomorrow.", "es": "Sí, tengo que acabar un proyecto para un cliente, así que mañana trabajaré hasta tarde.", "verdict": "wrong", "feedback": "Tras «must» no va «to»; y para obligaciones del trabajo es más natural «I have to»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Amigo", "text": "Ugh, that sounds stressful. How about Thursday instead?", "es": "Uf, qué estrés. ¿Qué tal el jueves?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que el jueves no te viene bien y propón el viernes a las siete.",
+      "options": [
+        { "text": "Thursday doesn't work for me. How about Friday at seven?", "es": "El jueves no me viene bien. ¿Qué tal el viernes a las siete?", "verdict": "correct", "feedback": "¡Bien! «doesn't work for me» = no me viene bien." },
+        { "text": "Thursday is bad. Friday at seven?", "es": "El jueves me va mal. ¿El viernes a las siete?", "verdict": "acceptable", "feedback": "Entre amigos vale, aunque suena un poco brusco." },
+        { "text": "Thursday doesn't go well for me. How about Friday at seven?", "es": "El jueves no me viene bien. ¿Qué tal el viernes a las siete?", "verdict": "wrong", "feedback": "Calco de «no me va bien»: se dice «Thursday doesn't work for me»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Amigo", "text": "Friday works. Let's go to that taco place in Pilsen. I'll book a table for seven.", "es": "El viernes me va bien. Vamos a la taquería de Pilsen. Reservo mesa para las siete.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dile que hecho y que la cena corre de tu cuenta para compensarle.",
+      "options": [
+        { "text": "It's a plan! And dinner's on me, to make it up to you.", "es": "¡Hecho! Y la cena corre de mi cuenta, para compensarte.", "verdict": "correct", "feedback": "¡Genial! «It's on me» = invito yo; «make it up to you» = compensarte." },
+        { "text": "Perfect. I'll pay for dinner.", "es": "Perfecto. Yo pago la cena.", "verdict": "acceptable", "feedback": "Correcto; «it's on me» es la forma más típica entre amigos." },
+        { "text": "It's a plan! And I invite you to dinner, to make it up to you.", "es": "¡Hecho! Y te invito a cenar, para compensarte.", "verdict": "wrong", "feedback": "«I invite you to dinner» es una invitación formal y no deja claro que pagas tú: se dice «dinner's on me»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Amigo", "text": "Deal! See you Friday, man. Good luck with the project!", "es": "¡Trato hecho! Nos vemos el viernes, tío. ¡Suerte con el proyecto!", "voice": "en-US-BrianNeural" }
+  ]
+}

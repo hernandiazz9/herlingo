@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-video-call",
+  "title": "Videollamada con un cliente",
+  "description": "Una videollamada con un cliente y una conexión que falla: cámara, pantalla compartida y plazos.",
+  "situation": "comunicacion",
+  "unit": "b1-calls",
+  "order": 104,
+  "register": "formal",
+  "level": "B1",
+  "avatars": { "Cliente": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Cliente", "text": "Hi, Hernán. Can you hear me okay? I think my connection is a little slow today.", "es": "Hola, Hernán. ¿Me oye bien? Creo que hoy mi conexión va un poco lenta.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que le oyes bien pero que no ves su vídeo, y pídele que encienda la cámara.",
+      "options": [
+        { "text": "I can hear you fine, but I can't see your video. Could you turn your camera on?", "es": "Le oigo bien, pero no veo su vídeo. ¿Podría encender la cámara?", "verdict": "correct", "feedback": "¡Perfecto! «turn on» = encender; «Could you…?» es una petición educada." },
+        { "text": "Yes, I can hear you. Is your camera on?", "es": "Sí, le oigo. ¿Tiene la cámara encendida?", "verdict": "acceptable", "feedback": "Se entiende, aunque pedirlo con «Could you turn your camera on?» es más claro." },
+        { "text": "I can hear you fine, but I can't see your video. Could you open your camera?", "es": "Le oigo bien, pero no veo su vídeo. ¿Podría encender la cámara?", "verdict": "wrong", "feedback": "La cámara no se «abre»: se enciende, «turn your camera on»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Cliente", "text": "Oh, sorry about that. Is that better? Okay, so I wanted to talk about the timeline for the new app.", "es": "Ay, perdone. ¿Mejor así? Bueno, quería hablar del calendario de la nueva app.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que vas a compartir tu pantalla y pregunta si la ve.",
+      "options": [
+        { "text": "Sure. Let me share my screen. Can you see it?", "es": "Claro. Voy a compartir mi pantalla. ¿La ve?", "verdict": "correct", "feedback": "¡Bien! «Let me…» = déjeme…, voy a…" },
+        { "text": "Sure. I'm sharing my screen now.", "es": "Claro. Ahora comparto mi pantalla.", "verdict": "acceptable", "feedback": "Correcto, pero conviene comprobar con «Can you see it?»." },
+        { "text": "Sure. Let me to share my screen. Can you see it?", "es": "Claro. Voy a compartir mi pantalla. ¿La ve?", "verdict": "wrong", "feedback": "Tras «let me» va el verbo sin «to»: «Let me share»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Cliente", "text": "Yes, I can see it. So, when do you think the first version will be ready? Sorry, you're breaking up a little...", "es": "Sí, la veo. Entonces, ¿cuándo cree que estará lista la primera versión? Perdone, se le corta un poco...", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Dile que se ha cortado el audio y pídele que repita la última parte.",
+      "options": [
+        { "text": "Sorry, the audio cut out. Could you repeat the last part, please?", "es": "Perdone, se ha cortado el audio. ¿Podría repetir la última parte, por favor?", "verdict": "correct", "feedback": "¡Perfecto! «cut out» = cortarse (audio, señal)." },
+        { "text": "Sorry? Can you say that again?", "es": "¿Perdón? ¿Puede repetirlo?", "verdict": "acceptable", "feedback": "Funciona, aunque explicar que se cortó el audio ayuda al cliente." },
+        { "text": "Sorry, the audio cutted. Could you repeat the last part, please?", "es": "Perdone, se ha cortado el audio. ¿Podría repetir la última parte, por favor?", "verdict": "wrong", "feedback": "«cut» es irregular (el pasado es «cut»), y aquí se dice «the audio cut out»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Cliente", "text": "Sure. I asked when the first version will be ready.", "es": "Claro. Le preguntaba cuándo estará lista la primera versión.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que esperáis tenerla lista para finales de mes y que le enviarás un email con los detalles.",
+      "options": [
+        { "text": "We expect to have it ready by the end of the month. I'll send you an email with the details.", "es": "Esperamos tenerla lista para finales de mes. Le enviaré un email con los detalles.", "verdict": "correct", "feedback": "¡Genial! «by the end of the month» = como tarde a final de mes." },
+        { "text": "At the end of the month, I think. I'll write to you.", "es": "A final de mes, creo. Le escribiré.", "verdict": "acceptable", "feedback": "Se entiende, pero suena poco seguro; «We expect to have it ready by…» da más confianza." },
+        { "text": "We expect to have it ready for the end of the month. I'll send to you an email with the details.", "es": "Esperamos tenerla lista para finales de mes. Le enviaré un email con los detalles.", "verdict": "wrong", "feedback": "Para plazos se usa «by the end of the month», y es «send you an email», sin «to»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Cliente", "text": "Perfect. That works for us. Thanks, Hernán. Talk to you soon!", "es": "Perfecto. Nos va bien. Gracias, Hernán. ¡Hablamos pronto!", "voice": "en-US-BrianNeural" }
+  ]
+}

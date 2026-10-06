@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-internet",
+  "title": "Llamar para arreglar internet",
+  "description": "Internet se corta en tu piso: llamas a la compañía, das tus datos y pides un técnico y un descuento.",
+  "situation": "vivienda",
+  "unit": "b1-renting",
+  "order": 109,
+  "register": "formal",
+  "level": "B1",
+  "avatars": { "Teleoperadora": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Teleoperadora", "text": "Thank you for calling StarNet. My name is Rachel. How can I help you today?", "es": "Gracias por llamar a StarNet. Me llamo Rachel. ¿En qué puedo ayudarle hoy?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que internet no para de cortarse y que lleva así desde el lunes.",
+      "options": [
+        { "text": "Hi. My internet keeps cutting out. It's been like this since Monday.", "es": "Hola. Internet no para de cortarse. Lleva así desde el lunes.", "verdict": "correct", "feedback": "¡Muy bien! «cut out» = cortarse; «It's been like this since…» = lleva así desde…" },
+        { "text": "Hi. The internet doesn't work well.", "es": "Hola. Internet no funciona bien.", "verdict": "acceptable", "feedback": "Se entiende, pero da pocos datos: explica qué pasa y desde cuándo." },
+        { "text": "Hi. My internet keeps cutting out. It is like this since Monday.", "es": "Hola. Internet no para de cortarse. Lleva así desde el lunes.", "verdict": "wrong", "feedback": "Para algo que empezó en el pasado y sigue, se usa present perfect: «It's been like this since Monday»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Teleoperadora", "text": "I'm sorry about that. Could I have your account number or the phone number on the account?", "es": "Lo siento. ¿Me podría dar su número de cliente o el teléfono de la cuenta?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que no tienes el número de cliente a mano y da tu teléfono: 312 555 0198.",
+      "options": [
+        { "text": "I don't have it with me, but my phone number is three one two, five five five, oh one nine eight.", "es": "No lo tengo a mano, pero mi teléfono es el 312 555 0198.", "verdict": "correct", "feedback": "¡Perfecto! Los teléfonos se dicen cifra a cifra, y el cero suele decirse «oh»." },
+        { "text": "Sorry, I don't know the account number. My phone is three one two, five five five, zero one nine eight.", "es": "Lo siento, no sé el número de cliente. Mi teléfono es el 312 555 0198.", "verdict": "acceptable", "feedback": "Correcto; solo que en los teléfonos suele decirse «oh» en lugar de «zero»." },
+        { "text": "I don't have it with me, but my phone number is three hundred twelve, five hundred fifty-five, zero one nine eight.", "es": "No lo tengo a mano, pero mi teléfono es el 312 555 0198.", "verdict": "wrong", "feedback": "Los teléfonos no se dicen como cantidades: cifra a cifra, «three one two, five five five…»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Teleoperadora", "text": "Thank you. I can see some problems with the signal in your area. Have you tried restarting your router?", "es": "Gracias. Veo algunos problemas con la señal en su zona. ¿Ha probado a reiniciar el router?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sí, varias veces, y que también has comprobado los cables.",
+      "options": [
+        { "text": "Yes, I've restarted it several times, and I've also checked the cables.", "es": "Sí, lo he reiniciado varias veces y también he comprobado los cables.", "verdict": "correct", "feedback": "¡Bien! Present perfect para lo que ya has hecho hasta ahora." },
+        { "text": "Yes, many times. The cables are okay too.", "es": "Sí, muchas veces. Los cables también están bien.", "verdict": "acceptable", "feedback": "Se entiende y suena natural; la primera opción es más completa." },
+        { "text": "Yes, I've restarted it several times, and I've also controlled the cables.", "es": "Sí, lo he reiniciado varias veces y también he comprobado los cables.", "verdict": "wrong", "feedback": "«control» es controlar o dirigir; comprobar es «check»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Teleoperadora", "text": "Okay. Then I'll need to send a technician. The earliest appointment is Thursday between eight a.m. and noon.", "es": "Vale. Entonces tendré que enviarle un técnico. La primera cita disponible es el jueves entre las ocho y las doce.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si hay algo antes, porque trabajas desde casa, y pide con educación un descuento en la factura de este mes.",
+      "options": [
+        { "text": "Is there anything earlier? I work from home. Also, could I get a discount on this month's bill?", "es": "¿Hay algo antes? Trabajo desde casa. Además, ¿podrían hacerme un descuento en la factura de este mes?", "verdict": "correct", "feedback": "¡Genial! «earlier» = antes; «this month's bill» = la factura de este mes." },
+        { "text": "Thursday is too late. I work at home. And I don't want to pay this month.", "es": "El jueves es demasiado tarde. Trabajo en casa. Y no quiero pagar este mes.", "verdict": "acceptable", "feedback": "Se entiende, pero suena exigente; «Could I get a discount…?» es más educado y funciona mejor." },
+        { "text": "Is there anything before? I work from home. Also, could I get a discount on the bill of this month?", "es": "¿Hay algo antes? Trabajo desde casa. Además, ¿podrían hacerme un descuento en la factura de este mes?", "verdict": "wrong", "feedback": "Para citas se dice «earlier», no «before», y «this month's bill» es más natural que «the bill of this month»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Teleoperadora", "text": "Let me check... Yes, I have Tuesday morning. And I'll add a twenty-dollar credit to your account.", "es": "Déjeme mirar... Sí, tengo el martes por la mañana. Y le añadiré un abono de veinte dólares en su cuenta.", "voice": "en-US-AvaNeural" }
+  ]
+}

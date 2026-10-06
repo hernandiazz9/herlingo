@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-it-support",
+  "title": "Explicar un fallo a soporte",
+  "description": "Llamas a soporte informático: explicas el fallo, qué has probado y cuándo empezó.",
+  "situation": "tecnologia",
+  "unit": "b1-tech",
+  "order": 105,
+  "register": "neutral",
+  "level": "B1",
+  "avatars": { "Técnico": "fluent:man-technologist" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Técnico", "text": "IT support, this is Kevin. How can I help?", "es": "Soporte informático, soy Kevin. ¿En qué te puedo ayudar?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que llamas por un problema con tu portátil del trabajo: la app de videollamadas no para de cerrarse.",
+      "options": [
+        { "text": "Hi, I'm calling about a problem with my work laptop. The video call app keeps crashing.", "es": "Hola, llamo por un problema con mi portátil del trabajo. La app de videollamadas no para de cerrarse.", "verdict": "correct", "feedback": "¡Muy bien! «keep + -ing» = no parar de…; «crash» = cerrarse de golpe." },
+        { "text": "Hi. My laptop has a problem with the video app.", "es": "Hola. Mi portátil tiene un problema con la app de vídeo.", "verdict": "acceptable", "feedback": "Se entiende, pero no explicas qué pasa; «it keeps crashing» lo deja claro." },
+        { "text": "Hi, I'm calling for a problem with my work laptop. The video call app keeps to crash.", "es": "Hola, llamo por un problema con mi portátil del trabajo. La app de videollamadas no para de cerrarse.", "verdict": "wrong", "feedback": "Se llama «about» un problema, y tras «keep» va -ing: «keeps crashing»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Técnico", "text": "Okay. When did it start? Did anything change on your laptop recently?", "es": "Vale. ¿Cuándo empezó? ¿Ha cambiado algo en tu portátil últimamente?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que funcionaba bien hasta ayer y que empezó después de la última actualización.",
+      "options": [
+        { "text": "It was working fine until yesterday. It started after the last update.", "es": "Funcionaba bien hasta ayer. Empezó después de la última actualización.", "verdict": "correct", "feedback": "¡Perfecto! «was working fine» describe cómo iba antes del fallo." },
+        { "text": "Yesterday it was okay. Now, after the update, no.", "es": "Ayer iba bien. Ahora, después de la actualización, no.", "verdict": "acceptable", "feedback": "Se entiende, pero suena entrecortado; una frase con «until» queda más clara." },
+        { "text": "It was working fine until yesterday. It started after the last actualization.", "es": "Funcionaba bien hasta ayer. Empezó después de la última actualización.", "verdict": "wrong", "feedback": "«Actualization» no significa actualización: es «update»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Técnico", "text": "Got it. Have you tried turning it off and on again?", "es": "Entendido. ¿Has probado a apagarlo y volver a encenderlo?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que ya lo has reiniciado dos veces y que has hecho una captura del error.",
+      "options": [
+        { "text": "Yes, I've already restarted it twice, and I've taken a screenshot of the error.", "es": "Sí, ya lo he reiniciado dos veces y he hecho una captura del error.", "verdict": "correct", "feedback": "¡Bien! «already» va entre «have» y el participio, y una captura se «take»." },
+        { "text": "Yes, two times. I have a screenshot.", "es": "Sí, dos veces. Tengo una captura.", "verdict": "acceptable", "feedback": "Correcto, aunque «twice» es más natural que «two times»." },
+        { "text": "Yes, I've restarted it already two times, and I've made a screenshot of the error.", "es": "Sí, ya lo he reiniciado dos veces y he hecho una captura del error.", "verdict": "wrong", "feedback": "Una captura se «take», no se «make»: «I've taken a screenshot». Y mejor «twice»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Técnico", "text": "Great, can you send it to me? Okay, I see the problem. Try clearing the cache and logging in again.", "es": "Genial, ¿me la mandas? Vale, ya veo el problema. Prueba a borrar la caché y volver a iniciar sesión.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que eso lo ha arreglado y dale las gracias.",
+      "options": [
+        { "text": "Yes, that fixed it. Thanks so much!", "es": "Sí, eso lo ha arreglado. ¡Muchas gracias!", "verdict": "correct", "feedback": "¡Genial! «That fixed it» = eso lo ha solucionado." },
+        { "text": "It works now. Thank you.", "es": "Ahora funciona. Gracias.", "verdict": "acceptable", "feedback": "Perfectamente válido, solo algo más seco." },
+        { "text": "Yes, that has fixed. Thanks so much!", "es": "Sí, eso lo ha arreglado. ¡Muchas gracias!", "verdict": "wrong", "feedback": "«fix» necesita objeto: «that fixed it»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Técnico", "text": "No problem. If it happens again, call me and I'll open a ticket. Have a good one!", "es": "De nada. Si vuelve a pasar, llámame y abro una incidencia. ¡Que vaya bien!", "voice": "en-US-AndrewNeural" }
+  ]
+}

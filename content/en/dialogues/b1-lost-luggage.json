@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-lost-luggage",
+  "title": "Equipaje perdido",
+  "description": "Tu maleta no sale: la describes, pides que te la lleven al hotel y preguntas por los gastos.",
+  "situation": "viajes",
+  "unit": "b1-trips",
+  "order": 106,
+  "register": "formal",
+  "level": "B1",
+  "avatars": { "Empleada": "fluent:woman-tipping-hand" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Empleada", "text": "Hi, this is the baggage service office. How can I help you?", "es": "Hola, esta es la oficina de equipajes. ¿En qué puedo ayudarle?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que tu maleta no ha salido y que venías en el vuelo de Madrid.",
+      "options": [
+        { "text": "Hi. My suitcase didn't come out. I was on the flight from Madrid.", "es": "Hola. Mi maleta no ha salido. Venía en el vuelo de Madrid.", "verdict": "correct", "feedback": "¡Muy bien! «I was on the flight from…» = venía en el vuelo de…" },
+        { "text": "Hello. I don't have my suitcase. Flight from Madrid.", "es": "Hola. No tengo mi maleta. Vuelo de Madrid.", "verdict": "acceptable", "feedback": "Se entiende, pero queda telegráfico." },
+        { "text": "Hi. My suitcase didn't come out. I came in the flight of Madrid.", "es": "Hola. Mi maleta no ha salido. Venía en el vuelo de Madrid.", "verdict": "wrong", "feedback": "Se dice «on the flight» y «from Madrid», no «in the flight of»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Empleada", "text": "I'm sorry to hear that. Can I see your boarding pass and your baggage claim tag?", "es": "Lo siento mucho. ¿Me enseña la tarjeta de embarque y el resguardo del equipaje?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Dáselos y explica que es una maleta grande y azul con una cinta roja en el asa.",
+      "options": [
+        { "text": "Here you go. It's a large blue suitcase with a red ribbon on the handle.", "es": "Aquí tiene. Es una maleta grande y azul con una cinta roja en el asa.", "verdict": "correct", "feedback": "¡Perfecto! Los adjetivos van antes del nombre: «a large blue suitcase»." },
+        { "text": "Here. It's big and blue, with a red ribbon.", "es": "Tome. Es grande y azul, con una cinta roja.", "verdict": "acceptable", "feedback": "Se entiende; decir dónde está la cinta ayuda a encontrarla." },
+        { "text": "Here you go. It's a suitcase blue and large with a red ribbon on the handle.", "es": "Aquí tiene. Es una maleta grande y azul con una cinta roja en el asa.", "verdict": "wrong", "feedback": "En inglés el adjetivo va delante del nombre: «a large blue suitcase»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Empleada", "text": "Thank you. It looks like your bag is still in Newark. It should arrive on tomorrow's flight.", "es": "Gracias. Parece que su maleta sigue en Newark. Debería llegar en el vuelo de mañana.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta con educación si sería posible enviarla a tu hotel.",
+      "options": [
+        { "text": "Would it be possible to send it to my hotel?", "es": "¿Sería posible enviarla a mi hotel?", "verdict": "correct", "feedback": "¡Muy bien! «Would it be possible to…?» es una petición muy educada." },
+        { "text": "Can you send it to my hotel?", "es": "¿Me la puede enviar al hotel?", "verdict": "acceptable", "feedback": "Correcto, aunque «Would it be possible…?» suena más cortés." },
+        { "text": "Is it possible that you send it to my hotel?", "es": "¿Es posible que me la envíen al hotel?", "verdict": "wrong", "feedback": "Calco de «¿es posible que…?»: en inglés se dice «Is it possible to send it…?»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Empleada", "text": "Yes, we'll deliver it for free. Please fill out this form with your address and phone number.", "es": "Sí, se la llevamos gratis. Por favor, rellene este formulario con su dirección y su teléfono.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes comprar algunas cosas básicas mientras tanto y si la aerolínea te devolverá el dinero.",
+      "options": [
+        { "text": "Can I buy a few basic things in the meantime? Will the airline pay me back?", "es": "¿Puedo comprar algunas cosas básicas mientras tanto? ¿La aerolínea me devolverá el dinero?", "verdict": "correct", "feedback": "¡Genial! «pay me back» = devolverme el dinero; «in the meantime» = mientras tanto." },
+        { "text": "I need a toothbrush and some clothes. Do you pay for that?", "es": "Necesito un cepillo de dientes y algo de ropa. ¿Eso lo pagan ustedes?", "verdict": "acceptable", "feedback": "Se entiende, pero suena brusco; pregunta si la aerolínea te lo devolverá." },
+        { "text": "Can I buy a few basic things in the meantime? Will the airline return me the money?", "es": "¿Puedo comprar algunas cosas básicas mientras tanto? ¿La aerolínea me devolverá el dinero?", "verdict": "wrong", "feedback": "«return me the money» es un calco: se dice «pay me back» o «give me a refund»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Empleada", "text": "Yes, just keep your receipts. Up to fifty dollars a day. We'll call you as soon as your bag arrives.", "es": "Sí, guarde los recibos. Hasta cincuenta dólares al día. Le llamaremos en cuanto llegue su maleta.", "voice": "en-US-EmmaNeural" }
+  ]
+}

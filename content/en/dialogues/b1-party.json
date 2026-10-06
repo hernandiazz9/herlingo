@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-party",
+  "title": "En una fiesta",
+  "description": "Conoces a alguien en una fiesta: de qué conoces al anfitrión, de dónde eres y un plan para el sábado.",
+  "situation": "social",
+  "unit": "b1-friends",
+  "order": 111,
+  "register": "tu",
+  "level": "B1",
+  "avatars": { "Invitada": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Invitada", "text": "Hey! I don't think we've met. I'm Jess, Sam's coworker. How do you know Sam?", "es": "¡Hola! Creo que no nos conocemos. Soy Jess, compañera de trabajo de Sam. ¿De qué conoces a Sam?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Preséntate y di que Sam y tú jugáis juntos al fútbol los domingos.",
+      "options": [
+        { "text": "Hi, I'm Hernán. Sam and I play soccer together on Sundays.", "es": "Hola, soy Hernán. Sam y yo jugamos juntos al fútbol los domingos.", "verdict": "correct", "feedback": "¡Muy bien! En EE. UU. el fútbol es «soccer»; «football» es el americano." },
+        { "text": "I'm Hernán. We play football on Sundays.", "es": "Soy Hernán. Jugamos al fútbol los domingos.", "verdict": "acceptable", "feedback": "Se entiende, pero en EE. UU. «football» es el fútbol americano: di «soccer»." },
+        { "text": "Hi, I'm Hernán. Sam and I play soccer together the Sundays.", "es": "Hola, soy Hernán. Sam y yo jugamos juntos al fútbol los domingos.", "verdict": "wrong", "feedback": "Los días van con «on», no con «the»: «on Sundays»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Invitada", "text": "Oh, cool! So where are you from? Your accent sounds Spanish.", "es": "¡Ah, qué guay! ¿Y de dónde eres? Tu acento suena español.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que eres de Madrid y que llevas tres meses viviendo en Chicago.",
+      "options": [
+        { "text": "Yeah, I'm from Madrid. I've been living in Chicago for three months.", "es": "Sí, soy de Madrid. Llevo tres meses viviendo en Chicago.", "verdict": "correct", "feedback": "¡Perfecto! «I've been living… for» = llevo… viviendo." },
+        { "text": "Yes, Madrid. Three months in Chicago.", "es": "Sí, de Madrid. Tres meses en Chicago.", "verdict": "acceptable", "feedback": "Se entiende, pero queda muy cortado para una charla." },
+        { "text": "Yeah, I'm from Madrid. I live in Chicago since three months.", "es": "Sí, soy de Madrid. Llevo tres meses viviendo en Chicago.", "verdict": "wrong", "feedback": "Calco de «desde hace»: se dice «I've been living in Chicago for three months»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Invitada", "text": "No way! I love Madrid. I went there two years ago. So, what do you think of Chicago so far?", "es": "¡No me digas! Me encanta Madrid. Estuve hace dos años. ¿Y qué te parece Chicago de momento?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que te encanta, aunque el invierno es durísimo, y pregúntale si ella es de aquí.",
+      "options": [
+        { "text": "I love it, but the winter is really tough. Are you from here?", "es": "Me encanta, aunque el invierno es durísimo. ¿Tú eres de aquí?", "verdict": "correct", "feedback": "¡Bien! «tough» = duro; suena «taf»." },
+        { "text": "It's great, but very cold. And you?", "es": "Es genial, pero hace mucho frío. ¿Y tú?", "verdict": "acceptable", "feedback": "Se entiende; «Are you from here?» es más claro que «And you?»." },
+        { "text": "I love it, but the winter is really tough. Are you of here?", "es": "Me encanta, aunque el invierno es durísimo. ¿Tú eres de aquí?", "verdict": "wrong", "feedback": "«de aquí» es «from here», no «of here»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Invitada", "text": "Yeah, born and raised! Hey, a few of us are going to a jazz bar next Saturday. Do you want to come?", "es": "¡Sí, de aquí de toda la vida! Oye, unos cuantos vamos a un bar de jazz el sábado que viene. ¿Te quieres venir?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que te apuntas y pídele su número para que te mande los detalles.",
+      "options": [
+        { "text": "Sounds great. Count me in! Can I get your number so you can text me the details?", "es": "Suena genial. ¡Me apunto! ¿Me das tu número y me mandas los detalles?", "verdict": "correct", "feedback": "¡Genial! «Count me in!» = ¡me apunto!; «text» = mandar un mensaje." },
+        { "text": "Yes, okay. What's your number?", "es": "Sí, vale. ¿Cuál es tu número?", "verdict": "acceptable", "feedback": "Funciona, aunque «Count me in!» suena más entusiasta." },
+        { "text": "Sounds great. I point myself! Can I get your number so you can text me the details?", "es": "Suena genial. ¡Me apunto! ¿Me das tu número y me mandas los detalles?", "verdict": "wrong", "feedback": "«I point myself» es un calco de «me apunto»: se dice «Count me in!» o «I'm in!»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Invitada", "text": "Awesome! Here, give me your phone and I'll put my number in.", "es": "¡Genial! Trae, dame tu móvil y te pongo mi número.", "voice": "en-US-EmmaNeural" }
+  ]
+}

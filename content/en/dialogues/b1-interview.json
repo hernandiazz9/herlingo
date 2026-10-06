@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b1-interview",
+  "title": "Entrevista de trabajo",
+  "description": "Hablas de tu experiencia, de por qué quieres el puesto y de un problema que resolviste.",
+  "situation": "trabajo",
+  "unit": "b1-interview",
+  "order": 103,
+  "register": "formal",
+  "level": "B1",
+  "avatars": { "Entrevistadora": "fluent:woman-white-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Entrevistadora", "text": "Thanks for coming in, Hernán. So, tell me a little about yourself.", "es": "Gracias por venir, Hernán. Bueno, hábleme un poco de usted.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que eres desarrollador backend y que llevas seis años trabajando en este campo.",
+      "options": [
+        { "text": "Of course. I'm a backend developer, and I've been working in this field for six years.", "es": "Por supuesto. Soy desarrollador backend y llevo seis años trabajando en este campo.", "verdict": "correct", "feedback": "¡Perfecto! «I've been working… for six years» = llevo seis años trabajando." },
+        { "text": "Well, I'm a programmer. I work with databases and APIs.", "es": "Bueno, soy programador. Trabajo con bases de datos y APIs.", "verdict": "acceptable", "feedback": "Se entiende, pero no dices cuánta experiencia tienes, que es lo que importa aquí." },
+        { "text": "Of course. I'm a backend developer, and I'm working in this field since six years.", "es": "Por supuesto. Soy desarrollador backend y llevo seis años trabajando en este campo.", "verdict": "wrong", "feedback": "Calco de «desde hace»: se dice «I've been working… for six years»; «since» va con un momento (since 2020)." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Entrevistadora", "text": "That's great. And why are you interested in this position?", "es": "Muy bien. ¿Y por qué le interesa este puesto?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que te interesa mucho la tecnología de pagos y que te gustaría trabajar en un equipo internacional.",
+      "options": [
+        { "text": "I'm really interested in payment technology, and I'd like to work on an international team.", "es": "Me interesa mucho la tecnología de pagos y me gustaría trabajar en un equipo internacional.", "verdict": "correct", "feedback": "¡Muy bien! «interested in» y «I'd like to» suenan profesionales." },
+        { "text": "Because I like payments, and the team is international.", "es": "Porque me gustan los pagos y el equipo es internacional.", "verdict": "acceptable", "feedback": "Se entiende, pero suena simple para una entrevista: mejor «I'm really interested in…»." },
+        { "text": "I'm very interesting in payment technology, and I'd like to work on an international team.", "es": "Me interesa mucho la tecnología de pagos y me gustaría trabajar en un equipo internacional.", "verdict": "wrong", "feedback": "«interesting» = que despierta interés; tú estás «interested». «I'm interesting» significa «soy interesante»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Entrevistadora", "text": "Can you tell me about a difficult problem you solved at your last job?", "es": "¿Puede hablarme de algún problema difícil que resolviera en su último trabajo?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Cuenta que una vez se cayó el servidor mientras lanzabais una nueva versión y que lo arreglaste en una hora.",
+      "options": [
+        { "text": "Sure. Once, the server went down while we were releasing a new version, and I fixed it in an hour.", "es": "Claro. Una vez se cayó el servidor mientras lanzábamos una nueva versión, y lo arreglé en una hora.", "verdict": "correct", "feedback": "¡Perfecto! Pasado continuo («were releasing») para el fondo y pasado simple para lo que pasó." },
+        { "text": "Sure. One time the server crashed during a release. I fixed it quickly.", "es": "Claro. Una vez el servidor se cayó durante un lanzamiento. Lo arreglé rápido.", "verdict": "acceptable", "feedback": "Correcto, aunque dar el dato concreto («in an hour») convence más." },
+        { "text": "Sure. Once, the server fell down while we released a new version, and I fixed it in an hour.", "es": "Claro. Una vez se cayó el servidor mientras lanzábamos una nueva versión, y lo arreglé en una hora.", "verdict": "wrong", "feedback": "Un servidor no «falls down»: «goes down». Y la acción de fondo va en pasado continuo: «while we were releasing»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Entrevistadora", "text": "Impressive. Do you have any questions for us?", "es": "Impresionante. ¿Tiene alguna pregunta para nosotros?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta con educación cómo es un día normal en el equipo.",
+      "options": [
+        { "text": "Yes, I do. Could you tell me what a typical day on the team looks like?", "es": "Sí. ¿Podría contarme cómo es un día normal en el equipo?", "verdict": "correct", "feedback": "¡Genial! En una pregunta indirecta el orden es de afirmación: «what a typical day looks like»." },
+        { "text": "Yes. What do you do every day on the team?", "es": "Sí. ¿Qué hacen cada día en el equipo?", "verdict": "acceptable", "feedback": "Se entiende, pero suena directo; «Could you tell me…?» es más educado." },
+        { "text": "Yes, I do. Could you tell me how is a normal day in the team?", "es": "Sí. ¿Podría contarme cómo es un día normal en el equipo?", "verdict": "wrong", "feedback": "En una pregunta indirecta no se invierte el verbo: «what a typical day is like», no «how is a normal day»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Entrevistadora", "text": "Of course. Every morning starts with a short stand-up, and then everyone works on their tasks. Thanks for your time, Hernán. We'll be in touch next week.", "es": "Por supuesto. Cada mañana empieza con un stand-up corto y luego cada uno trabaja en sus tareas. Gracias por su tiempo, Hernán. Le diremos algo la semana que viene.", "voice": "en-US-AvaNeural" }
+  ]
+}
