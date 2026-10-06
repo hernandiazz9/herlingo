@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 11:10Z 💻
-- Writer: 💻 desktop
-- Branch: main @ 2b18669 (plan merged 2026-10-06)
-- Next step: T75 fixes the coach functions; then ff main, push, Hernán deploys
+- Updated: 2026-10-06 11:17Z 💻
+- Writer: released 11:17Z by 💻 desktop
+- Branch: main @ fc87971
+- Next step: Hernán: check Prepárate on the deployed app; visual + review queues
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -257,7 +257,7 @@ Worktree setup: npm ci
 - Outcome: merged origin/main (XP everywhere, numbers in the mic, voice dictation) with 9 conflicts resolved for multi-language; recordListen lang required; Borrar progreso also clears daily-xp:<lang>; French numberWords 0–100, hundreds, 1000 · 2b18669 · verify ✓ strict ✓ 💻 · not checked: new UI from main in both themes, mic numbers on device
 
 ## T75 — Fix: Prepárate functions crash on Vercel (ES module load)
-- Status: running (attempt 1 · 💻 · agent acec2518d18aaec3b · since 11:10Z)
+- Status: done
 - Depends on: T74
 - Where: any
 - Goal: Production `/api/coach/*` answers 500 FUNCTION_INVOCATION_FAILED; Vercel logs: "Failed to load the ES module: /var/task/api/coach/usage.js. Make sure to set "type": "module" in the nearest package.json file or use the .mjs extension". Make every coach function load on Vercel's Node runtime (e.g. `api/package.json` with `"type": "module"` plus `.js` extensions on relative imports in `api/**`, or another documented fix), keeping `npm run dev:coach`/`start:coach` working.
@@ -267,7 +267,7 @@ Worktree setup: npm ci
   - `npx vercel@latest build --prod` (local, no deploy) succeeds and each built coach function loads in Node with no ESM error (import its entry from `.vercel/output/functions/...` and call it with a request lacking `x-coach-code` → 401 JSON, not a crash).
   - `COACH_FAKE=1 npm run dev:coach` still serves POST /api/coach/pack/ (200 with a dev code, 401 without).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: api/package.json type module + .js on relative imports in api/; .vercel ignored by ESLint; local vercel build: all 4 functions load and answer 401 · fc87971 · verify ✓ 💻 · not checked: production deploy
 
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
@@ -287,6 +287,7 @@ Worktree setup: npm ci
 - [ ] T72 @b23c31a — French language review (queued 2026-10-06 💻)
 - [ ] T73 @1c894c7 — code review (scripts/content.ts, scripts/images/plan.ts) (queued 2026-10-06 💻)
 - [ ] T74 @2b18669 — code review of the merge resolutions (queued 2026-10-06 💻)
+- [ ] T75 @fc87971 — code review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -359,3 +360,4 @@ Worktree setup: npm ci
 - 2026-10-06 10:40Z 💻 T74 launched · attempt 1 · agent a175ea6da93433afd
 - 2026-10-06 10:44Z 💻 T74 done · worktree-agent-a175ea6da93433afd → 2b18669 (merge) · verify ✓
 - 2026-10-06 11:10Z 💻 T75 launched · attempt 1 · agent acec2518d18aaec3b (prod /api/coach/* 500: ESM load failure)
+- 2026-10-06 11:17Z 💻 T75 done · worktree-agent-acec2518d18aaec3b → fc87971 · verify ✓
