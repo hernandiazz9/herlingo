@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 11:30Z 💻
-- Writer: 💻 desktop
-- Branch: main @ a5f51c1 (plan not approved yet; base branch created at approval)
-- Next step: launch T90
-- Needs Hernán: plan approval
+- Updated: 2026-10-06 11:41Z 💻
+- Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
+- Branch: plan-008-ingles @ 76a64c7
+- Next step: T90 foundation; then T91 + A2 units (max 2 agents)
+- Needs Hernán: -
 
 ## Shared contract (all tasks read this)
 
@@ -28,7 +28,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T90 — English foundation: generic levels, `formal` register, en pack.json
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent aab34ce7c5a906ee7 · since 11:41Z)
 - Depends on: none
 - Where: any
 - Goal: Make the schema, loader and checks ready for a levelled pack and write `content/en/pack.json`, per the Shared contract ("Schema"): `formal` register (dialogue badge "Registro formal" / "Registro informal" when the pack's `formalRegister` is `formal`, today's labels otherwise); `Level` A1–C2; optional `levels`, `equivalents`; `level` rules in `content:check`; loader exposes `pack.meta.levels`, `pack.meta.equivalents` and a derived level for units, dialogues, stories, placement questions and items. No change to answer matching or speech code here (plan 007 voice rewrites it; T110 wires `equivalents` in afterwards). `content/en/pack.json`: lang `en`, name "Inglés", nativeName "English", emoji 🇺🇸, speechLocale `en-US`, the four en-US voices, `formalRegister: "formal"`, `articles: ["a", "an"]`, `levels: ["A2", "B1"]`, the 18 situations of brief-en, `numberWords` 0–100 + hundreds + thousand, `equivalents` for the common contractions (I'm, you're, he's, it's, we're, they're, I've, I'll, I'd, don't, doesn't, didn't, can't, won't, isn't, aren't, wasn't, weren't, haven't, hasn't, couldn't, shouldn't, wouldn't, let's, what's, where's, that's, there's). `npm run content:check` and `verify` must pass while the English pack has no units yet (empty pack hidden from the language picker until it has a unit, generically).
@@ -307,3 +307,4 @@ Worktree setup: npm ci
 
 ## Log
 - 2026-10-06 11:30Z 💻 plan written from the interview; not approved yet
+- 2026-10-06 11:41Z 💻 plan approved by Hernán (as 007; renumbered 008/T90+ after plan 007 voice appeared); T90 launched · attempt 1 · agent aab34ce7c5a906ee7
