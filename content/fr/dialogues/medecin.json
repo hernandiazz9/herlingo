@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-medecin",
+  "title": "En la consulta del médico",
+  "description": "Le cuentas al médico qué te pasa, desde cuándo y que eres alérgico a la penicilina.",
+  "situation": "salud",
+  "unit": "sante",
+  "order": 52,
+  "register": "vous",
+  "avatars": { "Médico": "fluent:man-health-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Médico", "text": "Bonjour, asseyez-vous. Qu'est-ce qui ne va pas?", "es": "Buenos días, siéntese. ¿Qué le pasa?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que no te encuentras bien y que te duele la garganta.",
+      "options": [
+        { "text": "Je ne me sens pas bien. J'ai mal à la gorge.", "es": "No me encuentro bien. Me duele la garganta.", "verdict": "correct", "feedback": "¡Perfecto! «J'ai mal à…» = me duele…" },
+        { "text": "J'ai mal à la gorge.", "es": "Me duele la garganta.", "verdict": "acceptable", "feedback": "Correcto; si quieres, añade «je ne me sens pas bien»." },
+        { "text": "Je ne me sens pas bien. J'ai mal la gorge.", "es": "No me encuentro bien. Tengo mal la garganta.", "verdict": "wrong", "feedback": "Falta «à»: «j'ai mal à la gorge»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Médico", "text": "Depuis quand?", "es": "¿Desde cuándo?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que desde hace dos días.",
+      "options": [
+        { "text": "Depuis deux jours.", "es": "Desde hace dos días.", "verdict": "correct", "feedback": "¡Muy bien! «Depuis» = desde hace." },
+        { "text": "Deux jours.", "es": "Dos días.", "verdict": "acceptable", "feedback": "Se entiende; con «depuis» queda más claro." },
+        { "text": "Pour deux jours.", "es": "Para dos días.", "verdict": "wrong", "feedback": "«Pour deux jours» es «para dos días»: «desde hace» es «depuis»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Médico", "text": "Vous avez de la fièvre? Vous toussez?", "es": "¿Tiene fiebre? ¿Tose?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que tienes un poco de fiebre y que toses mucho.",
+      "options": [
+        { "text": "J'ai un peu de fièvre et je tousse beaucoup.", "es": "Tengo un poco de fiebre y toso mucho.", "verdict": "correct", "feedback": "¡Genial!" },
+        { "text": "Un peu de fièvre, et je tousse.", "es": "Un poco de fiebre, y toso.", "verdict": "acceptable", "feedback": "Se entiende; la frase completa es más clara." },
+        { "text": "J'ai un peu fièvre et je tousse beaucoup.", "es": "Tengo un poco fiebre y toso mucho.", "verdict": "wrong", "feedback": "Tras «un peu» va «de»: «un peu de fièvre»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Médico", "text": "Vous avez des allergies?", "es": "¿Tiene alguna alergia?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí, que eres alérgico a la penicilina.",
+      "options": [
+        { "text": "Oui, je suis allergique à la pénicilline.", "es": "Sí, soy alérgico a la penicilina.", "verdict": "correct", "feedback": "¡Perfecto! Muy importante decirlo." },
+        { "text": "Oui, pénicilline.", "es": "Sí, penicilina.", "verdict": "acceptable", "feedback": "Se entiende, pero mejor la frase completa." },
+        { "text": "Oui, j'ai allergique à la pénicilline.", "es": "Sí, tengo alérgico a la penicilina.", "verdict": "wrong", "feedback": "«Allergique» es adjetivo: «je suis allergique»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Médico", "text": "D'accord. C'est une angine. Je vous fais une ordonnance.", "es": "De acuerdo. Es una faringitis. Le hago una receta.", "voice": "fr-FR-HenriNeural" }
+  ]
+}

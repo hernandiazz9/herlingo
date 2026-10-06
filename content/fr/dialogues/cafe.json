@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-cafe",
+  "title": "Un café en la terraza",
+  "description": "Te sientas en la terraza, pides un café con leche y un cruasán, y preguntas cuánto es.",
+  "situation": "comida",
+  "unit": "manger",
+  "order": 40,
+  "register": "vous",
+  "avatars": { "Camarero": "fluent:man-beard" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Camarero", "text": "Bonjour, monsieur. Vous êtes seul?", "es": "Buenos días. ¿Viene usted solo?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí y pregunta si puedes sentarte en la terraza.",
+      "options": [
+        { "text": "Oui. Je peux me mettre en terrasse?", "es": "Sí. ¿Me puedo sentar en la terraza?", "verdict": "correct", "feedback": "¡Muy bien! «Se mettre en terrasse» = sentarse fuera." },
+        { "text": "Oui. Terrasse, s'il vous plaît.", "es": "Sí. Terraza, por favor.", "verdict": "acceptable", "feedback": "Se entiende, aunque es muy escueto." },
+        { "text": "Oui. Je peux me asseoir en terrasse?", "es": "Sí. ¿Me puedo sentar en la terraza?", "verdict": "wrong", "feedback": "Delante de vocal, «me» pasa a «m'»: «m'asseoir». Más fácil: «me mettre en terrasse»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Camarero", "text": "Bien sûr, installez-vous. Qu'est-ce que je vous sers?", "es": "Claro, siéntese. ¿Qué le pongo?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pide un café con leche y un cruasán.",
+      "options": [
+        { "text": "Un café crème et un croissant, s'il vous plaît.", "es": "Un café con leche y un cruasán, por favor.", "verdict": "correct", "feedback": "¡Perfecto! El café con leche del bar es «un café crème»." },
+        { "text": "Un café avec du lait et un croissant.", "es": "Un café con leche y un cruasán.", "verdict": "acceptable", "feedback": "Se entiende, pero en el bar se pide «un café crème», y con «s'il vous plaît»." },
+        { "text": "Un café crème et une croissant, s'il vous plaît.", "es": "Un café con leche y una cruasán, por favor.", "verdict": "wrong", "feedback": "«Croissant» es masculino: «un croissant»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Camarero", "text": "Et avec ça? Une orange pressée?", "es": "¿Y algo más? ¿Un zumo de naranja natural?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que no, gracias, y pide solo un vaso de agua.",
+      "options": [
+        { "text": "Non merci. Juste un verre d'eau, s'il vous plaît.", "es": "No, gracias. Solo un vaso de agua, por favor.", "verdict": "correct", "feedback": "¡Genial! Un vaso es «un verre»." },
+        { "text": "Non. De l'eau.", "es": "No. Agua.", "verdict": "acceptable", "feedback": "Se entiende, pero suena brusco: añade «merci» y «s'il vous plaît»." },
+        { "text": "Non merci. Juste un vase d'eau, s'il vous plaît.", "es": "No, gracias. Solo un jarrón de agua, por favor.", "verdict": "wrong", "feedback": "«Un vase» es un jarrón: el vaso es «un verre»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Camarero", "text": "Voilà pour vous. Bonne dégustation!", "es": "Aquí tiene. ¡Que lo disfrute!", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Al terminar, pregúntale cuánto le debes.",
+      "options": [
+        { "text": "Je vous dois combien?", "es": "¿Cuánto le debo?", "verdict": "correct", "feedback": "¡Perfecto! Así se pregunta en la barra o en la terraza." },
+        { "text": "Combien?", "es": "¿Cuánto?", "verdict": "acceptable", "feedback": "Se entiende, pero suena seco: «Je vous dois combien?»." },
+        { "text": "Je dois combien à vous?", "es": "¿Debo cuánto a usted?", "verdict": "wrong", "feedback": "El pronombre va delante del verbo: «Je vous dois combien?»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Camarero", "text": "Six euros vingt, s'il vous plaît. Merci, bonne journée!", "es": "Seis euros con veinte, por favor. ¡Gracias, que tenga buen día!", "voice": "fr-FR-HenriNeural" }
+  ]
+}

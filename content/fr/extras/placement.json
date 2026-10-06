@@ -1,0 +1,95 @@
+{
+  "placement": [
+    {
+      "id": "placement.fr-ca-va",
+      "prompt": "Un amigo te saluda así. ¿Qué le contestas?",
+      "text": "Salut! Ça va?",
+      "options": ["Je vous en prie.", "Au revoir, madame.", "Ça va bien, merci. Et toi?", "Je ne comprends pas."],
+      "answer": 2,
+      "lessons": ["salut.l.bonjour", "salut.l.ca-va"]
+    },
+    {
+      "id": "placement.fr-repeter",
+      "prompt": "¿Qué significa?",
+      "text": "Vous pouvez répéter plus lentement, s'il vous plaît?",
+      "options": ["¿Puede hablar más alto, por favor?", "¿Puede repetir más despacio, por favor?", "¿Puedo repetirlo otra vez, por favor?", "¿Me lo puede escribir, por favor?"],
+      "answer": 1,
+      "lessons": ["salut.l.comprendre"]
+    },
+    {
+      "id": "placement.fr-prix",
+      "prompt": "Escucha: ¿cuánto cuesta?",
+      "text": "Ça fait quatre-vingt-dix euros.",
+      "options": ["80 €", "90 €", "70 €", "19 €"],
+      "answer": 1,
+      "lessons": ["nombres.l.vingt-soixante", "nombres.l.prix"]
+    },
+    {
+      "id": "placement.fr-heure",
+      "prompt": "¿Qué significa?",
+      "text": "Lundi, à neuf heures moins le quart.",
+      "options": ["El lunes, a las nueve menos cuarto.", "El martes, a las nueve y cuarto.", "El lunes, a las nueve y cuarto.", "El domingo, a las nueve menos cuarto."],
+      "answer": 0,
+      "lessons": ["nombres.l.zero-vingt", "nombres.l.heure", "nombres.l.jours"]
+    },
+    {
+      "id": "placement.fr-origine",
+      "prompt": "¿Cómo dices que eres de España y que vives en Madrid?",
+      "options": ["Je vais en Espagne et j'habite à Madrid.", "Je suis de Espagne et je suis à Madrid.", "Je viens d'Espagne et je travaille à Madrid.", "Je viens d'Espagne et j'habite à Madrid."],
+      "answer": 3,
+      "lessons": ["presenter.l.origine"]
+    },
+    {
+      "id": "placement.fr-famille",
+      "prompt": "¿Qué significa?",
+      "text": "Ma sœur est grande et blonde, elle a les yeux bleus.",
+      "options": ["Mi hermana es alta y rubia, tiene los ojos azules.", "Mi hermano es alto y rubio, tiene los ojos azules.", "Mi madre es alta y morena, tiene los ojos azules.", "Mi hermana es bajita y rubia, tiene los ojos verdes."],
+      "answer": 0,
+      "lessons": ["famille.l.ma-famille", "famille.l.physique"]
+    },
+    {
+      "id": "placement.fr-matin",
+      "prompt": "¿Qué significa?",
+      "text": "Le matin, je me lève à sept heures et je prends une douche.",
+      "options": ["Por la tarde me acuesto a las siete y me ducho.", "Por la mañana me despierto a las seis y desayuno.", "Por la mañana me levanto a las siete y me ducho.", "Los domingos me levanto a las siete y me ducho."],
+      "answer": 2,
+      "lessons": ["maison.l.matin"]
+    },
+    {
+      "id": "placement.fr-plans",
+      "prompt": "Un amigo te propone ir al cine. ¿Cómo le dices «¡Buena idea! ¿Dónde quedamos?»?",
+      "options": ["Bonne nuit! On se retrouve où?", "Bonne idée! On se retrouve où?", "Bonne idée! Tu habites où?", "Une autre fois! On se retrouve où?"],
+      "answer": 1,
+      "lessons": ["loisirs.l.plans"]
+    },
+    {
+      "id": "placement.fr-addition",
+      "prompt": "Has terminado de comer en el restaurante. ¿Cómo pides la cuenta?",
+      "options": ["La carte, s'il vous plaît.", "Le compte, s'il vous plaît.", "Une carafe d'eau, s'il vous plaît.", "L'addition, s'il vous plaît."],
+      "answer": 3,
+      "lessons": ["manger.l.addition"]
+    },
+    {
+      "id": "placement.fr-essayer",
+      "prompt": "En una tienda de ropa quieres probarte un jersey. ¿Qué dices?",
+      "options": ["Je peux l'essayer?", "Je peux goûter?", "Je peux l'échanger?", "Je vais réfléchir."],
+      "answer": 0,
+      "lessons": ["courses.l.vetements", "courses.l.essayer"]
+    },
+    {
+      "id": "placement.fr-chemin",
+      "prompt": "Pides indicaciones y te contestan esto. ¿Qué te dicen?",
+      "text": "Allez tout droit, puis prenez la deuxième rue à gauche.",
+      "options": ["Siga recto y luego coja la segunda calle a la derecha.", "Gire a la izquierda y luego siga recto dos calles.", "Siga recto y luego coja la segunda calle a la izquierda.", "Coja la primera calle a la izquierda y luego siga recto."],
+      "answer": 2,
+      "lessons": ["ville.l.chemin"]
+    },
+    {
+      "id": "placement.fr-malade",
+      "prompt": "En el médico: ¿cómo dices que te duele la cabeza y que tienes fiebre?",
+      "options": ["J'ai mal au ventre et j'ai de la fièvre.", "J'ai mal à la tête et j'ai de la fièvre.", "J'ai mal à la tête et je suis enrhumé.", "Je suis mal la tête et j'ai de la fièvre."],
+      "answer": 1,
+      "lessons": ["sante.l.corps", "sante.l.malade"]
+    }
+  ]
+}

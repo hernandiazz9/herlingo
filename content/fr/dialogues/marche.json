@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-marche",
+  "title": "En el mercado",
+  "description": "Compras manzanas y fresas en un puesto de fruta y no necesitas bolsa.",
+  "situation": "compras",
+  "unit": "courses",
+  "order": 44,
+  "register": "vous",
+  "avatars": { "Frutera": "fluent:woman-farmer" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Frutera", "text": "Bonjour! Qu'est-ce que je vous mets?", "es": "¡Hola! ¿Qué le pongo?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide un kilo de manzanas.",
+      "options": [
+        { "text": "Un kilo de pommes, s'il vous plaît.", "es": "Un kilo de manzanas, por favor.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Je voudrais des pommes.", "es": "Querría manzanas.", "verdict": "acceptable", "feedback": "Correcto, pero no dices cuántas: «un kilo de pommes»." },
+        { "text": "Un kilo des pommes, s'il vous plaît.", "es": "Un kilo de las manzanas, por favor.", "verdict": "wrong", "feedback": "Tras una cantidad va «de» a secas: «un kilo de pommes»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Frutera", "text": "Voilà. Et avec ça?", "es": "Aquí tiene. ¿Algo más?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta a cuánto están las fresas.",
+      "options": [
+        { "text": "Elles sont à combien, les fraises?", "es": "¿A cuánto están las fresas?", "verdict": "correct", "feedback": "¡Muy bien! Así se pregunta el precio en el mercado." },
+        { "text": "Combien les fraises?", "es": "¿Cuánto las fresas?", "verdict": "acceptable", "feedback": "Se entiende, pero mejor «Elles sont à combien, les fraises?»." },
+        { "text": "Ils sont à combien, les fraises?", "es": "¿A cuánto están (ellos) las fresas?", "verdict": "wrong", "feedback": "«Fraise» es femenino: «elles sont»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Frutera", "text": "Trois euros la barquette. Elles sont délicieuses, vous voulez goûter?", "es": "Tres euros la bandeja. Están buenísimas, ¿quiere probar?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Acepta, y luego pide una bandeja.",
+      "options": [
+        { "text": "Oui, merci! Mmm… une barquette, s'il vous plaît.", "es": "¡Sí, gracias! Mmm… una bandeja, por favor.", "verdict": "correct", "feedback": "¡Genial! Amable y claro." },
+        { "text": "Oui, merci! Une barquette, s'il te plaît.", "es": "¡Sí, gracias! Una bandeja, por favor.", "verdict": "acceptable", "feedback": "Se entiende, pero a la frutera no la conoces: «s'il vous plaît»." },
+        { "text": "Oui, merci! Un barquette, s'il vous plaît.", "es": "¡Sí, gracias! Un bandeja, por favor.", "verdict": "wrong", "feedback": "«Barquette» es femenino: «une barquette»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Frutera", "text": "Voilà. Ça vous fait six euros cinquante. Vous voulez un sac?", "es": "Aquí tiene. Son seis euros con cincuenta. ¿Quiere una bolsa?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que no, gracias, que traes tu bolsa.",
+      "options": [
+        { "text": "Non merci, j'ai mon sac.", "es": "No, gracias, traigo mi bolsa.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Non, j'ai un sac.", "es": "No, tengo una bolsa.", "verdict": "acceptable", "feedback": "Correcto, aunque con «merci» es más amable." },
+        { "text": "Non merci, je n'ai pas mon sac.", "es": "No, gracias, no traigo mi bolsa.", "verdict": "wrong", "feedback": "Así dices que NO traes bolsa: es «j'ai mon sac»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Frutera", "text": "Très bien. Merci, bonne journée!", "es": "Muy bien. ¡Gracias, que tenga buen día!", "voice": "fr-FR-DeniseNeural" }
+  ]
+}

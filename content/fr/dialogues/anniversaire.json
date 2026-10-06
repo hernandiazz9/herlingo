@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-anniversaire",
+  "title": "El cumpleaños de Camille",
+  "description": "Llegas a la fiesta, felicitas a Camille y charlas con Julien sobre tu familia.",
+  "situation": "familia",
+  "unit": "famille",
+  "order": 22,
+  "register": "tu",
+  "avatars": { "Camille": "fluent:woman-red-hair", "Julien": "fluent:man-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Camille", "text": "Salut, Hernán! Entre, entre! Ça me fait plaisir de te voir.", "es": "¡Hola, Hernán! ¡Pasa, pasa! Me alegro de verte.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Felicítala y dale el regalo.",
+      "options": [
+        { "text": "Joyeux anniversaire, Camille! C'est pour toi.", "es": "¡Feliz cumpleaños, Camille! Es para ti.", "verdict": "correct", "feedback": "¡Genial! «C'est pour toi» = es para ti." },
+        { "text": "Bon anniversaire! C'est pour vous.", "es": "¡Feliz cumpleaños! Es para usted.", "verdict": "acceptable", "feedback": "«Bon anniversaire» está bien, pero a una amiga le dices «pour toi»." },
+        { "text": "Joyeux Noël, Camille! C'est pour toi.", "es": "¡Feliz Navidad, Camille! Es para ti.", "verdict": "wrong", "feedback": "«Joyeux Noël» es «Feliz Navidad»: aquí toca «Joyeux anniversaire»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Camille", "text": "Oh, merci, c'est trop gentil! Tu connais Julien, mon coloc?", "es": "¡Ay, gracias, qué detalle! ¿Conoces a Julien, mi compañero de piso?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que no y preséntate a Julien.",
+      "options": [
+        { "text": "Non. Salut, Julien, moi, c'est Hernán.", "es": "No. Hola, Julien, yo soy Hernán.", "verdict": "correct", "feedback": "¡Perfecto! Natural y con el tono de una fiesta." },
+        { "text": "Non. Ravi de vous rencontrer, Julien.", "es": "No. Encantado de conocerle, Julien.", "verdict": "acceptable", "feedback": "Es correcto, pero muy formal entre amigos: con «Salut» basta." },
+        { "text": "Non. Je te présente Hernán.", "es": "No. Te presento a Hernán.", "verdict": "wrong", "feedback": "«Je te présente» sirve para presentar a otra persona, no a ti mismo." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Julien", "text": "Salut, Hernán! Camille m'a parlé de toi. Ta famille est en Espagne?", "es": "¡Hola, Hernán! Camille me ha hablado de ti. ¿Tu familia está en España?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sí, que tus padres viven en Madrid.",
+      "options": [
+        { "text": "Oui, mes parents habitent à Madrid.", "es": "Sí, mis padres viven en Madrid.", "verdict": "correct", "feedback": "¡Muy bien! «Les parents» = los padres." },
+        { "text": "Oui, à Madrid.", "es": "Sí, en Madrid.", "verdict": "acceptable", "feedback": "Vale como respuesta corta; la frase completa es «mes parents habitent à Madrid»." },
+        { "text": "Oui, mes pères habitent à Madrid.", "es": "Sí, mis padres (varones) viven en Madrid.", "verdict": "wrong", "feedback": "«Mes pères» son varios padres varones: padre y madre son «mes parents»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Julien", "text": "Et tu as des frères et sœurs?", "es": "¿Y tienes hermanos?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que tienes un hermano y una hermana, y pregúntale a él.",
+      "options": [
+        { "text": "Oui, j'ai un frère et une sœur. Et toi?", "es": "Sí, tengo un hermano y una hermana. ¿Y tú?", "verdict": "correct", "feedback": "¡Genial! Y le devuelves la pregunta con «Et toi?»." },
+        { "text": "Oui, un frère et une sœur.", "es": "Sí, un hermano y una hermana.", "verdict": "acceptable", "feedback": "Correcto como respuesta corta, pero no le devuelves la pregunta." },
+        { "text": "Oui, j'ai un frère et un sœur. Et toi?", "es": "Sí, tengo un hermano y un hermana. ¿Y tú?", "verdict": "wrong", "feedback": "«Sœur» es femenino: «une sœur»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Camille", "text": "Allez, venez, on va couper le gâteau!", "es": "¡Venga, venid, que vamos a cortar la tarta!", "voice": "fr-FR-DeniseNeural" }
+  ]
+}

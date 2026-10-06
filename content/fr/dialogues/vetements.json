@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-vetements",
+  "title": "Comprar un jersey",
+  "description": "Buscas un jersey, dices tu talla, lo pides en negro y te lo pruebas.",
+  "situation": "compras",
+  "unit": "courses",
+  "order": 45,
+  "register": "vous",
+  "avatars": { "Dependienta": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Dependienta", "text": "Bonjour, je peux vous aider?", "es": "Hola, ¿le puedo ayudar?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, que buscas un jersey.",
+      "options": [
+        { "text": "Oui, je cherche un pull.", "es": "Sí, busco un jersey.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Oui, un pull.", "es": "Sí, un jersey.", "verdict": "acceptable", "feedback": "Se entiende; la frase completa es «je cherche un pull»." },
+        { "text": "Oui, je cherche un jersey.", "es": "Sí, busco un jersey.", "verdict": "wrong", "feedback": "Falso amigo: nuestro jersey es «un pull» en francés." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Dependienta", "text": "Quelle taille faites-vous?", "es": "¿Qué talla tiene?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que tienes la 40.",
+      "options": [
+        { "text": "Je fais du quarante.", "es": "Tengo la cuarenta.", "verdict": "correct", "feedback": "¡Perfecto! La talla se dice con «faire du»." },
+        { "text": "Quarante.", "es": "Cuarenta.", "verdict": "acceptable", "feedback": "Se entiende, aunque es muy escueto." },
+        { "text": "J'ai la quarante.", "es": "Tengo la cuarenta.", "verdict": "wrong", "feedback": "Es un calco del español: se dice «je fais du quarante»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Dependienta", "text": "Voilà, ce modèle existe en bleu et en gris.", "es": "Aquí tiene, este modelo lo hay en azul y en gris.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si lo tiene en negro.",
+      "options": [
+        { "text": "Vous l'avez en noir?", "es": "¿Lo tiene en negro?", "verdict": "correct", "feedback": "¡Muy bien! El color va con «en»." },
+        { "text": "Et en noir?", "es": "¿Y en negro?", "verdict": "acceptable", "feedback": "Se entiende; la frase completa es «Vous l'avez en noir?»." },
+        { "text": "Vous l'avez de noir?", "es": "¿Lo tiene de negro?", "verdict": "wrong", "feedback": "El color va con «en»: «en noir»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Dependienta", "text": "Oui, tenez. Les cabines d'essayage sont au fond.", "es": "Sí, tome. Los probadores están al fondo.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Tras probártelo: di que te queda pequeño y pide una talla más.",
+      "options": [
+        { "text": "C'est trop petit. Vous avez la taille au-dessus?", "es": "Me queda pequeño. ¿Tiene una talla más?", "verdict": "correct", "feedback": "¡Genial! «La taille au-dessus» = la talla siguiente." },
+        { "text": "Trop petit. Une autre taille?", "es": "Pequeño. ¿Otra talla?", "verdict": "acceptable", "feedback": "Se entiende, pero no dices si la quieres más grande." },
+        { "text": "C'est trop petit. Vous avez la taille au-dessous?", "es": "Me queda pequeño. ¿Tiene una talla menos?", "verdict": "wrong", "feedback": "«Au-dessous» es la talla menor: si te queda pequeño, «au-dessus»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Dependienta", "text": "Bien sûr, voici le quarante-deux. Il vous va très bien!", "es": "Claro, aquí tiene la cuarenta y dos. ¡Le queda muy bien!", "voice": "fr-FR-DeniseNeural" }
+  ]
+}

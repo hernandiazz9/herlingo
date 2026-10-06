@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-boulangerie",
+  "title": "En la panadería",
+  "description": "Pides una barra, preguntas por los cruasanes y pagas con tarjeta.",
+  "situation": "comida",
+  "unit": "manger",
+  "order": 41,
+  "register": "vous",
+  "avatars": { "Panadera": "fluent:woman-cook" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Panadera", "text": "Bonjour, monsieur! Qu'est-ce que je vous sers?", "es": "¡Buenos días! ¿Qué le pongo?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y pide una barra no muy hecha.",
+      "options": [
+        { "text": "Bonjour! Une baguette pas trop cuite, s'il vous plaît.", "es": "¡Buenos días! Una barra no muy hecha, por favor.", "verdict": "correct", "feedback": "¡Perfecto! En Francia siempre se saluda antes de pedir." },
+        { "text": "Une baguette, s'il vous plaît.", "es": "Una barra, por favor.", "verdict": "acceptable", "feedback": "Correcto, pero sin «Bonjour» suena seco: en Francia se saluda primero." },
+        { "text": "Bonjour! Un baguette pas trop cuit, s'il vous plaît.", "es": "¡Buenos días! Un barra no muy hecho, por favor.", "verdict": "wrong", "feedback": "«Baguette» es femenino: «une baguette pas trop cuite»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Panadera", "text": "Voilà. Et avec ceci?", "es": "Aquí tiene. ¿Algo más?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta si le quedan cruasanes.",
+      "options": [
+        { "text": "Il vous reste des croissants?", "es": "¿Le quedan cruasanes?", "verdict": "correct", "feedback": "¡Muy bien! «Il vous reste…?» = ¿le quedan…?" },
+        { "text": "Vous avez des croissants?", "es": "¿Tiene cruasanes?", "verdict": "acceptable", "feedback": "Correcto; si ya es tarde, «Il vous reste des croissants?» es más preciso." },
+        { "text": "Vous restez des croissants?", "es": "¿Usted se queda cruasanes?", "verdict": "wrong", "feedback": "«Vous restez» es «usted se queda»: para «¿le quedan…?», «Il vous reste…?»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Panadera", "text": "Ah non, désolée, il n'y en a plus. Mais il me reste des pains au chocolat.", "es": "Ay, no, lo siento, ya no quedan. Pero me quedan napolitanas de chocolate.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pide dos napolitanas de chocolate y di que nada más.",
+      "options": [
+        { "text": "Alors, deux pains au chocolat, s'il vous plaît. Ce sera tout.", "es": "Pues dos napolitanas de chocolate, por favor. Nada más.", "verdict": "correct", "feedback": "¡Genial! «Ce sera tout» = nada más." },
+        { "text": "Deux pains au chocolat. C'est tout.", "es": "Dos napolitanas de chocolate. Ya está.", "verdict": "acceptable", "feedback": "Se entiende, pero falta «s'il vous plaît»." },
+        { "text": "Deux pains de chocolat, s'il vous plaît. Ce sera tout.", "es": "Dos panes de chocolate, por favor. Nada más.", "verdict": "wrong", "feedback": "Se llama «pain au chocolat», con «au», no con «de»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Panadera", "text": "Très bien. Ça fait trois euros quatre-vingt-dix.", "es": "Muy bien. Son tres euros con noventa.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes pagar con tarjeta.",
+      "options": [
+        { "text": "Je peux payer par carte?", "es": "¿Puedo pagar con tarjeta?", "verdict": "correct", "feedback": "¡Perfecto! Con tarjeta es «par carte»." },
+        { "text": "Carte, c'est possible?", "es": "¿Tarjeta, se puede?", "verdict": "acceptable", "feedback": "Se entiende, aunque es muy telegráfico." },
+        { "text": "Je peux payer avec carte?", "es": "¿Puedo pagar con tarjeta?", "verdict": "wrong", "feedback": "Sin artículo no: «par carte» (o «avec ma carte»)." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Panadera", "text": "Bien sûr. Voilà, merci, bonne journée!", "es": "Claro. Aquí tiene, gracias, ¡que tenga buen día!", "voice": "fr-FR-DeniseNeural" }
+  ]
+}

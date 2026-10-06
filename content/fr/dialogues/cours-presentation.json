@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-cours-presentation",
+  "title": "Presentarte en clase de francés",
+  "description": "Primer día de clase: dices cómo te llamas, de dónde eres y a qué te dedicas.",
+  "situation": "presentarse",
+  "unit": "presenter",
+  "order": 20,
+  "register": "tu",
+  "avatars": { "Profesora": "fluent:woman-teacher" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Profesora", "text": "Bonjour à tous! Ici, on se tutoie, d'accord? Tu t'appelles comment?", "es": "¡Hola a todos! Aquí nos tuteamos, ¿vale? ¿Cómo te llamas?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di cómo te llamas.",
+      "options": [
+        { "text": "Je m'appelle Hernán.", "es": "Me llamo Hernán.", "verdict": "correct", "feedback": "¡Perfecto! «Je m'appelle» es la forma más habitual." },
+        { "text": "Mon nom est Hernán.", "es": "Mi nombre es Hernán.", "verdict": "acceptable", "feedback": "Se entiende, pero suena rígido; además, «nom» suele ser el apellido. Mejor «Je m'appelle Hernán»." },
+        { "text": "J'appelle Hernán.", "es": "Llamo a Hernán.", "verdict": "wrong", "feedback": "«J'appelle Hernán» es «llamo a Hernán»: falta el «m'», «je m'appelle»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Profesora", "text": "Enchantée, Hernán! Et tu viens d'où?", "es": "¡Encantada, Hernán! ¿Y de dónde eres?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que eres de España, de Madrid.",
+      "options": [
+        { "text": "Je viens d'Espagne, de Madrid.", "es": "Soy de España, de Madrid.", "verdict": "correct", "feedback": "¡Muy bien! Delante de vocal, «de» pasa a «d'»." },
+        { "text": "Je suis espagnol.", "es": "Soy español.", "verdict": "acceptable", "feedback": "Correcto, aunque no dices la ciudad: «de Madrid»." },
+        { "text": "Je viens de Espagne, de Madrid.", "es": "Vengo de España, de Madrid.", "verdict": "wrong", "feedback": "Delante de vocal, «de» pasa a «d'»: «d'Espagne»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Profesora", "text": "Super! Et tu fais quoi dans la vie?", "es": "¡Genial! ¿Y a qué te dedicas?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que eres programador y trabajas desde casa.",
+      "options": [
+        { "text": "Je suis développeur, je travaille de chez moi.", "es": "Soy programador, trabajo desde casa.", "verdict": "correct", "feedback": "¡Perfecto! Con las profesiones no se pone «un»." },
+        { "text": "Je suis un développeur.", "es": "Soy un programador.", "verdict": "acceptable", "feedback": "Se entiende, pero con la profesión el francés no pone artículo: «je suis développeur»." },
+        { "text": "Je fais développeur, je travaille de chez moi.", "es": "Hago de programador, trabajo desde casa.", "verdict": "wrong", "feedback": "La profesión va con «être»: «je suis développeur»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Profesora", "text": "Très bien! Tu parles déjà bien, tu sais.", "es": "¡Muy bien! Ya hablas bien, ¿sabes?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Da las gracias y pídele que te corrija.",
+      "options": [
+        { "text": "Merci, c'est gentil! N'hésite pas à me corriger.", "es": "¡Gracias, qué amable! No dudes en corregirme.", "verdict": "correct", "feedback": "¡Genial! Y con «tu», como ha propuesto ella." },
+        { "text": "Merci! N'hésitez pas à me corriger.", "es": "¡Gracias! No dude en corregirme.", "verdict": "acceptable", "feedback": "Correcto, pero os ha propuesto tutearos: «N'hésite pas»." },
+        { "text": "Merci, tu es gentil! N'hésite pas à me corriger.", "es": "¡Gracias, eres amable! No dudes en corregirme.", "verdict": "wrong", "feedback": "Hablas con una mujer: «gentille». Más fácil: «c'est gentil»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Profesora", "text": "Avec plaisir! Bienvenue dans le cours, Hernán.", "es": "¡Con mucho gusto! Bienvenido a la clase, Hernán.", "voice": "fr-FR-DeniseNeural" }
+  ]
+}

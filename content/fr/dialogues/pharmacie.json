@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-pharmacie",
+  "title": "En la farmacia",
+  "description": "Pides algo para el dolor de garganta, preguntas si hace falta receta y pagas.",
+  "situation": "salud",
+  "unit": "sante",
+  "order": 53,
+  "register": "vous",
+  "avatars": { "Farmacéutica": "fluent:woman-health-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Farmacéutica", "text": "Bonjour, monsieur. Je vous écoute.", "es": "Buenos días. Dígame.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y pide algo para el dolor de garganta.",
+      "options": [
+        { "text": "Bonjour. Vous avez quelque chose contre le mal de gorge?", "es": "Buenos días. ¿Tiene algo para el dolor de garganta?", "verdict": "correct", "feedback": "¡Perfecto! Educado y preciso." },
+        { "text": "Bonjour. Je veux un médicament pour la gorge.", "es": "Buenos días. Quiero un medicamento para la garganta.", "verdict": "acceptable", "feedback": "Se entiende, pero «je veux» suena brusco: «Vous avez quelque chose contre…?»." },
+        { "text": "Bonjour. Vous avez quelque chose contre le mal à la gorge?", "es": "Buenos días. ¿Tiene algo contra el dolor a la garganta?", "verdict": "wrong", "feedback": "Como nombre es «le mal de gorge»; «à la gorge» va con el verbo: «j'ai mal à la gorge»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Farmacéutica", "text": "Oui, j'ai des pastilles ou un sirop. C'est pour vous?", "es": "Sí, tengo pastillas para chupar o un jarabe. ¿Es para usted?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí y pregunta si el jarabe se vende sin receta.",
+      "options": [
+        { "text": "Oui. Le sirop, c'est sans ordonnance?", "es": "Sí. El jarabe, ¿se vende sin receta?", "verdict": "correct", "feedback": "¡Muy bien! La receta del médico es «l'ordonnance»." },
+        { "text": "Oui. Ordonnance?", "es": "Sí. ¿Receta?", "verdict": "acceptable", "feedback": "Se entiende, aunque es muy telegráfico." },
+        { "text": "Oui. Le sirop, c'est sans recette?", "es": "Sí. El jarabe, ¿es sin receta de cocina?", "verdict": "wrong", "feedback": "«Recette» es una receta de cocina; la del médico es «ordonnance»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Farmacéutica", "text": "Oui, pas besoin d'ordonnance. Une cuillère trois fois par jour, après les repas.", "es": "Sí, no hace falta receta. Una cucharada tres veces al día, después de las comidas.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "No lo has pillado todo: pide que lo repita más despacio.",
+      "options": [
+        { "text": "Pardon, vous pouvez répéter plus lentement?", "es": "Perdone, ¿puede repetir más despacio?", "verdict": "correct", "feedback": "¡Perfecto! Con medicinas, mejor asegurarse." },
+        { "text": "Pardon, tu peux répéter?", "es": "Perdona, ¿puedes repetir?", "verdict": "acceptable", "feedback": "Se entiende, pero a la farmacéutica se le habla de «vous»." },
+        { "text": "Pardon, vous pouvez répéter plus lent?", "es": "Perdone, ¿puede repetir más lento?", "verdict": "wrong", "feedback": "«Más despacio» es «plus lentement», no «plus lent»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Farmacéutica", "text": "Bien sûr: une cuillère, trois fois par jour, après les repas.", "es": "Claro: una cucharada, tres veces al día, después de las comidas.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que vale, que te lo llevas, y pregunta cuánto es.",
+      "options": [
+        { "text": "D'accord, je le prends. Ça fait combien?", "es": "Vale, me lo llevo. ¿Cuánto es?", "verdict": "correct", "feedback": "¡Genial! «Ça fait combien?» = ¿cuánto es en total?" },
+        { "text": "D'accord. Combien?", "es": "Vale. ¿Cuánto?", "verdict": "acceptable", "feedback": "Se entiende, aunque es muy escueto." },
+        { "text": "D'accord, je le prends. Ça fait comment?", "es": "Vale, me lo llevo. ¿Cómo es?", "verdict": "wrong", "feedback": "«Comment» es «cómo»: el precio se pregunta con «combien»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Farmacéutica", "text": "Sept euros quarante. Bon rétablissement!", "es": "Siete euros con cuarenta. ¡Que se mejore!", "voice": "fr-FR-DeniseNeural" }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-nouveau-voisin",
+  "title": "La vecina del segundo",
+  "description": "Te cruzas con Madame Martin en la escalera: te presentas como el nuevo vecino.",
+  "situation": "casa",
+  "unit": "maison",
+  "order": 30,
+  "register": "vous",
+  "avatars": { "Madame Martin": "fluent:old-woman" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Madame Martin", "text": "Bonjour, monsieur. Vous êtes nouveau dans l'immeuble?", "es": "Buenos días. ¿Es usted nuevo en el edificio?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y di que eres su nuevo vecino.",
+      "options": [
+        { "text": "Bonjour, madame. Oui, je suis votre nouveau voisin.", "es": "Buenos días, señora. Sí, soy su nuevo vecino.", "verdict": "correct", "feedback": "¡Perfecto! «Bonjour, madame» es lo educado con una vecina." },
+        { "text": "Salut! Oui, je suis le nouveau voisin.", "es": "¡Hola! Sí, soy el nuevo vecino.", "verdict": "acceptable", "feedback": "Se entiende, pero «Salut» es para amigos: a una vecina, «Bonjour, madame»." },
+        { "text": "Bonjour, madame. Oui, je suis votre voisin nouveau.", "es": "Buenos días, señora. Sí, soy su vecino nuevo.", "verdict": "wrong", "feedback": "«Nouveau» va delante del nombre: «votre nouveau voisin»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Madame Martin", "text": "Enchantée! Moi, c'est Madame Martin, j'habite au deuxième. Et vous?", "es": "¡Encantada! Yo soy la señora Martin, vivo en el segundo. ¿Y usted?", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di cómo te llamas y que vives en el tercero.",
+      "options": [
+        { "text": "Je m'appelle Hernán. J'habite au troisième étage.", "es": "Me llamo Hernán. Vivo en el tercer piso.", "verdict": "correct", "feedback": "¡Muy bien! «Au» = «à» + «le»." },
+        { "text": "Hernán. Troisième étage.", "es": "Hernán. Tercer piso.", "verdict": "acceptable", "feedback": "Se entiende, pero suena telegráfico: «J'habite au troisième étage»." },
+        { "text": "Je m'appelle Hernán. J'habite à la troisième étage.", "es": "Me llamo Hernán. Vivo en la tercera planta.", "verdict": "wrong", "feedback": "«Étage» es masculino: «au troisième étage»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Madame Martin", "text": "Ah, très bien. Vous venez d'où? Vous avez un petit accent.", "es": "Ah, muy bien. ¿De dónde es? Tiene un poco de acento.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que eres de España, de Madrid.",
+      "options": [
+        { "text": "Je viens d'Espagne, de Madrid.", "es": "Soy de España, de Madrid.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Je suis espagnol.", "es": "Soy español.", "verdict": "acceptable", "feedback": "Correcto; si quieres, añade la ciudad: «de Madrid»." },
+        { "text": "Je viens de la Espagne, de Madrid.", "es": "Vengo de la España, de Madrid.", "verdict": "wrong", "feedback": "Con países femeninos, «venir de» va sin artículo: «d'Espagne»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Madame Martin", "text": "Oh, Madrid! Alors, si vous avez besoin de quelque chose, n'hésitez pas.", "es": "¡Anda, Madrid! Pues si necesita algo, no dude en decírmelo.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias con amabilidad.",
+      "options": [
+        { "text": "Merci beaucoup, c'est très gentil!", "es": "¡Muchas gracias, es muy amable!", "verdict": "correct", "feedback": "¡Genial! Cálido y educado." },
+        { "text": "Merci, madame.", "es": "Gracias, señora.", "verdict": "acceptable", "feedback": "Correcto y educado; «c'est très gentil» lo hace más cálido." },
+        { "text": "De rien, madame!", "es": "¡De nada, señora!", "verdict": "wrong", "feedback": "«De rien» contesta a un «merci»; aquí te toca dar las gracias a ti." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Madame Martin", "text": "Je vous en prie. Bonne journée, et bienvenue!", "es": "No hay de qué. ¡Que tenga buen día, y bienvenido!", "voice": "fr-FR-DeniseNeural" }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "dlg.fr-chemin",
+  "title": "Preguntar el camino en Lyon",
+  "description": "Preguntas por la plaza Bellecour, compruebas las indicaciones y das las gracias.",
+  "situation": "ciudad",
+  "unit": "ville",
+  "order": 51,
+  "register": "vous",
+  "avatars": { "Señora": "fluent:woman" },
+  "turns": [
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Para a una señora y dile que buscas la plaza Bellecour.",
+      "options": [
+        { "text": "Excusez-moi, madame, je cherche la place Bellecour.", "es": "Perdone, señora, estoy buscando la plaza Bellecour.", "verdict": "correct", "feedback": "¡Perfecto! «Excusez-moi» para abordar a alguien." },
+        { "text": "Pardon, place Bellecour?", "es": "Perdón, ¿plaza Bellecour?", "verdict": "acceptable", "feedback": "Se entiende, pero suena brusco: «Excusez-moi, je cherche…»." },
+        { "text": "Excusez-moi, madame, je cherche à la place Bellecour.", "es": "Perdone, señora, busco a la plaza Bellecour.", "verdict": "wrong", "feedback": "«Chercher» va sin «à»: «je cherche la place Bellecour»." }
+      ]
+    },
+    { "id": "n1", "speaker": "native", "name": "Señora", "text": "Alors, allez tout droit, puis prenez la deuxième rue à gauche.", "es": "Pues siga recto y luego coja la segunda calle a la izquierda.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Comprueba que es la segunda a la izquierda.",
+      "options": [
+        { "text": "La deuxième à gauche, c'est ça?", "es": "La segunda a la izquierda, ¿no?", "verdict": "correct", "feedback": "¡Muy bien! Repetir para confirmar es muy útil." },
+        { "text": "Deuxième, gauche?", "es": "¿Segunda, izquierda?", "verdict": "acceptable", "feedback": "Se entiende; con «c'est ça?» queda más natural." },
+        { "text": "La deuxième à droite, c'est ça?", "es": "La segunda a la derecha, ¿no?", "verdict": "wrong", "feedback": "Cuidado: «droite» es derecha; ella ha dicho «gauche», izquierda." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Señora", "text": "C'est ça. Ensuite, vous traversez le pont, et la place est juste en face.", "es": "Eso es. Después cruza el puente, y la plaza está justo enfrente.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si está lejos.",
+      "options": [
+        { "text": "C'est loin?", "es": "¿Está lejos?", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Loin?", "es": "¿Lejos?", "verdict": "acceptable", "feedback": "Se entiende, aunque es muy escueto." },
+        { "text": "Ça est loin?", "es": "¿Eso está lejos?", "verdict": "wrong", "feedback": "Delante de «est», «ça» pasa a «c'»: «C'est loin?»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Señora", "text": "Non, c'est à dix minutes à pied.", "es": "No, está a diez minutos andando.", "voice": "fr-FR-DeniseNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias y despídete.",
+      "options": [
+        { "text": "Merci beaucoup, madame. Bonne journée!", "es": "Muchas gracias, señora. ¡Que tenga buen día!", "verdict": "correct", "feedback": "¡Genial! Educado y natural." },
+        { "text": "Merci, salut!", "es": "¡Gracias, chao!", "verdict": "acceptable", "feedback": "Se entiende, pero «salut» es demasiado familiar con una desconocida." },
+        { "text": "Merci beaucoup, madame. Bon jour!", "es": "Muchas gracias, señora. ¡Buenos días!", "verdict": "wrong", "feedback": "«Bonjour» es para saludar; al despedirte, «Bonne journée»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Señora", "text": "Je vous en prie. Bonne visite!", "es": "No hay de qué. ¡Que disfrute la visita!", "voice": "fr-FR-DeniseNeural" }
+  ]
+}

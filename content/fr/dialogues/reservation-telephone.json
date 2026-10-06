@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-reservation-telephone",
+  "title": "Reservar mesa por teléfono",
+  "description": "Llamas a un bouchon de Lyon para reservar mesa para dos esta noche.",
+  "situation": "comida",
+  "unit": "manger",
+  "order": 42,
+  "register": "vous",
+  "avatars": { "Encargado": "fluent:man-in-tuxedo" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Encargado", "text": "Restaurant Le Bouchon, bonsoir!", "es": "Restaurante Le Bouchon, ¡buenas tardes!", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y di que quieres reservar una mesa para esta noche.",
+      "options": [
+        { "text": "Bonsoir! Je voudrais réserver une table pour ce soir.", "es": "¡Buenas tardes! Querría reservar una mesa para esta noche.", "verdict": "correct", "feedback": "¡Perfecto! «Je voudrais» es la forma educada de pedir." },
+        { "text": "Bonsoir! Je veux réserver une table pour ce soir.", "es": "¡Buenas tardes! Quiero reservar una mesa para esta noche.", "verdict": "acceptable", "feedback": "Se entiende, pero «je veux» suena brusco: «je voudrais»." },
+        { "text": "Bonsoir! Je voudrais réserver une table pour cette nuit.", "es": "¡Buenas tardes! Querría reservar una mesa para esta madrugada.", "verdict": "wrong", "feedback": "«Cette nuit» es la noche de dormir; para cenar es «ce soir»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Encargado", "text": "Oui, pour combien de personnes?", "es": "Sí, ¿para cuántas personas?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que para dos personas.",
+      "options": [
+        { "text": "Pour deux personnes, s'il vous plaît.", "es": "Para dos personas, por favor.", "verdict": "correct", "feedback": "¡Muy bien!" },
+        { "text": "Deux.", "es": "Dos.", "verdict": "acceptable", "feedback": "Se entiende, pero mejor con la frase completa." },
+        { "text": "Pour douze personnes, s'il vous plaît.", "es": "Para doce personas, por favor.", "verdict": "wrong", "feedback": "Cuidado: «douze» es doce; dos es «deux»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Encargado", "text": "Et pour quelle heure?", "es": "¿Y para qué hora?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sobre las ocho de la tarde, si puede ser.",
+      "options": [
+        { "text": "Vers vingt heures, si possible.", "es": "Sobre las ocho, si es posible.", "verdict": "correct", "feedback": "¡Genial! En reservas se usa la hora de 24 horas: «vingt heures»." },
+        { "text": "À huit heures du soir.", "es": "A las ocho de la tarde.", "verdict": "acceptable", "feedback": "Se entiende; para reservar es más habitual «vingt heures»." },
+        { "text": "Vers vingt-huit heures, si possible.", "es": "Sobre las veintiocho, si es posible.", "verdict": "wrong", "feedback": "Las ocho de la tarde son «vingt heures»; «vingt-huit» es veintiocho." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Encargado", "text": "C'est noté. C'est à quel nom?", "es": "Apuntado. ¿A qué nombre?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que a nombre de Díaz.",
+      "options": [
+        { "text": "Au nom de Díaz.", "es": "A nombre de Díaz.", "verdict": "correct", "feedback": "¡Perfecto!" },
+        { "text": "Díaz.", "es": "Díaz.", "verdict": "acceptable", "feedback": "Vale, aunque la fórmula completa es «au nom de Díaz»." },
+        { "text": "À le nom de Díaz.", "es": "A el nombre de Díaz.", "verdict": "wrong", "feedback": "«À le» se contrae en «au»: «au nom de Díaz»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Encargado", "text": "Parfait, monsieur Díaz. Une table pour deux à vingt heures. À ce soir!", "es": "Perfecto, señor Díaz. Una mesa para dos a las ocho. ¡Hasta esta noche!", "voice": "fr-FR-HenriNeural" }
+  ]
+}

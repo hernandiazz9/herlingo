@@ -1,0 +1,57 @@
+{
+  "id": "dlg.fr-distributeur",
+  "title": "La máquina de billetes del metro",
+  "description": "La máquina no acepta tu tarjeta y un señor te ayuda a comprar el billete.",
+  "situation": "ciudad",
+  "unit": "ville",
+  "order": 50,
+  "register": "vous",
+  "avatars": { "Señor": "fluent:old-man" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Señor", "text": "Vous avez besoin d'aide?", "es": "¿Necesita ayuda?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí: la máquina no te acepta la tarjeta.",
+      "options": [
+        { "text": "Oui, merci. La machine ne prend pas ma carte.", "es": "Sí, gracias. La máquina no me acepta la tarjeta.", "verdict": "correct", "feedback": "¡Perfecto! «Ne… pas» rodea al verbo." },
+        { "text": "Oui. La machine… ma carte… non.", "es": "Sí. La máquina… mi tarjeta… no.", "verdict": "acceptable", "feedback": "Con gestos se entiende, pero la frase es «La machine ne prend pas ma carte»." },
+        { "text": "Oui, merci. La machine ne prend ma carte pas.", "es": "Sí, gracias. La máquina no acepta mi tarjeta.", "verdict": "wrong", "feedback": "La negación rodea al verbo: «ne prend pas ma carte»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Señor", "text": "Ah oui, elle est souvent en panne. Vous avez de la monnaie?", "es": "Ah, sí, se estropea a menudo. ¿Tiene suelto?", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí y pregunta cuánto cuesta un billete.",
+      "options": [
+        { "text": "Oui. Combien coûte un ticket?", "es": "Sí. ¿Cuánto cuesta un billete?", "verdict": "correct", "feedback": "¡Muy bien!" },
+        { "text": "Oui. Ticket, combien?", "es": "Sí. ¿Billete, cuánto?", "verdict": "acceptable", "feedback": "Se entiende, aunque es muy telegráfico." },
+        { "text": "Oui. Combien coûte une ticket?", "es": "Sí. ¿Cuánto cuesta una billete?", "verdict": "wrong", "feedback": "«Ticket» es masculino: «un ticket»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Señor", "text": "Deux euros, valable une heure. Pour toute la journée, prenez le ticket vingt-quatre heures.", "es": "Dos euros, válido una hora. Para todo el día, coja el billete de veinticuatro horas.", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que vas a coger uno sencillo y pregunta si hay que validarlo.",
+      "options": [
+        { "text": "Je vais prendre un ticket simple. Il faut le valider?", "es": "Voy a coger un billete sencillo. ¿Hay que validarlo?", "verdict": "correct", "feedback": "¡Genial! «Aller» + infinitivo, como en español." },
+        { "text": "Un ticket simple. Valider?", "es": "Un billete sencillo. ¿Validar?", "verdict": "acceptable", "feedback": "Se entiende, pero mejor con frases completas." },
+        { "text": "Je vais à prendre un ticket simple. Il faut le valider?", "es": "Voy a coger un billete sencillo. ¿Hay que validarlo?", "verdict": "wrong", "feedback": "Con «aller» + infinitivo no va «à»: «je vais prendre»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Señor", "text": "Oui, à l'entrée du métro. Voilà, appuyez ici, sur le bouton vert.", "es": "Sí, a la entrada del metro. Mire, pulse aquí, en el botón verde.", "voice": "fr-FR-HenriNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias por su ayuda.",
+      "options": [
+        { "text": "Merci beaucoup, vous êtes très gentil!", "es": "¡Muchas gracias, es usted muy amable!", "verdict": "correct", "feedback": "¡Perfecto! Educado y cálido." },
+        { "text": "Merci, tu es très gentil!", "es": "¡Gracias, eres muy amable!", "verdict": "acceptable", "feedback": "Se entiende, pero al señor no lo conoces: «vous êtes très gentil»." },
+        { "text": "Merci beaucoup, vous êtes très gentille!", "es": "¡Muchas gracias, es usted muy amable!", "verdict": "wrong", "feedback": "Hablas con un hombre: «gentil», no «gentille»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Señor", "text": "Je vous en prie. Bonne journée!", "es": "No hay de qué. ¡Que tenga buen día!", "voice": "fr-FR-HenriNeural" }
+  ]
+}
