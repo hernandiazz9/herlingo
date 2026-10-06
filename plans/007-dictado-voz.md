@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 💻
 - Writer: orchestrator (desktop)
 - Branch: plan-007-dictado-voz (from main @ a5f51c1)
-- Next step: run the plan
+- Next step: T76 + T78 running; then T77
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -38,7 +38,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T76 — Speech engine: one reliable listen session
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: none
 - Goal: Replace the two recognition helpers with the engine in the Shared contract: explicit states, live interim text, silence auto-stop, hard caps, guaranteed settle, error kinds with Spanish messages, diagnostics log. Old `listenOnce` stays exported as a thin wrapper over the new session so current screens keep working until they migrate.
 - Context: src/lib/speech/recognition.ts, src/lib/speech/index.ts, src/components/dialogue/recognition.ts (for behaviour to absorb, do not delete it yet), src/components/coach/use-dictation.ts, docs/brief.md speech lines. Web Speech API on iOS Safari: `onspeechend` unreliable, `onend` may never fire, `service-not-allowed` common in standalone PWAs.
@@ -61,7 +61,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T78 — One speech scoring with word-by-word result
-- Status: pending
+- Status: done
 - Depends on: none
 - Goal: `src/lib/speech/score.ts` per the Shared contract: word alignment over all alternatives, per-word ok/missing/wrong, score + pass, `bestOption()` for dialogue options; one documented threshold. Old `scoreSpeech` and the dialogue `bestMatch` keep working (re-implemented over the new scorer or left until their screens migrate).
 - Context: src/lib/speech/index.ts (`scoreSpeech`, `SPEECH_MATCH_THRESHOLD`), src/lib/exercises/normalize.ts, the dialogue `bestMatch` (Dice ≥0.6) in src/components/dialogue/, docs/content-guide.md `numberWords`.
@@ -69,7 +69,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run verify` → exit 0
   - a throwaway script (not committed) run with `npx tsx` against real phrases from `@/lib/content` shows sensible per-word results for: exact match, one missing word, digits vs number words, accents dropped; report the cases in the final message
-- Outcome:
+- Outcome: scoreHeard()/bestOption() in src/lib/speech/score.ts, word alignment, SPEECH_PASS_THRESHOLD 0.7 → 434e0f2
 
 ## T79 — Lessons "Dilo en voz alta" on the new engine
 - Status: pending
@@ -148,9 +148,14 @@ Worktree setup: npm ci
 - 2026-10-06: No self-recording / playback in this plan (Hernán) → Proposals
 - 2026-10-06: Errors in lessons: concrete message + Reintentar, never a permanent self-eval switch (Hernán)
 - 2026-10-06: No level meter (second mic stream breaks iOS recognition), no start/stop sounds, log keeps 50 entries without transcript text (orchestrator)
+- 2026-10-06 T78: threshold 0.7 (3 of 4 words passes, 1–2 word phrases must be fully right); score = ok / (expected + 0.5 × extra words); one-letter slip in 5+ letter words = ok; joined/split words match ("dove" = "dov'è"); levenshtein exported from normalize.ts (agent)
 
 ## Proposals (new scope)
 - 2026-10-06: "Grabarme": record your voice and play it next to the native audio (separate from recognition) (Hernán, later)
 - 2026-10-06: Server transcription fallback (Whisper/Deepgram via a Vercel function) if the iPhone engine is still unreliable after this plan (orchestrator)
+- 2026-10-06 T78: put scoring + threshold in docs/speech.md; remove scoreSpeech/SPEECH_MATCH_THRESHOLD/bestMatch after T79/T81 (agent; covered by T84)
 
 ## Log
+- 2026-10-06 13:45 T76 launched · attempt 1 · agent aed9f2545c1076095
+- 2026-10-06 13:45 T78 launched · attempt 1 · agent abd7c09a2e9924704
+- 2026-10-06 13:41 T78 done · branch worktree-agent-abd7c09a2e9924704 → 434e0f2
