@@ -1,0 +1,91 @@
+{
+  "id": "story.en-a2-a-warm-coat",
+  "order": 8,
+  "title": "A warm coat",
+  "titleEs": "Un abrigo calentito",
+  "description": "Pablo se compra un abrigo de invierno con Maya y al día siguiente devuelve un jersey que le queda pequeño.",
+  "emoji": "🧥",
+  "situation": "compras",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Chicago is getting colder, and Pablo's jacket from Valencia isn't warm enough.", "es": "En Chicago hace cada vez más frío, y la chaqueta que Pablo trajo de Valencia no abriga bastante." },
+    { "id": "s2", "text": "On Saturday, Maya takes him to a big store on State Street.", "es": "El sábado, Maya lo lleva a una tienda grande de State Street." },
+    { "id": "s3", "text": "«Hi! I'm looking for a winter jacket.»", "es": "«¡Hola! Busco una chaqueta de invierno.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "«Sure, the coats are over there. What size are you?»", "es": "«Claro, los abrigos están por allí. ¿Qué talla usas?»", "voice": "en-US-BrianNeural" },
+    { "id": "s5", "text": "Pablo finds a long, dark blue coat.", "es": "Pablo encuentra un abrigo largo azul oscuro." },
+    { "id": "s6", "text": "«Can I try this on?»", "es": "«¿Me lo puedo probar?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "In the fitting room, it fits perfectly.", "es": "En el probador, le queda perfecto." },
+    { "id": "s8", "text": "«How does it look?»", "es": "«¿Qué tal me queda?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "«That looks great on you! Very Chicago!»", "es": "«¡Te queda genial! ¡Muy de Chicago!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "He also buys a gray sweater, but at home it's too small.", "es": "También se compra un jersey gris, pero en casa ve que le queda pequeño." },
+    { "id": "s11", "text": "The next day, he goes back to the store.", "es": "Al día siguiente, vuelve a la tienda." },
+    { "id": "s12", "text": "«Hi, I'd like to return this, please. It doesn't fit.»", "es": "«Hola, quería devolver esto, por favor. No me queda bien.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s13", "text": "«No problem. Do you want a refund or a bigger size?»", "es": "«Sin problema. ¿Quieres que te devolvamos el dinero o una talla más grande?»", "voice": "en-US-BrianNeural" },
+    { "id": "s14", "text": "«A refund, please. Here's the receipt.»", "es": "«El reembolso, por favor. Aquí tienes el tíquet.»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "a2-shopping.looking-for-a-jacket",
+    "a2-shopping.coat",
+    "a2-shopping.can-i-try-this-on",
+    "a2-shopping.fitting-room",
+    "a2-shopping.it-fits-perfectly",
+    "a2-shopping.looks-great-on-you",
+    "a2-shopping.sweater",
+    "a2-shopping.id-like-to-return-this",
+    "a2-shopping.it-doesnt-fit",
+    "a2-shopping.receipt"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why does Pablo need a new coat?",
+      "es": "¿Por qué necesita Pablo un abrigo nuevo?",
+      "options": [
+        { "text": "His jacket from Valencia isn't warm enough.", "es": "Su chaqueta de Valencia no abriga bastante." },
+        { "text": "He lost his coat on the train.", "es": "Perdió el abrigo en el tren." },
+        { "text": "It's a gift for Maya.", "es": "Es un regalo para Maya." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "What color is the coat?",
+      "es": "¿De qué color es el abrigo?",
+      "options": [
+        { "text": "Red.", "es": "Rojo." },
+        { "text": "Gray.", "es": "Gris." },
+        { "text": "Dark blue.", "es": "Azul oscuro." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "What's the problem with the sweater?",
+      "es": "¿Qué problema tiene el jersey?",
+      "options": [
+        { "text": "It has a hole in it.", "es": "Tiene un agujero." },
+        { "text": "It's too small.", "es": "Le queda pequeño." },
+        { "text": "It's too expensive.", "es": "Es demasiado caro." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "What does Pablo want for the sweater?",
+      "es": "¿Qué quiere Pablo a cambio del jersey?",
+      "options": [
+        { "text": "A bigger size.", "es": "Una talla más grande." },
+        { "text": "Store credit.", "es": "Saldo para la tienda." },
+        { "text": "A refund.", "es": "Que le devuelvan el dinero." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s5", "answer": "a2-shopping.coat", "distractors": ["mirror", "basket"] },
+    { "id": "g2", "sentence": "s7", "answer": "a2-shopping.fitting-room", "distractors": ["kitchen", "parking lot"] },
+    { "id": "g3", "sentence": "s10", "answer": "a2-shopping.sweater", "distractors": ["map", "guitar"] },
+    { "id": "g4", "sentence": "s12", "answer": "a2-shopping.it-doesnt-fit", "gap": "fit", "distractors": ["hurt", "rain"] },
+    { "id": "g5", "sentence": "s14", "answer": "a2-shopping.receipt", "distractors": ["passport", "menu"] }
+  ]
+}

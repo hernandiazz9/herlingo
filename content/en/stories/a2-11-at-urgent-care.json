@@ -1,0 +1,91 @@
+{
+  "id": "story.en-a2-at-urgent-care",
+  "order": 11,
+  "title": "At urgent care",
+  "titleEs": "En urgencias",
+  "description": "Pablo sigue malo y Maya lo lleva a un centro de urgencias; allí le cuenta al médico su semana, en pasado.",
+  "emoji": "🩺",
+  "situation": "salud",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Two days later, Pablo still feels sick, and now his ear hurts too.", "es": "Dos días después, Pablo sigue encontrándose mal, y ahora también le duele el oído." },
+    { "id": "s2", "text": "Maya takes him to an urgent care near the apartment.", "es": "Maya lo lleva a un centro de urgencias cerca del piso." },
+    { "id": "s3", "text": "At the front desk, he fills out a form and shows his travel insurance.", "es": "En recepción, rellena un formulario y enseña su seguro de viaje." },
+    { "id": "s4", "text": "The doctor is young and very friendly.", "es": "El médico es joven y muy simpático." },
+    { "id": "s5", "text": "«So, Pablo, when did it start?»", "es": "«A ver, Pablo, ¿cuándo empezó?»", "voice": "en-US-BrianNeural" },
+    { "id": "s6", "text": "«It started on Tuesday. I walked by the lake for two hours.»", "es": "«Empezó el martes. Estuve dos horas paseando junto al lago.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "«It was very cold and windy, and I didn't wear a hat.»", "es": "«Hacía mucho frío y viento, y no llevaba gorro.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "«Then I couldn't sleep, and yesterday I had a fever.»", "es": "«Luego no podía dormir, y ayer tuve fiebre.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "The doctor looks in his ear and listens to his chest.", "es": "El médico le mira el oído y le escucha el pecho." },
+    { "id": "s10", "text": "«Is it serious, doctor?»", "es": "«¿Es grave, doctor?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "«No, don't worry. Rest, drink lots of water and take this medicine for five days.»", "es": "«No, tranquilo. Descansa, bebe mucha agua y tómate esta medicina durante cinco días.»", "voice": "en-US-BrianNeural" },
+    { "id": "s12", "text": "On the way home, Jordan calls: he made chicken soup for dinner.", "es": "De camino a casa, llama Jordan: ha hecho sopa de pollo para cenar." },
+    { "id": "s13", "text": "«You guys are the best!»", "es": "«¡Sois los mejores!»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "a2-health.ear",
+    "a2-health.urgent-care",
+    "a2-health.insurance",
+    "a2-health.it-started-yesterday",
+    "a2-numbers.tuesday",
+    "a2-health.couldnt-sleep",
+    "a2-health.fever",
+    "a2-health.is-it-serious",
+    "a2-health.medicine",
+    "a2-food.soup"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why does Pablo go to urgent care?",
+      "es": "¿Por qué va Pablo al centro de urgencias?",
+      "options": [
+        { "text": "He still feels sick, and his ear hurts.", "es": "Sigue encontrándose mal y le duele el oído." },
+        { "text": "He broke his leg on the stairs.", "es": "Se rompió la pierna en la escalera." },
+        { "text": "He needs pills for Mrs. Carter.", "es": "Necesita pastillas para Mrs. Carter." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "When did it start?",
+      "es": "¿Cuándo empezó?",
+      "options": [
+        { "text": "Last weekend.", "es": "El fin de semana pasado." },
+        { "text": "Yesterday.", "es": "Ayer." },
+        { "text": "On Tuesday.", "es": "El martes." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "What didn't Pablo wear by the lake?",
+      "es": "¿Qué no llevaba Pablo junto al lago?",
+      "options": [
+        { "text": "A coat.", "es": "Un abrigo." },
+        { "text": "A hat.", "es": "Un gorro." },
+        { "text": "Shoes.", "es": "Zapatos." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "What does the doctor tell him to do?",
+      "es": "¿Qué le dice el médico que haga?",
+      "options": [
+        { "text": "Go to the hospital.", "es": "Ir al hospital." },
+        { "text": "Rest, drink water and take the medicine.", "es": "Descansar, beber agua y tomarse la medicina." },
+        { "text": "Go back to Spain.", "es": "Volver a España." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "a2-health.urgent-care", "distractors": ["coffee shop", "grocery store"] },
+    { "id": "g2", "sentence": "s3", "answer": "a2-health.insurance", "distractors": ["guitar", "umbrella"] },
+    { "id": "g3", "sentence": "s6", "answer": "a2-numbers.tuesday", "distractors": ["Sunday", "Friday"] },
+    { "id": "g4", "sentence": "s8", "answer": "a2-health.couldnt-sleep", "gap": "couldn't sleep", "distractors": ["couldn't drive", "couldn't swim"] },
+    { "id": "g5", "sentence": "s10", "answer": "a2-health.is-it-serious", "gap": "serious", "distractors": ["expensive", "far"] },
+    { "id": "g6", "sentence": "s12", "answer": "a2-food.soup", "distractors": ["salad", "sandwich"] }
+  ]
+}

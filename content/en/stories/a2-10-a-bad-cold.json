@@ -1,0 +1,90 @@
+{
+  "id": "story.en-a2-a-bad-cold",
+  "order": 10,
+  "title": "A bad cold",
+  "titleEs": "Un buen resfriado",
+  "description": "Pablo se resfría; Mrs. Carter lo manda a la farmacia y le sube un té con miel.",
+  "emoji": "🤧",
+  "situation": "salud",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "After the windy day by the lake, Pablo wakes up with a bad cold.", "es": "Después del día de viento junto al lago, Pablo se despierta con un buen resfriado." },
+    { "id": "s2", "text": "He has a sore throat, a cough and a runny nose.", "es": "Le duele la garganta, tiene tos y moquea." },
+    { "id": "s3", "text": "On the stairs, Mrs. Carter hears him coughing.", "es": "En la escalera, Mrs. Carter lo oye toser." },
+    { "id": "s4", "text": "«Oh dear, you don't look well. Are you OK?»", "es": "«Ay, cielo, no tienes buena cara. ¿Estás bien?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«I don't feel well. I think I have a fever.»", "es": "«No me encuentro bien. Creo que tengo fiebre.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«Go to the pharmacy on the corner. And drink hot tea with honey!»", "es": "«Ve a la farmacia de la esquina. ¡Y tómate un té caliente con miel!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "At the pharmacy counter, Pablo talks to the pharmacist.", "es": "En el mostrador de la farmacia, Pablo habla con el farmacéutico." },
+    { "id": "s8", "text": "«Hi, I need something for a cough. Do I need a prescription?»", "es": "«Hola, necesito algo para la tos. ¿Hace falta receta?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "«No, you can get this over the counter. Take two pills every six hours.»", "es": "«No, esto se vende sin receta. Tómate dos pastillas cada seis horas.»", "voice": "en-US-BrianNeural" },
+    { "id": "s10", "text": "That evening, Mrs. Carter knocks on the door with a big cup of tea.", "es": "Esa noche, Mrs. Carter llama a la puerta con una taza grande de té." },
+    { "id": "s11", "text": "«It's my mother's recipe. It always works!»", "es": "«Es la receta de mi madre. ¡Siempre funciona!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s12", "text": "«Thank you so much! I'm feeling better already.»", "es": "«¡Muchísimas gracias! Ya me encuentro mejor.»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "a2-health.cold",
+    "a2-health.sore-throat",
+    "a2-health.cough",
+    "a2-health.i-dont-feel-well",
+    "a2-health.i-think-i-have-a-fever",
+    "a2-health.pharmacy",
+    "a2-health.something-for-a-cough",
+    "a2-health.do-i-need-a-prescription",
+    "a2-health.two-pills-every-six-hours",
+    "a2-health.feeling-better"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What's wrong with Pablo?",
+      "es": "¿Qué le pasa a Pablo?",
+      "options": [
+        { "text": "He hurt his ankle.", "es": "Se ha hecho daño en el tobillo." },
+        { "text": "He has a bad cold.", "es": "Tiene un buen resfriado." },
+        { "text": "He has a toothache.", "es": "Le duele una muela." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What does Mrs. Carter tell him to drink?",
+      "es": "¿Qué le dice Mrs. Carter que se tome?",
+      "options": [
+        { "text": "Hot tea with honey.", "es": "Té caliente con miel." },
+        { "text": "A cold beer.", "es": "Una cerveza fría." },
+        { "text": "Orange juice.", "es": "Zumo de naranja." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Does Pablo need a prescription for the pills?",
+      "es": "¿Necesita Pablo receta para las pastillas?",
+      "options": [
+        { "text": "Yes, from a doctor.", "es": "Sí, de un médico." },
+        { "text": "Yes, but the pharmacy is closed.", "es": "Sí, pero la farmacia está cerrada." },
+        { "text": "No, he can get them over the counter.", "es": "No, se venden sin receta." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How often does he take the pills?",
+      "es": "¿Cada cuánto se toma las pastillas?",
+      "options": [
+        { "text": "Once a day.", "es": "Una vez al día." },
+        { "text": "Every six hours.", "es": "Cada seis horas." },
+        { "text": "Every two hours.", "es": "Cada dos horas." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "a2-health.cold", "distractors": ["headache", "toothache"] },
+    { "id": "g2", "sentence": "s2", "answer": "a2-health.sore-throat", "gap": "sore throat", "distractors": ["broken arm", "bad back"] },
+    { "id": "g3", "sentence": "s5", "answer": "a2-health.i-think-i-have-a-fever", "gap": "fever", "distractors": ["coupon", "reservation"] },
+    { "id": "g4", "sentence": "s7", "answer": "a2-health.pharmacy", "distractors": ["bakery", "gym"] },
+    { "id": "g5", "sentence": "s8", "answer": "a2-health.do-i-need-a-prescription", "gap": "prescription", "distractors": ["reservation", "receipt"] },
+    { "id": "g6", "sentence": "s9", "answer": "a2-health.two-pills-every-six-hours", "gap": "two pills", "distractors": ["two coffees", "two bags"] }
+  ]
+}

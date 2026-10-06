@@ -1,0 +1,92 @@
+{
+  "id": "story.en-a2-see-you-in-january",
+  "order": 12,
+  "title": "See you in January",
+  "titleEs": "Nos vemos en enero",
+  "description": "Último día de Pablo en Chicago: despedida en O'Hare y una propuesta de trabajo que lo cambia todo.",
+  "emoji": "👋",
+  "situation": "viajes",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Pablo's two weeks in Chicago went very fast.", "es": "Las dos semanas de Pablo en Chicago pasaron volando." },
+    { "id": "s2", "text": "On his last morning, Mrs. Carter gave him a warm scarf.", "es": "En su última mañana, Mrs. Carter le regaló una bufanda calentita." },
+    { "id": "s3", "text": "Then Maya and Jordan drove him to O'Hare.", "es": "Luego Maya y Jordan lo llevaron en coche a O'Hare." },
+    { "id": "s4", "text": "At check-in, he got his boarding pass and checked his big red suitcase.", "es": "En el mostrador, le dieron la tarjeta de embarque y facturó su maleta roja grande." },
+    { "id": "s5", "text": "«So, Pablo, did you like Chicago?»", "es": "«Bueno, Pablo, ¿te ha gustado Chicago?»", "voice": "en-US-BrianNeural" },
+    { "id": "s6", "text": "«I loved it! I ate deep-dish pizza, and I got lost in the Loop.»", "es": "«¡Me ha encantado! Comí pizza de molde y me perdí en el Loop.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "«And I learned a lot of English!»", "es": "«¡Y he aprendido mucho inglés!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "Then Maya smiled and asked him a question.", "es": "Entonces Maya sonrió y le hizo una pregunta." },
+    { "id": "s9", "text": "«Listen, my startup needs a programmer. Do you want to work with us?»", "es": "«Oye, mi startup necesita un programador. ¿Quieres trabajar con nosotros?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "Pablo didn't know what to say.", "es": "Pablo no sabía qué decir." },
+    { "id": "s11", "text": "«Really? Yes, I'd love to!»", "es": "«¿En serio? ¡Sí, me encantaría!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "At the gate, his flight was on time.", "es": "En la puerta de embarque, su vuelo salía a su hora." },
+    { "id": "s13", "text": "«Thank you so much for everything!»", "es": "«¡Muchísimas gracias por todo!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "«Bye, Pablo! See you in January!»", "es": "«¡Adiós, Pablo! ¡Nos vemos en enero!»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "a2-shopping.scarf",
+    "a2-airport.boarding-pass",
+    "a2-airport.suitcase",
+    "story-en-deep-dish-pizza",
+    "a2-city.i-think-im-lost",
+    "a2-about-me.programmer",
+    "a2-airport.gate",
+    "a2-airport.is-it-on-time",
+    "a2-hello.thank-you-so-much",
+    "a2-numbers.january"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What did Mrs. Carter give Pablo?",
+      "es": "¿Qué le regaló Mrs. Carter a Pablo?",
+      "options": [
+        { "text": "A chocolate cake.", "es": "Una tarta de chocolate." },
+        { "text": "A warm scarf.", "es": "Una bufanda calentita." },
+        { "text": "A book.", "es": "Un libro." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Who drove Pablo to the airport?",
+      "es": "¿Quién llevó a Pablo al aeropuerto?",
+      "options": [
+        { "text": "Maya and Jordan.", "es": "Maya y Jordan." },
+        { "text": "Mrs. Carter.", "es": "Mrs. Carter." },
+        { "text": "An Uber driver.", "es": "Un conductor de Uber." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What does Maya's startup need?",
+      "es": "¿Qué necesita la startup de Maya?",
+      "options": [
+        { "text": "A teacher.", "es": "Un profesor." },
+        { "text": "A barista.", "es": "Un barista." },
+        { "text": "A programmer.", "es": "Un programador." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "When are Maya and Jordan going to see Pablo again?",
+      "es": "¿Cuándo van a volver a ver Maya y Jordan a Pablo?",
+      "options": [
+        { "text": "Next summer.", "es": "El verano que viene." },
+        { "text": "In January.", "es": "En enero." },
+        { "text": "In two weeks.", "es": "Dentro de dos semanas." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "a2-shopping.scarf", "distractors": ["sweater", "blanket"] },
+    { "id": "g2", "sentence": "s4", "answer": "a2-airport.boarding-pass", "distractors": ["receipt", "refund"] },
+    { "id": "g3", "sentence": "s6", "answer": "story-en-deep-dish-pizza", "distractors": ["fish soup", "fried chicken"] },
+    { "id": "g4", "sentence": "s9", "answer": "a2-about-me.programmer", "distractors": ["teacher", "nurse"] },
+    { "id": "g5", "sentence": "s12", "answer": "a2-airport.is-it-on-time", "gap": "on time", "distractors": ["delayed", "canceled"] },
+    { "id": "g6", "sentence": "s14", "answer": "a2-numbers.january", "distractors": ["July", "December"] }
+  ]
+}

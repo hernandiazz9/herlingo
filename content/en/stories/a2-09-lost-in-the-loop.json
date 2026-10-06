@@ -1,0 +1,91 @@
+{
+  "id": "story.en-a2-lost-in-the-loop",
+  "order": 9,
+  "title": "Lost in the Loop",
+  "titleEs": "Perdido en el Loop",
+  "description": "Pablo coge el «L» para ver a Maya en el centro, se pasa de parada y acaba comiendo junto al lago.",
+  "emoji": "🚇",
+  "situation": "ciudad",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "On Tuesday, Pablo takes the train to visit Maya at her office in the Loop.", "es": "El martes, Pablo coge el tren para ir a ver a Maya a su oficina en el Loop." },
+    { "id": "s2", "text": "In Chicago, people call the train «the L».", "es": "En Chicago, al tren la gente lo llama «the L»." },
+    { "id": "s3", "text": "At the station, he buys a Ventra card and gets on the Blue Line.", "es": "En la estación, compra una tarjeta Ventra y se sube a la línea azul." },
+    { "id": "s4", "text": "«Excuse me, how many stops is it to Washington?»", "es": "«Perdone, ¿cuántas paradas hay hasta Washington?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s5", "text": "«About eight. Don't worry, they say the name of every stop.»", "es": "«Unas ocho. Tranquilo, dicen el nombre de cada parada.»", "voice": "en-US-BrianNeural" },
+    { "id": "s6", "text": "But Pablo listens to music, and twenty minutes later he looks up.", "es": "Pero Pablo va escuchando música, y veinte minutos después levanta la vista." },
+    { "id": "s7", "text": "«Oh no, I missed my stop!»", "es": "«¡Oh, no, me he pasado de parada!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "He gets off and walks, but all the tall buildings look the same.", "es": "Se baja y camina, pero todos los edificios altos le parecen iguales." },
+    { "id": "s9", "text": "«Sorry, I think I'm lost. Where's State Street?»", "es": "«Perdone, creo que me he perdido. ¿Dónde está State Street?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«Go straight for two blocks and turn left at the light.»", "es": "«Siga recto dos manzanas y gire a la izquierda en el semáforo.»", "voice": "en-US-BrianNeural" },
+    { "id": "s11", "text": "Finally, he finds Maya's office, and they have lunch by the lake.", "es": "Por fin encuentra la oficina de Maya, y comen junto al lago." },
+    { "id": "s12", "text": "Lake Michigan is so big that it looks like the sea.", "es": "El lago Míchigan es tan grande que parece el mar." },
+    { "id": "s13", "text": "«It's beautiful! But next time, I'll just get an Uber.»", "es": "«¡Es precioso! Pero la próxima vez, pido un Uber y ya está.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "«Or next time, don't listen to music on the train!»", "es": "«¡O la próxima vez no escuches música en el tren!»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "a2-city.train",
+    "a2-city.station",
+    "a2-city.how-many-stops",
+    "a2-city.missed-my-stop",
+    "a2-city.i-think-im-lost",
+    "a2-city.where-is-state-street",
+    "a2-city.go-straight",
+    "a2-city.turn-left-at-the-light",
+    "a2-city.lake",
+    "a2-city.ill-get-an-uber"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Where is Maya's office?",
+      "es": "¿Dónde está la oficina de Maya?",
+      "options": [
+        { "text": "In Logan Square.", "es": "En Logan Square." },
+        { "text": "In the Loop.", "es": "En el Loop." },
+        { "text": "Near O'Hare Airport.", "es": "Cerca del aeropuerto O'Hare." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Why does Pablo miss his stop?",
+      "es": "¿Por qué se pasa Pablo de parada?",
+      "options": [
+        { "text": "He's listening to music.", "es": "Está escuchando música." },
+        { "text": "He's sleeping.", "es": "Está durmiendo." },
+        { "text": "He's talking on the phone.", "es": "Está hablando por teléfono." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What is Lake Michigan like?",
+      "es": "¿Cómo es el lago Míchigan?",
+      "options": [
+        { "text": "It's small and quiet.", "es": "Es pequeño y tranquilo." },
+        { "text": "It's very far from the Loop.", "es": "Está muy lejos del Loop." },
+        { "text": "It's so big that it looks like the sea.", "es": "Es tan grande que parece el mar." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How does Pablo want to travel next time?",
+      "es": "¿Cómo quiere moverse Pablo la próxima vez?",
+      "options": [
+        { "text": "By bike.", "es": "En bici." },
+        { "text": "In an Uber.", "es": "En Uber." },
+        { "text": "By bus.", "es": "En autobús." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "a2-city.station", "distractors": ["hotel", "museum"] },
+    { "id": "g2", "sentence": "s7", "answer": "a2-city.missed-my-stop", "gap": "missed", "distractors": ["found", "liked"] },
+    { "id": "g3", "sentence": "s9", "answer": "a2-city.i-think-im-lost", "gap": "lost", "distractors": ["full", "sick"] },
+    { "id": "g4", "sentence": "s10", "answer": "a2-city.turn-left-at-the-light", "gap": "left", "distractors": ["right", "around"] },
+    { "id": "g5", "sentence": "s11", "answer": "a2-city.lake", "distractors": ["museum", "airport"] }
+  ]
+}

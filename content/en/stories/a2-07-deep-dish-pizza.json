@@ -1,0 +1,101 @@
+{
+  "id": "story.en-a2-deep-dish-pizza",
+  "order": 7,
+  "title": "Deep-dish pizza",
+  "titleEs": "Pizza al estilo Chicago",
+  "description": "Pablo desayuna en la cafetería de Jordan y por la noche prueba la famosa pizza de Chicago con Maya.",
+  "emoji": "🍕",
+  "situation": "comida",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "On Monday morning, Pablo goes to the coffee shop where Jordan works.", "es": "El lunes por la mañana, Pablo va a la cafetería donde trabaja Jordan." },
+    { "id": "s2", "text": "«Hey, Pablo! What can I get you?»", "es": "«¡Hola, Pablo! ¿Qué te pongo?»", "voice": "en-US-BrianNeural" },
+    { "id": "s3", "text": "«Can I get a medium latte? With oat milk, please.»", "es": "«¿Me pones un latte mediano? Con leche de avena, por favor.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "«Sure. For here or to go?»", "es": "«Claro. ¿Para tomar aquí o para llevar?»", "voice": "en-US-BrianNeural" },
+    { "id": "s5", "text": "«For here, please. And a blueberry muffin.»", "es": "«Para tomar aquí, por favor. Y una magdalena de arándanos.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "In the evening, Maya takes Pablo to a famous pizza place downtown.", "es": "Por la noche, Maya lleva a Pablo a una pizzería famosa del centro." },
+    { "id": "s7", "text": "In Chicago, people love deep-dish pizza: it's very thick, with lots of cheese.", "es": "En Chicago, a la gente le encanta la pizza de molde: es muy gruesa y lleva mucho queso." },
+    { "id": "s8", "text": "«Could we see the menu, please?»", "es": "«¿Podríamos ver la carta, por favor?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s9", "text": "The pizza takes forty minutes, but it's worth it.", "es": "La pizza tarda cuarenta minutos, pero vale la pena." },
+    { "id": "s10", "text": "«This is delicious! But I'm full after two pieces.»", "es": "«¡Está buenísima! Pero estoy lleno después de dos trozos.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "«Can we get the check, please?»", "es": "«¿Nos trae la cuenta, por favor?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s12", "text": "The check is sixty dollars, and Pablo adds a twenty percent tip.", "es": "La cuenta son sesenta dólares, y Pablo añade un veinte por ciento de propina." },
+    { "id": "s13", "text": "«Twenty percent? In Spain, we don't tip that much!»", "es": "«¿Un veinte por ciento? ¡En España no dejamos tanta propina!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "«Welcome to America, Pablo!»", "es": "«¡Bienvenido a Estados Unidos, Pablo!»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "a2-food.can-i-get-a-latte",
+    "a2-food.for-here-or-to-go",
+    "a2-food.muffin",
+    {
+      "id": "story-en-deep-dish-pizza",
+      "word": "deep-dish pizza",
+      "article": "a",
+      "plural": "deep-dish pizzas",
+      "es": "la pizza de molde (estilo Chicago)",
+      "notes": "La pizza típica de Chicago: masa alta como una tarta, mucho queso y el tomate por encima. «Deep dish» = plato hondo.",
+      "situation": "comida",
+      "image": "fluent:pizza"
+    },
+    "a2-shopping.cheese",
+    "a2-food.could-we-see-the-menu",
+    "a2-food.this-is-delicious",
+    "a2-food.im-full",
+    "a2-food.can-we-get-the-check",
+    "a2-numbers.tip"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Where does Pablo have breakfast on Monday?",
+      "es": "¿Dónde desayuna Pablo el lunes?",
+      "options": [
+        { "text": "At home, with Maya.", "es": "En casa, con Maya." },
+        { "text": "At the coffee shop where Jordan works.", "es": "En la cafetería donde trabaja Jordan." },
+        { "text": "At a pizza place downtown.", "es": "En una pizzería del centro." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What is deep-dish pizza like?",
+      "es": "¿Cómo es la pizza deep-dish?",
+      "options": [
+        { "text": "Very thick, with lots of cheese.", "es": "Muy gruesa, con mucho queso." },
+        { "text": "Very thin, with no cheese.", "es": "Muy fina, sin queso." },
+        { "text": "Small and spicy.", "es": "Pequeña y picante." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "How long does the pizza take?",
+      "es": "¿Cuánto tarda la pizza?",
+      "options": [
+        { "text": "Ten minutes.", "es": "Diez minutos." },
+        { "text": "An hour and a half.", "es": "Una hora y media." },
+        { "text": "Forty minutes.", "es": "Cuarenta minutos." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How much does Pablo tip?",
+      "es": "¿Cuánta propina deja Pablo?",
+      "options": [
+        { "text": "Nothing.", "es": "Nada." },
+        { "text": "Twenty percent.", "es": "Un veinte por ciento." },
+        { "text": "Five dollars.", "es": "Cinco dólares." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "a2-food.can-i-get-a-latte", "gap": "latte", "distractors": ["menu", "check"] },
+    { "id": "g2", "sentence": "s4", "answer": "a2-food.for-here-or-to-go", "gap": "to go", "distractors": ["to eat", "to pay"] },
+    { "id": "g3", "sentence": "s7", "answer": "story-en-deep-dish-pizza", "distractors": ["fried chicken", "fish soup"] },
+    { "id": "g4", "sentence": "s10", "answer": "a2-food.im-full", "gap": "full", "distractors": ["hungry", "cold"] },
+    { "id": "g5", "sentence": "s11", "answer": "a2-food.can-we-get-the-check", "gap": "check", "distractors": ["menu", "table"] },
+    { "id": "g6", "sentence": "s12", "answer": "a2-numbers.tip", "distractors": ["coupon", "refill"] }
+  ]
+}
