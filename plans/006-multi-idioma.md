@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 10:12Z 💻
+- Updated: 2026-10-06 10:18Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
 - Next step: integrate T73; then Hernán: db push, hand checks, review queue
@@ -278,6 +278,7 @@ Worktree setup: npm ci
 - 2026-10-06 plan: Base branch `plan-006-multi-idioma` from main @ c970ea6; hybrid push policy: the writer pushes the plan branch after every integrated task; never main, no PR, merge or deploy without Hernán's OK. (orchestrator)
 - 2026-10-06 orchestrator: probe: `npm run verify` on main @ c970ea6 → exit 0. (orchestrator)
 - 2026-10-06 T60: scope extended by orchestrator: SW keeps other languages' audio caches while the new active language has no audio (fr before T73), and OfflineStatus copy names the active language's audio
+- 2026-10-06 T73: scope extended by orchestrator: fix checkImages to use pictures referenced by all packs; drop article on nombres.midi like minuit
 
 ## Proposals (new scope)
 - 2026-10-06 T58: listLangs() now returns the default pack first (sync.ts, coach/packs.ts iterate it, fr)
@@ -320,3 +321,4 @@ Worktree setup: npm ci
 - 2026-10-06 10:06Z 💻 T70 done · worktree-agent-ad5fd9b2e670aff2f → 70795f1 · verify ✓
 - 2026-10-06 10:12Z 💻 T72 done · worktree-agent-aa287685dcb08c962 → b23c31a · verify ✓
 - 2026-10-06 10:12Z 💻 T73 launched · attempt 1 · agent ae4d7048a936ed7f7
+- 2026-10-06 10:18Z 💻 T73 agent blocked: strict image check is per pack (other pack's pictures flagged unused); scope extended to scripts/images/plan.ts + scripts/content.ts, sent back to the same agent
