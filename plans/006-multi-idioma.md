@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:29Z 💻
+- Updated: 2026-10-06 09:34Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T64/T60; then T62 and French units T66–T69
-- Needs Hernán: npx supabase db push for 20261006000000_league_multi.sql only when T64 ships (old app keeps working either way)
+- Next step: integrate T60/T66; then T62 and French units T67–T69
+- Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
 
@@ -118,7 +118,7 @@ Worktree setup: npm ci
 - Outcome: migration 20261006000000_league_multi.sql: summed weekly XP, global daily cap, ≤10 groups (too_many_groups, not_in_group), league_status/ranking/podium, leave_group(code), old RPCs compatible; seed/check + docs · d1b5666 · verify ✓ db:check 214 ✓ league:local:check ✓ 💻 · not checked: real project (Hernán runs db push)
 
 ## T64 — Liga client: several groups and global rankings
-- Status: running (attempt 1 · 💻 · agent ab9c51c64c5870d41 · since 09:23Z)
+- Status: done
 - Depends on: T59, T63
 - Where: pc (local fake Supabase for the hand check)
 - Goal: The Liga screens use the new RPCs: "Tus grupos" (up to 10: create, join by code or link without leaving the others, leave one with confirmation), rankings with General + one tab per group, podium per tab, the RutaCard showing the global weekly XP and rank ("todos los idiomas"). The outbox keeps sending every language's events and stats.
@@ -129,7 +129,7 @@ Worktree setup: npm ci
   - XP earned in it and fr both reach the server (outbox per language) and the weekly total is their sum.
   - `npm run verify` → exit 0
   - Hand check (PC): Liga screens in light and dark at 375 px with several groups.
-- Outcome:
+- Outcome: Liga on league_status/ranking/podium/leave_group(code): Tus grupos (≤10, share, leave), General + per-group tabs with podium, RutaCard global rank/XP, invite adds a group; new keys league-groups, league-ranking:*; old keys left · 9a6d848 · verify ✓ league:local ✓ 💻 · not checked: full light/dark hand check on phone, XP from real lessons
 
 ## T65 — French content: greetings, numbers and grammar cards
 - Status: done
@@ -145,7 +145,7 @@ Worktree setup: npm ci
 - Outcome: units salut (4 lessons), nombres (5 incl. 70–100 + prices), grammaire (3) + 10 gram.fr-* cards: 105 phrases, 68 vocab, 16 Q&A · 3507bfd · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T66 — French content: introducing yourself, family and friends
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ad96a505c474bf6a2 · since 09:34Z)
 - Depends on: T58
 - Where: any
 - Goal: Units `presenter` (20) and `famille` (22) per docs/brief-fr.md.
@@ -249,10 +249,12 @@ Worktree setup: npm ci
 - [ ] T59 @214521a — code review (queued 2026-10-06 💻)
 - [ ] T65 @3507bfd — French language review (native-level) (queued 2026-10-06 💻)
 - [ ] T61 @d5ee8c7 — code review (SW) (queued 2026-10-06 💻)
+- [ ] T64 @9a6d848 — code review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
 - [ ] T61 @d5ee8c7 — installed iPhone PWA: Actualizar, Italian audio offline in airplane mode (queued 2026-10-06 💻)
+- [ ] T64 @9a6d848 — Liga with several groups (tabs, Tus grupos, invite, 10-group limit): light + dark, 375 px (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: multi-language app; French (`fr`) is the second pack; adding a language stays content only; active-language picker on first launch and in Perfil, stored on the device; every page uses the active pack; static params for all packs with ids unique across packs; SW precaches only the active language's audio; never lose on-device data (every `lang-lern:*:<lang>` key and shape kept, Italian progress untouched). (Hernán)
@@ -269,6 +271,7 @@ Worktree setup: npm ci
 - 2026-10-06 T58: listLangs() now returns the default pack first (sync.ts, coach/packs.ts iterate it, fr)
 - 2026-10-06 T59: Jugar on an empty pack shows 'Todos los temas ·' with a stray dot
 - 2026-10-06 T65: later French units reuse existing basics (grammaire.lait, nombres.carte, salut.francais) instead of duplicating
+- 2026-10-06 T64: sign-out/delete leave the old league-board:* caches on the device (harmless, unused)
 
 ## Log
 - 2026-10-06 💻 plan written from the interview; not approved yet
@@ -285,3 +288,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:23Z 💻 T64 launched · attempt 1 · agent ab9c51c64c5870d41
 - 2026-10-06 09:29Z 💻 T61 done · worktree-agent-acc11bf7897385ebd → d5ee8c7 · verify ✓
 - 2026-10-06 09:29Z 💻 T60 launched · attempt 1 · agent a95d57934a2e43c41
+- 2026-10-06 09:34Z 💻 T64 done · worktree-agent-ab9c51c64c5870d41 → 9a6d848 · verify ✓
+- 2026-10-06 09:34Z 💻 T66 launched · attempt 1 · agent ad96a505c474bf6a2
