@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 💻
 - Writer: orchestrator (desktop)
 - Branch: plan-007-dictado-voz (from main @ a5f51c1)
-- Next step: T79 + T82 running; then T81, T83, T84
+- Next step: T81 + T82 running; then T83, T84
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -72,7 +72,7 @@ Worktree setup: npm ci
 - Outcome: scoreHeard()/bestOption() in src/lib/speech/score.ts, word alignment, SPEECH_PASS_THRESHOLD 0.7 → 434e0f2
 
 ## T79 — Lessons "Dilo en voz alta" on the new engine
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T76, T77, T78
 - Goal: SpeakExercise uses the shared mic UI and scorer: live text while speaking, word-by-word feedback, Reintentar / Escuchar la frase, concrete errors with the mic still available, self-evaluation as an option, never a permanent switch to self mode on one error. Keep the try count / XP behaviour and "No puedo hablar ahora".
 - Context: src/components/exercises/SpeakExercise.tsx, Shared contract (feedback, errors), docs/brief.md speech lines, @/lib/audio (speak() from the tap handler).
@@ -80,7 +80,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run verify` → exit 0
   - `grep -n "listenOnce\|scoreSpeech" src/components/exercises/SpeakExercise.tsx` → no output
-- Outcome:
+- Outcome: SpeakExercise on useListen + SpeakPanel + scoreHeard, new <WordFeedback> in src/components/speech → c2bcd2d
 
 ## T80 — Lessons dictation exercise on the new engine
 - Status: done
@@ -94,7 +94,7 @@ Worktree setup: npm ci
 - Outcome: DictationExercise on useListen (phrase, speechLocale), live text in a read-only textarea, editable after → 7a9b9bc
 
 ## T81 — Dialogues: speak your turn on the new engine
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T76, T77, T78
 - Goal: DialoguePlayer's learner turn uses the shared mic UI and `bestOption()`: live text, finishing keeps what was said (no more abort discarding speech), errors distinguished from silence, word feedback on a miss, tapping an option always works. Delete src/components/dialogue/recognition.ts.
 - Context: src/components/dialogue/DialoguePlayer.tsx (lines ~150-176, ~305-322), src/components/dialogue/recognition.ts, docs/coach.md line ~399 (dialogue options said aloud), Shared contract.
@@ -154,6 +154,7 @@ Worktree setup: npm ci
 - 2026-10-06 orchestrator: duplicate MicIcon in src/components/exercises/shared.tsx and use-dictation.ts retirement → T79/T80 must not edit shared.tsx (parallel), T82 retires use-dictation, T84 removes the shared.tsx MicIcon
 - 2026-10-06 T80: textarea read-only with live text while the mic is open, final transcript (spellNumbers) replaces the answer and is editable; Comprobar/Enter disabled while listening; mic UI hidden once answered; old custom notices replaced by engine messages (agent)
 - 2026-10-06 orchestrator: T82 launched before T81 so T81 can reuse the word-feedback component T79 creates
+- 2026-10-06 T79: only scored results count as tries (MAX_TRIES 2, same XP); errors don't count and never switch to self mode; miss card "Casi. Te queda un intento." + word feedback + Reintentar / Escuchar la frase, stays after answering; "Prefiero evaluarme yo" always shown in mic mode, self mode gets "Usar el micrófono" to go back; missing words struck through, wrong words wavy underline with heard word below, per-word aria labels (agent)
 
 ## Proposals (new scope)
 - 2026-10-06: "Grabarme": record your voice and play it next to the native audio (separate from recognition) (Hernán, later)
@@ -170,3 +171,5 @@ Worktree setup: npm ci
 - 2026-10-06 13:47 T79 launched · attempt 1 · agent a8ab439f1fa452413
 - 2026-10-06 13:47 T80 launched · attempt 1 · agent ac77027cde8a91689
 - 2026-10-06 13:49 T80 done · branch worktree-agent-ac77027cde8a91689 → 7a9b9bc
+- 2026-10-06 13:50 T82 launched · attempt 1 · agent a08696eeef89402db
+- 2026-10-06 13:50 T79 done · branch worktree-agent-a8ab439f1fa452413 → c2bcd2d
