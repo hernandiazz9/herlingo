@@ -1,0 +1,327 @@
+{
+  "id": "loisirs",
+  "order": 32,
+  "title": "Tiempo libre, gustos, tiempo y planes",
+  "description": "Decir lo que te gusta, hablar de deporte y aficiones, del tiempo que hace y quedar con alguien: proponer, aceptar o decir que no.",
+  "emoji": "⚽",
+  "situation": "ocio",
+  "lessons": [
+    {
+      "id": "loisirs.l.gouts",
+      "title": "Lo que te gusta",
+      "items": [
+        "loisirs.musique",
+        "loisirs.cinema",
+        "loisirs.livre",
+        "loisirs.jeu-video",
+        "loisirs.jaime-lire",
+        "loisirs.jadore-le-cinema",
+        "loisirs.tu-aimes-la-musique",
+        "loisirs.je-naime-pas-trop-le-foot",
+        "grammaire.je-naime-pas-le-cafe",
+        "loisirs.je-deteste-le-froid",
+        "loisirs.je-prefere-la-mer",
+        "loisirs.moi-aussi",
+        "loisirs.moi-non-plus",
+        "loisirs.moi-si",
+        "loisirs.cest-genial",
+        "loisirs.quest-ce-que-tu-aimes-faire",
+        "loisirs.qa.cinema",
+        "loisirs.qa.foot",
+        "loisirs.qa.aimes-faire"
+      ]
+    },
+    {
+      "id": "loisirs.l.activites",
+      "title": "Deporte y aficiones",
+      "items": [
+        "loisirs.sport",
+        "loisirs.foot",
+        "loisirs.tennis",
+        "loisirs.natation",
+        "loisirs.piscine",
+        "loisirs.velo",
+        "loisirs.course-a-pied",
+        "loisirs.randonnee",
+        "loisirs.guitare",
+        "loisirs.tu-fais-du-sport",
+        "loisirs.je-fais-du-sport-deux-fois-par-semaine",
+        "loisirs.je-joue-au-foot",
+        "loisirs.je-fais-du-velo",
+        "loisirs.je-vais-a-la-piscine",
+        "loisirs.je-joue-de-la-guitare",
+        "loisirs.on-fait-de-la-randonnee",
+        "loisirs.je-ne-suis-pas-tres-sportif",
+        "gram.fr-faire",
+        "loisirs.qa.sport"
+      ]
+    },
+    {
+      "id": "loisirs.l.meteo",
+      "title": "Qué tiempo hace",
+      "items": [
+        "loisirs.temps",
+        "loisirs.soleil",
+        "loisirs.nuage",
+        "loisirs.pluie",
+        "loisirs.neige",
+        "loisirs.vent",
+        "loisirs.orage",
+        "loisirs.parapluie",
+        "loisirs.printemps",
+        "loisirs.ete",
+        "loisirs.automne",
+        "loisirs.hiver",
+        "loisirs.il-fait-quel-temps",
+        "grammaire.il-fait-beau",
+        "loisirs.il-fait-chaud",
+        "loisirs.il-fait-froid",
+        "loisirs.il-pleut",
+        "loisirs.il-neige",
+        "loisirs.il-y-a-du-vent",
+        "loisirs.il-fait-vingt-cinq-degres",
+        "loisirs.quel-temps-de-chien",
+        "loisirs.demain-il-va-faire-beau",
+        "loisirs.prends-un-parapluie",
+        "loisirs.qa.temps",
+        "loisirs.qa.parapluie"
+      ]
+    },
+    {
+      "id": "loisirs.l.plans",
+      "title": "Hacer planes",
+      "items": [
+        "loisirs.film",
+        "loisirs.concert",
+        "loisirs.musee",
+        "loisirs.vacances",
+        "loisirs.tu-es-libre-samedi",
+        "loisirs.tu-fais-quoi-ce-soir",
+        "grammaire.tu-veux-venir",
+        "loisirs.ca-te-dit-daller-au-cinema",
+        "loisirs.il-y-a-un-concert",
+        "loisirs.bonne-idee",
+        "salut.avec-plaisir",
+        "grammaire.je-ne-peux-pas",
+        "loisirs.une-autre-fois",
+        "loisirs.ca-depend-du-temps",
+        "loisirs.on-se-retrouve-ou",
+        "loisirs.devant-le-cinema",
+        "loisirs.deux-places",
+        "loisirs.bon-week-end",
+        "gram.fr-aller",
+        "loisirs.qa.proposition",
+        "loisirs.qa.rendez-vous"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "loisirs.jaime-lire", "text": "J'aime lire.", "es": "Me gusta leer.", "notes": "«aimer» + infinitivo, sin preposición.", "explanation": "Para hablar de tus aficiones. «J'aime» suena «shem», sin la «e» final: shem LIR.", "register": "neutral", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.jadore-le-cinema", "text": "J'adore le cinéma!", "es": "¡Me encanta el cine!", "notes": "Con los gustos el francés pone artículo: «le cinéma», «la musique».", "explanation": "Para decir lo que más te gusta. La «r» de «adore» es de garganta: sha-DOR l' si-né-MA.", "register": "neutral", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.tu-aimes-la-musique", "text": "Tu aimes la musique?", "es": "¿Te gusta la música?", "explanation": "A un amigo o alguien de tu edad para sacar tema. «musique» lleva la «u» francesa: tü EM la mü-ZIK?", "register": "tu", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.je-naime-pas-trop-le-foot", "text": "Je n'aime pas trop le foot.", "es": "No me gusta mucho el fútbol.", "notes": "«pas trop» suaviza: más educado que «je n'aime pas».", "explanation": "Para decir que algo no te entusiasma sin sonar brusco. «foot» suena «fut»: sh' nem pa tro l' FUT.", "register": "neutral", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.je-deteste-le-froid", "text": "Je déteste le froid.", "es": "Odio el frío.", "explanation": "Para quejarte del invierno. «froid» suena «frua», sin «d»: sh' dé-TEST l' FRUA.", "register": "neutral", "situation": "ocio", "tags": ["gustos", "tiempo"] },
+    { "id": "loisirs.je-prefere-la-mer", "text": "Je préfère la mer à la montagne.", "es": "Prefiero el mar a la montaña.", "notes": "«la mer» es femenino; «préférer A à B».", "explanation": "Para comparar gustos de vacaciones. «gne» suena como nuestra «ñ»: la mer a la mon-TAÑ.", "register": "neutral", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.moi-aussi", "text": "Moi aussi!", "es": "¡Yo también!", "notes": "Solo después de una frase afirmativa.", "explanation": "Cuando alguien dice que le gusta algo y a ti también. «Moi» suena «muá»: mua o-SI.", "register": "neutral", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.moi-non-plus", "text": "Moi non plus.", "es": "Yo tampoco.", "notes": "Después de una frase negativa: «Je n'aime pas…» → «Moi non plus».", "explanation": "Para estar de acuerdo con algo negativo. La «s» de «plus» no suena: mua non PLÜ.", "register": "neutral", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.moi-si", "text": "Moi, si!", "es": "¡Pues a mí sí!", "notes": "«si» (no «oui») contradice una frase negativa.", "explanation": "Cuando alguien dice que no le gusta algo y a ti sí. Mua, SI: corto y con énfasis.", "register": "neutral", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.cest-genial", "text": "C'est génial!", "es": "¡Es genial!", "explanation": "Para mostrar entusiasmo por un plan o una película. La «g» ante «e» es una «sh» sonora: se shé-NIAL.", "register": "neutral", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.quest-ce-que-tu-aimes-faire", "text": "Qu'est-ce que tu aimes faire le week-end?", "es": "¿Qué te gusta hacer los fines de semana?", "explanation": "La pregunta típica para conocer a alguien. «week-end» se dice a la inglesa: kes-k' tü em FER l' ui-KEND?", "register": "tu", "situation": "ocio", "tags": ["gustos"] },
+    { "id": "loisirs.tu-fais-du-sport", "text": "Tu fais du sport?", "es": "¿Haces deporte?", "explanation": "A un amigo o compañero. La «t» de «sport» no suena: tü fe dü SPOR?", "register": "tu", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.je-fais-du-sport-deux-fois-par-semaine", "text": "Je fais du sport deux fois par semaine.", "es": "Hago deporte dos veces por semana.", "notes": "«faire du / de la» + deporte o actividad.", "explanation": "Para decir cada cuánto haces algo. «fois» suena «fuá»: dö FUA par s'-MEN.", "register": "neutral", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.je-joue-au-foot", "text": "Je joue au foot le dimanche.", "es": "Juego al fútbol los domingos.", "notes": "Deportes y juegos: «jouer au / à la».", "explanation": "Para hablar de tus deportes. «joue» suena «shu», con «sh» sonora: sh' SHU o FUT.", "register": "neutral", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.je-fais-du-velo", "text": "Je fais du vélo.", "es": "Monto en bici.", "literal": "Hago bici.", "explanation": "Para contar que vas en bici por deporte o por placer. «du» lleva la «u» francesa: sh' fe dü vé-LO.", "register": "neutral", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.je-vais-a-la-piscine", "text": "Je vais à la piscine le mardi.", "es": "Voy a la piscina los martes.", "explanation": "Para hablar de tu semana. «piscine» se dice sin la primera «s»: pi-SIN.", "register": "neutral", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.je-joue-de-la-guitare", "text": "Je joue de la guitare.", "es": "Toco la guitarra.", "notes": "Instrumentos: «jouer du / de la», no «au».", "explanation": "Para hablar de tus aficiones. «gui» suena como en español: sh' shu d' la gui-TAR.", "register": "neutral", "situation": "ocio", "tags": ["aficiones"] },
+    { "id": "loisirs.on-fait-de-la-randonnee", "text": "Le week-end, on fait de la randonnée.", "es": "Los fines de semana hacemos senderismo.", "notes": "En la conversación «on» = nosotros.", "explanation": "Para contar planes de fin de semana. «randonnée» empieza nasal: ran-do-NÉ.", "register": "neutral", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.je-ne-suis-pas-tres-sportif", "text": "Je ne suis pas très sportif.", "es": "No soy muy deportista.", "notes": "Mujer: «sportive».", "explanation": "Para confesar que el deporte no es lo tuyo. Aquí la «f» final sí suena: spor-TIF.", "register": "neutral", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.il-fait-quel-temps", "text": "Il fait quel temps aujourd'hui?", "es": "¿Qué tiempo hace hoy?", "notes": "El tiempo va con «il fait», como nuestro «hace».", "explanation": "Por teléfono o al salir de casa. «temps» suena «tan», sin «p» ni «s»: il fe kel TAN o-shur-DUI?", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.il-fait-chaud", "text": "Il fait chaud!", "es": "¡Hace calor!", "notes": "«J'ai chaud» = tengo calor (tú).", "explanation": "En verano o al entrar en un sitio cargado. «chaud» suena «sho»: il fe SHO.", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.il-fait-froid", "text": "Il fait froid ce matin.", "es": "Hace frío esta mañana.", "explanation": "Para comentar el tiempo con cualquiera. «froid» suena «frua»: il fe FRUA s' ma-TAN.", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.il-pleut", "text": "Il pleut.", "es": "Llueve.", "explanation": "Al mirar por la ventana. «pleut» tiene la «eu» de labios redondos: il PLÖ.", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.il-neige", "text": "Il neige!", "es": "¡Está nevando!", "explanation": "Cuando ves caer la nieve. «neige» acaba en «sh» sonora: il NESH.", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.il-y-a-du-vent", "text": "Il y a du vent.", "es": "Hace viento.", "literal": "Hay viento.", "explanation": "Para hablar del tiempo. «vent» es nasal, sin «t»: i-lia dü VAN.", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.il-fait-vingt-cinq-degres", "text": "Il fait vingt-cinq degrés.", "es": "Hace veinticinco grados.", "explanation": "Para dar la temperatura. «vingt-cinq» se dice con la «t»: vant-SANK d'-GRÉ.", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.quel-temps-de-chien", "text": "Quel temps de chien!", "es": "¡Qué tiempo de perros!", "notes": "La misma expresión que en español.", "explanation": "Para quejarte de un día de lluvia y frío. «chien» suena «shian», nasal: kel tan d' SHIAN.", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.demain-il-va-faire-beau", "text": "Demain, il va faire beau.", "es": "Mañana va a hacer bueno.", "notes": "«aller» + infinitivo = «ir a»: futuro cercano.", "explanation": "Al hablar de la previsión o de planes. «beau» suena «bo»: d'-MAN il va fer BO.", "register": "neutral", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.prends-un-parapluie", "text": "Prends un parapluie, il va pleuvoir.", "es": "Coge un paraguas, que va a llover.", "explanation": "A alguien de casa o a un amigo antes de salir. «parapluie» acaba en «ui»: pran-zan pa-ra-PLUI.", "register": "tu", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.tu-es-libre-samedi", "text": "Tu es libre samedi?", "es": "¿Estás libre el sábado?", "explanation": "Para empezar a proponer un plan a un amigo. «libre» acaba en «r» casi muda: tü e LIBR' sam-DI?", "register": "tu", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.tu-fais-quoi-ce-soir", "text": "Tu fais quoi ce soir?", "es": "¿Qué haces esta noche?", "notes": "Forma hablada de «Qu'est-ce que tu fais ce soir?».", "explanation": "A un amigo, de forma relajada. «quoi» suena «kuá»: tü fe KUA s' SUAR?", "register": "tu", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.ca-te-dit-daller-au-cinema", "text": "Ça te dit d'aller au cinéma?", "es": "¿Te apetece ir al cine?", "literal": "¿Eso te dice ir al cine?", "notes": "«Ça te dit?» = ¿te apetece?", "explanation": "La forma más natural de proponer un plan a un amigo. sa t' DI da-lé o si-né-MA?", "register": "tu", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.il-y-a-un-concert", "text": "Il y a un concert samedi soir.", "es": "Hay un concierto el sábado por la noche.", "explanation": "Para proponer un plan concreto. «concert» es nasal y no suena la «t»: i-lia an kon-SER.", "register": "neutral", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.bonne-idee", "text": "Bonne idée!", "es": "¡Buena idea!", "explanation": "Para aceptar un plan con ganas. Se liga «bonne‿idée»: bo-ni-DÉ.", "register": "neutral", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.une-autre-fois", "text": "Une autre fois, peut-être.", "es": "Otro día, quizá.", "literal": "Otra vez, quizás.", "explanation": "Para decir que no a un plan sin cerrar la puerta. Se liga «une‿autre»: ü-NOTR' FUA, pö-TETR'.", "register": "neutral", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.ca-depend-du-temps", "text": "Ça dépend du temps.", "es": "Depende del tiempo.", "explanation": "Cuando un plan al aire libre depende de si llueve. «dépend» y «temps» son nasales: sa dé-PAN dü TAN.", "register": "neutral", "situation": "ocio", "tags": ["planes", "tiempo"] },
+    { "id": "loisirs.on-se-retrouve-ou", "text": "On se retrouve où?", "es": "¿Dónde quedamos?", "literal": "¿Dónde nos reencontramos?", "notes": "«se retrouver» = quedar, verse en un sitio.", "explanation": "Para cerrar un plan con un amigo. «retrouve» suena r'-TRUV: on s' r'-TRUV U?", "register": "tu", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.devant-le-cinema", "text": "Devant le cinéma, à huit heures.", "es": "Delante del cine, a las ocho.", "explanation": "Para decir dónde y cuándo quedáis. «devant» es nasal: d'-VAN l' si-né-MA, a ui-TÖR.", "register": "neutral", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.deux-places", "text": "Deux places pour vingt heures, s'il vous plaît.", "es": "Dos entradas para la sesión de las ocho, por favor.", "notes": "«une place» = una entrada (cine, teatro) o un asiento.", "explanation": "En la taquilla del cine o del teatro. «places» suena «plas»: dö PLAS pur van-TÖR.", "register": "vous", "situation": "ocio", "tags": ["planes"] },
+    { "id": "loisirs.bon-week-end", "text": "Bon week-end!", "es": "¡Buen fin de semana!", "explanation": "El viernes, al despedirte de compañeros o en una tienda. «Bon» es nasal: bon ui-KEND.", "register": "neutral", "situation": "ocio", "tags": ["planes"] }
+  ],
+  "vocab": [
+    { "id": "loisirs.musique", "word": "musique", "article": "la", "gender": "f", "es": "la música", "example": "loisirs.tu-aimes-la-musique", "situation": "ocio", "tags": ["gustos"], "image": "fluent:musical-notes" },
+    { "id": "loisirs.cinema", "word": "cinéma", "article": "le", "gender": "m", "plural": "cinémas", "es": "el cine", "notes": "En la conversación también «le ciné».", "example": "loisirs.jadore-le-cinema", "situation": "ocio", "tags": ["gustos"], "image": "fluent:cinema" },
+    { "id": "loisirs.livre", "word": "livre", "article": "le", "gender": "m", "plural": "livres", "es": "el libro", "notes": "Ojo: «libre» con «b» es «libre».", "situation": "ocio", "tags": ["gustos"], "image": "fluent:closed-book" },
+    { "id": "loisirs.jeu-video", "word": "jeu vidéo", "article": "le", "gender": "m", "plural": "jeux vidéo", "es": "el videojuego", "situation": "ocio", "tags": ["gustos"], "image": "fluent:video-game" },
+    { "id": "loisirs.sport", "word": "sport", "article": "le", "gender": "m", "plural": "sports", "es": "el deporte", "notes": "La «t» no suena: «spor».", "example": "loisirs.tu-fais-du-sport", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.foot", "word": "foot", "article": "le", "gender": "m", "es": "el fútbol", "notes": "Suena «fut»; forma corta de «football».", "example": "loisirs.je-joue-au-foot", "situation": "ocio", "tags": ["deporte"], "image": "fluent:soccer-ball" },
+    { "id": "loisirs.tennis", "word": "tennis", "article": "le", "gender": "m", "es": "el tenis", "notes": "Aquí la «s» final sí suena.", "situation": "ocio", "tags": ["deporte"], "image": "fluent:tennis" },
+    { "id": "loisirs.natation", "word": "natation", "article": "la", "gender": "f", "es": "la natación", "notes": "«faire de la natation» = nadar (como deporte).", "situation": "ocio", "tags": ["deporte"], "image": "fluent:person-swimming" },
+    { "id": "loisirs.piscine", "word": "piscine", "article": "la", "gender": "f", "plural": "piscines", "es": "la piscina", "example": "loisirs.je-vais-a-la-piscine", "situation": "ocio", "tags": ["deporte"] },
+    { "id": "loisirs.velo", "word": "vélo", "article": "le", "gender": "m", "plural": "vélos", "es": "la bici", "notes": "Masculino: «le vélo». «à vélo» = en bici.", "example": "loisirs.je-fais-du-velo", "situation": "ocio", "tags": ["deporte"], "image": "fluent:bicycle" },
+    { "id": "loisirs.course-a-pied", "word": "course à pied", "article": "la", "gender": "f", "es": "el running, correr", "notes": "«les courses» (plural) = la compra; no confundir.", "situation": "ocio", "tags": ["deporte"], "image": "fluent:person-running" },
+    { "id": "loisirs.randonnee", "word": "randonnée", "article": "la", "gender": "f", "plural": "randonnées", "es": "el senderismo, la excursión a pie", "example": "loisirs.on-fait-de-la-randonnee", "situation": "ocio", "tags": ["deporte"], "image": "fluent:hiking-boot" },
+    { "id": "loisirs.guitare", "word": "guitare", "article": "la", "gender": "f", "plural": "guitares", "es": "la guitarra", "example": "loisirs.je-joue-de-la-guitare", "situation": "ocio", "tags": ["aficiones"], "image": "fluent:guitar" },
+    { "id": "loisirs.temps", "word": "temps", "article": "le", "gender": "m", "es": "el tiempo", "notes": "El del clima y el que pasa. Suena «tan».", "example": "loisirs.il-fait-quel-temps", "situation": "ocio", "tags": ["tiempo"] },
+    { "id": "loisirs.soleil", "word": "soleil", "article": "le", "gender": "m", "es": "el sol", "notes": "Suena «so-LEI».", "situation": "ocio", "tags": ["tiempo"], "image": "fluent:sun" },
+    { "id": "loisirs.nuage", "word": "nuage", "article": "le", "gender": "m", "plural": "nuages", "es": "la nube", "notes": "Masculino en francés.", "situation": "ocio", "tags": ["tiempo"], "image": "fluent:cloud" },
+    { "id": "loisirs.pluie", "word": "pluie", "article": "la", "gender": "f", "es": "la lluvia", "notes": "Verbo: «il pleut» = llueve.", "example": "loisirs.il-pleut", "situation": "ocio", "tags": ["tiempo"], "image": "fluent:cloud-with-rain" },
+    { "id": "loisirs.neige", "word": "neige", "article": "la", "gender": "f", "es": "la nieve", "example": "loisirs.il-neige", "situation": "ocio", "tags": ["tiempo"], "image": "fluent:snowflake" },
+    { "id": "loisirs.vent", "word": "vent", "article": "le", "gender": "m", "plural": "vents", "es": "el viento", "example": "loisirs.il-y-a-du-vent", "situation": "ocio", "tags": ["tiempo"], "image": "fluent:wind-face" },
+    { "id": "loisirs.orage", "word": "orage", "article": "l'", "gender": "m", "plural": "orages", "es": "la tormenta", "notes": "Masculino: «un orage».", "situation": "ocio", "tags": ["tiempo"], "image": "fluent:cloud-with-lightning-and-rain" },
+    { "id": "loisirs.parapluie", "word": "parapluie", "article": "le", "gender": "m", "plural": "parapluies", "es": "el paraguas", "example": "loisirs.prends-un-parapluie", "situation": "ocio", "tags": ["tiempo"], "image": "fluent:umbrella" },
+    { "id": "loisirs.printemps", "word": "printemps", "article": "le", "gender": "m", "es": "la primavera", "notes": "Masculino; «au printemps» = en primavera.", "situation": "ocio", "tags": ["estaciones"], "image": "fluent:cherry-blossom" },
+    { "id": "loisirs.ete", "word": "été", "article": "l'", "gender": "m", "es": "el verano", "notes": "«en été» = en verano.", "situation": "ocio", "tags": ["estaciones"], "image": "fluent:sun-with-face" },
+    { "id": "loisirs.automne", "word": "automne", "article": "l'", "gender": "m", "es": "el otoño", "notes": "La «m» no suena: «o-TON».", "situation": "ocio", "tags": ["estaciones"], "image": "fluent:fallen-leaf" },
+    { "id": "loisirs.hiver", "word": "hiver", "article": "l'", "gender": "m", "es": "el invierno", "notes": "«en hiver» = en invierno; la «h» no suena.", "situation": "ocio", "tags": ["estaciones"], "image": "fluent:snowman" },
+    { "id": "loisirs.film", "word": "film", "article": "le", "gender": "m", "plural": "films", "es": "la película", "situation": "ocio", "tags": ["planes"], "image": "fluent:clapper-board" },
+    { "id": "loisirs.concert", "word": "concert", "article": "le", "gender": "m", "plural": "concerts", "es": "el concierto", "example": "loisirs.il-y-a-un-concert", "situation": "ocio", "tags": ["planes"], "image": "fluent:microphone" },
+    { "id": "loisirs.musee", "word": "musée", "article": "le", "gender": "m", "plural": "musées", "es": "el museo", "notes": "Masculino aunque acabe en «-ée».", "situation": "ocio", "tags": ["planes"], "image": "fluent:classical-building" },
+    { "id": "loisirs.vacances", "word": "vacances", "article": "les", "gender": "f", "es": "las vacaciones", "notes": "Siempre en plural: «en vacances».", "situation": "ocio", "tags": ["planes"], "image": "fluent:desert-island" }
+  ],
+  "qa": [
+    {
+      "id": "loisirs.qa.cinema",
+      "question": "Moi, j'adore le cinéma. Et toi?",
+      "questionEs": "A mí me encanta el cine. ¿Y a ti?",
+      "accepted": [
+        { "text": "Moi aussi!", "es": "¡Yo también!" },
+        { "text": "Pas trop. Je préfère la musique.", "es": "No mucho. Prefiero la música." }
+      ],
+      "distractors": [
+        { "text": "Moi non plus.", "es": "Yo tampoco." },
+        { "text": "Oui, je joue au cinéma.", "es": "Sí, juego al cine." }
+      ],
+      "register": "tu",
+      "situation": "ocio",
+      "notes": "Frase afirmativa → «moi aussi»; «moi non plus» solo tras una negativa.",
+      "tags": ["gustos"]
+    },
+    {
+      "id": "loisirs.qa.foot",
+      "question": "Je n'aime pas trop le foot. Et toi?",
+      "questionEs": "No me gusta mucho el fútbol. ¿Y a ti?",
+      "accepted": [
+        { "text": "Moi non plus.", "es": "Yo tampoco." },
+        { "text": "Moi, si! Je joue le dimanche.", "es": "¡Pues a mí sí! Juego los domingos." }
+      ],
+      "distractors": [
+        { "text": "Moi aussi.", "es": "Yo también." },
+        { "text": "Moi, je n'aime pas le foot aussi.", "es": "A mí no me gusta el fútbol también." }
+      ],
+      "register": "tu",
+      "situation": "ocio",
+      "notes": "Tras una negativa: «moi non plus» (tampoco) o «moi, si» (a mí sí), nunca «moi aussi» ni «oui».",
+      "tags": ["gustos"]
+    },
+    {
+      "id": "loisirs.qa.aimes-faire",
+      "question": "Qu'est-ce que tu aimes faire le week-end?",
+      "questionEs": "¿Qué te gusta hacer los fines de semana?",
+      "accepted": [
+        { "text": "J'aime lire et aller au cinéma.", "es": "Me gusta leer e ir al cine." },
+        { "text": "Je fais du vélo ou de la randonnée.", "es": "Monto en bici o hago senderismo." }
+      ],
+      "distractors": [
+        { "text": "J'aime de lire.", "es": "Me gusta de leer." },
+        { "text": "Le week-end, il fait froid.", "es": "El fin de semana hace frío." }
+      ],
+      "register": "tu",
+      "situation": "ocio",
+      "notes": "«aimer» va directo al infinitivo: «j'aime lire».",
+      "tags": ["gustos"]
+    },
+    {
+      "id": "loisirs.qa.sport",
+      "question": "Tu fais du sport?",
+      "questionEs": "¿Haces deporte?",
+      "accepted": [
+        { "text": "Oui, je joue au foot et je vais à la piscine.", "es": "Sí, juego al fútbol y voy a la piscina." },
+        { "text": "Pas vraiment, je ne suis pas très sportif.", "es": "No mucho, no soy muy deportista." }
+      ],
+      "distractors": [
+        { "text": "Oui, je joue du foot.", "es": "Sí, toco el fútbol." },
+        { "text": "Oui, je fais le sport.", "es": "Sí, hago el deporte." }
+      ],
+      "register": "tu",
+      "situation": "ocio",
+      "notes": "«jouer au» para deportes («du / de la» es para instrumentos) y «faire du sport».",
+      "tags": ["deporte"]
+    },
+    {
+      "id": "loisirs.qa.temps",
+      "question": "Il fait quel temps chez toi aujourd'hui?",
+      "questionEs": "¿Qué tiempo hace hoy donde estás?",
+      "accepted": [
+        { "text": "Il fait beau et chaud.", "es": "Hace bueno y calor." },
+        { "text": "Il pleut et il y a du vent.", "es": "Llueve y hace viento." }
+      ],
+      "distractors": [
+        { "text": "Il est froid.", "es": "Él está frío." },
+        { "text": "Il fait pluie et vent.", "es": "Hace lluvia y viento." }
+      ],
+      "register": "tu",
+      "situation": "ocio",
+      "notes": "«il fait» + adjetivo (beau, chaud, froid); «il y a du vent», «il pleut».",
+      "tags": ["tiempo"]
+    },
+    {
+      "id": "loisirs.qa.parapluie",
+      "question": "Attention, il va pleuvoir cet après-midi.",
+      "questionEs": "Cuidado, va a llover esta tarde.",
+      "accepted": [
+        { "text": "Alors je prends un parapluie.", "es": "Entonces cojo un paraguas." },
+        { "text": "Ah bon? Quel temps de chien!", "es": "¿Ah, sí? ¡Qué tiempo de perros!" }
+      ],
+      "distractors": [
+        { "text": "Alors je prends le soleil.", "es": "Entonces tomo el sol." },
+        { "text": "Il fait vingt-cinq degrés, demain.", "es": "Mañana hace veinticinco grados." }
+      ],
+      "register": "neutral",
+      "situation": "ocio",
+      "tags": ["tiempo"]
+    },
+    {
+      "id": "loisirs.qa.proposition",
+      "question": "Ça te dit d'aller au cinéma samedi?",
+      "questionEs": "¿Te apetece ir al cine el sábado?",
+      "accepted": [
+        { "text": "Oui, bonne idée!", "es": "¡Sí, buena idea!" },
+        { "text": "Désolé, samedi je ne peux pas. Une autre fois?", "es": "Lo siento, el sábado no puedo. ¿Otro día?" }
+      ],
+      "distractors": [
+        { "text": "De rien, samedi.", "es": "De nada, el sábado." },
+        { "text": "Oui, je vais au cinéma hier.", "es": "Sí, voy al cine ayer." }
+      ],
+      "register": "tu",
+      "situation": "ocio",
+      "tags": ["planes"]
+    },
+    {
+      "id": "loisirs.qa.rendez-vous",
+      "question": "D'accord pour ce soir! On se retrouve où?",
+      "questionEs": "¡Vale, esta noche! ¿Dónde quedamos?",
+      "accepted": [
+        { "text": "Devant le cinéma, à huit heures.", "es": "Delante del cine, a las ocho." },
+        { "text": "Au café à côté de chez moi.", "es": "En el café que está al lado de mi casa." }
+      ],
+      "distractors": [
+        { "text": "À huit heures.", "es": "A las ocho." },
+        { "text": "Je me retrouve au cinéma.", "es": "Me reencuentro en el cine." }
+      ],
+      "register": "tu",
+      "situation": "ocio",
+      "notes": "«où» pregunta por el sitio, no por la hora.",
+      "tags": ["planes"]
+    }
+  ]
+}

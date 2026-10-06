@@ -1,0 +1,367 @@
+{
+  "id": "maison",
+  "order": 30,
+  "title": "Casa, rutina diaria y días de la semana",
+  "description": "Dónde vives y cómo es tu casa, recibir a alguien, y contar tu día: levantarte, trabajar, cenar, las tareas y cada cuánto haces las cosas.",
+  "emoji": "🏠",
+  "situation": "casa",
+  "lessons": [
+    {
+      "id": "maison.l.logement",
+      "title": "Dónde vives",
+      "items": [
+        "maison.maison",
+        "maison.appartement",
+        "maison.immeuble",
+        "maison.quartier",
+        "maison.etage",
+        "maison.ascenseur",
+        "maison.voisin",
+        "grammaire.tu-habites-ou",
+        "maison.jhabite-dans-un-appartement",
+        "maison.tu-habites-dans-quel-quartier",
+        "maison.cest-au-troisieme-etage",
+        "maison.il-y-a-un-ascenseur",
+        "maison.je-vis-seul",
+        "maison.je-suis-votre-nouveau-voisin",
+        "maison.qa.logement",
+        "maison.qa.voisin"
+      ]
+    },
+    {
+      "id": "maison.l.pieces",
+      "title": "Las habitaciones y los muebles",
+      "items": [
+        "maison.chambre",
+        "maison.cuisine",
+        "maison.salon",
+        "maison.salle-de-bain",
+        "maison.toilettes",
+        "maison.lit",
+        "maison.table",
+        "maison.chaise",
+        "maison.canape",
+        "maison.porte",
+        "maison.fenetre",
+        "maison.cle",
+        "maison.il-y-a-deux-chambres",
+        "maison.cest-petit-mais-lumineux",
+        "maison.la-salle-de-bain-est-au-fond",
+        "maison.tu-peux-fermer-la-fenetre",
+        "maison.jai-oublie-mes-cles",
+        "maison.la-douche-ne-marche-pas"
+      ]
+    },
+    {
+      "id": "maison.l.chez-moi",
+      "title": "Bienvenido a mi casa",
+      "items": [
+        "maison.entre-je-ten-prie",
+        "maison.fais-comme-chez-toi",
+        "maison.cest-tres-joli-chez-toi",
+        "maison.je-mets-ca-ou",
+        "maison.ou-sont-les-toilettes",
+        "maison.je-suis-chez-moi",
+        "grammaire.je-suis-a-la-maison",
+        "maison.je-rentre-a-la-maison",
+        "maison.qa.entre",
+        "maison.qa.toilettes"
+      ]
+    },
+    {
+      "id": "maison.l.matin",
+      "title": "Por la mañana",
+      "items": [
+        "nombres.matin",
+        "maison.reveil",
+        "maison.douche",
+        "maison.brosse-a-dents",
+        "maison.petit-dejeuner",
+        "maison.je-me-reveille-a-sept-heures",
+        "maison.je-me-leve-tout-de-suite",
+        "maison.je-prends-une-douche",
+        "maison.je-me-brosse-les-dents",
+        "maison.je-mhabille",
+        "maison.je-prends-mon-petit-dejeuner",
+        "maison.dabord-un-cafe",
+        "maison.je-pars-au-travail",
+        "maison.tu-te-leves-a-quelle-heure",
+        "maison.je-ne-suis-pas-du-matin",
+        "maison.qa.lever",
+        "maison.qa.matin"
+      ]
+    },
+    {
+      "id": "maison.l.journee",
+      "title": "El día y la noche",
+      "items": [
+        "maison.travail",
+        "maison.dejeuner",
+        "maison.diner",
+        "maison.tele",
+        "nombres.apres-midi",
+        "nombres.soir",
+        "maison.je-travaille-de-neuf-heures-a-cinq-heures",
+        "maison.je-dejeune-a-midi",
+        "maison.le-soir-je-rentre-vers-sept-heures",
+        "maison.je-fais-la-cuisine",
+        "maison.on-dine-a-vingt-heures",
+        "maison.je-regarde-la-tele",
+        "maison.je-me-couche-tard",
+        "maison.dors-bien",
+        "maison.quest-ce-que-tu-fais-le-soir",
+        "maison.qa.soir"
+      ]
+    },
+    {
+      "id": "maison.l.semaine",
+      "title": "La semana: tareas y costumbres",
+      "items": [
+        "nombres.lundi",
+        "nombres.mardi",
+        "nombres.mercredi",
+        "nombres.jeudi",
+        "nombres.vendredi",
+        "nombres.samedi",
+        "nombres.dimanche",
+        "maison.menage",
+        "maison.vaisselle",
+        "maison.toujours",
+        "maison.souvent",
+        "maison.parfois",
+        "maison.jamais",
+        "maison.dhabitude",
+        "maison.tot",
+        "maison.tard",
+        "maison.le-mardi-je-teletravaille",
+        "maison.le-samedi-je-fais-le-menage",
+        "maison.je-fais-la-vaisselle",
+        "maison.cest-ton-tour",
+        "maison.dhabitude-je-me-leve-tot",
+        "maison.je-ne-regarde-jamais-la-tele",
+        "maison.le-dimanche-je-fais-la-grasse-matinee",
+        "gram.fr-verbes-er",
+        "maison.qa.vaisselle"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "maison.jhabite-dans-un-appartement", "text": "J'habite dans un appartement.", "es": "Vivo en un piso.", "notes": "«habiter» = vivir en un sitio; la «h» no suena.", "explanation": "Para hablar de tu casa con alguien que acabas de conocer. Se liga «dans‿un»: sha-BIT dan-zan-na-par-t'-MAN.", "register": "neutral", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.tu-habites-dans-quel-quartier", "text": "Tu habites dans quel quartier?", "es": "¿En qué barrio vives?", "explanation": "A un amigo o compañero, para situar su casa en la ciudad. «quartier» suena «kar-TIÉ», sin «u».", "register": "tu", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.cest-au-troisieme-etage", "text": "C'est au troisième étage.", "es": "Es en el tercer piso.", "notes": "La planta baja es «le rez-de-chaussée»; el «premier étage» es nuestro primero.", "explanation": "Cuando das tu dirección o explicas dónde vives. «troisième» suena «trua-ZIEM» y «étage» acaba en «sh» sonora: se-to trua-ZIEM é-TASH.", "register": "neutral", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.il-y-a-un-ascenseur", "text": "Il y a un ascenseur?", "es": "¿Hay ascensor?", "explanation": "Al visitar un piso o al llegar a un edificio. «il y a» suena «ilia», y se liga: i-lia-a-na-san-SÖR.", "register": "neutral", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.je-vis-seul", "text": "Je vis seul.", "es": "Vivo solo.", "notes": "Si eres mujer: «Je vis seule» (suena igual).", "explanation": "Para contar con quién vives. «seul» tiene la «eu» de labios redondos: sh' vi SÖL.", "register": "neutral", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.je-suis-votre-nouveau-voisin", "text": "Bonjour, je suis votre nouveau voisin.", "es": "Hola, soy su nuevo vecino.", "notes": "Mujer: «votre nouvelle voisine».", "explanation": "Al presentarte a los vecinos del rellano. «voisin» acaba en nasal, sin «n» final: nu-vo vua-ZAN.", "register": "vous", "situation": "casa", "tags": ["vivienda", "vecinos"] },
+    { "id": "maison.il-y-a-deux-chambres", "text": "Il y a deux chambres et un salon.", "es": "Hay dos dormitorios y un salón.", "notes": "«la chambre» es el dormitorio, no cualquier habitación («la pièce»).", "explanation": "Para describir tu piso. «chambres» empieza con «sh» y es nasal: dö SHAMBR' é an sa-LON.", "register": "neutral", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.cest-petit-mais-lumineux", "text": "C'est petit, mais c'est très lumineux.", "es": "Es pequeño, pero tiene mucha luz.", "literal": "Es pequeño, pero es muy luminoso.", "explanation": "Para hablar de tu casa o de un piso que visitas. «lumineux» lleva la «u» francesa: lü-mi-NÖ.", "register": "neutral", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.la-salle-de-bain-est-au-fond", "text": "La salle de bain est au fond du couloir.", "es": "El baño está al fondo del pasillo.", "explanation": "Para indicarle el baño a una visita. «bain» es nasal, sin «n»: sal d' BAN é-to-FON dü ku-LUAR.", "register": "neutral", "situation": "casa", "tags": ["casa"] },
+    { "id": "maison.tu-peux-fermer-la-fenetre", "text": "Tu peux fermer la fenêtre?", "es": "¿Puedes cerrar la ventana?", "explanation": "A tu compañero de piso o a un amigo en casa. «fenêtre» se dice casi en dos sílabas: f'-NETR'.", "register": "tu", "situation": "casa", "tags": ["casa"] },
+    { "id": "maison.jai-oublie-mes-cles", "text": "J'ai oublié mes clés!", "es": "¡Me he dejado las llaves!", "literal": "¡He olvidado mis llaves!", "explanation": "Cuando llegas a la puerta y no las tienes. «clés» suena «klé», sin «s»: shé u-bli-É mé KLÉ.", "register": "neutral", "situation": "casa", "tags": ["casa"] },
+    { "id": "maison.la-douche-ne-marche-pas", "text": "La douche ne marche pas.", "es": "La ducha no funciona.", "notes": "«marcher» = andar y también funcionar.", "explanation": "Al casero, en el hotel o a tu compañero de piso. «ou» suena «u»: la DUSH n' marsh PA.", "register": "neutral", "situation": "casa", "tags": ["casa"] },
+    { "id": "maison.entre-je-ten-prie", "text": "Entre, je t'en prie!", "es": "¡Pasa, pasa!", "literal": "Entra, te lo ruego.", "notes": "Con «vous»: «Entrez, je vous en prie».", "explanation": "Al abrir la puerta a un amigo que viene a casa. «Entre» es nasal: ANTR', sh' tan PRI.", "register": "tu", "situation": "casa", "tags": ["visitas"] },
+    { "id": "maison.fais-comme-chez-toi", "text": "Fais comme chez toi.", "es": "Estás en tu casa.", "literal": "Haz como en tu casa.", "explanation": "Para que una visita se sienta cómoda. «chez» suena «shé» y «toi» suena «tuá»: fe kom shé TUA.", "register": "tu", "situation": "casa", "tags": ["visitas"] },
+    { "id": "maison.cest-tres-joli-chez-toi", "text": "C'est très joli, chez toi!", "es": "¡Qué bonita es tu casa!", "literal": "Es muy bonito, en tu casa.", "notes": "«chez toi» = en tu casa; «chez moi» = en mi casa.", "explanation": "El cumplido de rigor al entrar en casa de un amigo. La «j» de «joli» es una «sh» sonora: tré sho-LI shé TUA.", "register": "tu", "situation": "casa", "tags": ["visitas"] },
+    { "id": "maison.je-mets-ca-ou", "text": "Je mets ça où?", "es": "¿Dónde pongo esto?", "explanation": "Cuando ayudas en casa de alguien o en una mudanza. «mets» suena «me», sin «t» ni «s»: sh' me sa U?", "register": "neutral", "situation": "casa", "tags": ["visitas"] },
+    { "id": "maison.ou-sont-les-toilettes", "text": "Où sont les toilettes?", "es": "¿Dónde está el baño?", "notes": "«les toilettes» siempre en plural.", "explanation": "En casa ajena, en un bar o en un museo. «toilettes» suena «tua-LET»: u son lé tua-LET?", "register": "neutral", "situation": "casa", "tags": ["casa"] },
+    { "id": "maison.je-suis-chez-moi", "text": "Je suis chez moi.", "es": "Estoy en casa.", "literal": "Estoy en mi casa.", "notes": "Más natural que «à la maison» cuando hablas de tu propia casa.", "explanation": "Por teléfono, cuando te preguntan dónde estás. «moi» suena «muá»: sh' sui shé MUA.", "register": "neutral", "situation": "casa", "tags": ["casa"] },
+    { "id": "maison.je-rentre-a-la-maison", "text": "Je rentre à la maison.", "es": "Me voy a casa.", "literal": "Vuelvo a la casa.", "notes": "«rentrer» = volver a casa.", "explanation": "Al despedirte al final de la tarde. «rentre» es nasal y la «r» es de garganta: sh' RANTR' a la me-ZON.", "register": "neutral", "situation": "casa", "tags": ["casa"] },
+    { "id": "maison.je-me-reveille-a-sept-heures", "text": "Je me réveille à sept heures.", "es": "Me despierto a las siete.", "explanation": "Para contar tu mañana. «réveille» acaba en «ei» como en «rey»: sh' m' ré-VEI a se-TÖR.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-me-leve-tout-de-suite", "text": "Je me lève tout de suite.", "es": "Me levanto enseguida.", "notes": "«se lever» = levantarse; «se réveiller» = despertarse.", "explanation": "Para contar tu rutina. «suite» suena «suit», con la «u» francesa: sh' m' LEV tud SUIT.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-prends-une-douche", "text": "Je prends une douche.", "es": "Me ducho.", "literal": "Tomo una ducha.", "notes": "En francés la ducha se «toma»: «prendre une douche».", "explanation": "Para contar tu mañana o tu noche. «prends» es nasal, sin «d» ni «s»: sh' pran-zün DUSH.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-me-brosse-les-dents", "text": "Je me brosse les dents.", "es": "Me lavo los dientes.", "literal": "Me cepillo los dientes.", "explanation": "Parte de tu rutina de mañana y noche. «dents» es nasal, sin «t» ni «s»: sh' m' bros lé DAN.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-mhabille", "text": "Je m'habille.", "es": "Me visto.", "explanation": "Para contar tu mañana. La «h» no suena y «ille» suena «ii»: sh' ma-BII.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-prends-mon-petit-dejeuner", "text": "Je prends mon petit-déjeuner.", "es": "Desayuno.", "literal": "Tomo mi desayuno.", "notes": "El desayuno es «le petit-déjeuner»; «le déjeuner» es la comida del mediodía.", "explanation": "Al contar tu mañana. «petit» casi pierde la «e»: mon p'-ti dé-shö-NÉ.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.dabord-un-cafe", "text": "D'abord, un café!", "es": "¡Primero, un café!", "explanation": "Lo que dices al levantarte antes de hacer nada. «café» lleva el acento al final: da-BOR, an ka-FÉ.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-pars-au-travail", "text": "Je pars au travail à huit heures.", "es": "Salgo para el trabajo a las ocho.", "notes": "«partir» = irse, salir de un sitio.", "explanation": "Para contar tu horario. «travail» acaba en «ai» como «hay»: sh' par o tra-VAI a ui-TÖR.", "register": "neutral", "situation": "casa", "tags": ["rutina", "trabajo"] },
+    { "id": "maison.tu-te-leves-a-quelle-heure", "text": "Tu te lèves à quelle heure?", "es": "¿A qué hora te levantas?", "explanation": "A un amigo o compañero de piso. «quelle‿heure» se liga: tü t' LEV a ke-LÖR?", "register": "tu", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-ne-suis-pas-du-matin", "text": "Je ne suis pas du matin.", "es": "No soy de mañanas.", "notes": "Igual que en español: «être du matin» / «être du soir».", "explanation": "Para disculparte si estás espeso temprano. «matin» acaba en nasal, sin «n»: pa dü ma-TAN.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-travaille-de-neuf-heures-a-cinq-heures", "text": "Je travaille de neuf heures à cinq heures.", "es": "Trabajo de nueve a cinco.", "notes": "La «f» de «neuf» suena «v» ante «heures»: «neuf‿heures» = nö-VÖR.", "explanation": "Para contar tu horario de trabajo. Ojo a las ligaduras: d' nö-VÖR a san-KÖR.", "register": "neutral", "situation": "casa", "tags": ["rutina", "trabajo"] },
+    { "id": "maison.je-dejeune-a-midi", "text": "Je déjeune à midi.", "es": "Como a las doce.", "notes": "En Francia se come pronto: entre las doce y la una.", "explanation": "Para hablar de tus horarios, que en Francia son más tempranos. «déjeune» suena dé-SHÖN.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.le-soir-je-rentre-vers-sept-heures", "text": "Le soir, je rentre vers sept heures.", "es": "Por la tarde vuelvo a casa hacia las siete.", "notes": "«vers» = hacia, sobre (una hora aproximada).", "explanation": "Para contar tu tarde. «soir» suena «suar» y «vers» se dice «ver»: l' SUAR, sh' rantr' ver se-TÖR.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-fais-la-cuisine", "text": "Je fais la cuisine.", "es": "Cocino.", "literal": "Hago la cocina.", "notes": "«la cuisine» es la cocina (el sitio) y también cocinar.", "explanation": "Para contar qué haces por la tarde. «cuisine» suena «kui-ZIN», con «z» sonora.", "register": "neutral", "situation": "casa", "tags": ["rutina", "tareas"] },
+    { "id": "maison.on-dine-a-vingt-heures", "text": "On dîne à vingt heures.", "es": "Cenamos a las ocho.", "notes": "En la conversación «on» sustituye a «nous»; las horas oficiales van de 0 a 24.", "explanation": "Para contar los horarios de tu casa. «vingt‿heures» se liga con «t»: on DIN a van-TÖR.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-regarde-la-tele", "text": "Je regarde la télé.", "es": "Veo la tele.", "notes": "«regarder» = mirar, ver (la tele, una serie).", "explanation": "Para contar tu noche. La primera «e» de «regarde» casi desaparece: sh' r'-GARD la té-LÉ.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.je-me-couche-tard", "text": "Je me couche tard.", "es": "Me acuesto tarde.", "explanation": "Para hablar de tus horarios de noche. «tard» suena «tar», sin «d»: sh' m' KUSH TAR.", "register": "neutral", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.dors-bien", "text": "Dors bien!", "es": "¡Que duermas bien!", "literal": "¡Duerme bien!", "notes": "Con «vous»: «Dormez bien!».", "explanation": "A tu pareja, tu familia o tu compañero de piso antes de dormir. «Dors» suena «dor», sin «s»: dor BIAN.", "register": "tu", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.quest-ce-que-tu-fais-le-soir", "text": "Qu'est-ce que tu fais le soir?", "es": "¿Qué haces por las tardes?", "notes": "«le soir» con artículo = cada tarde, normalmente.", "explanation": "A un amigo, para conocer su rutina. «Qu'est-ce que» suena de un tirón: kes-k' tü fe l' SUAR?", "register": "tu", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.le-mardi-je-teletravaille", "text": "Le mardi, je télétravaille.", "es": "Los martes teletrabajo.", "notes": "«le mardi» con artículo = todos los martes; «mardi» solo = este martes.", "explanation": "Para hablar de tu semana. «travaille» acaba en «ai»: l' mar-DI, sh' té-lé-tra-VAI.", "register": "neutral", "situation": "casa", "tags": ["semana", "trabajo"] },
+    { "id": "maison.le-samedi-je-fais-le-menage", "text": "Le samedi, je fais le ménage.", "es": "Los sábados limpio la casa.", "literal": "El sábado, hago la limpieza.", "explanation": "Para contar tus tareas. «ménage» acaba en «sh» sonora: l' sam-DI, sh' fe l' mé-NASH.", "register": "neutral", "situation": "casa", "tags": ["semana", "tareas"] },
+    { "id": "maison.je-fais-la-vaisselle", "text": "Je fais la vaisselle.", "es": "Friego los platos.", "literal": "Hago la vajilla.", "explanation": "Para ofrecerte después de comer en casa ajena. «vaisselle» suena «ve-SEL», con «s» sorda.", "register": "neutral", "situation": "casa", "tags": ["tareas"] },
+    { "id": "maison.cest-ton-tour", "text": "C'est ton tour de faire la vaisselle!", "es": "¡Te toca fregar los platos!", "literal": "Es tu turno de hacer la vajilla.", "explanation": "A tu compañero de piso, medio en broma. «tour» suena «tur»: se ton TUR d' fer la ve-SEL.", "register": "tu", "situation": "casa", "tags": ["tareas"] },
+    { "id": "maison.dhabitude-je-me-leve-tot", "text": "D'habitude, je me lève tôt.", "es": "Normalmente me levanto temprano.", "explanation": "Para hablar de tus costumbres. La «h» no suena y «tôt» suena «to»: da-bi-TÜD, sh' m' lev TO.", "register": "neutral", "situation": "casa", "tags": ["semana", "rutina"] },
+    { "id": "maison.je-ne-regarde-jamais-la-tele", "text": "Je ne regarde jamais la télé.", "es": "No veo nunca la tele.", "notes": "«ne … jamais» = nunca: va en el lugar de «ne … pas».", "explanation": "Para decir lo que no haces nunca. «jamais» empieza con «sh» sonora: sha-ME.", "register": "neutral", "situation": "casa", "tags": ["semana"] },
+    { "id": "maison.le-dimanche-je-fais-la-grasse-matinee", "text": "Le dimanche, je fais la grasse matinée.", "es": "Los domingos me quedo en la cama hasta tarde.", "literal": "El domingo, hago la mañana grasa.", "notes": "«faire la grasse matinée» = dormir hasta tarde, sin madrugar.", "explanation": "Para hablar de tus fines de semana. «dimanche» tiene dos nasales: l' di-MANSH, sh' fe la gras ma-ti-NÉ.", "register": "neutral", "situation": "casa", "tags": ["semana", "rutina"] }
+  ],
+  "vocab": [
+    { "id": "maison.maison", "word": "maison", "article": "la", "gender": "f", "plural": "maisons", "es": "la casa", "notes": "«à la maison» = en casa.", "example": "maison.je-rentre-a-la-maison", "situation": "casa", "tags": ["vivienda"], "image": "fluent:house" },
+    { "id": "maison.appartement", "word": "appartement", "article": "l'", "gender": "m", "plural": "appartements", "es": "el piso", "notes": "Masculino; en Francia se dice «appart» en la conversación.", "example": "maison.jhabite-dans-un-appartement", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.immeuble", "word": "immeuble", "article": "l'", "gender": "m", "plural": "immeubles", "es": "el edificio (de pisos)", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.quartier", "word": "quartier", "article": "le", "gender": "m", "plural": "quartiers", "es": "el barrio", "example": "maison.tu-habites-dans-quel-quartier", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.etage", "word": "étage", "article": "l'", "gender": "m", "plural": "étages", "es": "la planta, el piso (altura)", "notes": "«au premier étage» = en el primero.", "example": "maison.cest-au-troisieme-etage", "situation": "casa", "tags": ["vivienda"] },
+    { "id": "maison.ascenseur", "word": "ascenseur", "article": "l'", "gender": "m", "plural": "ascenseurs", "es": "el ascensor", "example": "maison.il-y-a-un-ascenseur", "situation": "casa", "tags": ["vivienda"], "image": "fluent:elevator" },
+    { "id": "maison.voisin", "word": "voisin", "article": "le", "gender": "m", "plural": "voisins", "es": "el vecino", "notes": "Femenino: «la voisine».", "example": "maison.je-suis-votre-nouveau-voisin", "situation": "casa", "tags": ["vecinos"] },
+    { "id": "maison.chambre", "word": "chambre", "article": "la", "gender": "f", "plural": "chambres", "es": "el dormitorio", "notes": "No es cualquier «cámara»: es la habitación donde duermes.", "example": "maison.il-y-a-deux-chambres", "situation": "casa", "tags": ["casa"], "image": "fluent:bed" },
+    { "id": "maison.cuisine", "word": "cuisine", "article": "la", "gender": "f", "plural": "cuisines", "es": "la cocina", "notes": "El sitio y también el arte de cocinar.", "example": "maison.je-fais-la-cuisine", "situation": "casa", "tags": ["casa"], "image": "fluent:cooking" },
+    { "id": "maison.salon", "word": "salon", "article": "le", "gender": "m", "plural": "salons", "es": "el salón", "situation": "casa", "tags": ["casa"], "image": "fluent:couch-and-lamp" },
+    { "id": "maison.salle-de-bain", "word": "salle de bain", "article": "la", "gender": "f", "plural": "salles de bain", "es": "el cuarto de baño", "notes": "Para el váter se dice «les toilettes».", "example": "maison.la-salle-de-bain-est-au-fond", "situation": "casa", "tags": ["casa"], "image": "fluent:bathtub" },
+    { "id": "maison.toilettes", "word": "toilettes", "article": "les", "gender": "f", "es": "el baño, el váter", "notes": "Siempre en plural y femenino.", "example": "maison.ou-sont-les-toilettes", "situation": "casa", "tags": ["casa"], "image": "fluent:toilet" },
+    { "id": "maison.lit", "word": "lit", "article": "le", "gender": "m", "plural": "lits", "es": "la cama", "notes": "La «t» no suena: «li».", "situation": "casa", "tags": ["muebles"], "image": "fluent:bed" },
+    { "id": "maison.table", "word": "table", "article": "la", "gender": "f", "plural": "tables", "es": "la mesa", "notes": "«À table!» = ¡a comer!", "situation": "casa", "tags": ["muebles"] },
+    { "id": "maison.chaise", "word": "chaise", "article": "la", "gender": "f", "plural": "chaises", "es": "la silla", "notes": "Suena «shez».", "situation": "casa", "tags": ["muebles"], "image": "fluent:chair" },
+    { "id": "maison.canape", "word": "canapé", "article": "le", "gender": "m", "plural": "canapés", "es": "el sofá", "situation": "casa", "tags": ["muebles"], "image": "fluent:couch-and-lamp" },
+    { "id": "maison.porte", "word": "porte", "article": "la", "gender": "f", "plural": "portes", "es": "la puerta", "situation": "casa", "tags": ["casa"], "image": "fluent:door" },
+    { "id": "maison.fenetre", "word": "fenêtre", "article": "la", "gender": "f", "plural": "fenêtres", "es": "la ventana", "example": "maison.tu-peux-fermer-la-fenetre", "situation": "casa", "tags": ["casa"], "image": "fluent:window" },
+    { "id": "maison.cle", "word": "clé", "article": "la", "gender": "f", "plural": "clés", "es": "la llave", "example": "maison.jai-oublie-mes-cles", "situation": "casa", "tags": ["casa"], "image": "fluent:key" },
+    { "id": "maison.reveil", "word": "réveil", "article": "le", "gender": "m", "plural": "réveils", "es": "el despertador", "notes": "Suena «ré-VEI».", "example": "maison.je-me-reveille-a-sept-heures", "situation": "casa", "tags": ["rutina"], "image": "fluent:alarm-clock" },
+    { "id": "maison.douche", "word": "douche", "article": "la", "gender": "f", "plural": "douches", "es": "la ducha", "example": "maison.je-prends-une-douche", "situation": "casa", "tags": ["rutina"], "image": "fluent:shower" },
+    { "id": "maison.brosse-a-dents", "word": "brosse à dents", "article": "la", "gender": "f", "plural": "brosses à dents", "es": "el cepillo de dientes", "example": "maison.je-me-brosse-les-dents", "situation": "casa", "tags": ["rutina"], "image": "fluent:toothbrush" },
+    { "id": "maison.petit-dejeuner", "word": "petit-déjeuner", "article": "le", "gender": "m", "plural": "petits-déjeuners", "es": "el desayuno", "example": "maison.je-prends-mon-petit-dejeuner", "situation": "casa", "tags": ["rutina", "comidas"] },
+    { "id": "maison.dejeuner", "word": "déjeuner", "article": "le", "gender": "m", "plural": "déjeuners", "es": "la comida (del mediodía)", "notes": "Ojo: no es el desayuno. Verbo: «déjeuner» = comer.", "example": "maison.je-dejeune-a-midi", "situation": "casa", "tags": ["rutina", "comidas"] },
+    { "id": "maison.diner", "word": "dîner", "article": "le", "gender": "m", "plural": "dîners", "es": "la cena", "notes": "Verbo: «dîner» = cenar.", "example": "maison.on-dine-a-vingt-heures", "situation": "casa", "tags": ["rutina", "comidas"] },
+    { "id": "maison.travail", "word": "travail", "article": "le", "gender": "m", "plural": "travaux", "es": "el trabajo", "notes": "Plural irregular: «les travaux» (también = las obras).", "example": "maison.je-pars-au-travail", "situation": "casa", "tags": ["trabajo"], "image": "fluent:briefcase" },
+    { "id": "maison.tele", "word": "télé", "article": "la", "gender": "f", "plural": "télés", "es": "la tele", "notes": "Forma corta y habitual de «la télévision».", "example": "maison.je-regarde-la-tele", "situation": "casa", "tags": ["rutina"], "image": "fluent:television" },
+    { "id": "maison.menage", "word": "ménage", "article": "le", "gender": "m", "es": "la limpieza (de la casa)", "notes": "«faire le ménage» = limpiar la casa.", "example": "maison.le-samedi-je-fais-le-menage", "situation": "casa", "tags": ["tareas"], "image": "fluent:broom" },
+    { "id": "maison.vaisselle", "word": "vaisselle", "article": "la", "gender": "f", "es": "los platos, la vajilla", "notes": "«faire la vaisselle» = fregar los platos.", "example": "maison.je-fais-la-vaisselle", "situation": "casa", "tags": ["tareas"] },
+    { "id": "maison.toujours", "word": "toujours", "es": "siempre", "notes": "Suena «tu-SHUR».", "situation": "casa", "tags": ["frecuencia"] },
+    { "id": "maison.souvent", "word": "souvent", "es": "a menudo", "notes": "Nasal al final, sin «t»: «su-VAN».", "situation": "casa", "tags": ["frecuencia"] },
+    { "id": "maison.parfois", "word": "parfois", "es": "a veces", "notes": "Suena «par-FUA».", "situation": "casa", "tags": ["frecuencia"] },
+    { "id": "maison.jamais", "word": "jamais", "es": "nunca", "notes": "Con verbo va con «ne»: «je ne … jamais».", "example": "maison.je-ne-regarde-jamais-la-tele", "situation": "casa", "tags": ["frecuencia"] },
+    { "id": "maison.dhabitude", "word": "d'habitude", "es": "normalmente, por lo general", "example": "maison.dhabitude-je-me-leve-tot", "situation": "casa", "tags": ["frecuencia"] },
+    { "id": "maison.tot", "word": "tôt", "es": "temprano", "notes": "Suena «to».", "example": "maison.dhabitude-je-me-leve-tot", "situation": "casa", "tags": ["rutina"] },
+    { "id": "maison.tard", "word": "tard", "es": "tarde", "notes": "Adverbio («llegar tarde»); la tarde del día es «l'après-midi» o «le soir».", "example": "maison.je-me-couche-tard", "situation": "casa", "tags": ["rutina"] }
+  ],
+  "qa": [
+    {
+      "id": "maison.qa.logement",
+      "question": "Tu habites dans une maison ou dans un appartement?",
+      "questionEs": "¿Vives en una casa o en un piso?",
+      "accepted": [
+        { "text": "J'habite dans un appartement.", "es": "Vivo en un piso." },
+        { "text": "Dans un petit appartement, au centre.", "es": "En un piso pequeño, en el centro." }
+      ],
+      "distractors": [
+        { "text": "J'habite dans une appartement.", "es": "Vivo en una piso." },
+        { "text": "Je suis à la maison.", "es": "Estoy en casa." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "«appartement» es masculino: «un appartement».",
+      "tags": ["vivienda"]
+    },
+    {
+      "id": "maison.qa.voisin",
+      "question": "Bonjour! Vous êtes le nouveau voisin?",
+      "questionEs": "¡Hola! ¿Es usted el nuevo vecino?",
+      "accepted": [
+        { "text": "Oui, enchanté! J'habite au troisième.", "es": "Sí, ¡encantado! Vivo en el tercero." },
+        { "text": "Oui, bonjour! Je m'appelle Hernán.", "es": "Sí, ¡hola! Me llamo Hernán." }
+      ],
+      "distractors": [
+        { "text": "Oui, j'ai trois étages.", "es": "Sí, tengo tres plantas." },
+        { "text": "Non, je suis chez moi.", "es": "No, estoy en casa." }
+      ],
+      "register": "vous",
+      "situation": "casa",
+      "tags": ["vecinos"]
+    },
+    {
+      "id": "maison.qa.entre",
+      "question": "Entre, je t'en prie! Fais comme chez toi.",
+      "questionEs": "¡Pasa, pasa! Estás en tu casa.",
+      "accepted": [
+        { "text": "Merci! C'est très joli, chez toi!", "es": "¡Gracias! ¡Qué bonita es tu casa!" },
+        { "text": "Merci beaucoup!", "es": "¡Muchas gracias!" }
+      ],
+      "distractors": [
+        { "text": "De rien!", "es": "¡De nada!" },
+        { "text": "Bienvenue chez moi!", "es": "¡Bienvenido a mi casa!" }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "Agradeces tú: «De rien» y «Bienvenue» los dice el anfitrión.",
+      "tags": ["visitas"]
+    },
+    {
+      "id": "maison.qa.toilettes",
+      "question": "Excuse-moi, où sont les toilettes?",
+      "questionEs": "Perdona, ¿dónde está el baño?",
+      "accepted": [
+        { "text": "Au fond du couloir.", "es": "Al fondo del pasillo." },
+        { "text": "C'est la porte à côté de la cuisine.", "es": "Es la puerta que está al lado de la cocina." }
+      ],
+      "distractors": [
+        { "text": "C'est au troisième étage, l'ascenseur.", "es": "Es en el tercer piso, el ascensor." },
+        { "text": "Je prends une douche.", "es": "Me ducho." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "tags": ["visitas"]
+    },
+    {
+      "id": "maison.qa.lever",
+      "question": "Tu te lèves à quelle heure, le matin?",
+      "questionEs": "¿A qué hora te levantas por la mañana?",
+      "accepted": [
+        { "text": "Je me lève à sept heures.", "es": "Me levanto a las siete." },
+        { "text": "Vers sept heures et demie.", "es": "Hacia las siete y media." }
+      ],
+      "distractors": [
+        { "text": "Je lève à sept heures.", "es": "Levanto a las siete." },
+        { "text": "Je me couche à sept heures.", "es": "Me acuesto a las siete." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "«se lever» necesita el «me»: «je me lève».",
+      "tags": ["rutina"]
+    },
+    {
+      "id": "maison.qa.matin",
+      "question": "Qu'est-ce que tu fais le matin, avant le travail?",
+      "questionEs": "¿Qué haces por la mañana, antes del trabajo?",
+      "accepted": [
+        { "text": "Je prends une douche et je prends mon petit-déjeuner.", "es": "Me ducho y desayuno." },
+        { "text": "D'abord, un café! Après, je m'habille.", "es": "¡Primero, un café! Después me visto." }
+      ],
+      "distractors": [
+        { "text": "Je fais une douche et je déjeune.", "es": "Hago una ducha y como." },
+        { "text": "Je me couche tard.", "es": "Me acuesto tarde." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "La ducha se «prend», no se «fait»; y «déjeuner» es comer, no desayunar.",
+      "tags": ["rutina"]
+    },
+    {
+      "id": "maison.qa.soir",
+      "question": "Et le soir, qu'est-ce que tu fais, en général?",
+      "questionEs": "¿Y por la tarde qué haces, en general?",
+      "accepted": [
+        { "text": "Je fais la cuisine et je regarde la télé.", "es": "Cocino y veo la tele." },
+        { "text": "Je rentre vers sept heures et je me couche tôt.", "es": "Vuelvo hacia las siete y me acuesto temprano." }
+      ],
+      "distractors": [
+        { "text": "Je me réveille à sept heures.", "es": "Me despierto a las siete." },
+        { "text": "Je fais la télé.", "es": "Hago la tele." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "tags": ["rutina"]
+    },
+    {
+      "id": "maison.qa.vaisselle",
+      "question": "Tu peux faire la vaisselle ce soir?",
+      "questionEs": "¿Puedes fregar los platos esta noche?",
+      "accepted": [
+        { "text": "Oui, pas de problème.", "es": "Sí, sin problema." },
+        { "text": "Désolé, je ne peux pas. Demain, d'accord?", "es": "Lo siento, no puedo. Mañana, ¿vale?" }
+      ],
+      "distractors": [
+        { "text": "Non merci, je n'ai pas faim.", "es": "No, gracias, no tengo hambre." },
+        { "text": "Oui, je fais le ménage hier.", "es": "Sí, hago la limpieza ayer." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "tags": ["tareas"]
+    }
+  ]
+}
