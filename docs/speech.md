@@ -163,3 +163,14 @@ Only this key is ever written or removed (`clearSpeechLog()`). No transcript tex
   Siri & Dictation must be on (Ajustes). The message for `not-allowed` says so.
 - A second `getUserMedia` stream breaks recognition, so there is no level meter.
 - Start from a user gesture; stop any playing audio first (the mic would capture it).
+
+## Probar micrófono (`/microfono/`)
+
+Diagnostics screen under Perfil (`NESTED` id `microphone`, linked from /perfil). Shows whether
+recognition exists, installed app vs browser tab and the browser family; one try card for the
+active pack's `speechLocale` and one for `es-ES` (`useListen` phrase mode + `<SpeakPanel>`), with
+the steps lit live and, once settled, the per-state timings and end reason of that session's log
+entry; the last 15 log entries in plain Spanish (newest first); "Copiar registro" (clipboard JSON
+`{ key, copiedAt, supported, standalone, browser, entries }`, with a read-only textarea fallback
+when the clipboard fails); "Borrar registro" (confirm, then `clearSpeechLog()`: only
+`lang-lern:speech-log`); iPhone tips. The log is read live through `subscribeSpeechLog`.
