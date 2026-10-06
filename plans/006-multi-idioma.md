@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 10:18Z 💻
-- Writer: 💻 desktop
+- Updated: 2026-10-06 10:20Z 💻
+- Writer: released 10:20Z by 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T73; then Hernán: db push, hand checks, review queue
-- Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
+- Next step: all 16 tasks done; Hernán: review + visual queues, then OK to merge into main / deploy
+- Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying; OK for merge to main
 
 ## Shared contract (all tasks read this)
 
@@ -230,7 +230,7 @@ Worktree setup: npm ci
 - Outcome: stories 7–12 per T71's outline (11–12 A2, light passé composé), 6 new inline words, no ⚠ · b23c31a · verify ✓ 💻 · not checked: native review, audio (T73)
 
 ## T73 — French audio and pictures, final offline check
-- Status: running (attempt 1 · 💻 · agent ae4d7048a936ed7f7 · since 10:12Z)
+- Status: done
 - Depends on: T61, T70, T72
 - Where: pc (edge-tts needs the Mac's internet; on-device check)
 - Goal: Generate fr-FR neural mp3 for every French playable and the French pictures, commit them, and prove the whole French course works offline with only its audio cached.
@@ -241,7 +241,7 @@ Worktree setup: npm ci
   - `npm run content:check -- --strict-audio --strict-images` → exit 0.
   - `npm run verify` → exit 0
   - Hand check (PC): installed PWA with French active, airplane mode: a lesson, a dialogue and a story play neural audio.
-- Outcome:
+- Outcome: fr-FR audio 1732 mp3 (29 MB) + 109 Fluent pictures; minuit/midi without article; strict image check now counts pictures referenced by any pack; SW: audio lists fr+it per language, no mp3 precached · 1c894c7 · verify ✓ strict audio+images ✓ 💻 · not checked: iPhone PWA French offline
 
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
@@ -259,6 +259,7 @@ Worktree setup: npm ci
 - [ ] T71 @2fad6dd — French language review (queued 2026-10-06 💻)
 - [ ] T70 @70795f1 — French language review (queued 2026-10-06 💻)
 - [ ] T72 @b23c31a — French language review (queued 2026-10-06 💻)
+- [ ] T73 @1c894c7 — code review (scripts/content.ts, scripts/images/plan.ts) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -267,6 +268,7 @@ Worktree setup: npm ci
 - [ ] T60 @c5f60f6 — picker, Ruta switch, Perfil section, welcome: dark + light 375 px; first launch on installed PWA; picker audio state (queued 2026-10-06 💻)
 - [ ] T62 @c191bba — Ruta and Perfil points/streak: light + dark, 375 px, with Hernán's real data (queued 2026-10-06 💻)
 - [ ] T70 @70795f1 — play two French dialogues and the French placement with device voices (queued 2026-10-06 💻)
+- [ ] T73 @1c894c7 — installed PWA, French active, airplane mode: lesson, dialogue, story play neural audio; audio cache switch it↔fr (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: multi-language app; French (`fr`) is the second pack; adding a language stays content only; active-language picker on first launch and in Perfil, stored on the device; every page uses the active pack; static params for all packs with ids unique across packs; SW precaches only the active language's audio; never lose on-device data (every `lang-lern:*:<lang>` key and shape kept, Italian progress untouched). (Hernán)
@@ -322,3 +324,4 @@ Worktree setup: npm ci
 - 2026-10-06 10:12Z 💻 T72 done · worktree-agent-aa287685dcb08c962 → b23c31a · verify ✓
 - 2026-10-06 10:12Z 💻 T73 launched · attempt 1 · agent ae4d7048a936ed7f7
 - 2026-10-06 10:18Z 💻 T73 agent blocked: strict image check is per pack (other pack's pictures flagged unused); scope extended to scripts/images/plan.ts + scripts/content.ts, sent back to the same agent
+- 2026-10-06 10:20Z 💻 T73 done · worktree-agent-ae4d7048a936ed7f7 → 1c894c7 · verify ✓
