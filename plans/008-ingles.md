@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:33Z 💻
+- Updated: 2026-10-06 13:38Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 7aa62c2
+- Branch: plan-008-ingles @ 4bb405e
 - Next step: integrate T105/T106; then T108 placement, T107 stories
 - Needs Hernán: -
 
@@ -225,7 +225,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T106 — English B1: stories 1–6
-- Status: running (attempt 1 · 💻 · agent ab9c8ed4cb82f5db9 · since 13:33Z)
+- Status: done
 - Depends on: T99, T100, T101, T102, T103, T104
 - Where: any
 - Goal: B1 stories 1–6 (Pablo back in Chicago working at Maya's startup), `level: "B1"`, mixed tenses, same cast as A2, reusing inline key words by id.
@@ -234,7 +234,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: B1 stories 101–106 (office, party/Nina, cancelled plans, video call with Mr. Park, Jordan's studio interview, IT bug), side cast Sam/Priya/Nina/Mr. Park/Kevin, no ⚠ · 4bb405e · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T107 — English B1: stories 7–12
 - Status: pending
@@ -303,6 +303,7 @@ Worktree setup: npm ci
 - [ ] T102 @fbd3ec5 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T103 @edc33c4 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T104 @7aa62c2 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T106 @4bb405e — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -322,6 +323,7 @@ Worktree setup: npm ci
 - 2026-10-06 T92: grammar cards live in the grammar unit's own grammar array (not extras) so they get the level; T100 scope updated accordingly. (orchestrator)
 - 2026-10-06 T98: outline for A2 stories 7–12 (T99): 7 coffee shop + deep-dish pizza, tip; 8 winter coat + returning a sweater; 9 L train to the Loop, lost, the lake; 10 cold, pharmacy via Mrs. Carter; 11 urgent care + telling his week (past simple); 12 goodbye at O'Hare (past simple), sets up B1. Voices: narrator Ava, Pablo Andrew, Maya/Mrs. Carter Emma (never together), Jordan Brian. (agent)
 - 2026-10-06 plan: Hernán: plan 008 runs entirely on the Mac (this session), not in the cloud. (Hernán)
+- 2026-10-06 T106: outline for B1 stories 7–12 (T107): 107 one-bedroom on Halsted (lease, deposit, utilities); 108 moving in (leak/heating, the super, noisy neighbors, Mrs. Carter helps); 109 checking account, card declined, unknown charge; 110 work trip to Denver, delay, missed connection, rebooked; 111 lost suitcase + telling it back with past continuous; 112 one year in Chicago, party, Pablo decides to stay. Jordan now works at a recording studio. Voices: side characters reuse a non-speaking cast member's voice (Sam/Mr. Park/Kevin Brian, Nina Emma). (agent)
 
 ## Proposals (new scope)
 - 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
@@ -359,3 +361,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:32Z 💻 T103 done · worktree-agent-a4c5260f9084f5cfc → edc33c4 · verify ✓
 - 2026-10-06 13:33Z 💻 T104 done · worktree-agent-aac01f4b40eee4d97 → 7aa62c2 · verify ✓
 - 2026-10-06 13:33Z 💻 T105 launched · agent a2fac5b84b0da1e21; T106 launched · agent ab9c8ed4cb82f5db9
+- 2026-10-06 13:38Z 💻 T106 done · worktree-agent-ab9c8ed4cb82f5db9 → 4bb405e · verify ✓
