@@ -1,15 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
+import { SpeakPanel, useListen, WordFeedback } from "@/components/speech";
 import { Button } from "@/components/ui";
-import { stop } from "@/lib/audio";
+import { speak } from "@/lib/audio";
 import { getPack } from "@/lib/content";
-import { cn } from "@/lib/cn";
 import type { SpeakExercise as Speak } from "@/lib/exercises";
-import { canRecognize, listenOnce, scoreSpeech, SPEAKING_PAUSE_MINUTES, type RecognitionSession } from "@/lib/speech";
-import { MicIcon, PlayControls, Prompt, useLessonLang, type ExerciseProps } from "./shared";
+import { SPEAKING_PAUSE_MINUTES, scoreHeard, type SpeechScore } from "@/lib/speech";
+import { PlayControls, Prompt, useLessonLang, type ExerciseProps } from "./shared";
 
 const MAX_TRIES = 2;
+
+const LINK = "text-base font-bold underline underline-offset-4 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
 
 export interface SpeakExerciseProps extends ExerciseProps<Speak> {
   /** "No puedo hablar ahora": the player pauses speaking and skips these exercises. */
@@ -17,57 +19,37 @@ export interface SpeakExerciseProps extends ExerciseProps<Speak> {
 }
 
 /**
- * Say it aloud. With Web Speech recognition: listen and compare (fuzzy). Without it, or if the
- * microphone is refused: self-evaluation ("Me ha salido / No me ha salido").
+ * Say it aloud. With Web Speech recognition: the shared mic UI (live text, states, errors with
+ * "Reintentar") and word-by-word feedback (`scoreHeard`); MAX_TRIES scored attempts. Errors never
+ * count as a try nor switch to self-evaluation. Without recognition, or when the learner prefers:
+ * self-evaluation ("Me ha salido / No me ha salido").
  */
 export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: SpeakExerciseProps) {
   const lang = useLessonLang();
-  const [mode, setMode] = useState<"mic" | "self">(() => (canRecognize() ? "mic" : "self"));
-  const [listening, setListening] = useState(false);
+  const { meta } = getPack(lang);
+  const [preferSelf, setPreferSelf] = useState(false);
   const [tries, setTries] = useState(0);
-  const [heard, setHeard] = useState<string | null>(null);
-  const [notice, setNotice] = useState<string | null>(null);
-  const session = useRef<RecognitionSession | null>(null);
+  const [score, setScore] = useState<SpeechScore | null>(null);
 
-  useEffect(() => () => session.current?.abort(), []);
-
-  const listen = () => {
-    if (answered) return;
-    if (listening) {
-      session.current?.stop();
-      return;
-    }
-    stop();
-    const { meta } = getPack(lang);
-    const s = listenOnce(meta.speechLocale);
-    session.current = s;
-    setListening(true);
-    setNotice(null);
-    void s.result.then((r) => {
-      if (session.current !== s) return;
-      session.current = null;
-      setListening(false);
-      if (!r.ok) {
-        if (r.error === "aborted") return;
-        if (r.error === "no-speech") {
-          setNotice("No te he oído. Toca el micro y habla más cerca.");
-          return;
-        }
-        setMode("self");
-        setNotice(
-          r.error === "not-allowed"
-            ? "No tengo permiso para usar el micro. Dilo en voz alta y evalúate tú."
-            : "El reconocimiento de voz no funciona ahora. Dilo en voz alta y evalúate tú.",
-        );
-        return;
-      }
-      const score = scoreSpeech(r.transcripts, exercise.audio.text, meta.numberWords);
-      setHeard(score.heard);
+  const listen = useListen({
+    locale: meta.speechLocale,
+    onResult: (r) => {
+      if (answered) return;
+      const s = scoreHeard(r.alternatives, exercise.audio.text, meta.numberWords);
+      setScore(s);
       const used = tries + 1;
       setTries(used);
-      if (score.passed) onAnswer({ correct: true, given: score.heard });
-      else if (used >= MAX_TRIES) onAnswer({ correct: false, given: score.heard });
-    });
+      if (s.passed) onAnswer({ correct: true, given: s.heard });
+      else if (used >= MAX_TRIES) onAnswer({ correct: false, given: s.heard });
+    },
+  });
+
+  const selfMode = !listen.supported || preferSelf;
+  const retryShown = score !== null && !score.passed && !answered && !listen.active && !listen.error;
+
+  const toSelf = () => {
+    listen.cancel();
+    setPreferSelf(true);
   };
 
   return (
@@ -81,42 +63,38 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
       </div>
       <PlayControls audio={exercise.audio} size="md" />
 
-      {notice ? <p className="rounded-button bg-lemon-soft px-4 py-3 text-base text-ink">{notice}</p> : null}
-
-      {mode === "mic" ? (
-        <div className="flex flex-col items-center gap-3">
-          <button
-            type="button"
-            onClick={listen}
-            disabled={answered}
-            aria-label={listening ? "Dejar de escuchar" : "Toca y habla"}
-            className={cn(
-              "pressable inline-flex size-24 items-center justify-center rounded-full text-on-accent",
-              "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep disabled:opacity-50",
-              listening
-                ? "animate-pulse bg-terracotta [--ledge:var(--terracotta-ledge)] motion-reduce:animate-none"
-                : "bg-sea [--ledge:var(--sea-ledge)]",
-            )}
-          >
-            <MicIcon className="size-11" />
-          </button>
-          <p className="text-base font-bold text-ink-muted" aria-live="polite">
-            {listening ? "Te escucho…" : tries > 0 && !answered ? "Casi. Inténtalo otra vez." : "Toca y habla"}
-          </p>
-          {heard && !answered ? (
-            <p className="text-base text-ink-muted">
-              He entendido: <span lang={lang} className="font-bold text-ink">«{heard}»</span>
-            </p>
+      {!selfMode ? (
+        <div className="flex flex-col items-center gap-4">
+          {score && !listen.active ? (
+            <div className="flex w-full flex-col gap-2 rounded-card border-2 border-line bg-surface px-4 py-3">
+              <p className="text-base font-bold text-ink" aria-live="polite">
+                {score.passed ? "¡Bien dicho!" : answered
+                    ? "Así ha quedado:"
+                    : `Casi. ${MAX_TRIES - tries === 1 ? "Te queda un intento." : `Te quedan ${MAX_TRIES - tries} intentos.`}`}
+              </p>
+              <WordFeedback words={score.words} lang={lang} heard={score.heard} />
+            </div>
           ) : null}
+
+          {retryShown ? (
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button size="md" onClick={listen.start}>
+                Reintentar
+              </Button>
+              <Button size="md" variant="secondary" onClick={() => void speak(exercise.audio, { lang })}>
+                Escuchar la frase
+              </Button>
+            </div>
+          ) : null}
+
+          <SpeakPanel
+            listen={listen}
+            lang={lang}
+            disabled={answered}
+          />
+
           {!answered ? (
-            <button
-              type="button"
-              onClick={() => {
-                session.current?.abort();
-                setMode("self");
-              }}
-              className="text-base font-bold text-sea underline underline-offset-4"
-            >
+            <button type="button" onClick={toSelf} className={`${LINK} text-sea-deep`}>
               Prefiero evaluarme yo
             </button>
           ) : null}
@@ -137,6 +115,11 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
               No me ha salido
             </Button>
           </div>
+          {listen.supported && !answered ? (
+            <button type="button" onClick={() => setPreferSelf(false)} className={`${LINK} self-center text-sea-deep`}>
+              Usar el micrófono
+            </button>
+          ) : null}
         </div>
       )}
 
@@ -144,10 +127,10 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
         <button
           type="button"
           onClick={() => {
-            session.current?.abort();
+            listen.cancel();
             onCannotSpeak();
           }}
-          className="mt-auto self-center text-base font-bold text-ink-muted underline underline-offset-4"
+          className={`${LINK} mt-auto self-center text-ink-muted`}
         >
           No puedo hablar ahora ({SPEAKING_PAUSE_MINUTES} min)
         </button>

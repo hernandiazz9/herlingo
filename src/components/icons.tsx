@@ -85,3 +85,32 @@ export function SpeakerIcon(props: IconProps) {
     </Svg>
   );
 }
+
+/** Microphone: start listening. */
+export function MicIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <rect x="9" y="3" width="6" height="11" rx="3" />
+      <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+    </Svg>
+  );
+}
+
+/** Crossed-out microphone: the mic is not available. */
+export function MicOffIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <path d="M15 10V6a3 3 0 0 0-5.7-1.3M9 9v2a3 3 0 0 0 4.6 2.5" />
+      <path d="M5 11a7 7 0 0 0 11.3 5.5M19 11a7 7 0 0 1-.5 2.6M12 18v3M3 3l18 18" />
+    </Svg>
+  );
+}
+
+/** Rounded square: finish listening and keep what was said. */
+export function MicStopIcon(props: IconProps) {
+  return (
+    <Svg {...props}>
+      <rect x="6" y="6" width="12" height="12" rx="2.5" fill="currentColor" />
+    </Svg>
+  );
+}

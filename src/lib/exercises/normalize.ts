@@ -109,7 +109,8 @@ export function spellNumbers(text: string, words: Readonly<Record<string, string
   return text.replace(/\d+/g, (n) => words[String(Number(n))] ?? n);
 }
 
-function levenshtein(a: string, b: string): number {
+/** Edit distance (insertions, deletions, substitutions) between two strings. */
+export function levenshtein(a: string, b: string): number {
   if (a === b) return 0;
   if (!a.length) return b.length;
   if (!b.length) return a.length;

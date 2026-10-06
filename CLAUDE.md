@@ -42,6 +42,9 @@ src/components/icons.tsx  Inline SVG icons (no icon library).
 src/lib/               Framework-free logic. navigation.ts = the tab list (single source of truth).
                        theme/ = light/dark choice (localStorage), inline pre-paint script, theme-color.
 src/lib/content/       Content contract: schema.ts (zod, source JSON), types.ts (runtime types), index.ts (loader).
+src/lib/speech/        Speech recognition engine (createListenSession; only platform.ts touches the browser API),
+                       error messages, diagnostics log, scoring (score.ts). docs/speech.md.
+src/components/speech/ The one mic UI: useListen hook, MicButton, LiveTranscript, SpeakPanel, WordFeedback.
 src/lib/audio/         speak() / stop(): the only way to play target-language audio (content mp3s; generated.ts =
                        Prepárate lines: Cache Storage, else /api/coach/tts/ once, else speechSynthesis).
 src/lib/pwa/           Web app manifest (manifest.ts), SW registration + update prompt (register.ts, UpdatePrompt.tsx).
@@ -134,6 +137,10 @@ plans/                 Orchestrator plans. Never edit.
   falls back to `speechSynthesis` in the pack's `speechLocale` (strings, missing or failing mp3).
 - **Audio** must start from a user gesture (iOS): call `speak()` directly in the handler. Speech recognition is optional: feature-detect
   and fall back to self-evaluation.
+- **Speech** (the learner speaking) only through `useListen` (`@/components/speech`) or
+  `createListenSession` (`@/lib/speech`); ESLint rejects `SpeechRecognition` /
+  `webkitSpeechRecognition` outside `src/lib/speech/`. Score with `scoreHeard` / `bestOption`.
+  Each session logs to `lang-lern:speech-log` (no transcript text; "Probar micrófono" at /microfono/). docs/speech.md.
 - **Pictures** (vocab words, dialogue avatars) are shown only through `<Picture image={…} alt={…} size=… />`
   from `@/components/ui`, with the resolved `image` / `avatar` (`{ src, dark? }`) from `@/lib/content`
   (`listVocab({ situation, withImage })`, `getVocab()`, `hasImage()`); absent = no picture, show text.

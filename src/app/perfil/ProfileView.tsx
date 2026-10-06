@@ -12,6 +12,7 @@ import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useLevel } from "@/lib/content/level-hook";
 import { LevelChips } from "@/components/level/LevelChips";
 import { cn } from "@/lib/cn";
+import { getTab } from "@/lib/navigation";
 import { resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
 import { useAppPoints, useProgress, useSettings, type AppPoints } from "@/lib/progress/use-progress";
 import { LanguagePicker, pickablePacks, useChooseLanguage } from "@/components/language/LanguagePicker";
@@ -115,6 +116,18 @@ function Profile({ lang }: { lang: string }) {
             className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
           >
             Cómo instalarla
+          </Link>
+        </Card>
+        <Card className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1">
+            <h3 className="text-lg font-bold text-ink">Probar micrófono</h3>
+            <p className="text-sm text-ink-muted">Comprueba si la app te oye y mira qué pasó en tus últimos intentos.</p>
+          </div>
+          <Link
+            href={getTab("microphone").href}
+            className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
+          >
+            Probar micrófono
           </Link>
         </Card>
         <Card tone="terracotta" className="flex flex-col gap-3">

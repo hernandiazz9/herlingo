@@ -1,8 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState, useSyncExternalStore, type FormEvent } from "react";
-import { LessonLangContext, MicIcon, PlayControls } from "@/components/exercises";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { LessonLangContext, PlayControls } from "@/components/exercises";
+import { LiveTranscript, MicButton, useListen } from "@/components/speech";
 import { Button, Card } from "@/components/ui";
 import { stop } from "@/lib/audio";
 import {
@@ -19,9 +20,7 @@ import {
 import { useCoachAccess, useCoachUsage, useLearnerProfile } from "@/lib/coach/use-coach";
 import { getPack } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
-import { cn } from "@/lib/cn";
 import { recordActivity } from "@/lib/progress/activity";
-import { canRecognize, listenOnce, type RecognitionSession } from "@/lib/speech";
 import { CoachCodeForm, useHydrated } from "./AiUsagePanel";
 
 /** XP for finishing the level interview. */
@@ -293,9 +292,19 @@ function QuestionStep({
         ? `Escribe tu respuesta en ${target}…`
         : "Escribe tu respuesta…";
 
+  // Dictation (long answers): what is heard is appended to what is typed and stays editable.
+  const listen = useListen({
+    locale: answerInSpanish ? SPANISH_LOCALE : meta.speechLocale,
+    mode: "long",
+    onResult: (r) =>
+      setAnswer((a) => (a.trim() ? `${a.trimEnd()} ${r.transcript}` : r.transcript).slice(0, COACH_LIMITS.description)),
+  });
+
   const submit = (e: FormEvent) => {
     e.preventDefault();
-    if (answer.trim()) onAnswer(answer.trim());
+    if (!answer.trim()) return;
+    listen.cancel();
+    onAnswer(answer.trim());
   };
 
   return (
@@ -335,16 +344,29 @@ function QuestionStep({
           className="w-full resize-none rounded-card border-2 border-line bg-surface p-4 text-lg text-ink placeholder:text-ink-muted focus:border-sea focus:outline-none"
         />
       </label>
-      <DictateButton
-        locale={answerInSpanish ? SPANISH_LOCALE : meta.speechLocale}
-        label={answerInSpanish ? "Dictar en español" : `Dictar en ${target}`}
-        onText={(text) => setAnswer((a) => (a.trim() ? `${a.trim()} ${text}` : text).slice(0, COACH_LIMITS.description))}
-      />
+      {listen.supported ? (
+        <div className="flex flex-col items-start gap-2">
+          <MicButton
+            listen={listen}
+            size="sm"
+            idleLabel={answerInSpanish ? "Dictar en español" : `Dictar en ${target}`}
+            disabled={!listen.active && answer.length >= COACH_LIMITS.description}
+          />
+          <LiveTranscript listen={listen} lang={answerInSpanish ? "es" : meta.lang} align="start" />
+        </div>
+      ) : null}
       <div className="mt-auto flex flex-col gap-3 pt-2">
         <Button type="submit" fullWidth disabled={!answer.trim()}>
           Enviar
         </Button>
-        <Button fullWidth variant="secondary" onClick={() => onAnswer(DONT_KNOW)}>
+        <Button
+          fullWidth
+          variant="secondary"
+          onClick={() => {
+            listen.cancel();
+            onAnswer(DONT_KNOW);
+          }}
+        >
           No lo sé
         </Button>
         <button
@@ -356,65 +378,5 @@ function QuestionStep({
         </button>
       </div>
     </form>
-  );
-}
-
-const noSubscribe = () => () => {};
-
-/** Dictation into the answer box (Web Speech recognition); hidden where the browser has none. */
-function DictateButton({ locale, label, onText }: { locale: string; label: string; onText: (text: string) => void }) {
-  const supported = useSyncExternalStore(noSubscribe, canRecognize, () => false);
-  const [listening, setListening] = useState(false);
-  const [notice, setNotice] = useState<string | null>(null);
-  const session = useRef<RecognitionSession | null>(null);
-
-  useEffect(() => () => session.current?.abort(), []);
-
-  if (!supported) return null;
-
-  const toggle = () => {
-    if (listening) {
-      session.current?.stop();
-      return;
-    }
-    stop();
-    const s = listenOnce(locale, 15_000);
-    session.current = s;
-    setListening(true);
-    setNotice(null);
-    void s.result.then((r) => {
-      if (session.current !== s) return;
-      session.current = null;
-      setListening(false);
-      if (r.ok) onText(r.transcripts[0]);
-      else if (r.error === "no-speech") setNotice("No te he oído. Toca el micro y habla más cerca.");
-      else if (r.error === "not-allowed") setNotice("No tengo permiso para usar el micro. Escribe tu respuesta.");
-      else if (r.error !== "aborted") setNotice("El dictado no funciona ahora. Escribe tu respuesta.");
-    });
-  };
-
-  return (
-    <div className="flex flex-col gap-2">
-      <button
-        type="button"
-        onClick={toggle}
-        aria-pressed={listening}
-        className={cn(
-          "pressable inline-flex min-h-12 items-center justify-center gap-2 self-start rounded-full px-5 text-base font-bold",
-          "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
-          listening
-            ? "animate-pulse bg-terracotta text-on-accent [--ledge:var(--terracotta-ledge)] motion-reduce:animate-none"
-            : "border-2 border-line bg-surface text-sea [--ledge:var(--line)]",
-        )}
-      >
-        <MicIcon className="size-5" />
-        {listening ? "Te escucho… (toca para parar)" : label}
-      </button>
-      {notice ? (
-        <p className="rounded-button bg-lemon-soft px-4 py-3 text-base text-ink" aria-live="polite">
-          {notice}
-        </p>
-      ) : null}
-    </div>
   );
 }

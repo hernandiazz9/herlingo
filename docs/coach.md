@@ -256,6 +256,11 @@ side, change the other.
   `@/lib/progress`: lessons done/total, words learned, XP, placement test date and lessons it
   marked; the latest assessment; the "Sobre mí" notes). Responses are shape-checked; nothing is
   saved automatically: call `savePack` / `replacePack` / `saveAssessment`.
+- **Dictation** (the description in `SituationForm`, the answers in `LevelInterview`) uses the
+  shared mic UI (`useListen` + `<MicButton size="sm">` + `<LiveTranscript>`, docs/speech.md) in
+  `mode: "long"`: es-ES for Spanish answers, the pack's `speechLocale` for a reply in the target
+  language. What is heard is appended to what is typed (capped at the field's limit) and stays
+  editable; "Cancelar" discards; errors show the engine's message + "Reintentar".
 - **Errors**: every call rejects with a `CoachApiError` (`kind`, `status`, `code`, `message`).
   `message` is Spain Spanish, the server's own when it sent one: show it as is.
 

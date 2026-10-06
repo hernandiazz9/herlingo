@@ -23,6 +23,30 @@ const eslintConfig = defineConfig([
       ],
     },
   },
+  {
+    // Speech recognition goes through the one engine (docs/speech.md): only src/lib/speech/ may
+    // touch SpeechRecognition / webkitSpeechRecognition (globals, `window.…`, `"…" in window`, types).
+    files: ["src/**/*.{ts,tsx}"],
+    ignores: ["src/lib/speech/**"],
+    rules: {
+      "no-restricted-globals": [
+        "error",
+        { name: "SpeechRecognition", message: "Use useListen / createListenSession (docs/speech.md)." },
+        { name: "webkitSpeechRecognition", message: "Use useListen / createListenSession (docs/speech.md)." },
+      ],
+      "no-restricted-syntax": [
+        "error",
+        {
+          selector: "Identifier[name=/^(webkit)?SpeechRecognition/]",
+          message: "Only src/lib/speech/ touches SpeechRecognition: use useListen / createListenSession (docs/speech.md).",
+        },
+        {
+          selector: "Literal[value=/^(webkit)?SpeechRecognition/]",
+          message: "Only src/lib/speech/ touches SpeechRecognition: use useListen / createListenSession (docs/speech.md).",
+        },
+      ],
+    },
+  },
   globalIgnores([
     ".claude/**",
     ".next/**",
