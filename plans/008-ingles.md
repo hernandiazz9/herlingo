@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:44Z 💻
+- Updated: 2026-10-06 13:45Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 2e8fa42
-- Next step: integrate T107/T108; then T109 audio + images on the Mac (this session)
+- Branch: plan-008-ingles @ 80e939f
+- Next step: T109 audio + pictures running on the Mac; then end of plan (T110 waits for plan 007 voice)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -249,7 +249,7 @@ Worktree setup: npm ci
 - Outcome: B1 stories 107–112 per T106 outline (Halsted flat, moving day, card declined, stuck in Kansas City, lost suitcase, one year later), no ⚠ · 2e8fa42 · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T108 — English placement test (A2 + B1)
-- Status: running (attempt 1 · 💻 · agent ab71d946f3971ca84 · since 13:41Z)
+- Status: done
 - Depends on: T91, T92, T93, T94, T95, T96, T100, T101, T102, T103, T104
 - Where: any
 - Goal: 12 graded placement questions (6 `level: "A2"`, 6 `level: "B1"`, easy → hard), spread over the units of each level, each marking the lessons it proves, so T91's suggestion picks A2 or B1.
@@ -259,10 +259,10 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓; 12 questions, 6 per level, covering every unit except the grammar units.
   - `npm run verify` → exit 0
   - Hand check (PC): English placement answered well → suggests B1; answered poorly → A2.
-- Outcome:
+- Outcome: 12 placement questions (6 A2 + 6 B1, easy→hard, cover all 20 non-grammar units); suggestLevel: all right → B1, A2 only → A2 · 80e939f · verify ✓ 💻 · not checked: placement screen on device
 
 ## T109 — English audio and pictures, final offline check
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a4fd31c836beead18 · since 13:45Z)
 - Depends on: T97, T99, T105, T107, T108
 - Where: pc (edge-tts needs the Mac's internet; on-device check)
 - Goal: Generate en-US neural mp3 for every English playable and the English pictures, commit them, and prove the English course (A2 and B1) works offline with only its audio cached.
@@ -306,11 +306,13 @@ Worktree setup: npm ci
 - [ ] T106 @4bb405e — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T105 @e4df5b6 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T107 @2e8fa42 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T108 @80e939f — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T97 @d91ede2 — play two English A2 dialogues with device voices (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T105 @e4df5b6 — play two English B1 dialogues (formal + tu badge) with device voices (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T108 @80e939f — English placement: answered well → suggests B1, poorly → A2; light + dark 375 px (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: English (`en`) is the third pack, American English (en-US voices and speechLocale, US spelling and formats); content only, generic code where the schema needs it; product note in docs/brief-en.md (docs/brief.md not edited); never lose on-device data, it/fr content and audio byte-identical. (Hernán)
@@ -331,6 +333,7 @@ Worktree setup: npm ci
 ## Proposals (new scope)
 - 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
 - 2026-10-06 T91: docs/content-guide.md should document the order%100>=90 side-unit rule for levelled packs
+- 2026-10-06 T108: Ruta subtitle (src/app/page.tsx:10) and Onboarding.tsx:127 say 'situaciones del viaje' for every pack; English/French have no trip — make it generic ('por situaciones') or per pack
 
 ## Log
 - 2026-10-06 11:30Z 💻 plan written from the interview; not approved yet
@@ -369,3 +372,5 @@ Worktree setup: npm ci
 - 2026-10-06 13:41Z 💻 T105 done · worktree-agent-a2fac5b84b0da1e21 → e4df5b6 · verify ✓
 - 2026-10-06 13:41Z 💻 T108 launched · attempt 1 · agent ab71d946f3971ca84
 - 2026-10-06 13:44Z 💻 T107 done · worktree-agent-a5e325762b5aa14eb → 2e8fa42 · verify ✓
+- 2026-10-06 13:45Z 💻 T108 done · worktree-agent-ab71d946f3971ca84 → 80e939f · verify ✓
+- 2026-10-06 13:45Z 💻 T109 launched · attempt 1 · agent a4fd31c836beead18
