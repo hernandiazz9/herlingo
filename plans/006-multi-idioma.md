@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:36Z 💻
+- Updated: 2026-10-06 09:41Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T66/T62; then French units T67–T69
+- Next step: integrate T66/T67; then T68, T69, then T70–T72
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -90,7 +90,7 @@ Worktree setup: npm ci
 - Outcome: precache without /audio/ (790 files, 6.9 MB), per-language lists, cache lang-lern-audio-<lang> filled from old caches first, switch drops other langs, useAudioProgress API · d5ee8c7 · verify ✓ headless Chrome ✓ 💻 · not checked: iPhone update + airplane mode
 
 ## T62 — App points: monthly XP, lifetime XP, global streak
-- Status: running (attempt 1 · 💻 · agent a382ef15404b4341a · since 09:36Z)
+- Status: done
 - Depends on: T60
 - Where: any
 - Goal: XP is global and always shown: "XP de <mes>" (all languages, resets on day 1) on Ruta and Perfil, plus the lifetime total and a per-language breakdown in Perfil; the streak and best streak become global, seeded so today's Italian streak carries over.
@@ -102,7 +102,7 @@ Worktree setup: npm ci
   - "Borrar progreso" of one language removes only that language (progress key and its `activity` entries).
   - `npm run verify` → exit 0
   - Hand check (PC): Ruta and Perfil numbers in light and dark at 375 px.
-- Outcome:
+- Outcome: new lang-lern:activity (points.ts) seeded from per-language streaks; Ruta streak + 'XP de <mes>', Perfil monthly/lifetime/per-language/global streak; Ruta lesson counter counts all lessons; Liga stats send global streak · c191bba · verify ✓ headless 19 asserts ✓ 💻 · not checked: light theme, real month rollover
 
 ## T63 — Liga SQL: global weekly sum, global daily cap, up to 10 groups
 - Status: done
@@ -157,7 +157,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T67 — French content: home and routine, free time and weather
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a2578ade40af140b3 · since 09:41Z)
 - Depends on: T58
 - Where: any
 - Goal: Units `maison` (30) and `loisirs` (32) per docs/brief-fr.md.
@@ -251,12 +251,14 @@ Worktree setup: npm ci
 - [ ] T61 @d5ee8c7 — code review (SW) (queued 2026-10-06 💻)
 - [ ] T64 @9a6d848 — code review (queued 2026-10-06 💻)
 - [ ] T60 @c5f60f6 — code review (queued 2026-10-06 💻)
+- [ ] T62 @c191bba — code review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
 - [ ] T61 @d5ee8c7 — installed iPhone PWA: Actualizar, Italian audio offline in airplane mode (queued 2026-10-06 💻)
 - [ ] T64 @9a6d848 — Liga with several groups (tabs, Tus grupos, invite, 10-group limit): light + dark, 375 px (queued 2026-10-06 💻)
 - [ ] T60 @c5f60f6 — picker, Ruta switch, Perfil section, welcome: dark + light 375 px; first launch on installed PWA; picker audio state (queued 2026-10-06 💻)
+- [ ] T62 @c191bba — Ruta and Perfil points/streak: light + dark, 375 px, with Hernán's real data (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: multi-language app; French (`fr`) is the second pack; adding a language stays content only; active-language picker on first launch and in Perfil, stored on the device; every page uses the active pack; static params for all packs with ids unique across packs; SW precaches only the active language's audio; never lose on-device data (every `lang-lern:*:<lang>` key and shape kept, Italian progress untouched). (Hernán)
@@ -294,3 +296,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:34Z 💻 T66 launched · attempt 1 · agent ad96a505c474bf6a2
 - 2026-10-06 09:36Z 💻 T60 done · worktree-agent-a95d57934a2e43c41 → c5f60f6 · verify ✓
 - 2026-10-06 09:36Z 💻 T62 launched · attempt 1 · agent a382ef15404b4341a
+- 2026-10-06 09:41Z 💻 T62 done · worktree-agent-a382ef15404b4341a → c191bba · verify ✓
+- 2026-10-06 09:41Z 💻 T67 launched · attempt 1 · agent a2578ade40af140b3
