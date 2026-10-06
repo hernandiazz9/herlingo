@@ -1,0 +1,81 @@
+{
+  "id": "story.en-b1-it-works-on-my-machine",
+  "order": 106,
+  "title": "It works on my machine!",
+  "titleEs": "¡En mi ordenador funciona!",
+  "description": "El día de la demo, el portátil de Pablo se cuelga y la app falla delante de todo el equipo.",
+  "emoji": "🐛",
+  "situation": "tecnologia",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "For three weeks, Pablo worked hard on the new payments page.", "es": "Durante tres semanas, Pablo trabajó mucho en la nueva página de pagos." },
+    { "id": "s2", "text": "On Friday morning, he was ready to show it to the whole team.", "es": "El viernes por la mañana, estaba listo para enseñársela a todo el equipo." },
+    { "id": "s3", "text": "But when he opened his laptop, he got an error message.", "es": "Pero cuando abrió el portátil, le salió un mensaje de error." },
+    { "id": "s4", "text": "He called IT support, and a guy named Kevin answered.", "es": "Llamó al soporte técnico y contestó un chico llamado Kevin." },
+    { "id": "s5", "text": "«Have you tried turning it off and on again?»", "es": "«¿Has probado a apagarlo y volver a encenderlo?»", "voice": "en-US-BrianNeural" },
+    { "id": "s6", "text": "«Yes, I already restarted it twice.»", "es": "«Sí, ya lo he reiniciado dos veces.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "Kevin found the problem: last night's update had broken the login.", "es": "Kevin encontró el problema: la actualización de anoche había estropeado el inicio de sesión." },
+    { "id": "s8", "text": "«Try clearing the cache and logging in again.»", "es": "«Prueba a borrar la caché y a iniciar sesión otra vez.»", "voice": "en-US-BrianNeural" },
+    { "id": "s9", "text": "It worked, and the demo started on time.", "es": "Funcionó, y la demo empezó a su hora." },
+    { "id": "s10", "text": "Then, in front of everyone, the app crashed.", "es": "Entonces, delante de todos, la app se cerró de golpe." },
+    { "id": "s11", "text": "Maya looked at Pablo, and Pablo looked at his laptop.", "es": "Maya miró a Pablo, y Pablo miró su portátil." },
+    { "id": "s12", "text": "«I don't understand. It works on my machine!»", "es": "«No lo entiendo. ¡En mi ordenador funciona!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s13", "text": "Everybody laughed, and Maya found the bug in five minutes.", "es": "Todos se rieron, y Maya encontró el fallo en cinco minutos." },
+    { "id": "s14", "text": "«Don't worry, Pablo. It happens to everyone.»", "es": "«Tranquilo, Pablo. Nos pasa a todos.»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "b1-tech.error-message",
+    "b1-tech.it-support",
+    "b1-tech.have-you-tried-turning-it-off",
+    "b1-tech.i-already-restarted-it",
+    "b1-tech.restart",
+    "b1-tech.update",
+    "b1-tech.try-clearing-the-cache",
+    "b1-tech.crash",
+    "b1-tech.it-works-on-my-machine",
+    "b1-tech.bug"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What happened when Pablo opened his laptop?",
+      "es": "¿Qué pasó cuando Pablo abrió el portátil?",
+      "options": [
+        { "text": "The battery died.", "es": "Se quedó sin batería." },
+        { "text": "He got an error message.", "es": "Le salió un mensaje de error." },
+        { "text": "Everything worked fine.", "es": "Todo funcionó bien." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What caused the login problem?",
+      "es": "¿Qué causó el problema al iniciar sesión?",
+      "options": [
+        { "text": "Last night's update.", "es": "La actualización de anoche." },
+        { "text": "A broken keyboard.", "es": "Un teclado roto." },
+        { "text": "Pablo forgot his password.", "es": "Pablo olvidó su contraseña." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Who found the bug in the app?",
+      "es": "¿Quién encontró el fallo de la app?",
+      "options": [
+        { "text": "Kevin, from IT support.", "es": "Kevin, del soporte técnico." },
+        { "text": "Pablo.", "es": "Pablo." },
+        { "text": "Maya.", "es": "Maya." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "b1-tech.error-message", "gap": "error message", "distractors": ["birthday card", "free coffee"] },
+    { "id": "g2", "sentence": "s4", "answer": "b1-tech.it-support", "gap": "IT support", "distractors": ["his landlord", "the pizza place"] },
+    { "id": "g3", "sentence": "s6", "answer": "b1-tech.i-already-restarted-it", "gap": "restarted", "distractors": ["painted", "washed"] },
+    { "id": "g4", "sentence": "s7", "answer": "b1-tech.update", "distractors": ["snow", "neighbor"] },
+    { "id": "g5", "sentence": "s10", "answer": "b1-tech.crash", "gap": "crashed", "distractors": ["smiled", "sang"] },
+    { "id": "g6", "sentence": "s13", "answer": "b1-tech.bug", "distractors": ["sandwich", "umbrella"] }
+  ]
+}

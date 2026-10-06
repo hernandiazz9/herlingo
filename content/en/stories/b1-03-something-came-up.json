@@ -1,0 +1,91 @@
+{
+  "id": "story.en-b1-something-came-up",
+  "order": 103,
+  "title": "Something came up",
+  "titleEs": "Me ha surgido algo",
+  "description": "Pablo y Jordan quedan para ver tocar a Nina, pero Jordan cancela en el último momento.",
+  "emoji": "📅",
+  "situation": "social",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "On Wednesday, Nina texted Pablo: her band was playing at a bar on Friday.", "es": "El miércoles, Nina le escribió a Pablo: su grupo tocaba en un bar el viernes." },
+    { "id": "s2", "text": "«Jordan, are you free on Friday night? Do you want to come?»", "es": "«Jordan, ¿estás libre el viernes por la noche? ¿Quieres venir?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s3", "text": "«Sounds great. Count me in! What time does it start?»", "es": "«Suena genial. ¡Cuenta conmigo! ¿A qué hora empieza?»", "voice": "en-US-BrianNeural" },
+    { "id": "s4", "text": "«At nine. Let's meet in front of the bar at eight thirty.»", "es": "«A las nueve. Quedamos delante del bar a las ocho y media.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s5", "text": "But on Friday afternoon, Pablo got a message from Jordan.", "es": "Pero el viernes por la tarde, Pablo recibió un mensaje de Jordan." },
+    { "id": "s6", "text": "«I'm so sorry, I have to cancel tonight. Something came up at work.»", "es": "«Lo siento muchísimo, tengo que cancelar lo de esta noche. Me ha surgido algo en el trabajo.»", "voice": "en-US-BrianNeural" },
+    { "id": "s7", "text": "Pablo was a little disappointed, but he went to the concert alone.", "es": "Pablo se quedó un poco decepcionado, pero fue al concierto solo." },
+    { "id": "s8", "text": "The band was amazing, and the bar was full of people.", "es": "El grupo estuvo increíble y el bar estaba lleno de gente." },
+    { "id": "s9", "text": "At midnight, Jordan finally showed up, still wearing his apron from the coffee shop.", "es": "A medianoche, Jordan por fin apareció, todavía con el delantal de la cafetería." },
+    { "id": "s10", "text": "«Sorry, man. Let me make it up to you. Dinner's on me.»", "es": "«Perdona, tío. Deja que te lo compense. La cena corre de mi cuenta.»", "voice": "en-US-BrianNeural" },
+    { "id": "s11", "text": "«Don't worry about it. These things happen.»", "es": "«No te preocupes. Son cosas que pasan.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«Nina's band is playing again next Friday. Are we still on?»", "es": "«El grupo de Nina vuelve a tocar el viernes que viene. ¿Seguimos en pie?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s13", "text": "«Definitely. It's a plan!»", "es": "«Por supuesto. ¡Hecho!»", "voice": "en-US-BrianNeural" }
+  ],
+  "keywords": [
+    "b1-plans.bar",
+    "b1-plans.count-me-in",
+    "b1-plans.i-have-to-cancel-tonight",
+    "b1-plans.something-came-up",
+    "b1-stories.disappointed",
+    "b1-friends.concert",
+    "b1-grammar.show-up",
+    "b1-plans.let-me-make-it-up-to-you",
+    "b1-plans.dont-worry-about-it",
+    "b1-plans.its-a-plan"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Where was Nina's band playing on Friday?",
+      "es": "¿Dónde tocaba el grupo de Nina el viernes?",
+      "options": [
+        { "text": "At a bar.", "es": "En un bar." },
+        { "text": "At Jordan's coffee shop.", "es": "En la cafetería de Jordan." },
+        { "text": "In a park by the lake.", "es": "En un parque junto al lago." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Why did Jordan cancel?",
+      "es": "¿Por qué canceló Jordan?",
+      "options": [
+        { "text": "He was sick.", "es": "Estaba enfermo." },
+        { "text": "He didn't like the band.", "es": "No le gustaba el grupo." },
+        { "text": "Something came up at work.", "es": "Le surgió algo en el trabajo." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "What did Pablo do on Friday night?",
+      "es": "¿Qué hizo Pablo el viernes por la noche?",
+      "options": [
+        { "text": "He stayed home and watched TV.", "es": "Se quedó en casa viendo la tele." },
+        { "text": "He went to the concert alone.", "es": "Fue solo al concierto." },
+        { "text": "He worked late at the office.", "es": "Se quedó trabajando hasta tarde en la oficina." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "How does Jordan want to make it up to Pablo?",
+      "es": "¿Cómo quiere Jordan compensar a Pablo?",
+      "options": [
+        { "text": "He's going to buy him a new guitar.", "es": "Le va a comprar una guitarra nueva." },
+        { "text": "He's going to pay for dinner.", "es": "Le va a invitar a cenar." },
+        { "text": "He's going to make him a coffee.", "es": "Le va a preparar un café." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "b1-plans.count-me-in", "gap": "Count me in", "distractors": ["Bless you", "Excuse me"] },
+    { "id": "g2", "sentence": "s6", "answer": "b1-plans.i-have-to-cancel-tonight", "gap": "cancel", "distractors": ["celebrate", "cook"] },
+    { "id": "g3", "sentence": "s7", "answer": "b1-stories.disappointed", "distractors": ["proud", "relieved"] },
+    { "id": "g4", "sentence": "s9", "answer": "b1-grammar.show-up", "gap": "showed up", "distractors": ["gave up", "set up"] },
+    { "id": "g5", "sentence": "s11", "answer": "b1-plans.dont-worry-about-it", "gap": "worry", "distractors": ["laugh", "dance"] },
+    { "id": "g6", "sentence": "s13", "answer": "b1-plans.its-a-plan", "gap": "plan", "distractors": ["bill", "bug"] }
+  ]
+}

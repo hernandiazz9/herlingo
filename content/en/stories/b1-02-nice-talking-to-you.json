@@ -1,0 +1,91 @@
+{
+  "id": "story.en-b1-nice-talking-to-you",
+  "order": 102,
+  "title": "Nice talking to you",
+  "titleEs": "Un placer hablar contigo",
+  "description": "En la fiesta de Jordan, Pablo no conoce a nadie… hasta que aparece Nina.",
+  "emoji": "🎉",
+  "situation": "social",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "On Saturday night, Jordan had a party at the apartment.", "es": "El sábado por la noche, Jordan hizo una fiesta en el piso." },
+    { "id": "s2", "text": "Pablo didn't know anyone, so at first he just stood in the kitchen.", "es": "Pablo no conocía a nadie, así que al principio se quedó en la cocina." },
+    { "id": "s3", "text": "Then a woman with a guitar case came over and smiled.", "es": "Entonces una mujer con la funda de una guitarra se acercó y sonrió." },
+    { "id": "s4", "text": "«Hi! I don't think we've met. I'm Nina.»", "es": "«¡Hola! Creo que no nos conocemos. Soy Nina.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«Nice to meet you. I'm Pablo, Maya's friend from Spain.»", "es": "«Encantado. Soy Pablo, el amigo español de Maya.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«So, what brings you to Chicago?»", "es": "«¿Y qué te trae por Chicago?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "«I moved here for work. I'm a programmer at Maya's startup.»", "es": "«Me mudé aquí por trabajo. Soy programador en la startup de Maya.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "It turned out that Nina played the bass in Jordan's band.", "es": "Resultó que Nina tocaba el bajo en el grupo de Jordan." },
+    { "id": "s9", "text": "They talked about jazz, hiking and the long Chicago winters.", "es": "Hablaron de jazz, de senderismo y de los largos inviernos de Chicago." },
+    { "id": "s10", "text": "«I used to play the guitar in a band, too!»", "es": "«¡Yo también tocaba la guitarra en un grupo!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "They had a lot in common, and the night went really fast.", "es": "Tenían mucho en común y la noche pasó volando." },
+    { "id": "s12", "text": "«Can I get your number? We should hang out sometime!»", "es": "«¿Me das tu número? ¡Deberíamos quedar algún día!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s13", "text": "«Sure! It was really nice talking to you.»", "es": "«¡Claro! Ha sido un placer hablar contigo.»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "b1-friends.party",
+    "b1-friends.i-dont-think-weve-met",
+    "b1-friends.what-brings-you-to-chicago",
+    "b1-stories.turn-out",
+    "b1-friends.band",
+    "b1-friends.jazz",
+    "b1-friends.hiking",
+    "b1-friends.we-have-a-lot-in-common",
+    "b1-friends.can-i-get-your-number",
+    "b1-friends.nice-talking-to-you"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What did Pablo do at the beginning of the party?",
+      "es": "¿Qué hizo Pablo al principio de la fiesta?",
+      "options": [
+        { "text": "He played the guitar.", "es": "Tocó la guitarra." },
+        { "text": "He danced with Maya.", "es": "Bailó con Maya." },
+        { "text": "He stood in the kitchen.", "es": "Se quedó en la cocina." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "How does Nina know Jordan?",
+      "es": "¿De qué conoce Nina a Jordan?",
+      "options": [
+        { "text": "She plays in his band.", "es": "Toca en su grupo." },
+        { "text": "She works at the coffee shop.", "es": "Trabaja en la cafetería." },
+        { "text": "They met at college.", "es": "Se conocieron en la universidad." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What did Pablo use to do?",
+      "es": "¿Qué hacía Pablo antes?",
+      "options": [
+        { "text": "He used to teach English.", "es": "Daba clases de inglés." },
+        { "text": "He used to play the guitar in a band.", "es": "Tocaba la guitarra en un grupo." },
+        { "text": "He used to live in Chicago.", "es": "Vivía en Chicago." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "What did Nina ask Pablo at the end?",
+      "es": "¿Qué le pidió Nina a Pablo al final?",
+      "options": [
+        { "text": "His email address.", "es": "Su correo electrónico." },
+        { "text": "A ride home.", "es": "Que la llevara a casa." },
+        { "text": "His phone number.", "es": "Su número de teléfono." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "b1-friends.party", "distractors": ["meeting", "lesson"] },
+    { "id": "g2", "sentence": "s6", "answer": "b1-friends.what-brings-you-to-chicago", "gap": "brings you", "distractors": ["costs you", "tells you"] },
+    { "id": "g3", "sentence": "s8", "answer": "b1-stories.turn-out", "gap": "turned out", "distractors": ["gave up", "ran out"] },
+    { "id": "g4", "sentence": "s9", "answer": "b1-friends.jazz", "distractors": ["taxes", "homework"] },
+    { "id": "g5", "sentence": "s11", "answer": "b1-friends.we-have-a-lot-in-common", "gap": "in common", "distractors": ["in trouble", "in line"] },
+    { "id": "g6", "sentence": "s12", "answer": "b1-friends.can-i-get-your-number", "gap": "number", "distractors": ["wallet", "coat"] }
+  ]
+}

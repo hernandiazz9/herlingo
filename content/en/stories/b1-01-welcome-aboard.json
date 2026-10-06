@@ -1,0 +1,90 @@
+{
+  "id": "story.en-b1-welcome-aboard",
+  "order": 101,
+  "title": "Welcome aboard!",
+  "titleEs": "¡Bienvenido al equipo!",
+  "description": "Pablo vuelve a Chicago en enero y empieza a trabajar en la startup de Maya.",
+  "emoji": "💼",
+  "situation": "trabajo",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "In January, Pablo came back to Chicago, but this time he came to work.", "es": "En enero, Pablo volvió a Chicago, pero esta vez vino a trabajar." },
+    { "id": "s2", "text": "On Monday morning, he walked into Maya's office in the Loop, a little nervous.", "es": "El lunes por la mañana entró en la oficina de Maya en el Loop, un poco nervioso." },
+    { "id": "s3", "text": "«Pablo! Welcome aboard! Let me introduce you to the team.»", "es": "«¡Pablo! ¡Bienvenido al equipo! Deja que te presente a todos.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s4", "text": "She introduced him to Sam, the team lead, and to Priya, a designer.", "es": "Le presentó a Sam, el jefe de equipo, y a Priya, una diseñadora." },
+    { "id": "s5", "text": "«Hi, Pablo. I'm Sam. How long have you been a developer?»", "es": "«Hola, Pablo. Soy Sam. ¿Cuánto tiempo llevas como desarrollador?»", "voice": "en-US-BrianNeural" },
+    { "id": "s6", "text": "«For six years. I used to work for a bank in Valencia.»", "es": "«Seis años. Antes trabajaba para un banco en Valencia.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "Sam gave him a badge, a laptop and a desk by the window.", "es": "Sam le dio una tarjeta de acceso, un portátil y una mesa junto a la ventana." },
+    { "id": "s8", "text": "By lunchtime, Pablo had already set up his laptop.", "es": "A la hora de comer, Pablo ya había configurado su portátil." },
+    { "id": "s9", "text": "In the afternoon, he joined his first stand-up with the backend team.", "es": "Por la tarde, participó en su primera reunión diaria con el equipo de backend." },
+    { "id": "s10", "text": "«This week, I'll be working on the payments feature with Sam.»", "es": "«Esta semana voy a trabajar en la funcionalidad de pagos con Sam.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "After work, Maya asked him how his first day went.", "es": "Después del trabajo, Maya le preguntó qué tal le había ido el primer día." },
+    { "id": "s12", "text": "«Great! Everyone was really friendly. I think I'm going to like it here.»", "es": "«¡Genial! Todo el mundo ha sido muy simpático. Creo que me va a gustar estar aquí.»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "b1-office.welcome-aboard",
+    "b1-office.let-me-introduce-you",
+    "b1-office.team-lead",
+    "b1-office.designer",
+    "b1-office.developer",
+    "b1-office.badge",
+    "b1-office.desk",
+    "a2-airport.laptop",
+    "b1-office.stand-up",
+    "b1-office.feature"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why did Pablo come back to Chicago?",
+      "es": "¿Por qué volvió Pablo a Chicago?",
+      "options": [
+        { "text": "To go on vacation.", "es": "Para irse de vacaciones." },
+        { "text": "To work at Maya's startup.", "es": "Para trabajar en la startup de Maya." },
+        { "text": "To study English at a college.", "es": "Para estudiar inglés en una universidad." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Who is Sam?",
+      "es": "¿Quién es Sam?",
+      "options": [
+        { "text": "The team lead.", "es": "El jefe de equipo." },
+        { "text": "A designer.", "es": "Un diseñador." },
+        { "text": "Maya's roommate.", "es": "El compañero de piso de Maya." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Where did Pablo use to work?",
+      "es": "¿Dónde trabajaba Pablo antes?",
+      "options": [
+        { "text": "At a coffee shop in Chicago.", "es": "En una cafetería de Chicago." },
+        { "text": "At a school in Madrid.", "es": "En un colegio de Madrid." },
+        { "text": "For a bank in Valencia.", "es": "Para un banco en Valencia." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "What is Pablo going to work on this week?",
+      "es": "¿En qué va a trabajar Pablo esta semana?",
+      "options": [
+        { "text": "The login page.", "es": "La página de inicio de sesión." },
+        { "text": "The payments feature.", "es": "La funcionalidad de pagos." },
+        { "text": "A new website for the bank.", "es": "Una web nueva para el banco." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "b1-office.welcome-aboard", "gap": "Welcome aboard", "distractors": ["Bless you", "Excuse me"] },
+    { "id": "g2", "sentence": "s4", "answer": "b1-office.team-lead", "gap": "team lead", "distractors": ["new neighbor", "taxi driver"] },
+    { "id": "g3", "sentence": "s5", "answer": "b1-office.developer", "distractors": ["barista", "teacher"] },
+    { "id": "g4", "sentence": "s7", "answer": "b1-office.badge", "distractors": ["scarf", "pizza"] },
+    { "id": "g5", "sentence": "s9", "answer": "b1-office.stand-up", "distractors": ["concert", "picnic"] },
+    { "id": "g6", "sentence": "s10", "answer": "b1-office.feature", "distractors": ["party", "menu"] }
+  ]
+}

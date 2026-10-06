@@ -1,0 +1,80 @@
+{
+  "id": "story.en-b1-youre-on-mute",
+  "order": 104,
+  "title": "You're on mute",
+  "titleEs": "Tienes el micro silenciado",
+  "description": "Primera videollamada de Pablo con un cliente: micro silenciado, conexión que se corta y un resumen por email.",
+  "emoji": "🎧",
+  "situation": "comunicacion",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "On Tuesday, Maya and Pablo had a video call with a new client.", "es": "El martes, Maya y Pablo tuvieron una videollamada con un cliente nuevo." },
+    { "id": "s2", "text": "Mr. Park owned five coffee shops in Denver and wanted a mobile app.", "es": "El señor Park tenía cinco cafeterías en Denver y quería una app para el móvil." },
+    { "id": "s3", "text": "«Good morning, everyone. Let's get started. Can you hear me okay?»", "es": "«Buenos días a todos. Empecemos. ¿Me oís bien?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s4", "text": "Mr. Park was moving his lips, but nobody could hear anything.", "es": "El señor Park movía los labios, pero nadie oía nada." },
+    { "id": "s5", "text": "«Sorry, Mr. Park, I think you're on mute.»", "es": "«Perdone, señor Park, creo que tiene el micro silenciado.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«Oh, sorry! Is that better? I'll turn my camera on, too.»", "es": "«¡Ay, perdón! ¿Mejor así? Voy a encender la cámara también.»", "voice": "en-US-BrianNeural" },
+    { "id": "s7", "text": "Then Pablo shared his screen and showed him the first designs.", "es": "Luego Pablo compartió su pantalla y le enseñó los primeros diseños." },
+    { "id": "s8", "text": "While he was explaining the payments page, Mr. Park's connection dropped.", "es": "Mientras explicaba la página de pagos, se cortó la conexión del señor Park." },
+    { "id": "s9", "text": "Two minutes later, he was back.", "es": "Dos minutos después, ya estaba de vuelta." },
+    { "id": "s10", "text": "«Sorry, my connection dropped. What did I miss?»", "es": "«Perdón, se me ha cortado la conexión. ¿Qué me he perdido?»", "voice": "en-US-BrianNeural" },
+    { "id": "s11", "text": "Pablo explained everything again, slowly and clearly.", "es": "Pablo se lo explicó todo otra vez, despacio y con claridad." },
+    { "id": "s12", "text": "«Great work. Could you send me a summary by email?»", "es": "«Buen trabajo. ¿Podría mandarme un resumen por email?»", "voice": "en-US-BrianNeural" },
+    { "id": "s13", "text": "After the call, Maya gave Pablo a high five.", "es": "Después de la llamada, Maya chocó los cinco con Pablo." }
+  ],
+  "keywords": [
+    "b1-calls.video-call",
+    "b1-calls.client",
+    "b1-calls.can-you-hear-me-okay",
+    "b1-calls.i-think-youre-on-mute",
+    "b1-calls.camera",
+    "b1-calls.screen",
+    "b1-calls.connection",
+    "b1-calls.my-connection-dropped",
+    "b1-calls.summary",
+    "b1-calls.email"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What did Mr. Park want?",
+      "es": "¿Qué quería el señor Park?",
+      "options": [
+        { "text": "A new coffee shop in Chicago.", "es": "Una cafetería nueva en Chicago." },
+        { "text": "A mobile app for his coffee shops.", "es": "Una app móvil para sus cafeterías." },
+        { "text": "A job at Maya's startup.", "es": "Un trabajo en la startup de Maya." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Why couldn't anybody hear Mr. Park at first?",
+      "es": "¿Por qué al principio nadie oía al señor Park?",
+      "options": [
+        { "text": "He was on mute.", "es": "Tenía el micro silenciado." },
+        { "text": "He was in a noisy coffee shop.", "es": "Estaba en una cafetería ruidosa." },
+        { "text": "His camera was broken.", "es": "Tenía la cámara rota." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What was Pablo doing when the connection dropped?",
+      "es": "¿Qué estaba haciendo Pablo cuando se cortó la conexión?",
+      "options": [
+        { "text": "He was drinking coffee.", "es": "Estaba tomando café." },
+        { "text": "He was writing an email.", "es": "Estaba escribiendo un email." },
+        { "text": "He was explaining the payments page.", "es": "Estaba explicando la página de pagos." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "b1-calls.video-call", "gap": "video call", "distractors": ["picnic", "birthday party"] },
+    { "id": "g2", "sentence": "s5", "answer": "b1-calls.i-think-youre-on-mute", "gap": "on mute", "distractors": ["on vacation", "on fire"] },
+    { "id": "g3", "sentence": "s6", "answer": "b1-calls.camera", "distractors": ["oven", "car"] },
+    { "id": "g4", "sentence": "s7", "answer": "b1-calls.screen", "distractors": ["lunch", "umbrella"] },
+    { "id": "g5", "sentence": "s8", "answer": "b1-calls.connection", "distractors": ["coffee", "cat"] },
+    { "id": "g6", "sentence": "s12", "answer": "b1-calls.summary", "distractors": ["pizza", "postcard"] }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "story.en-b1-the-big-interview",
+  "order": 105,
+  "title": "The big interview",
+  "titleEs": "La gran entrevista",
+  "description": "Jordan tiene una entrevista en un estudio de grabación y Pablo le ayuda a prepararla.",
+  "emoji": "🎙️",
+  "situation": "trabajo",
+  "level": "B1",
+  "sentences": [
+    { "id": "s1", "text": "Jordan saw a job posting for an assistant at a recording studio downtown.", "es": "Jordan vio una oferta de trabajo de ayudante en un estudio de grabación del centro." },
+    { "id": "s2", "text": "He applied the same day, and they invited him to a job interview.", "es": "Se presentó ese mismo día y lo invitaron a una entrevista de trabajo." },
+    { "id": "s3", "text": "«I'm a bit nervous about the interview. I've never had a real one.»", "es": "«Estoy un poco nervioso por la entrevista. Nunca he tenido una de verdad.»", "voice": "en-US-BrianNeural" },
+    { "id": "s4", "text": "So Pablo helped him practice in the kitchen every evening.", "es": "Así que Pablo lo ayudó a practicar en la cocina todas las tardes." },
+    { "id": "s5", "text": "«So, tell me a little about yourself.»", "es": "«Bueno, háblame un poco de ti.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "On Thursday, the studio manager asked him about his strengths.", "es": "El jueves, la directora del estudio le preguntó por sus puntos fuertes." },
+    { "id": "s7", "text": "«I'm good at solving problems, and I work well under pressure.»", "es": "«Se me da bien resolver problemas y trabajo bien bajo presión.»", "voice": "en-US-BrianNeural" },
+    { "id": "s8", "text": "«And what's your biggest weakness?»", "es": "«¿Y cuál es tu mayor punto débil?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s9", "text": "«I sometimes take on too much, but I'm learning to say no.»", "es": "«A veces asumo demasiadas cosas, pero estoy aprendiendo a decir que no.»", "voice": "en-US-BrianNeural" },
+    { "id": "s10", "text": "«Do you have any questions for us?»", "es": "«¿Tienes alguna pregunta para nosotros?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "«Yes. What does a typical day look like?»", "es": "«Sí. ¿Cómo es un día normal?»", "voice": "en-US-BrianNeural" },
+    { "id": "s12", "text": "Two days later, Jordan rushed into the kitchen with his phone in his hand.", "es": "Dos días después, Jordan entró corriendo en la cocina con el móvil en la mano." },
+    { "id": "s13", "text": "«Guess what? I got the job!»", "es": "«¿Sabes qué? ¡Me han dado el trabajo!»", "voice": "en-US-BrianNeural" },
+    { "id": "s14", "text": "«Congratulations! You totally deserve it.»", "es": "«¡Enhorabuena! Te lo mereces de verdad.»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "b1-interview.job-posting",
+    "b1-interview.job-interview",
+    "b1-interview.im-a-bit-nervous",
+    "b1-interview.tell-me-about-yourself",
+    "b1-interview.strength",
+    "b1-interview.weakness",
+    "b1-interview.take-on",
+    "b1-interview.do-you-have-any-questions",
+    "b1-interview.guess-what-i-got-the-job",
+    "b1-interview.congratulations-you-deserve-it"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Where did Jordan apply for a job?",
+      "es": "¿Dónde pidió trabajo Jordan?",
+      "options": [
+        { "text": "At a recording studio.", "es": "En un estudio de grabación." },
+        { "text": "At Maya's startup.", "es": "En la startup de Maya." },
+        { "text": "At a new coffee shop.", "es": "En una cafetería nueva." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "How did Pablo help Jordan?",
+      "es": "¿Cómo ayudó Pablo a Jordan?",
+      "options": [
+        { "text": "He wrote his résumé.", "es": "Le escribió el currículum." },
+        { "text": "He practiced the interview with him.", "es": "Practicó la entrevista con él." },
+        { "text": "He drove him to the studio.", "es": "Lo llevó en coche al estudio." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "What is Jordan's biggest weakness?",
+      "es": "¿Cuál es el mayor punto débil de Jordan?",
+      "options": [
+        { "text": "He's always late.", "es": "Siempre llega tarde." },
+        { "text": "He doesn't like people.", "es": "No le gusta la gente." },
+        { "text": "He sometimes takes on too much.", "es": "A veces asume demasiadas cosas." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How did the story end?",
+      "es": "¿Cómo terminó la historia?",
+      "options": [
+        { "text": "Jordan got the job.", "es": "A Jordan le dieron el trabajo." },
+        { "text": "The studio chose another candidate.", "es": "El estudio eligió a otro candidato." },
+        { "text": "Jordan decided not to go.", "es": "Jordan decidió no ir." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "b1-interview.job-posting", "gap": "job posting", "distractors": ["bus stop", "pizza place"] },
+    { "id": "g2", "sentence": "s3", "answer": "b1-interview.im-a-bit-nervous", "gap": "nervous", "distractors": ["hungry", "sleepy"] },
+    { "id": "g3", "sentence": "s6", "answer": "b1-interview.strength", "gap": "strengths", "distractors": ["neighbors", "shoes"] },
+    { "id": "g4", "sentence": "s9", "answer": "b1-interview.take-on", "gap": "take on", "distractors": ["wake up", "show up"] },
+    { "id": "g5", "sentence": "s13", "answer": "b1-interview.guess-what-i-got-the-job", "gap": "got the job", "distractors": ["lost my keys", "missed the bus"] },
+    { "id": "g6", "sentence": "s14", "answer": "b1-interview.congratulations-you-deserve-it", "gap": "Congratulations", "distractors": ["Bless you", "Excuse me"] }
+  ]
+}
