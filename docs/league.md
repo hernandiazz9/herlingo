@@ -20,6 +20,15 @@ for the database side (schema, rules, RPC contract) and for setting up the Supab
   table. **Weekly XP**, reset on Monday 00:00 Europe/Madrid, per language.
 - **Reasonable anti-cheat:** XP only enters through one RPC with per-event, per-day and time-window
   limits. No table is writable (or readable) by clients.
+- **2026-10-06, Hernán (several languages, plan 006):** weekly XP = **sum over every language**
+  (the week is unchanged); `lang` is still recorded on every event and stat. **Daily cap 2500 per
+  player per Madrid day across all languages.** A player can be in **up to 10 groups** at once,
+  plus the general table; joining another group no longer requires leaving. Leaderboard streak =
+  the best of the player's per-language streaks. New RPCs for the multi-group client
+  (`league_status`, `league_ranking`, `league_podium`, `league_leave_group(code)`); the old ones
+  keep answering for installed app versions (see "Old RPCs"). Migration
+  `20261006000000_league_multi.sql`. This supersedes "one group per person" and "per language"
+  in the 2026-10-01 record above.
 - Hernán applies migrations to the real project himself (`npx supabase db push`). Agents only
   validate SQL locally with `npm run db:check`.
 
@@ -35,7 +44,7 @@ browser (static app) ──supabase-js, anon key──▶ Supabase Auth (anonymo
   (`supabase/config.toml` → `[api] schemas`). RLS is enabled on every table with **no policies**,
   and `anon`/`authenticated` hold no privileges on them: a direct `select`/`insert` fails with
   `42501 permission denied`.
-- Clients call the nine **`public.league_*` RPCs**: `security definer`, `search_path = ''`,
+- Clients call the twelve **`public.league_*` RPCs**: `security definer`, `search_path = ''`,
   executable by `authenticated` only (anonymous Supabase users are `authenticated` too; the `anon`
   role, i.e. not signed in, can call nothing).
 - The caller is always `auth.uid()`; no RPC takes a user id.
@@ -48,7 +57,7 @@ browser (static app) ──supabase-js, anon key──▶ Supabase Auth (anonymo
 | `profiles` | `user_id` (pk → `auth.users`, cascade), `nickname`, `emoji`, `created_at` (= joined at), `updated_at` | Nickname unique on `lower(nickname)`. |
 | `stats` | `user_id`, `lang`, `total_xp`, `streak_count`, `streak_best`, `updated_at` (pk user+lang) | Sent by the device; shown, never ranked. |
 | `groups` | `id`, `code` (6 chars, unique), `name`, `created_at` | Deleted automatically when its last member leaves. |
-| `members` | `user_id` (pk), `group_id`, `joined_at` | Primary key on the user = at most one group per person. |
+| `members` | `user_id`, `group_id` (pk user+group), `joined_at` | Up to `league.max_groups()` (10) rows per player; `joined_at` orders them (earliest = "the group" of the old RPCs). |
 | `xp_events` | `id` (uuid from the device, pk), `user_id`, `lang`, `amount` (≥ 0), `source`, `earned_at`, `received_at` | `amount` is 0 when the daily cap swallowed the event (kept so a resend is a duplicate). |
 | `blocked_words` | `word`, `mode` (`token` \| `contains`) | Nickname / group-name blocklist (edit with SQL). |
 | `emojis` | `emoji`, `position` | The fixed avatar list. |
@@ -63,8 +72,11 @@ removes all their Liga data.
 - **Week** = `[Monday 00:00, next Monday 00:00)` in **Europe/Madrid** (DST aware: the week in which
   clocks go back lasts 169 h, the one in which they go forward 167 h). SQL: `league.week_start(ts)`,
   `league.week_end(ts)`.
-- **Weekly XP** = sum of `amount` of the player's events for that `lang` whose `earned_at` is in the
-  current week. Rankings are **per language** (`lang` of the pack, e.g. `it`).
+- **Weekly XP** = sum of `amount` of the player's events in **every language** whose `earned_at` is
+  in the current week. There is one ranking for all languages (`lang` is still stored on events
+  and stats, but no ranking filters by it).
+- **Streak** shown on the boards = the highest `streak_count` among the player's per-language
+  `stats` (the device sends its global streak in each language's stats).
 - **Day** (daily cap) = calendar day in Europe/Madrid of the event's `earned_at`.
 
 ### XP limits
@@ -81,7 +93,8 @@ Derived from the XP rules in the code (2026-10-01):
 | Limit | Value | Where |
 | --- | --- | --- |
 | Per-event cap | **100 XP** (≈ 2× a strong award, above the theoretical game maximum). Larger → `too_big`. | `league.max_event_xp()` |
-| Daily cap | **2500 XP** per player, per language, per Madrid day (≈ 90 perfect lessons). The event that crosses it is clamped, later ones get 0 (`capped`). | `league.daily_cap_xp()` |
+| Daily cap | **2500 XP** per player, per Madrid day, **all languages together** (≈ 90 perfect lessons). The event that crosses it is clamped, later ones get 0 (`capped`). | `league.daily_cap_xp()` |
+| Groups | **10** groups per player at once. One more (create or join) → `too_many_groups`. | `league.max_groups()` |
 | Batch size | **200** events per `league_record_xp` call. More → `too_many_events`. | `league.max_batch()` |
 | Time window | `earned_at` ≤ now + 5 min (clock skew) and ≥ now − 8 days. | `league_record_xp` |
 | Only after joining | `earned_at` ≥ profile `created_at` − 5 min, else `before_join`. | `league_record_xp` |
@@ -126,11 +139,14 @@ keys. All need a signed-in user (anonymous is fine).
 | `nickname_taken` | Another player has it (ignoring case). |
 | `emoji_invalid` | Not in the list. |
 | `group_name_invalid` / `group_name_blocked` | Group name length/characters / blocklist. |
-| `already_in_group` | Create/join while in another group (leave first). |
+| `too_many_groups` | Create/join while already in `max_groups` (10) groups. |
+| `not_in_group` | `league_ranking` / `league_podium` for a group the caller is not a member of. |
+| `already_in_group` | No longer raised (until 2026-10-06: create/join while in another group). |
 | `group_not_found` | No group with that code. |
 | `try_again` | Could not pick a free group code (practically never). |
 | `lang_invalid` | `lang` is not 2–3 lower-case letters. |
 | `scope_invalid` | `scope` is not `group` or `global`. |
+| `group_not_found` (rankings) | `league_ranking` / `league_podium` with scope `group` and an unknown or missing `code`. |
 | `events_invalid` / `too_many_events` | `events` is not a JSON array / has more than 200 items. |
 | `stats_invalid` | `stats` malformed or out of range. |
 
@@ -172,40 +188,86 @@ Errors: `not_authenticated`, `no_profile`, `events_invalid`, `too_many_events`, 
 
 ### `league_create_group(name text) → jsonb`
 
-Creates a group and makes the caller its first member. Returns `{ code, name, members }`.
-Share link: `/liga/unirse/?codigo=<code>`.
+Creates a group and makes the caller its first member (other groups are kept). Returns
+`{ code, name, members }`. Share link: `/liga/unirse/?codigo=<code>`.
 Errors: `not_authenticated`, `no_profile`, `group_name_invalid`, `group_name_blocked`,
-`already_in_group`, `try_again`.
+`too_many_groups`, `try_again`.
 
 ### `league_join_group(code text) → jsonb`
 
-Joins the group with that code; joining the group you are already in is a no-op. Returns
-`{ code, name, members }`.
-Errors: `not_authenticated`, `no_profile`, `group_not_found`, `already_in_group`.
+Joins the group with that code without leaving the others; joining a group you are already in is a
+no-op (also at the limit). Returns `{ code, name, members }`.
+Errors: `not_authenticated`, `no_profile`, `group_not_found`, `too_many_groups`.
 
-### `league_leave_group() → boolean`
+### `league_leave_group(code text default null) → boolean`
 
-Leaves the caller's group (`true`), or `false` when in no group. The group is deleted when its last
-member leaves (its code stops working). Errors: `not_authenticated`.
+With `code`: leaves that group (`true`), or `false` when not a member or the code is unknown.
+Without `code` (old app versions call it with `{}`): leaves the **earliest joined** group, `false`
+when in no group. A group is deleted when its last member leaves (its code stops working).
+Errors: `not_authenticated`.
+
+### `league_status() → jsonb`
+
+Everything the multi-group Liga screen needs about the caller:
+
+```jsonc
+{
+  "profile": { "nickname": "Hernán", "emoji": "🍋", "joined_at": "…" } | null,
+  "stats": [{ "lang": "fr", "total_xp": 80, "streak_count": 2, "streak_best": 2, "updated_at": "…" }], // one per lang, sorted
+  "streak": 5,                       // max streak_count over stats (what the boards show)
+  "groups": [{ "code": "K7PX2M", "name": "Amici", "members": 4, "joined_at": "…", "rank": 2 }],
+  "max_groups": 10,
+  "week": { "start": "…", "end": "…" },
+  "weekly_xp": 85,                   // all languages
+  "rank": { "global": 12 | null }
+}
+```
+
+`groups` = the caller's groups, earliest joined first, with `rank` = the caller's rank in that
+group this week (same as the `is_me` row of `league_ranking('group', code)`). Without a profile:
+`profile: null`, empty `stats`/`groups`, `weekly_xp: 0`, `rank.global: null`.
+Errors: `not_authenticated`.
+
+### `league_ranking(scope text default 'global', code text default null) → setof row`
+
+This week's ranking, XP summed over every language. Same rows and rules as `league_leaderboard`
+below; `scope: 'group'` needs the `code` of one of the caller's groups (any case, spaces ignored).
+Errors: `not_authenticated`, `scope_invalid`, `group_not_found`, `not_in_group`.
+
+### `league_podium(scope text default 'global', code text default null) → setof row`
+
+Last week's top 3 (players with XP only, all languages), of the general table or one of the
+caller's groups. Errors: as `league_ranking`.
+
+### Old RPCs (installed app versions)
+
+`league_me(lang)`, `league_leaderboard(lang, scope)` and `league_last_week_podium(lang, scope)`
+keep their signatures and shapes until a later cleanup migration, with the 2026-10-06 rules:
+weekly XP is **summed over every language** (`lang` is only validated; `league_me.stats` is still
+the stats of that `lang`), the streak is the max over stats, and "the group" (`league_me.group`,
+`rank.group`, scope `group`) is the caller's **earliest joined** group. `league_leave_group()`
+without a code leaves that group (above).
 
 ### `league_leaderboard(lang text, scope text default 'global') → setof row`
 
-Current week's ranking. Rows (display order):
+Old RPC (see "Old RPCs"). Current week's ranking. Rows (display order):
 `{ rank int, nickname text, emoji text, weekly_xp int, streak int, is_me boolean }`.
 
 - `global`: every player with weekly XP > 0, plus the caller (also with 0).
-- `group`: every member of the caller's group, 0 XP included; empty when in no group.
+- `group`: every member of the caller's earliest joined group, 0 XP included; empty when in no group.
 - Top **50** rows plus the caller's own row when outside them (so up to 51). `rank` is shared on
-  ties (1, 2, 2, 4); `streak` comes from the stats (0 if never sent). No user ids are exposed.
+  ties (1, 2, 2, 4); `streak` = max `streak_count` over the player's stats (0 if never sent). No user ids are exposed.
 
 Errors: `not_authenticated`, `lang_invalid`, `scope_invalid`.
 
 ### `league_last_week_podium(lang text, scope text default 'global') → setof row`
 
-Last week's top 3 (same row shape), players with XP only; may return fewer rows.
+Old RPC. Last week's top 3 (same row shape), players with XP only; may return fewer rows.
 Errors: as `league_leaderboard`.
 
 ### `league_me(lang text) → jsonb`
+
+Old RPC (see "Old RPCs"; new clients use `league_status`).
 
 ```jsonc
 {
@@ -224,8 +286,8 @@ Errors: `not_authenticated`, `lang_invalid`.
 
 ### `league_delete_me() → boolean`
 
-"Salir de la Liga y borrar mis datos": deletes the caller's XP events, stats, membership (and the
-group if it becomes empty) and profile. `true` if there was a profile. The auth user itself stays
+"Salir de la Liga y borrar mis datos": deletes the caller's XP events, stats, every membership
+(and each group that becomes empty) and profile. `true` if there was a profile. The auth user itself stays
 (anonymous, without data); the client then signs out and clears its local Liga state. To remove an
 auth user completely, delete it in the dashboard (Authentication → Users): everything cascades.
 Errors: `not_authenticated`.
@@ -385,8 +447,9 @@ applies `scripts/db/auth-stub.sql` (minimal `auth.users`, `auth.uid()` from the
 `request.jwt.claim.sub` setting, and Supabase's default grants on `public`), every migration in
 order, then `scripts/db/smoke.sql`, and drops the database. The smoke SQL simulates callers like
 PostgREST (`set role authenticated|anon` + the JWT `sub`) and covers profiles, blocklist, groups,
-`record_xp` statuses and caps, the Madrid week boundary, leaderboards, podium, deletion and the
-RLS/privilege denials. `DB_CHECK_VERBOSE=1` lists every check; libpq variables (`PGHOST`, `PGPORT`,
+`record_xp` statuses and caps (daily cap across languages), the Madrid week boundary, up to 10
+groups (`too_many_groups`, leave by code), summed weekly XP, new and old rankings/podiums, streak =
+max over stats, deletion (every membership) and the RLS/privilege denials. `DB_CHECK_VERBOSE=1` lists every check; libpq variables (`PGHOST`, `PGPORT`,
 `PGUSER`) pick another server.
 
 ## Try it locally (fake Supabase)
@@ -407,12 +470,14 @@ the default socket and `psql`; Node built-ins only, no Docker). It uses its own 
    Put them in `.env.local` (keep the real keys commented out) and restart `npm run dev` (or
    `npm run build && npm start`; both origins are allowed by CORS).
 2. **`npm run league:seed`** (`-- --reset` to reseed): 15 fake players "Bot …" with XP spread over
-   this week and last week in every content language, and the group **Amici di prova** (code
-   `PRUEBA`) with 5 of them, so the global and group tables and last week's podium have content.
-   Does nothing if the bots already exist; `--reset` deletes the bots and the `PRUEBA` group (real
-   members leave it too).
+   this week and last week in every content language plus `it` and `fr`, and two groups of 5:
+   **Amici di prova** (code `PRUEBA`) and **Les copains** (code `BANDA2`), with two bots in both,
+   so the global and group tables and last week's podium have content.
+   Does nothing if the bots already exist; `--reset` deletes the bots and both groups (real
+   members leave them too).
 3. **`npm run league:local:check`**: proves it over HTTP with two throwaway users (CORS, anonymous
-   sign-up, refresh, set_profile, record_xp statuses, groups, leaderboards, league_me, email linking,
+   sign-up, refresh, set_profile, record_xp statuses, groups, leaderboards, league_me, a second
+   language, `league_status`/`league_ranking`/`league_podium`, leave by code, the 10-group limit, email linking,
    sign in by email, sign-out, delete_me) on its own free port, then deletes them. Exit 1 on failure.
 
 What it serves: GoTrue-shaped `POST /auth/v1/signup` (anonymous only), `POST /auth/v1/token?grant_type=refresh_token`

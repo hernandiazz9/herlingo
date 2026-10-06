@@ -78,9 +78,10 @@ select smoke.ok(not has_schema_privilege('authenticated', 'league', 'USAGE')
 select smoke.ok(not exists (
   select 1 from unnest(array[
     'public.league_set_profile(text, text)', 'public.league_record_xp(jsonb, jsonb)',
-    'public.league_create_group(text)', 'public.league_join_group(text)', 'public.league_leave_group()',
+    'public.league_create_group(text)', 'public.league_join_group(text)', 'public.league_leave_group(text)',
     'public.league_leaderboard(text, text)', 'public.league_last_week_podium(text, text)',
-    'public.league_me(text)', 'public.league_delete_me()']) as f(sig)
+    'public.league_me(text)', 'public.league_delete_me()',
+    'public.league_status()', 'public.league_ranking(text, text)', 'public.league_podium(text, text)']) as f(sig)
   where to_regprocedure(f.sig) is null
 ), 'every RPC of the contract exists');
 
@@ -190,8 +191,10 @@ begin
   perform smoke.ok((g ->> 'members')::int = 1, 'creator is the first member');
   perform set_config('smoke.code1', g ->> 'code', false);
 end $$;
-select smoke.ok(smoke.err($q$select public.league_create_group('Otro')$q$) = 'already_in_group', 'one group per person (create)');
 select smoke.ok(public.league_me('it') #>> '{group,code}' = current_setting('smoke.code1'), 'league_me shows the group');
+select smoke.ok(public.league_status() #>> '{groups,0,code}' = current_setting('smoke.code1')
+  and (public.league_status() #>> '{groups,0,members}')::int = 1
+  and (public.league_status() #>> '{groups,0,rank}')::int = 1, 'league_status lists the group (members, my rank)');
 
 select smoke.login(3);
 select smoke.ok(smoke.err($q$select public.league_create_group('   ')$q$) = 'group_name_invalid', 'empty group name rejected');
@@ -207,12 +210,25 @@ end $$;
 select smoke.login(2);
 select smoke.ok((public.league_join_group(' ' || lower(current_setting('smoke.code1')) || ' ') ->> 'members')::int = 2, 'join by code (lower case, spaces)');
 select smoke.ok((public.league_join_group(current_setting('smoke.code1')) ->> 'members')::int = 2, 'joining own group again is a no-op');
-select smoke.ok(smoke.err(format('select public.league_join_group(%L)', current_setting('smoke.code2'))) = 'already_in_group', 'one group per person (join)');
-select smoke.ok(public.league_leave_group(), 'leave group');
-select smoke.ok(not public.league_leave_group(), 'leave again → false');
-select smoke.ok((public.league_join_group(current_setting('smoke.code2')) ->> 'members')::int = 2, 'join another group after leaving');
-select smoke.ok(public.league_leave_group(), 'leave second group');
-select smoke.ok((public.league_join_group(current_setting('smoke.code1')) ->> 'members')::int = 2, 'back in group 1');
+select smoke.ok((public.league_join_group(current_setting('smoke.code2')) ->> 'members')::int = 2, 'join a second group without leaving the first');
+select smoke.ok((select string_agg(g ->> 'code', ',') from jsonb_array_elements(public.league_status() -> 'groups') g)
+  = current_setting('smoke.code1') || ',' || current_setting('smoke.code2'), 'league_status: groups, earliest joined first');
+select smoke.ok(public.league_me('it') #>> '{group,code}' = current_setting('smoke.code1'), 'old league_me: the group = the earliest joined');
+select smoke.ok(public.league_leave_group(lower(current_setting('smoke.code1'))), 'leave one group by code');
+select smoke.ok((select string_agg(g ->> 'code', ',') from jsonb_array_elements(public.league_status() -> 'groups') g)
+  = current_setting('smoke.code2'), 'the other group is kept');
+select smoke.ok(public.league_me('it') #>> '{group,code}' = current_setting('smoke.code2'), 'old league_me: next group after leaving');
+select smoke.ok(not public.league_leave_group(current_setting('smoke.code1')), 'leave a group I am not in → false');
+select smoke.ok(not public.league_leave_group('ZZZZZZ'), 'leave an unknown code → false');
+select smoke.ok((public.league_join_group(current_setting('smoke.code1')) ->> 'members')::int = 2, 'rejoin group 1');
+select smoke.ok(public.league_leave_group(), 'old league_leave_group() leaves the earliest joined group');
+select smoke.ok((select string_agg(g ->> 'code', ',') from jsonb_array_elements(public.league_status() -> 'groups') g)
+  = current_setting('smoke.code1'), 'back in group 1 only');
+select smoke.ok(not public.league_leave_group(current_setting('smoke.code2')), 'not in group 2 any more');
+select smoke.ok(smoke.err(format('select * from public.league_ranking(%L, %L)', 'group', current_setting('smoke.code2'))) = 'not_in_group', 'ranking of a group I am not in → not_in_group');
+select smoke.ok(smoke.err($q$select * from public.league_ranking('group', 'ZZZZZZ')$q$) = 'group_not_found', 'ranking of an unknown code → group_not_found');
+select smoke.ok(smoke.err($q$select * from public.league_podium('group')$q$) = 'group_not_found', 'group podium without code → group_not_found');
+select smoke.ok(smoke.err($q$select * from public.league_ranking('friends')$q$) = 'scope_invalid', 'new RPCs: bad scope rejected');
 
 select smoke.login(3);
 select smoke.ok(public.league_leave_group(), 'last member leaves');
@@ -228,7 +244,8 @@ update league.profiles set created_at = now() - interval '3 days' where user_id 
 -- Limits come from the migration itself, never hard-coded here.
 select set_config('smoke.max_event', league.max_event_xp()::text, false),
        set_config('smoke.daily_cap', league.daily_cap_xp()::text, false),
-       set_config('smoke.max_batch', league.max_batch()::text, false);
+       set_config('smoke.max_batch', league.max_batch()::text, false),
+       set_config('smoke.max_groups', league.max_groups()::text, false);
 
 set role authenticated;
 select smoke.login(1);
@@ -310,9 +327,9 @@ begin
   perform smoke.ok((r ->> 'xp_added')::int = c, 'day total equals the daily cap');
   r := public.league_record_xp(jsonb_build_array(smoke.ev(smoke.e(201), '1', n)));
   perform smoke.ok(r #>> '{results,0,status}' = 'duplicate', 'a capped event is remembered (duplicate on resend)');
-  r := public.league_record_xp(jsonb_build_array(smoke.ev(smoke.e(202), '5', n, 'es')));
-  perform smoke.ok(r #>> '{results,0,status}' = 'accepted', 'daily cap is per language');
-  r := public.league_record_xp(jsonb_build_array(smoke.ev(smoke.e(203), to_jsonb(m), day_start - interval '1 hour')));
+  r := public.league_record_xp(jsonb_build_array(smoke.ev(smoke.e(202), '5', n, 'fr')));
+  perform smoke.ok(r #>> '{results,0,status}' = 'capped' and (r ->> 'xp_added')::int = 0, 'daily cap is across languages (fr after a full it day gets 0)');
+  r := public.league_record_xp(jsonb_build_array(smoke.ev(smoke.e(203), to_jsonb(m), day_start - interval '1 hour', 'fr')));
   perform smoke.ok(r #>> '{results,0,status}' = 'accepted' and (r ->> 'xp_added')::int = m, 'daily cap is per Madrid day');
 end $$;
 reset role;
@@ -399,6 +416,9 @@ select smoke.ok((select b.weekly_xp from public.league_leaderboard('it', 'global
 select smoke.login(5); -- no profile
 select smoke.ok((select count(*) from public.league_leaderboard('it', 'global')) = 50, 'global without profile: top 50 only');
 select smoke.ok((select count(*) from public.league_leaderboard('it', 'group')) = 0, 'group without group: empty');
+select smoke.ok(public.league_status() -> 'profile' = 'null'::jsonb and public.league_status() -> 'groups' = '[]'::jsonb
+  and public.league_status() #> '{rank,global}' = 'null'::jsonb, 'league_status without profile');
+select smoke.ok((select count(*) from public.league_ranking('global')) = 50, 'league_ranking without profile: top 50 only');
 
 select smoke.login(1);
 select smoke.ok((select count(*) from public.league_leaderboard('it', 'group')) = 2, 'group: every member, 0 XP included');
@@ -406,7 +426,42 @@ select smoke.ok((select b.is_me and b.rank = 1 from public.league_leaderboard('i
 select smoke.ok((select b.weekly_xp = 0 and not b.is_me from public.league_leaderboard('it', 'group') b offset 1 limit 1), 'group: member without XP last');
 select smoke.ok((select b.streak from public.league_leaderboard('it', 'group') b where b.is_me) = 3, 'board shows the streak from stats');
 select smoke.ok((public.league_me('it') #>> '{rank,group}')::int = 1, 'league_me.rank.group');
-select smoke.ok((select count(*) from public.league_leaderboard('es', 'global')) = 2, 'rankings are per language (only es players + me)');
+select smoke.ok((select count(*) from (
+    select * from public.league_leaderboard('es', 'global') except all select * from public.league_leaderboard('it', 'global')) t) = 0
+  and (select count(*) from public.league_leaderboard('es', 'global')) = (select count(*) from public.league_leaderboard('it', 'global')), 'old leaderboard: same summed ranking whatever the lang');
+select smoke.ok((select count(*) from (
+    select * from public.league_ranking('global') except all select * from public.league_leaderboard('it', 'global')) t) = 0
+  and (select count(*) from public.league_ranking('global')) = (select count(*) from public.league_leaderboard('it', 'global')),
+  'league_ranking(global) = old leaderboard');
+select smoke.ok((select count(*) from (
+    select * from public.league_ranking('group', current_setting('smoke.code1')) except all select * from public.league_leaderboard('it', 'group')) t) = 0
+  and (select count(*) from public.league_ranking('group', current_setting('smoke.code1'))) = 2, 'league_ranking(group, code) = old group leaderboard');
+
+-- Weekly XP is summed over every language; streak = max over the per-language stats.
+do $$
+declare
+  st jsonb := public.league_status();
+  before_xp int := (st ->> 'weekly_xp')::int;
+  before_me int := (public.league_me('it') ->> 'weekly_xp')::int;
+  r jsonb;
+begin
+  perform smoke.ok(before_xp = before_me, 'league_status.weekly_xp = old league_me.weekly_xp');
+  r := public.league_record_xp(jsonb_build_array(smoke.ev(smoke.e(40), '13', now(), 'fr')),
+    '{"lang": "fr", "total_xp": 13, "streak_count": 7, "streak_best": 7}');
+  perform smoke.ok((r ->> 'xp_added')::int = 13, 'fr event accepted');
+  st := public.league_status();
+  perform smoke.ok((st ->> 'weekly_xp')::int = before_xp + 13, 'weekly XP sums it + fr');
+  perform smoke.ok((public.league_me('it') ->> 'weekly_xp')::int = before_me + 13, 'old league_me(it): summed weekly XP');
+  perform smoke.ok((select b.weekly_xp from public.league_ranking('global') b where b.is_me) = before_xp + 13, 'global ranking row sums it + fr');
+  perform smoke.ok((select b.weekly_xp from public.league_ranking('group', current_setting('smoke.code1')) b where b.is_me) = before_xp + 13, 'group ranking row sums it + fr');
+  perform smoke.ok((st ->> 'streak')::int = 7 and (select b.streak from public.league_ranking('global') b where b.is_me) = 7
+    and (select b.streak from public.league_leaderboard('it', 'group') b where b.is_me) = 7, 'streak = max over the per-language stats');
+  perform smoke.ok(public.league_me('it') #>> '{stats,streak_count}' = '3', 'old league_me(it) still returns the it stats');
+  perform smoke.ok(jsonb_array_length(st -> 'stats') = 2 and st #>> '{stats,0,lang}' = 'fr', 'league_status lists the stats per language');
+  perform smoke.ok((st #>> '{rank,global}')::int = (select b.rank from public.league_ranking('global') b where b.is_me), 'league_status.rank.global matches the ranking');
+  perform smoke.ok((st #>> '{groups,0,rank}')::int = (select b.rank from public.league_ranking('group', current_setting('smoke.code1')) b where b.is_me), 'league_status group rank matches the group ranking');
+  perform smoke.ok((st ->> 'max_groups')::int = current_setting('smoke.max_groups')::int, 'league_status.max_groups');
+end $$;
 select smoke.ok(smoke.err($q$select * from public.league_leaderboard('it', 'friends')$q$) = 'scope_invalid', 'bad scope rejected');
 select smoke.ok(smoke.err($q$select * from public.league_leaderboard('Italian', 'global')$q$) = 'lang_invalid', 'bad lang rejected');
 
@@ -419,20 +474,68 @@ reset role;
 
 -- Last week's XP goes in directly (record_xp would reject most of it as before joining).
 insert into league.xp_events (id, user_id, lang, amount, source, earned_at)
-select gen_random_uuid(), smoke.u(v.n), 'it', v.xp, 'lesson',
+select gen_random_uuid(), smoke.u(v.n), v.lang, v.xp, 'lesson',
        league.week_start(league.week_start(now()) - interval '1 day') + interval '1 hour'
-from (values (2, 3000), (3, 2000), (101, 1000), (102, 500)) v(n, xp);
+from (values (2, 'it', 3000), (3, 'it', 1500), (3, 'fr', 500), (101, 'fr', 1000), (102, 'it', 500)) v(n, lang, xp);
 
 set role authenticated;
 select smoke.login(3);
 select smoke.ok((select string_agg(b.nickname || ':' || b.weekly_xp, ',' order by b.rank) from public.league_last_week_podium('it', 'global') b)
-  = 'Giulia:3000,Turi:2000,Jugador101:1000', 'global podium: last week top 3');
+  = 'Giulia:3000,Turi:2000,Jugador101:1000', 'global podium: last week top 3, it + fr summed');
 select smoke.ok((select b.is_me from public.league_last_week_podium('it', 'global') b where b.nickname = 'Turi'), 'podium marks my row');
 select smoke.login(1);
 select smoke.ok((select string_agg(b.nickname || ':' || b.weekly_xp, ',' order by b.rank) from public.league_last_week_podium('it', 'group') b)
   = 'Giulia:3000,Hernán:7', 'group podium: only members with XP, last week only');
-select smoke.ok((select count(*) from public.league_last_week_podium('es', 'global')) = 0, 'podium per language');
+select smoke.ok((select string_agg(b.nickname || ':' || b.weekly_xp, ',' order by b.rank) from public.league_last_week_podium('es', 'group') b)
+  = 'Giulia:3000,Hernán:7', 'old podium: summed, whatever the lang');
+select smoke.ok((select string_agg(b.nickname || ':' || b.weekly_xp, ',' order by b.rank) from public.league_podium('group', current_setting('smoke.code1')) b)
+  = 'Giulia:3000,Hernán:7', 'league_podium(group, code)');
+select smoke.ok((select string_agg(b.nickname || ':' || b.weekly_xp, ',' order by b.rank) from public.league_podium() b)
+  = 'Giulia:3000,Turi:2000,Jugador101:1000', 'league_podium(global)');
 reset role;
+
+-- =============================================================================================
+-- 7b. Up to max_groups groups per player
+
+set role authenticated;
+select smoke.login(151);
+do $$
+declare g jsonb := public.league_create_group('Extra');
+begin
+  perform set_config('smoke.code_extra', g ->> 'code', false);
+end $$;
+select smoke.login(150);
+do $$
+declare
+  k int := current_setting('smoke.max_groups')::int;
+  i int;
+  g jsonb;
+  st jsonb;
+begin
+  for i in 1..k loop
+    g := public.league_create_group('Gruppo ' || i);
+    if i = 1 then perform set_config('smoke.code_g1', g ->> 'code', false); end if;
+    if i = 2 then perform set_config('smoke.code_g2', g ->> 'code', false); end if;
+  end loop;
+  st := public.league_status();
+  perform smoke.ok(jsonb_array_length(st -> 'groups') = k, format('in %s groups at once', k));
+  perform smoke.ok(st #>> '{groups,0,code}' = current_setting('smoke.code_g1'), 'groups listed in joining order');
+  perform smoke.ok(smoke.err($q$select public.league_create_group('Uno di troppo')$q$) = 'too_many_groups', 'create beyond the limit → too_many_groups');
+  perform smoke.ok(smoke.err(format('select public.league_join_group(%L)', current_setting('smoke.code_extra'))) = 'too_many_groups', 'join beyond the limit → too_many_groups');
+  perform smoke.ok((public.league_join_group(current_setting('smoke.code_g2')) ->> 'members')::int = 1, 'rejoining a group I am in is still fine at the limit');
+  perform smoke.ok(public.league_leave_group(current_setting('smoke.code_g2')), 'leave one group');
+  perform smoke.ok((public.league_join_group(current_setting('smoke.code_extra')) ->> 'members')::int = 2, 'room for another group after leaving one');
+  perform smoke.ok(smoke.err($q$select public.league_create_group('Uno di troppo')$q$) = 'too_many_groups', 'full again');
+  perform smoke.ok(public.league_me('it') #>> '{group,code}' = current_setting('smoke.code_g1'), 'old league_me: earliest of many groups');
+  perform smoke.ok(smoke.err($q$select public.league_create_group('Otro')$q$) = 'too_many_groups', 'old already_in_group is gone, too_many_groups instead');
+end $$;
+select smoke.ok(public.league_delete_me(), 'delete_me with many groups');
+reset role;
+select smoke.ok(not exists (select 1 from league.members where user_id = smoke.u(150)), 'delete_me removes every membership');
+select smoke.ok((select count(*) from league.groups where name like 'Gruppo %') = 0, 'groups left empty by delete_me are deleted');
+select smoke.ok((select count(*) from league.members m join league.groups g on g.id = m.group_id
+  where g.code = current_setting('smoke.code_extra')) = 1, 'shared group kept with its other member');
+select smoke.ok(position('league.lock_member' in pg_get_functiondef('league.join(uuid, uuid)'::regprocedure)) > 0, 'joins serialised per user (group limit cannot be raced)');
 
 -- =============================================================================================
 -- 8. Delete my data

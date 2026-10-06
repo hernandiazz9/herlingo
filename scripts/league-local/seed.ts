@@ -1,14 +1,20 @@
 /**
  * `npm run league:seed [-- --reset]`: fills the local fake Supabase (`lang_lern_league_local`) with
- * 15 clearly fake players ("Bot …") with XP this week and last week in every content language, and
- * a group (code PRUEBA) with 5 of them. Idempotent: does nothing when the bots exist; --reset deletes
- * the bots and the PRUEBA group (its real members leave it too) and seeds again.
+ * 15 clearly fake players ("Bot …") with XP this week and last week in every content language plus
+ * `it` and `fr` (the Liga sums them), and two groups (codes PRUEBA and BANDA2) of 5 bots each, two
+ * of them in both. Idempotent: does nothing when the bots exist; --reset deletes the bots and both
+ * groups (their real members leave them too) and seeds again.
  */
 import { randomBytes, randomUUID } from "node:crypto";
 import { contentLangs, DB, ensureDatabase, mustRun, wantsReset } from "./shared";
 
-const GROUP = { code: "PRUEBA", name: "Amici di prova" };
-const GROUP_SIZE = 5;
+/** Each group gets the bots with these indexes (bots 3 and 4 are in both). */
+const GROUPS = [
+  { code: "PRUEBA", name: "Amici di prova", bots: [0, 1, 2, 3, 4] },
+  { code: "BANDA2", name: "Les copains", bots: [3, 4, 5, 6, 7] },
+];
+/** Seed languages: every content pack plus it and fr, so the summed weekly XP has two languages. */
+const SEED_LANGS = ["it", "fr"];
 const BOTS = [
   "Bot Gino", "Bot Marta", "Bot Salvo", "Bot Lucia", "Bot Pippo", "Bot Rosa", "Bot Tano", "Bot Agata",
   "Bot Nino", "Bot Carla", "Bot Turi", "Bot Elena", "Bot Mimmo", "Bot Sara", "Bot Ciccio",
@@ -65,16 +71,16 @@ async function main() {
       DB,
       "remove bots",
       `begin;
-delete from league.groups where code = :'code';
+delete from league.groups where code = any(string_to_array(:'codes', ','));
 delete from auth.users where id in (select user_id from local_auth.seed_users);
 commit;`,
-      { code: GROUP.code },
+      { codes: GROUPS.map((g) => g.code).join(",") },
     );
-    console.log("• removed the bots and the PRUEBA group");
+    console.log(`• removed the bots and the groups ${GROUPS.map((g) => g.code).join(", ")}`);
   } else {
     const count = Number((await mustRun(DB, "count bots", "select count(*) from local_auth.seed_users;")).trim());
     if (count > 0) {
-      console.log(`${count} bots already seeded (group code ${GROUP.code}). Use --reset to reseed.`);
+      console.log(`${count} bots already seeded (group codes ${GROUPS.map((g) => g.code).join(", ")}). Use --reset to reseed.`);
       return;
     }
   }
@@ -83,9 +89,10 @@ commit;`,
   const now = Date.now();
   const from = weekStart - 7 * DAY_MS;
   const joined = new Date(from - DAY_MS).toISOString();
-  const langs = contentLangs();
+  const langs = [...new Set([...contentLangs(), ...SEED_LANGS])];
   const random = rng(42);
 
+  const members = GROUPS.flatMap((g) => g.bots.map((i) => ({ code: g.code, i })));
   const bots: Bot[] = BOTS.map((nickname, i) => ({ id: randomUUID(), nickname, emoji: EMOJIS[i % EMOJIS.length] }));
   const events: Event[] = [];
   const stats: Stat[] = [];
@@ -139,17 +146,22 @@ insert into league.stats (user_id, lang, total_xp, streak_count, streak_best)
 insert into league.xp_events (id, user_id, lang, amount, source, earned_at)
   select * from jsonb_to_recordset(${dollarQuote(events)}::jsonb)
     as e(id uuid, user_id uuid, lang text, amount integer, source text, earned_at timestamptz);
-insert into league.groups (code, name) values (:'code', :'name');
-insert into league.members (user_id, group_id)
-  select b.id, g.id from jsonb_to_recordset(${dollarQuote(bots.slice(0, GROUP_SIZE))}::jsonb) as b(id uuid),
-    league.groups g where g.code = :'code';
+insert into league.groups (code, name)
+  select * from jsonb_to_recordset(${dollarQuote(GROUPS.map(({ code, name }) => ({ code, name })))}::jsonb) as g(code text, name text);
+insert into league.members (user_id, group_id, joined_at)
+  select m.user_id, g.id, :'joined'::timestamptz
+  from jsonb_to_recordset(${dollarQuote(members.map((m) => ({ user_id: bots[m.i].id, code: m.code })))}::jsonb)
+    as m(user_id uuid, code text)
+  join league.groups g on g.code = m.code;
 commit;`,
-    { joined, code: GROUP.code, name: GROUP.name },
+    { joined },
   );
 
   console.log(`✓ ${bots.length} bots, ${events.length} XP events (${langs.join(", ")}), this week and last week.`);
-  console.log(`✓ group "${GROUP.name}" with ${bots.slice(0, GROUP_SIZE).map((b) => b.nickname).join(", ")}`);
-  console.log(`  join code: ${GROUP.code}  ·  link: http://localhost:3000/liga/unirse/?codigo=${GROUP.code}`);
+  for (const g of GROUPS) {
+    console.log(`✓ group "${g.name}" with ${g.bots.map((i) => bots[i].nickname).join(", ")}`);
+    console.log(`  join code: ${g.code}  ·  link: http://localhost:3000/liga/unirse/?codigo=${g.code}`);
+  }
 }
 
 main().catch((error: unknown) => {

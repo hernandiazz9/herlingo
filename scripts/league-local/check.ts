@@ -1,7 +1,8 @@
 /**
  * `npm run league:local:check`: proves the local fake Supabase end to end over HTTP with two
  * throwaway users (like supabase-js would call it): CORS, anonymous sign-up, refresh, get user,
- * set_profile, record_xp (duplicate/cap/future), groups, leaderboards, league_me, email linking
+ * set_profile, record_xp (duplicate/cap/future), groups, leaderboards, league_me, the multi-group
+ * RPCs (league_status, league_ranking, league_podium, leave by code, group limit), email linking
  * through the printed magic link, sign in by email, sign-out, delete_me. Starts its own server on a
  * free port against `lang_lern_league_local` (created if missing) and removes its users at the end.
  */
@@ -22,6 +23,14 @@ interface Session {
   access_token: string;
   refresh_token: string;
   user: { id: string; email: string; is_anonymous: boolean; new_email?: string };
+}
+
+interface Status {
+  weekly_xp: number;
+  streak: number;
+  max_groups: number;
+  groups: { code: string; members: number; rank: number }[];
+  rank: { global: number | null };
 }
 
 interface Row {
@@ -159,6 +168,65 @@ async function run(lang: string) {
   const meBody = meA.body as { weekly_xp: number; group: { code: string } | null; rank: { group: number | null } };
   ok(meBody.weekly_xp === 40 && meBody.group?.code === code && meBody.rank.group === 1, "league_me", meA.body);
 
+  // Multi-language, multi-group RPCs (docs/league.md, 2026-10-06).
+  const other = lang === "fr" ? "it" : "fr";
+  const xo = await rpc("league_record_xp", a.access_token, {
+    events: [event(other, 15)],
+    stats: { lang: other, total_xp: 15, streak_count: 6, streak_best: 6 },
+  });
+  ok(xo.status === 200 && (xo.body as { xp_added: number }).xp_added === 15, `record_xp in a second language (${other})`);
+
+  const status = async (token: string) => (await rpc("league_status", token)).body as unknown as Status;
+  let st = await status(a.access_token);
+  ok(
+    st.weekly_xp === 55 && st.streak === 6 && st.groups.length === 1 && st.groups[0].code === code && st.groups[0].rank === 1,
+    `league_status: weekly XP summed (${lang} + ${other}), streak = max, groups`,
+    st,
+  );
+  const ranking = (await rpc("league_ranking", a.access_token, { scope: "global" })).body as unknown as Row[];
+  const oldBoard = (await rpc("league_leaderboard", a.access_token, { lang: other, scope: "global" })).body as unknown as Row[];
+  const myRow = ranking.find((r) => r.is_me);
+  ok(
+    myRow?.weekly_xp === 55 && oldBoard.find((r) => r.is_me)?.weekly_xp === 55 && st.rank.global === myRow.rank,
+    "league_ranking(global) and the old leaderboard both sum the languages",
+  );
+  const oldMe = (await rpc("league_me", a.access_token, { lang })).body as { weekly_xp: number; group: { code: string } | null };
+  ok(oldMe.weekly_xp === 55 && oldMe.group?.code === code, "old league_me: summed weekly XP, earliest group", oldMe);
+
+  const g2 = await rpc("league_create_group", a.access_token, { name: `Check2 ${tag}` });
+  const code2 = (g2.body as { code: string }).code;
+  st = await status(a.access_token);
+  ok(g2.status === 200 && st.groups.map((x) => x.code).join() === `${code},${code2}`, "a second group without leaving the first", st);
+  const gr = await rpc("league_ranking", a.access_token, { scope: "group", code: code2 });
+  ok(gr.status === 200 && (gr.body as unknown as Row[]).length === 1, "league_ranking(group, code)");
+  const notIn = await rpc("league_ranking", b.access_token, { scope: "group", code: code2 });
+  ok(
+    notIn.status === 400 && (notIn.body as { message: string }).message === "not_in_group",
+    "ranking of someone else's group → not_in_group",
+    notIn.body,
+  );
+  const pod = await rpc("league_podium", a.access_token, { scope: "group", code });
+  const podGlobal = await rpc("league_podium", a.access_token, {});
+  ok(
+    pod.status === 200 && Array.isArray(pod.body) && podGlobal.status === 200 && Array.isArray(podGlobal.body),
+    "league_podium (group and global)",
+  );
+  const left = await rpc("league_leave_group", a.access_token, { code: code2 });
+  st = await status(a.access_token);
+  ok(left.body === true && st.groups.length === 1 && st.groups[0].code === code, "leave one group by code");
+
+  for (let i = st.groups.length; i < st.max_groups; i++) {
+    const r = await rpc("league_create_group", a.access_token, { name: `Check ${tag} ${i}` });
+    if (r.status !== 200) ok(false, `create group ${i + 1}`, r.body);
+  }
+  const tooMany = await rpc("league_create_group", a.access_token, { name: `Check ${tag} extra` });
+  st = await status(a.access_token);
+  ok(
+    st.groups.length === st.max_groups && tooMany.status === 400 && (tooMany.body as { message: string }).message === "too_many_groups",
+    `${st.max_groups} groups at once, one more → too_many_groups`,
+    tooMany.body,
+  );
+
   const email = `check-${tag}@example.test`;
   const upd = await call("PUT", `/auth/v1/user?redirect_to=${encodeURIComponent("http://localhost:3000/liga/")}`, {
     token: a.access_token,
@@ -194,6 +262,12 @@ async function run(lang: string) {
   const db = await rpc("league_delete_me", b.access_token);
   const gone = await rpc("league_me", b.access_token, { lang });
   ok(da.body === true && db.body === true && (gone.body as { profile: Json }).profile === null, "delete_me for both users");
+  const leftover = (
+    await mustRun(DB, "count memberships", "select count(*) from league.members where user_id = any(string_to_array(:'ids', ',')::uuid[]);", {
+      ids: [a.user.id, b.user.id].join(","),
+    })
+  ).trim();
+  ok(leftover === "0", "delete_me removes every membership");
 }
 
 async function main() {
