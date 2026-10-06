@@ -5,8 +5,10 @@ import { useState } from "react";
 import { CloseIcon, PlayControls } from "@/components/exercises";
 import { Button, Card, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { getLesson, getPack, type PlacementQuestion } from "@/lib/content";
+import { getLesson, getLevels, getPack, type Level, type PlacementQuestion } from "@/lib/content";
 import { setActiveLang } from "@/lib/content/active";
+import { setLevel, suggestLevel } from "@/lib/content/level";
+import { LevelChips } from "@/components/level/LevelChips";
 import { useActiveLang, useScreenLang } from "@/lib/content/use-active-lang";
 import { LanguagePicker, pickablePacks } from "@/components/language/LanguagePicker";
 import { cn } from "@/lib/cn";
@@ -16,7 +18,10 @@ import { recordActivity } from "@/lib/progress/activity";
 /** XP for finishing the placement test, plus one per right answer. */
 const XP_PLACEMENT = 10;
 
-type Phase = { name: "welcome" } | { name: "test"; index: number; answers: boolean[] } | { name: "result"; right: number; lessons: string[] };
+type Phase =
+  | { name: "welcome" }
+  | { name: "test"; index: number; answers: boolean[] }
+  | { name: "result"; right: number; lessons: string[]; suggested: Level | null; level: Level | null };
 
 /** Lessons passed: every question that lists the lesson was answered right. */
 function masteredLessons(questions: PlacementQuestion[], answers: boolean[]): string[] {
@@ -107,7 +112,8 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
     applyPlacement(lang, lessons);
     const rightCount = answers.filter(Boolean).length;
     recordActivity({ lang, xp: XP_PLACEMENT + rightCount, outcomes: [], source: "placement" });
-    setPhase({ name: "result", right: rightCount, lessons });
+    const suggested = suggestLevel(getLevels(pack), questions, answers);
+    setPhase({ name: "result", right: rightCount, lessons, suggested, level: suggested });
   };
 
   if (phase.name === "welcome") {
@@ -151,6 +157,12 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
 
   if (phase.name === "result") {
     const titles = phase.lessons.map((id) => getLesson(id, pack)?.title).filter((t): t is string => !!t);
+    const levels = getLevels(pack);
+    const finish = () => {
+      // The suggested (or chosen) level is stored only when confirmed here.
+      if (phase.level) setLevel(lang, phase.level);
+      router.replace("/");
+    };
     return (
       <div className="flex flex-1 flex-col gap-5">
         <p aria-hidden="true" className="pt-4 text-6xl">
@@ -174,9 +186,17 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
         ) : (
           <p className="text-lg text-ink">Empezarás desde el principio: así no se te escapa nada.</p>
         )}
+        {levels.length && phase.level ? (
+          <LevelChoice
+            levels={levels}
+            suggested={phase.suggested ?? phase.level}
+            value={phase.level}
+            onChange={(level) => setPhase({ ...phase, level })}
+          />
+        ) : null}
         <p className="text-base text-ink-muted">Puedes repetir la prueba cuando quieras desde tu perfil.</p>
         <div className="mt-auto pt-4">
-          <Button fullWidth onClick={() => router.replace("/")}>
+          <Button fullWidth onClick={finish}>
             Ir a mi ruta
           </Button>
         </div>
@@ -237,5 +257,18 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
         </Button>
       </div>
     </div>
+  );
+}
+
+/** Placement result for a pack with levels: the suggested level, and chips to choose another. */
+function LevelChoice({ levels, suggested, value, onChange }: { levels: Level[]; suggested: Level; value: Level; onChange: (level: Level) => void }) {
+  return (
+    <Card tone="lemon" className="flex flex-col gap-3">
+      <p className="text-lg font-bold text-ink">Te recomendamos el nivel {suggested}</p>
+      <p className="text-base text-ink">
+        Tu ruta mostrará las unidades de este nivel. Si prefieres otro, elígelo aquí; puedes cambiarlo cuando quieras.
+      </p>
+      <LevelChips levels={levels} value={value} onChange={onChange} label="Elige tu nivel" />
+    </Card>
   );
 }

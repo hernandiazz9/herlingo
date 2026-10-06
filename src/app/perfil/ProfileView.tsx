@@ -9,6 +9,8 @@ import { leagueEnabled, LEAGUE_PATH } from "@/lib/league/config";
 import { useLeagueAccount } from "@/lib/league/use-league-account";
 import { getAllLessons, getPack, languageName, listPacks } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
+import { useLevel } from "@/lib/content/level-hook";
+import { LevelChips } from "@/components/level/LevelChips";
 import { cn } from "@/lib/cn";
 import { resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
 import { useAppPoints, useProgress, useSettings, type AppPoints } from "@/lib/progress/use-progress";
@@ -58,6 +60,8 @@ function Profile({ lang }: { lang: string }) {
       </div>
 
       {pickablePacks().length > 1 ? <LanguageSection lang={lang} /> : null}
+
+      <LevelSection lang={lang} />
 
       {leagueEnabled() ? <LeagueLink /> : null}
 
@@ -170,6 +174,25 @@ function LanguageSection({ lang }: { lang: string }) {
         <p className="text-sm text-ink-muted">Cada idioma guarda su propio progreso: cambiar no borra nada.</p>
       </div>
       <LanguagePicker current={lang} onChoose={choose} label="Idioma que estudias" />
+    </section>
+  );
+}
+
+/** "Tu nivel" (packs with levels only): the level Ruta shows; other levels keep their progress. */
+function LevelSection({ lang }: { lang: string }) {
+  const { levels, level, setLevel } = useLevel(lang);
+  if (!levels.length || !level) return null;
+  return (
+    <section aria-labelledby="level-title" className="flex flex-col gap-3">
+      <div className="flex flex-col gap-1">
+        <h2 id="level-title" className="text-2xl font-extrabold tracking-tight text-ink">
+          Tu nivel
+        </h2>
+        <p className="text-sm text-ink-muted">
+          Tu ruta muestra las unidades de este nivel de {languageName(lang)}. Cambiar de nivel no borra nada.
+        </p>
+      </div>
+      <LevelChips levels={levels} value={level} onChange={setLevel} label="Cambiar nivel" />
     </section>
   );
 }

@@ -1,27 +1,46 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { ALL_LEVELS, LevelChips, type LevelFilter } from "@/components/level/LevelChips";
 import { getPack } from "@/lib/content";
+import { useLevel } from "@/lib/content/level-hook";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 
-/** Every dialogue of the active pack, grouped by situation (pack order). */
+/**
+ * Every dialogue of the active pack, grouped by situation (pack order). A pack with levels shows
+ * the learner's level first, with level chips and "Todos" (a view filter: the level is not changed).
+ */
 export function DialogueList() {
   const lang = useScreenLang();
-  return lang ? <PackDialogues lang={lang} /> : null;
+  return lang ? <PackDialogues key={lang} lang={lang} /> : null;
 }
 
 function PackDialogues({ lang }: { lang: string }) {
   const pack = getPack(lang);
+  const { levels, level } = useLevel(lang);
+  const [filter, setFilter] = useState<LevelFilter>(level ?? ALL_LEVELS);
+  const shown = filter === ALL_LEVELS ? pack.dialogues : pack.dialogues.filter((d) => d.level === filter);
   const groups = pack.meta.situations
-    .map((situation) => ({ situation, dialogues: pack.dialogues.filter((d) => d.situation === situation.id) }))
+    .map((situation) => ({ situation, dialogues: shown.filter((d) => d.situation === situation.id) }))
     .filter((g) => g.dialogues.length > 0);
 
+  const chips = levels.length ? (
+    <LevelChips levels={levels} value={filter} onChange={setFilter} label="Filtrar por nivel" allLabel="Todos" />
+  ) : null;
+
   if (groups.length === 0) {
-    return <p className="text-ink-muted">Todavía no hay diálogos.</p>;
+    return (
+      <div className="flex flex-col gap-4">
+        {chips}
+        <p className="text-ink-muted">{pack.dialogues.length ? "Todavía no hay diálogos de este nivel." : "Todavía no hay diálogos."}</p>
+      </div>
+    );
   }
 
   return (
     <div className="flex flex-col gap-6">
+      {chips}
       {groups.map(({ situation, dialogues }) => (
         <section key={situation.id} className="flex flex-col gap-2">
           <h2 className="text-lg font-extrabold text-ink">

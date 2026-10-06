@@ -6,6 +6,8 @@ import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Card, ProgressBar } from "@/components/ui";
 import { getPack, getUnit } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
+import { useLevel } from "@/lib/content/level-hook";
+import { LevelChips } from "@/components/level/LevelChips";
 import { cn } from "@/lib/cn";
 import { DialoguesIcon, ReviewIcon } from "@/components/icons";
 import { RutaLeagueCard } from "@/components/league/RutaCard";
@@ -34,7 +36,8 @@ function Path({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const progress = useProgress(lang);
   const now = useNow();
-  const path = useMemo(() => buildPath(pack, progress), [pack, progress]);
+  const { levels, level, setLevel } = useLevel(lang);
+  const path = useMemo(() => buildPath(pack, progress, level), [pack, progress, level]);
   const [sheet, setSheet] = useState<"grammar" | "expressions" | null>(null);
 
   // First launch: welcome + placement test (only when progress can be saved, or it would loop).
@@ -48,11 +51,23 @@ function Path({ lang }: { lang: string }) {
   const currentUnit = current ? getUnit(current.unitId, pack) : undefined;
   const main = path.units.filter((u) => !u.side);
   const side = path.units.filter((u) => u.side);
-  const varieties = [...new Set(pack.expressions.map((e) => e.variety.toLowerCase()))];
+  // A levelled pack shows the level's grammar cards, expressions and dialogues (unlevelled extras too).
+  const inLevel = (x: { level?: string }) => !level || !x.level || x.level === level;
+  const grammar = pack.grammar.filter(inLevel);
+  const expressions = pack.expressions.filter(inLevel);
+  const dialogueCount = pack.dialogues.filter(inLevel).length;
+  const varieties = [...new Set(expressions.map((e) => e.variety.toLowerCase()))];
 
   return (
     <>
       <LanguageSwitch lang={lang} />
+
+      {levels.length && level ? (
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          <span className="text-sm font-bold uppercase tracking-wider text-ink-muted">Tu nivel</span>
+          <LevelChips levels={levels} value={level} onChange={setLevel} label="Tu nivel" />
+        </div>
+      ) : null}
 
       <div className="grid grid-cols-2 gap-2">
         <Stat icon={<FlameIcon className="size-5 text-terracotta-deep" />} value={points.streak} label={points.streak === 1 ? "día seguido" : "días seguidos"} />
@@ -103,17 +118,23 @@ function Path({ lang }: { lang: string }) {
           href="/dialogos/"
           icon={<DialoguesIcon className="size-7" />}
           title={dialogues.title}
-          detail={`${pack.dialogues.length} ${pack.dialogues.length === 1 ? "conversación" : "conversaciones"}`}
+          detail={`${dialogueCount} ${dialogueCount === 1 ? "conversación" : "conversaciones"}`}
         />
       </div>
 
       <RutaLeagueCard lang={lang} />
 
+      {levels.length && main.length === 0 && side.length === 0 ? (
+        <p className="rounded-card border-2 border-dashed border-line p-6 text-center text-ink-muted">
+          Todavía no hay lecciones de este nivel. Elige otro nivel arriba.
+        </p>
+      ) : null}
+
       {main.map((u) => (
         <UnitSection key={u.unit.id} entry={u} />
       ))}
 
-      {side.length || pack.grammar.length || pack.expressions.length ? (
+      {side.length || grammar.length || expressions.length ? (
         <section aria-labelledby="side-title" className="flex flex-col gap-4 pt-2">
           <div className="flex flex-col gap-1">
             <h2 id="side-title" className="text-2xl font-extrabold tracking-tight text-ink">
@@ -122,14 +143,14 @@ function Path({ lang }: { lang: string }) {
             <p className="text-base text-ink-muted">Cuando quieras, sin orden: no bloquean la ruta.</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {pack.grammar.length ? (
-              <SideButton emoji="📘" title="Fichas de gramática" count={pack.grammar.length} onClick={() => setSheet("grammar")} />
+            {grammar.length ? (
+              <SideButton emoji="📘" title="Fichas de gramática" count={grammar.length} onClick={() => setSheet("grammar")} />
             ) : null}
-            {pack.expressions.length ? (
+            {expressions.length ? (
               <SideButton
                 emoji="👂"
                 title={`Expresiones en ${varieties.join(" y ")}`}
-                count={pack.expressions.length}
+                count={expressions.length}
                 onClick={() => setSheet("expressions")}
               />
             ) : null}
@@ -142,7 +163,7 @@ function Path({ lang }: { lang: string }) {
 
       {sheet === "grammar" ? (
         <SideSheet title="Fichas de gramática" onClose={() => setSheet(null)}>
-          {pack.grammar.map((card) => (
+          {grammar.map((card) => (
             <GrammarCardView key={card.id} card={card} />
           ))}
         </SideSheet>
@@ -150,7 +171,7 @@ function Path({ lang }: { lang: string }) {
       {sheet === "expressions" ? (
         <SideSheet title={`Expresiones en ${varieties.join(" y ")}`} onClose={() => setSheet(null)}>
           <p className="text-base text-ink-muted">Para reconocerlas cuando las oigas, no hace falta que las digas.</p>
-          {pack.expressions.map((e) => (
+          {expressions.map((e) => (
             <ExpressionView key={e.id} item={e} />
           ))}
         </SideSheet>

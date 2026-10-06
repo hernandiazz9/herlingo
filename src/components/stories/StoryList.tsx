@@ -1,13 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { ALL_LEVELS, LevelChips, type LevelFilter } from "@/components/level/LevelChips";
 import { ProgressBar } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack, getSituation, getStories } from "@/lib/content";
+import { useLevel } from "@/lib/content/level-hook";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { storyHref, useStoriesDone } from "@/lib/stories";
 
-/** Every story in trip order, with its situation and whether it is done on this device. */
+/**
+ * Every story in trip order, with its situation and whether it is done on this device. A pack with
+ * levels shows the learner's level first, with level chips and "Todos" (a view filter only).
+ */
 export function StoryList() {
   const lang = useScreenLang();
   return lang ? <PackStories key={lang} lang={lang} /> : null;
@@ -15,14 +21,29 @@ export function StoryList() {
 
 function PackStories({ lang }: { lang: string }) {
   const pack = getPack(lang);
-  const stories = getStories(pack);
+  const all = getStories(pack);
+  const { levels, level } = useLevel(lang);
+  const [filter, setFilter] = useState<LevelFilter>(level ?? ALL_LEVELS);
+  const stories = levels.length && filter !== ALL_LEVELS ? all.filter((s) => s.level === filter) : all;
   const done = useStoriesDone(pack.meta.lang);
   const count = stories.filter((s) => s.id in done).length;
 
-  if (stories.length === 0) return <p className="text-ink-muted">Todavía no hay historias.</p>;
+  const chips = levels.length ? (
+    <LevelChips levels={levels} value={filter} onChange={setFilter} label="Filtrar por nivel" allLabel="Todos" />
+  ) : null;
+
+  if (stories.length === 0) {
+    return (
+      <div className="flex flex-col gap-4">
+        {chips}
+        <p className="text-ink-muted">{all.length ? "Todavía no hay historias de este nivel." : "Todavía no hay historias."}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-4">
+      {chips}
       <div className="flex flex-col gap-2">
         <p className="text-sm font-bold text-ink-muted">
           {count} de {stories.length} {stories.length === 1 ? "historia leída" : "historias leídas"}

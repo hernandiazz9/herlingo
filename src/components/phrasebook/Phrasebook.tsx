@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
+import { ALL_LEVELS, LevelChips, type LevelFilter } from "@/components/level/LevelChips";
 import { cn } from "@/lib/cn";
-import { getPack } from "@/lib/content";
+import { getLevels, getPack, type Pack } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { PhraseList } from "./PhraseList";
 import type { Filter } from "./SearchHeader";
@@ -16,7 +17,8 @@ const VIEWS: Array<{ id: PhrasebookView; label: string }> = [
 
 /**
  * Pocket phrasebook: a "Frases | Palabras" switch (remembered on the device) over the phrase list
- * and the picture vocabulary. Search text and topic filter carry over between the two.
+ * and the picture vocabulary. Search text and topic filter carry over between the two. A pack with
+ * levels shows everything, with level chips to narrow it to one level.
  */
 export function Phrasebook() {
   const lang = useScreenLang();
@@ -24,7 +26,10 @@ export function Phrasebook() {
 }
 
 function PackPhrasebook({ lang }: { lang: string }) {
-  const pack = getPack(lang);
+  const fullPack = getPack(lang);
+  const levels = getLevels(fullPack);
+  const [level, setLevel] = useState<LevelFilter>(ALL_LEVELS);
+  const pack = useMemo(() => levelPack(fullPack, level), [fullPack, level]);
   const view = useSyncExternalStore(subscribeView, readView, serverView);
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<Filter>({ kind: "all" });
@@ -53,7 +58,18 @@ function PackPhrasebook({ lang }: { lang: string }) {
           );
         })}
       </div>
+      {levels.length ? <LevelChips levels={levels} value={level} onChange={setLevel} label="Filtrar por nivel" allLabel="Todos" /> : null}
       {view === "words" ? <WordList {...props} /> : <PhraseList {...props} />}
     </div>
   );
+}
+
+/** The pack with only one level's phrases and words (items carry their unit's level). */
+function levelPack(pack: Pack, level: LevelFilter): Pack {
+  if (level === ALL_LEVELS) return pack;
+  return {
+    ...pack,
+    phrases: pack.phrases.filter((p) => p.level === level),
+    vocab: pack.vocab.filter((v) => v.level === level),
+  };
 }

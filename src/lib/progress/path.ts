@@ -6,8 +6,12 @@
  * Locking: the first lesson of every main unit is open (jump to the situation you need); inside a
  * unit each lesson opens when the previous one is done. The current lesson is the first main
  * lesson not done.
+ *
+ * Packs split by level (`pack.json` `levels`): the path shows one level's units only (`level`),
+ * and side units are those at `SIDE_ORDER` or more inside their hundred (`order % 100`: each level
+ * owns a range of 100, grammar at x90; docs/brief-en.md). Progress of other levels is untouched.
  */
-import type { Lesson, Pack, Unit } from "@/lib/content";
+import { getLevels, type Lesson, type Level, type Pack, type Unit } from "@/lib/content";
 import type { Progress } from "./index";
 
 export const SIDE_ORDER = 90;
@@ -32,17 +36,25 @@ export interface PathModel {
   /** Main path totals. */
   done: number;
   total: number;
-  /** Every lesson of the pack, side units included (same count as Perfil and the picker). */
+  /** Every lesson shown (the level's, in a levelled pack), side units included. */
   allDone: number;
   allTotal: number;
 }
 
-export function buildPath(pack: Pack, progress: Progress): PathModel {
+/** True for side units (always open, outside the main sequence). */
+function isSide(unit: Unit, levelled: boolean): boolean {
+  return (levelled ? unit.order % 100 : unit.order) >= SIDE_ORDER;
+}
+
+/** `level` = the learner's level, for a pack with `levels` (ignored otherwise). */
+export function buildPath(pack: Pack, progress: Progress, level?: Level | null): PathModel {
   const isDone = (id: string) => id in progress.lessons;
-  const main = pack.units.filter((u) => u.order < SIDE_ORDER);
+  const levelled = getLevels(pack).length > 0;
+  const shown = levelled && level ? pack.units.filter((u) => u.level === level) : pack.units;
+  const main = shown.filter((u) => !isSide(u, levelled));
   const current = main.flatMap((u) => u.lessons).find((l) => !isDone(l.id));
-  const units = pack.units.map((unit): PathUnit => {
-    const side = unit.order >= SIDE_ORDER;
+  const units = shown.map((unit): PathUnit => {
+    const side = isSide(unit, levelled);
     const lessons = unit.lessons.map((lesson, i): PathLesson => {
       if (isDone(lesson.id)) return { lesson, state: "done" };
       if (lesson.id === current?.id) return { lesson, state: "current" };
