@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:23Z 💻
+- Updated: 2026-10-06 09:29Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T61/T64; then T60 and French units T66–T69
+- Next step: integrate T64/T60; then T62 and French units T66–T69
 - Needs Hernán: npx supabase db push for 20261006000000_league_multi.sql only when T64 ships (old app keeps working either way)
 
 ## Shared contract (all tasks read this)
@@ -61,7 +61,7 @@ Worktree setup: npm ci
 - Outcome: useScreenLang (waits for ready), owning pack on [id] routes, lang attrs + languageName() copy, match fields renamed, audio/league/coach follow active lang, fake coach per lang · 214521a · verify ✓ 💻 · not checked: Italian audio/themes on device, full game round
 
 ## T60 — Language picker: first launch, Perfil, Ruta
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a95d57934a2e43c41 · since 09:29Z)
 - Depends on: T59, T61
 - Where: any
 - Goal: Let the learner choose what to study. First launch with no active language → a picker before the welcome/placement (`/bienvenida/`), then that pack's onboarding. Perfil gets "Idioma que estudias" to switch at any time (each language keeps its own progress; a never-onboarded language goes to its welcome). Ruta shows the active language (name + flag/emoji from the pack) as a quick switch. The picker lists packs that have at least one unit, shows per-language progress and the offline-audio state from T61 ("Audio sin conexión: descargando 40 %"). Perfil's backup summary lists every language, not just the active one.
@@ -75,7 +75,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T61 — Service worker: offline audio for the active language only
-- Status: running (attempt 1 · 💻 · agent acc11bf7897385ebd · since 09:22Z)
+- Status: done
 - Depends on: T58
 - Where: any
 - Goal: Stop precaching every language's audio (+~30 MB per language). The precache keeps the app; audio goes to one SW-owned cache per language filled for the active language, reusing files already cached by the current SW so the update does not re-download Italian.
@@ -87,7 +87,7 @@ Worktree setup: npm ci
   - The coach audio cache and every `localStorage` key are untouched by install, activate and switch.
   - `npm run verify` → exit 0
   - Hand check (PC): installed iPhone PWA updates via "Actualizar" and keeps Italian audio offline (airplane mode).
-- Outcome:
+- Outcome: precache without /audio/ (790 files, 6.9 MB), per-language lists, cache lang-lern-audio-<lang> filled from old caches first, switch drops other langs, useAudioProgress API · d5ee8c7 · verify ✓ headless Chrome ✓ 💻 · not checked: iPhone update + airplane mode
 
 ## T62 — App points: monthly XP, lifetime XP, global streak
 - Status: pending
@@ -248,9 +248,11 @@ Worktree setup: npm ci
 - [ ] T63 @d1b5666 — code review (SQL) (queued 2026-10-06 💻)
 - [ ] T59 @214521a — code review (queued 2026-10-06 💻)
 - [ ] T65 @3507bfd — French language review (native-level) (queued 2026-10-06 💻)
+- [ ] T61 @d5ee8c7 — code review (SW) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
+- [ ] T61 @d5ee8c7 — installed iPhone PWA: Actualizar, Italian audio offline in airplane mode (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: multi-language app; French (`fr`) is the second pack; adding a language stays content only; active-language picker on first launch and in Perfil, stored on the device; every page uses the active pack; static params for all packs with ids unique across packs; SW precaches only the active language's audio; never lose on-device data (every `lang-lern:*:<lang>` key and shape kept, Italian progress untouched). (Hernán)
@@ -261,6 +263,7 @@ Worktree setup: npm ci
 - 2026-10-06 plan: `numberWords` dropped: the app has no number-to-words code (survey 2026-10-06); French numbers are taught as content in unit `nombres`. (orchestrator)
 - 2026-10-06 plan: Base branch `plan-006-multi-idioma` from main @ c970ea6; hybrid push policy: the writer pushes the plan branch after every integrated task; never main, no PR, merge or deploy without Hernán's OK. (orchestrator)
 - 2026-10-06 orchestrator: probe: `npm run verify` on main @ c970ea6 → exit 0. (orchestrator)
+- 2026-10-06 T60: scope extended by orchestrator: SW keeps other languages' audio caches while the new active language has no audio (fr before T73), and OfflineStatus copy names the active language's audio
 
 ## Proposals (new scope)
 - 2026-10-06 T58: listLangs() now returns the default pack first (sync.ts, coach/packs.ts iterate it, fr)
@@ -280,3 +283,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:22Z 💻 T61 launched · attempt 1 · agent acc11bf7897385ebd
 - 2026-10-06 09:23Z 💻 T65 done · worktree-agent-afbf6bfca2c5bb23b → 3507bfd · verify ✓
 - 2026-10-06 09:23Z 💻 T64 launched · attempt 1 · agent ab9c51c64c5870d41
+- 2026-10-06 09:29Z 💻 T61 done · worktree-agent-acc11bf7897385ebd → d5ee8c7 · verify ✓
+- 2026-10-06 09:29Z 💻 T60 launched · attempt 1 · agent a95d57934a2e43c41
