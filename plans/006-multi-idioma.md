@@ -8,8 +8,8 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 10:39Z 💻
-- Writer: released 10:20Z by 💻 desktop
+- Updated: 2026-10-06 10:40Z 💻
+- Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
 - Next step: all 16 tasks done; Hernán: review + visual queues, then OK to merge into main / deploy
 - Needs Hernán: OK for merge to main / deploy; visual + review queues
@@ -243,6 +243,19 @@ Worktree setup: npm ci
   - Hand check (PC): installed PWA with French active, airplane mode: a lesson, a dialogue and a story play neural audio.
 - Outcome: fr-FR audio 1732 mp3 (29 MB) + 109 Fluent pictures; minuit/midi without article; strict image check now counts pictures referenced by any pack; SW: audio lists fr+it per language, no mp3 precached · 1c894c7 · verify ✓ strict audio+images ✓ 💻 · not checked: iPhone PWA French offline
 
+## T74 — Bring main (XP everywhere, numbers in the mic) into plan 006 + French numberWords
+- Status: pending
+- Depends on: T73
+- Where: any
+- Goal: main gained a434e34 and 3e54007 (another session): XP in dialogues/listening/Descubrir/placement/interview with an XpToast and `src/lib/progress/daily.ts`, numbers spoken in the mic compared through `pack.json` `numberWords`, dictation by voice with typo tolerance. Merge origin/main into this branch keeping both sides: every new feature must follow the plan's Shared contract (active pack, no Italian hard-coded, new stored keys only, global XP via `saveResult()` so `lang-lern:activity` and the Liga outbox see every award). Add `numberWords` to `content/fr/pack.json` (0–100 at least, French spelling: soixante-dix, quatre-vingts, quatre-vingt-dix…, same coverage as Italian).
+- Context: `git log c970ea6..origin/main`, `git diff c970ea6 origin/main`; conflicts in docs/content-guide.md, DialogueSimulator, DictationExercise, FeedbackSheet, Onboarding, PhraseList, ShowMode, WordList, src/lib/progress/index.ts.
+- Scope: may touch every file in the merge, `content/fr/pack.json` (numberWords only), docs/content-guide.md / must not touch `public/audio/**`, `supabase/**`, `plans/`.
+- Done when:
+  - `git merge-base --is-ancestor origin/main HEAD` → true; no conflict markers.
+  - `grep -rnE 'DEFAULT_LANG|lang="it"|italiano' src api` → only the loader and explanatory comments.
+  - `npm run content:check -- --strict-audio --strict-images` and `npm run verify` → exit 0.
+- Outcome:
+
 ## Review queue
 - [ ] T58 @197c3ac — code review (queued 2026-10-06 💻)
 - [ ] T63 @d1b5666 — code review (SQL) (queued 2026-10-06 💻)
@@ -281,6 +294,7 @@ Worktree setup: npm ci
 - 2026-10-06 orchestrator: probe: `npm run verify` on main @ c970ea6 → exit 0. (orchestrator)
 - 2026-10-06 T60: scope extended by orchestrator: SW keeps other languages' audio caches while the new active language has no audio (fr before T73), and OfflineStatus copy names the active language's audio
 - 2026-10-06 T73: scope extended by orchestrator: fix checkImages to use pictures referenced by all packs; drop article on nombres.midi like minuit
+- 2026-10-06 plan: Hernán OK'd merging plan 006 into main for deploy (2026-10-06); main had moved (a434e34, 3e54007), so T74 brings it in first
 
 ## Proposals (new scope)
 - 2026-10-06 T58: listLangs() now returns the default pack first (sync.ts, coach/packs.ts iterate it, fr)
