@@ -1,6 +1,6 @@
 # Product note — English pack (`content/en/`)
 
-Decided with Hernán on 2026-10-06 (plan 007). `docs/brief.md` still holds every app-wide decision
+Decided with Hernán on 2026-10-06 (plan 008). `docs/brief.md` still holds every app-wide decision
 and stays untouched; this note only says how the **English** pack differs. Every English content
 task reads both, plus docs/content-guide.md for the format.
 
@@ -10,7 +10,7 @@ task reads both, plus docs/content-guide.md for the format.
   programmer), mixed at every level and getting more demanding level by level.
 - **The pack is split by CEFR level**: A2, B1, B2, C1. The learner picks his level with a
   selector (Ruta, Perfil); Ruta shows only that level's units; the placement test suggests a level.
-  **Plan 007 builds A2 and B1**; B2 and C1 come in a later plan with the same structure (the pack
+  **Plan 008 builds A2 and B1**; B2 and C1 come in a later plan with the same structure (the pack
   declares only the levels that have content).
 - Oral first, like Italian and French: audio on every item, short phrases, grammar only where it
   helps to speak.
@@ -19,9 +19,9 @@ task reads both, plus docs/content-guide.md for the format.
 Same format as Italian and French (docs/content-guide.md) and **the full French volume per level**:
 **~420 phrases, ~320 vocabulary words, ~80 Q&A, 10 units + a grammar unit, ~50 lessons (8–30
 items each), ~10 grammar cards, 12 dialogues, 12 stories**. Placement: 12 questions for the whole
-pack (6 A2 + 6 B1 in plan 007; B2/C1 questions added with their levels).
+pack (6 A2 + 6 B1 in plan 008; B2/C1 questions added with their levels).
 
-## Levels (generic schema, plan 007 T76/T77)
+## Levels (generic schema, plan 008 T90/T91)
 - `pack.json` `levels` = the pack's CEFR levels in order (`["A2", "B1"]` for now). A pack without
   `levels` (Italian, French) works exactly as today: no selector.
 - Every unit, dialogue and story of a levelled pack has `level`; placement questions too. A
@@ -88,7 +88,7 @@ la ciudad · `salud` 💊 Salud y emergencias · `social` 🗣️ Vida social ·
   US formats (dates "October 6th", 10/6; $; a.m./p.m.; °F and miles for recognition only).
   Short phrases: ≤ 12 words at A2, ≤ 15 at B1 when possible.
 - **Contractions as people speak** (I'm, don't, it's, I'd like). Answer matching treats a
-  contraction and its full form as equal through `pack.json` `equivalents` (T76); still avoid
+  contraction and its full form as equal through `pack.json` `equivalents` (T110); still avoid
   exercises whose only difference is a contraction.
 - **Register** (`formalRegister: "formal"`): English has no tú/usted, so most items are
   `neutral`; `formal` marks polite or formal wording (Could you…, Would you mind…, I would like…,
