@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 10:06Z 💻
+- Updated: 2026-10-06 10:12Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T72; then T73 (audio + images) on the Mac
+- Next step: integrate T73; then Hernán: db push, hand checks, review queue
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -218,7 +218,7 @@ Worktree setup: npm ci
 - Outcome: stories 1–6 (Lyon cast: Pablo from Seville, Camille, Julien, Madame Martin, Léa), 108–125 words, 10 key words, 4 questions, 5–6 gaps, no ⚠ · 2fad6dd · verify ✓ 💻 · not checked: native review, audio (T73)
 
 ## T72 — French content: stories 7–12
-- Status: running (attempt 1 · 💻 · agent aa287685dcb08c962 · since 10:05Z)
+- Status: done
 - Depends on: T71
 - Where: any
 - Goal: Stories 7–12 (A1, the last ones A1–A2), continuing T71's cast and reusing its inline key words by id.
@@ -227,10 +227,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: stories 7–12 per T71's outline (11–12 A2, light passé composé), 6 new inline words, no ⚠ · b23c31a · verify ✓ 💻 · not checked: native review, audio (T73)
 
 ## T73 — French audio and pictures, final offline check
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ae4d7048a936ed7f7 · since 10:12Z)
 - Depends on: T61, T70, T72
 - Where: pc (edge-tts needs the Mac's internet; on-device check)
 - Goal: Generate fr-FR neural mp3 for every French playable and the French pictures, commit them, and prove the whole French course works offline with only its audio cached.
@@ -258,6 +258,7 @@ Worktree setup: npm ci
 - [ ] T69 @6729cca — French language review (queued 2026-10-06 💻)
 - [ ] T71 @2fad6dd — French language review (queued 2026-10-06 💻)
 - [ ] T70 @70795f1 — French language review (queued 2026-10-06 💻)
+- [ ] T72 @b23c31a — French language review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -317,3 +318,5 @@ Worktree setup: npm ci
 - 2026-10-06 10:05Z 💻 T71 done · worktree-agent-a874c68c42dcdc95b → 2fad6dd · verify ✓
 - 2026-10-06 10:05Z 💻 T72 launched · attempt 1 · agent aa287685dcb08c962
 - 2026-10-06 10:06Z 💻 T70 done · worktree-agent-ad5fd9b2e670aff2f → 70795f1 · verify ✓
+- 2026-10-06 10:12Z 💻 T72 done · worktree-agent-aa287685dcb08c962 → b23c31a · verify ✓
+- 2026-10-06 10:12Z 💻 T73 launched · attempt 1 · agent ae4d7048a936ed7f7
