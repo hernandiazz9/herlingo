@@ -1,0 +1,295 @@
+{
+  "id": "famille",
+  "order": 22,
+  "title": "Familia, amigos y describir a alguien",
+  "description": "Hablar de tu familia y tu pareja, presentar a tus amigos y describir cómo es alguien, por fuera y por dentro.",
+  "emoji": "👨‍👩‍👧",
+  "situation": "familia",
+  "lessons": [
+    {
+      "id": "famille.l.ma-famille",
+      "title": "Tu familia",
+      "items": [
+        "famille.famille",
+        "famille.parents",
+        "famille.pere",
+        "famille.mere",
+        "famille.frere",
+        "famille.soeur",
+        "famille.tu-as-des-freres-et-soeurs",
+        "famille.jai-un-frere-et-une-soeur",
+        "famille.je-suis-fils-unique",
+        "gram.fr-avoir",
+        "famille.mes-parents-habitent-a-madrid",
+        "famille.cest-ma-mere-sur-la-photo",
+        "famille.grands-parents",
+        "famille.grand-mere",
+        "famille.ma-grand-mere-a-quatre-vingt-dix-ans",
+        "famille.ma-famille-me-manque",
+        "famille.qa.freres-et-soeurs"
+      ]
+    },
+    {
+      "id": "famille.l.couple-enfants",
+      "title": "Pareja e hijos",
+      "items": [
+        "famille.tu-es-marie",
+        "famille.mari",
+        "famille.femme",
+        "famille.je-suis-marie",
+        "famille.je-suis-celibataire",
+        "famille.copain",
+        "famille.copine",
+        "famille.ma-copine-sappelle-laura",
+        "famille.enfant",
+        "famille.fils",
+        "famille.fille",
+        "famille.vous-avez-des-enfants",
+        "famille.jai-deux-enfants",
+        "famille.je-nai-pas-denfants",
+        "gram.fr-negation",
+        "famille.bebe",
+        "famille.ma-soeur-attend-un-bebe",
+        "famille.qa.enfants"
+      ]
+    },
+    {
+      "id": "famille.l.amis",
+      "title": "Amigos, vecinos y compañeros",
+      "items": [
+        "famille.ami",
+        "famille.je-te-presente-pablo",
+        "salut.enchante",
+        "famille.collegue",
+        "famille.je-vous-presente-ma-collegue",
+        "famille.colocataire",
+        "famille.voici-julien-mon-coloc",
+        "famille.tu-connais-julien",
+        "famille.voisin",
+        "famille.ma-voisine-est-tres-sympa",
+        "famille.on-se-connait-depuis-lecole",
+        "famille.cest-mon-meilleur-ami",
+        "famille.qa.tu-connais-julien"
+      ]
+    },
+    {
+      "id": "famille.l.physique",
+      "title": "Cómo es: el físico",
+      "items": [
+        "famille.il-est-comment-ton-frere",
+        "famille.grand",
+        "famille.petit",
+        "famille.brun",
+        "famille.blond",
+        "famille.il-est-grand-et-brun",
+        "famille.elle-est-petite-et-blonde",
+        "famille.cheveux",
+        "famille.il-a-les-cheveux-courts",
+        "famille.yeux",
+        "famille.elle-a-les-yeux-bleus",
+        "famille.lunettes",
+        "famille.il-porte-des-lunettes",
+        "famille.barbe",
+        "famille.il-a-une-barbe",
+        "famille.il-ressemble-a-son-pere",
+        "famille.qa.il-est-comment"
+      ]
+    },
+    {
+      "id": "famille.l.caractere",
+      "title": "Cómo es: el carácter",
+      "items": [
+        "famille.sympa",
+        "famille.il-est-sympa-ton-frere",
+        "famille.gentil",
+        "famille.elle-est-tres-gentille",
+        "famille.drole",
+        "famille.bavard",
+        "famille.elle-est-drole-et-bavarde",
+        "famille.timide",
+        "famille.il-est-un-peu-timide",
+        "famille.tu-tentends-bien-avec-ta-soeur",
+        "famille.on-sentend-tres-bien",
+        "famille.qa.tu-tentends-bien",
+        "famille.qa.elle-est-comment"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "famille.tu-as-des-freres-et-soeurs", "text": "Tu as des frères et sœurs?", "es": "¿Tienes hermanos?", "literal": "¿Tienes hermanos y hermanas?", "explanation": "Entre amigos, cuando empezáis a conoceros. «frères» y «sœurs» suenan «frer» y «sör», con la «s» final muda: tü a dé FRER é SÖR?", "register": "tu", "situation": "familia", "tags": ["familia"] },
+    { "id": "famille.jai-un-frere-et-une-soeur", "text": "J'ai un frère et une sœur.", "es": "Tengo un hermano y una hermana.", "explanation": "Para responder a «Tu as des frères et sœurs?». «sœur» se dice con labios redondos, como una «e» con morritos: SÖR.", "register": "neutral", "situation": "familia", "tags": ["familia"] },
+    { "id": "famille.je-suis-fils-unique", "text": "Je suis fils unique.", "es": "Soy hijo único.", "notes": "Si eres mujer: «Je suis fille unique».", "explanation": "Si no tienes hermanos. En «fils» la «l» no suena y la «s» sí: FIS ü-NIK.", "register": "neutral", "situation": "familia", "tags": ["familia"] },
+    { "id": "famille.mes-parents-habitent-a-madrid", "text": "Mes parents habitent à Madrid.", "es": "Mis padres viven en Madrid.", "notes": "«Parents» son los padres; los parientes son «la famille».", "explanation": "Al hablar de tu familia. La terminación «-ent» de «habitent» no suena: mé pa-RAN a-BIT a ma-DRI.", "register": "neutral", "situation": "familia", "tags": ["familia"] },
+    { "id": "famille.cest-ma-mere-sur-la-photo", "text": "Regarde, c'est ma mère sur la photo.", "es": "Mira, esta de la foto es mi madre.", "explanation": "Al enseñar fotos en el móvil a un amigo. «Regarde» suena «r'GARD» y «mère», «mer»: se ma MER.", "register": "tu", "situation": "familia", "tags": ["familia"] },
+    { "id": "famille.ma-grand-mere-a-quatre-vingt-dix-ans", "text": "Ma grand-mère a quatre-vingt-dix ans.", "es": "Mi abuela tiene noventa años.", "notes": "La edad va con «avoir»: «elle a 90 ans».", "explanation": "Para hablar de tus abuelos. «grand» es nasal y la «d» no suena: gran-MER a ka-tr'van-DI-ZAN.", "register": "neutral", "situation": "familia", "tags": ["familia"] },
+    { "id": "famille.ma-famille-me-manque", "text": "Ma famille me manque.", "es": "Echo de menos a mi familia.", "literal": "Mi familia me falta.", "notes": "Al revés que en español: lo que echas de menos es el sujeto.", "explanation": "Cuando vives lejos de casa. «manque» es nasal: ma fa-MIY m'MANK.", "register": "neutral", "situation": "familia", "tags": ["familia"] },
+    { "id": "famille.tu-es-marie", "text": "Tu es marié?", "es": "¿Estás casado?", "notes": "A una mujer: «Tu es mariée?», que suena igual.", "explanation": "Entre amigos o compañeros de confianza. «es» suena «e»: tü E ma-RIÉ?", "register": "tu", "situation": "familia", "tags": ["pareja"] },
+    { "id": "famille.je-suis-marie", "text": "Oui, je suis marié.", "es": "Sí, estoy casado.", "notes": "Si eres mujer, «mariée»: suena igual.", "explanation": "Para responder sobre tu pareja. «marié» acaba en «é» cerrada: ma-RIÉ.", "register": "neutral", "situation": "familia", "tags": ["pareja"] },
+    { "id": "famille.je-suis-celibataire", "text": "Non, je suis célibataire.", "es": "No, estoy soltero.", "notes": "Igual para hombre y mujer.", "explanation": "Si no tienes pareja. Acento al final, como siempre en francés: sé-li-ba-TER.", "register": "neutral", "situation": "familia", "tags": ["pareja"] },
+    { "id": "famille.ma-copine-sappelle-laura", "text": "Ma copine s'appelle Laura.", "es": "Mi novia se llama Laura.", "notes": "«Ma copine» puede ser «mi novia» o «mi amiga»: el contexto lo aclara.", "explanation": "Al hablar de tu pareja con amigos. «copine» suena «ko-PIN», sin nasal porque va seguida de vocal.", "register": "neutral", "situation": "familia", "tags": ["pareja"] },
+    { "id": "famille.vous-avez-des-enfants", "text": "Vous avez des enfants?", "es": "¿Tiene hijos?", "explanation": "Te lo preguntará un vecino o alguien mayor. Dos ligaduras: vu-za-VÉ dé-zan-FAN?", "register": "vous", "situation": "familia", "tags": ["hijos", "registro"] },
+    { "id": "famille.jai-deux-enfants", "text": "J'ai deux enfants, un garçon et une fille.", "es": "Tengo dos hijos, un niño y una niña.", "explanation": "Para hablar de tus hijos. Liga «deux‿enfants» con «z»: dö-zan-FAN; «garçon» suena «gar-SON».", "register": "neutral", "situation": "familia", "tags": ["hijos"] },
+    { "id": "famille.je-nai-pas-denfants", "text": "Non, je n'ai pas d'enfants.", "es": "No, no tengo hijos.", "notes": "Tras una negación, «des» pasa a «de»: «pas d'enfants».", "explanation": "Para responder que no tienes hijos. «n'ai» suena «ne» y todo va de seguido: sh'ne pa dan-FAN.", "register": "neutral", "situation": "familia", "tags": ["hijos"] },
+    { "id": "famille.ma-soeur-attend-un-bebe", "text": "Ma sœur attend un bébé.", "es": "Mi hermana está esperando un bebé.", "explanation": "Para dar una buena noticia de la familia. «attend» es nasal y la «d» no suena: a-TAN an bé-BÉ.", "register": "neutral", "situation": "familia", "tags": ["hijos"] },
+    { "id": "famille.je-te-presente-pablo", "text": "Je te présente mon ami Pablo.", "es": "Te presento a mi amigo Pablo.", "notes": "Sin «a» delante de la persona: «je te présente Pablo».", "explanation": "Para presentar a un amigo a otro. Liga «mon‿ami»: mo-na-MI PA-blo.", "register": "tu", "situation": "familia", "tags": ["amigos"] },
+    { "id": "famille.je-vous-presente-ma-collegue", "text": "Je vous présente ma collègue, Camille.", "es": "Le presento a mi compañera, Camille.", "explanation": "En el trabajo o con alguien a quien tratas de usted. «Camille» suena «ka-MIY», con «ll» como «y».", "register": "vous", "situation": "familia", "tags": ["amigos", "registro"] },
+    { "id": "famille.voici-julien-mon-coloc", "text": "Voici Julien, mon coloc.", "es": "Este es Julien, mi compañero de piso.", "notes": "«Coloc» es la forma corta y coloquial de «colocataire».", "explanation": "Para presentar a alguien que está contigo. «Voici» suena «vua-SI» y «Julien», «shü-LIAN».", "register": "neutral", "situation": "familia", "tags": ["amigos"] },
+    { "id": "famille.tu-connais-julien", "text": "Tu connais Julien?", "es": "¿Conoces a Julien?", "notes": "Sin «a» delante de la persona: «connaître quelqu'un».", "explanation": "Antes de presentar a dos amigos. «connais» suena «ko-NE»: tü ko-NE shü-LIAN?", "register": "tu", "situation": "familia", "tags": ["amigos"] },
+    { "id": "famille.ma-voisine-est-tres-sympa", "text": "Ma voisine est très sympa.", "es": "Mi vecina es muy maja.", "explanation": "Al hablar de la gente de tu edificio. «sympa» empieza nasal: san-PA; «voisine» suena «vua-ZIN».", "register": "neutral", "situation": "familia", "tags": ["amigos"] },
+    { "id": "famille.on-se-connait-depuis-lecole", "text": "On se connaît depuis l'école.", "es": "Nos conocemos desde el colegio.", "notes": "«On» es «nosotros» en la lengua hablada; el verbo va como con «il».", "explanation": "Al contar de qué conoces a un amigo. «On» es nasal: on s'ko-NE d'püi lé-KOL.", "register": "neutral", "situation": "familia", "tags": ["amigos"] },
+    { "id": "famille.cest-mon-meilleur-ami", "text": "C'est mon meilleur ami.", "es": "Es mi mejor amigo.", "notes": "Para una amiga: «C'est ma meilleure amie».", "explanation": "Para presentar a tu mejor amigo. «meilleur» suena «me-IÖR»: se mon me-iö-ra-MI.", "register": "neutral", "situation": "familia", "tags": ["amigos"] },
+    { "id": "famille.il-est-comment-ton-frere", "text": "Il est comment, ton frère?", "es": "¿Cómo es tu hermano?", "notes": "Hablando, la persona va al final; para una chica: «Elle est comment?».", "explanation": "Para pedir que te describan a alguien. Liga «il‿est»: i-le ko-MAN, ton FRER?", "register": "tu", "situation": "familia", "tags": ["describir"] },
+    { "id": "famille.il-est-grand-et-brun", "text": "Il est grand et brun.", "es": "Es alto y moreno.", "notes": "«Grand» es alto, no «grande»; «brun» es de pelo oscuro.", "explanation": "Para describir a alguien. «grand» y «brun» son nasales y sin consonante final: il e GRAN e BRAN.", "register": "neutral", "situation": "familia", "tags": ["describir"] },
+    { "id": "famille.elle-est-petite-et-blonde", "text": "Elle est petite et blonde.", "es": "Es bajita y rubia.", "notes": "En femenino suena la consonante final: «petite», «blonde».", "explanation": "Para describir a una mujer o una niña. Aquí la «t» y la «d» finales sí suenan: p'TIT e BLOND.", "register": "neutral", "situation": "familia", "tags": ["describir"] },
+    { "id": "famille.il-a-les-cheveux-courts", "text": "Il a les cheveux courts.", "es": "Tiene el pelo corto.", "notes": "«Cheveux» va en plural: los pelos de la cabeza.", "explanation": "Para describir el pelo. «cheveux» suena «sh'VÖ» y «courts», «kur»: il a lé sh'vö KUR.", "register": "neutral", "situation": "familia", "tags": ["describir"] },
+    { "id": "famille.elle-a-les-yeux-bleus", "text": "Elle a les yeux bleus.", "es": "Tiene los ojos azules.", "explanation": "Para describir los ojos. Liga «les‿yeux»: lé-ZIÖ, y «bleus» suena «blö».", "register": "neutral", "situation": "familia", "tags": ["describir"] },
+    { "id": "famille.il-porte-des-lunettes", "text": "Il porte des lunettes.", "es": "Lleva gafas.", "notes": "«Porter» = llevar puesto (gafas, ropa, barba).", "explanation": "Para dar un detalle fácil de reconocer. «lunettes» con «u» francesa: lü-NET.", "register": "neutral", "situation": "familia", "tags": ["describir"] },
+    { "id": "famille.il-a-une-barbe", "text": "Il a une barbe.", "es": "Tiene barba.", "explanation": "Para describir a un hombre. Liga «a‿une» de un tirón: i-la-ün BARB.", "register": "neutral", "situation": "familia", "tags": ["describir"] },
+    { "id": "famille.il-ressemble-a-son-pere", "text": "Il ressemble beaucoup à son père.", "es": "Se parece mucho a su padre.", "explanation": "Al ver a alguien con su familia o en una foto. «ressemble» suena «r'SANBL», nasal: r'sanbl bo-KU a son PER.", "register": "neutral", "situation": "familia", "tags": ["describir"] },
+    { "id": "famille.il-est-sympa-ton-frere", "text": "Il est sympa, ton frère!", "es": "¡Qué majo es tu hermano!", "literal": "Es majo, tu hermano.", "explanation": "Para decirle algo bonito a un amigo sobre alguien de su familia. «sympa» es nasal: i-le san-PA.", "register": "tu", "situation": "familia", "tags": ["describir", "caracter"] },
+    { "id": "famille.elle-est-tres-gentille", "text": "Ma mère est très gentille.", "es": "Mi madre es muy buena.", "literal": "Mi madre es muy amable.", "notes": "«Gentil» es amable, buena persona; no «gentil» en sentido español.", "explanation": "Para hablar bien de alguien. En femenino, «-ille» suena «iy»: shan-TIY.", "register": "neutral", "situation": "familia", "tags": ["caracter"] },
+    { "id": "famille.elle-est-drole-et-bavarde", "text": "Elle est drôle et très bavarde.", "es": "Es graciosa y muy habladora.", "explanation": "Para describir el carácter de una amiga. «drôle» suena «drol», con «o» cerrada; «bavarde», «ba-VARD».", "register": "neutral", "situation": "familia", "tags": ["caracter"] },
+    { "id": "famille.il-est-un-peu-timide", "text": "Il est un peu timide.", "es": "Es un poco tímido.", "explanation": "Para describir a alguien callado. «timide» suena «ti-MID», con acento al final.", "register": "neutral", "situation": "familia", "tags": ["caracter"] },
+    { "id": "famille.tu-tentends-bien-avec-ta-soeur", "text": "Tu t'entends bien avec ta sœur?", "es": "¿Te llevas bien con tu hermana?", "explanation": "Entre amigos, al hablar de familia. «t'entends» es nasal y sin la «ds»: tü tan-TAN BIAN?", "register": "tu", "situation": "familia", "tags": ["caracter"] },
+    { "id": "famille.on-sentend-tres-bien", "text": "Oui, on s'entend très bien.", "es": "Sí, nos llevamos muy bien.", "explanation": "Para responder que te llevas bien con alguien. «on s'entend» son dos nasales: on san-TAN tre BIAN.", "register": "neutral", "situation": "familia", "tags": ["caracter"] }
+  ],
+  "vocab": [
+    { "id": "famille.famille", "word": "famille", "article": "la", "gender": "f", "plural": "familles", "es": "la familia", "notes": "Acaba en «iy»: «fa-MIY».", "example": "famille.ma-famille-me-manque", "situation": "familia", "image": "fluent:people-hugging" },
+    { "id": "famille.parents", "word": "parents", "article": "les", "gender": "m", "es": "los padres", "notes": "Ojo: no son los parientes.", "example": "famille.mes-parents-habitent-a-madrid", "situation": "familia" },
+    { "id": "famille.pere", "word": "père", "article": "le", "gender": "m", "plural": "pères", "es": "el padre", "notes": "Hablando con tus padres: «papa».", "example": "famille.il-ressemble-a-son-pere", "situation": "familia" },
+    { "id": "famille.mere", "word": "mère", "article": "la", "gender": "f", "plural": "mères", "es": "la madre", "notes": "Hablando con tus padres: «maman».", "example": "famille.cest-ma-mere-sur-la-photo", "situation": "familia" },
+    { "id": "famille.frere", "word": "frère", "article": "le", "gender": "m", "plural": "frères", "es": "el hermano", "example": "famille.jai-un-frere-et-une-soeur", "situation": "familia" },
+    { "id": "famille.soeur", "word": "sœur", "article": "la", "gender": "f", "plural": "sœurs", "es": "la hermana", "notes": "Se dice «sör», con labios redondos.", "example": "famille.jai-un-frere-et-une-soeur", "situation": "familia" },
+    { "id": "famille.grands-parents", "word": "grands-parents", "article": "les", "gender": "m", "es": "los abuelos", "situation": "familia", "image": "fluent:older-person" },
+    { "id": "famille.grand-mere", "word": "grand-mère", "article": "la", "gender": "f", "plural": "grands-mères", "es": "la abuela", "notes": "El abuelo: «le grand-père»; cariñosamente, «mamie» y «papi».", "example": "famille.ma-grand-mere-a-quatre-vingt-dix-ans", "situation": "familia", "image": "fluent:old-woman" },
+    { "id": "famille.mari", "word": "mari", "article": "le", "gender": "m", "plural": "maris", "es": "el marido", "situation": "familia" },
+    { "id": "famille.femme", "word": "femme", "article": "la", "gender": "f", "plural": "femmes", "es": "la mujer (también la esposa)", "notes": "Se dice «fam», como si fuera con «a».", "situation": "familia" },
+    { "id": "famille.copain", "word": "copain", "article": "le", "gender": "m", "plural": "copains", "es": "el novio (o el amigo)", "notes": "«Mon copain» suele ser «mi novio»; «un copain», «un amigo».", "situation": "familia" },
+    { "id": "famille.copine", "word": "copine", "article": "la", "gender": "f", "plural": "copines", "es": "la novia (o la amiga)", "example": "famille.ma-copine-sappelle-laura", "situation": "familia" },
+    { "id": "famille.enfant", "word": "enfant", "article": "l'", "gender": "m", "plural": "enfants", "es": "el niño (también el hijo)", "notes": "Vale para chico o chica: «un enfant», «une enfant».", "example": "famille.vous-avez-des-enfants", "situation": "familia", "image": "fluent:child" },
+    { "id": "famille.fils", "word": "fils", "article": "le", "gender": "m", "plural": "fils", "es": "el hijo", "notes": "La «l» no suena y la «s» sí: «fis».", "situation": "familia" },
+    { "id": "famille.fille", "word": "fille", "article": "la", "gender": "f", "plural": "filles", "es": "la hija (también la chica)", "notes": "Suena «fiy».", "example": "famille.jai-deux-enfants", "situation": "familia" },
+    { "id": "famille.bebe", "word": "bébé", "article": "le", "gender": "m", "plural": "bébés", "es": "el bebé", "notes": "Siempre masculino, aunque sea una niña.", "example": "famille.ma-soeur-attend-un-bebe", "situation": "familia", "image": "fluent:baby" },
+    { "id": "famille.ami", "word": "ami", "article": "l'", "gender": "m", "plural": "amis", "es": "el amigo", "notes": "Femenino: «l'amie», suena igual.", "example": "famille.cest-mon-meilleur-ami", "situation": "familia" },
+    { "id": "famille.collegue", "word": "collègue", "article": "le", "gender": "mf", "plural": "collègues", "es": "el compañero de trabajo (la compañera)", "notes": "Igual en masculino y femenino: «le collègue», «la collègue».", "example": "famille.je-vous-presente-ma-collegue", "situation": "familia" },
+    { "id": "famille.colocataire", "word": "colocataire", "article": "le", "gender": "mf", "plural": "colocataires", "es": "el compañero de piso (la compañera)", "notes": "Hablando: «le coloc», «la coloc».", "example": "famille.voici-julien-mon-coloc", "situation": "familia" },
+    { "id": "famille.voisin", "word": "voisin", "article": "le", "gender": "m", "plural": "voisins", "es": "el vecino", "notes": "Femenino: «la voisine», con la «n» sonora.", "example": "famille.ma-voisine-est-tres-sympa", "situation": "familia" },
+    { "id": "famille.grand", "word": "grand", "es": "alto, grande", "notes": "Femenino: «grande», con la «d» sonora.", "example": "famille.il-est-grand-et-brun", "situation": "familia", "tags": ["adjetivo"] },
+    { "id": "famille.petit", "word": "petit", "es": "bajo, pequeño", "notes": "Femenino: «petite», con la «t» sonora.", "example": "famille.elle-est-petite-et-blonde", "situation": "familia", "tags": ["adjetivo"] },
+    { "id": "famille.brun", "word": "brun", "es": "moreno (de pelo)", "notes": "Femenino: «brune». Para la piel morena: «bronzé».", "example": "famille.il-est-grand-et-brun", "situation": "familia", "tags": ["adjetivo"] },
+    { "id": "famille.blond", "word": "blond", "es": "rubio", "notes": "Femenino: «blonde».", "example": "famille.elle-est-petite-et-blonde", "situation": "familia", "tags": ["adjetivo"], "image": "fluent:person-blonde-hair" },
+    { "id": "famille.cheveux", "word": "cheveux", "article": "les", "gender": "m", "es": "el pelo", "notes": "Siempre en plural para el pelo de la cabeza.", "example": "famille.il-a-les-cheveux-courts", "situation": "familia" },
+    { "id": "famille.yeux", "word": "yeux", "article": "les", "gender": "m", "es": "los ojos", "notes": "Singular: «l'œil». Con la ligadura: «les‿yeux», lé-ZIÖ.", "example": "famille.elle-a-les-yeux-bleus", "situation": "familia", "image": "fluent:eyes" },
+    { "id": "famille.lunettes", "word": "lunettes", "article": "les", "gender": "f", "es": "las gafas", "notes": "Siempre en plural.", "example": "famille.il-porte-des-lunettes", "situation": "familia", "image": "fluent:glasses" },
+    { "id": "famille.barbe", "word": "barbe", "article": "la", "gender": "f", "plural": "barbes", "es": "la barba", "example": "famille.il-a-une-barbe", "situation": "familia", "image": "fluent:man-beard" },
+    { "id": "famille.sympa", "word": "sympa", "es": "majo, simpático", "notes": "Igual en masculino y femenino; es la forma corta de «sympathique».", "example": "famille.il-est-sympa-ton-frere", "situation": "familia", "tags": ["adjetivo"] },
+    { "id": "famille.gentil", "word": "gentil", "es": "amable, buena persona", "notes": "Femenino: «gentille». No es «gentil» en sentido español.", "example": "famille.elle-est-tres-gentille", "situation": "familia", "tags": ["adjetivo"] },
+    { "id": "famille.drole", "word": "drôle", "es": "gracioso", "notes": "Igual en masculino y femenino.", "example": "famille.elle-est-drole-et-bavarde", "situation": "familia", "tags": ["adjetivo"], "image": "fluent:face-with-tears-of-joy" },
+    { "id": "famille.bavard", "word": "bavard", "es": "hablador", "notes": "Femenino: «bavarde».", "example": "famille.elle-est-drole-et-bavarde", "situation": "familia", "tags": ["adjetivo"] },
+    { "id": "famille.timide", "word": "timide", "es": "tímido", "notes": "Igual en masculino y femenino.", "example": "famille.il-est-un-peu-timide", "situation": "familia", "tags": ["adjetivo"] }
+  ],
+  "qa": [
+    {
+      "id": "famille.qa.freres-et-soeurs",
+      "question": "Et toi, tu as des frères et sœurs?",
+      "questionEs": "¿Y tú tienes hermanos?",
+      "accepted": [
+        { "text": "Oui, j'ai un frère et une sœur.", "es": "Sí, tengo un hermano y una hermana." },
+        { "text": "Non, je suis fils unique.", "es": "No, soy hijo único." }
+      ],
+      "distractors": [
+        { "text": "Oui, je suis un frère et une sœur.", "es": "Sí, soy un hermano y una hermana." },
+        { "text": "Oui, tu as une sœur.", "es": "Sí, tú tienes una hermana." }
+      ],
+      "register": "tu",
+      "situation": "familia",
+      "notes": "Hermanos se «tienen» («j'ai»), como en español; y hablas de ti, no de «tu».",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "famille.qa.enfants",
+      "question": "Vous avez des enfants?",
+      "questionEs": "¿Tiene hijos?",
+      "accepted": [
+        { "text": "Non, je n'ai pas d'enfants.", "es": "No, no tengo hijos." },
+        { "text": "Oui, j'ai deux enfants, un garçon et une fille.", "es": "Sí, tengo dos hijos, un niño y una niña." }
+      ],
+      "distractors": [
+        { "text": "Non, je n'ai pas des enfants.", "es": "No, no tengo (unos) hijos." },
+        { "text": "Oui, je suis deux enfants.", "es": "Sí, soy dos hijos." }
+      ],
+      "register": "vous",
+      "situation": "familia",
+      "notes": "Tras «pas», «des» se convierte en «de»: «pas d'enfants».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "famille.qa.tu-connais-julien",
+      "question": "Tu connais Julien, mon coloc?",
+      "questionEs": "¿Conoces a Julien, mi compañero de piso?",
+      "accepted": [
+        { "text": "Non! Salut, Julien, moi c'est Hernán. Enchanté!", "es": "¡No! Hola, Julien, yo soy Hernán. ¡Encantado!" },
+        { "text": "Oui, on se connaît déjà!", "es": "¡Sí, ya nos conocemos!" }
+      ],
+      "distractors": [
+        { "text": "Non, je m'appelle Julien.", "es": "No, me llamo Julien." },
+        { "text": "Non. Bonjour, monsieur, comment allez-vous?", "es": "No. Buenos días, señor, ¿cómo está usted?" }
+      ],
+      "register": "tu",
+      "situation": "familia",
+      "notes": "Entre gente joven y amigos de amigos se usa «tu»; tratar de usted aquí suena muy frío.",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "famille.qa.il-est-comment",
+      "question": "Il est comment, ton frère?",
+      "questionEs": "¿Cómo es tu hermano?",
+      "accepted": [
+        { "text": "Il est grand et brun, et il porte des lunettes.", "es": "Es alto y moreno, y lleva gafas." },
+        { "text": "Il est très sympa, un peu timide.", "es": "Es muy majo, un poco tímido." }
+      ],
+      "distractors": [
+        { "text": "Elle est petite et blonde.", "es": "Ella es bajita y rubia." },
+        { "text": "Il va très bien, merci.", "es": "Está muy bien, gracias." }
+      ],
+      "register": "tu",
+      "situation": "familia",
+      "notes": "«Il est comment?» pide una descripción, no cómo está; y hablas de él: «il».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "famille.qa.tu-tentends-bien",
+      "question": "Tu t'entends bien avec ta sœur?",
+      "questionEs": "¿Te llevas bien con tu hermana?",
+      "accepted": [
+        { "text": "Oui, on s'entend très bien.", "es": "Sí, nos llevamos muy bien." },
+        { "text": "Oui, elle est très gentille.", "es": "Sí, es muy buena." }
+      ],
+      "distractors": [
+        { "text": "Oui, j'entends très bien.", "es": "Sí, oigo muy bien." },
+        { "text": "Oui, il est très gentil.", "es": "Sí, él es muy bueno." }
+      ],
+      "register": "tu",
+      "situation": "familia",
+      "notes": "«S'entendre avec» es llevarse bien; sin «se», «entendre» es oír.",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "famille.qa.elle-est-comment",
+      "question": "Et ta meilleure amie, elle est comment?",
+      "questionEs": "¿Y tu mejor amiga cómo es?",
+      "accepted": [
+        { "text": "Elle est drôle et très bavarde.", "es": "Es graciosa y muy habladora." },
+        { "text": "Elle est petite et blonde, et très gentille.", "es": "Es bajita y rubia, y muy buena." }
+      ],
+      "distractors": [
+        { "text": "Elle est petit et blond.", "es": "Ella es bajito y rubio." },
+        { "text": "Elle s'appelle comment?", "es": "¿Cómo se llama?" }
+      ],
+      "register": "tu",
+      "situation": "familia",
+      "notes": "Con «elle», los adjetivos van en femenino: «petite», «blonde».",
+      "voice": "fr-FR-HenriNeural"
+    }
+  ]
+}

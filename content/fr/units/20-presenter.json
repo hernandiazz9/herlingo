@@ -1,0 +1,451 @@
+{
+  "id": "presenter",
+  "order": 20,
+  "title": "Presentarte: nombre, origen, trabajo e idiomas",
+  "description": "Decir cómo te llamas, de dónde eres, a qué te dedicas y qué idiomas hablas, y dar tus datos cuando te los piden.",
+  "emoji": "🙂",
+  "situation": "presentarse",
+  "lessons": [
+    {
+      "id": "presenter.l.je-mappelle",
+      "title": "Cómo te llamas",
+      "items": [
+        "presenter.je-mappelle",
+        "presenter.moi-cest",
+        "presenter.prenom",
+        "presenter.mon-prenom-cest",
+        "presenter.nom-de-famille",
+        "presenter.mon-nom-de-famille",
+        "presenter.comment-tu-tappelles",
+        "presenter.comment-vous-appelez-vous",
+        "salut.enchante",
+        "presenter.ravi-de-vous-rencontrer",
+        "presenter.ca-secrit-comment",
+        "presenter.ca-secrit-avec-un-h",
+        "presenter.qa.comment-tu-tappelles",
+        "presenter.qa.comment-vous-appelez-vous"
+      ]
+    },
+    {
+      "id": "presenter.l.origine",
+      "title": "De dónde eres y dónde vives",
+      "items": [
+        "presenter.tu-viens-dou",
+        "presenter.vous-venez-dou",
+        "presenter.je-suis-espagnol",
+        "presenter.espagne",
+        "presenter.je-viens-despagne",
+        "presenter.pays",
+        "presenter.ville",
+        "presenter.capitale",
+        "presenter.madrid-cest-la-capitale",
+        "presenter.jhabite-a-madrid",
+        "presenter.quartier",
+        "presenter.jhabite-dans-un-quartier-calme",
+        "grammaire.tu-habites-ou",
+        "presenter.france",
+        "presenter.vous-etes-francais",
+        "presenter.non-je-ne-suis-pas-francais",
+        "gram.fr-etre",
+        "presenter.qa.tu-viens-dou",
+        "presenter.qa.vous-etes-francais",
+        "grammaire.qa.habites"
+      ]
+    },
+    {
+      "id": "presenter.l.travail",
+      "title": "A qué te dedicas",
+      "items": [
+        "presenter.tu-fais-quoi-dans-la-vie",
+        "presenter.vous-faites-quoi-dans-la-vie",
+        "presenter.travail",
+        "presenter.developpeur",
+        "presenter.je-suis-developpeur",
+        "presenter.informatique",
+        "presenter.je-travaille-dans-linformatique",
+        "presenter.ordinateur",
+        "presenter.je-travaille-de-chez-moi",
+        "presenter.bureau",
+        "presenter.entreprise",
+        "presenter.tu-travailles-ou",
+        "presenter.ca-te-plait-ton-travail",
+        "presenter.jaime-bien-mon-travail",
+        "presenter.etudiant",
+        "presenter.je-suis-etudiant",
+        "presenter.vacances",
+        "presenter.en-ce-moment-je-suis-en-vacances",
+        "gram.fr-verbes-er",
+        "presenter.qa.tu-fais-quoi",
+        "presenter.qa.vous-faites-quoi"
+      ]
+    },
+    {
+      "id": "presenter.l.metiers",
+      "title": "Profesiones",
+      "items": [
+        "presenter.metier",
+        "presenter.professeur",
+        "presenter.medecin",
+        "presenter.infirmier",
+        "presenter.serveur",
+        "presenter.vendeur",
+        "presenter.cuisinier",
+        "presenter.retraite",
+        "presenter.elle-est-professeure",
+        "presenter.il-est-infirmier",
+        "presenter.je-suis-a-la-retraite",
+        "presenter.qa.ta-soeur"
+      ]
+    },
+    {
+      "id": "presenter.l.langues",
+      "title": "Idiomas y por qué aprendes francés",
+      "items": [
+        "presenter.langue",
+        "presenter.tu-parles-quelles-langues",
+        "salut.espagnol",
+        "salut.anglais",
+        "presenter.italien",
+        "presenter.allemand",
+        "presenter.je-parle-espagnol-et-anglais",
+        "presenter.ma-langue-maternelle",
+        "salut.francais",
+        "presenter.japprends-le-francais",
+        "presenter.japprends-depuis-trois-mois",
+        "presenter.appli",
+        "presenter.avec-une-appli",
+        "presenter.cours",
+        "presenter.pourquoi-tu-apprends",
+        "presenter.pour-le-plaisir",
+        "presenter.je-comprends-mieux",
+        "presenter.vous-parlez-tres-bien",
+        "presenter.cest-gentil",
+        "presenter.faute",
+        "presenter.nhesite-pas-a-me-corriger",
+        "presenter.qa.quelles-langues",
+        "presenter.qa.pourquoi-francais",
+        "presenter.qa.vous-parlez-bien"
+      ]
+    },
+    {
+      "id": "presenter.l.coordonnees",
+      "title": "Tus datos: dirección, correo y teléfono",
+      "items": [
+        "presenter.vous-pouvez-epeler",
+        "presenter.adresse",
+        "presenter.rue",
+        "presenter.quelle-est-votre-adresse",
+        "presenter.jhabite-au-quinze",
+        "presenter.e-mail",
+        "presenter.vous-avez-un-e-mail",
+        "presenter.mon-e-mail",
+        "presenter.telephone",
+        "presenter.votre-numero",
+        "nombres.mon-numero",
+        "presenter.date-de-naissance",
+        "presenter.votre-date-de-naissance",
+        "presenter.je-suis-ne-le-trois-mai",
+        "presenter.formulaire",
+        "presenter.qa.epeler",
+        "presenter.qa.date-de-naissance"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "presenter.je-mappelle", "text": "Je m'appelle Hernán.", "es": "Me llamo Hernán.", "notes": "Cambia el nombre por el tuyo.", "explanation": "Al presentarte a cualquiera: un vecino, un compañero, en clase. «m'appelle» va junto y la «e» final no suena: sh'ma-PEL.", "register": "neutral", "situation": "presentarse", "tags": ["persona", "nombre"] },
+    { "id": "presenter.moi-cest", "text": "Moi, c'est Hernán.", "es": "Yo soy Hernán.", "notes": "La forma más natural en un ambiente relajado.", "explanation": "Entre gente joven, en una fiesta o con los amigos de un amigo. «Moi» suena «mua»: MUA, se er-NAN.", "register": "neutral", "situation": "presentarse", "tags": ["persona", "nombre"] },
+    { "id": "presenter.mon-prenom-cest", "text": "Mon prénom, c'est Hernán.", "es": "Mi nombre es Hernán.", "notes": "«Prénom» es el nombre de pila; «nom», el apellido.", "explanation": "Cuando te piden el nombre en una ventanilla o al apuntarte a algo. «Mon» es nasal, sin «n»: mon pré-NON.", "register": "neutral", "situation": "presentarse", "tags": ["persona", "nombre"] },
+    { "id": "presenter.mon-nom-de-famille", "text": "Mon nom de famille, c'est Díaz.", "es": "Mi apellido es Díaz.", "notes": "En Francia se usa un solo apellido.", "explanation": "En el médico, en un formulario o al reservar. «famille» acaba en «iy»: fa-MIY.", "register": "neutral", "situation": "presentarse", "tags": ["persona", "nombre"] },
+    { "id": "presenter.comment-tu-tappelles", "text": "Comment tu t'appelles?", "es": "¿Cómo te llamas?", "notes": "Hablando también se oye «Tu t'appelles comment?».", "explanation": "A alguien de tu edad, a un niño o a un compañero. «t'appelles» suena igual que «appelle»: ko-MAN tü ta-PEL?", "register": "tu", "situation": "presentarse", "tags": ["persona", "nombre"] },
+    { "id": "presenter.comment-vous-appelez-vous", "text": "Comment vous appelez-vous?", "es": "¿Cómo se llama usted?", "explanation": "Con un adulto al que no conoces, en el trabajo o en una ventanilla. Liga «vous‿appelez»: ko-man vu-za-p'LÉ-vu?", "register": "vous", "situation": "presentarse", "tags": ["persona", "nombre", "registro"] },
+    { "id": "presenter.ravi-de-vous-rencontrer", "text": "Ravi de vous rencontrer.", "es": "Encantado de conocerle.", "notes": "Si eres mujer, «Ravie»: suena igual.", "explanation": "Al conocer a alguien en un contexto algo formal: un cliente, la familia de tu pareja. «rencontrer» lleva dos nasales: ran-kon-TRÉ.", "register": "vous", "situation": "presentarse", "tags": ["persona", "registro"] },
+    { "id": "presenter.ca-secrit-comment", "text": "Ça s'écrit comment?", "es": "¿Cómo se escribe?", "explanation": "Cuando oyes un nombre o una calle y no sabes escribirlo. «s'écrit» va todo junto y la «t» no suena: sa sé-KRI ko-MAN?", "register": "neutral", "situation": "presentarse", "tags": ["nombre", "deletrear"] },
+    { "id": "presenter.ca-secrit-avec-un-h", "text": "Ça s'écrit avec un H.", "es": "Se escribe con hache.", "notes": "La letra H se llama «ache», como en español pero sin la «e» final: «ash».", "explanation": "Cuando te preguntan cómo se escribe tu nombre. Liga «avec‿un»: a-ve-KAN ASH.", "register": "neutral", "situation": "presentarse", "tags": ["nombre", "deletrear"] },
+    { "id": "presenter.tu-viens-dou", "text": "Tu viens d'où?", "es": "¿De dónde eres?", "literal": "¿Tú vienes de dónde?", "explanation": "La pregunta típica entre gente joven cuando notan tu acento. «viens» es nasal: tü VIAN DU?", "register": "tu", "situation": "presentarse", "tags": ["origen"] },
+    { "id": "presenter.vous-venez-dou", "text": "Vous venez d'où?", "es": "¿De dónde es usted?", "explanation": "A un adulto que no conoces, por ejemplo un vecino nuevo. «venez» suena «v'né»: vu v'NÉ DU?", "register": "vous", "situation": "presentarse", "tags": ["origen", "registro"] },
+    { "id": "presenter.je-suis-espagnol", "text": "Je suis espagnol.", "es": "Soy español.", "notes": "Las nacionalidades van en minúscula; si eres mujer, «espagnole», que suena igual.", "explanation": "Cuando te preguntan de dónde eres. «gnol» suena «ñol» y «suis» es una sílaba: sh'süi-zes-pa-ÑOL.", "register": "neutral", "situation": "presentarse", "tags": ["origen"] },
+    { "id": "presenter.je-viens-despagne", "text": "Je viens d'Espagne, de Madrid.", "es": "Soy de España, de Madrid.", "literal": "Vengo de España, de Madrid.", "explanation": "Para responder a «Tu viens d'où?». «d'Espagne» va junto y la «e» final no suena: des-PAÑ.", "register": "neutral", "situation": "presentarse", "tags": ["origen"] },
+    { "id": "presenter.madrid-cest-la-capitale", "text": "Madrid, c'est la capitale de l'Espagne.", "es": "Madrid es la capital de España.", "explanation": "Si te preguntan dónde está tu ciudad. En francés, Madrid se dice con acento final y la «d» casi muda: ma-DRI.", "register": "neutral", "situation": "presentarse", "tags": ["origen"] },
+    { "id": "presenter.jhabite-a-madrid", "text": "J'habite à Madrid.", "es": "Vivo en Madrid.", "notes": "Para ciudades, «à»; para países femeninos, «en»: «en Espagne».", "explanation": "Para decir dónde vives. La «h» no suena y todo va junto: sha-BIT a ma-DRI.", "register": "neutral", "situation": "presentarse", "tags": ["origen"] },
+    { "id": "presenter.jhabite-dans-un-quartier-calme", "text": "J'habite dans un quartier calme.", "es": "Vivo en un barrio tranquilo.", "explanation": "Al hablar de tu casa o tu barrio. «quartier» suena «kar-TIÉ» y liga «dans‿un»: dan-ZAN.", "register": "neutral", "situation": "presentarse", "tags": ["origen"] },
+    { "id": "presenter.vous-etes-francais", "text": "Vous êtes français?", "es": "¿Es usted francés?", "explanation": "Para preguntar a alguien a quien tratas de usted. Liga «vous‿êtes»: vu-ZET fran-SE?", "register": "vous", "situation": "presentarse", "tags": ["origen", "registro"] },
+    { "id": "presenter.non-je-ne-suis-pas-francais", "text": "Non, je ne suis pas français.", "es": "No, no soy francés.", "notes": "El «ne … pas» rodea al verbo.", "explanation": "Cuando te confunden con alguien de aquí. Las «e» de «je ne» casi desaparecen: sh'n'süi pa fran-SE.", "register": "neutral", "situation": "presentarse", "tags": ["origen"] },
+    { "id": "presenter.tu-fais-quoi-dans-la-vie", "text": "Tu fais quoi dans la vie?", "es": "¿A qué te dedicas?", "literal": "¿Qué haces en la vida?", "explanation": "Entre gente joven, después del nombre y la ciudad. «fais» suena «fe» y «quoi», «kua»: tü fe KUA dan la VI?", "register": "tu", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.vous-faites-quoi-dans-la-vie", "text": "Qu'est-ce que vous faites dans la vie?", "es": "¿A qué se dedica usted?", "explanation": "Con un adulto al que tratas de usted. «Qu'est-ce que» se dice de un tirón: KES-kö vu FET dan la VI?", "register": "vous", "situation": "presentarse", "tags": ["trabajo", "registro"] },
+    { "id": "presenter.je-suis-developpeur", "text": "Je suis développeur.", "es": "Soy programador.", "notes": "Sin artículo: «je suis développeur», «je suis médecin».", "explanation": "Al decir tu profesión. «eur» se dice con los labios redondos, como una «e» con morritos: dé-vlo-PÖR.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.je-travaille-dans-linformatique", "text": "Je travaille dans l'informatique.", "es": "Trabajo en informática.", "explanation": "Para hablar de tu sector. «travaille» acaba en «ay»: tra-VAY; y «in» es nasal: lan-for-ma-TIK.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.je-travaille-de-chez-moi", "text": "Je travaille de chez moi.", "es": "Trabajo desde casa.", "notes": "También «Je suis en télétravail».", "explanation": "Cuando te preguntan dónde trabajas. «chez» suena «shé»: tra-VAY d'shé MUA.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.tu-travailles-ou", "text": "Tu travailles où?", "es": "¿Dónde trabajas?", "explanation": "A un amigo o compañero para seguir la conversación. «où» suena «u», con la boca muy cerrada: tü tra-VAY U?", "register": "tu", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.ca-te-plait-ton-travail", "text": "Ça te plaît, ton travail?", "es": "¿Te gusta tu trabajo?", "explanation": "Entre amigos, para que el otro cuente más. «plaît» suena «ple», sin la «t»: sa t'PLE ton tra-VAY?", "register": "tu", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.jaime-bien-mon-travail", "text": "Oui, j'aime bien mon travail.", "es": "Sí, me gusta mi trabajo.", "notes": "«J'aime bien» es «me gusta»; «j'aime» a secas suena más fuerte.", "explanation": "Para responder a «Ça te plaît, ton travail?». «j'aime» suena «shem»: UI, shem BIAN mon tra-VAY.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.je-suis-etudiant", "text": "Je suis étudiant.", "es": "Soy estudiante.", "notes": "Si eres mujer, «étudiante», con la «t» final sonora.", "explanation": "Al presentarte en clase o si todavía estudias. Liga «suis‿étudiant»: sh'süi-zé-tü-DIAN.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.en-ce-moment-je-suis-en-vacances", "text": "En ce moment, je suis en vacances.", "es": "Ahora estoy de vacaciones.", "notes": "«Vacances» va siempre en plural.", "explanation": "Para explicar que estos días no trabajas. Las «en/an» son nasales: an s'mo-MAN … an va-KANS.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.elle-est-professeure", "text": "Elle est professeure de maths.", "es": "Es profesora de matemáticas.", "notes": "Hablando, casi siempre «Elle est prof».", "explanation": "Al hablar del trabajo de otra persona. Liga «elle‿est»: e-LE pro-fe-SÖR d'MAT.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.il-est-infirmier", "text": "Il est infirmier à l'hôpital.", "es": "Es enfermero en el hospital.", "explanation": "Para contar a qué se dedica alguien. «in» es nasal y la «r» final no suena: an-fir-MIÉ a lo-pi-TAL.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.je-suis-a-la-retraite", "text": "Je suis à la retraite.", "es": "Estoy jubilado.", "literal": "Estoy en la jubilación.", "explanation": "Lo oirás mucho a tus vecinos mayores. «retraite» suena «r'TRET»: sh'süi-za la r'TRET.", "register": "neutral", "situation": "presentarse", "tags": ["trabajo"] },
+    { "id": "presenter.tu-parles-quelles-langues", "text": "Tu parles quelles langues?", "es": "¿Qué idiomas hablas?", "explanation": "Entre amigos o compañeros. «parles» suena igual que «parle», la «s» no se oye: tü PARL kel LANG?", "register": "tu", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.je-parle-espagnol-et-anglais", "text": "Je parle espagnol et anglais.", "es": "Hablo español e inglés.", "notes": "Sin artículo después de «parler»: «je parle anglais».", "explanation": "Para decir qué idiomas hablas. «et» es solo «e» y «anglais» empieza nasal: es-pa-ÑOL e an-GLE.", "register": "neutral", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.ma-langue-maternelle", "text": "Ma langue maternelle, c'est l'espagnol.", "es": "Mi lengua materna es el español.", "explanation": "Para explicar tu acento o tus errores. «langue» es nasal y la «g» final sí suena, sin la «e»: ma LANG ma-ter-NEL.", "register": "neutral", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.japprends-le-francais", "text": "J'apprends le français.", "es": "Estoy aprendiendo francés.", "notes": "El presente francés vale también para «estoy haciendo».", "explanation": "Cuando te preguntan por tu francés. «apprends» es nasal y la «ds» no suena: sha-PRAN l'fran-SE.", "register": "neutral", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.japprends-depuis-trois-mois", "text": "J'apprends depuis trois mois.", "es": "Llevo tres meses aprendiendo.", "literal": "Aprendo desde hace tres meses.", "notes": "«Depuis» + tiempo = «desde hace»; el verbo va en presente.", "explanation": "Para decir cuánto llevas estudiando. «trois mois» suena «trua MUA».", "register": "neutral", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.avec-une-appli", "text": "J'apprends avec une appli sur mon téléphone.", "es": "Aprendo con una app en el móvil.", "explanation": "Para contar cómo estudias. Liga «avec‿une»: a-ve-KÜN a-PLI, con la «u» francesa.", "register": "neutral", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.pourquoi-tu-apprends", "text": "Pourquoi tu apprends le français?", "es": "¿Por qué aprendes francés?", "explanation": "Te lo preguntará casi todo el mundo. «Pourquoi» suena «pur-KUA».", "register": "tu", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.pour-le-plaisir", "text": "Pour le plaisir, et pour voyager.", "es": "Por gusto, y para viajar.", "explanation": "Una respuesta fácil a «Pourquoi tu apprends le français?». «voyager» suena «vua-ia-SHÉ».", "register": "neutral", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.je-comprends-mieux", "text": "Je comprends mieux que je ne parle.", "es": "Entiendo mejor de lo que hablo.", "notes": "Aquí el «ne» no niega nada: es típico tras una comparación.", "explanation": "Para pedir paciencia cuando te responden muy rápido. «mieux» suena «MIÖ», con labios redondos.", "register": "neutral", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.vous-parlez-tres-bien", "text": "Vous parlez très bien français!", "es": "¡Habla usted muy bien francés!", "explanation": "Te lo dirán a menudo aunque te equivoques; es un cumplido. vu par-LÉ tre BIAN fran-SE.", "register": "vous", "situation": "presentarse", "tags": ["idiomas", "registro"] },
+    { "id": "presenter.cest-gentil", "text": "Merci, c'est gentil!", "es": "¡Gracias, qué amable!", "literal": "Gracias, es amable.", "explanation": "Para responder a un cumplido o a un favor. «gentil» empieza con la «j» francesa y es nasal: shan-TI, la «l» no suena.", "register": "neutral", "situation": "presentarse", "tags": ["idiomas", "cortesia"] },
+    { "id": "presenter.nhesite-pas-a-me-corriger", "text": "N'hésite pas à me corriger!", "es": "¡No dudes en corregirme!", "explanation": "A un amigo francés con el que practicas. La «h» no suena y la «s» suena «z»: né-ZIT pa a m'ko-ri-SHÉ.", "register": "tu", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.vous-pouvez-epeler", "text": "Vous pouvez épeler votre nom, s'il vous plaît?", "es": "¿Puede deletrear su apellido, por favor?", "explanation": "Te lo pedirán al teléfono, en el médico o en una ventanilla. «épeler» suena «ép-LÉ»: vu pu-VÉ ép-LÉ.", "register": "vous", "situation": "presentarse", "tags": ["datos", "deletrear"] },
+    { "id": "presenter.quelle-est-votre-adresse", "text": "Quelle est votre adresse?", "es": "¿Cuál es su dirección?", "explanation": "En un formulario, al pedir algo a domicilio o en el médico. Liga «quelle‿est»: ke-LE vo-tra-DRES?", "register": "vous", "situation": "presentarse", "tags": ["datos"] },
+    { "id": "presenter.jhabite-au-quinze", "text": "J'habite au quinze, rue Victor-Hugo.", "es": "Vivo en la calle Victor Hugo, número quince.", "notes": "En francés el número va antes de la calle. Cámbialo por tu dirección.", "explanation": "Para dar tu dirección. «au» suena «o» y «quinze» es nasal: sha-bit o KANZ, rü vik-tor-ü-GO.", "register": "neutral", "situation": "presentarse", "tags": ["datos"] },
+    { "id": "presenter.vous-avez-un-e-mail", "text": "Vous avez une adresse e-mail?", "es": "¿Tiene una dirección de correo electrónico?", "explanation": "Lo oirás al apuntarte a algo o al pedir un presupuesto. Liga «vous‿avez»: vu-za-VÉ ün a-dres i-MEL?", "register": "vous", "situation": "presentarse", "tags": ["datos"] },
+    { "id": "presenter.mon-e-mail", "text": "C'est hernan arobase exemple point com.", "es": "Es hernan arroba exemple punto com.", "notes": "@ = «arobase», . = «point», - = «tiret». Cambia la dirección por la tuya.", "explanation": "Para dictar tu correo. «arobase» suena «a-ro-BAZ» y «point» es nasal: PUAN.", "register": "neutral", "situation": "presentarse", "tags": ["datos"] },
+    { "id": "presenter.votre-numero", "text": "Votre numéro de téléphone, s'il vous plaît?", "es": "¿Su número de teléfono, por favor?", "explanation": "En la farmacia, el médico o cualquier mostrador. «numéro» se dice con la «u» francesa: nü-mé-RO.", "register": "vous", "situation": "presentarse", "tags": ["datos"] },
+    { "id": "presenter.votre-date-de-naissance", "text": "Quelle est votre date de naissance?", "es": "¿Cuál es su fecha de nacimiento?", "explanation": "En el médico o al rellenar un formulario. «naissance» acaba nasal: ne-SANS.", "register": "vous", "situation": "presentarse", "tags": ["datos"] },
+    { "id": "presenter.je-suis-ne-le-trois-mai", "text": "Je suis né le trois mai.", "es": "Nací el tres de mayo.", "notes": "Si eres mujer, «née». Las fechas van sin «de»: «le trois mai».", "explanation": "Para dar tu fecha de nacimiento. «mai» suena «me»: sh'süi NÉ l'trua ME.", "register": "neutral", "situation": "presentarse", "tags": ["datos"] }
+  ],
+  "vocab": [
+    { "id": "presenter.prenom", "word": "prénom", "article": "le", "gender": "m", "plural": "prénoms", "es": "el nombre (de pila)", "notes": "La «m» final no suena: «pré-NON».", "example": "presenter.mon-prenom-cest", "situation": "presentarse", "image": "fluent:name-badge" },
+    { "id": "presenter.nom-de-famille", "word": "nom de famille", "article": "le", "gender": "m", "es": "el apellido", "notes": "A secas, «le nom» suele ser el apellido.", "example": "presenter.mon-nom-de-famille", "situation": "presentarse" },
+    { "id": "presenter.espagne", "word": "Espagne", "article": "l'", "gender": "f", "es": "España", "notes": "Los países llevan artículo: «l'Espagne», «la France».", "example": "presenter.je-viens-despagne", "situation": "presentarse", "tags": ["paises"] },
+    { "id": "presenter.france", "word": "France", "article": "la", "gender": "f", "es": "Francia", "notes": "«En France» = en Francia.", "situation": "presentarse", "tags": ["paises"] },
+    { "id": "presenter.pays", "word": "pays", "article": "le", "gender": "m", "plural": "pays", "es": "el país", "notes": "Se dice «pe-I», en dos sílabas.", "situation": "presentarse", "image": "fluent:world-map" },
+    { "id": "presenter.ville", "word": "ville", "article": "la", "gender": "f", "plural": "villes", "es": "la ciudad", "notes": "Aquí «ll» suena «l»: «vil».", "situation": "presentarse", "image": "fluent:cityscape" },
+    { "id": "presenter.capitale", "word": "capitale", "article": "la", "gender": "f", "plural": "capitales", "es": "la capital", "example": "presenter.madrid-cest-la-capitale", "situation": "presentarse" },
+    { "id": "presenter.quartier", "word": "quartier", "article": "le", "gender": "m", "plural": "quartiers", "es": "el barrio", "example": "presenter.jhabite-dans-un-quartier-calme", "situation": "presentarse" },
+    { "id": "presenter.travail", "word": "travail", "article": "le", "gender": "m", "plural": "travaux", "es": "el trabajo", "notes": "Hablando también se dice «le boulot».", "example": "presenter.jaime-bien-mon-travail", "situation": "presentarse", "image": "fluent:briefcase" },
+    { "id": "presenter.metier", "word": "métier", "article": "le", "gender": "m", "plural": "métiers", "es": "la profesión, el oficio", "situation": "presentarse" },
+    { "id": "presenter.developpeur", "word": "développeur", "article": "le", "gender": "m", "plural": "développeurs", "es": "el programador", "notes": "Femenino: «la développeuse».", "example": "presenter.je-suis-developpeur", "situation": "presentarse", "image": "fluent:man-technologist" },
+    { "id": "presenter.informatique", "word": "informatique", "article": "l'", "gender": "f", "es": "la informática", "example": "presenter.je-travaille-dans-linformatique", "situation": "presentarse" },
+    { "id": "presenter.ordinateur", "word": "ordinateur", "article": "l'", "gender": "m", "plural": "ordinateurs", "es": "el ordenador", "notes": "Hablando, a menudo «l'ordi».", "situation": "presentarse", "image": "fluent:laptop" },
+    { "id": "presenter.bureau", "word": "bureau", "article": "le", "gender": "m", "plural": "bureaux", "es": "la oficina (y el escritorio)", "notes": "«eau» suena «o»: «bü-RO».", "situation": "presentarse", "image": "fluent:office-building" },
+    { "id": "presenter.entreprise", "word": "entreprise", "article": "l'", "gender": "f", "plural": "entreprises", "es": "la empresa", "situation": "presentarse" },
+    { "id": "presenter.etudiant", "word": "étudiant", "article": "l'", "gender": "m", "plural": "étudiants", "es": "el estudiante", "notes": "Femenino: «l'étudiante».", "example": "presenter.je-suis-etudiant", "situation": "presentarse", "image": "fluent:student" },
+    { "id": "presenter.vacances", "word": "vacances", "article": "les", "gender": "f", "es": "las vacaciones", "notes": "Siempre en plural: «les vacances».", "example": "presenter.en-ce-moment-je-suis-en-vacances", "situation": "presentarse", "image": "fluent:beach-with-umbrella" },
+    { "id": "presenter.professeur", "word": "professeur", "article": "le", "gender": "m", "plural": "professeurs", "es": "el profesor", "notes": "Femenino: «la professeure»; hablando, «le prof», «la prof».", "example": "presenter.elle-est-professeure", "situation": "presentarse", "image": "fluent:teacher" },
+    { "id": "presenter.medecin", "word": "médecin", "article": "le", "gender": "m", "plural": "médecins", "es": "el médico (la médica)", "notes": "Igual para mujeres: «Elle est médecin».", "situation": "presentarse", "image": "fluent:health-worker" },
+    { "id": "presenter.infirmier", "word": "infirmier", "article": "l'", "gender": "m", "plural": "infirmiers", "es": "el enfermero", "notes": "Femenino: «l'infirmière».", "example": "presenter.il-est-infirmier", "situation": "presentarse" },
+    { "id": "presenter.serveur", "word": "serveur", "article": "le", "gender": "m", "plural": "serveurs", "es": "el camarero", "notes": "Femenino: «la serveuse».", "situation": "presentarse" },
+    { "id": "presenter.vendeur", "word": "vendeur", "article": "le", "gender": "m", "plural": "vendeurs", "es": "el dependiente", "notes": "Femenino: «la vendeuse».", "situation": "presentarse" },
+    { "id": "presenter.cuisinier", "word": "cuisinier", "article": "le", "gender": "m", "plural": "cuisiniers", "es": "el cocinero", "notes": "Femenino: «la cuisinière».", "situation": "presentarse", "image": "fluent:cook" },
+    { "id": "presenter.retraite", "word": "retraite", "article": "la", "gender": "f", "es": "la jubilación", "notes": "«Être à la retraite» = estar jubilado.", "example": "presenter.je-suis-a-la-retraite", "situation": "presentarse" },
+    { "id": "presenter.langue", "word": "langue", "article": "la", "gender": "f", "plural": "langues", "es": "el idioma, la lengua", "notes": "También es la lengua del cuerpo.", "example": "presenter.ma-langue-maternelle", "situation": "presentarse", "tags": ["idiomas"], "image": "fluent:speaking-head" },
+    { "id": "presenter.italien", "word": "italien", "article": "l'", "gender": "m", "es": "el italiano (idioma)", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.allemand", "word": "allemand", "article": "l'", "gender": "m", "es": "el alemán (idioma)", "situation": "presentarse", "tags": ["idiomas"] },
+    { "id": "presenter.appli", "word": "appli", "article": "l'", "gender": "f", "plural": "applis", "es": "la app", "notes": "Abreviatura de «application».", "example": "presenter.avec-une-appli", "situation": "presentarse", "image": "fluent:mobile-phone" },
+    { "id": "presenter.cours", "word": "cours", "article": "le", "gender": "m", "plural": "cours", "es": "la clase", "notes": "Igual en singular y plural; la «s» no suena.", "situation": "presentarse", "image": "fluent:books" },
+    { "id": "presenter.faute", "word": "faute", "article": "la", "gender": "f", "plural": "fautes", "es": "la falta, el error", "notes": "«Faire une faute» = equivocarse (al hablar o escribir).", "situation": "presentarse" },
+    { "id": "presenter.adresse", "word": "adresse", "article": "l'", "gender": "f", "plural": "adresses", "es": "la dirección", "notes": "Con una sola «d», al revés que en inglés.", "example": "presenter.quelle-est-votre-adresse", "situation": "presentarse", "tags": ["datos"], "image": "fluent:house" },
+    { "id": "presenter.rue", "word": "rue", "article": "la", "gender": "f", "plural": "rues", "es": "la calle", "notes": "Con la «u» francesa: «rü».", "example": "presenter.jhabite-au-quinze", "situation": "presentarse", "tags": ["datos"] },
+    { "id": "presenter.e-mail", "word": "e-mail", "article": "l'", "gender": "m", "plural": "e-mails", "es": "el correo electrónico", "notes": "También «le mail» o, más oficial, «le courriel».", "example": "presenter.vous-avez-un-e-mail", "situation": "presentarse", "tags": ["datos"], "image": "fluent:e-mail" },
+    { "id": "presenter.telephone", "word": "téléphone", "article": "le", "gender": "m", "plural": "téléphones", "es": "el teléfono", "notes": "El móvil: «le portable».", "example": "presenter.votre-numero", "situation": "presentarse", "tags": ["datos"], "image": "fluent:telephone-receiver" },
+    { "id": "presenter.date-de-naissance", "word": "date de naissance", "article": "la", "gender": "f", "es": "la fecha de nacimiento", "example": "presenter.votre-date-de-naissance", "situation": "presentarse", "tags": ["datos"], "image": "fluent:birthday-cake" },
+    { "id": "presenter.formulaire", "word": "formulaire", "article": "le", "gender": "m", "plural": "formulaires", "es": "el formulario", "situation": "presentarse", "tags": ["datos"], "image": "fluent:clipboard" }
+  ],
+  "qa": [
+    {
+      "id": "presenter.qa.comment-tu-tappelles",
+      "question": "Salut! Moi, c'est Camille. Et toi, tu t'appelles comment?",
+      "questionEs": "¡Hola! Yo soy Camille. ¿Y tú cómo te llamas?",
+      "accepted": [
+        { "text": "Moi, c'est Hernán. Enchanté!", "es": "Yo soy Hernán. ¡Encantado!" },
+        { "text": "Je m'appelle Hernán.", "es": "Me llamo Hernán." }
+      ],
+      "distractors": [
+        { "text": "Tu t'appelles Hernán.", "es": "Tú te llamas Hernán." },
+        { "text": "Enchanté, je viens de Madrid.", "es": "Encantado, soy de Madrid." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Hablas de ti: «je m'appelle» o «moi, c'est»; «tu t'appelles» es «tú te llamas».",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "presenter.qa.comment-vous-appelez-vous",
+      "question": "Bonjour, monsieur. Comment vous appelez-vous?",
+      "questionEs": "Buenos días, señor. ¿Cómo se llama usted?",
+      "accepted": [
+        { "text": "Je m'appelle Hernán Díaz.", "es": "Me llamo Hernán Díaz." },
+        { "text": "Hernán Díaz. Ravi de vous rencontrer.", "es": "Hernán Díaz. Encantado de conocerle." }
+      ],
+      "distractors": [
+        { "text": "Moi, c'est Hernán. Et toi?", "es": "Yo soy Hernán. ¿Y tú?" },
+        { "text": "Je vais bien, merci.", "es": "Estoy bien, gracias." }
+      ],
+      "register": "vous",
+      "situation": "presentarse",
+      "notes": "Te tratan de usted: no respondas con «et toi?»; «je vais bien» contesta a «comment allez-vous?».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "presenter.qa.tu-viens-dou",
+      "question": "Tu as un petit accent! Tu viens d'où?",
+      "questionEs": "¡Tienes un poco de acento! ¿De dónde eres?",
+      "accepted": [
+        { "text": "Je viens d'Espagne, de Madrid.", "es": "Soy de España, de Madrid." },
+        { "text": "Je suis espagnol.", "es": "Soy español." }
+      ],
+      "distractors": [
+        { "text": "Je vais en Espagne.", "es": "Voy a España." },
+        { "text": "Je suis français, de Madrid.", "es": "Soy francés, de Madrid." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "«Venir de» = ser de / venir de; «aller en» es ir a un sitio.",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "presenter.qa.vous-etes-francais",
+      "question": "Vous êtes français?",
+      "questionEs": "¿Es usted francés?",
+      "accepted": [
+        { "text": "Non, je suis espagnol.", "es": "No, soy español." },
+        { "text": "Non, je ne suis pas français. Je viens d'Espagne.", "es": "No, no soy francés. Soy de España." }
+      ],
+      "distractors": [
+        { "text": "Non, je ne parle pas français.", "es": "No, no hablo francés." },
+        { "text": "Non, je pas français.", "es": "No, yo no francés." }
+      ],
+      "register": "vous",
+      "situation": "presentarse",
+      "notes": "Te preguntan la nacionalidad, no el idioma; y la negación necesita el verbo: «je ne suis pas».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "presenter.qa.tu-fais-quoi",
+      "question": "Et toi, tu fais quoi dans la vie?",
+      "questionEs": "¿Y tú a qué te dedicas?",
+      "accepted": [
+        { "text": "Je suis développeur. Je travaille dans l'informatique.", "es": "Soy programador. Trabajo en informática." },
+        { "text": "Je travaille dans l'informatique, de chez moi.", "es": "Trabajo en informática, desde casa." }
+      ],
+      "distractors": [
+        { "text": "Je suis un développeur de chez moi.", "es": "Soy un programador de mi casa." },
+        { "text": "Ce soir, je fais du sport.", "es": "Esta noche hago deporte." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "«Dans la vie» pregunta por tu trabajo, no por tus planes; y la profesión va sin «un».",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "presenter.qa.vous-faites-quoi",
+      "question": "Qu'est-ce que vous faites dans la vie?",
+      "questionEs": "¿A qué se dedica usted?",
+      "accepted": [
+        { "text": "Je suis développeur.", "es": "Soy programador." },
+        { "text": "Je travaille dans l'informatique.", "es": "Trabajo en informática." }
+      ],
+      "distractors": [
+        { "text": "Vous êtes développeur.", "es": "Usted es programador." },
+        { "text": "Je travaille dans le développeur.", "es": "Trabajo en el programador." }
+      ],
+      "register": "vous",
+      "situation": "presentarse",
+      "notes": "Hablas de ti («je suis»); «travailler dans» va con un sector: «dans l'informatique».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "presenter.qa.ta-soeur",
+      "question": "Et ta sœur, elle fait quoi?",
+      "questionEs": "¿Y tu hermana a qué se dedica?",
+      "accepted": [
+        { "text": "Elle est professeure de maths.", "es": "Es profesora de matemáticas." },
+        { "text": "Elle est médecin.", "es": "Es médica." }
+      ],
+      "distractors": [
+        { "text": "Il est infirmier à l'hôpital.", "es": "Él es enfermero en el hospital." },
+        { "text": "Elle est une médecin.", "es": "Ella es una médica." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Hablas de tu hermana: «elle»; y la profesión va sin artículo después de «être».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "presenter.qa.quelles-langues",
+      "question": "Tu parles quelles langues?",
+      "questionEs": "¿Qué idiomas hablas?",
+      "accepted": [
+        { "text": "Je parle espagnol et anglais, et un peu français.", "es": "Hablo español e inglés, y un poco de francés." },
+        { "text": "Espagnol, anglais… et j'apprends le français!", "es": "Español, inglés… ¡y estoy aprendiendo francés!" }
+      ],
+      "distractors": [
+        { "text": "Je parle l'espagnol et l'Espagne.", "es": "Hablo el español y España." },
+        { "text": "Tu parles espagnol et anglais.", "es": "Tú hablas español e inglés." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Se habla un idioma («espagnol»), no un país («l'Espagne»); y hablas de ti: «je parle».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "presenter.qa.pourquoi-francais",
+      "question": "Ah, tu apprends le français? Depuis quand?",
+      "questionEs": "Ah, ¿estás aprendiendo francés? ¿Desde cuándo?",
+      "accepted": [
+        { "text": "Depuis trois mois, avec une appli.", "es": "Desde hace tres meses, con una app." },
+        { "text": "J'apprends depuis trois mois.", "es": "Llevo tres meses aprendiendo." }
+      ],
+      "distractors": [
+        { "text": "Il y a trois heures.", "es": "Hace tres horas." },
+        { "text": "Pour le plaisir.", "es": "Por gusto." }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "«Depuis quand?» pide el tiempo que llevas: «depuis trois mois»; «pour le plaisir» responde a «pourquoi?».",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "presenter.qa.vous-parlez-bien",
+      "question": "Mais vous parlez très bien français!",
+      "questionEs": "¡Pero si habla usted muy bien francés!",
+      "accepted": [
+        { "text": "Merci, c'est gentil! Je comprends mieux que je ne parle.", "es": "¡Gracias, qué amable! Entiendo mejor de lo que hablo." },
+        { "text": "Merci beaucoup! J'apprends depuis trois mois.", "es": "¡Muchas gracias! Llevo tres meses aprendiendo." }
+      ],
+      "distractors": [
+        { "text": "De rien, vous aussi!", "es": "¡De nada, usted también!" },
+        { "text": "Oui, je parle très bien.", "es": "Sí, hablo muy bien." }
+      ],
+      "register": "vous",
+      "situation": "presentarse",
+      "notes": "A un cumplido se responde dando las gracias; «de rien» contesta a un «merci».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "presenter.qa.epeler",
+      "question": "Hernán? Vous pouvez épeler, s'il vous plaît?",
+      "questionEs": "¿Hernán? ¿Puede deletrearlo, por favor?",
+      "accepted": [
+        { "text": "Oui: H, E, R, N, A, N.", "es": "Sí: H, E, R, N, A, N." },
+        { "text": "Bien sûr. Ça s'écrit avec un H: H, E, R, N, A, N.", "es": "Claro. Se escribe con hache: H, E, R, N, A, N." }
+      ],
+      "distractors": [
+        { "text": "Oui, je m'appelle Hernán.", "es": "Sí, me llamo Hernán." },
+        { "text": "Oui, c'est le zéro six, douze…", "es": "Sí, es el cero seis, doce…" }
+      ],
+      "register": "vous",
+      "situation": "presentarse",
+      "notes": "«Épeler» es deletrear: di las letras una a una.",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "presenter.qa.date-de-naissance",
+      "question": "Et quelle est votre date de naissance?",
+      "questionEs": "¿Y cuál es su fecha de nacimiento?",
+      "accepted": [
+        { "text": "Je suis né le trois mai.", "es": "Nací el tres de mayo." },
+        { "text": "Le trois mai.", "es": "El tres de mayo." }
+      ],
+      "distractors": [
+        { "text": "Je suis né à Madrid.", "es": "Nací en Madrid." },
+        { "text": "À trois heures.", "es": "A las tres." }
+      ],
+      "register": "vous",
+      "situation": "presentarse",
+      "notes": "Te piden la fecha («le trois mai»), no el lugar ni la hora.",
+      "voice": "fr-FR-DeniseNeural"
+    }
+  ]
+}
