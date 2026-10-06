@@ -1,0 +1,437 @@
+{
+  "id": "a2-grammar",
+  "order": 90,
+  "level": "A2",
+  "title": "Gramática A2",
+  "description": "Lo que necesitas para hablar en presente, pasado y futuro, pedir cosas, contar y comparar: primero reconocer, luego decirlo.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "a2-grammar.l.present-past",
+      "title": "Presente, pasado y «Have you ever…?»",
+      "items": [
+        "gram.en-a2-present-simple-continuous",
+        "a2-grammar.i-usually-work-from-home",
+        "a2-grammar.im-working-right-now",
+        "gram.en-a2-do-does-did",
+        "a2-grammar.do-you-like-coffee",
+        "a2-grammar.she-doesnt-eat-meat",
+        "gram.en-a2-past-simple",
+        "a2-grammar.i-worked-late",
+        "a2-grammar.we-visited-the-museum",
+        "a2-grammar.i-went-to-the-beach",
+        "a2-hello.it-was-great",
+        "gram.en-a2-present-perfect-ever",
+        "a2-grammar.have-you-ever-been",
+        "a2-grammar.ive-never-tried-it",
+        "a2-grammar.qa.work-from-home",
+        "a2-grammar.qa.ever-been"
+      ]
+    },
+    {
+      "id": "a2-grammar.l.future-requests",
+      "title": "Futuro, pedir y «hay»",
+      "items": [
+        "gram.en-a2-going-to-will",
+        "a2-grammar.im-going-to-visit",
+        "a2-grammar.ill-call-you-later",
+        "gram.en-a2-can-could-would-like",
+        "a2-grammar.can-i-sit-here",
+        "a2-grammar.could-you-open-the-window",
+        "a2-grammar.id-like-a-glass-of-water",
+        "a2-hello.could-you-help-me",
+        "gram.en-a2-there-is-there-are",
+        "a2-grammar.is-there-a-pharmacy",
+        "a2-grammar.qa.what-can-i-get-you",
+        "a2-grammar.qa.is-there-a-bank"
+      ]
+    },
+    {
+      "id": "a2-grammar.l.things-places",
+      "title": "Cantidades, comparar y in/on/at",
+      "items": [
+        "gram.en-a2-countable-uncountable",
+        "a2-grammar.apple",
+        "a2-grammar.egg",
+        "a2-grammar.hour",
+        "a2-grammar.university",
+        "a2-grammar.water",
+        "a2-grammar.bread",
+        "a2-grammar.money",
+        "a2-grammar.information",
+        "a2-grammar.some-bread-and-eggs",
+        "a2-grammar.do-we-have-any-milk",
+        "a2-grammar.a-lot-of-traffic",
+        "gram.en-a2-comparatives",
+        "a2-grammar.bigger-than-valencia",
+        "a2-grammar.the-best-pizza",
+        "gram.en-a2-in-on-at",
+        "a2-grammar.see-you-on-monday-at-five",
+        "a2-grammar.im-at-the-airport",
+        "a2-grammar.qa.small-or-large"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "a2-grammar.i-usually-work-from-home", "text": "I usually work from home.", "es": "Normalmente trabajo desde casa.", "notes": "Presente simple: lo que haces de costumbre.", "explanation": "Para hablar de tu rutina con un compañero o un vecino. «work» suena «werk», no «uork»: ai YUU-ʒu-ə-li WERK.", "register": "neutral", "situation": "casa", "tags": ["presente"] },
+    { "id": "a2-grammar.im-working-right-now", "text": "I'm working right now. Can I call you back?", "es": "Ahora mismo estoy trabajando. ¿Te llamo luego?", "notes": "Presente continuo: lo que está pasando ahora.", "explanation": "Cuando te llaman en mal momento. «right» con «r» americana y sin vibrar: aim WER-king RAIT NAU.", "register": "neutral", "situation": "casa", "tags": ["presente"] },
+    { "id": "a2-grammar.do-you-like-coffee", "text": "Do you like coffee?", "es": "¿Te gusta el café?", "notes": "Las preguntas en presente llevan «do» (o «does» con he/she/it).", "explanation": "Para conocer los gustos de alguien. «do you» se une: dyu LAIK KO-fi?", "register": "neutral", "situation": "casa", "tags": ["preguntas"] },
+    { "id": "a2-grammar.she-doesnt-eat-meat", "text": "She doesn't eat meat.", "es": "Ella no come carne.", "notes": "Con he/she/it, «doesn't» + verbo sin «-s».", "explanation": "Al hablar de otra persona, por ejemplo al pedir en un restaurante. «eat» y «meat» con «i» larga: shi DA-zənt IIT MIIT.", "register": "neutral", "situation": "comida", "tags": ["negacion"] },
+    { "id": "a2-grammar.i-worked-late", "text": "I worked late yesterday.", "es": "Ayer trabajé hasta tarde.", "notes": "Tras «k», «p», «s», «sh», «ch», la «-ed» suena /t/.", "explanation": "Para contar qué hiciste ayer. «worked» es una sola sílaba que acaba en «t»: WERKT, no «uor-ked».", "register": "neutral", "situation": "casa", "tags": ["pasado"] },
+    { "id": "a2-grammar.we-visited-the-museum", "text": "We visited the museum on Saturday.", "es": "El sábado visitamos el museo.", "notes": "Tras «t» o «d», la «-ed» añade una sílaba: VI-zi-tid.", "explanation": "Para contar un plan del fin de semana. «museum» lleva el acento en el medio: myu-ZII-əm.", "register": "neutral", "situation": "casa", "tags": ["pasado"] },
+    { "id": "a2-grammar.i-went-to-the-beach", "text": "I went to the beach last weekend.", "es": "El fin de semana pasado fui a la playa.", "notes": "«go» es irregular: «went». Con «last», «yesterday» o «ago», pasado simple.", "explanation": "Para contar lo que hiciste. Cuidado: «beach» con «i» larga, BIICH; con «i» corta sería un insulto.", "register": "neutral", "situation": "casa", "tags": ["pasado"] },
+    { "id": "a2-grammar.have-you-ever-been", "text": "Have you ever been to New York?", "es": "¿Has estado alguna vez en Nueva York?", "notes": "«Have you ever…?» pregunta por experiencias de tu vida, sin fecha.", "explanation": "En una conversación para conocer a alguien. «been» suena «bin», corto: jæv-yu E-vər BIN tə nuu YORK?", "register": "neutral", "situation": "presentarse", "tags": ["presente-perfecto"] },
+    { "id": "a2-grammar.ive-never-tried-it", "text": "I've never tried it.", "es": "No lo he probado nunca.", "notes": "Con «never» no hace falta otra negación: nunca «I haven't never».", "explanation": "Cuando te ofrecen una comida nueva. «I've» es una sola sílaba con «v» de dientes y labio: aiv NE-vər TRAID-it.", "register": "neutral", "situation": "comida", "tags": ["presente-perfecto"] },
+    { "id": "a2-grammar.im-going-to-visit", "text": "I'm going to visit a friend in Chicago.", "es": "Voy a visitar a un amigo en Chicago.", "notes": "«going to»: planes que ya has decidido.", "explanation": "Para contar tus planes. Al hablar rápido «going to» suena «gonna», pero escríbelo completo. Chicago = shi-KA-gou.", "register": "neutral", "situation": "viajes", "tags": ["futuro"] },
+    { "id": "a2-grammar.ill-call-you-later", "text": "I'll call you later.", "es": "Te llamo luego.", "notes": "«will» ('ll): decisiones del momento y promesas.", "explanation": "Al despedirte de alguien al teléfono. «I'll» es una sola sílaba con «l» oscura: ail KOL yu LEI-rər.", "register": "neutral", "situation": "comunicacion", "tags": ["futuro"] },
+    { "id": "a2-grammar.can-i-sit-here", "text": "Can I sit here?", "es": "¿Me puedo sentar aquí?", "explanation": "En una cafetería, el tren o una sala de espera. «sit» con «i» corta: con «i» larga sería «seat».", "register": "neutral", "situation": "casa", "tags": ["pedir"] },
+    { "id": "a2-grammar.could-you-open-the-window", "text": "Could you open the window, please?", "es": "¿Podría abrir la ventana, por favor?", "notes": "«Could you…?» es más educado que «Can you…?».", "explanation": "A alguien que no conoces bien, en el tren o en la oficina. «window» = WIN-dou, la «w» como «gu» muy suave.", "register": "formal", "situation": "casa", "tags": ["pedir"] },
+    { "id": "a2-grammar.id-like-a-glass-of-water", "text": "I'd like a glass of water, please.", "es": "Querría un vaso de agua, por favor.", "notes": "«I'd like» = «I would like»: más educado que «I want».", "explanation": "Al camarero o en un mostrador. «water» con la «t» como «r» suave: ə GLÆS əv WA-rər.", "register": "formal", "situation": "comida", "tags": ["pedir"] },
+    { "id": "a2-grammar.is-there-a-pharmacy", "text": "Is there a pharmacy near here?", "es": "¿Hay una farmacia por aquí cerca?", "notes": "En EE. UU. también se dice «drugstore».", "explanation": "A alguien en la calle o en la recepción del hotel. «there» con «th» suave, como la «d» de «nada»: iz ÐER ə FAR-mə-si?", "register": "neutral", "situation": "ciudad", "tags": ["hay"] },
+    { "id": "a2-grammar.some-bread-and-eggs", "text": "We need some bread and some eggs.", "es": "Necesitamos pan y huevos.", "notes": "«some» para cantidades sin precisar, en frases afirmativas.", "explanation": "Al hacer la lista de la compra. «bread» suena BRED, con «e» corta; «eggs» acaba en «z».", "register": "neutral", "situation": "compras", "tags": ["cantidades"] },
+    { "id": "a2-grammar.do-we-have-any-milk", "text": "Do we have any milk?", "es": "¿Tenemos leche?", "notes": "«any» en preguntas y negativas: «We don't have any milk».", "explanation": "En casa, mirando la nevera. «milk» con «i» corta y «l» oscura: MILK, casi «miuk».", "register": "neutral", "situation": "casa", "tags": ["cantidades"] },
+    { "id": "a2-grammar.a-lot-of-traffic", "text": "There's a lot of traffic today.", "es": "Hoy hay mucho tráfico.", "notes": "«a lot of» vale para contables e incontables.", "explanation": "Para justificar un retraso o charlar del día. «a lot of» se une: ə-LA-rəv TRÆ-fik.", "register": "neutral", "situation": "ciudad", "tags": ["cantidades"] },
+    { "id": "a2-grammar.bigger-than-valencia", "text": "Chicago is bigger than Valencia.", "es": "Chicago es más grande que Valencia.", "notes": "Adjetivo corto + «-er» + «than».", "explanation": "Al comparar tu ciudad con otra. «than» es débil, «ðən»: BI-gər ðən.", "register": "neutral", "situation": "ciudad", "tags": ["comparar"] },
+    { "id": "a2-grammar.the-best-pizza", "text": "This is the best pizza in town!", "es": "¡Es la mejor pizza de la ciudad!", "notes": "«good → better → the best». El superlativo va con «in», no «of», para lugares.", "explanation": "Para recomendar un sitio a un amigo. «pizza» = PIIT-sə, con la «zz» como «ts».", "register": "neutral", "situation": "comida", "tags": ["comparar"] },
+    { "id": "a2-grammar.see-you-on-monday-at-five", "text": "See you on Monday at five.", "es": "Nos vemos el lunes a las cinco.", "notes": "«on» para días y fechas, «at» para horas, «in» para meses y años.", "explanation": "Para cerrar una cita. «on» y «at» van débiles; marca «Monday» y «five»: si-yu ən MAN-dei ət FAIV.", "register": "neutral", "situation": "numeros", "tags": ["preposiciones"] },
+    { "id": "a2-grammar.im-at-the-airport", "text": "I'm at the airport now.", "es": "Ya estoy en el aeropuerto.", "notes": "«at» para un punto concreto (the airport, work, home); «in» para dentro de algo (in the car).", "explanation": "Para avisar por teléfono de dónde estás. «airport» = ER-port, con dos «r» americanas.", "register": "neutral", "situation": "viajes", "tags": ["preposiciones"] }
+  ],
+  "vocab": [
+    { "id": "a2-grammar.apple", "word": "apple", "article": "an", "plural": "apples", "es": "la manzana", "notes": "«an» porque empieza por sonido de vocal.", "situation": "comida", "tags": ["articulos"], "image": "fluent:red-apple" },
+    { "id": "a2-grammar.egg", "word": "egg", "article": "an", "plural": "eggs", "es": "el huevo", "notes": "«an egg», «two eggs».", "situation": "comida", "tags": ["articulos"], "image": "fluent:egg" },
+    { "id": "a2-grammar.hour", "word": "hour", "article": "an", "plural": "hours", "es": "la hora", "notes": "La «h» no suena: «an hour» (AU-ər).", "situation": "numeros", "tags": ["articulos"] },
+    { "id": "a2-grammar.university", "word": "university", "article": "a", "plural": "universities", "es": "la universidad", "notes": "«a», no «an»: empieza por sonido «yu».", "situation": "presentarse", "tags": ["articulos"] },
+    { "id": "a2-grammar.water", "word": "water", "es": "el agua", "notes": "Incontable: «some water», «a glass of water».", "situation": "comida", "tags": ["incontable"], "image": "fluent:droplet" },
+    { "id": "a2-grammar.bread", "word": "bread", "es": "el pan", "notes": "Incontable: «some bread», «a loaf of bread» (una barra).", "situation": "comida", "tags": ["incontable"], "image": "fluent:bread" },
+    { "id": "a2-grammar.money", "word": "money", "es": "el dinero", "notes": "Incontable: «How much money?», nunca «many moneys».", "situation": "compras", "tags": ["incontable"], "image": "fluent:money-bag" },
+    { "id": "a2-grammar.information", "word": "information", "es": "la información", "notes": "Incontable: «some information», nunca «informations».", "situation": "gramatica", "tags": ["incontable"] }
+  ],
+  "qa": [
+    {
+      "id": "a2-grammar.qa.work-from-home",
+      "question": "Do you work from home?",
+      "questionEs": "¿Trabajas desde casa?",
+      "accepted": [
+        { "text": "Yes, I do. Most days.", "es": "Sí. Casi todos los días." },
+        { "text": "No, I don't. I work in an office.", "es": "No. Trabajo en una oficina." }
+      ],
+      "distractors": [
+        { "text": "Yes, I am.", "es": "Sí, lo estoy." },
+        { "text": "No, I not work from home.", "es": "No, no trabajo desde casa." }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "A una pregunta con «Do you…?» se responde «Yes, I do» / «No, I don't», no «I am».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "a2-grammar.qa.ever-been",
+      "question": "Have you ever been to Chicago?",
+      "questionEs": "¿Has estado alguna vez en Chicago?",
+      "accepted": [
+        { "text": "No, never. But I'd love to go!", "es": "No, nunca. ¡Pero me encantaría ir!" },
+        { "text": "Yes, I have. I went there last year.", "es": "Sí. Fui el año pasado." }
+      ],
+      "distractors": [
+        { "text": "Yes, I have been there last year.", "es": "Sí, he estado allí el año pasado." },
+        { "text": "No, I never have been.", "es": "No, nunca he estado." }
+      ],
+      "register": "neutral",
+      "situation": "presentarse",
+      "notes": "Con una fecha concreta («last year») se usa el pasado simple: «I went there last year».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "a2-grammar.qa.what-can-i-get-you",
+      "question": "Hi! What can I get you?",
+      "questionEs": "¡Hola! ¿Qué te pongo?",
+      "accepted": [
+        { "text": "I'd like a coffee, please.", "es": "Querría un café, por favor." },
+        { "text": "Can I get a coffee, please?", "es": "¿Me pones un café, por favor?" }
+      ],
+      "distractors": [
+        { "text": "Give me a coffee.", "es": "Dame un café." },
+        { "text": "I would like to coffee, please.", "es": "Me gustaría café, por favor (mal construido)." }
+      ],
+      "register": "formal",
+      "situation": "comida",
+      "notes": "«Give me…» suena brusco en inglés; usa «I'd like…» o «Can I get…?».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "a2-grammar.qa.is-there-a-bank",
+      "question": "Can I help you? You look lost.",
+      "questionEs": "¿Te puedo ayudar? Pareces perdido.",
+      "accepted": [
+        { "text": "Yes, thanks. Is there a bank near here?", "es": "Sí, gracias. ¿Hay un banco por aquí cerca?" },
+        { "text": "Thank you! Is there a subway station near here?", "es": "¡Gracias! ¿Hay una estación de metro por aquí cerca?" }
+      ],
+      "distractors": [
+        { "text": "Yes, thanks. Has it a bank near here?", "es": "Sí, gracias. ¿Tiene un banco por aquí? (calco de «hay»)" },
+        { "text": "Yes, thanks. Are there a bank near here?", "es": "Sí, gracias. ¿Hay un banco por aquí? (mal concordado)" }
+      ],
+      "register": "neutral",
+      "situation": "ciudad",
+      "notes": "«Hay» = «there is» (singular) / «there are» (plural). En pregunta: «Is there…?».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-grammar.qa.small-or-large",
+      "question": "Do you want the small or the large?",
+      "questionEs": "¿Quieres el pequeño o el grande?",
+      "accepted": [
+        { "text": "The small one, please. It's cheaper.", "es": "El pequeño, por favor. Es más barato." },
+        { "text": "The large one. It's better value.", "es": "El grande. Sale más a cuenta." }
+      ],
+      "distractors": [
+        { "text": "The more small, please.", "es": "El más pequeño, por favor (mal construido)." },
+        { "text": "The small, it's more cheap.", "es": "El pequeño, es más barato (mal construido)." }
+      ],
+      "register": "neutral",
+      "situation": "comida",
+      "notes": "Adjetivos cortos: «smaller», «cheaper», no «more small». Y «the small one», con «one».",
+      "voice": "en-US-AvaNeural"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.en-a2-present-simple-continuous",
+      "title": "Presente simple y presente continuo",
+      "summary": "El presente simple es para costumbres y cosas que siempre son así («I work from home»). El continuo (am/is/are + -ing) es para lo que pasa ahora mismo («I'm working»).",
+      "points": [
+        "Con he/she/it, el verbo lleva «-s»: «she works», «he lives», «it costs».",
+        "Palabras de costumbre: «usually», «always», «every day» → presente simple.",
+        "Palabras de ahora: «now», «right now», «at the moment» → continuo.",
+        "Verbos como «like», «want», «know», «need» casi nunca van en -ing: «I want a coffee», no «I'm wanting»."
+      ],
+      "table": [
+        ["", "presente simple", "presente continuo"],
+        ["I / you / we / they", "I work", "I'm working"],
+        ["he / she / it", "she works", "she's working"],
+        ["negativo", "I don't work", "I'm not working"],
+        ["pregunta", "Do you work?", "Are you working?"]
+      ],
+      "examples": [
+        { "text": "I usually work from home.", "es": "Normalmente trabajo desde casa." },
+        { "text": "I'm working right now.", "es": "Ahora mismo estoy trabajando." },
+        { "text": "Maya lives in Chicago.", "es": "Maya vive en Chicago." }
+      ],
+      "tags": ["presente"]
+    },
+    {
+      "id": "gram.en-a2-past-simple",
+      "title": "Pasado simple",
+      "summary": "Para acciones terminadas en un momento del pasado (yesterday, last week, in 2020). Los regulares añaden «-ed»; los irregulares hay que aprenderlos. Es igual para todas las personas.",
+      "points": [
+        "La «-ed» suena de tres maneras: /t/ tras k, p, s, sh, ch («worked», «stopped»); /d/ tras sonidos sonoros («called», «played»); /ɪd/ (sílaba extra) solo tras t o d («visited», «needed»).",
+        "Irregulares que más vas a usar: go → went, have → had, get → got, see → saw, make → made, buy → bought, eat → ate, say → said.",
+        "«be» tiene dos formas: «I/he/she/it was», «you/we/they were».",
+        "No digas «worked» con dos sílabas: es una sola, «werkt»."
+      ],
+      "table": [
+        ["verbo", "pasado", "suena"],
+        ["work", "worked", "/t/ werkt"],
+        ["call", "called", "/d/ kold"],
+        ["visit", "visited", "/ɪd/ VI-zi-tid"],
+        ["go", "went", "irregular"],
+        ["have", "had", "irregular"]
+      ],
+      "examples": [
+        { "text": "I worked late yesterday.", "es": "Ayer trabajé hasta tarde." },
+        { "text": "We visited the museum on Saturday.", "es": "El sábado visitamos el museo." },
+        { "text": "I went to the beach last weekend.", "es": "El fin de semana pasado fui a la playa." }
+      ],
+      "tags": ["pasado"]
+    },
+    {
+      "id": "gram.en-a2-do-does-did",
+      "title": "Preguntas y negativas con do / does / did",
+      "summary": "En inglés, para preguntar o negar con un verbo normal hace falta un ayudante: «do» (presente), «does» (he/she/it) o «did» (pasado). El verbo principal queda en su forma base.",
+      "points": [
+        "Pregunta: (palabra interrogativa) + do/does/did + sujeto + verbo: «Where do you live?», «Did you sleep well?».",
+        "Negativa: don't / doesn't / didn't + verbo: «She doesn't eat meat», «I didn't see it».",
+        "Con «does» y «did» el verbo pierde la «-s» y la «-ed»: «Does she work?», no «Does she works?».",
+        "Respuestas cortas: «Yes, I do» / «No, I don't»; «Yes, she does»; «Yes, I did»."
+      ],
+      "table": [
+        ["", "pregunta", "negativa"],
+        ["presente (I/you/we/they)", "Do you like it?", "I don't like it."],
+        ["presente (he/she/it)", "Does she like it?", "She doesn't like it."],
+        ["pasado (todos)", "Did you like it?", "I didn't like it."]
+      ],
+      "examples": [
+        { "text": "Do you like coffee?", "es": "¿Te gusta el café?" },
+        { "text": "She doesn't eat meat.", "es": "Ella no come carne." },
+        { "text": "Did you sleep well?", "es": "¿Has dormido bien?" }
+      ],
+      "tags": ["preguntas", "negacion"]
+    },
+    {
+      "id": "gram.en-a2-going-to-will",
+      "title": "Futuro: going to y will",
+      "summary": "«going to» para planes ya decididos («I'm going to visit Chicago»); «will» ('ll) para decisiones del momento, ofrecimientos y promesas («I'll call you later»).",
+      "points": [
+        "going to: am/is/are + going to + verbo: «She's going to start a new job».",
+        "will: igual para todos y casi siempre contraído: «I'll», «you'll», «it'll»; negativo «won't».",
+        "Para ofrecerte a algo en el momento: «I'll help you», «I'll get it» (ya voy yo).",
+        "Al hablar rápido, «going to» suena «gonna»: entiéndelo, pero escríbelo completo."
+      ],
+      "table": [
+        ["", "going to", "will"],
+        ["uso", "plan decidido", "decisión ahora / promesa"],
+        ["afirmativo", "I'm going to call her.", "I'll call her."],
+        ["negativo", "I'm not going to call her.", "I won't call her."],
+        ["pregunta", "Are you going to call her?", "Will you call her?"]
+      ],
+      "examples": [
+        { "text": "I'm going to visit a friend in Chicago.", "es": "Voy a visitar a un amigo en Chicago." },
+        { "text": "I'll call you later.", "es": "Te llamo luego." },
+        { "text": "Don't worry, I'll help you.", "es": "Tranquilo, te ayudo." }
+      ],
+      "tags": ["futuro"]
+    },
+    {
+      "id": "gram.en-a2-can-could-would-like",
+      "title": "Pedir con educación: can, could, would like",
+      "summary": "«Can I…?» y «Can you…?» sirven para pedir cosas en el día a día; «Could you…?» es más educado; «I'd like…» (I would like) es la forma correcta de decir «quiero» al pedir.",
+      "points": [
+        "Después de can / could / would va el verbo sin «to»: «Can you help me?», no «Can you to help me?».",
+        "«I want…» suena brusco al pedir en una tienda; usa «I'd like…» o «Can I get…?».",
+        "«Would you like…?» = ¿quieres…? (para ofrecer): «Would you like some water?».",
+        "«can» en frase afirmativa suena débil, «kən»; «can't» suena fuerte, «kænt»: el acento te dice si es sí o no."
+      ],
+      "table": [
+        ["quieres…", "frase", "tono"],
+        ["permiso", "Can I sit here?", "normal"],
+        ["un favor", "Could you open the window?", "educado"],
+        ["pedir algo", "I'd like a coffee, please.", "educado"],
+        ["ofrecer", "Would you like some water?", "educado"]
+      ],
+      "examples": [
+        { "text": "Can I sit here?", "es": "¿Me puedo sentar aquí?" },
+        { "text": "Could you open the window, please?", "es": "¿Podría abrir la ventana, por favor?" },
+        { "text": "I'd like a glass of water, please.", "es": "Querría un vaso de agua, por favor." }
+      ],
+      "tags": ["pedir"]
+    },
+    {
+      "id": "gram.en-a2-there-is-there-are",
+      "title": "Hay: there is / there are",
+      "summary": "«Hay» se dice «there is» con singular e incontables y «there are» con plural. Nunca «it has» ni «have».",
+      "points": [
+        "Contraído: «there's» (singular). «there are» no se contrae al escribir.",
+        "Pregunta: «Is there a…?» / «Are there any…?».",
+        "Negativa: «There isn't any milk», «There aren't any taxis».",
+        "En pasado: «there was» / «there were»: «There was a lot of traffic»."
+      ],
+      "table": [
+        ["", "singular / incontable", "plural"],
+        ["afirmativo", "There's a pharmacy.", "There are two bedrooms."],
+        ["negativo", "There isn't a bank.", "There aren't any taxis."],
+        ["pregunta", "Is there a bank near here?", "Are there any restaurants?"]
+      ],
+      "examples": [
+        { "text": "Is there a pharmacy near here?", "es": "¿Hay una farmacia por aquí cerca?" },
+        { "text": "There are two bedrooms.", "es": "Hay dos dormitorios." },
+        { "text": "There's a lot of traffic today.", "es": "Hoy hay mucho tráfico." }
+      ],
+      "tags": ["hay"]
+    },
+    {
+      "id": "gram.en-a2-countable-uncountable",
+      "title": "Contables e incontables: a/an, some/any, much/many",
+      "summary": "Los contables se cuentan (an egg, two eggs) y llevan «a» o «an» en singular; los incontables (water, money, bread, information) no llevan «a» ni plural.",
+      "points": [
+        "«a» delante de sonido de consonante, «an» delante de sonido de vocal: «an apple», «an hour» (la h no suena), pero «a university» (suena «yu»).",
+        "«some» en afirmativas y al pedir/ofrecer; «any» en preguntas y negativas: «Do we have any milk?».",
+        "«many» con contables, «much» con incontables (sobre todo en preguntas y negativas): «How many eggs?», «How much money?».",
+        "«a lot of» vale para los dos y es lo más natural en afirmativas."
+      ],
+      "table": [
+        ["", "contable", "incontable"],
+        ["singular", "an egg, a ticket", "water, money"],
+        ["afirmativo", "some eggs", "some water"],
+        ["pregunta", "How many eggs?", "How much water?"],
+        ["mucho", "a lot of eggs", "a lot of water"]
+      ],
+      "examples": [
+        { "text": "We need some bread and some eggs.", "es": "Necesitamos pan y huevos." },
+        { "text": "Do we have any milk?", "es": "¿Tenemos leche?" },
+        { "text": "How much money do you need?", "es": "¿Cuánto dinero necesitas?" }
+      ],
+      "tags": ["cantidades", "articulos"]
+    },
+    {
+      "id": "gram.en-a2-comparatives",
+      "title": "Comparar: bigger than, the best",
+      "summary": "Adjetivos cortos: «-er than» y «the -est» (cheap → cheaper → the cheapest). Largos: «more … than» y «the most …» (expensive → more expensive → the most expensive).",
+      "points": [
+        "Consonante final tras una vocal corta se dobla: big → bigger, hot → hotter.",
+        "Acabados en «-y» cambian a «-ier»: easy → easier, busy → busier.",
+        "Irregulares: good → better → the best; bad → worse → the worst; far → farther.",
+        "Nunca «more cheap» ni «more big». Para decir «tan… como»: «as big as»."
+      ],
+      "table": [
+        ["adjetivo", "comparativo", "superlativo"],
+        ["cheap", "cheaper", "the cheapest"],
+        ["big", "bigger", "the biggest"],
+        ["expensive", "more expensive", "the most expensive"],
+        ["good", "better", "the best"]
+      ],
+      "examples": [
+        { "text": "Chicago is bigger than Valencia.", "es": "Chicago es más grande que Valencia." },
+        { "text": "This one is cheaper.", "es": "Este es más barato." },
+        { "text": "This is the best pizza in town!", "es": "¡Es la mejor pizza de la ciudad!" }
+      ],
+      "tags": ["comparar"]
+    },
+    {
+      "id": "gram.en-a2-in-on-at",
+      "title": "In, on, at: tiempo y lugar",
+      "summary": "Tiempo: «at» para horas, «on» para días y fechas, «in» para meses, años y partes del día. Lugar: «at» para un punto, «in» para dentro de algo, «on» para una superficie o una calle.",
+      "points": [
+        "at five, at noon, at night · on Monday, on July fourth · in October, in 2026, in the morning.",
+        "at the airport, at work, at home · in Chicago, in the car, in the kitchen · on the table, on Main Street, on the bus.",
+        "Sin preposición: «next week», «last year», «tomorrow», «this morning».",
+        "on y at suelen sonar débiles: «ən», «ət»."
+      ],
+      "table": [
+        ["", "tiempo", "lugar"],
+        ["at", "at five o'clock", "at the airport"],
+        ["on", "on Monday", "on Main Street"],
+        ["in", "in July", "in Chicago"]
+      ],
+      "examples": [
+        { "text": "See you on Monday at five.", "es": "Nos vemos el lunes a las cinco." },
+        { "text": "I'm at the airport now.", "es": "Ya estoy en el aeropuerto." },
+        { "text": "My birthday is in July.", "es": "Mi cumpleaños es en julio." }
+      ],
+      "tags": ["preposiciones"]
+    },
+    {
+      "id": "gram.en-a2-present-perfect-ever",
+      "title": "Have you ever…? (presente perfecto, intro)",
+      "summary": "Para hablar de experiencias de tu vida sin decir cuándo: have/has + participio («I've been», «I've tried»). Si dices cuándo, pasa al pasado simple.",
+      "points": [
+        "«Have you ever been to…?» = ¿has estado alguna vez en…? («been», no «gone»).",
+        "«I've never…» = nunca he…: con «never» no hace falta «not».",
+        "Respuestas cortas: «Yes, I have» / «No, I haven't».",
+        "Con fecha, pasado simple: «Yes, I went there in 2019», no «I have been there in 2019»."
+      ],
+      "table": [
+        ["", "frase"],
+        ["pregunta", "Have you ever tried sushi?"],
+        ["sí", "Yes, I have. I tried it in Tokyo."],
+        ["no", "No, I haven't. / No, never."],
+        ["nunca", "I've never been to New York."]
+      ],
+      "examples": [
+        { "text": "Have you ever been to New York?", "es": "¿Has estado alguna vez en Nueva York?" },
+        { "text": "I've never tried it.", "es": "No lo he probado nunca." },
+        { "text": "Yes, I have. I went there last year.", "es": "Sí. Fui el año pasado." }
+      ],
+      "tags": ["presente-perfecto"]
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "id": "a2-hello",
+  "order": 10,
+  "level": "A2",
+  "title": "Saludos, small talk y «¿puedes repetir?»",
+  "description": "Saludar y despedirte como en EE. UU., el small talk de cada día, dar las gracias y pedir perdón, y qué decir cuando no entiendes.",
+  "emoji": "👋",
+  "situation": "saludos",
+  "lessons": [
+    {
+      "id": "a2-hello.l.hello",
+      "title": "Hola y adiós",
+      "items": [
+        "a2-hello.hello",
+        "a2-hello.hi",
+        "a2-hello.good-morning",
+        "a2-hello.good-afternoon",
+        "a2-hello.good-evening",
+        "a2-hello.hey-how-is-it-going",
+        "a2-hello.bye-see-you-later",
+        "a2-hello.see-you-tomorrow",
+        "a2-hello.good-night",
+        "a2-hello.have-a-nice-day",
+        "a2-hello.you-too",
+        "a2-hello.take-care",
+        "a2-hello.qa.have-a-great-day"
+      ]
+    },
+    {
+      "id": "a2-hello.l.small-talk",
+      "title": "¿Qué tal? El small talk",
+      "items": [
+        "a2-hello.friend",
+        "a2-hello.neighbor",
+        "a2-hello.coworker",
+        "a2-hello.name",
+        "a2-hello.how-are-you",
+        "a2-hello.im-good-thanks",
+        "a2-hello.not-bad",
+        "a2-hello.whats-up",
+        "a2-hello.not-much",
+        "a2-hello.nice-to-meet-you",
+        "a2-hello.nice-to-meet-you-too",
+        "a2-hello.how-was-your-weekend",
+        "a2-hello.it-was-great",
+        "a2-hello.nice-weather",
+        "a2-hello.qa.how-are-you",
+        "a2-hello.qa.nice-to-meet-you",
+        "a2-hello.qa.weekend"
+      ]
+    },
+    {
+      "id": "a2-hello.l.polite",
+      "title": "Gracias, perdón y por favor",
+      "items": [
+        "a2-hello.yes-please",
+        "a2-hello.no-thank-you",
+        "a2-hello.thank-you-so-much",
+        "a2-hello.youre-welcome",
+        "a2-hello.no-problem",
+        "a2-hello.excuse-me",
+        "a2-hello.sorry",
+        "a2-hello.thats-ok",
+        "a2-hello.could-you-help-me",
+        "a2-hello.sure",
+        "a2-hello.after-you",
+        "a2-hello.bless-you",
+        "a2-hello.qa.heres-your-coffee",
+        "a2-hello.qa.sorry"
+      ]
+    },
+    {
+      "id": "a2-hello.l.repeat",
+      "title": "Cuando no entiendes",
+      "items": [
+        "a2-hello.word",
+        "a2-hello.question",
+        "a2-hello.accent",
+        "a2-hello.mistake",
+        "a2-hello.sorry-i-dont-understand",
+        "a2-hello.could-you-repeat",
+        "a2-hello.sorry-what-was-that",
+        "a2-hello.more-slowly",
+        "a2-hello.what-does-that-mean",
+        "a2-hello.how-do-you-say",
+        "a2-hello.how-do-you-spell-that",
+        "a2-hello.can-you-write-it-down",
+        "a2-hello.my-english-isnt-perfect",
+        "a2-hello.do-you-speak-spanish",
+        "a2-hello.oh-i-see",
+        "a2-hello.got-it",
+        "a2-hello.qa.last-name",
+        "a2-hello.qa.speak-english"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "a2-hello.hello", "text": "Hello!", "es": "¡Hola!", "notes": "Sirve con todo el mundo; al teléfono es lo normal para contestar.", "explanation": "Con cualquiera, a cualquier hora, y para contestar al teléfono. La «h» se aspira suave, como una «j» flojita: je-LOU.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "a2-hello.hi", "text": "Hi!", "es": "¡Hola!", "notes": "Más corto y más habitual que «Hello» en el día a día.", "explanation": "Al entrar en una tienda, a un compañero, al vecino. Suena «jai», con la «h» aspirada suave.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "a2-hello.good-morning", "text": "Good morning.", "es": "Buenos días.", "notes": "Hasta el mediodía.", "explanation": "Por la mañana, al llegar a la oficina o a la recepción. La «r» americana no vibra: la lengua se curva hacia atrás, MOR-ning.", "register": "neutral", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "a2-hello.good-afternoon", "text": "Good afternoon.", "es": "Buenas tardes.", "notes": "De mediodía a las cinco o seis; suena algo formal.", "explanation": "En la recepción o al empezar una llamada de trabajo por la tarde. El acento va al final: af-ter-NUUN, con «u» larga.", "register": "formal", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "a2-hello.good-evening", "text": "Good evening.", "es": "Buenas tardes / buenas noches (al llegar).", "notes": "Para saludar a partir de las seis. Para despedirte por la noche se dice «Good night».", "explanation": "Al llegar a un restaurante o a un hotel por la noche. «evening» tiene dos sílabas: IV-ning.", "register": "formal", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "a2-hello.hey-how-is-it-going", "text": "Hey! How's it going?", "es": "¡Hola! ¿Qué tal?", "notes": "Muy común entre amigos y compañeros jóvenes.", "explanation": "A un amigo o compañero con confianza. «How's it» se une en una sola palabra: jau-ZIT GOU-ing.", "register": "tu", "situation": "saludos", "tags": ["saludo"] },
+    { "id": "a2-hello.bye-see-you-later", "text": "Bye! See you later.", "es": "¡Adiós! Hasta luego.", "notes": "«See you later» se dice aunque no vayas a ver a esa persona ese día.", "explanation": "Al irte de una tienda, de la oficina o al colgar. En «later» la «t» suena casi como una «r» suave: LEI-rer.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "a2-hello.see-you-tomorrow", "text": "See you tomorrow!", "es": "¡Hasta mañana!", "explanation": "Al salir del trabajo o despedirte de un compañero. «to» es débil, casi «tə»: si-yu tə-MA-rou.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "a2-hello.good-night", "text": "Good night!", "es": "¡Buenas noches!", "notes": "Solo para despedirte por la noche o antes de dormir, nunca para saludar.", "explanation": "Al despedirte por la noche o al irte a dormir. La «d» de «good» casi desaparece: gu-NAIT.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "a2-hello.have-a-nice-day", "text": "Have a nice day!", "es": "¡Que tengas un buen día!", "notes": "Te lo dirán en cada tienda y cafetería.", "explanation": "Al despedirte de un dependiente o un conductor. «have a» se une: JA-və NAIS DEI.", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "a2-hello.you-too", "text": "Thanks, you too!", "es": "¡Gracias, igualmente!", "notes": "La respuesta automática a «Have a nice day!».", "explanation": "Cuando te desean un buen día o un buen fin de semana. «th» con la lengua entre los dientes: THANKS, no «tanks».", "register": "neutral", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "a2-hello.take-care", "text": "Take care!", "es": "¡Cuídate!", "explanation": "Al despedirte de un amigo o de alguien que está malo. «care» lleva la «r» americana al final: teik KER.", "register": "tu", "situation": "saludos", "tags": ["despedida"] },
+    { "id": "a2-hello.how-are-you", "text": "How are you?", "es": "¿Qué tal? / ¿Cómo estás?", "notes": "En EE. UU. es casi un saludo: se responde corto y se devuelve la pregunta.", "explanation": "Justo después de saludar, a cualquiera. Se dice de un tirón: jau-ər-YU?", "register": "neutral", "situation": "saludos", "tags": ["small-talk"] },
+    { "id": "a2-hello.im-good-thanks", "text": "I'm good, thanks. And you?", "es": "Bien, gracias. ¿Y tú?", "notes": "«I'm good» es lo normal; «I'm fine» suena más seco.", "explanation": "La respuesta estándar a «How are you?». «I'm» es una sola sílaba: aim GUD.", "register": "neutral", "situation": "saludos", "tags": ["small-talk"] },
+    { "id": "a2-hello.not-bad", "text": "Not bad. How about you?", "es": "No me puedo quejar. ¿Y tú?", "literal": "No mal. ¿Qué tal tú?", "explanation": "Para responder a «How are you?» de forma relajada. «bad» lleva una «a» abierta, entre «a» y «e»: NAT BÆD.", "register": "neutral", "situation": "saludos", "tags": ["small-talk"] },
+    { "id": "a2-hello.whats-up", "text": "What's up?", "es": "¿Qué hay? / ¿Qué pasa?", "notes": "Saludo informal; no pide una respuesta seria.", "explanation": "Entre amigos o compañeros de tu edad. «What's up» se une: wa-TSAP.", "register": "tu", "situation": "saludos", "tags": ["small-talk"] },
+    { "id": "a2-hello.not-much", "text": "Not much. You?", "es": "Nada especial. ¿Y tú?", "notes": "La respuesta típica a «What's up?».", "explanation": "Para contestar a «What's up?». La «t» de «not» casi no se oye: na MACH. YU?", "register": "tu", "situation": "saludos", "tags": ["small-talk"] },
+    { "id": "a2-hello.nice-to-meet-you", "text": "Nice to meet you.", "es": "Encantado de conocerte.", "notes": "Solo la primera vez que conoces a alguien.", "explanation": "Cuando te presentan a alguien, mientras le das la mano. «meet» lleva «i» larga: nais tə MIIT yu.", "register": "neutral", "situation": "saludos", "tags": ["presentacion"] },
+    { "id": "a2-hello.nice-to-meet-you-too", "text": "Nice to meet you too.", "es": "Encantado también.", "notes": "No digas «Me too»: significa «yo también (me alegro de conocerme)».", "explanation": "Cuando el otro te dice primero «Nice to meet you». Remarca el «too» final: nais tə MIIT yu TUU.", "register": "neutral", "situation": "saludos", "tags": ["presentacion"] },
+    { "id": "a2-hello.how-was-your-weekend", "text": "How was your weekend?", "es": "¿Qué tal el fin de semana?", "notes": "La pregunta de los lunes en cualquier oficina.", "explanation": "El lunes, a un compañero o vecino. «weekend» lleva el acento al principio: WIIK-end.", "register": "neutral", "situation": "saludos", "tags": ["small-talk"] },
+    { "id": "a2-hello.it-was-great", "text": "It was great, thanks! And yours?", "es": "¡Genial, gracias! ¿Y el tuyo?", "explanation": "Para responder a «How was your weekend?». «great» rima con «eight»: it-wəz GREIT.", "register": "neutral", "situation": "saludos", "tags": ["small-talk"] },
+    { "id": "a2-hello.nice-weather", "text": "Nice weather today, huh?", "es": "Hace buen día hoy, ¿eh?", "notes": "El tiempo es el tema estrella del small talk.", "explanation": "En el ascensor o haciendo cola, para romper el hielo. «weather» lleva «th» suave, como la «d» de «nada»: WE-ðər.", "register": "neutral", "situation": "saludos", "tags": ["small-talk"] },
+    { "id": "a2-hello.yes-please", "text": "Yes, please.", "es": "Sí, por favor.", "explanation": "Cuando te ofrecen algo: más café, una bolsa, ayuda. «please» con «i» larga y «z» sonora al final: YES PLIIZ.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.no-thank-you", "text": "No, thank you.", "es": "No, gracias.", "explanation": "Para rechazar algo con educación en una tienda o en casa de alguien. «th» con la lengua entre los dientes: THANK-yu.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.thank-you-so-much", "text": "Thank you so much!", "es": "¡Muchísimas gracias!", "notes": "Más natural que «Thank you very much» en el día a día.", "explanation": "Cuando alguien te ayuda de verdad. «so» se alarga para dar énfasis: THANK-yu SOOU MACH.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.youre-welcome", "text": "You're welcome.", "es": "De nada.", "notes": "Responde a «Thank you», nunca a «Please».", "explanation": "Cuando alguien te da las gracias. «You're» suena casi como «your»: yər WEL-kəm.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.no-problem", "text": "No problem!", "es": "¡No hay de qué!", "notes": "Otra forma, más relajada, de decir «de nada».", "explanation": "Cuando te dan las gracias por algo pequeño. El acento en «PRO»: nou PRA-bləm.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.excuse-me", "text": "Excuse me.", "es": "Perdone / Disculpe.", "notes": "Para pedir paso o llamar la atención; si ya has molestado, «Sorry».", "explanation": "Para pasar entre la gente o llamar a un dependiente. No digas «es»: ik-SKIUZ mi, con «z» sonora.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.sorry", "text": "Oh, sorry!", "es": "¡Uy, perdón!", "notes": "Cuando ya has molestado: un empujón, un pisotón.", "explanation": "Si chocas con alguien o le pisas. La «r» no vibra: SA-ri, con la lengua curvada.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.thats-ok", "text": "That's OK, don't worry.", "es": "No pasa nada, tranquilo.", "explanation": "Cuando alguien te pide perdón. «worry» suena «WAR-i», no «wo-rri».", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.could-you-help-me", "text": "Excuse me, could you help me, please?", "es": "Perdone, ¿me podría ayudar, por favor?", "notes": "«Could you…?» es la forma educada de pedir algo a un desconocido.", "explanation": "A un desconocido en la calle o a un empleado. La «l» de «could» no suena: kud-yu JELP mi.", "register": "formal", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.sure", "text": "Sure, of course.", "es": "Claro, por supuesto.", "explanation": "Cuando alguien te pide un favor. «Sure» suena «shur», con la «r» americana.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.after-you", "text": "After you.", "es": "Pase usted / Tú primero.", "explanation": "En una puerta o al subir al ascensor, cediendo el paso. La «t» de «after» es suave: ÆF-tər yu.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.bless-you", "text": "Bless you!", "es": "¡Salud! / ¡Jesús!", "notes": "Cuando alguien estornuda, incluso un desconocido. Se responde «Thank you».", "explanation": "Cuando alguien estornuda a tu lado. «bless» empieza con «bl» sin vocal: BLES-yu.", "register": "neutral", "situation": "saludos", "tags": ["cortesia"] },
+    { "id": "a2-hello.sorry-i-dont-understand", "text": "Sorry, I don't understand.", "es": "Perdona, no entiendo.", "explanation": "Cuando te hablan rápido o no captas algo. El acento va al final: an-dər-STAND.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.could-you-repeat", "text": "Could you repeat that, please?", "es": "¿Podría repetirlo, por favor?", "explanation": "A un empleado, un conductor o al teléfono. «repeat» con «i» larga y acento final: ri-PIIT ðæt.", "register": "formal", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.sorry-what-was-that", "text": "Sorry, what was that?", "es": "Perdona, ¿qué has dicho?", "notes": "Más natural que «What?», que suena brusco.", "explanation": "Cuando no has oído bien, con amigos o con cualquiera. «what was» se une: wət-wəz ÐÆT?", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.more-slowly", "text": "Could you speak more slowly, please?", "es": "¿Podría hablar más despacio, por favor?", "explanation": "Cuando alguien habla muy rápido. Ojo: «speak» sin «e» delante, SPIIK, no «espik».", "register": "formal", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.what-does-that-mean", "text": "What does that mean?", "es": "¿Qué significa eso?", "explanation": "Cuando oyes una palabra o expresión nueva. «does» suena «dəz», muy corto: wət-dəz ÐÆT MIIN?", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.how-do-you-say", "text": "How do you say this in English?", "es": "¿Cómo se dice esto en inglés?", "explanation": "Señalando algo cuya palabra no sabes. «English» con «i» corta al principio: ING-glish.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.how-do-you-spell-that", "text": "How do you spell that?", "es": "¿Cómo se escribe?", "notes": "En EE. UU. se deletrean nombres y correos constantemente.", "explanation": "Al apuntar un nombre, una calle o un email. «spell» sin «e» delante: SPEL.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.can-you-write-it-down", "text": "Can you write it down, please?", "es": "¿Me lo puedes apuntar, por favor?", "explanation": "Para direcciones, precios o nombres difíciles. La «w» de «write» no suena: RAI-rit DAUN.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.my-english-isnt-perfect", "text": "Sorry, my English isn't perfect.", "es": "Perdona, mi inglés no es perfecto.", "explanation": "Para avisar con una sonrisa antes de hablar. «perfect» lleva el acento al principio: PER-fikt.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.do-you-speak-spanish", "text": "Do you speak Spanish?", "es": "¿Hablas español?", "notes": "En EE. UU. mucha gente habla español: no pierdes nada por preguntar.", "explanation": "Si te atascas de verdad. «Spanish» sin «e» delante: SPÆ-nish, no «espanish».", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.oh-i-see", "text": "Oh, I see.", "es": "Ah, ya veo / Ah, vale.", "notes": "Para decir que ya has entendido.", "explanation": "Cuando por fin entiendes una explicación. «see» con «i» larga: ou ai SII.", "register": "neutral", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.got-it", "text": "Got it, thanks!", "es": "¡Entendido, gracias!", "explanation": "Con amigos o compañeros, cuando te explican algo. La «t» entre vocales suena como «r» suave: GA-rit.", "register": "tu", "situation": "no-entiendo", "tags": ["comprension"] }
+  ],
+  "vocab": [
+    { "id": "a2-hello.friend", "word": "friend", "article": "a", "plural": "friends", "es": "el amigo / la amiga", "notes": "La «ie» suena «e»: FREND.", "situation": "saludos", "tags": ["personas"], "image": "fluent:people-hugging" },
+    { "id": "a2-hello.neighbor", "word": "neighbor", "article": "a", "plural": "neighbors", "es": "el vecino / la vecina", "notes": "Ortografía americana: «neighbor», sin «u». Suena NEI-bər.", "situation": "saludos", "tags": ["personas"] },
+    { "id": "a2-hello.coworker", "word": "coworker", "article": "a", "plural": "coworkers", "es": "el compañero de trabajo", "notes": "Suena KOU-wer-kər.", "situation": "saludos", "tags": ["personas", "trabajo"] },
+    { "id": "a2-hello.name", "word": "name", "article": "a", "plural": "names", "es": "el nombre", "notes": "«last name» = apellido; «first name» = nombre de pila.", "situation": "saludos", "tags": ["presentacion"] },
+    { "id": "a2-hello.word", "word": "word", "article": "a", "plural": "words", "es": "la palabra", "notes": "Suena «werd», con la «r» americana.", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.question", "word": "question", "article": "a", "plural": "questions", "es": "la pregunta", "notes": "«Can I ask you a question?» = ¿Te puedo hacer una pregunta?", "situation": "no-entiendo", "tags": ["comprension"], "image": "fluent:red-question-mark" },
+    { "id": "a2-hello.accent", "word": "accent", "article": "an", "plural": "accents", "es": "el acento", "notes": "«an» porque empieza por sonido de vocal. Acento al principio: ÆK-sent.", "situation": "no-entiendo", "tags": ["comprension"] },
+    { "id": "a2-hello.mistake", "word": "mistake", "article": "a", "plural": "mistakes", "es": "el error", "notes": "Se dice «make a mistake» (cometer un error), no «do».", "situation": "no-entiendo", "tags": ["comprension"] }
+  ],
+  "qa": [
+    {
+      "id": "a2-hello.qa.have-a-great-day",
+      "question": "Here's your receipt. Have a great day!",
+      "questionEs": "Aquí tienes el tique. ¡Que tengas un buen día!",
+      "accepted": [
+        { "text": "Thanks, you too!", "es": "¡Gracias, igualmente!" },
+        { "text": "Thank you! You too.", "es": "¡Gracias! Igualmente." }
+      ],
+      "distractors": [
+        { "text": "Good night!", "es": "¡Buenas noches!" },
+        { "text": "You're welcome!", "es": "¡De nada!" }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "A «Have a great day!» se responde «Thanks, you too!»; «You're welcome» solo responde a un «gracias».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "a2-hello.qa.how-are-you",
+      "question": "Hi! How are you today?",
+      "questionEs": "¡Hola! ¿Qué tal estás hoy?",
+      "accepted": [
+        { "text": "I'm good, thanks. And you?", "es": "Bien, gracias. ¿Y tú?" },
+        { "text": "Not bad. How about you?", "es": "No me puedo quejar. ¿Y tú?" }
+      ],
+      "distractors": [
+        { "text": "I'm from Madrid.", "es": "Soy de Madrid." },
+        { "text": "Nice to meet you.", "es": "Encantado de conocerte." }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "Responde corto y devuelve la pregunta: «And you?» o «How about you?».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "a2-hello.qa.nice-to-meet-you",
+      "question": "Hi, I'm Maya. Nice to meet you!",
+      "questionEs": "Hola, soy Maya. ¡Encantada de conocerte!",
+      "accepted": [
+        { "text": "Nice to meet you too. I'm Hernán.", "es": "Encantado también. Soy Hernán." },
+        { "text": "Hi, Maya! I'm Hernán. Nice to meet you too.", "es": "¡Hola, Maya! Soy Hernán. Encantado también." }
+      ],
+      "distractors": [
+        { "text": "Me too, Maya.", "es": "Yo también, Maya." },
+        { "text": "You're welcome, Maya.", "es": "De nada, Maya." }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "«Me too» sería «yo también me alegro de conocerme»: di «Nice to meet you too».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "a2-hello.qa.weekend",
+      "question": "Morning! How was your weekend?",
+      "questionEs": "¡Buenos días! ¿Qué tal el fin de semana?",
+      "accepted": [
+        { "text": "It was great, thanks! And yours?", "es": "¡Genial, gracias! ¿Y el tuyo?" },
+        { "text": "Pretty good, thanks. How was yours?", "es": "Bastante bien, gracias. ¿Y el tuyo?" }
+      ],
+      "distractors": [
+        { "text": "It is great, thanks!", "es": "Es genial, gracias." },
+        { "text": "I was in my weekend.", "es": "Estuve en mi fin de semana." }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "Te preguntan por el pasado («was»): responde también en pasado, «It was…».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-hello.qa.heres-your-coffee",
+      "question": "Here's your coffee.",
+      "questionEs": "Aquí tienes tu café.",
+      "accepted": [
+        { "text": "Thank you so much!", "es": "¡Muchísimas gracias!" },
+        { "text": "Thanks!", "es": "¡Gracias!" }
+      ],
+      "distractors": [
+        { "text": "Please.", "es": "Por favor." },
+        { "text": "You're welcome.", "es": "De nada." }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "Cuando te dan algo se dice «Thanks»; en inglés no se responde «Please» como «tome».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "a2-hello.qa.sorry",
+      "question": "Oh, I'm so sorry! Are you OK?",
+      "questionEs": "¡Uy, lo siento mucho! ¿Estás bien?",
+      "accepted": [
+        { "text": "That's OK, don't worry.", "es": "No pasa nada, tranquilo." },
+        { "text": "Yes, I'm fine. No problem.", "es": "Sí, estoy bien. No pasa nada." }
+      ],
+      "distractors": [
+        { "text": "You're welcome.", "es": "De nada." },
+        { "text": "Excuse me.", "es": "Disculpe." }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "A un «sorry» se responde «That's OK» o «No problem», no «You're welcome».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "a2-hello.qa.last-name",
+      "question": "And can I get your last name?",
+      "questionEs": "¿Y me das tu apellido?",
+      "accepted": [
+        { "text": "Sorry, could you repeat that, please?", "es": "Perdone, ¿podría repetirlo, por favor?" },
+        { "text": "Sure. It's Díaz. D, I, A, Z.", "es": "Claro. Es Díaz. D, I, A, Z." }
+      ],
+      "distractors": [
+        { "text": "Yes, you can.", "es": "Sí, puedes." },
+        { "text": "Repeat, I don't understand.", "es": "Repite, no entiendo." }
+      ],
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "notes": "«Can I get…?» es una petición, no una pregunta de permiso. Si no entiendes, pide que repitan con «Could you…?».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-hello.qa.speak-english",
+      "question": "Do you speak English?",
+      "questionEs": "¿Hablas inglés?",
+      "accepted": [
+        { "text": "Yes, a little.", "es": "Sí, un poco." },
+        { "text": "Yes, but not very well.", "es": "Sí, pero no muy bien." }
+      ],
+      "distractors": [
+        { "text": "Yes, I speak a little of English.", "es": "Sí, hablo un poco de inglés." },
+        { "text": "Yes, I'm speaking English.", "es": "Sí, estoy hablando inglés." }
+      ],
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "notes": "Es «a little English», sin «of»; y para lo que sabes hacer, presente simple: «I speak».",
+      "voice": "en-US-BrianNeural"
+    }
+  ]
+}

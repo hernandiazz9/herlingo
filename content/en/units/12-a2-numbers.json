@@ -1,0 +1,326 @@
+{
+  "id": "a2-numbers",
+  "order": 12,
+  "level": "A2",
+  "title": "Números, hora, fechas, precios y propinas",
+  "description": "Contar del 0 al 1000, tu edad, tu teléfono y el año, pagar en dólares y dejar propina, la hora y las fechas al estilo de EE. UU. (primero el mes).",
+  "emoji": "🔢",
+  "situation": "numeros",
+  "lessons": [
+    {
+      "id": "a2-numbers.l.zero-twenty",
+      "title": "Del 0 al 20",
+      "items": [
+        "a2-numbers.zero",
+        "a2-numbers.one",
+        "a2-numbers.two",
+        "a2-numbers.three",
+        "a2-numbers.four",
+        "a2-numbers.five",
+        "a2-numbers.six",
+        "a2-numbers.seven",
+        "a2-numbers.eight",
+        "a2-numbers.nine",
+        "a2-numbers.ten",
+        "a2-numbers.eleven",
+        "a2-numbers.twelve",
+        "a2-numbers.thirteen",
+        "a2-numbers.fourteen",
+        "a2-numbers.fifteen",
+        "a2-numbers.sixteen",
+        "a2-numbers.seventeen",
+        "a2-numbers.eighteen",
+        "a2-numbers.nineteen",
+        "a2-numbers.twenty",
+        "a2-numbers.table-for-two",
+        "a2-numbers.qa.how-many"
+      ]
+    },
+    {
+      "id": "a2-numbers.l.age-phone",
+      "title": "Del 21 al 1000: edad, teléfono y años",
+      "items": [
+        "a2-numbers.twenty-one",
+        "a2-numbers.thirty",
+        "a2-numbers.forty",
+        "a2-numbers.fifty",
+        "a2-numbers.sixty",
+        "a2-numbers.seventy",
+        "a2-numbers.eighty",
+        "a2-numbers.ninety",
+        "a2-numbers.one-hundred",
+        "a2-numbers.one-thousand",
+        "a2-numbers.thirteen-or-thirty",
+        "a2-numbers.how-old-are-you",
+        "a2-numbers.im-thirty-two",
+        "a2-numbers.born-in",
+        "a2-numbers.whats-your-number",
+        "a2-numbers.my-number-is",
+        "a2-hello.could-you-repeat",
+        "a2-numbers.qa.age",
+        "a2-numbers.qa.phone-number"
+      ]
+    },
+    {
+      "id": "a2-numbers.l.prices",
+      "title": "Precios, pagar y la propina",
+      "items": [
+        "a2-numbers.dollar",
+        "a2-numbers.quarter",
+        "a2-numbers.tip",
+        "a2-numbers.how-much-is-it",
+        "a2-numbers.thats-three-fifty",
+        "a2-numbers.nineteen-ninety-nine",
+        "a2-numbers.is-tax-included",
+        "a2-numbers.can-i-pay-by-card",
+        "a2-numbers.do-you-take-cash",
+        "a2-numbers.twenty-percent-tip",
+        "a2-numbers.keep-the-change",
+        "a2-numbers.qa.how-would-you-like-to-pay"
+      ]
+    },
+    {
+      "id": "a2-numbers.l.time",
+      "title": "La hora",
+      "items": [
+        "a2-numbers.what-time-is-it",
+        "a2-numbers.do-you-have-the-time",
+        "a2-numbers.its-three-oclock",
+        "a2-numbers.its-eight-thirty",
+        "a2-numbers.quarter-to-ten",
+        "a2-numbers.its-noon",
+        "a2-numbers.what-time-do-you-open",
+        "a2-numbers.we-close-at-nine",
+        "a2-numbers.im-running-late",
+        "a2-numbers.qa.what-time"
+      ]
+    },
+    {
+      "id": "a2-numbers.l.dates",
+      "title": "Días, meses y fechas",
+      "items": [
+        "a2-numbers.monday",
+        "a2-numbers.tuesday",
+        "a2-numbers.wednesday",
+        "a2-numbers.thursday",
+        "a2-numbers.friday",
+        "a2-numbers.saturday",
+        "a2-numbers.sunday",
+        "a2-numbers.today",
+        "a2-numbers.tomorrow",
+        "a2-numbers.yesterday",
+        "a2-numbers.january",
+        "a2-numbers.february",
+        "a2-numbers.march",
+        "a2-numbers.april",
+        "a2-numbers.may",
+        "a2-numbers.june",
+        "a2-numbers.july",
+        "a2-numbers.august",
+        "a2-numbers.september",
+        "a2-numbers.october",
+        "a2-numbers.november",
+        "a2-numbers.december",
+        "a2-numbers.whats-the-date",
+        "a2-numbers.its-october-sixth",
+        "a2-numbers.closed-on-sundays",
+        "a2-numbers.when-is-your-birthday",
+        "a2-numbers.birthday-july-fourth",
+        "a2-numbers.qa.birthday"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "a2-numbers.table-for-two", "text": "Table for two, please.", "es": "Una mesa para dos, por favor.", "notes": "En EE. UU. esperas en la entrada a que te sienten.", "explanation": "Al host que te recibe en la entrada del restaurante. «two» suena igual que «too»: TEI-bəl fər TUU.", "register": "neutral", "situation": "numeros", "tags": ["numero", "restaurante"] },
+    { "id": "a2-numbers.thirteen-or-thirty", "text": "Sorry, did you say thirteen or thirty?", "es": "Perdona, ¿has dicho trece o treinta?", "notes": "En «-teen» el acento va al final; en «-ty», al principio.", "explanation": "Cuando dudas con un precio o un número de puerta. Marca el acento: thir-TIIN frente a THIR-ri, con «th» entre los dientes.", "register": "neutral", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.how-old-are-you", "text": "How old are you?", "es": "¿Cuántos años tienes?", "notes": "No se pregunta a desconocidos ni en el trabajo.", "explanation": "A un amigo, a un niño o en un formulario. «old» lleva una «o» que acaba en «u»: jau OULD ar-yu?", "register": "neutral", "situation": "numeros", "tags": ["edad"] },
+    { "id": "a2-numbers.im-thirty-two", "text": "I'm thirty-two.", "es": "Tengo treinta y dos años.", "literal": "Soy treinta y dos.", "notes": "La edad va con «be»: «I'm thirty-two», nunca «I have thirty-two».", "explanation": "Para decir tu edad. «th» con la lengua entre los dientes, y la «t» de «thirty» suave, casi «r»: aim THIR-ri TUU.", "register": "neutral", "situation": "numeros", "tags": ["edad"] },
+    { "id": "a2-numbers.born-in", "text": "I was born in nineteen ninety-four.", "es": "Nací en 1994.", "notes": "Los años se dicen de dos en dos: 1994 = «nineteen ninety-four»; 2026 = «twenty twenty-six».", "explanation": "Cuando te preguntan el año en que naciste. «born» con «r» americana: ai-wəz BORN in.", "register": "neutral", "situation": "numeros", "tags": ["edad", "fecha"] },
+    { "id": "a2-numbers.whats-your-number", "text": "What's your phone number?", "es": "¿Cuál es tu número de teléfono?", "explanation": "Al pedir el teléfono a alguien o cuando te lo piden en una tienda. «phone» suena FOUN: wats-yər FOUN NAM-bər?", "register": "neutral", "situation": "numeros", "tags": ["telefono"] },
+    { "id": "a2-numbers.my-number-is", "text": "It's three one two, five five five, oh one four seven.", "es": "Es el 312 555 0147.", "notes": "Se dice cifra a cifra en grupos de 3, 3 y 4; el cero se suele decir «oh».", "explanation": "Al dar tu teléfono, con una pausa entre los grupos. El cero se dice «ou», como la letra O.", "register": "neutral", "situation": "numeros", "tags": ["telefono"] },
+    { "id": "a2-numbers.how-much-is-it", "text": "How much is it?", "es": "¿Cuánto es? / ¿Cuánto cuesta?", "explanation": "Señalando algo en una tienda o en un mercadillo. «much» lleva una «a» corta y oscura: jau MACH iz-it?", "register": "neutral", "situation": "numeros", "tags": ["pagar"] },
+    { "id": "a2-numbers.thats-three-fifty", "text": "That's three fifty.", "es": "Son 3,50 dólares.", "notes": "Los precios se dicen sin «dollars» ni «cents»: $3.50 = «three fifty».", "explanation": "Lo que te dice el cajero al cobrar. «fifty» lleva el acento al principio: ðæts THRII FIF-ti.", "register": "neutral", "situation": "numeros", "tags": ["pagar", "precio"] },
+    { "id": "a2-numbers.nineteen-ninety-nine", "text": "It's nineteen ninety-nine.", "es": "Cuesta 19,99 dólares.", "notes": "$19.99 = «nineteen ninety-nine». En EE. UU. los decimales llevan punto, no coma.", "explanation": "Cuando te dicen el precio de algo. Distingue «nine-TEEN» (19) de «NINE-ty» (90) por el acento.", "register": "neutral", "situation": "numeros", "tags": ["pagar", "precio"] },
+    { "id": "a2-numbers.is-tax-included", "text": "Is tax included?", "es": "¿Va incluido el impuesto?", "notes": "En EE. UU. el precio de la etiqueta casi nunca incluye el impuesto: se suma en caja.", "explanation": "Cuando el total en caja es más alto que la etiqueta. «tax» con «a» abierta y acento final en «included»: in-KLUU-did.", "register": "neutral", "situation": "numeros", "tags": ["pagar"] },
+    { "id": "a2-numbers.can-i-pay-by-card", "text": "Can I pay by card?", "es": "¿Puedo pagar con tarjeta?", "notes": "«by card» o «with a card»; nunca «in card».", "explanation": "Antes de pagar en un taxi, un puesto o un bar pequeño. «can» es débil, «kən»: kən-ai PEI bai KARD?", "register": "neutral", "situation": "numeros", "tags": ["pagar"] },
+    { "id": "a2-numbers.do-you-take-cash", "text": "Do you take cash?", "es": "¿Aceptáis efectivo?", "notes": "Algunos sitios en EE. UU. ya solo aceptan tarjeta («cashless»).", "explanation": "Si quieres pagar en billetes. «cash» con «a» abierta, entre «a» y «e»: dyu teik KÆSH?", "register": "neutral", "situation": "numeros", "tags": ["pagar"] },
+    { "id": "a2-numbers.twenty-percent-tip", "text": "I'll add a twenty percent tip.", "es": "Añado un veinte por ciento de propina.", "notes": "En restaurantes con camarero se deja entre el 18 y el 20 %; no es opcional en la práctica.", "explanation": "Al pagar en un restaurante o un taxi. «percent» lleva el acento al final: pər-SENT.", "register": "neutral", "situation": "numeros", "tags": ["pagar", "propina"] },
+    { "id": "a2-numbers.keep-the-change", "text": "Keep the change.", "es": "Quédese el cambio.", "explanation": "Al pagar en efectivo un taxi o una cuenta pequeña. «change» suena CHEINCH, con «ch» suave al final.", "register": "neutral", "situation": "numeros", "tags": ["pagar", "propina"] },
+    { "id": "a2-numbers.what-time-is-it", "text": "What time is it?", "es": "¿Qué hora es?", "explanation": "A un amigo o a cualquiera. «time» con «ai» y «it» muy corto: wət TAIM iz-it?", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.do-you-have-the-time", "text": "Excuse me, do you have the time?", "es": "Perdone, ¿tiene hora?", "notes": "«Do you have time?» (sin «the») significa «¿tienes tiempo?».", "explanation": "A un desconocido por la calle. «the» con «th» suave, como la «d» de «nada»: də TAIM.", "register": "formal", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.its-three-oclock", "text": "It's three o'clock.", "es": "Son las tres.", "explanation": "Para las horas en punto. «o'clock» = ə-KLAK, con acento al final; «three» con «th» entre los dientes.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.its-eight-thirty", "text": "It's eight thirty.", "es": "Son las ocho y media.", "notes": "Lo normal es decir los números: «eight thirty», «six fifteen».", "explanation": "Para dar la hora como se hace en EE. UU. La «t» de «eight» se une a «thirty»: eit-THIR-ri.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.quarter-to-ten", "text": "It's a quarter to ten.", "es": "Son las diez menos cuarto.", "notes": "«a quarter after ten» = las diez y cuarto.", "explanation": "Otra forma de dar la hora, muy común. «quarter» suena KWOR-rər, con la «t» suave.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.its-noon", "text": "It's noon.", "es": "Es mediodía.", "notes": "«noon» = las 12 del mediodía; «midnight» = las 12 de la noche.", "explanation": "Para las doce del mediodía. «noon» con «u» larga: its NUUN.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.what-time-do-you-open", "text": "What time do you open tomorrow?", "es": "¿A qué hora abrís mañana?", "explanation": "En una tienda o un museo. «do you» se une en «dyu»: wət TAIM dyu OU-pən?", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.we-close-at-nine", "text": "We close at nine p.m.", "es": "Cerramos a las nueve de la noche.", "notes": "En EE. UU. se usa el reloj de 12 horas: a.m. (mañana) y p.m. (tarde y noche).", "explanation": "Lo verás en carteles y te lo dirán en tiendas. «close» con «z» sonora: wi KLOUZ ət NAIN pii-EM.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.im-running-late", "text": "Sorry, I'm running late.", "es": "Perdona, llego tarde.", "notes": "Para avisar de que vas con retraso.", "explanation": "En un mensaje o una llamada antes de llegar. «running» con «r» americana: aim RA-ning LEIT.", "register": "neutral", "situation": "numeros", "tags": ["hora"] },
+    { "id": "a2-numbers.whats-the-date", "text": "What's the date today?", "es": "¿A qué fecha estamos hoy?", "explanation": "Al rellenar un formulario o fechar algo. «date» rima con «eight»: wats ðə DEIT tə-DEI?", "register": "neutral", "situation": "numeros", "tags": ["fecha"] },
+    { "id": "a2-numbers.its-october-sixth", "text": "Today is October sixth.", "es": "Hoy es 6 de octubre.", "notes": "En EE. UU. se escribe primero el mes: 10/6 = 6 de octubre.", "explanation": "Para decir la fecha: mes + número ordinal. «sixth» acaba en «ksth», difícil: SIKSTH.", "register": "neutral", "situation": "numeros", "tags": ["fecha"] },
+    { "id": "a2-numbers.closed-on-sundays", "text": "We're closed on Sundays.", "es": "Los domingos cerramos.", "notes": "Días de la semana con «on»: «on Monday», «on Sundays».", "explanation": "En carteles y tiendas. «closed» acaba en «zd», sin «e» extra: KLOUZD.", "register": "neutral", "situation": "numeros", "tags": ["fecha"] },
+    { "id": "a2-numbers.when-is-your-birthday", "text": "When's your birthday?", "es": "¿Cuándo es tu cumpleaños?", "explanation": "A un amigo o compañero. «birthday» con «th» entre los dientes: BERTH-dei.", "register": "neutral", "situation": "numeros", "tags": ["fecha"] },
+    { "id": "a2-numbers.birthday-july-fourth", "text": "My birthday is on July fourth.", "es": "Mi cumpleaños es el 4 de julio.", "notes": "El 4 de julio es la fiesta nacional de EE. UU.", "explanation": "Para decir tu cumpleaños: «on» + mes + ordinal. «July» lleva el acento al final: dʒu-LAI.", "register": "neutral", "situation": "numeros", "tags": ["fecha"] }
+  ],
+  "vocab": [
+    { "id": "a2-numbers.zero", "word": "zero", "es": "cero", "notes": "En teléfonos y habitaciones se dice «oh».", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.one", "word": "one", "es": "uno", "notes": "Suena «wan».", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.two", "word": "two", "es": "dos", "notes": "Suena «tuu», igual que «too» y «to».", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.three", "word": "three", "es": "tres", "notes": "«th» con la lengua entre los dientes: no «tri» ni «fri».", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.four", "word": "four", "es": "cuatro", "notes": "Suena «for», con la «r» americana.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.five", "word": "five", "es": "cinco", "notes": "La «v» se dice con los dientes sobre el labio: FAIV.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.six", "word": "six", "es": "seis", "notes": "«i» corta: siks.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.seven", "word": "seven", "es": "siete", "notes": "SE-vən, con «v» de dientes y labio.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.eight", "word": "eight", "es": "ocho", "notes": "Suena «eit»: la «gh» no se pronuncia.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.nine", "word": "nine", "es": "nueve", "notes": "Suena «nain».", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.ten", "word": "ten", "es": "diez", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.eleven", "word": "eleven", "es": "once", "notes": "Acento en el medio: i-LE-vən.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.twelve", "word": "twelve", "es": "doce", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.thirteen", "word": "thirteen", "es": "trece", "notes": "Acento al final: thir-TIIN (treinta es THIR-ty).", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.fourteen", "word": "fourteen", "es": "catorce", "notes": "for-TIIN, acento al final.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.fifteen", "word": "fifteen", "es": "quince", "notes": "fif-TIIN, acento al final.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.sixteen", "word": "sixteen", "es": "dieciséis", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.seventeen", "word": "seventeen", "es": "diecisiete", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.eighteen", "word": "eighteen", "es": "dieciocho", "notes": "Una sola «t»: ei-TIIN.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.nineteen", "word": "nineteen", "es": "diecinueve", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.twenty", "word": "twenty", "es": "veinte", "notes": "En EE. UU. la «t» tras «n» casi desaparece: TWEN-i.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.twenty-one", "word": "twenty-one", "es": "veintiuno", "notes": "Las decenas y las unidades se unen con guion.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.thirty", "word": "thirty", "es": "treinta", "notes": "Acento al principio: THIR-ri, con la «t» suave.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.forty", "word": "forty", "es": "cuarenta", "notes": "Se escribe sin «u»: «forty», aunque «four» la lleve.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.fifty", "word": "fifty", "es": "cincuenta", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.sixty", "word": "sixty", "es": "sesenta", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.seventy", "word": "seventy", "es": "setenta", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.eighty", "word": "eighty", "es": "ochenta", "notes": "Suena EI-ri, con la «t» suave.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.ninety", "word": "ninety", "es": "noventa", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.one-hundred", "word": "one hundred", "es": "cien", "notes": "También «a hundred». 150 = «a hundred and fifty» o «one fifty».", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.one-thousand", "word": "one thousand", "es": "mil", "notes": "«th» entre los dientes: THAU-zənd. 1,000 se escribe con coma en EE. UU.", "situation": "numeros", "tags": ["numero"] },
+    { "id": "a2-numbers.dollar", "word": "dollar", "article": "a", "plural": "dollars", "es": "el dólar", "notes": "Coloquialmente «a buck» (un pavo).", "situation": "numeros", "tags": ["dinero"], "image": "fluent:dollar-banknote" },
+    { "id": "a2-numbers.quarter", "word": "quarter", "article": "a", "plural": "quarters", "es": "la moneda de 25 centavos", "notes": "También «cuarto» en la hora: «a quarter to ten».", "situation": "numeros", "tags": ["dinero"], "image": "fluent:coin" },
+    { "id": "a2-numbers.tip", "word": "tip", "article": "a", "plural": "tips", "es": "la propina", "notes": "En EE. UU. se espera un 18–20 % en restaurantes y taxis.", "situation": "numeros", "tags": ["dinero", "propina"] },
+    { "id": "a2-numbers.monday", "word": "Monday", "es": "el lunes", "notes": "Los días van siempre con mayúscula. MAN-dei.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.tuesday", "word": "Tuesday", "es": "el martes", "notes": "TUUZ-dei.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.wednesday", "word": "Wednesday", "es": "el miércoles", "notes": "La primera «d» no suena: WENZ-dei.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.thursday", "word": "Thursday", "es": "el jueves", "notes": "«th» entre los dientes: THERZ-dei.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.friday", "word": "Friday", "es": "el viernes", "notes": "FRAI-dei.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.saturday", "word": "Saturday", "es": "el sábado", "notes": "SÆ-rər-dei, con la «t» suave.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.sunday", "word": "Sunday", "es": "el domingo", "notes": "SAN-dei.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.today", "word": "today", "es": "hoy", "notes": "Acento al final: tə-DEI.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.tomorrow", "word": "tomorrow", "es": "mañana", "notes": "«tomorrow morning» = mañana por la mañana.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.yesterday", "word": "yesterday", "es": "ayer", "notes": "YES-tər-dei.", "situation": "numeros", "tags": ["dia"] },
+    { "id": "a2-numbers.january", "word": "January", "es": "enero", "notes": "Los meses van con mayúscula. DʒÆ-nyu-e-ri.", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.february", "word": "February", "es": "febrero", "notes": "FEB-yu-e-ri: la primera «r» casi no se oye.", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.march", "word": "March", "es": "marzo", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.april", "word": "April", "es": "abril", "notes": "EI-prəl.", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.may", "word": "May", "es": "mayo", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.june", "word": "June", "es": "junio", "notes": "DʒUUN.", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.july", "word": "July", "es": "julio", "notes": "Acento al final: dʒu-LAI.", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.august", "word": "August", "es": "agosto", "notes": "O-gəst.", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.september", "word": "September", "es": "septiembre", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.october", "word": "October", "es": "octubre", "notes": "ak-TOU-bər.", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.november", "word": "November", "es": "noviembre", "situation": "numeros", "tags": ["mes"] },
+    { "id": "a2-numbers.december", "word": "December", "es": "diciembre", "notes": "di-SEM-bər.", "situation": "numeros", "tags": ["mes"] }
+  ],
+  "qa": [
+    {
+      "id": "a2-numbers.qa.how-many",
+      "question": "Hi there! How many people?",
+      "questionEs": "¡Hola! ¿Cuántas personas?",
+      "accepted": [
+        { "text": "Table for two, please.", "es": "Una mesa para dos, por favor." },
+        { "text": "Just two, please.", "es": "Solo dos, por favor." }
+      ],
+      "distractors": [
+        { "text": "We have two.", "es": "Tenemos dos." },
+        { "text": "It's two o'clock.", "es": "Son las dos." }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "El host pregunta cuántos sois: responde con el número, «Table for two» o «Just two».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "a2-numbers.qa.age",
+      "question": "So how old are you?",
+      "questionEs": "Y ¿cuántos años tienes?",
+      "accepted": [
+        { "text": "I'm thirty-two.", "es": "Tengo treinta y dos años." },
+        { "text": "I'm thirty-two years old.", "es": "Tengo treinta y dos años." }
+      ],
+      "distractors": [
+        { "text": "I have thirty-two years.", "es": "Tengo treinta y dos años." },
+        { "text": "I'm thirty-two years.", "es": "Soy treinta y dos años." }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "La edad va con «be»: «I'm thirty-two» o «I'm thirty-two years old», nunca «I have».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-numbers.qa.phone-number",
+      "question": "Can I get a phone number for the reservation?",
+      "questionEs": "¿Me das un número de teléfono para la reserva?",
+      "accepted": [
+        { "text": "Sure. It's three one two, five five five, oh one four seven.", "es": "Claro. Es el 312 555 0147." },
+        { "text": "Sure, it's five five five, oh one four seven.", "es": "Claro, es el 555 0147." }
+      ],
+      "distractors": [
+        { "text": "Yes, you can get.", "es": "Sí, puedes conseguir." },
+        { "text": "My phone is an iPhone.", "es": "Mi teléfono es un iPhone." }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "«Can I get…?» pide algo: da el número cifra a cifra, con «oh» para el cero.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "a2-numbers.qa.how-would-you-like-to-pay",
+      "question": "That's twelve fifty. How would you like to pay?",
+      "questionEs": "Son 12,50. ¿Cómo quieres pagar?",
+      "accepted": [
+        { "text": "By card, please.", "es": "Con tarjeta, por favor." },
+        { "text": "Cash. Here you go.", "es": "En efectivo. Aquí tienes." }
+      ],
+      "distractors": [
+        { "text": "In card, please.", "es": "En tarjeta, por favor." },
+        { "text": "Yes, I would like.", "es": "Sí, me gustaría." }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "Se paga «by card» o «with a card», y «in cash» o solo «cash».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "a2-numbers.qa.what-time",
+      "question": "Excuse me, do you have the time?",
+      "questionEs": "Perdone, ¿tiene hora?",
+      "accepted": [
+        { "text": "Sure, it's eight thirty.", "es": "Claro, son las ocho y media." },
+        { "text": "Yeah, it's a quarter to ten.", "es": "Sí, son las diez menos cuarto." }
+      ],
+      "distractors": [
+        { "text": "Sorry, I'm very busy.", "es": "Lo siento, estoy muy ocupado." },
+        { "text": "They are eight and half.", "es": "Son las ocho y media (calco)." }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "«Do you have the time?» pregunta la hora. Se responde con «It's…», nunca «They are».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "a2-numbers.qa.birthday",
+      "question": "When's your birthday?",
+      "questionEs": "¿Cuándo es tu cumpleaños?",
+      "accepted": [
+        { "text": "It's on July fourth.", "es": "Es el 4 de julio." },
+        { "text": "July fourth. And yours?", "es": "El 4 de julio. ¿Y el tuyo?" }
+      ],
+      "distractors": [
+        { "text": "It's in four of July.", "es": "Es el cuatro de julio (calco)." },
+        { "text": "I'm thirty-two.", "es": "Tengo treinta y dos años." }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "Fechas en EE. UU.: mes + ordinal, «July fourth», con «on» delante.",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}
