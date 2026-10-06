@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 11:54Z 💻
+- Updated: 2026-10-06 12:00Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ f81dc63
-- Next step: integrate T91/T92, then A2 units T93–T96
+- Branch: plan-008-ingles @ 56781fd
+- Next step: integrate T95/T96, then A2 dialogues + stories (T97, T98)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -68,7 +68,7 @@ Worktree setup: npm ci
 - Outcome: units a2-hello, a2-numbers, a2-grammar (10 gram.en-a2-* cards in the unit's grammar array): 12 lessons, 97 phrases, 72 vocab, 19 Q&A; numbers/years/prices as words · f81dc63 · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T93 — English A2: about me, daily life
-- Status: running (attempt 1 · 💻 · agent a82a20e7ade54cab9 · since 11:52Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-about-me` (20) and `a2-daily` (22) per docs/brief-en.md (persona: Hernán, from Madrid, programmer).
@@ -77,10 +77,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~80 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "A2"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units a2-about-me (6 lessons) + a2-daily (5): 89 phrases, 68 vocab, 18 Q&A, 38 Fluent pictures; neutral with some formal/tu · 7356c8b · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T94 — English A2: airport, hotel
-- Status: running (attempt 1 · 💻 · agent a2b5e82c901d31a33 · since 11:54Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-airport` (30) and `a2-hotel` (32) per docs/brief-en.md.
@@ -89,10 +89,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "A2"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units a2-airport + a2-hotel (5 lessons each): 87 phrases, 70 vocab, 19 Q&A; formal for I'd like/Could you · 56781fd · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T95 — English A2: food, shopping
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ae9ae727412ff8139 · since 12:00Z)
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-food` (40) and `a2-shopping` (42) per docs/brief-en.md (coffee shop, restaurant, tip; supermarket, clothes, returns).
@@ -104,7 +104,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T96 — English A2: city, health
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a2c3dd70602ba7d52 · since 12:00Z)
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-city` (50) and `a2-health` (52) per docs/brief-en.md (subway/bus/rideshare, directions; pharmacy, doctor, 911).
@@ -291,6 +291,8 @@ Worktree setup: npm ci
 - [ ] T90 @a048f4c — code review (schema, build.ts levels) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T91 @7683f96 — code review (path.ts, level store) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T92 @f81dc63 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T93 @7356c8b — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T94 @56781fd — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -322,3 +324,7 @@ Worktree setup: npm ci
 - 2026-10-06 11:52Z 💻 T93 launched · attempt 1 · agent a82a20e7ade54cab9
 - 2026-10-06 11:54Z 💻 T92 done · worktree-agent-adea40484a0eb938e → f81dc63 · verify ✓
 - 2026-10-06 11:54Z 💻 T94 launched · attempt 1 · agent a2b5e82c901d31a33
+- 2026-10-06 12:00Z 💻 T93 done · worktree-agent-a82a20e7ade54cab9 → 7356c8b · verify ✓
+- 2026-10-06 12:00Z 💻 T95 launched · attempt 1 · agent ae9ae727412ff8139
+- 2026-10-06 12:00Z 💻 T94 done · worktree-agent-a2b5e82c901d31a33 → 56781fd · verify ✓
+- 2026-10-06 12:00Z 💻 T96 launched · attempt 1 · agent a2c3dd70602ba7d52
