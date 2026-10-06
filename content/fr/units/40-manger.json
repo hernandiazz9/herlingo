@@ -1,0 +1,473 @@
+{
+  "id": "manger",
+  "order": 40,
+  "title": "Comer y beber: café, panadería, restaurante",
+  "description": "Pedir en la barra o en la terraza, comprar el pan, reservar mesa, pedir la comida y la bebida, avisar de alergias y pagar la cuenta.",
+  "emoji": "🥐",
+  "situation": "comida",
+  "lessons": [
+    {
+      "id": "manger.l.cafe",
+      "title": "En el café",
+      "items": [
+        "manger.cafe",
+        "manger.terrasse",
+        "manger.on-peut-se-mettre-en-terrasse",
+        "manger.quest-ce-que-je-vous-sers",
+        "grammaire.je-voudrais-un-cafe",
+        "manger.croissant",
+        "manger.un-cafe-et-un-croissant",
+        "manger.un-cafe-creme",
+        "grammaire.lait",
+        "manger.avec-un-peu-de-lait",
+        "manger.sucre",
+        "manger.sans-sucre-merci",
+        "manger.the",
+        "manger.chocolat-chaud",
+        "manger.un-chocolat-chaud-pour-moi",
+        "manger.une-orange-pressee",
+        "manger.je-vous-dois-combien",
+        "grammaire.qa.voudrais",
+        "manger.qa.terrasse"
+      ]
+    },
+    {
+      "id": "manger.l.boulangerie",
+      "title": "En la panadería",
+      "items": [
+        "manger.boulangerie",
+        "grammaire.je-vais-a-la-boulangerie",
+        "manger.pain",
+        "manger.baguette",
+        "grammaire.une-baguette",
+        "manger.une-baguette-pas-trop-cuite",
+        "manger.il-vous-reste-des-croissants",
+        "manger.pain-au-chocolat",
+        "manger.deux-pains-au-chocolat",
+        "manger.et-avec-ceci",
+        "manger.ce-sera-tout-merci",
+        "manger.tarte",
+        "manger.une-part-de-tarte-aux-pommes",
+        "manger.gateau",
+        "manger.cest-quoi-ce-gateau",
+        "manger.sandwich",
+        "manger.un-jambon-beurre",
+        "manger.sur-place-ou-a-emporter",
+        "manger.a-emporter",
+        "manger.qa.et-avec-ceci",
+        "manger.qa.sur-place"
+      ]
+    },
+    {
+      "id": "manger.l.reserver",
+      "title": "Reservar y pedir mesa",
+      "items": [
+        "manger.restaurant",
+        "manger.reservation",
+        "manger.je-voudrais-reserver",
+        "manger.pour-combien-de-personnes",
+        "nombres.deux-personnes",
+        "manger.pour-quelle-heure",
+        "manger.vers-vingt-heures",
+        "manger.vous-avez-reserve",
+        "manger.jai-reserve-au-nom-de",
+        "manger.table",
+        "manger.vous-avez-une-table-de-libre",
+        "manger.une-table-pour-quatre",
+        "manger.cest-complet",
+        "manger.on-peut-manger-dehors",
+        "nombres.qa.vous-etes-combien",
+        "manger.qa.vous-avez-reserve"
+      ]
+    },
+    {
+      "id": "manger.l.commander",
+      "title": "Pedir la comida",
+      "items": [
+        "nombres.carte",
+        "manger.la-carte-sil-vous-plait",
+        "manger.menu",
+        "manger.vous-avez-choisi",
+        "manger.pas-encore-une-minute",
+        "manger.quest-ce-que-vous-me-conseillez",
+        "manger.plat",
+        "manger.cest-quoi-le-plat-du-jour",
+        "manger.je-vais-prendre-le-menu",
+        "manger.entree",
+        "manger.salade",
+        "manger.en-entree-une-salade",
+        "manger.poisson",
+        "manger.viande",
+        "manger.et-comme-plat-le-poisson",
+        "manger.poulet",
+        "manger.frites",
+        "manger.le-poulet-frites",
+        "manger.legumes",
+        "manger.bon-appetit",
+        "manger.qa.vous-avez-choisi"
+      ]
+    },
+    {
+      "id": "manger.l.boissons",
+      "title": "Bebidas y cubiertos",
+      "items": [
+        "manger.eau",
+        "manger.carafe",
+        "manger.une-carafe-deau",
+        "manger.bouteille",
+        "manger.plate-ou-gazeuse",
+        "manger.verre",
+        "manger.vin",
+        "manger.un-verre-de-vin-rouge",
+        "manger.on-prend-une-bouteille-de-blanc",
+        "manger.biere",
+        "manger.un-demi",
+        "manger.sante",
+        "manger.a-la-tienne",
+        "manger.fourchette",
+        "manger.couteau",
+        "manger.cuillere",
+        "manger.il-me-manque-une-fourchette",
+        "manger.vous-pouvez-mapporter-du-pain",
+        "manger.qa.comme-boisson"
+      ]
+    },
+    {
+      "id": "manger.l.regimes",
+      "title": "Alergias y preferencias",
+      "items": [
+        "manger.vegetarien",
+        "manger.je-suis-vegetarien",
+        "manger.je-ne-mange-pas-de-viande",
+        "manger.vous-avez-un-plat-vegetarien",
+        "manger.allergie",
+        "manger.je-suis-allergique-aux-fruits-a-coque",
+        "manger.gluten",
+        "manger.il-y-a-du-gluten-dedans",
+        "courses.oignon",
+        "manger.sans-oignons",
+        "manger.steak",
+        "manger.quelle-cuisson",
+        "manger.a-point",
+        "manger.bien-cuit",
+        "manger.qa.cuisson",
+        "manger.qa.allergies"
+      ]
+    },
+    {
+      "id": "manger.l.addition",
+      "title": "Postre y cuenta",
+      "items": [
+        "manger.dessert",
+        "manger.vous-prendrez-un-dessert",
+        "courses.fromage",
+        "manger.fromage-ou-dessert",
+        "manger.glace",
+        "manger.juste-un-cafe",
+        "manger.addition",
+        "manger.laddition-sil-vous-plait",
+        "manger.tout-sest-bien-passe",
+        "manger.cetait-delicieux",
+        "manger.on-peut-payer-separement",
+        "nombres.je-peux-payer-par-carte",
+        "manger.le-service-est-compris",
+        "manger.pourboire",
+        "manger.gardez-la-monnaie",
+        "manger.je-crois-quil-y-a-une-erreur",
+        "manger.qa.dessert",
+        "manger.qa.tout-sest-bien-passe"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "manger.on-peut-se-mettre-en-terrasse", "text": "On peut se mettre en terrasse?", "es": "¿Podemos sentarnos en la terraza?", "literal": "¿Se puede uno poner en terraza?", "explanation": "Al llegar a un café con buen tiempo, al camarero. «terrasse» suena te-RAS, sin la «e» final.", "register": "neutral", "situation": "comida", "tags": ["cafe"] },
+    { "id": "manger.quest-ce-que-je-vous-sers", "text": "Qu'est-ce que je vous sers?", "es": "¿Qué le pongo?", "literal": "¿Qué le sirvo?", "explanation": "Te lo dice el camarero en la barra o en la mesa. La «s» final de «sers» es muda: kes-ke-sh'vu SER?", "register": "vous", "situation": "comida", "tags": ["cafe"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.un-cafe-et-un-croissant", "text": "Un café et un croissant, s'il vous plaît.", "es": "Un café y un cruasán, por favor.", "notes": "«Un café» en Francia es un expreso.", "explanation": "El desayuno típico en la barra. «croissant» acaba en nasal y sin «t»: krua-SAN.", "register": "vous", "situation": "comida", "tags": ["cafe"] },
+    { "id": "manger.un-cafe-creme", "text": "Un café crème, s'il vous plaît.", "es": "Un café con leche, por favor.", "notes": "El «café crème» es lo más parecido a nuestro café con leche.", "explanation": "Para tu café con leche de la mañana. «crème» suena KREM, con la «r» en la garganta.", "register": "vous", "situation": "comida", "tags": ["cafe"] },
+    { "id": "manger.avec-un-peu-de-lait", "text": "Avec un peu de lait, s'il vous plaît.", "es": "Con un poco de leche, por favor.", "explanation": "Para pedir un poco de leche con el café o el té. «lait» suena LE: la «t» es muda.", "register": "vous", "situation": "comida", "tags": ["cafe"] },
+    { "id": "manger.sans-sucre-merci", "text": "Sans sucre, merci.", "es": "Sin azúcar, gracias.", "explanation": "Cuando te ofrecen azúcar. «sans» es nasal y sin «s»: san SÜKR.", "register": "neutral", "situation": "comida", "tags": ["cafe"] },
+    { "id": "manger.un-chocolat-chaud-pour-moi", "text": "Un chocolat chaud pour moi.", "es": "Un chocolate caliente para mí.", "explanation": "Cuando pedís en grupo y cada uno dice lo suyo. «chaud» suena SHO: la «d» final es muda.", "register": "neutral", "situation": "comida", "tags": ["cafe"] },
+    { "id": "manger.une-orange-pressee", "text": "Une orange pressée, s'il vous plaît.", "es": "Un zumo de naranja natural, por favor.", "literal": "Una naranja exprimida, por favor.", "notes": "«Un jus d'orange» suele ser de brik; el natural es «une orange pressée».", "explanation": "En la carta de cualquier café. «orange» es nasal, con «g» como la «y» argentina: o-RANSH.", "register": "vous", "situation": "comida", "tags": ["cafe"] },
+    { "id": "manger.je-vous-dois-combien", "text": "Je vous dois combien?", "es": "¿Cuánto le debo?", "explanation": "Para pagar en la barra o al camarero. «dois» suena DUA: sh'vu DUA kom-BIAN?", "register": "vous", "situation": "comida", "tags": ["cafe", "pagar"] },
+
+    { "id": "manger.une-baguette-pas-trop-cuite", "text": "Une baguette pas trop cuite, s'il vous plaît.", "es": "Una barra no muy hecha, por favor.", "notes": "Si la quieres tostadita: «bien cuite».", "explanation": "Muchos franceses piden la barra a su gusto. «cuite» suena KÜIT, con la «u» francesa.", "register": "vous", "situation": "comida", "tags": ["boulangerie"] },
+    { "id": "manger.il-vous-reste-des-croissants", "text": "Il vous reste des croissants?", "es": "¿Le quedan cruasanes?", "explanation": "A media mañana, cuando ya queda poco en la vitrina. La «s» del plural no suena: dé krua-SAN.", "register": "vous", "situation": "comida", "tags": ["boulangerie"] },
+    { "id": "manger.deux-pains-au-chocolat", "text": "Deux pains au chocolat, s'il vous plaît.", "es": "Dos napolitanas de chocolate, por favor.", "notes": "En el suroeste de Francia lo llaman «chocolatine».", "explanation": "En la panadería, para desayunar o merendar. «pain» es nasal, sin cerrar la boca: dö PAN o sho-ko-LA.", "register": "vous", "situation": "comida", "tags": ["boulangerie"] },
+    { "id": "manger.et-avec-ceci", "text": "Et avec ceci?", "es": "¿Algo más?", "literal": "¿Y con esto?", "explanation": "Te lo dicen en la panadería o la tienda después de cada cosa que pides. Suena é a-vek se-SI.", "register": "neutral", "situation": "comida", "tags": ["boulangerie", "tienda"], "voice": "fr-FR-DeniseNeural" },
+    { "id": "manger.ce-sera-tout-merci", "text": "Ce sera tout, merci.", "es": "Nada más, gracias.", "literal": "Eso será todo, gracias.", "explanation": "Para terminar de pedir en una tienda. «tout» suena TU: la «t» final es muda.", "register": "neutral", "situation": "comida", "tags": ["boulangerie", "tienda"] },
+    { "id": "manger.une-part-de-tarte-aux-pommes", "text": "Une part de tarte aux pommes, s'il vous plaît.", "es": "Un trozo de tarta de manzana, por favor.", "explanation": "En la pastelería o de postre. «part» suena PAR y «pommes», POM: las letras finales no suenan.", "register": "vous", "situation": "comida", "tags": ["boulangerie"] },
+    { "id": "manger.cest-quoi-ce-gateau", "text": "C'est quoi, ce gâteau?", "es": "¿Qué es este pastel?", "explanation": "Señalando la vitrina, para saber qué lleva. «gâteau» suena ga-TO.", "register": "neutral", "situation": "comida", "tags": ["boulangerie"] },
+    { "id": "manger.un-jambon-beurre", "text": "Un jambon-beurre, s'il vous plaît.", "es": "Un bocadillo de jamón york con mantequilla, por favor.", "notes": "El bocadillo más típico de Francia: baguette, jamón cocido y mantequilla.", "explanation": "Para comer rápido a mediodía. «jambon» es nasal, con la «j» como la «y» argentina: shan-BON BÖR.", "register": "vous", "situation": "comida", "tags": ["boulangerie"] },
+    { "id": "manger.sur-place-ou-a-emporter", "text": "Sur place ou à emporter?", "es": "¿Para tomar aquí o para llevar?", "explanation": "Te lo preguntan en panaderías y cafés al pedir. «emporter» suena an-por-TÉ: la «r» final es muda.", "register": "neutral", "situation": "comida", "tags": ["boulangerie"], "voice": "fr-FR-DeniseNeural" },
+    { "id": "manger.a-emporter", "text": "À emporter, s'il vous plaît.", "es": "Para llevar, por favor.", "notes": "Se dice «à emporter», no «pour emporter».", "explanation": "Cuando te lo llevas. Suena a an-por-TÉ, sil vu PLE.", "register": "vous", "situation": "comida", "tags": ["boulangerie"] },
+
+    { "id": "manger.je-voudrais-reserver", "text": "Je voudrais réserver une table pour ce soir.", "es": "Querría reservar una mesa para esta noche.", "explanation": "Por teléfono o en la puerta del restaurante. La «s» de «réserver» suena como una «z»: ré-zer-VÉ.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.pour-combien-de-personnes", "text": "Pour combien de personnes?", "es": "¿Para cuántas personas?", "explanation": "Te lo pregunta el restaurante al reservar o al entrar. «personnes» suena per-SON, sin la «es» final.", "register": "neutral", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.pour-quelle-heure", "text": "Pour quelle heure?", "es": "¿Para qué hora?", "explanation": "Te piden la hora de la reserva. Se enlaza «quelle heure»: pur ke-LÖR?", "register": "neutral", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.vers-vingt-heures", "text": "Vers vingt heures.", "es": "Sobre las ocho de la tarde.", "literal": "Hacia las veinte horas.", "notes": "Para reservas y horarios se usa el reloj de 24 horas.", "explanation": "Para dar la hora de la reserva. Se liga «vingt‿heures»: ver van-TÖR.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.vous-avez-reserve", "text": "Vous avez réservé?", "es": "¿Tienen reserva?", "literal": "¿Han reservado?", "explanation": "Lo primero que te pregunta el camarero en la puerta. Se liga «vous‿avez»: vu-za-VÉ ré-zer-VÉ?", "register": "vous", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.jai-reserve-au-nom-de", "text": "J'ai réservé au nom de Díaz.", "es": "Tengo una reserva a nombre de Díaz.", "literal": "He reservado a nombre de Díaz.", "explanation": "Al llegar al restaurante con reserva. «nom» es nasal y la «m» no suena: o NON de.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.vous-avez-une-table-de-libre", "text": "Vous avez une table de libre?", "es": "¿Tiene una mesa libre?", "explanation": "Al entrar sin reserva en un restaurante o un café. «table» suena TABL, con la «e» muda.", "register": "vous", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.une-table-pour-quatre", "text": "Une table pour quatre, s'il vous plaît.", "es": "Una mesa para cuatro, por favor.", "explanation": "Al entrar sin reserva. «quatre» suena KATR, con la «e» final muda.", "register": "vous", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.cest-complet", "text": "Désolé, c'est complet ce soir.", "es": "Lo siento, esta noche está completo.", "explanation": "Te lo dicen si no queda sitio. «complet» suena kom-PLE: la «t» final es muda.", "register": "neutral", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.on-peut-manger-dehors", "text": "On peut manger dehors?", "es": "¿Podemos comer fuera?", "explanation": "Para pedir mesa fuera si hace bueno. «dehors» suena de-OR: la «h» y la «s» no suenan.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+
+    { "id": "manger.la-carte-sil-vous-plait", "text": "La carte, s'il vous plaît.", "es": "La carta, por favor.", "notes": "«La carte» es la carta; «le menu», el menú a precio fijo.", "explanation": "Al sentarte, si no te la han traído. «carte» suena KART.", "register": "vous", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.vous-avez-choisi", "text": "Vous avez choisi?", "es": "¿Ya saben qué van a tomar?", "literal": "¿Han elegido?", "explanation": "Te lo pregunta el camarero para tomar nota. «choisi» suena shua-ZI.", "register": "vous", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.pas-encore-une-minute", "text": "Pas encore, une petite minute.", "es": "Todavía no, un minutito.", "explanation": "Si aún no has decidido. Se liga «pas‿encore»: pa-zan-KOR.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.quest-ce-que-vous-me-conseillez", "text": "Qu'est-ce que vous me conseillez?", "es": "¿Qué me recomienda?", "explanation": "Para que el camarero te recomiende un plato. «conseillez» suena kon-se-YÉ.", "register": "vous", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.cest-quoi-le-plat-du-jour", "text": "C'est quoi, le plat du jour?", "es": "¿Cuál es el plato del día?", "explanation": "En bistrós y brasseries siempre hay plato del día en la pizarra. «plat» suena PLA, sin «t».", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.je-vais-prendre-le-menu", "text": "Je vais prendre le menu à vingt euros.", "es": "Voy a tomar el menú de veinte euros.", "notes": "«Je vais prendre…» es la forma natural de pedir.", "explanation": "Para pedir el menú del día. Se liga «vingt‿euros»: van-tö-RO.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.en-entree-une-salade", "text": "En entrée, une salade.", "es": "De primero, una ensalada.", "notes": "Ojo: «l'entrée» es el primer plato, no el principal.", "explanation": "Para pedir el primer plato. Se liga «en‿entrée»: a-nan-TRÉ.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.et-comme-plat-le-poisson", "text": "Et comme plat, le poisson.", "es": "Y de segundo, el pescado.", "literal": "Y como plato, el pescado.", "explanation": "Para pedir el plato principal. «poisson» lleva «s» sorda: pua-SON; con «z» sería «poison», veneno.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.le-poulet-frites", "text": "Pour moi, le poulet-frites.", "es": "Para mí, pollo con patatas fritas.", "explanation": "Un clásico de cualquier brasserie. «poulet» suena pu-LÉ y «frites», FRIT.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.bon-appetit", "text": "Bon appétit!", "es": "¡Que aproveche!", "explanation": "Antes de empezar a comer, a todos los de la mesa. Se liga «bon‿appétit»: bo-na-pé-TI.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+
+    { "id": "manger.une-carafe-deau", "text": "Une carafe d'eau, s'il vous plaît.", "es": "Una jarra de agua del grifo, por favor.", "notes": "En los restaurantes franceses el agua del grifo en jarra es gratis.", "explanation": "Para no pagar agua embotellada. «d'eau» es una sola sílaba: ün ka-RAF DO.", "register": "vous", "situation": "comida", "tags": ["boissons"] },
+    { "id": "manger.plate-ou-gazeuse", "text": "Plate ou gazeuse?", "es": "¿Sin gas o con gas?", "literal": "¿Plana o gaseosa?", "explanation": "Te lo preguntan si pides agua embotellada. «gazeuse» suena ga-ZÖZ.", "register": "neutral", "situation": "comida", "tags": ["boissons"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.un-verre-de-vin-rouge", "text": "Un verre de vin rouge, s'il vous plaît.", "es": "Una copa de vino tinto, por favor.", "notes": "El tinto es «rouge»; el blanco, «blanc»; el rosado, «rosé».", "explanation": "Con la comida. «vin» es nasal, VAN, y «rouge» suena RUSH, con la «g» como la «y» argentina.", "register": "vous", "situation": "comida", "tags": ["boissons"] },
+    { "id": "manger.on-prend-une-bouteille-de-blanc", "text": "On prend une bouteille de blanc?", "es": "¿Pedimos una botella de blanco?", "notes": "«On» por «nosotros», muy habitual al hablar.", "explanation": "Entre amigos, para compartir vino. «bouteille» suena bu-TEY y «blanc», BLAN, sin «c».", "register": "neutral", "situation": "comida", "tags": ["boissons"] },
+    { "id": "manger.un-demi", "text": "Un demi, s'il vous plaît.", "es": "Una caña, por favor.", "notes": "«Un demi» es una cerveza de barril de 25 cl.", "explanation": "En el bar, para pedir cerveza de barril. Suena an de-MI.", "register": "vous", "situation": "comida", "tags": ["boissons"] },
+    { "id": "manger.sante", "text": "Santé!", "es": "¡Salud!", "explanation": "Al brindar, mirando a los ojos, como en España. Suena san-TÉ, nasal.", "register": "neutral", "situation": "comida", "tags": ["boissons"] },
+    { "id": "manger.a-la-tienne", "text": "À la tienne!", "es": "¡A tu salud!", "notes": "A varias personas o de usted: «À la vôtre!».", "explanation": "Para brindar con un amigo. «tienne» suena TIEN.", "register": "tu", "situation": "comida", "tags": ["boissons"] },
+    { "id": "manger.il-me-manque-une-fourchette", "text": "Excusez-moi, il me manque une fourchette.", "es": "Perdone, me falta un tenedor.", "explanation": "Para pedírselo al camarero. «fourchette» suena fur-SHET.", "register": "vous", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.vous-pouvez-mapporter-du-pain", "text": "Vous pouvez m'apporter du pain, s'il vous plaît?", "es": "¿Me puede traer pan, por favor?", "notes": "El pan de la mesa es gratis y te lo rellenan.", "explanation": "Cuando se acaba el pan de la cesta. «apporter» suena a-por-TÉ.", "register": "vous", "situation": "comida", "tags": ["restaurant"] },
+
+    { "id": "manger.je-suis-vegetarien", "text": "Je suis végétarien.", "es": "Soy vegetariano.", "notes": "Si eres mujer: «végétarienne».", "explanation": "Al pedir o cuando te invitan a comer. Acaba en nasal: vé-shé-ta-RIAN.", "register": "neutral", "situation": "comida", "tags": ["regime"] },
+    { "id": "manger.je-ne-mange-pas-de-viande", "text": "Je ne mange pas de viande.", "es": "No como carne.", "notes": "Tras la negación, «de» y no «de la».", "explanation": "Para avisar al pedir o al invitado. «viande» es nasal: VIAND.", "register": "neutral", "situation": "comida", "tags": ["regime"] },
+    { "id": "manger.vous-avez-un-plat-vegetarien", "text": "Vous avez un plat végétarien?", "es": "¿Tiene algún plato vegetariano?", "explanation": "Para preguntar al camarero. Se liga «vous‿avez‿un»: vu-za-vé-ZAN pla vé-shé-ta-RIAN?", "register": "vous", "situation": "comida", "tags": ["regime"] },
+    { "id": "manger.je-suis-allergique-aux-fruits-a-coque", "text": "Je suis allergique aux fruits à coque.", "es": "Soy alérgico a los frutos secos.", "notes": "Los «fruits secs» son las frutas desecadas: pasas, orejones…", "explanation": "Avísalo al camarero antes de pedir. «allergique» suena a-ler-SHIK.", "register": "neutral", "situation": "comida", "tags": ["regime"] },
+    { "id": "manger.il-y-a-du-gluten-dedans", "text": "Il y a du gluten dedans?", "es": "¿Lleva gluten?", "literal": "¿Hay gluten dentro?", "explanation": "Para preguntar por un plato o un pastel. «dedans» es nasal: de-DAN.", "register": "neutral", "situation": "comida", "tags": ["regime"] },
+    { "id": "manger.sans-oignons", "text": "Sans oignons, s'il vous plaît.", "es": "Sin cebolla, por favor.", "notes": "En francés va en plural.", "explanation": "Para quitar algo de un plato. En «oignon» la «i» no suena: o-ÑON.", "register": "vous", "situation": "comida", "tags": ["regime"] },
+    { "id": "manger.quelle-cuisson", "text": "Quelle cuisson pour la viande?", "es": "¿Cómo quiere la carne?", "literal": "¿Qué cocción para la carne?", "explanation": "Te lo pregunta el camarero si pides carne. «cuisson» suena küi-SON.", "register": "neutral", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.a-point", "text": "À point, s'il vous plaît.", "es": "En su punto, por favor.", "notes": "Poco hecha: «saignant»; muy hecha: «bien cuit».", "explanation": "Para pedir la carne en su punto. «point» suena PUAN, nasal y sin «t».", "register": "vous", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.bien-cuit", "text": "Bien cuit, s'il vous plaît.", "es": "Muy hecha, por favor.", "literal": "Bien cocido, por favor.", "notes": "En Francia la carne se sirve poco hecha si no dices nada.", "explanation": "Si no quieres la carne roja por dentro. «cuit» suena KÜI, sin «t».", "register": "vous", "situation": "comida", "tags": ["restaurant"] },
+
+    { "id": "manger.vous-prendrez-un-dessert", "text": "Vous prendrez un dessert?", "es": "¿Tomará postre?", "explanation": "Al terminar el plato principal. «dessert» lleva «s» sorda: dé-SER; con «z» sería «désert», desierto.", "register": "vous", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.fromage-ou-dessert", "text": "Fromage ou dessert?", "es": "¿Queso o postre?", "notes": "En Francia el queso se toma después del plato, antes del postre o en su lugar.", "explanation": "Te lo ofrecen en muchos menús. «fromage» acaba como la «y» argentina: fro-MASH.", "register": "neutral", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.juste-un-cafe", "text": "Non merci, juste un café.", "es": "No, gracias, solo un café.", "explanation": "Para saltarte el postre. «juste» suena SHÜST, con la «u» francesa.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.laddition-sil-vous-plait", "text": "L'addition, s'il vous plaît.", "es": "La cuenta, por favor.", "explanation": "Para pedir la cuenta al camarero; no te la traen hasta que la pides. Suena la-di-SION.", "register": "vous", "situation": "comida", "tags": ["restaurant", "pagar"] },
+    { "id": "manger.tout-sest-bien-passe", "text": "Tout s'est bien passé?", "es": "¿Todo bien?", "literal": "¿Todo ha ido bien?", "explanation": "El camarero lo pregunta al recoger o al traer la cuenta. Suena tu se BIAN pa-SÉ?", "register": "neutral", "situation": "comida", "tags": ["restaurant"], "voice": "fr-FR-HenriNeural" },
+    { "id": "manger.cetait-delicieux", "text": "C'était délicieux, merci!", "es": "¡Estaba buenísimo, gracias!", "explanation": "Al camarero, al pagar o al salir. «délicieux» suena dé-li-SIÖ.", "register": "neutral", "situation": "comida", "tags": ["restaurant"] },
+    { "id": "manger.on-peut-payer-separement", "text": "On peut payer séparément?", "es": "¿Podemos pagar por separado?", "notes": "A medias es «on partage».", "explanation": "Cuando cada uno paga lo suyo. «séparément» suena sé-pa-ré-MAN.", "register": "neutral", "situation": "comida", "tags": ["restaurant", "pagar"] },
+    { "id": "manger.le-service-est-compris", "text": "Le service est compris?", "es": "¿El servicio está incluido?", "notes": "En Francia el servicio va siempre incluido; la propina es opcional.", "explanation": "Para saber si hay que dejar propina. «compris» suena kom-PRI, sin «s».", "register": "neutral", "situation": "comida", "tags": ["restaurant", "pagar"] },
+    { "id": "manger.gardez-la-monnaie", "text": "Gardez la monnaie.", "es": "Quédese con el cambio.", "literal": "Guarde el cambio.", "explanation": "Para dejar las monedas de la vuelta como propina. «monnaie» suena mo-NÉ.", "register": "vous", "situation": "comida", "tags": ["restaurant", "pagar"] },
+    { "id": "manger.je-crois-quil-y-a-une-erreur", "text": "Je crois qu'il y a une erreur.", "es": "Creo que hay un error.", "explanation": "Si algo de la cuenta no cuadra, con calma y una sonrisa. Suena sh'krua ki-lia ü-ne-RÖR.", "register": "neutral", "situation": "comida", "tags": ["restaurant", "pagar"] }
+  ],
+  "vocab": [
+    { "id": "manger.cafe", "word": "café", "article": "le", "gender": "m", "plural": "cafés", "es": "el café", "notes": "También el local: «on va au café».", "example": "manger.un-cafe-et-un-croissant", "situation": "comida", "image": "fluent:hot-beverage" },
+    { "id": "manger.terrasse", "word": "terrasse", "article": "la", "gender": "f", "plural": "terrasses", "es": "la terraza", "example": "manger.on-peut-se-mettre-en-terrasse", "situation": "comida" },
+    { "id": "manger.croissant", "word": "croissant", "article": "le", "gender": "m", "plural": "croissants", "es": "el cruasán", "example": "manger.un-cafe-et-un-croissant", "situation": "comida", "image": "fluent:croissant" },
+    { "id": "manger.sucre", "word": "sucre", "article": "le", "gender": "m", "es": "el azúcar", "notes": "Masculino, como en español.", "example": "manger.sans-sucre-merci", "situation": "comida" },
+    { "id": "manger.the", "word": "thé", "article": "le", "gender": "m", "plural": "thés", "es": "el té", "notes": "La «h» no suena: TÉ.", "situation": "comida", "image": "fluent:teacup-without-handle" },
+    { "id": "manger.chocolat-chaud", "word": "chocolat chaud", "article": "le", "gender": "m", "es": "el chocolate caliente", "example": "manger.un-chocolat-chaud-pour-moi", "situation": "comida" },
+    { "id": "manger.boulangerie", "word": "boulangerie", "article": "la", "gender": "f", "plural": "boulangeries", "es": "la panadería", "notes": "La pastelería es «la pâtisserie».", "example": "grammaire.je-vais-a-la-boulangerie", "situation": "comida" },
+    { "id": "manger.pain", "word": "pain", "article": "le", "gender": "m", "plural": "pains", "es": "el pan", "notes": "Nasal: PAN, sin cerrar la boca.", "example": "manger.vous-pouvez-mapporter-du-pain", "situation": "comida", "image": "fluent:bread" },
+    { "id": "manger.baguette", "word": "baguette", "article": "la", "gender": "f", "plural": "baguettes", "es": "la barra de pan", "example": "grammaire.une-baguette", "situation": "comida", "image": "fluent:baguette-bread" },
+    { "id": "manger.pain-au-chocolat", "word": "pain au chocolat", "article": "le", "gender": "m", "plural": "pains au chocolat", "es": "la napolitana de chocolate", "example": "manger.deux-pains-au-chocolat", "situation": "comida" },
+    { "id": "manger.tarte", "word": "tarte", "article": "la", "gender": "f", "plural": "tartes", "es": "la tarta", "notes": "Tarta con base de masa, casi siempre de fruta.", "example": "manger.une-part-de-tarte-aux-pommes", "situation": "comida", "image": "fluent:pie" },
+    { "id": "manger.gateau", "word": "gâteau", "article": "le", "gender": "m", "plural": "gâteaux", "es": "el pastel", "notes": "Plural con «x»: «gâteaux».", "example": "manger.cest-quoi-ce-gateau", "situation": "comida", "image": "fluent:shortcake" },
+    { "id": "manger.sandwich", "word": "sandwich", "article": "le", "gender": "m", "plural": "sandwichs", "es": "el bocadillo", "notes": "Suele ser de baguette: un bocadillo, no un sándwich de molde.", "example": "manger.un-jambon-beurre", "situation": "comida", "image": "fluent:sandwich" },
+    { "id": "manger.restaurant", "word": "restaurant", "article": "le", "gender": "m", "plural": "restaurants", "es": "el restaurante", "notes": "La «t» final no suena: res-to-RAN.", "example": "manger.je-voudrais-reserver", "situation": "comida", "image": "fluent:fork-and-knife-with-plate" },
+    { "id": "manger.reservation", "word": "réservation", "article": "la", "gender": "f", "plural": "réservations", "es": "la reserva", "example": "manger.jai-reserve-au-nom-de", "situation": "comida" },
+    { "id": "manger.table", "word": "table", "article": "la", "gender": "f", "plural": "tables", "es": "la mesa", "example": "manger.une-table-pour-quatre", "situation": "comida" },
+    { "id": "manger.menu", "word": "menu", "article": "le", "gender": "m", "plural": "menus", "es": "el menú (a precio fijo)", "notes": "La carta es «la carte».", "example": "manger.je-vais-prendre-le-menu", "situation": "comida" },
+    { "id": "manger.plat", "word": "plat", "article": "le", "gender": "m", "plural": "plats", "es": "el plato (principal)", "notes": "«Le plat du jour»: el plato del día.", "example": "manger.cest-quoi-le-plat-du-jour", "situation": "comida", "image": "fluent:steaming-bowl" },
+    { "id": "manger.entree", "word": "entrée", "article": "l'", "gender": "f", "plural": "entrées", "es": "el primer plato", "notes": "Falso amigo: no es el plato principal.", "example": "manger.en-entree-une-salade", "situation": "comida" },
+    { "id": "manger.salade", "word": "salade", "article": "la", "gender": "f", "plural": "salades", "es": "la ensalada", "notes": "También la lechuga.", "example": "manger.en-entree-une-salade", "situation": "comida", "image": "fluent:green-salad" },
+    { "id": "manger.poisson", "word": "poisson", "article": "le", "gender": "m", "plural": "poissons", "es": "el pescado", "notes": "También el pez. «s» sorda: pua-SON.", "example": "manger.et-comme-plat-le-poisson", "situation": "comida", "image": "fluent:fish" },
+    { "id": "manger.viande", "word": "viande", "article": "la", "gender": "f", "plural": "viandes", "es": "la carne", "example": "manger.je-ne-mange-pas-de-viande", "situation": "comida", "image": "fluent:meat-on-bone" },
+    { "id": "manger.poulet", "word": "poulet", "article": "le", "gender": "m", "plural": "poulets", "es": "el pollo", "example": "manger.le-poulet-frites", "situation": "comida", "image": "fluent:poultry-leg" },
+    { "id": "manger.frites", "word": "frites", "article": "les", "gender": "f", "es": "las patatas fritas", "example": "manger.le-poulet-frites", "situation": "comida", "image": "fluent:french-fries" },
+    { "id": "manger.legumes", "word": "légumes", "article": "les", "gender": "m", "es": "las verduras", "notes": "Singular: «le légume». No son solo las legumbres.", "situation": "comida", "image": "fluent:leafy-green" },
+    { "id": "manger.eau", "word": "eau", "article": "l'", "gender": "f", "plural": "eaux", "es": "el agua", "notes": "Femenino: «l'eau plate», «l'eau gazeuse». Suena O.", "example": "manger.une-carafe-deau", "situation": "comida", "image": "fluent:droplet" },
+    { "id": "manger.carafe", "word": "carafe", "article": "la", "gender": "f", "plural": "carafes", "es": "la jarra", "example": "manger.une-carafe-deau", "situation": "comida" },
+    { "id": "manger.bouteille", "word": "bouteille", "article": "la", "gender": "f", "plural": "bouteilles", "es": "la botella", "example": "manger.on-prend-une-bouteille-de-blanc", "situation": "comida" },
+    { "id": "manger.verre", "word": "verre", "article": "le", "gender": "m", "plural": "verres", "es": "el vaso, la copa", "notes": "«Prendre un verre»: tomar algo.", "example": "manger.un-verre-de-vin-rouge", "situation": "comida", "image": "fluent:tumbler-glass" },
+    { "id": "manger.vin", "word": "vin", "article": "le", "gender": "m", "plural": "vins", "es": "el vino", "notes": "Nasal: VAN.", "example": "manger.un-verre-de-vin-rouge", "situation": "comida", "image": "fluent:wine-glass" },
+    { "id": "manger.biere", "word": "bière", "article": "la", "gender": "f", "plural": "bières", "es": "la cerveza", "example": "manger.un-demi", "situation": "comida", "image": "fluent:beer-mug" },
+    { "id": "manger.fourchette", "word": "fourchette", "article": "la", "gender": "f", "plural": "fourchettes", "es": "el tenedor", "example": "manger.il-me-manque-une-fourchette", "situation": "comida", "image": "fluent:fork-and-knife" },
+    { "id": "manger.couteau", "word": "couteau", "article": "le", "gender": "m", "plural": "couteaux", "es": "el cuchillo", "situation": "comida", "image": "fluent:kitchen-knife" },
+    { "id": "manger.cuillere", "word": "cuillère", "article": "la", "gender": "f", "plural": "cuillères", "es": "la cuchara", "notes": "Suena küi-YER.", "situation": "comida", "image": "fluent:spoon" },
+    { "id": "manger.vegetarien", "word": "végétarien", "es": "vegetariano", "notes": "Femenino: «végétarienne».", "example": "manger.je-suis-vegetarien", "situation": "comida", "tags": ["adjetivo"] },
+    { "id": "manger.allergie", "word": "allergie", "article": "l'", "gender": "f", "plural": "allergies", "es": "la alergia", "notes": "Suena a-ler-SHI.", "example": "manger.je-suis-allergique-aux-fruits-a-coque", "situation": "comida" },
+    { "id": "manger.gluten", "word": "gluten", "article": "le", "gender": "m", "es": "el gluten", "notes": "«Sans gluten»: sin gluten.", "example": "manger.il-y-a-du-gluten-dedans", "situation": "comida" },
+    { "id": "manger.steak", "word": "steak", "article": "le", "gender": "m", "plural": "steaks", "es": "el filete", "notes": "Suena STEK.", "example": "manger.a-point", "situation": "comida", "image": "fluent:cut-of-meat" },
+    { "id": "manger.dessert", "word": "dessert", "article": "le", "gender": "m", "plural": "desserts", "es": "el postre", "example": "manger.vous-prendrez-un-dessert", "situation": "comida", "image": "fluent:custard" },
+    { "id": "manger.glace", "word": "glace", "article": "la", "gender": "f", "plural": "glaces", "es": "el helado", "notes": "También el hielo y el espejo.", "situation": "comida", "image": "fluent:soft-ice-cream" },
+    { "id": "manger.addition", "word": "addition", "article": "l'", "gender": "f", "plural": "additions", "es": "la cuenta", "notes": "En el restaurante; en el súper es «le ticket».", "example": "manger.laddition-sil-vous-plait", "situation": "comida", "image": "fluent:receipt" },
+    { "id": "manger.pourboire", "word": "pourboire", "article": "le", "gender": "m", "plural": "pourboires", "es": "la propina", "notes": "Literalmente, «para beber».", "example": "manger.gardez-la-monnaie", "situation": "comida" }
+  ],
+  "qa": [
+    {
+      "id": "manger.qa.terrasse",
+      "question": "Bonjour! En terrasse ou à l'intérieur?",
+      "questionEs": "¡Hola! ¿En la terraza o dentro?",
+      "accepted": [
+        { "text": "En terrasse, s'il vous plaît.", "es": "En la terraza, por favor." },
+        { "text": "À l'intérieur, s'il vous plaît.", "es": "Dentro, por favor." }
+      ],
+      "distractors": [
+        { "text": "En terrasse, s'il te plaît.", "es": "En la terraza, por favor (de tú)." },
+        { "text": "Je suis en terrasse.", "es": "Estoy en la terraza." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "Al camarero se le habla de «vous»: «s'il vous plaît».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "manger.qa.et-avec-ceci",
+      "question": "Voilà votre baguette. Et avec ceci?",
+      "questionEs": "Aquí tiene su barra. ¿Algo más?",
+      "accepted": [
+        { "text": "Ce sera tout, merci.", "es": "Nada más, gracias." },
+        { "text": "Deux croissants, s'il vous plaît.", "es": "Dos cruasanes, por favor." }
+      ],
+      "distractors": [
+        { "text": "Avec ceci, merci.", "es": "Con esto, gracias." },
+        { "text": "Deux croissants, s'il te plaît.", "es": "Dos cruasanes, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "«Et avec ceci?» significa «¿algo más?»: contestas con otra cosa o con «ce sera tout».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "manger.qa.sur-place",
+      "question": "C'est pour manger sur place ou à emporter?",
+      "questionEs": "¿Es para tomar aquí o para llevar?",
+      "accepted": [
+        { "text": "À emporter, s'il vous plaît.", "es": "Para llevar, por favor." },
+        { "text": "Sur place, s'il vous plaît.", "es": "Para tomar aquí, por favor." }
+      ],
+      "distractors": [
+        { "text": "Pour emporter, s'il vous plaît.", "es": "Para llevar, por favor (calco del español)." },
+        { "text": "À emporter, s'il te plaît.", "es": "Para llevar, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "Se dice «à emporter», no «pour emporter», y a la dependienta, de «vous».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "manger.qa.vous-avez-reserve",
+      "question": "Bonsoir! Vous avez réservé?",
+      "questionEs": "¡Buenas noches! ¿Tienen reserva?",
+      "accepted": [
+        { "text": "Oui, au nom de Díaz.", "es": "Sí, a nombre de Díaz." },
+        { "text": "Non, vous avez une table pour deux?", "es": "No, ¿tiene una mesa para dos?" }
+      ],
+      "distractors": [
+        { "text": "Oui, je suis réservé.", "es": "Sí, soy reservado." },
+        { "text": "Non, tu as une table pour deux?", "es": "No, ¿tienes una mesa para dos?" }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "La reserva se da «au nom de…»; al camarero, de «vous».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "manger.qa.vous-avez-choisi",
+      "question": "Vous avez choisi?",
+      "questionEs": "¿Ya saben qué van a tomar?",
+      "accepted": [
+        { "text": "Oui, je vais prendre le poisson.", "es": "Sí, voy a tomar el pescado." },
+        { "text": "Pas encore, une petite minute.", "es": "Todavía no, un minutito." }
+      ],
+      "distractors": [
+        { "text": "Oui, tu vas prendre le poisson.", "es": "Sí, tú vas a tomar el pescado." },
+        { "text": "Oui, je vais prendre la carte.", "es": "Sí, voy a tomar la carta." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "Para pedir: «je vais prendre…». «La carte» es la carta, no un plato.",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "manger.qa.comme-boisson",
+      "question": "Et comme boisson?",
+      "questionEs": "¿Y para beber?",
+      "accepted": [
+        { "text": "Une carafe d'eau, s'il vous plaît.", "es": "Una jarra de agua, por favor." },
+        { "text": "Un verre de vin rouge, s'il vous plaît.", "es": "Una copa de vino tinto, por favor." }
+      ],
+      "distractors": [
+        { "text": "Un verre de vin tinto, s'il vous plaît.", "es": "Una copa de vino tinto, por favor (mezclando idiomas)." },
+        { "text": "Une carafe d'eau, s'il te plaît.", "es": "Una jarra de agua, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "El vino tinto es «rouge»; y al camarero, «s'il vous plaît».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "manger.qa.cuisson",
+      "question": "Et pour le steak, quelle cuisson?",
+      "questionEs": "¿Y el filete, cómo lo quiere?",
+      "accepted": [
+        { "text": "À point, s'il vous plaît.", "es": "En su punto, por favor." },
+        { "text": "Bien cuit, s'il vous plaît.", "es": "Muy hecho, por favor." }
+      ],
+      "distractors": [
+        { "text": "Au point, s'il vous plaît.", "es": "Al punto, por favor (no se dice así)." },
+        { "text": "À point, s'il te plaît.", "es": "En su punto, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "Se dice «à point», con «à»; al camarero, de «vous».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "manger.qa.allergies",
+      "question": "Vous avez des allergies?",
+      "questionEs": "¿Tiene alguna alergia?",
+      "accepted": [
+        { "text": "Oui, je suis allergique aux fruits à coque.", "es": "Sí, soy alérgico a los frutos secos." },
+        { "text": "Non, aucune, merci.", "es": "No, ninguna, gracias." }
+      ],
+      "distractors": [
+        { "text": "Oui, j'ai allergique aux fruits à coque.", "es": "Sí, tengo alérgico a los frutos secos." },
+        { "text": "Oui, tu es allergique aux fruits à coque.", "es": "Sí, tú eres alérgico a los frutos secos." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "Como en español: «je suis allergique à…», con «être».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "manger.qa.dessert",
+      "question": "Vous prendrez un dessert?",
+      "questionEs": "¿Tomará postre?",
+      "accepted": [
+        { "text": "Non merci, juste un café.", "es": "No, gracias, solo un café." },
+        { "text": "Oui, une tarte aux pommes, s'il vous plaît.", "es": "Sí, una tarta de manzana, por favor." }
+      ],
+      "distractors": [
+        { "text": "Non merci, je n'ai pas de dessert.", "es": "No, gracias, no tengo postre." },
+        { "text": "Oui, une tarte aux pommes, s'il te plaît.", "es": "Sí, una tarta de manzana, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "Para rechazar el postre basta «non merci»; al camarero, de «vous».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "manger.qa.tout-sest-bien-passe",
+      "question": "Tout s'est bien passé?",
+      "questionEs": "¿Todo bien?",
+      "accepted": [
+        { "text": "Oui, c'était délicieux, merci!", "es": "Sí, ¡estaba buenísimo, gracias!" },
+        { "text": "Très bien, merci. L'addition, s'il vous plaît.", "es": "Muy bien, gracias. La cuenta, por favor." }
+      ],
+      "distractors": [
+        { "text": "Oui, je suis délicieux, merci!", "es": "Sí, ¡soy delicioso, gracias!" },
+        { "text": "Très bien, merci. L'addition, s'il te plaît.", "es": "Muy bien, gracias. La cuenta, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "comida",
+      "notes": "La comida «c'était délicieux»; tú no eres delicioso.",
+      "voice": "fr-FR-HenriNeural"
+    }
+  ]
+}

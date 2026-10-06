@@ -1,0 +1,356 @@
+{
+  "id": "courses",
+  "order": 42,
+  "title": "Compras: supermercado, mercado, ropa",
+  "description": "Hacer la compra en el súper y en el mercado, pedir por peso y por lonchas, y comprar ropa: tallas, probador y cambios.",
+  "emoji": "🛒",
+  "situation": "compras",
+  "lessons": [
+    {
+      "id": "courses.l.supermarche",
+      "title": "En el supermercado",
+      "items": [
+        "courses.il-faut-faire-les-courses",
+        "courses.supermarche",
+        "courses.on-na-plus-de-lait",
+        "courses.oeufs",
+        "courses.ou-sont-les-oeufs",
+        "courses.rayon",
+        "courses.cest-au-rayon-frais",
+        "courses.panier",
+        "courses.caisse",
+        "courses.sac",
+        "courses.vous-voulez-un-sac",
+        "courses.non-merci-jai-mon-sac",
+        "courses.magasin",
+        "courses.vous-avez-la-carte-du-magasin",
+        "courses.ticket-de-caisse",
+        "courses.vous-voulez-le-ticket",
+        "courses.qa.sac",
+        "courses.qa.carte-du-magasin"
+      ]
+    },
+    {
+      "id": "courses.l.marche",
+      "title": "En el mercado: fruta y verdura",
+      "items": [
+        "courses.marche",
+        "courses.quest-ce-que-je-vous-mets",
+        "courses.fruits",
+        "courses.pomme",
+        "courses.kilo",
+        "courses.un-kilo-de-pommes",
+        "courses.fraise",
+        "courses.elles-sont-a-combien-les-fraises",
+        "courses.trois-euros-la-barquette",
+        "courses.je-peux-gouter",
+        "courses.elles-sont-bien-mures",
+        "courses.banane",
+        "courses.citron",
+        "manger.legumes",
+        "courses.tomate",
+        "courses.pomme-de-terre",
+        "courses.oignon",
+        "courses.cest-bio",
+        "courses.qa.quest-ce-que-je-vous-mets"
+      ]
+    },
+    {
+      "id": "courses.l.fromagerie",
+      "title": "Quesería y charcutería",
+      "items": [
+        "courses.fromagerie",
+        "courses.fromage",
+        "courses.quel-fromage-vous-me-conseillez",
+        "courses.gramme",
+        "courses.deux-cents-grammes-de-comte",
+        "courses.morceau",
+        "courses.un-morceau-comme-ca",
+        "courses.un-peu-moins",
+        "courses.jambon",
+        "courses.tranche",
+        "courses.vous-en-voulez-combien",
+        "courses.quatre-tranches-de-jambon",
+        "courses.beurre",
+        "courses.une-douzaine-doeufs",
+        "manger.et-avec-ceci",
+        "manger.ce-sera-tout-merci",
+        "courses.qa.combien"
+      ]
+    },
+    {
+      "id": "courses.l.vetements",
+      "title": "Ropa: buscar y preguntar",
+      "items": [
+        "courses.vetements",
+        "courses.je-peux-vous-aider",
+        "courses.non-merci-je-regarde",
+        "courses.pull",
+        "courses.je-cherche-un-pull",
+        "courses.t-shirt",
+        "courses.pantalon",
+        "courses.robe",
+        "courses.manteau",
+        "courses.taille",
+        "courses.quelle-taille-faites-vous",
+        "courses.je-fais-du-quarante",
+        "courses.chaussures",
+        "courses.chaussettes",
+        "courses.pointure",
+        "courses.vous-faites-quelle-pointure",
+        "courses.vous-lavez-en-noir",
+        "courses.soldes",
+        "courses.cest-en-solde",
+        "courses.qa.je-peux-vous-aider",
+        "courses.qa.quelle-taille"
+      ]
+    },
+    {
+      "id": "courses.l.essayer",
+      "title": "Probarse, comprar y cambiar",
+      "items": [
+        "courses.cabine-dessayage",
+        "courses.je-peux-lessayer",
+        "courses.ou-sont-les-cabines",
+        "courses.miroir",
+        "courses.cest-trop-petit",
+        "courses.vous-avez-la-taille-au-dessus",
+        "courses.il-me-va-bien-ce-pull",
+        "courses.il-te-va-tres-bien",
+        "courses.echarpe",
+        "courses.je-le-prends",
+        "courses.je-vais-reflechir",
+        "nombres.je-peux-payer-par-carte",
+        "courses.je-peux-lechanger",
+        "courses.gardez-bien-le-ticket",
+        "courses.qa.ca-vous-va",
+        "courses.qa.il-me-va"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "courses.il-faut-faire-les-courses", "text": "Il faut faire les courses.", "es": "Hay que hacer la compra.", "notes": "«Faire les courses» es hacer la compra; ir de tiendas es «faire du shopping».", "explanation": "En casa, organizando la semana. «courses» suena KURS, con la «r» en la garganta.", "register": "neutral", "situation": "compras", "tags": ["supermarche"] },
+    { "id": "courses.on-na-plus-de-lait", "text": "On n'a plus de lait.", "es": "No nos queda leche.", "literal": "No tenemos más leche.", "notes": "«On» por «nosotros», muy habitual al hablar.", "explanation": "Mirando la nevera con tu compañero de piso. «plus» suena PLÜ, sin «s»: o-na PLÜ de LE.", "register": "neutral", "situation": "compras", "tags": ["supermarche"] },
+    { "id": "courses.ou-sont-les-oeufs", "text": "Pardon, où sont les œufs?", "es": "Perdone, ¿dónde están los huevos?", "explanation": "A un empleado del súper. En plural la «f» no suena y se liga: u son lé-ZÖ?", "register": "neutral", "situation": "compras", "tags": ["supermarche"] },
+    { "id": "courses.cest-au-rayon-frais", "text": "C'est au rayon frais, au fond.", "es": "Está en la sección de frescos, al fondo.", "explanation": "Así te indican dónde está algo. «rayon» suena re-YON y «fond», FON, nasal y sin «d».", "register": "neutral", "situation": "compras", "tags": ["supermarche"], "voice": "fr-FR-HenriNeural" },
+    { "id": "courses.vous-voulez-un-sac", "text": "Vous voulez un sac?", "es": "¿Quiere una bolsa?", "explanation": "Te lo preguntan en la caja; las bolsas se pagan. «voulez» suena vu-LÉ y «sac», SAK.", "register": "vous", "situation": "compras", "tags": ["supermarche"], "voice": "fr-FR-DeniseNeural" },
+    { "id": "courses.non-merci-jai-mon-sac", "text": "Non merci, j'ai mon sac.", "es": "No, gracias, traigo mi bolsa.", "literal": "No, gracias, tengo mi bolsa.", "explanation": "En la caja, si llevas tu bolsa. «mon» es nasal: mon SAK.", "register": "neutral", "situation": "compras", "tags": ["supermarche"] },
+    { "id": "courses.vous-avez-la-carte-du-magasin", "text": "Vous avez la carte du magasin?", "es": "¿Tiene la tarjeta de cliente?", "literal": "¿Tiene la tarjeta de la tienda?", "explanation": "Te lo preguntan en casi todas las cajas. «magasin» suena ma-ga-ZAN, nasal al final.", "register": "vous", "situation": "compras", "tags": ["supermarche"], "voice": "fr-FR-DeniseNeural" },
+    { "id": "courses.vous-voulez-le-ticket", "text": "Vous voulez le ticket?", "es": "¿Quiere el tique?", "explanation": "En la caja, al pagar con tarjeta. «ticket» suena ti-KÉ, sin la «t» final.", "register": "vous", "situation": "compras", "tags": ["supermarche"], "voice": "fr-FR-DeniseNeural" },
+
+    { "id": "courses.quest-ce-que-je-vous-mets", "text": "Qu'est-ce que je vous mets?", "es": "¿Qué le pongo?", "literal": "¿Qué le meto?", "explanation": "Lo dice el vendedor del mercado. Suena kes-ke-sh'vu MÉ?, sin la «t» de «mets».", "register": "vous", "situation": "compras", "tags": ["marche"], "voice": "fr-FR-HenriNeural" },
+    { "id": "courses.un-kilo-de-pommes", "text": "Un kilo de pommes, s'il vous plaît.", "es": "Un kilo de manzanas, por favor.", "notes": "Tras una cantidad, solo «de»: «un kilo de pommes».", "explanation": "Así se pide por peso. «pommes» suena POM, sin la «es».", "register": "vous", "situation": "compras", "tags": ["marche"] },
+    { "id": "courses.elles-sont-a-combien-les-fraises", "text": "Elles sont à combien, les fraises?", "es": "¿A cuánto están las fresas?", "explanation": "Para preguntar el precio en el puesto. «fraises» suena FREZ, con «s» sonora.", "register": "neutral", "situation": "compras", "tags": ["marche"] },
+    { "id": "courses.trois-euros-la-barquette", "text": "Trois euros la barquette.", "es": "Tres euros la bandeja.", "explanation": "Así dicen los precios en el mercado. Se liga «trois‿euros»: trua-zö-RO la bar-KET.", "register": "neutral", "situation": "compras", "tags": ["marche"], "voice": "fr-FR-HenriNeural" },
+    { "id": "courses.je-peux-gouter", "text": "Je peux goûter?", "es": "¿Puedo probar?", "explanation": "En el mercado suelen dejarte probar fruta o queso. «goûter» suena gu-TÉ.", "register": "neutral", "situation": "compras", "tags": ["marche"] },
+    { "id": "courses.elles-sont-bien-mures", "text": "Elles sont bien mûres?", "es": "¿Están bien maduras?", "explanation": "Para elegir la fruta. «mûres» suena MÜR, con la «u» francesa.", "register": "neutral", "situation": "compras", "tags": ["marche"] },
+    { "id": "courses.cest-bio", "text": "C'est bio?", "es": "¿Es ecológico?", "notes": "«Bio» es lo ecológico en Francia.", "explanation": "En el mercado o en el súper. Suena se BIO.", "register": "neutral", "situation": "compras", "tags": ["marche"] },
+
+    { "id": "courses.quel-fromage-vous-me-conseillez", "text": "Quel fromage vous me conseillez?", "es": "¿Qué queso me recomienda?", "explanation": "En la quesería, donde te aconsejan encantados. «fromage» suena fro-MASH, con la «g» como la «y» argentina.", "register": "vous", "situation": "compras", "tags": ["fromagerie"] },
+    { "id": "courses.deux-cents-grammes-de-comte", "text": "Deux cents grammes de comté, s'il vous plaît.", "es": "Doscientos gramos de comté, por favor.", "notes": "El comté es un queso curado muy popular.", "explanation": "Para pedir queso por peso. En «cents» no suenan ni la «t» ni la «s»: dö san GRAM.", "register": "vous", "situation": "compras", "tags": ["fromagerie"] },
+    { "id": "courses.un-morceau-comme-ca", "text": "Un morceau comme ça?", "es": "¿Un trozo así?", "explanation": "El quesero te enseña con el cuchillo cuánto va a cortar. «morceau» suena mor-SO.", "register": "neutral", "situation": "compras", "tags": ["fromagerie"], "voice": "fr-FR-HenriNeural" },
+    { "id": "courses.un-peu-moins", "text": "Un peu moins, s'il vous plaît.", "es": "Un poco menos, por favor.", "notes": "Un poco más: «un peu plus».", "explanation": "Para que corte un trozo más pequeño. «moins» es nasal: MUAN.", "register": "vous", "situation": "compras", "tags": ["fromagerie"] },
+    { "id": "courses.vous-en-voulez-combien", "text": "Vous en voulez combien?", "es": "¿Cuánto quiere?", "explanation": "Te lo pregunta el dependiente. Se liga «vous‿en»: vu-zan vu-LÉ kom-BIAN?", "register": "vous", "situation": "compras", "tags": ["fromagerie"], "voice": "fr-FR-DeniseNeural" },
+    { "id": "courses.quatre-tranches-de-jambon", "text": "Quatre tranches de jambon, s'il vous plaît.", "es": "Cuatro lonchas de jamón york, por favor.", "notes": "«Jambon» a secas es jamón cocido; el serrano es «jambon cru».", "explanation": "En la charcutería o en el mostrador del súper. «tranches» suena TRANSH, nasal.", "register": "vous", "situation": "compras", "tags": ["fromagerie"] },
+    { "id": "courses.une-douzaine-doeufs", "text": "Une douzaine d'œufs, s'il vous plaît.", "es": "Una docena de huevos, por favor.", "notes": "«Un œuf» suena con «f»; «des œufs», sin ella.", "explanation": "Así se compran los huevos. «d'œufs» es una sílaba: DÖ.", "register": "vous", "situation": "compras", "tags": ["fromagerie"] },
+
+    { "id": "courses.je-peux-vous-aider", "text": "Bonjour, je peux vous aider?", "es": "Hola, ¿le puedo ayudar?", "explanation": "Te lo dice el dependiente al entrar en una tienda. «aider» suena e-DÉ.", "register": "vous", "situation": "compras", "tags": ["vetements"], "voice": "fr-FR-EloiseNeural" },
+    { "id": "courses.non-merci-je-regarde", "text": "Non merci, je regarde.", "es": "No, gracias, solo estoy mirando.", "literal": "No, gracias, miro.", "explanation": "Para mirar tranquilo sin que te atiendan. «regarde» suena re-GARD.", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.je-cherche-un-pull", "text": "Je cherche un pull.", "es": "Busco un jersey.", "explanation": "Para decir qué buscas. «cherche» suena SHERSH y «pull», PÜL, con la «u» francesa.", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.quelle-taille-faites-vous", "text": "Quelle taille faites-vous?", "es": "¿Qué talla tiene?", "literal": "¿Qué talla hace usted?", "explanation": "Te lo pregunta el dependiente. «taille» suena TAY.", "register": "vous", "situation": "compras", "tags": ["vetements"], "voice": "fr-FR-EloiseNeural" },
+    { "id": "courses.je-fais-du-quarante", "text": "Je fais du quarante.", "es": "Tengo la cuarenta.", "literal": "Hago del cuarenta.", "notes": "Para la talla y el número de pie se usa «faire du».", "explanation": "Para decir tu talla o tu número. «quarante» suena ka-RANT.", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.vous-faites-quelle-pointure", "text": "Vous faites quelle pointure?", "es": "¿Qué número calza?", "notes": "Para los zapatos es «pointure», no «taille».", "explanation": "Te lo preguntan en la zapatería. «pointure» suena puan-TÜR.", "register": "vous", "situation": "compras", "tags": ["vetements"], "voice": "fr-FR-EloiseNeural" },
+    { "id": "courses.vous-lavez-en-noir", "text": "Vous l'avez en noir?", "es": "¿Lo tiene en negro?", "notes": "Otros colores: «en blanc», «en bleu», «en rouge».", "explanation": "Para pedir otro color. «noir» suena NUAR.", "register": "vous", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.cest-en-solde", "text": "C'est en solde?", "es": "¿Está rebajado?", "explanation": "Para preguntar si tiene descuento. Se liga «c'est‿en»: se-tan SOLD?", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+
+    { "id": "courses.je-peux-lessayer", "text": "Je peux l'essayer?", "es": "¿Me lo puedo probar?", "explanation": "Con la prenda en la mano, al dependiente. «essayer» suena e-se-YÉ.", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.ou-sont-les-cabines", "text": "Où sont les cabines d'essayage?", "es": "¿Dónde están los probadores?", "explanation": "En una tienda de ropa grande. «essayage» suena e-se-YASH.", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.cest-trop-petit", "text": "C'est trop petit.", "es": "Me queda pequeño.", "literal": "Es demasiado pequeño.", "notes": "Grande: «c'est trop grand».", "explanation": "Al salir del probador. «trop» suena TRO, sin la «p».", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.vous-avez-la-taille-au-dessus", "text": "Vous avez la taille au-dessus?", "es": "¿Tiene una talla más?", "literal": "¿Tiene la talla de encima?", "notes": "Una talla menos: «la taille en dessous».", "explanation": "Si te queda pequeño. «dessus» suena de-SÜ.", "register": "vous", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.il-me-va-bien-ce-pull", "text": "Il me va bien, ce pull?", "es": "¿Me queda bien este jersey?", "notes": "«Quedar bien» es «aller bien»: «il me va».", "explanation": "Para preguntarle a quien te acompaña. Suena il me va BIAN, se PÜL?", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.il-te-va-tres-bien", "text": "Il te va très bien!", "es": "¡Te queda muy bien!", "explanation": "Para animar a un amigo en el probador. Suena il te va tre BIAN.", "register": "tu", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.je-le-prends", "text": "Je le prends.", "es": "Me lo llevo.", "literal": "Lo cojo.", "explanation": "Para decidir la compra. «prends» suena PRAN, nasal y sin «ds».", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.je-vais-reflechir", "text": "Je vais réfléchir.", "es": "Me lo voy a pensar.", "explanation": "La forma educada de irte sin comprar. «réfléchir» suena ré-flé-SHIR.", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.je-peux-lechanger", "text": "Je peux l'échanger si ça ne va pas?", "es": "¿Lo puedo cambiar si no me queda bien?", "explanation": "Antes de pagar, por si acaso. «échanger» suena é-shan-SHÉ, la segunda «sh» sonora.", "register": "neutral", "situation": "compras", "tags": ["vetements"] },
+    { "id": "courses.gardez-bien-le-ticket", "text": "Gardez bien le ticket.", "es": "Guarde bien el tique.", "explanation": "Te lo dicen en la caja para que puedas cambiarlo. «gardez» suena gar-DÉ.", "register": "vous", "situation": "compras", "tags": ["vetements"], "voice": "fr-FR-EloiseNeural" }
+  ],
+  "vocab": [
+    { "id": "courses.supermarche", "word": "supermarché", "article": "le", "gender": "m", "plural": "supermarchés", "es": "el supermercado", "notes": "Coloquial: «le supermarché» o «le super».", "example": "courses.il-faut-faire-les-courses", "situation": "compras", "image": "fluent:shopping-cart" },
+    { "id": "courses.oeufs", "word": "œufs", "article": "les", "gender": "m", "es": "los huevos", "notes": "Singular: «l'œuf», con «f» sonora; en plural no suena.", "example": "courses.ou-sont-les-oeufs", "situation": "compras", "image": "fluent:egg" },
+    { "id": "courses.rayon", "word": "rayon", "article": "le", "gender": "m", "plural": "rayons", "es": "la sección (de una tienda)", "example": "courses.cest-au-rayon-frais", "situation": "compras" },
+    { "id": "courses.panier", "word": "panier", "article": "le", "gender": "m", "plural": "paniers", "es": "la cesta", "situation": "compras", "image": "fluent:basket" },
+    { "id": "courses.caisse", "word": "caisse", "article": "la", "gender": "f", "plural": "caisses", "es": "la caja", "notes": "La cajera: «la caissière».", "situation": "compras" },
+    { "id": "courses.sac", "word": "sac", "article": "le", "gender": "m", "plural": "sacs", "es": "la bolsa", "notes": "También el bolso.", "example": "courses.vous-voulez-un-sac", "situation": "compras", "image": "fluent:shopping-bags" },
+    { "id": "courses.magasin", "word": "magasin", "article": "le", "gender": "m", "plural": "magasins", "es": "la tienda", "example": "courses.vous-avez-la-carte-du-magasin", "situation": "compras", "image": "fluent:convenience-store" },
+    { "id": "courses.ticket-de-caisse", "word": "ticket de caisse", "article": "le", "gender": "m", "plural": "tickets de caisse", "es": "el tique de compra", "notes": "Normalmente se dice solo «le ticket».", "example": "courses.gardez-bien-le-ticket", "situation": "compras", "image": "fluent:receipt" },
+    { "id": "courses.marche", "word": "marché", "article": "le", "gender": "m", "plural": "marchés", "es": "el mercado", "notes": "Casi todos los barrios tienen mercado al aire libre una o dos mañanas por semana.", "situation": "compras" },
+    { "id": "courses.fruits", "word": "fruits", "article": "les", "gender": "m", "es": "la fruta", "notes": "Se usa en plural: «j'achète des fruits».", "situation": "compras" },
+    { "id": "courses.pomme", "word": "pomme", "article": "la", "gender": "f", "plural": "pommes", "es": "la manzana", "example": "courses.un-kilo-de-pommes", "situation": "compras", "image": "fluent:red-apple" },
+    { "id": "courses.kilo", "word": "kilo", "article": "le", "gender": "m", "plural": "kilos", "es": "el kilo", "notes": "Medio kilo: «un demi-kilo» o «une livre».", "example": "courses.un-kilo-de-pommes", "situation": "compras", "image": "fluent:balance-scale" },
+    { "id": "courses.fraise", "word": "fraise", "article": "la", "gender": "f", "plural": "fraises", "es": "la fresa", "example": "courses.elles-sont-a-combien-les-fraises", "situation": "compras", "image": "fluent:strawberry" },
+    { "id": "courses.banane", "word": "banane", "article": "la", "gender": "f", "plural": "bananes", "es": "el plátano", "situation": "compras", "image": "fluent:banana" },
+    { "id": "courses.citron", "word": "citron", "article": "le", "gender": "m", "plural": "citrons", "es": "el limón", "notes": "Nasal al final: si-TRON.", "situation": "compras", "image": "fluent:lemon" },
+    { "id": "courses.tomate", "word": "tomate", "article": "la", "gender": "f", "plural": "tomates", "es": "el tomate", "notes": "Femenino en francés.", "situation": "compras", "image": "fluent:tomato" },
+    { "id": "courses.pomme-de-terre", "word": "pomme de terre", "article": "la", "gender": "f", "plural": "pommes de terre", "es": "la patata", "notes": "Literalmente, «manzana de tierra».", "situation": "compras", "image": "fluent:potato" },
+    { "id": "courses.oignon", "word": "oignon", "article": "l'", "gender": "m", "plural": "oignons", "es": "la cebolla", "notes": "Masculino; la «i» no suena: o-ÑON.", "example": "manger.sans-oignons", "situation": "compras", "image": "fluent:onion" },
+    { "id": "courses.fromagerie", "word": "fromagerie", "article": "la", "gender": "f", "plural": "fromageries", "es": "la quesería", "example": "courses.quel-fromage-vous-me-conseillez", "situation": "compras" },
+    { "id": "courses.fromage", "word": "fromage", "article": "le", "gender": "m", "plural": "fromages", "es": "el queso", "example": "manger.fromage-ou-dessert", "situation": "compras", "image": "fluent:cheese-wedge" },
+    { "id": "courses.gramme", "word": "gramme", "article": "le", "gender": "m", "plural": "grammes", "es": "el gramo", "example": "courses.deux-cents-grammes-de-comte", "situation": "compras" },
+    { "id": "courses.morceau", "word": "morceau", "article": "le", "gender": "m", "plural": "morceaux", "es": "el trozo", "example": "courses.un-morceau-comme-ca", "situation": "compras" },
+    { "id": "courses.jambon", "word": "jambon", "article": "le", "gender": "m", "plural": "jambons", "es": "el jamón (cocido)", "notes": "El serrano es «jambon cru».", "example": "courses.quatre-tranches-de-jambon", "situation": "compras" },
+    { "id": "courses.tranche", "word": "tranche", "article": "la", "gender": "f", "plural": "tranches", "es": "la loncha, la rebanada", "example": "courses.quatre-tranches-de-jambon", "situation": "compras" },
+    { "id": "courses.beurre", "word": "beurre", "article": "le", "gender": "m", "es": "la mantequilla", "notes": "Suena BÖR.", "example": "manger.un-jambon-beurre", "situation": "compras", "image": "fluent:butter" },
+    { "id": "courses.vetements", "word": "vêtements", "article": "les", "gender": "m", "es": "la ropa", "notes": "Siempre en plural: «des vêtements».", "situation": "compras", "image": "fluent:womans-clothes" },
+    { "id": "courses.pull", "word": "pull", "article": "le", "gender": "m", "plural": "pulls", "es": "el jersey", "example": "courses.je-cherche-un-pull", "situation": "compras" },
+    { "id": "courses.t-shirt", "word": "t-shirt", "article": "le", "gender": "m", "plural": "t-shirts", "es": "la camiseta", "notes": "Suena ti-SHÖRT.", "situation": "compras", "image": "fluent:t-shirt" },
+    { "id": "courses.pantalon", "word": "pantalon", "article": "le", "gender": "m", "plural": "pantalons", "es": "el pantalón", "notes": "En singular: «un pantalon».", "situation": "compras", "image": "fluent:jeans" },
+    { "id": "courses.robe", "word": "robe", "article": "la", "gender": "f", "plural": "robes", "es": "el vestido", "notes": "Falso amigo: no es una bata.", "situation": "compras", "image": "fluent:dress" },
+    { "id": "courses.manteau", "word": "manteau", "article": "le", "gender": "m", "plural": "manteaux", "es": "el abrigo", "notes": "Falso amigo: no es una manta.", "situation": "compras", "image": "fluent:coat" },
+    { "id": "courses.chaussures", "word": "chaussures", "article": "les", "gender": "f", "es": "los zapatos", "notes": "Singular: «une chaussure».", "situation": "compras", "image": "fluent:mans-shoe" },
+    { "id": "courses.chaussettes", "word": "chaussettes", "article": "les", "gender": "f", "es": "los calcetines", "situation": "compras", "image": "fluent:socks" },
+    { "id": "courses.taille", "word": "taille", "article": "la", "gender": "f", "plural": "tailles", "es": "la talla", "notes": "Suena TAY.", "example": "courses.quelle-taille-faites-vous", "situation": "compras" },
+    { "id": "courses.pointure", "word": "pointure", "article": "la", "gender": "f", "plural": "pointures", "es": "el número (de pie)", "example": "courses.vous-faites-quelle-pointure", "situation": "compras" },
+    { "id": "courses.soldes", "word": "soldes", "article": "les", "gender": "m", "es": "las rebajas", "notes": "Dos veces al año, en enero y en verano.", "example": "courses.cest-en-solde", "situation": "compras" },
+    { "id": "courses.cabine-dessayage", "word": "cabine d'essayage", "article": "la", "gender": "f", "plural": "cabines d'essayage", "es": "el probador", "example": "courses.ou-sont-les-cabines", "situation": "compras" },
+    { "id": "courses.miroir", "word": "miroir", "article": "le", "gender": "m", "plural": "miroirs", "es": "el espejo", "notes": "Suena mi-RUAR.", "situation": "compras", "image": "fluent:mirror" },
+    { "id": "courses.echarpe", "word": "écharpe", "article": "l'", "gender": "f", "plural": "écharpes", "es": "la bufanda", "situation": "compras", "image": "fluent:scarf" }
+  ],
+  "qa": [
+    {
+      "id": "courses.qa.sac",
+      "question": "Vous voulez un sac?",
+      "questionEs": "¿Quiere una bolsa?",
+      "accepted": [
+        { "text": "Non merci, j'ai mon sac.", "es": "No, gracias, traigo mi bolsa." },
+        { "text": "Oui, un sac, s'il vous plaît.", "es": "Sí, una bolsa, por favor." }
+      ],
+      "distractors": [
+        { "text": "Non merci, je suis mon sac.", "es": "No, gracias, soy mi bolsa." },
+        { "text": "Oui, un sac, s'il te plaît.", "es": "Sí, una bolsa, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "compras",
+      "notes": "Tu bolsa «la tienes»: «j'ai»; y a la cajera, de «vous».",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "courses.qa.carte-du-magasin",
+      "question": "Vous avez la carte du magasin?",
+      "questionEs": "¿Tiene la tarjeta de cliente?",
+      "accepted": [
+        { "text": "Non, je ne l'ai pas.", "es": "No, no la tengo." },
+        { "text": "Non, désolé.", "es": "No, lo siento." }
+      ],
+      "distractors": [
+        { "text": "Oui, je peux payer par carte?", "es": "Sí, ¿puedo pagar con tarjeta?" },
+        { "text": "Non, je ne suis pas.", "es": "No, no soy." }
+      ],
+      "register": "vous",
+      "situation": "compras",
+      "notes": "«La carte du magasin» es la tarjeta de cliente, no la de pagar.",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "courses.qa.quest-ce-que-je-vous-mets",
+      "question": "Bonjour! Qu'est-ce que je vous mets?",
+      "questionEs": "¡Hola! ¿Qué le pongo?",
+      "accepted": [
+        { "text": "Un kilo de tomates, s'il vous plaît.", "es": "Un kilo de tomates, por favor." },
+        { "text": "Un kilo de pommes, s'il vous plaît.", "es": "Un kilo de manzanas, por favor." }
+      ],
+      "distractors": [
+        { "text": "Un kilo des tomates, s'il vous plaît.", "es": "Un kilo de los tomates, por favor." },
+        { "text": "Un kilo de pommes, s'il te plaît.", "es": "Un kilo de manzanas, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "compras",
+      "notes": "Tras una cantidad va solo «de»: «un kilo de tomates».",
+      "voice": "fr-FR-HenriNeural"
+    },
+    {
+      "id": "courses.qa.combien",
+      "question": "Du jambon? Vous en voulez combien?",
+      "questionEs": "¿Jamón? ¿Cuánto quiere?",
+      "accepted": [
+        { "text": "Quatre tranches, s'il vous plaît.", "es": "Cuatro lonchas, por favor." },
+        { "text": "Deux cents grammes, s'il vous plaît.", "es": "Doscientos gramos, por favor." }
+      ],
+      "distractors": [
+        { "text": "Il coûte combien?", "es": "¿Cuánto cuesta?" },
+        { "text": "Quatre tranches, s'il te plaît.", "es": "Cuatro lonchas, por favor (de tú)." }
+      ],
+      "register": "vous",
+      "situation": "compras",
+      "notes": "Te preguntan la cantidad, no el precio.",
+      "voice": "fr-FR-DeniseNeural"
+    },
+    {
+      "id": "courses.qa.je-peux-vous-aider",
+      "question": "Bonjour! Je peux vous aider?",
+      "questionEs": "¡Hola! ¿Le puedo ayudar?",
+      "accepted": [
+        { "text": "Non merci, je regarde.", "es": "No, gracias, solo estoy mirando." },
+        { "text": "Oui, je cherche un pull.", "es": "Sí, busco un jersey." }
+      ],
+      "distractors": [
+        { "text": "Non merci, je vois.", "es": "No, gracias, veo." },
+        { "text": "Oui, tu peux m'aider?", "es": "Sí, ¿me puedes ayudar?" }
+      ],
+      "register": "vous",
+      "situation": "compras",
+      "notes": "«Solo estoy mirando» es «je regarde»; al dependiente, de «vous».",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "courses.qa.quelle-taille",
+      "question": "Quelle taille faites-vous?",
+      "questionEs": "¿Qué talla tiene?",
+      "accepted": [
+        { "text": "Je fais du quarante.", "es": "Tengo la cuarenta." },
+        { "text": "Du trente-huit, je crois.", "es": "La treinta y ocho, creo." }
+      ],
+      "distractors": [
+        { "text": "Je suis du quarante.", "es": "Soy de la cuarenta." },
+        { "text": "J'ai quarante ans.", "es": "Tengo cuarenta años." }
+      ],
+      "register": "vous",
+      "situation": "compras",
+      "notes": "La talla se dice con «faire du…», no con «être» ni «avoir».",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "courses.qa.ca-vous-va",
+      "question": "Alors, ça vous va?",
+      "questionEs": "¿Qué tal, le queda bien?",
+      "accepted": [
+        { "text": "Non, c'est trop petit. Vous avez la taille au-dessus?", "es": "No, me queda pequeño. ¿Tiene una talla más?" },
+        { "text": "Oui, très bien. Je le prends.", "es": "Sí, muy bien. Me lo llevo." }
+      ],
+      "distractors": [
+        { "text": "Oui, je vais bien, merci.", "es": "Sí, estoy bien, gracias." },
+        { "text": "Non, c'est trop petit. Tu as la taille au-dessus?", "es": "No, me queda pequeño. ¿Tienes una talla más?" }
+      ],
+      "register": "vous",
+      "situation": "compras",
+      "notes": "Te preguntan por la prenda, no por cómo estás.",
+      "voice": "fr-FR-EloiseNeural"
+    },
+    {
+      "id": "courses.qa.il-me-va",
+      "question": "Il me va bien, ce pull?",
+      "questionEs": "¿Me queda bien este jersey?",
+      "accepted": [
+        { "text": "Oui, il te va très bien!", "es": "¡Sí, te queda muy bien!" },
+        { "text": "Bof, il est un peu grand.", "es": "Psé, te queda un poco grande." }
+      ],
+      "distractors": [
+        { "text": "Oui, il me va très bien!", "es": "¡Sí, me queda muy bien!" },
+        { "text": "Oui, il vous va très bien!", "es": "¡Sí, le queda muy bien!" }
+      ],
+      "register": "tu",
+      "situation": "compras",
+      "notes": "Tu amigo pregunta por él: contestas «il te va», de «tú».",
+      "voice": "fr-FR-EloiseNeural"
+    }
+  ]
+}
