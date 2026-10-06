@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:43Z 💻
+- Updated: 2026-10-06 09:49Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T67/T68; then T69, then T70–T72
+- Next step: integrate T68/T69; then T70 + T71, then T72
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -157,7 +157,7 @@ Worktree setup: npm ci
 - Outcome: units presenter (6 lessons) + famille (5): 87 phrases, 69 vocab, 18 Q&A, reuses salut/nombres/grammaire items; persona Hernán (Madrid, programmer) · a68dc23 · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T67 — French content: home and routine, free time and weather
-- Status: running (attempt 1 · 💻 · agent a2578ade40af140b3 · since 09:41Z)
+- Status: done
 - Depends on: T58
 - Where: any
 - Goal: Units `maison` (30) and `loisirs` (32) per docs/brief-fr.md.
@@ -166,7 +166,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~80 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units maison (6 lessons) + loisirs (4): 85 phrases, 65 vocab, 16 Q&A, 44 picture keys, reuses earlier items · cdee444 · verify ✓ 💻 · not checked: native review, audio/pictures (T73)
 
 ## T68 — French content: eating and drinking, shopping
 - Status: running (attempt 1 · 💻 · agent ab47370f46b265ec9 · since 09:43Z)
@@ -181,7 +181,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T69 — French content: around town, health and emergencies
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent aba579a428944ec60 · since 09:49Z)
 - Depends on: T58
 - Where: any
 - Goal: Units `ville` (50) and `sante` (52) per docs/brief-fr.md (metro/bus/tram tickets, directions on foot; doctor, pharmacy, emergencies).
@@ -253,6 +253,7 @@ Worktree setup: npm ci
 - [ ] T60 @c5f60f6 — code review (queued 2026-10-06 💻)
 - [ ] T62 @c191bba — code review (queued 2026-10-06 💻)
 - [ ] T66 @a68dc23 — French language review (queued 2026-10-06 💻)
+- [ ] T67 @cdee444 — French language review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
@@ -277,6 +278,7 @@ Worktree setup: npm ci
 - 2026-10-06 T59: Jugar on an empty pack shows 'Todos los temas ·' with a stray dot
 - 2026-10-06 T65: later French units reuse existing basics (grammaire.lait, nombres.carte, salut.francais) instead of duplicating
 - 2026-10-06 T64: sign-out/delete leave the old league-board:* caches on the device (harmless, unused)
+- 2026-10-06 T67: docs/content-guide.md order ranges and quality rules are still Italy-only; point them to per-pack briefs
 
 ## Log
 - 2026-10-06 💻 plan written from the interview; not approved yet
@@ -301,3 +303,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:41Z 💻 T67 launched · attempt 1 · agent a2578ade40af140b3
 - 2026-10-06 09:43Z 💻 T66 done · worktree-agent-ad96a505c474bf6a2 → a68dc23 · verify ✓
 - 2026-10-06 09:43Z 💻 T68 launched · attempt 1 · agent ab47370f46b265ec9
+- 2026-10-06 09:49Z 💻 T67 done · worktree-agent-a2578ade40af140b3 → cdee444 · verify ✓
+- 2026-10-06 09:49Z 💻 T69 launched · attempt 1 · agent aba579a428944ec60
