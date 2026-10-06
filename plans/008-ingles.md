@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:32Z 💻
+- Updated: 2026-10-06 13:33Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ edc33c4
-- Next step: T104 running; then T105, T106, T108
+- Branch: plan-008-ingles @ 7aa62c2
+- Next step: integrate T105/T106; then T108 placement, T107 stories
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -201,7 +201,7 @@ Worktree setup: npm ci
 - Outcome: units b1-trips (delays, rebooking, lost luggage, complaints, on the road) + b1-renting (5 lessons each): 94 phrases, 68 vocab, 20 Q&A · edc33c4 · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T104 — English B1: bank and money, telling what happened
-- Status: running (attempt 1 · 💻 · agent aac01f4b40eee4d97 · since 13:25Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Units `b1-money` (150) and `b1-stories` (152) per docs/brief-en.md (account, payments, returns and complaints; experiences, anecdotes, feelings with past tenses).
@@ -210,10 +210,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "B1"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units b1-money + b1-stories (5 lessons each): 97 phrases, 68 vocab, 16 Q&A, reuses A2/B1 items · 7aa62c2 · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T105 — English B1: 12 dialogues
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a2fac5b84b0da1e21 · since 13:33Z)
 - Depends on: T100, T101, T102, T103, T104
 - Where: any
 - Goal: The 12 B1 dialogues listed in docs/brief-en.md (`level: "B1"`, longer turns, more `formal`/`tu` contrast at work vs with friends).
@@ -225,7 +225,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T106 — English B1: stories 1–6
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ab9c8ed4cb82f5db9 · since 13:33Z)
 - Depends on: T99, T100, T101, T102, T103, T104
 - Where: any
 - Goal: B1 stories 1–6 (Pablo back in Chicago working at Maya's startup), `level: "B1"`, mixed tenses, same cast as A2, reusing inline key words by id.
@@ -302,6 +302,7 @@ Worktree setup: npm ci
 - [ ] T101 @08fdeb0 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T102 @fbd3ec5 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T103 @edc33c4 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T104 @7aa62c2 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -356,3 +357,5 @@ Worktree setup: npm ci
 - 2026-10-06 13:25Z 💻 T102 done · worktree-agent-a564d131cc1effd2d → fbd3ec5 · verify ✓
 - 2026-10-06 13:25Z 💻 T104 launched · attempt 1 · agent aac01f4b40eee4d97
 - 2026-10-06 13:32Z 💻 T103 done · worktree-agent-a4c5260f9084f5cfc → edc33c4 · verify ✓
+- 2026-10-06 13:33Z 💻 T104 done · worktree-agent-aac01f4b40eee4d97 → 7aa62c2 · verify ✓
+- 2026-10-06 13:33Z 💻 T105 launched · agent a2fac5b84b0da1e21; T106 launched · agent ab9c8ed4cb82f5db9
