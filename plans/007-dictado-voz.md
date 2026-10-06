@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 💻
 - Writer: orchestrator (desktop)
 - Branch: plan-007-dictado-voz (from main @ a5f51c1)
-- Next step: T83 running; then T84
+- Next step: T84 running
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -116,7 +116,7 @@ Worktree setup: npm ci
 - Outcome: SituationForm + LevelInterview on useListen (long), use-dictation.ts and DictateButton removed → 6a1a92a
 
 ## T83 — "Probar micrófono" diagnostics screen under Perfil
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T76, T77
 - Goal: The screen in the Shared contract: support check, try target locale and es-ES with live states and timings, last attempts from `lang-lern:speech-log` in plain Spanish, Copiar registro, Borrar registro, iPhone tips. Linked from /perfil.
 - Context: src/lib/navigation.ts (`NESTED`), src/app/perfil/ (how other Perfil links like /liga/ and /instalar/ are done), src/components/shell/PageHeader, Shared contract.
@@ -124,10 +124,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run verify` → exit 0
   - the new route exists in `out/` after build (`ls out/<route>/index.html`)
-- Outcome:
+- Outcome: /microfono/ (NESTED under Perfil, card after Instalar), live try cards, last 15 log entries, Copiar/Borrar registro → 0bfa3e9
 
 ## T84 — Cleanup, guard rail and docs
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T79, T80, T81, T82, T83
 - Goal: Remove dead speech code (the `listenOnce` wrapper and `scoreSpeech` if unused, old thresholds), add an ESLint rule so only src/lib/speech/ may use SpeechRecognition / webkitSpeechRecognition, finish docs/speech.md, update CLAUDE.md (folder layout + a Speech convention line next to Audio), and write a "Hand checks (iPhone)" list in docs/speech.md for Hernán (installed app and Safari, each screen, permission denied, airplane mode, long silence). Never edit plans/.
 - Context: eslint.config.* (existing restricted-imports rule for api/), CLAUDE.md, docs/speech.md, every file touched by T76–T83.
@@ -157,6 +157,7 @@ Worktree setup: npm ci
 - 2026-10-06 T79: only scored results count as tries (MAX_TRIES 2, same XP); errors don't count and never switch to self mode; miss card "Casi. Te queda un intento." + word feedback + Reintentar / Escuchar la frase, stays after answering; "Prefiero evaluarme yo" always shown in mic mode, self mode gets "Usar el micrófono" to go back; missing words struck through, wrong words wavy underline with heard word below, per-word aria labels (agent)
 - 2026-10-06 T82: dictated text appended and cut at the field limit; mic disabled at the limit; submit / "No lo sé" cancel an open session; dictation clears an earlier generation error like typing; labels "Dictar en español" / "Dictar en <idioma>" kept; added a "Dictation" bullet to docs/coach.md Client (agent)
 - 2026-10-06 T81: SpeakPanel under the options ("O dilo en voz alta" / "Toca y dilo otra vez" after a miss); miss card "He oído «…», que no se parece bastante… La más cercana:" + WordFeedback of the closest option; tapping an option resets the mic first so a tap always works; miss card hidden while the mic is open (agent)
+- 2026-10-06 T83: route /microfono/ (top level like /liga/), NESTED "microphone"; try cards in phrase mode show the newest log entry's timings once settled; Copiar registro = JSON {key, copiedAt, supported, standalone, browser, entries} with a textarea fallback; Borrar registro asks inline confirmation; live log hook in src/app/microfono/use-speech-log.ts (agent)
 
 ## Proposals (new scope)
 - 2026-10-06: "Grabarme": record your voice and play it next to the native audio (separate from recognition) (Hernán, later)
@@ -179,3 +180,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:52 T82 done · branch worktree-agent-a08696eeef89402db → 6a1a92a
 - 2026-10-06 13:53 T83 launched · attempt 1 · agent af91ad46e4780737f
 - 2026-10-06 13:54 T81 done · branch worktree-agent-a54c724831e21baa1 → c1ec2c2
+- 2026-10-06 13:59 T83 done · branch worktree-agent-af91ad46e4780737f → 0bfa3e9
