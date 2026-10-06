@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 09:34Z 💻
+- Updated: 2026-10-06 09:36Z 💻
 - Writer: 💻 desktop
 - Branch: plan-006-multi-idioma (from main @ c970ea6)
-- Next step: integrate T60/T66; then T62 and French units T67–T69
+- Next step: integrate T66/T62; then French units T67–T69
 - Needs Hernán: npx supabase db push (20261006000000_league_multi.sql) before deploying this branch
 
 ## Shared contract (all tasks read this)
@@ -61,7 +61,7 @@ Worktree setup: npm ci
 - Outcome: useScreenLang (waits for ready), owning pack on [id] routes, lang attrs + languageName() copy, match fields renamed, audio/league/coach follow active lang, fake coach per lang · 214521a · verify ✓ 💻 · not checked: Italian audio/themes on device, full game round
 
 ## T60 — Language picker: first launch, Perfil, Ruta
-- Status: running (attempt 1 · 💻 · agent a95d57934a2e43c41 · since 09:29Z)
+- Status: done
 - Depends on: T59, T61
 - Where: any
 - Goal: Let the learner choose what to study. First launch with no active language → a picker before the welcome/placement (`/bienvenida/`), then that pack's onboarding. Perfil gets "Idioma que estudias" to switch at any time (each language keeps its own progress; a never-onboarded language goes to its welcome). Ruta shows the active language (name + flag/emoji from the pack) as a quick switch. The picker lists packs that have at least one unit, shows per-language progress and the offline-audio state from T61 ("Audio sin conexión: descargando 40 %"). Perfil's backup summary lists every language, not just the active one.
@@ -72,7 +72,7 @@ Worktree setup: npm ci
   - Switching it → fr → it keeps both languages' progress byte-identical (compare `localStorage` before/after).
   - `npm run verify` → exit 0
   - Hand check (PC): picker, Perfil section and Ruta switch in light and dark at 375 px; first launch on the installed PWA.
-- Outcome:
+- Outcome: picker on /bienvenida/ (first launch, only with >1 language), Ruta flag switch sheet, Perfil 'Idioma que estudias', backup summary per language; SW keeps other audio caches while the new language has no audio; OfflineStatus names the language · c5f60f6 · verify ✓ 💻 · not checked: Perfil/welcome dark, installed PWA first launch, picker audio line with SW
 
 ## T61 — Service worker: offline audio for the active language only
 - Status: done
@@ -90,7 +90,7 @@ Worktree setup: npm ci
 - Outcome: precache without /audio/ (790 files, 6.9 MB), per-language lists, cache lang-lern-audio-<lang> filled from old caches first, switch drops other langs, useAudioProgress API · d5ee8c7 · verify ✓ headless Chrome ✓ 💻 · not checked: iPhone update + airplane mode
 
 ## T62 — App points: monthly XP, lifetime XP, global streak
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a382ef15404b4341a · since 09:36Z)
 - Depends on: T60
 - Where: any
 - Goal: XP is global and always shown: "XP de <mes>" (all languages, resets on day 1) on Ruta and Perfil, plus the lifetime total and a per-language breakdown in Perfil; the streak and best streak become global, seeded so today's Italian streak carries over.
@@ -250,11 +250,13 @@ Worktree setup: npm ci
 - [ ] T65 @3507bfd — French language review (native-level) (queued 2026-10-06 💻)
 - [ ] T61 @d5ee8c7 — code review (SW) (queued 2026-10-06 💻)
 - [ ] T64 @9a6d848 — code review (queued 2026-10-06 💻)
+- [ ] T60 @c5f60f6 — code review (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T59 @214521a — Italian lesson, game round, phrasebook, story, dialogue unchanged; light + dark, 375 px (queued 2026-10-06 💻)
 - [ ] T61 @d5ee8c7 — installed iPhone PWA: Actualizar, Italian audio offline in airplane mode (queued 2026-10-06 💻)
 - [ ] T64 @9a6d848 — Liga with several groups (tabs, Tus grupos, invite, 10-group limit): light + dark, 375 px (queued 2026-10-06 💻)
+- [ ] T60 @c5f60f6 — picker, Ruta switch, Perfil section, welcome: dark + light 375 px; first launch on installed PWA; picker audio state (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: multi-language app; French (`fr`) is the second pack; adding a language stays content only; active-language picker on first launch and in Perfil, stored on the device; every page uses the active pack; static params for all packs with ids unique across packs; SW precaches only the active language's audio; never lose on-device data (every `lang-lern:*:<lang>` key and shape kept, Italian progress untouched). (Hernán)
@@ -290,3 +292,5 @@ Worktree setup: npm ci
 - 2026-10-06 09:29Z 💻 T60 launched · attempt 1 · agent a95d57934a2e43c41
 - 2026-10-06 09:34Z 💻 T64 done · worktree-agent-ab9c51c64c5870d41 → 9a6d848 · verify ✓
 - 2026-10-06 09:34Z 💻 T66 launched · attempt 1 · agent ad96a505c474bf6a2
+- 2026-10-06 09:36Z 💻 T60 done · worktree-agent-a95d57934a2e43c41 → c5f60f6 · verify ✓
+- 2026-10-06 09:36Z 💻 T62 launched · attempt 1 · agent a382ef15404b4341a
