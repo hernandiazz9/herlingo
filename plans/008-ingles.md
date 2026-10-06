@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 11:41Z 💻
+- Updated: 2026-10-06 11:45Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 76a64c7
-- Next step: T90 foundation; then T91 + A2 units (max 2 agents)
+- Branch: plan-008-ingles @ a048f4c
+- Next step: integrate T91/T92, then A2 units T93–T96
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -28,7 +28,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T90 — English foundation: generic levels, `formal` register, en pack.json
-- Status: running (attempt 1 · 💻 · agent aab34ce7c5a906ee7 · since 11:41Z)
+- Status: done
 - Depends on: none
 - Where: any
 - Goal: Make the schema, loader and checks ready for a levelled pack and write `content/en/pack.json`, per the Shared contract ("Schema"): `formal` register (dialogue badge "Registro formal" / "Registro informal" when the pack's `formalRegister` is `formal`, today's labels otherwise); `Level` A1–C2; optional `levels`, `equivalents`; `level` rules in `content:check`; loader exposes `pack.meta.levels`, `pack.meta.equivalents` and a derived level for units, dialogues, stories, placement questions and items. No change to answer matching or speech code here (plan 007 voice rewrites it; T110 wires `equivalents` in afterwards). `content/en/pack.json`: lang `en`, name "Inglés", nativeName "English", emoji 🇺🇸, speechLocale `en-US`, the four en-US voices, `formalRegister: "formal"`, `articles: ["a", "an"]`, `levels: ["A2", "B1"]`, the 18 situations of brief-en, `numberWords` 0–100 + hundreds + thousand, `equivalents` for the common contractions (I'm, you're, he's, it's, we're, they're, I've, I'll, I'd, don't, doesn't, didn't, can't, won't, isn't, aren't, wasn't, weren't, haven't, hasn't, couldn't, shouldn't, wouldn't, let's, what's, where's, that's, there's). `npm run content:check` and `verify` must pass while the English pack has no units yet (empty pack hidden from the language picker until it has a unit, generically).
@@ -38,10 +38,10 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓ for it, fr and en; `git diff --stat content/it content/fr` → empty.
   - `grep -rnE '"en"|lang === .en|english' src scripts api` → nothing new beyond comments.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: schema: formal register, Level A1–C2, optional levels/equivalents, level rules in content:check, derived item levels, getLevels(); en/pack.json (en-US, a/an, A2+B1, 18 situations, numberWords, 29 equivalents); dialogue badge Registro formal/informal · a048f4c · verify ✓ 💻 · not checked: badge in UI
 
 ## T91 — Level selector: Ruta, Perfil, Diálogos, Historias, Frasario, placement suggestion
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent abe7cc49ff9a9bd1b · since 11:45Z)
 - Depends on: T90
 - Where: any
 - Goal: The learner chooses a CEFR level per language for packs with `levels`, per the Shared contract ("Level selector"): new key `lang-lern:level:<lang>`, `getLevel`/`setLevel`/`useLevel`, level chips on Ruta and Perfil, Ruta filtered to the level, Diálogos/Historias defaulting to it with "Todos", Frasario level filter, placement result suggesting a level. Packs without `levels` (it, fr) render exactly as before. Spain Spanish copy with "tú" ("Tu nivel", "Cambiar nivel", "Te recomendamos el nivel B1").
@@ -55,7 +55,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T92 — English A2: hello, numbers and A2 grammar
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent adea40484a0eb938e · since 11:45Z)
 - Depends on: T90
 - Where: any
 - Goal: Units `a2-hello` (10), `a2-numbers` (12) and `a2-grammar` (90) with the 10 A2 grammar cards, per docs/brief-en.md: ~5-minute lessons ending with their Q&A, pronunciation tips for a Spanish speaker, US dates, prices and tipping, phone numbers and years.
@@ -288,6 +288,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## Review queue
+- [ ] T90 @a048f4c — code review (schema, build.ts levels) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 
@@ -304,7 +305,11 @@ Worktree setup: npm ci
 - 2026-10-06 plan: Base branch `plan-008-ingles` from main @ 1c8aab4, in its own worktree `.claude/worktrees/plan-008`: plan 006 (main checkout) and plan 007 voice (`.claude/worktrees/plan-007`, T76–T84) run in other sessions at the same time; this plan was drafted as 007 and renumbered to 008 / T90+ to avoid collisions. Hybrid push policy: the writer pushes the plan branch after every integrated task; never main, no PR, merge or deploy without Hernán's OK. (orchestrator)
 
 ## Proposals (new scope)
+- 2026-10-06 T90: Prepárate PackView/PackPractice still label register 'Trato de usted/tú'; English coach packs would show it
 
 ## Log
 - 2026-10-06 11:30Z 💻 plan written from the interview; not approved yet
 - 2026-10-06 11:41Z 💻 plan approved by Hernán (as 007; renumbered 008/T90+ after plan 007 voice appeared); T90 launched · attempt 1 · agent aab34ce7c5a906ee7
+- 2026-10-06 11:45Z 💻 T90 done · worktree-agent-aab34ce7c5a906ee7 → a048f4c · verify ✓
+- 2026-10-06 11:45Z 💻 T91 launched · attempt 1 · agent abe7cc49ff9a9bd1b
+- 2026-10-06 11:45Z 💻 T92 launched · attempt 1 · agent adea40484a0eb938e
