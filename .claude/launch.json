@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "coach-fake",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev:coach"
+      ],
+      "env": {
+        "COACH_FAKE": "1"
+      },
+      "port": 3000
+    }
+  ]
+}
