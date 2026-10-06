@@ -1,10 +1,14 @@
 /**
- * Practice outside lessons (game mode, stories): XP, streak day and SRS outcomes in one call.
+ * Practice outside lessons (game mode, stories, dialogues, listening...): XP, streak day and SRS
+ * outcomes in one call.
  * Built only on `recordReviewResult()` (same rules as /repaso): XP added, today marked as
  * practised, each outcome scheduled in the Leitner boxes (wrong → box 1, due at once).
  */
 import type { ItemOutcome } from "@/lib/exercises";
+import { claimListen } from "./daily";
 import { recordReviewResult, type Progress, type XpSource } from "./index";
+
+export { LISTEN_DAILY_CAP, XP_LISTEN, countPlay, repeatXp } from "./daily";
 
 export interface ActivityOutcome {
   itemId: string;
@@ -53,4 +57,14 @@ export function recordActivity({ lang, xp, outcomes, source }: Activity): Progre
     firstTryCorrect: outcomes.filter((o) => o.correct).length,
     items: [...items.values()],
   }, source ?? sourceFromRoute());
+}
+
+/**
+ * A playable listened to on purpose outside an exercise (phrasebook, story reader, Prepárate
+ * phrases): `XP_LISTEN` the first time today per audio, up to `LISTEN_DAILY_CAP`. Returns the XP.
+ */
+export function recordListen(audioKey: string, lang: string): number {
+  const xp = claimListen(lang, audioKey);
+  if (xp > 0) recordActivity({ lang, xp, outcomes: [], source: "listen" });
+  return xp;
 }

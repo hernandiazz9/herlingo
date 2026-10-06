@@ -1,6 +1,6 @@
 /**
  * Role-play of a pack's dialogue: the adapter to the content `Dialogue` the dialogue player takes,
- * and the XP for finishing it (like a game round, only the first time per day per pack; the
+ * and the XP for finishing it (like a game round; half on repeats of the same pack today, the
  * marker is `lang-lern:coach:practice:<lang>`).
  */
 import { getPack, type Dialogue, type DialogueTurn } from "@/lib/content";
@@ -37,14 +37,14 @@ function rewardedToday(lang: string): string[] {
 }
 
 /**
- * Records a finished role-play with `correct` right answers: the XP of a game round, unless this
- * pack already earned XP today. Returns the XP awarded (0 = already earned today).
+ * Records a finished role-play with `correct` right answers: the XP of a game round, half when
+ * this pack already earned XP today. Returns the XP awarded and whether it was a repeat.
  */
-export function awardPracticeXp(pack: CoachPack, correct: number): number {
+export function awardPracticeXp(pack: CoachPack, correct: number): { xp: number; repeat: boolean } {
   const done = rewardedToday(pack.lang);
-  if (done.includes(pack.id)) return 0;
-  const xp = roundXp(correct);
-  writeJson(COACH_KEYS.practice(pack.lang), { v: VERSION, day: dayKey(), packs: [...done, pack.id] });
-  recordActivity({ lang: pack.lang, xp, outcomes: [] });
-  return xp;
+  const repeat = done.includes(pack.id);
+  const xp = repeat ? Math.ceil(roundXp(correct) / 2) : roundXp(correct);
+  if (!repeat) writeJson(COACH_KEYS.practice(pack.lang), { v: VERSION, day: dayKey(), packs: [...done, pack.id] });
+  recordActivity({ lang: pack.lang, xp, outcomes: [], source: "coach" });
+  return { xp, repeat };
 }

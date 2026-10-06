@@ -82,8 +82,10 @@ Spanish, "Francés"), `nativeName` ("Français"), `emoji?` (flag shown by the la
 `speechLocale` (`it-IT`), `voices` (edge-tts voice names; the first is the default),
 `formalRegister` (`lei` | `vous`: the formal register this pack's items use), `articles` (definite
 articles allowed in vocab `article`: Italian `il lo la l' i gli le`, French `le la l' les`),
-`situations` (`{ id, title, emoji? }`, phrasebook sections in display order). If you need a new
-situation, add one line here.
+`numberWords` (optional, `{ "40": "quaranta", … }`: speech recognition often returns digits, so
+spoken answers are compared with digits written out with these words), `situations`
+(`{ id, title, emoji? }`, phrasebook sections in display order). If you need a new situation, add
+one line here.
 
 **Unit file** (`units/*.json`): `id`, `order`, `title`, `description?`, `emoji?`, `situation`,
 `lessons`, plus the item arrays `phrases`, `vocab`, `qa`, `grammar`, `expressions` (each optional).

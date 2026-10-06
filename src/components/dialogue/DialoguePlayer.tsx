@@ -164,6 +164,7 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
       const idx = bestMatch(
         heard,
         turn.options.map((o) => o.text),
+        meta.numberWords,
       );
       if (idx >= 0) answer(turn, idx, heard[0]);
       else

@@ -11,6 +11,10 @@ import { useActiveLang, useScreenLang } from "@/lib/content/use-active-lang";
 import { LanguagePicker, pickablePacks } from "@/components/language/LanguagePicker";
 import { cn } from "@/lib/cn";
 import { applyPlacement, completeOnboarding, getProgress } from "@/lib/progress";
+import { recordActivity } from "@/lib/progress/activity";
+
+/** XP for finishing the placement test, plus one per right answer. */
+const XP_PLACEMENT = 10;
 
 type Phase = { name: "welcome" } | { name: "test"; index: number; answers: boolean[] } | { name: "result"; right: number; lessons: string[] };
 
@@ -101,7 +105,9 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
     stop();
     const lessons = masteredLessons(questions, answers);
     applyPlacement(lang, lessons);
-    setPhase({ name: "result", right: answers.filter(Boolean).length, lessons });
+    const rightCount = answers.filter(Boolean).length;
+    recordActivity({ lang, xp: XP_PLACEMENT + rightCount, outcomes: [], source: "placement" });
+    setPhase({ name: "result", right: rightCount, lessons });
   };
 
   if (phase.name === "welcome") {
@@ -153,6 +159,7 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
         <h1 className="text-3xl font-extrabold tracking-tight text-ink">
           {phase.right} de {questions.length} bien
         </h1>
+        <p className="text-xl font-extrabold text-success-deep">+{XP_PLACEMENT + phase.right} XP</p>
         {titles.length ? (
           <Card tone="sea" className="flex flex-col gap-2">
             <p className="text-base font-bold text-ink">

@@ -5,6 +5,7 @@ import { Picture } from "@/components/ui";
 import { speak } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import { listVocab, type Pack, type Situation, type Vocab } from "@/lib/content";
+import { recordListen } from "@/lib/progress/activity";
 import { fold, matches } from "./search";
 import { SearchHeader, situationChips, type Chip, type Filter } from "./SearchHeader";
 
@@ -88,6 +89,7 @@ export function WordList({ pack, query, onQuery, filter: rawFilter, onFilter }: 
 
   const play = (vocab: Vocab) => {
     speak(vocab, { lang: pack.meta.lang });
+    recordListen(vocab.audioKey, pack.meta.lang);
     setOpenId(vocab.id);
   };
 

@@ -6,6 +6,7 @@ import { speak } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import { getAllLessons, type Pack, type Phrase } from "@/lib/content";
 import { useFavorites } from "@/lib/favorites/use-favorites";
+import { recordListen } from "@/lib/progress/activity";
 import { dedupeByText } from "@/lib/srs/dedupe";
 import { ExpandIcon, SlowIcon, StarIcon } from "./icons";
 import { fold, matches } from "./search";
@@ -141,6 +142,7 @@ export function PhraseList({ pack, query, onQuery, filter: rawFilter, onFilter }
                 favorite={isFav(entry)}
                 onPlay={() => {
                   speak(entry.phrase, { lang: pack.meta.lang });
+                  recordListen(entry.phrase.audioKey, pack.meta.lang);
                   setOpenId(entry.phrase.id);
                 }}
                 onToggleFavorite={() => toggleFav(entry)}
@@ -208,7 +210,10 @@ function PhraseRow({ phrase, open, favorite, onPlay, onToggleFavorite, onShow }:
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
-              onClick={() => speak(phrase, { lang, slow: true })}
+              onClick={() => {
+                speak(phrase, { lang, slow: true });
+                recordListen(phrase.audioKey, lang);
+              }}
               className="pressable inline-flex min-h-12 items-center justify-center gap-2 rounded-button border-2 border-line bg-surface font-bold text-sea [--ledge:var(--line)]"
             >
               <SlowIcon width={20} height={20} /> Lento
