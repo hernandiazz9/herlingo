@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:41Z 💻
+- Updated: 2026-10-06 13:44Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ e4df5b6
+- Branch: plan-008-ingles @ 2e8fa42
 - Next step: integrate T107/T108; then T109 audio + images on the Mac (this session)
 - Needs Hernán: -
 
@@ -237,7 +237,7 @@ Worktree setup: npm ci
 - Outcome: B1 stories 101–106 (office, party/Nina, cancelled plans, video call with Mr. Park, Jordan's studio interview, IT bug), side cast Sam/Priya/Nina/Mr. Park/Kevin, no ⚠ · 4bb405e · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T107 — English B1: stories 7–12
-- Status: running (attempt 1 · 💻 · agent a5e325762b5aa14eb · since 13:39Z)
+- Status: done
 - Depends on: T106
 - Where: any
 - Goal: B1 stories 7–12 continuing T106.
@@ -246,7 +246,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: B1 stories 107–112 per T106 outline (Halsted flat, moving day, card declined, stuck in Kansas City, lost suitcase, one year later), no ⚠ · 2e8fa42 · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T108 — English placement test (A2 + B1)
 - Status: running (attempt 1 · 💻 · agent ab71d946f3971ca84 · since 13:41Z)
@@ -305,6 +305,7 @@ Worktree setup: npm ci
 - [ ] T104 @7aa62c2 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T106 @4bb405e — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T105 @e4df5b6 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T107 @2e8fa42 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -367,3 +368,4 @@ Worktree setup: npm ci
 - 2026-10-06 13:39Z 💻 T107 launched · attempt 1 · agent a5e325762b5aa14eb
 - 2026-10-06 13:41Z 💻 T105 done · worktree-agent-a2fac5b84b0da1e21 → e4df5b6 · verify ✓
 - 2026-10-06 13:41Z 💻 T108 launched · attempt 1 · agent ab71d946f3971ca84
+- 2026-10-06 13:44Z 💻 T107 done · worktree-agent-a5e325762b5aa14eb → 2e8fa42 · verify ✓
