@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:39Z 💻
+- Updated: 2026-10-06 13:41Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 4bb405e
-- Next step: integrate T105/T107; then T108 placement; then T109 audio on the Mac
+- Branch: plan-008-ingles @ e4df5b6
+- Next step: integrate T107/T108; then T109 audio + images on the Mac (this session)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -213,7 +213,7 @@ Worktree setup: npm ci
 - Outcome: units b1-money + b1-stories (5 lessons each): 97 phrases, 68 vocab, 16 Q&A, reuses A2/B1 items · 7aa62c2 · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T105 — English B1: 12 dialogues
-- Status: running (attempt 1 · 💻 · agent a2fac5b84b0da1e21 · since 13:33Z)
+- Status: done
 - Depends on: T100, T101, T102, T103, T104
 - Where: any
 - Goal: The 12 B1 dialogues listed in docs/brief-en.md (`level: "B1"`, longer turns, more `formal`/`tu` contrast at work vs with friends).
@@ -222,7 +222,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; 12 B1 dialogues (6–10 turns, ≥ 3 learner turns, 3 options each).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: 12 B1 dialogues (order 101–112, 9 turns, 4 learner turns × 3 options; formal with interviewer/client/airline/landlord/ISP/bank, tu with friends) · e4df5b6 · verify ✓ 💻 · not checked: playing with device voices, avatars (T109)
 
 ## T106 — English B1: stories 1–6
 - Status: done
@@ -249,7 +249,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T108 — English placement test (A2 + B1)
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ab71d946f3971ca84 · since 13:41Z)
 - Depends on: T91, T92, T93, T94, T95, T96, T100, T101, T102, T103, T104
 - Where: any
 - Goal: 12 graded placement questions (6 `level: "A2"`, 6 `level: "B1"`, easy → hard), spread over the units of each level, each marking the lessons it proves, so T91's suggestion picks A2 or B1.
@@ -304,10 +304,12 @@ Worktree setup: npm ci
 - [ ] T103 @edc33c4 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T104 @7aa62c2 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T106 @4bb405e — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T105 @e4df5b6 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T97 @d91ede2 — play two English A2 dialogues with device voices (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T105 @e4df5b6 — play two English B1 dialogues (formal + tu badge) with device voices (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Decisions
 - 2026-10-06 plan: English (`en`) is the third pack, American English (en-US voices and speechLocale, US spelling and formats); content only, generic code where the schema needs it; product note in docs/brief-en.md (docs/brief.md not edited); never lose on-device data, it/fr content and audio byte-identical. (Hernán)
@@ -363,3 +365,5 @@ Worktree setup: npm ci
 - 2026-10-06 13:33Z 💻 T105 launched · agent a2fac5b84b0da1e21; T106 launched · agent ab9c8ed4cb82f5db9
 - 2026-10-06 13:38Z 💻 T106 done · worktree-agent-ab9c8ed4cb82f5db9 → 4bb405e · verify ✓
 - 2026-10-06 13:39Z 💻 T107 launched · attempt 1 · agent a5e325762b5aa14eb
+- 2026-10-06 13:41Z 💻 T105 done · worktree-agent-a2fac5b84b0da1e21 → e4df5b6 · verify ✓
+- 2026-10-06 13:41Z 💻 T108 launched · attempt 1 · agent ab71d946f3971ca84
