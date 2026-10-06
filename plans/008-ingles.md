@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-06 13:15Z 💻
+- Updated: 2026-10-06 13:17Z 💻
 - Writer: 💻 desktop (worktree .claude/worktrees/plan-008)
-- Branch: plan-008-ingles @ 4c1c036
-- Next step: integrate T99/T100; then B1 units T101–T104
+- Branch: plan-008-ingles @ 0f454fe
+- Next step: integrate T101/T102; then T103, T104
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -153,7 +153,7 @@ Worktree setup: npm ci
 - Outcome: A2 stories 7–12 per T98 outline (11–12 past simple; 12 sets up B1: Maya offers Pablo a job at her startup), new inline word story-en-deep-dish-pizza, no ⚠ · 4c1c036 · verify ✓ 💻 · not checked: native review, audio (T109)
 
 ## T100 — English B1: friends, plans and B1 grammar
-- Status: running (attempt 1 · 💻 · agent a31a5f0d322050405 · since 13:09Z)
+- Status: done
 - Depends on: T90
 - Where: any
 - Goal: Units `b1-friends` (110), `b1-plans` (112) and `b1-grammar` (190) with the 10 B1 grammar cards, per docs/brief-en.md; phrasal verbs explained in `notes`.
@@ -162,7 +162,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~60 vocab, ~16 Q&A, ~10 grammar cards, 10–12 lessons, `level: "B1"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: units b1-friends + b1-plans + b1-grammar (10 gram.en-b1-* cards, 12 work phrasal verbs): 12 lessons, 101 phrases, 59 vocab, 19 Q&A · 0f454fe · verify ✓ 💻 · not checked: native review, audio/pictures (T109)
 
 ## T101 — English B1: office, email and calls
 - Status: running (attempt 1 · 💻 · agent af79a9ac470fd9c2c · since 13:15Z)
@@ -177,7 +177,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T102 — English B1: job interview, technology
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a564d131cc1effd2d · since 13:17Z)
 - Depends on: T90
 - Where: any
 - Goal: Units `b1-interview` (130) and `b1-tech` (132) per docs/brief-en.md (experience, skills, questions to ask; computers, apps, explaining a problem, IT support).
@@ -298,6 +298,7 @@ Worktree setup: npm ci
 - [ ] T98 @2ce823e — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T97 @d91ede2 — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 - [ ] T99 @4c1c036 — English language review (gap distractors) (queued 2026-10-06 💻) (queued 2026-10-06 💻)
+- [ ] T100 @0f454fe — English language review (queued 2026-10-06 💻) (queued 2026-10-06 💻)
 
 ## Visual checks queue
 - [ ] T91 @7683f96 — level chips Ruta/Perfil, Diálogos/Historias/Frasario filters, placement suggestion; light + dark 375 px; Italian Ruta unchanged; 'Tu nivel' vs 'Tu nivel para la IA' in Perfil (queued 2026-10-06 💻) (queued 2026-10-06 💻)
@@ -345,3 +346,5 @@ Worktree setup: npm ci
 - 2026-10-06 13:09Z 💻 resumed on 💻 (Hernán: all on the Mac); T99 launched · agent aff36bf9f0b5fb64f; T100 launched · agent a31a5f0d322050405
 - 2026-10-06 13:15Z 💻 T99 done · worktree-agent-aff36bf9f0b5fb64f → 4c1c036 · verify ✓
 - 2026-10-06 13:15Z 💻 T101 launched · attempt 1 · agent af79a9ac470fd9c2c
+- 2026-10-06 13:17Z 💻 T100 done · worktree-agent-a31a5f0d322050405 → 0f454fe · verify ✓
+- 2026-10-06 13:17Z 💻 T102 launched · attempt 1 · agent a564d131cc1effd2d
