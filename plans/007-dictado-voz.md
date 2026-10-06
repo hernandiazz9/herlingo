@@ -1,6 +1,6 @@
 # Plan 007 — Voice: reliable, visible speech recognition
 
-Status: active
+Status: done
 Created: 2026-10-06
 Base branch: plan-007-dictado-voz (worktree .claude/worktrees/plan-007, from main @ a5f51c1)
 Goal: Make speaking to the app useful. Today the learner speaks and "nothing happens", doesn't know what is going on, or waits a long time: no live text, "Te escucho…" before the mic is really open, timeouts that only ask the recognizer to stop (can hang forever on iOS), four duplicated implementations, two scoring methods, errors that look like silence. This batch builds one robust speech engine on the browser Web Speech API (no server transcription), one shared mic UI with real states and live text, one scoring with word-by-word feedback, moves every screen onto them, and adds a "Probar micrófono" diagnostics screen.
@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-06 💻
 - Writer: orchestrator (desktop)
 - Branch: plan-007-dictado-voz (from main @ a5f51c1)
-- Next step: T84 running
+- Next step: all tasks done. Hernán: hand checks on iPhone (docs/speech.md), then merge plan-007-dictado-voz into main and deploy
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -127,7 +127,7 @@ Worktree setup: npm ci
 - Outcome: /microfono/ (NESTED under Perfil, card after Instalar), live try cards, last 15 log entries, Copiar/Borrar registro → 0bfa3e9
 
 ## T84 — Cleanup, guard rail and docs
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T79, T80, T81, T82, T83
 - Goal: Remove dead speech code (the `listenOnce` wrapper and `scoreSpeech` if unused, old thresholds), add an ESLint rule so only src/lib/speech/ may use SpeechRecognition / webkitSpeechRecognition, finish docs/speech.md, update CLAUDE.md (folder layout + a Speech convention line next to Audio), and write a "Hand checks (iPhone)" list in docs/speech.md for Hernán (installed app and Safari, each screen, permission denied, airplane mode, long silence). Never edit plans/.
 - Context: eslint.config.* (existing restricted-imports rule for api/), CLAUDE.md, docs/speech.md, every file touched by T76–T83.
@@ -136,7 +136,7 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0
   - `grep -rn "SpeechRecognition" src --include=*.ts --include=*.tsx | grep -v "^src/lib/speech/"` → no output
   - `grep -rn "listenOnce\|scoreSpeech\|bestMatch" src` → no output
-- Outcome:
+- Outcome: legacy recognition.ts/listenOnce/scoreSpeech/duplicate MicIcon removed, ESLint guard, docs/speech.md complete with Hand checks (iPhone), CLAUDE.md → a2d9580
 
 ## Decisions
 - 2026-10-06: Engine = browser Web Speech API only, done well; server transcription later only if iPhone still fails (Hernán)
@@ -158,11 +158,13 @@ Worktree setup: npm ci
 - 2026-10-06 T82: dictated text appended and cut at the field limit; mic disabled at the limit; submit / "No lo sé" cancel an open session; dictation clears an earlier generation error like typing; labels "Dictar en español" / "Dictar en <idioma>" kept; added a "Dictation" bullet to docs/coach.md Client (agent)
 - 2026-10-06 T81: SpeakPanel under the options ("O dilo en voz alta" / "Toca y dilo otra vez" after a miss); miss card "He oído «…», que no se parece bastante… La más cercana:" + WordFeedback of the closest option; tapping an option resets the mic first so a tap always works; miss card hidden while the mic is open (agent)
 - 2026-10-06 T83: route /microfono/ (top level like /liga/), NESTED "microphone"; try cards in phrase mode show the newest log entry's timings once settled; Copiar registro = JSON {key, copiedAt, supported, standalone, browser, entries} with a textarea fallback; Borrar registro asks inline confirmation; live log hook in src/app/microfono/use-speech-log.ts (agent)
+- 2026-10-06 T84: ESLint guard = no-restricted-globals + no-restricted-syntax on identifiers/strings starting with SpeechRecognition/webkitSpeechRecognition, src/** except src/lib/speech/**; docs/speech.md gains Scoring, Screens and Hand checks (iPhone, 14 checks) (agent)
 
 ## Proposals (new scope)
 - 2026-10-06: "Grabarme": record your voice and play it next to the native audio (separate from recognition) (Hernán, later)
 - 2026-10-06: Server transcription fallback (Whisper/Deepgram via a Vercel function) if the iPhone engine is still unreliable after this plan (orchestrator)
 - 2026-10-06 T78: put scoring + threshold in docs/speech.md; remove scoreSpeech/SPEECH_MATCH_THRESHOLD/bestMatch after T79/T81 (agent; covered by T84)
+- 2026-10-06 T84: unused third MicIcon in src/components/phrasebook/icons.tsx (agent)
 
 ## Log
 - 2026-10-06 13:45 T76 launched · attempt 1 · agent aed9f2545c1076095
@@ -181,3 +183,6 @@ Worktree setup: npm ci
 - 2026-10-06 13:53 T83 launched · attempt 1 · agent af91ad46e4780737f
 - 2026-10-06 13:54 T81 done · branch worktree-agent-a54c724831e21baa1 → c1ec2c2
 - 2026-10-06 13:59 T83 done · branch worktree-agent-af91ad46e4780737f → 0bfa3e9
+- 2026-10-06 13:59 T84 launched · attempt 1 · agent af24839d542e54522
+- 2026-10-06 14:03 T84 done · branch worktree-agent-af24839d542e54522 → a2d9580
+- 2026-10-06 14:04 plan done · npm run verify pass on plan-007-dictado-voz
