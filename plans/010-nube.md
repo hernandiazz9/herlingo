@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:37Z 💻
+- Updated: 2026-10-07 22:49Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-010-nube @ cfe71d6 (from main) · worktree .claude/worktrees/plan-010 · not pushed
-- Next step: T131 running; then T132
+- Next step: T132 running; then T133
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -57,7 +57,7 @@ Worktree setup: npm ci
 - Outcome: league.saves + league_save_head/get/put/delete, 2 MiB cap, 120 writes/h (fixed window), league_delete_me deletes the save; smoke 264 checks; fake server body limit 4 MB · aad60fe · verify ✓ 💻 · db:check ✓
 
 ## T131 — Client module `src/lib/cloud-save/` + key exclusions + local HTTP check
-- Status: running (attempt 1 · 💻 · agent a50096a2724793dcb · since 22:37Z)
+- Status: done
 - Depends on: T130
 - Where: pc (local fake Supabase for the HTTP check)
 - Goal: Add `isCloudSaveKey` and the `league-auth` exclusion in `src/lib/backup/` (file import ignores that key and keeps the device's session), and the client module per the Shared contract ("Client"): bookkeeping key, hash, change detection, debounced/throttled upload with optimistic concurrency, offline retry, conflict state, the exposed API and hook. Start it from the app shell (like Liga's sync) only when `leagueEnabled()`. Extend `npm run league:local:check` (or a sibling `league:local:save-check` script in package.json) with put → get → stale put = conflict → head → delete against the fake Supabase.
@@ -68,10 +68,10 @@ Worktree setup: npm ci
   - A tsx snippet shows `isCloudSaveKey` false for `lang-lern:league-auth`, `lang-lern:league-outbox:it`, `lang-lern:cloud-save`, `lang-lern:coach:access`, true for `lang-lern:progress:it` (report output).
   - With Liga env unset (`leagueEnabled()` false) no request is made (report how checked).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: src/lib/cloud-save/ (blob, hash, debounce 5 s / ≥30 s, head check per launch, conflict + restore-available in memory), isCloudSaveKey, league-auth out of file backups, key filter on collect/applyBackup, started from LeagueSync; league:local:check 50 checks · 763dff6 · verify ✓ 💻
 
 ## T132 — Conflict and restore flow with undo
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a0b6c93b85cf43637 · since 22:49Z)
 - Depends on: T131
 - Where: any
 - Goal: Per the Shared contract ("Conflict/restore"): launch check, restore offer on an empty device, the "¿Qué copia quieres conservar?" dialog with XP / lessons / last activity per side, `keepLocalCopy` and `restoreCloudCopy` (undo copy in Cache Storage `lang-lern-cloud-undo`, "Deshacer restauración", "Descargar copia anterior" for 7 days), reusing `applyBackup` and its rollback. Confirm the SW does not delete the undo cache.
@@ -112,6 +112,7 @@ Worktree setup: npm ci
 
 ## Review queue
 - [ ] T130 @aad60fe — code review (SQL: security definer, RLS, caps) (queued 2026-10-07 💻)
+- [ ] T131 @763dff6 — code review (client state machine, key exclusions, backup filter) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 
@@ -133,12 +134,16 @@ Worktree setup: npm ci
 - 2026-10-07 T130: rate limit is a fixed 1-hour window in the row (window_start/window_writes), only successful puts count; stale + over limit → conflict first. (agent)
 - 2026-10-07 T130: put with non-null base and no row → conflict with null rev/size/updated_at; limits as revoked functions league.save_max_bytes()/save_max_writes_per_hour(); league_delete_me still returns true only if a profile was deleted, but always deletes the save. (agent)
 - 2026-10-07 T130: local fake server MAX_BODY 1 MB → 4 MB; psql variables > 64 KiB passed through a temp file. (agent)
+- 2026-10-07 T131: league-auth* and cloud-save keys excluded from file backups; collectBackup/applyBackup take an optional key filter; head checked once per launch/account change, same data → adopt rev; rate limited → retry after 15 min, too large/invalid → no retry until data changes; save tokens read from LeagueError message; client started from src/components/league/LeagueSync.tsx (lazy import). (agent)
 
 ## Proposals (new scope)
 - 2026-10-07 plan: field-by-field merge of two copies (max XP, union of lessons and SRS by latest review) instead of choosing a whole copy.
+- 2026-10-07 T131: in dev, Turbopack loads the supabase-js chunk on / through RutaCard even with Liga disabled (pre-existing, no network request).
 
 ## Log
 - 2026-10-07 22:24Z 💻 plan written from Hernán's brief (prompt-009-nube.md); not approved yet
 - 2026-10-07 22:40Z 💻 plan approved by Hernán ("hazlo en worktree y comienza"); T130 launched · attempt 1 · agent a62e7237f6ef165ce
 - 2026-10-07 22:37Z 💻 T130 done · worktree-agent-a62e7237f6ef165ce → aad60fe · verify ✓ · db:check ✓
 - 2026-10-07 22:37Z 💻 T131 launched · attempt 1 · agent a50096a2724793dcb
+- 2026-10-07 22:49Z 💻 T131 done · worktree-agent-a50096a2724793dcb → 763dff6 · verify ✓
+- 2026-10-07 22:49Z 💻 T132 launched · attempt 1 · agent a0b6c93b85cf43637
