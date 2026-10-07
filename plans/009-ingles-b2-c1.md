@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:12Z 💻
+- Updated: 2026-10-07 22:21Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ ba14336
-- Next step: integrate T122/T123, then T124; B2 complete
+- Branch: plan-009-ingles-b2-c1 @ 2b11f14
+- Next step: integrate T123/T124, then T125, T126, T128
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -162,7 +162,7 @@ Worktree setup: npm ci
 - Outcome: c1-leading/tech-decisions: 86 phrases, 66 vocab, 20 Q&A, 10 lessons · 478ccbf · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T122 — English C1: nuance, idioms
-- Status: running (attempt 1 · 💻 · agent ae73dcc4ba6a5f6ec · since 22:10Z)
+- Status: done
 - Depends on: T111, T120
 - Where: any
 - Goal: Units `c1-nuance` (330) and `c1-idioms` (332) (hedging, irony, indirect politeness; advanced idioms and phrasal verbs, each explained in `notes`), per docs/brief-en.md: `level: "C1"`, phrases ≤ 22 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -171,7 +171,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~70 vocab, ~16 Q&A, 9–11 lessons, `level: "C1"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: c1-nuance/idioms: 89 phrases, 69 vocab, 17 Q&A, 10 lessons · 2b11f14 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T123 — English C1: networking, complex problems
 - Status: running (attempt 1 · 💻 · agent a014857546e18c137 · since 22:12Z)
@@ -186,7 +186,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T124 — English C1: society debates, storytelling
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a1005de88ee4b83f0 · since 22:21Z)
 - Depends on: T111, T120
 - Where: any
 - Goal: Units `c1-society` (350) and `c1-storytelling` (352), per docs/brief-en.md: `level: "C1"`, phrases ≤ 22 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -274,6 +274,7 @@ Worktree setup: npm ci
 - [ ] T118 @5f44b8a — content review (queued 2026-10-07 💻)
 - [ ] T121 @478ccbf — content review (queued 2026-10-07 💻)
 - [ ] T119 @38e56f8 — content review (queued 2026-10-07 💻)
+- [ ] T122 @2b11f14 — content review (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
@@ -324,3 +325,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:10Z 💻 T122 launched · attempt 1 · agent ae73dcc4ba6a5f6ec
 - 2026-10-07 22:11Z 💻 T119 done · worktree-agent-a504eb9fe3fcbf7b3 → 38e56f8 · verify ✓
 - 2026-10-07 22:12Z 💻 T123 launched · attempt 1 · agent a014857546e18c137
+- 2026-10-07 22:21Z 💻 T122 done · worktree-agent-ae73dcc4ba6a5f6ec → 2b11f14 · verify ✓
+- 2026-10-07 22:21Z 💻 T124 launched · attempt 1 · agent a1005de88ee4b83f0
