@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:28Z 💻
+- Updated: 2026-10-07 22:34Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T112 + T115 running; then T116–T119, T125
+- Next step: T115 + T116 running; then T117–T119, T125
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -46,7 +46,7 @@ Worktree setup: npm ci
 - Outcome: helpers in src/lib/content/script.ts (romanize, stripStress, foldText, stressIssues); articles optional; Gender n/pl; audio --dry-run; voices Svetlana+Dmitry only → 5c16137
 
 ## T112 — Romanization line under target text + Perfil switch
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T111
 - Where: any
 - Goal: Per the Shared contract ("Display"): one shared component renders target text plus, for packs with `romanization` and the switch on, the muted Latin line; every screen that shows target-language text uses it; new key `lang-lern:romanization:<lang>` `{ v: 1, show }` with `getShowRomanization`/`setShowRomanization`/`useShowRomanization` (framework-free + hook, like `@/lib/content/active`); Perfil switch "Mostrar transliteración" only for such packs; Frasario search matches romanization. Packs without `romanization` render exactly as before.
@@ -55,7 +55,7 @@ Worktree setup: npm ci
 - Done when:
   - With a temporary local ru unit (not committed) or after T114 lands: a Russian item shows Cyrillic + Latin line; the switch hides it; Italian screens unchanged (report how checked).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: TargetText/LatinLine in components/ui, store lang-lern:romanization:<lang>, Perfil switch, Frasario Latin search, FeedbackSheet diffWords rules → 84820ed
 
 ## T113 — Script-aware answer matching and speech scoring
 - Status: done
@@ -94,7 +94,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T116 — Russian A1: about me, daily life
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T111
 - Where: any
 - Goal: Units `ru-a1-about-me` (20) and `ru-a1-daily` (22) per docs/brief-ru.md (persona: Hernán, from Madrid, programmer; home, routine, free time, weekdays, weather).
@@ -218,9 +218,11 @@ Worktree setup: npm ci
 - [ ] T111 @5c16137 — code review (script.ts, build.ts stress check, audio strip) (queued 2026-10-07 💻)
 - [ ] T113 @bde39f8 — code review (normalize.ts Latin path, score.ts) (queued 2026-10-07 💻)
 - [ ] T114 @7e2496d — Russian language review (stress marks, alphabet explanations) (queued 2026-10-07 💻)
+- [ ] T112 @84820ed — code review (TargetText usage coverage, romanization store) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
+- [ ] T112 @84820ed — Russian lesson/Frasario/dialogue/story with Latin line, Perfil switch off/on; Italian unchanged; light + dark 375 px; check Perfil hint 'Las letras latinas debajo del {idioma}' casing (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: Russian (`ru`) is the fourth pack, levelled with one level A1 (`levels: ["A1"]`), full French volume; A2 later with the same molds; product note in docs/brief-ru.md (docs/brief.md not edited). (Hernán)
@@ -234,9 +236,11 @@ Worktree setup: npm ci
 - 2026-10-07 T113: alternatives one-way (expected romanization → listed alternative) inside typo distance; tiles/fill-gap get scriptRules only (agent)
 - 2026-10-07 T113→T112: FeedbackSheet.tsx:50 diffWords needs getPack(lang).meta as 3rd arg; added to T112's prompt (orchestrator)
 - 2026-10-07 T114: letter-group explanations are grammar cards gram.ru-a1-alphabet-<group>; alphabet unit holds many travel words (метро́, такси́, гости́ница, апте́ка, вокза́л…) that later units reuse by id; card gram.ru-a1-ty-or-vy exists (T115 must not duplicate it) (agent)
+- 2026-10-07 T112: Latin line inherits text colour at 0.7 opacity; hidden when equal to the text; FillGap Latin line masks the gap until answered (agent)
 
 ## Proposals (new scope)
 - 2026-10-07 T111: server-side Prepárate TTS (api/) still gets stress marks; client strips them today
+- 2026-10-07 T112: no Latin line on the learner's own typed/heard answer nor 'He oído «…»' in dialogues
 
 ## Log
 - 2026-10-07 💻 plan written from the interview; not approved yet
@@ -248,3 +252,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:24Z 💻 T113 done · → bde39f8 · verify ✓
 - 2026-10-07 22:24Z 💻 T112 launched · attempt 1 · agent ac45225e3f34f1b56
 - 2026-10-07 22:28Z 💻 T114 done · → 7e2496d · verify ✓
+- 2026-10-07 22:28Z 💻 T115 launched · attempt 1 · agent a4cbd6e7a0645f68a
+- 2026-10-07 22:34Z 💻 T112 done · → 84820ed · verify ✓
