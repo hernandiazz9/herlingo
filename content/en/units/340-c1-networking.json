@@ -1,0 +1,364 @@
+{
+  "id": "c1-networking",
+  "order": 340,
+  "level": "C1",
+  "title": "Networking: conferencias, eventos, presentarte con soltura",
+  "description": "Moverte con soltura en conferencias y eventos en inglés: romper el hielo, presentarte sin sonar a currículum, mantener viva la conversación, conectar a gente entre sí y despedirte y hacer seguimiento sin resultar pesado.",
+  "emoji": "🤝",
+  "situation": "social",
+  "lessons": [
+    {
+      "id": "c1-networking.l.breaking-the-ice",
+      "title": "Romper el hielo en un evento",
+      "items": [
+        "c1-networking.icebreaker",
+        "c1-networking.mind-if-i-join-you",
+        "b1-friends.i-dont-think-weve-met",
+        "c1-networking.keynote",
+        "c1-networking.what-did-you-think-of-the-keynote",
+        "c1-networking.conference",
+        "c1-networking.is-this-your-first-time-here",
+        "c1-networking.ive-been-coming-for-years",
+        "b2-culture.venue",
+        "c1-networking.this-venue-is-incredible",
+        "c1-networking.overhear",
+        "c1-networking.i-couldnt-help-overhearing",
+        "c1-networking.how-are-you-finding-the-conference",
+        "c1-presenting.talk",
+        "c1-networking.any-talks-youd-recommend",
+        "c1-networking.small-talk",
+        "c1-networking.name-tag",
+        "c1-networking.mingle",
+        "b2-meetings.attendee",
+        "c1-networking.qa.first-time",
+        "c1-networking.qa.keynote"
+      ]
+    },
+    {
+      "id": "c1-networking.l.introducing-yourself",
+      "title": "Presentarte sin sonar a currículum",
+      "items": [
+        "c1-networking.elevator-pitch",
+        "c1-networking.i-lead-the-backend-team",
+        "b1-interview.startup",
+        "c1-networking.in-a-nutshell",
+        "c1-networking.what-i-really-enjoy-is",
+        "c1-networking.im-originally-from-valencia",
+        "c1-networking.background",
+        "c1-networking.my-background-is-in-physics",
+        "c1-networking.these-days-im-mostly-focused-on",
+        "c1-networking.field",
+        "c1-networking.how-did-you-get-into-this-field",
+        "c1-networking.role",
+        "c1-networking.its-a-bit-of-a-hybrid-role",
+        "c1-networking.job-title",
+        "c1-networking.my-title-is-a-bit-misleading",
+        "c1-networking.enough-about-me",
+        "c1-networking.booth",
+        "c1-networking.panel",
+        "c1-networking.workshop",
+        "c1-networking.qa.what-do-you-do",
+        "c1-networking.qa.background"
+      ]
+    },
+    {
+      "id": "c1-networking.l.keeping-it-going",
+      "title": "Mantener viva la conversación",
+      "items": [
+        "c1-networking.that-sounds-fascinating",
+        "c1-networking.so-if-i-understand-correctly",
+        "c1-networking.funny-you-should-mention-that",
+        "c1-negotiation.common-ground",
+        "b1-friends.we-have-a-lot-in-common",
+        "b1-interview.challenge",
+        "c1-networking.whats-the-biggest-challenge",
+        "c1-networking.pain-point",
+        "c1-networking.i-hear-that-a-lot",
+        "c1-networking.out-of-curiosity",
+        "c1-networking.im-by-no-means-an-expert",
+        "c1-networking.industry",
+        "c1-networking.where-do-you-see-the-industry-going",
+        "c1-networking.its-a-small-world",
+        "c1-networking.mutual-connection",
+        "c1-networking.we-must-have-mutual-connections",
+        "c1-networking.rapport",
+        "c1-presenting.tangent",
+        "c1-networking.sorry-i-went-off-on-a-tangent",
+        "c1-networking.qa.challenge"
+      ]
+    },
+    {
+      "id": "c1-networking.l.connecting-people",
+      "title": "Presentar a otros y pedir contactos",
+      "items": [
+        "c1-networking.id-love-to-introduce-you",
+        "c1-networking.have-you-two-met",
+        "c1-networking.tackle",
+        "c1-networking.you-two-should-really-talk",
+        "c1-networking.would-you-mind-putting-me-in-touch",
+        "c1-networking.reach-out",
+        "c1-networking.feel-free-to-mention-my-name",
+        "c1-networking.referral",
+        "c1-networking.would-you-be-comfortable-referring-me",
+        "c1-networking.opportunity",
+        "c1-networking.im-not-actively-looking",
+        "b1-interview.recruiter",
+        "c1-networking.headhunter",
+        "c1-networking.could-i-pick-your-brain",
+        "c1-networking.insight",
+        "c1-networking.id-really-value-your-insight",
+        "c1-networking.go-to-person",
+        "c1-networking.shes-the-go-to-person",
+        "c1-networking.qa.introduce",
+        "c1-networking.qa.pick-your-brain"
+      ]
+    },
+    {
+      "id": "c1-networking.l.following-up",
+      "title": "Despedirte y hacer seguimiento",
+      "items": [
+        "c1-networking.i-dont-want-to-keep-you",
+        "c1-networking.i-should-let-you-go",
+        "c1-networking.business-card",
+        "c1-networking.do-you-have-a-card",
+        "c1-networking.it-was-a-pleasure-meeting-you",
+        "b1-friends.lets-keep-in-touch",
+        "c1-networking.lets-grab-coffee",
+        "c1-networking.ill-drop-you-a-line",
+        "c1-networking.touch-base",
+        "b2-meetings.follow-up",
+        "c1-networking.great-meeting-you-yesterday",
+        "c1-networking.i-was-wondering-whether-you-might-be-free",
+        "c1-networking.hectic",
+        "c1-networking.no-pressure-at-all",
+        "c1-networking.circle-back",
+        "b1-calls.inbox",
+        "c1-networking.just-circling-back",
+        "c1-networking.i-came-across-this-article",
+        "c1-networking.qa.wrap-up"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "c1-networking.mind-if-i-join-you", "text": "Mind if I join you? I don't really know anyone here yet.", "es": "¿Te importa si me uno? Todavía no conozco a casi nadie aquí.", "notes": "«Mind if…?» es la forma corta y relajada de «Do you mind if…?». Si aceptas, se responde «Not at all» (= para nada, adelante).", "explanation": "Para acercarte a un grupo en una pausa del evento. «Mind» se dice «MAIND», con la «i» de «my».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.what-did-you-think-of-the-keynote", "text": "So, what did you think of the keynote? I found it surprisingly practical.", "es": "¿Y qué te pareció la ponencia principal? A mí me pareció sorprendentemente práctica.", "notes": "«What did you think of…?» = ¿qué te pareció…?; nunca «How did you think…?». «find something + adjetivo» = parecerte algo.", "explanation": "Comentar algo que habéis visto los dos es la forma más natural de romper el hielo. «think» lleva la «th» de «zapato», con la lengua entre los dientes.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.is-this-your-first-time-here", "text": "Is this your first time at this conference, or are you a regular?", "es": "¿Es tu primera vez en este congreso o vienes todos los años?", "notes": "«a regular» = un habitual, alguien que siempre viene. «at a conference» lleva «at», no «in».", "explanation": "Pregunta segura para empezar con un desconocido. «conference» se acentúa al principio: «CON-frəns», casi dos sílabas.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.ive-been-coming-for-years", "text": "I've been coming for years, mostly for the hallway conversations.", "es": "Vengo desde hace años, sobre todo por las conversaciones de pasillo.", "notes": "Para algo que empezó en el pasado y sigue: «I've been coming for years» = vengo desde hace años; nunca «I come since years». «hallway» = pasillo.", "explanation": "Respuesta típica de un habitual, que además abre tema. «hallway» se dice «HOL-wei».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.this-venue-is-incredible", "text": "This venue is incredible, though the Wi-Fi leaves a lot to be desired.", "es": "Este sitio es increíble, aunque el wifi deja mucho que desear.", "notes": "«leave a lot to be desired» = dejar mucho que desear, igual que en español. «though» en mitad de la frase = aunque.", "explanation": "Una queja ligera y compartida une mucho. «venue» se dice «VEN-yu»; «though», «dou», con la «th» de «this».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.i-couldnt-help-overhearing", "text": "Sorry, I couldn't help overhearing: are you working on payments too?", "es": "Perdona, no he podido evitar oírte: ¿tú también trabajas en pagos?", "notes": "«can't help + -ing» = no poder evitar hacer algo; «overhear» = oír sin querer una conversación ajena.", "explanation": "Para sumarte con educación a una conversación que no es tuya. «overhearing»: «ou-ver-HIR-ing», con la «h» suave.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.how-are-you-finding-the-conference", "text": "How are you finding the conference so far?", "es": "¿Qué te está pareciendo el congreso hasta ahora?", "notes": "«How are you finding…?» = ¿qué te parece…? No tiene nada que ver con «encontrar».", "explanation": "Clásico del primer día o de la pausa del café. «so far» se enlaza: «sou-FAR», con la «r» americana.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.any-talks-youd-recommend", "text": "Have you been to any talks you'd recommend for this afternoon?", "es": "¿Has ido a alguna charla que me recomiendes para esta tarde?", "notes": "«go to a talk» = ir a una charla. «you'd recommend» = que recomendarías: el «would» suaviza la pregunta.", "explanation": "Pide consejo: a la gente le encanta recomendar. «recommend» se acentúa al final: «re-kə-MEND», con una sola «c» sonora.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.i-lead-the-backend-team", "text": "I lead the backend team at a small fintech startup in the Loop.", "es": "Dirijo el equipo de backend de una pequeña startup fintech en el Loop.", "notes": "«lead a team» = dirigir un equipo. «the Loop» es el centro financiero de Chicago. Di la función antes que la empresa.", "explanation": "Una frase que dice qué haces y dónde, sin listar tu currículum. «lead» rima con «need»; no lo confundas con «led» (pasado).", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.in-a-nutshell", "text": "In a nutshell, we help small shops get paid faster.", "es": "En pocas palabras, ayudamos a las tiendas pequeñas a cobrar más rápido.", "notes": "«in a nutshell» = en pocas palabras, en resumen. «help someone do something» puede ir sin «to». «get paid» = cobrar.", "explanation": "Tu «elevator pitch» en una frase: qué problema resuelves y para quién. «nutshell»: «NAT-shel», con la «u» corta de «cup».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.what-i-really-enjoy-is", "text": "What I really enjoy is turning messy problems into simple tools.", "es": "Lo que de verdad me gusta es convertir problemas enrevesados en herramientas sencillas.", "notes": "Oración escindida: «What I enjoy is…» pone el foco en lo que viene después. «messy» = desordenado, enrevesado; «turn A into B» = convertir A en B.", "explanation": "Hablar de lo que te motiva queda mucho mejor que recitar tu cargo. Sube el tono en «REALLY» y en «SIMPLE».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.im-originally-from-valencia", "text": "I'm originally from Valencia, but I've been based in Chicago for two years.", "es": "Soy de Valencia, pero llevo dos años viviendo en Chicago.", "notes": "«originally from» = de origen. «be based in» = tener tu base en una ciudad. «I've been… for two years» = llevo dos años.", "explanation": "Responde de antemano al «where are you from?» que tu acento provoca. En inglés «Valencia» suena «və-LEN-si-ə».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.my-background-is-in-physics", "text": "My background is actually in physics; I moved into software later on.", "es": "En realidad vengo de la física; me pasé al software más tarde.", "notes": "«my background is in…» = vengo del mundo de…, mi formación es en…; «move into» = pasarte a otro sector. «actually» = en realidad, no «actualmente».", "explanation": "Un dato inesperado da pie a preguntas. «physics» se dice «FI-ziks»: la «ph» es una «f» y la «s» suena «z».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.these-days-im-mostly-focused-on", "text": "These days I'm mostly focused on making our APIs easier to use.", "es": "Hoy en día me centro sobre todo en que nuestras API sean más fáciles de usar.", "notes": "«be focused on + -ing» = centrarse en. «these days» = últimamente, hoy en día.", "explanation": "Habla de lo que haces ahora, no de tu historia completa. «APIs» se deletrea: «ei-pi-AIS».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.how-did-you-get-into-this-field", "text": "How did you get into this field in the first place?", "es": "¿Y cómo acabaste en este sector, para empezar?", "notes": "«get into» = meterte en, empezar en algo; «in the first place» = en un principio, para empezar.", "explanation": "Pregunta abierta que invita a contar una historia. «field» alarga la «ii»: «fiild».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.its-a-bit-of-a-hybrid-role", "text": "It's a bit of a hybrid role: half engineering, half talking to customers.", "es": "Es un puesto un poco híbrido: mitad ingeniería, mitad hablar con clientes.", "notes": "«a bit of a + sustantivo» = algo así como un, un poco: «a bit of a mess» = un poco caótico.", "explanation": "Útil cuando tu cargo no se entiende a la primera. «hybrid» se dice «HAI-brid».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.my-title-is-a-bit-misleading", "text": "My title is a bit misleading; I actually spend most of my day coding.", "es": "Mi cargo despista un poco: en realidad paso casi todo el día programando.", "notes": "«misleading» = engañoso, que da una idea equivocada. «spend time + -ing» = pasar tiempo haciendo algo.", "explanation": "Aclara con humor lo que haces de verdad. «misleading»: «mis-LII-ding», acento en la segunda sílaba.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.enough-about-me", "text": "Anyway, enough about me. What brings you here?", "es": "Bueno, ya está bien de hablar de mí. ¿Y a ti qué te trae por aquí?", "notes": "«enough about me» = basta de hablar de mí. «What brings you here?» = ¿qué te trae por aquí?", "explanation": "Devuelve la pregunta para no monopolizar la conversación. «enough» se dice «i-NAF»: la «gh» suena «f».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.that-sounds-fascinating", "text": "That sounds fascinating. How does it actually work in practice?", "es": "Suena fascinante. ¿Y cómo funciona en la práctica?", "notes": "«in practice» = en la práctica (sin «the»). Pedir detalles demuestra interés real.", "explanation": "Escucha activa: reacciona y pide más. «fascinating» se dice «FA-si-nei-ding», sin la «c».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.so-if-i-understand-correctly", "text": "So if I understand correctly, you're replacing the whole billing system?", "es": "O sea, si lo he entendido bien, ¿estáis cambiando todo el sistema de facturación?", "notes": "«If I understand correctly» = si lo he entendido bien. «billing» = facturación.", "explanation": "Resumir lo que te han contado demuestra que escuchas y evita malentendidos. Sube el tono al final: es una pregunta.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.funny-you-should-mention-that", "text": "Funny you should mention that; we ran into the exact same problem.", "es": "Qué casualidad que lo digas: nosotros nos topamos con el mismo problema.", "notes": "«Funny you should mention that» = qué curioso que lo menciones. «run into a problem» = toparse con un problema.", "explanation": "Para enlazar tu experiencia con la de la otra persona. «exact same» se enlaza: «ig-ZAK-seim».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.whats-the-biggest-challenge", "text": "What's the biggest challenge you're dealing with right now?", "es": "¿Cuál es el mayor reto al que te enfrentas ahora mismo?", "notes": "«deal with» = lidiar con, ocuparse de. «biggest», nunca «most big».", "explanation": "Pregunta de networking por excelencia: la gente habla con gusto de sus problemas. «challenge»: «CHA-lənch».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.i-hear-that-a-lot", "text": "I hear that a lot, especially from teams that grew really fast.", "es": "Eso lo oigo mucho, sobre todo en equipos que han crecido muy rápido.", "notes": "«I hear that a lot» = me lo dicen mucho. «grow fast» = crecer rápido.", "explanation": "Valida lo que te cuentan y muestra que conoces el tema. «especially»: «is-PE-shə-li», sin «e» extra delante.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.out-of-curiosity", "text": "Out of curiosity, how big is your team these days?", "es": "Por curiosidad, ¿cómo de grande es vuestro equipo ahora?", "notes": "«out of curiosity» = por curiosidad; nunca «by curiosity». «how big» = cómo de grande, cuánta gente.", "explanation": "Suaviza una pregunta algo directa. «curiosity»: «kiu-ri-A-si-di», acento en la tercera sílaba.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.im-by-no-means-an-expert", "text": "I'm by no means an expert, but we had good results with feature flags.", "es": "No soy ni mucho menos un experto, pero a nosotros nos funcionaron bien los feature flags.", "notes": "«by no means» = en absoluto, ni mucho menos. «feature flag» = interruptor para activar una funcionalidad sin desplegar.", "explanation": "Aporta una idea sin sonar a sabelotodo. «means» lleva «ii» larga: «miinz».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.where-do-you-see-the-industry-going", "text": "Where do you see the industry going over the next few years?", "es": "¿Hacia dónde crees que va el sector en los próximos años?", "notes": "«see something going» = ver hacia dónde va algo. «over the next few years» = en los próximos años.", "explanation": "Pregunta de altura para conversaciones con gente veterana. «industry» se acentúa al principio: «IN-dəs-tri».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.its-a-small-world", "text": "It's a small world! I used to work with her at my last job.", "es": "¡El mundo es un pañuelo! Trabajé con ella en mi anterior empresa.", "notes": "«It's a small world» = el mundo es un pañuelo. «used to» = antes solía; «my last job» = mi anterior trabajo.", "explanation": "Cuando descubrís un conocido común. «world» es difícil: «wərld», la «o» suena como una «e» muy cerrada.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.we-must-have-mutual-connections", "text": "We must have a few mutual connections, then.", "es": "Entonces seguro que tenemos algunos contactos en común.", "notes": "«must have» aquí es deducción: «seguro que tenemos». «mutual connections» = contactos en común (en LinkedIn y en la vida).", "explanation": "Deducción lógica y simpática. «mutual»: «MIU-chu-əl».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.sorry-i-went-off-on-a-tangent", "text": "Sorry, I went off on a tangent there. Where were we?", "es": "Perdona, me he ido por las ramas. ¿Por dónde íbamos?", "notes": "«go off on a tangent» = irse por las ramas. «Where were we?» = ¿por dónde íbamos?", "explanation": "Para volver al hilo con naturalidad. «tangent»: «TAN-chənt».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.id-love-to-introduce-you", "text": "I'd love to introduce you to my colleague; she's working on something similar.", "es": "Me encantaría presentarte a mi compañera; está trabajando en algo parecido.", "notes": "Presentar a una persona es «introduce», nunca «present» (que es presentar en público o un producto).", "explanation": "Conectar a dos personas te hace memorable. «introduce»: «in-trə-DUUS».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.have-you-two-met", "text": "Have you two met? Priya, this is Daniel, who runs the data team at Lumen.", "es": "¿Os conocéis? Priya, este es Daniel, que dirige el equipo de datos de Lumen.", "notes": "«Have you two met?» = ¿os conocéis ya? Al presentar se dice «this is…», no «he is…». «run a team» = dirigir.", "explanation": "Fórmula estándar: nombre más un detalle que dé tema de conversación. «data» en EE. UU.: «DEI-da».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.you-two-should-really-talk", "text": "You two should really talk; you're tackling the same problem from different angles.", "es": "Tenéis que hablar: estáis abordando el mismo problema desde ángulos distintos.", "notes": "«tackle a problem» = abordar un problema. «from different angles» = desde distintos ángulos.", "explanation": "Justifica por qué presentas a dos personas. «angles»: «ANG-gəlz».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.would-you-mind-putting-me-in-touch", "text": "Would you mind putting me in touch with someone on their hiring team?", "es": "¿Te importaría ponerme en contacto con alguien de su equipo de selección?", "notes": "«put someone in touch with» = poner en contacto con. «Would you mind + -ing?» = ¿te importaría…? «hiring team» = equipo de contratación.", "explanation": "Petición formal y educada. Recuerda: si la respuesta es «Not at all», significa que sí te ayudan.", "register": "formal", "situation": "social"},
+    {"id": "c1-networking.feel-free-to-mention-my-name", "text": "Feel free to mention my name when you reach out to her.", "es": "Puedes decirle que vas de mi parte cuando le escribas.", "notes": "«feel free to» = no dudes en; «reach out to someone» = contactar con alguien, muy usado en el trabajo.", "explanation": "Lo dice quien te recomienda: abre puertas. «reach out» se enlaza: «rii-CHAUT».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.would-you-be-comfortable-referring-me", "text": "If a role opens up, would you be comfortable referring me?", "es": "Si sale algún puesto, ¿te parecería bien recomendarme?", "notes": "«refer someone» = recomendar a alguien para un puesto; «a role opens up» = sale una vacante. «would you be comfortable» deja espacio para decir que no.", "explanation": "Pide una recomendación sin presionar. «referring»: acento en la segunda sílaba, «ri-FER-ing».", "register": "formal", "situation": "social"},
+    {"id": "c1-networking.im-not-actively-looking", "text": "I'm not actively looking, but I'm always open to interesting conversations.", "es": "No estoy buscando trabajo activamente, pero siempre estoy abierto a conversaciones interesantes.", "notes": "«be looking» a secas, en este contexto, = buscar trabajo. «open to» + sustantivo o «-ing».", "explanation": "Respuesta elegante cuando un reclutador te tantea. «actively»: «AK-tiv-li».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.could-i-pick-your-brain", "text": "I don't want to impose, but could I pick your brain about remote hiring?", "es": "No quiero abusar, pero ¿te puedo pedir consejo sobre la contratación en remoto?", "notes": "«pick someone's brain» = pedirle consejo a alguien que sabe del tema; «impose» = abusar de alguien, molestar.", "explanation": "Para pedir consejo a un experto sin resultar invasivo. «brain» rima con «rain».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.id-really-value-your-insight", "text": "I'd really value your insight on this, since you've been through it before.", "es": "Me vendría muy bien tu opinión, ya que tú ya has pasado por esto.", "notes": "«value someone's insight» = valorar la opinión de alguien; «go through something» = pasar por algo. «since» aquí = ya que.", "explanation": "Halaga sin exagerar y justifica la petición. «insight»: «IN-sait», acento al principio.", "register": "formal", "situation": "social"},
+    {"id": "c1-networking.shes-the-go-to-person", "text": "She's the go-to person for anything related to security.", "es": "Ella es la persona a la que acudir para todo lo relacionado con seguridad.", "notes": "«the go-to person» = la persona de referencia. «related to» = relacionado con.", "explanation": "Para recomendar a alguien concreto. «security»: «si-KIU-ri-di».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.i-dont-want-to-keep-you", "text": "I don't want to keep you; I'm sure there are other people you want to see.", "es": "No te quiero entretener; seguro que hay más gente a la que quieres ver.", "notes": "«I don't want to keep you» = no te quiero entretener: forma educada de cerrar. «there are other people», en plural.", "explanation": "Cierra la conversación pensando en la otra persona. «keep» lleva «ii» larga.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.i-should-let-you-go", "text": "I should probably let you go, but it's been great chatting.", "es": "Debería dejarte ir, pero ha sido un placer charlar contigo.", "notes": "«let someone go» aquí = no entretener más a alguien (en otro contexto, «despedir»). «it's been great + -ing».", "explanation": "Otra salida elegante. «probably» se reduce a «PRAB-li» al hablar rápido.", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.do-you-have-a-card", "text": "Do you have a card, or should I just find you on LinkedIn?", "es": "¿Tienes tarjeta o te busco directamente en LinkedIn?", "notes": "«a card» aquí = tarjeta de visita («business card»). «just» = directamente, sin más.", "explanation": "Para intercambiar contactos antes de despedirte. «LinkedIn»: «LINKT-in».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.it-was-a-pleasure-meeting-you", "text": "It was a real pleasure meeting you, and good luck with the launch.", "es": "Ha sido un auténtico placer conocerte, y suerte con el lanzamiento.", "notes": "«meet» = conocer por primera vez; «know» = conocer ya. «good luck with» = suerte con.", "explanation": "Despedida cálida que recuerda algo de lo que hablasteis. «pleasure»: «PLE-zhər», la «s» suena como la «j» francesa.", "register": "formal", "situation": "social"},
+    {"id": "c1-networking.lets-grab-coffee", "text": "Let's grab coffee sometime next week and pick up where we left off.", "es": "Tomémonos un café la semana que viene y seguimos donde lo dejamos.", "notes": "«grab coffee» = tomar un café (informal); «pick up where we left off» = retomar donde lo dejamos.", "explanation": "Propuesta informal para seguir la conversación. «left off» se enlaza: «lef-TOF».", "register": "tu", "situation": "social"},
+    {"id": "c1-networking.ill-drop-you-a-line", "text": "I'll drop you a line on Monday with the article I mentioned.", "es": "Te escribo el lunes con el artículo que te comenté.", "notes": "«drop someone a line» = escribirle unas líneas, mandarle un mensaje. «on Monday», con «on».", "explanation": "Promete algo concreto y cúmplelo. «Monday»: «MAN-dei».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.great-meeting-you-yesterday", "text": "Great meeting you at the conference yesterday. As promised, here's the link.", "es": "Encantado de haberte conocido ayer en el congreso. Como te prometí, aquí tienes el enlace.", "notes": "Email de seguimiento: recuerda dónde os conocisteis y cumple lo prometido. «As promised» = como prometí.", "explanation": "Envíalo dentro de las cuarenta y ocho horas siguientes. «promised» termina en /t/: «PRA-mist».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.i-was-wondering-whether-you-might-be-free", "text": "I was wondering whether you might be free for a quick call next week.", "es": "Me preguntaba si tendrías un rato para una llamada rápida la semana que viene.", "notes": "«I was wondering whether…» = pasado de cortesía que suaviza la petición. «might» la hace aún más educada.", "explanation": "Para pedir una reunión por escrito sin presionar. «wondering»: «WAN-dər-ing», no confundir con «wandering» (deambular).", "register": "formal", "situation": "social"},
+    {"id": "c1-networking.no-pressure-at-all", "text": "No pressure at all; I know things get hectic after a conference.", "es": "Sin ninguna prisa; sé que después de un congreso todo es una locura.", "notes": "«No pressure» = sin presión, sin compromiso. «hectic» = frenético, de locos.", "explanation": "Quita presión a tu mensaje. «pressure»: «PRE-shər».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.just-circling-back", "text": "Just circling back on my last email in case it got buried.", "es": "Te escribo de nuevo por mi último email, por si se te quedó enterrado.", "notes": "«circle back» = volver sobre un tema; «get buried» = quedar enterrado en la bandeja de entrada. Se omite «I'm» al principio, típico de emails.", "explanation": "Recordatorio educado una semana después. «buried» se dice «BE-rid», como «berry».", "register": "neutral", "situation": "social"},
+    {"id": "c1-networking.i-came-across-this-article", "text": "I came across this article and immediately thought of our conversation.", "es": "Me encontré con este artículo y enseguida pensé en nuestra conversación.", "notes": "«come across» = encontrarse algo por casualidad. «thought of» = pensé en («think of/about», nunca «think in»).", "explanation": "Excusa perfecta para retomar el contacto semanas después. «thought»: «zot», con la «th» de «zapato».", "register": "neutral", "situation": "social"}
+  ],
+  "vocab": [
+    {"id": "c1-networking.icebreaker", "word": "icebreaker", "article": "an", "plural": "icebreakers", "es": "la frase o actividad para romper el hielo", "notes": "«break the ice» = romper el hielo, igual que en español.", "situation": "social"},
+    {"id": "c1-networking.keynote", "word": "keynote", "article": "a", "plural": "keynotes", "es": "la ponencia principal", "notes": "La charla estrella del evento. «keynote speaker» = el ponente principal.", "example": "c1-networking.what-did-you-think-of-the-keynote", "situation": "social"},
+    {"id": "c1-networking.conference", "word": "conference", "article": "a", "plural": "conferences", "es": "el congreso, la conferencia (el evento)", "notes": "El evento entero; cada charla es «a talk». Se va «to a conference» y se está «at a conference».", "example": "c1-networking.is-this-your-first-time-here", "situation": "social"},
+    {"id": "c1-networking.overhear", "word": "overhear", "es": "oír sin querer", "notes": "Verbo irregular: overhear, overheard, overheard.", "example": "c1-networking.i-couldnt-help-overhearing", "situation": "social"},
+    {"id": "c1-networking.small-talk", "word": "small talk", "es": "la charla de cortesía", "notes": "Incontable: «make small talk» = charlar de temas ligeros (el tiempo, el viaje, el evento).", "situation": "social"},
+    {"id": "c1-networking.name-tag", "word": "name tag", "article": "a", "plural": "name tags", "es": "la etiqueta con el nombre, la acreditación", "notes": "Mirar la acreditación de alguien es una excusa perfecta para empezar a hablar.", "situation": "social"},
+    {"id": "c1-networking.mingle", "word": "mingle", "es": "mezclarse con la gente, socializar", "notes": "Verbo: ir de grupo en grupo en un evento. «Let's go mingle» = vamos a socializar un poco.", "situation": "social"},
+    {"id": "c1-networking.elevator-pitch", "word": "elevator pitch", "article": "an", "plural": "elevator pitches", "es": "la presentación relámpago (de ti o de tu proyecto)", "notes": "Lo que puedes contar en un viaje de ascensor: unos treinta segundos.", "situation": "social"},
+    {"id": "c1-networking.background", "word": "background", "es": "la formación, la trayectoria", "notes": "«What's your background?» = ¿de dónde vienes profesionalmente? También «el fondo» de una imagen.", "example": "c1-networking.my-background-is-in-physics", "situation": "social"},
+    {"id": "c1-networking.field", "word": "field", "article": "a", "plural": "fields", "es": "el campo, el sector", "notes": "«in my field» = en mi sector. También «el campo» (de fútbol, de cultivo).", "example": "c1-networking.how-did-you-get-into-this-field", "situation": "social"},
+    {"id": "c1-networking.role", "word": "role", "article": "a", "plural": "roles", "es": "el puesto, la función", "notes": "Más usado que «position» al hablar de trabajo: «a senior role», «a new role».", "example": "c1-networking.its-a-bit-of-a-hybrid-role", "situation": "social"},
+    {"id": "c1-networking.job-title", "word": "job title", "article": "a", "plural": "job titles", "es": "el cargo", "notes": "El nombre oficial de tu puesto («Senior Engineer»). A menudo se dice solo «title».", "example": "c1-networking.my-title-is-a-bit-misleading", "situation": "social"},
+    {"id": "c1-networking.booth", "word": "booth", "article": "a", "plural": "booths", "es": "el stand, la caseta", "notes": "En una feria o congreso: «Come by our booth!» = ¡pásate por nuestro stand! La «th» final es la de «zapato».", "situation": "social"},
+    {"id": "c1-networking.panel", "word": "panel", "article": "a", "plural": "panels", "es": "la mesa redonda", "notes": "«be on a panel» = participar en una mesa redonda; «panelist» = participante.", "situation": "social"},
+    {"id": "c1-networking.workshop", "word": "workshop", "article": "a", "plural": "workshops", "es": "el taller", "notes": "Sesión práctica en un congreso: «run a workshop» = impartir un taller.", "situation": "social"},
+    {"id": "c1-networking.industry", "word": "industry", "article": "an", "plural": "industries", "es": "el sector, la industria", "notes": "«the tech industry» = el sector tecnológico. Acento al principio: «IN-dəs-tri».", "example": "c1-networking.where-do-you-see-the-industry-going", "situation": "social"},
+    {"id": "c1-networking.pain-point", "word": "pain point", "article": "a", "plural": "pain points", "es": "el punto débil, el problema que más duele", "notes": "Jerga de negocio: el problema concreto que sufre un cliente o un equipo.", "situation": "social"},
+    {"id": "c1-networking.mutual-connection", "word": "mutual connection", "article": "a", "plural": "mutual connections", "es": "el contacto en común", "notes": "«mutual friend» = amigo en común.", "example": "c1-networking.we-must-have-mutual-connections", "situation": "social"},
+    {"id": "c1-networking.rapport", "word": "rapport", "es": "la buena sintonía, el buen feeling", "notes": "«build rapport» = crear confianza y sintonía. Se dice «ra-POR»: la «t» final no suena.", "situation": "social"},
+    {"id": "c1-networking.tackle", "word": "tackle", "es": "abordar, afrontar (un problema)", "notes": "Verbo: «tackle a problem». En deporte, «hacer una entrada».", "example": "c1-networking.you-two-should-really-talk", "situation": "social"},
+    {"id": "c1-networking.reach-out", "word": "reach out", "es": "contactar, ponerse en contacto", "notes": "Phrasal verb: «reach out to someone». «Thanks for reaching out» = gracias por escribir.", "example": "c1-networking.feel-free-to-mention-my-name", "situation": "social"},
+    {"id": "c1-networking.referral", "word": "referral", "article": "a", "plural": "referrals", "es": "la recomendación (para un puesto)", "notes": "Muchas empresas contratan por «referrals»: un empleado recomienda a alguien. Verbo: «refer».", "situation": "social"},
+    {"id": "c1-networking.opportunity", "word": "opportunity", "article": "an", "plural": "opportunities", "es": "la oportunidad", "notes": "«a job opportunity» = una oferta de trabajo. Acento en «TU»: «a-pər-TU-ni-di».", "situation": "social"},
+    {"id": "c1-networking.headhunter", "word": "headhunter", "article": "a", "plural": "headhunters", "es": "el cazatalentos", "notes": "Reclutador externo que busca perfiles concretos.", "situation": "social"},
+    {"id": "c1-networking.insight", "word": "insight", "article": "an", "plural": "insights", "es": "la perspectiva, la idea valiosa", "notes": "Lo que aporta alguien que entiende bien un tema. «insightful» = revelador, muy acertado.", "example": "c1-networking.id-really-value-your-insight", "situation": "social"},
+    {"id": "c1-networking.go-to-person", "word": "go-to person", "article": "a", "plural": "go-to people", "es": "la persona de referencia", "notes": "La persona a la que todos acuden para un tema concreto.", "example": "c1-networking.shes-the-go-to-person", "situation": "social"},
+    {"id": "c1-networking.business-card", "word": "business card", "article": "a", "plural": "business cards", "es": "la tarjeta de visita", "notes": "En la conversación basta con «a card».", "example": "c1-networking.do-you-have-a-card", "situation": "social"},
+    {"id": "c1-networking.hectic", "word": "hectic", "es": "frenético, de locos", "notes": "Adjetivo: «a hectic week» = una semana de locos.", "example": "c1-networking.no-pressure-at-all", "situation": "social"},
+    {"id": "c1-networking.circle-back", "word": "circle back", "es": "volver sobre un tema, retomarlo", "notes": "Phrasal verb muy de oficina: «Let's circle back on this next week».", "example": "c1-networking.just-circling-back", "situation": "social"},
+    {"id": "c1-networking.touch-base", "word": "touch base", "es": "hablar un momento, ponerse al día", "notes": "«Let's touch base next week» = hablamos la semana que viene. Expresión que viene del béisbol.", "situation": "social"}
+  ],
+  "qa": [
+    {
+      "id": "c1-networking.qa.first-time",
+      "question": "Hi there! Is this your first time at one of these events?",
+      "questionEs": "¡Hola! ¿Es la primera vez que vienes a uno de estos eventos?",
+      "accepted": [
+        {"text": "It is, actually. I'm still getting my bearings, so any tips are welcome.", "es": "Pues sí. Todavía me estoy orientando, así que cualquier consejo es bienvenido."},
+        {"text": "No, I came last year too, but I still only know a handful of people.", "es": "No, vine también el año pasado, pero sigo conociendo solo a un puñado de gente."}
+      ],
+      "distractors": [
+        {"text": "Yes, is my first time and I don't know to nobody.", "es": "Sí, es mi primera vez y no conozco a nadie."},
+        {"text": "No, I come to this event since three years.", "es": "No, vengo a este evento desde hace tres años."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "En inglés el sujeto es obligatorio: «it is», nunca «is my first time»; «no conozco a nadie» = «I don't know anyone» (sin «to» y sin doble negación); «vengo desde hace tres años» = «I've been coming for three years». «get your bearings» = orientarte.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-networking.qa.keynote",
+      "question": "What did you make of the keynote this morning?",
+      "questionEs": "¿Qué te pareció la ponencia principal de esta mañana?",
+      "accepted": [
+        {"text": "I thought it was really thought-provoking, although it ran a little long.", "es": "Me pareció que daba mucho que pensar, aunque se alargó un poco."},
+        {"text": "Honestly, it was a bit too high-level for me, but the Q&A was great.", "es": "La verdad, fue un poco demasiado general para mí, pero el turno de preguntas estuvo genial."}
+      ],
+      "distractors": [
+        {"text": "It was very interesting, I liked a lot.", "es": "Fue muy interesante, me gustó mucho."},
+        {"text": "It was a little boring for me, it was too much long.", "es": "Para mí fue un poco aburrida, fue demasiado larga."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«What did you make of…?» = ¿qué te pareció…? «like» necesita objeto: «I liked it a lot»; «demasiado larga» = «too long», sin «much». «run long» = alargarse; «high-level» = general, poco detallado.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-networking.qa.what-do-you-do",
+      "question": "So what is it that you do, exactly?",
+      "questionEs": "¿Y a qué te dedicas exactamente?",
+      "accepted": [
+        {"text": "I'm a backend developer. In a nutshell, I build the systems that move money around.", "es": "Soy desarrollador de backend. En pocas palabras, construyo los sistemas que mueven el dinero."},
+        {"text": "I lead a small team at a fintech startup; we make payments simpler for small shops.", "es": "Dirijo un pequeño equipo en una startup fintech: hacemos los pagos más sencillos para tiendas pequeñas."}
+      ],
+      "distractors": [
+        {"text": "I work of programmer in a startup of payments.", "es": "Trabajo de programador en una startup de pagos."},
+        {"text": "I am backend developer since two years.", "es": "Soy desarrollador de backend desde hace dos años."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«trabajo de programador» = «I work as a developer» o «I'm a developer», con artículo «a»; «una startup de pagos» = «a payments startup»; «desde hace dos años» = «I've been… for two years».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-networking.qa.background",
+      "question": "How did you end up in tech? I'm guessing you're not from around here.",
+      "questionEs": "¿Cómo acabaste en tecnología? Supongo que no eres de por aquí.",
+      "accepted": [
+        {"text": "Good guess! I'm from Spain. My background is in physics, and I moved into software after college.", "es": "¡Bien visto! Soy de España. Vengo de la física y me pasé al software al acabar la carrera."},
+        {"text": "Long story short, I'm from Valencia, and I came here for a job at a startup.", "es": "Resumiendo mucho, soy de Valencia y vine aquí por un trabajo en una startup."}
+      ],
+      "distractors": [
+        {"text": "I am from Spain and I studied physic, after I changed to software.", "es": "Soy de España y estudié física; después me cambié al software."},
+        {"text": "I came here for to work in a startup.", "es": "Vine aquí para trabajar en una startup."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«física» = «physics», siempre con «s»; «después» al principio de frase = «after that» o «later», no «after» a secas; «para trabajar» = «to work», nunca «for to work». «long story short» = resumiendo.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-networking.qa.challenge",
+      "question": "What's the biggest challenge your team is facing at the moment?",
+      "questionEs": "¿Cuál es el mayor reto al que se enfrenta tu equipo ahora mismo?",
+      "accepted": [
+        {"text": "Honestly, scaling. We doubled in size this year, and our processes haven't caught up.", "es": "La verdad, crecer. Hemos doblado el tamaño este año y nuestros procesos no han ido al mismo ritmo."},
+        {"text": "Hiring, mostly. It's hard to find senior people who want to join a startup.", "es": "Contratar, sobre todo. Cuesta encontrar gente senior que quiera unirse a una startup."}
+      ],
+      "distractors": [
+        {"text": "The most big challenge is to scale, because we are growing a lot.", "es": "El mayor reto es crecer, porque estamos creciendo mucho."},
+        {"text": "We have many problems for find senior people.", "es": "Tenemos muchos problemas para encontrar gente senior."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«el mayor» = «the biggest», nunca «the most big»; «problemas para encontrar» = «trouble finding» o «it's hard to find», nunca «for find». «catch up» = ponerse al día.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-networking.qa.introduce",
+      "question": "Do you happen to know anyone here who works in machine learning?",
+      "questionEs": "¿Conoces por casualidad a alguien aquí que trabaje en machine learning?",
+      "accepted": [
+        {"text": "Actually, yes. Let me introduce you to Daniel; he runs the data team at Lumen.", "es": "Pues sí. Deja que te presente a Daniel: dirige el equipo de datos de Lumen."},
+        {"text": "Not personally, but I can put you in touch with a friend who does.", "es": "Personalmente no, pero te puedo poner en contacto con una amiga que sí."}
+      ],
+      "distractors": [
+        {"text": "Yes, I can present you a friend that works in this.", "es": "Sí, te puedo presentar a un amigo que trabaja en esto."},
+        {"text": "I know a person who is working in machine learning since years.", "es": "Conozco a una persona que trabaja en machine learning desde hace años."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«presentar a alguien» = «introduce someone to someone», no «present» (que es presentar en público o un producto); «desde hace años» = «who has worked… for years», no «since years». «Do you happen to…?» = ¿por casualidad…?",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-networking.qa.pick-your-brain",
+      "question": "Would you mind if I picked your brain about moving to the US?",
+      "questionEs": "¿Te importaría si te pido consejo sobre mudarse a Estados Unidos?",
+      "accepted": [
+        {"text": "Not at all, happy to help. What would you like to know?", "es": "Para nada, encantado de ayudar. ¿Qué te gustaría saber?"},
+        {"text": "Of course not! I went through the whole process myself two years ago.", "es": "¡Claro que no! Yo pasé por todo el proceso hace dos años."}
+      ],
+      "distractors": [
+        {"text": "Yes, of course, ask me.", "es": "Sí, claro, pregúntame."},
+        {"text": "No problem, you can to ask me everything.", "es": "No hay problema, puedes preguntarme todo."}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Cuidado: a «Would you mind…?» se responde «Not at all» u «Of course not» si aceptas; «Yes» significa que sí te importa. «can» va sin «to»; «pregúntame lo que quieras» = «ask me anything».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-networking.qa.wrap-up",
+      "question": "Anyway, I should probably go and find my colleagues before the next session.",
+      "questionEs": "Bueno, debería ir a buscar a mis compañeros antes de la próxima sesión.",
+      "accepted": [
+        {"text": "Of course, I don't want to keep you. It was great talking to you.", "es": "Claro, no te quiero entretener. Ha sido un placer hablar contigo."},
+        {"text": "Sure! Let's connect on LinkedIn and grab coffee sometime.", "es": "¡Claro! Conectamos en LinkedIn y nos tomamos un café algún día."}
+      ],
+      "distractors": [
+        {"text": "Okay, was a pleasure to know you.", "es": "Vale, fue un placer conocerte."},
+        {"text": "Of course, we keep in contact!", "es": "¡Claro, seguimos en contacto!"}
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Falta el sujeto: «It was a pleasure»; conocer a alguien por primera vez es «meet», no «know»; «seguimos en contacto» = «Let's keep in touch», no «we keep in contact».",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}
