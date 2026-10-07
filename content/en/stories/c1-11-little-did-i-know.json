@@ -1,0 +1,95 @@
+{
+  "id": "story.en-c1-little-did-i-know",
+  "order": 311,
+  "title": "Little did I know",
+  "titleEs": "Poco me imaginaba yo",
+  "description": "Por fin se presenta el libro de la señora Carter. Ella cuenta una anécdota sobre los cuatro amigos, y Pablo descubre que tiene un capítulo propio.",
+  "emoji": "📚",
+  "situation": "cultura",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "The bookstore in Andersonville is packed for the launch of Mrs. Carter's memoir.", "es": "La librería de Andersonville está llena para la presentación de las memorias de la señora Carter." },
+    { "id": "s2", "text": "Maya, Jordan and Pablo sit in the front row, holding their copies.", "es": "Maya, Jordan y Pablo se sientan en la primera fila, con sus ejemplares en la mano." },
+    { "id": "s3", "text": "Mrs. Carter adjusts her glasses and looks at the audience.", "es": "La señora Carter se ajusta las gafas y mira al público." },
+    { "id": "s4", "text": "«Have I ever told you about the time a young Spaniard knocked on my door at midnight?»", "es": "«¿Os he contado alguna vez lo de aquel joven español que llamó a mi puerta a medianoche?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«To give you some context, he had locked himself out, and it was snowing.»", "es": "«Para que os hagáis una idea, se había quedado fuera sin llaves, y estaba nevando.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s6", "text": "«His English was terrible, so he tried to explain everything with his hands.»", "es": "«Su inglés era malísimo, así que intentó explicármelo todo con las manos.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "«I thought he was asking me for a frying pan.»", "es": "«Yo pensé que me estaba pidiendo una sartén.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s8", "text": "The whole room cracks up, and Pablo turns bright red.", "es": "Toda la sala se parte de risa, y Pablo se pone rojo como un tomate." },
+    { "id": "s9", "text": "«I'll spare you the details, but we ended up drinking tea until three in the morning.»", "es": "«Os ahorro los detalles, pero acabamos tomando té hasta las tres de la mañana.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "«Little did I know that this was only the beginning.»", "es": "«Poco me imaginaba yo que aquello era solo el principio.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "She reads a few pages about Maya's first job and Jordan's first concert.", "es": "Lee unas cuantas páginas sobre el primer trabajo de Maya y el primer concierto de Jordan." },
+    { "id": "s12", "text": "Then she closes the book and smiles at Pablo.", "es": "Luego cierra el libro y le sonríe a Pablo." },
+    { "id": "s13", "text": "«Chapter twelve is called “The boy from Valencia.” It's about courage.»", "es": "«El capítulo doce se titula «El chico de Valencia». Trata sobre el valor.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s14", "text": "Pablo just freezes. He had no idea.", "es": "Pablo se queda helado. No tenía ni idea." },
+    { "id": "s15", "text": "After the signing, he finds her by the window.", "es": "Después de la firma, la encuentra junto a la ventana." },
+    { "id": "s16", "text": "«In hindsight, I should have asked before putting you in it, dear.»", "es": "«Ahora que lo pienso, debería haberte preguntado antes de meterte en el libro, cielo.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s17", "text": "«Are you kidding? It's the nicest thing anyone has ever done for me.»", "es": "«¿Estás de broma? Es lo más bonito que alguien ha hecho nunca por mí.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s18", "text": "«Then the moral of the story is: wherever you go, you'll always have a door to knock on.»", "es": "«Entonces la moraleja de la historia es esta: vayas donde vayas, siempre tendrás una puerta a la que llamar.»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "c1-storytelling.have-i-ever-told-you-about-the-time",
+    "c1-storytelling.to-give-you-some-context",
+    "c1-storytelling.crack-up",
+    "c1-storytelling.ill-spare-you-the-details",
+    "c1-storytelling.little-did-i-know",
+    "c1-storytelling.freeze-up",
+    "c1-storytelling.hindsight",
+    "c1-storytelling.moral",
+    "c1-presenting.audience"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why did Pablo knock on Mrs. Carter's door at midnight?",
+      "es": "¿Por qué llamó Pablo a la puerta de la señora Carter a medianoche?",
+      "options": [
+        { "text": "He wanted to borrow a frying pan.", "es": "Quería que le prestara una sartén." },
+        { "text": "He had locked himself out in the snow.", "es": "Se había quedado fuera sin llaves en plena nevada." },
+        { "text": "He wanted to practice his English.", "es": "Quería practicar inglés." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "How does the audience react to the story?",
+      "es": "¿Cómo reacciona el público a la anécdota?",
+      "options": [
+        { "text": "Everyone laughs.", "es": "Todos se ríen." },
+        { "text": "Nobody says a word.", "es": "Nadie dice nada." },
+        { "text": "Some people leave.", "es": "Algunos se van." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What is chapter twelve about?",
+      "es": "¿De qué trata el capítulo doce?",
+      "options": [
+        { "text": "Jordan's first concert.", "es": "El primer concierto de Jordan." },
+        { "text": "Mrs. Carter's first class.", "es": "La primera clase de la señora Carter." },
+        { "text": "Pablo, and courage.", "es": "Pablo, y el valor." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How does Pablo feel about being in the book?",
+      "es": "¿Cómo se siente Pablo por aparecer en el libro?",
+      "options": [
+        { "text": "Angry that she didn't ask.", "es": "Enfadado porque no le preguntó." },
+        { "text": "Deeply touched.", "es": "Muy conmovido." },
+        { "text": "Embarrassed and annoyed.", "es": "Avergonzado y molesto." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s5", "answer": "c1-storytelling.to-give-you-some-context", "gap": "context", "distractors": ["contest", "contexture"] },
+    { "id": "g2", "sentence": "s8", "answer": "c1-storytelling.crack-up", "gap": "cracks up", "distractors": ["breaks up", "splits of laughing"] },
+    { "id": "g3", "sentence": "s9", "answer": "c1-storytelling.ill-spare-you-the-details", "gap": "spare you", "distractors": ["save to you", "economize you"] },
+    { "id": "g4", "sentence": "s10", "answer": "c1-storytelling.little-did-i-know", "gap": "Little did I know", "distractors": ["Little I knew did", "Few did I know"] },
+    { "id": "g5", "sentence": "s16", "answer": "c1-storytelling.hindsight", "gap": "hindsight", "distractors": ["insight", "backsight"] },
+    { "id": "g6", "sentence": "s18", "answer": "c1-storytelling.moral", "gap": "moral", "distractors": ["morality", "morale"] }
+  ]
+}
