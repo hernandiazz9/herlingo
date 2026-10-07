@@ -1,0 +1,370 @@
+{
+  "id": "b2-tech-talk",
+  "order": 220,
+  "level": "B2",
+  "title": "Hablar de tecnología: arquitectura, pros y contras, code review",
+  "description": "Explicar cómo está montado un sistema, defender una decisión técnica con sus pros y contras, comentar y responder en un code review, y contárselo a quien no es técnico.",
+  "emoji": "💻",
+  "situation": "tecnologia",
+  "lessons": [
+    {
+      "id": "b2-tech-talk.l.architecture",
+      "title": "Describir la arquitectura de un sistema",
+      "items": [
+        "b2-tech-talk.architecture",
+        "b2-tech-talk.high-level-overview",
+        "b2-tech-talk.service",
+        "b2-tech-talk.split-into-three-services",
+        "b1-tech.database",
+        "b2-tech-talk.each-service-has-its-own-database",
+        "b2-tech-talk.layer",
+        "b2-tech-talk.api",
+        "b2-tech-talk.talks-to-the-backend",
+        "b2-tech-talk.queue",
+        "b2-tech-talk.requests-go-through-a-queue",
+        "b2-tech-talk.cache",
+        "b2-tech-talk.we-cache-the-results",
+        "b2-tech-talk.bottleneck",
+        "b2-tech-talk.the-main-bottleneck",
+        "b2-tech-talk.monolith",
+        "b2-tech-talk.breaking-up-the-monolith",
+        "b2-tech-talk.load",
+        "b2-tech-talk.under-heavy-load",
+        "b2-tech-talk.scale",
+        "b2-tech-talk.how-does-this-scale",
+        "b2-tech-talk.qa.walk-me-through",
+        "b2-tech-talk.qa.bottleneck"
+      ]
+    },
+    {
+      "id": "b2-tech-talk.l.trade-offs",
+      "title": "Pros y contras de una decisión técnica",
+      "items": [
+        "b2-tech-talk.approach",
+        "b2-meetings.trade-off",
+        "b2-tech-talk.both-approaches-work",
+        "b2-tech-talk.upside",
+        "b2-tech-talk.the-upside-is",
+        "b2-tech-talk.complexity",
+        "b2-tech-talk.it-adds-complexity",
+        "b2-tech-talk.maintain",
+        "b2-tech-talk.harder-to-maintain",
+        "b2-tech-talk.framework",
+        "b2-tech-talk.overkill",
+        "b2-tech-talk.a-new-framework-would-be-overkill",
+        "b2-tech-talk.performance",
+        "b2-tech-talk.trading-performance-for-simplicity",
+        "b2-tech-talk.library",
+        "b2-tech-talk.this-library-is-well-maintained",
+        "b2-tech-talk.cut-corners",
+        "b2-tech-talk.if-we-cut-corners-now",
+        "b2-tech-talk.tech-debt",
+        "b2-tech-talk.that-would-create-tech-debt",
+        "b2-tech-talk.it-depends-on-traffic",
+        "b2-tech-talk.id-go-with-the-simpler-option",
+        "b2-tech-talk.qa.which-option",
+        "b2-tech-talk.qa.rewrite"
+      ]
+    },
+    {
+      "id": "b2-tech-talk.l.reviewing",
+      "title": "Code review: comentar el código de otro",
+      "items": [
+        "b1-office.code-review",
+        "b2-tech-talk.pull-request",
+        "b2-tech-talk.i-left-a-few-comments",
+        "b2-tech-talk.overall-it-looks-good",
+        "b2-tech-talk.nitpick",
+        "b2-tech-talk.just-a-nitpick",
+        "b2-tech-talk.edge-case",
+        "b2-tech-talk.what-happens-if-the-list-is-empty",
+        "b2-tech-talk.were-missing-an-edge-case",
+        "b2-tech-talk.readable",
+        "b2-tech-talk.could-we-rename-this-variable",
+        "b2-tech-talk.split-up",
+        "b2-tech-talk.this-function-is-doing-too-much",
+        "b2-tech-talk.have-you-considered",
+        "b2-tech-talk.test-coverage",
+        "b2-tech-talk.could-you-add-a-test",
+        "b2-tech-talk.looks-good-to-me",
+        "b2-tech-talk.qa.pull-request"
+      ]
+    },
+    {
+      "id": "b2-tech-talk.l.responding",
+      "title": "Code review: responder y defender tu código",
+      "items": [
+        "b2-tech-talk.good-catch",
+        "b2-tech-talk.address",
+        "b2-tech-talk.ive-addressed-all-your-comments",
+        "b2-tech-talk.on-purpose",
+        "b2-tech-talk.i-did-it-this-way-on-purpose",
+        "b2-tech-talk.reasoning",
+        "b2-tech-talk.the-reasoning-behind-this",
+        "b2-tech-talk.push-back",
+        "b2-tech-talk.im-not-sure-i-agree",
+        "b2-tech-talk.fair-enough",
+        "b2-tech-talk.could-you-take-another-look",
+        "b2-tech-talk.merge-conflict",
+        "b2-tech-talk.ive-resolved-the-merge-conflicts",
+        "b2-tech-talk.approve",
+        "b2-tech-talk.merge",
+        "b2-tech-talk.once-its-approved",
+        "b2-tech-talk.lets-leave-that-for-a-follow-up",
+        "b2-tech-talk.qa.why-this-way",
+        "b2-tech-talk.qa.ready-to-merge"
+      ]
+    },
+    {
+      "id": "b2-tech-talk.l.non-technical",
+      "title": "Explicar lo técnico a quien no es técnico",
+      "items": [
+        "b2-tech-talk.let-me-put-it-in-simple-terms",
+        "b2-tech-talk.think-of-it-like",
+        "b2-tech-talk.outage",
+        "b2-tech-talk.in-plain-english",
+        "b2-tech-talk.root-cause",
+        "b2-tech-talk.the-root-cause-was",
+        "b2-tech-talk.workaround",
+        "b2-tech-talk.theres-a-workaround",
+        "b2-tech-talk.roll-out",
+        "b2-tech-talk.well-roll-it-out-gradually",
+        "b2-tech-talk.customers-wont-notice",
+        "b2-tech-talk.jargon",
+        "b2-tech-talk.sorry-that-was-a-lot-of-jargon",
+        "b2-tech-talk.does-that-make-sense",
+        "b2-tech-talk.qa.outage"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-tech-talk.high-level-overview", "text": "Let me give you a high-level overview of the architecture.", "es": "Te doy una visión general de la arquitectura.", "notes": "«high-level» = a grandes rasgos, sin detalles; «low-level» = con detalle.", "explanation": "Para empezar a explicar un sistema a alguien nuevo. «architecture» = «AR-ki-tek-cher», con «k», nunca «ch» al principio.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.split-into-three-services", "text": "The system is split into three main services.", "es": "El sistema está dividido en tres servicios principales.", "notes": "«be split into» = estar dividido en.", "explanation": "Para dar la estructura general. «split» sin «e» delante: «split», no «esplit».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.each-service-has-its-own-database", "text": "Each service has its own database.", "es": "Cada servicio tiene su propia base de datos.", "notes": "«its» (de él/ella, una cosa) no lleva apóstrofo; «it's» = it is.", "explanation": "Al explicar cómo se separan los datos. «database» se acentúa al principio: «DEI-də-beis».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.talks-to-the-backend", "text": "The frontend talks to the backend through a REST API.", "es": "El frontend se comunica con el backend a través de una API REST.", "notes": "«talk to» se usa mucho entre sistemas: «this service talks to that one».", "explanation": "Para describir cómo se comunican las piezas. «API» se deletrea: «ei-pi-ai»; «talks» = «toks», la «l» no suena.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.requests-go-through-a-queue", "text": "Requests go through a queue, so nothing gets lost.", "es": "Las peticiones pasan por una cola, así que no se pierde nada.", "notes": "«get lost» = perderse; «nothing gets lost» = no se pierde nada.", "explanation": "Para explicar por qué el sistema es fiable. «queue» suena igual que la letra «Q»: «kiu».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.we-cache-the-results", "text": "We cache the results to keep response times low.", "es": "Guardamos los resultados en caché para que las respuestas sean rápidas.", "notes": "«cache» también es verbo: «cache the results» = guardarlos en caché.", "explanation": "Al hablar de rendimiento. «cache» = «kash», una sola sílaba, como «cash» (dinero).", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.the-main-bottleneck", "text": "The main bottleneck is the database, not the code.", "es": "El principal cuello de botella es la base de datos, no el código.", "notes": "«bottleneck» = cuello de botella, igual que en español.", "explanation": "Para señalar dónde está el problema de rendimiento. «bottle» con flap t: «BA-dl»; la «o» es una «a» abierta.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.breaking-up-the-monolith", "text": "It's basically a monolith that we're slowly breaking up.", "es": "Básicamente es un monolito que estamos dividiendo poco a poco.", "notes": "«break up» = dividir en partes (también «romper» una pareja).", "explanation": "Para describir un sistema antiguo en migración. «basically» = «BEI-si-kli», tres sílabas; la «a» de «-ally» casi desaparece.", "register": "neutral", "situation": "tecnologia", "tags": ["phrasal-verbs"] },
+    { "id": "b2-tech-talk.under-heavy-load", "text": "Under heavy load, the service starts timing out.", "es": "Con mucha carga, el servicio empieza a dar timeouts.", "notes": "«time out» = agotar el tiempo de espera; «heavy load» = mucha carga.", "explanation": "Para describir un fallo que solo pasa con mucho tráfico. «heavy» = «JE-vi», con «h» suave y «v» de labio y dientes.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.how-does-this-scale", "text": "How does this scale if traffic doubles?", "es": "¿Cómo escala esto si se duplica el tráfico?", "notes": "«scale» = escalar, aguantar más uso; «double» = duplicarse.", "explanation": "La pregunta típica al revisar un diseño. «scale» sin «e» delante: «skeil»; «doubles» = «DA-blz».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.both-approaches-work", "text": "Both approaches work, but they have different trade-offs.", "es": "Los dos enfoques funcionan, pero cada uno tiene sus pros y sus contras.", "notes": "«both» = los dos, ambos; va antes del sustantivo sin «the».", "explanation": "Para abrir una comparación técnica sin tomar partido aún. «both» termina en «th» con la lengua entre los dientes: «bouz».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.the-upside-is", "text": "The upside is that it's much faster to build.", "es": "Lo bueno es que se construye mucho más rápido.", "notes": "«upside» = lo bueno, la ventaja; su contrario es «downside».", "explanation": "Para presentar la ventaja principal de una opción. «upside» se acentúa al principio: «AP-said».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.it-adds-complexity", "text": "On the other hand, it adds a lot of complexity.", "es": "Por otro lado, añade mucha complejidad.", "notes": "«on the other hand» = por otro lado; «complexity» es incontable: «a lot of complexity».", "explanation": "Para pasar a los contras. «complexity» = «kəm-PLEK-si-di», acento en la segunda sílaba y flap t.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.harder-to-maintain", "text": "It's faster, but it's harder to maintain in the long run.", "es": "Es más rápido, pero a la larga cuesta más mantenerlo.", "notes": "«in the long run» = a la larga.", "explanation": "Para contrastar corto y largo plazo. «maintain» = «mein-TEIN», acento al final.", "register": "neutral", "situation": "tecnologia", "tags": ["idioms"] },
+    { "id": "b2-tech-talk.a-new-framework-would-be-overkill", "text": "Honestly, a new framework would be overkill for this.", "es": "Sinceramente, un framework nuevo sería matar moscas a cañonazos.", "notes": "«overkill» = algo exagerado para lo que se necesita.", "explanation": "Para frenar una solución demasiado grande. «honestly» empieza sin «h»: «A-nəst-li».", "register": "neutral", "situation": "tecnologia", "tags": ["idioms"] },
+    { "id": "b2-tech-talk.trading-performance-for-simplicity", "text": "We'd be trading performance for simplicity.", "es": "Estaríamos sacrificando rendimiento a cambio de simplicidad.", "notes": "«trade A for B» = renunciar a A para conseguir B.", "explanation": "Para resumir el compromiso de una decisión. «we'd» = «wiid», la «d» final se nota poco pero está.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.this-library-is-well-maintained", "text": "This library is well maintained and widely used.", "es": "Esta librería está bien mantenida y la usa muchísima gente.", "notes": "«library» = biblioteca y también librería de código; la tienda de libros es «bookstore».", "explanation": "Para defender una dependencia. «library» = «LAI-bre-ri», tres sílabas con la «r» americana.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.if-we-cut-corners-now", "text": "If we cut corners now, we'll pay for it later.", "es": "Si ahora hacemos las cosas a medias, lo pagaremos después.", "notes": "«cut corners» = hacer algo deprisa y mal para ahorrar tiempo. Primer condicional: if + presente, will.", "explanation": "Para avisar de los atajos peligrosos. «corners» = «KOR-nərz», la «r» americana se oye las dos veces.", "register": "neutral", "situation": "tecnologia", "tags": ["idioms"] },
+    { "id": "b2-tech-talk.that-would-create-tech-debt", "text": "That would create a lot of tech debt.", "es": "Eso generaría mucha deuda técnica.", "notes": "«tech debt» (o «technical debt») es incontable: «a lot of tech debt».", "explanation": "Para frenar un apaño rápido. En «debt» la «b» no suena: «det».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.it-depends-on-traffic", "text": "It depends on how much traffic we expect.", "es": "Depende de cuánto tráfico esperemos.", "notes": "«depend on», nunca «depend of».", "explanation": "Para no responder sin datos. «depends on» se une: «di-PEN-dzon».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.id-go-with-the-simpler-option", "text": "I'd go with the simpler option for now.", "es": "Yo me quedaría con la opción más sencilla por ahora.", "notes": "«go with» = elegir, quedarse con.", "explanation": "Para dar tu recomendación final. «simpler» = «SIM-plər», dos sílabas; no digas «más simple».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.i-left-a-few-comments", "text": "I left a few comments on your pull request.", "es": "Te he dejado unos comentarios en tu pull request.", "notes": "«leave a comment» = dejar un comentario; «left» es su pasado.", "explanation": "Para avisar a un compañero de que ya revisaste su código. «left» con «l» clara y «ft» final: no digas «lef».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.overall-it-looks-good", "text": "Overall it looks good, just a couple of small things.", "es": "En general tiene buena pinta, solo un par de detalles.", "notes": "«overall» = en general; «a couple of» = un par de.", "explanation": "Para empezar una review en positivo. «overall» se acentúa al principio: «OU-vər-ol».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.just-a-nitpick", "text": "This is just a nitpick, so feel free to ignore it.", "es": "Esto es una tontería, así que ignóralo si quieres.", "notes": "«nitpick» = detalle menor, casi manía; «feel free to» = siéntete libre de, no hace falta.", "explanation": "Para que un comentario menor no suene a orden. «ignore» = «ig-NOR», acento al final; nunca «ignorar» = no saber.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.what-happens-if-the-list-is-empty", "text": "What happens if the list is empty?", "es": "¿Qué pasa si la lista está vacía?", "notes": "«empty» = vacío; «full» = lleno.", "explanation": "La pregunta típica para encontrar un fallo en una review. «empty» = «EMP-ti», con la «p» clara.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.were-missing-an-edge-case", "text": "I think we're missing an edge case here.", "es": "Creo que aquí se nos escapa un caso límite.", "notes": "«miss» = no tener en cuenta, pasar por alto.", "explanation": "Para señalar un caso raro sin culpar a nadie: «we», no «you». «edge» = «ech», con «ch» sonora.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.could-we-rename-this-variable", "text": "Could we rename this variable to something more readable?", "es": "¿Podemos cambiar el nombre de esta variable por algo más claro?", "notes": "«rename» = renombrar, cambiar el nombre; «readable» = fácil de leer.", "explanation": "Una sugerencia educada con «could we». «variable» = «VE-ri-ə-bl», acento al principio.", "register": "formal", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.this-function-is-doing-too-much", "text": "This function is doing too much. Could you split it up?", "es": "Esta función hace demasiadas cosas. ¿La podrías dividir?", "notes": "«split up» = dividir en partes más pequeñas.", "explanation": "Para pedir un refactor concreto. «function» = «FANK-shən», la «u» suena como una «a» breve.", "register": "neutral", "situation": "tecnologia", "tags": ["phrasal-verbs"] },
+    { "id": "b2-tech-talk.have-you-considered", "text": "Have you considered using a map here instead?", "es": "¿Te has planteado usar un map aquí?", "notes": "«consider» va con -ing: «consider using», no «consider to use».", "explanation": "Para proponer otra solución como pregunta, sin imponer. «considered» = «kən-SI-dərd», la «-ed» suena «d».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.could-you-add-a-test", "text": "Could you add a test for this, please?", "es": "¿Podrías añadir un test para esto, por favor?", "notes": "«add a test for», no «add a test to».", "explanation": "La petición más común en una review. «test» termina en «st»: pronuncia la «t» final.", "register": "formal", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.looks-good-to-me", "text": "Looks good to me. Approved!", "es": "Me parece bien. ¡Aprobado!", "notes": "Se abrevia LGTM en los comentarios escritos.", "explanation": "Al aprobar el código de un compañero. «approved» = «ə-PRUUVD», la «-ed» suena «d».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.good-catch", "text": "Good catch! I'll fix it right away.", "es": "¡Bien visto! Lo arreglo ahora mismo.", "notes": "«good catch» = bien visto (literalmente, buena atrapada); «right away» = enseguida.", "explanation": "Para agradecer que alguien encontró un fallo tuyo. «catch» = «kæch», con la «a» abierta entre «a» y «e».", "register": "neutral", "situation": "tecnologia", "tags": ["idioms"] },
+    { "id": "b2-tech-talk.ive-addressed-all-your-comments", "text": "I've addressed all your comments.", "es": "Ya he resuelto todos tus comentarios.", "notes": "«address» un comentario = atenderlo, resolverlo; no es «dirigir».", "explanation": "Al volver a pedir revisión. «addressed» = «ə-DREST», acento al final y la «-ed» suena «t».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.i-did-it-this-way-on-purpose", "text": "I see your point, but I did it this way on purpose.", "es": "Entiendo lo que dices, pero lo hice así a propósito.", "notes": "«on purpose» = a propósito, a posta; «I see your point» = entiendo tu argumento.", "explanation": "Para defender una decisión sin sonar a la defensiva. «purpose» = «PER-pəs».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.the-reasoning-behind-this", "text": "The reasoning behind this is performance.", "es": "El motivo de hacerlo así es el rendimiento.", "notes": "«the reasoning behind» = el razonamiento detrás de algo.", "explanation": "Para explicar por qué elegiste algo. «reasoning» = «RII-zə-ning», con «z» zumbante.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.im-not-sure-i-agree", "text": "I'm not sure I agree. Could we discuss it on a call?", "es": "No sé si estoy de acuerdo. ¿Lo hablamos en una llamada?", "notes": "«discuss» va sin «about»: «discuss it».", "explanation": "Para no discutir por escrito durante horas. «agree» = «ə-GRII», acento al final.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.fair-enough", "text": "Fair enough, I'll change it.", "es": "Vale, tienes razón, lo cambio.", "notes": "«fair enough» = es razonable, acepto tu argumento.", "explanation": "Para ceder con naturalidad en una review. «enough» = «i-NAF», la «gh» suena «f».", "register": "neutral", "situation": "tecnologia", "tags": ["idioms"] },
+    { "id": "b2-tech-talk.could-you-take-another-look", "text": "Could you take another look when you have a minute?", "es": "¿Le puedes echar otro vistazo cuando tengas un momento?", "notes": "«take a look» = echar un vistazo.", "explanation": "Para pedir que revisen otra vez tus cambios. «another» con «th» suave entre los dientes: «ə-NA-dhər».", "register": "formal", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.ive-resolved-the-merge-conflicts", "text": "I've resolved the merge conflicts.", "es": "He resuelto los conflictos del merge.", "notes": "«resolve» = resolver un conflicto; «solve» se usa más con problemas.", "explanation": "Para avisar de que tu rama ya está al día. «resolved» = «ri-ZOLVD», con «z» zumbante.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.once-its-approved", "text": "Once it's approved, I'll merge it.", "es": "En cuanto esté aprobado, lo integro.", "notes": "Después de «once» (en cuanto) va presente, no «will»: «once it's approved».", "explanation": "Para explicar el siguiente paso. «once» = «wans», una sola sílaba con «w».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.lets-leave-that-for-a-follow-up", "text": "Good idea, but let's leave that for a follow-up PR.", "es": "Buena idea, pero dejémoslo para otra pull request.", "notes": "«PR» = pull request; «follow-up» = posterior, de seguimiento.", "explanation": "Para no hacer crecer una PR que ya está lista. «PR» se deletrea: «pi-AR», con «r» americana.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.let-me-put-it-in-simple-terms", "text": "Let me put it in simple terms.", "es": "Te lo explico de forma sencilla.", "notes": "«put it» = decirlo, expresarlo; «in simple terms» = en pocas palabras, sin tecnicismos.", "explanation": "Para cambiar de registro con un cliente o un jefe no técnico. «terms» = «termz», con «r» americana y «z» final.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.think-of-it-like", "text": "Think of it like a waiting line at the supermarket.", "es": "Piénsalo como la cola de un supermercado.", "notes": "«think of it like» / «think of it as» = imagínalo como. En EE. UU. la cola de gente es «line».", "explanation": "Para dar una comparación cotidiana. «think» con «th» entre los dientes; no digas «tink».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.in-plain-english", "text": "In plain English, the website was down for an hour.", "es": "Dicho claro: la web estuvo caída una hora.", "notes": "«in plain English» = dicho de forma sencilla; «be down» = estar caído.", "explanation": "Para traducir un informe técnico a lo que importa. «plain» = «plein», como «plane» (avión).", "register": "neutral", "situation": "tecnologia", "tags": ["idioms"] },
+    { "id": "b2-tech-talk.the-root-cause-was", "text": "The root cause was a bad configuration change.", "es": "La causa de fondo fue un cambio de configuración erróneo.", "notes": "«root cause» = la causa raíz, el origen real del problema.", "explanation": "Para explicar un fallo después de investigarlo. «root» = «ruut», vocal larga, y «cause» = «koz», con «z».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.theres-a-workaround", "text": "There's a workaround until we fix it properly.", "es": "Hay una solución provisional hasta que lo arreglemos bien.", "notes": "Tras «until» va presente aunque hable de futuro: «until we fix it».", "explanation": "Para tranquilizar mientras se busca la solución definitiva. «workaround» = «WER-kə-raund», acento al principio.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.well-roll-it-out-gradually", "text": "We'll roll it out gradually, starting with ten percent of users.", "es": "Lo iremos activando poco a poco, empezando por el diez por ciento de los usuarios.", "notes": "«roll out» = lanzar, desplegar algo poco a poco.", "explanation": "Para explicar un lanzamiento por fases. «gradually» = «GRA-yu-ə-li», la «d» suena casi como «y».", "register": "neutral", "situation": "tecnologia", "tags": ["phrasal-verbs"] },
+    { "id": "b2-tech-talk.customers-wont-notice", "text": "Customers won't notice anything different.", "es": "Los clientes no notarán ninguna diferencia.", "notes": "«notice» = notar, darse cuenta; no significa «noticia» (news).", "explanation": "Para dejar claro que un cambio interno no afecta a nadie. «won't» = «wount», distinto de «want».", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.sorry-that-was-a-lot-of-jargon", "text": "Sorry, that was a lot of jargon.", "es": "Perdón, eso ha sido mucha jerga.", "notes": "«jargon» es incontable: «a lot of jargon».", "explanation": "Para reconocer que te has pasado de técnico. «jargon» = «YAR-gən», con «y» fuerte y la segunda vocal muy breve.", "register": "neutral", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.does-that-make-sense", "text": "Does that make sense so far?", "es": "¿Se entiende hasta aquí?", "notes": "«make sense» = tener sentido, entenderse; «so far» = hasta ahora.", "explanation": "Para comprobar que te siguen antes de continuar. «sense» = «sens», con «s» final clara, sin «e».", "register": "neutral", "situation": "tecnologia" }
+  ],
+  "vocab": [
+    { "id": "b2-tech-talk.architecture", "word": "architecture", "es": "la arquitectura", "notes": "De software o de edificios; incontable en este sentido.", "example": "b2-tech-talk.high-level-overview", "situation": "tecnologia", "image": "fluent:building-construction" },
+    { "id": "b2-tech-talk.service", "word": "service", "article": "a", "plural": "services", "es": "el servicio", "notes": "Parte independiente de un sistema que hace una tarea concreta.", "example": "b2-tech-talk.split-into-three-services", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.layer", "word": "layer", "article": "a", "plural": "layers", "es": "la capa", "notes": "«the data layer» = la capa de datos.", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.api", "word": "API", "article": "an", "plural": "APIs", "es": "la API", "notes": "Se deletrea «ei-pi-ai», por eso lleva «an».", "example": "b2-tech-talk.talks-to-the-backend", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.queue", "word": "queue", "article": "a", "plural": "queues", "es": "la cola", "notes": "En la vida diaria de EE. UU. la cola de gente es «line»; «queue» se usa en informática.", "example": "b2-tech-talk.requests-go-through-a-queue", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.cache", "word": "cache", "article": "a", "plural": "caches", "es": "la caché", "notes": "Se pronuncia como «cash».", "example": "b2-tech-talk.we-cache-the-results", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.bottleneck", "word": "bottleneck", "article": "a", "plural": "bottlenecks", "es": "el cuello de botella", "example": "b2-tech-talk.the-main-bottleneck", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.monolith", "word": "monolith", "article": "a", "plural": "monoliths", "es": "el monolito", "notes": "Una aplicación grande en una sola pieza.", "example": "b2-tech-talk.breaking-up-the-monolith", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.load", "word": "load", "es": "la carga", "notes": "Incontable en este sentido: «heavy load» = mucha carga.", "example": "b2-tech-talk.under-heavy-load", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.scale", "word": "scale", "es": "escalar", "notes": "Verbo: aguantar más usuarios o datos sin romperse.", "example": "b2-tech-talk.how-does-this-scale", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.approach", "word": "approach", "article": "an", "plural": "approaches", "es": "el enfoque", "notes": "«a different approach» = otra forma de abordarlo.", "example": "b2-tech-talk.both-approaches-work", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.upside", "word": "upside", "article": "an", "plural": "upsides", "es": "la ventaja, lo bueno", "example": "b2-tech-talk.the-upside-is", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.complexity", "word": "complexity", "es": "la complejidad", "notes": "Incontable.", "example": "b2-tech-talk.it-adds-complexity", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.maintain", "word": "maintain", "es": "mantener", "notes": "Verbo: cuidar y actualizar el código con el tiempo.", "example": "b2-tech-talk.harder-to-maintain", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.framework", "word": "framework", "article": "a", "plural": "frameworks", "es": "el framework, el marco de trabajo", "example": "b2-tech-talk.a-new-framework-would-be-overkill", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.overkill", "word": "overkill", "es": "algo exagerado, matar moscas a cañonazos", "notes": "Incontable: «that's overkill».", "example": "b2-tech-talk.a-new-framework-would-be-overkill", "situation": "tecnologia", "tags": ["idioms"] },
+    { "id": "b2-tech-talk.performance", "word": "performance", "es": "el rendimiento", "notes": "Incontable al hablar de software.", "example": "b2-tech-talk.trading-performance-for-simplicity", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.library", "word": "library", "article": "a", "plural": "libraries", "es": "la librería (de código), la biblioteca", "notes": "Falso amigo: la tienda de libros es «bookstore».", "example": "b2-tech-talk.this-library-is-well-maintained", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.cut-corners", "word": "cut corners", "es": "hacer las cosas a medias para ir rápido", "notes": "Expresión hecha, siempre con «corners» en plural.", "example": "b2-tech-talk.if-we-cut-corners-now", "situation": "tecnologia", "tags": ["idioms"] },
+    { "id": "b2-tech-talk.tech-debt", "word": "tech debt", "es": "la deuda técnica", "notes": "Incontable. La «b» de «debt» no suena.", "example": "b2-tech-talk.that-would-create-tech-debt", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.pull-request", "word": "pull request", "article": "a", "plural": "pull requests", "es": "la pull request, la petición de cambios", "notes": "Se abrevia PR. En GitLab se llama «merge request».", "example": "b2-tech-talk.i-left-a-few-comments", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.nitpick", "word": "nitpick", "article": "a", "plural": "nitpicks", "es": "el detalle menor, la puntillosidad", "notes": "En los comentarios se abrevia «nit:».", "example": "b2-tech-talk.just-a-nitpick", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.edge-case", "word": "edge case", "article": "an", "plural": "edge cases", "es": "el caso límite", "notes": "Una situación rara: lista vacía, valor nulo, número enorme.", "example": "b2-tech-talk.were-missing-an-edge-case", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.readable", "word": "readable", "es": "legible, fácil de leer", "notes": "Adjetivo: «readable code» = código claro.", "example": "b2-tech-talk.could-we-rename-this-variable", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.split-up", "word": "split up", "es": "dividir, partir", "notes": "Phrasal verb: «split it up into smaller functions» = dividirla en funciones más pequeñas.", "example": "b2-tech-talk.this-function-is-doing-too-much", "situation": "tecnologia", "tags": ["phrasal-verbs"] },
+    { "id": "b2-tech-talk.test-coverage", "word": "test coverage", "es": "la cobertura de tests", "notes": "Incontable: «good test coverage».", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.address", "word": "address", "es": "atender, resolver (un comentario, un problema)", "notes": "Verbo, acento al final: «ə-DRES». El sustantivo «address» es la dirección.", "example": "b2-tech-talk.ive-addressed-all-your-comments", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.on-purpose", "word": "on purpose", "es": "a propósito", "notes": "Su contrario es «by accident» (sin querer).", "example": "b2-tech-talk.i-did-it-this-way-on-purpose", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.reasoning", "word": "reasoning", "es": "el razonamiento, el porqué", "notes": "Incontable.", "example": "b2-tech-talk.the-reasoning-behind-this", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.push-back", "word": "push back", "es": "no estar de acuerdo, poner pegas", "notes": "Phrasal verb: «push back on a comment» = rebatir un comentario. También «retrasar» una fecha.", "situation": "tecnologia", "tags": ["phrasal-verbs"] },
+    { "id": "b2-tech-talk.merge-conflict", "word": "merge conflict", "article": "a", "plural": "merge conflicts", "es": "el conflicto de merge", "example": "b2-tech-talk.ive-resolved-the-merge-conflicts", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.approve", "word": "approve", "es": "aprobar", "notes": "Verbo: «approve a pull request». Para un examen se dice «pass», no «approve».", "example": "b2-tech-talk.once-its-approved", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.merge", "word": "merge", "es": "integrar, fusionar (código)", "notes": "Verbo: «merge it into main» = integrarlo en la rama principal.", "example": "b2-tech-talk.once-its-approved", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.outage", "word": "outage", "article": "an", "plural": "outages", "es": "la caída del servicio, el corte", "notes": "También un corte de luz: «a power outage».", "example": "b2-tech-talk.in-plain-english", "situation": "tecnologia", "image": "fluent:warning" },
+    { "id": "b2-tech-talk.root-cause", "word": "root cause", "article": "a", "plural": "root causes", "es": "la causa raíz, el origen del problema", "example": "b2-tech-talk.the-root-cause-was", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.workaround", "word": "workaround", "article": "a", "plural": "workarounds", "es": "la solución provisional, el apaño", "example": "b2-tech-talk.theres-a-workaround", "situation": "tecnologia" },
+    { "id": "b2-tech-talk.roll-out", "word": "roll out", "es": "lanzar, desplegar (poco a poco)", "notes": "Phrasal verb. El sustantivo es «rollout», junto: «a gradual rollout».", "example": "b2-tech-talk.well-roll-it-out-gradually", "situation": "tecnologia", "tags": ["phrasal-verbs"] },
+    { "id": "b2-tech-talk.jargon", "word": "jargon", "es": "la jerga técnica", "notes": "Incontable.", "example": "b2-tech-talk.sorry-that-was-a-lot-of-jargon", "situation": "tecnologia" }
+  ],
+  "qa": [
+    {
+      "id": "b2-tech-talk.qa.walk-me-through",
+      "question": "Could you walk me through the architecture?",
+      "questionEs": "¿Me explicas paso a paso la arquitectura?",
+      "accepted": [
+        { "text": "Sure. The system is split into three main services.", "es": "Claro. El sistema está dividido en tres servicios principales." },
+        { "text": "Sure. Let me give you a high-level overview first.", "es": "Claro. Primero te doy una visión general." }
+      ],
+      "distractors": [
+        { "text": "Sure. The system is divided in three main services.", "es": "Claro. El sistema está dividido en tres servicios principales." },
+        { "text": "Sure. Let me explain you the general vision first.", "es": "Claro. Primero te explico la visión general." }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Se dice «split into» o «divided into», no «in»; «explain» no lleva la persona detrás, y «visión general» = «overview».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-tech-talk.qa.bottleneck",
+      "question": "So why is the app so slow at peak times?",
+      "questionEs": "¿Y por qué va tan lenta la app en las horas punta?",
+      "accepted": [
+        { "text": "The main bottleneck is the database, not the code.", "es": "El principal cuello de botella es la base de datos, no el código." },
+        { "text": "Under heavy load, the service starts timing out.", "es": "Con mucha carga, el servicio empieza a dar timeouts." }
+      ],
+      "distractors": [
+        { "text": "The main bottleneck is the data base, not the code.", "es": "El principal cuello de botella es la base de datos, no el código." },
+        { "text": "With much load, the service starts to give timeouts.", "es": "Con mucha carga, el servicio empieza a dar timeouts." }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«database» va junto; «mucha carga» = «heavy load», y «dar timeouts» = «time out».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-tech-talk.qa.which-option",
+      "question": "Should we adopt the new framework or stick with what we have?",
+      "questionEs": "¿Adoptamos el framework nuevo o seguimos con lo que tenemos?",
+      "accepted": [
+        { "text": "Honestly, a new framework would be overkill for this.", "es": "Sinceramente, un framework nuevo sería exagerado para esto." },
+        { "text": "It depends on how much traffic we expect.", "es": "Depende de cuánto tráfico esperemos." }
+      ],
+      "distractors": [
+        { "text": "It depends of how much traffic we expect.", "es": "Depende de cuánto tráfico esperemos." },
+        { "text": "I would stay with the actual one.", "es": "Yo me quedaría con el actual." }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«depend on», no «of»; «actual» es un falso amigo (en inglés = real); el «actual» español es «current».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-tech-talk.qa.rewrite",
+      "question": "Why don't we just rewrite the whole thing from scratch?",
+      "questionEs": "¿Por qué no lo reescribimos todo desde cero?",
+      "accepted": [
+        { "text": "It's tempting, but it adds a lot of complexity and risk.", "es": "Es tentador, pero añade mucha complejidad y riesgo." },
+        { "text": "I'd go with the simpler option for now.", "es": "Yo me quedaría con la opción más sencilla por ahora." }
+      ],
+      "distractors": [
+        { "text": "It's tempting, but it adds a lot of complexities.", "es": "Es tentador, pero añade muchas complejidades." },
+        { "text": "I'd go with the more simple option for now.", "es": "Yo me quedaría con la opción más sencilla por ahora." }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«complexity» es incontable; «simple» forma el comparativo «simpler». «from scratch» = desde cero.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-tech-talk.qa.pull-request",
+      "question": "Did you get a chance to look at my pull request?",
+      "questionEs": "¿Has podido mirar mi pull request?",
+      "accepted": [
+        { "text": "Yes, I left a few comments. Overall it looks good.", "es": "Sí, te dejé unos comentarios. En general tiene buena pinta." },
+        { "text": "Not yet, but I'll review it this afternoon.", "es": "Todavía no, pero la reviso esta tarde." }
+      ],
+      "distractors": [
+        { "text": "Yes, I left you some commentaries. In general it has good look.", "es": "Sí, te dejé unos comentarios. En general tiene buena pinta." },
+        { "text": "Not yet, but I revise it this afternoon.", "es": "Todavía no, pero la reviso esta tarde." }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«comment», no «commentary»; «tiene buena pinta» = «it looks good». «revise» es corregir un texto: el código se «review».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-tech-talk.qa.why-this-way",
+      "question": "Why did you write it this way? It looks a bit complicated.",
+      "questionEs": "¿Por qué lo escribiste así? Parece un poco complicado.",
+      "accepted": [
+        { "text": "I did it on purpose. The reasoning behind this is performance.", "es": "Lo hice a propósito. El motivo es el rendimiento." },
+        { "text": "Fair enough, I'll simplify it.", "es": "Vale, tienes razón, lo simplifico." }
+      ],
+      "distractors": [
+        { "text": "I did it by purpose. The reason behind is the performance.", "es": "Lo hice a propósito. El motivo es el rendimiento." },
+        { "text": "You have reason, I'll simplify it.", "es": "Tienes razón, lo simplifico." }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«on purpose», no «by purpose»; «tener razón» = «be right», nunca «have reason».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-tech-talk.qa.ready-to-merge",
+      "question": "Is your branch ready to merge?",
+      "questionEs": "¿Tu rama está lista para integrar?",
+      "accepted": [
+        { "text": "Almost. I've resolved the conflicts, and it just needs an approval.", "es": "Casi. He resuelto los conflictos y solo falta una aprobación." },
+        { "text": "Yes. Once it's approved, I'll merge it.", "es": "Sí. En cuanto esté aprobada, la integro." }
+      ],
+      "distractors": [
+        { "text": "Yes. When it will be approved, I'll merge it.", "es": "Sí. Cuando esté aprobada, la integro." },
+        { "text": "Almost. Only lacks an approval.", "es": "Casi. Solo falta una aprobación." }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Tras «once» o «when» va presente, no «will»; «solo falta» = «it just needs», siempre con sujeto.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-tech-talk.qa.outage",
+      "question": "I'm not technical. What actually happened yesterday?",
+      "questionEs": "No soy técnica. ¿Qué pasó exactamente ayer?",
+      "accepted": [
+        { "text": "In plain English, the website was down for an hour.", "es": "Dicho claro: la web estuvo caída una hora." },
+        { "text": "The root cause was a bad configuration change, and it's fixed now.", "es": "La causa fue un cambio de configuración erróneo, y ya está arreglado." }
+      ],
+      "distractors": [
+        { "text": "In plain English, the website was fallen for an hour.", "es": "Dicho claro: la web estuvo caída una hora." },
+        { "text": "Actually the website is working, it's fixed since one hour.", "es": "Ahora mismo la web funciona, está arreglada desde hace una hora." }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Una web caída está «down», no «fallen»; «actually» = en realidad, no «actualmente»; «desde hace una hora» = «for an hour».",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}

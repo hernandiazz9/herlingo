@@ -1,0 +1,261 @@
+{
+  "id": "b2-opinions",
+  "order": 212,
+  "level": "B2",
+  "title": "Opiniones y debate: estar de acuerdo, matizar, argumentar",
+  "description": "Dar tu opinión con seguridad, estar de acuerdo del todo o en parte, discrepar con tacto y defender una idea con razones y ejemplos.",
+  "emoji": "💬",
+  "situation": "opiniones",
+  "lessons": [
+    {
+      "id": "b2-opinions.l.giving",
+      "title": "Dar tu opinión con seguridad",
+      "items": [
+        "b1-friends.opinion",
+        "b1-friends.in-my-opinion",
+        "b2-opinions.point-of-view",
+        "b2-opinions.from-my-point-of-view",
+        "b2-opinions.as-far-as-im-concerned",
+        "b2-opinions.if-you-ask-me",
+        "b2-opinions.overrated",
+        "b2-opinions.belief",
+        "b2-opinions.im-convinced",
+        "b2-opinions.i-have-mixed-feelings",
+        "b2-opinions.id-say-its-worth-it",
+        "b2-opinions.id-rather-live-in-a-smaller-city",
+        "b2-opinions.ive-changed-my-mind",
+        "b1-friends.to-be-honest",
+        "b2-opinions.stance",
+        "b2-opinions.qa.remote-work",
+        "b2-opinions.qa.movie"
+      ]
+    },
+    {
+      "id": "b2-opinions.l.agreeing",
+      "title": "Estar de acuerdo, del todo o en parte",
+      "items": [
+        "b1-friends.i-totally-agree",
+        "b2-opinions.i-couldnt-agree-more",
+        "b2-opinions.thats-exactly-what-i-was-thinking",
+        "b2-opinions.youve-got-a-point-there",
+        "b1-friends.point",
+        "b1-friends.thats-a-good-point",
+        "b2-opinions.i-agree-up-to-a-point",
+        "b2-opinions.i-partly-agree",
+        "b2-opinions.fair",
+        "b2-opinions.fair-enough",
+        "b2-opinions.convincing",
+        "b2-opinions.qa.agree"
+      ]
+    },
+    {
+      "id": "b2-opinions.l.disagreeing",
+      "title": "Discrepar con tacto y matizar",
+      "items": [
+        "b2-opinions.disagree",
+        "b2-opinions.im-not-sure-i-agree",
+        "b2-opinions.i-see-it-a-bit-differently",
+        "b1-friends.i-see-your-point-but",
+        "b2-opinions.i-take-your-point",
+        "b2-opinions.evidence",
+        "b2-opinions.data",
+        "b2-opinions.with-all-due-respect",
+        "b2-opinions.thats-not-entirely-true",
+        "b2-opinions.i-wouldnt-go-that-far",
+        "b2-opinions.assumption",
+        "b2-opinions.biased",
+        "b2-opinions.controversial",
+        "b1-friends.it-depends",
+        "b2-opinions.lets-agree-to-disagree",
+        "b2-opinions.qa.ai-developers",
+        "b2-opinions.qa.why"
+      ]
+    },
+    {
+      "id": "b2-opinions.l.arguing",
+      "title": "Argumentar: razones, ejemplos y conclusiones",
+      "items": [
+        "b2-opinions.argument",
+        "b2-opinions.debate",
+        "b2-opinions.issue",
+        "b2-opinions.reason",
+        "b2-opinions.the-main-reason-is",
+        "b2-opinions.take-chicago-for-example",
+        "b2-opinions.pros-and-cons",
+        "b2-opinions.on-the-one-hand",
+        "b2-opinions.consequence",
+        "b2-opinions.thats-why-i-think",
+        "b2-opinions.exception",
+        "b2-opinions.having-said-that",
+        "b2-opinions.priority",
+        "b2-opinions.its-a-matter-of-priorities",
+        "b2-opinions.afford",
+        "b2-opinions.the-thing-is",
+        "b2-opinions.persuade",
+        "b2-opinions.what-makes-you-say-that",
+        "b2-opinions.at-the-end-of-the-day",
+        "b2-opinions.qa.job-offer"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-opinions.from-my-point-of-view", "text": "From my point of view, it's just too expensive.", "es": "Desde mi punto de vista, es sencillamente demasiado caro.", "notes": "«just» aquí refuerza: sencillamente.", "explanation": "Para dar tu opinión en una charla o un debate. «point of view» se une: «POIN-tə-VIU».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.as-far-as-im-concerned", "text": "As far as I'm concerned, remote work is here to stay.", "es": "En lo que a mí respecta, el teletrabajo ha venido para quedarse.", "notes": "«be here to stay» = haber venido para quedarse.", "explanation": "Para dejar clara tu postura personal. «concerned» = «kən-SERND», la «-ed» suena /d/, sin sílaba extra.", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-opinions.if-you-ask-me", "text": "If you ask me, the movie was a bit overrated.", "es": "Si me preguntas, la película estaba un poco sobrevalorada.", "explanation": "Opinión sincera entre amigos o compañeros. «overrated» = «ou-vər-REI-did», con flap t en «-ted».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.im-convinced", "text": "I'm convinced that it was the right decision.", "es": "Estoy convencido de que fue la decisión correcta.", "notes": "«convinced that…» sin «of» delante de «that».", "explanation": "Para mostrar una opinión firme. «convinced» acaba en /st/: «kən-VINST», sin «e» final.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.i-have-mixed-feelings", "text": "I have mixed feelings about it.", "es": "Tengo sentimientos encontrados.", "notes": "«mixed feelings» = te gusta y no te gusta a la vez.", "explanation": "Cuando no lo tienes claro. «mixed» = «mikst», la «-ed» suena /t/.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.id-say-its-worth-it", "text": "Overall, I'd say it's worth it.", "es": "En general, yo diría que merece la pena.", "notes": "«I'd say» suaviza la opinión; «worth it» = merece la pena.", "explanation": "Para valorar algo con equilibrio. «worth it» se une: «WER-zit», con «th» entre los dientes.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.id-rather-live-in-a-smaller-city", "text": "Personally, I'd rather live in a smaller city.", "es": "Personalmente, preferiría vivir en una ciudad más pequeña.", "notes": "«I'd rather» + verbo base, sin «to».", "explanation": "Para expresar una preferencia personal. «rather» = «RÆ-ðər», con «th» suave como la «d» de «nada».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.ive-changed-my-mind", "text": "I've changed my mind about electric cars.", "es": "He cambiado de opinión sobre los coches eléctricos.", "notes": "«change your mind» = cambiar de opinión; es lo más natural.", "explanation": "Para contar que ya no piensas lo mismo. «changed» = «cheinyd», una sola sílaba.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.i-couldnt-agree-more", "text": "I couldn't agree more.", "es": "Estoy totalmente de acuerdo.", "notes": "Literal: no podría estar más de acuerdo. Es un sí rotundo, no un no.", "literal": "No podría estar más de acuerdo.", "explanation": "Para apoyar del todo a alguien. «couldn't» = «KU-dnt», la «l» no suena.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.thats-exactly-what-i-was-thinking", "text": "That's exactly what I was thinking.", "es": "Es justo lo que estaba pensando.", "explanation": "Cuando alguien dice lo que tú ibas a decir. «exactly» = «ig-ZÆKT-li», con «z» sonora.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.youve-got-a-point-there", "text": "You've got a point there.", "es": "Ahí tienes razón.", "notes": "«have a point» = tener algo de razón.", "explanation": "Para reconocer un buen argumento. «got a» se une con flap t: «GA-də».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.i-agree-up-to-a-point", "text": "I agree with you up to a point.", "es": "Estoy de acuerdo contigo hasta cierto punto.", "notes": "«agree with» + persona; «up to a point» = hasta cierto punto.", "explanation": "Para aceptar parte de lo que dicen. «up to a» se une: «AP-tə-wə».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.i-partly-agree", "text": "I partly agree, but it's more complicated than that.", "es": "En parte estoy de acuerdo, pero es más complicado.", "explanation": "Para matizar sin llevar la contraria. «than that» con dos «th» suaves: «ðən ðæt».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.fair-enough", "text": "Fair enough.", "es": "Vale, es razonable.", "notes": "Aceptas el argumento del otro, aunque no te entusiasme.", "explanation": "Respuesta corta muy común en conversación. «enough» = «i-NAF», la «gh» suena «f».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.im-not-sure-i-agree", "text": "I'm not sure I agree with that.", "es": "No sé si estoy de acuerdo con eso.", "notes": "Forma suave de decir que no estás de acuerdo; «agree» es verbo, sin «am».", "explanation": "Para discrepar sin sonar duro, sobre todo en el trabajo. «sure» = «shur», con «sh».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.i-see-it-a-bit-differently", "text": "I see it a bit differently.", "es": "Yo lo veo un poco distinto.", "explanation": "Para dar otra visión con tacto. «a bit» suena «ə-BIT», con «i» corta, no «biit».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.i-take-your-point", "text": "I take your point, but I still think it's risky.", "es": "Entiendo lo que dices, pero sigo pensando que es arriesgado.", "notes": "«I take your point» = acepto tu argumento.", "explanation": "Para reconocer el argumento y mantener tu postura. «still» empieza sin «e»: «stil».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.with-all-due-respect", "text": "With all due respect, that's not what the data shows.", "es": "Con todo el respeto, eso no es lo que dicen los datos.", "notes": "Suena educado pero firme; anuncia un desacuerdo claro.", "explanation": "Para discrepar de alguien con más rango. «due» = «duu»; «data» = «DEI-də», con flap t.", "register": "formal", "situation": "opiniones" },
+    { "id": "b2-opinions.thats-not-entirely-true", "text": "That's not entirely true.", "es": "Eso no es del todo cierto.", "explanation": "Para corregir un dato sin ofender. «entirely» = «in-TAIR-li», acento en «TAI».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.i-wouldnt-go-that-far", "text": "I wouldn't go that far.", "es": "Yo no diría tanto.", "notes": "Matizas una afirmación exagerada.", "literal": "Yo no iría tan lejos.", "explanation": "Cuando alguien exagera. «wouldn't» = «WU-dnt», sin «l»; «far» con «r» americana.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.lets-agree-to-disagree", "text": "Let's just agree to disagree.", "es": "Dejémoslo en que no pensamos igual.", "notes": "Expresión para cerrar un debate sin ganador.", "explanation": "Para terminar una discusión de forma amable. «disagree» lleva el acento al final: «dis-ə-GRII».", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-opinions.the-main-reason-is", "text": "The main reason is that it saves a lot of time.", "es": "La razón principal es que ahorra mucho tiempo.", "notes": "«The reason is that…», no «is because…» en un registro cuidado.", "explanation": "Para dar tu argumento más fuerte primero. «reason» = «RII-zən», con «z» sonora.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.take-chicago-for-example", "text": "Take Chicago, for example: some trains run all night.", "es": "Mira Chicago, por ejemplo: algunos trenes funcionan toda la noche.", "notes": "«Take X, for example» = fíjate en X.", "explanation": "Para apoyar una idea con un ejemplo concreto. «example» = «ig-ZÆM-pəl», con «z».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.on-the-one-hand", "text": "On the one hand it's cheaper; on the other hand, it's slower.", "es": "Por un lado es más barato; por otro, es más lento.", "notes": "Siempre «on», no «in» ni «for».", "explanation": "Para comparar los pros y los contras. «other» = «A-ðər», con «th» suave.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.thats-why-i-think", "text": "That's why I think we need clear rules.", "es": "Por eso creo que hacen falta normas claras.", "notes": "«That's why» = por eso.", "explanation": "Para llegar a tu conclusión. «clear rules»: dos «r» americanas, la lengua no toca el paladar.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.having-said-that", "text": "Having said that, there are some exceptions.", "es": "Dicho esto, hay algunas excepciones.", "notes": "«Having said that» = dicho esto; introduce un matiz.", "explanation": "Para matizar lo que acabas de decir. «said» = «sed», con «e» corta.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.its-a-matter-of-priorities", "text": "In the end, it's a matter of priorities.", "es": "Al final, es una cuestión de prioridades.", "notes": "«a matter of» = una cuestión de.", "explanation": "Para resumir un debate. «matter» = «MÆ-dər», con flap t.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.the-thing-is", "text": "The thing is, most people can't afford it.", "es": "La cosa es que la mayoría de la gente no se lo puede permitir.", "notes": "«The thing is…» introduce el problema de fondo; «afford» = permitirse.", "explanation": "Para ir al punto clave. «thing» con «th» entre los dientes, no «ting».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.what-makes-you-say-that", "text": "What makes you say that?", "es": "¿Por qué lo dices?", "notes": "Más suave y curioso que un seco «Why?».", "literal": "¿Qué te hace decir eso?", "explanation": "Para pedir razones sin sonar a ataque. «makes you» se une: «MEIK-sə».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-opinions.at-the-end-of-the-day", "text": "At the end of the day, it's your decision.", "es": "Al fin y al cabo, es tu decisión.", "notes": "Expresión: «at the end of the day» = al fin y al cabo, no «al final del día».", "explanation": "Para cerrar un consejo o un debate. «end of the» se une: «EN-dəv-ðə».", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] }
+  ],
+  "vocab": [
+    { "id": "b2-opinions.point-of-view", "word": "point of view", "article": "a", "plural": "points of view", "es": "el punto de vista", "example": "b2-opinions.from-my-point-of-view", "situation": "opiniones" },
+    { "id": "b2-opinions.overrated", "word": "overrated", "es": "sobrevalorado", "notes": "Adjetivo; lo contrario es «underrated».", "example": "b2-opinions.if-you-ask-me", "situation": "opiniones" },
+    { "id": "b2-opinions.belief", "word": "belief", "article": "a", "plural": "beliefs", "es": "la creencia, la convicción", "notes": "Sustantivo de «believe».", "situation": "opiniones" },
+    { "id": "b2-opinions.stance", "word": "stance", "article": "a", "plural": "stances", "es": "la postura", "notes": "«What's your stance on…?» = ¿cuál es tu postura sobre…?", "situation": "opiniones" },
+    { "id": "b2-opinions.fair", "word": "fair", "es": "justo, razonable", "notes": "Adjetivo: «That's not fair!» = ¡no es justo!", "example": "b2-opinions.fair-enough", "situation": "opiniones" },
+    { "id": "b2-opinions.convincing", "word": "convincing", "es": "convincente", "notes": "Adjetivo: «a convincing argument».", "situation": "opiniones" },
+    { "id": "b2-opinions.disagree", "word": "disagree", "es": "no estar de acuerdo", "notes": "Verbo: «I disagree», nunca «I'm disagree».", "situation": "opiniones" },
+    { "id": "b2-opinions.evidence", "word": "evidence", "es": "las pruebas, los datos", "notes": "Incontable: «a piece of evidence», nunca «evidences». Falso amigo: no es «evidencia obvia».", "situation": "opiniones" },
+    { "id": "b2-opinions.data", "word": "data", "es": "los datos", "notes": "Incontable en el uso diario: «the data shows». Se dice «DEI-də».", "example": "b2-opinions.with-all-due-respect", "situation": "opiniones", "image": "fluent:bar-chart" },
+    { "id": "b2-opinions.assumption", "word": "assumption", "article": "an", "plural": "assumptions", "es": "la suposición", "notes": "«That's just an assumption» = eso es solo una suposición.", "situation": "opiniones" },
+    { "id": "b2-opinions.biased", "word": "biased", "es": "parcial, sesgado", "notes": "Adjetivo: «a biased opinion» = una opinión parcial.", "situation": "opiniones" },
+    { "id": "b2-opinions.controversial", "word": "controversial", "es": "polémico", "notes": "Adjetivo: «a controversial topic».", "situation": "opiniones" },
+    { "id": "b2-opinions.argument", "word": "argument", "article": "an", "plural": "arguments", "es": "el argumento; la discusión", "notes": "Ojo: «we had an argument» = discutimos (nos peleamos).", "situation": "opiniones" },
+    { "id": "b2-opinions.debate", "word": "debate", "article": "a", "plural": "debates", "es": "el debate", "situation": "opiniones" },
+    { "id": "b2-opinions.issue", "word": "issue", "article": "an", "plural": "issues", "es": "el tema, el problema", "notes": "Se dice «I-shuu».", "situation": "opiniones" },
+    { "id": "b2-opinions.reason", "word": "reason", "article": "a", "plural": "reasons", "es": "la razón, el motivo", "notes": "«tener razón» no es «have reason»: es «be right».", "example": "b2-opinions.the-main-reason-is", "situation": "opiniones" },
+    { "id": "b2-opinions.pros-and-cons", "word": "pros and cons", "es": "los pros y los contras", "notes": "Siempre en plural.", "situation": "opiniones" },
+    { "id": "b2-opinions.consequence", "word": "consequence", "article": "a", "plural": "consequences", "es": "la consecuencia", "situation": "opiniones" },
+    { "id": "b2-opinions.exception", "word": "exception", "article": "an", "plural": "exceptions", "es": "la excepción", "example": "b2-opinions.having-said-that", "situation": "opiniones" },
+    { "id": "b2-opinions.priority", "word": "priority", "article": "a", "plural": "priorities", "es": "la prioridad", "example": "b2-opinions.its-a-matter-of-priorities", "situation": "opiniones" },
+    { "id": "b2-opinions.afford", "word": "afford", "es": "permitirse (pagar)", "notes": "Verbo, casi siempre con «can»: «I can't afford it».", "example": "b2-opinions.the-thing-is", "situation": "opiniones" },
+    { "id": "b2-opinions.persuade", "word": "persuade", "es": "convencer, persuadir", "notes": "Verbo: «persuade someone to do something».", "situation": "opiniones" }
+  ],
+  "qa": [
+    {
+      "id": "b2-opinions.qa.remote-work",
+      "question": "What's your take on remote work?",
+      "questionEs": "¿Qué opinas del teletrabajo?",
+      "accepted": [
+        { "text": "As far as I'm concerned, it's here to stay.", "es": "En lo que a mí respecta, ha venido para quedarse." },
+        { "text": "I have mixed feelings about it, to be honest.", "es": "Tengo sentimientos encontrados, la verdad." }
+      ],
+      "distractors": [
+        { "text": "According to me, it's here to stay.", "es": "Según yo, ha venido para quedarse." },
+        { "text": "I have mixed feelings of it, to be honest.", "es": "Tengo sentimientos encontrados, la verdad." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«What's your take on…?» = ¿qué opinas de…? «According to me» no se usa para tu opinión; «mixed feelings about».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-opinions.qa.movie",
+      "question": "So, did you like the movie?",
+      "questionEs": "Bueno, ¿te gustó la película?",
+      "accepted": [
+        { "text": "If you ask me, it was a bit overrated.", "es": "Si me preguntas, estaba un poco sobrevalorada." },
+        { "text": "I'd say it was good, but not amazing.", "es": "Yo diría que estaba bien, pero no era increíble." }
+      ],
+      "distractors": [
+        { "text": "If you ask me, it was a bit overvalued.", "es": "Si me preguntas, estaba un poco sobrevalorada." },
+        { "text": "I'd say it was good, but I wasn't amazing.", "es": "Yo diría que estaba bien, pero no me asombró." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "Una película está «overrated»; «overvalued» es para precios. «amazing» = asombroso, «amazed» = asombrado (la persona).",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-opinions.qa.agree",
+      "question": "I think meetings should never be longer than thirty minutes.",
+      "questionEs": "Creo que las reuniones nunca deberían durar más de media hora.",
+      "accepted": [
+        { "text": "I couldn't agree more.", "es": "Estoy totalmente de acuerdo." },
+        { "text": "I agree with you up to a point.", "es": "Estoy de acuerdo contigo hasta cierto punto." }
+      ],
+      "distractors": [
+        { "text": "I am agree with you.", "es": "Estoy de acuerdo contigo." },
+        { "text": "I could agree more.", "es": "Podría estar más de acuerdo." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«agree» es un verbo: nunca «I am agree». «I could agree more» diría que no estás del todo de acuerdo.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-opinions.qa.ai-developers",
+      "question": "Honestly, I think AI is going to replace all developers.",
+      "questionEs": "Sinceramente, creo que la IA va a sustituir a todos los programadores.",
+      "accepted": [
+        { "text": "I wouldn't go that far.", "es": "Yo no diría tanto." },
+        { "text": "I'm not sure I agree with that.", "es": "No sé si estoy de acuerdo con eso." }
+      ],
+      "distractors": [
+        { "text": "I'm not agree with that.", "es": "No estoy de acuerdo con eso." },
+        { "text": "I wouldn't go so far away.", "es": "Yo no iría tan lejos." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "Para discrepar: «I disagree» o «I don't agree», nunca «I'm not agree». La expresión fija es «go that far».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-opinions.qa.why",
+      "question": "Why do you think it's a bad idea?",
+      "questionEs": "¿Por qué crees que es mala idea?",
+      "accepted": [
+        { "text": "The main reason is that it's too expensive.", "es": "La razón principal es que es demasiado caro." },
+        { "text": "Mainly because it would take too long.", "es": "Sobre todo porque llevaría demasiado tiempo." }
+      ],
+      "distractors": [
+        { "text": "Because is too expensive.", "es": "Porque es demasiado caro." },
+        { "text": "The main reason is because of it's too expensive.", "es": "La razón principal es porque es demasiado caro." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "El sujeto «it» no se omite; «because of» va con un sustantivo, no con una frase.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-opinions.qa.job-offer",
+      "question": "So, should I take the job in New York or not?",
+      "questionEs": "Entonces, ¿acepto el trabajo en Nueva York o no?",
+      "accepted": [
+        { "text": "On the one hand, it pays more; on the other hand, it's far away.", "es": "Por un lado, pagan más; por otro, está lejos." },
+        { "text": "At the end of the day, it's your decision.", "es": "Al fin y al cabo, es tu decisión." }
+      ],
+      "distractors": [
+        { "text": "For one side it pays more, for the other side it's far away.", "es": "Por un lado pagan más, por el otro está lejos." },
+        { "text": "At the end of the day, is your decision.", "es": "Al fin y al cabo, es tu decisión." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«por un lado… por otro» = «on the one hand… on the other hand»; y el sujeto «it» siempre aparece.",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

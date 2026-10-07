@@ -6,7 +6,7 @@
   "emoji": "🇺🇸",
   "formalRegister": "formal",
   "articles": ["a", "an"],
-  "levels": ["A2", "B1"],
+  "levels": ["A2", "B1", "B2", "C1"],
   "voices": ["en-US-AvaNeural", "en-US-AndrewNeural", "en-US-EmmaNeural", "en-US-BrianNeural"],
   "numberWords": {
     "0": "zero", "1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven",
@@ -52,6 +52,8 @@
     { "id": "tecnologia", "title": "Tecnología", "emoji": "💻" },
     { "id": "vivienda", "title": "Vivienda", "emoji": "🔑" },
     { "id": "dinero", "title": "Banco y dinero", "emoji": "🏦" },
+    { "id": "opiniones", "title": "Opiniones y debate", "emoji": "💬" },
+    { "id": "cultura", "title": "Cultura y ocio", "emoji": "🎬" },
     { "id": "gramatica", "title": "Gramática", "emoji": "📘" }
   ]
 }

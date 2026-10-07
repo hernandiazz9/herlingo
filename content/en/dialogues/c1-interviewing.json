@@ -1,0 +1,47 @@
+{
+  "id": "dlg.en-c1-interviewing",
+  "title": "Entrevistar a un candidato",
+  "description": "Ahora eres tú quien entrevista: haces preguntas abiertas, pides ejemplos concretos y explicas los siguientes pasos.",
+  "situation": "trabajo",
+  "unit": "c1-leading",
+  "order": 309,
+  "register": "formal",
+  "level": "C1",
+  "avatars": { "Candidato": "fluent:man-student" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Candidato", "text": "Thanks for having me. I'm really excited about this role.", "es": "Gracias por recibirme. Me hace mucha ilusión este puesto.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Dale la bienvenida y pídele que te cuente un proyecto del que esté especialmente orgulloso.",
+      "options": [
+        { "text": "Thanks for coming in. To start, could you walk me through a project you're particularly proud of?", "es": "Gracias por venir. Para empezar, ¿podrías explicarme paso a paso un proyecto del que estés especialmente orgulloso?", "verdict": "correct", "feedback": "¡Muy bien! «walk me through» = explicar paso a paso; es una pregunta abierta que le deja lucirse." },
+        { "text": "Tell me about your experience.", "es": "Háblame de tu experiencia.", "verdict": "acceptable", "feedback": "Correcto, pero muy general; pedir un proyecto concreto da respuestas más útiles." },
+        { "text": "Thanks for coming in. To start, could you explain me a project you're particularly proud about?", "es": "Gracias por venir. Para empezar, ¿podrías explicarme un proyecto del que estés especialmente orgulloso?", "verdict": "wrong", "feedback": "«explain» no lleva objeto de persona directo («explain it to me», no «explain me»), y es «proud of», no «proud about»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Candidato", "text": "Sure. Last year I led the migration of our payments system to a new provider with zero downtime.", "es": "Claro. El año pasado lideré la migración de nuestro sistema de pagos a un nuevo proveedor sin ninguna interrupción.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregúntale qué fue lo más difícil y cómo lo resolvió él personalmente.",
+      "options": [
+        { "text": "Impressive. What was the trickiest part, and how did you personally tackle it?", "es": "Impresionante. ¿Qué fue lo más complicado y cómo lo abordaste tú personalmente?", "verdict": "correct", "feedback": "¡Perfecto! «tackle» = abordar un problema; «personally» separa su aportación de la del equipo." },
+        { "text": "Was it difficult?", "es": "¿Fue difícil?", "verdict": "acceptable", "feedback": "Se puede responder con «sí» o «no»; una pregunta abierta te da más información." },
+        { "text": "Impressive. Which was the most tricky part, and how did you personally tackle it?", "es": "Impresionante. ¿Qué fue lo más complicado y cómo lo abordaste tú personalmente?", "verdict": "wrong", "feedback": "«tricky» forma el superlativo con -iest: «the trickiest part»; y aquí lo natural es «What was…», no «Which»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Candidato", "text": "Getting three teams to agree on a cutover date. I set up weekly syncs and a shared risk log.", "es": "Conseguir que tres equipos se pusieran de acuerdo en una fecha de cambio. Organicé reuniones semanales y un registro de riesgos compartido.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Dale las gracias y explica que la siguiente fase es una prueba técnica y que le escribiréis esta semana.",
+      "options": [
+        { "text": "That's really helpful, thank you. The next step is a technical exercise, and we'll be in touch by the end of the week.", "es": "Muy útil, gracias. El siguiente paso es un ejercicio técnico, y te escribiremos antes de que acabe la semana.", "verdict": "correct", "feedback": "¡Genial! Explicas el proceso con claridad; «be in touch» = ponernos en contacto." },
+        { "text": "Okay. We'll call you.", "es": "Vale. Te llamaremos.", "verdict": "acceptable", "feedback": "Se entiende, pero un buen entrevistador explica los siguientes pasos y el plazo." },
+        { "text": "That's really helpful, thank you. The next step is a technical exercise, and we'll be in contact until the end of the week.", "es": "Muy útil, gracias. El siguiente paso es un ejercicio técnico, y te escribiremos antes de que acabe la semana.", "verdict": "wrong", "feedback": "Un plazo límite es «by the end of the week»; «until» indica duración (hasta), no fecha límite." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Candidato", "text": "Sounds great. Thanks so much for your time.", "es": "Genial. Muchas gracias por tu tiempo.", "voice": "en-US-BrianNeural" }
+  ]
+}

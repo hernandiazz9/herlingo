@@ -1,0 +1,500 @@
+{
+  "id": "c1-tech-decisions",
+  "order": 322,
+  "level": "C1",
+  "title": "Decisiones técnicas: incidentes, postmortems, convencer al equipo",
+  "description": "Llevar la parte técnica en inglés: coordinar un incidente en directo, dirigir un postmortem sin culpables, proponer un cambio de arquitectura, convencer a un equipo escéptico y cerrar una decisión.",
+  "emoji": "🛠️",
+  "situation": "tecnologia",
+  "lessons": [
+    {
+      "id": "c1-tech-decisions.l.incidents",
+      "title": "En pleno incidente",
+      "items": [
+        "c1-tech-decisions.incident",
+        "b2-tech-talk.outage",
+        "c1-tech-decisions.severity",
+        "c1-tech-decisions.weve-got-a-sev-one",
+        "c1-tech-decisions.im-declaring-an-incident",
+        "c1-tech-decisions.on-call",
+        "c1-tech-decisions.whos-on-call-tonight",
+        "c1-tech-decisions.roll-back",
+        "c1-tech-decisions.lets-roll-back-the-last-deploy",
+        "c1-tech-decisions.stop-the-bleeding",
+        "c1-tech-decisions.our-priority-right-now",
+        "c1-tech-decisions.status-page",
+        "c1-tech-decisions.can-someone-post-an-update",
+        "c1-tech-decisions.error-rate",
+        "c1-tech-decisions.error-rates-are-back-to-normal",
+        "c1-tech-decisions.lets-keep-this-channel",
+        "c1-tech-decisions.downtime",
+        "c1-tech-decisions.qa.status",
+        "c1-tech-decisions.qa.roll-back"
+      ]
+    },
+    {
+      "id": "c1-tech-decisions.l.postmortems",
+      "title": "El postmortem sin culpables",
+      "items": [
+        "c1-tech-decisions.postmortem",
+        "c1-tech-decisions.blameless",
+        "c1-tech-decisions.this-is-a-blameless-postmortem",
+        "b2-meetings.timeline",
+        "c1-tech-decisions.lets-walk-through-the-timeline",
+        "c1-tech-decisions.it-took-us-forty-minutes",
+        "b2-tech-talk.root-cause",
+        "c1-tech-decisions.the-root-cause-was-a-config-change",
+        "c1-tech-decisions.contributing-factor",
+        "c1-tech-decisions.a-contributing-factor-was",
+        "c1-tech-decisions.noisy",
+        "c1-tech-decisions.what-could-we-have-done",
+        "c1-tech-decisions.safeguard",
+        "c1-tech-decisions.canary-release",
+        "c1-tech-decisions.had-we-had-a-canary",
+        "b2-meetings.action-item",
+        "c1-tech-decisions.each-action-item-needs-an-owner",
+        "c1-tech-decisions.lesson-learned",
+        "c1-tech-decisions.qa.fault",
+        "c1-tech-decisions.qa.lesson"
+      ]
+    },
+    {
+      "id": "c1-tech-decisions.l.proposals",
+      "title": "Proponer un cambio técnico",
+      "items": [
+        "c1-tech-decisions.design-doc",
+        "c1-tech-decisions.ive-written-up-a-design-doc",
+        "c1-tech-decisions.alternative",
+        "c1-tech-decisions.we-looked-at-three-alternatives",
+        "c1-tech-decisions.the-main-reason-im-proposing",
+        "c1-tech-decisions.benchmark",
+        "c1-tech-decisions.i-ran-a-quick-benchmark",
+        "c1-tech-decisions.proof-of-concept",
+        "c1-tech-decisions.id-suggest-we-build",
+        "b2-meetings.trade-off",
+        "c1-tech-decisions.the-trade-off-is",
+        "c1-tech-decisions.maintainability",
+        "c1-tech-decisions.vendor-lock-in",
+        "c1-tech-decisions.my-concern-with-that-option",
+        "c1-tech-decisions.migrate",
+        "c1-tech-decisions.wed-need-to-migrate",
+        "b2-tech-talk.tech-debt",
+        "c1-tech-decisions.qa.why-change",
+        "c1-tech-decisions.qa.alternatives"
+      ]
+    },
+    {
+      "id": "c1-tech-decisions.l.persuading",
+      "title": "Convencer a un equipo escéptico",
+      "items": [
+        "c1-presenting.buy-in",
+        "c1-tech-decisions.skeptical",
+        "c1-tech-decisions.i-get-why-youre-skeptical",
+        "b2-tech-talk.push-back",
+        "c1-tech-decisions.thats-a-fair-concern",
+        "b2-opinions.evidence",
+        "c1-tech-decisions.let-me-show-you-the-numbers",
+        "c1-tech-decisions.the-data-speaks-for-itself",
+        "c1-tech-decisions.compelling",
+        "c1-tech-decisions.what-would-it-take-to-convince-you",
+        "c1-tech-decisions.pilot",
+        "c1-tech-decisions.lets-start-with-a-pilot",
+        "c1-tech-decisions.track-record",
+        "c1-tech-decisions.win-over",
+        "c1-tech-decisions.id-rather-hear-your-doubts-now",
+        "c1-tech-decisions.devils-advocate",
+        "c1-tech-decisions.qa.not-convinced",
+        "c1-tech-decisions.qa.new-tool"
+      ]
+    },
+    {
+      "id": "c1-tech-decisions.l.deciding",
+      "title": "Decidir y comprometerse",
+      "items": [
+        "b2-meetings.consensus",
+        "c1-tech-decisions.weve-gone-back-and-forth",
+        "c1-tech-decisions.make-the-call",
+        "c1-tech-decisions.reversible",
+        "c1-tech-decisions.this-decision-is-easy-to-reverse",
+        "c1-tech-decisions.overthink",
+        "c1-tech-decisions.disagree-and-commit",
+        "c1-tech-decisions.id-have-gone-the-other-way",
+        "c1-tech-decisions.nobodys-going-to-love-this",
+        "c1-tech-decisions.lets-document-the-decision",
+        "c1-tech-decisions.revisit",
+        "c1-tech-decisions.well-revisit-this-in-three-months",
+        "b2-meetings.stakeholder",
+        "c1-tech-decisions.can-we-get-sign-off",
+        "c1-tech-decisions.qa.cant-agree",
+        "c1-tech-decisions.qa.on-board"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "c1-tech-decisions.weve-got-a-sev-one", "text": "We've got a sev one: checkout is down for all users.", "es": "Tenemos un incidente de gravedad uno: el pago no funciona para ningún usuario.", "notes": "«sev one» = severity one, el nivel más grave. «be down» = estar caído.", "explanation": "Lo primero que dices al dar la alarma. «sev» se dice «sev», con «v» de labio y dientes; «users» empieza por «iu»: «IU-zərz».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.im-declaring-an-incident", "text": "I'm declaring an incident and opening a war room, so please join the call.", "es": "Declaro un incidente y abro una sala de crisis, así que conectaos a la llamada.", "notes": "«war room» = sala de crisis (física o una videollamada).", "explanation": "Lo dice quien coordina para movilizar al equipo. «declaring»: «di-KLE-ring», con «r» americana.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.whos-on-call-tonight", "text": "Who's on call tonight, and have they been paged yet?", "es": "¿Quién está de guardia esta noche y le han avisado ya?", "notes": "«be on call» = estar de guardia; «page someone» = avisar con una alerta.", "explanation": "Para saber a quién despertar. «paged» termina en /d/ casi sin vocal: «peichd».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.lets-roll-back-the-last-deploy", "text": "Let's roll back the last deploy and see if the errors drop.", "es": "Revirtamos el último despliegue y veamos si bajan los errores.", "notes": "«roll back» = revertir, volver a la versión anterior. «drop» = bajar.", "explanation": "La primera medida típica en un incidente. «roll» se dice «roul», con «o» redonda.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.our-priority-right-now", "text": "Our priority right now is to stop the bleeding, not to find the root cause.", "es": "Lo prioritario ahora mismo es frenar el daño, no encontrar la causa raíz.", "notes": "«stop the bleeding» = cortar la hemorragia, frenar los daños (idiom).", "explanation": "Para que el equipo no se pierda investigando durante la caída. «bleeding» con «ee» larga: «BLII-ding».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.can-someone-post-an-update", "text": "Can someone post an update on the status page every thirty minutes?", "es": "¿Puede alguien publicar una actualización en la página de estado cada treinta minutos?", "notes": "«post an update» = publicar una actualización.", "explanation": "Para que clientes y soporte sepan qué pasa. «update» como sustantivo: «UP-deit», acento al principio.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.error-rates-are-back-to-normal", "text": "Error rates are back to normal, but we'll keep monitoring for another hour.", "es": "La tasa de errores ha vuelto a la normalidad, pero seguiremos vigilando una hora más.", "notes": "«be back to normal» = volver a la normalidad; «keep + -ing» = seguir haciendo.", "explanation": "Para anunciar que lo peor ha pasado sin cerrar aún el incidente. «monitoring»: «MA-ni-tə-ring».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.lets-keep-this-channel", "text": "Let's keep this channel for the incident only and take side discussions elsewhere.", "es": "Dejemos este canal solo para el incidente y llevemos las conversaciones paralelas a otro sitio.", "notes": "«side discussion» = conversación paralela; «elsewhere» = en otro sitio.", "explanation": "Para mantener el orden en Slack durante una caída. «elsewhere»: «ELS-wer», acento al principio.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.this-is-a-blameless-postmortem", "text": "This is a blameless postmortem: we're looking at systems, not people.", "es": "Este es un postmortem sin culpables: analizamos sistemas, no personas.", "notes": "«blameless» = sin culpar a nadie. Es la norma en muchas empresas tecnológicas de EE. UU.", "explanation": "Cómo abrir la reunión para que la gente hable sin miedo. «postmortem»: «poust-MOR-təm».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.lets-walk-through-the-timeline", "text": "Let's walk through the timeline, starting with the first alert at two a.m.", "es": "Repasemos la cronología paso a paso, empezando por la primera alerta a las dos de la mañana.", "notes": "«walk through» = repasar paso a paso. «two a.m.» = las dos de la madrugada.", "explanation": "La primera parte de todo postmortem. «through» lleva «th» de «zapato» y suena «zru».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.it-took-us-forty-minutes", "text": "It took us forty minutes to even notice something was wrong.", "es": "Tardamos cuarenta minutos solo en darnos cuenta de que algo iba mal.", "notes": "«it took us + tiempo + to» = tardamos… en. «even» = siquiera, solo.", "explanation": "Para señalar un problema de detección. «forty» se escribe sin «u» y la «t» suena suave: «FOR-di».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.the-root-cause-was-a-config-change", "text": "The root cause was a config change that skipped code review.", "es": "La causa raíz fue un cambio de configuración que se saltó la revisión de código.", "notes": "«config» = configuration; «skip» = saltarse.", "explanation": "Frase central de la sección de causas. «root» con «u» larga: «ruut».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.a-contributing-factor-was", "text": "A contributing factor was that our alerts were so noisy that people ignored them.", "es": "Un factor que contribuyó fue que las alertas saltaban tanto que la gente las ignoraba.", "notes": "«so + adjetivo + that» = tan… que. «noisy alerts» = alertas que saltan demasiado.", "explanation": "Para hablar de causas secundarias sin culpar a nadie. «contributing»: «kən-TRI-biu-ting».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.what-could-we-have-done", "text": "What could we have done differently to catch this sooner?", "es": "¿Qué podríamos haber hecho distinto para pillarlo antes?", "notes": "«could have + participio» = podríamos haber… «catch» = detectar, pillar.", "explanation": "La pregunta clave del postmortem. «could we have» se reduce a «cud-wi-əv».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.had-we-had-a-canary", "text": "Had we had a canary release, we'd have caught this within minutes.", "es": "Si hubiéramos tenido un despliegue canario, lo habríamos detectado en minutos.", "notes": "Inversión formal de «If we had had…». Ver la gramática C1 de inversión.", "explanation": "Suena muy C1 en un documento o reunión formal. «had we had»: la primera «had» se acentúa.", "register": "formal", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.each-action-item-needs-an-owner", "text": "Each action item needs an owner and a due date, or it won't get done.", "es": "Cada tarea pendiente necesita un responsable y una fecha, o no se hará.", "notes": "«owner» = responsable; «due date» = fecha límite; «get done» = hacerse.", "explanation": "Para cerrar el postmortem con compromisos reales. «owner» empieza por «ou»: «OU-nər», sin «w».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.ive-written-up-a-design-doc", "text": "I've written up a design doc, and I'd love your comments by Thursday.", "es": "He redactado un documento de diseño y me encantaría tener vuestros comentarios antes del jueves.", "notes": "«write up» = poner por escrito, redactar. «by Thursday» = como tarde el jueves.", "explanation": "Para lanzar una propuesta por escrito en Slack o email. «Thursday»: «ZURS-dei», con «th» de «zapato».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.we-looked-at-three-alternatives", "text": "We looked at three alternatives before landing on this one.", "es": "Estudiamos tres alternativas antes de decidirnos por esta.", "notes": "«land on» = decidirse por, acabar eligiendo.", "explanation": "Demuestra que la propuesta está pensada. «alternatives»: «al-TER-nə-tivz», acento en la segunda.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.the-main-reason-im-proposing", "text": "The main reason I'm proposing this is to cut our cloud costs by about a third.", "es": "El motivo principal de esta propuesta es reducir los costes de la nube en torno a un tercio.", "notes": "«cut costs» = recortar costes; «a third» = un tercio.", "explanation": "Empieza por el porqué, no por el cómo. «third» lleva «th» de «zapato»: «zerd».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.i-ran-a-quick-benchmark", "text": "I ran a quick benchmark, and the new version is roughly twice as fast.", "es": "Hice una prueba de rendimiento rápida y la nueva versión es aproximadamente el doble de rápida.", "notes": "«run a benchmark» = hacer una prueba de rendimiento; «twice as fast» = el doble de rápido.", "explanation": "Para apoyar la propuesta con datos. «roughly» = «RAF-li»: la «gh» suena «f».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.id-suggest-we-build", "text": "Before we commit to anything, I'd suggest we build a small proof of concept.", "es": "Antes de comprometernos a nada, propondría que hiciéramos una pequeña prueba de concepto.", "notes": "«I'd suggest we + infinitivo sin to» (subjuntivo formal). «commit to» = comprometerse con.", "explanation": "Para reducir el riesgo de una decisión grande. «suggest»: «səg-JEST», la «g» suena como «ch» suave.", "register": "formal", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.the-trade-off-is", "text": "The trade-off is more work upfront in exchange for much easier maintenance later.", "es": "La contrapartida es más trabajo al principio a cambio de un mantenimiento mucho más fácil después.", "notes": "«upfront» = al principio, por adelantado; «in exchange for» = a cambio de.", "explanation": "Reconocer el coste hace la propuesta más creíble. «maintenance»: «MEIN-tə-nəns», acento al principio.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.my-concern-with-that-option", "text": "My main concern with that option is vendor lock-in.", "es": "Lo que más me preocupa de esa opción es quedarnos atados al proveedor.", "notes": "«my concern with X is…» = lo que me preocupa de X es…", "explanation": "Para objetar con un argumento técnico, no personal. «concern»: «kən-SERN», acento al final.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.wed-need-to-migrate", "text": "We'd need to migrate the data without any downtime, which is the tricky part.", "es": "Tendríamos que migrar los datos sin ninguna caída, y eso es lo complicado.", "notes": "«which is the tricky part» = y eso es lo difícil. «tricky» = complicado, delicado.", "explanation": "Para señalar el punto débil del plan antes de que lo hagan otros. «data» en EE. UU.: «DEI-də».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.i-get-why-youre-skeptical", "text": "I get why you're skeptical; to be honest, I was too at first.", "es": "Entiendo que seas escéptico; para serte sincero, yo también lo era al principio.", "notes": "«I get why» = entiendo por qué (coloquial). «at first» = al principio.", "explanation": "Empatiza antes de argumentar. «skeptical» en EE. UU. se escribe con «k»: «SKEP-ti-kəl».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.thats-a-fair-concern", "text": "That's a fair concern, and here's how we'd address it.", "es": "Es una preocupación razonable y te cuento cómo la abordaríamos.", "notes": "«fair» = razonable, justo. «address a concern» = dar respuesta a una preocupación.", "explanation": "Valida la objeción y pasa a la solución. «address» como verbo: «ə-DRES», acento al final.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.let-me-show-you-the-numbers", "text": "Let me show you the numbers, and then you can make up your own mind.", "es": "Déjame enseñarte las cifras y luego decides tú mismo.", "notes": "«make up your mind» = decidirte, formarte una opinión.", "explanation": "Para persuadir con datos sin presionar. «numbers»: la «u» corta de «cup», no una «u» española.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.the-data-speaks-for-itself", "text": "The data speaks for itself: deploys have failed half as often since we switched.", "es": "Los datos hablan por sí solos: los despliegues fallan la mitad desde que cambiamos.", "notes": "«speak for itself» = hablar por sí solo. «half as often» = la mitad de veces.", "explanation": "Cierre contundente tras enseñar los datos. «itself» se acentúa al final: «it-SELF».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.what-would-it-take-to-convince-you", "text": "What would it take to convince you that this is worth trying?", "es": "¿Qué haría falta para convencerte de que merece la pena probarlo?", "notes": "«What would it take to…?» = ¿qué haría falta para…? «be worth + -ing» = merecer la pena.", "explanation": "Convierte el «no» en condiciones concretas. «worth» lleva «th» de «zapato» al final: «werz».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.lets-start-with-a-pilot", "text": "We don't have to switch everything at once; let's start with a pilot on one service.", "es": "No hace falta cambiarlo todo de golpe; empecemos con un piloto en un solo servicio.", "notes": "«at once» = de golpe, a la vez. «don't have to» = no hace falta (no es «no debes»).", "explanation": "Reduce el riesgo para ganarte a los escépticos. «pilot»: «PAI-lət».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.id-rather-hear-your-doubts-now", "text": "I'd rather hear your doubts now than six months into the project.", "es": "Prefiero oír vuestras dudas ahora que a los seis meses de proyecto.", "notes": "«I'd rather + infinitivo sin to… than…» = prefiero… a… «six months into» = a los seis meses de.", "explanation": "Invita a que la gente plantee sus dudas pronto. «I'd rather»: «aid-RA-dher», con «th» sonora.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.devils-advocate", "text": "Let me play devil's advocate for a second: what if traffic doubles next year?", "es": "Déjame hacer de abogado del diablo un momento: ¿y si el tráfico se duplica el año que viene?", "notes": "«play devil's advocate» = hacer de abogado del diablo. «double» = duplicarse.", "explanation": "Para poner a prueba una propuesta sin atacarla. «devil's»: «DE-vəlz», con «v» de labio y dientes.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.weve-gone-back-and-forth", "text": "We've gone back and forth on this for weeks; it's time to make a call.", "es": "Llevamos semanas dándole vueltas a esto; es hora de decidir.", "notes": "«go back and forth» = darle vueltas, ir y venir. «make a call» = tomar una decisión.", "explanation": "Para cortar un debate que no avanza. «back and forth» se enlaza: «BA-kən-FORZ».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.this-decision-is-easy-to-reverse", "text": "This decision is easy to reverse, so let's not overthink it.", "es": "Esta decisión es fácil de deshacer, así que no le demos más vueltas.", "notes": "«easy to reverse» = fácil de revertir; «overthink» = pensar demasiado algo.", "explanation": "Útil cuando el equipo se bloquea con algo de poco riesgo. «reverse»: «ri-VERS», con «v» de labio y dientes.", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.id-have-gone-the-other-way", "text": "I'd have gone the other way, but I'll commit to it and help make it work.", "es": "Yo habría elegido lo otro, pero me comprometo y ayudaré a que funcione.", "notes": "«go the other way» = optar por lo contrario. Es el «disagree and commit».", "explanation": "Para aceptar una decisión con la que no estás de acuerdo. «I'd have» suena «AI-dəv».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.nobodys-going-to-love-this", "text": "Nobody's going to love this option, but it's by far the least risky.", "es": "A nadie le va a encantar esta opción, pero es con diferencia la menos arriesgada.", "notes": "«by far» = con diferencia; «the least risky» = la menos arriesgada.", "explanation": "Para defender una solución poco atractiva pero segura. «least» con «ee» larga: «liist».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.lets-document-the-decision", "text": "Let's document the decision and the reasoning behind it, so nobody has to guess later.", "es": "Dejemos por escrito la decisión y el razonamiento que hay detrás, para que nadie tenga que adivinarlo después.", "notes": "«the reasoning behind it» = el porqué. Muchos equipos usan un «decision record» (ADR).", "explanation": "Cierra una decisión técnica para el futuro. «document» como verbo: «DA-kiu-ment».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.well-revisit-this-in-three-months", "text": "We'll revisit this in three months, once we have real usage data.", "es": "Lo volveremos a revisar dentro de tres meses, cuando tengamos datos de uso reales.", "notes": "«revisit» = volver a plantear; «once» aquí = cuando, en cuanto (no solo «una vez»).", "explanation": "Para tranquilizar a quien no está convencido. «once» se dice «uans».", "register": "neutral", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.can-we-get-sign-off", "text": "Can we get sign-off from the stakeholders by end of day?", "es": "¿Podemos tener el visto bueno de las partes interesadas antes del final del día?", "notes": "«sign-off» (sustantivo) = la aprobación; «by end of day» (EOD) = hoy como tarde.", "explanation": "Último paso para cerrar la decisión. «stakeholders»: «STEIK-houl-dərz».", "register": "formal", "situation": "tecnologia"}
+  ],
+  "vocab": [
+    {"id": "c1-tech-decisions.incident", "word": "incident", "article": "an", "plural": "incidents", "es": "el incidente", "notes": "«incident response» = la gestión de incidentes. Acento: «IN-si-dənt».", "example": "c1-tech-decisions.im-declaring-an-incident", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.severity", "word": "severity", "es": "la gravedad", "notes": "«a high-severity incident»; se abrevia «sev»: «sev one», «sev two».", "example": "c1-tech-decisions.weve-got-a-sev-one", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.on-call", "word": "on call", "es": "de guardia", "notes": "«be on call» = estar de guardia. Con guion delante de un sustantivo: «the on-call engineer».", "example": "c1-tech-decisions.whos-on-call-tonight", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.roll-back", "word": "roll back", "es": "revertir (un cambio, un despliegue)", "notes": "Phrasal verb. El sustantivo va junto: «a rollback».", "example": "c1-tech-decisions.lets-roll-back-the-last-deploy", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.stop-the-bleeding", "word": "stop the bleeding", "es": "frenar los daños", "notes": "Expresión: actuar rápido para que el problema no empeore.", "example": "c1-tech-decisions.our-priority-right-now", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.status-page", "word": "status page", "article": "a", "plural": "status pages", "es": "la página de estado", "notes": "Página pública donde una empresa informa de caídas.", "example": "c1-tech-decisions.can-someone-post-an-update", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.error-rate", "word": "error rate", "article": "an", "plural": "error rates", "es": "la tasa de errores", "notes": "«rate» = tasa, ritmo: «success rate», «response rate».", "example": "c1-tech-decisions.error-rates-are-back-to-normal", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.downtime", "word": "downtime", "es": "el tiempo de inactividad, la caída", "notes": "Incontable: «zero downtime» = sin cortes. Lo contrario: «uptime».", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.postmortem", "word": "postmortem", "article": "a", "plural": "postmortems", "es": "el postmortem, el análisis posterior a un incidente", "notes": "También «post-mortem» o «retro» (retrospectiva). Literalmente, autopsia.", "example": "c1-tech-decisions.this-is-a-blameless-postmortem", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.blameless", "word": "blameless", "es": "sin culpables", "notes": "«-less» = sin: «blame» (culpa) + «less».", "example": "c1-tech-decisions.this-is-a-blameless-postmortem", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.contributing-factor", "word": "contributing factor", "article": "a", "plural": "contributing factors", "es": "el factor que contribuye", "notes": "Causa secundaria, junto a la «root cause».", "example": "c1-tech-decisions.a-contributing-factor-was", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.noisy", "word": "noisy", "es": "ruidoso; (alerta) que salta demasiado", "notes": "«noisy alerts» = alertas con tantos falsos positivos que nadie les hace caso.", "example": "c1-tech-decisions.a-contributing-factor-was", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.safeguard", "word": "safeguard", "article": "a", "plural": "safeguards", "es": "la salvaguarda, la medida de protección", "notes": "«put safeguards in place» = poner medidas de protección.", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.canary-release", "word": "canary release", "article": "a", "plural": "canary releases", "es": "el despliegue canario (a unos pocos usuarios primero)", "notes": "Como el canario de las minas: si falla, solo afecta a unos pocos.", "example": "c1-tech-decisions.had-we-had-a-canary", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.lesson-learned", "word": "lesson learned", "article": "a", "plural": "lessons learned", "es": "la lección aprendida", "notes": "El plural cambia solo el sustantivo: «lessons learned».", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.design-doc", "word": "design doc", "article": "a", "plural": "design docs", "es": "el documento de diseño", "notes": "Documento que explica un cambio técnico antes de hacerlo. Similar: «RFC» (request for comments).", "example": "c1-tech-decisions.ive-written-up-a-design-doc", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.alternative", "word": "alternative", "article": "an", "plural": "alternatives", "es": "la alternativa", "notes": "Acento en la segunda sílaba: «al-TER-nə-tiv».", "example": "c1-tech-decisions.we-looked-at-three-alternatives", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.benchmark", "word": "benchmark", "article": "a", "plural": "benchmarks", "es": "la prueba de rendimiento, la referencia", "notes": "También verbo: «benchmark two databases».", "example": "c1-tech-decisions.i-ran-a-quick-benchmark", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.proof-of-concept", "word": "proof of concept", "article": "a", "plural": "proofs of concept", "es": "la prueba de concepto", "notes": "Se abrevia «PoC». El plural cambia «proof», no «concept».", "example": "c1-tech-decisions.id-suggest-we-build", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.maintainability", "word": "maintainability", "es": "la facilidad de mantenimiento", "notes": "Incontable. Viene de «maintain» (mantener).", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.vendor-lock-in", "word": "vendor lock-in", "es": "la dependencia del proveedor", "notes": "Incontable. Quedarte atado a un proveedor porque cambiar es demasiado caro.", "example": "c1-tech-decisions.my-concern-with-that-option", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.migrate", "word": "migrate", "es": "migrar", "notes": "«migrate from X to Y». Sustantivo: «migration».", "example": "c1-tech-decisions.wed-need-to-migrate", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.skeptical", "word": "skeptical", "es": "escéptico", "notes": "Ortografía de EE. UU.; en Reino Unido, «sceptical». «be skeptical about/of».", "example": "c1-tech-decisions.i-get-why-youre-skeptical", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.compelling", "word": "compelling", "es": "convincente, de peso", "notes": "«a compelling argument / case» = un argumento de peso.", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.pilot", "word": "pilot", "article": "a", "plural": "pilots", "es": "el piloto, la prueba piloto", "notes": "«run a pilot» = hacer una prueba piloto.", "example": "c1-tech-decisions.lets-start-with-a-pilot", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.track-record", "word": "track record", "article": "a", "plural": "track records", "es": "el historial, la trayectoria demostrada", "notes": "«a proven track record» = resultados demostrados.", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.win-over", "word": "win over", "es": "ganarse (a alguien), convencer", "notes": "Phrasal verb: «win someone over» = conseguir que alguien te apoye.", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.make-the-call", "word": "make the call", "es": "tomar la decisión, decidir", "notes": "«It's your call» = tú decides. Nunca «take the call» con este sentido (eso es contestar una llamada).", "example": "c1-tech-decisions.weve-gone-back-and-forth", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.reversible", "word": "reversible", "es": "reversible", "notes": "Lo contrario: «irreversible», o «a one-way door» (puerta de un solo sentido).", "example": "c1-tech-decisions.this-decision-is-easy-to-reverse", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.overthink", "word": "overthink", "es": "darle demasiadas vueltas", "notes": "Verbo irregular: overthink, overthought.", "example": "c1-tech-decisions.this-decision-is-easy-to-reverse", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.disagree-and-commit", "word": "disagree and commit", "es": "discrepar y aun así comprometerse", "notes": "Principio de equipo: dices que no estás de acuerdo y luego apoyas la decisión al cien por cien.", "example": "c1-tech-decisions.id-have-gone-the-other-way", "situation": "tecnologia"},
+    {"id": "c1-tech-decisions.revisit", "word": "revisit", "es": "volver a plantear, revisar", "notes": "«revisit a decision» = replanteársela más adelante.", "example": "c1-tech-decisions.well-revisit-this-in-three-months", "situation": "tecnologia"}
+  ],
+  "qa": [
+    {
+      "id": "c1-tech-decisions.qa.status",
+      "question": "What's the status? Customers are flooding support with tickets.",
+      "questionEs": "¿Cómo está la cosa? Los clientes están inundando soporte de tickets.",
+      "accepted": [
+        {
+          "text": "We've identified the bad deploy and we're rolling it back now. I'll update the status page in ten minutes.",
+          "es": "Hemos identificado el despliegue que falla y lo estamos revirtiendo. Actualizo la página de estado en diez minutos."
+        },
+        {
+          "text": "We're still investigating, but we've stopped the bleeding. Errors are dropping.",
+          "es": "Seguimos investigando, pero hemos frenado los daños. Los errores están bajando."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "We are investigating since one hour.",
+          "es": "Llevamos una hora investigando."
+        },
+        {
+          "text": "We have identified the deploy and now we return it back.",
+          "es": "Hemos identificado el despliegue y ahora lo revertimos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«llevamos una hora investigando» = «we've been investigating for an hour»; «revertir» = «roll back», no «return back».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.roll-back",
+      "question": "Should we roll back, or try to push a fix forward?",
+      "questionEs": "¿Revertimos o intentamos subir un arreglo?",
+      "accepted": [
+        {
+          "text": "Let's roll back first. We can work on a proper fix once things are stable.",
+          "es": "Primero revirtamos. Ya trabajaremos en un arreglo bien hecho cuando todo esté estable."
+        },
+        {
+          "text": "Rolling back is safer; a rushed fix could make things worse.",
+          "es": "Revertir es más seguro; un arreglo con prisas podría empeorarlo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "It's more secure to roll back, a fix with hurry can do it worse.",
+          "es": "Es más seguro revertir, un arreglo con prisa puede empeorarlo."
+        },
+        {
+          "text": "First we roll back and when it will be stable we fix it.",
+          "es": "Primero revertimos y cuando esté estable lo arreglamos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«seguro» (sin riesgo) = «safe», no «secure»; tras «when» con sentido futuro va presente: «when it's stable», no «when it will be».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.fault",
+      "question": "So, whose fault was the outage, really?",
+      "questionEs": "Entonces, ¿de quién fue la culpa de la caída, en realidad?",
+      "accepted": [
+        {
+          "text": "It's not about whose fault it was. The process let a risky change go out without review.",
+          "es": "No se trata de quién tuvo la culpa. El proceso dejó salir un cambio arriesgado sin revisión."
+        },
+        {
+          "text": "Nobody's, really. Any of us could have made that change; the system should have stopped it.",
+          "es": "De nadie, en realidad. Cualquiera podría haber hecho ese cambio; el sistema debería haberlo frenado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "The fault is of the person who did the change.",
+          "es": "La culpa es de la persona que hizo el cambio."
+        },
+        {
+          "text": "It's not important who has the guilt, the process failed.",
+          "es": "No importa quién tiene la culpa, el proceso falló."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«la culpa es de X» = «it's X's fault»; «tener la culpa» = «be to blame», no «have the guilt»; «hacer un cambio» = «make a change».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.lesson",
+      "question": "What's the main lesson learned from this incident?",
+      "questionEs": "¿Cuál es la principal lección aprendida de este incidente?",
+      "accepted": [
+        {
+          "text": "That we need better alerts. It took us far too long to notice anything was wrong.",
+          "es": "Que necesitamos mejores alertas. Tardamos demasiado en darnos cuenta de que algo iba mal."
+        },
+        {
+          "text": "Config changes need the same safeguards as code: review, tests and a canary release.",
+          "es": "Los cambios de configuración necesitan las mismas salvaguardas que el código: revisión, tests y despliegue canario."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "That we need better alerts, we tardied too much to realize.",
+          "es": "Que necesitamos mejores alertas, tardamos demasiado en darnos cuenta."
+        },
+        {
+          "text": "We have learned that the changes of configuration need review.",
+          "es": "Hemos aprendido que los cambios de configuración necesitan revisión."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«tardar» = «take (time)»: «it took us too long»; en inglés el sustantivo va delante: «config changes», no «changes of configuration».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.why-change",
+      "question": "Our current setup works fine. Why not just stick with what we have?",
+      "questionEs": "Lo que tenemos ahora funciona bien. ¿Por qué no seguir con lo que hay?",
+      "accepted": [
+        {
+          "text": "It works today, but it won't scale, and every new feature is taking longer to build.",
+          "es": "Hoy funciona, pero no va a escalar, y cada nueva funcionalidad tarda más en hacerse."
+        },
+        {
+          "text": "Fair question. The main reason is cost: we'd cut our cloud bill by about a third.",
+          "es": "Buena pregunta. El motivo principal es el coste: reduciríamos la factura de la nube en torno a un tercio."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "It functions now, but every new functionality costs more time.",
+          "es": "Ahora funciona, pero cada nueva funcionalidad cuesta más tiempo."
+        },
+        {
+          "text": "Because the costs of the cloud would reduce in a third.",
+          "es": "Porque los costes de la nube se reducirían en un tercio."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Para software se dice «it works», no «it functions»; «funcionalidad» = «feature»; «tardar más» = «take longer». «stick with» = seguir con.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.alternatives",
+      "question": "Have you considered any other options?",
+      "questionEs": "¿Has considerado otras opciones?",
+      "accepted": [
+        {
+          "text": "Yes, we looked at three alternatives. The design doc explains why we ruled them out.",
+          "es": "Sí, estudiamos tres alternativas. El documento de diseño explica por qué las descartamos."
+        },
+        {
+          "text": "We did. The managed service was faster to set up, but it meant vendor lock-in.",
+          "es": "Sí. El servicio gestionado era más rápido de montar, pero suponía depender del proveedor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, we have considered three alternatives last month.",
+          "es": "Sí, consideramos tres alternativas el mes pasado."
+        },
+        {
+          "text": "Yes, but we discarded them because they supposed lock-in.",
+          "es": "Sí, pero las descartamos porque suponían dependencia."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Con «last month» va pasado simple, no present perfect; «descartar» una opción = «rule out»; «suponer» (implicar) = «mean», no «suppose».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.not-convinced",
+      "question": "Honestly, I'm not convinced it's worth the effort.",
+      "questionEs": "Sinceramente, no estoy convencido de que merezca la pena el esfuerzo.",
+      "accepted": [
+        {
+          "text": "That's fair. What would it take to convince you? Maybe a pilot on one service?",
+          "es": "Es razonable. ¿Qué haría falta para convencerte? ¿Quizá un piloto en un servicio?"
+        },
+        {
+          "text": "I get that. Let me show you the numbers, and then you can make up your own mind.",
+          "es": "Lo entiendo. Déjame enseñarte las cifras y luego decides tú."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "You are not right, it deserves the effort.",
+          "es": "No tienes razón, merece el esfuerzo."
+        },
+        {
+          "text": "I understand. What would it need to convince you?",
+          "es": "Lo entiendo. ¿Qué haría falta para convencerte?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«no tienes razón» = «you're wrong», y suena brusco; «merecer la pena» = «be worth it»; «¿qué haría falta?» = «what would it take?», no «need».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.new-tool",
+      "question": "Why should we trust a tool nobody on the team has used before?",
+      "questionEs": "¿Por qué deberíamos fiarnos de una herramienta que nadie del equipo ha usado antes?",
+      "accepted": [
+        {
+          "text": "It has a solid track record at much bigger companies, and we'd start with a small pilot.",
+          "es": "Tiene un historial sólido en empresas mucho más grandes y empezaríamos con un piloto pequeño."
+        },
+        {
+          "text": "Fair point. We'd only roll it out if the pilot goes well, so the risk is small.",
+          "es": "Buena observación. Solo lo implantaríamos si el piloto sale bien, así que el riesgo es pequeño."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Because it has a good historial in big companies.",
+          "es": "Porque tiene un buen historial en empresas grandes."
+        },
+        {
+          "text": "We would only implant it if the pilot goes well.",
+          "es": "Solo lo implantaríamos si el piloto sale bien."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«historial» = «track record» (no existe «historial» en inglés); «implantar» una herramienta = «roll out» o «adopt», no «implant».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.cant-agree",
+      "question": "We've been arguing about this for an hour and we still can't agree. What now?",
+      "questionEs": "Llevamos una hora discutiendo y seguimos sin ponernos de acuerdo. ¿Y ahora qué?",
+      "accepted": [
+        {
+          "text": "It's easy to reverse, so I'll make the call, and we'll revisit it in a month.",
+          "es": "Es fácil de deshacer, así que decido yo y lo revisamos dentro de un mes."
+        },
+        {
+          "text": "Let's run a quick proof of concept for both options and let the data decide.",
+          "es": "Hagamos una prueba de concepto rápida de las dos opciones y que decidan los datos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I will take the decision and we revise it in one month.",
+          "es": "Tomaré la decisión y la revisamos dentro de un mes."
+        },
+        {
+          "text": "Let's discuss one more hour until we are agree.",
+          "es": "Discutamos una hora más hasta que estemos de acuerdo."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "«tomar una decisión» = «make a decision / make the call»; «revisar» una decisión = «revisit», no «revise» (= corregir un texto); nunca «we are agree».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-tech-decisions.qa.on-board",
+      "question": "I know you argued for the other option. Are you on board with the decision?",
+      "questionEs": "Sé que defendías la otra opción. ¿Estás de acuerdo con la decisión?",
+      "accepted": [
+        {
+          "text": "I'd have gone the other way, but I'm fully on board and I'll help make it work.",
+          "es": "Yo habría elegido lo otro, pero lo apoyo totalmente y ayudaré a que funcione."
+        },
+        {
+          "text": "Yes. I still have some concerns, but I'll disagree and commit.",
+          "es": "Sí. Sigo teniendo algunas dudas, pero discrepo y me comprometo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, although I would have chosen the other, I'm agree.",
+          "es": "Sí, aunque yo habría elegido la otra, estoy de acuerdo."
+        },
+        {
+          "text": "Yes, I'm on the board with the decision.",
+          "es": "Sí, estoy a bordo con la decisión."
+        }
+      ],
+      "register": "neutral",
+      "situation": "tecnologia",
+      "notes": "Es «I agree», nunca «I'm agree»; la expresión es «on board», sin «the» («on the board» = en el consejo de administración).",
+      "voice": "en-US-AndrewNeural"
+    }
+  ]
+}

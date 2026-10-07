@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-c1-difficult-feedback",
+  "title": "Dar feedback difícil",
+  "description": "En un 1:1 tienes que decirle a un compañero de tu equipo que sus retrasos están afectando a los demás, sin desmotivarlo.",
+  "situation": "trabajo",
+  "unit": "c1-leading",
+  "order": 303,
+  "register": "neutral",
+  "level": "C1",
+  "avatars": { "Desarrollador": "fluent:man-technologist" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Desarrollador", "text": "Hey, you wanted to chat? Is everything okay?", "es": "Hola, ¿querías hablar? ¿Va todo bien?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Tranquilízalo y di que quieres hablar de algo que has notado en las últimas semanas.",
+      "options": [
+        { "text": "Everything's fine, don't worry. I just wanted to talk about something I've noticed over the past few weeks.", "es": "Todo bien, no te preocupes. Solo quería hablar de algo que he notado en las últimas semanas.", "verdict": "correct", "feedback": "¡Muy bien! Empiezas quitando tensión; «over the past few weeks» con present perfect, porque sigue pasando." },
+        { "text": "We need to talk about your work.", "es": "Tenemos que hablar de tu trabajo.", "verdict": "acceptable", "feedback": "Es claro, pero suena alarmante; abre con algo que lo tranquilice." },
+        { "text": "Everything's fine, don't worry. I just wanted to talk about something I noticed since the last weeks.", "es": "Todo bien, no te preocupes. Solo quería hablar de algo que he notado en las últimas semanas.", "verdict": "wrong", "feedback": "Con algo que sigue ocurriendo va present perfect: «I've noticed over the past few weeks»; «since the last weeks» no es natural." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Desarrollador", "text": "Okay… is this about the API ticket? I know it slipped a bit.", "es": "Vale… ¿es por el ticket de la API? Sé que se retrasó un poco.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí, que es la tercera vez que pasa y que el resto del equipo se ha quedado bloqueado.",
+      "options": [
+        { "text": "It is, partly. It's the third time a deadline has slipped, and it's left the rest of the team blocked.", "es": "Sí, en parte. Es la tercera vez que se retrasa una fecha, y el resto del equipo se ha quedado bloqueado.", "verdict": "correct", "feedback": "¡Perfecto! Hechos concretos sin atacar a la persona; tras «It's the third time» va present perfect." },
+        { "text": "Yes, you're always late.", "es": "Sí, siempre vas tarde.", "verdict": "acceptable", "feedback": "Es directo, pero «always» generaliza y pone a la defensiva; habla de hechos concretos." },
+        { "text": "It is, partly. It's the third time a deadline slips, and it left the rest of the team blocked.", "es": "Sí, en parte. Es la tercera vez que se retrasa una fecha, y el resto del equipo se ha quedado bloqueado.", "verdict": "wrong", "feedback": "Tras «It's the third time» el inglés exige present perfect: «has slipped», no presente como en español." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Desarrollador", "text": "Yeah, that's fair. Honestly, I've been juggling too much since the reorg.", "es": "Sí, es justo. Sinceramente, desde la reorganización voy con demasiadas cosas a la vez.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Agradece su sinceridad y pregúntale qué podrías quitarle de encima para ayudarle.",
+      "options": [
+        { "text": "I appreciate you being upfront about it. What could I take off your plate to help?", "es": "Te agradezco que seas sincero. ¿Qué podría quitarte de encima para ayudarte?", "verdict": "correct", "feedback": "¡Genial! «upfront» = franco; «take something off your plate» = quitarte carga de trabajo." },
+        { "text": "Okay. How can I help?", "es": "Vale. ¿Cómo puedo ayudar?", "verdict": "acceptable", "feedback": "Correcto y amable, aunque reconocer su sinceridad refuerza la confianza." },
+        { "text": "I appreciate you being upfront about it. What could I take out of your plate to help?", "es": "Te agradezco que seas sincero. ¿Qué podría quitarte de encima para ayudarte?", "verdict": "wrong", "feedback": "La expresión es «take something off your plate»; «out of» rompe el modismo." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Desarrollador", "text": "If someone else could handle the on-call rotation this month, that'd really help.", "es": "Si otra persona pudiera encargarse de las guardias este mes, me ayudaría mucho.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Acepta, y pídele que te avise antes la próxima vez que vea que no llega a una fecha.",
+      "options": [
+        { "text": "Done. And next time you see a deadline at risk, give me a heads-up early so we can adjust.", "es": "Hecho. Y la próxima vez que veas una fecha en peligro, avísame pronto para que podamos ajustar.", "verdict": "correct", "feedback": "¡Muy bien! «give me a heads-up» = avisarme con antelación; cierras con un acuerdo claro." },
+        { "text": "Okay. Tell me before next time.", "es": "Vale. Avísame antes la próxima vez.", "verdict": "acceptable", "feedback": "Se entiende, pero suena seco; explica para qué quieres el aviso." },
+        { "text": "Done. And next time you will see a deadline at risk, give me a heads-up early so we can adjust.", "es": "Hecho. Y la próxima vez que veas una fecha en peligro, avísame pronto para que podamos ajustar.", "verdict": "wrong", "feedback": "Tras «next time» (como tras «when») va presente, no «will»: «next time you see»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Desarrollador", "text": "Will do. Thanks for being straight with me.", "es": "Lo haré. Gracias por ser claro conmigo.", "voice": "en-US-AndrewNeural" }
+  ]
+}

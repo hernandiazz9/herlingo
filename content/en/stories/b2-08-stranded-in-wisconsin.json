@@ -1,0 +1,93 @@
+{
+  "id": "story.en-b2-stranded-in-wisconsin",
+  "order": 208,
+  "title": "Stranded in Wisconsin",
+  "titleEs": "Tirados en Wisconsin",
+  "description": "El coche de alquiler se estropea en mitad de Wisconsin, pero Pablo y Maya llegan al concierto de Jordan de la forma más inesperada.",
+  "emoji": "🛞",
+  "situation": "viajes",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "On Friday morning, Pablo goes to the rental office near the airport.", "es": "El viernes por la mañana, Pablo va a la oficina de alquiler cerca del aeropuerto." },
+    { "id": "s2", "text": "«Hi, I'm here to pick up my rental car.»", "es": "«Hola, vengo a recoger mi coche de alquiler.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s3", "text": "«Do you have an automatic? I can't drive stick.»", "es": "«¿Tienen uno automático? No sé conducir con cambio manual.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "«And I'd rather get full coverage, just in case.»", "es": "«Y prefiero el seguro a todo riesgo, por si acaso.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s5", "text": "Three hours later, somewhere in Wisconsin, they hear a loud bang.", "es": "Tres horas después, en algún lugar de Wisconsin, oyen un golpe fuerte." },
+    { "id": "s6", "text": "Pablo pulls over on the side of the highway.", "es": "Pablo se para en el arcén de la autopista." },
+    { "id": "s7", "text": "One of the tires is completely flat.", "es": "Una de las ruedas está completamente pinchada." },
+    { "id": "s8", "text": "Maya opens the trunk, but the spare tire is flat too.", "es": "Maya abre el maletero, pero la rueda de repuesto también está pinchada." },
+    { "id": "s9", "text": "The rental company says the tow truck will take four hours.", "es": "La empresa de alquiler dice que la grúa tardará cuatro horas." },
+    { "id": "s10", "text": "«We're stranded here, and the show starts at nine!»", "es": "«¡Estamos aquí tirados, y el concierto empieza a las nueve!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "«Okay, don't panic. We need a plan B.»", "es": "«Vale, que no cunda el pánico. Necesitamos un plan B.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "Just then, a farmer in an old pickup stops to help.", "es": "Justo entonces, un granjero con una vieja camioneta para a ayudarlos." },
+    { "id": "s13", "text": "He's a local, and he knows a mechanic in the next town.", "es": "Es de la zona, y conoce a un mecánico en el siguiente pueblo." },
+    { "id": "s14", "text": "When he hears about the band, he offers to drive them to Minneapolis himself.", "es": "Cuando se entera de lo del grupo, se ofrece a llevarlos él mismo a Minneapolis." },
+    { "id": "s15", "text": "They arrive five minutes before the show, and the farmer stays to watch.", "es": "Llegan cinco minutos antes del concierto, y el granjero se queda a verlo." },
+    { "id": "s16", "text": "«Honestly, that flat tire turned out to be a blessing in disguise.»", "es": "«La verdad, aquel pinchazo acabó siendo una bendición disfrazada.»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "b2-travel.im-here-to-pick-up-my-rental-car",
+    "b2-travel.do-you-have-an-automatic",
+    "b2-travel.id-rather-get-full-coverage-just-in-case",
+    "b2-travel.coverage",
+    "b2-travel.spare-tire",
+    "b2-travel.stranded",
+    "b2-travel.we-need-a-plan-b",
+    "b2-travel.local",
+    "b2-travel.it-turned-out-to-be-a-blessing-in-disguise"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What kind of car does Pablo ask for?",
+      "es": "¿Qué tipo de coche pide Pablo?",
+      "options": [
+        { "text": "A big car for the band.", "es": "Un coche grande para el grupo." },
+        { "text": "An electric car.", "es": "Un coche eléctrico." },
+        { "text": "An automatic.", "es": "Uno automático." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "Why can't they change the tire?",
+      "es": "¿Por qué no pueden cambiar la rueda?",
+      "options": [
+        { "text": "The spare tire is flat too.", "es": "La rueda de repuesto también está pinchada." },
+        { "text": "Neither of them knows how.", "es": "Ninguno de los dos sabe cómo." },
+        { "text": "It's raining too hard.", "es": "Llueve demasiado." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "How do they get to Minneapolis?",
+      "es": "¿Cómo llegan a Minneapolis?",
+      "options": [
+        { "text": "The tow truck takes them.", "es": "Los lleva la grúa." },
+        { "text": "A farmer drives them there.", "es": "Los lleva un granjero." },
+        { "text": "They take a bus from the next town.", "es": "Cogen un autobús en el siguiente pueblo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "What does the farmer do at the end?",
+      "es": "¿Qué hace el granjero al final?",
+      "options": [
+        { "text": "He goes back to his farm.", "es": "Vuelve a su granja." },
+        { "text": "He asks them for money.", "es": "Les pide dinero." },
+        { "text": "He stays to watch the show.", "es": "Se queda a ver el concierto." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "b2-travel.im-here-to-pick-up-my-rental-car", "gap": "pick up", "distractors": ["pick on", "take up"] },
+    { "id": "g2", "sentence": "s4", "answer": "b2-travel.coverage", "distractors": ["covering", "covers"] },
+    { "id": "g3", "sentence": "s8", "answer": "b2-travel.spare-tire", "distractors": ["extra wheel", "free tire"] },
+    { "id": "g4", "sentence": "s10", "answer": "b2-travel.stranded", "distractors": ["standing", "strained"] },
+    { "id": "g5", "sentence": "s13", "answer": "b2-travel.local", "distractors": ["location", "locale"] },
+    { "id": "g6", "sentence": "s16", "answer": "b2-travel.it-turned-out-to-be-a-blessing-in-disguise", "gap": "blessing in disguise", "distractors": ["blessing in costume", "gift in disguise"] }
+  ]
+}

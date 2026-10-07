@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-code-review",
+  "title": "Discrepar en una revisión de código",
+  "description": "Un compañero cuestiona tu pull request; defiendes tu enfoque, reconoces lo que tiene razón y llegáis a un acuerdo.",
+  "situation": "tecnologia",
+  "unit": "b2-tech-talk",
+  "order": 202,
+  "register": "neutral",
+  "level": "B2",
+  "avatars": { "Compañero": "fluent:man-technologist" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Compañero", "text": "I left a few comments on your pull request. Honestly, I'm not sure about adding a cache here.", "es": "Te he dejado unos comentarios en la pull request. La verdad, no lo tengo claro con lo de añadir una caché aquí.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que la añadiste porque la página tardaba más de dos segundos en cargar.",
+      "options": [
+        { "text": "I added it because the page was taking over two seconds to load.", "es": "La añadí porque la página tardaba más de dos segundos en cargar.", "verdict": "correct", "feedback": "¡Muy bien! «take + tiempo + to load» = tardar en cargar; «over» = más de." },
+        { "text": "The page was slow, so I added it.", "es": "La página iba lenta, así que la añadí.", "verdict": "acceptable", "feedback": "Correcto, pero un dato concreto («over two seconds») defiende mejor tu decisión." },
+        { "text": "I added it because the page was delaying more than two seconds in loading.", "es": "La añadí porque la página tardaba más de dos segundos en cargar.", "verdict": "wrong", "feedback": "«tardar en» no se traduce con «delay»: se dice «it takes two seconds to load»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Compañero", "text": "Sure, but now we have to worry about stale data. What happens when a price changes?", "es": "Ya, pero ahora tenemos que preocuparnos por datos desactualizados. ¿Qué pasa cuando cambia un precio?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Reconoce que tiene razón y di que no habías pensado en eso.",
+      "options": [
+        { "text": "That's a fair point. I hadn't thought about that.", "es": "Es una observación justa. No había pensado en eso.", "verdict": "correct", "feedback": "¡Perfecto! «That's a fair point» reconoce sin rendirse; «think about» lleva «about»." },
+        { "text": "Okay, you're right.", "es": "Vale, tienes razón.", "verdict": "acceptable", "feedback": "Se entiende, aunque suena a que cedes del todo; «That's a fair point» es más matizado." },
+        { "text": "You have reason. I hadn't thought on that.", "es": "Tienes razón. No había pensado en eso.", "verdict": "wrong", "feedback": "«Tener razón» es «to be right» («You're right»), y se dice «think about», no «think on»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Compañero", "text": "So maybe we should drop the cache and optimize the query instead?", "es": "¿Entonces quizá deberíamos quitar la caché y optimizar la consulta?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Discrepa con educación: di que no estás seguro de que eso baste y propón invalidar la caché cuando cambie un precio.",
+      "options": [
+        { "text": "I'm not sure that would be enough. What if we clear the cache whenever a price changes?", "es": "No estoy seguro de que eso baste. ¿Y si vaciamos la caché cada vez que cambie un precio?", "verdict": "correct", "feedback": "¡Genial! «I'm not sure that would be enough» discrepa con tacto, y «What if we…?» propone una alternativa." },
+        { "text": "No, the query is not the problem.", "es": "No, la consulta no es el problema.", "verdict": "acceptable", "feedback": "Es claro, pero un «No» tan directo puede sonar brusco en una revisión; suaviza y propón algo." },
+        { "text": "I'm not agree. What if we clean the cache every time a price changes?", "es": "No estoy de acuerdo. ¿Y si vaciamos la caché cada vez que cambie un precio?", "verdict": "wrong", "feedback": "Se dice «I don't agree» o «I disagree», nunca «I'm not agree»; y vaciar una caché es «clear», no «clean»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Compañero", "text": "Hmm, that could work. Can you add a test for it?", "es": "Mmm, eso podría funcionar. ¿Puedes añadir una prueba para eso?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Acepta, di que lo harás esta tarde y que le avisarás cuando esté listo.",
+      "options": [
+        { "text": "Sure, I'll do it this afternoon and let you know when it's ready.", "es": "Claro, lo hago esta tarde y te aviso cuando esté listo.", "verdict": "correct", "feedback": "¡Bien! «let you know» = avisarte; «when it's ready» en presente tras «when»." },
+        { "text": "Okay, this afternoon.", "es": "Vale, esta tarde.", "verdict": "acceptable", "feedback": "Correcto, pero ofrecer avisar («I'll let you know») queda más profesional." },
+        { "text": "Sure, I'll do it this afternoon and I'll tell you when it will be ready.", "es": "Claro, lo hago esta tarde y te digo cuando esté listo.", "verdict": "wrong", "feedback": "Tras «when» con sentido futuro va el presente: «when it's ready», no «when it will be ready»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Compañero", "text": "Great. Once the test passes, I'll approve it.", "es": "Genial. En cuanto pase la prueba, la apruebo.", "voice": "en-US-AndrewNeural" }
+  ]
+}

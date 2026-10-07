@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-c1-incident-call",
+  "title": "Llamada por un incidente",
+  "description": "Producción está caída y coordinas la llamada con la ingeniera de guardia: aclaras el impacto, decides revertir y repartes tareas.",
+  "situation": "tecnologia",
+  "unit": "c1-tech-decisions",
+  "order": 304,
+  "register": "neutral",
+  "level": "C1",
+  "avatars": { "Ingeniera de guardia": "fluent:woman-technologist" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Ingeniera de guardia", "text": "Checkout's throwing five hundreds for about thirty percent of users. It started right after the ten o'clock deploy.", "es": "El pago está devolviendo errores quinientos a un treinta por ciento de los usuarios. Empezó justo después del despliegue de las diez.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pregunta si el problema afecta a todas las regiones o solo a una.",
+      "options": [
+        { "text": "Got it. Is it affecting every region, or is it isolated to one?", "es": "Entendido. ¿Afecta a todas las regiones o se limita a una?", "verdict": "correct", "feedback": "¡Muy bien! Pregunta corta y precisa para medir el alcance; «isolated to» = limitado a." },
+        { "text": "Where is the problem?", "es": "¿Dónde está el problema?", "verdict": "acceptable", "feedback": "Se entiende, pero es vago; en un incidente conviene preguntar algo concreto." },
+        { "text": "Got it. Is it affecting to every region, or only to one?", "es": "Entendido. ¿Afecta a todas las regiones o solo a una?", "verdict": "wrong", "feedback": "«affect» es transitivo: «affect every region», sin «to» (en español sí decimos «afectar a»)." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Ingeniera de guardia", "text": "All regions. I could try to hotfix it, but I'm not sure how long that would take.", "es": "Todas las regiones. Podría intentar un parche rápido, pero no sé cuánto tardaría.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Decide revertir el despliegue ya y dejar la causa raíz para cuando el servicio esté estable.",
+      "options": [
+        { "text": "Let's roll back the deploy first. We'll dig into the root cause once things are stable.", "es": "Revirtamos primero el despliegue. Investigaremos la causa raíz cuando todo esté estable.", "verdict": "correct", "feedback": "¡Perfecto! «roll back» = revertir; decides con claridad: primero mitigar, luego investigar." },
+        { "text": "Maybe we should roll back?", "es": "¿Quizá deberíamos revertir?", "verdict": "acceptable", "feedback": "La idea es buena, pero en un incidente hace falta una decisión firme, no una pregunta." },
+        { "text": "Let's roll back the deploy first. We'll dig into the root cause once things will be stable.", "es": "Revirtamos primero el despliegue. Investigaremos la causa raíz cuando todo esté estable.", "verdict": "wrong", "feedback": "Tras «once» o «when» con sentido futuro va presente: «once things are stable», no «will be»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Ingeniera de guardia", "text": "Rolling back now. Should someone update the status page?", "es": "Revirtiendo ahora. ¿Debería alguien actualizar la página de estado?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que tú te encargas de la página de estado y que ella se centre en la reversión.",
+      "options": [
+        { "text": "I'll take care of the status page. You stay focused on the rollback.", "es": "Yo me encargo de la página de estado. Tú céntrate en la reversión.", "verdict": "correct", "feedback": "¡Genial! Repartes tareas sin ambigüedad: «take care of» = encargarse de." },
+        { "text": "I can do it.", "es": "Lo puedo hacer yo.", "verdict": "acceptable", "feedback": "Correcto, aunque decir quién hace qué evita confusiones en una llamada tensa." },
+        { "text": "I'll take charge of the status page. You stay concentrated in the rollback.", "es": "Yo me encargo de la página de estado. Tú céntrate en la reversión.", "verdict": "wrong", "feedback": "Es «stay focused on» («concentrated in» no se usa así); «take charge of» suena a liderar, no a encargarse de una tarea." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Ingeniera de guardia", "text": "Rollback's done. Error rate is dropping back to normal.", "es": "La reversión está hecha. La tasa de errores vuelve a la normalidad.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Agradécelo y propón hacer un postmortem sin culpas el jueves.",
+      "options": [
+        { "text": "Nice work. Let's set up a blameless postmortem on Thursday so we can learn from this.", "es": "Buen trabajo. Organicemos un postmortem sin culpas el jueves para aprender de esto.", "verdict": "correct", "feedback": "¡Muy bien! «blameless» = sin buscar culpables; «set up» = organizar una reunión." },
+        { "text": "Thanks. Meeting on Thursday.", "es": "Gracias. Reunión el jueves.", "verdict": "acceptable", "feedback": "Se entiende, pero explica para qué es la reunión y el tono que tendrá." },
+        { "text": "Nice work. Let's set up a postmortem without guilts on Thursday so we can learn of this.", "es": "Buen trabajo. Organicemos un postmortem sin culpas el jueves para aprender de esto.", "verdict": "wrong", "feedback": "«Sin culpas» es «blameless» («guilt» es incontable y es el sentimiento), y es «learn from», no «learn of»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Ingeniera de guardia", "text": "Sounds good. I'll start drafting the timeline.", "es": "Me parece bien. Empezaré a redactar la cronología.", "voice": "en-US-AvaNeural" }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-news-dinner",
+  "title": "Comentar las noticias en la cena",
+  "description": "Durante la cena, un amigo saca una noticia sobre coches autónomos; reaccionas, das tu opinión y matizas.",
+  "situation": "opiniones",
+  "unit": "b2-news",
+  "order": 212,
+  "register": "tu",
+  "level": "B2",
+  "avatars": { "Amigo": "fluent:man-red-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Amigo", "text": "Did you see the news? The city's going to allow self-driving taxis downtown next year.", "es": "¿Has visto las noticias? La ciudad va a permitir taxis autónomos en el centro el año que viene.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Reacciona con sorpresa: di que lo leíste esta mañana y que no te lo esperabas tan pronto.",
+      "options": [
+        { "text": "Yeah, I read about it this morning. I didn't expect it to happen so soon!", "es": "Sí, lo he leído esta mañana. ¡No me esperaba que pasara tan pronto!", "verdict": "correct", "feedback": "¡Muy bien! «read about it» = leer sobre ello; «expect it to happen» es la estructura correcta." },
+        { "text": "Wow, really? So soon?", "es": "¡Hala! ¿En serio? ¿Tan pronto?", "verdict": "acceptable", "feedback": "Natural para reaccionar, aunque no aportas nada más a la conversación." },
+        { "text": "Yeah, I read it this morning. I didn't expect that it happened so early!", "es": "Sí, lo he leído esta mañana. ¡No me esperaba que pasara tan pronto!", "verdict": "wrong", "feedback": "Se dice «I didn't expect it to happen» (no «that it happened»), y aquí «pronto» es «soon»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Amigo", "text": "I think it's great. Fewer accidents, less traffic. What's not to like?", "es": "A mí me parece genial. Menos accidentes, menos tráfico. ¿Qué tiene de malo?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Matiza: en teoría sí, pero te preocupa qué pasará con los taxistas que pierdan su trabajo.",
+      "options": [
+        { "text": "In theory, sure. But I'm worried about what'll happen to the drivers who lose their jobs.", "es": "En teoría, sí. Pero me preocupa qué pasará con los conductores que pierdan su trabajo.", "verdict": "correct", "feedback": "¡Perfecto! «worried about» y «happen to» (le pasa algo a alguien)." },
+        { "text": "Maybe, but what about the drivers?", "es": "Puede, pero ¿y los conductores?", "verdict": "acceptable", "feedback": "Se entiende y es natural; explicar tu preocupación lo hace más claro." },
+        { "text": "In theory, sure. But I'm worried for what will pass with the drivers that lose their works.", "es": "En teoría, sí. Pero me preocupa qué pasará con los conductores que pierdan su trabajo.", "verdict": "wrong", "feedback": "«pasar» (ocurrir) es «happen», no «pass»; «work» es incontable: «their jobs»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Amigo", "text": "Hmm, good point. But that happens with every new technology, doesn't it?", "es": "Mmm, buena observación. Pero eso pasa con cada tecnología nueva, ¿no?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Reconoce que sí, pero di que, aun así, la ciudad debería ayudarles a formarse para otros trabajos.",
+      "options": [
+        { "text": "That's true. Even so, I think the city should help them retrain for other jobs.", "es": "Es verdad. Aun así, creo que la ciudad debería ayudarles a formarse para otros trabajos.", "verdict": "correct", "feedback": "¡Genial! «Even so» = aun así; «retrain» = reciclarse, formarse de nuevo." },
+        { "text": "True. The city should do something for them.", "es": "Cierto. La ciudad debería hacer algo por ellos.", "verdict": "acceptable", "feedback": "Correcto, aunque más vago; propón algo concreto." },
+        { "text": "That's true. Even though, I think the city should help them to form for other jobs.", "es": "Es verdad. Aun así, creo que la ciudad debería ayudarles a formarse para otros trabajos.", "verdict": "wrong", "feedback": "«Even though» necesita una oración detrás; «aun así» es «even so». Y formarse es «train» o «retrain», no «form»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Amigo", "text": "Okay, I'll give you that. Would you ever ride in one, though?", "es": "Vale, en eso te doy la razón. Pero ¿tú te subirías a uno?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di, con humor, que quizá cuando lleven unos años funcionando sin problemas.",
+      "options": [
+        { "text": "Maybe once they've been running for a few years without any problems!", "es": "¡Quizá cuando lleven unos años funcionando sin ningún problema!", "verdict": "correct", "feedback": "¡Bien! «once» = cuando, una vez que; «have been running for» = llevar funcionando." },
+        { "text": "Maybe in a few years.", "es": "Quizá dentro de unos años.", "verdict": "acceptable", "feedback": "Correcto, pero pierdes el matiz de «cuando se haya demostrado que funcionan»." },
+        { "text": "Maybe when they will be working since a few years without no problems!", "es": "¡Quizá cuando lleven unos años funcionando sin ningún problema!", "verdict": "wrong", "feedback": "Tras «when» no va «will»; la duración es «for a few years» («since» es desde) y no hay doble negación." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Amigo", "text": "Ha! Fair enough. Let's see how it goes. More pasta?", "es": "¡Ja! Me parece justo. A ver cómo va. ¿Más pasta?", "voice": "en-US-BrianNeural" }
+  ]
+}

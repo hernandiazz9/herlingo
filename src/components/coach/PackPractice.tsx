@@ -13,9 +13,7 @@ import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useHydrated } from "@/lib/progress/use-progress";
 import { PACK_PARAM, PREPARE_HREF } from "./nav";
 import { leavePractice, PRACTICE_TITLE } from "./practice-nav";
-import { FOCUS } from "./shared";
-
-const REGISTER: Record<CoachPack["register"], string> = { formal: "Trato de usted", informal: "Trato de tú" };
+import { FOCUS, registerBadge } from "./shared";
 
 /**
  * /preparar/dialogo/?pack=<id>: the role-play of a saved pack in the dialogue player, with XP on
@@ -73,7 +71,7 @@ function Practice({ pack }: { pack: CoachPack }) {
             <p className="text-sm font-bold text-sea-deep">Tu situación</p>
             <p className="text-lg text-ink">«{pack.description}»</p>
             <p className="text-sm text-ink-muted">
-              {REGISTER[pack.register]} · {answers === 1 ? "1 respuesta" : `${answers} respuestas`}
+              {registerBadge(pack)} · {answers === 1 ? "1 respuesta" : `${answers} respuestas`}
             </p>
           </>
         }

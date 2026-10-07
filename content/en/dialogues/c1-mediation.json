@@ -1,0 +1,47 @@
+{
+  "id": "dlg.en-c1-mediation",
+  "title": "Mediar entre compañeros",
+  "description": "Una diseñadora está molesta porque otro compañero cambió su trabajo sin avisar; escuchas, lees entre líneas y buscas una salida.",
+  "situation": "opiniones",
+  "unit": "c1-nuance",
+  "order": 308,
+  "register": "neutral",
+  "level": "C1",
+  "avatars": { "Diseñadora": "fluent:woman-artist" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Diseñadora", "text": "I'm sure Mark had his reasons for redoing my mockups without telling me. I'm just thrilled about it.", "es": "Seguro que Mark tenía sus motivos para rehacer mis maquetas sin decírmelo. Estoy encantadísima, vamos.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Capta la ironía: di que te da la sensación de que no está nada contenta y pregúntale qué le molestó más.",
+      "options": [
+        { "text": "I get the sense you're not exactly thrilled. What bothered you the most?", "es": "Me da la sensación de que no estás precisamente encantada. ¿Qué es lo que más te molestó?", "verdict": "correct", "feedback": "¡Muy bien! «not exactly thrilled» devuelve la ironía con suavidad y la pregunta abierta la invita a hablar." },
+        { "text": "Great, so you're happy.", "es": "Genial, así que estás contenta.", "verdict": "wrong", "feedback": "Ella usa ironía: «I'm just thrilled» quiere decir justo lo contrario. Léelo entre líneas." },
+        { "text": "Are you upset?", "es": "¿Estás molesta?", "verdict": "acceptable", "feedback": "Captas el tono, pero suena directo; «I get the sense…» suaviza y abre la conversación." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Diseñadora", "text": "Honestly? That he went straight to the client. It made me look like I wasn't on top of things.", "es": "¿Sinceramente? Que fuera directamente al cliente. Me hizo quedar como si no tuviera las cosas controladas.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Muestra que lo entiendes y sugiere con tacto que quizá no lo hizo con mala intención.",
+      "options": [
+        { "text": "That's understandable. I wonder, though, whether he might not have realized how it would come across.", "es": "Es comprensible. Aunque me pregunto si quizá no se dio cuenta de cómo iba a parecer.", "verdict": "correct", "feedback": "¡Perfecto! «I wonder whether he might not have…» es cortesía indirecta; «come across» = dar una impresión." },
+        { "text": "I'm sure he didn't mean it.", "es": "Seguro que no lo hizo a propósito.", "verdict": "acceptable", "feedback": "Bien intencionado, pero puede sonar a que le das la razón a él; valida antes su enfado." },
+        { "text": "That's understandable. I wonder, though, if he might not have realized how it would come through.", "es": "Es comprensible. Aunque me pregunto si quizá no se dio cuenta de cómo iba a parecer.", "verdict": "wrong", "feedback": "«Dar una impresión» es «come across»; «come through» significa llegar o cumplir." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Diseñadora", "text": "Maybe. I just don't want it to happen again.", "es": "Puede ser. Solo que no quiero que vuelva a pasar.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Propón sentaros los tres y acordar que cualquier cambio de diseño pase primero por ella.",
+      "options": [
+        { "text": "Fair enough. How about the three of us sit down and agree that any design changes go through you first?", "es": "Me parece justo. ¿Qué tal si nos sentamos los tres y acordamos que cualquier cambio de diseño pase primero por ti?", "verdict": "correct", "feedback": "¡Genial! «go through you» = pasar por ti; propones una regla concreta en lugar de buscar culpables." },
+        { "text": "I'll talk to Mark.", "es": "Hablaré con Mark.", "verdict": "acceptable", "feedback": "Es un paso, pero mediar funciona mejor si los reúnes y acordáis algo juntos." },
+        { "text": "Fair enough. How about the three of us sit down and agree that any design changes pass for you first?", "es": "Me parece justo. ¿Qué tal si nos sentamos los tres y acordamos que cualquier cambio de diseño pase primero por ti?", "verdict": "wrong", "feedback": "«Pasar por alguien» (aprobación) es «go through», no «pass for» («pass for» es hacerse pasar por)." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Diseñadora", "text": "That would actually help a lot. Thanks for hearing me out.", "es": "Eso sí que ayudaría mucho. Gracias por escucharme.", "voice": "en-US-AvaNeural" }
+  ]
+}

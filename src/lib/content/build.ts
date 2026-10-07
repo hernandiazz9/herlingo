@@ -31,6 +31,17 @@ export const STORY_GUIDE = {
   gaps: [4, 6],
 } as const;
 
+/** Story length per CEFR level (words); levels not listed use `STORY_GUIDE.words` (A1–B1). */
+export const STORY_WORDS_BY_LEVEL: Partial<Record<Level, readonly [number, number]>> = {
+  B2: [100, 200],
+  C1: [120, 250],
+};
+
+/** The story guidelines for a story of `level` (only the word range depends on it). */
+export function storyGuide(level: Level): Record<keyof typeof STORY_GUIDE, readonly [number, number]> {
+  return { ...STORY_GUIDE, words: STORY_WORDS_BY_LEVEL[level] ?? STORY_GUIDE.words };
+}
+
 /** Prefix required on vocab items defined inline in a story file. */
 export const STORY_VOCAB_PREFIX = "story-";
 
@@ -450,9 +461,10 @@ export function buildPack(src: PackSources): BuildResult {
       questions: story.questions.length,
       gaps: raw.gaps.length,
     };
-    const misses = (Object.keys(STORY_GUIDE) as (keyof typeof STORY_GUIDE)[])
-      .filter((k) => counts[k] < STORY_GUIDE[k][0] || counts[k] > STORY_GUIDE[k][1])
-      .map((k) => `${counts[k]} ${k} (guideline ${STORY_GUIDE[k][0]}–${STORY_GUIDE[k][1]})`);
+    const guide = storyGuide(story.level);
+    const misses = (Object.keys(guide) as (keyof typeof guide)[])
+      .filter((k) => counts[k] < guide[k][0] || counts[k] > guide[k][1])
+      .map((k) => `${counts[k]} ${k} (guideline ${guide[k][0]}–${guide[k][1]} for ${story.level})`);
     if (misses.length) warnings.push(`${where}: ${misses.join(", ")}`);
   }
 

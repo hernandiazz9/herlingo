@@ -1,0 +1,95 @@
+{
+  "id": "story.en-c1-butterflies",
+  "order": 304,
+  "title": "Butterflies",
+  "titleEs": "Mariposas en el estómago",
+  "description": "Pablo va a dar una charla en un congreso y está muerto de nervios. Mrs. Carter y Jordan le ayudan a ensayar en el salón.",
+  "emoji": "🦋",
+  "situation": "cultura",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "Pablo has been invited to speak at a tech conference in Chicago.", "es": "Han invitado a Pablo a dar una charla en un congreso de tecnología en Chicago." },
+    { "id": "s2", "text": "His talk is about the payments launch that went wrong last year.", "es": "Su charla trata del lanzamiento de pagos que salió mal el año pasado." },
+    { "id": "s3", "text": "There's just one problem: he gets butterflies in his stomach just thinking about it.", "es": "Solo hay un problema: se le pone un nudo en el estómago solo de pensarlo." },
+    { "id": "s4", "text": "So on Sunday, he rehearses in Mrs. Carter's living room.", "es": "Así que el domingo ensaya en el salón de Mrs. Carter." },
+    { "id": "s5", "text": "Jordan sits on the sofa with a big bowl of popcorn.", "es": "Jordan se sienta en el sofá con un bol enorme de palomitas." },
+    { "id": "s6", "text": "Pablo begins with a slide full of numbers and charts.", "es": "Pablo empieza con una diapositiva llena de cifras y gráficos." },
+    { "id": "s7", "text": "After two minutes, Jordan is already yawning.", "es": "A los dos minutos, Jordan ya está bostezando." },
+    { "id": "s8", "text": "«Sorry, dear, but you've already lost them. You need a hook.»", "es": "«Lo siento, cielo, pero ya los has perdido. Necesitas algo que enganche.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s9", "text": "Pablo takes a breath and tries again.", "es": "Pablo respira y lo vuelve a intentar." },
+    { "id": "s10", "text": "«Let me start with a quick story about the worst launch of my career.»", "es": "«Dejadme empezar con una pequeña historia sobre el peor lanzamiento de mi carrera.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "This time, Jordan puts down the popcorn and listens.", "es": "Esta vez, Jordan deja las palomitas y escucha." },
+    { "id": "s12", "text": "When Pablo reaches the punchline, Jordan cracks up.", "es": "Cuando Pablo llega al remate, Jordan se parte de risa." },
+    { "id": "s13", "text": "«See? Timing is everything,» says Mrs. Carter.", "es": "«¿Lo ves? El ritmo lo es todo», dice Mrs. Carter." },
+    { "id": "s14", "text": "«And don't rush. Pause before the big moment and let the audience wait.»", "es": "«Y no corras. Haz una pausa antes del gran momento y deja que el público espere.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s15", "text": "«But what if they ask me something I don't know?»", "es": "«¿Y si me preguntan algo que no sé?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s16", "text": "«Then be honest, man. Say you'll follow up by email.»", "es": "«Pues sé sincero, tío. Di que les contestarás por correo.»", "voice": "en-US-BrianNeural" },
+    { "id": "s17", "text": "Pablo practices three more times, until he can do it without notes.", "es": "Pablo lo practica tres veces más, hasta que puede hacerlo sin notas." },
+    { "id": "s18", "text": "«Butterflies are fine, dear. Just teach them to fly in formation.»", "es": "«Los nervios están bien, cielo. Solo enséñales a volar en formación.»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "c1-presenting.talk",
+    "c1-idioms.butterflies",
+    "c1-presenting.slide",
+    "c1-storytelling.hook",
+    "c1-presenting.let-me-start-with-a-story",
+    "c1-storytelling.punchline",
+    "c1-storytelling.crack-up",
+    "c1-storytelling.timing-is-everything",
+    "c1-presenting.audience"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is Pablo's talk about?",
+      "es": "¿De qué trata la charla de Pablo?",
+      "options": [
+        { "text": "A launch that went wrong.", "es": "Un lanzamiento que salió mal." },
+        { "text": "Life in Valencia.", "es": "La vida en Valencia." },
+        { "text": "The startup's acquisition.", "es": "La compra de la startup." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "What's wrong with Pablo's first try?",
+      "es": "¿Qué falla en el primer intento de Pablo?",
+      "options": [
+        { "text": "It's too short.", "es": "Es demasiado corto." },
+        { "text": "He forgets what to say.", "es": "Se le olvida qué decir." },
+        { "text": "It's boring: too many numbers and charts.", "es": "Es aburrido: demasiadas cifras y gráficos." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "What advice does Mrs. Carter give him?",
+      "es": "¿Qué consejo le da Mrs. Carter?",
+      "options": [
+        { "text": "Speak as fast as possible.", "es": "Hablar lo más rápido posible." },
+        { "text": "Begin with a story and don't rush.", "es": "Empezar con una historia y no correr." },
+        { "text": "Read everything from his notes.", "es": "Leerlo todo de sus notas." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "What does Jordan suggest if Pablo doesn't know an answer?",
+      "es": "¿Qué sugiere Jordan si Pablo no sabe una respuesta?",
+      "options": [
+        { "text": "Make something up.", "es": "Inventarse algo." },
+        { "text": "Change the subject.", "es": "Cambiar de tema." },
+        { "text": "Be honest and reply by email later.", "es": "Ser sincero y responder después por correo." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "c1-idioms.butterflies", "gap": "butterflies", "distractors": ["moths", "bees"] },
+    { "id": "g2", "sentence": "s8", "answer": "c1-storytelling.hook", "gap": "hook", "distractors": ["hanger", "hitch"] },
+    { "id": "g3", "sentence": "s10", "answer": "c1-presenting.let-me-start-with-a-story", "gap": "story", "distractors": ["history", "historic"] },
+    { "id": "g4", "sentence": "s12", "answer": "c1-storytelling.crack-up", "gap": "cracks up", "distractors": ["breaks up", "cracks down"] },
+    { "id": "g5", "sentence": "s13", "answer": "c1-storytelling.timing-is-everything", "gap": "Timing", "distractors": ["Timer", "Temporal"] },
+    { "id": "g6", "sentence": "s14", "answer": "c1-presenting.audience", "gap": "audience", "distractors": ["public", "assistance"] }
+  ]
+}

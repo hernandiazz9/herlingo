@@ -1,0 +1,94 @@
+{
+  "id": "story.en-c1-looking-back",
+  "order": 312,
+  "title": "Looking back",
+  "titleEs": "Mirando atrás",
+  "description": "Pablo ha tomado una decisión. En una azotea de Chicago, se despide de sus amigos y recuerda todo lo que ha pasado desde que llegó.",
+  "emoji": "🌇",
+  "situation": "social",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "It's a warm evening in June, and the whole gang is on the rooftop of Maya's building.", "es": "Es una tarde cálida de junio, y toda la pandilla está en la azotea del edificio de Maya." },
+    { "id": "s2", "text": "Pablo has finally made the call: he's taking Laura's offer and moving back to Valencia.", "es": "Pablo por fin ha tomado la decisión: acepta la oferta de Laura y vuelve a Valencia." },
+    { "id": "s3", "text": "But he isn't cutting ties with the startup.", "es": "Pero no va a cortar los lazos con la startup." },
+    { "id": "s4", "text": "Rachel has asked him to stay on as an advisor, a few hours a month.", "es": "Rachel le ha pedido que siga como asesor, unas horas al mes." },
+    { "id": "s5", "text": "Jordan raises his glass and clears his throat.", "es": "Jordan levanta la copa y carraspea." },
+    { "id": "s6", "text": "«Speak of the devil! Here's the guy who couldn't order a coffee three years ago.»", "es": "«¡Hablando del rey de Roma! Aquí está el tío que hace tres años no sabía ni pedir un café.»", "voice": "en-US-BrianNeural" },
+    { "id": "s7", "text": "Everyone cracks up, and Pablo shakes his head.", "es": "Todos se parten de risa, y Pablo niega con la cabeza." },
+    { "id": "s8", "text": "«Looking back, it was actually pretty funny. At the time, it was terrifying.»", "es": "«Visto ahora, la verdad es que tenía gracia. En aquel momento, era aterrador.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "«I really don't want to let you down. You've all been like family to me.»", "es": "«De verdad que no quiero decepcionaros. Habéis sido como una familia para mí.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«You're not letting anyone down. You're going home with a lot more than a suitcase.»", "es": "«No decepcionas a nadie. Vuelves a casa con mucho más que una maleta.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "Mrs. Carter hands him a signed copy of her book.", "es": "La señora Carter le da un ejemplar firmado de su libro." },
+    { "id": "s12", "text": "«Chapter twelve isn't finished, dear. I'll need updates.»", "es": "«El capítulo doce no está terminado, cielo. Necesitaré noticias.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s13", "text": "«I'll drop you a line every Sunday, I promise.»", "es": "«Te escribiré todos los domingos, te lo prometo.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "«And you can't back out of my first concert in Spain.»", "es": "«Y no puedes escaquearte de mi primer concierto en España.»", "voice": "en-US-BrianNeural" },
+    { "id": "s15", "text": "As the sun goes down over the lake, Pablo thinks about everything that has changed.", "es": "Mientras el sol se pone sobre el lago, Pablo piensa en todo lo que ha cambiado." },
+    { "id": "s16", "text": "He came here to learn a language. He's leaving with three friends for life.", "es": "Vino aquí para aprender un idioma. Se va con tres amigos para toda la vida." },
+    { "id": "s17", "text": "«In hindsight, the hardest part wasn't the English,» he says. «It's saying goodbye.»", "es": "«Ahora que lo pienso, lo más difícil no fue el inglés», dice. «Es despedirse.»" }
+  ],
+  "keywords": [
+    "c1-tech-decisions.make-the-call",
+    "c1-idioms.speak-of-the-devil",
+    "c1-storytelling.crack-up",
+    "c1-storytelling.looking-back-it-was-funny",
+    "c1-idioms.i-dont-want-to-let-you-down",
+    "c1-idioms.let-down",
+    "c1-networking.ill-drop-you-a-line",
+    "c1-idioms.back-out",
+    "c1-storytelling.hindsight"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What has Pablo decided?",
+      "es": "¿Qué ha decidido Pablo?",
+      "options": [
+        { "text": "To stay in Chicago for good.", "es": "Quedarse en Chicago para siempre." },
+        { "text": "To accept the job in Valencia.", "es": "Aceptar el trabajo en Valencia." },
+        { "text": "To start his own company.", "es": "Montar su propia empresa." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "How will Pablo stay connected with the startup?",
+      "es": "¿Cómo seguirá Pablo conectado con la startup?",
+      "options": [
+        { "text": "As an advisor, a few hours a month.", "es": "Como asesor, unas horas al mes." },
+        { "text": "As the new CEO.", "es": "Como nuevo director general." },
+        { "text": "He won't stay connected.", "es": "No seguirá conectado." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What does Mrs. Carter ask Pablo for?",
+      "es": "¿Qué le pide la señora Carter a Pablo?",
+      "options": [
+        { "text": "To help her with a new book.", "es": "Que la ayude con un nuevo libro." },
+        { "text": "To come back next summer.", "es": "Que vuelva el próximo verano." },
+        { "text": "To send her news for chapter twelve.", "es": "Que le mande noticias para el capítulo doce." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "According to Pablo, what is the hardest part?",
+      "es": "Según Pablo, ¿qué es lo más difícil?",
+      "options": [
+        { "text": "Learning English.", "es": "Aprender inglés." },
+        { "text": "Saying goodbye.", "es": "Despedirse." },
+        { "text": "Finding a flat in Valencia.", "es": "Encontrar piso en Valencia." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "c1-tech-decisions.make-the-call", "gap": "made the call", "distractors": ["taken the call", "done the call"] },
+    { "id": "g2", "sentence": "s6", "answer": "c1-idioms.speak-of-the-devil", "gap": "Speak of the devil", "distractors": ["Talking of the king", "Speak about the devil"] },
+    { "id": "g3", "sentence": "s8", "answer": "c1-storytelling.looking-back-it-was-funny", "gap": "Looking back", "distractors": ["Seeing back", "Looking behind"] },
+    { "id": "g4", "sentence": "s9", "answer": "c1-idioms.i-dont-want-to-let-you-down", "gap": "let you down", "distractors": ["deceive you", "let you under"] },
+    { "id": "g5", "sentence": "s13", "answer": "c1-networking.ill-drop-you-a-line", "gap": "drop you a line", "distractors": ["throw you a line", "drop you a letter"] },
+    { "id": "g6", "sentence": "s14", "answer": "c1-idioms.back-out", "gap": "back out", "distractors": ["go back out", "throw back"] }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "story.en-b2-sold-out",
+  "order": 205,
+  "title": "Sold out",
+  "titleEs": "Entradas agotadas",
+  "description": "El grupo de Jordan agota las entradas de su mayor concierto, y al terminar les llega una oferta inesperada.",
+  "emoji": "🎸",
+  "situation": "cultura",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "Jordan's band has a gig on Friday at a small club in Wicker Park.", "es": "El grupo de Jordan tiene un concierto el viernes en un pequeño club de Wicker Park." },
+    { "id": "s2", "text": "It's their biggest show so far, and the tickets sold out in minutes.", "es": "Es su concierto más grande hasta ahora, y las entradas se agotaron en minutos." },
+    { "id": "s3", "text": "Pablo, Maya and Mrs. Carter are standing in the front row.", "es": "Pablo, Maya y Mrs. Carter están en primera fila." },
+    { "id": "s4", "text": "The venue is tiny, but the sound is amazing.", "es": "La sala es diminuta, pero el sonido es increíble." },
+    { "id": "s5", "text": "Nina plays the bass, and Jordan sings the songs from their new album.", "es": "Nina toca el bajo, y Jordan canta las canciones de su nuevo disco." },
+    { "id": "s6", "text": "To everyone's surprise, Mrs. Carter knows all the lyrics by heart.", "es": "Para sorpresa de todos, Mrs. Carter se sabe todas las letras de memoria." },
+    { "id": "s7", "text": "«I've been practicing in my kitchen for weeks!»", "es": "«¡Llevo semanas practicando en la cocina!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s8", "text": "After the show, a man with a festival badge comes up to Jordan.", "es": "Después del concierto, un hombre con una acreditación de festival se acerca a Jordan." },
+    { "id": "s9", "text": "«Great set. I put together the lineup for a summer festival in Milwaukee.»", "es": "«Muy buen concierto. Yo organizo el cartel de un festival de verano en Milwaukee.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«Would your band like to play there in July?»", "es": "«¿Le gustaría a tu grupo tocar allí en julio?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "Jordan stares at him for a second.", "es": "Jordan se le queda mirando un segundo." },
+    { "id": "s12", "text": "«Wait, are you being sarcastic?»", "es": "«Espera, ¿lo dices con ironía?»", "voice": "en-US-BrianNeural" },
+    { "id": "s13", "text": "«Not at all. Here's my card. Call me on Monday.»", "es": "«Para nada. Aquí tienes mi tarjeta. Llámame el lunes.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "On the way home, everybody is talking about the festival.", "es": "De camino a casa, todos hablan del festival." },
+    { "id": "s15", "text": "And Pablo has the band's new song stuck in his head all night.", "es": "Y a Pablo se le queda la canción nueva del grupo metida en la cabeza toda la noche." }
+  ],
+  "keywords": [
+    "b2-culture.gig",
+    "b2-culture.tickets-sold-out-in-minutes",
+    "b2-culture.venue",
+    "b2-culture.album",
+    "b2-culture.i-know-all-the-lyrics-by-heart",
+    "b2-culture.lineup",
+    "b2-culture.are-you-being-sarcastic",
+    "b2-culture.festival",
+    "b2-culture.that-song-is-stuck-in-my-head"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why is this gig special for the band?",
+      "es": "¿Por qué es especial este concierto para el grupo?",
+      "options": [
+        { "text": "It's their first gig ever.", "es": "Es su primer concierto." },
+        { "text": "It's their biggest show so far.", "es": "Es su concierto más grande hasta ahora." },
+        { "text": "It's their last gig together.", "es": "Es su último concierto juntos." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What surprises everyone during the show?",
+      "es": "¿Qué sorprende a todos durante el concierto?",
+      "options": [
+        { "text": "Mrs. Carter knows all the lyrics.", "es": "Mrs. Carter se sabe todas las letras." },
+        { "text": "Pablo goes up on stage.", "es": "Pablo se sube al escenario." },
+        { "text": "The sound stops working.", "es": "El sonido deja de funcionar." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What does the man offer the band?",
+      "es": "¿Qué le ofrece el hombre al grupo?",
+      "options": [
+        { "text": "A record deal.", "es": "Un contrato discográfico." },
+        { "text": "A new bass for Nina.", "es": "Un bajo nuevo para Nina." },
+        { "text": "A slot at a summer festival.", "es": "Tocar en un festival de verano." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "b2-culture.gig", "distractors": ["refund", "receipt"] },
+    { "id": "g2", "sentence": "s2", "answer": "b2-culture.tickets-sold-out-in-minutes", "gap": "sold out", "distractors": ["sold off", "ran away"] },
+    { "id": "g3", "sentence": "s4", "answer": "b2-culture.venue", "distractors": ["avenue", "menu"] },
+    { "id": "g4", "sentence": "s6", "answer": "b2-culture.i-know-all-the-lyrics-by-heart", "gap": "by heart", "distractors": ["by memory", "of heart"] },
+    { "id": "g5", "sentence": "s12", "answer": "b2-culture.are-you-being-sarcastic", "gap": "sarcastic", "distractors": ["sympathetic", "sensible"] },
+    { "id": "g6", "sentence": "s15", "answer": "b2-culture.that-song-is-stuck-in-my-head", "gap": "stuck", "distractors": ["struck", "stacked"] }
+  ]
+}

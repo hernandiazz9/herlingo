@@ -1,0 +1,1036 @@
+{
+  "id": "c1-storytelling",
+  "order": 352,
+  "level": "C1",
+  "title": "Contar historias con gracia: anécdotas, ritmo, humor",
+  "description": "Cuenta una anécdota como un nativo: engancha desde la primera frase, sitúa la escena, crea suspense, exagera con gracia y remata. Y reacciona cuando te la cuentan a ti.",
+  "emoji": "🎙️",
+  "situation": "cultura",
+  "lessons": [
+    {
+      "id": "c1-storytelling.l.hook",
+      "title": "Enganchar desde la primera frase",
+      "items": [
+        "b1-stories.anecdote",
+        "c1-storytelling.storyteller",
+        "c1-storytelling.hook",
+        "c1-storytelling.this-is-a-true-story-i-swear",
+        "c1-storytelling.swear",
+        "c1-storytelling.youll-never-believe-who-i-bumped-into",
+        "c1-storytelling.bump-into",
+        "c1-storytelling.picture-this",
+        "c1-storytelling.have-i-ever-told-you-about-the-time",
+        "c1-storytelling.funny-you-should-mention-that",
+        "c1-storytelling.it-all-started-with-a-wrong-number",
+        "c1-storytelling.stop-me-if-youve-heard-this-one",
+        "c1-storytelling.ill-never-forget-the-first-time",
+        "c1-storytelling.gripping",
+        "c1-presenting.audience",
+        "c1-storytelling.build-up",
+        "c1-presenting.let-me-start-with-a-story",
+        "b1-stories.you-wont-believe-what-happened",
+        "c1-storytelling.qa.any-stories"
+      ]
+    },
+    {
+      "id": "c1-storytelling.l.pacing",
+      "title": "Situar la escena y llevar el ritmo",
+      "items": [
+        "c1-storytelling.setting",
+        "c1-storytelling.so-there-i-was",
+        "c1-storytelling.you-have-to-understand",
+        "c1-storytelling.context",
+        "c1-storytelling.to-give-you-some-context",
+        "c1-storytelling.pace",
+        "c1-storytelling.sidetracked",
+        "c1-storytelling.sorry-im-getting-sidetracked",
+        "c1-storytelling.anyway-where-was-i",
+        "c1-storytelling.ill-spare-you-the-details",
+        "c1-storytelling.fast-forward",
+        "c1-storytelling.fast-forward-three-hours",
+        "c1-storytelling.without-going-into-too-much-detail",
+        "b1-stories.long-story-short",
+        "c1-storytelling.little-did-i-know",
+        "c1-storytelling.drag-on",
+        "c1-storytelling.ramble",
+        "c1-storytelling.qa.where-was-i",
+        "c1-storytelling.qa.did-you-make-it"
+      ]
+    },
+    {
+      "id": "c1-storytelling.l.suspense",
+      "title": "Suspense y giros inesperados",
+      "items": [
+        "c1-storytelling.suspense",
+        "c1-storytelling.thats-when-things-started-to-go-wrong",
+        "c1-storytelling.out-of-nowhere",
+        "c1-storytelling.out-of-nowhere-a-dog",
+        "c1-storytelling.twist",
+        "c1-storytelling.but-heres-the-twist",
+        "b1-stories.turn-out",
+        "c1-storytelling.it-wasnt-until-we-got-home",
+        "c1-storytelling.dawn-on",
+        "c1-storytelling.then-it-dawned-on-me",
+        "c1-storytelling.freeze-up",
+        "c1-storytelling.i-just-froze",
+        "c1-storytelling.wait-it-gets-better",
+        "c1-storytelling.youll-never-guess-what-was-inside",
+        "c1-storytelling.for-a-moment-nobody-said-a-word",
+        "b2-culture.cliffhanger",
+        "c1-storytelling.qa.and-then",
+        "c1-storytelling.qa.who-was-at-the-door"
+      ]
+    },
+    {
+      "id": "c1-storytelling.l.humor",
+      "title": "Humor: exagerar y rematar",
+      "items": [
+        "b2-culture.sense-of-humor",
+        "c1-storytelling.exaggerate",
+        "c1-storytelling.im-exaggerating-obviously",
+        "c1-storytelling.the-longest-five-minutes-of-my-life",
+        "c1-nuance.understatement",
+        "c1-storytelling.needless-to-say",
+        "c1-storytelling.punchline",
+        "c1-storytelling.timing",
+        "c1-storytelling.timing-is-everything",
+        "c1-storytelling.crack-up",
+        "c1-storytelling.everyone-cracked-up",
+        "c1-storytelling.i-laughed-so-hard",
+        "c1-idioms.i-could-barely-keep-a-straight-face",
+        "c1-storytelling.self-deprecating",
+        "c1-storytelling.in-my-defense",
+        "c1-storytelling.awkward",
+        "c1-storytelling.i-wanted-the-ground-to-swallow-me-up",
+        "c1-storytelling.inside-joke",
+        "c1-storytelling.its-kind-of-an-inside-joke",
+        "b2-culture.you-had-to-be-there",
+        "c1-storytelling.qa.most-embarrassing",
+        "c1-storytelling.qa.did-people-laugh"
+      ]
+    },
+    {
+      "id": "c1-storytelling.l.wrapping-up",
+      "title": "Cerrar la historia y reaccionar",
+      "items": [
+        "c1-storytelling.moral",
+        "c1-storytelling.the-moral-of-the-story",
+        "c1-storytelling.looking-back-it-was-funny",
+        "c1-storytelling.hindsight",
+        "c1-storytelling.in-hindsight-i-should-have-asked",
+        "c1-storytelling.now-we-laugh-about-it",
+        "c1-storytelling.relatable",
+        "c1-storytelling.thats-such-a-relatable-story",
+        "c1-storytelling.make-up",
+        "c1-storytelling.hold-on-are-you-making-this-up",
+        "c1-storytelling.far-fetched",
+        "c1-storytelling.that-sounds-a-bit-far-fetched",
+        "c1-storytelling.how-did-you-keep-a-straight-face",
+        "c1-storytelling.that-reminds-me-of-something",
+        "b1-stories.and-then-what-happened",
+        "b1-stories.no-way-are-you-serious",
+        "c1-storytelling.qa.did-that-really-happen"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "c1-storytelling.this-is-a-true-story-i-swear",
+      "text": "Okay, so this is a true story, I swear.",
+      "es": "Vale, esto es una historia real, te lo juro.",
+      "notes": "«I swear» = te lo juro. «Okay, so…» es la forma más natural de arrancar una anécdota en una conversación.",
+      "explanation": "«swear» suena «suer», una sílaba, con la «r» americana. «story» con «st» directa, sin «e» delante.",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.youll-never-believe-who-i-bumped-into",
+      "text": "You'll never believe who I bumped into at the airport yesterday.",
+      "es": "No te vas a creer con quién me encontré ayer en el aeropuerto.",
+      "notes": "«bump into someone» = encontrarse a alguien por casualidad. La preposición va al final de la pregunta indirecta: «who I bumped into».",
+      "explanation": "«bumped» es una sílaba con la «-ed» como /t/: «bampt». Une «bumped into»: «BAMP-tin-tu».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.picture-this",
+      "text": "Picture this: it's two in the morning and the fire alarm goes off.",
+      "es": "Imagínate la escena: son las dos de la mañana y salta la alarma de incendios.",
+      "notes": "«Picture this» = imagínate esto. El presente simple («it's», «goes off») hace la historia más viva. «go off» = saltar, sonar (una alarma).",
+      "explanation": "«picture» suena «PIK-cher». Haz una pequeña pausa tras «this» para crear expectación.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.have-i-ever-told-you-about-the-time",
+      "text": "Have I ever told you about the time I got stuck in an elevator with my boss?",
+      "es": "¿Te he contado alguna vez lo de aquella vez que me quedé encerrado en un ascensor con mi jefe?",
+      "notes": "«the time (that)…» = aquella vez que… Es la fórmula clásica para anunciar una anécdota. «get stuck» = quedarse atrapado.",
+      "explanation": "«told you» se une: «TOL-dyu». «elevator»: «E-le-vei-rer», con la «t» americana suave.",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.funny-you-should-mention-that",
+      "text": "Funny you should mention that, because something similar happened to me last week.",
+      "es": "Qué casualidad que lo menciones, porque a mí me pasó algo parecido la semana pasada.",
+      "notes": "«Funny you should mention that» = qué curioso que lo saques, justo. Ese «should» no indica obligación, sino sorpresa.",
+      "explanation": "«similar» se acentúa al principio: «SI-mi-ler». «happened»: «JA-pend», dos sílabas.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.it-all-started-with-a-wrong-number",
+      "text": "It all started with a text from a wrong number.",
+      "es": "Todo empezó con un mensaje de un número equivocado.",
+      "notes": "«It all started with…» = todo empezó con… «a wrong number» = un número equivocado (cuando alguien se equivoca al llamar o escribir).",
+      "explanation": "«started» tiene dos sílabas, con la «-ed» como /ɪd/: «STAR-rid». En «wrong» la «w» no suena.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.stop-me-if-youve-heard-this-one",
+      "text": "Stop me if you've heard this one before.",
+      "es": "Para si ya me la has oído contar.",
+      "notes": "Fórmula para empezar un chiste o una historia que quizá ya conocen. «this one» = esta (historia, este chiste).",
+      "explanation": "«heard» suena «jerd», con la vocal neutra y la «r» americana; no lo confundas con «hard».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.ill-never-forget-the-first-time",
+      "text": "I'll never forget the first time I tried to order coffee in English.",
+      "es": "Nunca olvidaré la primera vez que intenté pedir un café en inglés.",
+      "notes": "«the first time (that) I + pasado» = la primera vez que… El «that» casi siempre se omite al hablar.",
+      "explanation": "«forget» se acentúa al final: «for-GET». «order» suena «OR-der», con la «r» americana.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.so-there-i-was",
+      "text": "So there I was, standing in the rain with no phone and no wallet.",
+      "es": "Y allí estaba yo, de pie bajo la lluvia, sin móvil y sin cartera.",
+      "notes": "«So there I was» = y allí estaba yo: fórmula típica para situar al oyente en el momento clave. «in the rain» = bajo la lluvia.",
+      "explanation": "Alarga un poco «there I was» y baja el tono: es el momento de pintar la escena. «wallet»: «UO-lit».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.you-have-to-understand",
+      "text": "Now, you have to understand that I'd never driven in the snow before.",
+      "es": "A ver, tienes que entender que yo nunca había conducido con nieve.",
+      "notes": "«Now,…» al principio no significa «ahora»: introduce un dato importante. «I'd never driven» = pluscuamperfecto para el fondo de la historia.",
+      "explanation": "«I'd» suena «aid». «driven» tiene una «i» corta: «DRI-ven», distinta de «drive».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.to-give-you-some-context",
+      "text": "To give you some context, this was my very first week at the company.",
+      "es": "Para que te sitúes, era mi primerísima semana en la empresa.",
+      "notes": "«To give you some context» = para ponerte en contexto. «my very first» = mi primerísima: «very» enfatiza.",
+      "explanation": "«context» se acentúa al principio: «KON-tekst». Pronuncia el grupo final «-kst» sin añadir vocales.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.sorry-im-getting-sidetracked",
+      "text": "Sorry, I'm getting sidetracked. Back to the story.",
+      "es": "Perdona, me estoy yendo por las ramas. Vuelvo a la historia.",
+      "notes": "«get sidetracked» = desviarse del tema, irse por las ramas. «Back to the story» = volvamos a la historia.",
+      "explanation": "«sidetracked» tiene dos sílabas: «SAID-trakt». La «-ed» suena /t/.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.anyway-where-was-i",
+      "text": "Anyway, where was I?",
+      "es": "Bueno, ¿por dónde iba?",
+      "notes": "«Anyway» = bueno, en fin: vuelve al hilo principal. «Where was I?» = ¿por dónde iba? (no «where I was?»).",
+      "explanation": "«Anyway»: «E-ni-uei», acento en la primera sílaba. Sube el tono al final de la pregunta.",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.ill-spare-you-the-details",
+      "text": "I'll spare you the details, but it took us four hours to get out.",
+      "es": "Te ahorro los detalles, pero tardamos cuatro horas en salir.",
+      "notes": "«spare someone the details» = ahorrarle a alguien los detalles. «it took us… to» = tardamos… en.",
+      "explanation": "«details» se acentúa en la primera en americano: «DI-teils». «took us» se une: «TU-kus».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.fast-forward-three-hours",
+      "text": "Fast-forward three hours, and we're still stuck at the border.",
+      "es": "Tres horas después, y seguimos atascados en la frontera.",
+      "notes": "«Fast-forward…» = avancemos…, como al pasar un vídeo hacia delante. Se combina con el presente para darle ritmo.",
+      "explanation": "«border» suena «BOR-der», con la «r» americana dos veces. «still» con «st» directa, sin «e».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.without-going-into-too-much-detail",
+      "text": "Without going into too much detail, let's just say it didn't end well.",
+      "es": "Sin entrar en demasiados detalles, digamos que no acabó bien.",
+      "notes": "«go into detail» = entrar en detalles (en singular en inglés). «let's just say…» = digamos que…, para insinuar sin contar todo.",
+      "explanation": "«let's just say» casi se funde: «lets-YAS-sei». Es un recurso de humor: deja que el oyente se lo imagine.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.little-did-i-know",
+      "text": "Little did I know that this was only the beginning.",
+      "es": "Poco sabía yo que aquello era solo el principio.",
+      "notes": "Inversión tras «Little»: «Little did I know» = no tenía ni idea de que… Da un toque literario y de suspense.",
+      "explanation": "«little» suena «LI-rol», con la «t» americana suave. Haz una pausa antes de «only the beginning».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.thats-when-things-started-to-go-wrong",
+      "text": "And that's when things started to go horribly wrong.",
+      "es": "Y ahí es cuando las cosas empezaron a torcerse de mala manera.",
+      "notes": "«that's when…» = fue entonces cuando… Marca el punto de giro. «go wrong» = salir mal, torcerse.",
+      "explanation": "Baja la voz y ralentiza en «horribly wrong»: «JO-ri-bli rong». En «wrong» la «w» es muda.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.out-of-nowhere-a-dog",
+      "text": "Out of nowhere, a huge dog came running toward us.",
+      "es": "De la nada, un perro enorme vino corriendo hacia nosotros.",
+      "notes": "«out of nowhere» = de la nada, de repente. «come running» = venir corriendo. En EE. UU. «toward», sin «s».",
+      "explanation": "«nowhere» suena «NOU-uer». «huge» empieza con una «h» suave y una «y»: «hiuch».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.but-heres-the-twist",
+      "text": "But here's the twist: the guy was actually her brother.",
+      "es": "Pero aquí viene el giro: el tipo era en realidad su hermano.",
+      "notes": "«twist» = giro inesperado (de guion). «actually» = en realidad, no «actualmente» (eso es «currently»).",
+      "explanation": "«twist» acaba en «-st»: pronúncialo sin añadir una «e» final. «actually»: «AK-chu-a-li».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.it-wasnt-until-we-got-home",
+      "text": "It wasn't until we got home that I realized my passport was missing.",
+      "es": "No fue hasta que llegamos a casa cuando me di cuenta de que me faltaba el pasaporte.",
+      "notes": "Frase escindida «It wasn't until… that…» = no fue hasta… cuando… «realize» = darse cuenta (no «realizar»). «be missing» = faltar, haber desaparecido.",
+      "explanation": "«realized»: «RI-a-laizd», tres sílabas, con la «-ed» como /d/.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.then-it-dawned-on-me",
+      "text": "Then it dawned on me: I'd been in the wrong building the whole time.",
+      "es": "Entonces caí en la cuenta: había estado en el edificio equivocado todo el rato.",
+      "notes": "«it dawned on me» = caí en la cuenta, se me encendió la bombilla. «the whole time» = todo el rato.",
+      "explanation": "«dawned» suena «dond», con una «o» abierta y larga. «building»: «BIL-ding».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.i-just-froze",
+      "text": "I just froze. I had no idea what to say.",
+      "es": "Me quedé paralizado. No tenía ni idea de qué decir.",
+      "notes": "«freeze» (froze, frozen) = quedarse helado, bloquearse. «no idea what to say» = ni idea de qué decir.",
+      "explanation": "«froze» suena «frouz», con «z» final. «idea» se acentúa en la segunda: «ai-DI-a».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.wait-it-gets-better",
+      "text": "Wait, it gets better.",
+      "es": "Espera, que aún hay más.",
+      "notes": "Irónico: «it gets better» = espera, que la cosa mejora (normalmente, que empeora o se pone más absurda).",
+      "explanation": "«gets better» se une: «get-SBE-rer», con la «t» de «better» como una «r» suave.",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.youll-never-guess-what-was-inside",
+      "text": "You'll never guess what was inside the box.",
+      "es": "No adivinarías nunca lo que había dentro de la caja.",
+      "notes": "«You'll never guess…» = no vas a adivinar nunca… Pide al oyente que participe antes de revelar el dato.",
+      "explanation": "En «guess» la «u» no suena: «ges». «inside» se acentúa al final: «in-SAID».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.for-a-moment-nobody-said-a-word",
+      "text": "For a moment, nobody said a word.",
+      "es": "Durante un momento, nadie dijo ni una palabra.",
+      "notes": "«nobody said a word» = nadie dijo nada. Con «nobody», el verbo va en afirmativo: nunca «nobody didn't say».",
+      "explanation": "«said» suena «sed», no «seid». Una pausa después de «moment» crea el silencio que describes.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.im-exaggerating-obviously",
+      "text": "I'm exaggerating, obviously, but only slightly.",
+      "es": "Estoy exagerando, claro, pero solo un poquito.",
+      "notes": "Admitir la exageración forma parte del humor. «slightly» = ligeramente, un poquito.",
+      "explanation": "«exaggerating»: «ig-ZA-ye-rei-ring», la «gg» suena como «y» fuerte, no como «g». «obviously»: «OB-vi-us-li».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.the-longest-five-minutes-of-my-life",
+      "text": "It was, without a doubt, the longest five minutes of my life.",
+      "es": "Fueron, sin lugar a dudas, los cinco minutos más largos de mi vida.",
+      "notes": "Hipérbole clásica del humor. «five minutes» va con «was» porque se ve como un único bloque de tiempo.",
+      "explanation": "En «doubt» la «b» es muda: «daut». Haz pausas en las comas para darle dramatismo.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.needless-to-say",
+      "text": "Needless to say, I didn't get the job.",
+      "es": "Ni que decir tiene que no me dieron el trabajo.",
+      "notes": "«Needless to say» = ni que decir tiene, huelga decir. Perfecto para rematar con ironía lo que el oyente ya intuye.",
+      "explanation": "«needless» suena «NID-les», con la «ee» larga. Pausa breve antes del remate.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.timing-is-everything",
+      "text": "When you're telling a joke, timing is everything.",
+      "es": "Cuando cuentas un chiste, el ritmo lo es todo.",
+      "notes": "«timing» = el momento justo, el ritmo para decir algo. «tell a joke» = contar un chiste (no «say a joke» ni «count a joke»).",
+      "explanation": "«timing» suena «TAI-ming». «everything»: «EV-ri-zing», con la «th» suave.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.everyone-cracked-up",
+      "text": "Everyone cracked up, including the teacher.",
+      "es": "Todo el mundo se partió de risa, incluida la profesora.",
+      "notes": "«crack up» = partirse de risa. «including» = incluido/a, sin cambiar de género.",
+      "explanation": "Une «cracked up»: «KRAK-tap», con la «-ed» como /t/. «including»: «in-KLU-ding».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.i-laughed-so-hard",
+      "text": "I laughed so hard I nearly fell off my chair.",
+      "es": "Me reí tanto que casi me caigo de la silla.",
+      "notes": "«so hard (that)…» = tanto que… «nearly» = casi. «fall off» = caerse de (una silla, una bici).",
+      "explanation": "En «laughed» la «gh» suena como «f» y la «-ed» como /t/: «laft».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.in-my-defense",
+      "text": "In my defense, the sign was really confusing.",
+      "es": "En mi defensa diré que el cartel era muy confuso.",
+      "notes": "«In my defense» = en mi defensa. Muy útil en el humor autocrítico. Ortografía americana: «defense» con «s».",
+      "explanation": "«defense» se acentúa al final: «di-FENS». «confusing»: «kon-FIU-zing».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.i-wanted-the-ground-to-swallow-me-up",
+      "text": "It was so awkward I wanted the ground to swallow me up.",
+      "es": "Fue tan incómodo que quería que me tragara la tierra.",
+      "notes": "«I wanted the ground to swallow me up» = quería que me tragara la tierra. «want someone to + verbo» (nunca «want that…»).",
+      "explanation": "«awkward» suena «OK-uord». «swallow»: «SUO-lou».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.its-kind-of-an-inside-joke",
+      "text": "It's kind of an inside joke between me and Jordan.",
+      "es": "Es una especie de broma privada entre Jordan y yo.",
+      "notes": "«inside joke» = chiste privado, que solo entiende un grupo. «kind of» = un poco, más o menos. Al hablar se dice «me and Jordan»; por escrito, «Jordan and me».",
+      "explanation": "«kind of an» se une: «KAIN-da-van». «joke»: «youk».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.the-moral-of-the-story",
+      "text": "So the moral of the story is: always check the address twice.",
+      "es": "Así que la moraleja es: comprueba siempre la dirección dos veces.",
+      "notes": "«the moral of the story» = la moraleja. Se usa mucho en broma para cerrar una anécdota.",
+      "explanation": "«moral» se acentúa al principio: «MO-ral». No lo confundas con «morale» (la moral de un equipo), acentuado al final.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.looking-back-it-was-funny",
+      "text": "Looking back, it was actually pretty funny.",
+      "es": "Visto con perspectiva, la verdad es que tuvo bastante gracia.",
+      "notes": "«Looking back» = mirando atrás, visto ahora. «pretty» delante de un adjetivo = bastante.",
+      "explanation": "«pretty» suena «PRI-ri», con la «t» americana suave. «funny»: «FA-ni».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.in-hindsight-i-should-have-asked",
+      "text": "In hindsight, I should have just asked for directions.",
+      "es": "Visto lo visto, debería haber preguntado por dónde se iba y ya está.",
+      "notes": "«In hindsight» = a toro pasado, en retrospectiva. «should have + participio» = debería haber… (un arrepentimiento).",
+      "explanation": "«should have» se reduce a «SHU-rov». «hindsight»: «JAIND-sait».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.now-we-laugh-about-it",
+      "text": "Now we laugh about it, but at the time it was terrifying.",
+      "es": "Ahora nos reímos, pero en aquel momento fue aterrador.",
+      "notes": "«laugh about something» = reírse de algo (que pasó). «at the time» = en aquel momento, entonces.",
+      "explanation": "«laugh» suena «laf». «terrifying»: «TE-ri-fai-ing», acento en la primera.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.thats-such-a-relatable-story",
+      "text": "That's such a relatable story. The same thing happened to me in Madrid.",
+      "es": "Es una historia con la que me identifico totalmente. A mí me pasó lo mismo en Madrid.",
+      "notes": "«relatable» = con lo que te identificas. «such a + adjetivo + sustantivo» = una historia tan…",
+      "explanation": "«relatable»: «ri-LEI-ta-bol». «Madrid» en inglés se acentúa al final: «ma-DRID».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.hold-on-are-you-making-this-up",
+      "text": "Hold on, are you making this up?",
+      "es": "Un momento, ¿te lo estás inventando?",
+      "notes": "«make up» = inventarse (una historia, una excusa). «Hold on» = espera, un momento.",
+      "explanation": "Une «making this up»: «MEI-king-dis-AP». Acentúa «up».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.that-sounds-a-bit-far-fetched",
+      "text": "That sounds a bit far-fetched, but I believe you.",
+      "es": "Suena un poco rocambolesco, pero te creo.",
+      "notes": "«far-fetched» = poco creíble, rebuscado. Lo suavizas con «a bit» y «but I believe you».",
+      "explanation": "«fetched» es una sílaba: «fecht». «believe» con «v» final suave: «bi-LIV».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.how-did-you-keep-a-straight-face",
+      "text": "How did you manage to keep a straight face?",
+      "es": "¿Cómo conseguiste aguantarte la risa?",
+      "notes": "«keep a straight face» = mantenerse serio, aguantarse la risa. «manage to» = conseguir.",
+      "explanation": "«straight» suena «streit», sin «e» delante de la «s» y con la «gh» muda.",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.that-reminds-me-of-something",
+      "text": "That reminds me of something that happened to my sister last summer.",
+      "es": "Eso me recuerda a algo que le pasó a mi hermana el verano pasado.",
+      "notes": "«remind someone of something» = recordarle algo a alguien (por parecido). Ojo: «remind me of», no «remember me».",
+      "explanation": "«reminds» se acentúa en «MAINDZ», con el grupo final «-ndz» completo.",
+      "register": "neutral",
+      "situation": "cultura"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "c1-storytelling.storyteller",
+      "word": "storyteller",
+      "article": "a",
+      "plural": "storytellers",
+      "es": "el narrador, la persona que cuenta historias",
+      "notes": "«She's a great storyteller» = cuenta las historias de maravilla. «storytelling» = el arte de contar historias.",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.hook",
+      "word": "hook",
+      "article": "a",
+      "plural": "hooks",
+      "es": "el gancho",
+      "notes": "Lo que engancha al público al principio de una historia, canción o charla. Como verbo: «I was hooked» = estaba enganchado.",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.swear",
+      "word": "swear",
+      "es": "jurar; decir palabrotas",
+      "notes": "Verbo irregular: swear, swore, sworn. «I swear» = te lo juro; «stop swearing» = deja de decir palabrotas.",
+      "example": "c1-storytelling.this-is-a-true-story-i-swear",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.bump-into",
+      "word": "bump into",
+      "es": "encontrarse por casualidad con",
+      "notes": "Phrasal verb, sinónimo de «run into». Literalmente es «chocar con» alguien.",
+      "example": "c1-storytelling.youll-never-believe-who-i-bumped-into",
+      "situation": "cultura",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "c1-storytelling.gripping",
+      "word": "gripping",
+      "es": "apasionante, que te atrapa",
+      "notes": "Adjetivo para historias, libros o series: «a gripping story». Viene de «grip» (agarrar).",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.build-up",
+      "word": "build-up",
+      "article": "a",
+      "es": "la preparación, el crescendo (antes del momento clave)",
+      "notes": "La parte de la historia que va creando tensión antes del desenlace. El verbo es «build up» (ir aumentando).",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.setting",
+      "word": "setting",
+      "article": "a",
+      "plural": "settings",
+      "es": "el escenario, el lugar donde ocurre (una historia)",
+      "notes": "En una historia, el dónde y el cuándo. En el móvil, «settings» son los ajustes.",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.context",
+      "word": "context",
+      "es": "el contexto",
+      "notes": "Normalmente incontable: «some context», «a bit of context». «out of context» = fuera de contexto.",
+      "example": "c1-storytelling.to-give-you-some-context",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.pace",
+      "word": "pace",
+      "article": "a",
+      "es": "el ritmo",
+      "notes": "«at a slow pace» = a un ritmo lento. «pacing» = el ritmo de una historia o una película.",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.sidetracked",
+      "word": "sidetracked",
+      "es": "distraído, desviado del tema",
+      "notes": "Casi siempre con «get»: «I got sidetracked» = me desvié del tema, me distraje.",
+      "example": "c1-storytelling.sorry-im-getting-sidetracked",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.fast-forward",
+      "word": "fast-forward",
+      "es": "avanzar rápido (en el tiempo)",
+      "notes": "Como el botón de avanzar de un vídeo. En una historia, salta a lo que pasó después.",
+      "example": "c1-storytelling.fast-forward-three-hours",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.drag-on",
+      "word": "drag on",
+      "es": "hacerse eterno, alargarse",
+      "notes": "Phrasal verb: «The meeting dragged on for hours» = la reunión se alargó durante horas. Lo que una buena historia no debe hacer.",
+      "situation": "cultura",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "c1-storytelling.ramble",
+      "word": "ramble",
+      "es": "divagar, enrollarse",
+      "notes": "Verbo: hablar mucho sin ir al grano. «Sorry, I'm rambling» = perdona, me estoy enrollando.",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.suspense",
+      "word": "suspense",
+      "es": "el suspense",
+      "notes": "Incontable: «build suspense» = crear suspense. «Don't keep me in suspense!» = ¡no me tengas en vilo!",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.out-of-nowhere",
+      "word": "out of nowhere",
+      "es": "de la nada, de repente",
+      "notes": "Expresión para algo que aparece sin avisar. Similar a «all of a sudden».",
+      "example": "c1-storytelling.out-of-nowhere-a-dog",
+      "situation": "cultura",
+      "tags": [
+        "idioms"
+      ]
+    },
+    {
+      "id": "c1-storytelling.twist",
+      "word": "twist",
+      "article": "a",
+      "plural": "twists",
+      "es": "el giro (inesperado)",
+      "notes": "«a plot twist» = un giro de guion. Como verbo, «twist» = torcer.",
+      "example": "c1-storytelling.but-heres-the-twist",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.dawn-on",
+      "word": "dawn on",
+      "es": "caer en la cuenta, darse cuenta de repente",
+      "notes": "Phrasal verb con sujeto «it» o la idea: «It dawned on me that…» = de repente me di cuenta de que… «dawn» = amanecer.",
+      "example": "c1-storytelling.then-it-dawned-on-me",
+      "situation": "cultura",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "c1-storytelling.freeze-up",
+      "word": "freeze up",
+      "es": "quedarse bloqueado, paralizarse",
+      "notes": "Phrasal verb: «I froze up on stage» = me quedé en blanco en el escenario. Irregular: freeze, froze, frozen. Sin «up» también vale: «I just froze».",
+      "example": "c1-storytelling.i-just-froze",
+      "situation": "cultura",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "c1-storytelling.exaggerate",
+      "word": "exaggerate",
+      "es": "exagerar",
+      "notes": "Solo una «x» y doble «g». El sustantivo es «exaggeration». «That's an exaggeration» = eso es exagerar.",
+      "example": "c1-storytelling.im-exaggerating-obviously",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.punchline",
+      "word": "punchline",
+      "article": "a",
+      "plural": "punchlines",
+      "es": "el remate (de un chiste)",
+      "notes": "La frase final que hace reír. «You ruined the punchline!» = ¡has estropeado el final del chiste!",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.timing",
+      "word": "timing",
+      "es": "el ritmo, el momento oportuno",
+      "notes": "Incontable. «comic timing» = el sentido del ritmo cómico. «Great timing!» = ¡qué oportuno! (a veces irónico).",
+      "example": "c1-storytelling.timing-is-everything",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.crack-up",
+      "word": "crack up",
+      "es": "partirse de risa; hacer reír mucho",
+      "notes": "Phrasal verb: «I cracked up» = me partí de risa; «He cracks me up» = me hace reír muchísimo.",
+      "example": "c1-storytelling.everyone-cracked-up",
+      "situation": "cultura",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "c1-storytelling.self-deprecating",
+      "word": "self-deprecating",
+      "es": "autocrítico, que se ríe de sí mismo",
+      "notes": "«self-deprecating humor» = humor que se ríe de uno mismo; muy apreciado en EE. UU. para caer bien.",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.awkward",
+      "word": "awkward",
+      "es": "incómodo, violento; torpe",
+      "notes": "Para situaciones sociales incómodas: «an awkward silence» = un silencio incómodo. Se dice «OK-uord».",
+      "example": "c1-storytelling.i-wanted-the-ground-to-swallow-me-up",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.inside-joke",
+      "word": "inside joke",
+      "article": "an",
+      "plural": "inside jokes",
+      "es": "la broma privada, el chiste interno",
+      "notes": "Un chiste que solo entiende un grupo de amigos. En británico también «in-joke».",
+      "example": "c1-storytelling.its-kind-of-an-inside-joke",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.moral",
+      "word": "moral",
+      "article": "a",
+      "plural": "morals",
+      "es": "la moraleja",
+      "notes": "En una historia, la enseñanza final. En plural, «morals» también son los principios morales de alguien.",
+      "example": "c1-storytelling.the-moral-of-the-story",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.hindsight",
+      "word": "hindsight",
+      "es": "la retrospectiva, el «a toro pasado»",
+      "notes": "Incontable, casi siempre en «in hindsight». Refrán: «Hindsight is twenty-twenty» = a toro pasado todo se ve claro.",
+      "example": "c1-storytelling.in-hindsight-i-should-have-asked",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.relatable",
+      "word": "relatable",
+      "es": "con lo que uno se identifica",
+      "notes": "Adjetivo muy común: «a relatable character» = un personaje con el que te identificas.",
+      "example": "c1-storytelling.thats-such-a-relatable-story",
+      "situation": "cultura"
+    },
+    {
+      "id": "c1-storytelling.make-up",
+      "word": "make up",
+      "es": "inventarse",
+      "notes": "Phrasal verb: «make up a story / an excuse» = inventarse una historia / una excusa. También «make up with someone» = reconciliarse.",
+      "example": "c1-storytelling.hold-on-are-you-making-this-up",
+      "situation": "cultura",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "c1-storytelling.far-fetched",
+      "word": "far-fetched",
+      "es": "poco creíble, rebuscado",
+      "notes": "Para una historia o una idea difícil de creer. Sinónimo informal: «a bit much».",
+      "example": "c1-storytelling.that-sounds-a-bit-far-fetched",
+      "situation": "cultura"
+    }
+  ],
+  "qa": [
+    {
+      "id": "c1-storytelling.qa.any-stories",
+      "question": "So, did anything interesting happen on your trip?",
+      "questionEs": "Bueno, ¿te pasó algo interesante en el viaje?",
+      "accepted": [
+        {
+          "text": "Oh, you'll never believe who I bumped into at the airport.",
+          "es": "Uf, no te vas a creer con quién me encontré en el aeropuerto."
+        },
+        {
+          "text": "Okay, so this is a true story, I swear. It all started with a text from a wrong number.",
+          "es": "Vale, esto es una historia real, te lo juro. Todo empezó con un mensaje de un número equivocado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes! I found by chance an old friend in the airport.",
+          "es": "¡Sí! Me encontré por casualidad con un viejo amigo en el aeropuerto."
+        },
+        {
+          "text": "You won't believe who I bumped with at the airport.",
+          "es": "No te vas a creer con quién me encontré en el aeropuerto."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "«encontrarse con alguien por casualidad» es «bump into» o «run into», no «find». Y la preposición es «into», nunca «with». En inglés se dice «at the airport».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-storytelling.qa.where-was-i",
+      "question": "Sorry, I interrupted you. You were telling me about the flight?",
+      "questionEs": "Perdona, te he interrumpido. ¿Me estabas contando lo del vuelo?",
+      "accepted": [
+        {
+          "text": "Oh, right. Anyway, where was I? So there I was, stuck at the gate with no phone.",
+          "es": "Ah, sí. Bueno, ¿por dónde iba? Y allí estaba yo, atrapado en la puerta de embarque sin móvil."
+        },
+        {
+          "text": "No worries. To give you some context, it was my very first time flying alone.",
+          "es": "No pasa nada. Para que te sitúes, era la primerísima vez que volaba solo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes. Where I was? Ah, I was in the gate without phone.",
+          "es": "Sí. ¿Por dónde iba? Ah, estaba en la puerta sin móvil."
+        },
+        {
+          "text": "Don't worry. For put you in context, it was my first time flying alone.",
+          "es": "No te preocupes. Para ponerte en contexto, era mi primera vez volando solo."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "En la pregunta se invierte: «Where was I?». «sin móvil» = «with no phone» o «without a phone». «para + verbo» es «to + verbo», nunca «for put».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-storytelling.qa.did-you-make-it",
+      "question": "So did you make it to the wedding in the end?",
+      "questionEs": "Entonces, ¿llegaste a la boda al final?",
+      "accepted": [
+        {
+          "text": "Without going into too much detail, let's just say we missed the ceremony.",
+          "es": "Sin entrar en demasiados detalles, digamos que nos perdimos la ceremonia."
+        },
+        {
+          "text": "Fast-forward three hours, and yes, we finally got there for dessert.",
+          "es": "Tres horas después, y sí, por fin llegamos a tiempo para el postre."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, we arrived to the wedding at the end, for the dessert.",
+          "es": "Sí, llegamos a la boda al final, para el postre."
+        },
+        {
+          "text": "No, we lost the ceremony, but we arrived to the party.",
+          "es": "No, nos perdimos la ceremonia, pero llegamos a la fiesta."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "«llegar a» es «get to» o «arrive at», nunca «arrive to». «perderse algo» (un evento) es «miss», no «lose». «al final» = «in the end»; «at the end» es «al final de» algo.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-storytelling.qa.and-then",
+      "question": "No way! And then what? Did they find out?",
+      "questionEs": "¡No me digas! ¿Y luego qué? ¿Se enteraron?",
+      "accepted": [
+        {
+          "text": "Wait, it gets better. It wasn't until the next morning that anyone noticed.",
+          "es": "Espera, que aún hay más. No fue hasta la mañana siguiente cuando alguien se dio cuenta."
+        },
+        {
+          "text": "Well, for a moment nobody said a word. And that's when things started to go horribly wrong.",
+          "es": "Pues durante un momento nadie dijo ni una palabra. Y ahí es cuando las cosas empezaron a torcerse de mala manera."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Wait, is better. Nobody didn't notice until the next morning.",
+          "es": "Espera, que es mejor. Nadie se dio cuenta hasta la mañana siguiente."
+        },
+        {
+          "text": "Yes, they realized it in the next morning.",
+          "es": "Sí, se dieron cuenta a la mañana siguiente."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "Con «nobody» no se añade otra negación: «Nobody noticed». Siempre con sujeto («it gets better») y «the next morning» sin «in».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-storytelling.qa.who-was-at-the-door",
+      "question": "Okay, I'm dying to know. Who was at the door?",
+      "questionEs": "Vale, me muero por saberlo. ¿Quién estaba en la puerta?",
+      "accepted": [
+        {
+          "text": "You'll never guess. It was my landlord, holding my lost wallet.",
+          "es": "No lo adivinarías nunca. Era mi casero, con mi cartera perdida en la mano."
+        },
+        {
+          "text": "Here's the twist: it was the guy from the elevator, and he was actually her brother.",
+          "es": "Aquí viene el giro: era el tipo del ascensor, y en realidad era su hermano."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "You never will guess. Was my landlord with my wallet.",
+          "es": "Nunca lo adivinarás. Era mi casero con mi cartera."
+        },
+        {
+          "text": "Was the guy of the elevator, and actually he is her brother.",
+          "es": "Era el tipo del ascensor, y en realidad es su hermano."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "«never» va entre el auxiliar y el verbo: «You'll never guess». El sujeto es obligatorio: «It was…». «actually» no es «actualmente».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-storytelling.qa.most-embarrassing",
+      "question": "What's the most embarrassing thing that's ever happened to you?",
+      "questionEs": "¿Qué es lo más vergonzoso que te ha pasado nunca?",
+      "accepted": [
+        {
+          "text": "Oh, I once called my boss Mom in a meeting. I wanted the ground to swallow me up.",
+          "es": "Uf, una vez llamé «mamá» a mi jefa en una reunión. Quería que me tragara la tierra."
+        },
+        {
+          "text": "I walked into the wrong job interview. In my defense, the sign was really confusing.",
+          "es": "Entré en la entrevista de trabajo equivocada. En mi defensa diré que el cartel era muy confuso."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Once I was very embarrassed because I was pregnant of nerves in a meeting.",
+          "es": "Una vez pasé mucha vergüenza porque estaba muy nervioso en una reunión."
+        },
+        {
+          "text": "I wanted that the ground swallowed me, it was very awkward.",
+          "es": "Quería que me tragara la tierra, fue muy incómodo."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "Falso amigo: «embarrassed» es «avergonzado», y «embarazada» es «pregnant». Con «want», nunca «that»: «I wanted the ground to swallow me up».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-storytelling.qa.did-people-laugh",
+      "question": "Wait, did people laugh, or was it just awkward?",
+      "questionEs": "Espera, ¿la gente se rió o fue simplemente incómodo?",
+      "accepted": [
+        {
+          "text": "Everyone cracked up, including the teacher. I could barely keep a straight face.",
+          "es": "Todo el mundo se partió de risa, incluida la profesora. Yo casi no podía aguantarme la risa."
+        },
+        {
+          "text": "Honestly, it was the longest five minutes of my life. Needless to say, nobody laughed.",
+          "es": "Sinceramente, fueron los cinco minutos más largos de mi vida. Ni que decir tiene que nadie se rió."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Everybody laughed a lot, they were dying of laugh.",
+          "es": "Todos se rieron mucho, se morían de risa."
+        },
+        {
+          "text": "Nobody didn't laugh. It was a very awkward moment.",
+          "es": "Nadie se rió. Fue un momento muy incómodo."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "«morirse de risa» no es «die of laugh»: se dice «crack up» o «die laughing». Con «nobody» no hay doble negación: «Nobody laughed».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-storytelling.qa.did-that-really-happen",
+      "question": "Come on, did that really happen, or are you making it up?",
+      "questionEs": "Venga ya, ¿eso pasó de verdad o te lo estás inventando?",
+      "accepted": [
+        {
+          "text": "I swear it's true! Now we laugh about it, but at the time it was terrifying.",
+          "es": "¡Te juro que es verdad! Ahora nos reímos, pero en aquel momento fue aterrador."
+        },
+        {
+          "text": "It really happened. Looking back, it was actually pretty funny.",
+          "es": "Pasó de verdad. Visto con perspectiva, la verdad es que tuvo bastante gracia."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I swear you it's true, I'm not inventing nothing.",
+          "es": "Te juro que es verdad, no me estoy inventando nada."
+        },
+        {
+          "text": "Is true! Now we laugh of it, but in that moment was terrible.",
+          "es": "¡Es verdad! Ahora nos reímos de ello, pero en aquel momento fue terrible."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "«Te lo juro» es «I swear», sin «you». Una sola negación: «I'm not making anything up». «reírse de» = «laugh about», y «en aquel momento» = «at the time».",
+      "voice": "en-US-AndrewNeural"
+    }
+  ]
+}

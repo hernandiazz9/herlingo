@@ -1,0 +1,94 @@
+{
+  "id": "story.en-b2-a-clean-bill-of-health",
+  "order": 211,
+  "title": "A clean bill of health",
+  "titleEs": "Todo en orden",
+  "description": "Mrs. Carter se agota para terminar su libro a tiempo y se lleva un buen susto. Toca ir al médico y cambiar de hábitos.",
+  "emoji": "🩺",
+  "situation": "salud",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "The reading at the bookstore is in three weeks, and Mrs. Carter's book isn't finished.", "es": "La lectura en la librería es dentro de tres semanas, y el libro de Mrs. Carter no está terminado." },
+    { "id": "s2", "text": "She writes until two in the morning and drinks far too much coffee.", "es": "Escribe hasta las dos de la madrugada y bebe demasiado café." },
+    { "id": "s3", "text": "«I tend to skip breakfast when I'm busy, dear.»", "es": "«Cuando estoy liada, suelo saltarme el desayuno, cielo.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s4", "text": "One morning, she feels dizzy on the stairs and has to sit down.", "es": "Una mañana, se marea en la escalera y tiene que sentarse." },
+    { "id": "s5", "text": "Pablo, who is visiting Maya, finds her there and takes her to her primary care doctor.", "es": "Pablo, que está de visita en casa de Maya, la encuentra allí y la lleva a su médico de cabecera." },
+    { "id": "s6", "text": "«Your blood pressure is a bit high,» says Dr. Lee.", "es": "«Tiene la tensión un poco alta», dice el doctor Lee." },
+    { "id": "s7", "text": "«We'd like to run some blood tests, just in case.»", "es": "«Nos gustaría hacerle unos análisis de sangre, por si acaso.»", "voice": "en-US-BrianNeural" },
+    { "id": "s8", "text": "«Have you been under a lot of pressure lately?»", "es": "«¿Ha estado sometida a mucha presión últimamente?»", "voice": "en-US-BrianNeural" },
+    { "id": "s9", "text": "Mrs. Carter laughs. «Only a deadline, a book and a bookstore full of people.»", "es": "Mrs. Carter se ríe. «Solo una fecha de entrega, un libro y una librería llena de gente.»" },
+    { "id": "s10", "text": "Two days later, the results come back fine.", "es": "Dos días después, los resultados salen bien." },
+    { "id": "s11", "text": "It's a clean bill of health, but the doctor wants her to change some habits.", "es": "Le dan el visto bueno, pero el médico quiere que cambie algunos hábitos." },
+    { "id": "s12", "text": "Less coffee, eight hours of sleep and a walk every day.", "es": "Menos café, ocho horas de sueño y un paseo cada día." },
+    { "id": "s13", "text": "That evening, Pablo brings her soup and sits with her for a while.", "es": "Esa tarde, Pablo le lleva sopa y se queda un rato con ella." },
+    { "id": "s14", "text": "«Go easy on yourself. The book will be ready.»", "es": "«No seas tan dura contigo misma. El libro estará listo.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s15", "text": "Now, every morning, they go for a walk along the lake together.", "es": "Ahora, cada mañana, salen juntos a pasear por la orilla del lago." },
+    { "id": "s16", "text": "«I'm feeling much better. I'm finally back on track.»", "es": "«Me encuentro mucho mejor. Por fin vuelvo a ser la de siempre.»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "b2-wellbeing.i-tend-to-skip-breakfast",
+    "b2-wellbeing.primary-care-doctor",
+    "b2-wellbeing.blood-pressure",
+    "b2-wellbeing.they-want-to-run-some-tests",
+    "b2-wellbeing.blood-test",
+    "b2-wellbeing.im-under-a-lot-of-pressure",
+    "b2-wellbeing.i-got-a-clean-bill-of-health",
+    "b2-wellbeing.habit",
+    "b2-wellbeing.go-easy-on-yourself",
+    "b2-wellbeing.im-finally-back-on-track"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why is Mrs. Carter so tired?",
+      "es": "¿Por qué está Mrs. Carter tan cansada?",
+      "options": [
+        { "text": "She's been working late on her book.", "es": "Ha estado trabajando hasta tarde en su libro." },
+        { "text": "Her neighbors are very noisy.", "es": "Sus vecinos hacen mucho ruido." },
+        { "text": "She's been training for a race.", "es": "Ha estado entrenando para una carrera." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "What happens to her one morning?",
+      "es": "¿Qué le pasa una mañana?",
+      "options": [
+        { "text": "She falls and breaks her arm.", "es": "Se cae y se rompe el brazo." },
+        { "text": "She feels dizzy on the stairs.", "es": "Se marea en la escalera." },
+        { "text": "She loses her notebook.", "es": "Pierde su cuaderno." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "What do the blood tests show?",
+      "es": "¿Qué muestran los análisis de sangre?",
+      "options": [
+        { "text": "She needs to see a specialist.", "es": "Que tiene que ir a un especialista." },
+        { "text": "She has to stay in the hospital.", "es": "Que tiene que quedarse en el hospital." },
+        { "text": "Everything is fine.", "es": "Que todo está bien." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "What do Pablo and Mrs. Carter do every morning now?",
+      "es": "¿Qué hacen Pablo y Mrs. Carter cada mañana ahora?",
+      "options": [
+        { "text": "They have coffee at a café.", "es": "Se toman un café en una cafetería." },
+        { "text": "They walk along the lake.", "es": "Pasean por la orilla del lago." },
+        { "text": "They work on the book together.", "es": "Trabajan juntos en el libro." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "b2-wellbeing.i-tend-to-skip-breakfast", "gap": "skip", "distractors": ["jump", "lose"] },
+    { "id": "g2", "sentence": "s6", "answer": "b2-wellbeing.blood-pressure", "distractors": ["blood tension", "blood force"] },
+    { "id": "g3", "sentence": "s8", "answer": "b2-wellbeing.im-under-a-lot-of-pressure", "gap": "under", "distractors": ["below", "with"] },
+    { "id": "g4", "sentence": "s11", "answer": "b2-wellbeing.i-got-a-clean-bill-of-health", "gap": "clean bill of health", "distractors": ["clear bill of health", "clean note of health"] },
+    { "id": "g5", "sentence": "s14", "answer": "b2-wellbeing.go-easy-on-yourself", "gap": "easy", "distractors": ["soft", "slow"] },
+    { "id": "g6", "sentence": "s16", "answer": "b2-wellbeing.im-finally-back-on-track", "gap": "on track", "distractors": ["in track", "on road"] }
+  ]
+}

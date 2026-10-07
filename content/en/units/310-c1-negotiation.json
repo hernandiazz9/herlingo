@@ -1,0 +1,311 @@
+{
+  "id": "c1-negotiation",
+  "order": 310,
+  "level": "C1",
+  "title": "Negociar: salario, condiciones, clientes y proveedores",
+  "description": "Negociar en inglés con aplomo: pedir más sueldo con argumentos, ajustar condiciones, apretar a un proveedor o defender tu precio ante un cliente y cerrar el trato sin quemar puentes.",
+  "emoji": "🤝",
+  "situation": "trabajo",
+  "lessons": [
+    {
+      "id": "c1-negotiation.l.salary",
+      "title": "Negociar el salario y pedir una subida",
+      "items": [
+        "b1-interview.salary",
+        "b1-interview.job-offer",
+        "c1-negotiation.market-rate",
+        "c1-negotiation.based-on-my-research",
+        "c1-negotiation.range",
+        "c1-negotiation.i-was-hoping-for-something-in-the-range",
+        "c1-negotiation.id-like-to-discuss-the-package",
+        "c1-negotiation.is-there-any-flexibility",
+        "c1-negotiation.leverage",
+        "c1-negotiation.i-bring-a-lot-to-the-table",
+        "c1-negotiation.equity",
+        "c1-negotiation.perk",
+        "c1-negotiation.if-the-salary-is-fixed",
+        "c1-negotiation.counteroffer",
+        "c1-negotiation.im-not-in-a-position-to-accept",
+        "c1-negotiation.raise",
+        "c1-negotiation.ive-taken-on-a-lot-more",
+        "c1-negotiation.id-like-to-make-the-case",
+        "c1-negotiation.qa.expectations",
+        "c1-negotiation.qa.raise"
+      ]
+    },
+    {
+      "id": "c1-negotiation.l.terms",
+      "title": "Condiciones, contrapropuestas y líneas rojas",
+      "items": [
+        "c1-negotiation.terms",
+        "c1-negotiation.the-terms-look-good",
+        "c1-negotiation.notice-period",
+        "c1-negotiation.could-we-revisit-the-notice-period",
+        "c1-negotiation.clause",
+        "c1-negotiation.is-the-non-compete-clause-negotiable",
+        "b1-interview.remote-work",
+        "c1-negotiation.deal-breaker",
+        "c1-negotiation.working-remotely-is-a-deal-breaker",
+        "c1-negotiation.concession",
+        "c1-negotiation.id-be-willing-to-start-earlier",
+        "c1-negotiation.what-would-it-take",
+        "c1-negotiation.how-about-we-meet-halfway",
+        "c1-negotiation.could-we-put-that-in-writing",
+        "c1-negotiation.ill-need-a-couple-of-days",
+        "c1-negotiation.qa.notice",
+        "c1-negotiation.qa.counter"
+      ]
+    },
+    {
+      "id": "c1-negotiation.l.clients",
+      "title": "Clientes y proveedores: precios, descuentos y márgenes",
+      "items": [
+        "b1-calls.client",
+        "c1-negotiation.supplier",
+        "c1-negotiation.quote",
+        "b2-meetings.budget",
+        "c1-negotiation.thanks-for-the-quote",
+        "c1-negotiation.is-there-any-wiggle-room",
+        "c1-negotiation.commitment",
+        "c1-negotiation.if-we-commit-to-a-two-year-contract",
+        "c1-negotiation.rate",
+        "b1-trips.discount",
+        "c1-negotiation.we-could-offer-a-discount",
+        "c1-negotiation.margin",
+        "c1-negotiation.our-margins-are-already-tight",
+        "c1-negotiation.weve-received-other-quotes",
+        "c1-negotiation.what-if-we-paid-upfront",
+        "c1-negotiation.we-cant-lower-the-price",
+        "c1-negotiation.that-works-for-us-as-long-as",
+        "c1-negotiation.lets-not-lose-sight",
+        "c1-negotiation.qa.best-price",
+        "c1-negotiation.qa.discount"
+      ]
+    },
+    {
+      "id": "c1-negotiation.l.closing",
+      "title": "Ceder, plantarse y cerrar el trato",
+      "items": [
+        "c1-negotiation.stalemate",
+        "c1-negotiation.weve-reached-a-stalemate",
+        "c1-negotiation.common-ground",
+        "c1-negotiation.lets-focus-on-common-ground",
+        "c1-negotiation.thats-as-far-as-we-can-go",
+        "c1-negotiation.walk-away",
+        "c1-negotiation.were-prepared-to-walk-away",
+        "c1-negotiation.i-can-live-with-that",
+        "c1-negotiation.sign-off-on",
+        "c1-negotiation.ill-need-to-run-it-by",
+        "c1-negotiation.it-sounds-like-we-have-a-deal",
+        "c1-negotiation.agreement",
+        "c1-negotiation.ill-have-legal-draft",
+        "c1-negotiation.win-win",
+        "c1-negotiation.this-is-a-win-win",
+        "c1-negotiation.qa.final-offer",
+        "c1-negotiation.qa.stalemate"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "c1-negotiation.based-on-my-research", "text": "Based on my research, the market rate for this role is quite a bit higher.", "es": "Según lo que he investigado, el precio de mercado para este puesto es bastante más alto.", "notes": "«quite a bit higher» = bastante más alto; «based on» = según, partiendo de.", "explanation": "Para anclar la negociación en datos y no en lo que «te gustaría». «research» se acentúa al principio en inglés americano: «REE-serch».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.i-was-hoping-for-something-in-the-range", "text": "I was hoping for something in the range of one hundred twenty thousand.", "es": "Esperaba algo en torno a ciento veinte mil.", "notes": "«in the range of» = en la horquilla de, en torno a. En EE. UU. se dice «one hundred twenty thousand», sin «and».", "explanation": "Cuando te piden una cifra: el pasado «I was hoping» la suaviza sin rebajarla. «range» rima con «change»: «REINCH».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.id-like-to-discuss-the-package", "text": "Before I accept, I'd like to discuss the overall compensation package.", "es": "Antes de aceptar, me gustaría hablar del paquete retributivo en conjunto.", "notes": "«compensation package» = sueldo más extras (acciones, seguro, vacaciones). «discuss» va sin «about».", "explanation": "Para no decir que sí a la primera oferta. «package» = «PÆ-kich», la segunda sílaba muy corta.", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.is-there-any-flexibility", "text": "Is there any flexibility on the base salary?", "es": "¿Hay algo de margen en el salario base?", "notes": "«flexibility on» algo = margen para mover algo; «base salary» = sueldo fijo, sin bonus.", "explanation": "La forma más educada de pedir más sin presionar. «flexibility» lleva el acento en «BI»: «flek-sə-BI-lə-ti», con flap t final.", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.i-bring-a-lot-to-the-table", "text": "I think I bring a lot to the table, especially on the backend side.", "es": "Creo que aporto mucho, sobre todo en la parte de backend.", "notes": "«bring a lot to the table» = aportar mucho (expresión muy común en negociaciones).", "explanation": "Para recordar tu valor sin sonar arrogante. «table» = «TEI-bəl»; «the» con la lengua entre los dientes.", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-negotiation.if-the-salary-is-fixed", "text": "If the salary is fixed, could we look at equity or extra vacation days?", "es": "Si el sueldo no se puede mover, ¿podríamos ver acciones o más días de vacaciones?", "notes": "«fixed» aquí = cerrado, que no se mueve. «look at» = estudiar, valorar.", "explanation": "Para cambiar de variable cuando el sueldo está bloqueado. «fixed» termina en /t/: «fikst», sin «e» final.", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.im-not-in-a-position-to-accept", "text": "I'm afraid I'm not in a position to accept anything below that figure.", "es": "Me temo que no puedo aceptar nada por debajo de esa cifra.", "notes": "«not in a position to» = no estar en condiciones de (formal y firme). «figure» = cifra.", "explanation": "Para marcar tu mínimo con firmeza pero con cortesía. «figure» = «FI-gyər», con «r» americana al final.", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.ive-taken-on-a-lot-more", "text": "Over the last year, I've taken on a lot more responsibility.", "es": "Durante el último año he asumido mucha más responsabilidad.", "notes": "«take on» = asumir, hacerse cargo de (phrasal verb). «responsibility» en singular, como concepto.", "explanation": "Primer argumento para pedir una subida. «taken on» se une: «TEI-kə-non».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-negotiation.id-like-to-make-the-case", "text": "I'd like to make the case for a raise, based on what I've delivered this year.", "es": "Me gustaría argumentar por qué merezco una subida, por lo que he conseguido este año.", "notes": "«make the case for» = defender, argumentar a favor de. «deliver» = entregar resultados.", "explanation": "Para abrir la conversación con tu jefe en un 1:1. «case» con «s» sorda: «keis», nunca «keiz».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.the-terms-look-good", "text": "Overall, the terms look good, but I have a couple of concerns.", "es": "En general, las condiciones están bien, pero tengo un par de dudas.", "notes": "«terms» = condiciones (de un contrato), siempre en plural. «concern» = duda, preocupación.", "explanation": "Para aceptar lo bueno antes de pedir cambios. «concerns» = «kən-SERNZ», la «s» final suena «z».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.could-we-revisit-the-notice-period", "text": "Could we revisit the notice period? Three months feels quite long.", "es": "¿Podríamos replantear el preaviso? Tres meses me parece bastante largo.", "notes": "«revisit» = volver sobre algo, replantearlo. «feels quite long» suaviza «is too long».", "explanation": "Para reabrir un punto concreto con tacto. «revisit» = «ree-VI-zit», acento en la segunda sílaba.", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.is-the-non-compete-clause-negotiable", "text": "Is the non-compete clause negotiable, or is it standard for everyone?", "es": "¿La cláusula de no competencia es negociable o es la estándar para todos?", "notes": "«non-compete clause» = cláusula de no competencia.", "explanation": "Antes de firmar un contrato con letra pequeña. «clause» suena como «claws»: «klawz», con «z» final.", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.working-remotely-is-a-deal-breaker", "text": "To be honest, being able to work remotely is a deal-breaker for me.", "es": "Para serte sincero, poder teletrabajar es innegociable para mí.", "notes": "«deal-breaker» = algo sin lo cual no hay trato, una línea roja.", "explanation": "Para dejar clara tu línea roja sin rodeos. «honest» empieza sin «h»: «O-nist».", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-negotiation.id-be-willing-to-start-earlier", "text": "I'd be willing to start earlier if we can agree on the remote days.", "es": "Estaría dispuesto a empezar antes si nos ponemos de acuerdo en los días de teletrabajo.", "notes": "«be willing to» = estar dispuesto a: ofreces algo a cambio de otra cosa.", "explanation": "La fórmula clásica del «te doy esto si me das aquello». «willing» con «i» corta: «WI-ling».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.what-would-it-take", "text": "What would it take for you to agree to four days remote?", "es": "¿Qué haría falta para que aceptaras cuatro días de teletrabajo?", "notes": "«What would it take for you to…?» = ¿qué haría falta para que…? Pregunta muy útil para desbloquear.", "explanation": "Para que la otra parte ponga su precio. «would it» se une: «wu-DIT»; «take for» casi sin pausa.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-negotiation.how-about-we-meet-halfway", "text": "How about we meet halfway, at two days a week in the office?", "es": "¿Y si lo dejamos a medias, con dos días a la semana en la oficina?", "notes": "«meet halfway» = ceder cada uno la mitad, llegar a un punto medio.", "explanation": "Para proponer un punto medio. «halfway» sin «l»: «HÆF-wei».", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-negotiation.could-we-put-that-in-writing", "text": "That sounds fair. Could we put that in writing?", "es": "Me parece justo. ¿Podríamos ponerlo por escrito?", "notes": "«put something in writing» = ponerlo por escrito.", "explanation": "Para no quedarte con un acuerdo verbal. «writing» con flap t: «RAI-ding».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.ill-need-a-couple-of-days", "text": "I'll need a couple of days to think it over.", "es": "Necesitaré un par de días para pensármelo.", "notes": "«think it over» = pensárselo con calma (phrasal verb; «it» va en medio).", "explanation": "Para no decidir bajo presión. «think it over» se une: «THIN-ki-TOU-vər».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-negotiation.thanks-for-the-quote", "text": "Thanks for the quote, but it's well above our budget.", "es": "Gracias por el presupuesto, pero se pasa bastante del que tenemos.", "notes": "«quote» = presupuesto que te da un proveedor; «budget» = el dinero que tú tienes. «well above» = muy por encima.", "explanation": "Para responder a un proveedor caro sin cerrar la puerta. «quote» = «kwout», con «w» clara.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-negotiation.is-there-any-wiggle-room", "text": "Is that your best price, or is there any wiggle room?", "es": "¿Es su mejor precio o hay algo de margen?", "notes": "«wiggle room» = margen para moverse (coloquial pero muy usado en negocios).", "explanation": "Para tantear si el precio baja. «wiggle» = «WI-gəl», con «i» corta.", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-negotiation.if-we-commit-to-a-two-year-contract", "text": "If we commit to a two-year contract, could you lower the rate?", "es": "Si nos comprometemos a un contrato de dos años, ¿podrían bajar la tarifa?", "notes": "«commit to» = comprometerse a. «two-year contract» sin «s»: el número va como adjetivo.", "explanation": "Para ofrecer estabilidad a cambio de precio. «commit» se acentúa al final: «kə-MIT».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.we-could-offer-a-discount", "text": "We could offer a ten percent discount for a longer commitment.", "es": "Podríamos ofrecer un diez por ciento de descuento por un compromiso más largo.", "notes": "«commitment» = compromiso (obligación); «compromise» = acuerdo en el que ambos ceden.", "explanation": "Desde el lado del proveedor: das algo, pides algo. «percent» se acentúa en «CENT»: «pər-SENT».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.our-margins-are-already-tight", "text": "I'm afraid our margins are already very tight.", "es": "Me temo que nuestros márgenes ya están muy ajustados.", "notes": "«tight margins» = márgenes ajustados (no «adjusted»).", "explanation": "Para defender tu precio ante un cliente. «tight» termina en /t/ suave: «tait».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.weve-received-other-quotes", "text": "To be transparent, we've received other quotes that are more competitive.", "es": "Para ser transparentes, hemos recibido otros presupuestos más competitivos.", "notes": "«To be transparent» = para ser claros (introduce una presión educada).", "explanation": "Para usar tu baza sin amenazar. «competitive» = «kəm-PE-də-tiv», con flap t.", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.what-if-we-paid-upfront", "text": "What if we paid the full amount upfront?", "es": "¿Y si pagáramos el importe completo por adelantado?", "notes": "«upfront» = por adelantado. «What if» + pasado = propuesta hipotética, más suave.", "explanation": "Para ofrecer algo que al proveedor le interesa. «upfront» = «up-FRONT», con «o» como «a» corta.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-negotiation.we-cant-lower-the-price", "text": "We can't lower the price, but we can include a year of support.", "es": "No podemos bajar el precio, pero podemos incluir un año de soporte.", "notes": "Cuando no cedes en precio, cedes en valor: «include», «throw in» (añadir gratis).", "explanation": "Para no tocar el precio y aun así ceder. «can't» en inglés americano = «kænt», con «t» final suave.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-negotiation.that-works-for-us-as-long-as", "text": "That works for us, as long as delivery is guaranteed by March.", "es": "Eso nos va bien, siempre que la entrega esté garantizada para marzo.", "notes": "«as long as» = siempre que (condición). «by March» = como tarde en marzo.", "explanation": "Para aceptar poniendo una condición. «guaranteed» = «gæ-rən-TEED», acento al final.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-negotiation.lets-not-lose-sight", "text": "Let's not lose sight of the bigger picture: we both want a long-term partnership.", "es": "No perdamos de vista lo importante: los dos queremos una relación a largo plazo.", "notes": "«lose sight of» = perder de vista; «the bigger picture» = la visión de conjunto.", "explanation": "Para enfriar una discusión sobre detalles. «lose» = «luuz», con «u» larga y «z».", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-negotiation.weve-reached-a-stalemate", "text": "I think we've reached a stalemate. Shall we take a short break?", "es": "Creo que hemos llegado a un punto muerto. ¿Hacemos una pausa corta?", "notes": "«stalemate» = punto muerto (viene del ajedrez: tablas). «take a break» = hacer una pausa.", "explanation": "Para parar antes de que se tense. «stalemate» = «STEIL-meit».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-negotiation.lets-focus-on-common-ground", "text": "Let's focus on where we already have common ground.", "es": "Centrémonos en los puntos en los que ya estamos de acuerdo.", "notes": "«common ground» = terreno común, puntos de acuerdo.", "explanation": "Para reconducir hacia lo positivo. «ground» = «graund», con «d» final.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-negotiation.thats-as-far-as-we-can-go", "text": "I'm afraid that's as far as we can go.", "es": "Me temo que no podemos ir más allá.", "notes": "«as far as we can go» = hasta donde podemos llegar: tu límite.", "explanation": "Para marcar el último paso con calma. «far» con «r» americana: «faar».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.were-prepared-to-walk-away", "text": "If those are the final terms, we're prepared to walk away.", "es": "Si esas son las condiciones definitivas, estamos dispuestos a retirarnos.", "notes": "«walk away» = levantarse de la mesa, renunciar al trato. «be prepared to» = estar dispuesto a.", "explanation": "Tu mejor baza: úsala solo si es verdad. «walk» sin «l»: «wok».", "register": "formal", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-negotiation.i-can-live-with-that", "text": "It's not ideal, but I can live with that.", "es": "No es lo ideal, pero puedo aceptarlo.", "notes": "«I can live with that» = puedo aceptarlo, me vale (aunque no me encante).", "explanation": "Para ceder sin entusiasmo. «ideal» = «ai-DEEL», tres sílabas con acento en medio.", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-negotiation.ill-need-to-run-it-by", "text": "I'll need to run it by my manager before I can sign off on it.", "es": "Tendré que consultarlo con mi jefa antes de poder darle el visto bueno.", "notes": "«run something by someone» = consultárselo; «sign off on» = dar el visto bueno (phrasal verbs).", "explanation": "Para ganar tiempo sin decir que no. «run it by» se une: «RA-ni-bai».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-negotiation.it-sounds-like-we-have-a-deal", "text": "Great, it sounds like we have a deal.", "es": "Genial, parece que tenemos un trato.", "notes": "«it sounds like» + frase = parece que.", "explanation": "Para cerrar con buen tono. «deal» con «l» oscura al final: «diil».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-negotiation.ill-have-legal-draft", "text": "I'll have our legal team draft the agreement by the end of the week.", "es": "Haré que nuestro equipo legal redacte el acuerdo antes de que acabe la semana.", "notes": "«have someone do something» = encargar a alguien que haga algo. «draft» = redactar un borrador.", "explanation": "Para dar el siguiente paso concreto. «draft» = «dræft», con la «a» abierta de «cat».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-negotiation.this-is-a-win-win", "text": "I really think this is a win-win for both sides.", "es": "De verdad creo que salimos ganando los dos.", "notes": "«a win-win» = un acuerdo en el que ganan las dos partes.", "explanation": "Para despedir la negociación en positivo. «both» con «th» final: lengua entre los dientes.", "register": "neutral", "situation": "trabajo" }
+  ],
+  "vocab": [
+    { "id": "c1-negotiation.market-rate", "word": "market rate", "article": "a", "plural": "market rates", "es": "el precio de mercado", "notes": "Lo que suele pagarse por un puesto o servicio.", "example": "c1-negotiation.based-on-my-research", "situation": "trabajo" },
+    { "id": "c1-negotiation.range", "word": "range", "article": "a", "plural": "ranges", "es": "la horquilla, el rango", "notes": "«salary range» = horquilla salarial.", "example": "c1-negotiation.i-was-hoping-for-something-in-the-range", "situation": "trabajo" },
+    { "id": "c1-negotiation.leverage", "word": "leverage", "es": "la baza, el poder de negociación", "notes": "Incontable. «We have leverage» = tenemos con qué presionar. Se dice «LE-və-rich».", "situation": "trabajo" },
+    { "id": "c1-negotiation.equity", "word": "equity", "es": "las acciones (de la empresa), la participación", "notes": "Incontable. En startups, parte del sueldo se paga en «equity».", "example": "c1-negotiation.if-the-salary-is-fixed", "situation": "trabajo" },
+    { "id": "c1-negotiation.perk", "word": "perk", "article": "a", "plural": "perks", "es": "el extra, la ventaja (del puesto)", "notes": "Seguro médico, gimnasio, comida gratis… Casi siempre en plural: «the perks».", "situation": "trabajo" },
+    { "id": "c1-negotiation.counteroffer", "word": "counteroffer", "article": "a", "plural": "counteroffers", "es": "la contraoferta", "notes": "«make a counteroffer» = hacer una contraoferta.", "situation": "trabajo" },
+    { "id": "c1-negotiation.raise", "word": "raise", "article": "a", "plural": "raises", "es": "la subida de sueldo", "notes": "En EE. UU. «a raise» («a rise» es británico). «ask for a raise» = pedir una subida.", "example": "c1-negotiation.id-like-to-make-the-case", "situation": "trabajo", "image": "fluent:chart-increasing" },
+    { "id": "c1-negotiation.terms", "word": "terms", "es": "las condiciones (de un acuerdo)", "notes": "Siempre en plural en este sentido: «the terms of the contract».", "example": "c1-negotiation.the-terms-look-good", "situation": "trabajo" },
+    { "id": "c1-negotiation.notice-period", "word": "notice period", "article": "a", "plural": "notice periods", "es": "el preaviso", "notes": "«give notice» = avisar de que te vas de la empresa.", "example": "c1-negotiation.could-we-revisit-the-notice-period", "situation": "trabajo" },
+    { "id": "c1-negotiation.clause", "word": "clause", "article": "a", "plural": "clauses", "es": "la cláusula", "example": "c1-negotiation.is-the-non-compete-clause-negotiable", "situation": "trabajo", "image": "fluent:scroll" },
+    { "id": "c1-negotiation.deal-breaker", "word": "deal-breaker", "article": "a", "plural": "deal-breakers", "es": "la línea roja, lo innegociable", "notes": "Lo que hace que no haya trato si no se cumple.", "example": "c1-negotiation.working-remotely-is-a-deal-breaker", "situation": "trabajo" },
+    { "id": "c1-negotiation.concession", "word": "concession", "article": "a", "plural": "concessions", "es": "la concesión, lo que cedes", "notes": "«make a concession» = ceder en algo.", "situation": "trabajo" },
+    { "id": "c1-negotiation.supplier", "word": "supplier", "article": "a", "plural": "suppliers", "es": "el proveedor", "notes": "También «vendor», sobre todo en software.", "situation": "trabajo", "image": "fluent:package" },
+    { "id": "c1-negotiation.quote", "word": "quote", "article": "a", "plural": "quotes", "es": "el presupuesto (de un proveedor)", "notes": "Ojo: «presupuesto» que te pasan = «quote»; el dinero que tienes = «budget».", "example": "c1-negotiation.thanks-for-the-quote", "situation": "trabajo", "image": "fluent:receipt" },
+    { "id": "c1-negotiation.commitment", "word": "commitment", "article": "a", "plural": "commitments", "es": "el compromiso (obligación)", "notes": "No confundas con «compromise» (acuerdo en el que ambos ceden).", "example": "c1-negotiation.we-could-offer-a-discount", "situation": "trabajo" },
+    { "id": "c1-negotiation.rate", "word": "rate", "article": "a", "plural": "rates", "es": "la tarifa", "notes": "«hourly rate» = tarifa por hora; «day rate» = tarifa por día.", "example": "c1-negotiation.if-we-commit-to-a-two-year-contract", "situation": "trabajo" },
+    { "id": "c1-negotiation.margin", "word": "margin", "article": "a", "plural": "margins", "es": "el margen (de beneficio)", "notes": "«profit margin» = margen de beneficio.", "example": "c1-negotiation.our-margins-are-already-tight", "situation": "trabajo" },
+    { "id": "c1-negotiation.stalemate", "word": "stalemate", "article": "a", "plural": "stalemates", "es": "el punto muerto", "notes": "«reach a stalemate» = llegar a un punto muerto.", "example": "c1-negotiation.weve-reached-a-stalemate", "situation": "trabajo" },
+    { "id": "c1-negotiation.common-ground", "word": "common ground", "es": "el terreno común, los puntos de acuerdo", "notes": "Incontable: «find common ground» = encontrar puntos en común.", "example": "c1-negotiation.lets-focus-on-common-ground", "situation": "trabajo" },
+    { "id": "c1-negotiation.walk-away", "word": "walk away", "es": "retirarse (de una negociación)", "notes": "Phrasal verb: abandonar el trato. «walk-away price» = precio a partir del cual te vas.", "example": "c1-negotiation.were-prepared-to-walk-away", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-negotiation.sign-off-on", "word": "sign off on", "es": "dar el visto bueno a", "notes": "Phrasal verb: aprobar algo formalmente. «My boss signed off on it» = mi jefe lo aprobó.", "example": "c1-negotiation.ill-need-to-run-it-by", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-negotiation.agreement", "word": "agreement", "article": "an", "plural": "agreements", "es": "el acuerdo", "notes": "«reach an agreement» = llegar a un acuerdo.", "example": "c1-negotiation.ill-have-legal-draft", "situation": "trabajo", "image": "fluent:handshake" },
+    { "id": "c1-negotiation.win-win", "word": "win-win", "es": "en el que ganan todos", "notes": "Adjetivo o sustantivo: «a win-win situation», «it's a win-win».", "example": "c1-negotiation.this-is-a-win-win", "situation": "trabajo" }
+  ],
+  "qa": [
+    {
+      "id": "c1-negotiation.qa.expectations",
+      "question": "So, what are your salary expectations?",
+      "questionEs": "Bueno, ¿cuáles son tus expectativas salariales?",
+      "accepted": [
+        { "text": "I was hoping for something in the range of one hundred twenty thousand, depending on the overall package.", "es": "Esperaba algo en torno a ciento veinte mil, según el paquete en conjunto." },
+        { "text": "Based on the market rate, I'd expect between one hundred ten and one hundred twenty thousand.", "es": "Según el precio de mercado, esperaría entre ciento diez y ciento veinte mil." }
+      ],
+      "distractors": [
+        { "text": "My pretensions are one hundred twenty thousand.", "es": "Mis pretensiones son ciento veinte mil." },
+        { "text": "I hope to win one hundred twenty thousand.", "es": "Espero ganar ciento veinte mil." }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "«pretensiones» no es «pretensions» (eso es «presunción»); «ganar dinero» es «earn» o «make», no «win».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-negotiation.qa.raise",
+      "question": "Why do you think you deserve a raise?",
+      "questionEs": "¿Por qué crees que te mereces una subida?",
+      "accepted": [
+        { "text": "Over the last year, I've taken on a lot more responsibility and delivered two major projects.", "es": "Este último año he asumido mucha más responsabilidad y he sacado dos proyectos importantes." },
+        { "text": "Because my role has grown, but my salary hasn't kept up with it.", "es": "Porque mi puesto ha crecido, pero mi sueldo no ha ido al mismo ritmo." }
+      ],
+      "distractors": [
+        { "text": "Because I am working here since three years.", "es": "Porque trabajo aquí desde hace tres años." },
+        { "text": "Because I have assumed much more responsibilities.", "es": "Porque he asumido muchas más responsabilidades." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«desde hace tres años» = «I've been working here for three years»; «asumir» una responsabilidad es «take on», no «assume». «keep up with» = ir al mismo ritmo.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-negotiation.qa.notice",
+      "question": "Our standard notice period is three months. Is that OK with you?",
+      "questionEs": "Nuestro preaviso estándar es de tres meses. ¿Te parece bien?",
+      "accepted": [
+        { "text": "Could we bring it down to one month? That's more common in tech.", "es": "¿Podríamos bajarlo a un mes? Es lo más habitual en tecnología." },
+        { "text": "I'd be willing to accept two months, but three feels quite long.", "es": "Estaría dispuesto a aceptar dos meses, pero tres me parece bastante largo." }
+      ],
+      "distractors": [
+        { "text": "Could we reduce it at one month?", "es": "¿Podríamos reducirlo a un mes?" },
+        { "text": "It's a bit long. I prefer that it is one month.", "es": "Es un poco largo. Prefiero que sea un mes." }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "«reducir a» = «reduce to» o «bring down to», nunca «at»; «prefiero que sea» = «I'd prefer it to be», no «I prefer that it is».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-negotiation.qa.counter",
+      "question": "We can offer two days remote. Would that work for you?",
+      "questionEs": "Podemos ofrecer dos días de teletrabajo. ¿Te valdría?",
+      "accepted": [
+        { "text": "How about we meet halfway, at three days remote?", "es": "¿Y si lo dejamos en un punto medio, tres días de teletrabajo?" },
+        { "text": "That could work if we can review it after six months.", "es": "Podría valer si lo podemos revisar a los seis meses." }
+      ],
+      "distractors": [
+        { "text": "We can meet in the half, with three days?", "es": "¿Podemos quedar a medias, con tres días?" },
+        { "text": "It could work if we look it again after six months.", "es": "Podría valer si lo volvemos a mirar a los seis meses." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«llegar a un punto medio» = «meet halfway»; «mirar algo» = «look at something» (sin «at» no tiene sentido); «revisar» un acuerdo = «review it».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-negotiation.qa.best-price",
+      "question": "Our price for the whole project is fifty thousand dollars.",
+      "questionEs": "Nuestro precio por todo el proyecto es de cincuenta mil dólares.",
+      "accepted": [
+        { "text": "Thanks for the quote, but it's well above our budget. Is there any wiggle room?", "es": "Gracias por el presupuesto, pero se pasa bastante del nuestro. ¿Hay algo de margen?" },
+        { "text": "If we commit to a two-year contract, could you lower the rate?", "es": "Si nos comprometemos a un contrato de dos años, ¿podrían bajar la tarifa?" }
+      ],
+      "distractors": [
+        { "text": "That's above our budget. Can you make us a better price?", "es": "Se pasa de nuestro presupuesto. ¿Nos puede hacer un precio mejor?" },
+        { "text": "Thanks, but that's out of our quote.", "es": "Gracias, pero se sale de nuestro presupuesto." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«hacer un precio» = «give us a better price» (no «make»); el dinero que tú tienes es «budget», y «quote» es lo que te pide el proveedor.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-negotiation.qa.discount",
+      "question": "Could you give us a fifteen percent discount?",
+      "questionEs": "¿Podrían hacernos un quince por ciento de descuento?",
+      "accepted": [
+        { "text": "I'm afraid our margins are already tight, but we can include a year of support.", "es": "Me temo que nuestros márgenes ya están ajustados, pero podemos incluir un año de soporte." },
+        { "text": "We could do ten percent if you pay the full amount upfront.", "es": "Podríamos hacer un diez por ciento si pagan el importe completo por adelantado." }
+      ],
+      "distractors": [
+        { "text": "I'm afraid our margins are already very adjusted.", "es": "Me temo que nuestros márgenes ya están muy ajustados." },
+        { "text": "We could do ten percent if you pay everything in before.", "es": "Podríamos hacer un diez por ciento si lo pagan todo antes." }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "«márgenes ajustados» = «tight margins»; «por adelantado» = «upfront» o «in advance».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-negotiation.qa.final-offer",
+      "question": "This is our final offer. Take it or leave it.",
+      "questionEs": "Esta es nuestra oferta final. O la tomas o la dejas.",
+      "accepted": [
+        { "text": "I'm afraid that's not enough. In that case, we're prepared to walk away.", "es": "Me temo que no es suficiente. En ese caso, estamos dispuestos a retirarnos." },
+        { "text": "I can live with that, but I'll need to run it by my manager first.", "es": "Puedo aceptarlo, pero antes tendré que consultarlo con mi jefa." }
+      ],
+      "distractors": [
+        { "text": "I can accept it, but I need to consult it with my boss.", "es": "Puedo aceptarlo, pero tengo que consultarlo con mi jefe." },
+        { "text": "In this case, we prefer to go away.", "es": "En este caso, preferimos irnos." }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "«consultarlo con alguien» = «run it by someone» o «check with someone», no «consult it with»; «retirarse» de un trato = «walk away».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-negotiation.qa.stalemate",
+      "question": "We don't seem to be getting anywhere.",
+      "questionEs": "Parece que no avanzamos nada.",
+      "accepted": [
+        { "text": "Let's take a short break and then focus on where we have common ground.", "es": "Hagamos una pausa corta y luego centrémonos en lo que tenemos en común." },
+        { "text": "Let's not lose sight of the bigger picture: we both want this deal.", "es": "No perdamos de vista lo importante: los dos queremos este trato." }
+      ],
+      "distractors": [
+        { "text": "Let's do a pause and look for common points.", "es": "Hagamos una pausa y busquemos puntos en común." },
+        { "text": "We are in a dead point, no?", "es": "Estamos en un punto muerto, ¿no?" }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«hacer una pausa» = «take a break»; «punto muerto» = «stalemate» o «deadlock»; «not getting anywhere» = no avanzar.",
+      "voice": "en-US-BrianNeural"
+    }
+  ]
+}

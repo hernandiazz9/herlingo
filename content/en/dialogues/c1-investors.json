@@ -1,0 +1,47 @@
+{
+  "id": "dlg.en-c1-investors",
+  "title": "Reunión con inversores",
+  "description": "Una inversora cuestiona vuestras cifras de crecimiento; defiendes el plan con datos, reconoces los riesgos y negocias las condiciones.",
+  "situation": "trabajo",
+  "unit": "c1-negotiation",
+  "order": 310,
+  "register": "formal",
+  "level": "C1",
+  "avatars": { "Inversora": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Inversora", "text": "Your growth looks strong, but churn went up last quarter. Should that worry us?", "es": "Su crecimiento parece sólido, pero la tasa de abandono subió el último trimestre. ¿Debería preocuparnos?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Reconoce la subida y explica que se debió a un cambio de precios que ya habéis corregido.",
+      "options": [
+        { "text": "It's a fair concern. The spike was driven by a pricing change, which we've since reversed.", "es": "Es una preocupación legítima. El repunte se debió a un cambio de precios que ya hemos revertido.", "verdict": "correct", "feedback": "¡Muy bien! No esquivas el dato; «driven by» = causado por, y «since» indica que ya está resuelto." },
+        { "text": "No, it's not a problem.", "es": "No, no es un problema.", "verdict": "acceptable", "feedback": "Suena a negar lo evidente; a un inversor convence más reconocer y explicar la causa." },
+        { "text": "It's a fair concern. The spike was due to a change of prices, which we have reverted already since.", "es": "Es una preocupación legítima. El repunte se debió a un cambio de precios que ya hemos revertido.", "verdict": "wrong", "feedback": "«a pricing change» es lo natural, y «already» y «since» juntos sobran: «which we've since reversed»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Inversora", "text": "Good to know. We'd be prepared to lead the round, but at a lower valuation than you're asking.", "es": "Bien saberlo. Estaríamos dispuestos a liderar la ronda, pero con una valoración más baja de la que piden.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que valoras el interés, pero que la valoración refleja vuestros ingresos recurrentes y que no estás dispuesto a bajarla sin más.",
+      "options": [
+        { "text": "We value your interest. However, our valuation reflects our recurring revenue, so we're not prepared to lower it without a good reason.", "es": "Valoramos su interés. Sin embargo, nuestra valoración refleja nuestros ingresos recurrentes, así que no estamos dispuestos a bajarla sin un buen motivo.", "verdict": "correct", "feedback": "¡Perfecto! Firme y formal: «not prepared to» = no estar dispuesto a; justificas con datos." },
+        { "text": "That's too low. We want our number.", "es": "Es demasiado bajo. Queremos nuestra cifra.", "verdict": "acceptable", "feedback": "Es firme, pero no argumenta; ante inversores conviene justificar la cifra." },
+        { "text": "We value your interest. However, our valuation reflects our recurrent incomes, so we're not disposed to lower it without a good reason.", "es": "Valoramos su interés. Sin embargo, nuestra valoración refleja nuestros ingresos recurrentes, así que no estamos dispuestos a bajarla sin un buen motivo.", "verdict": "wrong", "feedback": "En una empresa se dice «recurring revenue» (incontable), y «estar dispuesto» es «be prepared/willing to», no «disposed»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Inversora", "text": "What if we met in the middle, with a board seat for us?", "es": "¿Y si llegáramos a un punto intermedio, con un puesto en el consejo para nosotros?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Responde que estás abierto a estudiarlo, pero que tienes que consultarlo con tu cofundadora antes de comprometerte.",
+      "options": [
+        { "text": "I'm open to exploring that. That said, I'd need to run it by my co-founder before committing to anything.", "es": "Estoy abierto a estudiarlo. Dicho esto, tendría que consultarlo con mi cofundadora antes de comprometerme a nada.", "verdict": "correct", "feedback": "¡Genial! «run it by someone» = consultarlo con alguien; ganas tiempo sin cerrar la puerta." },
+        { "text": "Yes, okay, deal.", "es": "Sí, vale, trato hecho.", "verdict": "acceptable", "feedback": "Aceptar tan rápido debilita tu posición; mejor ganar tiempo para pensarlo." },
+        { "text": "I'm open to exploring that. That said, I'd need to consult it with my co-founder before compromising to anything.", "es": "Estoy abierto a estudiarlo. Dicho esto, tendría que consultarlo con mi cofundadora antes de comprometerme a nada.", "verdict": "wrong", "feedback": "Es «consult my co-founder» o «run it by my co-founder»; y comprometerse es «commit to», no «compromise»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Inversora", "text": "Of course. Let's reconvene early next week.", "es": "Por supuesto. Volvamos a reunirnos a principios de la semana que viene.", "voice": "en-US-EmmaNeural" }
+  ]
+}

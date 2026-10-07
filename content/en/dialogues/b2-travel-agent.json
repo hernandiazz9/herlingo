@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-travel-agent",
+  "title": "Planear un viaje con un agente",
+  "description": "Hablas con un agente de viajes para organizar una ruta por los parques nacionales del oeste.",
+  "situation": "viajes",
+  "unit": "b2-travel",
+  "order": 209,
+  "register": "formal",
+  "level": "B2",
+  "avatars": { "Agente de viajes": "fluent:man-blonde-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Agente de viajes", "text": "So, you're interested in visiting the national parks out West. What did you have in mind?", "es": "Entonces, le interesa visitar los parques nacionales del Oeste. ¿Qué tenía pensado?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que tienes unos diez días en mayo y que te gustaría ver el Gran Cañón y Yosemite.",
+      "options": [
+        { "text": "I have about ten days in May, and I'd love to see the Grand Canyon and Yosemite.", "es": "Tengo unos diez días en mayo y me encantaría ver el Gran Cañón y Yosemite.", "verdict": "correct", "feedback": "¡Muy bien! «about» = unos, aproximadamente; «I'd love to» expresa un deseo con entusiasmo." },
+        { "text": "Ten days, May. The Grand Canyon and Yosemite.", "es": "Diez días, mayo. El Gran Cañón y Yosemite.", "verdict": "acceptable", "feedback": "Se entiende, pero con frases completas suenas mucho más natural." },
+        { "text": "I have about ten days on May, and I would love to see the Grand Canyon and the Yosemite.", "es": "Tengo unos diez días en mayo y me encantaría ver el Gran Cañón y Yosemite.", "verdict": "wrong", "feedback": "Con meses va «in May», no «on». Y Yosemite, como nombre de parque, no lleva «the»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Agente de viajes", "text": "Great choices. They're quite far apart, though. Would you rather fly between them or drive?", "es": "Muy buena elección. Aunque están bastante lejos entre sí. ¿Prefiere volar de uno a otro o ir en coche?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que prefieres conducir, aunque tardes más, porque quieres parar por el camino.",
+      "options": [
+        { "text": "I'd rather drive, even if it takes longer, because I want to stop along the way.", "es": "Prefiero ir en coche, aunque tarde más, porque quiero parar por el camino.", "verdict": "correct", "feedback": "¡Perfecto! «I'd rather + infinitivo sin to»; «along the way» = por el camino." },
+        { "text": "Driving, I think. I like road trips.", "es": "En coche, creo. Me gustan los viajes por carretera.", "verdict": "acceptable", "feedback": "Correcto y natural, aunque no responde a la pega de que se tarda más." },
+        { "text": "I'd rather to drive, even if it takes more long, because I want to stop on the way.", "es": "Prefiero ir en coche, aunque tarde más, porque quiero parar por el camino.", "verdict": "wrong", "feedback": "«would rather» va sin «to»: «I'd rather drive». Y el comparativo de «long» es «longer»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Agente de viajes", "text": "In that case, I'd recommend booking the hotels in advance. May is a busy month.", "es": "En ese caso, le recomendaría reservar los hoteles con antelación. Mayo es un mes con mucha gente.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si se puede cancelar sin coste por si cambian tus planes.",
+      "options": [
+        { "text": "Could I cancel for free in case my plans change?", "es": "¿Podría cancelar gratis por si cambian mis planes?", "verdict": "correct", "feedback": "¡Genial! «in case» = por si; detrás va el presente («change»)." },
+        { "text": "Is it refundable?", "es": "¿Es reembolsable?", "verdict": "acceptable", "feedback": "Correcto y breve; añadir «in case my plans change» explica por qué preguntas." },
+        { "text": "Could I cancel for free in case my plans will change?", "es": "¿Podría cancelar gratis por si cambian mis planes?", "verdict": "wrong", "feedback": "Tras «in case» no va «will»: «in case my plans change»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Agente de viajes", "text": "Most of these hotels allow free cancellation up to forty-eight hours before. Shall I put together a draft itinerary?", "es": "La mayoría de estos hoteles permiten cancelar gratis hasta cuarenta y ocho horas antes. ¿Le preparo un borrador del itinerario?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Acepta y pide que incluya también una o dos recomendaciones para comer por el camino.",
+      "options": [
+        { "text": "Yes, please. Could you also include one or two recommendations for places to eat on the way?", "es": "Sí, por favor. ¿Podría incluir también una o dos recomendaciones de sitios para comer por el camino?", "verdict": "correct", "feedback": "¡Bien! «put together» = preparar, montar; «places to eat» = sitios para comer." },
+        { "text": "Yes, please. And some restaurants, too.", "es": "Sí, por favor. Y algunos restaurantes también.", "verdict": "acceptable", "feedback": "Se entiende; «Could you also include…?» lo pide de forma más clara y educada." },
+        { "text": "Yes, please. Could you also include one or two recommendations of places for eat on the way?", "es": "Sí, por favor. ¿Podría incluir también una o dos recomendaciones de sitios para comer por el camino?", "verdict": "wrong", "feedback": "Finalidad = «to + infinitivo»: «places to eat», nunca «for eat»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Agente de viajes", "text": "Absolutely. I'll email you the itinerary by tomorrow afternoon.", "es": "Por supuesto. Le envío el itinerario por correo antes de mañana por la tarde.", "voice": "en-US-BrianNeural" }
+  ]
+}

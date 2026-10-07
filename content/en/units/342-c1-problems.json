@@ -1,0 +1,356 @@
+{
+  "id": "c1-problems",
+  "order": 342,
+  "level": "C1",
+  "title": "Resolver problemas complejos: quejas formales, burocracia, reclamar con firmeza",
+  "description": "Defender tus intereses en inglés cuando algo sale mal de verdad: exponer el caso con hechos y fechas, mantenerte firme sin perder las formas, sobrevivir a la burocracia, reclamar por escrito y escalar hasta que alguien lo resuelva.",
+  "emoji": "⚖️",
+  "situation": "dinero",
+  "lessons": [
+    {
+      "id": "c1-problems.l.stating-the-case",
+      "title": "Exponer el problema con hechos y fechas",
+      "items": [
+        "b1-money.complaint",
+        "c1-problems.ongoing",
+        "c1-problems.im-calling-about-an-ongoing-issue",
+        "b2-paperwork.case-number",
+        "b1-trips.reference-number",
+        "c1-problems.before-we-go-any-further",
+        "c1-problems.let-me-give-you-a-quick-timeline",
+        "c1-problems.business-day",
+        "c1-problems.on-march-third-i-was-told",
+        "c1-problems.since-then-ive-heard-nothing",
+        "c1-problems.to-be-clear-im-not-blaming-you",
+        "c1-problems.discrepancy",
+        "c1-problems.invoice",
+        "c1-problems.there-seems-to-be-a-discrepancy",
+        "c1-problems.billing-error",
+        "c1-problems.overcharge",
+        "c1-problems.i-was-charged-for-a-service-i-never-received",
+        "c1-problems.qa.whats-the-issue",
+        "c1-problems.qa.timeline"
+      ]
+    },
+    {
+      "id": "c1-problems.l.standing-firm",
+      "title": "Mantenerte firme sin perder las formas",
+      "items": [
+        "c1-problems.firm",
+        "c1-problems.i-understand-your-position-but",
+        "b2-news.policy",
+        "c1-problems.with-all-due-respect",
+        "c1-problems.loyal",
+        "c1-problems.id-like-to-point-out",
+        "c1-problems.honor",
+        "c1-problems.im-not-asking-for-special-treatment",
+        "b2-tech-talk.address",
+        "c1-problems.that-doesnt-really-address-my-question",
+        "b2-paperwork.ive-already-explained-this-to-three-people",
+        "c1-grammar.insist",
+        "c1-problems.im-going-to-have-to-insist",
+        "c1-problems.faulty",
+        "c1-problems.what-are-my-options-here",
+        "c1-problems.id-rather-not-escalate-this",
+        "c1-problems.goodwill-gesture",
+        "c1-problems.could-you-offer-a-goodwill-gesture",
+        "c1-problems.qa.policy",
+        "c1-problems.qa.goodwill"
+      ]
+    },
+    {
+      "id": "c1-problems.l.red-tape",
+      "title": "Sobrevivir a la burocracia",
+      "items": [
+        "c1-problems.red-tape",
+        "c1-problems.paperwork",
+        "c1-problems.renewal",
+        "c1-problems.im-trying-to-get-my-head-around",
+        "c1-problems.supporting-documents",
+        "c1-problems.could-you-clarify-which-documents",
+        "c1-problems.proof-of-residency",
+        "c1-problems.the-form-asks-for-proof-of-residency",
+        "c1-problems.clerk",
+        "c1-problems.ive-been-sent-back-and-forth",
+        "c1-problems.nobody-seems-to-know",
+        "c1-problems.permit",
+        "c1-problems.expire",
+        "c1-problems.is-there-any-way-to-speed-it-up",
+        "b1-renting.application",
+        "c1-problems.processing-time",
+        "c1-problems.whats-the-current-processing-time",
+        "a2-health.appointment",
+        "c1-problems.the-earliest-appointment-is-too-late",
+        "c1-problems.notarize",
+        "c1-problems.do-i-need-to-get-this-notarized",
+        "c1-problems.expedited",
+        "c1-problems.qa.documents",
+        "c1-problems.qa.speed-up"
+      ]
+    },
+    {
+      "id": "c1-problems.l.in-writing",
+      "title": "Reclamar por escrito y dejar rastro",
+      "items": [
+        "b2-paperwork.formal-complaint",
+        "c1-problems.dissatisfaction",
+        "c1-problems.i-am-writing-to-express-my-dissatisfaction",
+        "c1-problems.please-find-below-a-summary",
+        "c1-problems.as-per-our-phone-call",
+        "c1-problems.callback",
+        "c1-problems.to-date-i-have-received-no-response",
+        "c1-problems.reverse",
+        "c1-problems.i-would-therefore-ask-that",
+        "c1-problems.prompt",
+        "c1-problems.i-look-forward-to-your-prompt-reply",
+        "b2-paperwork.proof-of-purchase",
+        "c1-problems.paper-trail",
+        "c1-problems.keep-a-paper-trail",
+        "c1-problems.timeframe",
+        "c1-problems.if-i-do-not-hear-back",
+        "c1-problems.loophole",
+        "c1-problems.qa.in-writing"
+      ]
+    },
+    {
+      "id": "c1-problems.l.escalating",
+      "title": "Escalar, pedir compensación y cerrar el caso",
+      "items": [
+        "b2-paperwork.supervisor",
+        "b2-paperwork.escalate",
+        "c1-problems.authority",
+        "c1-problems.id-like-to-speak-to-someone-with-the-authority",
+        "c1-problems.could-i-get-your-name",
+        "c1-problems.im-prepared-to-take-this-further",
+        "c1-problems.regulator",
+        "c1-problems.ill-be-filing-a-complaint-with-the-regulator",
+        "b1-trips.compensation",
+        "c1-problems.entitled",
+        "c1-problems.im-entitled-to-compensation",
+        "c1-leading.outcome",
+        "c1-problems.what-exactly-happens-next",
+        "c1-problems.settlement",
+        "c1-problems.could-you-send-me-a-confirmation-email",
+        "c1-problems.thanks-for-taking-care-of-this",
+        "c1-problems.qa.escalate"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "c1-problems.im-calling-about-an-ongoing-issue", "text": "I'm calling about an ongoing issue with my account that still hasn't been resolved.", "es": "Llamo por un problema con mi cuenta que sigue abierto y todavía no se ha resuelto.", "notes": "«I'm calling about…» = llamo por…, nunca «I call for…». «ongoing» = que sigue abierto; «hasn't been resolved» = pasiva en present perfect.", "explanation": "Primera frase de una queja seria: deja claro que no es la primera vez. «resolved» termina en /d/: «ri-ZOLVD».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.before-we-go-any-further", "text": "Before we go any further, could you note down my reference number?", "es": "Antes de seguir, ¿podría apuntar mi número de referencia?", "notes": "«before we go any further» = antes de seguir. «note down» = apuntar.", "explanation": "Que lo apunten desde el principio evita empezar de cero si se corta la llamada. «further»: «FER-dhər».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.let-me-give-you-a-quick-timeline", "text": "Let me give you a quick timeline so we're on the same page.", "es": "Le resumo rápidamente lo que ha pasado para que tengamos la misma información.", "notes": "«timeline» = cronología de los hechos. «be on the same page» = estar en sintonía, tener la misma información.", "explanation": "Ordenar los hechos por fechas hace tu queja mucho más difícil de ignorar. «timeline»: «TAIM-lain».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.on-march-third-i-was-told", "text": "On March third, I was told the refund would take five business days.", "es": "El tres de marzo me dijeron que el reembolso tardaría cinco días hábiles.", "notes": "Las fechas llevan «on»: «on March third». «I was told» = me dijeron (pasiva: muy natural en inglés). «business days» = días hábiles.", "explanation": "Una fecha y una promesa concretas pesan más que «hace tiempo». «third» lleva la «th» de «zapato»: «zerd».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.since-then-ive-heard-nothing", "text": "Since then, I've heard absolutely nothing, despite three follow-up emails.", "es": "Desde entonces no he sabido absolutamente nada, a pesar de tres emails de seguimiento.", "notes": "«since then» va con present perfect («I've heard»). «despite» + sustantivo, sin «of»: nunca «despite of».", "explanation": "Remata la cronología con lo que falla. Acentúa «ABsolutely» y «NOTHING».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.to-be-clear-im-not-blaming-you", "text": "To be clear, I'm not blaming you personally; I just need this fixed.", "es": "Que quede claro que no le culpo a usted personalmente; solo necesito que se arregle.", "notes": "«blame someone» = culpar a alguien. «need something fixed» = necesitar que algo se arregle (estructura «have/get something done»).", "explanation": "Tener de tu parte a quien te atiende ayuda más que enfadarte con él. «fixed» termina en /t/: «fikst».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.there-seems-to-be-a-discrepancy", "text": "There seems to be a discrepancy between the quote and the final invoice.", "es": "Parece que hay una discrepancia entre el presupuesto y la factura final.", "notes": "«There seems to be…» = parece que hay…: suaviza la acusación. «quote» = presupuesto; «invoice» = factura.", "explanation": "Forma educada de decir «me estáis cobrando de más». «discrepancy»: «dis-KRE-pən-si».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.i-was-charged-for-a-service-i-never-received", "text": "I was charged for a service I never actually received.", "es": "Me cobraron un servicio que en realidad nunca recibí.", "notes": "«be charged for something» = que te cobren algo. «actually» = en realidad, de hecho; no «actualmente».", "explanation": "El hecho central de muchas reclamaciones, en una frase. «received»: «ri-SIIVD», con «ii» larga.", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.i-understand-your-position-but", "text": "I understand your position, but that simply isn't acceptable.", "es": "Entiendo su postura, pero eso sencillamente no es aceptable.", "notes": "«I understand…, but…» reconoce al otro antes de plantarte. «simply» refuerza sin levantar la voz.", "explanation": "Firmeza tranquila: baja el tono en «acceptable», no lo subas. «acceptable»: «ək-SEP-tə-bəl».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.with-all-due-respect", "text": "With all due respect, that's not what your own policy says.", "es": "Con todo el respeto, eso no es lo que dice su propia política.", "notes": "«With all due respect» = con todo el respeto: anuncia un desacuerdo. «policy» = política, normas de la empresa (no «la policía»).", "explanation": "Cita sus propias normas: es tu mejor argumento. «due» se dice «duu».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.id-like-to-point-out", "text": "I'd like to point out that I've been a loyal customer for six years.", "es": "Me gustaría señalar que soy un cliente fiel desde hace seis años.", "notes": "«point out» = señalar, hacer notar. «I've been… for six years» = lo soy desde hace seis años.", "explanation": "Recordar tu antigüedad da peso a la reclamación. «loyal»: «LOI-əl».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.im-not-asking-for-special-treatment", "text": "I'm not asking for special treatment; I'm asking you to honor the agreement.", "es": "No le pido un trato especial; le pido que cumpla lo acordado.", "notes": "«ask for something» = pedir algo; «ask someone to do something» = pedirle a alguien que haga algo. «honor an agreement» = cumplir un acuerdo.", "explanation": "Desmonta el «we can't make exceptions». «honor» empieza por vocal: la «h» no suena, «A-nər».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.that-doesnt-really-address-my-question", "text": "I appreciate that, but it doesn't really address my question.", "es": "Se lo agradezco, pero eso no responde realmente a mi pregunta.", "notes": "«address a question» = dar respuesta a una pregunta, abordarla. «I appreciate that» = se lo agradezco.", "explanation": "Para cuando te responden con un discurso genérico. «address» como verbo: «ə-DRES».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.im-going-to-have-to-insist", "text": "I'm sorry, but I'm going to have to insist on a full refund.", "es": "Lo siento, pero voy a tener que insistir en un reembolso completo.", "notes": "«insist on» + sustantivo o «-ing». «I'm going to have to…» suena firme pero educado.", "explanation": "La frase para no aceptar un «no» a la primera. «insist»: «in-SIST», sin «e» delante de «s».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.what-are-my-options-here", "text": "So, realistically, what are my options here?", "es": "Entonces, siendo realistas, ¿qué opciones tengo?", "notes": "«realistically» = siendo realistas. «here» = en este caso.", "explanation": "Obliga a la otra persona a pasar de la negativa a las alternativas. «realistically»: «rii-ə-LIS-ti-kli».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.id-rather-not-escalate-this", "text": "I'd rather not escalate this, but you're not leaving me much choice.", "es": "Preferiría no llevar esto más arriba, pero no me deja mucha opción.", "notes": "«I'd rather not + verbo base» = preferiría no. «escalate» = escalar, llevar a un nivel superior. «not leave someone much choice» = no dejar muchas opciones.", "explanation": "Una advertencia educada antes de pedir un supervisor. «rather»: «RA-dhər».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.could-you-offer-a-goodwill-gesture", "text": "Given the trouble this has caused, could you offer something as a goodwill gesture?", "es": "Dadas las molestias que ha causado, ¿podrían ofrecerme algo como gesto de buena voluntad?", "notes": "«given» = dado, teniendo en cuenta. «goodwill gesture» = gesto de buena voluntad (un descuento, un crédito).", "explanation": "Pide compensación sin exigirla. «gesture»: «CHES-chər».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.im-trying-to-get-my-head-around", "text": "I'm trying to get my head around all the paperwork for my visa renewal.", "es": "Estoy intentando aclararme con todo el papeleo para renovar el visado.", "notes": "«get your head around something» = llegar a entender algo complicado. «paperwork» es incontable.", "explanation": "Para reconocer que el trámite es lioso y pedir ayuda. «renewal»: «ri-NUU-əl».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.could-you-clarify-which-documents", "text": "Could you clarify exactly which documents I need to bring?", "es": "¿Podría aclararme exactamente qué documentos tengo que traer?", "notes": "En una pregunta indirecta no hay inversión: «which documents I need», no «which documents do I need».", "explanation": "Mejor preguntarlo dos veces que perder la cita. «clarify»: «KLE-rə-fai».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.the-form-asks-for-proof-of-residency", "text": "The form asks for proof of residency, but I've only just moved.", "es": "El formulario pide un justificante de residencia, pero me acabo de mudar.", "notes": "«ask for» = pedir. «proof» es incontable: «proof of residency», nunca «a proof». «I've only just moved» = me acabo de mudar.", "explanation": "Explica tu caso especial antes de que te rechacen. «proof» con «uu» larga: «pruuf».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.ive-been-sent-back-and-forth", "text": "I've been sent back and forth between three different offices.", "es": "Me han mandado de una oficina a otra, ya van tres.", "notes": "«back and forth» = de un lado a otro. «I've been sent» = pasiva en present perfect: me han mandado.", "explanation": "Describe el peloteo burocrático sin perder la calma. «forth» lleva la «th» de «zapato»: «forz».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.nobody-seems-to-know", "text": "Nobody seems to know whose responsibility this actually is.", "es": "Nadie parece saber de quién es responsabilidad esto en realidad.", "notes": "«whose» = de quién. En la pregunta indirecta el verbo va al final: «whose responsibility this is».", "explanation": "Señala el problema de fondo sin acusar a nadie. «whose» suena igual que «who's»: «huuz».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.is-there-any-way-to-speed-it-up", "text": "Is there any way to speed it up? My current permit expires next month.", "es": "¿Hay alguna forma de acelerarlo? Mi permiso actual caduca el mes que viene.", "notes": "«speed something up» = acelerar algo (phrasal verb separable). «expire» = caducar, vencer. «current» = actual (no «corriente»).", "explanation": "Da siempre el motivo de la urgencia. «expires»: «ik-SPAIRZ».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.whats-the-current-processing-time", "text": "What's the current processing time for this kind of application?", "es": "¿Cuánto se tarda ahora en tramitar este tipo de solicitud?", "notes": "«processing time» = plazo de tramitación. «application» = solicitud (no «aplicación», que es «app»).", "explanation": "Pregunta clave para planificar cualquier trámite. «processing»: «PRA-se-sing».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.the-earliest-appointment-is-too-late", "text": "The earliest appointment I could get is in six weeks, which is too late.", "es": "La primera cita que he conseguido es dentro de seis semanas, y es demasiado tarde.", "notes": "«the earliest» = la más pronta, la primera disponible. «in six weeks» = dentro de seis semanas. «which» se refiere a toda la frase anterior.", "explanation": "Para explicar que el sistema de citas no te sirve. «earliest»: «ER-li-əst».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.do-i-need-to-get-this-notarized", "text": "Do I need to get this notarized, or is a regular copy enough?", "es": "¿Tengo que legalizar esto ante notario o basta con una copia normal?", "notes": "«get something + participio» = que alguien te lo haga: «get it notarized» = hacer que un notario lo certifique.", "explanation": "En EE. UU. un «notary» firma y sella documentos en bancos o tiendas, no solo en una notaría. «notarized»: «NOU-tə-raizd».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.i-am-writing-to-express-my-dissatisfaction", "text": "I am writing to express my dissatisfaction with the way my case has been handled.", "es": "Le escribo para expresar mi descontento con la forma en que se ha gestionado mi caso.", "notes": "Por escrito, sin contracciones: «I am writing». «the way… has been handled» = cómo se ha gestionado.", "explanation": "Apertura clásica de una carta de queja formal. «dissatisfaction»: «dis-sa-dis-FAK-shən».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.please-find-below-a-summary", "text": "Please find below a summary of events, with dates and reference numbers.", "es": "A continuación encontrará un resumen de lo ocurrido, con fechas y números de referencia.", "notes": "«Please find below / attached» = fórmula fija de email formal: a continuación / adjunto encontrará.", "explanation": "Presenta tu cronología en el email. «below»: «bi-LOU».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.as-per-our-phone-call", "text": "As per our phone call on Tuesday, I was promised a callback within forty-eight hours.", "es": "Según lo hablado por teléfono el martes, se me prometió una llamada en un plazo de cuarenta y ocho horas.", "notes": "«as per» = según, conforme a (muy de email formal). «callback» = llamada de vuelta. «within» = en un plazo de.", "explanation": "Pone por escrito lo que te dijeron de palabra. «within»: «wi-DHIN», con la «th» de «this».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.to-date-i-have-received-no-response", "text": "To date, I have received no response.", "es": "A día de hoy no he recibido ninguna respuesta.", "notes": "«to date» = hasta la fecha. «no response» = ninguna respuesta; equivale a «I haven't received any response».", "explanation": "Frase corta y seca: deja que el hecho hable. «response»: «ri-SPONS».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.i-would-therefore-ask-that", "text": "I would therefore ask that the charge be reversed in full.", "es": "Por lo tanto, solicito que se anule el cargo en su totalidad.", "notes": "Subjuntivo formal: «ask that + sujeto + verbo base» («be reversed», no «is reversed»). «therefore» = por lo tanto; «in full» = íntegramente.", "explanation": "Pide la solución concreta en registro formal. «therefore»: «DHER-for».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.i-look-forward-to-your-prompt-reply", "text": "I look forward to your prompt reply.", "es": "Quedo a la espera de su pronta respuesta.", "notes": "«look forward to» + sustantivo o «-ing», nunca + infinitivo: «to hearing from you». «prompt» = rápido, pronto.", "explanation": "Cierre formal que marca urgencia sin amenazar. «prompt»: «prampt».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.keep-a-paper-trail", "text": "Keep a paper trail: save every email and get a name on every call.", "es": "Deja rastro de todo: guarda cada email y apunta un nombre en cada llamada.", "notes": "«paper trail» = rastro documental. «get a name» = conseguir el nombre de quien te atiende.", "explanation": "Consejo de oro para cualquier reclamación en EE. UU. «trail»: «treil».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.if-i-do-not-hear-back", "text": "If I do not hear back within fourteen days, I will take the matter further.", "es": "Si no recibo respuesta en catorce días, llevaré el asunto más lejos.", "notes": "«hear back» = recibir respuesta. «take the matter further» = llevar el asunto a otra instancia. Por escrito, «do not» y «I will» sin contraer.", "explanation": "Fija un plazo concreto: da seriedad sin amenazar directamente. «matter»: «MA-dər».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.id-like-to-speak-to-someone-with-the-authority", "text": "I'd like to speak to someone who has the authority to make a decision.", "es": "Me gustaría hablar con alguien que tenga autoridad para tomar una decisión.", "notes": "«speak to someone» = hablar con alguien. «make a decision» = tomar una decisión (nunca «take a decision» en EE. UU.).", "explanation": "Escala sin pedir «the manager» a gritos. «authority»: «ə-ZO-ri-di».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.could-i-get-your-name", "text": "Before you transfer me, could I get your name and employee ID?", "es": "Antes de pasarme, ¿me podría dar su nombre y su número de empleado?", "notes": "«transfer someone» = pasar la llamada a otra persona. «ID» = identificación: «ai-DI».", "explanation": "Parte de tu «paper trail». Pídelo con amabilidad, no como amenaza.", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.im-prepared-to-take-this-further", "text": "I'm prepared to take this further if that's what it takes.", "es": "Estoy dispuesto a llevar esto más lejos si hace falta.", "notes": "«be prepared to» = estar dispuesto a. «if that's what it takes» = si es lo que hace falta.", "explanation": "Muestra determinación sin levantar la voz. «prepared»: «pri-PERD».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.ill-be-filing-a-complaint-with-the-regulator", "text": "Otherwise, I'll be filing a complaint with the regulator.", "es": "De lo contrario, presentaré una queja ante el organismo regulador.", "notes": "«file a complaint with» = presentar una queja ante. «otherwise» = de lo contrario. El futuro continuo («I'll be filing») suena a plan ya decidido.", "explanation": "Último aviso antes de salir de la empresa. «regulator»: «RE-giu-lei-dər».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.im-entitled-to-compensation", "text": "Under the terms of my contract, I believe I'm entitled to compensation.", "es": "Según las condiciones de mi contrato, creo que tengo derecho a una compensación.", "notes": "«be entitled to» + sustantivo = tener derecho a. «under the terms of» = según las condiciones de.", "explanation": "Basa tu petición en el contrato, no en tu enfado. «entitled»: «in-TAI-dəld».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.what-exactly-happens-next", "text": "Just so I'm clear, what exactly happens next, and by when?", "es": "Para tenerlo claro, ¿qué pasa exactamente ahora y para cuándo?", "notes": "«just so I'm clear» = para que me quede claro. «by when?» = ¿para cuándo?, ¿con qué fecha límite?", "explanation": "Nunca cuelgues sin un siguiente paso y una fecha. «exactly»: «ig-ZAKT-li».", "register": "neutral", "situation": "dinero"},
+    {"id": "c1-problems.could-you-send-me-a-confirmation-email", "text": "Could you send me a confirmation email with everything we've agreed?", "es": "¿Me podría enviar un email de confirmación con todo lo que hemos acordado?", "notes": "«agree» sin «on» cuando el objeto es «everything we've agreed»; con un tema concreto, «agree on a date».", "explanation": "Convierte la llamada en un compromiso por escrito. «confirmation»: «kan-fər-MEI-shən».", "register": "formal", "situation": "dinero"},
+    {"id": "c1-problems.thanks-for-taking-care-of-this", "text": "Thanks for taking care of this; you're the first person who actually listened.", "es": "Gracias por ocuparse de esto; es la primera persona que me ha escuchado de verdad.", "notes": "«take care of something» = ocuparse de algo. «actually» = de verdad, realmente.", "explanation": "Agradecer al final deja buena huella en el expediente. «listened»: la «t» no suena, «LI-sənd».", "register": "neutral", "situation": "dinero"}
+  ],
+  "vocab": [
+    {"id": "c1-problems.ongoing", "word": "ongoing", "es": "en curso, que sigue abierto", "notes": "Adjetivo: «an ongoing issue» = un problema que no se ha cerrado.", "example": "c1-problems.im-calling-about-an-ongoing-issue", "situation": "dinero"},
+    {"id": "c1-problems.business-day", "word": "business day", "article": "a", "plural": "business days", "es": "el día hábil", "notes": "De lunes a viernes, sin festivos. «within five business days» = en cinco días hábiles.", "example": "c1-problems.on-march-third-i-was-told", "situation": "dinero"},
+    {"id": "c1-problems.discrepancy", "word": "discrepancy", "article": "a", "plural": "discrepancies", "es": "la discrepancia, el desajuste", "notes": "Diferencia entre dos cifras o documentos que deberían coincidir.", "example": "c1-problems.there-seems-to-be-a-discrepancy", "situation": "dinero"},
+    {"id": "c1-problems.invoice", "word": "invoice", "article": "an", "plural": "invoices", "es": "la factura", "notes": "Para empresas y servicios; la factura mensual de casa suele ser «a bill».", "situation": "dinero"},
+    {"id": "c1-problems.billing-error", "word": "billing error", "article": "a", "plural": "billing errors", "es": "el error de facturación", "notes": "«billing» = facturación (incontable).", "situation": "dinero"},
+    {"id": "c1-problems.overcharge", "word": "overcharge", "es": "cobrar de más", "notes": "Verbo: «I was overcharged by forty dollars» = me cobraron cuarenta dólares de más.", "situation": "dinero"},
+    {"id": "c1-problems.firm", "word": "firm", "es": "firme", "notes": "«be firm but polite» = firme pero educado. Como sustantivo, «a firm» = un bufete o una empresa.", "situation": "dinero"},
+    {"id": "c1-problems.loyal", "word": "loyal", "es": "fiel, leal", "notes": "«a loyal customer» = un cliente fiel.", "example": "c1-problems.id-like-to-point-out", "situation": "dinero"},
+    {"id": "c1-problems.honor", "word": "honor", "es": "cumplir, respetar (un acuerdo, una garantía)", "notes": "Verbo: «honor a warranty» = respetar una garantía. La «h» no suena. Ortografía de EE. UU. (en Reino Unido, «honour»).", "example": "c1-problems.im-not-asking-for-special-treatment", "situation": "dinero"},
+    {"id": "c1-problems.faulty", "word": "faulty", "es": "defectuoso", "notes": "«a faulty product» = un producto defectuoso. «fault» = defecto o culpa.", "situation": "dinero"},
+    {"id": "c1-problems.goodwill-gesture", "word": "goodwill gesture", "article": "a", "plural": "goodwill gestures", "es": "el gesto de buena voluntad", "notes": "Compensación que la empresa ofrece sin estar obligada: un descuento, un crédito, un mes gratis.", "example": "c1-problems.could-you-offer-a-goodwill-gesture", "situation": "dinero"},
+    {"id": "c1-problems.red-tape", "word": "red tape", "es": "la burocracia, el papeleo excesivo", "notes": "Incontable. Viene de la cinta roja con que se ataban los expedientes.", "situation": "dinero"},
+    {"id": "c1-problems.paperwork", "word": "paperwork", "es": "el papeleo", "notes": "Incontable: «a lot of paperwork», nunca «paperworks».", "example": "c1-problems.im-trying-to-get-my-head-around", "situation": "dinero"},
+    {"id": "c1-problems.renewal", "word": "renewal", "article": "a", "plural": "renewals", "es": "la renovación", "notes": "Verbo: «renew». «visa renewal» = renovación del visado.", "example": "c1-problems.im-trying-to-get-my-head-around", "situation": "dinero"},
+    {"id": "c1-problems.supporting-documents", "word": "supporting documents", "es": "la documentación justificativa", "notes": "Plural: los papeles que acompañan una solicitud y prueban lo que dices.", "situation": "dinero"},
+    {"id": "c1-problems.proof-of-residency", "word": "proof of residency", "es": "el justificante de residencia", "notes": "Incontable: «proof» nunca lleva «a». Suele ser una factura o un contrato de alquiler con tu dirección.", "example": "c1-problems.the-form-asks-for-proof-of-residency", "situation": "dinero"},
+    {"id": "c1-problems.clerk", "word": "clerk", "article": "a", "plural": "clerks", "es": "el funcionario de ventanilla, el administrativo", "notes": "En EE. UU. también el dependiente de una tienda. Se dice «klerk».", "situation": "dinero"},
+    {"id": "c1-problems.permit", "word": "permit", "article": "a", "plural": "permits", "es": "el permiso (documento)", "notes": "Sustantivo con acento al principio, «PER-mit»; el verbo «permit» (permitir) lo lleva al final. «work permit» = permiso de trabajo.", "example": "c1-problems.is-there-any-way-to-speed-it-up", "situation": "dinero"},
+    {"id": "c1-problems.expire", "word": "expire", "es": "caducar, vencer", "notes": "«My passport expires in May». Sustantivo: «expiration date» = fecha de caducidad.", "example": "c1-problems.is-there-any-way-to-speed-it-up", "situation": "dinero"},
+    {"id": "c1-problems.processing-time", "word": "processing time", "es": "el plazo de tramitación", "notes": "Normalmente sin artículo: «processing times are long right now».", "example": "c1-problems.whats-the-current-processing-time", "situation": "dinero"},
+    {"id": "c1-problems.notarize", "word": "notarize", "es": "legalizar ante notario", "notes": "Verbo: «get a document notarized». El «notary» certifica tu firma.", "example": "c1-problems.do-i-need-to-get-this-notarized", "situation": "dinero"},
+    {"id": "c1-problems.expedited", "word": "expedited", "es": "urgente, acelerado (trámite, envío)", "notes": "«expedited processing» = tramitación urgente, normalmente pagando más.", "situation": "dinero"},
+    {"id": "c1-problems.dissatisfaction", "word": "dissatisfaction", "es": "el descontento, la insatisfacción", "notes": "Incontable. Adjetivo: «dissatisfied».", "example": "c1-problems.i-am-writing-to-express-my-dissatisfaction", "situation": "dinero"},
+    {"id": "c1-problems.callback", "word": "callback", "article": "a", "plural": "callbacks", "es": "la llamada de vuelta", "notes": "«request a callback» = pedir que te llamen. El verbo se escribe separado: «call me back».", "example": "c1-problems.as-per-our-phone-call", "situation": "dinero"},
+    {"id": "c1-problems.reverse", "word": "reverse", "es": "anular, revertir (un cargo, una decisión)", "notes": "«reverse a charge» = anular un cargo.", "example": "c1-problems.i-would-therefore-ask-that", "situation": "dinero"},
+    {"id": "c1-problems.prompt", "word": "prompt", "es": "rápido, pronto", "notes": "Adjetivo formal: «a prompt reply». Adverbio: «promptly».", "example": "c1-problems.i-look-forward-to-your-prompt-reply", "situation": "dinero"},
+    {"id": "c1-problems.paper-trail", "word": "paper trail", "article": "a", "plural": "paper trails", "es": "el rastro documental", "notes": "Emails, recibos y notas que prueban lo que ha pasado.", "example": "c1-problems.keep-a-paper-trail", "situation": "dinero"},
+    {"id": "c1-problems.timeframe", "word": "timeframe", "article": "a", "plural": "timeframes", "es": "el plazo", "notes": "«within a reasonable timeframe» = en un plazo razonable.", "situation": "dinero"},
+    {"id": "c1-problems.loophole", "word": "loophole", "article": "a", "plural": "loopholes", "es": "el resquicio legal, el vacío", "notes": "«find a loophole» = encontrar un resquicio en una norma o contrato.", "situation": "dinero"},
+    {"id": "c1-problems.authority", "word": "authority", "es": "la autoridad, la potestad", "notes": "«have the authority to» = tener potestad para. «the authorities» = las autoridades.", "example": "c1-problems.id-like-to-speak-to-someone-with-the-authority", "situation": "dinero"},
+    {"id": "c1-problems.regulator", "word": "regulator", "article": "a", "plural": "regulators", "es": "el organismo regulador", "notes": "Organismo público que supervisa un sector (bancos, telecomunicaciones, energía).", "example": "c1-problems.ill-be-filing-a-complaint-with-the-regulator", "situation": "dinero"},
+    {"id": "c1-problems.entitled", "word": "entitled", "es": "con derecho (a)", "notes": "«be entitled to something» = tener derecho a algo. Ojo: «an entitled person» = alguien que se cree con derecho a todo.", "example": "c1-problems.im-entitled-to-compensation", "situation": "dinero"},
+    {"id": "c1-problems.settlement", "word": "settlement", "article": "a", "plural": "settlements", "es": "el acuerdo (para cerrar una disputa)", "notes": "«reach a settlement» = llegar a un acuerdo. Verbo: «settle».", "situation": "dinero"}
+  ],
+  "qa": [
+    {
+      "id": "c1-problems.qa.whats-the-issue",
+      "question": "Thank you for holding. How can I help you today?",
+      "questionEs": "Gracias por esperar. ¿En qué puedo ayudarle hoy?",
+      "accepted": [
+        {"text": "I'm calling about a billing issue that's been going on for over a month.", "es": "Llamo por un problema de facturación que dura ya más de un mes."},
+        {"text": "I'd like to follow up on a complaint. My case number is eight three one five.", "es": "Quería hacer seguimiento de una queja. Mi número de caso es ocho tres uno cinco."}
+      ],
+      "distractors": [
+        {"text": "I call for a problem with my bill since one month.", "es": "Llamo por un problema con mi factura desde hace un mes."},
+        {"text": "I want to make a reclamation about my invoice.", "es": "Quiero poner una reclamación sobre mi factura."}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "«llamo por» = «I'm calling about», nunca «I call for»; «desde hace un mes» = «for a month» con present perfect; «reclamación» = «complaint» (o «claim» en seguros), nunca «reclamation».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-problems.qa.timeline",
+      "question": "Could you tell me exactly what happened, from the beginning?",
+      "questionEs": "¿Podría contarme exactamente qué pasó, desde el principio?",
+      "accepted": [
+        {"text": "Sure. On March third, I canceled my plan, but I've been charged twice since then.", "es": "Claro. El tres de marzo cancelé mi plan, pero desde entonces me han cobrado dos veces."},
+        {"text": "Of course. I returned the laptop a month ago, and I still haven't received a refund.", "es": "Por supuesto. Devolví el portátil hace un mes y todavía no he recibido el reembolso."}
+      ],
+      "distractors": [
+        {"text": "Sure. In March third I canceled my plan, and since then they charged me two times.", "es": "Claro. El tres de marzo cancelé mi plan, y desde entonces me han cobrado dos veces."},
+        {"text": "I returned the laptop since a month and still I didn't receive the refund.", "es": "Devolví el portátil hace un mes y todavía no he recibido el reembolso."}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "Las fechas llevan «on»: «on March third»; con «since then» va present perfect: «they've charged me twice»; «hace un mes» = «a month ago», no «since a month»; «todavía no» = «I still haven't…».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-problems.qa.policy",
+      "question": "I'm sorry, but our policy doesn't allow refunds after thirty days.",
+      "questionEs": "Lo siento, pero nuestra política no permite reembolsos pasados treinta días.",
+      "accepted": [
+        {"text": "I understand, but the item was faulty from day one, so that policy shouldn't apply.", "es": "Lo entiendo, pero el artículo era defectuoso desde el primer día, así que esa norma no debería aplicarse."},
+        {"text": "With all due respect, I reported the problem within a week, and I have the emails to prove it.", "es": "Con todo el respeto, informé del problema en menos de una semana y tengo los emails que lo demuestran."}
+      ],
+      "distractors": [
+        {"text": "I understand, but the product is broken since the first day.", "es": "Lo entiendo, pero el producto está roto desde el primer día."},
+        {"text": "But I made the reclamation the first week, I have the proofs.", "es": "Pero hice la reclamación la primera semana, tengo las pruebas."}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "«está roto desde…» = «has been broken since…» (present perfect, nunca presente); «reclamation» no significa reclamación; «proof» es incontable: «I have proof», nunca «the proofs».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-problems.qa.goodwill",
+      "question": "What I can do is offer you a ten-dollar credit on your next bill.",
+      "questionEs": "Lo que sí puedo hacer es ofrecerle un crédito de diez dólares en su próxima factura.",
+      "accepted": [
+        {"text": "I appreciate that, but it doesn't really cover the forty dollars I was overcharged.", "es": "Se lo agradezco, pero eso no cubre los cuarenta dólares que me cobraron de más."},
+        {"text": "Thanks, but I'd rather have the full amount refunded to my card.", "es": "Gracias, pero preferiría que me devolvieran el importe completo a la tarjeta."}
+      ],
+      "distractors": [
+        {"text": "Thank you, but is not enough for me.", "es": "Gracias, pero no es suficiente para mí."},
+        {"text": "I prefer that you return me the money to my card.", "es": "Prefiero que me devuelvan el dinero a la tarjeta."}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "El sujeto es obligatorio: «it's not enough»; «prefiero que me devuelvan» = «I'd rather have it refunded» o «I'd prefer a refund», nunca «I prefer that you return me»; «devolver dinero» = «refund», no «return».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-problems.qa.documents",
+      "question": "You'll need to bring all your supporting documents to the appointment.",
+      "questionEs": "Tendrá que traer toda la documentación justificativa a la cita.",
+      "accepted": [
+        {"text": "Could you clarify exactly which documents count as supporting documents?", "es": "¿Podría aclararme exactamente qué documentos cuentan como documentación justificativa?"},
+        {"text": "Understood. Do the copies need to be certified, or are regular copies fine?", "es": "Entendido. ¿Las copias tienen que ser compulsadas o valen copias normales?"}
+      ],
+      "distractors": [
+        {"text": "Which documentations I need to bring exactly?", "es": "¿Qué documentación tengo que traer exactamente?"},
+        {"text": "Is necessary to bring the originals or only copies?", "es": "¿Es necesario traer los originales o solo copias?"}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "«documentation» es incontable (sin plural); en la pregunta directa hace falta «do»: «Which documents do I need…?»; «es necesario» = «Is it necessary…?» o «Do I need to…?», nunca sin «it».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-problems.qa.speed-up",
+      "question": "The current processing time is around twelve weeks.",
+      "questionEs": "El plazo de tramitación actual es de unas doce semanas.",
+      "accepted": [
+        {"text": "That's a problem, since my permit expires in six. Is there any way to speed it up?", "es": "Eso es un problema, porque mi permiso caduca en seis. ¿Hay alguna forma de acelerarlo?"},
+        {"text": "Is there an expedited option? I'm happy to pay an extra fee.", "es": "¿Hay una opción urgente? No me importa pagar una tasa extra."}
+      ],
+      "distractors": [
+        {"text": "Is too much! My permit finishes in six weeks.", "es": "¡Es demasiado! Mi permiso se acaba en seis semanas."},
+        {"text": "Can you make it more fast, please?", "es": "¿Puede hacerlo más rápido, por favor?"}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "Falta el sujeto: «That's too long»; un permiso «expires», no «finishes»; «más rápido» = «faster», nunca «more fast»; «acelerar un trámite» = «speed it up» o «expedite it».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-problems.qa.in-writing",
+      "question": "Could you send us the details of your complaint in writing?",
+      "questionEs": "¿Podría enviarnos los detalles de su queja por escrito?",
+      "accepted": [
+        {"text": "Of course. I'll email you a summary of events with all the dates and receipts.", "es": "Por supuesto. Le envío por email un resumen de lo ocurrido con todas las fechas y recibos."},
+        {"text": "Sure. Which address should I send it to, and who should I address it to?", "es": "Claro. ¿A qué dirección lo envío y a quién lo dirijo?"}
+      ],
+      "distractors": [
+        {"text": "Of course, I will send you a mail with all the informations.", "es": "Claro, le enviaré un correo con toda la información."},
+        {"text": "Yes, I send it you today.", "es": "Sí, se lo envío hoy."}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "Un correo electrónico es «an email»; «mail» es el correo postal; «information» es incontable: «all the information»; para el futuro inmediato, «I'll send it to you today».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-problems.qa.escalate",
+      "question": "Unfortunately, there's nothing more I can do from my end.",
+      "questionEs": "Por desgracia, yo ya no puedo hacer nada más por mi parte.",
+      "accepted": [
+        {"text": "In that case, I'd like to speak to a supervisor, please.", "es": "En ese caso, me gustaría hablar con un supervisor, por favor."},
+        {"text": "I understand. Then could you escalate this to someone who has the authority to decide?", "es": "Lo entiendo. Entonces, ¿podría pasar esto a alguien que tenga autoridad para decidir?"}
+      ],
+      "distractors": [
+        {"text": "Then pass me with your boss, please.", "es": "Entonces páseme con su jefe, por favor."},
+        {"text": "So I want to talk with the responsible.", "es": "Entonces quiero hablar con el responsable."}
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "«páseme con» = «Could you put me through to…?» o «Could I speak to…?»; «el responsable» = «the person in charge» o «a supervisor»; «responsible» es solo adjetivo. «from my end» = por mi parte.",
+      "voice": "en-US-BrianNeural"
+    }
+  ]
+}

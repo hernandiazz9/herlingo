@@ -1,0 +1,405 @@
+{
+  "id": "b2-travel",
+  "order": 240,
+  "level": "B2",
+  "title": "Viajar por tu cuenta: planificar, alquilar coche, imprevistos, recomendar",
+  "description": "Organizar un viaje a tu aire, alquilar un coche y moverte por carretera, salir airoso de los imprevistos y recomendar (o desaconsejar) sitios.",
+  "emoji": "🗺️",
+  "situation": "viajes",
+  "lessons": [
+    {
+      "id": "b2-travel.l.planning",
+      "title": "Planificar el viaje a tu aire",
+      "items": [
+        "b2-travel.road-trip",
+        "b2-travel.were-planning-a-road-trip-down-the-coast",
+        "b1-trips.itinerary",
+        "b2-travel.weve-mapped-out-a-rough-itinerary",
+        "b2-travel.peak-season",
+        "b2-travel.id-rather-avoid-peak-season",
+        "b1-trips.booking",
+        "b2-travel.its-way-cheaper-if-you-book-in-advance",
+        "b2-travel.accommodation",
+        "b2-travel.how-far-ahead-should-i-book-accommodation",
+        "b2-meetings.budget",
+        "b2-travel.hostel",
+        "b2-travel.were-on-a-tight-budget",
+        "b2-travel.day-trip",
+        "b2-travel.id-like-to-squeeze-in-a-day-trip",
+        "b2-travel.guidebook",
+        "b2-travel.is-it-worth-staying-an-extra-night",
+        "b2-travel.i-like-to-leave-room-for-the-unexpected",
+        "b2-travel.lets-play-it-by-ear",
+        "b2-travel.qa.summer-plans",
+        "b2-travel.qa.book-now"
+      ]
+    },
+    {
+      "id": "b2-travel.l.rental",
+      "title": "Alquilar un coche",
+      "items": [
+        "b1-trips.rental-car",
+        "b2-travel.im-here-to-pick-up-my-rental-car",
+        "b1-trips.drivers-license",
+        "b2-travel.mileage",
+        "b2-travel.does-it-come-with-unlimited-mileage",
+        "b2-travel.coverage",
+        "b2-travel.what-exactly-does-the-basic-coverage-include",
+        "b2-travel.id-rather-get-full-coverage-just-in-case",
+        "b2-travel.can-i-drop-it-off-at-a-different-location",
+        "b2-travel.drop-off-fee",
+        "b2-travel.is-there-a-fee-for-adding-a-second-driver",
+        "b2-travel.automatic",
+        "b2-travel.stick-shift",
+        "b2-travel.do-you-have-an-automatic",
+        "b2-travel.dent",
+        "b2-travel.could-you-make-a-note-of-this-dent",
+        "b1-trips.scratch",
+        "b2-travel.spare-tire",
+        "b2-travel.is-there-a-spare-tire-in-the-trunk",
+        "b2-travel.what-happens-if-i-bring-it-back-late",
+        "b2-travel.qa.full-coverage",
+        "b2-travel.qa.return-car"
+      ]
+    },
+    {
+      "id": "b2-travel.l.road",
+      "title": "En la carretera",
+      "items": [
+        "b1-trips.highway",
+        "b2-travel.the-gps-is-taking-us-the-long-way",
+        "b2-travel.we-missed-our-exit",
+        "b2-travel.lane",
+        "b2-travel.you-need-to-get-in-the-left-lane",
+        "b2-travel.toll",
+        "b2-travel.is-this-a-toll-road",
+        "b2-travel.speed-limit",
+        "b2-travel.whats-the-speed-limit-on-this-road",
+        "b2-travel.speeding-ticket",
+        "b2-travel.i-got-pulled-over-for-speeding",
+        "b2-travel.detour",
+        "b2-travel.theres-a-detour-because-of-roadwork",
+        "b2-travel.parking-lot",
+        "b2-travel.is-there-anywhere-to-park-around-here",
+        "b1-trips.gas-station",
+        "b2-travel.we-should-fill-up-before-we-head-into-the-mountains",
+        "b2-travel.lets-pull-over-and-stretch-our-legs",
+        "b1-trips.our-car-broke-down-on-the-highway",
+        "b1-trips.roadside-assistance",
+        "b2-travel.qa.so-slow",
+        "b2-travel.qa.pulled-over"
+      ]
+    },
+    {
+      "id": "b2-travel.l.unexpected",
+      "title": "Imprevistos: robos, huelgas, cambios de plan",
+      "items": [
+        "b2-travel.pickpocket",
+        "a2-airport.passport",
+        "b2-travel.i-think-my-passports-been-stolen",
+        "b2-travel.police-report",
+        "b2-travel.i-need-to-file-a-police-report",
+        "b2-travel.consulate",
+        "b2-travel.embassy",
+        "b2-travel.wheres-the-nearest-spanish-consulate",
+        "b2-travel.can-they-issue-an-emergency-passport",
+        "b2-news.strike",
+        "b2-travel.all-the-trains-are-canceled-because-of-the-strike",
+        "b2-travel.stranded",
+        "b2-travel.im-stranded-here-until-monday",
+        "b2-travel.we-need-a-plan-b",
+        "b1-trips.storm",
+        "b2-travel.we-had-to-cut-our-trip-short",
+        "b2-travel.travel-insurance",
+        "b2-travel.does-my-travel-insurance-cover-this",
+        "b2-travel.it-turned-out-to-be-a-blessing-in-disguise",
+        "b2-travel.qa.what-happened",
+        "b2-travel.qa.ferry-canceled"
+      ]
+    },
+    {
+      "id": "b2-travel.l.recommend",
+      "title": "Recomendar y contar el viaje",
+      "items": [
+        "b2-travel.landmark",
+        "b2-travel.youve-got-to-check-out-the-old-town",
+        "b2-travel.tourist-trap",
+        "b2-travel.honestly-its-a-bit-of-a-tourist-trap",
+        "b2-travel.if-i-were-you-id-skip-it",
+        "b2-travel.its-well-worth-the-drive",
+        "b2-travel.crowd",
+        "b2-travel.try-to-get-there-early-to-beat-the-crowds",
+        "b2-travel.local",
+        "b2-travel.ask-the-locals-where-they-eat",
+        "b2-travel.hidden-gem",
+        "b2-travel.its-a-little-off-the-beaten-path",
+        "b2-travel.scenery",
+        "b2-travel.the-scenery-along-the-coast-was-breathtaking",
+        "b2-travel.overrated",
+        "b2-travel.it-was-overrated-i-wouldnt-go-back",
+        "b1-trips.review",
+        "b2-travel.would-you-recommend-it-to-someone-traveling-alone",
+        "b2-travel.qa.recommendations",
+        "b2-travel.qa.how-was-the-trip"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-travel.were-planning-a-road-trip-down-the-coast", "text": "We're planning a road trip down the coast this summer.", "es": "Estamos planeando un viaje en coche por la costa este verano.", "notes": "«down the coast» = recorriendo la costa (hacia el sur, o simplemente a lo largo). «road trip» es un viaje en coche con paradas, no un trayecto.", "explanation": "Para contar tus planes. «coast» con «o» larga: «KOUST»; no la confundas con «cost» («KOST»).", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.weve-mapped-out-a-rough-itinerary", "text": "We've mapped out a rough itinerary, but we're keeping it flexible.", "es": "Tenemos un itinerario más o menos pensado, pero lo dejamos abierto.", "notes": "«map out» = planear algo paso a paso. «rough» aquí = aproximado, no áspero.", "explanation": "«rough» suena «RAF»: la «gh» final es una «f». «mapped out» se une: «MAP-taut».", "register": "neutral", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.id-rather-avoid-peak-season", "text": "I'd rather avoid peak season. Everything's twice as expensive.", "es": "Prefiero evitar la temporada alta. Todo cuesta el doble.", "notes": "«I'd rather» + infinitivo sin «to» = preferiría. «twice as expensive» = el doble de caro.", "explanation": "«I'd rather» = «aid RÆ-ðər», con «th» suave como en «this». «peak» con «i» larga: «PIIK».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.its-way-cheaper-if-you-book-in-advance", "text": "It's way cheaper if you book in advance.", "es": "Sale mucho más barato si reservas con antelación.", "notes": "«way» + comparativo = mucho más (coloquial). Con antelación = «in advance», no «with anticipation».", "explanation": "«advance» con acento en la segunda: «əd-VÆNS». «book» con «u» corta, como «look».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.how-far-ahead-should-i-book-accommodation", "text": "How far ahead should I book accommodation?", "es": "¿Con cuánta antelación debería reservar el alojamiento?", "notes": "«how far ahead» = con cuánta antelación. «accommodation» es incontable en este uso: nunca «accommodations» en un examen (aunque en EE. UU. se oye).", "explanation": "«accommodation» = «ə-ka-mə-DEI-shən», acento en «DEI»; dos «c» y dos «m».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.were-on-a-tight-budget", "text": "We're on a tight budget, so we're staying in hostels.", "es": "Vamos justos de presupuesto, así que dormiremos en albergues.", "notes": "«be on a tight budget» = tener un presupuesto ajustado. Presente continuo para un plan ya decidido.", "explanation": "«tight» = «TAIT», la «gh» no suena. «budget» = «BA-dʒit».", "register": "neutral", "situation": "viajes", "tags": ["idioms"] },
+    { "id": "b2-travel.id-like-to-squeeze-in-a-day-trip", "text": "I'd like to squeeze in a day trip to the mountains.", "es": "Me gustaría hacer hueco para una excursión de un día a la montaña.", "notes": "«squeeze in» = encajar algo en un horario apretado (literalmente, meter apretando).", "explanation": "«squeeze» sin «e» delante: «SKWIIZ», con «z» sonora al final. «day trip» = excursión de ida y vuelta en el día.", "register": "neutral", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.is-it-worth-staying-an-extra-night", "text": "Is it worth staying an extra night there?", "es": "¿Merece la pena quedarse una noche más allí?", "notes": "«be worth» + -ing = merecer la pena hacer algo. «Is it worth it?» = ¿merece la pena?", "explanation": "«worth» = «WƏRθ», con «r» americana y «th» final entre los dientes.", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.i-like-to-leave-room-for-the-unexpected", "text": "I like to leave some room for the unexpected.", "es": "Me gusta dejar margen para los imprevistos.", "notes": "«room» incontable = espacio, margen. «the unexpected» = lo inesperado.", "explanation": "«leave» con «i» larga («LIIV»); con «i» corta sería «live». «room» con «u» larga.", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.lets-play-it-by-ear", "text": "Let's play it by ear once we get there.", "es": "Cuando lleguemos, ya iremos viendo sobre la marcha.", "notes": "«play it by ear» = improvisar, decidir sobre la marcha (como tocar de oído). «once» = en cuanto.", "explanation": "Se encadena: «PLEI-i-bai-IR». «once» = «WANS», empieza por sonido «w».", "register": "tu", "situation": "viajes", "tags": ["idioms"] },
+    { "id": "b2-travel.im-here-to-pick-up-my-rental-car", "text": "Hi, I'm here to pick up my rental car. It's under Díaz.", "es": "Hola, vengo a recoger el coche de alquiler. Está a nombre de Díaz.", "notes": "«pick up» = recoger. «under» + nombre = a nombre de, igual que en el hotel.", "explanation": "«pick up» se une: «pi-KAP». «rental» con flap: casi «REN-əl».", "register": "neutral", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.does-it-come-with-unlimited-mileage", "text": "Does it come with unlimited mileage?", "es": "¿Incluye kilometraje ilimitado?", "notes": "«come with» = venir con, incluir. En EE. UU. se cuenta en millas: «mileage».", "explanation": "«mileage» = «MAI-lidʒ», dos sílabas. «unlimited» con acento en «LI».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.what-exactly-does-the-basic-coverage-include", "text": "What exactly does the basic coverage include?", "es": "¿Qué cubre exactamente el seguro básico?", "notes": "«coverage» = cobertura (de un seguro). «include» = incluir; ojo, la pregunta lleva «does».", "explanation": "«coverage» = «KA-və-ridʒ», tres sílabas. «exactly» = «ig-ZAKT-li».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.id-rather-get-full-coverage-just-in-case", "text": "I'd rather get full coverage, just in case.", "es": "Prefiero el seguro a todo riesgo, por si acaso.", "notes": "«full coverage» = a todo riesgo. «just in case» = por si acaso.", "explanation": "«full» con «u» corta (no «fool», «u» larga). «just in case» se une: «JAS-tin-KEIS».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.can-i-drop-it-off-at-a-different-location", "text": "Can I drop it off at a different location?", "es": "¿Puedo devolverlo en otra oficina?", "notes": "«drop off» = dejar (un coche, a una persona, un paquete). Con pronombre va en medio: «drop it off».", "explanation": "Todo encadenado: «DRA-pi-TOF». La «t» entre vocales suena como una «r» suave.", "register": "neutral", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.is-there-a-fee-for-adding-a-second-driver", "text": "Is there a fee for adding a second driver?", "es": "¿Se paga algo por añadir un segundo conductor?", "notes": "«for» + -ing: después de preposición, siempre gerundio.", "explanation": "«fee» con «i» larga. «second» = «SE-kənd», la «o» se reduce a schwa.", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.do-you-have-an-automatic", "text": "Do you have an automatic? I can't drive stick.", "es": "¿Tienen alguno automático? No sé conducir con cambio manual.", "notes": "«drive stick» (EE. UU.) = conducir con cambio manual. La mayoría de coches de alquiler allí son automáticos.", "explanation": "«can't» en EE. UU. = «KÆNT», vocal abierta y «t» final suave. «automatic» con flap: «a-də-MÆ-dik».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.could-you-make-a-note-of-this-dent", "text": "Could you make a note of this dent before I leave?", "es": "¿Podría anotar este bollo antes de irme?", "notes": "«make a note of» = tomar nota de. Así no te cobran el daño al devolverlo.", "explanation": "Petición cortés con «Could you…?». «dent» = abolladura; termina en «t» suave, no la quites.", "register": "formal", "situation": "viajes" },
+    { "id": "b2-travel.is-there-a-spare-tire-in-the-trunk", "text": "Is there a spare tire in the trunk?", "es": "¿Hay rueda de repuesto en el maletero?", "notes": "En EE. UU.: «tire» (rueda/neumático) y «trunk» (maletero); en Reino Unido «tyre» y «boot».", "explanation": "«spare» sin «e» delante: «SPER». «trunk» = «TRANK».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.what-happens-if-i-bring-it-back-late", "text": "What happens if I bring it back a few hours late?", "es": "¿Qué pasa si lo devuelvo con unas horas de retraso?", "notes": "«bring back» = devolver (traer de vuelta). «late» sin «-ly»: «lately» significa últimamente.", "explanation": "«bring it back» se une: «BRIN-gi-BÆK». «hours» empieza por vocal: la «h» no suena.", "register": "neutral", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.the-gps-is-taking-us-the-long-way", "text": "The GPS is taking us the long way around.", "es": "El GPS nos está llevando por el camino más largo.", "notes": "«the long way (around)» = dando un rodeo. Lo contrario: «a shortcut», un atajo.", "explanation": "«GPS» se deletrea: «dʒii-pii-ES». «long way» se une: «LON-guei».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.we-missed-our-exit", "text": "We missed our exit. We'll have to turn around.", "es": "Nos hemos pasado la salida. Tendremos que dar la vuelta.", "notes": "«miss an exit» = pasarse una salida. «turn around» = dar media vuelta.", "explanation": "«missed» termina en /t/: «MIST». «turn around» se une: «tər-nə-RAUND».", "register": "neutral", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.you-need-to-get-in-the-left-lane", "text": "You need to get in the left lane now.", "es": "Tienes que ponerte en el carril de la izquierda ya.", "notes": "«get in the … lane» = ponerse en un carril. «change lanes» = cambiar de carril.", "explanation": "«lane» = «LEIN», con diptongo; no lo confundas con «line».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.is-this-a-toll-road", "text": "Is this a toll road? Do I need cash?", "es": "¿Esta carretera es de peaje? ¿Necesito efectivo?", "notes": "«toll» = peaje. Muchos peajes en EE. UU. son electrónicos y te cobran por la matrícula.", "explanation": "«toll» con «o» larga: «TOUL». «cash» con «a» abierta: «KÆSH».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.whats-the-speed-limit-on-this-road", "text": "What's the speed limit on this road?", "es": "¿Cuál es el límite de velocidad en esta carretera?", "notes": "Velocidad = «speed»; «velocity» es término de física. En EE. UU. va en millas por hora (65 mph ≈ 105 km/h).", "explanation": "«speed» sin «e» delante: «SPIID», no «espid».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.i-got-pulled-over-for-speeding", "text": "I got pulled over for speeding on the way here.", "es": "Me paró la policía por exceso de velocidad de camino aquí.", "notes": "«get pulled over» = que te pare la policía en la carretera. «speeding» = ir demasiado rápido.", "explanation": "«pulled over» se une: «PUL-dou-vər». «on the way here» = de camino aquí.", "register": "neutral", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.theres-a-detour-because-of-roadwork", "text": "There's a detour because of roadwork up ahead.", "es": "Hay un desvío por obras más adelante.", "notes": "Desvío = «detour», no «deviation». Obras en la carretera = «roadwork» (incontable). «up ahead» = más adelante.", "explanation": "«detour» = «DII-tur», acento en la primera.", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.is-there-anywhere-to-park-around-here", "text": "Is there anywhere to park around here?", "es": "¿Hay algún sitio para aparcar por aquí?", "notes": "«anywhere to» + verbo = algún sitio donde. Aparcamiento = «parking lot» o «parking garage» si es cubierto.", "explanation": "«park» con «r» americana: «PARK». «around here» se une: «ə-RAUN-hir».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.we-should-fill-up-before-we-head-into-the-mountains", "text": "We should fill up before we head into the mountains.", "es": "Deberíamos llenar el depósito antes de meternos en la montaña.", "notes": "«fill up» = llenar el depósito. «head into/to» = ir hacia, dirigirse a.", "explanation": "«fill» con «i» corta (no «feel», «i» larga). «fill up» se une: «fi-LAP».", "register": "neutral", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.lets-pull-over-and-stretch-our-legs", "text": "Let's pull over and stretch our legs for a bit.", "es": "Vamos a parar un momento a estirar las piernas.", "notes": "«pull over» = parar a un lado de la carretera. «stretch your legs» = estirar las piernas, dar un paseíto.", "explanation": "«stretch» sin «e» delante: «STRECH». «legs» termina en /z/.", "register": "tu", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.i-think-my-passports-been-stolen", "text": "I think my passport's been stolen.", "es": "Creo que me han robado el pasaporte.", "notes": "Pasiva: lo robado es el sujeto («my passport has been stolen»). A la persona se le «rob»: «I've been robbed».", "explanation": "«passport's been» = «passport has been». «stolen» = «STOU-lən».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.i-need-to-file-a-police-report", "text": "I need to file a police report for my insurance.", "es": "Necesito poner una denuncia para el seguro.", "notes": "Poner una denuncia = «file a police report» (o «report it to the police»).", "explanation": "«police» con acento en la segunda: «pə-LIIS».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.wheres-the-nearest-spanish-consulate", "text": "Where's the nearest Spanish consulate?", "es": "¿Dónde está el consulado español más cercano?", "notes": "Las embajadas están en la capital; los consulados, en otras ciudades grandes.", "explanation": "«Spanish» sin «e» delante: «SPÆ-nish», no «espanish». «consulate» = «KAN-sə-lət».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.can-they-issue-an-emergency-passport", "text": "Can they issue an emergency passport by tomorrow?", "es": "¿Pueden expedirme un pasaporte provisional para mañana?", "notes": "«issue» = expedir (un documento). «by tomorrow» = como muy tarde mañana.", "explanation": "«issue» = «I-shuu». «emergency» = «i-MƏR-dʒən-si».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.all-the-trains-are-canceled-because-of-the-strike", "text": "All the trains are canceled because of the strike.", "es": "Han cancelado todos los trenes por la huelga.", "notes": "«because of» + sustantivo; «because» + frase. En EE. UU. se escribe «canceled», con una «l».", "explanation": "«canceled» termina en /d/: «KÆN-səld». «strike» sin «e» delante.", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.im-stranded-here-until-monday", "text": "I'm stranded here until Monday. Any ideas?", "es": "Estoy aquí tirado hasta el lunes. ¿Alguna idea?", "notes": "«be stranded» = quedarse tirado, atrapado sin poder seguir el viaje.", "explanation": "«stranded» sin «e» delante y con /ɪd/ al final: «STRÆN-did».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.we-need-a-plan-b", "text": "We need a plan B. The road's closed.", "es": "Necesitamos un plan B. La carretera está cortada.", "notes": "Carretera cortada = «the road is closed», no «cut».", "explanation": "«plan B» = «plæn BII». «road's closed» = «ROUDZ KLOUZD».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.we-had-to-cut-our-trip-short", "text": "We had to cut our trip short because of the storm.", "es": "Tuvimos que acortar el viaje por la tormenta.", "notes": "«cut something short» = acabar algo antes de lo previsto.", "explanation": "«cut our» se une: «KA-dau-ər», con flap t.", "register": "neutral", "situation": "viajes", "tags": ["idioms"] },
+    { "id": "b2-travel.does-my-travel-insurance-cover-this", "text": "Does my travel insurance cover medical expenses abroad?", "es": "¿Mi seguro de viaje cubre los gastos médicos en el extranjero?", "notes": "«abroad» = en el extranjero, sin «in»: «live abroad», «travel abroad».", "explanation": "«insurance» con acento en la segunda: «in-SHU-rəns». «abroad» = «ə-BROD».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.it-turned-out-to-be-a-blessing-in-disguise", "text": "Missing that train turned out to be a blessing in disguise.", "es": "Perder aquel tren acabó siendo una suerte.", "notes": "«a blessing in disguise» = un mal que acaba siendo un bien («no hay mal que por bien no venga»). «turn out to be» = resultar ser.", "explanation": "«disguise» = «dis-GAIZ», con «z» sonora. «turned out» se une: «TƏR-ndaut».", "register": "neutral", "situation": "viajes", "tags": ["idioms"] },
+    { "id": "b2-travel.youve-got-to-check-out-the-old-town", "text": "You've got to check out the old town. It's amazing.", "es": "Tienes que ver el casco antiguo. Es increíble.", "notes": "«check out» = ir a ver, echar un vistazo. «You've got to» = tienes que (recomendación entusiasta).", "explanation": "«check out» se une: «CHE-kaut». En habla rápida «got to» suena «GA-də».", "register": "tu", "situation": "viajes", "tags": ["phrasal-verbs"] },
+    { "id": "b2-travel.honestly-its-a-bit-of-a-tourist-trap", "text": "Honestly, it's a bit of a tourist trap.", "es": "Sinceramente, es un poco sacacuartos para turistas.", "notes": "«a tourist trap» = sitio caro y masificado pensado para turistas. «a bit of a» suaviza la crítica.", "explanation": "«Honestly» empieza por vocal: la «h» no suena («A-nəst-li»). «bit of a» = «BI-də-və».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.if-i-were-you-id-skip-it", "text": "If I were you, I'd skip it and go to the lake instead.", "es": "Yo en tu lugar me lo saltaría y me iría al lago.", "notes": "«If I were you, I'd…» = yo que tú. «skip» = saltarse. «instead» = en su lugar.", "explanation": "«I'd skip it» = «aid SKI-pit», sin «e» antes de «sk».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.its-well-worth-the-drive", "text": "It's a long way, but it's well worth the drive.", "es": "Está lejos, pero merece mucho la pena el viaje en coche.", "notes": "«well worth» = merece mucho la pena. «worth» + sustantivo directamente: «worth the drive», «worth the money».", "explanation": "«well worth» = «WEL WƏRθ»: «l» final clara y «th» entre los dientes.", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.try-to-get-there-early-to-beat-the-crowds", "text": "Try to get there early to beat the crowds.", "es": "Intenta llegar pronto para evitar las aglomeraciones.", "notes": "«beat the crowds» = adelantarte a la gente para no encontrarte colas.", "explanation": "«early» = «ƏR-li», con «r» americana. «crowds» termina en /dz/.", "register": "neutral", "situation": "viajes", "tags": ["idioms"] },
+    { "id": "b2-travel.ask-the-locals-where-they-eat", "text": "Ask the locals where they eat. That's where the good food is.", "es": "Pregunta a la gente de allí dónde come. Ahí está la buena comida.", "notes": "Pregunta indirecta: «where they eat», sin «do».", "explanation": "«locals» = «LOU-kəlz». «Ask the» sin pausa: «ÆSK-ðə».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.its-a-little-off-the-beaten-path", "text": "It's a little off the beaten path, but totally worth it.", "es": "Está un poco apartado de las rutas turísticas, pero merece totalmente la pena.", "notes": "«off the beaten path» = fuera de los circuitos habituales (en Reino Unido, «track»).", "explanation": "«beaten» con «t» casi muda en EE. UU.: «BII-ʔn». «totally» con flap: «TOU-də-li».", "register": "neutral", "situation": "viajes", "tags": ["idioms"] },
+    { "id": "b2-travel.the-scenery-along-the-coast-was-breathtaking", "text": "The scenery along the coast was breathtaking.", "es": "El paisaje a lo largo de la costa era impresionante.", "notes": "«scenery» = paisaje (incontable). «breathtaking» = que te quita el aliento.", "explanation": "«scenery» = «SII-nə-ri», la «c» no suena. «breath» con «e» corta y «th» final.", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.it-was-overrated-i-wouldnt-go-back", "text": "It was overrated, to be honest. I wouldn't go back.", "es": "Estaba sobrevalorado, la verdad. No volvería.", "notes": "«overrated» = sobrevalorado. «go back» = volver a un sitio.", "explanation": "«overrated» con flap: «ou-vər-REI-did». «wouldn't» = «WU-dənt».", "register": "neutral", "situation": "viajes" },
+    { "id": "b2-travel.would-you-recommend-it-to-someone-traveling-alone", "text": "Would you recommend it to someone traveling alone?", "es": "¿Lo recomendarías para alguien que viaja solo?", "notes": "«recommend something to someone». En EE. UU. «traveling» con una «l».", "explanation": "«recommend» = «re-kə-MEND», con una «c» y dos «m». «alone» = «ə-LOUN».", "register": "neutral", "situation": "viajes" }
+  ],
+  "vocab": [
+    { "id": "b2-travel.road-trip", "word": "road trip", "article": "a", "plural": "road trips", "es": "el viaje en coche (con paradas)", "notes": "Muy americano: varios días de carretera parando por el camino.", "example": "b2-travel.were-planning-a-road-trip-down-the-coast", "situation": "viajes", "image": "fluent:oncoming-automobile" },
+    { "id": "b2-travel.peak-season", "word": "peak season", "es": "la temporada alta", "notes": "Lo contrario: «off-season» o «low season».", "example": "b2-travel.id-rather-avoid-peak-season", "situation": "viajes" },
+    { "id": "b2-travel.accommodation", "word": "accommodation", "es": "el alojamiento", "notes": "Incontable: «some accommodation», no «an accommodation».", "example": "b2-travel.how-far-ahead-should-i-book-accommodation", "situation": "viajes", "image": "fluent:hotel" },
+    { "id": "b2-travel.hostel", "word": "hostel", "article": "a", "plural": "hostels", "es": "el albergue", "notes": "«hostel» no es un hostal de lujo: es un albergue con habitaciones compartidas. La «h» suena.", "example": "b2-travel.were-on-a-tight-budget", "situation": "viajes" },
+    { "id": "b2-travel.day-trip", "word": "day trip", "article": "a", "plural": "day trips", "es": "la excursión de un día", "example": "b2-travel.id-like-to-squeeze-in-a-day-trip", "situation": "viajes" },
+    { "id": "b2-travel.guidebook", "word": "guidebook", "article": "a", "plural": "guidebooks", "es": "la guía de viaje", "notes": "La persona que te guía es «a tour guide».", "situation": "viajes", "image": "fluent:open-book" },
+    { "id": "b2-travel.mileage", "word": "mileage", "es": "el kilometraje (en millas)", "notes": "Incontable. «unlimited mileage» = kilometraje ilimitado.", "example": "b2-travel.does-it-come-with-unlimited-mileage", "situation": "viajes" },
+    { "id": "b2-travel.coverage", "word": "coverage", "es": "la cobertura (del seguro)", "notes": "Incontable. «full coverage» = a todo riesgo.", "example": "b2-travel.what-exactly-does-the-basic-coverage-include", "situation": "viajes", "image": "fluent:shield" },
+    { "id": "b2-travel.drop-off-fee", "word": "drop-off fee", "article": "a", "plural": "drop-off fees", "es": "el cargo por devolver en otra oficina", "notes": "También «one-way fee».", "situation": "viajes" },
+    { "id": "b2-travel.automatic", "word": "automatic", "article": "an", "plural": "automatics", "es": "el coche automático", "notes": "Sustantivo: «an automatic». Adjetivo: «automatic transmission» = cambio automático.", "example": "b2-travel.do-you-have-an-automatic", "situation": "viajes" },
+    { "id": "b2-travel.stick-shift", "word": "stick shift", "article": "a", "plural": "stick shifts", "es": "el cambio manual, el coche manual", "notes": "Coloquial: «drive stick» = conducir con marchas.", "situation": "viajes" },
+    { "id": "b2-travel.dent", "word": "dent", "article": "a", "plural": "dents", "es": "la abolladura, el bollo", "notes": "Un arañazo es «a scratch».", "example": "b2-travel.could-you-make-a-note-of-this-dent", "situation": "viajes" },
+    { "id": "b2-travel.spare-tire", "word": "spare tire", "article": "a", "plural": "spare tires", "es": "la rueda de repuesto", "notes": "«spare» = de repuesto, de sobra: «a spare key», «spare time».", "example": "b2-travel.is-there-a-spare-tire-in-the-trunk", "situation": "viajes" },
+    { "id": "b2-travel.lane", "word": "lane", "article": "a", "plural": "lanes", "es": "el carril", "notes": "«the fast lane» = el carril rápido (y, en sentido figurado, la vida a tope).", "example": "b2-travel.you-need-to-get-in-the-left-lane", "situation": "viajes", "image": "fluent:motorway" },
+    { "id": "b2-travel.toll", "word": "toll", "article": "a", "plural": "tolls", "es": "el peaje", "notes": "«toll road» = carretera de peaje; «toll-free number» = número gratuito.", "example": "b2-travel.is-this-a-toll-road", "situation": "viajes" },
+    { "id": "b2-travel.speed-limit", "word": "speed limit", "article": "a", "plural": "speed limits", "es": "el límite de velocidad", "example": "b2-travel.whats-the-speed-limit-on-this-road", "situation": "viajes" },
+    { "id": "b2-travel.speeding-ticket", "word": "speeding ticket", "article": "a", "plural": "speeding tickets", "es": "la multa por exceso de velocidad", "notes": "Multa de aparcamiento = «a parking ticket». «get a ticket» = que te pongan una multa.", "situation": "viajes", "image": "fluent:police-car-light" },
+    { "id": "b2-travel.detour", "word": "detour", "article": "a", "plural": "detours", "es": "el desvío", "notes": "«take a detour» = desviarse, dar un rodeo.", "example": "b2-travel.theres-a-detour-because-of-roadwork", "situation": "viajes", "image": "fluent:construction" },
+    { "id": "b2-travel.parking-lot", "word": "parking lot", "article": "a", "plural": "parking lots", "es": "el aparcamiento (al aire libre)", "notes": "«a parking garage» = aparcamiento cubierto o de varias plantas. «parking» solo es incontable.", "situation": "viajes" },
+    { "id": "b2-travel.pickpocket", "word": "pickpocket", "article": "a", "plural": "pickpockets", "es": "el carterista", "notes": "«Watch out for pickpockets» = cuidado con los carteristas.", "situation": "viajes" },
+    { "id": "b2-travel.police-report", "word": "police report", "article": "a", "plural": "police reports", "es": "la denuncia (policial)", "notes": "«file a police report» = poner una denuncia.", "example": "b2-travel.i-need-to-file-a-police-report", "situation": "viajes", "image": "fluent:police-car" },
+    { "id": "b2-travel.consulate", "word": "consulate", "article": "a", "plural": "consulates", "es": "el consulado", "example": "b2-travel.wheres-the-nearest-spanish-consulate", "situation": "viajes", "image": "fluent:classical-building" },
+    { "id": "b2-travel.embassy", "word": "embassy", "article": "an", "plural": "embassies", "es": "la embajada", "notes": "Acento en la primera: «EM-bə-si».", "situation": "viajes" },
+    { "id": "b2-travel.stranded", "word": "stranded", "es": "tirado, atrapado (sin poder seguir)", "notes": "Adjetivo: «be stranded», «get stranded».", "example": "b2-travel.im-stranded-here-until-monday", "situation": "viajes" },
+    { "id": "b2-travel.travel-insurance", "word": "travel insurance", "es": "el seguro de viaje", "notes": "Incontable: «some travel insurance», no «a travel insurance».", "example": "b2-travel.does-my-travel-insurance-cover-this", "situation": "viajes", "image": "fluent:shield" },
+    { "id": "b2-travel.landmark", "word": "landmark", "article": "a", "plural": "landmarks", "es": "el monumento emblemático, el punto de referencia", "notes": "Edificio o lugar conocido que identifica una ciudad.", "situation": "viajes", "image": "fluent:statue-of-liberty" },
+    { "id": "b2-travel.tourist-trap", "word": "tourist trap", "article": "a", "plural": "tourist traps", "es": "el sitio sacacuartos para turistas", "example": "b2-travel.honestly-its-a-bit-of-a-tourist-trap", "situation": "viajes" },
+    { "id": "b2-travel.crowd", "word": "crowd", "article": "a", "plural": "crowds", "es": "la multitud, el gentío", "notes": "«crowded» = abarrotado.", "example": "b2-travel.try-to-get-there-early-to-beat-the-crowds", "situation": "viajes" },
+    { "id": "b2-travel.local", "word": "local", "article": "a", "plural": "locals", "es": "el lugareño, la gente de allí", "notes": "Sustantivo: «the locals». Un «local» de bar es «a bar» o «a place».", "example": "b2-travel.ask-the-locals-where-they-eat", "situation": "viajes" },
+    { "id": "b2-travel.hidden-gem", "word": "hidden gem", "article": "a", "plural": "hidden gems", "es": "la joya escondida, un sitio poco conocido", "situation": "viajes", "image": "fluent:gem-stone" },
+    { "id": "b2-travel.scenery", "word": "scenery", "es": "el paisaje", "notes": "Incontable: «beautiful scenery», nunca «a scenery». También «the landscape».", "example": "b2-travel.the-scenery-along-the-coast-was-breathtaking", "situation": "viajes", "image": "fluent:sunrise-over-mountains" },
+    { "id": "b2-travel.overrated", "word": "overrated", "es": "sobrevalorado", "notes": "Lo contrario: «underrated», infravalorado.", "example": "b2-travel.it-was-overrated-i-wouldnt-go-back", "situation": "viajes" }
+  ],
+  "qa": [
+    {
+      "id": "b2-travel.qa.summer-plans",
+      "question": "So, what are your plans for the summer?",
+      "questionEs": "Bueno, ¿qué planes tienes para el verano?",
+      "accepted": [
+        { "text": "We're planning a road trip down the coast.", "es": "Estamos planeando un viaje en coche por la costa." },
+        { "text": "We haven't decided yet. We'll play it by ear.", "es": "Aún no lo hemos decidido. Iremos viendo." }
+      ],
+      "distractors": [
+        { "text": "We're planning a road travel down the coast.", "es": "Estamos planeando un viaje en coche por la costa." },
+        { "text": "We haven't decided still. We'll play it by ear.", "es": "Aún no lo hemos decidido. Iremos viendo." }
+      ],
+      "register": "tu",
+      "situation": "viajes",
+      "notes": "«travel» es el verbo o la actividad en general; un viaje concreto es «a trip». «todavía no» en negativa = «yet», al final.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-travel.qa.book-now",
+      "question": "Should we book the hotels now or wait until we get there?",
+      "questionEs": "¿Reservamos los hoteles ya o esperamos a llegar?",
+      "accepted": [
+        { "text": "Let's book now. It's way cheaper in advance.", "es": "Reservemos ya. Con antelación sale mucho más barato." },
+        { "text": "I'd book the first night and play the rest by ear.", "es": "Yo reservaría la primera noche y el resto, sobre la marcha." }
+      ],
+      "distractors": [
+        { "text": "Let's book now. It's way cheaper with anticipation.", "es": "Reservemos ya. Con antelación sale mucho más barato." },
+        { "text": "I'd book the first night and the rest we will see it.", "es": "Yo reservaría la primera noche y el resto ya lo veremos." }
+      ],
+      "register": "tu",
+      "situation": "viajes",
+      "notes": "Con antelación = «in advance»; «anticipation» es la ilusión de esperar algo. «play it by ear» = decidir sobre la marcha.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-travel.qa.full-coverage",
+      "question": "Would you like to add our full coverage package today?",
+      "questionEs": "¿Quiere añadir hoy nuestro paquete a todo riesgo?",
+      "accepted": [
+        { "text": "Yes, please. I'd rather be safe than sorry.", "es": "Sí, por favor. Más vale prevenir que curar." },
+        { "text": "No, thanks. My credit card already covers it.", "es": "No, gracias. Ya me lo cubre la tarjeta de crédito." }
+      ],
+      "distractors": [
+        { "text": "Yes, please. Better to prevent than to cure.", "es": "Sí, por favor. Más vale prevenir que curar." },
+        { "text": "No, thanks. My credit card already cover it.", "es": "No, gracias. Ya me lo cubre la tarjeta de crédito." }
+      ],
+      "register": "formal",
+      "situation": "viajes",
+      "notes": "«Más vale prevenir que curar» = «better safe than sorry» (o «I'd rather be safe than sorry»); la traducción literal no se usa. Tercera persona: «covers», con «s».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-travel.qa.return-car",
+      "question": "And where will you be returning the vehicle?",
+      "questionEs": "¿Y dónde devolverá el vehículo?",
+      "accepted": [
+        { "text": "At the airport, if that's possible.", "es": "En el aeropuerto, si es posible." },
+        { "text": "I'd like to drop it off in San Diego.", "es": "Querría dejarlo en San Diego." }
+      ],
+      "distractors": [
+        { "text": "At the airport, if it's possible it.", "es": "En el aeropuerto, si es posible." },
+        { "text": "I'd like to leave off it in San Diego.", "es": "Querría dejarlo en San Diego." }
+      ],
+      "register": "formal",
+      "situation": "viajes",
+      "notes": "Con un phrasal verb separable, el pronombre va en medio: «drop it off», nunca «drop off it». No repitas el sujeto: «if that's possible».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-travel.qa.so-slow",
+      "question": "Why are we going so slowly?",
+      "questionEs": "¿Por qué vamos tan despacio?",
+      "accepted": [
+        { "text": "There's a detour because of roadwork.", "es": "Hay un desvío por obras." },
+        { "text": "We're stuck in traffic behind a truck.", "es": "Estamos atascados detrás de un camión." }
+      ],
+      "distractors": [
+        { "text": "There's a deviation because of works.", "es": "Hay un desvío por obras." },
+        { "text": "We're stuck in traffic behind of a truck.", "es": "Estamos atascados detrás de un camión." }
+      ],
+      "register": "tu",
+      "situation": "viajes",
+      "notes": "Desvío = «detour»; obras en la carretera = «roadwork». «behind» va sin «of»: «behind a truck».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-travel.qa.pulled-over",
+      "question": "Do you know how fast you were going, sir?",
+      "questionEs": "¿Sabe a qué velocidad iba, señor?",
+      "accepted": [
+        { "text": "I'm sorry, officer. I didn't see the speed limit.", "es": "Lo siento, agente. No vi el límite de velocidad." },
+        { "text": "I'm not sure, officer. I'm not from around here.", "es": "No estoy seguro, agente. No soy de por aquí." }
+      ],
+      "distractors": [
+        { "text": "I'm sorry, agent. I didn't see the limit of velocity.", "es": "Lo siento, agente. No vi el límite de velocidad." },
+        { "text": "I'm not sure, officer. I'm not from here around.", "es": "No estoy seguro, agente. No soy de por aquí." }
+      ],
+      "register": "formal",
+      "situation": "viajes",
+      "notes": "A un policía se le dice «officer», no «agent». Límite de velocidad = «speed limit». Por aquí = «around here», en ese orden.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-travel.qa.what-happened",
+      "question": "You look upset. What happened?",
+      "questionEs": "Te veo disgustado. ¿Qué ha pasado?",
+      "accepted": [
+        { "text": "Someone stole my wallet on the subway.", "es": "Alguien me ha robado la cartera en el metro." },
+        { "text": "I think my passport's been stolen.", "es": "Creo que me han robado el pasaporte." }
+      ],
+      "distractors": [
+        { "text": "Someone robbed my wallet on the subway.", "es": "Alguien me ha robado la cartera en el metro." },
+        { "text": "I think they have stolen me my passport.", "es": "Creo que me han robado el pasaporte." }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "«steal» + la cosa robada («steal a wallet»); «rob» + la persona o el lugar («rob a bank», «I was robbed»). En inglés no hay «me» de interés: «they stole my passport».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-travel.qa.ferry-canceled",
+      "question": "The ferry's canceled. What do we do now?",
+      "questionEs": "Han cancelado el ferri. ¿Y ahora qué hacemos?",
+      "accepted": [
+        { "text": "Let's make the most of it and explore the town.", "es": "Aprovechemos y exploremos el pueblo." },
+        { "text": "We could rent a car and drive there instead.", "es": "Podríamos alquilar un coche e ir en él." }
+      ],
+      "distractors": [
+        { "text": "Let's take the most of it and explore the town.", "es": "Aprovechemos y exploremos el pueblo." },
+        { "text": "We could rent a car and drive there in its place.", "es": "Podríamos alquilar un coche e ir en él." }
+      ],
+      "register": "tu",
+      "situation": "viajes",
+      "notes": "Aprovechar al máximo = «make the most of it», con «make». En su lugar = «instead», al final de la frase.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-travel.qa.recommendations",
+      "question": "Any recommendations for my trip to New Orleans?",
+      "questionEs": "¿Alguna recomendación para mi viaje a Nueva Orleans?",
+      "accepted": [
+        { "text": "You've got to check out the French Quarter at night.", "es": "Tienes que ver el Barrio Francés de noche." },
+        { "text": "Try the local food, and ask the locals where they eat.", "es": "Prueba la comida de allí y pregunta a la gente dónde come." }
+      ],
+      "distractors": [
+        { "text": "You've got to know the French Quarter at night.", "es": "Tienes que conocer el Barrio Francés de noche." },
+        { "text": "Prove the local food, and ask the locals where they eat.", "es": "Prueba la comida de allí y pregunta a la gente dónde come." }
+      ],
+      "register": "tu",
+      "situation": "viajes",
+      "notes": "Conocer un sitio = «see», «visit» o «check out»; «know» es conocer a fondo. Probar comida = «try»; «prove» es demostrar.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-travel.qa.how-was-the-trip",
+      "question": "How was your trip? Was it worth it?",
+      "questionEs": "¿Qué tal el viaje? ¿Mereció la pena?",
+      "accepted": [
+        { "text": "Totally. The scenery was breathtaking.", "es": "Totalmente. El paisaje era impresionante." },
+        { "text": "It was nice, but a bit overrated, to be honest.", "es": "Estuvo bien, pero un poco sobrevalorado, la verdad." }
+      ],
+      "distractors": [
+        { "text": "Totally. It was worth the pain.", "es": "Totalmente. Valió la pena." },
+        { "text": "It was nice, but a bit overvalued, to be honest.", "es": "Estuvo bien, pero un poco sobrevalorado, la verdad." }
+      ],
+      "register": "tu",
+      "situation": "viajes",
+      "notes": "Valer la pena = «be worth it»; «worth the pain» es una traducción literal. Un sitio está «overrated»; «overvalued» se dice de acciones o precios.",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

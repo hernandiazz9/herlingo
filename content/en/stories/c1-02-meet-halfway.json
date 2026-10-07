@@ -1,0 +1,97 @@
+{
+  "id": "story.en-c1-meet-halfway",
+  "order": 302,
+  "title": "Meet halfway",
+  "titleEs": "A medio camino",
+  "description": "Los nuevos dueños le ofrecen a Pablo un contrato fijo. Maya le enseña a no aceptar la primera cifra, y Pablo negocia por primera vez.",
+  "emoji": "🤝",
+  "situation": "dinero",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "Two weeks later, Pablo gets an email from the new owners' HR team.", "es": "Dos semanas después, a Pablo le llega un correo del equipo de recursos humanos de los nuevos dueños." },
+    { "id": "s2", "text": "They want to offer him a permanent contract after June.", "es": "Quieren ofrecerle un contrato indefinido a partir de junio." },
+    { "id": "s3", "text": "Before the call, Maya helps him look up the market rate for his role.", "es": "Antes de la llamada, Maya le ayuda a buscar el sueldo de mercado para su puesto." },
+    { "id": "s4", "text": "«Never accept the first number. There's always some wiggle room.»", "es": "«Nunca aceptes la primera cifra. Siempre hay algo de margen.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "On the call, a manager called Greg makes him an offer.", "es": "En la llamada, un responsable llamado Greg le hace una oferta." },
+    { "id": "s6", "text": "«We can offer you ninety thousand a year, plus the usual perks.»", "es": "«Podemos ofrecerte noventa mil al año, más los beneficios habituales.»", "voice": "en-US-BrianNeural" },
+    { "id": "s7", "text": "Pablo takes a deep breath and remembers Maya's advice.", "es": "Pablo respira hondo y se acuerda del consejo de Maya." },
+    { "id": "s8", "text": "«Is there any flexibility on the base salary?»", "es": "«¿Hay algo de flexibilidad en el sueldo base?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "«Over the last year, I've taken on a lot more responsibility.»", "es": "«Durante el último año, he asumido mucha más responsabilidad.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "«I led the payments project, and I think I bring a lot to the table.»", "es": "«Dirigí el proyecto de pagos y creo que aporto mucho.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "Greg goes quiet for a moment.", "es": "Greg se queda callado un momento." },
+    { "id": "s12", "text": "«The salary is fairly fixed, I'm afraid. What about some equity instead?»", "es": "«Me temo que el sueldo es bastante cerrado. ¿Qué tal unas acciones a cambio?»", "voice": "en-US-BrianNeural" },
+    { "id": "s13", "text": "«Equity sounds good. But working remotely is a deal-breaker for me.»", "es": "«Las acciones suenan bien. Pero poder teletrabajar es innegociable para mí.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "«How about we meet halfway: one day remote, and we review it in six months?»", "es": "«¿Y si lo dejamos a medio camino: un día en remoto, y lo revisamos dentro de seis meses?»", "voice": "en-US-BrianNeural" },
+    { "id": "s15", "text": "«That sounds fair. Could we put that in writing?»", "es": "«Me parece justo. ¿Podemos ponerlo por escrito?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s16", "text": "«Of course. Take a couple of days to think it over.»", "es": "«Claro. Tómate un par de días para pensártelo.»", "voice": "en-US-BrianNeural" },
+    { "id": "s17", "text": "After the call, Maya is waiting for him with two cups of coffee.", "es": "Después de la llamada, Maya lo está esperando con dos cafés." },
+    { "id": "s18", "text": "«So? Did you get your raise?»", "es": "«¿Y bien? ¿Te han subido el sueldo?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s19", "text": "«Sort of. But now I'm not sure I want to stay.»", "es": "«Más o menos. Pero ahora no sé si quiero quedarme.»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "c1-negotiation.market-rate",
+    "c1-negotiation.perk",
+    "c1-negotiation.is-there-any-flexibility",
+    "c1-negotiation.ive-taken-on-a-lot-more",
+    "c1-negotiation.i-bring-a-lot-to-the-table",
+    "c1-negotiation.equity",
+    "c1-negotiation.deal-breaker",
+    "c1-negotiation.how-about-we-meet-halfway",
+    "c1-negotiation.could-we-put-that-in-writing",
+    "c1-negotiation.raise"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does Maya do before the call?",
+      "es": "¿Qué hace Maya antes de la llamada?",
+      "options": [
+        { "text": "She calls Greg to ask for more money.", "es": "Llama a Greg para pedir más dinero." },
+        { "text": "She helps Pablo find out what his role usually pays.", "es": "Ayuda a Pablo a averiguar cuánto se suele cobrar en su puesto." },
+        { "text": "She tells Pablo to accept the first offer.", "es": "Le dice a Pablo que acepte la primera oferta." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Why does Pablo think he deserves more?",
+      "es": "¿Por qué cree Pablo que merece más?",
+      "options": [
+        { "text": "He has taken on more responsibility this year.", "es": "Este año ha asumido más responsabilidad." },
+        { "text": "Another company has made him an offer.", "es": "Otra empresa le ha hecho una oferta." },
+        { "text": "His rent has gone up.", "es": "Le han subido el alquiler." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What do Pablo and Greg agree on in the end?",
+      "es": "¿En qué quedan Pablo y Greg al final?",
+      "options": [
+        { "text": "A higher base salary.", "es": "Un sueldo base más alto." },
+        { "text": "Working remotely every day.", "es": "Teletrabajar todos los días." },
+        { "text": "One remote day, reviewed in six months.", "es": "Un día en remoto, que revisarán dentro de seis meses." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How does Pablo feel after the call?",
+      "es": "¿Cómo se siente Pablo después de la llamada?",
+      "options": [
+        { "text": "Happy and sure about staying.", "es": "Contento y seguro de quedarse." },
+        { "text": "Unsure whether he wants to stay.", "es": "No está seguro de querer quedarse." },
+        { "text": "Angry with Maya.", "es": "Enfadado con Maya." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "c1-negotiation.market-rate", "gap": "market rate", "distractors": ["market tax", "market fee"] },
+    { "id": "g2", "sentence": "s6", "answer": "c1-negotiation.perk", "gap": "perks", "distractors": ["benefices", "regalies"] },
+    { "id": "g3", "sentence": "s8", "answer": "c1-negotiation.is-there-any-flexibility", "gap": "flexibility", "distractors": ["flexibleness", "elasticity"] },
+    { "id": "g4", "sentence": "s10", "answer": "c1-negotiation.i-bring-a-lot-to-the-table", "gap": "bring a lot to the table", "distractors": ["give a lot to the table", "put a lot on the table"] },
+    { "id": "g5", "sentence": "s13", "answer": "c1-negotiation.deal-breaker", "gap": "deal-breaker", "distractors": ["break-deal", "contract-breaker"] },
+    { "id": "g6", "sentence": "s18", "answer": "c1-negotiation.raise", "gap": "raise", "distractors": ["raising", "augment"] }
+  ]
+}

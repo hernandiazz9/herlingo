@@ -1,0 +1,429 @@
+{
+  "id": "c1-grammar",
+  "order": 390,
+  "level": "C1",
+  "title": "Gramática C1",
+  "description": "Recursos para sonar natural y con matices: dar énfasis, mezclar tiempos en condicionales, usar modales finos, el registro formal, suavizar opiniones y conectar ideas como un nativo.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "c1-grammar.l.emphasis",
+      "title": "Énfasis: inversión, frases escindidas y do enfático",
+      "items": [
+        "gram.en-c1-inversion",
+        "c1-grammar.never-have-i-seen",
+        "c1-grammar.not-only-did-we",
+        "c1-grammar.seldom",
+        "c1-grammar.under-no-circumstances",
+        "gram.en-c1-cleft-sentences",
+        "c1-grammar.what-i-need-is",
+        "c1-grammar.it-was-maya-who",
+        "gram.en-c1-emphatic-do",
+        "c1-grammar.i-do-understand",
+        "c1-grammar.qa.cleft"
+      ]
+    },
+    {
+      "id": "c1-grammar.l.conditionals-modals",
+      "title": "Condicionales mixtos y modales con matiz",
+      "items": [
+        "gram.en-c1-mixed-conditionals",
+        "c1-grammar.if-id-taken-that-job",
+        "c1-grammar.if-i-were-more-organized",
+        "gram.en-c1-advanced-modals",
+        "c1-grammar.neednt-have",
+        "c1-grammar.you-neednt-have-brought",
+        "c1-grammar.would-rather",
+        "c1-grammar.id-rather-you-didnt",
+        "c1-grammar.had-better",
+        "c1-grammar.wed-better-leave-now",
+        "c1-grammar.qa.rather"
+      ]
+    },
+    {
+      "id": "c1-grammar.l.formal",
+      "title": "Registro formal: subjuntivo y oraciones de participio",
+      "items": [
+        "gram.en-c1-formal-subjunctive",
+        "c1-grammar.insist",
+        "c1-grammar.i-suggest-that-he-be",
+        "c1-grammar.it-is-essential-that",
+        "c1-grammar.we-recommend-that-she-not-sign",
+        "gram.en-c1-participle-clauses",
+        "c1-grammar.having-finished-the-report",
+        "c1-grammar.given",
+        "c1-grammar.given-the-circumstances",
+        "c1-grammar.anyone-wishing-to-attend",
+        "c1-grammar.qa.subjunctive"
+      ]
+    },
+    {
+      "id": "c1-grammar.l.softening-linking",
+      "title": "Suavizar, abreviar y conectar ideas",
+      "items": [
+        "gram.en-c1-hedging",
+        "c1-grammar.it-seems-that",
+        "c1-grammar.id-tend-to-think",
+        "c1-grammar.arguably",
+        "c1-grammar.somewhat",
+        "c1-grammar.presumably",
+        "c1-grammar.apparently",
+        "gram.en-c1-ellipsis-substitution",
+        "c1-grammar.i-hope-so-but",
+        "c1-grammar.she-said-she-would-and-she-did",
+        "c1-grammar.if-so",
+        "c1-grammar.if-not",
+        "c1-grammar.do-so",
+        "gram.en-c1-discourse-markers",
+        "c1-grammar.that-said",
+        "c1-grammar.that-said-its-a-risk",
+        "c1-grammar.on-the-whole",
+        "c1-grammar.on-the-whole-it-went-well",
+        "c1-grammar.by-and-large",
+        "c1-grammar.admittedly",
+        "c1-grammar.nonetheless",
+        "c1-grammar.mind-you",
+        "c1-grammar.qa.hedging"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.en-c1-inversion",
+      "title": "Inversión para dar énfasis (Never have I…)",
+      "summary": "Tras una expresión negativa o restrictiva al principio, el auxiliar va antes del sujeto, como en una pregunta: «Never have I seen…» = jamás he visto…",
+      "points": [
+        "Expresiones típicas: never, rarely, seldom, not only, no sooner, under no circumstances, only then, little.",
+        "Con presente o pasado simple aparece «do/does/did»: «Not only did we finish, we…».",
+        "Suena enfático y algo formal: perfecto en charlas, emails formales o para impresionar; en una charla de bar, mejor «I've never seen…».",
+        "No es una pregunta: la entonación baja al final."
+      ],
+      "table": [
+        ["normal", "con inversión"],
+        ["I have never seen such a mess.", "Never have I seen such a mess."],
+        ["We not only finished early, we…", "Not only did we finish early, we…"],
+        ["You must not share this.", "Under no circumstances should you share this."]
+      ],
+      "examples": [
+        { "text": "Never have I seen a launch go so smoothly.", "es": "Jamás he visto un lanzamiento salir tan bien." },
+        { "text": "Rarely do we get a second chance like this.", "es": "Pocas veces tenemos una segunda oportunidad así." }
+      ],
+      "tags": ["enfasis"]
+    },
+    {
+      "id": "gram.en-c1-cleft-sentences",
+      "title": "Frases escindidas (What I need is… / It was… that…)",
+      "summary": "Partes la frase en dos para poner el foco en una parte, igual que en español «Lo que necesito es…» o «Fue Maya quien…».",
+      "points": [
+        "«What» + sujeto + verbo + «is/was» + foco: «What I need is more time».",
+        "«It is/was» + foco + «that/who» + resto: «It was Maya who found the bug».",
+        "Con una acción como foco: «What we did was rewrite the backend» (verbo sin «to» o con él, ambos valen).",
+        "Muy útil para corregir: «It's not the price that worries me, it's the timeline»."
+      ],
+      "table": [
+        ["normal", "con foco"],
+        ["I need more time.", "What I need is more time."],
+        ["Maya found the bug.", "It was Maya who found the bug."],
+        ["The timeline worries me.", "It's the timeline that worries me."]
+      ],
+      "examples": [
+        { "text": "What I really need right now is a clear deadline.", "es": "Lo que de verdad necesito ahora es una fecha límite clara." },
+        { "text": "It was Maya who spotted the problem.", "es": "Fue Maya quien detectó el problema." }
+      ],
+      "tags": ["enfasis"]
+    },
+    {
+      "id": "gram.en-c1-emphatic-do",
+      "title": "Do enfático (I do understand)",
+      "summary": "En una frase afirmativa, «do/does/did» delante del verbo insiste en que algo es verdad, sobre todo para contradecir o tranquilizar: «I do understand» = de verdad que lo entiendo.",
+      "points": [
+        "do/does + verbo base en presente; did + verbo base en pasado: «She did call you».",
+        "El «do» se pronuncia fuerte y acentuado: «I DO understand».",
+        "Sirve para contradecir («But I did send it!») o para ser amable («Do sit down» = siéntate, por favor).",
+        "Equivale a «sí que…» o «de verdad que…» en español."
+      ],
+      "examples": [
+        { "text": "I do understand your concerns, but we need to decide today.", "es": "Entiendo de verdad tus dudas, pero tenemos que decidir hoy." },
+        { "text": "But I did send you the file yesterday!", "es": "¡Pero si te mandé el archivo ayer!" }
+      ],
+      "tags": ["enfasis"]
+    },
+    {
+      "id": "gram.en-c1-mixed-conditionals",
+      "title": "Condicionales mixtos (pasado → presente y al revés)",
+      "summary": "Mezclan tiempos: un pasado distinto con una consecuencia hoy («If I'd taken that job, I'd be living in Boston») o un rasgo de hoy que explica el pasado («If I were more organized, I wouldn't have missed it»).",
+      "points": [
+        "Pasado → presente: if + had + participio, would + verbo base.",
+        "Presente → pasado: if + pasado simple (were), would have + participio.",
+        "Fíjate en la referencia temporal de cada mitad: «now», «today», «yesterday» ayudan a elegir.",
+        "Como siempre, nunca «would» en la parte del «if»."
+      ],
+      "table": [
+        ["tipo", "condición", "resultado"],
+        ["pasado → presente", "If I had taken that job,", "I would be living in Boston now."],
+        ["presente → pasado", "If I were more organized,", "I wouldn't have missed the deadline."]
+      ],
+      "examples": [
+        { "text": "If I'd taken that job, I'd be living in Boston now.", "es": "Si hubiera aceptado ese trabajo, ahora estaría viviendo en Boston." },
+        { "text": "If she weren't so stubborn, she would have listened to us.", "es": "Si no fuera tan cabezota, nos habría escuchado." }
+      ],
+      "tags": ["condicionales"]
+    },
+    {
+      "id": "gram.en-c1-advanced-modals",
+      "title": "Modales con matiz: needn't have, would rather, had better",
+      "summary": "Tres modales para afinar: «needn't have» (lo hiciste y no hacía falta), «would rather» (preferencia) y «had better» (consejo con aviso).",
+      "points": [
+        "«You needn't have brought anything» = no hacía falta que trajeras nada (pero lo trajiste). En EE. UU. también «You didn't need to bring anything».",
+        "«I'd rather stay» = prefiero quedarme (verbo base, sin «to»). Con otra persona, pasado: «I'd rather you didn't tell her».",
+        "«You'd better leave now» = más vale que te vayas ya. «'d» aquí es «had», pero va seguido del verbo base, sin «to».",
+        "Negativos: «I'd rather not», «You'd better not»."
+      ],
+      "table": [
+        ["modal", "significado", "ejemplo"],
+        ["needn't have + participio", "no hacía falta (y se hizo)", "You needn't have waited."],
+        ["would rather + base", "preferir", "I'd rather walk."],
+        ["would rather + sujeto + pasado", "preferir que otro…", "I'd rather you didn't."],
+        ["had better + base", "más vale que", "We'd better hurry."]
+      ],
+      "examples": [
+        { "text": "You needn't have brought anything, but thank you!", "es": "No hacía falta que trajeras nada, ¡pero gracias!" },
+        { "text": "We'd better leave now, or we'll miss the train.", "es": "Más vale que nos vayamos ya o perderemos el tren." }
+      ],
+      "tags": ["modales"]
+    },
+    {
+      "id": "gram.en-c1-formal-subjunctive",
+      "title": "Subjuntivo formal (I suggest that he be…)",
+      "summary": "Tras verbos y expresiones de petición o necesidad (suggest, recommend, insist, it's essential that), el inglés formal usa el verbo base para todas las personas: «I suggest that he be informed».",
+      "points": [
+        "Verbos: suggest, recommend, insist, demand, request, propose + that + sujeto + verbo base.",
+        "Expresiones: it's essential / important / vital that + sujeto + verbo base.",
+        "Sin «-s» en tercera persona: «that she attend», no «that she attends»; y «be» para todos: «that he be».",
+        "Negativo con «not» delante, sin «do»: «We recommend that he not travel». Es muy habitual en inglés americano formal."
+      ],
+      "table": [
+        ["expresión", "ejemplo"],
+        ["suggest that", "I suggest that he be told today."],
+        ["insist that", "She insisted that everyone attend."],
+        ["it's essential that", "It's essential that the data be backed up."],
+        ["recommend that … not", "We recommend that she not sign yet."]
+      ],
+      "examples": [
+        { "text": "I suggest that he be informed before the meeting.", "es": "Propongo que se le informe antes de la reunión." },
+        { "text": "It's essential that every user update the app.", "es": "Es fundamental que todos los usuarios actualicen la app." }
+      ],
+      "tags": ["registro-formal"]
+    },
+    {
+      "id": "gram.en-c1-participle-clauses",
+      "title": "Oraciones de participio (Having finished…, Given…)",
+      "summary": "Una forma con -ing o participio sustituye a una frase entera con sujeto y verbo, y da un tono escrito y elegante: «Having finished the report, she left» = después de terminar el informe, se fue.",
+      "points": [
+        "-ing = acción a la vez o causa: «Feeling tired, I went home».",
+        "Having + participio = acción anterior: «Having read the contract, I signed it».",
+        "Participio solo = sentido pasivo: «Built in 1920, the house…» (construida en 1920).",
+        "Después de un nombre, sustituye a un relativo: «anyone wishing to attend» = cualquiera que desee asistir.",
+        "El sujeto de las dos partes debe ser el mismo."
+      ],
+      "table": [
+        ["frase completa", "con participio"],
+        ["After she had finished the report, she left.", "Having finished the report, she left."],
+        ["Because we didn't know the answer, we asked.", "Not knowing the answer, we asked."],
+        ["People who wish to attend should register.", "Anyone wishing to attend should register."]
+      ],
+      "examples": [
+        { "text": "Having finished the report, she finally logged off.", "es": "Después de terminar el informe, por fin se desconectó." },
+        { "text": "Given the circumstances, I think we made the right call.", "es": "Dadas las circunstancias, creo que tomamos la decisión correcta." }
+      ],
+      "tags": ["registro-formal"]
+    },
+    {
+      "id": "gram.en-c1-hedging",
+      "title": "Suavizar y matizar (It seems that…, I'd tend to…)",
+      "summary": "En inglés las opiniones tajantes suenan bruscas. Se suavizan con verbos, adverbios y condicionales: «It seems that…», «I'd tend to think…», «arguably».",
+      "points": [
+        "Verbos: it seems / appears that…, I'd tend to think…, I'd say…, I'm inclined to think…",
+        "Adverbios: arguably (se podría decir que), presumably (es de suponer), apparently (por lo visto), somewhat (algo, un tanto).",
+        "Modales y cantidades: might, could, may; a bit, slightly, to some extent.",
+        "Preguntas negativas para proponer: «Wouldn't it be better to…?».",
+        "Es lo habitual en reuniones, emails de trabajo y críticas: decir «This is wrong» puede sonar agresivo."
+      ],
+      "table": [
+        ["directo", "suavizado"],
+        ["This plan is wrong.", "I'm not sure this plan is quite right."],
+        ["The design is too complex.", "The design seems somewhat complex."],
+        ["We should wait.", "I'd tend to think we should wait."]
+      ],
+      "examples": [
+        { "text": "It seems that the new design is somewhat harder to use.", "es": "Parece que el nuevo diseño es algo más difícil de usar." },
+        { "text": "I'd tend to think we should wait another week.", "es": "Yo diría que deberíamos esperar otra semana." }
+      ],
+      "tags": ["matices"]
+    },
+    {
+      "id": "gram.en-c1-ellipsis-substitution",
+      "title": "Elipsis y sustitución (I hope so, I think not, do so)",
+      "summary": "Para no repetir, el inglés sustituye o corta: «so» y «not» reemplazan una frase, y un auxiliar solo basta para repetir un verbo: «She said she'd call, and she did».",
+      "points": [
+        "«so» tras think, hope, expect, guess, suppose: «I think so», «I hope so». Negativo: «I don't think so», «I hope not».",
+        "«if so» = en ese caso, si es así; «if not» = si no.",
+        "Auxiliar solo para no repetir el verbo: «I can't swim, but she can», «He said he'd help, and he did».",
+        "«do so» = hacerlo (formal): «Anyone who wants to leave may do so».",
+        "Error típico: «I think yes» o «I hope it» no existen."
+      ],
+      "table": [
+        ["en español", "en inglés"],
+        ["Creo que sí / que no", "I think so / I don't think so"],
+        ["Espero que sí / que no", "I hope so / I hope not"],
+        ["Dijo que llamaría, y llamó.", "She said she'd call, and she did."]
+      ],
+      "examples": [
+        { "text": "Will we make the deadline? I hope so, but I'm not sure.", "es": "¿Llegaremos a la fecha? Espero que sí, pero no estoy seguro." },
+        { "text": "She said she'd fix it by Monday, and she did.", "es": "Dijo que lo arreglaría para el lunes, y lo hizo." }
+      ],
+      "tags": ["matices"]
+    },
+    {
+      "id": "gram.en-c1-discourse-markers",
+      "title": "Marcadores del discurso (that said, on the whole, by and large)",
+      "summary": "Pequeñas expresiones que ordenan lo que dices y dan naturalidad: «That said, …» = dicho esto; «On the whole» = en general; «Mind you» = eso sí.",
+      "points": [
+        "Contraste: that said, having said that, nonetheless, mind you (coloquial), admittedly (hay que reconocer que).",
+        "Generalizar: on the whole, by and large, overall, all in all.",
+        "Van al principio de la frase, normalmente seguidos de coma.",
+        "Al hablar, una pausa breve después del marcador suena muy natural."
+      ],
+      "table": [
+        ["marcador", "en español", "registro"],
+        ["That said, …", "Dicho esto, …", "neutro"],
+        ["On the whole, …", "En general, …", "neutro"],
+        ["By and large, …", "En líneas generales, …", "neutro"],
+        ["Nonetheless, …", "No obstante, …", "formal"],
+        ["Mind you, …", "Eso sí, …", "coloquial"]
+      ],
+      "examples": [
+        { "text": "On the whole, the launch went really well.", "es": "En general, el lanzamiento salió muy bien." },
+        { "text": "That said, it's still a risk we need to manage.", "es": "Dicho esto, sigue siendo un riesgo que tenemos que gestionar." }
+      ],
+      "tags": ["conectores"]
+    }
+  ],
+  "phrases": [
+    { "id": "c1-grammar.never-have-i-seen", "text": "Never have I seen a launch go so smoothly.", "es": "Jamás he visto un lanzamiento salir tan bien.", "notes": "Inversión: «Never» al principio, luego «have» + sujeto. «smoothly» = sin problemas.", "explanation": "Para dar énfasis en un discurso o un email de felicitación. «smoothly» = «SMUUÐ-li», con «th» sonora.", "register": "formal", "situation": "gramatica", "tags": ["enfasis"] },
+    { "id": "c1-grammar.not-only-did-we", "text": "Not only did we finish early, but we also came in under budget.", "es": "No solo terminamos antes, sino que además gastamos menos de lo previsto.", "notes": "«Not only did we…, but we also…». «come in under budget» = costar menos de lo presupuestado.", "explanation": "Para presentar resultados con fuerza. «did we» se une: «DID-wi».", "register": "formal", "situation": "gramatica", "tags": ["enfasis"] },
+    { "id": "c1-grammar.what-i-need-is", "text": "What I really need right now is a clear deadline.", "es": "Lo que de verdad necesito ahora es una fecha límite clara.", "notes": "Frase escindida: «What I need is…» pone el foco en lo que viene después de «is».", "explanation": "Para pedir algo con claridad en una reunión. «right now» se une: «RAIT-nau».", "register": "neutral", "situation": "gramatica", "tags": ["enfasis"] },
+    { "id": "c1-grammar.it-was-maya-who", "text": "It was Maya who spotted the problem, not me.", "es": "Fue Maya quien detectó el problema, no yo.", "notes": "«It was… who…» = fue… quien… «spot» = detectar, darse cuenta.", "explanation": "Para dar el mérito a quien corresponde. Acento fuerte en «MAYA».", "register": "neutral", "situation": "gramatica", "tags": ["enfasis"] },
+    { "id": "c1-grammar.i-do-understand", "text": "I do understand your concerns, but we need to decide today.", "es": "Entiendo de verdad tus dudas, pero tenemos que decidir hoy.", "notes": "«do» enfático: insiste en que es verdad.", "explanation": "Para tranquilizar a alguien antes de un «pero». Acentúa el «do»: «ai DUU un-dər-STAND».", "register": "neutral", "situation": "gramatica", "tags": ["enfasis"] },
+    { "id": "c1-grammar.if-id-taken-that-job", "text": "If I'd taken that job, I'd be living in Boston now.", "es": "Si hubiera aceptado ese trabajo, ahora estaría viviendo en Boston.", "notes": "Condicional mixto: pasado distinto («I'd taken» = I had taken) con consecuencia hoy («I'd be» = I would be).", "explanation": "Para imaginar otra vida. Los dos «I'd» suenan igual: «aid»; el contexto dice cuál es cuál.", "register": "neutral", "situation": "gramatica", "tags": ["condicionales"] },
+    { "id": "c1-grammar.if-i-were-more-organized", "text": "If I were more organized, I wouldn't have missed the deadline.", "es": "Si fuera más organizado, no me habría saltado la fecha límite.", "notes": "Condicional mixto: rasgo de hoy («were») que explica algo pasado («wouldn't have missed»).", "explanation": "Para reconocer un fallo con autocrítica. «organized» = «OR-gə-naizd», con «z».", "register": "neutral", "situation": "gramatica", "tags": ["condicionales"] },
+    { "id": "c1-grammar.you-neednt-have-brought", "text": "Oh, you needn't have brought anything, but thank you!", "es": "Ay, no hacía falta que trajeras nada, ¡pero gracias!", "notes": "«needn't have» + participio = lo hiciste, pero no era necesario.", "explanation": "Cuando un invitado llega con un regalo. «needn't» = «NII-dnt», la «d» casi se traga.", "register": "neutral", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "c1-grammar.id-rather-you-didnt", "text": "I'd rather you didn't mention it to the client yet.", "es": "Preferiría que no se lo mencionaras al cliente todavía.", "notes": "«would rather» + otra persona + pasado: «I'd rather you didn't» = preferiría que no.", "explanation": "Para pedir algo con tacto. «rather» = «RÆ-ðər», con «th» sonora.", "register": "neutral", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "c1-grammar.wed-better-leave-now", "text": "We'd better leave now, or we'll miss the train.", "es": "Más vale que nos vayamos ya o perderemos el tren.", "notes": "«had better» + verbo base (sin «to») = más vale que. «'d» aquí es «had».", "explanation": "Para avisar con urgencia. «We'd better» se une: «wid-BE-dər», con flap t.", "register": "neutral", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "c1-grammar.i-suggest-that-he-be", "text": "I suggest that he be informed before the meeting.", "es": "Propongo que se le informe antes de la reunión.", "notes": "Subjuntivo formal: «suggest that» + sujeto + verbo base («be», no «is»).", "explanation": "Para emails o reuniones formales. «suggest» en EE. UU. = «səg-JEST».", "register": "formal", "situation": "gramatica", "tags": ["registro-formal"] },
+    { "id": "c1-grammar.it-is-essential-that", "text": "It's essential that every user update the app before Friday.", "es": "Es fundamental que todos los usuarios actualicen la app antes del viernes.", "notes": "«It's essential that» + verbo base: «update», sin «-s».", "explanation": "Típico de avisos oficiales. «essential» = «i-SEN-shəl», acento en la segunda sílaba.", "register": "formal", "situation": "gramatica", "tags": ["registro-formal"] },
+    { "id": "c1-grammar.we-recommend-that-she-not-sign", "text": "We strongly recommend that she not sign the contract yet.", "es": "Le recomendamos encarecidamente que no firme el contrato todavía.", "notes": "Negativo del subjuntivo: «not» + verbo base, sin «does».", "explanation": "Lenguaje de abogados o asesores. «strongly» con «str» sin «e» delante.", "register": "formal", "situation": "gramatica", "tags": ["registro-formal"] },
+    { "id": "c1-grammar.having-finished-the-report", "text": "Having finished the report, she finally logged off.", "es": "Después de terminar el informe, por fin se desconectó.", "notes": "«Having» + participio = acción terminada antes de la otra. «log off» = desconectarse.", "explanation": "Más propio de lo escrito o de contar una historia. «finished» termina en /t/: «FI-nisht».", "register": "neutral", "situation": "gramatica", "tags": ["registro-formal"] },
+    { "id": "c1-grammar.given-the-circumstances", "text": "Given the circumstances, I think we made the right call.", "es": "Dadas las circunstancias, creo que tomamos la decisión correcta.", "notes": "«Given» = dado, teniendo en cuenta. «make the right call» = acertar con una decisión.", "explanation": "Para justificar una decisión difícil. «circumstances» = «SER-kəm-stæn-siz».", "register": "neutral", "situation": "gramatica", "tags": ["registro-formal"] },
+    { "id": "c1-grammar.anyone-wishing-to-attend", "text": "Anyone wishing to attend should register by Monday.", "es": "Quien desee asistir debe inscribirse antes del lunes.", "notes": "«wishing» sustituye a «who wishes». «attend» = asistir (no «atender»).", "explanation": "Lenguaje de avisos y emails formales. «register» = «RE-jis-tər».", "register": "formal", "situation": "gramatica", "tags": ["registro-formal"] },
+    { "id": "c1-grammar.it-seems-that", "text": "It seems that the new design is somewhat harder to use.", "es": "Parece que el nuevo diseño es algo más difícil de usar.", "notes": "«It seems that» y «somewhat» suavizan una crítica.", "explanation": "Para dar feedback sin herir a nadie. «somewhat» = «SAM-wat».", "register": "neutral", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.id-tend-to-think", "text": "I'd tend to think we should wait another week.", "es": "Yo diría que deberíamos esperar otra semana.", "notes": "«I'd tend to think» = me inclino a pensar: opinión firme, pero educada.", "explanation": "Para opinar ante gente con más rango. «I'd tend» se une: «ai-TEND».", "register": "neutral", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.i-hope-so-but", "text": "Will we make the deadline? I hope so, but I'm not sure.", "es": "¿Llegaremos a la fecha? Espero que sí, pero no estoy seguro.", "notes": "«I hope so» = espero que sí; «I hope not» = espero que no. Nunca «I hope yes».", "explanation": "Respuesta corta y natural. «hope so» se une: «HOUP-sou».", "register": "neutral", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.she-said-she-would-and-she-did", "text": "She said she'd fix it by Monday, and she did.", "es": "Dijo que lo arreglaría para el lunes, y lo hizo.", "notes": "«and she did» = y lo hizo: el auxiliar solo evita repetir «fixed it».", "explanation": "Para reconocer que alguien cumplió. Acento fuerte en el último «DID».", "register": "neutral", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.that-said-its-a-risk", "text": "That said, it's still a risk we need to manage.", "es": "Dicho esto, sigue siendo un riesgo que tenemos que gestionar.", "notes": "«That said» = dicho esto: introduce un contraste tras algo positivo.", "explanation": "Para matizar sin contradecir del todo. Pequeña pausa tras «That said».", "register": "neutral", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "c1-grammar.on-the-whole-it-went-well", "text": "On the whole, the launch went really well.", "es": "En general, el lanzamiento salió muy bien.", "notes": "«On the whole» = en general, en conjunto.", "explanation": "Para resumir un balance. «whole» suena igual que «hole»: «houl», la «w» no suena.", "register": "neutral", "situation": "gramatica", "tags": ["conectores"] }
+  ],
+  "vocab": [
+    { "id": "c1-grammar.seldom", "word": "seldom", "es": "rara vez", "notes": "Formal, como «rarely». Al principio provoca inversión: «Seldom do we…».", "situation": "gramatica", "tags": ["enfasis"] },
+    { "id": "c1-grammar.under-no-circumstances", "word": "under no circumstances", "es": "bajo ningún concepto", "notes": "Al principio provoca inversión: «Under no circumstances should you…».", "situation": "gramatica", "tags": ["enfasis"] },
+    { "id": "c1-grammar.neednt-have", "word": "needn't have", "es": "no hacía falta (y se hizo)", "notes": "+ participio: «You needn't have worried» = no hacía falta que te preocuparas.", "example": "c1-grammar.you-neednt-have-brought", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "c1-grammar.would-rather", "word": "would rather", "es": "preferiría", "notes": "+ verbo base: «I'd rather walk». Con otra persona + pasado: «I'd rather you stayed».", "example": "c1-grammar.id-rather-you-didnt", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "c1-grammar.had-better", "word": "had better", "es": "más vale que", "notes": "+ verbo base, sin «to»: «You'd better hurry». Lleva un aviso implícito.", "example": "c1-grammar.wed-better-leave-now", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "c1-grammar.insist", "word": "insist", "es": "insistir, exigir", "notes": "«insist on» + -ing, o «insist that» + verbo base: «She insisted that he come».", "situation": "gramatica", "tags": ["registro-formal"] },
+    { "id": "c1-grammar.given", "word": "given", "es": "dado, teniendo en cuenta", "notes": "Al principio de la frase: «Given the delay, …» = dado el retraso.", "example": "c1-grammar.given-the-circumstances", "situation": "gramatica", "tags": ["registro-formal"] },
+    { "id": "c1-grammar.arguably", "word": "arguably", "es": "se podría decir que, posiblemente", "notes": "Presenta una opinión como discutible pero defendible: «It's arguably the best option».", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.somewhat", "word": "somewhat", "es": "algo, un tanto", "notes": "Más formal que «a bit»: «somewhat complex».", "example": "c1-grammar.it-seems-that", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.presumably", "word": "presumably", "es": "es de suponer, supuestamente", "notes": "Lo que lógicamente esperas: «Presumably, they'll call us».", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.apparently", "word": "apparently", "es": "por lo visto, al parecer", "notes": "No significa «aparentemente» en el sentido de «a simple vista»: indica que te lo han contado.", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.if-so", "word": "if so", "es": "en ese caso, si es así", "notes": "Sustituye a toda una frase: «Is it urgent? If so, call me».", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.if-not", "word": "if not", "es": "si no, en caso contrario", "notes": "«Are you coming? If not, let me know».", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.do-so", "word": "do so", "es": "hacerlo", "notes": "Formal, para no repetir un verbo: «Anyone who wants to leave may do so».", "situation": "gramatica", "tags": ["matices"] },
+    { "id": "c1-grammar.that-said", "word": "that said", "es": "dicho esto", "notes": "Igual que «having said that». Va al principio y con coma.", "example": "c1-grammar.that-said-its-a-risk", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "c1-grammar.on-the-whole", "word": "on the whole", "es": "en general, en conjunto", "example": "c1-grammar.on-the-whole-it-went-well", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "c1-grammar.by-and-large", "word": "by and large", "es": "en líneas generales", "notes": "Expresión fija: «By and large, people liked it».", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "c1-grammar.admittedly", "word": "admittedly", "es": "hay que reconocer que", "notes": "Concede un punto antes de rebatir: «Admittedly, it's expensive, but…».", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "c1-grammar.nonetheless", "word": "nonetheless", "es": "no obstante, aun así", "notes": "Formal, como «however» o «even so».", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "c1-grammar.mind-you", "word": "mind you", "es": "eso sí, aunque", "notes": "Coloquial, añade una matización: «It's a great place. Mind you, it's not cheap».", "situation": "gramatica", "tags": ["conectores"] }
+  ],
+  "qa": [
+    {
+      "id": "c1-grammar.qa.cleft",
+      "question": "So what's the main problem? Is it the price?",
+      "questionEs": "Entonces, ¿cuál es el problema principal? ¿Es el precio?",
+      "accepted": [
+        { "text": "It's not the price that worries me, it's the timeline.", "es": "No es el precio lo que me preocupa, es el calendario." },
+        { "text": "No, what I really need is a clear deadline.", "es": "No, lo que de verdad necesito es una fecha límite clara." }
+      ],
+      "distractors": [
+        { "text": "Is not the price what worries me, is the timeline.", "es": "No es el precio lo que me preocupa, es el calendario." },
+        { "text": "No, what I really need it is a clear deadline.", "es": "No, lo que de verdad necesito es una fecha límite clara." }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "En inglés nunca falta el sujeto: «It's not…», no «Is not…»; y tras «What I need» no se repite «it».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-grammar.qa.rather",
+      "question": "Shall we take a taxi to the restaurant?",
+      "questionEs": "¿Cogemos un taxi al restaurante?",
+      "accepted": [
+        { "text": "I'd rather walk, if you don't mind. It's a nice evening.", "es": "Prefiero ir andando, si no te importa. Hace una tarde estupenda." },
+        { "text": "We'd better take one, or we'll be late.", "es": "Más vale que cojamos uno, o llegaremos tarde." }
+      ],
+      "distractors": [
+        { "text": "I'd rather to walk, if you don't mind.", "es": "Prefiero ir andando, si no te importa." },
+        { "text": "We'd better to take one, or we'll be late.", "es": "Más vale que cojamos uno, o llegaremos tarde." }
+      ],
+      "register": "tu",
+      "situation": "gramatica",
+      "notes": "«would rather» y «had better» van con el verbo base, nunca con «to».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-grammar.qa.subjunctive",
+      "question": "The client hasn't been told about the delay. What do you suggest?",
+      "questionEs": "Al cliente no le han contado lo del retraso. ¿Qué propones?",
+      "accepted": [
+        { "text": "I suggest that he be informed before the meeting.", "es": "Propongo que se le informe antes de la reunión." },
+        { "text": "It's essential that someone call him today.", "es": "Es fundamental que alguien le llame hoy." }
+      ],
+      "distractors": [
+        { "text": "I suggest to inform him before the meeting.", "es": "Sugiero informarle antes de la reunión." },
+        { "text": "It's essential that somebody calls to him today.", "es": "Es fundamental que alguien le llame hoy." }
+      ],
+      "register": "formal",
+      "situation": "gramatica",
+      "notes": "«suggest» nunca va con «to» + verbo; tras «It's essential that» va el verbo base («call», sin «-s»), y «call» no lleva «to».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-grammar.qa.hedging",
+      "question": "What did you think of the new onboarding flow?",
+      "questionEs": "¿Qué te pareció el nuevo flujo de bienvenida?",
+      "accepted": [
+        { "text": "On the whole, I liked it. That said, it seems somewhat long.", "es": "En general, me gustó. Dicho esto, parece algo largo." },
+        { "text": "I'd tend to think it's a bit too long, but the design is great.", "es": "Yo diría que es un poco largo, pero el diseño es genial." }
+      ],
+      "distractors": [
+        { "text": "In general I liked it. Said this, it is a little long.", "es": "En general me gustó. Dicho esto, es un poco largo." },
+        { "text": "Is too long, I think yes.", "es": "Es demasiado largo, creo que sí." }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "«dicho esto» = «that said», no «said this»; «creo que sí» = «I think so»; y siempre con sujeto: «It's too long».",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "dlg.en-c1-dinner-party",
+  "title": "Bromas en una cena",
+  "description": "En una cena con amigos, un invitado te toma el pelo por tu manera de cocinar; le sigues la broma con expresiones naturales.",
+  "situation": "social",
+  "unit": "c1-idioms",
+  "order": 311,
+  "register": "tu",
+  "level": "C1",
+  "avatars": { "Invitado": "fluent:man-cook" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Invitado", "text": "So, Hernán, I hear you made the paella. Should we be worried, or is this a family recipe?", "es": "Entonces, Hernán, me han dicho que has hecho tú la paella. ¿Deberíamos preocuparnos o es una receta familiar?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Síguele la broma: di que es de tu abuela, pero que no te hagas responsable de nada.",
+      "options": [
+        { "text": "It's my grandma's recipe, but I'm not making any promises. Eat at your own risk!", "es": "Es la receta de mi abuela, pero no prometo nada. ¡Comed bajo vuestra responsabilidad!", "verdict": "correct", "feedback": "¡Muy bien! «at your own risk» = bajo tu responsabilidad; sigues la broma riéndote de ti mismo." },
+        { "text": "It's a family recipe.", "es": "Es una receta familiar.", "verdict": "acceptable", "feedback": "Correcto, pero él te está tomando el pelo; seguirle la broma queda más natural." },
+        { "text": "It's my grandma's recipe, but I'm not doing any promises. Eat under your own responsibility!", "es": "Es la receta de mi abuela, pero no prometo nada. ¡Comed bajo vuestra responsabilidad!", "verdict": "wrong", "feedback": "Se dice «make a promise», no «do», y «bajo tu responsabilidad» es «at your own risk»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Invitado", "text": "Wow, okay, this is actually amazing. You've been holding out on us!", "es": "Vaya, pues está buenísima. ¡Nos lo tenías escondido!", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Bromea diciendo que es tu arma secreta y que no la sacas para cualquiera.",
+      "options": [
+        { "text": "What can I say? It's my secret weapon. I don't break it out for just anyone.", "es": "¿Qué quieres que te diga? Es mi arma secreta. No la saco para cualquiera.", "verdict": "correct", "feedback": "¡Perfecto! «break it out» = sacarlo para una ocasión; «just anyone» = cualquiera." },
+        { "text": "Thanks, I'm glad you like it.", "es": "Gracias, me alegro de que te guste.", "verdict": "acceptable", "feedback": "Educado y correcto, aunque más serio que el tono de la cena." },
+        { "text": "What can I say? It's my secret weapon. I don't take it out for anyone.", "es": "¿Qué quieres que te diga? Es mi arma secreta. No la saco para cualquiera.", "verdict": "wrong", "feedback": "«for anyone» en negativa significa «para nadie»; «cualquiera» aquí es «just anyone»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Invitado", "text": "Well, next time we're doing tacos at my place, and the bar is now officially high.", "es": "Bueno, la próxima vez hacemos tacos en mi casa, y el listón está oficialmente alto.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Acepta el reto con humor: di que ahí estarás y que no tienes ninguna presión.",
+      "options": [
+        { "text": "Count me in. No pressure, right?", "es": "Cuenta conmigo. Sin presión, ¿eh?", "verdict": "correct", "feedback": "¡Genial! «Count me in» = cuenta conmigo; «No pressure, right?» es ironía amable que cierra la broma." },
+        { "text": "Yes, I will go.", "es": "Sí, iré.", "verdict": "acceptable", "feedback": "Correcto, pero muy plano para una conversación de bromas." },
+        { "text": "Count with me. No pressure, right?", "es": "Cuenta conmigo. Sin presión, ¿eh?", "verdict": "wrong", "feedback": "«Cuenta conmigo» es «Count me in» (para un plan) o «You can count on me»; «count with me» es un calco." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Invitado", "text": "Ha! You'll be fine. Now pass me that pan before it disappears.", "es": "¡Ja! Te irá bien. Ahora pásame esa paellera antes de que desaparezca.", "voice": "en-US-AndrewNeural" }
+  ]
+}

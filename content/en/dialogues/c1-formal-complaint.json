@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-c1-formal-complaint",
+  "title": "Una reclamación formal por teléfono",
+  "description": "Te han cobrado dos veces la cuota anual y llamas por tercera vez; reclamas con firmeza y pides que lo escalen.",
+  "situation": "dinero",
+  "unit": "c1-problems",
+  "order": 307,
+  "register": "formal",
+  "level": "C1",
+  "avatars": { "Agente": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Agente", "text": "Thank you for calling Northline Bank. How may I help you today?", "es": "Gracias por llamar a Northline Bank. ¿En qué puedo ayudarle hoy?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que te han cobrado dos veces la cuota anual y que es la tercera vez que llamas por lo mismo.",
+      "options": [
+        { "text": "I've been charged the annual fee twice, and this is the third time I've called about it.", "es": "Me han cobrado dos veces la cuota anual, y es la tercera vez que llamo por esto.", "verdict": "correct", "feedback": "¡Muy bien! La pasiva «I've been charged» es natural, y tras «the third time» va present perfect." },
+        { "text": "You charged me two times. Again.", "es": "Me han cobrado dos veces. Otra vez.", "verdict": "acceptable", "feedback": "Se entiende tu enfado, pero falta información; explica qué cargo y desde cuándo." },
+        { "text": "They've charged me the annual quota twice, and this is the third time I call about it.", "es": "Me han cobrado dos veces la cuota anual, y es la tercera vez que llamo por esto.", "verdict": "wrong", "feedback": "Una cuota que se paga es «fee» («quota» es un cupo), y tras «the third time» va «I've called»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Agente", "text": "I'm sorry to hear that. I can see the duplicate charge. Refunds usually take seven to ten business days.", "es": "Siento oír eso. Veo el cargo duplicado. Los reembolsos suelen tardar de siete a diez días hábiles.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di con firmeza que eso mismo te dijeron hace un mes y que no es aceptable.",
+      "options": [
+        { "text": "With all due respect, that's exactly what I was told a month ago. Frankly, that's not acceptable.", "es": "Con el debido respeto, eso es exactamente lo que me dijeron hace un mes. Sinceramente, no es aceptable.", "verdict": "correct", "feedback": "¡Perfecto! «With all due respect» marca firmeza sin perder la cortesía; «I was told» = me dijeron." },
+        { "text": "That's not acceptable!", "es": "¡Eso no es aceptable!", "verdict": "acceptable", "feedback": "Firme, pero sin el dato clave: que ya te prometieron lo mismo." },
+        { "text": "With all due respect, that's exactly what they told me since a month. Frankly, that's not acceptable.", "es": "Con el debido respeto, eso es exactamente lo que me dijeron hace un mes. Sinceramente, no es aceptable.", "verdict": "wrong", "feedback": "«Hace un mes» es «a month ago»; «since» marca el inicio de algo que continúa." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Agente", "text": "I completely understand your frustration. Unfortunately, I'm not authorized to speed it up.", "es": "Entiendo perfectamente su frustración. Por desgracia, no estoy autorizado para agilizarlo.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pide que lo escalen a un supervisor y que te den un número de referencia.",
+      "options": [
+        { "text": "In that case, I'd like this escalated to a supervisor, and could I get a reference number, please?", "es": "En ese caso, quiero que esto se escale a un supervisor, y ¿podría darme un número de referencia, por favor?", "verdict": "correct", "feedback": "¡Genial! «I'd like this escalated» es firme y formal; el número de referencia deja constancia." },
+        { "text": "Can I talk to your boss?", "es": "¿Puedo hablar con su jefe?", "verdict": "acceptable", "feedback": "Se entiende, pero «boss» suena informal; «a supervisor» y pedir referencia es más eficaz." },
+        { "text": "In that case, I'd like that you escalate this to a supervisor, and could I get a reference number, please?", "es": "En ese caso, quiero que escale esto a un supervisor, y ¿podría darme un número de referencia, por favor?", "verdict": "wrong", "feedback": "«I'd like that you…» es un calco de «quiero que»; en inglés es «I'd like you to escalate» o «I'd like this escalated»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Agente", "text": "Of course. Your reference is C-four-one-seven. A supervisor will call you back within twenty-four hours.", "es": "Por supuesto. Su referencia es C cuatro uno siete. Un supervisor le devolverá la llamada en veinticuatro horas.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Agradécele su ayuda y deja claro que, si no te llaman, presentarás una queja formal.",
+      "options": [
+        { "text": "Thank you for your help. If I don't hear back by then, I'll be filing a formal complaint.", "es": "Gracias por su ayuda. Si no tengo noticias para entonces, presentaré una queja formal.", "verdict": "correct", "feedback": "¡Muy bien! «hear back» = recibir respuesta; «file a complaint» = presentar una queja. Firme y educado." },
+        { "text": "Okay, thank you.", "es": "Vale, gracias.", "verdict": "acceptable", "feedback": "Educado, pero no deja claro qué harás si no cumplen." },
+        { "text": "Thank you for your help. If I won't hear back by then, I'll be putting a formal complaint.", "es": "Gracias por su ayuda. Si no tengo noticias para entonces, presentaré una queja formal.", "verdict": "wrong", "feedback": "Tras «if» va presente («If I don't hear back»), y una queja se «files» o «makes», no se «puts»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Agente", "text": "Understood. Again, I apologize for the inconvenience.", "es": "Entendido. Una vez más, le pido disculpas por las molestias.", "voice": "en-US-AndrewNeural" }
+  ]
+}

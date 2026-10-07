@@ -1,0 +1,398 @@
+{
+  "id": "b2-relationships",
+  "order": 250,
+  "level": "B2",
+  "title": "Relaciones: sentimientos, malentendidos, resolver conflictos",
+  "description": "Decir cómo te sientes, aclarar un malentendido, discutir sin pelearte, pedir perdón y hacer las paces, y hablar de tu pareja, tu familia y tus amigos.",
+  "emoji": "💞",
+  "situation": "social",
+  "lessons": [
+    {
+      "id": "b2-relationships.l.feelings",
+      "title": "Decir cómo te sientes",
+      "items": [
+        "b2-relationships.feeling",
+        "b2-relationships.i-feel-like-youre-not-listening",
+        "b2-relationships.hurt",
+        "b2-relationships.it-really-hurt-my-feelings",
+        "b1-stories.upset",
+        "b2-relationships.what-are-you-so-upset-about",
+        "b2-relationships.annoyed",
+        "b2-relationships.it-really-gets-on-my-nerves",
+        "b2-relationships.im-fed-up-with-doing-the-dishes",
+        "b2-relationships.jealous",
+        "b2-relationships.ill-admit-im-a-little-jealous",
+        "b2-relationships.left-out",
+        "b2-relationships.i-cant-help-feeling-left-out",
+        "b2-relationships.grateful",
+        "b2-relationships.it-means-a-lot-to-me",
+        "b2-relationships.i-was-over-the-moon",
+        "b2-relationships.qa.down",
+        "b2-relationships.qa.bothers-you"
+      ]
+    },
+    {
+      "id": "b2-relationships.l.misunderstandings",
+      "title": "Malentendidos: aclarar lo que querías decir",
+      "items": [
+        "b2-relationships.misunderstanding",
+        "b2-relationships.i-think-theres-been-a-misunderstanding",
+        "b2-relationships.thats-not-what-i-meant",
+        "b2-relationships.what-i-meant-was",
+        "b2-relationships.i-didnt-mean-it-like-that",
+        "b2-relationships.it-came-out-wrong",
+        "b2-relationships.tone",
+        "b2-relationships.its-hard-to-tell-tone-over-text",
+        "b2-relationships.you-took-it-the-wrong-way",
+        "b2-relationships.i-was-only-joking",
+        "b2-opinions.assumption",
+        "b2-relationships.i-just-assumed-youd-be-okay",
+        "b2-relationships.mad",
+        "b2-relationships.i-thought-you-were-mad-at-me",
+        "b2-relationships.mix-up",
+        "b2-relationships.lets-clear-this-up",
+        "b2-relationships.qa.meant",
+        "b2-relationships.qa.mad"
+      ]
+    },
+    {
+      "id": "b2-relationships.l.conflict",
+      "title": "Discutir sin pelearte",
+      "items": [
+        "b2-relationships.fight",
+        "b2-relationships.we-had-a-big-fight",
+        "b2-opinions.argument",
+        "b2-relationships.we-had-an-argument-about-money",
+        "b2-relationships.can-we-talk-about-what-happened",
+        "b2-relationships.lets-both-calm-down",
+        "b2-relationships.i-hear-what-youre-saying",
+        "b2-relationships.try-to-see-it-from-my-side",
+        "b2-relationships.blame",
+        "b2-relationships.im-not-blaming-you",
+        "b2-relationships.its-not-about-whos-right",
+        "b2-relationships.compromise",
+        "b2-relationships.maybe-we-can-meet-halfway",
+        "b2-relationships.space",
+        "b2-relationships.i-just-need-some-space",
+        "b2-relationships.boundary",
+        "b2-opinions.lets-agree-to-disagree",
+        "b2-relationships.we-sorted-it-out",
+        "b2-relationships.qa.what-happened",
+        "b2-relationships.qa.solve-it"
+      ]
+    },
+    {
+      "id": "b2-relationships.l.apologizing",
+      "title": "Pedir perdón y hacer las paces",
+      "items": [
+        "b2-relationships.apology",
+        "b2-relationships.i-owe-you-an-apology",
+        "b2-relationships.overreact",
+        "b2-relationships.im-sorry-i-overreacted",
+        "b2-relationships.i-shouldnt-have-said-that",
+        "b2-grammar.i-wish-i-hadnt-said-that",
+        "b2-relationships.i-didnt-mean-to-upset-you",
+        "b2-relationships.fault",
+        "b2-relationships.it-was-totally-my-fault",
+        "b2-relationships.i-take-full-responsibility",
+        "b2-relationships.forgive",
+        "b2-relationships.i-hope-you-can-forgive-me",
+        "b1-plans.let-me-make-it-up-to-you",
+        "b2-relationships.no-hard-feelings",
+        "b2-relationships.its-water-under-the-bridge",
+        "b2-relationships.make-up",
+        "b2-relationships.we-talked-for-hours-and-made-up",
+        "b2-relationships.trust",
+        "b2-relationships.itll-take-time-to-trust-him-again",
+        "b2-relationships.qa.apology",
+        "b2-relationships.qa.fault"
+      ]
+    },
+    {
+      "id": "b2-relationships.l.people",
+      "title": "Pareja, familia y amigos de verdad",
+      "items": [
+        "b2-relationships.relationship",
+        "b2-relationships.relationships-take-work",
+        "b2-relationships.partner",
+        "b2-relationships.weve-been-together-for-five-years",
+        "b2-relationships.shes-seeing-someone-new",
+        "b2-relationships.engaged",
+        "b2-relationships.they-just-got-engaged",
+        "b2-relationships.wedding",
+        "b2-relationships.were-getting-married-next-summer",
+        "b2-relationships.breakup",
+        "b2-relationships.they-broke-up-a-few-months-ago",
+        "b2-relationships.ex",
+        "b2-relationships.were-still-on-good-terms",
+        "b2-relationships.in-laws",
+        "b2-grammar.get-along-with",
+        "b2-relationships.i-get-along-with-my-in-laws",
+        "b2-relationships.close",
+        "b2-relationships.were-really-close",
+        "b2-relationships.we-drifted-apart",
+        "b2-relationships.he-always-has-my-back",
+        "b2-relationships.qa.together",
+        "b2-relationships.qa.close"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-relationships.i-feel-like-youre-not-listening", "text": "I feel like you're not really listening to me.", "es": "Siento que no me estás escuchando de verdad.", "notes": "«I feel like» + frase = tengo la sensación de que… Hablar de lo que sientes («I feel») suena menos acusador que «You never listen».", "explanation": "Para decirle algo delicado a tu pareja o a un amigo. «listening» sin la «t»: «LI-sə-ning».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.it-really-hurt-my-feelings", "text": "It really hurt my feelings.", "es": "Me dolió mucho, la verdad.", "literal": "Realmente hirió mis sentimientos.", "notes": "«hurt someone's feelings» = herir a alguien. «hurt» es igual en presente y pasado.", "explanation": "Cuando algo que te dijeron te sentó mal. «hurt» = «hərt», con la «r» americana, sin vocal clara.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.what-are-you-so-upset-about", "text": "What are you so upset about?", "es": "¿Por qué estás tan disgustado?", "notes": "En inglés la preposición va al final: «upset about something». «What… about?» = ¿por qué…?", "explanation": "Para preguntar con cariño qué pasa. «upset» lleva el acento al final: «ap-SET».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.it-really-gets-on-my-nerves", "text": "It really gets on my nerves when he's late.", "es": "Me pone de los nervios que llegue tarde.", "notes": "«get on someone's nerves» = sacar de quicio, poner de los nervios. Con «on», no «in».", "explanation": "Para quejarte de una manía de alguien. «nerves» = «nərvz», la «s» final suena como «z».", "register": "neutral", "situation": "social", "tags": ["idioms"] },
+    { "id": "b2-relationships.im-fed-up-with-doing-the-dishes", "text": "I'm fed up with always doing the dishes.", "es": "Estoy harto de fregar siempre los platos.", "notes": "«be fed up with» + nombre o -ing = estar harto de. «do the dishes» = fregar los platos.", "explanation": "Para decir que ya no aguantas algo en casa. «fed up» se une: «fe-DAP».", "register": "neutral", "situation": "social", "tags": ["idioms"] },
+    { "id": "b2-relationships.ill-admit-im-a-little-jealous", "text": "I'll admit I'm a little jealous.", "es": "Reconozco que tengo un poco de envidia.", "notes": "«jealous» = celoso, y también envidioso (sano): «I'm so jealous!» cuando alguien se va de viaje. «I'll admit…» = lo reconozco.", "explanation": "Para confesar algo con sinceridad. «jealous» empieza con «y» fuerte, como «yeh»: «YE-ləs».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.i-cant-help-feeling-left-out", "text": "I can't help feeling a bit left out.", "es": "No puedo evitar sentirme un poco excluido.", "notes": "«can't help» + -ing = no poder evitar. «feel left out» = sentirse excluido, dejado de lado.", "explanation": "Cuando tus amigos quedan sin ti. «left out» se une: «LEF-taut».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.it-means-a-lot-to-me", "text": "It means a lot to me that you came.", "es": "Significa mucho para mí que hayas venido.", "notes": "«mean a lot to someone» = significar mucho para alguien. Tras «that» va el pasado simple, no subjuntivo.", "explanation": "Para dar las gracias de corazón. «a lot to» se une y la «t» suena suave: «ə-LA-də».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.i-was-over-the-moon", "text": "I was over the moon when she said yes.", "es": "Estaba feliz como una perdiz cuando me dijo que sí.", "literal": "Estaba por encima de la luna.", "notes": "«be over the moon» = estar encantado, en una nube. Muy común en conversación.", "explanation": "Para contar una gran alegría. «moon» con «u» larga: «muun», no «mon».", "register": "neutral", "situation": "social", "tags": ["idioms"] },
+    { "id": "b2-relationships.i-think-theres-been-a-misunderstanding", "text": "I think there's been a bit of a misunderstanding.", "es": "Creo que ha habido un pequeño malentendido.", "notes": "«a bit of a» suaviza: «a bit of a problem», «a bit of a mess».", "explanation": "Para calmar las cosas antes de explicarte. «misunderstanding» lleva el acento en «STAN»: «mis-ən-dər-STAN-ding».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.thats-not-what-i-meant", "text": "That's not what I meant at all.", "es": "No quería decir eso, para nada.", "notes": "Querer decir = «mean» (pasado «meant»), no «want to say».", "explanation": "Cuando alguien entendió otra cosa. «meant» = «ment», con «e» corta y la «t» final suave.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.what-i-meant-was", "text": "What I meant was that I needed more time.", "es": "Lo que quería decir era que necesitaba más tiempo.", "notes": "«What I meant was…» = lo que quería decir es… Sirve para reformular con calma.", "explanation": "Para aclararte después de un malentendido. «What I» se une: «wa-DAI».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.i-didnt-mean-it-like-that", "text": "I didn't mean it like that.", "es": "No lo dije con esa intención.", "notes": "«mean it» = decirlo en serio o con intención. «I didn't mean it» = no lo decía en serio.", "explanation": "Para quitar hierro a algo que sonó mal. «mean it» se une: «MII-nit».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.it-came-out-wrong", "text": "Sorry, that came out wrong.", "es": "Perdona, no me ha salido como quería.", "literal": "Eso salió mal.", "notes": "«come out wrong» = sonar mal, decir algo de forma torpe. Phrasal verb muy útil.", "explanation": "Justo después de decir algo torpe. «came out» se une: «kei-MAUT».", "register": "neutral", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.its-hard-to-tell-tone-over-text", "text": "It's hard to tell someone's tone over text.", "es": "Es difícil saber en qué tono te habla alguien por mensaje.", "notes": "«tell» aquí = notar, distinguir: «I can't tell if he's joking». «over text» = por mensaje.", "explanation": "Para explicar un malentendido por WhatsApp. «tone» con diptongo: «toun».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.you-took-it-the-wrong-way", "text": "I think you took it the wrong way.", "es": "Creo que te lo tomaste a mal.", "notes": "«take something the wrong way» = tomárselo a mal. Lo contrario: «take it well».", "explanation": "Para explicar sin culpar. «wrong» sin «w»: suena «rong».", "register": "neutral", "situation": "social", "tags": ["idioms"] },
+    { "id": "b2-relationships.i-was-only-joking", "text": "I was only joking, I promise.", "es": "Solo era una broma, te lo prometo.", "notes": "«I was only joking» o «I was just kidding». Nunca «I was doing a joke».", "explanation": "Cuando una broma no ha caído bien. «joking» empieza con «y» fuerte: «YOU-king».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.i-just-assumed-youd-be-okay", "text": "I just assumed you'd be okay with it.", "es": "Simplemente di por hecho que te parecería bien.", "notes": "«assume» = dar por hecho, suponer (no «asumir» una responsabilidad, que es «take on»).", "explanation": "Para reconocer que no preguntaste. «assumed» = «ə-SUUMD», la «-ed» suena «d».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.i-thought-you-were-mad-at-me", "text": "I thought you were mad at me.", "es": "Pensaba que estabas enfadado conmigo.", "notes": "En EE. UU. «mad at someone» = enfadado con alguien (con «at»). «mad» también es loco, según el contexto.", "explanation": "Para aclarar las cosas. «thought» con «th» entre los dientes: «θot».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.lets-clear-this-up", "text": "Let's clear this up before it gets any worse.", "es": "Aclaremos esto antes de que vaya a peor.", "notes": "«clear up» = aclarar (un malentendido); también despejarse (el cielo).", "explanation": "Para proponer hablarlo ya. «clear this» se une; «this» con «th» suave, como «d» entre los dientes.", "register": "neutral", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.we-had-a-big-fight", "text": "We had a big fight last night.", "es": "Anoche tuvimos una buena pelea.", "notes": "«have a fight» = pelearse, discutir fuerte (con palabras). «have an argument» es un poco más suave.", "explanation": "Para contarle a un amigo que discutiste con alguien. «fight» = «fait», la «gh» no suena.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.we-had-an-argument-about-money", "text": "We had an argument about money again.", "es": "Volvimos a discutir por dinero.", "notes": "Discutir (enfadados) = «argue» / «have an argument». «discuss» es solo hablar de un tema, sin pelea.", "explanation": "Para contar el motivo de una discusión. «argument» lleva el acento en la primera: «AR-gyə-mənt».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.can-we-talk-about-what-happened", "text": "Can we talk about what happened yesterday?", "es": "¿Podemos hablar de lo que pasó ayer?", "notes": "«what happened» = lo que pasó; sin «that» delante.", "explanation": "Para abrir una conversación difícil con calma. «happened» = «HÆ-pənd», la «-ed» suena «d».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.lets-both-calm-down", "text": "Let's both calm down and talk about it.", "es": "Calmémonos los dos y hablémoslo.", "notes": "«calm down» = calmarse. Ojo: decirle «Calm down!» a alguien enfadado suele sentar mal; con «Let's both» suena justo.", "explanation": "Cuando la discusión sube de tono. En «calm» la «l» no suena: «kaam».", "register": "neutral", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.i-hear-what-youre-saying", "text": "I hear what you're saying.", "es": "Entiendo lo que me dices.", "literal": "Oigo lo que estás diciendo.", "notes": "Muestra que escuchas antes de dar tu opinión; a menudo va seguido de «but…».", "explanation": "Para que la otra persona se sienta escuchada. «hear» = «hiər», no lo confundas con «here», que suena igual.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.try-to-see-it-from-my-side", "text": "Try to see it from my side for a second.", "es": "Intenta verlo desde mi punto de vista un momento.", "notes": "«see it from my side / from my point of view». «for a second» = un momento.", "explanation": "Para pedir empatía sin gritar. «side» = «said», con diptongo /ai/.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.im-not-blaming-you", "text": "I'm not blaming you; I just want to fix this.", "es": "No te estoy echando la culpa; solo quiero arreglarlo.", "notes": "«blame someone (for something)» = culpar a alguien. «fix» = arreglar, también una situación.", "explanation": "Para bajar la tensión. «blaming» = «BLEI-ming», sin «e» delante de la «b».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.its-not-about-whos-right", "text": "It's not about who's right or wrong.", "es": "No se trata de quién tiene razón.", "notes": "Tener razón = «be right», nunca «have reason». «It's not about…» = no se trata de…", "explanation": "Para centrar la conversación en la solución. «right» y «wrong» empiezan con la «r» americana, sin vibrar.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.maybe-we-can-meet-halfway", "text": "Maybe we can meet halfway on this.", "es": "Quizá podamos llegar a un término medio.", "literal": "Quizá podamos encontrarnos a mitad de camino.", "notes": "«meet someone halfway» = ceder los dos un poco. También «reach a compromise».", "explanation": "Para proponer un acuerdo. En «halfway» la «l» no suena: «HAF-wei».", "register": "neutral", "situation": "social", "tags": ["idioms"] },
+    { "id": "b2-relationships.i-just-need-some-space", "text": "I just need some space right now.", "es": "Ahora mismo solo necesito un poco de espacio.", "notes": "«need some space» = necesitar tiempo a solas. «space» es incontable aquí: sin «a».", "explanation": "Para pedir tiempo sin cortar la relación. «space» sin «e» delante: «speis», no «espeis».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.we-sorted-it-out", "text": "In the end, we sorted it out.", "es": "Al final, lo arreglamos.", "notes": "«sort something out» = solucionar, arreglar (un problema, un malentendido).", "explanation": "Para contar que la cosa terminó bien. «sorted it out» se une: «SOR-di-daut».", "register": "neutral", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.i-owe-you-an-apology", "text": "I owe you an apology.", "es": "Te debo una disculpa.", "notes": "«owe» = deber (algo a alguien). «apologize» = disculparse; «apology» = la disculpa.", "explanation": "Para empezar a pedir perdón en serio. «owe» suena «ou», como la «o» de «go».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.im-sorry-i-overreacted", "text": "I'm sorry I overreacted.", "es": "Perdona por haber reaccionado de forma exagerada.", "notes": "«overreact» = exagerar, reaccionar de más. Tras «I'm sorry» va directamente la frase en pasado.", "explanation": "Cuando te pasaste de la raya. «overreacted» = «ou-vər-ri-ÆK-tid».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.i-shouldnt-have-said-that", "text": "I shouldn't have said that. It was unfair.", "es": "No debería haber dicho eso. Fue injusto.", "notes": "«shouldn't have» + participio = no debería haber… (arrepentimiento por el pasado).", "explanation": "Para reconocer un error. «shouldn't have» se reduce al hablar: «SHUD-ən-əv».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.i-didnt-mean-to-upset-you", "text": "I didn't mean to upset you.", "es": "No era mi intención disgustarte.", "notes": "«mean to» + verbo = tener intención de. «upset» también es verbo: disgustar.", "explanation": "Para pedir perdón sin justificarte. «mean to» se une y el «to» se reduce: «MIIN-tə».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.it-was-totally-my-fault", "text": "It was totally my fault.", "es": "Fue totalmente culpa mía.", "notes": "La culpa = «fault» (de quién es); «guilt» es el sentimiento de culpa.", "explanation": "Para asumir el error sin rodeos. «fault» = «folt», con la «l» suave al final.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.i-take-full-responsibility", "text": "I take full responsibility for what happened.", "es": "Asumo toda la responsabilidad de lo ocurrido.", "notes": "Formal: con tu jefe, un cliente o en un correo. «take responsibility for» = asumir la responsabilidad de.", "explanation": "Para disculparte en un contexto serio. «responsibility»: acento en «BI», «ri-span-sə-BI-lə-di».", "register": "formal", "situation": "social" },
+    { "id": "b2-relationships.i-hope-you-can-forgive-me", "text": "I hope you can forgive me.", "es": "Espero que puedas perdonarme.", "notes": "Tras «hope» va el indicativo inglés, no hace falta subjuntivo: «I hope you can».", "explanation": "Para cerrar una disculpa sincera. «forgive» lleva el acento en «GIV»: «fər-GIV».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.no-hard-feelings", "text": "Don't worry. No hard feelings.", "es": "Tranquilo. Sin rencores.", "notes": "«No hard feelings» = no te guardo rencor. Se dice para cerrar un conflicto.", "explanation": "Para responder a una disculpa con buen rollo. «hard» con «r» americana; la «h» se aspira suave.", "register": "neutral", "situation": "social", "tags": ["idioms"] },
+    { "id": "b2-relationships.its-water-under-the-bridge", "text": "Forget it. It's water under the bridge.", "es": "Olvídalo. Agua pasada.", "literal": "Es agua bajo el puente.", "notes": "«water under the bridge» = agua pasada (no mueve molino), algo que ya no importa.", "explanation": "Cuando alguien saca un tema viejo. «water» con flap t: «WA-dər».", "register": "neutral", "situation": "social", "tags": ["idioms"] },
+    { "id": "b2-relationships.we-talked-for-hours-and-made-up", "text": "We talked for hours and finally made up.", "es": "Hablamos durante horas y al final hicimos las paces.", "notes": "«make up» = hacer las paces (también inventar, o maquillarse, según el contexto).", "explanation": "Para contar que os reconciliasteis. «made up» se une: «mei-DAP».", "register": "neutral", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.itll-take-time-to-trust-him-again", "text": "It'll take some time for me to trust him again.", "es": "Me va a costar volver a confiar en él.", "notes": "«trust someone» = confiar en alguien, sin preposición. «It takes time to…» = cuesta tiempo…", "explanation": "Para hablar de una amistad dañada. «trust» sin «e» delante y con la «t» final marcada.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.relationships-take-work", "text": "Relationships take a lot of work, but it's worth it.", "es": "Las relaciones requieren mucho esfuerzo, pero merece la pena.", "notes": "«take work» = requerir esfuerzo. «it's worth it» = merece la pena.", "explanation": "Para hablar de pareja o amistad con un amigo. «worth» con «th» entre los dientes: «wərθ».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.weve-been-together-for-five-years", "text": "We've been together for five years.", "es": "Llevamos cinco años juntos.", "notes": "Llevar X tiempo = present perfect + «for»: nunca «We are together since…».", "explanation": "Cuando te preguntan por tu pareja. «together» con «th» suave entre los dientes: «tə-GE-ðər».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.shes-seeing-someone-new", "text": "She's been seeing someone new.", "es": "Está saliendo con alguien nuevo.", "notes": "«be seeing someone» = salir con alguien (al principio de una relación). También «date someone».", "explanation": "Para comentar novedades de un amigo. «She's been» se une: «shiz-bin».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.they-just-got-engaged", "text": "Guess what? They just got engaged!", "es": "¿A que no sabes qué? ¡Se acaban de prometer!", "notes": "«get engaged» = prometerse, comprometerse. «fiancé / fiancée» = prometido / prometida.", "explanation": "Para dar una buena noticia. «engaged» = «in-GEIDYD», la «-ed» suena «d».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.were-getting-married-next-summer", "text": "We're getting married next summer.", "es": "Nos casamos el verano que viene.", "notes": "Casarse = «get married», no «marry» a secas («marry someone» = casarse con alguien). Present continuous para un plan fijo.", "explanation": "Para anunciar tu boda. «married» = «MÆ-rid», con «a» abierta entre «a» y «e».", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.they-broke-up-a-few-months-ago", "text": "They broke up a few months ago.", "es": "Lo dejaron hace unos meses.", "notes": "«break up (with someone)» = cortar, dejarlo con alguien. Sustantivo: «a breakup».", "explanation": "Para contar una ruptura. «broke up» se une: «brou-KAP».", "register": "neutral", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.were-still-on-good-terms", "text": "We broke up, but we're still on good terms.", "es": "Lo dejamos, pero nos llevamos bien.", "notes": "«be on good terms with someone» = llevarse bien (sin estar ya juntos, o tras un conflicto).", "explanation": "Para hablar de tu ex sin drama. «terms» = «tərmz», con la «r» americana.", "register": "neutral", "situation": "social", "tags": ["idioms"] },
+    { "id": "b2-relationships.i-get-along-with-my-in-laws", "text": "Luckily, I get along really well with my in-laws.", "es": "Por suerte, me llevo muy bien con mis suegros.", "notes": "«get along with» = llevarse bien con. «in-laws» = la familia política.", "explanation": "Para hablar de la familia de tu pareja. «along» se une con «get»: «ge-də-LONG».", "register": "neutral", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.were-really-close", "text": "We're really close; she's like a sister to me.", "es": "Estamos muy unidos; es como una hermana para mí.", "notes": "«close» = unido, cercano (en una relación). Se pronuncia con «s», no con «z» (que es cerrar).", "explanation": "Para hablar de tu mejor amiga. «close» (unido) = «klous», con «s» sorda.", "register": "neutral", "situation": "social" },
+    { "id": "b2-relationships.we-drifted-apart", "text": "We drifted apart after I moved to Chicago.", "es": "Nos fuimos distanciando después de mudarme a Chicago.", "notes": "«drift apart» = distanciarse poco a poco, sin pelea. «move to» = mudarse a.", "explanation": "Para explicar por qué ya no ves a alguien. «drifted» = «DRIF-tid», la «-ed» suena «id».", "register": "neutral", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.he-always-has-my-back", "text": "No matter what, he always has my back.", "es": "Pase lo que pase, siempre me apoya.", "literal": "Siempre me cubre la espalda.", "notes": "«have someone's back» = apoyar a alguien, estar de su lado. «No matter what» = pase lo que pase.", "explanation": "Para hablar de un amigo de verdad. «back» con «a» abierta, entre «a» y «e»: «bæk».", "register": "neutral", "situation": "social", "tags": ["idioms"] }
+  ],
+  "vocab": [
+    { "id": "b2-relationships.feeling", "word": "feeling", "article": "a", "plural": "feelings", "es": "el sentimiento, la sensación", "notes": "«I have a feeling that…» = tengo la sensación de que… «hurt someone's feelings» = herir a alguien.", "situation": "social", "image": "fluent:red-heart" },
+    { "id": "b2-relationships.hurt", "word": "hurt", "es": "dolido; herir, doler", "notes": "Adjetivo: «I was hurt». Verbo irregular: hurt, hurt, hurt.", "example": "b2-relationships.it-really-hurt-my-feelings", "situation": "social", "image": "fluent:broken-heart" },
+    { "id": "b2-relationships.annoyed", "word": "annoyed", "es": "molesto, mosqueado", "notes": "«annoyed» = cómo te sientes; «annoying» = lo que te molesta: «He's so annoying».", "situation": "social", "image": "fluent:face-with-rolling-eyes" },
+    { "id": "b2-relationships.jealous", "word": "jealous", "es": "celoso, envidioso", "notes": "«jealous of someone». La «j» suena como «y» fuerte: «YE-ləs».", "example": "b2-relationships.ill-admit-im-a-little-jealous", "situation": "social" },
+    { "id": "b2-relationships.left-out", "word": "left out", "es": "excluido, dejado de lado", "notes": "Se usa con «feel»: «I feel left out».", "example": "b2-relationships.i-cant-help-feeling-left-out", "situation": "social" },
+    { "id": "b2-relationships.grateful", "word": "grateful", "es": "agradecido", "notes": "«grateful for something», «grateful to someone». No es «gratificante» (= «rewarding»).", "situation": "social" },
+    { "id": "b2-relationships.misunderstanding", "word": "misunderstanding", "article": "a", "plural": "misunderstandings", "es": "el malentendido", "notes": "Verbo: «misunderstand» (pasado «misunderstood»).", "example": "b2-relationships.i-think-theres-been-a-misunderstanding", "situation": "social", "image": "fluent:confused-face" },
+    { "id": "b2-relationships.tone", "word": "tone", "article": "a", "plural": "tones", "es": "el tono", "notes": "«Don't use that tone with me» = no me hables en ese tono.", "example": "b2-relationships.its-hard-to-tell-tone-over-text", "situation": "social" },
+    { "id": "b2-relationships.mad", "word": "mad", "es": "enfadado (EE. UU.)", "notes": "«mad at someone» = enfadado con alguien. Más formal: «angry».", "example": "b2-relationships.i-thought-you-were-mad-at-me", "situation": "social", "image": "fluent:angry-face" },
+    { "id": "b2-relationships.mix-up", "word": "mix-up", "article": "a", "plural": "mix-ups", "es": "el lío, la confusión", "notes": "Coloquial: «There was a mix-up with the dates». Verbo: «mix up» = confundir.", "situation": "social" },
+    { "id": "b2-relationships.fight", "word": "fight", "article": "a", "plural": "fights", "es": "la pelea, la bronca", "notes": "Entre pareja o amigos suele ser verbal. Verbo irregular: fight, fought, fought.", "example": "b2-relationships.we-had-a-big-fight", "situation": "social", "image": "fluent:face-with-steam-from-nose" },
+    { "id": "b2-relationships.blame", "word": "blame", "es": "culpar; la culpa", "notes": "«blame someone for something». «Don't blame me!» = ¡no me eches la culpa!", "example": "b2-relationships.im-not-blaming-you", "situation": "social" },
+    { "id": "b2-relationships.compromise", "word": "compromise", "article": "a", "plural": "compromises", "es": "el término medio, el acuerdo (cediendo)", "notes": "Falso amigo: no es «compromiso» (= «commitment»). «reach a compromise» = llegar a un acuerdo.", "situation": "social", "image": "fluent:handshake" },
+    { "id": "b2-relationships.space", "word": "space", "es": "el espacio (personal)", "notes": "Incontable en «need some space». Sin «e» delante: «speis».", "example": "b2-relationships.i-just-need-some-space", "situation": "social" },
+    { "id": "b2-relationships.boundary", "word": "boundary", "article": "a", "plural": "boundaries", "es": "el límite (personal)", "notes": "«set boundaries» = poner límites. Muy usado al hablar de relaciones y trabajo.", "situation": "social" },
+    { "id": "b2-relationships.apology", "word": "apology", "article": "an", "plural": "apologies", "es": "la disculpa", "notes": "Verbo: «apologize (for something)». Acento en «PA»: «ə-PA-lə-dyi».", "example": "b2-relationships.i-owe-you-an-apology", "situation": "social" },
+    { "id": "b2-relationships.overreact", "word": "overreact", "es": "reaccionar de forma exagerada", "notes": "«You're overreacting» = estás exagerando.", "example": "b2-relationships.im-sorry-i-overreacted", "situation": "social" },
+    { "id": "b2-relationships.fault", "word": "fault", "es": "la culpa", "notes": "«It's my fault» = es culpa mía. «guilt» = el sentimiento de culpa.", "example": "b2-relationships.it-was-totally-my-fault", "situation": "social" },
+    { "id": "b2-relationships.forgive", "word": "forgive", "es": "perdonar", "notes": "Irregular: forgive, forgave, forgiven. «forgive someone for something».", "example": "b2-relationships.i-hope-you-can-forgive-me", "situation": "social" },
+    { "id": "b2-relationships.make-up", "word": "make up", "es": "hacer las paces", "notes": "Phrasal verb: «They had a fight but made up». Sustantivo «makeup» = maquillaje.", "example": "b2-relationships.we-talked-for-hours-and-made-up", "situation": "social", "tags": ["phrasal-verbs"] },
+    { "id": "b2-relationships.trust", "word": "trust", "es": "la confianza; confiar en", "notes": "Incontable. «trust someone», sin «in».", "example": "b2-relationships.itll-take-time-to-trust-him-again", "situation": "social" },
+    { "id": "b2-relationships.relationship", "word": "relationship", "article": "a", "plural": "relationships", "es": "la relación", "notes": "«be in a relationship» = tener pareja. También relación de trabajo o familiar.", "example": "b2-relationships.relationships-take-work", "situation": "social", "image": "fluent:two-hearts" },
+    { "id": "b2-relationships.partner", "word": "partner", "article": "a", "plural": "partners", "es": "la pareja", "notes": "Neutro: sirve para novio, novia, marido o mujer. También socio en un negocio.", "situation": "social" },
+    { "id": "b2-relationships.engaged", "word": "engaged", "es": "prometido, comprometido", "notes": "«get engaged (to someone)». El anillo: «an engagement ring».", "example": "b2-relationships.they-just-got-engaged", "situation": "social", "image": "fluent:ring" },
+    { "id": "b2-relationships.wedding", "word": "wedding", "article": "a", "plural": "weddings", "es": "la boda", "notes": "«wedding» = la boda (la fiesta); «marriage» = el matrimonio.", "example": "b2-relationships.were-getting-married-next-summer", "situation": "social", "image": "fluent:wedding" },
+    { "id": "b2-relationships.breakup", "word": "breakup", "article": "a", "plural": "breakups", "es": "la ruptura", "notes": "Sustantivo en una palabra; el verbo es «break up».", "example": "b2-relationships.they-broke-up-a-few-months-ago", "situation": "social", "image": "fluent:broken-heart" },
+    { "id": "b2-relationships.ex", "word": "ex", "article": "an", "plural": "exes", "es": "el ex, la ex", "notes": "«my ex» = mi ex. Suena «eks».", "situation": "social" },
+    { "id": "b2-relationships.in-laws", "word": "in-laws", "es": "los suegros, la familia política", "notes": "Siempre plural. «mother-in-law» = suegra; «brother-in-law» = cuñado.", "example": "b2-relationships.i-get-along-with-my-in-laws", "situation": "social" },
+    { "id": "b2-relationships.close", "word": "close", "es": "unido, cercano", "notes": "Adjetivo con «s» sorda: «klous». El verbo cerrar suena con «z»: «klouz».", "example": "b2-relationships.were-really-close", "situation": "social", "image": "fluent:people-hugging" }
+  ],
+  "qa": [
+    {
+      "id": "b2-relationships.qa.down",
+      "question": "You seem a bit down. Is everything okay?",
+      "questionEs": "Te veo un poco de bajón. ¿Va todo bien?",
+      "accepted": [
+        { "text": "Not really. Something Jordan said really hurt my feelings.", "es": "No mucho. Algo que dijo Jordan me dolió mucho." },
+        { "text": "I'm okay. I just feel a bit left out lately.", "es": "Estoy bien. Es que últimamente me siento un poco excluido." }
+      ],
+      "distractors": [
+        { "text": "Not really. Something Jordan said really hurted my feelings.", "es": "No mucho. Algo que dijo Jordan me dolió mucho." },
+        { "text": "I'm okay. I just feel a bit left outside lately.", "es": "Estoy bien. Es que últimamente me siento un poco excluido." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«hurt» es irregular y no cambia: hurt, hurt, hurt. «left out», no «left outside».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-relationships.qa.bothers-you",
+      "question": "So what is it about your roommate that bothers you?",
+      "questionEs": "¿Y qué es lo que te molesta de tu compañero de piso?",
+      "accepted": [
+        { "text": "It really gets on my nerves when he leaves dishes everywhere.", "es": "Me pone de los nervios que deje platos por todas partes." },
+        { "text": "Honestly, I'm fed up with always cleaning up after him.", "es": "La verdad, estoy harto de recoger siempre lo que él deja." }
+      ],
+      "distractors": [
+        { "text": "It really gets in my nerves when he leaves dishes everywhere.", "es": "Me pone de los nervios que deje platos por todas partes." },
+        { "text": "Honestly, I'm fed up of always clean after him.", "es": "La verdad, estoy harto de recoger siempre lo que él deja." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«get on someone's nerves», con «on». «fed up with» + -ing: «fed up with cleaning».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-relationships.qa.meant",
+      "question": "Wait, are you saying my idea is bad?",
+      "questionEs": "Espera, ¿estás diciendo que mi idea es mala?",
+      "accepted": [
+        { "text": "No, that's not what I meant at all.", "es": "No, no quería decir eso, para nada." },
+        { "text": "Sorry, that came out wrong. I actually like it.", "es": "Perdona, no me ha salido bien. En realidad me gusta." }
+      ],
+      "distractors": [
+        { "text": "No, that's not what I wanted to say at all.", "es": "No, no quería decir eso, para nada." },
+        { "text": "Sorry, that went out wrong. I actually like it.", "es": "Perdona, no me ha salido bien. En realidad me gusta." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Querer decir = «mean», no «want to say». Algo «sale» mal al hablar: «come out wrong», no «go out».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-relationships.qa.mad",
+      "question": "Are you still mad at me about last night?",
+      "questionEs": "¿Sigues enfadado conmigo por lo de anoche?",
+      "accepted": [
+        { "text": "No, I'm not mad. I think there was just a misunderstanding.", "es": "No, no estoy enfadado. Creo que solo hubo un malentendido." },
+        { "text": "Not anymore. Let's just clear it up and move on.", "es": "Ya no. Aclarémoslo y pasemos página." }
+      ],
+      "distractors": [
+        { "text": "No, I'm not mad. I think there was just a misunderstand.", "es": "No, no estoy enfadado. Creo que solo hubo un malentendido." },
+        { "text": "Not anymore. Let's just clarify it up and move on.", "es": "Ya no. Aclarémoslo y pasemos página." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "El sustantivo es «misunderstanding»; «misunderstand» es el verbo. «clear up» o «clarify», pero no «clarify up».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-relationships.qa.what-happened",
+      "question": "You two seem tense. Did something happen?",
+      "questionEs": "Os veo tensos. ¿Ha pasado algo?",
+      "accepted": [
+        { "text": "We had an argument about money, but we'll sort it out.", "es": "Discutimos por dinero, pero lo arreglaremos." },
+        { "text": "Yeah, we had a big fight last night.", "es": "Sí, anoche tuvimos una buena pelea." }
+      ],
+      "distractors": [
+        { "text": "We discussed about money, but we'll sort it out.", "es": "Discutimos por dinero, pero lo arreglaremos." },
+        { "text": "Yeah, we made a big fight last night.", "es": "Sí, anoche tuvimos una buena pelea." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Discutir enfadado = «argue» / «have an argument»; «discuss» es hablar de un tema y nunca lleva «about». Una pelea se «tiene»: «have a fight».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-relationships.qa.solve-it",
+      "question": "So how are you two going to solve it?",
+      "questionEs": "¿Y cómo vais a solucionarlo?",
+      "accepted": [
+        { "text": "I guess we'll both have to meet halfway.", "es": "Supongo que los dos tendremos que ceder un poco." },
+        { "text": "We're going to try to reach a compromise.", "es": "Vamos a intentar llegar a un acuerdo." }
+      ],
+      "distractors": [
+        { "text": "I guess we'll both have to meet in the half.", "es": "Supongo que los dos tendremos que ceder un poco." },
+        { "text": "We're going to try to arrive to a compromise.", "es": "Vamos a intentar llegar a un acuerdo." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«meet halfway» = ceder los dos. Llegar a un acuerdo = «reach a compromise / an agreement», no «arrive to».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-relationships.qa.apology",
+      "question": "I'm really sorry about yesterday. I overreacted.",
+      "questionEs": "Siento mucho lo de ayer. Me pasé.",
+      "accepted": [
+        { "text": "Don't worry about it. No hard feelings.", "es": "No te preocupes. Sin rencores." },
+        { "text": "Thanks for saying that. It's water under the bridge.", "es": "Gracias por decirlo. Agua pasada." }
+      ],
+      "distractors": [
+        { "text": "Don't worry about it. No bad feelings.", "es": "No te preocupes. Sin rencores." },
+        { "text": "Thanks for saying that. I forgive to you.", "es": "Gracias por decirlo. Te perdono." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "La expresión fija es «No hard feelings». «forgive» va sin preposición: «I forgive you».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-relationships.qa.fault",
+      "question": "Whose fault was it, in the end?",
+      "questionEs": "Al final, ¿de quién fue la culpa?",
+      "accepted": [
+        { "text": "Honestly, it was totally my fault.", "es": "La verdad, fue totalmente culpa mía." },
+        { "text": "It wasn't anyone's fault, really. It was just a mix-up.", "es": "No fue culpa de nadie, de verdad. Fue solo un lío." }
+      ],
+      "distractors": [
+        { "text": "Honestly, it was totally my guilt.", "es": "La verdad, fue totalmente culpa mía." },
+        { "text": "It was fault of nobody, really. It was just a mix-up.", "es": "No fue culpa de nadie, de verdad. Fue solo un lío." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "La culpa (de quién es) = «fault»; «guilt» es el sentimiento. «nobody's fault» o «not anyone's fault», nunca «fault of nobody».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-relationships.qa.together",
+      "question": "How long have you two been together?",
+      "questionEs": "¿Cuánto tiempo lleváis juntos?",
+      "accepted": [
+        { "text": "We've been together for five years.", "es": "Llevamos cinco años juntos." },
+        { "text": "About two years. We met at a friend's wedding.", "es": "Unos dos años. Nos conocimos en la boda de un amigo." }
+      ],
+      "distractors": [
+        { "text": "We are together since five years.", "es": "Llevamos cinco años juntos." },
+        { "text": "About two years. We knew each other at a friend's wedding.", "es": "Unos dos años. Nos conocimos en la boda de un amigo." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Duración hasta hoy = present perfect + «for». Conocer a alguien por primera vez = «meet», no «know».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-relationships.qa.close",
+      "question": "Are you still close with your friends from college?",
+      "questionEs": "¿Sigues teniendo relación con tus amigos de la universidad?",
+      "accepted": [
+        { "text": "Some of them. We drifted apart after I moved.", "es": "Con algunos. Nos fuimos distanciando cuando me mudé." },
+        { "text": "Yeah, we're still really close.", "es": "Sí, seguimos muy unidos." }
+      ],
+      "distractors": [
+        { "text": "Some of them. We distanced apart after I moved.", "es": "Con algunos. Nos fuimos distanciando cuando me mudé." },
+        { "text": "Yeah, we're still very united.", "es": "Sí, seguimos muy unidos." }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Distanciarse poco a poco = «drift apart». Unidos (amigos, familia) = «close», no «united».",
+      "voice": "en-US-AndrewNeural"
+    }
+  ]
+}
