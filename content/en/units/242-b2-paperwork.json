@@ -1,0 +1,305 @@
+{
+  "id": "b2-paperwork",
+  "order": 242,
+  "level": "B2",
+  "title": "Trámites y servicios: seguros, contratos, reclamaciones formales",
+  "description": "Contratar un seguro y dar un parte, entender un contrato antes de firmar, cambiar o dar de baja un servicio y reclamar con firmeza, por teléfono y por escrito.",
+  "emoji": "📄",
+  "situation": "dinero",
+  "lessons": [
+    {
+      "id": "b2-paperwork.l.insurance",
+      "title": "Seguros: pólizas, franquicias y partes",
+      "items": [
+        "a2-health.insurance",
+        "b2-paperwork.insurance-policy",
+        "b2-paperwork.quote",
+        "b2-paperwork.id-like-to-get-a-quote-for-renters-insurance",
+        "b2-travel.coverage",
+        "b2-paperwork.does-the-policy-cover-water-damage",
+        "b2-paperwork.damage",
+        "b2-paperwork.deductible",
+        "b2-paperwork.whats-the-deductible-on-this-plan",
+        "b2-paperwork.out-of-pocket",
+        "b2-paperwork.how-much-would-i-have-to-pay-out-of-pocket",
+        "b2-paperwork.claim",
+        "b2-paperwork.id-like-to-file-a-claim",
+        "b2-paperwork.my-claim-was-denied",
+        "b2-paperwork.premium",
+        "b2-paperwork.my-premium-went-up-again",
+        "b2-paperwork.policyholder",
+        "b2-paperwork.im-not-sure-im-covered-for-that",
+        "b2-paperwork.qa.how-can-i-help",
+        "b2-paperwork.qa.switching-insurance"
+      ]
+    },
+    {
+      "id": "b2-paperwork.l.contracts",
+      "title": "Contratos y letra pequeña",
+      "items": [
+        "b1-interview.contract",
+        "b2-paperwork.agreement",
+        "b2-paperwork.fine-print",
+        "b2-paperwork.always-read-the-fine-print",
+        "b2-paperwork.terms-and-conditions",
+        "b2-paperwork.could-you-walk-me-through-the-main-terms",
+        "b2-paperwork.clause",
+        "b2-paperwork.that-clause-wasnt-in-the-original-agreement",
+        "b2-paperwork.what-happens-if-i-want-to-cancel",
+        "b2-paperwork.penalty",
+        "b2-paperwork.is-there-a-penalty-for-ending-it-early",
+        "b2-paperwork.renew",
+        "b2-paperwork.does-it-renew-automatically",
+        "b2-paperwork.id-like-to-take-it-home-and-read-it-first",
+        "b1-renting.lease",
+        "b2-paperwork.copy",
+        "b2-paperwork.could-i-get-a-signed-copy",
+        "b2-paperwork.qa.sign-here"
+      ]
+    },
+    {
+      "id": "b2-paperwork.l.services",
+      "title": "Servicios y suscripciones: cambiar, bajar de plan, darte de baja",
+      "items": [
+        "b2-news.subscription",
+        "b2-paperwork.id-like-to-cancel-my-subscription",
+        "b2-paperwork.please-confirm-the-cancellation-in-writing",
+        "b1-renting.internet-provider",
+        "b2-paperwork.carrier",
+        "b2-paperwork.im-thinking-of-switching-to-a-different-provider",
+        "b2-paperwork.phone-plan",
+        "b2-paperwork.id-like-to-downgrade-to-a-cheaper-plan",
+        "b2-paperwork.bundle",
+        "b2-paperwork.introductory-rate",
+        "b2-paperwork.my-introductory-rate-just-ran-out",
+        "b2-paperwork.is-there-anything-you-can-do-to-lower-my-bill",
+        "b1-money.fee",
+        "b2-paperwork.late-fee",
+        "b2-paperwork.autopay",
+        "b2-paperwork.i-was-charged-a-late-fee-but-i-set-up-autopay",
+        "b2-paperwork.qa.why-cancel"
+      ]
+    },
+    {
+      "id": "b2-paperwork.l.complaint-call",
+      "title": "Reclamar por teléfono, con firmeza y educación",
+      "items": [
+        "b1-money.complaint",
+        "b2-paperwork.im-calling-to-follow-up-on-a-complaint",
+        "b2-paperwork.case-number",
+        "b2-paperwork.my-case-number-is-four-seven-two-nine",
+        "b1-money.ive-been-on-hold-for-forty-minutes",
+        "b2-paperwork.representative",
+        "b2-paperwork.ive-already-explained-this-to-three-people",
+        "b1-money.this-is-the-third-time-ive-called",
+        "b2-paperwork.supervisor",
+        "b2-paperwork.escalate",
+        "b2-paperwork.id-like-to-escalate-this-to-a-supervisor",
+        "b2-paperwork.resolution",
+        "b2-paperwork.what-exactly-are-you-going-to-do-to-resolve-this",
+        "b2-paperwork.could-you-put-that-in-writing",
+        "b2-paperwork.i-appreciate-your-help-but-thats-not-good-enough",
+        "b2-paperwork.qa.case-number"
+      ]
+    },
+    {
+      "id": "b2-paperwork.l.in-writing",
+      "title": "Reclamaciones por escrito",
+      "items": [
+        "b2-paperwork.formal-complaint",
+        "b2-paperwork.i-am-writing-to-make-a-formal-complaint",
+        "b2-paperwork.despite-several-calls-the-issue-remains-unresolved",
+        "a2-shopping.receipt",
+        "b2-paperwork.proof-of-purchase",
+        "b2-paperwork.please-find-attached-a-copy-of-the-receipt",
+        "b2-paperwork.warranty",
+        "b2-paperwork.the-product-is-still-under-warranty",
+        "a2-shopping.refund",
+        "b2-paperwork.i-would-like-a-full-refund-within-fourteen-days",
+        "b1-trips.compensation",
+        "b2-paperwork.consumer-rights",
+        "b2-paperwork.i-know-my-rights-as-a-consumer",
+        "b2-paperwork.legal-action",
+        "b2-paperwork.otherwise-i-will-have-no-choice-but-to-take-legal-action",
+        "b1-calls.i-look-forward-to-hearing-from-you",
+        "b2-paperwork.qa.warranty"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-paperwork.id-like-to-get-a-quote-for-renters-insurance", "text": "I'd like to get a quote for renters insurance.", "es": "Quería pedir presupuesto para un seguro de hogar para inquilinos.", "notes": "Presupuesto de un servicio = «a quote»; «budget» es el dinero que tú tienes. «renters insurance» cubre tus cosas en un piso alquilado.", "explanation": "Para llamar a una aseguradora. «quote» = «KWOUT», empieza por sonido «kw».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.does-the-policy-cover-water-damage", "text": "Does the policy cover water damage?", "es": "¿La póliza cubre los daños por agua?", "notes": "«policy» aquí = póliza. «damage» es incontable: «water damage», nunca «damages» en este sentido.", "explanation": "«policy» = «PA-lə-si». «damage» = «DÆ-midʒ», acento en la primera.", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.whats-the-deductible-on-this-plan", "text": "What's the deductible on this plan?", "es": "¿Qué franquicia tiene este plan?", "notes": "«deductible» = franquicia: lo que pagas tú antes de que pague el seguro.", "explanation": "«deductible» = «di-DAK-tə-bəl», acento en «DAK».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.how-much-would-i-have-to-pay-out-of-pocket", "text": "How much would I have to pay out of pocket?", "es": "¿Cuánto tendría que pagar de mi bolsillo?", "notes": "«out of pocket» = de tu bolsillo, lo que no cubre el seguro.", "explanation": "Se encadena: «AU-də-PA-kit», con flap t en «out of».", "register": "neutral", "situation": "dinero", "tags": ["idioms"] },
+    { "id": "b2-paperwork.id-like-to-file-a-claim", "text": "I'd like to file a claim. My laptop was stolen.", "es": "Quería dar un parte. Me han robado el portátil.", "notes": "Dar un parte al seguro = «file a claim» o «make a claim». «reclamation» no existe en este sentido.", "explanation": "«claim» = «KLEIM», con diptongo. «stolen» = «STOU-lən».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.my-claim-was-denied", "text": "My claim was denied, and I'd like to know why.", "es": "Me han rechazado el parte y me gustaría saber por qué.", "notes": "«deny a claim» = rechazarlo. Pregunta indirecta: «I'd like to know why», sin inversión.", "explanation": "«denied» = «di-NAID», termina en /d/.", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.my-premium-went-up-again", "text": "My premium went up again, even though I've never made a claim.", "es": "Me han vuelto a subir la cuota, aunque nunca he dado un parte.", "notes": "«premium» = lo que pagas por el seguro (la prima). «go up» = subir (precio); «raise» necesita objeto: «they raised it».", "explanation": "«premium» = «PRII-mi-əm». «even though» con «th» suave: «II-vən ðou».", "register": "neutral", "situation": "dinero", "tags": ["phrasal-verbs"] },
+    { "id": "b2-paperwork.im-not-sure-im-covered-for-that", "text": "I'm not sure I'm covered for that.", "es": "No estoy seguro de que eso me lo cubra el seguro.", "notes": "«be covered for something» = tener cobertura para algo.", "explanation": "«covered» = «KA-vərd», la «-ed» suena /d/.", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.always-read-the-fine-print", "text": "Always read the fine print before you sign anything.", "es": "Lee siempre la letra pequeña antes de firmar nada.", "notes": "«the fine print» (EE. UU.) = la letra pequeña. «anything» en frase con sentido negativo = nada.", "explanation": "«sign» = «SAIN»: la «g» no suena. «print» sin «e» final.", "register": "neutral", "situation": "dinero", "tags": ["idioms"] },
+    { "id": "b2-paperwork.could-you-walk-me-through-the-main-terms", "text": "Could you walk me through the main terms?", "es": "¿Podría explicarme paso a paso las condiciones principales?", "notes": "«walk someone through something» = explicarle algo paso a paso. «terms» = condiciones de un contrato.", "explanation": "«walk» = «WOK», la «l» no suena. «through» = «θRUU», con «th» entre los dientes.", "register": "formal", "situation": "dinero", "tags": ["phrasal-verbs"] },
+    { "id": "b2-paperwork.that-clause-wasnt-in-the-original-agreement", "text": "That clause wasn't in the original agreement.", "es": "Esa cláusula no estaba en el contrato original.", "notes": "«agreement» = acuerdo, contrato. «clause» = cláusula.", "explanation": "«clause» = «KLOZ», con «z» sonora al final. «original» = «ə-RI-dʒə-nəl».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.what-happens-if-i-want-to-cancel", "text": "What happens if I want to cancel before the contract ends?", "es": "¿Qué pasa si quiero cancelarlo antes de que termine el contrato?", "notes": "Con «before», el futuro va en presente: «before the contract ends», no «will end».", "explanation": "«contract» como sustantivo, acento en la primera: «KAN-trækt».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.is-there-a-penalty-for-ending-it-early", "text": "Is there a penalty for ending the contract early?", "es": "¿Hay penalización por terminar el contrato antes de tiempo?", "notes": "«penalty» = penalización. También se oye «early termination fee».", "explanation": "«penalty» = «PE-nəl-ti», acento en la primera; en habla rápida, «PE-nə-di».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.does-it-renew-automatically", "text": "Does it renew automatically at the end of the year?", "es": "¿Se renueva automáticamente a final de año?", "notes": "Renovar un contrato = «renew»; «renovate» es reformar una casa.", "explanation": "«renew» = «ri-NUU». «automatically» con flap: «a-də-MÆ-dik-li».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.id-like-to-take-it-home-and-read-it-first", "text": "I'd like to take it home and read it carefully first.", "es": "Prefiero llevármelo a casa y leerlo con calma primero.", "notes": "Con calma = «carefully» o «take my time»; «with calm» no se dice.", "explanation": "«read it» se une: «RII-dit», con flap. «carefully» = «KER-fə-li».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.could-i-get-a-signed-copy", "text": "Could I get a signed copy for my records?", "es": "¿Me podría dar una copia firmada para guardarla?", "notes": "«for my records» = para tenerlo archivado, para mis papeles.", "explanation": "«signed» = «SAIND»: la «g» no suena y la «-ed» es /d/. «records» como sustantivo: «RE-kərdz».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.id-like-to-cancel-my-subscription", "text": "I'd like to cancel my subscription, effective immediately.", "es": "Quiero darme de baja de la suscripción, con efecto inmediato.", "notes": "Darse de baja = «cancel». «effective immediately» = con efecto inmediato (registro formal).", "explanation": "«subscription» = «səb-SKRIP-shən», sin «e» antes de «scr». «immediately» = «i-MII-di-ət-li».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.please-confirm-the-cancellation-in-writing", "text": "Could you confirm the cancellation in writing, please?", "es": "¿Me podría confirmar la baja por escrito, por favor?", "notes": "«in writing» = por escrito. Así tienes prueba si te siguen cobrando.", "explanation": "«writing» con flap: «RAI-ding». «cancellation» = «kæn-sə-LEI-shən».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.im-thinking-of-switching-to-a-different-provider", "text": "I'm thinking of switching to a different provider.", "es": "Estoy pensando en cambiarme a otra compañía.", "notes": "«think of/about» + -ing = plantearse hacer algo. «switch to» = cambiarse a.", "explanation": "«switching» = «SWI-ching», empieza por «sw», sin «e». «provider» = «prə-VAI-dər».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.id-like-to-downgrade-to-a-cheaper-plan", "text": "I'd like to downgrade to a cheaper plan.", "es": "Quiero pasarme a una tarifa más barata.", "notes": "«downgrade» = bajar a un plan inferior; «upgrade» = subir. Tarifa de móvil = «plan».", "explanation": "«downgrade» con acento en «DAUN». «cheaper» = «CHII-pər».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.my-introductory-rate-just-ran-out", "text": "My introductory rate just ran out, and my bill doubled.", "es": "Se me acaba de terminar la oferta de bienvenida y la factura se ha duplicado.", "notes": "«run out» = acabarse, caducar. «introductory rate» = precio promocional de los primeros meses.", "explanation": "«ran out» se une: «RÆ-naut». «doubled» = «DA-bəld».", "register": "neutral", "situation": "dinero", "tags": ["phrasal-verbs"] },
+    { "id": "b2-paperwork.is-there-anything-you-can-do-to-lower-my-bill", "text": "Is there anything you can do to lower my monthly bill?", "es": "¿Puede hacer algo para bajarme la factura mensual?", "notes": "«lower» como verbo = bajar, reducir. Frase clásica para que te ofrezcan un descuento antes de irte.", "explanation": "«lower» = «LOU-ər». «monthly» = «MANθ-li», con «th».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.i-was-charged-a-late-fee-but-i-set-up-autopay", "text": "I was charged a late fee, but I set up autopay.", "es": "Me han cobrado un recargo por retraso, pero tengo domiciliado el pago.", "notes": "«set up» = configurar, dejar preparado. «autopay» = pago automático (domiciliación).", "explanation": "«charged» = «CHARDʒD», una sílaba. «set up» se une: «se-DAP».", "register": "neutral", "situation": "dinero", "tags": ["phrasal-verbs"] },
+    { "id": "b2-paperwork.im-calling-to-follow-up-on-a-complaint", "text": "I'm calling to follow up on a complaint I made last week.", "es": "Llamo para hacer seguimiento de una reclamación que puse la semana pasada.", "notes": "«follow up on» = hacer seguimiento de algo. Poner una reclamación = «make a complaint».", "explanation": "«follow up on» se une: «FA-lou-A-pan». «complaint» = «kəm-PLEINT».", "register": "formal", "situation": "dinero", "tags": ["phrasal-verbs"] },
+    { "id": "b2-paperwork.my-case-number-is-four-seven-two-nine", "text": "My case number is four seven two nine.", "es": "Mi número de caso es cuatro siete dos nueve.", "notes": "Los números de referencia se dicen cifra a cifra; el cero, «oh» o «zero».", "explanation": "«case» con «s» sorda: «KEIS». «seven» con «v» de labio y dientes: «SE-vən».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.ive-already-explained-this-to-three-people", "text": "I've already explained this to three different people.", "es": "Ya le he explicado esto a tres personas distintas.", "notes": "«explain something to someone»: nunca «explain me». Present perfect con «already».", "explanation": "«explained» = «ik-SPLEIND», termina en /d/. «three» con «th» sorda.", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.id-like-to-escalate-this-to-a-supervisor", "text": "I'd like to escalate this to a supervisor, please.", "es": "Quisiera que esto lo viera un supervisor, por favor.", "notes": "«escalate» = llevar el problema a un nivel superior. Muy útil cuando el agente no puede resolverlo.", "explanation": "«escalate» = «ES-kə-leit», acento en la primera. «supervisor» = «SUU-pər-vai-zər».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.what-exactly-are-you-going-to-do-to-resolve-this", "text": "What exactly are you going to do to resolve this?", "es": "¿Qué van a hacer exactamente para resolver esto?", "notes": "Firme pero educado: pide un compromiso concreto. «resolve» = resolver (un problema).", "explanation": "«going to» en habla rápida suena «GA-nə». «resolve» = «ri-ZALV», con «z».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.could-you-put-that-in-writing", "text": "Could you put that in writing for me?", "es": "¿Me lo podría poner por escrito?", "notes": "«put something in writing» = dejarlo por escrito. Protégete: lo dicho por teléfono se olvida.", "explanation": "«put that» = «PUT ðæt», con «th» suave. «writing» con flap.", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.i-appreciate-your-help-but-thats-not-good-enough", "text": "I appreciate your help, but that's not good enough.", "es": "Le agradezco la ayuda, pero eso no es suficiente.", "notes": "«I appreciate…, but…» = fórmula para mostrar firmeza sin ser grosero. «not good enough» = insuficiente.", "explanation": "«appreciate» = «ə-PRII-shi-eit». «enough» = «i-NAF».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.i-am-writing-to-make-a-formal-complaint", "text": "I am writing to make a formal complaint about your service.", "es": "Le escribo para presentar una reclamación formal sobre su servicio.", "notes": "En una carta formal se evitan las contracciones: «I am writing».", "explanation": "Para abrir un email o carta formal. «formal» = «FOR-məl», con «r» americana.", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.despite-several-calls-the-issue-remains-unresolved", "text": "Despite several calls, the issue remains unresolved.", "es": "A pesar de varias llamadas, el problema sigue sin resolverse.", "notes": "«despite» + sustantivo, sin «of». «remain» = seguir, permanecer (registro escrito).", "explanation": "«despite» = «di-SPAIT». «issue» = «I-shuu».", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.please-find-attached-a-copy-of-the-receipt", "text": "Please find attached a copy of the receipt.", "es": "Le adjunto una copia del recibo.", "notes": "Fórmula fija de email formal: «Please find attached…». Coloquial: «I've attached…».", "explanation": "«attached» = «ə-TÆCHT», una sola sílaba final. «receipt» = «ri-SIIT»: la «p» no suena.", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.the-product-is-still-under-warranty", "text": "The product is still under warranty.", "es": "El producto todavía está en garantía.", "notes": "Estar en garantía = «be under warranty», con «under».", "explanation": "«warranty» = «WO-rən-ti», acento en la primera.", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.i-would-like-a-full-refund-within-fourteen-days", "text": "I would like a full refund within fourteen days.", "es": "Solicito el reembolso íntegro en un plazo de catorce días.", "notes": "«within» + periodo = en un plazo de, dentro de. Forma completa «I would» en lo escrito.", "explanation": "«fourteen» con acento al final: «for-TIIN»; «forty» lo lleva al principio.", "register": "formal", "situation": "dinero" },
+    { "id": "b2-paperwork.i-know-my-rights-as-a-consumer", "text": "I know my rights as a consumer.", "es": "Conozco mis derechos como consumidor.", "notes": "«rights» = derechos. «as a» = en calidad de, como.", "explanation": "«rights» = «RAITS», la «gh» no suena. «consumer» = «kən-SUU-mər».", "register": "neutral", "situation": "dinero" },
+    { "id": "b2-paperwork.otherwise-i-will-have-no-choice-but-to-take-legal-action", "text": "Otherwise, I will have no choice but to take legal action.", "es": "De lo contrario, no tendré más remedio que emprender acciones legales.", "notes": "«have no choice but to» = no tener más remedio que. «take legal action» = acudir a la vía legal.", "explanation": "«Otherwise» = «A-ðər-waiz», con «th» suave. «legal» = «LII-gəl».", "register": "formal", "situation": "dinero" }
+  ],
+  "vocab": [
+    { "id": "b2-paperwork.insurance-policy", "word": "insurance policy", "article": "an", "plural": "insurance policies", "es": "la póliza de seguro", "notes": "«policy» también significa política o normativa: «company policy».", "example": "b2-paperwork.does-the-policy-cover-water-damage", "situation": "dinero", "image": "fluent:page-facing-up" },
+    { "id": "b2-paperwork.quote", "word": "quote", "article": "a", "plural": "quotes", "es": "el presupuesto (de un servicio)", "notes": "«get a quote» = pedir presupuesto. «budget» es tu presupuesto, el dinero disponible.", "example": "b2-paperwork.id-like-to-get-a-quote-for-renters-insurance", "situation": "dinero" },
+    { "id": "b2-paperwork.damage", "word": "damage", "es": "los daños", "notes": "Incontable: «a lot of damage». «damages» en plural es la indemnización en un juicio.", "example": "b2-paperwork.does-the-policy-cover-water-damage", "situation": "dinero" },
+    { "id": "b2-paperwork.deductible", "word": "deductible", "article": "a", "plural": "deductibles", "es": "la franquicia", "notes": "Lo que pagas tú antes de que pague el seguro.", "example": "b2-paperwork.whats-the-deductible-on-this-plan", "situation": "dinero" },
+    { "id": "b2-paperwork.out-of-pocket", "word": "out-of-pocket", "es": "de tu bolsillo (gasto no cubierto)", "notes": "Adjetivo: «out-of-pocket costs». Tras el verbo, sin guiones: «pay out of pocket».", "example": "b2-paperwork.how-much-would-i-have-to-pay-out-of-pocket", "situation": "dinero" },
+    { "id": "b2-paperwork.claim", "word": "claim", "article": "a", "plural": "claims", "es": "el parte, la reclamación (al seguro)", "notes": "«file/make a claim» = dar un parte. Verbo «claim» = afirmar o reclamar algo que te corresponde.", "example": "b2-paperwork.id-like-to-file-a-claim", "situation": "dinero", "image": "fluent:clipboard" },
+    { "id": "b2-paperwork.premium", "word": "premium", "article": "a", "plural": "premiums", "es": "la prima, la cuota del seguro", "example": "b2-paperwork.my-premium-went-up-again", "situation": "dinero" },
+    { "id": "b2-paperwork.policyholder", "word": "policyholder", "article": "a", "plural": "policyholders", "es": "el titular de la póliza, el asegurado", "situation": "dinero" },
+    { "id": "b2-paperwork.agreement", "word": "agreement", "article": "an", "plural": "agreements", "es": "el acuerdo, el contrato", "notes": "«reach an agreement» = llegar a un acuerdo.", "example": "b2-paperwork.that-clause-wasnt-in-the-original-agreement", "situation": "dinero", "image": "fluent:handshake" },
+    { "id": "b2-paperwork.fine-print", "word": "fine print", "es": "la letra pequeña", "notes": "Siempre con «the»: «read the fine print».", "example": "b2-paperwork.always-read-the-fine-print", "situation": "dinero" },
+    { "id": "b2-paperwork.terms-and-conditions", "word": "terms and conditions", "es": "los términos y condiciones", "notes": "Siempre en plural.", "situation": "dinero", "image": "fluent:scroll" },
+    { "id": "b2-paperwork.clause", "word": "clause", "article": "a", "plural": "clauses", "es": "la cláusula", "example": "b2-paperwork.that-clause-wasnt-in-the-original-agreement", "situation": "dinero" },
+    { "id": "b2-paperwork.penalty", "word": "penalty", "article": "a", "plural": "penalties", "es": "la penalización", "notes": "En fútbol, «penalty» es el penalti.", "example": "b2-paperwork.is-there-a-penalty-for-ending-it-early", "situation": "dinero" },
+    { "id": "b2-paperwork.renew", "word": "renew", "es": "renovar (un contrato, un documento)", "notes": "Verbo. Sustantivo: «renewal». No confundir con «renovate», reformar.", "example": "b2-paperwork.does-it-renew-automatically", "situation": "dinero" },
+    { "id": "b2-paperwork.copy", "word": "copy", "article": "a", "plural": "copies", "es": "la copia, el ejemplar", "notes": "«a signed copy» = una copia firmada.", "example": "b2-paperwork.could-i-get-a-signed-copy", "situation": "dinero", "image": "fluent:fountain-pen" },
+    { "id": "b2-paperwork.carrier", "word": "carrier", "article": "a", "plural": "carriers", "es": "el operador (de telefonía móvil)", "notes": "En EE. UU. la compañía de móvil es «a carrier» o «a provider».", "situation": "dinero", "image": "fluent:mobile-phone" },
+    { "id": "b2-paperwork.phone-plan", "word": "phone plan", "article": "a", "plural": "phone plans", "es": "la tarifa de móvil", "notes": "«plan» = tarifa, plan de precios: «a data plan», «an unlimited plan».", "situation": "dinero" },
+    { "id": "b2-paperwork.bundle", "word": "bundle", "article": "a", "plural": "bundles", "es": "el paquete (de servicios combinados)", "notes": "Internet + TV + móvil juntos. «bundle» también es verbo: agrupar.", "situation": "dinero" },
+    { "id": "b2-paperwork.introductory-rate", "word": "introductory rate", "article": "an", "plural": "introductory rates", "es": "el precio promocional de bienvenida", "notes": "«rate» = tarifa, tipo, precio por unidad.", "example": "b2-paperwork.my-introductory-rate-just-ran-out", "situation": "dinero" },
+    { "id": "b2-paperwork.late-fee", "word": "late fee", "article": "a", "plural": "late fees", "es": "el recargo por pago atrasado", "example": "b2-paperwork.i-was-charged-a-late-fee-but-i-set-up-autopay", "situation": "dinero" },
+    { "id": "b2-paperwork.autopay", "word": "autopay", "es": "el pago automático, la domiciliación", "notes": "Incontable: «set up autopay» = domiciliar el pago.", "example": "b2-paperwork.i-was-charged-a-late-fee-but-i-set-up-autopay", "situation": "dinero", "image": "fluent:credit-card" },
+    { "id": "b2-paperwork.case-number", "word": "case number", "article": "a", "plural": "case numbers", "es": "el número de caso, de incidencia", "notes": "También «reference number» o «ticket number».", "example": "b2-paperwork.my-case-number-is-four-seven-two-nine", "situation": "dinero" },
+    { "id": "b2-paperwork.representative", "word": "representative", "article": "a", "plural": "representatives", "es": "el agente, el representante (de atención al cliente)", "notes": "Abreviado «rep»: «a customer service rep».", "situation": "dinero", "image": "fluent:telephone-receiver" },
+    { "id": "b2-paperwork.supervisor", "word": "supervisor", "article": "a", "plural": "supervisors", "es": "el supervisor, el responsable", "example": "b2-paperwork.id-like-to-escalate-this-to-a-supervisor", "situation": "dinero" },
+    { "id": "b2-paperwork.escalate", "word": "escalate", "es": "elevar (una queja) a un nivel superior", "notes": "Verbo. También: «the situation escalated» = la situación fue a más.", "example": "b2-paperwork.id-like-to-escalate-this-to-a-supervisor", "situation": "dinero" },
+    { "id": "b2-paperwork.resolution", "word": "resolution", "article": "a", "plural": "resolutions", "es": "la solución, la resolución", "notes": "«New Year's resolution» = propósito de Año Nuevo.", "situation": "dinero" },
+    { "id": "b2-paperwork.formal-complaint", "word": "formal complaint", "article": "a", "plural": "formal complaints", "es": "la reclamación formal", "notes": "«file a formal complaint» = presentar una reclamación formal.", "example": "b2-paperwork.i-am-writing-to-make-a-formal-complaint", "situation": "dinero", "image": "fluent:envelope" },
+    { "id": "b2-paperwork.proof-of-purchase", "word": "proof of purchase", "es": "el comprobante de compra", "notes": "«proof» es incontable: «some proof», no «a proof».", "situation": "dinero", "image": "fluent:receipt" },
+    { "id": "b2-paperwork.warranty", "word": "warranty", "article": "a", "plural": "warranties", "es": "la garantía", "notes": "«a two-year warranty» = dos años de garantía.", "example": "b2-paperwork.the-product-is-still-under-warranty", "situation": "dinero" },
+    { "id": "b2-paperwork.consumer-rights", "word": "consumer rights", "es": "los derechos del consumidor", "notes": "Siempre en plural.", "situation": "dinero", "image": "fluent:balance-scale" },
+    { "id": "b2-paperwork.legal-action", "word": "legal action", "es": "las acciones legales, la vía judicial", "notes": "Incontable: «take legal action».", "example": "b2-paperwork.otherwise-i-will-have-no-choice-but-to-take-legal-action", "situation": "dinero" }
+  ],
+  "qa": [
+    {
+      "id": "b2-paperwork.qa.how-can-i-help",
+      "question": "Thank you for calling. How can I help you today?",
+      "questionEs": "Gracias por llamar. ¿En qué puedo ayudarle hoy?",
+      "accepted": [
+        { "text": "I'd like to file a claim for water damage.", "es": "Quería dar un parte por daños por agua." },
+        { "text": "I'm calling to get a quote for car insurance.", "es": "Llamo para pedir presupuesto de un seguro de coche." }
+      ],
+      "distractors": [
+        { "text": "I'd like to make a reclamation for water damage.", "es": "Quería poner una reclamación por daños por agua." },
+        { "text": "I'm calling to get a budget for car insurance.", "es": "Llamo para pedir presupuesto de un seguro de coche." }
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "Parte al seguro = «claim»; «reclamation» no se usa así. Presupuesto de un servicio = «quote»; «budget» es tu dinero disponible.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-paperwork.qa.switching-insurance",
+      "question": "Why are you switching insurance companies?",
+      "questionEs": "¿Por qué te cambias de aseguradora?",
+      "accepted": [
+        { "text": "My premium went up again this year.", "es": "Este año me han vuelto a subir la cuota." },
+        { "text": "I found a better deal with another company.", "es": "He encontrado una oferta mejor en otra compañía." }
+      ],
+      "distractors": [
+        { "text": "My premium raised again this year.", "es": "Este año me han vuelto a subir la cuota." },
+        { "text": "I found a better deal with other company.", "es": "He encontrado una oferta mejor en otra compañía." }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "Un precio «goes up» o «rises»; «raise» necesita objeto («they raised my premium»). Otra compañía = «another company», nunca «other company» sin artículo.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-paperwork.qa.sign-here",
+      "question": "Just sign here and you're all set.",
+      "questionEs": "Firme aquí y ya está todo.",
+      "accepted": [
+        { "text": "Could I read it carefully first?", "es": "¿Puedo leerlo con calma primero?" },
+        { "text": "Before I sign, does it renew automatically?", "es": "Antes de firmar, ¿se renueva automáticamente?" }
+      ],
+      "distractors": [
+        { "text": "Could I read it with calm first?", "es": "¿Puedo leerlo con calma primero?" },
+        { "text": "Before I sign, does it renovate automatically?", "es": "Antes de firmar, ¿se renueva automáticamente?" }
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "Con calma = «carefully» o «take my time». Renovar un contrato = «renew»; «renovate» es reformar una casa.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-paperwork.qa.why-cancel",
+      "question": "May I ask why you'd like to cancel today?",
+      "questionEs": "¿Puedo preguntarle por qué quiere darse de baja?",
+      "accepted": [
+        { "text": "I found a cheaper plan with another carrier.", "es": "He encontrado una tarifa más barata en otro operador." },
+        { "text": "I'm just not using it enough to justify the cost.", "es": "Es que no lo uso lo suficiente para que compense." }
+      ],
+      "distractors": [
+        { "text": "I found a more cheap plan with another carrier.", "es": "He encontrado una tarifa más barata en otro operador." },
+        { "text": "I'm just not using it enough for justify the cost.", "es": "Es que no lo uso lo suficiente para que compense." }
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "Adjetivos cortos: «cheaper», nunca «more cheap». Para + verbo (finalidad) = «to», no «for».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-paperwork.qa.case-number",
+      "question": "Do you have a case number for this issue?",
+      "questionEs": "¿Tiene un número de caso para esta incidencia?",
+      "accepted": [
+        { "text": "Yes, it's four seven two nine.", "es": "Sí, es el cuatro siete dos nueve." },
+        { "text": "No, nobody gave me one last time.", "es": "No, la última vez nadie me dio ninguno." }
+      ],
+      "distractors": [
+        { "text": "Yes, is four seven two nine.", "es": "Sí, es el cuatro siete dos nueve." },
+        { "text": "No, nobody didn't give me one last time.", "es": "No, la última vez nadie me dio ninguno." }
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "En inglés el sujeto es obligatorio: «it's», nunca «is» solo. Una sola negación: «nobody gave me», no «nobody didn't give».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-paperwork.qa.warranty",
+      "question": "Our records show the item is no longer under warranty.",
+      "questionEs": "Según nuestros datos, el artículo ya no está en garantía.",
+      "accepted": [
+        { "text": "I bought it eight months ago. Here's my proof of purchase.", "es": "Lo compré hace ocho meses. Aquí tiene el comprobante." },
+        { "text": "It has a two-year warranty. Could you check again?", "es": "Tiene dos años de garantía. ¿Podría comprobarlo otra vez?" }
+      ],
+      "distractors": [
+        { "text": "I bought it since eight months. Here's my proof of purchase.", "es": "Lo compré hace ocho meses. Aquí tiene el comprobante." },
+        { "text": "It has two years of warranty. Could you revise it again?", "es": "Tiene dos años de garantía. ¿Podría revisarlo otra vez?" }
+      ],
+      "register": "formal",
+      "situation": "dinero",
+      "notes": "Hace + tiempo con pasado = «… ago». «a two-year warranty»: el número va como adjetivo, en singular. Comprobar = «check»; «revise» es corregir un texto.",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}
