@@ -1,0 +1,1016 @@
+{
+  "id": "ru-a1-city",
+  "order": 50,
+  "level": "A1",
+  "title": "Por la ciudad: direcciones, museos y quedar",
+  "description": "Preguntar y entender el camino, visitar museos (taquilla, guardarropa, visitas guiadas) y quedar con amigos.",
+  "emoji": "🏛️",
+  "situation": "ciudad",
+  "lessons": [
+    {
+      "id": "ru-a1-city.l.places",
+      "title": "Lugares de la ciudad",
+      "items": [
+        "ru-a1-alphabet.gorod",
+        "ru-a1-alphabet.tsentr",
+        "ru-a1-city.eto-tsentr-goroda",
+        "ru-a1-city.ploshchad",
+        "ru-a1-city.prospekt",
+        "ru-a1-grammar.ulitsa",
+        "ru-a1-city.reka",
+        "ru-a1-city.naberezhnaya",
+        "ru-a1-alphabet.most",
+        "ru-a1-city.tserkov",
+        "ru-a1-city.sobor",
+        "ru-a1-city.dvorets",
+        "ru-a1-city.dostoprimechatelnosti",
+        "ru-a1-city.chto-posmotret",
+        "ru-a1-city.gde-nakhoditsya",
+        "ru-a1-alphabet.bank",
+        "ru-a1-city.bankomat",
+        "ru-a1-city.gde-zdes-bankomat",
+        "ru-a1-city.ryadom-est-kafe",
+        "ru-a1-city.kakoi-krasivyi-gorod",
+        "ru-a1-city.qa.gde-bankomat"
+      ]
+    },
+    {
+      "id": "ru-a1-city.l.ask-the-way",
+      "title": "Preguntar el camino",
+      "items": [
+        "ru-a1-hello.izvinite",
+        "ru-a1-city.vy-ne-podskazhete",
+        "ru-a1-city.kak-proiti-k-ermitazhu",
+        "ru-a1-city.kak-doiti-do-metro",
+        "ru-a1-transport.adres",
+        "ru-a1-city.ya-ishchu-etot-adres",
+        "ru-a1-city.eto-daleko-otsyuda",
+        "ru-a1-transport.daleko",
+        "ru-a1-transport.blizko",
+        "ru-a1-city.peshkom",
+        "ru-a1-city.mozhno-doiti-peshkom",
+        "ru-a1-numbers.karta",
+        "ru-a1-city.pokazhite-na-karte",
+        "ru-a1-city.ya-zabludilsya",
+        "ru-a1-city.ya-zabludilas",
+        "ru-a1-city.ya-ne-mestnyi",
+        "ru-a1-city.qa.vam-pomoch",
+        "ru-a1-city.qa.peshkom"
+      ]
+    },
+    {
+      "id": "ru-a1-city.l.directions",
+      "title": "Entender las indicaciones",
+      "items": [
+        "ru-a1-city.pryamo",
+        "ru-a1-city.idite-pryamo",
+        "ru-a1-city.nalevo",
+        "ru-a1-city.povernite-nalevo",
+        "ru-a1-city.napravo",
+        "ru-a1-city.povernite-napravo",
+        "ru-a1-city.svetofor",
+        "ru-a1-city.na-svetofore-nalevo",
+        "ru-a1-city.perekryostok",
+        "ru-a1-city.idite-do-perekryostka",
+        "ru-a1-city.idite-do-kontsa-ulitsy",
+        "ru-a1-city.pereidite-ulitsu",
+        "ru-a1-city.ugol",
+        "ru-a1-city.eto-na-uglu",
+        "ru-a1-city.sleva",
+        "ru-a1-city.sprava",
+        "ru-a1-city.muzei-budet-sleva",
+        "ru-a1-city.naprotiv",
+        "ru-a1-city.apteka-naprotiv",
+        "ru-a1-city.ryadom",
+        "ru-a1-city.eto-ryadom-s-metro",
+        "ru-a1-city.pyat-minut-peshkom"
+      ]
+    },
+    {
+      "id": "ru-a1-city.l.museum",
+      "title": "Museos y visitas",
+      "items": [
+        "ru-a1-alphabet.muzei",
+        "ru-a1-alphabet.teatr",
+        "ru-a1-city.vo-skolko-otkryvaetsya",
+        "ru-a1-city.do-skolki-rabotaet",
+        "ru-a1-city.po-ponedelnikam-zakryt",
+        "ru-a1-transport.gde-kassa",
+        "ru-a1-numbers.bilet",
+        "ru-a1-city.odin-vzroslyi-bilet",
+        "ru-a1-city.skidka",
+        "ru-a1-city.est-skidka-dlya-studentov",
+        "ru-a1-city.garderob",
+        "ru-a1-city.gde-garderob",
+        "ru-a1-city.sdaite-kurtku",
+        "ru-a1-city.est-audiogid",
+        "ru-a1-city.ekskursiya",
+        "ru-a1-city.ekskursovod",
+        "ru-a1-city.kogda-ekskursiya",
+        "ru-a1-city.vystavka",
+        "ru-a1-city.kartina",
+        "ru-a1-city.mozhno-fotografirovat",
+        "ru-a1-city.ochen-interesno",
+        "ru-a1-city.qa.kakoi-bilet",
+        "ru-a1-city.qa.sdaite-kurtku"
+      ]
+    },
+    {
+      "id": "ru-a1-city.l.meeting",
+      "title": "Quedar con amigos",
+      "items": [
+        "ru-a1-city.vstrecha",
+        "ru-a1-city.chto-ty-delaesh-zavtra",
+        "ru-a1-city.poidyom-v-kafe",
+        "ru-a1-city.s-udovolstviem",
+        "ru-a1-city.k-sozhaleniyu-ne-mogu",
+        "ru-a1-city.davai-vstretimsya-v-shest",
+        "ru-a1-city.davaite-vstretimsya-u-metro",
+        "ru-a1-city.gde-vstretimsya",
+        "ru-a1-alphabet.vkhod",
+        "ru-a1-city.zhdu-tebya-u-vkhoda",
+        "ru-a1-city.ty-gde",
+        "ru-a1-city.ya-uzhe-zdes",
+        "ru-a1-city.ya-u-vkhoda-v-metro",
+        "ru-a1-numbers.opazdyvayu",
+        "ru-a1-hello.do-vstrechi",
+        "ru-a1-city.qa.gde-vstretimsya",
+        "ru-a1-city.qa.poidyom-v-teatr",
+        "ru-a1-city.qa.ty-gde"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "ru-a1-city.gde-nakhoditsya",
+      "text": "Где нахо́дится Эрмита́ж?",
+      "es": "¿Dónde está el Hermitage?",
+      "explanation": "Para preguntar por cualquier sitio con nombre. na-JÓ-di-tsa: la «о» sin acento suena «a» y -тся suena «tsa».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.gde-zdes-bankomat",
+      "text": "Где здесь банкома́т?",
+      "es": "¿Dónde hay un cajero por aquí?",
+      "explanation": "Para encontrar un cajero en la calle o en el metro. «здесь» acaba en «s» suave: zdies' ban-ka-MAT.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ryadom-est-kafe",
+      "text": "Здесь ря́дом есть кафе́?",
+      "es": "¿Hay alguna cafetería cerca?",
+      "literal": "¿Aquí al lado hay café?",
+      "explanation": "Cuando buscas un sitio para sentarte un rato. «ря́дом» = RIA-dam: la «о» sin acento suena «a».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ya-ishchu-etot-adres",
+      "text": "Я ищу́ э́тот а́дрес.",
+      "es": "Busco esta dirección.",
+      "explanation": "Mientras enseñas el móvil o un papel a un transeúnte. «щ» es una «sh» larga y suave: ya i-SHCHÚ.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.eto-tsentr-goroda",
+      "text": "Э́то центр го́рода?",
+      "es": "¿Esto es el centro?",
+      "literal": "¿Esto es el centro de la ciudad?",
+      "explanation": "Al salir del metro, para saber si ya has llegado. «ц» = «ts»: tsentr GÓ-ra-da.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.kakoi-krasivyi-gorod",
+      "text": "Како́й краси́вый го́род!",
+      "es": "¡Qué ciudad tan bonita!",
+      "explanation": "Para piropear la ciudad a un ruso: les encanta oírlo. ka-KÓI kra-SÍ-vyi: la «ы» va con la lengua atrás.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.chto-posmotret",
+      "text": "Что мо́жно посмотре́ть в го́роде?",
+      "es": "¿Qué se puede ver en la ciudad?",
+      "explanation": "En recepción o a un amigo ruso, para pedir ideas. «что» se dice «shto».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.kak-proiti-k-ermitazhu",
+      "text": "Как пройти́ к Эрмита́жу?",
+      "es": "¿Cómo se va al Hermitage?",
+      "notes": "Detrás de «к» el nombre cambia: Эрмита́ж → к Эрмита́жу.",
+      "explanation": "La pregunta clásica para ir andando a un sitio. «пройти́» es ir a pie; en coche dirías «прое́хать».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.kak-doiti-do-metro",
+      "text": "Как дойти́ до метро́?",
+      "es": "¿Cómo llego andando al metro?",
+      "explanation": "Para llegar a pie a un sitio concreto. dai-TÍ da mit-RÓ: «до» sin acento suena «da».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.eto-daleko-otsyuda",
+      "text": "Э́то далеко́ отсю́да?",
+      "es": "¿Está lejos de aquí?",
+      "explanation": "Antes de decidir si vas andando o coges el metro. da-li-KÓ at-SIÚ-da: las «о» sin acento suenan «a».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.mozhno-doiti-peshkom",
+      "text": "Мо́жно дойти́ пешко́м?",
+      "es": "¿Se puede ir andando?",
+      "explanation": "Cuando quieres pasear en vez de coger transporte. «пешко́м» = pish-KÓM, acento al final.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.pokazhite-na-karte",
+      "text": "Покажи́те, пожа́луйста, на ка́рте.",
+      "es": "Enséñemelo en el mapa, por favor.",
+      "explanation": "Mientras le tiendes el móvil con el mapa abierto. «ж» es como la «j» francesa: pa-ka-ZHÍ-tie.",
+      "register": "vy",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ya-zabludilsya",
+      "text": "Я заблуди́лся.",
+      "es": "Me he perdido.",
+      "notes": "Lo dice un hombre; una mujer dice «заблуди́лась».",
+      "explanation": "Para pedir ayuda cuando no sabes dónde estás. -лся suena «-lsa»: za-blu-DÍL-sa.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ya-zabludilas",
+      "text": "Я заблуди́лась.",
+      "es": "Me he perdido.",
+      "notes": "Lo dice una mujer; un hombre dice «заблуди́лся».",
+      "explanation": "Para pedir ayuda cuando no sabes dónde estás. El femenino acaba en «-las'», con «s» suave: za-blu-DÍ-las'.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.vy-ne-podskazhete",
+      "text": "Вы не подска́жете, где Не́вский проспе́кт?",
+      "es": "¿Me podría decir dónde está la avenida Nevski?",
+      "literal": "¿No me indicará dónde está la avenida Nevski?",
+      "explanation": "La forma más educada de parar a alguien por la calle. pat-SKÁ-zhi-tie: la «д» delante de «с» suena «t».",
+      "register": "vy",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ya-ne-mestnyi",
+      "text": "Извини́те, я не ме́стный.",
+      "es": "Lo siento, no soy de aquí.",
+      "notes": "Lo dice un hombre; una mujer dice «я не ме́стная».",
+      "explanation": "Lo que te puede contestar alguien que no lo sabe. En «ме́стный» la «т» casi no se oye: MIES-nyi.",
+      "register": "neutral",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.idite-pryamo",
+      "text": "Иди́те пря́мо.",
+      "es": "Siga recto.",
+      "explanation": "Lo que más vas a oír al preguntar el camino. «я» al principio suena «ya»: PRIA-ma.",
+      "register": "vy",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.povernite-nalevo",
+      "text": "Поверни́те нале́во.",
+      "es": "Gire a la izquierda.",
+      "explanation": "Te lo dicen al indicarte el camino. na-LIE-va: la «о» final sin acento suena «a».",
+      "register": "vy",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.povernite-napravo",
+      "text": "Поверни́те напра́во.",
+      "es": "Gire a la derecha.",
+      "explanation": "Te lo dicen al indicarte el camino. pa-vir-NÍ-tie na-PRA-va: la «р» es como la de «pero».",
+      "register": "vy",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.na-svetofore-nalevo",
+      "text": "На светофо́ре поверни́те нале́во.",
+      "es": "En el semáforo, gire a la izquierda.",
+      "explanation": "Indicación típica en una avenida grande. svi-ta-FÓ-rie: la «е» sin acento suena casi «i».",
+      "register": "vy",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.idite-do-perekryostka",
+      "text": "Иди́те пря́мо до перекрёстка.",
+      "es": "Siga recto hasta el cruce.",
+      "explanation": "Indicación típica para llegar a una esquina. «ё» siempre lleva el acento: pi-ri-KRIÓST-ka.",
+      "register": "vy",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.idite-do-kontsa-ulitsy",
+      "text": "Иди́те до конца́ у́лицы.",
+      "es": "Siga hasta el final de la calle.",
+      "explanation": "Cuando el sitio está al fondo de la calle. kan-TSÁ U-li-tsy: «ц» = «ts».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.pereidite-ulitsu",
+      "text": "Перейди́те у́лицу.",
+      "es": "Cruce la calle.",
+      "explanation": "Si lo que buscas está en la otra acera. pi-riei-DÍ-tie: la «й» es una «i» breve.",
+      "register": "vy",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.eto-na-uglu",
+      "text": "Э́то на углу́.",
+      "es": "Está en la esquina.",
+      "explanation": "Para situar una tienda o una parada. Acento al final: na u-GLÚ.",
+      "register": "neutral",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.muzei-budet-sleva",
+      "text": "Музе́й бу́дет сле́ва.",
+      "es": "El museo quedará a la izquierda.",
+      "literal": "El museo estará a la izquierda.",
+      "explanation": "Lo dice quien te indica para que sepas qué lado mirar. «сле́ва» = a la izquierda (dónde está): SLIE-va.",
+      "register": "neutral",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.apteka-naprotiv",
+      "text": "Апте́ка напро́тив.",
+      "es": "La farmacia está enfrente.",
+      "explanation": "Para decir que algo está al otro lado de la calle. na-PRÓ-tif: la «в» final suena «f».",
+      "register": "neutral",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.eto-ryadom-s-metro",
+      "text": "Э́то ря́дом с метро́.",
+      "es": "Está al lado del metro.",
+      "explanation": "Para dar una referencia fácil: el metro siempre se ve. RIA-dam s mit-RÓ: «с» se une a la palabra siguiente.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.pyat-minut-peshkom",
+      "text": "Э́то пять мину́т пешко́м.",
+      "es": "Está a cinco minutos andando.",
+      "literal": "Esto es cinco minutos a pie.",
+      "explanation": "Así te dicen la distancia en Rusia: en minutos. «пять» acaba en «t» suave: piat'.",
+      "register": "neutral",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.vo-skolko-otkryvaetsya",
+      "text": "Во ско́лько открыва́ется музе́й?",
+      "es": "¿A qué hora abre el museo?",
+      "explanation": "Antes de ir, en recepción o en la taquilla. at-kry-VÁ-ye-tsa: -тся suena «tsa».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.do-skolki-rabotaet",
+      "text": "До ско́льки рабо́тает музе́й?",
+      "es": "¿Hasta qué hora abre el museo?",
+      "explanation": "Para saber cuánto tiempo tienes dentro. da SKÓL'-ki: la «л» suave antes de la «к».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.odin-vzroslyi-bilet",
+      "text": "Оди́н взро́слый биле́т, пожа́луйста.",
+      "es": "Una entrada de adulto, por favor.",
+      "explanation": "En la taquilla de un museo o un teatro. VZRÓS-lyi: grupo de consonantes, dilo sin vocal entre «в» y «з».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.est-skidka-dlya-studentov",
+      "text": "Есть ски́дка для студе́нтов?",
+      "es": "¿Hay descuento para estudiantes?",
+      "explanation": "En la taquilla, enseñando el carné. SKÍT-ka: la «д» delante de «к» suena «t».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.mozhno-fotografirovat",
+      "text": "Здесь мо́жно фотографи́ровать?",
+      "es": "¿Se pueden hacer fotos aquí?",
+      "explanation": "Antes de sacar el móvil en una sala. Palabra larga con acento en «и»: fa-ta-gra-FÍ-ra-vat'.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.gde-garderob",
+      "text": "Где гардеро́б?",
+      "es": "¿Dónde está el guardarropa?",
+      "explanation": "En museos y teatros rusos el abrigo se deja siempre en el guardarropa. La «б» final suena «p»: gar-di-RÓP.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.sdaite-kurtku",
+      "text": "Сда́йте ку́ртку в гардеро́б, пожа́луйста.",
+      "es": "Deje la chaqueta en el guardarropa, por favor.",
+      "explanation": "Te lo dice el personal si entras con el abrigo puesto. ZDÁI-tie: la «с» delante de «д» suena «z».",
+      "register": "vy",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.est-audiogid",
+      "text": "У вас есть аудиоги́д на испа́нском?",
+      "es": "¿Tienen audioguía en español?",
+      "explanation": "En la entrada de los grandes museos. au-di-a-GUÍT: la «д» final suena «t».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.kogda-ekskursiya",
+      "text": "Когда́ сле́дующая экску́рсия?",
+      "es": "¿Cuándo es la próxima visita guiada?",
+      "explanation": "En la taquilla o en el mostrador de información. iks-KÚR-si-ya: la «э» sin acento suena «i».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.po-ponedelnikam-zakryt",
+      "text": "По понеде́льникам музе́й закры́т.",
+      "es": "Los lunes el museo cierra.",
+      "literal": "Los lunes el museo está cerrado.",
+      "explanation": "Muchos museos rusos cierran un día a la semana: mira el horario. za-KRYT: «ы» con la lengua atrás.",
+      "register": "neutral",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.ochen-interesno",
+      "text": "Э́то о́чень интере́сно!",
+      "es": "¡Es muy interesante!",
+      "explanation": "Para comentar una visita o algo que te cuentan. in-ti-RIES-na: la «е» sin acento suena «i».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.davai-vstretimsya-v-shest",
+      "text": "Дава́й встре́тимся в шесть.",
+      "es": "¿Quedamos a las seis?",
+      "literal": "Vamos a encontrarnos a las seis.",
+      "explanation": "Para quedar con un amigo. VSTRIE-tim-sa: -мся suena «msa».",
+      "register": "tu",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.davaite-vstretimsya-u-metro",
+      "text": "Дава́йте встре́тимся у метро́.",
+      "es": "Quedemos en la boca del metro.",
+      "literal": "Encontrémonos junto al metro.",
+      "explanation": "Con alguien a quien tratas de usted o con un grupo. «у метро́» es el punto de encuentro típico en Rusia.",
+      "register": "vy",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.gde-vstretimsya",
+      "text": "Где встре́тимся?",
+      "es": "¿Dónde quedamos?",
+      "explanation": "Para fijar el sitio de una cita. gdie VSTRIE-tim-sa: dos sílabas fuertes, «где» va pegado.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.chto-ty-delaesh-zavtra",
+      "text": "Что ты де́лаешь за́втра?",
+      "es": "¿Qué haces mañana?",
+      "explanation": "Para proponer un plan a un amigo. DIE-la-yesh: la «ш» final es como «sh» inglesa.",
+      "register": "tu",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.poidyom-v-kafe",
+      "text": "Пойдём в кафе́?",
+      "es": "¿Vamos a una cafetería?",
+      "explanation": "Para invitar a un amigo a tomar algo. «ё» lleva el acento: pai-DIÓM f ka-FÉ (la «в» suena «f»).",
+      "register": "tu",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.s-udovolstviem",
+      "text": "С удово́льствием!",
+      "es": "¡Con mucho gusto!",
+      "explanation": "Para aceptar una invitación. su-da-VÓL'-stvi-yem: la «с» se une a la palabra siguiente.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.k-sozhaleniyu-ne-mogu",
+      "text": "К сожале́нию, я не могу́.",
+      "es": "Lo siento, no puedo.",
+      "literal": "Por desgracia, no puedo.",
+      "explanation": "Para rechazar un plan con educación. ksa-zha-LIE-ni-yu: la «к» se pega a la palabra.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ty-gde",
+      "text": "Ты где?",
+      "es": "¿Dónde estás?",
+      "explanation": "Por teléfono, cuando has quedado y no encuentras a tu amigo. Dos palabras cortas: ty gdie.",
+      "register": "tu",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ya-uzhe-zdes",
+      "text": "Я уже́ здесь.",
+      "es": "Ya estoy aquí.",
+      "explanation": "Para avisar de que has llegado al sitio. u-ZHÉ zdies': acento al final de «уже́».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.zhdu-tebya-u-vkhoda",
+      "text": "Жду тебя́ у вхо́да.",
+      "es": "Te espero en la entrada.",
+      "explanation": "Por mensaje o por teléfono a un amigo. FJÓ-da: la «в» delante de «х» suena «f».",
+      "register": "tu",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ya-u-vkhoda-v-metro",
+      "text": "Я у вхо́да в метро́.",
+      "es": "Estoy en la entrada del metro.",
+      "explanation": "Para decir dónde estás exactamente. «вход» y «вы́ход»: entrada y salida, búscalas en los carteles.",
+      "register": "neutral",
+      "situation": "ciudad"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "ru-a1-city.ploshchad",
+      "word": "пло́щадь",
+      "gender": "f",
+      "es": "la plaza",
+      "notes": "«Дворцо́вая пло́щадь» es la gran plaza del Hermitage.",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.prospekt",
+      "word": "проспе́кт",
+      "gender": "m",
+      "es": "la avenida",
+      "notes": "«Не́вский проспе́кт» es la calle principal de San Petersburgo.",
+      "example": "ru-a1-city.vy-ne-podskazhete",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.tserkov",
+      "word": "це́рковь",
+      "gender": "f",
+      "es": "la iglesia",
+      "situation": "ciudad",
+      "image": "fluent:church"
+    },
+    {
+      "id": "ru-a1-city.sobor",
+      "word": "собо́р",
+      "gender": "m",
+      "es": "la catedral",
+      "notes": "«Исаа́киевский собо́р», la catedral de San Isaac.",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.dvorets",
+      "word": "дворе́ц",
+      "gender": "m",
+      "es": "el palacio",
+      "situation": "ciudad",
+      "image": "fluent:castle"
+    },
+    {
+      "id": "ru-a1-city.kartina",
+      "word": "карти́на",
+      "gender": "f",
+      "es": "el cuadro",
+      "situation": "ciudad",
+      "image": "fluent:framed-picture"
+    },
+    {
+      "id": "ru-a1-city.vystavka",
+      "word": "вы́ставка",
+      "gender": "f",
+      "es": "la exposición",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ekskursiya",
+      "word": "экску́рсия",
+      "gender": "f",
+      "es": "la visita guiada",
+      "example": "ru-a1-city.kogda-ekskursiya",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ekskursovod",
+      "word": "экскурсово́д",
+      "gender": "m",
+      "es": "el guía (de museo)",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.garderob",
+      "word": "гардеро́б",
+      "gender": "m",
+      "es": "el guardarropa",
+      "example": "ru-a1-city.gde-garderob",
+      "situation": "ciudad",
+      "image": "fluent:coat"
+    },
+    {
+      "id": "ru-a1-city.skidka",
+      "word": "ски́дка",
+      "gender": "f",
+      "es": "el descuento",
+      "example": "ru-a1-city.est-skidka-dlya-studentov",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.bankomat",
+      "word": "банкома́т",
+      "gender": "m",
+      "es": "el cajero automático",
+      "example": "ru-a1-city.gde-zdes-bankomat",
+      "situation": "ciudad",
+      "image": "fluent:atm-sign"
+    },
+    {
+      "id": "ru-a1-city.svetofor",
+      "word": "светофо́р",
+      "gender": "m",
+      "es": "el semáforo",
+      "example": "ru-a1-city.na-svetofore-nalevo",
+      "situation": "ciudad",
+      "image": "fluent:vertical-traffic-light"
+    },
+    {
+      "id": "ru-a1-city.perekryostok",
+      "word": "перекрёсток",
+      "gender": "m",
+      "es": "el cruce",
+      "example": "ru-a1-city.idite-do-perekryostka",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ugol",
+      "word": "у́гол",
+      "gender": "m",
+      "es": "la esquina",
+      "notes": "«на углу́» = en la esquina.",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.nalevo",
+      "word": "нале́во",
+      "es": "a la izquierda (hacia)",
+      "example": "ru-a1-city.povernite-nalevo",
+      "situation": "ciudad",
+      "image": "fluent:left-arrow"
+    },
+    {
+      "id": "ru-a1-city.napravo",
+      "word": "напра́во",
+      "es": "a la derecha (hacia)",
+      "example": "ru-a1-city.povernite-napravo",
+      "situation": "ciudad",
+      "image": "fluent:right-arrow"
+    },
+    {
+      "id": "ru-a1-city.pryamo",
+      "word": "пря́мо",
+      "es": "recto",
+      "example": "ru-a1-city.idite-pryamo",
+      "situation": "ciudad",
+      "image": "fluent:up-arrow"
+    },
+    {
+      "id": "ru-a1-city.sleva",
+      "word": "сле́ва",
+      "es": "a la izquierda (situado)",
+      "notes": "«нале́во» es girar; «сле́ва» es dónde está algo.",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.sprava",
+      "word": "спра́ва",
+      "es": "a la derecha (situado)",
+      "notes": "«напра́во» es girar; «спра́ва» es dónde está algo.",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.ryadom",
+      "word": "ря́дом",
+      "es": "al lado, cerca",
+      "example": "ru-a1-city.eto-ryadom-s-metro",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.naprotiv",
+      "word": "напро́тив",
+      "es": "enfrente",
+      "example": "ru-a1-city.apteka-naprotiv",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.peshkom",
+      "word": "пешко́м",
+      "es": "a pie, andando",
+      "example": "ru-a1-city.mozhno-doiti-peshkom",
+      "situation": "ciudad",
+      "image": "fluent:person-walking"
+    },
+    {
+      "id": "ru-a1-city.reka",
+      "word": "река́",
+      "gender": "f",
+      "es": "el río",
+      "notes": "En San Petersburgo, el Nevá: «Нева́».",
+      "situation": "ciudad",
+      "image": "fluent:water-wave"
+    },
+    {
+      "id": "ru-a1-city.naberezhnaya",
+      "word": "на́бережная",
+      "gender": "f",
+      "es": "el paseo junto al río",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.dostoprimechatelnosti",
+      "word": "достопримеча́тельности",
+      "gender": "pl",
+      "es": "los monumentos, lo que hay que ver",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-city.vstrecha",
+      "word": "встре́ча",
+      "gender": "f",
+      "es": "la cita, el encuentro",
+      "situation": "ciudad",
+      "image": "fluent:handshake"
+    }
+  ],
+  "qa": [
+    {
+      "id": "ru-a1-city.qa.vam-pomoch",
+      "question": "Вам помо́чь?",
+      "questionEs": "¿Le ayudo?",
+      "accepted": [
+        {
+          "text": "Да, пожа́луйста. Где Эрмита́ж?",
+          "es": "Sí, por favor. ¿Dónde está el Hermitage?"
+        },
+        {
+          "text": "Да, спаси́бо. Я ищу́ метро́.",
+          "es": "Sí, gracias. Busco el metro."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, два ко́фе.",
+          "es": "Sí, dos cafés."
+        },
+        {
+          "text": "Мне три́дцать лет.",
+          "es": "Tengo treinta años."
+        }
+      ],
+      "register": "vy",
+      "situation": "ciudad",
+      "notes": "Acepta la ayuda y di qué buscas.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.qa.gde-bankomat",
+      "question": "Вы не зна́ете, где здесь банкома́т?",
+      "questionEs": "¿Sabe dónde hay un cajero por aquí?",
+      "accepted": [
+        {
+          "text": "Извини́те, я не зна́ю.",
+          "es": "Lo siento, no lo sé."
+        },
+        {
+          "text": "Да, вон там, спра́ва.",
+          "es": "Sí, allí, a la derecha."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, у меня́ есть ка́рта.",
+          "es": "Sí, tengo tarjeta."
+        },
+        {
+          "text": "Нет, спаси́бо.",
+          "es": "No, gracias."
+        }
+      ],
+      "register": "vy",
+      "situation": "ciudad",
+      "notes": "Si no lo sabes, «Я не зна́ю» basta."
+    },
+    {
+      "id": "ru-a1-city.qa.peshkom",
+      "question": "Вы пешко́м и́ли на метро́?",
+      "questionEs": "¿Va andando o en metro?",
+      "accepted": [
+        {
+          "text": "Пешко́м.",
+          "es": "Andando."
+        },
+        {
+          "text": "На метро́.",
+          "es": "En metro."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "В семь часо́в.",
+          "es": "A las siete."
+        },
+        {
+          "text": "Нале́во.",
+          "es": "A la izquierda."
+        }
+      ],
+      "register": "vy",
+      "situation": "ciudad",
+      "notes": "Responde con una de las dos opciones.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.qa.gde-vstretimsya",
+      "question": "Где встре́тимся?",
+      "questionEs": "¿Dónde quedamos?",
+      "accepted": [
+        {
+          "text": "У метро́.",
+          "es": "En la boca del metro."
+        },
+        {
+          "text": "Дава́й у вхо́да в музе́й.",
+          "es": "En la entrada del museo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "В шесть.",
+          "es": "A las seis."
+        },
+        {
+          "text": "Пешко́м.",
+          "es": "Andando."
+        }
+      ],
+      "register": "tu",
+      "situation": "ciudad",
+      "notes": "«Где» pregunta el sitio, no la hora."
+    },
+    {
+      "id": "ru-a1-city.qa.poidyom-v-teatr",
+      "question": "Пойдём сего́дня в теа́тр?",
+      "questionEs": "¿Vamos hoy al teatro?",
+      "accepted": [
+        {
+          "text": "С удово́льствием!",
+          "es": "¡Con mucho gusto!"
+        },
+        {
+          "text": "К сожале́нию, я не могу́.",
+          "es": "Lo siento, no puedo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я из Мадри́да.",
+          "es": "Soy de Madrid."
+        },
+        {
+          "text": "Э́то спра́ва.",
+          "es": "Está a la derecha."
+        }
+      ],
+      "register": "tu",
+      "situation": "ciudad",
+      "notes": "Acepta o rechaza la invitación.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.qa.kakoi-bilet",
+      "question": "Вам како́й биле́т?",
+      "questionEs": "¿Qué entrada quiere?",
+      "accepted": [
+        {
+          "text": "Оди́н взро́слый, пожа́луйста.",
+          "es": "Una de adulto, por favor."
+        },
+        {
+          "text": "Два взро́слых, пожа́луйста.",
+          "es": "Dos de adulto, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Туда́ и обра́тно.",
+          "es": "Ida y vuelta."
+        },
+        {
+          "text": "В гардеро́бе.",
+          "es": "En el guardarropa."
+        }
+      ],
+      "register": "vy",
+      "situation": "ciudad",
+      "notes": "En la taquilla del museo: tipo y número de entradas."
+    },
+    {
+      "id": "ru-a1-city.qa.sdaite-kurtku",
+      "question": "Сда́йте ку́ртку в гардеро́б, пожа́луйста.",
+      "questionEs": "Deje la chaqueta en el guardarropa, por favor.",
+      "accepted": [
+        {
+          "text": "Хорошо́. А где гардеро́б?",
+          "es": "Vale. ¿Y dónde está el guardarropa?"
+        },
+        {
+          "text": "Хорошо́, спаси́бо.",
+          "es": "Vale, gracias."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Нет, я не студе́нт.",
+          "es": "No, no soy estudiante."
+        },
+        {
+          "text": "Иди́те пря́мо.",
+          "es": "Siga recto."
+        }
+      ],
+      "register": "vy",
+      "situation": "ciudad",
+      "notes": "En los museos rusos el abrigo no entra en las salas.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-city.qa.ty-gde",
+      "question": "Ты где? Я уже́ у метро́.",
+      "questionEs": "¿Dónde estás? Ya estoy en el metro.",
+      "accepted": [
+        {
+          "text": "Я уже́ здесь!",
+          "es": "¡Ya estoy aquí!"
+        },
+        {
+          "text": "Я опа́здываю на де́сять мину́т.",
+          "es": "Llego diez minutos tarde."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я живу́ в Мадри́де.",
+          "es": "Vivo en Madrid."
+        },
+        {
+          "text": "Иди́те пря́мо.",
+          "es": "Siga recto."
+        }
+      ],
+      "register": "tu",
+      "situation": "ciudad",
+      "notes": "Di dónde estás o avisa de que llegas tarde."
+    }
+  ]
+}
