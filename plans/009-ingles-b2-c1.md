@@ -1,6 +1,6 @@
 # Plan 009 — Inglés B2 + C1: the upper levels of the English pack
 
-Status: active
+Status: done
 Created: 2026-10-07
 Base branch: plan-009-ingles-b2-c1
 Goal: Complete the English pack with levels **B2 and C1**, each the full French-sized course (10 units + grammar, ~420 phrases, ~320 vocab, ~80 Q&A, 12 dialogues, 12 stories), using the molds plan 008 built for A2 and B1 (generic `levels`, level selector, `formal` register, `equivalents`). Small generic polish first (pack levels and situations, per-level story length, Prepárate register labels, copy that assumes a trip, content-guide docs), then content unit by unit (max 2 agents), dialogues, stories in two batches per level, a placement test rewritten for four levels (4 questions each), and en-US audio + pictures last on the Mac. Italian, French and the English A2/B1 content stay byte-identical; every on-device key keeps its shape. MVP speed: no automated tests; verification is `npm run verify`.
@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:46Z 💻
-- Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 2474623
-- Next step: T129 on 💻: npm run audio + images, strict checks, offline/iPhone check
-- Needs Hernán: -
+- Updated: 2026-10-07 22:58Z 💻
+- Writer: released 22:58Z by 💻 desktop
+- Branch: plan-009-ingles-b2-c1 @ 514922c
+- Next step: Hernán: visual + review queues; OK to merge into main and deploy
+- Needs Hernán: merge/deploy approval
 
 ## Shared contract (all tasks read this)
 
@@ -249,7 +249,7 @@ Worktree setup: npm ci
 - Outcome: en placement: 16 questions, 4 per level A2–C1, every non-grammar unit covered; suggestLevel checked with a throwaway script · 9dff1ff · verify ✓ 💻 · not checked: take the test in the app
 
 ## T129 — English B2/C1 audio and pictures, final offline check
-- Status: running (attempt 1 · 💻 · writer · since 22:46Z)
+- Status: done
 - Depends on: T117, T119, T125, T127, T128
 - Where: pc (edge-tts needs the Mac's internet; on-device check)
 - Goal: Generate en-US neural mp3 for every new English playable and the new pictures, commit them, and prove B2/C1 work offline with only English audio cached.
@@ -260,7 +260,7 @@ Worktree setup: npm ci
   - `npm run content:check -- --strict-audio --strict-images` → exit 0.
   - `npm run verify` → exit 0
   - Hand check (PC): installed PWA, English, airplane mode: a B2 lesson, a C1 dialogue and a C1 story play neural audio.
-- Outcome:
+- Outcome: 3517 en-US mp3 + 34 pictures; it/fr audio untouched; 2 placement mp3 pruned (questions rewritten in T128); strict audio+images ✓ · 514922c · verify ✓ 💻 · not checked: installed PWA offline on iPhone
 
 ## Review queue
 - [ ] T111 @b45105e — code review (queued 2026-10-07 ☁️)
@@ -287,6 +287,7 @@ Worktree setup: npm ci
 - [ ] T117 @55efa70 — play two B2 dialogues with device voices (queued 2026-10-07 💻)
 - [ ] T125 @60de43a — play two C1 dialogues with device voices (queued 2026-10-07 💻)
 - [ ] T128 @9dff1ff — take the English placement test, confirm suggested level (all right → C1, A2+B1 → B1) (queued 2026-10-07 💻)
+- [ ] T129 @514922c — installed PWA, English, airplane mode: a B2 lesson, a C1 dialogue and a C1 story play neural audio (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: B2 and C1 complete the English pack with the full French-sized volume per level and the plan 008 molds; units, grammar, dialogues and stories in docs/brief-en.md (B2/C1 sections added 2026-10-07). (Hernán: "plan b2 c1", same structure)
@@ -347,3 +348,4 @@ Worktree setup: npm ci
 - 2026-10-07 22:46Z 💻 T128 done · worktree-agent-a40a6f1638a7f7220 → 9dff1ff · verify ✓ (dropped a2-check, a2-sore-throat, b1-crashing, b1-experience; ids not stored on device)
 - 2026-10-07 22:46Z 💻 T127 done · worktree-agent-ac83a5827992af568 → 2474623 · verify ✓
 - 2026-10-07 22:46Z 💻 T129 started by the 💻 writer (npm run audio)
+- 2026-10-07 22:58Z 💻 T129 done · 514922c · strict-audio/images ✓ · verify ✓
