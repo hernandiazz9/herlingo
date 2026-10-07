@@ -1,0 +1,1235 @@
+{
+  "id": "ru-a1-hello",
+  "order": 12,
+  "level": "A1",
+  "title": "Saludos, cortesía y «no entiendo»",
+  "description": "Saludar y despedirte, ты o вы, dar las gracias, pedir perdón y salir del paso cuando no entiendes.",
+  "emoji": "👋",
+  "situation": "saludos",
+  "lessons": [
+    {
+      "id": "ru-a1-hello.l.hello",
+      "title": "Hola y adiós",
+      "items": [
+        "ru-a1-hello.zdravstvuite",
+        "ru-a1-hello.privet",
+        "ru-a1-hello.dobroe-utro",
+        "ru-a1-hello.dobryi-den",
+        "ru-a1-hello.dobryi-vecher",
+        "ru-a1-hello.do-svidaniya",
+        "ru-a1-hello.poka",
+        "ru-a1-hello.spokoinoi-nochi",
+        "ru-a1-hello.do-zavtra",
+        "ru-a1-hello.do-vstrechi",
+        "ru-a1-hello.vsego-khoroshego",
+        "ru-a1-hello.dobro-pozhalovat",
+        "ru-a1-hello.qa.dobroe-utro",
+        "ru-a1-hello.qa.vsego-khoroshego"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.l.kak-dela",
+      "title": "¿Qué tal?",
+      "items": [
+        "ru-a1-hello.kak-dela",
+        "ru-a1-hello.khorosho-spasibo",
+        "ru-a1-hello.a-u-tebya",
+        "ru-a1-hello.kak-ty",
+        "ru-a1-hello.kak-u-vas-dela",
+        "ru-a1-hello.a-u-vas",
+        "ru-a1-hello.otlichno",
+        "ru-a1-hello.normalno",
+        "ru-a1-hello.tak-sebe",
+        "ru-a1-hello.plokho",
+        "ru-a1-hello.drug",
+        "ru-a1-hello.podruga",
+        "ru-a1-hello.ochen-priyatno",
+        "ru-a1-hello.mne-tozhe",
+        "ru-a1-hello.qa.kak-dela",
+        "ru-a1-hello.qa.kak-u-vas-dela",
+        "ru-a1-hello.qa.ochen-priyatno"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.l.ty-vy",
+      "title": "¿Tú o usted?",
+      "items": [
+        "ru-a1-alphabet.ty",
+        "ru-a1-alphabet.vy",
+        "gram.ru-a1-ty-or-vy",
+        "ru-a1-hello.muzhchina",
+        "ru-a1-hello.zhenshchina",
+        "ru-a1-hello.rebyonok",
+        "ru-a1-hello.devushka",
+        "ru-a1-hello.molodoi-chelovek",
+        "ru-a1-hello.devushka-mozhno-vas",
+        "ru-a1-hello.molodoi-chelovek-izvinite",
+        "ru-a1-hello.mozhno-na-ty",
+        "ru-a1-hello.davai-na-ty",
+        "ru-a1-hello.qa.mozhno-na-ty"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.l.polite",
+      "title": "Por favor, gracias y perdón",
+      "items": [
+        "ru-a1-hello.spasibo",
+        "ru-a1-hello.bolshoe-spasibo",
+        "ru-a1-hello.pozhaluista",
+        "ru-a1-hello.ne-za-chto",
+        "ru-a1-hello.da-pozhaluista",
+        "ru-a1-hello.net-spasibo",
+        "ru-a1-hello.izvinite",
+        "ru-a1-hello.izvini",
+        "ru-a1-hello.prostite",
+        "ru-a1-hello.nichego-strashnogo",
+        "ru-a1-hello.khorosho",
+        "ru-a1-hello.konechno",
+        "ru-a1-hello.mozhno",
+        "ru-a1-hello.bez-problem",
+        "ru-a1-hello.qa.spasibo",
+        "ru-a1-hello.qa.izvinite"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.l.ne-ponimayu",
+      "title": "Cuando no entiendes",
+      "items": [
+        "ru-a1-hello.ya-ne-ponimayu",
+        "ru-a1-hello.povtorite",
+        "ru-a1-hello.povtori",
+        "ru-a1-hello.medlennee",
+        "ru-a1-hello.eshchyo-raz",
+        "ru-a1-hello.chto-vy-skazali",
+        "ru-a1-hello.ya-plokho-govoryu",
+        "ru-a1-hello.ya-nemnogo-govoryu",
+        "ru-a1-hello.yazyk",
+        "ru-a1-hello.vy-govorite-po-angliiski",
+        "ru-a1-hello.vy-govorite-po-ispanski",
+        "ru-a1-hello.slovo",
+        "ru-a1-hello.kak-eto-po-russki",
+        "ru-a1-hello.chto-eto-znachit",
+        "ru-a1-hello.napishite",
+        "ru-a1-hello.minutochku",
+        "ru-a1-hello.ya-ne-znayu",
+        "ru-a1-hello.ya-ponyal",
+        "ru-a1-hello.ya-ponyala",
+        "ru-a1-hello.qa.ponimaete",
+        "ru-a1-hello.qa.po-angliiski",
+        "ru-a1-hello.qa.ponyatno"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "ru-a1-hello.zdravstvuite",
+      "text": "Здра́вствуйте!",
+      "es": "¡Hola! / ¡Buenos días!",
+      "notes": "El saludo de usted, a cualquier hora; también para saludar a varios.",
+      "explanation": "Con quien no conoces o tratas de usted: en tiendas, hoteles, con gente mayor. La primera «в» no suena: ZDRÁS-tvui-tie.",
+      "register": "vy",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.privet",
+      "text": "Приве́т!",
+      "es": "¡Hola!",
+      "explanation": "Con amigos, familia y gente joven a la que tuteas. pri-VIET: la «е» ablanda la «в».",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.dobroe-utro",
+      "text": "До́брое у́тро!",
+      "es": "¡Buenos días!",
+      "explanation": "Por la mañana, hasta las once o así, con cualquiera. DÓ-bra-ye Ú-tra: las «о» átonas suenan «a».",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.dobryi-den",
+      "text": "До́брый день!",
+      "es": "¡Buenos días! / ¡Buenas tardes!",
+      "explanation": "Durante el día, al entrar en una tienda o al empezar una llamada. DÓ-bryi dien': «ы» con la lengua atrás.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.dobryi-vecher",
+      "text": "До́брый ве́чер!",
+      "es": "¡Buenas tardes! / ¡Buenas noches!",
+      "explanation": "Al llegar a un sitio a partir de las seis o así; no es para irte a dormir. DÓ-bryi VIÉ-chir.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.do-svidaniya",
+      "text": "До свида́ния!",
+      "es": "¡Adiós!",
+      "literal": "Hasta la vista.",
+      "explanation": "La despedida de siempre, sirve con todo el mundo. da svi-DÁ-ni-ya: la «о» de «до» suena «a».",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.poka",
+      "text": "Пока́!",
+      "es": "¡Chao! / ¡Hasta luego!",
+      "explanation": "Solo con quien tuteas: amigos, familia. pa-KÁ, con la «о» átona como «a».",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.spokoinoi-nochi",
+      "text": "Споко́йной но́чи!",
+      "es": "¡Buenas noches! (al irse a dormir)",
+      "explanation": "Solo antes de dormir o al despedirte muy tarde. spa-KÓI-nai NÓ-chi.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.do-zavtra",
+      "text": "До за́втра!",
+      "es": "¡Hasta mañana!",
+      "explanation": "Con quien vas a ver mañana: en el hotel, en clase. da ZÁF-tra: la «в» antes de «т» suena «f».",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.do-vstrechi",
+      "text": "До встре́чи!",
+      "es": "¡Hasta la próxima!",
+      "explanation": "Cuando ya habéis quedado o sabes que os veréis. da FSTRIÉ-chi: la «в» suena «f».",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.vsego-khoroshego",
+      "text": "Всего́ хоро́шего!",
+      "es": "¡Que te vaya bien! / ¡Que tenga un buen día!",
+      "explanation": "Al salir de una tienda o terminar una llamada. La «г» de «-его» suena «v»: fsi-VÓ ja-RÓ-shi-va.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.dobro-pozhalovat",
+      "text": "Добро́ пожа́ловать!",
+      "es": "¡Bienvenido! / ¡Bienvenidos!",
+      "explanation": "Lo verás en carteles y te lo dirán al llegar a un hotel o a una casa. da-BRÓ pa-ZHÁ-la-vat'.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.kak-dela",
+      "text": "Как дела́?",
+      "es": "¿Qué tal?",
+      "literal": "¿Cómo (van) los asuntos?",
+      "explanation": "Entre amigos o conocidos; con alguien de usted mejor «Как у вас дела́?». kak di-LÁ: la «е» átona suena «i».",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.kak-u-vas-dela",
+      "text": "Как у вас дела́?",
+      "es": "¿Qué tal está usted?",
+      "explanation": "Con un conocido al que tratas de usted, o con varias personas. kak u vas di-LÁ.",
+      "register": "vy",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.kak-ty",
+      "text": "Как ты?",
+      "es": "¿Qué tal estás?",
+      "explanation": "A un amigo o a alguien de la familia, sobre todo si hace tiempo que no le ves. kak ty: la «ы» con la lengua atrás.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.khorosho-spasibo",
+      "text": "Хорошо́, спаси́бо.",
+      "es": "Bien, gracias.",
+      "explanation": "La respuesta de siempre a «Как дела́?». ja-ra-SHÓ, spa-SÍ-ba: las «о» átonas suenan «a».",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.otlichno",
+      "text": "Отли́чно!",
+      "es": "¡Genial! / ¡Muy bien!",
+      "explanation": "Cuando estás de verdad bien, o para decir «perfecto» a un plan. at-LÍCH-na.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.normalno",
+      "text": "Норма́льно.",
+      "es": "Bien, normal.",
+      "explanation": "La respuesta más rusa a «¿qué tal?»: ni bien ni mal. nar-MÁL'-na: la «ль» es blanda.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.tak-sebe",
+      "text": "Так себе́.",
+      "es": "Regular. / Así así.",
+      "explanation": "Cuando no estás muy bien pero no quieres contarlo. tak si-BIÉ.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.plokho",
+      "text": "Пло́хо.",
+      "es": "Mal.",
+      "explanation": "Si de verdad estás mal: te preguntarán «Что случи́лось?» (¿Qué ha pasado?). PLÓ-ja.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.a-u-tebya",
+      "text": "А у тебя́?",
+      "es": "¿Y tú?",
+      "literal": "¿Y en ti?",
+      "explanation": "Para devolver la pregunta a quien tuteas. a u ti-BIÁ: la «е» átona suena «i».",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.a-u-vas",
+      "text": "А у вас?",
+      "es": "¿Y usted?",
+      "literal": "¿Y en usted?",
+      "explanation": "Para devolver la pregunta a quien tratas de usted. a u vas.",
+      "register": "vy",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.ochen-priyatno",
+      "text": "О́чень прия́тно!",
+      "es": "¡Encantado! / ¡Encantada!",
+      "literal": "Muy agradable.",
+      "explanation": "Al conocer a alguien, después de decir los nombres. Ó-chin' pri-YÁT-na.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.mne-tozhe",
+      "text": "Мне то́же.",
+      "es": "Igualmente.",
+      "literal": "A mí también.",
+      "explanation": "Para responder a «О́чень прия́тно!». mnie TÓ-zhe: la «ж» es dura.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "que-tal"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.mozhno-na-ty",
+      "text": "Мо́жно на ты?",
+      "es": "¿Nos tuteamos?",
+      "explanation": "Para pasar de «вы» a «ты» con alguien de tu edad o con quien ya hay confianza. MÓZH-na na ty.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.davai-na-ty",
+      "text": "Дава́й на ты!",
+      "es": "¡Tutéame! / ¡Vamos a tutearnos!",
+      "explanation": "Te lo dirán cuando ya hay confianza; a partir de ahí, «ты». da-VÁI na ty.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.devushka-mozhno-vas",
+      "text": "Де́вушка, мо́жно вас?",
+      "es": "Perdone (a una camarera o dependienta)",
+      "literal": "Chica, ¿se puede a usted?",
+      "explanation": "Para llamar a una camarera o dependienta joven. DIÉ-vush-ka, MÓZH-na vas.",
+      "register": "vy",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.molodoi-chelovek-izvinite",
+      "text": "Молодо́й челове́к, извини́те!",
+      "es": "¡Perdone! (a un chico joven)",
+      "literal": "Joven, perdone.",
+      "explanation": "Para llamar a un camarero o a un chico desconocido. ma-la-DÓI chi-la-VIÉK.",
+      "register": "vy",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.spasibo",
+      "text": "Спаси́бо!",
+      "es": "¡Gracias!",
+      "explanation": "Con todo el mundo, a todas horas. spa-SÍ-ba: la «о» final suena «a».",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.bolshoe-spasibo",
+      "text": "Большо́е спаси́бо!",
+      "es": "¡Muchas gracias!",
+      "literal": "Gran gracias.",
+      "explanation": "Cuando alguien te ayuda de verdad. bal'-SHÓ-ye spa-SÍ-ba.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.pozhaluista",
+      "text": "Пожа́луйста.",
+      "es": "Por favor. / De nada.",
+      "explanation": "Para pedir algo y también para responder a «спаси́бо». Se dice rápido: pa-ZHÁL-sta.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.ne-za-chto",
+      "text": "Не за что!",
+      "es": "¡De nada!",
+      "literal": "No hay por qué.",
+      "explanation": "Para responder a «спаси́бо», algo más cercano que «пожа́луйста». El acento va en «не»: NIÉ-za-shta.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.izvinite",
+      "text": "Извини́те!",
+      "es": "¡Perdone! / ¡Disculpe!",
+      "explanation": "Para pedir paso, llamar la atención o disculparte con quien tratas de usted. iz-vi-NÍ-tie.",
+      "register": "vy",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.izvini",
+      "text": "Извини́!",
+      "es": "¡Perdona!",
+      "explanation": "Lo mismo con quien tuteas: amigos, familia. iz-vi-NÍ.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.prostite",
+      "text": "Прости́те!",
+      "es": "¡Perdone! / ¡Lo siento!",
+      "explanation": "Para pedir perdón cuando de verdad has molestado a alguien. pras-TÍ-tie.",
+      "register": "vy",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.nichego-strashnogo",
+      "text": "Ничего́ стра́шного.",
+      "es": "No pasa nada.",
+      "literal": "Nada terrible.",
+      "explanation": "Para responder a quien te pide perdón. La «г» suena «v»: ni-chi-VÓ STRÁSH-na-va.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.da-pozhaluista",
+      "text": "Да, пожа́луйста.",
+      "es": "Sí, por favor.",
+      "explanation": "Cuando te ofrecen algo: una bolsa, más té, ayuda. da, pa-ZHÁL-sta.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.net-spasibo",
+      "text": "Нет, спаси́бо.",
+      "es": "No, gracias.",
+      "explanation": "Para rechazar con educación algo que te ofrecen. niet, spa-SÍ-ba.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.khorosho",
+      "text": "Хорошо́!",
+      "es": "¡Vale! / ¡De acuerdo!",
+      "explanation": "Para aceptar un plan o una indicación; es el «vale» ruso. ja-ra-SHÓ.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.konechno",
+      "text": "Коне́чно!",
+      "es": "¡Claro! / ¡Por supuesto!",
+      "explanation": "Para decir que sí con ganas. La «чн» suena «shn»: ka-NIÉSH-na.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.mozhno",
+      "text": "Мо́жно?",
+      "es": "¿Se puede? / ¿Puedo?",
+      "explanation": "Al entrar en un despacho, coger una silla o hacer una foto. MÓZH-na: la «ж» suena «sh» antes de «н».",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.bez-problem",
+      "text": "Без пробле́м!",
+      "es": "¡Sin problema!",
+      "explanation": "Informal, cuando te piden un favor. La «з» final suena «s»: bies pra-BLIEM.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.ya-ne-ponimayu",
+      "text": "Я не понима́ю.",
+      "es": "No entiendo.",
+      "explanation": "Tu salvavidas cuando te hablan en ruso. ya ni pa-ni-MÁ-yu: las vocales átonas se reducen.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.ya-ne-znayu",
+      "text": "Я не зна́ю.",
+      "es": "No lo sé.",
+      "explanation": "Si te preguntan algo que no sabes, por ejemplo una calle. ya ni ZNÁ-yu.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.ya-plokho-govoryu",
+      "text": "Я пло́хо говорю́ по-ру́сски.",
+      "es": "Hablo mal ruso.",
+      "explanation": "Para avisar al empezar y que te hablen despacio. ga-va-RIÚ pa-RÚS-ki.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.ya-nemnogo-govoryu",
+      "text": "Я немно́го говорю́ по-ру́сски.",
+      "es": "Hablo un poco de ruso.",
+      "explanation": "Para presentarte con modestia; a los rusos les encanta que lo intentes. nim-NÓ-ga.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.vy-govorite-po-angliiski",
+      "text": "Вы говори́те по-англи́йски?",
+      "es": "¿Habla inglés?",
+      "explanation": "Para buscar una lengua común en el hotel o en la calle. pa-an-GLÍIS-ki.",
+      "register": "vy",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.vy-govorite-po-ispanski",
+      "text": "Вы говори́те по-испа́нски?",
+      "es": "¿Habla español?",
+      "explanation": "Por si hay suerte: en museos y hoteles de San Petersburgo a veces sí. pa-is-PÁNS-ki.",
+      "register": "vy",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.povtorite",
+      "text": "Повтори́те, пожа́луйста.",
+      "es": "Repita, por favor.",
+      "explanation": "Cuando no has pillado algo. La «в» antes de «т» suena «f»: paf-ta-RÍ-tie.",
+      "register": "vy",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.povtori",
+      "text": "Повтори́, пожа́луйста.",
+      "es": "Repite, por favor.",
+      "explanation": "Lo mismo con un amigo o con quien tuteas. paf-ta-RÍ.",
+      "register": "tu",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.medlennee",
+      "text": "Говори́те, пожа́луйста, ме́дленнее.",
+      "es": "Hable más despacio, por favor.",
+      "explanation": "Cuando te hablan demasiado rápido. MIÉD-li-ni-ye: la «е» átona suena casi «i».",
+      "register": "vy",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.eshchyo-raz",
+      "text": "Ещё раз, пожа́луйста.",
+      "es": "Otra vez, por favor.",
+      "explanation": "Para que repitan un número, un precio o una dirección. yi-SHIÓ ras: la «щ» es una «sh» suave.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.kak-eto-po-russki",
+      "text": "Как э́то по-ру́сски?",
+      "es": "¿Cómo se dice esto en ruso?",
+      "explanation": "Señalando algo que no sabes nombrar. kak É-ta pa-RÚS-ki.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.chto-eto-znachit",
+      "text": "Что э́то зна́чит?",
+      "es": "¿Qué significa esto?",
+      "explanation": "Ante una palabra o un cartel que no entiendes. «Что» se dice «shto».",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.napishite",
+      "text": "Напиши́те, пожа́луйста.",
+      "es": "Escríbalo, por favor.",
+      "explanation": "Para direcciones, precios o nombres: leer es más fácil que oír. «ши» suena «shy»: na-pi-SHY-tie.",
+      "register": "vy",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.chto-vy-skazali",
+      "text": "Что вы сказа́ли?",
+      "es": "¿Qué ha dicho?",
+      "explanation": "Cuando no has oído bien. shto vy ska-ZÁ-li.",
+      "register": "vy",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.ya-ponyal",
+      "text": "Я по́нял.",
+      "es": "Entendido. (dicho por un hombre)",
+      "notes": "En pasado el verbo cambia según quién habla: «по́нял» (él), «поняла́» (ella).",
+      "explanation": "Si eres hombre, para decir que lo has entendido. ya PÓ-nial.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.ya-ponyala",
+      "text": "Я поняла́.",
+      "es": "Entendido. (dicho por una mujer)",
+      "explanation": "Si eres mujer, para decir que lo has entendido. El acento salta al final: ya pa-ni-LÁ.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "ru-a1-hello.minutochku",
+      "text": "Мину́точку!",
+      "es": "¡Un momento!",
+      "literal": "Un minutito.",
+      "explanation": "Para pedir que esperen mientras buscas algo o piensas. mi-NÚ-tach-ku.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "ru-a1-hello.drug",
+      "word": "друг",
+      "gender": "m",
+      "es": "el amigo",
+      "notes": "La «г» final suena «k»: «druk».",
+      "situation": "saludos"
+    },
+    {
+      "id": "ru-a1-hello.podruga",
+      "word": "подру́га",
+      "gender": "f",
+      "es": "la amiga",
+      "notes": "pa-DRÚ-ga.",
+      "situation": "saludos"
+    },
+    {
+      "id": "ru-a1-hello.muzhchina",
+      "word": "мужчи́на",
+      "gender": "m",
+      "es": "el hombre",
+      "notes": "Acaba en «-а» pero es masculino. «жч» suena «shch»: mu-SHCHÍ-na.",
+      "situation": "saludos",
+      "image": "fluent:man"
+    },
+    {
+      "id": "ru-a1-hello.zhenshchina",
+      "word": "же́нщина",
+      "gender": "f",
+      "es": "la mujer",
+      "notes": "ZHÉN-shchi-na.",
+      "situation": "saludos",
+      "image": "fluent:woman"
+    },
+    {
+      "id": "ru-a1-hello.devushka",
+      "word": "де́вушка",
+      "gender": "f",
+      "es": "la chica",
+      "notes": "También para llamar a una camarera o dependienta joven.",
+      "example": "ru-a1-hello.devushka-mozhno-vas",
+      "situation": "saludos"
+    },
+    {
+      "id": "ru-a1-hello.molodoi-chelovek",
+      "word": "молодо́й челове́к",
+      "gender": "m",
+      "es": "el joven",
+      "notes": "Para llamar a un camarero o a un chico desconocido.",
+      "example": "ru-a1-hello.molodoi-chelovek-izvinite",
+      "situation": "saludos"
+    },
+    {
+      "id": "ru-a1-hello.rebyonok",
+      "word": "ребёнок",
+      "gender": "m",
+      "es": "el niño (la criatura)",
+      "notes": "ri-BIÓ-nak. A un niño se le habla de «ты».",
+      "situation": "saludos",
+      "image": "fluent:child"
+    },
+    {
+      "id": "ru-a1-hello.yazyk",
+      "word": "язы́к",
+      "gender": "m",
+      "es": "el idioma; la lengua",
+      "notes": "yi-ZYK: «ру́сский язы́к» = el ruso.",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "ru-a1-hello.slovo",
+      "word": "сло́во",
+      "gender": "n",
+      "es": "la palabra",
+      "notes": "SLÓ-va: la «о» átona final suena «a».",
+      "situation": "no-entiendo"
+    }
+  ],
+  "qa": [
+    {
+      "id": "ru-a1-hello.qa.dobroe-utro",
+      "question": "До́брое у́тро!",
+      "questionEs": "¡Buenos días!",
+      "accepted": [
+        {
+          "text": "До́брое у́тро!",
+          "es": "¡Buenos días!"
+        },
+        {
+          "text": "Здра́вствуйте!",
+          "es": "¡Buenos días! (de usted)"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Споко́йной но́чи!",
+          "es": "¡Buenas noches! (al irse a dormir)"
+        },
+        {
+          "text": "До свида́ния!",
+          "es": "¡Adiós!"
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "Al saludo se responde con el mismo saludo.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-hello.qa.vsego-khoroshego",
+      "question": "Спаси́бо! Всего́ хоро́шего!",
+      "questionEs": "¡Gracias! ¡Que tenga un buen día!",
+      "accepted": [
+        {
+          "text": "Спаси́бо, вам то́же! До свида́ния!",
+          "es": "¡Gracias, igualmente! ¡Adiós!"
+        },
+        {
+          "text": "До свида́ния!",
+          "es": "¡Adiós!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Приве́т!",
+          "es": "¡Hola! (de tú)"
+        },
+        {
+          "text": "Добро́ пожа́ловать!",
+          "es": "¡Bienvenido!"
+        }
+      ],
+      "register": "vy",
+      "situation": "saludos",
+      "notes": "Al salir de una tienda devuelves el deseo: «вам то́же» = igualmente (de usted)."
+    },
+    {
+      "id": "ru-a1-hello.qa.kak-dela",
+      "question": "Приве́т! Как дела́?",
+      "questionEs": "¡Hola! ¿Qué tal?",
+      "accepted": [
+        {
+          "text": "Хорошо́, спаси́бо! А у тебя́?",
+          "es": "¡Bien, gracias! ¿Y tú?"
+        },
+        {
+          "text": "Норма́льно, а ты?",
+          "es": "Bien, ¿y tú?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Хорошо́, а у вас?",
+          "es": "Bien, ¿y usted?"
+        },
+        {
+          "text": "Споко́йной но́чи!",
+          "es": "¡Buenas noches!"
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "«Приве́т» es de tú: devuelve la pregunta de tú, «А у тебя́?».",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-hello.qa.kak-u-vas-dela",
+      "question": "Здра́вствуйте! Как у вас дела́?",
+      "questionEs": "¡Hola! ¿Qué tal está usted?",
+      "accepted": [
+        {
+          "text": "Хорошо́, спаси́бо. А у вас?",
+          "es": "Bien, gracias. ¿Y usted?"
+        },
+        {
+          "text": "Спаси́бо, норма́льно.",
+          "es": "Bien, gracias."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Приве́т! А у тебя́?",
+          "es": "¡Hola! ¿Y tú?"
+        },
+        {
+          "text": "До свида́ния!",
+          "es": "¡Adiós!"
+        }
+      ],
+      "register": "vy",
+      "situation": "saludos",
+      "notes": "Te tratan de usted: responde de usted, «А у вас?»."
+    },
+    {
+      "id": "ru-a1-hello.qa.ochen-priyatno",
+      "question": "О́чень прия́тно!",
+      "questionEs": "¡Encantado!",
+      "accepted": [
+        {
+          "text": "Мне то́же!",
+          "es": "¡Igualmente!"
+        },
+        {
+          "text": "Мне то́же о́чень прия́тно.",
+          "es": "Igualmente, encantado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Пожа́луйста!",
+          "es": "¡De nada!"
+        },
+        {
+          "text": "Пока́!",
+          "es": "¡Chao!"
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "«Мне то́же» = a mí también, igualmente.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-hello.qa.mozhno-na-ty",
+      "question": "Мо́жно на ты?",
+      "questionEs": "¿Nos tuteamos?",
+      "accepted": [
+        {
+          "text": "Да, коне́чно! Дава́й!",
+          "es": "¡Sí, claro! ¡Venga!"
+        },
+        {
+          "text": "Коне́чно, мо́жно.",
+          "es": "Claro que sí."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Спаси́бо, хорошо́.",
+          "es": "Bien, gracias."
+        },
+        {
+          "text": "Споко́йной но́чи!",
+          "es": "¡Buenas noches!"
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "Si aceptas, desde ahora «ты»: «Дава́й!» ya es de tú."
+    },
+    {
+      "id": "ru-a1-hello.qa.spasibo",
+      "question": "Большо́е спаси́бо!",
+      "questionEs": "¡Muchas gracias!",
+      "accepted": [
+        {
+          "text": "Не за что!",
+          "es": "¡De nada!"
+        },
+        {
+          "text": "Пожа́луйста!",
+          "es": "¡De nada!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Извини́те!",
+          "es": "¡Perdone!"
+        },
+        {
+          "text": "Здра́вствуйте!",
+          "es": "¡Hola!"
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "A «спаси́бо» se responde «пожа́луйста» o «не за что».",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-hello.qa.izvinite",
+      "question": "Ой, извини́те!",
+      "questionEs": "¡Ay, perdone!",
+      "accepted": [
+        {
+          "text": "Ничего́ стра́шного.",
+          "es": "No pasa nada."
+        },
+        {
+          "text": "Ничего́, всё в поря́дке.",
+          "es": "Nada, todo bien."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Не за что!",
+          "es": "¡De nada!"
+        },
+        {
+          "text": "О́чень прия́тно!",
+          "es": "¡Encantado!"
+        }
+      ],
+      "register": "vy",
+      "situation": "saludos",
+      "notes": "«Не за что» es para las gracias; para una disculpa, «ничего́ стра́шного»."
+    },
+    {
+      "id": "ru-a1-hello.qa.ponimaete",
+      "question": "Вы понима́ете по-ру́сски?",
+      "questionEs": "¿Entiende ruso?",
+      "accepted": [
+        {
+          "text": "Немно́го. Говори́те ме́дленнее, пожа́луйста.",
+          "es": "Un poco. Hable más despacio, por favor."
+        },
+        {
+          "text": "Немно́го.",
+          "es": "Un poco."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Не за что.",
+          "es": "De nada."
+        },
+        {
+          "text": "Да, по-испа́нски.",
+          "es": "Sí, en español."
+        }
+      ],
+      "register": "vy",
+      "situation": "no-entiendo",
+      "notes": "Con «немно́го» (un poco) y «ме́дленнее» (más despacio) sales de casi todo.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-hello.qa.po-angliiski",
+      "question": "Вы говори́те по-англи́йски?",
+      "questionEs": "¿Habla inglés?",
+      "accepted": [
+        {
+          "text": "Да, немно́го.",
+          "es": "Sí, un poco."
+        },
+        {
+          "text": "Нет, извини́те.",
+          "es": "No, lo siento."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, пожа́луйста.",
+          "es": "Sí, por favor."
+        },
+        {
+          "text": "Спаси́бо, хорошо́.",
+          "es": "Bien, gracias."
+        }
+      ],
+      "register": "vy",
+      "situation": "no-entiendo",
+      "notes": "«Да, пожа́луйста» es para aceptar algo que te ofrecen, no para responder a una pregunta."
+    },
+    {
+      "id": "ru-a1-hello.qa.ponyatno",
+      "question": "Вам поня́тно?",
+      "questionEs": "¿Lo ha entendido?",
+      "accepted": [
+        {
+          "text": "Нет. Повтори́те, пожа́луйста.",
+          "es": "No. Repita, por favor."
+        },
+        {
+          "text": "Да, спаси́бо, всё поня́тно.",
+          "es": "Sí, gracias, está todo claro."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Не за что!",
+          "es": "¡De nada!"
+        },
+        {
+          "text": "Хорошо́, а у вас?",
+          "es": "Bien, ¿y usted?"
+        }
+      ],
+      "register": "vy",
+      "situation": "no-entiendo",
+      "notes": "Si no lo has entendido, pide que repitan: «Повтори́те, пожа́луйста».",
+      "voice": "ru-RU-DmitryNeural"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.ru-a1-ty-or-vy",
+      "title": "Ты o вы: tú o usted",
+      "summary": "«Ты» es tú: familia, amigos, niños. «Вы» es usted con quien no conoces (en tiendas, hoteles, con gente mayor) y también vosotros.",
+      "points": [
+        "Con desconocidos empieza siempre con «вы» y «Здра́вствуйте!».",
+        "El paso a «ты» lo propone uno de los dos: «Мо́жно на ты?» o «Дава́й на ты!».",
+        "Muchas palabras de usted acaban en «-те»: «извини́» → «извини́те», «повтори́» → «повтори́те»."
+      ],
+      "table": [
+        [
+          "",
+          "Ты (tú)",
+          "Вы (usted)"
+        ],
+        [
+          "Hola",
+          "Приве́т!",
+          "Здра́вствуйте!"
+        ],
+        [
+          "¿Qué tal?",
+          "Как ты?",
+          "Как у вас дела́?"
+        ],
+        [
+          "¿Y tú? / ¿Y usted?",
+          "А у тебя́?",
+          "А у вас?"
+        ],
+        [
+          "Perdona / Perdone",
+          "Извини́!",
+          "Извини́те!"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Приве́т! Как ты?",
+          "es": "¡Hola! ¿Qué tal estás?"
+        },
+        {
+          "text": "Здра́вствуйте! Как у вас дела́?",
+          "es": "¡Hola! ¿Qué tal está usted?"
+        }
+      ],
+      "tags": [
+        "registro"
+      ]
+    }
+  ]
+}
