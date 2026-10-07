@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-insurance-claim",
+  "title": "Un parte al seguro",
+  "description": "Llamas a tu aseguradora para dar parte de un daño por agua en tu casa.",
+  "situation": "dinero",
+  "unit": "b2-paperwork",
+  "order": 206,
+  "register": "formal",
+  "level": "B2",
+  "avatars": { "Agente de seguros": "fluent:woman-white-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Agente de seguros", "text": "Claims department, this is Linda. Could I have your policy number, please?", "es": "Departamento de siniestros, le atiende Linda. ¿Me da su número de póliza, por favor?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Da el número y explica que quieres dar parte de un daño por agua en tu apartamento.",
+      "options": [
+        { "text": "Sure, it's four, seven, two, nine, one. I'd like to file a claim for water damage in my apartment.", "es": "Claro, es el cuatro, siete, dos, nueve, uno. Querría dar parte de un daño por agua en mi apartamento.", "verdict": "correct", "feedback": "¡Muy bien! «file a claim» = presentar una reclamación o dar parte al seguro." },
+        { "text": "It's four, seven, two, nine, one. There's water damage in my apartment.", "es": "Es el cuatro, siete, dos, nueve, uno. Hay daños por agua en mi apartamento.", "verdict": "acceptable", "feedback": "Correcto; «I'd like to file a claim» deja claro qué trámite quieres hacer." },
+        { "text": "Sure, it's four, seven, two, nine, one. I'd like to make a reclamation for water damage in my apartment.", "es": "Claro, es el cuatro, siete, dos, nueve, uno. Querría hacer una reclamación por daños por agua en mi apartamento.", "verdict": "wrong", "feedback": "«reclamation» no es una reclamación; con un seguro se dice «file a claim»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Agente de seguros", "text": "I'm sorry to hear that. Can you tell me what happened and when?", "es": "Lamento oírlo. ¿Puede contarme qué pasó y cuándo?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Cuenta que el domingo por la noche se rompió una tubería en el baño del vecino de arriba y el agua entró por el techo.",
+      "options": [
+        { "text": "On Sunday night, a pipe burst in my upstairs neighbor's bathroom, and water came through my ceiling.", "es": "El domingo por la noche reventó una tubería en el baño de mi vecino de arriba y el agua entró por mi techo.", "verdict": "correct", "feedback": "¡Perfecto! «a pipe burst» = reventó una tubería; «come through the ceiling» = entrar por el techo." },
+        { "text": "There was a leak from upstairs on Sunday.", "es": "El domingo hubo una fuga desde arriba.", "verdict": "acceptable", "feedback": "Se entiende, pero para un parte necesitan detalles: qué se rompió y por dónde entró el agua." },
+        { "text": "On Sunday at night, a pipe broke in the bathroom of my neighbor of above, and water entered by my roof.", "es": "El domingo por la noche se rompió una tubería en el baño de mi vecino de arriba y el agua entró por mi techo.", "verdict": "wrong", "feedback": "Calco del español: se dice «on Sunday night», «my upstairs neighbor» y «through my ceiling» («roof» es el tejado)." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Agente de seguros", "text": "Was anything damaged apart from the ceiling? Furniture, electronics?", "es": "¿Se dañó algo aparte del techo? ¿Muebles, aparatos electrónicos?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que se estropeó el portátil y que ya has hecho fotos de todos los daños.",
+      "options": [
+        { "text": "Yes, my laptop was ruined. I've already taken photos of all the damage.", "es": "Sí, se me estropeó el portátil. Ya he hecho fotos de todos los daños.", "verdict": "correct", "feedback": "¡Genial! «take photos», y «damage» es incontable: «all the damage»." },
+        { "text": "My laptop. I have photos.", "es": "Mi portátil. Tengo fotos.", "verdict": "acceptable", "feedback": "Se entiende, pero en una llamada formal mejor con frases completas." },
+        { "text": "Yes, my laptop was ruined. I've already made photos of all the damages.", "es": "Sí, se me estropeó el portátil. Ya he hecho fotos de todos los daños.", "verdict": "wrong", "feedback": "Las fotos se «take», no se «make»; y «damages» en plural es una indemnización: aquí es «the damage»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Agente de seguros", "text": "That's very helpful. An adjuster will need to inspect the apartment before we can process the claim.", "es": "Eso ayuda mucho. Un perito tendrá que inspeccionar el apartamento antes de que podamos tramitar el parte.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta cuánto suele tardar el proceso y si debes guardar el portátil roto hasta entonces.",
+      "options": [
+        { "text": "How long does the process usually take? And should I keep the broken laptop until then?", "es": "¿Cuánto suele tardar el proceso? ¿Y debería guardar el portátil roto hasta entonces?", "verdict": "correct", "feedback": "¡Bien! «usually» va antes del verbo principal; guardar algo = «keep»." },
+        { "text": "When will I get the money?", "es": "¿Cuándo recibiré el dinero?", "verdict": "acceptable", "feedback": "Es natural preguntarlo, pero suena algo directo; pregunta también por el proceso." },
+        { "text": "How long does usually take the process? And should I save the broken laptop until then?", "es": "¿Cuánto suele tardar el proceso? ¿Y debería guardar el portátil roto hasta entonces?", "verdict": "wrong", "feedback": "El orden es «How long does the process usually take?», y guardar un objeto es «keep», no «save»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Agente de seguros", "text": "Usually two to three weeks. And yes, please keep it until the adjuster has seen it.", "es": "Normalmente de dos a tres semanas. Y sí, guárdelo hasta que lo haya visto el perito.", "voice": "en-US-EmmaNeural" }
+  ]
+}

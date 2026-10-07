@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-job-offer",
+  "title": "La llamada con la oferta de trabajo",
+  "description": "Una reclutadora te llama para ofrecerte el puesto; muestras interés, preguntas por las condiciones y pides tiempo para pensarlo.",
+  "situation": "trabajo",
+  "unit": "b2-projects",
+  "order": 210,
+  "register": "formal",
+  "level": "B2",
+  "avatars": { "Reclutadora": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Reclutadora", "text": "Hi, Hernán, it's Rachel from Brightpath. I have good news: we'd like to offer you the position.", "es": "Hola, Hernán, soy Rachel, de Brightpath. Tengo buenas noticias: nos gustaría ofrecerle el puesto.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que es una noticia estupenda y que te hace mucha ilusión.",
+      "options": [
+        { "text": "That's wonderful news. I'm really excited about it.", "es": "Es una noticia estupenda. Me hace mucha ilusión.", "verdict": "correct", "feedback": "¡Muy bien! «news» es incontable («wonderful news», sin «a»); «excited about» = ilusionado con." },
+        { "text": "Great, thank you!", "es": "¡Genial, gracias!", "verdict": "acceptable", "feedback": "Correcto y amable, aunque puedes mostrar más entusiasmo." },
+        { "text": "That's a wonderful news. I'm really exciting about it.", "es": "Es una noticia estupenda. Me hace mucha ilusión.", "verdict": "wrong", "feedback": "«news» no lleva «a», y tú estás «excited» (lo sientes); «exciting» es lo que emociona." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Reclutadora", "text": "We're thrilled too. The base salary would be one hundred and ten thousand a year, plus benefits.", "es": "Nosotros también estamos encantados. El salario base sería de ciento diez mil al año, más beneficios.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta qué incluyen los beneficios, por ejemplo el seguro médico y los días de vacaciones.",
+      "options": [
+        { "text": "Could you tell me a bit more about the benefits, like health insurance and vacation days?", "es": "¿Podría contarme algo más de los beneficios, como el seguro médico y los días de vacaciones?", "verdict": "correct", "feedback": "¡Perfecto! «a bit more about» pide detalles con suavidad; en EE. UU. se dice «vacation days»." },
+        { "text": "What are the benefits?", "es": "¿Cuáles son los beneficios?", "verdict": "acceptable", "feedback": "Correcto, pero suena seco; «Could you tell me a bit more…?» es más formal." },
+        { "text": "Could you tell me a bit more about the benefits, like the medical security and holidays days?", "es": "¿Podría contarme algo más de los beneficios, como el seguro médico y los días de vacaciones?", "verdict": "wrong", "feedback": "El seguro médico es «health insurance» («security» es seguridad), y los días libres son «vacation days»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Reclutadora", "text": "Of course. Full health coverage and twenty days of paid time off. We'd love to have you start on the first of next month.", "es": "Claro. Cobertura médica completa y veinte días de vacaciones pagadas. Nos encantaría que empezara el día uno del mes que viene.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Agradécelo y pide un par de días para pensarlo y hablarlo con tu familia.",
+      "options": [
+        { "text": "Thank you. Would it be possible to have a couple of days to think it over and talk it through with my family?", "es": "Gracias. ¿Sería posible tener un par de días para pensarlo y hablarlo con mi familia?", "verdict": "correct", "feedback": "¡Genial! «think it over» = pensarlo bien; «talk it through» = hablarlo a fondo." },
+        { "text": "Thanks. Can I answer you next week?", "es": "Gracias. ¿Le puedo responder la semana que viene?", "verdict": "acceptable", "feedback": "Se entiende, pero «Would it be possible…?» es más formal y explicar el motivo ayuda." },
+        { "text": "Thank you. Would it be possible to have a couple of days for think about it and to speak it with my family?", "es": "Gracias. ¿Sería posible tener un par de días para pensarlo y hablarlo con mi familia?", "verdict": "wrong", "feedback": "Finalidad = «to think», no «for think»; y «hablarlo con» es «talk it over/through with», no «speak it with»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Reclutadora", "text": "That's completely fine. Could you let me know by Thursday?", "es": "Por supuesto, no hay problema. ¿Podría decírmelo antes del jueves?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Confirma que le darás una respuesta el jueves como muy tarde y dale las gracias otra vez.",
+      "options": [
+        { "text": "Absolutely. I'll get back to you by Thursday at the latest. Thanks again, Rachel.", "es": "Por supuesto. Le respondo el jueves como muy tarde. Gracias otra vez, Rachel.", "verdict": "correct", "feedback": "¡Bien! «get back to you» = volver a contactar; «at the latest» = como muy tarde." },
+        { "text": "Sure, Thursday. Thank you.", "es": "Claro, el jueves. Gracias.", "verdict": "acceptable", "feedback": "Correcto, aunque algo escueto para cerrar una llamada tan importante." },
+        { "text": "Absolutely. I'll give you an answer until Thursday as later. Thanks again, Rachel.", "es": "Por supuesto. Le doy una respuesta el jueves como muy tarde. Gracias otra vez, Rachel.", "verdict": "wrong", "feedback": "Plazo límite = «by Thursday» («until» es hasta, de duración), y «como muy tarde» es «at the latest»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Reclutadora", "text": "Perfect. Congratulations again, and talk soon!", "es": "Perfecto. Enhorabuena otra vez, ¡y hablamos pronto!", "voice": "en-US-AvaNeural" }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-deposit",
+  "title": "Recuperar la fianza",
+  "description": "Te has mudado y la casera quiere quedarse parte de la fianza; defiendes tu postura con argumentos.",
+  "situation": "vivienda",
+  "unit": "b2-paperwork",
+  "order": 208,
+  "register": "formal",
+  "level": "B2",
+  "avatars": { "Casera": "fluent:old-woman" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Casera", "text": "Hello, Hernán. I got your message about the security deposit. I'm afraid I'll have to keep two hundred dollars.", "es": "Hola, Hernán. Recibí su mensaje sobre la fianza. Me temo que tendré que quedarme doscientos dólares.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pregunta con educación por qué, ya que dejaste el apartamento en perfecto estado.",
+      "options": [
+        { "text": "May I ask why? I left the apartment in perfect condition.", "es": "¿Puedo preguntar por qué? Dejé el apartamento en perfecto estado.", "verdict": "correct", "feedback": "¡Muy bien! «May I ask why?» es una forma formal y educada de pedir explicaciones." },
+        { "text": "Why? The apartment was fine.", "es": "¿Por qué? El apartamento estaba bien.", "verdict": "acceptable", "feedback": "Se entiende, pero suena brusco en una conversación delicada con la casera." },
+        { "text": "Can I ask why? I left the apartment in perfect state.", "es": "¿Puedo preguntar por qué? Dejé el apartamento en perfecto estado.", "verdict": "wrong", "feedback": "«en perfecto estado» es «in perfect condition»; «state» no se usa así." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Casera", "text": "There's a large stain on the living room carpet, and one of the walls needs repainting.", "es": "Hay una mancha grande en la moqueta del salón, y una de las paredes hay que repintarla.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que la mancha ya estaba cuando te mudaste y que está en el informe de entrada.",
+      "options": [
+        { "text": "Actually, that stain was already there when I moved in. It's in the move-in report.", "es": "En realidad, esa mancha ya estaba cuando me mudé. Aparece en el informe de entrada.", "verdict": "correct", "feedback": "¡Perfecto! «move in» = mudarse a un sitio; «actually» = en realidad (no «actualmente»)." },
+        { "text": "The stain is old. It's not mine.", "es": "La mancha es antigua. No es mía.", "verdict": "acceptable", "feedback": "Correcto, pero mencionar el informe de entrada es tu mejor prueba." },
+        { "text": "Actually, that stain was already there when I moved. It's in the entrance report.", "es": "En realidad, esa mancha ya estaba cuando me mudé. Aparece en el informe de entrada.", "verdict": "wrong", "feedback": "Mudarse a un piso es «move in», y el documento es el «move-in report», no «entrance report»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Casera", "text": "Oh, I'll have to check that. But what about the wall?", "es": "Ah, tendré que comprobarlo. ¿Pero y la pared?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que unas pocas marcas en la pared son desgaste normal y que no deberían descontarse de la fianza.",
+      "options": [
+        { "text": "With respect, a few marks on the wall are normal wear and tear. They shouldn't come out of the deposit.", "es": "Con todo respeto, unas pocas marcas en la pared son desgaste normal. No deberían descontarse de la fianza.", "verdict": "correct", "feedback": "¡Genial! «wear and tear» = desgaste por el uso; «come out of» = descontarse de." },
+        { "text": "The wall is normal after two years.", "es": "La pared está normal después de dos años.", "verdict": "acceptable", "feedback": "Se entiende; la expresión «normal wear and tear» es la que se usa en los contratos." },
+        { "text": "With respect, a few marks on the wall are a normal use. You shouldn't discount them of the deposit.", "es": "Con todo respeto, unas pocas marcas en la pared son el uso normal. No debería descontarlas de la fianza.", "verdict": "wrong", "feedback": "«descontar» aquí es «deduct from», no «discount of»; el desgaste es «wear and tear»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Casera", "text": "Well, if the stain is in the report, I suppose I could return the full amount.", "es": "Bueno, si la mancha está en el informe, supongo que podría devolverle el importe completo.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias y di que le reenvías el informe ahora para que lo tenga a mano.",
+      "options": [
+        { "text": "Thank you, I appreciate it. I'll forward you the report now so you have it on hand.", "es": "Gracias, se lo agradezco. Le reenvío el informe ahora para que lo tenga a mano.", "verdict": "correct", "feedback": "¡Bien! «I appreciate it» agradece con formalidad; «forward» = reenviar." },
+        { "text": "Thanks. I'll send you the report.", "es": "Gracias. Le envío el informe.", "verdict": "acceptable", "feedback": "Correcto, aunque «I appreciate it» suena más cordial al cerrar el acuerdo." },
+        { "text": "Thank you, I appreciate. I'll forward you the report now so you have it at hand.", "es": "Gracias, se lo agradezco. Le reenvío el informe ahora para que lo tenga a mano.", "verdict": "wrong", "feedback": "«appreciate» necesita objeto: «I appreciate it». Y en inglés americano se dice «on hand»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Casera", "text": "Thank you. If everything checks out, you'll have the deposit by the end of the week.", "es": "Gracias. Si todo cuadra, tendrá la fianza antes de que acabe la semana.", "voice": "en-US-EmmaNeural" }
+  ]
+}

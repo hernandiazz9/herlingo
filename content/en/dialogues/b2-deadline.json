@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-deadline",
+  "title": "Negociar un plazo",
+  "description": "Una clienta quiere la nueva función para el viernes; explicas el riesgo y negocias una fecha realista.",
+  "situation": "trabajo",
+  "unit": "b2-projects",
+  "order": 203,
+  "register": "formal",
+  "level": "B2",
+  "avatars": { "Clienta": "fluent:woman-blonde-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Clienta", "text": "We really need the reporting feature by Friday. Our board meeting is on Monday.", "es": "Necesitamos de verdad la función de informes para el viernes. Nuestra reunión del consejo es el lunes.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que entiendes que es importante, pero que el viernes sería muy justo.",
+      "options": [
+        { "text": "I understand how important this is, but Friday would be very tight.", "es": "Entiendo lo importante que es, pero el viernes iríamos muy justos.", "verdict": "correct", "feedback": "¡Muy bien! Empatizar primero y luego «would be very tight» (muy justo) suaviza el no." },
+        { "text": "Friday is not possible.", "es": "El viernes no es posible.", "verdict": "acceptable", "feedback": "Es claro, pero con una clienta conviene mostrar comprensión antes de decir que no." },
+        { "text": "I understand how important is this, but Friday would be very fair.", "es": "Entiendo lo importante que es, pero el viernes sería muy justo.", "verdict": "wrong", "feedback": "En la pregunta indirecta no se invierte: «how important this is». Y «fair» es justo de justicia; de tiempo es «tight»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Clienta", "text": "What exactly is the problem? I thought it was almost done.", "es": "¿Cuál es exactamente el problema? Creía que estaba casi terminado.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que la parte de exportar ha resultado más compleja de lo previsto y que, si lo entregáis con prisas, podría haber errores.",
+      "options": [
+        { "text": "The export part has turned out to be more complex than expected. If we rush it, there could be bugs.", "es": "La parte de exportar ha resultado más compleja de lo previsto. Si vamos con prisas, podría haber errores.", "verdict": "correct", "feedback": "¡Perfecto! «turn out to be» = resultar ser; «rush it» = hacerlo con prisas." },
+        { "text": "The export part is difficult, and we don't want bugs.", "es": "La parte de exportar es difícil y no queremos errores.", "verdict": "acceptable", "feedback": "Se entiende, aunque no explica que el problema ha surgido sobre la marcha." },
+        { "text": "The export part has resulted more complex than expected. If we rush it, it could have bugs.", "es": "La parte de exportar ha resultado más compleja de lo previsto. Si vamos con prisas, podría tener errores.", "verdict": "wrong", "feedback": "«resultar» no es «result» aquí: se dice «turn out to be more complex»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Clienta", "text": "I see. So what can you offer us?", "es": "Entiendo. ¿Y qué nos podéis ofrecer?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Propón entregar el viernes una versión básica con los gráficos y el resto el miércoles siguiente.",
+      "options": [
+        { "text": "Would it work if we delivered a basic version with the charts on Friday, and the rest next Wednesday?", "es": "¿Le iría bien que entregáramos el viernes una versión básica con los gráficos, y el resto el miércoles que viene?", "verdict": "correct", "feedback": "¡Genial! «Would it work if we + pasado…?» es una propuesta formal y flexible." },
+        { "text": "We can give you the charts on Friday and the rest on Wednesday.", "es": "Podemos darle los gráficos el viernes y el resto el miércoles.", "verdict": "acceptable", "feedback": "Correcto, pero planteado como pregunta («Would it work if…?») invita a negociar." },
+        { "text": "Would it work if we deliver a basic version with the graphics in Friday, and the rest the next Wednesday?", "es": "¿Le iría bien que entregáramos el viernes una versión básica con los gráficos, y el resto el miércoles siguiente?", "verdict": "wrong", "feedback": "Con días de la semana va «on Friday», no «in»; y se dice «next Wednesday», sin «the»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Clienta", "text": "That could work, as long as the charts are reliable. Can you guarantee that?", "es": "Eso podría funcionar, siempre que los gráficos sean fiables. ¿Me lo podéis garantizar?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Asegúrale que sí, y di que le enviarás un plan actualizado por escrito hoy.",
+      "options": [
+        { "text": "Yes, absolutely. I'll send you an updated plan in writing later today.", "es": "Sí, por supuesto. Le enviaré hoy mismo un plan actualizado por escrito.", "verdict": "correct", "feedback": "¡Bien! «in writing» = por escrito; dejarlo por escrito da confianza." },
+        { "text": "Yes. I'll write you later.", "es": "Sí. Luego le escribo.", "verdict": "acceptable", "feedback": "Se entiende; mencionar «an updated plan» deja claro qué vas a enviar." },
+        { "text": "Yes, of course. I'll send you an actualized plan by writing today.", "es": "Sí, claro. Le enviaré hoy un plan actualizado por escrito.", "verdict": "wrong", "feedback": "«actualizado» es «updated» («actualize» no significa eso), y «por escrito» es «in writing»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Clienta", "text": "Perfect. Thank you for being upfront about it.", "es": "Perfecto. Gracias por ser franco con esto.", "voice": "en-US-EmmaNeural" }
+  ]
+}
