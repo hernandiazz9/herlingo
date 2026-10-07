@@ -1,0 +1,402 @@
+{
+  "id": "b2-wellbeing",
+  "order": 232,
+  "level": "B2",
+  "title": "Salud y bienestar: hábitos, deporte, estrés, el médico de cabecera",
+  "description": "Hablar de tus hábitos y del sueño, del deporte y las lesiones, del estrés y cómo desconectar, ir al médico de cabecera y apoyar a alguien que lo está pasando mal.",
+  "emoji": "🧘",
+  "situation": "salud",
+  "lessons": [
+    {
+      "id": "b2-wellbeing.l.habits",
+      "title": "Hábitos: comer, dormir, desconectar",
+      "items": [
+        "b2-wellbeing.habit",
+        "b2-wellbeing.healthy",
+        "b2-wellbeing.im-trying-to-eat-healthier",
+        "b2-wellbeing.diet",
+        "b2-wellbeing.junk-food",
+        "b2-wellbeing.vegetables",
+        "b2-grammar.cut-down-on",
+        "b2-wellbeing.ive-cut-down-on-sugar",
+        "b2-wellbeing.i-gave-up-smoking",
+        "b2-wellbeing.i-tend-to-skip-breakfast",
+        "b2-wellbeing.i-make-a-point-of-drinking-water",
+        "b2-wellbeing.sleep",
+        "b2-wellbeing.i-try-to-get-eight-hours",
+        "b2-wellbeing.screen-time",
+        "b2-wellbeing.i-spend-way-too-much-time-on-my-phone",
+        "b2-wellbeing.ive-been-cooking-at-home-more",
+        "b2-wellbeing.balance",
+        "b2-wellbeing.its-all-about-balance",
+        "b2-wellbeing.qa.habits",
+        "b2-wellbeing.qa.sleep"
+      ]
+    },
+    {
+      "id": "b2-wellbeing.l.exercise",
+      "title": "Deporte y ponerse en forma",
+      "items": [
+        "b2-wellbeing.work-out",
+        "b2-wellbeing.i-work-out-three-times-a-week",
+        "a2-daily.gym",
+        "b2-wellbeing.ive-just-joined-a-gym",
+        "b2-wellbeing.fit",
+        "b2-wellbeing.out-of-shape",
+        "b2-wellbeing.im-so-out-of-shape",
+        "b2-wellbeing.im-training-for-a-half-marathon",
+        "b2-wellbeing.sneakers",
+        "b2-wellbeing.i-go-for-a-run-along-the-lake",
+        "b2-wellbeing.warm-up",
+        "b2-wellbeing.i-need-to-warm-up-first",
+        "b2-wellbeing.muscle",
+        "b2-wellbeing.i-think-i-pulled-a-muscle",
+        "b2-wellbeing.injury",
+        "b2-wellbeing.dont-overdo-it",
+        "b2-wellbeing.yoga",
+        "b2-wellbeing.yoga-helps-me-relax",
+        "b2-wellbeing.qa.exercise",
+        "b2-wellbeing.qa.limping"
+      ]
+    },
+    {
+      "id": "b2-wellbeing.l.stress",
+      "title": "Estrés, cansancio y desconectar",
+      "items": [
+        "b2-wellbeing.stress",
+        "b2-wellbeing.ive-been-really-stressed-out",
+        "b2-wellbeing.pressure",
+        "b1-office.deadline",
+        "b2-wellbeing.im-under-a-lot-of-pressure",
+        "b2-wellbeing.overwhelmed",
+        "b1-stories.exhausted",
+        "b2-wellbeing.i-really-need-a-break",
+        "b2-wellbeing.burnout",
+        "b2-wellbeing.i-think-im-burned-out",
+        "b2-wellbeing.switch-off",
+        "b2-wellbeing.i-find-it-hard-to-switch-off",
+        "b2-wellbeing.unwind",
+        "b2-wellbeing.on-weekends-i-try-to-unwind",
+        "b2-wellbeing.it-helps-me-clear-my-head",
+        "b2-wellbeing.meditation",
+        "b2-wellbeing.i-should-learn-to-say-no",
+        "b2-wellbeing.maybe-you-should-take-some-time-off",
+        "b2-wellbeing.qa.tired",
+        "b2-wellbeing.qa.unwind"
+      ]
+    },
+    {
+      "id": "b2-wellbeing.l.doctor",
+      "title": "El médico de cabecera",
+      "items": [
+        "b2-wellbeing.primary-care-doctor",
+        "b2-wellbeing.id-like-to-book-a-checkup",
+        "b2-wellbeing.checkup",
+        "b2-wellbeing.its-time-for-my-annual-physical",
+        "b2-wellbeing.symptom",
+        "a2-health.headache",
+        "b2-wellbeing.ive-been-having-headaches",
+        "b2-wellbeing.its-been-going-on-for-weeks",
+        "b2-wellbeing.does-it-run-in-your-family",
+        "b2-wellbeing.blood-test",
+        "b2-wellbeing.they-want-to-run-some-tests",
+        "b2-wellbeing.blood-pressure",
+        "b2-wellbeing.my-blood-pressure-is-a-bit-high",
+        "b2-wellbeing.specialist",
+        "b2-wellbeing.she-referred-me-to-a-specialist",
+        "b2-wellbeing.side-effects",
+        "b2-wellbeing.are-there-any-side-effects",
+        "a2-health.insurance",
+        "b2-wellbeing.is-this-covered-by-my-insurance",
+        "b2-wellbeing.i-got-a-clean-bill-of-health",
+        "b2-wellbeing.qa.brings-you-in",
+        "b2-wellbeing.qa.how-long"
+      ]
+    },
+    {
+      "id": "b2-wellbeing.l.support",
+      "title": "Salud mental: cuidarte y apoyar a alguien",
+      "items": [
+        "b2-wellbeing.mental-health",
+        "b2-wellbeing.mental-health-is-just-as-important",
+        "b2-wellbeing.how-are-you-holding-up",
+        "b2-wellbeing.mood",
+        "b2-wellbeing.lonely",
+        "b2-wellbeing.its-okay-not-to-be-okay",
+        "b2-wellbeing.im-here-if-you-need-to-talk",
+        "b2-wellbeing.therapist",
+        "b2-wellbeing.have-you-thought-about-talking-to-a-therapist",
+        "b2-wellbeing.therapy",
+        "b2-wellbeing.i-started-seeing-a-therapist",
+        "b2-wellbeing.go-easy-on-yourself",
+        "b2-wellbeing.self-care",
+        "b2-wellbeing.take-care-of-yourself",
+        "a2-health.feeling-better",
+        "b2-wellbeing.im-finally-back-on-track",
+        "b2-wellbeing.wellbeing",
+        "b2-wellbeing.qa.holding-up",
+        "b2-wellbeing.qa.feeling-down"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-wellbeing.im-trying-to-eat-healthier", "text": "I'm trying to eat healthier these days.", "es": "Últimamente intento comer más sano.", "notes": "«eat healthier» o «eat more healthily»; «sane» significa cuerdo, no sano.", "explanation": "Para hablar de tus propósitos. «healthier» = «HEL-θi-ər», con «th» entre los dientes.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.ive-cut-down-on-sugar", "text": "I've cut down on sugar and coffee.", "es": "He reducido el azúcar y el café.", "notes": "«cut down on» = reducir el consumo de algo; «cut out» = eliminarlo del todo.", "explanation": "Para contar un cambio de hábitos. «cut down on» se une: «ka-DAU-nan».", "register": "neutral", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.i-gave-up-smoking", "text": "I gave up smoking three years ago.", "es": "Dejé de fumar hace tres años.", "notes": "«give up» + -ing = dejar de hacer algo (un hábito). «stop smoking» también vale.", "explanation": "«gave up» se une: «GEI-vap». «smoking» sin «e» delante: no «esmoking».", "register": "neutral", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.i-tend-to-skip-breakfast", "text": "I tend to skip breakfast when I'm busy.", "es": "Suelo saltarme el desayuno cuando voy liado.", "notes": "«tend to» = soler, tener tendencia a. «skip» = saltarse (una comida, una clase).", "explanation": "Para hablar de un mal hábito. «skip» sin «e» delante: «skip», no «eskip».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-make-a-point-of-drinking-water", "text": "I make a point of drinking a lot of water.", "es": "Me esfuerzo por beber mucha agua.", "notes": "«make a point of» + -ing = proponerse algo y cumplirlo.", "explanation": "En EE. UU. «water» = «WA-dər», con flap t: suena como una «r» suave.", "register": "neutral", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.i-try-to-get-eight-hours", "text": "I try to get at least eight hours of sleep.", "es": "Intento dormir al menos ocho horas.", "notes": "«get some sleep / get eight hours of sleep» = dormir. «sleep» aquí es sustantivo.", "explanation": "Para hablar del descanso. «eight hours» se une: «EI-tauərz»; la «h» de «hours» no suena.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-spend-way-too-much-time-on-my-phone", "text": "I spend way too much time on my phone.", "es": "Paso muchísimo más tiempo del que debería con el móvil.", "notes": "«way too much» = muchísimo más de la cuenta (coloquial). «on my phone», con «on».", "explanation": "Para reconocer un mal hábito. «phone» = «foun», con diptongo /ou/.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.ive-been-cooking-at-home-more", "text": "I've been cooking at home more to save money and eat better.", "es": "Últimamente cocino más en casa para ahorrar y comer mejor.", "notes": "Present perfect continuous: un hábito reciente que sigue.", "explanation": "«cooking» = «KU-king», con la «u» corta de «book».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.its-all-about-balance", "text": "It's all about balance, really.", "es": "Al final, todo es cuestión de equilibrio.", "notes": "«It's all about…» = lo importante es…, todo se reduce a…", "explanation": "Para resumir tu filosofía. «balance» = «BÆ-ləns», acento en la primera.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-work-out-three-times-a-week", "text": "I work out three times a week.", "es": "Entreno tres veces por semana.", "notes": "«work out» = hacer ejercicio, entrenar. «three times a week», con «a», no «per».", "explanation": "«work out» se une: «wer-KAUT». «three» con «th» entre los dientes.", "register": "neutral", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.ive-just-joined-a-gym", "text": "I've just joined a gym near the office.", "es": "Me acabo de apuntar a un gimnasio cerca de la oficina.", "notes": "«join a gym» = apuntarse a un gimnasio. «just» + present perfect = acabar de.", "explanation": "«gym» = «dʒim», como una «ch» sonora; nunca con la «j» española.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.im-so-out-of-shape", "text": "I'm so out of shape. I got tired on the stairs!", "es": "Estoy fatal de forma. ¡Me he cansado subiendo las escaleras!", "notes": "«be out of shape» = estar en baja forma; «be in shape» = estar en forma. No «out of form».", "explanation": "«shape» = «sheip», con «sh». «stairs» = «sterz», sin «e» delante.", "register": "neutral", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.im-training-for-a-half-marathon", "text": "I'm training for a half marathon in the spring.", "es": "Estoy entrenando para una media maratón en primavera.", "notes": "«train for» = prepararse para. «half» = media: la «l» no suena.", "explanation": "«half» = «hæf», sin «l». «marathon» = «MÆ-rə-θan», con «th».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-go-for-a-run-along-the-lake", "text": "I go for a run along the lake before work.", "es": "Salgo a correr junto al lago antes de trabajar.", "notes": "«go for a run / a walk / a swim» = salir a correr, a pasear, a nadar.", "explanation": "«run» con la «u» corta /ʌ/: «ran». «along the» se une: «ə-LON-ðə».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-need-to-warm-up-first", "text": "I need to warm up first, or I'll get injured.", "es": "Tengo que calentar primero o me lesionaré.", "notes": "«warm up» = calentar antes del ejercicio. «get injured» = lesionarse.", "explanation": "«warm» = «worm», con la «a» como /o/. «injured» = «IN-dʒərd».", "register": "neutral", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.i-think-i-pulled-a-muscle", "text": "I think I pulled a muscle at the gym.", "es": "Creo que me he dado un tirón en el gimnasio.", "notes": "«pull a muscle» = darse un tirón muscular. «muscle»: la «c» no suena.", "explanation": "«muscle» = «MA-səl», sin «c». «pulled» = «puld», una sílaba.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.dont-overdo-it", "text": "Take it easy and don't overdo it.", "es": "Tómatelo con calma y no te pases.", "notes": "«overdo it» = pasarse, excederse. «take it easy» = tomárselo con calma.", "explanation": "Para aconsejar a alguien. «overdo» = «ou-vər-DUU», acento al final.", "register": "tu", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.yoga-helps-me-relax", "text": "Yoga really helps me relax after work.", "es": "El yoga me ayuda mucho a relajarme después del trabajo.", "notes": "«help someone relax», sin «to» (también vale «to relax»). «relax» no es reflexivo: no «relax me».", "explanation": "«yoga» = «YOU-gə». «relax» = «ri-LÆKS», acento en la segunda.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.ive-been-really-stressed-out", "text": "I've been really stressed out at work lately.", "es": "Últimamente estoy muy estresado en el trabajo.", "notes": "«stressed out» = muy estresado. «at work», con «at».", "explanation": "«stressed» = «strest», sin «e» delante y la «-ed» suena /t/.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.im-under-a-lot-of-pressure", "text": "I'm under a lot of pressure with this deadline.", "es": "Estoy muy presionado con esta fecha de entrega.", "notes": "«be under pressure» = estar bajo presión, con «under».", "explanation": "«pressure» = «PRE-shər», con «sh».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-really-need-a-break", "text": "I really need a break. I'm exhausted.", "es": "Necesito un descanso de verdad. Estoy agotado.", "notes": "«a break» = un descanso, una pausa; «take a break» = descansar un rato.", "explanation": "«break» = «breik», como «brake». «exhausted» = «ig-ZOS-tid».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-think-im-burned-out", "text": "I think I'm burned out. I can't focus on anything.", "es": "Creo que estoy quemado. No me puedo concentrar en nada.", "notes": "«be burned out» = estar quemado (agotamiento laboral). «focus on» = concentrarse en.", "explanation": "«burned» = «bernd», una sílaba, con la «r» americana.", "register": "neutral", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.i-find-it-hard-to-switch-off", "text": "I find it hard to switch off after work.", "es": "Me cuesta desconectar después del trabajo.", "notes": "«find it hard to…» = costarte hacer algo. «switch off» = desconectar (mentalmente).", "explanation": "«switch off» se une: «swi-CHOF».", "register": "neutral", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.on-weekends-i-try-to-unwind", "text": "On weekends, I try to unwind and stay offline.", "es": "Los fines de semana intento relajarme y no conectarme.", "notes": "«unwind» = relajarse, desconectar. «on weekends» en EE. UU.", "explanation": "«unwind» = «an-WAIND», con «ai» como en «mind».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.it-helps-me-clear-my-head", "text": "A long walk really helps me clear my head.", "es": "Un paseo largo me ayuda mucho a despejarme.", "notes": "«clear your head» = despejarte, aclarar las ideas.", "explanation": "«walk» = «wok»: la «l» no suena.", "register": "neutral", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.i-should-learn-to-say-no", "text": "I should learn to say no more often.", "es": "Debería aprender a decir que no más a menudo.", "notes": "«say no» = decir que no, sin «that».", "explanation": "«often» = «O-fən», la «t» normalmente no suena.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.maybe-you-should-take-some-time-off", "text": "Maybe you should take some time off.", "es": "Quizá deberías cogerte unos días libres.", "notes": "«take time off» = cogerse días libres o vacaciones.", "explanation": "Para aconsejar con tacto. «time off» se une: «tai-MOF».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.id-like-to-book-a-checkup", "text": "I'd like to book a checkup with my primary care doctor.", "es": "Quería pedir cita para una revisión con mi médico de cabecera.", "notes": "«primary care doctor» = médico de cabecera en EE. UU. «book» = reservar, pedir cita.", "explanation": "Para llamar a la consulta. «I'd like» = «aid-LAIK», con la «d» suave.", "register": "formal", "situation": "salud" },
+    { "id": "b2-wellbeing.its-time-for-my-annual-physical", "text": "It's time for my annual physical.", "es": "Me toca la revisión médica anual.", "notes": "«a physical» = un reconocimiento médico completo (muy de EE. UU.).", "explanation": "«annual» = «Æ-niu-əl». «physical» = «FI-zi-kəl», la «ph» suena /f/.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.ive-been-having-headaches", "text": "I've been having a lot of headaches recently.", "es": "Últimamente tengo muchos dolores de cabeza.", "notes": "Present perfect continuous para algo que empezó y sigue. Nunca «I have headaches since…».", "explanation": "«headaches» = «HED-eiks», la «ch» suena /k/.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.its-been-going-on-for-weeks", "text": "It's been going on for a couple of weeks now.", "es": "Me pasa desde hace un par de semanas.", "notes": "«go on» = durar, seguir pasando. Duración = «for», no «since».", "explanation": "«going on» se une: «GOU-in-gan».", "register": "neutral", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.does-it-run-in-your-family", "text": "Does it run in your family?", "es": "¿Hay antecedentes en tu familia?", "notes": "«run in the family» = venir de familia, ser hereditario.", "literal": "¿Corre en tu familia?", "explanation": "Pregunta típica del médico. «run in» se une: «RA-nin».", "register": "neutral", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.they-want-to-run-some-tests", "text": "They want to run some blood tests, just in case.", "es": "Quieren hacerme unos análisis de sangre, por si acaso.", "notes": "«run tests» = hacer pruebas. «just in case» = por si acaso.", "explanation": "«blood» = «blad», con la «oo» como /ʌ/.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.my-blood-pressure-is-a-bit-high", "text": "My blood pressure is a bit high.", "es": "Tengo la tensión un poco alta.", "notes": "La tensión = «blood pressure», nunca «tension».", "explanation": "«high» = «hai», la «gh» no suena.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.she-referred-me-to-a-specialist", "text": "My doctor referred me to a specialist.", "es": "Mi médica me derivó a un especialista.", "notes": "«refer someone to» = derivar a alguien a. «referral» = el volante.", "explanation": "«referred» = «ri-FERD», acento en la segunda. «specialist» sin «e» delante.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.are-there-any-side-effects", "text": "Are there any side effects I should know about?", "es": "¿Tiene algún efecto secundario que deba conocer?", "notes": "«side effects» = efectos secundarios. La preposición va al final: «know about».", "explanation": "Para preguntar por un medicamento. «effects» = «i-FEKTS».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.is-this-covered-by-my-insurance", "text": "Is this covered by my insurance?", "es": "¿Esto lo cubre mi seguro?", "notes": "«be covered by» = estar cubierto por.", "explanation": "Pregunta clave en EE. UU. «insurance» = «in-SHU-rəns», acento en la segunda.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-got-a-clean-bill-of-health", "text": "The results came back fine, so I got a clean bill of health.", "es": "Los resultados salieron bien, así que me dieron el visto bueno.", "notes": "«a clean bill of health» = un certificado de buena salud; se usa también en sentido figurado.", "explanation": "«results» = «ri-ZALTS». «health» con «th» final.", "register": "neutral", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.mental-health-is-just-as-important", "text": "Mental health is just as important as physical health.", "es": "La salud mental es igual de importante que la física.", "notes": "«just as… as» = igual de… que.", "explanation": "«health» = «helθ», con «th» final entre los dientes; no «jelz».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.how-are-you-holding-up", "text": "How are you holding up?", "es": "¿Cómo lo llevas?", "notes": "«hold up» = aguantar, sobrellevar una situación difícil.", "explanation": "Para preguntar con cariño a alguien que lo pasa mal. «holding up» se une: «HOUL-din-gap».", "register": "neutral", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.its-okay-not-to-be-okay", "text": "It's okay not to be okay.", "es": "Está bien no estar bien.", "notes": "«not to be»: el «not» va antes de «to».", "explanation": "Frase de apoyo muy habitual. «okay» = «ou-KEI», acento al final.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.im-here-if-you-need-to-talk", "text": "I'm here if you ever need to talk.", "es": "Aquí me tienes si alguna vez necesitas hablar.", "notes": "«need to» + verbo, con «to». «ever» = alguna vez.", "explanation": "Para ofrecer apoyo. «need to» se une: «NII-də».", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.have-you-thought-about-talking-to-a-therapist", "text": "Have you thought about talking to a therapist?", "es": "¿Te has planteado hablar con un terapeuta?", "notes": "«think about» + -ing = plantearse algo. «talk to someone».", "explanation": "Para sugerir ayuda con tacto. «thought» = «θot», con «th» entre los dientes.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.i-started-seeing-a-therapist", "text": "I started seeing a therapist last year, and it's helped a lot.", "es": "El año pasado empecé a ir a terapia y me ha ayudado mucho.", "notes": "«see a therapist / a doctor» = ir a un terapeuta, a un médico.", "explanation": "«therapist» = «θE-rə-pist», con «th» entre los dientes.", "register": "neutral", "situation": "salud" },
+    { "id": "b2-wellbeing.go-easy-on-yourself", "text": "Go easy on yourself. You've had a tough year.", "es": "No seas tan duro contigo. Has tenido un año difícil.", "notes": "«go easy on someone» = no ser duro con alguien. «tough» = difícil, duro.", "explanation": "«tough» = «taf», la «gh» suena /f/.", "register": "tu", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.take-care-of-yourself", "text": "Take care of yourself, okay?", "es": "Cuídate, ¿vale?", "notes": "«take care of» = cuidar de. Para despedirse basta «Take care!».", "explanation": "«care of» se une: «KE-rəv».", "register": "tu", "situation": "salud" },
+    { "id": "b2-wellbeing.im-finally-back-on-track", "text": "I'm feeling much better. I'm finally back on track.", "es": "Me encuentro mucho mejor. Por fin vuelvo a estar bien encaminado.", "notes": "«be back on track» = volver a ir por buen camino.", "explanation": "«track» = «træk», con la «a» abierta de «cat».", "register": "neutral", "situation": "salud", "tags": ["idioms"] }
+  ],
+  "vocab": [
+    { "id": "b2-wellbeing.habit", "word": "habit", "article": "a", "plural": "habits", "es": "el hábito, la costumbre", "notes": "«a bad habit» = una mala costumbre. La «h» suena: «HÆ-bit».", "situation": "salud" },
+    { "id": "b2-wellbeing.healthy", "word": "healthy", "es": "sano, saludable", "notes": "Comparativo «healthier». Sustantivo: «health».", "example": "b2-wellbeing.im-trying-to-eat-healthier", "situation": "salud" },
+    { "id": "b2-wellbeing.diet", "word": "diet", "article": "a", "plural": "diets", "es": "la dieta, la alimentación", "notes": "«a balanced diet» = una alimentación equilibrada; «be on a diet» = estar a dieta.", "situation": "salud" },
+    { "id": "b2-wellbeing.junk-food", "word": "junk food", "es": "la comida basura", "notes": "Incontable, sin artículo.", "situation": "salud" },
+    { "id": "b2-wellbeing.vegetables", "word": "vegetables", "es": "las verduras", "notes": "Casi siempre en plural; coloquial: «veggies».", "situation": "salud", "image": "fluent:broccoli" },
+    { "id": "b2-wellbeing.sleep", "word": "sleep", "es": "el sueño (dormir)", "notes": "«get some sleep» = dormir un poco. El sueño que se sueña es «a dream».", "example": "b2-wellbeing.i-try-to-get-eight-hours", "situation": "salud", "image": "fluent:sleeping-face" },
+    { "id": "b2-wellbeing.screen-time", "word": "screen time", "es": "el tiempo de pantalla", "notes": "Incontable.", "situation": "salud", "image": "fluent:mobile-phone" },
+    { "id": "b2-wellbeing.balance", "word": "balance", "es": "el equilibrio", "notes": "«work-life balance» = conciliación entre trabajo y vida personal.", "example": "b2-wellbeing.its-all-about-balance", "situation": "salud" },
+    { "id": "b2-wellbeing.work-out", "word": "work out", "es": "hacer ejercicio, entrenar", "notes": "Verbo frasal. El sustantivo es «a workout» = un entrenamiento.", "example": "b2-wellbeing.i-work-out-three-times-a-week", "situation": "salud", "tags": ["phrasal-verbs"], "image": "fluent:person-lifting-weights" },
+    { "id": "b2-wellbeing.fit", "word": "fit", "es": "en forma", "notes": "«keep fit» = mantenerse en forma.", "situation": "salud" },
+    { "id": "b2-wellbeing.out-of-shape", "word": "out of shape", "es": "en baja forma", "notes": "Lo contrario: «in shape».", "example": "b2-wellbeing.im-so-out-of-shape", "situation": "salud", "tags": ["idioms"] },
+    { "id": "b2-wellbeing.sneakers", "word": "sneakers", "es": "las zapatillas de deporte", "notes": "En EE. UU. «sneakers»; en el Reino Unido «trainers».", "situation": "salud", "image": "fluent:running-shoe" },
+    { "id": "b2-wellbeing.warm-up", "word": "warm up", "es": "calentar (antes del ejercicio)", "notes": "Verbo frasal; el sustantivo es «a warm-up».", "example": "b2-wellbeing.i-need-to-warm-up-first", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.muscle", "word": "muscle", "article": "a", "plural": "muscles", "es": "el músculo", "notes": "La «c» no suena: «MA-səl».", "example": "b2-wellbeing.i-think-i-pulled-a-muscle", "situation": "salud", "image": "fluent:flexed-biceps" },
+    { "id": "b2-wellbeing.injury", "word": "injury", "article": "an", "plural": "injuries", "es": "la lesión", "notes": "«injured» = lesionado. «a wound» = una herida abierta.", "situation": "salud" },
+    { "id": "b2-wellbeing.yoga", "word": "yoga", "es": "el yoga", "notes": "Incontable: «do yoga».", "example": "b2-wellbeing.yoga-helps-me-relax", "situation": "salud", "image": "fluent:person-in-lotus-position" },
+    { "id": "b2-wellbeing.stress", "word": "stress", "es": "el estrés", "notes": "Incontable. Sin «e» delante: «stres».", "situation": "salud" },
+    { "id": "b2-wellbeing.pressure", "word": "pressure", "es": "la presión", "notes": "«be under pressure» = estar bajo presión.", "example": "b2-wellbeing.im-under-a-lot-of-pressure", "situation": "salud" },
+    { "id": "b2-wellbeing.overwhelmed", "word": "overwhelmed", "es": "desbordado, agobiado", "notes": "«I feel overwhelmed» = estoy agobiado, no doy abasto.", "situation": "salud" },
+    { "id": "b2-wellbeing.burnout", "word": "burnout", "es": "el agotamiento, el síndrome del trabajador quemado", "notes": "Incontable. Adjetivo: «burned out».", "example": "b2-wellbeing.i-think-im-burned-out", "situation": "salud" },
+    { "id": "b2-wellbeing.switch-off", "word": "switch off", "es": "desconectar", "notes": "Verbo frasal: apagar un aparato o desconectar mentalmente.", "example": "b2-wellbeing.i-find-it-hard-to-switch-off", "situation": "salud", "tags": ["phrasal-verbs"] },
+    { "id": "b2-wellbeing.unwind", "word": "unwind", "es": "relajarse, desconectar", "notes": "Pasado: «unwound».", "example": "b2-wellbeing.on-weekends-i-try-to-unwind", "situation": "salud" },
+    { "id": "b2-wellbeing.meditation", "word": "meditation", "es": "la meditación", "notes": "Incontable. Verbo: «meditate».", "situation": "salud" },
+    { "id": "b2-wellbeing.primary-care-doctor", "word": "primary care doctor", "article": "a", "plural": "primary care doctors", "es": "el médico de cabecera", "notes": "En EE. UU. también «PCP» o «family doctor»; en el Reino Unido «GP».", "example": "b2-wellbeing.id-like-to-book-a-checkup", "situation": "salud", "image": "fluent:man-health-worker" },
+    { "id": "b2-wellbeing.checkup", "word": "checkup", "article": "a", "plural": "checkups", "es": "la revisión, el chequeo", "notes": "«revision» en inglés es otra cosa (corregir un texto).", "situation": "salud", "image": "fluent:stethoscope" },
+    { "id": "b2-wellbeing.symptom", "word": "symptom", "article": "a", "plural": "symptoms", "es": "el síntoma", "notes": "La «p» casi no suena: «SIM-təm».", "situation": "salud" },
+    { "id": "b2-wellbeing.blood-test", "word": "blood test", "article": "a", "plural": "blood tests", "es": "el análisis de sangre", "example": "b2-wellbeing.they-want-to-run-some-tests", "situation": "salud", "image": "fluent:syringe" },
+    { "id": "b2-wellbeing.blood-pressure", "word": "blood pressure", "es": "la tensión arterial", "notes": "Incontable. «high blood pressure» = hipertensión.", "example": "b2-wellbeing.my-blood-pressure-is-a-bit-high", "situation": "salud" },
+    { "id": "b2-wellbeing.specialist", "word": "specialist", "article": "a", "plural": "specialists", "es": "el especialista", "notes": "Sin «e» delante: «SPE-shə-list».", "example": "b2-wellbeing.she-referred-me-to-a-specialist", "situation": "salud" },
+    { "id": "b2-wellbeing.side-effects", "word": "side effects", "es": "los efectos secundarios", "notes": "Casi siempre en plural.", "example": "b2-wellbeing.are-there-any-side-effects", "situation": "salud" },
+    { "id": "b2-wellbeing.mental-health", "word": "mental health", "es": "la salud mental", "notes": "Incontable, sin artículo.", "example": "b2-wellbeing.mental-health-is-just-as-important", "situation": "salud" },
+    { "id": "b2-wellbeing.mood", "word": "mood", "article": "a", "plural": "moods", "es": "el humor, el estado de ánimo", "notes": "«be in a good / bad mood» = estar de buen / mal humor.", "situation": "salud" },
+    { "id": "b2-wellbeing.lonely", "word": "lonely", "es": "solo (que se siente solo)", "notes": "«lonely» = que se siente solo; «alone» = sin compañía.", "situation": "salud" },
+    { "id": "b2-wellbeing.therapist", "word": "therapist", "article": "a", "plural": "therapists", "es": "el terapeuta, el psicólogo", "notes": "En EE. UU. se dice más «therapist» que «psychologist».", "example": "b2-wellbeing.have-you-thought-about-talking-to-a-therapist", "situation": "salud" },
+    { "id": "b2-wellbeing.therapy", "word": "therapy", "es": "la terapia", "notes": "Incontable: «be in therapy» = ir a terapia.", "situation": "salud" },
+    { "id": "b2-wellbeing.self-care", "word": "self-care", "es": "el autocuidado", "notes": "Incontable, con guion.", "situation": "salud" },
+    { "id": "b2-wellbeing.wellbeing", "word": "wellbeing", "es": "el bienestar", "notes": "Incontable; también se escribe «well-being».", "situation": "salud" }
+  ],
+  "qa": [
+    {
+      "id": "b2-wellbeing.qa.habits",
+      "question": "Have you changed any habits lately?",
+      "questionEs": "¿Has cambiado algún hábito últimamente?",
+      "accepted": [
+        { "text": "Yeah, I've cut down on sugar and coffee.", "es": "Sí, he reducido el azúcar y el café." },
+        { "text": "I'm trying to eat healthier these days.", "es": "Últimamente intento comer más sano." }
+      ],
+      "distractors": [
+        { "text": "Yeah, I've cut down of sugar and coffee.", "es": "Sí, he reducido el azúcar y el café." },
+        { "text": "I'm trying to eat more sane these days.", "es": "Últimamente intento comer más sano." }
+      ],
+      "register": "neutral",
+      "situation": "salud",
+      "notes": "«cut down on», siempre con «on». «sane» = cuerdo; sano = «healthy».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.sleep",
+      "question": "How much sleep do you usually get?",
+      "questionEs": "¿Cuánto sueles dormir?",
+      "accepted": [
+        { "text": "I try to get at least eight hours.", "es": "Intento dormir al menos ocho horas." },
+        { "text": "Not enough, to be honest. Maybe six hours.", "es": "No lo suficiente, la verdad. Unas seis horas." }
+      ],
+      "distractors": [
+        { "text": "I try to make at least eight hours.", "es": "Intento hacer al menos ocho horas." },
+        { "text": "Not enough, to be honest. Maybe six hours of dream.", "es": "No lo suficiente, la verdad. Unas seis horas de sueño." }
+      ],
+      "register": "neutral",
+      "situation": "salud",
+      "notes": "Dormir X horas = «get X hours (of sleep)». El sueño de dormir es «sleep»; «dream» es lo que sueñas.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.exercise",
+      "question": "Do you do any exercise?",
+      "questionEs": "¿Haces algo de ejercicio?",
+      "accepted": [
+        { "text": "Yeah, I work out three times a week.", "es": "Sí, entreno tres veces por semana." },
+        { "text": "Not really. I'm so out of shape.", "es": "La verdad es que no. Estoy fatal de forma." }
+      ],
+      "distractors": [
+        { "text": "Yeah, I make exercise three times a week.", "es": "Sí, hago ejercicio tres veces por semana." },
+        { "text": "Not really. I'm so out of form.", "es": "La verdad es que no. Estoy fatal de forma." }
+      ],
+      "register": "neutral",
+      "situation": "salud",
+      "notes": "Hacer ejercicio = «do exercise» o «work out», nunca «make». En baja forma = «out of shape».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.limping",
+      "question": "Why are you limping?",
+      "questionEs": "¿Por qué cojeas?",
+      "accepted": [
+        { "text": "I think I pulled a muscle at the gym.", "es": "Creo que me di un tirón en el gimnasio." },
+        { "text": "I overdid it at the gym yesterday.", "es": "Ayer me pasé en el gimnasio." }
+      ],
+      "distractors": [
+        { "text": "I think I gave myself a pull at the gym.", "es": "Creo que me di un tirón en el gimnasio." },
+        { "text": "I passed myself at the gym yesterday.", "es": "Ayer me pasé en el gimnasio." }
+      ],
+      "register": "neutral",
+      "situation": "salud",
+      "notes": "Darse un tirón = «pull a muscle». Pasarse = «overdo it»; «pass myself» es una traducción literal que no existe.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.tired",
+      "question": "You look tired. Is everything okay?",
+      "questionEs": "Te veo cansado. ¿Va todo bien?",
+      "accepted": [
+        { "text": "I've been really stressed out at work lately.", "es": "Últimamente estoy muy estresado en el trabajo." },
+        { "text": "I'm under a lot of pressure with this deadline.", "es": "Estoy muy presionado con esta fecha de entrega." }
+      ],
+      "distractors": [
+        { "text": "I've been very stressed of work lately.", "es": "Últimamente estoy muy estresado por el trabajo." },
+        { "text": "I'm with a lot of pressure with this deadline.", "es": "Estoy con mucha presión con esta fecha de entrega." }
+      ],
+      "register": "neutral",
+      "situation": "salud",
+      "notes": "Estresado por el trabajo = «stressed (out) at/about work», nunca «of». Bajo presión = «under pressure».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.unwind",
+      "question": "What do you do to unwind?",
+      "questionEs": "¿Qué haces para desconectar?",
+      "accepted": [
+        { "text": "A long walk really helps me clear my head.", "es": "Un paseo largo me ayuda mucho a despejarme." },
+        { "text": "I turn off my phone and read for a while.", "es": "Apago el móvil y leo un rato." }
+      ],
+      "distractors": [
+        { "text": "A long walk really helps me to clean my head.", "es": "Un paseo largo me ayuda mucho a limpiar la cabeza." },
+        { "text": "I turn off my phone and read during a while.", "es": "Apago el móvil y leo durante un rato." }
+      ],
+      "register": "neutral",
+      "situation": "salud",
+      "notes": "Despejarse = «clear your head»; «clean» es limpiar. Un rato = «for a while», no «during».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.brings-you-in",
+      "question": "So, what brings you in today?",
+      "questionEs": "Bueno, ¿qué le trae por aquí hoy?",
+      "accepted": [
+        { "text": "I've been having a lot of headaches recently.", "es": "Últimamente tengo muchos dolores de cabeza." },
+        { "text": "I'd like a checkup. It's been a while.", "es": "Quería hacerme una revisión. Hace tiempo que no me la hago." }
+      ],
+      "distractors": [
+        { "text": "I have a lot of headaches since two weeks.", "es": "Tengo muchos dolores de cabeza desde hace dos semanas." },
+        { "text": "I'd like a revision. It's been a while.", "es": "Quería una revisión. Hace tiempo que no me la hago." }
+      ],
+      "register": "formal",
+      "situation": "salud",
+      "notes": "Lo que empezó y sigue va en present perfect: «I've been having… for two weeks». Revisión médica = «checkup».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.how-long",
+      "question": "How long has this been going on?",
+      "questionEs": "¿Desde cuándo le pasa?",
+      "accepted": [
+        { "text": "For a couple of weeks now.", "es": "Desde hace un par de semanas." },
+        { "text": "It started about a month ago.", "es": "Empezó hace más o menos un mes." }
+      ],
+      "distractors": [
+        { "text": "Since a couple of weeks.", "es": "Desde hace un par de semanas." },
+        { "text": "It started since a month.", "es": "Empezó desde hace un mes." }
+      ],
+      "register": "formal",
+      "situation": "salud",
+      "notes": "«desde hace» + periodo = «for»; «since» va con un momento («since Monday»). Con pasado simple: «a month ago».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.holding-up",
+      "question": "How are you holding up?",
+      "questionEs": "¿Cómo lo llevas?",
+      "accepted": [
+        { "text": "Better, thanks. I'm finally back on track.", "es": "Mejor, gracias. Por fin vuelvo a estar bien encaminado." },
+        { "text": "It's been tough, but I'm getting there.", "es": "Ha sido duro, pero poco a poco." }
+      ],
+      "distractors": [
+        { "text": "Better, thanks. I'm finally in the good way.", "es": "Mejor, gracias. Por fin voy por buen camino." },
+        { "text": "It's been tough, but I'm arriving.", "es": "Ha sido duro, pero ya voy llegando." }
+      ],
+      "register": "neutral",
+      "situation": "salud",
+      "notes": "Ir por buen camino = «be (back) on track». «I'm getting there» = voy mejorando, poco a poco; «arriving» es literal y no se usa así.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-wellbeing.qa.feeling-down",
+      "question": "I've been feeling really down lately.",
+      "questionEs": "Últimamente estoy muy de bajón.",
+      "accepted": [
+        { "text": "I'm sorry. I'm here if you ever need to talk.", "es": "Lo siento. Aquí me tienes si alguna vez necesitas hablar." },
+        { "text": "Have you thought about talking to a therapist?", "es": "¿Te has planteado hablar con un terapeuta?" }
+      ],
+      "distractors": [
+        { "text": "I'm sorry. I'm here if you ever need talk.", "es": "Lo siento. Aquí me tienes si alguna vez necesitas hablar." },
+        { "text": "Have you thought in talking to a therapist?", "es": "¿Has pensado en hablar con un terapeuta?" }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": "«need to talk», con «to». Pensar en = «think about» (o «think of»), nunca «think in».",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}
