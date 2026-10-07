@@ -73,6 +73,24 @@ leave gaps:
 | 40–49 | food (bar, restaurant) |
 | 90+ | minimal grammar and Sicilian (recognition only) |
 
+### Levelled packs
+
+A pack with `levels` in pack.json (English: A2, B1, B2, C1) is split by CEFR level instead of
+one trip course. Full plan for English: **docs/brief-en.md** (unit ids, order ranges, situations,
+cast, voices). What changes:
+
+- **`level` fields**: every unit, dialogue, story and placement question has a `level` from the
+  pack's `levels`. Phrases, vocab, Q&A and grammar cards take the level of the unit that defines
+  them (never written by hand); a later unit may reuse an earlier item by id at any level.
+- **Order ranges per level**: one hundred per level (English: A2 10–99, B1 110–199, B2 210–299,
+  C1 310–399). Inside each hundred, units with `order % 100 >= 90` are **side units** (grammar,
+  extras): shown apart from the main path, like `90+` in a one-course pack.
+- **Grammar cards** of a level live in that level's grammar unit's own `grammar` array (e.g.
+  `units/190-b1-grammar.json`), so they get its level.
+- **File names** carry the level: units `units/<order>-<unit-id>.json` (`units/110-b1-friends.json`),
+  stories `stories/<level>-NN-<slug>.json` in lower case (`stories/b1-01-welcome-aboard.json`).
+- **Story length** depends on the story level (see "Story guidelines" below).
+
 ## Schema
 
 `?` = optional. All text fields must be non-empty. Spanish is **Spain Spanish with "tú"**.
@@ -169,8 +187,9 @@ plus `placement`:
 | `questions` | Comprehension: `[{ id, question, es, options: [{ text, es }] (≥ 3), correct }]`. `question` and options in the target language; `correct` = 0-based index; exactly one right option, the others plausible from the story. |
 | `gaps` | Fill the gap: `[{ id, sentence, answer, gap?, distractors }]`. `sentence` = a sentence id; `answer` = one of this story's key word ids; `gap?` = exact text blanked in the sentence (whole word(s), case-insensitive, first occurrence), default = the key word's bare `word` (vocab) or `text` (phrase/expression) — set it when the sentence uses another form ("cerca" for `cercare`, "biglietti"); `distractors` = ≥ 2 wrong chips in the same form (same person, gender, number), never also correct. |
 
-**Story guidelines** (`content:check` prints ⚠ warnings, never fails): **80–150 words** in all
-sentences, **8–10 key words**, **3–4 questions**, **4–6 gaps** (each on a different sentence
+**Story guidelines** (`content:check` prints ⚠ warnings, never fails): words in all sentences
+by story `level`: **80–150** for A1–B1, **100–200** for B2, **120–250** for C1 (`storyGuide()` in
+`src/lib/content/build.ts`; C2 uses the A1–B1 range until a pack needs it); **8–10 key words**, **3–4 questions**, **4–6 gaps** (each on a different sentence
 when possible). A1–A2 Italian, present tense mostly, natural and current; the story follows
 Hernán's trip (persona in `units/32-persona-sobre-mi.json`). Spanish with "tú".
 

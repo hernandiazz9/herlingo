@@ -11,9 +11,7 @@ import { cn } from "@/lib/cn";
 import { recordListen } from "@/lib/progress/activity";
 import { PracticeDialogue } from "./PracticeDialogue";
 import { RefineCard } from "./RefineCard";
-import { FOCUS } from "./shared";
-
-const REGISTER: Record<CoachPack["register"], string> = { formal: "Trato de usted", informal: "Trato de tú" };
+import { FOCUS, registerBadge } from "./shared";
 
 export interface PackViewProps {
   pack: CoachPack;
@@ -34,7 +32,7 @@ export function PackView({ pack, notice, onBack, onRefined }: PackViewProps) {
       </button>
       <PageHeader title={pack.title} subtitle={`«${pack.description}»`} />
       <p className="-mt-3 flex flex-wrap gap-2 text-sm font-bold">
-        <span className="rounded-full bg-lemon-soft px-3 py-1 text-ink">{REGISTER[pack.register]}</span>
+        <span className="rounded-full bg-lemon-soft px-3 py-1 text-ink">{registerBadge(pack)}</span>
         <span className="rounded-full bg-sand px-3 py-1 text-ink-muted">{pack.keyPhrases.length} frases clave</span>
       </p>
       {notice}
