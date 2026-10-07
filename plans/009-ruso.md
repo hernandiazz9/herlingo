@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:11Z 💻
+- Updated: 2026-10-07 22:18Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T111 running; then T112, T113, T114–T119, T125 in pairs
+- Next step: T113 + T114 running; then T112, T115–T119, T125
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -32,7 +32,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T111 — Russian foundation: `vy` register, `stress`, `romanization`, `fold`, ru pack.json
-- Status: running (attempt 1)
+- Status: done
 - Depends on: none
 - Where: any
 - Goal: Make schema, loader, `content:check`, the audio script and `@/lib/audio` ready for a non-Latin pack, per the Shared contract ("Schema"), and write `content/ru/pack.json`: lang `ru`, name "Ruso", nativeName "Русский", emoji 🇷🇺, speechLocale `ru-RU`, voices `ru-RU-SvetlanaNeural`, `ru-RU-DmitryNeural` (plus any other ru-RU voice `edge-tts --list-voices` shows, if the network allows), `formalRegister: "vy"`, `levels: ["A1"]`, no `articles`, the 13 situations of brief-ru, `numberWords` 0–100 + hundreds + 1000 with stress marks, `stress` (U+0301, Russian vowels, `selfStressed` ё), the Spanish-reader `romanization` of brief-ru with `alternatives`, `fold` ё→е. Export `romanize()` and a `stripStress()`/`foldText()` helper from `@/lib/content` (framework-free). `content:check` and `verify` must pass while the Russian pack has no units yet (an empty pack stays hidden, as for English).
@@ -43,7 +43,7 @@ Worktree setup: npm ci
   - `npm run audio -- --dry-run` (or the script's plan step) → no it/fr/en file changes; a quick node/tsx check prints `romanize("Здра́вствуйте, молоко́, ещё, я, Хорошо́")` → `Zdrávstvuite, molokó, yeshchió, ya, Joroshó`-style output matching brief-ru's scheme (report it).
   - `grep -rnE "lang === .ru|[а-яё]" src scripts api --include='*.ts' --include='*.tsx'` → nothing new beyond comments.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: helpers in src/lib/content/script.ts (romanize, stripStress, foldText, stressIssues); articles optional; Gender n/pl; audio --dry-run; voices Svetlana+Dmitry only → 5c16137
 
 ## T112 — Romanization line under target text + Perfil switch
 - Status: pending
@@ -58,7 +58,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T113 — Script-aware answer matching and speech scoring
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T111
 - Where: any
 - Goal: Per the Shared contract ("Matching"): typed answers accept Cyrillic or Latin (romanization + `alternatives`, accents stripped, existing typo tolerance); stress marks stripped and `fold` applied on both sides for typed answers, tiles, dictation and speech scoring (`scoreHeard`/`bestOption`); a missing stress mark never triggers the "acento" note. Packs without `stress`/`romanization`/`fold` give identical results to today.
@@ -70,7 +70,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T114 — Russian A1: alphabet and greetings
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T111
 - Where: any
 - Goal: Units `ru-a1-alphabet` (10) and `ru-a1-hello` (12) per docs/brief-ru.md: reading lessons by letter group with real short words (vocab with pictures where concrete) and a Spanish `explanation` per group; greetings, politeness, ты/вы, "no entiendo / más despacio / ¿cómo se dice?", with Q&A.
@@ -215,6 +215,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## Review queue
+- [ ] T111 @5c16137 — code review (script.ts, build.ts stress check, audio strip) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 
@@ -225,9 +226,14 @@ Worktree setup: npm ci
 - 2026-10-07 plan: goal travel + everyday life; stories in Saint Petersburg (Lucía, Anya, Dima, Vera Petrovna). (Hernán)
 - 2026-10-07 plan: generic pack fields `stress`, `romanization`, `fold` and register `vy` instead of any Russian-specific code; Spanish-reader romanization scheme (х → j); TTS gets text without stress marks; one native speaker per dialogue because edge-tts has two ru-RU voices. (orchestrator)
 - 2026-10-07 plan: Base branch `plan-009-ruso` from main @ cfe71d6 in the main checkout (no other plan running); push policy: guarded push of the plan branch after every integrated task; never main, no PR, merge or deploy without Hernán's OK. (orchestrator)
+- 2026-10-07 T111: ru alternatives table is a first pass for T113 (j→kh/h, ia→ya/a, io→yo/o/e, y→i); vy badge 'Trato de usted' without pronoun; gap text must match whole words incl. stress marks (agent)
+- 2026-10-07 plan: T112 and T113 both touch src/components/exercises → run T113 first, T112 after it (orchestrator)
 
 ## Proposals (new scope)
+- 2026-10-07 T111: server-side Prepárate TTS (api/) still gets stress marks; client strips them today
 
 ## Log
 - 2026-10-07 💻 plan written from the interview; not approved yet
 - 2026-10-07 22:11Z 💻 plan approved by Hernán
+- 2026-10-07 22:11Z 💻 T111 launched · attempt 1 · agent a45b2c48e4ff6e874
+- 2026-10-07 22:18Z 💻 T111 done · → 5c16137 · verify ✓
