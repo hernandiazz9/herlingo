@@ -17,6 +17,7 @@ import { resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
 import { useAppPoints, useProgress, useSettings, type AppPoints } from "@/lib/progress/use-progress";
 import { LanguagePicker, pickablePacks, useChooseLanguage } from "@/components/language/LanguagePicker";
 import { BackupSection } from "./BackupSection";
+import { CloudSaveSection } from "./CloudSaveSection";
 import { CoachSections } from "./CoachSections";
 
 /** Destructive button: error colours, same shape and press animation as `Button`. */
@@ -143,6 +144,8 @@ function Profile({ lang }: { lang: string }) {
           </button>
         </Card>
       </section>
+
+      <CloudSaveSection />
 
       <BackupSection />
 

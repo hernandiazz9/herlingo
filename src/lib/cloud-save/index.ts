@@ -341,7 +341,9 @@ function detect(userId: string): boolean {
   const fresh = lastSeenHash !== null && hash !== lastSeenHash;
   lastSeenHash = hash;
   const dirty = hash !== book.hash;
-  if (dirty !== book.dirty) writeBook({ dirty });
+  // Back to the uploaded data (e.g. the too-large data was removed): the error no longer applies.
+  if (!dirty && book.lastError) writeBook({ dirty, lastError: null });
+  else if (dirty !== book.dirty) writeBook({ dirty });
   return fresh;
 }
 
@@ -616,11 +618,49 @@ export function syncNow(): Promise<void> {
   const userId = activeUser();
   if (!userId) return Promise.resolve();
   try {
+    // No known cloud copy (e.g. after "Borrar copia de la nube"): upload even without a change. A
+    // copy that does exist makes the put a conflict, handled as usual (never overwritten).
+    if (readBook().rev === null) writeBook({ hash: null });
     detect(userId);
   } catch {
     // Checked again inside the flush.
   }
   return flushCloudSave(true);
+}
+
+/**
+ * "Borrar copia de la nube": deletes this account's cloud copy (`league_save_delete`); the data on
+ * this device is not touched and the switch keeps its value. Switch on: nothing is uploaded until
+ * the data changes again (or "Guardar ahora"), which creates a new copy. Switch off: nothing is
+ * uploaded; turning it on later uploads a new copy. Throws `LeagueError` (`offline`, `network`,
+ * `not_joined`…).
+ */
+export async function deleteCloudCopy(): Promise<void> {
+  const userId = typeof window !== "undefined" && leagueEnabled() ? joinedUser() : null;
+  if (!userId) throw new LeagueError("not_joined");
+  await leagueRpc<null>("league_save_delete");
+  if (joinedUser() !== userId) return;
+  ensureUser(userId);
+  let hash: string | null = null;
+  if (readBook().enabled) {
+    try {
+      hash = localHash();
+    } catch {
+      hash = null;
+    }
+  }
+  if (timer !== undefined) {
+    clearTimeout(timer);
+    timer = undefined;
+  }
+  lastSeenHash = hash;
+  refusedHash = null;
+  checkedFor = userId;
+  failures = 0;
+  retryAt = 0;
+  writeBook({ rev: null, hash, dirty: false, lastSyncAt: null, lastError: null });
+  setMismatch(null);
+  setSize(null);
 }
 
 export interface CloudCopy {
