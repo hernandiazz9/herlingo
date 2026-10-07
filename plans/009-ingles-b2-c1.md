@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 21:48Z 💻
+- Updated: 2026-10-07 21:49Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 7eb3c50
-- Next step: integrate T115/T120, then T117+T118 and C1 units
+- Branch: plan-009-ingles-b2-c1 @ 6a29c92
+- Next step: integrate T120/T117, then T118 and C1 units T121–T124
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -77,7 +77,7 @@ Worktree setup: npm ci
 - Outcome: b2-news/wellbeing: 92 phrases, 70 vocab, 19 Q&A, 10 lessons · 8dd8cae · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T115 — English B2: independent travel, paperwork
-- Status: running (attempt 1 · 💻 · agent a2877f122eec5dbe6 · since 21:39Z)
+- Status: done
 - Depends on: T111, T112
 - Where: any
 - Goal: Units `b2-travel` (240) and `b2-paperwork` (242) (planning, car rental, the unexpected; insurance, contracts, formal complaints), per docs/brief-en.md: `level: "B2"`, phrases ≤ 18 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -86,7 +86,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "B2"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: b2-travel/paperwork: 87 phrases, 63 vocab, 16 Q&A, 10 lessons · 6a29c92 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T116 — English B2: relationships, culture
 - Status: done
@@ -101,7 +101,7 @@ Worktree setup: npm ci
 - Outcome: b2-relationships/culture: 89 phrases, 67 vocab, 16 Q&A, 10 lessons · 7eb3c50 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T117 — English B2: 12 dialogues
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a938a7ec4e3724faa · since 21:49Z)
 - Depends on: T112, T113, T114, T115, T116
 - Where: any
 - Goal: The 12 B2 dialogues listed in docs/brief-en.md (`level: "B2"`, `unit`, one native speaker with a Spanish role name, Fluent avatar and an en-US voice, register-honest options with Spanish feedback), order 201–212.
@@ -268,6 +268,7 @@ Worktree setup: npm ci
 - [ ] T114 @8dd8cae — content review (queued 2026-10-07 💻)
 - [ ] T113 @2040b43 — content review (queued 2026-10-07 💻)
 - [ ] T116 @7eb3c50 — content review (queued 2026-10-07 💻)
+- [ ] T115 @6a29c92 — content review (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
@@ -303,3 +304,5 @@ Worktree setup: npm ci
 - 2026-10-07 21:39Z 💻 T116 launched · attempt 1 · agent af3a48e958b4a6b7d
 - 2026-10-07 21:48Z 💻 T116 done · worktree-agent-af3a48e958b4a6b7d → 7eb3c50 · verify ✓
 - 2026-10-07 21:48Z 💻 T120 launched · attempt 1 · agent a093dd1264c1aa5ed
+- 2026-10-07 21:49Z 💻 T115 done · worktree-agent-a2877f122eec5dbe6 → 6a29c92 · verify ✓
+- 2026-10-07 21:49Z 💻 T117 launched · attempt 1 · agent a938a7ec4e3724faa
