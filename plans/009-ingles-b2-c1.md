@@ -10,8 +10,8 @@ Worktree setup: npm ci
 ## Now
 - Updated: 2026-10-07 07:59Z ☁️
 - Writer: ☁️ session_01TRpJSE1mnE3mnYdfYQTXo5 since 07:53Z
-- Branch: plan-009-ingles-b2-c1 @ 416cc37
-- Next step: integrate T111, then T112
+- Branch: plan-009-ingles-b2-c1 @ 051214c
+- Next step: integrate T112, then T113–T116 / T120 (1 agent)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -41,7 +41,7 @@ Worktree setup: npm ci
 - Outcome: pack levels A2–C1 + opiniones/cultura, per-level story words, registerBadge, generic Ruta/Onboarding copy, content-guide levelled packs · b45105e · verify ✓ ☁️ · not checked: level chips, Prepárate badge en/it, copy, themes 375 px
 
 ## T112 — English B2: meetings, opinions and B2 grammar
-- Status: pending
+- Status: running (attempt 1 · ☁️ session_01TRpJSE1mnE3mnYdfYQTXo5 · agent a49235f2b326166fc · since 07:59Z)
 - Depends on: T111
 - Where: any
 - Goal: Units `b2-meetings` (210), `b2-opinions` (212) and `b2-grammar` (290) with the 10 B2 grammar cards in its `grammar` array, per docs/brief-en.md: `level: "B2"`, phrases ≤ 18 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -283,3 +283,4 @@ Worktree setup: npm ci
 - 2026-10-07 07:53Z ☁️ resume on ☁️ session_01TRpJSE1mnE3mnYdfYQTXo5 · seven-day rate-limit warning → 1 agent
 - 2026-10-07 07:54Z ☁️ T111 launched · attempt 1 · agent a31cc210f51247cf5
 - 2026-10-07 07:59Z ☁️ T111 done · worktree-agent-a31cc210f51247cf5 → b45105e · verify ✓
+- 2026-10-07 07:59Z ☁️ T112 launched · attempt 1 · agent a49235f2b326166fc
