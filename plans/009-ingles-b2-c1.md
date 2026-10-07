@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 21:29Z 💻
+- Updated: 2026-10-07 21:39Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ b0a1e25
-- Next step: integrate T113/T114, then T115/T116
+- Branch: plan-009-ingles-b2-c1 @ 2040b43
+- Next step: integrate T115/T116, then T117+T118 (B2 dialogues, stories)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -53,7 +53,7 @@ Worktree setup: npm ci
 - Outcome: b2-meetings/opinions/grammar: 88 phrases, 59 vocab, 18 Q&A, 10 grammar, 12 lessons · eaac50e · verify ✓ ☁️ · not checked: audio/images (T129)
 
 ## T113 — English B2: tech talk, projects
-- Status: running (attempt 3 · 💻 · agent a67cae1912ecd9cb9 · since 21:29Z)
+- Status: done
 - Depends on: T111, T112
 - Where: any
 - Goal: Units `b2-tech-talk` (220) and `b2-projects` (222) (architecture, trade-offs, code review; deadlines, risks, priorities, feedback), per docs/brief-en.md: `level: "B2"`, phrases ≤ 18 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -62,10 +62,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "B2"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: b2-tech-talk/projects: 88 phrases, 70 vocab, 16 Q&A, 10 lessons · 2040b43 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T114 — English B2: news, wellbeing
-- Status: running (attempt 2 · 💻 · agent aead2af6b3d053a8e · since 21:29Z)
+- Status: done
 - Depends on: T111, T112
 - Where: any
 - Goal: Units `b2-news` (230) and `b2-wellbeing` (232), per docs/brief-en.md: `level: "B2"`, phrases ≤ 18 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -74,10 +74,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "B2"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: b2-news/wellbeing: 92 phrases, 70 vocab, 19 Q&A, 10 lessons · 8dd8cae · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T115 — English B2: independent travel, paperwork
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a2877f122eec5dbe6 · since 21:39Z)
 - Depends on: T111, T112
 - Where: any
 - Goal: Units `b2-travel` (240) and `b2-paperwork` (242) (planning, car rental, the unexpected; insurance, contracts, formal complaints), per docs/brief-en.md: `level: "B2"`, phrases ≤ 18 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -89,7 +89,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T116 — English B2: relationships, culture
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent af3a48e958b4a6b7d · since 21:39Z)
 - Depends on: T111, T112
 - Where: any
 - Goal: Units `b2-relationships` (250) and `b2-culture` (252), per docs/brief-en.md: `level: "B2"`, phrases ≤ 18 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -265,6 +265,8 @@ Worktree setup: npm ci
 ## Review queue
 - [ ] T111 @b45105e — code review (queued 2026-10-07 ☁️)
 - [ ] T112 @eaac50e — content review (queued 2026-10-07 ☁️)
+- [ ] T114 @8dd8cae — content review (queued 2026-10-07 💻)
+- [ ] T113 @2040b43 — content review (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
@@ -294,3 +296,7 @@ Worktree setup: npm ci
 - 2026-10-07 11:48Z 💻 T114 launched · attempt 1 · agent af7ea21a6dae32bc8
 - 2026-10-07 21:29Z 💻 T113 attempt 2 stalled (stream watchdog, no commits) · relaunched · attempt 3 · agent a67cae1912ecd9cb9
 - 2026-10-07 21:29Z 💻 T114 attempt 1 stalled (stream watchdog, no commits) · relaunched · attempt 2 · agent aead2af6b3d053a8e
+- 2026-10-07 21:39Z 💻 T114 done · worktree-agent-aead2af6b3d053a8e → 8dd8cae · verify ✓
+- 2026-10-07 21:39Z 💻 T113 done · worktree-agent-a67cae1912ecd9cb9 → 2040b43 · verify ✓
+- 2026-10-07 21:39Z 💻 T115 launched · attempt 1 · agent a2877f122eec5dbe6
+- 2026-10-07 21:39Z 💻 T116 launched · attempt 1 · agent af3a48e958b4a6b7d
