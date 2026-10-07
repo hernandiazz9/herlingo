@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:24Z 💻
+- Updated: 2026-10-07 22:37Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-010-nube @ cfe71d6 (from main) · worktree .claude/worktrees/plan-010 · not pushed
-- Next step: T130 running; then T131
+- Next step: T131 running; then T132
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -44,7 +44,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T130 — Migration: `league.saves` + save RPCs + smoke SQL
-- Status: running (attempt 1 · 💻 · agent a62e7237f6ef165ce · since 22:40Z)
+- Status: done
 - Depends on: none
 - Where: pc (local Postgres for `npm run db:check`)
 - Goal: Write `supabase/migrations/20261008000000_league_save.sql` per the Shared contract ("Server"): table, `league_save_head/get/put/delete`, size cap 2 MiB, 120 writes/hour rate limit, `league_delete_me` re-created to also delete the save. Extend `scripts/db/smoke.sql`: two users; put with null base → ok rev 1; put base 1 → rev 2; stale base → conflict, data unchanged; user B cannot see A's save; anon cannot call; too large / invalid → tokens; rate limit hit; `league_delete_me` removes the save; deleting the auth user cascades.
@@ -54,10 +54,10 @@ Worktree setup: npm ci
   - `npm run db:check` → exit 0 with the new smoke assertions.
   - `git diff --stat supabase/migrations` → only the new file.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: league.saves + league_save_head/get/put/delete, 2 MiB cap, 120 writes/h (fixed window), league_delete_me deletes the save; smoke 264 checks; fake server body limit 4 MB · aad60fe · verify ✓ 💻 · db:check ✓
 
 ## T131 — Client module `src/lib/cloud-save/` + key exclusions + local HTTP check
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a50096a2724793dcb · since 22:37Z)
 - Depends on: T130
 - Where: pc (local fake Supabase for the HTTP check)
 - Goal: Add `isCloudSaveKey` and the `league-auth` exclusion in `src/lib/backup/` (file import ignores that key and keeps the device's session), and the client module per the Shared contract ("Client"): bookkeeping key, hash, change detection, debounced/throttled upload with optimistic concurrency, offline retry, conflict state, the exposed API and hook. Start it from the app shell (like Liga's sync) only when `leagueEnabled()`. Extend `npm run league:local:check` (or a sibling `league:local:save-check` script in package.json) with put → get → stale put = conflict → head → delete against the fake Supabase.
@@ -111,6 +111,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## Review queue
+- [ ] T130 @aad60fe — code review (SQL: security definer, RLS, caps) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 
@@ -129,6 +130,9 @@ Worktree setup: npm ci
 - 2026-10-07 plan: undo copy kept in Cache Storage `lang-lern-cloud-undo` (localStorage has no room for a second copy), offered 7 days. (orchestrator; approved by Hernán 2026-10-07)
 - 2026-10-07 plan: coach mp3s and lesson audio (Cache Storage) are not in the cloud copy; they are re-downloaded or regenerated. (orchestrator)
 - 2026-10-07 plan: push policy: guarded push of `plan-010-nube` only; no merge into main, PR or deploy without Hernán's explicit OK; Hernán runs `npx supabase db push`. (Hernán)
+- 2026-10-07 T130: rate limit is a fixed 1-hour window in the row (window_start/window_writes), only successful puts count; stale + over limit → conflict first. (agent)
+- 2026-10-07 T130: put with non-null base and no row → conflict with null rev/size/updated_at; limits as revoked functions league.save_max_bytes()/save_max_writes_per_hour(); league_delete_me still returns true only if a profile was deleted, but always deletes the save. (agent)
+- 2026-10-07 T130: local fake server MAX_BODY 1 MB → 4 MB; psql variables > 64 KiB passed through a temp file. (agent)
 
 ## Proposals (new scope)
 - 2026-10-07 plan: field-by-field merge of two copies (max XP, union of lessons and SRS by latest review) instead of choosing a whole copy.
@@ -136,3 +140,5 @@ Worktree setup: npm ci
 ## Log
 - 2026-10-07 22:24Z 💻 plan written from Hernán's brief (prompt-009-nube.md); not approved yet
 - 2026-10-07 22:40Z 💻 plan approved by Hernán ("hazlo en worktree y comienza"); T130 launched · attempt 1 · agent a62e7237f6ef165ce
+- 2026-10-07 22:37Z 💻 T130 done · worktree-agent-a62e7237f6ef165ce → aad60fe · verify ✓ · db:check ✓
+- 2026-10-07 22:37Z 💻 T131 launched · attempt 1 · agent a50096a2724793dcb
