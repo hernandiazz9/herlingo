@@ -265,7 +265,11 @@ async function respond(req, url) {
   // Audio lives in its language's cache (/audio/<lang>/…), everything else in the precache.
   const audio = /^\/audio\/([^/]+)\//.exec(path);
   const cacheName = audio ? AUDIO_PREFIX + audio[1] : CACHE;
-  const hit = await caches.match(path, { cacheName, ignoreVary: true });
+  let hit = await caches.match(path, { cacheName, ignoreVary: true });
+  // Ids with dots (/leccion/surv.l.cortesia) look like files: retry as a page.
+  if (!hit && req.mode === "navigate" && !path.endsWith("/")) {
+    hit = await caches.match(path + "/", { cacheName, ignoreVary: true });
+  }
   if (hit) return req.headers.has("range") ? partial(req, hit) : hit;
   try {
     return await fetch(req);
