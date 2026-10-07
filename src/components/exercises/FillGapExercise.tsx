@@ -2,21 +2,23 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/cn";
-import { checkAnswer, type FillGapExercise as FillGap } from "@/lib/exercises";
+import { getPack } from "@/lib/content";
+import { checkAnswer, scriptRules, type FillGapExercise as FillGap } from "@/lib/exercises";
 import { MiniPlay, Prompt, useLessonLang, type ExerciseProps } from "./shared";
 
 /** Target-language sentence with a missing word: pick the word. */
 export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<FillGap>) {
   const lang = useLessonLang();
+  const rules = scriptRules(getPack(lang).meta);
   const [picked, setPicked] = useState<string | null>(null);
 
   const choose = (word: string) => {
     if (answered || picked) return;
     setPicked(word);
-    const result = checkAnswer(word, exercise.gap);
+    const result = checkAnswer(word, exercise.gap, rules);
     onAnswer({ correct: result.correct, accentNote: result.accentNote, given: word });
   };
-  const correct = picked !== null && checkAnswer(picked, exercise.gap).correct;
+  const correct = picked !== null && checkAnswer(picked, exercise.gap, rules).correct;
 
   return (
     <div className="flex flex-col gap-6">

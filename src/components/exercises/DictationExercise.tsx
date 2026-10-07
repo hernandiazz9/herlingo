@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui";
 import { LiveTranscript, MicButton, useListen } from "@/components/speech";
 import { getPack, languageName } from "@/lib/content";
-import { checkAnswer, spellNumbers, type DictationExercise as Dictation } from "@/lib/exercises";
+import { checkAnswer, scriptRules, spellNumbers, type DictationExercise as Dictation } from "@/lib/exercises";
 import { PlayControls, Prompt, useLessonLang, type ExerciseProps } from "./shared";
 
 /**
@@ -29,7 +29,11 @@ export function DictationExercise({ exercise, answered, onAnswer }: ExerciseProp
   const check = () => {
     if (answered || listen.active || !text.trim()) return;
     listen.reset();
-    const result = checkAnswer(text, exercise.accepted, { typos: true, equivalents: meta.equivalents });
+    const result = checkAnswer(text, exercise.accepted, {
+      typos: true,
+      equivalents: meta.equivalents,
+      ...scriptRules(meta),
+    });
     onAnswer({ correct: result.correct, accentNote: result.accentNote, typo: result.typo, given: text.trim() });
   };
 

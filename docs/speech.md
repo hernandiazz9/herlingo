@@ -146,11 +146,16 @@ dialogue Dice ≥ 0.6 match).
   `index` = -1 when even the best one does not pass, `result` is still its word feedback.
 - Word-level alignment with `normalizeAnswer` from `src/lib/exercises/normalize.ts`: case,
   punctuation and accents ignored, apostrophes split words ("dov'è" = "dov è"). `matching` is the
-  pack's `meta` (`{ numberWords?, equivalents? }`): its `equivalents` are written out on both sides
-  first ("I'm" = "I am", "don't" = "do not"; whole words, case and apostrophe variants ignored), then
-  digits on both sides with `numberWords` ("40" heard = "quaranta", "21" = "twenty-one"). Typed
-  dictation (`checkAnswer(…, { equivalents })`) expands the same `equivalents`. Packs without them
-  compare as before.
+  pack's `meta` (`{ numberWords?, equivalents?, stress?, fold? }`): its `equivalents` are written out
+  on both sides first ("I'm" = "I am", "don't" = "do not"; whole words, case and apostrophe variants
+  ignored), then digits on both sides with `numberWords` ("40" heard = "quaranta", "21" =
+  "twenty-one"), then the `stress` mark is removed and `fold` applied on both sides (recognisers
+  return text without stress marks: "привет" heard = "приве́т", "еще" = "ещё"). Typed dictation
+  (`checkAnswer(…, { equivalents, ...scriptRules(meta) })`) does the same, and with the pack's
+  `romanization` also accepts the answer typed in Latin letters (the romanization of an accepted
+  answer, accents and apostrophes ignored, `alternatives` spellings accepted: "khorosho" =
+  "jorosho" = "хорошо́"; same typo tolerance). Tiles and fill-the-gap pass `scriptRules(meta)`.
+  A missing stress mark is never an accent note. Packs without these fields compare as before.
 - Words written together or apart match ("buon giorno" = "buongiorno", "dove" = "dov'è").
 - A one-letter slip in a word of 5+ letters counts as `ok` (usually the recogniser's spelling).
 - Score = `ok` words / (expected words + 0.5 × extra words heard), in [0, 1].

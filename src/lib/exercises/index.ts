@@ -9,6 +9,8 @@ export {
   diffWords,
   expandEquivalents,
   normalizeAnswer,
+  prepareScript,
+  scriptRules,
   similarity,
   spellNumbers,
   toTiles,
@@ -16,6 +18,7 @@ export {
   type AnswerCheck,
   type CheckOptions,
   type Equivalents,
+  type ScriptRules,
   type DiffWord,
 } from "./normalize";
 export { createRng, hashSeed, type Rng } from "./random";
