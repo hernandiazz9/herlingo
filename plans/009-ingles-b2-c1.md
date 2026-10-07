@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:11Z 💻
+- Updated: 2026-10-07 22:12Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 478ccbf
-- Next step: integrate T119/T122, then T123/T124
+- Branch: plan-009-ingles-b2-c1 @ ba14336
+- Next step: integrate T122/T123, then T124; B2 complete
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -174,7 +174,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T123 — English C1: networking, complex problems
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a014857546e18c137 · since 22:12Z)
 - Depends on: T111, T120
 - Where: any
 - Goal: Units `c1-networking` (340) and `c1-problems` (342), per docs/brief-en.md: `level: "C1"`, phrases ≤ 22 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -323,3 +323,4 @@ Worktree setup: npm ci
 - 2026-10-07 22:10Z 💻 T121 done · worktree-agent-ad2efc66ff7fd045c → 478ccbf · verify ✓
 - 2026-10-07 22:10Z 💻 T122 launched · attempt 1 · agent ae73dcc4ba6a5f6ec
 - 2026-10-07 22:11Z 💻 T119 done · worktree-agent-a504eb9fe3fcbf7b3 → 38e56f8 · verify ✓
+- 2026-10-07 22:12Z 💻 T123 launched · attempt 1 · agent a014857546e18c137
