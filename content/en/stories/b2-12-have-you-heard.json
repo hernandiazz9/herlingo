@@ -1,0 +1,95 @@
+{
+  "id": "story.en-b2-have-you-heard",
+  "order": 212,
+  "title": "Have you heard?",
+  "titleEs": "¿Os habéis enterado?",
+  "description": "Una cena para celebrar el éxito de Mrs. Carter: Pablo hace balance de su año en Chicago, y Maya suelta un rumor que lo puede cambiar todo.",
+  "emoji": "📰",
+  "situation": "opiniones",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "Mrs. Carter's reading at the bookstore was a huge success.", "es": "La lectura de Mrs. Carter en la librería fue un éxito enorme." },
+    { "id": "s2", "text": "Two days later, a local newspaper publishes an article about her.", "es": "Dos días después, un periódico local publica un artículo sobre ella." },
+    { "id": "s3", "text": "That night, the four friends have dinner at her apartment to celebrate.", "es": "Esa noche, los cuatro amigos cenan en su piso para celebrarlo." },
+    { "id": "s4", "text": "Jordan reads from his phone: «It says here that the book will be in every store!»", "es": "Jordan lee en su móvil: «¡Aquí dice que el libro estará en todas las tiendas!»" },
+    { "id": "s5", "text": "«I'd take that with a grain of salt, dear.»", "es": "«Yo no me lo creería del todo, cielo.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s6", "text": "Then Pablo raises his glass and looks back on his year.", "es": "Entonces Pablo levanta su copa y hace balance de su año." },
+    { "id": "s7", "text": "«If I'd stayed in Valencia, I would have missed all of this.»", "es": "«Si me hubiera quedado en Valencia, me habría perdido todo esto.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "«I just wish I had more time. This year went by so fast.»", "es": "«Ojalá tuviera más tiempo. Este año se me ha pasado volando.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "Maya looks at her phone and suddenly goes quiet.", "es": "Maya mira su móvil y de repente se queda callada." },
+    { "id": "s10", "text": "«Have you heard? Apparently, a big tech company wants to buy our startup.»", "es": "«¿Os habéis enterado? Por lo visto, una gran empresa tecnológica quiere comprar nuestra startup.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "«What? Where did you read that?»", "es": "«¿Qué? ¿Dónde has leído eso?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«A friend sent me an article, but nobody at work has said anything.»", "es": "«Una amiga me ha mandado un artículo, pero en el trabajo nadie ha dicho nada.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s13", "text": "«Well, it remains to be seen whether it's true.»", "es": "«Bueno, está por ver si es verdad.»", "voice": "en-US-BrianNeural" },
+    { "id": "s14", "text": "«In the long run, it could be good for you,» says Mrs. Carter.", "es": "«A la larga, podría ser bueno para vosotros», dice Mrs. Carter." },
+    { "id": "s15", "text": "Pablo isn't so sure. «I have mixed feelings about it.»", "es": "Pablo no lo tiene tan claro. «Tengo sentimientos encontrados.»" },
+    { "id": "s16", "text": "They change the subject and raise their glasses to Mrs. Carter's book.", "es": "Cambian de tema y brindan por el libro de Mrs. Carter." },
+    { "id": "s17", "text": "But that night, Pablo can't stop thinking about the rumor.", "es": "Pero esa noche, Pablo no puede dejar de pensar en el rumor." }
+  ],
+  "keywords": [
+    "b2-news.article",
+    "b2-news.it-says-here-that",
+    "b2-news.take-it-with-a-grain-of-salt",
+    "b2-grammar.i-wish-i-had-more-time",
+    "b2-news.have-you-heard",
+    "b2-news.apparently",
+    "b2-news.where-did-you-read-that",
+    "b2-news.it-remains-to-be-seen",
+    "b2-news.in-the-long-run",
+    "b2-opinions.i-have-mixed-feelings"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why are the friends having dinner together?",
+      "es": "¿Por qué cenan juntos los amigos?",
+      "options": [
+        { "text": "It's Pablo's last night in Chicago.", "es": "Es la última noche de Pablo en Chicago." },
+        { "text": "To celebrate Mrs. Carter's success.", "es": "Para celebrar el éxito de Mrs. Carter." },
+        { "text": "It's Jordan's birthday.", "es": "Es el cumpleaños de Jordan." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "How does Pablo feel about his year in Chicago?",
+      "es": "¿Cómo se siente Pablo con su año en Chicago?",
+      "options": [
+        { "text": "He's glad he came, but it went by too fast.", "es": "Se alegra de haber venido, pero se le ha pasado demasiado rápido." },
+        { "text": "He wishes he had stayed in Valencia.", "es": "Le gustaría haberse quedado en Valencia." },
+        { "text": "He thinks it was too long.", "es": "Cree que se le ha hecho demasiado largo." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What has Maya heard?",
+      "es": "¿De qué se ha enterado Maya?",
+      "options": [
+        { "text": "The startup is closing.", "es": "Que la startup va a cerrar." },
+        { "text": "Her boss is leaving.", "es": "Que su jefa se va." },
+        { "text": "A big company may buy the startup.", "es": "Que una gran empresa podría comprar la startup." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How does Pablo react to the news?",
+      "es": "¿Cómo reacciona Pablo a la noticia?",
+      "options": [
+        { "text": "He's really excited about it.", "es": "Le hace mucha ilusión." },
+        { "text": "He's not sure how he feels.", "es": "No sabe muy bien qué pensar." },
+        { "text": "He doesn't care at all.", "es": "Le da completamente igual." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "b2-news.article", "distractors": ["notice", "articule"] },
+    { "id": "g2", "sentence": "s5", "answer": "b2-news.take-it-with-a-grain-of-salt", "gap": "grain of salt", "distractors": ["pinch of sugar", "grain of sand"] },
+    { "id": "g3", "sentence": "s8", "answer": "b2-grammar.i-wish-i-had-more-time", "gap": "had", "distractors": ["have", "would have"] },
+    { "id": "g4", "sentence": "s10", "answer": "b2-news.apparently", "gap": "Apparently", "distractors": ["Supposed", "Evident"] },
+    { "id": "g5", "sentence": "s13", "answer": "b2-news.it-remains-to-be-seen", "gap": "remains to be seen", "distractors": ["stays to be seen", "remains to see"] },
+    { "id": "g6", "sentence": "s14", "answer": "b2-news.in-the-long-run", "gap": "long run", "distractors": ["long race", "large run"] }
+  ]
+}

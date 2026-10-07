@@ -1,0 +1,373 @@
+{
+  "id": "b2-news",
+  "order": 230,
+  "level": "B2",
+  "title": "Noticias y actualidad: contar, comentar, reaccionar",
+  "description": "Contar una noticia que has leído u oído, reaccionar con naturalidad, comentar la actualidad, desconfiar de los bulos y hablar de sucesos, economía y elecciones.",
+  "emoji": "📰",
+  "situation": "opiniones",
+  "lessons": [
+    {
+      "id": "b2-news.l.telling",
+      "title": "Contar una noticia",
+      "items": [
+        "b2-news.news",
+        "b2-news.did-you-see-the-news",
+        "b2-news.have-you-heard",
+        "b2-news.article",
+        "b2-news.i-read-an-article",
+        "b2-news.according-to-the-article",
+        "b2-news.apparently",
+        "b2-news.headline",
+        "b2-news.it-says-here-that",
+        "b2-news.it-was-all-over-the-news",
+        "b2-news.the-story-broke-this-morning",
+        "b2-news.breaking-news",
+        "b2-news.newspaper",
+        "b2-news.i-heard-about-it-on-the-radio",
+        "b2-news.report",
+        "b2-news.qa.did-you-see"
+      ]
+    },
+    {
+      "id": "b2-news.l.reacting",
+      "title": "Reaccionar a una noticia",
+      "items": [
+        "b2-news.shocking",
+        "b2-news.thats-shocking",
+        "b2-news.i-cant-believe-they-did-that",
+        "b1-stories.no-way-are-you-serious",
+        "b2-news.it-doesnt-surprise-me",
+        "b2-news.it-was-bound-to-happen",
+        "b2-news.thats-great-news",
+        "b2-news.relief",
+        "b2-news.what-a-relief",
+        "b2-news.heartbreaking",
+        "b2-news.my-heart-goes-out-to-the-families",
+        "b1-stories.oh-no-that-sounds-awful",
+        "b2-news.outrageous",
+        "b2-news.thats-ridiculous",
+        "b2-news.im-speechless",
+        "b2-news.qa.hikers",
+        "b2-news.qa.arrested"
+      ]
+    },
+    {
+      "id": "b2-news.l.discussing",
+      "title": "Comentar la actualidad",
+      "items": [
+        "b2-news.whats-your-take-on-the-new-law",
+        "b2-news.law",
+        "b2-news.government",
+        "b2-news.the-government-should-do-more",
+        "b2-news.policy",
+        "b2-news.it-affects-all-of-us",
+        "b2-opinions.issue",
+        "b2-news.theres-been-a-lot-of-debate",
+        "b2-opinions.controversial",
+        "b2-news.it-remains-to-be-seen",
+        "b2-news.it-seems-to-me-that",
+        "b2-opinions.on-the-one-hand",
+        "b2-news.in-the-long-run",
+        "b2-news.politics",
+        "b2-news.politician",
+        "b2-news.i-try-not-to-follow-politics",
+        "b2-news.lets-not-talk-politics",
+        "b2-news.qa.new-law",
+        "b2-news.qa.politics"
+      ]
+    },
+    {
+      "id": "b2-news.l.sources",
+      "title": "Fuentes, redes y bulos",
+      "items": [
+        "b2-news.source",
+        "b2-news.where-did-you-read-that",
+        "b2-news.fake-news",
+        "b2-news.check-the-source",
+        "b2-news.i-dont-really-trust-that-website",
+        "b2-news.take-it-with-a-grain-of-salt",
+        "b1-friends.social-media",
+        "b2-news.i-saw-it-on-social-media",
+        "b2-news.viral",
+        "b2-news.it-went-viral",
+        "b2-news.clickbait",
+        "b2-news.misleading",
+        "b2-news.its-just-clickbait",
+        "b2-news.the-media",
+        "b2-news.they-blew-it-out-of-proportion",
+        "b1-friends.podcast",
+        "b2-news.i-get-most-of-my-news-from-podcasts",
+        "b2-news.subscription",
+        "b2-news.qa.where-news",
+        "b2-news.qa.coffee"
+      ]
+    },
+    {
+      "id": "b2-news.l.events",
+      "title": "Sucesos, economía y elecciones",
+      "items": [
+        "b1-trips.storm",
+        "b2-news.damage",
+        "b2-news.the-storm-caused-a-lot-of-damage",
+        "b2-news.flood",
+        "b2-news.wildfire",
+        "b2-news.thousands-were-evacuated",
+        "b2-news.economy",
+        "b2-news.inflation",
+        "b2-news.prices-have-gone-up",
+        "b2-news.unemployment",
+        "b2-news.unemployment-is-down",
+        "b2-news.layoff",
+        "b2-news.the-company-announced-layoffs",
+        "b2-news.strike",
+        "b2-news.the-drivers-are-on-strike",
+        "b2-news.protest",
+        "b2-news.there-was-a-huge-protest",
+        "b2-news.election",
+        "b2-news.poll",
+        "b2-news.the-polls-are-really-close",
+        "b2-news.its-been-in-the-headlines-all-week",
+        "b2-news.qa.this-week",
+        "b2-news.qa.strike"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-news.did-you-see-the-news", "text": "Did you see the news about the storm last night?", "es": "¿Viste la noticia de la tormenta de anoche?", "notes": "«news» es incontable: «the news is», nunca «a new» ni «the news are».", "explanation": "Para sacar un tema de actualidad. «news» = «nuuz», con /z/ final, no «nius».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.have-you-heard", "text": "Have you heard? They're closing the old train station.", "es": "¿Te has enterado? Van a cerrar la antigua estación de tren.", "notes": "«Have you heard?» = ¿te has enterado? El presente continuo habla de un plan ya decidido.", "explanation": "Para dar una noticia fresca. «heard» = «herd», como «bird», no «hird».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.i-read-an-article", "text": "I read a really interesting article about it this morning.", "es": "Esta mañana leí un artículo muy interesante sobre eso.", "notes": "«read» en pasado se escribe igual pero suena «red».", "explanation": "Para contar de dónde sacas la información. «article» = «AR-ti-kəl», acento en la primera.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.according-to-the-article", "text": "According to the article, prices went up again last month.", "es": "Según el artículo, los precios volvieron a subir el mes pasado.", "notes": "«according to» es para fuentes (un artículo, un estudio), no para tu propia opinión.", "explanation": "Para citar una fuente. «according» = «ə-KOR-ding», la «a» inicial es una schwa débil.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.apparently", "text": "Apparently, the mayor is going to resign next week.", "es": "Por lo visto, el alcalde va a dimitir la semana que viene.", "notes": "«apparently» = por lo visto, al parecer; no es «aparentemente».", "explanation": "Para contar algo que has oído pero no has comprobado. «apparently» = «ə-PE-rənt-li».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.it-says-here-that", "text": "It says here that the new subway line opens in March.", "es": "Aquí pone que la nueva línea de metro abre en marzo.", "notes": "«It says…» = pone, dice (un texto). Nunca «It puts».", "explanation": "Para leer en voz alta lo que pone el móvil o el periódico. «says» = «sez», no «seis».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.it-was-all-over-the-news", "text": "It was all over the news yesterday.", "es": "Ayer salió en todas las noticias.", "notes": "«be all over the news» = salir en todas partes, ser la noticia del día.", "explanation": "Para una noticia que todo el mundo comenta. «all over the» se une: «aa-LOU-vər-ðə».", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.the-story-broke-this-morning", "text": "The story broke early this morning, so details are still coming in.", "es": "La noticia saltó esta mañana temprano, así que todavía están llegando detalles.", "notes": "«a story breaks» = una noticia salta, sale a la luz. «come in» = ir llegando.", "explanation": "Para una noticia de última hora. «broke» = «brouk», con diptongo /ou/.", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.i-heard-about-it-on-the-radio", "text": "I heard about it on the radio on my way to work.", "es": "Me enteré por la radio de camino al trabajo.", "notes": "«hear about something» = enterarse de algo. «on the radio», «on TV», con «on».", "explanation": "En EE. UU. «radio» = «REI-di-ou», no «RA-dio».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.thats-shocking", "text": "That's shocking. I had no idea.", "es": "Qué fuerte. No tenía ni idea.", "notes": "«shocking» = impactante, escandaloso; no es «chocante» (raro).", "explanation": "Reacción a una noticia grave. «shocking» = «SHA-king», con «sh» y «o» abierta.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.i-cant-believe-they-did-that", "text": "I can't believe they actually did that.", "es": "No me puedo creer que lo hayan hecho de verdad.", "notes": "«actually» = de verdad, realmente; no es «actualmente» (currently).", "explanation": "Para mostrar sorpresa o indignación. «can't» en EE. UU. = «kænt», con la «t» casi muda.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.it-doesnt-surprise-me", "text": "Honestly, it doesn't surprise me at all.", "es": "Sinceramente, no me sorprende en absoluto.", "notes": "«not… at all» = en absoluto. «honestly»: la «h» no suena.", "explanation": "Cuando ya te lo esperabas. «honestly» = «A-nəst-li», sin «h».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.it-was-bound-to-happen", "text": "It was bound to happen sooner or later.", "es": "Tarde o temprano tenía que pasar.", "notes": "«be bound to» + verbo = ser seguro que pasará. «sooner or later» = tarde o temprano (el orden es al revés).", "explanation": "Cuando algo era previsible. «bound to» se une: «BAUN-tə».", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.thats-great-news", "text": "That's great news! It's about time.", "es": "¡Qué buena noticia! Ya era hora.", "notes": "«great news» sin «a»: es incontable. «It's about time» = ya era hora.", "explanation": "Para celebrar una noticia. «about time» se une: «ə-BAU-taim».", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.what-a-relief", "text": "What a relief! Nobody was hurt.", "es": "¡Qué alivio! No hubo heridos.", "notes": "«What a…!» = ¡qué…! con un sustantivo contable. «be hurt» = resultar herido.", "explanation": "Cuando una noticia acaba bien. «relief» = «ri-LIIF», con «i» larga.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.my-heart-goes-out-to-the-families", "text": "That's so sad. My heart goes out to the families.", "es": "Qué triste. Lo siento muchísimo por las familias.", "notes": "«my heart goes out to…» = lo siento de corazón por…; se usa ante tragedias.", "explanation": "Para mostrar empatía con respeto. «heart» = «hart», con la «r» americana.", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.thats-ridiculous", "text": "That's ridiculous! They can't be serious.", "es": "¡Eso es ridículo! No pueden ir en serio.", "notes": "«can't be serious» = no puede ser que lo digan en serio.", "explanation": "Para indignarte con algo absurdo. «ridiculous» = «ri-DI-kiə-ləs», acento en la segunda.", "register": "tu", "situation": "opiniones" },
+    { "id": "b2-news.im-speechless", "text": "I'm speechless. I don't know what to say.", "es": "Me he quedado sin palabras. No sé qué decir.", "notes": "«speechless» = sin palabras (speech + less).", "explanation": "Ante una noticia que te deja helado. «speechless» = «SPIICH-ləs», sin «e» delante de la «s».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.whats-your-take-on-the-new-law", "text": "What's your take on the new housing law?", "es": "¿Qué opinas de la nueva ley de vivienda?", "notes": "«What's your take on…?» = ¿qué opinas de…? Muy habitual y algo informal.", "explanation": "Para pedir opinión sobre la actualidad. «take on» se une: «TEI-kan».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.the-government-should-do-more", "text": "I think the government should do a lot more about housing.", "es": "Creo que el Gobierno debería hacer mucho más con la vivienda.", "notes": "«do something about…» = hacer algo para solucionar…", "explanation": "Para dar tu opinión política sin rodeos. «government» = «GA-vərn-mənt»; la segunda «n» casi no suena.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.it-affects-all-of-us", "text": "It's something that affects all of us.", "es": "Es algo que nos afecta a todos.", "notes": "«affect» es el verbo; «effect» es el sustantivo (el efecto).", "explanation": "Para recalcar la importancia de un tema. «affects» = «ə-FEKTS», cuidado con el grupo final /kts/.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.theres-been-a-lot-of-debate", "text": "There's been a lot of debate about it lately.", "es": "Últimamente se ha debatido mucho sobre eso.", "notes": "«There's been» = «There has been». «lately» = últimamente, va con present perfect.", "explanation": "Para presentar un tema polémico. «debate» = «di-BEIT», acento en la segunda.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.it-remains-to-be-seen", "text": "It remains to be seen whether it'll actually work.", "es": "Está por ver si realmente funcionará.", "notes": "«It remains to be seen» = está por ver. Algo formal, típico de noticias y debates.", "explanation": "Para mostrar dudas con prudencia. «whether» suena igual que «weather»: «WE-ðər».", "register": "formal", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.it-seems-to-me-that", "text": "It seems to me that nobody really knows what's going on.", "es": "Me da la impresión de que nadie sabe realmente lo que está pasando.", "notes": "«It seems to me that…» = me parece que… Suaviza la opinión.", "explanation": "Para opinar sin sonar tajante. «seems to me» se une: «SIIMZ-tə-mi».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.in-the-long-run", "text": "In the long run, it could be good for the city.", "es": "A la larga, podría ser bueno para la ciudad.", "notes": "«in the long run» = a la larga; lo contrario es «in the short term».", "explanation": "Para hablar de consecuencias futuras. «run» = «ran», con la «u» corta /ʌ/.", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.i-try-not-to-follow-politics", "text": "I try not to follow politics too closely.", "es": "Intento no seguir la política demasiado de cerca.", "notes": "«try not to» + verbo: el «not» va antes de «to». «closely» = de cerca (no «close»).", "explanation": "Para esquivar el tema con elegancia. «politics» = «PA-lə-tiks», acento en la primera.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.lets-not-talk-politics", "text": "Let's not talk politics at dinner, okay?", "es": "No hablemos de política en la cena, ¿vale?", "notes": "«talk politics» = hablar de política, sin «about».", "explanation": "Para cortar una discusión entre amigos. «Let's not» = «lets-NAT».", "register": "tu", "situation": "opiniones" },
+    { "id": "b2-news.where-did-you-read-that", "text": "Where did you read that? It sounds like fake news to me.", "es": "¿Dónde has leído eso? A mí me suena a bulo.", "notes": "«sound like» + sustantivo = sonar a. «fake news» = bulo, noticia falsa.", "explanation": "Para dudar de una noticia. «read that» se une: «RID-ðæt»; en presente «read» suena «riid».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.check-the-source", "text": "You should always check the source before you share something.", "es": "Siempre deberías comprobar la fuente antes de compartir algo.", "notes": "«source» = fuente de información; «font» es solo el tipo de letra.", "explanation": "Consejo contra los bulos. «source» = «sors», con la «r» americana y una sola sílaba.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.i-dont-really-trust-that-website", "text": "I don't really trust that website.", "es": "No me fío mucho de esa web.", "notes": "«trust» = fiarse de, sin preposición: «trust someone».", "explanation": "Para mostrar desconfianza. «trust» = «trast», sin «e» al final.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.take-it-with-a-grain-of-salt", "text": "I'd take that with a grain of salt.", "es": "Yo me lo tomaría con pinzas.", "notes": "«take something with a grain of salt» = tomárselo con pinzas, no creérselo del todo.", "literal": "Yo me lo tomaría con un grano de sal.", "explanation": "Para recomendar prudencia. «grain of» se une: «GREI-nəv».", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.i-saw-it-on-social-media", "text": "I saw it on social media, so I'm not sure it's true.", "es": "Lo vi en redes, así que no sé si es verdad.", "notes": "«on social media», con «on» y sin artículo.", "explanation": "Para dar una noticia con reservas. «media» = «MII-di-ə», no «MEDIA».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.it-went-viral", "text": "The video went viral overnight.", "es": "El vídeo se hizo viral de la noche a la mañana.", "notes": "«go viral» = hacerse viral. «overnight» = de la noche a la mañana.", "explanation": "Para algo que se difunde muy rápido. «viral» = «VAI-rəl», con «ai».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.its-just-clickbait", "text": "It's just clickbait. The headline is totally misleading.", "es": "Es un titular gancho y nada más. Es totalmente engañoso.", "notes": "«clickbait» = titular gancho para que hagas clic. «misleading» = engañoso.", "explanation": "Para criticar un titular. «misleading» = «mis-LII-ding», con «i» larga.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.they-blew-it-out-of-proportion", "text": "Honestly, the media blew it out of proportion.", "es": "Sinceramente, los medios lo exageraron muchísimo.", "notes": "«blow something out of proportion» = sacar algo de quicio, exagerarlo.", "explanation": "Para quitar hierro a una noticia. «blew» = «bluu», pasado de «blow».", "register": "neutral", "situation": "opiniones", "tags": ["idioms"] },
+    { "id": "b2-news.i-get-most-of-my-news-from-podcasts", "text": "I get most of my news from podcasts.", "es": "Casi todas las noticias me llegan por pódcast.", "notes": "«get your news from…» = informarte a través de…", "explanation": "Para contar cómo te informas. «podcasts» = «PAD-kæsts», con el grupo final /sts/.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.the-storm-caused-a-lot-of-damage", "text": "The storm caused a lot of damage downtown.", "es": "La tormenta causó muchos daños en el centro.", "notes": "«damage» es incontable: «a lot of damage», nunca «damages». «downtown» = en el centro.", "explanation": "Para contar un suceso. «caused» = «kozd», una sola sílaba, la «-ed» suena /d/.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.thousands-were-evacuated", "text": "Thousands of people were evacuated from their homes.", "es": "Miles de personas fueron evacuadas de sus casas.", "notes": "Pasiva en pasado: «were evacuated». «thousands of» sin número delante.", "explanation": "Lenguaje típico de las noticias. «thousands» = «ZAU-zəndz», con «th» entre los dientes.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.prices-have-gone-up", "text": "Prices have gone up a lot this year.", "es": "Los precios han subido mucho este año.", "notes": "«go up» = subir; «go down» = bajar.", "explanation": "Para hablar de economía. «gone» = «gon», no «gou-ne».", "register": "neutral", "situation": "opiniones", "tags": ["phrasal-verbs"] },
+    { "id": "b2-news.unemployment-is-down", "text": "Unemployment is down, but rent is still really high.", "es": "El paro ha bajado, pero el alquiler sigue estando muy alto.", "notes": "«be down / be up» = haber bajado / subido (cifras).", "explanation": "Para comentar datos económicos. «unemployment» = «ən-im-PLOI-mənt».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.the-company-announced-layoffs", "text": "The company announced hundreds of layoffs yesterday.", "es": "La empresa anunció cientos de despidos ayer.", "notes": "«layoffs» = despidos por recortes; «be laid off» = ser despedido así.", "explanation": "Para noticias de empresa. «announced» = «ə-NAUNST», la «-ed» suena /t/.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.the-drivers-are-on-strike", "text": "The train drivers are on strike until Friday.", "es": "Los maquinistas están de huelga hasta el viernes.", "notes": "«be on strike» = estar de huelga, con «on».", "explanation": "Para explicar un problema de transporte. «strike» = «straik», sin «e» delante: no «estraik».", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.there-was-a-huge-protest", "text": "There was a huge protest outside City Hall.", "es": "Hubo una manifestación enorme delante del ayuntamiento.", "notes": "«protest» = manifestación, protesta. «City Hall» = el ayuntamiento, sin artículo.", "explanation": "Para contar un suceso. El sustantivo «PRO-test» lleva el acento en la primera.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.the-polls-are-really-close", "text": "The election is next month, and the polls are really close.", "es": "Las elecciones son el mes que viene y las encuestas están muy reñidas.", "notes": "«election» en singular para unas elecciones. «close» = reñido, suena «klous» con /s/.", "explanation": "Para hablar de elecciones. «polls» = «poulz», con diptongo /ou/.", "register": "neutral", "situation": "opiniones" },
+    { "id": "b2-news.its-been-in-the-headlines-all-week", "text": "It's been in the headlines all week.", "es": "Ha estado en los titulares toda la semana.", "notes": "«It's been» = «It has been». «all week» = toda la semana, sin «the».", "explanation": "Para una noticia que dura. «headlines» = «HED-lainz».", "register": "neutral", "situation": "opiniones" }
+  ],
+  "vocab": [
+    { "id": "b2-news.news", "word": "news", "es": "las noticias, la noticia", "notes": "Incontable y en singular: «The news is good». Una noticia = «a piece of news» o «a story».", "example": "b2-news.did-you-see-the-news", "situation": "opiniones" },
+    { "id": "b2-news.article", "word": "article", "article": "an", "plural": "articles", "es": "el artículo", "example": "b2-news.i-read-an-article", "situation": "opiniones" },
+    { "id": "b2-news.headline", "word": "headline", "article": "a", "plural": "headlines", "es": "el titular", "notes": "«make the headlines» = salir en los titulares.", "situation": "opiniones" },
+    { "id": "b2-news.breaking-news", "word": "breaking news", "es": "la noticia de última hora", "notes": "Incontable, sin artículo: «There's breaking news».", "situation": "opiniones" },
+    { "id": "b2-news.newspaper", "word": "newspaper", "article": "a", "plural": "newspapers", "es": "el periódico", "notes": "También «paper» a secas.", "situation": "opiniones", "image": "fluent:newspaper" },
+    { "id": "b2-news.report", "word": "report", "article": "a", "plural": "reports", "es": "el reportaje, el informe", "notes": "También verbo: «report on something» = informar sobre algo.", "situation": "opiniones" },
+    { "id": "b2-news.shocking", "word": "shocking", "es": "impactante, escandaloso", "notes": "No es «chocante». La persona está «shocked».", "example": "b2-news.thats-shocking", "situation": "opiniones" },
+    { "id": "b2-news.relief", "word": "relief", "article": "a", "es": "el alivio", "notes": "«What a relief!» = ¡qué alivio! El adjetivo es «relieved».", "example": "b2-news.what-a-relief", "situation": "opiniones" },
+    { "id": "b2-news.heartbreaking", "word": "heartbreaking", "es": "desgarrador, que parte el corazón", "situation": "opiniones" },
+    { "id": "b2-news.outrageous", "word": "outrageous", "es": "indignante, escandaloso", "notes": "Suena «aut-REI-dʒəs».", "situation": "opiniones" },
+    { "id": "b2-news.law", "word": "law", "article": "a", "plural": "laws", "es": "la ley", "notes": "«pass a law» = aprobar una ley. Suena «laa».", "situation": "opiniones" },
+    { "id": "b2-news.government", "word": "government", "article": "a", "plural": "governments", "es": "el Gobierno", "example": "b2-news.the-government-should-do-more", "situation": "opiniones" },
+    { "id": "b2-news.policy", "word": "policy", "article": "a", "plural": "policies", "es": "la política (medida), la normativa", "notes": "«policy» = una medida o línea de actuación; «politics» = la política en general.", "situation": "opiniones" },
+    { "id": "b2-news.politics", "word": "politics", "es": "la política", "notes": "Sin artículo y con verbo en singular: «Politics is…».", "example": "b2-news.i-try-not-to-follow-politics", "situation": "opiniones" },
+    { "id": "b2-news.politician", "word": "politician", "article": "a", "plural": "politicians", "es": "el político, la política", "notes": "Suena «pa-lə-TI-shən».", "situation": "opiniones" },
+    { "id": "b2-news.source", "word": "source", "article": "a", "plural": "sources", "es": "la fuente (de información)", "notes": "No confundas con «font» (tipo de letra) ni «fountain» (fuente de agua).", "example": "b2-news.check-the-source", "situation": "opiniones" },
+    { "id": "b2-news.fake-news", "word": "fake news", "es": "las noticias falsas, el bulo", "notes": "Incontable: «That's fake news».", "example": "b2-news.where-did-you-read-that", "situation": "opiniones" },
+    { "id": "b2-news.viral", "word": "viral", "es": "viral", "notes": "«go viral» = hacerse viral. Suena «VAI-rəl».", "example": "b2-news.it-went-viral", "situation": "opiniones" },
+    { "id": "b2-news.clickbait", "word": "clickbait", "es": "el titular gancho, el cebo de clics", "notes": "Incontable. «bait» = cebo.", "example": "b2-news.its-just-clickbait", "situation": "opiniones" },
+    { "id": "b2-news.misleading", "word": "misleading", "es": "engañoso", "notes": "De «mislead» = inducir a error.", "situation": "opiniones" },
+    { "id": "b2-news.the-media", "word": "the media", "es": "los medios de comunicación", "notes": "Siempre con «the». Suena «MII-di-ə».", "example": "b2-news.they-blew-it-out-of-proportion", "situation": "opiniones" },
+    { "id": "b2-news.subscription", "word": "subscription", "article": "a", "plural": "subscriptions", "es": "la suscripción", "notes": "«subscribe to» = suscribirse a.", "situation": "opiniones" },
+    { "id": "b2-news.damage", "word": "damage", "es": "los daños", "notes": "Incontable en este sentido: «a lot of damage». «damages» = indemnización (legal).", "example": "b2-news.the-storm-caused-a-lot-of-damage", "situation": "opiniones" },
+    { "id": "b2-news.flood", "word": "flood", "article": "a", "plural": "floods", "es": "la inundación", "notes": "Suena «flad», como «blood».", "situation": "opiniones", "image": "fluent:water-wave" },
+    { "id": "b2-news.wildfire", "word": "wildfire", "article": "a", "plural": "wildfires", "es": "el incendio forestal", "situation": "opiniones", "image": "fluent:fire" },
+    { "id": "b2-news.economy", "word": "economy", "article": "an", "plural": "economies", "es": "la economía", "notes": "Suena «i-KA-nə-mi». «economics» = la ciencia económica.", "situation": "opiniones" },
+    { "id": "b2-news.inflation", "word": "inflation", "es": "la inflación", "notes": "Incontable.", "situation": "opiniones" },
+    { "id": "b2-news.unemployment", "word": "unemployment", "es": "el paro, el desempleo", "notes": "Incontable. «unemployed» = en paro.", "example": "b2-news.unemployment-is-down", "situation": "opiniones" },
+    { "id": "b2-news.layoff", "word": "layoff", "article": "a", "plural": "layoffs", "es": "el despido (colectivo)", "notes": "Verbo: «lay off» = despedir por recortes.", "example": "b2-news.the-company-announced-layoffs", "situation": "opiniones" },
+    { "id": "b2-news.strike", "word": "strike", "article": "a", "plural": "strikes", "es": "la huelga", "notes": "«be on strike» = estar de huelga; «go on strike» = ir a la huelga.", "example": "b2-news.the-drivers-are-on-strike", "situation": "opiniones" },
+    { "id": "b2-news.protest", "word": "protest", "article": "a", "plural": "protests", "es": "la manifestación, la protesta", "example": "b2-news.there-was-a-huge-protest", "situation": "opiniones", "image": "fluent:megaphone" },
+    { "id": "b2-news.election", "word": "election", "article": "an", "plural": "elections", "es": "las elecciones", "notes": "Unas elecciones = «an election» (singular).", "situation": "opiniones", "image": "fluent:ballot-box-with-ballot" },
+    { "id": "b2-news.poll", "word": "poll", "article": "a", "plural": "polls", "es": "la encuesta (de opinión)", "notes": "«survey» es una encuesta en general; para intención de voto se dice «poll».", "example": "b2-news.the-polls-are-really-close", "situation": "opiniones" }
+  ],
+  "qa": [
+    {
+      "id": "b2-news.qa.did-you-see",
+      "question": "Did you see the news this morning?",
+      "questionEs": "¿Viste las noticias esta mañana?",
+      "accepted": [
+        { "text": "Yeah, apparently the mayor is going to resign.", "es": "Sí, por lo visto el alcalde va a dimitir." },
+        { "text": "No, I didn't. What happened?", "es": "No, no las vi. ¿Qué pasó?" }
+      ],
+      "distractors": [
+        { "text": "Yeah, I saw a new about the mayor.", "es": "Sí, vi una noticia sobre el alcalde." },
+        { "text": "No, I didn't. What did it happen?", "es": "No, no las vi. ¿Qué pasó?" }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«news» no tiene singular «a new»: di «a story» o «a piece of news». En preguntas por el sujeto no hay «did»: «What happened?».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-news.qa.hikers",
+      "question": "They found the missing hikers, and they're all okay.",
+      "questionEs": "Han encontrado a los excursionistas desaparecidos y están todos bien.",
+      "accepted": [
+        { "text": "What a relief! That's great news.", "es": "¡Qué alivio! Qué buena noticia." },
+        { "text": "Thank goodness. I was really worried about them.", "es": "Menos mal. Estaba muy preocupado por ellos." }
+      ],
+      "distractors": [
+        { "text": "What a relief! That's a great new.", "es": "¡Qué alivio! Qué buena noticia." },
+        { "text": "Thank goodness. I was really worried for them.", "es": "Menos mal. Estaba muy preocupado por ellos." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«great news» sin «a». Preocupado por alguien = «worried about», no «for».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-news.qa.arrested",
+      "question": "Did you hear that the CEO got arrested?",
+      "questionEs": "¿Te has enterado de que han detenido al director general?",
+      "accepted": [
+        { "text": "No way! I can't believe it.", "es": "¡No puede ser! No me lo puedo creer." },
+        { "text": "Honestly, it doesn't surprise me at all.", "es": "Sinceramente, no me sorprende en absoluto." }
+      ],
+      "distractors": [
+        { "text": "No way! I can't believe.", "es": "¡No puede ser! No me lo puedo creer." },
+        { "text": "Honestly, it doesn't surprise me nothing.", "es": "Sinceramente, no me sorprende nada." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«believe» necesita su objeto: «believe it». En inglés no hay doble negación: «doesn't… at all» o «doesn't… anything».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-news.qa.new-law",
+      "question": "What's your take on the new housing law?",
+      "questionEs": "¿Qué opinas de la nueva ley de vivienda?",
+      "accepted": [
+        { "text": "It remains to be seen whether it'll actually work.", "es": "Está por ver si realmente funcionará." },
+        { "text": "I think it's a step in the right direction.", "es": "Creo que es un paso en la buena dirección." }
+      ],
+      "distractors": [
+        { "text": "It rests to be seen whether it'll actually work.", "es": "Queda por ver si realmente funcionará." },
+        { "text": "I think it's a step in the correct direction.", "es": "Creo que es un paso en la dirección correcta." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«Queda por ver» = «It remains to be seen». La expresión fija es «a step in the right direction».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-news.qa.politics",
+      "question": "Do you follow politics much?",
+      "questionEs": "¿Sigues mucho la política?",
+      "accepted": [
+        { "text": "Not really. I try not to follow it too closely.", "es": "La verdad es que no. Intento no seguirla demasiado de cerca." },
+        { "text": "Yeah, I try to keep up with the local news.", "es": "Sí, intento estar al día de las noticias locales." }
+      ],
+      "distractors": [
+        { "text": "Not really. I try to not follow it too close.", "es": "La verdad es que no. Intento no seguirla demasiado de cerca." },
+        { "text": "Yeah, I try to keep me informed of the local news.", "es": "Sí, intento mantenerme informado de las noticias locales." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«try not to» y el adverbio «closely». «keep up with» = estar al día de; mantenerse informado = «keep myself informed», no «keep me».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-news.qa.where-news",
+      "question": "Where do you usually get your news?",
+      "questionEs": "¿Por dónde te sueles informar?",
+      "accepted": [
+        { "text": "I get most of my news from podcasts.", "es": "Casi todas las noticias me llegan por pódcast." },
+        { "text": "I read a couple of newspapers online.", "es": "Leo un par de periódicos en internet." }
+      ],
+      "distractors": [
+        { "text": "I get most of my news of podcasts.", "es": "Casi todas las noticias me llegan por pódcast." },
+        { "text": "I read a couple of news online.", "es": "Leo un par de noticias en internet." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«get news from…», con «from». «news» no se cuenta: «a couple of stories» o «a couple of newspapers».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-news.qa.coffee",
+      "question": "Look, this website says coffee cures the flu!",
+      "questionEs": "¡Mira, esta web dice que el café cura la gripe!",
+      "accepted": [
+        { "text": "I'd take that with a grain of salt.", "es": "Yo me lo tomaría con pinzas." },
+        { "text": "Where did you read that? Check the source first.", "es": "¿Dónde lo has leído? Comprueba primero la fuente." }
+      ],
+      "distractors": [
+        { "text": "I'd take that with tweezers.", "es": "Yo me lo tomaría con pinzas." },
+        { "text": "Where did you read that? Check the font first.", "es": "¿Dónde lo has leído? Comprueba primero la fuente." }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "«con pinzas» = «with a grain of salt»; «tweezers» es la traducción literal y no se entiende. La fuente de una noticia es «the source».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-news.qa.this-week",
+      "question": "So, what's been in the news this week?",
+      "questionEs": "Bueno, ¿qué ha salido en las noticias esta semana?",
+      "accepted": [
+        { "text": "Mostly the election. The polls are really close.", "es": "Sobre todo las elecciones. Las encuestas están muy reñidas." },
+        { "text": "The storm. It caused a lot of damage downtown.", "es": "La tormenta. Causó muchos daños en el centro." }
+      ],
+      "distractors": [
+        { "text": "Mostly the election. The surveys are really tight.", "es": "Sobre todo las elecciones. Las encuestas están muy ajustadas." },
+        { "text": "The storm. It caused a lot of damages downtown.", "es": "La tormenta. Causó muchos daños en el centro." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "Encuestas electorales = «polls», reñidas = «close». «damage» (daños) es incontable: sin «-s».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-news.qa.strike",
+      "question": "Why are you working from home today?",
+      "questionEs": "¿Por qué teletrabajas hoy?",
+      "accepted": [
+        { "text": "The train drivers are on strike until Friday.", "es": "Los maquinistas están de huelga hasta el viernes." },
+        { "text": "There's a strike, so the trains aren't running.", "es": "Hay huelga, así que no hay trenes." }
+      ],
+      "distractors": [
+        { "text": "The train drivers are in strike until Friday.", "es": "Los maquinistas están de huelga hasta el viernes." },
+        { "text": "There's a strike, so the trains don't circulate.", "es": "Hay huelga, así que los trenes no circulan." }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«be on strike», con «on». Los trenes «run» (circulan, funcionan); «circulate» no se usa así.",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

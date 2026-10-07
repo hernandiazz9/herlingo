@@ -1,0 +1,83 @@
+{
+  "id": "story.en-b2-twenty-three-comments",
+  "order": 202,
+  "title": "Twenty-three comments",
+  "titleEs": "Veintitrés comentarios",
+  "description": "Sam llena de comentarios el pull request de Pablo, y Pablo tiene que aprender a defender su código sin ponerse a la defensiva.",
+  "emoji": "💻",
+  "situation": "tecnologia",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "On Thursday, Pablo opens a pull request for the booking page.", "es": "El jueves, Pablo abre un pull request para la página de reservas." },
+    { "id": "s2", "text": "An hour later, Sam has left twenty-three comments.", "es": "Una hora después, Sam ha dejado veintitrés comentarios." },
+    { "id": "s3", "text": "Pablo reads them on the train home and feels his face get hot.", "es": "Pablo los lee en el tren de vuelta a casa y nota cómo se le calienta la cara." },
+    { "id": "s4", "text": "Most of them are fair: an edge case he forgot, a variable with a bad name.", "es": "La mayoría son justos: un caso límite que se le olvidó, una variable con un mal nombre." },
+    { "id": "s5", "text": "«What happens if the list is empty?»", "es": "«¿Qué pasa si la lista está vacía?»", "voice": "en-US-BrianNeural" },
+    { "id": "s6", "text": "«Good catch! I'll fix it right away.»", "es": "«¡Bien visto! Lo arreglo ahora mismo.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "But one comment really bothers him.", "es": "Pero hay un comentario que le molesta de verdad." },
+    { "id": "s8", "text": "«This function is doing too much. Could you split it up?»", "es": "«Esta función hace demasiadas cosas. ¿Podrías dividirla?»", "voice": "en-US-BrianNeural" },
+    { "id": "s9", "text": "Pablo thinks the function is fine, so he pushes back.", "es": "Pablo cree que la función está bien, así que no da su brazo a torcer." },
+    { "id": "s10", "text": "«I see your point, but I did it this way on purpose.»", "es": "«Entiendo lo que dices, pero lo hice así a propósito.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "«I'm not sure I agree. Could we discuss it on a call?»", "es": "«No sé si estoy de acuerdo. ¿Lo hablamos en una llamada?»", "voice": "en-US-BrianNeural" },
+    { "id": "s12", "text": "On the call, Pablo explains his reasoning, and Sam listens carefully.", "es": "En la llamada, Pablo explica su razonamiento, y Sam escucha con atención." },
+    { "id": "s13", "text": "In the end, they decide to leave it for a follow-up pull request.", "es": "Al final, deciden dejarlo para otro pull request más adelante." },
+    { "id": "s14", "text": "«I've addressed all your comments.»", "es": "«He resuelto todos tus comentarios.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s15", "text": "«Looks good to me. Approved!»", "es": "«Por mi parte, bien. ¡Aprobado!»", "voice": "en-US-BrianNeural" },
+    { "id": "s16", "text": "Pablo merges it before dinner and finally relaxes.", "es": "Pablo lo fusiona antes de cenar y por fin se relaja." }
+  ],
+  "keywords": [
+    "b2-tech-talk.pull-request",
+    "b2-tech-talk.edge-case",
+    "b2-tech-talk.what-happens-if-the-list-is-empty",
+    "b2-tech-talk.good-catch",
+    "b2-tech-talk.this-function-is-doing-too-much",
+    "b2-tech-talk.push-back",
+    "b2-tech-talk.i-did-it-this-way-on-purpose",
+    "b2-tech-talk.reasoning",
+    "b2-tech-talk.ive-addressed-all-your-comments",
+    "b2-tech-talk.looks-good-to-me"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "How does Pablo feel when he first reads the comments?",
+      "es": "¿Cómo se siente Pablo cuando lee los comentarios por primera vez?",
+      "options": [
+        { "text": "Bored.", "es": "Aburrido." },
+        { "text": "Upset and embarrassed.", "es": "Molesto y avergonzado." },
+        { "text": "Proud of his work.", "es": "Orgulloso de su trabajo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Which comment does Pablo disagree with?",
+      "es": "¿Con qué comentario no está de acuerdo Pablo?",
+      "options": [
+        { "text": "That a function is doing too much.", "es": "Que una función hace demasiadas cosas." },
+        { "text": "That the list could be empty.", "es": "Que la lista podría estar vacía." },
+        { "text": "That a variable has a bad name.", "es": "Que una variable tiene un mal nombre." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "How do Pablo and Sam solve the disagreement?",
+      "es": "¿Cómo resuelven Pablo y Sam el desacuerdo?",
+      "options": [
+        { "text": "Maya makes the decision for them.", "es": "Maya decide por ellos." },
+        { "text": "They argue in the comments all night.", "es": "Discuten en los comentarios toda la noche." },
+        { "text": "They talk on a call and leave it for later.", "es": "Lo hablan en una llamada y lo dejan para más adelante." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "b2-tech-talk.pull-request", "distractors": ["bank account", "window seat"] },
+    { "id": "g2", "sentence": "s6", "answer": "b2-tech-talk.good-catch", "gap": "catch", "distractors": ["luck", "night"] },
+    { "id": "g3", "sentence": "s8", "answer": "b2-tech-talk.this-function-is-doing-too-much", "gap": "split it up", "distractors": ["give it up", "look it up"] },
+    { "id": "g4", "sentence": "s9", "answer": "b2-tech-talk.push-back", "gap": "pushes back", "distractors": ["backs up", "takes off"] },
+    { "id": "g5", "sentence": "s10", "answer": "b2-tech-talk.i-did-it-this-way-on-purpose", "gap": "on purpose", "distractors": ["in purpose", "for purpose"] },
+    { "id": "g6", "sentence": "s12", "answer": "b2-tech-talk.reasoning", "distractors": ["holidays", "feelings"] }
+  ]
+}

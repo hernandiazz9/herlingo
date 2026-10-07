@@ -1,0 +1,82 @@
+{
+  "id": "story.en-b2-agree-to-disagree",
+  "order": 203,
+  "title": "Agree to disagree",
+  "titleEs": "Cada uno con su opinión",
+  "description": "Una cena en casa de Mrs. Carter acaba en debate sobre el teletrabajo, y nadie cambia de opinión.",
+  "emoji": "💬",
+  "situation": "opiniones",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "On Saturday, Mrs. Carter invites everyone for dinner at her apartment.", "es": "El sábado, Mrs. Carter invita a todos a cenar a su piso." },
+    { "id": "s2", "text": "Over dessert, Jordan reads out a headline: companies want workers back in the office.", "es": "Con el postre, Jordan lee en voz alta un titular: las empresas quieren a los trabajadores de vuelta en la oficina." },
+    { "id": "s3", "text": "«As far as I'm concerned, remote work is here to stay.»", "es": "«Por lo que a mí respecta, el teletrabajo ha venido para quedarse.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s4", "text": "Maya works from home three days a week, and she loves it.", "es": "Maya trabaja desde casa tres días a la semana, y le encanta." },
+    { "id": "s5", "text": "Pablo isn't so sure.", "es": "Pablo no lo tiene tan claro." },
+    { "id": "s6", "text": "«I see it a bit differently. I learn more when I'm with the team.»", "es": "«Yo lo veo un poco distinto. Aprendo más cuando estoy con el equipo.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "«You've got a point there. But think about the commute!»", "es": "«En eso tienes razón. ¡Pero piensa en el trayecto!»", "voice": "en-US-BrianNeural" },
+    { "id": "s8", "text": "Then Mrs. Carter, who taught for forty years, joins the debate.", "es": "Entonces Mrs. Carter, que fue profesora durante cuarenta años, se une al debate." },
+    { "id": "s9", "text": "«If you ask me, young people spend too much time alone with screens.»", "es": "«Si me preguntáis, los jóvenes pasan demasiado tiempo solos con pantallas.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "«I agree with you up to a point.»", "es": "«Estoy de acuerdo contigo hasta cierto punto.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "The discussion goes on until midnight, and nobody changes their mind.", "es": "La discusión sigue hasta medianoche, y nadie cambia de opinión." },
+    { "id": "s12", "text": "Finally, Maya raises her glass with a smile.", "es": "Al final, Maya levanta su copa con una sonrisa." },
+    { "id": "s13", "text": "«Let's just agree to disagree.»", "es": "«Mejor dejémoslo en que cada uno tiene su opinión.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s14", "text": "«Fair enough. Is there any more pie?»", "es": "«Me parece bien. ¿Queda tarta?»", "voice": "en-US-BrianNeural" },
+    { "id": "s15", "text": "At the end of the day, they all love a good argument.", "es": "Al fin y al cabo, a todos les encanta una buena discusión." }
+  ],
+  "keywords": [
+    "b2-opinions.as-far-as-im-concerned",
+    "b2-opinions.i-see-it-a-bit-differently",
+    "b2-opinions.youve-got-a-point-there",
+    "b2-opinions.debate",
+    "b2-opinions.if-you-ask-me",
+    "b2-opinions.i-agree-up-to-a-point",
+    "b2-opinions.lets-agree-to-disagree",
+    "b2-opinions.fair-enough",
+    "b2-opinions.at-the-end-of-the-day",
+    "b2-opinions.argument"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What starts the discussion?",
+      "es": "¿Qué da comienzo a la discusión?",
+      "options": [
+        { "text": "A headline about working in the office.", "es": "Un titular sobre trabajar en la oficina." },
+        { "text": "A movie they saw together.", "es": "Una película que vieron juntos." },
+        { "text": "Mrs. Carter's new phone.", "es": "El móvil nuevo de Mrs. Carter." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Why does Pablo prefer the office?",
+      "es": "¿Por qué prefiere Pablo la oficina?",
+      "options": [
+        { "text": "His apartment is too small.", "es": "Su piso es demasiado pequeño." },
+        { "text": "He learns more with the team.", "es": "Aprende más con el equipo." },
+        { "text": "The commute is short.", "es": "El trayecto es corto." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "How does the discussion end?",
+      "es": "¿Cómo termina la discusión?",
+      "options": [
+        { "text": "Maya changes her mind.", "es": "Maya cambia de opinión." },
+        { "text": "Jordan leaves angry.", "es": "Jordan se va enfadado." },
+        { "text": "Nobody changes their mind.", "es": "Nadie cambia de opinión." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "b2-opinions.as-far-as-im-concerned", "gap": "concerned", "distractors": ["worried", "interested"] },
+    { "id": "g2", "sentence": "s7", "answer": "b2-opinions.youve-got-a-point-there", "gap": "point", "distractors": ["reason", "right"] },
+    { "id": "g3", "sentence": "s8", "answer": "b2-opinions.debate", "distractors": ["traffic", "weather"] },
+    { "id": "g4", "sentence": "s10", "answer": "b2-opinions.i-agree-up-to-a-point", "gap": "up to a point", "distractors": ["until a point", "in a point"] },
+    { "id": "g5", "sentence": "s13", "answer": "b2-opinions.lets-agree-to-disagree", "gap": "disagree", "distractors": ["unagree", "misagree"] },
+    { "id": "g6", "sentence": "s15", "answer": "b2-opinions.argument", "distractors": ["headache", "traffic jam"] }
+  ]
+}

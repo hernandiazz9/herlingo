@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-sprint-planning",
+  "title": "Planificación del sprint",
+  "description": "En la planificación del sprint propones prioridades, estimas tareas y avisas de un riesgo.",
+  "situation": "trabajo",
+  "unit": "b2-meetings",
+  "order": 201,
+  "register": "neutral",
+  "level": "B2",
+  "avatars": { "Jefa de producto": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Jefa de producto", "text": "Okay, let's plan the next sprint. We've got more tickets than we can handle, so we need to prioritize.", "es": "Bien, planifiquemos el próximo sprint. Tenemos más tareas de las que podemos asumir, así que hay que priorizar.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Propón empezar por el error del pago, porque afecta a los clientes, y dejar el modo oscuro para más adelante.",
+      "options": [
+        { "text": "I'd suggest we start with the payment bug, since it affects customers, and leave dark mode for later.", "es": "Propondría empezar por el error del pago, ya que afecta a los clientes, y dejar el modo oscuro para más adelante.", "verdict": "correct", "feedback": "¡Muy bien! «I'd suggest we…» propone sin imponer, y «since» da el motivo." },
+        { "text": "The payment bug first. Dark mode later.", "es": "Primero el error del pago. El modo oscuro, después.", "verdict": "acceptable", "feedback": "Se entiende, pero suena seco y no explica por qué; en una reunión conviene justificarlo." },
+        { "text": "I suggest to start with the payment bug, because it affects to the customers.", "es": "Propongo empezar por el error del pago, porque afecta a los clientes.", "verdict": "wrong", "feedback": "«suggest» no va con «to + infinitivo» («I suggest we start» o «I suggest starting»), y «affect» no lleva «to»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Jefa de producto", "text": "Makes sense. How long do you think the payment fix will take?", "es": "Tiene sentido. ¿Cuánto crees que llevará arreglar el pago?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Estima unos tres días, pero di que depende de lo que encuentres en el código antiguo.",
+      "options": [
+        { "text": "Roughly three days, but it depends on what I find in the old code.", "es": "Unos tres días, aunque depende de lo que encuentre en el código antiguo.", "verdict": "correct", "feedback": "¡Perfecto! «Roughly» = aproximadamente; «it depends on» siempre con «on»." },
+        { "text": "Three days, maybe more.", "es": "Tres días, quizá más.", "verdict": "acceptable", "feedback": "Correcto, pero no explica de qué depende la estimación." },
+        { "text": "More or less three days, but it depends of what I find in the old code.", "es": "Más o menos tres días, pero depende de lo que encuentre en el código antiguo.", "verdict": "wrong", "feedback": "En inglés es «depend on», no «depend of» (calco de «depender de»)." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Jefa de producto", "text": "Fine. Can we also squeeze in the new onboarding screens?", "es": "Vale. ¿Podemos meter también las nuevas pantallas de bienvenida?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Avisa con tacto de que, si añadís más, os arriesgáis a no terminar nada a tiempo.",
+      "options": [
+        { "text": "I'm a bit worried that if we take on more, we risk not finishing anything on time.", "es": "Me preocupa un poco que, si asumimos más, nos arriesguemos a no terminar nada a tiempo.", "verdict": "correct", "feedback": "¡Genial! «take on» = asumir trabajo; «risk + -ing» expresa el riesgo con tacto." },
+        { "text": "I don't think we have time for that.", "es": "No creo que tengamos tiempo para eso.", "verdict": "acceptable", "feedback": "Es educado, pero no explica la consecuencia; el riesgo convence más." },
+        { "text": "If we take on more, we risk to not finish nothing on time.", "es": "Si asumimos más, nos arriesgamos a no terminar nada a tiempo.", "verdict": "wrong", "feedback": "«risk» va con «-ing» («risk not finishing») y en inglés no hay doble negación: «anything», no «nothing»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Jefa de producto", "text": "Fair point. So what do we do with the onboarding screens?", "es": "Buena observación. ¿Y qué hacemos con las pantallas de bienvenida?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Propón dejarlas para el siguiente sprint y resume: este sprint, el error del pago y las pruebas.",
+      "options": [
+        { "text": "Let's push them to the next sprint. So, to sum up: this sprint is the payment bug and the tests.", "es": "Pasémoslas al siguiente sprint. Entonces, resumiendo: este sprint, el error del pago y las pruebas.", "verdict": "correct", "feedback": "¡Muy bien! «push to» = aplazar; «to sum up» cierra la reunión resumiendo." },
+        { "text": "Next sprint, maybe. This sprint is the payment bug and the tests.", "es": "El siguiente sprint, quizá. Este sprint, el error del pago y las pruebas.", "verdict": "acceptable", "feedback": "Se entiende; «Let's push them to…» lo propone con más claridad." },
+        { "text": "Let's leave them for the next sprint. Resuming: this sprint is the payment bug and the tests.", "es": "Dejémoslas para el siguiente sprint. Resumiendo: este sprint, el error del pago y las pruebas.", "verdict": "wrong", "feedback": "«resume» es reanudar, no resumir (falso amigo); usa «to sum up» o «to summarize»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Jefa de producto", "text": "Sounds like a plan. I'll update the board and send everyone a summary.", "es": "Me parece un buen plan. Actualizo el tablero y os mando un resumen a todos.", "voice": "en-US-AvaNeural" }
+  ]
+}

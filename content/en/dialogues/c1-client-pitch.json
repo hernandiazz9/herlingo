@@ -1,0 +1,47 @@
+{
+  "id": "dlg.en-c1-client-pitch",
+  "title": "Presentar una propuesta a un cliente",
+  "description": "Le presentas tu propuesta a un posible cliente que duda del precio; destacas el valor y respondes a sus objeciones.",
+  "situation": "trabajo",
+  "unit": "c1-presenting",
+  "order": 305,
+  "register": "formal",
+  "level": "C1",
+  "avatars": { "Cliente": "fluent:man-in-tuxedo" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Cliente", "text": "Thanks for coming in. So, in a nutshell, why should we choose you over the bigger agencies?", "es": "Gracias por venir. Entonces, en pocas palabras, ¿por qué deberíamos elegirles a ustedes en vez de a las agencias grandes?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que sois un equipo pequeño, así que trabajaría directamente con los desarrolladores, sin intermediarios.",
+      "options": [
+        { "text": "Because we're a small team, you'd be working directly with the developers, with no middlemen.", "es": "Porque somos un equipo pequeño, trabajaría directamente con los desarrolladores, sin intermediarios.", "verdict": "correct", "feedback": "¡Muy bien! Conviertes el tamaño en ventaja; «middlemen» = intermediarios." },
+        { "text": "We're small and we work hard.", "es": "Somos pequeños y trabajamos mucho.", "verdict": "acceptable", "feedback": "Se entiende, pero no dice qué gana el cliente; vende el beneficio concreto." },
+        { "text": "Because we're a small team, you would work directly with the developers, without intermediates.", "es": "Porque somos un equipo pequeño, trabajaría directamente con los desarrolladores, sin intermediarios.", "verdict": "wrong", "feedback": "«Intermediarios» es «middlemen» o «intermediaries»; «intermediates» es nivel intermedio." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Cliente", "text": "That's appealing. But your quote is about twenty percent higher than what we'd budgeted.", "es": "Es atractivo. Pero su presupuesto es un veinte por ciento más alto de lo que teníamos previsto.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Reconoce la diferencia y explica que el precio incluye un año de mantenimiento, que otros cobran aparte.",
+      "options": [
+        { "text": "I understand. Bear in mind, though, that the price includes a year of maintenance, which most agencies charge separately.", "es": "Lo entiendo. Pero tenga en cuenta que el precio incluye un año de mantenimiento, que la mayoría de agencias cobra aparte.", "verdict": "correct", "feedback": "¡Perfecto! «Bear in mind» = tenga en cuenta; replanteas el precio como valor, sin bajarlo." },
+        { "text": "We can't lower the price.", "es": "No podemos bajar el precio.", "verdict": "acceptable", "feedback": "Es honesto, pero cierra la conversación; explica qué incluye el precio." },
+        { "text": "I understand. Have in mind, though, that the price includes a year of maintenance, which most agencies charge apart.", "es": "Lo entiendo. Pero tenga en cuenta que el precio incluye un año de mantenimiento, que la mayoría de agencias cobra aparte.", "verdict": "wrong", "feedback": "Es «bear in mind» o «keep in mind», no «have in mind»; y «cobrar aparte» es «charge separately»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Cliente", "text": "Okay, that changes things. What would the timeline look like?", "es": "Vale, eso cambia las cosas. ¿Cómo serían los plazos?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que una primera versión estaría lista en ocho semanas y propón una prueba piloto para que lo comprueben sin riesgo.",
+      "options": [
+        { "text": "A first version would be ready in eight weeks. We could also start with a pilot, so you can see results without any risk.", "es": "Una primera versión estaría lista en ocho semanas. También podríamos empezar con un piloto, para que vean resultados sin ningún riesgo.", "verdict": "correct", "feedback": "¡Genial! Das un plazo concreto y el piloto reduce el riesgo percibido del cliente." },
+        { "text": "About two months.", "es": "Unos dos meses.", "verdict": "acceptable", "feedback": "Correcto, pero pierdes la ocasión de proponer algo que facilite el «sí»." },
+        { "text": "A first version would be ready in eight weeks. We could also start with a pilot, so you can see results without no risk.", "es": "Una primera versión estaría lista en ocho semanas. También podríamos empezar con un piloto, para que vean resultados sin ningún riesgo.", "verdict": "wrong", "feedback": "En inglés no hay doble negación: «without any risk», no «without no risk»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Cliente", "text": "A pilot sounds sensible. Send me a short proposal and I'll run it by my team.", "es": "Un piloto parece sensato. Envíeme una propuesta breve y se la comentaré a mi equipo.", "voice": "en-US-BrianNeural" }
+  ]
+}

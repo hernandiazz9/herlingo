@@ -1,0 +1,57 @@
+{
+  "id": "dlg.en-c1-networking",
+  "title": "Networking en un evento",
+  "description": "En un evento del sector te acercas a una desconocida, rompes el hielo, te presentas con soltura y te despides dejando la puerta abierta.",
+  "situation": "social",
+  "unit": "c1-networking",
+  "order": 306,
+  "register": "neutral",
+  "level": "C1",
+  "avatars": { "Ingeniera": "fluent:woman-curly-hair" },
+  "turns": [
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Acércate a una desconocida y rompe el hielo comentando la charla de apertura.",
+      "options": [
+        { "text": "Hi, mind if I join you? What did you make of the opening keynote?", "es": "Hola, ¿te importa si me uno? ¿Qué te pareció la charla de apertura?", "verdict": "correct", "feedback": "¡Muy bien! «What did you make of…?» = ¿qué te pareció?, una pregunta abierta perfecta para romper el hielo." },
+        { "text": "Hello. My name is Hernán.", "es": "Hola. Me llamo Hernán.", "verdict": "acceptable", "feedback": "Correcto, pero algo rígido; un comentario sobre el evento hace la entrada más natural." },
+        { "text": "Hi, mind if I join you? What did you think about the opening keynote of today?", "es": "Hola, ¿te importa si me uno? ¿Qué te pareció la charla de apertura de hoy?", "verdict": "wrong", "feedback": "«the opening keynote of today» es un calco del español; di «today's opening keynote» o simplemente «the opening keynote»." }
+      ]
+    },
+    { "id": "n1", "speaker": "native", "name": "Ingeniera", "text": "Honestly, it was a bit too salesy for my taste. I'm Dana, by the way. I work on data infrastructure at a fintech.", "es": "Sinceramente, demasiado comercial para mi gusto. Soy Dana, por cierto. Trabajo en infraestructura de datos en una fintech.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Preséntate: eres desarrollador, llevas ocho años en el sector y ahora te centras en apps que funcionan sin conexión.",
+      "options": [
+        { "text": "Nice to meet you, Dana. I'm Hernán, a developer. I've been in the industry for eight years, and lately I've been focusing on offline-first apps.", "es": "Encantado, Dana. Soy Hernán, desarrollador. Llevo ocho años en el sector y últimamente me centro en apps que funcionan sin conexión.", "verdict": "correct", "feedback": "¡Perfecto! «I've been… for eight years» = llevo ocho años; la presentación es breve y deja un tema para seguir hablando." },
+        { "text": "I'm Hernán. I'm a developer.", "es": "Soy Hernán. Soy desarrollador.", "verdict": "acceptable", "feedback": "Correcto, pero no da pie a seguir la conversación; añade algo concreto de lo que haces." },
+        { "text": "Nice to meet you, Dana. I'm Hernán, a developer. I'm in the industry since eight years, and lately I'm focusing on offline-first apps.", "es": "Encantado, Dana. Soy Hernán, desarrollador. Llevo ocho años en el sector y últimamente me centro en apps que funcionan sin conexión.", "verdict": "wrong", "feedback": "«Llevo ocho años» es «I've been… for eight years»: present perfect y «for» con duraciones («since» va con un punto de inicio)." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Ingeniera", "text": "Oh, interesting! We've been struggling with sync on our mobile app for months.", "es": "¡Anda, qué interesante! Llevamos meses peleándonos con la sincronización de nuestra app móvil.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que es justo tu terreno y ofrécete a compartir lo que habéis aprendido sin sonar a vendedor.",
+      "options": [
+        { "text": "That's right up my alley. Happy to share what's worked for us, no strings attached.", "es": "Eso es justo lo mío. Encantado de contarte lo que nos ha funcionado, sin compromiso.", "verdict": "correct", "feedback": "¡Genial! «right up my alley» = justo lo mío; «no strings attached» = sin compromiso, así no suena a venta." },
+        { "text": "I can help you with that.", "es": "Te puedo ayudar con eso.", "verdict": "acceptable", "feedback": "Es amable, pero puede sonar a que vendes algo; aclara que es sin compromiso." },
+        { "text": "That's right up my street. Happy to share what's worked for us, without strings.", "es": "Eso es justo lo mío. Encantado de contarte lo que nos ha funcionado, sin compromiso.", "verdict": "wrong", "feedback": "En EE. UU. se dice «right up my alley» («up my street» es británico) y la expresión fija es «no strings attached»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Ingeniera", "text": "I'd love that. I have to run to the next session, though.", "es": "Me encantaría. Aunque tengo que irme corriendo a la siguiente sesión.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Proponle conectar en LinkedIn y tomar un café la semana que viene.",
+      "options": [
+        { "text": "No worries. Why don't we connect on LinkedIn and grab a coffee sometime next week?", "es": "No te preocupes. ¿Por qué no conectamos en LinkedIn y tomamos un café la semana que viene?", "verdict": "correct", "feedback": "¡Muy bien! «grab a coffee» es informal y cercano; cierras con un siguiente paso concreto." },
+        { "text": "Okay, bye. Nice to meet you.", "es": "Vale, adiós. Encantado.", "verdict": "acceptable", "feedback": "Correcto, pero pierdes el contacto; propón una forma de seguir en contacto." },
+        { "text": "No worries. Why don't we connect in LinkedIn and take a coffee sometime next week?", "es": "No te preocupes. ¿Por qué no conectamos en LinkedIn y tomamos un café la semana que viene?", "verdict": "wrong", "feedback": "Es «connect on LinkedIn» (on con plataformas) y «grab» o «get a coffee»; «take a coffee» es calco del español." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Ingeniera", "text": "Perfect. I'll look you up. Great meeting you, Hernán!", "es": "Perfecto. Te busco. ¡Un placer conocerte, Hernán!", "voice": "en-US-EmmaNeural" }
+  ]
+}

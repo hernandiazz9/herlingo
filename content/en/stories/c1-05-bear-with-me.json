@@ -1,0 +1,97 @@
+{
+  "id": "story.en-c1-bear-with-me",
+  "order": 305,
+  "title": "Bear with me",
+  "titleEs": "Un segundito, por favor",
+  "description": "Llega el gran día: Pablo da su charla en el congreso. La demo se resiste, las preguntas aprietan y al final alguien se le acerca con una tarjeta.",
+  "emoji": "🎤",
+  "situation": "trabajo",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "The conference room is packed, and Pablo's hands are shaking.", "es": "La sala del congreso está a reventar y a Pablo le tiemblan las manos." },
+    { "id": "s2", "text": "«Good morning, everyone, and thanks so much for having me.»", "es": "«Buenos días a todos, y muchísimas gracias por invitarme.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s3", "text": "He opens with the story, and people laugh in all the right places.", "es": "Empieza con la historia, y la gente se ríe justo donde tiene que reírse." },
+    { "id": "s4", "text": "Then, of course, the demo refuses to load.", "es": "Entonces, cómo no, la demo se niega a cargar." },
+    { "id": "s5", "text": "«Bear with me a second while the page loads.»", "es": "«Dadme un segundo mientras carga la página.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«Let's hope the demo gods are on our side today.»", "es": "«Esperemos que hoy los dioses de las demos estén de nuestra parte.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "A few people laugh, and finally the page appears.", "es": "Algunos se ríen y, por fin, aparece la página." },
+    { "id": "s8", "text": "«As you can see on this chart, sign-ups doubled after the redesign.»", "es": "«Como veis en este gráfico, los registros se duplicaron tras el rediseño.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "«If you take one thing away from this talk, let it be this: test early.»", "es": "«Si os quedáis con una sola idea de esta charla, que sea esta: probad pronto.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "When he finishes, a man in the front row raises his hand.", "es": "Cuando termina, un hombre de la primera fila levanta la mano." },
+    { "id": "s11", "text": "«What was the exact cost of the migration?»", "es": "«¿Cuál fue el coste exacto de la migración?»", "voice": "en-US-BrianNeural" },
+    { "id": "s12", "text": "«That's a great question. I don't have the exact figures on hand.»", "es": "«Muy buena pregunta. No tengo las cifras exactas a mano.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s13", "text": "«But I'm happy to follow up by email after the talk.»", "es": "«Pero te lo envío encantado por correo después de la charla.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "Next, a woman asks him about the new AI rules in Europe.", "es": "Después, una mujer le pregunta por las nuevas normas sobre IA en Europa." },
+    { "id": "s15", "text": "«That's slightly outside the scope of this talk, but let's chat afterwards.»", "es": "«Eso se sale un poco del tema de esta charla, pero lo hablamos luego.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s16", "text": "At the back of the room, his three friends are clapping loudly.", "es": "Al fondo de la sala, sus tres amigos aplauden con fuerza." },
+    { "id": "s17", "text": "Afterwards, Mrs. Carter gives him a big hug.", "es": "Después, Mrs. Carter le da un abrazo enorme." },
+    { "id": "s18", "text": "«You were wonderful, dear. I didn't see a single butterfly.»", "es": "«Has estado maravilloso, cielo. No he visto ni una mariposa.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s19", "text": "Then a woman Pablo doesn't know walks over with a business card.", "es": "Entonces se le acerca una mujer a la que no conoce, con una tarjeta de visita en la mano." }
+  ],
+  "keywords": [
+    "c1-presenting.good-morning-everyone",
+    "c1-presenting.demo",
+    "c1-presenting.bear-with-me",
+    "c1-presenting.lets-hope-the-demo-gods",
+    "c1-presenting.chart",
+    "c1-presenting.if-you-take-one-thing-away",
+    "c1-presenting.thats-a-great-question",
+    "c1-presenting.i-dont-have-the-figures-on-hand",
+    "c1-presenting.thats-slightly-outside-the-scope",
+    "c1-networking.business-card"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What goes wrong during the talk?",
+      "es": "¿Qué sale mal durante la charla?",
+      "options": [
+        { "text": "Nobody laughs at his story.", "es": "Nadie se ríe con su historia." },
+        { "text": "The demo takes a while to load.", "es": "La demo tarda en cargar." },
+        { "text": "The microphone stops working.", "es": "El micrófono deja de funcionar." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What is the main idea Pablo wants people to remember?",
+      "es": "¿Cuál es la idea principal que Pablo quiere que recuerde la gente?",
+      "options": [
+        { "text": "Test early.", "es": "Probar pronto." },
+        { "text": "Never redesign a website.", "es": "No rediseñar nunca una web." },
+        { "text": "Always trust the demo gods.", "es": "Confiar siempre en los dioses de las demos." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "How does Pablo answer the question about the cost?",
+      "es": "¿Cómo responde Pablo a la pregunta sobre el coste?",
+      "options": [
+        { "text": "He guesses a number.", "es": "Se inventa una cifra." },
+        { "text": "He refuses to answer.", "es": "Se niega a responder." },
+        { "text": "He offers to send the figures by email.", "es": "Se ofrece a enviar las cifras por correo." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Why doesn't Pablo answer the question about AI rules?",
+      "es": "¿Por qué no responde Pablo a la pregunta sobre las normas de IA?",
+      "options": [
+        { "text": "It isn't really what his talk is about.", "es": "No tiene mucho que ver con su charla." },
+        { "text": "He has run out of time.", "es": "Se ha quedado sin tiempo." },
+        { "text": "He didn't hear the question.", "es": "No ha oído la pregunta." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s5", "answer": "c1-presenting.bear-with-me", "gap": "Bear with me", "distractors": ["Bare with me", "Support me"] },
+    { "id": "g2", "sentence": "s8", "answer": "c1-presenting.chart", "gap": "chart", "distractors": ["graphic", "grafic"] },
+    { "id": "g3", "sentence": "s9", "answer": "c1-presenting.if-you-take-one-thing-away", "gap": "take one thing away", "distractors": ["take one thing out", "bring one thing away"] },
+    { "id": "g4", "sentence": "s12", "answer": "c1-presenting.i-dont-have-the-figures-on-hand", "gap": "on hand", "distractors": ["at hand of", "on the hand"] },
+    { "id": "g5", "sentence": "s15", "answer": "c1-presenting.thats-slightly-outside-the-scope", "gap": "outside the scope", "distractors": ["out of the scoop", "outside the reach"] },
+    { "id": "g6", "sentence": "s19", "answer": "c1-networking.business-card", "gap": "business card", "distractors": ["visit card", "presentation card"] }
+  ]
+}

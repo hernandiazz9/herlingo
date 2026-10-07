@@ -7,7 +7,7 @@ const tab = getTab("path");
 export default function PathPage() {
   return (
     <>
-      <PageHeader title={tab.title} subtitle="Lecciones cortas, de unos 5 minutos, por situaciones del viaje." />
+      <PageHeader title={tab.title} subtitle="Lecciones cortas, de unos 5 minutos, por situaciones." />
       <PathView />
     </>
   );

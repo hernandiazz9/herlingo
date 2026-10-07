@@ -124,7 +124,7 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
         </p>
         <h1 className="text-3xl font-extrabold tracking-tight text-ink">¡Hola! Vamos a por el {pack.meta.name.toLowerCase()}</h1>
         <p className="text-lg text-ink">
-          Lecciones de unos 5 minutos por situaciones del viaje, repaso de lo que fallas y un frasario para usar en la
+          Lecciones cortas, de unos 5 minutos, por situaciones. Repaso de lo que fallas y un frasario para usar en la
           calle.
         </p>
         {questions.length ? (

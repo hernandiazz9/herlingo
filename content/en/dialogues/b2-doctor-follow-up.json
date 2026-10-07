@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-doctor-follow-up",
+  "title": "Revisión con la médica",
+  "description": "Vuelves a la consulta de tu médica de cabecera para contar cómo te ha ido el tratamiento y hablar de hábitos.",
+  "situation": "salud",
+  "unit": "b2-wellbeing",
+  "order": 204,
+  "register": "formal",
+  "level": "B2",
+  "avatars": { "Doctora": "fluent:woman-health-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Doctora", "text": "Good to see you again. How have you been feeling since your last visit?", "es": "Me alegro de verle de nuevo. ¿Cómo se ha encontrado desde la última visita?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que te encuentras mucho mejor, aunque todavía te duele la espalda por las mañanas.",
+      "options": [
+        { "text": "Much better, thanks, although my back still hurts in the mornings.", "es": "Mucho mejor, gracias, aunque todavía me duele la espalda por las mañanas.", "verdict": "correct", "feedback": "¡Muy bien! «although» introduce el contraste; «my back hurts» = me duele la espalda." },
+        { "text": "Better, but I still have some back pain.", "es": "Mejor, pero todavía tengo algo de dolor de espalda.", "verdict": "acceptable", "feedback": "Correcto; decir cuándo te duele («in the mornings») ayuda a la médica." },
+        { "text": "Much better, thanks, although it still hurts me the back in the mornings.", "es": "Mucho mejor, gracias, aunque todavía me duele la espalda por las mañanas.", "verdict": "wrong", "feedback": "En inglés la parte del cuerpo es el sujeto y lleva posesivo: «my back hurts», no «it hurts me the back»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Doctora", "text": "I see. Have you been doing the exercises I recommended?", "es": "Entiendo. ¿Ha estado haciendo los ejercicios que le recomendé?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Admite que al principio los hacías todos los días, pero que últimamente los has dejado.",
+      "options": [
+        { "text": "I was doing them every day at first, but lately I've stopped doing them.", "es": "Al principio los hacía todos los días, pero últimamente he dejado de hacerlos.", "verdict": "correct", "feedback": "¡Perfecto! «stop doing» = dejar de hacer; «lately» va con present perfect." },
+        { "text": "Not really, to be honest.", "es": "No mucho, la verdad.", "verdict": "acceptable", "feedback": "Es sincero, pero explicar lo que pasó le da más información a la médica." },
+        { "text": "I was doing them every day at first, but lately I've stopped to do them.", "es": "Al principio los hacía todos los días, pero últimamente he dejado de hacerlos.", "verdict": "wrong", "feedback": "«stop to do» es pararse para hacer algo; «dejar de hacer» es «stop doing»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Doctora", "text": "That might explain the pain. Is anything else going on? Stress, sleep?", "es": "Eso podría explicar el dolor. ¿Pasa algo más? ¿Estrés, sueño?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Cuenta que has tenido mucho estrés en el trabajo y que te cuesta dormirte.",
+      "options": [
+        { "text": "I've been under a lot of stress at work, and I'm having trouble falling asleep.", "es": "He tenido mucho estrés en el trabajo y me cuesta dormirme.", "verdict": "correct", "feedback": "¡Genial! «be under stress» es una colocación típica; «have trouble + -ing» = costar hacer algo." },
+        { "text": "Work is stressful and I don't sleep well.", "es": "El trabajo es estresante y no duermo bien.", "verdict": "acceptable", "feedback": "Se entiende; «have trouble falling asleep» es más preciso que «don't sleep well»." },
+        { "text": "I've had a lot of stress at work, and it costs me to fall asleep.", "es": "He tenido mucho estrés en el trabajo y me cuesta dormirme.", "verdict": "wrong", "feedback": "«me cuesta» no es «it costs me» (eso es de dinero); se dice «I have trouble falling asleep»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Doctora", "text": "That's very common. I'd recommend getting back to the exercises and cutting down on screens before bed.", "es": "Es muy habitual. Le recomendaría volver a los ejercicios y reducir las pantallas antes de dormir.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que lo intentarás y pregunta si deberías volver dentro de un mes.",
+      "options": [
+        { "text": "I'll give it a try. Should I come back in a month?", "es": "Lo intentaré. ¿Debería volver dentro de un mes?", "verdict": "correct", "feedback": "¡Bien! «give it a try» = intentarlo; «in a month» = dentro de un mes." },
+        { "text": "Okay. Do I need another appointment?", "es": "Vale. ¿Necesito otra cita?", "verdict": "acceptable", "feedback": "Correcto, aunque no concreta cuándo volver." },
+        { "text": "I'll give it a try. Should I return back in a month?", "es": "Lo intentaré. ¿Debería volver dentro de un mes?", "verdict": "wrong", "feedback": "«return» ya significa volver: «return back» es redundante. Di «come back» o «return»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Doctora", "text": "Yes, let's check in again in a month. If the pain gets worse, call us sooner.", "es": "Sí, nos vemos de nuevo en un mes. Si el dolor empeora, llámenos antes.", "voice": "en-US-AvaNeural" }
+  ]
+}

@@ -1,6 +1,6 @@
 # Product note — English pack (`content/en/`)
 
-Decided with Hernán on 2026-10-06 (plan 008). `docs/brief.md` still holds every app-wide decision
+Decided with Hernán on 2026-10-06 (plan 008; B2 and C1 added 2026-10-07 for plan 009). `docs/brief.md` still holds every app-wide decision
 and stays untouched; this note only says how the **English** pack differs. Every English content
 task reads both, plus docs/content-guide.md for the format.
 
@@ -10,7 +10,7 @@ task reads both, plus docs/content-guide.md for the format.
   programmer), mixed at every level and getting more demanding level by level.
 - **The pack is split by CEFR level**: A2, B1, B2, C1. The learner picks his level with a
   selector (Ruta, Perfil); Ruta shows only that level's units; the placement test suggests a level.
-  **Plan 008 builds A2 and B1**; B2 and C1 come in a later plan with the same structure (the pack
+  **Plan 008 built A2 and B1; plan 009 builds B2 and C1** with the same structure (the pack
   declares only the levels that have content).
 - Oral first, like Italian and French: audio on every item, short phrases, grammar only where it
   helps to speak.
@@ -18,8 +18,8 @@ task reads both, plus docs/content-guide.md for the format.
 ## Volume and format (per level)
 Same format as Italian and French (docs/content-guide.md) and **the full French volume per level**:
 **~420 phrases, ~320 vocabulary words, ~80 Q&A, 10 units + a grammar unit, ~50 lessons (8–30
-items each), ~10 grammar cards, 12 dialogues, 12 stories**. Placement: 12 questions for the whole
-pack (6 A2 + 6 B1 in plan 008; B2/C1 questions added with their levels).
+items each), ~10 grammar cards, 12 dialogues, 12 stories**. Placement: 16 questions for the whole
+pack, 4 per level (plan 008 shipped 6 A2 + 6 B1; plan 009 rewrites it for the four levels).
 
 ## Levels (generic schema, plan 008 T90/T91)
 - `pack.json` `levels` = the pack's CEFR levels in order (`["A2", "B1"]` for now). A pack without
@@ -63,6 +63,38 @@ pack (6 A2 + 6 B1 in plan 008; B2/C1 questions added with their levels).
 | 152 | `b1-stories` | Contar lo que pasó: experiencias, anécdotas, sentimientos | `social` |
 | 190 | `b1-grammar` | Gramática B1 (cards) | `gramatica` |
 
+### B2 — work in depth, opinions, independent life
+
+| Order | Unit id | Spanish title (guide) | Situation |
+| --- | --- | --- | --- |
+| 210 | `b2-meetings` | Reuniones: proponer, interrumpir con educación, acordar, resumir | `trabajo` |
+| 212 | `b2-opinions` | Opiniones y debate: estar de acuerdo, matizar, argumentar | `opiniones` |
+| 220 | `b2-tech-talk` | Hablar de tecnología: arquitectura, pros y contras, code review | `tecnologia` |
+| 222 | `b2-projects` | Proyectos: plazos, riesgos, prioridades, dar y pedir feedback | `trabajo` |
+| 230 | `b2-news` | Noticias y actualidad: contar, comentar, reaccionar | `opiniones` |
+| 232 | `b2-wellbeing` | Salud y bienestar: hábitos, deporte, estrés, el médico de cabecera | `salud` |
+| 240 | `b2-travel` | Viajar por tu cuenta: planificar, alquilar coche, imprevistos, recomendar | `viajes` |
+| 242 | `b2-paperwork` | Trámites y servicios: seguros, contratos, reclamaciones formales | `dinero` |
+| 250 | `b2-relationships` | Relaciones: sentimientos, malentendidos, resolver conflictos | `social` |
+| 252 | `b2-culture` | Cultura: series, cine, libros, música, humor | `cultura` |
+| 290 | `b2-grammar` | Gramática B2 (cards) | `gramatica` |
+
+### C1 — leading, persuading, nuance
+
+| Order | Unit id | Spanish title (guide) | Situation |
+| --- | --- | --- | --- |
+| 310 | `c1-negotiation` | Negociar: salario, condiciones, clientes y proveedores | `trabajo` |
+| 312 | `c1-presenting` | Presentar y hablar en público: demos, charlas, preguntas difíciles | `trabajo` |
+| 320 | `c1-leading` | Liderar: feedback difícil, 1:1, delegar, motivar | `trabajo` |
+| 322 | `c1-tech-decisions` | Decisiones técnicas: incidentes, postmortems, convencer al equipo | `tecnologia` |
+| 330 | `c1-nuance` | Matices: suavizar, ironía, cortesía indirecta, leer entre líneas | `opiniones` |
+| 332 | `c1-idioms` | Expresiones y phrasal verbs avanzados | `social` |
+| 340 | `c1-networking` | Networking: conferencias, eventos, presentarte con soltura | `social` |
+| 342 | `c1-problems` | Resolver problemas complejos: quejas formales, burocracia, reclamar con firmeza | `dinero` |
+| 350 | `c1-society` | Debatir sobre la sociedad: teletrabajo, IA, ciudades, medio ambiente | `opiniones` |
+| 352 | `c1-storytelling` | Contar historias con gracia: anécdotas, ritmo, humor | `cultura` |
+| 390 | `c1-grammar` | Gramática C1 (cards) | `gramatica` |
+
 Order ranges for English: A2 10–99, B1 110–199, B2 210–299, C1 310–399 (grammar unit at x90).
 Inside a level, the first two units come first because the rest use them.
 
@@ -72,7 +104,8 @@ Saludos y cortesía · `no-entiendo` ❓ Cuando no entiendes · `numeros` 🔢 N
 `alojamiento` 🏨 Alojamiento · `comida` 🍔 Comer y beber · `compras` 🛒 Compras · `ciudad` 🚕 Por
 la ciudad · `salud` 💊 Salud y emergencias · `social` 🗣️ Vida social · `trabajo` 💼 Trabajo ·
 `comunicacion` 📧 Email y llamadas · `tecnologia` 💻 Tecnología · `vivienda` 🔑 Vivienda · `dinero`
-🏦 Banco y dinero · `gramatica` 📘 Gramática.
+🏦 Banco y dinero · `opiniones` 💬 Opiniones y debate (B2+) · `cultura` 🎬 Cultura y ocio (B2+) ·
+`gramatica` 📘 Gramática.
 
 **Grammar cards** (`gram.en-<level>-<slug>`):
 - A2: present simple vs present continuous; past simple (regular, irregular, -ed sounds);
@@ -82,11 +115,21 @@ la ciudad · `salud` 💊 Salud y emergencias · `social` 🗣️ Vida social ·
 - B1: present perfect vs past simple (for/since, just/already/yet); past continuous; first and
   second conditional; should / must / have to; used to; passive (intro); relative clauses
   (who/which/that); reported speech basics; gerund vs infinitive; common phrasal verbs at work.
+- B2: third conditional; wish / if only; modals of deduction (must have, can't have, might have);
+  the passive in all tenses and have/get something done; reported speech (tenses, questions,
+  reporting verbs); defining vs non-defining relative clauses; future continuous and future
+  perfect; linking words of contrast (although, despite, however, whereas); gerund vs infinitive
+  with a change of meaning (stop, remember, try); phrasal verbs with two particles.
+- C1: inversion for emphasis (Never have I…, Not only…); cleft sentences (What I need is…, It was
+  … that…); mixed conditionals; advanced modals (needn't have, would rather, had better);
+  formal subjunctive (I suggest that he be…); participle clauses; emphatic do; hedging and
+  softening (It seems that…, I'd tend to…); ellipsis and substitution (so/not, do so); discourse
+  markers (that said, by and large, on the whole).
 
 ## Language rules
 - **American English (en-US)**, natural and current, US spelling (color, apartment, check),
   US formats (dates "October 6th", 10/6; $; a.m./p.m.; °F and miles for recognition only).
-  Short phrases: ≤ 12 words at A2, ≤ 15 at B1 when possible.
+  Short phrases: ≤ 12 words at A2, ≤ 15 at B1, ≤ 18 at B2, ≤ 22 at C1 when possible.
 - **Contractions as people speak** (I'm, don't, it's, I'd like). Answer matching treats a
   contraction and its full form as equal through `pack.json` `equivalents` (T110); still avoid
   exercises whose only difference is a contraction.
@@ -96,7 +139,8 @@ la ciudad · `salud` 💊 Salud y emergencias · `social` 🗣️ Vida social ·
   (Hey, What's up?, Sounds good!, wanna is never written). Q&A replies and dialogue options match
   it. The dialogue badge says "Registro formal" / "Registro informal".
 - Never slang a learner would misuse; idioms only when common, explained in `notes`. Phrasal
-  verbs (B1) explained in `notes` with their meaning.
+  verbs (B1+) explained in `notes` with their meaning. B2 and C1 add common idioms, collocations
+  and register shifts (formal written vs spoken), always explained in `notes`.
 - **Pronunciation tips** (phrase `explanation`) for a Spanish speaker: `th` (think/this), short
   vs long vowels (ship/sheep, full/fool), the schwa and weak forms (to, a, can), -ed endings
   (/t/ /d/ /ɪd/), final consonants and plurals, no extra "e" before s+consonant (Spain, school),
@@ -123,6 +167,14 @@ grammar `gram.en-a2-past-simple`, dialogue `dlg.en-a2-hotel`, placement
     bad connection, explaining a bug to IT support, lost-luggage desk, rebooking a delayed flight,
     apartment viewing with a landlord, calling to fix the internet, opening a bank account, a
     party (making friends), rescheduling plans with a friend.
+  - B2: sprint planning, disagreeing in a code review, negotiating a deadline, a follow-up with
+    the doctor, a car rental problem, an insurance claim, debating with a friend, getting the
+    deposit back from a landlord, planning a trip with a travel agent, a job offer call, a
+    conflict with a roommate, discussing the news over dinner.
+  - C1: salary negotiation, Q&A after a conference talk, giving difficult feedback, an incident
+    call, pitching to a client, networking at an event, a formal complaint by phone, mediating a
+    conflict between colleagues, interviewing a candidate, a meeting with investors, banter at a
+    dinner party, presenting to executives.
 - **Stories (12 per level)**, present tense mostly at A2 (past simple in the last ones), mixed
   tenses at B1, 80–150 words (`content:check` range), recurring cast in **Chicago**: **Maya**
   (28, software developer at a startup in the Loop), her roommate **Jordan** (barista and
@@ -130,6 +182,12 @@ grammar `gram.en-a2-past-simple`, dialogue `dlg.en-a2-hotel`, placement
   from Valencia who is learning English like you. A2 follows Pablo's visit (arrival, the
   neighbourhood, food, shopping, getting around, a cold); B1 follows him back in Chicago working
   at Maya's startup (office, calls, an interview, a flat, a trip that goes wrong, a party).
+  B2 (orders 201–212, 100–200 words): Pablo's second year: he leads a small project at the
+  startup, Jordan's band goes on a short tour, Mrs. Carter writes a memoir, a road trip, a
+  misunderstanding between friends, a health scare. C1 (orders 301–312, 120–250 words): the
+  startup is about to be acquired, Pablo speaks at a conference, Maya has to make a hard call,
+  Jordan signs a record deal, Mrs. Carter's book launch, and Pablo decides what comes next.
+  Story length is checked per level (T111).
 
 ## Audio and pictures
 - Neural mp3 with edge-tts **en-US** voices (`en-US-AvaNeural`, `en-US-AndrewNeural`,

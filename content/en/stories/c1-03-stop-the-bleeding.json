@@ -1,0 +1,96 @@
+{
+  "id": "story.en-c1-stop-the-bleeding",
+  "order": 303,
+  "title": "Stop the bleeding",
+  "titleEs": "Cortar la hemorragia",
+  "description": "A las dos de la mañana se cae el pago justo cuando los nuevos dueños revisan la empresa. Maya está de guardia y le toca apagar el fuego.",
+  "emoji": "🚨",
+  "situation": "tecnologia",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "It's two in the morning when Maya's phone starts buzzing.", "es": "Son las dos de la mañana cuando el móvil de Maya empieza a vibrar." },
+    { "id": "s2", "text": "She's on call this week, and checkout is down for all users.", "es": "Esta semana está de guardia, y el pago no funciona para ningún usuario." },
+    { "id": "s3", "text": "Worse still, the new owners are reviewing all the company's systems this week.", "es": "Y lo peor: esta semana los nuevos dueños están revisando todos los sistemas de la empresa." },
+    { "id": "s4", "text": "She opens her laptop and declares an incident.", "es": "Abre el portátil y declara un incidente." },
+    { "id": "s5", "text": "«It's a sev one. Pablo, can you join the war room?»", "es": "«Es de gravedad máxima. Pablo, ¿puedes unirte a la sala de crisis?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s6", "text": "Pablo joins the call in his pajamas, still half asleep.", "es": "Pablo se une a la llamada en pijama, todavía medio dormido." },
+    { "id": "s7", "text": "«The errors started right after last night's deploy.»", "es": "«Los errores empezaron justo después del despliegue de anoche.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "«Then let's roll back the last deploy and see if the errors drop.»", "es": "«Entonces revirtamos el último despliegue y veamos si bajan los errores.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s9", "text": "«Our priority right now is to stop the bleeding, not to find the root cause.»", "es": "«Ahora mismo la prioridad es cortar la hemorragia, no encontrar la causa de fondo.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "«And can someone post an update on the status page?»", "es": "«Y ¿puede alguien publicar una actualización en la página de estado?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "Ten minutes later, the error rate finally starts to fall.", "es": "Diez minutos después, la tasa de errores por fin empieza a bajar." },
+    { "id": "s12", "text": "By three o'clock, everything is back to normal, and Maya can breathe again.", "es": "A las tres, todo ha vuelto a la normalidad y Maya puede respirar de nuevo." },
+    { "id": "s13", "text": "On Friday, the team holds a blameless postmortem.", "es": "El viernes, el equipo hace un análisis posterior sin buscar culpables." },
+    { "id": "s14", "text": "«Remember, we're looking at systems, not at people,» Maya tells everyone.", "es": "«Recordad, analizamos sistemas, no personas», les dice Maya a todos." },
+    { "id": "s15", "text": "It turns out that a config change had skipped code review.", "es": "Resulta que un cambio de configuración se había saltado la revisión de código." },
+    { "id": "s16", "text": "«Had we had a canary release, we'd have caught this within minutes.»", "es": "«Si hubiéramos tenido un despliegue canario, lo habríamos detectado en minutos.»", "voice": "en-US-BrianNeural" },
+    { "id": "s17", "text": "Later, Rachel thanks Maya in front of the whole company.", "es": "Más tarde, Rachel le da las gracias a Maya delante de toda la empresa." },
+    { "id": "s18", "text": "«The new owners were impressed by how calmly you handled it.»", "es": "«A los nuevos dueños les impresionó la calma con la que lo gestionaste.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s19", "text": "Maya smiles, but she's exhausted and wonders how long she can keep this up.", "es": "Maya sonríe, pero está agotada y se pregunta cuánto tiempo podrá aguantar este ritmo." }
+  ],
+  "keywords": [
+    "c1-tech-decisions.on-call",
+    "c1-tech-decisions.incident",
+    "c1-tech-decisions.roll-back",
+    "c1-tech-decisions.stop-the-bleeding",
+    "c1-tech-decisions.status-page",
+    "c1-tech-decisions.error-rate",
+    "c1-tech-decisions.blameless",
+    "c1-tech-decisions.postmortem",
+    "c1-tech-decisions.had-we-had-a-canary"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why is the timing of the outage so bad?",
+      "es": "¿Por qué la caída llega en tan mal momento?",
+      "options": [
+        { "text": "Maya is on vacation.", "es": "Maya está de vacaciones." },
+        { "text": "The new owners are reviewing the company's systems.", "es": "Los nuevos dueños están revisando los sistemas de la empresa." },
+        { "text": "It's the day of a big product launch.", "es": "Es el día de un gran lanzamiento." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What does Maya decide to do first?",
+      "es": "¿Qué decide hacer Maya primero?",
+      "options": [
+        { "text": "Undo the last deploy.", "es": "Deshacer el último despliegue." },
+        { "text": "Find out who made the mistake.", "es": "Averiguar quién cometió el error." },
+        { "text": "Wait until the morning.", "es": "Esperar a que se haga de día." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What caused the problem?",
+      "es": "¿Qué causó el problema?",
+      "options": [
+        { "text": "A server that overheated.", "es": "Un servidor que se sobrecalentó." },
+        { "text": "Too many users at once.", "es": "Demasiados usuarios a la vez." },
+        { "text": "A config change that nobody reviewed.", "es": "Un cambio de configuración que nadie revisó." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How does Maya feel at the end?",
+      "es": "¿Cómo se siente Maya al final?",
+      "options": [
+        { "text": "Proud but worn out.", "es": "Orgullosa pero agotada." },
+        { "text": "Angry with Rachel.", "es": "Enfadada con Rachel." },
+        { "text": "Ready to work even more.", "es": "Con ganas de trabajar todavía más." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "c1-tech-decisions.on-call", "gap": "on call", "distractors": ["in call", "of guard"] },
+    { "id": "g2", "sentence": "s8", "answer": "c1-tech-decisions.roll-back", "gap": "roll back", "distractors": ["roll behind", "return back"] },
+    { "id": "g3", "sentence": "s9", "answer": "c1-tech-decisions.stop-the-bleeding", "gap": "stop the bleeding", "distractors": ["stop the blood", "cut the hemorrhage"] },
+    { "id": "g4", "sentence": "s10", "answer": "c1-tech-decisions.status-page", "gap": "status page", "distractors": ["state page", "estate page"] },
+    { "id": "g5", "sentence": "s13", "answer": "c1-tech-decisions.blameless", "gap": "blameless", "distractors": ["guiltless", "without culprits"] },
+    { "id": "g6", "sentence": "s16", "answer": "c1-tech-decisions.had-we-had-a-canary", "gap": "Had we had", "distractors": ["Have we had", "Had we have"] }
+  ]
+}

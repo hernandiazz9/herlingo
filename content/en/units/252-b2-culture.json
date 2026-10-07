@@ -1,0 +1,313 @@
+{
+  "id": "b2-culture",
+  "order": 252,
+  "level": "B2",
+  "title": "Cultura: series, cine, libros, música, humor",
+  "description": "Comentar series sin hacer spoilers, opinar de una peli, recomendar un libro, hablar de música y conciertos, y entender (o no) un chiste.",
+  "emoji": "🎬",
+  "situation": "cultura",
+  "lessons": [
+    {
+      "id": "b2-culture.l.series",
+      "title": "Series y plataformas",
+      "items": [
+        "b1-friends.tv-show",
+        "b2-culture.series",
+        "b2-culture.what-are-you-watching",
+        "b2-culture.streaming-service",
+        "b2-culture.is-it-on-any-streaming-service",
+        "b2-culture.season",
+        "b2-culture.episode",
+        "b2-culture.have-you-seen-the-new-season",
+        "b2-culture.spoiler",
+        "b2-culture.no-spoilers-please",
+        "b2-culture.binge-watch",
+        "b2-culture.i-binge-watched-the-whole-thing",
+        "b2-culture.hooked",
+        "b2-culture.stick-with-it",
+        "b2-culture.plot",
+        "b2-culture.character",
+        "b2-culture.the-plot-is-hard-to-follow",
+        "b2-culture.cliffhanger",
+        "b2-culture.it-ended-on-a-cliffhanger",
+        "b2-culture.qa.watching"
+      ]
+    },
+    {
+      "id": "b2-culture.l.movies",
+      "title": "Cine: comentar una película",
+      "items": [
+        "a2-daily.movie",
+        "b1-plans.movie-theater",
+        "b2-culture.trailer",
+        "b2-culture.director",
+        "b2-culture.actor",
+        "b2-culture.its-based-on-a-true-story",
+        "b2-culture.ending",
+        "b2-culture.the-acting-was-brilliant",
+        "b1-trips.review",
+        "b2-culture.it-got-great-reviews",
+        "b2-opinions.if-you-ask-me",
+        "b2-opinions.overrated",
+        "b2-culture.it-was-a-bit-too-long",
+        "b2-culture.subtitles",
+        "b2-culture.i-prefer-the-original-version",
+        "b2-culture.sequel",
+        "b2-culture.it-wasnt-as-good-as-the-book",
+        "b2-culture.id-give-it-a-seven",
+        "b2-culture.qa.movie"
+      ]
+    },
+    {
+      "id": "b2-culture.l.books",
+      "title": "Libros: recomendar y comentar",
+      "items": [
+        "a2-daily.book",
+        "b2-culture.novel",
+        "b2-culture.im-reading-a-really-good-novel",
+        "b2-culture.author",
+        "b2-culture.chapter",
+        "b2-culture.page-turner",
+        "b2-culture.i-couldnt-put-it-down",
+        "b2-culture.ive-been-meaning-to-read-it",
+        "b2-culture.can-you-recommend-something",
+        "b2-culture.audiobook",
+        "b2-culture.i-listen-to-audiobooks-on-my-commute",
+        "b2-culture.book-club",
+        "b2-culture.i-joined-a-book-club",
+        "b2-culture.bookstore",
+        "b2-culture.qa.reading"
+      ]
+    },
+    {
+      "id": "b2-culture.l.music",
+      "title": "Música y conciertos",
+      "items": [
+        "a2-daily.music",
+        "b1-friends.band",
+        "b2-culture.gig",
+        "b2-culture.jordans-band-has-a-gig",
+        "b1-friends.concert",
+        "b2-culture.venue",
+        "b2-culture.the-venue-was-tiny",
+        "b2-culture.tickets-sold-out-in-minutes",
+        "b2-culture.lineup",
+        "b2-culture.festival",
+        "b2-culture.album",
+        "b2-culture.their-new-album-is-amazing",
+        "b2-culture.lyrics",
+        "b2-culture.i-know-all-the-lyrics-by-heart",
+        "b2-culture.song",
+        "b2-culture.that-song-is-stuck-in-my-head",
+        "b2-culture.playlist",
+        "b2-culture.im-more-into-live-music",
+        "b2-culture.qa.gig",
+        "b2-culture.qa.into"
+      ]
+    },
+    {
+      "id": "b2-culture.l.humor",
+      "title": "Humor: chistes, ironía y sarcasmo",
+      "items": [
+        "b2-culture.sense-of-humor",
+        "b2-culture.he-has-a-great-sense-of-humor",
+        "b2-culture.joke",
+        "b2-culture.i-didnt-get-the-joke",
+        "b2-culture.funny",
+        "b2-culture.hilarious",
+        "b2-culture.thats-hilarious",
+        "b2-culture.its-funny-because-its-true",
+        "b2-culture.sarcasm",
+        "b2-culture.are-you-being-sarcastic",
+        "b2-culture.stand-up-comedy",
+        "b2-culture.comedian",
+        "b2-culture.we-went-to-a-stand-up-show",
+        "b2-culture.humor-doesnt-always-translate",
+        "b2-culture.you-had-to-be-there",
+        "b2-culture.qa.joke"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-culture.what-are-you-watching", "text": "What are you watching at the moment?", "es": "¿Qué serie estás viendo ahora?", "notes": "Ver una serie o una peli = «watch», no «see». «at the moment» = ahora, estos días.", "explanation": "Para sacar tema con un amigo o compañero. «watching» = «WA-ching», con «a» abierta.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.is-it-on-any-streaming-service", "text": "Is it on any streaming service?", "es": "¿Está en alguna plataforma?", "notes": "Una plataforma de series = «a streaming service». Estar en una plataforma = «be on», con «on».", "explanation": "Cuando te recomiendan algo. «streaming» sin «e» delante: «STRII-ming», no «estriming».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.have-you-seen-the-new-season", "text": "Have you seen the new season yet?", "es": "¿Has visto ya la nueva temporada?", "notes": "Aquí sí va «seen» (has visto, resultado). «yet» al final en preguntas = ya.", "explanation": "Para hablar de una serie que seguís los dos. «season» = «SII-zən», con «z» sonora.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.no-spoilers-please", "text": "No spoilers, please! I'm only on episode three.", "es": "¡Sin spoilers, por favor! Solo voy por el episodio tres.", "notes": "«I'm on episode three» = voy por el episodio tres. Verbo: «spoil it» = destripar.", "explanation": "Cuando alguien va a contarte el final. «spoilers» sin «e» delante: «SPOI-lərz».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.i-binge-watched-the-whole-thing", "text": "I binge-watched the whole thing in one weekend.", "es": "Me la vi entera de un tirón en un fin de semana.", "notes": "«binge-watch» = ver muchos episodios seguidos, darse un atracón. «the whole thing» = todo entero.", "explanation": "Para confesar un atracón de serie. «binge» = «bindy», la «g» suena como «y» fuerte.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.stick-with-it", "text": "Stick with it; it gets better after a few episodes.", "es": "Aguanta, que mejora después de unos episodios.", "notes": "«stick with something» = no abandonarlo, seguir con ello. «it gets better» = mejora.", "explanation": "Para animar a alguien a seguir una serie. «stick» sin «e» delante y con «i» corta.", "register": "neutral", "situation": "cultura", "tags": ["phrasal-verbs"] },
+    { "id": "b2-culture.the-plot-is-hard-to-follow", "text": "The plot is a bit hard to follow.", "es": "Cuesta un poco seguir la trama.", "notes": "«hard to follow» = difícil de seguir. «plot» = el argumento, la trama.", "explanation": "Para opinar de una serie complicada. «plot» con «a» breve: «plat».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.it-ended-on-a-cliffhanger", "text": "The last episode ended on a huge cliffhanger.", "es": "El último episodio terminó con muchísima intriga.", "notes": "«end on a cliffhanger» = acabar en lo más emocionante, dejándote en vilo.", "explanation": "Para quejarte (o alegrarte) del final de temporada. «huge» = «hyuudy».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.its-based-on-a-true-story", "text": "It's based on a true story.", "es": "Está basada en una historia real.", "notes": "«based on» = basado en (con «on», no «in»). Real = «true» cuando hablas de historias.", "explanation": "Para contar de qué va una película. «based on» se une: «BEIS-tan».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.the-acting-was-brilliant", "text": "The acting was brilliant, but the ending was disappointing.", "es": "La interpretación fue genial, pero el final me decepcionó.", "notes": "La actuación = «the acting» (no «interpretation»). El final de una peli = «the ending», no «the final».", "explanation": "Para dar una opinión matizada. «disappointing» lleva el acento en «POIN».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.it-got-great-reviews", "text": "It got great reviews, so I had high expectations.", "es": "Tuvo muy buenas críticas, así que tenía expectativas altas.", "notes": "«get good reviews» = tener buenas críticas. «expectations» = expectativas.", "explanation": "Para explicar por qué fuiste a verla. «reviews» = «ri-VYUUZ», acento al final.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.it-was-a-bit-too-long", "text": "It was a bit too long for my taste.", "es": "Para mi gusto, fue un poco larga.", "notes": "«for my taste» = para mi gusto. «too long» = demasiado larga.", "explanation": "Para criticar sin ser duro. «taste» = «teist», con diptongo /ei/.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.i-prefer-the-original-version", "text": "I prefer watching movies in English with subtitles.", "es": "Prefiero ver las pelis en inglés con subtítulos.", "notes": "En EE. UU. casi no se dobla; «dubbed» = doblada. Versión original: «in the original language».", "explanation": "Para hablar de cómo practicas inglés. «subtitles» = «SAB-tai-dəlz».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.it-wasnt-as-good-as-the-book", "text": "It wasn't as good as the book.", "es": "No estaba tan bien como el libro.", "notes": "«not as… as» = no tan… como.", "explanation": "La crítica clásica. «as good as» se une y se reduce: «əz-GU-dəz».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.id-give-it-a-seven", "text": "I'd give it a seven out of ten.", "es": "Le daría un siete sobre diez.", "notes": "«out of ten» = sobre diez. Los números, en palabras al hablar.", "explanation": "Para puntuar una peli. «out of» se une: «au-dəv», con flap t.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.im-reading-a-really-good-novel", "text": "I'm reading a really good novel right now.", "es": "Ahora mismo estoy leyendo una novela muy buena.", "notes": "«novel» = novela (ficción). Un libro de no ficción es «a book», nunca «a novel».", "explanation": "Para recomendar algo en una charla. «novel» = «NA-vəl», acento en la primera.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.i-couldnt-put-it-down", "text": "It's a real page-turner; I couldn't put it down.", "es": "Engancha muchísimo; no podía dejar de leerlo.", "notes": "«page-turner» = libro que engancha. «put down» = dejar (soltar) un libro.", "explanation": "Para recomendar un libro con entusiasmo. «put it down» se une: «pu-di-DAUN».", "register": "neutral", "situation": "cultura", "tags": ["phrasal-verbs"] },
+    { "id": "b2-culture.ive-been-meaning-to-read-it", "text": "I've been meaning to read it for ages.", "es": "Hace siglos que tengo pendiente leerlo.", "notes": "«I've been meaning to…» = llevo tiempo queriendo… «for ages» = desde hace siglos.", "explanation": "Cuando alguien menciona un libro famoso. «ages» = «EI-dyiz».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.can-you-recommend-something", "text": "Can you recommend something good to read?", "es": "¿Me recomiendas algo bueno para leer?", "notes": "«recommend» no lleva «me» detrás: «Can you recommend something?», no «recommend me».", "explanation": "Para pedir ideas a un amigo lector. «recommend» = «re-kə-MEND», con una sola «c» y doble «m».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.i-listen-to-audiobooks-on-my-commute", "text": "I usually listen to audiobooks on my commute.", "es": "Suelo escuchar audiolibros de camino al trabajo.", "notes": "«commute» = el trayecto diario al trabajo. «listen to», siempre con «to».", "explanation": "Para hablar de tus hábitos de lectura. «listen» sin «t»: «LI-sən».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.i-joined-a-book-club", "text": "I joined a book club to practice my English.", "es": "Me apunté a un club de lectura para practicar inglés.", "notes": "«join» = apuntarse a, unirse a (sin preposición). «practice» en EE. UU. también es verbo.", "explanation": "Para contar cómo te integras en Chicago. «joined» = «dyoind», la «-ed» suena «d».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.jordans-band-has-a-gig", "text": "Jordan's band has a gig on Friday.", "es": "El grupo de Jordan toca el viernes.", "notes": "«gig» = actuación, bolo (coloquial). «have a gig» = tener un concierto.", "explanation": "Para invitar a un amigo a ver un concierto. «gig» con «g» fuerte las dos veces.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.the-venue-was-tiny", "text": "The venue was tiny, but the sound was amazing.", "es": "La sala era diminuta, pero el sonido era increíble.", "notes": "«venue» = el local, la sala (de conciertos o eventos).", "explanation": "Para contar qué tal el concierto. «venue» = «VEN-yuu», acento en la primera.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.tickets-sold-out-in-minutes", "text": "The tickets sold out in minutes.", "es": "Las entradas se agotaron en minutos.", "notes": "«sell out» = agotarse. «It's sold out» = está agotado.", "explanation": "Para explicar por qué no vas. «sold out» se une: «soul-DAUT».", "register": "neutral", "situation": "cultura", "tags": ["phrasal-verbs"] },
+    { "id": "b2-culture.their-new-album-is-amazing", "text": "Their new album is amazing. Have you heard it?", "es": "Su nuevo disco es una pasada. ¿Lo has escuchado?", "notes": "Para música grabada se dice «heard it» o «listened to it».", "explanation": "Para recomendar música. «album» = «ÆL-bəm», con «a» abierta.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.i-know-all-the-lyrics-by-heart", "text": "I know all the lyrics by heart.", "es": "Me sé la letra entera de memoria.", "notes": "«lyrics» = la letra (de una canción), siempre en plural. «by heart» = de memoria.", "explanation": "Para hablar de tu canción favorita. «lyrics» = «LI-riks», con «i» corta.", "register": "neutral", "situation": "cultura", "tags": ["idioms"] },
+    { "id": "b2-culture.that-song-is-stuck-in-my-head", "text": "I've had that song stuck in my head all day.", "es": "Llevo todo el día con esa canción en la cabeza.", "notes": "«be stuck in your head» = no poder quitarte una canción de la cabeza.", "explanation": "Cuando una canción no te deja en paz. «stuck» sin «e» delante y con «a» corta: «stak».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.im-more-into-live-music", "text": "I'm more into live music than playlists.", "es": "Me va más la música en directo que las listas de reproducción.", "notes": "«be into something» = gustarte, ser lo tuyo. «live» (en directo) suena «laiv», no «liv».", "explanation": "Para hablar de tus gustos. «live» adjetivo = «laiv», con diptongo.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.he-has-a-great-sense-of-humor", "text": "He has a great sense of humor.", "es": "Tiene muy buen sentido del humor.", "notes": "En EE. UU. «humor»; en Reino Unido «humour». Con «a»: «a sense of humor».", "explanation": "Para describir a alguien. «humor» empieza con «hy»: «HYUU-mər».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.i-didnt-get-the-joke", "text": "Sorry, I didn't get the joke.", "es": "Perdona, no he pillado el chiste.", "notes": "«get a joke» = entender, pillar un chiste. Contar un chiste = «tell a joke», no «say» ni «count».", "explanation": "Cuando todos se ríen menos tú. «joke» empieza con «y» fuerte: «youk».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.thats-hilarious", "text": "That's hilarious! I can't stop laughing.", "es": "¡Qué gracioso! No puedo parar de reír.", "notes": "«hilarious» = graciosísimo. Es un adjetivo extremo: no lleva «very» («really» sí).", "explanation": "Para reaccionar a algo muy gracioso. «laughing» = «LÆ-fing»: la «gh» suena «f».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.its-funny-because-its-true", "text": "It's funny because it's true.", "es": "Tiene gracia porque es verdad.", "notes": "«funny» = gracioso; también raro: «That's funny, I left it here». Divertido (pasarlo bien) = «fun».", "explanation": "Para comentar un chiste o un meme. «funny» con «a» corta: «FA-ni».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.are-you-being-sarcastic", "text": "Wait, are you being sarcastic?", "es": "Espera, ¿estás siendo sarcástico?", "notes": "«be being» + adjetivo = comportarse así ahora mismo. El sarcasmo americano a veces no se nota en el tono.", "explanation": "Cuando no sabes si va en serio. «sarcastic» = «sar-KÆS-tik», acento en «KAS».", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.we-went-to-a-stand-up-show", "text": "We went to a stand-up comedy show downtown.", "es": "Fuimos a un espectáculo de monólogos en el centro.", "notes": "«stand-up comedy» = monólogos de humor. Chicago es famosa por la comedia y la improvisación.", "explanation": "Para contar tu plan del finde. «downtown» = «daun-TAUN», acento al final.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.humor-doesnt-always-translate", "text": "Humor doesn't always translate from one language to another.", "es": "El humor no siempre se puede traducir de un idioma a otro.", "notes": "«translate» sin objeto = poder traducirse, funcionar en otro idioma o cultura.", "explanation": "Para explicar por qué no te ríes. «translate» = «trænz-LEIT», acento al final.", "register": "neutral", "situation": "cultura" },
+    { "id": "b2-culture.you-had-to-be-there", "text": "It's hard to explain. You had to be there.", "es": "Es difícil de explicar. Tenías que haber estado allí.", "notes": "«You had to be there» = hay que vivirlo para que tenga gracia. Se dice al contar algo que no ha hecho gracia.", "explanation": "Cuando tu anécdota no funciona. «had to» se reduce: «HÆD-tə».", "register": "neutral", "situation": "cultura", "tags": ["idioms"] }
+  ],
+  "vocab": [
+    { "id": "b2-culture.series", "word": "series", "article": "a", "plural": "series", "es": "la serie", "notes": "Igual en singular y plural: «a series», «two series». Más coloquial: «a show».", "situation": "cultura", "image": "fluent:television" },
+    { "id": "b2-culture.streaming-service", "word": "streaming service", "article": "a", "plural": "streaming services", "es": "la plataforma (de series)", "notes": "«platform» se entiende, pero lo natural es «streaming service».", "example": "b2-culture.is-it-on-any-streaming-service", "situation": "cultura" },
+    { "id": "b2-culture.season", "word": "season", "article": "a", "plural": "seasons", "es": "la temporada", "notes": "También estación del año. En inglés británico, «series» = temporada.", "example": "b2-culture.have-you-seen-the-new-season", "situation": "cultura" },
+    { "id": "b2-culture.episode", "word": "episode", "article": "an", "plural": "episodes", "es": "el episodio, el capítulo", "notes": "Acento en la primera: «E-pi-soud».", "situation": "cultura" },
+    { "id": "b2-culture.spoiler", "word": "spoiler", "article": "a", "plural": "spoilers", "es": "el spoiler, el destripe", "notes": "«spoiler alert!» = ¡aviso de spoiler!", "example": "b2-culture.no-spoilers-please", "situation": "cultura" },
+    { "id": "b2-culture.binge-watch", "word": "binge-watch", "es": "ver de un tirón, darse un atracón de series", "notes": "Verbo: «I binge-watched it». Sustantivo: «a binge».", "example": "b2-culture.i-binge-watched-the-whole-thing", "situation": "cultura", "image": "fluent:popcorn" },
+    { "id": "b2-culture.hooked", "word": "hooked", "es": "enganchado", "notes": "«be hooked on something» = estar enganchado a algo.", "situation": "cultura" },
+    { "id": "b2-culture.plot", "word": "plot", "article": "a", "plural": "plots", "es": "la trama, el argumento", "notes": "«plot twist» = giro inesperado.", "example": "b2-culture.the-plot-is-hard-to-follow", "situation": "cultura" },
+    { "id": "b2-culture.character", "word": "character", "article": "a", "plural": "characters", "es": "el personaje", "notes": "Se escribe con «ch» pero suena «k»: «KÆ-rək-tər». También carácter (de una persona).", "situation": "cultura" },
+    { "id": "b2-culture.cliffhanger", "word": "cliffhanger", "article": "a", "plural": "cliffhangers", "es": "el final en vilo, la intriga", "notes": "Literalmente, alguien colgado de un acantilado.", "example": "b2-culture.it-ended-on-a-cliffhanger", "situation": "cultura" },
+    { "id": "b2-culture.trailer", "word": "trailer", "article": "a", "plural": "trailers", "es": "el tráiler", "notes": "Suena «TREI-lər».", "situation": "cultura", "image": "fluent:movie-camera" },
+    { "id": "b2-culture.director", "word": "director", "article": "a", "plural": "directors", "es": "el director, la directora (de cine)", "notes": "Acento en «REK»: «də-REK-tər».", "situation": "cultura", "image": "fluent:clapper-board" },
+    { "id": "b2-culture.actor", "word": "actor", "article": "an", "plural": "actors", "es": "el actor, la actriz", "notes": "Hoy «actor» sirve también para mujeres; «actress» sigue existiendo.", "situation": "cultura" },
+    { "id": "b2-culture.ending", "word": "ending", "article": "an", "plural": "endings", "es": "el final (de una historia)", "notes": "«a happy ending». «the final» es la final de un torneo.", "example": "b2-culture.the-acting-was-brilliant", "situation": "cultura" },
+    { "id": "b2-culture.subtitles", "word": "subtitles", "es": "los subtítulos", "notes": "Casi siempre en plural. «captions» = subtítulos en el mismo idioma.", "example": "b2-culture.i-prefer-the-original-version", "situation": "cultura" },
+    { "id": "b2-culture.sequel", "word": "sequel", "article": "a", "plural": "sequels", "es": "la secuela, la segunda parte", "notes": "Lo anterior: «a prequel».", "situation": "cultura" },
+    { "id": "b2-culture.novel", "word": "novel", "article": "a", "plural": "novels", "es": "la novela", "notes": "Solo ficción. Acento en la primera: «NA-vəl».", "example": "b2-culture.im-reading-a-really-good-novel", "situation": "cultura", "image": "fluent:open-book" },
+    { "id": "b2-culture.author", "word": "author", "article": "an", "plural": "authors", "es": "el autor, la autora", "notes": "«th» entre los dientes: «O-θər». Un libro «by» un autor: «a novel by…».", "situation": "cultura" },
+    { "id": "b2-culture.chapter", "word": "chapter", "article": "a", "plural": "chapters", "es": "el capítulo (de un libro)", "notes": "De una serie se dice «episode».", "situation": "cultura" },
+    { "id": "b2-culture.page-turner", "word": "page-turner", "article": "a", "plural": "page-turners", "es": "el libro que engancha", "notes": "Elogio típico de un thriller o una novela muy ágil.", "example": "b2-culture.i-couldnt-put-it-down", "situation": "cultura" },
+    { "id": "b2-culture.audiobook", "word": "audiobook", "article": "an", "plural": "audiobooks", "es": "el audiolibro", "notes": "«listen to an audiobook».", "example": "b2-culture.i-listen-to-audiobooks-on-my-commute", "situation": "cultura", "image": "fluent:headphone" },
+    { "id": "b2-culture.book-club", "word": "book club", "article": "a", "plural": "book clubs", "es": "el club de lectura", "notes": "Muy común en EE. UU., a menudo en bibliotecas o librerías.", "example": "b2-culture.i-joined-a-book-club", "situation": "cultura", "image": "fluent:books" },
+    { "id": "b2-culture.bookstore", "word": "bookstore", "article": "a", "plural": "bookstores", "es": "la librería", "notes": "Falso amigo: «library» = biblioteca; librería = «bookstore».", "situation": "cultura" },
+    { "id": "b2-culture.gig", "word": "gig", "article": "a", "plural": "gigs", "es": "el concierto, el bolo", "notes": "Coloquial, sobre todo para grupos pequeños. También un trabajo puntual.", "example": "b2-culture.jordans-band-has-a-gig", "situation": "cultura", "image": "fluent:guitar" },
+    { "id": "b2-culture.venue", "word": "venue", "article": "a", "plural": "venues", "es": "la sala, el local (de eventos)", "notes": "Para conciertos, bodas, conferencias.", "example": "b2-culture.the-venue-was-tiny", "situation": "cultura" },
+    { "id": "b2-culture.lineup", "word": "lineup", "article": "a", "plural": "lineups", "es": "el cartel (de un festival)", "notes": "«The lineup this year is amazing» = el cartel de este año es buenísimo.", "situation": "cultura" },
+    { "id": "b2-culture.festival", "word": "festival", "article": "a", "plural": "festivals", "es": "el festival", "notes": "Acento en la primera: «FES-ti-vəl».", "situation": "cultura", "image": "fluent:admission-tickets" },
+    { "id": "b2-culture.album", "word": "album", "article": "an", "plural": "albums", "es": "el disco, el álbum", "notes": "Disco (de música) = «album» o «record».", "example": "b2-culture.their-new-album-is-amazing", "situation": "cultura" },
+    { "id": "b2-culture.lyrics", "word": "lyrics", "es": "la letra (de una canción)", "notes": "Siempre plural: «the lyrics are…». «letter» es una carta.", "example": "b2-culture.i-know-all-the-lyrics-by-heart", "situation": "cultura" },
+    { "id": "b2-culture.song", "word": "song", "article": "a", "plural": "songs", "es": "la canción", "notes": "Sin «e» delante: «song». La «g» final casi no suena.", "example": "b2-culture.that-song-is-stuck-in-my-head", "situation": "cultura", "image": "fluent:musical-notes" },
+    { "id": "b2-culture.playlist", "word": "playlist", "article": "a", "plural": "playlists", "es": "la lista de reproducción", "notes": "«make a playlist» = hacer una lista.", "situation": "cultura" },
+    { "id": "b2-culture.sense-of-humor", "word": "sense of humor", "article": "a", "es": "el sentido del humor", "notes": "Ortografía de EE. UU.: «humor».", "example": "b2-culture.he-has-a-great-sense-of-humor", "situation": "cultura" },
+    { "id": "b2-culture.joke", "word": "joke", "article": "a", "plural": "jokes", "es": "el chiste, la broma", "notes": "«tell a joke» = contar un chiste; «get a joke» = pillarlo.", "example": "b2-culture.i-didnt-get-the-joke", "situation": "cultura" },
+    { "id": "b2-culture.funny", "word": "funny", "es": "gracioso; raro", "notes": "No confundir con «fun» = divertido (una fiesta, un plan).", "example": "b2-culture.its-funny-because-its-true", "situation": "cultura" },
+    { "id": "b2-culture.hilarious", "word": "hilarious", "es": "graciosísimo, desternillante", "notes": "La «h» suena: «hi-LE-ri-əs».", "example": "b2-culture.thats-hilarious", "situation": "cultura", "image": "fluent:face-with-tears-of-joy" },
+    { "id": "b2-culture.sarcasm", "word": "sarcasm", "es": "el sarcasmo", "notes": "Incontable. Adjetivo: «sarcastic».", "example": "b2-culture.are-you-being-sarcastic", "situation": "cultura" },
+    { "id": "b2-culture.stand-up-comedy", "word": "stand-up comedy", "es": "los monólogos de humor", "notes": "Incontable. «a stand-up show» = un espectáculo de monólogos.", "example": "b2-culture.we-went-to-a-stand-up-show", "situation": "cultura", "image": "fluent:microphone" },
+    { "id": "b2-culture.comedian", "word": "comedian", "article": "a", "plural": "comedians", "es": "el humorista, el cómico", "notes": "Falso amigo: no es «comediante» de teatro en general. Acento en «MII»: «kə-MII-di-ən».", "situation": "cultura" }
+  ],
+  "qa": [
+    {
+      "id": "b2-culture.qa.watching",
+      "question": "Are you watching anything good right now?",
+      "questionEs": "¿Estás viendo algo bueno ahora?",
+      "accepted": [
+        { "text": "Yeah, I'm hooked on a crime series. I'm on season two.", "es": "Sí, estoy enganchado a una serie policíaca. Voy por la segunda temporada." },
+        { "text": "Not really. I binge-watched everything last month.", "es": "La verdad es que no. El mes pasado me lo vi todo de un tirón." }
+      ],
+      "distractors": [
+        { "text": "Yeah, I'm seeing a crime serie. I'm in season two.", "es": "Sí, estoy viendo una serie policíaca. Voy por la segunda temporada." },
+        { "text": "Not really. I binge-watched all last month.", "es": "La verdad es que no. El mes pasado me lo vi todo de un tirón." }
+      ],
+      "register": "neutral",
+      "situation": "cultura",
+      "notes": "Ver una serie = «watch». «series» no tiene «serie» en singular. Ir por un episodio = «be on». «everything» = todo; «all» no puede ir solo así.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-culture.qa.movie",
+      "question": "So, how was the movie last night?",
+      "questionEs": "¿Y qué tal la peli de anoche?",
+      "accepted": [
+        { "text": "The acting was brilliant, but the ending was disappointing.", "es": "La interpretación fue genial, pero el final me decepcionó." },
+        { "text": "Not bad. I'd give it a seven out of ten.", "es": "No estuvo mal. Le daría un siete sobre diez." }
+      ],
+      "distractors": [
+        { "text": "The interpretation was brilliant, but the final was disappointing.", "es": "La interpretación fue genial, pero el final me decepcionó." },
+        { "text": "Not bad. I'd give it a seven over ten.", "es": "No estuvo mal. Le daría un siete sobre diez." }
+      ],
+      "register": "neutral",
+      "situation": "cultura",
+      "notes": "La actuación = «the acting»; el final de una historia = «the ending». Puntuar «sobre diez» = «out of ten».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-culture.qa.reading",
+      "question": "What are you reading these days?",
+      "questionEs": "¿Qué estás leyendo estos días?",
+      "accepted": [
+        { "text": "A novel by a Chicago author. I can't put it down.", "es": "Una novela de un autor de Chicago. No puedo dejar de leerla." },
+        { "text": "Nothing right now. Can you recommend something?", "es": "Nada ahora mismo. ¿Me recomiendas algo?" }
+      ],
+      "distractors": [
+        { "text": "A novel of a Chicago author. I can't leave it.", "es": "Una novela de un autor de Chicago. No puedo dejarla." },
+        { "text": "Nothing right now. Can you recommend me something?", "es": "Nada ahora mismo. ¿Me recomiendas algo?" }
+      ],
+      "register": "neutral",
+      "situation": "cultura",
+      "notes": "Un libro «by» su autor, no «of». No poder dejar un libro = «can't put it down». «recommend» no lleva «me» detrás.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-culture.qa.gig",
+      "question": "Want to come see Jordan's band on Friday?",
+      "questionEs": "¿Te vienes a ver al grupo de Jordan el viernes?",
+      "accepted": [
+        { "text": "I'd love to! Where's the gig?", "es": "¡Me encantaría! ¿Dónde tocan?" },
+        { "text": "Count me in. Are tickets sold out yet?", "es": "Cuenta conmigo. ¿Se han agotado ya las entradas?" }
+      ],
+      "distractors": [
+        { "text": "I'd love! Where's the gig?", "es": "¡Me encantaría! ¿Dónde tocan?" },
+        { "text": "Count with me. Are tickets sold out yet?", "es": "Cuenta conmigo. ¿Se han agotado ya las entradas?" }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "«I'd love to», con «to» al final. Cuenta conmigo = «Count me in», no «count with me».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-culture.qa.into",
+      "question": "What kind of music are you into?",
+      "questionEs": "¿Qué tipo de música te va?",
+      "accepted": [
+        { "text": "Mostly indie rock, but I'm more into live music than playlists.", "es": "Sobre todo indie rock, pero me va más la música en directo que las listas." },
+        { "text": "A bit of everything. I know way too many lyrics by heart.", "es": "Un poco de todo. Me sé demasiadas letras de memoria." }
+      ],
+      "distractors": [
+        { "text": "Mostly indie rock, but I'm more into music in direct than playlists.", "es": "Sobre todo indie rock, pero me va más la música en directo que las listas." },
+        { "text": "A bit of everything. I know way too many letters by heart.", "es": "Un poco de todo. Me sé demasiadas letras de memoria." }
+      ],
+      "register": "neutral",
+      "situation": "cultura",
+      "notes": "En directo = «live» (laiv). La letra de una canción = «lyrics»; «letters» son cartas o letras del abecedario.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-culture.qa.joke",
+      "question": "Did you get the joke?",
+      "questionEs": "¿Has pillado el chiste?",
+      "accepted": [
+        { "text": "Not really. Humor doesn't always translate.", "es": "No mucho. El humor no siempre se puede traducir." },
+        { "text": "Yeah, it was hilarious!", "es": "¡Sí, fue graciosísimo!" }
+      ],
+      "distractors": [
+        { "text": "Not really. Can you explain me it?", "es": "No mucho. ¿Me lo explicas?" },
+        { "text": "Yeah, it was very hilarious!", "es": "¡Sí, fue graciosísimo!" }
+      ],
+      "register": "neutral",
+      "situation": "cultura",
+      "notes": "«explain it to me», nunca «explain me». «hilarious» ya es extremo: «really hilarious», no «very hilarious».",
+      "voice": "en-US-BrianNeural"
+    }
+  ]
+}

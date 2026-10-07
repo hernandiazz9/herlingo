@@ -1,0 +1,95 @@
+{
+  "id": "story.en-b2-read-the-fine-print",
+  "order": 209,
+  "title": "Read the fine print",
+  "titleEs": "Lee la letra pequeña",
+  "description": "La empresa de alquiler le cobra a Pablo la grúa a pesar del seguro, y él se pasa una tarde entera al teléfono hasta que se lo devuelven.",
+  "emoji": "🧾",
+  "situation": "dinero",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "A week after the trip, Pablo gets an email from the rental company.", "es": "Una semana después del viaje, a Pablo le llega un correo de la empresa de alquiler." },
+    { "id": "s2", "text": "They're charging him four hundred dollars for the tow truck and the tire.", "es": "Le cobran cuatrocientos dólares por la grúa y la rueda." },
+    { "id": "s3", "text": "«But I paid for full coverage!»", "es": "«¡Pero si pagué el seguro a todo riesgo!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "He files a claim online, and two days later it's denied.", "es": "Presenta una reclamación por internet, y dos días después se la rechazan." },
+    { "id": "s5", "text": "According to the policy, flat tires aren't included.", "es": "Según la póliza, los pinchazos no están incluidos." },
+    { "id": "s6", "text": "Maya shakes her head when he tells her.", "es": "Maya niega con la cabeza cuando él se lo cuenta." },
+    { "id": "s7", "text": "«Always read the fine print before you sign anything.»", "es": "«Lee siempre la letra pequeña antes de firmar nada.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s8", "text": "Pablo calls the customer service line and waits for forty minutes.", "es": "Pablo llama al servicio de atención al cliente y espera cuarenta minutos." },
+    { "id": "s9", "text": "«My claim was denied, and I'd like to know why.»", "es": "«Me han rechazado la reclamación, y me gustaría saber por qué.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "The representative transfers him, and then he gets transferred again.", "es": "El agente le pasa con otra persona, y luego vuelven a pasarle." },
+    { "id": "s11", "text": "«Sorry, but I've already explained this to three different people.»", "es": "«Perdone, pero ya se lo he explicado a tres personas distintas.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«I'd like to escalate this to a supervisor, please.»", "es": "«Me gustaría que esto lo viera un supervisor, por favor.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s13", "text": "The supervisor listens carefully and checks his case number.", "es": "La supervisora le escucha con atención y consulta su número de caso." },
+    { "id": "s14", "text": "«The spare should never have been flat. That's on us.»", "es": "«La rueda de repuesto nunca debería haber estado pinchada. Eso es culpa nuestra.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s15", "text": "«We'll give you a full refund within five business days.»", "es": "«Le devolveremos el importe completo en un plazo de cinco días hábiles.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s16", "text": "«Thank you. Could you put that in writing for me?»", "es": "«Gracias. ¿Me lo podría poner por escrito?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s17", "text": "When he hangs up, Pablo feels like he's just passed an English exam.", "es": "Cuando cuelga, Pablo siente que acaba de aprobar un examen de inglés." }
+  ],
+  "keywords": [
+    "b2-paperwork.claim",
+    "b2-paperwork.insurance-policy",
+    "b2-paperwork.always-read-the-fine-print",
+    "b2-paperwork.fine-print",
+    "b2-paperwork.my-claim-was-denied",
+    "b2-paperwork.representative",
+    "b2-paperwork.ive-already-explained-this-to-three-people",
+    "b2-paperwork.id-like-to-escalate-this-to-a-supervisor",
+    "b2-paperwork.case-number",
+    "b2-paperwork.could-you-put-that-in-writing"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why is Pablo surprised by the email?",
+      "es": "¿Por qué le sorprende a Pablo el correo?",
+      "options": [
+        { "text": "He thought his insurance covered everything.", "es": "Creía que su seguro lo cubría todo." },
+        { "text": "He had already paid the bill.", "es": "Ya había pagado la factura." },
+        { "text": "He never rented a car.", "es": "Nunca alquiló un coche." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Why was his claim denied at first?",
+      "es": "¿Por qué le rechazaron la reclamación al principio?",
+      "options": [
+        { "text": "He sent it too late.", "es": "La mandó demasiado tarde." },
+        { "text": "The policy doesn't include flat tires.", "es": "La póliza no incluye los pinchazos." },
+        { "text": "Maya was driving the car.", "es": "Maya conducía el coche." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Who finally solves the problem?",
+      "es": "¿Quién soluciona por fin el problema?",
+      "options": [
+        { "text": "The first representative.", "es": "El primer agente." },
+        { "text": "Maya, on the phone.", "es": "Maya, por teléfono." },
+        { "text": "A supervisor.", "es": "Una supervisora." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "What does Pablo ask for at the end?",
+      "es": "¿Qué pide Pablo al final?",
+      "options": [
+        { "text": "A free car for his next trip.", "es": "Un coche gratis para su próximo viaje." },
+        { "text": "A written confirmation.", "es": "Una confirmación por escrito." },
+        { "text": "To speak to the manager.", "es": "Hablar con el director." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "b2-paperwork.claim", "distractors": ["reclamation", "complain"] },
+    { "id": "g2", "sentence": "s5", "answer": "b2-paperwork.insurance-policy", "gap": "policy", "distractors": ["police", "politics"] },
+    { "id": "g3", "sentence": "s7", "answer": "b2-paperwork.fine-print", "distractors": ["small letter", "thin print"] },
+    { "id": "g4", "sentence": "s9", "answer": "b2-paperwork.my-claim-was-denied", "gap": "denied", "distractors": ["refunded", "negated"] },
+    { "id": "g5", "sentence": "s12", "answer": "b2-paperwork.id-like-to-escalate-this-to-a-supervisor", "gap": "escalate", "distractors": ["climb", "scale"] },
+    { "id": "g6", "sentence": "s16", "answer": "b2-paperwork.could-you-put-that-in-writing", "gap": "in writing", "distractors": ["on writing", "in written"] }
+  ]
+}

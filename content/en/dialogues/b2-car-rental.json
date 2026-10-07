@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-car-rental",
+  "title": "Un problema con el coche de alquiler",
+  "description": "Llamas a la agencia de alquiler porque el coche tiene un problema en mitad del viaje.",
+  "situation": "viajes",
+  "unit": "b2-travel",
+  "order": 205,
+  "register": "formal",
+  "level": "B2",
+  "avatars": { "Empleado": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Empleado", "text": "Thank you for calling Roadway Rentals. How can I help you today?", "es": "Gracias por llamar a Roadway Rentals. ¿En qué puedo ayudarle hoy?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que alquilaste un coche ayer y que se ha encendido un testigo del motor en el salpicadero.",
+      "options": [
+        { "text": "Hi, I rented a car from you yesterday, and a warning light has come on on the dashboard.", "es": "Hola, ayer les alquilé un coche y se ha encendido un testigo de aviso en el salpicadero.", "verdict": "correct", "feedback": "¡Muy bien! «come on» = encenderse (una luz); «dashboard» = salpicadero." },
+        { "text": "Hi, there's a problem with my rental car. There's a light on.", "es": "Hola, hay un problema con mi coche de alquiler. Hay una luz encendida.", "verdict": "acceptable", "feedback": "Se entiende, pero conviene decir cuándo lo alquilaste y qué luz es." },
+        { "text": "Hi, I rented a car to you yesterday, and a warning light has turned on in the dashboard.", "es": "Hola, ayer les alquilé un coche y se ha encendido un testigo en el salpicadero.", "verdict": "wrong", "feedback": "«rent a car to you» es alquilártelo tú a ellos; tú lo alquilas «from» la agencia. Y es «on the dashboard»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Empleado", "text": "I'm sorry to hear that. Is the car still drivable, or have you had to pull over?", "es": "Siento oír eso. ¿Todavía se puede conducir el coche, o ha tenido que parar en el arcén?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que has parado en una gasolinera porque el coche hacía un ruido raro y no querías arriesgarte.",
+      "options": [
+        { "text": "I've pulled over at a gas station. The car was making a strange noise, and I didn't want to risk it.", "es": "He parado en una gasolinera. El coche hacía un ruido raro y no quería arriesgarme.", "verdict": "correct", "feedback": "¡Perfecto! «pull over» = apartarse y parar; «make a noise» es la colocación correcta." },
+        { "text": "I stopped at a gas station because of a noise.", "es": "He parado en una gasolinera por un ruido.", "verdict": "acceptable", "feedback": "Correcto; describir el ruido («a strange noise») y tu motivo ayuda." },
+        { "text": "I've pulled over at a gas station. The car was doing a strange noise, and I didn't want to risk.", "es": "He parado en una gasolinera. El coche hacía un ruido raro y no quería arriesgarme.", "verdict": "wrong", "feedback": "Un ruido se «make», no se «do»; y «risk» necesita complemento: «risk it»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Empleado", "text": "You did the right thing. We can send a tow truck, or you could swap it at our nearest branch.", "es": "Ha hecho bien. Podemos enviar una grúa, o podría cambiarlo en nuestra oficina más cercana.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta cuánto tardaría la grúa y si tendrías que pagar algo extra.",
+      "options": [
+        { "text": "How long would the tow truck take to get here? And would I have to pay anything extra?", "es": "¿Cuánto tardaría la grúa en llegar? ¿Y tendría que pagar algo extra?", "verdict": "correct", "feedback": "¡Genial! «How long would it take…?» y «anything» en preguntas." },
+        { "text": "Is the tow truck free?", "es": "¿La grúa es gratis?", "verdict": "acceptable", "feedback": "Es una pregunta válida, pero también te interesa saber cuánto tardará." },
+        { "text": "How much would the tow truck delay? And would I have to pay something extra?", "es": "¿Cuánto tardaría la grúa? ¿Y tendría que pagar algo extra?", "verdict": "wrong", "feedback": "«tardar» es «take», no «delay»: «How long would it take?». En preguntas se suele usar «anything»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Empleado", "text": "It's covered, since it's a mechanical issue. The truck should be there within an hour.", "es": "Está cubierto, ya que es una avería mecánica. La grúa debería llegar en menos de una hora.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Acepta y pide que te confirmen por correo que no te cobrarán nada.",
+      "options": [
+        { "text": "That works for me. Could you confirm by email that I won't be charged?", "es": "Me parece bien. ¿Podrían confirmarme por correo que no me cobrarán nada?", "verdict": "correct", "feedback": "¡Bien! «I won't be charged» = no me cobrarán (pasiva); pedirlo por escrito es prudente." },
+        { "text": "Okay, send the truck, please.", "es": "Vale, envíen la grúa, por favor.", "verdict": "acceptable", "feedback": "Correcto, pero sin confirmación por escrito podrías tener sorpresas en la factura." },
+        { "text": "That works for me. Could you confirm me by email that you won't charge me nothing?", "es": "Me parece bien. ¿Podrían confirmarme por correo que no me cobrarán nada?", "verdict": "wrong", "feedback": "Se dice «confirm that…» sin «me», y no hay doble negación: «won't charge me anything»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Empleado", "text": "Of course. You'll get an email in a few minutes. Again, sorry for the trouble.", "es": "Por supuesto. Recibirá un correo en unos minutos. De nuevo, disculpe las molestias.", "voice": "en-US-BrianNeural" }
+  ]
+}
