@@ -1,0 +1,102 @@
+{
+  "id": "story.ru-a1-goodbye",
+  "order": 12,
+  "title": "До свида́ния, Петербу́рг!",
+  "titleEs": "¡Adiós, San Petersburgo!",
+  "description": "Último día: regalos de despedida, Dima lleva a Lucía en coche al aeropuerto de Púlkovo y se dicen adiós.",
+  "emoji": "👋",
+  "situation": "viajes",
+  "level": "A1",
+  "voice": "ru-RU-DmitryNeural",
+  "sentences": [
+    { "id": "s1", "text": "В понеде́льник у́тром Луси́я улета́ла домо́й.", "es": "El lunes por la mañana, Lucía volvía a casa en avión." },
+    { "id": "s2", "text": "Ди́ма отвёз её в аэропо́рт Пу́лково на маши́не.", "es": "Dima la llevó en coche al aeropuerto de Púlkovo." },
+    { "id": "s3", "text": "А́ня не пое́хала: у неё была́ экску́рсия в Эрмита́же.", "es": "Ania no fue: tenía una visita guiada en el Hermitage." },
+    { "id": "s4", "text": "Но у́тром она́ подари́ла Луси́и матрёшку.", "es": "Pero por la mañana le regaló a Lucía una matrioska." },
+    { "id": "s5", "text": "А Ве́ра Петро́вна дала́ ей пирожки́ в доро́гу.", "es": "Y Vera Petrovna le dio empanadillas para el viaje." },
+    { "id": "s6", "text": "В маши́не они́ мно́го говори́ли и смея́лись.", "es": "En el coche hablaron mucho y se rieron." },
+    { "id": "s7", "text": "В аэропорту́ бы́ло мно́го люде́й.", "es": "En el aeropuerto había mucha gente." },
+    { "id": "s8", "text": "Луси́я сдала́ чемода́н на регистра́ции.", "es": "Lucía facturó la maleta." },
+    { "id": "s9", "text": "«Ну, вот и всё. Тебе́ пора́.»", "es": "«Bueno, pues ya está. Te tienes que ir.»" },
+    { "id": "s10", "text": "«Ди́ма, спаси́бо за всё! Э́то была́ лу́чшая неде́ля в мое́й жи́зни.»", "es": "«¡Dima, gracias por todo! Ha sido la mejor semana de mi vida.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s11", "text": "«Приезжа́й ещё! Мы бу́дем скуча́ть.»", "es": "«¡Vuelve pronto! Te vamos a echar de menos.»" },
+    { "id": "s12", "text": "«Обяза́тельно прие́ду! До встре́чи!»", "es": "«¡Claro que volveré! ¡Hasta la próxima!»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s13", "text": "В самолёте Луси́я смотре́ла в окно́ и улыба́лась.", "es": "En el avión, Lucía miraba por la ventanilla y sonreía." },
+    { "id": "s14", "text": "Она́ уже́ зна́ла: сле́дующим ле́том она́ вернётся в Петербу́рг.", "es": "Ya lo sabía: el verano que viene volvería a San Petersburgo." }
+  ],
+  "keywords": [
+    "ru-a1-alphabet.aeroport",
+    "ru-a1-city.ekskursiya",
+    "ru-a1-shopping.matryoshka",
+    {
+      "id": "story-ru-pirozhok",
+      "word": "пирожо́к",
+      "gender": "m",
+      "plural": "пирожки́",
+      "es": "la empanadilla (pirozhok)",
+      "notes": "Es el diminutivo de «пиро́г»: empanadillas pequeñas de carne, col, patata o manzana. Casi siempre se dice en plural: «пирожки́».",
+      "situation": "comida",
+      "image": "fluent:dumpling"
+    },
+    "ru-a1-transport.chemodan",
+    "ru-a1-transport.registratsiya",
+    "ru-a1-daily.nedelya",
+    "story-ru-skuchat",
+    "ru-a1-hello.do-vstrechi",
+    "ru-a1-transport.samolyot"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Кто отвёз Луси́ю в аэропо́рт?",
+      "es": "¿Quién llevó a Lucía al aeropuerto?",
+      "options": [
+        { "text": "А́ня.", "es": "Ania." },
+        { "text": "Ди́ма.", "es": "Dima." },
+        { "text": "Ве́ра Петро́вна.", "es": "Vera Petrovna." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Почему́ А́ня не пое́хала в аэропо́рт?",
+      "es": "¿Por qué no fue Ania al aeropuerto?",
+      "options": [
+        { "text": "У неё была́ экску́рсия.", "es": "Tenía una visita guiada." },
+        { "text": "Она́ заболе́ла.", "es": "Se puso enferma." },
+        { "text": "Она́ была́ на да́че.", "es": "Estaba en la dacha." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Что подари́ла Луси́и А́ня?",
+      "es": "¿Qué le regaló Ania a Lucía?",
+      "options": [
+        { "text": "Пирожки́.", "es": "Empanadillas." },
+        { "text": "Матрёшку.", "es": "Una matrioska." },
+        { "text": "Кни́гу.", "es": "Un libro." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Когда́ Луси́я вернётся в Петербу́рг?",
+      "es": "¿Cuándo volverá Lucía a San Petersburgo?",
+      "options": [
+        { "text": "Зимо́й.", "es": "En invierno." },
+        { "text": "Сле́дующим ле́том.", "es": "El verano que viene." },
+        { "text": "Никогда́.", "es": "Nunca." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "ru-a1-alphabet.aeroport", "distractors": ["вокза́л", "теа́тр"] },
+    { "id": "g2", "sentence": "s4", "answer": "ru-a1-shopping.matryoshka", "gap": "матрёшку", "distractors": ["ку́ртку", "ша́пку"] },
+    { "id": "g3", "sentence": "s8", "answer": "ru-a1-transport.chemodan", "distractors": ["ключ", "зонт"] },
+    { "id": "g4", "sentence": "s11", "answer": "story-ru-skuchat", "distractors": ["рабо́тать", "спать"] },
+    { "id": "g5", "sentence": "s12", "answer": "ru-a1-hello.do-vstrechi", "gap": "До встре́чи", "distractors": ["До́брое у́тро", "Приве́т"] },
+    { "id": "g6", "sentence": "s13", "answer": "ru-a1-transport.samolyot", "gap": "самолёте", "distractors": ["по́езде", "авто́бусе"] }
+  ]
+}

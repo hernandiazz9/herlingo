@@ -1,0 +1,95 @@
+{
+  "id": "story.ru-a1-cafe",
+  "order": 7,
+  "title": "В кафе́",
+  "titleEs": "En la cafetería",
+  "description": "Llueve en la avenida Nevski: Lucía y Ania entran en una cafetería a tomar café y un pirog de cerezas.",
+  "emoji": "☕",
+  "situation": "comida",
+  "level": "A1",
+  "voice": "ru-RU-DmitryNeural",
+  "sentences": [
+    { "id": "s1", "text": "По́сле обе́да А́ня и Луси́я гуля́ют по Не́вскому проспе́кту.", "es": "Después de comer, Ania y Lucía pasean por la avenida Nevski." },
+    { "id": "s2", "text": "На у́лице хо́лодно, и идёт дождь.", "es": "Fuera hace frío y está lloviendo." },
+    { "id": "s3", "text": "«Пойдём в кафе́? Я хочу́ ко́фе.»", "es": "«¿Vamos a una cafetería? Me apetece un café.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s4", "text": "«С удово́льствием!»", "es": "«¡Encantada!»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s5", "text": "В кафе́ тепло́ и о́чень ую́тно.", "es": "En la cafetería hace calorcito y se está muy a gusto." },
+    { "id": "s6", "text": "Они́ садя́тся за сто́лик у окна́.", "es": "Se sientan en una mesa junto a la ventana." },
+    { "id": "s7", "text": "Официа́нтка прино́сит меню́.", "es": "La camarera les trae la carta." },
+    { "id": "s8", "text": "«Что вы бу́дете пить?»", "es": "«¿Qué vais a tomar?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s9", "text": "«Я бу́ду капучи́но.»", "es": "«Yo voy a tomar un capuchino.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s10", "text": "«А мне чай с лимо́ном, пожа́луйста.»", "es": "«Y para mí, un té con limón, por favor.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s11", "text": "«У вас есть десе́рты?»", "es": "«¿Tienen postres?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s12", "text": "«Да, есть пиро́г с ви́шней и моро́женое.»", "es": "«Sí, hay pastel de cerezas y helado.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s13", "text": "Пиро́г тёплый и о́чень вку́сный.", "es": "El pastel está calentito y muy rico." },
+    { "id": "s14", "text": "«Како́й вку́сный пиро́г! А́ня, сего́дня я угоща́ю!»", "es": "«¡Qué pastel tan rico! Ania, hoy invito yo.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s15", "text": "Пото́м Луси́я про́сит счёт.", "es": "Luego Lucía pide la cuenta." },
+    { "id": "s16", "text": "«Спаси́бо! Тогда́ в сле́дующий раз угоща́ю я.»", "es": "«¡Gracias! Pues la próxima vez invito yo.»", "voice": "ru-RU-SvetlanaNeural" }
+  ],
+  "keywords": [
+    "ru-a1-city.poidyom-v-kafe",
+    "ru-a1-city.s-udovolstviem",
+    "ru-a1-food.stolik",
+    "ru-a1-food.ofitsiantka",
+    "ru-a1-food.menyu",
+    "ru-a1-food.ya-budu-kapuchino",
+    "ru-a1-food.mne-chai-s-limonom",
+    "ru-a1-food.u-vas-est-deserty",
+    "ru-a1-food.pirog",
+    "ru-a1-food.ya-ugoshchayu"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Почему́ А́ня и Луси́я иду́т в кафе́?",
+      "es": "¿Por qué van Ania y Lucía a una cafetería?",
+      "options": [
+        { "text": "На у́лице хо́лодно, и идёт дождь.", "es": "Fuera hace frío y está lloviendo." },
+        { "text": "Там рабо́тает Ди́ма.", "es": "Allí trabaja Dima." },
+        { "text": "У Луси́и день рожде́ния.", "es": "Es el cumpleaños de Lucía." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Что пьёт А́ня?",
+      "es": "¿Qué toma Ania?",
+      "options": [
+        { "text": "Капучи́но.", "es": "Un capuchino." },
+        { "text": "Чай с лимо́ном.", "es": "Un té con limón." },
+        { "text": "Сок.", "es": "Un zumo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Како́й пиро́г в кафе́?",
+      "es": "¿De qué es el pastel de la cafetería?",
+      "options": [
+        { "text": "С я́блоками.", "es": "De manzana." },
+        { "text": "С мя́сом.", "es": "De carne." },
+        { "text": "С ви́шней.", "es": "De cerezas." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Кто пла́тит сего́дня?",
+      "es": "¿Quién paga hoy?",
+      "options": [
+        { "text": "А́ня.", "es": "Ania." },
+        { "text": "Луси́я.", "es": "Lucía." },
+        { "text": "Ди́ма.", "es": "Dima." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s6", "answer": "ru-a1-food.stolik", "distractors": ["дива́н", "балко́н"] },
+    { "id": "g2", "sentence": "s7", "answer": "ru-a1-food.ofitsiantka", "distractors": ["Медсестра́", "Учи́тельница"] },
+    { "id": "g3", "sentence": "s9", "answer": "ru-a1-food.ya-budu-kapuchino", "gap": "капучи́но", "distractors": ["пельме́ни", "борщ"] },
+    { "id": "g4", "sentence": "s10", "answer": "ru-a1-food.mne-chai-s-limonom", "gap": "лимо́ном", "distractors": ["молоко́м", "са́харом"] },
+    { "id": "g5", "sentence": "s12", "answer": "ru-a1-food.pirog", "distractors": ["суп", "борщ"] },
+    { "id": "g6", "sentence": "s14", "answer": "ru-a1-food.ya-ugoshchayu", "gap": "угоща́ю", "distractors": ["понима́ю", "зна́ю"] }
+  ]
+}

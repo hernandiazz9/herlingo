@@ -1,0 +1,109 @@
+{
+  "id": "story.ru-a1-white-nights",
+  "order": 8,
+  "title": "Бе́лые но́чи",
+  "titleEs": "Las noches blancas",
+  "description": "Dima lleva a Lucía a pasear por el muelle del Nevá en una noche blanca y ven cómo levantan los puentes.",
+  "emoji": "🌉",
+  "situation": "ciudad",
+  "level": "A1",
+  "voice": "ru-RU-DmitryNeural",
+  "sentences": [
+    { "id": "s1", "text": "В Петербу́рге ле́том бе́лые но́чи.", "es": "En verano, en San Petersburgo hay noches blancas." },
+    { "id": "s2", "text": "Да́же но́чью на у́лице светло́.", "es": "Incluso de noche, en la calle hay luz." },
+    { "id": "s3", "text": "Ве́чером Ди́ма и Луси́я гуля́ют по на́бережной.", "es": "Por la noche, Dima y Lucía pasean por el paseo junto al río." },
+    { "id": "s4", "text": "«Смотри́, вот Нева́! Э́то са́мая краси́вая река́ в Росси́и.»", "es": "«¡Mira, ahí está el Nevá! Es el río más bonito de Rusia.»" },
+    { "id": "s5", "text": "«Како́й краси́вый го́род!»", "es": "«¡Qué ciudad tan bonita!»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s6", "text": "На на́бережной мно́го люде́й: тури́сты, студе́нты, музыка́нты.", "es": "En el paseo hay mucha gente: turistas, estudiantes, músicos." },
+    { "id": "s7", "text": "Кто́-то игра́ет на гита́ре.", "es": "Alguien toca la guitarra." },
+    { "id": "s8", "text": "«Ди́ма, кото́рый час?»", "es": "«Dima, ¿qué hora es?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s9", "text": "«Уже́ час но́чи. Сейча́с бу́дет са́мое интере́сное!»", "es": "«Ya es la una de la madrugada. ¡Ahora viene lo más interesante!»" },
+    { "id": "s10", "text": "Но́чью мосты́ на Неве́ разво́дят.", "es": "De noche, los puentes del Nevá se levantan." },
+    { "id": "s11", "text": "Большо́й мост ме́дленно поднима́ется.", "es": "Un puente grande sube despacio." },
+    { "id": "s12", "text": "По реке́ иду́т корабли́.", "es": "Por el río pasan barcos." },
+    { "id": "s13", "text": "«Э́то как в ска́зке!»", "es": "«¡Es como en un cuento!»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s14", "text": "«Да, но тепе́рь мы до утра́ на э́той стороне́ реки́!»", "es": "«Sí, ¡pero ahora nos quedamos en este lado del río hasta la mañana!»" },
+    { "id": "s15", "text": "«Ничего́ стра́шного! Гуля́ем да́льше.»", "es": "«¡No pasa nada! Seguimos paseando.»", "voice": "ru-RU-SvetlanaNeural" }
+  ],
+  "keywords": [
+    "ru-a1-daily.nochyu",
+    {
+      "id": "story-ru-svetlo",
+      "word": "светло́",
+      "es": "hay luz, es de día",
+      "notes": "Lo contrario es «темно́»: está oscuro. En junio, en San Petersburgo casi nunca oscurece.",
+      "situation": "ciudad"
+    },
+    "ru-a1-daily.vecherom",
+    "ru-a1-city.naberezhnaya",
+    "ru-a1-city.reka",
+    "ru-a1-city.kakoi-krasivyi-gorod",
+    "ru-a1-alphabet.chas",
+    "ru-a1-alphabet.most",
+    {
+      "id": "story-ru-korabl",
+      "word": "кора́бль",
+      "gender": "m",
+      "plural": "корабли́",
+      "es": "el barco",
+      "notes": "En las noches blancas, los barcos cruzan la ciudad por el Nevá mientras los puentes están levantados.",
+      "situation": "ciudad",
+      "image": "fluent:ship"
+    },
+    "ru-a1-hello.nichego-strashnogo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Когда́ в Петербу́рге бе́лые но́чи?",
+      "es": "¿Cuándo hay noches blancas en San Petersburgo?",
+      "options": [
+        { "text": "Ле́том.", "es": "En verano." },
+        { "text": "Зимо́й.", "es": "En invierno." },
+        { "text": "О́сенью.", "es": "En otoño." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Где гуля́ют Ди́ма и Луси́я?",
+      "es": "¿Por dónde pasean Dima y Lucía?",
+      "options": [
+        { "text": "В па́рке.", "es": "Por el parque." },
+        { "text": "По на́бережной.", "es": "Por el paseo junto al río." },
+        { "text": "По ры́нку.", "es": "Por el mercado." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Что происхо́дит с моста́ми но́чью?",
+      "es": "¿Qué pasa con los puentes de noche?",
+      "options": [
+        { "text": "Их разво́дят.", "es": "Los levantan." },
+        { "text": "Их мо́ют.", "es": "Los lavan." },
+        { "text": "Их кра́сят.", "es": "Los pintan." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Что де́лают Ди́ма и Луси́я в конце́?",
+      "es": "¿Qué hacen Dima y Lucía al final?",
+      "options": [
+        { "text": "Иду́т домо́й.", "es": "Se van a casa." },
+        { "text": "Гуля́ют да́льше.", "es": "Siguen paseando." },
+        { "text": "Е́дут на такси́.", "es": "Van en taxi." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "story-ru-svetlo", "distractors": ["темно́", "жа́рко"] },
+    { "id": "g2", "sentence": "s3", "answer": "ru-a1-city.naberezhnaya", "gap": "на́бережной", "distractors": ["ры́нку", "ста́нции"] },
+    { "id": "g3", "sentence": "s4", "answer": "ru-a1-city.reka", "distractors": ["у́лица", "пло́щадь"] },
+    { "id": "g4", "sentence": "s10", "answer": "ru-a1-alphabet.most", "gap": "мосты́", "distractors": ["магази́ны", "музе́и"] },
+    { "id": "g5", "sentence": "s12", "answer": "story-ru-korabl", "gap": "корабли́", "distractors": ["маши́ны", "авто́бусы"] },
+    { "id": "g6", "sentence": "s15", "answer": "ru-a1-hello.nichego-strashnogo", "gap": "Ничего́ стра́шного", "distractors": ["Большо́е спаси́бо", "Всего́ хоро́шего"] }
+  ]
+}
