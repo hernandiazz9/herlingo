@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:33Z 💻
+- Updated: 2026-10-07 22:40Z 💻
 - Writer: 💻 desktop (since 11:48Z)
 - Branch: plan-009-ingles-b2-c1 @ 5137464
 - Next step: integrate T125/T126, then T127 + T128; T129 on 💻 last
@@ -198,7 +198,7 @@ Worktree setup: npm ci
 - Outcome: c1-society/storytelling: 89 phrases, 66 vocab, 16 Q&A, 10 lessons · 5137464 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T125 — English C1: 12 dialogues
-- Status: running (attempt 1 · 💻 · agent a66884cf1615c93da · since 22:33Z)
+- Status: done
 - Depends on: T120, T121, T122, T123, T124
 - Where: any
 - Goal: The 12 C1 dialogues listed in docs/brief-en.md (`level: "C1"`, `unit`, one native speaker with a Spanish role name, Fluent avatar and an en-US voice, register-honest options with Spanish feedback), order 301–312.
@@ -208,10 +208,10 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓; 12 C1 dialogues (6–10 turns, ≥ 3 learner turns, 3 options each).
   - `npm run verify` → exit 0
   - Hand check (PC): play two C1 dialogues with device voices.
-- Outcome:
+- Outcome: 12 C1 dialogues (301–312, 7–9 turns, 3–4 learner turns × 3 options) · 60de43a · verify ✓ 💻 · not checked: play two with device voices, avatars woman-artist/man-raising-hand/man-student/man-cook + audio (T129)
 
 ## T126 — English C1: stories 1–6
-- Status: running (attempt 1 · 💻 · agent a371e626f987dedd8 · since 22:33Z)
+- Status: done
 - Depends on: T120, T121, T122, T123, T124, T119
 - Where: any
 - Goal: C1 stories 1–6 (order 301–306, `level: "C1"`) with the Chicago cast, following the arc in docs/brief-en.md; key words reuse unit items by id; end the final message with an outline of stories 7–12 for T127.
@@ -220,7 +220,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings (120–250 words after T111).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: C1 stories 1–6 (301–306), continue from B2 story 12 · 9f21e06 · verify ✓ 💻 · not checked: audio (T129), reading in app
 
 ## T127 — English C1: stories 7–12
 - Status: pending
@@ -277,10 +277,13 @@ Worktree setup: npm ci
 - [ ] T122 @2b11f14 — content review (queued 2026-10-07 💻)
 - [ ] T123 @4c95f94 — content review (note: second 'timeline' vocab entry, complaint sense, vs b2-meetings schedule sense) (queued 2026-10-07 💻)
 - [ ] T124 @5137464 — content review (note: c1-storytelling.make-up 'inventarse' vs b2-relationships.make-up 'hacer las paces', kept separate) (queued 2026-10-07 💻)
+- [ ] T125 @60de43a — content review (queued 2026-10-07 💻)
+- [ ] T126 @9f21e06 — content review (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
 - [ ] T117 @55efa70 — play two B2 dialogues with device voices (queued 2026-10-07 💻)
+- [ ] T125 @60de43a — play two C1 dialogues with device voices (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: B2 and C1 complete the English pack with the full French-sized volume per level and the plan 008 molds; units, grammar, dialogues and stories in docs/brief-en.md (B2/C1 sections added 2026-10-07). (Hernán: "plan b2 c1", same structure)
@@ -290,6 +293,7 @@ Worktree setup: npm ci
 - 2026-10-07 plan: runs in a cloud session (hybrid skill); T129 on the Mac. Base branch `plan-009-ingles-b2-c1` from main @ 1455082; guarded push of the plan branch only; no merge to main or deploy without Hernán's OK. (Hernán)
 - 2026-10-07 T119 outline (from T118): 07 viajes — Jordan's band Midwest tour, Pablo plans a road trip to join (b2-travel) · 08 viajes/dinero — rental car breaks down near Wisconsin, band still plays (b2-travel, b2-paperwork) · 09 dinero — formal insurance claim, arguing with the call centre (b2-paperwork) · 10 social — a text taken the wrong way, Jordan feels left out, they make up (b2-relationships) · 11 salud — Mrs. Carter's health scare while finishing her book; doctor, stress, habits (b2-wellbeing) · 12 opiniones — dinner about Mrs. Carter's reading in local news, Pablo looks back on the year, sets up the C1 acquisition rumour (b2-news, b2-grammar wish/third conditional). Voices: Ava narrator, Pablo Andrew, Jordan/Sam Brian, Maya/Mrs. Carter/Priya Emma.
 - 2026-10-07 B2 story 12 leaves the cast (for T126): Mrs. Carter's bookstore reading in the local paper, her book about to come out; Maya shares an unconfirmed rumour that a big tech company wants to buy the startup; Pablo has mixed feelings, wishes he had more time in Chicago; Jordan's band back from its Midwest tour.
+- 2026-10-07 T127 outline (from T126): 07 trabajo — Maya's hard call: blunt feedback / performance plan for Sam after the acquisition · 08 cultura — Jordan's record deal: clause, deal-breaker, Maya helps negotiate, cold feet · 09 dinero — Pablo's US work-permit renewal red tape, formal complaint, pushes him to decide · 10 opiniones — dinner-party debate (remote work, AI, Chicago rents), Pablo devil's advocate on moving back to Spain · 11 cultura — Mrs. Carter's book launch, anecdote about the four, a chapter about Pablo · 12 social — rooftop farewell: Pablo takes Laura's Valencia offer and stays connected with the startup (default ending; brief leaves it open), hindsight. Cast so far: Greg (HR), Rachel (CEO), Laura (Valencia fintech); extra women = Emma, men = Brian/Andrew as in B2.
 
 ## Proposals (new scope)
 - 2026-10-07 T111: content-guide story/unit-range parts still describe the Italian trip ("Trip order", "A1–A2 Italian")
@@ -333,3 +337,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:32Z 💻 T124 done · worktree-agent-a1005de88ee4b83f0 → 5137464 · verify ✓
 - 2026-10-07 22:33Z 💻 T125 launched · attempt 1 · agent a66884cf1615c93da
 - 2026-10-07 22:33Z 💻 T126 launched · attempt 1 · agent a371e626f987dedd8
+- 2026-10-07 22:40Z 💻 T125 done · worktree-agent-a66884cf1615c93da → 60de43a · verify ✓
+- 2026-10-07 22:40Z 💻 T126 done · worktree-agent-a371e626f987dedd8 → 9f21e06 · verify ✓
