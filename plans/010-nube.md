@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 23:16Z 💻
+- Updated: 2026-10-07 23:52Z 💻
 - Writer: me (💻 desktop)
-- Branch: plan-010-nube @ cfe71d6 (from main) · worktree .claude/worktrees/plan-010 · not pushed
+- Branch: plan-010-nube @ 3aa09ea · pushed (main merged in)
 - Next step: all tasks done; code review T130–T134 + iPhone visual pass
 - Needs Hernán: npx supabase db push (new migration) before any deploy; OK to merge into main
 
@@ -162,3 +162,4 @@ Worktree setup: npm ci
 - 2026-10-07 23:11Z 💻 T133 done · worktree-agent-af32c171b3c245a86 → a3fc6ce · verify ✓
 - 2026-10-07 23:11Z 💻 T134 launched · attempt 1 · agent a0425436ef40bd0a5 (+ BackupSection intro copy when Liga is on)
 - 2026-10-07 23:16Z 💻 T134 done · worktree-agent-a0425436ef40bd0a5 → 9d19829 · verify ✓ · db:check ✓; all tasks done, queues open
+- 2026-10-07 23:52Z 💻 merged origin/main (84 commits) → 3aa09ea; verify ✓ · db:check ✓ (264) · league:local:check ✓ (50)
