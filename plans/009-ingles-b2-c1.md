@@ -10,8 +10,8 @@ Worktree setup: npm ci
 ## Now
 - Updated: 2026-10-07 22:40Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 5137464
-- Next step: integrate T125/T126, then T127 + T128; T129 on 💻 last
+- Branch: plan-009-ingles-b2-c1 @ 6b8b385
+- Next step: integrate T127/T128, then T129 on 💻 (audio, images, offline check)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -223,7 +223,7 @@ Worktree setup: npm ci
 - Outcome: C1 stories 1–6 (301–306), continue from B2 story 12 · 9f21e06 · verify ✓ 💻 · not checked: audio (T129), reading in app
 
 ## T127 — English C1: stories 7–12
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ac83a5827992af568 · since 22:40Z)
 - Depends on: T126
 - Where: any
 - Goal: C1 stories 7–12 (order 307–312) following T126's outline (in Decisions).
@@ -235,7 +235,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T128 — English placement test for four levels
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a40a6f1638a7f7220 · since 22:40Z)
 - Depends on: T112, T113, T114, T115, T116, T120, T121, T122, T123, T124
 - Where: any
 - Goal: Rewrite `content/en/extras/placement.json` with 16 graded questions, 4 per level (A2, B1, B2, C1; easy → hard), covering every non-grammar unit of each level and marking the lessons each proves, so `suggestLevel` (≥ 2/3 of a level and every lower level passed) suggests the right level. Keep the best existing A2/B1 questions by id where they fit.
@@ -339,3 +339,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:33Z 💻 T126 launched · attempt 1 · agent a371e626f987dedd8
 - 2026-10-07 22:40Z 💻 T125 done · worktree-agent-a66884cf1615c93da → 60de43a · verify ✓
 - 2026-10-07 22:40Z 💻 T126 done · worktree-agent-a371e626f987dedd8 → 9f21e06 · verify ✓
+- 2026-10-07 22:40Z 💻 T127 launched · attempt 1 · agent ac83a5827992af568
+- 2026-10-07 22:40Z 💻 T128 launched · attempt 1 · agent a40a6f1638a7f7220
