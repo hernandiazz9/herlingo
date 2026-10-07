@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:18Z 💻
+- Updated: 2026-10-07 22:24Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T113 + T114 running; then T112, T115–T119, T125
+- Next step: T112 + T114 running; then T115–T119, T125
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -46,7 +46,7 @@ Worktree setup: npm ci
 - Outcome: helpers in src/lib/content/script.ts (romanize, stripStress, foldText, stressIssues); articles optional; Gender n/pl; audio --dry-run; voices Svetlana+Dmitry only → 5c16137
 
 ## T112 — Romanization line under target text + Perfil switch
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T111
 - Where: any
 - Goal: Per the Shared contract ("Display"): one shared component renders target text plus, for packs with `romanization` and the switch on, the muted Latin line; every screen that shows target-language text uses it; new key `lang-lern:romanization:<lang>` `{ v: 1, show }` with `getShowRomanization`/`setShowRomanization`/`useShowRomanization` (framework-free + hook, like `@/lib/content/active`); Perfil switch "Mostrar transliteración" only for such packs; Frasario search matches romanization. Packs without `romanization` render exactly as before.
@@ -58,7 +58,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T113 — Script-aware answer matching and speech scoring
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T111
 - Where: any
 - Goal: Per the Shared contract ("Matching"): typed answers accept Cyrillic or Latin (romanization + `alternatives`, accents stripped, existing typo tolerance); stress marks stripped and `fold` applied on both sides for typed answers, tiles, dictation and speech scoring (`scoreHeard`/`bestOption`); a missing stress mark never triggers the "acento" note. Packs without `stress`/`romanization`/`fold` give identical results to today.
@@ -67,7 +67,7 @@ Worktree setup: npm ci
 - Done when:
   - A node/tsx check (not committed) with the ru pack meta prints correct for: "privet" vs "приве́т", "spasibo" vs "спаси́бо", "jorosho"/"khorosho" vs "хорошо́", "ещё" vs "еще", "Привет" vs "приве́т"; and an it/en answer set gives the same results as on main (report the table).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: scriptRules(meta)/prepareScript in @/lib/exercises; Latin path via romanize + alternatives; it/en/fr 0 diffs over 256k comparisons → bde39f8
 
 ## T114 — Russian A1: alphabet and greetings
 - Status: running (attempt 1)
@@ -216,8 +216,10 @@ Worktree setup: npm ci
 
 ## Review queue
 - [ ] T111 @5c16137 — code review (script.ts, build.ts stress check, audio strip) (queued 2026-10-07 💻)
+- [ ] T113 @bde39f8 — code review (normalize.ts Latin path, score.ts) (queued 2026-10-07 💻)
 
 ## Visual checks queue
+- [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: Russian (`ru`) is the fourth pack, levelled with one level A1 (`levels: ["A1"]`), full French volume; A2 later with the same molds; product note in docs/brief-ru.md (docs/brief.md not edited). (Hernán)
@@ -228,6 +230,8 @@ Worktree setup: npm ci
 - 2026-10-07 plan: Base branch `plan-009-ruso` from main @ cfe71d6 in the main checkout (no other plan running); push policy: guarded push of the plan branch after every integrated task; never main, no PR, merge or deploy without Hernán's OK. (orchestrator)
 - 2026-10-07 T111: ru alternatives table is a first pass for T113 (j→kh/h, ia→ya/a, io→yo/o/e, y→i); vy badge 'Trato de usted' without pronoun; gap text must match whole words incl. stress marks (agent)
 - 2026-10-07 plan: T112 and T113 both touch src/components/exercises → run T113 first, T112 after it (orchestrator)
+- 2026-10-07 T113: alternatives one-way (expected romanization → listed alternative) inside typo distance; tiles/fill-gap get scriptRules only (agent)
+- 2026-10-07 T113→T112: FeedbackSheet.tsx:50 diffWords needs getPack(lang).meta as 3rd arg; added to T112's prompt (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-07 T111: server-side Prepárate TTS (api/) still gets stress marks; client strips them today
@@ -237,3 +241,6 @@ Worktree setup: npm ci
 - 2026-10-07 22:11Z 💻 plan approved by Hernán
 - 2026-10-07 22:11Z 💻 T111 launched · attempt 1 · agent a45b2c48e4ff6e874
 - 2026-10-07 22:18Z 💻 T111 done · → 5c16137 · verify ✓
+- 2026-10-07 22:18Z 💻 T113 launched · attempt 1 · agent a62d0af1e05cdb73c
+- 2026-10-07 22:18Z 💻 T114 launched · attempt 1 · agent ae2634e7774cc36ea
+- 2026-10-07 22:24Z 💻 T113 done · → bde39f8 · verify ✓
