@@ -5,7 +5,8 @@
  */
 import { spawn, spawnSync } from "node:child_process";
 import { createHmac, timingSafeEqual } from "node:crypto";
-import { existsSync, readdirSync, readFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { join } from "node:path";
 
 export const ROOT = process.cwd();
@@ -20,6 +21,8 @@ const MIGRATIONS = join(ROOT, "supabase/migrations");
 const STUB = join(ROOT, "scripts/db/auth-stub.sql");
 const LOCAL_AUTH = join(ROOT, "scripts/league-local/local-auth.sql");
 const ROLES = ["anon", "authenticated", "service_role"];
+/** Values above this size are passed to psql through a temp file (see psql()). */
+const BIG_VAR_BYTES = 64 * 1024;
 
 function findPsql(): string {
   if (process.env.PSQL) return process.env.PSQL;
@@ -51,16 +54,38 @@ export interface PgError {
  */
 export function psql(db: string, script: string, vars: Record<string, string> = {}): Promise<PsqlResult> {
   const args = ["-X", "-q", "-At", "-v", "ON_ERROR_STOP=1", "-v", "VERBOSITY=verbose", "-d", db];
-  for (const [k, v] of Object.entries(vars)) args.push("-v", `${k}=${v}`);
+  // Big values (a cloud save can be ~2 MiB) would overflow the command line (ARG_MAX): they go
+  // through a temp file that psql reads with `\set name `cat file`` instead.
+  let dir: string | null = null;
+  let pre = "";
+  for (const [k, v] of Object.entries(vars)) {
+    if (Buffer.byteLength(v) <= BIG_VAR_BYTES) {
+      args.push("-v", `${k}=${v}`);
+      continue;
+    }
+    dir ??= mkdtempSync(join(tmpdir(), "lang-lern-psql-"));
+    const file = join(dir, k);
+    writeFileSync(file, v);
+    pre += `\\set ${k} \`cat '${file}'\`\n`;
+  }
+  const cleanup = () => {
+    if (dir) rmSync(dir, { recursive: true, force: true });
+  };
   return new Promise((resolve) => {
     const child = spawn(PSQL, args, { env: { ...process.env, PGTZ: "UTC" } });
     let stdout = "";
     let stderr = "";
     child.stdout.on("data", (d: Buffer) => (stdout += d.toString("utf8")));
     child.stderr.on("data", (d: Buffer) => (stderr += d.toString("utf8")));
-    child.on("error", (e) => resolve({ ok: false, stdout, stderr: `${stderr}${String(e)}` }));
-    child.on("close", (code) => resolve({ ok: code === 0, stdout, stderr }));
-    child.stdin.end(script);
+    child.on("error", (e) => {
+      cleanup();
+      resolve({ ok: false, stdout, stderr: `${stderr}${String(e)}` });
+    });
+    child.on("close", (code) => {
+      cleanup();
+      resolve({ ok: code === 0, stdout, stderr });
+    });
+    child.stdin.end(pre + script);
   });
 }
 

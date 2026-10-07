@@ -81,7 +81,9 @@ select smoke.ok(not exists (
     'public.league_create_group(text)', 'public.league_join_group(text)', 'public.league_leave_group(text)',
     'public.league_leaderboard(text, text)', 'public.league_last_week_podium(text, text)',
     'public.league_me(text)', 'public.league_delete_me()',
-    'public.league_status()', 'public.league_ranking(text, text)', 'public.league_podium(text, text)']) as f(sig)
+    'public.league_status()', 'public.league_ranking(text, text)', 'public.league_podium(text, text)',
+    'public.league_save_head()', 'public.league_save_get()', 'public.league_save_put(jsonb, bigint)',
+    'public.league_save_delete()']) as f(sig)
   where to_regprocedure(f.sig) is null
 ), 'every RPC of the contract exists');
 
@@ -566,3 +568,125 @@ select smoke.ok(not exists (select 1 from league.stats where user_id = smoke.u(1
 delete from auth.users where id = smoke.u(4);
 select smoke.ok(not exists (select 1 from league.profiles where user_id = smoke.u(4))
   and not exists (select 1 from league.xp_events where user_id = smoke.u(4)), 'auth user deletion cascades');
+
+-- =============================================================================================
+-- 9. Cloud save (league.saves + league_save_*)
+
+-- Users 6 and 7: no Liga profile needed (the save belongs to the auth user).
+insert into auth.users (id) select smoke.u(n) from generate_series(6, 7) n;
+
+create function smoke.blob(note text) returns jsonb
+language sql immutable as $$
+  select jsonb_build_object('app', 'lang-lern', 'format', 1, 'exportedAt', '2026-10-08T10:00:00Z',
+    'data', jsonb_build_object('lang-lern:progress:it', note))
+$$;
+grant execute on function smoke.blob(text) to anon, authenticated;
+
+select smoke.ok(position('league.saves' in pg_get_functiondef('public.league_delete_me()'::regprocedure)) > 0,
+  'league_delete_me re-created to delete the save');
+
+set role authenticated;
+select smoke.login(6);
+select smoke.ok(public.league_save_head() is null, 'no save yet: head is null');
+select smoke.ok(public.league_save_get() is null, 'no save yet: get is null');
+select smoke.ok(public.league_save_put(smoke.blob('x'), 0) ->> 'status' = 'conflict', 'base rev given but no copy → conflict');
+select smoke.ok(public.league_save_head() is null, 'conflict wrote nothing');
+do $$
+declare r jsonb;
+begin
+  r := public.league_save_put(smoke.blob('first'), null);
+  perform smoke.ok(r ->> 'status' = 'ok' and (r ->> 'rev')::bigint = 1, 'put with null base → ok rev 1');
+  perform smoke.ok((r ->> 'size')::int = octet_length(smoke.blob('first')::text) and r ? 'updated_at', 'put returns size and updated_at');
+  r := public.league_save_put(smoke.blob('second'), 1);
+  perform smoke.ok(r ->> 'status' = 'ok' and (r ->> 'rev')::bigint = 2, 'put base 1 → ok rev 2');
+  r := public.league_save_put(smoke.blob('stale'), 1);
+  perform smoke.ok(r ->> 'status' = 'conflict' and (r ->> 'rev')::bigint = 2, 'stale base → conflict with the stored head');
+  perform smoke.ok(not r ? 'data', 'conflict carries no data');
+  r := public.league_save_put(smoke.blob('again'), null);
+  perform smoke.ok(r ->> 'status' = 'conflict' and (r ->> 'rev')::bigint = 2, 'null base when a copy exists → conflict');
+  r := public.league_save_get();
+  perform smoke.ok((r ->> 'rev')::bigint = 2 and r -> 'data' = smoke.blob('second'), 'data unchanged after conflicts');
+  r := public.league_save_head();
+  perform smoke.ok((r ->> 'rev')::bigint = 2 and not r ? 'data' and r ? 'size' and r ? 'updated_at', 'head: rev, size, updated_at, no data');
+end $$;
+
+-- Invalid and too large blobs (the limit comes from the migration).
+reset role;
+select set_config('smoke.save_max', league.save_max_bytes()::text, false),
+       set_config('smoke.save_writes', league.save_max_writes_per_hour()::text, false);
+set role authenticated;
+select smoke.login(6);
+select smoke.ok(smoke.err($q$select public.league_save_put(null, 2)$q$) = 'save_invalid', 'null blob → save_invalid');
+select smoke.ok(smoke.err($q$select public.league_save_put('[1]', 2)$q$) = 'save_invalid', 'array blob → save_invalid');
+select smoke.ok(smoke.err($q$select public.league_save_put(smoke.blob('x') || '{"app": "other"}', 2)$q$) = 'save_invalid', 'wrong app → save_invalid');
+select smoke.ok(smoke.err($q$select public.league_save_put(smoke.blob('x') - 'app', 2)$q$) = 'save_invalid', 'missing app → save_invalid');
+select smoke.ok(smoke.err($q$select public.league_save_put(smoke.blob('x') || '{"format": 1.5}', 2)$q$) = 'save_invalid', 'non-integer format → save_invalid');
+select smoke.ok(smoke.err($q$select public.league_save_put(smoke.blob('x') || '{"format": "1"}', 2)$q$) = 'save_invalid', 'string format → save_invalid');
+select smoke.ok(smoke.err($q$select public.league_save_put(smoke.blob('x') || '{"data": []}', 2)$q$) = 'save_invalid', 'data not an object → save_invalid');
+select smoke.ok(smoke.err($q$select public.league_save_put(smoke.blob(repeat('a', current_setting('smoke.save_max')::int)), 2)$q$) = 'save_too_large', 'blob over the size cap → save_too_large');
+select smoke.ok(public.league_save_put(smoke.blob(repeat('a', current_setting('smoke.save_max')::int - 200)), 2) ->> 'status' = 'ok', 'blob just under the cap → ok');
+select smoke.ok((public.league_save_head() ->> 'rev')::bigint = 3, 'rejected puts did not bump rev');
+
+-- User 7 cannot see (or touch) user 6's save.
+select smoke.login(7);
+select smoke.ok(public.league_save_head() is null and public.league_save_get() is null, 'another user sees no save');
+select smoke.ok(public.league_save_put(smoke.blob('mine'), null) ->> 'rev' = '1', 'another user has their own rev 1');
+select public.league_save_delete();
+select smoke.ok(public.league_save_head() is null, 'save_delete removes my copy');
+select public.league_save_delete();
+select smoke.ok(true, 'save_delete with no copy is a no-op');
+select smoke.login(6);
+select smoke.ok((public.league_save_head() ->> 'rev')::bigint = 3, 'the other user''s delete left my save alone');
+select smoke.login(null);
+select smoke.ok(smoke.err($q$select public.league_save_head()$q$) = 'not_authenticated', 'no JWT → not_authenticated');
+reset role;
+
+set role anon;
+select smoke.login(6);
+select smoke.ok(smoke.state($q$select public.league_save_get()$q$) = '42501', 'anon: league_save_get not executable');
+select smoke.ok(smoke.state($q$select public.league_save_head()$q$) = '42501', 'anon: league_save_head not executable');
+select smoke.ok(smoke.state($q$select public.league_save_put(smoke.blob('x'), 3)$q$) = '42501', 'anon: league_save_put not executable');
+select smoke.ok(smoke.state($q$select public.league_save_delete()$q$) = '42501', 'anon: league_save_delete not executable');
+reset role;
+
+-- Rate limit: N writes per hour per user, then save_rate_limited; a window an hour old resets it.
+update league.saves set window_start = now(), window_writes = 0 where user_id = smoke.u(6);
+set role authenticated;
+select smoke.login(6);
+do $$
+declare
+  n int := current_setting('smoke.save_writes')::int;
+  rev bigint := (public.league_save_head() ->> 'rev')::bigint;
+  i int;
+  r jsonb;
+begin
+  for i in 1..n loop
+    r := public.league_save_put(smoke.blob('w' || i), rev);
+    rev := (r ->> 'rev')::bigint;
+  end loop;
+  perform smoke.ok(r ->> 'status' = 'ok' and rev = 3 + n, format('%s writes in an hour are fine', n));
+  perform smoke.ok(smoke.err(format('select public.league_save_put(smoke.blob(%L), %s)', 'over', rev)) = 'save_rate_limited', 'one more → save_rate_limited');
+  perform smoke.ok((public.league_save_get() ->> 'rev')::bigint = rev and public.league_save_get() -> 'data' = smoke.blob('w' || n), 'rate-limited put wrote nothing');
+  perform smoke.ok(public.league_save_put(smoke.blob('stale'), rev - 1) ->> 'status' = 'conflict', 'conflict still answered while rate limited');
+end $$;
+reset role;
+update league.saves set window_start = now() - interval '61 minutes' where user_id = smoke.u(6);
+set role authenticated;
+select smoke.login(6);
+select smoke.ok(public.league_save_put(smoke.blob('later'), (public.league_save_head() ->> 'rev')::bigint) ->> 'status' = 'ok', 'writes allowed again after an hour');
+reset role;
+select smoke.ok((select window_writes from league.saves where user_id = smoke.u(6)) = 1, 'new window counts from 1');
+
+-- league_delete_me removes the save (no Liga profile needed).
+set role authenticated;
+select smoke.login(6);
+select smoke.ok(not public.league_delete_me(), 'delete_me without a profile → false');
+select smoke.ok(public.league_save_head() is null, 'delete_me removes the save');
+select smoke.login(7);
+select smoke.ok(public.league_save_put(smoke.blob('keep'), null) ->> 'status' = 'ok', 'user 7 saves again');
+reset role;
+select smoke.ok(not exists (select 1 from league.saves where user_id = smoke.u(6)), 'no save row left after delete_me');
+
+-- Deleting the auth user cascades to the save.
+delete from auth.users where id = smoke.u(7);
+select smoke.ok(not exists (select 1 from league.saves where user_id = smoke.u(7)), 'auth user deletion cascades to the save');

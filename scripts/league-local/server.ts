@@ -29,7 +29,7 @@ interface AuthUser {
   new_email: string | null;
 }
 
-const MAX_BODY = 1_000_000;
+const MAX_BODY = 4_000_000; // room for a cloud save just over its 2 MiB cap (save_too_large)
 const DEFAULT_REDIRECT = "http://localhost:3000/liga/";
 const LOCAL_ORIGIN = /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/;
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
