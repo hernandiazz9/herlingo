@@ -14,6 +14,14 @@ const PackMeta = z.object({
   nativeName: z.string(),
   speechLocale: z.string(),
   voices: z.array(z.string()).min(1),
+  /**
+   * Written stress (optional, `pack.json` `stress`): `mark` after the stressed vowel of every word
+   * with two or more `vowels`, none in words with a `selfStressed` letter. Shown to the learner,
+   * never sent to a voice.
+   */
+  stress: z
+    .object({ mark: z.string().min(1), vowels: z.string().min(1), selfStressed: z.string().optional() })
+    .optional(),
 });
 export type LanguageMeta = z.infer<typeof PackMeta>;
 
@@ -42,6 +50,19 @@ export function getLanguage(lang: string): LanguageMeta {
 /** Native turns use the pack's first voice; learner options a different one, like static dialogues. */
 export function packVoices(meta: LanguageMeta): { native: string; learner: string } {
   return { native: meta.voices[0], learner: meta.voices[1] ?? meta.voices[0] };
+}
+
+/**
+ * `text` without the written stress marks of the packs that declare `voice` (the coach TTS gets
+ * only text and voice). Unchanged for voices of packs without `stress`.
+ */
+export function stripStressForVoice(text: string, voice: string): string {
+  let out = text;
+  for (const meta of load().values()) {
+    const mark = meta.stress?.mark;
+    if (mark && meta.voices.includes(voice)) out = out.split(mark).join("");
+  }
+  return out;
 }
 
 /** Every voice any pack declares: the TTS endpoint accepts only these. */

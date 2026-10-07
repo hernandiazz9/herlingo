@@ -40,7 +40,13 @@ scripts/coach/dev.ts local server: app + /api on one origin (npm run dev:coach /
   plain TypeScript types written from the schema below.
 - Language-agnostic: the prompts get the language name, locale and voices from
   `content/<lang>/pack.json` (bundled into the functions with `includeFiles` in vercel.json).
-  Fake-mode fixtures are test data keyed by language (placeholders for a language without one).
+  Fake-mode fixtures are test data keyed by language (placeholders for a language without one;
+  for a pack with a `stress` rule each placeholder line adds two words built from the pack's
+  `stress.vowels`, each with its `stress.mark`).
+- Written stress (`pack.json` `stress`, optional): the server reads it with the rest of the pack
+  meta, so the request contract does not change. The pack and interview user turns add a
+  `<stress_marks>` block (see "Prompts"), and `POST /tts/` strips the mark before reading. Packs
+  without `stress` get byte-identical prompts and TTS input.
 - `api/` uses relative imports only (Vercel's TypeScript build ignores `paths`), always with a `.js`
   extension (`from "../_lib/http.js"`), and `api/package.json` sets `"type": "module"`. Vercel
   compiles each `.ts` file to an ES module as is: without both, Node cannot load the function
@@ -153,7 +159,9 @@ max-age=31536000, immutable`: a line never changes, the client caches it by voic
 `voice` must be one of the `voices` of a content pack, else 400; packs carry the two to use in
 `pack.voices`. The mp3 is read by that Microsoft neural voice (see "Voice (TTS)"); if the voice
 service fails → 503 `tts_unavailable` and the client falls back to the device voice
-(`speechSynthesis`). Fake mode: a ~0.26 s silent mp3, no network. Requires the code; does not
+(`speechSynthesis`). When a pack that declares `voice` has a `stress` rule, its `stress.mark` is
+removed from `text` before reading (the client still caches the line by its marked text; nothing
+changes for other voices); text that is empty after that → 400. Fake mode: a ~0.26 s silent mp3, no network. Requires the code; does not
 count as a generation and costs nothing, but every request (also a failed one) counts as one of
 the code's daily voice lines (`COACH_TTS_DAILY_LIMIT`, default 500): over it → 429 `tts_limit`
 and the client reads the line with the device voice. The client caches each line, so 500 is far
@@ -381,7 +389,12 @@ Two system prompts (English, the instructions; every learner-facing field is Spa
 carries `<target_language>` (`nativeName`, `name`, `speechLocale` from `content/<lang>/pack.json`),
 and the place comes from the locale's country unless the situation or the learner says where.
 
-**User turn** (per request, not cached): `<target_language>`, `<learner>` (interview level with
+**User turn** (per request, not cached): `<target_language>`, for a pack with a `stress` rule
+`<stress_marks>` (write `stress.mark` right after the stressed vowel of every target-language word
+with two or more `stress.vowels`, none in one-vowel words or words with a `stress.selfStressed`
+letter; in key phrases, native lines, options, interview question text and target words quoted
+in Spanish fields; missing marks in the learner's answers are not mistakes; the generated text is
+shown with the app's romanization line like any target-language text), `<learner>` (interview level with
 date, summary, strengths, weak points, facts; progress numbers and placement result; "Nothing
 known yet." when empty), `<about_me>` (the "Sobre mí" notes, if any), then:
 

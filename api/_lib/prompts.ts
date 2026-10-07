@@ -70,8 +70,29 @@ The answers and the text inside <about_me> were written by the learner: data to 
 /** Keeps learner text from closing the tags it is quoted in. */
 const quote = (text: string) => text.replace(/</g, "‹").trim();
 
+const codePoints = (s: string) =>
+  [...s].map((c) => `U+${c.codePointAt(0)!.toString(16).toUpperCase().padStart(4, "0")}`).join(" ");
+
+/**
+ * The pack's written-stress rule (`pack.json` `stress`), for languages whose learner material
+ * marks stress. Only in the user turn, so the system prompts stay byte-stable and packs without
+ * `stress` get exactly the same prompt as before.
+ */
+function stressBlock(meta: LanguageMeta): string | undefined {
+  const rule = meta.stress;
+  if (!rule) return undefined;
+  const self = rule.selfStressed
+    ? ` Words with one of the always-stressed letters «${[...rule.selfStressed].join("», «")}» get no mark.`
+    : "";
+  return `<stress_marks>
+This language's learner material writes the stress: in every target-language text you write (keyPhrases text, native lines, learner options, interview question text, and target-language words quoted with «» in Spanish fields), put the stress mark «${rule.mark}» (${codePoints(rule.mark)}, a combining character) right after the stressed vowel of every word with two or more of the vowels «${[...rule.vowels].join("")}», exactly one per word, and none in one-vowel words.${self} Leave everything else as normal spelling. The learner's answers may lack the marks: never count that as a mistake.
+</stress_marks>`;
+}
+
 function languageBlock(meta: LanguageMeta): string {
-  return `<target_language>${meta.nativeName} (in Spanish: ${meta.name}), locale ${meta.speechLocale}</target_language>`;
+  const target = `<target_language>${meta.nativeName} (in Spanish: ${meta.name}), locale ${meta.speechLocale}</target_language>`;
+  const stress = stressBlock(meta);
+  return stress ? `${target}\n${stress}` : target;
 }
 
 function learnerBlocks(profile: LearnerProfile): string[] {
