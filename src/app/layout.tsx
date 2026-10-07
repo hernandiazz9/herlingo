@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { LeagueSync } from "@/components/league/LeagueSync";
+import { InstallPrompt } from "@/components/shell/InstallPrompt";
 import { XpToast } from "@/components/shell/XpToast";
 import { TabBar } from "@/components/shell/TabBar";
 import { ThemeSync } from "@/components/shell/ThemeSync";
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           </main>
           <TabBar />
           <UpdatePrompt />
+          <InstallPrompt />
         </div>
       </body>
     </html>
