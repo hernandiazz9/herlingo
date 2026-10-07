@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 23:08Z 💻
+- Updated: 2026-10-07 23:09Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T122 running; then T124 on the Mac (npm run audio/images, offline check)
+- Next step: T124 running on the Mac (audio, pictures, offline check)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -166,7 +166,7 @@ Worktree setup: npm ci
 - Outcome: 6 stories (83–93 words), narrator Dmitry, women Svetlana; inline words story-ru-sosedka/eskalator/vspyshka → 27ba4ba
 
 ## T122 — Russian A1: stories 7–12
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T121
 - Where: any
 - Goal: Stories 7–12 continuing T121's outline (café, white nights, a cold and the pharmacy, a dacha weekend, the past week in past tense, goodbye at the airport), reusing T121's inline key words by id.
@@ -175,7 +175,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: stories 7–12 (81–98 words), past tense in 10–12, 7 new inline words → 5cf8825
 
 ## T123 — Russian placement test
 - Status: done
@@ -190,7 +190,7 @@ Worktree setup: npm ci
 - Outcome: 8 questions easy→hard over 8 units, all with audio; single-level suggestLevel always A1 → 3dfb900
 
 ## T124 — Russian audio and pictures, final offline check
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T112, T113, T120, T122, T123
 - Where: mac
 - Goal: Generate ru-RU neural mp3 for every Russian playable (text without stress marks) and the Russian pictures, commit them, and prove the Russian course works offline with only its audio cached.
@@ -228,12 +228,14 @@ Worktree setup: npm ci
 - [ ] T121 @27ba4ba — Russian language review (stories 1–6) (queued 2026-10-07 💻)
 - [ ] T120 @63a23e9 — Russian language review (dialogues) (queued 2026-10-07 💻)
 - [ ] T123 @3dfb900 — Russian language review (placement) (queued 2026-10-07 💻)
+- [ ] T122 @5cf8825 — Russian language review (stories 7–12) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
 - [ ] T112 @84820ed — Russian lesson/Frasario/dialogue/story with Latin line, Perfil switch off/on; Italian unchanged; light + dark 375 px; check Perfil hint 'Las letras latinas debajo del {idioma}' casing (queued 2026-10-07 💻)
 - [ ] T125 @41225a2 — Prepárate pack + interview with Russian active (fake mode): marks + Latin line; light + dark 375 px (queued 2026-10-07 💻)
 - [ ] T120 @63a23e9 — play two Russian dialogues (vy + neighbour tu) with device voices; badge 'Trato de usted/tú'; Latin line on options (queued 2026-10-07 💻)
+- [ ] T122 @5cf8825 — read two Russian stories with Latin line on/off (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: Russian (`ru`) is the fourth pack, levelled with one level A1 (`levels: ["A1"]`), full French volume; A2 later with the same molds; product note in docs/brief-ru.md (docs/brief.md not edited). (Hernán)
@@ -287,3 +289,4 @@ Worktree setup: npm ci
 - 2026-10-07 23:04Z 💻 T120 done · → 63a23e9 · verify ✓
 - 2026-10-07 23:04Z 💻 T123 launched · attempt 1 · agent a9a4d7e7750c97261
 - 2026-10-07 23:08Z 💻 T123 done · → 3dfb900 · verify ✓
+- 2026-10-07 23:09Z 💻 T122 done · → 5cf8825 · verify ✓
