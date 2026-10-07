@@ -1,0 +1,1087 @@
+{
+  "id": "c1-idioms",
+  "order": 332,
+  "level": "C1",
+  "title": "Expresiones y phrasal verbs avanzados",
+  "description": "Las expresiones y phrasal verbs que los nativos usan sin pensar, en el trabajo, con amigos y en el día a día: qué significan, cuándo encajan y cuáles no conviene traducir palabra por palabra.",
+  "emoji": "🧩",
+  "situation": "social",
+  "lessons": [
+    {
+      "id": "c1-idioms.l.work",
+      "title": "Expresiones del trabajo",
+      "items": [
+        "c1-idioms.idiom",
+        "c1-idioms.ballpark-figure",
+        "c1-idioms.can-you-give-me-a-ballpark-figure",
+        "c1-idioms.get-the-ball-rolling",
+        "c1-idioms.lets-get-the-ball-rolling",
+        "c1-idioms.drop-the-ball",
+        "c1-idioms.i-dropped-the-ball-on-that-one",
+        "c1-idioms.back-to-the-drawing-board",
+        "c1-idioms.its-back-to-the-drawing-board",
+        "c1-idioms.back-burner",
+        "c1-idioms.lets-put-it-on-the-back-burner",
+        "c1-idioms.the-elephant-in-the-room",
+        "c1-idioms.lets-address-the-elephant-in-the-room",
+        "c1-idioms.long-shot",
+        "c1-idioms.its-a-long-shot-but",
+        "c1-idioms.learning-curve",
+        "c1-idioms.go-the-extra-mile",
+        "c1-idioms.she-always-goes-the-extra-mile",
+        "b2-tech-talk.cut-corners",
+        "c1-idioms.qa.estimate",
+        "c1-idioms.qa.missed"
+      ]
+    },
+    {
+      "id": "c1-idioms.l.feelings",
+      "title": "Emociones y reacciones",
+      "items": [
+        "c1-idioms.cold-feet",
+        "c1-idioms.he-got-cold-feet",
+        "c1-idioms.on-edge",
+        "c1-idioms.everyone-has-been-on-edge",
+        "c1-idioms.blow-off-steam",
+        "c1-idioms.i-go-running-to-blow-off-steam",
+        "c1-idioms.the-last-straw",
+        "c1-idioms.that-was-the-last-straw",
+        "c1-idioms.fly-off-the-handle",
+        "c1-idioms.theres-no-need-to-fly-off-the-handle",
+        "c1-idioms.bite-my-tongue",
+        "c1-idioms.i-had-to-bite-my-tongue",
+        "c1-idioms.i-could-barely-keep-a-straight-face",
+        "c1-idioms.butterflies",
+        "c1-idioms.i-had-butterflies-in-my-stomach",
+        "b2-relationships.i-was-over-the-moon",
+        "c1-idioms.qa.wedding"
+      ]
+    },
+    {
+      "id": "c1-idioms.l.phrasal-work",
+      "title": "Phrasal verbs avanzados en el trabajo",
+      "items": [
+        "c1-idioms.iron-out",
+        "c1-idioms.we-still-need-to-iron-out-a-few-details",
+        "c1-idioms.rule-out",
+        "c1-idioms.we-cant-rule-out-a-delay",
+        "c1-idioms.play-down",
+        "c1-idioms.he-tried-to-play-down-the-problem",
+        "c1-idioms.follow-through",
+        "c1-idioms.its-important-to-follow-through",
+        "c1-idioms.fall-through",
+        "c1-idioms.the-deal-fell-through",
+        "c1-idioms.phase-out",
+        "c1-idioms.were-phasing-out-the-old-api",
+        "c1-idioms.brush-up-on",
+        "c1-idioms.i-need-to-brush-up-on-my-sql",
+        "b1-grammar.come-up-with",
+        "c1-idioms.step-down",
+        "c1-idioms.the-ceo-is-stepping-down",
+        "c1-idioms.qa.deal",
+        "c1-idioms.qa.ready"
+      ]
+    },
+    {
+      "id": "c1-idioms.l.phrasal-people",
+      "title": "Phrasal verbs con la gente",
+      "items": [
+        "c1-idioms.fall-out-with",
+        "c1-idioms.she-fell-out-with-her-sister",
+        "c1-idioms.come-across-as",
+        "c1-idioms.he-comes-across-as-a-bit-arrogant",
+        "c1-idioms.look-up-to",
+        "c1-idioms.ive-always-looked-up-to-my-grandfather",
+        "c1-idioms.talk-into",
+        "c1-idioms.jordan-talked-me-into-it",
+        "c1-idioms.back-out",
+        "c1-idioms.you-cant-back-out-now",
+        "c1-idioms.open-up",
+        "c1-idioms.it-took-him-a-while-to-open-up",
+        "c1-idioms.let-down",
+        "c1-idioms.i-dont-want-to-let-you-down",
+        "c1-idioms.stand-up-for",
+        "c1-idioms.thanks-for-standing-up-for-me",
+        "b2-grammar.put-up-with",
+        "c1-idioms.qa.new-colleague"
+      ]
+    },
+    {
+      "id": "c1-idioms.l.everyday",
+      "title": "Expresiones del día a día",
+      "items": [
+        "c1-idioms.cup-of-tea",
+        "c1-idioms.its-not-really-my-cup-of-tea",
+        "c1-idioms.under-the-weather",
+        "c1-idioms.im-feeling-a-bit-under-the-weather",
+        "c1-idioms.call-it-a-day",
+        "c1-idioms.lets-call-it-a-day",
+        "c1-idioms.sleep-on-it",
+        "c1-idioms.can-i-sleep-on-it",
+        "c1-idioms.beat-around-the-bush",
+        "c1-idioms.stop-beating-around-the-bush",
+        "c1-idioms.hit-the-nail-on-the-head",
+        "c1-idioms.you-hit-the-nail-on-the-head",
+        "c1-idioms.once-in-a-blue-moon",
+        "c1-idioms.i-only-eat-out-once-in-a-blue-moon",
+        "c1-idioms.speak-of-the-devil",
+        "c1-idioms.it-wont-break-the-bank",
+        "c1-idioms.rocket-science",
+        "c1-idioms.its-not-rocket-science",
+        "b2-news.take-it-with-a-grain-of-salt",
+        "c1-idioms.qa.concert",
+        "c1-idioms.qa.offer"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "c1-idioms.can-you-give-me-a-ballpark-figure",
+      "text": "Can you give me a ballpark figure before we commit?",
+      "es": "¿Me puedes dar una cifra aproximada antes de comprometernos?",
+      "notes": "«ballpark figure» = cifra aproximada (del béisbol: «ballpark» = estadio). «commit» = comprometerse.",
+      "explanation": "Muy usado en presupuestos y estimaciones. «ballpark» se acentúa al principio: «BOL-park».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.lets-get-the-ball-rolling",
+      "text": "Let's get the ball rolling with a quick round of introductions.",
+      "es": "Empecemos con una ronda rápida de presentaciones.",
+      "notes": "«get the ball rolling» = arrancar, poner algo en marcha.",
+      "explanation": "«rolling» con «o» larga: «ROU-ling». «round of» se une: «RAUN-dəv».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.i-dropped-the-ball-on-that-one",
+      "text": "Sorry, I dropped the ball on that one. I'll fix it today.",
+      "es": "Perdona, eso se me pasó a mí. Lo arreglo hoy.",
+      "notes": "«drop the ball» = descuidar algo de lo que eras responsable. Reconocerlo así suena profesional y honesto.",
+      "explanation": "«dropped» termina en /t/: «dropt», una sola sílaba.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.its-back-to-the-drawing-board",
+      "text": "The client hated it, so it's back to the drawing board.",
+      "es": "Al cliente no le gustó nada, así que toca empezar de cero.",
+      "notes": "«back to the drawing board» = volver a empezar el diseño desde el principio tras un fracaso.",
+      "explanation": "«drawing» sin «r» en medio: «DRO-ing». «board» con «r» americana.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.lets-put-it-on-the-back-burner",
+      "text": "Let's put the redesign on the back burner until after the launch.",
+      "es": "Dejemos el rediseño en segundo plano hasta después del lanzamiento.",
+      "notes": "«on the back burner» = aparcado, sin prioridad (el fuego de atrás de la cocina).",
+      "explanation": "«burner» con «r» americana dos veces: «BÉR-ner».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.lets-address-the-elephant-in-the-room",
+      "text": "Let's address the elephant in the room: we're three weeks behind.",
+      "es": "Hablemos de lo que nadie quiere mencionar: vamos tres semanas tarde.",
+      "notes": "«the elephant in the room» = el problema evidente que nadie menciona. «address» = abordar (no solo «dirección»).",
+      "explanation": "Como verbo, «address» se acentúa al final: «ə-DRES».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.its-a-long-shot-but",
+      "text": "It's a long shot, but maybe they'd agree to a trial period.",
+      "es": "Es poco probable, pero a lo mejor aceptan un periodo de prueba.",
+      "notes": "«a long shot» = algo con pocas posibilidades de salir bien, pero que vale la pena intentar.",
+      "explanation": "«shot» con «o» corta y abierta: «shat» en americano.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.she-always-goes-the-extra-mile",
+      "text": "She always goes the extra mile for her clients.",
+      "es": "Siempre hace más de lo que se le pide por sus clientes.",
+      "notes": "«go the extra mile» = esforzarse más de lo necesario.",
+      "explanation": "«extra mile» se une: «EK-strə-MAIL». No digas «es-tra».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.he-got-cold-feet",
+      "text": "He was about to sign the lease, but he got cold feet.",
+      "es": "Estaba a punto de firmar el contrato de alquiler, pero le entró miedo y se echó atrás.",
+      "notes": "«get cold feet» = echarse atrás por nervios justo antes de algo importante (bodas, firmas).",
+      "explanation": "«cold feet» une la «d» con la «f»: «koul-FIIT», con «ii» larga en «feet».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.everyone-has-been-on-edge",
+      "text": "Everyone has been on edge since they announced the layoffs.",
+      "es": "Todo el mundo está con los nervios a flor de piel desde que anunciaron los despidos.",
+      "notes": "«on edge» = nervioso, tenso. «layoffs» = despidos colectivos.",
+      "explanation": "«on edge» se une: «o-NEDGE». «layoffs» se acentúa al principio: «LEI-ofs».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.i-go-running-to-blow-off-steam",
+      "text": "After a long week, I go running to blow off some steam.",
+      "es": "Después de una semana larga, salgo a correr para desfogarme.",
+      "notes": "«blow off steam» = desahogarse, soltar tensión (también «let off steam»).",
+      "explanation": "«steam» con «ii» larga y sin «e» delante: «stiim», no «estiim».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.that-was-the-last-straw",
+      "text": "He missed another deadline, and that was the last straw.",
+      "es": "Se saltó otra fecha de entrega, y eso fue la gota que colmó el vaso.",
+      "notes": "«the last straw» = la gota que colma el vaso (literalmente, la última paja).",
+      "explanation": "«straw» sin «e» delante: «strah», con la boca bien abierta.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.theres-no-need-to-fly-off-the-handle",
+      "text": "There's no need to fly off the handle. Let's talk about it calmly.",
+      "es": "No hace falta ponerse así. Hablémoslo con calma.",
+      "notes": "«fly off the handle» = perder los estribos de repente.",
+      "explanation": "«calmly» sin «l» pronunciada: «KAAM-li».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.i-had-to-bite-my-tongue",
+      "text": "I had to bite my tongue when he took credit for my work.",
+      "es": "Tuve que morderme la lengua cuando se atribuyó mi trabajo.",
+      "notes": "«bite your tongue» = callarte algo que querías decir. «take credit for» = atribuirse el mérito.",
+      "explanation": "«tongue» se dice «tang», una sílaba: la «ue» final no suena.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.i-could-barely-keep-a-straight-face",
+      "text": "His excuse was so ridiculous that I could barely keep a straight face.",
+      "es": "Su excusa era tan ridícula que casi no podía aguantarme la risa.",
+      "notes": "«keep a straight face» = mantenerse serio sin reírse. «barely» = apenas.",
+      "explanation": "«straight» se dice «streit», sin «e» delante y sin pronunciar «gh».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.i-had-butterflies-in-my-stomach",
+      "text": "I had butterflies in my stomach right before my talk.",
+      "es": "Tenía un nudo en el estómago justo antes de mi charla.",
+      "notes": "«butterflies in your stomach» = nervios antes de algo importante (no necesariamente amor).",
+      "explanation": "«stomach» se dice «STA-mək», con «k» final, sin «ch».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.we-still-need-to-iron-out-a-few-details",
+      "text": "We still need to iron out a few details before we sign.",
+      "es": "Todavía tenemos que pulir algunos detalles antes de firmar.",
+      "notes": "«iron out» = resolver los últimos problemas o diferencias (literalmente, planchar las arrugas).",
+      "explanation": "«iron» se dice «AI-ərn», casi «airn»: la «r» va al final, no en medio.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.we-cant-rule-out-a-delay",
+      "text": "At this point, we can't rule out a delay.",
+      "es": "A estas alturas, no podemos descartar un retraso.",
+      "notes": "«rule out» = descartar una posibilidad.",
+      "explanation": "«can't» en americano es «kænt», con «a» abierta y «t» casi muda; no confundas con «can» («kn»).",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.he-tried-to-play-down-the-problem",
+      "text": "He tried to play down the problem, but the customers noticed.",
+      "es": "Intentó quitarle importancia al problema, pero los clientes se dieron cuenta.",
+      "notes": "«play down» = minimizar, restar importancia. Lo contrario: «play up» = exagerar.",
+      "explanation": "«tried» termina en /d/: «traid», una sílaba.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.its-important-to-follow-through",
+      "text": "If you promise the client a fix, it's important to follow through.",
+      "es": "Si le prometes una solución al cliente, es importante cumplirlo hasta el final.",
+      "notes": "«follow through (on something)» = cumplir lo prometido, llevarlo a término.",
+      "explanation": "«through» tiene «th» de «think» y «uu» larga: «thruu».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.the-deal-fell-through",
+      "text": "We were about to close, but the deal fell through at the last minute.",
+      "es": "Estábamos a punto de cerrarlo, pero el acuerdo se vino abajo en el último momento.",
+      "notes": "«fall through» = fracasar, no llegar a realizarse (un plan, un trato, una compra).",
+      "explanation": "«fell» con «e» corta; no lo confundas con «fall» («fol»).",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.were-phasing-out-the-old-api",
+      "text": "We're phasing out the old API by the end of the year.",
+      "es": "Vamos a retirar poco a poco la API antigua antes de fin de año.",
+      "notes": "«phase out» = eliminar algo de forma gradual. Lo contrario: «phase in».",
+      "explanation": "«phasing» con «s» sonora: «FEI-zing». «API» se deletrea: «ei-pii-AI».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.i-need-to-brush-up-on-my-sql",
+      "text": "I need to brush up on my SQL before the interview.",
+      "es": "Tengo que repasar mi SQL antes de la entrevista.",
+      "notes": "«brush up on» = refrescar, repasar algo que ya sabías. «SQL» se dice «S-Q-L» o «sequel».",
+      "explanation": "«brush up on» se une: «bra-SHA-pon».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.the-ceo-is-stepping-down",
+      "text": "The CEO is stepping down at the end of the quarter.",
+      "es": "El director general deja el cargo a final de trimestre.",
+      "notes": "«step down» = dimitir, dejar un cargo (más neutro que «resign»).",
+      "explanation": "«CEO» se deletrea: «sii-ii-OU». «quarter» con flap t: «KWO-rer».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.she-fell-out-with-her-sister",
+      "text": "She fell out with her sister over the inheritance.",
+      "es": "Se peleó con su hermana por la herencia.",
+      "notes": "«fall out with someone» = enfadarse con alguien y dejar de hablarse. «a falling-out» = una pelea seria.",
+      "explanation": "«fell out with» se une: «fe-LAUT-with».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.he-comes-across-as-a-bit-arrogant",
+      "text": "He comes across as a bit arrogant, but he's actually really shy.",
+      "es": "Da la impresión de ser algo arrogante, pero en realidad es muy tímido.",
+      "notes": "«come across as» = dar la impresión de ser. «actually» = en realidad.",
+      "explanation": "«across» se acentúa al final: «ə-KROS». «arrogant» al principio: «A-rə-gənt».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.ive-always-looked-up-to-my-grandfather",
+      "text": "I've always looked up to my grandfather.",
+      "es": "Siempre he admirado a mi abuelo.",
+      "notes": "«look up to someone» = admirar a alguien. Ojo: «look up» solo = buscar (en el diccionario).",
+      "explanation": "«looked» termina en /t/: «lukt». «grandfather» suele sonar «GRAN-fa-ther».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.jordan-talked-me-into-it",
+      "text": "I didn't want to go, but Jordan talked me into it.",
+      "es": "No quería ir, pero Jordan me convenció.",
+      "notes": "«talk someone into something» = convencer a alguien. Lo contrario: «talk someone out of it» = convencerle de que no lo haga.",
+      "explanation": "«talked» se dice «tokt», sin pronunciar la «l».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.you-cant-back-out-now",
+      "text": "You can't back out now. Everyone is counting on you.",
+      "es": "Ahora no puedes echarte atrás. Todo el mundo cuenta contigo.",
+      "notes": "«back out (of something)» = echarse atrás en un compromiso. «count on» = contar con.",
+      "explanation": "«back out» se une: «ba-KAUT».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.it-took-him-a-while-to-open-up",
+      "text": "It took him a while to open up about what happened.",
+      "es": "Le costó un tiempo abrirse y contar lo que pasó.",
+      "notes": "«open up (about something)» = abrirse, contar algo personal. «it took him a while» = le llevó un tiempo.",
+      "explanation": "«took him» se une y la «h» casi desaparece: «tu-kim».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.i-dont-want-to-let-you-down",
+      "text": "I really don't want to let you down.",
+      "es": "De verdad que no quiero decepcionarte.",
+      "notes": "«let someone down» = decepcionar o fallar a alguien. «a letdown» = una decepción.",
+      "explanation": "«let you» se une: «LE-chu». «want to» suena «wanna» al hablar, pero no se escribe así.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.thanks-for-standing-up-for-me",
+      "text": "Thanks for standing up for me in the meeting.",
+      "es": "Gracias por defenderme en la reunión.",
+      "notes": "«stand up for someone» = defender a alguien (o una idea). «stand up to someone» = plantarle cara.",
+      "explanation": "Detrás de «for» va -ing: «thanks for standing». «standing» sin «e» delante: «STAN-ding».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.its-not-really-my-cup-of-tea",
+      "text": "Jazz isn't really my cup of tea, but I'll come along.",
+      "es": "El jazz no es lo mío, pero te acompaño.",
+      "notes": "«not my cup of tea» = no es lo mío, no me va. Se usa casi siempre en negativa. «come along» = venir, acompañar.",
+      "explanation": "«cup of tea» se une: «KA-pə-TII», con «of» reducido a «ə».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.im-feeling-a-bit-under-the-weather",
+      "text": "I'm feeling a bit under the weather, so I'll work from home today.",
+      "es": "No me encuentro muy bien, así que hoy trabajo desde casa.",
+      "notes": "«under the weather» = pachucho, algo enfermo. Muy útil para avisar en el trabajo sin dar detalles.",
+      "explanation": "«weather» suena igual que «whether»: «WE-ther», con la «th» suave de «this».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.lets-call-it-a-day",
+      "text": "It's almost eight. Let's call it a day and finish this tomorrow.",
+      "es": "Son casi las ocho. Dejémoslo por hoy y lo terminamos mañana.",
+      "notes": "«call it a day» = dar por terminada la jornada. «call it a night» si es de noche.",
+      "explanation": "«call it a» se une: «KO-li-rə», con la «t» americana como una «r» suave.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.can-i-sleep-on-it",
+      "text": "It sounds great, but can I sleep on it and let you know tomorrow?",
+      "es": "Suena genial, pero ¿lo puedo consultar con la almohada y te digo mañana?",
+      "notes": "«sleep on it» = consultarlo con la almohada, pensarlo una noche antes de decidir.",
+      "explanation": "«sleep» con «ii» larga y sin «e» delante: «sliip», no «esliip».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.stop-beating-around-the-bush",
+      "text": "Stop beating around the bush and tell me what happened.",
+      "es": "Deja de andarte por las ramas y dime qué ha pasado.",
+      "notes": "«beat around the bush» = andarse con rodeos (en británico, «beat about the bush»).",
+      "explanation": "«bush» tiene la «u» corta de «put»: «bush», no «bash».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.you-hit-the-nail-on-the-head",
+      "text": "You hit the nail on the head: the real problem is communication.",
+      "es": "Has dado en el clavo: el problema de verdad es la comunicación.",
+      "notes": "«hit the nail on the head» = dar en el clavo, igual que en español.",
+      "explanation": "«nail» se dice «neil», una sílaba. «head» con «e» corta: «hed».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.i-only-eat-out-once-in-a-blue-moon",
+      "text": "Now that I'm saving up, I only eat out once in a blue moon.",
+      "es": "Ahora que estoy ahorrando, solo como fuera muy de vez en cuando.",
+      "notes": "«once in a blue moon» = de higos a brevas, casi nunca. «eat out» = comer fuera. «save up» = ahorrar para algo.",
+      "explanation": "«blue moon» se dice «bluu-MUUN», con dos «uu» largas.",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.speak-of-the-devil",
+      "text": "Speak of the devil! We were just talking about you.",
+      "es": "¡Hablando del rey de Roma! Justo estábamos hablando de ti.",
+      "notes": "«Speak of the devil» = hablando del rey de Roma; se dice cuando aparece la persona de la que se hablaba.",
+      "explanation": "«devil» se dice «DE-vəl», sin «i» marcada al final.",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.it-wont-break-the-bank",
+      "text": "It's a nice hotel, but it won't break the bank.",
+      "es": "Es un hotel bonito, pero no te va a arruinar.",
+      "notes": "«break the bank» = costar una fortuna. Se usa sobre todo en negativa: «it won't break the bank».",
+      "explanation": "«won't» se dice «wount»; si dices «want», cambias el sentido.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.its-not-rocket-science",
+      "text": "Don't worry, setting it up isn't rocket science.",
+      "es": "No te preocupes, configurarlo no tiene ninguna ciencia.",
+      "notes": "«It's not rocket science» = no es tan difícil, no tiene mucho misterio. «set up» = configurar, instalar.",
+      "explanation": "«science» se dice «SAI-əns», sin «e» delante de la «s».",
+      "register": "tu",
+      "situation": "social"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "c1-idioms.idiom",
+      "word": "idiom",
+      "article": "an",
+      "plural": "idioms",
+      "es": "la expresión hecha, el modismo",
+      "notes": "Falso amigo: «idiom» no es «idioma» («language»). Se dice «I-di-əm».",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.ballpark-figure",
+      "word": "ballpark figure",
+      "article": "a",
+      "plural": "ballpark figures",
+      "es": "la cifra aproximada",
+      "notes": "También «in the ballpark» = más o menos en esa cifra.",
+      "example": "c1-idioms.can-you-give-me-a-ballpark-figure",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.get-the-ball-rolling",
+      "word": "get the ball rolling",
+      "es": "poner algo en marcha, arrancar",
+      "notes": "Para empezar una reunión, un proyecto o una conversación.",
+      "example": "c1-idioms.lets-get-the-ball-rolling",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.drop-the-ball",
+      "word": "drop the ball",
+      "es": "descuidar algo, meter la pata (por despiste)",
+      "notes": "Se usa cuando alguien no hace algo de lo que era responsable.",
+      "example": "c1-idioms.i-dropped-the-ball-on-that-one",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.back-to-the-drawing-board",
+      "word": "back to the drawing board",
+      "es": "volver a empezar desde cero",
+      "notes": "«drawing board» = mesa de dibujo. Se dice tras un fracaso.",
+      "example": "c1-idioms.its-back-to-the-drawing-board",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.back-burner",
+      "word": "on the back burner",
+      "es": "en segundo plano, aparcado",
+      "notes": "«put something on the back burner» = dejarlo para más adelante.",
+      "example": "c1-idioms.lets-put-it-on-the-back-burner",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.the-elephant-in-the-room",
+      "word": "the elephant in the room",
+      "es": "el problema evidente que nadie menciona",
+      "notes": "Se suele decir «address the elephant in the room» = sacar por fin el tema.",
+      "example": "c1-idioms.lets-address-the-elephant-in-the-room",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.long-shot",
+      "word": "long shot",
+      "article": "a",
+      "plural": "long shots",
+      "es": "algo poco probable",
+      "notes": "«It's a long shot» = es difícil, pero se puede intentar. «Not by a long shot» = ni de lejos.",
+      "example": "c1-idioms.its-a-long-shot-but",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.learning-curve",
+      "word": "learning curve",
+      "article": "a",
+      "plural": "learning curves",
+      "es": "la curva de aprendizaje",
+      "notes": "«a steep learning curve» = algo que cuesta aprender al principio.",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.go-the-extra-mile",
+      "word": "go the extra mile",
+      "es": "esforzarse más de lo necesario",
+      "notes": "Se usa como elogio en evaluaciones y recomendaciones.",
+      "example": "c1-idioms.she-always-goes-the-extra-mile",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.cold-feet",
+      "word": "get cold feet",
+      "es": "echarse atrás por miedo",
+      "notes": "Justo antes de algo importante: una boda, una firma, un cambio de trabajo.",
+      "example": "c1-idioms.he-got-cold-feet",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.on-edge",
+      "word": "on edge",
+      "es": "nervioso, tenso",
+      "notes": "«I've been on edge all day» = llevo todo el día con los nervios de punta.",
+      "example": "c1-idioms.everyone-has-been-on-edge",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.blow-off-steam",
+      "word": "blow off steam",
+      "es": "desahogarse, desfogarse",
+      "notes": "También «let off steam». «steam» = vapor.",
+      "example": "c1-idioms.i-go-running-to-blow-off-steam",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.the-last-straw",
+      "word": "the last straw",
+      "es": "la gota que colma el vaso",
+      "notes": "Lo último que hace que alguien pierda la paciencia.",
+      "example": "c1-idioms.that-was-the-last-straw",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.fly-off-the-handle",
+      "word": "fly off the handle",
+      "es": "perder los estribos",
+      "notes": "Enfadarse de golpe y de forma exagerada.",
+      "example": "c1-idioms.theres-no-need-to-fly-off-the-handle",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.bite-my-tongue",
+      "word": "bite your tongue",
+      "es": "morderse la lengua",
+      "notes": "Igual que en español: callarte lo que piensas.",
+      "example": "c1-idioms.i-had-to-bite-my-tongue",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.butterflies",
+      "word": "butterflies",
+      "es": "los nervios (en el estómago)",
+      "notes": "«have butterflies (in your stomach)» = tener nervios antes de algo. Literalmente, mariposas.",
+      "example": "c1-idioms.i-had-butterflies-in-my-stomach",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.iron-out",
+      "word": "iron out",
+      "es": "limar, resolver (detalles o diferencias)",
+      "notes": "«iron» = plancha. «iron out the kinks» = resolver los últimos fallos.",
+      "example": "c1-idioms.we-still-need-to-iron-out-a-few-details",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.rule-out",
+      "word": "rule out",
+      "es": "descartar",
+      "notes": "«rule something out» o «rule out something»: los dos órdenes valen.",
+      "example": "c1-idioms.we-cant-rule-out-a-delay",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.play-down",
+      "word": "play down",
+      "es": "quitar importancia, minimizar",
+      "notes": "Lo contrario de «play up» (exagerar).",
+      "example": "c1-idioms.he-tried-to-play-down-the-problem",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.follow-through",
+      "word": "follow through",
+      "es": "cumplir, llevar a término",
+      "notes": "«follow through on a promise». Como sustantivo: «good follow-through» = constancia para terminar las cosas.",
+      "example": "c1-idioms.its-important-to-follow-through",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.fall-through",
+      "word": "fall through",
+      "es": "fracasar, venirse abajo (un plan)",
+      "notes": "Para tratos, planes o compras que al final no se hacen.",
+      "example": "c1-idioms.the-deal-fell-through",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.phase-out",
+      "word": "phase out",
+      "es": "retirar poco a poco",
+      "notes": "Muy usado con productos, versiones y tecnologías. «phase in» = introducir poco a poco.",
+      "example": "c1-idioms.were-phasing-out-the-old-api",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.brush-up-on",
+      "word": "brush up on",
+      "es": "repasar, refrescar",
+      "notes": "«brush up on my French» = refrescar mi francés.",
+      "example": "c1-idioms.i-need-to-brush-up-on-my-sql",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.step-down",
+      "word": "step down",
+      "es": "dejar el cargo, dimitir",
+      "notes": "«step down as CEO». Suena menos dramático que «resign».",
+      "example": "c1-idioms.the-ceo-is-stepping-down",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.fall-out-with",
+      "word": "fall out with",
+      "es": "pelearse con, enemistarse",
+      "notes": "Pasado: «fell out». No es lo mismo que «fall out» de algo físico (caerse de).",
+      "example": "c1-idioms.she-fell-out-with-her-sister",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.come-across-as",
+      "word": "come across as",
+      "es": "dar la impresión de ser",
+      "notes": "«She comes across as very confident». «come across something» = encontrarse algo por casualidad.",
+      "example": "c1-idioms.he-comes-across-as-a-bit-arrogant",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.look-up-to",
+      "word": "look up to",
+      "es": "admirar a alguien",
+      "notes": "Lo contrario: «look down on» = mirar por encima del hombro.",
+      "example": "c1-idioms.ive-always-looked-up-to-my-grandfather",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.talk-into",
+      "word": "talk into",
+      "es": "convencer (de hacer algo)",
+      "notes": "«talk someone into doing something». Con -ing: «she talked me into joining».",
+      "example": "c1-idioms.jordan-talked-me-into-it",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.back-out",
+      "word": "back out",
+      "es": "echarse atrás",
+      "notes": "«back out of a deal» = retirarse de un acuerdo ya hablado.",
+      "example": "c1-idioms.you-cant-back-out-now",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.open-up",
+      "word": "open up",
+      "es": "abrirse (contar cosas personales)",
+      "notes": "«open up to someone» = abrirse con alguien.",
+      "example": "c1-idioms.it-took-him-a-while-to-open-up",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.let-down",
+      "word": "let down",
+      "es": "decepcionar, fallar a alguien",
+      "notes": "El pronombre va en medio: «let me down», no «let down me».",
+      "example": "c1-idioms.i-dont-want-to-let-you-down",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.stand-up-for",
+      "word": "stand up for",
+      "es": "defender (a alguien o algo)",
+      "notes": "«stand up for yourself» = hacerte valer.",
+      "example": "c1-idioms.thanks-for-standing-up-for-me",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.cup-of-tea",
+      "word": "not my cup of tea",
+      "es": "no es lo mío, no me va",
+      "notes": "Para gustos: música, planes, deportes. Suena amable, nunca ofensivo.",
+      "example": "c1-idioms.its-not-really-my-cup-of-tea",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.under-the-weather",
+      "word": "under the weather",
+      "es": "pachucho, algo enfermo",
+      "notes": "Para malestares leves: resfriado, cansancio. No para algo grave.",
+      "example": "c1-idioms.im-feeling-a-bit-under-the-weather",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.call-it-a-day",
+      "word": "call it a day",
+      "es": "dejarlo por hoy",
+      "notes": "Para terminar de trabajar o de hacer algo. «call it quits» = dejarlo del todo.",
+      "example": "c1-idioms.lets-call-it-a-day",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.sleep-on-it",
+      "word": "sleep on it",
+      "es": "consultarlo con la almohada",
+      "notes": "Forma educada de pedir tiempo antes de decidir.",
+      "example": "c1-idioms.can-i-sleep-on-it",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.beat-around-the-bush",
+      "word": "beat around the bush",
+      "es": "andarse con rodeos",
+      "notes": "«Let's not beat around the bush» = vamos al grano.",
+      "example": "c1-idioms.stop-beating-around-the-bush",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.hit-the-nail-on-the-head",
+      "word": "hit the nail on the head",
+      "es": "dar en el clavo",
+      "notes": "Igual que en español. «nail» = clavo (y también uña).",
+      "example": "c1-idioms.you-hit-the-nail-on-the-head",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.once-in-a-blue-moon",
+      "word": "once in a blue moon",
+      "es": "muy de vez en cuando, casi nunca",
+      "notes": "Va al final de la frase: «I see him once in a blue moon».",
+      "example": "c1-idioms.i-only-eat-out-once-in-a-blue-moon",
+      "situation": "social"
+    },
+    {
+      "id": "c1-idioms.rocket-science",
+      "word": "rocket science",
+      "es": "algo muy complicado",
+      "notes": "Casi siempre en negativa: «It's not rocket science» = no tiene ningún misterio.",
+      "example": "c1-idioms.its-not-rocket-science",
+      "situation": "social"
+    }
+  ],
+  "qa": [
+    {
+      "id": "c1-idioms.qa.estimate",
+      "question": "I know it's early, but roughly how much would the whole project cost?",
+      "questionEs": "Sé que es pronto, pero ¿cuánto costaría más o menos todo el proyecto?",
+      "accepted": [
+        {
+          "text": "If you want a ballpark figure, somewhere between forty and fifty thousand dollars.",
+          "es": "Si quieres una cifra aproximada, entre cuarenta y cincuenta mil dólares."
+        },
+        {
+          "text": "It's hard to say yet, but I can send you a rough estimate by Friday.",
+          "es": "Aún es difícil decirlo, pero puedo mandarte un presupuesto aproximado el viernes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "More or less between forty and fifty thousands dollars.",
+          "es": "Más o menos entre cuarenta y cincuenta mil dólares."
+        },
+        {
+          "text": "I can send you a budget aproximated on Friday.",
+          "es": "Te puedo mandar un presupuesto aproximado el viernes."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«thousand» no lleva «s» con número delante: «fifty thousand dollars». «presupuesto aproximado» = «rough estimate».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-idioms.qa.missed",
+      "question": "Hey, did you ever send the contract to the client?",
+      "questionEs": "Oye, ¿al final le mandaste el contrato al cliente?",
+      "accepted": [
+        {
+          "text": "Oh no, I completely dropped the ball on that. I'll send it right now.",
+          "es": "Ay, no, se me pasó por completo. Lo mando ahora mismo."
+        },
+        {
+          "text": "Yes, I sent it this morning. I'm just waiting for them to sign it.",
+          "es": "Sí, lo mandé esta mañana. Solo estoy esperando a que lo firmen."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Oh no, I dropped the ball. I send it now.",
+          "es": "Ay, no, se me pasó. Lo mando ahora."
+        },
+        {
+          "text": "Yes, I sent it this morning. I'm waiting that they sign it.",
+          "es": "Sí, lo mandé esta mañana. Estoy esperando a que lo firmen."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Para una promesa inmediata se usa «I'll send it», no el presente. «esperar a que» = «wait for someone to do», no «wait that».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-idioms.qa.wedding",
+      "question": "How were you feeling on the morning of your wedding?",
+      "questionEs": "¿Cómo te sentías la mañana de tu boda?",
+      "accepted": [
+        {
+          "text": "I had butterflies in my stomach, but I never got cold feet.",
+          "es": "Tenía un nudo en el estómago, pero nunca pensé en echarme atrás."
+        },
+        {
+          "text": "Honestly, I was a bit on edge until the ceremony started.",
+          "es": "La verdad, estuve algo nervioso hasta que empezó la ceremonia."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I had butterflies in the stomach, but I never had cold foot.",
+          "es": "Tenía mariposas en el estómago, pero nunca tuve miedo."
+        },
+        {
+          "text": "I was very nervous until started the ceremony.",
+          "es": "Estuve muy nervioso hasta que empezó la ceremonia."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "Las expresiones hechas no se cambian: «in my stomach», «get cold feet» (plural). Y el sujeto va antes del verbo: «until the ceremony started».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-idioms.qa.deal",
+      "question": "What happened with the partnership? I thought it was almost signed.",
+      "questionEs": "¿Qué pasó con la colaboración? Pensaba que estaba casi firmada.",
+      "accepted": [
+        {
+          "text": "Unfortunately, it fell through. They couldn't iron out the legal details.",
+          "es": "Por desgracia, se vino abajo. No consiguieron resolver los detalles legales."
+        },
+        {
+          "text": "It's on hold for now, but we haven't ruled it out completely.",
+          "es": "De momento está en pausa, pero no lo hemos descartado del todo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Unfortunately, it fell down. They couldn't solve the legal details.",
+          "es": "Por desgracia, se cayó. No pudieron resolver los detalles legales."
+        },
+        {
+          "text": "It's stopped for now, but we didn't discard it.",
+          "es": "De momento está parado, pero no lo hemos descartado."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "Un plan que fracasa «falls through»; «fall down» es caerse al suelo. «descartar» una posibilidad es «rule out», no «discard» (tirar algo).",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-idioms.qa.ready",
+      "question": "Do you feel ready for the technical interview on Monday?",
+      "questionEs": "¿Te sientes preparado para la entrevista técnica del lunes?",
+      "accepted": [
+        {
+          "text": "Mostly, but I want to brush up on system design this weekend.",
+          "es": "Casi, pero quiero repasar diseño de sistemas este fin de semana."
+        },
+        {
+          "text": "I think so. I've been practicing a couple of hours every evening.",
+          "es": "Creo que sí. Llevo practicando un par de horas cada tarde."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "More or less, but I want to repass system design.",
+          "es": "Más o menos, pero quiero repasar diseño de sistemas."
+        },
+        {
+          "text": "I think yes. I practice two hours every evening since a month.",
+          "es": "Creo que sí. Practico dos horas cada tarde desde hace un mes."
+        }
+      ],
+      "register": "neutral",
+      "situation": "social",
+      "notes": "«repasar» es «brush up on» o «review»; «repass» no existe. «creo que sí» = «I think so»; «desde hace un mes» = «for a month» con present perfect.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-idioms.qa.new-colleague",
+      "question": "What do you make of the new guy on the team?",
+      "questionEs": "¿Qué te parece el nuevo del equipo?",
+      "accepted": [
+        {
+          "text": "He comes across as a bit shy, but I think he just needs time to open up.",
+          "es": "Parece algo tímido, pero creo que solo necesita tiempo para abrirse."
+        },
+        {
+          "text": "I like him. He stood up for Maya in the meeting yesterday.",
+          "es": "Me cae bien. Ayer defendió a Maya en la reunión."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "He seems a bit shy, but he needs time for open.",
+          "es": "Parece algo tímido, pero necesita tiempo para abrirse."
+        },
+        {
+          "text": "I like him. He defended to Maya in the meeting.",
+          "es": "Me cae bien. Defendió a Maya en la reunión."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«What do you make of…?» = ¿qué opinas de…? Para expresar finalidad se usa «to + verbo»: «time to open up», no «for open». La «a» personal del español no existe: «defended Maya».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-idioms.qa.concert",
+      "question": "We've got an extra ticket for the opera on Saturday. Do you want to come?",
+      "questionEs": "Nos sobra una entrada para la ópera del sábado. ¿Quieres venir?",
+      "accepted": [
+        {
+          "text": "Thanks for thinking of me, but opera isn't really my cup of tea.",
+          "es": "Gracias por acordarte de mí, pero la ópera no es lo mío."
+        },
+        {
+          "text": "I'd love to! I only go to the opera once in a blue moon.",
+          "es": "¡Me encantaría! Solo voy a la ópera muy de vez en cuando."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Thanks, but the opera is not my cup of coffee.",
+          "es": "Gracias, pero la ópera no es lo mío."
+        },
+        {
+          "text": "Thanks for think in me, but I don't like the opera.",
+          "es": "Gracias por pensar en mí, pero no me gusta la ópera."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "Las expresiones hechas no se cambian: es «cup of tea», nunca «of coffee». «pensar en» = «think of», y tras «for» va -ing; para hablar de la ópera en general no se usa «the».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-idioms.qa.offer",
+      "question": "So, are you going to accept the job offer or not?",
+      "questionEs": "Bueno, ¿vas a aceptar la oferta de trabajo o no?",
+      "accepted": [
+        {
+          "text": "I'm not sure yet. I want to sleep on it and decide tomorrow.",
+          "es": "Todavía no lo sé. Quiero consultarlo con la almohada y decidir mañana."
+        },
+        {
+          "text": "I won't beat around the bush: I've already said yes.",
+          "es": "No me voy a andar con rodeos: ya he dicho que sí."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I don't know still. I want to consult it with the pillow.",
+          "es": "Todavía no lo sé. Quiero consultarlo con la almohada."
+        },
+        {
+          "text": "I won't beat around the bush: I already said that yes.",
+          "es": "No me voy a andar con rodeos: ya he dicho que sí."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«consultarlo con la almohada» = «sleep on it»: las expresiones no se traducen palabra por palabra. «todavía no» = «not yet», y «decir que sí» = «say yes», sin «that».",
+      "voice": "en-US-BrianNeural"
+    }
+  ]
+}

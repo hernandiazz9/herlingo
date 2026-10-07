@@ -1,0 +1,1051 @@
+{
+  "id": "c1-nuance",
+  "order": 330,
+  "level": "C1",
+  "title": "Matices: suavizar, ironía, cortesía indirecta, leer entre líneas",
+  "description": "El inglés que no se dice tal cual: suavizar opiniones y críticas, pedir y decir que no sin decir «no», entender la ironía y el «understatement», y captar lo que la otra persona quiere decir de verdad.",
+  "emoji": "🎭",
+  "situation": "opiniones",
+  "lessons": [
+    {
+      "id": "c1-nuance.l.hedging",
+      "title": "Suavizar lo que dices",
+      "items": [
+        "c1-nuance.hedge",
+        "c1-nuance.i-might-be-wrong-but",
+        "c1-nuance.tentative",
+        "c1-nuance.im-inclined-to-think",
+        "c1-grammar.id-tend-to-think",
+        "c1-nuance.it-could-be-argued-that",
+        "c1-grammar.arguably",
+        "c1-nuance.to-some-extent",
+        "c1-nuance.extent",
+        "c1-nuance.as-far-as-i-can-tell",
+        "c1-nuance.correct-me-if-im-wrong",
+        "c1-grammar.it-seems-that",
+        "c1-grammar.somewhat",
+        "c1-nuance.its-not-ideal",
+        "c1-nuance.i-wonder-whether",
+        "c1-nuance.gut-feeling",
+        "c1-nuance.its-more-of-a-gut-feeling",
+        "c1-nuance.likely",
+        "c1-nuance.qa.honest-opinion",
+        "c1-nuance.qa.are-you-sure"
+      ]
+    },
+    {
+      "id": "c1-nuance.l.softening",
+      "title": "Discrepar y criticar con tacto",
+      "items": [
+        "c1-nuance.i-see-where-youre-coming-from",
+        "b2-opinions.i-take-your-point",
+        "c1-nuance.that-may-well-be-true",
+        "c1-nuance.im-not-entirely-convinced",
+        "c1-nuance.angle",
+        "c1-nuance.could-we-look-at-it-from-another-angle",
+        "c1-nuance.it-might-be-worth-reconsidering",
+        "c1-nuance.reconsider",
+        "c1-nuance.its-a-good-start",
+        "c1-nuance.tweak",
+        "c1-nuance.wording",
+        "c1-nuance.i-wonder-if-we-could-tweak",
+        "c1-nuance.the-only-thing-id-say",
+        "c1-nuance.dont-get-me-wrong",
+        "b2-projects.criticism",
+        "c1-leading.tactful",
+        "c1-nuance.diplomatic",
+        "b2-opinions.i-wouldnt-go-that-far",
+        "c1-nuance.qa.my-design",
+        "c1-nuance.qa.rewrite"
+      ]
+    },
+    {
+      "id": "c1-nuance.l.indirect",
+      "title": "Pedir y decir que no, sin decir «no»",
+      "items": [
+        "c1-nuance.request",
+        "c1-nuance.i-was-wondering-if-you-could",
+        "c1-nuance.would-it-be-at-all-possible",
+        "c1-nuance.if-its-not-too-much-trouble",
+        "c1-nuance.favor",
+        "c1-nuance.i-hate-to-ask-but",
+        "c1-nuance.cover-for",
+        "c1-nuance.no-pressure-at-all",
+        "c1-nuance.decline",
+        "c1-nuance.swamped",
+        "c1-nuance.id-love-to-but",
+        "c1-nuance.im-not-sure-thats-going-to-work",
+        "c1-nuance.im-afraid-that-wont-be-possible",
+        "c1-nuance.inconvenience",
+        "c1-nuance.sorry-for-the-inconvenience",
+        "c1-nuance.maybe-another-time",
+        "c1-nuance.qa.help-me-move",
+        "c1-nuance.qa.review-before-lunch"
+      ]
+    },
+    {
+      "id": "c1-nuance.l.irony",
+      "title": "Ironía y quitar hierro",
+      "items": [
+        "c1-nuance.irony",
+        "b2-culture.sarcasm",
+        "c1-nuance.oh-great-just-what-we-needed",
+        "c1-nuance.well-that-went-well",
+        "b2-culture.are-you-being-sarcastic",
+        "c1-nuance.understatement",
+        "c1-nuance.it-wasnt-exactly-a-huge-success",
+        "c1-nuance.it-was-a-bit-of-a-disaster",
+        "c1-nuance.im-not-the-biggest-fan",
+        "c1-nuance.mildly",
+        "c1-nuance.that-could-have-gone-better",
+        "c1-nuance.tell-me-about-it",
+        "c1-nuance.you-dont-say",
+        "c1-nuance.dry",
+        "c1-nuance.deadpan",
+        "c1-nuance.he-has-a-very-dry-sense-of-humor",
+        "c1-nuance.tongue-in-cheek",
+        "c1-nuance.i-was-being-ironic",
+        "c1-nuance.qa.demo",
+        "c1-nuance.qa.traffic"
+      ]
+    },
+    {
+      "id": "c1-nuance.l.between-the-lines",
+      "title": "Leer entre líneas",
+      "items": [
+        "c1-nuance.read-between-the-lines",
+        "c1-nuance.reading-between-the-lines",
+        "c1-nuance.imply",
+        "c1-nuance.when-he-says-its-interesting",
+        "c1-nuance.weve-decided-to-go-in-a-different-direction",
+        "c1-nuance.ill-keep-that-in-mind",
+        "c1-nuance.lets-park-it-for-now",
+        "b2-meetings.lets-take-this-offline",
+        "c1-nuance.we-should-grab-coffee-sometime",
+        "c1-nuance.i-hear-you-but-my-hands-are-tied",
+        "c1-nuance.hint",
+        "c1-nuance.take-a-hint",
+        "c1-nuance.without-naming-names",
+        "c1-nuance.euphemism",
+        "c1-nuance.vague",
+        "c1-nuance.what-are-you-getting-at",
+        "c1-nuance.qa.interesting-proposal"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "c1-nuance.i-might-be-wrong-but",
+      "text": "I might be wrong, but I don't think the numbers add up.",
+      "es": "Puede que me equivoque, pero no creo que las cifras cuadren.",
+      "notes": "«add up» = cuadrar, tener sentido. «It doesn't add up» también se usa para una historia que no encaja.",
+      "explanation": "Empezar admitiendo que puedes estar equivocado hace que la crítica no suene a ataque. En «wrong» la «w» no se pronuncia: «rong».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.im-inclined-to-think",
+      "text": "I'm inclined to think we should wait until spring.",
+      "es": "Me inclino a pensar que deberíamos esperar a la primavera.",
+      "notes": "«be inclined to» = tender a, inclinarse por. Da tu opinión sin cerrar la puerta a otras.",
+      "explanation": "Más suave que «I think». «inclined» se acentúa en la segunda sílaba: «in-KLAIND», con una sola sílaba al final, sin «e».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.it-could-be-argued-that",
+      "text": "It could be argued that the plan is a little too ambitious.",
+      "es": "Se podría decir que el plan es un poco demasiado ambicioso.",
+      "notes": "Pasiva impersonal típica de textos y reuniones formales: presentas una crítica como algo que «alguien podría pensar».",
+      "explanation": "Sirve para criticar sin hacerlo en primera persona. «argued» termina en /d/: «AR-gyud», dos sílabas.",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.to-some-extent",
+      "text": "To some extent, that's true, but it really depends on the team.",
+      "es": "Hasta cierto punto es verdad, pero depende mucho del equipo.",
+      "notes": "«to some extent» = hasta cierto punto. También «to a large extent» = en gran medida.",
+      "explanation": "Le das la razón a medias antes de matizar. «extent» se acentúa al final: «ik-STENT», sin «e» delante de la «s».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.as-far-as-i-can-tell",
+      "text": "As far as I can tell, nobody has complained so far.",
+      "es": "Por lo que yo sé, nadie se ha quejado hasta ahora.",
+      "notes": "«as far as I can tell» = por lo que veo, que yo sepa. «so far» = hasta ahora.",
+      "explanation": "Limita lo que afirmas a lo que sabes. Une las palabras: «as-far-as-I-can-tell» casi seguido, con «can» débil: «kn».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.correct-me-if-im-wrong",
+      "text": "Correct me if I'm wrong, but didn't we agree on Friday?",
+      "es": "Corrígeme si me equivoco, pero ¿no habíamos quedado en el viernes?",
+      "notes": "Forma educada de señalar un error del otro: la duda la pones en ti. «agree on» = acordar algo.",
+      "explanation": "Muy útil en reuniones. «didn't we…?» sube al final porque es pregunta de verdad; si bajas el tono, suena a reproche.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.its-not-ideal",
+      "text": "It's not ideal, but we can probably live with it.",
+      "es": "No es lo ideal, pero seguramente podemos apañarnos con eso.",
+      "notes": "«not ideal» es un eufemismo de «malo». «live with something» = aguantarse, conformarse con algo.",
+      "explanation": "El inglés prefiere «not ideal» a «bad». «ideal» se dice «ai-DIL», con el acento en la segunda sílaba.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.i-wonder-whether",
+      "text": "I wonder whether it might be worth asking the users first.",
+      "es": "Me pregunto si no valdría la pena preguntar primero a los usuarios.",
+      "notes": "«I wonder whether…» convierte una propuesta en una reflexión: el otro no se siente corregido. «worth + -ing» = valer la pena.",
+      "explanation": "Propuesta indirecta muy británica y también muy usada en EE. UU. «wonder» se dice «WAN-der», no como «wander» (deambular).",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.its-more-of-a-gut-feeling",
+      "text": "It's more of a gut feeling than anything I can prove.",
+      "es": "Es más una corazonada que algo que pueda demostrar.",
+      "notes": "«gut feeling» = corazonada, intuición (literalmente, «sensación de tripa»). «more of a… than…» = más bien un… que…",
+      "explanation": "Para dar una opinión reconociendo que no tienes datos. «gut» tiene la «u» corta de «cup»: «gat».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.i-see-where-youre-coming-from",
+      "text": "I see where you're coming from, but I'd look at it differently.",
+      "es": "Entiendo por qué lo dices, pero yo lo vería de otra forma.",
+      "notes": "«where you're coming from» = tu punto de vista y tus motivos, no un lugar.",
+      "explanation": "Reconoce la postura del otro antes de discrepar. «coming from» se une: «KA-ming-from».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.that-may-well-be-true",
+      "text": "That may well be true, but it doesn't solve the main problem.",
+      "es": "Puede que sea así, pero eso no resuelve el problema principal.",
+      "notes": "«may well» = es muy posible que. Concedes algo y luego vas al grano.",
+      "explanation": "Acentúa «well» y «main»: son las palabras que llevan el mensaje.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.im-not-entirely-convinced",
+      "text": "I'm not entirely convinced it's the best option.",
+      "es": "No estoy del todo convencido de que sea la mejor opción.",
+      "notes": "En inglés se discrepa negando lo positivo: «not entirely convinced» en vez de «I think it's a bad option».",
+      "explanation": "«entirely» se acentúa en la segunda sílaba: «in-TAIR-li».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.could-we-look-at-it-from-another-angle",
+      "text": "Could we look at it from another angle for a moment?",
+      "es": "¿Podríamos verlo desde otro ángulo un momento?",
+      "notes": "«from another angle» = desde otra perspectiva. Invita a cambiar de enfoque sin decir que el otro está equivocado.",
+      "explanation": "«angle» suena «ÉN-gol», con «g» suave y sin «e» final; no lo confundas con «ankle» (tobillo).",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.it-might-be-worth-reconsidering",
+      "text": "It might be worth reconsidering the timeline.",
+      "es": "Quizá valdría la pena replantearse el calendario.",
+      "notes": "«it might be worth + -ing» = quizá valdría la pena. Fórmula diplomática para proponer un cambio.",
+      "explanation": "Suena a sugerencia, no a orden. «worth» tiene «th» final: saca un poco la lengua entre los dientes.",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.its-a-good-start",
+      "text": "It's a good start; it just needs a bit more work.",
+      "es": "Es un buen comienzo; solo necesita un poco más de trabajo.",
+      "notes": "Fórmula clásica de feedback: algo positivo primero y la crítica suavizada con «just» y «a bit».",
+      "explanation": "«just» y «a bit» quitan peso a la crítica. «work» con «r» americana y vocal oscura: «wérk».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.i-wonder-if-we-could-tweak",
+      "text": "I wonder if we could tweak the wording a little.",
+      "es": "Me pregunto si podríamos retocar un poco la redacción.",
+      "notes": "«tweak» = retocar, ajustar un poco. «wording» = la forma de decir algo, la redacción.",
+      "explanation": "Pides un cambio como si fuera una idea compartida («we»). «tweak» tiene «i» larga: «twiik».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.the-only-thing-id-say",
+      "text": "The only thing I'd say is that the intro feels a bit long.",
+      "es": "Lo único que diría es que la introducción se hace un poco larga.",
+      "notes": "«The only thing I'd say is…» presenta la crítica como un detalle pequeño. «feels long» = se hace largo.",
+      "explanation": "«I'd» se dice muy corto: «aid». No lo conviertas en «I would» al hablar.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.dont-get-me-wrong",
+      "text": "Don't get me wrong, I love the idea. I'm just worried about the cost.",
+      "es": "No me malinterpretes, me encanta la idea. Solo me preocupa el coste.",
+      "notes": "«Don't get me wrong» = no me malinterpretes. Va antes de una pega para que no suene a rechazo.",
+      "explanation": "«get me» se une y la «t» casi desaparece: «ge-me». «worried» se dice «WÉ-rid».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.i-was-wondering-if-you-could",
+      "text": "I was wondering if you could take a quick look at this.",
+      "es": "Quería preguntarte si podrías echarle un vistazo rápido a esto.",
+      "notes": "El pasado continuo («I was wondering») hace la petición más suave y distante. «take a look at» = echar un vistazo.",
+      "explanation": "Es de las peticiones más educadas del inglés. Une «look at this»: «lu-kæt-this», con la «th» suave de «this».",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.would-it-be-at-all-possible",
+      "text": "Would it be at all possible to move the call to Thursday?",
+      "es": "¿Habría alguna posibilidad de pasar la llamada al jueves?",
+      "notes": "«at all» en una pregunta refuerza la cortesía: reconoces que pides algo que quizá no se pueda.",
+      "explanation": "«at all» se une y la «t» suena como una «r» suave: «a-ROL». «Thursday» empieza con «th» de «think».",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.if-its-not-too-much-trouble",
+      "text": "If it's not too much trouble, could you send it by noon?",
+      "es": "Si no es mucha molestia, ¿podrías enviarlo antes de las doce?",
+      "notes": "«trouble» aquí = molestia. «by noon» = como muy tarde a mediodía.",
+      "explanation": "«trouble» tiene la «u» corta de «cup»: «TRA-bol».",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.i-hate-to-ask-but",
+      "text": "I hate to ask, but could you cover for me on Monday?",
+      "es": "Me sabe fatal pedírtelo, pero ¿podrías cubrirme el lunes?",
+      "notes": "«I hate to ask» = me sabe mal pedirlo. «cover for someone» = sustituir a alguien que falta.",
+      "explanation": "Anticipas que pides un favor grande. «hate to» se une: «HEI-tə», con «to» débil.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.no-pressure-at-all",
+      "text": "No pressure at all, but let me know if you're interested.",
+      "es": "Sin ningún compromiso, pero dime si te interesa.",
+      "notes": "«No pressure» = sin presión, no te sientas obligado. Deja al otro una salida fácil para decir que no.",
+      "explanation": "«pressure» se dice «PRE-sher». «interested» tiene tres sílabas: «IN-tres-tid».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.id-love-to-but",
+      "text": "I'd love to, but I'm completely swamped this week.",
+      "es": "Me encantaría, pero esta semana voy hasta arriba.",
+      "notes": "Así se dice que no en inglés: entusiasmo primero y luego la excusa. «swamped» = desbordado de trabajo.",
+      "explanation": "«I'd love to» termina en «to» débil: «aid-LAV-tə». «swamped» acaba en /t/: «swompt».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.im-not-sure-thats-going-to-work",
+      "text": "I'm not sure that's going to work for me.",
+      "es": "No sé si eso me va a venir bien.",
+      "notes": "Aunque diga «not sure», normalmente significa «no». Es una negativa educada, no una duda.",
+      "explanation": "Al hablar, «going to» suele sonar «gonna», pero nunca se escribe así.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.im-afraid-that-wont-be-possible",
+      "text": "I'm afraid that won't be possible this time.",
+      "es": "Me temo que esta vez no va a ser posible.",
+      "notes": "«I'm afraid» = me temo; anuncia una mala noticia con cortesía, no expresa miedo.",
+      "explanation": "Típico de atención al cliente y emails formales. «won't» suena «wount», distinto de «want».",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.sorry-for-the-inconvenience",
+      "text": "Sorry for the inconvenience, and thanks for your patience.",
+      "es": "Perdona las molestias y gracias por tu paciencia.",
+      "notes": "«inconvenience» = molestia, trastorno. Es un falso amigo parcial: no significa «inconveniente» en el sentido de «desventaja» («drawback»).",
+      "explanation": "«inconvenience» se acentúa en la tercera sílaba: «in-kən-VII-nyəns».",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.maybe-another-time",
+      "text": "Maybe another time? I'm sure there'll be other chances.",
+      "es": "¿Quizá en otra ocasión? Seguro que habrá más oportunidades.",
+      "notes": "«Maybe another time» rechaza sin cerrar la puerta. «there'll be» = there will be.",
+      "explanation": "«there'll» se dice en una sola sílaba: «therl».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.oh-great-just-what-we-needed",
+      "text": "Oh, great. Just what we needed on a Friday afternoon.",
+      "es": "Ah, genial. Justo lo que nos faltaba un viernes por la tarde.",
+      "notes": "Ironía: «great» significa lo contrario. El tono plano y alargado («greeeat») avisa de que es irónico.",
+      "explanation": "Di «great» lento y sin entusiasmo: así entienden que es ironía. «Friday» se dice «FRAI-dei».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.well-that-went-well",
+      "text": "Well, that went well.",
+      "es": "Bueno, pues eso ha salido de maravilla (es decir, fatal).",
+      "notes": "Se dice justo después de un desastre. Es humor seco muy típico: el contexto deja claro que salió mal.",
+      "explanation": "Pausa breve tras «Well» y tono descendente en «went well».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.it-wasnt-exactly-a-huge-success",
+      "text": "It wasn't exactly a huge success.",
+      "es": "No fue precisamente un gran éxito.",
+      "notes": "«not exactly» = no precisamente, nada de eso. Forma educada de decir que algo salió mal.",
+      "explanation": "Acentúa «exactly»: «ig-ZAKT-li». «success» se dice «sək-SES», con el acento al final.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.it-was-a-bit-of-a-disaster",
+      "text": "To be honest, the launch was a bit of a disaster.",
+      "es": "Sinceramente, el lanzamiento fue un pequeño desastre.",
+      "notes": "Understatement: «a bit of a disaster» suaviza algo que fue un desastre total.",
+      "explanation": "«a bit of a» se une: «ə-BI-rə-və», con la «t» americana suave. «honest» empieza sin «h»: «ON-ist».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.im-not-the-biggest-fan",
+      "text": "I'm not the biggest fan of open-plan offices.",
+      "es": "No soy muy fan de las oficinas abiertas.",
+      "notes": "Understatement: «I'm not the biggest fan of…» = no me gusta nada, dicho con suavidad.",
+      "explanation": "«biggest» tiene la «i» corta de «ship». «open-plan» = sin despachos.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.that-could-have-gone-better",
+      "text": "That could have gone better, to put it mildly.",
+      "es": "Eso podría haber salido mejor, por decirlo suavemente.",
+      "notes": "«to put it mildly» = por decirlo de forma suave; avisa de que la realidad es peor.",
+      "explanation": "«could have» suena «KU-də»: nunca se escribe «could of».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.tell-me-about-it",
+      "text": "Tell me about it! I was stuck in traffic for two hours.",
+      "es": "¡Ni me lo digas! Estuve dos horas atascado en el tráfico.",
+      "notes": "«Tell me about it!» no pide información: significa «ni me lo digas, a mí me pasa igual».",
+      "explanation": "Une «tell me about it»: «TEL-mi-ə-BAU-rit». «stuck» con la «u» de «cup».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.you-dont-say",
+      "text": "You don't say! I would never have guessed.",
+      "es": "¡No me digas! Nunca lo habría adivinado (como si no fuera obvio).",
+      "notes": "Normalmente sarcástico: se responde así a algo obvio. Úsalo solo con confianza.",
+      "explanation": "Tono exagerado en «don't» y «never». «guessed» termina en /t/: «gest».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.he-has-a-very-dry-sense-of-humor",
+      "text": "He has a very dry sense of humor, so it's hard to tell when he's joking.",
+      "es": "Tiene un humor muy seco, así que cuesta saber cuándo está de broma.",
+      "notes": "«dry humor» = humor seco, dicho con cara seria. «hard to tell» = difícil de saber.",
+      "explanation": "«humor» se dice «HYU-mer», con una «y» al principio.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.i-was-being-ironic",
+      "text": "Relax, I was being ironic. I actually loved it.",
+      "es": "Tranquilo, lo decía con ironía. En realidad me encantó.",
+      "notes": "«I was being ironic» = lo decía irónicamente. «actually» = en realidad, no «actualmente» («currently»).",
+      "explanation": "«ironic» se acentúa en la segunda sílaba: «ai-RO-nik».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.reading-between-the-lines",
+      "text": "Reading between the lines, I don't think they're happy with us.",
+      "es": "Leyendo entre líneas, no creo que estén contentos con nosotros.",
+      "notes": "«read between the lines» = leer entre líneas, entender lo que no se dice abiertamente.",
+      "explanation": "«between» empieza por «b» y tiene «ii» larga: «bi-TWIIN».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.when-he-says-its-interesting",
+      "text": "When he says it's interesting, he usually means he doesn't like it.",
+      "es": "Cuando dice que es interesante, suele querer decir que no le gusta.",
+      "notes": "En el trabajo, «interesting» a secas a veces es una crítica educada. Fíjate en el tono y en lo que viene después.",
+      "explanation": "«interesting» tiene tres sílabas al hablar: «IN-tres-ting».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.weve-decided-to-go-in-a-different-direction",
+      "text": "We've decided to go in a different direction.",
+      "es": "Hemos decidido tomar otro camino (es decir: no te elegimos).",
+      "notes": "Eufemismo habitual para rechazar a un candidato, un proveedor o una propuesta.",
+      "explanation": "«direction» puede ser «di-REK-shən» o «dai-REK-shən»: las dos son correctas.",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.ill-keep-that-in-mind",
+      "text": "Thanks, I'll keep that in mind.",
+      "es": "Gracias, lo tendré en cuenta.",
+      "notes": "A veces es sincero y a veces es un «no» educado. «keep in mind» = tener en cuenta.",
+      "explanation": "«keep that in mind» se une: «kiip-THA-din-MAIND».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.lets-park-it-for-now",
+      "text": "That's an interesting idea. Let's park it for now.",
+      "es": "Es una idea interesante. Aparquémosla por ahora.",
+      "notes": "«park an idea» = aparcarla, dejarla para más tarde. A menudo significa que no se va a retomar.",
+      "explanation": "«park» con «r» americana: «parrk», la «a» abierta.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.we-should-grab-coffee-sometime",
+      "text": "We should grab coffee sometime!",
+      "es": "¡A ver si quedamos para un café algún día!",
+      "notes": "Muchas veces es solo cortesía, no una invitación concreta. Si de verdad quieres quedar, propón día y hora.",
+      "explanation": "«grab» = tomar algo rápido. «coffee» en americano: «KA-fi».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.i-hear-you-but-my-hands-are-tied",
+      "text": "I hear you, but my hands are tied on this one.",
+      "es": "Te entiendo, pero en esto tengo las manos atadas.",
+      "notes": "«I hear you» = te entiendo (no solo «te oigo»). «my hands are tied» = no puedo hacer nada, no depende de mí.",
+      "explanation": "«tied» suena igual que «tide»: «taid».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.without-naming-names",
+      "text": "Without naming names, some people still haven't sent their reports.",
+      "es": "Sin señalar a nadie, hay quien todavía no ha mandado su informe.",
+      "notes": "«without naming names» = sin decir nombres; todos saben a quién te refieres.",
+      "explanation": "«naming names» se une: «NEI-ming-NEIMZ», con «s» final sonora.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.what-are-you-getting-at",
+      "text": "Sorry, what exactly are you getting at?",
+      "es": "Perdona, ¿adónde quieres llegar exactamente?",
+      "notes": "«get at» = insinuar, querer decir. Pide que el otro diga claramente lo que insinúa.",
+      "explanation": "«getting at» con «t» americana suave: «GE-ring-at». Dilo con tono neutro para no sonar a reto.",
+      "register": "neutral",
+      "situation": "opiniones"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "c1-nuance.hedge",
+      "word": "hedge",
+      "es": "no comprometerse, suavizar (lo que dices)",
+      "notes": "Verbo: «to hedge» = expresarse con cautela para no afirmar algo rotundamente. «Stop hedging!» = ¡deja de andarte con rodeos!",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.tentative",
+      "word": "tentative",
+      "es": "provisional, tímido, con reservas",
+      "notes": "Falso amigo: no es «tentador» (eso es «tempting»). «a tentative date» = una fecha provisional.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.extent",
+      "word": "extent",
+      "article": "an",
+      "plural": "extents",
+      "es": "la medida, el alcance",
+      "notes": "Casi siempre en expresiones: «to some extent» (hasta cierto punto), «to what extent?» (¿hasta qué punto?).",
+      "example": "c1-nuance.to-some-extent",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.gut-feeling",
+      "word": "gut feeling",
+      "article": "a",
+      "plural": "gut feelings",
+      "es": "la corazonada, la intuición",
+      "notes": "«gut» = tripa. «trust your gut» = fíate de tu instinto.",
+      "example": "c1-nuance.its-more-of-a-gut-feeling",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.likely",
+      "word": "likely",
+      "es": "probable",
+      "notes": "«It's likely to rain» = es probable que llueva. «Most likely» = lo más probable. Lo contrario: «unlikely».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.angle",
+      "word": "angle",
+      "article": "an",
+      "plural": "angles",
+      "es": "el ángulo, el enfoque",
+      "notes": "«from a different angle» = desde otro punto de vista.",
+      "example": "c1-nuance.could-we-look-at-it-from-another-angle",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.reconsider",
+      "word": "reconsider",
+      "es": "replantearse, reconsiderar",
+      "notes": "Sin preposición: «reconsider the plan», no «reconsider about the plan».",
+      "example": "c1-nuance.it-might-be-worth-reconsidering",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.tweak",
+      "word": "tweak",
+      "es": "retocar, ajustar",
+      "notes": "Verbo y sustantivo: «a few tweaks» = unos pequeños retoques.",
+      "example": "c1-nuance.i-wonder-if-we-could-tweak",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.wording",
+      "word": "wording",
+      "es": "la redacción, la forma de expresarlo",
+      "notes": "Incontable: «the wording», no «a wording».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.diplomatic",
+      "word": "diplomatic",
+      "es": "diplomático, con tacto",
+      "notes": "«That was very diplomatic of you» = lo has dicho con mucho tacto (a veces con ironía).",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.request",
+      "word": "request",
+      "article": "a",
+      "plural": "requests",
+      "es": "la petición, la solicitud",
+      "notes": "«make a request» = hacer una petición. Como verbo es formal: «I'd like to request a refund».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.favor",
+      "word": "favor",
+      "article": "a",
+      "plural": "favors",
+      "es": "el favor",
+      "notes": "Ortografía americana «favor» (británica «favour»). «ask a favor», «do someone a favor»: no «make a favor».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.cover-for",
+      "word": "cover for",
+      "es": "cubrir a alguien, sustituirlo",
+      "notes": "Phrasal verb: «cover for someone» = hacer su trabajo cuando falta. También = encubrir a alguien.",
+      "example": "c1-nuance.i-hate-to-ask-but",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.decline",
+      "word": "decline",
+      "es": "rechazar, declinar (con educación)",
+      "notes": "Formal: «decline an invitation», «decline an offer». Más suave que «refuse».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.swamped",
+      "word": "swamped",
+      "es": "desbordado, hasta arriba de trabajo",
+      "notes": "Coloquial y muy común: «I'm swamped with work». Viene de «swamp» = pantano.",
+      "example": "c1-nuance.id-love-to-but",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.inconvenience",
+      "word": "inconvenience",
+      "es": "la molestia, el trastorno",
+      "notes": "«any inconvenience» en disculpas formales. «inconvenient» = que no viene bien: «Is this an inconvenient time?».",
+      "example": "c1-nuance.sorry-for-the-inconvenience",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.irony",
+      "word": "irony",
+      "es": "la ironía",
+      "notes": "Se acentúa al principio: «AI-rə-ni». Adjetivo: «ironic».",
+      "example": "c1-nuance.i-was-being-ironic",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.understatement",
+      "word": "understatement",
+      "article": "an",
+      "plural": "understatements",
+      "es": "la atenuación, decir menos de lo que es",
+      "notes": "Decir menos de lo que es («a bit of a disaster»). «That's an understatement!» = ¡eso es quedarse corto!",
+      "example": "c1-nuance.it-was-a-bit-of-a-disaster",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.mildly",
+      "word": "mildly",
+      "es": "suavemente, ligeramente",
+      "notes": "«to put it mildly» = por decirlo suavemente. «mildly annoying» = un poco molesto.",
+      "example": "c1-nuance.that-could-have-gone-better",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.dry",
+      "word": "dry",
+      "es": "seco (humor)",
+      "notes": "«dry humor» = humor seco, sin reírse uno mismo. También «dry» = aburrido: «a dry lecture».",
+      "example": "c1-nuance.he-has-a-very-dry-sense-of-humor",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.deadpan",
+      "word": "deadpan",
+      "es": "impasible, con cara de póquer",
+      "notes": "Decir una broma con la cara totalmente seria: «a deadpan joke», «he said it deadpan».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.tongue-in-cheek",
+      "word": "tongue-in-cheek",
+      "es": "en broma, medio en serio",
+      "notes": "Literalmente «con la lengua en la mejilla»: algo dicho con ironía. «a tongue-in-cheek comment».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.read-between-the-lines",
+      "word": "read between the lines",
+      "es": "leer entre líneas",
+      "notes": "Igual que en español. Entender lo que alguien insinúa sin decirlo.",
+      "example": "c1-nuance.reading-between-the-lines",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.imply",
+      "word": "imply",
+      "es": "insinuar, dar a entender",
+      "notes": "«Are you implying that I'm lying?» = ¿insinúas que miento? No es «implicar» en el sentido de involucrar («involve»).",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.hint",
+      "word": "hint",
+      "article": "a",
+      "plural": "hints",
+      "es": "la indirecta, la pista",
+      "notes": "«drop a hint» = soltar una indirecta. «a hint of» = un toque de (sabor).",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.take-a-hint",
+      "word": "take a hint",
+      "es": "pillar la indirecta",
+      "notes": "«He can't take a hint» = no pilla las indirectas. Suele decirse con fastidio.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.euphemism",
+      "word": "euphemism",
+      "article": "a",
+      "plural": "euphemisms",
+      "es": "el eufemismo",
+      "notes": "Ojo al artículo: «a euphemism», no «an», porque empieza por el sonido «yu».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-nuance.vague",
+      "word": "vague",
+      "es": "vago, impreciso",
+      "notes": "Falso amigo: «vague» = poco claro, no perezoso («lazy»). Se dice «veig», una sílaba.",
+      "situation": "opiniones"
+    }
+  ],
+  "qa": [
+    {
+      "id": "c1-nuance.qa.honest-opinion",
+      "question": "So what do you honestly think of the new pricing plan?",
+      "questionEs": "Entonces, ¿qué te parece de verdad el nuevo plan de precios?",
+      "accepted": [
+        {
+          "text": "I might be wrong, but I think it's a bit too expensive for small teams.",
+          "es": "Puede que me equivoque, pero creo que es un poco caro para equipos pequeños."
+        },
+        {
+          "text": "To some extent it makes sense, but I'm not entirely convinced by the top tier.",
+          "es": "Hasta cierto punto tiene sentido, pero el plan más alto no me convence del todo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "In my opinion it's too much expensive for the small teams.",
+          "es": "En mi opinión es demasiado caro para los equipos pequeños."
+        },
+        {
+          "text": "Honestly, I am not agree with the prices.",
+          "es": "Sinceramente, no estoy de acuerdo con los precios."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«too expensive», nunca «too much expensive»; «estar de acuerdo» es «I don't agree», no «I am not agree».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-nuance.qa.are-you-sure",
+      "question": "Are you sure the migration will be finished by Friday?",
+      "questionEs": "¿Seguro que la migración estará terminada el viernes?",
+      "accepted": [
+        {
+          "text": "As far as I can tell, yes, but it's likely we'll need the weekend for testing.",
+          "es": "Por lo que veo, sí, pero es probable que necesitemos el fin de semana para las pruebas."
+        },
+        {
+          "text": "Not a hundred percent. It's more of a gut feeling than a firm date.",
+          "es": "No al cien por cien. Es más una corazonada que una fecha firme."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I think yes, but probably we will need the weekend.",
+          "es": "Creo que sí, pero probablemente necesitaremos el fin de semana."
+        },
+        {
+          "text": "Is probable that we finish it on Friday.",
+          "es": "Es probable que la terminemos el viernes."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«creo que sí» = «I think so», no «I think yes»; el inglés necesita sujeto: «It's likely…», no «Is probable…».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-nuance.qa.my-design",
+      "question": "So, what do you think of my design? Be honest.",
+      "questionEs": "Bueno, ¿qué te parece mi diseño? Sé sincero.",
+      "accepted": [
+        {
+          "text": "It's a good start. The only thing I'd say is that the menu feels a bit crowded.",
+          "es": "Es un buen comienzo. Lo único que diría es que el menú se ve un poco recargado."
+        },
+        {
+          "text": "Don't get me wrong, I like it, but I wonder if we could tweak the colors.",
+          "es": "No me malinterpretes, me gusta, pero me pregunto si podríamos retocar los colores."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Is a good start, but the menu has too many things.",
+          "es": "Es un buen comienzo, pero el menú tiene demasiadas cosas."
+        },
+        {
+          "text": "Honestly, it's ugly. You must change the colors.",
+          "es": "Sinceramente, es feo. Tienes que cambiar los colores."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«Be honest» no es una invitación a ser brusco: se espera una crítica suavizada. Y el sujeto no se omite: «It's a good start».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-nuance.qa.rewrite",
+      "question": "I think we should rewrite the whole app from scratch.",
+      "questionEs": "Creo que deberíamos reescribir toda la aplicación desde cero.",
+      "accepted": [
+        {
+          "text": "I see where you're coming from, but I'm not entirely convinced it's worth the risk.",
+          "es": "Entiendo por qué lo dices, pero no estoy del todo convencido de que valga la pena el riesgo."
+        },
+        {
+          "text": "That may well be true, but could we look at it from another angle first?",
+          "es": "Puede que sea así, pero ¿podríamos verlo primero desde otro ángulo?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I understand you, but I am not agree with you.",
+          "es": "Te entiendo, pero no estoy de acuerdo contigo."
+        },
+        {
+          "text": "That's a stupid idea. It has no sense.",
+          "es": "Es una idea absurda. No tiene sentido."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«no tiene sentido» = «it doesn't make sense», no «it has no sense»; y discrepar sin suavizar suena muy agresivo en inglés.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-nuance.qa.help-me-move",
+      "question": "Hey, any chance you could help me move this Saturday?",
+      "questionEs": "Oye, ¿hay alguna posibilidad de que me ayudes con la mudanza este sábado?",
+      "accepted": [
+        {
+          "text": "I'd love to, but I'm away this weekend. Maybe I could help you unpack on Sunday night?",
+          "es": "Me encantaría, pero este fin de semana no estoy. ¿Quizá podría ayudarte a desempaquetar el domingo por la noche?"
+        },
+        {
+          "text": "Sure, I can come over in the morning. What time works for you?",
+          "es": "Claro, puedo pasarme por la mañana. ¿A qué hora te viene bien?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, I can't. I have plans.",
+          "es": "No, no puedo. Tengo planes."
+        },
+        {
+          "text": "I would love, but this weekend I'm not.",
+          "es": "Me encantaría, pero este fin de semana no estoy."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "Un «no» seco suena borde: se suaviza con «I'd love to, but…» y una alternativa. «love» necesita «to»: «I'd love to», y «no estoy» es «I'm away», no «I'm not».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-nuance.qa.review-before-lunch",
+      "question": "Would you mind reviewing my pull request before lunch?",
+      "questionEs": "¿Te importaría revisar mi pull request antes de comer?",
+      "accepted": [
+        {
+          "text": "Not at all. I'll take a look at it in the next hour.",
+          "es": "Para nada. Le echo un vistazo en la próxima hora."
+        },
+        {
+          "text": "I'm afraid I'm swamped this morning. Would right after lunch work?",
+          "es": "Me temo que esta mañana voy hasta arriba. ¿Te valdría justo después de comer?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, of course I mind. I'll do it now.",
+          "es": "Sí, claro. Lo hago ahora."
+        },
+        {
+          "text": "No problem, I review it before the lunch.",
+          "es": "No hay problema, la reviso antes de la comida."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "Trampa clásica: «Would you mind…?» = ¿te importa?, así que para aceptar se dice «Not at all» (no me importa). «Yes, I mind» significa que sí te molesta.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-nuance.qa.demo",
+      "question": "So, how did the demo with the client go yesterday?",
+      "questionEs": "Bueno, ¿qué tal fue ayer la demo con el cliente?",
+      "accepted": [
+        {
+          "text": "It wasn't exactly a huge success. The app crashed twice in ten minutes.",
+          "es": "No fue precisamente un gran éxito. La aplicación se colgó dos veces en diez minutos."
+        },
+        {
+          "text": "Let's just say it could have gone better, to put it mildly.",
+          "es": "Digamos que podría haber ido mejor, por decirlo suavemente."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "It was not exactly a success, the app fell two times.",
+          "es": "No fue precisamente un éxito, la aplicación se cayó dos veces."
+        },
+        {
+          "text": "It could have go better, sincerely.",
+          "es": "Podría haber ido mejor, sinceramente."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "Una aplicación «se cuelga»: «it crashed», no «it fell»; tras «could have» va participio: «gone»; «sincerely» es para cerrar cartas, al hablar se dice «honestly».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-nuance.qa.traffic",
+      "question": "The traffic on the way here was an absolute nightmare.",
+      "questionEs": "El tráfico para llegar hasta aquí ha sido una auténtica pesadilla.",
+      "accepted": [
+        {
+          "text": "Tell me about it! It took me over an hour from downtown.",
+          "es": "¡Ni me lo digas! Yo tardé más de una hora desde el centro."
+        },
+        {
+          "text": "Oh no, sorry to hear that. Was there an accident or something?",
+          "es": "Vaya, lo siento. ¿Hubo un accidente o algo?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Tell me about it, what happened exactly?",
+          "es": "Cuéntamelo, ¿qué pasó exactamente?"
+        },
+        {
+          "text": "Yes, I lasted more than one hour from the center.",
+          "es": "Sí, tardé más de una hora desde el centro."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "«Tell me about it!» no pide detalles: significa «a mí también me pasó». «tardar» con tiempo es «it took me», no «I lasted».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-nuance.qa.interesting-proposal",
+      "question": "The client said our proposal was very interesting and they'd keep it in mind. Is that good news?",
+      "questionEs": "El cliente dijo que nuestra propuesta era muy interesante y que la tendrían en cuenta. ¿Son buenas noticias?",
+      "accepted": [
+        {
+          "text": "Reading between the lines, I don't think they're going to sign anytime soon.",
+          "es": "Leyendo entre líneas, no creo que vayan a firmar pronto."
+        },
+        {
+          "text": "Not necessarily. It sounds like a polite way of saying no.",
+          "es": "No necesariamente. Suena a una forma educada de decir que no."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes! They said it's interesting, so they will sign sure.",
+          "es": "¡Sí! Dijeron que es interesante, así que seguro que firman."
+        },
+        {
+          "text": "It sounds like a educated way of saying no.",
+          "es": "Suena a una forma educada de decir que no."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«interesting» y «we'll keep it in mind» suelen ser un «no» suave. «educado» (cortés) es «polite»; «educated» = con estudios. Y es «a polite», con «a».",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}
