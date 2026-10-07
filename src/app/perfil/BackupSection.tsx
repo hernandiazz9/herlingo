@@ -16,6 +16,7 @@ import {
 } from "@/lib/backup";
 import { saveFile } from "@/lib/backup/file";
 import { languageName, listPacks } from "@/lib/content";
+import { leagueEnabled } from "@/lib/league/config";
 import { parseProgress } from "@/lib/progress";
 
 type Notice = { kind: "error" | "info"; text: string } | { kind: "restored"; previous: Backup };
@@ -93,7 +94,9 @@ export function BackupSection() {
           Copia de seguridad
         </h2>
         <p className="text-sm text-ink-muted">
-          Tu progreso solo está en este dispositivo. Hasta que haya cuentas, esta copia es la única forma de no perderlo.
+          {leagueEnabled()
+            ? "Además de «Guardado en la nube» (arriba), puedes guardar una copia en un archivo."
+            : "Tu progreso solo está en este dispositivo. Hasta que haya cuentas, esta copia es la única forma de no perderlo."}
         </p>
       </div>
       <Card className="flex flex-col gap-4">

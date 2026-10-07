@@ -56,6 +56,9 @@ src/lib/backup/        Perfil "Copia de seguridad": export/import every `lang-le
                        as a JSON file; validates before writing, rolls back on a failed write.
 src/lib/league/        Liga (docs/league.md): config.ts (`leagueEnabled()`), client.ts (lazy supabase-js, `leagueRpc`),
                        account.ts (cached account, actions, change event), use-league-account.ts. Route /liga/ (under Perfil).
+src/lib/cloud-save/    "Guardado en la nube" (docs/cloud-save.md): the backup blob per Liga account via `league_save_*` (blob.ts,
+                       undo.ts, sync loop + actions in index.ts, use-cloud-save.ts). Started by LeagueSync only when `leagueEnabled()`.
+src/components/cloud-save/  Its UI: CloudSaveHost (layout: restore offer, conflict dialog, undo panel), CloudSaveCard (Perfil).
 content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`).
                        `it` (default pack, `"default": true`) and `fr` (docs/brief-fr.md). Ids are unique across packs.
                        Format, ids, order ranges and quality rules: docs/content-guide.md.
@@ -97,6 +100,11 @@ plans/                 Orchestrator plans. Never edit.
   (contract, caps and setup in `docs/league.md`); tables live in the private `league` schema with
   RLS and no grants. SQL changes = a new file in `supabase/migrations/` + `npm run db:check`;
   never edit an applied migration and never touch the real project (Hernán runs `db push`).
+- **Cloud save** (docs/cloud-save.md) rides on the Liga account: the blob IS the Perfil backup format
+  (`collectBackup`/`applyBackup`, no second format) limited to `isCloudSaveKey` (backup keys minus every
+  `lang-lern:league-*` key; the coach access code and `lang-lern:cloud-save` are never in any backup). Bookkeeping
+  lives in `lang-lern:cloud-save` (keep `enabled` on resets). Conflicts are never resolved silently; a restore
+  first keeps the replaced data in Cache Storage `lang-lern-cloud-undo`, which the SW never deletes (KEEP list).
 - **Design tokens** are CSS variables in `src/app/globals.css` (`--lemon`, `--sea`, `--terracotta`,
   neutrals, `--success`, `--error`, each with `-deep`/`-soft`/`-ledge` variants, plus `--on-accent`,
   `--on-lemon`, `--shadow`) exposed to Tailwind as `bg-sea`, `text-ink`, `border-line`,

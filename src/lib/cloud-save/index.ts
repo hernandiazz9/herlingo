@@ -551,8 +551,10 @@ function check() {
 }
 
 function onAccount(change: LeagueAccountChange) {
-  if (change === "deleted") {
-    // The server deleted the copy with the account: forget it here too (keep the switch).
+  if (change === "deleted" || change === "user_changed") {
+    // Deleted: the server deleted the copy with the account. Another user: the revision, hash and
+    // dates belonged to the previous account. Forget them here too (keep the switch); the next
+    // check starts from scratch for the new account (head check before any upload).
     writeBook({ userId: null, rev: null, hash: null, dirty: false, lastSyncAt: null, lastError: null });
   }
   if (change === "signed_out" || change === "deleted" || change === "user_changed" || change === "joined") {

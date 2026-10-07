@@ -2,6 +2,8 @@
 
 Friends compete on weekly XP. Plan: `plans/004-liga.md`. This document is the source of truth
 for the database side (schema, rules, RPC contract) and for setting up the Supabase project.
+The cloud save of the on-device data ("Guardado en la nube", plan 010) uses the same account and
+project: see "Cloud save" below and [`docs/cloud-save.md`](cloud-save.md).
 
 ## Decision record
 
@@ -293,10 +295,30 @@ Errors: `not_authenticated`, `lang_invalid`.
 ### `league_delete_me() → boolean`
 
 "Salir de la Liga y borrar mis datos": deletes the caller's XP events, stats, every membership
-(and each group that becomes empty) and profile. `true` if there was a profile. The auth user itself stays
+(and each group that becomes empty), cloud save (`league.saves`, since migration
+`20261008000000_league_save.sql`) and profile. `true` if there was a profile. The auth user itself stays
 (anonymous, without data); the client then signs out and clears its local Liga state. To remove an
 auth user completely, delete it in the dashboard (Authentication → Users): everything cascades.
 Errors: `not_authenticated`.
+
+### Cloud save (`league_save_*`)
+
+Migration `20261008000000_league_save.sql` adds `league.saves` (one row per user: the Perfil
+backup blob, `rev`, `size`, `updated_at`, rate-limit window; RLS on, no grants) and four RPCs,
+same pattern as above (signed-in users only, P0001 tokens). Full contract, caps and client:
+[`docs/cloud-save.md`](cloud-save.md).
+
+| RPC | Returns |
+| --- | --- |
+| `league_save_head()` | `{ rev, size, updated_at }` or `null`. |
+| `league_save_get()` | `{ rev, size, updated_at, data }` or `null`. |
+| `league_save_put(p_data jsonb, p_base_rev bigint)` | `{ status: "ok" \| "conflict", rev, size, updated_at }`; `p_base_rev` must be the stored `rev` (`null` = no copy yet), else `conflict` and nothing written. Errors `save_invalid`, `save_too_large` (> 2 MiB), `save_rate_limited` (> 120 writes per hour). |
+| `league_save_delete()` | `void`: deletes the caller's copy. |
+
+**Delete behaviour.** `league_delete_me()` also deletes the save; deleting the auth user
+cascades. On the device, the account change `deleted` (and `user_changed`) resets the bookkeeping
+key `lang-lern:cloud-save` (keeps the on/off switch); the learner's data on the device is not
+touched. Signing out keeps the cloud copy and the bookkeeping.
 
 ## Client (`src/lib/league/`)
 
