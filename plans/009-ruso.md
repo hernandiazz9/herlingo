@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:49Z 💻
+- Updated: 2026-10-07 22:52Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T119 + T125 running; then T120, T121, T123
+- Next step: T125 + T121 running; then T120, T123, T122
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -130,7 +130,7 @@ Worktree setup: npm ci
 - Outcome: food (41 phrases, 7 lessons) + shopping (45 phrases, 6 lessons) → ec14baa
 
 ## T119 — Russian A1: city, health
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T111
 - Where: any
 - Goal: Units `ru-a1-city` (50) and `ru-a1-health` (52) per docs/brief-ru.md (directions, museums, places, meeting up; pharmacy, doctor, 112).
@@ -139,7 +139,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: city (50 phrases, St Petersburg) + health (51 phrases, 112); pack now 10 units, 422 phrases, 321 vocab, 76 Q&A → a554ae7
 
 ## T120 — Russian A1: 12 dialogues
 - Status: pending
@@ -154,7 +154,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T121 — Russian A1: stories 1–6
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T114, T115, T116, T117, T118, T119
 - Where: any
 - Goal: Stories 1–6 with the brief-ru cast in Saint Petersburg (Lucía's arrival, the flat, breakfast, the metro, the market, a museum), `level: "A1"`, present tense, 80–130 words; key words reuse unit items by id where possible. Leave a one-line outline for stories 7–12 in DECISIONS (voices included).
@@ -223,6 +223,7 @@ Worktree setup: npm ci
 - [ ] T116 @88f0d9b — Russian language review (about-me, daily) (queued 2026-10-07 💻)
 - [ ] T117 @98894e4 — Russian language review (transport, hotel) (queued 2026-10-07 💻)
 - [ ] T118 @ec14baa — Russian language review (food, shopping) (queued 2026-10-07 💻)
+- [ ] T119 @a554ae7 — Russian language review (city, health) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
@@ -267,3 +268,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:44Z 💻 T117 done · → 98894e4 · verify ✓
 - 2026-10-07 22:45Z 💻 T119 launched · attempt 1 · agent ab752833297b2880d
 - 2026-10-07 22:49Z 💻 T118 done · → ec14baa · verify ✓
+- 2026-10-07 22:49Z 💻 T125 launched · attempt 1 · agent a5f2477b9aaa30b35
+- 2026-10-07 22:52Z 💻 T119 done · → a554ae7 · verify ✓
