@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 21:39Z 💻
+- Updated: 2026-10-07 21:48Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 2040b43
-- Next step: integrate T115/T116, then T117+T118 (B2 dialogues, stories)
+- Branch: plan-009-ingles-b2-c1 @ 7eb3c50
+- Next step: integrate T115/T120, then T117+T118 and C1 units
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -89,7 +89,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T116 — English B2: relationships, culture
-- Status: running (attempt 1 · 💻 · agent af3a48e958b4a6b7d · since 21:39Z)
+- Status: done
 - Depends on: T111, T112
 - Where: any
 - Goal: Units `b2-relationships` (250) and `b2-culture` (252), per docs/brief-en.md: `level: "B2"`, phrases ≤ 18 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -98,7 +98,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "B2"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: b2-relationships/culture: 89 phrases, 67 vocab, 16 Q&A, 10 lessons · 7eb3c50 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T117 — English B2: 12 dialogues
 - Status: pending
@@ -138,7 +138,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T120 — English C1: negotiation, presenting and C1 grammar
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a093dd1264c1aa5ed · since 21:48Z)
 - Depends on: T111
 - Where: any
 - Goal: Units `c1-negotiation` (310), `c1-presenting` (312) and `c1-grammar` (390) with the 10 C1 grammar cards in its `grammar` array, per docs/brief-en.md: `level: "C1"`, phrases ≤ 22 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -267,6 +267,7 @@ Worktree setup: npm ci
 - [ ] T112 @eaac50e — content review (queued 2026-10-07 ☁️)
 - [ ] T114 @8dd8cae — content review (queued 2026-10-07 💻)
 - [ ] T113 @2040b43 — content review (queued 2026-10-07 💻)
+- [ ] T116 @7eb3c50 — content review (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
@@ -300,3 +301,5 @@ Worktree setup: npm ci
 - 2026-10-07 21:39Z 💻 T113 done · worktree-agent-a67cae1912ecd9cb9 → 2040b43 · verify ✓
 - 2026-10-07 21:39Z 💻 T115 launched · attempt 1 · agent a2877f122eec5dbe6
 - 2026-10-07 21:39Z 💻 T116 launched · attempt 1 · agent af3a48e958b4a6b7d
+- 2026-10-07 21:48Z 💻 T116 done · worktree-agent-af3a48e958b4a6b7d → 7eb3c50 · verify ✓
+- 2026-10-07 21:48Z 💻 T120 launched · attempt 1 · agent a093dd1264c1aa5ed
