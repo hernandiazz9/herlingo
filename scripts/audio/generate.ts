@@ -7,17 +7,21 @@
  *
  * edge-tts lives in a project-local venv (.venv, git-ignored) created on first run from
  * scripts/audio/requirements.txt (pinned).
+ *
+ * `npm run audio -- --dry-run` only prints what a real run would do per pack (new mp3s, unchanged
+ * files, files it would prune, manifest changes) and writes nothing under public/audio/.
  */
 import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
 import type { Pack } from "../../src/lib/content/types";
-import { audioDir, MANIFEST, planAudio, type Manifest } from "./plan";
+import { audioDir, MANIFEST, planAudio, readManifest, type Manifest } from "./plan";
 
 const ROOT = process.cwd();
 const VENV = join(ROOT, ".venv");
 const PY = join(VENV, "bin", "python");
 const HERE = join(ROOT, "scripts", "audio");
+const DRY_RUN = process.argv.includes("--dry-run");
 
 function ensureVenv() {
   if (existsSync(PY) && spawnSync(PY, ["-c", "import edge_tts"]).status === 0) return;
@@ -36,8 +40,23 @@ let failed = false;
 for (const pack of Object.values(bundle.packs)) {
   const lang = pack.meta.lang;
   const dir = audioDir(ROOT, lang);
-  mkdirSync(dir, { recursive: true });
   const jobs = planAudio(pack);
+
+  if (DRY_RUN) {
+    const wanted = new Set(jobs.map((j) => j.file));
+    const present = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith(".mp3")) : [];
+    const toGenerate = new Set(jobs.filter((j) => !existsSync(join(dir, j.file))).map((j) => j.file));
+    const toPrune = present.filter((f) => !wanted.has(f));
+    const old = readManifest(dir);
+    const changedKeys =
+      jobs.filter((j) => old[j.key] !== j.file).length + Object.keys(old).filter((k) => !jobs.some((j) => j.key === k)).length;
+    console.log(
+      `${relative(ROOT, dir)}: ${jobs.length} keys, would generate ${toGenerate.size}, keep ${present.length - toPrune.length}, ` +
+        `prune ${toPrune.length}, manifest entries changed ${changedKeys}`,
+    );
+    continue;
+  }
+  mkdirSync(dir, { recursive: true });
 
   const todo = new Map<string, { text: string; voice: string; out: string }>();
   for (const j of jobs) {
