@@ -1,6 +1,6 @@
 # Plan 009 — Ruso: Russian A1 pack with Cyrillic, stress marks and romanization
 
-Status: active
+Status: done
 Created: 2026-10-07
 Base branch: plan-009-ruso
 Goal: Add Russian (`ru`) as the fourth pack, a levelled pack with one level (A1) for a total beginner travelling and living day to day. Russian is the first pack in a non-Latin script, so this plan first makes the code generic for it: a `vy` register (badge "Trato de usted/tú"), a pack `stress` rule (marks checked by `content:check`, ignored when matching, stripped before TTS), a pack `romanization` table that shows a Latin line under target text (switch on Perfil, per language, on by default) and lets typed answers be written in Latin, and `ё`/`е` folding. Then the full French-sized A1 course (alphabet unit + 10 units + grammar, ~420 phrases, ~320 vocab, ~80 Q&A, 12 dialogues, 12 stories, 8 placement questions), ru-RU neural audio and pictures on the Mac. Italian, French and English content and every on-device key stay untouched. MVP speed: no automated tests; verification is `npm run verify`.
@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 23:09Z 💻
-- Writer: me (💻 desktop)
-- Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T124 running on the Mac (audio, pictures, offline check)
-- Needs Hernán: -
+- Updated: 2026-10-07 23:16Z 💻
+- Writer: released by 💻 desktop (plan done)
+- Branch: plan-009-ruso @ 436bce7 · ff of main possible
+- Next step: Hernán: OK to fast-forward main + push, then deploy; review/visual queues on the PC
+- Needs Hernán: OK for main + deploy
 
 ## Shared contract (all tasks read this)
 
@@ -190,7 +190,7 @@ Worktree setup: npm ci
 - Outcome: 8 questions easy→hard over 8 units, all with audio; single-level suggestLevel always A1 → 3dfb900
 
 ## T124 — Russian audio and pictures, final offline check
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T112, T113, T120, T122, T123
 - Where: mac
 - Goal: Generate ru-RU neural mp3 for every Russian playable (text without stress marks) and the Russian pictures, commit them, and prove the Russian course works offline with only its audio cached.
@@ -200,7 +200,7 @@ Worktree setup: npm ci
   - `npm run audio` and `npm run images` → done; `npm run content:check -- --strict-audio --strict-images` → ✓
   - `git diff --stat public/audio/it public/audio/fr public/audio/en` → empty
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: 1793 ru mp3 (Svetlana/Dmitry, marks stripped), 33 new pictures; strict audio+images ✓; sw audio list ru 1793 files, Range 206; it/fr/en untouched → 436bce7
 
 ## T125 — Prepárate: stress marks for packs with a `stress` rule
 - Status: done
@@ -229,6 +229,7 @@ Worktree setup: npm ci
 - [ ] T120 @63a23e9 — Russian language review (dialogues) (queued 2026-10-07 💻)
 - [ ] T123 @3dfb900 — Russian language review (placement) (queued 2026-10-07 💻)
 - [ ] T122 @5cf8825 — Russian language review (stories 7–12) (queued 2026-10-07 💻)
+- [ ] T124 @436bce7 — skim the ru audio manifest; listen to a few mp3s for stress (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
@@ -236,6 +237,7 @@ Worktree setup: npm ci
 - [ ] T125 @41225a2 — Prepárate pack + interview with Russian active (fake mode): marks + Latin line; light + dark 375 px (queued 2026-10-07 💻)
 - [ ] T120 @63a23e9 — play two Russian dialogues (vy + neighbour tu) with device voices; badge 'Trato de usted/tú'; Latin line on options (queued 2026-10-07 💻)
 - [ ] T122 @5cf8825 — read two Russian stories with Latin line on/off (queued 2026-10-07 💻)
+- [ ] T124 @436bce7 — installed PWA, Russian active, airplane mode: lesson, dialogue, story play neural audio; it↔ru switch keeps progress (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: Russian (`ru`) is the fourth pack, levelled with one level A1 (`levels: ["A1"]`), full French volume; A2 later with the same molds; product note in docs/brief-ru.md (docs/brief.md not edited). (Hernán)
@@ -290,3 +292,6 @@ Worktree setup: npm ci
 - 2026-10-07 23:04Z 💻 T123 launched · attempt 1 · agent a9a4d7e7750c97261
 - 2026-10-07 23:08Z 💻 T123 done · → 3dfb900 · verify ✓
 - 2026-10-07 23:09Z 💻 T122 done · → 5cf8825 · verify ✓
+- 2026-10-07 23:09Z 💻 T124 launched · attempt 1 · agent a7fe1df6ad5ca18bd
+- 2026-10-07 23:16Z 💻 T124 done · → 436bce7 · verify ✓ · strict-audio/images ✓
+- 2026-10-07 23:16Z 💻 plan done: final ru pack 12 units, 64 lessons, 508 phrases, 395 vocab, 92 Q&A, 19 grammar, 12 dialogues, 12 stories, 8 placement
