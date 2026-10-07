@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 23:00Z 💻
+- Updated: 2026-10-07 23:04Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T120 + T122 running; then T123, T124 on the Mac
+- Next step: T122 + T123 running; then T124 on the Mac
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -142,7 +142,7 @@ Worktree setup: npm ci
 - Outcome: city (50 phrases, St Petersburg) + health (51 phrases, 112); pack now 10 units, 422 phrases, 321 vocab, 76 Q&A → a554ae7
 
 ## T120 — Russian A1: 12 dialogues
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T114, T115, T116, T117, T118, T119
 - Where: any
 - Goal: The 12 dialogues listed in docs/brief-ru.md (`level: "A1"`, `unit`, one native speaker each, avatars, register-honest options `vy`/`tu` with Spanish feedback), order 1–12.
@@ -151,7 +151,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: 12 dialogues, 9–10 turns, one native speaker each (Svetlana odd / Dmitry even), 11 vy + neighbour tu → 63a23e9
 
 ## T121 — Russian A1: stories 1–6
 - Status: done
@@ -178,7 +178,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T123 — Russian placement test
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T114, T115, T116, T117, T118, T119
 - Where: any
 - Goal: 8 graded placement questions (`level: "A1"`, easy → hard, with `audio`), spread over the A1 units, each marking the lessons it proves, for a learner who already knows some Russian.
@@ -226,11 +226,13 @@ Worktree setup: npm ci
 - [ ] T119 @a554ae7 — Russian language review (city, health) (queued 2026-10-07 💻)
 - [ ] T125 @41225a2 — code review (api/_lib languages, tts strip by voice) (queued 2026-10-07 💻)
 - [ ] T121 @27ba4ba — Russian language review (stories 1–6) (queued 2026-10-07 💻)
+- [ ] T120 @63a23e9 — Russian language review (dialogues) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
 - [ ] T112 @84820ed — Russian lesson/Frasario/dialogue/story with Latin line, Perfil switch off/on; Italian unchanged; light + dark 375 px; check Perfil hint 'Las letras latinas debajo del {idioma}' casing (queued 2026-10-07 💻)
 - [ ] T125 @41225a2 — Prepárate pack + interview with Russian active (fake mode): marks + Latin line; light + dark 375 px (queued 2026-10-07 💻)
+- [ ] T120 @63a23e9 — play two Russian dialogues (vy + neighbour tu) with device voices; badge 'Trato de usted/tú'; Latin line on options (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: Russian (`ru`) is the fourth pack, levelled with one level A1 (`levels: ["A1"]`), full French volume; A2 later with the same molds; product note in docs/brief-ru.md (docs/brief.md not edited). (Hernán)
@@ -279,3 +281,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:53Z 💻 T125 done · → 41225a2 · verify ✓
 - 2026-10-07 22:53Z 💻 T120 launched · attempt 1 · agent a043629e2af1e9598
 - 2026-10-07 23:00Z 💻 T121 done · → 27ba4ba · verify ✓
+- 2026-10-07 23:00Z 💻 T122 launched · attempt 1 · agent a19f075a0e6de341e
+- 2026-10-07 23:04Z 💻 T120 done · → 63a23e9 · verify ✓
