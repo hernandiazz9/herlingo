@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:03Z 💻
+- Updated: 2026-10-07 22:04Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ f73954b
-- Next step: integrate T118/T121, then T119, T122–T124; relay after T121 (7 integrated)
+- Branch: plan-009-ingles-b2-c1 @ d68a4aa
+- Next step: integrate T121/T119, then relay to a fresh 💻 session for T122–T128
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -126,7 +126,7 @@ Worktree setup: npm ci
 - Outcome: B2 stories 1–6 (201–206, 15–16 sentences, key words reuse B2 items) · 5f44b8a · verify ✓ 💻 · not checked: audio + memoir picture (T129), reading in app
 
 ## T119 — English B2: stories 7–12
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a504eb9fe3fcbf7b3 · since 22:04Z)
 - Depends on: T118
 - Where: any
 - Goal: B2 stories 7–12 (order 207–212) following T118's outline (in Decisions).
@@ -316,3 +316,4 @@ Worktree setup: npm ci
 - 2026-10-07 22:00Z 💻 T120 done · worktree-agent-a093dd1264c1aa5ed → f73954b · verify ✓
 - 2026-10-07 22:00Z 💻 T121 launched · attempt 1 · agent ad2efc66ff7fd045c
 - 2026-10-07 22:03Z 💻 T118 done · worktree-agent-ae7f64c74ac840123 → 5f44b8a · verify ✓
+- 2026-10-07 22:04Z 💻 T119 launched · attempt 1 · agent a504eb9fe3fcbf7b3
