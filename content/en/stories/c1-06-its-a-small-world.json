@@ -1,0 +1,97 @@
+{
+  "id": "story.en-c1-its-a-small-world",
+  "order": 306,
+  "title": "It's a small world",
+  "titleEs": "El mundo es un pañuelo",
+  "description": "Después de la charla, una desconocida se presenta a Pablo. Resulta que es de Valencia… y trae una propuesta que lo cambia todo.",
+  "emoji": "🌍",
+  "situation": "social",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "The woman introduces herself as Laura, an engineering director at a fintech company.", "es": "La mujer se presenta: es Laura, directora de ingeniería en una empresa de tecnología financiera." },
+    { "id": "s2", "text": "«Mind if I join you? I really enjoyed your talk.»", "es": "«¿Te importa si me uno? Me ha gustado mucho tu charla.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s3", "text": "«Thanks! Is this your first time at this conference?»", "es": "«¡Gracias! ¿Es la primera vez que vienes a este congreso?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s4", "text": "«No, I've been coming for years, mostly for the hallway conversations.»", "es": "«No, llevo años viniendo, sobre todo por las charlas de pasillo.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "His friends politely drift toward the snack table.", "es": "Sus amigos se alejan discretamente hacia la mesa del picoteo." },
+    { "id": "s6", "text": "«So, what's your background? Your accent isn't from around here.»", "es": "«Y ¿cuál es tu trayectoria? Tu acento no es de por aquí.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "«I'm originally from Valencia, but I've been based in Chicago for two years.»", "es": "«Soy de Valencia, pero llevo dos años viviendo en Chicago.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "«It's a small world! I grew up in Valencia too.»", "es": "«¡El mundo es un pañuelo! Yo también me crie en Valencia.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s9", "text": "For a few minutes, they complain about the paella in Chicago and laugh.", "es": "Durante unos minutos, se quejan de la paella de Chicago y se ríen." },
+    { "id": "s10", "text": "Then Laura gets to the point.", "es": "Luego Laura va al grano." },
+    { "id": "s11", "text": "«My company is opening an office in Valencia next year.»", "es": "«Mi empresa va a abrir una oficina en Valencia el año que viene.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s12", "text": "«We need someone to lead the backend team. Would you be interested?»", "es": "«Necesitamos a alguien que dirija el equipo de backend. ¿Te interesaría?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s13", "text": "Pablo almost drops his drink.", "es": "A Pablo casi se le cae la bebida." },
+    { "id": "s14", "text": "«I'm not actively looking, but I'm always open to interesting opportunities.»", "es": "«No estoy buscando activamente, pero siempre estoy abierto a oportunidades interesantes.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s15", "text": "«No pressure at all. Let's grab coffee next week and talk properly.»", "es": "«Sin ninguna presión. Tomemos un café la semana que viene y lo hablamos con calma.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s16", "text": "«Sounds great. I'll drop you a line on Monday.»", "es": "«Genial. Te escribo el lunes.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s17", "text": "As soon as she leaves, Jordan comes back with a plate of cookies.", "es": "En cuanto ella se va, Jordan vuelve con un plato de galletas." },
+    { "id": "s18", "text": "«Okay, who was that? You look like you've seen a ghost.»", "es": "«A ver, ¿quién era esa? Tienes cara de haber visto un fantasma.»", "voice": "en-US-BrianNeural" },
+    { "id": "s19", "text": "Pablo stares at the card and, for the first time in months, thinks about going home.", "es": "Pablo se queda mirando la tarjeta y, por primera vez en meses, piensa en volver a casa." }
+  ],
+  "keywords": [
+    "c1-networking.conference",
+    "c1-networking.mind-if-i-join-you",
+    "c1-networking.ive-been-coming-for-years",
+    "c1-networking.background",
+    "c1-networking.im-originally-from-valencia",
+    "c1-networking.its-a-small-world",
+    "c1-networking.im-not-actively-looking",
+    "c1-networking.opportunity",
+    "c1-networking.no-pressure-at-all",
+    "c1-networking.ill-drop-you-a-line"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why does Laura come to this conference every year?",
+      "es": "¿Por qué viene Laura a este congreso todos los años?",
+      "options": [
+        { "text": "Mostly for the talks.", "es": "Sobre todo por las charlas." },
+        { "text": "Mostly for the conversations between talks.", "es": "Sobre todo por las conversaciones entre charlas." },
+        { "text": "Because she organizes it.", "es": "Porque ella lo organiza." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What do Pablo and Laura have in common?",
+      "es": "¿Qué tienen en común Pablo y Laura?",
+      "options": [
+        { "text": "They both work at Maya's startup.", "es": "Los dos trabajan en la startup de Maya." },
+        { "text": "They studied at the same university.", "es": "Estudiaron en la misma universidad." },
+        { "text": "They both grew up in Valencia.", "es": "Los dos se criaron en Valencia." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "What does Laura offer Pablo?",
+      "es": "¿Qué le ofrece Laura a Pablo?",
+      "options": [
+        { "text": "A job leading a team in Valencia.", "es": "Un puesto dirigiendo un equipo en Valencia." },
+        { "text": "A talk at her company.", "es": "Dar una charla en su empresa." },
+        { "text": "A job in Chicago.", "es": "Un trabajo en Chicago." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "How does Pablo react to the offer?",
+      "es": "¿Cómo reacciona Pablo a la oferta?",
+      "options": [
+        { "text": "He says no straight away.", "es": "Dice que no enseguida." },
+        { "text": "He's surprised but open to talking.", "es": "Se sorprende, pero está abierto a hablarlo." },
+        { "text": "He accepts on the spot.", "es": "La acepta en el acto." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "c1-networking.mind-if-i-join-you", "gap": "Mind", "distractors": ["Matter", "Bother"] },
+    { "id": "g2", "sentence": "s6", "answer": "c1-networking.background", "gap": "background", "distractors": ["formation", "trajectory"] },
+    { "id": "g3", "sentence": "s7", "answer": "c1-networking.im-originally-from-valencia", "gap": "based in", "distractors": ["based on", "basing in"] },
+    { "id": "g4", "sentence": "s8", "answer": "c1-networking.its-a-small-world", "gap": "small world", "distractors": ["little world", "small handkerchief"] },
+    { "id": "g5", "sentence": "s14", "answer": "c1-networking.opportunity", "gap": "opportunities", "distractors": ["occasions", "opportunitys"] },
+    { "id": "g6", "sentence": "s16", "answer": "c1-networking.ill-drop-you-a-line", "gap": "drop you a line", "distractors": ["throw you a line", "drop you a letter"] }
+  ]
+}
