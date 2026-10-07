@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 23:16Z 💻
+- Updated: 2026-10-07 23:17Z 💻
 - Writer: released by 💻 desktop (plan done)
-- Branch: plan-009-ruso @ 436bce7 · ff of main possible
+- Branch: plan-009-ruso @ 0430640 (origin/main merged) · ff of main possible
 - Next step: Hernán: OK to fast-forward main + push, then deploy; review/visual queues on the PC
 - Needs Hernán: OK for main + deploy
 
@@ -254,6 +254,7 @@ Worktree setup: npm ci
 - 2026-10-07 T112: Latin line inherits text colour at 0.7 opacity; hidden when equal to the text; FillGap Latin line masks the gap until answered (agent)
 - 2026-10-07 T115: pronouns folded into gram.ru-a1-pronouns-eto; ru-a1-numbers.bilet (билет) defined for later units to reuse (agent)
 - 2026-10-07 T121: outline 7–12 (narrator Dmitry, women Svetlana, Dima = narrator voice): 7 a1-07-cafe (Lucía+Anya, coffee and pirog on Nevsky); 8 a1-08-white-nights (embankment walk with Dima, bridges open at night); 9 a1-09-a-cold (Vera Petrovna takes her to the pharmacy); 10 a1-10-dacha (past, weekend with Dima); 11 a1-11-last-week (past, Lucía tells her mother); 12 a1-12-goodbye (past, Dima drives her to Pulkovo). Friends ты; Vera Petrovna вы at first then ты (agent)
+- 2026-10-07 plan: origin/main gained plan 009-ingles-b2-c1 (English B2+C1, T111–T129, run in parallel) — same plan number and overlapping task ids; merged origin/main into plan-009-ruso (0430640, clean, verify + strict audio/images ✓); main can now fast-forward (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-07 T111: server-side Prepárate TTS (api/) still gets stress marks; client strips them today
