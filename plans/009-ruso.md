@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 23:04Z 💻
+- Updated: 2026-10-07 23:08Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T122 + T123 running; then T124 on the Mac
+- Next step: T122 running; then T124 on the Mac (npm run audio/images, offline check)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -178,7 +178,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T123 — Russian placement test
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T114, T115, T116, T117, T118, T119
 - Where: any
 - Goal: 8 graded placement questions (`level: "A1"`, easy → hard, with `audio`), spread over the A1 units, each marking the lessons it proves, for a learner who already knows some Russian.
@@ -187,7 +187,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: 8 questions easy→hard over 8 units, all with audio; single-level suggestLevel always A1 → 3dfb900
 
 ## T124 — Russian audio and pictures, final offline check
 - Status: pending
@@ -227,6 +227,7 @@ Worktree setup: npm ci
 - [ ] T125 @41225a2 — code review (api/_lib languages, tts strip by voice) (queued 2026-10-07 💻)
 - [ ] T121 @27ba4ba — Russian language review (stories 1–6) (queued 2026-10-07 💻)
 - [ ] T120 @63a23e9 — Russian language review (dialogues) (queued 2026-10-07 💻)
+- [ ] T123 @3dfb900 — Russian language review (placement) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
@@ -254,6 +255,7 @@ Worktree setup: npm ci
 - 2026-10-07 T111: server-side Prepárate TTS (api/) still gets stress marks; client strips them today
 - 2026-10-07 T112: no Latin line on the learner's own typed/heard answer nor 'He oído «…»' in dialogues
 - 2026-10-07 T125: server doesn't check marks the model gets wrong (prompt only)
+- 2026-10-07 T123: hide the level chip/selector when a pack has a single level (ru A1 shows one chip)
 
 ## Log
 - 2026-10-07 💻 plan written from the interview; not approved yet
@@ -283,3 +285,5 @@ Worktree setup: npm ci
 - 2026-10-07 23:00Z 💻 T121 done · → 27ba4ba · verify ✓
 - 2026-10-07 23:00Z 💻 T122 launched · attempt 1 · agent a19f075a0e6de341e
 - 2026-10-07 23:04Z 💻 T120 done · → 63a23e9 · verify ✓
+- 2026-10-07 23:04Z 💻 T123 launched · attempt 1 · agent a9a4d7e7750c97261
+- 2026-10-07 23:08Z 💻 T123 done · → 3dfb900 · verify ✓
