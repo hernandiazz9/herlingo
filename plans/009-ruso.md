@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:34Z 💻
+- Updated: 2026-10-07 22:37Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T115 + T116 running; then T117–T119, T125
+- Next step: T116 + T117 running; then T118, T119, T125
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -82,7 +82,7 @@ Worktree setup: npm ci
 - Outcome: 2 units, 12 lessons, 75 phrases, 94 vocab, 15 Q&A, 7 grammar cards (alphabet groups + ty/vy) → 7e2496d
 
 ## T115 — Russian A1: numbers and grammar
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T111
 - Where: any
 - Goal: Units `ru-a1-numbers` (14) and `ru-a1-grammar` (90) with the 13 A1 grammar cards of brief-ru (recognition first, short examples with stress marks), prices in rubles, times, phone numbers.
@@ -91,7 +91,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: numbers (42 phrases, 42 vocab) + grammar (12 new cards; 13 topics with ty-or-vy) → 007cd62
 
 ## T116 — Russian A1: about me, daily life
 - Status: running (attempt 1)
@@ -106,7 +106,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T117 — Russian A1: transport, hotel
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T111
 - Where: any
 - Goal: Units `ru-a1-transport` (30) and `ru-a1-hotel` (32) per docs/brief-ru.md (airport, train, metro, taxi, tickets; booking, check-in, asking for things, small problems).
@@ -219,6 +219,7 @@ Worktree setup: npm ci
 - [ ] T113 @bde39f8 — code review (normalize.ts Latin path, score.ts) (queued 2026-10-07 💻)
 - [ ] T114 @7e2496d — Russian language review (stress marks, alphabet explanations) (queued 2026-10-07 💻)
 - [ ] T112 @84820ed — code review (TargetText usage coverage, romanization store) (queued 2026-10-07 💻)
+- [ ] T115 @007cd62 — Russian language review (numbers, grammar cards) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
@@ -237,6 +238,7 @@ Worktree setup: npm ci
 - 2026-10-07 T113→T112: FeedbackSheet.tsx:50 diffWords needs getPack(lang).meta as 3rd arg; added to T112's prompt (orchestrator)
 - 2026-10-07 T114: letter-group explanations are grammar cards gram.ru-a1-alphabet-<group>; alphabet unit holds many travel words (метро́, такси́, гости́ница, апте́ка, вокза́л…) that later units reuse by id; card gram.ru-a1-ty-or-vy exists (T115 must not duplicate it) (agent)
 - 2026-10-07 T112: Latin line inherits text colour at 0.7 opacity; hidden when equal to the text; FillGap Latin line masks the gap until answered (agent)
+- 2026-10-07 T115: pronouns folded into gram.ru-a1-pronouns-eto; ru-a1-numbers.bilet (билет) defined for later units to reuse (agent)
 
 ## Proposals (new scope)
 - 2026-10-07 T111: server-side Prepárate TTS (api/) still gets stress marks; client strips them today
@@ -254,3 +256,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:28Z 💻 T114 done · → 7e2496d · verify ✓
 - 2026-10-07 22:28Z 💻 T115 launched · attempt 1 · agent a4cbd6e7a0645f68a
 - 2026-10-07 22:34Z 💻 T112 done · → 84820ed · verify ✓
+- 2026-10-07 22:34Z 💻 T116 launched · attempt 1 · agent a8bdd3b582f293af5
+- 2026-10-07 22:37Z 💻 T115 done · → 007cd62 · verify ✓
