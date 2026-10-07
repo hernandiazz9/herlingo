@@ -1,0 +1,1072 @@
+{
+  "id": "ru-a1-daily",
+  "order": 22,
+  "level": "A1",
+  "title": "Casa, rutina y tiempo libre",
+  "description": "Tu casa, tu día a día, qué haces en tu tiempo libre, los días de la semana y el tiempo.",
+  "emoji": "🏠",
+  "situation": "casa",
+  "lessons": [
+    {
+      "id": "ru-a1-daily.l.home",
+      "title": "Tu casa",
+      "items": [
+        "ru-a1-daily.dom",
+        "ru-a1-daily.kvartira",
+        "ru-a1-daily.komnata",
+        "ru-a1-daily.kukhnya",
+        "ru-a1-daily.vannaya",
+        "ru-a1-daily.spalnya",
+        "ru-a1-daily.okno",
+        "ru-a1-daily.dver",
+        "ru-a1-daily.divan",
+        "ru-a1-daily.stol",
+        "ru-a1-daily.stul",
+        "ru-a1-daily.ya-zhivu-v-kvartire",
+        "ru-a1-daily.u-menya-malenkaya-kvartira",
+        "ru-a1-daily.kvartira-v-tsentre",
+        "ru-a1-daily.eto-moya-komnata",
+        "ru-a1-daily.prokhodite",
+        "ru-a1-daily.chuvstvuite-sebya-kak-doma",
+        "ru-a1-daily.u-vas-ochen-krasivo",
+        "ru-a1-daily.qa.prokhodite",
+        "ru-a1-daily.qa.kvartira"
+      ]
+    },
+    {
+      "id": "ru-a1-daily.l.routine",
+      "title": "Tu día",
+      "items": [
+        "ru-a1-daily.utrom",
+        "ru-a1-daily.dnyom",
+        "ru-a1-daily.vecherom",
+        "ru-a1-daily.nochyu",
+        "ru-a1-daily.obychno",
+        "ru-a1-daily.zavtrak",
+        "ru-a1-daily.obed",
+        "ru-a1-daily.uzhin",
+        "ru-a1-daily.ya-vstayu-v-sem",
+        "ru-a1-daily.ya-prinimayu-dush",
+        "ru-a1-daily.ya-zavtrakayu-doma",
+        "ru-a1-daily.utrom-ya-pyu-kofe",
+        "ru-a1-daily.ya-edu-na-rabotu",
+        "ru-a1-daily.ya-rabotayu-s-devyati",
+        "ru-a1-daily.ya-obedayu-v-chas",
+        "ru-a1-daily.ya-idu-domoi",
+        "ru-a1-daily.vecherom-ya-gotovlyu-uzhin",
+        "ru-a1-daily.ya-lozhus-spat",
+        "ru-a1-daily.qa.vo-skolko-vstaesh"
+      ]
+    },
+    {
+      "id": "ru-a1-daily.l.free-time",
+      "title": "Tiempo libre",
+      "items": [
+        "ru-a1-daily.chto-ty-delaesh",
+        "ru-a1-daily.chto-vy-delaete",
+        "ru-a1-daily.kniga",
+        "ru-a1-daily.film",
+        "ru-a1-daily.muzyka",
+        "ru-a1-daily.futbol",
+        "ru-a1-daily.sportzal",
+        "ru-a1-daily.park",
+        "ru-a1-daily.ya-lyublyu-chitat",
+        "ru-a1-daily.ya-lyublyu-gotovit",
+        "ru-a1-daily.ya-igrayu-v-futbol",
+        "ru-a1-daily.ya-khozhu-v-sportzal",
+        "ru-a1-daily.ya-smotryu-filmy",
+        "ru-a1-daily.ya-slushayu-muzyku",
+        "ru-a1-daily.ya-gulyayu-v-parke",
+        "ru-a1-daily.mne-nravitsya-gulyat",
+        "ru-a1-daily.qa.svobodnoe-vremya"
+      ]
+    },
+    {
+      "id": "ru-a1-daily.l.week",
+      "title": "Los días de la semana",
+      "items": [
+        "ru-a1-daily.nedelya",
+        "ru-a1-daily.ponedelnik",
+        "ru-a1-daily.vtornik",
+        "ru-a1-daily.sreda",
+        "ru-a1-daily.chetverg",
+        "ru-a1-daily.pyatnitsa",
+        "ru-a1-daily.subbota",
+        "ru-a1-daily.voskresenye",
+        "ru-a1-daily.vykhodnye",
+        "ru-a1-alphabet.den",
+        "ru-a1-daily.kakoi-segodnya-den",
+        "ru-a1-daily.segodnya-pyatnitsa",
+        "ru-a1-daily.v-subbotu-ya-otdykhayu",
+        "ru-a1-daily.v-ponedelnik-ya-rabotayu",
+        "ru-a1-daily.v-vykhodnye",
+        "ru-a1-daily.do-ponedelnika",
+        "ru-a1-daily.qa.kakoi-segodnya-den",
+        "ru-a1-daily.qa.vykhodnye"
+      ]
+    },
+    {
+      "id": "ru-a1-daily.l.weather",
+      "title": "El tiempo",
+      "items": [
+        "ru-a1-daily.pogoda",
+        "ru-a1-alphabet.sneg",
+        "ru-a1-daily.dozhd",
+        "ru-a1-daily.solntse",
+        "ru-a1-daily.veter",
+        "ru-a1-daily.zima",
+        "ru-a1-daily.vesna",
+        "ru-a1-daily.leto",
+        "ru-a1-daily.osen",
+        "ru-a1-daily.kakaya-pogoda",
+        "ru-a1-daily.segodnya-kholodno",
+        "ru-a1-daily.segodnya-teplo",
+        "ru-a1-daily.zharko",
+        "ru-a1-daily.solnechno",
+        "ru-a1-daily.idyot-dozhd",
+        "ru-a1-daily.idyot-sneg",
+        "ru-a1-daily.mne-kholodno",
+        "ru-a1-daily.zimoi-v-moskve",
+        "ru-a1-daily.letom-v-madride-zharko",
+        "ru-a1-daily.qa.pogoda",
+        "ru-a1-daily.qa.tebe-kholodno"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "ru-a1-daily.ya-zhivu-v-kvartire",
+      "text": "Я живу́ в кварти́ре.",
+      "es": "Vivo en un piso.",
+      "explanation": "«в» + lugar con «-е»: кварти́ра → в кварти́ре. fkvar-TÍ-rie: «в» suena «f» ante «к».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.u-menya-malenkaya-kvartira",
+      "text": "У меня́ ма́ленькая кварти́ра.",
+      "es": "Tengo un piso pequeño.",
+      "explanation": "MÁ-lien'-ka-ya: la «ь» ablanda la «н».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.kvartira-v-tsentre",
+      "text": "Моя́ кварти́ра в це́нтре.",
+      "es": "Mi piso está en el centro.",
+      "explanation": "Sin verbo «estar»: basta «в це́нтре». f TSÉN-trie.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.eto-moya-komnata",
+      "text": "Э́то моя́ ко́мната.",
+      "es": "Esta es mi habitación.",
+      "explanation": "Para enseñar tu cuarto en un piso compartido o en casa de amigos. KÓM-na-ta.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.prokhodite",
+      "text": "Проходи́те, пожа́луйста!",
+      "es": "¡Pase, por favor!",
+      "explanation": "Lo dice el anfitrión al abrir la puerta. pra-ja-DÍ-tie: la «х» es jota.",
+      "register": "vy",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.chuvstvuite-sebya-kak-doma",
+      "text": "Чу́вствуйте себя́ как до́ма!",
+      "es": "¡Siéntase como en casa!",
+      "explanation": "Lo dice el anfitrión. La primera «в» no suena: CHÚST-vui-tie.",
+      "register": "vy",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.u-vas-ochen-krasivo",
+      "text": "У вас о́чень краси́во!",
+      "es": "¡Qué bonita es su casa!",
+      "literal": "En su casa está muy bonito.",
+      "explanation": "Un cumplido al entrar en casa de alguien. kra-SÍ-va.",
+      "register": "vy",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-vstayu-v-sem",
+      "text": "Я встаю́ в семь.",
+      "es": "Me levanto a las siete.",
+      "explanation": "Para la hora, «в» + número. fsta-YÚ f siem': la «в» suena «f» ante consonante sorda.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-prinimayu-dush",
+      "text": "Я принима́ю душ.",
+      "es": "Me ducho.",
+      "literal": "Tomo una ducha.",
+      "explanation": "Literalmente «tomo una ducha». pri-ni-MÁ-yu dush: la «ш» es dura.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-zavtrakayu-doma",
+      "text": "Я за́втракаю до́ма.",
+      "es": "Desayuno en casa.",
+      "explanation": "«до́ма» = en casa. ZÁF-tra-ka-yu.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.utrom-ya-pyu-kofe",
+      "text": "У́тром я пью ко́фе.",
+      "es": "Por la mañana tomo café.",
+      "explanation": "«пью» = bebo: la «ь» separa, «piú» con una «y» breve: p'yu.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-edu-na-rabotu",
+      "text": "Я е́ду на рабо́ту на метро́.",
+      "es": "Voy al trabajo en metro.",
+      "explanation": "«е́ду» es ir en un vehículo; a pie se dice «иду́». YÉ-du.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-rabotayu-s-devyati",
+      "text": "Я рабо́таю с девяти́ до шести́.",
+      "es": "Trabajo de nueve a seis.",
+      "explanation": "«с … до …» = de … a …. di-vi-TÍ da shes-TÍ.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-obedayu-v-chas",
+      "text": "Я обе́даю в час.",
+      "es": "Como a la una.",
+      "explanation": "En Rusia se come antes que en España, sobre la una. a-BIÉ-da-yu f chas.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-idu-domoi",
+      "text": "Я иду́ домо́й.",
+      "es": "Me voy a casa.",
+      "explanation": "«домо́й» = hacia casa; «до́ма» = en casa. da-MÓI.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.vecherom-ya-gotovlyu-uzhin",
+      "text": "Ве́чером я гото́влю у́жин.",
+      "es": "Por la noche preparo la cena.",
+      "explanation": "ga-TÓV-liu: tras «в» aparece una «л» que no estaba en «гото́вить».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-lozhus-spat",
+      "text": "Я ложу́сь спать в двена́дцать.",
+      "es": "Me acuesto a las doce.",
+      "explanation": "la-ZHÚS' spat': «спать» es dormir; «ложу́сь» es acostarse.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.chto-ty-delaesh",
+      "text": "Что ты де́лаешь в свобо́дное вре́мя?",
+      "es": "¿Qué haces en tu tiempo libre?",
+      "explanation": "Para charlar con un amigo nuevo. «Что» se lee «shto».",
+      "register": "tu",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.chto-vy-delaete",
+      "text": "Что вы де́лаете в свобо́дное вре́мя?",
+      "es": "¿Qué hace en su tiempo libre?",
+      "explanation": "De usted. sva-BÓD-na-ye VRIÉ-mia.",
+      "register": "vy",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-lyublyu-chitat",
+      "text": "Я люблю́ чита́ть.",
+      "es": "Me encanta leer.",
+      "explanation": "«люблю́» + infinitivo = me gusta mucho hacer algo. liu-BLIÚ chi-TÁT'.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-lyublyu-gotovit",
+      "text": "Я люблю́ гото́вить.",
+      "es": "Me encanta cocinar.",
+      "explanation": "ga-TÓ-vit': la «ь» final ablanda la «т».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-igrayu-v-futbol",
+      "text": "Я игра́ю в футбо́л.",
+      "es": "Juego al fútbol.",
+      "explanation": "A un deporte se juega «в»: игра́ть в футбо́л. ig-RÁ-yu f fut-BÓL.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-khozhu-v-sportzal",
+      "text": "Я хожу́ в спортза́л.",
+      "es": "Voy al gimnasio.",
+      "explanation": "«хожу́» = voy habitualmente. ja-ZHÚ: la «х» es jota.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-smotryu-filmy",
+      "text": "Я смотрю́ фи́льмы.",
+      "es": "Veo películas.",
+      "explanation": "sma-TRIÚ FÍL'-my: la «о» átona suena «a».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-slushayu-muzyku",
+      "text": "Я слу́шаю му́зыку.",
+      "es": "Escucho música.",
+      "explanation": "му́зыка → му́зыку al ser lo que escuchas. SLÚ-sha-yu.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.ya-gulyayu-v-parke",
+      "text": "Я гуля́ю в па́рке.",
+      "es": "Paseo por el parque.",
+      "explanation": "«гуля́ть» = pasear, salir a dar una vuelta; muy usado. gu-LIÁ-yu f PÁR-kie.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.mne-nravitsya-gulyat",
+      "text": "Мне нра́вится гуля́ть по го́роду.",
+      "es": "Me gusta pasear por la ciudad.",
+      "explanation": "«по» + lugar = por. pa GÓ-ra-du: solo la primera «о» suena «o».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.kakoi-segodnya-den",
+      "text": "Како́й сего́дня день?",
+      "es": "¿Qué día es hoy?",
+      "explanation": "«сего́дня» se lee si-VÓD-nia: la «г» suena «v».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.segodnya-pyatnitsa",
+      "text": "Сего́дня пя́тница.",
+      "es": "Hoy es viernes.",
+      "explanation": "Sin verbo «ser»: «hoy viernes». si-VÓD-nia PIÁT-ni-tsa.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.v-subbotu-ya-otdykhayu",
+      "text": "В суббо́ту я отдыха́ю.",
+      "es": "El sábado descanso.",
+      "explanation": "Para «el sábado» (cuándo): в + суббо́ту. at-dy-JÁ-yu.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.v-ponedelnik-ya-rabotayu",
+      "text": "В понеде́льник я рабо́таю.",
+      "es": "El lunes trabajo.",
+      "explanation": "Los días masculinos no cambian tras «в»: в понеде́льник. f pa-ni-DIÉL'-nik.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.v-vykhodnye",
+      "text": "В выходны́е я до́ма.",
+      "es": "El fin de semana estoy en casa.",
+      "explanation": "«в выходны́е» = el fin de semana. v vy-jad-NÝ-ye.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.do-ponedelnika",
+      "text": "До понеде́льника!",
+      "es": "¡Hasta el lunes!",
+      "explanation": "Para despedirte el viernes de un compañero. da pa-ni-DIÉL'-ni-ka.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.kakaya-pogoda",
+      "text": "Кака́я сего́дня пого́да?",
+      "es": "¿Qué tiempo hace hoy?",
+      "explanation": "Tema de conversación seguro con cualquiera. ka-KÁ-ya si-VÓD-nia pa-GÓ-da.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.segodnya-kholodno",
+      "text": "Сего́дня хо́лодно.",
+      "es": "Hoy hace frío.",
+      "explanation": "Sin verbo: «hoy, frío». JÓ-lad-na: la «х» es jota.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.segodnya-teplo",
+      "text": "Сего́дня тепло́.",
+      "es": "Hoy hace bueno. / Hoy hace calorcito.",
+      "explanation": "Temperatura agradable. tip-LÓ: el golpe al final.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.zharko",
+      "text": "Сего́дня жа́рко.",
+      "es": "Hoy hace calor.",
+      "explanation": "Calor fuerte. ZHÁR-ka: «ж» como una «sh» sonora.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.solnechno",
+      "text": "Сего́дня со́лнечно.",
+      "es": "Hoy hace sol.",
+      "explanation": "La «л» suena suave: SÓL-nich-na.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.idyot-dozhd",
+      "text": "Идёт дождь.",
+      "es": "Está lloviendo.",
+      "literal": "Va la lluvia.",
+      "explanation": "La lluvia «va»: идёт дождь. i-DIÓT dosht'.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.idyot-sneg",
+      "text": "Идёт снег.",
+      "es": "Está nevando.",
+      "explanation": "Igual que la lluvia: идёт снег. sniek: la «г» final suena «k».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.mne-kholodno",
+      "text": "Мне хо́лодно.",
+      "es": "Tengo frío.",
+      "explanation": "El frío lo «tienes»: мне хо́лодно (a mí, frío). Nunca «я хо́лодный».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.zimoi-v-moskve",
+      "text": "Зимо́й в Москве́ о́чень хо́лодно.",
+      "es": "En invierno hace mucho frío en Moscú.",
+      "explanation": "zi-MÓI v mas-KVIÉ: «Москва́» → в Москве́.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.letom-v-madride-zharko",
+      "text": "Ле́том в Мадри́де жа́рко.",
+      "es": "En verano hace calor en Madrid.",
+      "explanation": "Para hablar de tu ciudad. LIÉ-tam: la «о» átona suena «a».",
+      "register": "neutral",
+      "situation": "casa"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "ru-a1-daily.dom",
+      "word": "дом",
+      "gender": "m",
+      "es": "la casa; el edificio",
+      "notes": "«до́ма» = en casa; «домо́й» = a casa.",
+      "situation": "casa",
+      "image": "fluent:house"
+    },
+    {
+      "id": "ru-a1-daily.kvartira",
+      "word": "кварти́ра",
+      "gender": "f",
+      "es": "el piso",
+      "notes": "En las ciudades rusas casi todo el mundo vive en un piso.",
+      "situation": "casa",
+      "image": "fluent:houses"
+    },
+    {
+      "id": "ru-a1-daily.komnata",
+      "word": "ко́мната",
+      "gender": "f",
+      "es": "la habitación",
+      "notes": "KÓM-na-ta: solo la primera «о» suena «o».",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.kukhnya",
+      "word": "ку́хня",
+      "gender": "f",
+      "es": "la cocina",
+      "notes": "KÚJ-nia: la «х» es nuestra jota.",
+      "situation": "casa",
+      "image": "fluent:cooking"
+    },
+    {
+      "id": "ru-a1-daily.vannaya",
+      "word": "ва́нная",
+      "gender": "f",
+      "es": "el cuarto de baño",
+      "notes": "Es un adjetivo usado como nombre: VÁN-na-ya.",
+      "situation": "casa",
+      "image": "fluent:bathtub"
+    },
+    {
+      "id": "ru-a1-daily.spalnya",
+      "word": "спа́льня",
+      "gender": "f",
+      "es": "el dormitorio",
+      "notes": "SPÁL'-nia.",
+      "situation": "casa",
+      "image": "fluent:bed"
+    },
+    {
+      "id": "ru-a1-daily.okno",
+      "word": "окно́",
+      "gender": "n",
+      "es": "la ventana",
+      "notes": "ak-NÓ: la primera «о» átona suena «a».",
+      "situation": "casa",
+      "image": "fluent:window"
+    },
+    {
+      "id": "ru-a1-daily.dver",
+      "word": "дверь",
+      "gender": "f",
+      "es": "la puerta",
+      "notes": "Femenino aunque acabe en consonante + «ь».",
+      "situation": "casa",
+      "image": "fluent:door"
+    },
+    {
+      "id": "ru-a1-daily.divan",
+      "word": "дива́н",
+      "gender": "m",
+      "es": "el sofá",
+      "situation": "casa",
+      "image": "fluent:couch-and-lamp"
+    },
+    {
+      "id": "ru-a1-daily.stol",
+      "word": "стол",
+      "gender": "m",
+      "es": "la mesa",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.stul",
+      "word": "стул",
+      "gender": "m",
+      "es": "la silla",
+      "situation": "casa",
+      "image": "fluent:chair"
+    },
+    {
+      "id": "ru-a1-daily.utrom",
+      "word": "у́тром",
+      "es": "por la mañana",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.dnyom",
+      "word": "днём",
+      "es": "por la tarde (de día)",
+      "notes": "Entre la comida y las seis o así.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.vecherom",
+      "word": "ве́чером",
+      "es": "por la tarde-noche",
+      "notes": "Desde las seis más o menos hasta la hora de dormir.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.nochyu",
+      "word": "но́чью",
+      "es": "por la noche",
+      "notes": "NÓ-chiu.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.obychno",
+      "word": "обы́чно",
+      "es": "normalmente",
+      "notes": "a-BYCH-na.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.zavtrak",
+      "word": "за́втрак",
+      "gender": "m",
+      "es": "el desayuno",
+      "notes": "ZÁF-trak: la «в» suena «f» ante «т».",
+      "situation": "casa",
+      "image": "fluent:croissant"
+    },
+    {
+      "id": "ru-a1-daily.obed",
+      "word": "обе́д",
+      "gender": "m",
+      "es": "la comida (del mediodía)",
+      "notes": "a-BIÉT: la «д» final suena «t».",
+      "situation": "casa",
+      "image": "fluent:pot-of-food"
+    },
+    {
+      "id": "ru-a1-daily.uzhin",
+      "word": "у́жин",
+      "gender": "m",
+      "es": "la cena",
+      "situation": "casa",
+      "image": "fluent:fork-and-knife-with-plate"
+    },
+    {
+      "id": "ru-a1-daily.kniga",
+      "word": "кни́га",
+      "gender": "f",
+      "es": "el libro",
+      "notes": "La «к» inicial sí suena: KNÍ-ga.",
+      "situation": "casa",
+      "image": "fluent:green-book"
+    },
+    {
+      "id": "ru-a1-daily.film",
+      "word": "фильм",
+      "gender": "m",
+      "es": "la película",
+      "notes": "La «ь» ablanda la «л».",
+      "situation": "casa",
+      "image": "fluent:clapper-board"
+    },
+    {
+      "id": "ru-a1-daily.muzyka",
+      "word": "му́зыка",
+      "gender": "f",
+      "es": "la música",
+      "notes": "MÚ-zy-ka: el golpe en la primera sílaba.",
+      "situation": "casa",
+      "image": "fluent:musical-note"
+    },
+    {
+      "id": "ru-a1-daily.futbol",
+      "word": "футбо́л",
+      "gender": "m",
+      "es": "el fútbol",
+      "notes": "fut-BÓL: el golpe al final, no como en español.",
+      "situation": "casa",
+      "image": "fluent:soccer-ball"
+    },
+    {
+      "id": "ru-a1-daily.sportzal",
+      "word": "спортза́л",
+      "gender": "m",
+      "es": "el gimnasio",
+      "situation": "casa",
+      "image": "fluent:person-lifting-weights"
+    },
+    {
+      "id": "ru-a1-daily.park",
+      "word": "парк",
+      "gender": "m",
+      "es": "el parque",
+      "situation": "casa",
+      "image": "fluent:national-park"
+    },
+    {
+      "id": "ru-a1-daily.nedelya",
+      "word": "неде́ля",
+      "gender": "f",
+      "es": "la semana",
+      "notes": "ni-DIÉ-lia.",
+      "situation": "casa",
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "ru-a1-daily.ponedelnik",
+      "word": "понеде́льник",
+      "gender": "m",
+      "es": "el lunes",
+      "notes": "Los días se escriben con minúscula. pa-ni-DIÉL'-nik.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.vtornik",
+      "word": "вто́рник",
+      "gender": "m",
+      "es": "el martes",
+      "notes": "FTÓR-nik: «в» suena «f» ante «т».",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.sreda",
+      "word": "среда́",
+      "gender": "f",
+      "es": "el miércoles",
+      "notes": "«el miércoles» (cuándo) = в сре́ду: cambia el golpe.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.chetverg",
+      "word": "четве́рг",
+      "gender": "m",
+      "es": "el jueves",
+      "notes": "chit-VIÉRK: la «г» final suena «k».",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.pyatnitsa",
+      "word": "пя́тница",
+      "gender": "f",
+      "es": "el viernes",
+      "notes": "PIÁT-ni-tsa.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.subbota",
+      "word": "суббо́та",
+      "gender": "f",
+      "es": "el sábado",
+      "notes": "su-BÓ-ta.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.voskresenye",
+      "word": "воскресе́нье",
+      "gender": "n",
+      "es": "el domingo",
+      "notes": "va-skri-SIÉ-n'ye.",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.vykhodnye",
+      "word": "выходны́е",
+      "gender": "pl",
+      "es": "el fin de semana",
+      "notes": "Literalmente «los días libres».",
+      "situation": "casa"
+    },
+    {
+      "id": "ru-a1-daily.pogoda",
+      "word": "пого́да",
+      "gender": "f",
+      "es": "el tiempo (meteorológico)",
+      "notes": "pa-GÓ-da.",
+      "situation": "casa",
+      "image": "fluent:sun-behind-cloud"
+    },
+    {
+      "id": "ru-a1-daily.dozhd",
+      "word": "дождь",
+      "gender": "m",
+      "es": "la lluvia",
+      "notes": "Suena «dosht'»: las consonantes finales se ensordecen.",
+      "situation": "casa",
+      "image": "fluent:cloud-with-rain"
+    },
+    {
+      "id": "ru-a1-daily.solntse",
+      "word": "со́лнце",
+      "gender": "n",
+      "es": "el sol",
+      "notes": "La «л» no suena: SÓN-tse.",
+      "situation": "casa",
+      "image": "fluent:sun"
+    },
+    {
+      "id": "ru-a1-daily.veter",
+      "word": "ве́тер",
+      "gender": "m",
+      "es": "el viento",
+      "notes": "VIÉ-tir.",
+      "situation": "casa",
+      "image": "fluent:wind-face"
+    },
+    {
+      "id": "ru-a1-daily.zima",
+      "word": "зима́",
+      "gender": "f",
+      "es": "el invierno",
+      "notes": "En invierno = зимо́й.",
+      "situation": "casa",
+      "image": "fluent:snowman"
+    },
+    {
+      "id": "ru-a1-daily.vesna",
+      "word": "весна́",
+      "gender": "f",
+      "es": "la primavera",
+      "notes": "En primavera = весно́й.",
+      "situation": "casa",
+      "image": "fluent:cherry-blossom"
+    },
+    {
+      "id": "ru-a1-daily.leto",
+      "word": "ле́то",
+      "gender": "n",
+      "es": "el verano",
+      "notes": "En verano = ле́том.",
+      "situation": "casa",
+      "image": "fluent:beach-with-umbrella"
+    },
+    {
+      "id": "ru-a1-daily.osen",
+      "word": "о́сень",
+      "gender": "f",
+      "es": "el otoño",
+      "notes": "En otoño = о́сенью.",
+      "situation": "casa",
+      "image": "fluent:fallen-leaf"
+    }
+  ],
+  "qa": [
+    {
+      "id": "ru-a1-daily.qa.prokhodite",
+      "question": "Проходи́те, чу́вствуйте себя́ как до́ма!",
+      "questionEs": "¡Pase, siéntase como en casa!",
+      "accepted": [
+        {
+          "text": "Спаси́бо! У вас о́чень краси́во.",
+          "es": "¡Gracias! Qué bonita es su casa."
+        },
+        {
+          "text": "Большо́е спаси́бо!",
+          "es": "¡Muchas gracias!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Пожа́луйста!",
+          "es": "¡De nada!"
+        },
+        {
+          "text": "Ничего́ стра́шного.",
+          "es": "No pasa nada."
+        }
+      ],
+      "register": "vy",
+      "situation": "casa",
+      "notes": "Al entrar se agradece; «Пожа́луйста» aquí sería «de nada».",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-daily.qa.kvartira",
+      "question": "Вы живёте в до́ме и́ли в кварти́ре?",
+      "questionEs": "¿Vive en una casa o en un piso?",
+      "accepted": [
+        {
+          "text": "В кварти́ре.",
+          "es": "En un piso."
+        },
+        {
+          "text": "Я живу́ в кварти́ре в це́нтре.",
+          "es": "Vivo en un piso en el centro."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "В кварти́ра.",
+          "es": "(En piso, mal declinado.)"
+        },
+        {
+          "text": "Ку́хня ма́ленькая.",
+          "es": "La cocina es pequeña."
+        }
+      ],
+      "register": "vy",
+      "situation": "casa",
+      "notes": "Tras «в» para decir dónde: кварти́ра → в кварти́ре.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-daily.qa.vo-skolko-vstaesh",
+      "question": "Во ско́лько ты встаёшь?",
+      "questionEs": "¿A qué hora te levantas?",
+      "accepted": [
+        {
+          "text": "Я встаю́ в семь.",
+          "es": "Me levanto a las siete."
+        },
+        {
+          "text": "Обы́чно в во́семь.",
+          "es": "Normalmente a las ocho."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я ложу́сь спать в семь.",
+          "es": "Me acuesto a las siete."
+        },
+        {
+          "text": "Сего́дня понеде́льник.",
+          "es": "Hoy es lunes."
+        }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "«Во ско́лько?» = ¿a qué hora?; responde con «в» + la hora.",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-daily.qa.svobodnoe-vremya",
+      "question": "Что ты де́лаешь в свобо́дное вре́мя?",
+      "questionEs": "¿Qué haces en tu tiempo libre?",
+      "accepted": [
+        {
+          "text": "Я чита́ю и гуля́ю в па́рке.",
+          "es": "Leo y paseo por el parque."
+        },
+        {
+          "text": "Я хожу́ в спортза́л.",
+          "es": "Voy al gimnasio."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я рабо́таю программи́стом.",
+          "es": "Trabajo de programador."
+        },
+        {
+          "text": "Я игра́ю футбо́л.",
+          "es": "(Juego fútbol, sin «в».)"
+        }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "Para un deporte, «игра́ть в»: «Я игра́ю в футбо́л».",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-daily.qa.kakoi-segodnya-den",
+      "question": "Како́й сего́дня день?",
+      "questionEs": "¿Qué día es hoy?",
+      "accepted": [
+        {
+          "text": "Сего́дня пя́тница.",
+          "es": "Hoy es viernes."
+        },
+        {
+          "text": "Пя́тница.",
+          "es": "Viernes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Сего́дня в пя́тницу.",
+          "es": "(Hoy el viernes, con «в».)"
+        },
+        {
+          "text": "Сего́дня хо́лодно.",
+          "es": "Hoy hace frío."
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "Para decir qué día es, sin «в»: «Сего́дня пя́тница».",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-daily.qa.vykhodnye",
+      "question": "Что вы де́лаете в выходны́е?",
+      "questionEs": "¿Qué hace el fin de semana?",
+      "accepted": [
+        {
+          "text": "В выходны́е я отдыха́ю.",
+          "es": "El fin de semana descanso."
+        },
+        {
+          "text": "Я гуля́ю и чита́ю.",
+          "es": "Paseo y leo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я рабо́таю с девяти́ до шести́.",
+          "es": "Trabajo de nueve a seis."
+        },
+        {
+          "text": "Сего́дня суббо́та.",
+          "es": "Hoy es sábado."
+        }
+      ],
+      "register": "vy",
+      "situation": "casa",
+      "notes": "Te preguntan qué haces, no qué día es: «Я отдыха́ю», «Я гуля́ю».",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-daily.qa.pogoda",
+      "question": "Кака́я сего́дня пого́да?",
+      "questionEs": "¿Qué tiempo hace hoy?",
+      "accepted": [
+        {
+          "text": "Сего́дня тепло́ и со́лнечно.",
+          "es": "Hoy hace bueno y sol."
+        },
+        {
+          "text": "Идёт дождь.",
+          "es": "Está lloviendo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Сего́дня суббо́та.",
+          "es": "Hoy es sábado."
+        },
+        {
+          "text": "Сего́дня тёплый.",
+          "es": "(Hoy cálido, con adjetivo.)"
+        }
+      ],
+      "register": "neutral",
+      "situation": "casa",
+      "notes": "El tiempo va con «-о»: тепло́, хо́лодно, жа́рко.",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-daily.qa.tebe-kholodno",
+      "question": "Тебе́ не хо́лодно?",
+      "questionEs": "¿No tienes frío?",
+      "accepted": [
+        {
+          "text": "Нет, всё хорошо́.",
+          "es": "No, estoy bien."
+        },
+        {
+          "text": "Да, немно́го хо́лодно.",
+          "es": "Sí, un poco de frío."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, я хо́лодный.",
+          "es": "(Sí, soy frío.)"
+        },
+        {
+          "text": "Нет, сего́дня среда́.",
+          "es": "No, hoy es miércoles."
+        }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "«Я хо́лодный» es «soy una persona fría»; el frío que sientes es «мне хо́лодно».",
+      "voice": "ru-RU-DmitryNeural"
+    }
+  ]
+}

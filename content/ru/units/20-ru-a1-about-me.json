@@ -1,0 +1,1006 @@
+{
+  "id": "ru-a1-about-me",
+  "order": 20,
+  "level": "A1",
+  "title": "Presentarte",
+  "description": "Tu nombre, de dónde eres, a qué te dedicas, qué idiomas hablas y tu familia.",
+  "emoji": "🙂",
+  "situation": "presentarse",
+  "lessons": [
+    {
+      "id": "ru-a1-about-me.l.name",
+      "title": "¿Cómo te llamas?",
+      "items": [
+        "ru-a1-about-me.menya-zovut",
+        "ru-a1-about-me.ya-ernan",
+        "ru-a1-about-me.kak-vas-zovut",
+        "ru-a1-about-me.kak-tebya-zovut",
+        "ru-a1-about-me.a-vas",
+        "ru-a1-about-me.a-tebya",
+        "ru-a1-about-me.imya",
+        "ru-a1-about-me.familiya",
+        "ru-a1-about-me.moya-familiya",
+        "ru-a1-about-me.kak-vasha-familiya",
+        "ru-a1-about-me.davaite-poznakomimsya",
+        "ru-a1-about-me.poznakomtes",
+        "ru-a1-hello.ochen-priyatno",
+        "ru-a1-hello.mne-tozhe",
+        "ru-a1-about-me.skolko-vam-let",
+        "ru-a1-about-me.skolko-tebe-let",
+        "ru-a1-about-me.mne-tridtsat-let",
+        "ru-a1-about-me.qa.kak-vas-zovut",
+        "ru-a1-about-me.qa.skolko-let"
+      ]
+    },
+    {
+      "id": "ru-a1-about-me.l.origin",
+      "title": "¿De dónde eres?",
+      "items": [
+        "ru-a1-about-me.otkuda-vy",
+        "ru-a1-about-me.otkuda-ty",
+        "ru-a1-about-me.ispaniya",
+        "ru-a1-about-me.madrid",
+        "ru-a1-about-me.ya-iz-ispanii",
+        "ru-a1-about-me.ya-iz-madrida",
+        "ru-a1-about-me.ispanets",
+        "ru-a1-about-me.ispanka",
+        "ru-a1-about-me.ya-ispanets",
+        "ru-a1-about-me.ya-ispanka",
+        "ru-a1-about-me.gde-vy-zhivyote",
+        "ru-a1-about-me.gde-ty-zhivyosh",
+        "ru-a1-about-me.ya-zhivu-v-madride",
+        "ru-a1-about-me.ya-zdes-v-otpuske",
+        "ru-a1-about-me.ya-zdes-pervyi-raz",
+        "ru-a1-about-me.qa.otkuda-vy",
+        "ru-a1-about-me.qa.gde-ty-zhivyosh"
+      ]
+    },
+    {
+      "id": "ru-a1-about-me.l.work",
+      "title": "¿A qué te dedicas?",
+      "items": [
+        "ru-a1-about-me.kem-vy-rabotaete",
+        "ru-a1-about-me.kem-ty-rabotaesh",
+        "ru-a1-about-me.chem-vy-zanimaetes",
+        "ru-a1-about-me.rabota",
+        "ru-a1-about-me.programmist",
+        "ru-a1-about-me.ya-programmist",
+        "ru-a1-about-me.ya-rabotayu-programmistom",
+        "ru-a1-about-me.ya-rabotayu-v-ai-ti",
+        "ru-a1-about-me.kompyuter",
+        "ru-a1-about-me.ofis",
+        "ru-a1-about-me.ya-rabotayu-iz-doma",
+        "ru-a1-about-me.mne-nravitsya-moya-rabota",
+        "ru-a1-about-me.student",
+        "ru-a1-about-me.uchitel",
+        "ru-a1-about-me.inzhener",
+        "ru-a1-about-me.ya-student",
+        "ru-a1-about-me.ya-seichas-ne-rabotayu",
+        "ru-a1-about-me.qa.kem-vy-rabotaete"
+      ]
+    },
+    {
+      "id": "ru-a1-about-me.l.languages",
+      "title": "Idiomas",
+      "items": [
+        "ru-a1-hello.yazyk",
+        "ru-a1-about-me.ya-govoryu-po-ispanski",
+        "ru-a1-about-me.ya-govoryu-po-angliiski",
+        "ru-a1-hello.ya-nemnogo-govoryu",
+        "ru-a1-hello.ya-plokho-govoryu",
+        "ru-a1-about-me.ya-uchu-russkii",
+        "ru-a1-about-me.ya-uchu-dva-mesyatsa",
+        "ru-a1-about-me.moi-rodnoi-yazyk",
+        "ru-a1-about-me.kakie-yazyki",
+        "ru-a1-about-me.vy-khorosho-govorite",
+        "ru-a1-about-me.spasibo-ya-starayus",
+        "ru-a1-about-me.pochemu-vy-uchite",
+        "ru-a1-about-me.ya-lyublyu-puteshestvovat",
+        "ru-a1-about-me.qa.kakie-yazyki",
+        "ru-a1-about-me.qa.khorosho-govorite"
+      ]
+    },
+    {
+      "id": "ru-a1-about-me.l.family",
+      "title": "Tu familia",
+      "items": [
+        "ru-a1-alphabet.semya",
+        "ru-a1-about-me.mat",
+        "ru-a1-about-me.otets",
+        "ru-a1-about-me.roditeli",
+        "ru-a1-about-me.brat",
+        "ru-a1-alphabet.sestra",
+        "ru-a1-about-me.syn",
+        "ru-a1-about-me.doch",
+        "ru-a1-about-me.deti",
+        "ru-a1-about-me.muzh",
+        "ru-a1-about-me.zhena",
+        "ru-a1-about-me.babushka",
+        "ru-a1-about-me.dedushka",
+        "ru-a1-about-me.eto-moya-mama",
+        "ru-a1-about-me.eto-moi-brat",
+        "ru-a1-about-me.u-menya-est-brat",
+        "ru-a1-about-me.u-menya-net-detei",
+        "ru-a1-about-me.u-vas-est-deti",
+        "ru-a1-about-me.ya-zhenat",
+        "ru-a1-about-me.ya-zamuzhem",
+        "ru-a1-about-me.moi-roditeli-zhivut",
+        "ru-a1-about-me.u-menya-bolshaya-semya",
+        "ru-a1-about-me.qa.u-vas-est-deti"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "ru-a1-about-me.menya-zovut",
+      "text": "Меня́ зову́т Эрна́н.",
+      "es": "Me llamo Hernán.",
+      "literal": "A mí me llaman Hernán.",
+      "explanation": "Para presentarte con cualquiera; cambia el nombre por el tuyo. mi-NIÁ za-VÚT: la «е» átona suena casi «i».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-ernan",
+      "text": "Я Эрна́н.",
+      "es": "Soy Hernán.",
+      "explanation": "La forma más corta: en ruso no hay verbo «ser» en presente. «Я» se lee «ya».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.kak-vas-zovut",
+      "text": "Как вас зову́т?",
+      "es": "¿Cómo se llama?",
+      "explanation": "A un desconocido, en recepción o en una tienda. kak vas za-VÚT: la «о» átona suena «a».",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.kak-tebya-zovut",
+      "text": "Как тебя́ зову́т?",
+      "es": "¿Cómo te llamas?",
+      "explanation": "A alguien joven o a un niño, de tú. ti-BIÁ: «тебя́» lleva el golpe al final.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.a-vas",
+      "text": "А вас?",
+      "es": "¿Y usted? (¿cómo se llama?)",
+      "explanation": "Para devolver la pregunta del nombre de usted. Corto y natural: a VAS.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.a-tebya",
+      "text": "А тебя́?",
+      "es": "¿Y tú? (¿cómo te llamas?)",
+      "explanation": "Para devolver la pregunta del nombre de tú. a ti-BIÁ.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.moya-familiya",
+      "text": "Моя́ фами́лия Ди́ас.",
+      "es": "Mi apellido es Díaz.",
+      "explanation": "Cuando te piden el apellido en un hotel o un control. ma-YÁ fa-MÍ-li-ya.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.kak-vasha-familiya",
+      "text": "Как ва́ша фами́лия?",
+      "es": "¿Cuál es su apellido?",
+      "explanation": "Lo oirás en recepción o en un mostrador. VÁ-sha: la «ш» es una «sh» dura.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.davaite-poznakomimsya",
+      "text": "Дава́йте познако́мимся!",
+      "es": "¿Nos presentamos?",
+      "explanation": "Para romper el hielo con alguien a quien tratas de usted. da-VÁI-tie pa-zna-KÓ-mim-sia.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.poznakomtes",
+      "text": "Познако́мьтесь, э́то А́ня.",
+      "es": "Te presento a Ania. / Le presento a Ania.",
+      "explanation": "Para presentar a una persona a otra (o a varias). La «ь» ablanda la «м»: pa-zna-KÓM'-ties'.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.skolko-vam-let",
+      "text": "Ско́лько вам лет?",
+      "es": "¿Cuántos años tiene?",
+      "explanation": "Pregunta de confianza; entre adultos que no se conocen no es muy habitual. SKÓL'-ka vam liet.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.skolko-tebe-let",
+      "text": "Ско́лько тебе́ лет?",
+      "es": "¿Cuántos años tienes?",
+      "explanation": "A un niño o a un amigo. ti-BIÉ: el golpe va al final.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.mne-tridtsat-let",
+      "text": "Мне три́дцать лет.",
+      "es": "Tengo treinta años.",
+      "literal": "A mí treinta años.",
+      "explanation": "Cambia el número por tu edad. En ruso no «tienes» años: «a mí, treinta años». TRÍ-tsat' liet.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.otkuda-vy",
+      "text": "Отку́да вы?",
+      "es": "¿De dónde es?",
+      "explanation": "La pregunta típica en un taxi o con un vecino. at-KÚ-da: la «о» inicial átona suena «a».",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.otkuda-ty",
+      "text": "Отку́да ты?",
+      "es": "¿De dónde eres?",
+      "explanation": "Con alguien de tu edad en un bar o un hostal. at-KÚ-da ti.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-iz-ispanii",
+      "text": "Я из Испа́нии.",
+      "es": "Soy de España.",
+      "explanation": "«из» + el país con otra terminación: Испа́ния → из Испа́нии. is is-PÁ-ni-i.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-iz-madrida",
+      "text": "Я из Мадри́да.",
+      "es": "Soy de Madrid.",
+      "explanation": "Para decir tu ciudad: Мадри́д → из Мадри́да. ya iz ma-DRÍ-da.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-ispanets",
+      "text": "Я испа́нец.",
+      "es": "Soy español.",
+      "notes": "Dicho por un hombre.",
+      "explanation": "Lo dice un hombre; una mujer dice «Я испа́нка». is-PÁ-niets.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-ispanka",
+      "text": "Я испа́нка.",
+      "es": "Soy española.",
+      "notes": "Dicho por una mujer.",
+      "explanation": "Lo dice una mujer; un hombre dice «Я испа́нец». is-PÁN-ka.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.gde-vy-zhivyote",
+      "text": "Где вы живёте?",
+      "es": "¿Dónde vive?",
+      "explanation": "Para preguntar por la ciudad o el barrio. zhi-VIÓ-tie: la «ё» siempre lleva el golpe.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.gde-ty-zhivyosh",
+      "text": "Где ты живёшь?",
+      "es": "¿Dónde vives?",
+      "explanation": "De tú, con amigos. zhi-VIÓSH: «ж» como una «sh» sonora.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-zhivu-v-madride",
+      "text": "Я живу́ в Мадри́де.",
+      "es": "Vivo en Madrid.",
+      "explanation": "«в» + lugar con «-е»: в Мадри́де. La «в» se pega a la palabra: vma-DRÍ-die.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-zdes-v-otpuske",
+      "text": "Я здесь в о́тпуске.",
+      "es": "Estoy aquí de vacaciones.",
+      "explanation": "Cuando te preguntan qué haces en Rusia. ya zdies' v ÓT-pus-kie.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-zdes-pervyi-raz",
+      "text": "Я здесь пе́рвый раз.",
+      "es": "Es mi primera vez aquí.",
+      "explanation": "Para explicar que no conoces la ciudad. PIER-vyi: la «ы» con la lengua hacia atrás.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.kem-vy-rabotaete",
+      "text": "Кем вы рабо́таете?",
+      "es": "¿A qué se dedica?",
+      "literal": "¿De qué trabaja?",
+      "explanation": "Para preguntar la profesión. kiem vy ra-BÓ-ta-ye-tie.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.kem-ty-rabotaesh",
+      "text": "Кем ты рабо́таешь?",
+      "es": "¿A qué te dedicas?",
+      "explanation": "De tú. ra-BÓ-ta-yesh: la «о» de «ра-» y la «а» final son átonas.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.chem-vy-zanimaetes",
+      "text": "Чем вы занима́етесь?",
+      "es": "¿A qué se dedica? / ¿Qué hace?",
+      "explanation": "Más general que «Кем вы рабо́таете?»: sirve también para estudios o aficiones. za-ni-MÁ-ye-ties'.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-programmist",
+      "text": "Я программи́ст.",
+      "es": "Soy programador.",
+      "explanation": "La respuesta de Hernán, sin verbo «ser». pra-gra-MÍST.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-rabotayu-programmistom",
+      "text": "Я рабо́таю программи́стом.",
+      "es": "Trabajo de programador.",
+      "explanation": "Con «рабо́таю» la profesión toma «-ом»: программи́стом. ra-BÓ-ta-yu pra-gra-MÍS-tam.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-rabotayu-v-ai-ti",
+      "text": "Я рабо́таю в ай-ти́.",
+      "es": "Trabajo en informática.",
+      "explanation": "Así llaman los rusos al sector: «ай-ти́», como en inglés. v ai-TÍ.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-rabotayu-iz-doma",
+      "text": "Я рабо́таю из до́ма.",
+      "es": "Trabajo desde casa.",
+      "explanation": "Para explicar que teletrabajas. iz DÓ-ma: la «а» final es átona.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.mne-nravitsya-moya-rabota",
+      "text": "Мне нра́вится моя́ рабо́та.",
+      "es": "Me gusta mi trabajo.",
+      "explanation": "«Мне нра́вится» funciona como «me gusta». NRÁ-vit-sa: «-тся» suena «tsa».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-student",
+      "text": "Я студе́нт.",
+      "es": "Soy estudiante.",
+      "notes": "Una estudiante dice «Я студе́нтка».",
+      "explanation": "Lo dice un hombre; una mujer dice «Я студе́нтка». stu-DIÉNT.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-seichas-ne-rabotayu",
+      "text": "Я сейча́с не рабо́таю.",
+      "es": "Ahora no trabajo.",
+      "explanation": "Si estás de vacaciones o entre trabajos. siei-CHÁS ni ra-BÓ-ta-yu.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-govoryu-po-ispanski",
+      "text": "Я говорю́ по-испа́нски.",
+      "es": "Hablo español.",
+      "explanation": "Con «говорю́» el idioma va con «по-» y «-ски»: по-испа́нски. ga-va-RIÚ pa-is-PÁN-ski.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-govoryu-po-angliiski",
+      "text": "Я говорю́ по-англи́йски.",
+      "es": "Hablo inglés.",
+      "explanation": "Útil si te atascas en ruso. pa-an-GLÍIS-ki.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-uchu-russkii",
+      "text": "Я учу́ ру́сский язы́к.",
+      "es": "Estoy aprendiendo ruso.",
+      "explanation": "Explica por qué hablas despacio: la gente lo agradece. ya u-CHÚ RÚS-kii ya-ZÝK.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-uchu-dva-mesyatsa",
+      "text": "Я учу́ ру́сский два ме́сяца.",
+      "es": "Llevo dos meses aprendiendo ruso.",
+      "explanation": "En ruso basta el presente + el tiempo, sin «llevar». MIÉ-sia-tsa.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.moi-rodnoi-yazyk",
+      "text": "Мой родно́й язы́к — испа́нский.",
+      "es": "Mi lengua materna es el español.",
+      "explanation": "El guion sustituye al verbo «ser». rad-NÓI: la «о» átona suena «a».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.kakie-yazyki",
+      "text": "Каки́е языки́ вы зна́ете?",
+      "es": "¿Qué idiomas sabe?",
+      "explanation": "Pregunta frecuente cuando dices que eres extranjero. ka-KÍ-ye ya-zy-KÍ.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.vy-khorosho-govorite",
+      "text": "Вы хорошо́ говори́те по-ру́сски!",
+      "es": "¡Habla muy bien ruso!",
+      "explanation": "Te lo dirán aunque hables poco: los rusos animan. ha-ra-SHÓ: todas las «о» átonas son «a».",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.spasibo-ya-starayus",
+      "text": "Спаси́бо, я стара́юсь.",
+      "es": "Gracias, lo intento.",
+      "explanation": "Respuesta modesta a un cumplido. sta-RÁ-yus': la «ь» final suaviza la «с».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.pochemu-vy-uchite",
+      "text": "Почему́ вы у́чите ру́сский?",
+      "es": "¿Por qué aprende ruso?",
+      "explanation": "Te lo preguntarán a menudo. pa-chi-MÚ vy Ú-chi-tie.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-lyublyu-puteshestvovat",
+      "text": "Я люблю́ путеше́ствовать.",
+      "es": "Me encanta viajar.",
+      "explanation": "Una buena respuesta al «¿por qué?». pu-ti-SHÉST-va-vat': palabra larga, ve sílaba a sílaba.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.eto-moya-mama",
+      "text": "Э́то моя́ ма́ма.",
+      "es": "Esta es mi madre.",
+      "explanation": "Para enseñar una foto. «моя́» para femenino; para masculino, «мой».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.eto-moi-brat",
+      "text": "Э́то мой брат.",
+      "es": "Este es mi hermano.",
+      "explanation": "«мой» va con palabras masculinas (брат, оте́ц). moi, como «moy».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.u-menya-est-brat",
+      "text": "У меня́ есть брат.",
+      "es": "Tengo un hermano.",
+      "literal": "En mí hay un hermano.",
+      "explanation": "«Tener» en ruso: «у меня́ есть» (en mí hay). u mi-NIÁ yest' brat.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.u-menya-net-detei",
+      "text": "У меня́ нет дете́й.",
+      "es": "No tengo hijos.",
+      "explanation": "Con «нет» la palabra cambia: де́ти → дете́й. di-TIÉI.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.u-vas-est-deti",
+      "text": "У вас есть де́ти?",
+      "es": "¿Tiene hijos?",
+      "explanation": "Pregunta habitual al conocerse. u vas yest' DIÉ-ti.",
+      "register": "vy",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-zhenat",
+      "text": "Я жена́т.",
+      "es": "Estoy casado.",
+      "notes": "Dicho por un hombre.",
+      "explanation": "Solo lo dice un hombre; una mujer dice «Я за́мужем». zhe-NÁT.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ya-zamuzhem",
+      "text": "Я за́мужем.",
+      "es": "Estoy casada.",
+      "notes": "Dicho por una mujer.",
+      "explanation": "Solo lo dice una mujer; un hombre dice «Я жена́т». ZÁ-mu-zhem.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.moi-roditeli-zhivut",
+      "text": "Мои́ роди́тели живу́т в Мадри́де.",
+      "es": "Mis padres viven en Madrid.",
+      "explanation": "«мои́» para el plural. ma-Í ra-DÍ-ti-li zhi-VÚT.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.u-menya-bolshaya-semya",
+      "text": "У меня́ больша́я семья́.",
+      "es": "Tengo una familia grande.",
+      "explanation": "bal'-SHÁ-ya sim'-YÁ: la «ь» separa y suena una «y» breve.",
+      "register": "neutral",
+      "situation": "presentarse"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "ru-a1-about-me.imya",
+      "word": "и́мя",
+      "gender": "n",
+      "es": "el nombre",
+      "notes": "Neutro aunque acabe en «-я». Í-mia.",
+      "situation": "presentarse",
+      "image": "fluent:identification-card"
+    },
+    {
+      "id": "ru-a1-about-me.familiya",
+      "word": "фами́лия",
+      "gender": "f",
+      "es": "el apellido",
+      "notes": "Falso amigo: «фами́лия» es el apellido, no la familia (esa es «семья́»).",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ispaniya",
+      "word": "Испа́ния",
+      "gender": "f",
+      "es": "España",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.madrid",
+      "word": "Мадри́д",
+      "gender": "m",
+      "es": "Madrid",
+      "notes": "La «д» final suena «t»: ma-DRÍT.",
+      "situation": "presentarse",
+      "image": "fluent:cityscape"
+    },
+    {
+      "id": "ru-a1-about-me.ispanets",
+      "word": "испа́нец",
+      "gender": "m",
+      "es": "el español",
+      "notes": "Para un hombre; la «ц» es «ts».",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.ispanka",
+      "word": "испа́нка",
+      "gender": "f",
+      "es": "la española",
+      "notes": "Para una mujer.",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.rabota",
+      "word": "рабо́та",
+      "gender": "f",
+      "es": "el trabajo",
+      "notes": "ra-BÓ-ta: la primera «а» es átona.",
+      "situation": "presentarse",
+      "image": "fluent:briefcase"
+    },
+    {
+      "id": "ru-a1-about-me.programmist",
+      "word": "программи́ст",
+      "gender": "m",
+      "es": "el programador",
+      "notes": "pra-gra-MÍST: la «о» átona suena «a».",
+      "situation": "presentarse",
+      "image": "fluent:man-technologist"
+    },
+    {
+      "id": "ru-a1-about-me.kompyuter",
+      "word": "компью́тер",
+      "gender": "m",
+      "es": "el ordenador",
+      "notes": "La «ь» ablanda la «п»: kam-PIÚ-tier.",
+      "situation": "presentarse",
+      "image": "fluent:laptop"
+    },
+    {
+      "id": "ru-a1-about-me.ofis",
+      "word": "о́фис",
+      "gender": "m",
+      "es": "la oficina",
+      "situation": "presentarse",
+      "image": "fluent:office-building"
+    },
+    {
+      "id": "ru-a1-about-me.student",
+      "word": "студе́нт",
+      "gender": "m",
+      "es": "el estudiante",
+      "notes": "stu-DIÉNT; una estudiante es «студе́нтка».",
+      "situation": "presentarse",
+      "image": "fluent:man-student"
+    },
+    {
+      "id": "ru-a1-about-me.uchitel",
+      "word": "учи́тель",
+      "gender": "m",
+      "es": "el profesor (de colegio)",
+      "notes": "u-CHÍ-tiel': la «ь» final ablanda la «л».",
+      "situation": "presentarse",
+      "image": "fluent:man-teacher"
+    },
+    {
+      "id": "ru-a1-about-me.inzhener",
+      "word": "инжене́р",
+      "gender": "m",
+      "es": "el ingeniero",
+      "notes": "in-zhe-NIÉR: tras «ж» la «е» suena dura.",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.mat",
+      "word": "мать",
+      "gender": "f",
+      "es": "la madre",
+      "notes": "En casa se dice «ма́ма».",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.otets",
+      "word": "оте́ц",
+      "gender": "m",
+      "es": "el padre",
+      "notes": "En casa se dice «па́па». a-TIÉTS.",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.roditeli",
+      "word": "роди́тели",
+      "gender": "pl",
+      "es": "los padres",
+      "notes": "Solo los padres; los parientes son «ро́дственники».",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.brat",
+      "word": "брат",
+      "gender": "m",
+      "es": "el hermano",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.syn",
+      "word": "сын",
+      "gender": "m",
+      "es": "el hijo",
+      "notes": "La «ы» suena con la lengua hacia atrás.",
+      "situation": "presentarse",
+      "image": "fluent:boy"
+    },
+    {
+      "id": "ru-a1-about-me.doch",
+      "word": "дочь",
+      "gender": "f",
+      "es": "la hija",
+      "notes": "La «ь» ablanda la «ч» final.",
+      "situation": "presentarse",
+      "image": "fluent:girl"
+    },
+    {
+      "id": "ru-a1-about-me.deti",
+      "word": "де́ти",
+      "gender": "pl",
+      "es": "los hijos; los niños",
+      "notes": "Plural de «ребёнок». DIÉ-ti.",
+      "situation": "presentarse",
+      "image": "fluent:children-crossing"
+    },
+    {
+      "id": "ru-a1-about-me.muzh",
+      "word": "муж",
+      "gender": "m",
+      "es": "el marido",
+      "notes": "La «ж» final suena «sh»: mush.",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.zhena",
+      "word": "жена́",
+      "gender": "f",
+      "es": "la mujer (esposa)",
+      "notes": "zhe-NÁ: el golpe al final.",
+      "situation": "presentarse"
+    },
+    {
+      "id": "ru-a1-about-me.babushka",
+      "word": "ба́бушка",
+      "gender": "f",
+      "es": "la abuela",
+      "notes": "BÁ-bush-ka: el golpe al principio, no «babushka» llano.",
+      "situation": "presentarse",
+      "image": "fluent:old-woman"
+    },
+    {
+      "id": "ru-a1-about-me.dedushka",
+      "word": "де́душка",
+      "gender": "m",
+      "es": "el abuelo",
+      "notes": "Masculino aunque acabe en «-а».",
+      "situation": "presentarse",
+      "image": "fluent:old-man"
+    }
+  ],
+  "qa": [
+    {
+      "id": "ru-a1-about-me.qa.kak-vas-zovut",
+      "question": "Здра́вствуйте! Как вас зову́т?",
+      "questionEs": "¡Hola! ¿Cómo se llama?",
+      "accepted": [
+        {
+          "text": "Меня́ зову́т Эрна́н.",
+          "es": "Me llamo Hernán."
+        },
+        {
+          "text": "Я Эрна́н. А вас?",
+          "es": "Soy Hernán. ¿Y usted?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Мне три́дцать лет.",
+          "es": "Tengo treinta años."
+        },
+        {
+          "text": "Я зову́т Эрна́н.",
+          "es": "(Yo llaman Hernán.)"
+        }
+      ],
+      "register": "vy",
+      "situation": "presentarse",
+      "notes": "Para tu nombre: «Меня́ зову́т…» (a mí me llaman), nunca «Я зову́т».",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-about-me.qa.skolko-let",
+      "question": "Ско́лько тебе́ лет?",
+      "questionEs": "¿Cuántos años tienes?",
+      "accepted": [
+        {
+          "text": "Мне три́дцать лет.",
+          "es": "Tengo treinta años."
+        },
+        {
+          "text": "Три́дцать.",
+          "es": "Treinta."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "У меня́ три́дцать лет.",
+          "es": "(Tengo treinta años, calcado del español.)"
+        },
+        {
+          "text": "Я три́дцать.",
+          "es": "(Yo treinta.)"
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "La edad va con «мне»: «Мне три́дцать лет», a mí treinta años.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-about-me.qa.otkuda-vy",
+      "question": "А вы отку́да?",
+      "questionEs": "¿Y usted de dónde es?",
+      "accepted": [
+        {
+          "text": "Я из Испа́нии, из Мадри́да.",
+          "es": "Soy de España, de Madrid."
+        },
+        {
+          "text": "Из Мадри́да.",
+          "es": "De Madrid."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я в Мадри́де.",
+          "es": "Estoy en Madrid."
+        },
+        {
+          "text": "Я из Мадри́д.",
+          "es": "(Soy de Madrid, mal declinado.)"
+        }
+      ],
+      "register": "vy",
+      "situation": "presentarse",
+      "notes": "Después de «из» la ciudad cambia: Мадри́д → из Мадри́да.",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-about-me.qa.gde-ty-zhivyosh",
+      "question": "А где ты живёшь?",
+      "questionEs": "¿Y dónde vives?",
+      "accepted": [
+        {
+          "text": "Я живу́ в Мадри́де.",
+          "es": "Vivo en Madrid."
+        },
+        {
+          "text": "В Мадри́де.",
+          "es": "En Madrid."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я живу́ в Мадри́д.",
+          "es": "(Vivo en Madrid, mal declinado.)"
+        },
+        {
+          "text": "Я рабо́таю из до́ма.",
+          "es": "Trabajo desde casa."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "«в» + lugar pide «-е» al final: в Мадри́де.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-about-me.qa.kem-vy-rabotaete",
+      "question": "Кем вы рабо́таете?",
+      "questionEs": "¿A qué se dedica?",
+      "accepted": [
+        {
+          "text": "Я программи́ст.",
+          "es": "Soy programador."
+        },
+        {
+          "text": "Я рабо́таю программи́стом.",
+          "es": "Trabajo de programador."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я рабо́таю в Мадри́де.",
+          "es": "Trabajo en Madrid."
+        },
+        {
+          "text": "Я рабо́таю программи́ст.",
+          "es": "(Trabajo programador, sin «-ом».)"
+        }
+      ],
+      "register": "vy",
+      "situation": "presentarse",
+      "notes": "«Кем» pregunta la profesión: «Я программи́ст» o «Я рабо́таю программи́стом».",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-about-me.qa.kakie-yazyki",
+      "question": "Каки́е языки́ вы зна́ете?",
+      "questionEs": "¿Qué idiomas sabe?",
+      "accepted": [
+        {
+          "text": "Испа́нский, англи́йский и немно́го ру́сский.",
+          "es": "Español, inglés y un poco de ruso."
+        },
+        {
+          "text": "Испа́нский и англи́йский.",
+          "es": "Español e inglés."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я из Испа́нии.",
+          "es": "Soy de España."
+        },
+        {
+          "text": "Я учу́сь в шко́ле.",
+          "es": "Estudio en el colegio."
+        }
+      ],
+      "register": "vy",
+      "situation": "presentarse",
+      "notes": "Para nombrar los idiomas usa el adjetivo: испа́нский, англи́йский, ру́сский.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-about-me.qa.khorosho-govorite",
+      "question": "Вы хорошо́ говори́те по-ру́сски!",
+      "questionEs": "¡Habla muy bien ruso!",
+      "accepted": [
+        {
+          "text": "Спаси́бо, я стара́юсь!",
+          "es": "¡Gracias, lo intento!"
+        },
+        {
+          "text": "Спаси́бо! Я учу́ ру́сский.",
+          "es": "¡Gracias! Estoy aprendiendo ruso."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Пожа́луйста!",
+          "es": "¡De nada!"
+        },
+        {
+          "text": "Ничего́ стра́шного.",
+          "es": "No pasa nada."
+        }
+      ],
+      "register": "vy",
+      "situation": "presentarse",
+      "notes": "A un cumplido se responde «Спаси́бо»; «Пожа́луйста» es «de nada».",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-about-me.qa.u-vas-est-deti",
+      "question": "У вас есть де́ти?",
+      "questionEs": "¿Tiene hijos?",
+      "accepted": [
+        {
+          "text": "Нет, у меня́ нет дете́й.",
+          "es": "No, no tengo hijos."
+        },
+        {
+          "text": "Да, у меня́ есть сын.",
+          "es": "Sí, tengo un hijo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Нет, у меня́ нет де́ти.",
+          "es": "(No, no tengo hijos, mal declinado.)"
+        },
+        {
+          "text": "Да, я жена́т.",
+          "es": "Sí, estoy casado."
+        }
+      ],
+      "register": "vy",
+      "situation": "presentarse",
+      "notes": "Tras «нет» cambia la terminación: де́ти → нет дете́й.",
+      "voice": "ru-RU-DmitryNeural"
+    }
+  ]
+}
