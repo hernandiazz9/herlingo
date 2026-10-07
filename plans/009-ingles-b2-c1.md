@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:22Z 💻
+- Updated: 2026-10-07 22:33Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 4c95f94
-- Next step: integrate T124, then T125 + T126, then T128
+- Branch: plan-009-ingles-b2-c1 @ 5137464
+- Next step: integrate T125/T126, then T127 + T128; T129 on 💻 last
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -186,7 +186,7 @@ Worktree setup: npm ci
 - Outcome: c1-networking/problems: 92 phrases, 63 vocab, 16 Q&A, 10 lessons · 4c95f94 · verify ✓ 💻 · not checked: audio (T129), wording by eye
 
 ## T124 — English C1: society debates, storytelling
-- Status: running (attempt 1 · 💻 · agent a1005de88ee4b83f0 · since 22:21Z)
+- Status: done
 - Depends on: T111, T120
 - Where: any
 - Goal: Units `c1-society` (350) and `c1-storytelling` (352), per docs/brief-en.md: `level: "C1"`, phrases ≤ 22 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -195,10 +195,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "C1"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: c1-society/storytelling: 89 phrases, 66 vocab, 16 Q&A, 10 lessons · 5137464 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T125 — English C1: 12 dialogues
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a66884cf1615c93da · since 22:33Z)
 - Depends on: T120, T121, T122, T123, T124
 - Where: any
 - Goal: The 12 C1 dialogues listed in docs/brief-en.md (`level: "C1"`, `unit`, one native speaker with a Spanish role name, Fluent avatar and an en-US voice, register-honest options with Spanish feedback), order 301–312.
@@ -211,7 +211,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T126 — English C1: stories 1–6
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a371e626f987dedd8 · since 22:33Z)
 - Depends on: T120, T121, T122, T123, T124, T119
 - Where: any
 - Goal: C1 stories 1–6 (order 301–306, `level: "C1"`) with the Chicago cast, following the arc in docs/brief-en.md; key words reuse unit items by id; end the final message with an outline of stories 7–12 for T127.
@@ -276,6 +276,7 @@ Worktree setup: npm ci
 - [ ] T119 @38e56f8 — content review (queued 2026-10-07 💻)
 - [ ] T122 @2b11f14 — content review (queued 2026-10-07 💻)
 - [ ] T123 @4c95f94 — content review (note: second 'timeline' vocab entry, complaint sense, vs b2-meetings schedule sense) (queued 2026-10-07 💻)
+- [ ] T124 @5137464 — content review (note: c1-storytelling.make-up 'inventarse' vs b2-relationships.make-up 'hacer las paces', kept separate) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
@@ -329,3 +330,6 @@ Worktree setup: npm ci
 - 2026-10-07 22:21Z 💻 T122 done · worktree-agent-ae73dcc4ba6a5f6ec → 2b11f14 · verify ✓
 - 2026-10-07 22:21Z 💻 T124 launched · attempt 1 · agent a1005de88ee4b83f0
 - 2026-10-07 22:22Z 💻 T123 done · worktree-agent-a014857546e18c137 → 4c95f94 · verify ✓
+- 2026-10-07 22:32Z 💻 T124 done · worktree-agent-a1005de88ee4b83f0 → 5137464 · verify ✓
+- 2026-10-07 22:33Z 💻 T125 launched · attempt 1 · agent a66884cf1615c93da
+- 2026-10-07 22:33Z 💻 T126 launched · attempt 1 · agent a371e626f987dedd8
