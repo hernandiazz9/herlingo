@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { CloseIcon, PlayControls } from "@/components/exercises/shared";
-import { Button, Card, IconButton, Picture, ProgressBar } from "@/components/ui";
+import { Button, Card, IconButton, Picture, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { explain, isWord, markKnown, type GameCard, type Topic } from "@/lib/game";
 import { recordActivity } from "@/lib/progress/activity";
@@ -73,7 +73,7 @@ export function Discover({
         {isWord(card) ? <Picture key={card.id} image={card.image} alt="" size="intro" className="self-center" /> : null}
         <PlayControls audio={card} />
         <p lang={lang} className="text-3xl font-extrabold leading-tight text-sea-deep">
-          {card.text}
+          <TargetText text={card.text} lang={lang} />
         </p>
         <p className="text-xl font-bold text-ink">{card.es}</p>
         {!isWord(card) && card.literal ? <p className="text-sm text-ink-muted">Literal: «{card.literal}»</p> : null}

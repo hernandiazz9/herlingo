@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { AnswerExercise, ChoiceOption, ListenMeaningExercise, ReadMeaningExercise } from "@/lib/exercises";
 import { MiniPlay, PlayControls, Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
@@ -35,7 +36,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
           <div className="flex items-center gap-3">
             <MiniPlay audio={exercise.audio} />
             <p lang={lang} className="text-2xl font-bold text-sea-deep">
-              {exercise.audio.text}
+              <TargetText text={exercise.audio.text} lang={lang} />
             </p>
           </div>
         </>
@@ -46,7 +47,9 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
           <PlayControls audio={exercise.question} />
           {showQuestion || answered ? (
             <p lang={lang} className="text-xl font-bold text-sea-deep">
-              «{exercise.question.text}»
+              <TargetText text={exercise.question.text} lang={lang}>
+                «{exercise.question.text}»
+              </TargetText>
             </p>
           ) : (
             <button
@@ -82,7 +85,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
                   answered && !reveal && !isPicked && "opacity-60",
                 )}
               >
-                {option.label}
+                {exercise.type === "answer" ? <TargetText text={option.label} lang={lang} /> : option.label}
               </button>
               {exercise.type === "answer" && option.audio ? <MiniPlay audio={option.audio} label={`Escuchar: ${option.label}`} /> : null}
             </li>

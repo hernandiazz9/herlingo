@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { SpeakPanel, useListen, WordFeedback } from "@/components/speech";
-import { Button } from "@/components/ui";
+import { Button, TargetText } from "@/components/ui";
 import { speak } from "@/lib/audio";
 import { getPack } from "@/lib/content";
 import type { SpeakExercise as Speak } from "@/lib/exercises";
@@ -57,7 +57,7 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
       <Prompt>Dilo en voz alta</Prompt>
       <div className="flex flex-col gap-2">
         <p lang={lang} className="text-2xl font-bold text-sea-deep">
-          {exercise.audio.text}
+          <TargetText text={exercise.audio.text} lang={lang} />
         </p>
         <p className="text-lg text-ink-muted">{exercise.es}</p>
       </div>

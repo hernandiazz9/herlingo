@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ALL_LEVELS, LevelChips, type LevelFilter } from "@/components/level/LevelChips";
-import { ProgressBar } from "@/components/ui";
+import { ProgressBar, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack, getSituation, getStories } from "@/lib/content";
 import { useLevel } from "@/lib/content/level-hook";
@@ -74,7 +74,7 @@ function PackStories({ lang }: { lang: string }) {
                 </span>
                 <span className="flex min-w-0 flex-1 flex-col gap-0.5">
                   <span lang={pack.meta.lang} className="text-lg font-bold leading-tight text-ink">
-                    {story.title}
+                    <TargetText text={story.title} lang={pack.meta.lang} />
                   </span>
                   <span className="text-ink-muted">{story.titleEs}</span>
                   <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-bold">

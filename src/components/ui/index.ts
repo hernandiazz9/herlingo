@@ -8,3 +8,5 @@ export { ProgressBar } from "./ProgressBar";
 export type { ProgressBarProps, ProgressTone } from "./ProgressBar";
 export { Picture } from "./Picture";
 export type { PictureProps, PictureSize } from "./Picture";
+export { LatinLine, TargetText } from "./TargetText";
+export type { TargetTextProps } from "./TargetText";

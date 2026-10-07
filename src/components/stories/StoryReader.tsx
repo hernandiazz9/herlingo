@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SpeakerIcon } from "@/components/icons";
-import { Button, Card, Picture } from "@/components/ui";
+import { Button, Card, Picture, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import { getPack, getStoryKeywords, hasImage, type Story, type StoryKeyword } from "@/lib/content";
@@ -132,24 +132,26 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
             >
               <div className="flex items-start gap-2">
                 <p lang={lang} className="flex-1 cursor-pointer text-xl leading-relaxed text-ink" onClick={() => playSentence(i)}>
-                  {(segments.get(s.id) ?? [{ text: s.text }]).map((seg, j) =>
-                    seg.keywordId ? (
-                      <button
-                        key={j}
-                        type="button"
-                        aria-expanded={kw?.id === seg.keywordId}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          tapKeyword(s.id, seg.keywordId!);
-                        }}
-                        className="rounded-md bg-terracotta-soft px-0.5 font-bold text-terracotta-deep underline decoration-dotted underline-offset-4 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
-                      >
-                        {seg.text}
-                      </button>
-                    ) : (
-                      <span key={j}>{seg.text}</span>
-                    ),
-                  )}
+                  <TargetText text={s.text} lang={lang}>
+                    {(segments.get(s.id) ?? [{ text: s.text }]).map((seg, j) =>
+                      seg.keywordId ? (
+                        <button
+                          key={j}
+                          type="button"
+                          aria-expanded={kw?.id === seg.keywordId}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            tapKeyword(s.id, seg.keywordId!);
+                          }}
+                          className="rounded-md bg-terracotta-soft px-0.5 font-bold text-terracotta-deep underline decoration-dotted underline-offset-4 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
+                        >
+                          {seg.text}
+                        </button>
+                      ) : (
+                        <span key={j}>{seg.text}</span>
+                      ),
+                    )}
+                  </TargetText>
                 </p>
                 <PlayButton label={`Escuchar la frase ${i + 1}`} onClick={() => playSentence(i)} />
               </div>
@@ -158,7 +160,7 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
                   <PlayButton label={`Escuchar: ${kw.text}`} onClick={() => tapKeyword(s.id, kw.id, true)} />
                   <div className="flex min-w-0 flex-col">
                     <span lang={lang} className="text-lg font-bold text-ink">
-                      {kw.text}
+                      <TargetText text={kw.text} lang={lang} />
                     </span>
                     <span className="text-base text-ink">{kw.es}</span>
                     {kw.notes ? <span className="mt-1 text-sm text-ink-muted">{kw.notes}</span> : null}

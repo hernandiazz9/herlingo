@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { CloseIcon, PlayControls } from "@/components/exercises";
-import { Button, Card, ProgressBar } from "@/components/ui";
+import { Button, Card, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { getLesson, getLevels, getPack, type Level, type PlacementQuestion } from "@/lib/content";
 import { setActiveLang } from "@/lib/content/active";
@@ -230,7 +230,7 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
       {q.text ? (
         <Card className="flex flex-col gap-3">
           <p lang={pack.meta.lang} className="text-xl font-bold text-ink">
-            {q.text}
+            <TargetText text={q.text} lang={pack.meta.lang} />
           </p>
           {q.audio ? <PlayControls audio={q.audio} size="md" /> : null}
         </Card>
@@ -246,7 +246,7 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
                 "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
               )}
             >
-              {option}
+              <TargetText text={option} lang={pack.meta.lang} />
             </button>
           </li>
         ))}

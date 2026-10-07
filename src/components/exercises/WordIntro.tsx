@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Picture } from "@/components/ui";
+import { Button, Picture, TargetText } from "@/components/ui";
 import type { Vocab } from "@/lib/content";
 import { PlayControls, useLessonLang } from "./shared";
 
@@ -18,7 +18,7 @@ export function WordIntro({ item, onContinue }: { item: Vocab; onContinue: () =>
         {item.image ? <Picture image={item.image} alt="" size="intro" /> : null}
         <div className="flex flex-col gap-1">
           <p lang={lang} className="text-4xl font-extrabold tracking-tight text-sea-deep">
-            {item.text}
+            <TargetText text={item.text} lang={lang} />
           </p>
           <p className="text-xl text-ink">{item.es}</p>
         </div>

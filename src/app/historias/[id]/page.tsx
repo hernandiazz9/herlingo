@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { StoryView } from "@/components/stories/StoryView";
+import { LatinLine } from "@/components/ui";
 import { findStoryPack, getPack, getSituation, getStories, getStory, listLangs } from "@/lib/content";
 
 export const dynamicParams = false;
@@ -34,6 +35,7 @@ export default async function StoryPage({ params }: PageProps<"/historias/[id]">
         title={story.title}
         subtitle={
           <>
+            <LatinLine text={story.title} lang={pack.meta.lang} className="font-bold" />
             {story.titleEs}
             {situation ? ` · ${situation.emoji ? `${situation.emoji} ` : ""}${situation.title}` : ""}
           </>

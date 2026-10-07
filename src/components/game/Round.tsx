@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { CloseIcon, MiniPlay, PlayControls } from "@/components/exercises/shared";
-import { Button, Card, IconButton, Picture, ProgressBar } from "@/components/ui";
+import { Button, Card, IconButton, Picture, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { getPack, languageName } from "@/lib/content";
 import { cn } from "@/lib/cn";
@@ -227,7 +227,7 @@ export function Round({
                   {isWord(p) ? <Picture image={p.image} alt="" size="avatar" /> : null}
                   <span className="flex flex-col">
                     <span lang={lang} className="font-bold text-sea-deep">
-                      {p.text}
+                      <TargetText text={p.text} lang={lang} />
                     </span>
                     <span className="text-sm text-ink-muted">{p.es}</span>
                   </span>
@@ -334,7 +334,7 @@ export function Round({
                         reveal ? "bg-success-soft text-success-deep" : "bg-error-soft text-error-deep",
                       )}
                     >
-                      {option.text}
+                      <TargetText text={option.text} lang={lang} />
                     </span>
                   ) : null}
                 </button>
@@ -367,7 +367,7 @@ export function Round({
                     g.picked !== null && !reveal && !isPicked && "opacity-60",
                   )}
                 >
-                  {label}
+                  {q.kind === "reverse" ? <TargetText text={label} lang={lang} /> : label}
                 </button>
                 {q.kind === "reverse" ? <MiniPlay audio={option} label={`Escuchar: ${option.text}`} /> : null}
               </li>

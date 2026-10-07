@@ -3,13 +3,14 @@
 import { useCallback, useDeferredValue, useMemo, useState } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { speak } from "@/lib/audio";
+import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getAllLessons, type Pack, type Phrase } from "@/lib/content";
 import { useFavorites } from "@/lib/favorites/use-favorites";
 import { recordListen } from "@/lib/progress/activity";
 import { dedupeByText } from "@/lib/srs/dedupe";
 import { ExpandIcon, SlowIcon, StarIcon } from "./icons";
-import { fold, matches } from "./search";
+import { fold, matches, romanizedForSearch } from "./search";
 import { SearchHeader, situationChips, type Chip, type Filter } from "./SearchHeader";
 import { ShowMode } from "./ShowMode";
 import { useLessonLang } from "@/components/exercises";
@@ -45,7 +46,7 @@ function buildEntries(pack: Pack): Entry[] {
         ids,
         haystack: fold(
           all
-            .flatMap((p) => [p.text, p.es, p.literal, p.notes, ...(p.tags ?? [])])
+            .flatMap((p) => [p.text, ...romanizedForSearch([p.text], pack), p.es, p.literal, p.notes, ...(p.tags ?? [])])
             .filter(Boolean)
             .join(" "),
         ),
@@ -180,7 +181,7 @@ function PhraseRow({ phrase, open, favorite, onPlay, onToggleFavorite, onShow }:
         >
           <span className="flex-1">
             <span lang={lang} className="block text-lg leading-snug font-bold text-ink">
-              {phrase.text}
+              <TargetText text={phrase.text} lang={lang} />
             </span>
             <span className="block text-base text-ink-muted">{phrase.es}</span>
           </span>

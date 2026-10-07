@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card } from "@/components/ui";
+import { Button, Card, TargetText } from "@/components/ui";
 import type { GrammarCard } from "@/lib/content";
 import { MiniPlay, useLessonLang } from "./shared";
 
@@ -37,7 +37,7 @@ export function GrammarTip({ card, onContinue }: { card: GrammarCard; onContinue
                 <tr key={r} className="border-t border-line">
                   {row.map((c, i) => (
                     <td key={i} lang={i > 0 ? lang : undefined} className="px-2 py-1 text-ink">
-                      {c}
+                      {i > 0 ? <TargetText text={c} lang={lang} /> : c}
                     </td>
                   ))}
                 </tr>
@@ -52,10 +52,12 @@ export function GrammarTip({ card, onContinue }: { card: GrammarCard; onContinue
             <li key={ex.audioKey} className="flex items-center gap-3">
               <MiniPlay audio={ex} />
               <span>
-                <span lang={lang} className="font-bold text-ink">
-                  {ex.text}
-                </span>{" "}
-                <span className="text-ink-muted">· {ex.es}</span>
+                <TargetText text={ex.text} lang={lang}>
+                  <span lang={lang} className="font-bold text-ink">
+                    {ex.text}
+                  </span>{" "}
+                  <span className="text-ink-muted">· {ex.es}</span>
+                </TargetText>
               </span>
             </li>
           ))}

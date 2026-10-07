@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui";
+import { Button, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack, languageName } from "@/lib/content";
 import { checkAnswer, scriptRules, type TilesExercise as Tiles } from "@/lib/exercises";
@@ -37,7 +37,7 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
       >
         {chosen.map((i) => (
           <button key={i} type="button" className={TILE} onClick={() => remove(i)} disabled={answered}>
-            {exercise.tiles[i]}
+            <TargetText text={exercise.tiles[i]} lang={lang} />
           </button>
         ))}
       </div>
@@ -54,7 +54,7 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
               disabled={answered || used}
               aria-hidden={used}
             >
-              {word}
+              <TargetText text={word} lang={lang} />
             </button>
           );
         })}

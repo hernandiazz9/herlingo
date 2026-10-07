@@ -1,3 +1,4 @@
+import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { ScoredWord } from "@/lib/speech";
 
@@ -36,7 +37,7 @@ export function WordFeedback({ words, lang, heard, className }: WordFeedbackProp
         {words.map((w, i) => (
           <span key={i} className="inline-flex flex-col items-center">
             <span className={cn("rounded-md px-1.5 py-0.5", WORD_STYLE[w.status])}>
-              {w.text}
+              <TargetText text={w.text} lang={lang} />
               <span className="sr-only"> ({WORD_LABEL[w.status]}{w.status === "wrong" && w.heard ? `: «${w.heard}»` : ""})</span>
             </span>
             {w.status === "wrong" && w.heard ? (

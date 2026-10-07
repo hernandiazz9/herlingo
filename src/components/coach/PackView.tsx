@@ -4,7 +4,7 @@ import { useEffect, type ReactNode } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { SlowIcon } from "@/components/phrasebook/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
-import { Card } from "@/components/ui";
+import { Card, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { packLine, type CoachKeyPhrase, type CoachPack } from "@/lib/coach";
 import { cn } from "@/lib/cn";
@@ -94,7 +94,7 @@ function KeyPhraseRow({ pack, phrase }: { pack: CoachPack; phrase: CoachKeyPhras
       >
         <span className="flex-1">
           <span lang={pack.lang} className="block text-lg font-bold leading-snug text-ink">
-            {phrase.text}
+            <TargetText text={phrase.text} lang={pack.lang} />
           </span>
           <span className="block text-base text-ink-muted">{phrase.es}</span>
           {phrase.note ? <span className="mt-1 block text-sm text-sea-deep">{phrase.note}</span> : null}

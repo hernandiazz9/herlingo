@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { ChoiceExercise, CloseIcon, FillGapExercise, LessonLangContext, MatchExercise, MiniPlay } from "@/components/exercises";
 import { ExitDialog, FeedbackSheet } from "@/components/lesson";
-import { Button, Card, ProgressBar } from "@/components/ui";
+import { Button, Card, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { getItem, getPack, getStories, type Story, type StoryKeyword } from "@/lib/content";
 import { recordOutcome, type Exercise, type ExerciseOutcome, type ItemOutcome } from "@/lib/exercises";
@@ -288,7 +288,7 @@ function StoryDone({
                 <MiniPlay audio={item} label={`Escuchar: ${item.text}`} />
                 <span className="flex min-w-0 flex-col">
                   <span lang={lang} className="text-base font-bold text-ink">
-                    {item.text}
+                    <TargetText text={item.text} lang={lang} />
                   </span>
                   <span className="text-sm text-ink-muted">{item.es}</span>
                 </span>

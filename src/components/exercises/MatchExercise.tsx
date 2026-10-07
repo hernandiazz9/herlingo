@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Picture } from "@/components/ui";
+import { Picture, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { MatchExercise as Match } from "@/lib/exercises";
 import { Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
@@ -75,7 +75,13 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
           !isDone && !isWrong && !isSelected && "border-line bg-surface text-ink [--ledge:var(--line)]",
         )}
       >
-        {image ? <Picture image={image} alt="" bordered={false} className="max-w-24" /> : label}
+        {image ? (
+          <Picture image={image} alt="" bordered={false} className="max-w-24" />
+        ) : side === "target" ? (
+          <TargetText text={label} lang={lang} />
+        ) : (
+          label
+        )}
       </button>
     );
   };

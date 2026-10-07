@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack } from "@/lib/content";
 import { checkAnswer, scriptRules, type FillGapExercise as FillGap } from "@/lib/exercises";
@@ -27,18 +28,20 @@ export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<
       <div className="flex items-start gap-3">
         {answered ? <MiniPlay audio={exercise.audio} /> : null}
         <p lang={lang} className="whitespace-pre-wrap text-2xl font-bold leading-relaxed text-ink">
-          {exercise.before}
-          <span
-            className={cn(
-              "inline-block min-w-20 rounded-lg border-b-4 px-2 text-center",
-              !picked && "border-lemon-deep bg-lemon-soft text-transparent",
-              picked && correct && "border-success bg-success-soft text-success-deep",
-              picked && !correct && "border-error bg-error-soft text-error-deep",
-            )}
-          >
-            {picked ?? "····"}
-          </span>
-          {exercise.after}
+          <TargetText text={`${exercise.before}${answered ? exercise.gap : "…"}${exercise.after}`} lang={lang}>
+            {exercise.before}
+            <span
+              className={cn(
+                "inline-block min-w-20 rounded-lg border-b-4 px-2 text-center",
+                !picked && "border-lemon-deep bg-lemon-soft text-transparent",
+                picked && correct && "border-success bg-success-soft text-success-deep",
+                picked && !correct && "border-error bg-error-soft text-error-deep",
+              )}
+            >
+              {picked ?? "····"}
+            </span>
+            {exercise.after}
+          </TargetText>
         </p>
       </div>
       <div lang={lang} className="grid grid-cols-2 gap-3">
@@ -54,7 +57,7 @@ export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<
               answered && picked !== word && "opacity-60",
             )}
           >
-            {word}
+            <TargetText text={word} lang={lang} />
           </button>
         ))}
       </div>
