@@ -10,7 +10,7 @@ Worktree setup: npm ci
 ## Now
 - Updated: 2026-10-07 💻
 - Writer: released (plan drafted on 💻; Hernán starts it in a cloud session)
-- Branch: plan-009-ingles-b2-c1 @ (this commit) from main @ 1455082
+- Branch: plan-009-ingles-b2-c1 @ 39c089e from main @ 1455082
 - Next step: cloud session: start ritual, launch T111 (then B2 units T112–T116, max 2 agents)
 - Needs Hernán: -
 
