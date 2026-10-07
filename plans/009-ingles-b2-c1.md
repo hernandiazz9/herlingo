@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 08:11Z ☁️
-- Writer: released 08:11Z by ☁️ session_01TRpJSE1mnE3mnYdfYQTXo5 → continue on ☁️
-- Branch: plan-009-ingles-b2-c1 @ eaac50e
-- Next step: fresh cloud session: start ritual, launch T113 (1 agent while the seven-day rate-limit warning lasts)
+- Updated: 2026-10-07 11:44Z ☁️
+- Writer: ☁️ session_011Ty23Vt9nLP3RjeDwVppCy (since 11:44Z)
+- Branch: plan-009-ingles-b2-c1 @ cf89c8a
+- Next step: launch T113, then loop T114–T128 (1 agent: seven-day warning)
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -287,3 +287,4 @@ Worktree setup: npm ci
 - 2026-10-07 07:59Z ☁️ T112 launched · attempt 1 · agent a49235f2b326166fc
 - 2026-10-07 08:10Z ☁️ T112 done · worktree-agent-a49235f2b326166fc → eaac50e · verify ✓
 - 2026-10-07 08:11Z ☁️ handoff ☁️ → ☁️ (relay, >5M cache-read) · plan-009-ingles-b2-c1 @ eaac50e
+- 2026-10-07 11:44Z ☁️ resume on ☁️ session_011Ty23Vt9nLP3RjeDwVppCy · writer taken (was released)
