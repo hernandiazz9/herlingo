@@ -1,0 +1,1254 @@
+{
+  "id": "ru-a1-numbers",
+  "order": 14,
+  "level": "A1",
+  "title": "Números, hora, precios y teléfono",
+  "description": "Contar del 0 al 1000, decir tu edad y tu teléfono, entender precios en rublos y preguntar la hora.",
+  "emoji": "🔢",
+  "situation": "numeros",
+  "lessons": [
+    {
+      "id": "ru-a1-numbers.l.zero-ten",
+      "title": "Del 0 al 10",
+      "items": [
+        "ru-a1-numbers.nol",
+        "ru-a1-numbers.odin",
+        "ru-a1-numbers.dva",
+        "ru-a1-numbers.tri",
+        "ru-a1-numbers.chetyre",
+        "ru-a1-numbers.pyat",
+        "ru-a1-numbers.shest",
+        "ru-a1-numbers.sem",
+        "ru-a1-numbers.vosem",
+        "ru-a1-numbers.devyat",
+        "ru-a1-numbers.desyat",
+        "ru-a1-numbers.odin-dva-tri",
+        "ru-a1-numbers.skolko",
+        "ru-a1-numbers.dva-kofe",
+        "ru-a1-numbers.bilet",
+        "ru-a1-numbers.odin-bilet",
+        "ru-a1-numbers.dva-bileta",
+        "ru-a1-numbers.stolik-na-dvoikh",
+        "ru-a1-numbers.qa.skolko-vas",
+        "ru-a1-numbers.qa.bilety"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.l.tens",
+      "title": "Del 11 al 1000 y tu edad",
+      "items": [
+        "ru-a1-numbers.odinnadtsat",
+        "ru-a1-numbers.dvenadtsat",
+        "ru-a1-numbers.trinadtsat",
+        "ru-a1-numbers.pyatnadtsat",
+        "ru-a1-numbers.dvadtsat",
+        "ru-a1-numbers.tridtsat",
+        "ru-a1-numbers.sorok",
+        "ru-a1-numbers.pyatdesyat",
+        "ru-a1-numbers.shestdesyat",
+        "ru-a1-numbers.semdesyat",
+        "ru-a1-numbers.vosemdesyat",
+        "ru-a1-numbers.devyanosto",
+        "ru-a1-numbers.sto",
+        "ru-a1-numbers.dvesti",
+        "ru-a1-numbers.pyatsot",
+        "ru-a1-numbers.tysyacha",
+        "ru-a1-numbers.skolko-vam-let",
+        "ru-a1-numbers.skolko-tebe-let",
+        "ru-a1-numbers.mne-tridtsat-dva-goda",
+        "ru-a1-numbers.qa.age"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.l.phone",
+      "title": "Tu número de teléfono",
+      "items": [
+        "ru-a1-numbers.telefon",
+        "ru-a1-alphabet.nomer",
+        "ru-a1-numbers.kakoi-u-vas-nomer",
+        "ru-a1-numbers.kakoi-u-tebya-nomer",
+        "ru-a1-numbers.moi-nomer",
+        "ru-a1-numbers.zapishite-moi-nomer",
+        "ru-a1-numbers.povtorite-nomer",
+        "ru-a1-hello.medlennee",
+        "ru-a1-hello.eshchyo-raz",
+        "ru-a1-numbers.pozvoni-mne",
+        "ru-a1-numbers.qa.nomer"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.l.prices",
+      "title": "Precios en rublos y pagar",
+      "items": [
+        "ru-a1-numbers.skolko-eto-stoit",
+        "ru-a1-numbers.skolko-stoit-bilet",
+        "ru-a1-numbers.rubl",
+        "ru-a1-numbers.kopeika",
+        "ru-a1-numbers.dengi",
+        "ru-a1-numbers.tsena",
+        "ru-a1-numbers.dvadtsat-odin-rubl",
+        "ru-a1-numbers.sorok-tri-rublya",
+        "ru-a1-numbers.sto-dvadtsat-rublei",
+        "ru-a1-numbers.dvesti-pyatdesyat-rublei",
+        "ru-a1-numbers.tysyacha-rublei",
+        "gram.ru-a1-numbers-rubles",
+        "ru-a1-numbers.dorogo",
+        "ru-a1-numbers.deshevo",
+        "ru-a1-numbers.eto-dorogo",
+        "ru-a1-numbers.eto-nedorogo",
+        "ru-a1-numbers.napishite-tsenu",
+        "ru-a1-numbers.skolko-s-menya",
+        "ru-a1-numbers.karta",
+        "ru-a1-numbers.nalichnye",
+        "ru-a1-numbers.mozhno-kartoi",
+        "ru-a1-numbers.mozhno-nalichnymi",
+        "ru-a1-numbers.sdacha",
+        "ru-a1-numbers.est-sdacha-s-tysyachi",
+        "ru-a1-numbers.sdachi-ne-nado",
+        "ru-a1-numbers.qa.kak-platit"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.l.time",
+      "title": "La hora",
+      "items": [
+        "ru-a1-alphabet.chas",
+        "ru-a1-numbers.seichas",
+        "ru-a1-numbers.kotoryi-chas",
+        "ru-a1-numbers.skolko-seichas-vremeni",
+        "ru-a1-numbers.seichas-chas",
+        "ru-a1-numbers.seichas-dva-chasa",
+        "ru-a1-numbers.seichas-pyat-chasov",
+        "ru-a1-numbers.seichas-desyat-tridtsat",
+        "ru-a1-numbers.vo-skolko",
+        "ru-a1-numbers.v-sem-chasov",
+        "ru-a1-numbers.poezd-v-dvadtsat-odin-sorok",
+        "ru-a1-numbers.muzei-rabotaet",
+        "ru-a1-numbers.minuta",
+        "ru-a1-numbers.cherez-pyat-minut",
+        "ru-a1-numbers.polchasa",
+        "ru-a1-numbers.budu-cherez-polchasa",
+        "ru-a1-numbers.opazdyvayu",
+        "ru-a1-numbers.qa.kotoryi-chas",
+        "ru-a1-numbers.qa.vo-skolko"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "ru-a1-numbers.odin-dva-tri",
+      "text": "Оди́н, два, три!",
+      "es": "¡Uno, dos, tres!",
+      "explanation": "Para contar en voz alta, o antes de una foto. a-DÍN, dva, tri: «два» y «три» son una sola sílaba.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.dva-kofe",
+      "text": "Два ко́фе, пожа́луйста.",
+      "es": "Dos cafés, por favor.",
+      "notes": "«ко́фе» es masculino y no se declina.",
+      "explanation": "En la barra de una cafetería. «ко́фе» no cambia nunca: два ко́фе, пять ко́фе. KÓ-fie.",
+      "register": "neutral",
+      "situation": "numeros"
+    },
+    {
+      "id": "ru-a1-numbers.odin-bilet",
+      "text": "Оди́н биле́т, пожа́луйста.",
+      "es": "Un billete, por favor.",
+      "explanation": "En la taquilla del metro, del tren o del museo. bi-LIET: la «е» ablanda la «л».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "billete"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.dva-bileta",
+      "text": "Два биле́та, пожа́луйста.",
+      "es": "Dos billetes, por favor.",
+      "notes": "Tras 2, 3 y 4 el nombre va en otra forma: «биле́та».",
+      "explanation": "Si vais dos. Tras 2, 3 y 4 la palabra cambia a «биле́та»: bi-LIE-ta.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "billete"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.stolik-na-dvoikh",
+      "text": "Сто́лик на двои́х, пожа́луйста.",
+      "es": "Una mesa para dos, por favor.",
+      "explanation": "Al entrar en un restaurante o cafetería. «двои́х» = para dos personas: dva-ÍJ, con «х» de jota.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "restaurante"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.skolko-vam-let",
+      "text": "Ско́лько вам лет?",
+      "es": "¿Cuántos años tiene?",
+      "literal": "¿Cuántos a usted años?",
+      "explanation": "A un adulto al que tratas de usted, en un formulario o una charla tranquila. «лет» = años: liet.",
+      "register": "vy",
+      "situation": "numeros",
+      "tags": [
+        "edad"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.skolko-tebe-let",
+      "text": "Ско́лько тебе́ лет?",
+      "es": "¿Cuántos años tienes?",
+      "explanation": "A un niño o a un amigo. ti-BIÉ: la «е» ablanda la consonante de delante.",
+      "register": "tu",
+      "situation": "numeros",
+      "tags": [
+        "edad"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.mne-tridtsat-dva-goda",
+      "text": "Мне три́дцать два го́да.",
+      "es": "Tengo treinta y dos años.",
+      "literal": "A mí treinta y dos años.",
+      "notes": "1 год, 2–4 го́да, 5 o más лет.",
+      "explanation": "Para decir tu edad: «мне» = a mí. Tras 2, 3 y 4 se dice «го́да»; tras 5 o más, «лет».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "edad"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.kakoi-u-vas-nomer",
+      "text": "Како́й у вас но́мер телефо́на?",
+      "es": "¿Cuál es su número de teléfono?",
+      "explanation": "En una recepción o al rellenar una ficha. ka-KÓI u vas NÓ-mir ti-li-FÓ-na.",
+      "register": "vy",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.kakoi-u-tebya-nomer",
+      "text": "Како́й у тебя́ но́мер?",
+      "es": "¿Cuál es tu número?",
+      "explanation": "A un amigo nuevo para quedar. ti-BIÁ: la «я» final se dice «ia».",
+      "register": "tu",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.moi-nomer",
+      "text": "Мой но́мер: во́семь, девятьсо́т шестна́дцать, сто два́дцать три, со́рок пять, шестьдеся́т семь.",
+      "es": "Mi número es el 8 916 123 45 67.",
+      "notes": "Los móviles empiezan por 8 (o +7) y se leen en grupos 3-3-2-2.",
+      "explanation": "Los móviles rusos se leen en grupos: 8, luego tres cifras, tres, dos y dos. Haz una pausa entre grupos.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.zapishite-moi-nomer",
+      "text": "Запиши́те мой но́мер.",
+      "es": "Apunte mi número.",
+      "explanation": "Cuando alguien te pide el teléfono. za-pi-SHÍ-tie: «-те» es la forma de usted.",
+      "register": "vy",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.pozvoni-mne",
+      "text": "Позвони́ мне!",
+      "es": "¡Llámame!",
+      "explanation": "Al despedirte de un amigo. pa-zva-NÍ: las dos «о» sin acento suenan «a».",
+      "register": "tu",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.povtorite-nomer",
+      "text": "Повтори́те но́мер, пожа́луйста.",
+      "es": "Repita el número, por favor.",
+      "explanation": "Si te dictan un número muy deprisa. pa-fta-RÍ-tie: la «в» suena «f» ante «т».",
+      "register": "vy",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.skolko-eto-stoit",
+      "text": "Ско́лько э́то сто́ит?",
+      "es": "¿Cuánto cuesta esto?",
+      "explanation": "En tiendas y mercados, señalando la cosa. «сто́ит» tiene dos sílabas: STÓ-it.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.skolko-stoit-bilet",
+      "text": "Ско́лько сто́ит биле́т?",
+      "es": "¿Cuánto cuesta el billete?",
+      "explanation": "En la taquilla del museo o de la estación. SKÓL'-ka STÓ-it bi-LIET?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio",
+        "billete"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.dvadtsat-odin-rubl",
+      "text": "Два́дцать оди́н рубль.",
+      "es": "Veintiún rublos.",
+      "notes": "Acaba en 1 (salvo 11) → рубль.",
+      "explanation": "Si el número acaba en 1 (21, 31, 101), se dice «рубль». La «ль» final es una «l» suave.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.sorok-tri-rublya",
+      "text": "Со́рок три рубля́.",
+      "es": "Cuarenta y tres rublos.",
+      "notes": "Acaba en 2, 3 o 4 → рубля́.",
+      "explanation": "Si el número acaba en 2, 3 o 4 (salvo 12–14), se dice «рубля́»: rub-LIÁ.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.sto-dvadtsat-rublei",
+      "text": "Сто два́дцать рубле́й.",
+      "es": "Ciento veinte rublos.",
+      "notes": "5–20, decenas y centenas → рубле́й.",
+      "explanation": "Lo que oyes en la caja. Con 5–20 y con cero final: «рубле́й», rub-LIÉI.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.dvesti-pyatdesyat-rublei",
+      "text": "Две́сти пятьдеся́т рубле́й.",
+      "es": "Doscientos cincuenta rublos.",
+      "explanation": "El precio típico de un café en San Petersburgo. DVIÉ-sti pi-di-SIAT rub-LIÉI.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.tysyacha-rublei",
+      "text": "Ты́сяча рубле́й.",
+      "es": "Mil rublos.",
+      "explanation": "Precio de una comida sencilla o de un billete de mil. TY-si-cha rub-LIÉI.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.eto-dorogo",
+      "text": "Э́то до́рого.",
+      "es": "Es caro.",
+      "explanation": "En un mercado, para regatear un poco. DÓ-ra-ga: la «о» sin acento suena «a».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.eto-nedorogo",
+      "text": "Э́то недо́рого.",
+      "es": "No es caro.",
+      "explanation": "Para decir que algo tiene buen precio. ni-DÓ-ra-ga: la «е» sin acento suena casi «i».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.mozhno-kartoi",
+      "text": "Мо́жно ка́ртой?",
+      "es": "¿Puedo pagar con tarjeta?",
+      "literal": "¿Se puede con tarjeta?",
+      "explanation": "En la caja antes de pagar. MÓZH-na KÁR-tai: la «ж» es como la «j» francesa.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "pagar"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.mozhno-nalichnymi",
+      "text": "Мо́жно нали́чными?",
+      "es": "¿Puedo pagar en efectivo?",
+      "literal": "¿Se puede en efectivo?",
+      "explanation": "En un mercado o un taxi. na-LÍCH-ny-mi: la «ы» se dice con la lengua hacia atrás.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "pagar"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.sdachi-ne-nado",
+      "text": "Сда́чи не на́до.",
+      "es": "Quédese con el cambio.",
+      "literal": "Cambio no hace falta.",
+      "explanation": "Al taxista o al camarero, como propina. ZDÁ-chi: la «с» suena «z» ante «д».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "pagar"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.est-sdacha-s-tysyachi",
+      "text": "У вас есть сда́ча с ты́сячи?",
+      "es": "¿Tiene cambio de mil?",
+      "explanation": "Antes de pagar algo barato con un billete grande. «с ты́сячи» = de mil: s TY-si-chi.",
+      "register": "vy",
+      "situation": "numeros",
+      "tags": [
+        "pagar"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.skolko-s-menya",
+      "text": "Ско́лько с меня́?",
+      "es": "¿Cuánto le debo?",
+      "literal": "¿Cuánto de mí?",
+      "explanation": "Para pedir el total en la caja, el mercado o el taxi. s mi-NIÁ.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "pagar"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.napishite-tsenu",
+      "text": "Напиши́те, пожа́луйста, це́ну.",
+      "es": "Escríbame el precio, por favor.",
+      "explanation": "Si no entiendes el número que te dicen. TSIÉ-nu: la «ц» es «ts».",
+      "register": "vy",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.kotoryi-chas",
+      "text": "Кото́рый час?",
+      "es": "¿Qué hora es?",
+      "literal": "¿Qué hora (número)?",
+      "explanation": "Para preguntar la hora a cualquiera. ka-TÓ-ryi CHAS.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.skolko-seichas-vremeni",
+      "text": "Ско́лько сейча́с вре́мени?",
+      "es": "¿Qué hora es?",
+      "literal": "¿Cuánto ahora de tiempo?",
+      "explanation": "La forma más corriente en la calle. sii-CHÁS VRIÉ-mi-ni.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.seichas-chas",
+      "text": "Сейча́с час.",
+      "es": "Es la una.",
+      "explanation": "Para la una basta «час», sin número. CHAS, con «ch» como en español.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.seichas-dva-chasa",
+      "text": "Сейча́с два часа́.",
+      "es": "Son las dos.",
+      "notes": "2–4 часа́, 5–20 часо́в.",
+      "explanation": "Con 2, 3 y 4: «часа́», chi-SÁ. La «а» de «час» sin acento suena «i».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.seichas-pyat-chasov",
+      "text": "Сейча́с пять часо́в.",
+      "es": "Son las cinco.",
+      "explanation": "De 5 a 20: «часо́в». La «в» final suena «f»: chi-SÓF.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.seichas-desyat-tridtsat",
+      "text": "Сейча́с де́сять три́дцать.",
+      "es": "Son las diez y media.",
+      "literal": "Ahora diez treinta.",
+      "explanation": "La forma fácil: hora y minutos, como en un reloj digital. DIÉ-sit' TRÍ-tsat'.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.vo-skolko",
+      "text": "Во ско́лько?",
+      "es": "¿A qué hora?",
+      "explanation": "Para quedar o preguntar un horario. va SKÓL'-ka: «во» se pega a la palabra siguiente.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.v-sem-chasov",
+      "text": "В семь часо́в.",
+      "es": "A las siete.",
+      "explanation": "Para decir a qué hora: «в» + la hora. «в» se pega: fsiem' chi-SÓF.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.poezd-v-dvadtsat-odin-sorok",
+      "text": "По́езд отправля́ется в два́дцать оди́н со́рок.",
+      "es": "El tren sale a las 21:40.",
+      "explanation": "Así lo anuncian en la estación: hora de 24 horas. at-prav-LIÁ-it-sa: «-тся» suena «tsa».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora",
+        "tren"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.muzei-rabotaet",
+      "text": "Музе́й рабо́тает с десяти́ до шести́.",
+      "es": "El museo abre de diez a seis.",
+      "literal": "El museo trabaja de diez a seis.",
+      "explanation": "Lo lees en carteles o te lo dicen en la entrada. s di-si-TÍ da shis-TÍ.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.cherez-pyat-minut",
+      "text": "Че́рез пять мину́т.",
+      "es": "Dentro de cinco minutos.",
+      "explanation": "Para decir cuándo llegas o cuándo sale algo. CHIÉ-ris piat' mi-NUT.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.budu-cherez-polchasa",
+      "text": "Я бу́ду че́рез полчаса́.",
+      "es": "Llego en media hora.",
+      "literal": "Estaré dentro de media hora.",
+      "explanation": "Por teléfono a quien te espera. BU-du: «я бу́ду» = estaré.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.opazdyvayu",
+      "text": "Я опа́здываю на де́сять мину́т.",
+      "es": "Llego diez minutos tarde.",
+      "literal": "Me retraso en diez minutos.",
+      "explanation": "Para avisar a un amigo o a un guía. a-PÁZ-dy-va-iu: la «о» inicial suena «a».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "ru-a1-numbers.nol",
+      "word": "ноль",
+      "gender": "m",
+      "es": "cero",
+      "notes": "También en teléfonos: «ноль», nunca «o».",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.odin",
+      "word": "оди́н",
+      "es": "uno",
+      "notes": "a-DÍN. Con palabras femeninas es «одна́»: одна́ ча́шка.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.dva",
+      "word": "два",
+      "es": "dos",
+      "notes": "Con palabras femeninas es «две»: две ты́сячи.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.tri",
+      "word": "три",
+      "es": "tres",
+      "notes": "La «р» vibra como en español.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.chetyre",
+      "word": "четы́ре",
+      "es": "cuatro",
+      "notes": "chi-TY-ri: la «ы» se dice con la lengua hacia atrás.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.pyat",
+      "word": "пять",
+      "es": "cinco",
+      "notes": "La «ь» final ablanda la «т»: piat'.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.shest",
+      "word": "шесть",
+      "es": "seis",
+      "notes": "shest': la «ш» es como «sh» inglesa.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.sem",
+      "word": "семь",
+      "es": "siete",
+      "notes": "siem': «м» suave al final.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.vosem",
+      "word": "во́семь",
+      "es": "ocho",
+      "notes": "VÓ-sim'.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.devyat",
+      "word": "де́вять",
+      "es": "nueve",
+      "notes": "DIÉ-vit'.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.desyat",
+      "word": "де́сять",
+      "es": "diez",
+      "notes": "DIÉ-sit'.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.odinnadtsat",
+      "word": "оди́ннадцать",
+      "es": "once",
+      "notes": "a-DÍ-na-tsat': de 11 a 19 acaban en «-надцать».",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.dvenadtsat",
+      "word": "двена́дцать",
+      "es": "doce",
+      "notes": "dvi-NÁ-tsat'.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.trinadtsat",
+      "word": "трина́дцать",
+      "es": "trece",
+      "notes": "tri-NÁ-tsat'.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.pyatnadtsat",
+      "word": "пятна́дцать",
+      "es": "quince",
+      "notes": "pit-NÁ-tsat': «пять» + «-надцать».",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.dvadtsat",
+      "word": "два́дцать",
+      "es": "veinte",
+      "notes": "DVÁ-tsat'. 21 = два́дцать оди́н, sin «y».",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.tridtsat",
+      "word": "три́дцать",
+      "es": "treinta",
+      "notes": "TRÍ-tsat'.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.sorok",
+      "word": "со́рок",
+      "es": "cuarenta",
+      "notes": "SÓ-rak: no se parece a «четы́ре».",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.pyatdesyat",
+      "word": "пятьдеся́т",
+      "es": "cincuenta",
+      "notes": "pi-di-SIAT: el acento va al final.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.shestdesyat",
+      "word": "шестьдеся́т",
+      "es": "sesenta",
+      "notes": "shis-di-SIAT.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.semdesyat",
+      "word": "се́мьдесят",
+      "es": "setenta",
+      "notes": "SIÉM-di-sit: aquí el acento va al principio.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.vosemdesyat",
+      "word": "во́семьдесят",
+      "es": "ochenta",
+      "notes": "VÓ-sim-di-sit.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.devyanosto",
+      "word": "девяно́сто",
+      "es": "noventa",
+      "notes": "di-vi-NÓS-ta: forma propia, como «со́рок».",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.sto",
+      "word": "сто",
+      "es": "cien",
+      "notes": "101 = сто оди́н.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.dvesti",
+      "word": "две́сти",
+      "es": "doscientos",
+      "notes": "DVIÉ-sti.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.pyatsot",
+      "word": "пятьсо́т",
+      "es": "quinientos",
+      "notes": "pit-SÓT.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.tysyacha",
+      "word": "ты́сяча",
+      "gender": "f",
+      "es": "mil",
+      "notes": "TY-si-cha. 2000 = две ты́сячи; 5000 = пять ты́сяч.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.bilet",
+      "word": "биле́т",
+      "gender": "m",
+      "plural": "биле́ты",
+      "es": "el billete; la entrada",
+      "notes": "bi-LIET. 2 = два биле́та; 5 = пять биле́тов.",
+      "example": "ru-a1-numbers.odin-bilet",
+      "situation": "numeros",
+      "image": "fluent:ticket"
+    },
+    {
+      "id": "ru-a1-numbers.telefon",
+      "word": "телефо́н",
+      "gender": "m",
+      "plural": "телефо́ны",
+      "es": "el teléfono",
+      "notes": "ti-li-FÓN.",
+      "example": "ru-a1-numbers.kakoi-u-vas-nomer",
+      "situation": "numeros",
+      "image": "fluent:mobile-phone"
+    },
+    {
+      "id": "ru-a1-numbers.rubl",
+      "word": "рубль",
+      "gender": "m",
+      "plural": "рубли́",
+      "es": "el rublo",
+      "notes": "1 рубль, 2 рубля́, 5 рубле́й. Símbolo: ₽.",
+      "example": "ru-a1-numbers.dvadtsat-odin-rubl",
+      "situation": "numeros",
+      "image": "fluent:coin"
+    },
+    {
+      "id": "ru-a1-numbers.kopeika",
+      "word": "копе́йка",
+      "gender": "f",
+      "plural": "копе́йки",
+      "es": "el céntimo (kopek)",
+      "notes": "100 копе́ек = 1 рубль; casi no se usan.",
+      "situation": "numeros"
+    },
+    {
+      "id": "ru-a1-numbers.dengi",
+      "word": "де́ньги",
+      "gender": "pl",
+      "es": "el dinero",
+      "notes": "Solo existe en plural.",
+      "situation": "numeros",
+      "image": "fluent:money-bag"
+    },
+    {
+      "id": "ru-a1-numbers.tsena",
+      "word": "цена́",
+      "gender": "f",
+      "plural": "це́ны",
+      "es": "el precio",
+      "notes": "tsi-NÁ.",
+      "example": "ru-a1-numbers.napishite-tsenu",
+      "situation": "numeros",
+      "image": "fluent:label"
+    },
+    {
+      "id": "ru-a1-numbers.sdacha",
+      "word": "сда́ча",
+      "gender": "f",
+      "es": "el cambio (la vuelta)",
+      "notes": "Lo que te devuelven al pagar.",
+      "example": "ru-a1-numbers.sdachi-ne-nado",
+      "situation": "numeros"
+    },
+    {
+      "id": "ru-a1-numbers.karta",
+      "word": "ка́рта",
+      "gender": "f",
+      "plural": "ка́рты",
+      "es": "la tarjeta; el mapa",
+      "notes": "Al pagar, «ка́ртой» = con tarjeta.",
+      "example": "ru-a1-numbers.mozhno-kartoi",
+      "situation": "numeros",
+      "image": "fluent:credit-card"
+    },
+    {
+      "id": "ru-a1-numbers.nalichnye",
+      "word": "нали́чные",
+      "gender": "pl",
+      "es": "el efectivo",
+      "notes": "Siempre en plural: «нали́чными» = en efectivo.",
+      "example": "ru-a1-numbers.mozhno-nalichnymi",
+      "situation": "numeros",
+      "image": "fluent:dollar-banknote"
+    },
+    {
+      "id": "ru-a1-numbers.skolko",
+      "word": "ско́лько",
+      "es": "cuánto; cuántos",
+      "notes": "SKÓL'-ka. En el mercado, señala algo y di «Ско́лько?».",
+      "example": "ru-a1-numbers.skolko-eto-stoit",
+      "situation": "numeros"
+    },
+    {
+      "id": "ru-a1-numbers.dorogo",
+      "word": "до́рого",
+      "es": "caro (es caro)",
+      "notes": "DÓ-ra-ga: solo la primera «о» suena «o».",
+      "example": "ru-a1-numbers.eto-dorogo",
+      "situation": "numeros"
+    },
+    {
+      "id": "ru-a1-numbers.deshevo",
+      "word": "дёшево",
+      "es": "barato (es barato)",
+      "notes": "DIÓ-shi-va: la «ё» siempre lleva el acento.",
+      "situation": "numeros"
+    },
+    {
+      "id": "ru-a1-numbers.seichas",
+      "word": "сейча́с",
+      "es": "ahora",
+      "notes": "sii-CHÁS; en la calle muchos dicen «щас».",
+      "example": "ru-a1-numbers.kotoryi-chas",
+      "situation": "numeros"
+    },
+    {
+      "id": "ru-a1-numbers.minuta",
+      "word": "мину́та",
+      "gender": "f",
+      "plural": "мину́ты",
+      "es": "el minuto",
+      "notes": "mi-NÚ-ta. 5 мину́т, 2 мину́ты.",
+      "example": "ru-a1-numbers.cherez-pyat-minut",
+      "situation": "numeros",
+      "image": "fluent:stopwatch"
+    },
+    {
+      "id": "ru-a1-numbers.polchasa",
+      "word": "полчаса́",
+      "es": "media hora",
+      "notes": "pol-chi-SÁ: «пол» = medio + «час».",
+      "example": "ru-a1-numbers.budu-cherez-polchasa",
+      "situation": "numeros",
+      "image": "fluent:hourglass-done"
+    }
+  ],
+  "qa": [
+    {
+      "id": "ru-a1-numbers.qa.skolko-vas",
+      "question": "Здра́вствуйте! Ско́лько вас?",
+      "questionEs": "¡Hola! ¿Cuántos sois?",
+      "accepted": [
+        {
+          "text": "Сто́лик на двои́х, пожа́луйста.",
+          "es": "Una mesa para dos, por favor."
+        },
+        {
+          "text": "Нас дво́е.",
+          "es": "Somos dos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Два ко́фе.",
+          "es": "Dos cafés."
+        },
+        {
+          "text": "Два часа́.",
+          "es": "Las dos (la hora)."
+        }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "En la entrada del restaurante preguntan cuántos sois: «Сто́лик на двои́х» o «Нас дво́е».",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-numbers.qa.bilety",
+      "question": "Вам ско́лько биле́тов?",
+      "questionEs": "¿Cuántos billetes quiere?",
+      "accepted": [
+        {
+          "text": "Два биле́та, пожа́луйста.",
+          "es": "Dos billetes, por favor."
+        },
+        {
+          "text": "Два, пожа́луйста.",
+          "es": "Dos, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Два биле́тов, пожа́луйста.",
+          "es": "Dos billetes, por favor (mal: tras «два» va «биле́та»)."
+        },
+        {
+          "text": "Ско́лько сто́ит биле́т?",
+          "es": "¿Cuánto cuesta el billete?"
+        }
+      ],
+      "register": "vy",
+      "situation": "numeros",
+      "notes": "Tras 2, 3 y 4 se dice «биле́та»; «биле́тов» es para 5 o más."
+    },
+    {
+      "id": "ru-a1-numbers.qa.age",
+      "question": "Ско́лько вам лет?",
+      "questionEs": "¿Cuántos años tiene?",
+      "accepted": [
+        {
+          "text": "Мне три́дцать два го́да.",
+          "es": "Tengo treinta y dos años."
+        },
+        {
+          "text": "Три́дцать два.",
+          "es": "Treinta y dos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я три́дцать два го́да.",
+          "es": "Yo treinta y dos años."
+        },
+        {
+          "text": "Мне три́дцать два лет.",
+          "es": "Tengo treinta y dos años (mal: tras «два» va «го́да»)."
+        }
+      ],
+      "register": "vy",
+      "situation": "numeros",
+      "notes": "La edad va con «мне» (a mí): «Мне три́дцать два го́да».",
+      "tags": [
+        "edad"
+      ],
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-numbers.qa.nomer",
+      "question": "Како́й у вас но́мер телефо́на?",
+      "questionEs": "¿Cuál es su número de teléfono?",
+      "accepted": [
+        {
+          "text": "Во́семь, девятьсо́т шестна́дцать, сто два́дцать три, со́рок пять, шестьдеся́т семь.",
+          "es": "El 8 916 123 45 67."
+        },
+        {
+          "text": "Запиши́те мой но́мер.",
+          "es": "Apunte mi número."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Сто два́дцать рубле́й.",
+          "es": "Ciento veinte rublos."
+        },
+        {
+          "text": "Мне три́дцать два го́да.",
+          "es": "Tengo treinta y dos años."
+        }
+      ],
+      "register": "vy",
+      "situation": "numeros",
+      "notes": "Dicta el número en grupos o pide que lo apunten.",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.qa.kak-platit",
+      "question": "Две́сти пятьдеся́т рубле́й. Ка́ртой и́ли нали́чными?",
+      "questionEs": "Doscientos cincuenta rublos. ¿Con tarjeta o en efectivo?",
+      "accepted": [
+        {
+          "text": "Ка́ртой, пожа́луйста.",
+          "es": "Con tarjeta, por favor."
+        },
+        {
+          "text": "Нали́чными.",
+          "es": "En efectivo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Две́сти пятьдеся́т.",
+          "es": "Doscientos cincuenta."
+        },
+        {
+          "text": "Ско́лько сто́ит?",
+          "es": "¿Cuánto cuesta?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "Ya te han dicho el precio: ahora elige cómo pagas.",
+      "tags": [
+        "pagar"
+      ],
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-numbers.qa.kotoryi-chas",
+      "question": "Извини́те, кото́рый час?",
+      "questionEs": "Perdone, ¿qué hora es?",
+      "accepted": [
+        {
+          "text": "Сейча́с два часа́.",
+          "es": "Son las dos."
+        },
+        {
+          "text": "Два часа́.",
+          "es": "Las dos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Че́рез два часа́.",
+          "es": "Dentro de dos horas."
+        },
+        {
+          "text": "Два рубля́.",
+          "es": "Dos rublos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "Responde con la hora: «Сейча́с два часа́» o solo «Два часа́».",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "ru-a1-numbers.qa.vo-skolko",
+      "question": "Во ско́лько встре́тимся?",
+      "questionEs": "¿A qué hora quedamos?",
+      "accepted": [
+        {
+          "text": "В семь часо́в.",
+          "es": "A las siete."
+        },
+        {
+          "text": "В семь.",
+          "es": "A las siete."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Сейча́с семь часо́в.",
+          "es": "Son las siete."
+        },
+        {
+          "text": "Семь рубле́й.",
+          "es": "Siete rublos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "«Во ско́лько?» pide una hora con «в»: «В семь».",
+      "tags": [
+        "hora"
+      ],
+      "voice": "ru-RU-DmitryNeural"
+    }
+  ]
+}
