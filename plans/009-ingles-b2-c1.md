@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 21:49Z 💻
+- Updated: 2026-10-07 21:56Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 6a29c92
-- Next step: integrate T120/T117, then T118 and C1 units T121–T124
+- Branch: plan-009-ingles-b2-c1 @ 55efa70
+- Next step: integrate T120/T118, then T119 and C1 units T121–T124
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -101,7 +101,7 @@ Worktree setup: npm ci
 - Outcome: b2-relationships/culture: 89 phrases, 67 vocab, 16 Q&A, 10 lessons · 7eb3c50 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T117 — English B2: 12 dialogues
-- Status: running (attempt 1 · 💻 · agent a938a7ec4e3724faa · since 21:49Z)
+- Status: done
 - Depends on: T112, T113, T114, T115, T116
 - Where: any
 - Goal: The 12 B2 dialogues listed in docs/brief-en.md (`level: "B2"`, `unit`, one native speaker with a Spanish role name, Fluent avatar and an en-US voice, register-honest options with Spanish feedback), order 201–212.
@@ -111,10 +111,10 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓; 12 B2 dialogues (6–10 turns, ≥ 3 learner turns, 3 options each).
   - `npm run verify` → exit 0
   - Hand check (PC): play two B2 dialogues with device voices.
-- Outcome:
+- Outcome: 12 B2 dialogues (201–212, 9 turns, 4 learner turns × 3 options; 7 formal, 3 tu, 2 neutral) · 55efa70 · verify ✓ 💻 · not checked: play two with device voices, audio (T129)
 
 ## T118 — English B2: stories 1–6
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ae7f64c74ac840123 · since 21:56Z)
 - Depends on: T112, T113, T114, T115, T116
 - Where: any
 - Goal: B2 stories 1–6 (order 201–206, `level: "B2"`) with the Chicago cast, following the arc in docs/brief-en.md; key words reuse unit items by id; end the final message with an outline of stories 7–12 for T119.
@@ -269,9 +269,11 @@ Worktree setup: npm ci
 - [ ] T113 @2040b43 — content review (queued 2026-10-07 💻)
 - [ ] T116 @7eb3c50 — content review (queued 2026-10-07 💻)
 - [ ] T115 @6a29c92 — content review (queued 2026-10-07 💻)
+- [ ] T117 @55efa70 — content review (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
+- [ ] T117 @55efa70 — play two B2 dialogues with device voices (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: B2 and C1 complete the English pack with the full French-sized volume per level and the plan 008 molds; units, grammar, dialogues and stories in docs/brief-en.md (B2/C1 sections added 2026-10-07). (Hernán: "plan b2 c1", same structure)
@@ -306,3 +308,5 @@ Worktree setup: npm ci
 - 2026-10-07 21:48Z 💻 T120 launched · attempt 1 · agent a093dd1264c1aa5ed
 - 2026-10-07 21:49Z 💻 T115 done · worktree-agent-a2877f122eec5dbe6 → 6a29c92 · verify ✓
 - 2026-10-07 21:49Z 💻 T117 launched · attempt 1 · agent a938a7ec4e3724faa
+- 2026-10-07 21:56Z 💻 T117 done · worktree-agent-a938a7ec4e3724faa → 55efa70 · verify ✓
+- 2026-10-07 21:56Z 💻 T118 launched · attempt 1 · agent ae7f64c74ac840123
