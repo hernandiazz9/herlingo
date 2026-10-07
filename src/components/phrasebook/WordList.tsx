@@ -1,12 +1,12 @@
 "use client";
 
 import { useDeferredValue, useMemo, useState } from "react";
-import { Picture } from "@/components/ui";
+import { Picture, TargetText } from "@/components/ui";
 import { speak } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import { listVocab, type Pack, type Situation, type Vocab } from "@/lib/content";
 import { recordListen } from "@/lib/progress/activity";
-import { fold, matches } from "./search";
+import { fold, matches, romanizedForSearch } from "./search";
 import { SearchHeader, situationChips, type Chip, type Filter } from "./SearchHeader";
 
 interface WordEntry {
@@ -33,7 +33,11 @@ function buildGroups(pack: Pack): WordGroup[] {
     const dupe = list.findIndex((e) => e.vocab.text === vocab.text);
     const entry = {
       vocab,
-      haystack: fold([vocab.text, vocab.word, vocab.plural, vocab.es].filter(Boolean).join(" ")),
+      haystack: fold(
+        [vocab.text, vocab.word, vocab.plural, ...romanizedForSearch([vocab.text, vocab.word, vocab.plural], pack), vocab.es]
+          .filter(Boolean)
+          .join(" "),
+      ),
     };
     if (dupe === -1) list.push(entry);
     else if (!list[dupe].vocab.image && vocab.image) list[dupe] = entry;
@@ -175,7 +179,7 @@ function WordCard({ vocab, lang, open, onPlay }: WordCardProps) {
       >
         {vocab.image ? <Picture image={vocab.image} alt="" bordered={false} /> : null}
         <span lang={lang} className="text-base leading-tight font-bold break-words text-ink">
-          {open ? vocab.text : vocab.word}
+          <TargetText text={open ? vocab.text : vocab.word} lang={lang} />
         </span>
         {open ? <span className="text-sm leading-tight text-ink-muted">{vocab.es}</span> : null}
       </button>

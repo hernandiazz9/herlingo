@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MiniPlay, PlayControls, Prompt, useLessonLang, type ExerciseProps } from "@/components/exercises";
+import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { AnswerExercise, ChoiceOption } from "@/lib/exercises";
 
@@ -23,7 +24,7 @@ export function QuestionExercise({ exercise, answered, onAnswer }: ExerciseProps
       <PlayControls audio={exercise.question} size="md" />
       <div className="flex flex-col gap-1">
         <p lang={lang} className="text-2xl font-bold text-sea-deep">
-          {exercise.question.text}
+          <TargetText text={exercise.question.text} lang={lang} />
         </p>
         {showEs || answered ? (
           <p className="text-base text-ink-muted">{exercise.questionEs}</p>
@@ -59,7 +60,7 @@ export function QuestionExercise({ exercise, answered, onAnswer }: ExerciseProps
                   answered && !reveal && !isPicked && "opacity-60",
                 )}
               >
-                {option.label}
+                <TargetText text={option.label} lang={lang} />
               </button>
               {option.audio ? <MiniPlay audio={option.audio} label={`Escuchar: ${option.label}`} /> : null}
             </li>

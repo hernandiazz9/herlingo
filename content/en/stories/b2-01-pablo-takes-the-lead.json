@@ -1,0 +1,93 @@
+{
+  "id": "story.en-b2-pablo-takes-the-lead",
+  "order": 201,
+  "title": "Pablo takes the lead",
+  "titleEs": "Pablo toma las riendas",
+  "description": "En su segundo año en Chicago, Pablo dirige su primer proyecto y su primera reunión, que se le va de las manos.",
+  "emoji": "📋",
+  "situation": "trabajo",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "It's Pablo's second year in Chicago, and things are going well at the startup.", "es": "Es el segundo año de Pablo en Chicago, y en la startup las cosas van bien." },
+    { "id": "s2", "text": "One Monday, Maya asks him to lead a small project: a booking app for gyms.", "es": "Un lunes, Maya le pide que dirija un proyecto pequeño: una app de reservas para gimnasios." },
+    { "id": "s3", "text": "Pablo is excited, but also a little nervous.", "es": "Pablo está ilusionado, pero también un poco nervioso." },
+    { "id": "s4", "text": "On Wednesday, he runs his first meeting with Sam and Priya.", "es": "El miércoles dirige su primera reunión con Sam y Priya." },
+    { "id": "s5", "text": "«Thanks, everyone, for joining on such short notice.»", "es": "«Gracias a todos por venir habiendo avisado con tan poco tiempo.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s6", "text": "«The purpose of this meeting is to agree on the release date.»", "es": "«El objetivo de esta reunión es acordar la fecha de lanzamiento.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "Priya brings up the budget, and Sam starts talking about a new framework.", "es": "Priya saca el tema del presupuesto, y Sam se pone a hablar de un framework nuevo." },
+    { "id": "s8", "text": "After twenty minutes, nobody has made a single decision.", "es": "A los veinte minutos, nadie ha tomado ni una sola decisión." },
+    { "id": "s9", "text": "«We're getting off track. Let's get back to the budget.»", "es": "«Nos estamos desviando del tema. Volvamos al presupuesto.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "Then Priya has an idea.", "es": "Entonces a Priya se le ocurre una idea." },
+    { "id": "s11", "text": "«What if we split the work into two phases?»", "es": "«¿Y si dividimos el trabajo en dos fases?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s12", "text": "Everyone likes the proposal, and the meeting finally moves forward.", "es": "A todos les gusta la propuesta, y por fin la reunión avanza." },
+    { "id": "s13", "text": "«To sum up, we're moving the launch to May fifteenth.»", "es": "«Resumiendo: pasamos el lanzamiento al quince de mayo.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "«I'll send the notes around this afternoon.»", "es": "«Esta tarde os paso las notas.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s15", "text": "Back at his desk, Pablo smiles. Leading a project is harder than he thought.", "es": "De vuelta en su mesa, Pablo sonríe. Dirigir un proyecto es más difícil de lo que pensaba." }
+  ],
+  "keywords": [
+    "b2-meetings.thanks-everyone-for-joining",
+    "b2-meetings.the-purpose-of-this-meeting",
+    "b2-meetings.bring-up",
+    "b2-meetings.budget",
+    "b2-meetings.decision",
+    "b2-meetings.lets-get-back-on-track",
+    "b2-meetings.what-if-we-split",
+    "b2-meetings.proposal",
+    "b2-meetings.to-sum-up",
+    "b2-meetings.ill-send-the-notes-around"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What is Pablo's new project?",
+      "es": "¿Cuál es el nuevo proyecto de Pablo?",
+      "options": [
+        { "text": "A payments page for a bank.", "es": "Una página de pagos para un banco." },
+        { "text": "A booking app for gyms.", "es": "Una app de reservas para gimnasios." },
+        { "text": "A website for Jordan's band.", "es": "Una web para el grupo de Jordan." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What goes wrong during the first twenty minutes?",
+      "es": "¿Qué sale mal durante los primeros veinte minutos?",
+      "options": [
+        { "text": "Nobody makes a decision.", "es": "Nadie toma una decisión." },
+        { "text": "Sam and Priya don't show up.", "es": "Sam y Priya no aparecen." },
+        { "text": "The client cancels the project.", "es": "El cliente cancela el proyecto." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Whose idea moves the meeting forward?",
+      "es": "¿La idea de quién hace avanzar la reunión?",
+      "options": [
+        { "text": "Maya's.", "es": "La de Maya." },
+        { "text": "Sam's.", "es": "La de Sam." },
+        { "text": "Priya's.", "es": "La de Priya." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How does Pablo feel at the end?",
+      "es": "¿Cómo se siente Pablo al final?",
+      "options": [
+        { "text": "He wants to quit the project.", "es": "Quiere dejar el proyecto." },
+        { "text": "He's happy, but it was harder than he expected.", "es": "Está contento, pero fue más difícil de lo que esperaba." },
+        { "text": "He's angry with Sam.", "es": "Está enfadado con Sam." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s6", "answer": "b2-meetings.the-purpose-of-this-meeting", "gap": "purpose", "distractors": ["budget", "minutes"] },
+    { "id": "g2", "sentence": "s7", "answer": "b2-meetings.bring-up", "gap": "brings up", "distractors": ["gives up", "runs out"] },
+    { "id": "g3", "sentence": "s9", "answer": "b2-meetings.lets-get-back-on-track", "gap": "off track", "distractors": ["on time", "in line"] },
+    { "id": "g4", "sentence": "s11", "answer": "b2-meetings.what-if-we-split", "gap": "split", "distractors": ["spend", "lose"] },
+    { "id": "g5", "sentence": "s12", "answer": "b2-meetings.proposal", "distractors": ["complaint", "weather"] },
+    { "id": "g6", "sentence": "s14", "answer": "b2-meetings.ill-send-the-notes-around", "gap": "notes", "distractors": ["bills", "keys"] }
+  ]
+}

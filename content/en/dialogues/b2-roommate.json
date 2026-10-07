@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-roommate",
+  "title": "Un conflicto con tu compañero de piso",
+  "description": "Hablas con tu compañero de piso sobre los platos sucios y el ruido, sin que acabe en discusión.",
+  "situation": "social",
+  "unit": "b2-relationships",
+  "order": 211,
+  "register": "tu",
+  "level": "B2",
+  "avatars": { "Compañero de piso": "fluent:man-beard" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Compañero de piso", "text": "Hey, you wanted to talk? Is everything okay?", "es": "Oye, ¿querías hablar? ¿Va todo bien?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Dile que sí, pero que hay algo que te ronda la cabeza y prefieres hablarlo.",
+      "options": [
+        { "text": "Yeah, mostly. There's just something that's been on my mind, and I'd rather talk about it.", "es": "Sí, más o menos. Es que hay algo que me ronda la cabeza y prefiero hablarlo.", "verdict": "correct", "feedback": "¡Muy bien! «be on my mind» = rondar la cabeza; empezar así suaviza la conversación." },
+        { "text": "Not really. We need to talk.", "es": "No mucho. Tenemos que hablar.", "verdict": "acceptable", "feedback": "Es claro, pero «We need to talk» suena alarmante; empieza más suave." },
+        { "text": "Yeah, mostly. There's just something that's been in my head, and I prefer to talk it.", "es": "Sí, más o menos. Es que hay algo que me ronda la cabeza y prefiero hablarlo.", "verdict": "wrong", "feedback": "Se dice «on my mind», y «talk» necesita «about»: «talk about it»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Compañero de piso", "text": "Sure, go ahead. What's up?", "es": "Claro, dime. ¿Qué pasa?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica, sin acusarle, que últimamente los platos se acumulan en el fregadero y te agobia un poco.",
+      "options": [
+        { "text": "Lately the dishes have been piling up in the sink, and it's stressing me out a bit.", "es": "Últimamente los platos se acumulan en el fregadero y me está agobiando un poco.", "verdict": "correct", "feedback": "¡Perfecto! Hablar de cómo te sientes en vez de acusar ayuda. «pile up» = acumularse; «stress out» = agobiar." },
+        { "text": "You never wash the dishes.", "es": "Nunca friegas los platos.", "verdict": "acceptable", "feedback": "Se entiende, pero «You never…» suena a acusación y puede acabar en discusión." },
+        { "text": "Lately the plates have been accumulating in the sink, and it's agobiating me a bit.", "es": "Últimamente los platos se acumulan en el fregadero y me está agobiando un poco.", "verdict": "wrong", "feedback": "Los platos sucios son «the dishes», «acumularse» aquí es «pile up», y «agobiar» es «stress out» («agobiate» no existe)." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Compañero de piso", "text": "Oh, I didn't realize it bothered you that much. Work has been crazy.", "es": "Ah, no me había dado cuenta de que te molestaba tanto. El trabajo ha sido una locura.", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Dile que lo entiendes y añade que lo de la música alta por la noche también te cuesta, porque madrugas.",
+      "options": [
+        { "text": "I get it. And to be honest, the loud music at night is hard for me too, because I get up early.", "es": "Lo entiendo. Y, para ser sincero, la música alta por la noche también me cuesta, porque madrugo.", "verdict": "correct", "feedback": "¡Genial! «I get it» = lo entiendo (informal); «get up early» = madrugar." },
+        { "text": "Okay. Also, the music is too loud.", "es": "Vale. Además, la música está demasiado alta.", "verdict": "acceptable", "feedback": "Se entiende, aunque sin explicar por qué te afecta suena más a queja." },
+        { "text": "I understand. And to be honest, the high music at night is hard for me too, because I wake up soon.", "es": "Lo entiendo. Y, para ser sincero, la música alta por la noche también me cuesta, porque madrugo.", "verdict": "wrong", "feedback": "La música es «loud», no «high»; y madrugar es «get up early» («soon» es pronto, dentro de poco)." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Compañero de piso", "text": "That's fair. I'll keep it down after ten. And maybe we could make a cleaning schedule?", "es": "Es justo. Bajaré el volumen a partir de las diez. ¿Y si hacemos un horario de limpieza?", "voice": "en-US-AndrewNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que te parece genial y que te alegras de haberlo hablado.",
+      "options": [
+        { "text": "Sounds great. I'm really glad we talked about it.", "es": "Me parece genial. Me alegro mucho de que lo hayamos hablado.", "verdict": "correct", "feedback": "¡Bien! «I'm glad we talked» cierra la conversación en buen tono." },
+        { "text": "Okay, cool.", "es": "Vale, guay.", "verdict": "acceptable", "feedback": "Natural entre amigos, pero agradecer la charla deja mejor sabor de boca." },
+        { "text": "Sounds great. I'm really glad of having talked it.", "es": "Me parece genial. Me alegro mucho de haberlo hablado.", "verdict": "wrong", "feedback": "Calco del español: se dice «I'm glad we talked about it»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Compañero de piso", "text": "Me too. Thanks for bringing it up instead of letting it build up.", "es": "Yo también. Gracias por sacar el tema en vez de dejar que se acumulara.", "voice": "en-US-AndrewNeural" }
+  ]
+}

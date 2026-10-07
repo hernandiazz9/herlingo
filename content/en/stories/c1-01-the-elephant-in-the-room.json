@@ -1,0 +1,95 @@
+{
+  "id": "story.en-c1-the-elephant-in-the-room",
+  "order": 301,
+  "title": "The elephant in the room",
+  "titleEs": "Lo que nadie se atreve a decir",
+  "description": "El rumor era verdad: compran la startup. Reunión general, caras largas y un Pablo que no sabe qué será de su contrato.",
+  "emoji": "🐘",
+  "situation": "trabajo",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "On Monday morning, the whole startup is called into an all-hands meeting.", "es": "El lunes por la mañana, convocan a toda la startup a una reunión general." },
+    { "id": "s2", "text": "Everyone has been on edge since the rumor started going around.", "es": "Todo el mundo está con los nervios a flor de piel desde que empezó a correr el rumor." },
+    { "id": "s3", "text": "Rachel, the CEO, walks in and gets straight to the point.", "es": "Rachel, la directora general, entra y va directa al grano." },
+    { "id": "s4", "text": "«Let's address the elephant in the room: yes, we're being acquired.»", "es": "«Vamos a hablar de lo que todos estáis pensando: sí, nos van a comprar.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«The deal should close by the end of the quarter.»", "es": "«La operación debería cerrarse a finales de trimestre.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s6", "text": "A few people clap, but most of them just stare at their laptops.", "es": "Algunos aplauden, pero la mayoría se queda mirando el portátil." },
+    { "id": "s7", "text": "Sam, the team lead, slowly raises his hand.", "es": "Sam, el jefe de equipo, levanta la mano despacio." },
+    { "id": "s8", "text": "«Is anyone going to lose their job?»", "es": "«¿Alguien va a perder su trabajo?»", "voice": "en-US-BrianNeural" },
+    { "id": "s9", "text": "«Nothing has been decided yet, but we can't rule out some changes.»", "es": "«Todavía no hay nada decidido, pero no podemos descartar algunos cambios.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "She tries to play down the problem, but nobody looks convinced.", "es": "Intenta quitarle hierro al asunto, pero nadie parece convencido." },
+    { "id": "s11", "text": "After the meeting, Maya and Pablo grab a coffee downstairs.", "es": "Después de la reunión, Maya y Pablo se toman un café abajo." },
+    { "id": "s12", "text": "«Reading between the lines, I don't think she can promise anything.»", "es": "«Leyendo entre líneas, no creo que pueda prometer nada.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s13", "text": "«It's more of a gut feeling, but I think our jobs are safe.»", "es": "«Es más una corazonada, pero creo que nuestros puestos no corren peligro.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "«Maybe. It's a double-edged sword: more money, but less freedom.»", "es": "«Puede ser. Es un arma de doble filo: más dinero, pero menos libertad.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s15", "text": "Pablo nods. His contract ends in June, and nobody has mentioned it.", "es": "Pablo asiente. Su contrato termina en junio y nadie lo ha mencionado." },
+    { "id": "s16", "text": "That evening, he tells Mrs. Carter everything over a cup of tea.", "es": "Esa noche, se lo cuenta todo a Mrs. Carter con una taza de té." },
+    { "id": "s17", "text": "«Don't get me wrong, it's exciting. I'm just worried about what comes next.»", "es": "«No me malinterpretes, es emocionante. Solo me preocupa lo que viene después.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s18", "text": "«Sleep on it, dear. Things always look clearer in the morning.»", "es": "«Consúltalo con la almohada, cielo. Por la mañana todo se ve más claro.»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "c1-idioms.on-edge",
+    "c1-idioms.the-elephant-in-the-room",
+    "c1-idioms.rule-out",
+    "c1-idioms.play-down",
+    "c1-nuance.reading-between-the-lines",
+    "c1-nuance.gut-feeling",
+    "c1-society.double-edged-sword",
+    "c1-nuance.dont-get-me-wrong",
+    "c1-idioms.sleep-on-it"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What does Rachel announce at the meeting?",
+      "es": "¿Qué anuncia Rachel en la reunión?",
+      "options": [
+        { "text": "The startup is moving to a new office.", "es": "Que la startup se muda a una oficina nueva." },
+        { "text": "The startup is being bought by another company.", "es": "Que otra empresa va a comprar la startup." },
+        { "text": "She is stepping down as CEO.", "es": "Que deja el cargo de directora general." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "How does Rachel answer Sam's question about jobs?",
+      "es": "¿Cómo responde Rachel a la pregunta de Sam sobre los puestos?",
+      "options": [
+        { "text": "She promises that nobody will be fired.", "es": "Promete que no echarán a nadie." },
+        { "text": "She says half the team will leave.", "es": "Dice que se irá la mitad del equipo." },
+        { "text": "She says there may be some changes.", "es": "Dice que puede haber algunos cambios." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "Why does Maya call the deal a double-edged sword?",
+      "es": "¿Por qué dice Maya que la operación es un arma de doble filo?",
+      "options": [
+        { "text": "It brings more money but less freedom.", "es": "Trae más dinero pero menos libertad." },
+        { "text": "It's good for Rachel but bad for Sam.", "es": "Es buena para Rachel pero mala para Sam." },
+        { "text": "She thinks the rumor is false.", "es": "Cree que el rumor es falso." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "What is Pablo worried about?",
+      "es": "¿Qué le preocupa a Pablo?",
+      "options": [
+        { "text": "Mrs. Carter's health.", "es": "La salud de Mrs. Carter." },
+        { "text": "What will happen when his contract ends.", "es": "Qué pasará cuando termine su contrato." },
+        { "text": "Losing his apartment.", "es": "Quedarse sin piso." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "c1-idioms.on-edge", "gap": "on edge", "distractors": ["in edge", "at the border"] },
+    { "id": "g2", "sentence": "s9", "answer": "c1-idioms.rule-out", "gap": "rule out", "distractors": ["rule off", "discard out"] },
+    { "id": "g3", "sentence": "s10", "answer": "c1-idioms.play-down", "gap": "play down", "distractors": ["play under", "put low"] },
+    { "id": "g4", "sentence": "s13", "answer": "c1-nuance.gut-feeling", "gap": "gut feeling", "distractors": ["belly feeling", "heart sense"] },
+    { "id": "g5", "sentence": "s14", "answer": "c1-society.double-edged-sword", "gap": "double-edged sword", "distractors": ["two-sided knife", "double-cut sword"] },
+    { "id": "g6", "sentence": "s18", "answer": "c1-idioms.sleep-on-it", "gap": "Sleep on it", "distractors": ["Sleep with it", "Dream on it"] }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "story.ru-a1-a-cold",
+  "order": 9,
+  "title": "Просту́да",
+  "titleEs": "Un resfriado",
+  "description": "Lucía se ha resfriado: Vera Petrovna le pone el termómetro y la acompaña a la farmacia de la esquina.",
+  "emoji": "🤧",
+  "situation": "salud",
+  "level": "A1",
+  "voice": "ru-RU-DmitryNeural",
+  "sentences": [
+    { "id": "s1", "text": "У́тром Луси́я пло́хо себя́ чу́вствует.", "es": "Por la mañana, Lucía se encuentra mal." },
+    { "id": "s2", "text": "У неё боли́т голова́ и го́рло.", "es": "Le duelen la cabeza y la garganta." },
+    { "id": "s3", "text": "А́ня на рабо́те, а Ди́ма в университе́те.", "es": "Ania está en el trabajo y Dima, en la universidad." },
+    { "id": "s4", "text": "В дверь звони́т Ве́ра Петро́вна.", "es": "Llaman a la puerta: es Vera Petrovna." },
+    { "id": "s5", "text": "«Луси́я, что с тобо́й? Ты о́чень бле́дная.»", "es": "«Lucía, ¿qué te pasa? Estás muy pálida.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s6", "text": "«Я, ка́жется, простуди́лась. У меня́ на́сморк и ка́шель.»", "es": "«Creo que me he resfriado. Tengo mocos y tos.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s7", "text": "«А температу́ра есть?»", "es": "«¿Y tienes fiebre?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s8", "text": "Ве́ра Петро́вна прино́сит гра́дусник.", "es": "Vera Petrovna trae el termómetro." },
+    { "id": "s9", "text": "«Три́дцать семь и пять. Пойдём в апте́ку!»", "es": "«Treinta y siete y medio. ¡Vamos a la farmacia!»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s10", "text": "Апте́ка ря́дом, на углу́.", "es": "La farmacia está cerca, en la esquina." },
+    { "id": "s11", "text": "«Здра́вствуйте! Мне ну́жно что́-нибудь от ка́шля.»", "es": "«¡Hola! Necesito algo para la tos.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s12", "text": "«Вот сиро́п, а э́то табле́тки от го́рла.»", "es": "«Aquí tiene un jarabe, y estas son pastillas para la garganta.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s13", "text": "«Ну́жен реце́пт?»", "es": "«¿Hace falta receta?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s14", "text": "«Нет, э́то мо́жно без реце́пта.»", "es": "«No, se puede comprar sin receta.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s15", "text": "До́ма Ве́ра Петро́вна гото́вит чай с мёдом и лимо́ном.", "es": "En casa, Vera Petrovna prepara un té con miel y limón." },
+    { "id": "s16", "text": "«Пей чай и спи. Выздора́вливай!»", "es": "«Tómate el té y duerme. ¡Que te mejores!»", "voice": "ru-RU-SvetlanaNeural" }
+  ],
+  "keywords": [
+    "ru-a1-health.chto-s-toboi",
+    "ru-a1-health.ya-prostudilas",
+    "ru-a1-health.nasmork-i-kashel",
+    "ru-a1-health.temperatura",
+    "ru-a1-health.gradusnik",
+    "ru-a1-alphabet.apteka",
+    "ru-a1-health.chto-nibud-ot-kashlya",
+    "ru-a1-health.tabletka",
+    "ru-a1-health.nuzhen-retsept",
+    "ru-a1-health.vyzdoravlivai"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Что боли́т у Луси́и?",
+      "es": "¿Qué le duele a Lucía?",
+      "options": [
+        { "text": "Голова́ и го́рло.", "es": "La cabeza y la garganta." },
+        { "text": "Спина́ и но́ги.", "es": "La espalda y las piernas." },
+        { "text": "Зуб.", "es": "Una muela." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Кака́я у Луси́и температу́ра?",
+      "es": "¿Cuánta fiebre tiene Lucía?",
+      "options": [
+        { "text": "Три́дцать шесть и шесть.", "es": "Treinta y seis con seis." },
+        { "text": "Три́дцать семь и пять.", "es": "Treinta y siete y medio." },
+        { "text": "Со́рок.", "es": "Cuarenta." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Что Луси́я покупа́ет в апте́ке?",
+      "es": "¿Qué compra Lucía en la farmacia?",
+      "options": [
+        { "text": "Сиро́п и табле́тки.", "es": "Un jarabe y pastillas." },
+        { "text": "Гра́дусник.", "es": "Un termómetro." },
+        { "text": "Пла́стырь.", "es": "Tiritas." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Ну́жен реце́пт?",
+      "es": "¿Hace falta receta?",
+      "options": [
+        { "text": "Да, ну́жен.", "es": "Sí, hace falta." },
+        { "text": "Нет, не ну́жен.", "es": "No, no hace falta." },
+        { "text": "Да, от врача́.", "es": "Sí, del médico." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s6", "answer": "ru-a1-health.ya-prostudilas", "gap": "простуди́лась", "distractors": ["заблуди́лась", "опозда́ла"] },
+    { "id": "g2", "sentence": "s8", "answer": "ru-a1-health.gradusnik", "distractors": ["зонт", "пиро́г"] },
+    { "id": "g3", "sentence": "s9", "answer": "ru-a1-alphabet.apteka", "gap": "апте́ку", "distractors": ["кафе́", "теа́тр"] },
+    { "id": "g4", "sentence": "s12", "answer": "ru-a1-health.tabletka", "gap": "табле́тки", "distractors": ["газе́ты", "биле́ты"] },
+    { "id": "g5", "sentence": "s13", "answer": "ru-a1-health.nuzhen-retsept", "gap": "реце́пт", "distractors": ["па́спорт", "биле́т"] },
+    { "id": "g6", "sentence": "s16", "answer": "ru-a1-health.vyzdoravlivai", "gap": "Выздора́вливай", "distractors": ["Повтори́", "Извини́"] }
+  ]
+}

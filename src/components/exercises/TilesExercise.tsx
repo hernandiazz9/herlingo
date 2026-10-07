@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui";
+import { Button, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { languageName } from "@/lib/content";
-import { checkAnswer, type TilesExercise as Tiles } from "@/lib/exercises";
+import { getPack, languageName } from "@/lib/content";
+import { checkAnswer, scriptRules, type TilesExercise as Tiles } from "@/lib/exercises";
 import { Prompt, useLessonLang, type ExerciseProps } from "./shared";
 
 const TILE =
@@ -13,6 +13,7 @@ const TILE =
 /** Spanish → target language by tapping word tiles. */
 export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Tiles>) {
   const lang = useLessonLang();
+  const { meta } = getPack(lang);
   // Indexes into exercise.tiles, in the order chosen.
   const [chosen, setChosen] = useState<number[]>([]);
 
@@ -20,7 +21,7 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
   const remove = (i: number) => !answered && setChosen((c) => c.filter((x) => x !== i));
   const check = () => {
     const given = chosen.map((i) => exercise.tiles[i]).join(" ");
-    const result = checkAnswer(given, exercise.answer);
+    const result = checkAnswer(given, exercise.answer, scriptRules(meta));
     onAnswer({ correct: result.correct, accentNote: result.accentNote, given });
   };
 
@@ -36,7 +37,7 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
       >
         {chosen.map((i) => (
           <button key={i} type="button" className={TILE} onClick={() => remove(i)} disabled={answered}>
-            {exercise.tiles[i]}
+            <TargetText text={exercise.tiles[i]} lang={lang} />
           </button>
         ))}
       </div>
@@ -53,7 +54,7 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
               disabled={answered || used}
               aria-hidden={used}
             >
-              {word}
+              <TargetText text={word} lang={lang} />
             </button>
           );
         })}

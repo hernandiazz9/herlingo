@@ -5,6 +5,7 @@
 import type { z } from "zod";
 import { audioKey, vocabText } from "./keys";
 import * as S from "./schema";
+import { stressIssues } from "./script";
 import type {
   Dialogue,
   Expression,
@@ -31,6 +32,17 @@ export const STORY_GUIDE = {
   gaps: [4, 6],
 } as const;
 
+/** Story length per CEFR level (words); levels not listed use `STORY_GUIDE.words` (A1–B1). */
+export const STORY_WORDS_BY_LEVEL: Partial<Record<Level, readonly [number, number]>> = {
+  B2: [100, 200],
+  C1: [120, 250],
+};
+
+/** The story guidelines for a story of `level` (only the word range depends on it). */
+export function storyGuide(level: Level): Record<keyof typeof STORY_GUIDE, readonly [number, number]> {
+  return { ...STORY_GUIDE, words: STORY_WORDS_BY_LEVEL[level] ?? STORY_GUIDE.words };
+}
+
 /** Prefix required on vocab items defined inline in a story file. */
 export const STORY_VOCAB_PREFIX = "story-";
 
@@ -39,10 +51,13 @@ export function countWords(text: string): number {
   return text.split(/\s+/).filter((t) => /[\p{L}\p{N}]/u.test(t)).length;
 }
 
-/** Index of the first whole-word, case-insensitive occurrence of `word` in `text`, or -1. */
+/**
+ * Index of the first whole-word, case-insensitive occurrence of `word` in `text`, or -1. A
+ * combining mark (a stress mark) counts as part of the word: an unmarked gap never matches a marked word.
+ */
 function findWord(text: string, word: string): number {
   const escaped = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const m = new RegExp(`(?<![\\p{L}\\p{N}])${escaped}(?![\\p{L}\\p{N}])`, "iu").exec(text);
+  const m = new RegExp(`(?<![\\p{L}\\p{M}\\p{N}])${escaped}(?![\\p{L}\\p{M}\\p{N}])`, "iu").exec(text);
   return m ? m.index : -1;
 }
 
@@ -144,12 +159,20 @@ export function buildPack(src: PackSources): BuildResult {
     else if (!levels.has(level)) errors.push(`${where}: level "${level}" is not in pack.json levels (${levelList})`);
     return level;
   };
-  const articles = new Set(meta.articles);
+  const articles = new Set(meta.articles ?? []);
   const checkArticle = (article: string | undefined, where: string) => {
-    if (article !== undefined && !articles.has(article)) {
+    if (article === undefined) return;
+    if (!meta.articles) errors.push(`${where}: "article" is only allowed when pack.json has "articles"`);
+    else if (!articles.has(article)) {
       errors.push(`${where}: article "${article}" is not in pack.json articles (${meta.articles.map((a) => `"${a}"`).join(", ")})`);
     }
   };
+  /** Pack `stress` rule on target-language text (no-op for a pack without `stress`). */
+  const checkStress = (text: string | undefined, where: string) => {
+    if (!meta.stress || text === undefined) return;
+    for (const { word, problem } of stressIssues(text, meta)) errors.push(`${where}: "${word}": ${problem}`);
+  };
+  for (const [n, word] of Object.entries(meta.numberWords ?? {})) checkStress(word, `${src.meta.file}: numberWords "${n}"`);
 
   const phrases: Phrase[] = [];
   const vocab: Vocab[] = [];
@@ -165,6 +188,8 @@ export function buildPack(src: PackSources): BuildResult {
     claim(v.id, "vocab", file);
     checkSituation(v.situation, where);
     checkArticle(v.article, where);
+    checkStress(v.word, where);
+    checkStress(v.plural, `${where} plural`);
     const { image: imageKey, ...rest } = v;
     vocab.push({
       ...rest,
@@ -186,6 +211,7 @@ export function buildPack(src: PackSources): BuildResult {
       claim(p.id, "phrase", file);
       checkSituation(p.situation, where);
       checkRegister(p.register, where);
+      checkStress(p.text, where);
       phrases.push({ ...p, ...lv, kind: "phrase", audioKey: audioKey(p.id), voice: checkVoice(p.voice, where) });
     }
     for (const v of f.vocab) addVocab(file, v, level);
@@ -194,6 +220,7 @@ export function buildPack(src: PackSources): BuildResult {
       claim(q.id, "qa", file);
       checkSituation(q.situation, where);
       checkRegister(q.register, where);
+      for (const t of [q.question, ...q.accepted.map((r) => r.text), ...q.distractors.map((r) => r.text)]) checkStress(t, where);
       const voice = checkVoice(q.voice, where);
       qa.push({
         ...q,
@@ -208,6 +235,7 @@ export function buildPack(src: PackSources): BuildResult {
     }
     for (const g of f.grammar) {
       claim(g.id, "grammar", file);
+      for (const e of g.examples) checkStress(e.text, `${file}: grammar "${g.id}"`);
       grammar.push({
         ...g,
         ...lv,
@@ -218,6 +246,7 @@ export function buildPack(src: PackSources): BuildResult {
     for (const x of f.expressions) {
       const where = `${file}: expression "${x.id}"`;
       claim(x.id, "expression", file);
+      checkStress(x.text, where);
       expressions.push({ ...x, ...lv, kind: "expression", audioKey: audioKey(x.id), voice: checkVoice(x.voice, where) });
     }
   };
@@ -277,6 +306,7 @@ export function buildPack(src: PackSources): BuildResult {
       if (turnIds.has(t.id)) errors.push(`${where}: duplicate turn id "${t.id}"`);
       turnIds.add(t.id);
       if (t.speaker === "native") {
+        checkStress(t.text, `${where} turn "${t.id}"`);
         return {
           ...t,
           audioKey: audioKey(d.id, t.id),
@@ -284,6 +314,7 @@ export function buildPack(src: PackSources): BuildResult {
           avatar: resolveImage(t.name ? d.avatars?.[t.name] : undefined),
         };
       }
+      for (const o of t.options) checkStress(o.text, `${where} turn "${t.id}"`);
       if (!t.options.some((o) => o.verdict === "correct")) {
         errors.push(`${where}: learner turn "${t.id}" needs at least one "correct" option`);
       }
@@ -315,6 +346,7 @@ export function buildPack(src: PackSources): BuildResult {
     if (clash) errors.push(`${where}: order ${st.order} already used by story "${clash}"`);
     storyOrders.set(st.order, st.id);
     const voice = checkVoice(st.voice, where);
+    checkStress(st.title, `${where} title`);
     const localIds = new Set<string>();
     const local = (id: string) => {
       if (localIds.has(id)) errors.push(`${where}: duplicate local id "${id}" (sentences, questions and gaps share one namespace)`);
@@ -331,11 +363,13 @@ export function buildPack(src: PackSources): BuildResult {
     if (new Set(keywords).size !== keywords.length) errors.push(`${where}: repeated key word`);
     const sentences = st.sentences.map((x) => {
       local(x.id);
+      checkStress(x.text, `${where} sentence "${x.id}"`);
       const v = x.voice ? checkVoice(x.voice, `${where} sentence "${x.id}"`) : voice;
       return { ...x, audioKey: audioKey(st.id, x.id), voice: v };
     });
     const questions = st.questions.map((q) => {
       local(q.id);
+      for (const t of [q.question, ...q.options.map((o) => o.text)]) checkStress(t, `${where} question "${q.id}"`);
       if (q.correct >= q.options.length) errors.push(`${where}: question "${q.id}": correct ${q.correct} is out of range`);
       return {
         ...q,
@@ -345,7 +379,10 @@ export function buildPack(src: PackSources): BuildResult {
         options: q.options.map((o, i) => ({ ...o, audioKey: audioKey(st.id, q.id, i + 1), voice })),
       };
     });
-    for (const g of st.gaps) local(g.id);
+    for (const g of st.gaps) {
+      local(g.id);
+      for (const t of [g.gap, ...g.distractors]) checkStress(t, `${where} gap "${g.id}"`);
+    }
     const story: Story = {
       id: st.id,
       order: st.order,
@@ -391,6 +428,7 @@ export function buildPack(src: PackSources): BuildResult {
   for (const { file, q } of rawPlacement) {
     const where = `${file}: placement "${q.id}"`;
     if (q.answer >= q.options.length) errors.push(`${where}: answer ${q.answer} is out of range`);
+    for (const t of [q.text, ...q.options]) checkStress(t, where);
     checkLevel(q.level, where);
     for (const l of q.lessons) if (kinds.get(l) !== "lesson") errors.push(`${where}: unknown lesson "${l}"`);
     const { voice, ...rest } = q;
@@ -450,9 +488,10 @@ export function buildPack(src: PackSources): BuildResult {
       questions: story.questions.length,
       gaps: raw.gaps.length,
     };
-    const misses = (Object.keys(STORY_GUIDE) as (keyof typeof STORY_GUIDE)[])
-      .filter((k) => counts[k] < STORY_GUIDE[k][0] || counts[k] > STORY_GUIDE[k][1])
-      .map((k) => `${counts[k]} ${k} (guideline ${STORY_GUIDE[k][0]}–${STORY_GUIDE[k][1]})`);
+    const guide = storyGuide(story.level);
+    const misses = (Object.keys(guide) as (keyof typeof guide)[])
+      .filter((k) => counts[k] < guide[k][0] || counts[k] > guide[k][1])
+      .map((k) => `${counts[k]} ${k} (guideline ${guide[k][0]}–${guide[k][1]} for ${story.level})`);
     if (misses.length) warnings.push(`${where}: ${misses.join(", ")}`);
   }
 

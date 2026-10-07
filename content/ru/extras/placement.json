@@ -1,0 +1,76 @@
+{
+  "placement": [
+    {
+      "id": "placement.ru-a1-signs",
+      "level": "A1",
+      "prompt": "Lees estos carteles en la estación. ¿Qué significan?",
+      "text": "Вы́ход. Ка́сса. Апте́ка.",
+      "options": ["Entrada. Caja. Farmacia.", "Salida. Caja. Farmacia.", "Salida. Cafetería. Farmacia.", "Salida. Caja. Correos."],
+      "answer": 1,
+      "lessons": ["ru-a1-alphabet.l.street-signs"]
+    },
+    {
+      "id": "placement.ru-a1-slower",
+      "level": "A1",
+      "prompt": "Un turista le dice esto a un policía. ¿Qué significa?",
+      "text": "Извини́те, я не понима́ю. Говори́те, пожа́луйста, ме́дленнее.",
+      "options": ["Perdone, no le oigo. Hable más alto, por favor.", "Perdone, no entiendo. Repita, por favor.", "Perdone, no entiendo. Hable más despacio, por favor.", "Perdone, no hablo ruso. ¿Habla inglés?"],
+      "answer": 2,
+      "lessons": ["ru-a1-hello.l.ne-ponimayu", "ru-a1-hello.l.polite"]
+    },
+    {
+      "id": "placement.ru-a1-price",
+      "level": "A1",
+      "prompt": "Vas a pagar en una tienda. ¿Qué significa?",
+      "text": "Ско́лько с меня́? — Две́сти пятьдеся́т рубле́й. Ка́ртой и́ли нали́чными?",
+      "options": ["¿Cuánto le debo? — Doscientos cincuenta rublos. ¿Con tarjeta o en efectivo?", "¿Cuánto le debo? — Ciento cincuenta rublos. ¿Con tarjeta o en efectivo?", "¿Cuánto le debo? — Doscientos quince rublos. ¿Con tarjeta o en efectivo?", "¿Cuánto cuesta? — Doscientos cincuenta rublos. ¿Lo quiere en una bolsa?"],
+      "answer": 0,
+      "lessons": ["ru-a1-numbers.l.prices", "ru-a1-numbers.l.tens"]
+    },
+    {
+      "id": "placement.ru-a1-about-me",
+      "level": "A1",
+      "prompt": "Te preguntan esto. ¿Cómo contestas que eres de Madrid y que trabajas de programador?",
+      "text": "Отку́да вы? Кем вы рабо́таете?",
+      "options": ["Я в Мадри́де. Я рабо́таю программи́ст.", "Я из Мадри́д. Я рабо́таю программи́стом.", "Я из Мадри́да. Я сейча́с не рабо́таю.", "Я из Мадри́да. Я рабо́таю программи́стом."],
+      "answer": 3,
+      "lessons": ["ru-a1-about-me.l.origin", "ru-a1-about-me.l.work"]
+    },
+    {
+      "id": "placement.ru-a1-metro",
+      "level": "A1",
+      "prompt": "Le preguntas esto a alguien en el metro. ¿Qué significa?",
+      "text": "Как дое́хать до це́нтра? Где мне сде́лать переса́дку?",
+      "options": ["¿Este autobús va al centro? ¿Dónde está la parada?", "¿Cómo llego al centro? ¿Dónde hago transbordo?", "¿Cómo llego al centro? ¿Dónde compro el billete?", "¿Cuándo sale el tren al centro? ¿Dónde hago transbordo?"],
+      "answer": 1,
+      "lessons": ["ru-a1-transport.l.metro"]
+    },
+    {
+      "id": "placement.ru-a1-bill",
+      "level": "A1",
+      "prompt": "Has cenado con un amigo y el camarero te pregunta esto. ¿Cómo le dices que por separado y le preguntas si puedes pagar con tarjeta?",
+      "text": "Вам вме́сте и́ли отде́льно?",
+      "options": ["Вме́сте, пожа́луйста. Мо́жно ка́ртой?", "Отде́льно, пожа́луйста. Мо́жно нали́чными?", "Отде́льно, пожа́луйста. Мо́жно ка́ртой?", "Отде́льно, пожа́луйста. Сда́чи не на́до."],
+      "answer": 2,
+      "lessons": ["ru-a1-food.l.bill"]
+    },
+    {
+      "id": "placement.ru-a1-directions",
+      "level": "A1",
+      "prompt": "Preguntas por una farmacia y te contestan esto. ¿Qué significa?",
+      "text": "Иди́те пря́мо до перекрёстка, пото́м поверни́те нале́во. Апте́ка бу́дет спра́ва.",
+      "options": ["Siga recto hasta el cruce, luego gire a la derecha. La farmacia quedará a la izquierda.", "Siga hasta el final de la calle, luego gire a la izquierda. La farmacia quedará a la derecha.", "Cruce la calle en el semáforo, luego gire a la izquierda. La farmacia está enfrente.", "Siga recto hasta el cruce, luego gire a la izquierda. La farmacia quedará a la derecha."],
+      "answer": 3,
+      "lessons": ["ru-a1-city.l.directions"]
+    },
+    {
+      "id": "placement.ru-a1-cold",
+      "level": "A1",
+      "prompt": "En la farmacia te dicen esto. Eres un hombre: ¿cómo dices que crees que te has resfriado y que tienes fiebre y tos?",
+      "text": "Здра́вствуйте! Чем могу́ помо́чь?",
+      "options": ["Я, ка́жется, простуди́лась. У меня́ температу́ра и ка́шель.", "Я, ка́жется, простуди́лся. У меня́ температу́ра и ка́шель.", "Я, ка́жется, простуди́л. У меня́ температу́ра и ка́шель.", "Я, ка́жется, простуди́лся. У меня́ на́сморк и аллерги́я."],
+      "answer": 1,
+      "lessons": ["ru-a1-health.l.feeling-ill"]
+    }
+  ]
+}

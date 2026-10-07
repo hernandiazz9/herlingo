@@ -1,0 +1,104 @@
+{
+  "id": "story.ru-a1-at-the-hermitage",
+  "order": 6,
+  "title": "В Эрмита́же",
+  "titleEs": "En el Hermitage",
+  "description": "Lucía visita el Hermitage: compra la entrada, deja la chaqueta en el guardarropa y Ania le enseña los cuadros.",
+  "emoji": "🏛️",
+  "situation": "ciudad",
+  "level": "A1",
+  "voice": "ru-RU-DmitryNeural",
+  "sentences": [
+    { "id": "s1", "text": "А́ня рабо́тает в Эрмита́же. Она́ экскурсово́д.", "es": "Ania trabaja en el Hermitage. Es guía." },
+    { "id": "s2", "text": "Сего́дня Луси́я идёт к ней на рабо́ту.", "es": "Hoy Lucía va a verla al trabajo." },
+    { "id": "s3", "text": "Эрмита́ж — э́то большо́й зелёный дворе́ц на Неве́.", "es": "El Hermitage es un gran palacio verde junto al Neva." },
+    { "id": "s4", "text": "У вхо́да мно́го тури́стов.", "es": "En la entrada hay muchos turistas." },
+    { "id": "s5", "text": "Луси́я идёт в ка́ссу.", "es": "Lucía va a la taquilla." },
+    { "id": "s6", "text": "«Оди́н взро́слый биле́т, пожа́луйста.»", "es": "«Una entrada de adulto, por favor.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s7", "text": "«Вот ваш биле́т. Гардеро́б спра́ва.»", "es": "«Aquí tiene su entrada. El guardarropa está a la derecha.»" },
+    { "id": "s8", "text": "Луси́я сдаёт ку́ртку в гардеро́б.", "es": "Lucía deja la chaqueta en el guardarropa." },
+    { "id": "s9", "text": "Пото́м А́ня пока́зывает ей карти́ны.", "es": "Luego Ania le enseña los cuadros." },
+    { "id": "s10", "text": "«Смотри́! Э́то Рембра́ндт, а э́то Леона́рдо да Ви́нчи.»", "es": "«¡Mira! Esto es un Rembrandt, y esto, un Leonardo da Vinci.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s11", "text": "В за́лах мно́го люде́й, все фотографи́руют.", "es": "En las salas hay mucha gente y todos hacen fotos." },
+    { "id": "s12", "text": "«Здесь мо́жно фотографи́ровать?»", "es": "«¿Se pueden hacer fotos aquí?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s13", "text": "«Да, мо́жно, но без вспы́шки.»", "es": "«Sí, se puede, pero sin flash.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s14", "text": "Они́ гуля́ют по за́лам три часа́.", "es": "Pasean por las salas durante tres horas." },
+    { "id": "s15", "text": "«Э́то о́чень интере́сно! Но я уже́ немно́го устаю́.»", "es": "«¡Es muy interesante! Pero ya me estoy cansando un poco.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s16", "text": "«Тогда́ пойдём в кафе́! Здесь ря́дом есть хоро́шее.»", "es": "«¡Pues vamos a una cafetería! Aquí al lado hay una buena.»", "voice": "ru-RU-SvetlanaNeural" }
+  ],
+  "keywords": [
+    "ru-a1-city.ekskursovod",
+    "ru-a1-city.dvorets",
+    "ru-a1-city.odin-vzroslyi-bilet",
+    "ru-a1-city.garderob",
+    "ru-a1-city.sprava",
+    "ru-a1-shopping.kurtka",
+    "ru-a1-city.kartina",
+    "ru-a1-city.mozhno-fotografirovat",
+    {
+      "id": "story-ru-vspyshka",
+      "word": "вспы́шка",
+      "gender": "f",
+      "plural": "вспы́шки",
+      "es": "el flash (de la cámara)",
+      "notes": "En muchos museos verás «Без вспы́шки»: se pueden hacer fotos, pero sin flash.",
+      "situation": "ciudad",
+      "image": "fluent:camera-with-flash"
+    },
+    "ru-a1-city.ochen-interesno"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Кем рабо́тает А́ня?",
+      "es": "¿A qué se dedica Ania?",
+      "options": [
+        { "text": "Она́ учи́тельница.", "es": "Es profesora." },
+        { "text": "Она́ экскурсово́д.", "es": "Es guía." },
+        { "text": "Она́ врач.", "es": "Es médica." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Како́й Эрмита́ж?",
+      "es": "¿Cómo es el Hermitage?",
+      "options": [
+        { "text": "Большо́й зелёный дворе́ц.", "es": "Un gran palacio verde." },
+        { "text": "Ма́ленький бе́лый дом.", "es": "Una casa blanca pequeña." },
+        { "text": "Но́вый кра́сный собо́р.", "es": "Una catedral roja nueva." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Где гардеро́б?",
+      "es": "¿Dónde está el guardarropa?",
+      "options": [
+        { "text": "Сле́ва.", "es": "A la izquierda." },
+        { "text": "Напро́тив.", "es": "Enfrente." },
+        { "text": "Спра́ва.", "es": "A la derecha." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Что нельзя́ де́лать в за́лах?",
+      "es": "¿Qué no se puede hacer en las salas?",
+      "options": [
+        { "text": "Фотографи́ровать со вспы́шкой.", "es": "Hacer fotos con flash." },
+        { "text": "Фотографи́ровать без вспы́шки.", "es": "Hacer fotos sin flash." },
+        { "text": "Смотре́ть карти́ны.", "es": "Mirar los cuadros." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "ru-a1-city.ekskursovod", "distractors": ["программи́ст", "води́тель"] },
+    { "id": "g2", "sentence": "s3", "answer": "ru-a1-city.dvorets", "distractors": ["вокза́л", "магази́н"] },
+    { "id": "g3", "sentence": "s7", "answer": "ru-a1-city.sprava", "distractors": ["сле́ва", "напро́тив"] },
+    { "id": "g4", "sentence": "s8", "answer": "ru-a1-shopping.kurtka", "gap": "ку́ртку", "distractors": ["ша́пку", "газе́ту"] },
+    { "id": "g5", "sentence": "s9", "answer": "ru-a1-city.kartina", "gap": "карти́ны", "distractors": ["фи́льмы", "кни́ги"] },
+    { "id": "g6", "sentence": "s13", "answer": "story-ru-vspyshka", "gap": "вспы́шки", "distractors": ["биле́та", "ку́ртки"] }
+  ]
+}

@@ -73,6 +73,24 @@ leave gaps:
 | 40–49 | food (bar, restaurant) |
 | 90+ | minimal grammar and Sicilian (recognition only) |
 
+### Levelled packs
+
+A pack with `levels` in pack.json (English: A2, B1, B2, C1) is split by CEFR level instead of
+one trip course. Full plan for English: **docs/brief-en.md** (unit ids, order ranges, situations,
+cast, voices). What changes:
+
+- **`level` fields**: every unit, dialogue, story and placement question has a `level` from the
+  pack's `levels`. Phrases, vocab, Q&A and grammar cards take the level of the unit that defines
+  them (never written by hand); a later unit may reuse an earlier item by id at any level.
+- **Order ranges per level**: one hundred per level (English: A2 10–99, B1 110–199, B2 210–299,
+  C1 310–399). Inside each hundred, units with `order % 100 >= 90` are **side units** (grammar,
+  extras): shown apart from the main path, like `90+` in a one-course pack.
+- **Grammar cards** of a level live in that level's grammar unit's own `grammar` array (e.g.
+  `units/190-b1-grammar.json`), so they get its level.
+- **File names** carry the level: units `units/<order>-<unit-id>.json` (`units/110-b1-friends.json`),
+  stories `stories/<level>-NN-<slug>.json` in lower case (`stories/b1-01-welcome-aboard.json`).
+- **Story length** depends on the story level (see "Story guidelines" below).
+
 ## Schema
 
 `?` = optional. All text fields must be non-empty. Spanish is **Spain Spanish with "tú"**.
@@ -80,10 +98,12 @@ leave gaps:
 **pack.json**: `default?` (`true` on exactly one pack), `lang` (= folder name), `name` (in
 Spanish, "Francés"), `nativeName` ("Français"), `emoji?` (flag shown by the language picker, 🇫🇷),
 `speechLocale` (`it-IT`), `voices` (edge-tts voice names; the first is the default),
-`formalRegister` (`lei` | `vous` | `formal`: the formal register this pack's items use; `formal`
+`formalRegister` (`lei` | `vous` | `vy` | `formal`: the formal register this pack's items use;
+`vy` is Russian вы to one person, shown as "Trato de usted"; `formal`
 is the generic value for a language with no polite pronoun, like English, where it marks polite
-or formal wording), `articles` (articles allowed in vocab `article`: Italian `il lo la l' i gli
-le`, French `le la l' les`, English `a an`),
+or formal wording), `articles?` (articles allowed in vocab `article`: Italian `il lo la l' i gli
+le`, French `le la l' les`, English `a an`; omit it for a language without articles, like
+Russian: vocab then has no `article`),
 `numberWords` (optional, `{ "40": "quaranta", … }`: speech recognition often returns digits, so
 spoken answers are compared with digits written out with these words), `situations`
 (`{ id, title, emoji? }`, phrasebook sections in display order). If you need a new situation, add
@@ -98,6 +118,34 @@ one line here.
   Only English uses it today (docs/brief-en.md: levels, unit ids and order ranges per level).
 - `equivalents?`: `{ "i'm": "i am", "don't": "do not", … }`, lower case, contracted form → full
   form. Answer and speech matching apply it to both sides, so "I am" and "I'm" count as the same.
+
+**Non-Latin scripts** (Russian, docs/brief-ru.md). Three optional fields make a pack in another
+script work without any code for that language (helpers in `src/lib/content/script.ts`,
+exported from `@/lib/content`):
+
+- `stress?`: `{ mark, vowels, selfStressed? }`, written stress marks. `mark` = one character
+  written right after the stressed vowel (Russian: U+0301 COMBINING ACUTE ACCENT, молоко́);
+  `vowels` = the script's lower-case vowels (`"аеёиоуыэюя"`); `selfStressed` = vowels that are
+  always stressed and never marked (`"ё"`). `content:check` requires **exactly one mark after a
+  vowel in every target-language word with two or more vowels** (hyphenated words count as one:
+  по-ру́сски) and none in one-vowel words or words with a self-stressed letter; words without
+  vowels of the script (Latin names, digits) are ignored. Checked in phrases, vocab `word` and
+  `plural`, expressions, Q&A question and replies, grammar examples, dialogue turns and options,
+  story titles, sentences, questions, options, gaps and distractors, placement text and options,
+  and `numberWords`. The mark is stripped before TTS (`npm run audio` hashes and speaks the text
+  without it; `speak()` strips it for the device voice) and ignored when matching answers
+  (`stripStress()`), so a missing or wrong mark is never an "acento" error.
+- `romanization?`: `{ map, wordStart?, afterVowel?, stressAccent?, alternatives? }`, the Latin
+  line `romanize(text, pack)` generates (no per-item field). `map` = lower-case letter(s) → Latin,
+  longest key first, upper case kept on the first Latin letter (х → `j`, щ → `shch`, ъ → `""`,
+  ь → `'`); `wordStart` / `afterVowel` = variants at the start of a word and after a `stress`
+  vowel or a letter romanized without Latin letters (е → `ye`, я → `ya`); `stressAccent: true`
+  turns the stress mark into an acute on the romanized vowel, and puts one on a self-stressed
+  letter in a word of two or more vowels (`Здра́вствуйте, молоко́, ещё` →
+  `Zdrávstvuite, molokó, yeshchió`). `alternatives` = canonical Latin spelling → other spellings
+  accepted when the learner types in Latin (`"j": ["kh", "h"]`, `"ia": ["ya"]`).
+- `fold?`: `{ "ё": "е" }`, lower-case letter → the letter it counts as when matching answers and
+  scoring speech (`foldText()`, applied to both sides; upper case folds to upper case).
 
 A pack with no units yet is valid (`content:check` reports it as empty) and stays hidden from the
 language picker until it has a unit.
@@ -124,7 +172,7 @@ language picker until it has a unit.
   Spanish speaker. Don't repeat the translation. Example for "Vorrei un biglietto per Catania.":
   `"Lo dices en la taquilla o a la máquina de billetes. «gli» suena como una «ll» suave: bi-LLE-tto."`
 - **Vocab**: `id`, `word` (bare), `article?` (one of pack.json `articles`: `il`, `lo`, `la`, `l'`, `i`, `gli`, `le` in Italian),
-  `gender?` (`m` | `f` | `mf`), `plural?` (bare word, no article: "biglietti", "autobus"), `es` (with article for nouns: "el billete"), `notes?`,
+  `gender?` (`m` | `f` | `n` neuter | `mf` | `pl` plural-only noun), `plural?` (bare word, no article: "biglietti", "autobus"), `es` (with article for nouns: "el billete"), `notes?`,
   `example?` (a phrase id), `situation?`, `tags?`, `voice?`, `image?` (picture key, see
   "Pictures"). It is spoken as article + word ("il biglietto", "l'orario").
 - **Q&A** (for "answer" exercises): `id`, `question` (what the Italian asks), `questionEs`,
@@ -169,8 +217,9 @@ plus `placement`:
 | `questions` | Comprehension: `[{ id, question, es, options: [{ text, es }] (≥ 3), correct }]`. `question` and options in the target language; `correct` = 0-based index; exactly one right option, the others plausible from the story. |
 | `gaps` | Fill the gap: `[{ id, sentence, answer, gap?, distractors }]`. `sentence` = a sentence id; `answer` = one of this story's key word ids; `gap?` = exact text blanked in the sentence (whole word(s), case-insensitive, first occurrence), default = the key word's bare `word` (vocab) or `text` (phrase/expression) — set it when the sentence uses another form ("cerca" for `cercare`, "biglietti"); `distractors` = ≥ 2 wrong chips in the same form (same person, gender, number), never also correct. |
 
-**Story guidelines** (`content:check` prints ⚠ warnings, never fails): **80–150 words** in all
-sentences, **8–10 key words**, **3–4 questions**, **4–6 gaps** (each on a different sentence
+**Story guidelines** (`content:check` prints ⚠ warnings, never fails): words in all sentences
+by story `level`: **80–150** for A1–B1, **100–200** for B2, **120–250** for C1 (`storyGuide()` in
+`src/lib/content/build.ts`; C2 uses the A1–B1 range until a pack needs it); **8–10 key words**, **3–4 questions**, **4–6 gaps** (each on a different sentence
 when possible). A1–A2 Italian, present tense mostly, natural and current; the story follows
 Hernán's trip (persona in `units/32-persona-sobre-mi.json`). Spanish with "tú".
 
@@ -181,10 +230,13 @@ Record SRS outcomes on key word ids (normal item ids).
 ## Audio keys
 
 Every playable text gets a stable key derived from ids (`src/lib/content/keys.ts`). `npm run audio`
-writes one mp3 per playable, named by a hash of voice + text (`public/audio/<lang>/<hash>.mp3`,
+writes one mp3 per playable, named by a hash of voice + text (stress marks of a pack with
+`stress` stripped; `public/audio/<lang>/<hash>.mp3`,
 so identical lines share a file and any text or voice change makes a new one), and maps each key
 to its file in `public/audio/<lang>/manifest.json`. Run it after every content change and commit
 `public/audio/`; `npm run content:check -- --strict-audio` fails if a playable has no current mp3.
+`npm run audio -- --dry-run` prints per pack what a real run would generate, keep and prune, and
+writes nothing.
 Dialogue learner options are voiced with a pack voice that no native turn of that dialogue uses.
 
 | Playable | Key |
@@ -281,7 +333,8 @@ Custom SVGs must sit next to Fluent Emoji Flat icons without looking foreign:
 
 Schema (types, required fields, non-empty text, id format), unique ids across every pack,
 exactly one default pack, `register` limited to `tu`, `neutral` and the pack's `formalRegister`,
-vocab `article` limited to the pack's `articles`, `level` required on units, dialogues, stories
+vocab `article` limited to the pack's `articles` (none without `articles`), the pack's `stress`
+rule on every target-language text (see "Non-Latin scripts"), `level` required on units, dialogues, stories
 and placement questions of a pack with `levels` (one of them) and not allowed on units, dialogues
 and placement questions of a pack without them, unique unit `order`, known situations and voices, lesson items that exist and are lesson-item kinds,
 non-empty lessons and units, `vocab.example` is a phrase, `dialogue.unit` is a unit, learner turns

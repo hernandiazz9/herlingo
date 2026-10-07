@@ -31,6 +31,7 @@ import type {
 
 export type * from "./types";
 export { audioKey } from "./keys";
+export { foldText, romanize, stripStress, type ScriptRulesSource } from "./script";
 
 interface Bundle {
   defaultLang: string;

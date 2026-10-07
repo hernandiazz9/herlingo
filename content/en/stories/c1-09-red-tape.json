@@ -1,0 +1,95 @@
+{
+  "id": "story.en-c1-red-tape",
+  "order": 309,
+  "title": "Red tape",
+  "titleEs": "Papeleo sin fin",
+  "description": "Pablo tiene que renovar su permiso de trabajo y se pierde entre formularios, oficinas y esperas. La burocracia le obliga a pensar en qué quiere de verdad.",
+  "emoji": "📑",
+  "situation": "dinero",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "Pablo's work permit expires in two months, and the new owners need it renewed before they sign his contract.", "es": "El permiso de trabajo de Pablo caduca dentro de dos meses, y los nuevos dueños necesitan que lo renueve antes de firmar su contrato." },
+    { "id": "s2", "text": "On paper, the renewal looks simple. In practice, it's a nightmare of red tape.", "es": "Sobre el papel, la renovación parece sencilla. En la práctica, es una pesadilla de burocracia." },
+    { "id": "s3", "text": "The form asks for proof of residency, his old contract and six months of bank statements.", "es": "El formulario pide un justificante de residencia, su contrato anterior y seis meses de extractos bancarios." },
+    { "id": "s4", "text": "At the office, the clerk barely looks at him.", "es": "En la oficina, el funcionario apenas lo mira." },
+    { "id": "s5", "text": "«This copy isn't valid. You need to get it notarized.»", "es": "«Esta copia no es válida. Tiene que compulsarla ante notario.»", "voice": "en-US-BrianNeural" },
+    { "id": "s6", "text": "«Nobody told me that. Is there any way to speed it up? My permit expires next month.»", "es": "«Nadie me lo dijo. ¿Hay alguna forma de acelerarlo? Mi permiso caduca el mes que viene.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "«The earliest appointment is in six weeks. Next, please.»", "es": "«La primera cita disponible es dentro de seis semanas. El siguiente, por favor.»", "voice": "en-US-BrianNeural" },
+    { "id": "s8", "text": "Over the next few days, he's sent back and forth between three different offices.", "es": "Durante los días siguientes, lo mandan de aquí para allá entre tres oficinas distintas." },
+    { "id": "s9", "text": "So, with Mrs. Carter's help, he writes a formal complaint.", "es": "Así que, con la ayuda de la señora Carter, escribe una queja formal." },
+    { "id": "s10", "text": "«I am writing to express my dissatisfaction with the way my case has been handled.»", "es": "«Le escribo para expresar mi descontento con la forma en que se ha gestionado mi caso.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s11", "text": "«Please find below a summary of events, with dates and reference numbers.»", "es": "«A continuación encontrará un resumen de los hechos, con fechas y números de referencia.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«Good. And keep a paper trail, dear: save every email and get a name on every call.»", "es": "«Bien. Y guarda todo por escrito, cielo: cada correo y el nombre de cada persona con la que hables.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s13", "text": "A week later, he gets a reply and an expedited appointment.", "es": "Una semana después, recibe una respuesta y una cita por vía urgente." },
+    { "id": "s14", "text": "But the whole process has left him thinking.", "es": "Pero todo el proceso lo ha dejado pensando." },
+    { "id": "s15", "text": "Every two years, it's the same paperwork, the same fear and the same waiting.", "es": "Cada dos años, el mismo papeleo, el mismo miedo y la misma espera." },
+    { "id": "s16", "text": "That night, he opens Laura's email again and reads it twice.", "es": "Esa noche, vuelve a abrir el correo de Laura y lo lee dos veces." },
+    { "id": "s17", "text": "«In Valencia, I wouldn't need anyone's permission to work,» he tells Mrs. Carter.", "es": "«En Valencia, no necesitaría el permiso de nadie para trabajar», le dice a la señora Carter." }
+  ],
+  "keywords": [
+    "c1-problems.permit",
+    "c1-problems.expire",
+    "c1-problems.renewal",
+    "c1-problems.red-tape",
+    "c1-problems.proof-of-residency",
+    "c1-problems.clerk",
+    "c1-problems.notarize",
+    "c1-problems.is-there-any-way-to-speed-it-up",
+    "c1-problems.ive-been-sent-back-and-forth",
+    "c1-problems.i-am-writing-to-express-my-dissatisfaction"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why does Pablo need to renew his work permit now?",
+      "es": "¿Por qué tiene Pablo que renovar ahora su permiso de trabajo?",
+      "options": [
+        { "text": "Because he wants to travel to Spain.", "es": "Porque quiere viajar a España." },
+        { "text": "Because it expires soon and the new owners need it for his contract.", "es": "Porque caduca pronto y los nuevos dueños lo necesitan para su contrato." },
+        { "text": "Because he lost it.", "es": "Porque lo ha perdido." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What is wrong with his copy?",
+      "es": "¿Qué problema tiene su copia?",
+      "options": [
+        { "text": "It needs to be notarized.", "es": "Hay que compulsarla ante notario." },
+        { "text": "It's in Spanish.", "es": "Está en español." },
+        { "text": "It's too old.", "es": "Es demasiado antigua." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What advice does Mrs. Carter give him?",
+      "es": "¿Qué consejo le da la señora Carter?",
+      "options": [
+        { "text": "To call a lawyer.", "es": "Que llame a un abogado." },
+        { "text": "To give up and go home.", "es": "Que se rinda y vuelva a casa." },
+        { "text": "To keep a written record of every email and call.", "es": "Que guarde un registro escrito de cada correo y llamada." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "How does the process make Pablo feel about his future?",
+      "es": "¿Cómo hace sentir el proceso a Pablo sobre su futuro?",
+      "options": [
+        { "text": "Sure that he'll stay in Chicago forever.", "es": "Seguro de que se quedará en Chicago para siempre." },
+        { "text": "More tempted by the job in Valencia.", "es": "Más tentado por el trabajo en Valencia." },
+        { "text": "Happy to do it again in two years.", "es": "Contento de repetirlo dentro de dos años." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "c1-problems.expire", "gap": "expires", "distractors": ["caducates", "expirates"] },
+    { "id": "g2", "sentence": "s2", "answer": "c1-problems.red-tape", "gap": "red tape", "distractors": ["red ribbon", "paper tape"] },
+    { "id": "g3", "sentence": "s3", "answer": "c1-problems.proof-of-residency", "gap": "proof of residency", "distractors": ["justification of residence", "proof of residence card"] },
+    { "id": "g4", "sentence": "s5", "answer": "c1-problems.notarize", "gap": "notarized", "distractors": ["compulsed", "notaried"] },
+    { "id": "g5", "sentence": "s8", "answer": "c1-problems.ive-been-sent-back-and-forth", "gap": "back and forth", "distractors": ["forth and back", "go and come"] },
+    { "id": "g6", "sentence": "s10", "answer": "c1-problems.i-am-writing-to-express-my-dissatisfaction", "gap": "dissatisfaction", "distractors": ["unsatisfaction", "insatisfaction"] }
+  ]
+}

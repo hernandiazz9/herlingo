@@ -1,0 +1,68 @@
+{
+  "id": "dlg.ru-a1-neighbour",
+  "title": "Tu nuevo vecino",
+  "description": "En la escalera conoces a Maxim, tu vecino: empezáis de usted, os pasáis al «ты» y os contáis de dónde sois y a qué os dedicáis.",
+  "situation": "presentarse",
+  "unit": "ru-a1-about-me",
+  "order": 12,
+  "register": "tu",
+  "level": "A1",
+  "avatars": { "Maxim": "fluent:man-blonde-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Maxim", "text": "Здра́вствуйте! Вы наш но́вый сосе́д?", "es": "¡Hola! ¿Es usted nuestro nuevo vecino?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, saluda y preséntate: te llamas Hernán.",
+      "options": [
+        { "text": "Да, здра́вствуйте! Меня́ зову́т Эрна́н.", "es": "Sí, ¡hola! Me llamo Hernán.", "verdict": "correct", "feedback": "¡Muy bien! Con alguien que acabas de conocer, de usted: «Здра́вствуйте»." },
+        { "text": "Да. Я Эрна́н.", "es": "Sí. Soy Hernán.", "verdict": "acceptable", "feedback": "Correcto y corto; un saludo delante queda mejor." },
+        { "text": "Да, приве́т! Как тебя́ зову́т?", "es": "Sí, ¡hola! ¿Cómo te llamas?", "verdict": "wrong", "feedback": "Te ha hablado de usted: no pases al «ты» todavía. Saluda con «Здра́вствуйте» y di tu nombre." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Maxim", "text": "О́чень прия́тно! Я Макси́м, живу́ в тридца́той кварти́ре. Мо́жно на ты?", "es": "¡Encantado! Soy Maxim, vivo en el 30. ¿Nos tuteamos?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Acepta tutearos.",
+      "options": [
+        { "text": "Да, коне́чно! Дава́й на ты!", "es": "¡Sí, claro! ¡Tuteémonos!", "verdict": "correct", "feedback": "¡Genial! Entre gente joven se pasa pronto al «ты»." },
+        { "text": "Коне́чно, мо́жно.", "es": "Claro, sí.", "verdict": "acceptable", "feedback": "Correcto, aunque «Дава́й на ты!» suena más cercano." },
+        { "text": "Да, коне́чно! Дава́й на вы!", "es": "¡Sí, claro! ¡Tratémonos de usted!", "verdict": "wrong", "feedback": "¡Al revés! «На вы» es de usted; para tutearse: «Дава́й на ты!»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Maxim", "text": "Отли́чно! Отку́да ты, Эрна́н?", "es": "¡Genial! ¿De dónde eres, Hernán?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que eres de Madrid y pregúntale, ya de tú, a qué se dedica.",
+      "options": [
+        { "text": "Я из Мадри́да. А ты кем рабо́таешь?", "es": "Soy de Madrid. ¿Y tú a qué te dedicas?", "verdict": "correct", "feedback": "¡Perfecto! «Кем ты рабо́таешь?», con «ты», como habéis acordado." },
+        { "text": "Из Мадри́да. А ты?", "es": "De Madrid. ¿Y tú?", "verdict": "acceptable", "feedback": "Correcto; «А ты?» le devuelve la pregunta, aunque no le preguntas por su trabajo." },
+        { "text": "Я из Мадри́да. А вы кем рабо́таете?", "es": "Soy de Madrid. ¿Y usted a qué se dedica?", "verdict": "wrong", "feedback": "Ya os tuteáis: «А ты кем рабо́таешь?»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Maxim", "text": "Я врач. А ты?", "es": "Soy médico. ¿Y tú?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que eres programador y trabajas desde casa.",
+      "options": [
+        { "text": "Я программи́ст. Рабо́таю из до́ма.", "es": "Soy programador. Trabajo desde casa.", "verdict": "correct", "feedback": "¡Muy bien! Cuando ya está claro, puedes omitir «я»: «Рабо́таю из до́ма»." },
+        { "text": "Программи́ст.", "es": "Programador.", "verdict": "acceptable", "feedback": "Correcto: la respuesta corta es natural." },
+        { "text": "Я есть программи́ст.", "es": "Yo soy programador.", "verdict": "wrong", "feedback": "En presente no se usa «есть» como «ser»: «Я программи́ст»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Maxim", "text": "Здо́рово! Ну, е́сли что́-то ну́жно — заходи́!", "es": "¡Qué bien! Bueno, si necesitas algo, ¡pásate!", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Da las gracias y despídete de tú.",
+      "options": [
+        { "text": "Спаси́бо! Пока́!", "es": "¡Gracias! ¡Hasta luego!", "verdict": "correct", "feedback": "¡Perfecto! «Пока́» es la despedida de tú." },
+        { "text": "Спаси́бо, до свида́ния!", "es": "Gracias, ¡adiós!", "verdict": "acceptable", "feedback": "Correcto, pero con alguien a quien tuteas, «Пока́» suena más natural." },
+        { "text": "Спаси́бо! Заходи́те!", "es": "¡Gracias! ¡Pásese!", "verdict": "wrong", "feedback": "«Заходи́те» es de usted y, además, eso te lo ha dicho él; tú: «Спаси́бо! Пока́!»." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "story.en-c1-i-wont-sugarcoat-it",
+  "order": 307,
+  "title": "I won't sugarcoat it",
+  "titleEs": "No te lo voy a endulzar",
+  "description": "Tras la compra, a Maya le toca la conversación más difícil de su carrera: decirle a Sam que su trabajo no está a la altura.",
+  "emoji": "🗣️",
+  "situation": "trabajo",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "Since the acquisition, Maya has been leading the backend team, and Sam now reports to her.", "es": "Desde la compra, Maya dirige el equipo de backend, y ahora Sam depende de ella." },
+    { "id": "s2", "text": "Over the last month, Sam has missed three deadlines and skipped most code reviews.", "es": "Durante el último mes, Sam ha incumplido tres plazos y se ha saltado casi todas las revisiones de código." },
+    { "id": "s3", "text": "Greg from HR has made it clear: either Maya deals with it, or he will.", "es": "Greg, de Recursos Humanos, lo ha dejado claro: o Maya se ocupa del tema, o lo hará él." },
+    { "id": "s4", "text": "On Thursday, she books a room for their one-on-one and closes the door.", "es": "El jueves, reserva una sala para su reunión individual y cierra la puerta." },
+    { "id": "s5", "text": "«Sam, I want to be upfront with you about how the last few weeks have gone.»", "es": "«Sam, quiero ser sincera contigo sobre cómo han ido las últimas semanas.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s6", "text": "«Lately, your work hasn't been meeting the standard we agreed on.»", "es": "«Últimamente, tu trabajo no está al nivel que acordamos.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "Sam crosses his arms and looks out of the window.", "es": "Sam se cruza de brazos y mira por la ventana." },
+    { "id": "s8", "text": "«So this is about the new owners, right? They want to get rid of me.»", "es": "«Así que esto va de los nuevos dueños, ¿no? Quieren deshacerse de mí.»", "voice": "en-US-BrianNeural" },
+    { "id": "s9", "text": "«This isn't about you as a person. And I won't sugarcoat it: the client noticed.»", "es": "«No se trata de ti como persona. Y no te lo voy a endulzar: el cliente se dio cuenta.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s10", "text": "«Is something going on outside of work that I should know about?»", "es": "«¿Está pasando algo fuera del trabajo que yo deba saber?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "For a long moment, Sam says nothing. Then he opens up: his father is ill, and he barely sleeps.", "es": "Durante un largo rato, Sam no dice nada. Luego se abre: su padre está enfermo y él apenas duerme." },
+    { "id": "s12", "text": "«I'm sorry, Sam. I'd like us to put together a plan with clear goals for the next six weeks.»", "es": "«Lo siento, Sam. Me gustaría que preparáramos juntos un plan con objetivos claros para las próximas seis semanas.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s13", "text": "«And I'll take the reporting off your plate, so you can focus on what matters.»", "es": "«Y te quito los informes de encima, para que puedas centrarte en lo importante.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s14", "text": "«A performance plan? That sounds like the first step out the door.»", "es": "«¿Un plan de mejora? Eso suena al primer paso para echarme.»", "voice": "en-US-BrianNeural" },
+    { "id": "s15", "text": "«It's the opposite. Let's check in again in two weeks and see how things are going.»", "es": "«Es justo lo contrario. Volvamos a vernos dentro de dos semanas y veamos cómo va todo.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s16", "text": "That night, Maya tells Pablo she felt terrible the whole time.", "es": "Esa noche, Maya le cuenta a Pablo que se sintió fatal todo el rato." },
+    { "id": "s17", "text": "«Being blunt is easy. Being blunt and kind at the same time is the hard part.»", "es": "«Ser directa es fácil. Lo difícil es ser directa y amable a la vez.»", "voice": "en-US-EmmaNeural" }
+  ],
+  "keywords": [
+    "c1-leading.one-on-one",
+    "c1-leading.i-want-to-be-upfront",
+    "c1-leading.your-work-hasnt-been-meeting",
+    "c1-leading.this-isnt-about-you",
+    "c1-leading.i-wont-sugarcoat-it",
+    "c1-leading.is-something-going-on",
+    "c1-idioms.open-up",
+    "c1-leading.id-like-to-put-together-a-plan",
+    "c1-leading.performance-plan",
+    "c1-leading.blunt"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why does Maya need to talk to Sam?",
+      "es": "¿Por qué tiene que hablar Maya con Sam?",
+      "options": [
+        { "text": "Because he wants a raise.", "es": "Porque quiere un aumento." },
+        { "text": "Because he has missed deadlines and skipped code reviews.", "es": "Porque ha incumplido plazos y se ha saltado revisiones de código." },
+        { "text": "Because he wants to leave the company.", "es": "Porque quiere irse de la empresa." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "What does Sam think at first?",
+      "es": "¿Qué piensa Sam al principio?",
+      "options": [
+        { "text": "That the new owners want to get rid of him.", "es": "Que los nuevos dueños quieren deshacerse de él." },
+        { "text": "That Maya is going to promote him.", "es": "Que Maya lo va a ascender." },
+        { "text": "That the client is happy with his work.", "es": "Que el cliente está contento con su trabajo." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What is going on in Sam's life?",
+      "es": "¿Qué le está pasando a Sam en su vida?",
+      "options": [
+        { "text": "He's moving to another city.", "es": "Se muda a otra ciudad." },
+        { "text": "He's planning his wedding.", "es": "Está organizando su boda." },
+        { "text": "His father is ill and he hardly sleeps.", "es": "Su padre está enfermo y apenas duerme." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "According to Maya, what is the hard part of giving feedback?",
+      "es": "Según Maya, ¿qué es lo difícil de dar feedback?",
+      "options": [
+        { "text": "Finding a free meeting room.", "es": "Encontrar una sala libre." },
+        { "text": "Being direct and kind at the same time.", "es": "Ser directa y amable a la vez." },
+        { "text": "Talking to HR.", "es": "Hablar con Recursos Humanos." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s5", "answer": "c1-leading.i-want-to-be-upfront", "gap": "upfront", "distractors": ["in front", "frontal"] },
+    { "id": "g2", "sentence": "s6", "answer": "c1-leading.your-work-hasnt-been-meeting", "gap": "meeting", "distractors": ["arriving to", "complying"] },
+    { "id": "g3", "sentence": "s9", "answer": "c1-leading.i-wont-sugarcoat-it", "gap": "sugarcoat", "distractors": ["make sweet", "sugarcoated"] },
+    { "id": "g4", "sentence": "s11", "answer": "c1-idioms.open-up", "gap": "opens up", "distractors": ["opens out", "opens himself"] },
+    { "id": "g5", "sentence": "s12", "answer": "c1-leading.id-like-to-put-together-a-plan", "gap": "put together", "distractors": ["put joined", "make together"] },
+    { "id": "g6", "sentence": "s17", "answer": "c1-leading.blunt", "gap": "blunt", "distractors": ["bluntly", "obtuse"] }
+  ]
+}

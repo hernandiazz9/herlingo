@@ -1,0 +1,261 @@
+{
+  "id": "c1-presenting",
+  "order": 312,
+  "level": "C1",
+  "title": "Presentar y hablar en público: demos, charlas, preguntas difíciles",
+  "description": "Dar una charla o una demo en inglés con soltura: enganchar al público, explicar datos, salir airoso de las preguntas difíciles y cerrar con un mensaje claro, también ante directivos.",
+  "emoji": "🎤",
+  "situation": "trabajo",
+  "lessons": [
+    {
+      "id": "c1-presenting.l.opening",
+      "title": "Abrir la charla y enganchar al público",
+      "items": [
+        "c1-presenting.talk",
+        "c1-presenting.audience",
+        "c1-presenting.good-morning-everyone",
+        "c1-presenting.let-me-start-with-a-story",
+        "c1-presenting.by-a-show-of-hands",
+        "c1-presenting.outline",
+        "c1-presenting.the-talk-is-split",
+        "c1-presenting.ill-walk-you-through",
+        "c1-presenting.slide",
+        "c1-presenting.feel-free-to-stop-me",
+        "c1-presenting.takeaway",
+        "c1-presenting.if-you-take-one-thing-away",
+        "c1-presenting.qa.how-long"
+      ]
+    },
+    {
+      "id": "c1-presenting.l.demo",
+      "title": "Hacer una demo y explicar datos",
+      "items": [
+        "c1-presenting.demo",
+        "b1-calls.let-me-share-my-screen",
+        "c1-presenting.lets-hope-the-demo-gods",
+        "c1-presenting.bear-with-me",
+        "c1-presenting.chart",
+        "c1-presenting.as-you-can-see-on-this-chart",
+        "c1-presenting.trend",
+        "c1-presenting.this-is-where-it-gets-interesting",
+        "c1-presenting.spike",
+        "c1-presenting.notice-the-spike",
+        "c1-presenting.figure",
+        "c1-presenting.to-put-that-into-perspective",
+        "c1-presenting.the-numbers-speak-for-themselves",
+        "c1-presenting.qa.demo-fails",
+        "c1-presenting.qa.chart"
+      ]
+    },
+    {
+      "id": "c1-presenting.l.questions",
+      "title": "Preguntas difíciles del público",
+      "items": [
+        "c1-presenting.thats-a-great-question",
+        "c1-presenting.let-me-make-sure-i-understand",
+        "b2-projects.scope",
+        "c1-presenting.thats-slightly-outside-the-scope",
+        "c1-presenting.tangent",
+        "c1-presenting.i-dont-have-the-figures-on-hand",
+        "b2-opinions.data",
+        "c1-presenting.to-be-perfectly-honest",
+        "c1-presenting.thats-a-fair-point",
+        "b2-opinions.assumption",
+        "c1-presenting.that-assumes",
+        "c1-presenting.does-that-answer-your-question",
+        "c1-presenting.qa.dont-know",
+        "c1-presenting.qa.off-topic"
+      ]
+    },
+    {
+      "id": "c1-presenting.l.closing",
+      "title": "Cerrar con fuerza y presentar a directivos",
+      "items": [
+        "c1-presenting.executive",
+        "c1-presenting.ill-keep-this-brief",
+        "c1-presenting.bottom-line",
+        "c1-presenting.the-bottom-line-is",
+        "c1-presenting.recommendation",
+        "c1-presenting.my-recommendation-is",
+        "c1-presenting.buy-in",
+        "c1-presenting.what-we-need-from-you",
+        "c1-presenting.next-steps",
+        "c1-presenting.to-wrap-things-up",
+        "c1-presenting.id-be-happy-to-take-questions",
+        "c1-presenting.thank-you-all-for-your-time",
+        "c1-presenting.qa.bottom-line",
+        "c1-presenting.qa.wrap-up"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "c1-presenting.good-morning-everyone", "text": "Good morning, everyone, and thanks so much for having me.", "es": "Buenos días a todos y muchas gracias por invitarme.", "notes": "«Thanks for having me» = gracias por invitarme (a hablar, a un evento).", "explanation": "La primera frase de una charla o un podcast. «having» con «h» suave, aspirada, nunca la «j» española.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.let-me-start-with-a-story", "text": "Let me start with a quick story about the worst launch of my career.", "es": "Déjame empezar con una anécdota rápida sobre el peor lanzamiento de mi carrera.", "notes": "«story» aquí = anécdota. «career» = carrera profesional (no la universitaria: «degree»).", "explanation": "Una historia engancha más que una diapositiva de índice. «career» = «kə-RIIR», acento al final.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.by-a-show-of-hands", "text": "By a show of hands, how many of you have ever broken production?", "es": "A mano alzada, ¿cuántos habéis roto producción alguna vez?", "notes": "«by a show of hands» = a mano alzada. «break production» = tumbar el entorno real (jerga de programadores).", "explanation": "Para que el público participe desde el minuto uno. «hands» = «hændz», con la «a» abierta de «cat».", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-presenting.the-talk-is-split", "text": "The talk is split into three parts, and I'll leave time for questions at the end.", "es": "La charla tiene tres partes y dejaré tiempo para preguntas al final.", "notes": "«be split into» = estar dividido en.", "explanation": "Para que el público sepa qué esperar. «split into» se une: «SPLI-tin-tu».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.ill-walk-you-through", "text": "Over the next twenty minutes, I'll walk you through how we rebuilt our app from scratch.", "es": "En los próximos veinte minutos os voy a contar paso a paso cómo rehicimos nuestra app desde cero.", "notes": "«walk someone through» = explicar paso a paso (phrasal verb); «from scratch» = desde cero.", "explanation": "Para anunciar el hilo de la charla. «walk» sin «l»: «wok»; «through» = «zruu» con «th» entre los dientes.", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-presenting.feel-free-to-stop-me", "text": "Feel free to stop me if anything isn't clear.", "es": "Interrumpidme sin problema si algo no queda claro.", "notes": "«Feel free to» = no dudes en, con toda libertad.", "explanation": "Para charlas pequeñas o reuniones: invita a preguntar. «feel» y «free» con «i» larga.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.if-you-take-one-thing-away", "text": "If you take one thing away from this talk, let it be this: test early.", "es": "Si os quedáis con una sola idea de esta charla, que sea esta: probad pronto.", "notes": "«take away» = llevarse (una idea); de ahí «takeaway», la idea clave.", "explanation": "Para fijar el mensaje principal, al principio o al final. «let it be» se une: «LE-di-bii», con flap t.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.lets-hope-the-demo-gods", "text": "Let's hope the demo gods are on our side today.", "es": "Esperemos que los dioses de las demos estén de nuestro lado hoy.", "notes": "Broma típica antes de una demo en directo: todo el mundo sabe que pueden fallar.", "explanation": "Un toque de humor relaja al público. «gods» con «o» abierta: «gaadz».", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-presenting.bear-with-me", "text": "Bear with me a second while the page loads.", "es": "Dadme un segundo mientras carga la página.", "notes": "«Bear with me» = tened paciencia conmigo (no tiene nada que ver con «bear», oso).", "explanation": "Cuando algo tarda o falla en directo. «bear» = «ber», como «bare».", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-presenting.as-you-can-see-on-this-chart", "text": "As you can see on this chart, sign-ups doubled after the redesign.", "es": "Como podéis ver en este gráfico, los registros se duplicaron tras el rediseño.", "notes": "«double» = duplicarse (no «duplicate», que es copiar). «sign-ups» = registros de usuarios.", "explanation": "Para guiar la mirada del público. «doubled» = «DA-bəld», la «-ed» suena /d/.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.this-is-where-it-gets-interesting", "text": "And this is where it gets interesting.", "es": "Y aquí es donde se pone interesante.", "notes": "«get» + adjetivo = ponerse, volverse.", "explanation": "Para crear expectación antes del dato clave. «interesting» en tres sílabas: «IN-trə-sting».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.notice-the-spike", "text": "Notice the spike in traffic right after the launch.", "es": "Fijaos en el pico de tráfico justo después del lanzamiento.", "notes": "«notice» = fijarse en (no «notificar»). «a spike in» = un pico de.", "explanation": "Para señalar un detalle del gráfico. «notice» = «NOU-dis», con flap t.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.to-put-that-into-perspective", "text": "To put that into perspective, that's roughly a million requests a day.", "es": "Para que os hagáis una idea, son más o menos un millón de peticiones al día.", "notes": "«to put that into perspective» = para dar contexto a una cifra. «roughly» = aproximadamente.", "explanation": "Una cifra suelta no dice nada: compárala. «roughly» = «RAF-li», «gh» como «f».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.the-numbers-speak-for-themselves", "text": "Honestly, the numbers speak for themselves.", "es": "Sinceramente, los números hablan por sí solos.", "notes": "«speak for themselves» = hablar por sí solos.", "explanation": "Para rematar después de enseñar resultados. «themselves» = «ðəm-SELVZ», con «th» suave.", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-presenting.thats-a-great-question", "text": "That's a great question, and honestly, one we struggled with too.", "es": "Muy buena pregunta y, la verdad, una con la que nosotros también nos peleamos.", "notes": "«struggle with» = pelearse con, costarle a uno algo.", "explanation": "Para ganar unos segundos y empatizar con quien pregunta. «struggled» = «STRA-gəld», sin «e» delante de «s».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.let-me-make-sure-i-understand", "text": "Let me make sure I understand: you're asking about the costs at scale?", "es": "A ver si lo he entendido: ¿preguntas por los costes a gran escala?", "notes": "«at scale» = a gran escala, con muchos usuarios.", "explanation": "Reformular la pregunta te da tiempo y evita responder a otra cosa. «sure» = «shur».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.thats-slightly-outside-the-scope", "text": "That's slightly outside the scope of this talk, but I'm happy to chat afterwards.", "es": "Eso se sale un poco del tema de esta charla, pero encantado de hablarlo luego.", "notes": "«outside the scope» = fuera del alcance, del tema. «afterwards» = después.", "explanation": "Para esquivar una pregunta que no toca sin ser borde. «slightly» = «SLAIT-li».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-presenting.i-dont-have-the-figures-on-hand", "text": "I don't have the exact figures on hand, but I can follow up by email.", "es": "No tengo las cifras exactas a mano, pero te las paso por email.", "notes": "«on hand» = a mano. «follow up» = hacer un seguimiento, volver sobre algo (phrasal verb).", "explanation": "Mejor admitir que no lo sabes que inventar. «exact» = «ig-ZÆKT», con «gz».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-presenting.to-be-perfectly-honest", "text": "To be perfectly honest, we haven't tested that at scale yet.", "es": "Para ser totalmente sincero, aún no lo hemos probado a gran escala.", "notes": "«To be perfectly honest» = siendo totalmente sincero; anuncia una respuesta incómoda.", "explanation": "La honestidad da credibilidad ante un público técnico. «honest» empieza sin «h»: «O-nist».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.thats-a-fair-point", "text": "That's a fair point, and it's a trade-off we made on purpose.", "es": "Es una crítica justa, y es una concesión que hicimos a propósito.", "notes": "«a fair point» = un argumento razonable. «on purpose» = a propósito.", "explanation": "Para reconocer una crítica sin ponerte a la defensiva. «fair» = «fer», con «r» americana.", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.that-assumes", "text": "That assumes traffic stays flat, which isn't what we're seeing.", "es": "Eso da por hecho que el tráfico no crece, y no es lo que estamos viendo.", "notes": "«assume» = suponer, dar por hecho (no «asumir» una responsabilidad). «stay flat» = mantenerse estable.", "explanation": "Para rebatir una premisa con datos. «assumes» = «ə-SUUMZ».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.does-that-answer-your-question", "text": "Does that answer your question?", "es": "¿Responde eso a tu pregunta?", "notes": "«answer» va sin preposición: «answer a question», no «answer to».", "explanation": "Para cerrar cada respuesta. «answer» sin «w»: «ÆN-sər».", "register": "neutral", "situation": "trabajo" },
+    { "id": "c1-presenting.ill-keep-this-brief", "text": "I know your time is limited, so I'll keep this brief.", "es": "Sé que tenéis poco tiempo, así que seré breve.", "notes": "«keep it brief» = ser breve. Ante directivos, ve al grano.", "explanation": "Para empezar ante un comité o un jefe. «brief» con «i» larga: «briif».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-presenting.the-bottom-line-is", "text": "The bottom line is that we can cut costs by thirty percent this year.", "es": "En resumidas cuentas, podemos reducir los costes un treinta por ciento este año.", "notes": "«the bottom line» = lo esencial, el resultado final (viene de la última línea de las cuentas). «cut by» = reducir en.", "explanation": "Para dar la conclusión primero, como esperan los directivos. «bottom» = «BAA-dəm», con flap t.", "register": "neutral", "situation": "trabajo", "tags": ["expresiones"] },
+    { "id": "c1-presenting.my-recommendation-is", "text": "My recommendation is that we start with a small pilot in the spring.", "es": "Mi recomendación es que empecemos con un piloto pequeño en primavera.", "notes": "«recommend/suggest that we start»: tras «that» va el verbo sin «to».", "explanation": "Para proponer algo concreto y fácil de aprobar. «recommendation» = «re-kə-men-DEI-shən».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-presenting.what-we-need-from-you", "text": "What we need from you today is a decision on the budget.", "es": "Lo que necesitamos de vosotros hoy es una decisión sobre el presupuesto.", "notes": "Frase escindida «What we need… is…» para poner el foco en la petición.", "explanation": "Para que el comité sepa qué tiene que decidir. «need from» se une: «NEED-frəm».", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-presenting.to-wrap-things-up", "text": "To wrap things up, let me recap the three key points.", "es": "Para terminar, voy a repasar los tres puntos clave.", "notes": "«wrap up» = terminar, cerrar (phrasal verb). «recap» = resumir, repasar.", "explanation": "Para cerrar repitiendo lo esencial. «wrap» sin «w»: «ræp».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "c1-presenting.id-be-happy-to-take-questions", "text": "With that, I'd be happy to take any questions.", "es": "Y con esto, encantado de responder a vuestras preguntas.", "notes": "«take questions» = aceptar, responder preguntas. «With that» = con esto (cierro).", "explanation": "La frase clásica para abrir el turno de preguntas. «happy» con «h» aspirada.", "register": "formal", "situation": "trabajo" },
+    { "id": "c1-presenting.thank-you-all-for-your-time", "text": "Thank you all for your time and for some really great questions.", "es": "Gracias a todos por vuestro tiempo y por unas preguntas buenísimas.", "notes": "«Thank you all» = gracias a todos.", "explanation": "Para despedirte del público. «thank» con «th» entre los dientes, nunca «tank».", "register": "neutral", "situation": "trabajo" }
+  ],
+  "vocab": [
+    { "id": "c1-presenting.talk", "word": "talk", "article": "a", "plural": "talks", "es": "la charla, la ponencia", "notes": "«give a talk» = dar una charla. «keynote» = la charla principal de un congreso.", "example": "c1-presenting.the-talk-is-split", "situation": "trabajo", "image": "fluent:studio-microphone" },
+    { "id": "c1-presenting.audience", "word": "audience", "article": "an", "plural": "audiences", "es": "el público", "notes": "Para personas que escuchan; «public» casi nunca se usa así.", "situation": "trabajo" },
+    { "id": "c1-presenting.outline", "word": "outline", "article": "an", "plural": "outlines", "es": "el esquema, el índice (de una charla)", "situation": "trabajo" },
+    { "id": "c1-presenting.slide", "word": "slide", "article": "a", "plural": "slides", "es": "la diapositiva", "notes": "«slide deck» o «deck» = la presentación entera.", "situation": "trabajo" },
+    { "id": "c1-presenting.takeaway", "word": "takeaway", "article": "a", "plural": "takeaways", "es": "la idea clave, la conclusión", "notes": "Lo que el público se lleva: «key takeaways».", "example": "c1-presenting.if-you-take-one-thing-away", "situation": "trabajo" },
+    { "id": "c1-presenting.demo", "word": "demo", "article": "a", "plural": "demos", "es": "la demo, la demostración", "notes": "«a live demo» = una demo en directo.", "example": "c1-presenting.lets-hope-the-demo-gods", "situation": "trabajo", "image": "fluent:laptop" },
+    { "id": "c1-presenting.chart", "word": "chart", "article": "a", "plural": "charts", "es": "el gráfico", "notes": "«bar chart» = de barras; «pie chart» = de quesitos.", "example": "c1-presenting.as-you-can-see-on-this-chart", "situation": "trabajo", "image": "fluent:bar-chart" },
+    { "id": "c1-presenting.trend", "word": "trend", "article": "a", "plural": "trends", "es": "la tendencia", "notes": "«an upward trend» = una tendencia al alza.", "situation": "trabajo" },
+    { "id": "c1-presenting.spike", "word": "spike", "article": "a", "plural": "spikes", "es": "el pico (subida brusca)", "notes": "«a spike in traffic» = un pico de tráfico.", "example": "c1-presenting.notice-the-spike", "situation": "trabajo" },
+    { "id": "c1-presenting.figure", "word": "figure", "article": "a", "plural": "figures", "es": "la cifra", "notes": "En informes, «figures» = los números, los datos.", "example": "c1-presenting.i-dont-have-the-figures-on-hand", "situation": "trabajo" },
+    { "id": "c1-presenting.tangent", "word": "tangent", "article": "a", "plural": "tangents", "es": "la digresión", "notes": "«go off on a tangent» = irse por las ramas.", "situation": "trabajo" },
+    { "id": "c1-presenting.executive", "word": "executive", "article": "an", "plural": "executives", "es": "el directivo, la directiva", "notes": "Coloquialmente «execs». «C-level» = la alta dirección (CEO, CTO…).", "situation": "trabajo", "image": "fluent:briefcase" },
+    { "id": "c1-presenting.bottom-line", "word": "bottom line", "article": "a", "plural": "bottom lines", "es": "lo esencial, el resultado final", "notes": "Casi siempre «the bottom line».", "example": "c1-presenting.the-bottom-line-is", "situation": "trabajo" },
+    { "id": "c1-presenting.recommendation", "word": "recommendation", "article": "a", "plural": "recommendations", "es": "la recomendación", "example": "c1-presenting.my-recommendation-is", "situation": "trabajo" },
+    { "id": "c1-presenting.buy-in", "word": "buy-in", "es": "el apoyo, el respaldo (de quien decide)", "notes": "Incontable: «get buy-in from the execs» = conseguir el respaldo de la dirección.", "situation": "trabajo" },
+    { "id": "c1-presenting.next-steps", "word": "next steps", "es": "los próximos pasos", "notes": "Siempre en plural al cerrar: «What are the next steps?».", "situation": "trabajo" }
+  ],
+  "qa": [
+    {
+      "id": "c1-presenting.qa.how-long",
+      "question": "How long is your talk going to be?",
+      "questionEs": "¿Cuánto va a durar tu charla?",
+      "accepted": [
+        { "text": "About twenty minutes, plus ten for questions at the end.", "es": "Unos veinte minutos, más diez para preguntas al final." },
+        { "text": "It's split into three parts and should take around twenty minutes.", "es": "Tiene tres partes y debería durar unos veinte minutos." }
+      ],
+      "distractors": [
+        { "text": "It dures about twenty minutes.", "es": "Dura unos veinte minutos." },
+        { "text": "Twenty minutes, and after we make questions.", "es": "Veinte minutos, y después hacemos preguntas." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«durar» = «last» o «take»; «hacer preguntas» = «ask questions», nunca «make».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-presenting.qa.demo-fails",
+      "question": "Uh-oh, it looks like the demo isn't loading.",
+      "questionEs": "Vaya, parece que la demo no carga.",
+      "accepted": [
+        { "text": "Bear with me a second while I refresh the page.", "es": "Dadme un segundo mientras recargo la página." },
+        { "text": "No worries, I have a recording as a backup. Let me play it.", "es": "Tranquilos, tengo una grabación de reserva. Voy a ponerla." }
+      ],
+      "distractors": [
+        { "text": "Wait me a second while I refresh.", "es": "Esperadme un segundo mientras recargo." },
+        { "text": "Don't worry, I have a recording of security.", "es": "No os preocupéis, tengo una grabación de seguridad." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«esperar a alguien» = «wait for someone»; «copia de seguridad» = «backup».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-presenting.qa.chart",
+      "question": "Sorry, what exactly does this chart show?",
+      "questionEs": "Perdona, ¿qué muestra exactamente este gráfico?",
+      "accepted": [
+        { "text": "It shows that sign-ups doubled after the redesign.", "es": "Muestra que los registros se duplicaron tras el rediseño." },
+        { "text": "Notice the spike in traffic right after the launch. That's the key point.", "es": "Fíjate en el pico de tráfico justo después del lanzamiento. Esa es la clave." }
+      ],
+      "distractors": [
+        { "text": "It shows that the sign-ups duplicated after the redesign.", "es": "Muestra que los registros se duplicaron tras el rediseño." },
+        { "text": "Here we can see how the sign-ups have grown the double.", "es": "Aquí vemos cómo los registros han crecido el doble." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«duplicarse» = «double» («duplicate» = hacer una copia); «crecer el doble» = «double» a secas.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-presenting.qa.dont-know",
+      "question": "What was the exact cost of the migration?",
+      "questionEs": "¿Cuál fue el coste exacto de la migración?",
+      "accepted": [
+        { "text": "I don't have the exact figures on hand, but I can follow up by email.", "es": "No tengo las cifras exactas a mano, pero te las paso por email." },
+        { "text": "To be perfectly honest, I'd need to check. Can we talk after the session?", "es": "Siendo sincero, tendría que mirarlo. ¿Hablamos después de la sesión?" }
+      ],
+      "distractors": [
+        { "text": "I don't have the exact numbers in this moment.", "es": "No tengo los números exactos en este momento." },
+        { "text": "I don't know exactly, but I will send you it by email.", "es": "No lo sé exactamente, pero te lo mando por email." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«en este momento» = «right now» o «at the moment»; «te lo mando» = «I'll send it to you», no «send you it».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-presenting.qa.off-topic",
+      "question": "And what's your opinion on the new regulations on AI in Europe?",
+      "questionEs": "¿Y qué opinas de las nuevas normas sobre IA en Europa?",
+      "accepted": [
+        { "text": "That's slightly outside the scope of this talk, but I'm happy to chat afterwards.", "es": "Eso se sale un poco del tema de la charla, pero encantado de hablarlo luego." },
+        { "text": "Great question. Can we take that offline, so we have time for the others?", "es": "Muy buena pregunta. ¿Lo hablamos aparte, para que haya tiempo para los demás?" }
+      ],
+      "distractors": [
+        { "text": "That is out of the topic, but we can speak after.", "es": "Eso está fuera del tema, pero podemos hablar después." },
+        { "text": "It's very interesting, but I prefer not to enter in that.", "es": "Es muy interesante, pero prefiero no entrar en eso." }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "«fuera de tema» = «off topic» u «outside the scope»; «entrar en eso» = «get into that»; «take it offline» = hablarlo aparte.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-presenting.qa.bottom-line",
+      "question": "I've only got five minutes. What's the bottom line?",
+      "questionEs": "Solo tengo cinco minutos. ¿Qué es lo esencial?",
+      "accepted": [
+        { "text": "The bottom line is that we can cut costs by thirty percent this year.", "es": "En resumidas cuentas, podemos reducir los costes un treinta por ciento este año." },
+        { "text": "What we need from you today is a decision on the budget.", "es": "Lo que necesitamos de ti hoy es una decisión sobre el presupuesto." }
+      ],
+      "distractors": [
+        { "text": "Resuming, we can reduce thirty percent the costs.", "es": "Resumiendo, podemos reducir un treinta por ciento los costes." },
+        { "text": "What we need of you today is to decide the budget.", "es": "Lo que necesitamos de ti hoy es decidir el presupuesto." }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "«resumiendo» = «in short» o «to sum up» («resume» = reanudar); «necesitar algo de alguien» = «need something from someone».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-presenting.qa.wrap-up",
+      "question": "We're almost out of time. Could you wrap up?",
+      "questionEs": "Casi no nos queda tiempo. ¿Puedes ir terminando?",
+      "accepted": [
+        { "text": "Sure. To wrap things up, let me recap the three key points.", "es": "Claro. Para terminar, voy a repasar los tres puntos clave." },
+        { "text": "Of course. With that, I'd be happy to take any questions.", "es": "Por supuesto. Y con esto, encantado de responder preguntas." }
+      ],
+      "distractors": [
+        { "text": "Of course. For finish, I recapitulate the three points.", "es": "Por supuesto. Para terminar, recapitulo los tres puntos." },
+        { "text": "Sure, in conclusion I make a resume of the key points.", "es": "Claro, como conclusión hago un resumen de los puntos clave." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«para terminar» = «to finish» o «to wrap up» (nunca «for finish»); «resumen» = «summary» o «recap» («résumé» es un currículum).",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

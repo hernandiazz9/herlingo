@@ -1,0 +1,95 @@
+{
+  "id": "story.en-c1-devils-advocate",
+  "order": 310,
+  "title": "Devil's advocate",
+  "titleEs": "Abogado del diablo",
+  "description": "En una cena con amigos se debate de todo: teletrabajo, inteligencia artificial y alquileres en Chicago. Al final, la discusión acaba en la decisión de Pablo.",
+  "emoji": "🍷",
+  "situation": "opiniones",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "On Saturday, Maya and Jordan host a dinner party for a few friends.", "es": "El sábado, Maya y Jordan organizan una cena en casa para unos cuantos amigos." },
+    { "id": "s2", "text": "By the second bottle of wine, the conversation has turned into a debate.", "es": "Para la segunda botella de vino, la conversación se ha convertido en un debate." },
+    { "id": "s3", "text": "Emma, a designer, starts with remote work.", "es": "Emma, una diseñadora, empieza con el teletrabajo." },
+    { "id": "s4", "text": "«I get far more done at home, without constant interruptions.»", "es": "«En casa rindo muchísimo más, sin interrupciones constantes.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«That said, junior developers arguably lose the most when everyone works remotely.»", "es": "«Dicho esto, podría decirse que los programadores júnior son los que más pierden cuando todos teletrabajan.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s6", "text": "Then Jordan's friend Andrew brings up AI, and everyone has an opinion.", "es": "Luego Andrew, un amigo de Jordan, saca el tema de la inteligencia artificial, y todo el mundo tiene una opinión." },
+    { "id": "s7", "text": "«There's a lot of hype around AI, and not all of it is justified.»", "es": "«Hay mucho bombo con la inteligencia artificial, y no todo está justificado.»", "voice": "en-US-BrianNeural" },
+    { "id": "s8", "text": "«It's a double-edged sword: incredibly useful, but very easy to misuse.»", "es": "«Es un arma de doble filo: increíblemente útil, pero muy fácil de usar mal.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s9", "text": "Finally, they get to rents, and the room heats up.", "es": "Al final, llegan a los alquileres, y el ambiente se calienta." },
+    { "id": "s10", "text": "«Housing in big cities has become unaffordable for most young people.»", "es": "«La vivienda en las grandes ciudades se ha vuelto inasequible para la mayoría de los jóvenes.»", "voice": "en-US-BrianNeural" },
+    { "id": "s11", "text": "«So move to Spain! Rents are cheaper, the food is better and the weather is perfect.»", "es": "«¡Pues vete a vivir a España! Los alquileres son más baratos, la comida es mejor y el tiempo es perfecto.»", "voice": "en-US-BrianNeural" },
+    { "id": "s12", "text": "Everyone looks at Pablo, who smiles and puts down his fork.", "es": "Todos miran a Pablo, que sonríe y deja el tenedor." },
+    { "id": "s13", "text": "«Let me play devil's advocate for a second.»", "es": "«Déjame hacer de abogado del diablo un momento.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s14", "text": "«Salaries in Spain are much lower, so you can't really compare the two. It's apples and oranges.»", "es": "«En España los sueldos son mucho más bajos, así que no se pueden comparar. Es como comparar peras con manzanas.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s15", "text": "«And it's not black and white: I'd miss all of you, and my career here.»", "es": "«Y no es blanco o negro: os echaría de menos a todos, y también mi carrera aquí.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s16", "text": "«I'll concede that point,» says Jordan, «but you've been arguing against yourself all night.»", "es": "«Eso te lo concedo», dice Jordan, «pero llevas toda la noche discutiendo contigo mismo.»" },
+    { "id": "s17", "text": "Pablo laughs, but he knows his friend has hit the nail on the head.", "es": "Pablo se ríe, pero sabe que su amigo ha dado en el clavo." }
+  ],
+  "keywords": [
+    "c1-society.i-get-far-more-done-at-home",
+    "c1-society.junior-developers-lose-the-most",
+    "c1-society.hype",
+    "c1-society.double-edged-sword",
+    "c1-society.affordable",
+    "c1-society.devils-advocate",
+    "c1-society.apples-and-oranges",
+    "c1-society.its-not-black-and-white",
+    "c1-society.concede",
+    "c1-idioms.hit-the-nail-on-the-head"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "According to Emma, who loses the most with remote work?",
+      "es": "Según Emma, ¿quién pierde más con el teletrabajo?",
+      "options": [
+        { "text": "Managers.", "es": "Los jefes." },
+        { "text": "Designers.", "es": "Los diseñadores." },
+        { "text": "Junior developers.", "es": "Los programadores júnior." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "What does Andrew think about AI?",
+      "es": "¿Qué piensa Andrew de la inteligencia artificial?",
+      "options": [
+        { "text": "That there's a lot of exaggerated excitement about it.", "es": "Que hay mucho entusiasmo exagerado en torno a ella." },
+        { "text": "That it will replace all programmers.", "es": "Que sustituirá a todos los programadores." },
+        { "text": "That it's completely useless.", "es": "Que es totalmente inútil." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Why does Pablo say Chicago and Spain are hard to compare?",
+      "es": "¿Por qué dice Pablo que Chicago y España son difíciles de comparar?",
+      "options": [
+        { "text": "Because the weather is the same.", "es": "Porque el tiempo es el mismo." },
+        { "text": "Because salaries in Spain are much lower.", "es": "Porque los sueldos en España son mucho más bajos." },
+        { "text": "Because he has never lived in Spain.", "es": "Porque nunca ha vivido en España." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "What does Jordan notice about Pablo?",
+      "es": "¿De qué se da cuenta Jordan sobre Pablo?",
+      "options": [
+        { "text": "That he's been arguing against himself.", "es": "De que ha estado discutiendo consigo mismo." },
+        { "text": "That he wants to buy a flat in Chicago.", "es": "De que quiere comprarse un piso en Chicago." },
+        { "text": "That he doesn't like the food.", "es": "De que no le gusta la comida." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "c1-society.i-get-far-more-done-at-home", "gap": "get far more done", "distractors": ["do far more done", "get far more made"] },
+    { "id": "g2", "sentence": "s7", "answer": "c1-society.hype", "gap": "hype", "distractors": ["boom", "hyper"] },
+    { "id": "g3", "sentence": "s8", "answer": "c1-society.double-edged-sword", "gap": "double-edged sword", "distractors": ["double-edged weapon", "two-edged arm"] },
+    { "id": "g4", "sentence": "s10", "answer": "c1-society.affordable", "gap": "unaffordable", "distractors": ["inaffordable", "unaccessible"] },
+    { "id": "g5", "sentence": "s14", "answer": "c1-society.apples-and-oranges", "gap": "apples and oranges", "distractors": ["pears and apples", "apples and pears"] },
+    { "id": "g6", "sentence": "s16", "answer": "c1-society.concede", "gap": "concede", "distractors": ["conceed", "accord"] }
+  ]
+}

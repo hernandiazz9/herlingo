@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button, Picture } from "@/components/ui";
+import { Button, Picture, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { PictureChoiceExercise as PictureChoice, PictureOption } from "@/lib/exercises";
 import { PlayControls, Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
@@ -76,7 +76,7 @@ export function PictureChoiceExercise({ exercise, answered, onAnswer }: Exercise
                   className={cn("min-h-7 text-center text-lg font-bold leading-tight", !showWord && "invisible")}
                   aria-hidden={!showWord}
                 >
-                  {option.text}
+                  <TargetText text={option.text} lang={lang} />
                 </span>
               </button>
             </li>

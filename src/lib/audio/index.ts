@@ -17,11 +17,12 @@
  * - A generated playable (`generatedPlayable(text, voice)`: Prepárate lines, `audioKey` "gen:…")
  *   plays its mp3 from Cache Storage, else downloads it once through the registered source (the
  *   coach TTS endpoint, see `./generated`) and caches it; no mp3 → speechSynthesis.
+ * - The pack's stress marks (`pack.json` `stress`) are stripped from every text sent to a voice.
  * - `slow: true` plays at `SLOW_RATE` (mp3 keeps its pitch). With the "Audio lento" setting on
  *   (`@/lib/progress/settings`), everything plays slow.
  * - The first tap/key anywhere unlocks audio for iOS (see `unlockOnFirstGesture`).
  */
-import { getPack, type Playable } from "@/lib/content";
+import { getPack, stripStress, type Playable } from "@/lib/content";
 import { getActiveLang, subscribeActiveLang } from "@/lib/content/active";
 import { getSettings } from "@/lib/progress/settings";
 import { isGenerated, playGenerated } from "./generated";
@@ -68,10 +69,11 @@ export function speak(input: SpeakInput, options: SpeakOptions = {}): Promise<vo
   stop();
   const my = generation;
   const { meta } = getPack(options.lang ?? getActiveLang() ?? undefined);
-  const text = typeof input === "string" ? input : input.text;
+  // Written stress marks are for the eyes: never sent to a voice.
+  const text = stripStress(typeof input === "string" ? input : input.text, meta);
   const rate = options.slow || getSettings().slowAudio ? SLOW_RATE : 1;
   if (typeof input !== "string" && isGenerated(input)) {
-    return playGenerated(input, rate, () => my === generation, () => ttsSpeak(text, meta.speechLocale, rate));
+    return playGenerated({ ...input, text }, rate, () => my === generation, () => ttsSpeak(text, meta.speechLocale, rate));
   }
   const url = typeof input === "string" ? undefined : mp3Url(meta.lang, input.audioKey);
   if (!url) return ttsSpeak(text, meta.speechLocale, rate);

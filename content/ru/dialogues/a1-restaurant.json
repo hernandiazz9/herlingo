@@ -1,0 +1,68 @@
+{
+  "id": "dlg.ru-a1-restaurant",
+  "title": "Cena y la cuenta",
+  "description": "En un restaurante ruso: pides borsch y pelmeni, dices qué te parece la comida y pagas la cuenta.",
+  "situation": "comida",
+  "unit": "ru-a1-food",
+  "order": 6,
+  "register": "vy",
+  "level": "A1",
+  "avatars": { "Camarero": "fluent:man-in-tuxedo" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Camarero", "text": "До́брый ве́чер! Вы гото́вы заказа́ть?", "es": "¡Buenas noches! ¿Está listo para pedir?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide borsch de primero y pelmeni de segundo.",
+      "options": [
+        { "text": "Да. На пе́рвое борщ, а на второ́е пельме́ни.", "es": "Sí. De primero, borsch, y de segundo, pelmeni.", "verdict": "correct", "feedback": "¡Muy bien! «На пе́рвое» y «на второ́е» son el primer y el segundo plato." },
+        { "text": "Борщ и пельме́ни, пожа́луйста.", "es": "Borsch y pelmeni, por favor.", "verdict": "acceptable", "feedback": "Perfectamente claro; «на пе́рвое… на второ́е» es como lo diría un ruso." },
+        { "text": "Да. Пе́рвый борщ, второ́й пельме́ни.", "es": "Sí. Primer borsch, segundo pelmeni.", "verdict": "wrong", "feedback": "Para los platos se dice «на пе́рвое» y «на второ́е»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Camarero", "text": "Отли́чный вы́бор. Что вы бу́дете пить?", "es": "Excelente elección. ¿Qué va a beber?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pide una botella de agua.",
+      "options": [
+        { "text": "Буты́лку воды́, пожа́луйста.", "es": "Una botella de agua, por favor.", "verdict": "correct", "feedback": "¡Perfecto! «Буты́лку воды́»: una botella de agua." },
+        { "text": "Во́ду, пожа́луйста.", "es": "Agua, por favor.", "verdict": "acceptable", "feedback": "Se entiende; «буты́лку воды́» es más preciso." },
+        { "text": "Буты́лка вода́, пожа́луйста.", "es": "Botella agua, por favor.", "verdict": "wrong", "feedback": "Las dos palabras cambian al pedir: «буты́лку воды́»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Camarero", "text": "Ну как? Вам нра́вится?", "es": "¿Qué tal? ¿Le gusta?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que está muy rico.",
+      "options": [
+        { "text": "О́чень вку́сно, спаси́бо!", "es": "¡Está muy rico, gracias!", "verdict": "correct", "feedback": "¡Genial! «О́чень вку́сно» es el mejor cumplido para la cocina." },
+        { "text": "Да, норма́льно.", "es": "Sí, está bien.", "verdict": "acceptable", "feedback": "Correcto, pero «норма́льно» suena tibio; «О́чень вку́сно!» alegra más." },
+        { "text": "Да, я о́чень вку́сный!", "es": "¡Sí, yo estoy muy rico!", "verdict": "wrong", "feedback": "«Я вку́сный» dice que el rico eres tú; para la comida: «О́чень вку́сно!»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Camarero", "text": "Спаси́бо! Что́-нибудь ещё? Десе́рт, чай?", "es": "¡Gracias! ¿Algo más? ¿Postre, té?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que no y pide la cuenta con educación.",
+      "options": [
+        { "text": "Нет, спаси́бо. Принеси́те, пожа́луйста, счёт.", "es": "No, gracias. ¿Me trae la cuenta, por favor?", "verdict": "correct", "feedback": "¡Perfecto! «Принеси́те» es la forma educada de pedir que te traigan algo." },
+        { "text": "Счёт, пожа́луйста.", "es": "La cuenta, por favor.", "verdict": "acceptable", "feedback": "Muy natural y corto; también vale." },
+        { "text": "Нет, спаси́бо. Принеси́, пожа́луйста, счёт.", "es": "No, gracias. Tráeme la cuenta, por favor.", "verdict": "wrong", "feedback": "«Принеси́» es de tú; al camarero: «принеси́те»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Camarero", "text": "Вот ваш счёт. Ты́сяча восемьсо́т рубле́й. Ка́ртой и́ли нали́чными?", "es": "Aquí tiene la cuenta. Mil ochocientos rublos. ¿Con tarjeta o en efectivo?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l5",
+      "speaker": "learner",
+      "prompt": "Paga en efectivo con dos mil y dile que se quede con el cambio.",
+      "options": [
+        { "text": "Нали́чными. Вот две ты́сячи, сда́чи не на́до.", "es": "En efectivo. Aquí tiene dos mil; quédese con el cambio.", "verdict": "correct", "feedback": "¡Muy bien! «Сда́чи не на́до» = quédese con el cambio." },
+        { "text": "Нали́чными.", "es": "En efectivo.", "verdict": "acceptable", "feedback": "Correcto; si quieres dejar propina, añade «сда́чи не на́до»." },
+        { "text": "Нали́чные. Вот две ты́сячи, сда́чи не на́до.", "es": "El efectivo. Aquí tiene dos mil; quédese con el cambio.", "verdict": "wrong", "feedback": "«Нали́чные» es «el efectivo»; para decir «en efectivo»: «нали́чными»." }
+      ]
+    }
+  ]
+}

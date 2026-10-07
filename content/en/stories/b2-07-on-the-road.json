@@ -1,0 +1,101 @@
+{
+  "id": "story.en-b2-on-the-road",
+  "order": 207,
+  "title": "On the road",
+  "titleEs": "En la carretera",
+  "description": "El grupo de Jordan sale de gira por el Medio Oeste, y Pablo organiza un viaje en coche para ir a verlos.",
+  "emoji": "🚐",
+  "situation": "viajes",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "The festival in Milwaukee went so well that Jordan's band got invited on a tour.", "es": "El festival de Milwaukee salió tan bien que invitaron al grupo de Jordan a una gira." },
+    { "id": "s2", "text": "It's six shows in ten days, from Madison to Minneapolis.", "es": "Son seis conciertos en diez días, de Madison a Minneapolis." },
+    { "id": "s3", "text": "Pablo and Maya decide to join them for the last weekend.", "es": "Pablo y Maya deciden unirse a ellos el último fin de semana." },
+    { "id": "s4", "text": "«Let's rent a car and make it a road trip!»", "es": "«¡Alquilemos un coche y hagamos un viaje por carretera!»", "voice": "en-US-AndrewNeural" },
+    { "id": "s5", "text": "Maya isn't so sure about the cost.", "es": "Maya no lo tiene tan claro por el dinero." },
+    { "id": "s6", "text": "«We're on a tight budget, so we're staying in hostels.»", "es": "«Vamos justos de presupuesto, así que dormimos en albergues.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s7", "text": "Pablo spends the whole evening on his laptop with a map.", "es": "Pablo se pasa toda la tarde con el portátil y un mapa." },
+    { "id": "s8", "text": "«We've mapped out a rough itinerary, but we're keeping it flexible.»", "es": "«Hemos trazado un itinerario aproximado, pero lo mantenemos flexible.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "«And it's way cheaper if you book in advance.»", "es": "«Y sale muchísimo más barato si reservas con antelación.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s10", "text": "He books two beds in a hostel near the venue in Minneapolis.", "es": "Reserva dos camas en un albergue cerca de la sala de Minneapolis." },
+    { "id": "s11", "text": "«On Sunday, I'd like to squeeze in a day trip to a lake.»", "es": "«El domingo me gustaría hacer hueco para una excursión a un lago.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "Maya laughs and looks at the long list on the screen.", "es": "Maya se ríe y mira la larga lista en la pantalla." },
+    { "id": "s13", "text": "«You've planned every single minute, Pablo!»", "es": "«¡Lo has planeado todo al minuto, Pablo!»", "voice": "en-US-EmmaNeural" },
+    { "id": "s14", "text": "«Fine. Once we get there, let's play it by ear.»", "es": "«Vale. Cuando lleguemos, ya improvisaremos sobre la marcha.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s15", "text": "That night, Jordan sends them a photo from the band's old van.", "es": "Esa noche, Jordan les manda una foto desde la vieja furgoneta del grupo." },
+    { "id": "s16", "text": "«Day three of the tour. See you in Minneapolis, guys!»", "es": "«Tercer día de gira. ¡Nos vemos en Minneapolis, chicos!»", "voice": "en-US-BrianNeural" }
+  ],
+  "keywords": [
+    {
+      "id": "story-en-tour",
+      "word": "tour",
+      "article": "a",
+      "plural": "tours",
+      "es": "la gira",
+      "notes": "Serie de conciertos en varias ciudades. «To go on tour» = irse de gira; «to be on tour» = estar de gira. También significa «visita guiada» (a tour of the city).",
+      "situation": "cultura"
+    },
+    "b2-travel.road-trip",
+    "b2-travel.were-on-a-tight-budget",
+    "b2-travel.weve-mapped-out-a-rough-itinerary",
+    "b2-travel.its-way-cheaper-if-you-book-in-advance",
+    "b2-travel.hostel",
+    "b2-culture.venue",
+    "b2-travel.id-like-to-squeeze-in-a-day-trip",
+    "b2-travel.lets-play-it-by-ear"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why is Jordan's band going on tour?",
+      "es": "¿Por qué se va de gira el grupo de Jordan?",
+      "options": [
+        { "text": "Their new album is number one.", "es": "Su nuevo disco es número uno." },
+        { "text": "They did really well at the festival.", "es": "Les fue muy bien en el festival." },
+        { "text": "Mrs. Carter paid for it.", "es": "Mrs. Carter se lo pagó." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Why does Maya want to stay in hostels?",
+      "es": "¿Por qué quiere Maya dormir en albergues?",
+      "options": [
+        { "text": "They don't have much money.", "es": "No tienen mucho dinero." },
+        { "text": "The hotels are all full.", "es": "Los hoteles están todos llenos." },
+        { "text": "She wants to meet other travelers.", "es": "Quiere conocer a otros viajeros." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What does Pablo want to do on Sunday?",
+      "es": "¿Qué quiere hacer Pablo el domingo?",
+      "options": [
+        { "text": "Sleep late at the hostel.", "es": "Dormir hasta tarde en el albergue." },
+        { "text": "See another show.", "es": "Ver otro concierto." },
+        { "text": "Visit a lake for the day.", "es": "Pasar el día en un lago." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "What does Maya think of Pablo's plan?",
+      "es": "¿Qué piensa Maya del plan de Pablo?",
+      "options": [
+        { "text": "It's far too detailed.", "es": "Que está demasiado detallado." },
+        { "text": "It's too expensive.", "es": "Que es demasiado caro." },
+        { "text": "It's too short.", "es": "Que es demasiado corto." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "b2-travel.road-trip", "distractors": ["road travel", "car journey"] },
+    { "id": "g2", "sentence": "s6", "answer": "b2-travel.were-on-a-tight-budget", "gap": "tight", "distractors": ["narrow", "short"] },
+    { "id": "g3", "sentence": "s8", "answer": "b2-travel.weve-mapped-out-a-rough-itinerary", "gap": "mapped out", "distractors": ["mapped off", "mapped in"] },
+    { "id": "g4", "sentence": "s9", "answer": "b2-travel.its-way-cheaper-if-you-book-in-advance", "gap": "in advance", "distractors": ["in before", "on advance"] },
+    { "id": "g5", "sentence": "s11", "answer": "b2-travel.id-like-to-squeeze-in-a-day-trip", "gap": "squeeze in", "distractors": ["squeeze out", "press in"] },
+    { "id": "g6", "sentence": "s14", "answer": "b2-travel.lets-play-it-by-ear", "gap": "by ear", "distractors": ["by heart", "by hand"] }
+  ]
+}

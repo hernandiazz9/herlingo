@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { MiniPlay, Prompt, useLessonLang, usePlay } from "@/components/exercises";
-import { Button } from "@/components/ui";
+import { Button, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { OrderStep } from "@/lib/stories";
 
@@ -51,7 +51,7 @@ export function OrderExercise({ step, onDone }: { step: OrderStep; onDone: (mist
                   {i + 1}
                 </span>
                 <span lang={lang} className="flex-1 text-base font-bold text-success-deep">
-                  {s.text}
+                  <TargetText text={s.text} lang={lang} />
                 </span>
                 {finished ? <MiniPlay audio={s} label={`Escuchar la frase ${i + 1}`} /> : null}
               </li>
@@ -78,7 +78,7 @@ export function OrderExercise({ step, onDone }: { step: OrderStep; onDone: (mist
                       : "border-line bg-surface text-ink [--ledge:var(--line)]",
                   )}
                 >
-                  {byId.get(id)!.text}
+                  <TargetText text={byId.get(id)!.text} lang={lang} />
                 </button>
               </li>
             ))}

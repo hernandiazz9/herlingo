@@ -1,0 +1,448 @@
+{
+  "id": "b2-grammar",
+  "order": 290,
+  "level": "B2",
+  "title": "Gramática B2",
+  "description": "Hablar de lo que pudo pasar, hacer deducciones, contar lo que dijo otro, matizar el futuro y unir ideas que se contradicen.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "b2-grammar.l.what-if",
+      "title": "Lo que pudo ser: condicionales, deseos y deducciones",
+      "items": [
+        "gram.en-b2-third-conditional",
+        "b2-grammar.if-id-left-earlier",
+        "b2-grammar.if-youd-told-me",
+        "gram.en-b2-wish-if-only",
+        "b2-grammar.i-wish-i-had-more-time",
+        "b2-grammar.i-wish-i-hadnt-said-that",
+        "b2-grammar.if-only-wed-tested-it",
+        "gram.en-b2-modals-of-deduction",
+        "b2-grammar.she-must-have-forgotten",
+        "b2-grammar.he-cant-have-finished",
+        "b2-grammar.they-might-have-gotten-lost",
+        "b2-grammar.qa.missed-train",
+        "b2-grammar.qa.maya-late"
+      ]
+    },
+    {
+      "id": "b2-grammar.l.passive-reported",
+      "title": "Pasiva y estilo indirecto",
+      "items": [
+        "gram.en-b2-passive-have-done",
+        "b2-grammar.the-bug-is-being-fixed",
+        "b2-grammar.it-will-be-delivered-tomorrow",
+        "b2-grammar.i-need-to-get-my-phone-fixed",
+        "gram.en-b2-reported-speech",
+        "b2-grammar.she-told-me-she-had-sent-it",
+        "b2-grammar.he-asked-me-if-i-could-stay",
+        "b2-grammar.she-refused-to-change-the-deadline",
+        "b2-grammar.qa.what-did-he-ask"
+      ]
+    },
+    {
+      "id": "b2-grammar.l.relatives-future",
+      "title": "Relativos con comas y el futuro con matices",
+      "items": [
+        "gram.en-b2-relative-clauses",
+        "b2-grammar.my-brother-who-lives-in-madrid",
+        "b2-grammar.chicago-which-is-on-lake-michigan",
+        "gram.en-b2-future-continuous-perfect",
+        "b2-grammar.this-time-tomorrow",
+        "b2-grammar.will-you-be-using-the-car",
+        "b2-grammar.by-next-year",
+        "b2-grammar.qa.this-time-tomorrow"
+      ]
+    },
+    {
+      "id": "b2-grammar.l.linking-verbs",
+      "title": "Contrastes, verbos con doble sentido y phrasal verbs largos",
+      "items": [
+        "gram.en-b2-contrast-linkers",
+        "b2-grammar.although",
+        "b2-grammar.although-it-was-raining",
+        "b2-grammar.despite",
+        "b2-grammar.despite-the-delay",
+        "b2-grammar.however",
+        "b2-grammar.whereas",
+        "gram.en-b2-gerund-infinitive-meaning",
+        "b2-grammar.i-remember-meeting-her",
+        "b2-grammar.remember-to-lock-the-door",
+        "b2-grammar.we-stopped-to-get-coffee",
+        "gram.en-b2-phrasal-verbs-two-particles",
+        "b2-grammar.put-up-with",
+        "b2-grammar.i-cant-put-up-with-this-noise",
+        "b2-grammar.look-forward-to",
+        "b2-grammar.get-along-with",
+        "b2-grammar.catch-up-with",
+        "b2-grammar.keep-up-with",
+        "b2-grammar.cut-down-on",
+        "b2-grammar.get-away-with",
+        "b2-grammar.go-along-with",
+        "b2-grammar.face-up-to",
+        "b2-grammar.get-around-to",
+        "b1-grammar.come-up-with",
+        "b1-grammar.run-out-of",
+        "b2-grammar.qa.despite"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.en-b2-third-conditional",
+      "title": "Tercer condicional (if I had known…)",
+      "summary": "Para imaginar un pasado distinto que ya no se puede cambiar: «If I'd known, I would have called» = si lo hubiera sabido, habría llamado.",
+      "points": [
+        "Estructura: if + had + participio, would have + participio.",
+        "Nunca «would» en la parte del «if»: «If I had known», no «If I would have known».",
+        "Al hablar, «I'd» puede ser «I had» (parte del if) o «I would» (resultado): «If I'd known, I'd have called».",
+        "«would have» suena «WU-də»: «I'd've called»."
+      ],
+      "table": [
+        ["", "condición (pasado)", "resultado imaginado"],
+        ["afirmativo", "If I had left earlier,", "I would have caught the train."],
+        ["negativo", "If you hadn't helped me,", "I wouldn't have finished."]
+      ],
+      "examples": [
+        { "text": "If I'd left earlier, I wouldn't have missed the train.", "es": "Si hubiera salido antes, no habría perdido el tren." },
+        { "text": "If you'd told me, I would have helped.", "es": "Si me lo hubieras dicho, te habría ayudado." }
+      ],
+      "tags": ["condicionales"]
+    },
+    {
+      "id": "gram.en-b2-wish-if-only",
+      "title": "Wish e if only (ojalá)",
+      "summary": "«wish» e «if only» expresan deseos o lamentos. El verbo va un paso atrás en el pasado: presente → pasado simple, pasado → past perfect.",
+      "points": [
+        "Deseo sobre el presente: «I wish I had more time» (ojalá tuviera).",
+        "Lamento sobre el pasado: «I wish I hadn't said that» (ojalá no hubiera dicho).",
+        "Queja sobre lo que otro hace: «I wish you would stop» (ojalá dejaras de…).",
+        "«If only» es igual pero más intenso: «If only we'd tested it!».",
+        "Con «be» se oye «I wish I were» (más cuidado) y «I wish I was» (coloquial)."
+      ],
+      "table": [
+        ["deseo sobre…", "estructura", "ejemplo"],
+        ["el presente", "wish + pasado simple", "I wish I lived closer."],
+        ["el pasado", "wish + had + participio", "I wish I'd studied more."],
+        ["lo que otro hace", "wish + would", "I wish he would call."]
+      ],
+      "examples": [
+        { "text": "I wish I had more time.", "es": "Ojalá tuviera más tiempo." },
+        { "text": "I wish I hadn't said that.", "es": "Ojalá no hubiera dicho eso." },
+        { "text": "If only we'd tested it properly.", "es": "Ojalá lo hubiéramos probado bien." }
+      ],
+      "tags": ["deseos"]
+    },
+    {
+      "id": "gram.en-b2-modals-of-deduction",
+      "title": "Deducciones sobre el pasado (must have, can't have, might have)",
+      "summary": "Para sacar conclusiones sobre lo que pasó: modal + have + participio. Según lo seguro que estés, eliges el modal.",
+      "points": [
+        "«must have» = seguro que sí (debe de haber…).",
+        "«can't have» o «couldn't have» = seguro que no (no puede haber…). Nunca «mustn't have» en este sentido.",
+        "«might have», «may have», «could have» = quizá (puede que haya…).",
+        "Al hablar, «have» se reduce: «must've» = «MAS-təv», «might've» = «MAI-dəv»."
+      ],
+      "table": [
+        ["seguridad", "modal", "ejemplo"],
+        ["casi seguro que sí", "must have", "She must have forgotten."],
+        ["quizá", "might / may / could have", "They might have gotten lost."],
+        ["casi seguro que no", "can't / couldn't have", "He can't have finished already."]
+      ],
+      "examples": [
+        { "text": "She must have forgotten about the meeting.", "es": "Se le debe de haber olvidado la reunión." },
+        { "text": "He can't have finished already.", "es": "No puede haber terminado ya." }
+      ],
+      "tags": ["modales"]
+    },
+    {
+      "id": "gram.en-b2-passive-have-done",
+      "title": "La pasiva en todos los tiempos y have/get something done",
+      "summary": "La pasiva es «be» en el tiempo que toque + participio; se usa mucho más que en español, donde decimos «se arregla» o «están arreglando». «have/get something done» = que te hagan algo (un servicio).",
+      "points": [
+        "Presente continuo: «is being fixed»; perfecto: «has been fixed»; futuro: «will be delivered».",
+        "Quién lo hace, solo si importa, con «by»: «It was designed by Maya».",
+        "«get my phone fixed» = llevar el móvil a arreglar; «have my hair cut» = cortarme el pelo (en la peluquería).",
+        "«get» es más coloquial que «have» y es lo más habitual al hablar."
+      ],
+      "table": [
+        ["tiempo", "activa", "pasiva"],
+        ["presente continuo", "They're fixing the bug.", "The bug is being fixed."],
+        ["present perfect", "They've canceled it.", "It's been canceled."],
+        ["futuro", "They'll deliver it.", "It will be delivered."],
+        ["servicio", "Someone fixes my phone.", "I get my phone fixed."]
+      ],
+      "examples": [
+        { "text": "The bug is being fixed right now.", "es": "Están arreglando el fallo ahora mismo." },
+        { "text": "I need to get my phone fixed.", "es": "Tengo que llevar el móvil a arreglar." }
+      ],
+      "tags": ["pasiva"]
+    },
+    {
+      "id": "gram.en-b2-reported-speech",
+      "title": "Estilo indirecto: tiempos, preguntas y verbos para contar",
+      "summary": "Al contar lo que dijo alguien, el verbo suele dar un paso atrás en el pasado; las preguntas indirectas tienen el orden de una afirmación.",
+      "points": [
+        "Paso atrás: «I've sent it» → «She said she had sent it»; «I'll call» → «He said he would call».",
+        "Si sigue siendo verdad, se puede mantener: «She said she lives in Pilsen».",
+        "Preguntas: sin «do» y con el orden sujeto + verbo: «He asked me if I could stay», no «if could I stay».",
+        "«say» sin persona («she said that…»), «tell» con persona («she told me that…»); nunca «she said me».",
+        "Verbos para contar: «refuse to», «offer to», «promise to», «recommend + -ing», «suggest + -ing»."
+      ],
+      "table": [
+        ["dijo", "lo cuentas"],
+        ["\"I'm tired.\"", "She said she was tired."],
+        ["\"I've sent it.\"", "She told me she had sent it."],
+        ["\"Can you stay late?\"", "He asked me if I could stay late."],
+        ["\"Where do you live?\"", "She asked me where I lived."]
+      ],
+      "examples": [
+        { "text": "She told me she had already sent it.", "es": "Me dijo que ya lo había enviado." },
+        { "text": "He asked me if I could stay late.", "es": "Me preguntó si podía quedarme hasta tarde." }
+      ],
+      "tags": ["estilo-indirecto"]
+    },
+    {
+      "id": "gram.en-b2-relative-clauses",
+      "title": "Relativos especificativos y explicativos (con comas)",
+      "summary": "Sin comas, el relativo dice de cuál hablas; con comas, solo añade información extra. Las comas cambian las reglas.",
+      "points": [
+        "Sin comas: «who», «which» o «that»; si el relativo es objeto, se puede omitir: «the app (that) I use».",
+        "Con comas: solo «who» o «which», nunca «that», y no se omite: «My brother, who lives in Madrid, …».",
+        "Al hablar, las comas son pausas: cambia el tono.",
+        "«which» puede referirse a toda la frase anterior: «He was late, which annoyed everyone»."
+      ],
+      "table": [
+        ["tipo", "ejemplo", "¿that?"],
+        ["especificativo", "The app (that) I use is free.", "sí"],
+        ["explicativo", "Chicago, which is on Lake Michigan, is windy.", "no"]
+      ],
+      "examples": [
+        { "text": "My brother, who lives in Madrid, is a doctor.", "es": "Mi hermano, que vive en Madrid, es médico." },
+        { "text": "The app I use for running is free.", "es": "La aplicación que uso para correr es gratis." }
+      ],
+      "tags": ["relativos"]
+    },
+    {
+      "id": "gram.en-b2-future-continuous-perfect",
+      "title": "Futuro continuo y futuro perfecto",
+      "summary": "«will be + -ing» = lo que estará pasando en un momento del futuro. «will have + participio» = lo que ya estará hecho antes de un momento del futuro.",
+      "points": [
+        "Futuro continuo: «This time tomorrow I'll be flying».",
+        "También sirve para preguntar planes con educación: «Will you be using the car tonight?».",
+        "Futuro perfecto con «by» (como muy tarde): «By next year I'll have finished».",
+        "«I'll have» se dice rápido: «ai-ləv»."
+      ],
+      "table": [
+        ["", "estructura", "ejemplo"],
+        ["en curso", "will be + -ing", "I'll be working at nine."],
+        ["terminado antes de", "will have + participio", "I'll have finished by nine."]
+      ],
+      "examples": [
+        { "text": "This time tomorrow, I'll be flying to Madrid.", "es": "Mañana a esta hora estaré volando a Madrid." },
+        { "text": "By next year, I'll have finished the course.", "es": "Para el año que viene habré terminado el curso." }
+      ],
+      "tags": ["futuro"]
+    },
+    {
+      "id": "gram.en-b2-contrast-linkers",
+      "title": "Contraste: although, despite, however, whereas",
+      "summary": "Cuatro formas de decir «aunque» o «sin embargo»; lo que cambia es lo que va detrás y dónde va en la frase.",
+      "points": [
+        "«although» + frase completa: «Although it was raining, we went out». Sin «but» en la otra parte.",
+        "«despite» + sustantivo o -ing, sin «of»: «Despite the delay», «Despite feeling tired». Igual «in spite of».",
+        "«however» une dos frases separadas: «It's expensive. However, it's worth it».",
+        "«whereas» compara dos cosas opuestas: «I like cities, whereas she prefers the countryside»."
+      ],
+      "table": [
+        ["conector", "lo que sigue", "ejemplo"],
+        ["although", "sujeto + verbo", "Although it rained, we went."],
+        ["despite", "sustantivo / -ing", "Despite the rain, we went."],
+        ["however", "frase nueva", "It rained. However, we went."],
+        ["whereas", "sujeto + verbo (contraste)", "I stayed, whereas he went."]
+      ],
+      "examples": [
+        { "text": "Although it was raining, we went for a walk.", "es": "Aunque llovía, salimos a pasear." },
+        { "text": "Despite the delay, we finished on time.", "es": "A pesar del retraso, terminamos a tiempo." }
+      ],
+      "tags": ["conectores"]
+    },
+    {
+      "id": "gram.en-b2-gerund-infinitive-meaning",
+      "title": "Gerundio o infinitivo: verbos que cambian de sentido",
+      "summary": "Con «stop», «remember», «forget» y «try», elegir -ing o «to» cambia lo que dices.",
+      "points": [
+        "«stop smoking» = dejar de fumar; «stop to smoke» = parar para fumar.",
+        "«remember meeting her» = recordar haberla conocido (pasado); «remember to call» = acordarse de llamar (antes de hacerlo).",
+        "«forget» funciona igual: «I'll never forget seeing it» / «Don't forget to call».",
+        "«try to open» = intentar (cuesta); «try opening» = probar a hacerlo, como experimento."
+      ],
+      "table": [
+        ["verbo", "+ -ing", "+ to"],
+        ["stop", "dejar de hacer", "parar para hacer"],
+        ["remember", "recordar algo pasado", "acordarse de hacer"],
+        ["try", "probar a hacer", "intentar hacer"]
+      ],
+      "examples": [
+        { "text": "I remember meeting her in Valencia.", "es": "Recuerdo haberla conocido en Valencia." },
+        { "text": "We stopped to get coffee on the way.", "es": "Paramos a tomar un café de camino." }
+      ],
+      "tags": ["gerundio-infinitivo"]
+    },
+    {
+      "id": "gram.en-b2-phrasal-verbs-two-particles",
+      "title": "Phrasal verbs con dos partículas",
+      "summary": "Verbo + dos partículas (put up with, look forward to) forman una sola unidad: no se separan y el objeto va al final.",
+      "points": [
+        "El objeto siempre detrás: «I can't put up with this noise», nunca «put up this noise with».",
+        "«look forward to» va con -ing, porque «to» es preposición: «I'm looking forward to seeing you».",
+        "El sentido no se deduce de las palabras: apréndelos como vocabulario, con un ejemplo.",
+        "Al hablar, la última partícula suele ser débil: «put up with it» = «pu-DA-pwi-ðit»."
+      ],
+      "table": [
+        ["phrasal verb", "significa"],
+        ["put up with", "aguantar, soportar"],
+        ["look forward to", "tener ganas de"],
+        ["get along with", "llevarse bien con"],
+        ["cut down on", "reducir el consumo de"],
+        ["come up with", "ocurrírsele, idear"]
+      ],
+      "examples": [
+        { "text": "I can't put up with this noise anymore.", "es": "No aguanto más este ruido." },
+        { "text": "I'm really looking forward to seeing you.", "es": "Tengo muchas ganas de verte." }
+      ],
+      "tags": ["phrasal-verbs"]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-grammar.if-id-left-earlier", "text": "If I'd left earlier, I wouldn't have missed the train.", "es": "Si hubiera salido antes, no habría perdido el tren.", "notes": "Tercer condicional: «I'd» aquí es «I had».", "explanation": "Para lamentar algo que ya pasó. «wouldn't have» se dice rápido: «WU-dn-təv».", "register": "neutral", "situation": "gramatica", "tags": ["condicionales"] },
+    { "id": "b2-grammar.if-youd-told-me", "text": "If you'd told me, I would have helped.", "es": "Si me lo hubieras dicho, te habría ayudado.", "notes": "En la parte del «if», «had» + participio, nunca «would».", "explanation": "Para un reproche suave a un amigo o compañero. «would have» = «WU-dəv».", "register": "neutral", "situation": "gramatica", "tags": ["condicionales"] },
+    { "id": "b2-grammar.i-wish-i-had-more-time", "text": "I wish I had more time.", "es": "Ojalá tuviera más tiempo.", "notes": "Deseo sobre el presente: «wish» + pasado simple.", "explanation": "Cuando vas a tope de trabajo. «wish» con «sh» suave y «i» corta: «uish».", "register": "neutral", "situation": "gramatica", "tags": ["deseos"] },
+    { "id": "b2-grammar.i-wish-i-hadnt-said-that", "text": "I wish I hadn't said that.", "es": "Ojalá no hubiera dicho eso.", "notes": "Lamento sobre el pasado: «wish» + had + participio.", "explanation": "Para arrepentirte de algo. «hadn't» = «HÆ-dnt», la «d» casi se traga.", "register": "neutral", "situation": "gramatica", "tags": ["deseos"] },
+    { "id": "b2-grammar.if-only-wed-tested-it", "text": "If only we'd tested it properly.", "es": "Ojalá lo hubiéramos probado bien.", "notes": "«If only» = ojalá, más intenso que «I wish».", "explanation": "Tras un fallo en producción. «tested» = «TES-tid», la «-ed» suena /ɪd/ tras «t».", "register": "neutral", "situation": "gramatica", "tags": ["deseos"] },
+    { "id": "b2-grammar.she-must-have-forgotten", "text": "She must have forgotten about the meeting.", "es": "Se le debe de haber olvidado la reunión.", "notes": "«must have» + participio = seguro que pasó.", "explanation": "Para deducir por qué alguien no ha venido. «must have» = «MAS-təv».", "register": "neutral", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "b2-grammar.he-cant-have-finished", "text": "He can't have finished already.", "es": "No puede haber terminado ya.", "notes": "«can't have» + participio = seguro que no pasó.", "explanation": "Para mostrar que algo te parece imposible. «can't» con «a» abierta: «kænt».", "register": "neutral", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "b2-grammar.they-might-have-gotten-lost", "text": "They might have gotten lost.", "es": "Puede que se hayan perdido.", "notes": "«might have» = quizá. «gotten» es el participio americano de «get».", "explanation": "Para dar una posible explicación. «gotten» = «GA-tn», con la «t» cortada.", "register": "neutral", "situation": "gramatica", "tags": ["modales"] },
+    { "id": "b2-grammar.the-bug-is-being-fixed", "text": "The bug is being fixed right now.", "es": "Están arreglando el fallo ahora mismo.", "notes": "Pasiva en presente continuo: is being + participio.", "explanation": "Para tranquilizar a un cliente o a tu jefe. «fixed» = «fikst», una sola sílaba.", "register": "neutral", "situation": "gramatica", "tags": ["pasiva"] },
+    { "id": "b2-grammar.it-will-be-delivered-tomorrow", "text": "Your order will be delivered tomorrow morning.", "es": "Tu pedido se entregará mañana por la mañana.", "notes": "Pasiva en futuro: will be + participio.", "explanation": "Lo oirás en tiendas y mensajes de envío. «delivered» = «di-LI-vərd», con «v» de labio y dientes.", "register": "neutral", "situation": "gramatica", "tags": ["pasiva"] },
+    { "id": "b2-grammar.i-need-to-get-my-phone-fixed", "text": "I need to get my phone fixed.", "es": "Tengo que llevar el móvil a arreglar.", "notes": "«get something done» = que alguien te haga un servicio.", "explanation": "Cuando otro hace el trabajo por ti. «get my» se une con la «t» cortada: «ge-mai».", "register": "neutral", "situation": "gramatica", "tags": ["pasiva"] },
+    { "id": "b2-grammar.she-told-me-she-had-sent-it", "text": "She told me she had already sent it.", "es": "Me dijo que ya lo había enviado.", "notes": "«tell» + persona; el verbo da un paso atrás: has sent → had sent.", "explanation": "Para contar lo que te dijo alguien. «sent it» se une: «SEN-tit».", "register": "neutral", "situation": "gramatica", "tags": ["estilo-indirecto"] },
+    { "id": "b2-grammar.he-asked-me-if-i-could-stay", "text": "He asked me if I could stay late.", "es": "Me preguntó si podía quedarme hasta tarde.", "notes": "Pregunta indirecta: «if» + orden de afirmación (I could).", "explanation": "Para contar una pregunta. «asked» = «æskt», una sola sílaba, sin «e» al principio.", "register": "neutral", "situation": "gramatica", "tags": ["estilo-indirecto"] },
+    { "id": "b2-grammar.she-refused-to-change-the-deadline", "text": "She refused to change the deadline.", "es": "Se negó a cambiar la fecha de entrega.", "notes": "Verbo para contar: «refuse to» = negarse a.", "explanation": "Para resumir lo que alguien dijo sin citarlo. «refused» = «ri-FIUZD», «z» sonora.", "register": "neutral", "situation": "gramatica", "tags": ["estilo-indirecto"] },
+    { "id": "b2-grammar.my-brother-who-lives-in-madrid", "text": "My brother, who lives in Madrid, is a doctor.", "es": "Mi hermano, que vive en Madrid, es médico.", "notes": "Con comas: información extra, solo «who» o «which».", "explanation": "Al hablar, haz una pausa breve en cada coma. «brother» con «th» suave: «BRA-ðər».", "register": "neutral", "situation": "gramatica", "tags": ["relativos"] },
+    { "id": "b2-grammar.chicago-which-is-on-lake-michigan", "text": "Chicago, which is on Lake Michigan, is very windy.", "es": "Chicago, que está a orillas del lago Michigan, tiene mucho viento.", "notes": "«which» para cosas y lugares; con comas, nunca «that».", "explanation": "Para añadir un dato sobre un lugar. «Michigan» = «MI-shi-gən», con «sh».", "register": "neutral", "situation": "gramatica", "tags": ["relativos"] },
+    { "id": "b2-grammar.this-time-tomorrow", "text": "This time tomorrow, I'll be flying to Madrid.", "es": "Mañana a esta hora estaré volando a Madrid.", "notes": "Futuro continuo: algo en curso en un momento futuro.", "explanation": "Para hablar de lo que estarás haciendo. «I'll be» = «ail-BI», con «l» oscura.", "register": "neutral", "situation": "gramatica", "tags": ["futuro"] },
+    { "id": "b2-grammar.will-you-be-using-the-car", "text": "Will you be using the car tonight?", "es": "¿Vas a usar el coche esta noche?", "notes": "Futuro continuo para preguntar planes con educación, sin presionar.", "explanation": "Para pedir algo prestado con tacto. «using» = «IU-zing», con «z».", "register": "formal", "situation": "gramatica", "tags": ["futuro"] },
+    { "id": "b2-grammar.by-next-year", "text": "By next year, I'll have finished the course.", "es": "Para el año que viene habré terminado el curso.", "notes": "Futuro perfecto + «by» = como muy tarde.", "explanation": "Para hablar de metas con fecha. «finished» = «FI-nisht», la «-ed» suena /t/.", "register": "neutral", "situation": "gramatica", "tags": ["futuro"] },
+    { "id": "b2-grammar.although-it-was-raining", "text": "Although it was raining, we went for a walk.", "es": "Aunque llovía, salimos a pasear.", "notes": "«although» + frase completa; sin «but» en la otra parte.", "explanation": "Para contar algo que pasó a pesar de un problema. «although» = «ol-ÐOU», con «th» suave.", "register": "neutral", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "b2-grammar.despite-the-delay", "text": "Despite the delay, we finished on time.", "es": "A pesar del retraso, terminamos a tiempo.", "notes": "«despite» + sustantivo, sin «of».", "explanation": "Muy útil en informes y reuniones. «despite» = «di-SPAIT», sin «e» delante de «sp».", "register": "neutral", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "b2-grammar.i-remember-meeting-her", "text": "I remember meeting her in Valencia.", "es": "Recuerdo haberla conocido en Valencia.", "notes": "«remember» + -ing = recordar algo que ya pasó.", "explanation": "Para recordar un momento concreto. «meeting her» se une y la «h» se pierde: «MII-ding-ər».", "register": "neutral", "situation": "gramatica", "tags": ["gerundio-infinitivo"] },
+    { "id": "b2-grammar.remember-to-lock-the-door", "text": "Remember to lock the door when you leave.", "es": "Acuérdate de cerrar con llave al salir.", "notes": "«remember to» = acordarse de hacer algo (todavía no hecho).", "explanation": "Un recordatorio a tu compañero de piso. «lock» con «o» abierta y corta: «lak».", "register": "tu", "situation": "gramatica", "tags": ["gerundio-infinitivo"] },
+    { "id": "b2-grammar.we-stopped-to-get-coffee", "text": "We stopped to get coffee on the way.", "es": "Paramos a tomar un café de camino.", "notes": "«stop to» = parar para hacer algo; «stop + -ing» = dejar de hacerlo.", "explanation": "Para contar un viaje o un trayecto. «stopped» = «stapt», una sílaba y sin «e» inicial.", "register": "neutral", "situation": "gramatica", "tags": ["gerundio-infinitivo"] },
+    { "id": "b2-grammar.i-cant-put-up-with-this-noise", "text": "I can't put up with this noise anymore.", "es": "No aguanto más este ruido.", "notes": "«put up with» = aguantar, soportar.", "explanation": "Para quejarte con fuerza. «put up with» se une: «pu-DAP-wið», con flap t.", "register": "neutral", "situation": "gramatica", "tags": ["phrasal-verbs"] }
+  ],
+  "vocab": [
+    { "id": "b2-grammar.although", "word": "although", "es": "aunque", "notes": "Conector + frase completa: «although it was late».", "example": "b2-grammar.although-it-was-raining", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "b2-grammar.despite", "word": "despite", "es": "a pesar de", "notes": "+ sustantivo o -ing, nunca «despite of».", "example": "b2-grammar.despite-the-delay", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "b2-grammar.however", "word": "however", "es": "sin embargo", "notes": "Empieza una frase nueva, seguido de coma: «However, …».", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "b2-grammar.whereas", "word": "whereas", "es": "mientras que", "notes": "Para comparar dos cosas opuestas.", "situation": "gramatica", "tags": ["conectores"] },
+    { "id": "b2-grammar.put-up-with", "word": "put up with", "es": "aguantar, soportar", "notes": "Phrasal verb: «I can't put up with it».", "example": "b2-grammar.i-cant-put-up-with-this-noise", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.look-forward-to", "word": "look forward to", "es": "tener ganas de", "notes": "Phrasal verb + -ing: «I'm looking forward to seeing you».", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.get-along-with", "word": "get along with", "es": "llevarse bien con", "notes": "Phrasal verb: «I get along with my roommate».", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.catch-up-with", "word": "catch up with", "es": "ponerse al día con (alguien); alcanzar", "notes": "Phrasal verb: «Let's catch up with Jordan this weekend».", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.keep-up-with", "word": "keep up with", "es": "seguir el ritmo de, estar al día de", "notes": "Phrasal verb: «It's hard to keep up with the news».", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.cut-down-on", "word": "cut down on", "es": "reducir (el consumo de)", "notes": "Phrasal verb: «I'm trying to cut down on sugar».", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.get-away-with", "word": "get away with", "es": "salirse con la suya, librarse", "notes": "Phrasal verb: hacer algo mal sin consecuencias.", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.go-along-with", "word": "go along with", "es": "aceptar, seguir (una idea)", "notes": "Phrasal verb: «I'll go along with your plan».", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.face-up-to", "word": "face up to", "es": "afrontar, asumir", "notes": "Phrasal verb: «face up to the problem» = afrontar el problema.", "situation": "gramatica", "tags": ["phrasal-verbs"] },
+    { "id": "b2-grammar.get-around-to", "word": "get around to", "es": "encontrar tiempo para (hacer algo)", "notes": "Phrasal verb, casi siempre en negativa: «I haven't gotten around to it yet».", "situation": "gramatica", "tags": ["phrasal-verbs"] }
+  ],
+  "qa": [
+    {
+      "id": "b2-grammar.qa.missed-train",
+      "question": "You missed the train again? What would you have done differently?",
+      "questionEs": "¿Otra vez has perdido el tren? ¿Qué habrías hecho distinto?",
+      "accepted": [
+        { "text": "If I'd left earlier, I wouldn't have missed it.", "es": "Si hubiera salido antes, no lo habría perdido." },
+        { "text": "I would have left home ten minutes earlier.", "es": "Habría salido de casa diez minutos antes." }
+      ],
+      "distractors": [
+        { "text": "If I would have left earlier, I didn't miss it.", "es": "Si hubiera salido antes, no lo perdía." },
+        { "text": "If I left earlier, I wouldn't miss it.", "es": "Si saliera antes, no lo perdería." }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "Pasado imaginado: if + had + participio, would have + participio. «If I left…» habla del presente o el futuro.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-grammar.qa.maya-late",
+      "question": "Maya isn't here yet, and she's usually on time.",
+      "questionEs": "Maya todavía no ha llegado, y suele ser puntual.",
+      "accepted": [
+        { "text": "She must have missed the bus.", "es": "Debe de haber perdido el autobús." },
+        { "text": "She might have gotten stuck in traffic.", "es": "Puede que se haya quedado atascada en el tráfico." }
+      ],
+      "distractors": [
+        { "text": "She must missed the bus.", "es": "Debe de haber perdido el autobús." },
+        { "text": "She can have missed the bus.", "es": "Puede haber perdido el autobús." }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "Deducción sobre el pasado: «must/might have» + participio. «can have» no se usa en afirmativa.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-grammar.qa.what-did-he-ask",
+      "question": "What did your manager want?",
+      "questionEs": "¿Qué quería tu jefe?",
+      "accepted": [
+        { "text": "He asked me if I could stay late.", "es": "Me preguntó si podía quedarme hasta tarde." },
+        { "text": "He asked whether I could work on Saturday.", "es": "Me preguntó si podía trabajar el sábado." }
+      ],
+      "distractors": [
+        { "text": "He asked me if can I stay late.", "es": "Me preguntó si podía quedarme hasta tarde." },
+        { "text": "He said me if I could stay late.", "es": "Me dijo si podía quedarme hasta tarde." }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "Pregunta indirecta: orden de afirmación (I could) y el verbo da un paso atrás. «say» nunca lleva la persona detrás.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-grammar.qa.this-time-tomorrow",
+      "question": "What will you be doing this time tomorrow?",
+      "questionEs": "¿Qué estarás haciendo mañana a esta hora?",
+      "accepted": [
+        { "text": "I'll be flying to Madrid.", "es": "Estaré volando a Madrid." },
+        { "text": "I'll probably be working from home.", "es": "Seguramente estaré trabajando desde casa." }
+      ],
+      "distractors": [
+        { "text": "I will flying to Madrid.", "es": "Estaré volando a Madrid." },
+        { "text": "I'm going to be fly to Madrid.", "es": "Voy a estar volando a Madrid." }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "Futuro continuo: «will be» + -ing; no te comas el «be» ni el «-ing».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-grammar.qa.despite",
+      "question": "How was the trip? I heard the weather was terrible.",
+      "questionEs": "¿Qué tal el viaje? Me dijeron que hizo un tiempo horrible.",
+      "accepted": [
+        { "text": "Despite the rain, we had a great time.", "es": "A pesar de la lluvia, lo pasamos genial." },
+        { "text": "Although it rained a lot, we loved it.", "es": "Aunque llovió mucho, nos encantó." }
+      ],
+      "distractors": [
+        { "text": "Despite of the rain, we had a great time.", "es": "A pesar de la lluvia, lo pasamos genial." },
+        { "text": "Although it rained a lot, but we loved it.", "es": "Aunque llovió mucho, pero nos encantó." }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "«despite» va sin «of» (o «in spite of»); con «although» no se añade «but».",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}

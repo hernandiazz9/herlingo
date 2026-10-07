@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-c1-salary",
+  "title": "Negociar el salario",
+  "description": "La directora de RR. HH. te hace una oferta por debajo de lo que esperabas; negocias con firmeza y sin cerrar puertas.",
+  "situation": "trabajo",
+  "unit": "c1-negotiation",
+  "order": 301,
+  "register": "formal",
+  "level": "C1",
+  "avatars": { "Directora de RR. HH.": "fluent:woman-white-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Directora de RR. HH.", "text": "We're delighted to move forward, Hernán. Our offer is one hundred and twenty thousand, which is at the top of our band.", "es": "Estamos encantados de seguir adelante, Hernán. Nuestra oferta es de ciento veinte mil, que está en lo más alto de nuestra banda.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Agradece la oferta, pero di con tacto que esperabas algo más cercano a ciento cuarenta mil, según el mercado.",
+      "options": [
+        { "text": "I really appreciate the offer. That said, based on market data, I was expecting something closer to one forty.", "es": "Le agradezco mucho la oferta. Dicho esto, según los datos del mercado, esperaba algo más cercano a ciento cuarenta.", "verdict": "correct", "feedback": "¡Muy bien! «That said» suaviza el contraste y apoyarte en datos del mercado da peso a tu cifra." },
+        { "text": "Thanks, but that's too low for me.", "es": "Gracias, pero es demasiado bajo para mí.", "verdict": "acceptable", "feedback": "Se entiende, pero suena brusco y no da ninguna cifra ni argumento para negociar." },
+        { "text": "I really appreciate the offer. That said, according to the market, I was waiting something closer to one forty.", "es": "Le agradezco mucho la oferta. Dicho esto, según el mercado, esperaba algo más cercano a ciento cuarenta.", "verdict": "wrong", "feedback": "«Esperar» una cantidad es «expect»; «wait» es esperar a que llegue algo o alguien." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Directora de RR. HH.", "text": "I hear you. Frankly, I don't have much room on base salary. Is there anything else that would make a difference?", "es": "Le entiendo. Sinceramente, no tengo mucho margen en el salario base. ¿Hay algo más que marcaría la diferencia?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Propón compensar con un bono de incorporación y una revisión salarial a los seis meses.",
+      "options": [
+        { "text": "Would you be open to a signing bonus and a salary review after six months? That would go a long way.", "es": "¿Estaría abierta a un bono de incorporación y una revisión salarial a los seis meses? Eso ayudaría mucho.", "verdict": "correct", "feedback": "¡Perfecto! «Would you be open to…?» propone sin presionar; «go a long way» = ayudar mucho." },
+        { "text": "Maybe a bonus when I start?", "es": "¿Quizá un bono al empezar?", "verdict": "acceptable", "feedback": "Es una idea válida, pero suena tímido; concreta y añade la revisión para negociar mejor." },
+        { "text": "Would you be open to a signing bonus and a salary revision after six months? That would make a long way.", "es": "¿Estaría abierta a un bono de incorporación y una revisión salarial a los seis meses? Eso ayudaría mucho.", "verdict": "wrong", "feedback": "Es «salary review» («revision» es corregir un texto) y la expresión es «go a long way», no «make»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Directora de RR. HH.", "text": "I could probably get approval for a ten thousand signing bonus and a six-month review. Would that work for you?", "es": "Probablemente podría conseguir que aprueben un bono de diez mil y una revisión a los seis meses. ¿Le encaja?", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que es un buen punto de partida y pide que te lo envíe por escrito antes de aceptar.",
+      "options": [
+        { "text": "That's a solid starting point. Could you put it in writing so I can review everything before I commit?", "es": "Es un buen punto de partida. ¿Podría ponerlo por escrito para que lo revise todo antes de comprometerme?", "verdict": "correct", "feedback": "¡Genial! «put it in writing» = ponerlo por escrito; «commit» = comprometerte sin decir «sí» todavía." },
+        { "text": "Okay, I accept.", "es": "Vale, acepto.", "verdict": "acceptable", "feedback": "Correcto, pero aceptar sin verlo por escrito te deja sin margen si algo cambia." },
+        { "text": "That's a solid starting point. Could you send it to me in written so I can review everything before compromising?", "es": "Es un buen punto de partida. ¿Podría enviármelo por escrito para revisarlo todo antes de comprometerme?", "verdict": "wrong", "feedback": "Es «in writing», no «in written»; y «compromise» es ceder o transigir, no comprometerte («commit»)." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Directora de RR. HH.", "text": "Of course. I'll send over a revised offer letter by end of day tomorrow.", "es": "Por supuesto. Le enviaré una carta de oferta revisada mañana antes de que acabe el día.", "voice": "en-US-EmmaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Dale las gracias por su flexibilidad y di que te hace ilusión empezar a trabajar con ellos.",
+      "options": [
+        { "text": "Thank you for being so flexible. I'm genuinely looking forward to working with you.", "es": "Gracias por ser tan flexible. Tengo muchas ganas de trabajar con ustedes.", "verdict": "correct", "feedback": "¡Muy bien! Cierras con calidez; «looking forward to» va seguido de -ing." },
+        { "text": "Thanks a lot. See you soon.", "es": "Muchas gracias. Hasta pronto.", "verdict": "acceptable", "feedback": "Correcto, aunque agradecer su flexibilidad deja mejor impresión tras negociar." },
+        { "text": "Thank you for being so flexible. I'm genuinely looking forward to work with you.", "es": "Gracias por ser tan flexible. Tengo muchas ganas de trabajar con ustedes.", "verdict": "wrong", "feedback": "Tras «looking forward to» va -ing: «looking forward to working»; el «to» es preposición." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Directora de RR. HH.", "text": "Likewise. Keep an eye on your inbox.", "es": "Igualmente. Esté atento a su bandeja de entrada.", "voice": "en-US-EmmaNeural" }
+  ]
+}

@@ -7,16 +7,20 @@ import { dialogueXp } from "@/lib/exercises";
 import { countPlay, recordActivity, repeatXp } from "@/lib/progress/activity";
 import { DialoguePlayer } from "./DialoguePlayer";
 
+/** Pronoun shown after "Trato de usted" for a Latin-script formal register; others show none. */
+const FORMAL_PRONOUN: Record<string, string> = { lei: "Lei", vous: "Vous" };
+
 /**
- * "Trato de tú", or "Trato de usted (Lei)" / "(Vous)" for the pack's formal register; a pack whose
- * formal register is the generic `formal` (no polite pronoun) says "Registro informal" /
- * "Registro formal"; neutral = none.
+ * "Trato de tú", or "Trato de usted (Lei)" / "(Vous)" / "Trato de usted" (`vy`) for the pack's
+ * formal register; a pack whose formal register is the generic `formal` (no polite pronoun) says
+ * "Registro informal" / "Registro formal"; neutral = none.
  */
 function registerLabel(register: string, formalRegister: string): string {
   if (register === "neutral") return "";
   if (formalRegister === "formal") return register === "tu" ? "Registro informal" : "Registro formal";
   if (register === "tu") return "Trato de tú";
-  return `Trato de usted (${register.charAt(0).toUpperCase()}${register.slice(1)})`;
+  const pronoun = FORMAL_PRONOUN[register];
+  return pronoun ? `Trato de usted (${pronoun})` : "Trato de usted";
 }
 
 /** Plays a scripted dialogue of the content pack (see `DialoguePlayer`); every finish earns XP (half on repeats today). */

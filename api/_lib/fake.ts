@@ -1,6 +1,7 @@
 /**
  * Fake mode (`COACH_FAKE=1`, or no Anthropic key in local dev): canned answers, no network.
- * Fixtures are test data keyed by language; a language without one gets placeholder lines.
+ * Fixtures are test data keyed by language; a language without one gets placeholder lines (with
+ * stress marks when its pack has a `stress` rule).
  */
 import type { LanguageMeta } from "./languages.js";
 import type { TokenUsage } from "./model.js";
@@ -242,17 +243,35 @@ const PLACEHOLDER_ASSESSMENT: Assessment = {
   facts: [],
 };
 
+/**
+ * Placeholder line `n` of a language without a fixture. For a pack with a `stress` rule it also
+ * carries two words built from the pack's own vowels, each with its stress mark (as a real
+ * generation would), so the marks, their display and their stripping before TTS can be tried
+ * in fake mode without any language-specific data in code.
+ */
+function placeholderLine(meta: LanguageMeta, n: number): string {
+  const base = `[${meta.lang}] ${n}`;
+  const rule = meta.stress;
+  if (!rule) return base;
+  const self = new Set(rule.selfStressed ?? "");
+  const vowels = [...rule.vowels].filter((v) => !self.has(v));
+  if (vowels.length < 2) return base;
+  const word = (length: number, offset: number, stressed: number) =>
+    Array.from({ length }, (_, i) => vowels[(offset + i) % vowels.length] + (i === stressed ? rule.mark : "")).join("");
+  return `${base} ${word(2, n, n % 2)} ${word(3, n + 1, n % 3)}`;
+}
+
 function questionsFor(meta: LanguageMeta): InterviewQuestion[] {
   const fixed = FIXTURES[meta.lang]?.questions ?? [
-    { kind: "comprehension", prompt: "Escucha y di qué te preguntan.", text: `[${meta.lang}] 1` },
-    { kind: "reply", prompt: "Te dicen esto. ¿Qué contestas?", text: `[${meta.lang}] 2` },
+    { kind: "comprehension", prompt: "Escucha y di qué te preguntan.", text: placeholderLine(meta, 1) },
+    { kind: "reply", prompt: "Te dicen esto. ¿Qué contestas?", text: placeholderLine(meta, 2) },
   ];
   const name = meta.name.toLocaleLowerCase("es");
   return [...fixed, { kind: "personal", prompt: `Cuéntame en ${name} (o en español) qué vas a hacer en tu viaje.` }];
 }
 
 function placeholderPack(meta: LanguageMeta, description: string): GeneratedPack {
-  const say = (n: number) => `[${meta.lang}] ${n}`;
+  const say = (n: number) => placeholderLine(meta, n);
   return {
     title: description.slice(0, 80),
     register: "formal",

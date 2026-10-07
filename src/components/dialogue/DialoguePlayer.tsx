@@ -4,7 +4,7 @@ import { type ReactNode, useEffect, useRef, useState } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { EyeIcon, SlowIcon } from "@/components/phrasebook/icons";
 import { SpeakPanel, useListen, WordFeedback } from "@/components/speech";
-import { Button, Picture } from "@/components/ui";
+import { Button, Picture, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import {
@@ -286,7 +286,7 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
                 lang={meta.lang}
                 className="pressable min-h-14 rounded-button border-2 border-line bg-surface px-4 py-3 text-left text-lg font-bold text-ink [--ledge:var(--line)]"
               >
-                {current.options[k].text}
+                <TargetText text={current.options[k].text} lang={meta.lang} />
               </button>
             ))}
           </div>
@@ -378,7 +378,7 @@ function NativeBubble({
       {shown ? (
         <div>
           <p lang={lang} className="text-lg font-bold text-ink">
-            {turn.text}
+            <TargetText text={turn.text} lang={lang} />
           </p>
           <p className="text-ink-muted">{turn.es}</p>
         </div>
@@ -419,7 +419,7 @@ function AnswerFeedback({
         <div className="flex-1">
           {attempt.heard ? <p className="text-xs text-ink-muted">Has dicho: «{attempt.heard}»</p> : null}
           <p lang={lang} className="text-lg font-bold text-ink">
-            {option.text}
+            <TargetText text={option.text} lang={lang} />
           </p>
           <p className="text-ink-muted">{option.es}</p>
         </div>
@@ -432,8 +432,8 @@ function AnswerFeedback({
           {option.verdict !== "correct" ? (
             <p className="text-ink">
               Lo ideal:{" "}
-              <button type="button" lang={lang} onClick={() => speak(ideal, { lang })} className="font-bold underline">
-                {ideal.text}
+              <button type="button" lang={lang} onClick={() => speak(ideal, { lang })} className="text-left align-top font-bold underline">
+                <TargetText text={ideal.text} lang={lang} />
               </button>
             </p>
           ) : null}
@@ -498,7 +498,7 @@ function TranscriptLine({
           ) : null}
         </p>
         <p lang={lang} className="font-bold text-ink">
-          {item.text}
+          <TargetText text={item.text} lang={lang} />
         </p>
         <p className="text-sm text-ink-muted">{es}</p>
       </div>

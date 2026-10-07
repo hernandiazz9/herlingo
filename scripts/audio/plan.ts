@@ -1,7 +1,8 @@
 /**
  * Audio plan shared by `npm run audio` (generate.ts) and `content:check --strict-audio`.
  *
- * Every playable of a pack gets one mp3 named by a hash of voice + text, so identical lines share
+ * Every playable of a pack gets one mp3 named by a hash of voice + spoken text (stress marks of a
+ * pack with `stress` stripped), so identical lines share
  * a file and any text or voice change produces a new file (the old one is pruned). The manifest
  * `public/audio/<lang>/manifest.json` maps audio key → file name; `speak()` reads it at runtime.
  *
@@ -13,6 +14,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { stripStress } from "../../src/lib/content/script";
 import type { Pack, Playable } from "../../src/lib/content/types";
 
 export interface AudioJob {
@@ -40,7 +42,9 @@ export function planAudio(pack: Pack): AudioJob[] {
   const jobs = new Map<string, AudioJob>();
   const add = (p: Playable | undefined, voice = p?.voice) => {
     if (!p || !voice) return;
-    jobs.set(p.audioKey, { key: p.audioKey, text: p.text, voice, file: audioFile(p.text, voice) });
+    // TTS gets the text without the pack's stress marks (unchanged for packs without `stress`).
+    const text = stripStress(p.text, pack.meta);
+    jobs.set(p.audioKey, { key: p.audioKey, text, voice, file: audioFile(text, voice) });
   };
   pack.phrases.forEach((p) => add(p));
   pack.vocab.forEach((p) => add(p));

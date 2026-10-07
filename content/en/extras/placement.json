@@ -3,11 +3,11 @@
     {
       "id": "placement.en-a2-repeat",
       "level": "A2",
-      "prompt": "En una tienda no has oído bien el precio. ¿Qué significa?",
+      "prompt": "En la cafetería no has oído bien el precio. ¿Qué significa?",
       "text": "Sorry, could you repeat that? Is it thirteen or thirty dollars?",
       "options": ["Perdona, ¿puedes hablar más despacio? ¿Son tres o treinta dólares?", "Perdona, ¿puedes repetirlo? ¿Son trece o treinta dólares?", "Perdona, no entiendo. ¿Son treinta o trescientos dólares?", "Perdona, ¿puedes repetirlo? ¿Son quince o cincuenta dólares?"],
       "answer": 1,
-      "lessons": ["a2-hello.l.repeat", "a2-numbers.l.zero-twenty", "a2-numbers.l.age-phone", "a2-numbers.l.prices"]
+      "lessons": ["a2-hello.l.repeat", "a2-numbers.l.zero-twenty", "a2-numbers.l.age-phone", "a2-numbers.l.prices", "a2-food.l.coffee-shop"]
     },
     {
       "id": "placement.en-a2-about-me",
@@ -16,14 +16,6 @@
       "options": ["I am programmer. I work from home and I get up at seven.", "I'm a programmer. I work from home and I go to bed at seven.", "I'm a programmer. I work from home and I get up at seven.", "I'm a programmer. I'm working from house and I get up to seven."],
       "answer": 2,
       "lessons": ["a2-about-me.l.work", "a2-daily.l.morning"]
-    },
-    {
-      "id": "placement.en-a2-check",
-      "level": "A2",
-      "prompt": "Has terminado de cenar en un restaurante de Chicago. ¿Cómo pides la cuenta?",
-      "options": ["Can we get the account, please?", "Can we get the menu, please?", "Can we get a box, please?", "Can we get the check, please?"],
-      "answer": 3,
-      "lessons": ["a2-food.l.check-tip"]
     },
     {
       "id": "placement.en-a2-grocery-store",
@@ -38,18 +30,10 @@
       "id": "placement.en-a2-late-check-in",
       "level": "A2",
       "prompt": "Llamas al hotel desde el aeropuerto. ¿Qué significa?",
-      "text": "My flight is delayed, so I'll arrive late. Can I still check in tonight?",
-      "options": ["Mi vuelo está cancelado, así que llegaré mañana. ¿Puedo hacer el check-in esta noche?", "Mi vuelo va con retraso, así que llegaré tarde. ¿Puedo dejar la habitación esta noche?", "Mi vuelo va con retraso, así que llegaré tarde. ¿Puedo hacer el check-in esta noche igualmente?", "Mi vuelo sale antes, así que llegaré pronto. ¿Puedo hacer el check-in ya?"],
+      "text": "My flight is delayed, so I'll arrive late. Can I still check in tonight? Also, I have a headache. Is there a pharmacy near the hotel?",
+      "options": ["Mi vuelo está cancelado, así que llegaré mañana. ¿Puedo hacer el check-in esta noche? Además, me duele la cabeza. ¿Hay una farmacia cerca del hotel?", "Mi vuelo va con retraso, así que llegaré tarde. ¿Puedo dejar la habitación esta noche? Además, me duele la garganta. ¿Hay un médico en el hotel?", "Mi vuelo va con retraso, así que llegaré tarde. ¿Puedo hacer el check-in esta noche igualmente? Además, me duele la cabeza. ¿Hay una farmacia cerca del hotel?", "Mi vuelo sale antes, así que llegaré pronto. ¿Puedo hacer el check-in ya? Además, me duele la cabeza. ¿Hay una farmacia en el aeropuerto?"],
       "answer": 2,
-      "lessons": ["a2-airport.l.gate", "a2-hotel.l.check-in"]
-    },
-    {
-      "id": "placement.en-a2-sore-throat",
-      "level": "A2",
-      "prompt": "En el médico: ¿cómo dices que te duele la garganta y que tienes fiebre?",
-      "options": ["It hurts me the throat and I have a fever.", "I have a sore throat and a fever.", "I have a sore throat and a cough.", "I have a sour throat and I am fever."],
-      "answer": 1,
-      "lessons": ["a2-health.l.body", "a2-health.l.feeling-sick"]
+      "lessons": ["a2-airport.l.gate", "a2-hotel.l.check-in", "a2-health.l.body", "a2-health.l.pharmacy"]
     },
     {
       "id": "placement.en-b1-hang-out",
@@ -67,32 +51,16 @@
       "text": "Sorry, I was on mute. Yesterday I finished the login page, and today I'm going to fix the checkout bug.",
       "options": ["Perdón, se me cortó la conexión. Ayer empecé la página de login y hoy voy a probar el pago.", "Perdón, tenía el micro apagado. Ayer terminé la página de login y hoy voy a arreglar el fallo del pago.", "Perdón, tenía el micro apagado. Hoy termino la página de login y mañana arreglo el fallo del pago.", "Perdón, tenía la cámara apagada. Ayer terminé la página de login y hoy voy a revisar el fallo del pago."],
       "answer": 1,
-      "lessons": ["b1-office.l.standup", "b1-calls.l.video"]
-    },
-    {
-      "id": "placement.en-b1-crashing",
-      "level": "B1",
-      "prompt": "Llamas a soporte técnico. ¿Cómo dices que la app se cierra todo el rato y que ayer funcionaba bien?",
-      "options": ["The app keeps to crash. It worked fine tomorrow.", "The app is always crashing. It has worked fine yesterday.", "The app keeps crashing. It's working fine since yesterday.", "The app keeps crashing. It was working fine yesterday."],
-      "answer": 3,
-      "lessons": ["b1-tech.l.problem", "b1-tech.l.support"]
+      "lessons": ["b1-office.l.standup", "b1-calls.l.video", "b1-tech.l.my-work"]
     },
     {
       "id": "placement.en-b1-bank-account",
       "level": "B1",
       "prompt": "En el banco, recién llegado a Chicago. ¿Qué significa?",
-      "text": "I just moved here, so I'd like to open a checking account. Here's my lease as proof of address.",
-      "options": ["Acabo de mudarme aquí, así que querría abrir una cuenta corriente. Aquí tienes mi contrato de alquiler como justificante de domicilio.", "Me voy a mudar pronto, así que querría cerrar mi cuenta corriente. Aquí tienes mi contrato de alquiler.", "Acabo de mudarme aquí, así que querría abrir una cuenta de ahorro. Aquí tienes mi pasaporte como justificante de domicilio.", "Acabo de mudarme aquí, así que querría pedir un préstamo. Aquí tienes mi contrato de alquiler como garantía."],
+      "text": "I just accepted a job offer here, so I'd like to open a checking account. Here's my lease as proof of address.",
+      "options": ["Acabo de aceptar una oferta de trabajo aquí, así que querría abrir una cuenta corriente. Aquí tienes mi contrato de alquiler como justificante de domicilio.", "Acabo de rechazar una oferta de trabajo aquí, así que querría cerrar mi cuenta corriente. Aquí tienes mi contrato de alquiler.", "Acabo de aceptar una oferta de trabajo aquí, así que querría abrir una cuenta de ahorro. Aquí tienes mi pasaporte como justificante de domicilio.", "Tengo una entrevista de trabajo aquí, así que querría pedir un préstamo. Aquí tienes mi contrato de alquiler como garantía."],
       "answer": 0,
-      "lessons": ["b1-money.l.account", "b1-renting.l.lease"]
-    },
-    {
-      "id": "placement.en-b1-experience",
-      "level": "B1",
-      "prompt": "En una entrevista de trabajo: ¿cómo dices que llevas seis años trabajando como desarrollador?",
-      "options": ["I'm a software developer since six years.", "I've been a software developer since six years.", "I've been a software developer for six years.", "I was a software developer for six years ago."],
-      "answer": 2,
-      "lessons": ["b1-interview.l.about-you"]
+      "lessons": ["b1-interview.l.after", "b1-money.l.account", "b1-renting.l.lease"]
     },
     {
       "id": "placement.en-b1-canceled-flight",
@@ -102,6 +70,76 @@
       "options": ["Iba de camino a la puerta cuando le cancelaron el vuelo, y tuvo que comprar otro billete.", "Estaba esperando en la puerta cuando le retrasaron el vuelo, y por suerte salió al día siguiente.", "Esperó en la puerta hasta que le cancelaron el vuelo, y no había más vuelos ese día.", "Estaba esperando en la puerta de embarque cuando le cancelaron el vuelo, y por suerte le cambiaron al siguiente."],
       "answer": 3,
       "lessons": ["b1-trips.l.delays", "b1-trips.l.rebooking", "b1-stories.l.while", "b1-stories.l.telling-a-story"]
+    },
+    {
+      "id": "placement.en-b2-overrated",
+      "level": "B2",
+      "prompt": "Una compañera te da su opinión sobre una película. ¿Qué piensa?",
+      "text": "If you ask me, it was a bit overrated. The acting was brilliant, but the ending was disappointing.",
+      "options": ["Si le preguntas, estaba un poco sobrevalorada. La interpretación fue genial, pero el final le decepcionó.", "Si le preguntas, le encantó. La interpretación fue genial y el final la sorprendió.", "Si le preguntas, estaba un poco infravalorada. La interpretación fue regular, pero el final le gustó.", "Si le preguntas, era un poco larga. La interpretación fue genial, pero no entendió el final."],
+      "answer": 0,
+      "lessons": ["b2-opinions.l.giving", "b2-culture.l.movies"]
+    },
+    {
+      "id": "placement.en-b2-behind-schedule",
+      "level": "B2",
+      "prompt": "En una reunión de proyecto, la jefa de producto dice esto. ¿Qué significa?",
+      "text": "We're a few days behind schedule. The root cause was a bad configuration change, so I suggest we postpone the launch by two weeks.",
+      "options": ["Vamos unos días adelantados. La causa fue un cambio de configuración, así que propone adelantar el lanzamiento dos semanas.", "Vamos unos días retrasados. La causa de fondo fue un cambio de configuración erróneo, así que propone retrasar el lanzamiento dos semanas.", "Vamos unos días retrasados. Nadie sabe la causa del fallo, así que propone cancelar el lanzamiento.", "Vamos unos días retrasados. La causa de fondo fue un cambio de configuración erróneo, así que propone lanzar dentro de dos días."],
+      "answer": 1,
+      "lessons": ["b2-projects.l.deadlines", "b2-tech-talk.l.non-technical", "b2-meetings.l.proposing"]
+    },
+    {
+      "id": "placement.en-b2-broke-up",
+      "level": "B2",
+      "prompt": "Un amigo te cuenta un cotilleo. ¿Qué te dice?",
+      "text": "Have you heard? Sam and Alex broke up a few months ago. Apparently, she's been really stressed out at work lately.",
+      "options": ["¿Te has enterado? Sam y Alex se prometieron hace unos meses. Por lo visto, ella está muy contenta en el trabajo.", "¿Me has oído? Sam y Alex discutieron hace unos meses. Al parecer, ella ha dejado el trabajo.", "¿Te has enterado? Sam y Alex lo dejaron hace unos meses. Por lo visto, ella está muy estresada en el trabajo últimamente.", "¿Te has enterado? Sam y Alex lo dejaron hace unos meses. Es evidente que ella trabaja demasiado últimamente."],
+      "answer": 2,
+      "lessons": ["b2-news.l.telling", "b2-relationships.l.people", "b2-wellbeing.l.stress"]
+    },
+    {
+      "id": "placement.en-b2-passport-stolen",
+      "level": "B2",
+      "prompt": "De viaje, en la comisaría: ¿cómo dices que crees que te han robado el pasaporte y que necesitas poner una denuncia para el seguro?",
+      "options": ["I think they have robbed my passport. I need to put a denounce for my insurance.", "I think my passport was robbed. I need to file a police report for my insurance.", "I think my passport's been stolen. I need to make a complaint for my assurance.", "I think my passport's been stolen. I need to file a police report for my insurance."],
+      "answer": 3,
+      "lessons": ["b2-travel.l.unexpected", "b2-paperwork.l.insurance"]
+    },
+    {
+      "id": "placement.en-c1-swamped",
+      "level": "C1",
+      "prompt": "Le propones a un contacto de un congreso colaborar en un proyecto. ¿Qué te contesta?",
+      "text": "I'd love to, but I'm completely swamped this week. Can I sleep on it and drop you a line on Monday?",
+      "options": ["Le encantaría, pero esta semana está enfermo. ¿Puede descansar un poco y llamarte el lunes?", "Le encantaría, pero esta semana va hasta arriba. ¿Puede pensárselo con calma y escribirte el lunes?", "Le encantaría, y esta semana tiene tiempo de sobra. ¿Puede verte el lunes para hablarlo en persona?", "Le encantaría, pero esta semana va hasta arriba. ¿Puede dejarlo para más adelante y no escribirte hasta final de mes?"],
+      "answer": 1,
+      "lessons": ["c1-nuance.l.indirect", "c1-idioms.l.everyday", "c1-networking.l.following-up"]
+    },
+    {
+      "id": "placement.en-c1-bottom-line",
+      "level": "C1",
+      "prompt": "Al final de una presentación a directivos, la ponente dice esto. ¿Qué significa?",
+      "text": "The bottom line is that we can cut our cloud costs by about a third. Before we commit to anything, I'd suggest a small pilot, and I'd like Dana to take the lead on it.",
+      "options": ["En el peor de los casos, los costes de la nube subirán un tercio. Antes de comprometerse, propone un piloto pequeño, y quiere que Dana lo supervise desde fuera.", "En resumidas cuentas, pueden reducir los costes de la nube en torno a un tres por ciento. Propone empezar ya con todo, y que Dana se encargue del piloto.", "En resumidas cuentas, pueden reducir los costes de la nube en torno a un tercio. Antes de comprometerse a nada, propone un piloto pequeño, y quiere que Dana lo lidere.", "En resumidas cuentas, pueden reducir los costes de la nube en torno a un tercio. Ya se han comprometido a un piloto pequeño, y quiere que Dana siga sus pasos."],
+      "answer": 2,
+      "lessons": ["c1-presenting.l.closing", "c1-tech-decisions.l.proposals", "c1-leading.l.delegating"]
+    },
+    {
+      "id": "placement.en-c1-walk-away",
+      "level": "C1",
+      "prompt": "Negocias con tu compañía de internet. ¿Cómo dices, con firmeza y educación, que entiendes su postura, pero que, si esas son las condiciones definitivas, estás dispuesto a irte?",
+      "options": ["I understand your posture, but if those are the definitive conditions, I'm disposed to go away.", "I understand your position, but if those are the final terms, I'm prepared to walk away.", "I understand your position, but unless those are the final terms, I'm prepared to walk away.", "I understand you, but if that is the last price, I'm ready for leaving."],
+      "answer": 1,
+      "lessons": ["c1-negotiation.l.closing", "c1-problems.l.standing-firm"]
+    },
+    {
+      "id": "placement.en-c1-dawned-on-me",
+      "level": "C1",
+      "prompt": "Una amiga termina de contarte cómo llegó tarde a una boda. ¿Qué te dice?",
+      "text": "In hindsight, I should have just taken the train. It wasn't until I'd spent two hours in traffic that it dawned on me: if public transportation were better, fewer people would need a car.",
+      "options": ["Visto lo visto, menos mal que cogió el tren. Después de dos horas de atasco se dio cuenta de que el transporte público es mejor, así que ya nadie necesita coche.", "Visto lo visto, debería haber cogido el tren y ya está. Se pasó dos horas en el atasco hasta que amaneció: si el transporte público fuera mejor, más gente necesitaría coche.", "Visto lo visto, debería haber cogido el tren y ya está. No fue hasta pasarse dos horas en un atasco cuando cayó en la cuenta: si el transporte público fuera mejor, menos gente necesitaría coche.", "Al principio pensó en coger el tren. A las dos horas de atasco decidió que, si el transporte público mejora, venderá el coche."],
+      "answer": 2,
+      "lessons": ["c1-storytelling.l.wrapping-up", "c1-storytelling.l.suspense", "c1-society.l.cities"]
     }
   ]
 }

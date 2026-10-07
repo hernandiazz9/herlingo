@@ -1,0 +1,83 @@
+{
+  "id": "story.en-b2-behind-schedule",
+  "order": 204,
+  "title": "Behind schedule",
+  "titleEs": "Con retraso",
+  "description": "A dos semanas del lanzamiento, el proyecto de Pablo se retrasa: toca recortar, priorizar y escuchar el feedback de Maya.",
+  "emoji": "⏳",
+  "situation": "trabajo",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "In April, Pablo's project is two weeks away from the first launch.", "es": "En abril, al proyecto de Pablo le quedan dos semanas para el primer lanzamiento." },
+    { "id": "s2", "text": "Then Sam sends him a message late on a Friday night.", "es": "Entonces Sam le manda un mensaje un viernes muy tarde por la noche." },
+    { "id": "s3", "text": "«Just a heads-up: the vendor might be late.»", "es": "«Solo para avisarte: puede que el proveedor se retrase.»", "voice": "en-US-BrianNeural" },
+    { "id": "s4", "text": "Pablo knows that his app depends on that vendor's payment service.", "es": "Pablo sabe que su app depende del servicio de pagos de ese proveedor." },
+    { "id": "s5", "text": "On Monday morning, he tells Maya the truth.", "es": "El lunes por la mañana, le cuenta la verdad a Maya." },
+    { "id": "s6", "text": "«We're a few days behind schedule.»", "es": "«Vamos unos días con retraso.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s7", "text": "«Is the deadline set in stone, or is there some flexibility?»", "es": "«¿La fecha límite es inamovible o hay algo de margen?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s8", "text": "«It's not set in stone, but the client is expecting a demo.»", "es": "«No es inamovible, pero el cliente espera una demo.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s9", "text": "Together, they go through the list of features one by one.", "es": "Juntos, repasan la lista de funcionalidades una por una." },
+    { "id": "s10", "text": "«This is a must-have, but that's just a nice-to-have.»", "es": "«Esto es imprescindible, pero eso es solo un extra.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s11", "text": "«We could hit the deadline if we cut the scope.»", "es": "«Podríamos llegar a la fecha límite si recortamos el alcance.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "They move three features to the backlog, and the team finishes on time.", "es": "Pasan tres funcionalidades a la lista de pendientes, y el equipo termina a tiempo." },
+    { "id": "s13", "text": "After the launch, Maya asks Pablo if he has a minute.", "es": "Después del lanzamiento, Maya le pregunta a Pablo si tiene un momento." },
+    { "id": "s14", "text": "«You did a great job on the demo yesterday.»", "es": "«Hiciste un trabajo genial en la demo de ayer.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s15", "text": "«One thing I'd like you to work on is your estimates.»", "es": "«Una cosa que me gustaría que mejoraras son tus estimaciones.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s16", "text": "«Thanks, that's really useful. I'll take that on board.»", "es": "«Gracias, me es muy útil. Lo tendré en cuenta.»", "voice": "en-US-AndrewNeural" }
+  ],
+  "keywords": [
+    "b2-projects.just-a-heads-up",
+    "b2-projects.were-a-few-days-behind-schedule",
+    "b2-projects.is-the-deadline-set-in-stone",
+    "b2-projects.this-is-a-must-have",
+    "b2-projects.we-could-hit-the-deadline",
+    "b2-projects.scope",
+    "b2-projects.backlog",
+    "b2-projects.you-did-a-great-job",
+    "b2-projects.estimate",
+    "b2-projects.ill-take-that-on-board"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why is the project at risk?",
+      "es": "¿Por qué está en peligro el proyecto?",
+      "options": [
+        { "text": "Pablo is sick.", "es": "Pablo está enfermo." },
+        { "text": "The vendor might be late.", "es": "Puede que el proveedor se retrase." },
+        { "text": "The client cancels the demo.", "es": "El cliente cancela la demo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "How do they finish on time?",
+      "es": "¿Cómo consiguen terminar a tiempo?",
+      "options": [
+        { "text": "They move some features to the backlog.", "es": "Pasan algunas funcionalidades a la lista de pendientes." },
+        { "text": "They hire a contractor.", "es": "Contratan a alguien externo." },
+        { "text": "They work every weekend.", "es": "Trabajan todos los fines de semana." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What does Maya want Pablo to improve?",
+      "es": "¿Qué quiere Maya que mejore Pablo?",
+      "options": [
+        { "text": "His demos.", "es": "Sus demos." },
+        { "text": "His English.", "es": "Su inglés." },
+        { "text": "His estimates.", "es": "Sus estimaciones." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "b2-projects.just-a-heads-up", "gap": "heads-up", "distractors": ["head-start", "headline"] },
+    { "id": "g2", "sentence": "s6", "answer": "b2-projects.were-a-few-days-behind-schedule", "gap": "behind", "distractors": ["after", "late"] },
+    { "id": "g3", "sentence": "s7", "answer": "b2-projects.is-the-deadline-set-in-stone", "gap": "set in stone", "distractors": ["set in rock", "put in stone"] },
+    { "id": "g4", "sentence": "s11", "answer": "b2-projects.scope", "distractors": ["lights", "coffee"] },
+    { "id": "g5", "sentence": "s12", "answer": "b2-projects.backlog", "distractors": ["backyard", "kitchen"] },
+    { "id": "g6", "sentence": "s15", "answer": "b2-projects.estimate", "gap": "estimates", "distractors": ["clothes", "holidays"] }
+  ]
+}

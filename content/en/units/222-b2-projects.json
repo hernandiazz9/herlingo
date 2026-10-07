@@ -1,0 +1,336 @@
+{
+  "id": "b2-projects",
+  "order": 222,
+  "level": "B2",
+  "title": "Proyectos: plazos, riesgos, prioridades, dar y pedir feedback",
+  "description": "Llevar un proyecto en inglés: estimar y negociar plazos, avisar de riesgos a tiempo, decidir qué va primero, y dar y recibir feedback sin herir ni ponerte a la defensiva.",
+  "emoji": "📋",
+  "situation": "trabajo",
+  "lessons": [
+    {
+      "id": "b2-projects.l.deadlines",
+      "title": "Plazos: estimar, negociar y avisar de retrasos",
+      "items": [
+        "b1-office.deadline",
+        "b2-projects.whats-a-realistic-deadline",
+        "b2-projects.estimate",
+        "b2-projects.my-rough-estimate",
+        "b1-office.schedule",
+        "b2-projects.behind-schedule",
+        "b2-projects.were-a-few-days-behind-schedule",
+        "b2-projects.on-track",
+        "b2-projects.were-on-track-to-finish",
+        "b2-projects.set-in-stone",
+        "b2-projects.is-the-deadline-set-in-stone",
+        "b2-projects.scope",
+        "b2-projects.we-could-hit-the-deadline",
+        "b2-projects.extension",
+        "b2-projects.well-need-a-one-week-extension",
+        "b2-projects.milestone",
+        "b2-projects.the-next-milestone",
+        "b2-projects.buffer",
+        "b2-projects.id-rather-add-a-buffer",
+        "b2-projects.qa.estimate",
+        "b2-projects.qa.by-friday"
+      ]
+    },
+    {
+      "id": "b2-projects.l.risks",
+      "title": "Riesgos: avisar a tiempo y tener un plan B",
+      "items": [
+        "b2-projects.risk",
+        "b2-projects.the-biggest-risk",
+        "b2-projects.dependency",
+        "b2-projects.we-depend-on-another-team",
+        "b2-projects.heads-up",
+        "b2-projects.just-a-heads-up",
+        "b2-projects.red-flag",
+        "b2-projects.thats-a-red-flag",
+        "b2-projects.whats-our-plan-b",
+        "b2-projects.worst-case-scenario",
+        "b2-projects.in-the-worst-case-scenario",
+        "b2-projects.mitigate",
+        "b2-projects.how-can-we-mitigate-that-risk",
+        "b2-projects.flag",
+        "b2-projects.lets-flag-it-early",
+        "b2-projects.keep-an-eye-on",
+        "b2-projects.id-keep-an-eye-on-the-tests",
+        "b2-projects.qa.biggest-risk",
+        "b2-projects.qa.other-team"
+      ]
+    },
+    {
+      "id": "b2-projects.l.priorities",
+      "title": "Prioridades: qué va primero y qué puede esperar",
+      "items": [
+        "b2-opinions.priority",
+        "b2-projects.prioritize",
+        "b2-projects.what-should-i-prioritize",
+        "b2-projects.must-have",
+        "b2-projects.nice-to-have",
+        "b2-projects.this-is-a-must-have",
+        "b2-projects.low-hanging-fruit",
+        "b2-projects.lets-focus-on-the-low-hanging-fruit",
+        "b1-office.sprint",
+        "b2-projects.can-this-wait-until-next-sprint",
+        "b2-projects.bandwidth",
+        "b2-projects.i-dont-have-the-bandwidth",
+        "b2-projects.backlog",
+        "b2-projects.lets-move-it-to-the-backlog",
+        "b2-projects.impact",
+        "b2-projects.what-would-have-the-biggest-impact",
+        "b2-projects.qa.where-to-start"
+      ]
+    },
+    {
+      "id": "b2-projects.l.giving-feedback",
+      "title": "Dar feedback a un compañero",
+      "items": [
+        "b1-office.feedback",
+        "b2-projects.do-you-have-a-minute",
+        "b2-projects.you-did-a-great-job",
+        "b2-projects.strength",
+        "b2-projects.one-thing-id-like-you-to-work-on",
+        "b2-projects.appreciate",
+        "b2-projects.i-really-appreciate-how",
+        "b2-projects.it-would-help-if-you",
+        "b2-projects.constructive",
+        "b2-projects.criticism",
+        "b2-projects.this-isnt-criticism",
+        "b2-projects.keep-up-the-good-work",
+        "b2-projects.qa.how-did-it-go"
+      ]
+    },
+    {
+      "id": "b2-projects.l.receiving-feedback",
+      "title": "Pedir y recibir feedback sin ponerte a la defensiva",
+      "items": [
+        "b2-projects.honest",
+        "b2-projects.id-love-your-honest-feedback",
+        "b2-projects.input",
+        "b2-projects.is-there-anything-i-could-do-better",
+        "b2-projects.what-would-you-have-done-differently",
+        "b2-projects.could-you-give-me-a-specific-example",
+        "b2-projects.take-on-board",
+        "b2-projects.ill-take-that-on-board",
+        "b2-projects.defensive",
+        "b2-projects.im-trying-not-to-get-defensive",
+        "b2-projects.speak-up",
+        "b2-projects.qa.speak-up",
+        "b2-projects.qa.anything-else"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-projects.whats-a-realistic-deadline", "text": "What's a realistic deadline for this?", "es": "¿Qué plazo es realista para esto?", "notes": "«deadline» = fecha límite; «realistic» = realista.", "explanation": "Para pedir una fecha antes de comprometerte con nadie. «realistic» = «rii-ə-LIS-tik», acento en la tercera sílaba.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.my-rough-estimate", "text": "My rough estimate is about two weeks.", "es": "Calculando por encima, unas dos semanas.", "notes": "«rough estimate» = cálculo aproximado; «about» = más o menos.", "explanation": "Para dar una cifra sin que suene a promesa. «rough» = «raf», la «gh» suena «f»; «estimate» (nombre) = «ES-ti-mət».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.were-a-few-days-behind-schedule", "text": "We're a few days behind schedule.", "es": "Vamos unos días retrasados.", "notes": "«behind schedule» = con retraso; «ahead of schedule» = adelantados.", "explanation": "Para avisar de un retraso con calma. «schedule» en EE. UU. = «SKE-yul», sin «e» delante.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.were-on-track-to-finish", "text": "We're on track to finish by the end of the month.", "es": "Vamos bien para acabar a final de mes.", "notes": "«on track» = según lo previsto; «by» + fecha = como muy tarde.", "explanation": "Para dar una buena noticia en el seguimiento. «track» con «æ» abierta, entre «a» y «e».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.is-the-deadline-set-in-stone", "text": "Is the deadline set in stone, or is there some flexibility?", "es": "¿La fecha es inamovible o hay algo de margen?", "notes": "«set in stone» = grabado en piedra, que no se puede cambiar.", "explanation": "Para tantear si se puede negociar el plazo. «stone» sin «e» delante: «stoun», no «estón».", "register": "neutral", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.we-could-hit-the-deadline", "text": "We could hit the deadline if we cut the scope.", "es": "Podríamos llegar a la fecha si recortamos el alcance.", "notes": "«hit» / «meet the deadline» = cumplir el plazo; «miss the deadline» = no llegar.", "explanation": "Para negociar: fecha a cambio de menos funcionalidades. «scope» = «skoup», sin «e» delante.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.well-need-a-one-week-extension", "text": "I'm afraid we'll need a one-week extension.", "es": "Me temo que vamos a necesitar una semana más.", "notes": "«I'm afraid» suaviza una mala noticia; «one-week» va con guion y sin «s» delante de un sustantivo.", "explanation": "Para pedir más tiempo con educación. «extension» = «ik-STEN-shən», acento en medio.", "register": "formal", "situation": "trabajo" },
+    { "id": "b2-projects.the-next-milestone", "text": "The next milestone is the beta launch on March third.", "es": "El siguiente hito es el lanzamiento de la beta el tres de marzo.", "notes": "Las fechas se dicen con ordinal: «March third», escrito «March 3rd».", "explanation": "Para situar al equipo en el calendario. «third» = «zerd», con «th» entre los dientes y «r» americana.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.id-rather-add-a-buffer", "text": "Let's not overpromise. I'd rather add a buffer.", "es": "No prometamos de más. Prefiero dejar un margen.", "notes": "«I'd rather» + verbo sin «to» = prefiero; «overpromise» = prometer más de lo que puedes cumplir.", "explanation": "Para proteger al equipo al dar una fecha. «rather» = «RA-dhər», con «th» suave.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.the-biggest-risk", "text": "The biggest risk is that the API won't be ready in time.", "es": "El mayor riesgo es que la API no esté lista a tiempo.", "notes": "«in time» = a tiempo (con margen); «on time» = puntual.", "explanation": "Para señalar el riesgo principal en una reunión. «risk» sin vocal al final: «risk», no «riske».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.we-depend-on-another-team", "text": "We depend on another team for the payment service.", "es": "Dependemos de otro equipo para el servicio de pagos.", "notes": "«depend on», nunca «depend of».", "explanation": "Para explicar una dependencia externa. «depend» = «di-PEND», acento al final.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.just-a-heads-up", "text": "Just a heads-up: the vendor might be late.", "es": "Solo para avisarte: puede que el proveedor se retrase.", "notes": "«a heads-up» = un aviso previo; «vendor» = proveedor.", "explanation": "Para avisar de algo antes de que sea un problema. «heads» = «jedz», con «h» suave y «z» final.", "register": "neutral", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.thats-a-red-flag", "text": "They haven't answered in a week. That's a red flag for me.", "es": "Llevan una semana sin contestar. Para mí, eso es una señal de alarma.", "notes": "«a red flag» = una señal de alarma. Presente perfecto con «in a week» = en toda la semana.", "explanation": "Para expresar preocupación concreta. «answered» = «AN-sərd»: la «w» no suena.", "register": "neutral", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.whats-our-plan-b", "text": "What's our plan B if it doesn't work?", "es": "¿Cuál es nuestro plan B si no funciona?", "notes": "«plan B» se usa igual que en español.", "explanation": "Para pedir una alternativa a tiempo. La «B» se dice «bii», no «be».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.in-the-worst-case-scenario", "text": "In the worst-case scenario, we push the launch back a week.", "es": "En el peor de los casos, retrasamos el lanzamiento una semana.", "notes": "«push back» = retrasar; «worst-case» lleva guion delante de un sustantivo.", "explanation": "Para poner límites al miedo. «scenario» = «sə-NE-ri-ou», acento en la segunda sílaba.", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-projects.how-can-we-mitigate-that-risk", "text": "How can we mitigate that risk?", "es": "¿Cómo podemos mitigar ese riesgo?", "notes": "«mitigate» = reducir el impacto; más informal: «reduce».", "explanation": "Para pasar del problema a la solución. «mitigate» = «MI-di-geit», con flap t.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.lets-flag-it-early", "text": "Let's flag it early so nobody's surprised.", "es": "Avisemos pronto para que nadie se lleve una sorpresa.", "notes": "«flag» = señalar, avisar de un problema; «so» = para que.", "explanation": "Para proponer avisar al jefe o al cliente. «flag» con «æ» abierta y «g» final clara.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.id-keep-an-eye-on-the-tests", "text": "I'd keep an eye on the integration tests.", "es": "Yo vigilaría los tests de integración.", "notes": "«keep an eye on» = vigilar, estar pendiente de.", "explanation": "Para recomendar qué vigilar. «an eye» se une: «ə-NAI».", "register": "neutral", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.what-should-i-prioritize", "text": "I've got three things on my plate. What should I prioritize?", "es": "Tengo tres cosas entre manos. ¿A cuál le doy prioridad?", "notes": "«have a lot on my plate» = tener mucho entre manos.", "explanation": "Para pedirle a tu jefe que elija por ti. «prioritize» = «prai-OR-ə-taiz», acento en la segunda sílaba.", "register": "neutral", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.this-is-a-must-have", "text": "This is a must-have, but that's just a nice-to-have.", "es": "Esto es imprescindible, pero aquello solo sería un extra.", "notes": "«must-have» = imprescindible; «nice-to-have» = estaría bien, pero no es necesario.", "explanation": "Para separar lo esencial de lo opcional. «must» = «mast», la «u» suena como una «a» breve.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.lets-focus-on-the-low-hanging-fruit", "text": "Let's focus on the low-hanging fruit first.", "es": "Centrémonos primero en lo fácil que da resultado rápido.", "notes": "«low-hanging fruit» = la fruta que cuelga bajo: lo más fácil de conseguir. «focus on», no «focus in».", "explanation": "Para empezar por victorias rápidas. «fruit» = «fruut», la «i» no suena.", "register": "neutral", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.can-this-wait-until-next-sprint", "text": "Can this wait until next sprint?", "es": "¿Esto puede esperar al próximo sprint?", "notes": "«next sprint» sin «the»; «wait until» = esperar hasta.", "explanation": "Para frenar una petición urgente que no lo es tanto. «sprint» sin «e» delante: «sprint».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.i-dont-have-the-bandwidth", "text": "I don't have the bandwidth for another project right now.", "es": "Ahora mismo no tengo capacidad para otro proyecto.", "notes": "«bandwidth» = ancho de banda; en el trabajo, tiempo y energía disponibles.", "explanation": "Para decir que no sin sonar vago. «bandwidth» = «BAND-width», termina en «th» entre los dientes.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.lets-move-it-to-the-backlog", "text": "It's not urgent. Let's move it to the backlog for now.", "es": "No es urgente. Pasémoslo a la lista de pendientes de momento.", "notes": "«backlog» = la lista de tareas pendientes; «for now» = de momento.", "explanation": "Para aparcar una idea sin descartarla. «urgent» = «ER-yənt», con «r» americana y la «g» como «y» fuerte.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.what-would-have-the-biggest-impact", "text": "What would have the biggest impact on our users?", "es": "¿Qué tendría más impacto en nuestros usuarios?", "notes": "«have an impact on» = tener impacto en, no «in».", "explanation": "La pregunta para decidir prioridades. «impact» (nombre) = «IM-pækt», acento al principio.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.do-you-have-a-minute", "text": "Do you have a minute? I'd like to give you some feedback.", "es": "¿Tienes un momento? Me gustaría darte un poco de feedback.", "notes": "«feedback» es incontable: «some feedback», nunca «a feedback» ni «feedbacks».", "explanation": "Para abrir una conversación de feedback en privado. «minute» = «MI-nit», la «u» no suena como «u».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.you-did-a-great-job", "text": "You did a great job on the demo yesterday.", "es": "Ayer hiciste un gran trabajo en la demo.", "notes": "«do a great job» = hacerlo muy bien; con «do», no con «make».", "explanation": "Para empezar con algo concreto y positivo. «job» = «yob», con «y» fuerte y «o» abierta.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.one-thing-id-like-you-to-work-on", "text": "One thing I'd like you to work on is your estimates.", "es": "Una cosa que me gustaría que mejoraras son tus estimaciones.", "notes": "«I'd like you to» + verbo = me gustaría que tú…; «work on» = trabajar en, mejorar.", "explanation": "Para dar un punto de mejora sin dramatizar. «I'd like you to» se dice rápido: «aid-LAIK-yə-də».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.i-really-appreciate-how", "text": "I really appreciate how you handled the client.", "es": "Valoro mucho cómo llevaste lo del cliente.", "notes": "«appreciate» = valorar, agradecer; «handle» = gestionar, llevar.", "explanation": "Para reconocer algo concreto. «appreciate» = «ə-PRII-shi-eit», la «c» suena «sh».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.it-would-help-if-you", "text": "It would help if you updated the ticket more often.", "es": "Ayudaría que actualizaras el ticket más a menudo.", "notes": "Segundo condicional: «would» + «if» + pasado («updated»), igual que el subjuntivo español.", "explanation": "Una crítica suave, en forma de petición. «updated» = «ap-DEI-did», la «-ed» suena «id».", "register": "formal", "situation": "trabajo" },
+    { "id": "b2-projects.this-isnt-criticism", "text": "This isn't criticism. I just want to help you grow.", "es": "Esto no es una crítica. Solo quiero ayudarte a crecer.", "notes": "«criticism» = la crítica; «critic» es la persona (el crítico).", "explanation": "Para quitar tensión a un feedback difícil. «criticism» = «KRI-di-si-zəm», acento al principio.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.keep-up-the-good-work", "text": "Keep up the good work!", "es": "¡Sigue así!", "notes": "«keep up» = mantener, seguir al mismo nivel.", "explanation": "Para cerrar un feedback con ánimo. «good work» se une: «gud-WERK», con «r» americana.", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-projects.id-love-your-honest-feedback", "text": "I'd love to get your honest feedback on this.", "es": "Me encantaría que me dieras tu opinión sincera sobre esto.", "notes": "«feedback on» algo, con «on».", "explanation": "Para pedir feedback a un jefe o compañero. «honest» empieza sin «h»: «A-nəst».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.is-there-anything-i-could-do-better", "text": "Is there anything I could do better?", "es": "¿Hay algo que podría hacer mejor?", "notes": "«anything» en preguntas; «something» en afirmaciones.", "explanation": "Para invitar a la crítica con humildad. «better» con flap t: «BE-dər».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.what-would-you-have-done-differently", "text": "Looking back, what would you have done differently?", "es": "Visto ahora, ¿qué habrías hecho de otra manera?", "notes": "«would have» + participio = habrías hecho; «looking back» = mirando atrás.", "explanation": "Para aprender de un proyecto ya terminado. «would you have» se dice rápido: «WU-djə-əv».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-projects.could-you-give-me-a-specific-example", "text": "Could you give me a specific example?", "es": "¿Me podrías dar un ejemplo concreto?", "notes": "«specific» = concreto; «concrete» existe pero se usa menos así.", "explanation": "Para entender una crítica vaga sin discutir. «specific» = «spə-SI-fik», sin «e» delante.", "register": "formal", "situation": "trabajo" },
+    { "id": "b2-projects.ill-take-that-on-board", "text": "Thanks, that's really useful. I'll take that on board.", "es": "Gracias, me sirve mucho. Lo tendré en cuenta.", "notes": "«take something on board» = tenerlo en cuenta, aceptarlo.", "explanation": "Para agradecer una crítica y cerrar el tema. «board» = «bord», con «r» americana.", "register": "neutral", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.im-trying-not-to-get-defensive", "text": "Sorry, I'm trying not to get defensive.", "es": "Perdona, intento no ponerme a la defensiva.", "notes": "«get defensive» = ponerse a la defensiva; «try not to» = intentar no.", "explanation": "Para reconocer que te ha dolido y seguir escuchando. «defensive» = «di-FEN-siv», acento en medio.", "register": "neutral", "situation": "trabajo" }
+  ],
+  "vocab": [
+    { "id": "b2-projects.estimate", "word": "estimate", "article": "an", "plural": "estimates", "es": "la estimación, el cálculo aproximado", "notes": "Nombre «ES-ti-mət»; el verbo «to estimate» se dice «ES-ti-meit».", "example": "b2-projects.my-rough-estimate", "situation": "trabajo" },
+    { "id": "b2-projects.behind-schedule", "word": "behind schedule", "es": "con retraso", "notes": "Contrario: «ahead of schedule» (adelantado) y «on schedule» (a tiempo).", "example": "b2-projects.were-a-few-days-behind-schedule", "situation": "trabajo" },
+    { "id": "b2-projects.on-track", "word": "on track", "es": "según lo previsto, bien encaminado", "notes": "«be on track» = ir bien; «get off track» = desviarse.", "example": "b2-projects.were-on-track-to-finish", "situation": "trabajo" },
+    { "id": "b2-projects.set-in-stone", "word": "set in stone", "es": "inamovible, que no se puede cambiar", "notes": "Expresión: «nothing is set in stone» = nada está decidido del todo.", "example": "b2-projects.is-the-deadline-set-in-stone", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.scope", "word": "scope", "es": "el alcance", "notes": "Lo que entra en un proyecto. «scope creep» = el alcance que crece sin control.", "example": "b2-projects.we-could-hit-the-deadline", "situation": "trabajo" },
+    { "id": "b2-projects.extension", "word": "extension", "article": "an", "plural": "extensions", "es": "la prórroga, el plazo extra", "notes": "También la extensión de teléfono.", "example": "b2-projects.well-need-a-one-week-extension", "situation": "trabajo" },
+    { "id": "b2-projects.milestone", "word": "milestone", "article": "a", "plural": "milestones", "es": "el hito", "notes": "Un punto clave del calendario de un proyecto.", "example": "b2-projects.the-next-milestone", "situation": "trabajo", "image": "fluent:spiral-calendar" },
+    { "id": "b2-projects.buffer", "word": "buffer", "article": "a", "plural": "buffers", "es": "el margen (de tiempo)", "notes": "Tiempo extra por si algo sale mal.", "example": "b2-projects.id-rather-add-a-buffer", "situation": "trabajo" },
+    { "id": "b2-projects.risk", "word": "risk", "article": "a", "plural": "risks", "es": "el riesgo", "notes": "«take a risk» = arriesgarse.", "example": "b2-projects.the-biggest-risk", "situation": "trabajo", "image": "fluent:warning" },
+    { "id": "b2-projects.dependency", "word": "dependency", "article": "a", "plural": "dependencies", "es": "la dependencia", "notes": "Algo que necesitas de otro equipo o de otra librería.", "example": "b2-projects.we-depend-on-another-team", "situation": "trabajo" },
+    { "id": "b2-projects.heads-up", "word": "heads-up", "article": "a", "plural": "heads-ups", "es": "el aviso previo", "notes": "«give someone a heads-up» = avisar a alguien con tiempo.", "example": "b2-projects.just-a-heads-up", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.red-flag", "word": "red flag", "article": "a", "plural": "red flags", "es": "la señal de alarma", "example": "b2-projects.thats-a-red-flag", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.worst-case-scenario", "word": "worst-case scenario", "article": "a", "plural": "worst-case scenarios", "es": "el peor de los casos", "example": "b2-projects.in-the-worst-case-scenario", "situation": "trabajo" },
+    { "id": "b2-projects.mitigate", "word": "mitigate", "es": "mitigar, reducir", "notes": "Verbo formal, típico de informes y reuniones.", "example": "b2-projects.how-can-we-mitigate-that-risk", "situation": "trabajo" },
+    { "id": "b2-projects.flag", "word": "flag", "es": "señalar, avisar de", "notes": "Verbo: «flag an issue» = avisar de un problema. El nombre «flag» es la bandera.", "example": "b2-projects.lets-flag-it-early", "situation": "trabajo" },
+    { "id": "b2-projects.keep-an-eye-on", "word": "keep an eye on", "es": "vigilar, estar pendiente de", "notes": "Expresión hecha: «keep an eye on it».", "example": "b2-projects.id-keep-an-eye-on-the-tests", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.prioritize", "word": "prioritize", "es": "priorizar, dar prioridad a", "notes": "Verbo, con «z» en inglés americano.", "example": "b2-projects.what-should-i-prioritize", "situation": "trabajo" },
+    { "id": "b2-projects.must-have", "word": "must-have", "article": "a", "plural": "must-haves", "es": "lo imprescindible", "notes": "Con guion cuando es sustantivo.", "example": "b2-projects.this-is-a-must-have", "situation": "trabajo" },
+    { "id": "b2-projects.nice-to-have", "word": "nice-to-have", "article": "a", "plural": "nice-to-haves", "es": "el extra, lo que estaría bien tener", "example": "b2-projects.this-is-a-must-have", "situation": "trabajo" },
+    { "id": "b2-projects.low-hanging-fruit", "word": "low-hanging fruit", "es": "lo más fácil de conseguir", "notes": "Incontable. Literalmente, la fruta que cuelga más baja.", "example": "b2-projects.lets-focus-on-the-low-hanging-fruit", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.bandwidth", "word": "bandwidth", "es": "la capacidad, el tiempo disponible", "notes": "Incontable. En informática, el ancho de banda.", "example": "b2-projects.i-dont-have-the-bandwidth", "situation": "trabajo" },
+    { "id": "b2-projects.backlog", "word": "backlog", "article": "a", "plural": "backlogs", "es": "la lista de pendientes, el backlog", "example": "b2-projects.lets-move-it-to-the-backlog", "situation": "trabajo", "image": "fluent:clipboard" },
+    { "id": "b2-projects.impact", "word": "impact", "article": "an", "plural": "impacts", "es": "el impacto", "notes": "«have an impact on» = tener impacto en.", "example": "b2-projects.what-would-have-the-biggest-impact", "situation": "trabajo" },
+    { "id": "b2-projects.strength", "word": "strength", "article": "a", "plural": "strengths", "es": "el punto fuerte", "notes": "Contrario: «weakness» (punto débil). Termina en «th».", "situation": "trabajo" },
+    { "id": "b2-projects.appreciate", "word": "appreciate", "es": "valorar, agradecer", "notes": "Verbo: «I appreciate it» = te lo agradezco.", "example": "b2-projects.i-really-appreciate-how", "situation": "trabajo" },
+    { "id": "b2-projects.constructive", "word": "constructive", "es": "constructivo", "notes": "Adjetivo: «constructive feedback» = feedback constructivo.", "situation": "trabajo" },
+    { "id": "b2-projects.criticism", "word": "criticism", "es": "la crítica", "notes": "Incontable en general; «a criticism» = una crítica concreta. El crítico es «critic».", "example": "b2-projects.this-isnt-criticism", "situation": "trabajo" },
+    { "id": "b2-projects.honest", "word": "honest", "es": "sincero, honesto", "notes": "Adjetivo; la «h» no suena: «an honest answer».", "example": "b2-projects.id-love-your-honest-feedback", "situation": "trabajo" },
+    { "id": "b2-projects.input", "word": "input", "es": "la opinión, la aportación", "notes": "Incontable: «I'd value your input» = me interesa tu opinión.", "situation": "trabajo" },
+    { "id": "b2-projects.take-on-board", "word": "take on board", "es": "tener en cuenta", "notes": "Expresión: el objeto va en medio, «take it on board».", "example": "b2-projects.ill-take-that-on-board", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-projects.defensive", "word": "defensive", "es": "a la defensiva", "notes": "Adjetivo: «get defensive» = ponerse a la defensiva.", "example": "b2-projects.im-trying-not-to-get-defensive", "situation": "trabajo" },
+    { "id": "b2-projects.speak-up", "word": "speak up", "es": "hablar, dar tu opinión (en voz alta)", "notes": "Phrasal verb: atreverse a intervenir. También «habla más alto».", "situation": "trabajo", "tags": ["phrasal-verbs"] }
+  ],
+  "qa": [
+    {
+      "id": "b2-projects.qa.estimate",
+      "question": "How long do you think the new dashboard will take?",
+      "questionEs": "¿Cuánto crees que llevará el nuevo panel?",
+      "accepted": [
+        { "text": "My rough estimate is about two weeks.", "es": "Calculando por encima, unas dos semanas." },
+        { "text": "Probably two weeks, but I'd rather add a buffer.", "es": "Seguramente dos semanas, pero prefiero dejar un margen." }
+      ],
+      "distractors": [
+        { "text": "I estimate more or less two weeks.", "es": "Calculo más o menos dos semanas." },
+        { "text": "Probably two weeks, but I prefer to leave a margin.", "es": "Seguramente dos semanas, pero prefiero dejar un margen." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«más o menos» delante de una cifra = «about»; el margen de tiempo es un «buffer», no un «margin» (que suele ser de beneficio).",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-projects.qa.by-friday",
+      "question": "Can you get it done by Friday?",
+      "questionEs": "¿Lo puedes tener hecho para el viernes?",
+      "accepted": [
+        { "text": "I'm afraid we'll need a one-week extension.", "es": "Me temo que vamos a necesitar una semana más." },
+        { "text": "We could hit the deadline if we cut the scope.", "es": "Podríamos llegar si recortamos el alcance." }
+      ],
+      "distractors": [
+        { "text": "I'm afraid we'll need a one-weeks extension.", "es": "Me temo que vamos a necesitar una semana más." },
+        { "text": "We could arrive to the deadline if we cut the scope.", "es": "Podríamos llegar a la fecha si recortamos el alcance." }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "Delante de un sustantivo, «one-week» va sin «s»; «llegar a la fecha» = «hit» o «meet the deadline», nunca «arrive».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-projects.qa.biggest-risk",
+      "question": "What's the biggest risk right now?",
+      "questionEs": "¿Cuál es ahora mismo el mayor riesgo?",
+      "accepted": [
+        { "text": "The biggest risk is that the API won't be ready in time.", "es": "El mayor riesgo es que la API no esté lista a tiempo." },
+        { "text": "We depend on another team, so I'd keep an eye on that.", "es": "Dependemos de otro equipo, así que yo vigilaría eso." }
+      ],
+      "distractors": [
+        { "text": "The most big risk is that the API won't be ready in time.", "es": "El mayor riesgo es que la API no esté lista a tiempo." },
+        { "text": "We depend of another team, so I'd keep an eye on that.", "es": "Dependemos de otro equipo, así que yo vigilaría eso." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«big» forma «bigger» y «the biggest», nunca «most big»; «no esté» se dice con futuro, «won't be»; «depend on», no «of».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-projects.qa.other-team",
+      "question": "What if the payments team doesn't deliver on time?",
+      "questionEs": "¿Y si el equipo de pagos no entrega a tiempo?",
+      "accepted": [
+        { "text": "In the worst-case scenario, we push the launch back a week.", "es": "En el peor de los casos, retrasamos el lanzamiento una semana." },
+        { "text": "Good question. Let's flag it early and agree on a plan B.", "es": "Buena pregunta. Avisemos pronto y acordemos un plan B." }
+      ],
+      "distractors": [
+        { "text": "In the worst of the cases, we delay the launch one week.", "es": "En el peor de los casos, retrasamos el lanzamiento una semana." },
+        { "text": "Good question. Let's advise them soon and agree a plan B.", "es": "Buena pregunta. Avisémosles pronto y acordemos un plan B." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«en el peor de los casos» = «in the worst-case scenario»; «advise» es aconsejar, avisar es «flag» o «let know»; «agree on» algo.",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-projects.qa.where-to-start",
+      "question": "We have three bugs and a new feature request. Where do we start?",
+      "questionEs": "Tenemos tres bugs y una petición de funcionalidad nueva. ¿Por dónde empezamos?",
+      "accepted": [
+        { "text": "Let's focus on the bugs first. The feature can wait until next sprint.", "es": "Centrémonos primero en los bugs. La funcionalidad puede esperar al próximo sprint." },
+        { "text": "It depends. What would have the biggest impact on our users?", "es": "Depende. ¿Qué tendría más impacto en nuestros usuarios?" }
+      ],
+      "distractors": [
+        { "text": "Let's focus in the bugs first. The feature can wait to the next sprint.", "es": "Centrémonos primero en los bugs. La funcionalidad puede esperar al próximo sprint." },
+        { "text": "It depends. What would have more impact in our users?", "es": "Depende. ¿Qué tendría más impacto en nuestros usuarios?" }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«focus on» y «impact on», con «on»; «esperar a» una fecha = «wait until».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-projects.qa.how-did-it-go",
+      "question": "Be honest. How do you think the demo went?",
+      "questionEs": "Sé sincero. ¿Qué tal crees que fue la demo?",
+      "accepted": [
+        { "text": "You did a great job. One thing to work on is timing.", "es": "Lo hiciste muy bien. Una cosa a mejorar es el tiempo." },
+        { "text": "It went really well. The client loved the new dashboard.", "es": "Fue muy bien. Al cliente le encantó el nuevo panel." }
+      ],
+      "distractors": [
+        { "text": "You made a great job. One thing to improve is the times.", "es": "Lo hiciste muy bien. Una cosa a mejorar es el tiempo." },
+        { "text": "It went very good. The client loved the new dashboard.", "es": "Fue muy bien. Al cliente le encantó el nuevo panel." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«do a good job», nunca «make»; «go well» lleva el adverbio «well», no el adjetivo «good».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-projects.qa.speak-up",
+      "question": "One thing to work on: you should speak up more in meetings.",
+      "questionEs": "Una cosa a mejorar: deberías intervenir más en las reuniones.",
+      "accepted": [
+        { "text": "Thanks, that's really useful. I'll take that on board.", "es": "Gracias, me sirve mucho. Lo tendré en cuenta." },
+        { "text": "That's fair. Could you give me a specific example?", "es": "Es justo. ¿Me podrías dar un ejemplo concreto?" }
+      ],
+      "distractors": [
+        { "text": "Thanks, I will have it in account.", "es": "Gracias, lo tendré en cuenta." },
+        { "text": "That's fair. Could you give me a concrete exemple?", "es": "Es justo. ¿Me podrías dar un ejemplo concreto?" }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«tener en cuenta» = «take on board» o «keep in mind», nunca «have in account»; se escribe «example», con «a».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-projects.qa.anything-else",
+      "question": "Before we finish, is there anything you'd like feedback on?",
+      "questionEs": "Antes de terminar, ¿hay algo sobre lo que quieras feedback?",
+      "accepted": [
+        { "text": "Yes. I'd love to get your honest feedback on my estimates.", "es": "Sí. Me encantaría tu opinión sincera sobre mis estimaciones." },
+        { "text": "Is there anything I could do better in client meetings?", "es": "¿Hay algo que podría hacer mejor en las reuniones con clientes?" }
+      ],
+      "distractors": [
+        { "text": "Yes. I'd love to get some feedbacks about my estimations.", "es": "Sí. Me encantaría recibir feedback sobre mis estimaciones." },
+        { "text": "Is there something I could make better in client meetings?", "es": "¿Hay algo que podría hacer mejor en las reuniones con clientes?" }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«feedback» es incontable, sin «s», y «estimación» = «estimate»; mejorar algo que haces = «do better», no «make better».",
+      "voice": "en-US-AvaNeural"
+    }
+  ]
+}

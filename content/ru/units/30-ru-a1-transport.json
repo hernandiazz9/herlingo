@@ -1,0 +1,929 @@
+{
+  "id": "ru-a1-transport",
+  "order": 30,
+  "level": "A1",
+  "title": "Transporte: aeropuerto, tren, metro y taxi",
+  "description": "Facturar y pasar el control de pasaportes, comprar billetes de tren, moverte en metro y autobús y coger un taxi.",
+  "emoji": "🚆",
+  "situation": "viajes",
+  "lessons": [
+    {
+      "id": "ru-a1-transport.l.airport",
+      "title": "En el aeropuerto: facturar y embarcar",
+      "items": [
+        "ru-a1-alphabet.aeroport",
+        "ru-a1-transport.samolyot",
+        "ru-a1-transport.reis",
+        "ru-a1-transport.vylet",
+        "ru-a1-transport.registratsiya",
+        "ru-a1-transport.gde-registratsiya",
+        "ru-a1-transport.vash-pasport",
+        "ru-a1-alphabet.vot-pasport",
+        "ru-a1-transport.chemodan",
+        "ru-a1-transport.u-menya-odin-chemodan",
+        "ru-a1-transport.ruchnaya-klad",
+        "ru-a1-transport.eto-ruchnaya-klad",
+        "ru-a1-grammar.eto-vash-bagazh",
+        "ru-a1-transport.posadochnyi-talon",
+        "ru-a1-transport.posadka",
+        "ru-a1-transport.gde-vykhod-na-posadku",
+        "ru-a1-transport.reis-zaderzhivaetsya",
+        "ru-a1-transport.posadka-nachalas",
+        "ru-a1-transport.qa.bagazh"
+      ]
+    },
+    {
+      "id": "ru-a1-transport.l.arrival",
+      "title": "Llegar: pasaportes, aduana y maletas",
+      "items": [
+        "ru-a1-transport.prilyot",
+        "ru-a1-transport.tsel-poezdki",
+        "ru-a1-transport.turizm",
+        "ru-a1-alphabet.ya-turist",
+        "ru-a1-transport.ya-zdes-na-nedelyu",
+        "ru-a1-grammar.bagazh",
+        "ru-a1-transport.gde-poluchit-bagazh",
+        "ru-a1-transport.chemodan-ne-prishyol",
+        "ru-a1-transport.tamozhnya",
+        "ru-a1-transport.nechego-deklarirovat",
+        "ru-a1-alphabet.gde-vykhod",
+        "ru-a1-transport.qa.tsel-poezdki",
+        "ru-a1-transport.qa.skolko-budete"
+      ]
+    },
+    {
+      "id": "ru-a1-transport.l.train",
+      "title": "En la estación de tren",
+      "items": [
+        "ru-a1-alphabet.vokzal",
+        "ru-a1-transport.poezd",
+        "ru-a1-alphabet.kassa",
+        "ru-a1-transport.gde-kassa",
+        "ru-a1-numbers.bilet",
+        "ru-a1-transport.bilet-do-moskvy",
+        "ru-a1-transport.tuda-i-obratno",
+        "ru-a1-transport.v-odin-konets",
+        "ru-a1-numbers.skolko-stoit-bilet",
+        "ru-a1-transport.raspisanie",
+        "ru-a1-transport.kogda-sleduyushchii-poezd",
+        "ru-a1-transport.platforma",
+        "ru-a1-transport.s-kakoi-platformy",
+        "ru-a1-transport.vagon",
+        "ru-a1-transport.gde-pyatyi-vagon",
+        "ru-a1-transport.mesto",
+        "ru-a1-transport.eto-moyo-mesto",
+        "ru-a1-transport.poezd-opazdyvaet",
+        "ru-a1-transport.poezdka",
+        "ru-a1-transport.qa.vam-kuda",
+        "ru-a1-transport.qa.tuda-obratno"
+      ]
+    },
+    {
+      "id": "ru-a1-transport.l.metro",
+      "title": "Metro, autobús y tranvía",
+      "items": [
+        "ru-a1-alphabet.metro",
+        "ru-a1-transport.stantsiya",
+        "ru-a1-transport.blizhaishaya-stantsiya",
+        "ru-a1-transport.proezdnoi",
+        "ru-a1-transport.nuzhen-proezdnoi",
+        "ru-a1-transport.kak-doekhat-do-tsentra",
+        "ru-a1-transport.peresadka",
+        "ru-a1-transport.gde-sdelat-peresadku",
+        "ru-a1-transport.kakaya-sleduyushchaya",
+        "ru-a1-transport.ostorozhno-dveri",
+        "ru-a1-transport.vy-vykhodite",
+        "ru-a1-transport.avtobus",
+        "ru-a1-transport.ostanovka",
+        "ru-a1-transport.gde-ostanovka",
+        "ru-a1-transport.etot-avtobus",
+        "ru-a1-transport.tramvai",
+        "ru-a1-grammar.kuda-vy-edete",
+        "ru-a1-transport.qa.vykhodite"
+      ]
+    },
+    {
+      "id": "ru-a1-transport.l.taxi",
+      "title": "Coger un taxi",
+      "items": [
+        "ru-a1-alphabet.taksi",
+        "ru-a1-transport.mne-nuzhno-taksi",
+        "ru-a1-transport.vyzovu-taksi",
+        "ru-a1-transport.voditel",
+        "ru-a1-transport.v-aeroport",
+        "ru-a1-transport.adres",
+        "ru-a1-transport.vot-adres",
+        "ru-a1-transport.skolko-do-tsentra",
+        "ru-a1-transport.daleko",
+        "ru-a1-transport.blizko",
+        "ru-a1-transport.daleko-ekhat",
+        "ru-a1-transport.bagazhnik",
+        "ru-a1-transport.otkroite-bagazhnik",
+        "ru-a1-transport.ostanovite-zdes",
+        "ru-a1-numbers.sdachi-ne-nado",
+        "ru-a1-transport.qa.kuda-otvezti",
+        "ru-a1-transport.qa.taksi-tsena"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "ru-a1-transport.gde-registratsiya",
+      "text": "Где регистра́ция?",
+      "es": "¿Dónde se factura?",
+      "notes": "«регистра́ция» es la facturación (y también registrarse en un hotel).",
+      "explanation": "Al entrar en la terminal, para encontrar los mostradores. -ция suena «tsi-ya»: re-guis-TRA-tsi-ya.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.vash-pasport",
+      "text": "Ваш па́спорт, пожа́луйста.",
+      "es": "Su pasaporte, por favor.",
+      "explanation": "Te lo dicen en el mostrador, en el control y en el hotel. «пожа́луйста» se dice rápido: pa-ZHÁ-lus-ta.",
+      "register": "vy",
+      "situation": "viajes",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-transport.u-menya-odin-chemodan",
+      "text": "У меня́ оди́н чемода́н.",
+      "es": "Llevo una maleta.",
+      "literal": "En mí, una maleta.",
+      "explanation": "Al facturar, cuando te preguntan por el equipaje. La «o» sin acento suena «a»: cha-ma-DÁN.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.eto-ruchnaya-klad",
+      "text": "Э́то ручна́я кладь.",
+      "es": "Esto es equipaje de mano.",
+      "explanation": "Para decir que una bolsa va contigo en cabina. «кладь» termina en «t» suave: klat'.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.gde-vykhod-na-posadku",
+      "text": "Где вы́ход на поса́дку?",
+      "es": "¿Dónde está la puerta de embarque?",
+      "literal": "¿Dónde la salida al embarque?",
+      "explanation": "Tras el control de seguridad. «ы» es una «i» con la lengua hacia atrás: VY-jad.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.reis-zaderzhivaetsya",
+      "text": "Рейс заде́рживается.",
+      "es": "El vuelo se retrasa.",
+      "explanation": "Lo oyes por megafonía o lo lees en la pantalla. -тся al final suena «tsa»: za-DIER-zhi-va-ye-tsa.",
+      "register": "neutral",
+      "situation": "viajes",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-transport.posadka-nachalas",
+      "text": "Поса́дка начала́сь.",
+      "es": "Ha empezado el embarque.",
+      "explanation": "Anuncio en la puerta: ve a la cola. pa-SÁT-ka: la «д» delante de «к» suena «t».",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.tsel-poezdki",
+      "text": "Цель пое́здки?",
+      "es": "¿Motivo del viaje?",
+      "explanation": "Lo pregunta el agente del control de pasaportes. «ц» = «ts»: tsel' pa-YEZ-tki.",
+      "register": "neutral",
+      "situation": "viajes",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-transport.turizm",
+      "text": "Тури́зм.",
+      "es": "Turismo.",
+      "explanation": "La respuesta más corta en el control de pasaportes. Acento al final: tu-RÍZM.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.ya-zdes-na-nedelyu",
+      "text": "Я здесь на неде́лю.",
+      "es": "Estoy aquí una semana.",
+      "literal": "Yo aquí para una semana.",
+      "explanation": "Si te preguntan cuánto tiempo te quedas. «здесь» acaba en «s» suave: zdies'.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.gde-poluchit-bagazh",
+      "text": "Где мо́жно получи́ть бага́ж?",
+      "es": "¿Dónde se recoge el equipaje?",
+      "explanation": "Al bajar del avión, si no ves las cintas. «бага́ж» acaba sonando «sh»: ba-GÁSH.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.chemodan-ne-prishyol",
+      "text": "Мой чемода́н не пришёл.",
+      "es": "Mi maleta no ha llegado.",
+      "explanation": "En el mostrador de equipajes perdidos. «ё» siempre lleva el acento: pri-SHIÓL.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.nechego-deklarirovat",
+      "text": "Мне не́чего деклари́ровать.",
+      "es": "No tengo nada que declarar.",
+      "explanation": "En la aduana, si te paran. NIE-chi-va: la «е» sin acento suena casi «i».",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.gde-kassa",
+      "text": "Где ка́сса?",
+      "es": "¿Dónde está la taquilla?",
+      "explanation": "En la estación, para comprar el billete en persona. La doble «сс» se alarga un poco: KÁS-sa.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.bilet-do-moskvy",
+      "text": "Оди́н биле́т до Москвы́, пожа́луйста.",
+      "es": "Un billete a Moscú, por favor.",
+      "notes": "«до» + destino: до Москвы́, до Петербу́рга.",
+      "explanation": "En la taquilla. Tras «до» el nombre cambia: Москва́ → до Москвы́ (mask-VY).",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.tuda-i-obratno",
+      "text": "Туда́ и обра́тно.",
+      "es": "Ida y vuelta.",
+      "literal": "Allí y de vuelta.",
+      "explanation": "Respuesta en la taquilla si vuelves. La «о» sin acento suena «a»: a-BRÁT-na.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.v-odin-konets",
+      "text": "В оди́н коне́ц.",
+      "es": "Solo ida.",
+      "literal": "A un extremo.",
+      "explanation": "Si no vuelves en tren. «в» se pega a la palabra siguiente: va-DÍN ka-NIETS.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.kogda-sleduyushchii-poezd",
+      "text": "Когда́ сле́дующий по́езд?",
+      "es": "¿Cuándo sale el próximo tren?",
+      "literal": "¿Cuándo el siguiente tren?",
+      "explanation": "En información o al revisor. «щ» es una «sh» larga y suave: SLIE-du-yu-shchi.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.s-kakoi-platformy",
+      "text": "С како́й платфо́рмы?",
+      "es": "¿De qué andén sale?",
+      "explanation": "Para saber adónde ir. En las grandes estaciones también oyes «путь» (vía): s ka-KÓI plat-FÓR-my.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.gde-pyatyi-vagon",
+      "text": "Где пя́тый ваго́н?",
+      "es": "¿Dónde está el vagón cinco?",
+      "explanation": "En el andén: en los trenes rusos cada billete tiene su vagón. «я» tras consonante la ablanda: PIA-ty.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.eto-moyo-mesto",
+      "text": "Извини́те, э́то моё ме́сто.",
+      "es": "Perdone, este es mi asiento.",
+      "explanation": "Si alguien está en tu plaza. «моё» acaba en «ió» acentuada: ma-YÓ MIES-ta.",
+      "register": "vy",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.poezd-opazdyvaet",
+      "text": "По́езд опа́здывает?",
+      "es": "¿El tren viene con retraso?",
+      "explanation": "Si el tren no llega a su hora. «по́езд» son dos sílabas: PO-yist (la «д» final suena «t»).",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.blizhaishaya-stantsiya",
+      "text": "Где ближа́йшая ста́нция метро́?",
+      "es": "¿Dónde está la estación de metro más cercana?",
+      "explanation": "A cualquiera por la calle, mejor tras «Извини́те». «ж» es como la «j» francesa: bli-ZHÁI-sha-ya.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.nuzhen-proezdnoi",
+      "text": "Мне ну́жен проездно́й.",
+      "es": "Necesito un abono de transporte.",
+      "literal": "A mí necesario un abono.",
+      "explanation": "En la taquilla del metro. En San Petersburgo la tarjeta se llama «Подоро́жник». pra-yiz-NÓI.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.kak-doekhat-do-tsentra",
+      "text": "Как дое́хать до це́нтра?",
+      "es": "¿Cómo llego al centro?",
+      "literal": "¿Cómo llegar (en transporte) hasta el centro?",
+      "explanation": "Para ir en metro o autobús («дойти́» es a pie). «х» es una jota: da-YÉ-jat'.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.gde-sdelat-peresadku",
+      "text": "Где мне сде́лать переса́дку?",
+      "es": "¿Dónde hago transbordo?",
+      "explanation": "Cuando tu línea no llega a tu destino. pi-ri-SÁT-ku: las «е» sin acento suenan «i».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.kakaya-sleduyushchaya",
+      "text": "Кака́я сле́дующая ста́нция?",
+      "es": "¿Cuál es la próxima estación?",
+      "explanation": "Dentro del vagón, si no entiendes el anuncio. ka-KÁ-ya: la primera «а» se reduce.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.ostorozhno-dveri",
+      "text": "Осторо́жно, две́ри закрыва́ются!",
+      "es": "¡Atención, se cierran las puertas!",
+      "explanation": "El anuncio del metro antes de arrancar: no intentes entrar. as-ta-RÓZH-na: las «о» sin acento suenan «a».",
+      "register": "neutral",
+      "situation": "ciudad",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-transport.vy-vykhodite",
+      "text": "Вы выхо́дите на сле́дующей?",
+      "es": "¿Se baja en la próxima?",
+      "explanation": "En un vagón lleno, a quien tienes delante, para pasar hacia la puerta. vy-ja-DI-tie.",
+      "register": "vy",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.etot-avtobus",
+      "text": "Э́тот авто́бус идёт в центр?",
+      "es": "¿Este autobús va al centro?",
+      "explanation": "Al conductor o a la gente en la parada. «в» ante consonante sorda suena «f»: f tsentr.",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.gde-ostanovka",
+      "text": "Где остано́вка авто́буса?",
+      "es": "¿Dónde está la parada del autobús?",
+      "explanation": "Por la calle, a un peatón. as-ta-NÓF-ka: la «в» delante de «к» suena «f».",
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.mne-nuzhno-taksi",
+      "text": "Мне ну́жно такси́.",
+      "es": "Necesito un taxi.",
+      "explanation": "En recepción o en la parada de taxis. «такси́» lleva el acento al final: tak-SÍ.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.vyzovu-taksi",
+      "text": "Я вы́зову такси́ че́рез приложе́ние.",
+      "es": "Pido un taxi con la aplicación.",
+      "literal": "Llamaré un taxi a través de la aplicación.",
+      "explanation": "En Rusia casi todos piden el taxi con una app. VY-za-vu: acento en la primera sílaba.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.v-aeroport",
+      "text": "В аэропо́рт, пожа́луйста.",
+      "es": "Al aeropuerto, por favor.",
+      "explanation": "Al subir al taxi. «в» + adónde vas. a-e-ra-PÓRT: cada vocal se pronuncia.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.vot-adres",
+      "text": "Вот а́дрес.",
+      "es": "Esta es la dirección.",
+      "literal": "Aquí la dirección.",
+      "explanation": "Mientras le enseñas el móvil al taxista. «а́дрес» acaba en «s»: Á-dris.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.skolko-do-tsentra",
+      "text": "Ско́лько сто́ит до це́нтра?",
+      "es": "¿Cuánto cuesta hasta el centro?",
+      "explanation": "Pregúntalo antes de subir a un taxi sin app. TSEN-tra: «ц» = «ts».",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.daleko-ekhat",
+      "text": "Далеко́ е́хать?",
+      "es": "¿Está lejos?",
+      "literal": "¿Lejos ir (en vehículo)?",
+      "explanation": "Al taxista o a quien te indica el camino. da-li-KÓ YÉ-jat'.",
+      "register": "neutral",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.otkroite-bagazhnik",
+      "text": "Откро́йте, пожа́луйста, бага́жник.",
+      "es": "Abra el maletero, por favor.",
+      "explanation": "Al taxista, si llevas maletas. ba-GÁZH-nik: la «ж» es como la «j» francesa.",
+      "register": "vy",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.ostanovite-zdes",
+      "text": "Останови́те здесь, пожа́луйста.",
+      "es": "Pare aquí, por favor.",
+      "explanation": "Cuando llegas. as-ta-na-VÍ-tie: todas las «о» sin acento suenan «a».",
+      "register": "vy",
+      "situation": "viajes"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "ru-a1-transport.samolyot",
+      "word": "самолёт",
+      "gender": "m",
+      "plural": "самолёты",
+      "es": "el avión",
+      "notes": "sa-ma-LIÓT: la «ё» lleva el acento.",
+      "situation": "viajes",
+      "image": "fluent:airplane"
+    },
+    {
+      "id": "ru-a1-transport.reis",
+      "word": "рейс",
+      "gender": "m",
+      "plural": "ре́йсы",
+      "es": "el vuelo",
+      "notes": "El vuelo con número: «рейс SU 2501».",
+      "example": "ru-a1-transport.reis-zaderzhivaetsya",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.vylet",
+      "word": "вы́лет",
+      "gender": "m",
+      "plural": "вы́леты",
+      "es": "la salida (de un vuelo)",
+      "notes": "En los paneles: «Вы́лет» = salidas.",
+      "situation": "viajes",
+      "image": "fluent:airplane-departure"
+    },
+    {
+      "id": "ru-a1-transport.prilyot",
+      "word": "прилёт",
+      "gender": "m",
+      "plural": "прилёты",
+      "es": "la llegada (de un vuelo)",
+      "notes": "En los paneles: «Прилёт» = llegadas.",
+      "situation": "viajes",
+      "image": "fluent:airplane-arrival"
+    },
+    {
+      "id": "ru-a1-transport.registratsiya",
+      "word": "регистра́ция",
+      "gender": "f",
+      "es": "la facturación",
+      "example": "ru-a1-transport.gde-registratsiya",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.chemodan",
+      "word": "чемода́н",
+      "gender": "m",
+      "plural": "чемода́ны",
+      "es": "la maleta",
+      "example": "ru-a1-transport.u-menya-odin-chemodan",
+      "situation": "viajes",
+      "image": "fluent:luggage"
+    },
+    {
+      "id": "ru-a1-transport.ruchnaya-klad",
+      "word": "ручна́я кладь",
+      "gender": "f",
+      "es": "el equipaje de mano",
+      "example": "ru-a1-transport.eto-ruchnaya-klad",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.posadochnyi-talon",
+      "word": "поса́дочный тало́н",
+      "gender": "m",
+      "plural": "поса́дочные тало́ны",
+      "es": "la tarjeta de embarque",
+      "situation": "viajes",
+      "image": "fluent:admission-tickets"
+    },
+    {
+      "id": "ru-a1-transport.posadka",
+      "word": "поса́дка",
+      "gender": "f",
+      "es": "el embarque",
+      "example": "ru-a1-transport.posadka-nachalas",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.tamozhnya",
+      "word": "тамо́жня",
+      "gender": "f",
+      "es": "la aduana",
+      "situation": "viajes",
+      "image": "fluent:customs"
+    },
+    {
+      "id": "ru-a1-transport.poezd",
+      "word": "по́езд",
+      "gender": "m",
+      "plural": "поезда́",
+      "es": "el tren",
+      "notes": "Plural con acento al final: поезда́.",
+      "example": "ru-a1-transport.kogda-sleduyushchii-poezd",
+      "situation": "viajes",
+      "image": "fluent:train"
+    },
+    {
+      "id": "ru-a1-transport.vagon",
+      "word": "ваго́н",
+      "gender": "m",
+      "plural": "ваго́ны",
+      "es": "el vagón",
+      "example": "ru-a1-transport.gde-pyatyi-vagon",
+      "situation": "viajes",
+      "image": "fluent:railway-car"
+    },
+    {
+      "id": "ru-a1-transport.platforma",
+      "word": "платфо́рма",
+      "gender": "f",
+      "plural": "платфо́рмы",
+      "es": "el andén",
+      "example": "ru-a1-transport.s-kakoi-platformy",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.mesto",
+      "word": "ме́сто",
+      "gender": "n",
+      "plural": "места́",
+      "es": "el asiento; el sitio",
+      "example": "ru-a1-transport.eto-moyo-mesto",
+      "situation": "viajes",
+      "image": "fluent:seat"
+    },
+    {
+      "id": "ru-a1-transport.raspisanie",
+      "word": "расписа́ние",
+      "gender": "n",
+      "es": "el horario",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.stantsiya",
+      "word": "ста́нция",
+      "gender": "f",
+      "plural": "ста́нции",
+      "es": "la estación (de metro)",
+      "example": "ru-a1-transport.blizhaishaya-stantsiya",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.peresadka",
+      "word": "переса́дка",
+      "gender": "f",
+      "es": "el transbordo",
+      "example": "ru-a1-transport.gde-sdelat-peresadku",
+      "situation": "ciudad"
+    },
+    {
+      "id": "ru-a1-transport.proezdnoi",
+      "word": "проездно́й",
+      "gender": "m",
+      "es": "el abono de transporte",
+      "example": "ru-a1-transport.nuzhen-proezdnoi",
+      "situation": "ciudad",
+      "image": "fluent:credit-card"
+    },
+    {
+      "id": "ru-a1-transport.poezdka",
+      "word": "пое́здка",
+      "gender": "f",
+      "plural": "пое́здки",
+      "es": "el viaje; el trayecto",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.avtobus",
+      "word": "авто́бус",
+      "gender": "m",
+      "plural": "авто́бусы",
+      "es": "el autobús",
+      "example": "ru-a1-transport.etot-avtobus",
+      "situation": "ciudad",
+      "image": "fluent:bus"
+    },
+    {
+      "id": "ru-a1-transport.ostanovka",
+      "word": "остано́вка",
+      "gender": "f",
+      "plural": "остано́вки",
+      "es": "la parada",
+      "example": "ru-a1-transport.gde-ostanovka",
+      "situation": "ciudad",
+      "image": "fluent:bus-stop"
+    },
+    {
+      "id": "ru-a1-transport.tramvai",
+      "word": "трамва́й",
+      "gender": "m",
+      "plural": "трамва́и",
+      "es": "el tranvía",
+      "situation": "ciudad",
+      "image": "fluent:tram-car"
+    },
+    {
+      "id": "ru-a1-transport.voditel",
+      "word": "води́тель",
+      "gender": "m",
+      "plural": "води́тели",
+      "es": "el conductor",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.adres",
+      "word": "а́дрес",
+      "gender": "m",
+      "plural": "адреса́",
+      "es": "la dirección",
+      "example": "ru-a1-transport.vot-adres",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.bagazhnik",
+      "word": "бага́жник",
+      "gender": "m",
+      "es": "el maletero",
+      "example": "ru-a1-transport.otkroite-bagazhnik",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.daleko",
+      "word": "далеко́",
+      "es": "lejos",
+      "example": "ru-a1-transport.daleko-ekhat",
+      "situation": "viajes"
+    },
+    {
+      "id": "ru-a1-transport.blizko",
+      "word": "бли́зко",
+      "es": "cerca",
+      "notes": "«Э́то бли́зко» = está cerca.",
+      "situation": "viajes"
+    }
+  ],
+  "qa": [
+    {
+      "id": "ru-a1-transport.qa.tsel-poezdki",
+      "question": "Цель пое́здки?",
+      "questionEs": "¿Motivo del viaje?",
+      "accepted": [
+        {
+          "text": "Тури́зм.",
+          "es": "Turismo."
+        },
+        {
+          "text": "Я тури́ст.",
+          "es": "Soy turista."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Неде́лю.",
+          "es": "Una semana."
+        },
+        {
+          "text": "Вот мой па́спорт.",
+          "es": "Aquí tiene mi pasaporte."
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "notes": "Al motivo se responde con «Тури́зм»; cuánto tiempo es otra pregunta.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-transport.qa.skolko-budete",
+      "question": "Ско́лько вы бу́дете в Росси́и?",
+      "questionEs": "¿Cuánto tiempo va a estar en Rusia?",
+      "accepted": [
+        {
+          "text": "Неде́лю.",
+          "es": "Una semana."
+        },
+        {
+          "text": "Я здесь на неде́лю.",
+          "es": "Estoy aquí una semana."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "В гости́нице.",
+          "es": "En el hotel."
+        },
+        {
+          "text": "Тури́зм.",
+          "es": "Turismo."
+        }
+      ],
+      "register": "vy",
+      "situation": "viajes",
+      "notes": "«Ско́лько» pide una cantidad de tiempo: неде́лю, две неде́ли."
+    },
+    {
+      "id": "ru-a1-transport.qa.bagazh",
+      "question": "У вас есть бага́ж?",
+      "questionEs": "¿Lleva equipaje?",
+      "accepted": [
+        {
+          "text": "Да, оди́н чемода́н.",
+          "es": "Sí, una maleta."
+        },
+        {
+          "text": "Нет, то́лько ручна́я кладь.",
+          "es": "No, solo equipaje de mano."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, оди́н биле́т.",
+          "es": "Sí, un billete."
+        },
+        {
+          "text": "Нет, я не тури́ст.",
+          "es": "No, no soy turista."
+        }
+      ],
+      "register": "vy",
+      "situation": "viajes",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-transport.qa.vam-kuda",
+      "question": "Здра́вствуйте! Вам куда́?",
+      "questionEs": "¡Hola! ¿Adónde va?",
+      "accepted": [
+        {
+          "text": "Оди́н биле́т до Москвы́, пожа́луйста.",
+          "es": "Un billete a Moscú, por favor."
+        },
+        {
+          "text": "До Москвы́, пожа́луйста.",
+          "es": "A Moscú, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "В Москве́, пожа́луйста.",
+          "es": "En Moscú, por favor (mal: «в Москве́» es «en Moscú»)."
+        },
+        {
+          "text": "Из Москвы́, пожа́луйста.",
+          "es": "Desde Moscú, por favor."
+        }
+      ],
+      "register": "vy",
+      "situation": "viajes",
+      "notes": "Para el destino del billete: «до» + Москвы́."
+    },
+    {
+      "id": "ru-a1-transport.qa.tuda-obratno",
+      "question": "Туда́ и обра́тно?",
+      "questionEs": "¿Ida y vuelta?",
+      "accepted": [
+        {
+          "text": "Нет, в оди́н коне́ц.",
+          "es": "No, solo ida."
+        },
+        {
+          "text": "Да, туда́ и обра́тно.",
+          "es": "Sí, ida y vuelta."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Нет, сле́дующий по́езд.",
+          "es": "No, el próximo tren."
+        },
+        {
+          "text": "Да, пя́тый ваго́н.",
+          "es": "Sí, el vagón cinco."
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-transport.qa.vykhodite",
+      "question": "Вы выхо́дите на сле́дующей?",
+      "questionEs": "¿Se baja en la próxima?",
+      "accepted": [
+        {
+          "text": "Да, выхожу́.",
+          "es": "Sí, me bajo."
+        },
+        {
+          "text": "Нет, проходи́те, пожа́луйста.",
+          "es": "No, pase, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, вы́ход там.",
+          "es": "Sí, la salida está allí."
+        },
+        {
+          "text": "Нет, сле́дующая ста́нция.",
+          "es": "No, la próxima estación."
+        }
+      ],
+      "register": "vy",
+      "situation": "ciudad",
+      "notes": "Si no te bajas, déjale pasar: «Проходи́те»."
+    },
+    {
+      "id": "ru-a1-transport.qa.kuda-otvezti",
+      "question": "Куда́ вас отвезти́?",
+      "questionEs": "¿Adónde le llevo?",
+      "accepted": [
+        {
+          "text": "В аэропо́рт, пожа́луйста.",
+          "es": "Al aeropuerto, por favor."
+        },
+        {
+          "text": "Вот а́дрес.",
+          "es": "Esta es la dirección."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "В аэропорту́, пожа́луйста.",
+          "es": "En el aeropuerto, por favor (mal: eso es «dónde», no «adónde»)."
+        },
+        {
+          "text": "Из аэропо́рта.",
+          "es": "Desde el aeropuerto."
+        }
+      ],
+      "register": "vy",
+      "situation": "viajes",
+      "notes": "Para ir a un sitio: «в аэропо́рт»; «в аэропорту́» es estar allí.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-transport.qa.taksi-tsena",
+      "question": "Пятьсо́т рубле́й до гости́ницы. Хорошо́?",
+      "questionEs": "Quinientos rublos hasta el hotel. ¿Vale?",
+      "accepted": [
+        {
+          "text": "Хорошо́, пое́хали!",
+          "es": "Vale, ¡vamos!"
+        },
+        {
+          "text": "Да, хорошо́.",
+          "es": "Sí, vale."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Пятьсо́т биле́тов, пожа́луйста.",
+          "es": "Quinientos billetes, por favor."
+        },
+        {
+          "text": "Нет, я в гости́нице.",
+          "es": "No, estoy en el hotel."
+        }
+      ],
+      "register": "neutral",
+      "situation": "viajes"
+    }
+  ]
+}

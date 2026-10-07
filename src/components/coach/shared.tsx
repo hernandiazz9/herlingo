@@ -1,5 +1,7 @@
 import { useSyncExternalStore, type ReactNode } from "react";
+import type { CoachPack } from "@/lib/coach";
 import { cn } from "@/lib/cn";
+import { getPack, hasPack } from "@/lib/content";
 
 /** Focus ring of every Prepárate control (same as `Button`). */
 export const FOCUS = "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
@@ -9,6 +11,17 @@ export const DANGER = cn(
   "pressable inline-flex items-center justify-center rounded-button border-2 border-error bg-surface px-5 font-bold tracking-wide text-error-deep [--ledge:var(--error-ledge)]",
   FOCUS,
 );
+
+/**
+ * Register badge of a Prepárate pack, same rule as DialogueSimulator: a pack whose formal register
+ * is the generic `formal` (no tú/usted split) says "Registro formal"/"Registro informal"; the
+ * others say "Trato de usted"/"Trato de tú".
+ */
+export function registerBadge(pack: Pick<CoachPack, "lang" | "register">): string {
+  const generic = hasPack(pack.lang) && getPack(pack.lang).meta.formalRegister === "formal";
+  if (pack.register === "formal") return generic ? "Registro formal" : "Trato de usted";
+  return generic ? "Registro informal" : "Trato de tú";
+}
 
 /** Text field shell: the input inside is borderless. */
 export const FIELD = "rounded-button border-2 border-line bg-surface focus-within:border-sea";

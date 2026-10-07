@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { SpeakerIcon } from "@/components/icons";
-import { Button } from "@/components/ui";
+import { Button, TargetText } from "@/components/ui";
 import type { Playable } from "@/lib/content";
 import { speak, stop } from "@/lib/audio";
 import { recordListen } from "@/lib/progress/activity";
@@ -60,7 +60,7 @@ export function ShowMode({ item, onClose }: ShowModeProps) {
         aria-label={`Escuchar: ${item.text}`}
       >
         <p lang={lang} className="text-[clamp(2.25rem,11vw,4.5rem)] leading-tight font-extrabold break-words text-ink">
-          {item.text}
+          <TargetText text={item.text} lang={lang} />
         </p>
         <p className="text-xl text-ink-muted">{item.es}</p>
       </button>

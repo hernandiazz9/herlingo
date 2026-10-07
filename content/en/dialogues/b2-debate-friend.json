@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-b2-debate-friend",
+  "title": "Debatir con una amiga",
+  "description": "Una amiga cree que trabajar desde casa es mejor en todo; tú matizas, das tus argumentos y llegáis a un punto medio.",
+  "situation": "opiniones",
+  "unit": "b2-opinions",
+  "order": 207,
+  "register": "tu",
+  "level": "B2",
+  "avatars": { "Amiga": "fluent:woman-red-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Amiga", "text": "Honestly, I think working from home is better in every way. Offices are a waste of time.", "es": "La verdad, creo que trabajar desde casa es mejor en todo. Las oficinas son una pérdida de tiempo.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Dale parte de razón, pero di que no estás del todo de acuerdo.",
+      "options": [
+        { "text": "I see your point, but I don't completely agree.", "es": "Entiendo lo que dices, pero no estoy del todo de acuerdo.", "verdict": "correct", "feedback": "¡Muy bien! «I see your point, but…» reconoce su argumento antes de matizar." },
+        { "text": "No way, that's not true.", "es": "Ni hablar, eso no es verdad.", "verdict": "acceptable", "feedback": "Entre amigos se puede, pero suena tajante; matizar abre mejor el debate." },
+        { "text": "I see your point, but I'm not completely agree.", "es": "Entiendo lo que dices, pero no estoy del todo de acuerdo.", "verdict": "wrong", "feedback": "«agree» es un verbo, no un adjetivo: «I don't agree», nunca «I'm not agree»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Amiga", "text": "Really? Why? You don't miss the commute, do you?", "es": "¿En serio? ¿Por qué? No echarás de menos el trayecto, ¿no?", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que el trayecto no, pero que en casa te sientes aislado y es más difícil aprender de los compañeros.",
+      "options": [
+        { "text": "The commute, no. But at home I feel isolated, and it's harder to learn from my coworkers.", "es": "El trayecto no. Pero en casa me siento aislado y es más difícil aprender de mis compañeros.", "verdict": "correct", "feedback": "¡Perfecto! «harder to learn from» compara bien, y «coworkers» = compañeros de trabajo." },
+        { "text": "Not the commute. I just feel lonely at home.", "es": "El trayecto no. Simplemente me siento solo en casa.", "verdict": "acceptable", "feedback": "Correcto, aunque te falta el segundo argumento, el de aprender de los demás." },
+        { "text": "The commute, no. But at home I feel isolated, and it's more hard to learn of my coworkers.", "es": "El trayecto no. Pero en casa me siento aislado y es más difícil aprender de mis compañeros.", "verdict": "wrong", "feedback": "«hard» hace el comparativo con -er: «harder». Y es «learn from», no «learn of»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Amiga", "text": "Okay, but you can just jump on a video call if you need help.", "es": "Vale, pero puedes hacer una videollamada sin más si necesitas ayuda.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Responde que sí, pero que no es lo mismo: muchas ideas surgen en conversaciones informales.",
+      "options": [
+        { "text": "Sure, but it's not the same. A lot of ideas come up in casual conversations.", "es": "Ya, pero no es lo mismo. Muchas ideas surgen en conversaciones informales.", "verdict": "correct", "feedback": "¡Genial! «come up» = surgir (un tema, una idea)." },
+        { "text": "Yeah, but it's different.", "es": "Ya, pero es diferente.", "verdict": "acceptable", "feedback": "Se entiende, pero no das ningún argumento para defenderlo." },
+        { "text": "Sure, but is not the same. A lot of ideas come up in casual conversations.", "es": "Ya, pero no es lo mismo. Muchas ideas surgen en conversaciones informales.", "verdict": "wrong", "feedback": "En inglés el sujeto no se omite: «it's not the same», no «is not the same»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Amiga", "text": "Hmm, I guess you've got a point there.", "es": "Mmm, supongo que en eso tienes razón.", "voice": "en-US-AvaNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Propón un punto medio: lo ideal sería un par de días en la oficina y el resto en casa.",
+      "options": [
+        { "text": "Maybe the ideal is somewhere in the middle: a couple of days at the office and the rest at home.", "es": "Quizá lo ideal esté en un punto medio: un par de días en la oficina y el resto en casa.", "verdict": "correct", "feedback": "¡Bien! «somewhere in the middle» = un punto medio; «a couple of» = un par de." },
+        { "text": "Two days at the office, three at home. Perfect.", "es": "Dos días en la oficina, tres en casa. Perfecto.", "verdict": "acceptable", "feedback": "Se entiende, aunque proponerlo como idea («Maybe…») suena menos tajante." },
+        { "text": "Maybe the ideal is a middle point: a pair of days in the office and the rest in home.", "es": "Quizá lo ideal sea un punto medio: un par de días en la oficina y el resto en casa.", "verdict": "wrong", "feedback": "«un par de días» es «a couple of days» («a pair» es para cosas que van a pares), y se dice «at home», no «in home»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Amiga", "text": "Okay, fine, that actually sounds pretty reasonable. Hybrid it is!", "es": "Vale, de acuerdo, eso suena bastante razonable. ¡Pues híbrido!", "voice": "en-US-AvaNeural" }
+  ]
+}

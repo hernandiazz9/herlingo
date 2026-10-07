@@ -1,0 +1,1493 @@
+{
+  "id": "ru-a1-grammar",
+  "order": 90,
+  "level": "A1",
+  "title": "Gramática A1",
+  "description": "Lo justo para hablar: género, presente y pasado, dónde y adónde, tener y contar. Primero reconocer, luego decirlo.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "ru-a1-grammar.l.basics",
+      "title": "Género, pronombres y «ser»",
+      "items": [
+        "gram.ru-a1-gender",
+        "gram.ru-a1-pronouns-eto",
+        "ru-a1-grammar.on-vrach",
+        "ru-a1-grammar.kto-eto",
+        "ru-a1-grammar.eto-moi-brat",
+        "ru-a1-grammar.vrach",
+        "ru-a1-grammar.brat",
+        "gram.ru-a1-ty-or-vy",
+        "gram.ru-a1-possessives",
+        "ru-a1-grammar.gde-moi-pasport",
+        "ru-a1-grammar.vot-moya-karta",
+        "ru-a1-grammar.bagazh",
+        "ru-a1-grammar.eto-vash-bagazh",
+        "gram.ru-a1-plural",
+        "ru-a1-grammar.kniga",
+        "ru-a1-grammar.okno",
+        "ru-a1-grammar.gde-tualety",
+        "ru-a1-grammar.eto-moi-druzya",
+        "ru-a1-grammar.qa.vash-pasport"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.l.verbs",
+      "title": "Verbos: presente y pasado",
+      "items": [
+        "gram.ru-a1-present-e",
+        "ru-a1-grammar.vy-znaete-gde-metro",
+        "ru-a1-grammar.gde-ty-zhivyosh",
+        "ru-a1-grammar.ya-rabotayu-v-madride",
+        "ru-a1-grammar.chto-ty-delaesh",
+        "gram.ru-a1-present-i",
+        "ru-a1-grammar.ya-lyublyu-kofe",
+        "ru-a1-grammar.my-govorim-po-russki",
+        "gram.ru-a1-past",
+        "ru-a1-grammar.ya-byl-v-moskve",
+        "ru-a1-grammar.ya-byla-v-moskve",
+        "ru-a1-grammar.vchera-ya-rabotal",
+        "ru-a1-grammar.gde-vy-byli",
+        "ru-a1-grammar.qa.gde-ty-byl"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.l.places",
+      "title": "¿Dónde? ¿Adónde? ¿Qué quieres?",
+      "items": [
+        "gram.ru-a1-prepositional",
+        "ru-a1-grammar.ulitsa",
+        "ru-a1-grammar.rabota",
+        "ru-a1-grammar.ya-zhivu-v-madride",
+        "ru-a1-grammar.my-v-gostinitse",
+        "ru-a1-grammar.on-na-rabote",
+        "gram.ru-a1-accusative",
+        "ru-a1-grammar.ya-khochu-vodu",
+        "ru-a1-grammar.ya-ishchu-apteku",
+        "gram.ru-a1-motion",
+        "ru-a1-grammar.kuda-vy-edete",
+        "ru-a1-grammar.kuda-ty-idyosh",
+        "ru-a1-grammar.ya-idu-v-muzei",
+        "ru-a1-grammar.my-edem-v-moskvu",
+        "ru-a1-grammar.qa.gde-vy-zhivyote",
+        "ru-a1-grammar.qa.kuda-edem",
+        "ru-a1-grammar.qa.chto-budete-pit"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.l.have-count",
+      "title": "Tener y contar",
+      "items": [
+        "gram.ru-a1-u-menya-est",
+        "ru-a1-grammar.u-menya-est-brat",
+        "ru-a1-grammar.u-vas-est-wifi",
+        "ru-a1-grammar.vremya",
+        "ru-a1-grammar.u-tebya-est-vremya",
+        "ru-a1-grammar.u-menya-net-vremeni",
+        "gram.ru-a1-numbers-rubles",
+        "ru-a1-numbers.dvadtsat-odin-rubl",
+        "ru-a1-numbers.sorok-tri-rublya",
+        "ru-a1-numbers.sto-dvadtsat-rublei",
+        "ru-a1-numbers.seichas-dva-chasa",
+        "ru-a1-numbers.mne-tridtsat-dva-goda",
+        "ru-a1-grammar.qa.est-brat"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "ru-a1-grammar.on-vrach",
+      "text": "Он врач.",
+      "es": "Es médico.",
+      "explanation": "Sin verbo: en presente el ruso no dice «es». vrach: la «ч» es como la española.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.kto-eto",
+      "text": "Кто э́то?",
+      "es": "¿Quién es?",
+      "explanation": "Señalando a alguien en una foto o en la calle. kto E-ta: la «о» final suena «a».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.eto-moi-brat",
+      "text": "Э́то мой брат.",
+      "es": "Este es mi hermano.",
+      "explanation": "Para presentar a alguien. «мой» va con palabras masculinas: moi brat.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "posesivos"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.eto-moi-druzya",
+      "text": "Э́то мои́ друзья́.",
+      "es": "Estos son mis amigos.",
+      "explanation": "Para presentar a varios. druz'-IÁ: la «ь» separa la «з» de la «я».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "plural",
+        "posesivos"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.gde-moi-pasport",
+      "text": "Где мой па́спорт?",
+      "es": "¿Dónde está mi pasaporte?",
+      "explanation": "Cuando buscas algo tuyo. PÁS-part: la «о» sin acento suena «a».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "posesivos"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.vot-moya-karta",
+      "text": "Вот моя́ ка́рта.",
+      "es": "Aquí tiene mi tarjeta.",
+      "explanation": "Al pagar o enseñar la tarjeta. ma-IÁ: «моя́» porque «ка́рта» es femenino.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "posesivos"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.eto-vash-bagazh",
+      "text": "Э́то ваш бага́ж?",
+      "es": "¿Es este su equipaje?",
+      "explanation": "Lo oyes en el aeropuerto o el hotel. ba-GÁSH: la «ж» final suena «sh».",
+      "register": "vy",
+      "situation": "gramatica",
+      "tags": [
+        "posesivos"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.gde-tualety",
+      "text": "Где здесь туале́ты?",
+      "es": "¿Dónde están los aseos?",
+      "explanation": "En un museo, una estación o un centro comercial. tua-LIÉ-ty: plural en «-ы».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "plural"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.vy-znaete-gde-metro",
+      "text": "Вы зна́ете, где метро́?",
+      "es": "¿Sabe dónde está el metro?",
+      "explanation": "Para preguntar el camino a un desconocido. ZNÁ-i-tie: la «е» sin acento suena casi «i».",
+      "register": "vy",
+      "situation": "gramatica",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.gde-ty-zhivyosh",
+      "text": "Где ты живёшь?",
+      "es": "¿Dónde vives?",
+      "explanation": "A alguien a quien tuteas. zhi-VIÓSH: la «ё» siempre lleva el acento.",
+      "register": "tu",
+      "situation": "gramatica",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.ya-rabotayu-v-madride",
+      "text": "Я рабо́таю в Мадри́де.",
+      "es": "Trabajo en Madrid.",
+      "explanation": "Al hablar de ti. ra-BÓ-ta-iu: con «я» el verbo acaba en «-ю».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "presente",
+        "lugar"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.chto-ty-delaesh",
+      "text": "Что ты де́лаешь?",
+      "es": "¿Qué haces?",
+      "explanation": "A un amigo, en persona o por teléfono. «Что» se dice «shto».",
+      "register": "tu",
+      "situation": "gramatica",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.ya-lyublyu-kofe",
+      "text": "Я о́чень люблю́ ко́фе.",
+      "es": "Me encanta el café.",
+      "explanation": "Para decir lo que te gusta mucho. liub-LIÚ: la «л» extra solo aparece con «я».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.my-govorim-po-russki",
+      "text": "Мы немно́го говори́м по-ру́сски.",
+      "es": "Hablamos un poco de ruso.",
+      "explanation": "Si vas con alguien que también aprende. ga-va-RÍM: las «о» sin acento suenan «a».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.ya-byl-v-moskve",
+      "text": "Я был в Москве́.",
+      "es": "Estuve en Moscú.",
+      "notes": "Lo dice un hombre; una mujer dice «была́».",
+      "explanation": "Lo dice un hombre. byl: la «ы» con la lengua atrás; «в Москве́» suena «vmask-VIÉ».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.ya-byla-v-moskve",
+      "text": "Я была́ в Москве́.",
+      "es": "Estuve en Moscú.",
+      "notes": "Lo dice una mujer; un hombre dice «был».",
+      "explanation": "Lo dice una mujer. by-LÁ: el acento va al final.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.vchera-ya-rabotal",
+      "text": "Вчера́ я мно́го рабо́тал.",
+      "es": "Ayer trabajé mucho.",
+      "notes": "Una mujer dice «рабо́тала».",
+      "explanation": "Lo dice un hombre al contar su día. fchi-RÁ: la «в» suena «f» ante «ч».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.gde-vy-byli",
+      "text": "Где вы бы́ли?",
+      "es": "¿Dónde ha estado?",
+      "explanation": "Con «вы», el pasado siempre acaba en «-ли», aunque hables con una sola persona. BY-li.",
+      "register": "vy",
+      "situation": "gramatica",
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.ya-zhivu-v-madride",
+      "text": "Я живу́ в Мадри́де.",
+      "es": "Vivo en Madrid.",
+      "explanation": "Al presentarte. vmad-RÍ-die: la «в» se pega a la palabra siguiente.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "lugar"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.my-v-gostinitse",
+      "text": "Мы в гости́нице.",
+      "es": "Estamos en el hotel.",
+      "explanation": "Por teléfono, para decir dónde estáis. vgas-TÍ-ni-tse: la «в» se pega a la palabra siguiente.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "lugar"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.on-na-rabote",
+      "text": "Он на рабо́те.",
+      "es": "Está en el trabajo.",
+      "explanation": "Para decir dónde está alguien. na ra-BÓ-tie: «на», no «в», con «рабо́та».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "lugar"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.ya-khochu-vodu",
+      "text": "Я хочу́ во́ду.",
+      "es": "Quiero agua.",
+      "explanation": "En un bar o en casa. VÓ-du: «вода́» cambia a «во́ду» y el acento se mueve.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "casos"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.ya-ishchu-apteku",
+      "text": "Я ищу́ апте́ку.",
+      "es": "Busco una farmacia.",
+      "explanation": "Para pedir ayuda por la calle. i-SHCHÚ: «щ» es una «sh» larga y suave.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "casos"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.kuda-vy-edete",
+      "text": "Куда́ вы е́дете?",
+      "es": "¿Adónde va?",
+      "explanation": "Te lo pregunta el taxista o un vecino. ku-DÁ vy YÉ-di-tie.",
+      "register": "vy",
+      "situation": "gramatica",
+      "tags": [
+        "movimiento"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.kuda-ty-idyosh",
+      "text": "Куда́ ты идёшь?",
+      "es": "¿Adónde vas?",
+      "explanation": "A un amigo que va andando. i-DIÓSH: la «ё» lleva el acento.",
+      "register": "tu",
+      "situation": "gramatica",
+      "tags": [
+        "movimiento"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.ya-idu-v-muzei",
+      "text": "Я иду́ в музе́й.",
+      "es": "Voy al museo.",
+      "explanation": "Vas a pie. i-DÚ vmu-ZIÉI: «музе́й» no cambia tras «в» porque es masculino.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "movimiento"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.my-edem-v-moskvu",
+      "text": "Мы е́дем в Москву́.",
+      "es": "Vamos a Moscú.",
+      "explanation": "Vais en tren, coche o avión. YÉ-dim vmask-VÚ: «Москва́» → «Москву́» con «куда́».",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "movimiento"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.u-menya-est-brat",
+      "text": "У меня́ есть брат.",
+      "es": "Tengo un hermano.",
+      "literal": "En mí hay hermano.",
+      "explanation": "Al hablar de tu familia. u mi-NIÁ YEST' brat.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "tener"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.u-vas-est-wifi",
+      "text": "У вас есть вай-фа́й?",
+      "es": "¿Tienen wifi?",
+      "explanation": "En un café o en el hotel. vai-FÁI: suena casi como en español.",
+      "register": "vy",
+      "situation": "gramatica",
+      "tags": [
+        "tener"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.u-tebya-est-vremya",
+      "text": "У тебя́ есть вре́мя?",
+      "es": "¿Tienes tiempo?",
+      "explanation": "Para proponer un plan a un amigo. VRIÉ-mia.",
+      "register": "tu",
+      "situation": "gramatica",
+      "tags": [
+        "tener"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.u-menya-net-vremeni",
+      "text": "У меня́ нет вре́мени.",
+      "es": "No tengo tiempo.",
+      "explanation": "Para decir que no puedes. VRIÉ-mi-ni: con «нет», «вре́мя» cambia de forma.",
+      "register": "neutral",
+      "situation": "gramatica",
+      "tags": [
+        "tener"
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "ru-a1-grammar.brat",
+      "word": "брат",
+      "gender": "m",
+      "plural": "бра́тья",
+      "es": "el hermano",
+      "notes": "Plural: бра́тья.",
+      "example": "ru-a1-grammar.u-menya-est-brat",
+      "situation": "gramatica"
+    },
+    {
+      "id": "ru-a1-grammar.vrach",
+      "word": "врач",
+      "gender": "m",
+      "plural": "врачи́",
+      "es": "el médico",
+      "notes": "Tras «ч», el plural lleva «-и»: врачи́.",
+      "example": "ru-a1-grammar.on-vrach",
+      "situation": "gramatica",
+      "image": "fluent:health-worker"
+    },
+    {
+      "id": "ru-a1-grammar.bagazh",
+      "word": "бага́ж",
+      "gender": "m",
+      "es": "el equipaje",
+      "notes": "ba-GÁSH: la «ж» final suena «sh».",
+      "example": "ru-a1-grammar.eto-vash-bagazh",
+      "situation": "gramatica",
+      "image": "fluent:luggage"
+    },
+    {
+      "id": "ru-a1-grammar.rabota",
+      "word": "рабо́та",
+      "gender": "f",
+      "plural": "рабо́ты",
+      "es": "el trabajo",
+      "notes": "«на рабо́те» = en el trabajo.",
+      "example": "ru-a1-grammar.on-na-rabote",
+      "situation": "gramatica",
+      "image": "fluent:briefcase"
+    },
+    {
+      "id": "ru-a1-grammar.vremya",
+      "word": "вре́мя",
+      "gender": "n",
+      "es": "el tiempo (de reloj)",
+      "notes": "Neutro aunque acabe en «-я».",
+      "example": "ru-a1-grammar.u-menya-net-vremeni",
+      "situation": "gramatica",
+      "image": "fluent:hourglass-done"
+    },
+    {
+      "id": "ru-a1-grammar.kniga",
+      "word": "кни́га",
+      "gender": "f",
+      "plural": "кни́ги",
+      "es": "el libro",
+      "notes": "Plural: кни́ги (tras «г», «-и»).",
+      "situation": "gramatica",
+      "image": "fluent:closed-book"
+    },
+    {
+      "id": "ru-a1-grammar.okno",
+      "word": "окно́",
+      "gender": "n",
+      "plural": "о́кна",
+      "es": "la ventana",
+      "notes": "Plural: о́кна; el acento se mueve.",
+      "situation": "gramatica",
+      "image": "fluent:window"
+    },
+    {
+      "id": "ru-a1-grammar.ulitsa",
+      "word": "у́лица",
+      "gender": "f",
+      "plural": "у́лицы",
+      "es": "la calle",
+      "notes": "«на у́лице» = en la calle, fuera.",
+      "situation": "gramatica",
+      "image": "fluent:motorway"
+    }
+  ],
+  "qa": [
+    {
+      "id": "ru-a1-grammar.qa.gde-vy-zhivyote",
+      "question": "Где вы живёте?",
+      "questionEs": "¿Dónde vive?",
+      "accepted": [
+        {
+          "text": "Я живу́ в Мадри́де.",
+          "es": "Vivo en Madrid."
+        },
+        {
+          "text": "В Мадри́де.",
+          "es": "En Madrid."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я живу́ Мадри́д.",
+          "es": "Vivo Madrid (falta «в» y el final «-е»)."
+        },
+        {
+          "text": "Я е́ду в Мадри́д.",
+          "es": "Voy a Madrid."
+        }
+      ],
+      "register": "vy",
+      "situation": "gramatica",
+      "notes": "«Где?» pide «в» + la forma en «-е»: «в Мадри́де».",
+      "tags": [
+        "lugar"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.qa.kuda-edem",
+      "question": "Здра́вствуйте! Куда́ е́дем?",
+      "questionEs": "¡Hola! ¿Adónde vamos?",
+      "accepted": [
+        {
+          "text": "На вокза́л, пожа́луйста.",
+          "es": "A la estación, por favor."
+        },
+        {
+          "text": "В аэропо́рт, пожа́луйста.",
+          "es": "Al aeropuerto, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "На вокза́ле.",
+          "es": "En la estación."
+        },
+        {
+          "text": "Я в аэропорту́.",
+          "es": "Estoy en el aeropuerto."
+        }
+      ],
+      "register": "neutral",
+      "situation": "gramatica",
+      "notes": "El taxista pregunta «¿adónde?»: «на вокза́л», no «на вокза́ле» (eso es «dónde»).",
+      "tags": [
+        "movimiento"
+      ],
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-grammar.qa.chto-budete-pit",
+      "question": "Что бу́дете пить?",
+      "questionEs": "¿Qué va a beber?",
+      "accepted": [
+        {
+          "text": "Во́ду, пожа́луйста.",
+          "es": "Agua, por favor."
+        },
+        {
+          "text": "Ко́фе, пожа́луйста.",
+          "es": "Un café, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я пил во́ду.",
+          "es": "Bebí agua."
+        },
+        {
+          "text": "Вода́ здесь.",
+          "es": "El agua está aquí."
+        }
+      ],
+      "register": "vy",
+      "situation": "gramatica",
+      "notes": "Responde solo con lo que quieres: «во́ду», con «-у» porque es femenino.",
+      "tags": [
+        "casos"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.qa.est-brat",
+      "question": "У тебя́ есть брат?",
+      "questionEs": "¿Tienes un hermano?",
+      "accepted": [
+        {
+          "text": "Да, у меня́ есть брат.",
+          "es": "Sí, tengo un hermano."
+        },
+        {
+          "text": "Нет, у меня́ нет бра́та.",
+          "es": "No, no tengo hermanos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, я есть брат.",
+          "es": "Sí, yo soy hermano (calco del español)."
+        },
+        {
+          "text": "Да, э́то мой брат.",
+          "es": "Sí, este es mi hermano."
+        }
+      ],
+      "register": "tu",
+      "situation": "gramatica",
+      "notes": "«Tener» es «у меня́ есть»; «нет бра́та» para el negativo.",
+      "tags": [
+        "tener"
+      ],
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-grammar.qa.gde-ty-byl",
+      "question": "Где ты был вчера́?",
+      "questionEs": "¿Dónde estuviste ayer?",
+      "accepted": [
+        {
+          "text": "Я был в музе́е.",
+          "es": "Estuve en el museo."
+        },
+        {
+          "text": "В музе́е.",
+          "es": "En el museo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Я иду́ в музе́й.",
+          "es": "Voy al museo."
+        },
+        {
+          "text": "Я бу́ду в музе́е.",
+          "es": "Estaré en el museo."
+        }
+      ],
+      "register": "tu",
+      "situation": "gramatica",
+      "notes": "Pregunta en pasado: responde con «был» (o «была́» si eres mujer).",
+      "tags": [
+        "pasado"
+      ]
+    },
+    {
+      "id": "ru-a1-grammar.qa.vash-pasport",
+      "question": "Э́то ваш па́спорт?",
+      "questionEs": "¿Es este su pasaporte?",
+      "accepted": [
+        {
+          "text": "Да, мой.",
+          "es": "Sí, es mío."
+        },
+        {
+          "text": "Да, э́то мой па́спорт.",
+          "es": "Sí, es mi pasaporte."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, моя́.",
+          "es": "Sí, mía (mal: «па́спорт» es masculino)."
+        },
+        {
+          "text": "Да, ваш.",
+          "es": "Sí, suyo."
+        }
+      ],
+      "register": "vy",
+      "situation": "gramatica",
+      "notes": "«Па́спорт» es masculino: «мой».",
+      "tags": [
+        "posesivos"
+      ],
+      "voice": "ru-RU-DmitryNeural"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.ru-a1-gender",
+      "title": "Masculino, femenino y neutro: он, она́, оно́",
+      "summary": "Cada nombre ruso es masculino, femenino o neutro, y casi siempre se ve en la última letra. Para decir «él / ella / ello» usas он, она́ u оно́ según esa letra, también con cosas.",
+      "points": [
+        "Consonante o «-й» al final → masculino (он): банк, музе́й.",
+        "«-а» o «-я» → femenino (она́): ка́рта, апте́ка, семья́.",
+        "«-о» o «-е» → neutro (оно́): метро́, молоко́, мо́ре.",
+        "«-ь» puede ser masculino (рубль) o femenino (ночь): apréndelo con la palabra.",
+        "Excepciones útiles: па́па y мужчи́на son masculinos; ко́фе también, aunque acabe en «-е»."
+      ],
+      "table": [
+        [
+          "termina en",
+          "género",
+          "pronombre",
+          "ejemplo"
+        ],
+        [
+          "consonante, -й",
+          "masculino",
+          "он",
+          "банк, музе́й"
+        ],
+        [
+          "-а, -я",
+          "femenino",
+          "она́",
+          "ка́рта, семья́"
+        ],
+        [
+          "-о, -е",
+          "neutro",
+          "оно́",
+          "метро́, мо́ре"
+        ],
+        [
+          "-ь",
+          "m o f",
+          "он / она́",
+          "рубль, ночь"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Где банк? — Он там.",
+          "es": "¿Dónde está el banco? — Está allí."
+        },
+        {
+          "text": "Где апте́ка? — Она́ там.",
+          "es": "¿Dónde está la farmacia? — Está allí."
+        },
+        {
+          "text": "Где метро́? — Оно́ там.",
+          "es": "¿Dónde está el metro? — Está allí."
+        }
+      ],
+      "tags": [
+        "genero"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-pronouns-eto",
+      "title": "Pronombres y el «ser» invisible: э́то",
+      "summary": "En presente, el ruso no dice «ser» ni «estar»: «Я тури́ст» es «Soy turista». «Э́то» sirve para presentar o señalar: «Э́то А́ня» = «Esta es Anya».",
+      "points": [
+        "Pronombres: я, ты, он, она́, оно́, мы, вы, они́. «Вы» es usted y también vosotros (ver «Ты o вы»).",
+        "Para negar, pon «не» delante: «Я не тури́ст».",
+        "«Кто э́то?» pregunta por personas y animales; «Что э́то?» por cosas.",
+        "Por escrito, entre dos nombres a veces va una raya: «Москва́ — столи́ца».",
+        "En pasado sí aparece el verbo: «Я был до́ма» (ver «El pasado»)."
+      ],
+      "table": [
+        [
+          "ruso",
+          "español"
+        ],
+        [
+          "я",
+          "yo"
+        ],
+        [
+          "ты",
+          "tú"
+        ],
+        [
+          "он / она́ / оно́",
+          "él / ella / ello"
+        ],
+        [
+          "мы",
+          "nosotros"
+        ],
+        [
+          "вы",
+          "usted; vosotros"
+        ],
+        [
+          "они́",
+          "ellos, ellas"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Я тури́ст.",
+          "es": "Soy turista."
+        },
+        {
+          "text": "Он врач.",
+          "es": "Es médico."
+        },
+        {
+          "text": "Кто э́то? — Э́то А́ня.",
+          "es": "¿Quién es? — Es Anya."
+        },
+        {
+          "text": "Я не тури́ст.",
+          "es": "No soy turista."
+        }
+      ],
+      "tags": [
+        "pronombres",
+        "presente"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-present-e",
+      "title": "Presente (1): verbos en -ешь",
+      "summary": "La mayoría de verbos en «-ать» y «-ять» van como «знать» (saber): quitas «-ть» y añades -ю, -ешь, -ет, -ем, -ете, -ют. Con «я» casi siempre acaba en «-ю» o «-у».",
+      "points": [
+        "Así van рабо́тать (trabajar), понима́ть (entender), чита́ть (leer), де́лать (hacer).",
+        "Algunos cambian la raíz, pero las terminaciones son las mismas: жить → живу́, живёшь.",
+        "Si la terminación lleva el acento, la «е» pasa a «ё»: живёшь, живёт.",
+        "La pregunta solo cambia la entonación: «Вы понима́ете?» sube al final."
+      ],
+      "table": [
+        [
+          "",
+          "знать (saber)",
+          "жить (vivir)"
+        ],
+        [
+          "я",
+          "зна́ю",
+          "живу́"
+        ],
+        [
+          "ты",
+          "зна́ешь",
+          "живёшь"
+        ],
+        [
+          "он / она́",
+          "зна́ет",
+          "живёт"
+        ],
+        [
+          "мы",
+          "зна́ем",
+          "живём"
+        ],
+        [
+          "вы",
+          "зна́ете",
+          "живёте"
+        ],
+        [
+          "они́",
+          "зна́ют",
+          "живу́т"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Вы зна́ете, где метро́?",
+          "es": "¿Sabe dónde está el metro?"
+        },
+        {
+          "text": "Я рабо́таю в Мадри́де.",
+          "es": "Trabajo en Madrid."
+        },
+        {
+          "text": "Где ты живёшь?",
+          "es": "¿Dónde vives?"
+        }
+      ],
+      "tags": [
+        "presente",
+        "verbos"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-present-i",
+      "title": "Presente (2): verbos en -ишь",
+      "summary": "Muchos verbos en «-ить» van como «говори́ть» (hablar): -ю, -ишь, -ит, -им, -ите, -ят. La señal es la «и»: ты говори́шь, вы говори́те.",
+      "points": [
+        "Así van звони́ть (llamar), смотре́ть (mirar, ver), стоя́ть (estar de pie), сто́ить (costar).",
+        "Tras б, в, м, п, ф se añade una «л» solo con «я»: люби́ть → я люблю́, ты лю́бишь.",
+        "Tras ж, ш, ч, щ se escribe «-у» y «-ат»: я учу́, они́ у́чат.",
+        "«Сто́ит» (cuesta) es de este grupo: «Ско́лько сто́ит?», «Ско́лько сто́ят?» (plural)."
+      ],
+      "table": [
+        [
+          "",
+          "говори́ть (hablar)",
+          "люби́ть (querer, gustar)"
+        ],
+        [
+          "я",
+          "говорю́",
+          "люблю́"
+        ],
+        [
+          "ты",
+          "говори́шь",
+          "лю́бишь"
+        ],
+        [
+          "он / она́",
+          "говори́т",
+          "лю́бит"
+        ],
+        [
+          "мы",
+          "говори́м",
+          "лю́бим"
+        ],
+        [
+          "вы",
+          "говори́те",
+          "лю́бите"
+        ],
+        [
+          "они́",
+          "говоря́т",
+          "лю́бят"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Вы говори́те по-испа́нски?",
+          "es": "¿Habla español?"
+        },
+        {
+          "text": "Я о́чень люблю́ ко́фе.",
+          "es": "Me encanta el café."
+        },
+        {
+          "text": "Мы немно́го говори́м по-ру́сски.",
+          "es": "Hablamos un poco de ruso."
+        }
+      ],
+      "tags": [
+        "presente",
+        "verbos"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-plural",
+      "title": "El plural: -ы, -и, -а",
+      "summary": "Para el plural, la mayoría de nombres masculinos y femeninos acaban en «-ы» o «-и»; los neutros, en «-а» o «-я».",
+      "points": [
+        "Consonante → «-ы»: биле́т → биле́ты; «-а» → «-ы»: ка́рта → ка́рты.",
+        "Tras г, к, х, ж, ш, щ, ч se escribe «-и», nunca «-ы»: кни́га → кни́ги, врач → врачи́.",
+        "«-ь», «-й», «-я» → «-и»: рубль → рубли́, музе́й → музе́и, неде́ля → неде́ли.",
+        "Neutros: «-о» → «-а», «-е» → «-я»: окно́ → о́кна, мо́ре → моря́. El acento suele moverse.",
+        "Irregulares frecuentes: го́род → города́, па́спорт → паспорта́, друг → друзья́, челове́к → лю́ди, ребёнок → де́ти."
+      ],
+      "table": [
+        [
+          "singular",
+          "plural",
+          "regla"
+        ],
+        [
+          "биле́т",
+          "биле́ты",
+          "+ы"
+        ],
+        [
+          "ка́рта",
+          "ка́рты",
+          "-а → -ы"
+        ],
+        [
+          "кни́га",
+          "кни́ги",
+          "tras к: -и"
+        ],
+        [
+          "рубль",
+          "рубли́",
+          "-ь → -и"
+        ],
+        [
+          "окно́",
+          "о́кна",
+          "-о → -а"
+        ],
+        [
+          "друг",
+          "друзья́",
+          "irregular"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Где здесь туале́ты?",
+          "es": "¿Dónde están los aseos?"
+        },
+        {
+          "text": "Э́то мои́ друзья́.",
+          "es": "Estos son mis amigos."
+        },
+        {
+          "text": "Биле́ты в ка́ссе.",
+          "es": "Las entradas, en la taquilla."
+        }
+      ],
+      "tags": [
+        "plural"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-prepositional",
+      "title": "¿Dónde? в / на + «-е»",
+      "summary": "Para decir dónde estás, usa «в» (en, dentro de) o «на» (en, sobre; en sitios abiertos o actividades) y cambia el final del nombre, casi siempre a «-е».",
+      "points": [
+        "Consonante → «+е»: банк → в ба́нке, Мадри́д → в Мадри́де.",
+        "«-а», «-я», «-о» → «-е»: Москва́ → в Москве́, гости́ница → в гости́нице.",
+        "«-ия» y «-ие» → «-ии»: Росси́я → в Росси́и, Испа́ния → в Испа́нии.",
+        "Con «на»: на вокза́ле, на рабо́те, на у́лице, на ры́нке, на конце́рте.",
+        "Las palabras que no cambian nunca (метро́, такси́, кафе́) se quedan igual: в метро́, в кафе́.",
+        "Pregunta: «Где?» (¿dónde?). Lo verás en frases hechas antes de entenderlo: «Я из Мадри́да» es otro caso."
+      ],
+      "table": [
+        [
+          "dónde",
+          "palabra",
+          "con в / на"
+        ],
+        [
+          "в",
+          "банк",
+          "в ба́нке"
+        ],
+        [
+          "в",
+          "Москва́",
+          "в Москве́"
+        ],
+        [
+          "в",
+          "Росси́я",
+          "в Росси́и"
+        ],
+        [
+          "в",
+          "метро́",
+          "в метро́"
+        ],
+        [
+          "на",
+          "вокза́л",
+          "на вокза́ле"
+        ],
+        [
+          "на",
+          "рабо́та",
+          "на рабо́те"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Я живу́ в Мадри́де.",
+          "es": "Vivo en Madrid."
+        },
+        {
+          "text": "Мы в гости́нице.",
+          "es": "Estamos en el hotel."
+        },
+        {
+          "text": "Он на рабо́те.",
+          "es": "Está en el trabajo."
+        },
+        {
+          "text": "Где ты? — Я на вокза́ле.",
+          "es": "¿Dónde estás? — Estoy en la estación."
+        }
+      ],
+      "tags": [
+        "casos",
+        "lugar"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-accusative",
+      "title": "Lo que quieres o buscas: «-у» en femenino",
+      "summary": "Detrás de verbos como «хоте́ть» (querer), «люби́ть», «иска́ть» (buscar) o «купи́ть» (comprar), las cosas femeninas cambian «-а» por «-у» y «-я» por «-ю». Las masculinas y neutras no cambian.",
+      "points": [
+        "Femenino: вода́ → Я хочу́ во́ду; пи́цца → Я люблю́ пи́ццу; апте́ка → Я ищу́ апте́ку.",
+        "Masculino y neutro (cosas): igual que siempre: Я хочу́ чай, Я хочу́ молоко́.",
+        "«-ь» femenino no cambia: «Да́йте соль, пожа́луйста».",
+        "Con personas masculinas sí cambia: «Я зна́ю Ди́му», «Я жду бра́та». De momento, reconócelo.",
+        "En el bar o la tienda vale solo la palabra: «Во́ду, пожа́луйста»."
+      ],
+      "table": [
+        [
+          "",
+          "nominativo",
+          "lo que quieres"
+        ],
+        [
+          "femenino -а",
+          "вода́",
+          "во́ду"
+        ],
+        [
+          "femenino -я",
+          "неде́ля",
+          "неде́лю"
+        ],
+        [
+          "masculino",
+          "чай",
+          "чай"
+        ],
+        [
+          "neutro",
+          "молоко́",
+          "молоко́"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Я хочу́ во́ду.",
+          "es": "Quiero agua."
+        },
+        {
+          "text": "Я ищу́ апте́ку.",
+          "es": "Busco una farmacia."
+        },
+        {
+          "text": "Я чита́ю газе́ту.",
+          "es": "Leo el periódico."
+        }
+      ],
+      "tags": [
+        "casos"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-u-menya-est",
+      "title": "Tener: у меня́ есть",
+      "summary": "En ruso no se dice «yo tengo», sino «en mí hay»: «У меня́ есть брат» = «Tengo un hermano». Para preguntar «¿tiene…?» en una tienda: «У вас есть…?».",
+      "points": [
+        "«есть» = hay; si lo que importa es la cosa, puede omitirse: «У меня́ вопро́с» (Tengo una pregunta).",
+        "En negativo: «У меня́ нет» + la cosa en otra forma: «нет вре́мени», «нет де́нег». Reconócelo y repítelo como frase hecha.",
+        "Respuesta corta: «Есть» (sí, hay) o «Нет» (no hay)."
+      ],
+      "table": [
+        [
+          "",
+          "tengo…",
+          "no tengo…"
+        ],
+        [
+          "yo",
+          "у меня́ есть",
+          "у меня́ нет"
+        ],
+        [
+          "tú",
+          "у тебя́ есть",
+          "у тебя́ нет"
+        ],
+        [
+          "él / ella",
+          "у него́ / у неё есть",
+          "у него́ / у неё нет"
+        ],
+        [
+          "nosotros",
+          "у нас есть",
+          "у нас нет"
+        ],
+        [
+          "usted / vosotros",
+          "у вас есть",
+          "у вас нет"
+        ],
+        [
+          "ellos",
+          "у них есть",
+          "у них нет"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "У меня́ есть брат.",
+          "es": "Tengo un hermano."
+        },
+        {
+          "text": "У вас есть вай-фа́й?",
+          "es": "¿Tienen wifi?"
+        },
+        {
+          "text": "У меня́ нет вре́мени.",
+          "es": "No tengo tiempo."
+        }
+      ],
+      "tags": [
+        "tener"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-past",
+      "title": "El pasado: -л, -ла, -ло, -ли",
+      "summary": "El pasado es fácil: quitas «-ть» y pones «-л». No cambia con la persona, sino con el género: un hombre dice «я был», una mujer «я была́»; en plural, «-ли».",
+      "points": [
+        "Hernán dice «я был», «я рабо́тал», «я по́нял»; Lucía dice «я была́», «я рабо́тала», «я поняла́».",
+        "Con «вы» siempre «-ли», también a una sola persona: «Где вы бы́ли?».",
+        "«Ser / estar» sí aparece en pasado: был, была́, бы́ло, бы́ли.",
+        "Irregular frecuente: идти́ → шёл, шла, шли."
+      ],
+      "table": [
+        [
+          "",
+          "быть (ser, estar)",
+          "рабо́тать (trabajar)"
+        ],
+        [
+          "él, yo (hombre)",
+          "был",
+          "рабо́тал"
+        ],
+        [
+          "ella, yo (mujer)",
+          "была́",
+          "рабо́тала"
+        ],
+        [
+          "ello (neutro)",
+          "бы́ло",
+          "рабо́тало"
+        ],
+        [
+          "plural, вы",
+          "бы́ли",
+          "рабо́тали"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Я был в Москве́.",
+          "es": "Estuve en Moscú. (hombre)"
+        },
+        {
+          "text": "Я была́ в Москве́.",
+          "es": "Estuve en Moscú. (mujer)"
+        },
+        {
+          "text": "Вчера́ я мно́го рабо́тал.",
+          "es": "Ayer trabajé mucho. (hombre)"
+        },
+        {
+          "text": "Где вы бы́ли?",
+          "es": "¿Dónde ha estado? / ¿Dónde habéis estado?"
+        }
+      ],
+      "tags": [
+        "pasado",
+        "verbos"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-possessives",
+      "title": "Mi, tu, nuestro, su: мой, твой, наш, ваш",
+      "summary": "Los posesivos concuerdan con la cosa, como en español «nuestro / nuestra»: мой па́спорт, моя́ ка́рта, моё фо́то, мои́ биле́ты.",
+      "points": [
+        "«Ваш» es de usted y de vosotros: «Э́то ва́ше такси́?».",
+        "«Его́» (de él), «её» (de ella) y «их» (de ellos) no cambian nunca. En «его́» la «г» suena «v»: ii-VÓ.",
+        "Respuesta corta: «Э́то ваш па́спорт? — Да, мой»."
+      ],
+      "table": [
+        [
+          "",
+          "m",
+          "f",
+          "n",
+          "plural"
+        ],
+        [
+          "mi",
+          "мой",
+          "моя́",
+          "моё",
+          "мои́"
+        ],
+        [
+          "tu",
+          "твой",
+          "твоя́",
+          "твоё",
+          "твои́"
+        ],
+        [
+          "nuestro",
+          "наш",
+          "на́ша",
+          "на́ше",
+          "на́ши"
+        ],
+        [
+          "su (de usted), vuestro",
+          "ваш",
+          "ва́ша",
+          "ва́ше",
+          "ва́ши"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Э́то мой па́спорт.",
+          "es": "Este es mi pasaporte."
+        },
+        {
+          "text": "Где моя́ ка́рта?",
+          "es": "¿Dónde está mi tarjeta?"
+        },
+        {
+          "text": "Э́то ва́ше такси́?",
+          "es": "¿Es este su taxi?"
+        }
+      ],
+      "tags": [
+        "posesivos"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-numbers-rubles",
+      "title": "Números y rublos: рубль, рубля́, рубле́й",
+      "summary": "Tras un número, el nombre cambia según la última cifra. Basta con reconocer tres formas: 1 рубль, 2–4 рубля́, 5–20 рубле́й. Lo mismo con час (hora), год (año) y биле́т.",
+      "points": [
+        "Acaba en 1 (21, 31, 101): рубль, час, год, биле́т.",
+        "Acaba en 2, 3, 4 (22, 43, 104): рубля́, часа́, го́да, биле́та.",
+        "Acaba en 5–9 o 0, y del 11 al 14: рубле́й, часо́в, лет, биле́тов.",
+        "Con femeninos: одна́ ты́сяча, две ты́сячи, пять ты́сяч.",
+        "Si te equivocas, se te entiende igual: el número es lo importante."
+      ],
+      "table": [
+        [
+          "número",
+          "rublo",
+          "hora",
+          "año"
+        ],
+        [
+          "1, 21, 31",
+          "рубль",
+          "час",
+          "год"
+        ],
+        [
+          "2–4, 22–24",
+          "рубля́",
+          "часа́",
+          "го́да"
+        ],
+        [
+          "5–20, 25–30",
+          "рубле́й",
+          "часо́в",
+          "лет"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Два́дцать оди́н рубль.",
+          "es": "Veintiún rublos."
+        },
+        {
+          "text": "Сейча́с три часа́.",
+          "es": "Son las tres."
+        },
+        {
+          "text": "Ко́фе сто́ит две́сти рубле́й.",
+          "es": "El café cuesta doscientos rublos."
+        },
+        {
+          "text": "Мне со́рок лет.",
+          "es": "Tengo cuarenta años."
+        }
+      ],
+      "tags": [
+        "numeros",
+        "precio"
+      ]
+    },
+    {
+      "id": "gram.ru-a1-motion",
+      "title": "Ir: идти́ o е́хать; ¿adónde? o ¿dónde?",
+      "summary": "El ruso tiene dos «ir»: «идти́» a pie y «е́хать» en un vehículo (metro, taxi, tren). Con «куда́?» (¿adónde?) va «в / на» + la forma de «lo que quieres» (в Москву́); con «где?» (¿dónde?), la forma en «-е» (в Москве́).",
+      "points": [
+        "A pie: «Я иду́ в музе́й». En metro, taxi o tren: «Я е́ду в аэропо́рт».",
+        "Куда́? → в Москву́, на вокза́л, в музе́й (masculino sin cambio).",
+        "Где? → в Москве́, на вокза́ле, в музе́е.",
+        "«Пойдём!» = ¡Vamos! (andando); «Пое́хали!» = ¡Vámonos! (en coche)."
+      ],
+      "table": [
+        [
+          "",
+          "идти́ (a pie)",
+          "е́хать (en vehículo)"
+        ],
+        [
+          "я",
+          "иду́",
+          "е́ду"
+        ],
+        [
+          "ты",
+          "идёшь",
+          "е́дешь"
+        ],
+        [
+          "он / она́",
+          "идёт",
+          "е́дет"
+        ],
+        [
+          "мы",
+          "идём",
+          "е́дем"
+        ],
+        [
+          "вы",
+          "идёте",
+          "е́дете"
+        ],
+        [
+          "они́",
+          "иду́т",
+          "е́дут"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Куда́ вы е́дете?",
+          "es": "¿Adónde va?"
+        },
+        {
+          "text": "Я иду́ в музе́й.",
+          "es": "Voy al museo (a pie)."
+        },
+        {
+          "text": "Мы е́дем в Москву́.",
+          "es": "Vamos a Moscú."
+        },
+        {
+          "text": "Где ты? — Я в музе́е.",
+          "es": "¿Dónde estás? — Estoy en el museo."
+        }
+      ],
+      "tags": [
+        "movimiento",
+        "verbos"
+      ]
+    }
+  ]
+}

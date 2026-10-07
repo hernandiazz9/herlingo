@@ -1,0 +1,58 @@
+{
+  "id": "dlg.ru-a1-museum",
+  "title": "Taquilla del museo",
+  "description": "En la taquilla de un museo: compras una entrada, preguntas por la audioguía en español y dónde dejar la chaqueta.",
+  "situation": "ciudad",
+  "unit": "ru-a1-city",
+  "order": 10,
+  "register": "vy",
+  "level": "A1",
+  "avatars": { "Taquillero": "fluent:man-white-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Taquillero", "text": "Здра́вствуйте! Вам како́й биле́т?", "es": "¡Hola! ¿Qué entrada quiere?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide una entrada de adulto.",
+      "options": [
+        { "text": "Оди́н взро́слый биле́т, пожа́луйста.", "es": "Una entrada de adulto, por favor.", "verdict": "correct", "feedback": "¡Perfecto! «Взро́слый» = de adulto." },
+        { "text": "Оди́н, пожа́луйста.", "es": "Una, por favor.", "verdict": "acceptable", "feedback": "Se entiende; di «взро́слый» si hay varias tarifas." },
+        { "text": "Одна́ взро́слая биле́т, пожа́луйста.", "es": "Una entrada de adulto, por favor.", "verdict": "wrong", "feedback": "«Биле́т» es masculino: «оди́н взро́слый биле́т»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Taquillero", "text": "Ты́сяча рубле́й. Вы студе́нт?", "es": "Mil rublos. ¿Es usted estudiante?", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que no, que trabajas de programador.",
+      "options": [
+        { "text": "Нет, я рабо́таю программи́стом.", "es": "No, trabajo de programador.", "verdict": "correct", "feedback": "¡Muy bien! Con «рабо́таю» la profesión lleva «-ом»: «программи́стом»." },
+        { "text": "Нет.", "es": "No.", "verdict": "acceptable", "feedback": "Correcto; puedes añadir a qué te dedicas." },
+        { "text": "Нет, я рабо́таю программи́ст.", "es": "No, trabajo programador.", "verdict": "wrong", "feedback": "Con «рабо́таю» la profesión cambia: «программи́стом»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Taquillero", "text": "Хорошо́. Прило́жите ка́рту, пожа́луйста. Вот ваш биле́т.", "es": "Muy bien. Acerque la tarjeta, por favor. Aquí tiene su entrada.", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Da las gracias y pregunta si tienen audioguía en español.",
+      "options": [
+        { "text": "Спаси́бо. У вас есть аудиоги́д на испа́нском?", "es": "Gracias. ¿Tienen audioguía en español?", "verdict": "correct", "feedback": "¡Genial! «На испа́нском» = en español." },
+        { "text": "Аудиоги́д есть?", "es": "¿Hay audioguía?", "verdict": "acceptable", "feedback": "Se entiende; di también el idioma: «на испа́нском»." },
+        { "text": "Спаси́бо. У вас есть аудиоги́д по-испа́нский?", "es": "Gracias. ¿Tienen audioguía en español?", "verdict": "wrong", "feedback": "Se dice «на испа́нском»; «по-испа́нски» va con verbos como «hablar»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Taquillero", "text": "Есть, на второ́м этаже́. И сда́йте, пожа́луйста, ку́ртку в гардеро́б.", "es": "Sí, en la segunda planta. Y deje la chaqueta en el guardarropa, por favor.", "voice": "ru-RU-DmitryNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que vale y pregunta dónde está el guardarropa.",
+      "options": [
+        { "text": "Хорошо́. А где гардеро́б?", "es": "Vale. ¿Y dónde está el guardarropa?", "verdict": "correct", "feedback": "¡Perfecto! En los museos rusos hay que dejar el abrigo en el «гардеро́б»." },
+        { "text": "Где гардеро́б?", "es": "¿Dónde está el guardarropa?", "verdict": "acceptable", "feedback": "Correcto; un «Хорошо́» delante muestra que has entendido." },
+        { "text": "Хорошо́. А куда́ гардеро́б?", "es": "Vale. ¿Y adónde guardarropa?", "verdict": "wrong", "feedback": "«Куда́» es «adónde»; para preguntar dónde está algo: «где»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Taquillero", "text": "Пря́мо и нале́во. Хоро́шего дня!", "es": "Recto y a la izquierda. ¡Que tenga un buen día!", "voice": "ru-RU-DmitryNeural" }
+  ]
+}

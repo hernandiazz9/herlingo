@@ -1,0 +1,99 @@
+{
+  "id": "story.ru-a1-last-week",
+  "order": 11,
+  "title": "Звоно́к ма́ме",
+  "titleEs": "Una llamada a mamá",
+  "description": "Lucía llama a su madre a Sevilla y le cuenta, día a día, cómo ha ido su semana en San Petersburgo.",
+  "emoji": "📞",
+  "situation": "presentarse",
+  "level": "A1",
+  "voice": "ru-RU-DmitryNeural",
+  "sentences": [
+    { "id": "s1", "text": "В воскресе́нье ве́чером Луси́я звони́т ма́ме в Севи́лью.", "es": "El domingo por la noche, Lucía llama a su madre a Sevilla." },
+    { "id": "s2", "text": "«Приве́т, до́чка! Как прошла́ неде́ля?»", "es": "«¡Hola, hija! ¿Qué tal ha ido la semana?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s3", "text": "«Ма́ма, неде́ля была́ о́чень интере́сная!»", "es": "«¡Mamá, ha sido una semana muy interesante!»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s4", "text": "«В понеде́льник я была́ в Эрмита́же.»", "es": "«El lunes estuve en el Hermitage.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s5", "text": "«Во вто́рник мы с А́ней пи́ли ко́фе на Не́вском.»", "es": "«El martes Ania y yo tomamos café en la Nevski.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s6", "text": "«В сре́ду я заболе́ла, но Ве́ра Петро́вна мне помогла́.»", "es": "«El miércoles me puse enferma, pero Vera Petrovna me ayudó.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s7", "text": "«В четве́рг я це́лый день спала́.»", "es": "«El jueves me pasé el día entero durmiendo.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s8", "text": "«А в пя́тницу мы с Ди́мой гуля́ли но́чью и смотре́ли мосты́.»", "es": "«Y el viernes Dima y yo paseamos de noche y vimos los puentes.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s9", "text": "«В суббо́ту мы е́здили на да́чу.»", "es": "«El sábado fuimos a la dacha.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s10", "text": "«А ты говори́шь по-ру́сски?»", "es": "«¿Y hablas ruso?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s11", "text": "«Да! Я уже́ мно́го понима́ю.»", "es": "«¡Sí! Ya entiendo mucho.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s12", "text": "«Вчера́ я сама́ купи́ла биле́ты в теа́тр.»", "es": "«Ayer compré yo sola las entradas del teatro.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s13", "text": "«Молоде́ц! Я тобо́й горжу́сь. Когда́ ты прилета́ешь?»", "es": "«¡Muy bien! Estoy orgullosa de ti. ¿Cuándo vuelves?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s14", "text": "«За́втра. Мне здесь о́чень нра́вится, но я скуча́ю по тебе́!»", "es": "«Mañana. Aquí estoy encantada, ¡pero te echo de menos!»", "voice": "ru-RU-SvetlanaNeural" }
+  ],
+  "keywords": [
+    "ru-a1-alphabet.mama",
+    "ru-a1-daily.nedelya",
+    "ru-a1-daily.ponedelnik",
+    "ru-a1-daily.vtornik",
+    "ru-a1-daily.sreda",
+    "ru-a1-health.ya-zabolela",
+    "ru-a1-daily.chetverg",
+    "ru-a1-daily.pyatnitsa",
+    "ru-a1-daily.subbota",
+    {
+      "id": "story-ru-skuchat",
+      "word": "скуча́ть",
+      "es": "echar de menos; aburrirse",
+      "notes": "«Я скуча́ю по тебе́»: te echo de menos. Se dice «скуча́ть по» + la persona o el lugar.",
+      "situation": "presentarse"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Кому́ звони́т Луси́я?",
+      "es": "¿A quién llama Lucía?",
+      "options": [
+        { "text": "Ма́ме.", "es": "A su madre." },
+        { "text": "А́не.", "es": "A Ania." },
+        { "text": "Ве́ре Петро́вне.", "es": "A Vera Petrovna." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Где была́ Луси́я в понеде́льник?",
+      "es": "¿Dónde estuvo Lucía el lunes?",
+      "options": [
+        { "text": "На да́че.", "es": "En la dacha." },
+        { "text": "В Эрмита́же.", "es": "En el Hermitage." },
+        { "text": "В апте́ке.", "es": "En la farmacia." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Что Луси́я де́лала в четве́рг?",
+      "es": "¿Qué hizo Lucía el jueves?",
+      "options": [
+        { "text": "Гуля́ла по го́роду.", "es": "Paseó por la ciudad." },
+        { "text": "Це́лый день спала́.", "es": "Durmió todo el día." },
+        { "text": "Пила́ ко́фе на Не́вском.", "es": "Tomó café en la Nevski." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Что Луси́я купи́ла вчера́?",
+      "es": "¿Qué compró Lucía ayer?",
+      "options": [
+        { "text": "Биле́ты в теа́тр.", "es": "Entradas para el teatro." },
+        { "text": "Сувени́ры.", "es": "Recuerdos." },
+        { "text": "Лека́рство.", "es": "Un medicamento." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "ru-a1-alphabet.mama", "gap": "ма́ме", "distractors": ["бра́ту", "сосе́дке"] },
+    { "id": "g2", "sentence": "s4", "answer": "ru-a1-daily.ponedelnik", "distractors": ["вто́рник", "четве́рг"] },
+    { "id": "g3", "sentence": "s6", "answer": "ru-a1-health.ya-zabolela", "gap": "заболе́ла", "distractors": ["пое́хала", "улете́ла"] },
+    { "id": "g4", "sentence": "s7", "answer": "ru-a1-daily.chetverg", "distractors": ["понеде́льник", "вто́рник"] },
+    { "id": "g5", "sentence": "s8", "answer": "ru-a1-daily.pyatnitsa", "gap": "пя́тницу", "distractors": ["сре́ду", "суббо́ту"] },
+    { "id": "g6", "sentence": "s14", "answer": "story-ru-skuchat", "gap": "скуча́ю", "distractors": ["гуля́ю", "звоню́"] }
+  ]
+}

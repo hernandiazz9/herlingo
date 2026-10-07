@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { LessonPlayer } from "@/components/lesson";
-import { Button, Card } from "@/components/ui";
+import { Button, Card, TargetText } from "@/components/ui";
 import { getItem, getPack, type Lesson } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { defaultSessionSize, type LessonResult } from "@/lib/exercises";
@@ -115,12 +115,12 @@ function Review({ lang }: { lang: string }) {
               {item.kind === "grammar" ? (
                 <span className="font-bold text-ink">{item.title}</span>
               ) : (
-                <>
+                <TargetText text={item.text} lang={pack.meta.lang}>
                   <span lang={pack.meta.lang} className="font-bold text-ink">
                     {item.text}
                   </span>
                   <span className="text-ink-muted"> · {item.kind === "qa" ? item.questionEs : item.es}</span>
-                </>
+                </TargetText>
               )}
             </li>
           ))}

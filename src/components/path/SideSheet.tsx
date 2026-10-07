@@ -2,7 +2,7 @@
 
 import { useEffect, type ReactNode } from "react";
 import { CloseIcon, MiniPlay, useLessonLang } from "@/components/exercises";
-import { Card } from "@/components/ui";
+import { Card, TargetText } from "@/components/ui";
 import type { Expression, GrammarCard } from "@/lib/content";
 
 /** Full-screen reference sheet over the path (grammar cards, local expressions). */
@@ -73,7 +73,7 @@ export function GrammarCardView({ card }: { card: GrammarCard }) {
                 <tr key={r} className="border-t border-line">
                   {row.map((c, i) => (
                     <td key={i} lang={i > 0 ? lang : undefined} className="px-2 py-1 text-ink">
-                      {c}
+                      {i > 0 ? <TargetText text={c} lang={lang} /> : c}
                     </td>
                   ))}
                 </tr>
@@ -88,10 +88,12 @@ export function GrammarCardView({ card }: { card: GrammarCard }) {
             <li key={ex.audioKey} className="flex items-center gap-3">
               <MiniPlay audio={ex} />
               <span>
-                <span lang={lang} className="font-bold text-ink">
-                  {ex.text}
-                </span>{" "}
-                <span className="text-ink-muted">· {ex.es}</span>
+                <TargetText text={ex.text} lang={lang}>
+                  <span lang={lang} className="font-bold text-ink">
+                    {ex.text}
+                  </span>{" "}
+                  <span className="text-ink-muted">· {ex.es}</span>
+                </TargetText>
               </span>
             </li>
           ))}
@@ -108,7 +110,7 @@ export function ExpressionView({ item }: { item: Expression }) {
       <MiniPlay audio={item} />
       <div className="flex flex-col gap-0.5">
         <p lang={lang} className="text-lg font-bold text-ink">
-          {item.text}
+          <TargetText text={item.text} lang={lang} />
         </p>
         <p className="text-base text-ink">{item.es}</p>
         {item.standard ? (

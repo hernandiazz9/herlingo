@@ -1,0 +1,95 @@
+{
+  "id": "story.en-c1-cold-feet",
+  "order": 308,
+  "title": "Cold feet",
+  "titleEs": "Echarse atrás",
+  "description": "Una discográfica le ofrece a Jordan su primer contrato. Maya lo ayuda a leer la letra pequeña y a negociar, pero a Jordan le entran las dudas.",
+  "emoji": "🎸",
+  "situation": "cultura",
+  "level": "C1",
+  "sentences": [
+    { "id": "s1", "text": "After the tour, a small record label in Nashville wants to sign Jordan's band.", "es": "Después de la gira, una pequeña discográfica de Nashville quiere fichar a la banda de Jordan." },
+    { "id": "s2", "text": "They send a twenty-page contract, and Jordan brings it straight to the kitchen table.", "es": "Mandan un contrato de veinte páginas, y Jordan lo lleva directamente a la mesa de la cocina." },
+    { "id": "s3", "text": "Maya reads every line while Jordan pretends to be calm.", "es": "Maya lee cada línea mientras Jordan finge estar tranquilo." },
+    { "id": "s4", "text": "«Overall, the terms look good, but I have a couple of concerns.»", "es": "«En general, las condiciones pintan bien, pero tengo un par de dudas.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s5", "text": "«This clause says they own your songs for ten years. That's a deal-breaker.»", "es": "«Esta cláusula dice que tus canciones son suyas durante diez años. Eso es innegociable.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s6", "text": "The next day, they have a video call with Denise, the label's manager.", "es": "Al día siguiente, tienen una videollamada con Denise, la responsable de la discográfica." },
+    { "id": "s7", "text": "«Is the ten-year clause negotiable, or is it standard for everyone?»", "es": "«¿La cláusula de los diez años es negociable o es la estándar para todos?»", "voice": "en-US-BrianNeural" },
+    { "id": "s8", "text": "«It's fairly standard, I'm afraid. What would it take for you to sign?»", "es": "«Me temo que es bastante estándar. ¿Qué haría falta para que firmaras?»", "voice": "en-US-EmmaNeural" },
+    { "id": "s9", "text": "«Five years, and the band keeps the rights to the old songs.»", "es": "«Cinco años, y la banda conserva los derechos de las canciones antiguas.»", "voice": "en-US-BrianNeural" },
+    { "id": "s10", "text": "Denise goes quiet, and then she smiles.", "es": "Denise se queda callada y luego sonríe." },
+    { "id": "s11", "text": "«It's not ideal, but I can live with that. I'll need to run it by my boss.»", "es": "«No es lo ideal, pero puedo aceptarlo. Tendré que consultarlo con mi jefe.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s12", "text": "Two days later, the new contract arrives, exactly as they asked.", "es": "Dos días después, llega el nuevo contrato, tal y como lo pidieron." },
+    { "id": "s13", "text": "But that evening, Jordan sits on the fire escape with his guitar and doesn't come in.", "es": "Pero esa noche, Jordan se sienta en la escalera de incendios con su guitarra y no entra." },
+    { "id": "s14", "text": "«What if it doesn't work out? I'd have to quit the café for good.»", "es": "«¿Y si no sale bien? Tendría que dejar la cafetería para siempre.»", "voice": "en-US-BrianNeural" },
+    { "id": "s15", "text": "«You're getting cold feet, and that's normal. But you can't back out now.»", "es": "«Te están entrando dudas, y es normal. Pero ahora no puedes echarte atrás.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s16", "text": "«Your bandmates are counting on you, and so am I.»", "es": "«Tus compañeros de banda cuentan contigo, y yo también.»", "voice": "en-US-EmmaNeural" },
+    { "id": "s17", "text": "Jordan plays a few chords, takes a deep breath and picks up a pen.", "es": "Jordan toca unos acordes, respira hondo y coge un bolígrafo." },
+    { "id": "s18", "text": "«Fine. But if I become famous, you're my lawyer.»", "es": "«Vale. Pero si me hago famoso, tú eres mi abogada.»", "voice": "en-US-BrianNeural" }
+  ],
+  "keywords": [
+    "c1-negotiation.the-terms-look-good",
+    "c1-negotiation.clause",
+    "c1-negotiation.deal-breaker",
+    "c1-negotiation.is-the-non-compete-clause-negotiable",
+    "c1-negotiation.what-would-it-take",
+    "c1-negotiation.i-can-live-with-that",
+    "c1-negotiation.ill-need-to-run-it-by",
+    "c1-idioms.cold-feet",
+    "c1-idioms.back-out"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "What problem does Maya find in the contract?",
+      "es": "¿Qué problema encuentra Maya en el contrato?",
+      "options": [
+        { "text": "The label would own Jordan's songs for ten years.", "es": "La discográfica sería dueña de las canciones de Jordan durante diez años." },
+        { "text": "The band would have to move to Nashville.", "es": "La banda tendría que mudarse a Nashville." },
+        { "text": "The contract is only two pages long.", "es": "El contrato solo tiene dos páginas." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "What does Jordan ask for?",
+      "es": "¿Qué pide Jordan?",
+      "options": [
+        { "text": "More money for the tour.", "es": "Más dinero para la gira." },
+        { "text": "Five years, and the rights to the old songs.", "es": "Cinco años y los derechos de las canciones antiguas." },
+        { "text": "A new manager at the label.", "es": "Una nueva responsable en la discográfica." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "How does Denise react?",
+      "es": "¿Cómo reacciona Denise?",
+      "options": [
+        { "text": "She ends the call.", "es": "Corta la llamada." },
+        { "text": "She says it's impossible.", "es": "Dice que es imposible." },
+        { "text": "She accepts, but has to check with her boss.", "es": "Acepta, pero tiene que consultarlo con su jefe." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Why does Jordan hesitate before signing?",
+      "es": "¿Por qué duda Jordan antes de firmar?",
+      "options": [
+        { "text": "He's afraid it won't work out and he'll lose his job at the café.", "es": "Teme que no salga bien y perder su trabajo en la cafetería." },
+        { "text": "He doesn't like the new songs.", "es": "No le gustan las canciones nuevas." },
+        { "text": "Maya tells him not to sign.", "es": "Maya le dice que no firme." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "c1-negotiation.the-terms-look-good", "gap": "terms", "distractors": ["conditionings", "terminals"] },
+    { "id": "g2", "sentence": "s5", "answer": "c1-negotiation.deal-breaker", "gap": "deal-breaker", "distractors": ["deal-broker", "break-deal"] },
+    { "id": "g3", "sentence": "s8", "answer": "c1-negotiation.what-would-it-take", "gap": "would it take", "distractors": ["would it lack", "would it make"] },
+    { "id": "g4", "sentence": "s11", "answer": "c1-negotiation.i-can-live-with-that", "gap": "live with", "distractors": ["live for", "live of"] },
+    { "id": "g5", "sentence": "s15", "answer": "c1-idioms.cold-feet", "gap": "cold feet", "distractors": ["cold hands", "frozen feet"] },
+    { "id": "g6", "sentence": "s7", "answer": "c1-negotiation.clause", "gap": "clause", "distractors": ["clausule", "close"] }
+  ]
+}

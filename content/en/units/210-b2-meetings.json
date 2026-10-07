@@ -1,0 +1,284 @@
+{
+  "id": "b2-meetings",
+  "order": 210,
+  "level": "B2",
+  "title": "Reuniones: proponer, interrumpir con educación, acordar, resumir",
+  "description": "Llevar una reunión de trabajo en inglés: abrirla, proponer ideas, pedir la palabra sin ser brusco, cerrar acuerdos y resumir quién hace qué.",
+  "emoji": "💼",
+  "situation": "trabajo",
+  "lessons": [
+    {
+      "id": "b2-meetings.l.opening",
+      "title": "Abrir la reunión y el orden del día",
+      "items": [
+        "b1-office.meeting",
+        "b1-calls.lets-get-started",
+        "b2-meetings.thanks-everyone-for-joining",
+        "b2-meetings.purpose",
+        "b2-meetings.the-purpose-of-this-meeting",
+        "b1-calls.agenda",
+        "b2-meetings.item",
+        "b2-meetings.we-have-three-items-on-the-agenda",
+        "b2-meetings.budget",
+        "b2-meetings.lets-start-with-the-budget",
+        "b2-meetings.minutes",
+        "b2-meetings.whos-taking-notes",
+        "b2-meetings.attendee",
+        "b2-meetings.can-we-keep-this-to-thirty-minutes",
+        "b2-meetings.lets-move-on-to-the-next-item",
+        "b2-meetings.lets-get-back-on-track",
+        "b2-meetings.qa.agenda"
+      ]
+    },
+    {
+      "id": "b2-meetings.l.proposing",
+      "title": "Proponer y sugerir",
+      "items": [
+        "b2-meetings.proposal",
+        "b2-meetings.i-have-a-proposal",
+        "b2-meetings.postpone",
+        "b2-meetings.i-suggest-we-postpone",
+        "b2-meetings.phase",
+        "b2-meetings.what-if-we-split",
+        "b2-meetings.how-about-running-a-test",
+        "b2-meetings.it-might-be-worth",
+        "b2-meetings.stakeholder",
+        "b2-meetings.would-it-make-sense",
+        "b2-meetings.contractor",
+        "b2-meetings.one-option-would-be",
+        "b2-meetings.advantage",
+        "b2-meetings.downside",
+        "b2-meetings.the-downside-is",
+        "b2-meetings.trade-off",
+        "b2-meetings.qa.suggestion",
+        "b2-meetings.qa.downside"
+      ]
+    },
+    {
+      "id": "b2-meetings.l.interrupting",
+      "title": "Interrumpir y pedir la palabra con educación",
+      "items": [
+        "b2-meetings.sorry-to-interrupt",
+        "b2-meetings.jump-in",
+        "b2-meetings.can-i-jump-in",
+        "b2-meetings.if-i-could-just-finish",
+        "b2-meetings.go-ahead",
+        "b2-meetings.just-to-clarify",
+        "b2-meetings.quarter",
+        "b2-meetings.could-you-elaborate",
+        "b2-meetings.i-didnt-quite-catch-that",
+        "b2-meetings.bring-up",
+        "b2-meetings.we-havent-heard-from-you",
+        "b2-meetings.lets-take-this-offline",
+        "b2-meetings.qa.interrupt",
+        "b2-meetings.qa.clarify"
+      ]
+    },
+    {
+      "id": "b2-meetings.l.wrapping-up",
+      "title": "Acordar, repartir tareas y resumir",
+      "items": [
+        "b2-meetings.consensus",
+        "b2-meetings.so-are-we-all-on-the-same-page",
+        "b2-meetings.decision",
+        "b2-meetings.can-we-make-a-decision-by-friday",
+        "b2-meetings.whos-going-to-own-this",
+        "b2-meetings.ill-take-care-of-it",
+        "b2-meetings.sum-up",
+        "b1-calls.summary",
+        "b2-meetings.to-sum-up",
+        "b2-meetings.action-item",
+        "b2-meetings.go-over",
+        "b2-meetings.lets-go-over-the-action-items",
+        "b2-meetings.ill-send-the-notes-around",
+        "b2-meetings.timeline",
+        "b2-meetings.follow-up",
+        "b2-meetings.lets-schedule-a-follow-up",
+        "b1-calls.lets-wrap-up",
+        "b2-meetings.qa.who-owns",
+        "b2-meetings.qa.sum-up"
+      ]
+    }
+  ],
+  "phrases": [
+    { "id": "b2-meetings.thanks-everyone-for-joining", "text": "Thanks, everyone, for joining on such short notice.", "es": "Gracias a todos por venir con tan poca antelación.", "notes": "«on short notice» = con poca antelación.", "explanation": "Para abrir una reunión convocada deprisa. «thanks» lleva «th» con la lengua entre los dientes, nunca «tanks».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.the-purpose-of-this-meeting", "text": "The purpose of this meeting is to agree on the release date.", "es": "El objetivo de esta reunión es acordar la fecha de lanzamiento.", "notes": "«agree on» algo = ponerse de acuerdo sobre algo.", "explanation": "Al empezar, para dejar claro qué hay que decidir. «purpose» se acentúa al principio: «PER-pəs», la segunda sílaba casi desaparece.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.we-have-three-items-on-the-agenda", "text": "We have three items on the agenda today.", "es": "Hoy tenemos tres puntos en el orden del día.", "notes": "«item» = punto de una lista; no se dice «points of the day».", "explanation": "Para presentar el orden del día. «agenda» se acentúa en medio: «ə-YEN-də»; «items» = «AI-dəmz», con flap t.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.lets-start-with-the-budget", "text": "Let's start with the budget, since it affects everything else.", "es": "Empecemos por el presupuesto, ya que afecta a todo lo demás.", "notes": "«since» aquí = ya que, no «desde».", "explanation": "Para fijar el orden de los temas. «budget» = «BA-yit»: la «d» casi no suena y la «e» es muy breve.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.whos-taking-notes", "text": "Who's taking notes today?", "es": "¿Quién toma notas hoy?", "notes": "«take notes» = tomar notas; en reuniones formales, «take the minutes» = levantar acta.", "explanation": "Al empezar, para que alguien apunte lo acordado. «who's» = «huuz», con «h» suave y «z» final zumbante.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.can-we-keep-this-to-thirty-minutes", "text": "Can we try to keep this to thirty minutes?", "es": "¿Intentamos que esto no pase de media hora?", "notes": "«keep it to» + tiempo = limitarlo a.", "explanation": "Para marcar el tiempo al principio. «thirty» = «ZER-di»: «th» entre los dientes y la «t» americana suena casi como «d».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.lets-move-on-to-the-next-item", "text": "Let's move on to the next item.", "es": "Pasemos al siguiente punto.", "notes": "«move on to» = pasar a (otro tema).", "explanation": "Para cambiar de tema cuando uno ya está cerrado. «move on» se une: «MUU-von», con «v» de labio y dientes.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.lets-get-back-on-track", "text": "We're getting off track. Let's get back to the budget.", "es": "Nos estamos desviando. Volvamos al presupuesto.", "notes": "«get off track» = desviarse del tema; «get back to» = volver a.", "explanation": "Para reconducir una reunión que se va por las ramas. «track» con «æ» abierta, entre «a» y «e».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.i-have-a-proposal", "text": "I'd like to put forward a proposal.", "es": "Me gustaría plantear una propuesta.", "notes": "«put forward» = plantear, presentar (phrasal verb algo formal).", "explanation": "Para pedir la palabra y proponer algo con formalidad. «proposal» = «prə-POU-zəl», con «z» zumbante.", "register": "formal", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.i-suggest-we-postpone", "text": "I suggest we postpone the launch by two weeks.", "es": "Propongo que retrasemos el lanzamiento dos semanas.", "notes": "«suggest» + sujeto + verbo base; nunca «suggest to postpone».", "explanation": "Para proponer un cambio de fechas. «suggest» = «səg-YEST», acento en la segunda sílaba.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.what-if-we-split", "text": "What if we split the work into two phases?", "es": "¿Y si dividimos el trabajo en dos fases?", "notes": "«What if…?» = ¿y si…?, con el verbo en presente.", "explanation": "Para lanzar una idea sin imponerla. «What if» se une con flap t: «wa-DIF».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.how-about-running-a-test", "text": "How about running a small test first?", "es": "¿Qué tal si primero hacemos una prueba pequeña?", "notes": "«How about» + verbo en -ing.", "explanation": "Para sugerir algo de forma ligera. «small» empieza sin «e»: «smól», no «esmól».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.it-might-be-worth", "text": "It might be worth asking the client before we decide.", "es": "Quizá valga la pena preguntar al cliente antes de decidir.", "notes": "«it's worth» + -ing = vale la pena hacer algo.", "explanation": "Para sugerir con prudencia. «worth» = «werz» con «th» final entre los dientes y «r» americana.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.would-it-make-sense", "text": "Would it make sense to bring in someone from design?", "es": "¿Tendría sentido incorporar a alguien de diseño?", "notes": "«bring in» = traer a alguien, incorporarlo (phrasal verb).", "explanation": "Para proponer algo con tacto ante tu jefe o un cliente. «would it» se une: «wu-DIT».", "register": "formal", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.one-option-would-be", "text": "One option would be to hire a contractor for three months.", "es": "Una opción sería contratar a un externo durante tres meses.", "explanation": "Para poner una alternativa sobre la mesa. «hire» = «HAI-ər», con la «h» aspirada y la «r» americana.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.the-downside-is", "text": "The downside is that it would take longer.", "es": "La pega es que tardaríamos más.", "notes": "«downside» = desventaja, inconveniente.", "explanation": "Para señalar el problema de una propuesta. «downside» se acentúa al principio: «DAUN-said».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.sorry-to-interrupt", "text": "Sorry to interrupt, but could I just add something?", "es": "Perdona que interrumpa, pero ¿puedo añadir algo?", "notes": "«Sorry to» + verbo base; «just» suaviza la petición.", "explanation": "Para meterte en la conversación sin sonar brusco. «interrupt» = «in-tə-RAPT», acento al final.", "register": "formal", "situation": "trabajo" },
+    { "id": "b2-meetings.can-i-jump-in", "text": "Can I jump in here for a second?", "es": "¿Puedo intervenir un segundo?", "notes": "«jump in» = intervenir, meterse en la conversación (phrasal verb).", "explanation": "Entre compañeros, para pedir la palabra. «jump» con «y» fuerte y «a» corta: «yamp».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.if-i-could-just-finish", "text": "If I could just finish my point…", "es": "Si me dejas terminar lo que decía…", "notes": "Forma educada de pedir que no te corten.", "explanation": "Cuando alguien te interrumpe y quieres acabar. «could» suena «kud», sin «l».", "register": "formal", "situation": "trabajo" },
+    { "id": "b2-meetings.go-ahead", "text": "Sorry, go ahead.", "es": "Perdona, adelante.", "notes": "Cuando habláis dos a la vez y cedes la palabra.", "explanation": "Muy útil en videollamadas, cuando os pisáis. «go ahead» se une: «gou-ə-HED».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.just-to-clarify", "text": "Just to clarify, are we talking about this quarter or next?", "es": "Solo para aclarar: ¿hablamos de este trimestre o del siguiente?", "explanation": "Para confirmar un detalle antes de seguir. «clarify» = «KLE-rə-fai», acento en la primera sílaba.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.could-you-elaborate", "text": "Could you elaborate on that a little?", "es": "¿Podrías desarrollar eso un poco?", "notes": "«elaborate on» = explicar con más detalle; no es «elaborar».", "explanation": "Para pedir más detalle con educación. «elaborate» (verbo) = «i-LÆ-bə-reit», acento en la segunda sílaba.", "register": "formal", "situation": "trabajo" },
+    { "id": "b2-meetings.i-didnt-quite-catch-that", "text": "Sorry, I didn't quite catch that last part.", "es": "Perdona, no he pillado bien lo último.", "notes": "«catch» = entender lo que alguien dice; «not quite» = no del todo.", "explanation": "Para pedir que repitan sin parecer perdido. «quite» = «kwait», con «w»; no confundas con «quiet» (dos sílabas).", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.we-havent-heard-from-you", "text": "Sam, we haven't heard from you yet. What do you think?", "es": "Sam, aún no te hemos oído. ¿Tú qué opinas?", "notes": "«hear from someone» = saber de alguien, oír su opinión.", "explanation": "Si llevas la reunión, para dar la palabra a quien no ha hablado. «heard» = «herd», una sola sílaba con «r» americana.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.lets-take-this-offline", "text": "Let's take this offline and discuss it after the meeting.", "es": "Hablemos de esto aparte, después de la reunión.", "notes": "«take something offline» = tratarlo fuera de la reunión; no tiene nada que ver con internet. «discuss» sin «about».", "explanation": "Cuando dos personas se enrollan con un detalle. «offline» = «of-LAIN», con la «f» bien marcada.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.so-are-we-all-on-the-same-page", "text": "So, are we all on the same page?", "es": "Entonces, ¿estamos todos de acuerdo?", "notes": "Expresión: «be on the same page» = entender lo mismo, estar alineados.", "explanation": "Para comprobar que todos han entendido igual antes de cerrar. «page» = «peich», con «ch» suave y sonora.", "register": "neutral", "situation": "trabajo", "tags": ["idioms"] },
+    { "id": "b2-meetings.can-we-make-a-decision-by-friday", "text": "Can we make a decision by Friday?", "es": "¿Podemos tomar una decisión antes del viernes?", "notes": "«make a decision» (no «take») en inglés americano; «by Friday» = como muy tarde el viernes.", "explanation": "Para poner fecha a una decisión. «decision» = «di-SI-zhən», con una «zh» suave como en francés «je».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.whos-going-to-own-this", "text": "Who's going to own this?", "es": "¿Quién se va a encargar de esto?", "notes": "«own» una tarea = ser su responsable (lenguaje de oficina).", "explanation": "Para asignar un responsable al final de la reunión. «own» = «oun», un diptongo, sin «w» al principio.", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.ill-take-care-of-it", "text": "I'll take care of the client email.", "es": "Yo me encargo del correo al cliente.", "notes": "«take care of» = encargarse de; decisión en el momento = «will».", "explanation": "Para ofrecerte a hacer una tarea. «I'll» es una sola sílaba con «l» oscura: «ail».", "register": "neutral", "situation": "trabajo" },
+    { "id": "b2-meetings.to-sum-up", "text": "To sum up, we're moving the launch to May fifteenth.", "es": "Resumiendo: pasamos el lanzamiento al quince de mayo.", "notes": "«sum up» = resumir; ojo, «resume» en inglés es retomar.", "explanation": "Para cerrar con lo acordado. «fifteenth» acaba en «th» entre los dientes: «fif-TIINZ».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.lets-go-over-the-action-items", "text": "Let's go over the action items before we finish.", "es": "Repasemos las tareas antes de terminar.", "notes": "«go over» = repasar; «action items» = tareas acordadas con responsable.", "explanation": "Al final de la reunión, para repasar quién hace qué. «go over» se une: «gou-OU-vər».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.ill-send-the-notes-around", "text": "I'll send the notes around this afternoon.", "es": "Esta tarde os paso las notas a todos.", "notes": "«send around» = enviar a todo el grupo.", "explanation": "Para comprometerte a mandar el resumen. «around» se acentúa al final: «ə-RAUND».", "register": "neutral", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.lets-schedule-a-follow-up", "text": "Let's schedule a follow-up for next Tuesday.", "es": "Programemos una reunión de seguimiento para el martes que viene.", "notes": "«next Tuesday» sin «the».", "explanation": "Para dejar fecha a la siguiente reunión. «schedule» en EE. UU. = «SKE-yul», sin «e» delante de la «s».", "register": "neutral", "situation": "trabajo" }
+  ],
+  "vocab": [
+    { "id": "b2-meetings.purpose", "word": "purpose", "article": "a", "plural": "purposes", "es": "el objetivo, el propósito", "example": "b2-meetings.the-purpose-of-this-meeting", "situation": "trabajo" },
+    { "id": "b2-meetings.item", "word": "item", "article": "an", "plural": "items", "es": "el punto (de una lista)", "notes": "En una reunión, cada tema del orden del día.", "example": "b2-meetings.we-have-three-items-on-the-agenda", "situation": "trabajo" },
+    { "id": "b2-meetings.budget", "word": "budget", "article": "a", "plural": "budgets", "es": "el presupuesto", "example": "b2-meetings.lets-start-with-the-budget", "situation": "trabajo", "image": "fluent:money-bag" },
+    { "id": "b2-meetings.minutes", "word": "minutes", "es": "el acta", "notes": "Siempre en plural en este sentido: «take the minutes» = levantar acta.", "situation": "trabajo", "image": "fluent:memo" },
+    { "id": "b2-meetings.attendee", "word": "attendee", "article": "an", "plural": "attendees", "es": "el asistente (a una reunión)", "notes": "«attend» = asistir; no confundas con «atender».", "situation": "trabajo" },
+    { "id": "b2-meetings.proposal", "word": "proposal", "article": "a", "plural": "proposals", "es": "la propuesta", "example": "b2-meetings.i-have-a-proposal", "situation": "trabajo" },
+    { "id": "b2-meetings.postpone", "word": "postpone", "es": "aplazar, retrasar", "notes": "Verbo: «postpone the meeting» = aplazar la reunión.", "example": "b2-meetings.i-suggest-we-postpone", "situation": "trabajo" },
+    { "id": "b2-meetings.phase", "word": "phase", "article": "a", "plural": "phases", "es": "la fase", "example": "b2-meetings.what-if-we-split", "situation": "trabajo" },
+    { "id": "b2-meetings.stakeholder", "word": "stakeholder", "article": "a", "plural": "stakeholders", "es": "la parte interesada", "notes": "Cualquiera afectado por un proyecto: cliente, jefe, otro equipo.", "situation": "trabajo" },
+    { "id": "b2-meetings.contractor", "word": "contractor", "article": "a", "plural": "contractors", "es": "el contratista, el externo", "notes": "Persona contratada por un tiempo, no en plantilla.", "example": "b2-meetings.one-option-would-be", "situation": "trabajo" },
+    { "id": "b2-meetings.advantage", "word": "advantage", "article": "an", "plural": "advantages", "es": "la ventaja", "situation": "trabajo" },
+    { "id": "b2-meetings.downside", "word": "downside", "article": "a", "plural": "downsides", "es": "la desventaja, la pega", "example": "b2-meetings.the-downside-is", "situation": "trabajo" },
+    { "id": "b2-meetings.trade-off", "word": "trade-off", "article": "a", "plural": "trade-offs", "es": "el compromiso (ganas algo y pierdes otra cosa)", "notes": "«It's a trade-off» = no se puede tener todo.", "situation": "trabajo" },
+    { "id": "b2-meetings.jump-in", "word": "jump in", "es": "intervenir, meter baza", "notes": "Phrasal verb: entrar en una conversación que ya ha empezado.", "example": "b2-meetings.can-i-jump-in", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.quarter", "word": "quarter", "article": "a", "plural": "quarters", "es": "el trimestre", "notes": "También «cuarto»; Q1 se lee «the first quarter».", "example": "b2-meetings.just-to-clarify", "situation": "trabajo" },
+    { "id": "b2-meetings.bring-up", "word": "bring up", "es": "sacar (un tema)", "notes": "Phrasal verb: «I'd like to bring up the budget» = quiero sacar el tema del presupuesto.", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.consensus", "word": "consensus", "es": "el consenso", "notes": "Incontable: «reach a consensus» = llegar a un consenso.", "situation": "trabajo" },
+    { "id": "b2-meetings.decision", "word": "decision", "article": "a", "plural": "decisions", "es": "la decisión", "notes": "«make a decision» = tomar una decisión.", "example": "b2-meetings.can-we-make-a-decision-by-friday", "situation": "trabajo" },
+    { "id": "b2-meetings.sum-up", "word": "sum up", "es": "resumir", "notes": "Phrasal verb. Falso amigo: «resume» = retomar, no resumir.", "example": "b2-meetings.to-sum-up", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.action-item", "word": "action item", "article": "an", "plural": "action items", "es": "la tarea acordada", "notes": "Tarea con responsable que sale de una reunión.", "example": "b2-meetings.lets-go-over-the-action-items", "situation": "trabajo" },
+    { "id": "b2-meetings.go-over", "word": "go over", "es": "repasar", "notes": "Phrasal verb: «go over the numbers» = repasar las cifras.", "example": "b2-meetings.lets-go-over-the-action-items", "situation": "trabajo", "tags": ["phrasal-verbs"] },
+    { "id": "b2-meetings.timeline", "word": "timeline", "article": "a", "plural": "timelines", "es": "el calendario (de un proyecto)", "notes": "Las fechas previstas de cada fase.", "situation": "trabajo" },
+    { "id": "b2-meetings.follow-up", "word": "follow-up", "article": "a", "plural": "follow-ups", "es": "la reunión de seguimiento", "notes": "Sustantivo con guion; el verbo es «follow up», sin guion.", "example": "b2-meetings.lets-schedule-a-follow-up", "situation": "trabajo" }
+  ],
+  "qa": [
+    {
+      "id": "b2-meetings.qa.agenda",
+      "question": "What's on the agenda today?",
+      "questionEs": "¿Qué hay hoy en el orden del día?",
+      "accepted": [
+        { "text": "We have three items: the budget, the timeline and hiring.", "es": "Tenemos tres puntos: el presupuesto, el calendario y las contrataciones." },
+        { "text": "Mainly the budget, and then the timeline if we have time.", "es": "Sobre todo el presupuesto, y luego el calendario si hay tiempo." }
+      ],
+      "distractors": [
+        { "text": "We have three points of the order of the day.", "es": "Tenemos tres puntos del orden del día." },
+        { "text": "Today we discuss about the budget.", "es": "Hoy hablamos del presupuesto." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«orden del día» = agenda, y sus puntos son «items»; «discuss» va sin «about».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-meetings.qa.suggestion",
+      "question": "We're two weeks behind schedule. Any suggestions?",
+      "questionEs": "Vamos dos semanas con retraso. ¿Alguna sugerencia?",
+      "accepted": [
+        { "text": "I suggest we postpone the launch by two weeks.", "es": "Propongo que retrasemos el lanzamiento dos semanas." },
+        { "text": "What if we split the work into two phases?", "es": "¿Y si dividimos el trabajo en dos fases?" }
+      ],
+      "distractors": [
+        { "text": "I suggest to postpone the launch two weeks.", "es": "Sugiero retrasar el lanzamiento dos semanas." },
+        { "text": "What if we would split the work in two phases?", "es": "¿Y si dividiéramos el trabajo en dos fases?" }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«suggest» + sujeto + verbo (no «suggest to»); «What if» va con presente, sin «would».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-meetings.qa.downside",
+      "question": "Hiring a contractor sounds good. Is there a downside?",
+      "questionEs": "Contratar a un externo suena bien. ¿Tiene alguna pega?",
+      "accepted": [
+        { "text": "The downside is that it would cost more.", "es": "La pega es que costaría más." },
+        { "text": "It's a trade-off: it's faster, but more expensive.", "es": "Es un compromiso: es más rápido, pero más caro." }
+      ],
+      "distractors": [
+        { "text": "The downside is that would cost more.", "es": "La pega es que costaría más." },
+        { "text": "It's faster, but more expensive that a new hire.", "es": "Es más rápido, pero más caro que contratar a alguien." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "En inglés el sujeto no se omite («that it would…»), y el comparativo va con «than», no «that».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "b2-meetings.qa.interrupt",
+      "question": "…so I think we should rewrite the whole module, and then we—",
+      "questionEs": "…así que creo que deberíamos reescribir todo el módulo, y luego—",
+      "accepted": [
+        { "text": "Sorry to interrupt, but could I just add something?", "es": "Perdona que interrumpa, pero ¿puedo añadir algo?" },
+        { "text": "Can I jump in here for a second?", "es": "¿Puedo intervenir un segundo?" }
+      ],
+      "distractors": [
+        { "text": "Sorry for interrupt, but I can add something?", "es": "Perdón por interrumpir, pero ¿puedo añadir algo?" },
+        { "text": "Can I jump here for a second?", "es": "¿Puedo saltar aquí un segundo?" }
+      ],
+      "register": "formal",
+      "situation": "trabajo",
+      "notes": "«Sorry to interrupt» (o «Sorry for interrupting»); en preguntas el verbo va delante: «could I…?». Sin «in», «jump» es saltar.",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "b2-meetings.qa.clarify",
+      "question": "We'll need to cut the scope by about twenty percent.",
+      "questionEs": "Vamos a tener que recortar el alcance un veinte por ciento.",
+      "accepted": [
+        { "text": "Just to clarify, are we talking about this quarter?", "es": "Solo para aclarar: ¿hablamos de este trimestre?" },
+        { "text": "Could you elaborate on that a little?", "es": "¿Podrías desarrollar eso un poco?" }
+      ],
+      "distractors": [
+        { "text": "Can you explain me that a little?", "es": "¿Me puedes explicar eso un poco?" },
+        { "text": "Just for clarify, we are talking about this quarter?", "es": "Solo para aclarar, ¿hablamos de este trimestre?" }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«explain» no lleva la persona detrás («explain it to me»); «to clarify», no «for clarify».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "b2-meetings.qa.who-owns",
+      "question": "Okay, who's going to own the client email?",
+      "questionEs": "Vale, ¿quién se encarga del correo al cliente?",
+      "accepted": [
+        { "text": "I'll take care of it.", "es": "Yo me encargo." },
+        { "text": "I can take that one.", "es": "Lo puedo coger yo." }
+      ],
+      "distractors": [
+        { "text": "I take care of it.", "es": "Yo me encargo." },
+        { "text": "I'll take care about it.", "es": "Yo me ocupo de eso." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Al ofrecerte en el momento se usa «will»; la preposición es «take care of».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "b2-meetings.qa.sum-up",
+      "question": "Before we go, can someone sum up what we decided?",
+      "questionEs": "Antes de irnos, ¿alguien puede resumir lo que hemos decidido?",
+      "accepted": [
+        { "text": "Sure. To sum up, we're moving the launch to May.", "es": "Claro. Resumiendo: pasamos el lanzamiento a mayo." },
+        { "text": "We agreed to postpone the launch by two weeks.", "es": "Acordamos retrasar el lanzamiento dos semanas." }
+      ],
+      "distractors": [
+        { "text": "Sure. To resume, we're moving the launch to May.", "es": "Claro. Resumiendo: pasamos el lanzamiento a mayo." },
+        { "text": "We decided postpone the launch two weeks.", "es": "Decidimos retrasar el lanzamiento dos semanas." }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«resume» es un falso amigo (= retomar); «decide» y «agree» van con «to» + verbo.",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}

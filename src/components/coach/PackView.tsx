@@ -4,16 +4,14 @@ import { useEffect, type ReactNode } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { SlowIcon } from "@/components/phrasebook/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
-import { Card } from "@/components/ui";
+import { Card, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { packLine, type CoachKeyPhrase, type CoachPack } from "@/lib/coach";
 import { cn } from "@/lib/cn";
 import { recordListen } from "@/lib/progress/activity";
 import { PracticeDialogue } from "./PracticeDialogue";
 import { RefineCard } from "./RefineCard";
-import { FOCUS } from "./shared";
-
-const REGISTER: Record<CoachPack["register"], string> = { formal: "Trato de usted", informal: "Trato de tú" };
+import { FOCUS, registerBadge } from "./shared";
 
 export interface PackViewProps {
   pack: CoachPack;
@@ -34,7 +32,7 @@ export function PackView({ pack, notice, onBack, onRefined }: PackViewProps) {
       </button>
       <PageHeader title={pack.title} subtitle={`«${pack.description}»`} />
       <p className="-mt-3 flex flex-wrap gap-2 text-sm font-bold">
-        <span className="rounded-full bg-lemon-soft px-3 py-1 text-ink">{REGISTER[pack.register]}</span>
+        <span className="rounded-full bg-lemon-soft px-3 py-1 text-ink">{registerBadge(pack)}</span>
         <span className="rounded-full bg-sand px-3 py-1 text-ink-muted">{pack.keyPhrases.length} frases clave</span>
       </p>
       {notice}
@@ -94,7 +92,7 @@ function KeyPhraseRow({ pack, phrase }: { pack: CoachPack; phrase: CoachKeyPhras
       >
         <span className="flex-1">
           <span lang={pack.lang} className="block text-lg font-bold leading-snug text-ink">
-            {phrase.text}
+            <TargetText text={phrase.text} lang={pack.lang} />
           </span>
           <span className="block text-base text-ink-muted">{phrase.es}</span>
           {phrase.note ? <span className="mt-1 block text-sm text-sea-deep">{phrase.note}</span> : null}

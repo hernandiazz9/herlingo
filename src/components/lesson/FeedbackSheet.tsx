@@ -2,8 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import { MiniPlay, useLessonLang } from "@/components/exercises";
+import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { diffWords, type DiffWord, type Exercise, type ExerciseOutcome } from "@/lib/exercises";
+import { getPack } from "@/lib/content";
+import { diffWords, scriptRules, type DiffWord, type Exercise, type ExerciseOutcome } from "@/lib/exercises";
 
 const PRAISE = ["¡Genial!", "¡Muy bien!", "¡Perfecto!", "¡Eso es!", "¡Bravo!"];
 
@@ -47,7 +49,7 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
   const isMatch = exercise.type === "match";
   const matchMistakes = isMatch ? (outcome.wrongItemIds?.length ?? 0) : 0;
   const typo = correct && outcome.typo === true && !!outcome.given;
-  const diff = typo && outcome.given ? diffWords(outcome.given, solution.text) : null;
+  const diff = typo && outcome.given ? diffWords(outcome.given, solution.text, scriptRules(getPack(lang).meta)) : null;
   const title = !correct ? "Casi…" : typo ? "¡Casi perfecto!" : matchMistakes > 0 ? "¡Hecho!" : PRAISE[seq % PRAISE.length];
   const button = useRef<HTMLButtonElement>(null);
   // Focus Continuar (keyboard: Enter goes on) without scrolling the lesson.
@@ -104,7 +106,9 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
           <div className="flex min-w-0 flex-col">
             {!correct ? <span className="text-sm font-bold uppercase tracking-wider text-error-deep">Solución</span> : null}
             <span lang={lang} className="text-xl font-bold text-ink">
-              {diff ? <Highlighted words={diff.expected} tone="fix" /> : solution.text}
+              <TargetText text={solution.text} lang={lang}>
+                {diff ? <Highlighted words={diff.expected} tone="fix" /> : solution.text}
+              </TargetText>
             </span>
             {solution.es ? <span className="text-base text-ink-muted">{solution.es}</span> : null}
             {solution.note ? <span className="mt-1 text-sm text-ink-muted">{solution.note}</span> : null}

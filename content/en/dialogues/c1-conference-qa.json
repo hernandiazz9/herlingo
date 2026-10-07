@@ -1,0 +1,47 @@
+{
+  "id": "dlg.en-c1-conference-qa",
+  "title": "Preguntas tras tu charla",
+  "description": "Acabas de dar una charla en una conferencia y un asistente te hace una pregunta difícil; respondes con calma y reconoces los límites.",
+  "situation": "trabajo",
+  "unit": "c1-presenting",
+  "order": 302,
+  "register": "neutral",
+  "level": "C1",
+  "avatars": { "Asistente": "fluent:man-raising-hand" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Asistente", "text": "Great talk. But isn't caching everything on the client just moving the complexity somewhere else?", "es": "Muy buena charla. Pero ¿guardar todo en caché en el cliente no es solo trasladar la complejidad a otro sitio?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Agradece la pregunta, reconoce que tiene parte de razón y di que depende del caso.",
+      "options": [
+        { "text": "That's a fair question, and you're partly right. It really depends on the use case.", "es": "Es una pregunta justa, y en parte tienes razón. Depende mucho del caso de uso.", "verdict": "correct", "feedback": "¡Muy bien! «That's a fair question» gana tiempo con elegancia y reconocer «partly right» desactiva la tensión." },
+        { "text": "No, I don't think so.", "es": "No, no lo creo.", "verdict": "acceptable", "feedback": "Es una respuesta válida, pero suena defensiva delante del público; reconoce algo primero." },
+        { "text": "That's a fair question, and you have part of reason. It really depends of the use case.", "es": "Es una pregunta justa, y en parte tienes razón. Depende mucho del caso de uso.", "verdict": "wrong", "feedback": "«Tener razón» es «be right» («you're partly right»), y «depender de» es «depend on», no «of»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Asistente", "text": "Sure, but in your benchmark, how did you handle stale data when two devices edit the same record?", "es": "Vale, pero en tu benchmark, ¿cómo gestionaste los datos desactualizados cuando dos dispositivos editan el mismo registro?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Admite que no lo cubriste en la charla y explica que lo resolvéis con «la última escritura gana».",
+      "options": [
+        { "text": "I didn't cover that in the talk, to be honest. We went with last-write-wins, which is simple but has trade-offs.", "es": "Para ser sincero, no lo cubrí en la charla. Optamos por «la última escritura gana», que es simple pero tiene sus pros y contras.", "verdict": "correct", "feedback": "¡Perfecto! Admitir el límite da credibilidad; «trade-offs» = compromisos entre ventajas e inconvenientes." },
+        { "text": "We used last-write-wins.", "es": "Usamos «la última escritura gana».", "verdict": "acceptable", "feedback": "Correcto, pero escueto; reconocer que no lo cubriste y mencionar los inconvenientes suena más honesto." },
+        { "text": "I didn't cover that in the talk, to be sincere. We went with last-write-wins, which is simple but has its pros and contras.", "es": "Para ser sincero, no lo cubrí en la charla. Optamos por «la última escritura gana», que es simple pero tiene sus pros y contras.", "verdict": "wrong", "feedback": "Se dice «to be honest» («to be sincere» no es natural) y «pros and cons», no «contras»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Asistente", "text": "Wouldn't that lose data in a real-world app, though?", "es": "Pero ¿eso no perdería datos en una aplicación real?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Reconoce que podría pasar y propón seguir hablándolo después de la sesión, porque queda poco tiempo.",
+      "options": [
+        { "text": "It could, in edge cases. I'd love to dig into it with you after the session, since we're running short on time.", "es": "Podría, en casos límite. Me encantaría profundizar contigo después de la sesión, que vamos justos de tiempo.", "verdict": "correct", "feedback": "¡Genial! «dig into» = profundizar; «running short on time» = ir justos de tiempo. Cierras sin esquivar." },
+        { "text": "Maybe. Let's talk later.", "es": "Quizá. Hablemos luego.", "verdict": "acceptable", "feedback": "Se entiende, pero suena a evasiva; explica por qué lo dejas para después." },
+        { "text": "It could, in edge cases. I'd love to deepen it with you after the session, since we're running out short of time.", "es": "Podría, en casos límite. Me encantaría profundizar contigo después de la sesión, que vamos justos de tiempo.", "verdict": "wrong", "feedback": "«Profundizar en un tema» es «dig into» o «go deeper into»; y es «running short on time» o «running out of time»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Asistente", "text": "Deal. I'll find you at the coffee break.", "es": "Trato hecho. Te busco en la pausa del café.", "voice": "en-US-BrianNeural" }
+  ]
+}

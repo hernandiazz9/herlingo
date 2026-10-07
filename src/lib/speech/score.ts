@@ -6,6 +6,8 @@
  *   apostrophes split words ("dov'è" = "dov è").
  * - The pack's `equivalents` are written out on both sides ("i'm" = "i am"), then digits on both
  *   sides with the pack's `numberWords` ("40" heard = "quaranta", "21" = "twenty-one").
+ * - The pack's script rules: the `stress` mark is removed and `fold` applied on both sides
+ *   ("приве́т" = "привет", "ё" = "е"); recognisers return text without stress marks.
  * - Words written together or apart match ("buon giorno" = "buongiorno", "dove" = "dov'è").
  * - A one-letter slip in a word of 5+ letters counts as right: the recogniser's spelling, not the
  *   learner's pronunciation, is usually at fault.
@@ -14,7 +16,15 @@
  * else heard). Score = right words / (expected words + half a word per extra word heard), in [0, 1];
  * the attempt passes from `SPEECH_PASS_THRESHOLD`.
  */
-import { expandEquivalents, levenshtein, normalizeAnswer, spellNumbers, type Equivalents } from "@/lib/exercises/normalize";
+import {
+  expandEquivalents,
+  levenshtein,
+  normalizeAnswer,
+  prepareScript,
+  spellNumbers,
+  type Equivalents,
+  type ScriptRules,
+} from "@/lib/exercises/normalize";
 
 /**
  * Score (0–1) from which a spoken answer counts as right: 0.7 = 3 of 4 words right passes,
@@ -54,7 +64,7 @@ export interface SpeechScore {
 export type NumberWords = Readonly<Record<string, string>> | undefined;
 
 /** The pack's matching fields: pass the pack's `meta` as is. Missing = plain comparison. */
-export interface Matching {
+export interface Matching extends ScriptRules {
   numberWords?: NumberWords;
   equivalents?: Equivalents;
 }
@@ -68,8 +78,10 @@ interface Token {
 }
 
 function tokens(text: string, matching: Matching, word = -1): Token[] {
-  const spelled = spellNumbers(expandEquivalents(text, matching.equivalents), matching.numberWords);
-  const keys = normalizeAnswer(spelled, true).split(" ").filter(Boolean);
+  const spelled = prepareScript(spellNumbers(expandEquivalents(text, matching.equivalents), matching.numberWords), {
+    stress: matching.stress,
+  });
+  const keys = normalizeAnswer(prepareScript(spelled, matching), true).split(" ").filter(Boolean);
   const shown = normalizeAnswer(spelled).split(" ").filter(Boolean);
   return keys.map((key, i) => ({ key, shown: shown[i] ?? key, word }));
 }

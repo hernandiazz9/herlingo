@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { LessonLangContext, PlayControls } from "@/components/exercises";
 import { LiveTranscript, MicButton, useListen } from "@/components/speech";
-import { Button, Card } from "@/components/ui";
+import { Button, Card, TargetText } from "@/components/ui";
 import { stop } from "@/lib/audio";
 import {
   COACH_LIMITS,
@@ -318,7 +318,7 @@ function QuestionStep({
           {playable ? <PlayControls audio={playable} size="md" /> : null}
           {showText ? (
             <p lang={meta.lang} className="text-xl font-bold text-ink">
-              {question.text}
+              <TargetText text={question.text} lang={meta.lang} />
             </p>
           ) : (
             <button

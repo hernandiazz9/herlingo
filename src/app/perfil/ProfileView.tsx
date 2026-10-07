@@ -10,6 +10,7 @@ import { useLeagueAccount } from "@/lib/league/use-league-account";
 import { getAllLessons, getPack, languageName, listPacks } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useLevel } from "@/lib/content/level-hook";
+import { useShowRomanization } from "@/lib/content/use-romanization";
 import { LevelChips } from "@/components/level/LevelChips";
 import { cn } from "@/lib/cn";
 import { getTab } from "@/lib/navigation";
@@ -35,6 +36,7 @@ function Profile({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const progress = useProgress(lang);
   const settings = useSettings();
+  const romanization = useShowRomanization(lang);
   const points = useAppPoints();
   const [confirmReset, setConfirmReset] = useState(false);
 
@@ -87,6 +89,17 @@ function Profile({ lang }: { lang: string }) {
             checked={settings.speaking}
             onChange={(v) => updateSettings({ speaking: v })}
           />
+          {romanization.available ? (
+            <>
+              <div className="h-0.5 bg-line" />
+              <Toggle
+                label="Mostrar transliteración"
+                hint={`Las letras latinas debajo del ${languageName(lang)}.`}
+                checked={romanization.show}
+                onChange={romanization.setShow}
+              />
+            </>
+          ) : null}
         </Card>
         <Card className="flex flex-col gap-3">
           <div className="flex flex-col gap-1">

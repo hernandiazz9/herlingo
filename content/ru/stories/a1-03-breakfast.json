@@ -1,0 +1,94 @@
+{
+  "id": "story.ru-a1-breakfast",
+  "order": 3,
+  "title": "За́втрак у А́ни",
+  "titleEs": "Desayuno en casa de Ania",
+  "description": "Primer desayuno ruso: blinis, miel, café con leche y planes para el día con Ania y Dima.",
+  "emoji": "🥞",
+  "situation": "comida",
+  "level": "A1",
+  "voice": "ru-RU-DmitryNeural",
+  "sentences": [
+    { "id": "s1", "text": "У́тро. Луси́я встаёт в во́семь часо́в.", "es": "Es por la mañana. Lucía se levanta a las ocho." },
+    { "id": "s2", "text": "На ку́хне А́ня уже́ гото́вит за́втрак.", "es": "En la cocina, Ania ya está preparando el desayuno." },
+    { "id": "s3", "text": "На столе́ хлеб, сыр, мёд и блины́.", "es": "En la mesa hay pan, queso, miel y blinis." },
+    { "id": "s4", "text": "«До́брое у́тро! Ты пьёшь ко́фе и́ли чай?»", "es": "«¡Buenos días! ¿Tomas café o té?»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s5", "text": "«Ко́фе с молоко́м, пожа́луйста. Без са́хара.»", "es": "«Café con leche, por favor. Sin azúcar.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s6", "text": "Пото́м на ку́хню прихо́дит Ди́ма.", "es": "Luego Dima entra en la cocina." },
+    { "id": "s7", "text": "«О, блины́! Я о́чень люблю́ блины́!»", "es": "«¡Anda, blinis! ¡Me encantan los blinis!»" },
+    { "id": "s8", "text": "Ди́ма ест блины́ со сме́таной.", "es": "Dima come blinis con nata agria." },
+    { "id": "s9", "text": "Луси́я про́бует блин с мёдом.", "es": "Lucía prueba un blini con miel." },
+    { "id": "s10", "text": "«О́чень вку́сно! В Испа́нии мы обы́чно еди́м тост с тома́том.»", "es": "«¡Está muy rico! En España solemos comer tostada con tomate.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s11", "text": "«Что вы де́лаете сего́дня?»", "es": "«¿Qué hacéis hoy?»" },
+    { "id": "s12", "text": "«Мы е́дем в центр на метро́.»", "es": "«Vamos al centro en metro.»", "voice": "ru-RU-SvetlanaNeural" },
+    { "id": "s13", "text": "«А я рабо́таю. Сего́дня суббо́та, и в такси́ мно́го рабо́ты.»", "es": "«Pues yo trabajo. Hoy es sábado y en el taxi hay mucho trabajo.»" },
+    { "id": "s14", "text": "Ди́ма пьёт чай и бы́стро ухо́дит.", "es": "Dima se toma un té y se va enseguida." },
+    { "id": "s15", "text": "«Пока́, де́вочки! Хоро́шего дня!»", "es": "«¡Hasta luego, chicas! ¡Que tengáis un buen día!»" }
+  ],
+  "keywords": [
+    "ru-a1-daily.zavtrak",
+    "ru-a1-alphabet.khleb",
+    "ru-a1-alphabet.syr",
+    "ru-a1-alphabet.myod",
+    "ru-a1-food.bliny",
+    "ru-a1-hello.dobroe-utro",
+    "ru-a1-food.kofe-s-molokom",
+    "ru-a1-food.bez-sakhara",
+    "ru-a1-food.smetana",
+    "ru-a1-food.ochen-vkusno"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Во ско́лько встаёт Луси́я?",
+      "es": "¿A qué hora se levanta Lucía?",
+      "options": [
+        { "text": "В семь часо́в.", "es": "A las siete." },
+        { "text": "В во́семь часо́в.", "es": "A las ocho." },
+        { "text": "В де́сять часо́в.", "es": "A las diez." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Что пьёт Луси́я?",
+      "es": "¿Qué toma Lucía?",
+      "options": [
+        { "text": "Чай с лимо́ном.", "es": "Té con limón." },
+        { "text": "Ко́фе с са́харом.", "es": "Café con azúcar." },
+        { "text": "Ко́фе с молоко́м.", "es": "Café con leche." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "С чем Ди́ма ест блины́?",
+      "es": "¿Con qué come Dima los blinis?",
+      "options": [
+        { "text": "Со сме́таной.", "es": "Con nata agria." },
+        { "text": "С мёдом.", "es": "Con miel." },
+        { "text": "С сы́ром.", "es": "Con queso." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Что де́лает Ди́ма сего́дня?",
+      "es": "¿Qué hace Dima hoy?",
+      "options": [
+        { "text": "Он е́дет в центр.", "es": "Va al centro." },
+        { "text": "Он рабо́тает.", "es": "Trabaja." },
+        { "text": "Он отдыха́ет до́ма.", "es": "Descansa en casa." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "ru-a1-daily.zavtrak", "distractors": ["обе́д", "у́жин"] },
+    { "id": "g2", "sentence": "s3", "answer": "ru-a1-alphabet.syr", "distractors": ["суп", "борщ"] },
+    { "id": "g3", "sentence": "s4", "answer": "ru-a1-hello.dobroe-utro", "gap": "До́брое у́тро", "distractors": ["Споко́йной но́чи", "До́брый ве́чер"] },
+    { "id": "g4", "sentence": "s5", "answer": "ru-a1-food.bez-sakhara", "gap": "Без са́хара", "distractors": ["Без молока́", "Без хле́ба"] },
+    { "id": "g5", "sentence": "s8", "answer": "ru-a1-food.smetana", "gap": "со сме́таной", "distractors": ["с лимо́ном", "с ры́бой"] },
+    { "id": "g6", "sentence": "s10", "answer": "ru-a1-food.ochen-vkusno", "gap": "О́чень вку́сно", "distractors": ["О́чень хо́лодно", "О́чень до́рого"] }
+  ]
+}
