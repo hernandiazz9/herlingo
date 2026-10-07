@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:44Z 💻
+- Updated: 2026-10-07 22:49Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T118 + T119 running; then T125, T120, T121, T123
+- Next step: T119 + T125 running; then T120, T121, T123
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -118,7 +118,7 @@ Worktree setup: npm ci
 - Outcome: transport (39 phrases) + hotel (38 phrases), m/f learner forms, reuses earlier ids → 98894e4
 
 ## T118 — Russian A1: food, shopping
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T111
 - Where: any
 - Goal: Units `ru-a1-food` (40) and `ru-a1-shopping` (42) per docs/brief-ru.md (café, restaurant, ordering, the bill, typical dishes; shop, market, supermarket, clothes, paying).
@@ -127,7 +127,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: food (41 phrases, 7 lessons) + shopping (45 phrases, 6 lessons) → ec14baa
 
 ## T119 — Russian A1: city, health
 - Status: running (attempt 1)
@@ -203,7 +203,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T125 — Prepárate: stress marks for packs with a `stress` rule
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T111
 - Where: any
 - Goal: When the active pack has `stress`, Prepárate's generation request tells the model to write the stress mark on every multi-syllable word (generic: the rule comes from the pack meta the client already sends or from a new optional field in the request contract); the generated pack's text is shown through T112's component automatically. Fake mode returns canned data with marks for such packs. No change for other packs.
@@ -222,6 +222,7 @@ Worktree setup: npm ci
 - [ ] T115 @007cd62 — Russian language review (numbers, grammar cards) (queued 2026-10-07 💻)
 - [ ] T116 @88f0d9b — Russian language review (about-me, daily) (queued 2026-10-07 💻)
 - [ ] T117 @98894e4 — Russian language review (transport, hotel) (queued 2026-10-07 💻)
+- [ ] T118 @ec14baa — Russian language review (food, shopping) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
@@ -264,3 +265,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:41Z 💻 T116 done · → 88f0d9b · verify ✓
 - 2026-10-07 22:41Z 💻 T118 launched · attempt 1 · agent a103db313c2f95cea
 - 2026-10-07 22:44Z 💻 T117 done · → 98894e4 · verify ✓
+- 2026-10-07 22:45Z 💻 T119 launched · attempt 1 · agent ab752833297b2880d
+- 2026-10-07 22:49Z 💻 T118 done · → ec14baa · verify ✓
