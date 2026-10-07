@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:21Z 💻
+- Updated: 2026-10-07 22:22Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 2b11f14
-- Next step: integrate T123/T124, then T125, T126, T128
+- Branch: plan-009-ingles-b2-c1 @ 4c95f94
+- Next step: integrate T124, then T125 + T126, then T128
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -174,7 +174,7 @@ Worktree setup: npm ci
 - Outcome: c1-nuance/idioms: 89 phrases, 69 vocab, 17 Q&A, 10 lessons · 2b11f14 · verify ✓ 💻 · not checked: audio/images (T129), wording by eye
 
 ## T123 — English C1: networking, complex problems
-- Status: running (attempt 1 · 💻 · agent a014857546e18c137 · since 22:12Z)
+- Status: done
 - Depends on: T111, T120
 - Where: any
 - Goal: Units `c1-networking` (340) and `c1-problems` (342), per docs/brief-en.md: `level: "C1"`, phrases ≤ 22 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -183,7 +183,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; ~85 phrases, ~65 vocab, ~16 Q&A, 9–11 lessons, `level: "C1"`.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: c1-networking/problems: 92 phrases, 63 vocab, 16 Q&A, 10 lessons · 4c95f94 · verify ✓ 💻 · not checked: audio (T129), wording by eye
 
 ## T124 — English C1: society debates, storytelling
 - Status: running (attempt 1 · 💻 · agent a1005de88ee4b83f0 · since 22:21Z)
@@ -275,6 +275,7 @@ Worktree setup: npm ci
 - [ ] T121 @478ccbf — content review (queued 2026-10-07 💻)
 - [ ] T119 @38e56f8 — content review (queued 2026-10-07 💻)
 - [ ] T122 @2b11f14 — content review (queued 2026-10-07 💻)
+- [ ] T123 @4c95f94 — content review (note: second 'timeline' vocab entry, complaint sense, vs b2-meetings schedule sense) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
@@ -327,3 +328,4 @@ Worktree setup: npm ci
 - 2026-10-07 22:12Z 💻 T123 launched · attempt 1 · agent a014857546e18c137
 - 2026-10-07 22:21Z 💻 T122 done · worktree-agent-ae73dcc4ba6a5f6ec → 2b11f14 · verify ✓
 - 2026-10-07 22:21Z 💻 T124 launched · attempt 1 · agent a1005de88ee4b83f0
+- 2026-10-07 22:22Z 💻 T123 done · worktree-agent-a014857546e18c137 → 4c95f94 · verify ✓
