@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:00Z 💻
+- Updated: 2026-10-07 22:03Z 💻
 - Writer: 💻 desktop (since 11:48Z)
 - Branch: plan-009-ingles-b2-c1 @ f73954b
 - Next step: integrate T118/T121, then T119, T122–T124; relay after T121 (7 integrated)
@@ -114,7 +114,7 @@ Worktree setup: npm ci
 - Outcome: 12 B2 dialogues (201–212, 9 turns, 4 learner turns × 3 options; 7 formal, 3 tu, 2 neutral) · 55efa70 · verify ✓ 💻 · not checked: play two with device voices, audio (T129)
 
 ## T118 — English B2: stories 1–6
-- Status: running (attempt 1 · 💻 · agent ae7f64c74ac840123 · since 21:56Z)
+- Status: done
 - Depends on: T112, T113, T114, T115, T116
 - Where: any
 - Goal: B2 stories 1–6 (order 201–206, `level: "B2"`) with the Chicago cast, following the arc in docs/brief-en.md; key words reuse unit items by id; end the final message with an outline of stories 7–12 for T119.
@@ -123,7 +123,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings (100–200 words after T111).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: B2 stories 1–6 (201–206, 15–16 sentences, key words reuse B2 items) · 5f44b8a · verify ✓ 💻 · not checked: audio + memoir picture (T129), reading in app
 
 ## T119 — English B2: stories 7–12
 - Status: pending
@@ -271,6 +271,7 @@ Worktree setup: npm ci
 - [ ] T115 @6a29c92 — content review (queued 2026-10-07 💻)
 - [ ] T117 @55efa70 — content review (queued 2026-10-07 💻)
 - [ ] T120 @f73954b — content review (queued 2026-10-07 💻)
+- [ ] T118 @5f44b8a — content review (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
@@ -282,6 +283,7 @@ Worktree setup: npm ci
 - 2026-10-07 plan: placement rewritten for four levels, 4 questions each (16 total). (orchestrator default)
 - 2026-10-07 plan: generic copy instead of "situaciones del viaje" (Ruta subtitle, Onboarding) and Prepárate register badge "Registro formal/informal" for packs with `formalRegister: "formal"` (plan 008 Proposals). (orchestrator default, Hernán to confirm)
 - 2026-10-07 plan: runs in a cloud session (hybrid skill); T129 on the Mac. Base branch `plan-009-ingles-b2-c1` from main @ 1455082; guarded push of the plan branch only; no merge to main or deploy without Hernán's OK. (Hernán)
+- 2026-10-07 T119 outline (from T118): 07 viajes — Jordan's band Midwest tour, Pablo plans a road trip to join (b2-travel) · 08 viajes/dinero — rental car breaks down near Wisconsin, band still plays (b2-travel, b2-paperwork) · 09 dinero — formal insurance claim, arguing with the call centre (b2-paperwork) · 10 social — a text taken the wrong way, Jordan feels left out, they make up (b2-relationships) · 11 salud — Mrs. Carter's health scare while finishing her book; doctor, stress, habits (b2-wellbeing) · 12 opiniones — dinner about Mrs. Carter's reading in local news, Pablo looks back on the year, sets up the C1 acquisition rumour (b2-news, b2-grammar wish/third conditional). Voices: Ava narrator, Pablo Andrew, Jordan/Sam Brian, Maya/Mrs. Carter/Priya Emma.
 
 ## Proposals (new scope)
 - 2026-10-07 T111: content-guide story/unit-range parts still describe the Italian trip ("Trip order", "A1–A2 Italian")
@@ -313,3 +315,4 @@ Worktree setup: npm ci
 - 2026-10-07 21:56Z 💻 T118 launched · attempt 1 · agent ae7f64c74ac840123
 - 2026-10-07 22:00Z 💻 T120 done · worktree-agent-a093dd1264c1aa5ed → f73954b · verify ✓
 - 2026-10-07 22:00Z 💻 T121 launched · attempt 1 · agent ad2efc66ff7fd045c
+- 2026-10-07 22:03Z 💻 T118 done · worktree-agent-ae7f64c74ac840123 → 5f44b8a · verify ✓
