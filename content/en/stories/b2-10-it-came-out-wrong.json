@@ -1,0 +1,95 @@
+{
+  "id": "story.en-b2-it-came-out-wrong",
+  "order": 210,
+  "title": "It came out wrong",
+  "titleEs": "Me expresé mal",
+  "description": "Un mensaje de Pablo le sienta fatal a Jordan, que se siente excluido. Toca hablarlo cara a cara.",
+  "emoji": "💬",
+  "situation": "social",
+  "level": "B2",
+  "sentences": [
+    { "id": "s1", "text": "On Saturday, Pablo and Maya go to a stand-up show with some friends from work.", "es": "El sábado, Pablo y Maya van a un espectáculo de monólogos con unos amigos del trabajo." },
+    { "id": "s2", "text": "Maya posts a few photos, and Jordan sends a short text.", "es": "Maya sube unas fotos, y Jordan manda un mensaje corto." },
+    { "id": "s3", "text": "«Looks fun. Thanks for the invite.»", "es": "«Qué bien lo pasáis. Gracias por invitarme.»", "voice": "en-US-BrianNeural" },
+    { "id": "s4", "text": "Pablo replies without thinking: «Ha, you would've hated it anyway.»", "es": "Pablo contesta sin pensar: «Ja, de todas formas lo habrías odiado.»" },
+    { "id": "s5", "text": "Jordan doesn't answer, and for two days he ignores all of Pablo's messages.", "es": "Jordan no contesta, y durante dos días ignora todos los mensajes de Pablo." },
+    { "id": "s6", "text": "«I think he took it the wrong way,» says Maya.", "es": "«Creo que se lo ha tomado a mal», dice Maya." },
+    { "id": "s7", "text": "On Monday evening, Pablo goes over to Logan Square and knocks on Jordan's door.", "es": "El lunes por la tarde, Pablo se pasa por Logan Square y llama a la puerta de Jordan." },
+    { "id": "s8", "text": "«Hey. Can we talk about what happened?»", "es": "«Oye. ¿Podemos hablar de lo que pasó?»", "voice": "en-US-AndrewNeural" },
+    { "id": "s9", "text": "«Since the tour, you two do everything together.»", "es": "«Desde la gira, vosotros dos lo hacéis todo juntos.»", "voice": "en-US-BrianNeural" },
+    { "id": "s10", "text": "«I can't help feeling a bit left out.»", "es": "«No puedo evitar sentirme un poco excluido.»", "voice": "en-US-BrianNeural" },
+    { "id": "s11", "text": "«Sorry, man, that came out wrong. I didn't mean it like that.»", "es": "«Perdona, tío, me expresé mal. No lo dije con esa intención.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s12", "text": "«I was only joking, I promise. I just assumed you'd be busy with the band.»", "es": "«Solo era una broma, te lo prometo. Simplemente di por hecho que estarías liado con el grupo.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s13", "text": "Jordan finally smiles a little.", "es": "Jordan por fin sonríe un poco." },
+    { "id": "s14", "text": "«It's hard to tell someone's tone over text. I'm sorry I overreacted.»", "es": "«Cuesta saber el tono de alguien por mensaje. Siento haber exagerado.»", "voice": "en-US-BrianNeural" },
+    { "id": "s15", "text": "«Don't worry. No hard feelings.»", "es": "«Tranquilo. Sin rencores.»", "voice": "en-US-AndrewNeural" },
+    { "id": "s16", "text": "They order a pizza, talk for hours and finally make up.", "es": "Piden una pizza, hablan durante horas y por fin hacen las paces." },
+    { "id": "s17", "text": "The next morning, Pablo starts a group chat for the three of them.", "es": "A la mañana siguiente, Pablo crea un chat de grupo para los tres." }
+  ],
+  "keywords": [
+    "b2-relationships.you-took-it-the-wrong-way",
+    "b2-relationships.can-we-talk-about-what-happened",
+    "b2-relationships.i-cant-help-feeling-left-out",
+    "b2-relationships.left-out",
+    "b2-relationships.i-didnt-mean-it-like-that",
+    "b2-relationships.i-was-only-joking",
+    "b2-relationships.its-hard-to-tell-tone-over-text",
+    "b2-relationships.im-sorry-i-overreacted",
+    "b2-relationships.no-hard-feelings",
+    "b2-relationships.make-up"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Why is Jordan upset?",
+      "es": "¿Por qué está molesto Jordan?",
+      "options": [
+        { "text": "Pablo forgot his birthday.", "es": "Pablo se olvidó de su cumpleaños." },
+        { "text": "Nobody came to his gig.", "es": "Nadie fue a su concierto." },
+        { "text": "He wasn't invited, and Pablo's reply hurt him.", "es": "No lo invitaron, y la respuesta de Pablo le dolió." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "What does Jordan do for two days?",
+      "es": "¿Qué hace Jordan durante dos días?",
+      "options": [
+        { "text": "He doesn't answer Pablo's messages.", "es": "No contesta los mensajes de Pablo." },
+        { "text": "He sends Pablo angry messages.", "es": "Le manda mensajes enfadados a Pablo." },
+        { "text": "He goes back on tour.", "es": "Se vuelve de gira." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "What does Pablo say about his text?",
+      "es": "¿Qué dice Pablo sobre su mensaje?",
+      "options": [
+        { "text": "He meant every word.", "es": "Que lo decía totalmente en serio." },
+        { "text": "It was just a joke.", "es": "Que era solo una broma." },
+        { "text": "Maya wrote it, not him.", "es": "Que lo escribió Maya, no él." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "How does the story end?",
+      "es": "¿Cómo termina la historia?",
+      "options": [
+        { "text": "Jordan decides to move out.", "es": "Jordan decide irse del piso." },
+        { "text": "They stop talking to each other.", "es": "Dejan de hablarse." },
+        { "text": "They make up, and Pablo starts a group chat.", "es": "Hacen las paces, y Pablo crea un chat de grupo." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s6", "answer": "b2-relationships.you-took-it-the-wrong-way", "gap": "the wrong way", "distractors": ["the bad way", "the wrong road"] },
+    { "id": "g2", "sentence": "s10", "answer": "b2-relationships.left-out", "distractors": ["left off", "let out"] },
+    { "id": "g3", "sentence": "s11", "answer": "b2-relationships.i-didnt-mean-it-like-that", "gap": "mean", "distractors": ["want", "say"] },
+    { "id": "g4", "sentence": "s12", "answer": "b2-relationships.i-was-only-joking", "gap": "joking", "distractors": ["playing", "laughing"] },
+    { "id": "g5", "sentence": "s15", "answer": "b2-relationships.no-hard-feelings", "gap": "hard feelings", "distractors": ["bad feelings", "hard senses"] },
+    { "id": "g6", "sentence": "s16", "answer": "b2-relationships.make-up", "distractors": ["do peace", "do up"] }
+  ]
+}
