@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:37Z 💻
+- Updated: 2026-10-07 22:41Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T116 + T117 running; then T118, T119, T125
+- Next step: T117 + T118 running; then T119, T125
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -94,7 +94,7 @@ Worktree setup: npm ci
 - Outcome: numbers (42 phrases, 42 vocab) + grammar (12 new cards; 13 topics with ty-or-vy) → 007cd62
 
 ## T116 — Russian A1: about me, daily life
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T111
 - Where: any
 - Goal: Units `ru-a1-about-me` (20) and `ru-a1-daily` (22) per docs/brief-ru.md (persona: Hernán, from Madrid, programmer; home, routine, free time, weekdays, weather).
@@ -103,7 +103,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: about-me (53 phrases) + daily (43 phrases, 42 vocab), reuses hello/alphabet ids → 88f0d9b
 
 ## T117 — Russian A1: transport, hotel
 - Status: running (attempt 1)
@@ -118,7 +118,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T118 — Russian A1: food, shopping
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T111
 - Where: any
 - Goal: Units `ru-a1-food` (40) and `ru-a1-shopping` (42) per docs/brief-ru.md (café, restaurant, ordering, the bill, typical dishes; shop, market, supermarket, clothes, paying).
@@ -220,6 +220,7 @@ Worktree setup: npm ci
 - [ ] T114 @7e2496d — Russian language review (stress marks, alphabet explanations) (queued 2026-10-07 💻)
 - [ ] T112 @84820ed — code review (TargetText usage coverage, romanization store) (queued 2026-10-07 💻)
 - [ ] T115 @007cd62 — Russian language review (numbers, grammar cards) (queued 2026-10-07 💻)
+- [ ] T116 @88f0d9b — Russian language review (about-me, daily) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
@@ -258,3 +259,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:34Z 💻 T112 done · → 84820ed · verify ✓
 - 2026-10-07 22:34Z 💻 T116 launched · attempt 1 · agent a8bdd3b582f293af5
 - 2026-10-07 22:37Z 💻 T115 done · → 007cd62 · verify ✓
+- 2026-10-07 22:37Z 💻 T117 launched · attempt 1 · agent a1f89f534aaa1f384
+- 2026-10-07 22:41Z 💻 T116 done · → 88f0d9b · verify ✓
