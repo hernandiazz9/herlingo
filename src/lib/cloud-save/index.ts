@@ -18,14 +18,16 @@
  *
  * Bookkeeping: `lang-lern:cloud-save` (`CLOUD_SAVE_KEY`), never part of a backup.
  */
-import { CLOUD_SAVE_KEY, type Backup } from "@/lib/backup";
+import { announceStorageReplaced, applyBackup, CLOUD_SAVE_KEY, isCloudSaveKey, type Backup } from "@/lib/backup";
 import { getLeagueAccount, refreshLeagueAccount, subscribeLeagueAccount, type LeagueAccountChange } from "@/lib/league/account";
 import { leagueRpc } from "@/lib/league/client";
 import { leagueEnabled } from "@/lib/league/config";
 import { isLeagueError, LeagueError } from "@/lib/league/errors";
 import { collectCloudBackup, hashData, isStoreEmpty, toCloudBackup } from "./blob";
+import { clearUndo, hasUndoStorage, readUndo, saveUndo, type UndoCopy } from "./undo";
 
 export { summarizeBackup, type BackupSummary } from "./blob";
+export { readUndo, subscribeUndo, UNDO_DAYS, type UndoCopy } from "./undo";
 
 const VERSION = 1;
 const EVENT = "lang-lern:cloud-save-change";
@@ -169,6 +171,11 @@ export interface CloudSaveState {
   needsEmail: boolean;
   /** The switch (Perfil). */
   enabled: boolean;
+  /**
+   * The learner chose "Decidir luego" (or undid a restore) on this page: the launch prompt stays
+   * hidden while `status` stays `conflict` / `restore-available` (no uploads). Next launch asks again.
+   */
+  promptDismissed: boolean;
 }
 
 type Mismatch = "conflict" | "restore-available" | null;
@@ -177,8 +184,19 @@ type Mismatch = "conflict" | "restore-available" | null;
 let cloudSize: number | null = null;
 let mismatch: Mismatch = null;
 let uploading = false;
+let dismissed = false;
+/** The cloud copy read when the mismatch was found (conflict dialog summary; restore reuses it if still current). */
+let pendingCopy: CloudCopy | null = null;
 
-const OFF: CloudSaveState = { status: "off", lastSyncAt: null, lastError: null, size: null, needsEmail: false, enabled: true };
+const OFF: CloudSaveState = {
+  status: "off",
+  lastSyncAt: null,
+  lastError: null,
+  size: null,
+  needsEmail: false,
+  enabled: true,
+  promptDismissed: false,
+};
 
 function online(): boolean {
   return typeof navigator === "undefined" || navigator.onLine !== false;
@@ -204,7 +222,7 @@ export function getCloudSaveState(): CloudSaveState {
   const raw = readRaw();
   const account = getLeagueAccount();
   const isOnline = online();
-  const key = `${raw}|${account.status}|${account.userId ?? ""}|${account.email ?? ""}|${isOnline}|${mismatch}|${uploading}|${cloudSize}`;
+  const key = `${raw}|${account.status}|${account.userId ?? ""}|${account.email ?? ""}|${isOnline}|${mismatch}|${uploading}|${cloudSize}|${dismissed}`;
   if (key === lastKey) return lastState;
   const book = parseBookkeeping(raw);
   const joined = account.status === "joined" && Boolean(account.userId);
@@ -225,6 +243,7 @@ export function getCloudSaveState(): CloudSaveState {
     size: joined ? cloudSize : null,
     needsEmail: joined && !account.email,
     enabled: book.enabled,
+    promptDismissed: dismissed,
   };
   return lastState;
 }
@@ -254,8 +273,10 @@ function setUploading(value: boolean) {
 }
 
 function setMismatch(value: Mismatch) {
+  if (!value) pendingCopy = null;
   if (mismatch === value) return;
   mismatch = value;
+  if (!value) dismissed = false;
   emit();
 }
 
@@ -298,6 +319,8 @@ function ensureUser(userId: string): Bookkeeping {
   const book = readBook();
   if (book.userId === userId) return book;
   mismatch = null;
+  dismissed = false;
+  pendingCopy = null;
   cloudSize = null;
   checkedFor = null;
   return writeBook({ userId, rev: null, hash: null, dirty: true, lastSyncAt: null, lastError: null });
@@ -384,6 +407,7 @@ async function resolveMismatch(userId: string): Promise<void> {
     setMismatch(null);
     return;
   }
+  pendingCopy = backup ? { rev: copy.rev, updated_at: copy.updated_at, size: copy.size, backup } : null;
   setMismatch(isLocalEmpty() ? "restore-available" : "conflict");
 }
 
@@ -666,4 +690,110 @@ export function markCloudCopyApplied(rev: number): void {
   checkedFor = userId;
   writeBook({ rev, hash, dirty: false, lastSyncAt: new Date().toISOString(), lastError: null });
   setMismatch(null);
+}
+
+// ---------------------------------------------------------------------------------------------
+// Conflict and restore (T132)
+
+/** "Decidir luego": hides the launch prompt on this page; stays in conflict, nothing is uploaded. */
+export function dismissCloudPrompt(): void {
+  if (dismissed) return;
+  dismissed = true;
+  emit();
+}
+
+/** Shows the launch prompt again (Perfil's "elige qué copia conservar"), if there is a choice to make. */
+export function reopenCloudPrompt(): void {
+  if (!dismissed) return;
+  dismissed = false;
+  emit();
+}
+
+/**
+ * The cloud copy behind a `conflict` / `restore-available` prompt (read once when the mismatch was
+ * found; fetched again if this page does not have it). Throws like `fetchCloudCopy`.
+ */
+export async function loadPendingCloudCopy(): Promise<CloudCopy | null> {
+  if (pendingCopy) return pendingCopy;
+  const copy = await fetchCloudCopy();
+  if (copy && mismatch) pendingCopy = copy;
+  return copy;
+}
+
+/** A restore or undo that failed on this device (nothing was changed). `message` is UI copy. */
+export class CloudRestoreError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "CloudRestoreError";
+  }
+}
+
+export const CLOUD_RESTORE_ERRORS = {
+  noCopy: "No hay ninguna copia en la nube. No se ha cambiado nada.",
+  noUndoStorage: "Este navegador no puede guardar una copia de lo que tienes ahora, así que no se ha cambiado nada.",
+  undoNotSaved: "No se ha podido guardar una copia de lo que tienes ahora (¿falta espacio?). No se ha cambiado nada.",
+  noUndo: "Ya no hay ninguna copia anterior que recuperar.",
+} as const;
+
+/**
+ * "La de la nube" / "Restaurar": replaces this device's data (cloud keys only: Liga keys, the
+ * theme when the copy has none and the coach access code stay) with the account's cloud copy.
+ * Before writing, the replaced data is kept as the undo copy (Cache Storage, 7 days); if that
+ * cannot be stored, nothing changes. Uses `applyBackup` (rolls back on a storage error).
+ * Afterwards every store re-reads, `rev`/`hash` are the cloud's and nothing is pending. Returns
+ * the undo copy. Throws `LeagueError` (network, account) or `CloudRestoreError` (this device;
+ * nothing changed).
+ */
+export async function restoreCloudCopy(): Promise<UndoCopy> {
+  const userId = activeUser();
+  if (!userId) throw new LeagueError("not_joined");
+  if (!hasUndoStorage()) throw new CloudRestoreError(CLOUD_RESTORE_ERRORS.noUndoStorage);
+  // Reuse the copy read for the prompt when the cloud has not changed since; else read it again.
+  let copy: CloudCopy | null = pendingCopy;
+  if (copy) {
+    const head = await leagueRpc<Head | null>("league_save_head");
+    if (!head || head.rev !== copy.rev) copy = null;
+  }
+  copy ??= await fetchCloudCopy();
+  if (!copy) throw new CloudRestoreError(CLOUD_RESTORE_ERRORS.noCopy);
+  if (activeUser() !== userId) throw new LeagueError("not_joined");
+
+  const now = new Date();
+  const store = window.localStorage;
+  const previous = collectCloudBackup(store, now);
+  try {
+    await saveUndo(previous, now);
+  } catch {
+    throw new CloudRestoreError(CLOUD_RESTORE_ERRORS.undoNotSaved);
+  }
+  const result = applyBackup(store, copy.backup, now, isCloudSaveKey);
+  if (!result.ok) throw new CloudRestoreError(result.error);
+  markCloudCopyApplied(copy.rev);
+  announceStorageReplaced();
+  return (await readUndo(now)) ?? { savedAt: now.toISOString(), expiresAt: now.toISOString(), backup: previous };
+}
+
+/**
+ * "Deshacer restauración": puts back the data the last cloud restore replaced (cloud keys only)
+ * and removes the undo copy. The cloud copy is not touched: this device forgets which revision it
+ * has, so the next check finds the difference and asks again (never a silent upload); the prompt
+ * stays hidden on this page. Throws `CloudRestoreError` (nothing changed).
+ */
+export async function undoCloudRestore(): Promise<void> {
+  const undo = await readUndo();
+  if (!undo) throw new CloudRestoreError(CLOUD_RESTORE_ERRORS.noUndo);
+  const result = applyBackup(window.localStorage, undo.backup, new Date(), isCloudSaveKey);
+  if (!result.ok) throw new CloudRestoreError(result.error);
+  await clearUndo();
+  const userId = activeUser();
+  if (userId) ensureUser(userId);
+  // Unknown revision: the head check runs before any upload and raises the choice again.
+  writeBook({ rev: null, hash: null, dirty: true });
+  checkedFor = null;
+  lastSeenHash = null;
+  refusedHash = null;
+  dismissed = true;
+  emit();
+  announceStorageReplaced();
+  void flushCloudSave(true);
 }

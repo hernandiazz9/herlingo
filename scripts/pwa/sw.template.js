@@ -20,12 +20,14 @@
  * - fetch: cache first (query strings ignored), network as fallback; Range requests for audio
  *   are answered from the cache with 206 (Safari/WebKit needs them to play mp3s offline).
  * - /api/ (Prepárate backend) is never handled: those requests go straight to the network.
- * - KEEP: caches the page owns (generated coach audio) survive every update, and so do the audio
+ * - KEEP: caches the page owns (generated coach audio, the cloud restore's undo copy) survive every update, and so do the audio
  *   caches. The SW never touches localStorage.
  */
 const VERSION = "__VERSION__";
 const PRECACHE = /* __PRECACHE__ */ [];
-const KEEP = /* __KEEP__ */ [];
+// Page-owned caches the SW never deletes: the build's list (generated coach audio) plus the cloud
+// restore's undo copy (src/lib/cloud-save/undo.ts, removed by the page after 7 days).
+const KEEP = [.../* __KEEP__ */ [], "lang-lern-cloud-undo"];
 const AUDIO_PREFIX = "__AUDIO_PREFIX__";
 const AUDIO_LIST_DIR = "__AUDIO_LIST_DIR__";
 const AUDIO_LANGS = /* __AUDIO_LANGS__ */ [];

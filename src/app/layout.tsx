@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { CloudSaveHost } from "@/components/cloud-save/CloudSaveHost";
 import { LeagueSync } from "@/components/league/LeagueSync";
 import { InstallPrompt } from "@/components/shell/InstallPrompt";
 import { XpToast } from "@/components/shell/XpToast";
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <TabBar />
           <UpdatePrompt />
           <InstallPrompt />
+          <CloudSaveHost />
         </div>
       </body>
     </html>
