@@ -1,0 +1,1045 @@
+{
+  "id": "ru-a1-food",
+  "order": 40,
+  "level": "A1",
+  "title": "Comer y beber",
+  "description": "Cafetería y restaurante: pedir, platos típicos rusos y pagar la cuenta.",
+  "emoji": "🥟",
+  "situation": "comida",
+  "lessons": [
+    {
+      "id": "ru-a1-food.l.cafe",
+      "title": "En la cafetería",
+      "items": [
+        "ru-a1-alphabet.kafe",
+        "ru-a1-alphabet.kofe",
+        "ru-a1-alphabet.chai",
+        "ru-a1-alphabet.moloko",
+        "ru-a1-alphabet.sakhar",
+        "ru-a1-alphabet.limon",
+        "ru-a1-food.chashka",
+        "ru-a1-food.desert",
+        "ru-a1-alphabet.tort",
+        "ru-a1-food.pirog",
+        "ru-a1-food.ya-budu-kapuchino",
+        "ru-a1-numbers.dva-kofe",
+        "ru-a1-food.mne-chai-s-limonom",
+        "ru-a1-food.kofe-s-molokom",
+        "ru-a1-food.bez-sakhara",
+        "ru-a1-food.zdes-ili-s-soboi",
+        "ru-a1-food.s-soboi",
+        "ru-a1-food.u-vas-est-deserty",
+        "ru-a1-numbers.skolko-s-menya",
+        "ru-a1-food.qa.zdes-ili-s-soboi",
+        "ru-a1-food.qa.kofe-s-molokom"
+      ]
+    },
+    {
+      "id": "ru-a1-food.l.table",
+      "title": "Mesa y carta",
+      "items": [
+        "ru-a1-alphabet.restoran",
+        "ru-a1-food.stolik",
+        "ru-a1-food.menyu",
+        "ru-a1-food.ofitsiant",
+        "ru-a1-food.ofitsiantka",
+        "ru-a1-food.svobodnyi-stolik",
+        "ru-a1-numbers.stolik-na-dvoikh",
+        "ru-a1-food.ya-zabroniroval-stolik",
+        "ru-a1-food.stolik-u-okna",
+        "ru-a1-food.saditess",
+        "ru-a1-food.mozhno-menyu",
+        "ru-a1-food.chto-vy-posovetuete",
+        "ru-a1-food.khochu-poprobovat-russkoe",
+        "ru-a1-hello.devushka-mozhno-vas",
+        "ru-a1-numbers.qa.skolko-vas",
+        "ru-a1-food.qa.bronirovali"
+      ]
+    },
+    {
+      "id": "ru-a1-food.l.ordering",
+      "title": "Pedir la comida",
+      "items": [
+        "ru-a1-food.blyudo",
+        "ru-a1-alphabet.sup",
+        "ru-a1-alphabet.salat",
+        "ru-a1-food.myaso",
+        "ru-a1-food.kuritsa",
+        "ru-a1-alphabet.ryba",
+        "ru-a1-food.kartoshka",
+        "ru-a1-food.ris",
+        "ru-a1-food.ovoshchi",
+        "ru-a1-food.ostryi",
+        "ru-a1-food.vy-gotovy-zakazat",
+        "ru-a1-food.eshchyo-minutku",
+        "ru-a1-food.na-pervoe-borshch",
+        "ru-a1-food.na-vtoroe-pelmeni",
+        "ru-a1-food.ya-ne-em-myaso",
+        "ru-a1-food.ya-vegetarianets",
+        "ru-a1-food.allergiya-na-orekhi",
+        "ru-a1-food.eto-blyudo-ostroe",
+        "ru-a1-food.chto-eto-za-blyudo",
+        "ru-a1-food.qa.gotovy-zakazat",
+        "ru-a1-food.qa.allergiya"
+      ]
+    },
+    {
+      "id": "ru-a1-food.l.drinks",
+      "title": "Bebidas",
+      "items": [
+        "ru-a1-alphabet.voda",
+        "ru-a1-alphabet.sok",
+        "ru-a1-food.pivo",
+        "ru-a1-food.vino",
+        "ru-a1-food.stakan",
+        "ru-a1-food.butylka",
+        "ru-a1-food.chto-vy-budete-pit",
+        "ru-a1-food.butylku-vody",
+        "ru-a1-food.stakan-soka",
+        "ru-a1-food.bokal-krasnogo-vina",
+        "ru-a1-grammar.qa.chto-budete-pit"
+      ]
+    },
+    {
+      "id": "ru-a1-food.l.russian-dishes",
+      "title": "Platos típicos rusos",
+      "items": [
+        "ru-a1-alphabet.borshch",
+        "ru-a1-food.shchi",
+        "ru-a1-food.pelmeni",
+        "ru-a1-food.bliny",
+        "ru-a1-food.smetana",
+        "ru-a1-food.ikra",
+        "ru-a1-food.kasha",
+        "ru-a1-food.yaitso",
+        "ru-a1-food.maslo",
+        "ru-a1-alphabet.khleb",
+        "ru-a1-alphabet.syr",
+        "ru-a1-alphabet.myod",
+        "ru-a1-food.frukty",
+        "ru-a1-food.morozhenoe",
+        "ru-a1-food.bliny-so-smetanoi",
+        "ru-a1-food.qa.na-desert"
+      ]
+    },
+    {
+      "id": "ru-a1-food.l.during-meal",
+      "title": "Durante la comida",
+      "items": [
+        "ru-a1-food.lozhka",
+        "ru-a1-food.vilka",
+        "ru-a1-food.nozh",
+        "ru-a1-food.vkusno",
+        "ru-a1-food.priyatnogo-appetita",
+        "ru-a1-food.ochen-vkusno",
+        "ru-a1-food.mozhno-eshchyo-khleba",
+        "ru-a1-food.prinesite-lozhku",
+        "ru-a1-food.eto-ne-moi-zakaz",
+        "ru-a1-food.sup-kholodnyi",
+        "ru-a1-food.qa.priyatnogo-appetita",
+        "ru-a1-food.qa.vam-ponravilos"
+      ]
+    },
+    {
+      "id": "ru-a1-food.l.bill",
+      "title": "La cuenta",
+      "items": [
+        "ru-a1-food.schyot",
+        "ru-a1-food.chaevye",
+        "ru-a1-numbers.karta",
+        "ru-a1-numbers.nalichnye",
+        "ru-a1-food.schyot-pozhaluista",
+        "ru-a1-food.prinesite-schyot",
+        "ru-a1-food.vmeste-ili-otdelno",
+        "ru-a1-food.otdelno-pozhaluista",
+        "ru-a1-numbers.mozhno-kartoi",
+        "ru-a1-food.chaevye-vklyucheny",
+        "ru-a1-food.vsyo-bylo-vkusno",
+        "ru-a1-food.ya-ugoshchayu",
+        "ru-a1-numbers.sdachi-ne-nado",
+        "ru-a1-food.qa.vmeste-ili-otdelno"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "ru-a1-food.mozhno-menyu",
+      "text": "Мо́жно меню́, пожа́луйста?",
+      "es": "¿Me trae la carta, por favor?",
+      "literal": "¿Se puede la carta, por favor?",
+      "explanation": "Lo dices al sentarte o al llamar al camarero. MÓZH-na mi-NIÚ: la о sin acento suena «a».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ya-budu-kapuchino",
+      "text": "Я бу́ду капучи́но.",
+      "es": "Voy a tomar un capuchino.",
+      "literal": "Yo seré capuchino.",
+      "explanation": "«Я бу`ду…» es la forma normal de pedir en Rusia: «voy a tomar…». ya BÚ-du ka-pu-CHÍ-na.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.mne-chai-s-limonom",
+      "text": "Мне чай с лимо́ном, пожа́луйста.",
+      "es": "Para mí un té con limón, por favor.",
+      "explanation": "«Мне…» = «para mí…», sin verbo. El té con limón es un clásico ruso. s li-MÓ-nam.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.kofe-s-molokom",
+      "text": "Ко́фе с молоко́м, пожа́луйста.",
+      "es": "Un café con leche, por favor.",
+      "explanation": "«с» + nombre en -ом: молоко` → с молоко`м. KÓ-fie s ma-la-KÓM: las о sin acento suenan «a».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.bez-sakhara",
+      "text": "Без са́хара, пожа́луйста.",
+      "es": "Sin azúcar, por favor.",
+      "explanation": "«без» + forma en -а: са`хар → без са`хара. biez SÁ-ja-ra: la х es una jota.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.s-soboi",
+      "text": "С собо́й, пожа́луйста.",
+      "es": "Para llevar, por favor.",
+      "literal": "Conmigo, por favor.",
+      "explanation": "Respuesta a «¿para aquí o para llevar?». s sa-BÓI: la primera о suena «a».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.zdes-ili-s-soboi",
+      "text": "Здесь и́ли с собо́й?",
+      "es": "¿Para tomar aquí o para llevar?",
+      "explanation": "Te lo pregunta el de la barra en una cafetería. ZDIES' I-li s sa-BÓI.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.u-vas-est-deserty",
+      "text": "У вас есть десе́рты?",
+      "es": "¿Tienen postres?",
+      "explanation": "Para preguntar en la cafetería qué hay. u vas YEST' di-SÉR-ty: la ы suena entre «i» y «u».",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.chto-vy-posovetuete",
+      "text": "Что вы посове́туете?",
+      "es": "¿Qué me recomienda?",
+      "explanation": "Pregúntaselo al camarero si dudas. shto vy pa-sa-VIÉ-tu-ye-tie: «что» se dice «shto».",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.khochu-poprobovat-russkoe",
+      "text": "Я хочу́ попро́бовать что́-нибудь ру́сское.",
+      "es": "Quiero probar algo ruso.",
+      "explanation": "Ideal para que te recomienden un plato típico. pa-PRÓ-ba-vat' SHTÓ-ni-bud' RÚS-ka-ye.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.svobodnyi-stolik",
+      "text": "У вас есть свобо́дный сто́лик?",
+      "es": "¿Tienen una mesa libre?",
+      "explanation": "Lo dices al entrar en un restaurante sin reserva. sva-BÓD-ny STÓ-lik.",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ya-zabroniroval-stolik",
+      "text": "Я заброни́ровал сто́лик на семь часо́в.",
+      "es": "He reservado mesa para las siete.",
+      "notes": "Forma masculina; una mujer dice «заброни`ровала».",
+      "explanation": "Si lo dice una mujer: «заброни`ровала». za-bra-NÍ-ra-val STÓ-lik.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.stolik-u-okna",
+      "text": "Мо́жно сто́лик у окна́?",
+      "es": "¿Nos pone una mesa junto a la ventana?",
+      "explanation": "Para pedir sitio al entrar. u ak-NÁ: la о sin acento suena «a».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.saditess",
+      "text": "Сади́тесь, пожа́луйста.",
+      "es": "Siéntese, por favor.",
+      "explanation": "Te lo dice el camarero al llevarte a la mesa. sa-DÍ-tie-s'.",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.vy-gotovy-zakazat",
+      "text": "Вы гото́вы заказа́ть?",
+      "es": "¿Están listos para pedir?",
+      "explanation": "Lo pregunta el camarero. vy ga-TÓ-vy za-ka-ZÁT'.",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.eshchyo-minutku",
+      "text": "Ещё мину́тку, пожа́луйста.",
+      "es": "Un minuto más, por favor.",
+      "explanation": "Si aún no has elegido. yi-SHCHIÓ mi-NÚT-ku: la ё siempre lleva el acento.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.na-pervoe-borshch",
+      "text": "На пе́рвое я бу́ду борщ.",
+      "es": "De primero, voy a tomar borsch.",
+      "explanation": "En Rusia el primer plato (пе`рвое) suele ser una sopa. na PIÉR-va-ye ya BÚ-du borshch.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.na-vtoroe-pelmeni",
+      "text": "А на второ́е — пельме́ни.",
+      "es": "Y de segundo, pelmeni.",
+      "explanation": "Второ`е = el segundo plato. a na fta-RÓ-ye piel'-MIÉ-ni: la в suena «f» ante т.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.bliny-so-smetanoi",
+      "text": "Блины́ со сме́таной, пожа́луйста.",
+      "es": "Blinis con nata agria, por favor.",
+      "explanation": "La forma clásica de comerlos. bli-NY sa SMIÉ-ta-nai.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.chto-vy-budete-pit",
+      "text": "Что вы бу́дете пить?",
+      "es": "¿Qué va a beber?",
+      "explanation": "Lo pregunta el camarero. shto vy BÚ-die-tie pit': la ь ablanda la т final.",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.butylku-vody",
+      "text": "Буты́лку воды́, пожа́луйста.",
+      "es": "Una botella de agua, por favor.",
+      "explanation": "буты`лка → буты`лку al pedirla. bu-TYL-ku va-DY.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.stakan-soka",
+      "text": "Стака́н со́ка, пожа́луйста.",
+      "es": "Un vaso de zumo, por favor.",
+      "explanation": "сок → со`ка: «un vaso de…» pide la forma en -а. sta-KÁN SÓ-ka.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.bokal-krasnogo-vina",
+      "text": "Бока́л кра́сного вина́, пожа́луйста.",
+      "es": "Una copa de vino tinto, por favor.",
+      "explanation": "«-ого» se lee «-ava»: KRÁS-na-va. Vino blanco: бе`лого вина`.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ya-ne-em-myaso",
+      "text": "Я не ем мя́со.",
+      "es": "No como carne.",
+      "explanation": "Para avisar al pedir. ya nie yem MIÁ-sa: la о final sin acento suena «a».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ya-vegetarianets",
+      "text": "Я вегетариа́нец.",
+      "es": "Soy vegetariano.",
+      "notes": "Una mujer dice «Я вегетариа`нка».",
+      "explanation": "Una mujer dice «вегетариа`нка». vie-gie-ta-ri-Á-niets.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.allergiya-na-orekhi",
+      "text": "У меня́ аллерги́я на оре́хи.",
+      "es": "Tengo alergia a los frutos secos.",
+      "explanation": "Avísalo siempre antes de pedir. a-lier-GUÍ-ya na a-RIÉ-ji: г suena siempre «g» (gui).",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.eto-blyudo-ostroe",
+      "text": "Э́то блю́до о́строе?",
+      "es": "¿Este plato pica?",
+      "explanation": "Para preguntar antes de pedir. É-ta BLIÚ-da ÓS-tra-ye.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.chto-eto-za-blyudo",
+      "text": "Что э́то за блю́до?",
+      "es": "¿Qué plato es este?",
+      "explanation": "Señalando la carta o el plato de la mesa de al lado. shto É-ta za BLIÚ-da.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.priyatnogo-appetita",
+      "text": "Прия́тного аппети́та!",
+      "es": "¡Que aproveche!",
+      "explanation": "Se dice al empezar a comer, a todos. pri-YÁT-na-va a-pie-TÍ-ta: «-ого» suena «-ava».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ochen-vkusno",
+      "text": "О́чень вку́сно!",
+      "es": "¡Está muy rico!",
+      "explanation": "Para alabar la comida. Ó-chien' FKÚS-na: la в suena «f» ante к.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.mozhno-eshchyo-khleba",
+      "text": "Мо́жно ещё хле́ба?",
+      "es": "¿Nos trae más pan?",
+      "explanation": "хлеб → хле`ба: «más de algo» pide la forma en -а. MÓZH-na yi-SHCHIÓ JLIÉ-ba.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.prinesite-lozhku",
+      "text": "Принеси́те, пожа́луйста, ло́жку.",
+      "es": "¿Me trae una cuchara, por favor?",
+      "explanation": "Принеси`те = traiga, para pedir cualquier cosa. pri-nie-SÍ-tie LÓSH-ku: la ж suena «sh» ante к.",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.eto-ne-moi-zakaz",
+      "text": "Извини́те, э́то не мой зака́з.",
+      "es": "Perdone, esto no es lo que he pedido.",
+      "literal": "Perdone, esto no es mi pedido.",
+      "explanation": "Si te traen otro plato. za-KÁS: la з final suena «s».",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.sup-kholodnyi",
+      "text": "Суп холо́дный.",
+      "es": "La sopa está fría.",
+      "explanation": "Para quejarte con educación (añade «извини`те»). sup ja-LÓD-ny: la х es una jota.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.schyot-pozhaluista",
+      "text": "Счёт, пожа́луйста.",
+      "es": "La cuenta, por favor.",
+      "explanation": "La forma más corta de pedir la cuenta. shchot pa-ZHÁ-lus-ta: «сч» suena como щ.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.prinesite-schyot",
+      "text": "Принеси́те, пожа́луйста, счёт.",
+      "es": "¿Nos trae la cuenta, por favor?",
+      "explanation": "Más completa y muy educada. pri-nie-SÍ-tie pa-ZHÁ-lus-ta shchot.",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.vmeste-ili-otdelno",
+      "text": "Вам вме́сте и́ли отде́льно?",
+      "es": "¿Juntos o por separado?",
+      "explanation": "Te lo pregunta el camarero al traer la cuenta. VMIÉS-tie I-li ad-DIÉL'-na.",
+      "register": "vy",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.otdelno-pozhaluista",
+      "text": "Отде́льно, пожа́луйста.",
+      "es": "Por separado, por favor.",
+      "explanation": "Si cada uno paga lo suyo. ad-DIÉL'-na: la т suena «d» ante д.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.chaevye-vklyucheny",
+      "text": "Чаевы́е включены́ в счёт?",
+      "es": "¿La propina está incluida?",
+      "explanation": "Normalmente no lo está: se deja un 10 %. cha-ye-VY-ye fkliu-chie-NY.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.vsyo-bylo-vkusno",
+      "text": "Всё бы́ло о́чень вку́сно.",
+      "es": "Todo estaba muy rico.",
+      "explanation": "Al pagar o al despedirte. fsio BY-la Ó-chien' FKÚS-na: в suena «f» ante с.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ya-ugoshchayu",
+      "text": "Я угоща́ю!",
+      "es": "¡Invito yo!",
+      "explanation": "Cuando quieres pagar tú. ya u-ga-SHCHÁ-yu: la щ es una «shch» suave y larga.",
+      "register": "neutral",
+      "situation": "comida"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "ru-a1-food.menyu",
+      "word": "меню́",
+      "gender": "n",
+      "es": "la carta, el menú",
+      "notes": "No cambia nunca de forma: меню` siempre igual.",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ofitsiant",
+      "word": "официа́нт",
+      "gender": "m",
+      "es": "el camarero",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ofitsiantka",
+      "word": "официа́нтка",
+      "gender": "f",
+      "es": "la camarera",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.stolik",
+      "word": "сто́лик",
+      "gender": "m",
+      "es": "la mesa (de bar o restaurante)",
+      "notes": "Diminutivo de стол: en el restaurante se pide «сто`лик».",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.chashka",
+      "word": "ча́шка",
+      "gender": "f",
+      "es": "la taza",
+      "situation": "comida",
+      "image": "fluent:teacup-without-handle"
+    },
+    {
+      "id": "ru-a1-food.stakan",
+      "word": "стака́н",
+      "gender": "m",
+      "plural": "стака́ны",
+      "es": "el vaso",
+      "situation": "comida",
+      "image": "fluent:tumbler-glass"
+    },
+    {
+      "id": "ru-a1-food.butylka",
+      "word": "буты́лка",
+      "gender": "f",
+      "es": "la botella",
+      "situation": "comida",
+      "image": "fluent:bottle-with-popping-cork"
+    },
+    {
+      "id": "ru-a1-food.lozhka",
+      "word": "ло́жка",
+      "gender": "f",
+      "plural": "ло́жки",
+      "es": "la cuchara",
+      "situation": "comida",
+      "image": "fluent:spoon"
+    },
+    {
+      "id": "ru-a1-food.vilka",
+      "word": "ви́лка",
+      "gender": "f",
+      "es": "el tenedor",
+      "situation": "comida",
+      "image": "fluent:fork-and-knife"
+    },
+    {
+      "id": "ru-a1-food.nozh",
+      "word": "нож",
+      "gender": "m",
+      "es": "el cuchillo",
+      "notes": "Se dice «nosh»: la ж final suena como ш.",
+      "situation": "comida",
+      "image": "fluent:kitchen-knife"
+    },
+    {
+      "id": "ru-a1-food.blyudo",
+      "word": "блю́до",
+      "gender": "n",
+      "es": "el plato (la comida)",
+      "situation": "comida",
+      "image": "fluent:shallow-pan-of-food"
+    },
+    {
+      "id": "ru-a1-food.pelmeni",
+      "word": "пельме́ни",
+      "gender": "pl",
+      "es": "los pelmeni (raviolis de carne)",
+      "notes": "El plato ruso más típico; se comen con сме`тана.",
+      "situation": "comida",
+      "image": "fluent:dumpling"
+    },
+    {
+      "id": "ru-a1-food.bliny",
+      "word": "блины́",
+      "gender": "pl",
+      "es": "los blinis (crepes rusas)",
+      "notes": "Singular: блин. Dulces o saladas, con сме`тана, miel o caviar.",
+      "situation": "comida",
+      "image": "fluent:pancakes"
+    },
+    {
+      "id": "ru-a1-food.pirog",
+      "word": "пиро́г",
+      "gender": "m",
+      "plural": "пироги́",
+      "es": "el pastel, la empanada (dulce o salado)",
+      "situation": "comida",
+      "image": "fluent:pie"
+    },
+    {
+      "id": "ru-a1-food.shchi",
+      "word": "щи",
+      "gender": "pl",
+      "es": "la sopa de col (shchi)",
+      "situation": "comida",
+      "image": "fluent:pot-of-food"
+    },
+    {
+      "id": "ru-a1-food.smetana",
+      "word": "сме́тана",
+      "gender": "f",
+      "es": "la nata agria (smetana)",
+      "notes": "Va con casi todo: borsch, pelmeni, blinis.",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ikra",
+      "word": "икра́",
+      "gender": "f",
+      "es": "el caviar, las huevas",
+      "notes": "«Кра`сная икра`» = huevas de salmón; «чёрная» = caviar negro.",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.kasha",
+      "word": "ка́ша",
+      "gender": "f",
+      "es": "las gachas (de avena, alforfón…)",
+      "situation": "comida",
+      "image": "fluent:bowl-with-spoon"
+    },
+    {
+      "id": "ru-a1-food.myaso",
+      "word": "мя́со",
+      "gender": "n",
+      "es": "la carne",
+      "situation": "comida",
+      "image": "fluent:cut-of-meat"
+    },
+    {
+      "id": "ru-a1-food.kuritsa",
+      "word": "ку́рица",
+      "gender": "f",
+      "es": "el pollo",
+      "situation": "comida",
+      "image": "fluent:poultry-leg"
+    },
+    {
+      "id": "ru-a1-food.kartoshka",
+      "word": "карто́шка",
+      "gender": "f",
+      "es": "las patatas",
+      "notes": "Incontable: «карто`шка» es la patata como alimento.",
+      "situation": "comida",
+      "image": "fluent:potato"
+    },
+    {
+      "id": "ru-a1-food.ris",
+      "word": "рис",
+      "gender": "m",
+      "es": "el arroz",
+      "situation": "comida",
+      "image": "fluent:cooked-rice"
+    },
+    {
+      "id": "ru-a1-food.ovoshchi",
+      "word": "о́вощи",
+      "gender": "pl",
+      "es": "las verduras",
+      "situation": "comida",
+      "image": "fluent:leafy-green"
+    },
+    {
+      "id": "ru-a1-food.frukty",
+      "word": "фру́кты",
+      "gender": "pl",
+      "es": "la fruta",
+      "situation": "comida",
+      "image": "fluent:grapes"
+    },
+    {
+      "id": "ru-a1-food.yaitso",
+      "word": "яйцо́",
+      "gender": "n",
+      "plural": "я́йца",
+      "es": "el huevo",
+      "situation": "comida",
+      "image": "fluent:egg"
+    },
+    {
+      "id": "ru-a1-food.maslo",
+      "word": "ма́сло",
+      "gender": "n",
+      "es": "la mantequilla; el aceite",
+      "situation": "comida",
+      "image": "fluent:butter"
+    },
+    {
+      "id": "ru-a1-food.pivo",
+      "word": "пи́во",
+      "gender": "n",
+      "es": "la cerveza",
+      "situation": "comida",
+      "image": "fluent:beer-mug"
+    },
+    {
+      "id": "ru-a1-food.vino",
+      "word": "вино́",
+      "gender": "n",
+      "es": "el vino",
+      "situation": "comida",
+      "image": "fluent:wine-glass"
+    },
+    {
+      "id": "ru-a1-food.desert",
+      "word": "десе́рт",
+      "gender": "m",
+      "es": "el postre",
+      "notes": "La е suena «e» abierta, como en español: di-SÉRT.",
+      "situation": "comida",
+      "image": "fluent:shortcake"
+    },
+    {
+      "id": "ru-a1-food.morozhenoe",
+      "word": "моро́женое",
+      "gender": "n",
+      "es": "el helado",
+      "situation": "comida",
+      "image": "fluent:soft-ice-cream"
+    },
+    {
+      "id": "ru-a1-food.schyot",
+      "word": "счёт",
+      "gender": "m",
+      "es": "la cuenta",
+      "notes": "Se dice «shchot»: «сч» suena como щ.",
+      "situation": "comida",
+      "image": "fluent:receipt"
+    },
+    {
+      "id": "ru-a1-food.chaevye",
+      "word": "чаевы́е",
+      "gender": "pl",
+      "es": "la propina",
+      "notes": "Viene de чай: «para el té». Lo normal es un 10 %.",
+      "situation": "comida",
+      "image": "fluent:coin"
+    },
+    {
+      "id": "ru-a1-food.vkusno",
+      "word": "вку́сно",
+      "es": "rico (está rico)",
+      "notes": "Se dice «FKÚS-na»: la в suena «f» ante к.",
+      "situation": "comida"
+    },
+    {
+      "id": "ru-a1-food.ostryi",
+      "word": "о́стрый",
+      "es": "picante",
+      "notes": "Femenino о`страя, neutro о`строе.",
+      "situation": "comida",
+      "image": "fluent:hot-pepper"
+    }
+  ],
+  "qa": [
+    {
+      "id": "ru-a1-food.qa.zdes-ili-s-soboi",
+      "question": "Здесь и́ли с собо́й?",
+      "questionEs": "¿Para tomar aquí o para llevar?",
+      "accepted": [
+        {
+          "text": "С собо́й, пожа́луйста.",
+          "es": "Para llevar, por favor."
+        },
+        {
+          "text": "Здесь, пожа́луйста.",
+          "es": "Aquí, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Без са́хара, пожа́луйста.",
+          "es": "Sin azúcar, por favor."
+        },
+        {
+          "text": "Сда́чи не на́до.",
+          "es": "Quédese con el cambio."
+        }
+      ],
+      "register": "neutral",
+      "situation": "comida",
+      "notes": "«С собо`й» = para llevar; «здесь» = para tomar aquí.",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-food.qa.kofe-s-molokom",
+      "question": "Вам ко́фе с молоко́м?",
+      "questionEs": "¿Quiere el café con leche?",
+      "accepted": [
+        {
+          "text": "Да, с молоко́м, пожа́луйста.",
+          "es": "Sí, con leche, por favor."
+        },
+        {
+          "text": "Нет, без молока́, спаси́бо.",
+          "es": "No, sin leche, gracias."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, с молоко́.",
+          "es": "(Sí, con leche; mal declinado.)"
+        },
+        {
+          "text": "Нет, с собо́й.",
+          "es": "No, para llevar."
+        }
+      ],
+      "register": "vy",
+      "situation": "comida",
+      "notes": "Tras «с» va -ом (с молоко`м); tras «без», -а (без молока`).",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-food.qa.bronirovali",
+      "question": "До́брый ве́чер! Вы брони́ровали сто́лик?",
+      "questionEs": "¡Buenas noches! ¿Tienen reserva?",
+      "accepted": [
+        {
+          "text": "Да, на и́мя Эрна́н.",
+          "es": "Sí, a nombre de Hernán."
+        },
+        {
+          "text": "Нет. У вас есть свобо́дный сто́лик?",
+          "es": "No. ¿Tienen una mesa libre?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, я бу́ду ко́фе.",
+          "es": "Sí, voy a tomar un café."
+        },
+        {
+          "text": "Счёт, пожа́луйста.",
+          "es": "La cuenta, por favor."
+        }
+      ],
+      "register": "vy",
+      "situation": "comida",
+      "notes": "«на и`мя…» = a nombre de…",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-food.qa.gotovy-zakazat",
+      "question": "Вы гото́вы заказа́ть?",
+      "questionEs": "¿Están listos para pedir?",
+      "accepted": [
+        {
+          "text": "Да. На пе́рвое я бу́ду борщ.",
+          "es": "Sí. De primero, voy a tomar borsch."
+        },
+        {
+          "text": "Ещё мину́тку, пожа́луйста.",
+          "es": "Un minuto más, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Прия́тного аппети́та!",
+          "es": "¡Que aproveche!"
+        },
+        {
+          "text": "Отде́льно, пожа́луйста.",
+          "es": "Por separado, por favor."
+        }
+      ],
+      "register": "vy",
+      "situation": "comida",
+      "notes": "Para pedir: «Я бу`ду…»; si aún dudas: «Ещё мину`тку».",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-food.qa.allergiya",
+      "question": "У вас есть аллерги́я?",
+      "questionEs": "¿Tiene alguna alergia?",
+      "accepted": [
+        {
+          "text": "Да, на оре́хи.",
+          "es": "Sí, a los frutos secos."
+        },
+        {
+          "text": "Нет, спаси́бо.",
+          "es": "No, gracias."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Да, о́чень вку́сно.",
+          "es": "Sí, está muy rico."
+        },
+        {
+          "text": "Нет, отде́льно.",
+          "es": "No, por separado."
+        }
+      ],
+      "register": "vy",
+      "situation": "comida",
+      "notes": "«Аллерги`я на…» = alergia a…",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-food.qa.na-desert",
+      "question": "Что вы бу́дете на десе́рт?",
+      "questionEs": "¿Qué va a tomar de postre?",
+      "accepted": [
+        {
+          "text": "Моро́женое, пожа́луйста.",
+          "es": "Un helado, por favor."
+        },
+        {
+          "text": "Ничего́, спаси́бо. Счёт, пожа́луйста.",
+          "es": "Nada, gracias. La cuenta, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Буты́лку воды́, пожа́луйста.",
+          "es": "Una botella de agua, por favor."
+        },
+        {
+          "text": "Прия́тного аппети́та!",
+          "es": "¡Que aproveche!"
+        }
+      ],
+      "register": "vy",
+      "situation": "comida",
+      "notes": "«На десе`рт» = de postre.",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-food.qa.vam-ponravilos",
+      "question": "Вам понра́вилось?",
+      "questionEs": "¿Le ha gustado?",
+      "accepted": [
+        {
+          "text": "Да, всё бы́ло о́чень вку́сно!",
+          "es": "Sí, ¡todo estaba muy rico!"
+        },
+        {
+          "text": "О́чень вку́сно, спаси́бо!",
+          "es": "Muy rico, ¡gracias!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Прия́тного аппети́та!",
+          "es": "¡Que aproveche!"
+        },
+        {
+          "text": "Я не ем мя́со.",
+          "es": "No como carne."
+        }
+      ],
+      "register": "vy",
+      "situation": "comida",
+      "notes": "«Прия`тного аппети`та» se dice antes de comer, no después.",
+      "voice": "ru-RU-SvetlanaNeural"
+    },
+    {
+      "id": "ru-a1-food.qa.vmeste-ili-otdelno",
+      "question": "Вам вме́сте и́ли отде́льно?",
+      "questionEs": "¿Juntos o por separado?",
+      "accepted": [
+        {
+          "text": "Отде́льно, пожа́луйста.",
+          "es": "Por separado, por favor."
+        },
+        {
+          "text": "Вме́сте. Я угоща́ю!",
+          "es": "Juntos. ¡Invito yo!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "С собо́й, пожа́луйста.",
+          "es": "Para llevar, por favor."
+        },
+        {
+          "text": "Без са́хара, пожа́луйста.",
+          "es": "Sin azúcar, por favor."
+        }
+      ],
+      "register": "vy",
+      "situation": "comida",
+      "notes": "Al pagar: juntos (вме`сте) o cada uno lo suyo (отде`льно).",
+      "voice": "ru-RU-DmitryNeural"
+    },
+    {
+      "id": "ru-a1-food.qa.priyatnogo-appetita",
+      "question": "Прия́тного аппети́та!",
+      "questionEs": "¡Que aproveche!",
+      "accepted": [
+        {
+          "text": "Спаси́бо, и тебе́!",
+          "es": "¡Gracias, igualmente!"
+        },
+        {
+          "text": "Спаси́бо!",
+          "es": "¡Gracias!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Пожа́луйста!",
+          "es": "¡De nada!"
+        },
+        {
+          "text": "Не за что!",
+          "es": "¡De nada!"
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "Se responde «Спаси`бо, и тебе`!» (a un amigo) o «…и вам!» (de usted).",
+      "voice": "ru-RU-SvetlanaNeural"
+    }
+  ]
+}
