@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-07 11:44Z ☁️
 - Writer: ☁️ session_011Ty23Vt9nLP3RjeDwVppCy (since 11:44Z)
 - Branch: plan-009-ingles-b2-c1 @ cf89c8a
-- Next step: launch T113, then loop T114–T128 (1 agent: seven-day warning)
+- Next step: integrate T113, then T114–T116 one at a time
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -53,7 +53,7 @@ Worktree setup: npm ci
 - Outcome: b2-meetings/opinions/grammar: 88 phrases, 59 vocab, 18 Q&A, 10 grammar, 12 lessons · eaac50e · verify ✓ ☁️ · not checked: audio/images (T129)
 
 ## T113 — English B2: tech talk, projects
-- Status: pending
+- Status: running (attempt 1 · ☁️ session_011Ty23Vt9nLP3RjeDwVppCy · agent a0e62ce07be57b2e1 · since 11:44Z)
 - Depends on: T111, T112
 - Where: any
 - Goal: Units `b2-tech-talk` (220) and `b2-projects` (222) (architecture, trade-offs, code review; deadlines, risks, priorities, feedback), per docs/brief-en.md: `level: "B2"`, phrases ≤ 18 words, every lesson ending with its Q&A, explanations for a Spanish speaker.
@@ -288,3 +288,4 @@ Worktree setup: npm ci
 - 2026-10-07 08:10Z ☁️ T112 done · worktree-agent-a49235f2b326166fc → eaac50e · verify ✓
 - 2026-10-07 08:11Z ☁️ handoff ☁️ → ☁️ (relay, >5M cache-read) · plan-009-ingles-b2-c1 @ eaac50e
 - 2026-10-07 11:44Z ☁️ resume on ☁️ session_011Ty23Vt9nLP3RjeDwVppCy · writer taken (was released)
+- 2026-10-07 11:44Z ☁️ T113 launched · attempt 1 · agent a0e62ce07be57b2e1
