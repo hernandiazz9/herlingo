@@ -1,0 +1,1105 @@
+{
+  "id": "c1-society",
+  "order": 350,
+  "level": "C1",
+  "title": "Debatir sobre la sociedad: teletrabajo, IA, ciudades, medio ambiente",
+  "description": "Los grandes temas de sobremesa y de oficina: el teletrabajo, la inteligencia artificial, la vivienda y las ciudades, el clima. Argumenta, concede, rebate y matiza como en un debate de verdad.",
+  "emoji": "🌍",
+  "situation": "opiniones",
+  "lessons": [
+    {
+      "id": "c1-society.l.remote-work",
+      "title": "Teletrabajo o vuelta a la oficina",
+      "items": [
+        "b1-interview.remote-work",
+        "c1-society.commute",
+        "c1-society.the-pandemic-changed-the-office-for-good",
+        "c1-society.the-biggest-perk-is-not-commuting",
+        "c1-negotiation.perk",
+        "c1-society.productivity",
+        "c1-society.i-get-far-more-done-at-home",
+        "c1-society.i-do-miss-the-spontaneous-conversations",
+        "c1-society.isolation",
+        "c1-society.junior-developers-lose-the-most",
+        "c1-society.mentoring",
+        "c1-society.its-not-so-much-where-you-work",
+        "c1-society.flexibility",
+        "c1-society.a-hybrid-model-seems-like-a-compromise",
+        "b2-relationships.compromise",
+        "c1-society.forcing-people-back-is-missing-the-point",
+        "c1-society.blur-the-line",
+        "c1-society.working-from-home-blurs-the-line",
+        "b2-wellbeing.burnout",
+        "c1-society.qa.back-to-the-office"
+      ]
+    },
+    {
+      "id": "c1-society.l.ai",
+      "title": "La inteligencia artificial",
+      "items": [
+        "c1-society.artificial-intelligence",
+        "c1-society.ai-wont-replace-programmers",
+        "c1-society.hype",
+        "c1-society.theres-a-lot-of-hype-around-ai",
+        "c1-society.algorithm",
+        "c1-society.who-is-accountable-when-an-algorithm-gets-it-wrong",
+        "c1-society.only-as-good-as-the-data",
+        "c1-society.bias",
+        "b2-opinions.biased",
+        "c1-society.automation",
+        "c1-society.automation-will-hit-low-paid-jobs",
+        "c1-society.regulation",
+        "c1-society.regulation-lags-behind",
+        "c1-society.used-responsibly-ai-could-free-us",
+        "c1-society.deepfake",
+        "c1-society.deepfakes-make-it-harder",
+        "c1-society.double-edged-sword",
+        "c1-society.its-a-double-edged-sword",
+        "c1-society.qa.ai-jobs",
+        "c1-society.qa.ai-at-work"
+      ]
+    },
+    {
+      "id": "c1-society.l.cities",
+      "title": "Ciudades y vivienda",
+      "items": [
+        "c1-society.affordable",
+        "c1-society.housing-has-become-unaffordable",
+        "b1-renting.rent",
+        "c1-society.gentrification",
+        "c1-society.gentrification-pushes-out",
+        "a2-city.neighborhood",
+        "c1-society.public-transportation",
+        "c1-society.if-public-transportation-were-better",
+        "c1-society.car-dependent",
+        "c1-society.cities-were-designed-around-the-car",
+        "c1-society.suburb",
+        "c1-society.id-rather-pay-more-rent",
+        "c1-society.building-more-housing-is-the-only-solution",
+        "c1-society.rent-control",
+        "c1-society.rent-control-sounds-good-on-paper",
+        "c1-society.bike-lane",
+        "c1-society.more-bike-lanes-would-make-the-city-safer",
+        "c1-society.remote-work-made-small-towns-attractive",
+        "c1-society.qa.city-or-town",
+        "c1-society.qa.rising-rents"
+      ]
+    },
+    {
+      "id": "c1-society.l.environment",
+      "title": "Medio ambiente y clima",
+      "items": [
+        "c1-society.climate-change",
+        "c1-society.individual-choices-matter-but",
+        "c1-society.emissions",
+        "c1-society.the-bulk-of-emissions",
+        "c1-society.carbon-footprint",
+        "c1-society.ive-cut-back-on-flying",
+        "c1-society.drop-in-the-bucket",
+        "c1-society.greenwashing",
+        "c1-society.so-called-green-products",
+        "c1-society.renewable-energy",
+        "c1-society.renewables-are-an-economic-issue",
+        "c1-society.fossil-fuels",
+        "c1-society.heat-wave",
+        "c1-society.heat-waves-used-to-be-rare",
+        "b2-news.wildfire",
+        "c1-society.we-cant-keep-putting-it-off",
+        "c1-society.not-only-is-it-cheaper",
+        "c1-society.whether-we-like-it-or-not",
+        "b2-news.in-the-long-run",
+        "c1-society.qa.carbon-footprint"
+      ]
+    },
+    {
+      "id": "c1-society.l.debate",
+      "title": "Debatir con argumentos",
+      "items": [
+        "b2-opinions.debate",
+        "c1-society.devils-advocate",
+        "c1-society.let-me-play-devils-advocate",
+        "c1-society.concede",
+        "c1-society.ill-concede-that-point",
+        "c1-society.oversimplification",
+        "c1-society.thats-a-bit-of-an-oversimplification",
+        "b2-opinions.evidence",
+        "c1-society.back-up",
+        "c1-society.is-there-any-evidence-to-back-that-up",
+        "c1-society.apples-and-oranges",
+        "c1-society.youre-comparing-apples-and-oranges",
+        "c1-society.i-think-we-agree-more-than-we-disagree",
+        "c1-negotiation.common-ground",
+        "c1-society.its-more-complicated-than-it-seems",
+        "c1-society.that-argument-cuts-both-ways",
+        "c1-society.gray-area",
+        "c1-society.its-not-black-and-white",
+        "c1-society.polarized",
+        "b2-opinions.lets-agree-to-disagree",
+        "c1-society.qa.social-media",
+        "c1-society.qa.lazy-remote-workers"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "c1-society.the-pandemic-changed-the-office-for-good",
+      "text": "The pandemic changed the way we think about the office for good.",
+      "es": "La pandemia cambió para siempre nuestra forma de ver la oficina.",
+      "notes": "«for good» = para siempre, de forma definitiva. No tiene nada que ver con «bueno».",
+      "explanation": "«the way we think about» es la forma natural de decir «nuestra forma de ver». En «thought» y «think» la «th» es suave, con la lengua entre los dientes, no una «t».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.the-biggest-perk-is-not-commuting",
+      "text": "For me, the biggest perk of remote work is not having to commute.",
+      "es": "Para mí, la mayor ventaja del teletrabajo es no tener que desplazarme.",
+      "notes": "«perk» = ventaja, beneficio extra. «commute» = ir y volver del trabajo cada día. Después de «of» va el verbo en -ing: «not having to».",
+      "explanation": "«commute» se acentúa al final: «ko-MYUT». La «r» de «perk» es americana: la lengua no toca el paladar.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.i-get-far-more-done-at-home",
+      "text": "I get far more done at home, without constant interruptions.",
+      "es": "En casa saco mucho más trabajo adelante, sin interrupciones constantes.",
+      "notes": "«get something done» = sacar algo adelante, terminarlo. «far more» = muchísimo más (más enfático que «much more»).",
+      "explanation": "Une «get far» y «more done» casi sin pausa. En «done» la «o» suena como una «a» corta: «dan».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.i-do-miss-the-spontaneous-conversations",
+      "text": "That said, I do miss the spontaneous conversations in the office.",
+      "es": "Dicho esto, sí que echo de menos las conversaciones espontáneas en la oficina.",
+      "notes": "«do» enfático: «I do miss» = «sí que echo de menos», para conceder algo que contradice lo anterior. «miss» = echar de menos.",
+      "explanation": "Acentúa fuerte el «do». «spontaneous» empieza por «sp» sin «e» delante: «spon-TEI-ni-us».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.junior-developers-lose-the-most",
+      "text": "Junior developers arguably lose the most when everyone works remotely.",
+      "es": "Se podría decir que los desarrolladores junior son los que más pierden cuando todos teletrabajan.",
+      "notes": "«arguably» = posiblemente, se podría decir que. Presenta tu opinión como algo defendible, no como un hecho.",
+      "explanation": "«arguably» se acentúa al principio: «AR-gyu-a-bli». En «lose» la «s» suena como «z» y la vocal es larga: «luuz».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.its-not-so-much-where-you-work",
+      "text": "It's not so much where you work as how the team communicates.",
+      "es": "No es tanto dónde trabajas como la forma en que se comunica el equipo.",
+      "notes": "«not so much X as Y» = no es tanto X como Y. Estructura muy útil para reencuadrar un debate.",
+      "explanation": "Acentúa «where» y «how», que son las dos ideas que comparas. «communicates»: «ko-MYU-ni-keits».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.a-hybrid-model-seems-like-a-compromise",
+      "text": "A hybrid model seems like a reasonable compromise for most teams.",
+      "es": "Un modelo híbrido parece un término medio razonable para la mayoría de los equipos.",
+      "notes": "«compromise» es falso amigo: significa «acuerdo intermedio, término medio», no «compromiso» (eso es «commitment»).",
+      "explanation": "«hybrid» suena «JAI-brid». «compromise» se acentúa al principio: «KOM-pro-maiz».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.forcing-people-back-is-missing-the-point",
+      "text": "Companies forcing people back to the office are missing the point.",
+      "es": "Las empresas que obligan a la gente a volver a la oficina no están entendiendo lo esencial.",
+      "notes": "«miss the point» = no entender lo esencial, irse por las ramas. «forcing people back» es una forma reducida de «that force people back».",
+      "explanation": "«forcing» y «point» llevan el acento de la frase. En «point» la «t» final se pronuncia, aunque sea suave.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.working-from-home-blurs-the-line",
+      "text": "Working from home can blur the line between work and personal life.",
+      "es": "Trabajar desde casa puede difuminar la frontera entre el trabajo y la vida personal.",
+      "notes": "«blur the line(s) between» = difuminar la frontera entre dos cosas. Muy frecuente en debates.",
+      "explanation": "«blur» suena «bler», con la «r» americana. «personal» se acentúa al principio: «PER-so-nal».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.ai-wont-replace-programmers",
+      "text": "AI won't replace programmers, but programmers who use AI might replace those who don't.",
+      "es": "La IA no sustituirá a los programadores, pero los programadores que usen IA quizá sustituyan a los que no.",
+      "notes": "«those who don't» = los que no (lo hacen). El inglés repite el auxiliar «don't» en lugar de todo el verbo.",
+      "explanation": "«AI» se dice letra a letra: «ei-AI». «replace» lleva el acento en la segunda sílaba: «ri-PLEIS».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.theres-a-lot-of-hype-around-ai",
+      "text": "There's a lot of hype around AI, and not all of it is justified.",
+      "es": "Hay mucho bombo con la IA, y no todo está justificado.",
+      "notes": "«hype» = bombo, expectación exagerada. «around» aquí significa «en torno a», «con».",
+      "explanation": "«hype» suena «jaip», con la «h» aspirada suave, nunca como una jota fuerte. «justified»: «YAS-ti-faid».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.who-is-accountable-when-an-algorithm-gets-it-wrong",
+      "text": "The real question is who's accountable when an algorithm gets it wrong.",
+      "es": "La verdadera pregunta es quién responde cuando un algoritmo se equivoca.",
+      "notes": "«accountable» = responsable (que tiene que rendir cuentas). «get it wrong» = equivocarse, meter la pata.",
+      "explanation": "«algorithm» se acentúa al principio: «AL-go-ri-dzem», con la «th» suave. «accountable»: «a-KAUN-ta-bol».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.only-as-good-as-the-data",
+      "text": "These tools are only as good as the data they're trained on.",
+      "es": "Estas herramientas son tan buenas como los datos con los que se entrenan, ni más ni menos.",
+      "notes": "«only as good as» = solo tan bueno como. La preposición va al final: «the data they're trained on».",
+      "explanation": "«data» en inglés americano suele sonar «DEI-ra», con la «t» como una «r» suave (flap t).",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.automation-will-hit-low-paid-jobs",
+      "text": "I'm worried that automation will hit low-paid jobs the hardest.",
+      "es": "Me preocupa que la automatización golpee con más fuerza a los empleos mal pagados.",
+      "notes": "«hit… the hardest» = afectar más que a nadie. «low-paid» = mal pagado; lo contrario es «well-paid».",
+      "explanation": "«worried» suena «WE-rid», dos sílabas, con la «-ed» como /d/. Nada de «guo-rri-ed».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.regulation-lags-behind",
+      "text": "Regulation always seems to lag behind the technology.",
+      "es": "La regulación siempre parece ir por detrás de la tecnología.",
+      "notes": "«lag behind» = quedarse atrás, ir con retraso respecto a algo.",
+      "explanation": "«lag» tiene una «a» abierta, entre «a» y «e». «technology»: «tek-NO-lo-yi», la «ch» suena «k».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.used-responsibly-ai-could-free-us",
+      "text": "Used responsibly, AI could free us from a lot of tedious work.",
+      "es": "Bien utilizada, la IA podría librarnos de mucho trabajo tedioso.",
+      "notes": "Oración de participio: «Used responsibly» = «If it's used responsibly». Típica del registro cuidado. «free someone from» = librar a alguien de.",
+      "explanation": "«used» aquí suena «yuzd». «tedious» se dice «TI-di-us».",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.deepfakes-make-it-harder",
+      "text": "Deepfakes make it harder than ever to know what's real.",
+      "es": "Los deepfakes hacen más difícil que nunca saber qué es real.",
+      "notes": "«make it harder to + verbo» = hacer más difícil. El «it» es obligatorio: nunca «make harder to know».",
+      "explanation": "«real» tiene dos sonidos: «RI-ol», no «re-al». «ever» lleva la «v» con los dientes sobre el labio.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.its-a-double-edged-sword",
+      "text": "It's a double-edged sword: incredibly useful, but very easy to misuse.",
+      "es": "Es un arma de doble filo: increíblemente útil, pero muy fácil de usar mal.",
+      "notes": "«a double-edged sword» = un arma de doble filo, igual que en español. «misuse» = usar mal.",
+      "explanation": "En «sword» la «w» no se pronuncia: «sord». «edged» es una sola sílaba: «edyd».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.housing-has-become-unaffordable",
+      "text": "Housing in big cities has become unaffordable for most young people.",
+      "es": "La vivienda en las grandes ciudades se ha vuelto inasequible para la mayoría de los jóvenes.",
+      "notes": "«housing» = la vivienda en general (incontable). «unaffordable» = que no te puedes permitir.",
+      "explanation": "«housing» suena «JAU-zing», con «z». «unaffordable» se acentúa en «FOR»: «an-a-FOR-da-bol».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.gentrification-pushes-out",
+      "text": "Gentrification pushes out the very people who made the neighborhood interesting.",
+      "es": "La gentrificación expulsa precisamente a la gente que hizo interesante el barrio.",
+      "notes": "«push out» = expulsar, echar. «the very people» = precisamente esa gente: «very» delante de un sustantivo enfatiza.",
+      "explanation": "«gentrification»: «yen-tri-fi-KEI-shon», la «g» suena como «y» fuerte. «neighborhood»: «NEI-bor-jud».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.if-public-transportation-were-better",
+      "text": "If public transportation were better, fewer people would need a car.",
+      "es": "Si el transporte público fuera mejor, menos gente necesitaría coche.",
+      "notes": "Segundo condicional con «were» para todas las personas, más cuidado que «was». «fewer» con contables («fewer people»), «less» con incontables.",
+      "explanation": "«public» suena «PA-blik». «fewer» tiene dos sílabas: «FIU-er».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.cities-were-designed-around-the-car",
+      "text": "Most American cities were designed around the car, not around people.",
+      "es": "La mayoría de las ciudades estadounidenses se diseñaron pensando en el coche, no en las personas.",
+      "notes": "«designed around» = diseñado en función de, girando alrededor de. «Most cities», sin «of the», cuando hablas en general.",
+      "explanation": "«designed» es una sola sílaba final: «di-ZAIND», la «g» no suena.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.id-rather-pay-more-rent",
+      "text": "I'd rather pay more rent than spend two hours a day commuting.",
+      "es": "Prefiero pagar más alquiler que pasarme dos horas al día en el trayecto.",
+      "notes": "«I'd rather + verbo sin to + than + verbo sin to». «spend time + -ing» = pasar tiempo haciendo algo.",
+      "explanation": "«I'd rather» suena «aid RA-der», con la «th» suave como una «d» blanda.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.building-more-housing-is-the-only-solution",
+      "text": "In my view, building more housing is the only long-term solution.",
+      "es": "En mi opinión, construir más vivienda es la única solución a largo plazo.",
+      "notes": "«In my view» = en mi opinión, algo más formal que «I think». «long-term» con guion cuando va delante de un sustantivo.",
+      "explanation": "«building» suena «BIL-ding», la «u» no se pronuncia. «solution»: «so-LU-shon».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.rent-control-sounds-good-on-paper",
+      "text": "Rent control sounds good on paper, but economists are divided on it.",
+      "es": "El control de alquileres suena bien sobre el papel, pero los economistas no se ponen de acuerdo.",
+      "notes": "«on paper» = sobre el papel, en teoría. «be divided on something» = tener opiniones enfrentadas sobre algo.",
+      "explanation": "«economists» se acentúa en la segunda sílaba: «i-KO-no-mists». Pronuncia bien el grupo final «-sts».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.more-bike-lanes-would-make-the-city-safer",
+      "text": "More bike lanes would make the city both safer and quieter.",
+      "es": "Más carriles bici harían la ciudad más segura y más tranquila.",
+      "notes": "«both… and…» = tanto… como…, a la vez. «bike lane» = carril bici.",
+      "explanation": "«quieter» tiene tres sílabas: «KUAI-e-rer», con la «t» como una «r» suave. No lo confundas con «quite».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.remote-work-made-small-towns-attractive",
+      "text": "Remote work has made smaller towns far more attractive than they used to be.",
+      "es": "El teletrabajo ha hecho que los pueblos y ciudades pequeñas sean mucho más atractivos que antes.",
+      "notes": "«than they used to be» = que antes. «make + objeto + adjetivo»: «made towns attractive», sin «to be».",
+      "explanation": "«attractive» se acentúa en «TRAK»: «a-TRAK-tiv». La «t» final de «remote» casi no se oye antes de «work».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.individual-choices-matter-but",
+      "text": "Individual choices matter, but they won't solve climate change on their own.",
+      "es": "Las decisiones individuales importan, pero por sí solas no van a resolver el cambio climático.",
+      "notes": "«matter» = importar, tener importancia (verbo). «on their own» = por sí solas, sin ayuda.",
+      "explanation": "«matter» suena «MA-rer», con la «t» americana como una «r» suave. «climate»: «KLAI-mit».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.the-bulk-of-emissions",
+      "text": "The bulk of emissions comes from a relatively small number of companies.",
+      "es": "La mayor parte de las emisiones procede de un número relativamente pequeño de empresas.",
+      "notes": "«the bulk of» = la mayor parte de. Registro de debate y de prensa.",
+      "explanation": "«bulk» tiene una «u» corta, como una «a» cerrada: «balk». «relatively»: «RE-la-tiv-li».",
+      "register": "formal",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.ive-cut-back-on-flying",
+      "text": "I've cut back on flying, although I know it's just a drop in the bucket.",
+      "es": "He reducido los vuelos, aunque sé que es solo una gota en el océano.",
+      "notes": "«cut back on» = reducir (un consumo). «a drop in the bucket» = una gota en el océano (en EE. UU. se dice «bucket», cubo).",
+      "explanation": "Une «cut back on» como una sola palabra: «ka-BA-kon». En «although» la «gh» no suena: «ol-DOU».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.so-called-green-products",
+      "text": "A lot of so-called green products are really just greenwashing.",
+      "es": "Muchos de los llamados productos ecológicos no son más que lavado de imagen verde.",
+      "notes": "«so-called» = el llamado, el supuesto (con un matiz escéptico). «green» = ecológico.",
+      "explanation": "«so-called» se acentúa en «called»: «sou-KOLD». En «green» la «ee» es larga.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.renewables-are-an-economic-issue",
+      "text": "Switching to renewable energy isn't just an environmental issue anymore; it's an economic one.",
+      "es": "Pasarse a las energías renovables ya no es solo una cuestión medioambiental, sino económica.",
+      "notes": "«switch to» = cambiarse a. «an economic one»: «one» sustituye a «issue» para no repetirlo. «not… anymore» = ya no.",
+      "explanation": "«issue» suena «I-shu». «economic» se acentúa en «NO»: «i-ko-NO-mik».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.heat-waves-used-to-be-rare",
+      "text": "Heat waves like this summer's used to be rare in Chicago.",
+      "es": "Olas de calor como la de este verano antes eran raras en Chicago.",
+      "notes": "«this summer's» = la de este verano (genitivo sin repetir el sustantivo). «used to» = solía, antes.",
+      "explanation": "«used to» suena «YUS-tu», con «s», no con «z». En «heat» la «ea» es larga, distinta de «hit».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.we-cant-keep-putting-it-off",
+      "text": "We can't keep putting it off and leaving the problem to the next generation.",
+      "es": "No podemos seguir aplazándolo y dejándole el problema a la próxima generación.",
+      "notes": "«put off» = aplazar, posponer. «keep + -ing» = seguir haciendo algo. Con pronombre, va en medio: «putting it off».",
+      "explanation": "Une «putting it off»: «PU-ri-rof», con las «t» americanas suaves.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.not-only-is-it-cheaper",
+      "text": "Not only is it cheaper, but it's also better for the planet.",
+      "es": "No solo es más barato, sino que además es mejor para el planeta.",
+      "notes": "Inversión tras «Not only»: el verbo va antes del sujeto («is it»). Muy de C1 para dar fuerza a un argumento.",
+      "explanation": "Acentúa «Not only» y «also». «cheaper» empieza por «ch» como en español: «CHI-per».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.whether-we-like-it-or-not",
+      "text": "Whether we like it or not, we'll all have to change the way we live.",
+      "es": "Nos guste o no, todos tendremos que cambiar nuestra forma de vivir.",
+      "notes": "«whether… or not» = tanto si… como si no. «whether» y «weather» (el tiempo) suenan igual.",
+      "explanation": "«whether» suena «UE-der», con la «th» suave. «we'll all» se une: «ui-LOL».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.let-me-play-devils-advocate",
+      "text": "Let me play devil's advocate for a second.",
+      "es": "Déjame hacer de abogado del diablo un momento.",
+      "notes": "«play devil's advocate» = hacer de abogado del diablo: defender la postura contraria para poner a prueba un argumento.",
+      "explanation": "«devil's» suena «DE-vols», con «v» de dientes y labio. «advocate»: «AD-vo-kit».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.ill-concede-that-point",
+      "text": "I'll concede that point, but it doesn't change my overall view.",
+      "es": "Te concedo ese punto, pero no cambia mi opinión general.",
+      "notes": "«concede» = conceder, admitir que el otro tiene razón en algo. «overall» = general, en conjunto.",
+      "explanation": "«concede» se acentúa al final: «kon-SID». «overall»: «OU-ver-ol».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.thats-a-bit-of-an-oversimplification",
+      "text": "That's a bit of an oversimplification, don't you think?",
+      "es": "Eso es simplificarlo un poco demasiado, ¿no crees?",
+      "notes": "«a bit of a/an + sustantivo» suaviza la crítica. La coletilla «don't you think?» invita al otro a reconsiderar sin atacarle.",
+      "explanation": "«oversimplification» se acentúa en «KEI»: «ou-ver-sim-pli-fi-KEI-shon». Sube la entonación en «think?».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.is-there-any-evidence-to-back-that-up",
+      "text": "Is there any evidence to back that up?",
+      "es": "¿Hay alguna prueba que lo respalde?",
+      "notes": "«back up» = respaldar, apoyar con datos. «evidence» es incontable: «any evidence», nunca «an evidence» ni «evidences».",
+      "explanation": "Une «back that up»: «BAK-da-rap». «evidence»: «E-vi-dens».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.youre-comparing-apples-and-oranges",
+      "text": "You can't really compare the two; it's apples and oranges.",
+      "es": "No puedes comparar las dos cosas; no tienen nada que ver.",
+      "notes": "«apples and oranges» = cosas que no se pueden comparar (como «mezclar churras con merinas»).",
+      "explanation": "«oranges» en americano suena «OR-in-yiz», dos o tres sílabas, con la «r» americana.",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.i-think-we-agree-more-than-we-disagree",
+      "text": "To be fair, I think we agree more than we disagree here.",
+      "es": "Para ser justos, creo que aquí estamos más de acuerdo que en desacuerdo.",
+      "notes": "«To be fair» = para ser justos, siendo honestos. Sirve para bajar la tensión y buscar puntos en común.",
+      "explanation": "Acentúa el contraste: «a-GRI» y «dis-a-GRI». «fair» suena «fer».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.its-more-complicated-than-it-seems",
+      "text": "The issue is far more complicated than it seems at first glance.",
+      "es": "El tema es mucho más complicado de lo que parece a primera vista.",
+      "notes": "«at first glance» = a primera vista. «than it seems» = de lo que parece: el inglés no usa «of what».",
+      "explanation": "«complicated»: «KOM-pli-kei-rid», con la «t» suave. «glance» tiene una «a» abierta.",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.that-argument-cuts-both-ways",
+      "text": "That argument cuts both ways, though.",
+      "es": "Aunque ese argumento vale para las dos posturas.",
+      "notes": "«cut both ways» = servir para defender ambas posturas, tener ventajas e inconvenientes. «though» al final = de todos modos, aunque.",
+      "explanation": "«both» termina en «th» suave, con la lengua entre los dientes. «though» suena «dou».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.its-not-black-and-white",
+      "text": "It's not black and white; there are a lot of gray areas.",
+      "es": "No es blanco o negro; hay muchas zonas grises.",
+      "notes": "En inglés el orden es «black and white», al revés que en español. En EE. UU. se escribe «gray»; en Reino Unido, «grey».",
+      "explanation": "«white» suena «uait». «areas» tiene tres sílabas: «E-ri-as».",
+      "register": "neutral",
+      "situation": "opiniones"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "c1-society.commute",
+      "word": "commute",
+      "article": "a",
+      "plural": "commutes",
+      "es": "el trayecto diario (al trabajo)",
+      "notes": "También verbo: «I commute by train» = voy al trabajo en tren. «a long commute» = un trayecto largo.",
+      "example": "c1-society.the-biggest-perk-is-not-commuting",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.productivity",
+      "word": "productivity",
+      "es": "la productividad",
+      "notes": "Incontable: «productivity has gone up», nunca «a productivity».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.isolation",
+      "word": "isolation",
+      "es": "el aislamiento",
+      "notes": "Incontable. «feel isolated» = sentirse aislado, una queja típica del teletrabajo.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.mentoring",
+      "word": "mentoring",
+      "es": "la mentoría, el acompañamiento",
+      "notes": "Incontable. «a mentor» es la persona; «to mentor someone» = guiar a alguien con menos experiencia.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.flexibility",
+      "word": "flexibility",
+      "es": "la flexibilidad",
+      "notes": "Incontable. «flexible hours» = horario flexible.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.blur-the-line",
+      "word": "blur the line",
+      "es": "difuminar la frontera",
+      "notes": "Expresión: «blur the line between A and B». «blurry» = borroso.",
+      "example": "c1-society.working-from-home-blurs-the-line",
+      "situation": "opiniones",
+      "tags": [
+        "idioms"
+      ]
+    },
+    {
+      "id": "c1-society.artificial-intelligence",
+      "word": "artificial intelligence",
+      "es": "la inteligencia artificial",
+      "notes": "Casi siempre se dice «AI» («ei-AI»), sin artículo: «AI is changing everything».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.hype",
+      "word": "hype",
+      "es": "el bombo, el revuelo",
+      "notes": "Incontable. «It's just hype» = es puro bombo. «overhyped» = sobrevalorado por el bombo.",
+      "example": "c1-society.theres-a-lot-of-hype-around-ai",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.algorithm",
+      "word": "algorithm",
+      "article": "an",
+      "plural": "algorithms",
+      "es": "el algoritmo",
+      "notes": "Acento al principio: «AL-go-ri-dzem».",
+      "example": "c1-society.who-is-accountable-when-an-algorithm-gets-it-wrong",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.bias",
+      "word": "bias",
+      "article": "a",
+      "plural": "biases",
+      "es": "el sesgo, el prejuicio",
+      "notes": "Se dice «BAI-as». El adjetivo es «biased» (sesgado, parcial).",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.automation",
+      "word": "automation",
+      "es": "la automatización",
+      "notes": "Incontable. El verbo es «automate» («AU-to-meit»).",
+      "example": "c1-society.automation-will-hit-low-paid-jobs",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.regulation",
+      "word": "regulation",
+      "es": "la regulación, la normativa",
+      "notes": "Incontable en general («regulation of AI»); contable para normas concretas: «new regulations».",
+      "example": "c1-society.regulation-lags-behind",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.deepfake",
+      "word": "deepfake",
+      "article": "a",
+      "plural": "deepfakes",
+      "es": "el deepfake (vídeo o audio falso hecho con IA)",
+      "notes": "Se usa igual en español. «a deepfake of the president» = un deepfake del presidente.",
+      "example": "c1-society.deepfakes-make-it-harder",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.double-edged-sword",
+      "word": "double-edged sword",
+      "article": "a",
+      "es": "el arma de doble filo",
+      "notes": "Expresión idéntica a la española: algo con ventajas y riesgos a la vez.",
+      "example": "c1-society.its-a-double-edged-sword",
+      "situation": "opiniones",
+      "tags": [
+        "idioms"
+      ]
+    },
+    {
+      "id": "c1-society.affordable",
+      "word": "affordable",
+      "es": "asequible",
+      "notes": "Viene de «afford» (permitirse). «affordable housing» = vivienda asequible; lo contrario es «unaffordable».",
+      "example": "c1-society.housing-has-become-unaffordable",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.gentrification",
+      "word": "gentrification",
+      "es": "la gentrificación",
+      "notes": "Incontable. «a gentrified neighborhood» = un barrio gentrificado.",
+      "example": "c1-society.gentrification-pushes-out",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.public-transportation",
+      "word": "public transportation",
+      "es": "el transporte público",
+      "notes": "Incontable. En EE. UU. «public transportation» o «transit»; «public transport» es británico.",
+      "example": "c1-society.if-public-transportation-were-better",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.car-dependent",
+      "word": "car-dependent",
+      "es": "dependiente del coche",
+      "notes": "Adjetivo: «a car-dependent city» = una ciudad donde sin coche no puedes hacer nada.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.suburb",
+      "word": "suburb",
+      "article": "a",
+      "plural": "suburbs",
+      "es": "la zona residencial de las afueras",
+      "notes": "Falso amigo: no es un «suburbio» pobre, sino un barrio residencial de casas en las afueras. «live in the suburbs» = vivir en las afueras.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.rent-control",
+      "word": "rent control",
+      "es": "el control de alquileres",
+      "notes": "Incontable. «rent-controlled apartment» = piso con alquiler regulado.",
+      "example": "c1-society.rent-control-sounds-good-on-paper",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.bike-lane",
+      "word": "bike lane",
+      "article": "a",
+      "plural": "bike lanes",
+      "es": "el carril bici",
+      "notes": "«lane» = carril (de carretera, de piscina). «a protected bike lane» = un carril bici separado de los coches.",
+      "example": "c1-society.more-bike-lanes-would-make-the-city-safer",
+      "image": "fluent:bicycle",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.climate-change",
+      "word": "climate change",
+      "es": "el cambio climático",
+      "notes": "Incontable y sin artículo: «Climate change is real». «climate» se dice «KLAI-mit».",
+      "example": "c1-society.individual-choices-matter-but",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.emissions",
+      "word": "emissions",
+      "es": "las emisiones",
+      "notes": "Casi siempre en plural: «carbon emissions», «cut emissions» (reducir emisiones).",
+      "example": "c1-society.the-bulk-of-emissions",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.carbon-footprint",
+      "word": "carbon footprint",
+      "article": "a",
+      "plural": "carbon footprints",
+      "es": "la huella de carbono",
+      "notes": "«reduce your carbon footprint» = reducir tu huella de carbono. «footprint» = huella (del pie).",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.drop-in-the-bucket",
+      "word": "drop in the bucket",
+      "article": "a",
+      "es": "la gota en el océano",
+      "notes": "Expresión americana: algo tan pequeño que apenas cambia nada. En inglés británico, «a drop in the ocean».",
+      "example": "c1-society.ive-cut-back-on-flying",
+      "situation": "opiniones",
+      "tags": [
+        "idioms"
+      ]
+    },
+    {
+      "id": "c1-society.greenwashing",
+      "word": "greenwashing",
+      "es": "el lavado de imagen verde, el «greenwashing»",
+      "notes": "Incontable: cuando una empresa se presenta como ecológica sin serlo de verdad.",
+      "example": "c1-society.so-called-green-products",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.renewable-energy",
+      "word": "renewable energy",
+      "es": "las energías renovables",
+      "notes": "Incontable en singular, aunque en español sea plural. También «renewables»: «invest in renewables».",
+      "example": "c1-society.renewables-are-an-economic-issue",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.fossil-fuels",
+      "word": "fossil fuels",
+      "es": "los combustibles fósiles",
+      "notes": "Normalmente en plural. «fuel» suena «FIU-ol».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.heat-wave",
+      "word": "heat wave",
+      "article": "a",
+      "plural": "heat waves",
+      "es": "la ola de calor",
+      "notes": "Lo contrario es «a cold snap» (una ola de frío).",
+      "example": "c1-society.heat-waves-used-to-be-rare",
+      "image": "fluent:thermometer",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.devils-advocate",
+      "word": "devil's advocate",
+      "es": "el abogado del diablo",
+      "notes": "Casi siempre con «play»: «I'm just playing devil's advocate» = solo hago de abogado del diablo.",
+      "example": "c1-society.let-me-play-devils-advocate",
+      "situation": "opiniones",
+      "tags": [
+        "idioms"
+      ]
+    },
+    {
+      "id": "c1-society.concede",
+      "word": "concede",
+      "es": "conceder, admitir",
+      "notes": "Verbo: admitir que algo es cierto, a menudo a regañadientes. «concede defeat» = reconocer la derrota.",
+      "example": "c1-society.ill-concede-that-point",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.oversimplification",
+      "word": "oversimplification",
+      "article": "an",
+      "plural": "oversimplifications",
+      "es": "la simplificación excesiva",
+      "notes": "El verbo es «oversimplify»: «You're oversimplifying» = lo estás simplificando demasiado.",
+      "example": "c1-society.thats-a-bit-of-an-oversimplification",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.back-up",
+      "word": "back up",
+      "es": "respaldar, apoyar (con datos)",
+      "notes": "Phrasal verb: «back up a claim» = respaldar una afirmación. También «back someone up» = apoyar a alguien, y en informática «hacer una copia de seguridad».",
+      "example": "c1-society.is-there-any-evidence-to-back-that-up",
+      "situation": "opiniones",
+      "tags": [
+        "phrasal-verbs"
+      ]
+    },
+    {
+      "id": "c1-society.apples-and-oranges",
+      "word": "apples and oranges",
+      "es": "cosas que no se pueden comparar",
+      "notes": "Expresión: «It's like comparing apples and oranges». Equivale a «mezclar churras con merinas».",
+      "example": "c1-society.youre-comparing-apples-and-oranges",
+      "situation": "opiniones",
+      "tags": [
+        "idioms"
+      ]
+    },
+    {
+      "id": "c1-society.gray-area",
+      "word": "gray area",
+      "article": "a",
+      "plural": "gray areas",
+      "es": "la zona gris",
+      "notes": "Algo que no está claro si es correcto o no. Ortografía americana: «gray».",
+      "example": "c1-society.its-not-black-and-white",
+      "situation": "opiniones"
+    },
+    {
+      "id": "c1-society.polarized",
+      "word": "polarized",
+      "es": "polarizado",
+      "notes": "«a polarized debate» = un debate polarizado. Ortografía americana con «z»; en británico, «polarised».",
+      "situation": "opiniones"
+    }
+  ],
+  "qa": [
+    {
+      "id": "c1-society.qa.back-to-the-office",
+      "question": "Do you think companies should bring everyone back to the office?",
+      "questionEs": "¿Crees que las empresas deberían hacer volver a todo el mundo a la oficina?",
+      "accepted": [
+        {
+          "text": "Not really. It's not so much where you work as how the team communicates.",
+          "es": "No mucho. No es tanto dónde trabajas como la forma en que se comunica el equipo."
+        },
+        {
+          "text": "I'd say a hybrid model is a reasonable compromise, although I do miss the office sometimes.",
+          "es": "Diría que un modelo híbrido es un término medio razonable, aunque sí que echo de menos la oficina a veces."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I think a hybrid model is a good commitment for everybody.",
+          "es": "Creo que un modelo híbrido es un buen compromiso para todos."
+        },
+        {
+          "text": "No, because at home I'm more productive that in the office.",
+          "es": "No, porque en casa soy más productivo que en la oficina."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«compromiso» en el sentido de «término medio» es «compromise», no «commitment»; y en las comparaciones, «more… than», nunca «more… that». A C1 se espera matizar, no solo dar un sí o un no.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-society.qa.ai-jobs",
+      "question": "Be honest: do you think AI is going to take our jobs?",
+      "questionEs": "Sé sincero: ¿crees que la IA nos va a quitar el trabajo?",
+      "accepted": [
+        {
+          "text": "Not entirely. AI won't replace programmers, but programmers who use AI might replace those who don't.",
+          "es": "No del todo. La IA no sustituirá a los programadores, pero los que usen IA quizá sustituyan a los que no."
+        },
+        {
+          "text": "Some of them, sure. I'm worried that automation will hit low-paid jobs the hardest.",
+          "es": "Algunos, claro. Me preocupa que la automatización golpee con más fuerza a los empleos mal pagados."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I don't think so, but is possible that some jobs will disappear.",
+          "es": "No creo, pero es posible que algunos trabajos desaparezcan."
+        },
+        {
+          "text": "Depends. The AI will replace the people who don't adapt.",
+          "es": "Depende. La IA sustituirá a la gente que no se adapte."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "El inglés necesita sujeto: «it's possible», «It depends». Y «AI» va sin artículo: «AI will…», no «The AI will…».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-society.qa.ai-at-work",
+      "question": "Should we let the team use AI tools for client work?",
+      "questionEs": "¿Deberíamos dejar que el equipo use herramientas de IA para el trabajo de clientes?",
+      "accepted": [
+        {
+          "text": "Used responsibly, yes. But these tools are only as good as the data they're trained on.",
+          "es": "Bien utilizadas, sí. Pero estas herramientas son tan buenas como los datos con los que se entrenan."
+        },
+        {
+          "text": "It's a double-edged sword. We'd need clear rules about who's accountable when it gets it wrong.",
+          "es": "Es un arma de doble filo. Necesitaríamos reglas claras sobre quién responde cuando se equivoca."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, but we must to check everything they write.",
+          "es": "Sí, pero tenemos que revisar todo lo que escriben."
+        },
+        {
+          "text": "I'm agree, if the client knows it before.",
+          "es": "Estoy de acuerdo, si el cliente lo sabe antes."
+        }
+      ],
+      "register": "formal",
+      "situation": "opiniones",
+      "notes": "Después de «must» va el verbo sin «to»: «we must check». «Estoy de acuerdo» es «I agree», nunca «I'm agree».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-society.qa.city-or-town",
+      "question": "Would you rather live in a big city or a small town?",
+      "questionEs": "¿Preferirías vivir en una gran ciudad o en un pueblo?",
+      "accepted": [
+        {
+          "text": "A big city, definitely. I'd rather pay more rent than spend two hours a day commuting.",
+          "es": "Una gran ciudad, sin duda. Prefiero pagar más alquiler que pasarme dos horas al día en el trayecto."
+        },
+        {
+          "text": "Honestly, remote work has made smaller towns far more attractive than they used to be.",
+          "es": "Sinceramente, el teletrabajo ha hecho los pueblos mucho más atractivos que antes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I prefer a big city, because there is more things to do.",
+          "es": "Prefiero una gran ciudad, porque hay más cosas que hacer."
+        },
+        {
+          "text": "I would rather to live in a small town, near of the nature.",
+          "es": "Preferiría vivir en un pueblo, cerca de la naturaleza."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "Con plural, «there are more things». Después de «would rather» va el verbo sin «to», y «near» no lleva «of»: «near nature».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-society.qa.rising-rents",
+      "question": "What do you think could actually be done about rising rents?",
+      "questionEs": "¿Qué crees que se podría hacer de verdad con la subida de los alquileres?",
+      "accepted": [
+        {
+          "text": "In my view, building more housing is the only long-term solution.",
+          "es": "En mi opinión, construir más vivienda es la única solución a largo plazo."
+        },
+        {
+          "text": "Rent control sounds good on paper, but I'm not entirely convinced it works.",
+          "es": "El control de alquileres suena bien sobre el papel, pero no me convence del todo que funcione."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "The government should to build more houses for the young people.",
+          "es": "El gobierno debería construir más casas para los jóvenes."
+        },
+        {
+          "text": "I think that the rents are too much high in the cities.",
+          "es": "Creo que los alquileres están demasiado altos en las ciudades."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«should» va sin «to»; «too high», nunca «too much high». Para hablar en general, sin artículo: «young people», «rents».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-society.qa.carbon-footprint",
+      "question": "Do you personally do anything to reduce your carbon footprint?",
+      "questionEs": "¿Tú haces algo personalmente para reducir tu huella de carbono?",
+      "accepted": [
+        {
+          "text": "I've cut back on flying, although I know it's just a drop in the bucket.",
+          "es": "He reducido los vuelos, aunque sé que es solo una gota en el océano."
+        },
+        {
+          "text": "A little. Individual choices matter, but they won't solve climate change on their own.",
+          "es": "Un poco. Las decisiones individuales importan, pero por sí solas no van a resolver el cambio climático."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I try to fly less, but the big companies contaminate much more.",
+          "es": "Sí, intento volar menos, pero las grandes empresas contaminan mucho más."
+        },
+        {
+          "text": "I recycle everything since three years, and I go to work in bike.",
+          "es": "Reciclo todo desde hace tres años y voy al trabajo en bici."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "«contaminar» en este sentido es «pollute», no «contaminate». «desde hace tres años» = «for three years» con present perfect («I've recycled… for three years»), y «en bici» = «by bike».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-society.qa.social-media",
+      "question": "Social media has done more harm than good. Surely you agree?",
+      "questionEs": "Las redes sociales han hecho más mal que bien. ¿No me digas que no estás de acuerdo?",
+      "accepted": [
+        {
+          "text": "Let me play devil's advocate for a second: they've also given a voice to a lot of people.",
+          "es": "Déjame hacer de abogado del diablo un momento: también han dado voz a mucha gente."
+        },
+        {
+          "text": "It's not black and white. The issue is far more complicated than it seems at first glance.",
+          "es": "No es blanco o negro. El tema es mucho más complicado de lo que parece a primera vista."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Is not so simple. The social media also have good things.",
+          "es": "No es tan sencillo. Las redes sociales también tienen cosas buenas."
+        },
+        {
+          "text": "I'm agree, but it's not white or black.",
+          "es": "Estoy de acuerdo, pero no es blanco o negro."
+        }
+      ],
+      "register": "neutral",
+      "situation": "opiniones",
+      "notes": "El sujeto es obligatorio («It's not so simple»), «social media» va sin artículo en general, y es «I agree» y «black and white», en ese orden.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-society.qa.lazy-remote-workers",
+      "question": "Come on, everyone knows people who work from home are just lazier.",
+      "questionEs": "Venga ya, todo el mundo sabe que la gente que trabaja desde casa es más vaga.",
+      "accepted": [
+        {
+          "text": "Is there any evidence to back that up? That's a bit of an oversimplification.",
+          "es": "¿Hay alguna prueba que lo respalde? Eso es simplificarlo un poco demasiado."
+        },
+        {
+          "text": "I'm not sure that's true. That argument cuts both ways, though: offices have plenty of distractions too.",
+          "es": "No estoy seguro de que sea así. Aunque ese argumento vale para las dos posturas: las oficinas también tienen muchas distracciones."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Where are the evidences? I don't believe it.",
+          "es": "¿Dónde están las pruebas? No me lo creo."
+        },
+        {
+          "text": "That's not true, I know a lot of people that work more in home.",
+          "es": "Eso no es verdad, conozco a mucha gente que trabaja más en casa."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "«evidence» es incontable: «Where's the evidence?». «en casa» es «at home», nunca «in home».",
+      "voice": "en-US-AndrewNeural"
+    }
+  ]
+}
