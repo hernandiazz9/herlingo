@@ -1,0 +1,518 @@
+{
+  "id": "c1-leading",
+  "order": 320,
+  "level": "C1",
+  "title": "Liderar: feedback difícil, 1:1, delegar, motivar",
+  "description": "Liderar un equipo en inglés: dar feedback incómodo sin herir, llevar reuniones 1:1 que sirvan de algo, delegar con claridad, motivar y reconducir el bajo rendimiento o los conflictos con tacto.",
+  "emoji": "🧭",
+  "situation": "trabajo",
+  "lessons": [
+    {
+      "id": "c1-leading.l.feedback",
+      "title": "Dar feedback difícil sin herir",
+      "items": [
+        "b1-office.feedback",
+        "c1-leading.can-i-give-you-some-feedback",
+        "c1-leading.upfront",
+        "c1-leading.i-want-to-be-upfront",
+        "c1-leading.pattern",
+        "c1-leading.i-noticed-that",
+        "c1-leading.the-impact-was",
+        "c1-leading.blunt",
+        "c1-leading.sugarcoat",
+        "c1-leading.i-wont-sugarcoat-it",
+        "c1-leading.this-isnt-about-you",
+        "c1-leading.how-do-you-see-it",
+        "b2-projects.defensive",
+        "c1-leading.i-know-this-is-hard-to-hear",
+        "c1-leading.expectation",
+        "c1-leading.going-forward-id-like",
+        "b2-projects.constructive",
+        "c1-leading.tactful",
+        "c1-leading.praise",
+        "c1-leading.you-handled-that-really-well",
+        "c1-leading.qa.improve",
+        "c1-leading.qa.differently"
+      ]
+    },
+    {
+      "id": "c1-leading.l.one-on-ones",
+      "title": "Reuniones 1:1 que sirven de algo",
+      "items": [
+        "c1-leading.one-on-one",
+        "c1-leading.this-is-your-time",
+        "c1-leading.whats-on-your-mind",
+        "c1-leading.check-in",
+        "c1-leading.how-are-you-really-doing",
+        "c1-leading.workload",
+        "c1-leading.is-your-workload-manageable",
+        "b2-wellbeing.overwhelmed",
+        "c1-leading.whats-getting-in-your-way",
+        "c1-leading.blocker",
+        "c1-leading.is-there-anything-i-can-do",
+        "c1-leading.growth",
+        "c1-leading.where-do-you-see-yourself",
+        "c1-leading.career-path",
+        "c1-leading.what-would-you-like-to-get-better-at",
+        "c1-leading.mentor",
+        "c1-leading.id-be-happy-to-pair-you-with",
+        "c1-leading.lets-make-these-a-regular-thing",
+        "c1-leading.candid",
+        "c1-leading.qa.how-are-things",
+        "c1-leading.qa.career"
+      ]
+    },
+    {
+      "id": "c1-leading.l.delegating",
+      "title": "Delegar con claridad",
+      "items": [
+        "c1-leading.delegate",
+        "c1-leading.id-like-you-to-take-the-lead-on",
+        "c1-leading.ownership",
+        "c1-leading.this-would-be-yours-end-to-end",
+        "b2-projects.bandwidth",
+        "c1-leading.do-you-have-the-bandwidth",
+        "c1-leading.what-success-looks-like",
+        "c1-leading.outcome",
+        "c1-leading.how-you-get-there-is-up-to-you",
+        "c1-leading.micromanage",
+        "c1-leading.i-dont-want-to-micromanage",
+        "c1-leading.lets-agree-on-checkpoints",
+        "c1-leading.checkpoint",
+        "c1-leading.if-you-get-stuck",
+        "b1-interview.take-on",
+        "c1-leading.hand-off",
+        "c1-leading.ill-hand-off-the-reporting",
+        "c1-leading.accountable",
+        "c1-leading.who-signs-off",
+        "c1-leading.qa.take-the-lead",
+        "c1-leading.qa.stuck"
+      ]
+    },
+    {
+      "id": "c1-leading.l.motivating",
+      "title": "Motivar y reconocer el trabajo",
+      "items": [
+        "c1-leading.morale",
+        "c1-leading.i-know-the-last-few-weeks",
+        "c1-leading.this-wouldnt-have-happened-without",
+        "c1-leading.shout-out",
+        "c1-leading.i-want-to-give-a-shout-out",
+        "b2-projects.appreciate",
+        "c1-leading.it-hasnt-gone-unnoticed",
+        "c1-leading.recognition",
+        "c1-leading.the-bigger-picture",
+        "c1-leading.this-ties-into-the-bigger-picture",
+        "b2-wellbeing.burnout",
+        "c1-leading.take-friday-off",
+        "c1-leading.momentum",
+        "c1-leading.lets-keep-the-momentum-going",
+        "c1-leading.rally",
+        "c1-leading.i-have-full-confidence",
+        "c1-leading.qa.morale",
+        "c1-leading.qa.thanks"
+      ]
+    },
+    {
+      "id": "c1-leading.l.tough-talks",
+      "title": "Bajo rendimiento y conflictos en el equipo",
+      "items": [
+        "c1-leading.underperform",
+        "c1-leading.your-work-hasnt-been-meeting",
+        "c1-leading.is-something-going-on",
+        "c1-leading.performance-plan",
+        "c1-leading.id-like-to-put-together-a-plan",
+        "c1-leading.lets-check-in-again-in-two-weeks",
+        "c1-leading.tension",
+        "c1-leading.ive-sensed-some-tension",
+        "b2-relationships.blame",
+        "c1-leading.im-not-here-to-assign-blame",
+        "c1-leading.common-goal",
+        "c1-leading.what-would-a-good-outcome-look-like",
+        "c1-leading.escalation",
+        "c1-leading.if-this-keeps-happening",
+        "c1-leading.mediate",
+        "c1-leading.lets-hear-both-sides",
+        "c1-leading.qa.performance",
+        "c1-leading.qa.conflict"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "c1-leading.can-i-give-you-some-feedback", "text": "Can I give you some feedback on the demo you did this morning?", "es": "¿Te puedo dar un poco de feedback sobre la demo de esta mañana?", "notes": "«feedback» es incontable: «some feedback», «a piece of feedback», nunca «a feedback».", "explanation": "Pedir permiso antes de dar feedback prepara a la otra persona. «feedback» se acentúa al principio: «FEED-back».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.i-want-to-be-upfront", "text": "I want to be upfront with you about how the launch went.", "es": "Quiero ser sincero contigo sobre cómo fue el lanzamiento.", "notes": "«be upfront with someone» = ser franco con alguien, ir de cara.", "explanation": "Para abrir una conversación incómoda sin rodeos. «upfront» se dice «up-FRONT», con la «u» corta de «cup».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.i-noticed-that", "text": "I noticed that the last three pull requests went in without any tests.", "es": "Me he fijado en que las tres últimas pull requests entraron sin ningún test.", "notes": "Feedback útil: describe un hecho observable, no un juicio («you're careless»).", "explanation": "Empieza por lo que has visto, no por lo que piensas de la persona. «noticed» termina en /t/: «NO-tist».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.the-impact-was", "text": "The impact was that QA spent two days chasing bugs we could have caught earlier.", "es": "La consecuencia fue que QA se pasó dos días persiguiendo bugs que podríamos haber detectado antes.", "notes": "«chase bugs» = perseguir errores; «could have caught» = podríamos haber pillado.", "explanation": "Después del hecho, explica su efecto en el equipo. «could have» suena «COU-də»: la «have» casi desaparece.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.i-wont-sugarcoat-it", "text": "I won't sugarcoat it: the client was really unhappy with the delay.", "es": "No te lo voy a endulzar: el cliente estaba muy descontento con el retraso.", "notes": "«sugarcoat» = suavizar, dorar la píldora. «won't» = will not.", "explanation": "Cuando el mensaje es duro y no quieres que suene ambiguo. «won't» rima con «don't»; no lo confundas con «want».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.this-isnt-about-you", "text": "This isn't about you as a person; it's about how we handle code reviews.", "es": "Esto no va de ti como persona, sino de cómo llevamos las revisiones de código.", "notes": "«it's about» = se trata de, va de. Separa a la persona del comportamiento.", "explanation": "Úsalo si notas que la otra persona se pone a la defensiva. «about» enlaza con lo anterior: «isn'-ta-bout».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.how-do-you-see-it", "text": "How do you see it? I might be missing part of the picture.", "es": "¿Tú cómo lo ves? Puede que se me escape parte de la historia.", "notes": "«miss part of the picture» = no tener toda la información.", "explanation": "Abre el turno a la otra persona después de dar el feedback. «picture» se dice «PIK-cher», no «pic-TUR».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.i-know-this-is-hard-to-hear", "text": "I know this is hard to hear, and I really appreciate you staying open.", "es": "Sé que esto cuesta escucharlo y te agradezco mucho que lo estés recibiendo bien.", "notes": "«stay open» = mantenerse receptivo. «appreciate you + -ing» = agradecerte que…", "explanation": "Reconoce la emoción sin dar marcha atrás en el mensaje. «hard to hear»: la «h» inglesa es un soplo suave, no una jota.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.going-forward-id-like", "text": "Going forward, I'd like every change to come with at least one test.", "es": "A partir de ahora, me gustaría que cada cambio venga con al menos un test.", "notes": "«going forward» = de ahora en adelante. «I'd like you to…», nunca «I'd like that you…».", "explanation": "Cierra el feedback con lo que esperas a partir de ahora. «I'd like» se dice «aid-LAIK», con la «d» muy suave.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.you-handled-that-really-well", "text": "You handled that client call really well, especially the part about pricing.", "es": "Llevaste muy bien la llamada con el cliente, sobre todo la parte de los precios.", "notes": "El elogio también es feedback: concreto («the part about pricing») vale más que «good job».", "explanation": "Para reconocer algo bien hecho justo después de que pase. «handled» termina en /d/: «HAN-dəld».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.this-is-your-time", "text": "This is your time, so feel free to bring up anything you want.", "es": "Este rato es tuyo, así que saca cualquier tema que quieras.", "notes": "«feel free to» = no dudes en; «bring up» = sacar un tema.", "explanation": "Para empezar un 1:1 dejando claro que no es una reunión de estado. «feel free» alarga la «ee»: «fiil friii».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.whats-on-your-mind", "text": "What's on your mind this week?", "es": "¿Qué te ronda por la cabeza esta semana?", "notes": "«on your mind» = lo que te preocupa o en lo que piensas.", "explanation": "Pregunta abierta para arrancar el 1:1. «What's on» se enlaza: «wat-SON».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.how-are-you-really-doing", "text": "Setting work aside for a second, how are you really doing?", "es": "Dejando el trabajo a un lado un momento, ¿cómo estás de verdad?", "notes": "«set something aside» = dejar algo a un lado.", "explanation": "Cuando notas a alguien apagado y quieres una respuesta sincera. Acentúa «REALLY» para que se note que preguntas en serio.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.is-your-workload-manageable", "text": "Is your workload manageable right now, or are you stretched too thin?", "es": "¿Tu carga de trabajo es asumible ahora mismo o vas demasiado justo?", "notes": "«be stretched too thin» = no dar abasto, tener demasiados frentes.", "explanation": "Pregunta clave de un 1:1 para detectar el agotamiento. «thin» lleva la «th» de «zapato», con la lengua entre los dientes.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.whats-getting-in-your-way", "text": "What's getting in your way at the moment?", "es": "¿Qué te está frenando ahora mismo?", "notes": "«get in the way» = estorbar, ser un obstáculo.", "explanation": "Busca los bloqueos sin acusar a nadie. «getting» con la «t» americana suave: «GE-ding».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.is-there-anything-i-can-do", "text": "Is there anything I can do to make that easier for you?", "es": "¿Hay algo que pueda hacer para ponértelo más fácil?", "notes": "«make something easier for someone» = facilitarle algo a alguien.", "explanation": "Lo dice quien lidera tras escuchar un problema. «can» va débil: «kən», casi sin vocal.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.where-do-you-see-yourself", "text": "Where do you see yourself in a couple of years?", "es": "¿Dónde te ves dentro de un par de años?", "notes": "«in a couple of years» = dentro de un par de años («in», no «inside»).", "explanation": "Para hablar de carrera, no de tareas. «couple of» se reduce a «CUP-lə».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.what-would-you-like-to-get-better-at", "text": "What would you like to get better at over the next few months?", "es": "¿En qué te gustaría mejorar en los próximos meses?", "notes": "«get better at something» = mejorar en algo. La preposición va al final.", "explanation": "Convierte el 1:1 en un plan de crecimiento. «better» con la «t» suave americana: «BE-der».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.id-be-happy-to-pair-you-with", "text": "I'd be happy to pair you with someone on the platform team.", "es": "Con gusto te emparejo con alguien del equipo de plataforma.", "notes": "«pair someone with someone» = emparejar, poner a trabajar juntos.", "explanation": "Para ofrecer mentoría o aprendizaje práctico. «pair» suena como «pear»: «per».", "register": "formal", "situation": "trabajo"},
+    {"id": "c1-leading.lets-make-these-a-regular-thing", "text": "Let's make these a regular thing, say every other Thursday.", "es": "Hagamos esto de forma habitual, por ejemplo un jueves sí y otro no.", "notes": "«every other Thursday» = cada dos jueves. «say» = pongamos, por ejemplo.", "explanation": "Para fijar la cadencia de los 1:1. «Thursday» empieza con «th» de «zapato»: «ZURS-dei».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.id-like-you-to-take-the-lead-on", "text": "I'd like you to take the lead on the payments migration.", "es": "Me gustaría que tú lideraras la migración de pagos.", "notes": "«take the lead on something» = encabezar, llevar la batuta.", "explanation": "Para delegar un proyecto entero a alguien del equipo. «lead» (liderar) rima con «need»; no lo leas como «led».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.this-would-be-yours-end-to-end", "text": "This would be yours end to end, from planning through to launch.", "es": "Esto sería tuyo de principio a fin, desde la planificación hasta el lanzamiento.", "notes": "«end to end» = de principio a fin; «through to» = hasta (incluido).", "explanation": "Deja claro que la responsabilidad es completa. «end to end» se enlaza: «en-də-END».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.do-you-have-the-bandwidth", "text": "Do you have the bandwidth for this, or should we move something else off your plate?", "es": "¿Tienes margen para esto o deberíamos quitarte alguna otra cosa?", "notes": "«bandwidth» = capacidad, tiempo libre; «off your plate» = de tu lista de tareas.", "explanation": "Antes de delegar, comprueba la carga. «bandwidth» termina en «th» suave: «BAND-width».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.what-success-looks-like", "text": "Let me be clear about what success looks like: checkout errors under one percent.", "es": "Te dejo claro cómo es el éxito: errores en el pago por debajo del uno por ciento.", "notes": "«what success looks like» = cómo sabremos que ha ido bien. «percent» en EE. UU. va junto.", "explanation": "Delegar es definir el resultado, no los pasos. «success» se acentúa al final: «sək-SES».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.how-you-get-there-is-up-to-you", "text": "How you get there is entirely up to you.", "es": "Cómo llegues hasta ahí depende totalmente de ti.", "notes": "«be up to someone» = depender de alguien, ser decisión suya.", "explanation": "Da autonomía después de fijar el objetivo. «up to you» se enlaza: «ə-pə-YU».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.i-dont-want-to-micromanage", "text": "I don't want to micromanage, but I'd like to stay in the loop.", "es": "No quiero estar encima de ti, pero me gustaría estar al tanto.", "notes": "«stay in the loop» = estar al corriente. «micromanage» = controlar cada detalle.", "explanation": "Equilibrio entre confianza y seguimiento. «micromanage»: «MAI-crou-MA-nich».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.lets-agree-on-checkpoints", "text": "Let's agree on a couple of checkpoints so nothing catches us off guard.", "es": "Acordemos un par de puntos de control para que nada nos pille por sorpresa.", "notes": "«catch someone off guard» = pillar desprevenido. «agree on» = ponerse de acuerdo en.", "explanation": "Para pactar el seguimiento al delegar. «guard» se dice «gard»: la «u» no suena.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.if-you-get-stuck", "text": "If you get stuck, don't sit on it for days; just ping me.", "es": "Si te atascas, no te lo guardes durante días: escríbeme y ya está.", "notes": "«get stuck» = atascarse; «sit on something» = no hacer nada con algo; «ping» = mandar un mensaje.", "explanation": "Lo dice quien delega para que pidan ayuda pronto. «stuck» con «u» corta y sin «e» delante: no «estuck».", "register": "tu", "situation": "trabajo"},
+    {"id": "c1-leading.ill-hand-off-the-reporting", "text": "I'll hand off the weekly reporting to Priya so you can focus on this.", "es": "Le paso los informes semanales a Priya para que tú te puedas centrar en esto.", "notes": "«hand off something to someone» = traspasar una tarea.", "explanation": "Para liberar a alguien antes de darle algo nuevo. «hand off» se enlaza: «han-DOF».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.who-signs-off", "text": "You'll be accountable for the timeline, and I'll sign off on the final release.", "es": "Tú responderás de los plazos y yo daré el visto bueno al lanzamiento final.", "notes": "«be accountable for» = rendir cuentas de. «sign off on» = aprobar formalmente.", "explanation": "Reparte responsabilidad y aprobación sin ambigüedad. «accountable»: «ə-KAUN-tə-bəl».", "register": "formal", "situation": "trabajo"},
+    {"id": "c1-leading.i-know-the-last-few-weeks", "text": "I know the last few weeks have been rough, and I want to acknowledge that.", "es": "Sé que estas últimas semanas han sido duras y quiero reconocerlo.", "notes": "«rough» = duro, complicado; «acknowledge» = reconocer, admitir.", "explanation": "Para abrir una reunión de equipo después de una racha difícil. «rough» rima con «stuff»: la «gh» suena «f».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.this-wouldnt-have-happened-without", "text": "This launch wouldn't have happened without the late nights you all put in.", "es": "Este lanzamiento no habría salido sin las noches hasta tarde que habéis echado todos.", "notes": "«put in hours / late nights» = echar horas. «you all» = todos vosotros.", "explanation": "Agradecimiento público y concreto al equipo. «wouldn't have» suena «WU-dn-tə».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.i-want-to-give-a-shout-out", "text": "I want to give a shout-out to Dana, who stayed up to fix the outage.", "es": "Quiero hacer una mención especial a Dana, que se quedó despierta arreglando la caída.", "notes": "«give a shout-out to someone» = mencionar y agradecer en público.", "explanation": "Típico en reuniones o canales de Slack. «shout» rima con «out»: «SHAUT-aut».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.it-hasnt-gone-unnoticed", "text": "The extra effort you've been putting in hasn't gone unnoticed.", "es": "El esfuerzo extra que estás poniendo no ha pasado desapercibido.", "notes": "«go unnoticed» = pasar desapercibido. «put in effort» = poner esfuerzo.", "explanation": "Reconocimiento en un 1:1, más elegante que «good job». «effort» se acentúa al principio: «E-fərt».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.this-ties-into-the-bigger-picture", "text": "Here's how this ties into the bigger picture for the company this year.", "es": "Así es como esto encaja en el panorama general de la empresa este año.", "notes": "«tie into» = conectar con, encajar en. «the bigger picture» = la visión de conjunto.", "explanation": "Para dar sentido a una tarea poco vistosa. «picture» se dice «PIK-cher».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.take-friday-off", "text": "You've earned it. Take Friday off and recharge.", "es": "Te lo has ganado. Tómate el viernes libre y recarga pilas.", "notes": "«take a day off» = tomarse un día libre; «recharge» = recargar pilas.", "explanation": "Para cuidar al equipo después de un esfuerzo grande. «earned» se dice «ernd», en una sola sílaba.", "register": "tu", "situation": "trabajo"},
+    {"id": "c1-leading.lets-keep-the-momentum-going", "text": "We're in a really good place, so let's keep the momentum going.", "es": "Estamos en muy buen momento, así que sigamos con este impulso.", "notes": "«keep the momentum going» = mantener el ritmo. «be in a good place» = estar bien.", "explanation": "Cierre motivador al final de un sprint. «momentum»: «mou-MEN-təm», acento en la segunda sílaba.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.i-have-full-confidence", "text": "I have full confidence in this team, and that's not just a pep talk.", "es": "Confío plenamente en este equipo, y no lo digo solo para animaros.", "notes": "«have confidence in» = confiar en. «a pep talk» = una charla para dar ánimos.", "explanation": "Para transmitir confianza antes de un reto. «confidence»: «CON-fi-dəns», acento en la primera.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.your-work-hasnt-been-meeting", "text": "Lately, your work hasn't been meeting the standard we agreed on.", "es": "Últimamente tu trabajo no está al nivel que acordamos.", "notes": "«meet a standard / expectations» = cumplir un estándar o unas expectativas.", "explanation": "Frase directa para abrir una conversación de rendimiento. «Lately» se dice «LEIT-li», con la «t» casi tragada.", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.is-something-going-on", "text": "Is something going on outside of work that I should know about?", "es": "¿Está pasando algo fuera del trabajo que debería saber?", "notes": "«go on» = pasar, ocurrir. La preposición «about» va al final.", "explanation": "Antes de juzgar el rendimiento, pregunta por el contexto. «going on» se enlaza: «GOU-in-GON».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.id-like-to-put-together-a-plan", "text": "I'd like us to put together a plan with clear goals for the next six weeks.", "es": "Me gustaría que preparáramos juntos un plan con objetivos claros para las próximas seis semanas.", "notes": "«put together» = preparar, montar. «I'd like us to…» = me gustaría que (nosotros)…", "explanation": "Paso formal tras una charla de rendimiento. «together» lleva «th» sonora, como la «d» de «nada»: «tə-GUE-dher».", "register": "formal", "situation": "trabajo"},
+    {"id": "c1-leading.lets-check-in-again-in-two-weeks", "text": "Let's check in again in two weeks and see how things are going.", "es": "Volvamos a hablar dentro de dos semanas a ver cómo van las cosas.", "notes": "«check in» = hacer un seguimiento. «in two weeks» = dentro de dos semanas.", "explanation": "Cierra la conversación con un seguimiento concreto. «check in» se enlaza: «che-KIN».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.ive-sensed-some-tension", "text": "I've sensed some tension between you and the design team lately.", "es": "He notado algo de tensión entre tú y el equipo de diseño últimamente.", "notes": "«sense» = percibir, notar. Más suave que «I've seen you fighting».", "explanation": "Para sacar un conflicto sin acusar. «sensed» termina en /t/: «senst».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.im-not-here-to-assign-blame", "text": "I'm not here to assign blame; I just want to understand what happened.", "es": "No estoy aquí para buscar culpables; solo quiero entender qué pasó.", "notes": "«assign blame» = señalar culpables. «blame» es incontable aquí.", "explanation": "Rebaja la tensión al empezar una mediación. «blame» lleva una «ei» larga: «bleim».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.what-would-a-good-outcome-look-like", "text": "What would a good outcome look like for both of you?", "es": "¿Cómo sería un buen resultado para los dos?", "notes": "«look like» = ser como, tener pinta de. «both of you» = vosotros dos.", "explanation": "Lleva el conflicto del pasado a la solución. «would a» se enlaza: «WU-də».", "register": "neutral", "situation": "trabajo"},
+    {"id": "c1-leading.if-this-keeps-happening", "text": "If this keeps happening, I'll have no choice but to escalate it to HR.", "es": "Si esto sigue pasando, no me quedará más remedio que llevarlo a Recursos Humanos.", "notes": "«keep + -ing» = seguir haciendo; «have no choice but to» = no quedar más remedio que.", "explanation": "Último aviso, firme pero tranquilo. «HR» se deletrea: «eich-AR».", "register": "formal", "situation": "trabajo"},
+    {"id": "c1-leading.lets-hear-both-sides", "text": "Let's hear both sides first, and then figure out a way forward together.", "es": "Escuchemos primero las dos versiones y luego busquemos juntos cómo seguir.", "notes": "«both sides» = las dos partes; «a way forward» = una salida, cómo avanzar.", "explanation": "Para mediar entre dos compañeros. «both» acaba en «th» de «zapato»: «bouz».", "register": "neutral", "situation": "trabajo"}
+  ],
+  "vocab": [
+    {"id": "c1-leading.upfront", "word": "upfront", "es": "franco, directo", "notes": "Adjetivo: «be upfront with someone». También «pay upfront» = pagar por adelantado.", "example": "c1-leading.i-want-to-be-upfront", "situation": "trabajo"},
+    {"id": "c1-leading.pattern", "word": "pattern", "article": "a", "plural": "patterns", "es": "el patrón, la pauta (de conducta)", "notes": "«I've noticed a pattern» = he notado que se repite.", "situation": "trabajo"},
+    {"id": "c1-leading.blunt", "word": "blunt", "es": "directo, sin rodeos (a veces brusco)", "notes": "«To be blunt…» = por decirlo sin rodeos. Puede sonar duro.", "situation": "trabajo"},
+    {"id": "c1-leading.sugarcoat", "word": "sugarcoat", "es": "endulzar, dorar la píldora", "notes": "Verbo: «don't sugarcoat it» = no lo suavices.", "example": "c1-leading.i-wont-sugarcoat-it", "situation": "trabajo"},
+    {"id": "c1-leading.expectation", "word": "expectation", "article": "an", "plural": "expectations", "es": "la expectativa", "notes": "«set clear expectations» = dejar claro lo que esperas.", "situation": "trabajo"},
+    {"id": "c1-leading.tactful", "word": "tactful", "es": "diplomático, con tacto", "notes": "Lo contrario: «tactless».", "situation": "trabajo"},
+    {"id": "c1-leading.praise", "word": "praise", "es": "el elogio, los elogios", "notes": "Incontable: «some praise», nunca «a praise». También verbo: «praise someone».", "example": "c1-leading.you-handled-that-really-well", "situation": "trabajo"},
+    {"id": "c1-leading.one-on-one", "word": "one-on-one", "article": "a", "plural": "one-on-ones", "es": "la reunión individual, el 1:1", "notes": "En EE. UU. se dice «one-on-one»; en Reino Unido, «one-to-one».", "example": "c1-leading.this-is-your-time", "situation": "trabajo"},
+    {"id": "c1-leading.check-in", "word": "check-in", "article": "a", "plural": "check-ins", "es": "la puesta al día, la reunión rápida de seguimiento", "notes": "Sustantivo con guion; el verbo es «check in with someone» = preguntar cómo va.", "situation": "trabajo"},
+    {"id": "c1-leading.workload", "word": "workload", "article": "a", "plural": "workloads", "es": "la carga de trabajo", "notes": "«a heavy workload» = mucha carga.", "example": "c1-leading.is-your-workload-manageable", "situation": "trabajo"},
+    {"id": "c1-leading.blocker", "word": "blocker", "article": "a", "plural": "blockers", "es": "el bloqueo, lo que impide avanzar", "notes": "Muy usado en stand-ups: «Any blockers?»", "situation": "trabajo"},
+    {"id": "c1-leading.growth", "word": "growth", "es": "el crecimiento, el desarrollo profesional", "notes": "Incontable: «career growth», «room for growth» = margen para crecer.", "situation": "trabajo"},
+    {"id": "c1-leading.career-path", "word": "career path", "article": "a", "plural": "career paths", "es": "la trayectoria profesional", "notes": "«career» se acentúa al final: «kə-RIR», no como «carrera».", "example": "c1-leading.where-do-you-see-yourself", "situation": "trabajo"},
+    {"id": "c1-leading.mentor", "word": "mentor", "article": "a", "plural": "mentors", "es": "el mentor, la mentora", "notes": "También verbo: «mentor someone». La persona guiada es «mentee».", "example": "c1-leading.id-be-happy-to-pair-you-with", "situation": "trabajo"},
+    {"id": "c1-leading.candid", "word": "candid", "es": "sincero, franco", "notes": "Falso amigo: no es «cándido» (= ingenuo, «naive»).", "situation": "trabajo"},
+    {"id": "c1-leading.delegate", "word": "delegate", "es": "delegar", "notes": "Verbo: «DE-lə-geit». El sustantivo (un delegado) se dice «DE-lə-gət».", "situation": "trabajo"},
+    {"id": "c1-leading.ownership", "word": "ownership", "es": "la responsabilidad, el sentirlo como propio", "notes": "Incontable: «take ownership of something» = hacerse cargo de verdad.", "situation": "trabajo"},
+    {"id": "c1-leading.outcome", "word": "outcome", "article": "an", "plural": "outcomes", "es": "el resultado", "notes": "«focus on outcomes, not tasks» = céntrate en resultados, no en tareas.", "example": "c1-leading.what-success-looks-like", "situation": "trabajo"},
+    {"id": "c1-leading.micromanage", "word": "micromanage", "es": "controlar cada detalle, estar encima", "notes": "Suena negativo. El sustantivo: «micromanagement».", "example": "c1-leading.i-dont-want-to-micromanage", "situation": "trabajo"},
+    {"id": "c1-leading.checkpoint", "word": "checkpoint", "article": "a", "plural": "checkpoints", "es": "el punto de control", "notes": "En un proyecto, una revisión pactada a mitad de camino.", "example": "c1-leading.lets-agree-on-checkpoints", "situation": "trabajo"},
+    {"id": "c1-leading.hand-off", "word": "hand off", "es": "traspasar, pasar (una tarea)", "notes": "Phrasal verb: «hand something off to someone». Sustantivo: «a handoff».", "example": "c1-leading.ill-hand-off-the-reporting", "situation": "trabajo"},
+    {"id": "c1-leading.accountable", "word": "accountable", "es": "responsable (que rinde cuentas)", "notes": "«be accountable for something / to someone».", "example": "c1-leading.who-signs-off", "situation": "trabajo"},
+    {"id": "c1-leading.morale", "word": "morale", "es": "la moral (del equipo), el ánimo", "notes": "Incontable. «morale» (mə-RAL) es el ánimo; «moral» (MO-rəl) es la moraleja o lo ético.", "situation": "trabajo"},
+    {"id": "c1-leading.shout-out", "word": "shout-out", "article": "a", "plural": "shout-outs", "es": "la mención (de agradecimiento)", "notes": "Informal pero muy usado en el trabajo en EE. UU.", "example": "c1-leading.i-want-to-give-a-shout-out", "situation": "trabajo"},
+    {"id": "c1-leading.recognition", "word": "recognition", "es": "el reconocimiento", "notes": "Incontable: «get recognition for your work».", "situation": "trabajo"},
+    {"id": "c1-leading.the-bigger-picture", "word": "the bigger picture", "es": "la visión de conjunto, el panorama general", "notes": "«lose sight of the bigger picture» = perder la perspectiva.", "example": "c1-leading.this-ties-into-the-bigger-picture", "situation": "trabajo"},
+    {"id": "c1-leading.momentum", "word": "momentum", "es": "el impulso, el ritmo", "notes": "Incontable: «gain / lose momentum» = coger / perder impulso.", "example": "c1-leading.lets-keep-the-momentum-going", "situation": "trabajo"},
+    {"id": "c1-leading.rally", "word": "rally", "es": "unir, movilizar (a un equipo)", "notes": "«rally the team around a goal» = unir al equipo en torno a un objetivo.", "situation": "trabajo"},
+    {"id": "c1-leading.underperform", "word": "underperform", "es": "rendir por debajo de lo esperado", "notes": "Verbo. El sustantivo: «underperformance».", "situation": "trabajo"},
+    {"id": "c1-leading.performance-plan", "word": "performance plan", "article": "a", "plural": "performance plans", "es": "el plan de mejora del rendimiento", "notes": "En EE. UU. se llama «PIP» (performance improvement plan) y suena serio.", "example": "c1-leading.id-like-to-put-together-a-plan", "situation": "trabajo"},
+    {"id": "c1-leading.tension", "word": "tension", "es": "la tensión", "notes": "Incontable en este sentido: «some tension», «a lot of tension».", "example": "c1-leading.ive-sensed-some-tension", "situation": "trabajo"},
+    {"id": "c1-leading.common-goal", "word": "common goal", "article": "a", "plural": "common goals", "es": "el objetivo común", "notes": "«work toward a common goal» = trabajar hacia un objetivo común.", "situation": "trabajo"},
+    {"id": "c1-leading.escalation", "word": "escalation", "article": "an", "plural": "escalations", "es": "la escalada, el paso a un nivel superior", "notes": "Llevar un problema a alguien con más autoridad. Verbo: «escalate».", "example": "c1-leading.if-this-keeps-happening", "situation": "trabajo"},
+    {"id": "c1-leading.mediate", "word": "mediate", "es": "mediar", "notes": "«mediate between two people» = mediar entre dos personas.", "example": "c1-leading.lets-hear-both-sides", "situation": "trabajo"}
+  ],
+  "qa": [
+    {
+      "id": "c1-leading.qa.improve",
+      "question": "Is there anything about my presentation you think I could improve?",
+      "questionEs": "¿Hay algo de mi presentación que creas que podría mejorar?",
+      "accepted": [
+        {
+          "text": "Overall it was strong, but I'd cut the first five slides and get to the demo sooner.",
+          "es": "En general estuvo muy bien, pero yo quitaría las cinco primeras diapositivas e iría antes a la demo."
+        },
+        {
+          "text": "The content was great; I'd just slow down a bit when you explain the numbers.",
+          "es": "El contenido fue genial; solo iría un poco más despacio al explicar las cifras."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "It was very well, but you must to speak more slow.",
+          "es": "Estuvo muy bien, pero tienes que hablar más despacio."
+        },
+        {
+          "text": "I would cut the five first slides and go before to the demo.",
+          "es": "Quitaría las cinco primeras diapositivas e iría antes a la demo."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«estuvo muy bien» = «it was great/good», no «very well»; «must» va sin «to»; en inglés es «the first five», no «the five first».",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-leading.qa.differently",
+      "question": "So what would you like me to do differently next time?",
+      "questionEs": "Entonces, ¿qué te gustaría que hiciera distinto la próxima vez?",
+      "accepted": [
+        {
+          "text": "Going forward, I'd like you to flag any delays as soon as you spot them.",
+          "es": "A partir de ahora, me gustaría que avisaras de cualquier retraso en cuanto lo veas."
+        },
+        {
+          "text": "Next time, just give me a heads-up before the deadline slips.",
+          "es": "La próxima vez, simplemente avísame antes de que se retrase la fecha."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "In the future I would like that you advise me of the delays.",
+          "es": "En el futuro me gustaría que me avisaras de los retrasos."
+        },
+        {
+          "text": "Next time I want that you tell me before.",
+          "es": "La próxima vez quiero que me lo digas antes."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«quiero que hagas» = «I want you to do», nunca «I want that you…»; «avisar» es «let know» o «flag», no «advise» (= aconsejar).",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-leading.qa.how-are-things",
+      "question": "Honestly, I've been feeling a bit overwhelmed lately. There's just too much on my plate.",
+      "questionEs": "La verdad, últimamente me siento algo agobiado. Tengo demasiadas cosas encima.",
+      "accepted": [
+        {
+          "text": "Thanks for telling me. Let's go through what's on your plate and see what we can move.",
+          "es": "Gracias por contármelo. Repasemos lo que tienes encima y veamos qué podemos mover."
+        },
+        {
+          "text": "I'm glad you brought it up. Which of those projects could we hand off or postpone?",
+          "es": "Me alegra que lo hayas sacado. ¿Cuál de esos proyectos podríamos pasar a otra persona o retrasar?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Don't worry, it's normal. Everybody is overwhelmed here.",
+          "es": "No te preocupes, es normal. Aquí todo el mundo está agobiado."
+        },
+        {
+          "text": "Thanks for explain me. We must to see the priorities.",
+          "es": "Gracias por explicármelo. Tenemos que ver las prioridades."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Quitarle importancia («it's normal») cierra la conversación. «Thanks for» va con -ing («for telling»); «must» va sin «to».",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-leading.qa.career",
+      "question": "Where do you see yourself in a couple of years?",
+      "questionEs": "¿Dónde te ves dentro de un par de años?",
+      "accepted": [
+        {
+          "text": "I'd like to move into a tech lead role and do more mentoring.",
+          "es": "Me gustaría pasar a un puesto de tech lead y hacer más mentoría."
+        },
+        {
+          "text": "Ideally, leading a small team, but I'd need to get better at planning first.",
+          "es": "Idealmente, liderando un equipo pequeño, pero antes tendría que mejorar en planificación."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I see me as a leader of a little team.",
+          "es": "Me veo como líder de un equipo pequeño."
+        },
+        {
+          "text": "In two years I would like to arrive to be tech lead.",
+          "es": "Dentro de dos años me gustaría llegar a ser tech lead."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Es «I see myself», no «I see me»; «llegar a ser» = «become» o «move into», no «arrive to be».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-leading.qa.take-the-lead",
+      "question": "Would you be up for taking the lead on the new onboarding flow?",
+      "questionEs": "¿Te animarías a liderar el nuevo flujo de onboarding?",
+      "accepted": [
+        {
+          "text": "I'd love to, but I'd need someone to take over the bug triage first.",
+          "es": "Me encantaría, pero antes necesitaría que alguien se encargara de clasificar los bugs."
+        },
+        {
+          "text": "Definitely. Could we agree on what success looks like before I start?",
+          "es": "Claro que sí. ¿Podríamos acordar cómo es el éxito antes de empezar?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yes, I'm agree to lead it.",
+          "es": "Sí, estoy de acuerdo en liderarlo."
+        },
+        {
+          "text": "I would love, but first I need that somebody takes the bugs.",
+          "es": "Me encantaría, pero antes necesito que alguien se quede con los bugs."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Es «I agree», nunca «I'm agree»; «I'd love to» necesita el «to»; «necesito que alguien…» = «I need someone to…». «be up for» = animarse a.",
+      "voice": "en-US-EmmaNeural"
+    },
+    {
+      "id": "c1-leading.qa.stuck",
+      "question": "What should I do if I get stuck and you're not around?",
+      "questionEs": "¿Qué hago si me atasco y tú no estás?",
+      "accepted": [
+        {
+          "text": "Just ping Marcus; he knows the payments code better than anyone.",
+          "es": "Escríbele a Marcus; conoce el código de pagos mejor que nadie."
+        },
+        {
+          "text": "Make the call you think is right, and we'll go over it together afterwards.",
+          "es": "Toma la decisión que creas correcta y luego lo repasamos juntos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Take the decision that you think is correct.",
+          "es": "Toma la decisión que creas correcta."
+        },
+        {
+          "text": "You can ask to Marcus, he knows the code better that anyone.",
+          "es": "Puedes preguntarle a Marcus, conoce el código mejor que nadie."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«tomar una decisión» = «make a decision / make the call», no «take». «ask someone» sin «to»; «mejor que» = «better than», no «that».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-leading.qa.morale",
+      "question": "Morale's pretty low after the layoffs. How are you going to handle it?",
+      "questionEs": "La moral está bastante baja después de los despidos. ¿Cómo lo vas a gestionar?",
+      "accepted": [
+        {
+          "text": "First, I'll be honest about what happened, and then I'll make time for one-on-ones with everyone.",
+          "es": "Primero, seré sincero sobre lo que ha pasado y luego sacaré tiempo para un 1:1 con cada uno."
+        },
+        {
+          "text": "I'd acknowledge it openly and remind people how their work ties into the bigger picture.",
+          "es": "Lo reconocería abiertamente y recordaría a la gente cómo su trabajo encaja en el panorama general."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "I will make a meeting to animate the team.",
+          "es": "Haré una reunión para animar al equipo."
+        },
+        {
+          "text": "I will be sincere and I will explain what passed.",
+          "es": "Seré sincero y explicaré lo que pasó."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«hacer una reunión» = «have/hold a meeting»; «animar» = «motivate» o «cheer up», no «animate»; «lo que pasó» = «what happened», no «what passed».",
+      "voice": "en-US-AndrewNeural"
+    },
+    {
+      "id": "c1-leading.qa.thanks",
+      "question": "Thanks for staying late to get the release out. I know it was a lot.",
+      "questionEs": "Gracias por quedarte hasta tarde para sacar el lanzamiento. Sé que fue mucho.",
+      "accepted": [
+        {
+          "text": "No problem, it was a team effort. Dana did most of the heavy lifting.",
+          "es": "No hay de qué, fue un esfuerzo de equipo. Dana hizo la parte más pesada."
+        },
+        {
+          "text": "Thanks, I appreciate you saying that. It was worth it in the end.",
+          "es": "Gracias, te agradezco que lo digas. Al final mereció la pena."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Of nothing, it was an effort of team.",
+          "es": "De nada, fue un esfuerzo de equipo."
+        },
+        {
+          "text": "Thanks, I appreciate that you say it. In the end it deserved the pain.",
+          "es": "Gracias, agradezco que lo digas. Al final mereció la pena."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«de nada» nunca es «of nothing»; «esfuerzo de equipo» = «team effort»; «merecer la pena» = «be worth it». «heavy lifting» = la parte dura.",
+      "voice": "en-US-AvaNeural"
+    },
+    {
+      "id": "c1-leading.qa.performance",
+      "question": "I know I've missed a few deadlines. Am I in trouble?",
+      "questionEs": "Sé que me he saltado algunas fechas de entrega. ¿Estoy en un lío?",
+      "accepted": [
+        {
+          "text": "You're not in trouble, but we do need to fix it. Let's put together a plan.",
+          "es": "No estás en un lío, pero sí tenemos que arreglarlo. Preparemos un plan."
+        },
+        {
+          "text": "Not at all. I'd just like to understand what's been getting in your way.",
+          "es": "Para nada. Solo me gustaría entender qué te ha estado frenando."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Not at all, but you must to arrive to the deadlines.",
+          "es": "Para nada, pero tienes que llegar a las fechas."
+        },
+        {
+          "text": "No, I only want to understand what is passing to you.",
+          "es": "No, solo quiero entender qué te pasa."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«llegar a una fecha» = «meet a deadline»; «qué te pasa» = «what's going on with you», no «what is passing». «we do need» = énfasis con «do».",
+      "voice": "en-US-BrianNeural"
+    },
+    {
+      "id": "c1-leading.qa.conflict",
+      "question": "Honestly, I just can't work with Sam anymore. He ignores every suggestion I make.",
+      "questionEs": "Sinceramente, ya no puedo trabajar con Sam. Ignora todas las sugerencias que hago.",
+      "accepted": [
+        {
+          "text": "That sounds frustrating. Would you be open to sitting down with both of us to talk it through?",
+          "es": "Suena frustrante. ¿Estarías dispuesto a sentarte con los dos para hablarlo?"
+        },
+        {
+          "text": "Thanks for telling me. Can you give me a recent example so I understand what's going on?",
+          "es": "Gracias por contármelo. ¿Me das un ejemplo reciente para entender qué está pasando?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sam is like that, you must ignore him also.",
+          "es": "Sam es así, tú también tienes que ignorarlo."
+        },
+        {
+          "text": "I understand you. Would you be open to sit with both of us?",
+          "es": "Te entiendo. ¿Estarías dispuesto a sentarte con los dos?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Tomar partido empeora el conflicto. «be open to» va con -ing («open to sitting»); «te entiendo» suena más natural como «I get it» o «that sounds frustrating».",
+      "voice": "en-US-EmmaNeural"
+    }
+  ]
+}
