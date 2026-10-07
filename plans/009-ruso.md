@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:53Z 💻
+- Updated: 2026-10-07 23:00Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T121 + T120 running; then T123, T122
+- Next step: T120 + T122 running; then T123, T124 on the Mac
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -154,7 +154,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T121 — Russian A1: stories 1–6
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T114, T115, T116, T117, T118, T119
 - Where: any
 - Goal: Stories 1–6 with the brief-ru cast in Saint Petersburg (Lucía's arrival, the flat, breakfast, the metro, the market, a museum), `level: "A1"`, present tense, 80–130 words; key words reuse unit items by id where possible. Leave a one-line outline for stories 7–12 in DECISIONS (voices included).
@@ -163,10 +163,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: 6 stories (83–93 words), narrator Dmitry, women Svetlana; inline words story-ru-sosedka/eskalator/vspyshka → 27ba4ba
 
 ## T122 — Russian A1: stories 7–12
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T121
 - Where: any
 - Goal: Stories 7–12 continuing T121's outline (café, white nights, a cold and the pharmacy, a dacha weekend, the past week in past tense, goodbye at the airport), reusing T121's inline key words by id.
@@ -225,6 +225,7 @@ Worktree setup: npm ci
 - [ ] T118 @ec14baa — Russian language review (food, shopping) (queued 2026-10-07 💻)
 - [ ] T119 @a554ae7 — Russian language review (city, health) (queued 2026-10-07 💻)
 - [ ] T125 @41225a2 — code review (api/_lib languages, tts strip by voice) (queued 2026-10-07 💻)
+- [ ] T121 @27ba4ba — Russian language review (stories 1–6) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
@@ -245,6 +246,7 @@ Worktree setup: npm ci
 - 2026-10-07 T114: letter-group explanations are grammar cards gram.ru-a1-alphabet-<group>; alphabet unit holds many travel words (метро́, такси́, гости́ница, апте́ка, вокза́л…) that later units reuse by id; card gram.ru-a1-ty-or-vy exists (T115 must not duplicate it) (agent)
 - 2026-10-07 T112: Latin line inherits text colour at 0.7 opacity; hidden when equal to the text; FillGap Latin line masks the gap until answered (agent)
 - 2026-10-07 T115: pronouns folded into gram.ru-a1-pronouns-eto; ru-a1-numbers.bilet (билет) defined for later units to reuse (agent)
+- 2026-10-07 T121: outline 7–12 (narrator Dmitry, women Svetlana, Dima = narrator voice): 7 a1-07-cafe (Lucía+Anya, coffee and pirog on Nevsky); 8 a1-08-white-nights (embankment walk with Dima, bridges open at night); 9 a1-09-a-cold (Vera Petrovna takes her to the pharmacy); 10 a1-10-dacha (past, weekend with Dima); 11 a1-11-last-week (past, Lucía tells her mother); 12 a1-12-goodbye (past, Dima drives her to Pulkovo). Friends ты; Vera Petrovna вы at first then ты (agent)
 
 ## Proposals (new scope)
 - 2026-10-07 T111: server-side Prepárate TTS (api/) still gets stress marks; client strips them today
@@ -275,3 +277,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:52Z 💻 T119 done · → a554ae7 · verify ✓
 - 2026-10-07 22:52Z 💻 T121 launched · attempt 1 · agent a7f215c4bf6fb78eb
 - 2026-10-07 22:53Z 💻 T125 done · → 41225a2 · verify ✓
+- 2026-10-07 22:53Z 💻 T120 launched · attempt 1 · agent a043629e2af1e9598
+- 2026-10-07 23:00Z 💻 T121 done · → 27ba4ba · verify ✓
