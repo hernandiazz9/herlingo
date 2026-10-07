@@ -3,7 +3,8 @@
  * throwaway users (like supabase-js would call it): CORS, anonymous sign-up, refresh, get user,
  * set_profile, record_xp (duplicate/cap/future), groups, leaderboards, league_me, the multi-group
  * RPCs (league_status, league_ranking, league_podium, leave by code, group limit), email linking
- * through the printed magic link, sign in by email, sign-out, delete_me. Starts its own server on a
+ * through the printed magic link, sign in by email, sign-out, the cloud save RPCs (put → get →
+ * stale put = conflict → head → delete, too large, invalid, delete_me removes the copy), delete_me. Starts its own server on a
  * free port against `lang_lern_league_local` (created if missing) and removes its users at the end.
  */
 import { randomUUID } from "node:crypto";
@@ -256,6 +257,8 @@ async function run(lang: string) {
     "sign in with email: known → 200, unknown → otp_disabled",
   );
 
+  await cloudSave(a.access_token, b.access_token);
+
   const out = await call("POST", "/auth/v1/logout?scope=local", { token: a.access_token });
   const afterOut = await call("POST", "/auth/v1/token?grant_type=refresh_token", { body: { refresh_token: a.refresh_token } });
   ok(out.status === 204 && afterOut.status === 400, "sign-out revokes the session's refresh token");
@@ -264,12 +267,88 @@ async function run(lang: string) {
   const db = await rpc("league_delete_me", b.access_token);
   const gone = await rpc("league_me", b.access_token, { lang });
   ok(da.body === true && db.body === true && (gone.body as { profile: Json }).profile === null, "delete_me for both users");
+  const saveLeft = (
+    await mustRun(DB, "count saves", "select count(*) from league.saves where user_id = any(string_to_array(:'ids', ',')::uuid[]);", {
+      ids: [a.user.id, b.user.id].join(","),
+    })
+  ).trim();
+  ok(saveLeft === "0", "delete_me removes the cloud save");
   const leftover = (
     await mustRun(DB, "count memberships", "select count(*) from league.members where user_id = any(string_to_array(:'ids', ',')::uuid[]);", {
       ids: [a.user.id, b.user.id].join(","),
     })
   ).trim();
   ok(leftover === "0", "delete_me removes every membership");
+}
+
+interface SaveHead {
+  rev: number;
+  size: number;
+  updated_at: string;
+}
+
+const blob = (data: Record<string, string>) => ({ app: "lang-lern", format: 1, exportedAt: new Date().toISOString(), data });
+const message = (r: Res) => (r.body as { message?: string } | null)?.message;
+
+/** Cloud save (plan 010): optimistic concurrency, caps, per-user isolation. Leaves a copy for `b` so delete_me is checked. */
+async function cloudSave(a: string, b: string) {
+  const none = await rpc("league_save_head", a);
+  ok(none.status === 200 && none.body === null, "save_head without a copy → null", none.body);
+  const noGet = await rpc("league_save_get", a);
+  ok(noGet.status === 200 && noGet.body === null, "save_get without a copy → null", noGet.body);
+
+  const staleFirst = await rpc("league_save_put", a, { p_data: blob({}), p_base_rev: 3 });
+  const sf = staleFirst.body as { status: string; rev: number | null };
+  ok(staleFirst.status === 200 && sf.status === "conflict" && sf.rev === null, "put with a base rev and no copy → conflict (null head)", sf);
+
+  const v1 = blob({ "lang-lern:progress:it": JSON.stringify({ v: 1, xp: 10 }) });
+  const p1 = await rpc("league_save_put", a, { p_data: v1, p_base_rev: null });
+  const r1 = p1.body as unknown as { status: string } & SaveHead;
+  ok(p1.status === 200 && r1.status === "ok" && r1.rev === 1 && r1.size > 0, "first put (base null) → ok, rev 1", r1);
+
+  const got = await rpc("league_save_get", a);
+  const g = got.body as unknown as SaveHead & { data: { data: Record<string, string> } };
+  ok(
+    got.status === 200 && g.rev === 1 && g.data.data["lang-lern:progress:it"] === v1.data["lang-lern:progress:it"],
+    "get returns the copy and its rev",
+    got.body,
+  );
+  const otherUser = await rpc("league_save_get", b);
+  ok(otherUser.status === 200 && otherUser.body === null, "another user does not see the copy");
+
+  const v2 = blob({ "lang-lern:progress:it": JSON.stringify({ v: 1, xp: 20 }) });
+  const p2 = await rpc("league_save_put", a, { p_data: v2, p_base_rev: 1 });
+  ok((p2.body as { status: string; rev: number }).status === "ok" && (p2.body as { rev: number }).rev === 2, "put with the current rev → ok, rev 2", p2.body);
+
+  const stale = await rpc("league_save_put", a, { p_data: v1, p_base_rev: 1 });
+  const st = stale.body as { status: string; rev: number };
+  const after = (await rpc("league_save_get", a)).body as unknown as SaveHead & { data: { data: Record<string, string> } };
+  ok(
+    st.status === "conflict" && st.rev === 2 && after.rev === 2 && after.data.data["lang-lern:progress:it"] === v2.data["lang-lern:progress:it"],
+    "stale put → conflict with the stored head, nothing written",
+    { st, rev: after.rev },
+  );
+  const nullBase = await rpc("league_save_put", a, { p_data: v1, p_base_rev: null });
+  ok((nullBase.body as { status: string }).status === "conflict", "put with base null over an existing copy → conflict");
+
+  const head = await rpc("league_save_head", a);
+  const h = head.body as unknown as SaveHead & { data?: unknown };
+  ok(head.status === 200 && h.rev === 2 && h.size > 0 && typeof h.updated_at === "string" && h.data === undefined, "head → {rev, size, updated_at}, no data", h);
+
+  const invalid = await rpc("league_save_put", a, { p_data: { app: "other", format: 1, data: {} }, p_base_rev: 2 });
+  ok(invalid.status === 400 && message(invalid) === "save_invalid", "wrong app → save_invalid", invalid.body);
+  const big = await rpc("league_save_put", a, { p_data: blob({ "lang-lern:big": "x".repeat(2 * 1024 * 1024) }), p_base_rev: 2 });
+  ok(big.status === 400 && message(big) === "save_too_large", "over 2 MiB → save_too_large", big.body);
+
+  const del = await rpc("league_save_delete", a);
+  const goneHead = await rpc("league_save_head", a);
+  ok(del.status === 200 && goneHead.body === null, "save_delete → head null", { del: del.body, head: goneHead.body });
+  const again = await rpc("league_save_put", a, { p_data: v1, p_base_rev: null });
+  ok((again.body as { status: string; rev: number }).status === "ok" && (again.body as { rev: number }).rev === 1, "after delete, base null → ok, rev 1");
+  await rpc("league_save_delete", a);
+
+  const pb = await rpc("league_save_put", b, { p_data: v1, p_base_rev: null });
+  ok((pb.body as { status: string }).status === "ok", "second user saves a copy (removed by delete_me below)");
 }
 
 /** The language the check plays: the default pack (`pack.json` `"default": true`), else the first one. */

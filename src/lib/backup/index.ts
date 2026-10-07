@@ -4,8 +4,11 @@
  * in the app, a fake in scripts).
  *
  * File: `{ app: "lang-lern", format: 1, exportedAt, data: { <key>: <raw string> } }` with every
- * `lang-lern:*` key except the Prepárate access code and transient probe keys (a segment starting
- * with "__", e.g. `lang-lern:progress:__test`). Values are copied raw, so the stores' own versioned,
+ * `lang-lern:*` key except the Prepárate access code, the Liga session (`lang-lern:league-auth*`:
+ * a refresh token tied to this device; an old file that has it is imported without it, so the
+ * device keeps its own session), the cloud save bookkeeping (`lang-lern:cloud-save`) and transient
+ * probe keys (a segment starting with "__", e.g. `lang-lern:progress:__test`). The cloud save
+ * (plan 010, `src/lib/cloud-save/`) uses the same format with fewer keys: `isCloudSaveKey`. Values are copied raw, so the stores' own versioned,
  * tolerant parsing reads them back (older backups included). Saved packs' audio lives in Cache
  * Storage, not here: it is fetched again on first play.
  *
@@ -19,6 +22,12 @@ export const BACKUP_PREFIX = "lang-lern:";
 
 /** Never exported nor imported: a secret, typed again on a new device. */
 const ACCESS_KEY = `${BACKUP_PREFIX}coach:access`;
+/** supabase-js session (access + refresh token) and its helper keys: never exported nor imported. */
+const LEAGUE_AUTH_PREFIX = `${BACKUP_PREFIX}league-auth`;
+/** Every Liga key (session, account cache, outbox, groups…): tied to one account, never in the cloud copy. */
+const LEAGUE_PREFIX = `${BACKUP_PREFIX}league-`;
+/** Cloud save bookkeeping (`src/lib/cloud-save/`): about this device and account, never in a copy. */
+export const CLOUD_SAVE_KEY = `${BACKUP_PREFIX}cloud-save`;
 /** Kept on the device when the backup lacks them (the theme is overwritten when the file has one). */
 const KEEP_ON_IMPORT = new Set([ACCESS_KEY, `${BACKUP_PREFIX}theme`]);
 
@@ -54,16 +63,25 @@ const isObject = (v: unknown): v is Record<string, unknown> => !!v && typeof v =
 
 /** True for keys that belong in a backup. */
 export function isBackupKey(key: string): boolean {
-  if (!key.startsWith(BACKUP_PREFIX) || key === ACCESS_KEY) return false;
+  if (!key.startsWith(BACKUP_PREFIX) || key === ACCESS_KEY || key === CLOUD_SAVE_KEY) return false;
+  if (key.startsWith(LEAGUE_AUTH_PREFIX)) return false;
   return !key.slice(BACKUP_PREFIX.length).split(":").some((segment) => segment.startsWith("__"));
 }
 
-/** Every backup key currently stored, with its raw value. */
-function snapshot(store: KeyValueStore): Record<string, string> {
+/** True for keys that belong in the cloud copy: backup keys minus every `lang-lern:league-*` key. */
+export function isCloudSaveKey(key: string): boolean {
+  return isBackupKey(key) && !key.startsWith(LEAGUE_PREFIX);
+}
+
+/** Which keys a backup covers: the file (`isBackupKey`, default) or the cloud copy (`isCloudSaveKey`). */
+export type BackupKeyFilter = (key: string) => boolean;
+
+/** Every backup key currently stored (key-sorted), with its raw value. */
+function snapshot(store: KeyValueStore, filter: BackupKeyFilter): Record<string, string> {
   const keys: string[] = [];
   for (let i = 0; i < store.length; i++) {
     const key = store.key(i);
-    if (key !== null && isBackupKey(key)) keys.push(key);
+    if (key !== null && filter(key)) keys.push(key);
   }
   const data: Record<string, string> = {};
   for (const key of keys.sort()) {
@@ -73,9 +91,9 @@ function snapshot(store: KeyValueStore): Record<string, string> {
   return data;
 }
 
-/** Builds a backup of the device's data. */
-export function collectBackup(store: KeyValueStore, now: Date = new Date()): Backup {
-  return { app: BACKUP_APP, format: BACKUP_FORMAT, exportedAt: now.toISOString(), data: snapshot(store) };
+/** Builds a backup of the device's data (`filter`: `isCloudSaveKey` for the cloud copy). */
+export function collectBackup(store: KeyValueStore, now: Date = new Date(), filter: BackupKeyFilter = isBackupKey): Backup {
+  return { app: BACKUP_APP, format: BACKUP_FORMAT, exportedAt: now.toISOString(), data: snapshot(store, filter) };
 }
 
 export function serializeBackup(backup: Backup): string {
@@ -122,12 +140,18 @@ export function parseBackup(text: string): ParseResult {
 /**
  * Replaces the device's data with a validated backup: writes its keys and removes local backup keys
  * it lacks (except the access code and theme). Returns the data as it was before, for "Descargar la
- * copia anterior". On any storage error everything is put back as it was.
+ * copia anterior". On any storage error everything is put back as it was. `filter` limits both the
+ * keys written and the keys removed (`isCloudSaveKey` for a cloud copy: Liga keys stay untouched).
  */
-export function applyBackup(store: KeyValueStore, backup: Backup, now: Date = new Date()): ApplyResult {
-  const previous = collectBackup(store, now);
+export function applyBackup(
+  store: KeyValueStore,
+  backup: Backup,
+  now: Date = new Date(),
+  filter: BackupKeyFilter = isBackupKey,
+): ApplyResult {
+  const previous = collectBackup(store, now, filter);
   const before = previous.data;
-  const incoming = Object.entries(backup.data).filter(([key]) => isBackupKey(key));
+  const incoming = Object.entries(backup.data).filter(([key]) => filter(key));
   try {
     // Removals first: they free space for the writes.
     for (const key of Object.keys(before)) {
