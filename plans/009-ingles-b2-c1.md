@@ -249,7 +249,7 @@ Worktree setup: npm ci
 - Outcome: en placement: 16 questions, 4 per level A2–C1, every non-grammar unit covered; suggestLevel checked with a throwaway script · 9dff1ff · verify ✓ 💻 · not checked: take the test in the app
 
 ## T129 — English B2/C1 audio and pictures, final offline check
-- Status: pending
+- Status: running (attempt 1 · 💻 · writer · since 22:46Z)
 - Depends on: T117, T119, T125, T127, T128
 - Where: pc (edge-tts needs the Mac's internet; on-device check)
 - Goal: Generate en-US neural mp3 for every new English playable and the new pictures, commit them, and prove B2/C1 work offline with only English audio cached.
@@ -346,3 +346,4 @@ Worktree setup: npm ci
 - 2026-10-07 22:40Z 💻 T128 launched · attempt 1 · agent a40a6f1638a7f7220
 - 2026-10-07 22:46Z 💻 T128 done · worktree-agent-a40a6f1638a7f7220 → 9dff1ff · verify ✓ (dropped a2-check, a2-sore-throat, b1-crashing, b1-experience; ids not stored on device)
 - 2026-10-07 22:46Z 💻 T127 done · worktree-agent-ac83a5827992af568 → 2474623 · verify ✓
+- 2026-10-07 22:46Z 💻 T129 started by the 💻 writer (npm run audio)
