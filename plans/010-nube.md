@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 23:11Z 💻
+- Updated: 2026-10-07 23:16Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-010-nube @ cfe71d6 (from main) · worktree .claude/worktrees/plan-010 · not pushed
-- Next step: T134 running; then review + iPhone visual pass
-- Needs Hernán: -
+- Next step: all tasks done; code review T130–T134 + iPhone visual pass
+- Needs Hernán: npx supabase db push (new migration) before any deploy; OK to merge into main
 
 ## Shared contract (all tasks read this)
 
@@ -99,7 +99,7 @@ Worktree setup: npm ci
 - Outcome: Perfil card (CloudSaveSection lazy, CloudSaveCard, CloudConfirmDialog, undo panel) with every status, switch, Guardar ahora, Restaurar, Borrar; deleteCloudCopy(); hidden without Liga; agent checked 375 px light/dark · a3fc6ce · verify ✓ 💻 · not checked: pending-email line
 
 ## T134 — Account deletion wiring, docs, CLAUDE.md
-- Status: running (attempt 1 · 💻 · agent a0425436ef40bd0a5 · since 23:11Z)
+- Status: done
 - Depends on: T133
 - Where: any
 - Goal: Client side of deletion per the Shared contract ("Deletion"): after `deleteLeagueAccount()` and on account `deleted`/`user_changed`, reset `lang-lern:cloud-save` (keep `enabled`); the /liga/ delete confirmation copy says the cloud save is deleted too. Docs: new `docs/cloud-save.md` (decision record: second exception to "no accounts, no server", what is in the blob and what is excluded and why, RPC contract, caps with the 2 MiB / 120 per hour reasoning, client states, conflict policy, undo, try it locally), a link and short "Cloud save" section in docs/league.md (RPCs + delete behaviour), CLAUDE.md folder line for `src/lib/cloud-save/` and `src/components/cloud-save/`, convention line (blob = backup format, `isCloudSaveKey`, `lang-lern:cloud-save`, `lang-lern-cloud-undo` never deleted by the SW).
@@ -108,13 +108,14 @@ Worktree setup: npm ci
 - Done when:
   - With `npm run league:local`: delete the account → `league_save_head` for that user returns nothing (the check or a psql query) and Perfil shows the no-account state (report how checked).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: deletion resets lang-lern:cloud-save on deleted and user_changed (enabled kept); delete copy in AccountSection; BackupSection intro points to the cloud card when Liga is on; docs/cloud-save.md, docs/league.md Cloud save section, CLAUDE.md lines · 9d19829 · verify ✓ db:check ✓ 💻
 
 ## Review queue
 - [ ] T130 @aad60fe — code review (SQL: security definer, RLS, caps) (queued 2026-10-07 💻)
 - [ ] T131 @763dff6 — code review (client state machine, key exclusions, backup filter) (queued 2026-10-07 💻)
 - [ ] T132 @ae512b0 — code review (restore/undo, SW KEEP change) (queued 2026-10-07 💻)
 - [ ] T133 @a3fc6ce — code review (card, syncNow/lastError lib changes) (queued 2026-10-07 💻)
+- [ ] T134 @9d19829 — code review (docs accuracy, deletion reset) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T132 @ae512b0 — restore offer and conflict dialog on the iPhone, light + dark (queued 2026-10-07 💻)
@@ -142,10 +143,12 @@ Worktree setup: npm ci
 - 2026-10-07 T132: SW cleanup would have deleted lang-lern-cloud-undo → added to KEEP in sw.template.js; undo resets rev/hash and marks dirty so the next head check asks again; restore aborts unchanged if the undo copy cannot be stored; restore offer buttons Restaurar / Ahora no, conflict dialog default Decidir luego. (agent)
 - 2026-10-07 T133: syncNow uploads when no cloud copy is known (after Borrar); lastError clears when data returns to the last uploaded hash; extra status lines (Comprobando tu cuenta…, Guardando…, No hay copia en la nube…, copia sin restaurar); with the switch off Guardar ahora and Restaurar are hidden, Borrar stays. (agent)
 - 2026-10-07 T134: scope adds BackupSection intro copy ("Tu progreso solo está en este dispositivo…") pointing to the cloud card when Liga is on. (orchestrator)
+- 2026-10-07 T134: user_changed now also resets lang-lern:cloud-save (keeps enabled); delete confirmation copy lives in src/components/league/AccountSection.tsx (text only). (agent)
 
 ## Proposals (new scope)
 - 2026-10-07 plan: field-by-field merge of two copies (max XP, union of lessons and SRS by latest review) instead of choosing a whole copy.
 - 2026-10-07 T131: in dev, Turbopack loads the supabase-js chunk on / through RutaCard even with Liga disabled (pre-existing, no network request).
+- 2026-10-07 T134: the bookkeeping reset on account deletion only runs if the lazy cloud-save chunk is loaded; harmless (next account starts clean) but could move into account.ts.
 
 ## Log
 - 2026-10-07 22:24Z 💻 plan written from Hernán's brief (prompt-009-nube.md); not approved yet
@@ -158,3 +161,4 @@ Worktree setup: npm ci
 - 2026-10-07 22:59Z 💻 T133 launched · attempt 1 · agent af32c171b3c245a86
 - 2026-10-07 23:11Z 💻 T133 done · worktree-agent-af32c171b3c245a86 → a3fc6ce · verify ✓
 - 2026-10-07 23:11Z 💻 T134 launched · attempt 1 · agent a0425436ef40bd0a5 (+ BackupSection intro copy when Liga is on)
+- 2026-10-07 23:16Z 💻 T134 done · worktree-agent-a0425436ef40bd0a5 → 9d19829 · verify ✓ · db:check ✓; all tasks done, queues open
