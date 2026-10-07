@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:59Z 💻
+- Updated: 2026-10-07 23:11Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-010-nube @ cfe71d6 (from main) · worktree .claude/worktrees/plan-010 · not pushed
-- Next step: T133 running; then T134
+- Next step: T134 running; then review + iPhone visual pass
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -85,7 +85,7 @@ Worktree setup: npm ci
 - Outcome: restore offer + ¿Qué copia quieres conservar? dialog (CloudSaveHost in layout), restore with undo copy in Cache Storage (SW KEEP list fixed), CloudUndoPanel, Decidir luego uploads nothing; agent checked 375 px light/dark · ae512b0 · verify ✓ 💻
 
 ## T133 — Perfil card "Guardado en la nube"
-- Status: running (attempt 1 · 💻 · agent af32c171b3c245a86 · since 22:59Z)
+- Status: done
 - Depends on: T132
 - Where: any
 - Goal: Per the Shared contract ("Perfil"): the card with status line, size, switch, "Guardar ahora", "Restaurar desde la nube" with confirmation, "Borrar copia de la nube" with confirmation, the Liga-account and link-email calls to action, privacy line. Hidden when `leagueEnabled()` is false.
@@ -96,10 +96,10 @@ Worktree setup: npm ci
   - Without Liga env the card is absent and Perfil looks as today.
   - `npm run verify` → exit 0
   - Hand check (PC): the card in light and dark at 375 px, every status.
-- Outcome:
+- Outcome: Perfil card (CloudSaveSection lazy, CloudSaveCard, CloudConfirmDialog, undo panel) with every status, switch, Guardar ahora, Restaurar, Borrar; deleteCloudCopy(); hidden without Liga; agent checked 375 px light/dark · a3fc6ce · verify ✓ 💻 · not checked: pending-email line
 
 ## T134 — Account deletion wiring, docs, CLAUDE.md
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a0425436ef40bd0a5 · since 23:11Z)
 - Depends on: T133
 - Where: any
 - Goal: Client side of deletion per the Shared contract ("Deletion"): after `deleteLeagueAccount()` and on account `deleted`/`user_changed`, reset `lang-lern:cloud-save` (keep `enabled`); the /liga/ delete confirmation copy says the cloud save is deleted too. Docs: new `docs/cloud-save.md` (decision record: second exception to "no accounts, no server", what is in the blob and what is excluded and why, RPC contract, caps with the 2 MiB / 120 per hour reasoning, client states, conflict policy, undo, try it locally), a link and short "Cloud save" section in docs/league.md (RPCs + delete behaviour), CLAUDE.md folder line for `src/lib/cloud-save/` and `src/components/cloud-save/`, convention line (blob = backup format, `isCloudSaveKey`, `lang-lern:cloud-save`, `lang-lern-cloud-undo` never deleted by the SW).
@@ -114,9 +114,11 @@ Worktree setup: npm ci
 - [ ] T130 @aad60fe — code review (SQL: security definer, RLS, caps) (queued 2026-10-07 💻)
 - [ ] T131 @763dff6 — code review (client state machine, key exclusions, backup filter) (queued 2026-10-07 💻)
 - [ ] T132 @ae512b0 — code review (restore/undo, SW KEEP change) (queued 2026-10-07 💻)
+- [ ] T133 @a3fc6ce — code review (card, syncNow/lastError lib changes) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T132 @ae512b0 — restore offer and conflict dialog on the iPhone, light + dark (queued 2026-10-07 💻)
+- [ ] T133 @a3fc6ce — Perfil card on the iPhone, light + dark: synced, pending, conflict, no email (pending-email line unchecked) (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: no new login; the Liga account (anonymous Supabase user + optional email magic link) is the identity; restoring on another device needs the email linked; never store credentials or passwords in any table. (Hernán)
@@ -138,6 +140,8 @@ Worktree setup: npm ci
 - 2026-10-07 T130: local fake server MAX_BODY 1 MB → 4 MB; psql variables > 64 KiB passed through a temp file. (agent)
 - 2026-10-07 T131: league-auth* and cloud-save keys excluded from file backups; collectBackup/applyBackup take an optional key filter; head checked once per launch/account change, same data → adopt rev; rate limited → retry after 15 min, too large/invalid → no retry until data changes; save tokens read from LeagueError message; client started from src/components/league/LeagueSync.tsx (lazy import). (agent)
 - 2026-10-07 T132: SW cleanup would have deleted lang-lern-cloud-undo → added to KEEP in sw.template.js; undo resets rev/hash and marks dirty so the next head check asks again; restore aborts unchanged if the undo copy cannot be stored; restore offer buttons Restaurar / Ahora no, conflict dialog default Decidir luego. (agent)
+- 2026-10-07 T133: syncNow uploads when no cloud copy is known (after Borrar); lastError clears when data returns to the last uploaded hash; extra status lines (Comprobando tu cuenta…, Guardando…, No hay copia en la nube…, copia sin restaurar); with the switch off Guardar ahora and Restaurar are hidden, Borrar stays. (agent)
+- 2026-10-07 T134: scope adds BackupSection intro copy ("Tu progreso solo está en este dispositivo…") pointing to the cloud card when Liga is on. (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-07 plan: field-by-field merge of two copies (max XP, union of lessons and SRS by latest review) instead of choosing a whole copy.
@@ -152,3 +156,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:49Z 💻 T132 launched · attempt 1 · agent a0b6c93b85cf43637
 - 2026-10-07 22:59Z 💻 T132 done · worktree-agent-a0b6c93b85cf43637 → ae512b0 · verify ✓
 - 2026-10-07 22:59Z 💻 T133 launched · attempt 1 · agent af32c171b3c245a86
+- 2026-10-07 23:11Z 💻 T133 done · worktree-agent-af32c171b3c245a86 → a3fc6ce · verify ✓
+- 2026-10-07 23:11Z 💻 T134 launched · attempt 1 · agent a0425436ef40bd0a5 (+ BackupSection intro copy when Liga is on)
