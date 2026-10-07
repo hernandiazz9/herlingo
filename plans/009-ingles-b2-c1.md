@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:40Z 💻
+- Updated: 2026-10-07 22:46Z 💻
 - Writer: 💻 desktop (since 11:48Z)
-- Branch: plan-009-ingles-b2-c1 @ 6b8b385
-- Next step: integrate T127/T128, then T129 on 💻 (audio, images, offline check)
+- Branch: plan-009-ingles-b2-c1 @ 2474623
+- Next step: T129 on 💻: npm run audio + images, strict checks, offline/iPhone check
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -223,7 +223,7 @@ Worktree setup: npm ci
 - Outcome: C1 stories 1–6 (301–306), continue from B2 story 12 · 9f21e06 · verify ✓ 💻 · not checked: audio (T129), reading in app
 
 ## T127 — English C1: stories 7–12
-- Status: running (attempt 1 · 💻 · agent ac83a5827992af568 · since 22:40Z)
+- Status: done
 - Depends on: T126
 - Where: any
 - Goal: C1 stories 7–12 (order 307–312) following T126's outline (in Decisions).
@@ -232,10 +232,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with no story ⚠ warnings.
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: C1 stories 7–12 (307–312), ending: Pablo takes the Valencia offer · 2474623 · verify ✓ 💻 · not checked: audio (T129), reading in app
 
 ## T128 — English placement test for four levels
-- Status: running (attempt 1 · 💻 · agent a40a6f1638a7f7220 · since 22:40Z)
+- Status: done
 - Depends on: T112, T113, T114, T115, T116, T120, T121, T122, T123, T124
 - Where: any
 - Goal: Rewrite `content/en/extras/placement.json` with 16 graded questions, 4 per level (A2, B1, B2, C1; easy → hard), covering every non-grammar unit of each level and marking the lessons each proves, so `suggestLevel` (≥ 2/3 of a level and every lower level passed) suggests the right level. Keep the best existing A2/B1 questions by id where they fit.
@@ -246,7 +246,7 @@ Worktree setup: npm ci
   - A scratch script (not committed) with the real pack: all right → C1; A2+B1 right only → B1; A2 only → A2.
   - `npm run verify` → exit 0
   - Hand check (PC): English placement suggests the expected level.
-- Outcome:
+- Outcome: en placement: 16 questions, 4 per level A2–C1, every non-grammar unit covered; suggestLevel checked with a throwaway script · 9dff1ff · verify ✓ 💻 · not checked: take the test in the app
 
 ## T129 — English B2/C1 audio and pictures, final offline check
 - Status: pending
@@ -279,11 +279,14 @@ Worktree setup: npm ci
 - [ ] T124 @5137464 — content review (note: c1-storytelling.make-up 'inventarse' vs b2-relationships.make-up 'hacer las paces', kept separate) (queued 2026-10-07 💻)
 - [ ] T125 @60de43a — content review (queued 2026-10-07 💻)
 - [ ] T126 @9f21e06 — content review (queued 2026-10-07 💻)
+- [ ] T128 @9dff1ff — content review (queued 2026-10-07 💻)
+- [ ] T127 @2474623 — content review (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T111 @b45105e — four level chips + B2 empty-level message, Prepárate register badge (en formal / it usted), Ruta subtitle + Onboarding copy; light + dark 375 px (queued 2026-10-07 ☁️)
 - [ ] T117 @55efa70 — play two B2 dialogues with device voices (queued 2026-10-07 💻)
 - [ ] T125 @60de43a — play two C1 dialogues with device voices (queued 2026-10-07 💻)
+- [ ] T128 @9dff1ff — take the English placement test, confirm suggested level (all right → C1, A2+B1 → B1) (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: B2 and C1 complete the English pack with the full French-sized volume per level and the plan 008 molds; units, grammar, dialogues and stories in docs/brief-en.md (B2/C1 sections added 2026-10-07). (Hernán: "plan b2 c1", same structure)
@@ -341,3 +344,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:40Z 💻 T126 done · worktree-agent-a371e626f987dedd8 → 9f21e06 · verify ✓
 - 2026-10-07 22:40Z 💻 T127 launched · attempt 1 · agent ac83a5827992af568
 - 2026-10-07 22:40Z 💻 T128 launched · attempt 1 · agent a40a6f1638a7f7220
+- 2026-10-07 22:46Z 💻 T128 done · worktree-agent-a40a6f1638a7f7220 → 9dff1ff · verify ✓ (dropped a2-check, a2-sore-throat, b1-crashing, b1-experience; ids not stored on device)
+- 2026-10-07 22:46Z 💻 T127 done · worktree-agent-ac83a5827992af568 → 2474623 · verify ✓
