@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 22:52Z 💻
+- Updated: 2026-10-07 22:53Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-009-ruso @ cfe71d6 (from main)
-- Next step: T125 + T121 running; then T120, T123, T122
+- Next step: T121 + T120 running; then T123, T122
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -142,7 +142,7 @@ Worktree setup: npm ci
 - Outcome: city (50 phrases, St Petersburg) + health (51 phrases, 112); pack now 10 units, 422 phrases, 321 vocab, 76 Q&A → a554ae7
 
 ## T120 — Russian A1: 12 dialogues
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T114, T115, T116, T117, T118, T119
 - Where: any
 - Goal: The 12 dialogues listed in docs/brief-ru.md (`level: "A1"`, `unit`, one native speaker each, avatars, register-honest options `vy`/`tu` with Spanish feedback), order 1–12.
@@ -203,7 +203,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T125 — Prepárate: stress marks for packs with a `stress` rule
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T111
 - Where: any
 - Goal: When the active pack has `stress`, Prepárate's generation request tells the model to write the stress mark on every multi-syllable word (generic: the rule comes from the pack meta the client already sends or from a new optional field in the request contract); the generated pack's text is shown through T112's component automatically. Fake mode returns canned data with marks for such packs. No change for other packs.
@@ -212,7 +212,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run dev:coach` in fake mode with Russian active → a pack generates (report how checked; queue a Visual line otherwise).
   - `npm run verify` → exit 0
-- Outcome:
+- Outcome: stress block in user turn from pack.json stress (api/_lib/languages.ts); /tts strips marks by voice→pack; fake mode marked placeholders → 41225a2
 
 ## Review queue
 - [ ] T111 @5c16137 — code review (script.ts, build.ts stress check, audio strip) (queued 2026-10-07 💻)
@@ -224,10 +224,12 @@ Worktree setup: npm ci
 - [ ] T117 @98894e4 — Russian language review (transport, hotel) (queued 2026-10-07 💻)
 - [ ] T118 @ec14baa — Russian language review (food, shopping) (queued 2026-10-07 💻)
 - [ ] T119 @a554ae7 — Russian language review (city, health) (queued 2026-10-07 💻)
+- [ ] T125 @41225a2 — code review (api/_lib languages, tts strip by voice) (queued 2026-10-07 💻)
 
 ## Visual checks queue
 - [ ] T113 @bde39f8 — type 'privet' / 'jorosho' in a Russian answer exercise and say 'привет' with the mic (queued 2026-10-07 💻)
 - [ ] T112 @84820ed — Russian lesson/Frasario/dialogue/story with Latin line, Perfil switch off/on; Italian unchanged; light + dark 375 px; check Perfil hint 'Las letras latinas debajo del {idioma}' casing (queued 2026-10-07 💻)
+- [ ] T125 @41225a2 — Prepárate pack + interview with Russian active (fake mode): marks + Latin line; light + dark 375 px (queued 2026-10-07 💻)
 
 ## Decisions
 - 2026-10-07 plan: Russian (`ru`) is the fourth pack, levelled with one level A1 (`levels: ["A1"]`), full French volume; A2 later with the same molds; product note in docs/brief-ru.md (docs/brief.md not edited). (Hernán)
@@ -247,6 +249,7 @@ Worktree setup: npm ci
 ## Proposals (new scope)
 - 2026-10-07 T111: server-side Prepárate TTS (api/) still gets stress marks; client strips them today
 - 2026-10-07 T112: no Latin line on the learner's own typed/heard answer nor 'He oído «…»' in dialogues
+- 2026-10-07 T125: server doesn't check marks the model gets wrong (prompt only)
 
 ## Log
 - 2026-10-07 💻 plan written from the interview; not approved yet
@@ -270,3 +273,5 @@ Worktree setup: npm ci
 - 2026-10-07 22:49Z 💻 T118 done · → ec14baa · verify ✓
 - 2026-10-07 22:49Z 💻 T125 launched · attempt 1 · agent a5f2477b9aaa30b35
 - 2026-10-07 22:52Z 💻 T119 done · → a554ae7 · verify ✓
+- 2026-10-07 22:52Z 💻 T121 launched · attempt 1 · agent a7f215c4bf6fb78eb
+- 2026-10-07 22:53Z 💻 T125 done · → 41225a2 · verify ✓
