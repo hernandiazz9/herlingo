@@ -97,7 +97,14 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
   const autoplay = (e: Entry | undefined) => {
     const s = e?.step;
     if (!s) return;
-    if (s.type === "listen-meaning" || s.type === "dictation" || s.type === "picture-listen") void speak(s.audio, { lang });
+    if (
+      s.type === "listen-meaning" ||
+      s.type === "read-meaning" ||
+      s.type === "dictation" ||
+      s.type === "picture-listen" ||
+      s.type === "speak"
+    )
+      void speak(s.audio, { lang });
     else if (s.type === "answer") void speak(s.question, { lang });
     else if (s.type === "intro") void speak(s.item, { lang });
   };
@@ -162,6 +169,8 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
     if ((o.correct || entry.attempt >= MAX_RETRIES) && !resolved.includes(step.key)) {
       setResolved([...resolved, step.key]);
     }
+    // Correct: replay the answer with the green sheet (same tap, so iOS allows it).
+    if (o.correct && step.type !== "speak" && step.type !== "match" && step.solution.audio) void speak(step.solution.audio, { lang });
     setOutcome(o);
   };
 
