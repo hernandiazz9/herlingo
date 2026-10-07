@@ -44,7 +44,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T130 — Migration: `league.saves` + save RPCs + smoke SQL
-- Status: running (attempt 1 · 💻 · since 22:40Z)
+- Status: running (attempt 1 · 💻 · agent a62e7237f6ef165ce · since 22:40Z)
 - Depends on: none
 - Where: pc (local Postgres for `npm run db:check`)
 - Goal: Write `supabase/migrations/20261008000000_league_save.sql` per the Shared contract ("Server"): table, `league_save_head/get/put/delete`, size cap 2 MiB, 120 writes/hour rate limit, `league_delete_me` re-created to also delete the save. Extend `scripts/db/smoke.sql`: two users; put with null base → ok rev 1; put base 1 → rev 2; stale base → conflict, data unchanged; user B cannot see A's save; anon cannot call; too large / invalid → tokens; rate limit hit; `league_delete_me` removes the save; deleting the auth user cascades.
@@ -135,4 +135,4 @@ Worktree setup: npm ci
 
 ## Log
 - 2026-10-07 22:24Z 💻 plan written from Hernán's brief (prompt-009-nube.md); not approved yet
-- 2026-10-07 22:40Z 💻 plan approved by Hernán ("hazlo en worktree y comienza"); T130 launched · attempt 1
+- 2026-10-07 22:40Z 💻 plan approved by Hernán ("hazlo en worktree y comienza"); T130 launched · attempt 1 · agent a62e7237f6ef165ce
