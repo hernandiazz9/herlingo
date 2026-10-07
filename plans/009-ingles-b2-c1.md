@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 07:53Z ☁️
+- Updated: 2026-10-07 07:54Z ☁️
 - Writer: ☁️ session_01TRpJSE1mnE3mnYdfYQTXo5 since 07:53Z
 - Branch: plan-009-ingles-b2-c1 @ 416cc37
-- Next step: T111 (1 agent: seven-day rate-limit warning)
+- Next step: integrate T111, then T112
 - Needs Hernán: -
 
 ## Shared contract (all tasks read this)
@@ -27,7 +27,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T111 — English B2/C1 foundation and generic polish
-- Status: pending
+- Status: running (attempt 1 · ☁️ session_01TRpJSE1mnE3mnYdfYQTXo5 · agent a31cc210f51247cf5 · since 07:54Z)
 - Depends on: none
 - Where: any
 - Goal: (1) `content/en/pack.json`: levels A2–C1 and the two new situations (Shared contract, "Pack"). (2) `content:check` story word range per CEFR level, generic in build.ts: A1–B1 80–150 (unchanged, so it/fr/en stories keep passing), B2 100–200, C1 120–250. (3) Prepárate's register badge (`src/components/coach/PackView.tsx`, `PackPractice.tsx`) uses the same rule as DialogueSimulator: "Registro formal"/"Registro informal" when the active pack's `formalRegister` is `formal`, today's "Trato de usted"/"Trato de tú" otherwise. (4) Copy that assumes a trip: Ruta subtitle (`src/app/page.tsx`) and Onboarding (`src/components/path/Onboarding.tsx`) say "situaciones del viaje" for every pack → generic wording ("Lecciones cortas, de unos 5 minutos, por situaciones."; Hernán's default, 2026-10-07). (5) docs/content-guide.md documents levelled packs: `level` fields, side units `order % 100 >= 90`, story files `<level>-NN-<slug>.json`, the per-level word ranges, grammar cards in the grammar unit, and points to brief-en.
@@ -278,3 +278,4 @@ Worktree setup: npm ci
 ## Log
 - 2026-10-07 💻 plan drafted from plan 008's molds and Hernán's request; starts in the cloud
 - 2026-10-07 07:53Z ☁️ resume on ☁️ session_01TRpJSE1mnE3mnYdfYQTXo5 · seven-day rate-limit warning → 1 agent
+- 2026-10-07 07:54Z ☁️ T111 launched · attempt 1 · agent a31cc210f51247cf5
