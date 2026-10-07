@@ -1,6 +1,6 @@
 # Plan 010 — Nube: cloud save and restore of all on-device data through the Liga account
 
-Status: draft (written 2026-10-07 from Hernán's brief prompt-009-nube.md; awaiting Hernán's approval before anything runs)
+Status: active
 Created: 2026-10-07
 Base branch: plan-010-nube
 Goal: Today all progress lives only in localStorage (`lang-lern:*`): deleting the home-screen app, losing the phone or moving from the Safari tab to the installed PWA (iOS keeps them apart) loses it; the only way out is Perfil → Copia de seguridad. Add "Guardado en la nube": an automatic copy of the same backup blob in Supabase, tied to the existing Liga account (anonymous user + optional email magic link), restorable on a new device or after a reinstall by signing in with the email link. The device stays the source of truth and the app works offline as today; the cloud is a copy, conflicts are never resolved silently, and replaced local data can always be undone. Hidden when Liga is not configured. MVP speed: no automated tests; verification is `npm run verify` (+ `npm run db:check` and the local fake Supabase check for SQL/client tasks).
@@ -11,8 +11,8 @@ Worktree setup: npm ci
 - Updated: 2026-10-07 22:24Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-010-nube @ cfe71d6 (from main) · worktree .claude/worktrees/plan-010 · not pushed
-- Next step: Hernán approves the plan; then T130
-- Needs Hernán: approve the plan; open questions in Decisions marked (proposed)
+- Next step: T130 running; then T131
+- Needs Hernán: -
 
 ## Shared contract (all tasks read this)
 
@@ -44,7 +44,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T130 — Migration: `league.saves` + save RPCs + smoke SQL
-- Status: pending
+- Status: running (attempt 1 · 💻 · since 22:40Z)
 - Depends on: none
 - Where: pc (local Postgres for `npm run db:check`)
 - Goal: Write `supabase/migrations/20261008000000_league_save.sql` per the Shared contract ("Server"): table, `league_save_head/get/put/delete`, size cap 2 MiB, 120 writes/hour rate limit, `league_delete_me` re-created to also delete the save. Extend `scripts/db/smoke.sql`: two users; put with null base → ok rev 1; put base 1 → rev 2; stale base → conflict, data unchanged; user B cannot see A's save; anon cannot call; too large / invalid → tokens; rate limit hit; `league_delete_me` removes the save; deleting the auth user cascades.
@@ -121,12 +121,12 @@ Worktree setup: npm ci
 - 2026-10-07 plan: conflict policy v1 = restore offer on an empty device, otherwise choose a whole copy (XP, lessons, last activity per side); no field-by-field merge. (Hernán)
 - 2026-10-07 plan: hidden when `leagueEnabled()` is false; deleting the Liga account deletes the cloud save. (Hernán)
 - 2026-10-07 plan: plan numbered 010 (not 009 as in the brief: 009-ruso and 009-ingles-b2-c1 already exist; last task id was T129); branch `plan-010-nube` from main in worktree `.claude/worktrees/plan-010`. (orchestrator)
-- 2026-10-07 plan: the current backup includes `lang-lern:league-auth` (Supabase session with refresh token): excluded from the cloud blob and, from T131, from file backups too. (orchestrator, proposed)
-- 2026-10-07 plan: all `lang-lern:league-*` keys excluded from the cloud blob (outbox is deduped server-side by event id, but is per user; the rest is rebuildable). (orchestrator, proposed)
-- 2026-10-07 plan: size cap 2 MiB per save: estimated real backup 0.3–1 MB for 2–3 languages (SRS ~80 B/item, coach packs 5–15 KB each), well under `MAX_BACKUP_BYTES` (5 MiB); T133 shows the size so the cap can be revisited with a measured value. (orchestrator, proposed)
-- 2026-10-07 plan: rate limit 120 writes per rolling hour per user (client: 5 s debounce, ≥ 30 s between puts). (orchestrator, proposed)
-- 2026-10-07 plan: cloud save requires a joined Liga account (no anonymous user created just for saving); Perfil links to /liga/ otherwise. (orchestrator, proposed)
-- 2026-10-07 plan: undo copy kept in Cache Storage `lang-lern-cloud-undo` (localStorage has no room for a second copy), offered 7 days. (orchestrator, proposed)
+- 2026-10-07 plan: the current backup includes `lang-lern:league-auth` (Supabase session with refresh token): excluded from the cloud blob and, from T131, from file backups too. (orchestrator; approved by Hernán 2026-10-07)
+- 2026-10-07 plan: all `lang-lern:league-*` keys excluded from the cloud blob (outbox is deduped server-side by event id, but is per user; the rest is rebuildable). (orchestrator; approved by Hernán 2026-10-07)
+- 2026-10-07 plan: size cap 2 MiB per save: estimated real backup 0.3–1 MB for 2–3 languages (SRS ~80 B/item, coach packs 5–15 KB each), well under `MAX_BACKUP_BYTES` (5 MiB); T133 shows the size so the cap can be revisited with a measured value. (orchestrator; approved by Hernán 2026-10-07)
+- 2026-10-07 plan: rate limit 120 writes per rolling hour per user (client: 5 s debounce, ≥ 30 s between puts). (orchestrator; approved by Hernán 2026-10-07)
+- 2026-10-07 plan: cloud save requires a joined Liga account (no anonymous user created just for saving); Perfil links to /liga/ otherwise. (orchestrator; approved by Hernán 2026-10-07)
+- 2026-10-07 plan: undo copy kept in Cache Storage `lang-lern-cloud-undo` (localStorage has no room for a second copy), offered 7 days. (orchestrator; approved by Hernán 2026-10-07)
 - 2026-10-07 plan: coach mp3s and lesson audio (Cache Storage) are not in the cloud copy; they are re-downloaded or regenerated. (orchestrator)
 - 2026-10-07 plan: push policy: guarded push of `plan-010-nube` only; no merge into main, PR or deploy without Hernán's explicit OK; Hernán runs `npx supabase db push`. (Hernán)
 
@@ -135,3 +135,4 @@ Worktree setup: npm ci
 
 ## Log
 - 2026-10-07 22:24Z 💻 plan written from Hernán's brief (prompt-009-nube.md); not approved yet
+- 2026-10-07 22:40Z 💻 plan approved by Hernán ("hazlo en worktree y comienza"); T130 launched · attempt 1
