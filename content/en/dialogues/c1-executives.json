@@ -1,0 +1,58 @@
+{
+  "id": "dlg.en-c1-executives",
+  "title": "Presentar ante la dirección",
+  "description": "Le presentas al director de operaciones por qué hay que invertir un trimestre en rehacer la plataforma; vas al grano y hablas de negocio, no de código.",
+  "situation": "trabajo",
+  "unit": "c1-tech-decisions",
+  "order": 312,
+  "register": "formal",
+  "level": "C1",
+  "avatars": { "Director de operaciones": "fluent:man-white-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Director de operaciones", "text": "I've got ten minutes. Give me the bottom line: why do you need a whole quarter for this?", "es": "Tengo diez minutos. Vaya al grano: ¿por qué necesitan un trimestre entero para esto?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Ve al grano: la plataforma actual os hace perder clientes y cada nueva funcionalidad tarda el doble.",
+      "options": [
+        { "text": "The bottom line is that our current platform is costing us customers, and every new feature takes twice as long to ship.", "es": "En resumen, nuestra plataforma actual nos está haciendo perder clientes, y cada nueva funcionalidad tarda el doble en salir.", "verdict": "correct", "feedback": "¡Muy bien! «The bottom line is…» = lo esencial es; hablas de impacto en el negocio, que es lo que le importa." },
+        { "text": "The code is old and messy.", "es": "El código es viejo y desordenado.", "verdict": "acceptable", "feedback": "Puede ser cierto, pero a la dirección le importa el impacto en el negocio, no el código." },
+        { "text": "The bottom line is that our current platform is costing us customers, and every new feature takes the double to ship.", "es": "En resumen, nuestra plataforma actual nos está haciendo perder clientes, y cada nueva funcionalidad tarda el doble en salir.", "verdict": "wrong", "feedback": "«Tardar el doble» es «take twice as long»; «the double» es un calco del español." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Director de operaciones", "text": "That's a big claim. Do you have numbers to back it up?", "es": "Es una afirmación muy fuerte. ¿Tiene cifras que la respalden?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Da los datos: el treinta por ciento de las bajas mencionan la lentitud, y no solo eso, sino que los incidentes se han triplicado.",
+      "options": [
+        { "text": "We do. Thirty percent of cancellations mention slowness, and not only that, incidents have tripled this year.", "es": "Sí. El treinta por ciento de las bajas mencionan la lentitud, y no solo eso: los incidentes se han triplicado este año.", "verdict": "correct", "feedback": "¡Perfecto! «We do» con do enfático responde con seguridad, y los datos concretos respaldan tu propuesta." },
+        { "text": "Yes, many customers complain.", "es": "Sí, muchos clientes se quejan.", "verdict": "acceptable", "feedback": "Se entiende, pero «many» es vago; ante la dirección, las cifras convencen." },
+        { "text": "We do. Thirty percent of cancellations mention slowness, and not only that, incidents have triplicated this year.", "es": "Sí. El treinta por ciento de las bajas mencionan la lentitud, y no solo eso: los incidentes se han triplicado este año.", "verdict": "wrong", "feedback": "«Triplicarse» es «triple» («incidents have tripled»); «triplicate» es hacer tres copias de un documento." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Director de operaciones", "text": "And what's the risk if we hold off until next year?", "es": "¿Y cuál es el riesgo si lo aplazamos hasta el año que viene?", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Responde con énfasis: lo que más te preocupa es que la competencia os adelante mientras estáis parados.",
+      "options": [
+        { "text": "What worries me most is that our competitors will overtake us while we're standing still.", "es": "Lo que más me preocupa es que la competencia nos adelante mientras estamos parados.", "verdict": "correct", "feedback": "¡Genial! La frase escindida «What worries me most is…» da énfasis; «overtake» = adelantar." },
+        { "text": "The competition can win.", "es": "La competencia puede ganar.", "verdict": "acceptable", "feedback": "Se entiende, pero es vago; describe el riesgo concreto con énfasis." },
+        { "text": "What most worries me is that the competence will overtake us while we're standing still.", "es": "Lo que más me preocupa es que la competencia nos adelante mientras estamos parados.", "verdict": "wrong", "feedback": "«La competencia» (rivales) es «competitors» o «the competition»; «competence» es ser competente. Y es «What worries me most»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Director de operaciones", "text": "Fair point. I'll need a one-page plan with milestones before Friday's board meeting.", "es": "Buen argumento. Necesitaré un plan de una página con hitos antes de la reunión del consejo del viernes.", "voice": "en-US-BrianNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Confirma que se lo enviarás el jueves y agradécele su tiempo.",
+      "options": [
+        { "text": "You'll have it by Thursday. Thank you for your time.", "es": "Lo tendrá el jueves. Gracias por su tiempo.", "verdict": "correct", "feedback": "¡Muy bien! Breve, concreto y con plazo: justo lo que espera un directivo." },
+        { "text": "Okay, I'll try.", "es": "Vale, lo intentaré.", "verdict": "acceptable", "feedback": "«I'll try» transmite poca seguridad; comprométete con un plazo." },
+        { "text": "You'll have it for Thursday. Thank you for your time.", "es": "Lo tendrá el jueves. Gracias por su tiempo.", "verdict": "wrong", "feedback": "Un plazo límite se expresa con «by Thursday»; «for Thursday» es un calco de «para el jueves»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Director de operaciones", "text": "Good. Let's make it happen.", "es": "Bien. Hagámoslo realidad.", "voice": "en-US-BrianNeural" }
+  ]
+}
