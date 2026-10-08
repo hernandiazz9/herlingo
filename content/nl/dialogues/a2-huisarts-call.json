@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-huisarts-call",
+  "title": "Pedir cita al médico de cabecera",
+  "description": "Llamas a la consulta del huisarts: explicas a la asistente qué te pasa, quedas a una hora y preguntas qué hacer de noche.",
+  "situation": "salud",
+  "unit": "nl-a2-huisarts",
+  "order": 10,
+  "register": "u",
+  "level": "A2",
+  "avatars": { "Asistente": "fluent:woman-health-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Asistente", "text": "Huisartsenpraktijk De Linde, goedemorgen. Met Sandra.", "es": "Consulta De Linde, buenos días. Le atiende Sandra.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda, di tu nombre y que te gustaría una cita con el médico.",
+      "options": [
+        { "text": "Goedemorgen, met Hernán. Ik wil graag een afspraak met de huisarts.", "es": "Buenos días, soy Hernán. Quería una cita con el médico.", "verdict": "correct", "feedback": "¡Bien! Al teléfono te presentas con «met» + tu nombre." },
+        { "text": "Hallo, ik wil een afspraak.", "es": "Hola, quiero una cita.", "verdict": "acceptable", "feedback": "Se entiende; saluda y di tu nombre al llamar." },
+        { "text": "Goedemorgen, je spreekt met Hernán. Ik wil graag een afspraak.", "es": "Buenos días, hablas con Hernán. Quería una cita.", "verdict": "wrong", "feedback": "Con la asistente usa u: «u spreekt met…», o simplemente «met Hernán»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Asistente", "text": "Wat zijn uw klachten?", "es": "¿Qué le pasa?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que tienes fiebre desde hace tres días y que tienes frío.",
+      "options": [
+        { "text": "Ik heb al drie dagen koorts en ik heb het koud.", "es": "Tengo fiebre desde hace tres días y tengo frío.", "verdict": "correct", "feedback": "¡Bien! «al drie dagen» = desde hace tres días; «ik heb het koud» = tengo frío." },
+        { "text": "Ik ben ziek. Koorts.", "es": "Estoy malo. Fiebre.", "verdict": "acceptable", "feedback": "Se entiende; di también desde cuándo." },
+        { "text": "Ik heb al drie dagen koorts en ik heb koud.", "es": "Tengo fiebre desde hace tres días y tengo frío.", "verdict": "wrong", "feedback": "Para el frío que sientes se dice «ik heb het koud», con «het»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Asistente", "text": "Dat klinkt als griep. Kunt u morgen om kwart over tien komen?", "es": "Parece gripe. ¿Puede venir mañana a las diez y cuarto?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sí, que mañana a las diez y cuarto te va bien.",
+      "options": [
+        { "text": "Ja, morgen om kwart over tien is goed.", "es": "Sí, mañana a las diez y cuarto me va bien.", "verdict": "correct", "feedback": "¡Bien! «kwart over tien» = las diez y cuarto." },
+        { "text": "Ja, prima.", "es": "Sí, perfecto.", "verdict": "acceptable", "feedback": "Correcto; repetir la hora te ayuda a no equivocarte." },
+        { "text": "Ja, morgen om kwart voor tien is goed.", "es": "Sí, mañana a las diez menos cuarto me va bien.", "verdict": "wrong", "feedback": "«Kwart voor tien» son las diez menos cuarto; las diez y cuarto es «kwart over tien»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Asistente", "text": "Prima. Neemt u paracetamol tegen de koorts en drinkt u veel water.", "es": "Muy bien. Tome paracetamol para la fiebre y beba mucha agua.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta qué pasa si empeora por la noche.",
+      "options": [
+        { "text": "En als het 's nachts erger wordt?", "es": "¿Y si empeora por la noche?", "verdict": "correct", "feedback": "¡Bien! Con «als», el verbo va al final: «…erger wordt»." },
+        { "text": "En vannacht?", "es": "¿Y esta noche?", "verdict": "acceptable", "feedback": "Se entiende, pero no queda claro qué preguntas." },
+        { "text": "En als het wordt 's nachts erger?", "es": "¿Y si empeora por la noche?", "verdict": "wrong", "feedback": "Tras «als», el verbo va al final: «als het 's nachts erger wordt»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Asistente", "text": "Dan belt u de huisartsenpost. Tot morgen!", "es": "Entonces llame al servicio de urgencias de médicos de cabecera. ¡Hasta mañana!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

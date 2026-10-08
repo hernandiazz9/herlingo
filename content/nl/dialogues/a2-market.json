@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-market",
+  "title": "El puesto de queso del mercado",
+  "description": "En el mercado pruebas queso curado, eliges uno más suave, pides medio kilo y pagas en efectivo.",
+  "situation": "compras",
+  "unit": "nl-a2-shopping",
+  "order": 7,
+  "register": "tu",
+  "level": "A2",
+  "avatars": { "Quesero": "fluent:man-farmer" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Quesero", "text": "Goedemorgen! Wil je even proeven?", "es": "¡Buenos días! ¿Quieres probar?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, que te gustaría probar el queso curado.",
+      "options": [
+        { "text": "Ja, graag! Mag ik de oude kaas proeven?", "es": "¡Sí, por favor! ¿Puedo probar el queso curado?", "verdict": "correct", "feedback": "¡Bien! «oude kaas» = queso curado; «Mag ik…?» es una forma educada de pedir." },
+        { "text": "Ja. Oude kaas.", "es": "Sí. Queso curado.", "verdict": "acceptable", "feedback": "Se entiende; la pregunta completa es más amable." },
+        { "text": "Ja, graag! Mag ik de oud kaas proeven?", "es": "¡Sí, por favor! ¿Puedo probar el queso curado?", "verdict": "wrong", "feedback": "Con «de», el adjetivo lleva -e: «de oude kaas»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Quesero", "text": "Alsjeblieft. Deze is twee jaar oud. Lekker, hè?", "es": "Toma. Este tiene dos años. Está rico, ¿eh?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que está rico, pero que prefieres el semicurado (belegen).",
+      "options": [
+        { "text": "Lekker, maar ik heb liever belegen.", "es": "Rico, pero prefiero el semicurado.", "verdict": "correct", "feedback": "¡Bien! «liever» = preferir: «ik heb liever…»." },
+        { "text": "Lekker. Belegen, graag.", "es": "Rico. Semicurado, por favor.", "verdict": "acceptable", "feedback": "Se entiende y es natural en el mercado." },
+        { "text": "Lekker, maar ik wil meer belegen.", "es": "Rico, pero prefiero el semicurado.", "verdict": "wrong", "feedback": "«Meer» es «más» (cantidad); para preferir se usa «liever»: «ik heb liever belegen»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Quesero", "text": "Prima. Hoeveel wil je?", "es": "Muy bien. ¿Cuánto quieres?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pide medio kilo.",
+      "options": [
+        { "text": "Een pond, graag.", "es": "Medio kilo, por favor.", "verdict": "correct", "feedback": "¡Muy bien! En el mercado «een pond» = medio kilo." },
+        { "text": "Een halve kilo, graag.", "es": "Medio kilo, por favor.", "verdict": "acceptable", "feedback": "Correcto; en el mercado se oye mucho «een pond» (quinientos gramos)." },
+        { "text": "Anderhalve kilo, graag.", "es": "Kilo y medio, por favor.", "verdict": "wrong", "feedback": "«Anderhalve kilo» es kilo y medio; medio kilo es «een pond» o «een halve kilo»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Quesero", "text": "Dat is dan negen euro vijftig. Pinnen of contant?", "es": "Son nueve euros con cincuenta. ¿Tarjeta o efectivo?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que en efectivo y pregunta si tiene cambio de veinte.",
+      "options": [
+        { "text": "Contant. Heb je terug van twintig?", "es": "En efectivo. ¿Tienes cambio de veinte?", "verdict": "correct", "feedback": "¡Bien! «Heb je terug van…?» = ¿tienes cambio de…?" },
+        { "text": "Contant, alsjeblieft.", "es": "En efectivo, toma.", "verdict": "acceptable", "feedback": "Correcto; si pagas con un billete grande, pregunta si tiene cambio." },
+        { "text": "Contant. Heb je verandering van twintig?", "es": "En efectivo. ¿Tienes cambio de veinte?", "verdict": "wrong", "feedback": "Falso amigo: «verandering» es un cambio de situación; el cambio de dinero es «wisselgeld» o «Heb je terug van…?»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Quesero", "text": "Ja hoor. Alsjeblieft, tien euro vijftig terug. Eet smakelijk!", "es": "Sí, claro. Toma, diez euros con cincuenta de vuelta. ¡Que aproveche!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

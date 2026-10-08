@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-room-viewing",
+  "title": "Ver una habitación",
+  "description": "Visitas una habitación con la agente inmobiliaria: preguntas por los gastos, la fianza y si te puedes empadronar allí.",
+  "situation": "vivienda",
+  "unit": "nl-a2-housing",
+  "order": 3,
+  "register": "u",
+  "level": "A2",
+  "avatars": { "Agente inmobiliaria": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Agente inmobiliaria", "text": "Goedemiddag! U komt voor de bezichtiging? Komt u binnen.", "es": "¡Buenas tardes! ¿Viene a ver la habitación? Pase.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, gracias, y que la habitación es bonita y grande.",
+      "options": [
+        { "text": "Ja, dank u. De kamer is mooi en groot.", "es": "Sí, gracias. La habitación es bonita y grande.", "verdict": "correct", "feedback": "¡Bien! «de kamer» = la habitación (no la cámara)." },
+        { "text": "Ja. Mooi!", "es": "Sí. ¡Qué bonita!", "verdict": "acceptable", "feedback": "Se entiende y es natural; puedes añadir algo más." },
+        { "text": "Ja, dank u. Het kamer is mooi en groot.", "es": "Sí, gracias. La habitación es bonita y grande.", "verdict": "wrong", "feedback": "Es «de kamer», no «het»: el artículo de cada palabra hay que aprenderlo con ella." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Agente inmobiliaria", "text": "De kamer is gemeubileerd. De huur is zevenhonderd euro per maand.", "es": "La habitación está amueblada. El alquiler es de setecientos euros al mes.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta si eso incluye la energía y el internet.",
+      "options": [
+        { "text": "Is dat inclusief energie en internet?", "es": "¿Eso incluye la energía y el internet?", "verdict": "correct", "feedback": "¡Bien! «inclusief» = incluido: pregunta clave antes de alquilar." },
+        { "text": "En energie?", "es": "¿Y la energía?", "verdict": "acceptable", "feedback": "Se entiende; la pregunta completa es más clara." },
+        { "text": "Is dat inclusief de energie en de internet?", "es": "¿Eso incluye la energía y el internet?", "verdict": "wrong", "feedback": "Es «het internet», no «de»; y aquí suena mejor sin artículos." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Agente inmobiliaria", "text": "Nee, dat is kale huur. Energie en internet zijn ongeveer honderd euro extra.", "es": "No, es el alquiler sin gastos. La energía e internet son unos cien euros más.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta cuánto es la fianza.",
+      "options": [
+        { "text": "Hoeveel is de borg?", "es": "¿Cuánto es la fianza?", "verdict": "correct", "feedback": "¡Bien! «de borg» = la fianza." },
+        { "text": "En de borg?", "es": "¿Y la fianza?", "verdict": "acceptable", "feedback": "Se entiende; «Hoeveel is de borg?» es más claro." },
+        { "text": "Hoeveel is de garantie?", "es": "¿Cuánto es la garantía?", "verdict": "wrong", "feedback": "Falso amigo: «garantie» es la garantía de un producto; la fianza del alquiler es «de borg»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Agente inmobiliaria", "text": "Twee maanden huur. U krijgt de borg terug als u vertrekt.", "es": "Dos meses de alquiler. Le devuelven la fianza cuando se vaya.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si te puedes empadronar en esta dirección.",
+      "options": [
+        { "text": "Kan ik me op dit adres inschrijven?", "es": "¿Me puedo empadronar en esta dirección?", "verdict": "correct", "feedback": "¡Muy bien! Pregunta clave: sin empadronamiento no hay BSN." },
+        { "text": "Inschrijven op dit adres, mag dat?", "es": "Empadronarse en esta dirección, ¿se puede?", "verdict": "acceptable", "feedback": "Se entiende; la pregunta completa empieza por el verbo: «Kan ik me…?»." },
+        { "text": "Kan ik me op dit adres schrijven in?", "es": "¿Me puedo empadronar en esta dirección?", "verdict": "wrong", "feedback": "Con un modal, «inschrijven» va entero y al final, sin separarse." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Agente inmobiliaria", "text": "Ja, dat mag. Denkt u er rustig over na en belt u me morgen.", "es": "Sí, se puede. Piénselo con calma y llámeme mañana.", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

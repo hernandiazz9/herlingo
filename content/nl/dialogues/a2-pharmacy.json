@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-pharmacy",
+  "title": "En la farmacia",
+  "description": "Recoges en la apotheek lo que te ha recetado el médico, preguntas cómo tomarlo y pides algo para la tos.",
+  "situation": "salud",
+  "unit": "nl-a2-huisarts",
+  "order": 11,
+  "register": "u",
+  "level": "A2",
+  "avatars": { "Farmacéutico": "fluent:man-health-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Farmacéutico", "text": "Goedemiddag, zegt u het maar.", "es": "Buenas tardes, dígame.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que vienes a recoger una receta.",
+      "options": [
+        { "text": "Goedemiddag. Ik kom een recept ophalen.", "es": "Buenas tardes. Vengo a recoger una receta.", "verdict": "correct", "feedback": "¡Bien! «ophalen» = recoger; tras «kom», va entero al final." },
+        { "text": "Ik heb een recept van de huisarts.", "es": "Tengo una receta del médico.", "verdict": "acceptable", "feedback": "Correcto; también puedes decir «Ik kom een recept ophalen»." },
+        { "text": "Goedemiddag. Ik kom ophalen een recept.", "es": "Buenas tardes. Vengo a recoger una receta.", "verdict": "wrong", "feedback": "El infinitivo va al final: «Ik kom een recept ophalen»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Farmacéutico", "text": "Wat is uw geboortedatum?", "es": "¿Cuál es su fecha de nacimiento?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que naciste el doce de marzo de mil novecientos noventa.",
+      "options": [
+        { "text": "Twaalf maart negentienhonderdnegentig.", "es": "El doce de marzo de mil novecientos noventa.", "verdict": "correct", "feedback": "¡Bien! Los años antes del dos mil se dicen por centenas: «negentienhonderd…»." },
+        { "text": "Twaalf, drie, negentig.", "es": "Doce, tres, noventa.", "verdict": "acceptable", "feedback": "Se entiende, pero lo natural es «twaalf maart negentienhonderdnegentig»." },
+        { "text": "Twaalf maart duizend negenhonderd negentig.", "es": "El doce de marzo de mil novecientos noventa.", "verdict": "wrong", "feedback": "Calco del español: los años se dicen por centenas: «negentienhonderdnegentig»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Farmacéutico", "text": "Dank u. Hier is uw medicijn. Neemt u drie keer per dag één tablet.", "es": "Gracias. Aquí tiene su medicamento. Tome un comprimido tres veces al día.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si lo tienes que tomar antes o después de comer.",
+      "options": [
+        { "text": "Moet ik het voor of na het eten innemen?", "es": "¿Lo tengo que tomar antes o después de comer?", "verdict": "correct", "feedback": "¡Bien! «innemen» = tomar un medicamento; con «moet», va al final." },
+        { "text": "Voor het eten?", "es": "¿Antes de comer?", "verdict": "acceptable", "feedback": "Se entiende; la pregunta completa es más clara." },
+        { "text": "Moet ik het voor of na de eten innemen?", "es": "¿Lo tengo que tomar antes o después de comer?", "verdict": "wrong", "feedback": "Es «het eten», no «de eten»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Farmacéutico", "text": "Na het eten. En niet met alcohol, hoor.", "es": "Después de comer. Y nada de alcohol, ¿eh?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si también tienen algo para la tos.",
+      "options": [
+        { "text": "Heeft u ook iets tegen hoesten?", "es": "¿Tiene también algo para la tos?", "verdict": "correct", "feedback": "¡Bien! «tegen» = para (contra): «iets tegen hoesten»." },
+        { "text": "En voor de hoest?", "es": "¿Y para la tos?", "verdict": "acceptable", "feedback": "Se entiende; la pregunta completa es más educada." },
+        { "text": "Heb je ook iets tegen hoesten?", "es": "¿Tienes también algo para la tos?", "verdict": "wrong", "feedback": "Al farmacéutico que te trata de u, pregúntale con «Heeft u…?»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Farmacéutico", "text": "Ja, deze siroop. Dat is dan zes euro negentig. Beterschap!", "es": "Sí, este jarabe. Son seis euros con noventa. ¡Que se mejore!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

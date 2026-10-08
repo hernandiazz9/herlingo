@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-bike-repair",
+  "title": "En el taller de bicis",
+  "description": "Llevas la bici al fietsenmaker: rueda pinchada, una luz que no funciona y a qué hora la recoges.",
+  "situation": "transporte",
+  "unit": "nl-a2-transport",
+  "order": 9,
+  "register": "tu",
+  "level": "A2",
+  "avatars": { "Mecánico": "fluent:man-mechanic" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Mecánico", "text": "Hoi! Wat kan ik voor je doen?", "es": "¡Hola! ¿Qué puedo hacer por ti?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que tienes una rueda pinchada.",
+      "options": [
+        { "text": "Hoi! Mijn band is lek.", "es": "¡Hola! Tengo una rueda pinchada.", "verdict": "correct", "feedback": "¡Bien! «Mijn band is lek» = tengo la rueda pinchada." },
+        { "text": "Mijn fiets is kapot.", "es": "Mi bici está rota.", "verdict": "acceptable", "feedback": "Se entiende, pero di qué le pasa: «Mijn band is lek»." },
+        { "text": "Hoi! Mijn band is lekker.", "es": "¡Hola! Tengo una rueda pinchada.", "verdict": "wrong", "feedback": "¡Cuidado! «lekker» es rico; pinchado es «lek»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Mecánico", "text": "Voor of achter?", "es": "¿La de delante o la de atrás?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que la de atrás, y que la luz tampoco funciona.",
+      "options": [
+        { "text": "Achter. En mijn licht doet het ook niet.", "es": "La de atrás. Y la luz tampoco funciona.", "verdict": "correct", "feedback": "¡Bien! «het doet het niet» = no funciona." },
+        { "text": "Achter.", "es": "La de atrás.", "verdict": "acceptable", "feedback": "Correcto; aprovecha para decir lo de la luz." },
+        { "text": "Achter. En mijn licht doet ook niet.", "es": "La de atrás. Y la luz tampoco funciona.", "verdict": "wrong", "feedback": "Falta «het»: «mijn licht doet het niet»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Mecánico", "text": "Oké. Dat kost samen vijfentwintig euro.", "es": "Vale. Todo junto cuesta veinticinco euros.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta cuándo estará lista.",
+      "options": [
+        { "text": "Wanneer is hij klaar?", "es": "¿Cuándo estará lista?", "verdict": "correct", "feedback": "¡Bien! «de fiets» es de, así que se dice «hij»." },
+        { "text": "Vandaag klaar?", "es": "¿Lista hoy?", "verdict": "acceptable", "feedback": "Se entiende, pero mejor la pregunta completa." },
+        { "text": "Wanneer is hij lijst?", "es": "¿Cuándo estará lista?", "verdict": "wrong", "feedback": "Falso amigo: «lijst» es una lista; listo o terminado es «klaar»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Mecánico", "text": "Vanmiddag om vier uur. Dan kun je hem ophalen.", "es": "Esta tarde a las cuatro. Entonces puedes recogerla.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que vale, que la recoges a las cuatro.",
+      "options": [
+        { "text": "Prima, ik haal hem om vier uur op.", "es": "Perfecto, la recojo a las cuatro.", "verdict": "correct", "feedback": "¡Bien! «ophalen» se separa: «ik haal hem … op»." },
+        { "text": "Oké, vier uur.", "es": "Vale, a las cuatro.", "verdict": "acceptable", "feedback": "Se entiende; la frase completa practica «ophalen»." },
+        { "text": "Prima, ik haal op hem om vier uur.", "es": "Perfecto, la recojo a las cuatro.", "verdict": "wrong", "feedback": "La partícula va al final: «ik haal hem om vier uur op»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Mecánico", "text": "Top. Tot straks!", "es": "Genial. ¡Hasta luego!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

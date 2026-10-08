@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-supermarket",
+  "title": "En la caja del supermercado",
+  "description": "En la caja del súper: la tarjeta de cliente, la bolsa y una caja donde solo se paga con tarjeta.",
+  "situation": "compras",
+  "unit": "nl-a2-shopping",
+  "order": 5,
+  "register": "tu",
+  "level": "A2",
+  "avatars": { "Cajera": "fluent:woman" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Cajera", "text": "Hoi! Heb je een bonuskaart?", "es": "¡Hola! ¿Tienes tarjeta de cliente?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que no, que no tienes.",
+      "options": [
+        { "text": "Nee, ik heb geen bonuskaart.", "es": "No, no tengo tarjeta de cliente.", "verdict": "correct", "feedback": "¡Bien! Un sustantivo con «een» se niega con «geen»." },
+        { "text": "Nee, sorry.", "es": "No, lo siento.", "verdict": "acceptable", "feedback": "Correcto y natural; la frase completa practica «geen»." },
+        { "text": "Nee, ik heb niet een bonuskaart.", "es": "No, no tengo tarjeta de cliente.", "verdict": "wrong", "feedback": "Con un sustantivo sin artículo definido se niega con «geen»: «Ik heb geen bonuskaart»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Cajera", "text": "Geen probleem. Wil je een tas?", "es": "No pasa nada. ¿Quieres una bolsa?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que no, gracias, que no la necesitas.",
+      "options": [
+        { "text": "Nee, dank je. Ik heb hem niet nodig.", "es": "No, gracias. No la necesito.", "verdict": "correct", "feedback": "¡Bien! «dank je» con quien te trata de tú, y «de tas» es «hem»." },
+        { "text": "Nee.", "es": "No.", "verdict": "acceptable", "feedback": "Correcto, pero seco; añade «dank je»." },
+        { "text": "Nee, dank je. Ik heb niet nodig.", "es": "No, gracias. No la necesito.", "verdict": "wrong", "feedback": "Falta el objeto: «Ik heb hem niet nodig» (o simplemente «Nee, dank je»)." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Cajera", "text": "Oké. Dat is dan achttien euro veertig.", "es": "Vale. Entonces son dieciocho euros con cuarenta.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes pagar en efectivo.",
+      "options": [
+        { "text": "Kan ik contant betalen?", "es": "¿Puedo pagar en efectivo?", "verdict": "correct", "feedback": "¡Bien! «contant» = en efectivo." },
+        { "text": "Contant, mag dat?", "es": "En efectivo, ¿se puede?", "verdict": "acceptable", "feedback": "Se entiende y es coloquial." },
+        { "text": "Kan ik in contant betalen?", "es": "¿Puedo pagar en efectivo?", "verdict": "wrong", "feedback": "Calco de «en efectivo»: se dice «contant betalen», sin «in»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Cajera", "text": "Sorry, deze kassa is alleen pinnen.", "es": "Lo siento, en esta caja solo se paga con tarjeta.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que vale, que entonces pagas con tarjeta.",
+      "options": [
+        { "text": "Oké, dan pin ik.", "es": "Vale, entonces pago con tarjeta.", "verdict": "correct", "feedback": "¡Bien! Tras «dan», el verbo va antes del sujeto: «dan pin ik»." },
+        { "text": "Oké, met de pas.", "es": "Vale, con la tarjeta.", "verdict": "acceptable", "feedback": "Se entiende; «dan pin ik» es lo más natural." },
+        { "text": "Oké, dan ik pin.", "es": "Vale, entonces pago con tarjeta.", "verdict": "wrong", "feedback": "Orden V2: tras «dan» va el verbo y luego el sujeto: «dan pin ik»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Cajera", "text": "Top. Hier is je bon. Fijne dag!", "es": "Genial. Aquí tienes el tique. ¡Que tengas un buen día!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

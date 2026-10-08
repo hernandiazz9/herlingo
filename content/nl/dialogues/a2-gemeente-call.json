@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-gemeente-call",
+  "title": "Llamar a la gemeente",
+  "description": "Llamas al ayuntamiento para pedir cita, confirmar la hora y preguntar qué llevar y cómo llega el código del DigiD.",
+  "situation": "tramites",
+  "unit": "nl-a2-gemeente",
+  "order": 2,
+  "register": "u",
+  "level": "A2",
+  "avatars": { "Funcionaria": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Funcionaria", "text": "Gemeente Utrecht, goedemiddag. U spreekt met Anouk.", "es": "Ayuntamiento de Utrecht, buenas tardes. Le atiende Anouk.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y di que quieres pedir cita para empadronarte.",
+      "options": [
+        { "text": "Goedemiddag. Ik wil graag een afspraak maken voor een inschrijving.", "es": "Buenas tardes. Quería pedir cita para empadronarme.", "verdict": "correct", "feedback": "¡Bien! «Ik wil graag…» es la forma educada de pedir algo." },
+        { "text": "Hallo, ik wil een afspraak.", "es": "Hola, quiero una cita.", "verdict": "acceptable", "feedback": "Se entiende; «Ik wil graag een afspraak maken» suena más educado." },
+        { "text": "Goedemiddag. Ik wil graag een afspraak vragen voor een inschrijving.", "es": "Buenas tardes. Quería pedir cita para empadronarme.", "verdict": "wrong", "feedback": "Calco de «pedir cita»: en neerlandés se dice «een afspraak maken»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Funcionaria", "text": "Dat kan. Volgende week dinsdag om half tien?", "es": "Se puede. ¿El martes de la semana que viene a las nueve y media?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Repite para confirmar: el martes a las nueve y media. Y di que te va bien.",
+      "options": [
+        { "text": "Dinsdag om half tien? Ja, dat is goed.", "es": "¿El martes a las nueve y media? Sí, me va bien.", "verdict": "correct", "feedback": "¡Bien! «Half tien» = las nueve y media: media hora antes de las diez." },
+        { "text": "Ja, prima.", "es": "Sí, perfecto.", "verdict": "acceptable", "feedback": "Correcto; repetir la hora te ayuda a comprobar que la has entendido." },
+        { "text": "Dinsdag om half negen? Ja, dat is goed.", "es": "¿El martes a las ocho y media? Sí, me va bien.", "verdict": "wrong", "feedback": "«Half negen» son las ocho y media: «half» mira a la hora siguiente, así que las nueve y media es «half tien»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Funcionaria", "text": "Prima. Neemt u uw paspoort en uw huurcontract mee.", "es": "Muy bien. Traiga su pasaporte y su contrato de alquiler.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si tienes que llevar algo más.",
+      "options": [
+        { "text": "Moet ik nog iets anders meenemen?", "es": "¿Tengo que llevar algo más?", "verdict": "correct", "feedback": "¡Bien! «meenemen» es separable, pero con «moet» va entero al final." },
+        { "text": "Nog iets anders?", "es": "¿Algo más?", "verdict": "acceptable", "feedback": "Se entiende; la pregunta completa suena más educada." },
+        { "text": "Moet ik nog iets anders nemen mee?", "es": "¿Tengo que llevar algo más?", "verdict": "wrong", "feedback": "Con un modal, el verbo separable va entero y al final: «meenemen»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Funcionaria", "text": "Nee, dat is alles. Daarna krijgt u uw BSN en kunt u DigiD aanvragen.", "es": "No, eso es todo. Después recibirá su BSN y podrá solicitar el DigiD.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si el código de activación del DigiD llega por correo.",
+      "options": [
+        { "text": "Komt de activeringscode van DigiD per post?", "es": "¿El código de activación del DigiD llega por correo?", "verdict": "correct", "feedback": "¡Muy bien! «per post» = por correo." },
+        { "text": "En de code van DigiD?", "es": "¿Y el código del DigiD?", "verdict": "acceptable", "feedback": "Se entiende; di también qué quieres saber del código." },
+        { "text": "Komt de activeringscode van DigiD voor post?", "es": "¿El código de activación del DigiD llega por correo?", "verdict": "wrong", "feedback": "«Por correo» se dice «per post»; «voor» significa «para» o «antes de»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Funcionaria", "text": "Ja, die komt per post naar uw adres. Tot dinsdag!", "es": "Sí, llega por correo a su dirección. ¡Hasta el martes!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

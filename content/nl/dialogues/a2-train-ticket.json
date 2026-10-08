@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-train-ticket",
+  "title": "Billete de tren en Utrecht Centraal",
+  "description": "En la taquilla de NS compras un billete de ida y vuelta a Ámsterdam y preguntas por el andén, el transbordo y la llegada.",
+  "situation": "transporte",
+  "unit": "nl-a2-transport",
+  "order": 8,
+  "register": "u",
+  "level": "A2",
+  "avatars": { "Empleada de NS": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Empleada de NS", "text": "Goedemiddag. Kan ik u helpen?", "es": "Buenas tardes. ¿Puedo ayudarle?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide un billete de ida y vuelta a Ámsterdam.",
+      "options": [
+        { "text": "Ja, graag. Een retour naar Amsterdam, alstublieft.", "es": "Sí, por favor. Un billete de ida y vuelta a Ámsterdam.", "verdict": "correct", "feedback": "¡Bien! «een retour» = ida y vuelta; «enkele reis» = solo ida." },
+        { "text": "Amsterdam, alstublieft.", "es": "Ámsterdam, por favor.", "verdict": "acceptable", "feedback": "Se entiende; di también si es ida o ida y vuelta." },
+        { "text": "Ja, graag. Een retour voor Amsterdam, alstublieft.", "es": "Sí, por favor. Un billete de ida y vuelta para Ámsterdam.", "verdict": "wrong", "feedback": "Para el destino se usa «naar»: «een retour naar Amsterdam»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Empleada de NS", "text": "Dat is dan achttien euro tachtig.", "es": "Son dieciocho euros con ochenta.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Paga y pregunta de qué andén sale el tren.",
+      "options": [
+        { "text": "Van welk spoor vertrekt de trein?", "es": "¿De qué andén sale el tren?", "verdict": "correct", "feedback": "¡Bien! «het spoor» es de het, por eso «welk» y no «welke»." },
+        { "text": "Welk spoor?", "es": "¿Qué andén?", "verdict": "acceptable", "feedback": "Se entiende; la pregunta completa es más clara." },
+        { "text": "Van welke perron vertrekt de trein?", "es": "¿De qué andén sale el tren?", "verdict": "wrong", "feedback": "«Perron» es de het: «welk perron»; en las pantallas verás «spoor»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Empleada de NS", "text": "Spoor vijf. Maar let op: de trein heeft tien minuten vertraging.", "es": "Andén cinco. Pero ojo: el tren lleva diez minutos de retraso.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si tienes que hacer transbordo.",
+      "options": [
+        { "text": "Moet ik overstappen?", "es": "¿Tengo que hacer transbordo?", "verdict": "correct", "feedback": "¡Bien! «overstappen» = hacer transbordo." },
+        { "text": "Is het een directe trein?", "es": "¿Es un tren directo?", "verdict": "acceptable", "feedback": "Correcto; también se pregunta «Moet ik overstappen?»." },
+        { "text": "Moet ik stappen over?", "es": "¿Tengo que hacer transbordo?", "verdict": "wrong", "feedback": "Con un modal, el verbo separable va entero al final: «overstappen»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Empleada de NS", "text": "Nee, de trein gaat direct naar Amsterdam Centraal.", "es": "No, el tren va directo a Ámsterdam Central.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta a qué hora llega a Ámsterdam.",
+      "options": [
+        { "text": "Hoe laat komt de trein in Amsterdam aan?", "es": "¿A qué hora llega el tren a Ámsterdam?", "verdict": "correct", "feedback": "¡Bien! «aankomen» se separa: «komt … aan»." },
+        { "text": "Hoe laat in Amsterdam?", "es": "¿A qué hora en Ámsterdam?", "verdict": "acceptable", "feedback": "Se entiende, pero falta el verbo." },
+        { "text": "Hoe laat aankomt de trein in Amsterdam?", "es": "¿A qué hora llega el tren a Ámsterdam?", "verdict": "wrong", "feedback": "«aankomen» es separable: «Hoe laat komt de trein … aan?»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Empleada de NS", "text": "Om half vier. Goede reis!", "es": "A las tres y media. ¡Buen viaje!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

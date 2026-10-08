@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-gemeente-registration",
+  "title": "Empadronarte en la gemeente",
+  "description": "En la ventanilla del ayuntamiento de Utrecht: te empadronas con tu contrato y preguntas por el BSN y el DigiD.",
+  "situation": "tramites",
+  "unit": "nl-a2-gemeente",
+  "order": 1,
+  "register": "u",
+  "level": "A2",
+  "avatars": { "Funcionario": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Funcionario", "text": "Goedemorgen. Waarmee kan ik u helpen?", "es": "Buenos días. ¿En qué puedo ayudarle?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que vienes a empadronarte y que tienes cita a las diez.",
+      "options": [
+        { "text": "Goedemorgen. Ik kom me inschrijven. Ik heb om tien uur een afspraak.", "es": "Buenos días. Vengo a empadronarme. Tengo cita a las diez.", "verdict": "correct", "feedback": "¡Muy bien! «me inschrijven» = empadronarme, y «om tien uur» va antes de lo que tienes." },
+        { "text": "Ik wil me inschrijven, alstublieft.", "es": "Quiero empadronarme, por favor.", "verdict": "acceptable", "feedback": "Se entiende; si dices que tienes cita, te atienden antes." },
+        { "text": "Goedemorgen. Om tien uur ik heb een afspraak.", "es": "Buenos días. A las diez tengo cita.", "verdict": "wrong", "feedback": "Orden V2: si empiezas por «om tien uur», el verbo va segundo: «Om tien uur heb ik…»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Funcionario", "text": "Prima. Mag ik uw paspoort even zien?", "es": "Muy bien. ¿Me deja ver su pasaporte?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Dale el pasaporte: «aquí tiene, este es mi pasaporte».",
+      "options": [
+        { "text": "Alstublieft, hier is mijn paspoort.", "es": "Aquí tiene, este es mi pasaporte.", "verdict": "correct", "feedback": "¡Bien! «Alstublieft» también significa «aquí tiene» al entregar algo, en trato de u." },
+        { "text": "Alsjeblieft, hier is mijn paspoort.", "es": "Toma, aquí está mi pasaporte.", "verdict": "acceptable", "feedback": "Se entiende y mucha gente lo dice, pero con u lo correcto es «alstublieft»." },
+        { "text": "Alstublieft, hier is de paspoort.", "es": "Aquí tiene, este es el pasaporte.", "verdict": "wrong", "feedback": "Es «het paspoort», no «de»; y mejor «mijn paspoort»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Funcionario", "text": "Dank u. Heeft u ook een huurcontract?", "es": "Gracias. ¿Tiene también un contrato de alquiler?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sí, dale el contrato y di que vives aquí desde el lunes.",
+      "options": [
+        { "text": "Ja, hier is mijn huurcontract. Ik woon hier sinds maandag.", "es": "Sí, aquí está mi contrato. Vivo aquí desde el lunes.", "verdict": "correct", "feedback": "¡Perfecto! «sinds» = desde, para algo que ya empezó." },
+        { "text": "Ja, ik heb een huurcontract.", "es": "Sí, tengo contrato de alquiler.", "verdict": "acceptable", "feedback": "Correcto, pero dáselo y di desde cuándo vives aquí." },
+        { "text": "Ja, hier is mijn huurcontract. Ik woon hier vanaf maandag.", "es": "Sí, aquí está mi contrato. Vivo aquí a partir del lunes.", "verdict": "wrong", "feedback": "«Vanaf maandag» suena a futuro («a partir del lunes»); para algo que ya empezó se dice «sinds»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Funcionario", "text": "Goed. U krijgt uw BSN over een paar dagen per post.", "es": "Bien. Recibirá su BSN por correo en unos días.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta cuándo puedes solicitar el DigiD.",
+      "options": [
+        { "text": "Wanneer kan ik DigiD aanvragen?", "es": "¿Cuándo puedo solicitar el DigiD?", "verdict": "correct", "feedback": "¡Muy bien! Con un modal («kan»), el infinitivo «aanvragen» va al final." },
+        { "text": "En DigiD?", "es": "¿Y el DigiD?", "verdict": "acceptable", "feedback": "Se entiende por el contexto, pero la pregunta completa es más clara." },
+        { "text": "Wanneer kan ik aanvragen DigiD?", "es": "¿Cuándo puedo solicitar el DigiD?", "verdict": "wrong", "feedback": "Con «kan», el infinitivo va al final: «Wanneer kan ik DigiD aanvragen?»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Funcionario", "text": "Als u uw BSN heeft, kunt u het online aanvragen. Fijne dag!", "es": "Cuando tenga su BSN, puede solicitarlo por internet. ¡Que tenga un buen día!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

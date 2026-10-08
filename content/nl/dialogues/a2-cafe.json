@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-cafe",
+  "title": "Pedir en una cafetería",
+  "description": "En un café de Utrecht pides un café con leche, tarta de manzana y un bocadillo para llevar.",
+  "situation": "comida",
+  "unit": "nl-a2-shopping",
+  "order": 6,
+  "register": "tu",
+  "level": "A2",
+  "avatars": { "Barista": "fluent:man-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Barista", "text": "Hoi! Wat mag het zijn?", "es": "¡Hola! ¿Qué te pongo?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide un café con leche, por favor.",
+      "options": [
+        { "text": "Ik wil graag een koffie verkeerd, alsjeblieft.", "es": "Quería un café con leche, por favor.", "verdict": "correct", "feedback": "¡Bien! «koffie verkeerd» = café con mucha leche; «alsjeblieft» con quien te tutea." },
+        { "text": "Een koffie met melk.", "es": "Un café con leche.", "verdict": "acceptable", "feedback": "Se entiende; el café con leche típico se llama «koffie verkeerd»." },
+        { "text": "Zet je mij een koffie verkeerd?", "es": "¿Me pones un café con leche?", "verdict": "wrong", "feedback": "Calco de «¿me pones…?»: en neerlandés se dice «Ik wil graag…» o «Mag ik…?»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Barista", "text": "Komt eraan. Wil je er iets bij?", "es": "Marchando. ¿Quieres algo más?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pide un trozo de tarta de manzana.",
+      "options": [
+        { "text": "Ja, een stuk appeltaart, graag.", "es": "Sí, un trozo de tarta de manzana, por favor.", "verdict": "correct", "feedback": "¡Bien! «graag» al final = por favor." },
+        { "text": "Appeltaart.", "es": "Tarta de manzana.", "verdict": "acceptable", "feedback": "Se entiende, pero suena seco; añade «graag»." },
+        { "text": "Ja, een stuk van appeltaart, graag.", "es": "Sí, un trozo de tarta de manzana, por favor.", "verdict": "wrong", "feedback": "Sin «van»: «een stuk appeltaart» (calco de «un trozo de»)." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Barista", "text": "Met slagroom?", "es": "¿Con nata?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sí, que qué rico, y pregunta si también tienen bocadillo de queso.",
+      "options": [
+        { "text": "Ja, lekker! Hebben jullie ook een broodje kaas?", "es": "¡Sí, qué rico! ¿Tenéis también bocadillo de queso?", "verdict": "correct", "feedback": "¡Bien! «lekker» = rico; «een broodje kaas» se dice sin «met»." },
+        { "text": "Ja. En een broodje?", "es": "Sí. ¿Y un bocadillo?", "verdict": "acceptable", "feedback": "Se entiende; di también de qué lo quieres." },
+        { "text": "Ja, rijk! Hebben jullie ook een broodje kaas?", "es": "¡Sí, qué rico! ¿Tenéis también bocadillo de queso?", "verdict": "wrong", "feedback": "Falso amigo: «rijk» es rico de dinero; para la comida se dice «lekker»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Barista", "text": "Ja hoor. Eet je het hier of neem je het mee?", "es": "Sí, claro. ¿Te lo tomas aquí o es para llevar?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que es para llevar.",
+      "options": [
+        { "text": "Ik neem het mee.", "es": "Me lo llevo.", "verdict": "correct", "feedback": "¡Bien! «meenemen» se separa: «ik neem het mee»." },
+        { "text": "Meenemen, graag.", "es": "Para llevar, por favor.", "verdict": "acceptable", "feedback": "Se entiende y se oye mucho; la frase completa es «Ik neem het mee»." },
+        { "text": "Ik meeneem het.", "es": "Me lo llevo.", "verdict": "wrong", "feedback": "«meenemen» es separable: «ik neem het mee», con «mee» al final." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Barista", "text": "Prima. Dat is dan elf euro twintig.", "es": "Muy bien. Entonces son once euros con veinte.", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

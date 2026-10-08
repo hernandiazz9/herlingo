@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-new-neighbour",
+  "title": "La vecina nueva",
+  "description": "Te presentas a la vecina de abajo, le cuentas que acabas de mudarte y te invita a su cumpleaños.",
+  "situation": "social",
+  "unit": "nl-a2-neighbours",
+  "order": 12,
+  "register": "tu",
+  "level": "A2",
+  "avatars": { "Vecina": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Vecina", "text": "Hoi! Ben jij de nieuwe buurman?", "es": "¡Hola! ¿Eres tú el vecino nuevo?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que sí, preséntate y di que vives en el segundo.",
+      "options": [
+        { "text": "Ja! Ik ben Hernán. Ik woon op twee hoog.", "es": "¡Sí! Soy Hernán. Vivo en el segundo.", "verdict": "correct", "feedback": "¡Bien! «twee hoog» = el segundo piso." },
+        { "text": "Ja, Hernán.", "es": "Sí, Hernán.", "verdict": "acceptable", "feedback": "Se entiende; di también dónde vives." },
+        { "text": "Ja! Ik ben Hernán. Ik woon op de tweede vloer.", "es": "¡Sí! Soy Hernán. Vivo en el segundo.", "verdict": "wrong", "feedback": "«Vloer» es el suelo; el piso de un edificio es «verdieping», o «twee hoog»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Vecina", "text": "Leuk! Ik ben Inge, van één hoog. Woon je hier al lang?", "es": "¡Qué bien! Soy Inge, del primero. ¿Llevas mucho aquí?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que no, que te mudaste hace dos semanas.",
+      "options": [
+        { "text": "Nee, ik ben twee weken geleden verhuisd.", "es": "No, me mudé hace dos semanas.", "verdict": "correct", "feedback": "¡Muy bien! «verhuizen» forma el perfecto con «zijn»: «ik ben verhuisd»." },
+        { "text": "Nee, twee weken.", "es": "No, dos semanas.", "verdict": "acceptable", "feedback": "Se entiende; la frase completa practica el perfecto." },
+        { "text": "Nee, ik heb twee weken geleden verhuisd.", "es": "No, me mudé hace dos semanas.", "verdict": "wrong", "feedback": "Con «verhuisd» el auxiliar es «zijn»: «ik ben verhuisd»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Vecina", "text": "Welkom! Zeg, ik ben zaterdag jarig. Kom je ook?", "es": "¡Bienvenido! Oye, el sábado es mi cumpleaños. ¿Vienes?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sí, que qué bien, y pregunta a qué hora empieza la fiesta.",
+      "options": [
+        { "text": "Ja, gezellig! Hoe laat begint het feestje?", "es": "¡Sí, qué bien! ¿A qué hora empieza la fiesta?", "verdict": "correct", "feedback": "¡Bien! «gezellig» = agradable, acogedor: la palabra estrella del neerlandés." },
+        { "text": "Ja, oké.", "es": "Sí, vale.", "verdict": "acceptable", "feedback": "Correcto pero frío; muestra un poco de ilusión: «Ja, leuk!»." },
+        { "text": "Ja, gezellig! Hoe laat begint de feestje?", "es": "¡Sí, qué bien! ¿A qué hora empieza la fiesta?", "verdict": "wrong", "feedback": "Los diminutivos (-je) siempre van con het: «het feestje»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Vecina", "text": "Om acht uur. Mijn hele familie komt ook.", "es": "A las ocho. También viene toda mi familia.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si llevas algo rico.",
+      "options": [
+        { "text": "Zal ik iets lekkers meenemen?", "es": "¿Llevo algo rico?", "verdict": "correct", "feedback": "¡Bien! Después de «iets», el adjetivo lleva -s: «iets lekkers»." },
+        { "text": "Kan ik iets meenemen?", "es": "¿Puedo llevar algo?", "verdict": "acceptable", "feedback": "Correcto; «iets lekkers» concreta que llevas algo rico." },
+        { "text": "Zal ik iets lekker meenemen?", "es": "¿Llevo algo rico?", "verdict": "wrong", "feedback": "Después de «iets», el adjetivo lleva -s: «iets lekkers»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Vecina", "text": "Wat lief! Een appeltaart is altijd goed. Tot zaterdag!", "es": "¡Qué detalle! Una tarta de manzana siempre va bien. ¡Hasta el sábado!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

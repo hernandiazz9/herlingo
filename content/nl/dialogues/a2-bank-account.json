@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-a2-bank-account",
+  "title": "Abrir una cuenta en el banco",
+  "description": "En el banco abres una cuenta: confirmas que estás empadronado y preguntas por la tarjeta y las transferencias.",
+  "situation": "dinero",
+  "unit": "nl-a2-bank",
+  "order": 4,
+  "register": "u",
+  "level": "A2",
+  "avatars": { "Empleado del banco": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Empleado del banco", "text": "Goedemorgen, welkom. Wat kan ik voor u doen?", "es": "Buenos días, bienvenido. ¿Qué puedo hacer por usted?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que te gustaría abrir una cuenta.",
+      "options": [
+        { "text": "Goedemorgen. Ik wil graag een rekening openen.", "es": "Buenos días. Me gustaría abrir una cuenta.", "verdict": "correct", "feedback": "¡Bien! «een rekening openen» = abrir una cuenta." },
+        { "text": "Een rekening, alstublieft.", "es": "Una cuenta, por favor.", "verdict": "acceptable", "feedback": "Se entiende; con el verbo «openen» queda más claro." },
+        { "text": "Goedemorgen. Ik wil graag een rekening open.", "es": "Buenos días. Me gustaría abrir una cuenta.", "verdict": "wrong", "feedback": "«Open» es el adjetivo (abierto); el verbo es «openen»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Empleado del banco", "text": "Natuurlijk. Heeft u een BSN en een adres in Nederland?", "es": "Claro. ¿Tiene BSN y una dirección en los Países Bajos?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí, que estás empadronado en Utrecht.",
+      "options": [
+        { "text": "Ja, ik sta ingeschreven in Utrecht.", "es": "Sí, estoy empadronado en Utrecht.", "verdict": "correct", "feedback": "¡Muy bien! «Ik sta ingeschreven» = estoy empadronado." },
+        { "text": "Ja, ik heb een BSN.", "es": "Sí, tengo BSN.", "verdict": "acceptable", "feedback": "Correcto; decir que estás empadronado responde también a lo de la dirección." },
+        { "text": "Ja, ik heb ingeschreven in Utrecht.", "es": "Sí, me he empadronado en Utrecht.", "verdict": "wrong", "feedback": "Falta «me»: «Ik heb me ingeschreven», o mejor «Ik sta ingeschreven»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Empleado del banco", "text": "Prima. U krijgt uw bankpas over een week per post.", "es": "Muy bien. Recibirá su tarjeta por correo en una semana.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si con ella puedes pagar con tarjeta en todas partes.",
+      "options": [
+        { "text": "Kan ik daarmee overal pinnen?", "es": "¿Puedo pagar con ella en todas partes?", "verdict": "correct", "feedback": "¡Bien! «pinnen» = pagar con tarjeta (y también sacar dinero)." },
+        { "text": "Kan ik met de pas betalen?", "es": "¿Puedo pagar con la tarjeta?", "verdict": "acceptable", "feedback": "Correcto; «pinnen» es la palabra del día a día." },
+        { "text": "Kan ik daarmee overal pin?", "es": "¿Puedo pagar con ella en todas partes?", "verdict": "wrong", "feedback": "Después de «kan» va el infinitivo entero: «pinnen»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Empleado del banco", "text": "Ja, en u kunt ook met iDEAL en Tikkie betalen.", "es": "Sí, y también puede pagar con iDEAL y Tikkie.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta cómo transfieres dinero a otra cuenta.",
+      "options": [
+        { "text": "Hoe maak ik geld over naar een andere rekening?", "es": "¿Cómo transfiero dinero a otra cuenta?", "verdict": "correct", "feedback": "¡Muy bien! «overmaken» se separa: «ik maak … over»." },
+        { "text": "Geld overmaken, hoe?", "es": "Transferir dinero, ¿cómo?", "verdict": "acceptable", "feedback": "Se entiende; la pregunta completa es más natural." },
+        { "text": "Hoe overmaak ik geld naar een andere rekening?", "es": "¿Cómo transfiero dinero a otra cuenta?", "verdict": "wrong", "feedback": "«overmaken» es separable: «Hoe maak ik geld over…?»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Empleado del banco", "text": "Dat doet u in de app. Ik laat het u zo even zien.", "es": "Eso lo hace en la app. Ahora mismo se lo enseño.", "voice": "nl-NL-MaartenNeural" }
+  ]
+}
