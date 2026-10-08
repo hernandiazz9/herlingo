@@ -1,0 +1,108 @@
+{
+  "placement": [
+    {
+      "id": "placement.nl-a2-half-drie",
+      "level": "A2",
+      "prompt": "La funcionaria te confirma la cita. ¿A qué hora es?",
+      "text": "Uw afspraak bij de gemeente is morgen om half drie.",
+      "options": ["Su cita en el ayuntamiento es mañana a las tres y media.", "Su cita en el ayuntamiento es mañana a las tres menos cuarto.", "Su cita en el ayuntamiento es mañana a las dos y media.", "Su cita en el banco es pasado mañana a las dos y media."],
+      "answer": 2,
+      "lessons": ["nl-a2-numbers.l.klok", "nl-a2-gemeente.l.afspraak"]
+    },
+    {
+      "id": "placement.nl-a2-kunt-u",
+      "level": "A2",
+      "prompt": "En la ventanilla de la gemeente: ¿cómo le preguntas a la funcionaria, de usted, si te puede ayudar un momento?",
+      "options": ["Kun je mij even helpen?", "Kunt u mij even helpen?", "Kunt u ik even helpen?", "Kunt u even helpen mij?"],
+      "answer": 1,
+      "lessons": ["nl-a2-hello.l.je-u", "nl-a2-gemeente.l.balie"]
+    },
+    {
+      "id": "placement.nl-a2-morgen-ga-ik",
+      "level": "A2",
+      "prompt": "¿Cómo dices que mañana vas a Ámsterdam en tren?",
+      "options": ["Morgen ik ga met de trein naar Amsterdam.", "Morgen ga ik met het trein naar Amsterdam.", "Ik ga morgen met de trein in Amsterdam.", "Morgen ga ik met de trein naar Amsterdam."],
+      "answer": 3,
+      "lessons": ["nl-a2-grammar.l.zinnen", "nl-a2-grammar.l.woorden", "nl-a2-transport.l.trein"]
+    },
+    {
+      "id": "placement.nl-a2-opbellen",
+      "level": "A2",
+      "prompt": "Un compañero de piso te deja un audio. ¿Qué significa?",
+      "text": "Ik bel je morgen op, want vandaag moet ik tot zes uur werken.",
+      "options": ["Te llamo mañana, porque hoy tengo que trabajar hasta las seis.", "Te llamo hoy, porque mañana tengo que trabajar hasta las seis.", "Llámame mañana, porque hoy trabajo hasta las siete.", "Te recojo mañana, porque hoy tengo que trabajar hasta las seis."],
+      "answer": 0,
+      "lessons": ["nl-a2-grammar.l.werkwoorden", "nl-a2-numbers.l.klok"]
+    },
+    {
+      "id": "placement.nl-a2-vertraging",
+      "level": "A2",
+      "prompt": "Preguntas en la estación por el tren a Róterdam. ¿Qué te contestan?",
+      "text": "De trein naar Rotterdam heeft tien minuten vertraging en vertrekt van spoor vijf. U hoeft niet over te stappen.",
+      "options": ["El tren a Róterdam sale dentro de diez minutos de la vía cinco. Tiene que hacer transbordo.", "El tren a Róterdam lleva diez minutos de retraso y sale de la vía cinco. No tiene que hacer transbordo.", "El tren a Róterdam lleva diez minutos de retraso y sale de la vía nueve. Tiene que hacer transbordo en Utrecht.", "El tren a Róterdam está cancelado. Coja el de dentro de diez minutos en la vía cinco."],
+      "answer": 1,
+      "lessons": ["nl-a2-transport.l.trein", "nl-a2-numbers.l.nul-twintig"]
+    },
+    {
+      "id": "placement.nl-a2-niet-lekker",
+      "level": "A2",
+      "prompt": "Llamas a la consulta del médico de cabecera y tu vecina habla por ti. ¿Qué dice?",
+      "text": "Hij voelt zich niet lekker. Hij heeft al drie dagen koorts en hoofdpijn.",
+      "options": ["No le sienta bien la comida. Lleva tres días con náuseas y dolor de tripa.", "No se encuentra bien. Lleva tres semanas con tos y dolor de garganta.", "Ya está mejor. Hace tres días tuvo fiebre y dolor de cabeza.", "No se encuentra bien. Lleva tres días con fiebre y dolor de cabeza."],
+      "answer": 3,
+      "lessons": ["nl-a2-huisarts.l.klachten", "nl-a2-huisarts.l.inschrijven"]
+    },
+    {
+      "id": "placement.nl-b1-omdat",
+      "level": "B1",
+      "prompt": "Avisas a tu jefa: ¿cómo dices que hoy no vas porque estás enfermo?",
+      "options": ["Ik kom vandaag niet, omdat ik ben ziek.", "Ik kom vandaag niet, want ik ziek ben.", "Ik kom vandaag niet, omdat ik ziek ben.", "Ik kom niet vandaag, omdat ben ik ziek."],
+      "answer": 2,
+      "lessons": ["nl-b1-grammar.l.zinnen", "nl-b1-meetings.l.ziekmelden"]
+    },
+    {
+      "id": "placement.nl-b1-vroeger",
+      "level": "B1",
+      "prompt": "Una compañera nueva te cuenta de dónde viene. ¿Qué te dice?",
+      "text": "Vroeger woonde ik in Madrid, maar vorig jaar ben ik voor mijn werk naar Utrecht verhuisd.",
+      "options": ["Antes vivía en Madrid, pero el año pasado se mudó a Utrecht por trabajo.", "Antes vivía en Madrid, pero el año que viene se mudará a Utrecht por trabajo.", "Ahora vive en Madrid, pero el año pasado trabajó en Utrecht.", "Antes vivía en Madrid, pero el año pasado se mudó a Utrecht por su pareja."],
+      "answer": 0,
+      "lessons": ["nl-b1-grammar.l.verleden", "nl-b1-interview.l.ervaring"]
+    },
+    {
+      "id": "placement.nl-b1-er-drie",
+      "level": "B1",
+      "prompt": "Un compañero mira su calendario. ¿Qué dice?",
+      "text": "Er zijn vandaag drie vergaderingen, maar ik heb er maar één in mijn agenda.",
+      "options": ["Hoy hay tres reuniones, pero no tengo ninguna en mi agenda.", "Ayer hubo tres reuniones, pero solo fui a una.", "Hoy hay tres reuniones, pero solo tengo una en mi agenda.", "Hoy tengo tres reuniones y una más en mi agenda."],
+      "answer": 2,
+      "lessons": ["nl-b1-grammar.l.er-zich", "nl-b1-meetings.l.overleg"]
+    },
+    {
+      "id": "placement.nl-b1-om-te",
+      "level": "B1",
+      "prompt": "En una reunión: ¿cómo propones, con tacto, probarlo primero?",
+      "options": ["Ik zou voorstellen om het eerst testen.", "Ik zou voorstellen om het eerst te testen.", "Ik zou voorstellen het om eerst te testen.", "Ik zou om het eerst te testen voorstellen."],
+      "answer": 1,
+      "lessons": ["nl-b1-meetings.l.voorstellen", "nl-b1-grammar.l.zinnen"]
+    },
+    {
+      "id": "placement.nl-b1-aanslag",
+      "level": "B1",
+      "prompt": "Te llega una carta de la Belastingdienst. ¿Qué te dice?",
+      "text": "U ontvangt een aanslag van tweehonderd euro. Betaal het bedrag voor de vervaldatum en vermeld het betalingskenmerk. Kunt u niet in één keer betalen? Vraag dan een betalingsregeling aan.",
+      "options": ["Le devuelven doscientos euros antes de la fecha de vencimiento. Si no le llegan de una vez, puede pedir que se los paguen a plazos.", "Tiene que pagar doscientos euros antes de la fecha de vencimiento, indicando la referencia de pago. Si no puede pagarlo de una vez, puede pedir pagarlo a plazos.", "Tiene una multa de doscientos euros. Si no la paga antes de la fecha de vencimiento, le llegará un aviso de impago con recargo.", "Tiene que pagar doce euros antes de la fecha de vencimiento, indicando la referencia de pago. Si no puede pagarlo de una vez, debe llamar a Hacienda."],
+      "answer": 1,
+      "lessons": ["nl-b1-taxes.l.brieven", "nl-b1-taxes.l.belastingdienst"]
+    },
+    {
+      "id": "placement.nl-b1-monteur",
+      "level": "B1",
+      "prompt": "La entidad de vivienda te escribe sobre la avería que avisaste. ¿Qué dice?",
+      "text": "Beste huurder, dinsdag komt er tussen acht en twaalf uur een monteur langs om de cv-ketel te repareren. Kunt u er niet zijn? Laat het ons dan voor maandag weten.",
+      "options": ["El martes, entre las ocho y las doce, viene un técnico a reparar la caldera. Si no puede estar, avísenos antes del lunes.", "El martes, entre las ocho y las doce, viene un técnico a revisar la calefacción. Si no puede estar, el técnico dejará una nota.", "El lunes, entre las ocho y las doce, viene un técnico a reparar la caldera. Si no puede estar, avísenos el martes.", "El martes, entre las once y media y las doce, viene un técnico a cambiar la caldera. No hace falta que esté en casa."],
+      "answer": 0,
+      "lessons": ["nl-b1-renting.l.melden", "nl-b1-grammar.l.zinnen"]
+    }
+  ]
+}
