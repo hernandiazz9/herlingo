@@ -94,7 +94,7 @@ Worktree setup: npm ci
 - Outcome: units 142 taxes, 150 culture, 152 opinions; B1 = 457 phrases, 335 vocab, 91 Q&A, 55 lessons — 5051d55
 
 ## T142 — A2 dialogues (12)
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T138
 - Goal: Write the 12 A2 dialogues from brief-nl.md (orders 1–12), using A2 vocabulary, mixed je/u register.
 - Context: Shared contract, docs/brief-nl.md, `content/en/dialogues/a2-*` as format model.
@@ -156,7 +156,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T148 — Dutch duplicate cleanup
-- Status: pending
+- Status: done
 - Depends on: T138, T141
 - Goal: A2 and B1 units were written in parallel, so some Dutch phrases and vocab exist twice under different ids (e.g. "Leuk u te ontmoeten." in nl-a2-about-me and nl-b1-interview; verhuurder, borg, verwarming, koorts, rug in B1 vs A2 housing/huisarts). Keep one item per text (the earliest unit's), point later lessons to it by id, and remove the copies. The nl pack is not released yet, so changing nl ids is safe.
 - Context: Shared contract, `content/nl/units/`, docs/content-guide.md (reuse by id), `npm run content:check` output.
@@ -164,7 +164,7 @@ Worktree setup: npm ci
 - Done when:
   - a script you run (not committed) finds no two nl phrases or vocab items with the same normalized text (report the before/after counts); level totals stay within ±10% of the targets.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 19 duplicate groups merged into the A2 items; B1 = 456 phrases, 317 vocab, 91 Q&A — fbf9947
 
 ## Decisions
 - 2026-10-08 Hernán: levels A2 + B1; goal live/work in the Netherlands, guided by inburgering themes; nl-NL voices; English-sized volume per level; mixed je/u; base Utrecht plus other cities; A2 and B1 built in parallel.
@@ -179,6 +179,7 @@ Worktree setup: npm ci
 - 2026-10-09 T138: smaller last A2 units to stay within +10%; directions imperatives register neutral; 112 written 'één één twee'; extra Q&A character Bas (agent)
 - 2026-10-09 T141: avoided A2 42/50/52 topics to keep duplicates low; grammar cards not listed in topic lessons (agent)
 - 2026-10-09 orchestrator: run T148 (cleanup, changes unit item ids) before dialogues/stories that might reference item ids; T148 + T142 first
+- 2026-10-09 T148: kept the A2 item in every duplicate group, B1 lessons point to it; kept 'de dag' vocab and 'Dag!' phrase (different meanings) (agent)
 
 ## Proposals (new scope)
 - 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
@@ -198,3 +199,6 @@ Worktree setup: npm ci
 - 2026-10-09 00:01 T141 launched · attempt 1 · agent a5ce8df4ff5521c15
 - 2026-10-09 00:12 T141 done → 5051d55
 - 2026-10-09 00:12 T138 done → d3aae14
+- 2026-10-09 00:12 T148 launched · attempt 1 · agent ab0b81238b703ee55
+- 2026-10-09 00:12 T142 launched · attempt 1 · agent afe061fe1c7eba870
+- 2026-10-09 00:16 T148 done → fbf9947
