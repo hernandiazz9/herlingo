@@ -104,17 +104,17 @@ Worktree setup: npm ci
 - Outcome: 12 A2 dialogues (9 turns, 3 options, Spanish-speaker-mistake distractors) — 29f15c1
 
 ## T143 — B1 dialogues (12)
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T141
 - Goal: Write the 12 B1 dialogues from brief-nl.md (orders 101–112).
 - Context: Shared contract, docs/brief-nl.md, `content/en/dialogues/b1-*` as format model.
 - Scope: may touch `content/nl/dialogues/b1-*` / must not touch units, pack.json, other packs.
 - Done when:
   - 12 dialogue files; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 12 B1 dialogues (9 turns, 3 options, Spanish-speaker-mistake distractors) — 59692fa
 
 ## T144 — A2 stories (12)
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T138
 - Goal: Write the 12 A2 stories from brief-nl.md (orders 1–12, files `a2-NN-<slug>.json`), at the English A2 story length.
 - Context: Shared contract, docs/brief-nl.md, `content/en/stories/a2-*` as format model.
@@ -181,6 +181,7 @@ Worktree setup: npm ci
 - 2026-10-09 orchestrator: run T148 (cleanup, changes unit item ids) before dialogues/stories that might reference item ids; T148 + T142 first
 - 2026-10-09 T148: kept the A2 item in every duplicate group, B1 lessons point to it; kept 'de dag' vocab and 'Dag!' phrase (different meanings) (agent)
 - 2026-10-09 T142: speaker names are Spanish role names (Funcionario, Cajera…) like English; one native per dialogue; Fluent person avatars (agent)
+- 2026-10-09 T143: one-off names per dialogue (no story cast); fictional agency 'Verhuurbeheer Domstad' (agent)
 
 ## Proposals (new scope)
 - 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
@@ -205,3 +206,5 @@ Worktree setup: npm ci
 - 2026-10-09 00:16 T148 done → fbf9947
 - 2026-10-09 00:17 T143 launched · attempt 1 · agent a35388743002be18f
 - 2026-10-09 00:20 T142 done → 29f15c1
+- 2026-10-09 00:21 T144 launched · attempt 1 · agent a7087b7d1df2fa168
+- 2026-10-09 00:24 T143 done → 59692fa
