@@ -44,7 +44,7 @@ Worktree setup: npm ci
 - Outcome: units 10 hello, 12 numbers, 20 about-me, 90 grammar (188 phrases, 130 vocab, 33 Q&A, 11 cards) — 49b2083
 
 ## T137 — A2 units 5–8
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T136
 - Goal: Write A2 units 5–8 from brief-nl.md, reusing earlier items by id.
 - Context: Shared contract, docs/brief-nl.md, T136's units.
@@ -64,14 +64,14 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T139 — B1 units 1–4 (with the grammar unit)
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T135
 - Goal: Write the first four B1 units from brief-nl.md, including the B1 grammar unit (190).
 - Context: Shared contract, docs/brief-nl.md, `content/en/units/` B1 files as format model. A2 may be in progress in parallel: do not depend on A2 items that are not on main yet.
 - Scope: may touch `content/nl/units/` (B1 files of these units only) / must not touch `content/nl/pack.json`, A2 units, other packs.
 - Done when:
   - 4 unit files at the brief's volume; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units 110 job-search, 112 interview, 120 workplace, 190 grammar (182 phrases, 122 vocab, 32 Q&A, 12 cards) — d790d8c
 
 ## T140 — B1 units 5–8
 - Status: pending
@@ -160,6 +160,8 @@ Worktree setup: npm ci
 - 2026-10-08 T135: new generic register value `u` (badge 'Trato de usted (u)'); voices Fenna=narrator, Maarten=men, Colette=women (only 3 nl-NL voices), stories quote ≤1 man + 1 woman; new situation `tramites`; equivalents 't/m'n/z'n; placement 12 questions (6+6); cast Diego (Zaragoza), Femke, Ria + Sanne, Joost, Lucía, Martina at B1 (agent)
 - 2026-10-08 orchestrator: unit split by brief order — T136 = 10, 12, 20 + 90; T137 = 22, 30, 32, 40; T138 = 42, 50, 52; T139 = 110, 112, 120 + 190; T140 = 122, 130, 132, 140; T141 = 142, 150, 152.
 - 2026-10-08 T136: days/months as vocab without article; learner persona as English A2 (Madrid, 32, programmer); grammar unit also carries phrases/vocab/Q&A with items meant for reuse; Q&A voices Maarten/Colette, phrases Fenna (agent)
+- 2026-10-08 T139: B1 grammar unit carries example phrases per card (34); B1 remaining units aim ~40 phrases each to stay within +10% (agent + orchestrator)
+- 2026-10-08 orchestrator: from T140 on each agent gets its own scratch folder (parallel agents overwrote each other's helper scripts in the shared scratchpad)
 
 ## Proposals (new scope)
 - 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
@@ -170,3 +172,5 @@ Worktree setup: npm ci
 - 2026-10-08 23:35 T136 launched · attempt 1 · agent a42f151109d93fddb
 - 2026-10-08 23:35 T139 launched · attempt 1 · agent a1326ce7d1a975f97
 - 2026-10-08 23:47 T136 done → 49b2083
+- 2026-10-08 23:47 T137 launched · attempt 1 · agent a1dce65903e5a9b1c
+- 2026-10-08 23:49 T139 done → d790d8c
