@@ -94,17 +94,17 @@ Worktree setup: npm ci
 - Outcome: units 142 taxes, 150 culture, 152 opinions; B1 = 457 phrases, 335 vocab, 91 Q&A, 55 lessons — 5051d55
 
 ## T142 — A2 dialogues (12)
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T138
 - Goal: Write the 12 A2 dialogues from brief-nl.md (orders 1–12), using A2 vocabulary, mixed je/u register.
 - Context: Shared contract, docs/brief-nl.md, `content/en/dialogues/a2-*` as format model.
 - Scope: may touch `content/nl/dialogues/a2-*` / must not touch units, pack.json, other packs.
 - Done when:
   - 12 dialogue files with learner options and Spanish-speaker-mistake distractors; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 12 A2 dialogues (9 turns, 3 options, Spanish-speaker-mistake distractors) — 29f15c1
 
 ## T143 — B1 dialogues (12)
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T141
 - Goal: Write the 12 B1 dialogues from brief-nl.md (orders 101–112).
 - Context: Shared contract, docs/brief-nl.md, `content/en/dialogues/b1-*` as format model.
@@ -180,6 +180,7 @@ Worktree setup: npm ci
 - 2026-10-09 T141: avoided A2 42/50/52 topics to keep duplicates low; grammar cards not listed in topic lessons (agent)
 - 2026-10-09 orchestrator: run T148 (cleanup, changes unit item ids) before dialogues/stories that might reference item ids; T148 + T142 first
 - 2026-10-09 T148: kept the A2 item in every duplicate group, B1 lessons point to it; kept 'de dag' vocab and 'Dag!' phrase (different meanings) (agent)
+- 2026-10-09 T142: speaker names are Spanish role names (Funcionario, Cajera…) like English; one native per dialogue; Fluent person avatars (agent)
 
 ## Proposals (new scope)
 - 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
@@ -202,3 +203,5 @@ Worktree setup: npm ci
 - 2026-10-09 00:12 T148 launched · attempt 1 · agent ab0b81238b703ee55
 - 2026-10-09 00:12 T142 launched · attempt 1 · agent afe061fe1c7eba870
 - 2026-10-09 00:16 T148 done → fbf9947
+- 2026-10-09 00:17 T143 launched · attempt 1 · agent a35388743002be18f
+- 2026-10-09 00:20 T142 done → 29f15c1
