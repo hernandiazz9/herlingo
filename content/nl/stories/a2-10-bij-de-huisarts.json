@@ -1,0 +1,89 @@
+{
+  "id": "story.nl-a2-bij-de-huisarts",
+  "order": 10,
+  "title": "Bij de huisarts",
+  "titleEs": "En el médico de cabecera",
+  "description": "Diego ha pillado la gripe: el huisarts y la farmacia (pretérito perfecto).",
+  "emoji": "🤒",
+  "situation": "salud",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Vorige week is Diego ziek geworden.", "es": "La semana pasada Diego se puso malo." },
+    { "id": "s2", "text": "Hij heeft drie dagen koorts gehad en hij heeft veel gehoest.", "es": "Tuvo fiebre tres días y tosió mucho." },
+    { "id": "s3", "text": "Op maandagochtend heeft hij de huisartsenpraktijk gebeld.", "es": "El lunes por la mañana llamó a la consulta del médico." },
+    { "id": "s4", "text": "De doktersassistente heeft een afspraak voor dezelfde dag gemaakt.", "es": "La asistente le dio cita para el mismo día." },
+    { "id": "s5", "text": "Om half elf is hij naar het spreekuur gegaan.", "es": "A las diez y media fue a la consulta." },
+    { "id": "s6", "text": "«Goedemorgen. Wat zijn uw klachten?»", "es": "«Buenos días. ¿Qué le pasa?»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s7", "text": "«Ik heb griep, denk ik. Ik heb hoofdpijn en mijn keel doet pijn.»", "es": "«Tengo gripe, creo. Me duele la cabeza y la garganta.»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s8", "text": "De huisarts heeft naar zijn keel gekeken en zijn temperatuur gemeten.", "es": "La médica le miró la garganta y le tomó la temperatura." },
+    { "id": "s9", "text": "Ze heeft gezegd: rust, veel water en paracetamol.", "es": "Le dijo: descanso, mucha agua y paracetamol." },
+    { "id": "s10", "text": "Daarna is Diego naar de apotheek gefietst.", "es": "Luego Diego fue en bici a la farmacia." },
+    { "id": "s11", "text": "Femke heeft soep voor hem gekookt en bij zijn deur gezet.", "es": "Femke le hizo sopa y se la dejó en la puerta." },
+    { "id": "s12", "text": "Na een week is hij weer aan het werk gegaan.", "es": "Al cabo de una semana volvió a trabajar." }
+  ],
+  "keywords": [
+    "nl-a2-huisarts.huisartsenpraktijk",
+    "nl-a2-huisarts.doktersassistente",
+    "nl-a2-huisarts.spreekuur",
+    "nl-a2-huisarts.wat-zijn-uw-klachten",
+    "nl-a2-huisarts.griep",
+    "nl-a2-huisarts.hoofdpijn",
+    "nl-a2-huisarts.keel",
+    "nl-a2-huisarts.paracetamol",
+    "nl-a2-huisarts.apotheek"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Hoe lang heeft Diego koorts gehad?",
+      "es": "¿Cuánto tiempo tuvo fiebre Diego?",
+      "options": [
+        { "text": "Een dag.", "es": "Un día." },
+        { "text": "Een week.", "es": "Una semana." },
+        { "text": "Drie dagen.", "es": "Tres días." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "Hoe laat is Diego naar het spreekuur gegaan?",
+      "es": "¿A qué hora fue Diego a la consulta?",
+      "options": [
+        { "text": "Om half elf.", "es": "A las diez y media." },
+        { "text": "Om elf uur.", "es": "A las once." },
+        { "text": "'s Avonds om acht uur.", "es": "A las ocho de la tarde." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Wat heeft de huisarts gezegd?",
+      "es": "¿Qué le dijo la médica?",
+      "options": [
+        { "text": "Een week in het ziekenhuis.", "es": "Una semana en el hospital." },
+        { "text": "Rust, veel water en paracetamol.", "es": "Descanso, mucha agua y paracetamol." },
+        { "text": "Meteen weer werken.", "es": "Volver a trabajar enseguida." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Wat heeft Femke gedaan?",
+      "es": "¿Qué hizo Femke?",
+      "options": [
+        { "text": "Ze heeft de huisarts gebeld.", "es": "Llamó a la médica." },
+        { "text": "Ze heeft medicijnen gekocht.", "es": "Compró medicinas." },
+        { "text": "Ze heeft soep gekookt.", "es": "Hizo sopa." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "nl-a2-huisarts.huisartsenpraktijk", "distractors": ["bibliotheek", "sportschool"] },
+    { "id": "g2", "sentence": "s5", "answer": "nl-a2-huisarts.spreekuur", "distractors": ["strand", "feest"] },
+    { "id": "g3", "sentence": "s6", "answer": "nl-a2-huisarts.wat-zijn-uw-klachten", "gap": "Wat zijn uw klachten", "distractors": ["Wat is uw postcode", "Wat kost dat"] },
+    { "id": "g4", "sentence": "s7", "answer": "nl-a2-huisarts.keel", "distractors": ["voet", "arm"] },
+    { "id": "g5", "sentence": "s9", "answer": "nl-a2-huisarts.paracetamol", "distractors": ["koffie", "bier"] },
+    { "id": "g6", "sentence": "s10", "answer": "nl-a2-huisarts.apotheek", "distractors": ["bioscoop", "supermarkt"] }
+  ]
+}

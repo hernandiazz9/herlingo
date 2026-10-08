@@ -1,0 +1,96 @@
+{
+  "id": "story.nl-a2-de-buurvrouw",
+  "order": 7,
+  "title": "De buurvrouw",
+  "titleEs": "La vecina",
+  "description": "Ria Bakker, café con tarta de manzana y las normas de la calle.",
+  "emoji": "☕",
+  "situation": "social",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Diego's buurvrouw op de begane grond heet Ria Bakker.", "es": "La vecina de Diego de la planta baja se llama Ria Bakker." },
+    { "id": "s2", "text": "Ze is eenenzeventig en ze kent de hele straat.", "es": "Tiene setenta y un años y conoce a toda la calle." },
+    { "id": "s3", "text": "Op zondagmiddag belt ze bij Diego aan.", "es": "El domingo por la tarde llama al timbre de Diego." },
+    { "id": "s4", "text": "«Hoi Diego! Heb je zin in koffie met appeltaart?»", "es": "«¡Hola, Diego! ¿Te apetece un café con tarta de manzana?»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s5", "text": "«Ja, graag! Wat gezellig!»", "es": "«¡Sí, por favor! ¡Qué bien!»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s6", "text": "Bij Ria staan overal bloemen en foto's.", "es": "En casa de Ria hay flores y fotos por todas partes." },
+    { "id": "s7", "text": "De appeltaart is heerlijk, met veel slagroom.", "es": "La tarta de manzana está buenísima, con mucha nata." },
+    { "id": "s8", "text": "Ria vertelt over de regels van de straat.", "es": "Ria le cuenta las normas de la calle." },
+    { "id": "s9", "text": "De groene container zet je op dinsdag buiten, en na tien uur is het stil.", "es": "El contenedor verde lo sacas el martes, y a partir de las diez hay silencio." },
+    { "id": "s10", "text": "«En je fiets zet je niet voor mijn raam, hè!»", "es": "«¡Y la bici no la dejas delante de mi ventana, eh!»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s11", "text": "Diego lacht: Ria is direct, maar heel aardig.", "es": "Diego se ríe: Ria es directa, pero muy amable." },
+    { "id": "s12", "text": "«Dank je wel, Ria. Tot ziens!»", "es": "«Muchas gracias, Ria. ¡Hasta luego!»", "voice": "nl-NL-MaartenNeural" }
+  ],
+  "keywords": [
+    "nl-a2-hello.buurvrouw",
+    {
+      "id": "story-nl-begane-grond",
+      "word": "begane grond",
+      "article": "de",
+      "es": "la planta baja",
+      "notes": "«Op de begane grond» = en la planta baja. El primer piso es «de eerste verdieping». «Begane» se pronuncia be-JA-ne.",
+      "situation": "vivienda"
+    },
+    "nl-a2-shopping.koffie",
+    "nl-a2-shopping.appeltaart",
+    "nl-a2-neighbours.wat-gezellig",
+    "nl-a2-neighbours.bloem",
+    "nl-a2-shopping.slagroom",
+    "nl-a2-housing.raam",
+    "nl-a2-hello.tot-ziens"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Waar woont Ria?",
+      "es": "¿Dónde vive Ria?",
+      "options": [
+        { "text": "Op de tweede verdieping.", "es": "En el segundo piso." },
+        { "text": "Op de begane grond.", "es": "En la planta baja." },
+        { "text": "In Amsterdam.", "es": "En Ámsterdam." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Wat eten ze bij Ria?",
+      "es": "¿Qué comen en casa de Ria?",
+      "options": [
+        { "text": "Appeltaart met slagroom.", "es": "Tarta de manzana con nata." },
+        { "text": "Pizza.", "es": "Pizza." },
+        { "text": "Broodjes kaas.", "es": "Bocadillos de queso." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Wanneer zet je de groene container buiten?",
+      "es": "¿Cuándo se saca el contenedor verde?",
+      "options": [
+        { "text": "Op zondag.", "es": "El domingo." },
+        { "text": "Elke dag.", "es": "Todos los días." },
+        { "text": "Op dinsdag.", "es": "El martes." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Hoe is Ria volgens Diego?",
+      "es": "¿Cómo es Ria, según Diego?",
+      "options": [
+        { "text": "Stil en verlegen.", "es": "Callada y tímida." },
+        { "text": "Direct, maar heel aardig.", "es": "Directa, pero muy amable." },
+        { "text": "Boos en onvriendelijk.", "es": "Enfadada y antipática." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "nl-a2-hello.buurvrouw", "distractors": ["collega", "zus"] },
+    { "id": "g2", "sentence": "s4", "answer": "nl-a2-shopping.appeltaart", "distractors": ["kaas", "vis"] },
+    { "id": "g3", "sentence": "s5", "answer": "nl-a2-neighbours.wat-gezellig", "gap": "Wat gezellig", "distractors": ["Wat jammer", "Gezondheid"] },
+    { "id": "g4", "sentence": "s7", "answer": "nl-a2-shopping.slagroom", "distractors": ["vis", "kaas"] },
+    { "id": "g5", "sentence": "s10", "answer": "nl-a2-housing.raam", "distractors": ["bed", "boek"] },
+    { "id": "g6", "sentence": "s12", "answer": "nl-a2-hello.tot-ziens", "gap": "Tot ziens", "distractors": ["Goedemorgen", "Welterusten"] }
+  ]
+}

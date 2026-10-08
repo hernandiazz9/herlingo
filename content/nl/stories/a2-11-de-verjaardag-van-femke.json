@@ -1,0 +1,95 @@
+{
+  "id": "story.nl-a2-de-verjaardag-van-femke",
+  "order": 11,
+  "title": "De verjaardag van Femke",
+  "titleEs": "El cumpleaños de Femke",
+  "description": "El cumpleaños de Femke: el círculo de sillas y felicitar a todo el mundo (pretérito perfecto).",
+  "emoji": "🎂",
+  "situation": "social",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Vorige zaterdag is Femke dertig geworden.", "es": "El sábado pasado Femke cumplió treinta años." },
+    { "id": "s2", "text": "Ze heeft Diego uitgenodigd voor haar verjaardag.", "es": "Invitó a Diego a su cumpleaños." },
+    { "id": "s3", "text": "Hij heeft een cadeautje gekocht: een boek over Utrecht.", "es": "Él compró un regalito: un libro sobre Utrecht." },
+    { "id": "s4", "text": "Om acht uur heeft hij bij Femke aangebeld.", "es": "A las ocho llamó al timbre de Femke." },
+    { "id": "s5", "text": "In de woonkamer hebben twaalf mensen in een grote kring gezeten.", "es": "En el salón había doce personas sentadas en un gran círculo." },
+    { "id": "s6", "text": "Diego heeft iedereen een hand gegeven.", "es": "Diego le dio la mano a todo el mundo." },
+    { "id": "s7", "text": "Hij heeft ook iedereen gefeliciteerd: de moeder, de vader, de tante…", "es": "También felicitó a todos: a la madre, al padre, a la tía…" },
+    { "id": "s8", "text": "«Gefeliciteerd met je dochter!»", "es": "«¡Felicidades por tu hija!»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s9", "text": "Daarna heeft hij koffie en een stuk taart gekregen.", "es": "Después le dieron café y un trozo de tarta." },
+    { "id": "s10", "text": "Iedereen heeft over het weer, het werk en de vakantie gepraat.", "es": "Todo el mundo habló del tiempo, del trabajo y de las vacaciones." },
+    { "id": "s11", "text": "Femke heeft het cadeautje meteen opengemaakt.", "es": "Femke abrió el regalito enseguida." },
+    { "id": "s12", "text": "«Een boek over Utrecht! Wat lief. Dank je wel!»", "es": "«¡Un libro sobre Utrecht! Qué detalle. ¡Muchas gracias!»", "voice": "nl-NL-ColetteNeural" }
+  ],
+  "keywords": [
+    "nl-a2-numbers.verjaardag",
+    "nl-a2-neighbours.uitnodigen",
+    "nl-a2-neighbours.cadeau",
+    "nl-a2-about-me.boek",
+    "nl-a2-housing.woonkamer",
+    "nl-a2-neighbours.kring",
+    {
+      "id": "story-nl-een-hand-geven",
+      "word": "een hand geven",
+      "es": "dar la mano",
+      "notes": "En un cumpleaños neerlandés das la mano a cada persona del círculo y la felicitas: «Gefeliciteerd!». Pasado: «Ik heb iedereen een hand gegeven».",
+      "situation": "social"
+    },
+    "nl-a2-neighbours.gefeliciteerd",
+    "nl-a2-hello.dank-je-wel"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Hoe oud is Femke geworden?",
+      "es": "¿Cuántos años ha cumplido Femke?",
+      "options": [
+        { "text": "Twintig.", "es": "Veinte." },
+        { "text": "Dertig.", "es": "Treinta." },
+        { "text": "Eenendertig.", "es": "Treinta y uno." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Wat heeft Diego voor Femke gekocht?",
+      "es": "¿Qué le compró Diego a Femke?",
+      "options": [
+        { "text": "Een boek over Utrecht.", "es": "Un libro sobre Utrecht." },
+        { "text": "Bloemen.", "es": "Flores." },
+        { "text": "Een fles wijn.", "es": "Una botella de vino." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Hoeveel mensen hebben in de kring gezeten?",
+      "es": "¿Cuántas personas había sentadas en el círculo?",
+      "options": [
+        { "text": "Twee.", "es": "Dos." },
+        { "text": "Dertig.", "es": "Treinta." },
+        { "text": "Twaalf.", "es": "Doce." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Wie heeft Diego gefeliciteerd?",
+      "es": "¿A quién felicitó Diego?",
+      "options": [
+        { "text": "Alleen Femke.", "es": "Solo a Femke." },
+        { "text": "Iedereen.", "es": "A todo el mundo." },
+        { "text": "Niemand.", "es": "A nadie." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "nl-a2-neighbours.uitnodigen", "gap": "uitgenodigd", "distractors": ["vergeten", "gezien"] },
+    { "id": "g2", "sentence": "s3", "answer": "nl-a2-neighbours.cadeau", "gap": "cadeautje", "distractors": ["kaartje", "koekje"] },
+    { "id": "g3", "sentence": "s5", "answer": "nl-a2-neighbours.kring", "distractors": ["rij", "trein"] },
+    { "id": "g4", "sentence": "s6", "answer": "story-nl-een-hand-geven", "gap": "hand", "distractors": ["kus", "boek"] },
+    { "id": "g5", "sentence": "s8", "answer": "nl-a2-neighbours.gefeliciteerd", "gap": "Gefeliciteerd", "distractors": ["Sorry", "Gezondheid"] },
+    { "id": "g6", "sentence": "s12", "answer": "nl-a2-hello.dank-je-wel", "gap": "Dank je wel", "distractors": ["Tot ziens", "Eet smakelijk"] }
+  ]
+}

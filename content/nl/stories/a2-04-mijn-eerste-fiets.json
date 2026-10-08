@@ -1,0 +1,89 @@
+{
+  "id": "story.nl-a2-mijn-eerste-fiets",
+  "order": 4,
+  "title": "Mijn eerste fiets",
+  "titleEs": "Mi primera bici",
+  "description": "Una bici de segunda mano, dos candados y el primer trayecto bajo la lluvia.",
+  "emoji": "🚲",
+  "situation": "transporte",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "In Utrecht heeft iedereen een fiets, dus Diego wil er ook een.", "es": "En Utrecht todo el mundo tiene bici, así que Diego también quiere una." },
+    { "id": "s2", "text": "Femke zoekt samen met hem op Marktplaats.", "es": "Femke busca con él en Marktplaats." },
+    { "id": "s3", "text": "Ze vinden een tweedehands fiets voor honderdtwintig euro.", "es": "Encuentran una bici de segunda mano por ciento veinte euros." },
+    { "id": "s4", "text": "«Let op: je hebt altijd twee sloten nodig!»", "es": "«Ojo: ¡siempre necesitas dos candados!»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s5", "text": "«Twee sloten? Waarom?»", "es": "«¿Dos candados? ¿Por qué?»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s6", "text": "«In Utrecht stelen ze heel veel fietsen.»", "es": "«En Utrecht roban muchísimas bicis.»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s7", "text": "Dus Diego koopt twee goede sloten bij de fietsenmaker.", "es": "Así que Diego compra dos buenos candados en el taller de bicis." },
+    { "id": "s8", "text": "De volgende ochtend fietst hij voor het eerst naar zijn werk.", "es": "A la mañana siguiente va en bici al trabajo por primera vez." },
+    { "id": "s9", "text": "Het regent hard en het waait.", "es": "Llueve mucho y hace viento." },
+    { "id": "s10", "text": "Op het fietspad zijn veel fietsers, en ze rijden snel.", "es": "En el carril bici hay muchos ciclistas, y van rápido." },
+    { "id": "s11", "text": "Bij het kruispunt remt hij net op tijd: rechts heeft voorrang.", "es": "En el cruce frena justo a tiempo: la derecha tiene preferencia." },
+    { "id": "s12", "text": "Hij komt nat maar blij op kantoor aan.", "es": "Llega a la oficina mojado, pero contento." }
+  ],
+  "keywords": [
+    "nl-a2-about-me.fiets",
+    "nl-a2-transport.slot",
+    "nl-a2-transport.je-hebt-altijd-twee-sloten-nodig",
+    "nl-a2-transport.fietsenmaker",
+    "nl-a2-neighbours.regenen",
+    "nl-a2-transport.fietspad",
+    "nl-a2-transport.kruispunt",
+    "nl-a2-transport.voorrang",
+    "nl-a2-about-me.kantoor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Hoeveel kost de fiets?",
+      "es": "¿Cuánto cuesta la bici?",
+      "options": [
+        { "text": "Twintig euro.", "es": "Veinte euros." },
+        { "text": "Tweehonderd euro.", "es": "Doscientos euros." },
+        { "text": "Honderdtwintig euro.", "es": "Ciento veinte euros." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "Hoeveel sloten koopt Diego?",
+      "es": "¿Cuántos candados compra Diego?",
+      "options": [
+        { "text": "Twee.", "es": "Dos." },
+        { "text": "Eén.", "es": "Uno." },
+        { "text": "Drie.", "es": "Tres." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Hoe is het weer de volgende ochtend?",
+      "es": "¿Qué tiempo hace a la mañana siguiente?",
+      "options": [
+        { "text": "De zon schijnt.", "es": "Hace sol." },
+        { "text": "Het regent en het waait.", "es": "Llueve y hace viento." },
+        { "text": "Het sneeuwt.", "es": "Nieva." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Wat gebeurt er bij het kruispunt?",
+      "es": "¿Qué pasa en el cruce?",
+      "options": [
+        { "text": "Diego valt van zijn fiets.", "es": "Diego se cae de la bici." },
+        { "text": "Diego stapt over op de tram.", "es": "Diego cambia al tranvía." },
+        { "text": "Diego remt net op tijd.", "es": "Diego frena justo a tiempo." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "nl-a2-about-me.fiets", "distractors": ["auto", "tram"] },
+    { "id": "g2", "sentence": "s7", "answer": "nl-a2-transport.fietsenmaker", "distractors": ["bakker", "huisarts"] },
+    { "id": "g3", "sentence": "s9", "answer": "nl-a2-neighbours.regenen", "gap": "regent", "distractors": ["sneeuwt", "vriest"] },
+    { "id": "g4", "sentence": "s10", "answer": "nl-a2-transport.fietspad", "distractors": ["strand", "balkon"] },
+    { "id": "g5", "sentence": "s11", "answer": "nl-a2-transport.voorrang", "distractors": ["vertraging", "koorts"] },
+    { "id": "g6", "sentence": "s12", "answer": "nl-a2-about-me.kantoor", "distractors": ["school", "vakantie"] }
+  ]
+}

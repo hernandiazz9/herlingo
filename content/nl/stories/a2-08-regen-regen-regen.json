@@ -1,0 +1,95 @@
+{
+  "id": "story.nl-a2-regen-regen-regen",
+  "order": 8,
+  "title": "Regen, regen, regen",
+  "titleEs": "Lluvia, lluvia, lluvia",
+  "description": "El tiempo, la rutina diaria y un fin de semana tranquilo en casa.",
+  "emoji": "🌧️",
+  "situation": "casa",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Het is november en het regent alweer in Utrecht.", "es": "Es noviembre y vuelve a llover en Utrecht." },
+    { "id": "s2", "text": "Diego staat elke dag om zeven uur op.", "es": "Diego se levanta todos los días a las siete." },
+    { "id": "s3", "text": "Hij drinkt koffie, eet een broodje met kaas en fietst naar zijn werk.", "es": "Se toma un café, come un bocadillo de queso y va en bici al trabajo." },
+    { "id": "s4", "text": "Hij neemt geen paraplu mee, want met wind gaat die meteen kapot.", "es": "No se lleva paraguas, porque con el viento se rompe enseguida." },
+    { "id": "s5", "text": "Op vrijdagavond is hij moe en nat.", "es": "El viernes por la noche está cansado y mojado." },
+    { "id": "s6", "text": "Het hele weekend blijft hij thuis.", "es": "Se queda en casa todo el fin de semana." },
+    { "id": "s7", "text": "Hij slaapt lang uit, kijkt series en kookt een grote pan soep.", "es": "Duerme hasta tarde, ve series y hace una olla grande de sopa." },
+    { "id": "s8", "text": "Op zondagmiddag klopt Femke op zijn deur.", "es": "El domingo por la tarde, Femke llama a su puerta." },
+    { "id": "s9", "text": "«Hoi! Wat ga je vandaag doen?»", "es": "«¡Hola! ¿Qué vas a hacer hoy?»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s10", "text": "«Niks bijzonders. Het regent, dus ik blijf binnen.»", "es": "«Nada especial. Llueve, así que me quedo en casa.»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s11", "text": "«Kom op, de zon schijnt! Zullen we in het park wandelen?»", "es": "«¡Venga, que hace sol! ¿Vamos a pasear por el parque?»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s12", "text": "Diego kijkt naar buiten: het is waar, de zon schijnt!", "es": "Diego mira por la ventana: es verdad, ¡hace sol!" }
+  ],
+  "keywords": [
+    "nl-a2-neighbours.het-regent-alweer",
+    "nl-a2-neighbours.paraplu",
+    "nl-a2-housing.kapot",
+    "nl-a2-about-me.weekend",
+    {
+      "id": "story-nl-uitslapen",
+      "word": "uitslapen",
+      "es": "dormir hasta tarde",
+      "notes": "Verbo separable: «Ik slaap uit», «Ik heb uitgeslapen». Es lo típico del sábado por la mañana.",
+      "situation": "casa"
+    },
+    "nl-a2-housing.deur",
+    "nl-a2-neighbours.de-zon-schijnt",
+    "nl-a2-neighbours.park",
+    "nl-a2-neighbours.wandelen"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Hoe laat staat Diego op?",
+      "es": "¿A qué hora se levanta Diego?",
+      "options": [
+        { "text": "Om zeven uur.", "es": "A las siete." },
+        { "text": "Om negen uur.", "es": "A las nueve." },
+        { "text": "Om half zes.", "es": "A las cinco y media." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Waarom neemt Diego geen paraplu mee?",
+      "es": "¿Por qué no se lleva paraguas Diego?",
+      "options": [
+        { "text": "Hij heeft geen paraplu.", "es": "No tiene paraguas." },
+        { "text": "Met wind gaat die meteen kapot.", "es": "Con el viento se rompe enseguida." },
+        { "text": "Het regent nooit in Utrecht.", "es": "En Utrecht nunca llueve." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Wat doet Diego in het weekend?",
+      "es": "¿Qué hace Diego el fin de semana?",
+      "options": [
+        { "text": "Hij gaat naar Amsterdam.", "es": "Va a Ámsterdam." },
+        { "text": "Hij werkt op kantoor.", "es": "Trabaja en la oficina." },
+        { "text": "Hij blijft thuis.", "es": "Se queda en casa." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Wat wil Femke op zondagmiddag doen?",
+      "es": "¿Qué quiere hacer Femke el domingo por la tarde?",
+      "options": [
+        { "text": "Soep koken.", "es": "Hacer sopa." },
+        { "text": "In het park wandelen.", "es": "Pasear por el parque." },
+        { "text": "Naar de bioscoop gaan.", "es": "Ir al cine." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "nl-a2-neighbours.het-regent-alweer", "gap": "het regent alweer", "distractors": ["het sneeuwt alweer", "de zon schijnt alweer"] },
+    { "id": "g2", "sentence": "s4", "answer": "nl-a2-neighbours.paraplu", "distractors": ["fiets", "jas"] },
+    { "id": "g3", "sentence": "s6", "answer": "nl-a2-about-me.weekend", "distractors": ["jaar", "land"] },
+    { "id": "g4", "sentence": "s7", "answer": "story-nl-uitslapen", "gap": "slaapt", "distractors": ["werkt", "fietst"] },
+    { "id": "g5", "sentence": "s8", "answer": "nl-a2-housing.deur", "distractors": ["tafel", "fiets"] },
+    { "id": "g6", "sentence": "s11", "answer": "nl-a2-neighbours.park", "distractors": ["kantoor", "station"] }
+  ]
+}

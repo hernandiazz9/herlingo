@@ -1,0 +1,90 @@
+{
+  "id": "story.nl-a2-een-bankrekening",
+  "order": 6,
+  "title": "Een bankrekening",
+  "titleEs": "Una cuenta bancaria",
+  "description": "Diego abre una cuenta en el banco; Femke le manda un Tikkie por la pizza.",
+  "emoji": "🏦",
+  "situation": "dinero",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Diego krijgt zijn salaris in Nederland, dus hij heeft een Nederlandse bankrekening nodig.", "es": "Diego cobra el sueldo en los Países Bajos, así que necesita una cuenta neerlandesa." },
+    { "id": "s2", "text": "Op dinsdag gaat hij naar een bankkantoor in het centrum.", "es": "El martes va a una oficina del banco en el centro." },
+    { "id": "s3", "text": "De medewerker vraagt naar zijn paspoort en zijn BSN.", "es": "El empleado le pide el pasaporte y el BSN." },
+    { "id": "s4", "text": "Hij legt uit: de bankpas komt binnen vijf dagen per post.", "es": "Le explica que la tarjeta llega por correo en cinco días." },
+    { "id": "s5", "text": "De pincode krijgt Diego apart, in een andere brief.", "es": "El PIN le llega aparte, en otra carta." },
+    { "id": "s6", "text": "Diego zet ook de app van de bank op zijn telefoon.", "es": "Diego también se instala la app del banco en el móvil." },
+    { "id": "s7", "text": "Op vrijdagavond eten Diego en Femke samen pizza.", "es": "El viernes por la noche, Diego y Femke cenan pizza juntos." },
+    { "id": "s8", "text": "Femke betaalt de rekening met haar pas.", "es": "Femke paga la cuenta con su tarjeta." },
+    { "id": "s9", "text": "«Ik stuur je een Tikkie, oké?»", "es": "«Te mando un Tikkie, ¿vale?»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s10", "text": "«Een Tikkie? Wat is dat?»", "es": "«¿Un Tikkie? ¿Qué es eso?»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s11", "text": "«Een betaalverzoek in de app. Dan krijg ik twaalf euro van jou.»", "es": "«Una solicitud de pago en la app. Así me pagas doce euros.»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s12", "text": "Diego klikt op de link en betaalt met iDEAL: heel makkelijk!", "es": "Diego pulsa el enlace y paga con iDEAL: ¡facilísimo!" }
+  ],
+  "keywords": [
+    "nl-a2-bank.salaris",
+    "nl-a2-bank.bankrekening",
+    "nl-a2-bank.bankkantoor",
+    "nl-a2-bank.bankpas",
+    "nl-a2-bank.pincode",
+    "nl-a2-bank.app",
+    "nl-a2-bank.ik-stuur-je-een-tikkie",
+    "nl-a2-bank.tikkie",
+    "nl-a2-bank.betaalverzoek",
+    "nl-a2-bank.ideal"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Waarom heeft Diego een bankrekening nodig?",
+      "es": "¿Por qué necesita Diego una cuenta bancaria?",
+      "options": [
+        { "text": "Voor zijn salaris.", "es": "Para el sueldo." },
+        { "text": "Voor zijn fiets.", "es": "Para la bici." },
+        { "text": "Voor zijn moeder.", "es": "Para su madre." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Hoe krijgt Diego zijn bankpas?",
+      "es": "¿Cómo recibe Diego la tarjeta?",
+      "options": [
+        { "text": "Meteen aan de balie.", "es": "En el momento, en el mostrador." },
+        { "text": "Van Femke.", "es": "Se la da Femke." },
+        { "text": "Per post, binnen vijf dagen.", "es": "Por correo, en cinco días." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "Wie betaalt de pizza eerst?",
+      "es": "¿Quién paga primero la pizza?",
+      "options": [
+        { "text": "Diego.", "es": "Diego." },
+        { "text": "Femke.", "es": "Femke." },
+        { "text": "Ze betalen ieder voor zich.", "es": "Cada uno paga lo suyo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Hoeveel euro betaalt Diego aan Femke?",
+      "es": "¿Cuántos euros le paga Diego a Femke?",
+      "options": [
+        { "text": "Twintig euro.", "es": "Veinte euros." },
+        { "text": "Twee euro.", "es": "Dos euros." },
+        { "text": "Twaalf euro.", "es": "Doce euros." }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "nl-a2-bank.salaris", "distractors": ["paspoort", "kaartje"] },
+    { "id": "g2", "sentence": "s2", "answer": "nl-a2-bank.bankkantoor", "distractors": ["strand", "museum"] },
+    { "id": "g3", "sentence": "s5", "answer": "nl-a2-bank.pincode", "distractors": ["huur", "borg"] },
+    { "id": "g4", "sentence": "s6", "answer": "nl-a2-bank.app", "distractors": ["fiets", "lamp"] },
+    { "id": "g5", "sentence": "s9", "answer": "nl-a2-bank.ik-stuur-je-een-tikkie", "gap": "Ik stuur je een Tikkie", "distractors": ["Ik bel je morgen op", "Ik heb je Tikkie betaald"] },
+    { "id": "g6", "sentence": "s11", "answer": "nl-a2-bank.betaalverzoek", "distractors": ["huurcontract", "formulier"] }
+  ]
+}

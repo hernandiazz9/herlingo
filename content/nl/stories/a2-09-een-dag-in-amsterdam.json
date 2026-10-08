@@ -1,0 +1,99 @@
+{
+  "id": "story.nl-a2-een-dag-in-amsterdam",
+  "order": 9,
+  "title": "Een dag in Amsterdam",
+  "titleEs": "Un día en Ámsterdam",
+  "description": "Excursión con Femke: los canales, un museo y el último tren.",
+  "emoji": "🛶",
+  "situation": "transporte",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Op zaterdag gaan Diego en Femke met de trein naar Amsterdam.", "es": "El sábado, Diego y Femke van en tren a Ámsterdam." },
+    { "id": "s2", "text": "De reis duurt maar een halfuur.", "es": "El viaje dura solo media hora." },
+    { "id": "s3", "text": "Op Amsterdam Centraal checken ze uit en lopen ze naar de grachten.", "es": "En Amsterdam Centraal hacen check-out y van andando a los canales." },
+    { "id": "s4", "text": "Het is druk: overal zijn toeristen, fietsen en boten.", "es": "Hay mucha gente: turistas, bicis y barcos por todas partes." },
+    { "id": "s5", "text": "Ze bezoeken het Rijksmuseum en zien de schilderijen van Rembrandt.", "es": "Visitan el Rijksmuseum y ven los cuadros de Rembrandt." },
+    { "id": "s6", "text": "«Wauw, wat mooi! Dit is mijn favoriete museum.»", "es": "«¡Uau, qué bonito! Este es mi museo favorito.»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s7", "text": "Daarna eten ze een broodje haring op de markt.", "es": "Después se comen un bocadillo de arenque en el mercado." },
+    { "id": "s8", "text": "«Rauwe vis? Hmm… eigenlijk is het lekker!»", "es": "«¿Pescado crudo? Mmm… ¡pues la verdad es que está bueno!»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s9", "text": "'s Avonds wandelen ze langs de grachten met al die lichtjes.", "es": "Por la noche pasean junto a los canales, con todas esas lucecitas." },
+    { "id": "s10", "text": "Om elf uur rennen ze naar het station.", "es": "A las once corren a la estación." },
+    { "id": "s11", "text": "De laatste trein naar Utrecht vertrekt van spoor zeven.", "es": "El último tren a Utrecht sale de la vía siete." },
+    { "id": "s12", "text": "«Snel! We hebben nog twee minuten!»", "es": "«¡Rápido! ¡Nos quedan dos minutos!»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s13", "text": "Ze halen de trein net op tijd.", "es": "Cogen el tren justo a tiempo." }
+  ],
+  "keywords": [
+    "nl-a2-transport.trein",
+    "nl-a2-transport.uitchecken",
+    "nl-a2-transport.lopen",
+    {
+      "id": "story-nl-gracht",
+      "word": "gracht",
+      "article": "de",
+      "plural": "grachten",
+      "es": "el canal (de la ciudad)",
+      "notes": "Los canales del centro de Ámsterdam o Utrecht. La «g» suena como una jota suave: JRAJT.",
+      "situation": "cultura"
+    },
+    "nl-a2-neighbours.museum",
+    "nl-a2-grammar.broodje",
+    "nl-a2-shopping.markt",
+    "nl-a2-shopping.vis",
+    "nl-a2-transport.station",
+    "nl-a2-transport.spoor"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Hoe lang duurt de reis naar Amsterdam?",
+      "es": "¿Cuánto dura el viaje a Ámsterdam?",
+      "options": [
+        { "text": "Twee uur.", "es": "Dos horas." },
+        { "text": "Een halfuur.", "es": "Media hora." },
+        { "text": "Tien minuten.", "es": "Diez minutos." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Welk museum bezoeken ze?",
+      "es": "¿Qué museo visitan?",
+      "options": [
+        { "text": "Het Rijksmuseum.", "es": "El Rijksmuseum." },
+        { "text": "Het Van Gogh Museum.", "es": "El Museo Van Gogh." },
+        { "text": "Het Anne Frank Huis.", "es": "La Casa de Ana Frank." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Wat eet Diego op de markt?",
+      "es": "¿Qué come Diego en el mercado?",
+      "options": [
+        { "text": "Appeltaart.", "es": "Tarta de manzana." },
+        { "text": "Een broodje kaas.", "es": "Un bocadillo de queso." },
+        { "text": "Een broodje haring.", "es": "Un bocadillo de arenque." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Halen ze de laatste trein?",
+      "es": "¿Cogen el último tren?",
+      "options": [
+        { "text": "Nee, ze slapen in Amsterdam.", "es": "No, duermen en Ámsterdam." },
+        { "text": "Ja, net op tijd.", "es": "Sí, justo a tiempo." },
+        { "text": "Nee, ze nemen de bus.", "es": "No, cogen el autobús." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s3", "answer": "story-nl-gracht", "gap": "grachten", "distractors": ["bergen", "stranden"] },
+    { "id": "g2", "sentence": "s6", "answer": "nl-a2-neighbours.museum", "distractors": ["park", "station"] },
+    { "id": "g3", "sentence": "s7", "answer": "nl-a2-shopping.markt", "distractors": ["trap", "bank"] },
+    { "id": "g4", "sentence": "s8", "answer": "nl-a2-shopping.vis", "distractors": ["kaas", "melk"] },
+    { "id": "g5", "sentence": "s11", "answer": "nl-a2-transport.spoor", "distractors": ["kassa", "balie"] },
+    { "id": "g6", "sentence": "s13", "answer": "nl-a2-transport.trein", "distractors": ["tram", "bus"] }
+  ]
+}

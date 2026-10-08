@@ -1,0 +1,90 @@
+{
+  "id": "story.nl-a2-de-bonuskaart",
+  "order": 5,
+  "title": "De bonuskaart",
+  "titleEs": "La tarjeta de cliente",
+  "description": "En el Albert Heijn: la bonuskaart, el depósito de las botellas y «solo con tarjeta».",
+  "emoji": "🛒",
+  "situation": "compras",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Het is zaterdag en Diego doet boodschappen bij de Albert Heijn.", "es": "Es sábado y Diego hace la compra en el Albert Heijn." },
+    { "id": "s2", "text": "Hij pakt een mandje en zoekt melk, brood, kaas en bananen.", "es": "Coge una cesta y busca leche, pan, queso y plátanos." },
+    { "id": "s3", "text": "Hij heeft ook een tas met lege flessen.", "es": "También lleva una bolsa con botellas vacías." },
+    { "id": "s4", "text": "Hij levert de flessen in en krijgt een bonnetje: dat is het statiegeld.", "es": "Devuelve las botellas y le dan un ticket: es el depósito." },
+    { "id": "s5", "text": "De kaas is in de aanbieding: één plus één gratis!", "es": "El queso está de oferta: ¡dos por uno!" },
+    { "id": "s6", "text": "Bij de kassa vraagt de caissière iets.", "es": "En la caja, la cajera le pregunta algo." },
+    { "id": "s7", "text": "«Heb je een bonuskaart?»", "es": "«¿Tienes tarjeta de cliente?»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s8", "text": "«Nee, die heb ik niet. Wat is dat?»", "es": "«No, no tengo. ¿Qué es eso?»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s9", "text": "«Met een bonuskaart krijg je korting. Wil je de bon?»", "es": "«Con la tarjeta de cliente tienes descuento. ¿Quieres el ticket?»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s10", "text": "Diego wil contant betalen, maar dat kan niet.", "es": "Diego quiere pagar en efectivo, pero no se puede." },
+    { "id": "s11", "text": "Op een bordje staat: «Alleen pinnen».", "es": "En un cartel pone: «Solo con tarjeta»." },
+    { "id": "s12", "text": "Gelukkig heeft hij zijn bankpas bij zich.", "es": "Por suerte lleva encima su tarjeta del banco." }
+  ],
+  "keywords": [
+    "nl-a2-shopping.boodschappen",
+    "nl-a2-shopping.mandje",
+    "nl-a2-shopping.kaas",
+    "nl-a2-shopping.fles",
+    "nl-a2-shopping.statiegeld",
+    "nl-a2-shopping.aanbieding",
+    "nl-a2-shopping.kassa",
+    "nl-a2-shopping.bonuskaart",
+    "nl-a2-shopping.heb-je-een-bonuskaart",
+    "nl-a2-bank.alleen-pinnen"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Welke dag doet Diego boodschappen?",
+      "es": "¿Qué día hace Diego la compra?",
+      "options": [
+        { "text": "Op maandag.", "es": "El lunes." },
+        { "text": "Op zaterdag.", "es": "El sábado." },
+        { "text": "Op zondag.", "es": "El domingo." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Wat is in de aanbieding?",
+      "es": "¿Qué está de oferta?",
+      "options": [
+        { "text": "De kaas.", "es": "El queso." },
+        { "text": "De melk.", "es": "La leche." },
+        { "text": "De bananen.", "es": "Los plátanos." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Heeft Diego een bonuskaart?",
+      "es": "¿Tiene Diego tarjeta de cliente?",
+      "options": [
+        { "text": "Ja, al een jaar.", "es": "Sí, desde hace un año." },
+        { "text": "Ja, maar hij is hem vergeten.", "es": "Sí, pero se la ha olvidado." },
+        { "text": "Nee, die heeft hij niet.", "es": "No, no tiene." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Hoe betaalt Diego?",
+      "es": "¿Cómo paga Diego?",
+      "options": [
+        { "text": "Contant.", "es": "En efectivo." },
+        { "text": "Met zijn bankpas.", "es": "Con su tarjeta del banco." },
+        { "text": "Met een creditcard.", "es": "Con tarjeta de crédito." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "nl-a2-shopping.mandje", "distractors": ["kaartje", "slot"] },
+    { "id": "g2", "sentence": "s3", "answer": "nl-a2-shopping.fles", "gap": "flessen", "distractors": ["boeken", "sleutels"] },
+    { "id": "g3", "sentence": "s4", "answer": "nl-a2-shopping.statiegeld", "distractors": ["saldo", "salaris"] },
+    { "id": "g4", "sentence": "s5", "answer": "nl-a2-shopping.aanbieding", "distractors": ["koelkast", "kassa"] },
+    { "id": "g5", "sentence": "s6", "answer": "nl-a2-shopping.kassa", "distractors": ["bakker", "markt"] },
+    { "id": "g6", "sentence": "s11", "answer": "nl-a2-bank.alleen-pinnen", "gap": "Alleen pinnen", "distractors": ["Alleen contant", "Niet pinnen"] }
+  ]
+}

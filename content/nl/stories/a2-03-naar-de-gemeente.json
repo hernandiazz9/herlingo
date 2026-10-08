@@ -1,0 +1,91 @@
+{
+  "id": "story.nl-a2-naar-de-gemeente",
+  "order": 3,
+  "title": "Naar de gemeente",
+  "titleEs": "Al ayuntamiento",
+  "description": "Diego se empadrona en la gemeente: el número BSN y la carta de DigiD.",
+  "emoji": "🏛️",
+  "situation": "tramites",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Diego heeft vandaag om negen uur een afspraak bij de gemeente.", "es": "Diego tiene hoy una cita a las nueve en el ayuntamiento." },
+    { "id": "s2", "text": "Hij moet zich inschrijven op zijn nieuwe adres.", "es": "Tiene que empadronarse en su nueva dirección." },
+    { "id": "s3", "text": "Hij neemt zijn paspoort en zijn huurcontract mee.", "es": "Se lleva el pasaporte y el contrato de alquiler." },
+    { "id": "s4", "text": "In het stadskantoor trekt hij een nummertje en wacht hij in de wachtkamer.", "es": "En las oficinas municipales coge número y espera en la sala de espera." },
+    { "id": "s5", "text": "Na tien minuten is hij aan de beurt.", "es": "A los diez minutos le toca." },
+    { "id": "s6", "text": "«Goedemorgen. Waarmee kan ik u helpen?»", "es": "«Buenos días. ¿En qué puedo ayudarle?»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s7", "text": "«Goedemorgen, ik kom me inschrijven.»", "es": "«Buenos días, vengo a empadronarme.»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s8", "text": "De medewerker bekijkt zijn paspoort en zijn huurcontract.", "es": "La funcionaria mira su pasaporte y su contrato de alquiler." },
+    { "id": "s9", "text": "Dan moet Diego een formulier invullen en onderaan tekenen.", "es": "Luego Diego tiene que rellenar un formulario y firmar abajo." },
+    { "id": "s10", "text": "«U krijgt binnen een paar dagen een brief met uw BSN.»", "es": "«Dentro de unos días recibirá una carta con su BSN.»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s11", "text": "Met dat nummer kan hij later een DigiD aanvragen.", "es": "Con ese número, más adelante puede solicitar un DigiD." },
+    { "id": "s12", "text": "De activeringscode voor zijn DigiD komt ook per post.", "es": "El código de activación de su DigiD también llega por correo." },
+    { "id": "s13", "text": "Diego fietst blij naar huis.", "es": "Diego vuelve a casa en bici, contento." }
+  ],
+  "keywords": [
+    "nl-a2-gemeente.gemeente",
+    "nl-a2-gemeente.afspraak",
+    "nl-a2-gemeente.paspoort",
+    "nl-a2-gemeente.huurcontract",
+    "nl-a2-gemeente.nummertje",
+    "nl-a2-gemeente.wachtkamer",
+    "nl-a2-gemeente.formulier",
+    "nl-a2-gemeente.ik-kom-me-inschrijven",
+    "nl-a2-gemeente.waarmee-kan-ik-u-helpen",
+    "nl-a2-gemeente.digid"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Hoe laat is de afspraak van Diego?",
+      "es": "¿A qué hora es la cita de Diego?",
+      "options": [
+        { "text": "Om tien uur.", "es": "A las diez." },
+        { "text": "Om negen uur.", "es": "A las nueve." },
+        { "text": "Om half drie.", "es": "A las dos y media." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Wat neemt Diego mee?",
+      "es": "¿Qué se lleva Diego?",
+      "options": [
+        { "text": "Zijn bankpas en een pasfoto.", "es": "Su tarjeta del banco y una foto de carné." },
+        { "text": "Alleen zijn ID-kaart.", "es": "Solo su DNI." },
+        { "text": "Zijn paspoort en zijn huurcontract.", "es": "Su pasaporte y su contrato de alquiler." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "Wat krijgt Diego binnen een paar dagen?",
+      "es": "¿Qué recibe Diego dentro de unos días?",
+      "options": [
+        { "text": "Een brief met zijn BSN.", "es": "Una carta con su BSN." },
+        { "text": "Een nieuwe fiets.", "es": "Una bici nueva." },
+        { "text": "De sleutel van zijn kamer.", "es": "La llave de su habitación." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Hoe komt de activeringscode?",
+      "es": "¿Cómo llega el código de activación?",
+      "options": [
+        { "text": "Via de balie.", "es": "Por el mostrador." },
+        { "text": "Per post.", "es": "Por correo." },
+        { "text": "Via Femke.", "es": "Por Femke." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s1", "answer": "nl-a2-gemeente.afspraak", "distractors": ["verjaardag", "vergadering"] },
+    { "id": "g2", "sentence": "s3", "answer": "nl-a2-gemeente.huurcontract", "distractors": ["boek", "brood"] },
+    { "id": "g3", "sentence": "s4", "answer": "nl-a2-gemeente.nummertje", "distractors": ["koekje", "biertje"] },
+    { "id": "g4", "sentence": "s6", "answer": "nl-a2-gemeente.waarmee-kan-ik-u-helpen", "gap": "Waarmee kan ik u helpen", "distractors": ["Hoe oud bent u", "Wat kost dat"] },
+    { "id": "g5", "sentence": "s9", "answer": "nl-a2-gemeente.formulier", "distractors": ["brood", "cadeau"] },
+    { "id": "g6", "sentence": "s11", "answer": "nl-a2-gemeente.digid", "distractors": ["bonuskaart", "fiets"] }
+  ]
+}

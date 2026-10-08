@@ -1,0 +1,90 @@
+{
+  "id": "story.nl-a2-welkom-in-utrecht",
+  "order": 1,
+  "title": "Welkom in Utrecht",
+  "titleEs": "Bienvenido a Utrecht",
+  "description": "Diego aterriza en Schiphol, coge el tren a Utrecht Centraal y hace check-in y check-out con su tarjeta.",
+  "emoji": "🚆",
+  "situation": "transporte",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Het is maandagochtend en het vliegtuig van Diego landt op Schiphol.", "es": "Es lunes por la mañana y el avión de Diego aterriza en Schiphol." },
+    { "id": "s2", "text": "Diego komt uit Zaragoza en gaat in Utrecht wonen en werken.", "es": "Diego es de Zaragoza y va a vivir y trabajar en Utrecht." },
+    { "id": "s3", "text": "Hij is programmeur, maar hij spreekt nog maar een beetje Nederlands.", "es": "Es programador, pero todavía habla solo un poco de neerlandés." },
+    { "id": "s4", "text": "Op het station koopt hij geen kaartje: hij checkt in met zijn bankpas.", "es": "En la estación no compra billete: hace check-in con su tarjeta del banco." },
+    { "id": "s5", "text": "«Pardon, van welk spoor vertrekt de trein naar Utrecht?»", "es": "«Perdone, ¿de qué vía sale el tren a Utrecht?»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s6", "text": "«Van spoor één. Hij vertrekt over tien minuten.»", "es": "«De la vía uno. Sale dentro de diez minutos.»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s7", "text": "De trein heeft vijf minuten vertraging, maar dat is geen probleem.", "es": "El tren lleva cinco minutos de retraso, pero no pasa nada." },
+    { "id": "s8", "text": "Na een halfuur is Diego op Utrecht Centraal.", "es": "Después de media hora, Diego está en Utrecht Centraal." },
+    { "id": "s9", "text": "Het station is enorm, en overal staan fietsen.", "es": "La estación es enorme y hay bicis por todas partes." },
+    { "id": "s10", "text": "Bij de uitgang checkt hij uit met zijn bankpas.", "es": "En la salida hace check-out con su tarjeta del banco." },
+    { "id": "s11", "text": "Buiten regent het een beetje, maar Diego lacht.", "es": "Fuera llueve un poco, pero Diego sonríe." },
+    { "id": "s12", "text": "«Hallo, Utrecht! Hier ga ik wonen!»", "es": "«¡Hola, Utrecht! ¡Aquí voy a vivir!»", "voice": "nl-NL-MaartenNeural" }
+  ],
+  "keywords": [
+    "nl-a2-transport.trein",
+    "nl-a2-transport.station",
+    "nl-a2-transport.kaartje",
+    "nl-a2-transport.spoor",
+    "nl-a2-transport.vertraging",
+    "nl-a2-transport.inchecken",
+    "nl-a2-transport.uitchecken",
+    "nl-a2-bank.bankpas",
+    "nl-a2-about-me.programmeur",
+    "nl-a2-hello.pardon"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Waar landt het vliegtuig van Diego?",
+      "es": "¿Dónde aterriza el avión de Diego?",
+      "options": [
+        { "text": "In Rotterdam.", "es": "En Róterdam." },
+        { "text": "Op Schiphol.", "es": "En Schiphol." },
+        { "text": "In Utrecht.", "es": "En Utrecht." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Hoe betaalt Diego de trein?",
+      "es": "¿Cómo paga Diego el tren?",
+      "options": [
+        { "text": "Hij koopt een kaartje bij de kassa.", "es": "Compra un billete en la taquilla." },
+        { "text": "Hij betaalt contant.", "es": "Paga en efectivo." },
+        { "text": "Hij checkt in met zijn bankpas.", "es": "Hace check-in con su tarjeta del banco." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "Hoeveel minuten vertraging heeft de trein?",
+      "es": "¿Cuántos minutos de retraso lleva el tren?",
+      "options": [
+        { "text": "Vijf minuten.", "es": "Cinco minutos." },
+        { "text": "Tien minuten.", "es": "Diez minutos." },
+        { "text": "Een halfuur.", "es": "Media hora." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Wat ziet Diego overal bij het station?",
+      "es": "¿Qué ve Diego por todas partes en la estación?",
+      "options": [
+        { "text": "Auto's.", "es": "Coches." },
+        { "text": "Fietsen.", "es": "Bicis." },
+        { "text": "Trams.", "es": "Tranvías." }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s4", "answer": "nl-a2-transport.kaartje", "distractors": ["paspoort", "huis"] },
+    { "id": "g2", "sentence": "s5", "answer": "nl-a2-hello.pardon", "gap": "Pardon", "distractors": ["Gezondheid", "Gefeliciteerd"] },
+    { "id": "g3", "sentence": "s6", "answer": "nl-a2-transport.spoor", "distractors": ["kaartje", "huis"] },
+    { "id": "g4", "sentence": "s7", "answer": "nl-a2-transport.vertraging", "distractors": ["voorrang", "koorts"] },
+    { "id": "g5", "sentence": "s9", "answer": "nl-a2-transport.station", "distractors": ["slot", "kaartje"] },
+    { "id": "g6", "sentence": "s10", "answer": "nl-a2-bank.bankpas", "distractors": ["paraplu", "sleutel"] }
+  ]
+}

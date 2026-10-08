@@ -1,0 +1,90 @@
+{
+  "id": "story.nl-a2-een-kamer-in-lombok",
+  "order": 2,
+  "title": "Een kamer in Lombok",
+  "titleEs": "Una habitación en Lombok",
+  "description": "Su primera habitación en el barrio de Lombok; conoce a Femke en la escalera estrecha.",
+  "emoji": "🔑",
+  "situation": "vivienda",
+  "level": "A2",
+  "sentences": [
+    { "id": "s1", "text": "Diego woont nu twee weken in Utrecht, in de wijk Lombok.", "es": "Diego lleva dos semanas viviendo en Utrecht, en el barrio de Lombok." },
+    { "id": "s2", "text": "Hij huurt een kleine kamer op de tweede verdieping.", "es": "Alquila una habitación pequeña en el segundo piso." },
+    { "id": "s3", "text": "De kamer is niet gemeubileerd, dus hij koopt een bed en een kast op Marktplaats.", "es": "La habitación no está amueblada, así que compra una cama y un armario en Marktplaats." },
+    { "id": "s4", "text": "De huur is zevenhonderd euro per maand, inclusief gas, water en licht.", "es": "El alquiler son setecientos euros al mes, con gas, agua y luz incluidos." },
+    { "id": "s5", "text": "Maar de trap is heel steil en smal, typisch Nederlands!", "es": "Pero la escalera es muy empinada y estrecha, ¡típico de los Países Bajos!" },
+    { "id": "s6", "text": "Op zaterdag draagt hij een grote doos naar boven.", "es": "El sábado sube una caja grande." },
+    { "id": "s7", "text": "Halverwege de trap komt hij een vrouw tegen.", "es": "A mitad de la escalera se encuentra con una mujer." },
+    { "id": "s8", "text": "«Hoi! Ben jij de nieuwe buurman? Ik ben Femke.»", "es": "«¡Hola! ¿Eres el nuevo vecino? Soy Femke.»", "voice": "nl-NL-ColetteNeural" },
+    { "id": "s9", "text": "«Ja, ik ben Diego. Sorry, de doos is te groot!»", "es": "«Sí, soy Diego. ¡Perdona, la caja es demasiado grande!»", "voice": "nl-NL-MaartenNeural" },
+    { "id": "s10", "text": "Femke lacht en helpt hem met de doos.", "es": "Femke se ríe y le ayuda con la caja." },
+    { "id": "s11", "text": "Ze woont boven hem en ze is verpleegkundige in het ziekenhuis.", "es": "Vive encima de él y es enfermera en el hospital." },
+    { "id": "s12", "text": "«Als je iets nodig hebt, bel maar aan!»", "es": "«Si necesitas algo, ¡llama al timbre!»", "voice": "nl-NL-ColetteNeural" }
+  ],
+  "keywords": [
+    "nl-a2-housing.kamer",
+    "nl-a2-housing.huren",
+    "nl-a2-housing.huur",
+    "nl-a2-housing.gemeubileerd",
+    "nl-a2-housing.trap",
+    "nl-a2-housing.bed",
+    "nl-a2-housing.kast",
+    "nl-a2-hello.buurman",
+    "nl-a2-about-me.verpleegkundige",
+    "nl-a2-neighbours.als-je-iets-nodig-hebt-bel-maar-aan"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "In welke wijk woont Diego?",
+      "es": "¿En qué barrio vive Diego?",
+      "options": [
+        { "text": "In Lombok.", "es": "En Lombok." },
+        { "text": "In het centrum van Amsterdam.", "es": "En el centro de Ámsterdam." },
+        { "text": "Vlak bij het station van Rotterdam.", "es": "Muy cerca de la estación de Róterdam." }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Hoeveel is de huur?",
+      "es": "¿Cuánto es el alquiler?",
+      "options": [
+        { "text": "Achthonderd euro per maand.", "es": "Ochocientos euros al mes." },
+        { "text": "Vijftig euro per week.", "es": "Cincuenta euros a la semana." },
+        { "text": "Zevenhonderd euro per maand.", "es": "Setecientos euros al mes." }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "Waar komt Diego Femke tegen?",
+      "es": "¿Dónde se encuentra Diego con Femke?",
+      "options": [
+        { "text": "In de supermarkt.", "es": "En el supermercado." },
+        { "text": "Op de trap.", "es": "En la escalera." },
+        { "text": "Op het station.", "es": "En la estación." }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Wat voor werk doet Femke?",
+      "es": "¿En qué trabaja Femke?",
+      "options": [
+        { "text": "Ze is verpleegkundige.", "es": "Es enfermera." },
+        { "text": "Ze is lerares.", "es": "Es profesora." },
+        { "text": "Ze is programmeur.", "es": "Es programadora." }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    { "id": "g1", "sentence": "s2", "answer": "nl-a2-housing.huren", "gap": "huurt", "distractors": ["verkoopt", "bouwt"] },
+    { "id": "g2", "sentence": "s3", "answer": "nl-a2-housing.gemeubileerd", "distractors": ["kapot", "leeg"] },
+    { "id": "g3", "sentence": "s4", "answer": "nl-a2-housing.huur", "distractors": ["borg", "kast"] },
+    { "id": "g4", "sentence": "s5", "answer": "nl-a2-housing.trap", "distractors": ["keuken", "wc"] },
+    { "id": "g5", "sentence": "s8", "answer": "nl-a2-hello.buurman", "distractors": ["collega", "huisgenoot"] },
+    { "id": "g6", "sentence": "s11", "answer": "nl-a2-about-me.verpleegkundige", "distractors": ["programmeur", "leraar"] }
+  ]
+}
