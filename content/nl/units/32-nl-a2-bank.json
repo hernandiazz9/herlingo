@@ -627,9 +627,10 @@
       "word": "salaris",
       "article": "het",
       "plural": "salarissen",
-      "es": "el sueldo",
+      "es": "el sueldo, el salario",
       "example": "nl-a2-bank.mijn-salaris-is-nog-niet-binnen",
-      "situation": "dinero"
+      "situation": "dinero",
+      "image": "fluent:money-bag"
     },
     {
       "id": "nl-a2-bank.betaling",

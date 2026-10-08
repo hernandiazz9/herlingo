@@ -12,13 +12,13 @@
       "title": "Avisar de una avería",
       "items": [
         "nl-b1-renting.huurder",
-        "nl-b1-renting.verhuurder",
+        "nl-a2-housing.verhuurder",
         "nl-b1-renting.woningcorporatie",
         "nl-b1-renting.onderhoud",
         "nl-b1-renting.reparatie",
         "nl-b1-renting.ik-wil-een-reparatie-melden",
         "nl-b1-renting.cv-ketel",
-        "nl-b1-renting.verwarming",
+        "nl-a2-housing.verwarming",
         "nl-b1-renting.de-verwarming-doet-het-niet-meer",
         "nl-b1-renting.de-cv-ketel-maakt-een-raar-geluid",
         "nl-b1-renting.kraan",
@@ -39,7 +39,7 @@
       "items": [
         "nl-b1-renting.lekkage",
         "nl-b1-renting.er-is-een-lekkage-in-de-badkamer",
-        "nl-b1-renting.badkamer",
+        "nl-a2-housing.badkamer",
         "nl-b1-renting.plafond",
         "nl-b1-renting.er-druppelt-water-van-het-plafond",
         "nl-b1-renting.vocht",
@@ -48,7 +48,7 @@
         "nl-b1-renting.er-zit-schimmel-op-de-muur-in-de-badkamer",
         "nl-b1-renting.ventileren",
         "nl-b1-renting.ik-ventileer-elke-dag-maar-het-helpt-niet",
-        "nl-b1-renting.raam",
+        "nl-a2-housing.raam",
         "nl-b1-renting.zet-de-ramen-af-en-toe-open",
         "nl-b1-renting.foto",
         "nl-b1-renting.ik-heb-fotos-van-de-schimmel-gemaakt",
@@ -106,9 +106,9 @@
         "nl-b1-renting.wat-is-mijn-opzegtermijn",
         "nl-b1-renting.oplevering",
         "nl-b1-renting.het-huis-wordt-bij-de-oplevering-gecontroleerd",
-        "nl-b1-renting.sleutel",
+        "nl-a2-housing.sleutel",
         "nl-b1-renting.ik-lever-de-sleutels-op-de-laatste-dag-in",
-        "nl-b1-renting.borg",
+        "nl-a2-housing.borg",
         "nl-b1-renting.terugkrijgen",
         "nl-b1-renting.wanneer-krijg-ik-mijn-borg-terug",
         "nl-b1-renting.schade",
@@ -487,15 +487,6 @@
       "situation": "vivienda"
     },
     {
-      "id": "nl-b1-renting.verhuurder",
-      "word": "verhuurder",
-      "article": "de",
-      "plural": "verhuurders",
-      "es": "el casero, el arrendador",
-      "notes": "Puede ser una persona, una agencia o una woningcorporatie.",
-      "situation": "vivienda"
-    },
-    {
       "id": "nl-b1-renting.woningcorporatie",
       "word": "woningcorporatie",
       "article": "de",
@@ -531,13 +522,6 @@
       "situation": "vivienda"
     },
     {
-      "id": "nl-b1-renting.verwarming",
-      "word": "verwarming",
-      "article": "de",
-      "es": "la calefacción",
-      "situation": "vivienda"
-    },
-    {
       "id": "nl-b1-renting.kraan",
       "word": "kraan",
       "article": "de",
@@ -563,15 +547,6 @@
       "es": "la fuga (de agua), la gotera",
       "situation": "vivienda",
       "image": "fluent:droplet"
-    },
-    {
-      "id": "nl-b1-renting.badkamer",
-      "word": "badkamer",
-      "article": "de",
-      "plural": "badkamers",
-      "es": "el cuarto de baño",
-      "situation": "vivienda",
-      "image": "fluent:bathtub"
     },
     {
       "id": "nl-b1-renting.plafond",
@@ -603,15 +578,6 @@
       "es": "ventilar",
       "notes": "ik ventileer, ik heb geventileerd.",
       "situation": "vivienda"
-    },
-    {
-      "id": "nl-b1-renting.raam",
-      "word": "raam",
-      "article": "het",
-      "plural": "ramen",
-      "es": "la ventana",
-      "situation": "vivienda",
-      "image": "fluent:window"
     },
     {
       "id": "nl-b1-renting.foto",
@@ -699,23 +665,6 @@
       "plural": "opleveringen",
       "es": "la entrega del piso (inspección final)",
       "notes": "El día que devuelves las llaves y revisan el piso.",
-      "situation": "vivienda"
-    },
-    {
-      "id": "nl-b1-renting.sleutel",
-      "word": "sleutel",
-      "article": "de",
-      "plural": "sleutels",
-      "es": "la llave",
-      "situation": "vivienda",
-      "image": "fluent:key"
-    },
-    {
-      "id": "nl-b1-renting.borg",
-      "word": "borg",
-      "article": "de",
-      "es": "la fianza",
-      "notes": "Suele ser uno o dos meses de alquiler.",
       "situation": "vivienda"
     },
     {

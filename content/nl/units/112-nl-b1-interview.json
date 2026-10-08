@@ -17,7 +17,7 @@
         "nl-b1-interview.ik-heb-om-tien-uur-een-afspraak-met-meneer-jansen",
         "nl-b1-interview.gesprek",
         "nl-b1-interview.leidinggevende",
-        "nl-b1-interview.leuk-u-te-ontmoeten",
+        "nl-a2-about-me.leuk-u-te-ontmoeten",
         "nl-b1-interview.sollicitant",
         "nl-b1-interview.kunt-u-iets-over-uzelf-vertellen",
         "nl-b1-interview.ik-kom-uit-spanje-en-woon-sinds-vorig-jaar-in-utrecht",
@@ -83,7 +83,7 @@
       "id": "nl-b1-interview.l.contract",
       "title": "Sueldo y contrato",
       "items": [
-        "nl-b1-interview.salaris",
+        "nl-a2-bank.salaris",
         "nl-b1-interview.wat-is-het-salaris-voor-deze-functie",
         "nl-b1-interview.bruto",
         "nl-b1-interview.netto",
@@ -124,8 +124,8 @@
         "nl-b1-interview.we-willen-je-graag-een-aanbod-doen",
         "nl-b1-job-search.arbeidsvoorwaarden",
         "nl-b1-job-search.opzegtermijn",
-        "nl-b1-interview.tekenen",
-        "nl-b1-interview.handtekening",
+        "nl-a2-gemeente.tekenen",
+        "nl-a2-gemeente.handtekening",
         "nl-b1-interview.ik-heb-het-contract-getekend",
         "nl-b1-interview.ik-begin-op-een-mei",
         "nl-b1-interview.qa.start-date",
@@ -136,7 +136,6 @@
   "phrases": [
     {"id": "nl-b1-interview.ik-kom-voor-het-sollicitatiegesprek", "text": "Goedemorgen, ik kom voor het sollicitatiegesprek.", "es": "Buenos días, vengo a la entrevista de trabajo.", "notes": "«komen voor» = venir para algo (una cita, una entrevista).", "explanation": "En recepción al llegar. «Goedemorgen»: «ju-de-MOR-je», con dos «g» de garganta suaves.", "register": "neutral", "situation": "trabajo"},
     {"id": "nl-b1-interview.ik-heb-om-tien-uur-een-afspraak-met-meneer-jansen", "text": "Ik heb om tien uur een afspraak met meneer Jansen.", "es": "Tengo una cita a las diez con el señor Jansen.", "notes": "«om» + hora: om tien uur. «meneer» = señor (al hablar de alguien o dirigirte a él).", "explanation": "Para decir con quién has quedado. «meneer» suena «me-NEER»; «uur» con «uu» redondeada.", "register": "neutral", "situation": "trabajo"},
-    {"id": "nl-b1-interview.leuk-u-te-ontmoeten", "text": "Leuk u te ontmoeten.", "es": "Encantado de conocerle.", "notes": "Con «je» es «Leuk je te ontmoeten»; en la entrevista, «u».", "explanation": "Al dar la mano al entrevistador. «ontmoeten»: acento en «MOE»: «ont-MU-te».", "register": "u", "situation": "trabajo"},
     {"id": "nl-b1-interview.kunt-u-iets-over-uzelf-vertellen", "text": "Kunt u iets over uzelf vertellen?", "es": "¿Puede hablarnos un poco de usted?", "notes": "«uzelf» = usted mismo; con je: jezelf.", "explanation": "La primera pregunta de casi toda entrevista. «uzelf»: «u-SELF», con la «u» redondeada.", "register": "u", "situation": "trabajo"},
     {"id": "nl-b1-interview.ik-kom-uit-spanje-en-woon-sinds-vorig-jaar-in-utrecht", "text": "Ik kom uit Spanje en woon sinds vorig jaar in Utrecht.", "es": "Soy de España y vivo en Utrecht desde el año pasado.", "notes": "«sinds» + un punto de inicio (sinds vorig jaar) con presente: lo que sigue.", "explanation": "Para presentarte en pocas palabras. «Utrecht»: «U-trejt», acento en la primera y «ch» de garganta.", "register": "neutral", "situation": "trabajo"},
     {"id": "nl-b1-interview.ik-ben-gemotiveerd-om-nederlands-te-leren", "text": "Ik ben erg gemotiveerd om goed Nederlands te leren.", "es": "Estoy muy motivado para aprender bien neerlandés.", "notes": "«om … te» + infinitivo al final: om Nederlands te leren.", "explanation": "Buena frase para mostrar compromiso. «gemotiveerd»: «je-mo-ti-VEERT», la «d» final como «t».", "register": "neutral", "situation": "trabajo"},
@@ -201,7 +200,6 @@
     {"id": "nl-b1-interview.druk", "word": "druk", "article": "de", "es": "la presión", "example": "nl-b1-interview.ik-kan-goed-onder-druk-werken", "situation": "trabajo"},
     {"id": "nl-b1-interview.flexibel", "word": "flexibel", "es": "flexible", "example": "nl-b1-interview.ik-ben-flexibel-en-ik-leer-snel", "situation": "trabajo"},
     {"id": "nl-b1-interview.product", "word": "product", "article": "het", "plural": "producten", "es": "el producto", "example": "nl-b1-interview.ik-vind-jullie-product-heel-interessant", "situation": "trabajo"},
-    {"id": "nl-b1-interview.salaris", "word": "salaris", "article": "het", "plural": "salarissen", "es": "el sueldo, el salario", "example": "nl-b1-interview.wat-is-het-salaris-voor-deze-functie", "situation": "trabajo", "image": "fluent:money-bag"},
     {"id": "nl-b1-interview.bruto", "word": "bruto", "es": "bruto (antes de impuestos)", "example": "nl-b1-interview.is-dat-bruto-of-netto", "situation": "trabajo"},
     {"id": "nl-b1-interview.netto", "word": "netto", "es": "neto (lo que cobras)", "example": "nl-b1-interview.is-dat-bruto-of-netto", "situation": "trabajo"},
     {"id": "nl-b1-interview.vakantiegeld", "word": "vakantiegeld", "article": "het", "es": "la paga de vacaciones", "example": "nl-b1-interview.het-vakantiegeld-is-acht-procent", "situation": "trabajo"},
@@ -214,8 +212,6 @@
     {"id": "nl-b1-interview.pensioen", "word": "pensioen", "article": "het", "plural": "pensioenen", "es": "la pensión, el plan de pensiones", "notes": "Se dice «pen-SJUN».", "situation": "trabajo"},
     {"id": "nl-b1-interview.cao", "word": "cao", "article": "de", "plural": "cao's", "es": "el convenio colectivo", "notes": "Siglas de collectieve arbeidsovereenkomst; se dice «see-aa-OO».", "situation": "trabajo"},
     {"id": "nl-b1-interview.aanbod", "word": "aanbod", "article": "het", "es": "la oferta (de trabajo)", "example": "nl-b1-interview.we-willen-je-graag-een-aanbod-doen", "situation": "trabajo"},
-    {"id": "nl-b1-interview.tekenen", "word": "tekenen", "es": "firmar; dibujar", "example": "nl-b1-interview.ik-heb-het-contract-getekend", "situation": "trabajo", "image": "fluent:writing-hand"},
-    {"id": "nl-b1-interview.handtekening", "word": "handtekening", "article": "de", "plural": "handtekeningen", "es": "la firma", "situation": "trabajo"},
     {"id": "nl-b1-interview.werkdag", "word": "werkdag", "article": "de", "plural": "werkdagen", "es": "el día laborable, la jornada", "example": "nl-b1-interview.hoe-ziet-een-normale-werkdag-eruit", "situation": "trabajo"}
   ],
   "qa": [

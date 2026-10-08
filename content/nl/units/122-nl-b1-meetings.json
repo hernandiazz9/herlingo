@@ -83,7 +83,7 @@
       "id": "nl-b1-meetings.l.afspraken",
       "title": "Acuerdos, tareas y plazos",
       "items": [
-        "nl-b1-meetings.afspraak",
+        "nl-a2-gemeente.afspraak",
         "nl-b1-meetings.afspreken",
         "nl-b1-meetings.wat-spreken-we-af",
         "nl-b1-meetings.we-spreken-dus-af-dat-ik-de-klant-bel",
@@ -705,15 +705,6 @@
       "plural": "compromissen",
       "es": "el término medio, el acuerdo intermedio",
       "notes": "Falso amigo: no es «compromiso» (obligación), sino el punto intermedio entre dos posturas.",
-      "situation": "trabajo"
-    },
-    {
-      "id": "nl-b1-meetings.afspraak",
-      "word": "afspraak",
-      "article": "de",
-      "plural": "afspraken",
-      "es": "el acuerdo; la cita",
-      "notes": "Sirve para «cita» y para «lo que acordamos»: afspraken maken.",
       "situation": "trabajo"
     },
     {

@@ -93,7 +93,7 @@
       "id": "nl-b1-culture.l.nederland",
       "title": "Cumpleaños en círculo, polderen, agua y gobierno",
       "items": [
-        "nl-b1-culture.kring",
+        "nl-a2-neighbours.kring",
         "nl-b1-culture.op-een-verjaardag-zit-iedereen-in-een-grote-kring",
         "nl-b1-culture.gefeliciteerd-met-je-vader",
         "nl-b1-culture.je-feliciteert-niet-alleen-de-jarige-maar-ook-de-familie",
@@ -602,14 +602,6 @@
       "plural": "kringloopwinkels",
       "es": "la tienda de segunda mano",
       "notes": "«de winkel» = la tienda (no la ventana).",
-      "situation": "cultura"
-    },
-    {
-      "id": "nl-b1-culture.kring",
-      "word": "kring",
-      "article": "de",
-      "plural": "kringen",
-      "es": "el círculo, el corro",
       "situation": "cultura"
     },
     {

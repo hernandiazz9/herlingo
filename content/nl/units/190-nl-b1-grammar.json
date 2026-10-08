@@ -18,7 +18,7 @@
         "nl-b1-grammar.ik-had-geen-tijd-want-ik-moest-werken",
         "nl-b1-interview.daarvoor-werkte-ik-bij-een-start-up-in-madrid",
         "gram.nl-b1-perfect-zijn",
-        "nl-b1-grammar.verhuizen",
+        "nl-a2-housing.verhuizen",
         "nl-b1-grammar.ik-ben-vorig-jaar-naar-utrecht-verhuisd",
         "nl-b1-grammar.ze-is-naar-huis-gegaan",
         "nl-b1-grammar.hoe-lang-ben-je-in-spanje-gebleven",
@@ -145,7 +145,6 @@
     {"id": "nl-b1-grammar.ik-zoek-een-goedkope-fiets", "text": "Ik zoek een goedkope fiets.", "es": "Busco una bici barata.", "notes": "«de fiets»: el adjetivo lleva -e también con «een».", "explanation": "Para preguntar en una tienda o en Marktplaats. «goedkope»: «jut-KOO-pe».", "register": "neutral", "situation": "compras"}
   ],
   "vocab": [
-    {"id": "nl-b1-grammar.verhuizen", "word": "verhuizen", "es": "mudarse (de casa)", "notes": "Perfecto con zijn: ik ben verhuisd.", "example": "nl-b1-grammar.ik-ben-vorig-jaar-naar-utrecht-verhuisd", "situation": "gramatica"},
     {"id": "nl-b1-grammar.vroeger", "word": "vroeger", "es": "antes, en otros tiempos", "example": "nl-b1-grammar.vroeger-woonde-ik-in-madrid", "situation": "gramatica"},
     {"id": "nl-b1-grammar.terwijl", "word": "terwijl", "es": "mientras", "notes": "Manda el verbo al final.", "example": "nl-b1-grammar.terwijl-ik-kookte-belde-mijn-moeder", "situation": "gramatica"},
     {"id": "nl-b1-grammar.lastig", "word": "lastig", "es": "complicado, difícil; molesto", "example": "nl-b1-grammar.het-is-lastig-om-in-utrecht-een-huis-te-vinden", "situation": "gramatica"},
