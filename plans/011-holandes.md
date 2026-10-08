@@ -33,7 +33,7 @@ Worktree setup: npm ci
 - Outcome: Dutch pack.json (A2/B1, nl-NL voices, new generic register 'u'), docs/brief-nl.md; diacritics already folded — e973589
 
 ## T136 — A2 units 1–4 (with the grammar unit)
-- Status: pending
+- Status: done
 - Depends on: T135
 - Goal: Write the first four A2 units from brief-nl.md, including the A2 grammar unit (x90).
 - Context: Shared contract, docs/brief-nl.md, `content/en/units/` A2 files as format model.
@@ -41,7 +41,7 @@ Worktree setup: npm ci
 - Done when:
   - 4 unit files exist, each with ~5 lessons and its share of ~45 phrases, ~33 vocab, ~9 Q&A per unit (grammar unit: ~10 cards) as brief-nl says.
   - `npm run content:check` → exit 0; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units 10 hello, 12 numbers, 20 about-me, 90 grammar (188 phrases, 130 vocab, 33 Q&A, 11 cards) — 49b2083
 
 ## T137 — A2 units 5–8
 - Status: pending
@@ -64,7 +64,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T139 — B1 units 1–4 (with the grammar unit)
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: T135
 - Goal: Write the first four B1 units from brief-nl.md, including the B1 grammar unit (190).
 - Context: Shared contract, docs/brief-nl.md, `content/en/units/` B1 files as format model. A2 may be in progress in parallel: do not depend on A2 items that are not on main yet.
@@ -158,6 +158,8 @@ Worktree setup: npm ci
 ## Decisions
 - 2026-10-08 Hernán: levels A2 + B1; goal live/work in the Netherlands, guided by inburgering themes; nl-NL voices; English-sized volume per level; mixed je/u; base Utrecht plus other cities; A2 and B1 built in parallel.
 - 2026-10-08 T135: new generic register value `u` (badge 'Trato de usted (u)'); voices Fenna=narrator, Maarten=men, Colette=women (only 3 nl-NL voices), stories quote ≤1 man + 1 woman; new situation `tramites`; equivalents 't/m'n/z'n; placement 12 questions (6+6); cast Diego (Zaragoza), Femke, Ria + Sanne, Joost, Lucía, Martina at B1 (agent)
+- 2026-10-08 orchestrator: unit split by brief order — T136 = 10, 12, 20 + 90; T137 = 22, 30, 32, 40; T138 = 42, 50, 52; T139 = 110, 112, 120 + 190; T140 = 122, 130, 132, 140; T141 = 142, 150, 152.
+- 2026-10-08 T136: days/months as vocab without article; learner persona as English A2 (Madrid, 32, programmer); grammar unit also carries phrases/vocab/Q&A with items meant for reuse; Q&A voices Maarten/Colette, phrases Fenna (agent)
 
 ## Proposals (new scope)
 - 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
@@ -165,3 +167,6 @@ Worktree setup: npm ci
 ## Log
 - 2026-10-08 23:27 T135 launched · attempt 1 · agent ada48689fcc653b83
 - 2026-10-08 23:34 T135 done · branch worktree-agent-ada48689fcc653b83 → e973589
+- 2026-10-08 23:35 T136 launched · attempt 1 · agent a42f151109d93fddb
+- 2026-10-08 23:35 T139 launched · attempt 1 · agent a1326ce7d1a975f97
+- 2026-10-08 23:47 T136 done → 49b2083
