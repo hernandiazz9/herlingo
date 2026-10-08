@@ -8,10 +8,10 @@ import { countPlay, recordActivity, repeatXp } from "@/lib/progress/activity";
 import { DialoguePlayer } from "./DialoguePlayer";
 
 /** Pronoun shown after "Trato de usted" for a Latin-script formal register; others show none. */
-const FORMAL_PRONOUN: Record<string, string> = { lei: "Lei", vous: "Vous" };
+const FORMAL_PRONOUN: Record<string, string> = { lei: "Lei", vous: "Vous", u: "u" };
 
 /**
- * "Trato de tú", or "Trato de usted (Lei)" / "(Vous)" / "Trato de usted" (`vy`) for the pack's
+ * "Trato de tú", or "Trato de usted (Lei)" / "(Vous)" / "(u)" / "Trato de usted" (`vy`) for the pack's
  * formal register; a pack whose formal register is the generic `formal` (no polite pronoun) says
  * "Registro informal" / "Registro formal"; neutral = none.
  */

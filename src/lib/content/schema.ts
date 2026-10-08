@@ -27,17 +27,18 @@ export const ImageKey = z
   .regex(IMAGE_KEY_PATTERN, 'image must be "fluent:<icon-name>" or "custom:<slug>" (lowercase a-z0-9 joined by single "-")');
 
 /**
- * Target-language register: tu = informal, lei / vous / vy / formal = formal (each pack allows
+ * Target-language register: tu = informal, lei / vous / vy / u / formal = formal (each pack allows
  * only its own `formalRegister`, checked by `content:check`), neutral = either.
  */
-export const Register = z.enum(["tu", "lei", "vous", "vy", "formal", "neutral"]);
+export const Register = z.enum(["tu", "lei", "vous", "vy", "u", "formal", "neutral"]);
 
 /**
  * Formal register of a pack (`pack.json` `formalRegister`): Italian `lei`, French `vous`, a
- * language whose polite "you" is the plural pronoun romanized "vy"; `formal` for a language
+ * language whose polite "you" is the plural pronoun romanized "vy", a language whose polite
+ * "you" is written "u" (Dutch); `formal` for a language
  * without a polite pronoun (polite or formal wording instead).
  */
-export const FormalRegister = z.enum(["lei", "vous", "vy", "formal"]);
+export const FormalRegister = z.enum(["lei", "vous", "vy", "u", "formal"]);
 
 /** CEFR level (stories; units, dialogues and placement questions of a pack with `levels`). */
 export const Level = z.enum(["A1", "A2", "B1", "B2", "C1", "C2"]);

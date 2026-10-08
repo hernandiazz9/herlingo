@@ -98,11 +98,12 @@ cast, voices). What changes:
 **pack.json**: `default?` (`true` on exactly one pack), `lang` (= folder name), `name` (in
 Spanish, "Francés"), `nativeName` ("Français"), `emoji?` (flag shown by the language picker, 🇫🇷),
 `speechLocale` (`it-IT`), `voices` (edge-tts voice names; the first is the default),
-`formalRegister` (`lei` | `vous` | `vy` | `formal`: the formal register this pack's items use;
-`vy` is Russian вы to one person, shown as "Trato de usted"; `formal`
+`formalRegister` (`lei` | `vous` | `vy` | `u` | `formal`: the formal register this pack's items use;
+`vy` is Russian вы to one person, shown as "Trato de usted"; `u` is Dutch polite u, shown as
+"Trato de usted (u)"; `formal`
 is the generic value for a language with no polite pronoun, like English, where it marks polite
 or formal wording), `articles?` (articles allowed in vocab `article`: Italian `il lo la l' i gli
-le`, French `le la l' les`, English `a an`; omit it for a language without articles, like
+le`, French `le la l' les`, English `a an`, Dutch `de het`; omit it for a language without articles, like
 Russian: vocab then has no `article`),
 `numberWords` (optional, `{ "40": "quaranta", … }`: speech recognition often returns digits, so
 spoken answers are compared with digits written out with these words), `situations`
@@ -163,7 +164,7 @@ language picker until it has a unit.
 
 - **Phrase**: `id`, `text` (target language, as spoken), `es`, `literal?` (word for word, only when
   it helps), `notes?` (short Spanish usage note), `explanation?` (see below), `register`
-  (`tu` | `neutral` | the pack's `formalRegister`: `lei` in Italian, `vous` in French, `formal`
+  (`tu` | `neutral` | the pack's `formalRegister`: `lei` in Italian, `vous` in French, `u` in Dutch, `formal`
   in English),
   `situation`, `tags?`, `voice?`.
 - **Phrase `explanation`** (shown on the Jugar discovery cards; the UI falls back to `notes`):
