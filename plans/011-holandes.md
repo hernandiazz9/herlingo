@@ -124,24 +124,24 @@ Worktree setup: npm ci
 - Outcome: 12 A2 stories (86–120 words, keywords, 4 questions, 6 gaps) — 05d726d
 
 ## T145 — B1 stories (12)
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T141
 - Goal: Write the 12 B1 stories from brief-nl.md (orders 101–112, files `b1-NN-<slug>.json`), at the English B1 story length.
 - Context: Shared contract, docs/brief-nl.md, `content/en/stories/b1-*` as format model.
 - Scope: may touch `content/nl/stories/b1-*` / must not touch units, dialogues, pack.json, other packs.
 - Done when:
   - 12 story files; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 12 B1 stories (130–149 words), inline vocab story-nl-b1-* — 08a6020
 
 ## T146 — Placement test (A2/B1)
-- Status: pending
+- Status: done
 - Depends on: T138, T141
 - Goal: Write `content/nl/extras/placement.json` that suggests A2 or B1 (about 8 questions per level, with audio questions like English).
 - Context: Shared contract, `content/en/extras/placement.json`, the placement logic in src (read only).
 - Scope: may touch `content/nl/extras/placement.json` / must not touch code, other packs.
 - Done when:
   - `npm run verify` → exit 0; a beginner's answers land on A2 and a strong learner's on B1 (explain how you checked).
-- Outcome:
+- Outcome: 12 placement questions (6 A2 + 6 B1, 8 audio); suggestLevel checked: beginner → A2, strong → B1 — a5552c4
 
 ## T147 — nl-NL audio, pictures and offline check
 - Status: pending
@@ -183,6 +183,8 @@ Worktree setup: npm ci
 - 2026-10-09 T142: speaker names are Spanish role names (Funcionario, Cajera…) like English; one native per dialogue; Fluent person avatars (agent)
 - 2026-10-09 T143: one-off names per dialogue (no story cast); fictional agency 'Verhuurbeheer Domstad' (agent)
 - 2026-10-09 T144: four inline story vocab items (story-nl-begane-grond, -uitslapen, -gracht, -een-hand-geven); non-quoted characters in reported speech (agent)
+- 2026-10-09 T146: placement = 12 questions per brief (4 production, 8 audio comprehension), default voice Fenna (agent)
+- 2026-10-09 T145: B1 stories follow one timeline (contract ends March → family arrives August → one year later); eigen risico €385 (agent)
 
 ## Proposals (new scope)
 - 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
@@ -211,3 +213,6 @@ Worktree setup: npm ci
 - 2026-10-09 00:24 T143 done → 59692fa
 - 2026-10-09 00:25 T145 launched · attempt 1 · agent ae25d8ede309856b2
 - 2026-10-09 00:29 T144 done → 05d726d
+- 2026-10-09 00:29 T146 launched · attempt 1 · agent a3ac45def17153dcb
+- 2026-10-09 00:34 T146 done → a5552c4
+- 2026-10-09 00:34 T145 done → 08a6020
