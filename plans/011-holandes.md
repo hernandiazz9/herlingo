@@ -1,6 +1,6 @@
 # Plan 011 — Holandés A2 + B1: a Dutch pack for living and working in the Netherlands
 
-Status: active
+Status: done
 Created: 2026-10-08
 Base branch: main
 Goal: Add a Dutch pack (`content/nl/`, nl-NL) with two selectable levels, **A2 and B1**, each the full English-sized course (10 units + grammar unit, ~450 phrases, ~330 vocab, ~90 Q&A, 12 dialogues, 12 stories), plus a placement test and nl-NL audio and pictures. The learner wants to live and work in the Netherlands, so the content follows daily life there, guided by the inburgeringsexamen themes (gemeente, BSN, DigiD, huisarts, huur, werk, KNM topics) without simulating the exam. Code stays language-agnostic and reuses plan 008's level model (`levels`, per-unit `level`, level chips, placement suggestion). A2 and B1 are built in parallel. MVP speed: no automated tests; verification is `npm run verify`.
@@ -144,7 +144,7 @@ Worktree setup: npm ci
 - Outcome: 12 placement questions (6 A2 + 6 B1, 8 audio); suggestLevel checked: beginner → A2, strong → B1 — a5552c4
 
 ## T147 — nl-NL audio, pictures and offline check
-- Status: pending
+- Status: done
 - Depends on: T142, T143, T144, T145, T146, T148
 - Goal: Generate nl-NL mp3s and pictures for the whole Dutch pack, and check the pack works offline in the built app.
 - Context: CLAUDE.md commands `npm run audio`, `npm run images`, `--strict-audio`, `--strict-images`; plan 008 T109 and plan 009-ruso T124 outcomes. Needs internet (edge-tts).
@@ -153,7 +153,7 @@ Worktree setup: npm ci
   - `npm run content:check -- --strict-audio --strict-images` → exit 0.
   - `npm run verify` → exit 0; `out/sw.js` build line lists audio for `nl`.
   - `git diff --stat main -- public/audio/it public/audio/fr public/audio/en public/audio/ru` → empty.
-- Outcome:
+- Outcome: 3483 nl mp3s + manifest, 16 Fluent SVGs; strict audio/images pass; sw lists nl audio (64.6 MB) — f760ee6c
 
 ## T148 — Dutch duplicate cleanup
 - Status: done
@@ -216,3 +216,5 @@ Worktree setup: npm ci
 - 2026-10-09 00:29 T146 launched · attempt 1 · agent a3ac45def17153dcb
 - 2026-10-09 00:34 T146 done → a5552c4
 - 2026-10-09 00:34 T145 done → 08a6020
+- 2026-10-09 00:34 T147 launched · attempt 1 · agent a78d0216bd71c0b8e
+- 2026-10-09 00:44 T147 done → f760ee6c
