@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-repair-request",
+  "title": "Avisar de una avería",
+  "description": "Llamas a la agencia de tu piso para avisar de moho en el baño y de que la caldera no funciona.",
+  "situation": "vivienda",
+  "unit": "nl-b1-renting",
+  "order": 106,
+  "register": "u",
+  "level": "B1",
+  "avatars": { "Empleado de la agencia": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Empleado de la agencia", "text": "Goedemiddag, Verhuurbeheer Domstad, u spreekt met Erik. Waarmee kan ik u helpen?", "es": "Buenas tardes, Verhuurbeheer Domstad, le atiende Erik. ¿En qué puedo ayudarle?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que quieres avisar de que hay moho en el baño.",
+      "options": [
+        { "text": "Goedemiddag, ik wil graag schimmel in de badkamer melden.", "es": "Buenas tardes, quería avisar de que hay moho en el baño.", "verdict": "correct", "feedback": "¡Muy bien! «melden» = avisar oficialmente de un problema; «de badkamer»." },
+        { "text": "Er zit schimmel in mijn badkamer.", "es": "Hay moho en mi baño.", "verdict": "acceptable", "feedback": "Correcto y claro." },
+        { "text": "Goedemiddag, ik wil graag humiditeit in het badkamer melden.", "es": "Buenas tardes, quería avisar de humedad en el baño.", "verdict": "wrong", "feedback": "«humiditeit» no se usa: el moho es «schimmel» y la humedad, «vocht». Y es «de badkamer»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Empleado de la agencia", "text": "Vervelend. Sinds wanneer heeft u daar last van?", "es": "Qué fastidio. ¿Desde cuándo tiene ese problema?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que desde hace un mes y que ya lo has comunicado dos veces por email.",
+      "options": [
+        { "text": "Al een maand. Ik heb het al twee keer per e-mail gemeld.", "es": "Desde hace un mes. Ya lo he comunicado dos veces por email.", "verdict": "correct", "feedback": "¡Bien! «al een maand» = desde hace un mes; «gemeld» es el participio de «melden»." },
+        { "text": "Ongeveer een maand. Ik heb al gemaild.", "es": "Más o menos un mes. Ya he mandado un email.", "verdict": "acceptable", "feedback": "Se entiende y suena natural." },
+        { "text": "Al een maand. Ik ben het al twee keer per e-mail gemeld.", "es": "Desde hace un mes. Ya lo he comunicado dos veces por email.", "verdict": "wrong", "feedback": "«melden» forma el perfecto con «hebben»: «ik heb het … gemeld»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Empleado de la agencia", "text": "Excuses daarvoor. Is er verder nog iets?", "es": "Lo siento mucho. ¿Hay algo más?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Explica que además la caldera no funciona, así que no hay agua caliente.",
+      "options": [
+        { "text": "Ja, de cv-ketel doet het ook niet, dus er is geen warm water.", "es": "Sí, la caldera tampoco funciona, así que no hay agua caliente.", "verdict": "correct", "feedback": "¡Perfecto! «doet het niet» = no funciona; «geen» niega el sustantivo." },
+        { "text": "De verwarming is kapot. Geen warm water.", "es": "La calefacción está rota. No hay agua caliente.", "verdict": "acceptable", "feedback": "Se entiende; la caldera en concreto es «de cv-ketel»." },
+        { "text": "Ja, de cv-ketel doet het ook niet, dus er is niet warm water.", "es": "Sí, la caldera tampoco funciona, así que no hay agua caliente.", "verdict": "wrong", "feedback": "Un sustantivo sin artículo se niega con «geen»: «geen warm water»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Empleado de la agencia", "text": "Dat is dringend. Morgen tussen acht en twaalf komt er een monteur. Bent u dan thuis?", "es": "Eso es urgente. Mañana entre las ocho y las doce irá un técnico. ¿Estará usted en casa?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí y pide con educación que te confirmen la cita por email.",
+      "options": [
+        { "text": "Ja, dan ben ik thuis. Zou u de afspraak per e-mail kunnen bevestigen?", "es": "Sí, estaré en casa. ¿Podría confirmarme la cita por email?", "verdict": "correct", "feedback": "¡Genial! «Zou u … kunnen…?» es la petición educada típica." },
+        { "text": "Ja. Kunt u me een mail sturen?", "es": "Sí. ¿Me puede mandar un email?", "verdict": "acceptable", "feedback": "Correcto y educado, más sencillo." },
+        { "text": "Ja, dan ben ik thuis. Kun je de afspraak per e-mail bevestigen?", "es": "Sí, estaré en casa. ¿Puedes confirmarme la cita por email?", "verdict": "wrong", "feedback": "Con la agencia se usa «u»: «Kunt u…?» o «Zou u…?», no «je»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Empleado de la agencia", "text": "Natuurlijk. U krijgt vandaag nog een bevestiging. En de schimmel wordt volgende week behandeld.", "es": "Por supuesto. Hoy mismo recibirá una confirmación. Y el moho se tratará la semana que viene.", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-sick-call",
+  "title": "Llamar para darte de baja",
+  "description": "Llamas a tu jefa para decir que estás enfermo, explicas qué te pasa y organizas quién te sustituye.",
+  "situation": "trabajo",
+  "unit": "nl-b1-meetings",
+  "order": 105,
+  "register": "tu",
+  "level": "B1",
+  "avatars": { "Jefa": "fluent:woman-blonde-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Jefa", "text": "Goedemorgen, met Marloes.", "es": "Buenos días, soy Marloes.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda y di que llamas para darte de baja por enfermedad.",
+      "options": [
+        { "text": "Hoi Marloes, met Hernán. Ik bel om me ziek te melden.", "es": "Hola, Marloes, soy Hernán. Te llamo para darme de baja.", "verdict": "correct", "feedback": "¡Muy bien! «zich ziekmelden» = darse de baja; con «om … te» queda «om me ziek te melden»." },
+        { "text": "Hoi, met Hernán. Ik ben vandaag ziek.", "es": "Hola, soy Hernán. Hoy estoy enfermo.", "verdict": "acceptable", "feedback": "Se entiende; «Ik meld me ziek» es la fórmula habitual." },
+        { "text": "Hoi Marloes, met Hernán. Ik heb vandaag ziek.", "es": "Hola, Marloes, soy Hernán. Hoy estoy enfermo.", "verdict": "wrong", "feedback": "«ziek» va con «zijn»: «Ik ben ziek», nunca «ik heb ziek»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Jefa", "text": "O, wat vervelend! Wat heb je?", "es": "¡Vaya, qué fastidio! ¿Qué te pasa?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que tienes fiebre desde anoche y dolor de cabeza.",
+      "options": [
+        { "text": "Ik heb sinds gisteravond koorts en ik heb hoofdpijn.", "es": "Tengo fiebre desde anoche y me duele la cabeza.", "verdict": "correct", "feedback": "¡Bien! «sinds» + presente = desde." },
+        { "text": "Koorts en hoofdpijn.", "es": "Fiebre y dolor de cabeza.", "verdict": "acceptable", "feedback": "Se entiende, pero es telegráfico." },
+        { "text": "Ik heb koorts van gisteravond en ik heb hoofdpijn.", "es": "Tengo fiebre desde anoche y me duele la cabeza.", "verdict": "wrong", "feedback": "«desde» se dice «sinds»: «van gisteravond» significa «de anoche»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Jefa", "text": "Beterschap! Denk je dat je morgen weer kunt werken?", "es": "¡Que te mejores! ¿Crees que mañana podrás trabajar?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que todavía no lo sabes: si te encuentras mejor, trabajas desde casa.",
+      "options": [
+        { "text": "Dat weet ik nog niet. Als ik me beter voel, werk ik thuis.", "es": "Todavía no lo sé. Si me encuentro mejor, trabajo desde casa.", "verdict": "correct", "feedback": "¡Perfecto! «zich voelen» es reflexivo («ik voel me»); tras la frase con «als» viene el verbo: «werk ik»." },
+        { "text": "Ik weet het niet. Misschien thuis.", "es": "No lo sé. Quizá desde casa.", "verdict": "acceptable", "feedback": "Se entiende; la primera opción explica la condición." },
+        { "text": "Dat weet ik nog niet. Als ik voel beter, ik werk thuis.", "es": "Todavía no lo sé. Si me encuentro mejor, trabajo desde casa.", "verdict": "wrong", "feedback": "Tras «als» el verbo va al final («als ik me beter voel») y luego el verbo principal va primero: «werk ik»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Jefa", "text": "Prima. Kun je je taken voor vandaag aan Bas overdragen? En meld je even beter als je terug bent.", "es": "Perfecto. ¿Puedes pasarle a Bas tus tareas de hoy? Y avísame cuando vuelvas para darte de alta.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que ahora le mandas un mensaje a Bas y que te darás de alta cuando vuelvas.",
+      "options": [
+        { "text": "Ik stuur Bas nu een berichtje en ik meld me beter als ik terug ben.", "es": "Ahora le mando un mensaje a Bas y me doy de alta cuando vuelva.", "verdict": "correct", "feedback": "¡Genial! «een berichtje» (diminutivo) es lo normal; «zich beter melden» = darse de alta." },
+        { "text": "Oké, ik app Bas. Tot snel!", "es": "Vale, le escribo a Bas. ¡Hasta pronto!", "verdict": "acceptable", "feedback": "Natural: «appen» = escribir por WhatsApp." },
+        { "text": "Ik stuur Bas nu een berichtje en ik meld me beter als ik ben terug.", "es": "Ahora le mando un mensaje a Bas y me doy de alta cuando vuelva.", "verdict": "wrong", "feedback": "Tras «als» el verbo va al final: «als ik terug ben»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Jefa", "text": "Top. Rust goed uit en beterschap!", "es": "Genial. ¡Descansa y que te mejores!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

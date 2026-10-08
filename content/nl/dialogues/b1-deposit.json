@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-deposit",
+  "title": "Recuperar la fianza",
+  "description": "Al dejar el piso, la casera quiere quedarse parte de la fianza por una mancha. Defiendes tu caso con educación.",
+  "situation": "vivienda",
+  "unit": "nl-b1-renting",
+  "order": 107,
+  "register": "u",
+  "level": "B1",
+  "avatars": { "Casera": "fluent:woman-white-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Casera", "text": "Zo, ik heb alles bekeken. Het appartement ziet er netjes uit.", "es": "Bueno, lo he revisado todo. El piso está muy limpio y ordenado.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Dale las gracias y pregunta cuándo te devolverá la fianza.",
+      "options": [
+        { "text": "Dank u wel. Wanneer krijg ik mijn borg terug?", "es": "Muchas gracias. ¿Cuándo me devuelve la fianza?", "verdict": "correct", "feedback": "¡Muy bien! «terugkrijgen» es separable: «krijg ik … terug»." },
+        { "text": "Fijn. En de borg?", "es": "Estupendo. ¿Y la fianza?", "verdict": "acceptable", "feedback": "Se entiende, aunque suena un poco seco." },
+        { "text": "Dank u wel. Wanneer terugkrijg ik mijn borg?", "es": "Muchas gracias. ¿Cuándo me devuelve la fianza?", "verdict": "wrong", "feedback": "«terugkrijgen» es separable: «Wanneer krijg ik mijn borg terug?»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Casera", "text": "Normaal binnen twee weken. Maar er zit een vlek op de vloer in de woonkamer. Daarvoor houd ik honderd euro in.", "es": "Normalmente en dos semanas. Pero hay una mancha en el suelo del salón. Por eso me quedo cien euros.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di con educación que esa mancha ya estaba cuando viniste a vivir aquí.",
+      "options": [
+        { "text": "Die vlek was er al toen ik hier kwam wonen.", "es": "Esa mancha ya estaba cuando vine a vivir aquí.", "verdict": "correct", "feedback": "¡Perfecto! Imperfecto («was», «kwam») para el pasado; tras «toen» los verbos van al final." },
+        { "text": "Die vlek is niet van mij.", "es": "Esa mancha no es mía.", "verdict": "acceptable", "feedback": "Claro y directo; la primera opción explica por qué." },
+        { "text": "Die vlek was er al toen ik kwam hier wonen.", "es": "Esa mancha ya estaba cuando vine a vivir aquí.", "verdict": "wrong", "feedback": "Tras «toen» los verbos van al final: «toen ik hier kwam wonen»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Casera", "text": "Weet u dat zeker? Dat herinner ik me niet.", "es": "¿Está seguro? No lo recuerdo.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que sí, que tienes fotos del día de la entrega de llaves y que se las puedes mandar.",
+      "options": [
+        { "text": "Ja, ik heb foto's van de sleuteloverdracht. Ik kan ze naar u sturen.", "es": "Sí, tengo fotos de la entrega de llaves. Se las puedo mandar.", "verdict": "correct", "feedback": "¡Bien! «de sleuteloverdracht» = la entrega de llaves; «ze» = las fotos." },
+        { "text": "Ja, ik heb foto's. Wilt u ze zien?", "es": "Sí, tengo fotos. ¿Quiere verlas?", "verdict": "acceptable", "feedback": "Natural y educado." },
+        { "text": "Ja, ik heb foto's van de sleuteloverdracht. Ik kan ze naar je sturen.", "es": "Sí, tengo fotos de la entrega de llaves. Te las puedo mandar.", "verdict": "wrong", "feedback": "Mantén el «u» con la casera: «naar u sturen», no «naar je»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Casera", "text": "Goed, stuurt u ze maar. Als het klopt, krijgt u de hele borg terug.", "es": "Bien, mándemelas. Si es así, le devuelvo la fianza entera.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que se las mandas hoy y pregunta si puede transferir el importe a tu cuenta.",
+      "options": [
+        { "text": "Ik stuur ze vandaag. Kunt u het bedrag naar mijn rekening overmaken?", "es": "Se las mando hoy. ¿Puede transferir el importe a mi cuenta?", "verdict": "correct", "feedback": "¡Genial! «overmaken» = transferir; con un modal va entero al final." },
+        { "text": "Vandaag nog. Mijn IBAN heeft u al.", "es": "Hoy mismo. Mi IBAN ya lo tiene.", "verdict": "acceptable", "feedback": "Natural: das por hecho que tiene tus datos." },
+        { "text": "Ik stuur ze vandaag. Kunt u het bedrag naar mijn rekening maken over?", "es": "Se las mando hoy. ¿Puede transferir el importe a mi cuenta?", "verdict": "wrong", "feedback": "Con un modal, el verbo separable va entero al final: «overmaken»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Casera", "text": "Natuurlijk. Bedankt, en succes in uw nieuwe huis!", "es": "Por supuesto. Gracias, ¡y mucha suerte en su nueva casa!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-first-day",
+  "title": "Primer día de trabajo",
+  "description": "En tu primer día te presentas a una compañera, hablas del almuerzo y de Teams, y aceptas un café.",
+  "situation": "trabajo",
+  "unit": "nl-b1-workplace",
+  "order": 103,
+  "register": "tu",
+  "level": "B1",
+  "avatars": { "Compañera": "fluent:woman-technologist" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Compañera", "text": "Hoi, jij bent vast de nieuwe collega! Ik ben Eva. Welkom!", "es": "Hola, tú debes de ser el nuevo compañero. Soy Eva. ¡Bienvenido!", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Preséntate y di que hoy empiezas en el equipo de backend.",
+      "options": [
+        { "text": "Hoi Eva, ik ben Hernán. Ik begin vandaag bij het backendteam.", "es": "Hola, Eva, soy Hernán. Hoy empiezo en el equipo de backend.", "verdict": "correct", "feedback": "¡Muy bien! «team» es una palabra de «het»: «het backendteam». Entre compañeros, «je» y nombre de pila." },
+        { "text": "Hallo, ik ben Hernán. Leuk je te ontmoeten.", "es": "Hola, soy Hernán. Encantado de conocerte.", "verdict": "acceptable", "feedback": "Correcto y amable, aunque no dices en qué equipo empiezas." },
+        { "text": "Hoi Eva, ik ben Hernán. Ik begin vandaag bij de backendteam.", "es": "Hola, Eva, soy Hernán. Hoy empiezo en el equipo de backend.", "verdict": "wrong", "feedback": "En una palabra compuesta manda la última: «het team», así que «het backendteam»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Compañera", "text": "Leuk! Om twaalf uur lunchen we samen in de kantine. Heb je zelf brood meegenomen?", "es": "¡Genial! A las doce comemos juntos en la cantina. ¿Has traído tu propio pan?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que hoy no has traído pan y pregunta si en la cantina se puede comprar algo.",
+      "options": [
+        { "text": "Nee, ik heb vandaag geen brood meegenomen. Kun je in de kantine iets kopen?", "es": "No, hoy no he traído pan. ¿Se puede comprar algo en la cantina?", "verdict": "correct", "feedback": "¡Perfecto! «meenemen» es separable; en el participio la partícula va delante: «meegenomen»." },
+        { "text": "Nee. Kan ik daar iets kopen?", "es": "No. ¿Puedo comprar algo allí?", "verdict": "acceptable", "feedback": "Se entiende; sencillo pero claro." },
+        { "text": "Nee, ik heb vandaag niet brood meegenomen. Kun je in de kantine iets kopen?", "es": "No, hoy no he traído pan. ¿Se puede comprar algo en la cantina?", "verdict": "wrong", "feedback": "Un sustantivo sin artículo se niega con «geen»: «geen brood», no «niet brood»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Compañera", "text": "Ja hoor, ze hebben broodjes en soep. Trouwens, heb je al toegang tot Teams?", "es": "Sí, claro, tienen bocadillos y sopa. Por cierto, ¿ya tienes acceso a Teams?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que todavía no, porque tu portátil aún no funciona.",
+      "options": [
+        { "text": "Nog niet, want mijn laptop werkt nog niet.", "es": "Todavía no, porque mi portátil aún no funciona.", "verdict": "correct", "feedback": "¡Bien! Con «want» el orden es normal: el verbo va segundo («werkt»)." },
+        { "text": "Nee, nog niet. Mijn laptop doet het nog niet.", "es": "No, todavía no. Mi portátil aún no funciona.", "verdict": "acceptable", "feedback": "Muy natural: «het doet het niet» = no funciona." },
+        { "text": "Nog niet, want mijn laptop nog niet werkt.", "es": "Todavía no, porque mi portátil aún no funciona.", "verdict": "wrong", "feedback": "Con «want» el orden es normal («mijn laptop werkt nog niet»); el verbo al final solo va con «omdat»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Compañera", "text": "Geen probleem, ik bel IT even voor je. Ik ga koffie halen. Wil jij ook?", "es": "No pasa nada, llamo un momento a informática por ti. Voy a por café. ¿Quieres tú también?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Acepta: un café con leche, sin azúcar. Y dale las gracias.",
+      "options": [
+        { "text": "Graag! Een koffie met melk, zonder suiker. Dank je wel!", "es": "¡Sí, por favor! Un café con leche, sin azúcar. ¡Muchas gracias!", "verdict": "correct", "feedback": "¡Genial! «Graag» acepta con educación; «dank je wel» entre compañeros. La próxima vez, trae tú el café: aquí se hace por turnos." },
+        { "text": "Ja, lekker. Met melk, alsjeblieft.", "es": "Sí, qué bien. Con leche, por favor.", "verdict": "acceptable", "feedback": "Natural y amable." },
+        { "text": "Graag! Een koffie met melk, zonder suiker. Dank u wel!", "es": "¡Sí, por favor! Un café con leche, sin azúcar. ¡Muchas gracias!", "verdict": "wrong", "feedback": "Entre compañeros se usa «je»: «dank je wel». «Dank u» suena demasiado distante." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Compañera", "text": "Komt eraan! Welkom in het team, Hernán.", "es": "¡Marchando! Bienvenido al equipo, Hernán.", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

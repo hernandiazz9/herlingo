@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-tax-call",
+  "title": "Una carta de Hacienda",
+  "description": "Llamas a la BelastingTelefoon por una carta sobre la zorgtoeslag que no entiendes y pides un plan de pagos.",
+  "situation": "dinero",
+  "unit": "nl-b1-taxes",
+  "order": 111,
+  "register": "u",
+  "level": "B1",
+  "avatars": { "Empleado": "fluent:man-bald" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Empleado", "text": "Goedemorgen, BelastingTelefoon, u spreekt met Dennis. Waarmee kan ik u helpen?", "es": "Buenos días, BelastingTelefoon, le atiende Dennis. ¿En qué puedo ayudarle?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que has recibido una carta sobre tu zorgtoeslag que no entiendes.",
+      "options": [
+        { "text": "Goedemorgen. Ik heb een brief over mijn zorgtoeslag gekregen die ik niet begrijp.", "es": "Buenos días. He recibido una carta sobre mi zorgtoeslag que no entiendo.", "verdict": "correct", "feedback": "¡Muy bien! Relativo con «die» y el verbo al final: «die ik niet begrijp»." },
+        { "text": "Ik heb een vraag over een brief van de Belastingdienst.", "es": "Tengo una pregunta sobre una carta de Hacienda.", "verdict": "acceptable", "feedback": "Correcto; luego explicarás de qué va." },
+        { "text": "Goedemorgen. Ik heb een brief over mijn zorgtoeslag gekregen die ik begrijp niet.", "es": "Buenos días. He recibido una carta sobre mi zorgtoeslag que no entiendo.", "verdict": "wrong", "feedback": "En la oración de relativo el verbo va al final: «die ik niet begrijp»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Empleado", "text": "Ik help u graag. Wat staat er in de brief?", "es": "Con mucho gusto le ayudo. ¿Qué pone en la carta?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que pone que tienes que devolver doscientos euros.",
+      "options": [
+        { "text": "Er staat dat ik tweehonderd euro moet terugbetalen.", "es": "Pone que tengo que devolver doscientos euros.", "verdict": "correct", "feedback": "¡Perfecto! «Er staat dat…» = pone que…; en la subordinada, «moet terugbetalen» va al final." },
+        { "text": "Ik moet tweehonderd euro terugbetalen, denk ik.", "es": "Creo que tengo que devolver doscientos euros.", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Er staat dat ik moet tweehonderd euro terugbetalen.", "es": "Pone que tengo que devolver doscientos euros.", "verdict": "wrong", "feedback": "Tras «dat» los verbos van al final: «dat ik tweehonderd euro moet terugbetalen»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Empleado", "text": "Ik zie het. U heeft vorig jaar meer verdiend dan u had doorgegeven. Daarom krijgt u minder toeslag.", "es": "Ya lo veo. El año pasado ganó más de lo que había comunicado. Por eso le corresponde menos ayuda.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que es verdad: en septiembre cambiaste de trabajo y se te olvidó comunicarlo.",
+      "options": [
+        { "text": "Dat klopt. Ik ben in september van baan veranderd en ik ben vergeten om het door te geven.", "es": "Es verdad. En septiembre cambié de trabajo y se me olvidó comunicarlo.", "verdict": "correct", "feedback": "¡Bien! Aquí «veranderen» y «vergeten» van con «zijn»; «doorgeven» = comunicar un cambio." },
+        { "text": "Ja, ik heb sinds september een nieuwe baan. Dat heb ik niet doorgegeven.", "es": "Sí, tengo un trabajo nuevo desde septiembre. No lo comuniqué.", "verdict": "acceptable", "feedback": "Correcto y claro." },
+        { "text": "Dat klopt. Ik ben in september van baan veranderd en ik ben vergeten om het te doorgeven.", "es": "Es verdad. En septiembre cambié de trabajo y se me olvidó comunicarlo.", "verdict": "wrong", "feedback": "Con un verbo separable, «te» va entre la partícula y el verbo: «door te geven»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Empleado", "text": "Dat gebeurt vaak. U kunt het online aanpassen. Wilt u een betalingsregeling?", "es": "Pasa a menudo. Puede cambiarlo en internet. ¿Quiere un plan de pagos?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí, por favor, y pregunta si puedes pagar por domiciliación bancaria.",
+      "options": [
+        { "text": "Ja, graag. Kan ik met een automatische incasso betalen?", "es": "Sí, por favor. ¿Puedo pagar por domiciliación bancaria?", "verdict": "correct", "feedback": "¡Genial! «de automatische incasso» = la domiciliación bancaria." },
+        { "text": "Ja, graag. Hoe werkt dat?", "es": "Sí, por favor. ¿Cómo funciona?", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Ja, graag. Kan ik met een automatisch incasso betalen?", "es": "Sí, por favor. ¿Puedo pagar por domiciliación bancaria?", "verdict": "wrong", "feedback": "«incasso» es de «de», así que el adjetivo lleva -e: «een automatische incasso»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Empleado", "text": "Dat kan. U logt in met DigiD en kiest voor een betalingsregeling. Nog een fijne dag!", "es": "Se puede. Entra con DigiD y elige un plan de pagos. ¡Que tenga un buen día!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

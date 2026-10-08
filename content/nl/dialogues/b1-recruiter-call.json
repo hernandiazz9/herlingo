@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-recruiter-call",
+  "title": "Llamada de una recruiter",
+  "description": "Una recruiter te llama por una vacante de backend: confirmas tu interés, tu disponibilidad y tu salario.",
+  "situation": "comunicacion",
+  "unit": "nl-b1-job-search",
+  "order": 101,
+  "register": "tu",
+  "level": "B1",
+  "avatars": { "Reclutadora": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Reclutadora", "text": "Hoi, met Lisa van TechTalent. Spreek ik met Hernán?", "es": "Hola, soy Lisa, de TechTalent. ¿Hablo con Hernán?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Confirma que eres tú y di que tienes un momento.",
+      "options": [
+        { "text": "Ja, daar spreek je mee. Ik heb even tijd, hoor.", "es": "Sí, soy yo. Tengo un momento.", "verdict": "correct", "feedback": "¡Muy bien! «Daar spreek je mee» es como se confirma al teléfono; «even» y «hoor» suavizan la frase." },
+        { "text": "Ja, dat ben ik.", "es": "Sí, soy yo.", "verdict": "acceptable", "feedback": "Correcto y natural; la primera opción además le dice que tienes tiempo." },
+        { "text": "Ja, ik ben. Ik heb een moment.", "es": "Sí, soy yo. Tengo un momento.", "verdict": "wrong", "feedback": "«Ik ben» solo no se usa: di «Daar spreek je mee» o «Dat ben ik». Y «tener un momento» es «even tijd hebben»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Reclutadora", "text": "Leuk! Ik zag je profiel op LinkedIn. We hebben een vacature voor een backend developer in Utrecht. Ben je geïnteresseerd?", "es": "¡Genial! Vi tu perfil en LinkedIn. Tenemos una vacante de desarrollador backend en Utrecht. ¿Te interesa?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que sí, que te interesa porque buscas un trabajo nuevo.",
+      "options": [
+        { "text": "Ja, zeker. Ik ben geïnteresseerd, omdat ik een nieuwe baan zoek.", "es": "Sí, claro. Me interesa, porque busco un trabajo nuevo.", "verdict": "correct", "feedback": "¡Perfecto! Tras «omdat» el verbo va al final: «omdat ik een nieuwe baan zoek»." },
+        { "text": "Ja, vertel maar!", "es": "¡Sí, cuéntame!", "verdict": "acceptable", "feedback": "Natural y amable, aunque no explicas por qué te interesa." },
+        { "text": "Ja, zeker. Ik ben geïnteresseerd, omdat ik zoek een nieuwe baan.", "es": "Sí, claro. Me interesa, porque busco un trabajo nuevo.", "verdict": "wrong", "feedback": "Tras «omdat» el verbo va al final: «omdat ik een nieuwe baan zoek»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Reclutadora", "text": "Mooi. Het is een vast contract, tweeëndertig tot veertig uur per week, en je kunt twee dagen thuiswerken. Wat is je huidige situatie?", "es": "Bien. Es un contrato indefinido, de treinta y dos a cuarenta horas a la semana, y puedes teletrabajar dos días. ¿Cuál es tu situación ahora?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Explica que tu contrato termina en diciembre, así que puedes empezar en enero.",
+      "options": [
+        { "text": "Mijn contract loopt in december af, dus ik kan in januari beginnen.", "es": "Mi contrato termina en diciembre, así que puedo empezar en enero.", "verdict": "correct", "feedback": "¡Muy bien! «aflopen» (terminar un contrato) es separable: «loopt … af». Tras «dus» el orden es normal." },
+        { "text": "Mijn contract stopt in december. Ik kan in januari beginnen.", "es": "Mi contrato se acaba en diciembre. Puedo empezar en enero.", "verdict": "acceptable", "feedback": "Se entiende; para contratos lo habitual es «aflopen»." },
+        { "text": "Mijn contract afloopt in december, dus ik kan in januari beginnen.", "es": "Mi contrato termina en diciembre, así que puedo empezar en enero.", "verdict": "wrong", "feedback": "«aflopen» es separable: en presente la partícula va al final: «Mijn contract loopt in december af»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Reclutadora", "text": "Perfect. En wat zijn je salarisverwachtingen?", "es": "Perfecto. ¿Y cuáles son tus expectativas salariales?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que piensas en unos cinco mil euros brutos al mes, pero que depende del paquete.",
+      "options": [
+        { "text": "Ik denk aan ongeveer vijfduizend euro bruto per maand, maar het hangt af van het pakket.", "es": "Pienso en unos cinco mil euros brutos al mes, pero depende del paquete.", "verdict": "correct", "feedback": "¡Genial! «afhangen van» = depender de: «het hangt af van…». En Países Bajos se habla del salario bruto mensual." },
+        { "text": "Ongeveer vijfduizend bruto, denk ik.", "es": "Unos cinco mil brutos, creo.", "verdict": "acceptable", "feedback": "Se entiende; añade «per maand» para que quede claro que es al mes." },
+        { "text": "Ik denk aan ongeveer vijfduizend euro bruto per maand, maar het hangt af van de pakket.", "es": "Pienso en unos cinco mil euros brutos al mes, pero depende del paquete.", "verdict": "wrong", "feedback": "Es «het pakket» (neutro), no «de pakket»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Reclutadora", "text": "Dat past binnen het budget. Ik stuur je vandaag een mail met de vacature. Tot snel!", "es": "Eso entra en el presupuesto. Hoy te mando un correo con la vacante. ¡Hasta pronto!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

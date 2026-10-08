@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-team-meeting",
+  "title": "Reunión de equipo",
+  "description": "En la reunión das tu opinión sobre la fecha de lanzamiento, propones otra y acordáis una deadline.",
+  "situation": "trabajo",
+  "unit": "nl-b1-meetings",
+  "order": 104,
+  "register": "tu",
+  "level": "B1",
+  "avatars": { "Jefe de equipo": "fluent:man-beard" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Jefe de equipo", "text": "Goedemorgen allemaal. Eerste punt op de agenda: de nieuwe release. Hernán, wat vind jij? Kunnen we vrijdag live?", "es": "Buenos días a todos. Primer punto del orden del día: la nueva versión. Hernán, ¿tú qué opinas? ¿Podemos publicarla el viernes?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que en tu opinión es demasiado pronto, porque todavía hay dos bugs.",
+      "options": [
+        { "text": "Volgens mij is dat te vroeg, omdat er nog twee bugs zijn.", "es": "En mi opinión es demasiado pronto, porque todavía hay dos bugs.", "verdict": "correct", "feedback": "¡Muy bien! Tras «volgens mij» va el verbo («is») y tras «omdat» el verbo va al final («zijn»)." },
+        { "text": "Vrijdag is te vroeg. Er zijn nog bugs.", "es": "El viernes es demasiado pronto. Todavía hay bugs.", "verdict": "acceptable", "feedback": "Directo, y aquí eso está bien visto; con «omdat» queda más completo." },
+        { "text": "Volgens mij dat is te vroeg, omdat er nog twee bugs zijn.", "es": "En mi opinión es demasiado pronto, porque todavía hay dos bugs.", "verdict": "wrong", "feedback": "Orden V2: tras «volgens mij» el verbo va segundo: «volgens mij is dat…»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Jefe de equipo", "text": "Hm, ik ben het niet helemaal met je eens. De bugs zijn klein. Wat stel je voor?", "es": "Mmm, no estoy del todo de acuerdo contigo. Los bugs son pequeños. ¿Qué propones?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Propón con educación publicar el martes: así tenéis dos días más para probar.",
+      "options": [
+        { "text": "Ik zou dinsdag willen voorstellen. Dan hebben we twee dagen extra om te testen.", "es": "Yo propondría el martes. Así tenemos dos días más para probar.", "verdict": "correct", "feedback": "¡Perfecto! «Ik zou … willen» suaviza la propuesta; «om … te» + infinitivo = para." },
+        { "text": "Misschien dinsdag? Dan kunnen we nog testen.", "es": "¿Quizá el martes? Así todavía podemos probar.", "verdict": "acceptable", "feedback": "Se entiende y es natural; la primera opción suena más cuidada en una reunión." },
+        { "text": "Ik zou dinsdag willen voorstellen. Dan we hebben twee dagen extra om te testen.", "es": "Yo propondría el martes. Así tenemos dos días más para probar.", "verdict": "wrong", "feedback": "Orden V2: tras «dan» el verbo va segundo: «dan hebben we…»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Jefe de equipo", "text": "Dat klinkt redelijk. Oké, dan wordt het dinsdag. Wie pakt de bugs op?", "es": "Suena razonable. Vale, pues será el martes. ¿Quién se encarga de los bugs?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Ofrécete: hoy arreglas el primer bug y mañana miras el segundo.",
+      "options": [
+        { "text": "Ik los de eerste bug vandaag op en morgen kijk ik naar de tweede.", "es": "Yo arreglo el primer bug hoy y mañana miro el segundo.", "verdict": "correct", "feedback": "¡Bien! «oplossen» es separable: «ik los … op». Y «morgen kijk ik»: el verbo va segundo." },
+        { "text": "Ik doe de bugs wel.", "es": "Ya me encargo yo de los bugs.", "verdict": "acceptable", "feedback": "Natural; «wel» aquí significa «ya me ocupo yo»." },
+        { "text": "Ik oplos de eerste bug vandaag en morgen kijk ik naar de tweede.", "es": "Yo arreglo el primer bug hoy y mañana miro el segundo.", "verdict": "wrong", "feedback": "«oplossen» es separable: en presente la partícula va al final: «ik los de eerste bug vandaag op»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Jefe de equipo", "text": "Top. Dan noteer ik dat als actiepunt. Nog iets voor de rondvraag?", "es": "Genial. Entonces lo apunto como tarea pendiente. ¿Algo más para ruegos y preguntas?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí: propón acordar una deadline para la documentación.",
+      "options": [
+        { "text": "Ja, zullen we een deadline afspreken voor de documentatie?", "es": "Sí, ¿acordamos una fecha límite para la documentación?", "verdict": "correct", "feedback": "¡Genial! «Zullen we…?» propone algo al grupo; «afspreken» = acordar." },
+        { "text": "Ja: wanneer moet de documentatie klaar zijn?", "es": "Sí: ¿cuándo tiene que estar lista la documentación?", "verdict": "acceptable", "feedback": "Correcto y directo." },
+        { "text": "Ja, zullen we een deadline akkoorden voor de documentatie?", "es": "Sí, ¿acordamos una fecha límite para la documentación?", "verdict": "wrong", "feedback": "«akkoord» no es un verbo («Akkoord!» = ¡de acuerdo!). Para acordar algo se dice «afspreken»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Jefe de equipo", "text": "Goed punt. Volgende week vrijdag. Bedankt allemaal, tot morgen!", "es": "Buena idea. El viernes de la semana que viene. Gracias a todos, ¡hasta mañana!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

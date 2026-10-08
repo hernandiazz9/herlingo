@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-insurance-call",
+  "title": "Llamar a la aseguradora",
+  "description": "Llamas a tu seguro de salud por una factura del hospital: te explican el eigen risico y pides pagarlo a plazos.",
+  "situation": "salud",
+  "unit": "nl-b1-health",
+  "order": 109,
+  "register": "u",
+  "level": "B1",
+  "avatars": { "Teleoperadora": "fluent:woman-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Teleoperadora", "text": "Goedemiddag, u spreekt met Linda van de klantenservice. Waarmee kan ik u helpen?", "es": "Buenas tardes, le atiende Linda, de atención al cliente. ¿En qué puedo ayudarle?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que has recibido una factura del hospital y que no la entiendes.",
+      "options": [
+        { "text": "Goedemiddag. Ik heb een rekening van het ziekenhuis gekregen en ik begrijp die niet.", "es": "Buenas tardes. He recibido una factura del hospital y no la entiendo.", "verdict": "correct", "feedback": "¡Muy bien! «de rekening» = la factura; «die» la retoma." },
+        { "text": "Ik heb een vraag over een rekening.", "es": "Tengo una pregunta sobre una factura.", "verdict": "acceptable", "feedback": "Correcto y educado; luego tendrás que explicar el problema." },
+        { "text": "Goedemiddag. Ik heb een rekening van de ziekenhuis gekregen en ik begrijp die niet.", "es": "Buenas tardes. He recibido una factura del hospital y no la entiendo.", "verdict": "wrong", "feedback": "Es «het ziekenhuis» (neutro), no «de ziekenhuis»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Teleoperadora", "text": "Ik kijk even mee. Ik zie een bedrag van driehonderdvijfentachtig euro. Dat is uw eigen risico.", "es": "Lo miro un momento. Veo un importe de trescientos ochenta y cinco euros. Es su franquicia (eigen risico).", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta qué es exactamente el eigen risico.",
+      "options": [
+        { "text": "Wat is het eigen risico precies?", "es": "¿Qué es exactamente el eigen risico?", "verdict": "correct", "feedback": "¡Bien! Es «het risico», así que «het eigen risico»." },
+        { "text": "Wat betekent dat?", "es": "¿Qué significa eso?", "verdict": "acceptable", "feedback": "Correcto y sencillo." },
+        { "text": "Wat is de eigen risico precies?", "es": "¿Qué es exactamente el eigen risico?", "verdict": "wrong", "feedback": "«risico» es de «het»: «het eigen risico»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Teleoperadora", "text": "Dat is het bedrag dat u elk jaar eerst zelf betaalt. Voor de huisarts betaalt u niets.", "es": "Es el importe que cada año paga usted primero. Por el médico de cabecera no paga nada.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si puedes pagarlo a plazos, porque es mucho dinero de una vez.",
+      "options": [
+        { "text": "Kan ik dat in termijnen betalen? Het is veel geld in één keer.", "es": "¿Puedo pagarlo a plazos? Es mucho dinero de una vez.", "verdict": "correct", "feedback": "¡Perfecto! «in termijnen» = a plazos; «in één keer» = de una vez." },
+        { "text": "Is een betalingsregeling mogelijk?", "es": "¿Es posible un plan de pagos?", "verdict": "acceptable", "feedback": "Muy bien: «betalingsregeling» es la palabra oficial." },
+        { "text": "Kan ik in termijnen betalen dat? Het is veel geld in één keer.", "es": "¿Puedo pagarlo a plazos? Es mucho dinero de una vez.", "verdict": "wrong", "feedback": "Con un modal, el infinitivo va al final: «Kan ik dat in termijnen betalen?»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Teleoperadora", "text": "Ja, dat kan. U kunt het in tien maanden betalen. Zal ik dat voor u regelen?", "es": "Sí, se puede. Puede pagarlo en diez meses. ¿Se lo gestiono?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí, por favor, y pregunta si también cubren el dentista.",
+      "options": [
+        { "text": "Ja, graag. En wordt de tandarts ook vergoed?", "es": "Sí, por favor. ¿Y el dentista también lo cubren?", "verdict": "correct", "feedback": "¡Genial! Pasiva con «worden»: «wordt … vergoed»." },
+        { "text": "Graag, dank u. En de tandarts?", "es": "Sí, gracias. ¿Y el dentista?", "verdict": "acceptable", "feedback": "Se entiende y es educado." },
+        { "text": "Ja, alsjeblieft. En wordt de tandarts ook vergoed?", "es": "Sí, por favor. ¿Y el dentista también lo cubren?", "verdict": "wrong", "feedback": "Con «u» se dice «alstublieft» (o «graag»); «alsjeblieft» es para quien tratas de «je»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Teleoperadora", "text": "Voor volwassenen alleen met een aanvullende verzekering, en die heeft u niet. Kan ik u nog ergens anders mee helpen?", "es": "Para adultos, solo con un seguro complementario, y usted no lo tiene. ¿Le puedo ayudar en algo más?", "voice": "nl-NL-ColetteNeural" }
+  ]
+}

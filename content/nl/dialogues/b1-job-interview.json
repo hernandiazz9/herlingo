@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-job-interview",
+  "title": "Entrevista de trabajo",
+  "description": "En una entrevista hablas de tu experiencia, tus puntos fuertes y débiles, y preguntas por el salario.",
+  "situation": "trabajo",
+  "unit": "nl-b1-interview",
+  "order": 102,
+  "register": "u",
+  "level": "B1",
+  "avatars": { "Entrevistador": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Entrevistador", "text": "Goedemiddag, welkom. Fijn dat u er bent. Kunt u iets over uzelf vertellen?", "es": "Buenas tardes, bienvenido. Me alegro de que haya venido. ¿Puede contarme algo sobre usted?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que eres de España y que has trabajado ocho años como desarrollador backend.",
+      "options": [
+        { "text": "Ik kom uit Spanje en ik heb acht jaar als backend developer gewerkt.", "es": "Soy de España y he trabajado ocho años como desarrollador backend.", "verdict": "correct", "feedback": "¡Muy bien! Perfecto con «hebben» y el participio al final: «heb … gewerkt»." },
+        { "text": "Ik ben Spaans. Ik ben al acht jaar backend developer.", "es": "Soy español. Soy desarrollador backend desde hace ocho años.", "verdict": "acceptable", "feedback": "Correcto: «al acht jaar» + presente = desde hace ocho años." },
+        { "text": "Ik kom uit Spanje en ik ben acht jaar als backend developer gewerkt.", "es": "Soy de España y he trabajado ocho años como desarrollador backend.", "verdict": "wrong", "feedback": "«werken» forma el perfecto con «hebben»: «ik heb … gewerkt»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Entrevistador", "text": "Interessant. En waarom wilt u bij ons werken?", "es": "Interesante. ¿Y por qué quiere trabajar con nosotros?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que el producto te parece muy bueno y que te gustaría trabajar en un equipo internacional.",
+      "options": [
+        { "text": "Ik vind jullie product erg goed en ik wil graag in een internationaal team werken.", "es": "Vuestro producto me parece muy bueno y me gustaría trabajar en un equipo internacional.", "verdict": "correct", "feedback": "¡Perfecto! Con «wil graag» el infinitivo «werken» va al final." },
+        { "text": "Omdat het product goed is.", "es": "Porque el producto es bueno.", "verdict": "acceptable", "feedback": "Bien construido (verbo al final tras «omdat»), pero muy corto para una entrevista." },
+        { "text": "Ik vind jullie product erg sympathiek en ik wil graag in een internationaal team werken.", "es": "Vuestro producto me parece muy simpático y me gustaría trabajar en un equipo internacional.", "verdict": "wrong", "feedback": "Falso amigo: «sympathiek» se dice de personas. Para un producto, «goed» o «interessant»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Entrevistador", "text": "Duidelijk. Wat zijn uw sterke punten? En uw zwakke punten?", "es": "Entendido. ¿Cuáles son sus puntos fuertes? ¿Y sus puntos débiles?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Di que trabajas de forma muy estructurada, pero que a veces eres demasiado perfeccionista.",
+      "options": [
+        { "text": "Ik werk heel gestructureerd, maar soms ben ik te perfectionistisch.", "es": "Trabajo de forma muy estructurada, pero a veces soy demasiado perfeccionista.", "verdict": "correct", "feedback": "¡Bien! Si la frase empieza por «soms», el verbo va segundo: «soms ben ik»." },
+        { "text": "Ik ben goed in plannen. Soms ben ik te precies.", "es": "Se me da bien planificar. A veces soy demasiado preciso.", "verdict": "acceptable", "feedback": "Se entiende y suena natural." },
+        { "text": "Ik werk heel gestructureerd, maar soms ik ben te perfectionistisch.", "es": "Trabajo de forma muy estructurada, pero a veces soy demasiado perfeccionista.", "verdict": "wrong", "feedback": "Orden V2: tras «soms» el verbo va segundo: «soms ben ik», no «soms ik ben»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Entrevistador", "text": "Helder. Het gaat om een vast contract met een proeftijd van één maand. Heeft u nog vragen?", "es": "Claro. Es un contrato indefinido con un periodo de prueba de un mes. ¿Tiene alguna pregunta?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta si el salario es bruto o neto y si incluye la paga de vacaciones.",
+      "options": [
+        { "text": "Is het salaris bruto of netto? En is dat inclusief vakantiegeld?", "es": "¿El salario es bruto o neto? ¿Y eso incluye la paga de vacaciones?", "verdict": "correct", "feedback": "¡Genial! «vakantiegeld» es la paga de vacaciones (un 8 % extra), típica en Países Bajos." },
+        { "text": "Hoeveel verdien ik netto?", "es": "¿Cuánto gano en neto?", "verdict": "acceptable", "feedback": "Se entiende, pero suena muy directo; la primera pregunta es más completa." },
+        { "text": "Is de salaris bruto of netto? En heb je ook vakantiegeld?", "es": "¿El salario es bruto o neto? ¿Y también tienes paga de vacaciones?", "verdict": "wrong", "feedback": "Es «het salaris», y en una entrevista se habla de «u»: no mezcles con «je»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Entrevistador", "text": "Bruto, en het vakantiegeld komt er nog bij. We bellen u volgende week. Bedankt voor uw komst!", "es": "Bruto, y la paga de vacaciones va aparte. Le llamamos la semana que viene. ¡Gracias por venir!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

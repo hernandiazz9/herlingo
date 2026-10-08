@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-referral",
+  "title": "Pedir una derivación",
+  "description": "En el huisarts explicas un dolor de rodilla que no mejora y pides que te deriven a un especialista.",
+  "situation": "salud",
+  "unit": "nl-b1-health",
+  "order": 108,
+  "register": "u",
+  "level": "B1",
+  "avatars": { "Médico": "fluent:man-health-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Médico", "text": "Goedemorgen, gaat u zitten. Wat kan ik voor u doen?", "es": "Buenos días, siéntese. ¿Qué puedo hacer por usted?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Explica que te duele la rodilla desde hace tres meses, sobre todo cuando corres.",
+      "options": [
+        { "text": "Ik heb al drie maanden pijn aan mijn knie, vooral als ik hardloop.", "es": "Hace tres meses que me duele la rodilla, sobre todo cuando corro.", "verdict": "correct", "feedback": "¡Muy bien! «pijn aan» + parte del cuerpo; tras «als» el verbo va al final, y el separable se junta: «hardloop»." },
+        { "text": "Mijn knie doet pijn. Al drie maanden.", "es": "Me duele la rodilla. Desde hace tres meses.", "verdict": "acceptable", "feedback": "Correcto y natural." },
+        { "text": "Ik heb al drie maanden pijn aan mijn knie, vooral als ik loop hard.", "es": "Hace tres meses que me duele la rodilla, sobre todo cuando corro.", "verdict": "wrong", "feedback": "Tras «als» el verbo va al final y entero: «als ik hardloop»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Médico", "text": "Laat eens kijken… Ik zie niets bijzonders. Ik raad u aan om eerst een paar weken rust te nemen.", "es": "A ver… No veo nada especial. Le recomiendo descansar primero unas semanas.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que ya has descansado seis semanas y que no ha mejorado.",
+      "options": [
+        { "text": "Ik heb al zes weken rust genomen, maar het is niet beter geworden.", "es": "Ya he descansado seis semanas, pero no ha mejorado.", "verdict": "correct", "feedback": "¡Perfecto! «worden» forma el perfecto con «zijn»: «is … geworden»." },
+        { "text": "Dat heb ik al gedaan. Het helpt niet.", "es": "Eso ya lo he hecho. No ayuda.", "verdict": "acceptable", "feedback": "Claro y directo." },
+        { "text": "Ik heb al zes weken rust genomen, maar het heeft niet beter geworden.", "es": "Ya he descansado seis semanas, pero no ha mejorado.", "verdict": "wrong", "feedback": "«worden» forma el perfecto con «zijn»: «het is niet beter geworden»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Médico", "text": "Dat begrijp ik. Wat had u zelf in gedachten?", "es": "Lo entiendo. ¿Qué había pensado usted?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pide con educación una derivación a un especialista o a un fisioterapeuta.",
+      "options": [
+        { "text": "Zou ik een verwijzing naar een specialist of een fysiotherapeut kunnen krijgen?", "es": "¿Podría darme una derivación a un especialista o a un fisioterapeuta?", "verdict": "correct", "feedback": "¡Bien! Para ir al especialista necesitas una «verwijzing» del huisarts." },
+        { "text": "Kan ik naar een specialist?", "es": "¿Puedo ir a un especialista?", "verdict": "acceptable", "feedback": "Se entiende; con «Zou ik… kunnen…?» suena más educado." },
+        { "text": "Zou ik een referentie naar een specialist kunnen krijgen?", "es": "¿Podría darme una derivación a un especialista?", "verdict": "wrong", "feedback": "Falso amigo: la derivación es «een verwijzing»; «een referentie» es una referencia, por ejemplo laboral." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Médico", "text": "Dat is redelijk. Ik verwijs u eerst naar een fysiotherapeut. Let op: die wordt niet altijd vergoed.", "es": "Es razonable. Primero le derivo a un fisioterapeuta. Ojo: el seguro no siempre lo cubre.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Pregunta cómo puedes saber si tu seguro lo cubre.",
+      "options": [
+        { "text": "Hoe weet ik of mijn verzekering dat vergoedt?", "es": "¿Cómo sé si mi seguro lo cubre?", "verdict": "correct", "feedback": "¡Genial! «vergoeden» = cubrir, reembolsar; tras «of» (= si) el verbo va al final." },
+        { "text": "Wordt dat vergoed?", "es": "¿Eso lo cubre el seguro?", "verdict": "acceptable", "feedback": "La pregunta típica: muy natural." },
+        { "text": "Hoe weet ik of mijn verzekering vergoedt dat?", "es": "¿Cómo sé si mi seguro lo cubre?", "verdict": "wrong", "feedback": "Tras «of» (= si) el verbo va al final: «of mijn verzekering dat vergoedt»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Médico", "text": "Dat staat in uw polis, of u belt uw zorgverzekeraar. Beterschap!", "es": "Lo pone en su póliza, o llame a su aseguradora. ¡Que se mejore!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

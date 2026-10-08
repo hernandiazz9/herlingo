@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-birthday-debate",
+  "title": "Opinar en un cumpleaños",
+  "description": "En un cumpleaños en círculo, el tío de una compañera te habla de la vivienda y las elecciones. Das tu opinión con matices.",
+  "situation": "opiniones",
+  "unit": "nl-b1-opinions",
+  "order": 112,
+  "register": "tu",
+  "level": "B1",
+  "avatars": { "Tío": "fluent:man-white-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Tío", "text": "Hoi, ik ben Kees, de oom van Anouk. En jij bent?", "es": "Hola, soy Kees, el tío de Anouk. ¿Y tú eres…?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Preséntate como compañero de Anouk y felicítale por su sobrina, como es costumbre aquí.",
+      "options": [
+        { "text": "Ik ben Hernán, een collega van Anouk. Gefeliciteerd met je nicht!", "es": "Soy Hernán, un compañero de Anouk. ¡Felicidades por tu sobrina!", "verdict": "correct", "feedback": "¡Muy bien! En los cumpleaños neerlandeses se felicita también a la familia: «Gefeliciteerd met…»." },
+        { "text": "Hernán. Leuk je te ontmoeten!", "es": "Hernán. ¡Encantado de conocerte!", "verdict": "acceptable", "feedback": "Correcto, pero en un cumpleaños en círculo lo típico es felicitar también a la familia." },
+        { "text": "Ik ben Hernán, een collega van Anouk. Gefeliciteerd met je verjaardag!", "es": "Soy Hernán, un compañero de Anouk. ¡Feliz cumpleaños!", "verdict": "wrong", "feedback": "No es su cumpleaños: a la familia se le dice «Gefeliciteerd met je nicht»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Tío", "text": "Dank je! Zeg, heb je het nieuws gezien? De huren in Utrecht zijn weer gestegen. Belachelijk, toch?", "es": "¡Gracias! Oye, ¿has visto las noticias? Los alquileres en Utrecht han vuelto a subir. Ridículo, ¿no?", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que estás de acuerdo: encontrar casa aquí es más difícil que en España.",
+      "options": [
+        { "text": "Ik ben het met je eens. Een huis vinden is hier moeilijker dan in Spanje.", "es": "Estoy de acuerdo contigo. Encontrar casa aquí es más difícil que en España.", "verdict": "correct", "feedback": "¡Perfecto! «Ik ben het met je eens» = estoy de acuerdo contigo; comparativo con «dan»." },
+        { "text": "Ja, echt. Het is hier heel moeilijk.", "es": "Sí, de verdad. Aquí es muy difícil.", "verdict": "acceptable", "feedback": "Natural." },
+        { "text": "Ik ben akkoord met jou. Een huis vinden is hier moeilijker dan in Spanje.", "es": "Estoy de acuerdo contigo. Encontrar casa aquí es más difícil que en España.", "verdict": "wrong", "feedback": "Para opiniones se dice «Ik ben het met je eens»; «akkoord» es para aceptar una propuesta («Akkoord!»)." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Tío", "text": "Precies. Volgens mij moet de regering veel meer bouwen. Maar ja, dat zeggen ze al tien jaar.", "es": "Exacto. Yo creo que el gobierno tiene que construir mucho más. Pero bueno, eso lo llevan diciendo diez años.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Matiza: por un lado hay que construir más, pero por otro la naturaleza también es importante.",
+      "options": [
+        { "text": "Aan de ene kant moeten we meer bouwen, maar aan de andere kant is natuur ook belangrijk.", "es": "Por un lado tenemos que construir más, pero por otro la naturaleza también es importante.", "verdict": "correct", "feedback": "¡Bien! «Aan de ene kant… aan de andere kant» = por un lado… por otro; el verbo va segundo tras cada uno." },
+        { "text": "Ja, maar de natuur is ook belangrijk.", "es": "Sí, pero la naturaleza también es importante.", "verdict": "acceptable", "feedback": "Correcto y directo." },
+        { "text": "Aan de ene kant we moeten meer bouwen, maar aan de andere kant natuur is ook belangrijk.", "es": "Por un lado tenemos que construir más, pero por otro la naturaleza también es importante.", "verdict": "wrong", "feedback": "Orden V2: tras «aan de ene kant» va el verbo: «moeten we…», «is natuur…»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Tío", "text": "Dat is waar. Ga jij trouwens stemmen bij de gemeenteraadsverkiezingen? Als EU-burger mag dat.", "es": "Es verdad. Por cierto, ¿vas a votar en las elecciones municipales? Como ciudadano de la UE puedes.", "voice": "nl-NL-MaartenNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que sí vas a votar, pero que primero quieres leer los programas de los partidos.",
+      "options": [
+        { "text": "Ja, ik ga stemmen, maar eerst wil ik de programma's van de partijen lezen.", "es": "Sí, voy a votar, pero primero quiero leer los programas de los partidos.", "verdict": "correct", "feedback": "¡Genial! Futuro con «gaan» + infinitivo; tras «eerst», el verbo va segundo: «eerst wil ik»." },
+        { "text": "Ja, zeker. Ik ga stemmen.", "es": "Sí, claro. Voy a votar.", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Ja, ik ga stemmen, maar eerst wil ik de programma's van de partijen leren.", "es": "Sí, voy a votar, pero primero quiero leer los programas de los partidos.", "verdict": "wrong", "feedback": "Falso amigo: «leren» es aprender; leer es «lezen»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Tío", "text": "Goed zo! Kom, neem nog een stukje taart. Gezellig dat je er bent!", "es": "¡Muy bien! Venga, coge otro trocito de tarta. ¡Qué bien que hayas venido!", "voice": "nl-NL-MaartenNeural" }
+  ]
+}

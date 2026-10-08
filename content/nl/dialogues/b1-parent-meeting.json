@@ -1,0 +1,58 @@
+{
+  "id": "dlg.nl-b1-parent-meeting",
+  "title": "Tutoría con la maestra",
+  "description": "En el oudergesprek hablas con la maestra de tu hija sobre cómo va en clase y el neerlandés.",
+  "situation": "familia",
+  "unit": "nl-b1-school",
+  "order": 110,
+  "register": "u",
+  "level": "B1",
+  "avatars": { "Maestra": "fluent:woman-teacher" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Maestra", "text": "Goedemiddag, welkom. Uw dochter zit nu drie maanden bij mij in groep drie. Hoe gaat het thuis?", "es": "Buenas tardes, bienvenido. Su hija lleva tres meses conmigo en grupo tres. ¿Qué tal en casa?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que bien: le gusta mucho el colegio, pero el neerlandés todavía le resulta difícil.",
+      "options": [
+        { "text": "Goed! Ze vindt school heel leuk, maar Nederlands vindt ze nog moeilijk.", "es": "¡Bien! Le gusta mucho el colegio, pero el neerlandés todavía le resulta difícil.", "verdict": "correct", "feedback": "¡Muy bien! Tras «maar» puedes poner delante «Nederlands», con el verbo segundo: «Nederlands vindt ze…»." },
+        { "text": "Goed, ze is blij. Alleen de taal is moeilijk.", "es": "Bien, está contenta. Solo el idioma es difícil.", "verdict": "acceptable", "feedback": "Se entiende y suena natural." },
+        { "text": "Goed! Ze vindt school heel leuk, maar Nederlands ze vindt nog moeilijk.", "es": "¡Bien! Le gusta mucho el colegio, pero el neerlandés todavía le resulta difícil.", "verdict": "wrong", "feedback": "Orden V2: si empiezas por «Nederlands», el verbo va segundo: «Nederlands vindt ze»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Maestra", "text": "Dat merk ik ook. Ze begrijpt veel, maar ze praat nog weinig in de klas. Spreekt u thuis Nederlands met haar?", "es": "Yo también lo noto. Entiende mucho, pero todavía habla poco en clase. ¿Habla usted neerlandés con ella en casa?", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que en casa habláis español, pero que sí lees libros en neerlandés con ella.",
+      "options": [
+        { "text": "Thuis spreken we Spaans, maar ik lees wel Nederlandse boeken met haar.", "es": "En casa hablamos español, pero sí leo libros en neerlandés con ella.", "verdict": "correct", "feedback": "¡Bien! «Thuis spreken we»: verbo segundo. «wel» marca el contraste." },
+        { "text": "Nee, Spaans. Maar we lezen samen boeken in het Nederlands.", "es": "No, español. Pero leemos juntos libros en neerlandés.", "verdict": "acceptable", "feedback": "Correcto." },
+        { "text": "Thuis spreken we Spaans, maar ik lees wel boeken Nederlandse met haar.", "es": "En casa hablamos español, pero sí leo libros en neerlandés con ella.", "verdict": "wrong", "feedback": "El adjetivo va delante del sustantivo: «Nederlandse boeken», no «boeken Nederlandse»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Maestra", "text": "Heel goed, dat helpt echt. De bibliotheek is ook een aanrader: kinderen zijn daar gratis lid.", "es": "Muy bien, eso ayuda de verdad. La biblioteca también es muy recomendable: los niños son socios gratis.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta si en el colegio hay ayuda extra para niños que aprenden neerlandés.",
+      "options": [
+        { "text": "Is er op school extra hulp voor kinderen die Nederlands leren?", "es": "¿Hay ayuda extra en el colegio para niños que aprenden neerlandés?", "verdict": "correct", "feedback": "¡Perfecto! Oración de relativo con «die» y el verbo al final: «die Nederlands leren»." },
+        { "text": "Krijgt ze extra hulp op school?", "es": "¿Recibe ayuda extra en el colegio?", "verdict": "acceptable", "feedback": "Correcto y directo." },
+        { "text": "Is er op school extra hulp voor kinderen die leren Nederlands?", "es": "¿Hay ayuda extra en el colegio para niños que aprenden neerlandés?", "verdict": "wrong", "feedback": "En la oración de relativo el verbo va al final: «die Nederlands leren»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Maestra", "text": "Ja, twee keer per week in een klein groepje. Ik meld haar aan, als u dat goed vindt.", "es": "Sí, dos veces por semana en un grupito. La apunto, si le parece bien.", "voice": "nl-NL-ColetteNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": "Di que te parece muy bien y pregunta cuándo es la próxima tutoría.",
+      "options": [
+        { "text": "Dat vind ik heel goed. Wanneer is het volgende oudergesprek?", "es": "Me parece muy bien. ¿Cuándo es la próxima tutoría?", "verdict": "correct", "feedback": "¡Genial! «het gesprek» → «het volgende oudergesprek», con -e tras «het»." },
+        { "text": "Prima, graag. Wanneer spreken we elkaar weer?", "es": "Perfecto, gracias. ¿Cuándo volvemos a hablar?", "verdict": "acceptable", "feedback": "Natural y educado." },
+        { "text": "Dat vind ik heel goed. Wanneer is de volgende oudergesprek?", "es": "Me parece muy bien. ¿Cuándo es la próxima tutoría?", "verdict": "wrong", "feedback": "«gesprek» es de «het»: «het volgende oudergesprek»." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Maestra", "text": "Over drie maanden. U krijgt een uitnodiging via de app van school. Tot ziens!", "es": "Dentro de tres meses. Recibirá una invitación por la app del colegio. ¡Hasta luego!", "voice": "nl-NL-ColetteNeural" }
+  ]
+}
