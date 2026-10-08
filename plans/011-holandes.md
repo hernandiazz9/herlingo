@@ -54,14 +54,14 @@ Worktree setup: npm ci
 - Outcome: units 22 gemeente, 30 housing, 32 bank, 40 shopping (192 phrases, 135 vocab, 36 Q&A) — 6e02f4e
 
 ## T138 — A2 units 9–11 (A2 complete)
-- Status: pending
+- Status: done
 - Depends on: T137
 - Goal: Write the remaining A2 units so A2 has 10 units + grammar unit at the target totals.
 - Context: Shared contract, docs/brief-nl.md, earlier A2 units.
 - Scope: may touch `content/nl/units/` (these units only) / must not touch `content/nl/pack.json`, other units, other packs.
 - Done when:
   - A2 totals within ±10% of ~450 phrases, ~330 vocab, ~90 Q&A (report the counts); `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units 42 transport, 50 huisarts, 52 neighbours; A2 = 471 phrases, 338 vocab, 93 Q&A, 56 lessons — d3aae14
 
 ## T139 — B1 units 1–4 (with the grammar unit)
 - Status: done
@@ -84,14 +84,14 @@ Worktree setup: npm ci
 - Outcome: units 122 meetings, 130 renting, 132 health, 140 school (175 phrases, 122 vocab, 37 Q&A) — 83058a5
 
 ## T141 — B1 units 9–11 (B1 complete)
-- Status: pending
+- Status: done
 - Depends on: T140
 - Goal: Write the remaining B1 units so B1 has 10 units + grammar unit at the target totals.
 - Context: Shared contract, docs/brief-nl.md, earlier B1 units.
 - Scope: may touch `content/nl/units/` (these units only) / must not touch `content/nl/pack.json`, other units, other packs.
 - Done when:
   - B1 totals within ±10% of ~450 phrases, ~330 vocab, ~90 Q&A (report the counts); `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units 142 taxes, 150 culture, 152 opinions; B1 = 457 phrases, 335 vocab, 91 Q&A, 55 lessons — 5051d55
 
 ## T142 — A2 dialogues (12)
 - Status: pending
@@ -176,6 +176,9 @@ Worktree setup: npm ci
 - 2026-10-09 T137: 'de bank' only as the sofa in vocab (bank unit uses bankrekening/bankkantoor); iDEAL without article (brand) (agent)
 - 2026-10-09 T140: wrote verhuurder, borg, verwarming, koorts, rug itself because A2 housing/huisarts were not on main yet → possible duplicates (agent)
 - 2026-10-09 orchestrator: added T148 (Dutch duplicate cleanup) after T138/T141, because A2 and B1 were written in parallel and duplicated some words/phrases; T147 now also depends on T148
+- 2026-10-09 T138: smaller last A2 units to stay within +10%; directions imperatives register neutral; 112 written 'één één twee'; extra Q&A character Bas (agent)
+- 2026-10-09 T141: avoided A2 42/50/52 topics to keep duplicates low; grammar cards not listed in topic lessons (agent)
+- 2026-10-09 orchestrator: run T148 (cleanup, changes unit item ids) before dialogues/stories that might reference item ids; T148 + T142 first
 
 ## Proposals (new scope)
 - 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
@@ -191,3 +194,7 @@ Worktree setup: npm ci
 - 2026-10-08 23:49 T140 launched · attempt 1 · agent a8593eaeb9bdb12a6
 - 2026-10-09 00:00 T137 done → 6e02f4e
 - 2026-10-09 00:00 T140 done → 83058a5
+- 2026-10-09 00:01 T138 launched · attempt 1 · agent a037369d995a97426
+- 2026-10-09 00:01 T141 launched · attempt 1 · agent a5ce8df4ff5521c15
+- 2026-10-09 00:12 T141 done → 5051d55
+- 2026-10-09 00:12 T138 done → d3aae14
