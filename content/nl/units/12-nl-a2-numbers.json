@@ -1,0 +1,1553 @@
+{
+  "id": "nl-a2-numbers",
+  "order": 12,
+  "level": "A2",
+  "title": "Números, hora, fechas, precios, teléfono y código postal",
+  "description": "Contar del 0 al 1000 (con las unidades primero), pagar en euros, decir la hora con «half drie», días, meses y fechas, y dar tu teléfono, tu código postal y tu número de casa.",
+  "emoji": "🔢",
+  "situation": "numeros",
+  "lessons": [
+    {
+      "id": "nl-a2-numbers.l.nul-twintig",
+      "title": "Del 0 al 20",
+      "items": [
+        "nl-a2-numbers.nul",
+        "nl-a2-numbers.een",
+        "nl-a2-numbers.twee",
+        "nl-a2-numbers.drie",
+        "nl-a2-numbers.vier",
+        "nl-a2-numbers.vijf",
+        "nl-a2-numbers.zes",
+        "nl-a2-numbers.zeven",
+        "nl-a2-numbers.acht",
+        "nl-a2-numbers.negen",
+        "nl-a2-numbers.tien",
+        "nl-a2-numbers.elf",
+        "nl-a2-numbers.twaalf",
+        "nl-a2-numbers.dertien",
+        "nl-a2-numbers.veertien",
+        "nl-a2-numbers.vijftien",
+        "nl-a2-numbers.zestien",
+        "nl-a2-numbers.zeventien",
+        "nl-a2-numbers.achttien",
+        "nl-a2-numbers.negentien",
+        "nl-a2-numbers.twintig",
+        "nl-a2-numbers.hoeveel"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.l.tot-duizend",
+      "title": "Hasta mil: edad, teléfono y dirección",
+      "items": [
+        "nl-a2-numbers.eenentwintig",
+        "nl-a2-numbers.tweeentwintig",
+        "nl-a2-numbers.dertig",
+        "nl-a2-numbers.veertig",
+        "nl-a2-numbers.vijftig",
+        "nl-a2-numbers.zestig",
+        "nl-a2-numbers.zeventig",
+        "nl-a2-numbers.tachtig",
+        "nl-a2-numbers.negentig",
+        "nl-a2-numbers.honderd",
+        "nl-a2-numbers.duizend",
+        "nl-a2-numbers.jaar",
+        "nl-a2-numbers.telefoonnummer",
+        "nl-a2-numbers.postcode",
+        "nl-a2-numbers.huisnummer",
+        "nl-a2-numbers.adres",
+        "nl-a2-numbers.hoe-oud-ben-je",
+        "nl-a2-numbers.ik-ben-tweeendertig",
+        "nl-a2-numbers.dertien-of-dertig",
+        "nl-a2-numbers.wat-is-je-telefoonnummer",
+        "nl-a2-numbers.wat-is-uw-telefoonnummer",
+        "nl-a2-numbers.mijn-nummer-is",
+        "nl-a2-numbers.kunt-u-het-nummer-herhalen",
+        "nl-a2-numbers.wat-is-uw-postcode",
+        "nl-a2-numbers.mijn-postcode-is",
+        "nl-a2-numbers.en-uw-huisnummer",
+        "nl-a2-numbers.nummer-zeventien",
+        "nl-a2-numbers.qa.hoe-oud",
+        "nl-a2-numbers.qa.telefoonnummer",
+        "nl-a2-numbers.qa.postcode"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.l.prijzen",
+      "title": "Precios y pagar",
+      "items": [
+        "nl-a2-numbers.euro",
+        "nl-a2-numbers.cent",
+        "nl-a2-numbers.prijs",
+        "nl-a2-numbers.briefje",
+        "nl-a2-numbers.wat-kost-dat",
+        "nl-a2-numbers.hoeveel-kost-het",
+        "nl-a2-numbers.dat-is-twee-euro-vijftig",
+        "nl-a2-numbers.dat-wordt-dan",
+        "nl-a2-numbers.hoeveel-is-het-samen",
+        "nl-a2-numbers.dat-is-te-duur",
+        "nl-a2-numbers.een-briefje-van-vijftig",
+        "nl-a2-numbers.kan-ik-pinnen",
+        "nl-a2-numbers.qa.betalen"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.l.klok",
+      "title": "La hora: «half drie» y «kwart over»",
+      "items": [
+        "nl-a2-numbers.uur",
+        "nl-a2-numbers.minuut",
+        "nl-a2-numbers.kwartier",
+        "nl-a2-numbers.hoe-laat-is-het",
+        "nl-a2-numbers.het-is-drie-uur",
+        "nl-a2-numbers.het-is-half-drie",
+        "nl-a2-numbers.het-is-kwart-over-negen",
+        "nl-a2-numbers.het-is-kwart-voor-zes",
+        "nl-a2-numbers.het-is-tien-voor-half-tien",
+        "nl-a2-numbers.om-hoe-laat",
+        "nl-a2-numbers.om-acht-uur",
+        "nl-a2-numbers.over-tien-minuten",
+        "nl-a2-numbers.zullen-we-om-half-acht-afspreken",
+        "nl-a2-numbers.qa.hoe-laat",
+        "nl-a2-numbers.qa.afspraak-tijd"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.l.dagen",
+      "title": "Días de la semana",
+      "items": [
+        "nl-a2-numbers.dag",
+        "nl-a2-numbers.week",
+        "nl-a2-numbers.maandag",
+        "nl-a2-numbers.dinsdag",
+        "nl-a2-numbers.woensdag",
+        "nl-a2-numbers.donderdag",
+        "nl-a2-numbers.vrijdag",
+        "nl-a2-numbers.zaterdag",
+        "nl-a2-numbers.zondag",
+        "nl-a2-numbers.welke-dag-is-het-vandaag",
+        "nl-a2-numbers.vandaag-is-het-dinsdag",
+        "nl-a2-numbers.op-maandag-werk-ik-niet",
+        "nl-a2-numbers.volgende-week",
+        "nl-a2-numbers.qa.welke-dag"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.l.datums",
+      "title": "Meses y fechas",
+      "items": [
+        "nl-a2-numbers.maand",
+        "nl-a2-numbers.datum",
+        "nl-a2-numbers.verjaardag",
+        "nl-a2-numbers.januari",
+        "nl-a2-numbers.februari",
+        "nl-a2-numbers.maart",
+        "nl-a2-numbers.april",
+        "nl-a2-numbers.mei",
+        "nl-a2-numbers.juni",
+        "nl-a2-numbers.juli",
+        "nl-a2-numbers.augustus",
+        "nl-a2-numbers.september",
+        "nl-a2-numbers.oktober",
+        "nl-a2-numbers.november",
+        "nl-a2-numbers.december",
+        "nl-a2-numbers.welke-datum",
+        "nl-a2-numbers.het-is-acht-oktober",
+        "nl-a2-numbers.mijn-verjaardag",
+        "nl-a2-numbers.ik-ben-geboren-in",
+        "nl-a2-numbers.qa.verjaardag"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-numbers.hoeveel",
+      "text": "Hoeveel?",
+      "es": "¿Cuántos? / ¿Cuánto?",
+      "explanation": "Para preguntar una cantidad en una tienda o un mercado. «oe» = «u» y «ee» larga: ju-FEEL?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.hoe-oud-ben-je",
+      "text": "Hoe oud ben je?",
+      "es": "¿Cuántos años tienes?",
+      "literal": "¿Cómo de viejo eres?",
+      "notes": "La edad va con «zijn» (ser): nunca con «hebben».",
+      "explanation": "A un amigo o a un niño. «ou» suena «au»: ju AUT ben ye?",
+      "register": "tu",
+      "situation": "numeros",
+      "tags": [
+        "edad"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.ik-ben-tweeendertig",
+      "text": "Ik ben tweeëndertig.",
+      "es": "Tengo treinta y dos años.",
+      "literal": "Soy treinta y dos.",
+      "notes": "«Ik ben tweeëndertig (jaar)»; nunca «ik heb tweeëndertig jaar».",
+      "explanation": "Para decir tu edad. Primero la unidad: twee-en-DER-taj.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "edad"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.dertien-of-dertig",
+      "text": "Sorry, zei u dertien of dertig?",
+      "es": "Perdone, ¿ha dicho trece o treinta?",
+      "notes": "«zei» es el pasado de «zeggen» (decir).",
+      "explanation": "Cuando dudas con un precio o un número. «-tien» = TIIN; «-tig» = taj, con la «g» de garganta.",
+      "register": "u",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.wat-is-je-telefoonnummer",
+      "text": "Wat is je telefoonnummer?",
+      "es": "¿Cuál es tu número de teléfono?",
+      "explanation": "A un compañero o un amigo nuevo. Acento en «foon»: te-le-FOON-nu-mer.",
+      "register": "tu",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.wat-is-uw-telefoonnummer",
+      "text": "Wat is uw telefoonnummer?",
+      "es": "¿Cuál es su número de teléfono?",
+      "explanation": "Te lo preguntan en la gemeente, el médico o el banco. «uw» suena como «ü» + «u» corta: wat is ÜU.",
+      "register": "u",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.mijn-nummer-is",
+      "text": "Mijn nummer is nul zes, twaalf, vierendertig, zesenvijftig, achtenzeventig.",
+      "es": "Mi número es el 06-12345678.",
+      "notes": "Primero «nul zes» y luego parejas de cifras: 12 34 56 78.",
+      "explanation": "Los móviles empiezan por 06; se dicen de dos en dos tras el «nul zes». Haz una pausa entre parejas.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.kunt-u-het-nummer-herhalen",
+      "text": "Kunt u het nummer nog een keer herhalen?",
+      "es": "¿Puede repetir el número otra vez?",
+      "explanation": "Al apuntar un teléfono o un número de expediente. «keer» con «ee» larga: nog en KEER jer-JAA-le.",
+      "register": "u",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.wat-is-uw-postcode",
+      "text": "Wat is uw postcode?",
+      "es": "¿Cuál es su código postal?",
+      "explanation": "En la gemeente, la farmacia o al pedir algo por internet. «post» con «o» corta: POST-koo-de.",
+      "register": "u",
+      "situation": "numeros",
+      "tags": [
+        "direccion"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.mijn-postcode-is",
+      "text": "Mijn postcode is vijfendertig twaalf AB.",
+      "es": "Mi código postal es el 3512 AB.",
+      "notes": "Con el código postal y el número de casa ya saben tu dirección exacta.",
+      "explanation": "Las cuatro cifras se dicen en dos parejas y las letras por separado: «aa bee».",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "direccion"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.en-uw-huisnummer",
+      "text": "En uw huisnummer?",
+      "es": "¿Y su número de casa?",
+      "explanation": "La pregunta que sigue al código postal en cualquier ventanilla. «ui» = «ai» redondeada: en ÜU JAIS-nu-mer?",
+      "register": "u",
+      "situation": "numeros",
+      "tags": [
+        "direccion"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.nummer-zeventien",
+      "text": "Nummer zeventien.",
+      "es": "El número diecisiete.",
+      "explanation": "Para dar el número de tu casa o de tu turno. «u» corta, como una «e» oscura: NU-mer SEE-fen-tiin.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "direccion"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.wat-kost-dat",
+      "text": "Wat kost dat?",
+      "es": "¿Cuánto cuesta eso?",
+      "explanation": "Señalando algo en una tienda o en el mercado. «o» corta: wat KOST dat?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.hoeveel-kost-het",
+      "text": "Hoeveel kost het?",
+      "es": "¿Cuánto cuesta?",
+      "explanation": "En una tienda o un puesto. Acento en «veel»: ju-FEEL KOST et?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.dat-is-twee-euro-vijftig",
+      "text": "Dat is twee euro vijftig.",
+      "es": "Son dos euros con cincuenta.",
+      "notes": "Los céntimos van detrás sin «y»: €2,50 = «twee euro vijftig».",
+      "explanation": "Lo oirás en cada caja. «euro» suena «ÖÖ-ro», con «eu» como una «e» con labios redondos.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.dat-wordt-dan",
+      "text": "Dat wordt dan negen euro twintig.",
+      "es": "Entonces son nueve euros con veinte.",
+      "notes": "«dan» aquí es «entonces», muy típico al cobrar.",
+      "explanation": "Lo dice el cajero al final. «wordt» suena «vort»: dat VORT dan NEE-je ÖÖ-ro TVIN-taj.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.hoeveel-is-het-samen",
+      "text": "Hoeveel is het samen?",
+      "es": "¿Cuánto es todo junto?",
+      "explanation": "Cuando compras varias cosas en un puesto. Acento en «saa»: ju-FEEL is et SAA-me?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.dat-is-te-duur",
+      "text": "Dat is te duur.",
+      "es": "Eso es demasiado caro.",
+      "explanation": "En el mercado o en una tienda de segunda mano. «uu» = «ü» larga: dat is te DÜÜR.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.een-briefje-van-vijftig",
+      "text": "Ik heb alleen een briefje van vijftig.",
+      "es": "Solo tengo un billete de cincuenta.",
+      "notes": "«briefje» es diminutivo: los diminutivos están por todas partes en neerlandés.",
+      "explanation": "Al pagar en efectivo en un puesto o un café. «tj» suena «ch» suave: BRIIF-ye.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.kan-ik-pinnen",
+      "text": "Kan ik pinnen?",
+      "es": "¿Puedo pagar con tarjeta?",
+      "notes": "«pinnen» = pagar con tarjeta (de débito); en muchos sitios solo se acepta tarjeta.",
+      "explanation": "Antes de pedir en un puesto o una cafetería pequeña. «pinnen» con «i» corta: kan ik PI-ne?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "precio"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.hoe-laat-is-het",
+      "text": "Hoe laat is het?",
+      "es": "¿Qué hora es?",
+      "literal": "¿Cómo de tarde es?",
+      "explanation": "Para preguntar la hora. «laat» con «aa» larga: ju LAAT is et?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.het-is-drie-uur",
+      "text": "Het is drie uur.",
+      "es": "Son las tres.",
+      "notes": "En el reloj escrito verás 15:00, pero al hablar se usa sobre todo del 1 al 12.",
+      "explanation": "Para las horas en punto. «uur» = «ü» larga + «r»: et is DRII ÜÜR.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.het-is-half-drie",
+      "text": "Het is half drie.",
+      "es": "Son las dos y media.",
+      "literal": "Es media tres.",
+      "notes": "«half drie» = 2:30, no 3:30: «media hora hacia las tres».",
+      "explanation": "Al decir la hora. Cuidado: «half drie» es media hora ANTES de las tres. Suena et is JALF DRII.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.het-is-kwart-over-negen",
+      "text": "Het is kwart over negen.",
+      "es": "Son las nueve y cuarto.",
+      "explanation": "Para la hora y cuarto. «kw» se dice con «w» suave: KVART oo-fer NEE-je.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.het-is-kwart-voor-zes",
+      "text": "Het is kwart voor zes.",
+      "es": "Son las seis menos cuarto.",
+      "explanation": "Para la hora menos cuarto. «voor» con «oo» larga y «v» casi «f»: kvart FOOR SES.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.het-is-tien-voor-half-tien",
+      "text": "Het is tien voor half tien.",
+      "es": "Son las nueve y veinte.",
+      "literal": "Son diez antes de media diez.",
+      "notes": "De y veinte a menos veinte, todo gira alrededor de «half».",
+      "explanation": "Entre y cuarto y y media se cuenta desde la media: 9:20 = diez antes de «half tien» (9:30).",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.om-hoe-laat",
+      "text": "Om hoe laat begint het?",
+      "es": "¿A qué hora empieza?",
+      "notes": "«om» + hora = a las: «om acht uur».",
+      "explanation": "Para preguntar por una cita, una clase o un evento. «begint» con acento en «gint»: om ju LAAT be-JINT et?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.om-acht-uur",
+      "text": "Ik begin om acht uur.",
+      "es": "Empiezo a las ocho.",
+      "explanation": "Al hablar de tu horario de trabajo. «acht» con la «ch» de garganta: om AJT ÜÜR.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.over-tien-minuten",
+      "text": "Over tien minuten.",
+      "es": "Dentro de diez minutos.",
+      "notes": "«over» + tiempo = dentro de.",
+      "explanation": "Cuando alguien te pregunta cuándo llegas o cuándo sale algo. Acento en «nu»: OO-fer tiin mi-NÜ-te.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zullen-we-om-half-acht-afspreken",
+      "text": "Zullen we om half acht afspreken?",
+      "es": "¿Quedamos a las siete y media?",
+      "notes": "«half acht» = 7:30. «afspreken» (quedar) es separable, pero tras «zullen we» va entero al final.",
+      "explanation": "Para quedar con un amigo o una compañera. «afspreken» con acento en «af»: AF-spree-ke.",
+      "register": "tu",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.welke-dag-is-het-vandaag",
+      "text": "Welke dag is het vandaag?",
+      "es": "¿Qué día es hoy?",
+      "explanation": "Cuando pierdes la cuenta de los días. Acento en «daag»: VEL-ke DAJ is et fan-DAAJ?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.vandaag-is-het-dinsdag",
+      "text": "Vandaag is het dinsdag.",
+      "es": "Hoy es martes.",
+      "notes": "Si empiezas por «vandaag», el verbo va segundo: «Vandaag is het…», no «Vandaag het is…».",
+      "explanation": "Para decir qué día es. «dinsdag» suena DINS-daj, con la «g» final de garganta.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.op-maandag-werk-ik-niet",
+      "text": "Op maandag werk ik niet.",
+      "es": "Los lunes no trabajo.",
+      "notes": "El verbo va en segundo lugar, así que «ik» pasa detrás: «werk ik».",
+      "explanation": "Para hablar de tu horario semanal. «op» + día; «maandag» con «aa» larga: op MAAN-daj.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.welke-datum",
+      "text": "Welke datum is het vandaag?",
+      "es": "¿A qué fecha estamos hoy?",
+      "explanation": "Al rellenar un formulario o firmar algo. «datum» con «aa» larga: VEL-ke DAA-tum?",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.het-is-acht-oktober",
+      "text": "Het is acht oktober.",
+      "es": "Es ocho de octubre.",
+      "notes": "Sin preposición entre número y mes: «acht oktober».",
+      "explanation": "Para decir la fecha: número y mes, sin «de». Acento en «to»: AJT ok-TOO-ber.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.mijn-verjaardag",
+      "text": "Mijn verjaardag is op twaalf mei.",
+      "es": "Mi cumpleaños es el doce de mayo.",
+      "notes": "«op» + fecha: «op twaalf mei».",
+      "explanation": "Cuando te preguntan tu cumpleaños; aquí se celebra mucho. «ij» = «ei»: fer-YAAR-daj.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.ik-ben-geboren-in",
+      "text": "Ik ben geboren in negentien vierennegentig.",
+      "es": "Nací en 1994.",
+      "notes": "1994 = «negentien vierennegentig»; 2026 = «tweeduizend zesentwintig».",
+      "explanation": "En un formulario o una conversación. Los años se dicen en dos parejas: negentien / vierennegentig.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.volgende-week",
+      "text": "Volgende week heb ik tijd.",
+      "es": "La semana que viene tengo tiempo.",
+      "notes": "Empiezas por «volgende week», así que el verbo va antes que «ik».",
+      "explanation": "Para quedar o pedir una cita. El verbo va segundo: VOL-jen-de veek JEP ik teit.",
+      "register": "neutral",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-numbers.nul",
+      "word": "nul",
+      "es": "cero",
+      "notes": "Suena «nul», con la «u» neerlandesa (una «i» con labios redondos).",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.een",
+      "word": "één",
+      "es": "uno",
+      "notes": "Lleva tildes para no confundirlo con «een» (un, una). Suena «een», con «ee» larga.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.twee",
+      "word": "twee",
+      "es": "dos",
+      "notes": "«tw» se dice junto, con «w» suave: TVEE.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.drie",
+      "word": "drie",
+      "es": "tres",
+      "notes": "«ie» = «i» larga: DRII.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.vier",
+      "word": "vier",
+      "es": "cuatro",
+      "notes": "La «v» suena casi como «f»: FIIR.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.vijf",
+      "word": "vijf",
+      "es": "cinco",
+      "notes": "«ij» = «ei»: FEIF.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zes",
+      "word": "zes",
+      "es": "seis",
+      "notes": "La «z» suena casi como «s»: SES.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zeven",
+      "word": "zeven",
+      "es": "siete",
+      "notes": "SEE-fe: la «-en» final casi no se oye.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.acht",
+      "word": "acht",
+      "es": "ocho",
+      "notes": "«ch» es la «j» española de garganta: AJT.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.negen",
+      "word": "negen",
+      "es": "nueve",
+      "notes": "NEE-je, con la «g» de garganta.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.tien",
+      "word": "tien",
+      "es": "diez",
+      "notes": "TIIN, con «i» larga.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.elf",
+      "word": "elf",
+      "es": "once",
+      "notes": "Como «elf» en español, con la «e» corta.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.twaalf",
+      "word": "twaalf",
+      "es": "doce",
+      "notes": "TVAALF, con «aa» larga.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.dertien",
+      "word": "dertien",
+      "es": "trece",
+      "notes": "Del 13 al 19 terminan en «-tien»; acento al principio: DER-tiin.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.veertien",
+      "word": "veertien",
+      "es": "catorce",
+      "notes": "FEER-tiin.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.vijftien",
+      "word": "vijftien",
+      "es": "quince",
+      "notes": "FEIF-tiin.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zestien",
+      "word": "zestien",
+      "es": "dieciséis",
+      "notes": "SES-tiin.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zeventien",
+      "word": "zeventien",
+      "es": "diecisiete",
+      "notes": "SEE-fen-tiin.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.achttien",
+      "word": "achttien",
+      "es": "dieciocho",
+      "notes": "Con dos «t»: AJ-tiin.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.negentien",
+      "word": "negentien",
+      "es": "diecinueve",
+      "notes": "NEE-jen-tiin.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.twintig",
+      "word": "twintig",
+      "es": "veinte",
+      "notes": "Las decenas terminan en «-tig», con la «g» de garganta: TVIN-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.eenentwintig",
+      "word": "eenentwintig",
+      "es": "veintiuno",
+      "notes": "Primero la unidad: «uno y veinte». Del 21 al 99 todos van así.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.tweeentwintig",
+      "word": "tweeëntwintig",
+      "es": "veintidós",
+      "notes": "Diéresis en «ëe» para separar las vocales: twee-en-TVIN-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.dertig",
+      "word": "dertig",
+      "es": "treinta",
+      "notes": "DER-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.veertig",
+      "word": "veertig",
+      "es": "cuarenta",
+      "notes": "FEER-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.vijftig",
+      "word": "vijftig",
+      "es": "cincuenta",
+      "notes": "FEIF-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zestig",
+      "word": "zestig",
+      "es": "sesenta",
+      "notes": "SES-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zeventig",
+      "word": "zeventig",
+      "es": "setenta",
+      "notes": "SEE-fen-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.tachtig",
+      "word": "tachtig",
+      "es": "ochenta",
+      "notes": "Empieza por «t»: TAJ-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.negentig",
+      "word": "negentig",
+      "es": "noventa",
+      "notes": "NEE-jen-taj.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.honderd",
+      "word": "honderd",
+      "es": "cien",
+      "notes": "Sin «een» delante: «honderd» = cien; 250 = «tweehonderdvijftig».",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.duizend",
+      "word": "duizend",
+      "es": "mil",
+      "notes": "«ui» no existe en español: «ai» con labios redondos. DAI-sent.",
+      "situation": "numeros",
+      "tags": [
+        "numero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.euro",
+      "word": "euro",
+      "article": "de",
+      "plural": "euro's",
+      "es": "el euro",
+      "notes": "Con precios no se pone plural: «twee euro», no «twee euro's».",
+      "example": "nl-a2-numbers.dat-is-twee-euro-vijftig",
+      "situation": "numeros",
+      "tags": [
+        "dinero"
+      ],
+      "image": "fluent:euro-banknote"
+    },
+    {
+      "id": "nl-a2-numbers.cent",
+      "word": "cent",
+      "article": "de",
+      "plural": "cent",
+      "es": "el céntimo",
+      "notes": "Los precios se redondean a 5 céntimos si pagas en efectivo.",
+      "situation": "numeros",
+      "tags": [
+        "dinero"
+      ],
+      "image": "fluent:coin"
+    },
+    {
+      "id": "nl-a2-numbers.prijs",
+      "word": "prijs",
+      "article": "de",
+      "plural": "prijzen",
+      "es": "el precio",
+      "situation": "numeros",
+      "tags": [
+        "dinero"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.briefje",
+      "word": "briefje",
+      "article": "het",
+      "plural": "briefjes",
+      "es": "el billete (de dinero)",
+      "notes": "Diminutivo de «brief» (carta): siempre «het». Un billete de 50 = «een briefje van vijftig».",
+      "example": "nl-a2-numbers.een-briefje-van-vijftig",
+      "situation": "numeros",
+      "tags": [
+        "dinero"
+      ],
+      "image": "fluent:euro-banknote"
+    },
+    {
+      "id": "nl-a2-numbers.uur",
+      "word": "uur",
+      "article": "het",
+      "plural": "uur",
+      "es": "la hora",
+      "notes": "«drie uur» = las tres / tres horas; tras número no se pone plural.",
+      "example": "nl-a2-numbers.het-is-drie-uur",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ],
+      "image": "fluent:mantelpiece-clock"
+    },
+    {
+      "id": "nl-a2-numbers.minuut",
+      "word": "minuut",
+      "article": "de",
+      "plural": "minuten",
+      "es": "el minuto",
+      "example": "nl-a2-numbers.over-tien-minuten",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.kwartier",
+      "word": "kwartier",
+      "article": "het",
+      "plural": "kwartieren",
+      "es": "el cuarto de hora",
+      "notes": "«een kwartier» = quince minutos; en la hora se dice «kwart»: «kwart over negen».",
+      "situation": "numeros",
+      "tags": [
+        "hora"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.dag",
+      "word": "dag",
+      "article": "de",
+      "plural": "dagen",
+      "es": "el día",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.week",
+      "word": "week",
+      "article": "de",
+      "plural": "weken",
+      "es": "la semana",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.maand",
+      "word": "maand",
+      "article": "de",
+      "plural": "maanden",
+      "es": "el mes",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.jaar",
+      "word": "jaar",
+      "article": "het",
+      "plural": "jaar",
+      "es": "el año",
+      "notes": "Tras un número va en singular: «dertig jaar».",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.datum",
+      "word": "datum",
+      "article": "de",
+      "plural": "data",
+      "es": "la fecha",
+      "example": "nl-a2-numbers.welke-datum",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ],
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "nl-a2-numbers.verjaardag",
+      "word": "verjaardag",
+      "article": "de",
+      "plural": "verjaardagen",
+      "es": "el cumpleaños",
+      "example": "nl-a2-numbers.mijn-verjaardag",
+      "situation": "numeros",
+      "tags": [
+        "fecha"
+      ],
+      "image": "fluent:birthday-cake"
+    },
+    {
+      "id": "nl-a2-numbers.maandag",
+      "word": "maandag",
+      "es": "lunes",
+      "notes": "Días y meses en minúscula y sin artículo: «op maandag» (el lunes).",
+      "situation": "numeros",
+      "tags": [
+        "dias"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.dinsdag",
+      "word": "dinsdag",
+      "es": "martes",
+      "situation": "numeros",
+      "tags": [
+        "dias"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.woensdag",
+      "word": "woensdag",
+      "es": "miércoles",
+      "notes": "«oe» = «u»: VUNS-daj.",
+      "situation": "numeros",
+      "tags": [
+        "dias"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.donderdag",
+      "word": "donderdag",
+      "es": "jueves",
+      "notes": "Acento al principio: DON-der-daj.",
+      "situation": "numeros",
+      "tags": [
+        "dias"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.vrijdag",
+      "word": "vrijdag",
+      "es": "viernes",
+      "situation": "numeros",
+      "tags": [
+        "dias"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zaterdag",
+      "word": "zaterdag",
+      "es": "sábado",
+      "notes": "La «z» casi «s»: SAA-ter-daj.",
+      "situation": "numeros",
+      "tags": [
+        "dias"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.zondag",
+      "word": "zondag",
+      "es": "domingo",
+      "situation": "numeros",
+      "tags": [
+        "dias"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.januari",
+      "word": "januari",
+      "es": "enero",
+      "notes": "Meses en minúscula: «in januari», «op acht januari».",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.februari",
+      "word": "februari",
+      "es": "febrero",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.maart",
+      "word": "maart",
+      "es": "marzo",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.april",
+      "word": "april",
+      "es": "abril",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.mei",
+      "word": "mei",
+      "es": "mayo",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.juni",
+      "word": "juni",
+      "es": "junio",
+      "notes": "«juni» y «juli» se confunden: se suele decir «junie» y «julie» para distinguirlos.",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.juli",
+      "word": "juli",
+      "es": "julio",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.augustus",
+      "word": "augustus",
+      "es": "agosto",
+      "notes": "Acento en «gus»: au-JUS-tus.",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.september",
+      "word": "september",
+      "es": "septiembre",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.oktober",
+      "word": "oktober",
+      "es": "octubre",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.november",
+      "word": "november",
+      "es": "noviembre",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.december",
+      "word": "december",
+      "es": "diciembre",
+      "situation": "numeros",
+      "tags": [
+        "meses"
+      ]
+    },
+    {
+      "id": "nl-a2-numbers.telefoonnummer",
+      "word": "telefoonnummer",
+      "article": "het",
+      "plural": "telefoonnummers",
+      "es": "el número de teléfono",
+      "notes": "Compuesto: el artículo es el de la última palabra, «het nummer».",
+      "example": "nl-a2-numbers.wat-is-uw-telefoonnummer",
+      "situation": "numeros",
+      "tags": [
+        "telefono"
+      ],
+      "image": "fluent:mobile-phone"
+    },
+    {
+      "id": "nl-a2-numbers.postcode",
+      "word": "postcode",
+      "article": "de",
+      "plural": "postcodes",
+      "es": "el código postal",
+      "notes": "Cuatro cifras y dos letras: 3512 AB.",
+      "example": "nl-a2-numbers.wat-is-uw-postcode",
+      "situation": "numeros",
+      "tags": [
+        "direccion"
+      ],
+      "image": "fluent:envelope"
+    },
+    {
+      "id": "nl-a2-numbers.huisnummer",
+      "word": "huisnummer",
+      "article": "het",
+      "plural": "huisnummers",
+      "es": "el número de la casa",
+      "situation": "numeros",
+      "tags": [
+        "direccion"
+      ],
+      "image": "fluent:house"
+    },
+    {
+      "id": "nl-a2-numbers.adres",
+      "word": "adres",
+      "article": "het",
+      "plural": "adressen",
+      "es": "la dirección",
+      "situation": "numeros",
+      "tags": [
+        "direccion"
+      ]
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-numbers.qa.hoe-oud",
+      "question": "En hoe oud ben jij?",
+      "questionEs": "¿Y tú cuántos años tienes?",
+      "accepted": [
+        {
+          "text": "Ik ben tweeëndertig.",
+          "es": "Tengo treinta y dos."
+        },
+        {
+          "text": "Tweeëndertig jaar.",
+          "es": "Treinta y dos años."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb tweeëndertig jaar.",
+          "es": "Tengo treinta y dos años (calco)."
+        },
+        {
+          "text": "Ik ben dertig twee.",
+          "es": "Tengo treinta y dos (orden mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "numeros",
+      "notes": "La edad va con «zijn»: «Ik ben tweeëndertig». Y primero la unidad: «tweeëndertig», no «dertig twee».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-numbers.qa.telefoonnummer",
+      "question": "Wat is uw telefoonnummer?",
+      "questionEs": "¿Cuál es su número de teléfono?",
+      "accepted": [
+        {
+          "text": "Nul zes, twaalf, vierendertig, zesenvijftig, achtenzeventig.",
+          "es": "06-12345678."
+        },
+        {
+          "text": "Mijn nummer is nul zes, twaalf, vierendertig, zesenvijftig, achtenzeventig.",
+          "es": "Mi número es el 06-12345678."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mijn telefoon is een iPhone.",
+          "es": "Mi teléfono es un iPhone."
+        },
+        {
+          "text": "Ja, ik heb een telefoon.",
+          "es": "Sí, tengo un teléfono."
+        }
+      ],
+      "register": "u",
+      "situation": "numeros",
+      "notes": "Te piden el número: dilo con «nul zes» y luego de dos en dos.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-numbers.qa.postcode",
+      "question": "Wat is uw postcode en huisnummer?",
+      "questionEs": "¿Cuál es su código postal y número de casa?",
+      "accepted": [
+        {
+          "text": "Vijfendertig twaalf AB, nummer zeventien.",
+          "es": "3512 AB, número diecisiete."
+        },
+        {
+          "text": "Mijn postcode is vijfendertig twaalf AB. Nummer zeventien.",
+          "es": "Mi código postal es el 3512 AB. Número diecisiete."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik woon in Utrecht.",
+          "es": "Vivo en Utrecht."
+        },
+        {
+          "text": "Twaalf vijfendertig, nummer zeventig.",
+          "es": "1235, número setenta."
+        }
+      ],
+      "register": "u",
+      "situation": "numeros",
+      "notes": "Dan código postal y número: con eso basta. Ojo a «zeventien» (17) y «zeventig» (70).",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-numbers.qa.hoe-laat",
+      "question": "Sorry, weet jij hoe laat het is?",
+      "questionEs": "Perdona, ¿sabes qué hora es?",
+      "accepted": [
+        {
+          "text": "Ja, het is half drie.",
+          "es": "Sí, son las dos y media."
+        },
+        {
+          "text": "Het is kwart over vier.",
+          "es": "Son las cuatro y cuarto."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, het is twee en half.",
+          "es": "Sí, son dos y media (calco)."
+        },
+        {
+          "text": "Ja, ik heb een uur.",
+          "es": "Sí, tengo una hora."
+        }
+      ],
+      "register": "tu",
+      "situation": "numeros",
+      "notes": "La media hora se dice con «half» + la hora siguiente: 2:30 = «half drie», nunca «twee en half».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-numbers.qa.afspraak-tijd",
+      "question": "Om hoe laat is je afspraak?",
+      "questionEs": "¿A qué hora es tu cita?",
+      "accepted": [
+        {
+          "text": "Om tien uur.",
+          "es": "A las diez."
+        },
+        {
+          "text": "Om kwart over tien.",
+          "es": "A las diez y cuarto."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Op tien uur.",
+          "es": "En las diez (preposición mal)."
+        },
+        {
+          "text": "Over maandag.",
+          "es": "Dentro del lunes (mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "numeros",
+      "notes": "Con la hora se usa «om»: «om tien uur». Con los días, «op»: «op maandag».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-numbers.qa.betalen",
+      "question": "Dat wordt dan zes euro veertig. Pinnen of contant?",
+      "questionEs": "Entonces son seis euros con cuarenta. ¿Tarjeta o efectivo?",
+      "accepted": [
+        {
+          "text": "Pinnen, graag.",
+          "es": "Con tarjeta, por favor."
+        },
+        {
+          "text": "Contant. Alsjeblieft.",
+          "es": "En efectivo. Aquí tienes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, graag.",
+          "es": "Sí, por favor."
+        },
+        {
+          "text": "Zes euro en veertig cent.",
+          "es": "Seis euros y cuarenta céntimos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "numeros",
+      "notes": "Te preguntan cómo pagas: «pinnen» (tarjeta) o «contant» (efectivo). «Ja» no contesta a una pregunta con «of».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-numbers.qa.verjaardag",
+      "question": "Wanneer ben je jarig?",
+      "questionEs": "¿Cuándo es tu cumpleaños?",
+      "accepted": [
+        {
+          "text": "Op twaalf mei.",
+          "es": "El doce de mayo."
+        },
+        {
+          "text": "Mijn verjaardag is op twaalf mei.",
+          "es": "Mi cumpleaños es el doce de mayo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "In twaalf van mei.",
+          "es": "En doce de mayo (calco)."
+        },
+        {
+          "text": "Ik ben tweeëndertig.",
+          "es": "Tengo treinta y dos años."
+        }
+      ],
+      "register": "tu",
+      "situation": "numeros",
+      "notes": "«jarig zijn» = cumplir años. La fecha va con «op» y sin «van»: «op twaalf mei».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-numbers.qa.welke-dag",
+      "question": "Kom je maandag of dinsdag?",
+      "questionEs": "¿Vienes el lunes o el martes?",
+      "accepted": [
+        {
+          "text": "Op dinsdag.",
+          "es": "El martes."
+        },
+        {
+          "text": "Dinsdag. Maandag werk ik.",
+          "es": "El martes. El lunes trabajo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Dinsdag. Maandag ik werk.",
+          "es": "El martes. El lunes yo trabajo (orden mal)."
+        },
+        {
+          "text": "Om dinsdag.",
+          "es": "A las martes (mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "numeros",
+      "notes": "Si empiezas por «maandag», el verbo va segundo: «Maandag werk ik». Con los días, «op», no «om».",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}

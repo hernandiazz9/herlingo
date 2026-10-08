@@ -1,0 +1,1237 @@
+{
+  "id": "nl-a2-about-me",
+  "order": 20,
+  "level": "A2",
+  "title": "Presentarte: origen, trabajo, idiomas, familia y por qué estás aquí",
+  "description": "Decir cómo te llamas, de dónde eres, desde cuándo vives en Utrecht, a qué te dedicas, qué idiomas hablas y por qué aprendes neerlandés, tu familia y tu tiempo libre.",
+  "emoji": "🙂",
+  "situation": "presentarse",
+  "lessons": [
+    {
+      "id": "nl-a2-about-me.l.naam",
+      "title": "Cómo te llamas",
+      "items": [
+        "nl-a2-hello.naam",
+        "nl-a2-about-me.voornaam",
+        "nl-a2-about-me.achternaam",
+        "nl-a2-about-me.ik-ben-hernan",
+        "nl-a2-about-me.ik-heet-hernan",
+        "nl-a2-about-me.hoe-heet-je",
+        "nl-a2-about-me.hoe-heet-u",
+        "nl-a2-about-me.wat-is-uw-achternaam",
+        "nl-a2-about-me.mijn-achternaam-is-diaz",
+        "nl-a2-about-me.leuk-je-te-ontmoeten",
+        "nl-a2-about-me.jou-ook",
+        "nl-a2-about-me.leuk-u-te-ontmoeten",
+        "nl-a2-about-me.aangenaam",
+        "nl-a2-about-me.dit-is-mijn-collega",
+        "nl-a2-about-me.qa.hoe-heet-je",
+        "nl-a2-about-me.qa.achternaam"
+      ]
+    },
+    {
+      "id": "nl-a2-about-me.l.herkomst",
+      "title": "De dónde eres y dónde vives",
+      "items": [
+        "nl-a2-about-me.spanje",
+        "nl-a2-about-me.nederland",
+        "nl-a2-about-me.land",
+        "nl-a2-about-me.stad",
+        "nl-a2-about-me.hoofdstad",
+        "nl-a2-about-me.wijk",
+        "nl-a2-about-me.waar-kom-je-vandaan",
+        "nl-a2-about-me.waar-komt-u-vandaan",
+        "nl-a2-about-me.ik-kom-uit-spanje",
+        "nl-a2-about-me.ik-ben-spaans",
+        "nl-a2-about-me.ik-kom-uit-madrid",
+        "nl-a2-about-me.waar-woon-je",
+        "nl-a2-about-me.ik-woon-in-utrecht",
+        "nl-a2-about-me.ik-woon-vlak-bij-het-station",
+        "nl-a2-about-me.hoe-lang-woon-je-al-in-nederland",
+        "nl-a2-about-me.ik-woon-hier-sinds-september",
+        "nl-a2-about-me.ik-woon-hier-nu-drie-maanden",
+        "nl-a2-about-me.ik-ben-net-verhuisd",
+        "nl-a2-about-me.qa.waar-vandaan",
+        "nl-a2-about-me.qa.hoe-lang"
+      ]
+    },
+    {
+      "id": "nl-a2-about-me.l.werk",
+      "title": "A qué te dedicas",
+      "items": [
+        "nl-a2-about-me.werk",
+        "nl-a2-about-me.baan",
+        "nl-a2-about-me.bedrijf",
+        "nl-a2-about-me.kantoor",
+        "nl-a2-about-me.programmeur",
+        "nl-a2-about-me.verpleegkundige",
+        "nl-a2-about-me.leraar",
+        "nl-a2-about-me.student",
+        "nl-a2-about-me.wat-doe-je-voor-werk",
+        "nl-a2-about-me.wat-voor-werk-doet-u",
+        "nl-a2-about-me.ik-ben-programmeur",
+        "nl-a2-about-me.ik-werk-in-de-it",
+        "nl-a2-about-me.ik-werk-bij-een-klein-bedrijf",
+        "nl-a2-about-me.ik-werk-vaak-thuis",
+        "nl-a2-about-me.op-mijn-werk-spreken-we-engels",
+        "nl-a2-about-me.ik-zoek-werk",
+        "nl-a2-about-me.en-jij",
+        "nl-a2-about-me.en-u",
+        "nl-a2-about-me.wat-leuk",
+        "nl-a2-about-me.ze-is-verpleegkundige",
+        "nl-a2-about-me.qa.werk"
+      ]
+    },
+    {
+      "id": "nl-a2-about-me.l.talen",
+      "title": "Idiomas y por qué estás aquí",
+      "items": [
+        "nl-a2-about-me.spaans",
+        "nl-a2-hello.nederlands",
+        "nl-a2-hello.engels",
+        "nl-a2-about-me.welke-talen-spreek-je",
+        "nl-a2-about-me.ik-spreek-spaans-en-engels",
+        "nl-a2-about-me.waarom-leer-je-nederlands",
+        "nl-a2-about-me.ik-wil-hier-wonen-en-werken",
+        "nl-a2-about-me.ik-heb-het-nodig-voor-mijn-werk",
+        "nl-a2-about-me.je-spreekt-al-goed-nederlands",
+        "nl-a2-about-me.ik-doe-mijn-best",
+        "nl-a2-about-me.verbeter-me-maar",
+        "nl-a2-about-me.qa.talen",
+        "nl-a2-about-me.qa.waarom"
+      ]
+    },
+    {
+      "id": "nl-a2-about-me.l.familie",
+      "title": "Tu familia",
+      "items": [
+        "nl-a2-about-me.familie",
+        "nl-a2-about-me.ouder",
+        "nl-a2-about-me.vader",
+        "nl-a2-about-me.moeder",
+        "nl-a2-about-me.broer",
+        "nl-a2-about-me.zus",
+        "nl-a2-about-me.kind",
+        "nl-a2-about-me.man",
+        "nl-a2-about-me.vrouw",
+        "nl-a2-about-me.heb-je-broers-of-zussen",
+        "nl-a2-about-me.ik-heb-een-zus",
+        "nl-a2-about-me.mijn-ouders-wonen-in-madrid",
+        "nl-a2-about-me.mijn-zus-is-lerares",
+        "nl-a2-about-me.heb-je-kinderen",
+        "nl-a2-about-me.nee-ik-heb-geen-kinderen",
+        "nl-a2-about-me.ben-je-getrouwd",
+        "nl-a2-about-me.nee-ik-ben-niet-getrouwd",
+        "nl-a2-about-me.hoe-oud-is-ze",
+        "nl-a2-about-me.ze-is-dertig",
+        "nl-a2-about-me.qa.broers-zussen"
+      ]
+    },
+    {
+      "id": "nl-a2-about-me.l.vrije-tijd",
+      "title": "Tu tiempo libre",
+      "items": [
+        "nl-a2-about-me.hobby",
+        "nl-a2-about-me.weekend",
+        "nl-a2-about-me.sport",
+        "nl-a2-about-me.voetbal",
+        "nl-a2-about-me.fiets",
+        "nl-a2-about-me.boek",
+        "nl-a2-about-me.muziek",
+        "nl-a2-about-me.wat-doe-je-in-je-vrije-tijd",
+        "nl-a2-about-me.ik-sport-graag",
+        "nl-a2-about-me.ik-hou-van-koken",
+        "nl-a2-about-me.in-het-weekend-fiets-ik-graag",
+        "nl-a2-about-me.ik-speel-voetbal",
+        "nl-a2-about-me.ik-kijk-graag-series",
+        "nl-a2-about-me.qa.vrije-tijd"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-about-me.ik-ben-hernan",
+      "text": "Hoi, ik ben Hernán.",
+      "es": "Hola, soy Hernán.",
+      "notes": "Los holandeses se presentan con el nombre de pila al dar la mano.",
+      "explanation": "La forma más normal de presentarte, dando la mano. «ik» con «i» corta: joi, ik BEN er-NAN.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-heet-hernan",
+      "text": "Ik heet Hernán.",
+      "es": "Me llamo Hernán.",
+      "notes": "«heten» = llamarse; no es reflexivo: «ik heet», no «ik me heet».",
+      "explanation": "Para decir tu nombre en una oficina o una clase. «heet» con «h» aspirada y «ee» larga: ik JEET.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.hoe-heet-je",
+      "text": "Hoe heet je?",
+      "es": "¿Cómo te llamas?",
+      "explanation": "A un compañero, un vecino o alguien en una fiesta. Suena ju JEET ye?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.hoe-heet-u",
+      "text": "Hoe heet u?",
+      "es": "¿Cómo se llama usted?",
+      "explanation": "A una persona mayor o en una ventanilla. La «u» final, «i» con labios redondos: ju JEET Ü?",
+      "register": "u",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.wat-is-uw-achternaam",
+      "text": "Wat is uw achternaam?",
+      "es": "¿Cuál es su apellido?",
+      "explanation": "Te lo preguntan en la gemeente, el médico o el banco. «ch» de garganta: wat is üu AJ-ter-naam?",
+      "register": "u",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.mijn-achternaam-is-diaz",
+      "text": "Mijn achternaam is Díaz.",
+      "es": "Mi apellido es Díaz.",
+      "notes": "En los formularios: «voornaam» (nombre) y «achternaam» (apellido).",
+      "explanation": "Para dar tu apellido en una oficina. Después lo deletreas: «De, ie, aa, zet».",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.leuk-je-te-ontmoeten",
+      "text": "Leuk je te ontmoeten!",
+      "es": "¡Encantado de conocerte!",
+      "notes": "«leuk» = agradable, guay; una de las palabras más usadas.",
+      "explanation": "Al conocer a alguien en una fiesta o en el trabajo. «eu» = «e» con labios redondos: LÖK ye te ont-MOE-te.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.leuk-u-te-ontmoeten",
+      "text": "Leuk u te ontmoeten.",
+      "es": "Encantado de conocerle.",
+      "explanation": "Con alguien a quien tratas de usted, como un casero o una persona mayor. ont-MU-te, con «oe» = «u».",
+      "register": "u",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.jou-ook",
+      "text": "Ja, jou ook!",
+      "es": "¡Igualmente!",
+      "notes": "Con «u» contestarías «U ook».",
+      "explanation": "Para contestar a «Leuk je te ontmoeten». «jou» suena «yau»: ya, YAU ook.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.aangenaam",
+      "text": "Aangenaam.",
+      "es": "Encantado. / Mucho gusto.",
+      "notes": "Más formal que «leuk je te ontmoeten».",
+      "explanation": "Al dar la mano en una situación formal, como una entrevista. Suena AAN-je-naam, con «aa» larga.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.dit-is-mijn-collega",
+      "text": "Dit is mijn collega, Bram.",
+      "es": "Este es mi compañero, Bram.",
+      "explanation": "Para presentar a alguien. «ij» = «ei» y acento en «le»: dit is mein ko-LEE-ja.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.waar-kom-je-vandaan",
+      "text": "Waar kom je vandaan?",
+      "es": "¿De dónde eres?",
+      "literal": "¿De dónde vienes?",
+      "notes": "«vandaan» va al final de la frase.",
+      "explanation": "La pregunta que te harán todo el tiempo. «vandaan» con acento al final: vaar KOM ye fan-DAAN?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.waar-komt-u-vandaan",
+      "text": "Waar komt u vandaan?",
+      "es": "¿De dónde es usted?",
+      "explanation": "En la gemeente o con una persona mayor. Con «u» el verbo sí lleva «-t»: vaar KOMT ü fan-DAAN?",
+      "register": "u",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-kom-uit-spanje",
+      "text": "Ik kom uit Spanje.",
+      "es": "Soy de España.",
+      "literal": "Vengo de España.",
+      "notes": "«uit» + país o ciudad: «Ik kom uit Madrid».",
+      "explanation": "Para decir de dónde eres. «ui» es una «ai» con labios redondos, y «nj» = «ñ»: ik kom AIT SPA-ñe.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-ben-spaans",
+      "text": "Ik ben Spaans.",
+      "es": "Soy español.",
+      "notes": "«Spaans» es el adjetivo y el idioma; «een Spanjaard» es «un español».",
+      "explanation": "Para decir tu nacionalidad. «aa» larga: ik ben SPAANS.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-kom-uit-madrid",
+      "text": "Ik kom uit Madrid, de hoofdstad.",
+      "es": "Soy de Madrid, la capital.",
+      "explanation": "Si te preguntan qué parte de España. «hoofdstad» con «oo» larga: de JOOFT-stat.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.waar-woon-je",
+      "text": "Waar woon je?",
+      "es": "¿Dónde vives?",
+      "notes": "«jij woont», pero «woon jij?» / «waar woon je?».",
+      "explanation": "A un compañero o un vecino nuevo. Sin «t» en «woon» porque «je» va detrás: vaar VOON ye?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-woon-in-utrecht",
+      "text": "Ik woon in Utrecht.",
+      "es": "Vivo en Utrecht.",
+      "explanation": "Para decir dónde vives. «Utrecht» con acento al principio y «ch» de garganta: Ü-trejt.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-woon-vlak-bij-het-station",
+      "text": "Ik woon vlak bij het station.",
+      "es": "Vivo muy cerca de la estación.",
+      "notes": "«vlak bij» = justo al lado, muy cerca.",
+      "explanation": "Para situar tu casa. «station» suena «sta-SION»: ik voon flak bei et sta-SION.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.hoe-lang-woon-je-al-in-nederland",
+      "text": "Hoe lang woon je al in Nederland?",
+      "es": "¿Cuánto tiempo llevas viviendo en los Países Bajos?",
+      "notes": "Presente + «al»: así se dice «¿cuánto llevas…?».",
+      "explanation": "Otra pregunta clásica cuando notan tu acento. «al» = ya: ju LANG voon ye AL in NEE-der-lant?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-woon-hier-sinds-september",
+      "text": "Ik woon hier sinds september.",
+      "es": "Vivo aquí desde septiembre.",
+      "notes": "«sinds» + fecha y el verbo en presente, como en español.",
+      "explanation": "Para decir desde cuándo vives aquí. «sinds» suena «sins»: ik voon jiir SINS sep-TEM-ber.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-woon-hier-nu-drie-maanden",
+      "text": "Ik woon hier nu drie maanden.",
+      "es": "Llevo tres meses viviendo aquí.",
+      "explanation": "Para decir cuánto tiempo llevas. «maanden» con «aa» larga: nü DRII MAAN-de.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-ben-net-verhuisd",
+      "text": "Ik ben net verhuisd.",
+      "es": "Me acabo de mudar.",
+      "notes": "«net» = acabar de. «verhuizen» (mudarse) va con «zijn»: «ik ben verhuisd», no «ik heb verhuisd».",
+      "explanation": "Para explicar que eres nuevo en el barrio. «ui» es «ai» redondeada: ik ben net fer-JAIST.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.wat-doe-je-voor-werk",
+      "text": "Wat doe je voor werk?",
+      "es": "¿A qué te dedicas?",
+      "literal": "¿Qué haces de trabajo?",
+      "explanation": "A alguien que acabas de conocer. «oe» = «u»: wat DU ye foor VERK?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.wat-voor-werk-doet-u",
+      "text": "Wat voor werk doet u?",
+      "es": "¿A qué se dedica usted?",
+      "explanation": "En una oficina o con una persona mayor. Con «u» el verbo lleva «-t»: wat foor verk DUT ü?",
+      "register": "u",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-ben-programmeur",
+      "text": "Ik ben programmeur.",
+      "es": "Soy programador.",
+      "notes": "Las profesiones van sin «een»: «Ik ben programmeur», como en español.",
+      "explanation": "Para decir tu profesión. «eu» es una «e» con labios redondos: pro-ja-MÖR.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-werk-in-de-it",
+      "text": "Ik werk in de IT.",
+      "es": "Trabajo en informática.",
+      "explanation": "Si no quieres entrar en detalles. «IT» se dice a la holandesa: ii-TEE.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-werk-bij-een-klein-bedrijf",
+      "text": "Ik werk bij een klein bedrijf.",
+      "es": "Trabajo en una empresa pequeña.",
+      "notes": "Se trabaja «bij» una empresa: «Ik werk bij Philips».",
+      "explanation": "Para hablar de tu empresa. «bij» + empresa; «ij» = «ei»: bei en klein be-DREIF.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-werk-vaak-thuis",
+      "text": "Ik werk vaak thuis.",
+      "es": "Muchas veces trabajo desde casa.",
+      "explanation": "Para hablar de tu rutina. «th» suena solo «t» y «ui» = «ai» redondeada: FAAK TAIS.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.op-mijn-werk-spreken-we-engels",
+      "text": "Op mijn werk spreken we Engels.",
+      "es": "En mi trabajo hablamos inglés.",
+      "notes": "Verbo en segundo lugar: «Op mijn werk spreken we…», no «Op mijn werk we spreken…».",
+      "explanation": "Muy común en empresas internacionales. Empiezas por «op mijn werk», así que el verbo va segundo: SPREE-ke ve.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-zoek-werk",
+      "text": "Ik zoek werk.",
+      "es": "Busco trabajo.",
+      "explanation": "Si todavía no tienes empleo aquí. «oe» = «u» y «z» casi «s»: ik SUK verk.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.en-jij",
+      "text": "En jij?",
+      "es": "¿Y tú?",
+      "explanation": "Para devolver la pregunta a un amigo o un compañero. «jij» suena «yei»: en YEI?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.en-u",
+      "text": "En u?",
+      "es": "¿Y usted?",
+      "explanation": "Para devolver la pregunta a alguien a quien tratas de usted. La «u», «i» con labios redondos: en Ü?",
+      "register": "u",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.wat-leuk",
+      "text": "O, wat leuk!",
+      "es": "¡Ah, qué bien!",
+      "notes": "«leuk» = bonito, divertido, majo: se usa para casi todo lo positivo.",
+      "explanation": "Para reaccionar con interés a lo que te cuentan. «eu» con labios redondos: o, wat LÖK!",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ze-is-verpleegkundige",
+      "text": "Ze is verpleegkundige.",
+      "es": "Es enfermera.",
+      "notes": "«ze» = ella; con acento sería «zij».",
+      "explanation": "Para decir la profesión de alguien. Acento en «pleeg»: ver-PLEEJ-kun-di-je.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.welke-talen-spreek-je",
+      "text": "Welke talen spreek je?",
+      "es": "¿Qué idiomas hablas?",
+      "explanation": "En una presentación o en una entrevista informal. Sin «t» en «spreek» por el «je» de detrás: VEL-ke TAA-le spreek ye?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-spreek-spaans-en-engels",
+      "text": "Ik spreek Spaans, Engels en een beetje Nederlands.",
+      "es": "Hablo español, inglés y un poco de neerlandés.",
+      "explanation": "Para contar tus idiomas. «Spaans» con «aa» larga: SPAANS, ENG-els en en BEE-tye.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.waarom-leer-je-nederlands",
+      "text": "Waarom leer je Nederlands?",
+      "es": "¿Por qué aprendes neerlandés?",
+      "explanation": "Te lo preguntarán, porque mucha gente aquí habla inglés. Acento en «rom»: vaa-ROM leer ye?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-wil-hier-wonen-en-werken",
+      "text": "Ik wil hier wonen en werken.",
+      "es": "Quiero vivir y trabajar aquí.",
+      "notes": "Con «willen», el otro verbo va en infinitivo al final de la frase.",
+      "explanation": "Para explicar por qué estás aquí. Tras «wil», los infinitivos van al final: ik vil jiir VOO-ne en VER-ke.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-heb-het-nodig-voor-mijn-werk",
+      "text": "Ik heb het nodig voor mijn werk.",
+      "es": "Lo necesito para mi trabajo.",
+      "notes": "«nodig hebben» = necesitar: «Ik heb het nodig».",
+      "explanation": "Otra razón para aprender. «nodig» con «oo» larga y «g» de garganta: ik jep et NOO-daj.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.je-spreekt-al-goed-nederlands",
+      "text": "Je spreekt al goed Nederlands!",
+      "es": "¡Ya hablas muy bien neerlandés!",
+      "explanation": "Lo oirás a menudo cuando lo intentes. Aquí «je» va antes, así que «spreekt» sí lleva «-t»: ye SPREEKT al JUUT.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-doe-mijn-best",
+      "text": "Dank je, ik doe mijn best.",
+      "es": "Gracias, hago lo que puedo.",
+      "explanation": "Para contestar con modestia a un cumplido. «doe» = «du»: ik DU mein BEST.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.verbeter-me-maar",
+      "text": "Verbeter me maar als ik een fout maak.",
+      "es": "Corrígeme si me equivoco.",
+      "notes": "«maar» suaviza la orden. Tras «als», el verbo va al final: «als ik een fout maak».",
+      "explanation": "A un compañero o un amigo con quien practicas. Acento en «be»: fer-BEE-ter me maar.",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.heb-je-broers-of-zussen",
+      "text": "Heb je broers of zussen?",
+      "es": "¿Tienes hermanos?",
+      "notes": "«broers» = hermanos (chicos), «zussen» = hermanas.",
+      "explanation": "Pregunta típica al conocer a alguien. Sin «t»: «heb je», no «hebt je». Suena jep ye BRUURS of SU-se?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-heb-een-zus",
+      "text": "Ik heb één zus en geen broers.",
+      "es": "Tengo una hermana y ningún hermano.",
+      "notes": "Con sustantivos se niega con «geen»: «geen broers», no «niet broers».",
+      "explanation": "Para hablar de tus hermanos. «één» lleva tildes porque es el número: EEN ZUS en jeen BRUURS.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.mijn-ouders-wonen-in-madrid",
+      "text": "Mijn ouders wonen in Madrid.",
+      "es": "Mis padres viven en Madrid.",
+      "explanation": "Para hablar de tu familia en España. «ou» suena «au»: mein AU-ders VOO-ne.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.mijn-zus-is-lerares",
+      "text": "Mijn zus is lerares.",
+      "es": "Mi hermana es profesora.",
+      "notes": "«leraar» (profesor) → «lerares» (profesora).",
+      "explanation": "Para contar a qué se dedica tu familia. Acento al final: lee-ra-RES.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.heb-je-kinderen",
+      "text": "Heb je kinderen?",
+      "es": "¿Tienes hijos?",
+      "notes": "«kinderen» = niños e hijos.",
+      "explanation": "Entre personas que se conocen un poco. Suena jep ye KIN-de-re?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.nee-ik-heb-geen-kinderen",
+      "text": "Nee, ik heb geen kinderen.",
+      "es": "No, no tengo hijos.",
+      "notes": "«geen» niega un sustantivo sin artículo: nunca «ik heb niet kinderen».",
+      "explanation": "Para contestar que no. «geen» con «g» de garganta y «ee» larga: ik jep JEEN KIN-de-re.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ben-je-getrouwd",
+      "text": "Ben je getrouwd?",
+      "es": "¿Estás casado?",
+      "explanation": "Pregunta personal, entre conocidos. «ouw» suena «au»: ben ye je-TRAUT?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.nee-ik-ben-niet-getrouwd",
+      "text": "Nee, ik ben niet getrouwd.",
+      "es": "No, no estoy casado.",
+      "notes": "Con verbos y adjetivos se niega con «niet»: «niet getrouwd».",
+      "explanation": "Para contestar que no. «niet» con «ie» larga: ik ben NIIT je-TRAUT.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.hoe-oud-is-ze",
+      "text": "Hoe oud is ze?",
+      "es": "¿Cuántos años tiene?",
+      "explanation": "Para preguntar la edad de una hermana o una hija. «ou» = «au»: ju AUT is se?",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ze-is-dertig",
+      "text": "Ze is dertig.",
+      "es": "Tiene treinta años.",
+      "literal": "Ella es treinta.",
+      "explanation": "Para decir la edad de alguien: con «zijn», como la tuya. DER-taj, con la «g» de garganta.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.wat-doe-je-in-je-vrije-tijd",
+      "text": "Wat doe je in je vrije tijd?",
+      "es": "¿Qué haces en tu tiempo libre?",
+      "explanation": "Para seguir la conversación con alguien nuevo. «ij» = «ei»: in ye FREI-e TEIT?",
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-sport-graag",
+      "text": "Ik sport graag.",
+      "es": "Me gusta hacer deporte.",
+      "notes": "Verbo + «graag» = me gusta hacerlo: «ik lees graag» (me gusta leer).",
+      "explanation": "Para hablar de tus aficiones. «graag» con dos «g» de garganta: ik SPORT JRAAJ.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-hou-van-koken",
+      "text": "Ik hou van koken.",
+      "es": "Me encanta cocinar.",
+      "notes": "«houden van» = querer, encantar: «Ik hou van Utrecht».",
+      "explanation": "Para hablar de algo que te encanta. «hou» suena «jau»: ik JAU fan KOO-ke.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.in-het-weekend-fiets-ik-graag",
+      "text": "In het weekend fiets ik graag.",
+      "es": "Los fines de semana me gusta ir en bici.",
+      "notes": "Empiezas por «in het weekend», así que el verbo va antes de «ik».",
+      "explanation": "Para contar qué haces el fin de semana. El verbo va segundo: in et VII-kent FIITS ik jraaj.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-speel-voetbal",
+      "text": "Ik speel voetbal.",
+      "es": "Juego al fútbol.",
+      "explanation": "Para hablar de tu deporte. «oe» = «u»: ik speel FUT-bal.",
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ik-kijk-graag-series",
+      "text": "Ik kijk graag series.",
+      "es": "Me gusta ver series.",
+      "explanation": "Cuando te preguntan qué haces por la noche. «ij» = «ei»: ik KEIK jraaj SEE-ries.",
+      "register": "neutral",
+      "situation": "presentarse"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-about-me.voornaam",
+      "word": "voornaam",
+      "article": "de",
+      "plural": "voornamen",
+      "es": "el nombre (de pila)",
+      "situation": "presentarse",
+      "image": "fluent:name-badge"
+    },
+    {
+      "id": "nl-a2-about-me.achternaam",
+      "word": "achternaam",
+      "article": "de",
+      "plural": "achternamen",
+      "es": "el apellido",
+      "notes": "En los Países Bajos se suele tener un solo apellido.",
+      "example": "nl-a2-about-me.mijn-achternaam-is-diaz",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.spanje",
+      "word": "Spanje",
+      "es": "España",
+      "notes": "Los países no llevan artículo: «uit Spanje».",
+      "example": "nl-a2-about-me.ik-kom-uit-spanje",
+      "situation": "presentarse",
+      "tags": [
+        "paises"
+      ],
+      "image": "fluent:globe-showing-europe-africa"
+    },
+    {
+      "id": "nl-a2-about-me.nederland",
+      "word": "Nederland",
+      "es": "los Países Bajos",
+      "notes": "«Nederland» es el país entero; «Holland» son solo dos provincias, aunque se oye mucho.",
+      "situation": "presentarse",
+      "tags": [
+        "paises"
+      ]
+    },
+    {
+      "id": "nl-a2-about-me.spaans",
+      "word": "Spaans",
+      "article": "het",
+      "es": "el español (idioma)",
+      "notes": "Idioma = «het Spaans»; adjetivo: «Spaans eten» (comida española).",
+      "example": "nl-a2-about-me.ik-spreek-spaans-en-engels",
+      "situation": "presentarse",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "nl-a2-about-me.land",
+      "word": "land",
+      "article": "het",
+      "plural": "landen",
+      "es": "el país",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.stad",
+      "word": "stad",
+      "article": "de",
+      "plural": "steden",
+      "es": "la ciudad",
+      "notes": "Plural irregular: «steden».",
+      "situation": "presentarse",
+      "image": "fluent:cityscape"
+    },
+    {
+      "id": "nl-a2-about-me.hoofdstad",
+      "word": "hoofdstad",
+      "article": "de",
+      "plural": "hoofdsteden",
+      "es": "la capital",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.wijk",
+      "word": "wijk",
+      "article": "de",
+      "plural": "wijken",
+      "es": "el barrio",
+      "situation": "presentarse",
+      "image": "fluent:houses"
+    },
+    {
+      "id": "nl-a2-about-me.werk",
+      "word": "werk",
+      "article": "het",
+      "es": "el trabajo",
+      "notes": "«werk» es el trabajo en general; un puesto concreto es «een baan».",
+      "example": "nl-a2-about-me.ik-zoek-werk",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.baan",
+      "word": "baan",
+      "article": "de",
+      "plural": "banen",
+      "es": "el empleo, el puesto de trabajo",
+      "notes": "«Ik heb een nieuwe baan» = tengo un trabajo nuevo.",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.bedrijf",
+      "word": "bedrijf",
+      "article": "het",
+      "plural": "bedrijven",
+      "es": "la empresa",
+      "example": "nl-a2-about-me.ik-werk-bij-een-klein-bedrijf",
+      "situation": "presentarse",
+      "image": "fluent:office-building"
+    },
+    {
+      "id": "nl-a2-about-me.kantoor",
+      "word": "kantoor",
+      "article": "het",
+      "plural": "kantoren",
+      "es": "la oficina",
+      "situation": "presentarse",
+      "image": "fluent:office-building"
+    },
+    {
+      "id": "nl-a2-about-me.programmeur",
+      "word": "programmeur",
+      "article": "de",
+      "plural": "programmeurs",
+      "es": "el programador",
+      "example": "nl-a2-about-me.ik-ben-programmeur",
+      "situation": "presentarse",
+      "image": "fluent:man-technologist"
+    },
+    {
+      "id": "nl-a2-about-me.verpleegkundige",
+      "word": "verpleegkundige",
+      "article": "de",
+      "plural": "verpleegkundigen",
+      "es": "el enfermero / la enfermera",
+      "example": "nl-a2-about-me.ze-is-verpleegkundige",
+      "situation": "presentarse",
+      "image": "fluent:health-worker"
+    },
+    {
+      "id": "nl-a2-about-me.leraar",
+      "word": "leraar",
+      "article": "de",
+      "plural": "leraren",
+      "es": "el profesor",
+      "notes": "Femenino: «de lerares». En el colegio se dice «de meester» y «de juf».",
+      "situation": "presentarse",
+      "image": "fluent:man-teacher"
+    },
+    {
+      "id": "nl-a2-about-me.student",
+      "word": "student",
+      "article": "de",
+      "plural": "studenten",
+      "es": "el estudiante",
+      "situation": "presentarse",
+      "image": "fluent:student"
+    },
+    {
+      "id": "nl-a2-about-me.familie",
+      "word": "familie",
+      "article": "de",
+      "plural": "families",
+      "es": "la familia (parientes)",
+      "notes": "«familie» son los parientes; «mijn gezin» es tu familia de casa (pareja e hijos).",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.ouder",
+      "word": "ouder",
+      "article": "de",
+      "plural": "ouders",
+      "es": "el padre o la madre",
+      "notes": "Casi siempre en plural: «mijn ouders» = mis padres.",
+      "example": "nl-a2-about-me.mijn-ouders-wonen-in-madrid",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.vader",
+      "word": "vader",
+      "article": "de",
+      "plural": "vaders",
+      "es": "el padre",
+      "situation": "presentarse",
+      "image": "fluent:man"
+    },
+    {
+      "id": "nl-a2-about-me.moeder",
+      "word": "moeder",
+      "article": "de",
+      "plural": "moeders",
+      "es": "la madre",
+      "notes": "«oe» = «u»: MU-der.",
+      "situation": "presentarse",
+      "image": "fluent:woman"
+    },
+    {
+      "id": "nl-a2-about-me.broer",
+      "word": "broer",
+      "article": "de",
+      "plural": "broers",
+      "es": "el hermano",
+      "situation": "presentarse",
+      "image": "fluent:boy"
+    },
+    {
+      "id": "nl-a2-about-me.zus",
+      "word": "zus",
+      "article": "de",
+      "plural": "zussen",
+      "es": "la hermana",
+      "example": "nl-a2-about-me.mijn-zus-is-lerares",
+      "situation": "presentarse",
+      "image": "fluent:girl"
+    },
+    {
+      "id": "nl-a2-about-me.kind",
+      "word": "kind",
+      "article": "het",
+      "plural": "kinderen",
+      "es": "el niño / el hijo",
+      "notes": "Plural irregular: «kinderen».",
+      "example": "nl-a2-about-me.heb-je-kinderen",
+      "situation": "presentarse",
+      "image": "fluent:child"
+    },
+    {
+      "id": "nl-a2-about-me.man",
+      "word": "man",
+      "article": "de",
+      "plural": "mannen",
+      "es": "el hombre / el marido",
+      "notes": "«mijn man» = mi marido.",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.vrouw",
+      "word": "vrouw",
+      "article": "de",
+      "plural": "vrouwen",
+      "es": "la mujer / la esposa",
+      "notes": "«mijn vrouw» = mi mujer.",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.hobby",
+      "word": "hobby",
+      "article": "de",
+      "plural": "hobby's",
+      "es": "la afición",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.weekend",
+      "word": "weekend",
+      "article": "het",
+      "plural": "weekenden",
+      "es": "el fin de semana",
+      "example": "nl-a2-about-me.in-het-weekend-fiets-ik-graag",
+      "situation": "presentarse"
+    },
+    {
+      "id": "nl-a2-about-me.sport",
+      "word": "sport",
+      "article": "de",
+      "plural": "sporten",
+      "es": "el deporte",
+      "situation": "presentarse",
+      "image": "fluent:soccer-ball"
+    },
+    {
+      "id": "nl-a2-about-me.voetbal",
+      "word": "voetbal",
+      "article": "het",
+      "es": "el fútbol",
+      "example": "nl-a2-about-me.ik-speel-voetbal",
+      "situation": "presentarse",
+      "image": "fluent:soccer-ball"
+    },
+    {
+      "id": "nl-a2-about-me.fiets",
+      "word": "fiets",
+      "article": "de",
+      "plural": "fietsen",
+      "es": "la bicicleta",
+      "notes": "El verbo es «fietsen»: ir en bici.",
+      "situation": "presentarse",
+      "image": "fluent:bicycle"
+    },
+    {
+      "id": "nl-a2-about-me.boek",
+      "word": "boek",
+      "article": "het",
+      "plural": "boeken",
+      "es": "el libro",
+      "situation": "presentarse",
+      "image": "fluent:books"
+    },
+    {
+      "id": "nl-a2-about-me.muziek",
+      "word": "muziek",
+      "article": "de",
+      "es": "la música",
+      "situation": "presentarse",
+      "image": "fluent:musical-notes"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-about-me.qa.hoe-heet-je",
+      "question": "Hoi, ik ben Lotte. Hoe heet jij?",
+      "questionEs": "Hola, soy Lotte. ¿Cómo te llamas?",
+      "accepted": [
+        {
+          "text": "Ik ben Hernán. Leuk je te ontmoeten!",
+          "es": "Soy Hernán. ¡Encantado de conocerte!"
+        },
+        {
+          "text": "Ik heet Hernán.",
+          "es": "Me llamo Hernán."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik me heet Hernán.",
+          "es": "Me llamo Hernán (calco)."
+        },
+        {
+          "text": "Jij heet Hernán.",
+          "es": "Tú te llamas Hernán."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "«heten» no es reflexivo: «Ik heet Hernán». Hablas de ti: «ik», no «jij».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-about-me.qa.achternaam",
+      "question": "Wat is uw achternaam, meneer?",
+      "questionEs": "¿Cuál es su apellido, señor?",
+      "accepted": [
+        {
+          "text": "Díaz. D-I-A-Z.",
+          "es": "Díaz. D-I-A-Z."
+        },
+        {
+          "text": "Mijn achternaam is Díaz.",
+          "es": "Mi apellido es Díaz."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mijn achternaam is Hernán.",
+          "es": "Mi apellido es Hernán."
+        },
+        {
+          "text": "Mijn voornaam is Díaz.",
+          "es": "Mi nombre de pila es Díaz."
+        }
+      ],
+      "register": "u",
+      "situation": "presentarse",
+      "notes": "«achternaam» es el apellido; «voornaam», el nombre de pila (Hernán).",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-about-me.qa.waar-vandaan",
+      "question": "Waar kom je vandaan?",
+      "questionEs": "¿De dónde eres?",
+      "accepted": [
+        {
+          "text": "Ik kom uit Spanje, uit Madrid.",
+          "es": "Soy de España, de Madrid."
+        },
+        {
+          "text": "Uit Spanje. Ik ben Spaans.",
+          "es": "De España. Soy español."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik kom van Spanje.",
+          "es": "Vengo de España (preposición mal)."
+        },
+        {
+          "text": "Ik ben Spanje.",
+          "es": "Soy España."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "El origen va con «uit»: «Ik kom uit Spanje». La nacionalidad es «Spaans».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-about-me.qa.hoe-lang",
+      "question": "En hoe lang woon je al in Utrecht?",
+      "questionEs": "¿Y cuánto llevas viviendo en Utrecht?",
+      "accepted": [
+        {
+          "text": "Sinds september. Ik ben net verhuisd.",
+          "es": "Desde septiembre. Me acabo de mudar."
+        },
+        {
+          "text": "Ik woon hier nu drie maanden.",
+          "es": "Llevo tres meses aquí."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb net verhuisd.",
+          "es": "Me acabo de mudar (auxiliar mal)."
+        },
+        {
+          "text": "Ik woon in Utrecht.",
+          "es": "Vivo en Utrecht."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Te preguntan cuánto tiempo, no dónde. «verhuizen» va con «zijn»: «ik ben verhuisd».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-about-me.qa.werk",
+      "question": "Wat voor werk doet u?",
+      "questionEs": "¿A qué se dedica usted?",
+      "accepted": [
+        {
+          "text": "Ik ben programmeur.",
+          "es": "Soy programador."
+        },
+        {
+          "text": "Ik werk in de IT, als programmeur.",
+          "es": "Trabajo en informática, de programador."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik ben een programmeur werk.",
+          "es": "Soy un programador trabajo (mal)."
+        },
+        {
+          "text": "Ik doe werk.",
+          "es": "Hago trabajo."
+        }
+      ],
+      "register": "u",
+      "situation": "presentarse",
+      "notes": "La profesión va sin artículo y con «zijn»: «Ik ben programmeur».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-about-me.qa.talen",
+      "question": "Welke talen spreek je?",
+      "questionEs": "¿Qué idiomas hablas?",
+      "accepted": [
+        {
+          "text": "Spaans, Engels en een beetje Nederlands.",
+          "es": "Español, inglés y un poco de neerlandés."
+        },
+        {
+          "text": "Ik spreek Spaans en Engels.",
+          "es": "Hablo español e inglés."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik spreekt Spaans en Engels.",
+          "es": "Hablo español e inglés (con error)."
+        },
+        {
+          "text": "Ik ben Spaans en Engels.",
+          "es": "Soy español e inglés."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Con «ik» el verbo va sin «-t»: «ik spreek». Los idiomas se «hablan», no se «son».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-about-me.qa.waarom",
+      "question": "Waarom leer je Nederlands? Iedereen spreekt hier Engels.",
+      "questionEs": "¿Por qué aprendes neerlandés? Aquí todo el mundo habla inglés.",
+      "accepted": [
+        {
+          "text": "Ik wil hier wonen en werken.",
+          "es": "Quiero vivir y trabajar aquí."
+        },
+        {
+          "text": "Ik heb het nodig voor mijn werk.",
+          "es": "Lo necesito para mi trabajo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik wil wonen hier en werken.",
+          "es": "Quiero vivir aquí y trabajar (orden mal)."
+        },
+        {
+          "text": "Ik heb nodig het.",
+          "es": "Lo necesito (orden mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Tras «wil», los infinitivos van al final: «Ik wil hier wonen en werken».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-about-me.qa.broers-zussen",
+      "question": "Heb je broers of zussen?",
+      "questionEs": "¿Tienes hermanos?",
+      "accepted": [
+        {
+          "text": "Ja, ik heb één zus.",
+          "es": "Sí, tengo una hermana."
+        },
+        {
+          "text": "Ik heb één zus en geen broers.",
+          "es": "Tengo una hermana y ningún hermano."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb niet broers.",
+          "es": "No tengo hermanos (negación mal)."
+        },
+        {
+          "text": "Ja, ik heb één zussen.",
+          "es": "Sí, tengo una hermanas."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Delante de un sustantivo se niega con «geen»: «geen broers». Con «één», singular: «één zus».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-about-me.qa.vrije-tijd",
+      "question": "Wat doe je graag in het weekend?",
+      "questionEs": "¿Qué te gusta hacer los fines de semana?",
+      "accepted": [
+        {
+          "text": "In het weekend fiets ik graag.",
+          "es": "Los fines de semana me gusta ir en bici."
+        },
+        {
+          "text": "Ik sport graag en ik kook graag.",
+          "es": "Me gusta hacer deporte y cocinar."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "In het weekend ik fiets graag.",
+          "es": "Los fines de semana me gusta ir en bici (orden mal)."
+        },
+        {
+          "text": "Ik graag sport.",
+          "es": "Me gusta hacer deporte (orden mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "El verbo va en segundo lugar: «In het weekend fiets ik…», y «graag» va detrás del verbo.",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}

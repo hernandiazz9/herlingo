@@ -1,0 +1,1361 @@
+{
+  "id": "nl-a2-hello",
+  "order": 10,
+  "level": "A2",
+  "title": "Saludos, cortesía, je/u y «no entiendo»",
+  "description": "Saludar y despedirte como en los Países Bajos, cuándo decir «je» y cuándo «u», dar las gracias y pedir perdón, y qué decir cuando no entiendes o te contestan en inglés.",
+  "emoji": "👋",
+  "situation": "saludos",
+  "lessons": [
+    {
+      "id": "nl-a2-hello.l.hallo",
+      "title": "Hola y adiós",
+      "items": [
+        "nl-a2-hello.ochtend",
+        "nl-a2-hello.middag",
+        "nl-a2-hello.avond",
+        "nl-a2-hello.nacht",
+        "nl-a2-hello.hallo",
+        "nl-a2-hello.hoi",
+        "nl-a2-hello.goedemorgen",
+        "nl-a2-hello.goedemiddag",
+        "nl-a2-hello.goedenavond",
+        "nl-a2-hello.dag",
+        "nl-a2-hello.doei",
+        "nl-a2-hello.tot-ziens",
+        "nl-a2-hello.tot-straks",
+        "nl-a2-hello.tot-morgen",
+        "nl-a2-hello.fijne-dag",
+        "nl-a2-hello.fijn-weekend",
+        "nl-a2-hello.jij-ook",
+        "nl-a2-hello.u-ook",
+        "nl-a2-hello.welterusten",
+        "nl-a2-hello.qa.fijne-dag-nog"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.l.je-u",
+      "title": "¿Qué tal? ¿«Je» o «u»?",
+      "items": [
+        "nl-a2-hello.vriend",
+        "nl-a2-hello.vriendin",
+        "nl-a2-hello.buurman",
+        "nl-a2-hello.buurvrouw",
+        "nl-a2-hello.collega",
+        "nl-a2-hello.meneer",
+        "nl-a2-hello.mevrouw",
+        "nl-a2-hello.hoe-gaat-het",
+        "nl-a2-hello.hoe-gaat-het-met-je",
+        "nl-a2-hello.hoe-gaat-het-met-u",
+        "nl-a2-hello.goed-en-met-jou",
+        "nl-a2-hello.goed-en-met-u",
+        "nl-a2-hello.alles-goed",
+        "nl-a2-hello.ja-prima",
+        "nl-a2-hello.niet-zo-goed",
+        "nl-a2-hello.zeg-maar-je",
+        "nl-a2-hello.mag-ik-je-zeggen",
+        "nl-a2-hello.qa.hoe-gaat-het-met-u",
+        "nl-a2-hello.qa.alles-goed"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.l.beleefd",
+      "title": "Gracias, perdón y por favor",
+      "items": [
+        "nl-a2-hello.alsjeblieft",
+        "nl-a2-hello.alstublieft",
+        "nl-a2-hello.dank-je-wel",
+        "nl-a2-hello.dank-u-wel",
+        "nl-a2-hello.bedankt",
+        "nl-a2-hello.graag-gedaan",
+        "nl-a2-hello.geen-probleem",
+        "nl-a2-hello.ja-graag",
+        "nl-a2-hello.nee-dank-je",
+        "nl-a2-hello.sorry",
+        "nl-a2-hello.pardon",
+        "nl-a2-hello.geeft-niet",
+        "nl-a2-hello.kunt-u-me-even-helpen",
+        "nl-a2-hello.eet-smakelijk",
+        "nl-a2-hello.gezondheid",
+        "nl-a2-hello.qa.alsjeblieft-koffie",
+        "nl-a2-hello.qa.dank-u",
+        "nl-a2-hello.qa.sorry"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.l.niet-begrijpen",
+      "title": "Cuando no entiendes",
+      "items": [
+        "nl-a2-hello.naam",
+        "nl-a2-hello.woord",
+        "nl-a2-hello.vraag",
+        "nl-a2-hello.antwoord",
+        "nl-a2-hello.fout",
+        "nl-a2-hello.mag-ik-u-iets-vragen",
+        "nl-a2-hello.mag-ik-je-iets-vragen",
+        "nl-a2-hello.wat-zegt-u",
+        "nl-a2-hello.wat-zeg-je",
+        "nl-a2-hello.ik-begrijp-het-niet",
+        "nl-a2-hello.kunt-u-dat-herhalen",
+        "nl-a2-hello.kunt-u-langzamer-praten",
+        "nl-a2-hello.kun-je-langzamer-praten",
+        "nl-a2-hello.wat-betekent-dat",
+        "nl-a2-hello.hoe-schrijf-je-dat",
+        "nl-a2-hello.kunt-u-dat-opschrijven",
+        "nl-a2-hello.een-momentje",
+        "nl-a2-hello.o-ik-snap-het",
+        "nl-a2-hello.dat-klopt",
+        "nl-a2-hello.qa.herhalen",
+        "nl-a2-hello.qa.wat-betekent"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.l.nederlands",
+      "title": "Hablar un poco de neerlandés",
+      "items": [
+        "nl-a2-hello.taal",
+        "nl-a2-hello.nederlands",
+        "nl-a2-hello.engels",
+        "nl-a2-hello.spreekt-u-engels",
+        "nl-a2-hello.spreek-jij-engels",
+        "nl-a2-hello.ik-spreek-een-beetje-nederlands",
+        "nl-a2-hello.ik-leer-nederlands",
+        "nl-a2-hello.mijn-nederlands-is-nog-niet-zo-goed",
+        "nl-a2-hello.in-het-nederlands-graag",
+        "nl-a2-hello.hoe-zeg-je-dat",
+        "nl-a2-hello.hoe-heet-dat",
+        "nl-a2-hello.qa.spreekt-u-nederlands",
+        "nl-a2-hello.qa.engels-of-nederlands"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-hello.hallo",
+      "text": "Hallo!",
+      "es": "¡Hola!",
+      "notes": "El saludo comodín: sirve con desconocidos y con amigos.",
+      "explanation": "Con cualquiera y a cualquier hora; también para contestar al teléfono. Suena «JA-lo», con la «h» aspirada suave.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.hoi",
+      "text": "Hoi!",
+      "es": "¡Hola!",
+      "notes": "Más informal que «hallo»; muy habitual en el trabajo.",
+      "explanation": "A amigos, compañeros y vecinos de tu edad. Suena «joi», con la «h» aspirada.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.goedemorgen",
+      "text": "Goedemorgen!",
+      "es": "¡Buenos días!",
+      "notes": "Hasta las doce. «oe» suena como una «u» española.",
+      "explanation": "Por la mañana, al entrar en la gemeente o en la consulta. La «g» es una «j» española de garganta: JUU-de-mor-je.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.goedemiddag",
+      "text": "Goedemiddag!",
+      "es": "¡Buenas tardes!",
+      "notes": "«middag» es el mediodía y la primera parte de la tarde.",
+      "explanation": "De doce a seis, en una tienda o una oficina. Las dos «g» son una «j» suave de garganta: juu-de-MI-daj.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.goedenavond",
+      "text": "Goedenavond!",
+      "es": "¡Buenas tardes! / ¡Buenas noches! (al llegar)",
+      "notes": "Para saludar por la noche; para irte a dormir se dice «Welterusten».",
+      "explanation": "Al llegar a algún sitio a partir de las seis. «oe» = «u» y la «v» casi «f»: juu-de-NAA-font.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.dag",
+      "text": "Dag!",
+      "es": "¡Hola! / ¡Adiós!",
+      "notes": "Vale para saludar y para despedirte; con una «a» larga («daag») suena más cariñoso.",
+      "explanation": "Al entrar o al salir de una tienda pequeña. La «g» final es una «j» de garganta y la «a» corta: DAJ.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo",
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.doei",
+      "text": "Doei!",
+      "es": "¡Chao!",
+      "notes": "Muy coloquial; a veces lo oirás doble: «Doei doei!».",
+      "explanation": "A amigos, compañeros y vecinos al despedirte. «oe» = «u» y luego «i»: DUI.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.tot-ziens",
+      "text": "Tot ziens!",
+      "es": "¡Adiós! / ¡Hasta la vista!",
+      "notes": "La despedida neutra para todo el mundo.",
+      "explanation": "Al despedirte de alguien en una tienda, la gemeente o la consulta. La «z» suena casi como «s»: tot SIINS.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.tot-straks",
+      "text": "Tot straks!",
+      "es": "¡Hasta luego! (hoy mismo)",
+      "notes": "«straks» = dentro de un rato; para otro día usa «tot morgen» o «tot ziens».",
+      "explanation": "Cuando vas a ver a esa persona dentro de poco, el mismo día. «tot» con «o» corta: tot STRAKS.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.tot-morgen",
+      "text": "Tot morgen!",
+      "es": "¡Hasta mañana!",
+      "explanation": "Al salir del trabajo o de clase. La «g» de «morgen» es de garganta y la «-en» final casi muda: tot MOR-je.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.fijne-dag",
+      "text": "Fijne dag!",
+      "es": "¡Que tengas un buen día!",
+      "notes": "También «Fijne dag nog!» (lo que queda de día).",
+      "explanation": "Al irte de una tienda o al despedirte de un vecino. «ij» suena «ei»: FEI-ne DAJ.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.fijn-weekend",
+      "text": "Fijn weekend!",
+      "es": "¡Buen fin de semana!",
+      "explanation": "El viernes, al salir del trabajo o de la tienda. «weekend» como en inglés pero con «w» suave: fein UII-kent.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.jij-ook",
+      "text": "Dank je, jij ook!",
+      "es": "¡Gracias, igualmente!",
+      "notes": "Con «je» contestas «jij ook»; con «u», «u ook».",
+      "explanation": "Cuando un amigo o un dependiente joven te desea un buen día. «j» suena como «y»: dank-ye, yei OOK.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.u-ook",
+      "text": "Dank u, u ook!",
+      "es": "¡Gracias, igualmente!",
+      "notes": "Con «u» todo va en «u»: no mezcles «dank u» con «jij ook».",
+      "explanation": "A una persona mayor o en una oficina. La «u» neerlandesa es una «i» con los labios redondos, como la «u» francesa.",
+      "register": "u",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.welterusten",
+      "text": "Welterusten!",
+      "es": "¡Que descanses! / ¡Buenas noches!",
+      "notes": "Para saludar por la noche se dice «Goedenavond», no «Welterusten».",
+      "explanation": "Solo antes de irte a dormir, en casa o en un mensaje por la noche. Acento en «rus»: wel-te-RUS-te.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "despedida"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.hoe-gaat-het",
+      "text": "Hoe gaat het?",
+      "es": "¿Qué tal? / ¿Cómo va?",
+      "notes": "Sin pronombre sirve para «je» y para «u».",
+      "explanation": "A casi cualquiera, después de saludar. «oe» = «u» y la «g» de garganta: ju JAAT et?",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.hoe-gaat-het-met-je",
+      "text": "Hoe gaat het met je?",
+      "es": "¿Qué tal estás?",
+      "literal": "¿Cómo va con tú?",
+      "explanation": "A un amigo, un compañero o una vecina joven. «je» suena «ye» y va sin acento: ju JAAT et met ye?",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.hoe-gaat-het-met-u",
+      "text": "Hoe gaat het met u?",
+      "es": "¿Cómo está usted?",
+      "literal": "¿Cómo va con usted?",
+      "explanation": "A una persona mayor, al médico o en una oficina. La «u» final es una «i» con labios redondos: met Ü.",
+      "register": "u",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.goed-en-met-jou",
+      "text": "Goed, dank je. En met jou?",
+      "es": "Bien, gracias. ¿Y tú?",
+      "notes": "Tras «met» se dice «jou» (o «je»), nunca «jij».",
+      "explanation": "Para contestar a un amigo o un compañero. «jou» suena «yau»: JUUT, dank-ye. En met YAU?",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.goed-en-met-u",
+      "text": "Goed, dank u. En met u?",
+      "es": "Bien, gracias. ¿Y usted?",
+      "explanation": "Para contestar a alguien a quien tratas de usted. La «d» final de «goed» suena «t»: JUUT, dank Ü.",
+      "register": "u",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.alles-goed",
+      "text": "Alles goed?",
+      "es": "¿Todo bien?",
+      "notes": "Casi un saludo: no esperan que cuentes tus problemas.",
+      "explanation": "Saludo muy común entre conocidos; se contesta «Ja, prima!» o «Ja hoor!». Suena A-les JUUT.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.ja-prima",
+      "text": "Ja, prima!",
+      "es": "¡Sí, muy bien!",
+      "notes": "«prima» = estupendo, perfecto; también para decir «vale»: «Om drie uur? Prima!».",
+      "explanation": "La respuesta típica a «Alles goed?» o «Hoe gaat het?». La «r» puede ser vibrante o de garganta: ya PRII-ma.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.niet-zo-goed",
+      "text": "Niet zo goed, eigenlijk.",
+      "es": "No muy bien, la verdad.",
+      "notes": "«eigenlijk» = en realidad, la verdad; suaviza lo que dices.",
+      "explanation": "Si de verdad no estás bien; a los holandeses no les molesta la sinceridad. «ei» = «ei»: niit so JUUT, EI-je-lek.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "saludo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.zeg-maar-je",
+      "text": "Zeg maar je.",
+      "es": "Puedes tratarme de tú.",
+      "literal": "Di simplemente «je».",
+      "notes": "En los Países Bajos se pasa al «je» muy pronto; «maar» aquí suaviza: «tranquilo, di je».",
+      "explanation": "Te lo dirá alguien a quien tratas de «u» cuando prefiere el «je». «zeg» con la «g» de garganta: sej maar YE.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "je-u"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.mag-ik-je-zeggen",
+      "text": "Mag ik je zeggen?",
+      "es": "¿Puedo tratarte de tú?",
+      "notes": "Pides permiso para pasar del «u» al «je».",
+      "explanation": "A alguien con quien ya hablas a menudo, como la doktersassistente o un vecino mayor. Suena maj ik YE se-je?",
+      "register": "u",
+      "situation": "saludos",
+      "tags": [
+        "je-u"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.mag-ik-u-iets-vragen",
+      "text": "Mag ik u iets vragen?",
+      "es": "¿Le puedo preguntar algo?",
+      "notes": "Pregunta con inversión: el verbo va delante («Mag ik…?»).",
+      "explanation": "Para dirigirte a un desconocido en la calle o en una oficina. La «v» suena casi «f»: maj ik Ü iits FRAA-je?",
+      "register": "u",
+      "situation": "saludos",
+      "tags": [
+        "je-u"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.mag-ik-je-iets-vragen",
+      "text": "Mag ik je iets vragen?",
+      "es": "¿Te puedo preguntar algo?",
+      "explanation": "A un compañero o un vecino joven. «iets» suena «iits», con «i» larga: maj ik ye IITS FRAA-je?",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "je-u"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.alsjeblieft",
+      "text": "Alsjeblieft.",
+      "es": "Por favor. / Aquí tienes.",
+      "notes": "Sirve para pedir y también para dar algo («aquí tienes»). Con «je»; con «u» es «alstublieft».",
+      "explanation": "Al pedir algo a un amigo o en una cafetería, y al darle algo a alguien. Se dice rápido: A-sje-bliift.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.alstublieft",
+      "text": "Alstublieft.",
+      "es": "Por favor. / Aquí tiene.",
+      "notes": "Como «alsjeblieft», sirve para pedir y para dar; es la versión con «u».",
+      "explanation": "En la gemeente, el banco o con una persona mayor, y al entregar un papel. Suena als-tü-BLIIFT.",
+      "register": "u",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.dank-je-wel",
+      "text": "Dank je wel!",
+      "es": "¡Muchas gracias!",
+      "notes": "«Dank je» a secas también vale; «wel» lo refuerza.",
+      "explanation": "A un amigo, a un compañero o en la cafetería. «je» suena «ye» y la «w» es suave, casi «v»: DANK-ye-vel.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.dank-u-wel",
+      "text": "Dank u wel!",
+      "es": "¡Muchas gracias!",
+      "explanation": "En una oficina, en la consulta o con una persona mayor. La «u» es una «i» con labios redondos: DANK-ü-vel.",
+      "register": "u",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.bedankt",
+      "text": "Bedankt!",
+      "es": "¡Gracias!",
+      "notes": "El comodín cuando dudas entre «dank je» y «dank u».",
+      "explanation": "Vale con todo el mundo, sin pensar en «je» o «u». Acento en «dankt»: be-DANKT.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.graag-gedaan",
+      "text": "Graag gedaan.",
+      "es": "De nada.",
+      "literal": "Hecho con gusto.",
+      "notes": "La respuesta normal a «dank je» o «dank u».",
+      "explanation": "Cuando alguien te da las gracias. Dos «g» de garganta y «aa» larga: JRAAJ je-DAAN.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.geen-probleem",
+      "text": "Geen probleem.",
+      "es": "No hay problema.",
+      "explanation": "Para quitar importancia cuando te piden un favor o te dan las gracias. «ee» larga: jeen pro-BLEEM.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.ja-graag",
+      "text": "Ja, graag.",
+      "es": "Sí, por favor. / Sí, con gusto.",
+      "notes": "«graag» = con gusto; es la forma más natural de decir «sí, por favor».",
+      "explanation": "Para aceptar algo que te ofrecen: un café, una bolsa, ayuda. Suena ya JRAAJ, con la «g» de garganta.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.nee-dank-je",
+      "text": "Nee, dank je.",
+      "es": "No, gracias.",
+      "notes": "Con «u» sería «Nee, dank u».",
+      "explanation": "Para rechazar algo en la tienda o con amigos. «ee» larga: NEE, dank-ye.",
+      "register": "tu",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.sorry",
+      "text": "Sorry!",
+      "es": "¡Perdón! / ¡Lo siento!",
+      "notes": "La disculpa más habitual, en cualquier situación.",
+      "explanation": "Si chocas con alguien o te equivocas. Como en inglés pero con «o» abierta: SO-ri.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.pardon",
+      "text": "Pardon.",
+      "es": "Perdone. / Con permiso.",
+      "notes": "También sirve para pedir que repitan: «Pardon?».",
+      "explanation": "Para pasar entre la gente en el tranvía o llamar la atención de alguien. Acento al final: par-DON.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.geeft-niet",
+      "text": "Geeft niet!",
+      "es": "¡No pasa nada!",
+      "literal": "No da.",
+      "notes": "Forma corta de «Het geeft niet».",
+      "explanation": "Cuando alguien te pide perdón. La «g» de garganta y «ee» larga: JEEFT niit.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.kunt-u-me-even-helpen",
+      "text": "Kunt u mij even helpen?",
+      "es": "¿Me puede ayudar un momento?",
+      "notes": "«even» (un momento) suaviza la petición; lo oirás en todas partes.",
+      "explanation": "A un empleado de la estación o del supermercado. «even» = EE-fe, y la «h» aspirada: kunt ü mei EE-fe JEL-pe?",
+      "register": "u",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.eet-smakelijk",
+      "text": "Eet smakelijk!",
+      "es": "¡Que aproveche!",
+      "explanation": "Al empezar a comer con otros, en casa o en la cantina del trabajo. Suena eet SMAA-ke-lek.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.gezondheid",
+      "text": "Gezondheid!",
+      "es": "¡Salud! / ¡Jesús! (al estornudar)",
+      "literal": "¡Salud!",
+      "explanation": "Cuando alguien estornuda. La «g» de garganta y la «z» suave: je-SONT-jeit.",
+      "register": "neutral",
+      "situation": "saludos",
+      "tags": [
+        "cortesia"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.wat-zegt-u",
+      "text": "Wat zegt u?",
+      "es": "¿Cómo dice?",
+      "explanation": "Cuando no has oído bien a alguien a quien tratas de usted. La «z» suena casi «s»: wat SEJT ü?",
+      "register": "u",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.wat-zeg-je",
+      "text": "Wat zeg je?",
+      "es": "¿Qué dices?",
+      "notes": "Con «je» detrás del verbo, el verbo pierde la «-t»: «zeg je», no «zegt je».",
+      "explanation": "A un amigo o un compañero cuando no lo has oído. Sin «t» en «zeg» porque «je» va detrás: wat SEJ ye?",
+      "register": "tu",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.ik-begrijp-het-niet",
+      "text": "Sorry, ik begrijp het niet.",
+      "es": "Perdona, no lo entiendo.",
+      "notes": "«niet» va al final: «ik begrijp het niet», no «ik begrijp niet het».",
+      "explanation": "Cuando no entiendes lo que te dicen. «ij» = «ei» y acento en «grijp»: ik be-JREIP et NIIT.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.kunt-u-dat-herhalen",
+      "text": "Kunt u dat herhalen?",
+      "es": "¿Puede repetirlo?",
+      "explanation": "En la gemeente, al teléfono o en la consulta. Acento en «haal»: kunt ü dat jer-JAA-le?",
+      "register": "u",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.kunt-u-langzamer-praten",
+      "text": "Kunt u wat langzamer praten?",
+      "es": "¿Puede hablar un poco más despacio?",
+      "notes": "«wat» aquí significa «un poco».",
+      "explanation": "Cuando te hablan rápido en una oficina o al teléfono. «z» casi «s»: kunt ü wat LANG-saa-mer PRAA-te?",
+      "register": "u",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.kun-je-langzamer-praten",
+      "text": "Kun je wat langzamer praten?",
+      "es": "¿Puedes hablar un poco más despacio?",
+      "notes": "Con «u» se dice «kunt u»; con «je» detrás, «kun je».",
+      "explanation": "A un compañero o una vecina que habla deprisa. «kun je» sin «t»: kun ye wat LANG-saa-mer PRAA-te?",
+      "register": "tu",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.wat-betekent-dat",
+      "text": "Wat betekent dat?",
+      "es": "¿Qué significa eso?",
+      "explanation": "Cuando oyes una palabra nueva. Acento en «te»: wat be-TEE-kent dat?",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.hoe-zeg-je-dat",
+      "text": "Hoe zeg je dat in het Nederlands?",
+      "es": "¿Cómo se dice eso en neerlandés?",
+      "notes": "Aquí «je» es impersonal («se»), no tutea a nadie.",
+      "explanation": "Señalando algo cuya palabra no sabes. «Nederlands» con acento al principio: ju SEJ ye dat in et NEE-der-lants?",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.hoe-schrijf-je-dat",
+      "text": "Hoe schrijf je dat?",
+      "es": "¿Cómo se escribe?",
+      "notes": "«je» impersonal, como «se» en español.",
+      "explanation": "Cuando te dicen un nombre o una calle. «sch» = «s» + «j» de garganta: ju SJREIF ye dat?",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.kunt-u-dat-opschrijven",
+      "text": "Kunt u dat even opschrijven?",
+      "es": "¿Me lo puede escribir?",
+      "notes": "«opschrijven» es un verbo separable, pero con «kunt u» va entero al final.",
+      "explanation": "Para una dirección, una hora o un número difícil. Acento en «op»: kunt ü dat EE-fe OP-sjrei-fe?",
+      "register": "u",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.een-momentje",
+      "text": "Een momentje, alstublieft.",
+      "es": "Un momento, por favor.",
+      "notes": "«momentje» es un diminutivo: no es «pequeño», solo suena más amable.",
+      "explanation": "Al teléfono o en la ventanilla, mientras buscas un papel. Acento en «men»: en mo-MEN-tye.",
+      "register": "u",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.o-ik-snap-het",
+      "text": "O, ik snap het!",
+      "es": "¡Ah, ya lo pillo!",
+      "notes": "«snappen» es coloquial; «Ik begrijp het» es la forma estándar.",
+      "explanation": "Cuando por fin entiendes algo. «snap» con «a» corta: oo, ik SNAP et!",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.dat-klopt",
+      "text": "Dat klopt.",
+      "es": "Exacto. / Correcto.",
+      "notes": "Muy frecuente en oficinas y al teléfono: «es correcto».",
+      "explanation": "Para confirmar un dato: tu nombre, tu dirección, una hora. Con «o» corta: dat KLOPT.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "no-entiendo"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.spreekt-u-engels",
+      "text": "Spreekt u Engels?",
+      "es": "¿Habla usted inglés?",
+      "notes": "Pregunta de sí o no: el verbo va primero («Spreekt u…?»).",
+      "explanation": "En una oficina o con una persona mayor, si te atascas. «ee» larga: spreekt ü ENG-els?",
+      "register": "u",
+      "situation": "no-entiendo",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.spreek-jij-engels",
+      "text": "Spreek jij Engels?",
+      "es": "¿Hablas inglés?",
+      "notes": "«jij spreekt», pero «spreek jij?»: con jij/je detrás se pierde la «-t».",
+      "explanation": "A alguien joven o a un compañero. Sin «t» en «spreek» porque «jij» va detrás: spreek YEI ENG-els?",
+      "register": "tu",
+      "situation": "no-entiendo",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.ik-spreek-een-beetje-nederlands",
+      "text": "Ik spreek een beetje Nederlands.",
+      "es": "Hablo un poco de neerlandés.",
+      "explanation": "Al empezar una conversación, para que te hablen despacio. «ee» larga y «tj» = «ch» suave: en BEE-tye.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.ik-leer-nederlands",
+      "text": "Ik leer Nederlands.",
+      "es": "Estoy aprendiendo neerlandés.",
+      "notes": "El presente sirve para algo que estás haciendo estos días.",
+      "explanation": "Para explicar por qué hablas despacio o cometes errores. «ee» larga: ik LEER NEE-der-lants.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.mijn-nederlands-is-nog-niet-zo-goed",
+      "text": "Mijn Nederlands is nog niet zo goed.",
+      "es": "Mi neerlandés todavía no es muy bueno.",
+      "explanation": "Para pedir paciencia. «ij» = «ei»: mein NEE-der-lants is noj niit so JUUT.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.in-het-nederlands-graag",
+      "text": "Mag het in het Nederlands? Ik wil oefenen.",
+      "es": "¿Podemos hablar en neerlandés? Quiero practicar.",
+      "notes": "Es muy normal que te contesten en inglés; esta frase lo evita con educación.",
+      "explanation": "Cuando te cambian al inglés al oír tu acento. «oe» = «u»: ik vil U-fe-ne.",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "idiomas"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.hoe-heet-dat",
+      "text": "Hoe heet dat in het Nederlands?",
+      "es": "¿Cómo se llama eso en neerlandés?",
+      "notes": "«heten» = llamarse; no confundir con «heet» (caliente), que suena igual.",
+      "explanation": "Señalando un objeto en una tienda o en casa. «heet» = se llama: ju JEET dat?",
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "tags": [
+        "idiomas"
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-hello.vriend",
+      "word": "vriend",
+      "article": "de",
+      "plural": "vrienden",
+      "es": "el amigo",
+      "notes": "«mijn vriend» también puede ser «mi novio»; para dejarlo claro: «een vriend van mij».",
+      "situation": "saludos",
+      "tags": [
+        "personas"
+      ],
+      "image": "fluent:man"
+    },
+    {
+      "id": "nl-a2-hello.vriendin",
+      "word": "vriendin",
+      "article": "de",
+      "plural": "vriendinnen",
+      "es": "la amiga",
+      "notes": "«mijn vriendin» suele entenderse como «mi novia».",
+      "situation": "saludos",
+      "tags": [
+        "personas"
+      ],
+      "image": "fluent:woman"
+    },
+    {
+      "id": "nl-a2-hello.buurman",
+      "word": "buurman",
+      "article": "de",
+      "plural": "buren",
+      "es": "el vecino",
+      "notes": "Plural irregular: «de buren» (los vecinos).",
+      "situation": "saludos",
+      "tags": [
+        "personas"
+      ],
+      "image": "fluent:old-man"
+    },
+    {
+      "id": "nl-a2-hello.buurvrouw",
+      "word": "buurvrouw",
+      "article": "de",
+      "plural": "buurvrouwen",
+      "es": "la vecina",
+      "situation": "saludos",
+      "tags": [
+        "personas"
+      ],
+      "image": "fluent:old-woman"
+    },
+    {
+      "id": "nl-a2-hello.collega",
+      "word": "collega",
+      "article": "de",
+      "plural": "collega's",
+      "es": "el compañero / la compañera de trabajo",
+      "notes": "Plural con apóstrofo: «collega's».",
+      "situation": "saludos",
+      "tags": [
+        "personas"
+      ],
+      "image": "fluent:technologist"
+    },
+    {
+      "id": "nl-a2-hello.meneer",
+      "word": "meneer",
+      "article": "de",
+      "plural": "meneren",
+      "es": "el señor",
+      "notes": "Para dirigirte a un hombre: «Pardon, meneer!».",
+      "situation": "saludos",
+      "tags": [
+        "personas"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.mevrouw",
+      "word": "mevrouw",
+      "article": "de",
+      "plural": "mevrouwen",
+      "es": "la señora",
+      "notes": "Para cualquier mujer adulta, casada o no: «Dank u, mevrouw».",
+      "situation": "saludos",
+      "tags": [
+        "personas"
+      ]
+    },
+    {
+      "id": "nl-a2-hello.naam",
+      "word": "naam",
+      "article": "de",
+      "plural": "namen",
+      "es": "el nombre",
+      "situation": "saludos",
+      "image": "fluent:name-badge"
+    },
+    {
+      "id": "nl-a2-hello.woord",
+      "word": "woord",
+      "article": "het",
+      "plural": "woorden",
+      "es": "la palabra",
+      "example": "nl-a2-hello.wat-betekent-dat",
+      "situation": "no-entiendo",
+      "image": "fluent:speech-balloon"
+    },
+    {
+      "id": "nl-a2-hello.vraag",
+      "word": "vraag",
+      "article": "de",
+      "plural": "vragen",
+      "es": "la pregunta",
+      "example": "nl-a2-hello.mag-ik-u-iets-vragen",
+      "situation": "no-entiendo",
+      "image": "fluent:red-question-mark"
+    },
+    {
+      "id": "nl-a2-hello.antwoord",
+      "word": "antwoord",
+      "article": "het",
+      "plural": "antwoorden",
+      "es": "la respuesta",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "nl-a2-hello.taal",
+      "word": "taal",
+      "article": "de",
+      "plural": "talen",
+      "es": "el idioma / la lengua",
+      "situation": "no-entiendo",
+      "image": "fluent:globe-showing-europe-africa"
+    },
+    {
+      "id": "nl-a2-hello.nederlands",
+      "word": "Nederlands",
+      "article": "het",
+      "es": "el neerlandés (idioma)",
+      "notes": "Los idiomas son «het» y van con mayúscula: «het Nederlands», «het Spaans».",
+      "example": "nl-a2-hello.ik-spreek-een-beetje-nederlands",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "nl-a2-hello.engels",
+      "word": "Engels",
+      "article": "het",
+      "es": "el inglés (idioma)",
+      "example": "nl-a2-hello.spreekt-u-engels",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "nl-a2-hello.fout",
+      "word": "fout",
+      "article": "de",
+      "plural": "fouten",
+      "es": "el error",
+      "notes": "«Sorry, mijn fout!» = perdona, culpa mía.",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "nl-a2-hello.ochtend",
+      "word": "ochtend",
+      "article": "de",
+      "plural": "ochtenden",
+      "es": "la mañana",
+      "notes": "También «de morgen», de ahí «goedemorgen».",
+      "situation": "saludos",
+      "image": "fluent:sunrise"
+    },
+    {
+      "id": "nl-a2-hello.middag",
+      "word": "middag",
+      "article": "de",
+      "plural": "middagen",
+      "es": "el mediodía / la primera parte de la tarde",
+      "situation": "saludos",
+      "image": "fluent:sun"
+    },
+    {
+      "id": "nl-a2-hello.avond",
+      "word": "avond",
+      "article": "de",
+      "plural": "avonden",
+      "es": "la tarde-noche (desde las seis)",
+      "situation": "saludos",
+      "image": "fluent:sunset"
+    },
+    {
+      "id": "nl-a2-hello.nacht",
+      "word": "nacht",
+      "article": "de",
+      "plural": "nachten",
+      "es": "la noche",
+      "situation": "saludos",
+      "image": "fluent:night-with-stars"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-hello.qa.hoe-gaat-het-met-u",
+      "question": "Goedemorgen! Hoe gaat het met u?",
+      "questionEs": "¡Buenos días! ¿Cómo está usted?",
+      "accepted": [
+        {
+          "text": "Goed, dank u. En met u?",
+          "es": "Bien, gracias. ¿Y usted?"
+        },
+        {
+          "text": "Prima, dank u wel!",
+          "es": "Muy bien, muchas gracias."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Goed, dank je. En met jou?",
+          "es": "Bien, gracias. ¿Y tú?"
+        },
+        {
+          "text": "Ik ben goed.",
+          "es": "Soy bueno (calco)."
+        }
+      ],
+      "register": "u",
+      "situation": "saludos",
+      "notes": "Te tratan de «u»: contesta con «dank u». «Ik ben goed» significa «soy bueno (en algo)», no «estoy bien».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.alles-goed",
+      "question": "Hoi! Alles goed?",
+      "questionEs": "¡Hola! ¿Todo bien?",
+      "accepted": [
+        {
+          "text": "Ja, prima! En met jou?",
+          "es": "¡Sí, muy bien! ¿Y tú?"
+        },
+        {
+          "text": "Ja hoor, alles goed. En jij?",
+          "es": "Sí, todo bien. ¿Y tú?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, dank u. En met u?",
+          "es": "Sí, gracias. ¿Y usted?"
+        },
+        {
+          "text": "Ja, ik heb goed.",
+          "es": "Sí, tengo bien (calco)."
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "Un «hoi» pide «je/jou», no «u». «Ik heb goed» no existe: se dice «alles goed» o «prima».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.alsjeblieft-koffie",
+      "question": "Alsjeblieft, je koffie.",
+      "questionEs": "Aquí tienes tu café.",
+      "accepted": [
+        {
+          "text": "Dank je wel!",
+          "es": "¡Muchas gracias!"
+        },
+        {
+          "text": "Bedankt!",
+          "es": "¡Gracias!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Graag gedaan.",
+          "es": "De nada."
+        },
+        {
+          "text": "Geen probleem.",
+          "es": "No hay problema."
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "Aquí «alsjeblieft» significa «aquí tienes»: das las gracias. «Graag gedaan» es la respuesta a un «gracias».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.dank-u",
+      "question": "Dank u wel voor uw hulp!",
+      "questionEs": "¡Muchas gracias por su ayuda!",
+      "accepted": [
+        {
+          "text": "Graag gedaan.",
+          "es": "De nada."
+        },
+        {
+          "text": "Geen probleem!",
+          "es": "¡No hay problema!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Gezondheid!",
+          "es": "¡Salud! / ¡Jesús!"
+        },
+        {
+          "text": "Pardon?",
+          "es": "¿Perdón?"
+        }
+      ],
+      "register": "u",
+      "situation": "saludos",
+      "notes": "A un «dank u» se contesta «graag gedaan» o «geen probleem». «Gezondheid» se dice cuando alguien estornuda.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.sorry",
+      "question": "O, sorry! Dat was mijn fout.",
+      "questionEs": "¡Ay, perdón! Ha sido culpa mía.",
+      "accepted": [
+        {
+          "text": "Geeft niet!",
+          "es": "¡No pasa nada!"
+        },
+        {
+          "text": "Geen probleem.",
+          "es": "No hay problema."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Graag gedaan.",
+          "es": "De nada."
+        },
+        {
+          "text": "Dank je wel!",
+          "es": "¡Muchas gracias!"
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "A una disculpa se contesta «geeft niet» o «geen probleem»; «graag gedaan» contesta a un «gracias».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.spreekt-u-nederlands",
+      "question": "Goedemiddag. Spreekt u Nederlands?",
+      "questionEs": "Buenas tardes. ¿Habla usted neerlandés?",
+      "accepted": [
+        {
+          "text": "Een beetje. Kunt u langzaam praten?",
+          "es": "Un poco. ¿Puede hablar despacio?"
+        },
+        {
+          "text": "Ja, een beetje. Ik leer Nederlands.",
+          "es": "Sí, un poco. Estoy aprendiendo neerlandés."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik spreekt een beetje.",
+          "es": "Sí, hablo un poco (con error)."
+        },
+        {
+          "text": "Ja, ik ben Nederlands.",
+          "es": "Sí, soy neerlandés."
+        }
+      ],
+      "register": "u",
+      "situation": "saludos",
+      "notes": "Con «ik» el verbo no lleva «-t»: «ik spreek». «Ik ben Nederlands» quiere decir que eres de aquí.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.herhalen",
+      "question": "Heeft u het formulier al online ingevuld?",
+      "questionEs": "¿Ya ha rellenado el formulario en internet?",
+      "accepted": [
+        {
+          "text": "Sorry, kunt u dat herhalen?",
+          "es": "Perdone, ¿puede repetirlo?"
+        },
+        {
+          "text": "Sorry, kunt u wat langzamer praten?",
+          "es": "Perdone, ¿puede hablar más despacio?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sorry, kunt je dat herhalen?",
+          "es": "Perdona, ¿puedes repetirlo? (mezclado)"
+        },
+        {
+          "text": "Sorry, ik begrijp niet het.",
+          "es": "Perdone, no lo entiendo (orden mal)."
+        }
+      ],
+      "register": "u",
+      "situation": "no-entiendo",
+      "notes": "Con «u» es «kunt u», y con «je», «kun je»: no los mezcles. «niet» va al final: «ik begrijp het niet».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.wat-betekent",
+      "question": "Wat gezellig hier, hè?",
+      "questionEs": "Qué gezellig se está aquí, ¿eh?",
+      "accepted": [
+        {
+          "text": "Sorry, wat betekent 'gezellig'?",
+          "es": "Perdona, ¿qué significa «gezellig»?"
+        },
+        {
+          "text": "Ja! Hoe zeg je 'gezellig' in het Engels?",
+          "es": "¡Sí! ¿Cómo se dice «gezellig» en inglés?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Wat is gezellig betekent?",
+          "es": "¿Qué es gezellig significa? (mal)"
+        },
+        {
+          "text": "Hoe gaat het met gezellig?",
+          "es": "¿Qué tal gezellig?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "no-entiendo",
+      "notes": "Para preguntar por una palabra: «Wat betekent…?». «gezellig» = acogedor, agradable, con buen ambiente.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.engels-of-nederlands",
+      "question": "O, je bent Spaans? Zullen we Engels praten?",
+      "questionEs": "Ah, ¿eres español? ¿Hablamos en inglés?",
+      "accepted": [
+        {
+          "text": "Nee, liever Nederlands. Ik wil oefenen.",
+          "es": "No, mejor en neerlandés. Quiero practicar."
+        },
+        {
+          "text": "Mag het in het Nederlands? Ik wil oefenen.",
+          "es": "¿Podemos hablar en neerlandés? Quiero practicar."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik wil oefen Nederlands.",
+          "es": "No, quiero practicar neerlandés (mal)."
+        },
+        {
+          "text": "Ja, ik ben Engels.",
+          "es": "Sí, soy inglés."
+        }
+      ],
+      "register": "tu",
+      "situation": "no-entiendo",
+      "notes": "Tras «wil» el otro verbo va en infinitivo y al final: «Ik wil Nederlands oefenen».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-hello.qa.fijne-dag-nog",
+      "question": "Fijne dag nog!",
+      "questionEs": "¡Que tengas buen día!",
+      "accepted": [
+        {
+          "text": "Dank je, jij ook!",
+          "es": "¡Gracias, igualmente!"
+        },
+        {
+          "text": "Bedankt, u ook!",
+          "es": "¡Gracias, igualmente!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Goedemorgen!",
+          "es": "¡Buenos días!"
+        },
+        {
+          "text": "Graag gedaan.",
+          "es": "De nada."
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "Al «fijne dag» se contesta «jij ook» o «u ook», según el trato. «Graag gedaan» contesta a un «gracias».",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}

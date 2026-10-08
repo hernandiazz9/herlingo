@@ -1,0 +1,1399 @@
+{
+  "id": "nl-a2-grammar",
+  "order": 90,
+  "level": "A2",
+  "title": "Gramática A2",
+  "description": "Lo justo para hablar: de/het, pronombres, el presente, el verbo en segundo lugar, preguntas, niet/geen, plurales, verbos separables, modales, diminutivos y el perfecto. Primero reconocer, luego usar.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "nl-a2-grammar.l.woorden",
+      "title": "De/het, plurales y diminutivos",
+      "items": [
+        "gram.nl-a2-de-het",
+        "nl-a2-grammar.huis",
+        "nl-a2-grammar.tuin",
+        "nl-a2-grammar.tafel",
+        "nl-a2-grammar.stoel",
+        "nl-a2-grammar.het-huis-is-groot",
+        "nl-a2-grammar.de-huizen-zijn-duur",
+        "gram.nl-a2-plural",
+        "nl-a2-grammar.auto",
+        "nl-a2-grammar.ik-heb-twee-zussen",
+        "gram.nl-a2-diminutives",
+        "nl-a2-grammar.meisje",
+        "nl-a2-grammar.biertje",
+        "nl-a2-grammar.broodje",
+        "nl-a2-grammar.kopje",
+        "nl-a2-grammar.twee-broodjes-kaas",
+        "nl-a2-grammar.zullen-we-een-biertje-drinken",
+        "nl-a2-grammar.wil-je-een-kopje-koffie",
+        "nl-a2-grammar.mag-ik-even-een-vraagje-stellen"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.l.zinnen",
+      "title": "Pronombres, presente y orden de la frase",
+      "items": [
+        "gram.nl-a2-pronouns",
+        "nl-a2-grammar.onze-buren-zijn-aardig",
+        "nl-a2-grammar.is-dit-jouw-fiets",
+        "gram.nl-a2-present",
+        "nl-a2-grammar.woon-jij-hier-ook",
+        "nl-a2-grammar.hij-werkt-in-amsterdam",
+        "gram.nl-a2-word-order",
+        "nl-a2-grammar.morgen-ga-ik-naar-amsterdam",
+        "nl-a2-grammar.vandaag-werk-ik-thuis",
+        "nl-a2-about-me.in-het-weekend-fiets-ik-graag",
+        "nl-a2-grammar.qa.woon-jij-hier",
+        "nl-a2-grammar.qa.morgen"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.l.vragen",
+      "title": "Preguntas y negación",
+      "items": [
+        "gram.nl-a2-questions",
+        "nl-a2-grammar.tijd",
+        "nl-a2-grammar.waar-is-het-station",
+        "nl-a2-grammar.wanneer-begint-de-cursus",
+        "nl-a2-grammar.heb-je-morgen-tijd",
+        "nl-a2-hello.spreekt-u-engels",
+        "gram.nl-a2-niet-geen",
+        "nl-a2-grammar.ik-heb-geen-auto",
+        "nl-a2-grammar.dat-is-niet-duur",
+        "nl-a2-hello.ik-begrijp-het-niet",
+        "nl-a2-grammar.qa.auto"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.l.werkwoorden",
+      "title": "Separables, modales y perfecto",
+      "items": [
+        "gram.nl-a2-separable-verbs",
+        "nl-a2-grammar.ik-bel-je-morgen-op",
+        "nl-a2-grammar.kun-je-me-straks-opbellen",
+        "nl-a2-grammar.de-trein-komt-om-drie-uur-aan",
+        "nl-a2-grammar.ik-neem-mijn-paspoort-mee",
+        "gram.nl-a2-modals",
+        "nl-a2-grammar.ik-moet-morgen-werken",
+        "nl-a2-grammar.mag-ik-hier-zitten",
+        "nl-a2-grammar.kun-je-me-helpen",
+        "gram.nl-a2-perfect",
+        "nl-a2-grammar.wat-heb-je-dit-weekend-gedaan",
+        "nl-a2-grammar.ik-heb-de-hele-dag-gewerkt",
+        "nl-a2-grammar.ik-ben-naar-amsterdam-gegaan",
+        "nl-a2-grammar.ik-heb-een-fiets-gekocht",
+        "nl-a2-grammar.qa.opbellen",
+        "nl-a2-grammar.qa.zaterdag-helpen",
+        "nl-a2-grammar.qa.weekend"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-grammar.het-huis-is-groot",
+      "text": "Het huis is groot, maar de tuin is klein.",
+      "es": "La casa es grande, pero el jardín es pequeño.",
+      "notes": "«het huis», «de tuin»: cada palabra con su artículo.",
+      "explanation": "Al describir una casa. «huis» con «ui» (una «ai» redondeada) y «tuin» igual: et JAIS, de TAIN.",
+      "register": "neutral",
+      "situation": "casa",
+      "tags": [
+        "articulos"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.de-huizen-zijn-duur",
+      "text": "De huizen in Utrecht zijn duur.",
+      "es": "Las casas en Utrecht son caras.",
+      "notes": "En plural siempre «de», aunque en singular sea «het huis».",
+      "explanation": "Tema de conversación típico. «uu» larga = «ü»: de JAI-se in Ü-trejt sein DÜÜR.",
+      "register": "neutral",
+      "situation": "casa",
+      "tags": [
+        "articulos",
+        "plural"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.onze-buren-zijn-aardig",
+      "text": "Onze buren zijn erg aardig.",
+      "es": "Nuestros vecinos son muy majos.",
+      "notes": "«onze» con plural y palabras «de»; «ons» con palabras «het»: «ons huis».",
+      "explanation": "Al hablar de tus vecinos. «aardig» con «aa» larga: ON-se BÜ-re sein erj AAR-daj.",
+      "register": "neutral",
+      "situation": "social",
+      "tags": [
+        "pronombres"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.is-dit-jouw-fiets",
+      "text": "Is dit jouw fiets of haar fiets?",
+      "es": "¿Esta bici es tuya o suya (de ella)?",
+      "notes": "«jouw» se usa para contrastar; sin énfasis se dice «je fiets».",
+      "explanation": "En la fietsenstalling o en el portal. «jouw» suena «yau»: is dit YAU fiits of JAAR fiits?",
+      "register": "tu",
+      "situation": "transporte",
+      "tags": [
+        "pronombres"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.woon-jij-hier-ook",
+      "text": "Woon jij hier ook?",
+      "es": "¿Tú también vives aquí?",
+      "notes": "«jij woont», pero «woon jij?»: con «jij» detrás se quita la «-t».",
+      "explanation": "A alguien en el portal o en la escalera. Sin «t»: VOON yei jiir OOK?",
+      "register": "tu",
+      "situation": "casa",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.hij-werkt-in-amsterdam",
+      "text": "Hij werkt in Amsterdam.",
+      "es": "Él trabaja en Ámsterdam.",
+      "notes": "«hij» + raíz + «t»: «werkt».",
+      "explanation": "Para hablar de alguien. Acento al final en «Amsterdam»: jei VERKT in am-ster-DAM.",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.morgen-ga-ik-naar-amsterdam",
+      "text": "Morgen ga ik naar Amsterdam.",
+      "es": "Mañana voy a Ámsterdam.",
+      "notes": "Empiezas por «morgen», así que el verbo va antes de «ik».",
+      "explanation": "Para contar tus planes. El verbo va segundo: MOR-je JAA ik naar am-ster-DAM.",
+      "register": "neutral",
+      "situation": "transporte",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.vandaag-werk-ik-thuis",
+      "text": "Vandaag werk ik thuis.",
+      "es": "Hoy trabajo desde casa.",
+      "notes": "V2: «Vandaag werk ik», nunca «Vandaag ik werk».",
+      "explanation": "A un compañero o en un mensaje al equipo. fan-DAAJ VERK ik TAIS.",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.waar-is-het-station",
+      "text": "Waar is het station?",
+      "es": "¿Dónde está la estación?",
+      "notes": "Palabra interrogativa + verbo + sujeto.",
+      "explanation": "Preguntando por la calle. «station» suena sta-SION: vaar is et sta-SION?",
+      "register": "neutral",
+      "situation": "transporte",
+      "tags": [
+        "preguntas"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.wanneer-begint-de-cursus",
+      "text": "Wanneer begint de cursus?",
+      "es": "¿Cuándo empieza el curso?",
+      "explanation": "En la escuela de idiomas o al apuntarte a algo. Acento en «neer»: va-NEER be-JINT de KUR-sus?",
+      "register": "neutral",
+      "situation": "casa",
+      "tags": [
+        "preguntas"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.heb-je-morgen-tijd",
+      "text": "Heb je morgen tijd?",
+      "es": "¿Tienes tiempo mañana?",
+      "explanation": "Para quedar con alguien. Sin «t»: «heb je». Suena JEP ye MOR-je TEIT?",
+      "register": "tu",
+      "situation": "social",
+      "tags": [
+        "preguntas"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.ik-heb-geen-auto",
+      "text": "Ik heb geen auto, ik heb een fiets.",
+      "es": "No tengo coche, tengo bici.",
+      "notes": "«een auto» → «geen auto»: nunca «niet een auto».",
+      "explanation": "Lo normal en Utrecht. «auto» suena «AU-to»: ik jep JEEN AU-to.",
+      "register": "neutral",
+      "situation": "transporte",
+      "tags": [
+        "negacion"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.dat-is-niet-duur",
+      "text": "Dat is niet duur.",
+      "es": "Eso no es caro.",
+      "notes": "Con adjetivos se usa «niet».",
+      "explanation": "En una tienda o un mercado. «niet» delante del adjetivo: dat is NIIT DÜÜR.",
+      "register": "neutral",
+      "situation": "compras",
+      "tags": [
+        "negacion"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.ik-heb-twee-zussen",
+      "text": "Ik heb twee zussen.",
+      "es": "Tengo dos hermanas.",
+      "explanation": "Al hablar de tu familia. «zus» → «zussen»: la «s» se dobla tras vocal corta. ik jep TVEE SU-se.",
+      "register": "neutral",
+      "situation": "presentarse",
+      "tags": [
+        "plural"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.twee-broodjes-kaas",
+      "text": "Twee broodjes kaas, alsjeblieft.",
+      "es": "Dos bocadillos de queso, por favor.",
+      "notes": "«broodje» es diminutivo de «brood»; el plural de -je es «-s».",
+      "explanation": "En la panadería o la cantina. «oo» larga y «tj» suave: TVEE BROO-tyes KAAS.",
+      "register": "tu",
+      "situation": "comida",
+      "tags": [
+        "diminutivos",
+        "plural"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.zullen-we-een-biertje-drinken",
+      "text": "Zullen we een biertje drinken?",
+      "es": "¿Nos tomamos una cerveza?",
+      "notes": "El diminutivo hace la propuesta más ligera e informal.",
+      "explanation": "Para proponer algo a un compañero o un amigo. «biertje» suena BIIR-tye.",
+      "register": "tu",
+      "situation": "social",
+      "tags": [
+        "diminutivos"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.wil-je-een-kopje-koffie",
+      "text": "Wil je een kopje koffie?",
+      "es": "¿Quieres una taza de café?",
+      "notes": "«een kopje koffie» = una taza de café: el diminutivo es lo normal.",
+      "explanation": "Te lo ofrecerán al llegar a cualquier casa u oficina. «kopje» = KOP-ye.",
+      "register": "tu",
+      "situation": "comida",
+      "tags": [
+        "diminutivos"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.mag-ik-even-een-vraagje-stellen",
+      "text": "Mag ik even een vraagje stellen?",
+      "es": "¿Te puedo hacer una preguntita?",
+      "notes": "«even» y el diminutivo «vraagje» suavizan: no es que la pregunta sea pequeña.",
+      "explanation": "Para interrumpir con educación a un compañero o en una tienda. Suena maj ik EE-fe en FRAAJ-ye STE-le?",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "diminutivos"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.ik-bel-je-morgen-op",
+      "text": "Ik bel je morgen op.",
+      "es": "Te llamo mañana.",
+      "notes": "«bel … op» = opbellen: la partícula va al final.",
+      "explanation": "Para quedar en llamar a un amigo o una compañera. La partícula «op» va al final: ik BEL ye MOR-je OP.",
+      "register": "tu",
+      "situation": "comunicacion",
+      "tags": [
+        "separables"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.kun-je-me-straks-opbellen",
+      "text": "Kun je me straks opbellen?",
+      "es": "¿Me puedes llamar luego?",
+      "notes": "Con un modal, el separable va entero al final: «opbellen».",
+      "explanation": "Cuando no puedes hablar ahora. Con «kun je», el verbo entero al final y acento en «op»: OP-be-le.",
+      "register": "tu",
+      "situation": "comunicacion",
+      "tags": [
+        "separables"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.de-trein-komt-om-drie-uur-aan",
+      "text": "De trein komt om drie uur aan.",
+      "es": "El tren llega a las tres.",
+      "notes": "«komt … aan» = aankomen (llegar): la partícula al final.",
+      "explanation": "Para decir cuándo llegas. «trein» con «ei»: de TREIN komt om DRII ÜÜR AAN.",
+      "register": "neutral",
+      "situation": "transporte",
+      "tags": [
+        "separables"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.ik-neem-mijn-paspoort-mee",
+      "text": "Ik neem mijn paspoort mee.",
+      "es": "Me llevo el pasaporte.",
+      "notes": "«neem … mee» = meenemen (llevarse): la partícula al final.",
+      "explanation": "Antes de una cita en la gemeente o en el banco. «ee» larga: ik NEEM mein PAS-poort MEE.",
+      "register": "neutral",
+      "situation": "tramites",
+      "tags": [
+        "separables"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.ik-moet-morgen-werken",
+      "text": "Ik moet morgen werken.",
+      "es": "Mañana tengo que trabajar.",
+      "notes": "«moeten» + infinitivo al final.",
+      "explanation": "Para rechazar un plan. El infinitivo al final: ik MUT MOR-je VER-ke.",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "modales"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.mag-ik-hier-zitten",
+      "text": "Mag ik hier zitten?",
+      "es": "¿Puedo sentarme aquí?",
+      "notes": "«mogen» pide permiso.",
+      "explanation": "En el tren, el tranvía o una terraza llena. «mag» con «g» de garganta: MAJ ik jiir SI-te?",
+      "register": "neutral",
+      "situation": "transporte",
+      "tags": [
+        "modales"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.kun-je-me-helpen",
+      "text": "Kun je me even helpen?",
+      "es": "¿Me ayudas un momento?",
+      "notes": "«kunnen» pide un favor; con «u»: «Kunt u mij even helpen?».",
+      "explanation": "A un compañero o un vecino. «helpen» con «h» aspirada: kun ye me EE-fe JEL-pe?",
+      "register": "tu",
+      "situation": "social",
+      "tags": [
+        "modales"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.wat-heb-je-dit-weekend-gedaan",
+      "text": "Wat heb je dit weekend gedaan?",
+      "es": "¿Qué hiciste este fin de semana?",
+      "notes": "Perfecto: «hebben» + participio al final.",
+      "explanation": "El lunes en el trabajo, la pregunta de siempre. «gedaan» con «g» de garganta: wat jep ye dit VII-kent je-DAAN?",
+      "register": "tu",
+      "situation": "social",
+      "tags": [
+        "perfecto"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.ik-heb-de-hele-dag-gewerkt",
+      "text": "Ik heb de hele dag gewerkt.",
+      "es": "He trabajado todo el día.",
+      "notes": "«werken» → «gewerkt»: «k» está en «'t kofschip», así que «-t».",
+      "explanation": "Al final de un día largo. «gewerkt» con «-t» final: je-VERKT.",
+      "register": "neutral",
+      "situation": "trabajo",
+      "tags": [
+        "perfecto"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.ik-ben-naar-amsterdam-gegaan",
+      "text": "Ik ben naar Amsterdam gegaan.",
+      "es": "Fui a Ámsterdam.",
+      "notes": "Movimiento hacia un sitio: con «zijn», no con «hebben».",
+      "explanation": "Para contar una excursión. Dos «g» de garganta en «gegaan»: je-JAAN.",
+      "register": "neutral",
+      "situation": "transporte",
+      "tags": [
+        "perfecto"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.ik-heb-een-fiets-gekocht",
+      "text": "Ik heb een fiets gekocht.",
+      "es": "Me he comprado una bici.",
+      "notes": "«kopen» → «gekocht»: participio irregular.",
+      "explanation": "Para contar una compra. «gekocht» con «ch» de garganta: je-KOJT.",
+      "register": "neutral",
+      "situation": "compras",
+      "tags": [
+        "perfecto"
+      ]
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-grammar.huis",
+      "word": "huis",
+      "article": "het",
+      "plural": "huizen",
+      "es": "la casa",
+      "notes": "Palabra «het»: «het huis», pero «de huizen».",
+      "example": "nl-a2-grammar.het-huis-is-groot",
+      "situation": "casa",
+      "tags": [
+        "articulos"
+      ],
+      "image": "fluent:house"
+    },
+    {
+      "id": "nl-a2-grammar.tuin",
+      "word": "tuin",
+      "article": "de",
+      "plural": "tuinen",
+      "es": "el jardín",
+      "situation": "casa",
+      "tags": [
+        "articulos"
+      ],
+      "image": "fluent:potted-plant"
+    },
+    {
+      "id": "nl-a2-grammar.tafel",
+      "word": "tafel",
+      "article": "de",
+      "plural": "tafels",
+      "es": "la mesa",
+      "notes": "Termina en -el: plural con «-s».",
+      "situation": "casa",
+      "tags": [
+        "articulos"
+      ]
+    },
+    {
+      "id": "nl-a2-grammar.stoel",
+      "word": "stoel",
+      "article": "de",
+      "plural": "stoelen",
+      "es": "la silla",
+      "situation": "casa",
+      "tags": [
+        "articulos"
+      ],
+      "image": "fluent:chair"
+    },
+    {
+      "id": "nl-a2-grammar.meisje",
+      "word": "meisje",
+      "article": "het",
+      "plural": "meisjes",
+      "es": "la chica",
+      "notes": "Es un diminutivo, así que es «het», aunque sea una chica.",
+      "situation": "social",
+      "tags": [
+        "diminutivos"
+      ],
+      "image": "fluent:girl"
+    },
+    {
+      "id": "nl-a2-grammar.biertje",
+      "word": "biertje",
+      "article": "het",
+      "plural": "biertjes",
+      "es": "la cerveza (una caña)",
+      "example": "nl-a2-grammar.zullen-we-een-biertje-drinken",
+      "situation": "comida",
+      "tags": [
+        "diminutivos"
+      ],
+      "image": "fluent:beer-mug"
+    },
+    {
+      "id": "nl-a2-grammar.broodje",
+      "word": "broodje",
+      "article": "het",
+      "plural": "broodjes",
+      "es": "el bocadillo, el panecillo",
+      "notes": "El almuerzo típico holandés.",
+      "example": "nl-a2-grammar.twee-broodjes-kaas",
+      "situation": "comida",
+      "tags": [
+        "diminutivos"
+      ],
+      "image": "fluent:sandwich"
+    },
+    {
+      "id": "nl-a2-grammar.kopje",
+      "word": "kopje",
+      "article": "het",
+      "plural": "kopjes",
+      "es": "la taza",
+      "example": "nl-a2-grammar.wil-je-een-kopje-koffie",
+      "situation": "comida",
+      "tags": [
+        "diminutivos"
+      ],
+      "image": "fluent:hot-beverage"
+    },
+    {
+      "id": "nl-a2-grammar.auto",
+      "word": "auto",
+      "article": "de",
+      "plural": "auto's",
+      "es": "el coche",
+      "example": "nl-a2-grammar.ik-heb-geen-auto",
+      "situation": "transporte",
+      "tags": [
+        "plural"
+      ],
+      "image": "fluent:automobile"
+    },
+    {
+      "id": "nl-a2-grammar.tijd",
+      "word": "tijd",
+      "article": "de",
+      "es": "el tiempo (horas, minutos)",
+      "notes": "«tijd» es tiempo de reloj; el tiempo que hace es «het weer».",
+      "situation": "casa"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-grammar.qa.woon-jij-hier",
+      "question": "Hoi! Woon jij ook in dit huis?",
+      "questionEs": "¡Hola! ¿Tú también vives en esta casa?",
+      "accepted": [
+        {
+          "text": "Ja, ik woon hier ook.",
+          "es": "Sí, yo también vivo aquí."
+        },
+        {
+          "text": "Ja, ik ben net verhuisd.",
+          "es": "Sí, me acabo de mudar."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik woont hier ook.",
+          "es": "Sí, yo también vivo aquí (con error)."
+        },
+        {
+          "text": "Nee, ik woon hier geen.",
+          "es": "No, no vivo aquí (negación mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "Con «ik», sin «-t»: «ik woon». Con un verbo se niega con «niet»: «ik woon hier niet».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-grammar.qa.morgen",
+      "question": "Wat ga je morgen doen?",
+      "questionEs": "¿Qué vas a hacer mañana?",
+      "accepted": [
+        {
+          "text": "Morgen ga ik naar Amsterdam.",
+          "es": "Mañana voy a Ámsterdam."
+        },
+        {
+          "text": "Morgen werk ik thuis.",
+          "es": "Mañana trabajo desde casa."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Morgen ik ga naar Amsterdam.",
+          "es": "Mañana yo voy a Ámsterdam (orden mal)."
+        },
+        {
+          "text": "Morgen ik werk thuis.",
+          "es": "Mañana yo trabajo en casa (orden mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "Si empiezas por «morgen», el verbo va segundo y «ik» detrás: «Morgen ga ik…».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-grammar.qa.auto",
+      "question": "Heb je een auto?",
+      "questionEs": "¿Tienes coche?",
+      "accepted": [
+        {
+          "text": "Nee, ik heb geen auto. Ik heb een fiets.",
+          "es": "No, no tengo coche. Tengo bici."
+        },
+        {
+          "text": "Nee, ik fiets overal naartoe.",
+          "es": "No, voy a todas partes en bici."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik heb niet een auto.",
+          "es": "No, no tengo un coche (negación mal)."
+        },
+        {
+          "text": "Nee, ik heb een auto niet.",
+          "es": "No, no tengo un coche (orden mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "transporte",
+      "notes": "«een auto» se niega con «geen»: «Ik heb geen auto».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-grammar.qa.opbellen",
+      "question": "Bel je me morgen?",
+      "questionEs": "¿Me llamas mañana?",
+      "accepted": [
+        {
+          "text": "Ja, ik bel je morgen op.",
+          "es": "Sí, te llamo mañana."
+        },
+        {
+          "text": "Ja, ik bel je om tien uur.",
+          "es": "Sí, te llamo a las diez."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik opbel je morgen.",
+          "es": "Sí, te llamo mañana (partícula mal)."
+        },
+        {
+          "text": "Ja, ik bel op je morgen.",
+          "es": "Sí, te llamo mañana (orden mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "comunicacion",
+      "notes": "En «opbellen», la partícula «op» va al final de la frase: «Ik bel je morgen op».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-grammar.qa.zaterdag-helpen",
+      "question": "Kun je zaterdag helpen met verhuizen?",
+      "questionEs": "¿Puedes ayudar el sábado con la mudanza?",
+      "accepted": [
+        {
+          "text": "Ja, ik kan zaterdag helpen.",
+          "es": "Sí, el sábado puedo ayudar."
+        },
+        {
+          "text": "Sorry, zaterdag moet ik werken.",
+          "es": "Lo siento, el sábado tengo que trabajar."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sorry, zaterdag ik moet werken.",
+          "es": "Lo siento, el sábado yo tengo que trabajar (orden mal)."
+        },
+        {
+          "text": "Sorry, zaterdag moet ik te werken.",
+          "es": "Lo siento, el sábado tengo que a trabajar (mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "Tras «zaterdag», el verbo va segundo: «moet ik». Con los modales no se pone «te»: «moet ik werken».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-grammar.qa.weekend",
+      "question": "Wat heb je dit weekend gedaan?",
+      "questionEs": "¿Qué hiciste este fin de semana?",
+      "accepted": [
+        {
+          "text": "Ik ben naar Amsterdam gegaan.",
+          "es": "Fui a Ámsterdam."
+        },
+        {
+          "text": "Ik heb een fiets gekocht.",
+          "es": "Me compré una bici."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb naar Amsterdam gegaan.",
+          "es": "Fui a Ámsterdam (auxiliar mal)."
+        },
+        {
+          "text": "Ik ben een fiets gekocht.",
+          "es": "Me compré una bici (auxiliar mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "Ir a un sitio va con «zijn» («ik ben gegaan»); comprar, con «hebben» («ik heb gekocht»).",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.nl-a2-de-het",
+      "title": "«De» y «het»: los artículos",
+      "summary": "Hay dos artículos: «de» (la mayoría de palabras) y «het» (más o menos una de cada cuatro). «een» (un, una) vale para los dos. Apréndete cada palabra con su artículo.",
+      "points": [
+        "En plural siempre es «de»: «het huis» → «de huizen».",
+        "Los diminutivos (-je) siempre son «het»: «het huisje», «het biertje».",
+        "Las personas y las palabras en -heid y -ing suelen ser «de»: «de man», «de vrijheid», «de woning».",
+        "Los idiomas, los infinitivos y casi todas las palabras en -ment y -um son «het»: «het Nederlands», «het eten», «het appartement», «het museum».",
+        "Error típico: «de huis». Si no lo sabes, «een» te salva: «een huis»."
+      ],
+      "table": [
+        [
+          "",
+          "singular",
+          "plural"
+        ],
+        [
+          "de",
+          "de tafel",
+          "de tafels"
+        ],
+        [
+          "het",
+          "het huis",
+          "de huizen"
+        ],
+        [
+          "diminutivo",
+          "het tafeltje",
+          "de tafeltjes"
+        ],
+        [
+          "indefinido",
+          "een tafel / een huis",
+          "tafels / huizen"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Het huis is groot, maar de tuin is klein.",
+          "es": "La casa es grande, pero el jardín es pequeño."
+        },
+        {
+          "text": "De huizen in Utrecht zijn duur.",
+          "es": "Las casas en Utrecht son caras."
+        },
+        {
+          "text": "Ik heb een stoel en een tafel.",
+          "es": "Tengo una silla y una mesa."
+        }
+      ],
+      "tags": [
+        "articulos"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-pronouns",
+      "title": "Pronombres y posesivos",
+      "summary": "Muchos pronombres tienen una forma con acento (jij, zij, wij) y otra sin acento (je, ze, we). Al hablar se usa sobre todo la corta; la larga es para destacar o contrastar.",
+      "points": [
+        "«u» es el «usted»: sirve para una persona o varias, y el verbo va como con «hij»: «u woont».",
+        "«jullie» es «vosotros»; «zij/ze» puede ser «ella» o «ellos».",
+        "Posesivos: «mijn, jouw/je, uw, zijn, haar, ons/onze, jullie, hun».",
+        "«ons» con palabras «het» en singular («ons huis»); «onze» con el resto («onze buren», «onze stad»)."
+      ],
+      "table": [
+        [
+          "persona",
+          "sujeto",
+          "posesivo"
+        ],
+        [
+          "yo",
+          "ik",
+          "mijn"
+        ],
+        [
+          "tú",
+          "jij / je",
+          "jouw / je"
+        ],
+        [
+          "usted",
+          "u",
+          "uw"
+        ],
+        [
+          "él",
+          "hij",
+          "zijn"
+        ],
+        [
+          "ella",
+          "zij / ze",
+          "haar"
+        ],
+        [
+          "nosotros",
+          "wij / we",
+          "ons / onze"
+        ],
+        [
+          "vosotros",
+          "jullie",
+          "jullie"
+        ],
+        [
+          "ellos",
+          "zij / ze",
+          "hun"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Is dit jouw fiets of haar fiets?",
+          "es": "¿Esta bici es tuya o suya?"
+        },
+        {
+          "text": "Onze buren zijn erg aardig.",
+          "es": "Nuestros vecinos son muy majos."
+        },
+        {
+          "text": "Wat is uw adres?",
+          "es": "¿Cuál es su dirección?"
+        }
+      ],
+      "tags": [
+        "pronombres"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-present",
+      "title": "El presente",
+      "summary": "Quita «-en» al infinitivo y tienes la raíz: «werken» → «werk». «ik» usa la raíz; «jij», «u», «hij/zij» añaden «-t»; en plural vuelve el infinitivo.",
+      "points": [
+        "Si «jij/je» va detrás del verbo, se pierde la «-t»: «jij woont», pero «Woon jij hier?». Con «u» no se pierde: «Woont u hier?».",
+        "Ortografía: la vocal larga se mantiene escrita: «wonen» → «ik woon»; consonante doble se simplifica: «zitten» → «ik zit».",
+        "Si la raíz acaba en «-t», no se añade otra: «hij zit», «jij eet».",
+        "«zijn» (ser/estar) y «hebben» (tener) son irregulares: apréndelos de memoria."
+      ],
+      "table": [
+        [
+          "",
+          "wonen",
+          "zijn",
+          "hebben"
+        ],
+        [
+          "ik",
+          "woon",
+          "ben",
+          "heb"
+        ],
+        [
+          "jij / u",
+          "woont",
+          "bent",
+          "hebt / heeft"
+        ],
+        [
+          "hij / zij",
+          "woont",
+          "is",
+          "heeft"
+        ],
+        [
+          "wij / jullie / zij",
+          "wonen",
+          "zijn",
+          "hebben"
+        ],
+        [
+          "¿… jij?",
+          "woon jij?",
+          "ben jij?",
+          "heb jij?"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Ik woon in Utrecht.",
+          "es": "Vivo en Utrecht."
+        },
+        {
+          "text": "Woon jij hier ook?",
+          "es": "¿Tú también vives aquí?"
+        },
+        {
+          "text": "Hij werkt in Amsterdam.",
+          "es": "Él trabaja en Ámsterdam."
+        }
+      ],
+      "tags": [
+        "presente"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-word-order",
+      "title": "El verbo va en segundo lugar (V2)",
+      "summary": "En una frase normal, el verbo conjugado ocupa siempre la segunda posición. Si empiezas por otra cosa (un tiempo, un lugar), el sujeto pasa detrás del verbo.",
+      "points": [
+        "«Ik ga morgen naar Amsterdam» → «Morgen ga ik naar Amsterdam».",
+        "El error típico es el orden español: «Morgen ik ga…».",
+        "La primera posición puede ser larga: «In het weekend» o «Op mijn werk» cuentan como una sola.",
+        "Los infinitivos y participios van al final: «Morgen wil ik naar Amsterdam gaan»."
+      ],
+      "table": [
+        [
+          "1",
+          "2 (verbo)",
+          "resto"
+        ],
+        [
+          "Ik",
+          "ga",
+          "morgen naar Amsterdam."
+        ],
+        [
+          "Morgen",
+          "ga",
+          "ik naar Amsterdam."
+        ],
+        [
+          "In het weekend",
+          "fiets",
+          "ik graag."
+        ],
+        [
+          "Op maandag",
+          "werk",
+          "ik niet."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Morgen ga ik naar Amsterdam.",
+          "es": "Mañana voy a Ámsterdam."
+        },
+        {
+          "text": "Vandaag werk ik thuis.",
+          "es": "Hoy trabajo desde casa."
+        },
+        {
+          "text": "In het weekend fiets ik graag.",
+          "es": "Los fines de semana me gusta ir en bici."
+        }
+      ],
+      "tags": [
+        "orden"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-questions",
+      "title": "Hacer preguntas",
+      "summary": "Preguntas de sí o no: el verbo va primero («Spreekt u Engels?»). Con palabra interrogativa, la palabra va primero y el verbo justo detrás («Waar woon je?»).",
+      "points": [
+        "Palabras interrogativas: wat (qué), wie (quién), waar (dónde), wanneer (cuándo), hoe (cómo), hoeveel (cuánto), waarom (por qué), welk/welke (cuál).",
+        "«welke» con palabras «de» y con plurales; «welk» con palabras «het» en singular: «welk huis?», «welke dag?».",
+        "Recuerda: con «je/jij» detrás, el verbo pierde la «-t»: «Waar woon je?».",
+        "«Hoe laat?» = ¿a qué hora?; «Hoe oud?» = ¿cuántos años?"
+      ],
+      "table": [
+        [
+          "tipo",
+          "ejemplo"
+        ],
+        [
+          "sí / no",
+          "Spreekt u Engels?"
+        ],
+        [
+          "sí / no con je",
+          "Heb je tijd?"
+        ],
+        [
+          "wat",
+          "Wat doe je?"
+        ],
+        [
+          "waar",
+          "Waar is het station?"
+        ],
+        [
+          "wanneer",
+          "Wanneer begint de cursus?"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Waar is het station?",
+          "es": "¿Dónde está la estación?"
+        },
+        {
+          "text": "Wanneer begint de cursus?",
+          "es": "¿Cuándo empieza el curso?"
+        },
+        {
+          "text": "Heb je morgen tijd?",
+          "es": "¿Tienes tiempo mañana?"
+        }
+      ],
+      "tags": [
+        "preguntas"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-niet-geen",
+      "title": "«Niet» o «geen»",
+      "summary": "«geen» niega un sustantivo que llevaría «een» o ningún artículo: «Ik heb geen auto». «niet» niega todo lo demás: verbos, adjetivos, nombres con «de/het», y suele ir al final.",
+      "points": [
+        "«een auto» → «geen auto»; «tijd» → «geen tijd».",
+        "«de auto» → «niet»: «Ik zie de auto niet».",
+        "Con adjetivos y lugares, «niet» va delante: «niet duur», «niet in Utrecht».",
+        "Error típico: «Ik heb niet een auto» → «Ik heb geen auto»."
+      ],
+      "table": [
+        [
+          "afirmativo",
+          "negativo"
+        ],
+        [
+          "Ik heb een fiets.",
+          "Ik heb geen fiets."
+        ],
+        [
+          "Ik heb tijd.",
+          "Ik heb geen tijd."
+        ],
+        [
+          "Ik werk vandaag.",
+          "Ik werk vandaag niet."
+        ],
+        [
+          "Het is duur.",
+          "Het is niet duur."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Ik heb geen auto, ik heb een fiets.",
+          "es": "No tengo coche, tengo bici."
+        },
+        {
+          "text": "Dat is niet duur.",
+          "es": "Eso no es caro."
+        },
+        {
+          "text": "Ik begrijp het niet.",
+          "es": "No lo entiendo."
+        }
+      ],
+      "tags": [
+        "negacion"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-plural",
+      "title": "El plural: -en o -s",
+      "summary": "La mayoría de palabras hace el plural con «-en» («boek» → «boeken»). Las que acaban en -el, -er, -em, -en, -je y muchas palabras extranjeras, con «-s» («tafel» → «tafels»).",
+      "points": [
+        "Vocal larga: se escribe doble en singular y sencilla en plural: «jaar» → «jaren», «straat» → «straten».",
+        "Vocal corta: la consonante se dobla: «bus» → «bussen», «zus» → «zussen».",
+        "f → v y s → z: «brief» → «brieven», «huis» → «huizen».",
+        "Tras vocal, apóstrofo: «auto's», «euro's», «collega's». Irregulares: «kind» → «kinderen», «stad» → «steden»."
+      ],
+      "table": [
+        [
+          "singular",
+          "plural",
+          "regla"
+        ],
+        [
+          "boek",
+          "boeken",
+          "-en"
+        ],
+        [
+          "tafel",
+          "tafels",
+          "-s"
+        ],
+        [
+          "straat",
+          "straten",
+          "aa → a"
+        ],
+        [
+          "zus",
+          "zussen",
+          "doble consonante"
+        ],
+        [
+          "huis",
+          "huizen",
+          "s → z"
+        ],
+        [
+          "auto",
+          "auto's",
+          "-'s"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Twee broodjes kaas, alsjeblieft.",
+          "es": "Dos bocadillos de queso, por favor."
+        },
+        {
+          "text": "De huizen in Utrecht zijn duur.",
+          "es": "Las casas en Utrecht son caras."
+        },
+        {
+          "text": "Ik heb twee zussen.",
+          "es": "Tengo dos hermanas."
+        }
+      ],
+      "tags": [
+        "plural"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-separable-verbs",
+      "title": "Verbos separables",
+      "summary": "Muchos verbos tienen una partícula delante (op-bellen, mee-nemen, af-spreken, in-checken). Conjugados, la partícula se separa y va al final de la frase: «Ik bel je morgen op».",
+      "points": [
+        "Con un modal o «gaan», el verbo va entero al final: «Ik wil je opbellen», «Ik ga je opbellen».",
+        "El acento va en la partícula: OPbellen, MEEnemen, AFspreken.",
+        "En el perfecto, «ge» va entre la partícula y el verbo: «opgebeld», «meegenomen».",
+        "Error típico: dejar la partícula pegada: «Ik opbel je»."
+      ],
+      "table": [
+        [
+          "infinitivo",
+          "presente",
+          "con modal"
+        ],
+        [
+          "opbellen",
+          "Ik bel je op.",
+          "Ik wil je opbellen."
+        ],
+        [
+          "meenemen",
+          "Ik neem mijn paspoort mee.",
+          "Ik moet mijn paspoort meenemen."
+        ],
+        [
+          "aankomen",
+          "De trein komt om drie uur aan.",
+          "De trein moet om drie uur aankomen."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Ik bel je morgen op.",
+          "es": "Te llamo mañana."
+        },
+        {
+          "text": "De trein komt om drie uur aan.",
+          "es": "El tren llega a las tres."
+        },
+        {
+          "text": "Kun je me straks opbellen?",
+          "es": "¿Me puedes llamar luego?"
+        }
+      ],
+      "tags": [
+        "separables"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-modals",
+      "title": "Verbos modales: kunnen, willen, moeten, mogen",
+      "summary": "Los modales van en segunda posición y el otro verbo, en infinitivo, al final de la frase: «Ik moet morgen werken».",
+      "points": [
+        "kunnen = poder (capacidad); willen = querer; moeten = tener que; mogen = poder (permiso).",
+        "«Mag ik…?» pide permiso: «Mag ik hier zitten?». «Kunt u…?» pide un favor: «Kunt u mij helpen?».",
+        "Con «ik» y «hij» no llevan «-t»: «ik kan, hij kan», «ik wil, hij wil», «ik mag, hij mag».",
+        "«Ik wil graag…» es la forma educada de pedir algo."
+      ],
+      "table": [
+        [
+          "",
+          "kunnen",
+          "willen",
+          "moeten",
+          "mogen"
+        ],
+        [
+          "ik",
+          "kan",
+          "wil",
+          "moet",
+          "mag"
+        ],
+        [
+          "jij / u",
+          "kunt (kun je?)",
+          "wilt (wil je?)",
+          "moet",
+          "mag"
+        ],
+        [
+          "hij / zij",
+          "kan",
+          "wil",
+          "moet",
+          "mag"
+        ],
+        [
+          "wij / jullie / zij",
+          "kunnen",
+          "willen",
+          "moeten",
+          "mogen"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Ik moet morgen werken.",
+          "es": "Mañana tengo que trabajar."
+        },
+        {
+          "text": "Mag ik hier zitten?",
+          "es": "¿Puedo sentarme aquí?"
+        },
+        {
+          "text": "Kun je me helpen?",
+          "es": "¿Me puedes ayudar?"
+        }
+      ],
+      "tags": [
+        "modales"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-diminutives",
+      "title": "Diminutivos: -je, -tje, -pje, -etje",
+      "summary": "Los diminutivos están por todas partes y no siempre significan «pequeño»: hacen la frase más amable o informal («een biertje», «even een vraagje»). Siempre son «het».",
+      "points": [
+        "-je es lo normal: «het brood» → «het broodje».",
+        "-tje tras vocal larga, diptongo o vocal larga + l, n, r: «het biertje», «het stoeltje», «het treintje».",
+        "-pje tras -m: «de boom» → «het boompje».",
+        "-etje tras vocal corta + l, m, n, r, ng: «de man» → «het mannetje», «de bal» → «het balletje».",
+        "Algunas palabras casi solo existen así: «het broodje» (bocadillo), «het meisje» (chica), «het kopje» (taza)."
+      ],
+      "table": [
+        [
+          "palabra",
+          "diminutivo",
+          "terminación"
+        ],
+        [
+          "het brood",
+          "het broodje",
+          "-je"
+        ],
+        [
+          "het bier",
+          "het biertje",
+          "-tje"
+        ],
+        [
+          "de boom",
+          "het boompje",
+          "-pje"
+        ],
+        [
+          "de man",
+          "het mannetje",
+          "-etje"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Zullen we een biertje drinken?",
+          "es": "¿Nos tomamos una cerveza?"
+        },
+        {
+          "text": "Wil je een kopje koffie?",
+          "es": "¿Quieres una taza de café?"
+        },
+        {
+          "text": "Mag ik even een vraagje stellen?",
+          "es": "¿Te puedo hacer una preguntita?"
+        }
+      ],
+      "tags": [
+        "diminutivos"
+      ]
+    },
+    {
+      "id": "gram.nl-a2-perfect",
+      "title": "El perfecto: heb gewerkt, ben gegaan",
+      "summary": "Para contar lo que has hecho se usa «hebben» o «zijn» + participio al final: «Ik heb gewerkt». Es el pasado normal al hablar: «Wat heb je gedaan?».",
+      "points": [
+        "Participio regular: ge + raíz + t/d. Es «-t» si la raíz acaba en una consonante de «'t kofschip» (t, k, f, s, ch, p): «gewerkt», «gefietst»; si no, «-d»: «gewoond», «gebeld».",
+        "Muchos verbos frecuentes son irregulares: gaan → gegaan, doen → gedaan, zien → gezien, eten → gegeten, kopen → gekocht.",
+        "«zijn» con movimiento hacia un sitio y cambios: «Ik ben naar Amsterdam gegaan», «Ik ben verhuisd».",
+        "Sin «ge» si el verbo empieza por be-, ver-, ge-, her-, ont-: «betaald», «verhuisd»."
+      ],
+      "table": [
+        [
+          "infinitivo",
+          "perfecto",
+          "auxiliar"
+        ],
+        [
+          "werken",
+          "ik heb gewerkt",
+          "hebben"
+        ],
+        [
+          "wonen",
+          "ik heb gewoond",
+          "hebben"
+        ],
+        [
+          "kopen",
+          "ik heb gekocht",
+          "hebben"
+        ],
+        [
+          "gaan",
+          "ik ben gegaan",
+          "zijn"
+        ],
+        [
+          "verhuizen",
+          "ik ben verhuisd",
+          "zijn"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Wat heb je dit weekend gedaan?",
+          "es": "¿Qué hiciste este fin de semana?"
+        },
+        {
+          "text": "Ik ben naar Amsterdam gegaan.",
+          "es": "Fui a Ámsterdam."
+        },
+        {
+          "text": "Ik heb een fiets gekocht.",
+          "es": "Me compré una bici."
+        }
+      ],
+      "tags": [
+        "perfecto"
+      ]
+    }
+  ]
+}
