@@ -20,7 +20,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T135 — Dutch pack foundation and brief
-- Status: running (attempt 1)
+- Status: done
 - Depends on: none
 - Goal: Create `content/nl/pack.json` and `docs/brief-nl.md` so A2 and B1 content can be written in parallel, plus any small generic code change Dutch needs.
 - Context: plans/008-ingles.md and plans/009-ruso.md (foundation tasks T90 / T111), docs/brief-en.md and docs/brief-ru.md as the brief models, `content/en/pack.json`, `src/lib/content/schema.ts` (Register / FormalRegister), `src/components/dialogue/DialogueSimulator.tsx` (FORMAL_PRONOUN), `src/lib/coach/practice.ts`, `src/lib/exercises/normalize.ts` and the speech scoring, `api/_lib/languages.ts`.
@@ -30,7 +30,7 @@ Worktree setup: npm ci
   - The `nl` pack loads but is hidden while it has no lessons (existing empty-pack behaviour), or shows an empty-level message; formal dialogues show "(u)" as the pronoun if the register map supports it.
   - Dutch matching: answers typed without diacritics (`een` for `één`, `ideeen` for `ideeën`) are accepted, if the existing normalization does not already do so (generic, not Dutch-named).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Dutch pack.json (A2/B1, nl-NL voices, new generic register 'u'), docs/brief-nl.md; diacritics already folded — e973589
 
 ## T136 — A2 units 1–4 (with the grammar unit)
 - Status: pending
@@ -157,8 +157,11 @@ Worktree setup: npm ci
 
 ## Decisions
 - 2026-10-08 Hernán: levels A2 + B1; goal live/work in the Netherlands, guided by inburgering themes; nl-NL voices; English-sized volume per level; mixed je/u; base Utrecht plus other cities; A2 and B1 built in parallel.
+- 2026-10-08 T135: new generic register value `u` (badge 'Trato de usted (u)'); voices Fenna=narrator, Maarten=men, Colette=women (only 3 nl-NL voices), stories quote ≤1 man + 1 woman; new situation `tramites`; equivalents 't/m'n/z'n; placement 12 questions (6+6); cast Diego (Zaragoza), Femke, Ria + Sanne, Joost, Lucía, Martina at B1 (agent)
 
 ## Proposals (new scope)
+- 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
 
 ## Log
 - 2026-10-08 23:27 T135 launched · attempt 1 · agent ada48689fcc653b83
+- 2026-10-08 23:34 T135 done · branch worktree-agent-ada48689fcc653b83 → e973589
