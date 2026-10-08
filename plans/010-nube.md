@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-07 23:52Z 💻
+- Updated: 2026-10-08 06:46Z 💻
 - Writer: me (💻 desktop)
 - Branch: plan-010-nube @ 3aa09ea · pushed (main merged in)
-- Next step: all tasks done; code review T130–T134 + iPhone visual pass
-- Needs Hernán: npx supabase db push (new migration) before any deploy; OK to merge into main
+- Next step: code review T130–T134 + iPhone visual pass
+- Needs Hernán: iPhone visual pass; deploy when he asks
 
 ## Shared contract (all tasks read this)
 
@@ -144,6 +144,7 @@ Worktree setup: npm ci
 - 2026-10-07 T133: syncNow uploads when no cloud copy is known (after Borrar); lastError clears when data returns to the last uploaded hash; extra status lines (Comprobando tu cuenta…, Guardando…, No hay copia en la nube…, copia sin restaurar); with the switch off Guardar ahora and Restaurar are hidden, Borrar stays. (agent)
 - 2026-10-07 T134: scope adds BackupSection intro copy ("Tu progreso solo está en este dispositivo…") pointing to the cloud card when Liga is on. (orchestrator)
 - 2026-10-07 T134: user_changed now also resets lang-lern:cloud-save (keeps enabled); delete confirmation copy lives in src/components/league/AccountSection.tsx (text only). (agent)
+- 2026-10-08 plan: migration 20261008000000_league_save.sql applied to the real project by Hernán; merge into main approved. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-07 plan: field-by-field merge of two copies (max XP, union of lessons and SRS by latest review) instead of choosing a whole copy.
@@ -163,3 +164,4 @@ Worktree setup: npm ci
 - 2026-10-07 23:11Z 💻 T134 launched · attempt 1 · agent a0425436ef40bd0a5 (+ BackupSection intro copy when Liga is on)
 - 2026-10-07 23:16Z 💻 T134 done · worktree-agent-a0425436ef40bd0a5 → 9d19829 · verify ✓ · db:check ✓; all tasks done, queues open
 - 2026-10-07 23:52Z 💻 merged origin/main (84 commits) → 3aa09ea; verify ✓ · db:check ✓ (264) · league:local:check ✓ (50)
+- 2026-10-08 06:46Z 💻 Hernán ran npx supabase db push and approved the merge into main; checks green (verify, db:check 264, league:local:check 50); main fast-forwarded
