@@ -44,14 +44,14 @@ Worktree setup: npm ci
 - Outcome: units 10 hello, 12 numbers, 20 about-me, 90 grammar (188 phrases, 130 vocab, 33 Q&A, 11 cards) — 49b2083
 
 ## T137 — A2 units 5–8
-- Status: running (attempt 1)
+- Status: done
 - Depends on: T136
 - Goal: Write A2 units 5–8 from brief-nl.md, reusing earlier items by id.
 - Context: Shared contract, docs/brief-nl.md, T136's units.
 - Scope: may touch `content/nl/units/` (these units only) / must not touch `content/nl/pack.json`, other units, other packs.
 - Done when:
   - 4 unit files at the brief's volume; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units 22 gemeente, 30 housing, 32 bank, 40 shopping (192 phrases, 135 vocab, 36 Q&A) — 6e02f4e
 
 ## T138 — A2 units 9–11 (A2 complete)
 - Status: pending
@@ -74,14 +74,14 @@ Worktree setup: npm ci
 - Outcome: units 110 job-search, 112 interview, 120 workplace, 190 grammar (182 phrases, 122 vocab, 32 Q&A, 12 cards) — d790d8c
 
 ## T140 — B1 units 5–8
-- Status: pending
+- Status: done
 - Depends on: T139
 - Goal: Write B1 units 5–8 from brief-nl.md.
 - Context: Shared contract, docs/brief-nl.md, T139's units.
 - Scope: may touch `content/nl/units/` (these units only) / must not touch `content/nl/pack.json`, other units, other packs.
 - Done when:
   - 4 unit files at the brief's volume; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units 122 meetings, 130 renting, 132 health, 140 school (175 phrases, 122 vocab, 37 Q&A) — 83058a5
 
 ## T141 — B1 units 9–11 (B1 complete)
 - Status: pending
@@ -145,7 +145,7 @@ Worktree setup: npm ci
 
 ## T147 — nl-NL audio, pictures and offline check
 - Status: pending
-- Depends on: T142, T143, T144, T145, T146
+- Depends on: T142, T143, T144, T145, T146, T148
 - Goal: Generate nl-NL mp3s and pictures for the whole Dutch pack, and check the pack works offline in the built app.
 - Context: CLAUDE.md commands `npm run audio`, `npm run images`, `--strict-audio`, `--strict-images`; plan 008 T109 and plan 009-ruso T124 outcomes. Needs internet (edge-tts).
 - Scope: may touch `public/audio/nl/**`, `public/images/**` (only additions for Dutch), a generic fix in `scripts/audio` or `scripts/images` if needed / must not touch other languages' audio or content.
@@ -155,6 +155,17 @@ Worktree setup: npm ci
   - `git diff --stat main -- public/audio/it public/audio/fr public/audio/en public/audio/ru` → empty.
 - Outcome:
 
+## T148 — Dutch duplicate cleanup
+- Status: pending
+- Depends on: T138, T141
+- Goal: A2 and B1 units were written in parallel, so some Dutch phrases and vocab exist twice under different ids (e.g. "Leuk u te ontmoeten." in nl-a2-about-me and nl-b1-interview; verhuurder, borg, verwarming, koorts, rug in B1 vs A2 housing/huisarts). Keep one item per text (the earliest unit's), point later lessons to it by id, and remove the copies. The nl pack is not released yet, so changing nl ids is safe.
+- Context: Shared contract, `content/nl/units/`, docs/content-guide.md (reuse by id), `npm run content:check` output.
+- Scope: may touch `content/nl/units/` / must not touch `content/nl/pack.json`, dialogues, stories, other packs.
+- Done when:
+  - a script you run (not committed) finds no two nl phrases or vocab items with the same normalized text (report the before/after counts); level totals stay within ±10% of the targets.
+  - `npm run verify` → exit 0.
+- Outcome:
+
 ## Decisions
 - 2026-10-08 Hernán: levels A2 + B1; goal live/work in the Netherlands, guided by inburgering themes; nl-NL voices; English-sized volume per level; mixed je/u; base Utrecht plus other cities; A2 and B1 built in parallel.
 - 2026-10-08 T135: new generic register value `u` (badge 'Trato de usted (u)'); voices Fenna=narrator, Maarten=men, Colette=women (only 3 nl-NL voices), stories quote ≤1 man + 1 woman; new situation `tramites`; equivalents 't/m'n/z'n; placement 12 questions (6+6); cast Diego (Zaragoza), Femke, Ria + Sanne, Joost, Lucía, Martina at B1 (agent)
@@ -162,6 +173,9 @@ Worktree setup: npm ci
 - 2026-10-08 T136: days/months as vocab without article; learner persona as English A2 (Madrid, 32, programmer); grammar unit also carries phrases/vocab/Q&A with items meant for reuse; Q&A voices Maarten/Colette, phrases Fenna (agent)
 - 2026-10-08 T139: B1 grammar unit carries example phrases per card (34); B1 remaining units aim ~40 phrases each to stay within +10% (agent + orchestrator)
 - 2026-10-08 orchestrator: from T140 on each agent gets its own scratch folder (parallel agents overwrote each other's helper scripts in the shared scratchpad)
+- 2026-10-09 T137: 'de bank' only as the sofa in vocab (bank unit uses bankrekening/bankkantoor); iDEAL without article (brand) (agent)
+- 2026-10-09 T140: wrote verhuurder, borg, verwarming, koorts, rug itself because A2 housing/huisarts were not on main yet → possible duplicates (agent)
+- 2026-10-09 orchestrator: added T148 (Dutch duplicate cleanup) after T138/T141, because A2 and B1 were written in parallel and duplicated some words/phrases; T147 now also depends on T148
 
 ## Proposals (new scope)
 - 2026-10-08 T135: docs/content-guide.md still says only English uses `levels` (Russian and Dutch too); fix the line.
@@ -174,3 +188,6 @@ Worktree setup: npm ci
 - 2026-10-08 23:47 T136 done → 49b2083
 - 2026-10-08 23:47 T137 launched · attempt 1 · agent a1dce65903e5a9b1c
 - 2026-10-08 23:49 T139 done → d790d8c
+- 2026-10-08 23:49 T140 launched · attempt 1 · agent a8593eaeb9bdb12a6
+- 2026-10-09 00:00 T137 done → 6e02f4e
+- 2026-10-09 00:00 T140 done → 83058a5
