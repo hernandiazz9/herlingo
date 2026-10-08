@@ -1,0 +1,493 @@
+{
+  "id": "nl-b1-job-search",
+  "order": 110,
+  "title": "Buscar trabajo: vacantes, CV, carta y recruiters",
+  "description": "Buscar vacantes, hablar de tu experiencia, escribir la carta de motivación y el email formal, atender la llamada de una recruiter y entender permisos y agencias.",
+  "emoji": "🔎",
+  "situation": "trabajo",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-job-search.l.vacatures",
+      "title": "Buscar vacantes",
+      "items": [
+        "nl-b1-job-search.ik-zoek-een-nieuwe-baan",
+        "nl-b1-job-search.baan",
+        "nl-b1-job-search.mijn-contract-loopt-af",
+        "nl-b1-job-search.ik-ben-op-zoek-naar-een-baan-als-developer",
+        "nl-b1-job-search.vacature",
+        "nl-b1-job-search.ik-kijk-elke-dag-naar-vacatures",
+        "nl-b1-job-search.er-staat-een-leuke-vacature-online",
+        "nl-b1-job-search.bedrijf",
+        "nl-b1-job-search.werkgever",
+        "nl-b1-job-search.functie",
+        "nl-b1-job-search.ervaring",
+        "nl-b1-job-search.ze-vragen-minimaal-drie-jaar-ervaring",
+        "nl-b1-job-search.sluitingsdatum",
+        "nl-b1-job-search.is-de-vacature-nog-open",
+        "nl-b1-job-search.ik-denk-dat-ik-goed-bij-dit-bedrijf-pas",
+        "nl-b1-job-search.solliciteren",
+        "nl-b1-job-search.sollicitatie",
+        "nl-b1-job-search.ik-heb-bij-twee-bedrijven-gesolliciteerd",
+        "nl-b1-job-search.qa.what-job",
+        "nl-b1-job-search.qa.why-nl"
+      ]
+    },
+    {
+      "id": "nl-b1-job-search.l.cv",
+      "title": "Tu CV y tu experiencia",
+      "items": [
+        "nl-b1-job-search.cv",
+        "nl-b1-job-search.mijn-cv-is-in-het-engels",
+        "nl-b1-job-search.ik-heb-mijn-cv-aangepast",
+        "nl-b1-job-search.werkervaring",
+        "nl-b1-job-search.ik-werk-al-zes-jaar-als-developer",
+        "nl-b1-job-search.opleiding",
+        "nl-b1-job-search.diploma",
+        "nl-b1-job-search.ik-heb-informatica-gestudeerd",
+        "nl-b1-job-search.vaardigheid",
+        "nl-b1-job-search.ik-heb-veel-ervaring-met-java",
+        "nl-b1-job-search.ik-ben-sterk-in-backend",
+        "nl-b1-job-search.mijn-nederlands-is-nog-niet-perfect",
+        "nl-b1-job-search.profiel",
+        "nl-b1-job-search.mijn-projecten-staan-op-github",
+        "nl-b1-job-search.referentie",
+        "nl-b1-job-search.mag-ik-u-mijn-cv-sturen",
+        "nl-b1-job-search.qa.how-long-developer",
+        "nl-b1-job-search.qa.cv-language"
+      ]
+    },
+    {
+      "id": "nl-b1-job-search.l.brief",
+      "title": "La carta de motivación y el email formal",
+      "items": [
+        "nl-b1-job-search.motivatiebrief",
+        "nl-b1-job-search.aanhef",
+        "nl-b1-job-search.geachte-heer-mevrouw",
+        "nl-b1-job-search.geachte-mevrouw-de-vries",
+        "nl-b1-job-search.beste-sanne",
+        "nl-b1-job-search.onderwerp",
+        "nl-b1-job-search.email",
+        "nl-b1-job-search.hierbij-reageer-ik-op-uw-vacature",
+        "nl-b1-job-search.ik-solliciteer-naar-de-functie",
+        "nl-b1-job-search.ik-schrijf-u-omdat-ik-geinteresseerd-ben",
+        "nl-b1-job-search.bijlage",
+        "nl-b1-job-search.in-de-bijlage-vindt-u-mijn-cv",
+        "nl-b1-job-search.graag-licht-ik-mijn-motivatie-toe",
+        "nl-b1-job-search.reactie",
+        "nl-b1-job-search.ik-kijk-uit-naar-uw-reactie",
+        "nl-b1-job-search.alvast-bedankt-voor-uw-tijd",
+        "nl-b1-job-search.met-vriendelijke-groet",
+        "nl-b1-job-search.qa.sent-cv"
+      ]
+    },
+    {
+      "id": "nl-b1-job-search.l.recruiter",
+      "title": "La llamada de la recruiter",
+      "items": [
+        "nl-b1-job-search.telefoontje",
+        "nl-b1-job-search.met-hernan-goedemiddag",
+        "nl-b1-job-search.recruiter",
+        "nl-b1-job-search.ik-bel-je-over-een-vacature",
+        "nl-b1-job-search.heb-je-even-tijd-om-te-praten",
+        "nl-b1-job-search.komt-het-nu-goed-uit",
+        "nl-b1-job-search.terugbellen",
+        "nl-b1-job-search.kun-je-me-over-een-uurtje-terugbellen",
+        "nl-b1-job-search.uitdaging",
+        "nl-b1-job-search.ik-sta-open-voor-een-nieuwe-uitdaging",
+        "nl-b1-job-search.ik-zoek-iets-met-meer-verantwoordelijkheid",
+        "nl-b1-job-search.arbeidsvoorwaarden",
+        "nl-b1-job-search.wat-zijn-de-arbeidsvoorwaarden",
+        "nl-b1-job-search.opzegtermijn",
+        "nl-b1-job-search.ik-heb-een-opzegtermijn-van-een-maand",
+        "nl-b1-job-search.wanneer-zou-je-kunnen-beginnen",
+        "nl-b1-job-search.klant",
+        "nl-b1-job-search.mag-ik-je-cv-doorsturen-naar-de-klant",
+        "nl-b1-job-search.stuur-je-me-de-vacaturetekst-door",
+        "nl-b1-job-search.ik-hoor-het-graag-van-je",
+        "nl-b1-job-search.qa.good-time",
+        "nl-b1-job-search.qa.when-start"
+      ]
+    },
+    {
+      "id": "nl-b1-job-search.l.resultado",
+      "title": "Agencias, permisos y respuestas",
+      "items": [
+        "nl-b1-job-search.werkvergunning",
+        "nl-b1-job-search.als-eu-burger-heb-ik-geen-werkvergunning-nodig",
+        "nl-b1-job-search.kennismigrant",
+        "nl-b1-job-search.ze-nemen-ook-kennismigranten-aan",
+        "nl-b1-job-search.uitzendbureau",
+        "nl-b1-job-search.ik-heb-me-ingeschreven-bij-een-uitzendbureau",
+        "nl-b1-job-search.netwerk",
+        "nl-b1-job-search.netwerken-is-hier-heel-belangrijk",
+        "nl-b1-job-search.ik-heb-deze-baan-via-via-gevonden",
+        "nl-b1-job-search.ik-solliciteer-omdat-ik-meer-met-data-wil-werken",
+        "nl-b1-job-search.uitnodiging",
+        "nl-b1-job-search.sollicitatiegesprek",
+        "nl-b1-job-search.ik-ben-uitgenodigd-voor-een-sollicitatiegesprek",
+        "nl-b1-job-search.ze-zeggen-dat-ze-binnen-een-week-reageren",
+        "nl-b1-job-search.ik-heb-nog-niets-van-ze-gehoord",
+        "nl-b1-job-search.afwijzing",
+        "nl-b1-job-search.ik-heb-helaas-een-afwijzing-gekregen",
+        "nl-b1-job-search.qa.why-apply",
+        "nl-b1-job-search.qa.heard-back"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "nl-b1-job-search.ik-zoek-een-nieuwe-baan", "text": "Ik zoek een nieuwe baan in Utrecht.", "es": "Busco un trabajo nuevo en Utrecht.", "explanation": "Para contarlo a amigos o a una recruiter. «zoek»: la «oe» suena «u»: «suk»; la «z» del norte casi como una «s».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.mijn-contract-loopt-af", "text": "Mijn contract loopt in maart af.", "es": "Mi contrato termina en marzo.", "notes": "*loopt … af* = aflopen (terminar, vencer): la partícula va al final.", "explanation": "Para explicar por qué buscas trabajo. «loopt» lleva «oo» larga, una «o» alargada; en el infinitivo, acento en la partícula: «AF-loo-pe».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-ben-op-zoek-naar-een-baan-als-developer", "text": "Ik ben op zoek naar een baan als backend developer.", "es": "Estoy buscando un trabajo de desarrollador backend.", "notes": "«op zoek zijn naar» = estar buscando; «als» = como (función, profesión).", "explanation": "La forma más habitual de decir qué buscas. «zoek naar» se une: «suk-naar», con «aa» larga.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-kijk-elke-dag-naar-vacatures", "text": "Ik kijk elke dag naar vacatures op LinkedIn.", "es": "Miro vacantes en LinkedIn todos los días.", "notes": "«kijken naar» = mirar algo; sin «naar» no funciona.", "explanation": "Para contar cómo buscas. «elke» lleva «e» corta y «-ke» débil: «EL-ke»; «vacatures» suena «va-ka-TÚ-res», con la «u» redondeada.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.er-staat-een-leuke-vacature-online", "text": "Er staat een leuke vacature online.", "es": "Han publicado una vacante interesante.", "notes": "«leuk» = majo, interesante, que apetece: muy frecuente. «Er staat» = está escrito, publicado.", "explanation": "Cuando ves una oferta que te gusta. «leuke» tiene «eu», como una «e» con labios de «o»: «LEU-ke».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ze-vragen-minimaal-drie-jaar-ervaring", "text": "Ze vragen minimaal drie jaar ervaring.", "es": "Piden un mínimo de tres años de experiencia.", "notes": "«jaar» va en singular detrás de un número: drie jaar, no «drie jaren».", "explanation": "Para comentar los requisitos de una oferta. «ervaring» lleva el acento en «VAA»: «er-VAA-ring».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-denk-dat-ik-goed-bij-dit-bedrijf-pas", "text": "Ik denk dat ik goed bij dit bedrijf pas.", "es": "Creo que encajo bien en esta empresa.", "notes": "Tras «dat» el verbo conjugado va al final: …dat ik goed pas. «passen bij» = encajar con.", "explanation": "Para decir por qué te interesa una empresa. «bedrijf» lleva «ij» como «ei» y acento en «DREIF»: «be-DREIF».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.is-de-vacature-nog-open", "text": "Is de vacature nog open?", "es": "¿La vacante sigue abierta?", "explanation": "Para preguntar por email o teléfono antes de enviar tu CV. «open» se dice «O-pe», con la «-n» final casi muda.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-bij-twee-bedrijven-gesolliciteerd", "text": "Ik heb gisteren bij twee bedrijven gesolliciteerd.", "es": "Ayer envié candidaturas a dos empresas.", "notes": "«solliciteren bij» + empresa; «naar» + puesto. Es «solicitar un empleo», no un trámite.", "explanation": "Para contar cómo va tu búsqueda. «gesolliciteerd»: «je-so-li-si-TEERT», con la «g» de la garganta y la «d» final como «t».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.mijn-cv-is-in-het-engels", "text": "Mijn cv is in het Engels. Is dat een probleem?", "es": "Mi CV está en inglés. ¿Es un problema?", "notes": "Los idiomas llevan «het» detrás de «in»: in het Engels, in het Nederlands.", "explanation": "Para preguntar a una recruiter o empresa. «cv» se dice «see-VEE», a la holandesa; «Engels» con «e» corta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-mijn-cv-aangepast", "text": "Ik heb mijn cv aangepast voor deze functie.", "es": "He adaptado mi CV para este puesto.", "notes": "aanpassen (adaptar) es separable: el «ge» va en medio: aan-ge-past.", "explanation": "Para explicar que has preparado bien tu candidatura. «aangepast»: acento en «AAN», la partícula separable.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-werk-al-zes-jaar-als-developer", "text": "Ik werk al zes jaar als developer.", "es": "Llevo seis años trabajando como desarrollador.", "notes": "«al» + presente = llevar X tiempo haciendo algo que sigue; «zes jaar geleden» = hace seis años (algo terminado).", "explanation": "Cuando te preguntan por tu experiencia. «zes» empieza con una «z» suave, casi «s»: «ses».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-informatica-gestudeerd", "text": "Ik heb informatica gestudeerd in Spanje.", "es": "Estudié informática en España.", "notes": "En Países Bajos se cuenta la carrera en perfecto, aunque haga años: ik heb … gestudeerd.", "explanation": "Para hablar de tu formación. «gestudeerd»: «je-stu-DEERT», con la «u» redondeada y la «d» final como «t».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-veel-ervaring-met-java", "text": "Ik heb veel ervaring met Java en de cloud.", "es": "Tengo mucha experiencia con Java y la nube.", "explanation": "Para destacar tus puntos técnicos. «veel» lleva «ee» larga y cerrada: «veel», casi «veil».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-ben-sterk-in-backend", "text": "Ik ben sterk in backend en databases.", "es": "Se me dan bien el backend y las bases de datos.", "notes": "«sterk in iets zijn» = ser bueno en algo.", "explanation": "Para decir en qué eres bueno. «sterk»: la «r» puede ser suave o de garganta, ambas valen.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.mijn-nederlands-is-nog-niet-perfect", "text": "Mijn Nederlands is nog niet perfect, maar ik leer elke dag.", "es": "Mi neerlandés aún no es perfecto, pero aprendo cada día.", "notes": "Tras «maar» el orden es normal (ik leer), no cambia como tras «omdat».", "explanation": "Frase honesta y bien vista en una entrevista o llamada. «Nederlands» acento en «NEE»: «NEE-der-lants».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.mijn-projecten-staan-op-github", "text": "Mijn projecten staan op GitHub.", "es": "Mis proyectos están en GitHub.", "notes": "Lo que está escrito o publicado «staat» (de staan): op de site, op GitHub.", "explanation": "Para mandar a alguien a ver tu trabajo. «staan» con «aa» larga; «projecten» suena «pro-YEK-te».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.mag-ik-u-mijn-cv-sturen", "text": "Mag ik u mijn cv sturen?", "es": "¿Puedo enviarle mi CV?", "notes": "Con «mag ik» pides permiso; el infinitivo va al final.", "explanation": "Por teléfono a una empresa, con trato de usted. «sturen»: la «u» redondeada, como una «i» con labios de «u».", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.geachte-heer-mevrouw", "text": "Geachte heer, mevrouw,", "es": "Estimado/a señor/a:", "notes": "Saludo formal estándar; si sabes el nombre: Geachte mevrouw De Vries.", "explanation": "Para abrir un email o carta formal si no sabes a quién escribes. «Geachte»: dos «g/ch» de garganta: «je-AJ-te».", "register": "u", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.geachte-mevrouw-de-vries", "text": "Geachte mevrouw De Vries,", "es": "Estimada señora De Vries:", "notes": "Tras «mevrouw» o «meneer» el «De» del apellido va en mayúscula.", "explanation": "Cuando sabes el nombre de la persona. «mevrouw» suena «me-VRAU»; la «v» casi como una «f».", "register": "u", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.beste-sanne", "text": "Beste Sanne,", "es": "Hola, Sanne:", "notes": "«Beste» + nombre es el saludo normal de email, ni muy formal ni informal.", "explanation": "Para empezar un email a alguien que tuteas o con quien ya has hablado. «Beste» suena «BES-te», con «e» corta.", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.hierbij-reageer-ik-op-uw-vacature", "text": "Hierbij reageer ik op uw vacature voor backend developer.", "es": "Por la presente respondo a su oferta de desarrollador backend.", "notes": "V2: tras «Hierbij» va primero el verbo (reageer) y después el sujeto (ik).", "explanation": "Primera frase clásica de la carta de motivación. «reageer»: «re-a-JEER», con la «g» de garganta.", "register": "u", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.ik-solliciteer-naar-de-functie", "text": "Ik solliciteer naar de functie van backend developer.", "es": "Me presento al puesto de desarrollador backend.", "notes": "solliciteren naar + puesto, solliciteren bij + empresa.", "explanation": "Para decir a qué puesto te presentas. «functie» suena «FUNK-si», con la «u» corta como en «bus».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.ik-schrijf-u-omdat-ik-geinteresseerd-ben", "text": "Ik schrijf u omdat ik erg geïnteresseerd ben in deze functie.", "es": "Le escribo porque me interesa mucho este puesto.", "notes": "Tras «omdat» el verbo conjugado va al final (…ben). «geïnteresseerd»: la diéresis separa «e-i».", "explanation": "Para explicar tu motivo en la carta. «schrijf»: «sch» = «s» + «j» de garganta: «sjreif».", "register": "u", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.in-de-bijlage-vindt-u-mijn-cv", "text": "In de bijlage vindt u mijn cv.", "es": "Adjunto le envío mi CV.", "literal": "En el adjunto encuentra usted mi CV.", "notes": "V2: «In de bijlage» ocupa el primer lugar, así que va «vindt u».", "explanation": "Típico en el email al que adjuntas el CV. «bijlage»: «BEI-laa-je», con «ij» como «ei».", "register": "u", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.graag-licht-ik-mijn-motivatie-toe", "text": "Graag licht ik mijn motivatie toe in een gesprek.", "es": "Me gustaría explicarle mi motivación en una entrevista.", "notes": "*licht … toe* = toelichten (explicar): la partícula va al final. «Graag» delante = con gusto.", "explanation": "Cierre típico de la carta de motivación. «Graag» empieza y acaba con «g» de garganta: «jraaj».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.ik-kijk-uit-naar-uw-reactie", "text": "Ik kijk uit naar uw reactie.", "es": "Quedo a la espera de su respuesta.", "notes": "*kijk … uit naar* = uitkijken naar (esperar con ganas); «reactie» = respuesta.", "explanation": "Para cerrar un email formal. «uit» tiene el diptongo «ui», sin equivalente español: entre «au» y «oi».", "register": "u", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.alvast-bedankt-voor-uw-tijd", "text": "Alvast bedankt voor uw tijd.", "es": "Gracias de antemano por su tiempo.", "notes": "«alvast» = ya, de antemano.", "explanation": "Penúltima línea del email formal. «tijd» con «ij» = «ei» y «d» final como «t»: «teit».", "register": "u", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.met-vriendelijke-groet", "text": "Met vriendelijke groet,", "es": "Un saludo cordial,", "notes": "Informal: «Groetjes» (diminutivo); formal y neutro: «Met vriendelijke groet».", "explanation": "Despedida estándar de cualquier email de trabajo o formal. «groet» suena «jrut», con «oe» = «u».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.met-hernan-goedemiddag", "text": "Met Hernán, goedemiddag.", "es": "Sí, dígame, soy Hernán. Buenas tardes.", "literal": "Con Hernán, buenas tardes.", "notes": "En Países Bajos contestas el teléfono con «Met» + tu nombre.", "explanation": "Al coger el teléfono, sobre todo si no conoces el número. «goedemiddag»: «ju-de-MI-daj».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.ik-bel-je-over-een-vacature", "text": "Ik bel je over een vacature bij een scale-up in Utrecht.", "es": "Te llamo por una vacante en una scale-up de Utrecht.", "notes": "Falso amigo: «bellen» = llamar por teléfono, no tocar el timbre (también, pero menos).", "explanation": "Lo que te dice la recruiter al empezar la llamada. «bel» con «e» corta, como en «bello».", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.heb-je-even-tijd-om-te-praten", "text": "Heb je even tijd om te praten?", "es": "¿Tienes un momento para hablar?", "notes": "«even» suaviza la petición: un momentito, un segundo.", "explanation": "Pregunta habitual al principio de una llamada. «even» suena «EE-ve», con la «n» final muda.", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.komt-het-nu-goed-uit", "text": "Komt het nu goed uit?", "es": "¿Te viene bien ahora?", "notes": "uitkomen = venir bien (de horario); separable: het komt goed uit.", "explanation": "Para preguntar si es buen momento. «uit» con el diptongo «ui», entre «au» y «oi».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.kun-je-me-over-een-uurtje-terugbellen", "text": "Kun je me over een uurtje terugbellen?", "es": "¿Me puedes llamar dentro de una horita?", "notes": "terugbellen es separable, pero con «kun je» va entero al final. «uurtje» = diminutivo de uur.", "explanation": "Si la llamada te pilla mal. «uurtje»: la «uu» es una «i» larga con labios redondos: «UUR-tje».", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.ik-sta-open-voor-een-nieuwe-uitdaging", "text": "Ik sta open voor een nieuwe uitdaging.", "es": "Estoy abierto a un nuevo reto.", "notes": "«openstaan voor» = estar abierto a algo.", "explanation": "Respuesta típica a una recruiter que te ofrece algo. «uitdaging»: «AUT-daa-jing», acento en la primera sílaba.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-zoek-iets-met-meer-verantwoordelijkheid", "text": "Ik zoek iets met meer verantwoordelijkheid.", "es": "Busco algo con más responsabilidad.", "explanation": "Para explicar qué te motiva a cambiar. Palabra larga: «ver-ant-WOOR-de-lek-heit».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.wat-zijn-de-arbeidsvoorwaarden", "text": "Wat zijn de arbeidsvoorwaarden?", "es": "¿Cuáles son las condiciones laborales?", "notes": "arbeidsvoorwaarden = sueldo, horas, vacaciones, pensión, portátil, etc.", "explanation": "Para preguntar por sueldo, vacaciones y extras. «arbeids» suena «AR-beits», con «ei» como en «rey».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-een-opzegtermijn-van-een-maand", "text": "Ik heb een opzegtermijn van een maand.", "es": "Tengo un preaviso de un mes.", "notes": "opzeggen = darse de baja, avisar (separable); de opzegtermijn = el plazo de preaviso.", "explanation": "Cuando te preguntan cuándo puedes empezar. «opzegtermijn»: «OP-sej-ter-mein».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.wanneer-zou-je-kunnen-beginnen", "text": "Wanneer zou je kunnen beginnen?", "es": "¿Cuándo podrías empezar?", "notes": "«zou … kunnen» = podrías: forma suave y educada.", "explanation": "Pregunta clásica de la recruiter. «beginnen» acento en «GI»: «be-JI-ne», sin la «n» final.", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.mag-ik-je-cv-doorsturen-naar-de-klant", "text": "Mag ik je cv doorsturen naar de klant?", "es": "¿Puedo enviar tu CV al cliente?", "notes": "doorsturen = reenviar (separable). Para una agencia, «de klant» es la empresa que contrata.", "explanation": "La recruiter pide permiso para presentarte a una empresa. «doorsturen»: acento en «DOOR».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.stuur-je-me-de-vacaturetekst-door", "text": "Stuur je me de vacaturetekst even door?", "es": "¿Me reenvías el texto de la oferta?", "notes": "*stuur … door* = doorsturen: la partícula va al final. Pregunta en presente = petición amable.", "explanation": "Al final de la llamada, para leer bien la oferta. «stuur» con «uu» redondeada: «stuur», no «stur».", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.ik-hoor-het-graag-van-je", "text": "Ik hoor het graag van je.", "es": "Ya me dirás.", "literal": "Lo oigo con gusto de ti.", "explanation": "Para despedirte de la recruiter o de un contacto. «hoor» con «oo» larga: «hoor».", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.als-eu-burger-heb-ik-geen-werkvergunning-nodig", "text": "Als EU-burger heb ik geen werkvergunning nodig.", "es": "Como ciudadano de la UE no necesito permiso de trabajo.", "notes": "«nodig hebben» = necesitar; «geen» niega un sustantivo (geen werkvergunning), no «niet een».", "explanation": "Para aclarar tu situación a una empresa. «burger» suena «BUR-jer», con la «u» corta y la «g» de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ze-nemen-ook-kennismigranten-aan", "text": "Ze nemen ook kennismigranten van buiten Europa aan.", "es": "También contratan a trabajadores cualificados de fuera de Europa.", "notes": "*nemen … aan* = aannemen (contratar). kennismigrant = trabajador altamente cualificado con visado.", "explanation": "Para reconocer el término en ofertas en inglés y neerlandés. «Europa» acento en «RO»: «eu-RO-pa».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-me-ingeschreven-bij-een-uitzendbureau", "text": "Ik heb me ingeschreven bij een uitzendbureau.", "es": "Me he apuntado en una agencia de trabajo temporal.", "notes": "zich inschrijven = apuntarse, registrarse (reflexivo y separable: me + in-ge-schreven).", "explanation": "Para contar tus pasos. «uitzendbureau»: «AUT-send-bu-ro», la última parte suena a francés.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-deze-baan-via-via-gevonden", "text": "Ik heb deze baan via via gevonden.", "es": "Encontré este trabajo a través de un conocido.", "notes": "«via via» = por contactos, a través de alguien que conoce a alguien.", "explanation": "Muy útil para hablar de contactos. «via via»: «VI-a VI-a», como en español.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.netwerken-is-hier-heel-belangrijk", "text": "Netwerken is hier heel belangrijk.", "es": "Aquí hacer contactos es muy importante.", "notes": "«heel» = muy (heel belangrijk); «netwerken» = hacer networking.", "explanation": "Consejo que oirás a menudo. «belangrijk»: acento en «LANG»: «be-LANG-reik».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-ben-uitgenodigd-voor-een-sollicitatiegesprek", "text": "Ik ben uitgenodigd voor een sollicitatiegesprek!", "es": "¡Me han invitado a una entrevista de trabajo!", "notes": "Pasiva con «zijn» + participio: ik ben uitgenodigd = me han invitado.", "explanation": "Para dar la buena noticia. «uitgenodigd»: «AUT-je-noo-dijt», con dos «g» de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ze-zeggen-dat-ze-binnen-een-week-reageren", "text": "Ze zeggen dat ze binnen een week reageren.", "es": "Dicen que responden en una semana.", "notes": "Tras «dat» el verbo va al final: …dat ze binnen een week reageren.", "explanation": "Para contar lo que te ha dicho una empresa. «zeggen»: «SE-je», con la «gg» de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-nog-niets-van-ze-gehoord", "text": "Ik heb nog niets van ze gehoord.", "es": "Todavía no sé nada de ellos.", "notes": "«nog niets» = todavía nada; no se dice «nog niet iets».", "explanation": "Cuando un amigo te pregunta por una candidatura. «niets» suena «niets», con «ie» = «i» española.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-heb-helaas-een-afwijzing-gekregen", "text": "Ik heb helaas een afwijzing gekregen.", "es": "Por desgracia me han rechazado.", "notes": "«helaas» = por desgracia; afwijzing = rechazo (de afwijzen, separable).", "explanation": "Para contar un no. «helaas»: «he-LAAS», acento en la segunda sílaba.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ik-solliciteer-omdat-ik-meer-met-data-wil-werken", "text": "Ik solliciteer omdat ik meer met data wil werken.", "es": "Me presento porque quiero trabajar más con datos.", "notes": "Tras «omdat» todos los verbos van al final: …wil werken.", "explanation": "Para explicar tu motivación. «data» se dice «DAA-ta», con «aa» larga.", "register": "neutral", "situation": "trabajo"}
+  ],
+  "vocab": [
+    {"id": "nl-b1-job-search.baan", "word": "baan", "article": "de", "plural": "banen", "es": "el trabajo, el empleo", "notes": "«de baan» = un puesto concreto; «het werk» = el trabajo en general.", "example": "nl-b1-job-search.ik-zoek-een-nieuwe-baan", "situation": "trabajo", "image": "fluent:briefcase"},
+    {"id": "nl-b1-job-search.vacature", "word": "vacature", "article": "de", "plural": "vacatures", "es": "la vacante, la oferta de empleo", "example": "nl-b1-job-search.is-de-vacature-nog-open", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.solliciteren", "word": "solliciteren", "es": "presentar una candidatura, postularse", "notes": "Verbo regular: ik solliciteer, ik heb gesolliciteerd.", "example": "nl-b1-job-search.ik-heb-bij-twee-bedrijven-gesolliciteerd", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.sollicitatie", "word": "sollicitatie", "article": "de", "plural": "sollicitaties", "es": "la candidatura, la solicitud de empleo", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.bedrijf", "word": "bedrijf", "article": "het", "plural": "bedrijven", "es": "la empresa", "example": "nl-b1-job-search.ik-denk-dat-ik-goed-bij-dit-bedrijf-pas", "situation": "trabajo", "image": "fluent:office-building"},
+    {"id": "nl-b1-job-search.werkgever", "word": "werkgever", "article": "de", "plural": "werkgevers", "es": "el empleador, la empresa que te contrata", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.functie", "word": "functie", "article": "de", "plural": "functies", "es": "el puesto, el cargo", "notes": "Falso amigo a medias: en un anuncio, «functie» es el puesto, no la función.", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.ervaring", "word": "ervaring", "article": "de", "plural": "ervaringen", "es": "la experiencia", "example": "nl-b1-job-search.ze-vragen-minimaal-drie-jaar-ervaring", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.sluitingsdatum", "word": "sluitingsdatum", "article": "de", "plural": "sluitingsdata", "es": "la fecha límite (de una vacante)", "notes": "Termina en -um pero es «de»: palabra compuesta, manda «de datum».", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.cv", "word": "cv", "article": "het", "plural": "cv's", "es": "el currículum, el CV", "example": "nl-b1-job-search.mijn-cv-is-in-het-engels", "situation": "trabajo", "image": "fluent:page-facing-up"},
+    {"id": "nl-b1-job-search.opleiding", "word": "opleiding", "article": "de", "plural": "opleidingen", "es": "la formación, los estudios", "notes": "-ing siempre es «de».", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.diploma", "word": "diploma", "article": "het", "plural": "diploma's", "es": "el título, el diploma", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.werkervaring", "word": "werkervaring", "article": "de", "es": "la experiencia laboral", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.vaardigheid", "word": "vaardigheid", "article": "de", "plural": "vaardigheden", "es": "la habilidad, la competencia", "notes": "-heid siempre es «de»; plural -heden.", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.profiel", "word": "profiel", "article": "het", "plural": "profielen", "es": "el perfil", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.referentie", "word": "referentie", "article": "de", "plural": "referenties", "es": "la referencia (de un antiguo jefe)", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.motivatiebrief", "word": "motivatiebrief", "article": "de", "plural": "motivatiebrieven", "es": "la carta de motivación", "situation": "comunicacion", "image": "fluent:envelope"},
+    {"id": "nl-b1-job-search.bijlage", "word": "bijlage", "article": "de", "plural": "bijlagen", "es": "el adjunto, el anexo", "example": "nl-b1-job-search.in-de-bijlage-vindt-u-mijn-cv", "situation": "comunicacion", "image": "fluent:paperclip"},
+    {"id": "nl-b1-job-search.reactie", "word": "reactie", "article": "de", "plural": "reacties", "es": "la respuesta", "notes": "Falso amigo: en un email «reactie» es la respuesta, no una reacción emocional.", "example": "nl-b1-job-search.ik-kijk-uit-naar-uw-reactie", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.email", "word": "e-mail", "article": "de", "plural": "e-mails", "es": "el email, el correo", "situation": "comunicacion", "image": "fluent:e-mail"},
+    {"id": "nl-b1-job-search.onderwerp", "word": "onderwerp", "article": "het", "plural": "onderwerpen", "es": "el asunto (de un email)", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.aanhef", "word": "aanhef", "article": "de", "es": "el saludo inicial (de una carta)", "notes": "Geachte… o Beste…: así se llama el saludo de la carta.", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.recruiter", "word": "recruiter", "article": "de", "plural": "recruiters", "es": "el/la recruiter, el/la seleccionador/a", "notes": "Se dice a la inglesa: «ri-KRUU-ter».", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.telefoontje", "word": "telefoontje", "article": "het", "plural": "telefoontjes", "es": "la llamada (de teléfono)", "notes": "Diminutivo de telefoon: siempre «het».", "situation": "comunicacion", "image": "fluent:telephone-receiver"},
+    {"id": "nl-b1-job-search.klant", "word": "klant", "article": "de", "plural": "klanten", "es": "el cliente", "example": "nl-b1-job-search.mag-ik-je-cv-doorsturen-naar-de-klant", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.uitdaging", "word": "uitdaging", "article": "de", "plural": "uitdagingen", "es": "el reto, el desafío", "example": "nl-b1-job-search.ik-sta-open-voor-een-nieuwe-uitdaging", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.arbeidsvoorwaarden", "word": "arbeidsvoorwaarden", "article": "de", "es": "las condiciones laborales", "notes": "Casi siempre en plural.", "example": "nl-b1-job-search.wat-zijn-de-arbeidsvoorwaarden", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.opzegtermijn", "word": "opzegtermijn", "article": "de", "plural": "opzegtermijnen", "es": "el plazo de preaviso", "example": "nl-b1-job-search.ik-heb-een-opzegtermijn-van-een-maand", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.terugbellen", "word": "terugbellen", "es": "devolver la llamada", "notes": "Separable: ik bel je terug.", "situation": "comunicacion"},
+    {"id": "nl-b1-job-search.uitzendbureau", "word": "uitzendbureau", "article": "het", "plural": "uitzendbureaus", "es": "la agencia de trabajo temporal (ETT)", "notes": "Palabra compuesta: manda «het bureau».", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.werkvergunning", "word": "werkvergunning", "article": "de", "plural": "werkvergunningen", "es": "el permiso de trabajo", "example": "nl-b1-job-search.als-eu-burger-heb-ik-geen-werkvergunning-nodig", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.kennismigrant", "word": "kennismigrant", "article": "de", "plural": "kennismigranten", "es": "el trabajador altamente cualificado (con visado)", "notes": "Solo para reconocerlo: un ciudadano de la UE no lo necesita.", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.sollicitatiegesprek", "word": "sollicitatiegesprek", "article": "het", "plural": "sollicitatiegesprekken", "es": "la entrevista de trabajo", "notes": "Compuesta: manda «het gesprek».", "example": "nl-b1-job-search.ik-ben-uitgenodigd-voor-een-sollicitatiegesprek", "situation": "trabajo", "image": "fluent:handshake"},
+    {"id": "nl-b1-job-search.uitnodiging", "word": "uitnodiging", "article": "de", "plural": "uitnodigingen", "es": "la invitación", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.afwijzing", "word": "afwijzing", "article": "de", "plural": "afwijzingen", "es": "el rechazo, la respuesta negativa", "example": "nl-b1-job-search.ik-heb-helaas-een-afwijzing-gekregen", "situation": "trabajo"},
+    {"id": "nl-b1-job-search.netwerk", "word": "netwerk", "article": "het", "plural": "netwerken", "es": "la red de contactos", "situation": "trabajo"}
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-job-search.qa.what-job",
+      "question": "Wat voor baan zoek je precies?",
+      "questionEs": "¿Qué tipo de trabajo buscas exactamente?",
+      "accepted": [
+        {
+          "text": "Ik ben op zoek naar een baan als backend developer.",
+          "es": "Estoy buscando un trabajo de desarrollador backend."
+        },
+        {
+          "text": "Ik zoek een baan als developer, het liefst hybride.",
+          "es": "Busco un trabajo de desarrollador, a ser posible híbrido."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik zoek een werk als developer.",
+          "es": "Busco un trabajo de desarrollador."
+        },
+        {
+          "text": "Ik ben op zoek een baan als developer.",
+          "es": "Estoy buscando un trabajo de desarrollador."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "«het werk» no lleva «een» (es incontable): un puesto es «een baan»; y «op zoek» pide «naar».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-job-search.qa.how-long-developer",
+      "question": "Hoe lang werk je al als developer?",
+      "questionEs": "¿Cuánto tiempo llevas trabajando de desarrollador?",
+      "accepted": [
+        {
+          "text": "Ik werk al zes jaar als developer.",
+          "es": "Llevo seis años trabajando de desarrollador."
+        },
+        {
+          "text": "Al zes jaar.",
+          "es": "Ya seis años."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik werk zes jaar geleden als developer.",
+          "es": "Trabajo como desarrollador hace seis años."
+        },
+        {
+          "text": "Ik werk als developer voor zes jaar.",
+          "es": "Trabajo como desarrollador durante seis años."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Para lo que sigue: «al» + duración con presente; «geleden» es «hace» (algo terminado) y «voor zes jaar» es un calco del inglés.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-job-search.qa.why-apply",
+      "question": "Waarom solliciteer je bij ons?",
+      "questionEs": "¿Por qué te presentas a nuestra empresa?",
+      "accepted": [
+        {
+          "text": "Omdat ik graag met data werk.",
+          "es": "Porque me gusta trabajar con datos."
+        },
+        {
+          "text": "Ik solliciteer omdat ik meer met data wil werken.",
+          "es": "Me presento porque quiero trabajar más con datos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Omdat ik werk graag met data.",
+          "es": "Porque trabajo con gusto con datos."
+        },
+        {
+          "text": "Omdat ik wil werken meer met data.",
+          "es": "Porque quiero trabajar más con datos."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Tras «omdat» el verbo conjugado (y el infinitivo) van al final de la frase.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-job-search.qa.good-time",
+      "question": "Hoi, met Lotte van TechTalent. Komt het nu goed uit?",
+      "questionEs": "Hola, soy Lotte de TechTalent. ¿Te viene bien ahora?",
+      "accepted": [
+        {
+          "text": "Ja hoor, ik heb even tijd.",
+          "es": "Sí, claro, tengo un momento."
+        },
+        {
+          "text": "Eigenlijk niet. Kun je me over een uurtje terugbellen?",
+          "es": "La verdad es que no. ¿Me puedes llamar dentro de una horita?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, het komt goed.",
+          "es": "Sí, saldrá bien."
+        },
+        {
+          "text": "Nee, kun je me later bellen terug?",
+          "es": "No, ¿me puedes llamar más tarde?"
+        }
+      ],
+      "register": "tu",
+      "situation": "comunicacion",
+      "notes": "«Het komt goed» significa «saldrá bien», no «me viene bien»; y en «terugbellen» con «kun je» el verbo va entero al final.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-job-search.qa.when-start",
+      "question": "Wanneer zou je kunnen beginnen?",
+      "questionEs": "¿Cuándo podrías empezar?",
+      "accepted": [
+        {
+          "text": "Ik kan over een maand beginnen.",
+          "es": "Puedo empezar dentro de un mes."
+        },
+        {
+          "text": "Vanaf maart. Ik heb een opzegtermijn van een maand.",
+          "es": "A partir de marzo. Tengo un preaviso de un mes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Over een maand ik kan beginnen.",
+          "es": "Dentro de un mes puedo empezar."
+        },
+        {
+          "text": "Ik ben over een maand begonnen.",
+          "es": "Empecé dentro de un mes."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Si la frase empieza por «Over een maand», el verbo va segundo (kan ik); y hablas del futuro, no en perfecto.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-job-search.qa.cv-language",
+      "question": "Is je cv in het Nederlands of in het Engels?",
+      "questionEs": "¿Tu CV está en neerlandés o en inglés?",
+      "accepted": [
+        {
+          "text": "In het Engels. Is dat een probleem?",
+          "es": "En inglés. ¿Es un problema?"
+        },
+        {
+          "text": "Mijn cv is in het Engels.",
+          "es": "Mi CV está en inglés."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "In Engels.",
+          "es": "En inglés."
+        },
+        {
+          "text": "Mijn cv is op het Engels.",
+          "es": "Mi CV está en inglés."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Con idiomas se dice «in het Engels»: con «in» y con «het».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-job-search.qa.sent-cv",
+      "question": "Heeft u uw cv al gestuurd?",
+      "questionEs": "¿Ya ha enviado su CV?",
+      "accepted": [
+        {
+          "text": "Ja, ik heb het gisteren gestuurd.",
+          "es": "Sí, lo envié ayer."
+        },
+        {
+          "text": "Nog niet, ik stuur het vandaag.",
+          "es": "Todavía no, lo envío hoy."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik ben het gisteren gestuurd.",
+          "es": "Sí, lo envié ayer."
+        },
+        {
+          "text": "Nog geen, ik stuur het vandaag.",
+          "es": "Todavía no, lo envío hoy."
+        }
+      ],
+      "register": "u",
+      "situation": "comunicacion",
+      "notes": "«sturen» va con «hebben» (ik heb gestuurd); «nog niet» niega el verbo, «geen» solo va con sustantivos.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-job-search.qa.heard-back",
+      "question": "Heb je al iets van dat bedrijf gehoord?",
+      "questionEs": "¿Ya sabes algo de esa empresa?",
+      "accepted": [
+        {
+          "text": "Nee, nog niets. Ze zeggen dat ze binnen een week reageren.",
+          "es": "No, todavía nada. Dicen que responden en una semana."
+        },
+        {
+          "text": "Ja, ik ben uitgenodigd voor een sollicitatiegesprek!",
+          "es": "¡Sí, me han invitado a una entrevista!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, nog niet iets.",
+          "es": "No, todavía nada."
+        },
+        {
+          "text": "Ja, ik heb uitgenodigd voor een gesprek.",
+          "es": "Sí, he invitado a una entrevista."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "«Todavía nada» es «nog niets»; y «me han invitado» es pasiva: ik ben uitgenodigd.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-job-search.qa.why-nl",
+      "question": "Waarom wil je in Nederland werken?",
+      "questionEs": "¿Por qué quieres trabajar en los Países Bajos?",
+      "accepted": [
+        {
+          "text": "Omdat ik in Utrecht woon en hier wil blijven.",
+          "es": "Porque vivo en Utrecht y quiero quedarme aquí."
+        },
+        {
+          "text": "Ik woon in Utrecht en ik wil hier graag blijven.",
+          "es": "Vivo en Utrecht y me gustaría quedarme aquí."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Omdat ik woon in Utrecht en hier wil blijven.",
+          "es": "Porque vivo en Utrecht y quiero quedarme aquí."
+        },
+        {
+          "text": "Want ik in Utrecht woon.",
+          "es": "Porque vivo en Utrecht."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Tras «omdat» el verbo va al final (…in Utrecht woon); tras «want» el orden es normal (want ik woon…).",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}

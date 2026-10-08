@@ -1,0 +1,484 @@
+{
+  "id": "nl-b1-interview",
+  "order": 112,
+  "title": "Entrevista de trabajo: experiencia, puntos fuertes, contrato y salario",
+  "description": "Presentarte en la entrevista, contar tu experiencia con perfecto e imperfecto, hablar de tus puntos fuertes y débiles, y negociar salario, contrato, periodo de prueba y vacaciones.",
+  "emoji": "🤝",
+  "situation": "trabajo",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-interview.l.begin",
+      "title": "Llegar y presentarte",
+      "items": [
+        "nl-b1-job-search.sollicitatiegesprek",
+        "nl-b1-interview.ik-kom-voor-het-sollicitatiegesprek",
+        "nl-b1-interview.receptie",
+        "nl-b1-interview.ik-heb-om-tien-uur-een-afspraak-met-meneer-jansen",
+        "nl-b1-interview.gesprek",
+        "nl-b1-interview.leidinggevende",
+        "nl-b1-interview.leuk-u-te-ontmoeten",
+        "nl-b1-interview.sollicitant",
+        "nl-b1-interview.kunt-u-iets-over-uzelf-vertellen",
+        "nl-b1-interview.ik-kom-uit-spanje-en-woon-sinds-vorig-jaar-in-utrecht",
+        "nl-b1-job-search.ik-werk-al-zes-jaar-als-developer",
+        "nl-b1-job-search.mijn-nederlands-is-nog-niet-perfect",
+        "nl-b1-interview.motivatie",
+        "nl-b1-interview.ik-ben-gemotiveerd-om-nederlands-te-leren",
+        "nl-b1-interview.qa.about-yourself"
+      ]
+    },
+    {
+      "id": "nl-b1-interview.l.ervaring",
+      "title": "Contar tu experiencia",
+      "items": [
+        "nl-b1-interview.ik-heb-vier-jaar-bij-een-bank-gewerkt",
+        "nl-b1-interview.daarvoor-werkte-ik-bij-een-start-up-in-madrid",
+        "nl-b1-interview.vorig",
+        "nl-b1-interview.in-mijn-vorige-baan-deed-ik-vooral-backend",
+        "nl-b1-interview.toen-ik-in-madrid-woonde-werkte-ik-veel-met-klanten",
+        "nl-b1-interview.ik-ben-in-tweeduizend-twintig-als-junior-begonnen",
+        "nl-b1-interview.ontwikkelaar",
+        "nl-b1-interview.verantwoordelijk",
+        "nl-b1-interview.ik-was-verantwoordelijk-voor-de-betaalapp",
+        "nl-b1-interview.team",
+        "nl-b1-interview.leiden",
+        "nl-b1-interview.ik-heb-een-team-van-vier-mensen-geleid",
+        "nl-b1-interview.project",
+        "nl-b1-interview.wat-was-uw-grootste-project",
+        "nl-b1-interview.we-hebben-de-app-helemaal-opnieuw-gebouwd",
+        "nl-b1-interview.resultaat",
+        "nl-b1-interview.dat-heb-ik-nog-nooit-gedaan-maar-ik-leer-snel",
+        "nl-b1-interview.qa.previous-job",
+        "nl-b1-interview.qa.how-long-there"
+      ]
+    },
+    {
+      "id": "nl-b1-interview.l.punten",
+      "title": "Puntos fuertes, puntos débiles y por qué aquí",
+      "items": [
+        "nl-b1-interview.waarom-wilt-u-hier-werken",
+        "nl-b1-interview.product",
+        "nl-b1-interview.ik-vind-jullie-product-heel-interessant",
+        "nl-b1-interview.ik-heb-uw-website-goed-bekeken",
+        "nl-b1-interview.punt",
+        "nl-b1-interview.kwaliteit",
+        "nl-b1-interview.samenwerken",
+        "nl-b1-interview.mijn-sterke-punt-is-dat-ik-goed-samenwerk",
+        "nl-b1-interview.flexibel",
+        "nl-b1-interview.ik-ben-flexibel-en-ik-leer-snel",
+        "nl-b1-interview.druk",
+        "nl-b1-interview.ik-kan-goed-onder-druk-werken",
+        "nl-b1-interview.collegas-zeggen-dat-ik-rustig-ben",
+        "nl-b1-interview.zwakte",
+        "nl-b1-interview.een-zwak-punt-is-dat-ik-te-perfectionistisch-ben",
+        "nl-b1-interview.ik-werk-eraan",
+        "nl-b1-interview.ik-vind-het-moeilijk-om-nee-te-zeggen",
+        "nl-b1-interview.qa.strong-point",
+        "nl-b1-interview.qa.weak-point",
+        "nl-b1-interview.qa.why-here"
+      ]
+    },
+    {
+      "id": "nl-b1-interview.l.contract",
+      "title": "Sueldo y contrato",
+      "items": [
+        "nl-b1-interview.salaris",
+        "nl-b1-interview.wat-is-het-salaris-voor-deze-functie",
+        "nl-b1-interview.bruto",
+        "nl-b1-interview.netto",
+        "nl-b1-interview.is-dat-bruto-of-netto",
+        "nl-b1-interview.het-salaris-is-vierduizend-euro-bruto-per-maand",
+        "nl-b1-interview.vakantiegeld",
+        "nl-b1-interview.het-vakantiegeld-is-acht-procent",
+        "nl-b1-interview.contract",
+        "nl-b1-interview.tijdelijk",
+        "nl-b1-interview.het-is-een-tijdelijk-contract-voor-een-jaar",
+        "nl-b1-interview.is-er-kans-op-een-vast-contract",
+        "nl-b1-interview.proeftijd",
+        "nl-b1-interview.de-proeftijd-is-een-maand",
+        "nl-b1-interview.vakantiedag",
+        "nl-b1-interview.hoeveel-vakantiedagen-krijg-ik",
+        "nl-b1-interview.kan-ik-deels-thuiswerken",
+        "nl-b1-interview.reiskostenvergoeding",
+        "nl-b1-interview.krijg-ik-een-reiskostenvergoeding",
+        "nl-b1-interview.pensioen",
+        "nl-b1-interview.cao",
+        "nl-b1-interview.dertigprocentregeling",
+        "nl-b1-interview.komt-deze-functie-in-aanmerking-voor-de-dertigprocentregeling",
+        "nl-b1-interview.qa.salary"
+      ]
+    },
+    {
+      "id": "nl-b1-interview.l.afsluiting",
+      "title": "Cerrar la entrevista y la oferta",
+      "items": [
+        "nl-b1-interview.heeft-u-nog-vragen-voor-ons",
+        "nl-b1-interview.werkdag",
+        "nl-b1-interview.hoe-ziet-een-normale-werkdag-eruit",
+        "nl-b1-interview.wanneer-hoor-ik-van-u",
+        "nl-b1-interview.we-nemen-volgende-week-contact-met-u-op",
+        "nl-b1-interview.bedankt-voor-het-gesprek",
+        "nl-b1-interview.het-gesprek-ging-goed-denk-ik",
+        "nl-b1-interview.aanbod",
+        "nl-b1-interview.we-willen-je-graag-een-aanbod-doen",
+        "nl-b1-job-search.arbeidsvoorwaarden",
+        "nl-b1-job-search.opzegtermijn",
+        "nl-b1-interview.tekenen",
+        "nl-b1-interview.handtekening",
+        "nl-b1-interview.ik-heb-het-contract-getekend",
+        "nl-b1-interview.ik-begin-op-een-mei",
+        "nl-b1-interview.qa.start-date",
+        "nl-b1-interview.qa.how-did-it-go"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "nl-b1-interview.ik-kom-voor-het-sollicitatiegesprek", "text": "Goedemorgen, ik kom voor het sollicitatiegesprek.", "es": "Buenos días, vengo a la entrevista de trabajo.", "notes": "«komen voor» = venir para algo (una cita, una entrevista).", "explanation": "En recepción al llegar. «Goedemorgen»: «ju-de-MOR-je», con dos «g» de garganta suaves.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-heb-om-tien-uur-een-afspraak-met-meneer-jansen", "text": "Ik heb om tien uur een afspraak met meneer Jansen.", "es": "Tengo una cita a las diez con el señor Jansen.", "notes": "«om» + hora: om tien uur. «meneer» = señor (al hablar de alguien o dirigirte a él).", "explanation": "Para decir con quién has quedado. «meneer» suena «me-NEER»; «uur» con «uu» redondeada.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.leuk-u-te-ontmoeten", "text": "Leuk u te ontmoeten.", "es": "Encantado de conocerle.", "notes": "Con «je» es «Leuk je te ontmoeten»; en la entrevista, «u».", "explanation": "Al dar la mano al entrevistador. «ontmoeten»: acento en «MOE»: «ont-MU-te».", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-interview.kunt-u-iets-over-uzelf-vertellen", "text": "Kunt u iets over uzelf vertellen?", "es": "¿Puede hablarnos un poco de usted?", "notes": "«uzelf» = usted mismo; con je: jezelf.", "explanation": "La primera pregunta de casi toda entrevista. «uzelf»: «u-SELF», con la «u» redondeada.", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-kom-uit-spanje-en-woon-sinds-vorig-jaar-in-utrecht", "text": "Ik kom uit Spanje en woon sinds vorig jaar in Utrecht.", "es": "Soy de España y vivo en Utrecht desde el año pasado.", "notes": "«sinds» + un punto de inicio (sinds vorig jaar) con presente: lo que sigue.", "explanation": "Para presentarte en pocas palabras. «Utrecht»: «U-trejt», acento en la primera y «ch» de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-ben-gemotiveerd-om-nederlands-te-leren", "text": "Ik ben erg gemotiveerd om goed Nederlands te leren.", "es": "Estoy muy motivado para aprender bien neerlandés.", "notes": "«om … te» + infinitivo al final: om Nederlands te leren.", "explanation": "Buena frase para mostrar compromiso. «gemotiveerd»: «je-mo-ti-VEERT», la «d» final como «t».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-heb-vier-jaar-bij-een-bank-gewerkt", "text": "Ik heb vier jaar bij een bank gewerkt.", "es": "Trabajé cuatro años en un banco.", "notes": "Perfecto para un hecho o etapa terminada en general; es lo más normal al hablar.", "explanation": "Para resumir una etapa terminada. «gewerkt»: «je-WERKT», la «g» de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.daarvoor-werkte-ik-bij-een-start-up-in-madrid", "text": "Daarvoor werkte ik bij een start-up in Madrid.", "es": "Antes de eso trabajaba en una start-up en Madrid.", "notes": "Imperfecto para narrar una historia; V2: tras «Daarvoor» va el verbo y luego «ik».", "explanation": "Para seguir contando tu trayectoria. «werkte» tiene dos sílabas: «WER-kte», con la «e» final muy débil.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.toen-ik-in-madrid-woonde-werkte-ik-veel-met-klanten", "text": "Toen ik in Madrid woonde, werkte ik veel met klanten.", "es": "Cuando vivía en Madrid, trabajaba mucho con clientes.", "notes": "«toen» + verbo al final (woonde); luego la frase principal empieza por el verbo: werkte ik.", "explanation": "Para contar cómo era tu trabajo antes. «woonde»: «WOON-de», con «oo» larga.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-was-verantwoordelijk-voor-de-betaalapp", "text": "Ik was verantwoordelijk voor de betaalapp.", "es": "Era el responsable de la app de pagos.", "notes": "«verantwoordelijk zijn voor» = ser responsable de.", "explanation": "Para explicar tu papel en un proyecto. «betaal»: acento en «TAAL», nunca en el prefijo «be».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-heb-een-team-van-vier-mensen-geleid", "text": "Ik heb een team van vier mensen geleid.", "es": "Dirigí un equipo de cuatro personas.", "notes": "leiden = dirigir, liderar; participio geleid.", "explanation": "Para hablar de liderazgo. «geleid»: «je-LEIT», con «ei» como en «rey» y la «d» como «t».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.in-mijn-vorige-baan-deed-ik-vooral-backend", "text": "In mijn vorige baan deed ik vooral backend.", "es": "En mi anterior trabajo hacía sobre todo backend.", "notes": "«deed» = imperfecto de doen (hacer). V2: In mijn vorige baan + deed + ik.", "explanation": "Para resumir tus tareas. «vooral»: acento en «RAL»: «voor-AL».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-ben-in-tweeduizend-twintig-als-junior-begonnen", "text": "Ik ben in tweeduizend twintig als junior begonnen.", "es": "Empecé como junior en el dos mil veinte.", "notes": "«beginnen» forma el perfecto con «zijn»: ik ben begonnen.", "explanation": "Para situar el inicio de tu carrera. Los años se leen «tweeduizend twintig», todo seguido.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.wat-was-uw-grootste-project", "text": "Wat was uw grootste project?", "es": "¿Cuál fue su proyecto más grande?", "explanation": "Pregunta típica del entrevistador. «grootste»: «JROOT-ste», la «g» de garganta y «oo» larga.", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-interview.we-hebben-de-app-helemaal-opnieuw-gebouwd", "text": "We hebben de app helemaal opnieuw gebouwd.", "es": "Rehicimos la app desde cero.", "notes": "«helemaal opnieuw» = completamente de nuevo, desde cero.", "explanation": "Para contar un logro concreto. «gebouwd»: «je-BAUT», con «ouw» como «au».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.dat-heb-ik-nog-nooit-gedaan-maar-ik-leer-snel", "text": "Dat heb ik nog nooit gedaan, maar ik leer snel.", "es": "Eso no lo he hecho nunca, pero aprendo rápido.", "notes": "Perfecto con «nog nooit» = nunca (hasta ahora). «Dat» delante pone el verbo en segundo lugar: Dat heb ik…", "explanation": "Respuesta honesta cuando te preguntan por algo que no conoces. «nooit» suena «noit».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.waarom-wilt-u-hier-werken", "text": "Waarom wilt u hier werken?", "es": "¿Por qué quiere trabajar aquí?", "notes": "Con u el verbo lleva -t (wilt u, kunt u); con je invertido no: wil je, kun je.", "explanation": "Pregunta segura en la entrevista. «wilt u»: con «u» se dice «wilt», con «je» es «wil je».", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-vind-jullie-product-heel-interessant", "text": "Ik vind jullie product heel interessant.", "es": "Vuestro producto me parece muy interesante.", "notes": "«vinden» = opinar, parecer (Ik vind het leuk); al hablar de la empresa se usa «jullie».", "explanation": "Para mostrar interés por la empresa. «interessant»: «in-te-re-SANT», acento al final.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-heb-uw-website-goed-bekeken", "text": "Ik heb uw website goed bekeken.", "es": "He mirado su web con detalle.", "notes": "bekijken (mirar con atención) es inseparable: participio sin «ge»: bekeken.", "explanation": "Cuando te preguntan qué sabes de la empresa. «bekeken»: acento en «KEE»: «be-KEE-ke».", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-interview.mijn-sterke-punt-is-dat-ik-goed-samenwerk", "text": "Mijn sterke punt is dat ik goed samenwerk.", "es": "Mi punto fuerte es que trabajo bien en equipo.", "notes": "Tras «dat» el verbo va al final, y el separable va junto: …dat ik goed samenwerk.", "explanation": "Para hablar de tus cualidades. «samenwerk»: acento en «SAA»: «SAA-me-werk».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-ben-flexibel-en-ik-leer-snel", "text": "Ik ben flexibel en ik leer snel.", "es": "Soy flexible y aprendo rápido.", "explanation": "Respuesta corta y clara sobre tus cualidades. «flexibel»: «flek-SII-bel».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-kan-goed-onder-druk-werken", "text": "Ik kan goed onder druk werken.", "es": "Trabajo bien bajo presión.", "notes": "«druk» también significa «ocupado»: Ik heb het druk = estoy liado.", "explanation": "Punto fuerte típico. «druk» lleva la «u» corta, como una «e» neutra: «druk», no «druuk».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.een-zwak-punt-is-dat-ik-te-perfectionistisch-ben", "text": "Een zwak punt is dat ik soms te perfectionistisch ben.", "es": "Un punto débil es que a veces soy demasiado perfeccionista.", "notes": "Tras «dat» el verbo al final: …te perfectionistisch ben.", "explanation": "Para hablar de un punto débil sin hundirte. «zwak» suena «svak», con «z» suave y «a» corta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-werk-eraan", "text": "Maar ik werk eraan.", "es": "Pero estoy trabajando en ello.", "notes": "«eraan» = er + aan: «en ello». Así sustituye el neerlandés «aan het» + cosa.", "explanation": "Para cerrar lo de tu punto débil. «eraan» se dice «er-AAN», con «aa» larga.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-vind-het-moeilijk-om-nee-te-zeggen", "text": "Ik vind het moeilijk om nee te zeggen.", "es": "Me cuesta decir que no.", "notes": "«Ik vind het + adjetivo + om … te» = me parece … hacer algo. No olvides el «het».", "explanation": "Otra forma honesta de hablar de un punto débil. «moeilijk»: «MUI-lek», con «oei» como «ui» de «muy».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.collegas-zeggen-dat-ik-rustig-ben", "text": "Collega's zeggen dat ik rustig ben.", "es": "Mis compañeros dicen que soy tranquilo.", "notes": "«rustig» = tranquilo; dicho de una persona es un elogio.", "explanation": "Para describirte a través de otros. «rustig»: «RUS-tej», con la «g» final de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.wat-is-het-salaris-voor-deze-functie", "text": "Wat is het salaris voor deze functie?", "es": "¿Cuál es el sueldo de este puesto?", "notes": "Hablar de dinero sin rodeos se ve bien: la franqueza es normal aquí.", "explanation": "Pregunta directa y normal en Países Bajos. «salaris»: «sa-LAA-ris», acento en el centro.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.is-dat-bruto-of-netto", "text": "Is dat bruto of netto?", "es": "¿Eso es bruto o neto?", "notes": "Los sueldos se dan casi siempre en bruto y por mes.", "explanation": "Para aclarar una cifra. «bruto» suena «BRU-to», con la «u» redondeada.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.het-salaris-is-vierduizend-euro-bruto-per-maand", "text": "Het salaris is vierduizend euro bruto per maand.", "es": "El sueldo es de cuatro mil euros brutos al mes.", "notes": "En Países Bajos el sueldo es mensual (per maand), no anual.", "explanation": "La forma en que te darán la cifra. «vierduizend»: «VIIR-dau-sent», con «ui» y la «d» final como «t».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.het-vakantiegeld-is-acht-procent", "text": "Het vakantiegeld is acht procent van het salaris.", "es": "La paga de vacaciones es el ocho por ciento del sueldo.", "notes": "vakantiegeld = paga extra que se cobra en mayo o junio, normalmente el ocho por ciento.", "explanation": "Te lo explicarán al hablar del contrato. «acht» suena «ajt», con la «ch» de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.het-is-een-tijdelijk-contract-voor-een-jaar", "text": "Het is een tijdelijk contract voor een jaar.", "es": "Es un contrato temporal de un año.", "explanation": "Lo que te dirán al ofrecerte el puesto. «tijdelijk»: «TEI-de-lek».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.is-er-kans-op-een-vast-contract", "text": "Is er kans op een vast contract?", "es": "¿Hay posibilidad de un contrato indefinido?", "notes": "«een vast contract» = indefinido; «kans op» = posibilidad de.", "explanation": "Pregunta clave si te ofrecen un temporal. «vast» con «v» casi «f»: «fast».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.de-proeftijd-is-een-maand", "text": "De proeftijd is een maand.", "es": "El periodo de prueba es de un mes.", "notes": "Por ley, la proeftijd máxima suele ser de uno o dos meses.", "explanation": "Al repasar las condiciones del contrato. «proeftijd»: «PRUF-teit», con «oe» = «u».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.hoeveel-vakantiedagen-krijg-ik", "text": "Hoeveel vakantiedagen krijg ik?", "es": "¿Cuántos días de vacaciones tengo?", "notes": "«krijgen» = recibir, tener (que te den algo).", "explanation": "Para preguntar por las vacaciones. «krijg»: «kreij», con «ij» = «ei» y «g» de garganta suave.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.kan-ik-deels-thuiswerken", "text": "Kan ik deels thuiswerken?", "es": "¿Puedo teletrabajar una parte del tiempo?", "notes": "thuiswerken = teletrabajar (aquí no se separa: ik werk thuis).", "explanation": "Para preguntar por el trabajo híbrido. «thuis»: la «th» suena «t» y «ui» como siempre: «taus».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.krijg-ik-een-reiskostenvergoeding", "text": "Krijg ik een reiskostenvergoeding?", "es": "¿Me pagan los gastos de desplazamiento?", "notes": "Muchas empresas pagan el tren o los kilómetros en bici o coche.", "explanation": "Muy habitual en los contratos de aquí. Palabra larga: «REIS-kos-te-ver-ju-ding».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.komt-deze-functie-in-aanmerking-voor-de-dertigprocentregeling", "text": "Komt deze functie in aanmerking voor de dertigprocentregeling?", "es": "¿Este puesto puede acogerse a la regla del treinta por ciento?", "notes": "«in aanmerking komen voor» = tener derecho a, poder acogerse a. Solo para reconocerlo.", "explanation": "Para reconocer el término (ventaja fiscal para quien viene de fuera). «dertig»: «DER-tej».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.heeft-u-nog-vragen-voor-ons", "text": "Heeft u nog vragen voor ons?", "es": "¿Tiene alguna pregunta para nosotros?", "explanation": "Lo oirás al final de la entrevista: ten una pregunta preparada. «vragen»: «VRAA-je».", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-interview.hoe-ziet-een-normale-werkdag-eruit", "text": "Hoe ziet een normale werkdag eruit?", "es": "¿Cómo es un día de trabajo normal?", "notes": "«eruitzien» = tener aspecto: Hoe ziet … eruit? = ¿cómo es…?", "explanation": "Buena pregunta para el final. «eruit»: «er-AUT», con el diptongo «ui».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.wanneer-hoor-ik-van-u", "text": "Wanneer hoor ik van u?", "es": "¿Cuándo sabré algo de ustedes?", "explanation": "Para cerrar preguntando por los plazos. «wanneer»: acento en «NEER».", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-interview.we-nemen-volgende-week-contact-met-u-op", "text": "We nemen volgende week contact met u op.", "es": "Nos pondremos en contacto con usted la semana que viene.", "notes": "*nemen … op* = contact opnemen (ponerse en contacto): la partícula va al final.", "explanation": "Lo que te dirá el entrevistador al despedirse. «volgende»: «VOL-jen-de».", "register": "u", "situation": "trabajo"},
+    {"id": "nl-b1-interview.bedankt-voor-het-gesprek", "text": "Bedankt voor het gesprek.", "es": "Gracias por la entrevista.", "explanation": "Para despedirte con la mano. «bedankt»: «be-DANKT», acento en «DANK».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.het-gesprek-ging-goed-denk-ik", "text": "Het gesprek ging goed, denk ik.", "es": "Creo que la entrevista fue bien.", "notes": "«denk ik» al final lleva inversión: …, denk ik (no «ik denk»).", "explanation": "Para contárselo a un amigo. «ging» suena «jing», con «g» de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.we-willen-je-graag-een-aanbod-doen", "text": "We willen je graag een aanbod doen.", "es": "Nos gustaría hacerte una oferta.", "notes": "Se dice «een aanbod doen» (no «maken»). Tras contratarte, la empresa suele pasar a «je».", "explanation": "La llamada que esperas. «aanbod»: «AAN-bot», la «d» final como «t».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-heb-het-contract-getekend", "text": "Ik heb het contract getekend!", "es": "¡He firmado el contrato!", "notes": "«tekenen» = firmar (y también dibujar).", "explanation": "Para dar la buena noticia. «getekend»: «je-TEE-kent».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-interview.ik-begin-op-een-mei", "text": "Ik begin op één mei.", "es": "Empiezo el uno de mayo.", "notes": "Las fechas van con «op»: op één mei. Presente con sentido de futuro.", "explanation": "Para decir tu fecha de inicio. «één» lleva acentos para distinguirlo de «een»; suena «een» con «ee» larga.", "register": "neutral", "situation": "trabajo"}
+  ],
+  "vocab": [
+    {"id": "nl-b1-interview.sollicitant", "word": "sollicitant", "article": "de", "plural": "sollicitanten", "es": "el candidato, la candidata", "notes": "La persona que se presenta a un puesto.", "situation": "trabajo"},
+    {"id": "nl-b1-interview.gesprek", "word": "gesprek", "article": "het", "plural": "gesprekken", "es": "la conversación, la entrevista", "example": "nl-b1-interview.ik-kom-voor-het-sollicitatiegesprek", "situation": "trabajo"},
+    {"id": "nl-b1-interview.leidinggevende", "word": "leidinggevende", "article": "de", "plural": "leidinggevenden", "es": "el/la responsable, el jefe directo", "notes": "Adjetivo usado como nombre: sirve para hombre y mujer.", "situation": "trabajo"},
+    {"id": "nl-b1-interview.receptie", "word": "receptie", "article": "de", "plural": "recepties", "es": "la recepción", "notes": "Se dice «re-SEP-si».", "situation": "trabajo"},
+    {"id": "nl-b1-interview.motivatie", "word": "motivatie", "article": "de", "es": "la motivación", "notes": "-ie suele ser «de».", "situation": "trabajo"},
+    {"id": "nl-b1-interview.project", "word": "project", "article": "het", "plural": "projecten", "es": "el proyecto", "example": "nl-b1-interview.wat-was-uw-grootste-project", "situation": "trabajo"},
+    {"id": "nl-b1-interview.team", "word": "team", "article": "het", "plural": "teams", "es": "el equipo", "notes": "Se pronuncia a la inglesa, «tiim», pero es «het».", "example": "nl-b1-interview.ik-heb-een-team-van-vier-mensen-geleid", "situation": "trabajo", "image": "fluent:busts-in-silhouette"},
+    {"id": "nl-b1-interview.ontwikkelaar", "word": "ontwikkelaar", "article": "de", "plural": "ontwikkelaars", "es": "el desarrollador", "notes": "En las empresas se dice mucho «developer»; ontwikkelaar es la palabra neerlandesa.", "situation": "trabajo", "image": "fluent:man-technologist"},
+    {"id": "nl-b1-interview.leiden", "word": "leiden", "es": "dirigir, liderar", "notes": "ik leid, ik leidde, ik heb geleid.", "example": "nl-b1-interview.ik-heb-een-team-van-vier-mensen-geleid", "situation": "trabajo"},
+    {"id": "nl-b1-interview.verantwoordelijk", "word": "verantwoordelijk", "es": "responsable (de algo)", "example": "nl-b1-interview.ik-was-verantwoordelijk-voor-de-betaalapp", "situation": "trabajo"},
+    {"id": "nl-b1-interview.vorig", "word": "vorig", "es": "anterior, pasado", "notes": "vorige baan, vorige week; pero «vorig jaar» (het jaar) sin -e.", "situation": "trabajo"},
+    {"id": "nl-b1-interview.resultaat", "word": "resultaat", "article": "het", "plural": "resultaten", "es": "el resultado", "situation": "trabajo"},
+    {"id": "nl-b1-interview.punt", "word": "punt", "article": "het", "plural": "punten", "es": "el punto", "notes": "«het sterke punt / het zwakke punt» = el punto fuerte / débil. (Signo de puntuación: de punt.)", "example": "nl-b1-interview.mijn-sterke-punt-is-dat-ik-goed-samenwerk", "situation": "trabajo"},
+    {"id": "nl-b1-interview.kwaliteit", "word": "kwaliteit", "article": "de", "plural": "kwaliteiten", "es": "la cualidad, la calidad", "situation": "trabajo"},
+    {"id": "nl-b1-interview.zwakte", "word": "zwakte", "article": "de", "plural": "zwaktes", "es": "la debilidad", "situation": "trabajo"},
+    {"id": "nl-b1-interview.samenwerken", "word": "samenwerken", "es": "trabajar en equipo, colaborar", "notes": "Separable: we werken samen; ik heb samengewerkt.", "example": "nl-b1-interview.mijn-sterke-punt-is-dat-ik-goed-samenwerk", "situation": "trabajo"},
+    {"id": "nl-b1-interview.druk", "word": "druk", "article": "de", "es": "la presión", "example": "nl-b1-interview.ik-kan-goed-onder-druk-werken", "situation": "trabajo"},
+    {"id": "nl-b1-interview.flexibel", "word": "flexibel", "es": "flexible", "example": "nl-b1-interview.ik-ben-flexibel-en-ik-leer-snel", "situation": "trabajo"},
+    {"id": "nl-b1-interview.product", "word": "product", "article": "het", "plural": "producten", "es": "el producto", "example": "nl-b1-interview.ik-vind-jullie-product-heel-interessant", "situation": "trabajo"},
+    {"id": "nl-b1-interview.salaris", "word": "salaris", "article": "het", "plural": "salarissen", "es": "el sueldo, el salario", "example": "nl-b1-interview.wat-is-het-salaris-voor-deze-functie", "situation": "trabajo", "image": "fluent:money-bag"},
+    {"id": "nl-b1-interview.bruto", "word": "bruto", "es": "bruto (antes de impuestos)", "example": "nl-b1-interview.is-dat-bruto-of-netto", "situation": "trabajo"},
+    {"id": "nl-b1-interview.netto", "word": "netto", "es": "neto (lo que cobras)", "example": "nl-b1-interview.is-dat-bruto-of-netto", "situation": "trabajo"},
+    {"id": "nl-b1-interview.vakantiegeld", "word": "vakantiegeld", "article": "het", "es": "la paga de vacaciones", "example": "nl-b1-interview.het-vakantiegeld-is-acht-procent", "situation": "trabajo"},
+    {"id": "nl-b1-interview.contract", "word": "contract", "article": "het", "plural": "contracten", "es": "el contrato", "example": "nl-b1-interview.het-is-een-tijdelijk-contract-voor-een-jaar", "situation": "trabajo", "image": "fluent:page-with-curl"},
+    {"id": "nl-b1-interview.tijdelijk", "word": "tijdelijk", "es": "temporal", "example": "nl-b1-interview.het-is-een-tijdelijk-contract-voor-een-jaar", "situation": "trabajo"},
+    {"id": "nl-b1-interview.proeftijd", "word": "proeftijd", "article": "de", "es": "el periodo de prueba", "example": "nl-b1-interview.de-proeftijd-is-een-maand", "situation": "trabajo"},
+    {"id": "nl-b1-interview.vakantiedag", "word": "vakantiedag", "article": "de", "plural": "vakantiedagen", "es": "el día de vacaciones", "example": "nl-b1-interview.hoeveel-vakantiedagen-krijg-ik", "situation": "trabajo"},
+    {"id": "nl-b1-interview.reiskostenvergoeding", "word": "reiskostenvergoeding", "article": "de", "plural": "reiskostenvergoedingen", "es": "la compensación por gastos de viaje", "example": "nl-b1-interview.krijg-ik-een-reiskostenvergoeding", "situation": "trabajo"},
+    {"id": "nl-b1-interview.dertigprocentregeling", "word": "dertigprocentregeling", "article": "de", "es": "la regla del treinta por ciento (ventaja fiscal)", "notes": "Ventaja fiscal para algunos trabajadores llegados de fuera; solo para reconocerla.", "situation": "trabajo"},
+    {"id": "nl-b1-interview.pensioen", "word": "pensioen", "article": "het", "plural": "pensioenen", "es": "la pensión, el plan de pensiones", "notes": "Se dice «pen-SJUN».", "situation": "trabajo"},
+    {"id": "nl-b1-interview.cao", "word": "cao", "article": "de", "plural": "cao's", "es": "el convenio colectivo", "notes": "Siglas de collectieve arbeidsovereenkomst; se dice «see-aa-OO».", "situation": "trabajo"},
+    {"id": "nl-b1-interview.aanbod", "word": "aanbod", "article": "het", "es": "la oferta (de trabajo)", "example": "nl-b1-interview.we-willen-je-graag-een-aanbod-doen", "situation": "trabajo"},
+    {"id": "nl-b1-interview.tekenen", "word": "tekenen", "es": "firmar; dibujar", "example": "nl-b1-interview.ik-heb-het-contract-getekend", "situation": "trabajo", "image": "fluent:writing-hand"},
+    {"id": "nl-b1-interview.handtekening", "word": "handtekening", "article": "de", "plural": "handtekeningen", "es": "la firma", "situation": "trabajo"},
+    {"id": "nl-b1-interview.werkdag", "word": "werkdag", "article": "de", "plural": "werkdagen", "es": "el día laborable, la jornada", "example": "nl-b1-interview.hoe-ziet-een-normale-werkdag-eruit", "situation": "trabajo"}
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-interview.qa.about-yourself",
+      "question": "Kunt u iets over uzelf vertellen?",
+      "questionEs": "¿Puede hablarnos un poco de usted?",
+      "accepted": [
+        {
+          "text": "Natuurlijk. Ik werk al zes jaar als developer, vooral in de backend.",
+          "es": "Claro. Llevo seis años trabajando de desarrollador, sobre todo en backend."
+        },
+        {
+          "text": "Ik kom uit Spanje en woon sinds vorig jaar in Utrecht.",
+          "es": "Soy de España y vivo en Utrecht desde el año pasado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Natuurlijk. Ik ben developer en nu ik woon in Utrecht.",
+          "es": "Claro. Soy desarrollador y ahora vivo en Utrecht."
+        },
+        {
+          "text": "Ik heb developer en ik kom uit Spanje.",
+          "es": "Soy desarrollador y soy de España."
+        }
+      ],
+      "register": "u",
+      "situation": "trabajo",
+      "notes": "Si empiezas con «nu», el verbo va antes del sujeto (nu woon ik); y la profesión va con «zijn»: ik ben developer.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-interview.qa.previous-job",
+      "question": "Wat deed u in uw vorige baan?",
+      "questionEs": "¿Qué hacía en su anterior trabajo?",
+      "accepted": [
+        {
+          "text": "Ik werkte als backend developer bij een bank.",
+          "es": "Trabajaba como desarrollador backend en un banco."
+        },
+        {
+          "text": "Ik was verantwoordelijk voor de betaalapp van een bank.",
+          "es": "Era responsable de la app de pagos de un banco."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik ben als developer bij een bank gewerkt.",
+          "es": "He trabajado como desarrollador en un banco."
+        },
+        {
+          "text": "Ik deed als developer bij een bank.",
+          "es": "Hacía como desarrollador en un banco."
+        }
+      ],
+      "register": "u",
+      "situation": "trabajo",
+      "notes": "«werken» hace el perfecto con «hebben» (ik heb gewerkt); y «hacer de» no es «doen als»: dilo con «werken als».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-interview.qa.how-long-there",
+      "question": "Hoe lang heeft u daar gewerkt?",
+      "questionEs": "¿Cuánto tiempo trabajó allí?",
+      "accepted": [
+        {
+          "text": "Ik heb er vier jaar gewerkt.",
+          "es": "Trabajé allí cuatro años."
+        },
+        {
+          "text": "Vier jaar, tot vorige maand.",
+          "es": "Cuatro años, hasta el mes pasado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik werk er vier jaar.",
+          "es": "Trabajo allí cuatro años."
+        },
+        {
+          "text": "Ik heb er vier jaren gewerkt.",
+          "es": "Trabajé allí cuatro años."
+        }
+      ],
+      "register": "u",
+      "situation": "trabajo",
+      "notes": "La etapa terminó, así que perfecto (ik heb gewerkt); y tras un número va «jaar», en singular.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-interview.qa.strong-point",
+      "question": "Wat is uw sterke punt?",
+      "questionEs": "¿Cuál es su punto fuerte?",
+      "accepted": [
+        {
+          "text": "Mijn sterke punt is dat ik goed samenwerk.",
+          "es": "Mi punto fuerte es que trabajo bien en equipo."
+        },
+        {
+          "text": "Ik leer snel en ik kan goed onder druk werken.",
+          "es": "Aprendo rápido y trabajo bien bajo presión."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mijn sterke punt is dat ik werk goed samen.",
+          "es": "Mi punto fuerte es que trabajo bien en equipo."
+        },
+        {
+          "text": "Mijn sterke punt is dat ik ben flexibel.",
+          "es": "Mi punto fuerte es que soy flexible."
+        }
+      ],
+      "register": "u",
+      "situation": "trabajo",
+      "notes": "Tras «dat» el verbo va al final y el separable se junta: …dat ik goed samenwerk / …dat ik flexibel ben.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-interview.qa.weak-point",
+      "question": "En wat is uw zwakke punt?",
+      "questionEs": "¿Y cuál es su punto débil?",
+      "accepted": [
+        {
+          "text": "Ik ben soms te perfectionistisch, maar ik werk eraan.",
+          "es": "A veces soy demasiado perfeccionista, pero estoy en ello."
+        },
+        {
+          "text": "Ik vind het moeilijk om nee te zeggen.",
+          "es": "Me cuesta decir que no."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik vind moeilijk om nee te zeggen.",
+          "es": "Me cuesta decir que no."
+        },
+        {
+          "text": "Ik vind het moeilijk nee om te zeggen.",
+          "es": "Me cuesta decir que no."
+        }
+      ],
+      "register": "u",
+      "situation": "trabajo",
+      "notes": "Con «vinden» + adjetivo hace falta «het», y «om» va delante de todo el grupo: om nee te zeggen.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-interview.qa.why-here",
+      "question": "Waarom wilt u bij ons werken?",
+      "questionEs": "¿Por qué quiere trabajar con nosotros?",
+      "accepted": [
+        {
+          "text": "Omdat ik jullie product heel interessant vind.",
+          "es": "Porque vuestro producto me parece muy interesante."
+        },
+        {
+          "text": "Ik wil hier werken omdat ik hier veel kan leren.",
+          "es": "Quiero trabajar aquí porque puedo aprender mucho."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Omdat ik vind jullie product heel interessant.",
+          "es": "Porque vuestro producto me parece muy interesante."
+        },
+        {
+          "text": "Omdat ik kan veel leren hier.",
+          "es": "Porque puedo aprender mucho aquí."
+        }
+      ],
+      "register": "u",
+      "situation": "trabajo",
+      "notes": "Tras «omdat» los verbos van al final: …interessant vind, …kan leren.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-interview.qa.salary",
+      "question": "Wat zijn uw salariswensen?",
+      "questionEs": "¿Cuáles son sus expectativas salariales?",
+      "accepted": [
+        {
+          "text": "Ik denk aan ongeveer vierduizend euro bruto per maand.",
+          "es": "Pienso en unos cuatro mil euros brutos al mes."
+        },
+        {
+          "text": "Rond de vierduizend euro bruto per maand.",
+          "es": "Alrededor de cuatro mil euros brutos al mes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik denk over vierduizend euro bruto per maand.",
+          "es": "Reflexiono sobre cuatro mil euros brutos al mes."
+        },
+        {
+          "text": "Ik denk dat vierduizend euro bruto per maand.",
+          "es": "Creo que cuatro mil euros brutos al mes."
+        }
+      ],
+      "register": "u",
+      "situation": "trabajo",
+      "notes": "Para una cifra se dice «denken aan»; «denken over» es reflexionar, y «dat» necesita una frase con verbo.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-interview.qa.start-date",
+      "question": "Wanneer kunt u beginnen?",
+      "questionEs": "¿Cuándo puede empezar?",
+      "accepted": [
+        {
+          "text": "Ik kan op één mei beginnen.",
+          "es": "Puedo empezar el uno de mayo."
+        },
+        {
+          "text": "Na mijn opzegtermijn, dus over een maand.",
+          "es": "Después de mi preaviso, o sea, dentro de un mes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Op één mei ik kan beginnen.",
+          "es": "El uno de mayo puedo empezar."
+        },
+        {
+          "text": "Ik kan in één mei beginnen.",
+          "es": "Puedo empezar el uno de mayo."
+        }
+      ],
+      "register": "u",
+      "situation": "trabajo",
+      "notes": "Si empiezas por la fecha, el verbo va segundo (Op één mei kan ik…); y las fechas van con «op», no con «in».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-interview.qa.how-did-it-go",
+      "question": "Hoe ging het sollicitatiegesprek?",
+      "questionEs": "¿Qué tal fue la entrevista?",
+      "accepted": [
+        {
+          "text": "Het ging goed, denk ik. Ze waren heel aardig.",
+          "es": "Creo que fue bien. Fueron muy amables."
+        },
+        {
+          "text": "Goed! Ze hebben me een aanbod gedaan.",
+          "es": "¡Bien! Me han hecho una oferta."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Het ging goed, ik denk.",
+          "es": "Fue bien, creo."
+        },
+        {
+          "text": "Goed! Ze hebben me een aanbod gemaakt.",
+          "es": "¡Bien! Me han hecho una oferta."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Al final de la frase se invierte: «denk ik»; y una oferta se «doet»: een aanbod doen.",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "id": "nl-b1-workplace",
+  "order": 120,
+  "title": "En el trabajo: primeros días, compañeros, comida, email y Teams",
+  "description": "Presentarte el primer día, comer con los compañeros, entender la franqueza holandesa, moverte por Teams y el email, y organizar el teletrabajo y tu puesto en la oficina.",
+  "emoji": "💼",
+  "situation": "trabajo",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-workplace.l.eerste-dag",
+      "title": "Tu primer día",
+      "items": [
+        "nl-b1-workplace.hoi-ik-ben-hernan-de-nieuwe-developer",
+        "nl-b1-workplace.zich-voorstellen",
+        "nl-b1-workplace.mag-ik-me-even-voorstellen",
+        "nl-b1-workplace.welkom-leuk-dat-je-er-bent",
+        "nl-b1-workplace.vandaag-is-mijn-eerste-werkdag",
+        "nl-b1-interview.werkdag",
+        "nl-b1-workplace.ik-ben-vandaag-begonnen",
+        "nl-b1-workplace.collega",
+        "nl-b1-workplace.wie-is-mijn-buddy",
+        "nl-b1-workplace.kantoor",
+        "nl-b1-workplace.afdeling",
+        "nl-b1-workplace.op-welke-afdeling-werk-je",
+        "nl-b1-workplace.hoe-lang-werk-jij-hier-al",
+        "nl-b1-workplace.laptop",
+        "nl-b1-workplace.pasje",
+        "nl-b1-workplace.je-krijgt-vandaag-je-laptop-en-je-pasje",
+        "nl-b1-workplace.account",
+        "nl-b1-workplace.mijn-account-werkt-nog-niet",
+        "nl-b1-workplace.qa.new-colleague",
+        "nl-b1-workplace.qa.introduce"
+      ]
+    },
+    {
+      "id": "nl-b1-workplace.l.lunch",
+      "title": "La comida y el café",
+      "items": [
+        "nl-b1-workplace.lunch",
+        "nl-b1-workplace.ga-je-mee-lunchen",
+        "nl-b1-workplace.kantine",
+        "nl-b1-workplace.we-lunchen-meestal-om-half-een-in-de-kantine",
+        "nl-b1-workplace.boterham",
+        "nl-b1-workplace.beleg",
+        "nl-b1-workplace.ik-neem-een-boterham-met-kaas",
+        "nl-b1-workplace.karnemelk",
+        "nl-b1-workplace.heb-je-je-lunch-zelf-meegenomen",
+        "nl-b1-workplace.kroket",
+        "nl-b1-workplace.een-broodje-kroket-lekker",
+        "nl-b1-workplace.koffieapparaat",
+        "nl-b1-workplace.ik-ga-even-koffie-halen-wil-jij-ook",
+        "nl-b1-workplace.zal-ik-koffie-voor-je-meenemen",
+        "nl-b1-workplace.hoe-drink-je-je-koffie",
+        "nl-b1-workplace.jarig",
+        "nl-b1-workplace.trakteren",
+        "nl-b1-workplace.ik-trakteer-vandaag-ik-ben-jarig",
+        "nl-b1-workplace.taart",
+        "nl-b1-workplace.er-staat-taart-in-de-keuken",
+        "nl-b1-workplace.qa.lunch",
+        "nl-b1-workplace.qa.coffee"
+      ]
+    },
+    {
+      "id": "nl-b1-workplace.l.direct",
+      "title": "La franqueza holandesa",
+      "items": [
+        "nl-b1-workplace.direct",
+        "nl-b1-workplace.eerlijk",
+        "nl-b1-workplace.mag-ik-eerlijk-zijn",
+        "nl-b1-workplace.mening",
+        "nl-b1-workplace.idee",
+        "nl-b1-workplace.dat-vind-ik-geen-goed-idee",
+        "nl-b1-workplace.wat-vind-jij-ervan",
+        "nl-b1-workplace.dat-klopt-niet-helemaal",
+        "nl-b1-workplace.feedback",
+        "nl-b1-workplace.neem-het-niet-persoonlijk",
+        "nl-b1-workplace.hij-bedoelt-het-niet-zo",
+        "nl-b1-workplace.ik-zeg-gewoon-wat-ik-denk",
+        "nl-b1-workplace.je-mag-altijd-zeggen-wat-je-denkt",
+        "nl-b1-workplace.prima-doen-we",
+        "nl-b1-workplace.jammer-maar-geen-probleem",
+        "nl-b1-workplace.qa.direct-feedback"
+      ]
+    },
+    {
+      "id": "nl-b1-workplace.l.online",
+      "title": "Email, Teams y chat",
+      "items": [
+        "nl-b1-workplace.bericht",
+        "nl-b1-workplace.ik-stuur-je-even-een-berichtje-op-teams",
+        "nl-b1-workplace.mail",
+        "nl-b1-workplace.ik-heb-je-een-mail-gestuurd",
+        "nl-b1-workplace.kun-je-me-in-de-cc-zetten",
+        "nl-b1-workplace.ik-reageer-morgen-op-je-mail",
+        "nl-b1-workplace.camera",
+        "nl-b1-workplace.zet-je-je-camera-aan",
+        "nl-b1-workplace.je-staat-op-mute",
+        "nl-b1-workplace.meeting",
+        "nl-b1-workplace.vergadering",
+        "nl-b1-workplace.ik-zit-nog-in-een-meeting",
+        "nl-b1-workplace.ik-ben-even-weg",
+        "nl-b1-workplace.zich-aanmelden",
+        "nl-b1-workplace.training",
+        "nl-b1-workplace.ik-heb-me-aangemeld-voor-de-training",
+        "nl-b1-workplace.borrel",
+        "nl-b1-workplace.ik-meld-me-aan-voor-de-borrel",
+        "nl-b1-workplace.qa.teams-message"
+      ]
+    },
+    {
+      "id": "nl-b1-workplace.l.werkplek",
+      "title": "Teletrabajo y tu puesto",
+      "items": [
+        "nl-b1-workplace.thuiswerken",
+        "nl-b1-workplace.morgen-werk-ik-thuis",
+        "nl-b1-workplace.ik-ben-op-dinsdag-en-donderdag-op-kantoor",
+        "nl-b1-workplace.werkplek",
+        "nl-b1-workplace.flexplek",
+        "nl-b1-workplace.ik-moet-nog-een-werkplek-reserveren",
+        "nl-b1-workplace.is-deze-plek-vrij",
+        "nl-b1-workplace.bureau",
+        "nl-b1-workplace.scherm",
+        "nl-b1-workplace.toetsenbord",
+        "nl-b1-workplace.heb-je-even",
+        "nl-b1-workplace.heb-je-vijf-minuutjes-voor-me",
+        "nl-b1-workplace.ik-moet-me-even-concentreren",
+        "nl-b1-workplace.koptelefoon",
+        "nl-b1-workplace.ik-zet-mijn-koptelefoon-op",
+        "nl-b1-workplace.zich-voelen",
+        "nl-b1-workplace.ik-voel-me-hier-al-thuis",
+        "nl-b1-workplace.ik-verheug-me-op-het-weekend",
+        "nl-b1-workplace.qa.home-or-office",
+        "nl-b1-workplace.qa.have-a-minute",
+        "nl-b1-workplace.qa.how-is-it-going"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "nl-b1-workplace.hoi-ik-ben-hernan-de-nieuwe-developer", "text": "Hoi, ik ben Hernán, de nieuwe developer.", "es": "Hola, soy Hernán, el nuevo desarrollador.", "notes": "Con los compañeros, también con tu jefe, se usa «je»: «hoi» es el saludo normal.", "explanation": "Para presentarte a cada compañero el primer día. «nieuwe»: «NIU-we», con «ieuw» como «iu».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.mag-ik-me-even-voorstellen", "text": "Mag ik me even voorstellen?", "es": "¿Me presento un momento?", "notes": "zich voorstellen = presentarse (reflexivo y separable): ik stel me voor.", "explanation": "Para presentarte ante un grupo o en una reunión. «voorstellen»: acento en «VOOR».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.welkom-leuk-dat-je-er-bent", "text": "Welkom! Leuk dat je er bent.", "es": "¡Bienvenido! Qué bien que estés aquí.", "notes": "Tras «dat» el verbo al final: …dat je er bent. «er» = aquí, allí.", "explanation": "La bienvenida típica de tus compañeros. «welkom»: «WEL-kom», acento en la primera.", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.vandaag-is-mijn-eerste-werkdag", "text": "Vandaag is mijn eerste werkdag.", "es": "Hoy es mi primer día de trabajo.", "notes": "V2: tras «Vandaag» el verbo va segundo: Vandaag is…", "explanation": "Para explicar por qué no sabes nada todavía. «eerste»: «EER-ste», con «ee» larga.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-ben-vandaag-begonnen", "text": "Ik ben vandaag begonnen.", "es": "He empezado hoy.", "notes": "beginnen hace el perfecto con «zijn»: ik ben begonnen.", "explanation": "Respuesta rápida cuando te preguntan si eres nuevo. «begonnen»: «be-JO-ne».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.wie-is-mijn-buddy", "text": "Wie is mijn buddy deze eerste weken?", "es": "¿Quién es mi compañero de acogida estas primeras semanas?", "notes": "«buddy» = el compañero que te ayuda los primeros días.", "explanation": "Muchas empresas te asignan una persona de referencia. «weken»: «WEE-ke», sin la «n» final.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.je-krijgt-vandaag-je-laptop-en-je-pasje", "text": "Je krijgt vandaag je laptop en je pasje.", "es": "Hoy te dan el portátil y la tarjeta de acceso.", "notes": "«pasje» = diminutivo de pas (tarjeta): het pasje.", "explanation": "Lo que te dirá la persona de recursos humanos. «pasje»: «PAS-je», la «j» como «i».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.mijn-account-werkt-nog-niet", "text": "Mijn account werkt nog niet.", "es": "Mi cuenta todavía no funciona.", "notes": "«werken» también es funcionar: de printer werkt niet.", "explanation": "Para avisar a IT. «werkt»: no se come la «t»: «werkt».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.hoe-lang-werk-jij-hier-al", "text": "Hoe lang werk jij hier al?", "es": "¿Cuánto tiempo llevas trabajando aquí?", "notes": "Con «jij» detrás del verbo, el verbo pierde la -t: werk jij (no «werkt jij»).", "explanation": "Pregunta fácil para charlar con un compañero. «jij» suena «yei».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.op-welke-afdeling-werk-je", "text": "Op welke afdeling werk je?", "es": "¿En qué departamento trabajas?", "explanation": "Para situar a un compañero. «afdeling»: «AF-dee-ling», acento en la primera.", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ga-je-mee-lunchen", "text": "Ga je mee lunchen?", "es": "¿Te vienes a comer?", "notes": "meegaan = ir con alguien (separable): ga je mee?", "explanation": "Te lo dirán hacia las doce y media. «lunchen» se dice a la inglesa: «LUN-sje».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.we-lunchen-meestal-om-half-een-in-de-kantine", "text": "We lunchen meestal om half één in de kantine.", "es": "Normalmente comemos a las doce y media en el comedor.", "notes": "«half één» es media hora ANTES de la una: 12:30.", "explanation": "Para explicar la rutina del equipo. Ojo: «half één» = 12:30, la media hora antes de la una.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-neem-een-boterham-met-kaas", "text": "Ik neem een boterham met kaas.", "es": "Me tomo un sándwich de queso.", "notes": "Aquí se come ligero a mediodía: pan con queso y un vaso de leche o karnemelk.", "explanation": "La comida típica del mediodía holandés. «boterham»: «BOO-ter-jam», acento en la primera.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.heb-je-je-lunch-zelf-meegenomen", "text": "Heb je je lunch zelf meegenomen?", "es": "¿Te has traído la comida de casa?", "notes": "meenemen (llevar contigo) es separable: el «ge» va en medio: mee-ge-nomen.", "explanation": "Pregunta normal en la cantina. «meegenomen»: «MEE-je-noo-me», acento en «MEE».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.een-broodje-kroket-lekker", "text": "Een broodje kroket, lekker!", "es": "¡Un bocadillo de croqueta, qué rico!", "notes": "«lekker» = rico, y también agradable (lekker weer); «broodje» = panecillo.", "explanation": "Clásico de la cantina. «kroket»: «kro-KET», acento al final; «lekker» con «e» corta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-ga-even-koffie-halen-wil-jij-ook", "text": "Ik ga even koffie halen. Wil jij ook?", "es": "Voy a por café. ¿Quieres tú también?", "notes": "«halen» = ir a buscar algo. Se espera que también tú lo ofrezcas a veces.", "explanation": "Costumbre de la oficina: quien va a por café pregunta a los demás. «halen»: «HAA-le».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.zal-ik-koffie-voor-je-meenemen", "text": "Zal ik koffie voor je meenemen?", "es": "¿Te traigo un café?", "notes": "«Zal ik…?» = ¿quieres que…?: ofrecer algo.", "explanation": "Para ofrecerte cuando vas a la máquina. «zal»: «sal», con la «z» suave.", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.hoe-drink-je-je-koffie", "text": "Hoe drink je je koffie? Zwart?", "es": "¿Cómo tomas el café? ¿Solo?", "notes": "«zwart» = solo; «met melk» = con leche; «zonder suiker» = sin azúcar.", "explanation": "Pregunta del que va a por café. «zwart»: «svart», con la «w» suave casi como «v».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-trakteer-vandaag-ik-ben-jarig", "text": "Ik trakteer vandaag, ik ben jarig!", "es": "Hoy invito yo, ¡es mi cumpleaños!", "notes": "trakteren = invitar a algo (traer tarta). «jarig zijn» = cumplir años, ser tu cumpleaños.", "explanation": "Costumbre: el día de tu cumpleaños llevas tarta o dulces a la oficina. «trakteer»: «trak-TEER».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.er-staat-taart-in-de-keuken", "text": "Er staat taart in de keuken.", "es": "Hay tarta en la cocina.", "notes": "«Er staat…» = hay (algo colocado de pie o encima de algo).", "explanation": "El mensaje que todos esperan en el chat del equipo. «keuken»: «KEU-ke», con «eu».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.mag-ik-eerlijk-zijn", "text": "Mag ik eerlijk zijn?", "es": "¿Puedo ser sincero?", "notes": "Aquí la franqueza se ve como respeto, no como mala educación.", "explanation": "Lo oirás antes de una crítica directa. «eerlijk»: «EER-lek», la «ij» final casi muda.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.dat-vind-ik-geen-goed-idee", "text": "Dat vind ik geen goed idee.", "es": "Eso no me parece buena idea.", "notes": "Se niega con «geen» delante de «goed idee» (sustantivo). «Dat» delante: verbo segundo.", "explanation": "Para discrepar de forma directa pero normal. «idee»: «i-DEE», acento al final.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.neem-het-niet-persoonlijk", "text": "Neem het niet persoonlijk.", "es": "No te lo tomes como algo personal.", "notes": "Imperativo = la raíz del verbo: neem (de nemen).", "explanation": "Para tranquilizar a alguien tras una crítica. «persoonlijk»: «per-SOON-lek».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.hij-bedoelt-het-niet-zo", "text": "Hij bedoelt het niet zo.", "es": "No lo dice con mala intención.", "notes": "«bedoelen» = querer decir: Wat bedoel je? = ¿qué quieres decir?", "explanation": "Cuando un compañero muy directo te ha sorprendido. «bedoelt»: «be-DUULT», acento en «DOELT».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-zeg-gewoon-wat-ik-denk", "text": "Ik zeg gewoon wat ik denk.", "es": "Yo digo lo que pienso, sin más.", "notes": "«gewoon» = simplemente, sin más; también «normal». Tras «wat» el verbo va al final.", "explanation": "Frase muy holandesa. «gewoon»: «je-WOON», con «g» de garganta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.wat-vind-jij-ervan", "text": "Wat vind jij ervan?", "es": "¿Tú qué opinas?", "notes": "«ervan» = de eso (er + van). «vinden van» = opinar de.", "explanation": "Para pedir la opinión de un compañero. «ervan»: «er-VAN», acento al final.", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.dat-klopt-niet-helemaal", "text": "Dat klopt niet helemaal.", "es": "Eso no es del todo correcto.", "notes": "«Dat klopt» = es correcto, cuadra; muy frecuente para decir «exacto».", "explanation": "Para corregir algo sin rodeos. «klopt»: «klopt», con «o» corta.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.prima-doen-we", "text": "Prima, doen we.", "es": "Perfecto, lo hacemos.", "notes": "«prima» = bien, de acuerdo: tono neutro, ni entusiasta ni frío.", "explanation": "Para aceptar una propuesta. «prima»: «PRII-ma».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.jammer-maar-geen-probleem", "text": "Jammer, maar geen probleem.", "es": "Qué pena, pero no pasa nada.", "notes": "«jammer» = qué pena, lástima.", "explanation": "Cuando algo no sale como querías. «jammer»: «YA-mer», la «j» como «i».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.je-mag-altijd-zeggen-wat-je-denkt", "text": "Je mag altijd zeggen wat je denkt.", "es": "Siempre puedes decir lo que piensas.", "explanation": "Lo que te dirá tu jefa el primer día. «altijd»: «AL-teit».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-stuur-je-even-een-berichtje-op-teams", "text": "Ik stuur je even een berichtje op Teams.", "es": "Te mando un mensajito por Teams.", "notes": "El diminutivo «berichtje» hace la frase más ligera.", "explanation": "Para seguir una conversación por chat. «berichtje»: «be-RIJ-tje», diminutivo de bericht.", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.ik-heb-je-een-mail-gestuurd", "text": "Ik heb je net een mail gestuurd.", "es": "Te acabo de mandar un correo.", "notes": "«net» + perfecto = acabar de.", "explanation": "Para avisar a un compañero. «mail» se dice como en inglés: «meil».", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.zet-je-je-camera-aan", "text": "Zet je je camera aan?", "es": "¿Enciendes la cámara?", "notes": "*zet … aan* = aanzetten (encender): la partícula al final; uitzetten = apagar.", "explanation": "En una videollamada. «zet»: «set», con la «z» suave.", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.je-staat-op-mute", "text": "Je staat op mute.", "es": "Tienes el micro silenciado.", "explanation": "Lo oirás en todas las reuniones online. «mute» se dice a la inglesa: «miut».", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.ik-zit-nog-in-een-meeting", "text": "Ik zit nog in een meeting.", "es": "Todavía estoy en una reunión.", "notes": "«zitten» se usa mucho para «estar» en un lugar o situación.", "explanation": "Para contestar un mensaje rápido. «zit» con «i» corta: «sit».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.ik-heb-me-aangemeld-voor-de-training", "text": "Ik heb me aangemeld voor de training.", "es": "Me he apuntado a la formación.", "notes": "zich aanmelden = apuntarse (reflexivo y separable): ik meld me aan.", "explanation": "Para contar que te has inscrito. «aangemeld»: «AAN-je-melt».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.ik-meld-me-aan-voor-de-borrel", "text": "Ik meld me aan voor de borrel van vrijdag.", "es": "Me apunto a las copas del viernes.", "notes": "*meld me … aan* = zich aanmelden: la partícula al final.", "explanation": "La borrel es el rato de copas con los compañeros, a menudo el viernes. «borrel»: «BO-rel».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.kun-je-me-in-de-cc-zetten", "text": "Kun je me in de cc zetten?", "es": "¿Me pones en copia?", "explanation": "Para que te incluyan en un correo. «cc» se lee «see-SEE».", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.ik-reageer-morgen-op-je-mail", "text": "Ik reageer morgen op je mail.", "es": "Mañana contesto a tu correo.", "notes": "«reageren op» = contestar a, responder a.", "explanation": "Para avisar de que viste el mensaje. «reageer»: «re-a-JEER».", "register": "tu", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.ik-ben-even-weg", "text": "Ik ben even weg, over een halfuurtje terug.", "es": "Me ausento un rato, vuelvo en media horita.", "notes": "«even weg» = fuera un momento; «halfuurtje» = media horita (diminutivo).", "explanation": "Para el chat del equipo antes de salir. «halfuurtje»: «half-UUR-tje».", "register": "neutral", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.morgen-werk-ik-thuis", "text": "Morgen werk ik thuis.", "es": "Mañana trabajo desde casa.", "notes": "V2: tras «Morgen» va el verbo y luego «ik».", "explanation": "Para avisar al equipo. «thuis»: «taus», la «th» es una «t».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-ben-op-dinsdag-en-donderdag-op-kantoor", "text": "Ik ben op dinsdag en donderdag op kantoor.", "es": "Voy a la oficina los martes y los jueves.", "notes": "«op kantoor» = en la oficina (sin artículo).", "explanation": "Para explicar tu horario híbrido. «donderdag»: «DON-der-daj».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-moet-nog-een-werkplek-reserveren", "text": "Ik moet nog een werkplek reserveren.", "es": "Todavía tengo que reservar un puesto.", "notes": "Con un modal, el infinitivo va al final: moet … reserveren.", "explanation": "En oficinas con puestos flexibles. «reserveren»: «re-ser-VEE-re».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.is-deze-plek-vrij", "text": "Is deze plek nog vrij?", "es": "¿Está libre este sitio?", "explanation": "Antes de sentarte en una mesa compartida. «vrij»: «vrei», con «ij» = «ei».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.heb-je-even", "text": "Heb je even?", "es": "¿Tienes un momento?", "notes": "«even» suaviza: un momento. Respuesta: «Ja hoor» o «Nu even niet».", "explanation": "La forma más corta de pedir un minuto a un compañero. «even»: «EE-ve».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.heb-je-vijf-minuutjes-voor-me", "text": "Heb je vijf minuutjes voor me?", "es": "¿Tienes cinco minutillos para mí?", "notes": "Diminutivo para suavizar: minuutje, vraagje, momentje.", "explanation": "Para pedir ayuda sin molestar. «minuutjes»: «mi-NUUT-jes».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-moet-me-even-concentreren", "text": "Ik moet me even concentreren.", "es": "Necesito concentrarme un rato.", "notes": "zich concentreren = concentrarse (reflexivo: me).", "explanation": "Para pedir que no te molesten. «concentreren»: «kon-sen-TREE-re».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-zet-mijn-koptelefoon-op", "text": "Ik zet mijn koptelefoon op.", "es": "Me pongo los cascos.", "notes": "*zet … op* = opzetten (ponerse algo en la cabeza): partícula al final.", "explanation": "Señal típica de «estoy concentrado» en la oficina. «koptelefoon»: «KOP-te-le-foon».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-voel-me-hier-al-thuis", "text": "Ik voel me hier al thuis.", "es": "Ya me siento como en casa aquí.", "notes": "zich voelen = sentirse (reflexivo). «thuis» = en casa.", "explanation": "Cuando te preguntan qué tal te va. «voel»: «vul», con «oe» = «u».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.ik-verheug-me-op-het-weekend", "text": "Ik verheug me op het weekend.", "es": "Tengo ganas de que llegue el fin de semana.", "notes": "zich verheugen op = tener ganas de algo (reflexivo + op).", "explanation": "Típico del viernes. «verheug»: «ver-JEUJ», con «eu» y dos «g» de garganta.", "register": "neutral", "situation": "trabajo"}
+  ],
+  "vocab": [
+    {"id": "nl-b1-workplace.collega", "word": "collega", "article": "de", "plural": "collega's", "es": "el compañero de trabajo", "notes": "Plural con apóstrofo: collega's.", "situation": "trabajo", "image": "fluent:busts-in-silhouette"},
+    {"id": "nl-b1-workplace.kantoor", "word": "kantoor", "article": "het", "plural": "kantoren", "es": "la oficina", "situation": "trabajo", "image": "fluent:office-building"},
+    {"id": "nl-b1-workplace.afdeling", "word": "afdeling", "article": "de", "plural": "afdelingen", "es": "el departamento", "example": "nl-b1-workplace.op-welke-afdeling-werk-je", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.pasje", "word": "pasje", "article": "het", "plural": "pasjes", "es": "la tarjeta (de acceso)", "notes": "Diminutivo: siempre «het».", "example": "nl-b1-workplace.je-krijgt-vandaag-je-laptop-en-je-pasje", "situation": "trabajo", "image": "fluent:identification-card"},
+    {"id": "nl-b1-workplace.laptop", "word": "laptop", "article": "de", "plural": "laptops", "es": "el portátil", "example": "nl-b1-workplace.je-krijgt-vandaag-je-laptop-en-je-pasje", "situation": "trabajo", "image": "fluent:laptop"},
+    {"id": "nl-b1-workplace.account", "word": "account", "article": "het", "plural": "accounts", "es": "la cuenta (de usuario)", "example": "nl-b1-workplace.mijn-account-werkt-nog-niet", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.zich-voorstellen", "word": "zich voorstellen", "es": "presentarse", "notes": "Reflexivo y separable: ik stel me voor, hij stelt zich voor.", "example": "nl-b1-workplace.mag-ik-me-even-voorstellen", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.lunch", "word": "lunch", "article": "de", "plural": "lunches", "es": "la comida de mediodía", "example": "nl-b1-workplace.heb-je-je-lunch-zelf-meegenomen", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.kantine", "word": "kantine", "article": "de", "plural": "kantines", "es": "la cantina, el comedor de empresa", "example": "nl-b1-workplace.we-lunchen-meestal-om-half-een-in-de-kantine", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.boterham", "word": "boterham", "article": "de", "plural": "boterhammen", "es": "la rebanada de pan (con algo)", "notes": "Pan de molde con queso, embutido o hagelslag: la comida típica.", "example": "nl-b1-workplace.ik-neem-een-boterham-met-kaas", "situation": "trabajo", "image": "fluent:sandwich"},
+    {"id": "nl-b1-workplace.beleg", "word": "beleg", "article": "het", "es": "lo que se pone en el pan (queso, embutido…)", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.kroket", "word": "kroket", "article": "de", "plural": "kroketten", "es": "la croqueta", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.karnemelk", "word": "karnemelk", "article": "de", "es": "el suero de leche (bebida)", "notes": "Muchos holandeses la beben con la comida.", "situation": "trabajo", "image": "fluent:glass-of-milk"},
+    {"id": "nl-b1-workplace.koffieapparaat", "word": "koffieapparaat", "article": "het", "plural": "koffieapparaten", "es": "la máquina de café", "notes": "Compuesta: manda «het apparaat».", "situation": "trabajo", "image": "fluent:hot-beverage"},
+    {"id": "nl-b1-workplace.taart", "word": "taart", "article": "de", "plural": "taarten", "es": "la tarta", "example": "nl-b1-workplace.er-staat-taart-in-de-keuken", "situation": "trabajo", "image": "fluent:shortcake"},
+    {"id": "nl-b1-workplace.trakteren", "word": "trakteren", "es": "invitar (a tarta, a una ronda)", "example": "nl-b1-workplace.ik-trakteer-vandaag-ik-ben-jarig", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.jarig", "word": "jarig", "es": "de cumpleaños (ser el día de tu cumpleaños)", "notes": "Ik ben jarig = hoy es mi cumpleaños.", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.mening", "word": "mening", "article": "de", "plural": "meningen", "es": "la opinión", "notes": "-ing: siempre «de».", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.direct", "word": "direct", "es": "directo; enseguida", "notes": "Dicho de alguien: franco. «Ik kom direct» = voy enseguida.", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.eerlijk", "word": "eerlijk", "es": "sincero, honesto; justo", "example": "nl-b1-workplace.mag-ik-eerlijk-zijn", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.feedback", "word": "feedback", "article": "de", "es": "el feedback, los comentarios", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.idee", "word": "idee", "article": "het", "plural": "ideeën", "es": "la idea", "notes": "Plural con diéresis: ideeën.", "example": "nl-b1-workplace.dat-vind-ik-geen-goed-idee", "situation": "trabajo", "image": "fluent:light-bulb"},
+    {"id": "nl-b1-workplace.bericht", "word": "bericht", "article": "het", "plural": "berichten", "es": "el mensaje", "situation": "comunicacion", "image": "fluent:speech-balloon"},
+    {"id": "nl-b1-workplace.mail", "word": "mail", "article": "de", "plural": "mails", "es": "el correo electrónico", "notes": "En la oficina se dice «mail» más que «e-mail».", "situation": "comunicacion", "image": "fluent:e-mail"},
+    {"id": "nl-b1-workplace.camera", "word": "camera", "article": "de", "plural": "camera's", "es": "la cámara", "example": "nl-b1-workplace.zet-je-je-camera-aan", "situation": "comunicacion", "image": "fluent:video-camera"},
+    {"id": "nl-b1-workplace.meeting", "word": "meeting", "article": "de", "plural": "meetings", "es": "la reunión", "notes": "Muy usada en las empresas; en neerlandés de siempre: de vergadering.", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.vergadering", "word": "vergadering", "article": "de", "plural": "vergaderingen", "es": "la reunión", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.training", "word": "training", "article": "de", "plural": "trainingen", "es": "la formación, el curso", "example": "nl-b1-workplace.ik-heb-me-aangemeld-voor-de-training", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.borrel", "word": "borrel", "article": "de", "plural": "borrels", "es": "las copas (después del trabajo)", "example": "nl-b1-workplace.ik-meld-me-aan-voor-de-borrel", "situation": "comunicacion", "image": "fluent:clinking-beer-mugs"},
+    {"id": "nl-b1-workplace.zich-aanmelden", "word": "zich aanmelden", "es": "apuntarse, inscribirse", "notes": "Reflexivo y separable: ik meld me aan, ik heb me aangemeld.", "example": "nl-b1-workplace.ik-heb-me-aangemeld-voor-de-training", "situation": "comunicacion"},
+    {"id": "nl-b1-workplace.werkplek", "word": "werkplek", "article": "de", "plural": "werkplekken", "es": "el puesto de trabajo", "example": "nl-b1-workplace.ik-moet-nog-een-werkplek-reserveren", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.flexplek", "word": "flexplek", "article": "de", "plural": "flexplekken", "es": "el puesto flexible (sin sitio fijo)", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.bureau", "word": "bureau", "article": "het", "plural": "bureaus", "es": "la mesa de trabajo, el escritorio", "notes": "Falso amigo: «het bureau» es la mesa (o una oficina), no un mueble con cajones.", "situation": "trabajo", "image": "fluent:desktop-computer"},
+    {"id": "nl-b1-workplace.koptelefoon", "word": "koptelefoon", "article": "de", "plural": "koptelefoons", "es": "los cascos, los auriculares", "example": "nl-b1-workplace.ik-zet-mijn-koptelefoon-op", "situation": "trabajo", "image": "fluent:headphone"},
+    {"id": "nl-b1-workplace.scherm", "word": "scherm", "article": "het", "plural": "schermen", "es": "la pantalla, el monitor", "situation": "trabajo"},
+    {"id": "nl-b1-workplace.toetsenbord", "word": "toetsenbord", "article": "het", "plural": "toetsenborden", "es": "el teclado", "situation": "trabajo", "image": "fluent:keyboard"},
+    {"id": "nl-b1-workplace.thuiswerken", "word": "thuiswerken", "es": "teletrabajar", "notes": "Ik werk thuis; ik heb thuisgewerkt.", "example": "nl-b1-workplace.morgen-werk-ik-thuis", "situation": "trabajo", "image": "fluent:house"},
+    {"id": "nl-b1-workplace.zich-voelen", "word": "zich voelen", "es": "sentirse", "notes": "Reflexivo: ik voel me goed, hoe voel je je?", "example": "nl-b1-workplace.ik-voel-me-hier-al-thuis", "situation": "trabajo"}
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-workplace.qa.new-colleague",
+      "question": "Hoi! Ben jij de nieuwe collega?",
+      "questionEs": "¡Hola! ¿Eres tú el nuevo compañero?",
+      "accepted": [
+        {
+          "text": "Ja, ik ben Hernán. Ik ben vandaag begonnen.",
+          "es": "Sí, soy Hernán. He empezado hoy."
+        },
+        {
+          "text": "Ja, vandaag is mijn eerste werkdag.",
+          "es": "Sí, hoy es mi primer día de trabajo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik heb vandaag begonnen.",
+          "es": "Sí, he empezado hoy."
+        },
+        {
+          "text": "Ja, vandaag ik ben begonnen.",
+          "es": "Sí, hoy he empezado."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "«beginnen» hace el perfecto con «zijn» (ik ben begonnen); y tras «vandaag» va el verbo: vandaag ben ik…",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-workplace.qa.introduce",
+      "question": "Wil je je even voorstellen aan het team?",
+      "questionEs": "¿Te presentas un momento al equipo?",
+      "accepted": [
+        {
+          "text": "Natuurlijk. Ik ben Hernán en ik ben de nieuwe backend developer.",
+          "es": "Claro. Soy Hernán y soy el nuevo desarrollador backend."
+        },
+        {
+          "text": "Ja hoor. Ik heet Hernán en ik kom uit Spanje.",
+          "es": "Claro. Me llamo Hernán y soy de España."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Natuurlijk. Ik voorstel me: ik ben Hernán.",
+          "es": "Claro. Me presento: soy Hernán."
+        },
+        {
+          "text": "Ja, ik stel jou voor: ik ben Hernán.",
+          "es": "Sí, me presento: soy Hernán."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "«zich voorstellen» se separa (ik stel me voor) y el reflexivo es «me»: «jou» sería presentarte a ti.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-workplace.qa.lunch",
+      "question": "Ga je mee lunchen?",
+      "questionEs": "¿Te vienes a comer?",
+      "accepted": [
+        {
+          "text": "Ja, gezellig! Ik heb mijn boterhammen bij me.",
+          "es": "¡Sí, qué bien! Llevo mis bocadillos."
+        },
+        {
+          "text": "Ja leuk, ik kom eraan.",
+          "es": "Sí, genial, ya voy."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik ga mee lunch.",
+          "es": "Sí, voy a comer contigo."
+        },
+        {
+          "text": "Ja, ik meega lunchen.",
+          "es": "Sí, voy a comer contigo."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "«meegaan» se separa (ik ga mee) y detrás va el infinitivo completo: lunchen. «gezellig» = agradable, con buen ambiente.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-workplace.qa.coffee",
+      "question": "Ik ga even koffie halen. Wil jij ook?",
+      "questionEs": "Voy a por café. ¿Quieres tú también?",
+      "accepted": [
+        {
+          "text": "Graag, zwart, zonder suiker.",
+          "es": "Sí, por favor, solo y sin azúcar."
+        },
+        {
+          "text": "Lekker, dank je!",
+          "es": "¡Genial, gracias!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik wil ook een koffie zwart.",
+          "es": "Sí, yo también quiero un café solo."
+        },
+        {
+          "text": "Graag, dank u wel!",
+          "es": "¡Sí, muchas gracias!"
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "El adjetivo va delante (een zwarte koffie), y a un compañero se le dice «dank je», no «dank u».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-workplace.qa.direct-feedback",
+      "question": "Eerlijk gezegd vind ik je code nog niet helemaal goed.",
+      "questionEs": "Sinceramente, tu código todavía no me parece del todo bien.",
+      "accepted": [
+        {
+          "text": "Prima, wat kan ik beter doen?",
+          "es": "Vale, ¿qué puedo mejorar?"
+        },
+        {
+          "text": "Oké, bedankt voor je feedback. Wat moet ik aanpassen?",
+          "es": "Vale, gracias por tu feedback. ¿Qué tengo que cambiar?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Prima, wat kan ik doen beter?",
+          "es": "Vale, ¿qué puedo mejorar?"
+        },
+        {
+          "text": "Oké, bedankt voor uw feedback.",
+          "es": "Vale, gracias por su feedback."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "El infinitivo va al final (wat kan ik beter doen?), y con un compañero se usa «je», no «uw».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-workplace.qa.home-or-office",
+      "question": "Werk je morgen thuis of op kantoor?",
+      "questionEs": "¿Mañana trabajas en casa o en la oficina?",
+      "accepted": [
+        {
+          "text": "Morgen werk ik thuis.",
+          "es": "Mañana trabajo en casa."
+        },
+        {
+          "text": "Op kantoor. Ik heb al een werkplek gereserveerd.",
+          "es": "En la oficina. Ya he reservado un puesto."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Morgen ik werk thuis.",
+          "es": "Mañana trabajo en casa."
+        },
+        {
+          "text": "Op kantoor. Ik ben al een werkplek gereserveerd.",
+          "es": "En la oficina. Ya he reservado un puesto."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Tras «Morgen» el verbo va segundo (Morgen werk ik), y «reserveren» hace el perfecto con «hebben».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-workplace.qa.have-a-minute",
+      "question": "Heb je even?",
+      "questionEs": "¿Tienes un momento?",
+      "accepted": [
+        {
+          "text": "Ja hoor, waar gaat het over?",
+          "es": "Sí, claro, ¿de qué se trata?"
+        },
+        {
+          "text": "Nu even niet, ik zit in een meeting. Over tien minuten?",
+          "es": "Ahora no, estoy en una reunión. ¿En diez minutos?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nu even geen, ik zit in een meeting.",
+          "es": "Ahora no, estoy en una reunión."
+        },
+        {
+          "text": "Ja hoor, waar het gaat over?",
+          "es": "Sí, claro, ¿de qué se trata?"
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "«niet» niega el verbo o la frase (geen va con sustantivos), y en la pregunta el verbo va segundo: waar gaat het over?",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-workplace.qa.teams-message",
+      "question": "Kun je me het linkje even sturen op Teams?",
+      "questionEs": "¿Me mandas el enlace por Teams?",
+      "accepted": [
+        {
+          "text": "Ja, ik stuur het je zo.",
+          "es": "Sí, ahora te lo mando."
+        },
+        {
+          "text": "Prima, ik stuur je zo een berichtje.",
+          "es": "Vale, ahora te mando un mensajito."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik stuur zo je het.",
+          "es": "Sí, ahora te lo mando."
+        },
+        {
+          "text": "Ja, ik heb het je zo gestuurd.",
+          "es": "Sí, te lo he mandado ahora."
+        }
+      ],
+      "register": "tu",
+      "situation": "comunicacion",
+      "notes": "Los pronombres van juntos tras el verbo (ik stuur het je zo), y «zo» (ahora mismo) pide presente, no perfecto.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-workplace.qa.how-is-it-going",
+      "question": "Hoe bevalt het hier tot nu toe?",
+      "questionEs": "¿Qué tal te va aquí hasta ahora?",
+      "accepted": [
+        {
+          "text": "Heel goed! Ik voel me hier al thuis.",
+          "es": "¡Muy bien! Ya me siento como en casa."
+        },
+        {
+          "text": "Prima, iedereen is heel aardig.",
+          "es": "Bien, todos son muy majos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Heel goed! Ik voel hier al thuis.",
+          "es": "¡Muy bien! Ya me siento como en casa."
+        },
+        {
+          "text": "Heel goed! Ik bevalt het hier.",
+          "es": "¡Muy bien! Me gusta esto."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "«zich voelen» necesita el reflexivo (ik voel me), y con «bevallen» el sujeto es la cosa: het bevalt me goed.",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}

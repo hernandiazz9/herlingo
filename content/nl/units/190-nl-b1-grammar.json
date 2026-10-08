@@ -1,0 +1,921 @@
+{
+  "id": "nl-b1-grammar",
+  "order": 190,
+  "title": "Gramática B1",
+  "description": "Contar el pasado (imperfecto y perfecto con zijn), frases largas con el verbo al final, relativos, om te, er, reflexivos, comparar, hablar del futuro, pedir con zou y la pasiva.",
+  "emoji": "📘",
+  "situation": "gramatica",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-grammar.l.verleden",
+      "title": "Contar el pasado",
+      "items": [
+        "gram.nl-b1-imperfect",
+        "nl-b1-grammar.vroeger",
+        "nl-b1-grammar.vroeger-woonde-ik-in-madrid",
+        "nl-b1-grammar.toen-ik-klein-was-speelde-ik-veel-buiten",
+        "nl-b1-grammar.ik-had-geen-tijd-want-ik-moest-werken",
+        "nl-b1-interview.daarvoor-werkte-ik-bij-een-start-up-in-madrid",
+        "gram.nl-b1-perfect-zijn",
+        "nl-b1-grammar.verhuizen",
+        "nl-b1-grammar.ik-ben-vorig-jaar-naar-utrecht-verhuisd",
+        "nl-b1-grammar.ze-is-naar-huis-gegaan",
+        "nl-b1-grammar.hoe-lang-ben-je-in-spanje-gebleven",
+        "nl-b1-workplace.ik-ben-vandaag-begonnen",
+        "nl-b1-grammar.qa.moved",
+        "nl-b1-grammar.qa.before"
+      ]
+    },
+    {
+      "id": "nl-b1-grammar.l.zinnen",
+      "title": "Frases largas: el verbo al final, relativos y om te",
+      "items": [
+        "gram.nl-b1-subordinate-clauses",
+        "nl-b1-grammar.als-het-regent-neem-ik-de-tram",
+        "nl-b1-grammar.ik-weet-niet-of-hij-vandaag-komt",
+        "nl-b1-grammar.terwijl",
+        "nl-b1-grammar.terwijl-ik-kookte-belde-mijn-moeder",
+        "nl-b1-job-search.ik-solliciteer-omdat-ik-meer-met-data-wil-werken",
+        "gram.nl-b1-relative-clauses",
+        "nl-b1-grammar.dat-is-de-collega-die-naast-me-zit",
+        "nl-b1-grammar.het-huis-dat-we-hebben-gezien-was-te-duur",
+        "nl-b1-grammar.dat-is-het-bedrijf-waar-ik-werk",
+        "gram.nl-b1-om-te",
+        "nl-b1-grammar.ik-ga-naar-de-gemeente-om-me-in-te-schrijven",
+        "nl-b1-grammar.lastig",
+        "nl-b1-grammar.het-is-lastig-om-in-utrecht-een-huis-te-vinden",
+        "nl-b1-interview.ik-vind-het-moeilijk-om-nee-te-zeggen"
+      ]
+    },
+    {
+      "id": "nl-b1-grammar.l.er-zich",
+      "title": "«er» y los reflexivos",
+      "items": [
+        "gram.nl-b1-er",
+        "nl-b1-grammar.er-zijn-vandaag-drie-vergaderingen",
+        "nl-b1-grammar.hoeveel-collegas-heb-je-ik-heb-er-tien",
+        "nl-b1-grammar.nadenken",
+        "nl-b1-grammar.ik-denk-er-nog-over-na",
+        "nl-b1-interview.ik-werk-eraan",
+        "gram.nl-b1-reflexive",
+        "nl-b1-grammar.zich-vergissen",
+        "nl-b1-grammar.ik-vergis-me",
+        "nl-b1-grammar.we-moeten-ons-haasten",
+        "nl-b1-grammar.zich-herinneren",
+        "nl-b1-grammar.ik-herinner-me-haar-naam-niet-meer",
+        "nl-b1-workplace.ik-voel-me-hier-al-thuis"
+      ]
+    },
+    {
+      "id": "nl-b1-grammar.l.vergelijken",
+      "title": "Comparar, el futuro y zou",
+      "items": [
+        "gram.nl-b1-comparatives",
+        "nl-b1-grammar.utrecht-is-kleiner-dan-amsterdam",
+        "nl-b1-grammar.ik-drink-liever-thee-dan-koffie",
+        "nl-b1-grammar.duur",
+        "nl-b1-grammar.het-is-hier-duurder-dan-in-spanje",
+        "gram.nl-b1-future",
+        "nl-b1-grammar.volgend-jaar-gaan-we-een-huis-kopen",
+        "nl-b1-grammar.beloven",
+        "nl-b1-grammar.ik-zal-het-morgen-doen-dat-beloof-ik",
+        "gram.nl-b1-zou",
+        "nl-b1-grammar.zou-je-me-even-kunnen-helpen",
+        "nl-b1-grammar.zou-u-dat-kunnen-herhalen",
+        "nl-b1-grammar.als-ik-meer-tijd-had-zou-ik-vaker-sporten",
+        "nl-b1-grammar.qa.which-city",
+        "nl-b1-grammar.qa.can-i-help"
+      ]
+    },
+    {
+      "id": "nl-b1-grammar.l.passief",
+      "title": "La pasiva y la -e del adjetivo",
+      "items": [
+        "gram.nl-b1-passive",
+        "nl-b1-grammar.stelen",
+        "nl-b1-grammar.mijn-fiets-is-gestolen",
+        "nl-b1-grammar.pakket",
+        "nl-b1-grammar.bezorgen",
+        "nl-b1-grammar.het-pakket-wordt-morgen-bezorgd",
+        "nl-b1-grammar.de-vergadering-is-verplaatst",
+        "gram.nl-b1-adjective-ending",
+        "nl-b1-grammar.ik-heb-een-nieuw-huis-gevonden",
+        "nl-b1-grammar.het-nieuwe-huis-is-groot",
+        "nl-b1-grammar.goedkoop",
+        "nl-b1-grammar.ik-zoek-een-goedkope-fiets",
+        "nl-b1-grammar.qa.on-foot"
+      ]
+    }
+  ],
+  "phrases": [
+    {"id": "nl-b1-grammar.vroeger-woonde-ik-in-madrid", "text": "Vroeger woonde ik in Madrid.", "es": "Antes vivía en Madrid.", "notes": "Imperfecto para describir el pasado; V2: Vroeger + woonde + ik.", "explanation": "Para contar tu vida anterior. «vroeger»: «VRU-jer», con «oe» = «u» y «g» de garganta.", "register": "neutral", "situation": "presentarse"},
+    {"id": "nl-b1-grammar.toen-ik-klein-was-speelde-ik-veel-buiten", "text": "Toen ik klein was, speelde ik veel buiten.", "es": "Cuando era pequeño, jugaba mucho fuera.", "notes": "«toen» + verbo al final; luego la principal empieza por el verbo.", "explanation": "Para contar recuerdos de infancia. «buiten»: «BAU-te», con el diptongo «ui».", "register": "neutral", "situation": "presentarse"},
+    {"id": "nl-b1-grammar.ik-had-geen-tijd-want-ik-moest-werken", "text": "Ik had geen tijd, want ik moest werken.", "es": "No tenía tiempo porque tenía que trabajar.", "notes": "had (hebben), moest (moeten): imperfectos irregulares. Tras «want», orden normal.", "explanation": "Para disculparte por algo pasado. «moest»: «must», con «oe» = «u».", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.ik-ben-vorig-jaar-naar-utrecht-verhuisd", "text": "Ik ben vorig jaar naar Utrecht verhuisd.", "es": "Me mudé a Utrecht el año pasado.", "notes": "verhuizen hace el perfecto con «zijn»: ik ben verhuisd (no «ik heb verhuisd»).", "explanation": "Para contar cuándo llegaste. «verhuisd»: «ver-JAUST», acento en «HUIS».", "register": "neutral", "situation": "presentarse"},
+    {"id": "nl-b1-grammar.ze-is-naar-huis-gegaan", "text": "Ze is naar huis gegaan.", "es": "Se ha ido a casa.", "notes": "gaan: perfecto con «zijn».", "explanation": "Cuando preguntan por una compañera. «gegaan»: «je-JAAN», dos «g» de garganta.", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.hoe-lang-ben-je-in-spanje-gebleven", "text": "Hoe lang ben je in Spanje gebleven?", "es": "¿Cuánto tiempo te quedaste en España?", "notes": "blijven (quedarse) también va con «zijn».", "explanation": "Para preguntar a alguien que vuelve de vacaciones. «gebleven»: «je-BLEE-ve».", "register": "tu", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.als-het-regent-neem-ik-de-tram", "text": "Als het regent, neem ik de tram.", "es": "Si llueve, cojo el tranvía.", "notes": "«als» manda el verbo al final; la principal empieza por el verbo: neem ik.", "explanation": "Para explicar tus rutinas. «regent»: «REE-jent», con «g» de garganta.", "register": "neutral", "situation": "transporte"},
+    {"id": "nl-b1-grammar.ik-weet-niet-of-hij-vandaag-komt", "text": "Ik weet niet of hij vandaag komt.", "es": "No sé si viene hoy.", "notes": "«of» = si (en preguntas indirectas): verbo al final.", "explanation": "Para responder cuando no estás seguro. «weet»: «weet», con «ee» larga.", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.terwijl-ik-kookte-belde-mijn-moeder", "text": "Terwijl ik kookte, belde mijn moeder.", "es": "Mientras cocinaba, llamó mi madre.", "notes": "«terwijl» = mientras: verbo al final (kookte).", "explanation": "Para contar dos cosas a la vez en el pasado. «terwijl»: «ter-WEIL», acento al final.", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.dat-is-de-collega-die-naast-me-zit", "text": "Dat is de collega die naast me zit.", "es": "Ese es el compañero que se sienta a mi lado.", "notes": "«die» porque «collega» es una palabra «de»; el verbo va al final.", "explanation": "Para presentar o señalar a alguien en la oficina. «naast»: «naast», con «aa» larga.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-grammar.het-huis-dat-we-hebben-gezien-was-te-duur", "text": "Het huis dat we hebben gezien, was te duur.", "es": "La casa que vimos era demasiado cara.", "notes": "«dat» porque es «het huis»; los verbos del relativo van al final.", "explanation": "Para comentar una visita a un piso. «duur»: «duur», con «uu» redondeada.", "register": "neutral", "situation": "vivienda"},
+    {"id": "nl-b1-grammar.dat-is-het-bedrijf-waar-ik-werk", "text": "Dat is het bedrijf waar ik werk.", "es": "Esa es la empresa donde trabajo.", "notes": "«waar» = donde: verbo al final.", "explanation": "Para señalar tu empresa. «waar»: «waar», con «aa» larga y «w» suave.", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-grammar.ik-ga-naar-de-gemeente-om-me-in-te-schrijven", "text": "Ik ga naar de gemeente om me in te schrijven.", "es": "Voy al ayuntamiento para empadronarme.", "notes": "om … te: con separables, «te» va en medio: in te schrijven.", "explanation": "Para explicar adónde vas y para qué. «gemeente»: «je-MEEN-te».", "register": "neutral", "situation": "tramites"},
+    {"id": "nl-b1-grammar.het-is-lastig-om-in-utrecht-een-huis-te-vinden", "text": "Het is lastig om in Utrecht een huis te vinden.", "es": "Es difícil encontrar casa en Utrecht.", "notes": "«lastig» = complicado, difícil; «Het is + adjetivo + om … te».", "explanation": "Queja muy frecuente. «lastig»: «LAS-tej», con «g» final de garganta.", "register": "neutral", "situation": "vivienda"},
+    {"id": "nl-b1-grammar.er-zijn-vandaag-drie-vergaderingen", "text": "Er zijn vandaag drie vergaderingen.", "es": "Hoy hay tres reuniones.", "notes": "«er is / er zijn» = hay (singular / plural).", "explanation": "Para hablar de tu agenda. «vergaderingen»: «ver-JAA-de-ring-e».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-grammar.hoeveel-collegas-heb-je-ik-heb-er-tien", "text": "Hoeveel collega's heb je? Ik heb er tien.", "es": "¿Cuántos compañeros tienes? Tengo diez.", "notes": "Con un número sin nombre detrás hace falta «er»: Ik heb er tien.", "explanation": "«er» sustituye al nombre con un número. «tien»: «tiin».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-grammar.ik-denk-er-nog-over-na", "text": "Ik denk er nog over na.", "es": "Todavía lo estoy pensando.", "notes": "nadenken over = pensar sobre; «erover» se parte: er … over na.", "explanation": "Para no decidir en el momento, por ejemplo ante una oferta. «denk»: «denk», con «e» corta.", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.ik-vergis-me", "text": "Sorry, ik vergis me.", "es": "Perdona, me equivoco.", "notes": "zich vergissen = equivocarse (reflexivo).", "explanation": "Para corregirte al hablar. «vergis»: «ver-JIS», con «g» de garganta.", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.we-moeten-ons-haasten", "text": "We moeten ons haasten, de trein gaat zo.", "es": "Tenemos que darnos prisa, el tren sale ya.", "notes": "zich haasten = darse prisa; con «we» el reflexivo es «ons».", "explanation": "Para meter prisa a alguien. «haasten»: «JAAS-te», con «h» aspirada suave.", "register": "neutral", "situation": "transporte"},
+    {"id": "nl-b1-grammar.ik-herinner-me-haar-naam-niet-meer", "text": "Ik herinner me haar naam niet meer.", "es": "Ya no recuerdo su nombre.", "notes": "zich herinneren = acordarse (reflexivo). «niet meer» = ya no.", "explanation": "Para admitir un despiste. «herinner»: «he-RI-ner», acento en la segunda sílaba.", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.utrecht-is-kleiner-dan-amsterdam", "text": "Utrecht is kleiner dan Amsterdam.", "es": "Utrecht es más pequeña que Ámsterdam.", "notes": "Comparativo = adjetivo + -er + dan: kleiner dan (no «meer klein»).", "explanation": "Para comparar ciudades. «kleiner»: «KLEI-ner», con «ei» como en «rey».", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.ik-drink-liever-thee-dan-koffie", "text": "Ik drink liever thee dan koffie.", "es": "Prefiero el té al café.", "notes": "«liever» = comparativo de «graag»: preferir.", "explanation": "Para decir lo que prefieres. «liever»: «LII-ver», «thee» suena «tee».", "register": "neutral", "situation": "comida"},
+    {"id": "nl-b1-grammar.het-is-hier-duurder-dan-in-spanje", "text": "Het is hier duurder dan in Spanje.", "es": "Aquí es más caro que en España.", "notes": "duur → duurder (tras -r, -der).", "explanation": "Comentario típico sobre precios. «duurder»: tras «r» se añade «-der».", "register": "neutral", "situation": "dinero"},
+    {"id": "nl-b1-grammar.volgend-jaar-gaan-we-een-huis-kopen", "text": "Volgend jaar gaan we een huis kopen.", "es": "El año que viene vamos a comprar una casa.", "notes": "gaan + infinitivo al final = ir a hacer algo.", "explanation": "Para hablar de planes. «kopen»: «KOO-pe».", "register": "neutral", "situation": "vivienda"},
+    {"id": "nl-b1-grammar.ik-zal-het-morgen-doen-dat-beloof-ik", "text": "Ik zal het morgen doen, dat beloof ik.", "es": "Lo haré mañana, te lo prometo.", "notes": "«zullen» suena a promesa.", "explanation": "Para comprometerte con algo. «beloof»: «be-LOOF», acento en la segunda.", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.zou-je-me-even-kunnen-helpen", "text": "Zou je me even kunnen helpen?", "es": "¿Me podrías ayudar un momento?", "notes": "zou + infinitivos al final: la forma más educada de pedir.", "explanation": "Para pedir ayuda a un compañero con educación. «zou»: «sau».", "register": "tu", "situation": "trabajo"},
+    {"id": "nl-b1-grammar.zou-u-dat-kunnen-herhalen", "text": "Zou u dat kunnen herhalen?", "es": "¿Podría repetirlo?", "notes": "Con «u»: Zou u… kunnen…? = ¿Podría usted…?", "explanation": "En la gemeente, al médico o por teléfono. «herhalen»: «her-JAA-le».", "register": "u", "situation": "no-entiendo"},
+    {"id": "nl-b1-grammar.als-ik-meer-tijd-had-zou-ik-vaker-sporten", "text": "Als ik meer tijd had, zou ik vaker sporten.", "es": "Si tuviera más tiempo, haría más deporte.", "notes": "Hipótesis: als + imperfecto (had), luego zou + infinitivo.", "explanation": "Para hablar de lo que harías. «vaker»: «VAA-ker», «v» casi «f».", "register": "neutral", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.mijn-fiets-is-gestolen", "text": "Mijn fiets is gestolen!", "es": "¡Me han robado la bici!", "notes": "Pasiva terminada: zijn + participio. No «is gestolen geworden».", "explanation": "Por desgracia, muy útil aquí. «gestolen»: «je-STOO-le».", "register": "neutral", "situation": "transporte"},
+    {"id": "nl-b1-grammar.het-pakket-wordt-morgen-bezorgd", "text": "Het pakket wordt morgen bezorgd.", "es": "El paquete lo entregan mañana.", "notes": "Pasiva con «worden»: lo importante es la acción, no quién la hace.", "explanation": "Mensaje típico de una tienda online. «bezorgd»: «be-SORJT».", "register": "neutral", "situation": "compras"},
+    {"id": "nl-b1-grammar.de-vergadering-is-verplaatst", "text": "De vergadering is verplaatst naar vrijdag.", "es": "Han pasado la reunión al viernes.", "notes": "verplaatsen = cambiar de sitio o fecha (inseparable: sin «ge»).", "explanation": "Aviso típico en el trabajo. «verplaatst»: «ver-PLAATST».", "register": "neutral", "situation": "trabajo"},
+    {"id": "nl-b1-grammar.ik-heb-een-nieuw-huis-gevonden", "text": "Ik heb een nieuw huis gevonden.", "es": "He encontrado una casa nueva.", "notes": "«een» + palabra «het»: el adjetivo sin -e (een nieuw huis).", "explanation": "Para dar la buena noticia. «nieuw»: «niu», con «ieuw» como «iu».", "register": "neutral", "situation": "vivienda"},
+    {"id": "nl-b1-grammar.het-nieuwe-huis-is-groot", "text": "Het nieuwe huis is groot.", "es": "La casa nueva es grande.", "notes": "«het» + adjetivo con -e (het nieuwe huis); detrás del verbo, sin -e (is groot).", "explanation": "Para describir tu casa. «groot»: «jroot», con «g» de garganta.", "register": "neutral", "situation": "vivienda"},
+    {"id": "nl-b1-grammar.ik-zoek-een-goedkope-fiets", "text": "Ik zoek een goedkope fiets.", "es": "Busco una bici barata.", "notes": "«de fiets»: el adjetivo lleva -e también con «een».", "explanation": "Para preguntar en una tienda o en Marktplaats. «goedkope»: «jut-KOO-pe».", "register": "neutral", "situation": "compras"}
+  ],
+  "vocab": [
+    {"id": "nl-b1-grammar.verhuizen", "word": "verhuizen", "es": "mudarse (de casa)", "notes": "Perfecto con zijn: ik ben verhuisd.", "example": "nl-b1-grammar.ik-ben-vorig-jaar-naar-utrecht-verhuisd", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.vroeger", "word": "vroeger", "es": "antes, en otros tiempos", "example": "nl-b1-grammar.vroeger-woonde-ik-in-madrid", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.terwijl", "word": "terwijl", "es": "mientras", "notes": "Manda el verbo al final.", "example": "nl-b1-grammar.terwijl-ik-kookte-belde-mijn-moeder", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.lastig", "word": "lastig", "es": "complicado, difícil; molesto", "example": "nl-b1-grammar.het-is-lastig-om-in-utrecht-een-huis-te-vinden", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.nadenken", "word": "nadenken", "es": "pensar, reflexionar", "notes": "Separable: ik denk erover na.", "example": "nl-b1-grammar.ik-denk-er-nog-over-na", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.zich-vergissen", "word": "zich vergissen", "es": "equivocarse", "example": "nl-b1-grammar.ik-vergis-me", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.zich-herinneren", "word": "zich herinneren", "es": "acordarse, recordar", "example": "nl-b1-grammar.ik-herinner-me-haar-naam-niet-meer", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.goedkoop", "word": "goedkoop", "es": "barato", "notes": "Comparativo: goedkoper.", "example": "nl-b1-grammar.ik-zoek-een-goedkope-fiets", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.duur", "word": "duur", "es": "caro", "notes": "Comparativo: duurder.", "example": "nl-b1-grammar.het-is-hier-duurder-dan-in-spanje", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.beloven", "word": "beloven", "es": "prometer", "example": "nl-b1-grammar.ik-zal-het-morgen-doen-dat-beloof-ik", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.pakket", "word": "pakket", "article": "het", "plural": "pakketten", "es": "el paquete", "example": "nl-b1-grammar.het-pakket-wordt-morgen-bezorgd", "situation": "gramatica", "image": "fluent:package"},
+    {"id": "nl-b1-grammar.bezorgen", "word": "bezorgen", "es": "entregar, repartir", "notes": "Inseparable: participio bezorgd.", "example": "nl-b1-grammar.het-pakket-wordt-morgen-bezorgd", "situation": "gramatica"},
+    {"id": "nl-b1-grammar.stelen", "word": "stelen", "es": "robar", "notes": "Irregular: stal, gestolen.", "example": "nl-b1-grammar.mijn-fiets-is-gestolen", "situation": "gramatica"}
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-grammar.qa.moved",
+      "question": "Wanneer ben je naar Nederland verhuisd?",
+      "questionEs": "¿Cuándo te mudaste a los Países Bajos?",
+      "accepted": [
+        {
+          "text": "Ik ben vorig jaar verhuisd.",
+          "es": "Me mudé el año pasado."
+        },
+        {
+          "text": "Vorig jaar, in september.",
+          "es": "El año pasado, en septiembre."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb vorig jaar verhuisd.",
+          "es": "Me mudé el año pasado."
+        },
+        {
+          "text": "Vorig jaar ik ben verhuisd.",
+          "es": "El año pasado me mudé."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "«verhuizen» hace el perfecto con «zijn», y tras «Vorig jaar» el verbo va segundo: Vorig jaar ben ik…",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-grammar.qa.before",
+      "question": "Wat deed je vroeger in Spanje?",
+      "questionEs": "¿Qué hacías antes en España?",
+      "accepted": [
+        {
+          "text": "Vroeger werkte ik bij een bank in Madrid.",
+          "es": "Antes trabajaba en un banco de Madrid."
+        },
+        {
+          "text": "Ik woonde in Madrid en werkte bij een bank.",
+          "es": "Vivía en Madrid y trabajaba en un banco."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vroeger ik werkte bij een bank in Madrid.",
+          "es": "Antes trabajaba en un banco de Madrid."
+        },
+        {
+          "text": "Vroeger werk ik bij een bank in Madrid.",
+          "es": "Antes trabajo en un banco de Madrid."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": "Tras «Vroeger» el verbo va segundo, y para describir el pasado se usa el imperfecto: werkte.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-grammar.qa.on-foot",
+      "question": "Waarom kom je lopend?",
+      "questionEs": "¿Por qué vienes andando?",
+      "accepted": [
+        {
+          "text": "Mijn fiets is gisteren gestolen.",
+          "es": "Ayer me robaron la bici."
+        },
+        {
+          "text": "Omdat mijn fiets gestolen is.",
+          "es": "Porque me han robado la bici."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mijn fiets heeft gisteren gestolen.",
+          "es": "Mi bici robó ayer."
+        },
+        {
+          "text": "Omdat mijn fiets is gestolen geworden.",
+          "es": "Porque me han robado la bici."
+        }
+      ],
+      "register": "tu",
+      "situation": "transporte",
+      "notes": "La pasiva terminada es «zijn» + participio (is gestolen): con «hebben» la bici sería el ladrón, y «geworden» sobra.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-grammar.qa.which-city",
+      "question": "Wat vind je fijner: Utrecht of Amsterdam?",
+      "questionEs": "¿Qué te gusta más: Utrecht o Ámsterdam?",
+      "accepted": [
+        {
+          "text": "Utrecht. Het is kleiner en rustiger dan Amsterdam.",
+          "es": "Utrecht. Es más pequeña y tranquila que Ámsterdam."
+        },
+        {
+          "text": "Ik woon liever in Utrecht.",
+          "es": "Prefiero vivir en Utrecht."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Utrecht. Het is meer klein dan Amsterdam.",
+          "es": "Utrecht. Es más pequeña que Ámsterdam."
+        },
+        {
+          "text": "Ik woon meer graag in Utrecht.",
+          "es": "Prefiero vivir en Utrecht."
+        }
+      ],
+      "register": "tu",
+      "situation": "gramatica",
+      "notes": "El comparativo se hace con -er (kleiner), no con «meer», y el de «graag» es «liever».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-grammar.qa.can-i-help",
+      "question": "Kan ik u ergens mee helpen?",
+      "questionEs": "¿Le puedo ayudar en algo?",
+      "accepted": [
+        {
+          "text": "Ja, ik zou graag een afspraak willen maken.",
+          "es": "Sí, me gustaría pedir una cita."
+        },
+        {
+          "text": "Ja, zou u mij kunnen helpen met dit formulier?",
+          "es": "Sí, ¿me podría ayudar con este formulario?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik zou graag een afspraak gemaakt.",
+          "es": "Sí, me gustaría pedir una cita."
+        },
+        {
+          "text": "Ja, zou je mij kunnen helpen met dit formulier?",
+          "es": "Sí, ¿me podrías ayudar con este formulario?"
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "Tras «zou» va un infinitivo (willen maken), no un participio; y en un mostrador se habla de «u», no de «je».",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.nl-b1-imperfect",
+      "title": "El imperfecto (ik werkte, ik ging)",
+      "summary": "Para narrar y describir el pasado: lo que pasaba, cómo eran las cosas, una historia. Al hablar, para hechos sueltos se usa más el perfecto.",
+      "points": [
+        "Verbos regulares: raíz + -te / -ten si la raíz acaba en una consonante de «'t kofschip» (t, k, f, s, ch, p): werkte, fietste.",
+        "Si no, raíz + -de / -den: woonde, speelde, belde.",
+        "Los irregulares hay que aprenderlos: ging (gaan), was/waren (zijn), had (hebben), deed (doen), kwam (komen), zag (zien).",
+        "Típico con «vroeger» (antes), «toen» (cuando, en el pasado) y en historias."
+      ],
+      "table": [
+        [
+          "",
+          "werken",
+          "wonen",
+          "gaan",
+          "zijn"
+        ],
+        [
+          "ik / jij / hij",
+          "werkte",
+          "woonde",
+          "ging",
+          "was"
+        ],
+        [
+          "wij / jullie / zij",
+          "werkten",
+          "woonden",
+          "gingen",
+          "waren"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Vroeger woonde ik in Madrid.",
+          "es": "Antes vivía en Madrid."
+        },
+        {
+          "text": "Gisteren regende het de hele dag.",
+          "es": "Ayer llovió todo el día."
+        },
+        {
+          "text": "Toen ik klein was, speelde ik veel buiten.",
+          "es": "Cuando era pequeño, jugaba mucho fuera."
+        }
+      ],
+      "tags": [
+        "pasado",
+        "imperfecto"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-perfect-zijn",
+      "title": "Perfecto con zijn: movimiento y cambio",
+      "summary": "La mayoría de verbos hace el perfecto con «hebben», pero los de movimiento hacia un sitio y los de cambio de estado van con «zijn»: ik ben verhuisd.",
+      "points": [
+        "Con zijn: gaan, komen, vertrekken, verhuizen, beginnen, worden, blijven, sterven, vallen.",
+        "Movimiento con destino: «Ik ben naar Utrecht gefietst»; sin destino, con hebben: «Ik heb veel gefietst».",
+        "Error típico: «ik heb verhuisd» o «ik heb begonnen».",
+        "El participio va al final de la frase: Ik ben vorig jaar naar Utrecht verhuisd."
+      ],
+      "table": [
+        [
+          "hebben",
+          "zijn"
+        ],
+        [
+          "ik heb gewerkt",
+          "ik ben gegaan"
+        ],
+        [
+          "ik heb gewoond",
+          "ik ben verhuisd"
+        ],
+        [
+          "ik heb gegeten",
+          "ik ben begonnen"
+        ],
+        [
+          "ik heb gefietst (sin destino)",
+          "ik ben naar huis gefietst"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Ik ben vorig jaar naar Utrecht verhuisd.",
+          "es": "Me mudé a Utrecht el año pasado."
+        },
+        {
+          "text": "Ze is naar huis gegaan.",
+          "es": "Se ha ido a casa."
+        },
+        {
+          "text": "Het is koud geworden.",
+          "es": "Se ha puesto a hacer frío."
+        }
+      ],
+      "tags": [
+        "pasado",
+        "perfecto"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-adjective-ending",
+      "title": "El adjetivo: ¿con -e o sin -e?",
+      "summary": "Delante del nombre, el adjetivo casi siempre lleva -e (de mooie stad). Solo no la lleva con una palabra «het» en singular después de «een», «geen» o nada.",
+      "points": [
+        "Detrás del verbo nunca lleva -e: Het huis is groot.",
+        "de-palabras: een mooie fiets, de mooie fiets.",
+        "het-palabras: een mooi huis, pero het mooie huis, dit mooie huis, mijn mooie huis.",
+        "El adjetivo va siempre delante: een groot huis, nunca «een huis groot»."
+      ],
+      "table": [
+        [
+          "",
+          "de fiets",
+          "het huis"
+        ],
+        [
+          "een / geen",
+          "een nieuwe fiets",
+          "een nieuw huis"
+        ],
+        [
+          "de / het / deze / mijn",
+          "de nieuwe fiets",
+          "het nieuwe huis"
+        ],
+        [
+          "plural",
+          "nieuwe fietsen",
+          "nieuwe huizen"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Ik heb een nieuw huis gevonden.",
+          "es": "He encontrado una casa nueva."
+        },
+        {
+          "text": "Het nieuwe huis is groot.",
+          "es": "La casa nueva es grande."
+        },
+        {
+          "text": "Ik zoek een goedkope fiets.",
+          "es": "Busco una bici barata."
+        }
+      ],
+      "tags": [
+        "adjetivo",
+        "de-het"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-subordinate-clauses",
+      "title": "Subordinadas: el verbo al final",
+      "summary": "Tras dat, omdat, als, of, toen, terwijl, voordat y nadat, todos los verbos van al final de la frase. Tras maar, want, dus, en y of («o») el orden es normal.",
+      "points": [
+        "omdat = porque (verbo al final); want = porque (orden normal): …omdat ik ziek ben / …want ik ben ziek.",
+        "als = si / cuando (presente y repetido); toen = cuando (una vez en el pasado); of = si (pregunta indirecta).",
+        "Si la subordinada va primero, la principal empieza por el verbo: Als het regent, neem ik de tram.",
+        "Separables en subordinada, juntos: …dat ik je terugbel."
+      ],
+      "table": [
+        [
+          "conjunción",
+          "orden",
+          "ejemplo"
+        ],
+        [
+          "dat, omdat, als, of, toen, terwijl",
+          "verbo al final",
+          "…omdat ik moe ben."
+        ],
+        [
+          "en, maar, want, dus, of («o»)",
+          "orden normal",
+          "…want ik ben moe."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Als het mooi weer is, ga ik met de fiets.",
+          "es": "Si hace bueno, voy en bici."
+        },
+        {
+          "text": "Ik weet niet of hij vandaag komt.",
+          "es": "No sé si viene hoy."
+        },
+        {
+          "text": "Terwijl ik kookte, belde mijn moeder.",
+          "es": "Mientras cocinaba, llamó mi madre."
+        }
+      ],
+      "tags": [
+        "orden",
+        "subordinadas"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-er",
+      "title": "La palabra «er»",
+      "summary": "«er» es pequeña y aparece en todas partes. Tiene cuatro usos principales: hay, allí, cantidad y preposición + cosa.",
+      "points": [
+        "Hay: Er is een probleem. / Er zijn drie vergaderingen.",
+        "Lugar ya mencionado (allí): Woon je in Utrecht? Ja, ik woon er al een jaar.",
+        "Con un número o cantidad: Hoeveel collega's heb je? Ik heb er tien.",
+        "er + preposición = preposición + eso: erover (sobre eso), ervan, eraan, ermee. Con un verbo, se separa: Ik denk er nog over na."
+      ],
+      "table": [
+        [
+          "uso",
+          "ejemplo",
+          "español"
+        ],
+        [
+          "hay",
+          "Er zijn drie vergaderingen.",
+          "Hay tres reuniones."
+        ],
+        [
+          "allí",
+          "Ik woon er al een jaar.",
+          "Vivo allí desde hace un año."
+        ],
+        [
+          "cantidad",
+          "Ik heb er tien.",
+          "Tengo diez."
+        ],
+        [
+          "prep. + cosa",
+          "Ik werk eraan.",
+          "Estoy en ello."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Er zijn vandaag drie vergaderingen.",
+          "es": "Hoy hay tres reuniones."
+        },
+        {
+          "text": "Hoeveel collega's heb je? Ik heb er tien.",
+          "es": "¿Cuántos compañeros tienes? Tengo diez."
+        },
+        {
+          "text": "Ik denk er nog over na.",
+          "es": "Todavía lo estoy pensando."
+        }
+      ],
+      "tags": [
+        "er"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-relative-clauses",
+      "title": "Relativos: die, dat y waar + preposición",
+      "summary": "Para unir dos frases con «que»: «die» para palabras «de» y plurales, «dat» para palabras «het» en singular. El verbo va al final.",
+      "points": [
+        "de collega die naast me zit / de collega's die naast me zitten.",
+        "het huis dat we hebben gezien.",
+        "Lugar: waar (donde): het bedrijf waar ik werk.",
+        "Con preposición y cosa: waar + preposición: de app waarmee ik betaal (con la que pago). Con personas: met wie."
+      ],
+      "table": [
+        [
+          "antecedente",
+          "relativo",
+          "ejemplo"
+        ],
+        [
+          "de-palabra o plural",
+          "die",
+          "de fiets die ik heb gekocht"
+        ],
+        [
+          "het-palabra singular",
+          "dat",
+          "het huis dat we huren"
+        ],
+        [
+          "lugar",
+          "waar",
+          "de stad waar ik woon"
+        ],
+        [
+          "preposición + cosa",
+          "waar + prep.",
+          "de app waarmee ik betaal"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Dat is de collega die naast me zit.",
+          "es": "Ese es el compañero que se sienta a mi lado."
+        },
+        {
+          "text": "Het huis dat we hebben gezien, was te duur.",
+          "es": "La casa que vimos era demasiado cara."
+        },
+        {
+          "text": "Dat is het bedrijf waar ik werk.",
+          "es": "Esa es la empresa donde trabajo."
+        }
+      ],
+      "tags": [
+        "relativos",
+        "de-het"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-om-te",
+      "title": "om … te + infinitivo",
+      "summary": "«om … te» + infinitivo al final = para + infinitivo. También va detrás de muchos adjetivos y expresiones: Het is lastig om … te …",
+      "points": [
+        "Finalidad: Ik ga naar de gemeente om me in te schrijven (para empadronarme).",
+        "Con adjetivo: Het is moeilijk om een huis te vinden.",
+        "Con separables, «te» va en medio: om op te bellen, om in te schrijven.",
+        "Con algunos verbos solo «te», sin «om»: Ik probeer… te, Ik hoop… te, Ik begin… te."
+      ],
+      "table": [
+        [
+          "estructura",
+          "ejemplo"
+        ],
+        [
+          "om + … + te + inf.",
+          "om Nederlands te leren"
+        ],
+        [
+          "separable",
+          "om je op te bellen"
+        ],
+        [
+          "het is + adj. + om … te",
+          "Het is lastig om een huis te vinden."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Ik ga naar de gemeente om me in te schrijven.",
+          "es": "Voy al ayuntamiento para empadronarme."
+        },
+        {
+          "text": "Het is lastig om in Utrecht een huis te vinden.",
+          "es": "Es difícil encontrar casa en Utrecht."
+        },
+        {
+          "text": "Ik probeer elke dag Nederlands te spreken.",
+          "es": "Intento hablar neerlandés todos los días."
+        }
+      ],
+      "tags": [
+        "infinitivo"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-reflexive",
+      "title": "Verbos reflexivos (zich)",
+      "summary": "Algunos verbos llevan un pronombre reflexivo, como en español «me, te, se». Muchos coinciden con el español, pero no todos.",
+      "points": [
+        "Pronombres: ik → me, jij → je, u → zich (o u), hij/zij → zich, wij → ons, jullie → je, zij → zich.",
+        "Frecuentes: zich voorstellen, zich aanmelden, zich inschrijven, zich ziek melden, zich voelen, zich vergissen, zich haasten, zich herinneren, zich verheugen op.",
+        "El perfecto va con hebben: Ik heb me aangemeld.",
+        "En subordinada, el reflexivo va tras el sujeto: …omdat ik me niet goed voel."
+      ],
+      "table": [
+        [
+          "persona",
+          "zich voelen"
+        ],
+        [
+          "ik",
+          "ik voel me"
+        ],
+        [
+          "jij / u",
+          "jij voelt je / u voelt zich"
+        ],
+        [
+          "hij / zij",
+          "hij voelt zich"
+        ],
+        [
+          "wij",
+          "wij voelen ons"
+        ],
+        [
+          "jullie / zij",
+          "jullie voelen je / zij voelen zich"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Ik vergis me.",
+          "es": "Me equivoco."
+        },
+        {
+          "text": "We moeten ons haasten.",
+          "es": "Tenemos que darnos prisa."
+        },
+        {
+          "text": "Ik herinner me haar naam niet meer.",
+          "es": "Ya no recuerdo su nombre."
+        }
+      ],
+      "tags": [
+        "reflexivos",
+        "zich"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-comparatives",
+      "title": "Comparar: groter dan, het grootst",
+      "summary": "Comparativo: adjetivo + -er + dan (groter dan). Superlativo: het + adjetivo + -st (het grootst) o, delante del nombre, de/het … -ste.",
+      "points": [
+        "Tras -r se añade -der: duur → duurder, ver → verder.",
+        "Irregulares: goed → beter → best; veel → meer → meest; graag → liever → het liefst.",
+        "«dan» = que: Utrecht is kleiner dan Amsterdam (no «meer klein»).",
+        "Preferir: Ik drink liever thee (prefiero té); Ik woon het liefst in Utrecht."
+      ],
+      "table": [
+        [
+          "",
+          "comparativo",
+          "superlativo"
+        ],
+        [
+          "groot",
+          "groter",
+          "het grootst"
+        ],
+        [
+          "duur",
+          "duurder",
+          "het duurst"
+        ],
+        [
+          "goed",
+          "beter",
+          "het best"
+        ],
+        [
+          "graag",
+          "liever",
+          "het liefst"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Utrecht is kleiner dan Amsterdam.",
+          "es": "Utrecht es más pequeña que Ámsterdam."
+        },
+        {
+          "text": "Ik drink liever thee dan koffie.",
+          "es": "Prefiero el té al café."
+        },
+        {
+          "text": "Het is hier duurder dan in Spanje.",
+          "es": "Aquí es más caro que en España."
+        }
+      ],
+      "tags": [
+        "comparar"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-future",
+      "title": "El futuro: gaan, zullen y el presente",
+      "summary": "Para el futuro lo más normal es el presente con una marca de tiempo (Morgen bel ik je) o «gaan» + infinitivo. «zullen» suena a promesa o a algo más formal.",
+      "points": [
+        "Presente + tiempo: Volgende week begin ik.",
+        "gaan + infinitivo (planes, predicciones): Het gaat regenen. Ik ga verhuizen.",
+        "zullen: promesas y suposiciones: Ik zal het morgen doen. Dat zal wel kloppen.",
+        "Zullen we…? = ¿…? (propuesta): Zullen we koffie drinken?"
+      ],
+      "table": [
+        [
+          "forma",
+          "uso",
+          "ejemplo"
+        ],
+        [
+          "presente",
+          "plan con fecha",
+          "Morgen werk ik thuis."
+        ],
+        [
+          "gaan + inf.",
+          "plan, predicción",
+          "Het gaat regenen."
+        ],
+        [
+          "zullen + inf.",
+          "promesa, suposición",
+          "Ik zal je helpen."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Volgend jaar gaan we een huis kopen.",
+          "es": "El año que viene vamos a comprar una casa."
+        },
+        {
+          "text": "Ik zal het morgen doen, dat beloof ik.",
+          "es": "Lo haré mañana, te lo prometo."
+        },
+        {
+          "text": "Zullen we vrijdag gaan borrelen?",
+          "es": "¿Vamos de copas el viernes?"
+        }
+      ],
+      "tags": [
+        "futuro"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-zou",
+      "title": "zou: pedir con cortesía e hipótesis",
+      "summary": "«zou(den)» + infinitivo al final = condicional. Sirve para pedir con educación (Zou u…?), proponer (Ik zou…) y hablar de lo que harías.",
+      "points": [
+        "Peticiones educadas: Zou u dat kunnen herhalen? Zou je me even kunnen helpen?",
+        "Deseos: Ik zou graag een afspraak willen maken (me gustaría pedir cita).",
+        "Consejo: Ik zou het niet doen (yo no lo haría).",
+        "Hipótesis: Als ik meer tijd had, zou ik vaker sporten (imperfecto tras «als»)."
+      ],
+      "table": [
+        [
+          "persona",
+          "zullen (cond.)"
+        ],
+        [
+          "ik / jij / u / hij",
+          "zou"
+        ],
+        [
+          "wij / jullie / zij",
+          "zouden"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Zou u dat kunnen herhalen?",
+          "es": "¿Podría repetirlo?"
+        },
+        {
+          "text": "Ik zou graag een afspraak willen maken.",
+          "es": "Me gustaría pedir una cita."
+        },
+        {
+          "text": "Als ik meer tijd had, zou ik vaker sporten.",
+          "es": "Si tuviera más tiempo, haría más deporte."
+        }
+      ],
+      "tags": [
+        "condicional",
+        "cortesia"
+      ]
+    },
+    {
+      "id": "gram.nl-b1-passive",
+      "title": "La pasiva: worden / is + participio",
+      "summary": "Cuando importa la acción y no quién la hace: «worden» + participio (se hace, lo hacen) y «zijn» + participio para el resultado ya terminado.",
+      "points": [
+        "Presente: Het pakket wordt morgen bezorgd (se entrega, lo entregan mañana).",
+        "Terminado: Mijn fiets is gestolen (me han robado la bici). Nunca «is gestolen geworden».",
+        "Pasado narrativo: werd / werden: Het huis werd in negentienhonderd gebouwd.",
+        "Quién lo hace, con «door»: De brief wordt door de gemeente verstuurd."
+      ],
+      "table": [
+        [
+          "tiempo",
+          "ejemplo",
+          "español"
+        ],
+        [
+          "presente",
+          "Het wordt gerepareerd.",
+          "Lo están arreglando / lo arreglan."
+        ],
+        [
+          "perfecto",
+          "Het is gerepareerd.",
+          "Lo han arreglado."
+        ],
+        [
+          "imperfecto",
+          "Het werd gerepareerd.",
+          "Lo arreglaron."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Het pakket wordt morgen bezorgd.",
+          "es": "El paquete lo entregan mañana."
+        },
+        {
+          "text": "Mijn fiets is gestolen!",
+          "es": "¡Me han robado la bici!"
+        },
+        {
+          "text": "De vergadering is verplaatst naar vrijdag.",
+          "es": "Han pasado la reunión al viernes."
+        }
+      ],
+      "tags": [
+        "pasiva"
+      ]
+    }
+  ]
+}
