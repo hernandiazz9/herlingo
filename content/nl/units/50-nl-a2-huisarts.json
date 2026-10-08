@@ -1,0 +1,718 @@
+{
+  "id": "nl-a2-huisarts",
+  "order": 50,
+  "level": "A2",
+  "title": "Salud: huisarts, assistente, farmacia, urgencias",
+  "description": "Inscribirte en un médico de cabecera, pedir cita a la doktersassistente, decir qué te duele, recoger medicinas en la apotheek y saber a quién llamar fuera de horario o en una emergencia.",
+  "emoji": "💊",
+  "situation": "salud",
+  "lessons": [
+    {
+      "id": "nl-a2-huisarts.l.inschrijven",
+      "title": "Tu médico de cabecera",
+      "items": [
+        "nl-a2-huisarts.huisarts",
+        "nl-a2-huisarts.huisartsenpraktijk",
+        "nl-a2-huisarts.doktersassistente",
+        "nl-a2-huisarts.spreekuur",
+        "nl-a2-gemeente.inschrijven",
+        "nl-a2-gemeente.afspraak",
+        "nl-a2-huisarts.ik-wil-me-inschrijven-bij-een-huisarts",
+        "nl-a2-huisarts.neemt-u-nog-nieuwe-patienten-aan",
+        "nl-a2-gemeente.ik-wil-een-afspraak-maken",
+        "nl-a2-huisarts.kan-ik-vandaag-nog-komen",
+        "nl-a2-huisarts.wat-zijn-uw-klachten",
+        "nl-a2-huisarts.u-kunt-morgen-om-half-tien-komen",
+        "nl-a2-huisarts.qa.ingeschreven",
+        "nl-a2-huisarts.qa.half-tien"
+      ]
+    },
+    {
+      "id": "nl-a2-huisarts.l.klachten",
+      "title": "Qué te pasa",
+      "items": [
+        "nl-a2-huisarts.pijn",
+        "nl-a2-huisarts.hoofdpijn",
+        "nl-b1-school.koorts",
+        "nl-a2-huisarts.verkouden",
+        "nl-a2-huisarts.griep",
+        "nl-a2-huisarts.hoesten",
+        "nl-a2-huisarts.ik-voel-me-niet-lekker",
+        "nl-a2-huisarts.ik-ben-verkouden",
+        "nl-a2-huisarts.ik-heb-griep",
+        "nl-a2-huisarts.ik-heb-koorts",
+        "nl-a2-huisarts.ik-heb-hoofdpijn",
+        "nl-a2-huisarts.ik-hoest-al-een-week",
+        "nl-a2-huisarts.ik-ben-misselijk",
+        "nl-a2-huisarts.sinds-wanneer-heeft-u-dat",
+        "nl-a2-huisarts.al-drie-dagen",
+        "nl-b1-meetings.beterschap",
+        "nl-a2-huisarts.qa.klachten",
+        "nl-a2-huisarts.qa.sinds-wanneer",
+        "nl-a2-huisarts.qa.beterschap"
+      ]
+    },
+    {
+      "id": "nl-a2-huisarts.l.lichaam",
+      "title": "El cuerpo: ¿dónde te duele?",
+      "items": [
+        "nl-a2-huisarts.hoofd",
+        "nl-a2-huisarts.keel",
+        "nl-a2-huisarts.buik",
+        "nl-b1-health.rug",
+        "nl-a2-huisarts.arm",
+        "nl-a2-huisarts.been",
+        "nl-a2-huisarts.voet",
+        "nl-a2-huisarts.oog",
+        "nl-a2-huisarts.oor",
+        "nl-a2-huisarts.neus",
+        "nl-a2-huisarts.waar-doet-het-pijn",
+        "nl-a2-huisarts.hier-in-mijn-buik",
+        "nl-a2-huisarts.mijn-been-doet-pijn",
+        "nl-a2-huisarts.ik-heb-pijn-in-mijn-oor",
+        "nl-a2-huisarts.qa.waar-pijn"
+      ]
+    },
+    {
+      "id": "nl-a2-huisarts.l.apotheek",
+      "title": "En la farmacia",
+      "items": [
+        "nl-a2-huisarts.apotheek",
+        "nl-a2-huisarts.recept",
+        "nl-a2-huisarts.medicijn",
+        "nl-a2-huisarts.paracetamol",
+        "nl-a2-huisarts.ik-kom-een-recept-ophalen",
+        "nl-a2-huisarts.op-welke-naam",
+        "nl-a2-huisarts.hoe-vaak-moet-ik-dit-innemen",
+        "nl-a2-huisarts.drie-keer-per-dag",
+        "nl-a2-huisarts.heeft-u-iets-tegen-hoofdpijn",
+        "nl-a2-huisarts.qa.innemen"
+      ]
+    },
+    {
+      "id": "nl-a2-huisarts.l.spoed",
+      "title": "Fuera de horario y urgencias",
+      "items": [
+        "nl-a2-huisarts.huisartsenpost",
+        "nl-a2-huisarts.ambulance",
+        "nl-b1-health.ziekenhuis",
+        "nl-a2-huisarts.s-avonds-bel-je-de-huisartsenpost",
+        "nl-a2-huisarts.het-is-een-noodgeval",
+        "nl-a2-huisarts.bel-een-een-twee",
+        "nl-a2-huisarts.we-hebben-een-ambulance-nodig",
+        "nl-a2-huisarts.qa.alarmnummer"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-huisarts.ik-wil-me-inschrijven-bij-een-huisarts",
+      "text": "Ik wil me inschrijven bij een huisarts.",
+      "es": "Quiero inscribirme en un médico de cabecera.",
+      "notes": "«zich inschrijven»: con modal, «inschrijven» va entero al final. Sin huisarts no llegas al especialista: inscríbete nada más llegar.",
+      "explanation": "Al llamar a una consulta cerca de casa. «huisarts»: «JÖIS-arts», con «ui» entre «au» y «öi».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.neemt-u-nog-nieuwe-patienten-aan",
+      "text": "Neemt u nog nieuwe patiënten aan?",
+      "es": "¿Aceptan todavía pacientes nuevos?",
+      "notes": "«neemt … aan» = aannemen: la partícula va al final. Muchas consultas están llenas: pregunta en varias.",
+      "explanation": "Lo primero que preguntas al llamar. «patiënten»: «pa-SJEN-te»; la diéresis separa la «i» de la «e».",
+      "register": "u",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.kan-ik-vandaag-nog-komen",
+      "text": "Kan ik vandaag nog komen?",
+      "es": "¿Puedo ir hoy mismo?",
+      "notes": "«nog» aquí = todavía hoy. Se dice «komen» (venir) porque hablas desde el punto de vista de la consulta.",
+      "explanation": "Cuando te encuentras mal. «vandaag»: «fan-DAAJ», con la «g» final como «j».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.wat-zijn-uw-klachten",
+      "text": "Wat zijn uw klachten?",
+      "es": "¿Qué síntomas tiene?",
+      "notes": "«de klacht» = el síntoma, la molestia (también «la queja»).",
+      "explanation": "Te lo pregunta la doktersassistente antes de darte cita. «klachten»: «KLAJ-te».",
+      "register": "u",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.u-kunt-morgen-om-half-tien-komen",
+      "text": "U kunt morgen om half tien komen.",
+      "es": "Puede venir mañana a las nueve y media.",
+      "notes": "Ojo: «half tien» = las 9:30 (media hora antes de las diez), no las 10:30.",
+      "explanation": "La assistente te da la cita. «half tien»: «JALF TIN»; piensa «media para las diez».",
+      "register": "u",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-voel-me-niet-lekker",
+      "text": "Ik voel me niet lekker.",
+      "es": "No me encuentro bien.",
+      "notes": "«lekker» no es solo «rico»: también «a gusto, bien». «zich voelen» = sentirse.",
+      "explanation": "A tu jefe, a la assistente o a un amigo. «voel» con «oe» = «u»: «ik FUL me nit LE-ker».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-ben-verkouden",
+      "text": "Ik ben verkouden.",
+      "es": "Estoy resfriado.",
+      "notes": "«verkouden» va con «zijn»: «ik ben verkouden».",
+      "explanation": "La excusa más común en otoño. «verkouden»: «fer-KAU-de», acento en «KAU».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-heb-griep",
+      "text": "Ik heb griep.",
+      "es": "Tengo gripe.",
+      "explanation": "Para explicar por qué no vas. «griep»: «JRIP», con la «g» como «j».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-heb-koorts",
+      "text": "Ik heb koorts.",
+      "es": "Tengo fiebre.",
+      "notes": "Fiebre se tiene, como en español: «koorts hebben».",
+      "explanation": "En la consulta o al llamar al trabajo. «koorts» con «oo» larga: «KOORTS».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-heb-hoofdpijn",
+      "text": "Ik heb hoofdpijn.",
+      "es": "Me duele la cabeza.",
+      "literal": "Tengo dolor de cabeza.",
+      "notes": "Igual: «keelpijn» (garganta), «buikpijn» (barriga), «kiespijn» (muelas).",
+      "explanation": "Para explicar qué te pasa. «hoofdpijn»: «JOOFT-pein», con «ij» = «ei».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-hoest-al-een-week",
+      "text": "Ik hoest al een week.",
+      "es": "Llevo una semana tosiendo.",
+      "notes": "«al» + presente = «llevo … haciendo algo»: «ik hoest al een week».",
+      "explanation": "Al médico. «hoest» con «oe» = «u»: «ik JUST al en UEEK».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-ben-misselijk",
+      "text": "Ik ben misselijk.",
+      "es": "Tengo náuseas.",
+      "notes": "«misselijk» va con «zijn», no con «hebben».",
+      "explanation": "Al médico o en el tren. «misselijk»: «MI-se-lek»; el «-lijk» final suena débil.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.sinds-wanneer-heeft-u-dat",
+      "text": "Sinds wanneer heeft u dat?",
+      "es": "¿Desde cuándo lo tiene?",
+      "explanation": "Lo pregunta el huisarts. «sinds»: «SINTS», con la «d» como «t».",
+      "register": "u",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.al-drie-dagen",
+      "text": "Al drie dagen.",
+      "es": "Desde hace tres días.",
+      "notes": "«al» + tiempo = desde hace. También: «sinds maandag» (desde el lunes).",
+      "explanation": "Respuesta corta al médico. «dagen»: «DAA-je», con la «g» como «j» y la «-n» final muda.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.waar-doet-het-pijn",
+      "text": "Waar doet het pijn?",
+      "es": "¿Dónde le duele?",
+      "notes": "«pijn doen» = doler: «het doet pijn» = duele.",
+      "explanation": "Lo pregunta el médico. «pijn» con «ij» = «ei»: «uaar DUT et PEIN».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.hier-in-mijn-buik",
+      "text": "Hier, in mijn buik.",
+      "es": "Aquí, en la barriga.",
+      "notes": "Para el cuerpo se usa el posesivo: «mijn buik», no «de buik».",
+      "explanation": "Señalando dónde te duele. «buik» con «ui», sin equivalente: entre «bauk» y «böik».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.mijn-been-doet-pijn",
+      "text": "Mijn been doet pijn.",
+      "es": "Me duele la pierna.",
+      "notes": "Lo que duele es el sujeto: «mijn been doet pijn». «het been» = la pierna (y el hueso).",
+      "explanation": "Tras una caída en bici. «been» con «ee» larga: «BEEN».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-heb-pijn-in-mijn-oor",
+      "text": "Ik heb pijn in mijn oor.",
+      "es": "Me duele el oído.",
+      "notes": "Dos formas: «ik heb pijn in mijn oor» o «mijn oor doet pijn».",
+      "explanation": "En la consulta. «oor» con «oo» larga: «OOR».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ik-kom-een-recept-ophalen",
+      "text": "Ik kom een recept ophalen.",
+      "es": "Vengo a recoger una receta.",
+      "notes": "«komen» + infinitivo = venir a hacer algo. El huisarts envía la receta a la farmacia: tú solo das tu nombre.",
+      "explanation": "En el mostrador de la apotheek. «ophalen»: acento en la partícula: «OP-jaa-le».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.op-welke-naam",
+      "text": "Op welke naam?",
+      "es": "¿A qué nombre?",
+      "explanation": "Te lo pregunta el farmacéutico. «welke»: «UEL-ke»; «naam» con «aa» larga.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.hoe-vaak-moet-ik-dit-innemen",
+      "text": "Hoe vaak moet ik dit innemen?",
+      "es": "¿Cada cuánto tengo que tomarlo?",
+      "notes": "«innemen» = tomar (un medicamento). Con modal, va entero al final.",
+      "explanation": "Al recoger la medicina. «vaak» con «v» casi «f»: «ju FAAK»; acento en «IN-nee-me».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.drie-keer-per-dag",
+      "text": "Drie keer per dag, na het eten.",
+      "es": "Tres veces al día, después de comer.",
+      "notes": "«keer» = vez: «één keer», «twee keer». «na» = después de.",
+      "explanation": "La respuesta del farmacéutico. «keer» con «ee» larga: «DRI KEER per DAJ».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.heeft-u-iets-tegen-hoofdpijn",
+      "text": "Heeft u iets tegen hoofdpijn?",
+      "es": "¿Tiene algo para el dolor de cabeza?",
+      "notes": "«tegen» = contra: medicina «tegen» algo. El paracetamol se compra sin receta también en el súper o en el Kruidvat.",
+      "explanation": "En la farmacia. «tegen»: «TEE-je», con la «g» como «j».",
+      "register": "u",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.s-avonds-bel-je-de-huisartsenpost",
+      "text": "'s Avonds bel je de huisartsenpost.",
+      "es": "Por la noche llamas al servicio de guardia.",
+      "notes": "V2: empieza por «'s Avonds», así que va «bel» y luego «je». «'s avonds» = por la noche; también fines de semana y festivos.",
+      "explanation": "Si tu huisarts está cerrado y no puede esperar. «'s avonds» suena «SAA-fonts».",
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.het-is-een-noodgeval",
+      "text": "Het is een noodgeval.",
+      "es": "Es una emergencia.",
+      "explanation": "Al teléfono, si es grave. «noodgeval»: «NOOT-je-fal», con la «d» como «t».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.bel-een-een-twee",
+      "text": "Bel één één twee!",
+      "es": "¡Llama al uno uno dos!",
+      "notes": "El número de emergencias, 112, se dice cifra por cifra. Solo si hay peligro para la vida.",
+      "explanation": "Lo gritas si alguien está grave. «één» = «EEN», con «ee» larga; las tildes distinguen «uno» de «un».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.we-hebben-een-ambulance-nodig",
+      "text": "We hebben een ambulance nodig.",
+      "es": "Necesitamos una ambulancia.",
+      "notes": "«nodig hebben» = necesitar: «nodig» va al final.",
+      "explanation": "Al llamar al 112. «ambulance»: «am-bü-LAN-se», con la «u» redondeada.",
+      "register": "neutral",
+      "situation": "salud"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-huisarts.huisarts",
+      "word": "huisarts",
+      "article": "de",
+      "plural": "huisartsen",
+      "es": "el médico de cabecera",
+      "notes": "Literal: «médico de casa». Siempre vas primero a él; él te deriva al especialista.",
+      "example": "nl-a2-huisarts.ik-wil-me-inschrijven-bij-een-huisarts",
+      "situation": "salud",
+      "image": "fluent:stethoscope"
+    },
+    {
+      "id": "nl-a2-huisarts.huisartsenpraktijk",
+      "word": "huisartsenpraktijk",
+      "article": "de",
+      "plural": "huisartsenpraktijken",
+      "es": "la consulta del médico de cabecera",
+      "notes": "Se suele decir solo «de praktijk».",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.doktersassistente",
+      "word": "doktersassistente",
+      "article": "de",
+      "plural": "doktersassistentes",
+      "es": "la asistente de la consulta",
+      "notes": "Coge el teléfono, da las citas y pregunta qué te pasa. Hace muchas preguntas: es normal.",
+      "example": "nl-a2-huisarts.wat-zijn-uw-klachten",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.spreekuur",
+      "word": "spreekuur",
+      "article": "het",
+      "plural": "spreekuren",
+      "es": "el horario de consulta",
+      "notes": "«het telefonisch spreekuur» = la hora para consultas por teléfono. Compuesto: el artículo es el de la última palabra («het uur»).",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.pijn",
+      "word": "pijn",
+      "article": "de",
+      "plural": "pijnen",
+      "es": "el dolor",
+      "notes": "«pijn hebben» = tener dolor; «pijn doen» = doler.",
+      "example": "nl-a2-huisarts.waar-doet-het-pijn",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.hoofdpijn",
+      "word": "hoofdpijn",
+      "article": "de",
+      "es": "el dolor de cabeza",
+      "notes": "Compuesto con «pijn»: siempre «de».",
+      "example": "nl-a2-huisarts.ik-heb-hoofdpijn",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.verkouden",
+      "word": "verkouden",
+      "es": "resfriado",
+      "notes": "«verkouden zijn» = estar resfriado. El sustantivo es «de verkoudheid».",
+      "example": "nl-a2-huisarts.ik-ben-verkouden",
+      "situation": "salud",
+      "image": "fluent:sneezing-face"
+    },
+    {
+      "id": "nl-a2-huisarts.griep",
+      "word": "griep",
+      "article": "de",
+      "es": "la gripe",
+      "example": "nl-a2-huisarts.ik-heb-griep",
+      "situation": "salud",
+      "image": "fluent:face-with-thermometer"
+    },
+    {
+      "id": "nl-a2-huisarts.hoesten",
+      "word": "hoesten",
+      "es": "toser",
+      "notes": "«ik hoest», «ik heb gehoest». «de hoest» = la tos.",
+      "example": "nl-a2-huisarts.ik-hoest-al-een-week",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.hoofd",
+      "word": "hoofd",
+      "article": "het",
+      "plural": "hoofden",
+      "es": "la cabeza",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.keel",
+      "word": "keel",
+      "article": "de",
+      "plural": "kelen",
+      "es": "la garganta",
+      "notes": "«keelpijn» = dolor de garganta.",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.buik",
+      "word": "buik",
+      "article": "de",
+      "plural": "buiken",
+      "es": "la barriga",
+      "notes": "«buikpijn» = dolor de barriga.",
+      "example": "nl-a2-huisarts.hier-in-mijn-buik",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.arm",
+      "word": "arm",
+      "article": "de",
+      "plural": "armen",
+      "es": "el brazo",
+      "notes": "Falso amigo: «arm» como adjetivo es «pobre».",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.been",
+      "word": "been",
+      "article": "het",
+      "plural": "benen",
+      "es": "la pierna",
+      "notes": "Plural «benen» (pierna) o «beenderen» (huesos).",
+      "example": "nl-a2-huisarts.mijn-been-doet-pijn",
+      "situation": "salud",
+      "image": "fluent:leg"
+    },
+    {
+      "id": "nl-a2-huisarts.voet",
+      "word": "voet",
+      "article": "de",
+      "plural": "voeten",
+      "es": "el pie",
+      "notes": "«te voet» = a pie (formal); se dice más «lopend».",
+      "situation": "salud",
+      "image": "fluent:foot"
+    },
+    {
+      "id": "nl-a2-huisarts.oog",
+      "word": "oog",
+      "article": "het",
+      "plural": "ogen",
+      "es": "el ojo",
+      "situation": "salud",
+      "image": "fluent:eye"
+    },
+    {
+      "id": "nl-a2-huisarts.oor",
+      "word": "oor",
+      "article": "het",
+      "plural": "oren",
+      "es": "la oreja, el oído",
+      "example": "nl-a2-huisarts.ik-heb-pijn-in-mijn-oor",
+      "situation": "salud",
+      "image": "fluent:ear"
+    },
+    {
+      "id": "nl-a2-huisarts.neus",
+      "word": "neus",
+      "article": "de",
+      "plural": "neuzen",
+      "es": "la nariz",
+      "notes": "«eu» con labios redondos: «NÖS».",
+      "situation": "salud",
+      "image": "fluent:nose"
+    },
+    {
+      "id": "nl-a2-huisarts.apotheek",
+      "word": "apotheek",
+      "article": "de",
+      "plural": "apotheken",
+      "es": "la farmacia",
+      "notes": "Para medicinas con receta. Lo básico (paracetamol, tiritas) está también en la drogisterij (Kruidvat, Etos).",
+      "example": "nl-a2-huisarts.ik-kom-een-recept-ophalen",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.recept",
+      "word": "recept",
+      "article": "het",
+      "plural": "recepten",
+      "es": "la receta",
+      "notes": "También la receta de cocina.",
+      "example": "nl-a2-huisarts.ik-kom-een-recept-ophalen",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.medicijn",
+      "word": "medicijn",
+      "article": "het",
+      "plural": "medicijnen",
+      "es": "el medicamento",
+      "notes": "«het», aunque en español sea masculino.",
+      "example": "nl-a2-huisarts.hoe-vaak-moet-ik-dit-innemen",
+      "situation": "salud",
+      "image": "fluent:pill"
+    },
+    {
+      "id": "nl-a2-huisarts.paracetamol",
+      "word": "paracetamol",
+      "article": "de",
+      "es": "el paracetamol",
+      "notes": "El remedio estrella del huisarts holandés para casi todo.",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.huisartsenpost",
+      "word": "huisartsenpost",
+      "article": "de",
+      "plural": "huisartsenposten",
+      "es": "el servicio de guardia de médicos de cabecera",
+      "notes": "Noches, fines de semana y festivos. Llama siempre antes de ir.",
+      "example": "nl-a2-huisarts.s-avonds-bel-je-de-huisartsenpost",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-a2-huisarts.ambulance",
+      "word": "ambulance",
+      "article": "de",
+      "plural": "ambulances",
+      "es": "la ambulancia",
+      "example": "nl-a2-huisarts.we-hebben-een-ambulance-nodig",
+      "situation": "salud",
+      "image": "fluent:ambulance"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-huisarts.qa.ingeschreven",
+      "question": "Bent u al bij ons ingeschreven?",
+      "questionEs": "¿Ya está inscrito en nuestra consulta?",
+      "accepted": [
+        { "text": "Ja, sinds vorige maand.", "es": "Sí, desde el mes pasado." },
+        { "text": "Nee, nog niet. Kan dat nog?", "es": "No, todavía no. ¿Todavía se puede?" }
+      ],
+      "distractors": [
+        { "text": "Ja, ik heb ingeschreven.", "es": "Sí, he inscrito (falta «me»)." },
+        { "text": "Nee, ik schrijf niet.", "es": "No, no escribo." }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "«zich inschrijven» lleva «me»: «ik heb me ingeschreven» o «ik ben ingeschreven».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-huisarts.qa.half-tien",
+      "question": "Kunt u morgen om half tien komen?",
+      "questionEs": "¿Puede venir mañana a las nueve y media?",
+      "accepted": [
+        { "text": "Ja, half tien is goed.", "es": "Sí, a las nueve y media me va bien." },
+        { "text": "Nee, dan moet ik werken. Kan het ook later?", "es": "No, a esa hora trabajo. ¿Puede ser más tarde?" }
+      ],
+      "distractors": [
+        { "text": "Ja, half tien is goed, dank je.", "es": "Sí, me va bien, gracias (pero de «je»)." },
+        { "text": "Ja, ik kan komen morgen.", "es": "Sí, puedo venir mañana (orden mal)." }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "Con la assistente, «dank u». Con modal, el infinitivo va al final: «ik kan morgen komen».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-huisarts.qa.klachten",
+      "question": "Goedemorgen. Wat zijn uw klachten?",
+      "questionEs": "Buenos días. ¿Qué síntomas tiene?",
+      "accepted": [
+        { "text": "Ik heb koorts en ik hoest.", "es": "Tengo fiebre y toso." },
+        { "text": "Ik ben al drie dagen verkouden.", "es": "Llevo tres días resfriado." }
+      ],
+      "distractors": [
+        { "text": "Ik heb koud en ik hoest.", "es": "Tengo frío y toso (falta «het»)." },
+        { "text": "Ik ben koorts.", "es": "Soy fiebre." }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "El frío se dice «ik heb het koud», con «het». La fiebre se tiene: «ik heb koorts».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-huisarts.qa.sinds-wanneer",
+      "question": "Sinds wanneer heeft u die pijn?",
+      "questionEs": "¿Desde cuándo tiene ese dolor?",
+      "accepted": [
+        { "text": "Sinds maandag.", "es": "Desde el lunes." },
+        { "text": "Al een week.", "es": "Desde hace una semana." }
+      ],
+      "distractors": [
+        { "text": "Sinds een week geleden.", "es": "Desde hace una semana (mezcla «sinds» y «geleden»)." },
+        { "text": "Volgende week.", "es": "La semana que viene." }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "«desde hace» es «al» + tiempo («al een week»); «geleden» es «hace» y no va con «sinds».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-huisarts.qa.beterschap",
+      "question": "Je ziet er moe uit. Ben je ziek? Beterschap!",
+      "questionEs": "Tienes cara de cansado. ¿Estás malo? ¡Que te mejores!",
+      "accepted": [
+        { "text": "Dank je! Ik heb griep.", "es": "¡Gracias! Tengo gripe." },
+        { "text": "Dank je, het gaat al iets beter.", "es": "Gracias, ya estoy un poco mejor." }
+      ],
+      "distractors": [
+        { "text": "Dank je, ik ben griep.", "es": "Gracias, soy gripe." },
+        { "text": "Ja, ik heb ziek.", "es": "Sí, tengo enfermo." }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": "La gripe se tiene («ik heb griep»); enfermo se está («ik ben ziek»).",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-huisarts.qa.waar-pijn",
+      "question": "Waar doet het pijn?",
+      "questionEs": "¿Dónde le duele?",
+      "accepted": [
+        { "text": "Hier, in mijn buik.", "es": "Aquí, en la barriga." },
+        { "text": "Mijn been doet pijn.", "es": "Me duele la pierna." }
+      ],
+      "distractors": [
+        { "text": "Het doet pijn mijn hoofd.", "es": "Me duele la cabeza (calco del español)." },
+        { "text": "Ik doe pijn in mijn buik.", "es": "Hago daño en mi barriga." }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "Lo que duele es el sujeto: «mijn hoofd doet pijn». O bien «ik heb pijn in mijn hoofd».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-huisarts.qa.innemen",
+      "question": "Weet u hoe vaak u het moet innemen?",
+      "questionEs": "¿Sabe cada cuánto tiene que tomarlo?",
+      "accepted": [
+        { "text": "Ja, drie keer per dag.", "es": "Sí, tres veces al día." },
+        { "text": "Nee, kunt u het nog een keer uitleggen?", "es": "No, ¿me lo puede explicar otra vez?" }
+      ],
+      "distractors": [
+        { "text": "Ja, ik moet het drie keer per dag nemen in.", "es": "Sí, lo tengo que tomar tres veces al día (partícula mal)." },
+        { "text": "Ja, drie dag per keer.", "es": "Sí, tres día por vez." }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "Con modal, el separable va entero al final: «moet … innemen». «Drie keer per dag» = tres veces al día.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-huisarts.qa.alarmnummer",
+      "question": "Alarmnummer één één twee. Welke dienst heeft u nodig?",
+      "questionEs": "Número de emergencias uno uno dos. ¿Qué servicio necesita?",
+      "accepted": [
+        { "text": "Een ambulance, alstublieft!", "es": "¡Una ambulancia, por favor!" },
+        { "text": "Ambulance. Mijn buurman is gevallen.", "es": "Ambulancia. Mi vecino se ha caído." }
+      ],
+      "distractors": [
+        { "text": "Een dokter, ik ben verkouden.", "es": "Un médico, estoy resfriado." },
+        { "text": "Ja, ik heb een ambulance.", "es": "Sí, tengo una ambulancia." }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "El 112 es solo para emergencias (ambulancia, policía, bomberos). Un resfriado es para el huisarts. Necesitar = «nodig hebben».",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}

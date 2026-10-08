@@ -1,0 +1,747 @@
+{
+  "id": "nl-a2-neighbours",
+  "order": 52,
+  "level": "A2",
+  "title": "Vecinos, small talk, el tiempo, ocio y cumpleaños",
+  "description": "Presentarte a los vecinos, hablar del tiempo como un holandés, contar qué has hecho el fin de semana, felicitar en un cumpleaños (también a la familia) y quedar para un café.",
+  "emoji": "🗣️",
+  "situation": "social",
+  "lessons": [
+    {
+      "id": "nl-a2-neighbours.l.kennismaken",
+      "title": "Presentarte a los vecinos",
+      "items": [
+        "nl-a2-hello.buurman",
+        "nl-a2-hello.buurvrouw",
+        "nl-a2-neighbours.bloem",
+        "nl-a2-neighbours.ik-ben-je-nieuwe-buurman",
+        "nl-a2-about-me.leuk-je-te-ontmoeten",
+        "nl-a2-neighbours.woon-je-hier-al-lang",
+        "nl-a2-about-me.ik-woon-hier-sinds-september",
+        "nl-a2-neighbours.als-je-iets-nodig-hebt-bel-maar-aan",
+        "nl-a2-neighbours.wat-een-leuke-straat",
+        "nl-a2-neighbours.qa.nieuwe-buurman"
+      ]
+    },
+    {
+      "id": "nl-a2-neighbours.l.het-weer",
+      "title": "El tiempo",
+      "items": [
+        "nl-a2-neighbours.weer",
+        "nl-a2-neighbours.regen",
+        "nl-a2-neighbours.regenen",
+        "nl-a2-neighbours.zon",
+        "nl-a2-neighbours.wind",
+        "nl-a2-neighbours.wolk",
+        "nl-a2-neighbours.sneeuw",
+        "nl-a2-neighbours.paraplu",
+        "nl-a2-neighbours.graad",
+        "nl-a2-neighbours.wat-een-weer-he",
+        "nl-a2-neighbours.het-regent-alweer",
+        "nl-a2-neighbours.lekker-weertje-he",
+        "nl-a2-neighbours.de-zon-schijnt",
+        "nl-a2-neighbours.het-waait-hard",
+        "nl-a2-neighbours.het-wordt-morgen-twintig-graden",
+        "nl-a2-neighbours.neem-een-paraplu-mee",
+        "nl-a2-housing.ik-heb-het-koud",
+        "nl-a2-neighbours.qa.wat-een-weer"
+      ]
+    },
+    {
+      "id": "nl-a2-neighbours.l.weekend",
+      "title": "El fin de semana",
+      "items": [
+        "nl-a2-about-me.weekend",
+        "nl-a2-neighbours.wandelen",
+        "nl-a2-neighbours.zwemmen",
+        "nl-a2-neighbours.park",
+        "nl-a2-neighbours.strand",
+        "nl-a2-neighbours.museum",
+        "nl-a2-neighbours.film",
+        "nl-a2-neighbours.bioscoop",
+        "nl-a2-neighbours.wat-ga-je-dit-weekend-doen",
+        "nl-a2-neighbours.zaterdag-ga-ik-zwemmen",
+        "nl-a2-grammar.wat-heb-je-dit-weekend-gedaan",
+        "nl-a2-neighbours.ik-heb-lekker-uitgeslapen",
+        "nl-a2-neighbours.ik-ben-naar-het-strand-geweest",
+        "nl-a2-neighbours.we-hebben-een-film-gekeken",
+        "nl-a2-neighbours.ik-heb-in-het-park-gewandeld",
+        "nl-a2-neighbours.niks-bijzonders-ik-ben-thuisgebleven",
+        "nl-a2-neighbours.qa.plannen",
+        "nl-a2-neighbours.qa.hoe-was-je-weekend"
+      ]
+    },
+    {
+      "id": "nl-a2-neighbours.l.verjaardag",
+      "title": "Un cumpleaños",
+      "items": [
+        "nl-a2-numbers.verjaardag",
+        "nl-a2-neighbours.jarig",
+        "nl-a2-neighbours.feest",
+        "nl-a2-neighbours.cadeau",
+        "nl-b1-workplace.taart",
+        "nl-a2-neighbours.kring",
+        "nl-a2-neighbours.ik-ben-morgen-jarig",
+        "nl-a2-neighbours.kom-je-zaterdag-op-mijn-verjaardag",
+        "nl-a2-neighbours.gefeliciteerd",
+        "nl-a2-neighbours.gefeliciteerd-met-je-zus",
+        "nl-a2-neighbours.hoe-oud-ben-je-geworden",
+        "nl-a2-neighbours.ik-heb-een-cadeautje-voor-je",
+        "nl-a2-neighbours.wat-gezellig",
+        "nl-a2-neighbours.qa.jarig",
+        "nl-a2-neighbours.qa.broer"
+      ]
+    },
+    {
+      "id": "nl-a2-neighbours.l.afspreken",
+      "title": "Invitar y quedar",
+      "items": [
+        "nl-a2-neighbours.uitnodigen",
+        "nl-b1-meetings.afspreken",
+        "nl-a2-neighbours.gezellig",
+        "nl-a2-neighbours.zullen-we-een-keer-koffie-drinken",
+        "nl-a2-neighbours.heb-je-zin-om-mee-te-gaan",
+        "nl-a2-neighbours.ja-leuk",
+        "nl-a2-neighbours.wanneer-kun-je",
+        "nl-a2-neighbours.volgende-week-dinsdag-kan-ik",
+        "nl-a2-neighbours.jammer-ik-kan-niet",
+        "nl-a2-numbers.zullen-we-om-half-acht-afspreken",
+        "nl-a2-neighbours.qa.koffie",
+        "nl-a2-neighbours.qa.mee"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-neighbours.ik-ben-je-nieuwe-buurman",
+      "text": "Hoi, ik ben je nieuwe buurman van twee hoog.",
+      "es": "Hola, soy tu nuevo vecino del segundo.",
+      "notes": "«twee hoog» = el segundo piso (dos pisos arriba). Al mudarte se suele llamar a la puerta de los vecinos para presentarse.",
+      "explanation": "En la puerta del vecino. «nieuwe»: «NIU-ue»; «hoog»: «JOOJ», las dos «g» como «j».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.woon-je-hier-al-lang",
+      "text": "Woon je hier al lang?",
+      "es": "¿Llevas mucho tiempo viviendo aquí?",
+      "notes": "Con «je» detrás del verbo, sin «-t»: «Woon je…?», no «Woont je…?». «al lang» = desde hace mucho.",
+      "explanation": "Para seguir hablando con un vecino. «woon» con «oo» larga: «UOON je jiir al LANG».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.als-je-iets-nodig-hebt-bel-maar-aan",
+      "text": "Als je iets nodig hebt, bel maar aan.",
+      "es": "Si necesitas algo, llama al timbre.",
+      "notes": "Tras «als», el verbo va al final («nodig hebt»). «bel … aan» = aanbellen (llamar al timbre). «maar» suaviza: «no dudes en…».",
+      "explanation": "Lo dice un vecino amable. «bel maar AAN»: el acento cae en la partícula.",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.wat-een-leuke-straat",
+      "text": "Wat een leuke straat!",
+      "es": "¡Qué calle tan bonita!",
+      "notes": "«Wat een…!» = ¡Qué…! «leuk» = majo, agradable; la palabra que más oirás.",
+      "explanation": "Para romper el hielo. «leuke» con «eu», «e» con labios de «o»: «LÖ-ke».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.wat-een-weer-he",
+      "text": "Wat een weer, hè?",
+      "es": "Vaya tiempo, ¿eh?",
+      "notes": "El tiempo es el tema estrella de conversación. «hè?» al final busca que el otro asienta.",
+      "explanation": "En el portal, con el paraguas chorreando. «weer»: «UEER», con la «w» suave.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.het-regent-alweer",
+      "text": "Het regent alweer.",
+      "es": "Otra vez está lloviendo.",
+      "notes": "«alweer» = otra vez (con fastidio). El tiempo se dice con «het»: «het regent».",
+      "explanation": "La frase más holandesa del año. «regent»: «REE-jent», con la «g» como «j».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.lekker-weertje-he",
+      "text": "Lekker weertje, hè?",
+      "es": "Qué buen tiempo hace, ¿eh?",
+      "notes": "«weertje» es diminutivo de «weer»: no es «poco tiempo», es cariñoso. «lekker» = agradable.",
+      "explanation": "El primer día de sol. «weertje»: «UEER-che».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.de-zon-schijnt",
+      "text": "De zon schijnt!",
+      "es": "¡Hace sol!",
+      "literal": "¡El sol brilla!",
+      "notes": "Cuando sale el sol, todo el mundo se va a la terraza.",
+      "explanation": "Para animar el plan. «schijnt»: «sch» = s + j: «SJEINT».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.het-waait-hard",
+      "text": "Het waait hard.",
+      "es": "Hace mucho viento.",
+      "notes": "«waaien» = soplar (el viento). «hard» = fuerte. En bici, con viento de cara, se nota.",
+      "explanation": "Al llegar en bici. «waait»: «UAAIT», con «aa» larga.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.het-wordt-morgen-twintig-graden",
+      "text": "Het wordt morgen twintig graden.",
+      "es": "Mañana va a hacer veinte grados.",
+      "notes": "«worden» = llegar a ser: aquí, el pronóstico. Presente para el futuro.",
+      "explanation": "Comentando el pronóstico. «graden»: «JRAA-de», con la «g» como «j».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.neem-een-paraplu-mee",
+      "text": "Neem een paraplu mee.",
+      "es": "Llévate un paraguas.",
+      "notes": "«neem … mee» = meenemen (llevarse): la partícula va al final. Imperativo = la raíz del verbo.",
+      "explanation": "Consejo antes de salir. «paraplu»: «pa-ra-PLÜ», con la «u» redondeada.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.wat-ga-je-dit-weekend-doen",
+      "text": "Wat ga je dit weekend doen?",
+      "es": "¿Qué vas a hacer este fin de semana?",
+      "notes": "«gaan» + infinitivo al final = ir a hacer algo.",
+      "explanation": "El viernes, a un vecino o compañero. «weekend» como en inglés: «UII-kent».",
+      "register": "tu",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.zaterdag-ga-ik-zwemmen",
+      "text": "Zaterdag ga ik zwemmen.",
+      "es": "El sábado voy a nadar.",
+      "notes": "V2: empieza por «Zaterdag», así que va «ga» y luego «ik».",
+      "explanation": "Para contar tus planes. «zwemmen»: «SUE-me», con la «z» del norte casi «s».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.ik-heb-lekker-uitgeslapen",
+      "text": "Ik heb lekker uitgeslapen.",
+      "es": "He dormido hasta tarde, qué gusto.",
+      "notes": "«uitslapen» = dormir hasta tarde; en el participio «ge-» va entre partícula y verbo: «uitgeslapen».",
+      "explanation": "El lunes, cuando te preguntan por el finde. «uitgeslapen»: «ÖIT-je-slaa-pe».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.ik-ben-naar-het-strand-geweest",
+      "text": "Ik ben naar het strand geweest.",
+      "es": "He ido a la playa.",
+      "notes": "«naar … geweest» = he ido a…: perfecto con «zijn» + «geweest». El participio va al final.",
+      "explanation": "Contando el fin de semana. «geweest»: «je-UEEST», con la «g» como «j».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.we-hebben-een-film-gekeken",
+      "text": "We hebben een film gekeken.",
+      "es": "Hemos visto una peli.",
+      "notes": "«kijken» → «gekeken». Perfecto con «hebben»: el participio va al final.",
+      "explanation": "Un plan tranquilo. «gekeken»: «je-KEE-ke».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.ik-heb-in-het-park-gewandeld",
+      "text": "Ik heb in het park gewandeld.",
+      "es": "He paseado por el parque.",
+      "notes": "«wandelen» → «gewandeld» (con «d»: la raíz no termina en t, k, f, s, ch, p).",
+      "explanation": "Contando tu domingo. «gewandeld»: «je-UAN-delt», la «d» final como «t».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.niks-bijzonders-ik-ben-thuisgebleven",
+      "text": "Niks bijzonders, ik ben thuisgebleven.",
+      "es": "Nada especial, me he quedado en casa.",
+      "notes": "«thuisblijven» hace el perfecto con «zijn»: «ik ben thuisgebleven».",
+      "explanation": "Respuesta sincera a «¿qué tal el finde?». «thuis»: «TÖIS», la «th» como una «t».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.ik-ben-morgen-jarig",
+      "text": "Ik ben morgen jarig.",
+      "es": "Mañana es mi cumpleaños.",
+      "notes": "«jarig zijn» = cumplir años (ese día). Se dice con «zijn».",
+      "explanation": "Para avisar a tus vecinos o colegas. «jarig»: «YAA-rij», la «j» como una «y».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.kom-je-zaterdag-op-mijn-verjaardag",
+      "text": "Kom je zaterdag op mijn verjaardag?",
+      "es": "¿Vienes el sábado a mi cumpleaños?",
+      "notes": "Se va «op» un cumpleaños: «op mijn verjaardag».",
+      "explanation": "Para invitar a un vecino. «verjaardag»: «fer-YAAR-daj», acento en «YAAR».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.gefeliciteerd",
+      "text": "Gefeliciteerd!",
+      "es": "¡Felicidades!",
+      "notes": "Sirve para cumpleaños, un trabajo nuevo, un bebé…",
+      "explanation": "Al que cumple años. «je-fe-li-si-TEERT»: la «g» como «j», acento en «TEERT».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.gefeliciteerd-met-je-zus",
+      "text": "Gefeliciteerd met je zus!",
+      "es": "¡Felicidades por el cumple de tu hermana!",
+      "notes": "En un cumpleaños se felicita también a la familia y amigos del que cumple: «Gefeliciteerd met je zus / je moeder / Femke!».",
+      "explanation": "Al hermano de la cumpleañera, al darle la mano. «zus»: «SÜS», con la «u» corta.",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.hoe-oud-ben-je-geworden",
+      "text": "Hoe oud ben je geworden?",
+      "es": "¿Cuántos años has cumplido?",
+      "notes": "Perfecto con «zijn»: «worden» → «ben … geworden».",
+      "explanation": "Al que cumple años. «oud»: «AUT», con la «d» final como «t».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.ik-heb-een-cadeautje-voor-je",
+      "text": "Ik heb een cadeautje voor je.",
+      "es": "Tengo un regalito para ti.",
+      "notes": "«cadeautje» es diminutivo de «cadeau»: suena más cálido, no tiene que ser pequeño.",
+      "explanation": "Al llegar a la fiesta. «cadeautje»: «ka-DOO-che», la «eau» como en francés.",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.wat-gezellig",
+      "text": "Wat gezellig!",
+      "es": "¡Qué ambiente tan bueno!",
+      "notes": "«gezellig» no tiene traducción: acogedor, agradable, con buena compañía.",
+      "explanation": "Lo dirás mucho en las fiestas. «gezellig»: «je-SE-lij», las dos «g» como «j».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.zullen-we-een-keer-koffie-drinken",
+      "text": "Zullen we een keer koffie drinken?",
+      "es": "¿Quedamos un día para tomar un café?",
+      "notes": "«Zullen we…?» = ¿y si…?, para proponer. «een keer» = un día (sin fecha).",
+      "explanation": "Para quedar con un vecino. «zullen»: «SÜ-le», con la «u» corta.",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.heb-je-zin-om-mee-te-gaan",
+      "text": "Heb je zin om mee te gaan?",
+      "es": "¿Te apetece venir?",
+      "notes": "«zin hebben» = tener ganas. «meegaan» con «te»: «mee te gaan».",
+      "explanation": "Para invitar a alguien a un plan. «zin»: «SIN», la «z» casi «s».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.ja-leuk",
+      "text": "Ja, leuk!",
+      "es": "¡Sí, genial!",
+      "explanation": "Para aceptar un plan. «leuk»: «LÖK», con labios redondos.",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.wanneer-kun-je",
+      "text": "Wanneer kun je?",
+      "es": "¿Cuándo puedes?",
+      "notes": "Los holandeses quedan con agenda: concreta día y hora.",
+      "explanation": "Para poner fecha. «kun je» suena junto: «KÜ-ne».",
+      "register": "tu",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.volgende-week-dinsdag-kan-ik",
+      "text": "Volgende week dinsdag kan ik.",
+      "es": "El martes de la semana que viene puedo.",
+      "notes": "V2: empieza por la fecha, así que va «kan» y luego «ik».",
+      "explanation": "Al mirar la agenda. «dinsdag»: «DINS-daj».",
+      "register": "neutral",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.jammer-ik-kan-niet",
+      "text": "Jammer, dan kan ik niet.",
+      "es": "Qué pena, ese día no puedo.",
+      "notes": "«jammer» = qué pena. «dan» = entonces, ese día; luego verbo segundo: «dan kan ik».",
+      "explanation": "Para decir que no con amabilidad. «jammer»: «YA-mer», la «j» como «y».",
+      "register": "neutral",
+      "situation": "social"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-neighbours.bloem",
+      "word": "bloem",
+      "article": "de",
+      "plural": "bloemen",
+      "es": "la flor",
+      "notes": "Llevar flores a los vecinos o a un cumpleaños es lo normal.",
+      "situation": "social",
+      "image": "fluent:tulip"
+    },
+    {
+      "id": "nl-a2-neighbours.weer",
+      "word": "weer",
+      "article": "het",
+      "es": "el tiempo (meteorológico)",
+      "notes": "«het weer» = el tiempo; «weer» sin artículo = otra vez.",
+      "example": "nl-a2-neighbours.wat-een-weer-he",
+      "situation": "casa",
+      "image": "fluent:sun-behind-cloud"
+    },
+    {
+      "id": "nl-a2-neighbours.regen",
+      "word": "regen",
+      "article": "de",
+      "es": "la lluvia",
+      "situation": "casa",
+      "image": "fluent:cloud-with-rain"
+    },
+    {
+      "id": "nl-a2-neighbours.regenen",
+      "word": "regenen",
+      "es": "llover",
+      "notes": "Siempre con «het»: «het regent», «het heeft geregend».",
+      "example": "nl-a2-neighbours.het-regent-alweer",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.zon",
+      "word": "zon",
+      "article": "de",
+      "es": "el sol",
+      "example": "nl-a2-neighbours.de-zon-schijnt",
+      "situation": "casa",
+      "image": "fluent:sun"
+    },
+    {
+      "id": "nl-a2-neighbours.wind",
+      "word": "wind",
+      "article": "de",
+      "plural": "winden",
+      "es": "el viento",
+      "notes": "«wind mee» = viento a favor; «wind tegen» = viento en contra (en bici).",
+      "example": "nl-a2-neighbours.het-waait-hard",
+      "situation": "casa",
+      "image": "fluent:wind-face"
+    },
+    {
+      "id": "nl-a2-neighbours.wolk",
+      "word": "wolk",
+      "article": "de",
+      "plural": "wolken",
+      "es": "la nube",
+      "situation": "casa",
+      "image": "fluent:cloud"
+    },
+    {
+      "id": "nl-a2-neighbours.sneeuw",
+      "word": "sneeuw",
+      "article": "de",
+      "es": "la nieve",
+      "notes": "Poca y rara; cuando cae, es noticia.",
+      "situation": "casa",
+      "image": "fluent:snowflake"
+    },
+    {
+      "id": "nl-a2-neighbours.paraplu",
+      "word": "paraplu",
+      "article": "de",
+      "plural": "paraplu's",
+      "es": "el paraguas",
+      "notes": "Con el viento, mucha gente prefiere un chubasquero («regenjas»).",
+      "example": "nl-a2-neighbours.neem-een-paraplu-mee",
+      "situation": "casa",
+      "image": "fluent:umbrella-with-rain-drops"
+    },
+    {
+      "id": "nl-a2-neighbours.graad",
+      "word": "graad",
+      "article": "de",
+      "plural": "graden",
+      "es": "el grado",
+      "example": "nl-a2-neighbours.het-wordt-morgen-twintig-graden",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.wandelen",
+      "word": "wandelen",
+      "es": "pasear, caminar",
+      "notes": "«een wandeling maken» = dar un paseo.",
+      "example": "nl-a2-neighbours.ik-heb-in-het-park-gewandeld",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.zwemmen",
+      "word": "zwemmen",
+      "es": "nadar",
+      "notes": "Perfecto con «hebben»: «ik heb gezwommen».",
+      "example": "nl-a2-neighbours.zaterdag-ga-ik-zwemmen",
+      "situation": "casa",
+      "image": "fluent:person-swimming"
+    },
+    {
+      "id": "nl-a2-neighbours.park",
+      "word": "park",
+      "article": "het",
+      "plural": "parken",
+      "es": "el parque",
+      "example": "nl-a2-neighbours.ik-heb-in-het-park-gewandeld",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.strand",
+      "word": "strand",
+      "article": "het",
+      "plural": "stranden",
+      "es": "la playa",
+      "notes": "Desde Utrecht, la más cercana es Zandvoort o Scheveningen.",
+      "example": "nl-a2-neighbours.ik-ben-naar-het-strand-geweest",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.museum",
+      "word": "museum",
+      "article": "het",
+      "plural": "musea",
+      "es": "el museo",
+      "notes": "Las palabras en -um son «het». Plural «musea» o «museums».",
+      "example": "nl-a2-transport.hoe-kom-ik-bij-het-museum",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-neighbours.film",
+      "word": "film",
+      "article": "de",
+      "plural": "films",
+      "es": "la película",
+      "example": "nl-a2-neighbours.we-hebben-een-film-gekeken",
+      "situation": "casa",
+      "image": "fluent:film-frames"
+    },
+    {
+      "id": "nl-a2-neighbours.bioscoop",
+      "word": "bioscoop",
+      "article": "de",
+      "plural": "bioscopen",
+      "es": "el cine",
+      "notes": "Las películas se ven en versión original con subtítulos.",
+      "situation": "casa",
+      "image": "fluent:cinema"
+    },
+    {
+      "id": "nl-a2-neighbours.jarig",
+      "word": "jarig",
+      "es": "de cumpleaños",
+      "notes": "«Ik ben jarig» = hoy es mi cumpleaños. «de jarige» = el que cumple años.",
+      "example": "nl-a2-neighbours.ik-ben-morgen-jarig",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.feest",
+      "word": "feest",
+      "article": "het",
+      "plural": "feesten",
+      "es": "la fiesta",
+      "situation": "social",
+      "image": "fluent:party-popper"
+    },
+    {
+      "id": "nl-a2-neighbours.cadeau",
+      "word": "cadeau",
+      "article": "het",
+      "plural": "cadeaus",
+      "es": "el regalo",
+      "notes": "Se dice «ka-DOO». El diminutivo «cadeautje» es muy común.",
+      "example": "nl-a2-neighbours.ik-heb-een-cadeautje-voor-je",
+      "situation": "social",
+      "image": "fluent:wrapped-gift"
+    },
+    {
+      "id": "nl-a2-neighbours.kring",
+      "word": "kring",
+      "article": "de",
+      "plural": "kringen",
+      "es": "el círculo",
+      "notes": "En un cumpleaños en casa, los invitados se sientan en círculo: das la mano a todos y felicitas a la familia.",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.uitnodigen",
+      "word": "uitnodigen",
+      "es": "invitar",
+      "notes": "Separable: «ik nodig je uit», «ik heb je uitgenodigd». Invitar no significa pagar.",
+      "situation": "social"
+    },
+    {
+      "id": "nl-a2-neighbours.gezellig",
+      "word": "gezellig",
+      "es": "acogedor, agradable, con buen ambiente",
+      "notes": "La palabra más holandesa: una casa, una fiesta o una persona pueden ser «gezellig».",
+      "example": "nl-a2-neighbours.wat-gezellig",
+      "situation": "social"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-neighbours.qa.nieuwe-buurman",
+      "question": "Hoi! Ben jij de nieuwe buurman?",
+      "questionEs": "¡Hola! ¿Eres tú el vecino nuevo?",
+      "accepted": [
+        { "text": "Ja, ik woon sinds vorige week op twee hoog.", "es": "Sí, vivo en el segundo desde la semana pasada." },
+        { "text": "Ja! Leuk je te ontmoeten.", "es": "¡Sí! Encantado de conocerte." }
+      ],
+      "distractors": [
+        { "text": "Ja, ik ben de nieuwe buurvrouw.", "es": "Sí, soy la vecina nueva." },
+        { "text": "Ja, ik woon hier sinds een week geleden.", "es": "Sí, vivo aquí desde hace una semana (mezcla «sinds» y «geleden»)." }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "«buurman» = vecino, «buurvrouw» = vecina. «sinds» no va con «geleden»: «sinds vorige week» o «al een week».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-neighbours.qa.wat-een-weer",
+      "question": "Wat een weer, hè?",
+      "questionEs": "Vaya tiempo, ¿eh?",
+      "accepted": [
+        { "text": "Ja, het regent alweer!", "es": "¡Sí, otra vez está lloviendo!" },
+        { "text": "Ja, en het waait ook hard.", "es": "Sí, y además hace mucho viento." }
+      ],
+      "distractors": [
+        { "text": "Ja, ik heb koud.", "es": "Sí, tengo frío (falta «het»)." },
+        { "text": "Ja, het regen alweer.", "es": "Sí, otra vez llueve (verbo mal)." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "Frío: «ik heb het koud», con «het». Verbo con «het»: raíz + t: «het regent».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-neighbours.qa.plannen",
+      "question": "Wat ga je dit weekend doen?",
+      "questionEs": "¿Qué vas a hacer este fin de semana?",
+      "accepted": [
+        { "text": "Zaterdag ga ik zwemmen.", "es": "El sábado voy a nadar." },
+        { "text": "Ik weet het nog niet.", "es": "Todavía no lo sé." }
+      ],
+      "distractors": [
+        { "text": "Zaterdag ik ga zwemmen.", "es": "El sábado voy a nadar (orden mal)." },
+        { "text": "Ik heb gisteren gezwommen.", "es": "Ayer nadé." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "Tras «Zaterdag», el verbo va segundo: «Zaterdag ga ik». Te preguntan por el futuro, no por ayer.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-neighbours.qa.hoe-was-je-weekend",
+      "question": "Hoe was je weekend?",
+      "questionEs": "¿Qué tal tu fin de semana?",
+      "accepted": [
+        { "text": "Leuk! Ik ben naar het strand geweest.", "es": "¡Bien! He ido a la playa." },
+        { "text": "Rustig, ik heb lekker uitgeslapen.", "es": "Tranquilo, he dormido hasta tarde." }
+      ],
+      "distractors": [
+        { "text": "Leuk! Ik heb naar het strand geweest.", "es": "¡Bien! He ido a la playa (auxiliar mal)." },
+        { "text": "Rustig, ik heb lekker uitgeslaapt.", "es": "Tranquilo, he dormido hasta tarde (participio mal)." }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "«geweest» va con «zijn»: «ik ben … geweest». «slapen» es irregular: «uitgeslapen».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-neighbours.qa.jarig",
+      "question": "Weet je wat? Ik ben vandaag jarig!",
+      "questionEs": "¿Sabes qué? ¡Hoy es mi cumpleaños!",
+      "accepted": [
+        { "text": "Gefeliciteerd! Hoe oud ben je geworden?", "es": "¡Felicidades! ¿Cuántos has cumplido?" },
+        { "text": "O, gefeliciteerd!", "es": "¡Oh, felicidades!" }
+      ],
+      "distractors": [
+        { "text": "Gelukkige verjaardag!", "es": "¡Feliz cumpleaños! (calco)" },
+        { "text": "Gefeliciteerd! Hoeveel jaren heb je?", "es": "¡Felicidades! ¿Cuántos años tienes? (calco)" }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "En neerlandés se dice «Gefeliciteerd!» (o «Fijne verjaardag!»). La edad: «Hoe oud ben je?», nunca con «hebben».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-neighbours.qa.broer",
+      "question": "Hoi, ik ben Bas, de broer van de jarige.",
+      "questionEs": "Hola, soy Bas, el hermano de la cumpleañera.",
+      "accepted": [
+        { "text": "Hoi Bas! Gefeliciteerd met je zus!", "es": "¡Hola, Bas! ¡Felicidades por tu hermana!" },
+        { "text": "Leuk je te ontmoeten. Gefeliciteerd!", "es": "Encantado. ¡Felicidades!" }
+      ],
+      "distractors": [
+        { "text": "Hoi Bas! Gefeliciteerd met je broer!", "es": "¡Hola, Bas! ¡Felicidades por tu hermano!" },
+        { "text": "Hoi Bas! Gefeliciteerd met jouw verjaardag!", "es": "¡Hola, Bas! ¡Felicidades por tu cumpleaños!" }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "Bas no cumple años: su hermana sí. A la familia se le dice «Gefeliciteerd met je zus».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-neighbours.qa.koffie",
+      "question": "Zullen we een keer koffie drinken?",
+      "questionEs": "¿Quedamos un día para tomar un café?",
+      "accepted": [
+        { "text": "Ja, leuk! Wanneer kun je?", "es": "¡Sí, genial! ¿Cuándo puedes?" },
+        { "text": "Gezellig! Volgende week dinsdag?", "es": "¡Qué bien! ¿El martes de la semana que viene?" }
+      ],
+      "distractors": [
+        { "text": "Ja, ik drink elke dag koffie.", "es": "Sí, tomo café todos los días." },
+        { "text": "Ja, leuk! Morgen ik kan.", "es": "¡Sí, genial! Mañana puedo (orden mal)." }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "Te están invitando, no preguntando si tomas café. Tras «Morgen», el verbo va segundo: «Morgen kan ik».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-neighbours.qa.mee",
+      "question": "We gaan vanavond naar de film. Heb je zin om mee te gaan?",
+      "questionEs": "Esta noche vamos al cine. ¿Te apetece venir?",
+      "accepted": [
+        { "text": "Ja, leuk! Hoe laat?", "es": "¡Sí, genial! ¿A qué hora?" },
+        { "text": "Jammer, dan kan ik niet.", "es": "Qué pena, esta noche no puedo." }
+      ],
+      "distractors": [
+        { "text": "Nee, ik heb niet zin.", "es": "No, no tengo ganas (negación mal)." },
+        { "text": "Ja, ik ga mee gisteren.", "es": "Sí, voy ayer." }
+      ],
+      "register": "tu",
+      "situation": "social",
+      "notes": "Con sustantivo se niega con «geen»: «ik heb geen zin». Te invitan para esta noche, no para ayer.",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}

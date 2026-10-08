@@ -1,0 +1,798 @@
+{
+  "id": "nl-a2-transport",
+  "order": 42,
+  "level": "A2",
+  "title": "Bici y transporte: fiets, tren, tranvía, OV, direcciones",
+  "description": "Comprar una bici y cuidarla, moverte por el carril bici, coger el tren de NS, fichar en el tranvía y el bus con OVpay, y preguntar el camino.",
+  "emoji": "🚲",
+  "situation": "transporte",
+  "lessons": [
+    {
+      "id": "nl-a2-transport.l.fiets",
+      "title": "Tu bici",
+      "items": [
+        "nl-a2-about-me.fiets",
+        "nl-a2-transport.slot",
+        "nl-a2-transport.band",
+        "nl-a2-transport.fietsenstalling",
+        "nl-a2-transport.fietsenmaker",
+        "nl-a2-transport.ik-wil-een-tweedehands-fiets-kopen",
+        "nl-a2-transport.je-hebt-altijd-twee-sloten-nodig",
+        "nl-a2-transport.ik-zet-mijn-fiets-in-de-fietsenstalling",
+        "nl-a2-transport.mijn-band-is-lek",
+        "nl-a2-transport.kun-je-mijn-band-plakken",
+        "nl-a2-transport.wanneer-is-hij-klaar",
+        "nl-a2-transport.mijn-licht-doet-het-niet",
+        "nl-a2-transport.qa.wat-is-er-met-je-fiets",
+        "nl-a2-transport.qa.morgen-klaar"
+      ]
+    },
+    {
+      "id": "nl-a2-transport.l.fietsen",
+      "title": "En el carril bici",
+      "items": [
+        "nl-a2-transport.fietspad",
+        "nl-a2-transport.voorrang",
+        "nl-a2-transport.stoplicht",
+        "nl-a2-transport.kruispunt",
+        "nl-a2-transport.ik-fiets-elke-dag-naar-mijn-werk",
+        "nl-a2-transport.blijf-op-het-fietspad",
+        "nl-a2-transport.rechts-heeft-voorrang",
+        "nl-a2-transport.steek-je-hand-uit",
+        "nl-a2-transport.pas-op-een-fietser",
+        "nl-a2-transport.qa.naar-je-werk"
+      ]
+    },
+    {
+      "id": "nl-a2-transport.l.trein",
+      "title": "En el tren",
+      "items": [
+        "nl-a2-transport.trein",
+        "nl-a2-transport.station",
+        "nl-a2-transport.spoor",
+        "nl-a2-transport.kaartje",
+        "nl-a2-transport.vertraging",
+        "nl-a2-transport.overstappen",
+        "nl-a2-transport.een-kaartje-naar-amsterdam",
+        "nl-a2-transport.enkele-reis-of-retour",
+        "nl-a2-transport.van-welk-spoor-vertrekt-de-trein",
+        "nl-a2-transport.de-trein-vertrekt-van-spoor-vijf",
+        "nl-a2-transport.de-trein-heeft-tien-minuten-vertraging",
+        "nl-a2-transport.moet-ik-overstappen",
+        "nl-a2-transport.u-moet-in-utrecht-overstappen",
+        "nl-b1-workplace.is-deze-plek-vrij",
+        "nl-a2-transport.ik-heb-de-trein-gemist",
+        "nl-a2-grammar.de-trein-komt-om-drie-uur-aan",
+        "nl-a2-transport.qa.enkele-reis",
+        "nl-a2-transport.qa.waar-naartoe",
+        "nl-a2-transport.qa.plek-vrij"
+      ]
+    },
+    {
+      "id": "nl-a2-transport.l.ov",
+      "title": "Tranvía, bus y fichar",
+      "items": [
+        "nl-a2-transport.tram",
+        "nl-a2-transport.bus",
+        "nl-a2-transport.halte",
+        "nl-a2-transport.ov-chipkaart",
+        "nl-a2-transport.inchecken",
+        "nl-a2-transport.uitchecken",
+        "nl-a2-transport.uitstappen",
+        "nl-a2-transport.vergeet-niet-in-te-checken",
+        "nl-a2-transport.ik-check-in-met-mijn-bankpas",
+        "nl-a2-transport.ik-ben-vergeten-uit-te-checken",
+        "nl-a2-transport.stopt-deze-tram-bij-centraal",
+        "nl-a2-transport.bij-de-volgende-halte-stap-ik-uit",
+        "nl-a2-transport.qa.ingecheckt"
+      ]
+    },
+    {
+      "id": "nl-a2-transport.l.de-weg",
+      "title": "Preguntar el camino",
+      "items": [
+        "nl-a2-transport.rechtdoor",
+        "nl-a2-transport.linksaf",
+        "nl-a2-transport.rechtsaf",
+        "nl-a2-transport.brug",
+        "nl-a2-transport.lopen",
+        "nl-a2-grammar.waar-is-het-station",
+        "nl-a2-transport.hoe-kom-ik-bij-het-museum",
+        "nl-a2-transport.weet-u-waar-de-domtoren-is",
+        "nl-a2-transport.ga-rechtdoor",
+        "nl-a2-transport.neem-de-tweede-straat-rechts",
+        "nl-a2-transport.ga-bij-het-stoplicht-linksaf",
+        "nl-a2-transport.steek-de-brug-over",
+        "nl-a2-transport.is-het-ver-lopen",
+        "nl-a2-transport.het-is-vijf-minuten-lopen",
+        "nl-a2-transport.qa.de-weg"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-transport.ik-wil-een-tweedehands-fiets-kopen",
+      "text": "Ik wil een tweedehands fiets kopen.",
+      "es": "Quiero comprar una bici de segunda mano.",
+      "notes": "Modal + infinitivo al final: «wil … kopen». En Marktplaats o en un fietsenmaker hay muchas.",
+      "explanation": "En una tienda de bicis o a un amigo. «tweedehands»: «TUEE-de-jants», con la «d» final como «t».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.je-hebt-altijd-twee-sloten-nodig",
+      "text": "Je hebt altijd twee sloten nodig.",
+      "es": "Siempre necesitas dos candados.",
+      "notes": "«nodig hebben» = necesitar: «nodig» va al final. Consejo de todos los holandeses: roban muchas bicis.",
+      "explanation": "Te lo dirá cualquier vecino. «sloten» con «oo» larga: «SLOO-te»; «nodig» = «NOO-dij».",
+      "register": "tu",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.ik-zet-mijn-fiets-in-de-fietsenstalling",
+      "text": "Ik zet mijn fiets in de fietsenstalling.",
+      "es": "Dejo la bici en el aparcamiento de bicis.",
+      "notes": "La bici se «zet» (se pone de pie), no se «legt». Las de las estaciones son gratis las primeras 24 horas.",
+      "explanation": "Al llegar a la estación. «fietsenstalling» lleva el acento en «FIET»: «FIIT-se-sta-ling».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.mijn-band-is-lek",
+      "text": "Mijn band is lek.",
+      "es": "Tengo una rueda pinchada.",
+      "literal": "Mi neumático está agujereado.",
+      "notes": "«lek» = pinchado. Ojo: no es «lekker» (rico).",
+      "explanation": "Al fietsenmaker o a quien te pregunte por qué llegas tarde. «lek» con «e» corta: «LEK».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.kun-je-mijn-band-plakken",
+      "text": "Kun je mijn band plakken?",
+      "es": "¿Me puedes arreglar el pinchazo?",
+      "literal": "¿Puedes pegar mi neumático?",
+      "notes": "«plakken» = poner un parche. En el fietsenmaker te tratan de «je».",
+      "explanation": "En el taller de bicis. «kun je» se dice junto: «KÜ-ne»; la «u» redondeada.",
+      "register": "tu",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.wanneer-is-hij-klaar",
+      "text": "Wanneer is hij klaar?",
+      "es": "¿Cuándo estará lista?",
+      "notes": "«de fiets» es una palabra con «de», así que se dice «hij» (él). Presente para el futuro cercano.",
+      "explanation": "Al dejar la bici en el taller. «wanneer»: «ua-NEER», con la «w» suave entre «v» y «u».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.mijn-licht-doet-het-niet",
+      "text": "Mijn licht doet het niet.",
+      "es": "No me funciona la luz.",
+      "notes": "«het doen» = funcionar: «doet het niet» = no funciona. Sin luz de noche, multa.",
+      "explanation": "Al fietsenmaker. «licht»: la «ch» suena como una «j» española: «LIJT».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.ik-fiets-elke-dag-naar-mijn-werk",
+      "text": "Ik fiets elke dag naar mijn werk.",
+      "es": "Voy en bici al trabajo todos los días.",
+      "notes": "«fietsen» = ir en bici; un solo verbo. Con «ik», sin «-t» extra: «ik fiets».",
+      "explanation": "Para hablar de tu rutina. «elke dag»: «EL-ke DAJ», con la «g» final como una «j».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.blijf-op-het-fietspad",
+      "text": "Blijf op het fietspad.",
+      "es": "No te salgas del carril bici.",
+      "literal": "Quédate en el carril bici.",
+      "notes": "Imperativo = la raíz del verbo sin pronombre: «blijven» → «blijf».",
+      "explanation": "Consejo para tu primer día en bici. «blijf» con «ij» = «ei»: «BLEIF».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.rechts-heeft-voorrang",
+      "text": "Rechts heeft voorrang.",
+      "es": "La derecha tiene preferencia.",
+      "notes": "Si no hay señales, quien viene por la derecha pasa primero, también las bicis. Los triángulos blancos en el suelo («haaientanden») dicen que cedas tú.",
+      "explanation": "La regla básica en los cruces. «voorrang»: «FOOR-rang», con la «v» casi «f».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.steek-je-hand-uit",
+      "text": "Steek je hand uit als je afslaat.",
+      "es": "Saca la mano cuando vayas a girar.",
+      "notes": "«steek … uit» = uitsteken: la partícula va al final. Tras «als», el verbo va al final y entero: «afslaat».",
+      "explanation": "Lo que hacen todos los ciclistas antes de girar. «uit» con «ui», sin equivalente: entre «au» y «öi».",
+      "register": "tu",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.pas-op-een-fietser",
+      "text": "Pas op, een fietser!",
+      "es": "¡Cuidado, una bici!",
+      "notes": "«pas op» = oppassen (tener cuidado): la partícula va al final.",
+      "explanation": "Para avisar a un turista que camina por el carril bici. «fietser»: «FIIT-ser».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.een-kaartje-naar-amsterdam",
+      "text": "Een kaartje naar Amsterdam, alstublieft.",
+      "es": "Un billete para Ámsterdam, por favor.",
+      "notes": "«kaartje» es diminutivo de «kaart»: así se dice «billete». Con OVpay puedes fichar con tu tarjeta y no necesitas billete.",
+      "explanation": "En la taquilla de NS. «Amsterdam» lleva el acento al final: «ams-ter-DAM».",
+      "register": "u",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.enkele-reis-of-retour",
+      "text": "Enkele reis of retour?",
+      "es": "¿Ida o ida y vuelta?",
+      "explanation": "Te lo preguntan en la taquilla. «reis» con «ei»: «REIS»; «retour»: «re-TUR».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.van-welk-spoor-vertrekt-de-trein",
+      "text": "Van welk spoor vertrekt de trein naar Rotterdam?",
+      "es": "¿De qué vía sale el tren a Róterdam?",
+      "notes": "«het spoor» = la vía; «welk» (sin -e) va con palabras con «het».",
+      "explanation": "A un empleado de NS en el andén. «vertrekt»: acento en «TREKT», nunca en «ver».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.de-trein-vertrekt-van-spoor-vijf",
+      "text": "De trein naar Den Haag vertrekt van spoor vijf.",
+      "es": "El tren a La Haya sale de la vía cinco.",
+      "notes": "En las pantallas y avisos: «spoor 5». A veces «spoor 5b»: la parte b del mismo andén.",
+      "explanation": "Lo oyes por megafonía. «Den Haag»: «den JAAJ», las dos «g» como «j».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.de-trein-heeft-tien-minuten-vertraging",
+      "text": "De trein heeft tien minuten vertraging.",
+      "es": "El tren lleva diez minutos de retraso.",
+      "notes": "El retraso «se tiene»: «vertraging hebben».",
+      "explanation": "Aviso típico en el andén. «vertraging»: «fer-TRAA-jing», acento en «TRAA».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.moet-ik-overstappen",
+      "text": "Moet ik overstappen?",
+      "es": "¿Tengo que hacer transbordo?",
+      "notes": "Con modal, el verbo separable va entero al final: «overstappen».",
+      "explanation": "Al comprar el billete o a un revisor. Acento en la partícula: «OO-fer-sta-pe».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.u-moet-in-utrecht-overstappen",
+      "text": "U moet in Utrecht Centraal overstappen.",
+      "es": "Tiene que hacer transbordo en Utrecht Centraal.",
+      "notes": "«overstappen» queda entero al final porque hay modal («moet»).",
+      "explanation": "Respuesta del empleado de NS. «Utrecht»: «Ü-trejt», con «u» redondeada y «ch» como «j».",
+      "register": "u",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.ik-heb-de-trein-gemist",
+      "text": "Ik heb de trein gemist.",
+      "es": "He perdido el tren.",
+      "notes": "«missen» = perder (un tren, una cita). Perfecto con «hebben» + «gemist».",
+      "explanation": "Para avisar de que llegas tarde. «gemist»: «je-MIST», con la «g» como «j».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.vergeet-niet-in-te-checken",
+      "text": "Vergeet niet in te checken!",
+      "es": "¡No te olvides de fichar al subir!",
+      "notes": "«inchecken» con «te»: «in te checken». Si no fichas, viajas sin billete y te multan.",
+      "explanation": "Te lo dirá cualquiera en tu primer viaje. «vergeet»: acento en «JEET», nunca en «ver».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.ik-check-in-met-mijn-bankpas",
+      "text": "Ik check in met mijn bankpas.",
+      "es": "Ficho con mi tarjeta del banco.",
+      "notes": "«check … in» = inchecken: la partícula va detrás del verbo. Con OVpay vale tu tarjeta bancaria o el móvil.",
+      "explanation": "Para explicar cómo pagas el tranvía. «check» como en inglés: «ik CHEK in».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.ik-ben-vergeten-uit-te-checken",
+      "text": "Ik ben vergeten uit te checken.",
+      "es": "Se me ha olvidado fichar al bajar.",
+      "notes": "«vergeten» hace el perfecto con «zijn»: «ik ben vergeten». «uit te checken»: la «te» va entre partícula y verbo.",
+      "explanation": "Si te cobran el máximo. «vergeten» lleva el acento en «JEE»: «fer-JEE-te».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.stopt-deze-tram-bij-centraal",
+      "text": "Stopt deze tram bij het Centraal Station?",
+      "es": "¿Este tranvía para en la estación central?",
+      "notes": "Pregunta con el verbo delante: «Stopt deze tram…?». «deze» = este (con palabras con «de»).",
+      "explanation": "Al conductor o a otro pasajero. «Centraal»: «sen-TRAAL», con la «c» como «s».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.bij-de-volgende-halte-stap-ik-uit",
+      "text": "Bij de volgende halte stap ik uit.",
+      "es": "Me bajo en la próxima parada.",
+      "notes": "V2: la frase empieza por «Bij de volgende halte», así que va «stap» y luego «ik». «stap … uit» = uitstappen.",
+      "explanation": "Para pedir paso en el bus. «volgende»: «FOL-jen-de»; «halte»: «JAL-te».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.hoe-kom-ik-bij-het-museum",
+      "text": "Hoe kom ik bij het museum?",
+      "es": "¿Cómo llego al museo?",
+      "notes": "«Hoe kom ik bij…?» = ¿cómo llego a…? Fórmula fija.",
+      "explanation": "A alguien en la calle. «hoe» con «oe» = «u»: «JU kom ik bei et mü-SEE-jum».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.weet-u-waar-de-domtoren-is",
+      "text": "Pardon, weet u waar de Domtoren is?",
+      "es": "Perdone, ¿sabe dónde está la torre de la catedral?",
+      "notes": "Tras «waar» en una pregunta indirecta, el verbo va al final: «waar de Domtoren is». La Domtoren es el símbolo de Utrecht.",
+      "explanation": "A una persona mayor en la calle. «weet u» suena junto: «UEE-tü».",
+      "register": "u",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.ga-rechtdoor",
+      "text": "Ga hier rechtdoor.",
+      "es": "Sigue todo recto por aquí.",
+      "notes": "Imperativo: la raíz del verbo («gaan» → «ga»), igual para «je» y para «u».",
+      "explanation": "Al dar indicaciones. «rechtdoor»: «REJT-door», con la «ch» como «j».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.neem-de-tweede-straat-rechts",
+      "text": "Neem de tweede straat rechts.",
+      "es": "Coge la segunda calle a la derecha.",
+      "explanation": "Indicación típica. «tweede» = segunda: «TUEE-de»; «straat» con «aa» larga.",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.ga-bij-het-stoplicht-linksaf",
+      "text": "Ga bij het stoplicht linksaf.",
+      "es": "En el semáforo, gira a la izquierda.",
+      "notes": "«linksaf» = girando a la izquierda; «links» solo = a la izquierda (posición).",
+      "explanation": "Al dar indicaciones. «stoplicht»: «STOP-lijt».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.steek-de-brug-over",
+      "text": "Steek de brug over.",
+      "es": "Cruza el puente.",
+      "notes": "«steek … over» = oversteken (cruzar): la partícula va al final.",
+      "explanation": "En Utrecht y Ámsterdam hay puentes en cada esquina. «brug»: «BRÜJ», la «g» final como «j».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.is-het-ver-lopen",
+      "text": "Is het ver lopen?",
+      "es": "¿Está lejos andando?",
+      "notes": "«lopen» = andar, ir a pie (no «correr», que es «rennen»).",
+      "explanation": "Antes de decidir si coges el tranvía. «lopen» con «oo» larga y «-en» débil: «LOO-pe».",
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.het-is-vijf-minuten-lopen",
+      "text": "Nee, het is vijf minuten lopen.",
+      "es": "No, son cinco minutos andando.",
+      "explanation": "La respuesta típica. «vijf» con «ij» = «ei»: «FEIF mi-NÜ-te LOO-pe».",
+      "register": "neutral",
+      "situation": "transporte"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-transport.slot",
+      "word": "slot",
+      "article": "het",
+      "plural": "sloten",
+      "es": "el candado",
+      "notes": "Las bicis llevan un «ringslot» fijo en la rueda; se añade una cadena («kettingslot»).",
+      "example": "nl-a2-transport.je-hebt-altijd-twee-sloten-nodig",
+      "situation": "transporte",
+      "image": "fluent:locked"
+    },
+    {
+      "id": "nl-a2-transport.band",
+      "word": "band",
+      "article": "de",
+      "plural": "banden",
+      "es": "el neumático, la rueda",
+      "notes": "«een lekke band» = una rueda pinchada.",
+      "example": "nl-a2-transport.mijn-band-is-lek",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.fietsenstalling",
+      "word": "fietsenstalling",
+      "article": "de",
+      "plural": "fietsenstallingen",
+      "es": "el aparcamiento de bicis",
+      "notes": "Las palabras en -ing son «de».",
+      "example": "nl-a2-transport.ik-zet-mijn-fiets-in-de-fietsenstalling",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.fietsenmaker",
+      "word": "fietsenmaker",
+      "article": "de",
+      "plural": "fietsenmakers",
+      "es": "el taller de bicis, el mecánico de bicis",
+      "notes": "Las personas por su oficio son «de».",
+      "example": "nl-a2-transport.kun-je-mijn-band-plakken",
+      "situation": "transporte",
+      "image": "fluent:wrench"
+    },
+    {
+      "id": "nl-a2-transport.fietspad",
+      "word": "fietspad",
+      "article": "het",
+      "plural": "fietspaden",
+      "es": "el carril bici",
+      "notes": "Se reconoce por el asfalto rojo.",
+      "example": "nl-a2-transport.blijf-op-het-fietspad",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.voorrang",
+      "word": "voorrang",
+      "article": "de",
+      "es": "la preferencia (de paso)",
+      "notes": "«voorrang hebben» = tener preferencia; «voorrang geven» = ceder el paso.",
+      "example": "nl-a2-transport.rechts-heeft-voorrang",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.stoplicht",
+      "word": "stoplicht",
+      "article": "het",
+      "plural": "stoplichten",
+      "es": "el semáforo",
+      "notes": "Las bicis tienen sus propios semáforos, más pequeños.",
+      "example": "nl-a2-transport.ga-bij-het-stoplicht-linksaf",
+      "situation": "transporte",
+      "image": "fluent:vertical-traffic-light"
+    },
+    {
+      "id": "nl-a2-transport.kruispunt",
+      "word": "kruispunt",
+      "article": "het",
+      "plural": "kruispunten",
+      "es": "el cruce",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.trein",
+      "word": "trein",
+      "article": "de",
+      "plural": "treinen",
+      "es": "el tren",
+      "notes": "La compañía nacional es NS («en-ES»): Nederlandse Spoorwegen.",
+      "example": "nl-a2-transport.de-trein-heeft-tien-minuten-vertraging",
+      "situation": "transporte",
+      "image": "fluent:high-speed-train"
+    },
+    {
+      "id": "nl-a2-transport.station",
+      "word": "station",
+      "article": "het",
+      "plural": "stations",
+      "es": "la estación",
+      "notes": "Se dice «sta-SJON». «Utrecht Centraal» = la estación central.",
+      "example": "nl-a2-transport.stopt-deze-tram-bij-centraal",
+      "situation": "transporte",
+      "image": "fluent:station"
+    },
+    {
+      "id": "nl-a2-transport.spoor",
+      "word": "spoor",
+      "article": "het",
+      "plural": "sporen",
+      "es": "la vía (el andén)",
+      "notes": "En las pantallas pone «spoor», no «perron».",
+      "example": "nl-a2-transport.van-welk-spoor-vertrekt-de-trein",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.kaartje",
+      "word": "kaartje",
+      "article": "het",
+      "plural": "kaartjes",
+      "es": "el billete",
+      "notes": "Diminutivo de «kaart»: siempre «het».",
+      "example": "nl-a2-transport.een-kaartje-naar-amsterdam",
+      "situation": "transporte",
+      "image": "fluent:ticket"
+    },
+    {
+      "id": "nl-a2-transport.vertraging",
+      "word": "vertraging",
+      "article": "de",
+      "plural": "vertragingen",
+      "es": "el retraso",
+      "example": "nl-a2-transport.de-trein-heeft-tien-minuten-vertraging",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.overstappen",
+      "word": "overstappen",
+      "es": "hacer transbordo",
+      "notes": "Separable: «ik stap in Utrecht over», «ik ben overgestapt».",
+      "example": "nl-a2-transport.moet-ik-overstappen",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.tram",
+      "word": "tram",
+      "article": "de",
+      "plural": "trams",
+      "es": "el tranvía",
+      "notes": "Se dice «trem», como en inglés.",
+      "example": "nl-a2-transport.stopt-deze-tram-bij-centraal",
+      "situation": "transporte",
+      "image": "fluent:tram"
+    },
+    {
+      "id": "nl-a2-transport.bus",
+      "word": "bus",
+      "article": "de",
+      "plural": "bussen",
+      "es": "el autobús",
+      "notes": "Se dice «bus» con «u» corta, como en «bruto».",
+      "situation": "transporte",
+      "image": "fluent:bus"
+    },
+    {
+      "id": "nl-a2-transport.halte",
+      "word": "halte",
+      "article": "de",
+      "plural": "haltes",
+      "es": "la parada",
+      "notes": "«de bushalte» = la parada de autobús.",
+      "example": "nl-a2-transport.bij-de-volgende-halte-stap-ik-uit",
+      "situation": "transporte",
+      "image": "fluent:bus-stop"
+    },
+    {
+      "id": "nl-a2-transport.ov-chipkaart",
+      "word": "OV-chipkaart",
+      "article": "de",
+      "plural": "OV-chipkaarten",
+      "es": "la tarjeta de transporte",
+      "notes": "OV = openbaar vervoer (transporte público). Hoy también vale tu tarjeta bancaria (OVpay).",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.inchecken",
+      "word": "inchecken",
+      "es": "fichar al subir (validar)",
+      "notes": "Separable: «ik check in», «ik heb ingecheckt».",
+      "example": "nl-a2-transport.ik-check-in-met-mijn-bankpas",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.uitchecken",
+      "word": "uitchecken",
+      "es": "fichar al bajar",
+      "notes": "Separable: «ik check uit», «ik heb uitgecheckt». Si se te olvida, pagas de más.",
+      "example": "nl-a2-transport.ik-ben-vergeten-uit-te-checken",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.uitstappen",
+      "word": "uitstappen",
+      "es": "bajarse (del tren, del bus)",
+      "notes": "Separable: «ik stap uit». Lo contrario: «instappen» (subir).",
+      "example": "nl-a2-transport.bij-de-volgende-halte-stap-ik-uit",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.rechtdoor",
+      "word": "rechtdoor",
+      "es": "todo recto",
+      "example": "nl-a2-transport.ga-rechtdoor",
+      "situation": "transporte",
+      "image": "fluent:up-arrow"
+    },
+    {
+      "id": "nl-a2-transport.linksaf",
+      "word": "linksaf",
+      "es": "(girar) a la izquierda",
+      "notes": "«linksaf gaan» = girar a la izquierda.",
+      "example": "nl-a2-transport.ga-bij-het-stoplicht-linksaf",
+      "situation": "transporte",
+      "image": "fluent:left-arrow"
+    },
+    {
+      "id": "nl-a2-transport.rechtsaf",
+      "word": "rechtsaf",
+      "es": "(girar) a la derecha",
+      "notes": "«rechtsaf gaan» = girar a la derecha.",
+      "situation": "transporte",
+      "image": "fluent:right-arrow"
+    },
+    {
+      "id": "nl-a2-transport.brug",
+      "word": "brug",
+      "article": "de",
+      "plural": "bruggen",
+      "es": "el puente",
+      "example": "nl-a2-transport.steek-de-brug-over",
+      "situation": "transporte"
+    },
+    {
+      "id": "nl-a2-transport.lopen",
+      "word": "lopen",
+      "es": "andar, ir a pie",
+      "notes": "Falso amigo: no es «correr» («rennen»). «Het is tien minuten lopen» = son diez minutos andando.",
+      "example": "nl-a2-transport.is-het-ver-lopen",
+      "situation": "transporte"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-transport.qa.wat-is-er-met-je-fiets",
+      "question": "Hoi! Wat is er met je fiets?",
+      "questionEs": "¡Hola! ¿Qué le pasa a tu bici?",
+      "accepted": [
+        { "text": "Mijn band is lek.", "es": "Tengo una rueda pinchada." },
+        { "text": "Mijn licht doet het niet.", "es": "No me funciona la luz." }
+      ],
+      "distractors": [
+        { "text": "Mijn band is lekker.", "es": "Mi rueda está rica." },
+        { "text": "Mijn licht doet niet.", "es": "Mi luz no hace (falta «het»)." }
+      ],
+      "register": "tu",
+      "situation": "transporte",
+      "notes": "«lek» = pinchado; «lekker» = rico. «Het doet het niet» = no funciona: el «het» no se puede quitar.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-transport.qa.morgen-klaar",
+      "question": "Morgen is hij klaar. Is dat goed?",
+      "questionEs": "Mañana estará lista. ¿Te va bien?",
+      "accepted": [
+        { "text": "Ja, prima. Hoe laat kan ik hem ophalen?", "es": "Sí, perfecto. ¿A qué hora puedo recogerla?" },
+        { "text": "Ja, dat is goed.", "es": "Sí, está bien." }
+      ],
+      "distractors": [
+        { "text": "Ja, ik ben klaar.", "es": "Sí, ya he terminado." },
+        { "text": "Ja, morgen ik kom.", "es": "Sí, mañana vengo (orden mal)." }
+      ],
+      "register": "tu",
+      "situation": "transporte",
+      "notes": "«hij/hem» es la bici («de fiets»). Si empiezas por «morgen», el verbo va segundo: «Morgen kom ik».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-transport.qa.naar-je-werk",
+      "question": "Hoe ga jij naar je werk?",
+      "questionEs": "¿Cómo vas tú al trabajo?",
+      "accepted": [
+        { "text": "Ik fiets, het is niet ver.", "es": "Voy en bici, no está lejos." },
+        { "text": "Met de tram.", "es": "En tranvía." }
+      ],
+      "distractors": [
+        { "text": "Ik fietst, het is niet ver.", "es": "Voy en bici (verbo mal)." },
+        { "text": "Ik loop met de auto.", "es": "Ando con el coche." }
+      ],
+      "register": "tu",
+      "situation": "transporte",
+      "notes": "Con «ik», sin «-t»: «ik fiets». «lopen» es andar, no ir en coche.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-transport.qa.enkele-reis",
+      "question": "Enkele reis of retour?",
+      "questionEs": "¿Ida o ida y vuelta?",
+      "accepted": [
+        { "text": "Retour, alstublieft.", "es": "Ida y vuelta, por favor." },
+        { "text": "Enkele reis, graag.", "es": "Solo ida, por favor." }
+      ],
+      "distractors": [
+        { "text": "Ik heb een retour.", "es": "Tengo una ida y vuelta." },
+        { "text": "Ja, enkele reis of retour.", "es": "Sí, ida o ida y vuelta." }
+      ],
+      "register": "u",
+      "situation": "transporte",
+      "notes": "Te preguntan qué billete quieres: elige uno y añade «alstublieft» o «graag».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-transport.qa.waar-naartoe",
+      "question": "Waar gaat u naartoe?",
+      "questionEs": "¿Adónde va?",
+      "accepted": [
+        { "text": "Naar Den Haag Centraal.", "es": "A Den Haag Centraal." },
+        { "text": "Ik ga naar Rotterdam.", "es": "Voy a Róterdam." }
+      ],
+      "distractors": [
+        { "text": "Ik ga in Rotterdam.", "es": "Voy en Róterdam (preposición mal)." },
+        { "text": "Morgen ik ga naar Rotterdam.", "es": "Mañana voy a Róterdam (orden mal)." }
+      ],
+      "register": "u",
+      "situation": "transporte",
+      "notes": "Para un destino se usa «naar», no «in». Tras «Morgen», el verbo va segundo: «Morgen ga ik».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-transport.qa.plek-vrij",
+      "question": "Pardon, is deze plek nog vrij?",
+      "questionEs": "Perdone, ¿está libre este sitio?",
+      "accepted": [
+        { "text": "Ja, hoor. Gaat u zitten.", "es": "Sí, claro. Siéntese." },
+        { "text": "Nee, sorry, hier zit iemand.", "es": "No, lo siento, está ocupado." }
+      ],
+      "distractors": [
+        { "text": "Ja, hij is gratis.", "es": "Sí, es gratis." },
+        { "text": "Ja, hoor. Ga je zitten.", "es": "Sí, claro. Siéntate (pero le hablas de usted)." }
+      ],
+      "register": "u",
+      "situation": "transporte",
+      "notes": "«vrij» aquí es «libre», no «gratis». A una señora mayor, de «u»: «Gaat u zitten». «hoor» suaviza la respuesta.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-transport.qa.ingecheckt",
+      "question": "Goedemiddag, controle. Heeft u ingecheckt?",
+      "questionEs": "Buenas tardes, revisión. ¿Ha fichado?",
+      "accepted": [
+        { "text": "Ja, met mijn bankpas.", "es": "Sí, con mi tarjeta del banco." },
+        { "text": "Ja, met mijn OV-chipkaart.", "es": "Sí, con mi tarjeta de transporte." }
+      ],
+      "distractors": [
+        { "text": "Ja, ik heb geïncheckt.", "es": "Sí, he fichado (participio mal)." },
+        { "text": "Nee, ik check straks uit.", "es": "No, ficho la salida luego." }
+      ],
+      "register": "u",
+      "situation": "transporte",
+      "notes": "En los separables, «ge-» va entre partícula y verbo: «ingecheckt». Lo que piden es que hayas fichado al subir.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-transport.qa.de-weg",
+      "question": "Sorry, weet u waar het station is?",
+      "questionEs": "Perdone, ¿sabe dónde está la estación?",
+      "accepted": [
+        { "text": "Ja, ga hier rechtdoor en dan linksaf.", "es": "Sí, siga recto por aquí y luego a la izquierda." },
+        { "text": "Sorry, ik ben hier ook nieuw.", "es": "Lo siento, yo también soy nuevo aquí." }
+      ],
+      "distractors": [
+        { "text": "Ja, eerst u gaat rechtdoor.", "es": "Sí, primero usted va recto (orden mal)." },
+        { "text": "Ja, het is de twee straat rechts.", "es": "Sí, es la calle dos a la derecha (ordinal mal)." }
+      ],
+      "register": "u",
+      "situation": "transporte",
+      "notes": "Tras «eerst», el verbo va segundo: «eerst gaat u». Ordinal: «de tweede straat».",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}
