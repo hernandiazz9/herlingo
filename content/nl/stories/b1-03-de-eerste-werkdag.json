@@ -1,0 +1,126 @@
+{
+  "id": "story.nl-b1-de-eerste-werkdag",
+  "order": 103,
+  "title": "De eerste werkdag",
+  "titleEs": "El primer día de trabajo",
+  "description": "Primer día en la scale-up: tarjeta, portátil, Teams, Joost y un almuerzo de bocadillos y suero de leche.",
+  "emoji": "🥪",
+  "situation": "trabajo",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "Op een koude maandag in april begon Diego aan zijn nieuwe baan.", "es": "Un lunes frío de abril, Diego empezó su nuevo trabajo."},
+    {"id": "s2", "text": "Hij kreeg een pasje, een laptop en een flexplek bij het raam.", "es": "Le dieron una tarjeta de acceso, un portátil y un puesto flexible junto a la ventana."},
+    {"id": "s3", "text": "Sanne stelde hem voor aan het team en aan de rest van de afdeling.", "es": "Sanne le presentó al equipo y al resto del departamento."},
+    {"id": "s4", "text": "«Dit is Joost. Hij komt uit Rotterdam en zegt altijd wat hij denkt.»", "es": "«Este es Joost. Es de Róterdam y siempre dice lo que piensa.»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s5", "text": "«Welkom! Ben jij ook voor Feyenoord?»", "es": "«¡Bienvenido! ¿Tú también eres del Feyenoord?»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s6", "text": "De ochtend was druk: hij moest een account aanmaken en Teams installeren.", "es": "La mañana fue intensa: tenía que crear una cuenta e instalar Teams."},
+    {"id": "s7", "text": "Om twaalf uur ging iedereen naar de kantine.", "es": "A las doce todo el mundo fue a la cantina."},
+    {"id": "s8", "text": "Diego verwachtte een warme maaltijd, maar zijn collega's aten gewoon boterhammen met kaas.", "es": "Diego esperaba una comida caliente, pero sus compañeros comían simplemente pan con queso."},
+    {"id": "s9", "text": "Joost dronk er een glas karnemelk bij, en Diego keek hem verbaasd aan.", "es": "Joost se tomaba un vaso de suero de leche con ellos, y Diego lo miró sorprendido."},
+    {"id": "s10", "text": "«Dat is echt lekker, hoor. Probeer maar!»", "es": "«Está buenísimo, de verdad. ¡Pruébalo!»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s11", "text": "Diego proefde het en vond het vreselijk, maar hij zei niets.", "es": "Diego lo probó y le pareció horrible, pero no dijo nada."},
+    {"id": "s12", "text": "'s Middags had hij zijn eerste meeting op Teams, met de camera aan.", "es": "Por la tarde tuvo su primera reunión por Teams, con la cámara encendida."},
+    {"id": "s13", "text": "Om vijf uur was hij moe, maar heel tevreden.", "es": "A las cinco estaba cansado, pero muy contento."}
+  ],
+  "keywords": [
+    "nl-b1-workplace.pasje",
+    "nl-b1-workplace.laptop",
+    "nl-b1-workplace.flexplek",
+    "nl-b1-workplace.afdeling",
+    "nl-b1-workplace.account",
+    "nl-b1-workplace.kantine",
+    "nl-b1-workplace.boterham",
+    "nl-b1-workplace.karnemelk",
+    "nl-b1-workplace.meeting",
+    "nl-b1-workplace.camera"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Wat kreeg Diego op zijn eerste dag?",
+      "es": "¿Qué le dieron a Diego el primer día?",
+      "options": [
+        {
+          "text": "Een auto en een telefoon.",
+          "es": "Un coche y un teléfono."
+        },
+        {
+          "text": "Een pasje, een laptop en een flexplek.",
+          "es": "Una tarjeta, un portátil y un puesto flexible."
+        },
+        {
+          "text": "Een fiets en een sleutel.",
+          "es": "Una bici y una llave."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Waar komt Joost vandaan?",
+      "es": "¿De dónde es Joost?",
+      "options": [
+        {
+          "text": "Uit Utrecht.",
+          "es": "De Utrecht."
+        },
+        {
+          "text": "Uit Amsterdam.",
+          "es": "De Ámsterdam."
+        },
+        {
+          "text": "Uit Rotterdam.",
+          "es": "De Róterdam."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "Wat aten de collega's bij de lunch?",
+      "es": "¿Qué comían los compañeros en el almuerzo?",
+      "options": [
+        {
+          "text": "Boterhammen met kaas.",
+          "es": "Pan con queso."
+        },
+        {
+          "text": "Een warme maaltijd.",
+          "es": "Una comida caliente."
+        },
+        {
+          "text": "Pizza.",
+          "es": "Pizza."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "Wat vond Diego van de karnemelk?",
+      "es": "¿Qué le pareció a Diego el suero de leche?",
+      "options": [
+        {
+          "text": "Hij vond het heel lekker.",
+          "es": "Le pareció buenísimo."
+        },
+        {
+          "text": "Hij vond het vreselijk.",
+          "es": "Le pareció horrible."
+        },
+        {
+          "text": "Hij heeft het niet geproefd.",
+          "es": "No lo probó."
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s2", "answer": "nl-b1-workplace.pasje", "distractors": ["paspoort", "paraplu"]},
+    {"id": "g2", "sentence": "s7", "answer": "nl-b1-workplace.kantine", "distractors": ["bioscoop", "apotheek"]},
+    {"id": "g3", "sentence": "s8", "answer": "nl-b1-workplace.boterham", "gap": "boterhammen", "distractors": ["pannenkoeken", "bitterballen"]},
+    {"id": "g4", "sentence": "s9", "answer": "nl-b1-workplace.karnemelk", "distractors": ["wijn", "cola"]},
+    {"id": "g5", "sentence": "s12", "answer": "nl-b1-workplace.camera", "distractors": ["verwarming", "koelkast"]}
+  ]
+}

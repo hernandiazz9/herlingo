@@ -1,0 +1,108 @@
+{
+  "id": "story.nl-b1-de-vacature",
+  "order": 101,
+  "title": "De vacature",
+  "titleEs": "La vacante",
+  "description": "El contrato de Diego se acaba: busca vacantes y escribe su primera carta de motivación en neerlandés.",
+  "emoji": "📝",
+  "situation": "trabajo",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "Diego had een tijdelijk contract, en dat liep in maart af.", "es": "Diego tenía un contrato temporal, y se le acababa en marzo."},
+    {"id": "s2", "text": "Daarom keek hij elke avond op LinkedIn naar vacatures.", "es": "Por eso cada noche miraba vacantes en LinkedIn."},
+    {"id": "s3", "text": "Op een dinsdag vond hij een leuke vacature bij een scale-up in Utrecht.", "es": "Un martes encontró una vacante interesante en una scale-up de Utrecht."},
+    {"id": "s4", "text": "Ze zochten een backend developer met vijf jaar ervaring.", "es": "Buscaban un desarrollador backend con cinco años de experiencia."},
+    {"id": "s5", "text": "De contactpersoon was Sanne Visser, de teamleider.", "es": "La persona de contacto era Sanne Visser, la jefa de equipo."},
+    {"id": "s6", "text": "«Dit is perfect voor mij! Maar de sluitingsdatum is al vrijdag.»", "es": "«¡Esto es perfecto para mí! Pero la fecha límite ya es el viernes.»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s7", "text": "Hij paste zijn cv aan en begon aan een motivatiebrief in het Nederlands.", "es": "Adaptó su CV y empezó una carta de motivación en neerlandés."},
+    {"id": "s8", "text": "Dat was lastig, want hij had nog nooit een formele brief geschreven.", "es": "Era difícil, porque nunca había escrito una carta formal."},
+    {"id": "s9", "text": "Op donderdagavond las Femke, zijn buurvrouw van boven, de brief.", "es": "El jueves por la noche, Femke, su vecina de arriba, leyó la carta."},
+    {"id": "s10", "text": "«Goed geschreven! Maar je aanhef is te formeel. Begin gewoon met 'Beste Sanne'.»", "es": "«¡Bien escrita! Pero tu saludo es demasiado formal. Empieza simplemente con 'Beste Sanne'.»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s11", "text": "Diego veranderde de aanhef en stuurde de brief met zijn cv als bijlage.", "es": "Diego cambió el saludo y envió la carta con su CV como adjunto."},
+    {"id": "s12", "text": "Twee dagen later belde een recruiter van het bedrijf.", "es": "Dos días después llamó una recruiter de la empresa."},
+    {"id": "s13", "text": "Ze nodigde hem uit voor een sollicitatiegesprek met Sanne.", "es": "Le invitó a una entrevista de trabajo con Sanne."},
+    {"id": "s14", "text": "«Femke, ik heb een uitnodiging! Jouw tip heeft echt geholpen.»", "es": "«¡Femke, tengo una entrevista! Tu consejo me ha ayudado de verdad.»", "voice": "nl-NL-MaartenNeural"}
+  ],
+  "keywords": [
+    "nl-b1-job-search.vacature",
+    "nl-b1-job-search.ervaring",
+    "nl-b1-job-search.sluitingsdatum",
+    "nl-b1-job-search.cv",
+    "nl-b1-job-search.motivatiebrief",
+    "nl-b1-job-search.aanhef",
+    "nl-b1-job-search.bijlage",
+    "nl-b1-job-search.recruiter",
+    "nl-b1-job-search.sollicitatiegesprek",
+    "nl-b1-job-search.uitnodiging"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Waarom zocht Diego een nieuwe baan?",
+      "es": "¿Por qué buscaba Diego un trabajo nuevo?",
+      "options": [
+        {
+          "text": "Hij wilde naar Amsterdam verhuizen.",
+          "es": "Quería mudarse a Ámsterdam."
+        },
+        {
+          "text": "Zijn tijdelijke contract liep af.",
+          "es": "Su contrato temporal se acababa."
+        },
+        {
+          "text": "Hij vond zijn collega's niet aardig.",
+          "es": "No le caían bien sus compañeros."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Wat vond Femke van de brief?",
+      "es": "¿Qué le pareció la carta a Femke?",
+      "options": [
+        {
+          "text": "Goed geschreven, maar de aanhef was te formeel.",
+          "es": "Bien escrita, pero el saludo era demasiado formal."
+        },
+        {
+          "text": "Veel te lang en vol fouten.",
+          "es": "Demasiado larga y llena de errores."
+        },
+        {
+          "text": "Perfect, ze wilde niets veranderen.",
+          "es": "Perfecta, no quería cambiar nada."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Wie belde Diego twee dagen later?",
+      "es": "¿Quién llamó a Diego dos días después?",
+      "options": [
+        {
+          "text": "Zijn moeder in Zaragoza.",
+          "es": "Su madre en Zaragoza."
+        },
+        {
+          "text": "Femke, zijn buurvrouw.",
+          "es": "Femke, su vecina."
+        },
+        {
+          "text": "Een recruiter van het bedrijf.",
+          "es": "Una recruiter de la empresa."
+        }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s2", "answer": "nl-b1-job-search.vacature", "gap": "vacatures", "distractors": ["rekeningen", "recepten"]},
+    {"id": "g2", "sentence": "s4", "answer": "nl-b1-job-search.ervaring", "distractors": ["vakantie", "pijn"]},
+    {"id": "g3", "sentence": "s7", "answer": "nl-b1-job-search.motivatiebrief", "distractors": ["boodschappenlijst", "verjaardagskaart"]},
+    {"id": "g4", "sentence": "s10", "answer": "nl-b1-job-search.aanhef", "distractors": ["handtekening", "postcode"]},
+    {"id": "g5", "sentence": "s11", "answer": "nl-b1-job-search.bijlage", "distractors": ["cadeau", "boete"]},
+    {"id": "g6", "sentence": "s13", "answer": "nl-b1-job-search.sollicitatiegesprek", "distractors": ["oudergesprek", "verjaardagsfeest"]}
+  ]
+}

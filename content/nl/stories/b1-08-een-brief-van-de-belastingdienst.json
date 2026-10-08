@@ -1,0 +1,125 @@
+{
+  "id": "story.nl-b1-een-brief-van-de-belastingdienst",
+  "order": 108,
+  "title": "Een brief van de Belastingdienst",
+  "titleEs": "Una carta de Hacienda",
+  "description": "Un sobre azul: Diego tiene que devolver zorgtoeslag. Ria le ayuda con la declaración de la renta.",
+  "emoji": "✉️",
+  "situation": "dinero",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "Op een zaterdag in maart lag er een blauwe envelop in de brievenbus.", "es": "Un sábado de marzo había un sobre azul en el buzón."},
+    {"id": "s2", "text": "Diego schrok, want een blauwe envelop komt altijd van de Belastingdienst.", "es": "Diego se asustó, porque un sobre azul siempre viene de Hacienda."},
+    {"id": "s3", "text": "In de brief stond dat hij te veel zorgtoeslag had gekregen.", "es": "En la carta ponía que había recibido demasiada ayuda para el seguro médico."},
+    {"id": "s4", "text": "Hij moest zeshonderd euro terugbetalen.", "es": "Tenía que devolver seiscientos euros."},
+    {"id": "s5", "text": "«Zeshonderd euro? Ik begrijp er niets van!»", "es": "«¿Seiscientos euros? ¡No entiendo nada!»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s6", "text": "Hij ging naar beneden, naar Ria, die overal een oplossing voor heeft.", "es": "Bajó a ver a Ria, que tiene solución para todo."},
+    {"id": "s7", "text": "Ria zette koffie, las de brief en knikte rustig.", "es": "Ria hizo café, leyó la carta y asintió con calma."},
+    {"id": "s8", "text": "«Je verdient nu meer, jongen. Dan krijg je minder toeslag. Dat is normaal.»", "es": "«Ahora ganas más, chico. Entonces recibes menos ayuda. Es normal.»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s9", "text": "Ze legde uit dat hij voor mei ook zijn aangifte moest doen.", "es": "Le explicó que antes de mayo también tenía que hacer la declaración de la renta."},
+    {"id": "s10", "text": "Samen logden ze in met zijn DigiD en vulden ze alles in.", "es": "Juntos entraron con su DigiD y lo rellenaron todo."},
+    {"id": "s11", "text": "Tot zijn verbazing kreeg hij een teruggave van tweehonderd euro.", "es": "Para su sorpresa, le salió una devolución de doscientos euros."},
+    {"id": "s12", "text": "Voor de rest vroeg hij een betalingsregeling aan, en Ria kreeg een grote bos bloemen.", "es": "Para el resto pidió un pago a plazos, y Ria recibió un ramo de flores enorme."}
+  ],
+  "keywords": [
+    "nl-b1-taxes.envelop",
+    "nl-b1-taxes.belastingdienst",
+    "nl-b1-taxes.zorgtoeslag",
+    "nl-a2-bank.terugbetalen",
+    "nl-b1-taxes.toeslag",
+    "nl-b1-taxes.aangifte",
+    "nl-a2-gemeente.digid",
+    "nl-b1-taxes.teruggave",
+    "nl-b1-taxes.betalingsregeling"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Van wie kwam de blauwe envelop?",
+      "es": "¿De quién era el sobre azul?",
+      "options": [
+        {
+          "text": "Van de gemeente.",
+          "es": "Del ayuntamiento."
+        },
+        {
+          "text": "Van de Belastingdienst.",
+          "es": "De Hacienda."
+        },
+        {
+          "text": "Van de verhuurder.",
+          "es": "Del casero."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Waarom moest Diego geld terugbetalen?",
+      "es": "¿Por qué tenía que devolver dinero Diego?",
+      "options": [
+        {
+          "text": "Hij had te veel zorgtoeslag gekregen.",
+          "es": "Había recibido demasiada ayuda para el seguro médico."
+        },
+        {
+          "text": "Hij had een boete gekregen.",
+          "es": "Le habían puesto una multa."
+        },
+        {
+          "text": "Hij had zijn huur niet betaald.",
+          "es": "No había pagado el alquiler."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Hoe hielp Ria hem?",
+      "es": "¿Cómo le ayudó Ria?",
+      "options": [
+        {
+          "text": "Ze betaalde de zeshonderd euro.",
+          "es": "Pagó los seiscientos euros."
+        },
+        {
+          "text": "Ze belde de Belastingdienst.",
+          "es": "Llamó a Hacienda."
+        },
+        {
+          "text": "Ze deed samen met hem de aangifte.",
+          "es": "Hizo la declaración con él."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Wat kreeg Ria als dank?",
+      "es": "¿Qué recibió Ria como agradecimiento?",
+      "options": [
+        {
+          "text": "Een grote bos bloemen.",
+          "es": "Un ramo de flores enorme."
+        },
+        {
+          "text": "Een appeltaart.",
+          "es": "Una tarta de manzana."
+        },
+        {
+          "text": "Tweehonderd euro.",
+          "es": "Doscientos euros."
+        }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s1", "answer": "nl-b1-taxes.envelop", "distractors": ["paraplu", "fiets"]},
+    {"id": "g2", "sentence": "s3", "answer": "nl-b1-taxes.zorgtoeslag", "distractors": ["vakantiegeld", "statiegeld"]},
+    {"id": "g3", "sentence": "s4", "answer": "nl-a2-bank.terugbetalen", "distractors": ["lenen", "winnen"]},
+    {"id": "g4", "sentence": "s9", "answer": "nl-b1-taxes.aangifte", "distractors": ["afspraak", "boodschappen"]},
+    {"id": "g5", "sentence": "s11", "answer": "nl-b1-taxes.teruggave", "distractors": ["aanmaning", "huurverhoging"]},
+    {"id": "g6", "sentence": "s12", "answer": "nl-b1-taxes.betalingsregeling", "distractors": ["bezichtiging", "verjaardag"]}
+  ]
+}

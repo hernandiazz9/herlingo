@@ -1,0 +1,124 @@
+{
+  "id": "story.nl-b1-koningsdag",
+  "order": 109,
+  "title": "Koningsdag",
+  "titleEs": "El Día del Rey",
+  "description": "Todo Utrecht se viste de naranja. Martina vende sus juguetes viejos en el vrijmarkt.",
+  "emoji": "👑",
+  "situation": "cultura",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "Op zevenentwintig april was heel Utrecht oranje.", "es": "El veintisiete de abril, todo Utrecht estaba de naranja."},
+    {"id": "s2", "text": "Het was Koningsdag, de verjaardag van de koning, en bijna iedereen was vrij.", "es": "Era el Día del Rey, el cumpleaños del rey, y casi todo el mundo tenía fiesta."},
+    {"id": "s3", "text": "De avond ervoor had Martina een kleed op de stoep gelegd, met haar oude speelgoed.", "es": "La noche anterior, Martina había puesto una manta en la acera, con sus juguetes viejos."},
+    {"id": "s4", "text": "Ze wilde alles verkopen op de vrijmarkt, net als de andere kinderen in de straat.", "es": "Quería venderlo todo en el mercadillo, como los demás niños de la calle."},
+    {"id": "s5", "text": "Om acht uur 's ochtends zat ze er al, met een oranje kroon op haar hoofd.", "es": "A las ocho de la mañana ya estaba allí, con una corona naranja en la cabeza."},
+    {"id": "s6", "text": "Ria kocht een puzzel, en Femke kocht een knuffel voor één euro.", "es": "Ria compró un puzle, y Femke un peluche por un euro."},
+    {"id": "s7", "text": "«Kijk eens hoeveel geld ze al heeft! Ze wordt later vast zakenvrouw.»", "es": "«¡Mira cuánto dinero tiene ya! De mayor seguro que será empresaria.»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s8", "text": "Overal was muziek, en op de grachten voeren boten vol mensen in het oranje.", "es": "Había música por todas partes, y por los canales pasaban barcos llenos de gente vestida de naranja."},
+    {"id": "s9", "text": "Het was druk, maar vooral heel gezellig.", "es": "Había mucha gente, pero sobre todo un ambiente estupendo."},
+    {"id": "s10", "text": "«Nu snap ik het: dit is het grootste feest van het jaar!»", "es": "«Ahora lo entiendo: ¡es la fiesta más grande del año!»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s11", "text": "Aan het eind van de dag had Martina vijftien euro verdiend.", "es": "Al final del día, Martina había ganado quince euros."},
+    {"id": "s12", "text": "Met dat geld kocht ze meteen nieuw speelgoed, op dezelfde vrijmarkt.", "es": "Con ese dinero se compró enseguida juguetes nuevos, en el mismo mercadillo."}
+  ],
+  "keywords": [
+    "nl-b1-culture.koningsdag",
+    "nl-b1-culture.koning",
+    "nl-a2-numbers.verjaardag",
+    "nl-b1-school.speelgoed",
+    "nl-b1-culture.vrijmarkt",
+    "nl-a2-numbers.april",
+    "nl-a2-neighbours.gezellig",
+    "nl-a2-neighbours.feest",
+    "nl-a2-numbers.euro"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Waarom was bijna iedereen vrij?",
+      "es": "¿Por qué casi todo el mundo tenía fiesta?",
+      "options": [
+        {
+          "text": "Het was Koningsdag.",
+          "es": "Era el Día del Rey."
+        },
+        {
+          "text": "Het was de verjaardag van Martina.",
+          "es": "Era el cumpleaños de Martina."
+        },
+        {
+          "text": "Het was Kerstmis.",
+          "es": "Era Navidad."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Wat verkocht Martina op de vrijmarkt?",
+      "es": "¿Qué vendía Martina en el mercadillo?",
+      "options": [
+        {
+          "text": "Appeltaart.",
+          "es": "Tarta de manzana."
+        },
+        {
+          "text": "Oranje kronen.",
+          "es": "Coronas naranjas."
+        },
+        {
+          "text": "Haar oude speelgoed.",
+          "es": "Sus juguetes viejos."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "Hoeveel geld had Martina aan het eind van de dag verdiend?",
+      "es": "¿Cuánto dinero había ganado Martina al final del día?",
+      "options": [
+        {
+          "text": "Vijf euro.",
+          "es": "Cinco euros."
+        },
+        {
+          "text": "Vijftien euro.",
+          "es": "Quince euros."
+        },
+        {
+          "text": "Vijftig euro.",
+          "es": "Cincuenta euros."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Wat deed Martina met het geld?",
+      "es": "¿Qué hizo Martina con el dinero?",
+      "options": [
+        {
+          "text": "Ze gaf het aan Ria.",
+          "es": "Se lo dio a Ria."
+        },
+        {
+          "text": "Ze bewaarde het voor later.",
+          "es": "Lo guardó para más adelante."
+        },
+        {
+          "text": "Ze kocht nieuw speelgoed.",
+          "es": "Se compró juguetes nuevos."
+        }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s2", "answer": "nl-b1-culture.koning", "distractors": ["burgemeester", "juf"]},
+    {"id": "g2", "sentence": "s3", "answer": "nl-b1-school.speelgoed", "distractors": ["huiswerk", "afval"]},
+    {"id": "g3", "sentence": "s4", "answer": "nl-b1-culture.vrijmarkt", "distractors": ["bso", "polder"]},
+    {"id": "g4", "sentence": "s9", "answer": "nl-a2-neighbours.gezellig", "distractors": ["duur", "saai"]},
+    {"id": "g5", "sentence": "s10", "answer": "nl-a2-neighbours.feest", "distractors": ["probleem", "rapport"]}
+  ]
+}

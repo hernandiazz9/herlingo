@@ -1,0 +1,105 @@
+{
+  "id": "story.nl-b1-naar-de-basisschool",
+  "order": 106,
+  "title": "Naar de basisschool",
+  "titleEs": "Al colegio",
+  "description": "Lucía y Martina llegan a Utrecht. Martina empieza el cole con la juf Anouk y va a la bso.",
+  "emoji": "🎒",
+  "situation": "familia",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "In augustus kwamen Lucía en Martina eindelijk naar Utrecht.", "es": "En agosto, Lucía y Martina por fin llegaron a Utrecht."},
+    {"id": "s2", "text": "Martina was zes en ging na de zomer naar de basisschool.", "es": "Martina tenía seis años y después del verano iba a empezar el colegio."},
+    {"id": "s3", "text": "Ze kwam in groep drie, bij juf Anouk.", "es": "Entró en el grupo tres, con la maestra Anouk."},
+    {"id": "s4", "text": "Lucía maakte zich zorgen, want Martina sprak nog geen woord Nederlands.", "es": "Lucía estaba preocupada, porque Martina todavía no hablaba ni una palabra de neerlandés."},
+    {"id": "s5", "text": "«Hoe moet ze vriendjes maken als ze niemand begrijpt?»", "es": "«¿Cómo va a hacer amigos si no entiende a nadie?»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s6", "text": "«Kinderen leren snel. Over een paar maanden praat ze beter dan ik.»", "es": "«Los niños aprenden rápido. Dentro de unos meses hablará mejor que yo.»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s7", "text": "De eerste dag bracht Diego haar op de fiets naar school.", "es": "El primer día, Diego la llevó al colegio en bici."},
+    {"id": "s8", "text": "Op het schoolplein speelden kinderen, en ouders praatten in kleine groepjes.", "es": "En el patio jugaban niños, y los padres charlaban en grupitos."},
+    {"id": "s9", "text": "De juf vertelde dat Martina na school naar de bso kon.", "es": "La maestra les contó que Martina podía ir a la bso después del cole."},
+    {"id": "s10", "text": "Elke ochtend deed Lucía twee boterhammen en een appel in de broodtrommel.", "es": "Cada mañana, Lucía metía dos bocadillos y una manzana en la fiambrera."},
+    {"id": "s11", "text": "Na een week kwam Martina thuis met een nieuw vriendje, Daan.", "es": "Al cabo de una semana, Martina llegó a casa con un amiguito nuevo, Daan."},
+    {"id": "s12", "text": "En na drie maanden verbeterde ze haar vader al: niet 'de huis', maar 'het huis'!", "es": "Y a los tres meses ya corregía a su padre: ¡no 'de huis', sino 'het huis'!"}
+  ],
+  "keywords": [
+    "nl-b1-school.basisschool",
+    "nl-b1-school.groep",
+    "nl-b1-school.juf",
+    "nl-b1-school.brengen",
+    "nl-b1-school.schoolplein",
+    "nl-b1-school.bso",
+    "nl-b1-workplace.boterham",
+    "nl-b1-school.broodtrommel",
+    "nl-b1-school.vriendje"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "In welke groep kwam Martina?",
+      "es": "¿En qué grupo entró Martina?",
+      "options": [
+        {
+          "text": "In groep één.",
+          "es": "En el grupo uno."
+        },
+        {
+          "text": "In groep drie.",
+          "es": "En el grupo tres."
+        },
+        {
+          "text": "In groep zes.",
+          "es": "En el grupo seis."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Waarom maakte Lucía zich zorgen?",
+      "es": "¿Por qué estaba preocupada Lucía?",
+      "options": [
+        {
+          "text": "Martina sprak nog geen Nederlands.",
+          "es": "Martina todavía no hablaba neerlandés."
+        },
+        {
+          "text": "De school was te ver weg.",
+          "es": "El colegio estaba demasiado lejos."
+        },
+        {
+          "text": "De juf was niet aardig.",
+          "es": "La maestra no era simpática."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Hoe heette het nieuwe vriendje van Martina?",
+      "es": "¿Cómo se llamaba el amiguito nuevo de Martina?",
+      "options": [
+        {
+          "text": "Joost.",
+          "es": "Joost."
+        },
+        {
+          "text": "Anouk.",
+          "es": "Anouk."
+        },
+        {
+          "text": "Daan.",
+          "es": "Daan."
+        }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s2", "answer": "nl-b1-school.basisschool", "distractors": ["universiteit", "sportschool"]},
+    {"id": "g2", "sentence": "s3", "answer": "nl-b1-school.juf", "distractors": ["meester", "buurman"]},
+    {"id": "g3", "sentence": "s7", "answer": "nl-b1-school.brengen", "gap": "bracht", "distractors": ["belde", "kocht"]},
+    {"id": "g4", "sentence": "s8", "answer": "nl-b1-school.schoolplein", "distractors": ["perron", "dak"]},
+    {"id": "g5", "sentence": "s10", "answer": "nl-b1-school.broodtrommel", "distractors": ["wasmachine", "brievenbus"]},
+    {"id": "g6", "sentence": "s11", "answer": "nl-b1-school.vriendje", "distractors": ["boekje", "fietsje"]}
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "id": "story.nl-b1-het-sollicitatiegesprek",
+  "order": 102,
+  "title": "Het sollicitatiegesprek",
+  "titleEs": "La entrevista de trabajo",
+  "description": "Diego tiene la entrevista con Sanne: motivación, puntos débiles, sueldo y periodo de prueba.",
+  "emoji": "🤝",
+  "situation": "trabajo",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "Op maandagochtend fietste Diego nerveus naar een groot kantoor bij Utrecht Centraal.", "es": "El lunes por la mañana, Diego fue en bici, nervioso, a una oficina grande junto a Utrecht Centraal."},
+    {"id": "s2", "text": "Bij de receptie kreeg hij een kop koffie en wachtte hij tien minuten.", "es": "En la recepción le dieron un café y esperó diez minutos."},
+    {"id": "s3", "text": "Toen kwam Sanne Visser hem ophalen.", "es": "Luego Sanne Visser vino a buscarlo."},
+    {"id": "s4", "text": "«Welkom, Diego. Vertel eens: waarom wil je bij ons werken?»", "es": "«Bienvenido, Diego. Cuéntame: ¿por qué quieres trabajar con nosotros?»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s5", "text": "«Ik vind jullie product heel interessant, en ik werk graag in een klein team.»", "es": "«Vuestro producto me parece muy interesante, y me gusta trabajar en un equipo pequeño.»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s6", "text": "Sanne vroeg naar zijn vorige baan en naar zijn sterke en zwakke punten.", "es": "Sanne le preguntó por su trabajo anterior y por sus puntos fuertes y débiles."},
+    {"id": "s7", "text": "In Zaragoza had Diego een team van vier ontwikkelaars geleid.", "es": "En Zaragoza, Diego había dirigido un equipo de cuatro desarrolladores."},
+    {"id": "s8", "text": "Over zijn zwakte was hij eerlijk: zijn Nederlands was nog niet perfect.", "es": "Sobre su punto débil fue sincero: su neerlandés todavía no era perfecto."},
+    {"id": "s9", "text": "«Dat is geen probleem. Je leert snel, dat hoor ik al.»", "es": "«No es ningún problema. Aprendes rápido, ya lo noto.»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s10", "text": "Daarna praatten ze over het salaris, het vakantiegeld en de proeftijd van een maand.", "es": "Después hablaron del sueldo, de la paga de vacaciones y del periodo de prueba de un mes."},
+    {"id": "s11", "text": "Een week later kreeg Diego een aanbod: een contract voor een jaar.", "es": "Una semana después, Diego recibió una oferta: un contrato de un año."},
+    {"id": "s12", "text": "Hij belde meteen Femke.", "es": "Llamó enseguida a Femke."},
+    {"id": "s13", "text": "«Ik heb de baan! Vanavond trakteer ik op pizza.»", "es": "«¡Tengo el trabajo! Esta noche invito yo a pizza.»", "voice": "nl-NL-MaartenNeural"}
+  ],
+  "keywords": [
+    "nl-b1-interview.receptie",
+    "nl-b1-interview.product",
+    "nl-b1-interview.vorig",
+    "nl-b1-interview.zwakte",
+    "nl-b1-workplace.eerlijk",
+    "nl-b1-interview.vakantiegeld",
+    "nl-b1-interview.proeftijd",
+    "nl-b1-interview.aanbod",
+    "nl-b1-interview.contract",
+    "nl-b1-workplace.trakteren"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Waarom wil Diego bij het bedrijf werken?",
+      "es": "¿Por qué quiere Diego trabajar en la empresa?",
+      "options": [
+        {
+          "text": "Het salaris is heel hoog.",
+          "es": "El sueldo es muy alto."
+        },
+        {
+          "text": "Het kantoor is dicht bij zijn huis.",
+          "es": "La oficina está cerca de su casa."
+        },
+        {
+          "text": "Hij vindt het product interessant.",
+          "es": "El producto le parece interesante."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "Wat was de zwakte van Diego?",
+      "es": "¿Cuál era el punto débil de Diego?",
+      "options": [
+        {
+          "text": "Zijn Nederlands was nog niet perfect.",
+          "es": "Su neerlandés todavía no era perfecto."
+        },
+        {
+          "text": "Hij kwam altijd te laat.",
+          "es": "Siempre llegaba tarde."
+        },
+        {
+          "text": "Hij had nooit in een team gewerkt.",
+          "es": "Nunca había trabajado en un equipo."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Hoe lang was de proeftijd?",
+      "es": "¿Cuánto duraba el periodo de prueba?",
+      "options": [
+        {
+          "text": "Een jaar.",
+          "es": "Un año."
+        },
+        {
+          "text": "Een maand.",
+          "es": "Un mes."
+        },
+        {
+          "text": "Tien minuten.",
+          "es": "Diez minutos."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "Wat deed Diego toen hij het aanbod kreeg?",
+      "es": "¿Qué hizo Diego cuando recibió la oferta?",
+      "options": [
+        {
+          "text": "Hij belde meteen Femke.",
+          "es": "Llamó enseguida a Femke."
+        },
+        {
+          "text": "Hij ging naar de receptie.",
+          "es": "Fue a la recepción."
+        },
+        {
+          "text": "Hij schreef een nieuwe motivatiebrief.",
+          "es": "Escribió una nueva carta de motivación."
+        }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s2", "answer": "nl-b1-interview.receptie", "distractors": ["apotheek", "kassa"]},
+    {"id": "g2", "sentence": "s5", "answer": "nl-b1-interview.product", "distractors": ["weer", "station"]},
+    {"id": "g3", "sentence": "s8", "answer": "nl-b1-interview.zwakte", "distractors": ["verjaardag", "vakantie"]},
+    {"id": "g4", "sentence": "s10", "answer": "nl-b1-interview.proeftijd", "distractors": ["wachttijd", "lunchpauze"]},
+    {"id": "g5", "sentence": "s11", "answer": "nl-b1-interview.aanbod", "distractors": ["boete", "rekening"]},
+    {"id": "g6", "sentence": "s13", "answer": "nl-b1-workplace.trakteren", "gap": "trakteer", "distractors": ["verhuis", "vergeet"]}
+  ]
+}

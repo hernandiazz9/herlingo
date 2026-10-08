@@ -1,0 +1,126 @@
+{
+  "id": "story.nl-b1-een-dag-in-den-haag",
+  "order": 111,
+  "title": "Een dag in Den Haag",
+  "titleEs": "Un día en La Haya",
+  "description": "Diego y Lucía ven un debate sobre la falta de vivienda en la Tweede Kamer y pasan la tarde en la playa de Scheveningen.",
+  "emoji": "🏛️",
+  "situation": "opiniones",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "Op een warme zaterdag in juli gingen Diego en Lucía samen naar Den Haag.", "es": "Un sábado caluroso de julio, Diego y Lucía fueron juntos a La Haya."},
+    {"id": "s2", "text": "Martina bleef bij Ria, die appeltaart met haar zou bakken.", "es": "Martina se quedó con Ria, que iba a hacer tarta de manzana con ella."},
+    {"id": "s3", "text": "Eerst bezochten ze de Tweede Kamer, waar ze een debat mochten volgen.", "es": "Primero visitaron la Tweede Kamer, donde pudieron seguir un debate."},
+    {"id": "s4", "text": "Het ging over de woningnood: er zijn veel te weinig betaalbare huizen.", "es": "Trataba de la falta de vivienda: hay muy pocas casas asequibles."},
+    {"id": "s5", "text": "Een politicus beloofde honderdduizend nieuwe woningen per jaar.", "es": "Un político prometió cien mil viviendas nuevas al año."},
+    {"id": "s6", "text": "«Dat zeggen ze elk jaar. Ik geloof het pas als ik het zie.»", "es": "«Eso lo dicen cada año. No me lo creo hasta que lo vea.»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s7", "text": "«Ik vind dat ze vooral voor jonge mensen moeten bouwen.»", "es": "«Yo creo que tienen que construir sobre todo para los jóvenes.»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s8", "text": "'s Middags namen ze de tram naar het strand van Scheveningen.", "es": "Por la tarde cogieron el tranvía a la playa de Scheveningen."},
+    {"id": "s9", "text": "Het was druk, maar de zee was rustig en de lucht was blauw.", "es": "Había mucha gente, pero el mar estaba tranquilo y el cielo azul."},
+    {"id": "s10", "text": "Op een terras praatten ze verder over de toekomst.", "es": "En una terraza siguieron hablando del futuro."},
+    {"id": "s11", "text": "Lucía wilde ooit een huis kopen, maar Diego twijfelde nog.", "es": "Lucía quería comprar una casa algún día, pero Diego todavía dudaba."},
+    {"id": "s12", "text": "«Misschien over een paar jaar. Nu genieten we gewoon van de zon.»", "es": "«Quizá dentro de unos años. Ahora simplemente disfrutamos del sol.»", "voice": "nl-NL-MaartenNeural"}
+  ],
+  "keywords": [
+    "nl-b1-opinions.tweede-kamer",
+    "nl-b1-opinions.debat",
+    "nl-b1-opinions.woningnood",
+    "nl-b1-opinions.politicus",
+    "nl-b1-opinions.woning",
+    "nl-b1-grammar.beloven",
+    "nl-a2-transport.tram",
+    "nl-a2-neighbours.strand",
+    "nl-b1-opinions.toekomst",
+    "nl-a2-neighbours.zon"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Waar ging het debat over?",
+      "es": "¿De qué trataba el debate?",
+      "options": [
+        {
+          "text": "Over het klimaat.",
+          "es": "Del clima."
+        },
+        {
+          "text": "Over de woningnood.",
+          "es": "De la falta de vivienda."
+        },
+        {
+          "text": "Over de zorgverzekering.",
+          "es": "Del seguro médico."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Wat vond Lucía van de belofte van de politicus?",
+      "es": "¿Qué le pareció a Lucía la promesa del político?",
+      "options": [
+        {
+          "text": "Ze geloofde het niet echt.",
+          "es": "No se lo creía mucho."
+        },
+        {
+          "text": "Ze vond het een fantastisch plan.",
+          "es": "Le pareció un plan fantástico."
+        },
+        {
+          "text": "Ze had het niet gehoord.",
+          "es": "No lo había oído."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Hoe gingen ze naar Scheveningen?",
+      "es": "¿Cómo fueron a Scheveningen?",
+      "options": [
+        {
+          "text": "Met de fiets.",
+          "es": "En bici."
+        },
+        {
+          "text": "Met de trein.",
+          "es": "En tren."
+        },
+        {
+          "text": "Met de tram.",
+          "es": "En tranvía."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "Wat wilde Lucía ooit doen?",
+      "es": "¿Qué quería hacer Lucía algún día?",
+      "options": [
+        {
+          "text": "Teruggaan naar Spanje.",
+          "es": "Volver a España."
+        },
+        {
+          "text": "Een huis kopen.",
+          "es": "Comprar una casa."
+        },
+        {
+          "text": "In Den Haag wonen.",
+          "es": "Vivir en La Haya."
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s3", "answer": "nl-b1-opinions.debat", "distractors": ["concert", "ontbijt"]},
+    {"id": "g2", "sentence": "s4", "answer": "nl-b1-opinions.woningnood", "distractors": ["hittegolf", "griep"]},
+    {"id": "g3", "sentence": "s5", "answer": "nl-b1-opinions.politicus", "distractors": ["bakker", "fietsenmaker"]},
+    {"id": "g4", "sentence": "s8", "answer": "nl-a2-neighbours.strand", "distractors": ["ziekenhuis", "kantoor"]},
+    {"id": "g5", "sentence": "s10", "answer": "nl-b1-opinions.toekomst", "distractors": ["kaas", "regen"]},
+    {"id": "g6", "sentence": "s12", "answer": "nl-a2-neighbours.zon", "distractors": ["regen", "sneeuw"]}
+  ]
+}

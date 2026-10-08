@@ -1,0 +1,118 @@
+{
+  "id": "story.nl-b1-een-weekend-in-rotterdam",
+  "order": 110,
+  "title": "Een weekend in Rotterdam",
+  "titleEs": "Un fin de semana en Róterdam",
+  "description": "Joost les enseña su ciudad: el puerto, la arquitectura moderna y su madre, tan directa como él.",
+  "emoji": "🌉",
+  "situation": "cultura",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "In juni nodigde Joost Diego, Lucía en Martina uit voor een weekend in Rotterdam.", "es": "En junio, Joost invitó a Diego, Lucía y Martina a pasar un fin de semana en Róterdam."},
+    {"id": "s2", "text": "«Utrecht is leuk, maar Rotterdam is een echte stad. Kom maar kijken!»", "es": "«Utrecht está bien, pero Róterdam es una ciudad de verdad. ¡Venid a verla!»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s3", "text": "Op zaterdag namen ze de trein naar Rotterdam Centraal.", "es": "El sábado cogieron el tren a Rotterdam Centraal."},
+    {"id": "s4", "text": "Joost liet hun de moderne architectuur zien, zoals de gele kubuswoningen.", "es": "Joost les enseñó la arquitectura moderna, como las casas cubo amarillas."},
+    {"id": "s5", "text": "Hij vertelde dat het oude centrum in de oorlog bijna helemaal was verwoest.", "es": "Les contó que el centro antiguo había quedado casi destruido en la guerra."},
+    {"id": "s6", "text": "Daarna liepen ze over de Erasmusbrug, de beroemde witte brug over de Maas.", "es": "Después cruzaron el puente Erasmus, el famoso puente blanco sobre el Mosa."},
+    {"id": "s7", "text": "'s Middags maakten ze een boottocht door de enorme haven.", "es": "Por la tarde hicieron un paseo en barco por el enorme puerto."},
+    {"id": "s8", "text": "'s Avonds aten ze bij de moeder van Joost, in een klein huis in Kralingen.", "es": "Por la noche cenaron en casa de la madre de Joost, una casita en Kralingen."},
+    {"id": "s9", "text": "Ze was net zo direct als haar zoon.", "es": "Era tan directa como su hijo."},
+    {"id": "s10", "text": "«Dus jij bent die Spanjaard. Je Nederlands is goed, maar je praat te zacht.»", "es": "«Así que tú eres el español. Tu neerlandés es bueno, pero hablas demasiado bajo.»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s11", "text": "Lucía moest lachen, en Diego wist even niet wat hij moest zeggen.", "es": "Lucía se echó a reír, y Diego por un momento no supo qué decir."},
+    {"id": "s12", "text": "Op de terugweg zei Lucía dat ze Joost nu veel beter begreep.", "es": "En el camino de vuelta, Lucía dijo que ahora entendía mucho mejor a Joost."}
+  ],
+  "keywords": [
+    "nl-a2-about-me.stad",
+    "nl-a2-transport.trein",
+    {
+      "id": "story-nl-b1-architectuur",
+      "word": "architectuur",
+      "article": "de",
+      "es": "la arquitectura",
+      "notes": "Se pronuncia con «sj»: «arsjitektúur». Rotterdam es famosa por su arquitectura moderna, porque el centro se reconstruyó después de la guerra.",
+      "situation": "cultura"
+    },
+    "nl-b1-culture.oorlog",
+    "nl-a2-transport.brug",
+    {
+      "id": "story-nl-b1-haven",
+      "word": "haven",
+      "article": "de",
+      "plural": "havens",
+      "es": "el puerto",
+      "notes": "El puerto de Róterdam es el más grande de Europa. Ojo: «de haven» (puerto) no es «el cielo» («de hemel»).",
+      "situation": "cultura"
+    },
+    "nl-a2-about-me.moeder",
+    "nl-b1-workplace.direct"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Wat vond Joost van Rotterdam?",
+      "es": "¿Qué opinaba Joost de Róterdam?",
+      "options": [
+        {
+          "text": "Dat het een echte stad is.",
+          "es": "Que es una ciudad de verdad."
+        },
+        {
+          "text": "Dat het te druk is.",
+          "es": "Que hay demasiada gente."
+        },
+        {
+          "text": "Dat Utrecht veel mooier is.",
+          "es": "Que Utrecht es mucho más bonita."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "Waarom is het centrum van Rotterdam zo modern?",
+      "es": "¿Por qué es tan moderno el centro de Róterdam?",
+      "options": [
+        {
+          "text": "Het is een nieuwe stad.",
+          "es": "Es una ciudad nueva."
+        },
+        {
+          "text": "Het oude centrum is in de oorlog verwoest.",
+          "es": "El centro antiguo quedó destruido en la guerra."
+        },
+        {
+          "text": "Er was een grote overstroming.",
+          "es": "Hubo una gran inundación."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "Wat zei de moeder van Joost tegen Diego?",
+      "es": "¿Qué le dijo la madre de Joost a Diego?",
+      "options": [
+        {
+          "text": "Dat zijn Nederlands heel slecht is.",
+          "es": "Que su neerlandés es muy malo."
+        },
+        {
+          "text": "Dat hij te veel praat.",
+          "es": "Que habla demasiado."
+        },
+        {
+          "text": "Dat hij te zacht praat.",
+          "es": "Que habla demasiado bajo."
+        }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s2", "answer": "nl-a2-about-me.stad", "distractors": ["straat", "kamer"]},
+    {"id": "g2", "sentence": "s4", "answer": "story-nl-b1-architectuur", "distractors": ["griep", "regen"]},
+    {"id": "g3", "sentence": "s5", "answer": "nl-b1-culture.oorlog", "distractors": ["vakantie", "zomer"]},
+    {"id": "g4", "sentence": "s7", "answer": "story-nl-b1-haven", "distractors": ["badkamer", "kantine"]},
+    {"id": "g5", "sentence": "s9", "answer": "nl-b1-workplace.direct", "distractors": ["moe", "verlegen"]}
+  ]
+}

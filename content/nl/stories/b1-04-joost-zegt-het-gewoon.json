@@ -1,0 +1,107 @@
+{
+  "id": "story.nl-b1-joost-zegt-het-gewoon",
+  "order": 104,
+  "title": "Joost zegt het gewoon",
+  "titleEs": "Joost lo dice tal cual",
+  "description": "En una reunión, Joost critica la propuesta de Diego sin rodeos. Diego aprende a no tomárselo como algo personal.",
+  "emoji": "🗣️",
+  "situation": "trabajo",
+  "level": "B1",
+  "sentences": [
+    {"id": "s1", "text": "Op dinsdag presenteerde Diego zijn eerste voorstel in het overleg van het team.", "es": "El martes, Diego presentó su primera propuesta en la reunión del equipo."},
+    {"id": "s2", "text": "Hij had er een week aan gewerkt en was best trots.", "es": "Había trabajado en ella una semana y estaba bastante orgulloso."},
+    {"id": "s3", "text": "Na de presentatie was het even stil.", "es": "Después de la presentación hubo un momento de silencio."},
+    {"id": "s4", "text": "«Eerlijk gezegd vind ik het geen goed idee. Het is veel te ingewikkeld.»", "es": "«Sinceramente, no me parece una buena idea. Es demasiado complicada.»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s5", "text": "Diego werd rood. In Spanje zei niemand zoiets in een vergadering.", "es": "Diego se puso rojo. En España nadie decía algo así en una reunión."},
+    {"id": "s6", "text": "De hele middag dacht hij aan die woorden.", "es": "Toda la tarde estuvo pensando en esas palabras."},
+    {"id": "s7", "text": "Later kwam Sanne even naar zijn bureau.", "es": "Más tarde, Sanne se acercó un momento a su mesa."},
+    {"id": "s8", "text": "«Neem het niet persoonlijk. Joost zegt gewoon wat hij denkt.»", "es": "«No te lo tomes como algo personal. Joost dice lo que piensa, sin más.»", "voice": "nl-NL-ColetteNeural"},
+    {"id": "s9", "text": "Ze legde uit dat Nederlanders vaak heel direct feedback geven.", "es": "Le explicó que los neerlandeses suelen dar su opinión de forma muy directa."},
+    {"id": "s10", "text": "Om vier uur stond Joost ineens met twee koppen koffie naast hem.", "es": "A las cuatro, Joost apareció de repente a su lado con dos cafés."},
+    {"id": "s11", "text": "«Zullen we samen een oplossing zoeken? Jouw plan heeft ook goede punten.»", "es": "«¿Buscamos juntos una solución? Tu plan también tiene puntos buenos.»", "voice": "nl-NL-MaartenNeural"},
+    {"id": "s12", "text": "Samen maakten ze een simpeler plan, en vrijdag stond het in de planning.", "es": "Juntos hicieron un plan más sencillo, y el viernes ya estaba en la planificación."},
+    {"id": "s13", "text": "Vanaf die dag vond Diego de directe stijl van Joost eigenlijk wel prettig.", "es": "Desde aquel día, a Diego el estilo directo de Joost hasta le gustaba."}
+  ],
+  "keywords": [
+    "nl-b1-meetings.voorstel",
+    "nl-b1-meetings.overleg",
+    "nl-b1-meetings.presentatie",
+    "nl-b1-workplace.idee",
+    "nl-b1-workplace.vergadering",
+    "nl-b1-workplace.bureau",
+    "nl-b1-workplace.neem-het-niet-persoonlijk",
+    "nl-b1-workplace.feedback",
+    "nl-b1-meetings.oplossing",
+    "nl-b1-meetings.planning"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Wat vond Joost van het voorstel?",
+      "es": "¿Qué le pareció a Joost la propuesta?",
+      "options": [
+        {
+          "text": "Hij vond het te duur.",
+          "es": "Le pareció demasiado cara."
+        },
+        {
+          "text": "Hij vond het veel te ingewikkeld.",
+          "es": "Le pareció demasiado complicada."
+        },
+        {
+          "text": "Hij vond het perfect.",
+          "es": "Le pareció perfecta."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "Wat zei Sanne tegen Diego?",
+      "es": "¿Qué le dijo Sanne a Diego?",
+      "options": [
+        {
+          "text": "Dat hij het niet persoonlijk moest nemen.",
+          "es": "Que no se lo tomara como algo personal."
+        },
+        {
+          "text": "Dat Joost boos op hem was.",
+          "es": "Que Joost estaba enfadado con él."
+        },
+        {
+          "text": "Dat hij een nieuw voorstel moest schrijven.",
+          "es": "Que tenía que escribir una propuesta nueva."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "Wat bracht Joost om vier uur?",
+      "es": "¿Qué trajo Joost a las cuatro?",
+      "options": [
+        {
+          "text": "Een stuk taart.",
+          "es": "Un trozo de tarta."
+        },
+        {
+          "text": "Een nieuw plan.",
+          "es": "Un plan nuevo."
+        },
+        {
+          "text": "Twee koppen koffie.",
+          "es": "Dos cafés."
+        }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    {"id": "g1", "sentence": "s1", "answer": "nl-b1-meetings.voorstel", "distractors": ["huiswerk", "fietsslot"]},
+    {"id": "g2", "sentence": "s4", "answer": "nl-b1-workplace.idee", "distractors": ["weer", "cadeau"]},
+    {"id": "g3", "sentence": "s5", "answer": "nl-b1-workplace.vergadering", "distractors": ["bioscoop", "supermarkt"]},
+    {"id": "g4", "sentence": "s9", "answer": "nl-b1-workplace.feedback", "distractors": ["cadeaus", "boterhammen"]},
+    {"id": "g5", "sentence": "s11", "answer": "nl-b1-meetings.oplossing", "distractors": ["fietsenmaker", "bakker"]},
+    {"id": "g6", "sentence": "s12", "answer": "nl-b1-meetings.planning", "distractors": ["krant", "koelkast"]}
+  ]
+}
