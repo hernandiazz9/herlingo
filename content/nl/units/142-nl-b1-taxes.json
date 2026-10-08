@@ -1,0 +1,887 @@
+{
+  "id": "nl-b1-taxes",
+  "order": 142,
+  "title": "Impuestos y papeles: Belastingdienst, toeslagen, nómina, cartas",
+  "description": "Entrar con DigiD, hacer la declaración de la renta antes del uno de mayo, entender tu nómina, pedir zorgtoeslag y huurtoeslag, y responder a una carta, una reclamación de pago o una multa sin agobiarte.",
+  "emoji": "🧾",
+  "situation": "dinero",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-taxes.l.belastingdienst",
+      "title": "La Belastingdienst y DigiD",
+      "items": [
+        "nl-b1-taxes.belasting",
+        "nl-b1-taxes.belastingdienst",
+        "nl-b1-taxes.ik-heb-een-brief-van-de-belastingdienst-gekregen",
+        "nl-b1-taxes.envelop",
+        "nl-b1-taxes.er-zit-een-blauwe-envelop-in-de-brievenbus",
+        "nl-a2-gemeente.digid",
+        "nl-b1-taxes.ik-log-in-met-mijn-digid",
+        "nl-b1-taxes.belastingtelefoon",
+        "nl-b1-taxes.ik-bel-de-belastingtelefoon-want-ik-snap-het-niet",
+        "nl-b1-taxes.machtigen",
+        "nl-b1-taxes.ik-heb-een-vriendin-gemachtigd-voor-mijn-aangifte",
+        "nl-b1-taxes.belastingadviseur",
+        "nl-b1-taxes.ik-heb-morgen-een-afspraak-met-een-belastingadviseur",
+        "nl-b1-taxes.qa.how-can-i-help"
+      ]
+    },
+    {
+      "id": "nl-b1-taxes.l.aangifte",
+      "title": "La declaración de la renta",
+      "items": [
+        "nl-b1-taxes.aangifte",
+        "nl-b1-taxes.inkomstenbelasting",
+        "nl-b1-taxes.wanneer-moet-ik-aangifte-doen",
+        "nl-b1-taxes.u-moet-voor-een-mei-aangifte-doen",
+        "nl-b1-taxes.de-aangifte-is-al-vooraf-ingevuld",
+        "nl-b1-taxes.inkomen",
+        "nl-b1-taxes.ik-woonde-in-madrid-en-werkte-er-ook",
+        "nl-b1-taxes.moet-ik-mijn-inkomen-uit-spanje-ook-opgeven",
+        "nl-b1-taxes.partner",
+        "nl-b1-taxes.mijn-partner-en-ik-doen-samen-aangifte",
+        "nl-b1-taxes.aftrekpost",
+        "nl-b1-taxes.teruggave",
+        "nl-b1-taxes.krijg-ik-geld-terug-of-moet-ik-betalen",
+        "nl-b1-taxes.uitstel",
+        "nl-b1-taxes.kan-ik-uitstel-krijgen-voor-mijn-aangifte",
+        "nl-b1-taxes.qa.tax-return"
+      ]
+    },
+    {
+      "id": "nl-b1-taxes.l.loonstrook",
+      "title": "La nómina",
+      "items": [
+        "nl-b1-taxes.loonstrook",
+        "nl-b1-taxes.loon",
+        "nl-b1-interview.bruto",
+        "nl-b1-interview.netto",
+        "nl-b1-taxes.dit-is-mijn-loonstrook-van-september",
+        "nl-b1-taxes.loonheffing",
+        "nl-b1-taxes.hoeveel-loonheffing-wordt-er-ingehouden",
+        "nl-b1-taxes.mijn-nettoloon-is-lager-dan-ik-dacht",
+        "nl-b1-taxes.wat-betekent-dit-bedrag-op-mijn-loonstrook",
+        "nl-b1-interview.vakantiegeld",
+        "nl-b1-taxes.in-mei-krijg-ik-vakantiegeld-erbij",
+        "nl-b1-taxes.jaaropgave",
+        "nl-b1-taxes.ik-heb-mijn-jaaropgave-nodig-voor-de-aangifte",
+        "nl-b1-taxes.qa.payslip"
+      ]
+    },
+    {
+      "id": "nl-b1-taxes.l.toeslagen",
+      "title": "Ayudas: zorgtoeslag y huurtoeslag",
+      "items": [
+        "nl-b1-taxes.toeslag",
+        "nl-b1-taxes.zorgtoeslag",
+        "nl-b1-renting.huurtoeslag",
+        "nl-b1-taxes.heb-ik-recht-op-zorgtoeslag",
+        "nl-b1-taxes.voorschot",
+        "nl-b1-taxes.de-toeslag-is-een-voorschot",
+        "nl-b1-taxes.als-mijn-inkomen-verandert-moet-ik-dat-doorgeven",
+        "nl-b1-taxes.ik-heb-te-veel-toeslag-gekregen",
+        "nl-b1-taxes.toeslagen-ik-krijg-er-twee",
+        "nl-b1-taxes.qa.how-many",
+        "nl-b1-taxes.qa.read-letter"
+      ]
+    },
+    {
+      "id": "nl-b1-taxes.l.brieven",
+      "title": "Cartas, pagos y multas",
+      "items": [
+        "nl-a2-gemeente.brief",
+        "nl-b1-taxes.ik-heb-er-niets-van-begrepen",
+        "nl-b1-taxes.kunt-u-me-uitleggen-wat-deze-brief-betekent",
+        "nl-b1-taxes.aanslag",
+        "nl-b1-taxes.vervaldatum",
+        "nl-b1-taxes.betalingskenmerk",
+        "nl-b1-taxes.vergeet-het-betalingskenmerk-niet",
+        "nl-b1-taxes.betalingsregeling",
+        "nl-b1-taxes.ik-kan-het-bedrag-niet-in-een-keer-betalen",
+        "nl-b1-taxes.kan-ik-een-betalingsregeling-aanvragen",
+        "nl-b1-taxes.aanmaning",
+        "nl-b1-taxes.ik-heb-een-aanmaning-gekregen-maar-ik-heb-al-betaald",
+        "nl-b1-taxes.boete",
+        "nl-b1-taxes.ik-moet-de-boete-binnen-zes-weken-betalen",
+        "nl-b1-taxes.bezwaar",
+        "nl-b1-taxes.ik-ben-het-er-niet-mee-eens-dus-ik-maak-bezwaar",
+        "nl-b1-taxes.schuld",
+        "nl-b1-taxes.gemeentebelasting",
+        "nl-b1-taxes.automatische-incasso",
+        "nl-b1-taxes.ik-betaal-de-gemeentebelasting-met-automatische-incasso",
+        "nl-b1-taxes.termijn",
+        "nl-b1-taxes.qa.pay-at-once",
+        "nl-b1-taxes.qa.objection"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-b1-taxes.ik-heb-een-brief-van-de-belastingdienst-gekregen",
+      "text": "Ik heb een brief van de Belastingdienst gekregen.",
+      "es": "He recibido una carta de Hacienda.",
+      "notes": "Perfecto de «krijgen»: ik heb … gekregen, con el participio al final.",
+      "explanation": "Para pedir ayuda a alguien. «Belastingdienst»: «be-LAS-ting-dienst».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.er-zit-een-blauwe-envelop-in-de-brievenbus",
+      "text": "Er zit een blauwe envelop in de brievenbus.",
+      "es": "Hay un sobre azul en el buzón.",
+      "notes": "«Er zit/ligt/staat» = hay. El sobre azul es el de la Belastingdienst: ábrelo siempre.",
+      "explanation": "Todo el mundo en Países Bajos conoce «de blauwe envelop». «blauwe»: «BLAU-we».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-log-in-met-mijn-digid",
+      "text": "Ik log in met mijn DigiD.",
+      "es": "Entro con mi DigiD.",
+      "notes": "log … in = inloggen (separable): la partícula va al final.",
+      "explanation": "Para cualquier trámite online. «DigiD»: «DI-ji-dee».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-bel-de-belastingtelefoon-want-ik-snap-het-niet",
+      "text": "Ik bel de BelastingTelefoon, want ik snap het niet.",
+      "es": "Llamo al teléfono de Hacienda, porque no lo entiendo.",
+      "notes": "Tras «want» el orden es normal (ik snap); tras «omdat» el verbo iría al final.",
+      "explanation": "«snappen» = entender, muy coloquial. «snap»: «snap», con «a» corta.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-heb-een-vriendin-gemachtigd-voor-mijn-aangifte",
+      "text": "Ik heb een vriendin gemachtigd voor mijn aangifte.",
+      "es": "He autorizado a una amiga para hacer mi declaración.",
+      "notes": "«iemand machtigen» = autorizar a alguien a hacer trámites por ti con su propia DigiD.",
+      "explanation": "Muy útil el primer año. «gemachtigd»: «je-MAJ-tijt».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-heb-morgen-een-afspraak-met-een-belastingadviseur",
+      "text": "Ik heb morgen een afspraak met een belastingadviseur.",
+      "es": "Mañana tengo cita con un asesor fiscal.",
+      "explanation": "Para contarlo en el trabajo. «adviseur»: «at-fi-SEUR», con «eu» de labios redondos.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.wanneer-moet-ik-aangifte-doen",
+      "text": "Wanneer moet ik aangifte doen?",
+      "es": "¿Cuándo tengo que hacer la declaración?",
+      "notes": "«aangifte doen» = hacer la declaración (de la renta, o una denuncia en la policía).",
+      "explanation": "La gran pregunta de cada primavera. «aangifte»: «AAN-jif-te».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.u-moet-voor-een-mei-aangifte-doen",
+      "text": "U moet voor één mei aangifte doen.",
+      "es": "Usted tiene que hacer la declaración antes del uno de mayo.",
+      "notes": "«voor» + fecha = antes de. «één» lleva acentos para distinguirlo de «een» (un).",
+      "explanation": "Lo que te dirán en la BelastingTelefoon. «één»: «een», con «ee» larga.",
+      "register": "u",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.de-aangifte-is-al-vooraf-ingevuld",
+      "text": "De aangifte is al vooraf ingevuld.",
+      "es": "La declaración ya viene rellenada.",
+      "notes": "«is ingevuld» = está rellenada (resultado); «wordt ingevuld» sería la acción.",
+      "explanation": "Revísala de todos modos antes de enviarla. «vooraf»: «VOOR-af».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-woonde-in-madrid-en-werkte-er-ook",
+      "text": "Ik woonde in Madrid en werkte er ook.",
+      "es": "Vivía en Madrid y también trabajaba allí.",
+      "notes": "«er» = allí, para no repetir un lugar ya nombrado.",
+      "explanation": "Para explicar tu año de llegada. «werkte»: «WERK-te».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.moet-ik-mijn-inkomen-uit-spanje-ook-opgeven",
+      "text": "Moet ik mijn inkomen uit Spanje ook opgeven?",
+      "es": "¿Tengo que declarar también mis ingresos de España?",
+      "notes": "opgeven = declarar (separable); con «moet» va entero al final.",
+      "explanation": "Pregunta típica del primer año. «opgeven»: «OP-jee-fe».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.mijn-partner-en-ik-doen-samen-aangifte",
+      "text": "Mijn partner en ik doen samen aangifte.",
+      "es": "Mi pareja y yo hacemos la declaración juntos.",
+      "explanation": "Para explicar vuestra situación. «samen»: «SAA-me».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.krijg-ik-geld-terug-of-moet-ik-betalen",
+      "text": "Krijg ik geld terug of moet ik betalen?",
+      "es": "¿Me devuelven dinero o tengo que pagar?",
+      "notes": "krijg … terug = terugkrijgen: la partícula va detrás del complemento.",
+      "explanation": "Lo primero que miras al terminar. «terug»: «te-RUJ».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.kan-ik-uitstel-krijgen-voor-mijn-aangifte",
+      "text": "Kan ik uitstel krijgen voor mijn aangifte?",
+      "es": "¿Me pueden dar una prórroga para la declaración?",
+      "explanation": "Si no llegas al uno de mayo. «uitstel»: «AIT-stel».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.dit-is-mijn-loonstrook-van-september",
+      "text": "Dit is mijn loonstrook van september.",
+      "es": "Esta es mi nómina de septiembre.",
+      "explanation": "Te la pedirán para alquilar o para un préstamo. «loonstrook»: «LOON-strook».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.hoeveel-loonheffing-wordt-er-ingehouden",
+      "text": "Hoeveel loonheffing wordt er ingehouden?",
+      "es": "¿Cuánto me retienen de impuestos?",
+      "notes": "Pasiva con «worden»: «er» ocupa el hueco del sujeto. inhouden = retener.",
+      "explanation": "Para entender tu nómina. «ingehouden»: «IN-je-hau-de».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.mijn-nettoloon-is-lager-dan-ik-dacht",
+      "text": "Mijn nettoloon is lager dan ik dacht.",
+      "es": "Mi sueldo neto es más bajo de lo que pensaba.",
+      "notes": "Comparativo: laag → lager dan (nunca «meer laag»).",
+      "explanation": "La sorpresa de la primera nómina. «lager»: «LAA-jer».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.wat-betekent-dit-bedrag-op-mijn-loonstrook",
+      "text": "Wat betekent dit bedrag op mijn loonstrook?",
+      "es": "¿Qué significa esta cantidad de mi nómina?",
+      "notes": "«het bedrag» → «dit» (cerca), «dat» (lejos); con palabras «de», «deze/die».",
+      "explanation": "Para preguntar en Recursos Humanos. «betekent»: «be-TEE-kent».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.in-mei-krijg-ik-vakantiegeld-erbij",
+      "text": "In mei krijg ik vakantiegeld erbij.",
+      "es": "En mayo me pagan además la paga de vacaciones.",
+      "notes": "«erbij» = además, encima. Tras «in mei», el verbo va segundo (V2).",
+      "explanation": "Una alegría de cada mayo. «erbij»: «er-BEI».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-heb-mijn-jaaropgave-nodig-voor-de-aangifte",
+      "text": "Ik heb mijn jaaropgave nodig voor de aangifte.",
+      "es": "Necesito mi certificado anual de retenciones para la declaración.",
+      "notes": "«iets nodig hebben» = necesitar algo; «nodig» va detrás del objeto.",
+      "explanation": "Te lo da tu empresa a principios de año. «jaaropgave»: «JAAR-op-jaa-fe».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.heb-ik-recht-op-zorgtoeslag",
+      "text": "Heb ik recht op zorgtoeslag?",
+      "es": "¿Tengo derecho a la ayuda para el seguro médico?",
+      "notes": "«recht hebben op» = tener derecho a.",
+      "explanation": "Muchos recién llegados la tienen y no la piden. «zorg»: «zorj».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.de-toeslag-is-een-voorschot",
+      "text": "De toeslag is een voorschot.",
+      "es": "La ayuda es un anticipo.",
+      "notes": "Se calcula con lo que crees que ganarás; al año siguiente se ajusta.",
+      "explanation": "Lo más importante de las toeslagen. «voorschot»: «VOOR-sjot».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.als-mijn-inkomen-verandert-moet-ik-dat-doorgeven",
+      "text": "Als mijn inkomen verandert, moet ik dat doorgeven.",
+      "es": "Si cambian mis ingresos, tengo que comunicarlo.",
+      "notes": "Tras «als» el verbo al final (verandert); luego la principal empieza por el verbo: moet ik.",
+      "explanation": "Así evitas devolver dinero después. «doorgeven»: «DOOR-jee-fe».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-heb-te-veel-toeslag-gekregen",
+      "text": "Ik heb te veel toeslag gekregen en moet het terugbetalen.",
+      "es": "He recibido demasiada ayuda y tengo que devolverla.",
+      "explanation": "Pasa a menudo cuando ganas más de lo previsto. «terugbetalen»: «te-RUJ-be-taa-le».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.toeslagen-ik-krijg-er-twee",
+      "text": "Toeslagen? Ik krijg er twee.",
+      "es": "¿Ayudas? Recibo dos.",
+      "notes": "Con un número sin sustantivo hace falta «er»: ik krijg er twee (= dos de ellas).",
+      "explanation": "Un «er» que en español no existe. «krijg»: «kreij», con «ij» = «ei».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-heb-er-niets-van-begrepen",
+      "text": "Ik heb er niets van begrepen.",
+      "es": "No he entendido nada (de eso).",
+      "notes": "«er … van» sustituye a «van het»: nunca «van het» para una cosa.",
+      "explanation": "Sincero y muy natural. «begrepen»: «be-JREE-pe».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.kunt-u-me-uitleggen-wat-deze-brief-betekent",
+      "text": "Kunt u me uitleggen wat deze brief betekent?",
+      "es": "¿Me puede explicar qué significa esta carta?",
+      "notes": "Pregunta indirecta: el verbo va al final (wat deze brief betekent).",
+      "explanation": "Para la BelastingTelefoon o un servicio de ayuda. «uitleggen»: «AIT-le-je».",
+      "register": "u",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.vergeet-het-betalingskenmerk-niet",
+      "text": "Vergeet het betalingskenmerk niet!",
+      "es": "¡No olvides la referencia de pago!",
+      "notes": "Sin la referencia, Hacienda no sabe a qué corresponde tu pago.",
+      "explanation": "Consejo de amigo al pagar una carta. «kenmerk»: «KEN-merk».",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-kan-het-bedrag-niet-in-een-keer-betalen",
+      "text": "Ik kan het bedrag niet in één keer betalen.",
+      "es": "No puedo pagar la cantidad de una vez.",
+      "notes": "«in één keer» = de una vez. «niet» va delante del complemento con preposición.",
+      "explanation": "Para pedir facilidades. «keer»: «keer», con «ee» larga.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.kan-ik-een-betalingsregeling-aanvragen",
+      "text": "Kan ik een betalingsregeling aanvragen?",
+      "es": "¿Puedo pedir pagar a plazos?",
+      "explanation": "Hacienda suele aceptarlo si lo pides a tiempo. «regeling»: «REE-je-ling».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-heb-een-aanmaning-gekregen-maar-ik-heb-al-betaald",
+      "text": "Ik heb een aanmaning gekregen, maar ik heb al betaald.",
+      "es": "Me ha llegado un aviso de impago, pero ya he pagado.",
+      "notes": "Tras «maar» el orden es normal: ik heb al betaald.",
+      "explanation": "Ten a mano la fecha del pago. «aanmaning»: «AAN-maa-ning».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-moet-de-boete-binnen-zes-weken-betalen",
+      "text": "Ik moet de boete binnen zes weken betalen.",
+      "es": "Tengo que pagar la multa en un plazo de seis semanas.",
+      "notes": "«binnen» + tiempo = dentro de, en un plazo de.",
+      "explanation": "Lo leerás en la carta de la multa. «boete»: «BU-te», con «oe» = «u».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-ben-het-er-niet-mee-eens-dus-ik-maak-bezwaar",
+      "text": "Ik ben het er niet mee eens, dus ik maak bezwaar.",
+      "es": "No estoy de acuerdo, así que presento una reclamación.",
+      "notes": "«het ergens mee eens zijn»: con una cosa, «er … mee». «bezwaar maken» = recurrir.",
+      "explanation": "Tienes seis semanas para recurrir. «bezwaar»: «be-ZWAAR».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.ik-betaal-de-gemeentebelasting-met-automatische-incasso",
+      "text": "Ik betaal de gemeentebelasting met automatische incasso.",
+      "es": "Pago los impuestos municipales con domiciliación bancaria.",
+      "notes": "«automatische incasso»: el cobro se hace solo, en varios plazos.",
+      "explanation": "Así no se te olvida ningún plazo. «incasso»: «in-KA-so».",
+      "register": "neutral",
+      "situation": "dinero"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-b1-taxes.belasting",
+      "word": "belasting",
+      "article": "de",
+      "plural": "belastingen",
+      "es": "el impuesto",
+      "notes": "Las palabras en -ing son «de».",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.belastingdienst",
+      "word": "Belastingdienst",
+      "article": "de",
+      "es": "Hacienda (la agencia tributaria)",
+      "notes": "También gestiona las toeslagen (ayudas).",
+      "situation": "dinero",
+      "image": "fluent:classical-building"
+    },
+    {
+      "id": "nl-b1-taxes.envelop",
+      "word": "envelop",
+      "article": "de",
+      "plural": "enveloppen",
+      "es": "el sobre",
+      "notes": "«de blauwe envelop» = una carta de la Belastingdienst.",
+      "situation": "dinero",
+      "image": "fluent:envelope"
+    },
+    {
+      "id": "nl-b1-taxes.belastingtelefoon",
+      "word": "BelastingTelefoon",
+      "article": "de",
+      "es": "el teléfono de información de Hacienda",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.machtigen",
+      "word": "machtigen",
+      "es": "autorizar (a alguien para un trámite)",
+      "notes": "ik machtig, ik heb gemachtigd. Sustantivo: de machtiging.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.belastingadviseur",
+      "word": "belastingadviseur",
+      "article": "de",
+      "plural": "belastingadviseurs",
+      "es": "el asesor fiscal",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.aangifte",
+      "word": "aangifte",
+      "article": "de",
+      "plural": "aangiftes",
+      "es": "la declaración (de la renta); también la denuncia",
+      "notes": "«aangifte doen» = hacer la declaración o poner una denuncia.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.inkomstenbelasting",
+      "word": "inkomstenbelasting",
+      "article": "de",
+      "es": "el impuesto sobre la renta",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.inkomen",
+      "word": "inkomen",
+      "article": "het",
+      "plural": "inkomens",
+      "es": "los ingresos",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.partner",
+      "word": "partner",
+      "article": "de",
+      "plural": "partners",
+      "es": "la pareja",
+      "notes": "Sirve para pareja casada o no; Hacienda habla de «fiscale partner».",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.aftrekpost",
+      "word": "aftrekpost",
+      "article": "de",
+      "plural": "aftrekposten",
+      "es": "el gasto deducible",
+      "notes": "«aftrekken» = restar, deducir (separable).",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.teruggave",
+      "word": "teruggave",
+      "article": "de",
+      "plural": "teruggaven",
+      "es": "la devolución (de impuestos)",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.uitstel",
+      "word": "uitstel",
+      "article": "het",
+      "es": "la prórroga, el aplazamiento",
+      "notes": "«uitstel aanvragen» = pedir una prórroga.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.loonstrook",
+      "word": "loonstrook",
+      "article": "de",
+      "plural": "loonstroken",
+      "es": "la nómina (el recibo de sueldo)",
+      "situation": "dinero",
+      "image": "fluent:receipt"
+    },
+    {
+      "id": "nl-b1-taxes.loon",
+      "word": "loon",
+      "article": "het",
+      "plural": "lonen",
+      "es": "el sueldo, el salario",
+      "notes": "«het brutoloon», «het nettoloon»; «het salaris» es casi lo mismo.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.loonheffing",
+      "word": "loonheffing",
+      "article": "de",
+      "es": "la retención del sueldo (impuestos y cotizaciones)",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.jaaropgave",
+      "word": "jaaropgave",
+      "article": "de",
+      "plural": "jaaropgaven",
+      "es": "el certificado anual de sueldo y retenciones",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.toeslag",
+      "word": "toeslag",
+      "article": "de",
+      "plural": "toeslagen",
+      "es": "la ayuda, el subsidio",
+      "notes": "Falso amigo de «suplemento»: aquí es una ayuda del Estado.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.zorgtoeslag",
+      "word": "zorgtoeslag",
+      "article": "de",
+      "es": "la ayuda para el seguro médico",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.voorschot",
+      "word": "voorschot",
+      "article": "het",
+      "plural": "voorschotten",
+      "es": "el anticipo",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.aanslag",
+      "word": "aanslag",
+      "article": "de",
+      "plural": "aanslagen",
+      "es": "la liquidación (lo que Hacienda te dice que pagas o recibes)",
+      "notes": "Ojo: también significa «atentado»; en una carta de Hacienda es la liquidación.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.vervaldatum",
+      "word": "vervaldatum",
+      "article": "de",
+      "plural": "vervaldata",
+      "es": "la fecha de vencimiento",
+      "situation": "dinero",
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "nl-b1-taxes.betalingskenmerk",
+      "word": "betalingskenmerk",
+      "article": "het",
+      "plural": "betalingskenmerken",
+      "es": "la referencia de pago",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.betalingsregeling",
+      "word": "betalingsregeling",
+      "article": "de",
+      "plural": "betalingsregelingen",
+      "es": "el pago a plazos (acuerdo de pago)",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.aanmaning",
+      "word": "aanmaning",
+      "article": "de",
+      "plural": "aanmaningen",
+      "es": "el aviso de impago (recordatorio con recargo)",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.boete",
+      "word": "boete",
+      "article": "de",
+      "plural": "boetes",
+      "es": "la multa",
+      "situation": "dinero",
+      "image": "fluent:money-with-wings"
+    },
+    {
+      "id": "nl-b1-taxes.bezwaar",
+      "word": "bezwaar",
+      "article": "het",
+      "plural": "bezwaren",
+      "es": "la objeción, el recurso",
+      "notes": "«bezwaar maken» = presentar un recurso (nunca «bezwaar doen»).",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.schuld",
+      "word": "schuld",
+      "article": "de",
+      "plural": "schulden",
+      "es": "la deuda; también la culpa",
+      "notes": "«Het is mijn schuld» = es culpa mía.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.gemeentebelasting",
+      "word": "gemeentebelasting",
+      "article": "de",
+      "plural": "gemeentebelastingen",
+      "es": "el impuesto municipal (basuras, agua, IBI…)",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.automatische-incasso",
+      "word": "automatische incasso",
+      "article": "de",
+      "plural": "automatische incasso's",
+      "es": "la domiciliación bancaria",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-b1-taxes.termijn",
+      "word": "termijn",
+      "article": "de",
+      "plural": "termijnen",
+      "es": "el plazo",
+      "notes": "Sirve para el tiempo (binnen de termijn) y para cada pago (in tien termijnen).",
+      "situation": "dinero"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-taxes.qa.how-can-i-help",
+      "question": "Goedemiddag, waarmee kan ik u helpen?",
+      "questionEs": "Buenas tardes, ¿en qué puedo ayudarle?",
+      "accepted": [
+        {
+          "text": "Ik heb een brief gekregen die ik niet begrijp.",
+          "es": "He recibido una carta que no entiendo."
+        },
+        {
+          "text": "Ik heb een vraag over mijn aangifte.",
+          "es": "Tengo una pregunta sobre mi declaración."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb een brief gekregen die ik begrijp niet.",
+          "es": "He recibido una carta que no entiendo."
+        },
+        {
+          "text": "Ik heb een vraag over mijn aangifte, kun je me helpen?",
+          "es": "Tengo una pregunta sobre mi declaración, ¿me puedes ayudar?"
+        }
+      ],
+      "register": "u",
+      "situation": "dinero",
+      "notes": "En la relativa el verbo va al final (die ik niet begrijp), y si te tratan de «u», no pases a «je».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-taxes.qa.tax-return",
+      "question": "Heb je je aangifte al gedaan?",
+      "questionEs": "¿Ya has hecho la declaración?",
+      "accepted": [
+        {
+          "text": "Ja, en ik krijg geld terug!",
+          "es": "¡Sí, y me devuelven dinero!"
+        },
+        {
+          "text": "Nee, ik heb nog geen tijd gehad.",
+          "es": "No, todavía no he tenido tiempo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, en ik krijg terug geld!",
+          "es": "¡Sí, y me devuelven dinero!"
+        },
+        {
+          "text": "Nee, ik heb nog niet tijd gehad.",
+          "es": "No, todavía no he tenido tiempo."
+        }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "La partícula de «terugkrijgen» va al final (krijg geld terug), y delante de un sustantivo sin artículo se niega con «geen».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-taxes.qa.payslip",
+      "question": "Wat staat er op je loonstrook?",
+      "questionEs": "¿Qué pone en tu nómina?",
+      "accepted": [
+        {
+          "text": "Mijn brutoloon, de loonheffing en mijn nettoloon.",
+          "es": "Mi sueldo bruto, las retenciones y mi sueldo neto."
+        },
+        {
+          "text": "Wat ik verdien en wat er ingehouden wordt.",
+          "es": "Lo que gano y lo que me retienen."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mijn brutoloon, het loonheffing en mijn nettoloon.",
+          "es": "Mi sueldo bruto, las retenciones y mi sueldo neto."
+        },
+        {
+          "text": "Wat ik verdien en wat wordt er ingehouden.",
+          "es": "Lo que gano y lo que me retienen."
+        }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "Es «de loonheffing» (las palabras en -ing son «de»), y en la oración con «wat» los verbos van al final: wat er ingehouden wordt.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-taxes.qa.how-many",
+      "question": "Hoeveel toeslagen krijg je?",
+      "questionEs": "¿Cuántas ayudas recibes?",
+      "accepted": [
+        {
+          "text": "Ik krijg er twee.",
+          "es": "Recibo dos."
+        },
+        {
+          "text": "Twee: zorgtoeslag en huurtoeslag.",
+          "es": "Dos: la del seguro médico y la del alquiler."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik krijg twee.",
+          "es": "Recibo dos."
+        },
+        {
+          "text": "Ik krijg ze twee.",
+          "es": "Recibo dos."
+        }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "Un número sin sustantivo necesita «er»: ik krijg er twee.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-taxes.qa.read-letter",
+      "question": "Heeft u de brief over de zorgtoeslag gelezen?",
+      "questionEs": "¿Ha leído usted la carta sobre la ayuda del seguro médico?",
+      "accepted": [
+        {
+          "text": "Ja, maar ik heb er niets van begrepen.",
+          "es": "Sí, pero no he entendido nada."
+        },
+        {
+          "text": "Ja, maar ik weet niet wat ik moet doen.",
+          "es": "Sí, pero no sé qué tengo que hacer."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, maar ik heb niets van het begrepen.",
+          "es": "Sí, pero no he entendido nada."
+        },
+        {
+          "text": "Ja, maar ik weet niet wat moet ik doen.",
+          "es": "Sí, pero no sé qué tengo que hacer."
+        }
+      ],
+      "register": "u",
+      "situation": "dinero",
+      "notes": "Para una cosa, «van het» se convierte en «er … van», y en la pregunta indirecta el verbo va al final: wat ik moet doen.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-taxes.qa.pay-at-once",
+      "question": "Kunt u het hele bedrag in één keer betalen?",
+      "questionEs": "¿Puede usted pagar toda la cantidad de una vez?",
+      "accepted": [
+        {
+          "text": "Nee, kan ik een betalingsregeling aanvragen?",
+          "es": "No, ¿puedo pedir pagar a plazos?"
+        },
+        {
+          "text": "Nee, dat lukt helaas niet.",
+          "es": "No, por desgracia no me es posible."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik heb geen genoeg geld.",
+          "es": "No, no tengo suficiente dinero."
+        },
+        {
+          "text": "Nee, kun jij een betalingsregeling voor me maken?",
+          "es": "No, ¿puedes hacerme un plan de pagos?"
+        }
+      ],
+      "register": "u",
+      "situation": "dinero",
+      "notes": "Con «genoeg» se niega con «niet» (niet genoeg geld), y a quien te trata de «u» no le hables de «jij».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-taxes.qa.objection",
+      "question": "Bent u het eens met de aanslag?",
+      "questionEs": "¿Está usted de acuerdo con la liquidación?",
+      "accepted": [
+        {
+          "text": "Nee, ik ben het er niet mee eens.",
+          "es": "No, no estoy de acuerdo."
+        },
+        {
+          "text": "Nee, ik wil bezwaar maken.",
+          "es": "No, quiero presentar un recurso."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik ben het niet mee eens.",
+          "es": "No, no estoy de acuerdo."
+        },
+        {
+          "text": "Nee, ik wil bezwaar doen.",
+          "es": "No, quiero presentar un recurso."
+        }
+      ],
+      "register": "u",
+      "situation": "dinero",
+      "notes": "«Mee» necesita «er» delante (het er niet mee eens), y el recurso se «hace» con «maken»: bezwaar maken.",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}

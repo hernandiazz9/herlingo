@@ -1,0 +1,884 @@
+{
+  "id": "nl-b1-opinions",
+  "order": 152,
+  "title": "Opinión y noticias: debatir, reaccionar, la actualidad",
+  "description": "Dar y pedir tu opinión, estar de acuerdo o no con matices, comentar las noticias de la NOS, hablar de la crisis de la vivienda y del clima, y entender lo básico de la política y las elecciones.",
+  "emoji": "💬",
+  "situation": "opiniones",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-opinions.l.mening",
+      "title": "Dar y pedir tu opinión",
+      "items": [
+        "nl-b1-workplace.mening",
+        "nl-b1-workplace.wat-vind-jij-ervan",
+        "nl-b1-opinions.hoe-denkt-u-daarover",
+        "nl-b1-opinions.volgens-mij-is-dat-niet-helemaal-waar",
+        "nl-b1-opinions.ik-heb-daar-een-andere-mening-over",
+        "nl-b1-opinions.eerlijk-gezegd-weet-ik-het-niet",
+        "nl-b1-opinions.daar-heb-ik-nog-niet-over-nagedacht",
+        "nl-b1-grammar.ik-denk-er-nog-over-na",
+        "nl-b1-opinions.gevoelig",
+        "nl-b1-opinions.discussie",
+        "nl-b1-opinions.debat",
+        "nl-b1-opinions.qa.new-plans",
+        "nl-b1-opinions.qa.biggest-problem"
+      ]
+    },
+    {
+      "id": "nl-b1-opinions.l.discussie",
+      "title": "Estar de acuerdo, matizar, discrepar",
+      "items": [
+        "nl-b1-meetings.ik-ben-het-met-je-eens",
+        "nl-b1-opinions.daar-heb-je-gelijk-in",
+        "nl-b1-opinions.ik-snap-wat-je-bedoelt-maar-ik-zie-het-anders",
+        "nl-b1-meetings.argument",
+        "nl-b1-opinions.dat-is-een-sterk-argument-maar-ik-ben-niet-overtuigd",
+        "nl-b1-opinions.overtuigen",
+        "nl-b1-opinions.kant",
+        "nl-b1-opinions.aan-de-ene-kant-is-het-goedkoper",
+        "nl-b1-opinions.voordeel",
+        "nl-b1-opinions.nadeel",
+        "nl-b1-opinions.wat-zijn-de-voordelen-en-de-nadelen",
+        "nl-b1-opinions.het-probleem-is-groter-dan-je-denkt",
+        "nl-b1-opinions.we-zijn-het-erover-eens-dat-we-het-oneens-zijn",
+        "nl-b1-opinions.qa.agree",
+        "nl-b1-opinions.qa.minister"
+      ]
+    },
+    {
+      "id": "nl-b1-opinions.l.nieuws",
+      "title": "Las noticias",
+      "items": [
+        "nl-b1-opinions.nieuws",
+        "nl-b1-opinions.heb-je-het-nieuws-gezien",
+        "nl-b1-opinions.ik-kijk-elke-avond-naar-het-journaal",
+        "nl-b1-opinions.krant",
+        "nl-b1-opinions.ik-lees-het-nieuws-meestal-op-mijn-telefoon",
+        "nl-b1-opinions.artikel",
+        "nl-b1-opinions.ik-las-vanochtend-een-interessant-artikel",
+        "nl-b1-opinions.journalist",
+        "nl-b1-opinions.dat-is-het-slechtste-nieuws-van-de-week",
+        "nl-b1-opinions.wat-erg-dat-had-ik-niet-verwacht",
+        "nl-b1-opinions.echt-waar-dat-geloof-ik-niet",
+        "nl-b1-opinions.qa.news"
+      ]
+    },
+    {
+      "id": "nl-b1-opinions.l.wonen-klimaat",
+      "title": "Vivienda y clima: los grandes temas",
+      "items": [
+        "nl-b1-opinions.woningnood",
+        "nl-b1-opinions.woning",
+        "nl-b1-opinions.de-woningnood-is-het-grootste-probleem-van-nederland",
+        "nl-b1-opinions.huizen-worden-steeds-duurder",
+        "nl-b1-grammar.het-is-hier-duurder-dan-in-spanje",
+        "nl-b1-opinions.voor-jongeren-is-het-bijna-onmogelijk-om-een-huis-te-kopen",
+        "nl-b1-opinions.ik-vind-dat-er-meer-woningen-gebouwd-moeten-worden",
+        "nl-b1-opinions.nieuwbouw",
+        "nl-b1-opinions.klimaat",
+        "nl-b1-opinions.klimaatverandering",
+        "nl-b1-opinions.de-zomers-worden-heter-en-droger-dan-vroeger",
+        "nl-b1-opinions.hittegolf",
+        "nl-b1-opinions.overstroming",
+        "nl-b1-opinions.zonnepaneel",
+        "nl-b1-opinions.nederland-gaat-meer-windmolens-en-zonnepanelen-bouwen",
+        "nl-b1-opinions.dat-zal-niet-makkelijk-zijn",
+        "nl-b1-opinions.toekomst",
+        "nl-b1-opinions.qa.cost-of-living",
+        "nl-b1-opinions.qa.future"
+      ]
+    },
+    {
+      "id": "nl-b1-opinions.l.politiek",
+      "title": "Política y elecciones",
+      "items": [
+        "nl-b1-opinions.politiek",
+        "nl-b1-opinions.politicus",
+        "nl-b1-opinions.partij",
+        "nl-b1-opinions.tweede-kamer",
+        "nl-b1-opinions.verkiezing",
+        "nl-b1-opinions.volgend-jaar-zijn-er-verkiezingen-voor-de-tweede-kamer",
+        "nl-b1-opinions.stemmen",
+        "nl-b1-opinions.stem",
+        "nl-b1-opinions.mag-ik-als-spanjaard-stemmen",
+        "nl-b1-opinions.als-eu-burger-mag-ik-bij-de-gemeenteraadsverkiezingen-stemmen",
+        "nl-b1-opinions.op-welke-partij-ga-jij-stemmen",
+        "nl-b1-opinions.dat-zeg-ik-liever-niet-stemmen-is-geheim",
+        "nl-b1-opinions.minister-president",
+        "nl-b1-opinions.belofte",
+        "nl-b1-opinions.politici-beloven-veel-maar-wat-gaan-ze-echt-doen",
+        "nl-b1-opinions.de-nieuwe-regering-zal-meer-huizen-bouwen",
+        "nl-b1-opinions.qa.vote"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-b1-opinions.hoe-denkt-u-daarover",
+      "text": "Hoe denkt u daarover?",
+      "es": "¿Qué opina usted de eso?",
+      "notes": "«denken over» → «daarover» (de eso): con una cosa, nunca «over dat».",
+      "explanation": "Para preguntar con respeto. «daarover»: «DAAR-o-fer».",
+      "register": "u",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.volgens-mij-is-dat-niet-helemaal-waar",
+      "text": "Volgens mij is dat niet helemaal waar.",
+      "es": "Creo que eso no es del todo cierto.",
+      "notes": "«Volgens mij» ocupa el primer lugar: el verbo va segundo (is dat).",
+      "explanation": "Para discrepar con suavidad. «volgens»: «FOL-jens».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.ik-heb-daar-een-andere-mening-over",
+      "text": "Ik heb daar een andere mening over.",
+      "es": "Yo tengo otra opinión sobre eso.",
+      "notes": "«daar … over» se separa; «de mening» con «een»: andere con -e.",
+      "explanation": "Educado y firme a la vez. «andere»: «AN-de-re».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.eerlijk-gezegd-weet-ik-het-niet",
+      "text": "Eerlijk gezegd weet ik het niet.",
+      "es": "Sinceramente, no lo sé.",
+      "notes": "«eerlijk gezegd» = sinceramente; cuenta como primer elemento: weet ik.",
+      "explanation": "Admitirlo está bien visto. «gezegd»: «je-ZEJT».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.daar-heb-ik-nog-niet-over-nagedacht",
+      "text": "Daar heb ik nog niet over nagedacht.",
+      "es": "Todavía no lo he pensado.",
+      "notes": "«nadenken over» → «daar … over»; participio de nadenken: nagedacht.",
+      "explanation": "Para ganar tiempo. «nagedacht»: «NAA-je-dajt».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.daar-heb-je-gelijk-in",
+      "text": "Daar heb je gelijk in.",
+      "es": "En eso tienes razón.",
+      "notes": "«gelijk hebben» = tener razón (nunca «reden hebben»).",
+      "explanation": "Para conceder un punto. «gelijk»: «je-LEIK».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.ik-snap-wat-je-bedoelt-maar-ik-zie-het-anders",
+      "text": "Ik snap wat je bedoelt, maar ik zie het anders.",
+      "es": "Entiendo lo que quieres decir, pero yo lo veo distinto.",
+      "notes": "«bedoelen» = querer decir; en «wat je bedoelt», el verbo al final.",
+      "explanation": "Discrepar sin ofender. «bedoelt»: «be-DULT».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.dat-is-een-sterk-argument-maar-ik-ben-niet-overtuigd",
+      "text": "Dat is een sterk argument, maar ik ben niet overtuigd.",
+      "es": "Es un argumento sólido, pero no estoy convencido.",
+      "notes": "«het argument» con «een»: sterk sin -e.",
+      "explanation": "Muy útil en un debate. «overtuigd»: «o-fer-TAIJT».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.aan-de-ene-kant-is-het-goedkoper",
+      "text": "Aan de ene kant is het goedkoper, aan de andere kant minder goed.",
+      "es": "Por un lado es más barato; por otro, es peor.",
+      "notes": "«aan de ene kant … aan de andere kant» = por un lado … por otro. «minder» = menos.",
+      "explanation": "Para matizar. «goedkoper»: «jut-KOO-per».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.wat-zijn-de-voordelen-en-de-nadelen",
+      "text": "Wat zijn de voordelen en de nadelen?",
+      "es": "¿Cuáles son las ventajas y los inconvenientes?",
+      "explanation": "Para ordenar una discusión. «voordelen»: «VOOR-dee-le».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.het-probleem-is-groter-dan-je-denkt",
+      "text": "Het probleem is groter dan je denkt.",
+      "es": "El problema es más grande de lo que crees.",
+      "notes": "Comparativo + «dan»: groter dan (nunca «meer groot» ni «groter als»).",
+      "explanation": "Para insistir. «groter»: «JROO-ter».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.we-zijn-het-erover-eens-dat-we-het-oneens-zijn",
+      "text": "We zijn het erover eens dat we het oneens zijn.",
+      "es": "Estamos de acuerdo en que no estamos de acuerdo.",
+      "notes": "«het eens zijn» = estar de acuerdo; «het oneens zijn» = no estarlo.",
+      "explanation": "Para cerrar una discusión con humor. «oneens»: «ON-eens».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.heb-je-het-nieuws-gezien",
+      "text": "Heb je het nieuws gezien?",
+      "es": "¿Has visto las noticias?",
+      "notes": "«het nieuws» es singular: het nieuws is…",
+      "explanation": "Para empezar una conversación en el café. «nieuws»: «nius».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.ik-kijk-elke-avond-naar-het-journaal",
+      "text": "Ik kijk elke avond naar het Journaal.",
+      "es": "Veo el telediario todas las noches.",
+      "notes": "«kijken naar» = ver, mirar. «het NOS Journaal» es el telediario público.",
+      "explanation": "Buena práctica de escucha. «Journaal»: «zjur-NAAL».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.ik-lees-het-nieuws-meestal-op-mijn-telefoon",
+      "text": "Ik lees het nieuws meestal op mijn telefoon.",
+      "es": "Normalmente leo las noticias en el móvil.",
+      "explanation": "Para hablar de tus costumbres. «meestal»: «MEES-tal».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.ik-las-vanochtend-een-interessant-artikel",
+      "text": "Ik las vanochtend een interessant artikel over de woningmarkt.",
+      "es": "Esta mañana leí un artículo interesante sobre el mercado inmobiliario.",
+      "notes": "«het artikel» con «een»: interessant sin -e. Pasado simple de lezen: las.",
+      "explanation": "Para sacar un tema. «interessant»: «in-te-re-SANT».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.dat-is-het-slechtste-nieuws-van-de-week",
+      "text": "Dat is het slechtste nieuws van de week.",
+      "es": "Es la peor noticia de la semana.",
+      "notes": "Superlativo: slecht → slechter → het slechtst; delante de un sustantivo, slechtste.",
+      "explanation": "Para reaccionar a una mala noticia. «slechtste»: «SLEJT-ste».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.wat-erg-dat-had-ik-niet-verwacht",
+      "text": "Wat erg! Dat had ik niet verwacht.",
+      "es": "¡Qué horror! No me lo esperaba.",
+      "notes": "«erg» = grave, terrible; también «muy» (erg leuk).",
+      "explanation": "Reacción natural. «verwacht»: «fer-WAJT».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.echt-waar-dat-geloof-ik-niet",
+      "text": "Echt waar? Dat geloof ik niet.",
+      "es": "¿En serio? No me lo creo.",
+      "notes": "Con «dat» delante, el verbo va segundo: dat geloof ik.",
+      "explanation": "Para mostrar sorpresa. «geloof»: «je-LOOF».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.de-woningnood-is-het-grootste-probleem-van-nederland",
+      "text": "De woningnood is het grootste probleem van Nederland.",
+      "es": "La falta de vivienda es el mayor problema de los Países Bajos.",
+      "notes": "Superlativo: groot → groter → het grootst; delante del sustantivo, grootste.",
+      "explanation": "El tema del que todos hablan. «woningnood»: «WOO-ning-noot».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.huizen-worden-steeds-duurder",
+      "text": "Huizen worden steeds duurder.",
+      "es": "Las casas son cada vez más caras.",
+      "notes": "«steeds» + comparativo = cada vez más. duur → duurder (con -d-).",
+      "explanation": "Lo oirás en cualquier cumpleaños. «duurder»: «DUUR-der».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.voor-jongeren-is-het-bijna-onmogelijk-om-een-huis-te-kopen",
+      "text": "Voor jongeren is het bijna onmogelijk om een huis te kopen.",
+      "es": "Para los jóvenes es casi imposible comprar una casa.",
+      "notes": "«het is … om … te» + infinitivo: om een huis te kopen.",
+      "explanation": "Un argumento frecuente. «onmogelijk»: «on-MOO-je-luk».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.ik-vind-dat-er-meer-woningen-gebouwd-moeten-worden",
+      "text": "Ik vind dat er meer woningen gebouwd moeten worden.",
+      "es": "Creo que hay que construir más viviendas.",
+      "notes": "Tras «dat», todos los verbos al final; «er» abre la pasiva sin sujeto definido.",
+      "explanation": "Una opinión con estructura de B1. «gebouwd»: «je-BAUT».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.de-zomers-worden-heter-en-droger-dan-vroeger",
+      "text": "De zomers worden heter en droger dan vroeger.",
+      "es": "Los veranos se vuelven más calurosos y secos que antes.",
+      "notes": "heet → heter, droog → droger: el comparativo es -er (+ dan).",
+      "explanation": "Para hablar del clima. «droger»: «DROO-jer».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.nederland-gaat-meer-windmolens-en-zonnepanelen-bouwen",
+      "text": "Nederland gaat meer windmolens en zonnepanelen bouwen.",
+      "es": "Los Países Bajos van a construir más molinos de viento y placas solares.",
+      "notes": "Futuro con «gaan» + infinitivo al final (como «ir a» en español).",
+      "explanation": "Para hablar de planes. «windmolens»: «WINT-moo-lens».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.dat-zal-niet-makkelijk-zijn",
+      "text": "Dat zal niet makkelijk zijn.",
+      "es": "No va a ser fácil.",
+      "notes": "«zullen» + infinitivo = futuro o predicción, algo más formal que «gaan».",
+      "explanation": "Para mostrar dudas. «makkelijk»: «MA-ke-luk».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.volgend-jaar-zijn-er-verkiezingen-voor-de-tweede-kamer",
+      "text": "Volgend jaar zijn er verkiezingen voor de Tweede Kamer.",
+      "es": "El año que viene hay elecciones al Congreso.",
+      "notes": "«er zijn» = hay. Tras «volgend jaar», el verbo va segundo.",
+      "explanation": "La Tweede Kamer es la cámara baja. «verkiezingen»: «fer-KIE-zin-je».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.mag-ik-als-spanjaard-stemmen",
+      "text": "Mag ik als Spanjaard stemmen?",
+      "es": "¿Puedo votar siendo español?",
+      "notes": "«als» + persona = como, en calidad de.",
+      "explanation": "Buena pregunta para la gemeente. «Spanjaard»: «SPAN-jaart».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.als-eu-burger-mag-ik-bij-de-gemeenteraadsverkiezingen-stemmen",
+      "text": "Als EU-burger mag ik bij de gemeenteraadsverkiezingen stemmen.",
+      "es": "Como ciudadano de la UE puedo votar en las elecciones municipales.",
+      "notes": "En las elecciones a la Tweede Kamer solo votan los ciudadanos neerlandeses.",
+      "explanation": "Una palabra larguísima: «je-MEEN-te-raats-fer-kie-zin-je».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.op-welke-partij-ga-jij-stemmen",
+      "text": "Op welke partij ga jij stemmen?",
+      "es": "¿A qué partido vas a votar?",
+      "notes": "«stemmen op» = votar a. Futuro con «gaan»: ga jij stemmen.",
+      "explanation": "Pregunta algo delicada. «partij»: «par-TEI».",
+      "register": "tu",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.dat-zeg-ik-liever-niet-stemmen-is-geheim",
+      "text": "Dat zeg ik liever niet, stemmen is geheim.",
+      "es": "Prefiero no decirlo: el voto es secreto.",
+      "notes": "«liever» es el comparativo de «graag»: ik zeg het liever niet = prefiero no decirlo.",
+      "explanation": "Respuesta educada. «geheim»: «je-HEIM».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.politici-beloven-veel-maar-wat-gaan-ze-echt-doen",
+      "text": "Politici beloven veel, maar wat gaan ze echt doen?",
+      "es": "Los políticos prometen mucho, pero ¿qué van a hacer de verdad?",
+      "notes": "Plural irregular: de politicus → de politici.",
+      "explanation": "Una queja universal. «politici»: «po-LII-ti-sie».",
+      "register": "neutral",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.de-nieuwe-regering-zal-meer-huizen-bouwen",
+      "text": "De nieuwe regering zal meer huizen bouwen.",
+      "es": "El nuevo gobierno construirá más casas.",
+      "notes": "Tras «de», el adjetivo lleva -e: de nieuwe regering. «zal … bouwen» = construirá.",
+      "explanation": "Así hablan las noticias. «nieuwe»: «NIU-we».",
+      "register": "neutral",
+      "situation": "opiniones"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-b1-opinions.gevoelig",
+      "word": "gevoelig",
+      "es": "delicado, sensible (un tema)",
+      "notes": "«een gevoelig onderwerp» = un tema delicado.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.discussie",
+      "word": "discussie",
+      "article": "de",
+      "plural": "discussies",
+      "es": "la discusión, el debate",
+      "notes": "No implica pelea: es intercambiar argumentos.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.debat",
+      "word": "debat",
+      "article": "het",
+      "plural": "debatten",
+      "es": "el debate (formal, en la tele o el parlamento)",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.overtuigen",
+      "word": "overtuigen",
+      "es": "convencer",
+      "notes": "No separable: ik overtuig, ik heb overtuigd. «overtuigd zijn» = estar convencido.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.kant",
+      "word": "kant",
+      "article": "de",
+      "plural": "kanten",
+      "es": "el lado",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.voordeel",
+      "word": "voordeel",
+      "article": "het",
+      "plural": "voordelen",
+      "es": "la ventaja",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.nadeel",
+      "word": "nadeel",
+      "article": "het",
+      "plural": "nadelen",
+      "es": "el inconveniente, la desventaja",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.nieuws",
+      "word": "nieuws",
+      "article": "het",
+      "es": "las noticias",
+      "notes": "Singular en neerlandés: het nieuws is slecht. Una noticia = een nieuwsbericht.",
+      "situation": "opiniones",
+      "image": "fluent:newspaper"
+    },
+    {
+      "id": "nl-b1-opinions.krant",
+      "word": "krant",
+      "article": "de",
+      "plural": "kranten",
+      "es": "el periódico",
+      "situation": "opiniones",
+      "image": "fluent:rolled-up-newspaper"
+    },
+    {
+      "id": "nl-b1-opinions.artikel",
+      "word": "artikel",
+      "article": "het",
+      "plural": "artikelen",
+      "es": "el artículo",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.journalist",
+      "word": "journalist",
+      "article": "de",
+      "plural": "journalisten",
+      "es": "el periodista",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.woningnood",
+      "word": "woningnood",
+      "article": "de",
+      "es": "la falta de vivienda",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.woning",
+      "word": "woning",
+      "article": "de",
+      "plural": "woningen",
+      "es": "la vivienda",
+      "notes": "Más formal que «het huis»; la oirás en las noticias.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.nieuwbouw",
+      "word": "nieuwbouw",
+      "article": "de",
+      "es": "la obra nueva, las viviendas nuevas",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.klimaat",
+      "word": "klimaat",
+      "article": "het",
+      "es": "el clima",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.klimaatverandering",
+      "word": "klimaatverandering",
+      "article": "de",
+      "es": "el cambio climático",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.hittegolf",
+      "word": "hittegolf",
+      "article": "de",
+      "plural": "hittegolven",
+      "es": "la ola de calor",
+      "situation": "opiniones",
+      "image": "fluent:thermometer"
+    },
+    {
+      "id": "nl-b1-opinions.overstroming",
+      "word": "overstroming",
+      "article": "de",
+      "plural": "overstromingen",
+      "es": "la inundación",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.zonnepaneel",
+      "word": "zonnepaneel",
+      "article": "het",
+      "plural": "zonnepanelen",
+      "es": "la placa solar",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.toekomst",
+      "word": "toekomst",
+      "article": "de",
+      "es": "el futuro",
+      "notes": "«in de toekomst» = en el futuro.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.politiek",
+      "word": "politiek",
+      "article": "de",
+      "es": "la política",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.politicus",
+      "word": "politicus",
+      "article": "de",
+      "plural": "politici",
+      "es": "el político",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.partij",
+      "word": "partij",
+      "article": "de",
+      "plural": "partijen",
+      "es": "el partido (político); también la cantidad de mercancía",
+      "notes": "Un partido de fútbol es «de wedstrijd», no «de partij».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.tweede-kamer",
+      "word": "Tweede Kamer",
+      "article": "de",
+      "es": "la cámara baja del parlamento (como el Congreso)",
+      "notes": "Está en Den Haag, como el gobierno.",
+      "situation": "opiniones",
+      "image": "fluent:classical-building"
+    },
+    {
+      "id": "nl-b1-opinions.verkiezing",
+      "word": "verkiezing",
+      "article": "de",
+      "plural": "verkiezingen",
+      "es": "la elección (votación)",
+      "notes": "Casi siempre en plural: de verkiezingen.",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.stemmen",
+      "word": "stemmen",
+      "es": "votar",
+      "notes": "«stemmen op» + partido o persona = votar a.",
+      "situation": "opiniones",
+      "image": "fluent:ballot-box-with-ballot"
+    },
+    {
+      "id": "nl-b1-opinions.stem",
+      "word": "stem",
+      "article": "de",
+      "plural": "stemmen",
+      "es": "el voto; también la voz",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.minister-president",
+      "word": "minister-president",
+      "article": "de",
+      "plural": "minister-presidenten",
+      "es": "el primer ministro",
+      "notes": "En la calle también «de premier».",
+      "situation": "opiniones"
+    },
+    {
+      "id": "nl-b1-opinions.belofte",
+      "word": "belofte",
+      "article": "de",
+      "plural": "beloftes",
+      "es": "la promesa",
+      "situation": "opiniones"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-opinions.qa.new-plans",
+      "question": "Wat vind jij van de nieuwe plannen van de gemeente?",
+      "questionEs": "¿Qué te parecen los nuevos planes del ayuntamiento?",
+      "accepted": [
+        {
+          "text": "Ik denk dat ze te duur zijn.",
+          "es": "Creo que son demasiado caros."
+        },
+        {
+          "text": "Volgens mij gaan ze niet veel veranderen.",
+          "es": "Creo que no van a cambiar mucho."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik denk dat ze zijn te duur.",
+          "es": "Creo que son demasiado caros."
+        },
+        {
+          "text": "Volgens mij ze gaan niet veel veranderen.",
+          "es": "Creo que no van a cambiar mucho."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "Tras «dat» el verbo va al final (dat ze te duur zijn), y tras «volgens mij» va segundo: gaan ze.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-opinions.qa.biggest-problem",
+      "question": "Wat is volgens jou het grootste probleem in Nederland?",
+      "questionEs": "¿Cuál es para ti el mayor problema de los Países Bajos?",
+      "accepted": [
+        {
+          "text": "De woningnood, denk ik.",
+          "es": "La falta de vivienda, creo."
+        },
+        {
+          "text": "Volgens mij is dat het klimaat.",
+          "es": "Para mí, es el clima."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "De woningnood, ik denk.",
+          "es": "La falta de vivienda, creo."
+        },
+        {
+          "text": "Volgens mij dat is het klimaat.",
+          "es": "Para mí, es el clima."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "Al final de la frase se invierte (denk ik), y tras «volgens mij» el verbo va segundo: is dat.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-opinions.qa.agree",
+      "question": "Vind jij ook dat huizen veel te duur zijn?",
+      "questionEs": "¿Tú también crees que las casas son demasiado caras?",
+      "accepted": [
+        {
+          "text": "Ja, daar ben ik het helemaal mee eens.",
+          "es": "Sí, estoy totalmente de acuerdo."
+        },
+        {
+          "text": "Ja, ze worden steeds duurder.",
+          "es": "Sí, son cada vez más caras."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik ben helemaal eens.",
+          "es": "Sí, estoy totalmente de acuerdo."
+        },
+        {
+          "text": "Ja, ze worden steeds meer duur.",
+          "es": "Sí, son cada vez más caras."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "«Estar de acuerdo» es «het eens zijn» (daar ben ik het mee eens), y «más caro» es «duurder», nunca «meer duur».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-opinions.qa.minister",
+      "question": "Bent u het eens met de minister?",
+      "questionEs": "¿Está usted de acuerdo con el ministro?",
+      "accepted": [
+        {
+          "text": "Nee, ik zie het anders.",
+          "es": "No, yo lo veo distinto."
+        },
+        {
+          "text": "Gedeeltelijk: ik snap zijn punt, maar ik ben niet overtuigd.",
+          "es": "En parte: entiendo su argumento, pero no estoy convencido."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik ben niet eens met hem.",
+          "es": "No, no estoy de acuerdo con él."
+        },
+        {
+          "text": "Nee, ik denk dat hij heeft geen gelijk.",
+          "es": "No, creo que no tiene razón."
+        }
+      ],
+      "register": "u",
+      "situation": "opiniones",
+      "notes": "Falta «het»: ik ben het niet met hem eens; y tras «dat» el verbo va al final: dat hij geen gelijk heeft.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-opinions.qa.news",
+      "question": "Heb je vandaag het nieuws gezien?",
+      "questionEs": "¿Has visto hoy las noticias?",
+      "accepted": [
+        {
+          "text": "Ja, wat erg van die overstroming!",
+          "es": "Sí, ¡qué horror lo de la inundación!"
+        },
+        {
+          "text": "Nee, ik heb nog geen tijd gehad.",
+          "es": "No, todavía no he tenido tiempo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik heb gezien het op de NOS.",
+          "es": "Sí, lo he visto en la NOS."
+        },
+        {
+          "text": "Ja, wat erg van dat overstroming!",
+          "es": "Sí, ¡qué horror lo de la inundación!"
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "El participio va al final (ik heb het gezien), y «de overstroming» lleva «die», no «dat».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-opinions.qa.cost-of-living",
+      "question": "Waar is het leven duurder, in Utrecht of in Madrid?",
+      "questionEs": "¿Dónde es más cara la vida, en Utrecht o en Madrid?",
+      "accepted": [
+        {
+          "text": "In Utrecht, vooral de huur is veel hoger.",
+          "es": "En Utrecht, sobre todo el alquiler es mucho más alto."
+        },
+        {
+          "text": "In Utrecht, maar de salarissen zijn ook hoger dan in Madrid.",
+          "es": "En Utrecht, pero los sueldos también son más altos que en Madrid."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "In Utrecht, vooral de huur is veel meer hoog.",
+          "es": "En Utrecht, sobre todo el alquiler es mucho más alto."
+        },
+        {
+          "text": "In Utrecht, maar de salarissen zijn ook meer hoog dan in Madrid.",
+          "es": "En Utrecht, pero los sueldos también son más altos que en Madrid."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "El comparativo se forma con -er: hoog → hoger (nunca «meer hoog»).",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-opinions.qa.future",
+      "question": "Wat gaat er volgens jou veranderen?",
+      "questionEs": "¿Qué crees que va a cambiar?",
+      "accepted": [
+        {
+          "text": "Ik denk dat het steeds warmer wordt.",
+          "es": "Creo que va a hacer cada vez más calor."
+        },
+        {
+          "text": "Er gaan meer windmolens komen, denk ik.",
+          "es": "Va a haber más molinos de viento, creo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik denk dat het wordt steeds warmer.",
+          "es": "Creo que va a hacer cada vez más calor."
+        },
+        {
+          "text": "Er gaan meer windmolens te komen, denk ik.",
+          "es": "Va a haber más molinos de viento, creo."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "Tras «dat» el verbo va al final (dat het steeds warmer wordt), y tras «gaan» va el infinitivo sin «te».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-opinions.qa.vote",
+      "question": "Ga je stemmen bij de verkiezingen?",
+      "questionEs": "¿Vas a votar en las elecciones?",
+      "accepted": [
+        {
+          "text": "Ja, ik ga zeker stemmen.",
+          "es": "Sí, seguro que voy a votar."
+        },
+        {
+          "text": "Ik mag alleen bij de gemeenteraadsverkiezingen stemmen.",
+          "es": "Solo puedo votar en las elecciones municipales."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik ga zeker te stemmen.",
+          "es": "Sí, seguro que voy a votar."
+        },
+        {
+          "text": "Ik mag alleen stem bij de gemeenteraadsverkiezingen.",
+          "es": "Solo puedo votar en las elecciones municipales."
+        }
+      ],
+      "register": "tu",
+      "situation": "opiniones",
+      "notes": "Tras «gaan» y «mogen» va el infinitivo entero, sin «te» y al final: ik ga zeker stemmen.",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}

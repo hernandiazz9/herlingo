@@ -1,0 +1,869 @@
+{
+  "id": "nl-b1-culture",
+  "order": 150,
+  "title": "Cultura y normas (temas KNM): directness, agenda, fiestas, convivencia",
+  "description": "Entender la franqueza holandesa y el «doe normaal», quedar con semanas de antelación, vivir Koningsdag, Sinterklaas y el cuatro y cinco de mayo, separar la basura, convivir con los vecinos y sobrevivir a un cumpleaños en círculo.",
+  "emoji": "🌷",
+  "situation": "cultura",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-culture.l.direct",
+      "title": "Franqueza y «doe normaal»",
+      "items": [
+        "nl-b1-culture.cultuur",
+        "nl-b1-culture.gewoonte",
+        "nl-b1-workplace.direct",
+        "nl-b1-workplace.eerlijk",
+        "nl-b1-culture.nederlanders-zeggen-vaak-direct-wat-ze-denken",
+        "nl-b1-culture.dat-is-niet-onbeleefd-dat-is-gewoon-eerlijk",
+        "nl-b1-culture.beleefdheid",
+        "nl-b1-culture.je-hoeft-het-niet-persoonlijk-op-te-vatten",
+        "nl-b1-culture.ik-ben-nog-niet-gewend-aan-de-nederlandse-directheid",
+        "nl-b1-culture.in-spanje-zeggen-we-dat-wat-vriendelijker",
+        "nl-b1-culture.nuchter",
+        "nl-b1-culture.doe-maar-normaal-dan-doe-je-al-gek-genoeg",
+        "nl-b1-culture.vooroordeel",
+        "nl-b1-culture.qa.too-direct"
+      ]
+    },
+    {
+      "id": "nl-b1-culture.l.agenda",
+      "title": "La cultura de la agenda",
+      "items": [
+        "nl-b1-meetings.agenda",
+        "nl-b1-culture.ik-kijk-even-in-mijn-agenda",
+        "nl-b1-culture.zullen-we-over-drie-weken-iets-afspreken",
+        "nl-b1-culture.spontaan-langskomen-is-hier-niet-zo-gebruikelijk",
+        "nl-b1-culture.punctueel",
+        "nl-b1-culture.acht-uur-betekent-hier-echt-acht-uur",
+        "nl-b1-culture.veel-nederlanders-eten-al-om-zes-uur-warm",
+        "nl-b1-culture.verjaardagskalender",
+        "nl-b1-culture.bij-ons-hangt-de-verjaardagskalender-op-de-wc",
+        "nl-b1-culture.gezelligheid",
+        "nl-b1-culture.qa.make-plans"
+      ]
+    },
+    {
+      "id": "nl-b1-culture.l.feestdagen",
+      "title": "Fiestas: Koningsdag, Sinterklaas, cuatro y cinco de mayo",
+      "items": [
+        "nl-b1-culture.feestdag",
+        "nl-b1-culture.koningsdag",
+        "nl-b1-culture.koning",
+        "nl-b1-culture.op-koningsdag-is-de-hele-stad-oranje",
+        "nl-b1-culture.vrijmarkt",
+        "nl-b1-culture.op-de-vrijmarkt-verkopen-kinderen-hun-oude-speelgoed",
+        "nl-b1-culture.wat-een-leuk-oranje-hoedje",
+        "nl-b1-culture.sinterklaas",
+        "nl-b1-culture.pakjesavond",
+        "nl-b1-culture.gedicht",
+        "nl-b1-culture.met-sinterklaas-schrijven-we-gedichten-voor-elkaar",
+        "nl-b1-culture.oorlog",
+        "nl-b1-culture.herdenking",
+        "nl-b1-culture.op-vier-mei-zijn-we-om-acht-uur-twee-minuten-stil",
+        "nl-b1-culture.bevrijding",
+        "nl-b1-culture.op-vijf-mei-vieren-we-de-bevrijding",
+        "nl-b1-culture.met-oud-en-nieuw-eten-we-oliebollen",
+        "nl-b1-culture.qa.koningsdag",
+        "nl-b1-culture.qa.silence"
+      ]
+    },
+    {
+      "id": "nl-b1-culture.l.samenleven",
+      "title": "Convivencia: igualdad, basura y vecinos",
+      "items": [
+        "nl-b1-culture.gelijkheid",
+        "nl-b1-culture.in-nederland-heeft-iedereen-dezelfde-rechten",
+        "nl-b1-culture.mannen-en-vrouwen-worden-gelijk-behandeld",
+        "nl-b1-culture.discriminatie",
+        "nl-b1-culture.discriminatie-is-bij-de-wet-verboden",
+        "nl-b1-culture.afval",
+        "nl-b1-culture.scheiden",
+        "nl-b1-culture.wij-scheiden-ons-afval-plastic-papier-en-gft",
+        "nl-b1-culture.glasbak",
+        "nl-b1-culture.wanneer-wordt-het-afval-opgehaald",
+        "nl-b1-culture.na-tien-uur-s-avonds-moet-het-stil-zijn",
+        "nl-b1-culture.kringloopwinkel",
+        "nl-b1-culture.onze-oude-bank-brengen-we-naar-de-kringloopwinkel",
+        "nl-b1-culture.qa.bottle"
+      ]
+    },
+    {
+      "id": "nl-b1-culture.l.nederland",
+      "title": "Cumpleaños en círculo, polderen, agua y gobierno",
+      "items": [
+        "nl-b1-culture.kring",
+        "nl-b1-culture.op-een-verjaardag-zit-iedereen-in-een-grote-kring",
+        "nl-b1-culture.gefeliciteerd-met-je-vader",
+        "nl-b1-culture.je-feliciteert-niet-alleen-de-jarige-maar-ook-de-familie",
+        "nl-b1-culture.dijk",
+        "nl-b1-culture.een-groot-deel-van-nederland-ligt-onder-de-zeespiegel",
+        "nl-b1-culture.waterschap",
+        "nl-b1-culture.het-waterschap-zorgt-voor-de-dijken-en-het-water",
+        "nl-b1-culture.polder",
+        "nl-b1-culture.polderen",
+        "nl-b1-culture.nederlanders-zoeken-graag-een-compromis-dat-heet-polderen",
+        "nl-b1-culture.koningshuis",
+        "nl-b1-culture.regering",
+        "nl-b1-culture.nederland-heeft-een-koning-maar-de-regering-bestuurt-het-land",
+        "nl-b1-culture.qa.birthday",
+        "nl-b1-culture.qa.decisions"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-b1-culture.nederlanders-zeggen-vaak-direct-wat-ze-denken",
+      "text": "Nederlanders zeggen vaak direct wat ze denken.",
+      "es": "Los holandeses suelen decir directamente lo que piensan.",
+      "notes": "«wat ze denken» es una subordinada: el verbo va al final.",
+      "explanation": "La primera lección cultural. «Nederlanders»: «NEE-der-lan-ders».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.dat-is-niet-onbeleefd-dat-is-gewoon-eerlijk",
+      "text": "Dat is niet onbeleefd, dat is gewoon eerlijk.",
+      "es": "No es de mala educación, es simplemente sinceridad.",
+      "notes": "«gewoon» = simplemente; muy frecuente en la conversación.",
+      "explanation": "Lo que te explicará un amigo holandés. «onbeleefd»: «ON-be-leeft».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.je-hoeft-het-niet-persoonlijk-op-te-vatten",
+      "text": "Je hoeft het niet persoonlijk op te vatten.",
+      "es": "No tienes que tomártelo como algo personal.",
+      "notes": "«opvatten» con «hoeven … te» se separa: op te vatten. «niet hoeven te» = no tener que.",
+      "explanation": "Un buen consejo en el trabajo. «persoonlijk»: «per-SOON-luk».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.ik-ben-nog-niet-gewend-aan-de-nederlandse-directheid",
+      "text": "Ik ben nog niet gewend aan de Nederlandse directheid.",
+      "es": "Todavía no me he acostumbrado a la franqueza holandesa.",
+      "notes": "Tras «de», el adjetivo lleva -e: de Nederlandse directheid. «gewend zijn aan» = estar acostumbrado a.",
+      "explanation": "Sincero y simpático. «gewend»: «je-WENT».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.in-spanje-zeggen-we-dat-wat-vriendelijker",
+      "text": "In Spanje zeggen we dat wat vriendelijker.",
+      "es": "En España eso lo decimos un poco más amable.",
+      "notes": "«wat» + comparativo = un poco más. Tras «in Spanje», el verbo va segundo.",
+      "explanation": "Para comparar culturas con humor. «vriendelijker»: «FRIN-de-le-ker».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.doe-maar-normaal-dan-doe-je-al-gek-genoeg",
+      "text": "Doe maar normaal, dan doe je al gek genoeg.",
+      "es": "Compórtate con normalidad, que ya es bastante raro.",
+      "notes": "Dicho muy holandés: no destaques ni presumas. «doe normaal» a secas = ¡compórtate!",
+      "explanation": "Lo oirás a menudo. «gek»: «jek», con «g» de garganta.",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.ik-kijk-even-in-mijn-agenda",
+      "text": "Ik kijk even in mijn agenda.",
+      "es": "Miro un momento la agenda.",
+      "notes": "«even» suaviza: un momentito. Los holandeses lo planean casi todo.",
+      "explanation": "La respuesta típica a cualquier plan. «agenda»: «a-JEN-da».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.zullen-we-over-drie-weken-iets-afspreken",
+      "text": "Zullen we over drie weken iets afspreken?",
+      "es": "¿Quedamos dentro de tres semanas?",
+      "notes": "«over» + tiempo = dentro de. «afspreken» = quedar (separable).",
+      "explanation": "Quedar con semanas de antelación es normal aquí. «afspreken»: «AF-spree-ke».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.spontaan-langskomen-is-hier-niet-zo-gebruikelijk",
+      "text": "Spontaan langskomen is hier niet zo gebruikelijk.",
+      "es": "Pasarse sin avisar no es muy habitual aquí.",
+      "notes": "Un infinitivo puede ser sujeto: langskomen is… «langskomen» = pasarse (separable).",
+      "explanation": "Mejor manda un mensaje antes. «gebruikelijk»: «je-BRAI-ke-luk».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.acht-uur-betekent-hier-echt-acht-uur",
+      "text": "Acht uur betekent hier echt acht uur.",
+      "es": "Aquí las ocho son de verdad las ocho.",
+      "explanation": "La puntualidad importa. «echt»: «ejt», con «ch» de garganta.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.veel-nederlanders-eten-al-om-zes-uur-warm",
+      "text": "Veel Nederlanders eten al om zes uur warm.",
+      "es": "Muchos holandeses cenan ya a las seis.",
+      "notes": "«warm eten» = comer caliente, la comida principal (por la tarde-noche).",
+      "explanation": "Y a mediodía, un bocadillo. «warm»: «warm», con «w» suave.",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.bij-ons-hangt-de-verjaardagskalender-op-de-wc",
+      "text": "Bij ons hangt de verjaardagskalender op de wc.",
+      "es": "En casa tenemos el calendario de cumpleaños colgado en el váter.",
+      "notes": "Tras «bij ons», el verbo va segundo (V2): hangt de kalender. Es una costumbre real.",
+      "explanation": "Te reirás cuando lo veas. «wc»: «wee-SEE».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.op-koningsdag-is-de-hele-stad-oranje",
+      "text": "Op Koningsdag is de hele stad oranje.",
+      "es": "En el Día del Rey toda la ciudad está naranja.",
+      "notes": "«de hele stad»: -e tras «de». «oranje» no cambia nunca.",
+      "explanation": "El veintisiete de abril. «Koningsdag»: «KOO-nings-daj».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.op-de-vrijmarkt-verkopen-kinderen-hun-oude-speelgoed",
+      "text": "Op de vrijmarkt verkopen kinderen hun oude speelgoed.",
+      "es": "En el mercadillo libre los niños venden sus juguetes viejos.",
+      "notes": "Tras un posesivo el adjetivo lleva -e, también con palabras «het»: hun oude speelgoed.",
+      "explanation": "Cualquiera puede vender en la calle ese día. «vrijmarkt»: «FREI-markt».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.wat-een-leuk-oranje-hoedje",
+      "text": "Wat een leuk oranje hoedje!",
+      "es": "¡Qué sombrerito naranja tan chulo!",
+      "notes": "«het hoedje» con «een»: el adjetivo sin -e (een leuk hoedje). Diminutivo: siempre «het».",
+      "explanation": "Para piropear un disfraz. «hoedje»: «HU-tje».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.met-sinterklaas-schrijven-we-gedichten-voor-elkaar",
+      "text": "Met Sinterklaas schrijven we gedichten voor elkaar.",
+      "es": "Por San Nicolás nos escribimos poemas unos a otros.",
+      "notes": "«met» + fiesta = por, en (met Kerst, met Pasen). Luego V2: schrijven we.",
+      "explanation": "Poemas con rima y algo de burla cariñosa. «gedichten»: «je-DIJ-te».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.op-vier-mei-zijn-we-om-acht-uur-twee-minuten-stil",
+      "text": "Op vier mei zijn we om acht uur twee minuten stil.",
+      "es": "El cuatro de mayo, a las ocho, guardamos dos minutos de silencio.",
+      "notes": "Se recuerda a las víctimas de la guerra; todo el país se para.",
+      "explanation": "Respétalo aunque estés en la calle. «stil»: «stil».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.op-vijf-mei-vieren-we-de-bevrijding",
+      "text": "Op vijf mei vieren we de bevrijding.",
+      "es": "El cinco de mayo celebramos la liberación.",
+      "notes": "Tras «op vijf mei», el verbo va segundo: vieren we.",
+      "explanation": "Hay festivales por todo el país. «vieren»: «FII-re».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.met-oud-en-nieuw-eten-we-oliebollen",
+      "text": "Met Oud en Nieuw eten we oliebollen.",
+      "es": "En Nochevieja comemos buñuelos.",
+      "notes": "«Oud en Nieuw» = Nochevieja. «de oliebol» = buñuelo con pasas y azúcar glas.",
+      "explanation": "Los venden en puestos por la calle en diciembre. «oliebollen»: «OO-lie-bo-le».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.in-nederland-heeft-iedereen-dezelfde-rechten",
+      "text": "In Nederland heeft iedereen dezelfde rechten.",
+      "es": "En los Países Bajos todo el mundo tiene los mismos derechos.",
+      "notes": "«dezelfde» con palabras «de» y plurales; «hetzelfde» con palabras «het».",
+      "explanation": "El primer artículo de la Constitución. «dezelfde»: «de-ZELF-de».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.mannen-en-vrouwen-worden-gelijk-behandeld",
+      "text": "Mannen en vrouwen worden gelijk behandeld.",
+      "es": "A hombres y mujeres se les trata por igual.",
+      "notes": "Pasiva con «worden»: worden … behandeld (behandelen).",
+      "explanation": "Un valor central del país. «behandeld»: «be-HAN-delt».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.discriminatie-is-bij-de-wet-verboden",
+      "text": "Discriminatie is bij de wet verboden.",
+      "es": "La discriminación está prohibida por ley.",
+      "explanation": "Y se puede denunciar. «verboden»: «fer-BOO-de».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.wij-scheiden-ons-afval-plastic-papier-en-gft",
+      "text": "Wij scheiden ons afval: plastic, papier en gft.",
+      "es": "Separamos la basura: plástico, papel y orgánico.",
+      "notes": "«gft» = groente-, fruit- en tuinafval (restos orgánicos).",
+      "explanation": "Cada gemeente tiene sus reglas. «scheiden»: «SJEI-de».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.wanneer-wordt-het-afval-opgehaald",
+      "text": "Wanneer wordt het afval opgehaald?",
+      "es": "¿Cuándo recogen la basura?",
+      "notes": "Pasiva con «worden»: wordt … opgehaald (ophalen).",
+      "explanation": "Pregúntalo a un vecino o mira la app de la gemeente. «opgehaald»: «OP-je-haalt».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.na-tien-uur-s-avonds-moet-het-stil-zijn",
+      "text": "Na tien uur 's avonds moet het stil zijn.",
+      "es": "A partir de las diez de la noche tiene que haber silencio.",
+      "notes": "«'s avonds» = por la noche. Tras «na tien uur», el verbo va segundo: moet het.",
+      "explanation": "Una norma de convivencia típica. «'s avonds»: «SAA-fonts».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.onze-oude-bank-brengen-we-naar-de-kringloopwinkel",
+      "text": "Onze oude bank brengen we naar de kringloopwinkel.",
+      "es": "Nuestro sofá viejo lo llevamos a la tienda de segunda mano.",
+      "notes": "«de bank» aquí es el sofá. Tras el posesivo, «oude» con -e.",
+      "explanation": "Reutilizar es muy holandés. «kringloop»: «KRING-loop».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.op-een-verjaardag-zit-iedereen-in-een-grote-kring",
+      "text": "Op een verjaardag zit iedereen in een grote kring.",
+      "es": "En un cumpleaños todos se sientan en un gran círculo.",
+      "notes": "«de kring» con «een»: el adjetivo lleva -e (een grote kring). Con «het» no: een groot huis.",
+      "explanation": "El famoso cumpleaños en círculo. «kring»: «kring».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.gefeliciteerd-met-je-vader",
+      "text": "Gefeliciteerd met je vader!",
+      "es": "¡Felicidades por el cumpleaños de tu padre!",
+      "notes": "Se felicita también a la familia del cumpleañero.",
+      "explanation": "Lo dirás a todos al entrar. «gefeliciteerd»: «je-fe-li-si-TEERT».",
+      "register": "tu",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.je-feliciteert-niet-alleen-de-jarige-maar-ook-de-familie",
+      "text": "Je feliciteert niet alleen de jarige, maar ook de familie.",
+      "es": "No solo felicitas al cumpleañero, sino también a la familia.",
+      "notes": "«de jarige» = el que cumple años (de «jarig»). «niet alleen … maar ook» = no solo … sino también.",
+      "explanation": "La regla de oro del verjaardag. «jarige»: «JAA-ri-je».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.een-groot-deel-van-nederland-ligt-onder-de-zeespiegel",
+      "text": "Een groot deel van Nederland ligt onder de zeespiegel.",
+      "es": "Gran parte de los Países Bajos está bajo el nivel del mar.",
+      "notes": "«het deel» con «een»: groot sin -e.",
+      "explanation": "Por eso los diques son tan importantes. «zeespiegel»: «ZEE-spie-jel».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.het-waterschap-zorgt-voor-de-dijken-en-het-water",
+      "text": "Het waterschap zorgt voor de dijken en het water.",
+      "es": "La junta del agua se ocupa de los diques y del agua.",
+      "notes": "«zorgen voor» = ocuparse de, cuidar de.",
+      "explanation": "Hasta votas para el waterschap. «waterschap»: «WAA-ter-sjap».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.nederlanders-zoeken-graag-een-compromis-dat-heet-polderen",
+      "text": "Nederlanders zoeken graag een compromis: dat heet polderen.",
+      "es": "A los holandeses les gusta buscar un acuerdo: eso se llama «polderen».",
+      "notes": "«graag» + verbo = gustar hacer algo. «heten» = llamarse.",
+      "explanation": "Hablar hasta que todos estén de acuerdo. «polderen»: «POL-de-re».",
+      "register": "neutral",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.nederland-heeft-een-koning-maar-de-regering-bestuurt-het-land",
+      "text": "Nederland heeft een koning, maar de regering bestuurt het land.",
+      "es": "Los Países Bajos tienen rey, pero el gobierno dirige el país.",
+      "notes": "«besturen» = gobernar, dirigir; también «conducir» un vehículo.",
+      "explanation": "Monarquía parlamentaria, como España. «bestuurt»: «be-STUURT».",
+      "register": "neutral",
+      "situation": "cultura"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-b1-culture.cultuur",
+      "word": "cultuur",
+      "article": "de",
+      "plural": "culturen",
+      "es": "la cultura",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.gewoonte",
+      "word": "gewoonte",
+      "article": "de",
+      "plural": "gewoontes",
+      "es": "la costumbre",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.beleefdheid",
+      "word": "beleefdheid",
+      "article": "de",
+      "es": "la cortesía, la buena educación",
+      "notes": "Las palabras en -heid son «de». «beleefd» = educado; «onbeleefd» = maleducado.",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.nuchter",
+      "word": "nuchter",
+      "es": "sensato, con los pies en el suelo",
+      "notes": "Un gran elogio holandés. También significa «sobrio» (sin alcohol) y «en ayunas».",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.vooroordeel",
+      "word": "vooroordeel",
+      "article": "het",
+      "plural": "vooroordelen",
+      "es": "el prejuicio",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.punctueel",
+      "word": "punctueel",
+      "es": "puntual",
+      "notes": "En el día a día se dice más «op tijd» (a tiempo).",
+      "situation": "cultura",
+      "image": "fluent:alarm-clock"
+    },
+    {
+      "id": "nl-b1-culture.verjaardagskalender",
+      "word": "verjaardagskalender",
+      "article": "de",
+      "plural": "verjaardagskalenders",
+      "es": "el calendario de cumpleaños",
+      "notes": "Sin año, solo días: suele colgar en el váter.",
+      "situation": "cultura",
+      "image": "fluent:tear-off-calendar"
+    },
+    {
+      "id": "nl-b1-culture.gezelligheid",
+      "word": "gezelligheid",
+      "article": "de",
+      "es": "el buen ambiente, lo acogedor",
+      "notes": "De «gezellig»: agradable, acogedor, con buena compañía. No tiene traducción exacta.",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.feestdag",
+      "word": "feestdag",
+      "article": "de",
+      "plural": "feestdagen",
+      "es": "el día festivo",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.koningsdag",
+      "word": "Koningsdag",
+      "es": "el Día del Rey (veintisiete de abril)",
+      "notes": "Nombre de fiesta, sin artículo: op Koningsdag.",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.koning",
+      "word": "koning",
+      "article": "de",
+      "plural": "koningen",
+      "es": "el rey",
+      "situation": "cultura",
+      "image": "fluent:crown"
+    },
+    {
+      "id": "nl-b1-culture.vrijmarkt",
+      "word": "vrijmarkt",
+      "article": "de",
+      "plural": "vrijmarkten",
+      "es": "el mercadillo libre (de Koningsdag)",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.sinterklaas",
+      "word": "Sinterklaas",
+      "es": "San Nicolás (la fiesta y el personaje)",
+      "notes": "Se celebra el cinco de diciembre, sobre todo con niños.",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.pakjesavond",
+      "word": "pakjesavond",
+      "article": "de",
+      "es": "la noche de los regalos (cinco de diciembre)",
+      "notes": "«het pakje» = paquetito, regalo.",
+      "situation": "cultura",
+      "image": "fluent:wrapped-gift"
+    },
+    {
+      "id": "nl-b1-culture.gedicht",
+      "word": "gedicht",
+      "article": "het",
+      "plural": "gedichten",
+      "es": "el poema",
+      "situation": "cultura",
+      "image": "fluent:scroll"
+    },
+    {
+      "id": "nl-b1-culture.oorlog",
+      "word": "oorlog",
+      "article": "de",
+      "plural": "oorlogen",
+      "es": "la guerra",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.herdenking",
+      "word": "herdenking",
+      "article": "de",
+      "plural": "herdenkingen",
+      "es": "la conmemoración",
+      "notes": "«herdenken» = recordar a los muertos (no separable: ik herdenk, ik heb herdacht).",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.bevrijding",
+      "word": "bevrijding",
+      "article": "de",
+      "es": "la liberación",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.gelijkheid",
+      "word": "gelijkheid",
+      "article": "de",
+      "es": "la igualdad",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.discriminatie",
+      "word": "discriminatie",
+      "article": "de",
+      "es": "la discriminación",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.afval",
+      "word": "afval",
+      "article": "het",
+      "es": "la basura, los residuos",
+      "notes": "Incontable: het afval.",
+      "situation": "cultura",
+      "image": "fluent:wastebasket"
+    },
+    {
+      "id": "nl-b1-culture.scheiden",
+      "word": "scheiden",
+      "es": "separar; también divorciarse",
+      "notes": "afval scheiden = separar la basura; gescheiden zijn = estar divorciado.",
+      "situation": "cultura",
+      "image": "fluent:recycling-symbol"
+    },
+    {
+      "id": "nl-b1-culture.glasbak",
+      "word": "glasbak",
+      "article": "de",
+      "plural": "glasbakken",
+      "es": "el contenedor de vidrio",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.kringloopwinkel",
+      "word": "kringloopwinkel",
+      "article": "de",
+      "plural": "kringloopwinkels",
+      "es": "la tienda de segunda mano",
+      "notes": "«de winkel» = la tienda (no la ventana).",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.kring",
+      "word": "kring",
+      "article": "de",
+      "plural": "kringen",
+      "es": "el círculo, el corro",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.dijk",
+      "word": "dijk",
+      "article": "de",
+      "plural": "dijken",
+      "es": "el dique",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.waterschap",
+      "word": "waterschap",
+      "article": "het",
+      "plural": "waterschappen",
+      "es": "la junta del agua (gestiona diques y agua)",
+      "notes": "Una de las instituciones más antiguas del país, con elecciones propias.",
+      "situation": "cultura",
+      "image": "fluent:water-wave"
+    },
+    {
+      "id": "nl-b1-culture.polder",
+      "word": "polder",
+      "article": "de",
+      "plural": "polders",
+      "es": "el pólder (tierra ganada al agua)",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.polderen",
+      "word": "polderen",
+      "es": "negociar hasta llegar a un consenso",
+      "notes": "Del pólder: todos tenían que colaborar para mantener la tierra seca.",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.koningshuis",
+      "word": "koningshuis",
+      "article": "het",
+      "es": "la casa real",
+      "situation": "cultura"
+    },
+    {
+      "id": "nl-b1-culture.regering",
+      "word": "regering",
+      "article": "de",
+      "plural": "regeringen",
+      "es": "el gobierno",
+      "situation": "cultura"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-culture.qa.too-direct",
+      "question": "Vind je Nederlanders te direct?",
+      "questionEs": "¿Te parecen los holandeses demasiado directos?",
+      "accepted": [
+        {
+          "text": "Soms wel, maar ik ben er nu aan gewend.",
+          "es": "A veces sí, pero ahora ya me he acostumbrado."
+        },
+        {
+          "text": "Nee, ik vind het een eerlijke manier van praten.",
+          "es": "No, me parece una forma de hablar sincera."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Soms wel, maar ik heb er nu aan gewend.",
+          "es": "A veces sí, pero ahora ya me he acostumbrado."
+        },
+        {
+          "text": "Nee, ik vind het een manier eerlijke van praten.",
+          "es": "No, me parece una forma de hablar sincera."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "Es «gewend zijn» (ik ben gewend), y el adjetivo va delante del sustantivo: een eerlijke manier.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-culture.qa.make-plans",
+      "question": "Zullen we binnenkort eens samen eten?",
+      "questionEs": "¿Comemos juntos un día de estos?",
+      "accepted": [
+        {
+          "text": "Leuk! Ik kijk even in mijn agenda.",
+          "es": "¡Genial! Miro un momento la agenda."
+        },
+        {
+          "text": "Graag, volgende week kan ik op dinsdag.",
+          "es": "Con gusto, la semana que viene puedo el martes."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Graag, volgende week ik kan op dinsdag.",
+          "es": "Con gusto, la semana que viene puedo el martes."
+        },
+        {
+          "text": "Leuk! Wanneer heeft u tijd?",
+          "es": "¡Genial! ¿Cuándo tiene usted tiempo?"
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "Tras «volgende week» el verbo va segundo (kan ik), y a un amigo que te tutea no le hables de «u».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-culture.qa.koningsdag",
+      "question": "Wat doen jullie op Koningsdag?",
+      "questionEs": "¿Qué hacéis el Día del Rey?",
+      "accepted": [
+        {
+          "text": "We verkopen ons oude speelgoed op de vrijmarkt.",
+          "es": "Vendemos nuestros juguetes viejos en el mercadillo."
+        },
+        {
+          "text": "We gaan naar de vrijmarkt in de stad.",
+          "es": "Vamos al mercadillo de la ciudad."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "We verkopen ons oud speelgoed op de vrijmarkt.",
+          "es": "Vendemos nuestros juguetes viejos en el mercadillo."
+        },
+        {
+          "text": "We gaan naar het vrijmarkt in de stad.",
+          "es": "Vamos al mercadillo de la ciudad."
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "Tras un posesivo el adjetivo lleva -e (ons oude speelgoed), y es «de vrijmarkt».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-culture.qa.silence",
+      "question": "Waarom is iedereen om acht uur zo stil?",
+      "questionEs": "¿Por qué está todo el mundo tan callado a las ocho?",
+      "accepted": [
+        {
+          "text": "Omdat we de slachtoffers van de oorlog herdenken.",
+          "es": "Porque recordamos a las víctimas de la guerra."
+        },
+        {
+          "text": "Het is vier mei: de herdenking.",
+          "es": "Es cuatro de mayo: la conmemoración."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Omdat we herdenken de slachtoffers van de oorlog.",
+          "es": "Porque recordamos a las víctimas de la guerra."
+        },
+        {
+          "text": "Het is vier mei: we vieren de oorlog.",
+          "es": "Es cuatro de mayo: celebramos la guerra."
+        }
+      ],
+      "register": "neutral",
+      "situation": "cultura",
+      "notes": "Tras «omdat» el verbo va al final (herdenken), y el cuatro de mayo se recuerda, no se celebra («vieren»).",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-culture.qa.bottle",
+      "question": "Waar moet deze lege wijnfles heen?",
+      "questionEs": "¿Dónde va esta botella de vino vacía?",
+      "accepted": [
+        {
+          "text": "In de glasbak, hier om de hoek.",
+          "es": "Al contenedor de vidrio, aquí a la vuelta."
+        },
+        {
+          "text": "Die gaat in de glasbak.",
+          "es": "Va al contenedor de vidrio."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "In het glasbak, hier om de hoek.",
+          "es": "Al contenedor de vidrio, aquí a la vuelta."
+        },
+        {
+          "text": "Die gaat in het plastic.",
+          "es": "Va al plástico."
+        }
+      ],
+      "register": "neutral",
+      "situation": "cultura",
+      "notes": "Es «de glasbak», y el vidrio nunca va con el plástico.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-culture.qa.birthday",
+      "question": "Kom je zaterdag op mijn verjaardag?",
+      "questionEs": "¿Vienes el sábado a mi cumpleaños?",
+      "accepted": [
+        {
+          "text": "Ja, gezellig! Hoe laat?",
+          "es": "¡Sí, qué bien! ¿A qué hora?"
+        },
+        {
+          "text": "Ja, ik kom graag. Wat wil je hebben?",
+          "es": "Sí, voy con gusto. ¿Qué quieres que te regale?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik kom graag. Wat wilt u hebben?",
+          "es": "Sí, voy con gusto. ¿Qué quiere usted que le regale?"
+        },
+        {
+          "text": "Ja, ik graag kom. Hoe laat?",
+          "es": "Sí, voy con gusto. ¿A qué hora?"
+        }
+      ],
+      "register": "tu",
+      "situation": "cultura",
+      "notes": "A un amigo se le habla de «je», y en la oración principal el verbo va segundo: ik kom graag.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-culture.qa.decisions",
+      "question": "Hoe nemen Nederlanders een besluit op het werk?",
+      "questionEs": "¿Cómo toman decisiones los holandeses en el trabajo?",
+      "accepted": [
+        {
+          "text": "Ze overleggen tot iedereen het eens is.",
+          "es": "Lo hablan hasta que todos están de acuerdo."
+        },
+        {
+          "text": "Ze praten lang en zoeken een compromis.",
+          "es": "Hablan mucho y buscan un acuerdo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ze overleggen tot iedereen is het eens.",
+          "es": "Lo hablan hasta que todos están de acuerdo."
+        },
+        {
+          "text": "Ze overleggen tot iedereen eens heeft.",
+          "es": "Lo hablan hasta que todos están de acuerdo."
+        }
+      ],
+      "register": "neutral",
+      "situation": "cultura",
+      "notes": "Tras «tot» (hasta que) el verbo va al final, y «estar de acuerdo» es «het eens zijn»: tot iedereen het eens is.",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}
