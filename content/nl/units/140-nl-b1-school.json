@@ -1,0 +1,989 @@
+{
+  "id": "nl-b1-school",
+  "order": 140,
+  "title": "Escuela y cuidado infantil: guardería, basisschool, tutorías",
+  "description": "Buscar guardería y bso, inscribir a tu hija en la basisschool, entenderte con la juf en una tutoría, avisar cuando está enferma y organizar excursiones, cumpleaños y tardes de juego.",
+  "emoji": "🎒",
+  "situation": "familia",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-school.l.opvang",
+      "title": "Guardería y cuidado después del cole",
+      "items": [
+        "nl-a2-about-me.kind",
+        "nl-b1-school.kinderopvang",
+        "nl-b1-school.we-zoeken-kinderopvang-voor-onze-dochter",
+        "nl-b1-school.kinderdagverblijf",
+        "nl-b1-school.het-kinderdagverblijf-dat-bij-ons-om-de-hoek-zit",
+        "nl-b1-health.wachtlijst",
+        "nl-b1-school.bso",
+        "nl-b1-school.na-school-gaat-ze-naar-de-bso",
+        "nl-b1-school.gastouder",
+        "nl-b1-school.oppas",
+        "nl-b1-school.een-oppas-die-spaans-spreekt-zou-ideaal-zijn",
+        "nl-b1-school.hoeveel-dagen-per-week-heeft-u-opvang-nodig",
+        "nl-b1-school.kinderopvangtoeslag",
+        "nl-b1-school.heb-ik-recht-op-kinderopvangtoeslag",
+        "nl-b1-school.qa.childcare"
+      ]
+    },
+    {
+      "id": "nl-b1-school.l.basisschool",
+      "title": "La basisschool",
+      "items": [
+        "nl-b1-school.basisschool",
+        "nl-b1-school.we-willen-haar-op-een-basisschool-inschrijven",
+        "nl-b1-school.groep",
+        "nl-b1-school.ze-is-zes-dus-ze-komt-in-groep-drie",
+        "nl-b1-school.de-school-die-het-dichtstbij-is-heeft-nog-plek",
+        "nl-b1-school.juf",
+        "nl-b1-school.meester",
+        "nl-b1-school.wie-is-de-juf-van-groep-drie",
+        "nl-b1-school.de-meester-die-haar-klas-heeft-is-heel-aardig",
+        "nl-b1-school.klas",
+        "nl-b1-school.leerling",
+        "nl-b1-school.de-school-begint-om-half-negen",
+        "nl-b1-school.op-woensdagmiddag-zijn-de-kinderen-vrij",
+        "nl-b1-school.schoolplein",
+        "nl-b1-school.in-de-pauze-spelen-ze-op-het-schoolplein",
+        "nl-b1-school.broodtrommel",
+        "nl-b1-school.moet-ze-een-broodtrommel-meenemen",
+        "nl-b1-school.ze-krijgt-extra-hulp-met-nederlands",
+        "nl-b1-school.qa.which-group",
+        "nl-b1-school.qa.which-child"
+      ]
+    },
+    {
+      "id": "nl-b1-school.l.oudergesprek",
+      "title": "La tutoría con la juf",
+      "items": [
+        "nl-a2-about-me.ouder",
+        "nl-b1-school.oudergesprek",
+        "nl-b1-school.we-hebben-volgende-week-een-oudergesprek",
+        "nl-b1-school.hoe-gaat-het-met-haar-in-de-klas",
+        "nl-b1-school.ze-heeft-het-erg-naar-haar-zin",
+        "nl-b1-school.ze-praat-al-veel-meer-nederlands",
+        "nl-b1-school.vriendje",
+        "nl-b1-school.ze-heeft-veel-vriendjes-in-de-klas",
+        "nl-b1-school.ze-vindt-het-soms-moeilijk-om-stil-te-zitten",
+        "nl-b1-school.ontwikkeling",
+        "nl-b1-school.kunnen-wij-thuis-iets-doen-om-haar-te-helpen",
+        "nl-b1-school.rapport",
+        "nl-b1-school.dit-is-het-rapport-dat-ze-mee-naar-huis",
+        "nl-b1-school.huiswerk",
+        "nl-b1-school.qa.how-is-she",
+        "nl-b1-school.qa.parent-question"
+      ]
+    },
+    {
+      "id": "nl-b1-school.l.ziek",
+      "title": "Hija enferma y consultatiebureau",
+      "items": [
+        "nl-b1-school.ik-wil-mijn-dochter-ziek-melden",
+        "nl-b1-school.koorts",
+        "nl-b1-school.ze-heeft-koorts-en-blijft-vandaag-thuis",
+        "nl-b1-school.mag-ze-met-een-verkoudheid-naar-school",
+        "nl-b1-school.ophalen",
+        "nl-b1-school.brengen",
+        "nl-b1-school.wie-haalt-de-kinderen-vandaag-op",
+        "nl-b1-school.ik-breng-haar-om-half-negen-naar-school",
+        "nl-b1-school.consultatiebureau",
+        "nl-b1-school.we-hebben-een-afspraak-bij-het-consultatiebureau",
+        "nl-b1-school.daar-worden-kinderen-gemeten-en-gewogen",
+        "nl-b1-school.vaccinatie",
+        "nl-b1-school.ze-is-op-het-schoolplein-gevallen-maar-het-gaat",
+        "nl-b1-school.qa.sick-child",
+        "nl-b1-school.qa.pickup"
+      ]
+    },
+    {
+      "id": "nl-b1-school.l.activiteiten",
+      "title": "Excursiones, cumpleaños y tardes de juego",
+      "items": [
+        "nl-b1-school.schoolreisje",
+        "nl-b1-school.volgende-week-gaat-groep-drie-op-schoolreisje",
+        "nl-b1-school.zwemles",
+        "nl-b1-school.zwemdiploma",
+        "nl-b1-school.ze-heeft-haar-zwemdiploma-a-gehaald",
+        "nl-a2-numbers.verjaardag",
+        "nl-b1-workplace.trakteren",
+        "nl-b1-school.ze-is-volgende-week-jarig-en-wil-trakteren",
+        "nl-b1-school.traktatie",
+        "nl-b1-school.wat-is-een-gezonde-traktatie",
+        "nl-b1-school.speelgoed",
+        "nl-b1-school.speelafspraak",
+        "nl-b1-school.zullen-we-een-speelafspraak-maken",
+        "nl-b1-school.mag-haar-vriendinnetje-morgen-bij-ons-komen-spelen",
+        "nl-b1-school.hoe-laat-kan-ik-haar-ophalen",
+        "nl-b1-school.het-meisje-met-wie-ze-speelt-woont-hier-om",
+        "nl-a2-grammar.meisje",
+        "nl-b1-school.qa.playdate",
+        "nl-b1-school.qa.treat"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-b1-school.we-zoeken-kinderopvang-voor-onze-dochter",
+      "text": "We zoeken kinderopvang voor onze dochter.",
+      "es": "Buscamos dónde cuiden a nuestra hija.",
+      "explanation": "Para empezar la búsqueda. «dochter»: «DOJ-ter», con «ch» de garganta.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.het-kinderdagverblijf-dat-bij-ons-om-de-hoek-zit",
+      "text": "Het kinderdagverblijf dat bij ons om de hoek zit, is vol.",
+      "es": "La guardería que está a la vuelta de la esquina está llena.",
+      "notes": "«het kinderdagverblijf» → relativo «dat»; el verbo de la relativa va al final (zit).",
+      "explanation": "Para contar tu búsqueda. «verblijf»: «fer-BLEIF».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.na-school-gaat-ze-naar-de-bso",
+      "text": "Na school gaat ze naar de bso.",
+      "es": "Después del cole va al cuidado extraescolar.",
+      "notes": "Tras «na school», el verbo va segundo (V2): gaat ze.",
+      "explanation": "Para explicar vuestra rutina. «school»: «sjool», «sch» = «s» + «j».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.een-oppas-die-spaans-spreekt-zou-ideaal-zijn",
+      "text": "Een oppas die Spaans spreekt, zou ideaal zijn.",
+      "es": "Una canguro que hable español sería ideal.",
+      "notes": "«de oppas» → relativo «die»; «zou … zijn» = sería.",
+      "explanation": "Para pedir recomendaciones a otros padres. «ideaal»: «i-dee-AAL».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.hoeveel-dagen-per-week-heeft-u-opvang-nodig",
+      "text": "Hoeveel dagen per week heeft u opvang nodig?",
+      "es": "¿Cuántos días a la semana necesita usted cuidado?",
+      "explanation": "Lo que te preguntan en la guardería. «nodig»: «NOO-dij».",
+      "register": "u",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.heb-ik-recht-op-kinderopvangtoeslag",
+      "text": "Heb ik recht op kinderopvangtoeslag?",
+      "es": "¿Tengo derecho a la ayuda para guardería?",
+      "explanation": "Para preguntar a un amigo o en la Belastingdienst. «toeslag»: «TU-slaj».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.we-willen-haar-op-een-basisschool-inschrijven",
+      "text": "We willen haar op een basisschool inschrijven.",
+      "es": "Queremos inscribirla en un colegio de primaria.",
+      "notes": "inschrijven (separable) con «willen»: el infinitivo entero al final.",
+      "explanation": "Al llamar o visitar un cole. «inschrijven»: «IN-sjrei-fe».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-is-zes-dus-ze-komt-in-groep-drie",
+      "text": "Ze is zes, dus ze komt in groep drie.",
+      "es": "Tiene seis años, así que entra en tercero.",
+      "notes": "La edad va con «zijn»: ze is zes (nunca «ze heeft zes jaar»).",
+      "explanation": "Para explicar en qué curso va. «groep»: «jrup», con «oe» = «u».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.de-school-die-het-dichtstbij-is-heeft-nog-plek",
+      "text": "De school die het dichtstbij is, heeft nog plek.",
+      "es": "El cole que está más cerca todavía tiene plaza.",
+      "notes": "«de school» → «die»; dentro de la relativa, el verbo al final (is).",
+      "explanation": "Para comparar colegios. «dichtstbij»: «DIJST-bei».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.wie-is-de-juf-van-groep-drie",
+      "text": "Wie is de juf van groep drie?",
+      "es": "¿Quién es la seño de tercero?",
+      "explanation": "Al llegar el primer día. «juf»: «juf», con la «u» corta.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.de-meester-die-haar-klas-heeft-is-heel-aardig",
+      "text": "De meester die haar klas heeft, is heel aardig.",
+      "es": "El maestro que tiene su clase es muy majo.",
+      "notes": "«aardig» = amable, majo: la palabra de cada día (más que «sympathiek»).",
+      "explanation": "Para hablar del profe con otros padres. «aardig»: «AAR-dij».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.de-school-begint-om-half-negen",
+      "text": "De school begint om half negen.",
+      "es": "El cole empieza a las ocho y media.",
+      "notes": "«half negen» = media hora antes de las nueve.",
+      "explanation": "Para organizar las mañanas. «half negen» = 8:30, no 9:30.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.op-woensdagmiddag-zijn-de-kinderen-vrij",
+      "text": "Op woensdagmiddag zijn de kinderen vrij.",
+      "es": "Los miércoles por la tarde los niños no tienen clase.",
+      "notes": "«vrij zijn» = tener el día (o la tarde) libre.",
+      "explanation": "Muy común en los colegios holandeses. «woensdag»: «WUNS-daj».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.in-de-pauze-spelen-ze-op-het-schoolplein",
+      "text": "In de pauze spelen ze op het schoolplein.",
+      "es": "En el recreo juegan en el patio.",
+      "notes": "Tras «in de pauze» va el verbo: spelen ze.",
+      "explanation": "Para contar el día a día. «pauze»: «PAU-ze».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.moet-ze-een-broodtrommel-meenemen",
+      "text": "Moet ze een broodtrommel meenemen?",
+      "es": "¿Tiene que llevar fiambrera?",
+      "notes": "meenemen = llevar (separable); con «moet» va entero al final.",
+      "explanation": "Muchos niños comen en el cole lo que traen de casa. «meenemen»: «MEE-nee-me».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-krijgt-extra-hulp-met-nederlands",
+      "text": "Ze krijgt extra hulp met Nederlands.",
+      "es": "Recibe ayuda extra con el neerlandés.",
+      "explanation": "Para contar cómo la apoya el cole. «hulp»: «hulp», con la «u» corta.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.we-hebben-volgende-week-een-oudergesprek",
+      "text": "We hebben volgende week een oudergesprek.",
+      "es": "La semana que viene tenemos tutoría.",
+      "explanation": "Para organizarte con tu pareja. «gesprek»: «je-SPREK».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.hoe-gaat-het-met-haar-in-de-klas",
+      "text": "Hoe gaat het met haar in de klas?",
+      "es": "¿Qué tal va en clase?",
+      "explanation": "Primera pregunta en la tutoría. «klas»: «klas», con «a» corta.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-heeft-het-erg-naar-haar-zin",
+      "text": "Ze heeft het erg naar haar zin.",
+      "es": "Está muy a gusto.",
+      "notes": "Expresión: «het naar je zin hebben» = estar a gusto; con ella, «haar zin».",
+      "explanation": "Lo que querrás oír de la juf. «zin»: «zin», con «i» corta.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-praat-al-veel-meer-nederlands",
+      "text": "Ze praat al veel meer Nederlands.",
+      "es": "Ya habla mucho más neerlandés.",
+      "explanation": "Para contar sus progresos. «praat»: «praat», con «aa» larga.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-heeft-veel-vriendjes-in-de-klas",
+      "text": "Ze heeft veel vriendjes in de klas.",
+      "es": "Tiene muchos amiguitos en clase.",
+      "explanation": "Algo que alegra oír. «vriendjes»: «FRIN-tjes».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-vindt-het-soms-moeilijk-om-stil-te-zitten",
+      "text": "Ze vindt het soms moeilijk om stil te zitten.",
+      "es": "A veces le cuesta estarse quieta.",
+      "notes": "«het moeilijk vinden om … te» = costarle a uno hacer algo.",
+      "explanation": "Lo que podría decirte la juf. «moeilijk»: «MUI-luk».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.kunnen-wij-thuis-iets-doen-om-haar-te-helpen",
+      "text": "Kunnen wij thuis iets doen om haar te helpen?",
+      "es": "¿Podemos hacer algo en casa para ayudarla?",
+      "notes": "om haar te helpen: «te» va justo delante del infinitivo.",
+      "explanation": "Buena pregunta al final de la tutoría. «thuis»: «tais», con «ui» y la «h» muda tras «t».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.dit-is-het-rapport-dat-ze-mee-naar-huis",
+      "text": "Dit is het rapport dat ze mee naar huis kreeg.",
+      "es": "Este es el boletín que se trajo a casa.",
+      "notes": "«het rapport» → «dat»; el verbo de la relativa va al final (kreeg).",
+      "explanation": "Para comentarlo con la juf. «rapport»: «ra-PORT».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ik-wil-mijn-dochter-ziek-melden",
+      "text": "Ik wil mijn dochter ziek melden.",
+      "es": "Quiero avisar de que mi hija está enferma.",
+      "notes": "Para otra persona: iemand ziek melden. Para ti: me ziekmelden.",
+      "explanation": "Al llamar al cole por la mañana. «melden»: «MEL-de».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-heeft-koorts-en-blijft-vandaag-thuis",
+      "text": "Ze heeft koorts en blijft vandaag thuis.",
+      "es": "Tiene fiebre y hoy se queda en casa.",
+      "explanation": "Mensaje al cole o a la bso. «blijft»: «bleift».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.mag-ze-met-een-verkoudheid-naar-school",
+      "text": "Mag ze met een verkoudheid naar school?",
+      "es": "¿Puede ir al cole con un resfriado?",
+      "explanation": "Para saber las normas. «verkoudheid»: «fer-KAUT-heit».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.wie-haalt-de-kinderen-vandaag-op",
+      "text": "Wie haalt de kinderen vandaag op?",
+      "es": "¿Quién recoge hoy a los niños?",
+      "notes": "haalt … op = ophalen: la partícula va al final.",
+      "explanation": "Para organizarte con tu pareja. «haalt»: «haalt», con «aa» larga.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ik-breng-haar-om-half-negen-naar-school",
+      "text": "Ik breng haar om half negen naar school.",
+      "es": "La llevo al cole a las ocho y media.",
+      "explanation": "Para repartir tareas. «breng»: «breng», la «g» final casi no suena.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.we-hebben-een-afspraak-bij-het-consultatiebureau",
+      "text": "We hebben een afspraak bij het consultatiebureau.",
+      "es": "Tenemos cita en el centro de salud infantil.",
+      "explanation": "Para las revisiones de los más pequeños. «bureau»: «by-ROO».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.daar-worden-kinderen-gemeten-en-gewogen",
+      "text": "Daar worden kinderen gemeten en gewogen.",
+      "es": "Allí miden y pesan a los niños.",
+      "notes": "Pasiva con «worden»: worden gemeten (meten) en gewogen (wegen).",
+      "explanation": "Para explicar qué hacen en la revisión. «gewogen»: «je-WOO-je».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-is-op-het-schoolplein-gevallen-maar-het-gaat",
+      "text": "Ze is op het schoolplein gevallen, maar het gaat goed.",
+      "es": "Se ha caído en el patio, pero está bien.",
+      "notes": "«vallen» hace el perfecto con «zijn»: ze is gevallen.",
+      "explanation": "Lo que te puede contar la juf a la salida. «gevallen»: «je-FA-le».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.volgende-week-gaat-groep-drie-op-schoolreisje",
+      "text": "Volgende week gaat groep drie op schoolreisje.",
+      "es": "La semana que viene tercero se va de excursión.",
+      "notes": "Tras «volgende week» va el verbo (V2): gaat groep drie.",
+      "explanation": "Lo leerás en la app del cole. «reisje»: «REI-sje».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-heeft-haar-zwemdiploma-a-gehaald",
+      "text": "Ze heeft haar zwemdiploma A gehaald!",
+      "es": "¡Ha sacado el diploma de natación A!",
+      "notes": "«een diploma halen» = sacarse un título.",
+      "explanation": "Un gran día para cualquier niño holandés. «gehaald»: «je-HAALT».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ze-is-volgende-week-jarig-en-wil-trakteren",
+      "text": "Ze is volgende week jarig en wil trakteren.",
+      "es": "La semana que viene es su cumpleaños y quiere invitar a la clase.",
+      "notes": "«jarig zijn» = cumplir años; «trakteren» = llevar algo para todos.",
+      "explanation": "Para organizar el cumpleaños en el cole. «jarig»: «JAA-rij».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.wat-is-een-gezonde-traktatie",
+      "text": "Wat is een gezonde traktatie?",
+      "es": "¿Qué se puede llevar de sano para la clase?",
+      "explanation": "Muchos coles piden traktaties sanas. «gezonde»: «je-ZON-de».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.zullen-we-een-speelafspraak-maken",
+      "text": "Zullen we een speelafspraak maken?",
+      "es": "¿Quedamos para que jueguen juntos?",
+      "explanation": "A otro padre o madre en la puerta del cole. «speel»: «speel», con «ee» larga.",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.mag-haar-vriendinnetje-morgen-bij-ons-komen-spelen",
+      "text": "Mag haar vriendinnetje morgen bij ons komen spelen?",
+      "es": "¿Puede venir su amiguita mañana a jugar a casa?",
+      "notes": "«komen spelen» = venir a jugar: dos infinitivos al final.",
+      "explanation": "Para invitar a una amiga de tu hija. «vriendinnetje»: «frin-DI-ne-tje».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.hoe-laat-kan-ik-haar-ophalen",
+      "text": "Hoe laat kan ik haar ophalen?",
+      "es": "¿A qué hora puedo recogerla?",
+      "explanation": "Al dejar a tu hija en casa de otra familia. «ophalen»: «OP-haa-le».",
+      "register": "neutral",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.het-meisje-met-wie-ze-speelt-woont-hier-om",
+      "text": "Het meisje met wie ze speelt, woont hier om de hoek.",
+      "es": "La niña con la que juega vive aquí a la vuelta de la esquina.",
+      "notes": "Con preposición y persona: «met wie»; el verbo de la relativa al final.",
+      "explanation": "Para hablar de las amistades de tu hija. «meisje»: «MEI-sje».",
+      "register": "neutral",
+      "situation": "familia"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-b1-school.kinderopvang",
+      "word": "kinderopvang",
+      "article": "de",
+      "es": "el cuidado infantil (guarderías, bso…)",
+      "notes": "Nombre general para todo el cuidado de niños fuera de casa.",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.kinderdagverblijf",
+      "word": "kinderdagverblijf",
+      "article": "het",
+      "plural": "kinderdagverblijven",
+      "es": "la guardería (0 a 4 años)",
+      "notes": "En la calle se dice «het kdv» o «de crèche».",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.bso",
+      "word": "bso",
+      "article": "de",
+      "es": "el cuidado extraescolar (después del cole)",
+      "notes": "Buitenschoolse opvang; se dice «bee-es-o».",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.gastouder",
+      "word": "gastouder",
+      "article": "de",
+      "plural": "gastouders",
+      "es": "la madre/el padre de día (cuida niños en su casa)",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.oppas",
+      "word": "oppas",
+      "article": "de",
+      "plural": "oppassen",
+      "es": "el/la canguro",
+      "notes": "«oppassen» = cuidar niños; también «tener cuidado».",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.kinderopvangtoeslag",
+      "word": "kinderopvangtoeslag",
+      "article": "de",
+      "es": "la ayuda para el cuidado infantil",
+      "notes": "Ayuda de Hacienda si los dos padres trabajan.",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.basisschool",
+      "word": "basisschool",
+      "article": "de",
+      "plural": "basisscholen",
+      "es": "el colegio de primaria (de 4 a 12 años)",
+      "situation": "familia",
+      "image": "fluent:school"
+    },
+    {
+      "id": "nl-b1-school.groep",
+      "word": "groep",
+      "article": "de",
+      "plural": "groepen",
+      "es": "el curso (de la basisschool)",
+      "notes": "Groep 1 a 8: groep 1 empieza a los cuatro años, groep 3 a los seis.",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.juf",
+      "word": "juf",
+      "article": "de",
+      "plural": "juffen",
+      "es": "la maestra (seño)",
+      "notes": "Los niños dicen «juf» + nombre: juf Anne.",
+      "situation": "familia",
+      "image": "fluent:woman-teacher"
+    },
+    {
+      "id": "nl-b1-school.meester",
+      "word": "meester",
+      "article": "de",
+      "plural": "meesters",
+      "es": "el maestro (profe)",
+      "situation": "familia",
+      "image": "fluent:man-teacher"
+    },
+    {
+      "id": "nl-b1-school.klas",
+      "word": "klas",
+      "article": "de",
+      "plural": "klassen",
+      "es": "la clase (el grupo y el aula)",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.leerling",
+      "word": "leerling",
+      "article": "de",
+      "plural": "leerlingen",
+      "es": "el alumno",
+      "situation": "familia",
+      "image": "fluent:child"
+    },
+    {
+      "id": "nl-b1-school.schoolplein",
+      "word": "schoolplein",
+      "article": "het",
+      "plural": "schoolpleinen",
+      "es": "el patio del colegio",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.broodtrommel",
+      "word": "broodtrommel",
+      "article": "de",
+      "plural": "broodtrommels",
+      "es": "la fiambrera (del cole)",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.oudergesprek",
+      "word": "oudergesprek",
+      "article": "het",
+      "plural": "oudergesprekken",
+      "es": "la tutoría (reunión con los padres)",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.vriendje",
+      "word": "vriendje",
+      "article": "het",
+      "plural": "vriendjes",
+      "es": "el amiguito",
+      "notes": "Diminutivo de «vriend»: siempre «het». Entre niños, «vriendje» = amigo.",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.ontwikkeling",
+      "word": "ontwikkeling",
+      "article": "de",
+      "plural": "ontwikkelingen",
+      "es": "el desarrollo",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.rapport",
+      "word": "rapport",
+      "article": "het",
+      "plural": "rapporten",
+      "es": "las notas, el boletín",
+      "notes": "Falso amigo: no es un «informe» cualquiera, sino el boletín de notas del cole.",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.huiswerk",
+      "word": "huiswerk",
+      "article": "het",
+      "es": "los deberes",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.koorts",
+      "word": "koorts",
+      "article": "de",
+      "es": "la fiebre",
+      "situation": "familia",
+      "image": "fluent:face-with-thermometer"
+    },
+    {
+      "id": "nl-b1-school.ophalen",
+      "word": "ophalen",
+      "es": "recoger (a alguien)",
+      "notes": "Separable: ik haal haar op.",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.brengen",
+      "word": "brengen",
+      "es": "llevar (a alguien)",
+      "notes": "ik breng, ik bracht, ik heb gebracht.",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.consultatiebureau",
+      "word": "consultatiebureau",
+      "article": "het",
+      "plural": "consultatiebureaus",
+      "es": "el centro de salud infantil (revisiones de 0 a 4 años)",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.vaccinatie",
+      "word": "vaccinatie",
+      "article": "de",
+      "plural": "vaccinaties",
+      "es": "la vacuna",
+      "situation": "familia",
+      "image": "fluent:syringe"
+    },
+    {
+      "id": "nl-b1-school.schoolreisje",
+      "word": "schoolreisje",
+      "article": "het",
+      "plural": "schoolreisjes",
+      "es": "la excursión del colegio",
+      "notes": "Diminutivo: siempre «het».",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.zwemles",
+      "word": "zwemles",
+      "article": "de",
+      "plural": "zwemlessen",
+      "es": "la clase de natación",
+      "notes": "Casi todos los niños la hacen: en un país de agua, es importante.",
+      "situation": "familia",
+      "image": "fluent:person-swimming"
+    },
+    {
+      "id": "nl-b1-school.zwemdiploma",
+      "word": "zwemdiploma",
+      "article": "het",
+      "plural": "zwemdiploma's",
+      "es": "el diploma de natación",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.traktatie",
+      "word": "traktatie",
+      "article": "de",
+      "plural": "traktaties",
+      "es": "lo que se lleva para invitar a la clase",
+      "situation": "familia"
+    },
+    {
+      "id": "nl-b1-school.speelgoed",
+      "word": "speelgoed",
+      "article": "het",
+      "es": "los juguetes",
+      "notes": "Incontable: het speelgoed (no tiene plural).",
+      "situation": "familia",
+      "image": "fluent:teddy-bear"
+    },
+    {
+      "id": "nl-b1-school.speelafspraak",
+      "word": "speelafspraak",
+      "article": "de",
+      "plural": "speelafspraken",
+      "es": "la cita para jugar (playdate)",
+      "situation": "familia"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-school.qa.childcare",
+      "question": "Hoeveel dagen per week zoekt u opvang?",
+      "questionEs": "¿Cuántos días a la semana busca usted cuidado?",
+      "accepted": [
+        {
+          "text": "Drie dagen per week, als dat kan.",
+          "es": "Tres días a la semana, si puede ser."
+        },
+        {
+          "text": "Op maandag, dinsdag en donderdag.",
+          "es": "Los lunes, martes y jueves."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Drie dag per week, als dat kan.",
+          "es": "Tres días a la semana, si puede ser."
+        },
+        {
+          "text": "Drie dagen per week, omdat we werken allebei.",
+          "es": "Tres días a la semana, porque trabajamos los dos."
+        }
+      ],
+      "register": "u",
+      "situation": "familia",
+      "notes": "Tras un número va el plural (drie dagen), y tras «omdat» el verbo al final: omdat we allebei werken.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-school.qa.which-group",
+      "question": "In welke groep komt uw dochter?",
+      "questionEs": "¿En qué curso entra su hija?",
+      "accepted": [
+        {
+          "text": "Ze is zes, dus ze komt in groep drie.",
+          "es": "Tiene seis años, así que entra en tercero."
+        },
+        {
+          "text": "In groep drie, denk ik.",
+          "es": "En tercero, creo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ze heeft zes jaar, dus ze komt in groep drie.",
+          "es": "Tiene seis años, así que entra en tercero."
+        },
+        {
+          "text": "In groep drie, ik denk.",
+          "es": "En tercero, creo."
+        }
+      ],
+      "register": "u",
+      "situation": "familia",
+      "notes": "La edad se dice con «zijn» (ze is zes), y al final de la frase se invierte: denk ik.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-school.qa.which-child",
+      "question": "Wie is die jongen daar?",
+      "questionEs": "¿Quién es ese niño de ahí?",
+      "accepted": [
+        {
+          "text": "Dat is de jongen die altijd naast haar zit.",
+          "es": "Es el niño que siempre se sienta a su lado."
+        },
+        {
+          "text": "Dat is Daan, haar beste vriendje.",
+          "es": "Es Daan, su mejor amiguito."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Dat is de jongen dat altijd naast haar zit.",
+          "es": "Es el niño que siempre se sienta a su lado."
+        },
+        {
+          "text": "Dat is de jongen die zit altijd naast haar.",
+          "es": "Es el niño que siempre se sienta a su lado."
+        }
+      ],
+      "register": "neutral",
+      "situation": "familia",
+      "notes": "«de jongen» lleva el relativo «die», y en la relativa el verbo va al final: die altijd naast haar zit.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-school.qa.how-is-she",
+      "question": "Hoe vindt ze het op school?",
+      "questionEs": "¿Qué tal está en el cole?",
+      "accepted": [
+        {
+          "text": "Ze heeft het erg naar haar zin.",
+          "es": "Está muy a gusto."
+        },
+        {
+          "text": "Leuk! Ze heeft al veel vriendjes.",
+          "es": "¡Le gusta! Ya tiene muchos amiguitos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ze heeft het erg naar zijn zin.",
+          "es": "Está muy a gusto."
+        },
+        {
+          "text": "Ze vindt het leuk, omdat ze heeft veel vriendjes.",
+          "es": "Le gusta porque tiene muchos amiguitos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "familia",
+      "notes": "Para «ella» el posesivo es «haar» (no «zijn»), y tras «omdat» el verbo va al final: omdat ze veel vriendjes heeft.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-school.qa.parent-question",
+      "question": "Heeft u nog vragen?",
+      "questionEs": "¿Tiene usted alguna pregunta?",
+      "accepted": [
+        {
+          "text": "Ja, kunnen wij thuis iets doen om haar te helpen?",
+          "es": "Sí, ¿podemos hacer algo en casa para ayudarla?"
+        },
+        {
+          "text": "Ja, hoe gaat het met haar Nederlands?",
+          "es": "Sí, ¿qué tal va con el neerlandés?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, kunnen wij thuis iets doen voor haar te helpen?",
+          "es": "Sí, ¿podemos hacer algo en casa para ayudarla?"
+        },
+        {
+          "text": "Ja, kunnen wij thuis iets doen om te haar helpen?",
+          "es": "Sí, ¿podemos hacer algo en casa para ayudarla?"
+        }
+      ],
+      "register": "u",
+      "situation": "familia",
+      "notes": "«Para + infinitivo» es «om … te», con «te» justo delante del verbo: om haar te helpen.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-school.qa.sick-child",
+      "question": "Basisschool De Regenboog, goedemorgen.",
+      "questionEs": "Colegio De Regenboog, buenos días.",
+      "accepted": [
+        {
+          "text": "Goedemorgen, ik wil mijn dochter ziek melden.",
+          "es": "Buenos días, quiero avisar de que mi hija está enferma."
+        },
+        {
+          "text": "Goedemorgen, mijn dochter heeft koorts en blijft vandaag thuis.",
+          "es": "Buenos días, mi hija tiene fiebre y hoy se queda en casa."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Goedemorgen, ik wil me ziekmelden voor mijn dochter.",
+          "es": "Buenos días, quiero avisar de que mi hija está enferma."
+        },
+        {
+          "text": "Goedemorgen, mijn dochter is koorts en blijft vandaag thuis.",
+          "es": "Buenos días, mi hija tiene fiebre y hoy se queda en casa."
+        }
+      ],
+      "register": "neutral",
+      "situation": "familia",
+      "notes": "«Me ziekmelden» es darte de baja tú; para tu hija es «haar ziek melden». Y la fiebre se «tiene»: ze heeft koorts.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-school.qa.pickup",
+      "question": "Zal ik de kinderen vandaag van school halen?",
+      "questionEs": "¿Recojo yo hoy a los niños del cole?",
+      "accepted": [
+        {
+          "text": "Graag! Dan haal ik ze morgen op.",
+          "es": "¡Sí, por favor! Entonces mañana los recojo yo."
+        },
+        {
+          "text": "Wat aardig! Ik kan ze om vijf uur bij jou ophalen.",
+          "es": "¡Qué amable! Puedo recogerlos en tu casa a las cinco."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Graag! Dan ik haal ze morgen op.",
+          "es": "¡Sí, por favor! Entonces mañana los recojo yo."
+        },
+        {
+          "text": "Graag! Dan ophaal ik ze morgen.",
+          "es": "¡Sí, por favor! Entonces mañana los recojo yo."
+        }
+      ],
+      "register": "tu",
+      "situation": "familia",
+      "notes": "Tras «dan» va el verbo (dan haal ik), y «ophalen» se separa: haal … op.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-school.qa.playdate",
+      "question": "Mag mijn zoon morgen bij jullie komen spelen?",
+      "questionEs": "¿Puede mi hijo venir a jugar a vuestra casa mañana?",
+      "accepted": [
+        {
+          "text": "Ja hoor, gezellig!",
+          "es": "¡Claro, qué bien!"
+        },
+        {
+          "text": "Morgen kan niet, maar zaterdag wel.",
+          "es": "Mañana no puede ser, pero el sábado sí."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Morgen kan niet, maar zaterdag ja.",
+          "es": "Mañana no puede ser, pero el sábado sí."
+        },
+        {
+          "text": "Ja hoor, hij mag komen speelt.",
+          "es": "Claro, puede venir a jugar."
+        }
+      ],
+      "register": "tu",
+      "situation": "familia",
+      "notes": "Para contrastar con una negación se usa «wel» (no «ja»), y tras «komen» va el infinitivo: komen spelen.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-school.qa.treat",
+      "question": "Wat wil ze trakteren op haar verjaardag?",
+      "questionEs": "¿Qué quiere llevar a clase por su cumpleaños?",
+      "accepted": [
+        {
+          "text": "Fruitspiesjes, die zijn gezond.",
+          "es": "Brochetas de fruta, que son sanas."
+        },
+        {
+          "text": "Iets gezonds, misschien mandarijntjes.",
+          "es": "Algo sano, quizá mandarinas."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Fruitspiesjes, die is gezond.",
+          "es": "Brochetas de fruta, que son sanas."
+        },
+        {
+          "text": "Iets gezond, misschien mandarijntjes.",
+          "es": "Algo sano, quizá mandarinas."
+        }
+      ],
+      "register": "neutral",
+      "situation": "familia",
+      "notes": "Con un plural el verbo va en plural (die zijn), y tras «iets» el adjetivo lleva -s: iets gezonds.",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}

@@ -1,0 +1,1117 @@
+{
+  "id": "nl-b1-meetings",
+  "order": 122,
+  "title": "Reuniones y acuerdos: opinar, proponer, ziekmelden",
+  "description": "Seguir un overleg y una stand-up, dar tu opinión y llevar la contraria con educación, proponer con «zou», cerrar acuerdos y plazos, y darte de baja cuando estás enfermo.",
+  "emoji": "🗓️",
+  "situation": "trabajo",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-meetings.l.overleg",
+      "title": "El overleg y la agenda",
+      "items": [
+        "nl-b1-meetings.overleg",
+        "nl-b1-workplace.vergadering",
+        "nl-b1-meetings.hoe-laat-begint-het-overleg",
+        "nl-b1-meetings.agenda",
+        "nl-b1-meetings.agendapunt",
+        "nl-b1-meetings.wat-staat-er-vandaag-op-de-agenda",
+        "nl-b1-meetings.ik-wil-nog-een-punt-aan-de-agenda-toevoegen",
+        "nl-b1-meetings.stand-up",
+        "nl-b1-meetings.de-stand-up-duurt-maar-een-kwartier",
+        "nl-b1-meetings.voorzitter",
+        "nl-b1-meetings.notulen",
+        "nl-b1-meetings.wie-maakt-vandaag-de-notulen",
+        "nl-b1-meetings.zullen-we-beginnen",
+        "nl-b1-meetings.sorry-dat-ik-te-laat-ben-de-trein-had",
+        "nl-b1-meetings.kun-je-je-scherm-even-delen",
+        "nl-b1-meetings.presentatie",
+        "nl-b1-meetings.laten-we-naar-het-volgende-punt-gaan",
+        "nl-b1-meetings.we-lopen-een-beetje-uit"
+      ]
+    },
+    {
+      "id": "nl-b1-meetings.l.mening",
+      "title": "Opinar y estar (o no) de acuerdo",
+      "items": [
+        "nl-b1-workplace.mening",
+        "nl-b1-workplace.wat-vind-jij-ervan",
+        "nl-b1-meetings.eens",
+        "nl-b1-meetings.ik-ben-het-met-je-eens",
+        "nl-b1-meetings.ik-ben-het-niet-helemaal-met-je-eens",
+        "nl-b1-meetings.daar-ben-ik-het-mee-eens",
+        "nl-b1-meetings.dat-is-een-goed-punt",
+        "nl-b1-meetings.standpunt",
+        "nl-b1-meetings.argument",
+        "nl-b1-meetings.volgens-mij-is-dat-te-duur",
+        "nl-b1-meetings.ik-zie-het-anders",
+        "nl-b1-meetings.ik-snap-je-punt-maar-ik-twijfel-nog",
+        "nl-b1-meetings.ik-ben-ertegen-want-het-kost-te-veel-tijd",
+        "nl-b1-meetings.ik-ben-voor-dit-plan-omdat-het-sneller-is",
+        "nl-b1-meetings.mag-ik-even-iets-zeggen",
+        "nl-b1-meetings.laat-me-even-uitpraten",
+        "nl-b1-meetings.qa.agree",
+        "nl-b1-meetings.qa.disagree"
+      ]
+    },
+    {
+      "id": "nl-b1-meetings.l.voorstellen",
+      "title": "Proponer con «zou»",
+      "items": [
+        "nl-b1-meetings.voorstel",
+        "nl-b1-meetings.voorstellen",
+        "nl-b1-meetings.ik-zou-voorstellen-om-het-eerst-te-testen",
+        "nl-b1-meetings.zou-het-niet-beter-zijn-om-te-wachten",
+        "nl-b1-meetings.zouden-we-de-deadline-kunnen-verschuiven",
+        "nl-b1-meetings.wat-zou-je-ervan-vinden-als-we-het-anders",
+        "nl-b1-meetings.misschien-kunnen-we-het-in-kleinere-taken-opsplitsen",
+        "nl-b1-meetings.taak",
+        "nl-b1-meetings.mijn-voorstel-is-om-elke-week-kort-te-overleggen",
+        "nl-b1-meetings.zou-jij-dat-kunnen-uitzoeken",
+        "nl-b1-meetings.ik-heb-een-idee-we-doen-eerst-een-pilot",
+        "nl-b1-workplace.idee",
+        "nl-b1-meetings.oplossing",
+        "nl-b1-meetings.compromis",
+        "nl-b1-meetings.laten-we-een-compromis-zoeken",
+        "nl-b1-meetings.dat-zou-kunnen",
+        "nl-b1-meetings.qa.proposal",
+        "nl-b1-meetings.qa.alternative"
+      ]
+    },
+    {
+      "id": "nl-b1-meetings.l.afspraken",
+      "title": "Acuerdos, tareas y plazos",
+      "items": [
+        "nl-b1-meetings.afspraak",
+        "nl-b1-meetings.afspreken",
+        "nl-b1-meetings.wat-spreken-we-af",
+        "nl-b1-meetings.we-spreken-dus-af-dat-ik-de-klant-bel",
+        "nl-b1-meetings.besluit",
+        "nl-b1-meetings.beslissen",
+        "nl-b1-meetings.wie-neemt-het-besluit",
+        "nl-b1-meetings.actiepunt",
+        "nl-b1-meetings.wie-pakt-dit-actiepunt-op",
+        "nl-b1-meetings.ik-pak-het-op",
+        "nl-b1-meetings.deadline",
+        "nl-b1-meetings.wanneer-is-de-deadline",
+        "nl-b1-meetings.ik-heb-het-vrijdag-af",
+        "nl-b1-meetings.ik-red-het-niet-voor-vrijdag",
+        "nl-b1-meetings.planning",
+        "nl-b1-meetings.uitstellen",
+        "nl-b1-meetings.kunnen-we-het-naar-volgende-week-verschuiven",
+        "nl-b1-meetings.prioriteit",
+        "nl-b1-meetings.dit-heeft-nu-prioriteit",
+        "nl-b1-meetings.samenvatten",
+        "nl-b1-meetings.ik-stuur-iedereen-een-korte-samenvatting",
+        "nl-b1-meetings.afronden",
+        "nl-b1-meetings.laten-we-afronden",
+        "nl-b1-meetings.qa.deadline",
+        "nl-b1-meetings.qa.action-point",
+        "nl-b1-meetings.qa.agenda"
+      ]
+    },
+    {
+      "id": "nl-b1-meetings.l.ziekmelden",
+      "title": "Darte de baja y volver",
+      "items": [
+        "nl-b1-meetings.zich-ziekmelden",
+        "nl-b1-meetings.ik-wil-me-ziekmelden",
+        "nl-b1-meetings.ik-meld-me-ziek-ik-heb-koorts",
+        "nl-b1-meetings.ik-ben-vandaag-ziek-dus-ik-kom-niet",
+        "nl-b1-meetings.ik-denk-dat-ik-maandag-weer-beter-ben",
+        "nl-b1-meetings.kun-je-mijn-meeting-van-tien-uur-afzeggen",
+        "nl-b1-meetings.zich-beter-melden",
+        "nl-b1-meetings.ik-meld-me-morgen-weer-beter",
+        "nl-b1-meetings.bedrijfsarts",
+        "nl-b1-meetings.de-bedrijfsarts-belt-je-volgende-week",
+        "nl-b1-meetings.herstellen",
+        "nl-b1-meetings.ik-ben-nog-niet-helemaal-hersteld",
+        "nl-b1-meetings.beterschap",
+        "nl-b1-meetings.qa.sick-call",
+        "nl-b1-meetings.qa.when-back",
+        "nl-b1-meetings.qa.back"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-b1-meetings.hoe-laat-begint-het-overleg",
+      "text": "Hoe laat begint het overleg?",
+      "es": "¿A qué hora empieza la reunión?",
+      "explanation": "Para preguntar la hora a un compañero. «overleg»: acento en «O»; la «g» final, de garganta como la «j».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.wat-staat-er-vandaag-op-de-agenda",
+      "text": "Wat staat er vandaag op de agenda?",
+      "es": "¿Qué hay hoy en el orden del día?",
+      "notes": "«er staat … op de agenda» = hay … en el orden del día.",
+      "explanation": "Al empezar una reunión. «staat»: «staat» con «aa» larga.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-wil-nog-een-punt-aan-de-agenda-toevoegen",
+      "text": "Ik wil nog een punt aan de agenda toevoegen.",
+      "es": "Quiero añadir otro punto al orden del día.",
+      "notes": "toevoegen es separable: ik voeg … toe; con «wil», el infinitivo entero va al final.",
+      "explanation": "Antes de empezar, si te falta un tema. «toevoegen»: «TOE-fu-je», con «oe» como «u».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.de-stand-up-duurt-maar-een-kwartier",
+      "text": "De stand-up duurt maar een kwartier.",
+      "es": "La stand-up dura solo un cuarto de hora.",
+      "notes": "Aquí «maar» significa «solo», no «pero».",
+      "explanation": "Para explicar la reunión diaria a alguien nuevo. «duurt»: «dyrt», con la «u» redondeada.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.wie-maakt-vandaag-de-notulen",
+      "text": "Wie maakt vandaag de notulen?",
+      "es": "¿Quién toma el acta hoy?",
+      "explanation": "Para repartir el acta al empezar. «notulen»: «NO-ty-le», la «-en» final casi muda.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.zullen-we-beginnen",
+      "text": "Zullen we beginnen?",
+      "es": "¿Empezamos?",
+      "explanation": "Lo dice quien dirige la reunión. «zullen»: la «u» corta es casi una «e» redondeada.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.sorry-dat-ik-te-laat-ben-de-trein-had",
+      "text": "Sorry dat ik te laat ben, de trein had vertraging.",
+      "es": "Perdón por llegar tarde, el tren llevaba retraso.",
+      "notes": "Tras «dat», el verbo va al final: …dat ik te laat ben.",
+      "explanation": "Para disculparte al entrar. «vertraging»: «fer-TRAA-jing».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.kun-je-je-scherm-even-delen",
+      "text": "Kun je je scherm even delen?",
+      "es": "¿Puedes compartir tu pantalla un momento?",
+      "explanation": "En una reunión por Teams. «scherm»: «s» + «j» de garganta: «sjerm».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.laten-we-naar-het-volgende-punt-gaan",
+      "text": "Laten we naar het volgende punt gaan.",
+      "es": "Pasemos al siguiente punto.",
+      "explanation": "Para hacer avanzar la reunión. «volgende»: «VOL-jen-de».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.we-lopen-een-beetje-uit",
+      "text": "We lopen een beetje uit.",
+      "es": "Vamos un poco con retraso (la reunión se alarga).",
+      "notes": "uitlopen (separable) = alargarse, pasarse de la hora: we lopen uit.",
+      "explanation": "Cuando la reunión pasa de la hora. «lopen»: «LOO-pe», la «-en» final casi muda.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-ben-het-met-je-eens",
+      "text": "Ik ben het met je eens.",
+      "es": "Estoy de acuerdo contigo.",
+      "notes": "het eens zijn met iemand = estar de acuerdo con alguien; el «het» no se traduce.",
+      "explanation": "Para apoyar a un compañero. «eens» suena «eens» con «ee» larga, como «én» alargada.",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-ben-het-niet-helemaal-met-je-eens",
+      "text": "Ik ben het niet helemaal met je eens.",
+      "es": "No estoy del todo de acuerdo contigo.",
+      "explanation": "La forma suave de discrepar. «helemaal»: acento en «HEE».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.daar-ben-ik-het-mee-eens",
+      "text": "Daar ben ik het mee eens.",
+      "es": "En eso estoy de acuerdo.",
+      "notes": "Con cosas no se dice «met dat» sino «daarmee», partido: daar … mee.",
+      "explanation": "Para apoyar una idea concreta. «daar … mee» = con eso; se separa en la frase.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.dat-is-een-goed-punt",
+      "text": "Dat is een goed punt.",
+      "es": "Es un buen punto (tienes razón en eso).",
+      "explanation": "Para reconocer un argumento antes de matizar. «goed»: «jut», con «g» de garganta y «d» como «t».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.volgens-mij-is-dat-te-duur",
+      "text": "Volgens mij is dat te duur.",
+      "es": "En mi opinión, eso es demasiado caro.",
+      "notes": "Tras «volgens mij» va directamente el verbo (V2): volgens mij is…",
+      "explanation": "Para dar tu opinión sin rodeos. «volgens»: «VOL-jens».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-zie-het-anders",
+      "text": "Ik zie het anders.",
+      "es": "Yo lo veo de otra manera.",
+      "explanation": "Discrepar de forma directa pero educada. «zie»: «zi», la «z» casi como «s».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-snap-je-punt-maar-ik-twijfel-nog",
+      "text": "Ik snap je punt, maar ik twijfel nog.",
+      "es": "Entiendo lo que dices, pero aún tengo dudas.",
+      "notes": "Tras «maar» el orden es normal: …maar ik twijfel.",
+      "explanation": "Para no cerrar la puerta a una idea. «twijfel»: «TWEI-fel», «ij» = «ei».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-ben-ertegen-want-het-kost-te-veel-tijd",
+      "text": "Ik ben ertegen, want het kost te veel tijd.",
+      "es": "Estoy en contra, porque cuesta demasiado tiempo.",
+      "notes": "«want» (porque) no cambia el orden: want het kost… Con «omdat» el verbo iría al final.",
+      "explanation": "Para explicar por qué dices que no. «ertegen»: «er-TEE-je».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-ben-voor-dit-plan-omdat-het-sneller-is",
+      "text": "Ik ben voor dit plan, omdat het sneller is.",
+      "es": "Estoy a favor de este plan porque es más rápido.",
+      "notes": "Tras «omdat», el verbo al final: omdat het sneller is.",
+      "explanation": "Para apoyar una propuesta con un motivo. «sneller»: «SNE-ler».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.mag-ik-even-iets-zeggen",
+      "text": "Mag ik even iets zeggen?",
+      "es": "¿Puedo decir algo?",
+      "explanation": "Para pedir la palabra. «zeggen»: «ZE-je», con «g» de garganta suave.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.laat-me-even-uitpraten",
+      "text": "Laat me even uitpraten.",
+      "es": "Déjame terminar de hablar.",
+      "notes": "uitpraten = terminar de hablar (separable); «even» lo suaviza.",
+      "explanation": "Cuando te interrumpen; es directo, pero normal en una reunión holandesa. «uitpraten»: «AUT-praa-te».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-zou-voorstellen-om-het-eerst-te-testen",
+      "text": "Ik zou voorstellen om het eerst te testen.",
+      "es": "Yo propondría probarlo primero.",
+      "notes": "«zou» + infinitivo = condicional educado; «om … te» + infinitivo al final.",
+      "explanation": "Para proponer algo con suavidad. «voorstellen»: acento en «VOOR».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.zou-het-niet-beter-zijn-om-te-wachten",
+      "text": "Zou het niet beter zijn om te wachten?",
+      "es": "¿No sería mejor esperar?",
+      "notes": "«Zou … zijn?» = ¿sería…?: la forma amable de llevar la contraria.",
+      "explanation": "Para frenar una decisión sin chocar. «zou»: «zau».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.zouden-we-de-deadline-kunnen-verschuiven",
+      "text": "Zouden we de deadline kunnen verschuiven?",
+      "es": "¿Podríamos mover la fecha límite?",
+      "notes": "Dos infinitivos (kunnen verschuiven) van juntos al final.",
+      "explanation": "Para pedir más tiempo con educación. «verschuiven»: «fer-SJAU-fe», «sch» = «s» + «j».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.wat-zou-je-ervan-vinden-als-we-het-anders",
+      "text": "Wat zou je ervan vinden als we het anders doen?",
+      "es": "¿Qué te parecería si lo hiciéramos de otra manera?",
+      "notes": "Tras «als» el verbo va al final: als we het anders doen.",
+      "explanation": "Para proponer algo a un compañero sin imponer. «ervan»: «er-FAN».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.misschien-kunnen-we-het-in-kleinere-taken-opsplitsen",
+      "text": "Misschien kunnen we het in kleinere taken opsplitsen.",
+      "es": "Quizá podamos dividirlo en tareas más pequeñas.",
+      "notes": "Tras «misschien» va el verbo (V2): misschien kunnen we…",
+      "explanation": "Para hacer más manejable un proyecto. «misschien»: «mis-SJIN».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.mijn-voorstel-is-om-elke-week-kort-te-overleggen",
+      "text": "Mijn voorstel is om elke week kort te overleggen.",
+      "es": "Mi propuesta es reunirnos brevemente cada semana.",
+      "explanation": "Para presentar tu idea en la reunión. «elke»: «EL-ke».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.zou-jij-dat-kunnen-uitzoeken",
+      "text": "Zou jij dat kunnen uitzoeken?",
+      "es": "¿Podrías averiguar eso?",
+      "notes": "uitzoeken = averiguar, investigar (separable).",
+      "explanation": "Para pedir algo a un compañero con suavidad. «uitzoeken»: «AUT-zu-ke».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-heb-een-idee-we-doen-eerst-een-pilot",
+      "text": "Ik heb een idee: we doen eerst een pilot.",
+      "es": "Tengo una idea: hacemos primero una prueba piloto.",
+      "explanation": "Para lanzar una idea concreta. «idee»: «i-DEE», acento al final.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.laten-we-een-compromis-zoeken",
+      "text": "Laten we een compromis zoeken.",
+      "es": "Busquemos un término medio.",
+      "notes": "En una cultura de «polderen», buscar el compromis es lo normal.",
+      "explanation": "Cuando hay dos posturas. «compromis»: «kom-pro-MIS».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.dat-zou-kunnen",
+      "text": "Dat zou kunnen.",
+      "es": "Podría ser.",
+      "explanation": "Respuesta prudente ante una propuesta. «kunnen»: «KU-ne», con la «u» corta.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.wat-spreken-we-af",
+      "text": "Wat spreken we af?",
+      "es": "¿Qué acordamos?",
+      "notes": "spreken … af = afspreken: la partícula va al final.",
+      "explanation": "Para cerrar un tema con algo concreto. «spreken»: «SPREE-ke».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.we-spreken-dus-af-dat-ik-de-klant-bel",
+      "text": "We spreken dus af dat ik de klant bel.",
+      "es": "Entonces acordamos que yo llamo al cliente.",
+      "notes": "Tras «dat» el verbo va al final: dat ik de klant bel.",
+      "explanation": "Para resumir el acuerdo en voz alta. «klant»: la «a» corta y la «t» final se oye.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.wie-neemt-het-besluit",
+      "text": "Wie neemt het besluit?",
+      "es": "¿Quién toma la decisión?",
+      "notes": "Se dice «een besluit nemen» (tomar una decisión).",
+      "explanation": "Para saber quién decide al final. «besluit»: «be-SLAUT», «ui» como «au» cerrada.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.wie-pakt-dit-actiepunt-op",
+      "text": "Wie pakt dit actiepunt op?",
+      "es": "¿Quién se encarga de esta tarea?",
+      "notes": "oppakken = encargarse de algo (separable): wie pakt het op?",
+      "explanation": "Al repartir tareas al final. «actiepunt»: «AK-si-punt».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-pak-het-op",
+      "text": "Ik pak het op.",
+      "es": "Me encargo yo.",
+      "explanation": "Para ofrecerte. «pak»: «a» corta, como en español.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.wanneer-is-de-deadline",
+      "text": "Wanneer is de deadline?",
+      "es": "¿Cuándo es la fecha límite?",
+      "explanation": "Para saber el plazo. «wanneer»: acento en «NEER».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-heb-het-vrijdag-af",
+      "text": "Ik heb het vrijdag af.",
+      "es": "Lo tengo terminado el viernes.",
+      "notes": "«iets af hebben» = tener algo terminado.",
+      "explanation": "Para comprometerte con un plazo. «vrijdag»: «FREI-daj».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-red-het-niet-voor-vrijdag",
+      "text": "Ik red het niet voor vrijdag.",
+      "es": "No llego para el viernes.",
+      "notes": "«het redden» = conseguirlo, llegar a tiempo. «niet» va tras «het».",
+      "explanation": "Para avisar a tiempo de que no llegas. «red» suena «ret», la «d» final como «t».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.kunnen-we-het-naar-volgende-week-verschuiven",
+      "text": "Kunnen we het naar volgende week verschuiven?",
+      "es": "¿Podemos pasarlo a la semana que viene?",
+      "explanation": "Para mover una reunión o una entrega. «volgende»: «VOL-jen-de».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.dit-heeft-nu-prioriteit",
+      "text": "Dit heeft nu prioriteit.",
+      "es": "Esto ahora tiene prioridad.",
+      "explanation": "Para decir qué va primero. «prioriteit»: «pri-o-ri-TEIT».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-stuur-iedereen-een-korte-samenvatting",
+      "text": "Ik stuur iedereen een korte samenvatting.",
+      "es": "Le mando a todos un breve resumen.",
+      "explanation": "Al cerrar la reunión. «iedereen»: «I-de-reen».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.laten-we-afronden",
+      "text": "Laten we afronden.",
+      "es": "Vamos terminando.",
+      "explanation": "Lo dice quien dirige cuando se acaba el tiempo. «afronden»: «AF-ron-de».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-wil-me-ziekmelden",
+      "text": "Ik wil me ziekmelden.",
+      "es": "Quiero darme de baja por enfermedad.",
+      "notes": "Con «wil», ziekmelden va entero al final.",
+      "explanation": "Lo primero que dices al llamar a tu jefe. «ziekmelden»: «ZIK-mel-de».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-meld-me-ziek-ik-heb-koorts",
+      "text": "Ik meld me ziek, ik heb koorts.",
+      "es": "Me doy de baja, tengo fiebre.",
+      "notes": "meld … ziek = ziekmelden: la parte «ziek» va detrás del pronombre.",
+      "explanation": "Llamada o mensaje por la mañana. «koorts»: «koorts», «oo» larga.",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-ben-vandaag-ziek-dus-ik-kom-niet",
+      "text": "Ik ben vandaag ziek, dus ik kom niet.",
+      "es": "Hoy estoy enfermo, así que no voy.",
+      "notes": "«dus» (así que) no cambia el orden: dus ik kom niet.",
+      "explanation": "Mensaje rápido al equipo. «ziek»: «zik», con «ie» = «i».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-denk-dat-ik-maandag-weer-beter-ben",
+      "text": "Ik denk dat ik maandag weer beter ben.",
+      "es": "Creo que el lunes ya estaré bien.",
+      "notes": "Tras «dat», el verbo al final: dat ik … beter ben.",
+      "explanation": "Para decir cuándo vuelves. «beter»: «BEE-ter».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.kun-je-mijn-meeting-van-tien-uur-afzeggen",
+      "text": "Kun je mijn meeting van tien uur afzeggen?",
+      "es": "¿Puedes cancelar mi reunión de las diez?",
+      "notes": "afzeggen = cancelar una cita (separable).",
+      "explanation": "A un compañero cuando estás enfermo. «afzeggen»: «AF-ze-je».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-meld-me-morgen-weer-beter",
+      "text": "Ik meld me morgen weer beter.",
+      "es": "Mañana me doy de alta.",
+      "explanation": "Para avisar de que vuelves. «morgen»: «MOR-je».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.de-bedrijfsarts-belt-je-volgende-week",
+      "text": "De bedrijfsarts belt je volgende week.",
+      "es": "El médico de empresa te llamará la semana que viene.",
+      "notes": "«bellen» = llamar por teléfono.",
+      "explanation": "Lo que te dirá tu jefe en una baja larga. «bedrijfsarts»: «be-DREIFS-arts».",
+      "register": "tu",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.ik-ben-nog-niet-helemaal-hersteld",
+      "text": "Ik ben nog niet helemaal hersteld.",
+      "es": "Todavía no me he recuperado del todo.",
+      "notes": "«herstellen» hace el perfecto con «zijn»: ik ben hersteld.",
+      "explanation": "Si te preguntan cómo estás tras la baja. «hersteld»: «her-STELT».",
+      "register": "neutral",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.beterschap",
+      "text": "Beterschap!",
+      "es": "¡Que te mejores!",
+      "explanation": "Lo que le dices a un compañero enfermo. «beterschap»: «BEE-ter-sjap».",
+      "register": "neutral",
+      "situation": "trabajo"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-b1-meetings.overleg",
+      "word": "overleg",
+      "article": "het",
+      "plural": "overleggen",
+      "es": "la reunión, la consulta",
+      "notes": "La palabra más común para una reunión de trabajo; «overleggen» = consultar, hablarlo.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.agenda",
+      "word": "agenda",
+      "article": "de",
+      "plural": "agenda's",
+      "es": "el orden del día; la agenda",
+      "notes": "Sirve para el orden del día de una reunión y para tu agenda personal.",
+      "situation": "trabajo",
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "nl-b1-meetings.agendapunt",
+      "word": "agendapunt",
+      "article": "het",
+      "plural": "agendapunten",
+      "es": "el punto del orden del día",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.stand-up",
+      "word": "stand-up",
+      "article": "de",
+      "plural": "stand-ups",
+      "es": "la reunión diaria de pie (stand-up)",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.voorzitter",
+      "word": "voorzitter",
+      "article": "de",
+      "plural": "voorzitters",
+      "es": "el/la presidente (de la reunión), quien la dirige",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.notulen",
+      "word": "notulen",
+      "article": "de",
+      "es": "el acta (de la reunión)",
+      "notes": "Solo se usa en plural: de notulen. Tomar acta = notuleren.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.presentatie",
+      "word": "presentatie",
+      "article": "de",
+      "plural": "presentaties",
+      "es": "la presentación",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.eens",
+      "word": "eens",
+      "es": "de acuerdo (en «het eens zijn»)",
+      "notes": "Siempre «het eens zijn met»: ik ben het met je eens. Nunca «ik ben eens».",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.standpunt",
+      "word": "standpunt",
+      "article": "het",
+      "plural": "standpunten",
+      "es": "el punto de vista, la postura",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.argument",
+      "word": "argument",
+      "article": "het",
+      "plural": "argumenten",
+      "es": "el argumento",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.voorstel",
+      "word": "voorstel",
+      "article": "het",
+      "plural": "voorstellen",
+      "es": "la propuesta",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.voorstellen",
+      "word": "voorstellen",
+      "es": "proponer",
+      "notes": "Separable: ik stel voor. Ojo: «zich voorstellen» (con me/je) = presentarse.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.taak",
+      "word": "taak",
+      "article": "de",
+      "plural": "taken",
+      "es": "la tarea",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.oplossing",
+      "word": "oplossing",
+      "article": "de",
+      "plural": "oplossingen",
+      "es": "la solución",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.compromis",
+      "word": "compromis",
+      "article": "het",
+      "plural": "compromissen",
+      "es": "el término medio, el acuerdo intermedio",
+      "notes": "Falso amigo: no es «compromiso» (obligación), sino el punto intermedio entre dos posturas.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.afspraak",
+      "word": "afspraak",
+      "article": "de",
+      "plural": "afspraken",
+      "es": "el acuerdo; la cita",
+      "notes": "Sirve para «cita» y para «lo que acordamos»: afspraken maken.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.afspreken",
+      "word": "afspreken",
+      "es": "acordar, quedar",
+      "notes": "Separable: we spreken af dat…",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.besluit",
+      "word": "besluit",
+      "article": "het",
+      "plural": "besluiten",
+      "es": "la decisión",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.beslissen",
+      "word": "beslissen",
+      "es": "decidir",
+      "notes": "ik beslis, ik heb beslist.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.actiepunt",
+      "word": "actiepunt",
+      "article": "het",
+      "plural": "actiepunten",
+      "es": "la tarea pendiente (de una reunión)",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.deadline",
+      "word": "deadline",
+      "article": "de",
+      "plural": "deadlines",
+      "es": "la fecha límite",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.planning",
+      "word": "planning",
+      "article": "de",
+      "es": "la planificación, el calendario de trabajo",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.uitstellen",
+      "word": "uitstellen",
+      "es": "aplazar",
+      "notes": "Separable: we stellen het uit.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.prioriteit",
+      "word": "prioriteit",
+      "article": "de",
+      "plural": "prioriteiten",
+      "es": "la prioridad",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.samenvatten",
+      "word": "samenvatten",
+      "es": "resumir",
+      "notes": "Separable: ik vat het samen.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.afronden",
+      "word": "afronden",
+      "es": "terminar, cerrar",
+      "notes": "Separable: we ronden af.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.zich-ziekmelden",
+      "word": "zich ziekmelden",
+      "es": "darse de baja por enfermedad",
+      "notes": "Reflexivo y separable: ik meld me ziek. Se avisa al jefe antes de empezar el día.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.zich-beter-melden",
+      "word": "zich beter melden",
+      "es": "darse de alta (avisar de que vuelves)",
+      "notes": "ik meld me beter = aviso de que ya estoy bien y vuelvo al trabajo.",
+      "situation": "trabajo"
+    },
+    {
+      "id": "nl-b1-meetings.bedrijfsarts",
+      "word": "bedrijfsarts",
+      "article": "de",
+      "plural": "bedrijfsartsen",
+      "es": "el médico de empresa",
+      "notes": "Te llama si la baja dura varias semanas; no es tu huisarts.",
+      "situation": "trabajo",
+      "image": "fluent:health-worker"
+    },
+    {
+      "id": "nl-b1-meetings.herstellen",
+      "word": "herstellen",
+      "es": "recuperarse; reparar",
+      "notes": "Falso amigo: no es «herir». ik herstel, ik ben hersteld.",
+      "situation": "trabajo"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-meetings.qa.agree",
+      "question": "Wat vind jij van het nieuwe plan?",
+      "questionEs": "¿Qué te parece el nuevo plan?",
+      "accepted": [
+        {
+          "text": "Volgens mij is het een goed idee.",
+          "es": "En mi opinión, es una buena idea."
+        },
+        {
+          "text": "Ik ben ervoor, want het is sneller.",
+          "es": "Estoy a favor, porque es más rápido."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Volgens mij het is een goed idee.",
+          "es": "En mi opinión, es una buena idea."
+        },
+        {
+          "text": "Ik ben ervoor, omdat het is sneller.",
+          "es": "Estoy a favor, porque es más rápido."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Tras «volgens mij» va el verbo (is het), y tras «omdat» el verbo va al final: omdat het sneller is.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.disagree",
+      "question": "Ben je het met me eens?",
+      "questionEs": "¿Estás de acuerdo conmigo?",
+      "accepted": [
+        {
+          "text": "Niet helemaal. Ik zie het anders.",
+          "es": "No del todo. Yo lo veo de otra manera."
+        },
+        {
+          "text": "Ja, ik ben het helemaal met je eens.",
+          "es": "Sí, estoy totalmente de acuerdo contigo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik ben eens met je.",
+          "es": "Sí, estoy de acuerdo contigo."
+        },
+        {
+          "text": "Ja, ik heb het met je eens.",
+          "es": "Sí, estoy de acuerdo contigo."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Se dice «het eens zijn met»: con «zijn» (no «hebben») y con «het».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.proposal",
+      "question": "Hoe zullen we dit oplossen?",
+      "questionEs": "¿Cómo lo solucionamos?",
+      "accepted": [
+        {
+          "text": "Ik zou voorstellen om het eerst te testen.",
+          "es": "Yo propondría probarlo primero."
+        },
+        {
+          "text": "Misschien kunnen we het in kleinere taken opsplitsen.",
+          "es": "Quizá podamos dividirlo en tareas más pequeñas."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik zou voorstellen om te het eerst testen.",
+          "es": "Yo propondría probarlo primero."
+        },
+        {
+          "text": "Ik zou me voorstellen om het eerst te testen.",
+          "es": "Yo propondría probarlo primero."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«te» va justo delante del infinitivo (om het eerst te testen), y con «me», «zich voorstellen» es presentarse.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.alternative",
+      "question": "Zullen we het zo doen?",
+      "questionEs": "¿Lo hacemos así?",
+      "accepted": [
+        {
+          "text": "Zou het niet beter zijn om te wachten?",
+          "es": "¿No sería mejor esperar?"
+        },
+        {
+          "text": "Dat zou kunnen. Laten we een compromis zoeken.",
+          "es": "Podría ser. Busquemos un término medio."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Zou het niet beter zijn om wachten?",
+          "es": "¿No sería mejor esperar?"
+        },
+        {
+          "text": "Zou het niet beter zijn te om wachten?",
+          "es": "¿No sería mejor esperar?"
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "La estructura es «om … te» + infinitivo: om te wachten.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.deadline",
+      "question": "Lukt het om dit vrijdag af te hebben?",
+      "questionEs": "¿Te da tiempo a tenerlo terminado el viernes?",
+      "accepted": [
+        {
+          "text": "Ja, dat lukt wel.",
+          "es": "Sí, me da tiempo."
+        },
+        {
+          "text": "Nee, ik red het niet voor vrijdag. Kan het maandag?",
+          "es": "No, no llego para el viernes. ¿Puede ser el lunes?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik red niet het voor vrijdag.",
+          "es": "No, no llego para el viernes."
+        },
+        {
+          "text": "Nee, het lukt niet, omdat ik heb te veel werk.",
+          "es": "No, no me da tiempo porque tengo demasiado trabajo."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "«niet» va detrás de «het» (ik red het niet), y tras «omdat» el verbo va al final: omdat ik te veel werk heb.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.action-point",
+      "question": "Wie pakt dit actiepunt op?",
+      "questionEs": "¿Quién se encarga de esta tarea?",
+      "accepted": [
+        {
+          "text": "Ik pak het op.",
+          "es": "Me encargo yo."
+        },
+        {
+          "text": "Ik doe het wel, want ik heb deze week tijd.",
+          "es": "Lo hago yo, que esta semana tengo tiempo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik oppak het.",
+          "es": "Me encargo yo."
+        },
+        {
+          "text": "Ik doe het wel, omdat ik heb deze week tijd.",
+          "es": "Lo hago yo, porque esta semana tengo tiempo."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«oppakken» se separa (ik pak het op); y «omdat» manda el verbo al final, «want» no.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.agenda",
+      "question": "Heeft iemand nog een punt voor de agenda?",
+      "questionEs": "¿Alguien tiene otro punto para el orden del día?",
+      "accepted": [
+        {
+          "text": "Ja, ik wil het nog even over de planning hebben.",
+          "es": "Sí, quiero hablar un momento de la planificación."
+        },
+        {
+          "text": "Nee, voor mij is alles duidelijk.",
+          "es": "No, para mí está todo claro."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik wil hebben het nog even over de planning.",
+          "es": "Sí, quiero hablar un momento de la planificación."
+        },
+        {
+          "text": "Nee, voor mij alles is duidelijk.",
+          "es": "No, para mí está todo claro."
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "Con «wil» el infinitivo va al final, y tras «voor mij» viene el verbo: voor mij is alles…",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.sick-call",
+      "question": "Hoi Hernán, wat is er aan de hand?",
+      "questionEs": "Hola, Hernán, ¿qué pasa?",
+      "accepted": [
+        {
+          "text": "Ik wil me ziekmelden. Ik heb koorts.",
+          "es": "Quiero darme de baja. Tengo fiebre."
+        },
+        {
+          "text": "Ik ben ziek, dus ik kom vandaag niet.",
+          "es": "Estoy enfermo, así que hoy no voy."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb ziek, dus ik kom vandaag niet.",
+          "es": "Estoy enfermo, así que hoy no voy."
+        },
+        {
+          "text": "Ik wil me ziekmelden, omdat ik heb koorts.",
+          "es": "Quiero darme de baja porque tengo fiebre."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Se dice «ik ben ziek» (no «heb»), y tras «omdat» el verbo va al final: omdat ik koorts heb.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.when-back",
+      "question": "Wanneer denk je dat je weer beter bent?",
+      "questionEs": "¿Cuándo crees que estarás bien?",
+      "accepted": [
+        {
+          "text": "Ik denk dat ik maandag weer beter ben.",
+          "es": "Creo que el lunes ya estaré bien."
+        },
+        {
+          "text": "Over een paar dagen, hoop ik.",
+          "es": "Dentro de unos días, espero."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik denk dat ik ben maandag weer beter.",
+          "es": "Creo que el lunes ya estaré bien."
+        },
+        {
+          "text": "Over een paar dagen, ik hoop.",
+          "es": "Dentro de unos días, espero."
+        }
+      ],
+      "register": "tu",
+      "situation": "trabajo",
+      "notes": "Tras «dat» el verbo va al final (…weer beter ben), y al final se invierte: «hoop ik».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-meetings.qa.back",
+      "question": "Ik ben weer beter. Morgen kom ik weer naar kantoor.",
+      "questionEs": "Ya estoy bien. Mañana vuelvo a la oficina.",
+      "accepted": [
+        {
+          "text": "Fijn! Welkom terug.",
+          "es": "¡Qué bien! Bienvenido de vuelta."
+        },
+        {
+          "text": "Goed om te horen!",
+          "es": "¡Me alegra oírlo!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Beterschap!",
+          "es": "¡Que te mejores!"
+        },
+        {
+          "text": "Gefeliciteerd!",
+          "es": "¡Felicidades!"
+        }
+      ],
+      "register": "neutral",
+      "situation": "trabajo",
+      "notes": "«Beterschap» se dice mientras alguien está enfermo, y «gefeliciteerd» es para cumpleaños y logros.",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}

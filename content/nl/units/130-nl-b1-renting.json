@@ -1,0 +1,999 @@
+{
+  "id": "nl-b1-renting",
+  "order": 130,
+  "title": "Problemas con el alquiler: averías, humedad, fianza, subidas",
+  "description": "Avisar de una avería o una fuga, quejarte del moho y del ruido, entender una subida del alquiler y la huurcommissie, y dejar el piso recuperando la fianza.",
+  "emoji": "🔧",
+  "situation": "vivienda",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-renting.l.melden",
+      "title": "Avisar de una avería",
+      "items": [
+        "nl-b1-renting.huurder",
+        "nl-b1-renting.verhuurder",
+        "nl-b1-renting.woningcorporatie",
+        "nl-b1-renting.onderhoud",
+        "nl-b1-renting.reparatie",
+        "nl-b1-renting.ik-wil-een-reparatie-melden",
+        "nl-b1-renting.cv-ketel",
+        "nl-b1-renting.verwarming",
+        "nl-b1-renting.de-verwarming-doet-het-niet-meer",
+        "nl-b1-renting.de-cv-ketel-maakt-een-raar-geluid",
+        "nl-b1-renting.kraan",
+        "nl-b1-renting.er-komt-geen-warm-water-uit-de-kraan",
+        "nl-b1-renting.monteur",
+        "nl-b1-renting.wanneer-kan-er-een-monteur-langskomen",
+        "nl-b1-renting.de-monteur-komt-morgen-tussen-acht-en-twaalf",
+        "nl-b1-renting.de-ketel-wordt-morgen-gerepareerd",
+        "nl-b1-renting.wordt-de-reparatie-door-de-verhuurder-betaald",
+        "nl-b1-renting.ik-heb-het-vorige-week-al-gemeld",
+        "nl-b1-renting.qa.problem",
+        "nl-b1-renting.qa.plumber"
+      ]
+    },
+    {
+      "id": "nl-b1-renting.l.schimmel",
+      "title": "Humedad, fugas y moho",
+      "items": [
+        "nl-b1-renting.lekkage",
+        "nl-b1-renting.er-is-een-lekkage-in-de-badkamer",
+        "nl-b1-renting.badkamer",
+        "nl-b1-renting.plafond",
+        "nl-b1-renting.er-druppelt-water-van-het-plafond",
+        "nl-b1-renting.vocht",
+        "nl-b1-renting.het-is-heel-vochtig-in-huis",
+        "nl-b1-renting.schimmel",
+        "nl-b1-renting.er-zit-schimmel-op-de-muur-in-de-badkamer",
+        "nl-b1-renting.ventileren",
+        "nl-b1-renting.ik-ventileer-elke-dag-maar-het-helpt-niet",
+        "nl-b1-renting.raam",
+        "nl-b1-renting.zet-de-ramen-af-en-toe-open",
+        "nl-b1-renting.foto",
+        "nl-b1-renting.ik-heb-fotos-van-de-schimmel-gemaakt",
+        "nl-b1-renting.dit-moet-zo-snel-mogelijk-worden-opgelost",
+        "nl-b1-renting.ik-stuur-u-de-fotos-per-e-mail",
+        "nl-b1-renting.ik-wacht-al-drie-weken-op-een-reactie",
+        "nl-b1-renting.qa.ventilate",
+        "nl-b1-renting.qa.since-when"
+      ]
+    },
+    {
+      "id": "nl-b1-renting.l.buren",
+      "title": "Ruido, vecinos y la comunidad",
+      "items": [
+        "nl-b1-renting.geluidsoverlast",
+        "nl-b1-renting.de-buren-maken-s-nachts-veel-lawaai",
+        "nl-b1-renting.we-hebben-veel-last-van-de-buren",
+        "nl-b1-renting.zou-je-de-muziek-wat-zachter-kunnen-zetten",
+        "nl-b1-renting.na-elf-uur-s-avonds-moet-het-rustig-zijn",
+        "nl-b1-renting.klacht",
+        "nl-b1-renting.ik-heb-een-klacht-ingediend-bij-de-vve",
+        "nl-b1-renting.vve",
+        "nl-b1-renting.de-vve-vergadert-twee-keer-per-jaar",
+        "nl-b1-renting.trappenhuis",
+        "nl-b1-renting.het-trappenhuis-wordt-elke-week-schoongemaakt",
+        "nl-b1-renting.qa.music"
+      ]
+    },
+    {
+      "id": "nl-b1-renting.l.huur",
+      "title": "Subidas del alquiler y ayudas",
+      "items": [
+        "nl-b1-renting.huurprijs",
+        "nl-b1-renting.mijn-kale-huur-is-negenhonderd-euro-per-maand",
+        "nl-b1-renting.huurverhoging",
+        "nl-b1-renting.ik-heb-een-brief-over-de-huurverhoging-gekregen",
+        "nl-b1-renting.mijn-huur-wordt-per-een-juli-verhoogd",
+        "nl-b1-renting.is-deze-huurverhoging-wel-toegestaan",
+        "nl-b1-renting.hoeveel-mag-de-huur-per-jaar-omhoog",
+        "nl-b1-renting.huurcommissie",
+        "nl-b1-renting.ik-kan-naar-de-huurcommissie-stappen",
+        "nl-b1-renting.huurtoeslag",
+        "nl-b1-renting.heb-ik-recht-op-huurtoeslag",
+        "nl-b1-renting.qa.increase"
+      ]
+    },
+    {
+      "id": "nl-b1-renting.l.opzeggen",
+      "title": "Dejar el piso y recuperar la fianza",
+      "items": [
+        "nl-b1-renting.opzeggen",
+        "nl-b1-renting.ik-wil-mijn-huurcontract-opzeggen",
+        "nl-b1-renting.ik-zeg-de-huur-per-een-september-op",
+        "nl-b1-job-search.opzegtermijn",
+        "nl-b1-renting.wat-is-mijn-opzegtermijn",
+        "nl-b1-renting.oplevering",
+        "nl-b1-renting.het-huis-wordt-bij-de-oplevering-gecontroleerd",
+        "nl-b1-renting.sleutel",
+        "nl-b1-renting.ik-lever-de-sleutels-op-de-laatste-dag-in",
+        "nl-b1-renting.borg",
+        "nl-b1-renting.terugkrijgen",
+        "nl-b1-renting.wanneer-krijg-ik-mijn-borg-terug",
+        "nl-b1-renting.schade",
+        "nl-b1-renting.die-schade-was-er-al-toen-ik-erin-trok",
+        "nl-b1-renting.er-wordt-geld-van-de-borg-ingehouden",
+        "nl-b1-renting.qa.notice",
+        "nl-b1-renting.qa.handover",
+        "nl-b1-renting.qa.damage"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-b1-renting.ik-wil-een-reparatie-melden",
+      "text": "Ik wil een reparatie melden.",
+      "es": "Quiero avisar de una avería.",
+      "notes": "«melden» = avisar, comunicar oficialmente.",
+      "explanation": "Al llamar o escribir al casero. «melden»: «MEL-de», la «-en» final casi muda.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.de-verwarming-doet-het-niet-meer",
+      "text": "De verwarming doet het niet meer.",
+      "es": "La calefacción ya no funciona.",
+      "notes": "«het doen» = funcionar (een apparaat doet het / doet het niet).",
+      "explanation": "La frase clave para una avería. «verwarming»: «fer-WAR-ming».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.de-cv-ketel-maakt-een-raar-geluid",
+      "text": "De cv-ketel maakt een raar geluid.",
+      "es": "La caldera hace un ruido raro.",
+      "notes": "Falso amigo: «raar» = extraño, no «raro» en el sentido de poco frecuente.",
+      "explanation": "Para describir el problema. «raar»: «raar» con «aa» larga.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.er-komt-geen-warm-water-uit-de-kraan",
+      "text": "Er komt geen warm water uit de kraan.",
+      "es": "No sale agua caliente del grifo.",
+      "notes": "«er» al principio presenta lo que pasa: er komt…",
+      "explanation": "Cuando falla el agua caliente. «uit»: «aut», con la «ui» típica holandesa.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.wanneer-kan-er-een-monteur-langskomen",
+      "text": "Wanneer kan er een monteur langskomen?",
+      "es": "¿Cuándo puede venir un técnico?",
+      "notes": "langskomen = pasarse, venir (separable); con «kan» va entero al final.",
+      "explanation": "Para pedir fecha de visita. «monteur»: «mon-TEUR», «eu» como una «e» redondeada.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.de-monteur-komt-morgen-tussen-acht-en-twaalf",
+      "text": "De monteur komt morgen tussen acht en twaalf.",
+      "es": "El técnico viene mañana entre las ocho y las doce.",
+      "explanation": "Lo que te dirá la agencia. «tussen»: «TU-se», con la «u» corta.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.de-ketel-wordt-morgen-gerepareerd",
+      "text": "De ketel wordt morgen gerepareerd.",
+      "es": "Mañana reparan la caldera.",
+      "notes": "Pasiva con «worden»: wordt + participio al final («se repara / la reparan»).",
+      "explanation": "Para contar que ya hay fecha. «gerepareerd»: «je-re-pa-REERT».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.wordt-de-reparatie-door-de-verhuurder-betaald",
+      "text": "Wordt de reparatie door de verhuurder betaald?",
+      "es": "¿La reparación la paga el casero?",
+      "notes": "«door» = por (quien hace la acción en la pasiva).",
+      "explanation": "Para aclarar quién paga. «betaald»: «be-TAALT», acento en «TAAL».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-heb-het-vorige-week-al-gemeld",
+      "text": "Ik heb het vorige week al gemeld.",
+      "es": "Ya lo avisé la semana pasada.",
+      "explanation": "Cuando nadie te ha hecho caso. «gemeld»: «je-MELT», la «d» final como «t».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.er-is-een-lekkage-in-de-badkamer",
+      "text": "Er is een lekkage in de badkamer.",
+      "es": "Hay una fuga en el baño.",
+      "explanation": "Para avisar de una fuga. «lekkage»: «le-KAA-zje», con «g» suave como la «j» francesa.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.er-druppelt-water-van-het-plafond",
+      "text": "Er druppelt water van het plafond.",
+      "es": "Gotea agua del techo.",
+      "explanation": "Si cae agua del piso de arriba. «plafond»: «pla-FON», la «d» no suena.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.het-is-heel-vochtig-in-huis",
+      "text": "Het is heel vochtig in huis.",
+      "es": "Hay mucha humedad en casa.",
+      "explanation": "Para describir el problema. «vochtig»: «FOJ-tij», dos «ch/g» de garganta.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.er-zit-schimmel-op-de-muur-in-de-badkamer",
+      "text": "Er zit schimmel op de muur in de badkamer.",
+      "es": "Hay moho en la pared del baño.",
+      "notes": "Para cosas pegadas a una superficie se usa «zitten»: er zit schimmel op…",
+      "explanation": "La queja más común en pisos holandeses. «schimmel»: «SJI-mel», «sch» = «s» + «j».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-ventileer-elke-dag-maar-het-helpt-niet",
+      "text": "Ik ventileer elke dag, maar het helpt niet.",
+      "es": "Ventilo todos los días, pero no sirve de nada.",
+      "explanation": "Si te dicen que es culpa tuya. «ventileer»: «fen-ti-LEER».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.zet-de-ramen-af-en-toe-open",
+      "text": "Zet de ramen af en toe open.",
+      "es": "Abre las ventanas de vez en cuando.",
+      "notes": "openzetten (separable): zet … open.",
+      "explanation": "Consejo típico del casero. «af en toe»: «af en tu» = de vez en cuando.",
+      "register": "tu",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-heb-fotos-van-de-schimmel-gemaakt",
+      "text": "Ik heb foto's van de schimmel gemaakt.",
+      "es": "He hecho fotos del moho.",
+      "explanation": "Para tener pruebas. «foto's» lleva apóstrofo en el plural.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.dit-moet-zo-snel-mogelijk-worden-opgelost",
+      "text": "Dit moet zo snel mogelijk worden opgelost.",
+      "es": "Esto hay que solucionarlo lo antes posible.",
+      "notes": "Pasiva con verbo modal: moet … worden opgelost (= tiene que ser solucionado).",
+      "explanation": "Para meter prisa con educación. «mogelijk»: «MOO-je-luk».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-stuur-u-de-fotos-per-e-mail",
+      "text": "Ik stuur u de foto's per e-mail.",
+      "es": "Le mando las fotos por correo electrónico.",
+      "explanation": "A la agencia por teléfono. «stuur»: «styr», con la «uu» redondeada.",
+      "register": "u",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-wacht-al-drie-weken-op-een-reactie",
+      "text": "Ik wacht al drie weken op een reactie.",
+      "es": "Llevo tres semanas esperando una respuesta.",
+      "notes": "«al drie weken» = desde hace tres semanas (presente en neerlandés).",
+      "explanation": "Cuando la agencia no contesta. «wacht»: «wajt», la «ch» de garganta.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.de-buren-maken-s-nachts-veel-lawaai",
+      "text": "De buren maken 's nachts veel lawaai.",
+      "es": "Los vecinos hacen mucho ruido por la noche.",
+      "notes": "«'s nachts» = por la noche (forma antigua de «des nachts»).",
+      "explanation": "Para describir el problema. «'s nachts»: «snajts», una sola sílaba.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.we-hebben-veel-last-van-de-buren",
+      "text": "We hebben veel last van de buren.",
+      "es": "Los vecinos nos molestan mucho.",
+      "notes": "«last hebben van» = sufrir molestias por algo o alguien.",
+      "explanation": "Para quejarte con suavidad. «last»: «last», con «a» corta.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.zou-je-de-muziek-wat-zachter-kunnen-zetten",
+      "text": "Zou je de muziek wat zachter kunnen zetten?",
+      "es": "¿Podrías bajar un poco la música?",
+      "notes": "«zachter zetten» = bajar el volumen; «wat» aquí = un poco.",
+      "explanation": "Al vecino joven, en la puerta. «zachter»: «ZAJ-ter».",
+      "register": "tu",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.na-elf-uur-s-avonds-moet-het-rustig-zijn",
+      "text": "Na elf uur 's avonds moet het rustig zijn.",
+      "es": "A partir de las once de la noche tiene que haber silencio.",
+      "explanation": "Norma típica del reglamento de la comunidad. «rustig»: «RUS-tij».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-heb-een-klacht-ingediend-bij-de-vve",
+      "text": "Ik heb een klacht ingediend bij de VvE.",
+      "es": "He presentado una queja ante la comunidad de propietarios.",
+      "notes": "indienen = presentar (una queja, una solicitud), separable: ik dien … in.",
+      "explanation": "Cuando hablar con el vecino no basta. «ingediend»: «IN-je-dint».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.de-vve-vergadert-twee-keer-per-jaar",
+      "text": "De VvE vergadert twee keer per jaar.",
+      "es": "La comunidad se reúne dos veces al año.",
+      "explanation": "Para explicar cómo funciona el edificio. «vergadert»: «fer-JAA-dert».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.het-trappenhuis-wordt-elke-week-schoongemaakt",
+      "text": "Het trappenhuis wordt elke week schoongemaakt.",
+      "es": "La escalera se limpia cada semana.",
+      "notes": "Pasiva: wordt + participio. schoonmaken (limpiar) es separable: ge- va en medio.",
+      "explanation": "Lo que pagas en los servicekosten. «schoongemaakt»: «SJOON-je-maakt».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.mijn-kale-huur-is-negenhonderd-euro-per-maand",
+      "text": "Mijn kale huur is negenhonderd euro per maand.",
+      "es": "Mi alquiler sin gastos es de novecientos euros al mes.",
+      "notes": "«kaal» significa calvo: «kale huur» es el alquiler «pelado», sin servicekosten.",
+      "explanation": "Para comparar alquileres. «kale»: «KAA-le»; «kale huur» = alquiler sin gastos.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-heb-een-brief-over-de-huurverhoging-gekregen",
+      "text": "Ik heb een brief over de huurverhoging gekregen.",
+      "es": "He recibido una carta sobre la subida del alquiler.",
+      "explanation": "Llega cada año antes de julio. «verhoging»: «fer-HOO-jing».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.mijn-huur-wordt-per-een-juli-verhoogd",
+      "text": "Mijn huur wordt per één juli verhoogd.",
+      "es": "Me suben el alquiler a partir del uno de julio.",
+      "notes": "Pasiva: wordt … verhoogd. «per» + fecha = a partir de.",
+      "explanation": "Para contar la subida. «verhoogd»: «fer-HOOJT».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.is-deze-huurverhoging-wel-toegestaan",
+      "text": "Is deze huurverhoging wel toegestaan?",
+      "es": "¿Esta subida está realmente permitida?",
+      "notes": "«wel» aquí da énfasis: ¿de verdad está permitida?",
+      "explanation": "Para preguntar a la huurcommissie o a un amigo. «toegestaan»: «TU-je-staan».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.hoeveel-mag-de-huur-per-jaar-omhoog",
+      "text": "Hoeveel mag de huur per jaar omhoog?",
+      "es": "¿Cuánto puede subir el alquiler al año?",
+      "explanation": "Para informarte de tus derechos. «omhoog»: «om-HOOJ».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-kan-naar-de-huurcommissie-stappen",
+      "text": "Ik kan naar de huurcommissie stappen.",
+      "es": "Puedo acudir a la comisión de alquileres.",
+      "notes": "«naar … stappen» = acudir a (una instancia).",
+      "explanation": "Cuando el casero no cede. «stappen»: «STA-pe».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.heb-ik-recht-op-huurtoeslag",
+      "text": "Heb ik recht op huurtoeslag?",
+      "es": "¿Tengo derecho a la ayuda al alquiler?",
+      "notes": "«recht hebben op» = tener derecho a.",
+      "explanation": "Para preguntar en el Juridisch Loket o a un amigo. «toeslag»: «TU-slaj».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-wil-mijn-huurcontract-opzeggen",
+      "text": "Ik wil mijn huurcontract opzeggen.",
+      "es": "Quiero rescindir mi contrato de alquiler.",
+      "explanation": "Para avisar a la agencia de que te vas. «opzeggen»: «OP-ze-je».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-zeg-de-huur-per-een-september-op",
+      "text": "Ik zeg de huur per één september op.",
+      "es": "Dejo el alquiler a partir del uno de septiembre.",
+      "notes": "zeg … op = opzeggen: la partícula va al final.",
+      "explanation": "Fórmula de la carta de rescisión. «september»: «sep-TEM-ber».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.wat-is-mijn-opzegtermijn",
+      "text": "Wat is mijn opzegtermijn?",
+      "es": "¿Cuál es mi plazo de preaviso?",
+      "explanation": "Para saber cuándo avisar. «termijn»: «ter-MEIN».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.het-huis-wordt-bij-de-oplevering-gecontroleerd",
+      "text": "Het huis wordt bij de oplevering gecontroleerd.",
+      "es": "Revisan la casa en la entrega de llaves.",
+      "notes": "Pasiva con «worden»: wordt gecontroleerd.",
+      "explanation": "Para explicar qué pasa el último día. «gecontroleerd»: «je-kon-tro-LEERT».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ik-lever-de-sleutels-op-de-laatste-dag-in",
+      "text": "Ik lever de sleutels op de laatste dag in.",
+      "es": "Entrego las llaves el último día.",
+      "notes": "inleveren = entregar (separable): ik lever … in.",
+      "explanation": "Para acordar la entrega. «sleutels»: «SLEU-tels», con «eu» redondeada.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.wanneer-krijg-ik-mijn-borg-terug",
+      "text": "Wanneer krijg ik mijn borg terug?",
+      "es": "¿Cuándo me devuelven la fianza?",
+      "notes": "krijg … terug = terugkrijgen: la partícula va al final.",
+      "explanation": "La pregunta clave al irte. «terug»: «te-RUJ».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.die-schade-was-er-al-toen-ik-erin-trok",
+      "text": "Die schade was er al toen ik erin trok.",
+      "es": "Ese daño ya estaba cuando entré a vivir.",
+      "notes": "«ergens in trekken» = mudarse a un sitio; tras «toen» el verbo va al final.",
+      "explanation": "Para defenderte en la oplevering. «trok»: «trok», con «o» corta.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.er-wordt-geld-van-de-borg-ingehouden",
+      "text": "Er wordt geld van de borg ingehouden.",
+      "es": "Retienen dinero de la fianza.",
+      "notes": "Pasiva impersonal con «er»: er wordt … ingehouden (inhouden = retener).",
+      "explanation": "Lo que temes oír. «ingehouden»: «IN-je-hau-de».",
+      "register": "neutral",
+      "situation": "vivienda"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-b1-renting.huurder",
+      "word": "huurder",
+      "article": "de",
+      "plural": "huurders",
+      "es": "el inquilino",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.verhuurder",
+      "word": "verhuurder",
+      "article": "de",
+      "plural": "verhuurders",
+      "es": "el casero, el arrendador",
+      "notes": "Puede ser una persona, una agencia o una woningcorporatie.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.woningcorporatie",
+      "word": "woningcorporatie",
+      "article": "de",
+      "plural": "woningcorporaties",
+      "es": "la entidad de vivienda social",
+      "notes": "Alquila viviendas sociales; tiene listas de espera muy largas.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.onderhoud",
+      "word": "onderhoud",
+      "article": "het",
+      "es": "el mantenimiento",
+      "notes": "El onderhoud grande (caldera, tejado) lo paga el casero.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.reparatie",
+      "word": "reparatie",
+      "article": "de",
+      "plural": "reparaties",
+      "es": "la reparación",
+      "situation": "vivienda",
+      "image": "fluent:hammer-and-wrench"
+    },
+    {
+      "id": "nl-b1-renting.cv-ketel",
+      "word": "cv-ketel",
+      "article": "de",
+      "plural": "cv-ketels",
+      "es": "la caldera (de la calefacción)",
+      "notes": "cv = centrale verwarming (calefacción central). Se dice «see-fee-ketel».",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.verwarming",
+      "word": "verwarming",
+      "article": "de",
+      "es": "la calefacción",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.kraan",
+      "word": "kraan",
+      "article": "de",
+      "plural": "kranen",
+      "es": "el grifo",
+      "situation": "vivienda",
+      "image": "fluent:potable-water"
+    },
+    {
+      "id": "nl-b1-renting.monteur",
+      "word": "monteur",
+      "article": "de",
+      "plural": "monteurs",
+      "es": "el técnico, el operario",
+      "situation": "vivienda",
+      "image": "fluent:man-mechanic"
+    },
+    {
+      "id": "nl-b1-renting.lekkage",
+      "word": "lekkage",
+      "article": "de",
+      "plural": "lekkages",
+      "es": "la fuga (de agua), la gotera",
+      "situation": "vivienda",
+      "image": "fluent:droplet"
+    },
+    {
+      "id": "nl-b1-renting.badkamer",
+      "word": "badkamer",
+      "article": "de",
+      "plural": "badkamers",
+      "es": "el cuarto de baño",
+      "situation": "vivienda",
+      "image": "fluent:bathtub"
+    },
+    {
+      "id": "nl-b1-renting.plafond",
+      "word": "plafond",
+      "article": "het",
+      "plural": "plafonds",
+      "es": "el techo (de una habitación)",
+      "notes": "El techo por dentro; el tejado es «het dak».",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.vocht",
+      "word": "vocht",
+      "article": "het",
+      "es": "la humedad",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.schimmel",
+      "word": "schimmel",
+      "article": "de",
+      "plural": "schimmels",
+      "es": "el moho",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.ventileren",
+      "word": "ventileren",
+      "es": "ventilar",
+      "notes": "ik ventileer, ik heb geventileerd.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.raam",
+      "word": "raam",
+      "article": "het",
+      "plural": "ramen",
+      "es": "la ventana",
+      "situation": "vivienda",
+      "image": "fluent:window"
+    },
+    {
+      "id": "nl-b1-renting.foto",
+      "word": "foto",
+      "article": "de",
+      "plural": "foto's",
+      "es": "la foto",
+      "situation": "vivienda",
+      "image": "fluent:camera-with-flash"
+    },
+    {
+      "id": "nl-b1-renting.geluidsoverlast",
+      "word": "geluidsoverlast",
+      "article": "de",
+      "es": "las molestias por ruido",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.klacht",
+      "word": "klacht",
+      "article": "de",
+      "plural": "klachten",
+      "es": "la queja, la reclamación",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.vve",
+      "word": "VvE",
+      "article": "de",
+      "es": "la comunidad de propietarios",
+      "notes": "Vereniging van Eigenaars. Se dice «fee-fee-ee».",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.trappenhuis",
+      "word": "trappenhuis",
+      "article": "het",
+      "plural": "trappenhuizen",
+      "es": "la escalera (zona común)",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.huurprijs",
+      "word": "huurprijs",
+      "article": "de",
+      "plural": "huurprijzen",
+      "es": "el precio del alquiler",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.huurverhoging",
+      "word": "huurverhoging",
+      "article": "de",
+      "plural": "huurverhogingen",
+      "es": "la subida del alquiler",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.huurcommissie",
+      "word": "huurcommissie",
+      "article": "de",
+      "es": "la comisión de alquileres (arbitraje)",
+      "notes": "Organismo público que resuelve conflictos entre inquilino y casero.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.huurtoeslag",
+      "word": "huurtoeslag",
+      "article": "de",
+      "es": "la ayuda al alquiler",
+      "notes": "Ayuda de Hacienda si tu sueldo es bajo y el alquiler no muy alto.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.opzeggen",
+      "word": "opzeggen",
+      "es": "rescindir, dar de baja (un contrato)",
+      "notes": "Separable: ik zeg de huur op.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.oplevering",
+      "word": "oplevering",
+      "article": "de",
+      "plural": "opleveringen",
+      "es": "la entrega del piso (inspección final)",
+      "notes": "El día que devuelves las llaves y revisan el piso.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.sleutel",
+      "word": "sleutel",
+      "article": "de",
+      "plural": "sleutels",
+      "es": "la llave",
+      "situation": "vivienda",
+      "image": "fluent:key"
+    },
+    {
+      "id": "nl-b1-renting.borg",
+      "word": "borg",
+      "article": "de",
+      "es": "la fianza",
+      "notes": "Suele ser uno o dos meses de alquiler.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.terugkrijgen",
+      "word": "terugkrijgen",
+      "es": "recuperar, que te devuelvan",
+      "notes": "Separable: ik krijg het terug.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-b1-renting.schade",
+      "word": "schade",
+      "article": "de",
+      "es": "el daño, los desperfectos",
+      "situation": "vivienda"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-renting.qa.problem",
+      "question": "Waarmee kan ik u helpen?",
+      "questionEs": "¿En qué puedo ayudarle?",
+      "accepted": [
+        {
+          "text": "De verwarming doet het niet meer.",
+          "es": "La calefacción ya no funciona."
+        },
+        {
+          "text": "Ik wil een lekkage in de badkamer melden.",
+          "es": "Quiero avisar de una fuga en el baño."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "De verwarming werkt het niet meer.",
+          "es": "La calefacción ya no funciona."
+        },
+        {
+          "text": "Ik wil een lekkage in het badkamer melden.",
+          "es": "Quiero avisar de una fuga en el baño."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "Se dice «het doet het niet» pero «het werkt niet» (sin el segundo «het»), y es «de badkamer».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-renting.qa.plumber",
+      "question": "De monteur kan donderdagochtend komen. Bent u dan thuis?",
+      "questionEs": "El técnico puede ir el jueves por la mañana. ¿Estará usted en casa?",
+      "accepted": [
+        {
+          "text": "Ja, dan ben ik thuis.",
+          "es": "Sí, entonces estoy en casa."
+        },
+        {
+          "text": "Donderdag lukt niet. Kan het ook vrijdag?",
+          "es": "El jueves no me va bien. ¿Puede ser el viernes?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, dan ik ben thuis.",
+          "es": "Sí, entonces estoy en casa."
+        },
+        {
+          "text": "Donderdag lukt niet, omdat ik moet werken op kantoor.",
+          "es": "El jueves no puedo porque tengo que trabajar en la oficina."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "Tras «dan» va el verbo (dan ben ik), y tras «omdat» el verbo al final: omdat ik op kantoor moet werken.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-renting.qa.ventilate",
+      "question": "Ventileert u genoeg?",
+      "questionEs": "¿Ventila usted lo suficiente?",
+      "accepted": [
+        {
+          "text": "Ja, ik zet elke dag de ramen open.",
+          "es": "Sí, abro las ventanas todos los días."
+        },
+        {
+          "text": "Ja, maar de schimmel komt steeds terug.",
+          "es": "Sí, pero el moho vuelve una y otra vez."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik openzet elke dag de ramen.",
+          "es": "Sí, abro las ventanas todos los días."
+        },
+        {
+          "text": "Ja, maar het schimmel komt steeds terug.",
+          "es": "Sí, pero el moho vuelve una y otra vez."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "«openzetten» se separa (ik zet de ramen open), y es «de schimmel».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-renting.qa.since-when",
+      "question": "Sinds wanneer heeft u last van de lekkage?",
+      "questionEs": "¿Desde cuándo tiene usted la fuga?",
+      "accepted": [
+        {
+          "text": "Sinds vorige week. Ik heb het al eerder gemeld.",
+          "es": "Desde la semana pasada. Ya lo avisé antes."
+        },
+        {
+          "text": "Al drie weken.",
+          "es": "Desde hace tres semanas."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sinds vorig week.",
+          "es": "Desde la semana pasada."
+        },
+        {
+          "text": "Ik heb al drie weken last van de lekkage gehad.",
+          "es": "He tenido la fuga desde hace tres semanas."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "Es «vorige week» (con -e, porque es «de week»), y algo que sigue pasando va en presente: ik heb al drie weken last.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-renting.qa.music",
+      "question": "Is de muziek te hard?",
+      "questionEs": "¿Está la música demasiado alta?",
+      "accepted": [
+        {
+          "text": "Een beetje. Zou je hem wat zachter kunnen zetten?",
+          "es": "Un poco. ¿Podrías bajarla un poco?"
+        },
+        {
+          "text": "Ja, na elf uur is het echt te hard.",
+          "es": "Sí, a partir de las once está demasiado alta."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Een beetje. Zou je kunnen hem wat zachter zetten?",
+          "es": "Un poco. ¿Podrías bajarla un poco?"
+        },
+        {
+          "text": "Ja, na elf uur het is echt te hard.",
+          "es": "Sí, a partir de las once está demasiado alta."
+        }
+      ],
+      "register": "tu",
+      "situation": "vivienda",
+      "notes": "Los infinitivos van juntos al final (kunnen zetten), y tras «na elf uur» va el verbo: is het.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-renting.qa.increase",
+      "question": "Is jouw huur ook omhoog gegaan?",
+      "questionEs": "¿A ti también te han subido el alquiler?",
+      "accepted": [
+        {
+          "text": "Ja, mijn huur wordt per één juli verhoogd.",
+          "es": "Sí, me lo suben a partir del uno de julio."
+        },
+        {
+          "text": "Ja, met vijf procent. Ik ga het laten controleren.",
+          "es": "Sí, un cinco por ciento. Voy a hacer que lo revisen."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, mijn huur heeft per één juli verhoogd.",
+          "es": "Sí, me lo suben a partir del uno de julio."
+        },
+        {
+          "text": "Ja, met vijf procent. Ik ga het controleren laten.",
+          "es": "Sí, un cinco por ciento. Voy a hacer que lo revisen."
+        }
+      ],
+      "register": "tu",
+      "situation": "vivienda",
+      "notes": "La pasiva se hace con «worden» (wordt verhoogd), y «laten» va delante del otro infinitivo: laten controleren.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-renting.qa.notice",
+      "question": "Per wanneer wilt u de huur opzeggen?",
+      "questionEs": "¿A partir de cuándo quiere usted rescindir el alquiler?",
+      "accepted": [
+        {
+          "text": "Ik zeg de huur per één september op.",
+          "es": "Dejo el alquiler a partir del uno de septiembre."
+        },
+        {
+          "text": "Per één september, als dat kan.",
+          "es": "A partir del uno de septiembre, si puede ser."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik opzeg de huur per één september.",
+          "es": "Dejo el alquiler a partir del uno de septiembre."
+        },
+        {
+          "text": "Ik zeg op de huur per één september.",
+          "es": "Dejo el alquiler a partir del uno de septiembre."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "«opzeggen» es separable: la partícula «op» va al final de la frase (ik zeg de huur … op).",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-renting.qa.handover",
+      "question": "Heeft u nog vragen over de oplevering?",
+      "questionEs": "¿Tiene usted alguna pregunta sobre la entrega del piso?",
+      "accepted": [
+        {
+          "text": "Ja, wanneer krijg ik mijn borg terug?",
+          "es": "Sí, ¿cuándo me devuelven la fianza?"
+        },
+        {
+          "text": "Ja, wordt er geld van de borg ingehouden?",
+          "es": "Sí, ¿retienen dinero de la fianza?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, wanneer terugkrijg ik mijn borg?",
+          "es": "Sí, ¿cuándo me devuelven la fianza?"
+        },
+        {
+          "text": "Ja, wordt er geld van het borg ingehouden?",
+          "es": "Sí, ¿retienen dinero de la fianza?"
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "«terugkrijgen» se separa en la pregunta (krijg ik … terug), y es «de borg».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-renting.qa.damage",
+      "question": "Is deze schade op de vloer van u?",
+      "questionEs": "¿Este daño en el suelo es suyo?",
+      "accepted": [
+        {
+          "text": "Nee, die schade was er al toen ik erin trok.",
+          "es": "No, ese daño ya estaba cuando entré a vivir."
+        },
+        {
+          "text": "Nee, dat staat al op de foto's van het begin.",
+          "es": "No, eso ya sale en las fotos del principio."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, die schade was er al toen ik trok erin.",
+          "es": "No, ese daño ya estaba cuando entré a vivir."
+        },
+        {
+          "text": "Nee, dat schade was er al toen ik erin trok.",
+          "es": "No, ese daño ya estaba cuando entré a vivir."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "Tras «toen» el verbo va al final (toen ik erin trok), y «de schade» lleva «die», no «dat».",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}

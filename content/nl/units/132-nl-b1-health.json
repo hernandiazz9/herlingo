@@ -1,0 +1,1005 @@
+{
+  "id": "nl-b1-health",
+  "order": 132,
+  "title": "El sistema sanitario: seguro, eigen risico, especialista, dentista",
+  "description": "Elegir y entender tu seguro médico, saber qué cubre y qué es el eigen risico, pedir una derivación al especialista, ir al dentista y al fisio, y pedir ayuda cuando no estás bien.",
+  "emoji": "🏥",
+  "situation": "salud",
+  "level": "B1",
+  "lessons": [
+    {
+      "id": "nl-b1-health.l.verzekering",
+      "title": "El seguro médico",
+      "items": [
+        "nl-b1-health.zorgverzekering",
+        "nl-b1-health.verplicht",
+        "nl-b1-health.in-nederland-is-een-zorgverzekering-verplicht",
+        "nl-b1-health.ik-moet-me-binnen-vier-maanden-verzekeren",
+        "nl-b1-health.zorgverzekeraar",
+        "nl-b1-health.basisverzekering",
+        "nl-b1-health.ik-heb-alleen-een-basisverzekering",
+        "nl-b1-health.aanvullende-verzekering",
+        "nl-b1-health.heb-je-ook-een-aanvullende-verzekering",
+        "nl-b1-health.premie",
+        "nl-b1-health.de-premie-is-ongeveer-honderdveertig-euro-per-maand",
+        "nl-b1-health.ik-heb-een-andere-verzekeraar-gekozen-om-geld-te",
+        "nl-b1-health.je-kunt-tot-eind-december-overstappen",
+        "nl-b1-health.polis",
+        "nl-b1-health.waar-kan-ik-mijn-polis-vinden",
+        "nl-b1-health.qa.insured",
+        "nl-b1-health.qa.switch"
+      ]
+    },
+    {
+      "id": "nl-b1-health.l.eigen-risico",
+      "title": "El eigen risico y lo que cubre",
+      "items": [
+        "nl-b1-health.eigen-risico",
+        "nl-b1-health.het-eigen-risico-is-driehonderdvijfentachtig-euro-per-jaar",
+        "nl-b1-health.de-huisarts-valt-niet-onder-het-eigen-risico",
+        "nl-b1-health.valt-dit-onder-het-eigen-risico",
+        "nl-b1-health.vergoeden",
+        "nl-b1-health.wordt-dat-vergoed",
+        "nl-b1-health.u-heeft-een-verwijzing-nodig-om-het-vergoed-te",
+        "nl-b1-health.rekening",
+        "nl-b1-health.ik-heb-een-rekening-van-het-ziekenhuis-gekregen",
+        "nl-b1-health.ik-begrijp-deze-rekening-niet",
+        "nl-b1-health.kan-ik-in-termijnen-betalen",
+        "nl-b1-health.qa.covered",
+        "nl-b1-health.qa.eigen-risico"
+      ]
+    },
+    {
+      "id": "nl-b1-health.l.verwijzing",
+      "title": "Especialista, pruebas y hospital",
+      "items": [
+        "nl-b1-health.verwijzing",
+        "nl-b1-health.specialist",
+        "nl-b1-health.ik-wil-graag-een-verwijzing-naar-een-specialist",
+        "nl-b1-health.moet-ik-eerst-naar-de-huisarts",
+        "nl-b1-health.ziekenhuis",
+        "nl-b1-health.zonder-verwijzing-kun-je-niet-naar-het-ziekenhuis",
+        "nl-b1-health.wachttijd",
+        "nl-b1-health.wachtlijst",
+        "nl-b1-health.de-wachttijd-is-ongeveer-zes-weken",
+        "nl-b1-health.ik-sta-op-de-wachtlijst",
+        "nl-b1-health.onderzoek",
+        "nl-b1-health.bloedonderzoek",
+        "nl-b1-health.ik-moet-bloed-laten-prikken",
+        "nl-b1-health.rontgenfoto",
+        "nl-b1-health.ik-ga-naar-het-ziekenhuis-om-een-rontgenfoto-te",
+        "nl-b1-health.uitslag",
+        "nl-b1-health.wanneer-krijg-ik-de-uitslag",
+        "nl-b1-health.kunt-u-dat-in-eenvoudige-woorden-uitleggen",
+        "nl-b1-health.qa.referral",
+        "nl-b1-health.qa.why-hospital",
+        "nl-b1-health.qa.result"
+      ]
+    },
+    {
+      "id": "nl-b1-health.l.tandarts",
+      "title": "Dentista y fisioterapeuta",
+      "items": [
+        "nl-b1-health.tandarts",
+        "nl-b1-health.de-tandarts-zit-niet-in-de-basisverzekering",
+        "nl-b1-health.kinderen-tot-achttien-zijn-gratis-verzekerd-voor-de-tandarts",
+        "nl-b1-health.ik-zoek-een-tandarts-die-nieuwe-patienten-aanneemt",
+        "nl-b1-health.ik-heb-last-van-een-kies",
+        "nl-b1-health.gaatje",
+        "nl-b1-health.vulling",
+        "nl-b1-health.ik-heb-een-gaatje-dus-ik-krijg-een-vulling",
+        "nl-b1-health.twee-keer-per-jaar-ga-ik-voor-controle",
+        "nl-b1-health.mondhygienist",
+        "nl-b1-health.fysiotherapeut",
+        "nl-b1-health.rug",
+        "nl-b1-health.blessure",
+        "nl-b1-health.ik-heb-al-weken-pijn-in-mijn-rug",
+        "nl-b1-health.voor-de-fysiotherapeut-heb-je-geen-verwijzing-nodig",
+        "nl-b1-health.behandeling",
+        "nl-b1-health.hoeveel-behandelingen-worden-er-vergoed",
+        "nl-b1-health.qa.dentist"
+      ]
+    },
+    {
+      "id": "nl-b1-health.l.mentaal",
+      "title": "Cuando no estás bien",
+      "items": [
+        "nl-b1-health.stress",
+        "nl-b1-health.ik-slaap-slecht-en-heb-veel-stress",
+        "nl-b1-workplace.zich-voelen",
+        "nl-b1-health.ik-voel-me-de-laatste-tijd-niet-zo-goed",
+        "nl-b1-health.ik-wil-graag-met-iemand-praten",
+        "nl-b1-health.praktijkondersteuner",
+        "nl-b1-health.de-praktijkondersteuner-kan-je-helpen",
+        "nl-b1-health.psycholoog",
+        "nl-b1-health.ik-heb-een-afspraak-met-een-psycholoog",
+        "nl-b1-health.burn-out",
+        "nl-b1-health.het-is-niet-erg-om-hulp-te-vragen",
+        "nl-b1-health.ik-ga-elke-dag-wandelen-om-te-ontspannen",
+        "nl-b1-health.pas-goed-op-jezelf",
+        "nl-b1-health.qa.how-feel"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-b1-health.in-nederland-is-een-zorgverzekering-verplicht",
+      "text": "In Nederland is een zorgverzekering verplicht.",
+      "es": "En los Países Bajos el seguro médico es obligatorio.",
+      "notes": "Tras «In Nederland» va el verbo (V2): in Nederland is…",
+      "explanation": "Lo primero que te explican al llegar. «verplicht»: «fer-PLIJT».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-moet-me-binnen-vier-maanden-verzekeren",
+      "text": "Ik moet me binnen vier maanden verzekeren.",
+      "es": "Tengo que asegurarme en un plazo de cuatro meses.",
+      "notes": "«zich verzekeren» = hacerse un seguro (reflexivo: ik verzeker me).",
+      "explanation": "Plazo desde que te empadronas o empiezas a trabajar. «verzekeren»: «fer-ZEE-ke-re».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-heb-alleen-een-basisverzekering",
+      "text": "Ik heb alleen een basisverzekering.",
+      "es": "Solo tengo el seguro básico.",
+      "explanation": "Para explicar qué tienes contratado. «alleen»: «a-LEEN».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.heb-je-ook-een-aanvullende-verzekering",
+      "text": "Heb je ook een aanvullende verzekering?",
+      "es": "¿Tienes también un seguro complementario?",
+      "explanation": "Para comparar con un amigo o compañero. «aanvullende»: «AAN-fu-len-de».",
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.de-premie-is-ongeveer-honderdveertig-euro-per-maand",
+      "text": "De premie is ongeveer honderdveertig euro per maand.",
+      "es": "La cuota es de unos ciento cuarenta euros al mes.",
+      "notes": "Con un sueldo bajo, la zorgtoeslag ayuda a pagar la premie.",
+      "explanation": "Para hablar de lo que pagas. «ongeveer»: «on-je-FEER».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-heb-een-andere-verzekeraar-gekozen-om-geld-te",
+      "text": "Ik heb een andere verzekeraar gekozen om geld te besparen.",
+      "es": "He elegido otra aseguradora para ahorrar dinero.",
+      "notes": "«om … te» + infinitivo = para + infinitivo: om geld te besparen.",
+      "explanation": "Para contar tu cambio de seguro. «besparen»: «be-SPAA-re».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.je-kunt-tot-eind-december-overstappen",
+      "text": "Je kunt tot eind december overstappen.",
+      "es": "Puedes cambiarte hasta finales de diciembre.",
+      "notes": "overstappen = cambiar (de seguro, de tren); separable.",
+      "explanation": "El cambio de seguro se hace cada año antes del uno de enero. «overstappen»: «O-fer-sta-pe».",
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.waar-kan-ik-mijn-polis-vinden",
+      "text": "Waar kan ik mijn polis vinden?",
+      "es": "¿Dónde puedo encontrar mi póliza?",
+      "explanation": "Al llamar a la aseguradora o mirar la app. «polis»: «PO-lis».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.het-eigen-risico-is-driehonderdvijfentachtig-euro-per-jaar",
+      "text": "Het eigen risico is driehonderdvijfentachtig euro per jaar.",
+      "es": "La franquicia es de trescientos ochenta y cinco euros al año.",
+      "explanation": "Lo verás en cada factura del hospital. «eigen»: «EI-je», la «-en» final casi muda.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.de-huisarts-valt-niet-onder-het-eigen-risico",
+      "text": "De huisarts valt niet onder het eigen risico.",
+      "es": "El médico de cabecera no cuenta para la franquicia.",
+      "notes": "«vallen onder» = entrar en, contar para.",
+      "explanation": "Ir al huisarts no te cuesta nada. «valt»: «falt», la «v» casi como «f».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.valt-dit-onder-het-eigen-risico",
+      "text": "Valt dit onder het eigen risico?",
+      "es": "¿Esto cuenta para la franquicia?",
+      "explanation": "Para preguntar antes de una prueba. «onder»: «ON-der».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.wordt-dat-vergoed",
+      "text": "Wordt dat vergoed?",
+      "es": "¿Eso lo cubre el seguro?",
+      "notes": "Pasiva con «worden»: wordt vergoed = es cubierto.",
+      "explanation": "La pregunta clave en cualquier consulta. «vergoed»: «fer-JUT».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.u-heeft-een-verwijzing-nodig-om-het-vergoed-te",
+      "text": "U heeft een verwijzing nodig om het vergoed te krijgen.",
+      "es": "Necesita una derivación para que se lo cubran.",
+      "notes": "«om … te» al final: om het vergoed te krijgen.",
+      "explanation": "Lo que te dirá la aseguradora por teléfono. «nodig»: «NOO-dij».",
+      "register": "u",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-heb-een-rekening-van-het-ziekenhuis-gekregen",
+      "text": "Ik heb een rekening van het ziekenhuis gekregen.",
+      "es": "He recibido una factura del hospital.",
+      "explanation": "Cuando llega la sorpresa del eigen risico. «gekregen»: «je-KREE-je».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-begrijp-deze-rekening-niet",
+      "text": "Ik begrijp deze rekening niet.",
+      "es": "No entiendo esta factura.",
+      "explanation": "Al llamar a la aseguradora. «begrijp»: «be-GREIP», acento en «GRIJP».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.kan-ik-in-termijnen-betalen",
+      "text": "Kan ik in termijnen betalen?",
+      "es": "¿Puedo pagar a plazos?",
+      "explanation": "Para repartir el eigen risico en varios meses. «termijnen»: «ter-MEI-ne».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-wil-graag-een-verwijzing-naar-een-specialist",
+      "text": "Ik wil graag een verwijzing naar een specialist.",
+      "es": "Quisiera una derivación a un especialista.",
+      "explanation": "Al huisarts, si un problema no mejora. «verwijzing»: «fer-WEI-zing».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.moet-ik-eerst-naar-de-huisarts",
+      "text": "Moet ik eerst naar de huisarts?",
+      "es": "¿Tengo que ir primero al médico de cabecera?",
+      "explanation": "Para saber el camino correcto. «huisarts»: «HAUS-arts».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.zonder-verwijzing-kun-je-niet-naar-het-ziekenhuis",
+      "text": "Zonder verwijzing kun je niet naar het ziekenhuis.",
+      "es": "Sin derivación no puedes ir al hospital.",
+      "notes": "«je» aquí es impersonal (uno); tras «zonder verwijzing» va el verbo.",
+      "explanation": "La regla del sistema (salvo urgencias). «zonder»: «ZON-der».",
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.de-wachttijd-is-ongeveer-zes-weken",
+      "text": "De wachttijd is ongeveer zes weken.",
+      "es": "El tiempo de espera es de unas seis semanas.",
+      "explanation": "Lo que te dicen al pedir cita con el especialista. «weken»: «WEE-ke».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-sta-op-de-wachtlijst",
+      "text": "Ik sta op de wachtlijst.",
+      "es": "Estoy en la lista de espera.",
+      "notes": "Se usa «staan»: op een lijst staan.",
+      "explanation": "Para explicar por qué aún no tienes cita. «wachtlijst»: «WAJT-leist».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-moet-bloed-laten-prikken",
+      "text": "Ik moet bloed laten prikken.",
+      "es": "Tengo que hacerme un análisis de sangre.",
+      "notes": "«laten» + infinitivo = hacer que te hagan algo: bloed laten prikken.",
+      "explanation": "Lo dices al pedir cita en el laboratorio. «bloed»: «blut», la «d» como «t».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-ga-naar-het-ziekenhuis-om-een-rontgenfoto-te",
+      "text": "Ik ga naar het ziekenhuis om een röntgenfoto te laten maken.",
+      "es": "Voy al hospital a hacerme una radiografía.",
+      "notes": "om … te laten maken: «te» va delante de los dos infinitivos.",
+      "explanation": "Para explicar adónde vas. «röntgen»: «RUNT-je», la «ö» redondeada.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.wanneer-krijg-ik-de-uitslag",
+      "text": "Wanneer krijg ik de uitslag?",
+      "es": "¿Cuándo me dan el resultado?",
+      "explanation": "Al terminar la prueba. «uitslag»: «AUT-slaj».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.kunt-u-dat-in-eenvoudige-woorden-uitleggen",
+      "text": "Kunt u dat in eenvoudige woorden uitleggen?",
+      "es": "¿Puede explicármelo con palabras sencillas?",
+      "notes": "uitleggen = explicar (separable); con «kunt» va entero al final.",
+      "explanation": "Cuando el médico habla muy técnico. «eenvoudige»: «een-FAU-di-je».",
+      "register": "u",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.de-tandarts-zit-niet-in-de-basisverzekering",
+      "text": "De tandarts zit niet in de basisverzekering.",
+      "es": "El dentista no está en el seguro básico.",
+      "explanation": "Por eso muchos contratan un seguro complementario. «tandarts»: «TAN-darts».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.kinderen-tot-achttien-zijn-gratis-verzekerd-voor-de-tandarts",
+      "text": "Kinderen tot achttien zijn gratis verzekerd voor de tandarts.",
+      "es": "Los niños hasta los dieciocho tienen el dentista cubierto.",
+      "explanation": "Útil si tienes hijos. «achttien»: «AJ-tin».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-zoek-een-tandarts-die-nieuwe-patienten-aanneemt",
+      "text": "Ik zoek een tandarts die nieuwe patiënten aanneemt.",
+      "es": "Busco un dentista que acepte pacientes nuevos.",
+      "notes": "Oración de relativo con «die» (de tandarts): el verbo va al final.",
+      "explanation": "Muchos dentistas están llenos. «patiënten»: «pa-SJEN-te», la «ë» separa la vocal.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-heb-last-van-een-kies",
+      "text": "Ik heb last van een kies.",
+      "es": "Me molesta una muela.",
+      "notes": "«de kies» = la muela; «de tand» = el diente.",
+      "explanation": "Al pedir cita urgente en el dentista. «kies»: «kis».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-heb-een-gaatje-dus-ik-krijg-een-vulling",
+      "text": "Ik heb een gaatje, dus ik krijg een vulling.",
+      "es": "Tengo una caries, así que me ponen un empaste.",
+      "explanation": "Para contar la visita. «gaatje»: «JAA-tje».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.twee-keer-per-jaar-ga-ik-voor-controle",
+      "text": "Twee keer per jaar ga ik voor controle.",
+      "es": "Voy a revisión dos veces al año.",
+      "notes": "Tras «twee keer per jaar», el verbo va segundo: ga ik.",
+      "explanation": "Para hablar de tu rutina. «controle»: «kon-TRO-le».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-heb-al-weken-pijn-in-mijn-rug",
+      "text": "Ik heb al weken pijn in mijn rug.",
+      "es": "Llevo semanas con dolor de espalda.",
+      "notes": "«al weken» + presente = llevo semanas.",
+      "explanation": "Para explicar por qué vas al fisio. «rug»: «ruj», con la «u» corta y «g» de garganta.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.voor-de-fysiotherapeut-heb-je-geen-verwijzing-nodig",
+      "text": "Voor de fysiotherapeut heb je geen verwijzing nodig.",
+      "es": "Para el fisioterapeuta no necesitas derivación.",
+      "explanation": "Se puede ir directamente. «fysiotherapeut»: «fi-si-o-te-ra-PEUT».",
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.hoeveel-behandelingen-worden-er-vergoed",
+      "text": "Hoeveel behandelingen worden er vergoed?",
+      "es": "¿Cuántas sesiones cubre el seguro?",
+      "notes": "Pasiva con «er»: worden er vergoed.",
+      "explanation": "Al llamar a la aseguradora. «behandelingen»: «be-HAN-de-ling-e».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-slaap-slecht-en-heb-veel-stress",
+      "text": "Ik slaap slecht en heb veel stress.",
+      "es": "Duermo mal y tengo mucho estrés.",
+      "explanation": "Para explicar al médico cómo estás. «slaap»: «slaap», con «aa» larga.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-voel-me-de-laatste-tijd-niet-zo-goed",
+      "text": "Ik voel me de laatste tijd niet zo goed.",
+      "es": "Últimamente no me siento muy bien.",
+      "notes": "«zich voelen» = sentirse: ik voel me.",
+      "explanation": "Para empezar la conversación en la consulta. «laatste»: «LAAT-ste».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-wil-graag-met-iemand-praten",
+      "text": "Ik wil graag met iemand praten.",
+      "es": "Me gustaría hablar con alguien.",
+      "explanation": "Para pedir ayuda en el huisarts. «iemand»: «I-mant».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.de-praktijkondersteuner-kan-je-helpen",
+      "text": "De praktijkondersteuner kan je helpen.",
+      "es": "El profesional de apoyo puede ayudarte.",
+      "explanation": "Lo que te propondrá el huisarts. «praktijk»: «prak-TEIK».",
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-heb-een-afspraak-met-een-psycholoog",
+      "text": "Ik heb een afspraak met een psycholoog.",
+      "es": "Tengo cita con un psicólogo.",
+      "explanation": "Para contarlo a alguien de confianza. «psycholoog»: «si-jo-LOOJ», sin «p».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.het-is-niet-erg-om-hulp-te-vragen",
+      "text": "Het is niet erg om hulp te vragen.",
+      "es": "No pasa nada por pedir ayuda.",
+      "notes": "«niet erg» = no pasa nada; «om … te» + infinitivo al final.",
+      "explanation": "Para animar a alguien (o a ti mismo). «vragen»: «FRAA-je».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ik-ga-elke-dag-wandelen-om-te-ontspannen",
+      "text": "Ik ga elke dag wandelen om te ontspannen.",
+      "es": "Salgo a caminar todos los días para relajarme.",
+      "notes": "«om te» + infinitivo = para + infinitivo.",
+      "explanation": "Para hablar de lo que te ayuda. «ontspannen»: «ont-SPA-ne».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.pas-goed-op-jezelf",
+      "text": "Pas goed op jezelf.",
+      "es": "Cuídate mucho.",
+      "notes": "oppassen op = cuidar de (separable): pas … op.",
+      "explanation": "Despedida cariñosa a alguien que no está bien. «jezelf»: «je-ZELF».",
+      "register": "tu",
+      "situation": "salud"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-b1-health.zorgverzekering",
+      "word": "zorgverzekering",
+      "article": "de",
+      "plural": "zorgverzekeringen",
+      "es": "el seguro médico",
+      "notes": "Obligatorio para todo el que vive o trabaja en los Países Bajos.",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.verplicht",
+      "word": "verplicht",
+      "es": "obligatorio",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.zorgverzekeraar",
+      "word": "zorgverzekeraar",
+      "article": "de",
+      "plural": "zorgverzekeraars",
+      "es": "la aseguradora médica",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.basisverzekering",
+      "word": "basisverzekering",
+      "article": "de",
+      "plural": "basisverzekeringen",
+      "es": "el seguro básico",
+      "notes": "Cubre lo mismo en todas las aseguradoras; lo fija el Gobierno.",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.aanvullende-verzekering",
+      "word": "aanvullende verzekering",
+      "article": "de",
+      "plural": "aanvullende verzekeringen",
+      "es": "el seguro complementario",
+      "notes": "Opcional: dentista, más fisio, gafas…",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.premie",
+      "word": "premie",
+      "article": "de",
+      "plural": "premies",
+      "es": "la prima, la cuota del seguro",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.polis",
+      "word": "polis",
+      "article": "de",
+      "plural": "polissen",
+      "es": "la póliza",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.eigen-risico",
+      "word": "eigen risico",
+      "article": "het",
+      "es": "la franquicia anual del seguro",
+      "notes": "Lo que pagas tú cada año antes de que pague el seguro (hospital, medicinas, análisis).",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.vergoeden",
+      "word": "vergoeden",
+      "es": "cubrir, reembolsar",
+      "notes": "ik vergoed, het wordt vergoed.",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.rekening",
+      "word": "rekening",
+      "article": "de",
+      "plural": "rekeningen",
+      "es": "la factura; la cuenta",
+      "situation": "salud",
+      "image": "fluent:receipt"
+    },
+    {
+      "id": "nl-b1-health.verwijzing",
+      "word": "verwijzing",
+      "article": "de",
+      "plural": "verwijzingen",
+      "es": "la derivación, el volante",
+      "notes": "Sin ella del huisarts, el seguro no paga al especialista.",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.specialist",
+      "word": "specialist",
+      "article": "de",
+      "plural": "specialisten",
+      "es": "el especialista",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.ziekenhuis",
+      "word": "ziekenhuis",
+      "article": "het",
+      "plural": "ziekenhuizen",
+      "es": "el hospital",
+      "situation": "salud",
+      "image": "fluent:hospital"
+    },
+    {
+      "id": "nl-b1-health.wachttijd",
+      "word": "wachttijd",
+      "article": "de",
+      "plural": "wachttijden",
+      "es": "el tiempo de espera",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.wachtlijst",
+      "word": "wachtlijst",
+      "article": "de",
+      "plural": "wachtlijsten",
+      "es": "la lista de espera",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.onderzoek",
+      "word": "onderzoek",
+      "article": "het",
+      "plural": "onderzoeken",
+      "es": "la prueba médica; la investigación",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.bloedonderzoek",
+      "word": "bloedonderzoek",
+      "article": "het",
+      "es": "el análisis de sangre",
+      "situation": "salud",
+      "image": "fluent:drop-of-blood"
+    },
+    {
+      "id": "nl-b1-health.rontgenfoto",
+      "word": "röntgenfoto",
+      "article": "de",
+      "plural": "röntgenfoto's",
+      "es": "la radiografía",
+      "situation": "salud",
+      "image": "fluent:x-ray"
+    },
+    {
+      "id": "nl-b1-health.uitslag",
+      "word": "uitslag",
+      "article": "de",
+      "plural": "uitslagen",
+      "es": "el resultado (de una prueba)",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.tandarts",
+      "word": "tandarts",
+      "article": "de",
+      "plural": "tandartsen",
+      "es": "el dentista",
+      "situation": "salud",
+      "image": "fluent:tooth"
+    },
+    {
+      "id": "nl-b1-health.gaatje",
+      "word": "gaatje",
+      "article": "het",
+      "plural": "gaatjes",
+      "es": "la caries (el agujerito)",
+      "notes": "Diminutivo de «gat» (agujero): siempre «het».",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.vulling",
+      "word": "vulling",
+      "article": "de",
+      "plural": "vullingen",
+      "es": "el empaste",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.mondhygienist",
+      "word": "mondhygiënist",
+      "article": "de",
+      "plural": "mondhygiënisten",
+      "es": "el higienista dental",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.fysiotherapeut",
+      "word": "fysiotherapeut",
+      "article": "de",
+      "plural": "fysiotherapeuten",
+      "es": "el fisioterapeuta",
+      "notes": "En la calle se dice «de fysio».",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.rug",
+      "word": "rug",
+      "article": "de",
+      "plural": "ruggen",
+      "es": "la espalda",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.blessure",
+      "word": "blessure",
+      "article": "de",
+      "plural": "blessures",
+      "es": "la lesión (deportiva)",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.behandeling",
+      "word": "behandeling",
+      "article": "de",
+      "plural": "behandelingen",
+      "es": "el tratamiento, la sesión",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.stress",
+      "word": "stress",
+      "article": "de",
+      "es": "el estrés",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.praktijkondersteuner",
+      "word": "praktijkondersteuner",
+      "article": "de",
+      "plural": "praktijkondersteuners",
+      "es": "el/la profesional de apoyo en la consulta (POH)",
+      "notes": "Trabaja en la consulta del huisarts; la POH-GGZ atiende salud mental leve.",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.psycholoog",
+      "word": "psycholoog",
+      "article": "de",
+      "plural": "psychologen",
+      "es": "el psicólogo",
+      "notes": "La «p» no suena: «si-jo-LOOJ».",
+      "situation": "salud"
+    },
+    {
+      "id": "nl-b1-health.burn-out",
+      "word": "burn-out",
+      "article": "de",
+      "plural": "burn-outs",
+      "es": "el burnout, el agotamiento laboral",
+      "situation": "salud"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-b1-health.qa.insured",
+      "question": "Bent u al verzekerd?",
+      "questionEs": "¿Ya tiene usted seguro?",
+      "accepted": [
+        {
+          "text": "Ja, ik heb een basisverzekering.",
+          "es": "Sí, tengo el seguro básico."
+        },
+        {
+          "text": "Nog niet, ik ben net verhuisd.",
+          "es": "Todavía no, me acabo de mudar."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik heb verzekerd.",
+          "es": "Sí, tengo seguro."
+        },
+        {
+          "text": "Nog niet, omdat ik ben net verhuisd.",
+          "es": "Todavía no, porque me acabo de mudar."
+        }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "Estar asegurado es «verzekerd zijn» (ik ben verzekerd), y tras «omdat» el verbo va al final.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-health.qa.switch",
+      "question": "Ga je overstappen naar een andere verzekeraar?",
+      "questionEs": "¿Vas a cambiarte a otra aseguradora?",
+      "accepted": [
+        {
+          "text": "Ja, om geld te besparen.",
+          "es": "Sí, para ahorrar dinero."
+        },
+        {
+          "text": "Nee, ik ben tevreden met mijn verzekering.",
+          "es": "No, estoy contento con mi seguro."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, voor geld te besparen.",
+          "es": "Sí, para ahorrar dinero."
+        },
+        {
+          "text": "Ja, om te besparen geld.",
+          "es": "Sí, para ahorrar dinero."
+        }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": "«Para + infinitivo» es «om … te» (no «voor»), con el infinitivo al final: om geld te besparen.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-health.qa.covered",
+      "question": "Waarmee kan ik u helpen?",
+      "questionEs": "¿En qué puedo ayudarle?",
+      "accepted": [
+        {
+          "text": "Ik wil weten of de fysiotherapeut wordt vergoed.",
+          "es": "Quiero saber si cubren el fisioterapeuta."
+        },
+        {
+          "text": "Wordt de tandarts vergoed in mijn basisverzekering?",
+          "es": "¿El seguro básico cubre el dentista?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik wil weten of wordt de fysiotherapeut vergoed.",
+          "es": "Quiero saber si cubren el fisioterapeuta."
+        },
+        {
+          "text": "Vergoedt de tandarts in mijn basisverzekering?",
+          "es": "¿El seguro básico cubre el dentista?"
+        }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "Tras «of» los verbos van al final (of … wordt vergoed), y «ser cubierto» se dice con «worden»: wordt vergoed.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-health.qa.eigen-risico",
+      "question": "Weet u wat het eigen risico is?",
+      "questionEs": "¿Sabe usted qué es el eigen risico?",
+      "accepted": [
+        {
+          "text": "Ja, dat bedrag betaal ik eerst zelf.",
+          "es": "Sí, esa cantidad la pago yo primero."
+        },
+        {
+          "text": "Ja, de eerste driehonderdvijfentachtig euro per jaar betaal ik zelf.",
+          "es": "Sí, los primeros trescientos ochenta y cinco euros al año los pago yo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, dat bedrag ik betaal eerst zelf.",
+          "es": "Sí, esa cantidad la pago yo primero."
+        },
+        {
+          "text": "Ja, dat betaalt de verzekering altijd.",
+          "es": "Sí, eso lo paga siempre el seguro."
+        }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "Si la frase empieza por el objeto, el verbo va segundo (dat bedrag betaal ik), y el eigen risico lo pagas tú, no el seguro.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-health.qa.referral",
+      "question": "Wat kan ik voor u doen?",
+      "questionEs": "¿Qué puedo hacer por usted?",
+      "accepted": [
+        {
+          "text": "Ik wil graag een verwijzing naar een specialist.",
+          "es": "Quisiera una derivación a un especialista."
+        },
+        {
+          "text": "Ik heb al weken pijn in mijn rug.",
+          "es": "Llevo semanas con dolor de espalda."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik wil graag een verwijzing om naar een specialist gaan.",
+          "es": "Quisiera una derivación para ir a un especialista."
+        },
+        {
+          "text": "Ik heb al weken pijn in het rug.",
+          "es": "Llevo semanas con dolor de espalda."
+        }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "Con «om» hace falta «te» (om naar een specialist te gaan), y es «de rug».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-health.qa.why-hospital",
+      "question": "Waarom ga je naar het ziekenhuis?",
+      "questionEs": "¿Por qué vas al hospital?",
+      "accepted": [
+        {
+          "text": "Om een röntgenfoto te laten maken.",
+          "es": "Para hacerme una radiografía."
+        },
+        {
+          "text": "Ik moet bloed laten prikken.",
+          "es": "Tengo que hacerme un análisis de sangre."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Om te een röntgenfoto laten maken.",
+          "es": "Para hacerme una radiografía."
+        },
+        {
+          "text": "Voor een röntgenfoto te laten maken.",
+          "es": "Para hacerme una radiografía."
+        }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": "«Para + infinitivo» es «om … te», y «te» va justo delante de los infinitivos: om een röntgenfoto te laten maken.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-b1-health.qa.result",
+      "question": "Wanneer wilt u de uitslag bespreken?",
+      "questionEs": "¿Cuándo quiere usted comentar el resultado?",
+      "accepted": [
+        {
+          "text": "Volgende week, als dat kan.",
+          "es": "La semana que viene, si puede ser."
+        },
+        {
+          "text": "Kan het ook telefonisch?",
+          "es": "¿Puede ser también por teléfono?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Volgend week, als dat kan.",
+          "es": "La semana que viene, si puede ser."
+        },
+        {
+          "text": "Volgende week, als kan dat.",
+          "es": "La semana que viene, si puede ser."
+        }
+      ],
+      "register": "u",
+      "situation": "salud",
+      "notes": "Es «volgende week» (con -e, porque es «de week»), y tras «als» el verbo va al final: als dat kan.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-health.qa.dentist",
+      "question": "Heb je al een tandarts gevonden?",
+      "questionEs": "¿Ya has encontrado dentista?",
+      "accepted": [
+        {
+          "text": "Nog niet. Veel tandartsen nemen geen nieuwe patiënten aan.",
+          "es": "Todavía no. Muchos dentistas no aceptan pacientes nuevos."
+        },
+        {
+          "text": "Ja, ik ga volgende week voor controle.",
+          "es": "Sí, la semana que viene voy a revisión."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nog niet. Veel tandartsen aannemen geen nieuwe patiënten.",
+          "es": "Todavía no. Muchos dentistas no aceptan pacientes nuevos."
+        },
+        {
+          "text": "Nog niet. Veel tandartsen nemen niet nieuwe patiënten aan.",
+          "es": "Todavía no. Muchos dentistas no aceptan pacientes nuevos."
+        }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": "«aannemen» se separa (nemen … aan), y delante de un sustantivo sin artículo se usa «geen», no «niet».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-b1-health.qa.how-feel",
+      "question": "Hoe voel je je de laatste tijd?",
+      "questionEs": "¿Cómo te sientes últimamente?",
+      "accepted": [
+        {
+          "text": "Niet zo goed. Ik heb veel stress.",
+          "es": "No muy bien. Tengo mucho estrés."
+        },
+        {
+          "text": "Beter, dank je. Ik ga elke dag wandelen om te ontspannen.",
+          "es": "Mejor, gracias. Salgo a caminar cada día para relajarme."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Niet zo goed. Ik voel niet goed.",
+          "es": "No muy bien. No me siento bien."
+        },
+        {
+          "text": "Beter, dank je. Ik ga elke dag wandelen voor te ontspannen.",
+          "es": "Mejor, gracias. Salgo a caminar cada día para relajarme."
+        }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": "«Sentirse» es reflexivo (ik voel me), y «para + infinitivo» es «om te», no «voor te».",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}
