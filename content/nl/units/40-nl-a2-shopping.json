@@ -1,0 +1,1144 @@
+{
+  "id": "nl-a2-shopping",
+  "order": 40,
+  "level": "A2",
+  "title": "Supermercado, mercado, panadería y cafetería",
+  "description": "Hacer la compra en Albert Heijn o Jumbo, pasar por caja con la bonuskaart y el statiegeld, comprar queso en el mercado y pan en la panadería, y pedir en una cafetería.",
+  "emoji": "🛒",
+  "situation": "compras",
+  "lessons": [
+    {
+      "id": "nl-a2-shopping.l.supermarkt",
+      "title": "En el supermercado",
+      "items": [
+        "nl-a2-shopping.supermarkt",
+        "nl-a2-shopping.boodschappen",
+        "nl-a2-shopping.mandje",
+        "nl-a2-shopping.aanbieding",
+        "nl-a2-shopping.melk",
+        "nl-a2-shopping.ei",
+        "nl-a2-shopping.groente",
+        "nl-a2-shopping.fruit",
+        "nl-a2-shopping.vlees",
+        "nl-a2-shopping.vis",
+        "nl-a2-shopping.ik-moet-nog-boodschappen-doen",
+        "nl-a2-shopping.ik-ga-even-naar-de-albert-heijn",
+        "nl-a2-shopping.ik-pak-even-een-mandje",
+        "nl-a2-shopping.waar-staat-de-melk",
+        "nl-a2-shopping.waar-kan-ik-de-eieren-vinden",
+        "nl-a2-shopping.hebben-jullie-havermelk",
+        "nl-a2-shopping.dit-is-in-de-aanbieding",
+        "nl-a2-shopping.een-plus-een-gratis",
+        "nl-a2-shopping.banaan",
+        "nl-a2-shopping.de-bananen-zijn-op",
+        "nl-a2-numbers.hoeveel-kost-het",
+        "nl-a2-shopping.qa.anders-nog-iets"
+      ]
+    },
+    {
+      "id": "nl-a2-shopping.l.kassa",
+      "title": "En la caja",
+      "items": [
+        "nl-a2-shopping.kassa",
+        "nl-a2-shopping.bonuskaart",
+        "nl-a2-shopping.tas",
+        "nl-a2-shopping.bon",
+        "nl-a2-shopping.statiegeld",
+        "nl-a2-shopping.fles",
+        "nl-a2-shopping.is-deze-kassa-open",
+        "nl-a2-shopping.heb-je-een-bonuskaart",
+        "nl-a2-shopping.nee-die-heb-ik-niet",
+        "nl-a2-shopping.wil-je-een-tas",
+        "nl-a2-shopping.nee-dank-je-ik-heb-er-zelf-een",
+        "nl-a2-numbers.dat-wordt-dan",
+        "nl-a2-numbers.kan-ik-pinnen",
+        "nl-a2-bank.alleen-pinnen",
+        "nl-a2-shopping.wil-je-de-bon",
+        "nl-a2-shopping.nee-hoeft-niet",
+        "nl-a2-shopping.waar-kan-ik-de-flessen-inleveren",
+        "nl-a2-shopping.ik-heb-nog-een-statiegeldbon",
+        "nl-a2-shopping.gaat-u-maar-voor",
+        "nl-a2-shopping.qa.bonuskaart",
+        "nl-a2-shopping.qa.tas",
+        "nl-a2-shopping.qa.bon"
+      ]
+    },
+    {
+      "id": "nl-a2-shopping.l.markt",
+      "title": "En el mercado",
+      "items": [
+        "nl-a2-shopping.markt",
+        "nl-a2-shopping.kaas",
+        "nl-a2-shopping.stuk",
+        "nl-a2-shopping.kilo",
+        "nl-a2-shopping.ons",
+        "nl-a2-shopping.proeven",
+        "nl-a2-shopping.aardappel",
+        "nl-a2-shopping.tomaat",
+        "nl-a2-shopping.appel",
+        "nl-a2-shopping.wat-mag-het-zijn",
+        "nl-a2-shopping.ik-wil-graag-een-stuk-oude-kaas",
+        "nl-a2-shopping.mag-ik-even-proeven",
+        "nl-a2-shopping.jong-belegen-of-oud",
+        "nl-a2-shopping.doe-maar-belegen",
+        "nl-a2-shopping.twee-kilo-aardappels",
+        "nl-a2-shopping.twee-ons-ham-graag",
+        "nl-a2-shopping.mag-het-een-beetje-meer-zijn",
+        "nl-a2-shopping.ja-hoor-prima",
+        "nl-a2-shopping.anders-nog-iets",
+        "nl-a2-shopping.nee-dat-was-het",
+        "nl-a2-numbers.dat-is-twee-euro-vijftig",
+        "nl-a2-shopping.qa.wat-mag-het-zijn",
+        "nl-a2-shopping.qa.jong-of-oud"
+      ]
+    },
+    {
+      "id": "nl-a2-shopping.l.bakker",
+      "title": "En la panadería",
+      "items": [
+        "nl-a2-shopping.bakker",
+        "nl-a2-shopping.brood",
+        "nl-a2-grammar.broodje",
+        "nl-a2-shopping.koekje",
+        "nl-a2-shopping.ik-neem-een-bruin-brood",
+        "nl-a2-shopping.gesneden-graag",
+        "nl-a2-shopping.heeft-u-nog-croissants",
+        "nl-a2-shopping.zes-krentenbollen-graag",
+        "nl-a2-grammar.twee-broodjes-kaas",
+        "nl-a2-numbers.hoeveel-is-het-samen"
+      ]
+    },
+    {
+      "id": "nl-a2-shopping.l.cafe",
+      "title": "En la cafetería",
+      "items": [
+        "nl-a2-shopping.koffie",
+        "nl-a2-shopping.thee",
+        "nl-a2-shopping.water",
+        "nl-a2-shopping.bier",
+        "nl-a2-grammar.kopje",
+        "nl-a2-shopping.appeltaart",
+        "nl-a2-shopping.slagroom",
+        "nl-a2-shopping.afrekenen",
+        "nl-a2-shopping.wat-wil-je-drinken",
+        "nl-a2-shopping.ik-wil-graag-een-koffie-verkeerd",
+        "nl-a2-shopping.voor-mij-een-muntthee",
+        "nl-a2-grammar.wil-je-een-kopje-koffie",
+        "nl-a2-shopping.ik-neem-een-stuk-appeltaart",
+        "nl-a2-shopping.met-slagroom",
+        "nl-a2-shopping.ja-lekker",
+        "nl-a2-shopping.ik-neem-een-broodje-gezond",
+        "nl-a2-shopping.voor-hier-of-om-mee-te-nemen",
+        "nl-a2-shopping.voor-hier-graag",
+        "nl-a2-shopping.mag-ik-afrekenen",
+        "nl-a2-shopping.het-was-heerlijk",
+        "nl-a2-shopping.qa.wat-wil-je-drinken",
+        "nl-a2-shopping.qa.voor-hier",
+        "nl-a2-shopping.qa.afrekenen"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-shopping.ik-moet-nog-boodschappen-doen",
+      "text": "Ik moet nog boodschappen doen.",
+      "es": "Todavía tengo que hacer la compra.",
+      "notes": "«boodschappen doen» = hacer la compra (siempre en plural).",
+      "explanation": "Para decir tus planes del día. «oo» larga, «sch» = s + j: BOOT-sja-pe DUN.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.ik-ga-even-naar-de-albert-heijn",
+      "text": "Ik ga even naar de Albert Heijn.",
+      "es": "Voy un momento al Albert Heijn.",
+      "notes": "«even» = un momento; suaviza y hace la frase natural.",
+      "explanation": "A tu compañero de piso o tu pareja. «Heijn» con «ij» = «ei»: AL-bert JEIN.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.waar-staat-de-melk",
+      "text": "Waar staat de melk?",
+      "es": "¿Dónde está la leche?",
+      "notes": "Para lo que está en una estantería se usa «staan», no «zijn».",
+      "explanation": "A un reponedor. Las cosas en una estantería «staan»: waar STAAT de MELK.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.waar-kan-ik-de-eieren-vinden",
+      "text": "Waar kan ik de eieren vinden?",
+      "es": "¿Dónde puedo encontrar los huevos?",
+      "notes": "Modal + infinitivo al final: «kan ik … vinden».",
+      "explanation": "Al buscar algo en el súper. «ei» = «ei»: de EI-e-re FIN-de.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.hebben-jullie-havermelk",
+      "text": "Hebben jullie ook havermelk?",
+      "es": "¿Tenéis leche de avena?",
+      "explanation": "Al personal de la tienda. «jullie» = vosotros (la tienda): JÜ-li ook JAA-fer-melk.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.dit-is-in-de-aanbieding",
+      "text": "Dit is in de aanbieding.",
+      "es": "Esto está de oferta.",
+      "explanation": "Lo ves en las etiquetas amarillas o naranjas. AAN-bii-ding, acento en AAN.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.een-plus-een-gratis",
+      "text": "Eén plus één gratis!",
+      "es": "¡Dos por uno!",
+      "literal": "Uno más uno gratis.",
+      "explanation": "Una oferta típica del súper. «één» = uno, con tilde: EEN plus EEN JRAA-tis.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.de-bananen-zijn-op",
+      "text": "De bananen zijn op.",
+      "es": "Se han acabado los plátanos.",
+      "notes": "«op zijn» = haberse acabado. Plural en -en: banaan → bananen.",
+      "explanation": "Cuando la estantería está vacía. «op» = acabado: de ba-NAA-ne zein OP.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.ik-pak-even-een-mandje",
+      "text": "Ik pak even een mandje.",
+      "es": "Cojo una cesta.",
+      "notes": "«mandje» es diminutivo de «mand» (cesto); es lo normal.",
+      "explanation": "Al entrar en el súper. «mandje» suena MAN-che.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.heb-je-een-bonuskaart",
+      "text": "Heb je een bonuskaart?",
+      "es": "¿Tienes la tarjeta de cliente?",
+      "explanation": "La primera pregunta en la caja del Albert Heijn. «bonus» con «oo» larga: BOO-nus-kaart.",
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.nee-die-heb-ik-niet",
+      "text": "Nee, die heb ik niet.",
+      "es": "No, no la tengo.",
+      "notes": "«die» = esa (una palabra con «de»); el verbo sigue en segunda posición.",
+      "explanation": "Respuesta rápida en la caja. «die» va delante y el verbo segundo: nee, DI jep ik NIT.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.wil-je-een-tas",
+      "text": "Wil je een tas?",
+      "es": "¿Quieres una bolsa?",
+      "explanation": "Te lo pregunta el cajero. «tas» con «a» corta: wil ye en TAS.",
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.nee-dank-je-ik-heb-er-zelf-een",
+      "text": "Nee, dank je, ik heb er zelf een.",
+      "es": "No, gracias, traigo la mía.",
+      "notes": "«er … een» = uno (de eso): «ik heb er een» = tengo una.",
+      "explanation": "Si llevas tu bolsa. «zelf» = yo mismo: ik jep er ZELF een.",
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.wil-je-de-bon",
+      "text": "Wil je de bon?",
+      "es": "¿Quieres el tique?",
+      "explanation": "Al terminar de pagar. «bon» con «o» corta: wil ye de BON.",
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.nee-hoeft-niet",
+      "text": "Nee, hoeft niet.",
+      "es": "No, no hace falta.",
+      "notes": "«hoeft niet» = no hace falta (de «hoeven»).",
+      "explanation": "La respuesta más habitual al tique. «oe» = «u»: nee, JUFT nit.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.waar-kan-ik-de-flessen-inleveren",
+      "text": "Waar kan ik de flessen inleveren?",
+      "es": "¿Dónde puedo devolver las botellas?",
+      "notes": "«inleveren» es separable: «ik lever de flessen in».",
+      "explanation": "Para recuperar el statiegeld. Acento en IN: de FLE-se IN-lee-fe-re.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.ik-heb-nog-een-statiegeldbon",
+      "text": "Ik heb nog een bonnetje van het statiegeld.",
+      "es": "Tengo un tique del depósito de envases.",
+      "notes": "La máquina de botellas te da un tique que se descuenta en caja.",
+      "explanation": "Lo das en la caja para que te lo descuenten. «bonnetje» suena BO-ne-che.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.is-deze-kassa-open",
+      "text": "Is deze kassa open?",
+      "es": "¿Está abierta esta caja?",
+      "explanation": "Antes de ponerte en la cola. «deze» = esta: DEE-ze KA-sa OO-pe.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.gaat-u-maar-voor",
+      "text": "Gaat u maar voor.",
+      "es": "Pase usted primero.",
+      "notes": "«maar» suaviza la invitación; «voorgaan» = pasar delante (separable).",
+      "explanation": "A quien lleva poca cosa detrás de ti en la cola. «gaat» con «aa» larga: JAAT ü maar FOOR.",
+      "register": "u",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.wat-mag-het-zijn",
+      "text": "Wat mag het zijn?",
+      "es": "¿Qué le pongo?",
+      "literal": "¿Qué puede ser?",
+      "explanation": "Lo dicen en el mercado, la panadería o la quesería. wat maj et ZEIN.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.ik-wil-graag-een-stuk-oude-kaas",
+      "text": "Ik wil graag een stuk oude kaas.",
+      "es": "Quería un trozo de queso viejo.",
+      "notes": "El adjetivo va delante y lleva -e: «oude kaas».",
+      "explanation": "En la quesería. «oude» suena AU-de: en STÜK AU-de KAAS.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.mag-ik-even-proeven",
+      "text": "Mag ik even proeven?",
+      "es": "¿Puedo probar?",
+      "explanation": "En el puesto de queso siempre te dejan. «oe» = «u»: maj ik EE-fe PRU-fe.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.jong-belegen-of-oud",
+      "text": "Jong, belegen of oud?",
+      "es": "¿Tierno, semicurado o curado?",
+      "notes": "El gouda se vende por edad: «jong» (tierno), «belegen» (semicurado) y «oud» (curado).",
+      "explanation": "Te lo pregunta el quesero. «belegen» con «g» de garganta: yong, be-LEE-je of AUT.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.doe-maar-belegen",
+      "text": "Doe maar belegen.",
+      "es": "Pues semicurado.",
+      "notes": "«Doe maar…» = ponme…; es la forma relajada de elegir.",
+      "explanation": "Para elegir algo en una tienda. «doe» = «du»: DU maar be-LEE-je.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.twee-kilo-aardappels",
+      "text": "Twee kilo aardappels, graag.",
+      "es": "Dos kilos de patatas, por favor.",
+      "notes": "Tras un número no se pone «de»: «twee kilo aardappels».",
+      "explanation": "En el puesto de verdura. «aa» larga: twee KII-loo AART-a-pels.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.twee-ons-ham-graag",
+      "text": "Twee ons ham, graag.",
+      "es": "Doscientos gramos de jamón, por favor.",
+      "notes": "«een ons» = 100 gramos; «een pond» = medio kilo.",
+      "explanation": "En la charcutería o el mercado. «ons» = 100 g: twee ONS JAM.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.mag-het-een-beetje-meer-zijn",
+      "text": "Mag het een beetje meer zijn?",
+      "es": "¿Le importa si es un poco más?",
+      "explanation": "Te lo dicen al pesar. «beetje» suena BEE-che: maj et en BEE-che MEER zein.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.ja-hoor-prima",
+      "text": "Ja hoor, prima.",
+      "es": "Sí, sí, perfecto.",
+      "notes": "«hoor» al final suaviza y tranquiliza: «Ja hoor» = sí, claro.",
+      "explanation": "Para aceptar con amabilidad. «hoor» suaviza: ya JOOR, PRII-ma.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.anders-nog-iets",
+      "text": "Anders nog iets?",
+      "es": "¿Algo más?",
+      "explanation": "Te lo preguntan antes de cobrarte. AN-ders noj IITS.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.nee-dat-was-het",
+      "text": "Nee, dat was het.",
+      "es": "No, eso es todo.",
+      "literal": "No, eso era.",
+      "explanation": "Para terminar la compra. nee, dat WAS et.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.ik-neem-een-bruin-brood",
+      "text": "Ik neem een bruin brood.",
+      "es": "Me llevo un pan integral.",
+      "notes": "«Ik neem…» = me llevo / tomo; sirve en cualquier tienda.",
+      "explanation": "En la panadería. «ui» redonda: en BRÖIN BROOT, la «d» final suena «t».",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.gesneden-graag",
+      "text": "Gesneden, graag.",
+      "es": "Cortado, por favor.",
+      "explanation": "Si quieres el pan en rebanadas. «gesneden»: je-SNEE-de.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.heeft-u-nog-croissants",
+      "text": "Heeft u nog croissants?",
+      "es": "¿Le quedan cruasanes?",
+      "explanation": "A última hora en la panadería. «nog» = todavía: noj krwa-SANTS.",
+      "register": "u",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.zes-krentenbollen-graag",
+      "text": "Zes krentenbollen, graag.",
+      "es": "Seis bollos de pasas, por favor.",
+      "notes": "Plural: «krentenbol» → «krentenbollen», con consonante doble.",
+      "explanation": "Un clásico de la panadería. Plural en -en: KREN-te-bo-le.",
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.wat-wil-je-drinken",
+      "text": "Wat wil je drinken?",
+      "es": "¿Qué quieres tomar?",
+      "explanation": "Te lo pregunta el camarero o un amigo. wat wil ye DRIN-ke.",
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.ik-wil-graag-een-koffie-verkeerd",
+      "text": "Ik wil graag een koffie verkeerd.",
+      "es": "Quería un café con leche.",
+      "notes": "«koffie verkeerd» = café «al revés»: más leche que café.",
+      "explanation": "En una cafetería. «verkeerd» = equivocado: KO-fii fer-KEERT.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.voor-mij-een-muntthee",
+      "text": "Voor mij een muntthee, graag.",
+      "es": "Para mí un té de menta, por favor.",
+      "notes": "«verse muntthee» (menta fresca) se pide en todos los cafés.",
+      "explanation": "Al pedir en grupo. «muntthee» = hojas frescas de menta: MÜNT-tee.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.ik-neem-een-stuk-appeltaart",
+      "text": "Ik neem een stuk appeltaart.",
+      "es": "Me tomo un trozo de tarta de manzana.",
+      "explanation": "El clásico con el café. «appeltaart»: A-pel-taart, acento en A.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.met-slagroom",
+      "text": "Met slagroom?",
+      "es": "¿Con nata?",
+      "explanation": "Te lo preguntan con la tarta. «slagroom»: SLAJ-room.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.ja-lekker",
+      "text": "Ja, lekker!",
+      "es": "¡Sí, qué rico!",
+      "notes": "«lekker» = rico, y también agradable: «lekker weer» = buen tiempo.",
+      "explanation": "Para aceptar comida con gusto. LE-ker, con «e» corta.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.ik-neem-een-broodje-gezond",
+      "text": "Ik neem een broodje gezond.",
+      "es": "Me tomo un bocadillo vegetal.",
+      "notes": "«broodje gezond» lleva queso, jamón y ensalada; «broodje» es diminutivo de «brood».",
+      "explanation": "Para comer al mediodía. «gezond» = sano: BROO-che je-ZONT.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.voor-hier-of-om-mee-te-nemen",
+      "text": "Voor hier of om mee te nemen?",
+      "es": "¿Para tomar aquí o para llevar?",
+      "notes": "Con «te», el separable se abre: «mee te nemen».",
+      "explanation": "Te lo pregunta el camarero. «mee te nemen»: om MEE te NEE-me.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.voor-hier-graag",
+      "text": "Voor hier, graag.",
+      "es": "Para tomar aquí, por favor.",
+      "explanation": "Respuesta en la barra. voor JIR, JRAAJ.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.mag-ik-afrekenen",
+      "text": "Mag ik afrekenen?",
+      "es": "¿Me cobras?",
+      "notes": "«afrekenen» es separable: «ik reken af».",
+      "explanation": "Para pedir la cuenta. Acento en la partícula: maj ik AF-ree-ke-ne.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.het-was-heerlijk",
+      "text": "Het was heerlijk!",
+      "es": "¡Estaba buenísimo!",
+      "explanation": "Al pagar o al despedirte. «heerlijk» suena JEER-lek.",
+      "register": "neutral",
+      "situation": "comida"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-shopping.supermarkt",
+      "word": "supermarkt",
+      "article": "de",
+      "plural": "supermarkten",
+      "es": "el supermercado",
+      "notes": "Los más comunes: Albert Heijn («de Appie»), Jumbo y Lidl.",
+      "situation": "compras",
+      "image": "fluent:shopping-cart"
+    },
+    {
+      "id": "nl-a2-shopping.boodschappen",
+      "word": "boodschappen",
+      "article": "de",
+      "es": "la compra",
+      "notes": "Siempre en plural: «boodschappen doen» = hacer la compra.",
+      "example": "nl-a2-shopping.ik-moet-nog-boodschappen-doen",
+      "situation": "compras",
+      "image": "fluent:shopping-bags"
+    },
+    {
+      "id": "nl-a2-shopping.kassa",
+      "word": "kassa",
+      "article": "de",
+      "plural": "kassa's",
+      "es": "la caja",
+      "notes": "Plural con apóstrofo tras vocal: kassa's.",
+      "example": "nl-a2-shopping.is-deze-kassa-open",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.bonuskaart",
+      "word": "bonuskaart",
+      "article": "de",
+      "plural": "bonuskaarten",
+      "es": "la tarjeta de cliente (Albert Heijn)",
+      "notes": "Gratis; con ella tienes los descuentos «bonus».",
+      "example": "nl-a2-shopping.heb-je-een-bonuskaart",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.aanbieding",
+      "word": "aanbieding",
+      "article": "de",
+      "plural": "aanbiedingen",
+      "es": "la oferta",
+      "notes": "«in de aanbieding» = en oferta.",
+      "example": "nl-a2-shopping.dit-is-in-de-aanbieding",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.statiegeld",
+      "word": "statiegeld",
+      "article": "het",
+      "es": "el depósito por envase",
+      "notes": "Pagas unos céntimos por botella o lata y te los devuelven al reciclarla en la máquina.",
+      "example": "nl-a2-shopping.waar-kan-ik-de-flessen-inleveren",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.fles",
+      "word": "fles",
+      "article": "de",
+      "plural": "flessen",
+      "es": "la botella",
+      "notes": "Plural -en con consonante doble: fles → flessen.",
+      "example": "nl-a2-shopping.waar-kan-ik-de-flessen-inleveren",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.tas",
+      "word": "tas",
+      "article": "de",
+      "plural": "tassen",
+      "es": "la bolsa",
+      "notes": "Las bolsas se pagan: lleva la tuya.",
+      "example": "nl-a2-shopping.wil-je-een-tas",
+      "situation": "compras",
+      "image": "fluent:shopping-bags"
+    },
+    {
+      "id": "nl-a2-shopping.bon",
+      "word": "bon",
+      "article": "de",
+      "plural": "bonnen",
+      "es": "el tique, el recibo",
+      "notes": "También «het bonnetje» (diminutivo, siempre «het»).",
+      "example": "nl-a2-shopping.wil-je-de-bon",
+      "situation": "compras",
+      "image": "fluent:receipt"
+    },
+    {
+      "id": "nl-a2-shopping.mandje",
+      "word": "mandje",
+      "article": "het",
+      "plural": "mandjes",
+      "es": "la cesta (de la compra)",
+      "notes": "Diminutivo de «mand»: siempre «het».",
+      "situation": "compras",
+      "image": "fluent:basket"
+    },
+    {
+      "id": "nl-a2-shopping.markt",
+      "word": "markt",
+      "article": "de",
+      "plural": "markten",
+      "es": "el mercado",
+      "notes": "En Utrecht hay mercado en el Vredenburg los miércoles, viernes y sábados.",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.kaas",
+      "word": "kaas",
+      "article": "de",
+      "plural": "kazen",
+      "es": "el queso",
+      "notes": "Plural «kazen»: la «aa» larga se escribe con una sola «a» en sílaba abierta.",
+      "example": "nl-a2-shopping.ik-wil-graag-een-stuk-oude-kaas",
+      "situation": "comida",
+      "image": "fluent:cheese-wedge"
+    },
+    {
+      "id": "nl-a2-shopping.stuk",
+      "word": "stuk",
+      "article": "het",
+      "plural": "stukken",
+      "es": "el trozo, el pedazo",
+      "example": "nl-a2-shopping.ik-neem-een-stuk-appeltaart",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.kilo",
+      "word": "kilo",
+      "article": "de",
+      "plural": "kilo's",
+      "es": "el kilo",
+      "example": "nl-a2-shopping.twee-kilo-aardappels",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.ons",
+      "word": "ons",
+      "article": "het",
+      "es": "cien gramos",
+      "notes": "Medida típica en el mercado y la charcutería: «een ons kaas» = 100 g.",
+      "example": "nl-a2-shopping.twee-ons-ham-graag",
+      "situation": "compras"
+    },
+    {
+      "id": "nl-a2-shopping.brood",
+      "word": "brood",
+      "article": "het",
+      "plural": "broden",
+      "es": "el pan",
+      "notes": "«een brood» es una barra o un pan entero.",
+      "example": "nl-a2-shopping.ik-neem-een-bruin-brood",
+      "situation": "comida",
+      "image": "fluent:bread"
+    },
+    {
+      "id": "nl-a2-shopping.bakker",
+      "word": "bakker",
+      "article": "de",
+      "plural": "bakkers",
+      "es": "el panadero; la panadería",
+      "notes": "«naar de bakker» = a la panadería.",
+      "situation": "compras",
+      "image": "fluent:baguette-bread"
+    },
+    {
+      "id": "nl-a2-shopping.melk",
+      "word": "melk",
+      "article": "de",
+      "es": "la leche",
+      "example": "nl-a2-shopping.waar-staat-de-melk",
+      "situation": "comida",
+      "image": "fluent:glass-of-milk"
+    },
+    {
+      "id": "nl-a2-shopping.ei",
+      "word": "ei",
+      "article": "het",
+      "plural": "eieren",
+      "es": "el huevo",
+      "notes": "Plural irregular: «eieren».",
+      "example": "nl-a2-shopping.waar-kan-ik-de-eieren-vinden",
+      "situation": "comida",
+      "image": "fluent:egg"
+    },
+    {
+      "id": "nl-a2-shopping.appel",
+      "word": "appel",
+      "article": "de",
+      "plural": "appels",
+      "es": "la manzana",
+      "notes": "Plural -s tras -el: appels.",
+      "situation": "comida",
+      "image": "fluent:red-apple"
+    },
+    {
+      "id": "nl-a2-shopping.banaan",
+      "word": "banaan",
+      "article": "de",
+      "plural": "bananen",
+      "es": "el plátano",
+      "notes": "Plural -en; la «aa» se escribe simple: bananen.",
+      "example": "nl-a2-shopping.de-bananen-zijn-op",
+      "situation": "comida",
+      "image": "fluent:banana"
+    },
+    {
+      "id": "nl-a2-shopping.aardappel",
+      "word": "aardappel",
+      "article": "de",
+      "plural": "aardappels",
+      "es": "la patata",
+      "notes": "Plural «aardappels» o «aardappelen»: las dos valen.",
+      "example": "nl-a2-shopping.twee-kilo-aardappels",
+      "situation": "comida",
+      "image": "fluent:potato"
+    },
+    {
+      "id": "nl-a2-shopping.tomaat",
+      "word": "tomaat",
+      "article": "de",
+      "plural": "tomaten",
+      "es": "el tomate",
+      "situation": "comida",
+      "image": "fluent:tomato"
+    },
+    {
+      "id": "nl-a2-shopping.groente",
+      "word": "groente",
+      "article": "de",
+      "plural": "groenten",
+      "es": "la verdura",
+      "situation": "comida",
+      "image": "fluent:leafy-green"
+    },
+    {
+      "id": "nl-a2-shopping.fruit",
+      "word": "fruit",
+      "article": "het",
+      "es": "la fruta",
+      "notes": "Incontable: «veel fruit», no «fruiten».",
+      "situation": "comida",
+      "image": "fluent:grapes"
+    },
+    {
+      "id": "nl-a2-shopping.vlees",
+      "word": "vlees",
+      "article": "het",
+      "es": "la carne",
+      "situation": "comida",
+      "image": "fluent:cut-of-meat"
+    },
+    {
+      "id": "nl-a2-shopping.vis",
+      "word": "vis",
+      "article": "de",
+      "plural": "vissen",
+      "es": "el pescado; el pez",
+      "situation": "comida",
+      "image": "fluent:fish"
+    },
+    {
+      "id": "nl-a2-shopping.water",
+      "word": "water",
+      "article": "het",
+      "es": "el agua",
+      "notes": "«kraanwater» = agua del grifo, buena y gratis.",
+      "situation": "comida",
+      "image": "fluent:droplet"
+    },
+    {
+      "id": "nl-a2-shopping.koffie",
+      "word": "koffie",
+      "article": "de",
+      "es": "el café",
+      "example": "nl-a2-shopping.ik-wil-graag-een-koffie-verkeerd",
+      "situation": "comida",
+      "image": "fluent:hot-beverage"
+    },
+    {
+      "id": "nl-a2-shopping.thee",
+      "word": "thee",
+      "article": "de",
+      "es": "el té",
+      "example": "nl-a2-shopping.voor-mij-een-muntthee",
+      "situation": "comida",
+      "image": "fluent:teacup-without-handle"
+    },
+    {
+      "id": "nl-a2-shopping.bier",
+      "word": "bier",
+      "article": "het",
+      "plural": "bieren",
+      "es": "la cerveza",
+      "notes": "En el bar: «een biertje» (diminutivo).",
+      "situation": "comida",
+      "image": "fluent:beer-mug"
+    },
+    {
+      "id": "nl-a2-shopping.appeltaart",
+      "word": "appeltaart",
+      "article": "de",
+      "plural": "appeltaarten",
+      "es": "la tarta de manzana",
+      "notes": "Holandesa, alta y con canela; se pide «met slagroom».",
+      "example": "nl-a2-shopping.ik-neem-een-stuk-appeltaart",
+      "situation": "comida",
+      "image": "fluent:pie"
+    },
+    {
+      "id": "nl-a2-shopping.slagroom",
+      "word": "slagroom",
+      "article": "de",
+      "es": "la nata montada",
+      "example": "nl-a2-shopping.met-slagroom",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.koekje",
+      "word": "koekje",
+      "article": "het",
+      "plural": "koekjes",
+      "es": "la galleta",
+      "notes": "Diminutivo: siempre «het». Con el café suele venir uno.",
+      "situation": "comida",
+      "image": "fluent:cookie"
+    },
+    {
+      "id": "nl-a2-shopping.afrekenen",
+      "word": "afrekenen",
+      "es": "pagar la cuenta",
+      "notes": "Separable: «ik reken af».",
+      "example": "nl-a2-shopping.mag-ik-afrekenen",
+      "situation": "comida"
+    },
+    {
+      "id": "nl-a2-shopping.proeven",
+      "word": "proeven",
+      "es": "probar (comida)",
+      "notes": "«oe» = «u»: PRU-fe.",
+      "example": "nl-a2-shopping.mag-ik-even-proeven",
+      "situation": "comida"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-shopping.qa.bonuskaart",
+      "question": "Hoi! Heb je een bonuskaart?",
+      "questionEs": "¡Hola! ¿Tienes la tarjeta de cliente?",
+      "accepted": [
+        {
+          "text": "Nee, die heb ik niet.",
+          "es": "No, no la tengo."
+        },
+        {
+          "text": "Ja, hij zit in de app.",
+          "es": "Sí, la tengo en la app."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik heb niet een bonuskaart.",
+          "es": "No, no tengo tarjeta (negación mal)."
+        },
+        {
+          "text": "Nee, die hebben ik niet.",
+          "es": "No, no la tengo (verbo mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "compras",
+      "notes": "Con sustantivo se niega con «geen» o se dice «die heb ik niet». Con «ik», «heb».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-shopping.qa.tas",
+      "question": "Wil je een tas?",
+      "questionEs": "¿Quieres una bolsa?",
+      "accepted": [
+        {
+          "text": "Nee, dank je, ik heb er zelf een.",
+          "es": "No, gracias, traigo la mía."
+        },
+        {
+          "text": "Ja, graag. Eén tas.",
+          "es": "Sí, por favor. Una bolsa."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik wil niet een tas.",
+          "es": "No, no quiero bolsa (negación mal)."
+        },
+        {
+          "text": "Ja, graag, twee tas.",
+          "es": "Sí, por favor, dos bolsa (plural mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "compras",
+      "notes": "Con sustantivo, «geen tas». El plural de «tas» es «tassen».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-shopping.qa.bon",
+      "question": "Wil je de bon?",
+      "questionEs": "¿Quieres el tique?",
+      "accepted": [
+        {
+          "text": "Nee, hoeft niet, dank je.",
+          "es": "No, no hace falta, gracias."
+        },
+        {
+          "text": "Ja, graag.",
+          "es": "Sí, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik heb geen honger.",
+          "es": "No, no tengo hambre."
+        },
+        {
+          "text": "Ja, de bonuskaart is goed.",
+          "es": "Sí, la tarjeta está bien."
+        }
+      ],
+      "register": "tu",
+      "situation": "compras",
+      "notes": "«de bon» es el tique de compra: no tiene nada que ver con comer ni con la bonuskaart.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-shopping.qa.wat-mag-het-zijn",
+      "question": "Goedemorgen! Wat mag het zijn?",
+      "questionEs": "¡Buenos días! ¿Qué le pongo?",
+      "accepted": [
+        {
+          "text": "Ik wil graag een stuk oude kaas.",
+          "es": "Quería un trozo de queso curado."
+        },
+        {
+          "text": "Mag ik even proeven?",
+          "es": "¿Puedo probar?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik wil graag een stuk kaas oud.",
+          "es": "Quería un trozo de queso curado (adjetivo detrás)."
+        },
+        {
+          "text": "Graag ik wil een stuk kaas.",
+          "es": "Por favor, quiero un trozo de queso (orden mal)."
+        }
+      ],
+      "register": "neutral",
+      "situation": "compras",
+      "notes": "El adjetivo va delante: «oude kaas». Si empiezas por «graag», el verbo va segundo.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-shopping.qa.jong-of-oud",
+      "question": "Jong, belegen of oud?",
+      "questionEs": "¿Tierno, semicurado o curado?",
+      "accepted": [
+        {
+          "text": "Doe maar belegen.",
+          "es": "Pues semicurado."
+        },
+        {
+          "text": "Oud, graag. Een stuk van een pond.",
+          "es": "Curado, por favor. Un trozo de medio kilo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik ben belegen.",
+          "es": "Estoy semicurado."
+        },
+        {
+          "text": "Ja, graag.",
+          "es": "Sí, por favor (no eliges)."
+        }
+      ],
+      "register": "neutral",
+      "situation": "compras",
+      "notes": "Te preguntan qué queso quieres: elige uno; «Doe maar…» es lo más natural.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-shopping.qa.anders-nog-iets",
+      "question": "Anders nog iets?",
+      "questionEs": "¿Algo más?",
+      "accepted": [
+        {
+          "text": "Nee, dat was het, dank je.",
+          "es": "No, eso es todo, gracias."
+        },
+        {
+          "text": "Ja, ook nog zes eieren.",
+          "es": "Sí, también seis huevos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ook nog zes ei.",
+          "es": "Sí, también seis huevo (plural mal)."
+        },
+        {
+          "text": "Ja, ook nog zes eien.",
+          "es": "Sí, también seis huevos (plural mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "compras",
+      "notes": "El plural de «ei» es irregular: «eieren».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-shopping.qa.wat-wil-je-drinken",
+      "question": "Hoi, wat wil je drinken?",
+      "questionEs": "Hola, ¿qué quieres tomar?",
+      "accepted": [
+        {
+          "text": "Ik wil graag een koffie verkeerd.",
+          "es": "Quería un café con leche."
+        },
+        {
+          "text": "Doe maar een muntthee.",
+          "es": "Pues un té de menta."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik wil drinken een koffie.",
+          "es": "Quiero beber un café (orden mal)."
+        },
+        {
+          "text": "Een koffie fout, graag.",
+          "es": "Un café erróneo, por favor (calco)."
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "Con «willen», el infinitivo va al final. El café con leche es «koffie verkeerd».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-shopping.qa.voor-hier",
+      "question": "Voor hier of om mee te nemen?",
+      "questionEs": "¿Para tomar aquí o para llevar?",
+      "accepted": [
+        {
+          "text": "Voor hier, graag.",
+          "es": "Para tomar aquí, por favor."
+        },
+        {
+          "text": "Om mee te nemen, graag.",
+          "es": "Para llevar, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Om te meenemen, graag.",
+          "es": "Para llevar (orden mal)."
+        },
+        {
+          "text": "Voor mij, graag.",
+          "es": "Para mí, por favor."
+        }
+      ],
+      "register": "neutral",
+      "situation": "comida",
+      "notes": "Con «te», el separable se abre: «mee te nemen». «Voor hier» = para tomar aquí.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-shopping.qa.afrekenen",
+      "question": "Wil je afrekenen?",
+      "questionEs": "¿Quieres pagar?",
+      "accepted": [
+        {
+          "text": "Ja, graag. Kan ik pinnen?",
+          "es": "Sí, por favor. ¿Puedo pagar con tarjeta?"
+        },
+        {
+          "text": "Ja, het was heerlijk!",
+          "es": "Sí, ¡estaba buenísimo!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik afreken nu.",
+          "es": "Sí, pago ahora (partícula mal)."
+        },
+        {
+          "text": "Ja, ik heb afgerekend morgen.",
+          "es": "Sí, he pagado mañana (tiempo mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "«afrekenen» se separa: «ik reken nu af».",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}

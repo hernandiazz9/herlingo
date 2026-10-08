@@ -1,0 +1,1054 @@
+{
+  "id": "nl-a2-bank",
+  "order": 32,
+  "level": "A2",
+  "title": "Banco y dinero: cuenta, pinnen, iDEAL y Tikkie",
+  "description": "Abrir una cuenta, pagar con tarjeta («pinnen») o en efectivo, hacer y pedir transferencias con iDEAL y Tikkie, y resolver problemas con la tarjeta.",
+  "emoji": "🏦",
+  "situation": "dinero",
+  "lessons": [
+    {
+      "id": "nl-a2-bank.l.rekening",
+      "title": "Abrir una cuenta",
+      "items": [
+        "nl-a2-bank.bankrekening",
+        "nl-a2-bank.klant",
+        "nl-a2-bank.bankkantoor",
+        "nl-a2-bank.openen",
+        "nl-a2-bank.kosten",
+        "nl-a2-bank.app",
+        "nl-a2-bank.salaris",
+        "nl-a2-bank.bankpas",
+        "nl-a2-bank.pincode",
+        "nl-a2-bank.ik-wil-graag-een-rekening-openen",
+        "nl-a2-gemeente.welke-documenten-moet-ik-meenemen",
+        "nl-a2-gemeente.wat-is-uw-bsn",
+        "nl-a2-bank.ik-sta-ingeschreven-in-utrecht",
+        "nl-a2-bank.kan-ik-dat-ook-online-doen",
+        "nl-a2-bank.zijn-er-kosten",
+        "nl-a2-bank.wat-kost-een-rekening-per-maand",
+        "nl-a2-bank.ik-heb-een-rekening-nodig-voor-mijn-salaris",
+        "nl-a2-bank.is-de-app-ook-in-het-engels",
+        "nl-a2-bank.wanneer-krijg-ik-mijn-bankpas",
+        "nl-a2-bank.uw-pas-komt-binnen-vijf-dagen",
+        "nl-a2-bank.de-pincode-krijgt-u-apart",
+        "nl-a2-bank.qa.rekening-openen",
+        "nl-a2-bank.qa.ingeschreven"
+      ]
+    },
+    {
+      "id": "nl-a2-bank.l.pinnen",
+      "title": "Pagar: tarjeta o efectivo",
+      "items": [
+        "nl-a2-bank.pinnen",
+        "nl-a2-bank.betalen",
+        "nl-a2-bank.contant",
+        "nl-a2-bank.contactloos",
+        "nl-a2-bank.pinautomaat",
+        "nl-a2-bank.creditcard",
+        "nl-a2-numbers.euro",
+        "nl-a2-numbers.cent",
+        "nl-a2-bank.munt",
+        "nl-a2-bank.betaling",
+        "nl-a2-bank.alleen-pinnen",
+        "nl-a2-bank.pinnen-of-contant",
+        "nl-a2-bank.ik-pin-wel",
+        "nl-a2-numbers.kan-ik-pinnen",
+        "nl-a2-bank.kan-ik-contant-betalen",
+        "nl-a2-bank.kan-ik-met-een-creditcard-betalen",
+        "nl-a2-bank.je-kunt-contactloos-betalen",
+        "nl-a2-bank.toets-uw-pincode-in",
+        "nl-a2-bank.de-betaling-is-mislukt",
+        "nl-a2-bank.probeer-het-nog-een-keer",
+        "nl-a2-bank.qa.pinnen-of-contant",
+        "nl-a2-bank.qa.alleen-pinnen",
+        "nl-a2-bank.qa.geen-contant"
+      ]
+    },
+    {
+      "id": "nl-a2-bank.l.geld-opnemen",
+      "title": "El cajero y el saldo",
+      "items": [
+        "nl-a2-bank.geld",
+        "nl-a2-bank.geldautomaat",
+        "nl-a2-bank.opnemen",
+        "nl-a2-bank.saldo",
+        "nl-a2-bank.bedrag",
+        "nl-a2-numbers.briefje",
+        "nl-a2-bank.waar-is-hier-een-geldautomaat",
+        "nl-a2-bank.ik-wil-geld-opnemen",
+        "nl-a2-bank.ik-neem-vijftig-euro-op",
+        "nl-a2-numbers.een-briefje-van-vijftig",
+        "nl-a2-bank.wat-is-mijn-saldo",
+        "nl-a2-bank.mijn-salaris-is-nog-niet-binnen"
+      ]
+    },
+    {
+      "id": "nl-a2-bank.l.overmaken",
+      "title": "Transferencias, iDEAL y Tikkie",
+      "items": [
+        "nl-a2-bank.overmaken",
+        "nl-a2-bank.overboeking",
+        "nl-a2-bank.rekeningnummer",
+        "nl-a2-bank.betaalverzoek",
+        "nl-a2-bank.tikkie",
+        "nl-a2-bank.ideal",
+        "nl-a2-bank.terugbetalen",
+        "nl-a2-bank.ik-maak-het-geld-vanavond-over",
+        "nl-a2-bank.kun-je-het-naar-mijn-rekening-overmaken",
+        "nl-a2-bank.wat-is-je-rekeningnummer",
+        "nl-a2-bank.ik-heb-het-al-overgemaakt",
+        "nl-a2-bank.het-geld-staat-al-op-je-rekening",
+        "nl-a2-bank.ik-stuur-je-een-tikkie",
+        "nl-a2-bank.ik-heb-je-tikkie-betaald",
+        "nl-a2-bank.je-krijgt-nog-tien-euro-van-me",
+        "nl-a2-bank.ik-betaal-het-je-morgen-terug",
+        "nl-a2-bank.je-kunt-online-betalen-met-ideal",
+        "nl-a2-bank.zullen-we-de-rekening-delen",
+        "nl-a2-bank.we-betalen-ieder-voor-zich",
+        "nl-a2-bank.qa.tikkie",
+        "nl-a2-bank.qa.rekeningnummer",
+        "nl-a2-bank.qa.overmaken"
+      ]
+    },
+    {
+      "id": "nl-a2-bank.l.problemen",
+      "title": "Problemas con la tarjeta",
+      "items": [
+        "nl-a2-bank.blokkeren",
+        "nl-a2-bank.kwijt",
+        "nl-a2-bank.gestolen",
+        "nl-a2-bank.mijn-pas-is-geblokkeerd",
+        "nl-a2-bank.ik-ben-mijn-pas-kwijt",
+        "nl-a2-bank.mijn-pas-is-gestolen",
+        "nl-a2-bank.ik-wil-mijn-pas-laten-blokkeren",
+        "nl-a2-bank.ik-ben-mijn-pincode-vergeten",
+        "nl-a2-bank.de-automaat-heeft-mijn-pas-ingeslikt",
+        "nl-a2-bank.deze-betaling-ken-ik-niet",
+        "nl-a2-bank.kunt-u-me-een-nieuwe-pas-sturen",
+        "nl-a2-bank.qa.pas-kwijt"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-bank.ik-wil-graag-een-rekening-openen",
+      "text": "Ik wil graag een rekening openen.",
+      "es": "Quiero abrir una cuenta.",
+      "notes": "Con «willen», el infinitivo va al final.",
+      "explanation": "En el banco o en la app. «openen» al final: ik wil JRAAJ en REE-ke-ning OO-pe-ne.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.kan-ik-dat-ook-online-doen",
+      "text": "Kan ik dat ook online doen?",
+      "es": "¿Puedo hacerlo también por internet?",
+      "explanation": "Casi todo se hace en la app. «doen» = hacer, «oe» = «u»: ON-lain DUN.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.zijn-er-kosten",
+      "text": "Zijn er kosten aan verbonden?",
+      "es": "¿Tiene comisiones?",
+      "notes": "Expresión fija: «Zijn er kosten aan verbonden?» = ¿cuesta algo?",
+      "explanation": "Antes de abrir la cuenta. «verbonden» = ligado: aan fer-BON-de.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.wat-kost-een-rekening-per-maand",
+      "text": "Wat kost een rekening per maand?",
+      "es": "¿Cuánto cuesta una cuenta al mes?",
+      "explanation": "Para comparar bancos. «kost» con «o» corta: wat KOST en REE-ke-ning.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-heb-een-rekening-nodig-voor-mijn-salaris",
+      "text": "Ik heb een rekening nodig voor mijn salaris.",
+      "es": "Necesito una cuenta para cobrar el sueldo.",
+      "explanation": "Para explicar por qué la abres. «salaris» acentuado en LAA: sa-LAA-ris.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.wanneer-krijg-ik-mijn-bankpas",
+      "text": "Wanneer krijg ik mijn bankpas?",
+      "es": "¿Cuándo me llega la tarjeta?",
+      "explanation": "Al terminar de abrir la cuenta. «krijg» con «ij» = «ei» y «g» de garganta: KREIJ.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.uw-pas-komt-binnen-vijf-dagen",
+      "text": "Uw pas komt binnen vijf dagen per post.",
+      "es": "Su tarjeta llega en cinco días por correo.",
+      "explanation": "Te lo dice el banco. «uw» suena «üu»: üu PAS komt BI-ne feif DAA-je.",
+      "register": "u",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.de-pincode-krijgt-u-apart",
+      "text": "De pincode krijgt u apart.",
+      "es": "El PIN lo recibe aparte.",
+      "notes": "V2: si la frase empieza por otra cosa, el sujeto va detrás del verbo.",
+      "explanation": "Te explican el envío. Empieza por el objeto, así que el verbo va segundo: KREIJT ü.",
+      "register": "u",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.is-de-app-ook-in-het-engels",
+      "text": "Is de app ook in het Engels?",
+      "es": "¿La app está también en inglés?",
+      "explanation": "Útil al principio. «app» se dice como en inglés: de EP ook in et E-ngels.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-sta-ingeschreven-in-utrecht",
+      "text": "Ik sta ingeschreven in Utrecht.",
+      "es": "Estoy empadronado en Utrecht.",
+      "notes": "«ingeschreven staan» = estar empadronado.",
+      "explanation": "El banco necesita tu dirección. «ingeschreven»: IN-je-sjree-fe, acento en IN.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.alleen-pinnen",
+      "text": "Alleen pinnen.",
+      "es": "Solo tarjeta.",
+      "notes": "Muchos sitios no aceptan efectivo: lleva siempre la tarjeta.",
+      "explanation": "Lo ves en carteles de tiendas y cafés: no aceptan efectivo. a-LEEN PI-ne.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.pinnen-of-contant",
+      "text": "Pinnen of contant?",
+      "es": "¿Tarjeta o efectivo?",
+      "explanation": "Te lo pregunta el cajero. «contant» acentuado al final: PI-ne of kon-TANT.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-pin-wel",
+      "text": "Ik pin wel.",
+      "es": "Pago con tarjeta, entonces.",
+      "notes": "«wel» aquí = pues, entonces (lo contrario de lo esperado).",
+      "explanation": "Si no aceptan efectivo o no llevas. «wel» refuerza: ik PIN wel.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.kan-ik-contant-betalen",
+      "text": "Kan ik contant betalen?",
+      "es": "¿Puedo pagar en efectivo?",
+      "explanation": "Antes de pagar en un mercado o un sitio pequeño. kan ik kon-TANT be-TAA-le.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.kan-ik-met-een-creditcard-betalen",
+      "text": "Kan ik met een creditcard betalen?",
+      "es": "¿Puedo pagar con tarjeta de crédito?",
+      "explanation": "Muchos sitios solo aceptan la tarjeta de débito. Se dice como en inglés: KRE-dit-kart.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.je-kunt-contactloos-betalen",
+      "text": "Je kunt contactloos betalen.",
+      "es": "Puedes pagar sin contacto.",
+      "explanation": "Te lo dice el cajero. «kunt» con «u» corta: ye KÜNT kon-TAKT-loos.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.toets-uw-pincode-in",
+      "text": "Toets uw pincode in.",
+      "es": "Introduzca su PIN.",
+      "notes": "«intoetsen» es separable: la partícula «in» va al final.",
+      "explanation": "Lo pone la pantalla del datáfono. «oe» = «u»: TUTS üu PIN-koo-de IN.",
+      "register": "u",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.de-betaling-is-mislukt",
+      "text": "De betaling is mislukt.",
+      "es": "El pago ha fallado.",
+      "explanation": "Lo dice el datáfono o el cajero. «mislukt» = fallado: mis-LÜKT.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.probeer-het-nog-een-keer",
+      "text": "Probeer het nog een keer.",
+      "es": "Inténtalo otra vez.",
+      "explanation": "Te lo dice el cajero si falla. «probeer» = intenta: pro-BEER et noj en KEER.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.waar-is-hier-een-geldautomaat",
+      "text": "Waar is hier een geldautomaat?",
+      "es": "¿Dónde hay un cajero por aquí?",
+      "explanation": "Al buscar efectivo. «au» suena «au»: JELT-au-too-maat.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-wil-geld-opnemen",
+      "text": "Ik wil geld opnemen.",
+      "es": "Quiero sacar dinero.",
+      "notes": "«opnemen» es separable; con un modal, el infinitivo va entero al final.",
+      "explanation": "En el banco o al hablar de cajeros. Acento en la partícula: OP-nee-me.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-neem-vijftig-euro-op",
+      "text": "Ik neem vijftig euro op.",
+      "es": "Saco cincuenta euros.",
+      "notes": "«neem … op» = opnemen: la partícula va al final.",
+      "explanation": "En el cajero. La partícula «op» va al final: ik NEEM FEIF-taj EU-ro OP.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-maak-het-geld-vanavond-over",
+      "text": "Ik maak het geld vanavond over.",
+      "es": "Te hago la transferencia esta noche.",
+      "notes": "«maak … over» = overmaken: la partícula va al final de la frase.",
+      "explanation": "A un amigo al que le debes dinero. La partícula al final: ik MAAK et JELT fan-AA-font OO-fer.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.kun-je-het-naar-mijn-rekening-overmaken",
+      "text": "Kun je het naar mijn rekening overmaken?",
+      "es": "¿Me lo puedes transferir a mi cuenta?",
+      "notes": "Con modal, el verbo separable va entero al final.",
+      "explanation": "Para pedir que te paguen. Con modal, «overmaken» va entero al final: OO-fer-maa-ke.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.wat-is-je-rekeningnummer",
+      "text": "Wat is je rekeningnummer?",
+      "es": "¿Cuál es tu número de cuenta?",
+      "explanation": "Para hacer una transferencia. Suena wat is ye REE-ke-ning-nu-mer.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-stuur-je-een-tikkie",
+      "text": "Ik stuur je een Tikkie.",
+      "es": "Te mando un Tikkie.",
+      "notes": "Pagar uno y mandar un Tikkie a los demás es lo normal.",
+      "explanation": "Después de pagar algo para varios. «stuur» con «uu» redonda: ik STÜÜR ye en TI-ki.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-heb-je-tikkie-betaald",
+      "text": "Ik heb je Tikkie betaald.",
+      "es": "Ya te he pagado el Tikkie.",
+      "explanation": "Para confirmar que has pagado. «betaald»: be-TAALT, la «d» final suena «t».",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.je-krijgt-nog-tien-euro-van-me",
+      "text": "Je krijgt nog tien euro van me.",
+      "es": "Te debo diez euros.",
+      "literal": "Recibes todavía diez euros de mí.",
+      "notes": "Así se dice «te debo»: «jij krijgt nog … van mij».",
+      "explanation": "Para reconocer una deuda pequeña con un amigo. ye KREIJT noj TIN EU-ro fan me.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-betaal-het-je-morgen-terug",
+      "text": "Ik betaal het je morgen terug.",
+      "es": "Te lo devuelvo mañana.",
+      "notes": "«terugbetalen» es separable: «ik betaal het … terug».",
+      "explanation": "Cuando alguien te presta dinero. «terug» al final, acento en TE: te-RÜJ.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.je-kunt-online-betalen-met-ideal",
+      "text": "Je kunt online betalen met iDEAL.",
+      "es": "Puedes pagar por internet con iDEAL.",
+      "explanation": "Para pagar en una web holandesa. «iDEAL» se dice ai-DIIL.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.het-geld-staat-al-op-je-rekening",
+      "text": "Het geld staat al op je rekening.",
+      "es": "El dinero ya está en tu cuenta.",
+      "notes": "El dinero «staat» (está) en la cuenta.",
+      "explanation": "Después de hacer la transferencia. «staat» = está: et JELT staat al op ye REE-ke-ning.",
+      "register": "tu",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-heb-het-al-overgemaakt",
+      "text": "Ik heb het al overgemaakt.",
+      "es": "Ya te lo he transferido.",
+      "notes": "En el participio de un separable, «ge-» va entre la partícula y el verbo: over-ge-maakt.",
+      "explanation": "Para confirmar un pago. El «ge-» va dentro: OO-fer-je-maakt.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.wat-is-mijn-saldo",
+      "text": "Wat is mijn saldo?",
+      "es": "¿Cuál es mi saldo?",
+      "explanation": "En el banco o mirando la app. «saldo» con «a» corta: mein SAL-doo.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.mijn-salaris-is-nog-niet-binnen",
+      "text": "Mijn salaris is nog niet binnen.",
+      "es": "Todavía no me ha llegado el sueldo.",
+      "notes": "«binnen zijn» = haber llegado (dinero, un paquete).",
+      "explanation": "A final de mes, si va tarde. «binnen» = dentro, recibido: noj nit BI-ne.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.zullen-we-de-rekening-delen",
+      "text": "Zullen we de rekening delen?",
+      "es": "¿Pagamos a medias?",
+      "notes": "Aquí «de rekening» es la cuenta del restaurante.",
+      "explanation": "En un bar o restaurante con amigos. «zullen we» = ¿y si…?: ZÜ-le we de REE-ke-ning DEE-le.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.we-betalen-ieder-voor-zich",
+      "text": "We betalen ieder voor zich.",
+      "es": "Cada uno paga lo suyo.",
+      "explanation": "Lo normal entre holandeses. «ieder» = cada uno: II-der foor ZIJ.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.mijn-pas-is-geblokkeerd",
+      "text": "Mijn pas is geblokkeerd.",
+      "es": "Mi tarjeta está bloqueada.",
+      "explanation": "Si la tarjeta no funciona. je-blo-KEERT, la «d» final suena «t».",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-ben-mijn-pas-kwijt",
+      "text": "Ik ben mijn pas kwijt.",
+      "es": "He perdido la tarjeta.",
+      "notes": "«kwijt zijn» = haber perdido; va con «zijn», no con «hebben».",
+      "explanation": "Al llamar al banco. «kwijt» con «ij» = «ei»: ik ben mein PAS KWEIT.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.mijn-pas-is-gestolen",
+      "text": "Mijn pas is gestolen.",
+      "es": "Me han robado la tarjeta.",
+      "explanation": "Para bloquearla rápido. «gestolen»: je-STOO-le, con «g» de garganta.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-wil-mijn-pas-laten-blokkeren",
+      "text": "Ik wil mijn pas laten blokkeren.",
+      "es": "Quiero bloquear mi tarjeta.",
+      "explanation": "Al llamar al banco. «laten» + infinitivo = hacer que lo hagan: LAA-te blo-KEE-re.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.ik-ben-mijn-pincode-vergeten",
+      "text": "Ik ben mijn pincode vergeten.",
+      "es": "He olvidado el PIN.",
+      "explanation": "En el banco. «vergeten» va con «zijn» en pasado: fer-JEE-te.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.de-automaat-heeft-mijn-pas-ingeslikt",
+      "text": "De automaat heeft mijn pas ingeslikt.",
+      "es": "El cajero se ha tragado mi tarjeta.",
+      "notes": "«inslikken» = tragar; en el participio, «ge-» va en medio: in-ge-slikt.",
+      "explanation": "Si el cajero no te la devuelve. «ingeslikt»: IN-je-slikt, acento en IN.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.deze-betaling-ken-ik-niet",
+      "text": "Deze betaling ken ik niet.",
+      "es": "No reconozco este pago.",
+      "notes": "V2: el objeto va delante para destacarlo y el verbo sigue en segunda posición.",
+      "explanation": "Si ves un cargo extraño. Empiezas por el pago, y el verbo va segundo: DEE-ze be-TAA-ling KEN ik nit.",
+      "register": "neutral",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.kunt-u-me-een-nieuwe-pas-sturen",
+      "text": "Kunt u me een nieuwe pas sturen?",
+      "es": "¿Me puede enviar una tarjeta nueva?",
+      "explanation": "Al banco, después de bloquearla. «nieuwe» suena «NIU-e»: en NIU-e PAS STÜÜ-re.",
+      "register": "u",
+      "situation": "dinero"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-bank.bankrekening",
+      "word": "bankrekening",
+      "article": "de",
+      "plural": "bankrekeningen",
+      "es": "la cuenta bancaria",
+      "notes": "Abreviado: «de rekening», que también es la factura o la cuenta del bar.",
+      "example": "nl-a2-bank.ik-wil-graag-een-rekening-openen",
+      "situation": "dinero",
+      "image": "fluent:bank"
+    },
+    {
+      "id": "nl-a2-bank.rekeningnummer",
+      "word": "rekeningnummer",
+      "article": "het",
+      "plural": "rekeningnummers",
+      "es": "el número de cuenta",
+      "notes": "Casi siempre el IBAN: «NL» + dos cifras + banco + diez cifras.",
+      "example": "nl-a2-bank.wat-is-je-rekeningnummer",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.bankpas",
+      "word": "bankpas",
+      "article": "de",
+      "plural": "bankpassen",
+      "es": "la tarjeta del banco (débito)",
+      "notes": "Coloquial: «mijn pas» o «mijn pasje».",
+      "example": "nl-a2-bank.wanneer-krijg-ik-mijn-bankpas",
+      "situation": "dinero",
+      "image": "fluent:credit-card"
+    },
+    {
+      "id": "nl-a2-bank.pincode",
+      "word": "pincode",
+      "article": "de",
+      "plural": "pincodes",
+      "es": "el PIN",
+      "example": "nl-a2-bank.ik-ben-mijn-pincode-vergeten",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.creditcard",
+      "word": "creditcard",
+      "article": "de",
+      "plural": "creditcards",
+      "es": "la tarjeta de crédito",
+      "notes": "Se usa poco: en muchas tiendas solo aceptan la bankpas.",
+      "example": "nl-a2-bank.kan-ik-met-een-creditcard-betalen",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.geldautomaat",
+      "word": "geldautomaat",
+      "article": "de",
+      "plural": "geldautomaten",
+      "es": "el cajero automático",
+      "notes": "Coloquial: «de pinautomaat».",
+      "example": "nl-a2-bank.waar-is-hier-een-geldautomaat",
+      "situation": "dinero",
+      "image": "fluent:euro-banknote"
+    },
+    {
+      "id": "nl-a2-bank.pinautomaat",
+      "word": "pinautomaat",
+      "article": "de",
+      "plural": "pinautomaten",
+      "es": "el datáfono",
+      "notes": "En la caja también lo llaman «het pinapparaat».",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.geld",
+      "word": "geld",
+      "article": "het",
+      "es": "el dinero",
+      "example": "nl-a2-bank.ik-wil-geld-opnemen",
+      "situation": "dinero",
+      "image": "fluent:money-bag"
+    },
+    {
+      "id": "nl-a2-bank.munt",
+      "word": "munt",
+      "article": "de",
+      "plural": "munten",
+      "es": "la moneda",
+      "situation": "dinero",
+      "image": "fluent:coin"
+    },
+    {
+      "id": "nl-a2-bank.saldo",
+      "word": "saldo",
+      "article": "het",
+      "plural": "saldi",
+      "es": "el saldo",
+      "example": "nl-a2-bank.wat-is-mijn-saldo",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.bedrag",
+      "word": "bedrag",
+      "article": "het",
+      "plural": "bedragen",
+      "es": "el importe, la cantidad",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.kosten",
+      "word": "kosten",
+      "article": "de",
+      "es": "los gastos, el coste",
+      "notes": "Casi siempre en plural: «Zijn er kosten?»",
+      "example": "nl-a2-bank.zijn-er-kosten",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.salaris",
+      "word": "salaris",
+      "article": "het",
+      "plural": "salarissen",
+      "es": "el sueldo",
+      "example": "nl-a2-bank.mijn-salaris-is-nog-niet-binnen",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.betaling",
+      "word": "betaling",
+      "article": "de",
+      "plural": "betalingen",
+      "es": "el pago",
+      "notes": "Las palabras en -ing son siempre «de».",
+      "example": "nl-a2-bank.de-betaling-is-mislukt",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.overboeking",
+      "word": "overboeking",
+      "article": "de",
+      "plural": "overboekingen",
+      "es": "la transferencia",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.betaalverzoek",
+      "word": "betaalverzoek",
+      "article": "het",
+      "plural": "betaalverzoeken",
+      "es": "la solicitud de pago",
+      "notes": "Un enlace para que alguien te pague; la marca más conocida es Tikkie.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.tikkie",
+      "word": "Tikkie",
+      "article": "de",
+      "plural": "Tikkies",
+      "es": "el Tikkie (solicitud de pago por app)",
+      "notes": "Se usa como verbo informal: «Ik tikkie je» = te mando un Tikkie.",
+      "example": "nl-a2-bank.ik-stuur-je-een-tikkie",
+      "situation": "dinero",
+      "image": "fluent:mobile-phone"
+    },
+    {
+      "id": "nl-a2-bank.ideal",
+      "word": "iDEAL",
+      "es": "iDEAL (pago online por tu banco)",
+      "notes": "Se dice «ai-DIIL»; casi todas las tiendas online lo usan.",
+      "example": "nl-a2-bank.je-kunt-online-betalen-met-ideal",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.app",
+      "word": "app",
+      "article": "de",
+      "plural": "apps",
+      "es": "la app",
+      "example": "nl-a2-bank.is-de-app-ook-in-het-engels",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.klant",
+      "word": "klant",
+      "article": "de",
+      "plural": "klanten",
+      "es": "el cliente, la clienta",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.bankkantoor",
+      "word": "bankkantoor",
+      "article": "het",
+      "plural": "bankkantoren",
+      "es": "la oficina del banco",
+      "notes": "Hay pocas: casi todo se hace con la app.",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.contant",
+      "word": "contant",
+      "es": "en efectivo",
+      "notes": "«contant geld» = dinero en efectivo; «cash» también se oye.",
+      "example": "nl-a2-bank.kan-ik-contant-betalen",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.contactloos",
+      "word": "contactloos",
+      "es": "sin contacto (pago)",
+      "example": "nl-a2-bank.je-kunt-contactloos-betalen",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.pinnen",
+      "word": "pinnen",
+      "es": "pagar con tarjeta; sacar dinero",
+      "notes": "Verbo de «PIN»: «ik pin» = pago con tarjeta.",
+      "example": "nl-a2-bank.ik-pin-wel",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.betalen",
+      "word": "betalen",
+      "es": "pagar",
+      "notes": "No se separa: «ik betaal», «ik heb betaald».",
+      "example": "nl-a2-bank.kan-ik-contant-betalen",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.overmaken",
+      "word": "overmaken",
+      "es": "transferir (dinero)",
+      "notes": "Separable: «ik maak het over», «ik heb het overgemaakt».",
+      "example": "nl-a2-bank.ik-maak-het-geld-vanavond-over",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.opnemen",
+      "word": "opnemen",
+      "es": "sacar (dinero)",
+      "notes": "Separable: «ik neem vijftig euro op».",
+      "example": "nl-a2-bank.ik-neem-vijftig-euro-op",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.openen",
+      "word": "openen",
+      "es": "abrir (una cuenta)",
+      "example": "nl-a2-bank.ik-wil-graag-een-rekening-openen",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.blokkeren",
+      "word": "blokkeren",
+      "es": "bloquear",
+      "example": "nl-a2-bank.ik-wil-mijn-pas-laten-blokkeren",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.terugbetalen",
+      "word": "terugbetalen",
+      "es": "devolver (dinero)",
+      "notes": "Separable: «ik betaal het je morgen terug».",
+      "example": "nl-a2-bank.ik-betaal-het-je-morgen-terug",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.kwijt",
+      "word": "kwijt",
+      "es": "perdido (no lo encuentro)",
+      "notes": "Va con «zijn»: «ik ben mijn pas kwijt».",
+      "example": "nl-a2-bank.ik-ben-mijn-pas-kwijt",
+      "situation": "dinero"
+    },
+    {
+      "id": "nl-a2-bank.gestolen",
+      "word": "gestolen",
+      "es": "robado",
+      "example": "nl-a2-bank.mijn-pas-is-gestolen",
+      "situation": "dinero"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-bank.qa.rekening-openen",
+      "question": "Goedemiddag, waarmee kan ik u helpen?",
+      "questionEs": "Buenas tardes, ¿en qué puedo ayudarle?",
+      "accepted": [
+        {
+          "text": "Ik wil graag een rekening openen.",
+          "es": "Quiero abrir una cuenta."
+        },
+        {
+          "text": "Ik heb een rekening nodig voor mijn salaris.",
+          "es": "Necesito una cuenta para cobrar el sueldo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik wil openen een rekening.",
+          "es": "Quiero abrir una cuenta (orden mal)."
+        },
+        {
+          "text": "Ik wil graag een rekening betalen.",
+          "es": "Quiero pagar una factura (otra cosa)."
+        }
+      ],
+      "register": "u",
+      "situation": "dinero",
+      "notes": "El infinitivo va al final: «een rekening openen». «Een rekening betalen» es pagar una factura.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-bank.qa.ingeschreven",
+      "question": "Staat u ingeschreven in Nederland?",
+      "questionEs": "¿Está empadronado en los Países Bajos?",
+      "accepted": [
+        {
+          "text": "Ja, ik sta ingeschreven in Utrecht.",
+          "es": "Sí, estoy empadronado en Utrecht."
+        },
+        {
+          "text": "Ja, en ik heb ook een BSN.",
+          "es": "Sí, y también tengo BSN."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik heb ingeschreven in Utrecht.",
+          "es": "Sí, he empadronado en Utrecht (verbo mal)."
+        },
+        {
+          "text": "Nee, ik heb niet een BSN.",
+          "es": "No, no tengo BSN (negación mal)."
+        }
+      ],
+      "register": "u",
+      "situation": "dinero",
+      "notes": "Se dice «ik sta ingeschreven». Con un sustantivo se niega con «geen».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-bank.qa.pinnen-of-contant",
+      "question": "Pinnen of contant?",
+      "questionEs": "¿Tarjeta o efectivo?",
+      "accepted": [
+        {
+          "text": "Pinnen, graag.",
+          "es": "Con tarjeta, por favor."
+        },
+        {
+          "text": "Contant. Alsjeblieft, twintig euro.",
+          "es": "En efectivo. Aquí tienes, veinte euros."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik pinnen graag.",
+          "es": "Yo pagar con tarjeta (verbo sin conjugar)."
+        },
+        {
+          "text": "Ik ben pinnen.",
+          "es": "Soy pagar con tarjeta."
+        }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "Responde corto («Pinnen, graag») o conjuga: «ik pin».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-bank.qa.alleen-pinnen",
+      "question": "Sorry, we nemen geen contant geld aan. Alleen pinnen.",
+      "questionEs": "Lo siento, no aceptamos efectivo. Solo tarjeta.",
+      "accepted": [
+        {
+          "text": "O, geen probleem, ik pin wel.",
+          "es": "Ah, no pasa nada, pago con tarjeta."
+        },
+        {
+          "text": "Oké. Kan ik contactloos betalen?",
+          "es": "Vale. ¿Puedo pagar sin contacto?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "O, ik heb niet een pas.",
+          "es": "Ah, no tengo tarjeta (negación mal)."
+        },
+        {
+          "text": "O, geen probleem, ik pinnen.",
+          "es": "Ah, no pasa nada, yo pagar con tarjeta (sin conjugar)."
+        }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "Con sustantivo, «geen pas». Conjuga el verbo: «ik pin».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-bank.qa.tikkie",
+      "question": "Ik stuur je een Tikkie voor de pizza, oké?",
+      "questionEs": "Te mando un Tikkie por la pizza, ¿vale?",
+      "accepted": [
+        {
+          "text": "Prima, ik betaal hem vanavond.",
+          "es": "Perfecto, lo pago esta noche."
+        },
+        {
+          "text": "Oké! Je krijgt nog acht euro van me.",
+          "es": "¡Vale! Te debo ocho euros."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Prima, ik overmaak het vanavond.",
+          "es": "Perfecto, te lo transfiero esta noche (partícula mal)."
+        },
+        {
+          "text": "Prima, stuurt u het maar.",
+          "es": "Perfecto, mándelo (de usted)."
+        }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "«overmaken» se separa: «ik maak het over». Con una amiga, «je», no «u».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-bank.qa.rekeningnummer",
+      "question": "Wat is je rekeningnummer? Dan maak ik het geld over.",
+      "questionEs": "¿Cuál es tu número de cuenta? Así te hago la transferencia.",
+      "accepted": [
+        {
+          "text": "Ik stuur het je even via WhatsApp.",
+          "es": "Te lo mando por WhatsApp."
+        },
+        {
+          "text": "Het begint met NL. Ik stuur het je.",
+          "es": "Empieza por NL. Te lo mando."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mijn rekening is twintig euro.",
+          "es": "Mi factura es de veinte euros (otra cosa)."
+        },
+        {
+          "text": "Mijn telefoonnummer is nul zes, twaalf.",
+          "es": "Mi teléfono es seis, doce (otra cosa)."
+        }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "El «rekeningnummer» es el IBAN, no una factura ni un teléfono.",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-bank.qa.overmaken",
+      "question": "Kun je de tien euro voor de lunch overmaken?",
+      "questionEs": "¿Me puedes transferir los diez euros de la comida?",
+      "accepted": [
+        {
+          "text": "Ja, ik maak het meteen over.",
+          "es": "Sí, te lo transfiero ahora mismo."
+        },
+        {
+          "text": "Ik heb het al overgemaakt!",
+          "es": "¡Ya te lo he transferido!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik overmaak het meteen.",
+          "es": "Sí, te lo transfiero ahora (partícula mal)."
+        },
+        {
+          "text": "Ja, ik heb het al geovermaakt.",
+          "es": "Sí, ya te lo he transferido (participio mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "dinero",
+      "notes": "«ik maak het over»; en el participio, «ge-» va en medio: over-ge-maakt.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-bank.qa.pas-kwijt",
+      "question": "Met de bank, u spreekt met Pieter. Wat kan ik voor u doen?",
+      "questionEs": "Banco, le atiende Pieter. ¿Qué puedo hacer por usted?",
+      "accepted": [
+        {
+          "text": "Ik ben mijn pas kwijt. Kunt u hem blokkeren?",
+          "es": "He perdido la tarjeta. ¿Puede bloquearla?"
+        },
+        {
+          "text": "Mijn pas is gestolen.",
+          "es": "Me han robado la tarjeta."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb mijn pas kwijt.",
+          "es": "He perdido la tarjeta (auxiliar mal)."
+        },
+        {
+          "text": "Ik ben mijn pas.",
+          "es": "Soy mi tarjeta."
+        }
+      ],
+      "register": "u",
+      "situation": "dinero",
+      "notes": "«kwijt» va con «zijn»: «Ik ben mijn pas kwijt».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-bank.qa.geen-contant",
+      "question": "Het pinapparaat doet het niet. Heeft u contant geld?",
+      "questionEs": "El datáfono no funciona. ¿Tiene efectivo?",
+      "accepted": [
+        {
+          "text": "Nee, sorry. Is er hier een geldautomaat?",
+          "es": "No, lo siento. ¿Hay un cajero por aquí?"
+        },
+        {
+          "text": "Ja, ik heb nog twintig euro.",
+          "es": "Sí, todavía tengo veinte euros."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik heb niet contant geld.",
+          "es": "No, no tengo efectivo (negación mal)."
+        },
+        {
+          "text": "Nee, het pinapparaat doet niet.",
+          "es": "No, el datáfono no funciona (falta «het»)."
+        }
+      ],
+      "register": "u",
+      "situation": "dinero",
+      "notes": "Con sustantivo se niega con «geen»: «geen contant geld». «Het doen» = funcionar.",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}

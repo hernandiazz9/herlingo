@@ -1,0 +1,1160 @@
+{
+  "id": "nl-a2-housing",
+  "order": 30,
+  "level": "A2",
+  "title": "Buscar casa y mudarte: habitación, piso, contrato y facturas",
+  "description": "Buscar una habitación o un piso, visitarlo con la agencia, entender el alquiler y la fianza, nombrar las habitaciones y los muebles, mudarte y avisar cuando algo no funciona.",
+  "emoji": "🔑",
+  "situation": "vivienda",
+  "lessons": [
+    {
+      "id": "nl-a2-housing.l.zoeken",
+      "title": "Buscar casa",
+      "items": [
+        "nl-a2-housing.kamer",
+        "nl-a2-housing.appartement",
+        "nl-a2-housing.studio",
+        "nl-a2-grammar.huis",
+        "nl-a2-housing.huur",
+        "nl-a2-housing.buurt",
+        "nl-a2-housing.huisgenoot",
+        "nl-a2-housing.ik-zoek-een-kamer",
+        "nl-a2-housing.ik-zoek-een-appartement",
+        "nl-a2-housing.is-de-kamer-nog-beschikbaar",
+        "nl-a2-housing.hoeveel-is-de-huur",
+        "nl-a2-housing.is-dat-inclusief-gas-water-en-licht",
+        "nl-a2-housing.vanaf-wanneer-is-de-kamer-vrij",
+        "nl-a2-housing.mag-ik-de-kamer-komen-bekijken",
+        "nl-a2-housing.in-welke-buurt-is-het",
+        "nl-a2-housing.hoeveel-huisgenoten-heb-ik",
+        "nl-a2-housing.het-is-moeilijk-om-een-huis-te-vinden",
+        "nl-a2-housing.qa.wat-zoekt-u",
+        "nl-a2-housing.qa.hoeveel-betalen"
+      ]
+    },
+    {
+      "id": "nl-a2-housing.l.bezichtiging",
+      "title": "La visita al piso",
+      "items": [
+        "nl-a2-housing.bezichtiging",
+        "nl-a2-housing.makelaar",
+        "nl-a2-housing.woonkamer",
+        "nl-a2-housing.slaapkamer",
+        "nl-a2-housing.balkon",
+        "nl-a2-housing.wasmachine",
+        "nl-a2-housing.gemeubileerd",
+        "nl-a2-housing.komt-u-binnen",
+        "nl-a2-housing.dit-is-de-woonkamer",
+        "nl-a2-housing.er-is-ook-een-balkon",
+        "nl-a2-housing.er-zijn-twee-slaapkamers",
+        "nl-a2-housing.is-er-een-wasmachine",
+        "nl-a2-housing.de-keuken-en-de-badkamer-zijn-gedeeld",
+        "nl-a2-housing.is-de-kamer-gemeubileerd",
+        "nl-a2-housing.nee-hij-is-leeg",
+        "nl-a2-housing.mag-ik-even-een-foto-maken",
+        "nl-a2-housing.het-is-licht-en-rustig",
+        "nl-a2-housing.de-kamer-is-een-beetje-klein",
+        "nl-a2-housing.ik-wil-de-kamer-graag-huren",
+        "nl-a2-housing.qa.wasmachine",
+        "nl-a2-housing.qa.gemeubileerd",
+        "nl-a2-housing.qa.wat-vind-je"
+      ]
+    },
+    {
+      "id": "nl-a2-housing.l.huur",
+      "title": "Alquiler, fianza y contrato",
+      "items": [
+        "nl-a2-housing.verhuurder",
+        "nl-a2-housing.huren",
+        "nl-a2-housing.servicekosten",
+        "nl-a2-housing.borg",
+        "nl-a2-housing.sleutel",
+        "nl-a2-gemeente.huurcontract",
+        "nl-a2-housing.de-kale-huur-is-achthonderd-euro",
+        "nl-a2-housing.plus-vijftig-euro-servicekosten",
+        "nl-a2-housing.hoeveel-is-de-borg",
+        "nl-a2-housing.de-borg-is-een-maand-huur",
+        "nl-a2-housing.wanneer-moet-ik-de-huur-betalen",
+        "nl-a2-housing.voor-de-eerste-van-de-maand",
+        "nl-a2-housing.mag-ik-me-op-dit-adres-inschrijven",
+        "nl-a2-housing.wanneer-krijg-ik-de-sleutel",
+        "nl-a2-housing.ik-teken-het-contract-morgen",
+        "nl-a2-housing.qa.borg"
+      ]
+    },
+    {
+      "id": "nl-a2-housing.l.kamers",
+      "title": "Habitaciones y muebles",
+      "items": [
+        "nl-a2-housing.keuken",
+        "nl-a2-housing.badkamer",
+        "nl-a2-housing.wc",
+        "nl-a2-housing.trap",
+        "nl-a2-housing.raam",
+        "nl-a2-housing.deur",
+        "nl-a2-housing.bed",
+        "nl-a2-housing.kast",
+        "nl-a2-housing.bank",
+        "nl-a2-housing.lamp",
+        "nl-a2-housing.koelkast",
+        "nl-a2-grammar.tafel",
+        "nl-a2-grammar.stoel",
+        "nl-a2-housing.waar-is-de-wc",
+        "nl-a2-housing.de-badkamer-is-boven",
+        "nl-a2-housing.de-bank-staat-in-de-woonkamer",
+        "nl-a2-housing.ik-heb-nog-een-bed-nodig",
+        "nl-a2-housing.er-is-geen-kast",
+        "nl-a2-housing.de-trap-is-heel-steil",
+        "nl-a2-housing.ik-koop-tweedehands-meubels"
+      ]
+    },
+    {
+      "id": "nl-a2-housing.l.verhuizen",
+      "title": "Mudarte y averías",
+      "items": [
+        "nl-a2-housing.verhuizen",
+        "nl-a2-housing.energie",
+        "nl-a2-housing.internet",
+        "nl-a2-housing.verwarming",
+        "nl-a2-housing.kapot",
+        "nl-a2-housing.ik-ga-volgende-week-verhuizen",
+        "nl-a2-housing.zaterdag-verhuis-ik",
+        "nl-a2-housing.kun-je-me-helpen-met-verhuizen",
+        "nl-a2-housing.ik-moet-nog-energie-regelen",
+        "nl-a2-housing.wie-betaalt-het-internet",
+        "nl-a2-housing.de-energierekening-is-erg-hoog",
+        "nl-a2-housing.de-verwarming-doet-het-niet",
+        "nl-a2-housing.er-is-geen-warm-water",
+        "nl-a2-housing.de-lamp-in-de-keuken-is-kapot",
+        "nl-a2-housing.de-wc-is-verstopt",
+        "nl-a2-housing.de-wasmachine-lekt",
+        "nl-a2-housing.ik-heb-het-koud",
+        "nl-a2-housing.wanneer-komt-de-monteur",
+        "nl-a2-housing.kunt-u-iemand-sturen",
+        "nl-a2-housing.qa.wanneer-verhuizen",
+        "nl-a2-housing.qa.hulp-verhuizen",
+        "nl-a2-housing.qa.probleem"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-housing.ik-zoek-een-kamer",
+      "text": "Ik zoek een kamer in Utrecht.",
+      "es": "Busco una habitación en Utrecht.",
+      "explanation": "Al escribir o llamar por un anuncio. «oe» = «u»: ik ZUK en KAA-mer.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.ik-zoek-een-appartement",
+      "text": "Ik zoek een appartement voor één persoon.",
+      "es": "Busco un piso para una persona.",
+      "notes": "«één» lleva tilde para distinguirlo de «een» (un, una).",
+      "explanation": "Al hablar con una agencia. «één» con tilde = uno: voor EEN per-SOON.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.is-de-kamer-nog-beschikbaar",
+      "text": "Is de kamer nog beschikbaar?",
+      "es": "¿La habitación sigue disponible?",
+      "explanation": "Primera pregunta al responder un anuncio. «sch» = s + j: be-SJIK-baar.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.hoeveel-is-de-huur",
+      "text": "Hoeveel is de huur per maand?",
+      "es": "¿Cuánto es el alquiler al mes?",
+      "explanation": "Para preguntar el precio. «uu» larga y redonda: de JÜÜR per MAANT.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.is-dat-inclusief-gas-water-en-licht",
+      "text": "Is dat inclusief gas, water en licht?",
+      "es": "¿Eso incluye gas, agua y luz?",
+      "notes": "«gas, water en licht» es la expresión fija para los suministros.",
+      "explanation": "Para saber si los gastos van aparte. «licht» con «ch» de garganta: LIJT.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.vanaf-wanneer-is-de-kamer-vrij",
+      "text": "Vanaf wanneer is de kamer vrij?",
+      "es": "¿Desde cuándo está libre la habitación?",
+      "explanation": "Para saber cuándo puedes entrar. «vrij» con «ij» = «ei»: FREI.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.mag-ik-de-kamer-komen-bekijken",
+      "text": "Mag ik de kamer komen bekijken?",
+      "es": "¿Puedo ir a ver la habitación?",
+      "notes": "Dos infinitivos al final: «komen bekijken» = venir a ver.",
+      "explanation": "Para pedir una visita. «bekijken» no se separa: be-KEI-ke.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.in-welke-buurt-is-het",
+      "text": "In welke buurt is het?",
+      "es": "¿En qué barrio está?",
+      "explanation": "Al leer un anuncio sin dirección. «uu» larga: in WEL-ke BÜÜRT is et.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.hoeveel-huisgenoten-heb-ik",
+      "text": "Hoeveel huisgenoten heb ik?",
+      "es": "¿Cuántos compañeros de piso tendría?",
+      "explanation": "Al ver una habitación en un piso compartido. «ui» = «ai» con labios redondos: JÖIS-je-noo-te.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.het-is-moeilijk-om-een-huis-te-vinden",
+      "text": "Het is moeilijk om hier een huis te vinden.",
+      "es": "Es difícil encontrar casa aquí.",
+      "notes": "«om … te» + infinitivo = para / encontrar algo.",
+      "explanation": "Un tema de conversación muy típico. «oei» = «ui»: et is MUI-lek.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.komt-u-binnen",
+      "text": "Goedemiddag, komt u binnen!",
+      "es": "Buenas tardes, ¡pase!",
+      "notes": "«binnenkomen» = entrar; en la frase se separa: «komt u binnen».",
+      "explanation": "La agente te recibe en la puerta. «binnen» = dentro: komt ü BI-ne.",
+      "register": "u",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.dit-is-de-woonkamer",
+      "text": "Dit is de woonkamer.",
+      "es": "Este es el salón.",
+      "explanation": "Durante la visita. «oo» larga: dit is de WOON-kaa-mer.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.er-is-ook-een-balkon",
+      "text": "Er is ook een balkon.",
+      "es": "También hay un balcón.",
+      "notes": "«er is» + singular, «er zijn» + plural = hay.",
+      "explanation": "Al enseñar el piso. «Er is» = hay (una cosa): er is ook en bal-KON.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.er-zijn-twee-slaapkamers",
+      "text": "Er zijn twee slaapkamers.",
+      "es": "Hay dos dormitorios.",
+      "notes": "«er zijn» + plural = hay.",
+      "explanation": "Para describir un piso. «zijn» para el plural: er ZEIN twee SLAAP-kaa-mers.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.is-er-een-wasmachine",
+      "text": "Is er een wasmachine?",
+      "es": "¿Hay lavadora?",
+      "explanation": "Pregunta clave en un piso. Pregunta: «is er»: is er en WAS-ma-sji-ne.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.de-keuken-en-de-badkamer-zijn-gedeeld",
+      "text": "De keuken en de badkamer zijn gedeeld.",
+      "es": "La cocina y el baño son compartidos.",
+      "explanation": "Típico en una habitación de alquiler. «gedeeld»: je-DEELT, la «d» final suena «t».",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.is-de-kamer-gemeubileerd",
+      "text": "Is de kamer gemeubileerd?",
+      "es": "¿La habitación está amueblada?",
+      "explanation": "Antes de decidir si necesitas muebles. je-mö-bi-LEERT, «eu» con labios redondos.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.nee-hij-is-leeg",
+      "text": "Nee, hij is leeg.",
+      "es": "No, está vacía.",
+      "notes": "Una palabra con «de» (de kamer) se sustituye por «hij».",
+      "explanation": "Respuesta posible de la agente. «leeg» con «g» final de garganta: LEEJ.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.mag-ik-even-een-foto-maken",
+      "text": "Mag ik even een foto maken?",
+      "es": "¿Puedo hacer una foto?",
+      "explanation": "Durante una visita. «foto» con dos «o» largas: FOO-too.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.het-is-licht-en-rustig",
+      "text": "Het is licht en rustig.",
+      "es": "Es luminoso y tranquilo.",
+      "explanation": "Para dar tu opinión del piso. «rustig» = tranquilo: RÜS-taj.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.de-kamer-is-een-beetje-klein",
+      "text": "De kamer is een beetje klein.",
+      "es": "La habitación es un poco pequeña.",
+      "notes": "«een beetje» = un poco; suaviza la crítica.",
+      "explanation": "Si no te convence. «ei» = «ei»: en BEE-che KLEIN.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.ik-wil-de-kamer-graag-huren",
+      "text": "Ik wil de kamer graag huren.",
+      "es": "Me gustaría alquilar la habitación.",
+      "notes": "«graag» hace la frase amable: «ik wil graag» = me gustaría.",
+      "explanation": "Para decir que la quieres. «graag» con dos «g» de garganta: JRAAJ.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.de-kale-huur-is-achthonderd-euro",
+      "text": "De kale huur is achthonderd euro.",
+      "es": "El alquiler sin gastos es de ochocientos euros.",
+      "notes": "«kaal» = calvo; «kale huur» = alquiler sin servicios.",
+      "explanation": "Lo dice la agencia. «kale huur» = alquiler «pelado», sin gastos: KAA-le JÜÜR.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.plus-vijftig-euro-servicekosten",
+      "text": "Plus vijftig euro servicekosten.",
+      "es": "Más cincuenta euros de gastos.",
+      "explanation": "El resto del precio. «servicekosten» se dice SÖR-vis-kos-te, a la inglesa.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.hoeveel-is-de-borg",
+      "text": "Hoeveel is de borg?",
+      "es": "¿Cuánto es la fianza?",
+      "explanation": "Antes de firmar. «borg» con «g» de garganta: de BORJ.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.de-borg-is-een-maand-huur",
+      "text": "De borg is één maand huur.",
+      "es": "La fianza es un mes de alquiler.",
+      "explanation": "Respuesta típica del casero. «één» = uno: EEN maant JÜÜR.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.wanneer-moet-ik-de-huur-betalen",
+      "text": "Wanneer moet ik de huur betalen?",
+      "es": "¿Cuándo tengo que pagar el alquiler?",
+      "explanation": "Al firmar el contrato. «betalen» no se separa: be-TAA-le.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.voor-de-eerste-van-de-maand",
+      "text": "Voor de eerste van de maand.",
+      "es": "Antes del día uno de cada mes.",
+      "explanation": "La respuesta habitual. «voor» = antes de: voor de EER-ste fan de MAANT.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.mag-ik-me-op-dit-adres-inschrijven",
+      "text": "Mag ik me op dit adres inschrijven?",
+      "es": "¿Me puedo empadronar en esta dirección?",
+      "notes": "Algunos caseros no lo permiten; sin empadronarte no tienes BSN.",
+      "explanation": "Pregunta imprescindible: sin padrón no hay BSN. IN-sjrei-ve, acento en IN.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.wanneer-krijg-ik-de-sleutel",
+      "text": "Wanneer krijg ik de sleutel?",
+      "es": "¿Cuándo me dan la llave?",
+      "explanation": "Al cerrar el trato. «eu» con labios redondos: de SLÖ-tel.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.ik-teken-het-contract-morgen",
+      "text": "Ik teken het contract morgen.",
+      "es": "Firmo el contrato mañana.",
+      "explanation": "Para quedar con la agencia. «teken» = firmo: ik TEE-ke et kon-TRAKT.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.waar-is-de-wc",
+      "text": "Waar is de wc?",
+      "es": "¿Dónde está el váter?",
+      "explanation": "En una casa ajena. «wc» se dice «wee-see»: waar is de wee-SEE.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.de-badkamer-is-boven",
+      "text": "De badkamer is boven.",
+      "es": "El baño está arriba.",
+      "explanation": "Al explicar la casa. «boven» = arriba: BOO-fe, la «v» casi como «f».",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.de-bank-staat-in-de-woonkamer",
+      "text": "De bank staat in de woonkamer.",
+      "es": "El sofá está en el salón.",
+      "notes": "Los muebles «staan» (están de pie); «de bank» es aquí el sofá.",
+      "explanation": "Para describir dónde están los muebles. «staat» = está (de pie): de BANK staat.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.ik-heb-nog-een-bed-nodig",
+      "text": "Ik heb nog een bed nodig.",
+      "es": "Todavía necesito una cama.",
+      "explanation": "Al amueblar la habitación. «bed» con «d» final que suena «t»: BET.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.er-is-geen-kast",
+      "text": "Er is geen kast in de kamer.",
+      "es": "No hay armario en la habitación.",
+      "notes": "«er is geen» = no hay.",
+      "explanation": "Para decir qué falta. «geen» = ningún: er is JEEN kast.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.de-trap-is-heel-steil",
+      "text": "De trap is heel steil!",
+      "es": "¡La escalera es muy empinada!",
+      "explanation": "Comentario típico al subir en una casa holandesa. «ei» = «ei»: jeel STEIL.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.ik-koop-tweedehands-meubels",
+      "text": "Ik koop tweedehands meubels op Marktplaats.",
+      "es": "Compro muebles de segunda mano en Marktplaats.",
+      "explanation": "Marktplaats es la web de segunda mano. «eu» redonda: TWEE-de-jants MÖ-bels.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.ik-ga-volgende-week-verhuizen",
+      "text": "Ik ga volgende week verhuizen.",
+      "es": "Me mudo la semana que viene.",
+      "notes": "«gaan» + infinitivo al final = ir a hacer algo.",
+      "explanation": "Para contarlo a amigos o colegas. «ui» redonda: fer-JÖI-ze.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.zaterdag-verhuis-ik",
+      "text": "Zaterdag verhuis ik.",
+      "es": "El sábado me mudo.",
+      "notes": "V2: si la frase empieza por el día, el sujeto va detrás del verbo.",
+      "explanation": "Para dar la fecha. Empiezas por el día, así que el verbo va segundo: ZAA-ter-daj fer-JÖIS ik.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.kun-je-me-helpen-met-verhuizen",
+      "text": "Kun je me helpen met verhuizen?",
+      "es": "¿Me puedes ayudar con la mudanza?",
+      "notes": "«met verhuizen» = con la mudanza (el infinitivo como sustantivo).",
+      "explanation": "A un amigo o compañero. «kun je» sin «t»: KÜN ye me JEL-pe.",
+      "register": "tu",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.ik-moet-nog-energie-regelen",
+      "text": "Ik moet nog energie en internet regelen.",
+      "es": "Todavía tengo que contratar la luz, el gas e internet.",
+      "notes": "«nog» = todavía; «regelen» = gestionar, contratar.",
+      "explanation": "Al entrar en un piso vacío. «energie» acentuada al final: ee-ner-JII.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.wie-betaalt-het-internet",
+      "text": "Wie betaalt het internet?",
+      "es": "¿Quién paga internet?",
+      "explanation": "En un piso compartido. «wie» = quién: WII be-TAALT.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.de-energierekening-is-erg-hoog",
+      "text": "De energierekening is erg hoog.",
+      "es": "La factura de la luz es muy alta.",
+      "notes": "«de rekening» = la factura (y también la cuenta del banco).",
+      "explanation": "Queja típica en invierno. «hoog» con «g» de garganta final: erj JOOJ.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.de-verwarming-doet-het-niet",
+      "text": "De verwarming doet het niet.",
+      "es": "La calefacción no funciona.",
+      "notes": "«het doen» = funcionar: «De lamp doet het weer» = la lámpara vuelve a funcionar.",
+      "explanation": "Al llamar al casero. «doet het niet» = no funciona: de fer-WAR-ming DUT et NIT.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.er-is-geen-warm-water",
+      "text": "Er is geen warm water.",
+      "es": "No hay agua caliente.",
+      "explanation": "Una avería urgente. «water» con «w» suave: WAA-ter.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.de-lamp-in-de-keuken-is-kapot",
+      "text": "De lamp in de keuken is kapot.",
+      "es": "La lámpara de la cocina está rota.",
+      "explanation": "Para describir una avería pequeña. «kapot» acentuado al final: ka-POT.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.de-wc-is-verstopt",
+      "text": "De wc is verstopt.",
+      "es": "El váter está atascado.",
+      "explanation": "Avería que hay que avisar rápido. fer-STOPT, acento en STOPT.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.de-wasmachine-lekt",
+      "text": "De wasmachine lekt.",
+      "es": "La lavadora pierde agua.",
+      "explanation": "Para avisar de una fuga. «lekt» corto: de WAS-ma-sji-ne LEKT.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.ik-heb-het-koud",
+      "text": "Ik heb het koud.",
+      "es": "Tengo frío.",
+      "notes": "Se dice «ik heb het koud», nunca «ik heb koud».",
+      "explanation": "Cuando la calefacción falla. «ou» suena «au»: ik jep et KAUT.",
+      "register": "neutral",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.wanneer-komt-de-monteur",
+      "text": "Wanneer komt de monteur?",
+      "es": "¿Cuándo viene el técnico?",
+      "explanation": "Al casero o a la agencia. «eu» redonda: de mon-TÖR.",
+      "register": "neutral",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.kunt-u-iemand-sturen",
+      "text": "Kunt u iemand sturen?",
+      "es": "¿Puede mandar a alguien?",
+      "explanation": "Al llamar a la agencia por una avería. «sturen» con «uu» redonda: STÜÜ-re.",
+      "register": "u",
+      "situation": "vivienda"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-housing.kamer",
+      "word": "kamer",
+      "article": "de",
+      "plural": "kamers",
+      "es": "la habitación",
+      "notes": "Falso amigo: «kamer» es una habitación (o un cuarto de alquiler), no una cama.",
+      "example": "nl-a2-housing.ik-zoek-een-kamer",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.appartement",
+      "word": "appartement",
+      "article": "het",
+      "plural": "appartementen",
+      "es": "el piso, el apartamento",
+      "notes": "Las palabras en -ment son casi siempre «het».",
+      "example": "nl-a2-housing.ik-zoek-een-appartement",
+      "situation": "vivienda",
+      "image": "fluent:office-building"
+    },
+    {
+      "id": "nl-a2-housing.studio",
+      "word": "studio",
+      "article": "de",
+      "plural": "studio's",
+      "es": "el estudio (piso pequeño)",
+      "notes": "Una habitación con cocina y baño propios.",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.huur",
+      "word": "huur",
+      "article": "de",
+      "es": "el alquiler",
+      "notes": "«kale huur» = alquiler sin gastos; «huren» = alquilar.",
+      "example": "nl-a2-housing.hoeveel-is-de-huur",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.huren",
+      "word": "huren",
+      "es": "alquilar (como inquilino)",
+      "example": "nl-a2-housing.ik-wil-de-kamer-graag-huren",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.servicekosten",
+      "word": "servicekosten",
+      "article": "de",
+      "es": "los gastos de comunidad y servicios",
+      "notes": "Solo existe en plural; se suman a la «kale huur».",
+      "example": "nl-a2-housing.plus-vijftig-euro-servicekosten",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.borg",
+      "word": "borg",
+      "article": "de",
+      "es": "la fianza",
+      "notes": "Suele ser uno o dos meses de alquiler.",
+      "example": "nl-a2-housing.hoeveel-is-de-borg",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.verhuurder",
+      "word": "verhuurder",
+      "article": "de",
+      "plural": "verhuurders",
+      "es": "el casero, la casera",
+      "notes": "Coloquial: «de huisbaas». «verhuren» = alquilar (como propietario).",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.makelaar",
+      "word": "makelaar",
+      "article": "de",
+      "plural": "makelaars",
+      "es": "el agente inmobiliario",
+      "notes": "Las personas son casi siempre «de».",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.bezichtiging",
+      "word": "bezichtiging",
+      "article": "de",
+      "plural": "bezichtigingen",
+      "es": "la visita (a un piso)",
+      "notes": "Las palabras en -ing son siempre «de».",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.huisgenoot",
+      "word": "huisgenoot",
+      "article": "de",
+      "plural": "huisgenoten",
+      "es": "el compañero de piso",
+      "example": "nl-a2-housing.hoeveel-huisgenoten-heb-ik",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.buurt",
+      "word": "buurt",
+      "article": "de",
+      "plural": "buurten",
+      "es": "el barrio, la zona",
+      "example": "nl-a2-housing.in-welke-buurt-is-het",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.woonkamer",
+      "word": "woonkamer",
+      "article": "de",
+      "plural": "woonkamers",
+      "es": "el salón",
+      "example": "nl-a2-housing.dit-is-de-woonkamer",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.slaapkamer",
+      "word": "slaapkamer",
+      "article": "de",
+      "plural": "slaapkamers",
+      "es": "el dormitorio",
+      "example": "nl-a2-housing.er-zijn-twee-slaapkamers",
+      "situation": "vivienda",
+      "image": "fluent:bed"
+    },
+    {
+      "id": "nl-a2-housing.keuken",
+      "word": "keuken",
+      "article": "de",
+      "plural": "keukens",
+      "es": "la cocina",
+      "notes": "Las dos «k» como en español; «eu» con labios redondos: KÖ-ke.",
+      "situation": "casa",
+      "image": "fluent:cooking"
+    },
+    {
+      "id": "nl-a2-housing.badkamer",
+      "word": "badkamer",
+      "article": "de",
+      "plural": "badkamers",
+      "es": "el baño (con ducha)",
+      "example": "nl-a2-housing.de-badkamer-is-boven",
+      "situation": "casa",
+      "image": "fluent:shower"
+    },
+    {
+      "id": "nl-a2-housing.wc",
+      "word": "wc",
+      "article": "de",
+      "plural": "wc's",
+      "es": "el váter, el aseo",
+      "notes": "Se dice «wee-see»; también «het toilet».",
+      "example": "nl-a2-housing.waar-is-de-wc",
+      "situation": "casa",
+      "image": "fluent:toilet"
+    },
+    {
+      "id": "nl-a2-housing.balkon",
+      "word": "balkon",
+      "article": "het",
+      "plural": "balkons",
+      "es": "el balcón",
+      "example": "nl-a2-housing.er-is-ook-een-balkon",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.trap",
+      "word": "trap",
+      "article": "de",
+      "plural": "trappen",
+      "es": "la escalera",
+      "notes": "Las escaleras holandesas son famosas por lo empinadas.",
+      "example": "nl-a2-housing.de-trap-is-heel-steil",
+      "situation": "vivienda",
+      "image": "fluent:ladder"
+    },
+    {
+      "id": "nl-a2-housing.raam",
+      "word": "raam",
+      "article": "het",
+      "plural": "ramen",
+      "es": "la ventana",
+      "notes": "Ojo: «de winkel» no es una ventana, es una tienda.",
+      "situation": "casa",
+      "image": "fluent:window"
+    },
+    {
+      "id": "nl-a2-housing.deur",
+      "word": "deur",
+      "article": "de",
+      "plural": "deuren",
+      "es": "la puerta",
+      "situation": "casa",
+      "image": "fluent:door"
+    },
+    {
+      "id": "nl-a2-housing.sleutel",
+      "word": "sleutel",
+      "article": "de",
+      "plural": "sleutels",
+      "es": "la llave",
+      "example": "nl-a2-housing.wanneer-krijg-ik-de-sleutel",
+      "situation": "vivienda",
+      "image": "fluent:key"
+    },
+    {
+      "id": "nl-a2-housing.bed",
+      "word": "bed",
+      "article": "het",
+      "plural": "bedden",
+      "es": "la cama",
+      "example": "nl-a2-housing.ik-heb-nog-een-bed-nodig",
+      "situation": "casa",
+      "image": "fluent:bed"
+    },
+    {
+      "id": "nl-a2-housing.kast",
+      "word": "kast",
+      "article": "de",
+      "plural": "kasten",
+      "es": "el armario",
+      "notes": "«kast» es armario o estantería; «de koelkast» (armario frío) = la nevera.",
+      "example": "nl-a2-housing.er-is-geen-kast",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.bank",
+      "word": "bank",
+      "article": "de",
+      "plural": "banken",
+      "es": "el sofá",
+      "notes": "«de bank» es el sofá y también el banco del dinero: lo sabes por el contexto.",
+      "example": "nl-a2-housing.de-bank-staat-in-de-woonkamer",
+      "situation": "casa",
+      "image": "fluent:couch-and-lamp"
+    },
+    {
+      "id": "nl-a2-housing.lamp",
+      "word": "lamp",
+      "article": "de",
+      "plural": "lampen",
+      "es": "la lámpara",
+      "example": "nl-a2-housing.de-lamp-in-de-keuken-is-kapot",
+      "situation": "casa",
+      "image": "fluent:light-bulb"
+    },
+    {
+      "id": "nl-a2-housing.koelkast",
+      "word": "koelkast",
+      "article": "de",
+      "plural": "koelkasten",
+      "es": "la nevera",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.wasmachine",
+      "word": "wasmachine",
+      "article": "de",
+      "plural": "wasmachines",
+      "es": "la lavadora",
+      "example": "nl-a2-housing.is-er-een-wasmachine",
+      "situation": "casa"
+    },
+    {
+      "id": "nl-a2-housing.verwarming",
+      "word": "verwarming",
+      "article": "de",
+      "es": "la calefacción",
+      "example": "nl-a2-housing.de-verwarming-doet-het-niet",
+      "situation": "casa",
+      "image": "fluent:thermometer"
+    },
+    {
+      "id": "nl-a2-housing.energie",
+      "word": "energie",
+      "article": "de",
+      "es": "la luz y el gas (energía)",
+      "notes": "En los contratos, «energie» es luz y gas juntos.",
+      "example": "nl-a2-housing.ik-moet-nog-energie-regelen",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.internet",
+      "word": "internet",
+      "article": "het",
+      "es": "internet",
+      "example": "nl-a2-housing.wie-betaalt-het-internet",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.gemeubileerd",
+      "word": "gemeubileerd",
+      "es": "amueblado",
+      "notes": "Lo contrario: «ongemeubileerd» o «leeg» (vacío).",
+      "example": "nl-a2-housing.is-de-kamer-gemeubileerd",
+      "situation": "vivienda"
+    },
+    {
+      "id": "nl-a2-housing.verhuizen",
+      "word": "verhuizen",
+      "es": "mudarse",
+      "notes": "En pasado va con «zijn»: «ik ben verhuisd».",
+      "example": "nl-a2-housing.ik-ga-volgende-week-verhuizen",
+      "situation": "vivienda",
+      "image": "fluent:package"
+    },
+    {
+      "id": "nl-a2-housing.kapot",
+      "word": "kapot",
+      "es": "roto, estropeado",
+      "example": "nl-a2-housing.de-lamp-in-de-keuken-is-kapot",
+      "situation": "casa"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-housing.qa.wat-zoekt-u",
+      "question": "Wat voor woning zoekt u?",
+      "questionEs": "¿Qué tipo de vivienda busca?",
+      "accepted": [
+        {
+          "text": "Ik zoek een kamer of een kleine studio.",
+          "es": "Busco una habitación o un estudio pequeño."
+        },
+        {
+          "text": "Een appartement voor één persoon, in Utrecht.",
+          "es": "Un piso para una persona, en Utrecht."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik zoek een studio klein.",
+          "es": "Busco un estudio pequeño (adjetivo detrás)."
+        },
+        {
+          "text": "Ik zoek een winkel met twee kamers.",
+          "es": "Busco una tienda con dos habitaciones (falso amigo)."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "El adjetivo va delante del sustantivo: «een kleine studio». «winkel» es una tienda.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-housing.qa.hoeveel-betalen",
+      "question": "Hoeveel wilt u maximaal betalen?",
+      "questionEs": "¿Cuánto quiere pagar como máximo?",
+      "accepted": [
+        {
+          "text": "Maximaal duizend euro per maand.",
+          "es": "Como máximo mil euros al mes."
+        },
+        {
+          "text": "Niet meer dan negenhonderd euro, inclusief gas, water en licht.",
+          "es": "No más de novecientos euros, con luz, gas y agua incluidos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Maximaal duizend euro per jaar.",
+          "es": "Como máximo mil euros al año."
+        },
+        {
+          "text": "Ik wil maximaal betalen duizend euro.",
+          "es": "Quiero pagar como máximo mil euros (orden mal)."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "El alquiler se da al mes. Con «willen», el infinitivo «betalen» va al final.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-housing.qa.wanneer-verhuizen",
+      "question": "Wanneer wilt u verhuizen?",
+      "questionEs": "¿Cuándo quiere mudarse?",
+      "accepted": [
+        {
+          "text": "Zo snel mogelijk, eigenlijk.",
+          "es": "Lo antes posible, la verdad."
+        },
+        {
+          "text": "Op één november, als het kan.",
+          "es": "El uno de noviembre, si puede ser."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik heb verhuisd op één november.",
+          "es": "Me he mudado el uno de noviembre (auxiliar y tiempo mal)."
+        },
+        {
+          "text": "Volgende maand ik wil verhuizen.",
+          "es": "El mes que viene quiero mudarme (orden mal)."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "Hablas del futuro. Si empiezas por «volgende maand», el verbo va segundo: «wil ik».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-housing.qa.gemeubileerd",
+      "question": "Zoek je een gemeubileerde kamer?",
+      "questionEs": "¿Buscas una habitación amueblada?",
+      "accepted": [
+        {
+          "text": "Ja, liefst wel. Ik heb nog geen meubels.",
+          "es": "Sí, mejor. Todavía no tengo muebles."
+        },
+        {
+          "text": "Nee, dat maakt niet uit.",
+          "es": "No, me da igual."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik heb niet meubels.",
+          "es": "Sí, no tengo muebles (negación mal)."
+        },
+        {
+          "text": "Ja, liefst wel. Heeft u een bed?",
+          "es": "Sí, mejor. ¿Tiene una cama? (de usted)"
+        }
+      ],
+      "register": "tu",
+      "situation": "vivienda",
+      "notes": "Sin artículo se niega con «geen». Te trata de «je»: no cambies a «u».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-housing.qa.wat-vind-je",
+      "question": "En, wat vind je van de kamer?",
+      "questionEs": "¿Y qué te parece la habitación?",
+      "accepted": [
+        {
+          "text": "Hij is mooi en licht. Ik wil hem graag huren.",
+          "es": "Es bonita y luminosa. Me gustaría alquilarla."
+        },
+        {
+          "text": "Mooi, maar een beetje klein.",
+          "es": "Bonita, pero un poco pequeña."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Het kamer is mooi en licht.",
+          "es": "La habitación es bonita y luminosa (artículo mal)."
+        },
+        {
+          "text": "Ik vind het kamer mooi.",
+          "es": "La habitación me parece bonita (artículo mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "vivienda",
+      "notes": "Es «de kamer», y la palabra se sustituye por «hij» / «hem».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-housing.qa.wasmachine",
+      "question": "Is er een wasmachine?",
+      "questionEs": "¿Hay lavadora?",
+      "accepted": [
+        {
+          "text": "Ja, er is een wasmachine in de badkamer.",
+          "es": "Sí, hay una lavadora en el baño."
+        },
+        {
+          "text": "Nee, er is geen wasmachine.",
+          "es": "No, no hay lavadora."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, het is een wasmachine in de badkamer.",
+          "es": "Sí, es una lavadora en el baño («hay» mal)."
+        },
+        {
+          "text": "Nee, er is niet een wasmachine.",
+          "es": "No, no hay lavadora (negación mal)."
+        }
+      ],
+      "register": "neutral",
+      "situation": "vivienda",
+      "notes": "«Hay» se dice «er is»; para negar con sustantivo, «er is geen».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-housing.qa.borg",
+      "question": "De borg is twee maanden huur. Is dat goed?",
+      "questionEs": "La fianza son dos meses de alquiler. ¿Le va bien?",
+      "accepted": [
+        {
+          "text": "Ja, dat is goed. Wanneer moet ik betalen?",
+          "es": "Sí, está bien. ¿Cuándo tengo que pagar?"
+        },
+        {
+          "text": "Dat is veel. Kan het ook één maand zijn?",
+          "es": "Es mucho. ¿Puede ser un mes?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, dat is goed. Wanneer ik moet betalen?",
+          "es": "Sí, está bien. ¿Cuándo tengo que pagar? (orden mal)"
+        },
+        {
+          "text": "Ja, ik heb twee maanden.",
+          "es": "Sí, tengo dos meses."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "En una pregunta con «wanneer», el verbo va justo después: «Wanneer moet ik…?».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-housing.qa.probleem",
+      "question": "Met de verhuurder. Wat is het probleem?",
+      "questionEs": "Le atiende el casero. ¿Cuál es el problema?",
+      "accepted": [
+        {
+          "text": "De verwarming doet het niet en ik heb het koud.",
+          "es": "La calefacción no funciona y tengo frío."
+        },
+        {
+          "text": "Er is geen warm water. Kunt u iemand sturen?",
+          "es": "No hay agua caliente. ¿Puede mandar a alguien?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "De verwarming doet niet.",
+          "es": "La calefacción no funciona (falta «het»)."
+        },
+        {
+          "text": "De verwarming is kapot en ik heb koud.",
+          "es": "La calefacción está rota y tengo frío (falta «het»)."
+        }
+      ],
+      "register": "u",
+      "situation": "vivienda",
+      "notes": "«het doen» = funcionar y «ik heb het koud» = tengo frío: los dos llevan «het».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-housing.qa.hulp-verhuizen",
+      "question": "Zaterdag verhuis je, toch? Zal ik je helpen?",
+      "questionEs": "El sábado te mudas, ¿no? ¿Te ayudo?",
+      "accepted": [
+        {
+          "text": "Ja, graag! Dank je wel.",
+          "es": "¡Sí, por favor! Muchas gracias."
+        },
+        {
+          "text": "Wat aardig! Ik heb veel dozen.",
+          "es": "¡Qué amable! Tengo muchas cajas."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, graag! Dank u wel, mevrouw.",
+          "es": "¡Sí, por favor! Muchas gracias, señora (de usted)."
+        },
+        {
+          "text": "Ja, ik heb verhuisd zaterdag.",
+          "es": "Sí, me he mudado el sábado (tiempo y auxiliar mal)."
+        }
+      ],
+      "register": "tu",
+      "situation": "casa",
+      "notes": "«toch» pide confirmación (¿no?). Con una amiga, «dank je»; y la mudanza aún no ha pasado.",
+      "voice": "nl-NL-ColetteNeural"
+    }
+  ]
+}

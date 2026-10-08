@@ -1,0 +1,1145 @@
+{
+  "id": "nl-a2-gemeente",
+  "order": 22,
+  "level": "A2",
+  "title": "La gemeente: empadronarte, BSN, DigiD, citas y documentos",
+  "description": "Pedir cita en la gemeente, esperar tu turno en la balie, empadronarte con tu contrato, saber qué documentos llevar y entender el BSN y el DigiD.",
+  "emoji": "🏛️",
+  "situation": "tramites",
+  "lessons": [
+    {
+      "id": "nl-a2-gemeente.l.afspraak",
+      "title": "Pedir cita",
+      "items": [
+        "nl-a2-gemeente.gemeente",
+        "nl-a2-gemeente.stadskantoor",
+        "nl-a2-gemeente.afspraak",
+        "nl-a2-gemeente.ik-wil-een-afspraak-maken",
+        "nl-a2-gemeente.kan-ik-online-een-afspraak-maken",
+        "nl-a2-gemeente.moet-ik-een-afspraak-maken",
+        "nl-a2-gemeente.ik-heb-om-tien-uur-een-afspraak",
+        "nl-a2-gemeente.heeft-u-een-afspraak",
+        "nl-a2-gemeente.nee-ik-heb-geen-afspraak",
+        "nl-a2-gemeente.kan-het-ook-eerder",
+        "nl-a2-gemeente.donderdag-kan-ik-niet",
+        "nl-a2-gemeente.dinsdagochtend-is-prima",
+        "nl-a2-gemeente.ik-moet-mijn-afspraak-verzetten",
+        "nl-a2-gemeente.ik-wil-mijn-afspraak-afzeggen",
+        "nl-a2-numbers.het-is-half-drie",
+        "nl-a2-gemeente.qa.afspraak"
+      ]
+    },
+    {
+      "id": "nl-a2-gemeente.l.balie",
+      "title": "En la ventanilla",
+      "items": [
+        "nl-a2-gemeente.balie",
+        "nl-a2-gemeente.nummertje",
+        "nl-a2-gemeente.wachtkamer",
+        "nl-a2-gemeente.medewerker",
+        "nl-a2-gemeente.wachten",
+        "nl-a2-gemeente.ik-kom-me-inschrijven",
+        "nl-a2-gemeente.u-moet-eerst-een-nummertje-trekken",
+        "nl-a2-gemeente.u-mag-even-gaan-zitten",
+        "nl-a2-gemeente.hoe-lang-moet-ik-wachten",
+        "nl-a2-gemeente.ik-ben-aan-de-beurt",
+        "nl-a2-gemeente.ga-naar-balie-vier",
+        "nl-a2-gemeente.waarmee-kan-ik-u-helpen",
+        "nl-a2-gemeente.mag-ik-uw-paspoort-even-zien",
+        "nl-a2-gemeente.alstublieft-hier-is-het",
+        "nl-a2-hello.kunt-u-langzamer-praten",
+        "nl-a2-gemeente.qa.waarmee",
+        "nl-a2-gemeente.qa.paspoort"
+      ]
+    },
+    {
+      "id": "nl-a2-gemeente.l.inschrijven",
+      "title": "Empadronarte",
+      "items": [
+        "nl-a2-gemeente.inschrijving",
+        "nl-a2-gemeente.inschrijven",
+        "nl-a2-gemeente.huurcontract",
+        "nl-a2-gemeente.formulier",
+        "nl-a2-gemeente.invullen",
+        "nl-a2-gemeente.handtekening",
+        "nl-a2-gemeente.tekenen",
+        "nl-a2-gemeente.geboortedatum",
+        "nl-a2-gemeente.nationaliteit",
+        "nl-a2-numbers.adres",
+        "nl-a2-gemeente.ik-wil-me-inschrijven",
+        "nl-a2-about-me.ik-ben-net-verhuisd",
+        "nl-a2-gemeente.wat-is-uw-nieuwe-adres",
+        "nl-a2-gemeente.mijn-adres-is-kanaalstraat-twaalf",
+        "nl-a2-gemeente.heeft-u-een-huurcontract",
+        "nl-a2-gemeente.ja-hier-is-mijn-huurcontract",
+        "nl-a2-gemeente.wilt-u-dit-formulier-invullen",
+        "nl-a2-gemeente.ik-vul-het-formulier-in",
+        "nl-a2-gemeente.waar-moet-ik-tekenen",
+        "nl-a2-gemeente.u-moet-hier-tekenen",
+        "nl-a2-gemeente.hoe-lang-duurt-het",
+        "nl-a2-gemeente.brief",
+        "nl-a2-gemeente.u-krijgt-binnen-een-paar-dagen-een-brief",
+        "nl-a2-gemeente.qa.adres",
+        "nl-a2-gemeente.qa.huurcontract",
+        "nl-a2-gemeente.qa.formulier"
+      ]
+    },
+    {
+      "id": "nl-a2-gemeente.l.documenten",
+      "title": "Qué documentos llevar",
+      "items": [
+        "nl-a2-gemeente.paspoort",
+        "nl-a2-gemeente.id-kaart",
+        "nl-a2-gemeente.legitimatie",
+        "nl-a2-gemeente.kopie",
+        "nl-a2-gemeente.pasfoto",
+        "nl-a2-gemeente.verlopen",
+        "nl-a2-gemeente.meenemen",
+        "nl-a2-gemeente.regelen",
+        "nl-a2-gemeente.welke-documenten-moet-ik-meenemen",
+        "nl-a2-grammar.ik-neem-mijn-paspoort-mee",
+        "nl-a2-gemeente.u-moet-uw-paspoort-meenemen",
+        "nl-a2-gemeente.is-een-kopie-ook-goed",
+        "nl-a2-gemeente.mag-ik-ook-mijn-id-kaart-laten-zien",
+        "nl-a2-gemeente.mijn-paspoort-is-verlopen",
+        "nl-a2-gemeente.ik-ben-mijn-paspoort-vergeten",
+        "nl-a2-gemeente.kan-ik-het-morgen-brengen",
+        "nl-a2-gemeente.heb-ik-een-pasfoto-nodig",
+        "nl-a2-gemeente.is-dit-formulier-ook-in-het-engels",
+        "nl-a2-gemeente.dat-moet-u-online-regelen",
+        "nl-a2-gemeente.qa.documenten"
+      ]
+    },
+    {
+      "id": "nl-a2-gemeente.l.bsn-digid",
+      "title": "El BSN y el DigiD",
+      "items": [
+        "nl-a2-gemeente.burgerservicenummer",
+        "nl-a2-gemeente.digid",
+        "nl-a2-gemeente.aanvraag",
+        "nl-a2-gemeente.aanvragen",
+        "nl-a2-gemeente.activeringscode",
+        "nl-a2-gemeente.post",
+        "nl-a2-gemeente.wachtwoord",
+        "nl-a2-gemeente.wat-is-een-bsn",
+        "nl-a2-gemeente.ik-heb-nog-geen-bsn",
+        "nl-a2-gemeente.wat-is-uw-bsn",
+        "nl-a2-gemeente.mijn-bsn-staat-op-de-brief",
+        "nl-a2-gemeente.ik-wil-een-digid-aanvragen",
+        "nl-a2-gemeente.de-activeringscode-komt-per-post",
+        "nl-a2-gemeente.ik-heb-de-code-nog-niet-gekregen",
+        "nl-a2-gemeente.ik-kan-niet-inloggen",
+        "nl-a2-gemeente.ik-ben-mijn-wachtwoord-vergeten",
+        "nl-a2-gemeente.dat-kan-met-de-digid-app",
+        "nl-a2-gemeente.qa.bsn",
+        "nl-a2-gemeente.qa.digid"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "nl-a2-gemeente.ik-wil-een-afspraak-maken",
+      "text": "Ik wil graag een afspraak maken.",
+      "es": "Quiero pedir una cita.",
+      "notes": "Con «willen», «moeten», «kunnen», «mogen», el infinitivo va al final de la frase.",
+      "explanation": "Al llamar o en la web de la gemeente. Modal + infinitivo al final: ik WIL … AF-spraak MAA-ke.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.kan-ik-online-een-afspraak-maken",
+      "text": "Kan ik online een afspraak maken?",
+      "es": "¿Puedo pedir cita por internet?",
+      "explanation": "Para preguntar si hay cita web. «kan» con «a» corta; «maken» con «aa» larga: kan ik ON-lain.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.moet-ik-een-afspraak-maken",
+      "text": "Moet ik daarvoor een afspraak maken?",
+      "es": "¿Tengo que pedir cita para eso?",
+      "notes": "«daarvoor» = para eso. Casi todo en la gemeente va con cita previa.",
+      "explanation": "En la entrada de la gemeente, antes de hacer cola. «oe» = «u»: MUT ik DAAR-foor.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-heb-om-tien-uur-een-afspraak",
+      "text": "Ik heb om tien uur een afspraak.",
+      "es": "Tengo cita a las diez.",
+      "explanation": "Al llegar a la recepción. «uur» con «u» de labios redondos y larga: om TIN üür.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.heeft-u-een-afspraak",
+      "text": "Heeft u een afspraak?",
+      "es": "¿Tiene cita?",
+      "explanation": "Te lo pregunta la recepcionista. «heeft» con «ee» larga: JEEFT ü en AF-spraak.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.nee-ik-heb-geen-afspraak",
+      "text": "Nee, ik heb geen afspraak.",
+      "es": "No, no tengo cita.",
+      "notes": "Con un sustantivo sin artículo se niega con «geen», no con «niet een».",
+      "explanation": "Si llegas sin cita. «geen» = ningún: JEEN, con «g» de garganta, como una «j».",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.kan-het-ook-eerder",
+      "text": "Kan het ook eerder?",
+      "es": "¿Puede ser antes?",
+      "explanation": "Cuando te dan una cita muy lejana. «eerder» = antes: kan et ook EER-der.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.donderdag-kan-ik-niet",
+      "text": "Donderdag kan ik niet.",
+      "es": "El jueves no puedo.",
+      "notes": "La frase empieza por «donderdag», así que el verbo va justo después: «kan ik».",
+      "explanation": "Para rechazar una fecha. El verbo va segundo (V2): DON-der-daj KAN ik nit.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.dinsdagochtend-is-prima",
+      "text": "Dinsdagochtend is prima.",
+      "es": "El martes por la mañana me va bien.",
+      "notes": "«prima» = perfecto, me va bien; se usa muchísimo.",
+      "explanation": "Para aceptar una cita. «och» de garganta: dins-daj-OJ-tent is PRII-ma.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-moet-mijn-afspraak-verzetten",
+      "text": "Ik moet mijn afspraak verzetten.",
+      "es": "Tengo que cambiar la cita.",
+      "notes": "«verzetten» = cambiar de fecha; «afzeggen» = anular.",
+      "explanation": "Si no puedes ir el día de la cita. «verzetten» no se separa: acento en ZET: fer-ZE-te.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-wil-mijn-afspraak-afzeggen",
+      "text": "Ik wil mijn afspraak afzeggen.",
+      "es": "Quiero anular mi cita.",
+      "notes": "«afzeggen» es separable: «ik zeg mijn afspraak af».",
+      "explanation": "Por teléfono o en la web. Acento en la partícula: AF-ze-je.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-kom-me-inschrijven",
+      "text": "Goedemorgen, ik kom me inschrijven.",
+      "es": "Buenos días, vengo a empadronarme.",
+      "notes": "«komen» + infinitivo = venir a hacer algo.",
+      "explanation": "Al llegar al mostrador. «schr» = s + j + r: ik kom me IN-sjrei-ve.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.u-moet-eerst-een-nummertje-trekken",
+      "text": "U moet eerst een nummertje trekken.",
+      "es": "Primero tiene que sacar número.",
+      "notes": "«nummertje» es diminutivo: en neerlandés se usan muchísimo, no indican tamaño.",
+      "explanation": "Te lo dicen en la entrada. «nummertje» suena NU-mer-che, con «u» de labios redondos.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.u-mag-even-gaan-zitten",
+      "text": "U mag even gaan zitten.",
+      "es": "Puede sentarse un momento.",
+      "notes": "«even» suaviza cualquier petición; «mogen» aquí = poder (permiso).",
+      "explanation": "Mientras esperas tu turno. «even» = un momento, suaviza: ü maj EE-fe jaan ZI-te.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.hoe-lang-moet-ik-wachten",
+      "text": "Hoe lang moet ik ongeveer wachten?",
+      "es": "¿Cuánto tengo que esperar, más o menos?",
+      "explanation": "En la sala de espera. «ongeveer» = más o menos: ON-je-feer, con «g» de garganta.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-ben-aan-de-beurt",
+      "text": "Ik ben aan de beurt.",
+      "es": "Me toca a mí.",
+      "notes": "«Wie is er aan de beurt?» = ¿a quién le toca?",
+      "explanation": "Cuando llaman tu número. «eu» = «e» con labios redondos: aan de BÖRT.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ga-naar-balie-vier",
+      "text": "Nummer drieënveertig, balie vier.",
+      "es": "Número cuarenta y tres, ventanilla cuatro.",
+      "notes": "Como en los números: «drieënveertig» = tres y cuarenta.",
+      "explanation": "Lo dice la pantalla o el altavoz. Las unidades van primero: DRII-en-feer-tij.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.waarmee-kan-ik-u-helpen",
+      "text": "Waarmee kan ik u helpen?",
+      "es": "¿En qué puedo ayudarle?",
+      "explanation": "Lo primero que te dice el empleado. «waarmee» = con qué: waar-MEE kan ik ü JEL-pe.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.mag-ik-uw-paspoort-even-zien",
+      "text": "Mag ik uw paspoort even zien?",
+      "es": "¿Me deja ver su pasaporte?",
+      "explanation": "Te lo pide el empleado. «uw» suena «üu»: maj ik üu PAS-poort EE-fe ZIN.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.alstublieft-hier-is-het",
+      "text": "Alstublieft, hier is het.",
+      "es": "Aquí tiene.",
+      "notes": "«Alstublieft» también significa «aquí tiene» al dar algo.",
+      "explanation": "Al dar un papel en la ventanilla. Suena als-tü-BLIIFT, jir is et.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-wil-me-inschrijven",
+      "text": "Ik wil me inschrijven in Utrecht.",
+      "es": "Quiero empadronarme en Utrecht.",
+      "notes": "Modal + infinitivo al final; «me» va antes, porque es «zich inschrijven».",
+      "explanation": "Para explicar a qué vienes. Acento en IN: ik wil me IN-sjrei-ve in Ü-trejt.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.wat-is-uw-nieuwe-adres",
+      "text": "Wat is uw nieuwe adres?",
+      "es": "¿Cuál es su nueva dirección?",
+      "explanation": "Te lo preguntan al empadronarte. «ieuw» suena «iu»: üu NIU-e a-DRES.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.mijn-adres-is-kanaalstraat-twaalf",
+      "text": "Mijn adres is Kanaalstraat twaalf.",
+      "es": "Mi dirección es Kanaalstraat doce.",
+      "notes": "En los Países Bajos el número va detrás de la calle.",
+      "explanation": "Para dar tu dirección: primero la calle, luego el número. ka-NAAL-straat TWAALF.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.heeft-u-een-huurcontract",
+      "text": "Heeft u een huurcontract?",
+      "es": "¿Tiene contrato de alquiler?",
+      "explanation": "Lo piden para empadronarte. «uu» larga y redonda: ü en JÜÜR-kon-trakt.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ja-hier-is-mijn-huurcontract",
+      "text": "Ja, hier is mijn huurcontract.",
+      "es": "Sí, aquí está mi contrato de alquiler.",
+      "explanation": "Al enseñar el contrato. «hier» = aquí: ya, JIR is mein JÜÜR-kon-trakt.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.wilt-u-dit-formulier-invullen",
+      "text": "Wilt u dit formulier invullen?",
+      "es": "¿Puede rellenar este formulario?",
+      "notes": "«invullen» es separable: «ik vul het in».",
+      "explanation": "Te dan un papel en la ventanilla. Acento en la partícula: for-mü-LIR IN-fu-le.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-vul-het-formulier-in",
+      "text": "Ik vul het formulier nu in.",
+      "es": "Relleno el formulario ahora.",
+      "notes": "«vul … in» = invullen: la partícula va al final de la frase.",
+      "explanation": "Al sentarte a rellenarlo. La partícula «in» va al final: ik FUL et … nü IN.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.waar-moet-ik-tekenen",
+      "text": "Waar moet ik tekenen?",
+      "es": "¿Dónde tengo que firmar?",
+      "explanation": "Antes de firmar un papel. «tekenen» = firmar (y dibujar): waar mut ik TEE-ke-ne.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.u-moet-hier-tekenen",
+      "text": "U moet hier onderaan tekenen.",
+      "es": "Tiene que firmar aquí abajo.",
+      "explanation": "Te señalan dónde firmar. «onderaan» = abajo del todo: ON-der-aan.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.hoe-lang-duurt-het",
+      "text": "Hoe lang duurt het?",
+      "es": "¿Cuánto tarda?",
+      "explanation": "Para saber cuándo estará listo. «duurt» con «uu» larga: ju lang DÜÜRT et.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.u-krijgt-binnen-een-paar-dagen-een-brief",
+      "text": "U krijgt binnen een paar dagen een brief.",
+      "es": "Recibirá una carta en unos días.",
+      "notes": "«binnen» + tiempo = dentro de; el presente vale para el futuro.",
+      "explanation": "Te lo dicen al terminar. «ij» suena «ei»: ü KREIJT BI-ne en paar DAA-je.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.welke-documenten-moet-ik-meenemen",
+      "text": "Welke documenten moet ik meenemen?",
+      "es": "¿Qué documentos tengo que llevar?",
+      "notes": "Modal + infinitivo al final: «moet ik … meenemen»; separable sin separar.",
+      "explanation": "Al pedir cita, para no ir dos veces. Acento en MEE: WEL-ke do-kü-MEN-te mut ik MEE-nee-me.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.u-moet-uw-paspoort-meenemen",
+      "text": "U moet uw paspoort en uw huurcontract meenemen.",
+      "es": "Tiene que traer su pasaporte y su contrato de alquiler.",
+      "explanation": "La respuesta típica de la gemeente. «uw» suena «üu».",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.is-een-kopie-ook-goed",
+      "text": "Is een kopie ook goed?",
+      "es": "¿Vale también una copia?",
+      "explanation": "Si no llevas el original. «kopie» se acentúa en PII: ko-PII ook JUT.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.mag-ik-ook-mijn-id-kaart-laten-zien",
+      "text": "Mag ik ook mijn ID-kaart laten zien?",
+      "es": "¿Puedo enseñar también mi DNI?",
+      "notes": "«laten zien» = enseñar, mostrar (literalmente «dejar ver»).",
+      "explanation": "Si no tienes el pasaporte a mano. «laten zien» = enseñar: LAA-te ZIN.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.mijn-paspoort-is-verlopen",
+      "text": "Mijn paspoort is verlopen.",
+      "es": "Mi pasaporte está caducado.",
+      "explanation": "Para avisar de un problema con el documento. Acento en LOO: mein PAS-poort is fer-LOO-pe.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-ben-mijn-paspoort-vergeten",
+      "text": "Sorry, ik ben mijn paspoort vergeten.",
+      "es": "Perdón, me he olvidado el pasaporte.",
+      "notes": "«vergeten» lleva «zijn» en el pasado: «ik ben … vergeten».",
+      "explanation": "Si llegas sin él. «vergeten» = olvidar, con «g» de garganta: fer-JEE-te.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.kan-ik-het-morgen-brengen",
+      "text": "Kan ik het morgen brengen?",
+      "es": "¿Lo puedo traer mañana?",
+      "explanation": "Si te falta un papel. «morgen» = mañana: kan ik et MOR-je BRE-nge.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.heb-ik-een-pasfoto-nodig",
+      "text": "Heb ik een pasfoto nodig?",
+      "es": "¿Necesito una foto de carné?",
+      "notes": "«nodig hebben» = necesitar; «nodig» va al final.",
+      "explanation": "Antes de una solicitud. «nodig hebben» = necesitar: jep ik en PAS-foo-too NOO-dij.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.is-dit-formulier-ook-in-het-engels",
+      "text": "Is dit formulier ook in het Engels?",
+      "es": "¿Este formulario está también en inglés?",
+      "explanation": "Si el papel te resulta difícil. «Engels» con «e» abierta: in et E-ngels.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.dat-moet-u-online-regelen",
+      "text": "Dat moet u online regelen.",
+      "es": "Eso tiene que hacerlo por internet.",
+      "notes": "«regelen» = gestionar, arreglar un trámite; palabra muy útil.",
+      "explanation": "Te lo dicen para muchos trámites. «regelen»: REE-je-le, con «g» de garganta.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.wat-is-een-bsn",
+      "text": "Wat is een BSN precies?",
+      "es": "¿Qué es exactamente un BSN?",
+      "explanation": "Si no conoces la palabra. Las letras se dicen «bee-es-en»: wat is en bee-es-EN pre-SIIS.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-heb-nog-geen-bsn",
+      "text": "Ik heb nog geen BSN.",
+      "es": "Todavía no tengo BSN.",
+      "notes": "«nog geen» + sustantivo = todavía ningún.",
+      "explanation": "En el banco o en el trabajo, al principio. «nog geen» = todavía no: noj JEEN.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.wat-is-uw-bsn",
+      "text": "Wat is uw BSN?",
+      "es": "¿Cuál es su BSN?",
+      "explanation": "Te lo preguntan el banco, el médico o tu empresa. Suena wat is üu bee-es-EN.",
+      "register": "u",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.mijn-bsn-staat-op-de-brief",
+      "text": "Mijn BSN staat op de brief van de gemeente.",
+      "es": "Mi BSN está en la carta de la gemeente.",
+      "notes": "Lo escrito «staat» en un papel: «Het staat op de brief».",
+      "explanation": "Para explicar dónde encontrarlo. «staat» = está (escrito): STAAT op de BRIIF.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-wil-een-digid-aanvragen",
+      "text": "Ik wil een DigiD aanvragen.",
+      "es": "Quiero solicitar un DigiD.",
+      "notes": "«aanvragen» es separable: «ik vraag het aan».",
+      "explanation": "Con tu BSN ya puedes pedirlo en la web. Acento en AAN: en DI-ji-dee AAN-fraa-je.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.de-activeringscode-komt-per-post",
+      "text": "De activeringscode komt per post.",
+      "es": "El código de activación llega por correo.",
+      "explanation": "Así funciona el DigiD: una carta a tu dirección. ak-ti-FEE-rings-koo-de komt per POST.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-heb-de-code-nog-niet-gekregen",
+      "text": "Ik heb de code nog niet gekregen.",
+      "es": "Todavía no he recibido el código.",
+      "notes": "Perfecto: «hebben» + participio al final (ge-kreg-en).",
+      "explanation": "Si la carta no llega. «gekregen» con dos «g» de garganta: je-KREE-je.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-kan-niet-inloggen",
+      "text": "Ik kan niet inloggen met mijn DigiD.",
+      "es": "No puedo entrar con mi DigiD.",
+      "explanation": "Para pedir ayuda con la web. Acento en IN: ik kan nit IN-lo-je.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.ik-ben-mijn-wachtwoord-vergeten",
+      "text": "Ik ben mijn wachtwoord vergeten.",
+      "es": "He olvidado mi contraseña.",
+      "explanation": "Al llamar al servicio de ayuda. «w» entre «v» y «u»: WAJT-woort.",
+      "register": "neutral",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.dat-kan-met-de-digid-app",
+      "text": "Dat kan ook met de DigiD-app.",
+      "es": "También se puede con la app de DigiD.",
+      "explanation": "Te lo recomiendan para entrar más rápido. «app» se dice como en inglés: DI-ji-dee-ep.",
+      "register": "neutral",
+      "situation": "tramites"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "nl-a2-gemeente.gemeente",
+      "word": "gemeente",
+      "article": "de",
+      "plural": "gemeenten",
+      "es": "el ayuntamiento",
+      "notes": "La gemeente lleva el padrón, el BSN y muchos trámites; dices «bij de gemeente».",
+      "example": "nl-a2-gemeente.ik-wil-een-afspraak-maken",
+      "situation": "tramites",
+      "image": "fluent:classical-building"
+    },
+    {
+      "id": "nl-a2-gemeente.stadskantoor",
+      "word": "stadskantoor",
+      "article": "het",
+      "plural": "stadskantoren",
+      "es": "la oficina municipal",
+      "notes": "En Utrecht los trámites se hacen en el Stadskantoor, junto a la estación.",
+      "situation": "tramites",
+      "image": "fluent:office-building"
+    },
+    {
+      "id": "nl-a2-gemeente.afspraak",
+      "word": "afspraak",
+      "article": "de",
+      "plural": "afspraken",
+      "es": "la cita",
+      "notes": "Sirve para el médico, la gemeente o quedar con amigos.",
+      "example": "nl-a2-gemeente.ik-heb-om-tien-uur-een-afspraak",
+      "situation": "tramites",
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "nl-a2-gemeente.balie",
+      "word": "balie",
+      "article": "de",
+      "plural": "balies",
+      "es": "el mostrador, la ventanilla",
+      "example": "nl-a2-gemeente.ga-naar-balie-vier",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.nummertje",
+      "word": "nummertje",
+      "article": "het",
+      "plural": "nummertjes",
+      "es": "el número (de turno)",
+      "notes": "Diminutivo de «nummer»: siempre «het». Lo sacas de la máquina al entrar.",
+      "example": "nl-a2-gemeente.u-moet-eerst-een-nummertje-trekken",
+      "situation": "tramites",
+      "image": "fluent:ticket"
+    },
+    {
+      "id": "nl-a2-gemeente.wachtkamer",
+      "word": "wachtkamer",
+      "article": "de",
+      "plural": "wachtkamers",
+      "es": "la sala de espera",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.medewerker",
+      "word": "medewerker",
+      "article": "de",
+      "plural": "medewerkers",
+      "es": "el empleado, la empleada",
+      "notes": "«baliemedewerker» = quien te atiende en la ventanilla.",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.paspoort",
+      "word": "paspoort",
+      "article": "het",
+      "plural": "paspoorten",
+      "es": "el pasaporte",
+      "example": "nl-a2-grammar.ik-neem-mijn-paspoort-mee",
+      "situation": "tramites",
+      "image": "fluent:passport-control"
+    },
+    {
+      "id": "nl-a2-gemeente.id-kaart",
+      "word": "ID-kaart",
+      "article": "de",
+      "plural": "ID-kaarten",
+      "es": "el DNI, el documento de identidad",
+      "notes": "Se dice «ie-dee-kaart». Tu DNI español vale como ID-kaart en la UE.",
+      "example": "nl-a2-gemeente.mag-ik-ook-mijn-id-kaart-laten-zien",
+      "situation": "tramites",
+      "image": "fluent:identification-card"
+    },
+    {
+      "id": "nl-a2-gemeente.legitimatie",
+      "word": "legitimatie",
+      "article": "de",
+      "es": "la identificación (documento)",
+      "notes": "Palabra de ventanilla: «Heeft u legitimatie bij u?» = ¿lleva documentación?",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.huurcontract",
+      "word": "huurcontract",
+      "article": "het",
+      "plural": "huurcontracten",
+      "es": "el contrato de alquiler",
+      "notes": "«-contract» es «het», como «het contract».",
+      "example": "nl-a2-gemeente.ja-hier-is-mijn-huurcontract",
+      "situation": "tramites",
+      "image": "fluent:page-facing-up"
+    },
+    {
+      "id": "nl-a2-gemeente.formulier",
+      "word": "formulier",
+      "article": "het",
+      "plural": "formulieren",
+      "es": "el formulario",
+      "example": "nl-a2-gemeente.wilt-u-dit-formulier-invullen",
+      "situation": "tramites",
+      "image": "fluent:clipboard"
+    },
+    {
+      "id": "nl-a2-gemeente.handtekening",
+      "word": "handtekening",
+      "article": "de",
+      "plural": "handtekeningen",
+      "es": "la firma",
+      "notes": "Las palabras en -ing son siempre «de».",
+      "situation": "tramites",
+      "image": "fluent:writing-hand"
+    },
+    {
+      "id": "nl-a2-gemeente.kopie",
+      "word": "kopie",
+      "article": "de",
+      "plural": "kopieën",
+      "es": "la copia",
+      "notes": "Plural con diéresis: kopieën.",
+      "example": "nl-a2-gemeente.is-een-kopie-ook-goed",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.brief",
+      "word": "brief",
+      "article": "de",
+      "plural": "brieven",
+      "es": "la carta",
+      "notes": "Falso amigo: «brief» es una carta, no algo breve.",
+      "example": "nl-a2-gemeente.u-krijgt-binnen-een-paar-dagen-een-brief",
+      "situation": "tramites",
+      "image": "fluent:envelope"
+    },
+    {
+      "id": "nl-a2-gemeente.post",
+      "word": "post",
+      "article": "de",
+      "es": "el correo (cartas)",
+      "notes": "«per post» = por correo.",
+      "example": "nl-a2-gemeente.de-activeringscode-komt-per-post",
+      "situation": "tramites",
+      "image": "fluent:closed-mailbox-with-raised-flag"
+    },
+    {
+      "id": "nl-a2-gemeente.burgerservicenummer",
+      "word": "burgerservicenummer",
+      "article": "het",
+      "es": "el número de identificación (BSN)",
+      "notes": "Todos dicen «het BSN» (bee-es-en): lo necesitas para trabajar, el banco y el médico.",
+      "example": "nl-a2-gemeente.wat-is-uw-bsn",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.digid",
+      "word": "DigiD",
+      "article": "de",
+      "es": "el DigiD (identidad digital)",
+      "notes": "Tu usuario para la gemeente, Hacienda y el seguro médico; se dice «di-gi-dee».",
+      "example": "nl-a2-gemeente.ik-wil-een-digid-aanvragen",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.activeringscode",
+      "word": "activeringscode",
+      "article": "de",
+      "plural": "activeringscodes",
+      "es": "el código de activación",
+      "example": "nl-a2-gemeente.de-activeringscode-komt-per-post",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.wachtwoord",
+      "word": "wachtwoord",
+      "article": "het",
+      "plural": "wachtwoorden",
+      "es": "la contraseña",
+      "example": "nl-a2-gemeente.ik-ben-mijn-wachtwoord-vergeten",
+      "situation": "tramites",
+      "image": "fluent:locked"
+    },
+    {
+      "id": "nl-a2-gemeente.geboortedatum",
+      "word": "geboortedatum",
+      "article": "de",
+      "plural": "geboortedata",
+      "es": "la fecha de nacimiento",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.nationaliteit",
+      "word": "nationaliteit",
+      "article": "de",
+      "plural": "nationaliteiten",
+      "es": "la nacionalidad",
+      "notes": "Las palabras en -iteit son siempre «de».",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.pasfoto",
+      "word": "pasfoto",
+      "article": "de",
+      "plural": "pasfoto's",
+      "es": "la foto de carné",
+      "notes": "Plural con apóstrofo tras vocal larga: pasfoto's.",
+      "example": "nl-a2-gemeente.heb-ik-een-pasfoto-nodig",
+      "situation": "tramites",
+      "image": "fluent:framed-picture"
+    },
+    {
+      "id": "nl-a2-gemeente.aanvraag",
+      "word": "aanvraag",
+      "article": "de",
+      "plural": "aanvragen",
+      "es": "la solicitud",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.inschrijving",
+      "word": "inschrijving",
+      "article": "de",
+      "plural": "inschrijvingen",
+      "es": "el empadronamiento, la inscripción",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.inschrijven",
+      "word": "inschrijven",
+      "es": "empadronarse, inscribirse",
+      "notes": "Separable y reflexivo: «ik schrijf me in»; con modal, «ik wil me inschrijven».",
+      "example": "nl-a2-gemeente.ik-wil-me-inschrijven",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.aanvragen",
+      "word": "aanvragen",
+      "es": "solicitar",
+      "notes": "Separable: «ik vraag een DigiD aan».",
+      "example": "nl-a2-gemeente.ik-wil-een-digid-aanvragen",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.meenemen",
+      "word": "meenemen",
+      "es": "llevar (contigo)",
+      "notes": "Separable: «ik neem mijn paspoort mee».",
+      "example": "nl-a2-gemeente.welke-documenten-moet-ik-meenemen",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.invullen",
+      "word": "invullen",
+      "es": "rellenar (un formulario)",
+      "notes": "Separable: «ik vul het formulier in».",
+      "example": "nl-a2-gemeente.wilt-u-dit-formulier-invullen",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.tekenen",
+      "word": "tekenen",
+      "es": "firmar; también dibujar",
+      "notes": "«ondertekenen» es la forma formal (y no se separa).",
+      "example": "nl-a2-gemeente.waar-moet-ik-tekenen",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.wachten",
+      "word": "wachten",
+      "es": "esperar",
+      "example": "nl-a2-gemeente.hoe-lang-moet-ik-wachten",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.regelen",
+      "word": "regelen",
+      "es": "arreglar, gestionar",
+      "notes": "Muy usado: «Ik moet nog veel regelen» = tengo mucho papeleo pendiente.",
+      "example": "nl-a2-gemeente.dat-moet-u-online-regelen",
+      "situation": "tramites"
+    },
+    {
+      "id": "nl-a2-gemeente.verlopen",
+      "word": "verlopen",
+      "es": "caducado",
+      "notes": "Del verbo «verlopen» (caducar); «geldig» = válido.",
+      "example": "nl-a2-gemeente.mijn-paspoort-is-verlopen",
+      "situation": "tramites"
+    }
+  ],
+  "qa": [
+    {
+      "id": "nl-a2-gemeente.qa.afspraak",
+      "question": "Goedemorgen. Heeft u een afspraak?",
+      "questionEs": "Buenos días. ¿Tiene cita?",
+      "accepted": [
+        {
+          "text": "Ja, ik heb om tien uur een afspraak.",
+          "es": "Sí, tengo cita a las diez."
+        },
+        {
+          "text": "Nee, ik heb geen afspraak. Moet dat?",
+          "es": "No, no tengo cita. ¿Hace falta?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik heb niet een afspraak.",
+          "es": "No, no tengo cita (negación mal)."
+        },
+        {
+          "text": "Ja, om tien uur ik heb een afspraak.",
+          "es": "Sí, a las diez tengo cita (orden mal)."
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "Con un sustantivo se niega con «geen». Si empiezas por «om tien uur», el verbo va segundo: «heb ik».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-gemeente.qa.waarmee",
+      "question": "Waarmee kan ik u helpen?",
+      "questionEs": "¿En qué puedo ayudarle?",
+      "accepted": [
+        {
+          "text": "Ik wil me inschrijven. Ik ben net verhuisd.",
+          "es": "Quiero empadronarme. Me acabo de mudar."
+        },
+        {
+          "text": "Ik kom me inschrijven.",
+          "es": "Vengo a empadronarme."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik wil inschrijven me.",
+          "es": "Quiero empadronarme (orden mal)."
+        },
+        {
+          "text": "Ik wil me inschrijven. Kun jij me helpen?",
+          "es": "Quiero empadronarme. ¿Me ayudas? (tuteo)"
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "«me» va antes del infinitivo, que va al final. En la ventanilla, «u», no «jij».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-gemeente.qa.paspoort",
+      "question": "Mag ik uw paspoort even zien?",
+      "questionEs": "¿Me deja ver su pasaporte?",
+      "accepted": [
+        {
+          "text": "Ja, natuurlijk. Alstublieft.",
+          "es": "Sí, claro. Aquí tiene."
+        },
+        {
+          "text": "Sorry, ik ben mijn paspoort vergeten. Is een ID-kaart ook goed?",
+          "es": "Perdón, me he olvidado el pasaporte. ¿Vale un DNI?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, natuurlijk. Alsjeblieft, jij.",
+          "es": "Sí, claro. Aquí tienes (tuteo)."
+        },
+        {
+          "text": "Sorry, ik heb mijn paspoort vergeten.",
+          "es": "Perdón, he olvidado el pasaporte (auxiliar mal)."
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "Con «u» das las cosas con «alstublieft». «vergeten» va con «zijn»: «ik ben … vergeten».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-gemeente.qa.adres",
+      "question": "Wat is uw nieuwe adres?",
+      "questionEs": "¿Cuál es su nueva dirección?",
+      "accepted": [
+        {
+          "text": "Kanaalstraat twaalf, in Utrecht.",
+          "es": "Kanaalstraat doce, en Utrecht."
+        },
+        {
+          "text": "Mijn adres is Kanaalstraat twaalf.",
+          "es": "Mi dirección es Kanaalstraat doce."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Twaalf Kanaalstraat.",
+          "es": "Doce Kanaalstraat (orden inglés)."
+        },
+        {
+          "text": "Mijn adres is nul zes, twaalf, vierendertig.",
+          "es": "Mi dirección es seis, doce, treinta y cuatro (es un teléfono)."
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "Primero la calle y después el número. «adres» es la dirección, no el teléfono.",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-gemeente.qa.huurcontract",
+      "question": "Heeft u een huurcontract?",
+      "questionEs": "¿Tiene contrato de alquiler?",
+      "accepted": [
+        {
+          "text": "Ja, hier is mijn huurcontract.",
+          "es": "Sí, aquí está mi contrato."
+        },
+        {
+          "text": "Ja, ik heb het bij me.",
+          "es": "Sí, lo llevo encima."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, hier is mijn huurcontract. Wil jij het zien?",
+          "es": "Sí, aquí está. ¿Lo quieres ver? (tuteo)"
+        },
+        {
+          "text": "Ja, ik heb de huurcontract.",
+          "es": "Sí, tengo el contrato (artículo mal)."
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "Es «het huurcontract» (como «het contract»). No mezcles «u» y «jij».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-gemeente.qa.formulier",
+      "question": "Wilt u dit formulier invullen?",
+      "questionEs": "¿Puede rellenar este formulario?",
+      "accepted": [
+        {
+          "text": "Ja, natuurlijk. Waar moet ik tekenen?",
+          "es": "Sí, claro. ¿Dónde tengo que firmar?"
+        },
+        {
+          "text": "Is het formulier ook in het Engels?",
+          "es": "¿El formulario está también en inglés?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ja, ik invul het nu.",
+          "es": "Sí, lo relleno ahora (partícula mal)."
+        },
+        {
+          "text": "Ja, waar ik moet tekenen?",
+          "es": "Sí, ¿dónde tengo que firmar? (orden mal)"
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "«invullen» se separa: «ik vul het in». En la pregunta, el verbo va justo después de «waar».",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-gemeente.qa.documenten",
+      "question": "U heeft een afspraak op dinsdag. Welke documenten neemt u mee?",
+      "questionEs": "Tiene cita el martes. ¿Qué documentos va a traer?",
+      "accepted": [
+        {
+          "text": "Ik neem mijn paspoort en mijn huurcontract mee.",
+          "es": "Llevaré mi pasaporte y mi contrato."
+        },
+        {
+          "text": "Mijn paspoort. Moet ik nog meer meenemen?",
+          "es": "Mi pasaporte. ¿Tengo que llevar algo más?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ik meeneem mijn paspoort.",
+          "es": "Llevo mi pasaporte (partícula mal)."
+        },
+        {
+          "text": "Ik neem mijn paspoort.",
+          "es": "Cojo mi pasaporte (falta «mee»)."
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "«meenemen» se separa y «mee» va al final: «Ik neem mijn paspoort mee».",
+      "voice": "nl-NL-MaartenNeural"
+    },
+    {
+      "id": "nl-a2-gemeente.qa.bsn",
+      "question": "Heeft u al een BSN?",
+      "questionEs": "¿Ya tiene BSN?",
+      "accepted": [
+        {
+          "text": "Nee, ik heb nog geen BSN.",
+          "es": "No, todavía no tengo BSN."
+        },
+        {
+          "text": "Ja, het staat op de brief van de gemeente.",
+          "es": "Sí, está en la carta de la gemeente."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik heb nog niet een BSN.",
+          "es": "No, todavía no tengo BSN (negación mal)."
+        },
+        {
+          "text": "Ja, ik ben een BSN.",
+          "es": "Sí, soy un BSN."
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "«nog geen» + sustantivo = todavía no tengo. Un BSN se «tiene» («hebben»).",
+      "voice": "nl-NL-ColetteNeural"
+    },
+    {
+      "id": "nl-a2-gemeente.qa.digid",
+      "question": "Heeft u de activeringscode van DigiD al gekregen?",
+      "questionEs": "¿Ya ha recibido el código de activación de DigiD?",
+      "accepted": [
+        {
+          "text": "Nee, ik heb hem nog niet gekregen.",
+          "es": "No, todavía no lo he recibido."
+        },
+        {
+          "text": "Ja, de brief is gisteren gekomen.",
+          "es": "Sí, la carta llegó ayer."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nee, ik heb hem nog niet gekrijgt.",
+          "es": "No, todavía no lo he recibido (participio mal)."
+        },
+        {
+          "text": "Nee, ik krijg hem gisteren.",
+          "es": "No, lo recibo ayer (tiempo mal)."
+        }
+      ],
+      "register": "u",
+      "situation": "tramites",
+      "notes": "El participio de «krijgen» es irregular: «gekregen». Para el pasado usa el perfecto.",
+      "voice": "nl-NL-MaartenNeural"
+    }
+  ]
+}
