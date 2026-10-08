@@ -20,7 +20,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T135 — Dutch pack foundation and brief
-- Status: pending
+- Status: running (attempt 1)
 - Depends on: none
 - Goal: Create `content/nl/pack.json` and `docs/brief-nl.md` so A2 and B1 content can be written in parallel, plus any small generic code change Dutch needs.
 - Context: plans/008-ingles.md and plans/009-ruso.md (foundation tasks T90 / T111), docs/brief-en.md and docs/brief-ru.md as the brief models, `content/en/pack.json`, `src/lib/content/schema.ts` (Register / FormalRegister), `src/components/dialogue/DialogueSimulator.tsx` (FORMAL_PRONOUN), `src/lib/coach/practice.ts`, `src/lib/exercises/normalize.ts` and the speech scoring, `api/_lib/languages.ts`.
@@ -161,3 +161,4 @@ Worktree setup: npm ci
 ## Proposals (new scope)
 
 ## Log
+- 2026-10-08 23:27 T135 launched · attempt 1 · agent ada48689fcc653b83
