@@ -9,8 +9,8 @@
  * Read it in components with `useLearnCopy()` (`./use-learn-copy`); `learnCopy(lang, gloss)` here.
  * Strings that name the target language or the gloss language are already filled in for the pack.
  */
-import { GLOSS_LANGUAGES, type GlossLang } from "@/lib/content/gloss";
-import { languageName } from "@/lib/content";
+import { GLOSS_LANGUAGES, glossIsTargetLanguage, type GlossLang } from "@/lib/content/gloss";
+import { getPack, languageName } from "@/lib/content";
 import { LISTEN_ERROR_MESSAGES, type ListenErrorKind } from "@/lib/speech/messages";
 import type { StoryGameId } from "@/lib/stories/games";
 
@@ -227,10 +227,37 @@ interface Ctx {
   gloss: GlossLang;
 }
 
-/** Spain Spanish: today's strings. `gloss` other than es (without own copy) is named where "español" was. */
+/**
+ * Spain Spanish: today's strings. `gloss` other than es (without own copy) is named where "español" was.
+ * A Spanish-language pack glossed in Spain Spanish (`glossIsTargetLanguage`, e.g. a regional variety)
+ * gets "equivalente en España" wording where the others say "en español" or "qué significa".
+ */
 function es({ lang, gloss }: Ctx): LearnCopy {
   const target = languageName(lang);
   const glossName = GLOSS_LANGUAGES[gloss].name.toLocaleLowerCase("es");
+  const variety = gloss === "es" && glossIsTargetLanguage(getPack(lang).meta, gloss);
+  const copy = esBase(target, glossName);
+  if (!variety) return copy;
+  return {
+    ...copy,
+    listenMeaning: "Escucha y elige cómo se dice en España",
+    readMeaning: "¿Cómo se dice en España?",
+    roundHow: ({ phrases, words }) =>
+      `${
+        !phrases
+          ? "Escucha la palabra o lee cómo se dice en España y elige su imagen."
+          : words
+            ? `Escucha y elige cómo se dice en España, lee el equivalente de España y elige la frase en ${target}, o elige la imagen de cada palabra.`
+            : `Escucha y elige cómo se dice en España, o lee el equivalente de España y elige la frase en ${target}.`
+      } Encadena aciertos para multiplicar los puntos.`,
+    hideTranslation: "Ocultar equivalente en España",
+    showTranslation: "Ver equivalente en España",
+    seeInGloss: "Equivalente en España",
+    searchPlaceholder: `Busca en ${target} o en español de España`,
+  };
+}
+
+function esBase(target: string, glossName: string): LearnCopy {
   return {
     listen: "Escuchar",
     slow: "Lento",

@@ -35,6 +35,7 @@ export {
   DEFAULT_GLOSS_LANG,
   GLOSS_LANGUAGES,
   glossesOf,
+  glossIsTargetLanguage,
   glossLangsOf,
   glossOf,
   glossTag,

@@ -46,7 +46,10 @@ function load(): Map<string, LanguageMeta> {
 export function getLanguage(lang: string): LanguageMeta {
   const meta = load().get(lang);
   if (!meta) throw new CoachError(400, "bad_request", "Ese idioma no está disponible.");
-  if (meta.glossLangs && !meta.glossLangs.includes("es")) {
+  // The prompts write Spain Spanish glosses for a learner of another language: not for a pack
+  // without "es" glosses, nor for a Spanish-language pack (its glosses are the same language).
+  const targetIsSpanish = meta.speechLocale.split("-")[0].toLowerCase() === "es";
+  if ((meta.glossLangs && !meta.glossLangs.includes("es")) || targetIsSpanish) {
     throw new CoachError(400, "bad_request", "Prepárate todavía no está disponible para este idioma.");
   }
   return meta;

@@ -44,6 +44,16 @@ export function glossTag(lang: GlossLang): string | undefined {
   return lang === DEFAULT_GLOSS_LANG ? undefined : GLOSS_LANGUAGES[lang].tag;
 }
 
+/**
+ * Whether glosses in `lang` are written in the pack's own target language (the language of its
+ * `speechLocale`), e.g. a regional Spanish pack (es-AR) explained in Spain Spanish. Its "translations"
+ * are then equivalents from another variety, so copy that says "in Spanish" or "what does it mean"
+ * reads differently, and Prepárate (written for learners of another language) is not offered.
+ */
+export function glossIsTargetLanguage(meta: { speechLocale: string }, lang: GlossLang): boolean {
+  return meta.speechLocale.split("-")[0].toLowerCase() === GLOSS_LANGUAGES[lang].tag;
+}
+
 /** "Ru" for "ru": the suffix of a language-named sibling (`questionRu`, `titleRu`). */
 export function glossSuffix(lang: GlossLang): string {
   return lang.charAt(0).toUpperCase() + lang.slice(1);

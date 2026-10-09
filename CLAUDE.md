@@ -61,6 +61,7 @@ src/lib/cloud-save/    "Guardado en la nube" (docs/cloud-save.md): the backup bl
 src/components/cloud-save/  Its UI: CloudSaveHost (layout: restore offer, conflict dialog, undo panel), CloudSaveCard (Perfil).
 content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`).
                        `it` (default pack, `"default": true`), `fr`, `en`, `ru`, `nl`, `es` (docs/brief-<lang>.md each). Ids are unique across packs.
+                       `cba` = Cordobés for Spain-Spanish speakers (es-AR, glosses = Spain equivalents; docs/brief-cba.md).
                        Format, ids, order ranges and quality rules: docs/content-guide.md.
                        Code never hard-codes content.
 api/                   Prepárate backend only: Vercel functions (coach/*.ts, one per endpoint) + api/_lib/ (server modules,
