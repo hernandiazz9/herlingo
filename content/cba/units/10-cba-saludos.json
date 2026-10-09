@@ -1,0 +1,742 @@
+{
+  "id": "cba-saludos",
+  "order": 10,
+  "title": "¿Qué lo qué? Saludos y trato",
+  "description": "Cómo se saludan, cómo se llaman entre ellos (che, nero, negra, flaco) y el vos en lugar del tú. Aquí nadie dice «vale»: se dice «dale».",
+  "emoji": "👋",
+  "situation": "saludos",
+  "lessons": [
+    {
+      "id": "cba-saludos.l.saludar",
+      "title": "¿Qué lo qué? Saludar como en Córdoba",
+      "items": [
+        "cba-saludos.que-lo-que",
+        "cba-saludos.que-haces",
+        "cba-saludos.como-andas",
+        "cba-saludos.aca-andamos",
+        "cba-saludos.todo-bien",
+        "cba-saludos.que-onda",
+        "cba-saludos.chau-nos-vemos",
+        "cba-saludos.x.que-agitai",
+        "cba-saludos.x.queacicaraepoio",
+        "cba-saludos.qa.que-lo-que",
+        "cba-saludos.qa.que-haces",
+        "cba-saludos.qa.como-andas"
+      ]
+    },
+    {
+      "id": "cba-saludos.l.vocativos",
+      "title": "Che, nero, negra: cómo se llaman",
+      "items": [
+        "cba-saludos.che-tenes-fuego",
+        "cba-saludos.v.che",
+        "cba-saludos.que-haces-nero",
+        "cba-saludos.v.nero",
+        "cba-saludos.como-andas-negra",
+        "cba-saludos.v.negro",
+        "cba-saludos.hola-guanaco",
+        "cba-saludos.v.guanaco",
+        "cba-saludos.v.macho",
+        "cba-saludos.v.loco",
+        "cba-saludos.flaco-sal",
+        "cba-saludos.v.flaco",
+        "cba-saludos.gorda-comemos",
+        "cba-saludos.v.gordo",
+        "cba-saludos.v.neri",
+        "cba-saludos.v.wacho",
+        "cba-saludos.v.guachin"
+      ]
+    },
+    {
+      "id": "cba-saludos.l.trato",
+      "title": "Vos, ustedes, usted y doña",
+      "items": [
+        "cba-saludos.vos-sos-de-aca",
+        "cba-saludos.v.vos",
+        "cba-saludos.ustedes-vienen",
+        "cba-saludos.v.ustedes",
+        "cba-saludos.sos-un-capo",
+        "cba-saludos.v.capo",
+        "cba-saludos.gracias-genia",
+        "cba-saludos.v.genio",
+        "cba-saludos.ah-choro",
+        "cba-saludos.maestro-me-cobra",
+        "cba-saludos.v.maestro",
+        "cba-saludos.buen-dia-dona",
+        "cba-saludos.v.dona",
+        "cba-saludos.qa.de-donde",
+        "cba-saludos.qa.ustedes-comieron",
+        "cba-saludos.qa.dona",
+        "cba-saludos.qa.genia"
+      ]
+    },
+    {
+      "id": "cba-saludos.l.dale",
+      "title": "Dale, listo, ¿viste?",
+      "items": [
+        "cba-saludos.dale-a-que-hora",
+        "cba-saludos.v.dale",
+        "cba-saludos.listo-nos-vemos",
+        "cba-saludos.v.listo",
+        "cba-saludos.v.bueno",
+        "cba-saludos.viste-te-lo-dije",
+        "cba-saludos.mira-quien-vino",
+        "cba-saludos.de-papa",
+        "cba-saludos.x.vevo",
+        "cba-saludos.x.segun-vo",
+        "cba-saludos.x.no-si-vua",
+        "cba-saludos.qa.dale"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "cba-saludos.que-lo-que",
+      "text": "¿Qué lo qué?",
+      "es": "¿Qué pasa? / ¿Qué tal? (entre amigos)",
+      "notes": "Coloquial. Saludo muy cordobés entre amigos y gente joven; con la familia de tu pareja o con un desconocido mayor, mejor «¿cómo anda?».",
+      "explanation": "Al llegar a la juntada o al cruzarte con un amigo. Suele sonar pegado: «queloqué», con la segunda «que» estirada.",
+      "register": "neutral",
+      "situation": "saludos",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-saludos.que-haces",
+      "text": "¿Qué hacés?",
+      "es": "¿Qué tal? (saludo: no pregunta qué haces)",
+      "notes": "Coloquial. Es un saludo, no una pregunta: no cuentes lo que estás haciendo, contesta «todo bien, ¿y vos?». En Córdoba suena «¿qué hacé'?».",
+      "explanation": "Al saludar a cualquiera de tu edad. El acento va al final, ha-CÉS, y la -s casi no se oye.",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.como-andas",
+      "text": "¿Cómo andás?",
+      "es": "¿Qué tal estás?",
+      "notes": "El «¿cómo estás?» de siempre en Argentina; vale con amigos, compañeros y gente de tu edad. Con usted: «¿cómo anda?».",
+      "explanation": "A cualquier conocido de tu edad. Acento en la última: an-DÁS, nunca «ándas».",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.aca-andamos",
+      "text": "Acá andamos.",
+      "es": "Tirando. / Aquí estamos.",
+      "notes": "La respuesta típica a «¿cómo andás?»: ni bien ni mal. En la calle oirás «acá andamo'», sin la -s.",
+      "explanation": "Cuando te preguntan cómo estás y no hay grandes noticias. «Acá», no «aquí»: «aquí» suena muy de España.",
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.todo-bien",
+      "text": "¿Todo bien?",
+      "es": "¿Qué tal? (igual que en España, pero aquí es el saludo de siempre)",
+      "notes": "Las palabras son las de España, pero aquí es el saludo automático, a menudo justo después de «hola». Se contesta «todo bien, ¿y vos?».",
+      "explanation": "Al entrar en un kiosco, al ver a un amigo, al empezar una llamada. Sube el tono al final, sin pausa tras «todo».",
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.que-onda",
+      "text": "¿Qué onda?",
+      "es": "¿Qué hay? / ¿Qué pasa? (juvenil)",
+      "notes": "Coloquial. Saludo argentino de gente joven; también pregunta «¿qué pasa con esto?» («¿qué onda el asado?»).",
+      "explanation": "Entre amigos y gente de tu edad. La «o» de «onda» se alarga un poco: ¿qué oon-da?",
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.chau-nos-vemos",
+      "text": "Chau, nos vemos mañana.",
+      "es": "Adiós, hasta mañana.",
+      "notes": "«Chau» es el adiós de todo el mundo, también con desconocidos; «adiós» aquí suena a despedida para siempre.",
+      "explanation": "Al irte de cualquier sitio. En boca cordobesa: «chau, no' vemo' mañana», con las -s tragadas.",
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.che-tenes-fuego",
+      "text": "Che, ¿tenés fuego?",
+      "es": "Oye, ¿tienes fuego?",
+      "notes": "Coloquial. «Che» llama la atención como «oye» o «tío»; se lo dices a cualquiera de tu edad, también a un desconocido.",
+      "explanation": "Para llamar a alguien en la calle o en un bar. Acento en te-NÉS; «che» suena igual que en España.",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.que-haces-nero",
+      "text": "¿Qué hacés, nero?",
+      "es": "¿Qué tal, tío?",
+      "notes": "Coloquial. «Nero/nera» viene de «negro» y es un «tío/tía» cordobés muy cariñoso; úsalo con amigos cuando ya te traten así.",
+      "explanation": "Con un amigo del barrio, como el Nico. «Nero» se dice con la e abierta y la r suave.",
+      "register": "tu",
+      "situation": "saludos",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-saludos.como-andas-negra",
+      "text": "¿Cómo andás, negra?",
+      "es": "¿Qué tal, cariño?",
+      "notes": "Coloquial. «Negro/negra» es un mimo (pareja, amigos, familia) sin relación con la piel; pero «negro» también es insulto clasista: úsalo solo en cariñoso y con gente cercana.",
+      "explanation": "A tu pareja o a una amiga íntima. Dilo con cariño, bajando el tono al final.",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.hola-guanaco",
+      "text": "¡Hola, guanaco! ¡Tanto tiempo!",
+      "es": "¡Hola, tío! ¡Cuánto tiempo!",
+      "notes": "Coloquial. «Guanaco» es una versión suave de «culiado», para un amigo; y «¡tanto tiempo!» es el «¡cuánto tiempo!» de España.",
+      "explanation": "Cuando te reencuentras con un amigo. Ojo: «tanto», no «cuánto».",
+      "register": "tu",
+      "situation": "saludos",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-saludos.flaco-sal",
+      "text": "Flaco, ¿me pasás la sal?",
+      "es": "Oye, ¿me pasas la sal?",
+      "notes": "Coloquial. «Flaco/flaca» se dice a cualquiera, conocido o no, sin hablar de su peso; como un «oye, tío».",
+      "explanation": "En la mesa o en el bar, con alguien de tu edad. Acento en pa-SÁS.",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.gorda-comemos",
+      "text": "Gorda, ¿qué comemos hoy?",
+      "es": "Cariño, ¿qué comemos hoy?",
+      "notes": "Coloquial. «Gordo/gorda» es un apelativo de cariño en pareja o familia; nada que ver con el peso.",
+      "explanation": "A tu pareja, en casa. Dilo con ternura: el tono es lo que lo hace cariñoso.",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.sos-un-capo",
+      "text": "Sos un capo, arreglaste todo.",
+      "es": "Eres un crack, lo has arreglado todo.",
+      "notes": "Coloquial. «Capo/capa» es el crack, el que lo sabe hacer; fíjate también en el pretérito: «arreglaste», no «has arreglado».",
+      "explanation": "Para agradecer o felicitar a alguien que te resolvió algo. «Sos» se dice con s final suave: «so' un capo».",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.gracias-genia",
+      "text": "¡Gracias, genia!",
+      "es": "¡Gracias, eres un sol!",
+      "notes": "Coloquial. «Genio/genia» es el agradecimiento cariñoso de todos los días, sin exagerar.",
+      "explanation": "Cuando alguien te hace un favor. La «g» suena como la j de «jefe», un poco más suave.",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.ah-choro",
+      "text": "¡Ah, choro! ¡Qué golazo!",
+      "es": "¡Qué máquina! ¡Menudo golazo!",
+      "notes": "Coloquial. «¡Ah, choro!» felicita con picardía, como un «¡qué cabrón!» admirativo pero suave.",
+      "explanation": "Cuando un amigo hace algo genial, en la cancha o jugando. Alarga la «a»: ¡aah, choro!",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.maestro-me-cobra",
+      "text": "Maestro, ¿me cobra?",
+      "es": "Jefe, ¿me cobras? / La cuenta, por favor.",
+      "notes": "Coloquial. «Maestro» es como llamar «jefe» al camarero, al taxista o al kiosquero; con usted, porque no lo conoces.",
+      "explanation": "Para pedir la cuenta en un bar o pagar en un kiosco. «¿Me cobra?» basta: nadie dice «¿me cobras?» a un desconocido.",
+      "register": "usted",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.buen-dia-dona",
+      "text": "Buen día, doña. ¿Cómo le va?",
+      "es": "Buenos días, señora. ¿Qué tal está?",
+      "notes": "«Doña/don» es un trato respetuoso y cercano para gente mayor; «buen día» es el «buenos días» argentino.",
+      "explanation": "A una vecina mayor o a la abuela de tu pareja. «Le va» con usted; sonríe, que suena cariñoso.",
+      "register": "usted",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.vos-sos-de-aca",
+      "text": "¿Vos sos de acá?",
+      "es": "¿Tú eres de aquí?",
+      "notes": "«Vos» en lugar de «tú», siempre: el «tú» no se usa en Córdoba. Y «acá» en vez de «aquí».",
+      "explanation": "Al conocer a alguien de tu edad. «Sos» rima con «vos»; el acento cae en «acá».",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.ustedes-vienen",
+      "text": "¿Ustedes vienen al asado?",
+      "es": "¿Vosotros venís a la barbacoa?",
+      "notes": "No existe «vosotros»: «ustedes» vale para amigos y para desconocidos. «Venís» con vosotros sería «vienen» con ustedes.",
+      "explanation": "Cuando hablas a un grupo, aunque sean tus amigos. Nada de «venís» ni «os».",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.dale-a-que-hora",
+      "text": "Dale, ¿a qué hora?",
+      "es": "Vale, ¿a qué hora?",
+      "notes": "«Dale» es el «vale» argentino; «vale» aquí no se usa y te delata como español al momento.",
+      "explanation": "Para aceptar un plan. Di «da-le» con la «a» larga y alegre.",
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.listo-nos-vemos",
+      "text": "Listo, nos vemos en el centro.",
+      "es": "Hecho, quedamos en el centro.",
+      "notes": "«Listo» cierra la conversación o el trato, como «hecho» o «vale, ya está».",
+      "explanation": "Para cerrar un plan. «Centro» con s, nunca con z: «sentro».",
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.viste-te-lo-dije",
+      "text": "¿Viste? Te lo dije.",
+      "es": "¿Ves? Te lo dije.",
+      "notes": "«¿Viste?» busca complicidad, como «¿ves?» o «¿sabes?»; se usa a todas horas, también como muletilla.",
+      "explanation": "Cuando aciertas algo o quieres que el otro te dé la razón. Acento en «VIS-te», tono que sube.",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.mira-quien-vino",
+      "text": "Mirá quién vino.",
+      "es": "Mira quién ha venido.",
+      "notes": "Imperativo con vos: «mirá», «fijate», «vení». Y pretérito simple: «vino», no «ha venido».",
+      "explanation": "Cuando aparece alguien que no esperabas. Acento en mi-RÁ: si dices «mira», suena a España.",
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.de-papa",
+      "text": "¿De papa me lo decís?",
+      "es": "¿Me lo dices en serio?",
+      "notes": "Coloquial. «De papa» = de verdad, en serio; muy cordobés. Ojo: «papá» con acento es otra cosa.",
+      "explanation": "Cuando algo te sorprende y quieres confirmarlo. Acento en de-CÍS.",
+      "register": "tu",
+      "situation": "saludos"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cba-saludos.v.vos",
+      "word": "vos",
+      "es": "tú",
+      "notes": "Siempre «vos», nunca «tú»: vos tenés, vos sos, vos querés.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.ustedes",
+      "word": "ustedes",
+      "es": "vosotros (y también ustedes)",
+      "notes": "No hay «vosotros» ni «os»: ustedes vienen, los quiero.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.che",
+      "word": "che",
+      "es": "oye, tío (para llamar a alguien)",
+      "notes": "Coloquial. Al principio o al final: «Che, vení», «¿Qué hacés, che?».",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.nero",
+      "word": "nero",
+      "article": "el",
+      "gender": "m",
+      "es": "el tío, el colega",
+      "notes": "Coloquial. Cordobés puro (de «negro»); en femenino, «nera».",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.negro",
+      "word": "negro",
+      "article": "el",
+      "gender": "m",
+      "es": "cariño, cielo (apelativo)",
+      "notes": "Coloquial. Cariñoso con pareja, amigos y familia; como insulto («negro de mierda») es clasista y racista.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.guanaco",
+      "word": "guanaco",
+      "article": "el",
+      "gender": "m",
+      "es": "tío, macho (vocativo suave)",
+      "notes": "Coloquial. Versión suave de «culiado» entre amigos.",
+      "situation": "saludos",
+      "image": "fluent:llama"
+    },
+    {
+      "id": "cba-saludos.v.macho",
+      "word": "macho",
+      "gender": "m",
+      "es": "tío, colega (algo antiguo)",
+      "notes": "Coloquial. Lo oirás a gente mayor; en España «macho» se usa parecido.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.loco",
+      "word": "loco",
+      "gender": "m",
+      "es": "tío, chaval (vocativo)",
+      "notes": "Coloquial. «Loco, ¿venís?»: no llama loco a nadie.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.flaco",
+      "word": "flaco",
+      "gender": "m",
+      "es": "oye, tío (a cualquiera)",
+      "notes": "Coloquial. También a un desconocido: «Flaco, ¿me ayudás?».",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.gordo",
+      "word": "gordo",
+      "gender": "m",
+      "es": "cariño (sin hablar del peso)",
+      "notes": "Coloquial. Entre pareja o familia; «la Gorda» puede ser un apodo de toda la vida.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.neri",
+      "word": "ñeri",
+      "article": "el",
+      "gender": "m",
+      "es": "el colega, el tronco",
+      "notes": "Coloquial y popular: amigo del alma, de barrio.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.wacho",
+      "word": "wacho",
+      "article": "el",
+      "gender": "m",
+      "es": "el chaval, la chavala (popular)",
+      "notes": "Coloquial. «Hola, wacha» es saludo popular; ojo: «guacho» también es huérfano y sirve de insulto.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.guachin",
+      "word": "guachín",
+      "article": "el",
+      "gender": "m",
+      "es": "el chiquillo, el pillo",
+      "notes": "Coloquial y cariñoso: «Dale, guachín».",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.capo",
+      "word": "capo",
+      "article": "el",
+      "gender": "m",
+      "es": "el crack, la máquina",
+      "notes": "Coloquial. Femenino «capa»; también «jefe».",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.genio",
+      "word": "genio",
+      "article": "el",
+      "gender": "m",
+      "es": "el sol, el crack (para agradecer)",
+      "notes": "Coloquial. «¡Gracias, genio!» o «genia».",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.maestro",
+      "word": "maestro",
+      "gender": "m",
+      "es": "jefe (a un camarero o taxista)",
+      "notes": "Coloquial. Para llamar a un desconocido con respeto y simpatía.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.dona",
+      "word": "doña",
+      "gender": "f",
+      "es": "señora (con respeto y cariño)",
+      "notes": "«Doña» y «don» se usan mucho más que en España con gente mayor.",
+      "situation": "saludos",
+      "image": "fluent:old-woman"
+    },
+    {
+      "id": "cba-saludos.v.dale",
+      "word": "dale",
+      "es": "vale, venga",
+      "notes": "Para aceptar, animar o meter prisa: «¡Dale, que llegamos!». «Vale» no se usa.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.listo",
+      "word": "listo",
+      "es": "hecho, ya está (para cerrar)",
+      "notes": "«Listo, nos vemos»: cierra un trato o una charla.",
+      "situation": "saludos"
+    },
+    {
+      "id": "cba-saludos.v.bueno",
+      "word": "bueno",
+      "es": "venga, pues nada (para cerrar)",
+      "notes": "Como en España, pero aquí abre y cierra frases a todas horas: «Bueno, me voy».",
+      "situation": "saludos"
+    }
+  ],
+  "qa": [
+    {
+      "id": "cba-saludos.qa.que-lo-que",
+      "question": "¿Qué lo qué, Álex?",
+      "questionEs": "¿Qué pasa, Álex?",
+      "accepted": [
+        {
+          "text": "Acá andamos, ¿y vos?",
+          "es": "Tirando, ¿y tú?"
+        },
+        {
+          "text": "Todo bien, ¿y vos qué contás?",
+          "es": "Bien, ¿y tú qué te cuentas?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Pues aquí, tirando, ¿y tú?",
+          "es": "Así contestas en Madrid: «pues», «aquí» y «tú» suenan a España."
+        },
+        {
+          "text": "Vale, ¿y vosotros?",
+          "es": "«Vale» y «vosotros» no se usan en Córdoba: «dale» y «ustedes»."
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "Al «¿qué lo qué?» se contesta corto y se devuelve: «¿y vos?».",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-saludos.qa.que-haces",
+      "question": "¡Hola, Álex! ¿Qué hacés?",
+      "questionEs": "¡Hola, Álex! ¿Qué tal?",
+      "accepted": [
+        {
+          "text": "¡Hola! Todo bien, ¿y vos?",
+          "es": "¡Hola! Bien, ¿y tú?"
+        },
+        {
+          "text": "Acá ando, ¿vos qué hacés?",
+          "es": "Aquí ando, ¿tú qué tal?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nada, estoy leyendo un libro.",
+          "es": "Contestas literalmente: «¿qué hacés?» es un saludo, no una pregunta."
+        },
+        {
+          "text": "¿Qué pasa, tía? ¿Qué tal?",
+          "es": "«Tía» aquí es la hermana de tu madre, no un vocativo."
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "«¿Qué hacés?» es «¿qué tal?»: responde como a un saludo."
+    },
+    {
+      "id": "cba-saludos.qa.como-andas",
+      "question": "¿Cómo andás, Álex?",
+      "questionEs": "¿Qué tal estás, Álex?",
+      "accepted": [
+        {
+          "text": "Acá andando, tirando.",
+          "es": "Aquí, tirando."
+        },
+        {
+          "text": "Bien, ¿y vos cómo andás?",
+          "es": "Bien, ¿y tú qué tal?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Ando por la calle Belgrano.",
+          "es": "Contestas por dónde caminas: «¿cómo andás?» pregunta cómo estás."
+        },
+        {
+          "text": "Muy bien, ¿y tú qué tal?",
+          "es": "Correcto en Madrid; aquí el «tú» suena extranjero: «¿y vos?»."
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "«Andar» aquí es «estar»: «¿cómo andás?», «ando cansado».",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-saludos.qa.de-donde",
+      "question": "Che, ¿y vos de dónde sos?",
+      "questionEs": "Oye, ¿y tú de dónde eres?",
+      "accepted": [
+        {
+          "text": "Soy de Madrid, pero vivo acá con la Cami.",
+          "es": "Soy de Madrid, pero vivo aquí con Cami."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Soy madrileño, pero vivo aquí con Camila.",
+          "es": "Se entiende, pero «madrileño», «aquí» y el nombre sin artículo suenan a España."
+        },
+        {
+          "text": "¿Yo? De Madrid, ¿y tú de dónde eres?",
+          "es": "El «tú» y el «eres» delatan al madrileño: «¿y vos de dónde sos?»."
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "Aquí se dice «acá» y se pone artículo ante el nombre: «la Cami»."
+    },
+    {
+      "id": "cba-saludos.qa.ustedes-comieron",
+      "question": "¿Ustedes ya comieron?",
+      "questionEs": "¿Vosotros ya habéis comido?",
+      "accepted": [
+        {
+          "text": "Sí, ya comimos, gracias.",
+          "es": "Sí, ya hemos comido, gracias."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, ya hemos comido, muchas gracias.",
+          "es": "Se entiende, pero el «hemos comido» suena muy de España: «ya comimos»."
+        },
+        {
+          "text": "Sí, ¿y vosotros?",
+          "es": "«Vosotros» no existe en Córdoba: «¿y ustedes?»."
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "Pretérito simple («comimos») y «ustedes» para cualquier grupo."
+    },
+    {
+      "id": "cba-saludos.qa.dale",
+      "question": "¿Nos vemos a las ocho en el centro?",
+      "questionEs": "¿Quedamos a las ocho en el centro?",
+      "accepted": [
+        {
+          "text": "Dale, a las ocho.",
+          "es": "Vale, a las ocho."
+        },
+        {
+          "text": "Listo, ahí nos vemos.",
+          "es": "Hecho, allí nos vemos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vale, tío, a las ocho.",
+          "es": "«Vale» te delata como español (aquí «dale») y «tío» es el hermano de tu padre."
+        },
+        {
+          "text": "Venga, guay, a las ocho.",
+          "es": "«Venga» y «guay» se entienden, pero suenan a Madrid."
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": "Para aceptar un plan: «dale» o «listo»."
+    },
+    {
+      "id": "cba-saludos.qa.dona",
+      "question": "Buen día, querido. ¿Usted es el novio de la Cami?",
+      "questionEs": "Buenos días, cielo. ¿Eres el novio de Cami?",
+      "accepted": [
+        {
+          "text": "Sí, doña, mucho gusto. Soy Álex.",
+          "es": "Sí, señora, encantado de conocerla. Soy Álex."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, tía, encantado.",
+          "es": "«Tía» aquí es parentesco, y a una señora mayor no se le habla así."
+        },
+        {
+          "text": "Sí, ¿y tú quién eres?",
+          "es": "Tutear a una señora mayor suena brusco: con ella, usted."
+        }
+      ],
+      "register": "usted",
+      "situation": "saludos",
+      "notes": "Con gente mayor, usted y «doña»; ella puede llamarte «querido»."
+    },
+    {
+      "id": "cba-saludos.qa.genia",
+      "question": "Tomá, te traje la llave.",
+      "questionEs": "Toma, te he traído la llave.",
+      "accepted": [
+        {
+          "text": "¡Gracias, sos una genia!",
+          "es": "¡Gracias, eres un sol!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¡Gracias, eres un sol, tía!",
+          "es": "«Eres» es de tú (aquí «sos») y «tía» es parentesco, no un vocativo."
+        },
+        {
+          "text": "¡Gracias, guapa! Tú siempre tan maja.",
+          "es": "«Tú» y «maja» suenan a España: «sos una genia»."
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": "«Sos un genio / una genia» es el gracias cariñoso de cada día."
+    }
+  ],
+  "expressions": [
+    {
+      "id": "cba-saludos.x.que-agitai",
+      "text": "¿Qué agitai?",
+      "es": "¿Qué pasa? ¿Qué te cuentas? (de barrio)",
+      "variety": "Cordobés popular",
+      "standard": "¿Qué agitás?",
+      "notes": "Coloquial. Saludo juvenil de barrio con el voseo popular en -ai; entiéndelo, pero di «¿qué hacés?»: en tu boca sonaría a burla."
+    },
+    {
+      "id": "cba-saludos.x.queacicaraepoio",
+      "text": "¡Queacícaraepoio!",
+      "es": "¿Qué pasa, tío? (en broma)",
+      "variety": "Cordobés popular",
+      "standard": "¿Qué hacés, cara de pollo?",
+      "notes": "Coloquial. Saludo jocoso de toda la vida, dicho de un tirón: «¿qué hacés, cara de pollo?». Ríete, no lo imites."
+    },
+    {
+      "id": "cba-saludos.x.vevo",
+      "text": "¡Vevó!",
+      "es": "¡Ya te digo! / ¡Claro que sí!",
+      "variety": "Cordobés popular",
+      "standard": "¡Ves vos!",
+      "notes": "Coloquial. Viene de «¿ves vos?»: «¿Vamos al baile? —¡Vevó!». También «¿ves?, te lo dije». Muy cordobés y simpático."
+    },
+    {
+      "id": "cba-saludos.x.segun-vo",
+      "text": "Según vó.",
+      "es": "Eso lo dirás tú.",
+      "variety": "Cordobés popular",
+      "standard": "Según vos.",
+      "notes": "Coloquial. Ironía cordobesa para dudar de lo que dice el otro; con sonrisa, nunca con enfado."
+    },
+    {
+      "id": "cba-saludos.x.no-si-vua",
+      "text": "No, si vuá…",
+      "es": "¡Sí, hombre! / No, qué va (irónico)",
+      "variety": "Cordobés popular",
+      "standard": "No, si voy a…",
+      "notes": "Coloquial. «Vuá» es «voy a»: «no, si vuá ir…» = «¡sí, hombre, como si fuera a ir!». Ironía pura."
+    }
+  ]
+}

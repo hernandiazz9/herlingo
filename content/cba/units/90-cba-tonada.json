@@ -1,0 +1,471 @@
+{
+  "id": "cba-tonada",
+  "order": 90,
+  "title": "Tonada y gramática",
+  "description": "Ocho fichas cortas: la tonada, la -s que desaparece, el vos, el usted, el pretérito, «la Cami», los aumentativos y los intensificadores, siempre comparados con España.",
+  "emoji": "🗣️",
+  "situation": "tonada",
+  "lessons": [
+    {
+      "id": "cba-tonada.l.fichas",
+      "title": "Tonada y gramática en ocho fichas",
+      "items": [
+        "gram.cba-tonada",
+        "cba-comida.echale-peperina",
+        "gram.cba-s-final",
+        "cba-saludos.que-haces",
+        "gram.cba-voseo",
+        "cba-saludos.vos-sos-de-aca",
+        "cba-saludos.ustedes-vienen",
+        "gram.cba-usted",
+        "cba-saludos.buen-dia-dona",
+        "gram.cba-preterito",
+        "cba-saludos.mira-quien-vino",
+        "gram.cba-articulo-nombre",
+        "cba-gente.la-cami",
+        "cba-gente.lo-de-mis-viejos",
+        "gram.cba-aumentativos",
+        "cba-comida.tengo-un-hambrezon",
+        "gram.cba-intensificadores",
+        "cba-gente.es-re-piola"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.cba-tonada",
+      "title": "La tonada: la sílaba que se estira",
+      "summary": "Lo que hace sonar cordobés no son las palabras sino la melodía: la sílaba anterior a la acentuada se alarga y el tono sube pronto y luego cae. Tu tarea es entenderla, no imitarla.",
+      "points": [
+        "Se estira la sílaba de antes de la tónica: ca-pii-tal, pe-pee-ri-na, ¿qué ha-cee'?",
+        "El tono sube pronto, ya en esa sílaba larga, y cae después: de ahí el «cantito».",
+        "En la capital se alarga la pretónica; en Traslasierra (Villa Dolores, Mina Clavero) más bien la primera sílaba: paa-pe-li-to. En el este suena casi santafesina.",
+        "La tienen también los cordobeses cultos: es acento, no «hablar mal».",
+        "No la exageres: una tonada mal imitada suena a burla. Habla con tu acento y entiende el suyo."
+      ],
+      "table": [
+        [
+          "Palabra",
+          "Madrid",
+          "Córdoba capital",
+          "Traslasierra"
+        ],
+        [
+          "capital",
+          "ca-pi-TAL",
+          "ca-PII-tal",
+          "CAA-pi-tal"
+        ],
+        [
+          "peperina",
+          "pe-pe-RI-na",
+          "pe-PEE-ri-na",
+          "PEE-pe-ri-na"
+        ],
+        [
+          "papelito",
+          "pa-pe-LI-to",
+          "pa-PEE-li-to",
+          "PAA-pe-li-to"
+        ],
+        [
+          "¿qué hacés?",
+          "¿qué HA-ces?",
+          "¿qué ha-CEE'?",
+          "—"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Vamos a la capital.",
+          "es": "Vamos al centro de Córdoba (oirás «ca-pii-tal»)."
+        },
+        {
+          "text": "¿Le ponés peperina al mate?",
+          "es": "¿Le pones poleo serrano al mate?"
+        }
+      ]
+    },
+    {
+      "id": "gram.cba-s-final",
+      "title": "La -s que se pierde, la ll y el seseo",
+      "summary": "En habla relajada la -s final se aspira o desaparece, la ll/y suena como la j francesa y no existe la z. Puedes aspirar la -s en informal; lo popular, solo reconócelo.",
+      "points": [
+        "Seseo: «cerveza» suena «serbesa»; tu z de Madrid suena a «gallego» (español).",
+        "La -s final se aspira o se cae: «¿qué hacé'?», «lo' chico'», «vamo'». Más que en Buenos Aires, como en Andalucía occidental.",
+        "ll / y = [ʒ], la j francesa de «je»: «calle», «yo». No la sh porteña, que aquí suena a Buenos Aires.",
+        "-ado → -ao, como en España coloquial: «asao», «pelao».",
+        "Popular (solo reconocer): poio (pollo), Taiere (Talleres), coletivo, dotor, jue (fue), agora (ahora), pa' (para)."
+      ],
+      "table": [
+        [
+          "Escrito",
+          "Dicho en Córdoba",
+          "Madrid"
+        ],
+        [
+          "¿Qué hacés?",
+          "¿qué hacé'?",
+          "¿qué haces?"
+        ],
+        [
+          "los chicos",
+          "lo' chico'",
+          "los chicos"
+        ],
+        [
+          "calle",
+          "caʒe (j francesa)",
+          "calle"
+        ],
+        [
+          "cerveza",
+          "serbesa",
+          "cerbeza (con z)"
+        ],
+        [
+          "pollo (popular)",
+          "poio",
+          "pollo"
+        ],
+        [
+          "fue (popular)",
+          "jue",
+          "fue"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Nos vemos mañana.",
+          "es": "Hasta mañana (oirás «no' vemo' mañana»)."
+        },
+        {
+          "text": "Vamos a la calle San Martín.",
+          "es": "Vamos a la calle San Martín (con «ll» de «je» francesa)."
+        }
+      ]
+    },
+    {
+      "id": "gram.cba-voseo",
+      "title": "Vos en lugar de tú, ustedes en lugar de vosotros",
+      "summary": "En Córdoba el tú no existe: se dice vos, con sus propias formas, y para el plural siempre ustedes. Ni vosotros ni os.",
+      "points": [
+        "Presente: vos hablás, tenés, venís, sos, vas. El acento cae al final.",
+        "Imperativo: hablá, mirá, fijate, tené, poné, vení, decime, andá (no «ve»).",
+        "Resto de tiempos como con tú: vos hablabas, hablaste, hablarás.",
+        "Plural: ustedes, para amigos y desconocidos. «Os quiero» → «los quiero / las quiero».",
+        "Popular (solo reconocer): tenís, querís, hací, ¿qué agitai?, estai, «¡ite!» (vete)."
+      ],
+      "table": [
+        [
+          "Verbo",
+          "Tú (España)",
+          "Vos (Córdoba)"
+        ],
+        [
+          "ser",
+          "tú eres",
+          "vos sos"
+        ],
+        [
+          "tener",
+          "tú tienes",
+          "vos tenés"
+        ],
+        [
+          "querer",
+          "tú quieres",
+          "vos querés"
+        ],
+        [
+          "venir",
+          "tú vienes",
+          "vos venís"
+        ],
+        [
+          "imperativo",
+          "ven, di, mira",
+          "vení, decí, mirá"
+        ],
+        [
+          "ir (imperativo)",
+          "ve, vete",
+          "andá, andate"
+        ],
+        [
+          "plural",
+          "vosotros tenéis",
+          "ustedes tienen"
+        ],
+        [
+          "pronombre",
+          "os quiero",
+          "los quiero"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "¿Vos querés venir?",
+          "es": "¿Tú quieres venir?"
+        },
+        {
+          "text": "Vení, decime una cosa.",
+          "es": "Ven, dime una cosa."
+        },
+        {
+          "text": "Chicos, los quiero mucho.",
+          "es": "Chicos, os quiero mucho."
+        }
+      ]
+    },
+    {
+      "id": "gram.cba-usted",
+      "title": "Usted: más que en España",
+      "summary": "En España el tú llega a casi todo el mundo; en Córdoba usted se mantiene con mayores y en lo formal. Con cualquiera de tu edad, aunque no lo conozcas, vos.",
+      "points": [
+        "Usted: gente mayor (la abuela de tu pareja), el médico, la policía, el banco, un jefe formal.",
+        "Vos: amigos, familia, gente de tu edad aunque sea desconocida, el kiosquero joven, el camarero de un bar informal.",
+        "Ustedes es a la vez «vosotros» y «ustedes»: el plural no distingue trato.",
+        "«Don» y «doña» acompañan al usted con cariño: «¿Cómo le va, doña?»."
+      ],
+      "table": [
+        [
+          "Situación",
+          "Madrid",
+          "Córdoba"
+        ],
+        [
+          "la abuela de tu novia",
+          "¿Qué tal estás?",
+          "¿Cómo le va, doña?"
+        ],
+        [
+          "un camarero joven",
+          "¿Me cobras?",
+          "¿Me cobrás?"
+        ],
+        [
+          "el médico",
+          "¿Le puedo preguntar algo?",
+          "¿Le puedo preguntar algo, doctor?"
+        ],
+        [
+          "tus amigos",
+          "¿Venís?",
+          "¿Vienen?"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Disculpe, ¿usted sabe dónde queda la terminal?",
+          "es": "Perdona, ¿sabes dónde está la estación de autobuses?"
+        },
+        {
+          "text": "Doña, ¿le sirvo un mate?",
+          "es": "Señora, ¿le pongo un mate?"
+        }
+      ]
+    },
+    {
+      "id": "gram.cba-preterito",
+      "title": "Fui, comí: el pretérito de siempre",
+      "summary": "En Córdoba, como en toda Argentina, «hoy he ido» se dice «hoy fui». El futuro se hace con «voy a», y «recién» es «hace un momento».",
+      "points": [
+        "Pretérito simple también para hoy: «hoy fui al centro», «¿comiste?». El compuesto suena muy de España.",
+        "Futuro: «voy a ir» mejor que «iré»; en la calle «vuá» o «viá».",
+        "«Recién» = hace un momento («recién llegué») o «solo» («recién a las diez»).",
+        "«Saber» = soler, sobre todo en pasado: «sabía tener un puestito» = solía tener un puesto.",
+        "Pronominales: tomarse el colectivo, enojarse (no «enfadarse»), venirse."
+      ],
+      "table": [
+        [
+          "Madrid",
+          "Córdoba"
+        ],
+        [
+          "Hoy he ido al centro.",
+          "Hoy fui al centro."
+        ],
+        [
+          "¿Has comido?",
+          "¿Comiste?"
+        ],
+        [
+          "Iré mañana.",
+          "Voy a ir mañana."
+        ],
+        [
+          "Acabo de llegar.",
+          "Recién llegué."
+        ],
+        [
+          "Solía tener un puesto.",
+          "Sabía tener un puestito."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Recién llegué a casa.",
+          "es": "Acabo de llegar a casa."
+        },
+        {
+          "text": "Hoy fui al centro con la Cami.",
+          "es": "Hoy he ido al centro con Cami."
+        }
+      ]
+    },
+    {
+      "id": "gram.cba-articulo-nombre",
+      "title": "La Cami, el Nico: artículo ante el nombre",
+      "summary": "En Córdoba se pone artículo delante del nombre de pila, y es normal y cariñoso. En España suena rural o catalán, pero aquí sin artículo suena frío.",
+      "points": [
+        "Con nombres y apodos: la Cami, el Nico, la Yesi, el Negro, la Gorda.",
+        "Con apellidos, para hablar de alguien conocido: «la López».",
+        "Al dirigirte a la persona no se usa: «Cami, vení», no «la Cami, vení».",
+        "«En lo de» + nombre = en casa de: «en lo del Nico»."
+      ],
+      "table": [
+        [
+          "Madrid",
+          "Córdoba"
+        ],
+        [
+          "Viene Nico.",
+          "Viene el Nico."
+        ],
+        [
+          "Es la novia de Álex.",
+          "Es la novia del Álex."
+        ],
+        [
+          "Estamos en casa de Nico.",
+          "Estamos en lo del Nico."
+        ]
+      ],
+      "examples": [
+        {
+          "text": "La Yesi es de Talleres.",
+          "es": "Yesi es del Talleres."
+        },
+        {
+          "text": "Vamos a lo de la Cami.",
+          "es": "Vamos a casa de Cami."
+        }
+      ]
+    },
+    {
+      "id": "gram.cba-aumentativos",
+      "title": "Asadazo, calorón, calorononón",
+      "summary": "El cordobés exagera con sufijos: -azo para lo enorme o buenísimo, -ón y -azón para el calor, el frío o el hambre, y hasta el triple -ononón. Para lo pequeño, siempre -ito.",
+      "points": [
+        "-azo / -aza: asadazo, golazo, cuartetazo = enorme, buenísimo.",
+        "-ón / -azón: calorón, friazón, hambrezón; «calorón» puede ser un calor de 25 grados exagerado con humor.",
+        "-ononón (triple, muy cordobés): calorononón, friazononón.",
+        "Diminutivo -ito, nunca -illo: criollito, fernecito, vinito, partidito.",
+        "«Muy mucho» refuerza y «maomeno» (más o menos) suaviza una exageración."
+      ],
+      "table": [
+        [
+          "Base",
+          "Córdoba",
+          "Madrid"
+        ],
+        [
+          "asado",
+          "asadazo",
+          "barbacoa de escándalo"
+        ],
+        [
+          "calor",
+          "calorón, calorononón",
+          "un calor que te mueres"
+        ],
+        [
+          "frío",
+          "friazón",
+          "un frío que pela"
+        ],
+        [
+          "hambre",
+          "hambrezón",
+          "un hambre que te mueres"
+        ],
+        [
+          "vino",
+          "vinito",
+          "vinillo"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "¡Qué calorón que hace!",
+          "es": "¡Qué calor hace!"
+        },
+        {
+          "text": "El domingo hubo un asadazo.",
+          "es": "El domingo hubo una barbacoa espectacular."
+        }
+      ]
+    },
+    {
+      "id": "gram.cba-intensificadores",
+      "title": "Re, mal, una banda y ni en pedo",
+      "summary": "Para decir «muy», «mucho» o «de ninguna manera» el cordobés tiene su propio arsenal. Cada uno tiene su equivalente en España.",
+      "points": [
+        "re- / recontra-: re lindo, recontracansado = muy, súper, mazo.",
+        "mal (juvenil): «se enojó mal» = muchísimo. alto / alta: «alto asado» = menudo asado.",
+        "una banda, un montón, un toco: muchísimo, mogollón. a full: a tope. zarpado: pasado, flipante.",
+        "Negar: ni a palos (ni de broma), ni ahí (para nada), ni bosta (nada de nada), ni tronco 'e bola (ni caso), ni loco.",
+        "«Ni en pedo» es vulgar, como «ni de coña»: entre amigos sí, con la familia de tu pareja no."
+      ],
+      "table": [
+        [
+          "Córdoba",
+          "Madrid"
+        ],
+        [
+          "re lindo",
+          "muy bonito"
+        ],
+        [
+          "una banda de gente",
+          "mogollón de gente"
+        ],
+        [
+          "a full",
+          "a tope"
+        ],
+        [
+          "ni a palos",
+          "ni de broma"
+        ],
+        [
+          "ni ahí",
+          "para nada"
+        ],
+        [
+          "ni en pedo (vulgar)",
+          "ni de coña"
+        ],
+        [
+          "ni tronco 'e bola",
+          "ni caso"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Había una banda de gente.",
+          "es": "Había mogollón de gente."
+        },
+        {
+          "text": "Estoy a full con el laburo.",
+          "es": "Estoy a tope de trabajo."
+        },
+        {
+          "text": "¿Ir con él? Ni a palos.",
+          "es": "¿Ir con él? Ni de broma."
+        }
+      ]
+    }
+  ]
+}

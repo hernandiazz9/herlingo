@@ -1,0 +1,997 @@
+{
+  "id": "cba-comida",
+  "order": 30,
+  "title": "Fernet, lomito y criollos",
+  "description": "Fernet con coca setenta treinta, lomito completo, mate con peperina y criollos: lo que se come y se bebe en Córdoba, con el nombre de España al lado.",
+  "emoji": "🥪",
+  "situation": "comida",
+  "lessons": [
+    {
+      "id": "cba-comida.l.fernet",
+      "title": "Fernet setenta treinta",
+      "items": [
+        "cba-comida.fernet-con-coca",
+        "cba-comida.v.fernet",
+        "cba-comida.setenta-treinta",
+        "cba-comida.armate-un-fernando",
+        "cba-comida.v.fernando",
+        "cba-comida.x.hacemo-un-ferne",
+        "cba-comida.unas-birras",
+        "cba-comida.v.porron",
+        "cba-comida.v.chopp",
+        "cba-comida.que-gaseosa-queres",
+        "cba-comida.v.gaseosa",
+        "cba-comida.v.soda",
+        "cba-comida.pritiado",
+        "cba-comida.v.pritiado",
+        "cba-comida.v.tetra",
+        "cba-comida.v.jugo",
+        "cba-comida.qa.que-tomas",
+        "cba-comida.qa.gaseosa"
+      ]
+    },
+    {
+      "id": "cba-comida.l.mate",
+      "title": "Mate, criollos y facturas",
+      "items": [
+        "cba-comida.tomamos-unos-mates",
+        "cba-comida.v.mate",
+        "cba-comida.v.yerba",
+        "cba-comida.v.bombilla",
+        "cba-comida.quien-ceba",
+        "cba-comida.pone-la-pava",
+        "cba-comida.v.pava",
+        "cba-comida.echale-peperina",
+        "cba-comida.v.peperina",
+        "cba-comida.en-casa-dulce",
+        "cba-comida.mate-cocido",
+        "cba-comida.medio-kilo-de-criollos",
+        "cba-comida.v.criollo",
+        "cba-comida.x.unos-croio",
+        "cba-comida.v.bizcochito",
+        "cba-comida.v.chipaca",
+        "cba-comida.facturas-para-el-mate",
+        "cba-comida.v.factura",
+        "cba-comida.v.medialuna",
+        "cba-comida.me-clave-dos-mafaldas",
+        "cba-comida.v.mafalda",
+        "cba-comida.v.alfajor",
+        "cba-comida.venis-a-merendar",
+        "cba-comida.x.sumarino",
+        "cba-comida.qa.mate",
+        "cba-comida.qa.merienda"
+      ]
+    },
+    {
+      "id": "cba-comida.l.lomito",
+      "title": "Lomito, asado y empanadas",
+      "items": [
+        "cba-comida.sanguche-de-milanesa",
+        "cba-comida.v.sanguche",
+        "cba-comida.v.milanesa",
+        "cba-comida.lomito-completo",
+        "cba-comida.v.lomito",
+        "cba-comida.vamos-a-la-lomiteria",
+        "cba-comida.v.choripan",
+        "cba-comida.v.pancho",
+        "cba-comida.v.sandwich-de-miga",
+        "cba-comida.asado-en-lo-del-gordo",
+        "cba-comida.v.achuras",
+        "cba-comida.v.chinchulines",
+        "cba-comida.v.chimichurri",
+        "cba-comida.v.puchero",
+        "cba-comida.armamos-una-picada",
+        "cba-comida.docena-de-empanadas",
+        "cba-comida.v.empanada",
+        "cba-comida.v.locro",
+        "cba-comida.qa.lomito",
+        "cba-comida.qa.asado"
+      ]
+    },
+    {
+      "id": "cba-comida.l.verduleria",
+      "title": "Verdulería y hambrezón",
+      "items": [
+        "cba-comida.cuanto-sale-la-frutilla",
+        "cba-comida.v.frutilla",
+        "cba-comida.v.durazno",
+        "cba-comida.v.palta",
+        "cba-comida.v.papa",
+        "cba-comida.v.manteca",
+        "cba-comida.v.pan-dulce",
+        "cba-comida.llevamos-pururu",
+        "cba-comida.v.pururu",
+        "cba-comida.tengo-un-hambrezon",
+        "cba-comida.algo-para-morfar",
+        "cba-comida.tengo-un-bajon",
+        "cba-comida.qa.hambre",
+        "cba-comida.qa.verduleria"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "cba-comida.fernet-con-coca",
+      "text": "Un fernet con coca bien cargado.",
+      "es": "Un cubata de fernet bien cargado.",
+      "notes": "El fernet con coca es el combinado nacional cordobés: amargo de hierbas con cola. «Bien cargado» = con mucho fernet.",
+      "explanation": "Lo pides en un bar o en la previa. «Fernet» se dice «fer-NET», y en la calle «ferné».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.setenta-treinta",
+      "text": "¿Lo querés setenta treinta?",
+      "es": "¿Lo quieres con poco fernet y mucha cola?",
+      "notes": "Coloquial. «Setenta treinta» (70/30) es la proporción clásica: 70 % cola y 30 % fernet, con hielo. Pídelo así y quedas como un cordobés.",
+      "explanation": "Te lo preguntará quien prepara la jarra. Acento en que-RÉS.",
+      "register": "tu",
+      "situation": "comida",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-comida.armate-un-fernando",
+      "text": "Armate un fernando.",
+      "es": "Prepárate un cubata de fernet.",
+      "notes": "Coloquial. «Fernando» es el fernet con coca, juego de palabras cordobés; «armar» = preparar, montar.",
+      "explanation": "Entre amigos, en casa o en la previa. Acento en AR-ma-te; sin tilde en la escritura argentina.",
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.pritiado",
+      "text": "Si no alcanza para el fernet, hacemos un pritiado.",
+      "es": "Si no llega para el fernet, hacemos un tinto de verano.",
+      "notes": "Coloquial. El «pritiado» (o «pritiau») es vino con Pritty, la gaseosa de limón cordobesa; la opción barata.",
+      "explanation": "Cuando el presupuesto no da para más. En la calle oirás «pritiau».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.unas-birras",
+      "text": "¿Unas birras?",
+      "es": "¿Unas cañas?",
+      "notes": "Coloquial. «Birra» es cerveza en todo el país; ojo, «caña» aquí es aguardiente, no una cerveza pequeña.",
+      "explanation": "Para proponer tomar algo. La rr bien fuerte; algunos cordobeses la arrastran.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.que-gaseosa-queres",
+      "text": "¿Qué gaseosa querés?",
+      "es": "¿Qué refresco quieres?",
+      "notes": "«Gaseosa» es cualquier refresco; «soda» es el sifón o el agua con gas.",
+      "explanation": "Te lo preguntan en el bar o en un cumpleaños. «Gaseosa» con s, nunca con z.",
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.tomamos-unos-mates",
+      "text": "¿Tomamos unos mates?",
+      "es": "¿Quedamos para un café? (pero con mate)",
+      "notes": "Proponer mates es como quedar para un café: invitación social. Se comparte la misma bombilla, y es de mala educación limpiarla.",
+      "explanation": "Para invitar a alguien a casa o a la plaza. «Tomamos», no «bebemos».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.quien-ceba",
+      "text": "¿Quién ceba?",
+      "es": "¿Quién sirve el mate?",
+      "notes": "«Cebar» es servir el mate; el cebador llena, da la vuelta y reparte por turnos.",
+      "explanation": "En una ronda de mate. Di «se-BA» con s: aquí no hay z.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.pone-la-pava",
+      "text": "Poné la pava para el mate.",
+      "es": "Pon el hervidor para el mate.",
+      "notes": "La «pava» es el hervidor; el agua no debe hervir, o el mate se quema.",
+      "explanation": "En casa, a la hora del mate. Imperativo con vos: po-NÉ.",
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.echale-peperina",
+      "text": "Echale peperina al mate.",
+      "es": "Échale poleo serrano al mate.",
+      "notes": "La peperina es una menta de las sierras de Córdoba que se pone en el mate; muy cordobés.",
+      "explanation": "Cuando preparas mate. «Pe-pee-ri-na»: la tonada estira la sílaba antes de la tónica.",
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.en-casa-dulce",
+      "text": "En casa se toma dulce.",
+      "es": "En casa el mate se toma con azúcar.",
+      "notes": "En Córdoba mucha gente toma el mate dulce, con azúcar; en otras zonas se toma amargo.",
+      "explanation": "Para avisar cómo lo tomas tú. «Dulce» con la u breve.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.mate-cocido",
+      "text": "Un mate cocido con leche.",
+      "es": "Una infusión de yerba con leche.",
+      "notes": "El mate cocido es yerba en saquito, como un té; con leche es la merienda de la infancia.",
+      "explanation": "Lo pides en un bar o lo preparas en casa. «Cocido» con dos s: «co-SI-do».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.medio-kilo-de-criollos",
+      "text": "Traete medio kilo de criollos.",
+      "es": "Tráete medio kilo de bollos salados.",
+      "notes": "Los criollos son bollitos hojaldrados salados, de grasa, que en Córdoba van con el mate.",
+      "explanation": "Cuando alguien pasa por la panadería. Acento en TRA-e-te.",
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.facturas-para-el-mate",
+      "text": "Compramos facturas para el mate.",
+      "es": "Compramos bollería para la merienda.",
+      "notes": "Las «facturas» son la bollería: medialunas, vigilantes, bolas de fraile; se compran por docena.",
+      "explanation": "Para la merienda o el desayuno. «Fac-TU-ras», la c se oye suave.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.me-clave-dos-mafaldas",
+      "text": "Me clavé dos mafaldas.",
+      "es": "Me he zampado dos cruasanes mixtos.",
+      "notes": "Coloquial. «Clavarse» comida = zampársela; la «mafalda» es una medialuna con jamón y queso.",
+      "explanation": "Para contar que comiste de más. Pretérito simple: «me clavé».",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.venis-a-merendar",
+      "text": "¿Venís a merendar?",
+      "es": "¿Vienes a merendar? (aquí la merienda es sagrada)",
+      "notes": "La merienda es una cita social en Córdoba: mate, facturas, criollos, hacia las cinco.",
+      "explanation": "Para invitar a alguien por la tarde. Acento en ve-NÍS.",
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.sanguche-de-milanesa",
+      "text": "Un sánguche de milanesa a la napolitana.",
+      "es": "Un bocadillo de filete empanado con tomate, jamón y queso.",
+      "notes": "«Sánguche» es el bocadillo y la milanesa, el filete empanado; «a la napolitana» lleva salsa de tomate, jamón y queso gratinado.",
+      "explanation": "Lo pides en una lomitería o un bar. «SÁN-gu-che», acento en la primera.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.lomito-completo",
+      "text": "Un lomito completo para dos.",
+      "es": "Un pepito de ternera con todo, para compartir.",
+      "notes": "El lomito es cordobés: bocadillo de lomo con jamón, queso, huevo, lechuga y tomate; «completo» = con todo.",
+      "explanation": "En la lomitería. Uno completo llena a dos personas.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.vamos-a-la-lomiteria",
+      "text": "Vamos a la lomitería de la esquina.",
+      "es": "Vamos a la bocatería de la esquina.",
+      "notes": "La lomitería es el local de lomitos, abierto hasta tarde: el plan clásico después de salir.",
+      "explanation": "Para proponer cenar algo rápido. Acento en lo-mi-te-RÍ-a.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.asado-en-lo-del-gordo",
+      "text": "El domingo hay asado en lo del Gordo.",
+      "es": "El domingo hay barbacoa en casa del Gordo.",
+      "notes": "El asado es la carne a la brasa y también la reunión; «en lo de» = en casa de.",
+      "explanation": "Para invitar o avisar de un plan. En la calle oirás «asao».",
+      "register": "neutral",
+      "situation": "comida",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-comida.armamos-una-picada",
+      "text": "Armamos una picada.",
+      "es": "Preparamos algo para picar.",
+      "notes": "La «picada» es una tabla de embutido, queso y aceitunas para picotear, antes del asado o con el fernet.",
+      "explanation": "Cuando llegan amigos. Acento en pi-CA-da.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.docena-de-empanadas",
+      "text": "Media docena de empanadas cordobesas, por favor.",
+      "es": "Seis empanadillas de carne dulzonas, por favor.",
+      "notes": "La empanada argentina es grande, al horno o frita, y se pide por docena; la cordobesa es de carne con un toque dulce (azúcar, a veces pasas).",
+      "explanation": "Al pedir para llevar. «Docena» con s: do-SE-na.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.cuanto-sale-la-frutilla",
+      "text": "¿Cuánto sale el kilo de frutilla?",
+      "es": "¿A cuánto está el kilo de fresas?",
+      "notes": "«¿Cuánto sale?» = ¿cuánto cuesta?; y la fresa aquí es «frutilla».",
+      "explanation": "En la verdulería. «Frutilla» con la ll como la j francesa: fru-TI-ʒa.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.tengo-un-hambrezon",
+      "text": "Tengo un hambrezón terrible.",
+      "es": "Tengo un hambre que me muero.",
+      "notes": "Coloquial. «Hambrezón» es el aumentativo cordobés de hambre (como «calorón», «friazón»).",
+      "explanation": "Cuando llegas a casa muerto de hambre. Acento al final: ham-bre-ZÓN.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.algo-para-morfar",
+      "text": "¿Hay algo para morfar?",
+      "es": "¿Hay algo para jalar?",
+      "notes": "Coloquial. «Morfar» es comer; «el morfi», la comida. Lunfardo de todo el país.",
+      "explanation": "Al abrir la nevera de un amigo. Acento en mor-FAR.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.tengo-un-bajon",
+      "text": "Tengo un bajón…",
+      "es": "Tengo una gusa…",
+      "notes": "Coloquial. Además de «depre», «bajón» es el hambre de madrugada después de salir o fumar.",
+      "explanation": "A las cuatro de la mañana, camino de la lomitería. Alarga la ó final.",
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.llevamos-pururu",
+      "text": "Llevamos pururú al cine.",
+      "es": "Llevamos palomitas al cine.",
+      "notes": "«Pururú» es el nombre cordobés de las palomitas; en Buenos Aires dicen «pochoclo».",
+      "explanation": "Antes de ir al cine. Acento al final: pu-ru-RÚ.",
+      "register": "neutral",
+      "situation": "comida"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cba-comida.v.fernet",
+      "word": "fernet",
+      "article": "el",
+      "gender": "m",
+      "es": "el fernet (amargo de hierbas)",
+      "notes": "En España casi no se toma; en Córdoba es religión, casi siempre con cola.",
+      "situation": "comida",
+      "image": "fluent:tumbler-glass"
+    },
+    {
+      "id": "cba-comida.v.fernando",
+      "word": "fernando",
+      "article": "el",
+      "gender": "m",
+      "es": "el cubata de fernet con cola",
+      "notes": "Coloquial. Juego de palabras cordobés con «fernet».",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.pritiado",
+      "word": "pritiado",
+      "article": "el",
+      "gender": "m",
+      "es": "el vino con gaseosa de limón",
+      "notes": "Coloquial. De Pritty, la gaseosa de limón cordobesa; también «pritiau».",
+      "situation": "comida",
+      "image": "fluent:wine-glass"
+    },
+    {
+      "id": "cba-comida.v.tetra",
+      "word": "tetra",
+      "article": "el",
+      "gender": "m",
+      "es": "el vino de brik",
+      "notes": "Coloquial. De «tetrabrik»: el vino barato en cartón.",
+      "situation": "comida",
+      "image": "fluent:beverage-box"
+    },
+    {
+      "id": "cba-comida.v.porron",
+      "word": "porrón",
+      "article": "el",
+      "gender": "m",
+      "plural": "porrones",
+      "es": "el botellín, el tercio",
+      "notes": "¡No es el porrón catalán! Es una botella pequeña de cerveza.",
+      "situation": "comida",
+      "image": "fluent:beer-mug"
+    },
+    {
+      "id": "cba-comida.v.chopp",
+      "word": "chopp",
+      "article": "el",
+      "gender": "m",
+      "es": "la caña de barril (en jarra)",
+      "notes": "Cerveza de barril servida en jarra.",
+      "situation": "comida",
+      "image": "fluent:clinking-beer-mugs"
+    },
+    {
+      "id": "cba-comida.v.gaseosa",
+      "word": "gaseosa",
+      "article": "la",
+      "gender": "f",
+      "es": "el refresco",
+      "notes": "Cualquier refresco con gas: cola, limón, naranja.",
+      "situation": "comida",
+      "image": "fluent:cup-with-straw"
+    },
+    {
+      "id": "cba-comida.v.soda",
+      "word": "soda",
+      "article": "la",
+      "gender": "f",
+      "es": "el sifón, el agua con gas",
+      "notes": "«Soda» no es un refresco: es agua con gas, a menudo en sifón.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.jugo",
+      "word": "jugo",
+      "article": "el",
+      "gender": "m",
+      "es": "el zumo",
+      "notes": "«Zumo» no se usa: «un jugo de naranja exprimido».",
+      "situation": "comida",
+      "image": "fluent:tropical-drink"
+    },
+    {
+      "id": "cba-comida.v.mate",
+      "word": "mate",
+      "article": "el",
+      "gender": "m",
+      "es": "el mate (infusión de yerba)",
+      "notes": "Se toma con bombilla, se comparte y se da las gracias solo cuando ya no quieres más.",
+      "situation": "comida",
+      "image": "fluent:mate"
+    },
+    {
+      "id": "cba-comida.v.yerba",
+      "word": "yerba",
+      "article": "la",
+      "gender": "f",
+      "es": "la yerba mate",
+      "notes": "Con y: la hierba del mate.",
+      "situation": "comida",
+      "image": "fluent:herb"
+    },
+    {
+      "id": "cba-comida.v.bombilla",
+      "word": "bombilla",
+      "article": "la",
+      "gender": "f",
+      "es": "la pajita metálica del mate",
+      "notes": "Nada que ver con la de la lámpara (esa es la «lamparita» o «el foco»).",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.pava",
+      "word": "pava",
+      "article": "la",
+      "gender": "f",
+      "es": "el hervidor",
+      "notes": "La tetera o hervidor para el agua del mate.",
+      "situation": "comida",
+      "image": "fluent:teapot"
+    },
+    {
+      "id": "cba-comida.v.peperina",
+      "word": "peperina",
+      "article": "la",
+      "gender": "f",
+      "es": "el poleo serrano (para el mate)",
+      "notes": "Menta silvestre de las sierras de Córdoba.",
+      "situation": "comida",
+      "image": "fluent:leafy-green"
+    },
+    {
+      "id": "cba-comida.v.criollo",
+      "word": "criollo",
+      "article": "el",
+      "gender": "m",
+      "plural": "criollos",
+      "es": "el bollo hojaldrado salado",
+      "notes": "De grasa, para el mate; diminutivo «criollito».",
+      "situation": "comida",
+      "image": "fluent:bread"
+    },
+    {
+      "id": "cba-comida.v.bizcochito",
+      "word": "bizcochito",
+      "article": "el",
+      "gender": "m",
+      "plural": "bizcochitos",
+      "es": "la galletita salada de grasa",
+      "notes": "«Bizcochitos de grasa», otro clásico del mate.",
+      "situation": "comida",
+      "image": "fluent:cookie"
+    },
+    {
+      "id": "cba-comida.v.chipaca",
+      "word": "chipaca",
+      "article": "la",
+      "gender": "f",
+      "plural": "chipacas",
+      "es": "el bollito redondo de grasa",
+      "notes": "Pan de grasa redondo, cordobés.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.factura",
+      "word": "factura",
+      "article": "la",
+      "gender": "f",
+      "plural": "facturas",
+      "es": "la pieza de bollería",
+      "notes": "«Facturas» es la bollería; la cuenta del bar también es «la cuenta».",
+      "situation": "comida",
+      "image": "fluent:doughnut"
+    },
+    {
+      "id": "cba-comida.v.medialuna",
+      "word": "medialuna",
+      "article": "la",
+      "gender": "f",
+      "plural": "medialunas",
+      "es": "el cruasán",
+      "notes": "Pequeña y dulce (de manteca) o de grasa.",
+      "situation": "comida",
+      "image": "fluent:croissant"
+    },
+    {
+      "id": "cba-comida.v.mafalda",
+      "word": "mafalda",
+      "article": "la",
+      "gender": "f",
+      "es": "el cruasán mixto",
+      "notes": "Medialuna rellena de jamón y queso; muy cordobés.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.alfajor",
+      "word": "alfajor",
+      "article": "el",
+      "gender": "m",
+      "es": "el dulce de dos galletas con relleno",
+      "notes": "Nada que ver con el alfajor andaluz: dos galletas con dulce de leche, a menudo bañadas en chocolate.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.sanguche",
+      "word": "sánguche",
+      "article": "el",
+      "gender": "m",
+      "plural": "sánguches",
+      "es": "el bocadillo",
+      "notes": "Coloquial. «Sándwich» también se dice; «sanguchito» = bocadillo pequeño.",
+      "situation": "comida",
+      "image": "fluent:sandwich"
+    },
+    {
+      "id": "cba-comida.v.milanesa",
+      "word": "milanesa",
+      "article": "la",
+      "gender": "f",
+      "es": "el filete empanado",
+      "notes": "Coloquial: «milanga». «A la napolitana» = con tomate, jamón y queso.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.lomito",
+      "word": "lomito",
+      "article": "el",
+      "gender": "m",
+      "es": "el bocadillo de lomo completo",
+      "notes": "Nació en Córdoba: lomo, jamón, queso, huevo, lechuga y tomate.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.choripan",
+      "word": "choripán",
+      "article": "el",
+      "gender": "m",
+      "es": "el bocadillo de chorizo",
+      "notes": "«Chori», en el asado o en la puerta de la cancha.",
+      "situation": "comida",
+      "image": "fluent:hot-dog"
+    },
+    {
+      "id": "cba-comida.v.pancho",
+      "word": "pancho",
+      "article": "el",
+      "gender": "m",
+      "plural": "panchos",
+      "es": "el perrito caliente",
+      "notes": "«Dos panchos con papas».",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.achuras",
+      "word": "achuras",
+      "article": "las",
+      "gender": "pl",
+      "es": "la casquería a la parrilla",
+      "notes": "Chinchulines, mollejas, riñones: se comen primero en el asado.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.chinchulines",
+      "word": "chinchulines",
+      "article": "los",
+      "gender": "pl",
+      "es": "las tripas a la parrilla",
+      "notes": "Parecidos a las gallinejas madrileñas.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.empanada",
+      "word": "empanada",
+      "article": "la",
+      "gender": "f",
+      "plural": "empanadas",
+      "es": "la empanadilla",
+      "notes": "Por docena; de carne, pollo, jamón y queso…",
+      "situation": "comida",
+      "image": "fluent:dumpling"
+    },
+    {
+      "id": "cba-comida.v.locro",
+      "word": "locro",
+      "article": "el",
+      "gender": "m",
+      "es": "el guiso de maíz y carne",
+      "notes": "Se come el 25 de mayo, fiesta nacional.",
+      "situation": "comida",
+      "image": "fluent:pot-of-food"
+    },
+    {
+      "id": "cba-comida.v.sandwich-de-miga",
+      "word": "sándwich de miga",
+      "article": "el",
+      "gender": "m",
+      "plural": "sándwiches de miga",
+      "es": "el sándwich de pan de molde fino",
+      "notes": "Sin corteza, en capas finísimas; se compran por docena para cumpleaños.",
+      "situation": "comida",
+      "image": "fluent:sandwich"
+    },
+    {
+      "id": "cba-comida.v.papa",
+      "word": "papa",
+      "article": "la",
+      "gender": "f",
+      "plural": "papas",
+      "es": "la patata",
+      "notes": "«Patata» no se usa; «papas fritas».",
+      "situation": "comida",
+      "image": "fluent:potato"
+    },
+    {
+      "id": "cba-comida.v.chimichurri",
+      "word": "chimichurri",
+      "article": "el",
+      "gender": "m",
+      "es": "la salsa de perejil, ajo y ají",
+      "notes": "Con aceite y vinagre, para la carne del asado.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.puchero",
+      "word": "puchero",
+      "article": "el",
+      "gender": "m",
+      "es": "el cocido",
+      "notes": "Carne hervida con verduras y choclo: el cocido argentino (en Andalucía también se dice «puchero»).",
+      "situation": "comida",
+      "image": "fluent:pot-of-food"
+    },
+    {
+      "id": "cba-comida.v.palta",
+      "word": "palta",
+      "article": "la",
+      "gender": "f",
+      "plural": "paltas",
+      "es": "el aguacate",
+      "notes": "«Aguacate» no se usa.",
+      "situation": "comida",
+      "image": "fluent:avocado"
+    },
+    {
+      "id": "cba-comida.v.pan-dulce",
+      "word": "pan dulce",
+      "article": "el",
+      "gender": "m",
+      "es": "el panettone",
+      "notes": "El dulce de Navidad, herencia italiana.",
+      "situation": "comida"
+    },
+    {
+      "id": "cba-comida.v.frutilla",
+      "word": "frutilla",
+      "article": "la",
+      "gender": "f",
+      "plural": "frutillas",
+      "es": "la fresa",
+      "notes": "«Fresa» no se usa.",
+      "situation": "comida",
+      "image": "fluent:strawberry"
+    },
+    {
+      "id": "cba-comida.v.durazno",
+      "word": "durazno",
+      "article": "el",
+      "gender": "m",
+      "plural": "duraznos",
+      "es": "el melocotón",
+      "notes": "«Melocotón» no se usa.",
+      "situation": "comida",
+      "image": "fluent:peach"
+    },
+    {
+      "id": "cba-comida.v.manteca",
+      "word": "manteca",
+      "article": "la",
+      "gender": "f",
+      "es": "la mantequilla",
+      "notes": "Ojo: no es manteca de cerdo; «crema» es la nata.",
+      "situation": "comida",
+      "image": "fluent:butter"
+    },
+    {
+      "id": "cba-comida.v.pururu",
+      "word": "pururú",
+      "article": "el",
+      "gender": "m",
+      "es": "las palomitas",
+      "notes": "Nombre cordobés; en Buenos Aires, «pochoclo».",
+      "situation": "comida",
+      "image": "fluent:popcorn"
+    }
+  ],
+  "qa": [
+    {
+      "id": "cba-comida.qa.que-tomas",
+      "question": "¿Qué tomás, Álex?",
+      "questionEs": "¿Qué bebes, Álex?",
+      "accepted": [
+        {
+          "text": "Un fernet con coca, setenta treinta.",
+          "es": "Un cubata de fernet, con poco fernet."
+        },
+        {
+          "text": "Para mí una birra.",
+          "es": "Para mí una cerveza."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Una caña, por favor.",
+          "es": "Aquí «caña» es aguardiente: pide una birra o un chopp."
+        },
+        {
+          "text": "Un cubata de fernet, tío.",
+          "es": "«Cubata» y «tío» suenan a España: «un fernet con coca»."
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "Para beber se dice «tomar»: «¿qué tomás?».",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-comida.qa.lomito",
+      "question": "¿Qué va a llevar?",
+      "questionEs": "¿Qué va a ser? / ¿Qué le pongo?",
+      "accepted": [
+        {
+          "text": "Un lomito completo, por favor.",
+          "es": "Un pepito de ternera con todo, por favor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Quiero coger un lomito.",
+          "es": "«Coger» aquí es follar: di «llevar» o «pedir»."
+        },
+        {
+          "text": "Póngame un bocadillo de lomo con todo.",
+          "es": "Se entiende, pero «póngame» y «bocadillo» suenan muy de España."
+        }
+      ],
+      "register": "usted",
+      "situation": "comida",
+      "notes": "En la lomitería: «un lomito completo» y listo.",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-comida.qa.mate",
+      "question": "¿Querés un mate?",
+      "questionEs": "¿Quieres un mate?",
+      "accepted": [
+        {
+          "text": "Dale, gracias.",
+          "es": "Venga, gracias."
+        },
+        {
+          "text": "Dale, si es dulce, mejor.",
+          "es": "Vale, si lleva azúcar, mejor."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vale, gracias.",
+          "es": "«Vale» te delata: aquí, «dale»."
+        },
+        {
+          "text": "Sí, ¿me pasas una pajita?",
+          "es": "El mate viene con su bombilla, y «pasas» es de tú: «¿me pasás?»."
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "Ojo: «gracias» al devolver el mate significa «ya no quiero más»."
+    },
+    {
+      "id": "cba-comida.qa.merienda",
+      "question": "¿Qué llevo para la merienda?",
+      "questionEs": "¿Qué llevo para merendar?",
+      "accepted": [
+        {
+          "text": "Traé facturas y unos criollos.",
+          "es": "Trae bollería y unos bollos salados."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Trae bollería y unos cruasanes.",
+          "es": "Así se dice en España: aquí «facturas» y «medialunas», y con vos «traé»."
+        },
+        {
+          "text": "Traé criollos y una pava.",
+          "es": "La pava es el hervidor: no se come."
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "Para el mate: facturas, criollos o bizcochitos."
+    },
+    {
+      "id": "cba-comida.qa.hambre",
+      "question": "¿Comemos algo?",
+      "questionEs": "¿Picamos algo?",
+      "accepted": [
+        {
+          "text": "Dale, tengo un hambrezón.",
+          "es": "Venga, tengo un hambre que me muero."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vale, me apetece un bocata.",
+          "es": "«Vale», «apetece» y «bocata» son de España: «dale, tengo hambre»."
+        },
+        {
+          "text": "Dale, pero recién comí y no tengo hambre.",
+          "es": "Contradicción: aceptas y a la vez dices que acabas de comer."
+        }
+      ],
+      "register": "neutral",
+      "situation": "comida",
+      "notes": "«Hambrezón»: el hambre en versión cordobesa."
+    },
+    {
+      "id": "cba-comida.qa.gaseosa",
+      "question": "¿Qué gaseosa llevás?",
+      "questionEs": "¿Qué refresco te llevas?",
+      "accepted": [
+        {
+          "text": "Una Pritty de limón.",
+          "es": "Una gaseosa de limón cordobesa."
+        },
+        {
+          "text": "Una coca grande.",
+          "es": "Una Coca-Cola grande."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Una soda de naranja.",
+          "es": "«Soda» es agua con gas: di «una gaseosa de naranja»."
+        },
+        {
+          "text": "Un refresco de limón, por favor.",
+          "es": "Se entiende, pero «refresco» suena a España: «gaseosa»."
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "Gaseosa = refresco; soda = agua con gas.",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-comida.qa.asado",
+      "question": "¿Venís al asado del domingo?",
+      "questionEs": "¿Vienes a la barbacoa del domingo?",
+      "accepted": [
+        {
+          "text": "Dale, ¿llevo el vino?",
+          "es": "Vale, ¿llevo el vino?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vale, ¿llevo algo para la barbacoa?",
+          "es": "«Vale» y «barbacoa» son de España: aquí es «el asado»."
+        },
+        {
+          "text": "Sí, ¿vosotros ponéis la carne?",
+          "es": "«Vosotros» no se usa: «¿ustedes ponen la carne?»."
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": "Al asado se lleva algo: vino, gaseosa o el postre."
+    },
+    {
+      "id": "cba-comida.qa.verduleria",
+      "question": "¿Qué le doy?",
+      "questionEs": "¿Qué le pongo?",
+      "accepted": [
+        {
+          "text": "Un kilo de frutillas y dos paltas.",
+          "es": "Un kilo de fresas y dos aguacates."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Un kilo de fresas y dos aguacates, por favor.",
+          "es": "Te entenderán, pero aquí son «frutillas» y «paltas»."
+        },
+        {
+          "text": "Un kilo de frutillas y dos patatas.",
+          "es": "«Patata» no se dice: aquí son «papas»."
+        }
+      ],
+      "register": "usted",
+      "situation": "comida",
+      "notes": "En la verdulería, el vocabulario cambia casi entero."
+    }
+  ],
+  "expressions": [
+    {
+      "id": "cba-comida.x.hacemo-un-ferne",
+      "text": "¿Hacemo' un ferne?",
+      "es": "¿Nos tomamos un fernet?",
+      "variety": "Cordobés popular",
+      "standard": "¿Hacemos un fernet?",
+      "notes": "Coloquial. Así suena en la calle: -s y -t finales tragadas. Entiéndelo; tú di «¿hacemos un fernet?»."
+    },
+    {
+      "id": "cba-comida.x.unos-croio",
+      "text": "Unos croio' pa'l mate.",
+      "es": "Unos bollos salados para el mate.",
+      "variety": "Cordobés popular",
+      "standard": "Unos criollos para el mate.",
+      "notes": "Coloquial. «Croio» es «criollo» con la ll popular y la r perdida; lo oirás en la panadería del barrio."
+    },
+    {
+      "id": "cba-comida.x.sumarino",
+      "text": "Un sumarino, por favor.",
+      "es": "Una leche caliente con chocolate, por favor.",
+      "variety": "Cordobés popular",
+      "standard": "Un submarino, por favor.",
+      "notes": "El «submarino» es leche caliente con una barrita de chocolate que se derrite dentro; la pronunciación popular pierde la b."
+    }
+  ]
+}

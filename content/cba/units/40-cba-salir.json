@@ -1,0 +1,776 @@
+{
+  "id": "cba-salir",
+  "order": 40,
+  "title": "El baile, la previa y el clásico",
+  "description": "La previa, el baile de cuarteto, la caravana y la cancha: para salir con cordobeses sin decir «vale», «botellón» ni «coger».",
+  "emoji": "🎶",
+  "situation": "salir",
+  "lessons": [
+    {
+      "id": "cba-salir.l.cuarteto",
+      "title": "El baile de cuarteto",
+      "items": [
+        "cba-salir.pinta-cuarteto",
+        "cba-salir.v.cuarteto",
+        "cba-salir.v.cuartetazo",
+        "cba-salir.v.tunga-tunga",
+        "cba-salir.baile-de-la-mona",
+        "cba-salir.v.baile",
+        "cba-salir.la-mona-la-descose",
+        "cba-salir.vamos-a-la-pista",
+        "cba-salir.v.pista",
+        "cba-salir.cuarteteamos-hasta-morir",
+        "cba-salir.v.cuartetear",
+        "cba-salir.v.cuartetero",
+        "cba-salir.v.curtir",
+        "cba-salir.qa.bailas"
+      ]
+    },
+    {
+      "id": "cba-salir.l.previa",
+      "title": "La previa y la caravana",
+      "items": [
+        "cba-salir.hay-salida",
+        "cba-salir.v.salida",
+        "cba-salir.hacemos-la-previa",
+        "cba-salir.v.previa",
+        "cba-salir.hagamos-una-vaquita",
+        "cba-salir.pinta-un-fernet",
+        "cba-salir.x.queris-un-fernet",
+        "cba-salir.me-fui-de-caravana",
+        "cba-salir.les-pinto-la-caravana",
+        "cba-salir.v.caravana",
+        "cba-salir.a-que-boliche",
+        "cba-salir.v.boliche",
+        "cba-salir.pena-en-cosquin",
+        "cba-salir.v.pena",
+        "cba-salir.v.joda",
+        "cba-salir.de-una",
+        "cba-salir.estoy-re-manija",
+        "cba-salir.v.manija",
+        "cba-salir.x.ta-mortal",
+        "cba-salir.qa.salimos",
+        "cba-salir.qa.pinta",
+        "cba-salir.qa.vaquita"
+      ]
+    },
+    {
+      "id": "cba-salir.l.escabio",
+      "title": "Escabio y ligue",
+      "items": [
+        "cba-salir.escabiamos-toda-la-noche",
+        "cba-salir.v.escabio",
+        "cba-salir.v.chupi",
+        "cba-salir.estaba-en-pedo",
+        "cba-salir.volvio-mamado",
+        "cba-salir.v.chupado",
+        "cba-salir.x.los-vamo",
+        "cba-salir.chaparon-toda-la-noche",
+        "cba-salir.v.chapar",
+        "cba-salir.te-esta-chamuyando",
+        "cba-salir.v.chamuyar",
+        "cba-salir.le-tiro-los-perros",
+        "cba-salir.levantaste-algo",
+        "cba-salir.v.levantar",
+        "cba-salir.qa.anoche",
+        "cba-salir.qa.chamuyo"
+      ]
+    },
+    {
+      "id": "cba-salir.l.cancha",
+      "title": "Finde, cancha y pileta",
+      "items": [
+        "cba-salir.el-asado-quedo-joya",
+        "cba-salir.v.joya",
+        "cba-salir.v.finde",
+        "cba-salir.vamos-a-la-cancha",
+        "cba-salir.v.cancha",
+        "cba-salir.v.picado",
+        "cba-salir.x.fulbo",
+        "cba-salir.v.truco",
+        "cba-salir.v.pileta",
+        "cba-salir.v.pelopincho",
+        "cba-salir.qa.cancha"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "cba-salir.pinta-cuarteto",
+      "text": "El sábado pinta cuarteto.",
+      "es": "El sábado toca cuarteto. / El sábado apetece cuarteto.",
+      "notes": "Coloquial. «Pintar» = surgir o apetecer («¿qué pinta?»); el cuarteto es la música de baile de Córdoba, Patrimonio de la Humanidad desde 2025.",
+      "explanation": "Para proponer el plan del finde. «Cuarteto» con la t suave y la o final corta.",
+      "register": "neutral",
+      "situation": "salir",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-salir.baile-de-la-mona",
+      "text": "¿Vamos al baile de la Mona?",
+      "es": "¿Vamos al concierto de la Mona?",
+      "notes": "«El baile» es el concierto-baile de cuarteto; la Mona Jiménez es su gran ídolo. Ir «al baile» no es ir a bailar sin más.",
+      "explanation": "Para invitar a alguien a un baile de cuarteto. «Mona» con o abierta y alargada: «la Moo-na».",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.la-mona-la-descose",
+      "text": "La Mona la descose.",
+      "es": "La Mona lo peta. / La Mona lo borda.",
+      "notes": "Coloquial. «La descose» = es un crack, lo hace de maravilla; se dice de un artista, un jugador o un amigo.",
+      "explanation": "Para elogiar a alguien que lo hace genial. «Descose» con s: des-CO-se.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.vamos-a-la-pista",
+      "text": "Vamos a la pista, que empieza la ronda.",
+      "es": "Vamos a la pista, que empiezan a bailar en corro.",
+      "notes": "En el baile de cuarteto se baila en ronda: las parejas giran todas en el mismo sentido alrededor de la pista.",
+      "explanation": "Cuando arranca el tema que te gusta. «Ronda» con la r fuerte, que algunos arrastran.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.cuarteteamos-hasta-morir",
+      "text": "Cuarteteamos hasta morir.",
+      "es": "Bailamos cuarteto hasta reventar.",
+      "notes": "Coloquial. «Cuartetear» = bailar cuarteto, ir al baile; verbo muy cordobés.",
+      "explanation": "Para contar la noche. Cuar-te-te-A-mos: la tonada estira la sílaba antes del acento.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.hay-salida",
+      "text": "¿Hay salida el sábado?",
+      "es": "¿Salimos el sábado? / ¿Hay plan el sábado?",
+      "notes": "«Salida» es el plan de salir de noche; «salir» = salir de marcha.",
+      "explanation": "Para tantear al grupo a mitad de semana. «Sábado» con s, nunca con z.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.hacemos-la-previa",
+      "text": "Hacemos la previa en casa.",
+      "es": "Hacemos botellón en casa antes de salir.",
+      "notes": "Coloquial. La «previa» es beber en casa de alguien antes del baile o el boliche: no se hace en la calle.",
+      "explanation": "Para organizar la noche. «Previa» con la e cerrada: PRE-via.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.hagamos-una-vaquita",
+      "text": "Hagamos una vaquita para el fernet.",
+      "es": "Hagamos un bote para el fernet.",
+      "notes": "Coloquial. «Hacer una vaquita» = poner dinero entre todos, el bote de España.",
+      "explanation": "Antes de ir al súper con los amigos. «Vaquita» con la qu suave.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.pinta-un-fernet",
+      "text": "¿Pinta un fernet?",
+      "es": "¿Te apetece un fernet? / ¿Un fernet?",
+      "notes": "Coloquial. «¿Pinta…?» = ¿apetece…?, ¿surge…?; muy usado para proponer planes.",
+      "explanation": "Para proponer tomar algo. Sube el tono al final de «fernet».",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.me-fui-de-caravana",
+      "text": "Anoche me fui de caravana.",
+      "es": "Anoche salí de marcha.",
+      "notes": "Coloquial. La «caravana» es la juerga en grupo, de un sitio a otro; palabra cordobesa.",
+      "explanation": "Para contar tu noche. «Ca-ra-VA-na», la segunda a estirada.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.les-pinto-la-caravana",
+      "text": "Les pintó la caravana.",
+      "es": "Les dio por salir de marcha.",
+      "notes": "Coloquial. «Les pintó» = les entró la idea, les dio por; aquí, salir de juerga sin plan.",
+      "explanation": "Para explicar por qué tus amigos no contestan. Acento en pin-TÓ.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.a-que-boliche",
+      "text": "¿A qué boliche vamos?",
+      "es": "¿A qué discoteca vamos?",
+      "notes": "«Boliche» es la discoteca; en Córdoba se distingue del «baile» de cuarteto.",
+      "explanation": "Al final de la previa. «Boliche» con ch de «chico».",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.pena-en-cosquin",
+      "text": "Esta noche hay una peña en Cosquín.",
+      "es": "Esta noche hay música folk en un local de Cosquín.",
+      "notes": "La «peña» es un local o una fiesta de música folclórica, con guitarras y empanadas; no un grupo de amigos.",
+      "explanation": "En Cosquín o en las sierras, sobre todo en enero. «Peña» como en España, pero es otro sitio.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.de-una",
+      "text": "¡De una!",
+      "es": "¡Venga, hecho! / ¡Claro!",
+      "notes": "Coloquial. «De una» = sin dudarlo, ahora mismo; la respuesta entusiasta a un plan.",
+      "explanation": "Cuando te proponen algo que te encanta. Rápido y seco: «¡de una!».",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.estoy-re-manija",
+      "text": "Estoy re manija con el finde.",
+      "es": "Tengo muchísimas ganas de que llegue el finde.",
+      "notes": "Coloquial. «Estar manija» = tener muchísimas ganas, estar a tope; también enganchado a algo.",
+      "explanation": "Antes de un plan que te ilusiona. «Re manija» pegado: re-ma-NI-ja.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.escabiamos-toda-la-noche",
+      "text": "Escabiamos toda la noche.",
+      "es": "Estuvimos pimplando toda la noche.",
+      "notes": "Coloquial. «Escabiar» es beber alcohol y «el escabio», la bebida; lunfardo de todo el país.",
+      "explanation": "Contando la noche, entre amigos. Es-ca-BIA-mos.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.estaba-en-pedo",
+      "text": "Estaba en pedo.",
+      "es": "Iba pedo. / Iba borracho.",
+      "notes": "Vulgar. «En pedo» = borracho; entre amigos es normal, delante de la familia de tu pareja suena grosero. Ojo: «pedo» también es el de España.",
+      "explanation": "Contando una noche con amigos, no a los suegros. «Pedo» con e abierta.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.volvio-mamado",
+      "text": "Volvió mamado.",
+      "es": "Volvió ciego. / Volvió como una cuba.",
+      "notes": "Coloquial. «Mamado» es borracho, como en el «mamado» coloquial de España; más fuerte: «chupado».",
+      "explanation": "Hablando de alguien que se pasó. En la calle: «mamao».",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.chaparon-toda-la-noche",
+      "text": "Chaparon toda la noche.",
+      "es": "Se estuvieron liando toda la noche.",
+      "notes": "Coloquial. «Chapar» (o «transar») = morrearse, liarse; no implica más.",
+      "explanation": "Para cotillear después del baile. Acento en cha-PA-ron.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.te-esta-chamuyando",
+      "text": "Te está chamuyando.",
+      "es": "Te está camelando.",
+      "notes": "Coloquial. «Chamuyar» o «versear» = ligar con labia, camelar, también engañar con palabras.",
+      "explanation": "Para avisar a un amigo de que lo están camelando. Cha-mu-YAN-do, con la y de «je» francesa.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.le-tiro-los-perros",
+      "text": "Le tiró los perros toda la noche.",
+      "es": "Le estuvo tirando los tejos toda la noche.",
+      "notes": "Coloquial. «Tirar los perros» o «tirar onda» = tirar los tejos.",
+      "explanation": "Cotilleando sobre el baile. «Perros» con la rr bien fuerte.",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.levantaste-algo",
+      "text": "¿Levantaste algo?",
+      "es": "¿Has ligado?",
+      "notes": "Coloquial. «Levantar» = ligar, conseguir a alguien; pretérito simple: «¿levantaste?», no «¿has levantado?».",
+      "explanation": "La pregunta del día siguiente, entre amigos. Acento en le-van-TAS-te.",
+      "register": "tu",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.el-asado-quedo-joya",
+      "text": "El asado quedó joya.",
+      "es": "La barbacoa ha quedado de lujo.",
+      "notes": "Coloquial. «Joya» = genial, perfecto. Pretérito simple: «quedó».",
+      "explanation": "Para felicitar al asador. «Joya» con la y de «je» francesa: «JO-ʒa».",
+      "register": "neutral",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.vamos-a-la-cancha",
+      "text": "Vamos a la cancha a ver a la T.",
+      "es": "Vamos al campo a ver al Talleres.",
+      "notes": "La «cancha» es el estadio; «la T» es Talleres. El clásico cordobés es Belgrano contra Talleres.",
+      "explanation": "Para ir al fútbol. «Cancha» con ch, nunca «campo» (aquí el campo es el del campo).",
+      "register": "neutral",
+      "situation": "salir",
+      "voice": "es-AR-TomasNeural"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cba-salir.v.cuarteto",
+      "word": "cuarteto",
+      "article": "el",
+      "gender": "m",
+      "es": "el cuarteto (música de baile cordobesa)",
+      "notes": "Nació en Córdoba en 1943; ritmo «tunga-tunga».",
+      "situation": "salir",
+      "image": "fluent:musical-notes"
+    },
+    {
+      "id": "cba-salir.v.cuartetazo",
+      "word": "cuartetazo",
+      "article": "el",
+      "gender": "m",
+      "es": "el temazo de cuarteto",
+      "notes": "Coloquial. También un gran baile de cuarteto.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.tunga-tunga",
+      "word": "tunga-tunga",
+      "article": "el",
+      "gender": "m",
+      "es": "el ritmo del cuarteto",
+      "notes": "Coloquial. Onomatopeya del ritmo; también, el cuarteto en sí.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.cuartetero",
+      "word": "cuartetero",
+      "article": "el",
+      "gender": "m",
+      "es": "el fan del cuarteto",
+      "notes": "Neutro en «es re cuartetero», pero «negro cuartetero» es un insulto clasista: ojo con el tono.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.baile",
+      "word": "baile",
+      "article": "el",
+      "gender": "m",
+      "es": "el concierto-baile de cuarteto",
+      "notes": "«Ir al baile» = ir a un baile de cuarteto.",
+      "situation": "salir",
+      "image": "fluent:man-dancing"
+    },
+    {
+      "id": "cba-salir.v.pista",
+      "word": "pista",
+      "article": "la",
+      "gender": "f",
+      "es": "la pista de baile (en ronda)",
+      "notes": "En el baile se gira en ronda alrededor de la pista.",
+      "situation": "salir",
+      "image": "fluent:woman-dancing"
+    },
+    {
+      "id": "cba-salir.v.caravana",
+      "word": "caravana",
+      "article": "la",
+      "gender": "f",
+      "es": "la marcha, la juerga en grupo",
+      "notes": "Coloquial. «Irse de caravana»; «encaravanarse» = salir de juerga.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.boliche",
+      "word": "boliche",
+      "article": "el",
+      "gender": "m",
+      "plural": "boliches",
+      "es": "la discoteca, el garito",
+      "notes": "«Boliche» es la discoteca; el baile es otra cosa.",
+      "situation": "salir",
+      "image": "fluent:mirror-ball"
+    },
+    {
+      "id": "cba-salir.v.pena",
+      "word": "peña",
+      "article": "la",
+      "gender": "f",
+      "es": "el local de música folclórica",
+      "notes": "No es un grupo de amigos: es un sitio o una fiesta de folclore.",
+      "situation": "salir",
+      "image": "fluent:guitar"
+    },
+    {
+      "id": "cba-salir.v.previa",
+      "word": "previa",
+      "article": "la",
+      "gender": "f",
+      "es": "el botellón en casa antes de salir",
+      "notes": "Coloquial. «Hacer la previa».",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.joda",
+      "word": "joda",
+      "article": "la",
+      "gender": "f",
+      "es": "la fiesta, el cachondeo",
+      "notes": "Coloquial. «Me gusta la joda»; también «broma»: «era una joda» = era broma.",
+      "situation": "salir",
+      "image": "fluent:party-popper"
+    },
+    {
+      "id": "cba-salir.v.salida",
+      "word": "salida",
+      "article": "la",
+      "gender": "f",
+      "es": "el plan de salir (de noche)",
+      "notes": "«¿Hay salida?» = ¿salimos?",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.joya",
+      "word": "joya",
+      "gender": "f",
+      "es": "genial, de lujo",
+      "notes": "Coloquial. «¡Joya!» = ¡perfecto!",
+      "situation": "salir",
+      "image": "fluent:gem-stone"
+    },
+    {
+      "id": "cba-salir.v.escabio",
+      "word": "escabio",
+      "article": "el",
+      "gender": "m",
+      "es": "la priva, el alcohol",
+      "notes": "Coloquial. «Escabiar» = beber alcohol.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.chupi",
+      "word": "chupi",
+      "article": "el",
+      "gender": "m",
+      "es": "la bebida, la priva",
+      "notes": "Coloquial. De «chupar» = beber alcohol: «se chupó todo».",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.chupado",
+      "word": "chupado",
+      "gender": "m",
+      "es": "borrachísimo, ciego",
+      "notes": "Coloquial. Cordobés: «rechupadazo» = como una cuba.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.finde",
+      "word": "finde",
+      "article": "el",
+      "gender": "m",
+      "es": "el fin de semana (igual que en España)",
+      "notes": "Como en España; «este finde me voy a las sierras».",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.cancha",
+      "word": "cancha",
+      "article": "la",
+      "gender": "f",
+      "es": "el estadio, el campo de fútbol",
+      "notes": "«Ir a la cancha» = ir al fútbol.",
+      "situation": "salir",
+      "image": "fluent:stadium"
+    },
+    {
+      "id": "cba-salir.v.picado",
+      "word": "picado",
+      "article": "el",
+      "gender": "m",
+      "es": "la pachanga (partidillo)",
+      "notes": "Coloquial. «Armar un picado en el parque».",
+      "situation": "salir",
+      "image": "fluent:soccer-ball"
+    },
+    {
+      "id": "cba-salir.v.truco",
+      "word": "truco",
+      "article": "el",
+      "gender": "m",
+      "es": "el truco (juego de cartas)",
+      "notes": "El juego de cartas nacional, con señas y faroles; sin equivalente en España.",
+      "situation": "salir",
+      "image": "fluent:flower-playing-cards"
+    },
+    {
+      "id": "cba-salir.v.pelopincho",
+      "word": "pelopincho",
+      "article": "la",
+      "gender": "f",
+      "es": "la piscina hinchable",
+      "notes": "Coloquial. De una marca: la piscina de lona del patio.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.pileta",
+      "word": "pileta",
+      "article": "la",
+      "gender": "f",
+      "es": "la piscina",
+      "notes": "«Piscina» casi no se dice; «¿hay pileta?».",
+      "situation": "salir",
+      "image": "fluent:person-swimming"
+    },
+    {
+      "id": "cba-salir.v.cuartetear",
+      "word": "cuartetear",
+      "es": "bailar cuarteto, ir al baile",
+      "notes": "Coloquial y cordobés.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.chapar",
+      "word": "chapar",
+      "es": "morrearse, liarse",
+      "notes": "Coloquial. Sinónimo: «transar».",
+      "situation": "salir",
+      "image": "fluent:kiss-mark"
+    },
+    {
+      "id": "cba-salir.v.chamuyar",
+      "word": "chamuyar",
+      "es": "camelar, ligar con labia",
+      "notes": "Coloquial. Sinónimo: «versear».",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.levantar",
+      "word": "levantar",
+      "es": "ligar, pillar",
+      "notes": "Coloquial. «¿Levantaste?» = ¿has ligado?",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.curtir",
+      "word": "curtir",
+      "es": "ser de, irle (algo)",
+      "notes": "Coloquial. «Curte el cuarteto» = le va el cuarteto, es de cuarteto.",
+      "situation": "salir"
+    },
+    {
+      "id": "cba-salir.v.manija",
+      "word": "manija",
+      "es": "con muchísimas ganas, a tope",
+      "notes": "Coloquial. «Estar manija»; también, enganchado.",
+      "situation": "salir"
+    }
+  ],
+  "qa": [
+    {
+      "id": "cba-salir.qa.salimos",
+      "question": "¿Qué hacemos el sábado?",
+      "questionEs": "¿Qué plan hay para el sábado?",
+      "accepted": [
+        {
+          "text": "Hacemos la previa en lo del Nico y después vamos al baile.",
+          "es": "Bebemos algo en casa de Nico y luego al concierto de cuarteto."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Hacemos botellón y luego vamos de marcha, ¿vale?",
+          "es": "Se entiende, pero «botellón», «de marcha» y «vale» son de España."
+        },
+        {
+          "text": "Cogemos un taxi y nos vamos de caravana.",
+          "es": "«Coger» aquí es follar: di «tomamos un taxi»."
+        }
+      ],
+      "register": "tu",
+      "situation": "salir",
+      "notes": "La noche cordobesa: previa, baile o boliche, lomitería."
+    },
+    {
+      "id": "cba-salir.qa.pinta",
+      "question": "Che, ¿pinta un fernando?",
+      "questionEs": "Oye, ¿te apetece un cubata de fernet?",
+      "accepted": [
+        {
+          "text": "¡De una! Yo pongo la coca.",
+          "es": "¡Venga! Yo pongo la Coca-Cola."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¡Venga, guay! Yo pongo la Coca-Cola.",
+          "es": "Se entiende, pero «venga» y «guay» suenan a Madrid."
+        },
+        {
+          "text": "No, gracias, no sé pintar.",
+          "es": "«Pintar» aquí es apetecer, no pintar cuadros."
+        }
+      ],
+      "register": "tu",
+      "situation": "salir",
+      "notes": "«¿Pinta…?» = ¿apetece…?",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-salir.qa.bailas",
+      "question": "¿Bailás?",
+      "questionEs": "¿Quieres bailar?",
+      "accepted": [
+        {
+          "text": "Dale, pero enseñame la ronda.",
+          "es": "Venga, pero enséñame a bailar en corro."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vale, pero enséñame tú.",
+          "es": "«Vale» y «tú» te delatan: «dale, enseñame vos»."
+        },
+        {
+          "text": "Venga, ¿bailáis vosotros también?",
+          "es": "«Vosotros» no existe aquí: «¿ustedes también bailan?»."
+        }
+      ],
+      "register": "tu",
+      "situation": "salir",
+      "notes": "Con vos: «enseñame», con el acento en «ñá»."
+    },
+    {
+      "id": "cba-salir.qa.anoche",
+      "question": "¿Qué tal anoche?",
+      "questionEs": "¿Qué tal ayer por la noche?",
+      "accepted": [
+        {
+          "text": "Re bien, bailamos hasta las seis.",
+          "es": "Genial, estuvimos bailando hasta las seis."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Genial, hemos bailado hasta las seis, tío.",
+          "es": "«Hemos bailado» y «tío» suenan a España: «bailamos»."
+        },
+        {
+          "text": "Bien, cogimos hasta las seis.",
+          "es": "«Coger» aquí es follar: acabas de contar otra cosa."
+        }
+      ],
+      "register": "tu",
+      "situation": "salir",
+      "notes": "Para la noche anterior, pretérito simple: «bailamos», «tomamos»."
+    },
+    {
+      "id": "cba-salir.qa.cancha",
+      "question": "¿Venís a la cancha el domingo?",
+      "questionEs": "¿Vienes al fútbol el domingo?",
+      "accepted": [
+        {
+          "text": "Dale, ¿a qué hora es el partido?",
+          "es": "Vale, ¿a qué hora es el partido?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vale, tío, ¿a qué hora es el partido?",
+          "es": "«Vale» y «tío» te delatan: «dale»."
+        },
+        {
+          "text": "Venga, ¿vosotros a qué hora vais?",
+          "es": "«Vosotros» no se usa: «¿ustedes a qué hora van?»."
+        }
+      ],
+      "register": "tu",
+      "situation": "salir",
+      "notes": "«La cancha» es el estadio.",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-salir.qa.chamuyo",
+      "question": "¿Y qué hacía la Yesi con ese chabón?",
+      "questionEs": "¿Y qué hacía Yesi con ese tío?",
+      "accepted": [
+        {
+          "text": "Nada, él le tiraba los perros, pero ella ni lo miró.",
+          "es": "Nada, él le tiraba los tejos, pero ella ni lo miró."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Él le tiraba los tejos, pero ella pasaba, tío.",
+          "es": "Se entiende, pero «tirar los tejos», «pasar» y «tío» son de España."
+        },
+        {
+          "text": "Nada, él la levantó en brazos.",
+          "es": "Literal: «levantar» aquí también es ligar, y no es lo que pasó."
+        }
+      ],
+      "register": "tu",
+      "situation": "salir",
+      "notes": "Ligar: tirar los perros, chamuyar, levantar."
+    },
+    {
+      "id": "cba-salir.qa.vaquita",
+      "question": "¿Cómo pagamos el fernet?",
+      "questionEs": "¿Cómo pagamos el fernet entre todos?",
+      "accepted": [
+        {
+          "text": "Hacemos una vaquita, ponemos todos.",
+          "es": "Hacemos un bote, ponemos todos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Hacemos un bote y ponemos todos, ¿vale?",
+          "es": "Se entiende, pero «bote» y «vale» son de España: «vaquita»."
+        },
+        {
+          "text": "Pagamos a escote, tío.",
+          "es": "«A escote» y «tío» suenan a España: aquí, «hacemos una vaquita»."
+        }
+      ],
+      "register": "neutral",
+      "situation": "salir",
+      "notes": "«Hacer una vaquita» = poner bote."
+    }
+  ],
+  "expressions": [
+    {
+      "id": "cba-salir.x.ta-mortal",
+      "text": "¡Ta mortal!",
+      "es": "¡Qué guay! / ¡Genial!",
+      "variety": "Cordobés popular",
+      "standard": "¡Está mortal!",
+      "notes": "Coloquial. «Ta» es «está», contracción popular; «mortal» = genial. Respuesta entusiasta a un plan: entiéndela, di «¡de una!»."
+    },
+    {
+      "id": "cba-salir.x.queris-un-fernet",
+      "text": "¿Querís un fernet?",
+      "es": "¿Quieres un fernet?",
+      "variety": "Cordobés popular",
+      "standard": "¿Querés un fernet?",
+      "notes": "Coloquial. Voseo popular cordobés en -ís («tenís», «querís»): de barrio y de cuarteto. En tu boca sonaría a burla: di «¿querés?»."
+    },
+    {
+      "id": "cba-salir.x.los-vamo",
+      "text": "¡Los vamo'!",
+      "es": "¡Nos vamos!",
+      "variety": "Cordobés popular",
+      "standard": "¡Nos vamos!",
+      "notes": "Coloquial. «Los» por «nos» y la -s perdida: habla popular. Entiéndelo al final de la noche; tú di «nos vamos»."
+    },
+    {
+      "id": "cba-salir.x.fulbo",
+      "text": "Un partidito de fulbo.",
+      "es": "Un partidillo de fútbol.",
+      "variety": "Cordobés popular",
+      "standard": "Un partidito de fútbol.",
+      "notes": "Coloquial. «Fulbo» (o «fóbal») es «fútbol» en boca popular; y el diminutivo es -ito, nunca -illo."
+    }
+  ]
+}

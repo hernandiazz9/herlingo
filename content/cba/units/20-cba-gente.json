@@ -1,0 +1,912 @@
+{
+  "id": "cba-gente",
+  "order": 20,
+  "title": "El Nico, la Cami y el negro",
+  "description": "La Cami, el Nico y el resto del barrio: el artículo ante el nombre, los apodos con «cara de…», pibes, chabones y chichises, y cómo se dice cómo es cada uno.",
+  "emoji": "🧑‍🤝‍🧑",
+  "situation": "gente",
+  "lessons": [
+    {
+      "id": "cba-gente.l.nombres",
+      "title": "La Cami, el Nico y los apodos",
+      "items": [
+        "cba-gente.la-cami",
+        "cba-gente.el-nico-viene",
+        "cba-gente.x.care-poio",
+        "cba-gente.x.care-lampazo",
+        "cba-gente.x.care-muerto",
+        "cba-gente.ese-guaso",
+        "cba-gente.sos-un-guaso",
+        "cba-gente.v.guaso",
+        "cba-gente.vos-sos-gallego",
+        "cba-gente.v.porteno",
+        "cba-gente.v.tano",
+        "cba-gente.v.gringo",
+        "cba-gente.v.serrano",
+        "cba-gente.qa.quien-es",
+        "cba-gente.qa.gallego"
+      ]
+    },
+    {
+      "id": "cba-gente.l.pibes",
+      "title": "Pibes, chabones y chichises",
+      "items": [
+        "cba-gente.vino-un-chabon",
+        "cba-gente.v.chabon",
+        "cba-gente.pibe-de-barrio",
+        "cba-gente.v.pibe",
+        "cba-gente.chichises-gratis",
+        "cba-gente.v.chichi",
+        "cba-gente.v.mina",
+        "cba-gente.v.tipo",
+        "cba-gente.v.vago",
+        "cba-gente.v.chango",
+        "cba-gente.v.nene",
+        "cba-gente.v.purrete",
+        "cba-gente.v.pendejo",
+        "cba-gente.mi-vieja",
+        "cba-gente.v.vieja",
+        "cba-gente.lo-de-mis-viejos",
+        "cba-gente.estoy-de-novio",
+        "cba-gente.es-un-chongo",
+        "cba-gente.v.chongo",
+        "cba-gente.v.jermu",
+        "cba-gente.v.festejante",
+        "cba-gente.v.pollerudo",
+        "cba-gente.qa.tus-viejos",
+        "cba-gente.qa.novia"
+      ]
+    },
+    {
+      "id": "cba-gente.l.como-es",
+      "title": "Piola, chanta, agrandado",
+      "items": [
+        "cba-gente.es-re-piola",
+        "cba-gente.que-copado",
+        "cba-gente.v.groso",
+        "cba-gente.v.picante",
+        "cba-gente.es-un-chanta",
+        "cba-gente.se-hizo-el-vivo",
+        "cba-gente.v.gil",
+        "cba-gente.v.otario",
+        "cba-gente.esta-re-agrandado",
+        "cba-gente.v.carteludo",
+        "cba-gente.v.humiento",
+        "cba-gente.v.cheto",
+        "cba-gente.v.concheto",
+        "cba-gente.v.tincho",
+        "cba-gente.v.milipili",
+        "cba-gente.que-denso",
+        "cba-gente.v.chusma",
+        "cba-gente.v.jeton",
+        "cba-gente.v.tumbado",
+        "cba-gente.no-te-juntes",
+        "cba-gente.buena-onda",
+        "cba-gente.qa.el-chabon",
+        "cba-gente.qa.malondon"
+      ]
+    },
+    {
+      "id": "cba-gente.l.barrio",
+      "title": "El barrio y la cancha",
+      "items": [
+        "cba-gente.hincha-de-belgrano",
+        "cba-gente.v.pirata",
+        "cba-gente.v.tallarin",
+        "cba-gente.v.gloria",
+        "cba-gente.te-lo-cuida-el-naranjita",
+        "cba-gente.v.trapito",
+        "cba-gente.viene-la-cana",
+        "cba-gente.v.boton",
+        "cba-gente.no-seas-ortiva",
+        "cba-gente.se-hace-el-sota",
+        "cba-gente.le-faltan-cinco",
+        "cba-gente.no-le-des-bola",
+        "cba-gente.qa.hincha"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "cba-gente.la-cami",
+      "text": "Esta es la Cami, mi novia.",
+      "es": "Esta es Cami, mi novia.",
+      "notes": "En Córdoba se pone artículo ante el nombre (la Cami, el Nico, la Yesi) y es normal y cariñoso; en España suena a pueblo o a catalán.",
+      "explanation": "Al presentar a alguien. Di «la Cami» sin pausa, como una sola palabra.",
+      "register": "tu",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.el-nico-viene",
+      "text": "El Nico viene más tarde.",
+      "es": "Nico viene más tarde.",
+      "notes": "Artículo + nombre, también con hombres: «el Nico», «el Rodolfo». Sin artículo suena distante.",
+      "explanation": "Cuando hablas de alguien que todos conocen. «Viene» con la e bien abierta.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.ese-guaso",
+      "text": "Ese guaso me cayó bien.",
+      "es": "Ese tío me ha caído bien.",
+      "notes": "Coloquial. «Guaso» es «tío, tipo» en cordobés; y pretérito simple: «me cayó», no «me ha caído».",
+      "explanation": "Hablando de alguien que acabas de conocer. «Guaso» con la s suave, nunca con z.",
+      "register": "neutral",
+      "situation": "gente",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-gente.sos-un-guaso",
+      "text": "¡Sos un guaso!",
+      "es": "¡Qué bruto eres!",
+      "notes": "Coloquial. Dicho a alguien, «guaso» es «bruto, tosco»; con risa es cariñoso, con mala cara es una crítica.",
+      "explanation": "Cuando un amigo hace algo poco fino. Ríete al decirlo, que se note que es en broma.",
+      "register": "tu",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.vino-un-chabon",
+      "text": "Vino un chabón re raro.",
+      "es": "Ha venido un tío rarísimo.",
+      "notes": "Coloquial. «Chabón» es «tío, pavo»; «re» intensifica como «muy» o el «mazo» madrileño.",
+      "explanation": "Para contar algo de alguien que no conoces. Acento en cha-BÓN.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.pibe-de-barrio",
+      "text": "Es un pibe de barrio.",
+      "es": "Es un chaval de barrio.",
+      "notes": "Coloquial. «Pibe/piba» es «chaval/a»; lo usa todo el mundo, sin matiz negativo.",
+      "explanation": "Hablando de un chico joven. «Pibe» con la b suave, casi «pi-be».",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.chichises-gratis",
+      "text": "Hoy las chichises entran gratis al baile.",
+      "es": "Hoy las chicas entran gratis al concierto de cuarteto.",
+      "notes": "Coloquial. «Chichí» (plural «chichises») es chica joven de Córdoba capital; muy de la noche y del cuarteto.",
+      "explanation": "Lo oirás en anuncios de bailes y entre amigos. «Chi-chí», acento al final.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.mi-vieja",
+      "text": "Mi vieja no me dejó salir.",
+      "es": "Mi madre no me ha dejado salir.",
+      "notes": "Coloquial. «Mi vieja / mi viejo» es «mi madre / mi padre», con cariño; no es nada despectivo.",
+      "explanation": "Hablando de tus padres con amigos. Pretérito simple: «no me dejó».",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.lo-de-mis-viejos",
+      "text": "Voy a lo de mis viejos.",
+      "es": "Voy a casa de mis padres.",
+      "notes": "Coloquial. «Los viejos» son los padres, y «a lo de» es «a casa de»: «en lo del Nico» = en casa de Nico.",
+      "explanation": "Cuando dices adónde vas. «A lo de» va pegado: «alode».",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.estoy-de-novio",
+      "text": "Estoy de novio.",
+      "es": "Tengo pareja. / Salgo con alguien.",
+      "notes": "«Estar de novio/a» = tener pareja estable, aunque viváis juntos; «novio» aquí no implica boda.",
+      "explanation": "Si te preguntan si estás soltero. «Novio» tal cual, sin «mi chica» ni «mi churri».",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.es-un-chongo",
+      "text": "No es mi novio, es un chongo.",
+      "es": "No es mi novio, es un rollo.",
+      "notes": "Coloquial. «Chongo/chonga» es un ligue sin compromiso; ojo, no presentes así a tu pareja.",
+      "explanation": "Entre amigos, hablando de ligues. Acento en CHON-go.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.es-re-piola",
+      "text": "El profe es re piola.",
+      "es": "El profe es muy majo.",
+      "notes": "Coloquial. «Piola» es majo, enrollado; también listo, que sabe moverse.",
+      "explanation": "Para hablar bien de alguien. «Re piola» va pegado: «re-pio-la».",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.que-copado",
+      "text": "¡Qué copado el lugar, che!",
+      "es": "¡Qué sitio más chulo, tío!",
+      "notes": "Coloquial. «Copado» vale para gente (maja) y cosas (chulas, guais); muy argentino.",
+      "explanation": "Cuando algo te gusta. Acento en co-PA-do; «lugar» es el «sitio» de España.",
+      "register": "tu",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.es-un-chanta",
+      "text": "Es un chanta, nunca te devuelve nada.",
+      "es": "Es un caradura, nunca te devuelve nada.",
+      "notes": "Coloquial. «Chanta» es el jeta, el cuentista que no cumple; no es insulto grave.",
+      "explanation": "Para avisar de alguien poco fiable. «Chanta» con la ch de «chocolate».",
+      "register": "tu",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.se-hizo-el-vivo",
+      "text": "Se hizo el vivo y se coló.",
+      "es": "Se hizo el listillo y se coló.",
+      "notes": "Coloquial. «Vivo» es el listillo, el aprovechado; «hacerse el vivo» = pasarse de listo.",
+      "explanation": "Cuando alguien se aprovecha en una cola o un trato. Pretérito: «se hizo», «se coló».",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.esta-re-agrandado",
+      "text": "Está re agrandado desde que ganó.",
+      "es": "Está flipadísimo desde que ganó.",
+      "notes": "Coloquial. «Agrandado» es creído, subido; «re» lo refuerza.",
+      "explanation": "Hablando de alguien que se lo tiene creído. Acento en a-gran-DA-do.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.que-denso",
+      "text": "¡Qué denso que es!",
+      "es": "¡Qué pesado es!",
+      "notes": "Coloquial. «Denso» o «pesado» es el plasta que no para; fíjate en el «que» repetido, muy argentino.",
+      "explanation": "Para quejarte de alguien insistente. Alarga la e: «¡qué deen-so!».",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.no-te-juntes",
+      "text": "No te juntés con ese, es un malondón.",
+      "es": "No te juntes con ese, que es un borde.",
+      "notes": "Coloquial. «Malondón» (de «mala onda») es cordobés: borde, con mala leche. «Juntarse» = quedar, ir con alguien.",
+      "explanation": "Para avisar a un amigo. Con vos el acento cae en jun-TÉS.",
+      "register": "tu",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.buena-onda",
+      "text": "Es re buena onda.",
+      "es": "Es muy buen rollo. / Es muy majo.",
+      "notes": "Coloquial. «Buena onda» = buen rollo, majo; «mala onda» = mal rollo, borde.",
+      "explanation": "Para recomendar a alguien. «Onda» con la o bien redonda.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.hincha-de-belgrano",
+      "text": "Soy hincha de Belgrano.",
+      "es": "Soy del Belgrano. / Soy aficionado del Belgrano.",
+      "notes": "«Hincha» es el aficionado; en Córdoba se es de Belgrano (los piratas), de Talleres (la T) o de Instituto (la Gloria).",
+      "explanation": "Cuando te preguntan de qué equipo eres. Mejor no burlarte del equipo del otro.",
+      "register": "neutral",
+      "situation": "gente",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-gente.vos-sos-gallego",
+      "text": "¿Vos sos gallego? Se te nota.",
+      "es": "¿Eres español? Se te nota.",
+      "notes": "Coloquial, no ofensivo. «Gallego» es cualquier español, aunque seas de Madrid; no te lo tomes a mal.",
+      "explanation": "Te lo dirán al oírte la z. Sonríe y contesta: «Sí, de Madrid».",
+      "register": "tu",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.te-lo-cuida-el-naranjita",
+      "text": "Dejalo ahí, te lo cuida el naranjita.",
+      "es": "Déjalo ahí, te lo vigila el gorrilla.",
+      "notes": "El «naranjita» es el aparcacoches del chaleco naranja, muy cordobés; se le da una propina.",
+      "explanation": "Al aparcar en el centro. «Dejalo» con acento en DE, sin tilde en Argentina.",
+      "register": "tu",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.viene-la-cana",
+      "text": "Cuidado, que viene la cana.",
+      "es": "Cuidado, que viene la poli.",
+      "notes": "Coloquial. «La cana» es la policía (también «la yuta», «la poli»); «un cana» es un policía.",
+      "explanation": "Lo oirás en la calle o en el fútbol. «Cana» con a abierta.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.no-seas-ortiva",
+      "text": "No seas ortiva, vení.",
+      "es": "No seas aguafiestas, ven.",
+      "notes": "Coloquial. «Ortiva» es el aguafiestas o el chivato; se dice en broma a quien no quiere venir.",
+      "explanation": "Para convencer a un amigo. Imperativo con vos: «vení», acento en NÍ.",
+      "register": "tu",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.se-hace-el-sota",
+      "text": "Se hace el sota.",
+      "es": "Se hace el sueco.",
+      "notes": "Coloquial. «Hacerse el sota» = hacerse el sueco, fingir que no se entera.",
+      "explanation": "Cuando alguien finge no oírte. «Sota» como la carta de la baraja.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.le-faltan-cinco",
+      "text": "A ese le faltan cinco para el peso.",
+      "es": "A ese le falta un tornillo.",
+      "literal": "Le faltan cinco centavos para llegar a un peso.",
+      "notes": "Coloquial. Literal «le faltan cinco centavos para el peso»: no está del todo bien de la cabeza. En la calle: «pa'l peso».",
+      "explanation": "En broma, de alguien excéntrico. No lo digas delante del aludido.",
+      "register": "neutral",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.no-le-des-bola",
+      "text": "No le des bola.",
+      "es": "No le hagas caso.",
+      "notes": "Coloquial. «Dar bola» = hacer caso, prestar atención; «no me da bola» = pasa de mí.",
+      "explanation": "Para calmar a un amigo al que alguien molesta. Voseo en subjuntivo: «des» o «dés».",
+      "register": "tu",
+      "situation": "gente"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cba-gente.v.guaso",
+      "word": "guaso",
+      "article": "el",
+      "gender": "m",
+      "es": "el tío, el tipo; el bruto",
+      "notes": "Coloquial. Cordobés; femenino «guasa».",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.chichi",
+      "word": "chichí",
+      "article": "la",
+      "gender": "f",
+      "plural": "chichises",
+      "es": "la chica, la chavala (cordobesa)",
+      "notes": "Coloquial. Chica joven de Córdoba capital.",
+      "situation": "gente",
+      "image": "fluent:woman"
+    },
+    {
+      "id": "cba-gente.v.pibe",
+      "word": "pibe",
+      "article": "el",
+      "gender": "m",
+      "plural": "pibes",
+      "es": "el chaval, el chico",
+      "notes": "Coloquial. Femenino «piba».",
+      "situation": "gente",
+      "image": "fluent:boy"
+    },
+    {
+      "id": "cba-gente.v.chabon",
+      "word": "chabón",
+      "article": "el",
+      "gender": "m",
+      "plural": "chabones",
+      "es": "el tío, el pavo",
+      "notes": "Coloquial. Femenino «chabona».",
+      "situation": "gente",
+      "image": "fluent:man"
+    },
+    {
+      "id": "cba-gente.v.mina",
+      "word": "mina",
+      "article": "la",
+      "gender": "f",
+      "plural": "minas",
+      "es": "la tía, la chica",
+      "notes": "Coloquial. Muy común, pero puede sonar machista; mejor «chica» si hablas de alguien delante de ella.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.tipo",
+      "word": "tipo",
+      "article": "el",
+      "gender": "m",
+      "es": "el tío, el tipo",
+      "notes": "Coloquial. «Un tipo re copado»; también «tipo ocho» = sobre las ocho.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.vago",
+      "word": "vago",
+      "article": "el",
+      "gender": "m",
+      "es": "el tío, el tipo (no por perezoso)",
+      "notes": "Coloquial. En Córdoba «el vago» o «la vaga» es simplemente una persona; también significa vago, como en España.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.chango",
+      "word": "chango",
+      "article": "el",
+      "gender": "m",
+      "es": "el chico, el chaval (en el norte)",
+      "notes": "Coloquial. Norte de Córdoba y el noroeste argentino.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.vieja",
+      "word": "vieja",
+      "article": "la",
+      "gender": "f",
+      "es": "la madre (cariñoso)",
+      "notes": "Coloquial. «Mi vieja»; «mi viejo» = mi padre.",
+      "situation": "gente",
+      "image": "fluent:old-woman"
+    },
+    {
+      "id": "cba-gente.v.jermu",
+      "word": "jermu",
+      "article": "la",
+      "gender": "f",
+      "es": "la parienta, la mujer",
+      "notes": "Coloquial. Lunfardo al revés de «mujer».",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.chongo",
+      "word": "chongo",
+      "article": "el",
+      "gender": "m",
+      "es": "el rollo, el ligue",
+      "notes": "Coloquial. Sin compromiso; femenino «chonga».",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.festejante",
+      "word": "festejante",
+      "article": "el",
+      "gender": "mf",
+      "es": "el pretendiente",
+      "notes": "Coloquial. «La Mari tiene un festejante».",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.pollerudo",
+      "word": "pollerudo",
+      "article": "el",
+      "gender": "m",
+      "es": "el calzonazos",
+      "notes": "Coloquial. De «pollera» (falda): el que hace lo que dice la novia.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.cheto",
+      "word": "cheto",
+      "article": "el",
+      "gender": "m",
+      "es": "el pijo",
+      "notes": "Coloquial. ¡Nunca digas «pijo»! Aquí «pija» es el pene: di «cheto».",
+      "situation": "gente",
+      "image": "fluent:smiling-face-with-sunglasses"
+    },
+    {
+      "id": "cba-gente.v.concheto",
+      "word": "concheto",
+      "article": "el",
+      "gender": "m",
+      "es": "el pijo de toda la vida",
+      "notes": "Coloquial. Como «cheto», algo más fuerte.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.tincho",
+      "word": "tincho",
+      "article": "el",
+      "gender": "m",
+      "es": "el pijo de rugby, el cayetano",
+      "notes": "Coloquial y reciente.",
+      "situation": "gente",
+      "image": "fluent:rugby-football"
+    },
+    {
+      "id": "cba-gente.v.milipili",
+      "word": "milipili",
+      "article": "la",
+      "gender": "f",
+      "es": "la pija superficial, la cayetana",
+      "notes": "Coloquial y reciente.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.humiento",
+      "word": "humiento",
+      "article": "el",
+      "gender": "m",
+      "es": "el creído, el chulito (del baile)",
+      "notes": "Coloquial. Cordobés, del ambiente del cuarteto.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.carteludo",
+      "word": "carteludo",
+      "article": "el",
+      "gender": "m",
+      "es": "el fardón, el chulo",
+      "notes": "Coloquial. Cordobés; en positivo, alguien con fama.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.gil",
+      "word": "gil",
+      "article": "el",
+      "gender": "m",
+      "es": "el pringado, el primo",
+      "notes": "Coloquial. «No seas gil»: no seas tonto, que te engañan.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.otario",
+      "word": "otario",
+      "article": "el",
+      "gender": "m",
+      "es": "el pardillo",
+      "notes": "Coloquial. El ingenuo al que se la cuelan.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.groso",
+      "word": "groso",
+      "article": "el",
+      "gender": "m",
+      "es": "el crack, la figura",
+      "notes": "Coloquial. «Es un groso»: alguien muy bueno o importante.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.picante",
+      "word": "picante",
+      "article": "el",
+      "gender": "mf",
+      "es": "el pillo, el travieso",
+      "notes": "Coloquial. De una cosa: arriesgada, chunga.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.jeton",
+      "word": "jetón",
+      "article": "el",
+      "gender": "m",
+      "es": "el bocazas",
+      "notes": "Coloquial. Cordobés; ojo, en España «jeta» es el caradura.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.tumbado",
+      "word": "tumbado",
+      "article": "el",
+      "gender": "m",
+      "es": "el empanado, el despistado",
+      "notes": "Coloquial. «¡Qué tumbado que sos!»: no es que esté acostado.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.chusma",
+      "word": "chusma",
+      "article": "el",
+      "gender": "mf",
+      "es": "el cotilla",
+      "notes": "Coloquial. «La vecina es re chusma»; en España «chusma» es gentuza, aquí es cotilla.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.pirata",
+      "word": "pirata",
+      "article": "el",
+      "gender": "mf",
+      "es": "el hincha del Belgrano",
+      "notes": "Coloquial. Los de Belgrano, de barrio Alberdi.",
+      "situation": "gente",
+      "image": "fluent:pirate-flag"
+    },
+    {
+      "id": "cba-gente.v.tallarin",
+      "word": "tallarín",
+      "article": "el",
+      "gender": "m",
+      "es": "el hincha de Talleres",
+      "notes": "Coloquial. También «la T» o los «matadores».",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.gloria",
+      "word": "Gloria",
+      "article": "la",
+      "gender": "f",
+      "es": "el Instituto (club de Alta Córdoba)",
+      "notes": "«Hoy juega la Gloria»: el tercer club grande de la ciudad.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.porteno",
+      "word": "porteño",
+      "article": "el",
+      "gender": "m",
+      "es": "el de Buenos Aires (capital)",
+      "notes": "Los cordobeses se ríen de su «sh» y los porteños imitan la tonada: rivalidad de broma.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.tano",
+      "word": "tano",
+      "article": "el",
+      "gender": "m",
+      "es": "el italiano",
+      "notes": "Coloquial. Italiano o descendiente de italianos.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.gringo",
+      "word": "gringo",
+      "article": "el",
+      "gender": "m",
+      "es": "el colono de origen italiano",
+      "notes": "Coloquial. En el este de Córdoba (la pampa gringa); también el extranjero rubio.",
+      "situation": "gente",
+      "image": "fluent:man-farmer"
+    },
+    {
+      "id": "cba-gente.v.serrano",
+      "word": "serrano",
+      "article": "el",
+      "gender": "m",
+      "es": "el de las sierras",
+      "notes": "De las sierras de Córdoba: Punilla, Traslasierra.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.trapito",
+      "word": "trapito",
+      "article": "el",
+      "gender": "m",
+      "es": "el limpiacristales del semáforo",
+      "notes": "El que limpia el parabrisas o vigila coches por una propina.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.boton",
+      "word": "botón",
+      "article": "el",
+      "gender": "m",
+      "es": "el chivato",
+      "notes": "Coloquial. «No seas botón»: no te chives.",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.nene",
+      "word": "nene",
+      "article": "el",
+      "gender": "m",
+      "es": "el niño, el crío",
+      "notes": "«El nene está en el jardín» (en la guardería).",
+      "situation": "gente",
+      "image": "fluent:child"
+    },
+    {
+      "id": "cba-gente.v.purrete",
+      "word": "purrete",
+      "article": "el",
+      "gender": "m",
+      "es": "el renacuajo, el crío",
+      "notes": "Coloquial. «Cuando era purrete…».",
+      "situation": "gente"
+    },
+    {
+      "id": "cba-gente.v.pendejo",
+      "word": "pendejo",
+      "article": "el",
+      "gender": "m",
+      "es": "el crío, el adolescente",
+      "notes": "Coloquial. Aquí es un chaval, sin más; en México es un insulto fuerte.",
+      "situation": "gente"
+    }
+  ],
+  "qa": [
+    {
+      "id": "cba-gente.qa.quien-es",
+      "question": "¿Y ese quién es?",
+      "questionEs": "¿Y ese quién es? (señalando a alguien)",
+      "accepted": [
+        {
+          "text": "Es el Nico, el primo de la Cami.",
+          "es": "Es Nico, el primo de Cami."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Es un tío de la Cami.",
+          "es": "Aquí «tío» es el hermano de tu padre: entenderán que es su tío de verdad."
+        },
+        {
+          "text": "Es Nico, el primo de Camila.",
+          "es": "Se entiende, pero sin artículo y con el nombre entero suena distante y muy de España."
+        }
+      ],
+      "register": "neutral",
+      "situation": "gente",
+      "notes": "Artículo ante el nombre y nada de «tío» como vocativo."
+    },
+    {
+      "id": "cba-gente.qa.tus-viejos",
+      "question": "¿Y tus viejos qué dicen de que estés acá?",
+      "questionEs": "¿Y tus padres qué dicen de que estés aquí?",
+      "accepted": [
+        {
+          "text": "Mis viejos están contentos, vienen en marzo.",
+          "es": "Mis padres están contentos, vienen en marzo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mis abuelos están bien, gracias.",
+          "es": "«Viejos» aquí son los padres, no los abuelos."
+        },
+        {
+          "text": "Mis padres flipan, vienen en marzo.",
+          "es": "Se entiende, pero «flipan» es muy de España."
+        }
+      ],
+      "register": "tu",
+      "situation": "gente",
+      "notes": "«Mis viejos» = mis padres, con cariño."
+    },
+    {
+      "id": "cba-gente.qa.novia",
+      "question": "¿La Cami es tu novia?",
+      "questionEs": "¿Cami es tu novia?",
+      "accepted": [
+        {
+          "text": "Sí, estamos de novios hace dos años.",
+          "es": "Sí, llevamos dos años juntos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, es mi chongo.",
+          "es": "«Chongo» es un rollo sin compromiso: a la Cami no le haría gracia."
+        },
+        {
+          "text": "Sí, es mi chica, tío.",
+          "es": "«Mi chica» y «tío» suenan a España: aquí «es mi novia»."
+        }
+      ],
+      "register": "tu",
+      "situation": "gente",
+      "notes": "«Estar de novios» = ser pareja estable.",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-gente.qa.el-chabon",
+      "question": "¿Qué tal el chabón que conociste ayer?",
+      "questionEs": "¿Qué tal el tío que conociste ayer?",
+      "accepted": [
+        {
+          "text": "Re piola, me cayó re bien.",
+          "es": "Muy majo, me cayó genial."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Es un chanta, me cayó re bien.",
+          "es": "Contradicción: «chanta» es un caradura, no un elogio."
+        },
+        {
+          "text": "Muy majo, me ha caído genial, tío.",
+          "es": "Se entiende, pero «majo», «me ha caído» y «tío» suenan a Madrid."
+        }
+      ],
+      "register": "tu",
+      "situation": "gente",
+      "notes": "«Piola», «copado» y «buena onda» son los elogios de cada día."
+    },
+    {
+      "id": "cba-gente.qa.hincha",
+      "question": "¿Sos hincha de Belgrano o de Talleres?",
+      "questionEs": "¿Eres del Belgrano o del Talleres?",
+      "accepted": [
+        {
+          "text": "Soy de Belgrano, como el Nico.",
+          "es": "Soy del Belgrano, como Nico."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Soy tallarín, como el Nico.",
+          "es": "«Tallarín» es de Talleres, y el Nico es pirata, de Belgrano."
+        },
+        {
+          "text": "Soy del Atleti, tío.",
+          "es": "Ni es la pregunta ni se dice «tío»: elige un club cordobés."
+        }
+      ],
+      "register": "tu",
+      "situation": "gente",
+      "notes": "Belgrano (los piratas) contra Talleres (la T): pregunta segura, burla peligrosa.",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-gente.qa.gallego",
+      "question": "Che, ¿sos gallego vos?",
+      "questionEs": "Oye, ¿eres español?",
+      "accepted": [
+        {
+          "text": "Sí, gallego, pero de Madrid.",
+          "es": "Sí, español, de Madrid."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, no soy gallego, soy de Madrid.",
+          "es": "Aquí «gallego» es cualquier español: sí lo eres."
+        },
+        {
+          "text": "No, soy madrileño, ¿y tú de dónde eres?",
+          "es": "El «tú» y el «eres» te delatan: «¿y vos de dónde sos?»."
+        }
+      ],
+      "register": "tu",
+      "situation": "gente",
+      "notes": "«Gallego» = español, sin ofender."
+    },
+    {
+      "id": "cba-gente.qa.malondon",
+      "question": "¿Por qué no invitaste al vecino?",
+      "questionEs": "¿Por qué no has invitado al vecino?",
+      "accepted": [
+        {
+          "text": "Porque es re malondón, siempre está enojado.",
+          "es": "Porque es un borde, siempre está enfadado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Porque es un borde, tío, siempre está enfadado.",
+          "es": "Se entiende, pero «borde» y «enfadado» y «tío» son de España: «malondón», «enojado»."
+        },
+        {
+          "text": "Porque es re piola, siempre está enojado.",
+          "es": "Contradicción: «piola» es majo."
+        }
+      ],
+      "register": "tu",
+      "situation": "gente",
+      "notes": "«Enojarse», no «enfadarse»; «malondón», no «borde»."
+    }
+  ],
+  "expressions": [
+    {
+      "id": "cba-gente.x.care-poio",
+      "text": "Car'e poio",
+      "es": "Cara de pollo (apodo)",
+      "variety": "Cordobés popular",
+      "standard": "Cara de pollo",
+      "notes": "Coloquial. Los apodos «car'e…» (cara de…) pueden ser crueles o cariñosos; la grafía imita la ll popular («poio»). Entiéndelos, no los pongas tú."
+    },
+    {
+      "id": "cba-gente.x.care-lampazo",
+      "text": "Car'e lampazo",
+      "es": "Cara de fregona (apodo)",
+      "variety": "Cordobés popular",
+      "standard": "Cara de lampazo",
+      "notes": "Coloquial. «Lampazo» es la fregona; apodo burlón del barrio, como «car'e balde» o «car'e naipe»."
+    },
+    {
+      "id": "cba-gente.x.care-muerto",
+      "text": "Car'e muerto",
+      "es": "Cara de muerto (apodo para el serio o el pálido)",
+      "variety": "Cordobés popular",
+      "standard": "Cara de muerto",
+      "notes": "Coloquial. Apodo para el que nunca se ríe; entre amigos es broma, dicho por un recién llegado molesta."
+    }
+  ]
+}
