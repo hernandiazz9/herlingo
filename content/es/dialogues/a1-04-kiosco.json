@@ -1,0 +1,47 @@
+{
+  "id": "dlg.es-a1-kiosco",
+  "title": { "ru": "Киоск дона Хулио" },
+  "description": { "ru": "С Мартином в киоске: пополняешь карту SUBE, берёшь альфахор и платишь переводом с телефона." },
+  "situation": "compras",
+  "unit": "es-a1-comprar",
+  "order": 4,
+  "register": "tu",
+  "avatars": { "Don Julio": "fluent:old-man", "Sofi": "fluent:woman-blonde-hair", "Martín": "fluent:man-beard" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Don Julio", "text": "¡Hola, pibe! ¿Qué andás buscando?", "ru": "Привет, парень! Что ищешь?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": { "ru": "Попроси пополнить тебе карту SUBE." },
+      "options": [
+        { "text": "Hola. ¿Me cargás la SUBE, por favor?", "ru": "Привет. Пополнишь мне SUBE, пожалуйста?", "verdict": "correct", "feedback": { "ru": "Отлично! «Cargar la SUBE» — пополнить проездную карту." } },
+        { "text": "La SUBE.", "ru": "SUBE.", "verdict": "acceptable", "feedback": { "ru": "Дон Хулио поймёт, но «¿Me cargás…?» звучит приятнее." } },
+        { "text": "Hola. ¿Me cargás el SUBE, por favor?", "ru": "Привет. Пополнишь мне SUBE, пожалуйста?", "verdict": "wrong", "feedback": { "ru": "SUBE — это «la tarjeta SUBE», поэтому женский род: «la SUBE»." } }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Don Julio", "text": "Dale. ¿Cuánto le cargo?", "ru": "Давай. Сколько положить?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": { "ru": "Скажи: пять тысяч песо. И ещё альфахор." },
+      "options": [
+        { "text": "Cinco mil pesos. Y un alfajor, por favor.", "ru": "Пять тысяч песо. И альфахор, пожалуйста.", "verdict": "correct", "feedback": { "ru": "Супер! Альфахор — печенье с дульсе де лече, без него в Аргентине никак." } },
+        { "text": "Cinco mil.", "ru": "Пять тысяч.", "verdict": "acceptable", "feedback": { "ru": "Нормально, но альфахор ты забыл!" } },
+        { "text": "Cinco miles pesos. Y un alfajor, por favor.", "ru": "Пять тысяч песо. И альфахор, пожалуйста.", "verdict": "wrong", "feedback": { "ru": "«Mil» не меняется: «cinco mil», хоть по-русски и «пять тысяч»." } }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Don Julio", "text": "Listo. Son seis mil quinientos. ¿Tenés efectivo?", "ru": "Готово. С тебя шесть тысяч пятьсот. Наличные есть?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": { "ru": "Скажи, что наличных нет, и спроси, можно ли заплатить переводом." },
+      "options": [
+        { "text": "No tengo efectivo. ¿Te pago por transferencia?", "ru": "Наличных нет. Переведу тебе, ок?", "verdict": "correct", "feedback": { "ru": "Супер! В Аргентине переводом платят даже за жвачку." } },
+        { "text": "¿Transferencia?", "ru": "Переводом?", "verdict": "acceptable", "feedback": { "ru": "Поймут, но целая фраза звучит лучше." } },
+        { "text": "No tengo efectivo. ¿Te pago por transferencia, vale?", "ru": "Наличных нет. Переведу тебе, ладно?", "verdict": "wrong", "feedback": { "ru": "«Vale» — словечко из Испании, в Аргентине так не говорят. Здесь говорят «dale»." } }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Sofi", "text": "¡Hola! Soy Sofi, la nieta. Escaneá este QR, es más fácil.", "ru": "Привет! Я Софи, внучка. Отсканируй этот QR-код, так проще.", "voice": "es-AR-ElenaNeural" },
+    { "id": "n5", "speaker": "native", "name": "Martín", "text": "¿Viste? Acá hasta el alfajor se paga con el celular.", "ru": "Видал? Тут даже альфахор оплачивают с телефона.", "voice": "es-AR-TomasNeural" }
+  ]
+}

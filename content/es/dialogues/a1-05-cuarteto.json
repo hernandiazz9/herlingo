@@ -1,0 +1,46 @@
+{
+  "id": "dlg.es-a1-cuarteto",
+  "title": { "ru": "Вечер квартето в Кордове" },
+  "description": { "ru": "Кордова: Флор и её кузен Нико зовут тебя танцевать квартето. Договариваетесь, во сколько и где встретиться." },
+  "situation": "planes",
+  "unit": "es-a1-planes",
+  "order": 5,
+  "register": "tu",
+  "avatars": { "Nico": "fluent:man-curly-hair", "Flor": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Nico", "text": "¡Ey, Iván! ¿Qué hacés? Soy Nico, el primo de Flor.", "ru": "Эй, Иван! Как оно? Я Нико, кузен Флор.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": { "ru": "Поздоровайся с Нико, ответь, что всё отлично, и спроси, как у него." },
+      "options": [
+        { "text": "¡Hola, Nico! Todo bien, ¿y vos?", "ru": "Привет, Нико! Всё отлично, а ты?", "verdict": "correct", "feedback": { "ru": "Отлично! В Кордове слышится «¿qué hacé'?» — «s» на конце глотают. Ты говори полностью: «¿qué hacés?»." } },
+        { "text": "Bien.", "ru": "Нормально.", "verdict": "acceptable", "feedback": { "ru": "Коротковато для знакомства. Добавь «¡Hola, Nico!» и «¿y vos?»." } },
+        { "text": "¡Hola, Nico! No hago nada.", "ru": "Привет, Нико! Ничего не делаю.", "verdict": "wrong", "feedback": { "ru": "«¿Qué hacés?» здесь значит «как дела?», а не «что делаешь?». Ответь «todo bien»." } }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Flor", "text": "Esta noche hay cuarteto en el centro. ¿Vamos a bailar?", "ru": "Сегодня вечером в центре квартето. Пойдём танцевать?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": { "ru": "Скажи, что тебе нравится квартето, но ты не умеешь танцевать." },
+      "options": [
+        { "text": "¡Me gusta el cuarteto! Pero no sé bailar.", "ru": "Мне нравится квартето! Но я не умею танцевать.", "verdict": "correct", "feedback": { "ru": "Честно! «Me gusta» работает как «мне нравится», а «no sé bailar» — «не умею танцевать»." } },
+        { "text": "¡Dale!", "ru": "Давай!", "verdict": "acceptable", "feedback": { "ru": "Смело! Но лучше заранее признаться, что танцевать ты не умеешь." } },
+        { "text": "¡Yo gusto el cuarteto! Pero no sé bailar.", "ru": "Я нравлюсь квартето! Но я не умею танцевать.", "verdict": "wrong", "feedback": { "ru": "«Gustar» — это «нравиться», не «любить»: «мне нравится» = «me gusta»." } }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Nico", "text": "¡Tranqui, acá nadie sabe! Bailamos todos juntos.", "ru": "Спокойно, тут никто не умеет! Танцуем все вместе.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": { "ru": "Спроси, во сколько вы встречаетесь." },
+      "options": [
+        { "text": "¿A qué hora nos vemos?", "ru": "Во сколько встречаемся?", "verdict": "correct", "feedback": { "ru": "Точно! «A» здесь как «в» в «во сколько»." } },
+        { "text": "¿Cuándo?", "ru": "Когда?", "verdict": "acceptable", "feedback": { "ru": "Сойдёт, но точнее спросить «¿a qué hora?»." } },
+        { "text": "¿Qué hora nos vemos?", "ru": "Который час встречаемся?", "verdict": "wrong", "feedback": { "ru": "Не забудь «a»: «¿a qué hora…?». А «¿qué hora es?» — это «который час?»." } }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Flor", "text": "A las once en la plaza. ¡Pero antes, fernet con coca en casa!", "ru": "В одиннадцать на площади. Но сначала — фернет с колой дома!", "voice": "es-AR-ElenaNeural" }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "dlg.es-a1-pasaje-carlos-paz",
+  "title": { "ru": "Билет до Карлос-Паса" },
+  "description": { "ru": "Автовокзал Кордовы: покупаешь билеты до Вилья-Карлос-Пас, а Флор следит, чтобы ты говорил сам." },
+  "situation": "transporte",
+  "unit": "es-a1-moverse",
+  "order": 2,
+  "register": "usted",
+  "avatars": { "Flor": "fluent:woman-curly-hair", "Boletero": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Flor", "text": "Mirá, Iván, esa es la boletería. ¡Pedí vos, así practicás!", "ru": "Смотри, Иван, вон касса. Проси сам — потренируешься!", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": { "ru": "Поздоровайся с кассиром и попроси билет до Карлос-Паса." },
+      "options": [
+        { "text": "Buen día. Un pasaje a Carlos Paz, por favor.", "ru": "Добрый день. Билет до Карлос-Паса, пожалуйста.", "verdict": "correct", "feedback": { "ru": "Отлично! «Pasaje» — билет на автобус или самолёт." } },
+        { "text": "Un pasaje, por favor.", "ru": "Билет, пожалуйста.", "verdict": "acceptable", "feedback": { "ru": "Поймут, но кассир всё равно спросит, куда: добавь «a Carlos Paz»." } },
+        { "text": "Buen día. Un billete a Carlos Paz, por favor.", "ru": "Добрый день. Купюру до Карлос-Паса, пожалуйста.", "verdict": "wrong", "feedback": { "ru": "В Аргентине «billete» — это купюра! Билет на автобус — «pasaje»." } }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Boletero", "text": "Buen día. ¿Ida sola o ida y vuelta?", "ru": "Добрый день. Только туда или туда и обратно?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": { "ru": "Попроси два билета туда и обратно." },
+      "options": [
+        { "text": "Dos pasajes de ida y vuelta, por favor.", "ru": "Два билета туда и обратно, пожалуйста.", "verdict": "correct", "feedback": { "ru": "Супер! После «dos» — множественное число: «dos pasajes»." } },
+        { "text": "Ida y vuelta.", "ru": "Туда и обратно.", "verdict": "acceptable", "feedback": { "ru": "Понятно, но кассир не знает, что вас двое: «dos pasajes»." } },
+        { "text": "Dos pasaje de ida y vuelta, por favor.", "ru": "Два билета туда и обратно, пожалуйста.", "verdict": "wrong", "feedback": { "ru": "Не как в русском «два билета»: в испанском после «dos» просто множественное — «dos pasajes»." } }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Boletero", "text": "Son veinte mil pesos. El próximo sale a las once y cuarto.", "ru": "Двадцать тысяч песо. Следующий отправляется в четверть двенадцатого.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": { "ru": "Вежливо (на «usted») спроси, где платформа." },
+      "options": [
+        { "text": "Disculpe, ¿dónde está la plataforma?", "ru": "Извините, где платформа?", "verdict": "correct", "feedback": { "ru": "Точно! «Disculpe» — вежливо, на «usted», а для места — «estar»: «¿dónde está…?»." } },
+        { "text": "¿Plataforma?", "ru": "Платформа?", "verdict": "acceptable", "feedback": { "ru": "По интонации поймут, но целый вопрос вежливее." } },
+        { "text": "Disculpe, ¿dónde es la plataforma?", "ru": "Извините, где платформа?", "verdict": "wrong", "feedback": { "ru": "Для места используй «estar», а не «ser»: «¿dónde está la plataforma?»." } }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Boletero", "text": "La plataforma cuarenta, a la derecha. ¡Buen viaje!", "ru": "Платформа сорок, направо. Счастливого пути!", "voice": "es-AR-TomasNeural" },
+    { "id": "n5", "speaker": "native", "name": "Flor", "text": "¡Muy bien, Iván! Ya sos casi cordobés. ¡Vamos, que mi abuela nos espera!", "ru": "Молодец, Иван! Ты уже почти кордовец. Пошли, бабушка ждёт!", "voice": "es-AR-ElenaNeural" }
+  ]
+}

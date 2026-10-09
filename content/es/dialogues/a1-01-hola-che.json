@@ -1,0 +1,56 @@
+{
+  "id": "dlg.es-a1-hola-che",
+  "title": { "ru": "Привет, че! Новые соседи" },
+  "description": { "ru": "Первый день в квартире в Палермо: знакомишься с Мартином и Флор, говоришь, откуда ты, и честно признаёшься, что не всё понимаешь." },
+  "situation": "presentarse",
+  "unit": "es-a1-hola",
+  "order": 1,
+  "register": "tu",
+  "avatars": { "Martín": "fluent:man-beard", "Flor": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Martín", "text": "¡Hola! Vos sos Iván, ¿no? Yo soy Martín.", "ru": "Привет! Ты Иван, да? Я Мартин.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": { "ru": "Поздоровайся, скажи, что тебя зовут Иван и что тебе очень приятно." },
+      "options": [
+        { "text": "¡Hola! Sí, me llamo Iván. ¡Mucho gusto!", "ru": "Привет! Да, меня зовут Иван. Очень приятно!", "verdict": "correct", "feedback": { "ru": "Отлично! «¡Mucho gusto!» — идеальная фраза для знакомства." } },
+        { "text": "Sí, soy Iván.", "ru": "Да, я Иван.", "verdict": "acceptable", "feedback": { "ru": "Понятно, но без «¡Hola!» звучит суховато для нового соседа." } },
+        { "text": "¡Hola! Sí, mi nombre Iván.", "ru": "Привет! Да, моё имя Иван.", "verdict": "wrong", "feedback": { "ru": "Не выкидывай глагол, как в русском «я — Иван»: «me llamo Iván» или «mi nombre es Iván»." } }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Flor", "text": "¡Hola, Iván! Yo soy Flor. ¿De dónde sos?", "ru": "Привет, Иван! Я Флор. Ты откуда?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": { "ru": "Скажи, что ты из России, из Екатеринбурга." },
+      "options": [
+        { "text": "Soy de Rusia, de Ekaterimburgo.", "ru": "Я из России, из Екатеринбурга.", "verdict": "correct", "feedback": { "ru": "Супер! Откуда ты — это всегда «ser»: «soy de…»." } },
+        { "text": "De Rusia.", "ru": "Из России.", "verdict": "acceptable", "feedback": { "ru": "Для разговора нормально, но целая фраза «Soy de Rusia» звучит увереннее." } },
+        { "text": "Estoy de Rusia, de Ekaterimburgo.", "ru": "Я из России, из Екатеринбурга.", "verdict": "wrong", "feedback": { "ru": "Происхождение — это «ser», а не «estar»: «soy de Rusia». «Estar» — где ты сейчас." } }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Flor", "text": "¡Qué lejos! Yo soy de Córdoba. ¿Y qué hacés? ¿Todo bien?", "ru": "Как далеко! А я из Кордовы. Ну как ты? Всё норм?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": { "ru": "Флор говорит быстро и нараспев. Скажи, что не понимаешь, и попроси говорить помедленнее." },
+      "options": [
+        { "text": "Perdón, no entiendo. Más despacio, por favor.", "ru": "Извини, не понимаю. Помедленнее, пожалуйста.", "verdict": "correct", "feedback": { "ru": "Идеально, так и учатся! Кордовцы растягивают слог перед ударным — это их «тонада»." } },
+        { "text": "¿Cómo?", "ru": "Что-что?", "verdict": "acceptable", "feedback": { "ru": "Сработает: «¿Cómo?» — это «что-что?». Но «más despacio» поможет больше." } },
+        { "text": "Perdón, no entiendo. ¿Usted podés hablar más despacio?", "ru": "Извини, не понимаю. Вы можешь говорить помедленнее?", "verdict": "wrong", "feedback": { "ru": "Не смешивай «usted» с формой «vos». Флор — твоя ровесница: «¿Podés hablar más despacio?»." } }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Martín", "text": "Tranqui, Iván. Dice: ¿cómo estás? ¡Los cordobeses hablan cantando!", "ru": "Спокойно, Иван. Она спрашивает, как ты. Кордовцы говорят, будто поют!", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l4",
+      "speaker": "learner",
+      "prompt": { "ru": "Ответь Флор, что всё хорошо, и спроси, как у неё дела." },
+      "options": [
+        { "text": "¡Todo bien! ¿Y vos?", "ru": "Всё отлично! А ты?", "verdict": "correct", "feedback": { "ru": "Ровно так говорят аргентинцы. «¿Y vos?» — «а ты?». Флор, кстати, спросила «¿qué hacé'?» — в Кордове «s» на конце проглатывают." } },
+        { "text": "Bien, gracias.", "ru": "Хорошо, спасибо.", "verdict": "acceptable", "feedback": { "ru": "Вежливо, но спроси и её: «¿Y vos?»." } },
+        { "text": "¡Soy bien! ¿Y vos?", "ru": "Я хороший! А ты?", "verdict": "wrong", "feedback": { "ru": "Самочувствие — это «estar»: «estoy bien». А проще всего — «todo bien»." } }
+      ]
+    }
+  ]
+}

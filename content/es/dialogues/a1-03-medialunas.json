@@ -1,0 +1,47 @@
+{
+  "id": "dlg.es-a1-medialunas",
+  "title": { "ru": "Кофе с медиалунами" },
+  "description": { "ru": "Завтрак с Мартином в кафе Буэнос-Айреса: кофе с молоком, медиалуны и счёт." },
+  "situation": "comida",
+  "unit": "es-a1-comer",
+  "order": 3,
+  "register": "tu",
+  "avatars": { "Moza": "fluent:woman-red-hair", "Martín": "fluent:man-beard" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Moza", "text": "¡Buen día, chicos! ¿Qué les traigo?", "ru": "Доброе утро, ребята! Что вам принести?", "voice": "es-AR-ElenaNeural" },
+    { "id": "n2", "speaker": "native", "name": "Martín", "text": "Para mí, un cortado. ¿Y vos, Iván?", "ru": "Мне кортадо. А тебе, Иван?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": { "ru": "Закажи кофе с молоком и две медиалуны." },
+      "options": [
+        { "text": "Un café con leche con dos medialunas, por favor.", "ru": "Кофе с молоком и две медиалуны, пожалуйста.", "verdict": "correct", "feedback": { "ru": "Классический аргентинский завтрак! Медиалуны — маленькие сладкие круассаны." } },
+        { "text": "Café con leche.", "ru": "Кофе с молоком.", "verdict": "acceptable", "feedback": { "ru": "Поймут, но лучше с «un» — и без медиалун завтрак не завтрак!" } },
+        { "text": "Una café con leche con dos medialunas, por favor.", "ru": "Кофе с молоком и две медиалуны, пожалуйста.", "verdict": "wrong", "feedback": { "ru": "«Café» — мужского рода: «un café». Запоминай слова сразу с артиклем." } }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Moza", "text": "¿Las medialunas de manteca o de grasa?", "ru": "Медиалуны на сливочном масле или на жиру?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": { "ru": "Ты понятия не имеешь, в чём разница. Скажи, что не знаешь, и спроси, что она советует." },
+      "options": [
+        { "text": "No sé. ¿Qué me recomendás?", "ru": "Не знаю. Что посоветуешь?", "verdict": "correct", "feedback": { "ru": "Отлично! «Recomendás» — форма «vos», ударение на последний слог." } },
+        { "text": "¿Cuál es mejor?", "ru": "Какие лучше?", "verdict": "acceptable", "feedback": { "ru": "Хороший вопрос, тоже сработает." } },
+        { "text": "No conozco. ¿Qué me recomendás?", "ru": "Не знаком. Что посоветуешь?", "verdict": "wrong", "feedback": { "ru": "«Не знаю» — это «no sé». «Conocer» — знать человека или место, и ему нужно дополнение." } }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Moza", "text": "¡De manteca! Son más dulces. Ya te las traigo.", "ru": "На сливочном! Они слаще. Сейчас принесу.", "voice": "es-AR-ElenaNeural" },
+    { "id": "n5", "speaker": "native", "name": "Martín", "text": "¡Qué ricas! Che, hoy pagás vos, ¿no? Es joda. Pedí la cuenta.", "ru": "Вкуснятина! Слушай, сегодня платишь ты, да? Шучу. Попроси счёт.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": { "ru": "Позови официантку и попроси счёт." },
+      "options": [
+        { "text": "Disculpá, ¿me traés la cuenta?", "ru": "Извини, принесёшь счёт?", "verdict": "correct", "feedback": { "ru": "Идеально: «disculpá» и «traés» — формы «vos», как говорят с молодой официанткой." } },
+        { "text": "¡La cuenta!", "ru": "Счёт!", "verdict": "acceptable", "feedback": { "ru": "Поймут, но без «por favor» резковато." } },
+        { "text": "Disculpá, ¿me traés el cuento?", "ru": "Извини, принесёшь сказку?", "verdict": "wrong", "feedback": { "ru": "«El cuento» — это сказка! Счёт — «la cuenta», женского рода." } }
+      ]
+    }
+  ]
+}

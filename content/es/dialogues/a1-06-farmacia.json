@@ -1,0 +1,47 @@
+{
+  "id": "dlg.es-a1-farmacia",
+  "title": { "ru": "В аптеке" },
+  "description": { "ru": "Болит горло и температура. Мартин ведёт тебя в аптеку, а ты объясняешься с фармацевтом на «usted»." },
+  "situation": "salud",
+  "unit": "es-a1-ayuda",
+  "order": 6,
+  "register": "usted",
+  "avatars": { "Martín": "fluent:man-beard", "Farmacéutica": "fluent:woman-health-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Martín", "text": "Che, Iván, estás re pálido. Vamos a la farmacia.", "ru": "Слушай, Иван, ты совсем бледный. Пойдём в аптеку.", "voice": "es-AR-TomasNeural" },
+    { "id": "n2", "speaker": "native", "name": "Farmacéutica", "text": "Buenas tardes. ¿En qué lo puedo ayudar?", "ru": "Добрый день. Чем могу вам помочь?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": { "ru": "Скажи, что у тебя болит горло и температура." },
+      "options": [
+        { "text": "Buenas tardes. Me duele la garganta y tengo fiebre.", "ru": "Добрый день. У меня болит горло и температура.", "verdict": "correct", "feedback": { "ru": "Отлично! «Me duele» — точь-в-точь «у меня болит»." } },
+        { "text": "La garganta y fiebre.", "ru": "Горло и температура.", "verdict": "acceptable", "feedback": { "ru": "Поймут, но полная фраза лучше: «me duele la garganta y tengo fiebre»." } },
+        { "text": "Buenas tardes. Me duelo la garganta y tengo fiebre.", "ru": "Добрый день. Я болю горлом, и у меня температура.", "verdict": "wrong", "feedback": { "ru": "Болит горло, а не ты: «me duele la garganta». Глагол согласуется с тем, что болит." } }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Farmacéutica", "text": "Le doy estas pastillas. Una cada ocho horas, con agua.", "ru": "Дам вам эти таблетки. По одной каждые восемь часов, с водой.", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": { "ru": "Ты боишься забыть. Вежливо (на «usted») попроси её это записать." },
+      "options": [
+        { "text": "¿Me lo puede escribir, por favor?", "ru": "Можете мне это записать, пожалуйста?", "verdict": "correct", "feedback": { "ru": "Отлично: «¿me lo puede…?» — вежливая форма на «usted»." } },
+        { "text": "Escríbalo, por favor.", "ru": "Запишите, пожалуйста.", "verdict": "acceptable", "feedback": { "ru": "Грамматически верно, но звучит как приказ. Вопрос «¿me lo puede escribir?» мягче." } },
+        { "text": "¿Me lo podés escribir, por favor?", "ru": "Можешь мне это записать, пожалуйста?", "verdict": "wrong", "feedback": { "ru": "С незнакомым фармацевтом лучше «usted»: «¿me lo puede escribir?». «Podés» — для друзей." } }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Farmacéutica", "text": "Claro, acá tiene. Tome mucha agua. ¡Que se mejore!", "ru": "Конечно, вот. Пейте много воды. Поправляйтесь!", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": { "ru": "Поблагодари и попрощайся." },
+      "options": [
+        { "text": "¡Muchas gracias! ¡Hasta luego!", "ru": "Большое спасибо! До свидания!", "verdict": "correct", "feedback": { "ru": "Идеально! Вежливо и тепло." } },
+        { "text": "Gracias.", "ru": "Спасибо.", "verdict": "acceptable", "feedback": { "ru": "Верно, а с «¡Hasta luego!» вышло бы теплее." } },
+        { "text": "¡Gracias, igualmente!", "ru": "Спасибо, и вам того же!", "verdict": "wrong", "feedback": { "ru": "«Igualmente» — «и вам того же», а болеешь тут ты. Хватит «¡Muchas gracias!»." } }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Martín", "text": "Dale, vamos a casa. Hoy el mate lo ceba yo.", "ru": "Давай, пошли домой. Сегодня мате наливаю я.", "voice": "es-AR-TomasNeural" }
+  ]
+}
