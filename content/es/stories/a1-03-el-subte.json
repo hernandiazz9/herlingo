@@ -1,0 +1,220 @@
+{
+  "id": "story.es-a1-el-subte",
+  "order": 3,
+  "title": "El subte",
+  "titleRu": "Метро",
+  "description": {
+    "ru": "На SUBE ноль, киоско закрыт, добрая сеньора и автобус, из которого Иван выходит слишком поздно."
+  },
+  "emoji": "🚇",
+  "situation": "transporte",
+  "level": "A1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Es lunes. Iván va al centro en subte.",
+      "ru": "Понедельник. Иван едет в центр на метро."
+    },
+    {
+      "id": "s2",
+      "text": "En la entrada, pasa la tarjeta SUBE, pero no funciona.",
+      "ru": "На входе он прикладывает карту SUBE, но она не срабатывает."
+    },
+    {
+      "id": "s3",
+      "text": "No tiene saldo, y el kiosco de la esquina está cerrado.",
+      "ru": "На карте ноль, а киоско на углу закрыт."
+    },
+    {
+      "id": "s4",
+      "text": "Una señora lo ve y lo ayuda.",
+      "ru": "Его замечает одна сеньора и помогает."
+    },
+    {
+      "id": "s5",
+      "text": "«Tome el sesenta, querido. Yo le pago con mi SUBE.»",
+      "ru": "«Садитесь на шестидесятый, дорогой. Я заплачу за вас своей SUBE.»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s6",
+      "text": "«¡Muchas gracias, señora!»",
+      "ru": "«Большое спасибо, сеньора!»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s7",
+      "text": "En el colectivo, Iván mira el mapa en el celular.",
+      "ru": "В автобусе Иван смотрит карту в телефоне."
+    },
+    {
+      "id": "s8",
+      "text": "Pero no tiene señal.",
+      "ru": "Но связи нет."
+    },
+    {
+      "id": "s9",
+      "text": "«Perdón, ¿este colectivo va al centro?»",
+      "ru": "«Извините, этот автобус идёт в центр?»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s10",
+      "text": "«Sí, pero ya pasamos el centro. Está a diez cuadras.»",
+      "ru": "«Да, но центр мы уже проехали. Он в десяти кварталах.»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s11",
+      "text": "Iván se baja y camina diez cuadras. ¡Qué lunes!",
+      "ru": "Иван выходит и идёт десять кварталов пешком. Ну и понедельник!"
+    }
+  ],
+  "keywords": [
+    "es-a1-moverse.v.subte",
+    "es-a1-moverse.v.tarjeta",
+    "es-a1-moverse.no-tengo-saldo",
+    "es-a1-comprar.v.kiosco",
+    "es-a1-moverse.v.esquina",
+    "es-a1-hola.v.senora",
+    "es-a1-hola.muchas-gracias",
+    "es-a1-moverse.v.colectivo",
+    "es-a1-moverse.va-al-centro",
+    "es-a1-moverse.v.cuadra"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Por qué no funciona la SUBE?",
+      "ru": "Почему не срабатывает SUBE?",
+      "options": [
+        {
+          "text": "Porque es de Córdoba.",
+          "ru": "Потому что она из Кордовы."
+        },
+        {
+          "text": "Porque no tiene saldo.",
+          "ru": "Потому что на ней ноль."
+        },
+        {
+          "text": "Porque está rota.",
+          "ru": "Потому что она сломана."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "¿Quién ayuda a Iván?",
+      "ru": "Кто помогает Ивану?",
+      "options": [
+        {
+          "text": "Una señora.",
+          "ru": "Одна сеньора."
+        },
+        {
+          "text": "Martín.",
+          "ru": "Мартин."
+        },
+        {
+          "text": "El kiosquero.",
+          "ru": "Продавец в киоско."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "¿Qué colectivo toma Iván?",
+      "ru": "На какой автобус садится Иван?",
+      "options": [
+        {
+          "text": "El dos.",
+          "ru": "На второй."
+        },
+        {
+          "text": "El diez.",
+          "ru": "На десятый."
+        },
+        {
+          "text": "El sesenta.",
+          "ru": "На шестидесятый."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Dónde se baja Iván?",
+      "ru": "Где выходит Иван?",
+      "options": [
+        {
+          "text": "En el centro.",
+          "ru": "В центре."
+        },
+        {
+          "text": "Diez cuadras después del centro.",
+          "ru": "В десяти кварталах за центром."
+        },
+        {
+          "text": "En Palermo.",
+          "ru": "В Палермо."
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s1",
+      "answer": "es-a1-moverse.v.subte",
+      "gap": "subte",
+      "distractors": [
+        "metro",
+        "autobús"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s3",
+      "answer": "es-a1-comprar.v.kiosco",
+      "gap": "kiosco",
+      "distractors": [
+        "magazine",
+        "banco"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s6",
+      "answer": "es-a1-hola.muchas-gracias",
+      "gap": "Muchas gracias",
+      "distractors": [
+        "Mucho gracias",
+        "De nada"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s7",
+      "answer": "es-a1-moverse.v.colectivo",
+      "gap": "colectivo",
+      "distractors": [
+        "autobús",
+        "coche"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s10",
+      "answer": "es-a1-moverse.v.cuadra",
+      "gap": "cuadras",
+      "distractors": [
+        "horas",
+        "pesos"
+      ]
+    }
+  ]
+}

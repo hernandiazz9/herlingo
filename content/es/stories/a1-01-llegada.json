@@ -1,0 +1,242 @@
+{
+  "id": "story.es-a1-llegada",
+  "order": 1,
+  "title": "La llegada",
+  "titleRu": "Прилёт",
+  "description": {
+    "ru": "Иван прилетает в Эсейсу, а Мартин встречает его с мате. Первые «че» и «дале»."
+  },
+  "emoji": "✈️",
+  "situation": "saludos",
+  "level": "A1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Iván llega a Ezeiza a las siete de la mañana.",
+      "ru": "Иван прилетает в Эсейсу в семь утра."
+    },
+    {
+      "id": "s2",
+      "text": "Está cansado, pero está re contento.",
+      "ru": "Он устал, но очень рад."
+    },
+    {
+      "id": "s3",
+      "text": "En la salida, un chico con un termo y un mate lo espera.",
+      "ru": "На выходе его ждёт парень с термосом и мате."
+    },
+    {
+      "id": "s4",
+      "text": "Es Martín, su nuevo compañero de departamento.",
+      "ru": "Это Мартин, его новый сосед по квартире."
+    },
+    {
+      "id": "s5",
+      "text": "«¡Hola, che! ¡Bienvenido a Buenos Aires!»",
+      "ru": "«Привет, дружище! Добро пожаловать в Буэнос-Айрес!»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s6",
+      "text": "«¡Hola! Me llamo Iván. Mucho gusto.»",
+      "ru": "«Привет! Меня зовут Иван. Очень приятно.»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s7",
+      "text": "«Vos sos el ruso, ¿no? ¿Todo bien?»",
+      "ru": "«Ты ведь тот самый русский, да? Как ты, всё норм?»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s8",
+      "text": "«Todo bien, ¿y vos?»",
+      "ru": "«Всё хорошо, а ты?»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s9",
+      "text": "Martín le da el mate. Iván toma y dice: «¡Uy, está muy caliente!»",
+      "ru": "Мартин даёт ему мате. Иван отпивает и говорит: «Ой, очень горячо!»"
+    },
+    {
+      "id": "s10",
+      "text": "Martín se ríe.",
+      "ru": "Мартин смеётся."
+    },
+    {
+      "id": "s11",
+      "text": "«¿Vamos a Palermo en remís?»",
+      "ru": "«Поехали в Палермо на ремисе?»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s12",
+      "text": "Iván no entiende todo, pero ya sabe una palabra.",
+      "ru": "Иван понимает не всё, но одно слово он уже знает."
+    },
+    {
+      "id": "s13",
+      "text": "«¡Dale!»",
+      "ru": "«Давай!»",
+      "voice": "es-UY-MateoNeural"
+    }
+  ],
+  "keywords": [
+    "es-a1-hola.hola-che",
+    "es-a1-hola.me-llamo-ivan",
+    "es-a1-hola.mucho-gusto",
+    "es-a1-hola.todo-bien",
+    "es-a1-hola.todo-bien-y-vos",
+    "es-a1-hola.dale",
+    "es-a1-comer.v.mate",
+    "es-a1-comer.v.termo",
+    "es-a1-comer.esta-muy-caliente",
+    "es-a1-moverse.v.remis"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿A qué hora llega Iván a Ezeiza?",
+      "ru": "Во сколько Иван прилетает в Эсейсу?",
+      "options": [
+        {
+          "text": "A las siete de la noche.",
+          "ru": "В семь вечера."
+        },
+        {
+          "text": "A las siete de la mañana.",
+          "ru": "В семь утра."
+        },
+        {
+          "text": "A las diez de la mañana.",
+          "ru": "В десять утра."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "¿Qué tiene Martín en la salida?",
+      "ru": "Что у Мартина в руках на выходе?",
+      "options": [
+        {
+          "text": "Un termo y un mate.",
+          "ru": "Термос и мате."
+        },
+        {
+          "text": "Una birra bien fría.",
+          "ru": "Холодное пиво."
+        },
+        {
+          "text": "Un mapa de Buenos Aires.",
+          "ru": "Карта Буэнос-Айреса."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "¿Cómo está el mate?",
+      "ru": "Какой мате?",
+      "options": [
+        {
+          "text": "Está muy frío.",
+          "ru": "Очень холодный."
+        },
+        {
+          "text": "Está muy dulce.",
+          "ru": "Очень сладкий."
+        },
+        {
+          "text": "Está muy caliente.",
+          "ru": "Очень горячий."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Qué dice Iván al final?",
+      "ru": "Что Иван говорит в конце?",
+      "options": [
+        {
+          "text": "¡Chau!",
+          "ru": "Пока!"
+        },
+        {
+          "text": "¡Dale!",
+          "ru": "Давай!"
+        },
+        {
+          "text": "¡Perdón!",
+          "ru": "Извини!"
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s3",
+      "answer": "es-a1-comer.v.termo",
+      "gap": "termo",
+      "distractors": [
+        "vaso",
+        "mapa"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s5",
+      "answer": "es-a1-hola.hola-che",
+      "gap": "Hola, che",
+      "distractors": [
+        "Chau, che",
+        "Perdón, che"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s6",
+      "answer": "es-a1-hola.mucho-gusto",
+      "gap": "Mucho gusto",
+      "distractors": [
+        "De nada",
+        "Por favor"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s8",
+      "answer": "es-a1-hola.todo-bien-y-vos",
+      "gap": "Todo bien, ¿y vos?",
+      "distractors": [
+        "Soy bien, ¿y vos?",
+        "Todo bien, ¿y usted?"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s9",
+      "answer": "es-a1-comer.esta-muy-caliente",
+      "gap": "está muy caliente",
+      "distractors": [
+        "es muy caliente",
+        "está muy fría"
+      ]
+    },
+    {
+      "id": "g6",
+      "sentence": "s13",
+      "answer": "es-a1-hola.dale",
+      "gap": "Dale",
+      "distractors": [
+        "Vale",
+        "Chau"
+      ]
+    }
+  ]
+}

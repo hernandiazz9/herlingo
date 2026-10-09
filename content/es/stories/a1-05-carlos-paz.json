@@ -1,0 +1,240 @@
+{
+  "id": "story.es-a1-carlos-paz",
+  "order": 5,
+  "title": "Un finde en Carlos Paz",
+  "titleRu": "Выходные в Карлос-Пасе",
+  "description": {
+    "ru": "Выходные у бабушки Флор: озеро, часы с кукушкой и слишком много солнца."
+  },
+  "emoji": "☀️",
+  "situation": "salud",
+  "level": "A1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "El finde, Iván y Flor van a Villa Carlos Paz.",
+      "ru": "На выходные Иван и Флор едут в Вилья-Карлос-Пас."
+    },
+    {
+      "id": "s2",
+      "text": "Ahí vive Doña Marta, la abuela de Flor.",
+      "ru": "Там живёт донья Марта, бабушка Флор."
+    },
+    {
+      "id": "s3",
+      "text": "Doña Marta le pregunta: «¿Usted es el ruso?»",
+      "ru": "Донья Марта спрашивает его: «Вы и есть тот русский?»"
+    },
+    {
+      "id": "s4",
+      "text": "En la casa hay un reloj cucú.",
+      "ru": "В доме висят часы с кукушкой."
+    },
+    {
+      "id": "s5",
+      "text": "A la tarde van al lago. Hay mucho sol.",
+      "ru": "Днём они идут на озеро. Солнце жарит вовсю."
+    },
+    {
+      "id": "s6",
+      "text": "«¡Ponete protector, Iván!»",
+      "ru": "«Намажься кремом, Иван!»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s7",
+      "text": "«No, gracias. En Rusia nunca hay sol.»",
+      "ru": "«Нет, спасибо. В России солнца никогда не бывает.»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s8",
+      "text": "A la noche, Iván está rojo como un tomate.",
+      "ru": "Вечером Иван красный как помидор."
+    },
+    {
+      "id": "s9",
+      "text": "«Me quemé con el sol», dice. Le duele todo.",
+      "ru": "«Я сгорел на солнце», — говорит он. У него всё болит."
+    },
+    {
+      "id": "s10",
+      "text": "Doña Marta le trae una crema y un té.",
+      "ru": "Донья Марта приносит ему крем и чай."
+    },
+    {
+      "id": "s11",
+      "text": "Y toda la noche, el reloj canta: «¡Cucú!»",
+      "ru": "А часы всю ночь поют: «Ку-ку!»"
+    }
+  ],
+  "keywords": [
+    "es-a1-planes.v.finde",
+    {
+      "id": "story-es-abuela",
+      "word": "abuela",
+      "article": "la",
+      "gender": "f",
+      "ru": "бабушка",
+      "situation": "planes"
+    },
+    {
+      "id": "story-es-reloj-cucu",
+      "word": "reloj cucú",
+      "article": "el",
+      "gender": "m",
+      "ru": "часы с кукушкой",
+      "notes": {
+        "ru": "Часы с кукушкой — классика домов в горах Кордовы; в Карлос-Пасе есть даже гигантские."
+      },
+      "situation": "ciudad"
+    },
+    {
+      "id": "story-es-lago",
+      "word": "lago",
+      "article": "el",
+      "gender": "m",
+      "ru": "озеро",
+      "situation": "ciudad"
+    },
+    "es-a1-ayuda.v.sol",
+    "es-a1-ayuda.ponete-protector",
+    "es-a1-ayuda.me-queme-con-el-sol",
+    "es-a1-hola.v.noche"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Quién es Doña Marta?",
+      "ru": "Кто такая донья Марта?",
+      "options": [
+        {
+          "text": "La mamá de Flor.",
+          "ru": "Мама Флор."
+        },
+        {
+          "text": "Una médica de Carlos Paz.",
+          "ru": "Врач из Карлос-Паса."
+        },
+        {
+          "text": "La abuela de Flor.",
+          "ru": "Бабушка Флор."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "¿Qué hay en la casa de Doña Marta?",
+      "ru": "Что есть в доме доньи Марты?",
+      "options": [
+        {
+          "text": "Un reloj cucú.",
+          "ru": "Часы с кукушкой."
+        },
+        {
+          "text": "Una parrilla nueva.",
+          "ru": "Новый гриль."
+        },
+        {
+          "text": "Una pileta.",
+          "ru": "Бассейн."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "¿Por qué Iván no se pone protector?",
+      "ru": "Почему Иван не мажется кремом?",
+      "options": [
+        {
+          "text": "Porque no tiene plata.",
+          "ru": "Потому что у него нет денег."
+        },
+        {
+          "text": "Porque en Rusia nunca hay sol.",
+          "ru": "Потому что в России никогда нет солнца."
+        },
+        {
+          "text": "Porque está en la casa.",
+          "ru": "Потому что он сидит дома."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "¿Cómo está Iván a la noche?",
+      "ru": "Каким Иван выглядит вечером?",
+      "options": [
+        {
+          "text": "Blanco como la leche.",
+          "ru": "Белый как молоко."
+        },
+        {
+          "text": "Rojo como un tomate.",
+          "ru": "Красный как помидор."
+        },
+        {
+          "text": "Muy contento.",
+          "ru": "Очень довольный."
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s1",
+      "answer": "es-a1-planes.v.finde",
+      "gap": "finde",
+      "distractors": [
+        "lunes",
+        "martes"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s2",
+      "answer": "story-es-abuela",
+      "gap": "abuela",
+      "distractors": [
+        "abuelo",
+        "hermana"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s5",
+      "answer": "story-es-lago",
+      "gap": "lago",
+      "distractors": [
+        "mar",
+        "subte"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s6",
+      "answer": "es-a1-ayuda.ponete-protector",
+      "gap": "Ponete protector",
+      "distractors": [
+        "Póngase protector",
+        "Ponete campera"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s9",
+      "answer": "es-a1-ayuda.me-queme-con-el-sol",
+      "gap": "Me quemé con el sol",
+      "distractors": [
+        "Me quemé con la sol",
+        "Me perdí con el sol"
+      ]
+    }
+  ]
+}

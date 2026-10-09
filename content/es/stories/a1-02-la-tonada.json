@@ -1,0 +1,234 @@
+{
+  "id": "story.es-a1-la-tonada",
+  "order": 2,
+  "title": "La tonada",
+  "titleRu": "Кордовская тонада",
+  "description": {
+    "ru": "Иван в гостях у Флор в Кордове: тонада, «¿qué hacé'?», прогулка по Каньяде и фернет с колой."
+  },
+  "emoji": "🎶",
+  "situation": "ciudad",
+  "level": "A1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "El viernes Iván viaja a Córdoba para visitar a Flor.",
+      "ru": "В пятницу Иван едет в Кордову в гости к Флор."
+    },
+    {
+      "id": "s2",
+      "text": "Flor lo espera en la terminal con dos alfajores.",
+      "ru": "Флор ждёт его на автовокзале с двумя альфахорами."
+    },
+    {
+      "id": "s3",
+      "text": "«¡Hola, Iván! ¿Qué hacé'?»",
+      "ru": "«Привет, Иван! Как дела?» (по-кордовски: «¿qué hacés?» без «с» на конце)",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s4",
+      "text": "«¿Cómo? Más despacio, por favor.»",
+      "ru": "«Что-что? Помедленнее, пожалуйста.»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s5",
+      "text": "Flor se ríe: en Córdoba la gente habla con tonada.",
+      "ru": "Флор смеётся: в Кордове говорят нараспев, с тонадой."
+    },
+    {
+      "id": "s6",
+      "text": "La tonada es como una canción: «Cór-dooo-ba».",
+      "ru": "Тонада звучит как песня: «Кор-дооо-ба»."
+    },
+    {
+      "id": "s7",
+      "text": "Por la tarde caminan por la Cañada.",
+      "ru": "Днём они гуляют вдоль Каньяды."
+    },
+    {
+      "id": "s8",
+      "text": "Hace calor y Flor tiene sed.",
+      "ru": "Жарко, и Флор хочет пить."
+    },
+    {
+      "id": "s9",
+      "text": "En un bar, Flor pide dos fernet con coca.",
+      "ru": "В баре Флор заказывает два фернета с колой."
+    },
+    {
+      "id": "s10",
+      "text": "«¡Salud, Iván! ¡Bienvenido a Córdoba!»",
+      "ru": "«Будем, Иван! Добро пожаловать в Кордову!»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s11",
+      "text": "Iván prueba el fernet. Es amargo, pero le gusta.",
+      "ru": "Иван пробует фернет. Горький, но ему нравится."
+    },
+    {
+      "id": "s12",
+      "text": "«¡Qué hacé', Córdoba!», dice Iván, con tonada rusa.",
+      "ru": "«Как дела, Кордова!» — говорит Иван с русской тонадой."
+    }
+  ],
+  "keywords": [
+    {
+      "id": "story-es-tonada",
+      "word": "tonada",
+      "article": "la",
+      "gender": "f",
+      "ru": "тонада (напевный акцент)",
+      "notes": {
+        "ru": "Кордовцы тянут слог перед ударным («Кор-дооо-ба») и глотают «s» в конце: «¿qué hacé'?» = «¿qué hacés?». Пиши и говори полную форму."
+      },
+      "situation": "presentarse"
+    },
+    "es-a1-hola.que-haces",
+    "es-a1-hola.como",
+    "es-a1-hola.mas-despacio",
+    "es-a1-moverse.v.terminal",
+    "es-a1-comer.v.alfajor",
+    "es-a1-moverse.caminamos-por-la-canada",
+    "es-a1-comer.v.fernet",
+    "es-a1-comer.un-fernet-con-coca",
+    "es-a1-comer.salud"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Dónde espera Flor a Iván?",
+      "ru": "Где Флор ждёт Ивана?",
+      "options": [
+        {
+          "text": "En el aeropuerto.",
+          "ru": "В аэропорту."
+        },
+        {
+          "text": "En la Cañada.",
+          "ru": "На Каньяде."
+        },
+        {
+          "text": "En la terminal.",
+          "ru": "На автовокзале."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "¿Qué es la tonada?",
+      "ru": "Что такое тонада?",
+      "options": [
+        {
+          "text": "Una forma de hablar de Córdoba.",
+          "ru": "Кордовская манера говорить."
+        },
+        {
+          "text": "Un alfajor cordobés.",
+          "ru": "Кордовский альфахор."
+        },
+        {
+          "text": "Un bar de la Cañada.",
+          "ru": "Бар на Каньяде."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "¿Qué toman en el bar?",
+      "ru": "Что они пьют в баре?",
+      "options": [
+        {
+          "text": "Mate.",
+          "ru": "Мате."
+        },
+        {
+          "text": "Fernet con coca.",
+          "ru": "Фернет с колой."
+        },
+        {
+          "text": "Una birra.",
+          "ru": "Пиво."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "¿Le gusta el fernet a Iván?",
+      "ru": "Ивану нравится фернет?",
+      "options": [
+        {
+          "text": "No, no le gusta.",
+          "ru": "Нет, не нравится."
+        },
+        {
+          "text": "No lo prueba.",
+          "ru": "Он его не пробует."
+        },
+        {
+          "text": "Sí, le gusta.",
+          "ru": "Да, нравится."
+        }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s2",
+      "answer": "es-a1-comer.v.alfajor",
+      "gap": "alfajores",
+      "distractors": [
+        "empanadas",
+        "medialunas"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s4",
+      "answer": "es-a1-hola.mas-despacio",
+      "gap": "Más despacio",
+      "distractors": [
+        "Más rápido",
+        "Más tarde"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s5",
+      "answer": "story-es-tonada",
+      "gap": "tonada",
+      "distractors": [
+        "tarjeta",
+        "bombilla"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s9",
+      "answer": "es-a1-comer.v.fernet",
+      "gap": "fernet",
+      "distractors": [
+        "vino",
+        "helado"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s10",
+      "answer": "es-a1-comer.salud",
+      "gap": "Salud",
+      "distractors": [
+        "Perdón",
+        "Permiso"
+      ]
+    }
+  ]
+}

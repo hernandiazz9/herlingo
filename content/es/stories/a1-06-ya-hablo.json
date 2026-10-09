@@ -1,0 +1,222 @@
+{
+  "id": "story.es-a1-ya-hablo",
+  "order": 6,
+  "title": "Ya hablo",
+  "titleRu": "Я уже говорю",
+  "description": {
+    "ru": "Три месяца спустя: Иван заказывает в баре, шутит, говорит «re» как портеньо и снова собирается в Кордову."
+  },
+  "emoji": "🗣️",
+  "situation": "planes",
+  "level": "A1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Pasan tres meses. Iván ya vive como un porteño.",
+      "ru": "Проходит три месяца. Иван уже живёт как настоящий портеньо."
+    },
+    {
+      "id": "s2",
+      "text": "Hoy está en el bar de la esquina con Martín.",
+      "ru": "Сегодня он с Мартином в баре на углу."
+    },
+    {
+      "id": "s3",
+      "text": "«¿Me traés un cortado y dos medialunas?»",
+      "ru": "«Принесёшь мне кортадо и две медиалуны?»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s4",
+      "text": "El mozo entiende todo a la primera.",
+      "ru": "Официант понимает всё с первого раза."
+    },
+    {
+      "id": "s5",
+      "text": "«¡Che, Iván, hablás re bien!»",
+      "ru": "«Слушай, Иван, ты классно говоришь!»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s6",
+      "text": "«¡Re bien no! Hablo un poquito de castellano.»",
+      "ru": "«Ну не классно! Я немного говорю по-испански.»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s7",
+      "text": "Martín se ríe. Iván ya dice «re», «dale» y «che».",
+      "ru": "Мартин смеётся. Иван уже говорит «re», «dale» и «che»."
+    },
+    {
+      "id": "s8",
+      "text": "Después llama Flor desde Córdoba.",
+      "ru": "Потом звонит Флор из Кордовы."
+    },
+    {
+      "id": "s9",
+      "text": "«¿Qué hacés, Iván? ¿Venís el finde?»",
+      "ru": "«Как дела, Иван? Приедешь на выходные?»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s10",
+      "text": "«¡Dale! Voy a ir a Córdoba el viernes.»",
+      "ru": "«Давай! Я поеду в Кордову в пятницу.»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s11",
+      "text": "«¡Re lindo! Te espero con un fernet.»",
+      "ru": "«Супер! Жду тебя с фернетом.»",
+      "voice": "es-AR-ElenaNeural"
+    }
+  ],
+  "keywords": [
+    "es-a1-hola.v.porteno",
+    "es-a1-comer.me-traes-un-cortado",
+    "es-a1-comer.v.medialuna",
+    "es-a1-comer.v.mozo",
+    "es-a1-hola.hablo-un-poquito",
+    "es-a1-hola.que-haces",
+    "es-a1-planes.v.finde",
+    "es-a1-planes.voy-a-ir-a-cordoba",
+    "es-a1-planes.v.viernes",
+    "es-a1-planes.re-lindo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Dónde está Iván con Martín?",
+      "ru": "Где Иван с Мартином?",
+      "options": [
+        {
+          "text": "En la terminal.",
+          "ru": "На автовокзале."
+        },
+        {
+          "text": "En la farmacia.",
+          "ru": "В аптеке."
+        },
+        {
+          "text": "En el bar de la esquina.",
+          "ru": "В баре на углу."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q2",
+      "question": "¿Qué pide Iván?",
+      "ru": "Что заказывает Иван?",
+      "options": [
+        {
+          "text": "Un cortado y dos medialunas.",
+          "ru": "Кортадо и две медиалуны."
+        },
+        {
+          "text": "Un fernet con coca.",
+          "ru": "Фернет с колой."
+        },
+        {
+          "text": "Una birra bien fría.",
+          "ru": "Холодное пиво."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "¿Quién llama a Iván?",
+      "ru": "Кто звонит Ивану?",
+      "options": [
+        {
+          "text": "Doña Marta.",
+          "ru": "Донья Марта."
+        },
+        {
+          "text": "Flor, desde Córdoba.",
+          "ru": "Флор из Кордовы."
+        },
+        {
+          "text": "Su vieja, desde Rusia.",
+          "ru": "Мама из России."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q4",
+      "question": "¿Cuándo va a ir Iván a Córdoba?",
+      "ru": "Когда Иван поедет в Кордову?",
+      "options": [
+        {
+          "text": "El lunes.",
+          "ru": "В понедельник."
+        },
+        {
+          "text": "El domingo.",
+          "ru": "В воскресенье."
+        },
+        {
+          "text": "El viernes.",
+          "ru": "В пятницу."
+        }
+      ],
+      "correct": 2
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s1",
+      "answer": "es-a1-hola.v.porteno",
+      "gap": "porteño",
+      "distractors": [
+        "porteña",
+        "cordobés"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s3",
+      "answer": "es-a1-comer.me-traes-un-cortado",
+      "gap": "Me traés un cortado",
+      "distractors": [
+        "Me traés una cortado",
+        "Me llevás un cortado"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s4",
+      "answer": "es-a1-comer.v.mozo",
+      "gap": "mozo",
+      "distractors": [
+        "moza",
+        "camarero"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s10",
+      "answer": "es-a1-planes.voy-a-ir-a-cordoba",
+      "gap": "Voy a ir a Córdoba",
+      "distractors": [
+        "Voy ir a Córdoba",
+        "Voy a ir en Córdoba"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s11",
+      "answer": "es-a1-planes.re-lindo",
+      "gap": "Re lindo",
+      "distractors": [
+        "Re feo",
+        "Muy re lindo"
+      ]
+    }
+  ]
+}

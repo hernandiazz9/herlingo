@@ -1,0 +1,223 @@
+{
+  "id": "story.es-a1-asado",
+  "order": 4,
+  "title": "El asado del domingo",
+  "titleRu": "Воскресное асадо",
+  "description": {
+    "ru": "Асадо у родителей Мартина: мате идёт по кругу, а Иван говорит «gracias» — и остаётся без мате."
+  },
+  "emoji": "🥩",
+  "situation": "comida",
+  "level": "A1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "El domingo hay asado en la casa de los viejos de Martín.",
+      "ru": "В воскресенье асадо у родителей Мартина."
+    },
+    {
+      "id": "s2",
+      "text": "El papá de Martín está en la parrilla desde las once.",
+      "ru": "Папа Мартина стоит у гриля с одиннадцати утра."
+    },
+    {
+      "id": "s3",
+      "text": "La mamá ceba mate para todos.",
+      "ru": "Мама разливает мате на всех."
+    },
+    {
+      "id": "s4",
+      "text": "Iván toma un mate y dice: «Gracias».",
+      "ru": "Иван выпивает мате и говорит: «Спасибо»."
+    },
+    {
+      "id": "s5",
+      "text": "Después, el mate pasa a todos, menos a Iván.",
+      "ru": "Потом мате идёт ко всем, кроме Ивана."
+    },
+    {
+      "id": "s6",
+      "text": "«Che, ¿y yo?», pregunta Iván, triste.",
+      "ru": "«Эй, а я?» — грустно спрашивает Иван."
+    },
+    {
+      "id": "s7",
+      "text": "Martín se ríe.",
+      "ru": "Мартин смеётся."
+    },
+    {
+      "id": "s8",
+      "text": "«Acá, si decís gracias, no tomás más.»",
+      "ru": "«У нас если говоришь „спасибо“, значит, больше не пьёшь.»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s9",
+      "text": "«Bueno, uno más y listo.»",
+      "ru": "«Ладно, ещё один — и хватит.»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s10",
+      "text": "Después comen choripán y mucha carne.",
+      "ru": "Потом они едят чорипан и много мяса."
+    },
+    {
+      "id": "s11",
+      "text": "«¡Está riquísimo!», dice Iván.",
+      "ru": "«Очень вкусно!» — говорит Иван."
+    },
+    {
+      "id": "s12",
+      "text": "Todos aplauden: «¡Un aplauso para el asador!»",
+      "ru": "Все хлопают: «Аплодисменты асадору!»"
+    }
+  ],
+  "keywords": [
+    "es-a1-planes.v.domingo",
+    "es-a1-comer.hay-asado",
+    "es-a1-planes.v.viejo",
+    "es-a1-comer.v.parrilla",
+    "es-a1-comer.v.mate",
+    "es-a1-hola.gracias",
+    "es-a1-comer.uno-mas-y-listo",
+    "es-a1-comer.v.choripan",
+    "es-a1-comer.esta-riquisimo",
+    "es-a1-comer.un-aplauso-para-el-asador"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Dónde es el asado?",
+      "ru": "Где проходит асадо?",
+      "options": [
+        {
+          "text": "En un bar de Palermo.",
+          "ru": "В баре в Палермо."
+        },
+        {
+          "text": "En la casa de los viejos de Martín.",
+          "ru": "У родителей Мартина."
+        },
+        {
+          "text": "En las sierras.",
+          "ru": "В горах."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "¿Quién está en la parrilla?",
+      "ru": "Кто стоит у гриля?",
+      "options": [
+        {
+          "text": "El papá de Martín.",
+          "ru": "Папа Мартина."
+        },
+        {
+          "text": "La mamá de Martín.",
+          "ru": "Мама Мартина."
+        },
+        {
+          "text": "Iván.",
+          "ru": "Иван."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "En la ronda de mate, ¿qué quiere decir «gracias»?",
+      "ru": "Что значит «gracias», когда мате идёт по кругу?",
+      "options": [
+        {
+          "text": "Quiero otro.",
+          "ru": "Хочу ещё."
+        },
+        {
+          "text": "Está muy caliente.",
+          "ru": "Очень горячо."
+        },
+        {
+          "text": "No quiero más.",
+          "ru": "Мне больше не надо."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Qué dicen todos al final?",
+      "ru": "Что все говорят в конце?",
+      "options": [
+        {
+          "text": "¡Chau, nos vemos!",
+          "ru": "Пока, увидимся!"
+        },
+        {
+          "text": "¡Un aplauso para el asador!",
+          "ru": "Аплодисменты асадору!"
+        },
+        {
+          "text": "¡Buen provecho!",
+          "ru": "Приятного аппетита!"
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s2",
+      "answer": "es-a1-comer.v.parrilla",
+      "gap": "parrilla",
+      "distractors": [
+        "pileta",
+        "calle"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s4",
+      "answer": "es-a1-hola.gracias",
+      "gap": "Gracias",
+      "distractors": [
+        "Salud",
+        "Permiso"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s9",
+      "answer": "es-a1-comer.uno-mas-y-listo",
+      "gap": "uno más y listo",
+      "distractors": [
+        "una más y listo",
+        "uno menos y listo"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s10",
+      "answer": "es-a1-comer.v.choripan",
+      "gap": "choripán",
+      "distractors": [
+        "milanesa",
+        "helado"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s11",
+      "answer": "es-a1-comer.esta-riquisimo",
+      "gap": "Está riquísimo",
+      "distractors": [
+        "Es riquísimo",
+        "Está carísimo"
+      ]
+    }
+  ]
+}
