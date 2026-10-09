@@ -61,17 +61,17 @@ Worktree setup: npm ci
 - Outcome: pack es (4 voices, glossLangs ru, situation titles as {ru} maps, new situation planes); units hola 10, moverse 20, comer 30, comprar 40, planes 50, ayuda 60, gramatica 90; cast Iván (ruso, Mateo), Martín (porteño, Tomás), Flor (cordobesa, Elena), Valentina narra — 0b4a01e7
 
 ## T152 — Units 1–3 and the grammar unit
-- Status: running
+- Status: done
 - Depends on: T151
 - Goal: Write units 10, 20, 30 and the grammar unit 90 from brief-es.md, with Russian glosses and notes.
 - Context: Shared contract, docs/brief-es.md, `content/ru/units/` and `content/en/units/` as format models.
 - Scope: may touch `content/es/units/` (these units only) / must not touch `content/es/pack.json`, other packs.
 - Done when:
   - 4 unit files at about half the A1 volume (~90 phrases, ~75 vocab, ~20 Q&A, ~8 grammar cards); `npm run verify` → exit 0. Report counts.
-- Outcome:
+- Outcome: units 10 hola, 20 moverse, 30 comer, 90 gramatica: 99 phrases, 84 vocab (49 pictures), 22 Q&A, 8 cards — 07ceb5ec
 
 ## T153 — Units 4–6 (A1 complete)
-- Status: pending
+- Status: running
 - Depends on: T152
 - Goal: Write units 40, 50, 60, reusing earlier items by id, so the pack reaches the A1 mini totals.
 - Context: Shared contract, docs/brief-es.md, T152's units.
@@ -113,6 +113,7 @@ Worktree setup: npm ci
 
 - 2026-10-09 T149: gloss shape = sibling fields per language for es-named fields, {lang: text} map for the rest; new-pack welcome screen still shown once before the route (agent)
 - 2026-10-09 T151: options voiced by the first es voice unused by the natives (Mateo when Elena+Tomás speak); Córdoba ≈1/3 of every unit, dialogues/stories 2 and 5 in Córdoba; 'coger' warning note in unit 20, 'culiado' note in unit 50 (agent)
+- 2026-10-09 T152: numbers cero–diez as vocab in unit 20 for reuse; vocab ids <unit>.v.<slug>; ~10% over on phrases/vocab, so T153 aims lower (agent)
 
 ## Proposals (new scope)
 - 2026-10-09 orchestrator: growth of the deploy (audio is 279 MB / 16,299 files; repo 17,048 files, `.git` 245 MB): serve mp3s from Cloudflare R2 or similar (audio base URL, CORS, cross-origin SW cache and Range) and/or re-encode at a lower bitrate. Its own plan when needed.
@@ -126,3 +127,5 @@ Worktree setup: npm ci
 - 2026-10-09 T151 done → 0b4a01e7
 - 2026-10-09 T152 launched · attempt 1
 - 2026-10-09 T150 done → 8dfa2196
+- 2026-10-09 T152 done → 07ceb5ec
+- 2026-10-09 T153 launched · attempt 1
