@@ -1,0 +1,978 @@
+{
+  "id": "es-a1-moverse",
+  "order": 20,
+  "title": {
+    "ru": "Колективо, субте и ремис"
+  },
+  "description": {
+    "ru": "Автобус, метро и карта SUBE в Буэнос-Айресе, дорога пешком, такси-ремис и автовокзал Кордовы с билетом до Карлос-Паса."
+  },
+  "emoji": "🚌",
+  "situation": "transporte",
+  "lessons": [
+    {
+      "id": "es-a1-moverse.l.numeros",
+      "title": {
+        "ru": "От нуля до десяти"
+      },
+      "items": [
+        "es-a1-moverse.v.cero",
+        "es-a1-moverse.v.uno",
+        "es-a1-moverse.v.dos",
+        "es-a1-moverse.v.tres",
+        "es-a1-moverse.v.cuatro",
+        "es-a1-moverse.v.cinco",
+        "es-a1-moverse.v.seis",
+        "es-a1-moverse.v.siete",
+        "es-a1-moverse.v.ocho",
+        "es-a1-moverse.v.nueve",
+        "es-a1-moverse.v.diez"
+      ]
+    },
+    {
+      "id": "es-a1-moverse.l.colectivo",
+      "title": {
+        "ru": "Колективо, субте и SUBE"
+      },
+      "items": [
+        "es-a1-moverse.v.colectivo",
+        "es-a1-moverse.tomo-el-colectivo",
+        "es-a1-moverse.que-colectivo-va",
+        "es-a1-moverse.toma-el-sesenta",
+        "es-a1-moverse.v.parada",
+        "es-a1-moverse.donde-esta-la-parada",
+        "es-a1-moverse.v.tarjeta",
+        "es-a1-moverse.tengo-que-cargar-la-sube",
+        "es-a1-moverse.no-tengo-saldo",
+        "es-a1-moverse.me-prestas-la-sube",
+        "es-a1-moverse.va-al-centro",
+        "es-a1-moverse.me-avisa-donde-bajo",
+        "es-a1-moverse.bajo-en-la-proxima",
+        "es-a1-moverse.me-bajo-aca",
+        "es-a1-moverse.v.subte",
+        "es-a1-moverse.v.linea",
+        "es-a1-moverse.donde-esta-el-subte",
+        "es-a1-moverse.qa.parada",
+        "es-a1-moverse.qa.bajas"
+      ]
+    },
+    {
+      "id": "es-a1-moverse.l.direcciones",
+      "title": {
+        "ru": "Как пройти?"
+      },
+      "items": [
+        "es-a1-moverse.donde-queda-el-centro",
+        "es-a1-moverse.v.cuadra",
+        "es-a1-moverse.esta-a-dos-cuadras",
+        "es-a1-moverse.v.calle",
+        "es-a1-moverse.v.esquina",
+        "es-a1-moverse.segui-derecho",
+        "es-a1-moverse.v.derecha",
+        "es-a1-moverse.dobla-a-la-derecha",
+        "es-a1-moverse.v.izquierda",
+        "es-a1-moverse.dobla-a-la-izquierda",
+        "es-a1-moverse.esta-cerca",
+        "es-a1-moverse.esta-re-lejos",
+        "es-a1-moverse.se-puede-ir-caminando",
+        "es-a1-moverse.v.mapa",
+        "es-a1-moverse.me-perdi",
+        "es-a1-moverse.v.plaza",
+        "es-a1-moverse.caminamos-por-la-canada",
+        "es-a1-moverse.v.bicicleta",
+        "es-a1-moverse.qa.lejos",
+        "es-a1-moverse.qa.te-ayudo"
+      ]
+    },
+    {
+      "id": "es-a1-moverse.l.remis-terminal",
+      "title": {
+        "ru": "Ремис и автобус в Карлос-Пас"
+      },
+      "items": [
+        "es-a1-moverse.v.remis",
+        "es-a1-moverse.pido-un-remis",
+        "es-a1-moverse.me-lleva-a-la-terminal",
+        "es-a1-moverse.cuanto-sale",
+        "es-a1-moverse.pare-aca",
+        "es-a1-moverse.v.auto",
+        "es-a1-moverse.v.terminal",
+        "es-a1-moverse.v.valija",
+        "es-a1-moverse.v.pasaje",
+        "es-a1-moverse.un-pasaje-a-carlos-paz",
+        "es-a1-moverse.ida-y-vuelta",
+        "es-a1-moverse.a-que-hora-sale",
+        "es-a1-moverse.de-que-plataforma-sale",
+        "es-a1-moverse.cuanto-tarda",
+        "es-a1-moverse.v.sierras",
+        "es-a1-moverse.qa.adonde-lo-llevo",
+        "es-a1-moverse.qa.cinco-mil",
+        "es-a1-moverse.qa.ida-o-vuelta"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "es-a1-moverse.tomo-el-colectivo",
+      "text": "Tomo el colectivo.",
+      "ru": "Я сажусь на автобус.",
+      "notes": {
+        "ru": "Никогда не говори «coger el colectivo», как в Испании: здесь «coger» — очень грубое слово. Только «tomar»!"
+      },
+      "explanation": {
+        "ru": "Рассказываешь, как добираешься. Колективо — городской автобус; разговорно «bondi»."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.que-colectivo-va",
+      "text": "¿Qué colectivo va a Palermo?",
+      "ru": "Какой автобус идёт до Палермо?",
+      "notes": {
+        "ru": "Палермо — это район Буэнос-Айреса, где живёт Мартин, а не Сицилия."
+      },
+      "explanation": {
+        "ru": "Спрашиваешь на остановке у людей в очереди. «v» = «б»: ке ко-лек-ТИ-бо БА."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.toma-el-sesenta",
+      "text": "Tomá el sesenta.",
+      "ru": "Садись на шестидесятый.",
+      "notes": {
+        "ru": "Автобусы называют по номеру: «el sesenta», «el ciento cincuenta y dos»."
+      },
+      "explanation": {
+        "ru": "Так тебе подскажет друг. «Tomá» — повелительное для «vos», ударение на конце: то-МА."
+      },
+      "register": "tu",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.donde-esta-la-parada",
+      "text": "¿Dónde está la parada?",
+      "ru": "Где остановка?",
+      "explanation": {
+        "ru": "Ищешь остановку колективо. «Está» с ударением: эс-ТА — «находится»."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.tengo-que-cargar-la-sube",
+      "text": "Tengo que cargar la SUBE.",
+      "ru": "Мне надо пополнить SUBE.",
+      "notes": {
+        "ru": "SUBE — транспортная карта для колективо, субте и электричек; пополняют её в киоске."
+      },
+      "explanation": {
+        "ru": "Говоришь в киоске или другу у турникета. SUBE читается «СУ-бе»."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.no-tengo-saldo",
+      "text": "No tengo saldo.",
+      "ru": "У меня на карте ноль.",
+      "explanation": {
+        "ru": "Когда турникет пищит, а денег на SUBE нет. «saldo» — баланс: САЛЬ-до."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.me-prestas-la-sube",
+      "text": "¿Me prestás la SUBE?",
+      "ru": "Одолжишь SUBE?",
+      "explanation": {
+        "ru": "Просишь у друга карту, когда твоя пустая. Ударение на конце: прес-ТАС."
+      },
+      "register": "tu",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.va-al-centro",
+      "text": "¿Este colectivo va al centro?",
+      "ru": "Этот автобус идёт в центр?",
+      "explanation": {
+        "ru": "Спрашиваешь водителя, входя в автобус. «a + el» сливается в «al»."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.me-avisa-donde-bajo",
+      "text": "¿Me avisa dónde tengo que bajar?",
+      "ru": "Скажете, где мне выходить?",
+      "explanation": {
+        "ru": "Просишь водителя или пожилую соседку. Ударение: а-БИ-са — «v» снова как «б»."
+      },
+      "register": "usted",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.bajo-en-la-proxima",
+      "text": "Bajo en la próxima.",
+      "ru": "Я выхожу на следующей.",
+      "notes": {
+        "ru": "В колективо выходят через заднюю дверь и звонят в звонок."
+      },
+      "explanation": {
+        "ru": "Протискиваешься к двери. «x» в «próxima» звучит «кс»: ПРОК-си-ма."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.me-bajo-aca",
+      "text": "Me bajo acá.",
+      "ru": "Я выхожу здесь.",
+      "notes": {
+        "ru": "«Acá» — «здесь» по-аргентински; в Испании чаще «aquí»."
+      },
+      "explanation": {
+        "ru": "Когда твоя остановка прямо сейчас. Ударение: а-КА."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.donde-esta-el-subte",
+      "text": "¿Dónde está el subte?",
+      "ru": "Где метро?",
+      "notes": {
+        "ru": "Метро в Буэнос-Айресе — «subte», от «subterráneo» (подземный)."
+      },
+      "explanation": {
+        "ru": "Спрашиваешь на улице. СУБ-те: «e» на конце чёткое, не «и»."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.donde-queda-el-centro",
+      "text": "¿Dónde queda el centro?",
+      "ru": "Где находится центр?",
+      "notes": {
+        "ru": "«Quedar» — «находиться» для мест; в Аргентине так говорят постоянно."
+      },
+      "explanation": {
+        "ru": "Спрашиваешь дорогу у прохожего. «qu» читается «к»: КЕ-да."
+      },
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.esta-a-dos-cuadras",
+      "text": "Está a dos cuadras.",
+      "ru": "Это в двух кварталах.",
+      "notes": {
+        "ru": "«Cuadra» — квартал, примерно сто метров; аргентинцы всё меряют в куадрах."
+      },
+      "explanation": {
+        "ru": "Так тебе ответят на «¿dónde queda?». КУА-драс: «u» после «c» звучит."
+      },
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.segui-derecho",
+      "text": "Seguí derecho.",
+      "ru": "Иди прямо.",
+      "notes": {
+        "ru": "«Derecho» — прямо, а «a la derecha» — направо. Легко перепутать!"
+      },
+      "explanation": {
+        "ru": "Объяснение дороги. «Seguí» — повелительное для «vos»: се-ГИ."
+      },
+      "register": "tu",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.dobla-a-la-derecha",
+      "text": "Doblá a la derecha.",
+      "ru": "Поверни направо.",
+      "explanation": {
+        "ru": "Объясняешь или слушаешь дорогу. до-БЛА: ударение на конце, как у всех команд на «vos»."
+      },
+      "register": "tu",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.dobla-a-la-izquierda",
+      "text": "Doblá a la izquierda.",
+      "ru": "Поверни налево.",
+      "explanation": {
+        "ru": "Пара к «a la derecha». ис-КЬЕР-да: «z» звучит как «с»."
+      },
+      "register": "tu",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.esta-cerca",
+      "text": "¿Está cerca?",
+      "ru": "Это близко?",
+      "explanation": {
+        "ru": "Решаешь, идти пешком или ехать. СЕР-ка: «c» перед «e» — как «с»."
+      },
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.esta-re-lejos",
+      "text": "Está re lejos.",
+      "ru": "Это очень далеко.",
+      "notes": {
+        "ru": "«Re» — «очень» по-аргентински: «re lejos», «re lindo», «re caro»."
+      },
+      "explanation": {
+        "ru": "Когда идти пешком — плохая идея. «j» — как русское «х»: ЛЕ-хос."
+      },
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.se-puede-ir-caminando",
+      "text": "¿Se puede ir caminando?",
+      "ru": "Туда можно дойти пешком?",
+      "explanation": {
+        "ru": "Спрашиваешь в хостеле или у прохожего. ка-ми-НАН-до: ударение на «нан»."
+      },
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.me-perdi",
+      "text": "Me perdí.",
+      "ru": "Я заблудился.",
+      "explanation": {
+        "ru": "Пишешь другу или говоришь прохожему. Ударение на конце: пер-ДИ."
+      },
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.caminamos-por-la-canada",
+      "text": "Caminamos por la Cañada.",
+      "ru": "Гуляем вдоль Каньяды.",
+      "notes": {
+        "ru": "Ла-Каньяда — канал с каменными стенами и деревьями прямо в центре Кордовы."
+      },
+      "explanation": {
+        "ru": "Флор показывает тебе свою Кордову. «ñ» звучит «нь»: ка-НЬЯ-да."
+      },
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.cuanto-sale",
+      "text": "¿Cuánto sale?",
+      "ru": "Сколько стоит?",
+      "notes": {
+        "ru": "Аргентинцы чаще говорят «¿cuánto sale?», чем «¿cuánto cuesta?»."
+      },
+      "explanation": {
+        "ru": "Спрашиваешь цену поездки или чего угодно. КУАН-то."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.pido-un-remis",
+      "text": "Pido un remís.",
+      "ru": "Я вызову ремис.",
+      "notes": {
+        "ru": "Ремис — машина с водителем из агентства: заказываешь по телефону, цена известна заранее."
+      },
+      "explanation": {
+        "ru": "Когда поздно и колективо не ходит. Ударение на конце: ре-МИС."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.me-lleva-a-la-terminal",
+      "text": "¿Me lleva a la terminal?",
+      "ru": "Отвезёте меня на автовокзал?",
+      "explanation": {
+        "ru": "Садишься в ремис или такси. «ll» снова «ш»: ме ШЕ-ба."
+      },
+      "register": "usted",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.pare-aca",
+      "text": "Pare acá, por favor.",
+      "ru": "Остановите здесь, пожалуйста.",
+      "explanation": {
+        "ru": "Водителю такси или ремиса, когда приехал. ПА-ре а-КА."
+      },
+      "register": "usted",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.un-pasaje-a-carlos-paz",
+      "text": "Un pasaje a Carlos Paz, por favor.",
+      "ru": "Один билет до Карлос-Паса, пожалуйста.",
+      "notes": {
+        "ru": "Вилья-Карлос-Пас — курортный городок у озера в горах Кордовы, час на автобусе."
+      },
+      "explanation": {
+        "ru": "В кассе автовокзала. «pasaje» — билет: «j» как «х», па-СА-хе."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.a-que-hora-sale",
+      "text": "¿A qué hora sale el próximo?",
+      "ru": "Во сколько следующий?",
+      "explanation": {
+        "ru": "Спрашиваешь в кассе про ближайший автобус. «h» немая: а ке О-ра."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.de-que-plataforma-sale",
+      "text": "¿De qué plataforma sale?",
+      "ru": "С какой платформы отправляется?",
+      "explanation": {
+        "ru": "На автовокзале Кордовы смотри номер платформы на билете. пла-та-ФОР-ма."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.ida-y-vuelta",
+      "text": "Ida y vuelta, por favor.",
+      "ru": "Туда и обратно, пожалуйста.",
+      "explanation": {
+        "ru": "Покупаешь билет сразу в обе стороны. «v» как «б»: БУЭЛЬ-та."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.cuanto-tarda",
+      "text": "¿Cuánto tarda?",
+      "ru": "Сколько ехать?",
+      "explanation": {
+        "ru": "Спрашиваешь, сколько времени займёт дорога. ТАР-да."
+      },
+      "register": "neutral",
+      "situation": "transporte"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "es-a1-moverse.v.cero",
+      "word": "cero",
+      "ru": "ноль",
+      "notes": {
+        "ru": "Пригодится, когда на SUBE «saldo cero». СЕ-ро: «c» перед «e» — как «с»."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.uno",
+      "word": "uno",
+      "ru": "один",
+      "notes": {
+        "ru": "Перед мужским словом сокращается: «un colectivo»."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.dos",
+      "word": "dos",
+      "ru": "два",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.tres",
+      "word": "tres",
+      "ru": "три",
+      "notes": {
+        "ru": "«r» одна, короткий удар языком."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.cuatro",
+      "word": "cuatro",
+      "ru": "четыре",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.cinco",
+      "word": "cinco",
+      "ru": "пять",
+      "notes": {
+        "ru": "СИН-ко: «c» перед «i» — как «с»."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.seis",
+      "word": "seis",
+      "ru": "шесть",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.siete",
+      "word": "siete",
+      "ru": "семь",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.ocho",
+      "word": "ocho",
+      "ru": "восемь",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.nueve",
+      "word": "nueve",
+      "ru": "девять",
+      "notes": {
+        "ru": "«v» звучит как «б»: НУЭ-бе."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.diez",
+      "word": "diez",
+      "ru": "десять",
+      "notes": {
+        "ru": "«z» в Аргентине звучит как «с»: дьес."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-moverse.v.colectivo",
+      "word": "colectivo",
+      "article": "el",
+      "gender": "m",
+      "ru": "автобус",
+      "notes": {
+        "ru": "Разговорно — «el bondi»."
+      },
+      "example": "es-a1-moverse.tomo-el-colectivo",
+      "situation": "transporte",
+      "image": "fluent:bus"
+    },
+    {
+      "id": "es-a1-moverse.v.subte",
+      "word": "subte",
+      "article": "el",
+      "gender": "m",
+      "ru": "метро",
+      "example": "es-a1-moverse.donde-esta-el-subte",
+      "situation": "transporte",
+      "image": "fluent:metro"
+    },
+    {
+      "id": "es-a1-moverse.v.tarjeta",
+      "word": "tarjeta",
+      "article": "la",
+      "gender": "f",
+      "ru": "карта, карточка",
+      "notes": {
+        "ru": "«La tarjeta SUBE» — транспортная, «la tarjeta» в магазине — банковская."
+      },
+      "situation": "transporte",
+      "image": "fluent:credit-card"
+    },
+    {
+      "id": "es-a1-moverse.v.parada",
+      "word": "parada",
+      "article": "la",
+      "gender": "f",
+      "ru": "остановка",
+      "example": "es-a1-moverse.donde-esta-la-parada",
+      "situation": "transporte",
+      "image": "fluent:bus-stop"
+    },
+    {
+      "id": "es-a1-moverse.v.remis",
+      "word": "remís",
+      "article": "el",
+      "gender": "m",
+      "ru": "ремис (такси по вызову)",
+      "example": "es-a1-moverse.pido-un-remis",
+      "situation": "transporte",
+      "image": "fluent:oncoming-taxi"
+    },
+    {
+      "id": "es-a1-moverse.v.terminal",
+      "word": "terminal",
+      "article": "la",
+      "gender": "f",
+      "ru": "автовокзал",
+      "notes": {
+        "ru": "Женского рода: «la terminal de ómnibus»."
+      },
+      "situation": "transporte",
+      "image": "fluent:station"
+    },
+    {
+      "id": "es-a1-moverse.v.pasaje",
+      "word": "pasaje",
+      "article": "el",
+      "gender": "m",
+      "ru": "билет (на автобус)",
+      "example": "es-a1-moverse.un-pasaje-a-carlos-paz",
+      "situation": "transporte",
+      "image": "fluent:ticket"
+    },
+    {
+      "id": "es-a1-moverse.v.linea",
+      "word": "línea",
+      "article": "la",
+      "gender": "f",
+      "ru": "линия, ветка",
+      "notes": {
+        "ru": "У субте линии обозначены буквами: «la línea D»."
+      },
+      "situation": "transporte"
+    },
+    {
+      "id": "es-a1-moverse.v.valija",
+      "word": "valija",
+      "article": "la",
+      "gender": "f",
+      "ru": "чемодан",
+      "notes": {
+        "ru": "В Аргентине «valija», а не «maleta»."
+      },
+      "situation": "transporte",
+      "image": "fluent:luggage"
+    },
+    {
+      "id": "es-a1-moverse.v.auto",
+      "word": "auto",
+      "article": "el",
+      "gender": "m",
+      "ru": "машина",
+      "notes": {
+        "ru": "Не «coche»: здесь говорят «auto»."
+      },
+      "situation": "transporte",
+      "image": "fluent:automobile"
+    },
+    {
+      "id": "es-a1-moverse.v.bicicleta",
+      "word": "bicicleta",
+      "article": "la",
+      "gender": "f",
+      "ru": "велосипед",
+      "notes": {
+        "ru": "Мартин работает в веломагазине и зовёт её «la bici»."
+      },
+      "situation": "transporte",
+      "image": "fluent:bicycle"
+    },
+    {
+      "id": "es-a1-moverse.v.cuadra",
+      "word": "cuadra",
+      "article": "la",
+      "gender": "f",
+      "ru": "квартал",
+      "example": "es-a1-moverse.esta-a-dos-cuadras",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.v.esquina",
+      "word": "esquina",
+      "article": "la",
+      "gender": "f",
+      "ru": "угол (улицы)",
+      "notes": {
+        "ru": "«En la esquina» — на углу: так объясняют, где что находится."
+      },
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.v.calle",
+      "word": "calle",
+      "article": "la",
+      "gender": "f",
+      "ru": "улица",
+      "notes": {
+        "ru": "«ll» звучит «ш»: КА-ше."
+      },
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.v.plaza",
+      "word": "plaza",
+      "article": "la",
+      "gender": "f",
+      "ru": "площадь, сквер",
+      "situation": "ciudad",
+      "image": "fluent:fountain"
+    },
+    {
+      "id": "es-a1-moverse.v.derecha",
+      "word": "derecha",
+      "article": "la",
+      "gender": "f",
+      "ru": "право (сторона)",
+      "example": "es-a1-moverse.dobla-a-la-derecha",
+      "situation": "ciudad",
+      "image": "fluent:right-arrow"
+    },
+    {
+      "id": "es-a1-moverse.v.izquierda",
+      "word": "izquierda",
+      "article": "la",
+      "gender": "f",
+      "ru": "лево (сторона)",
+      "example": "es-a1-moverse.dobla-a-la-izquierda",
+      "situation": "ciudad",
+      "image": "fluent:left-arrow"
+    },
+    {
+      "id": "es-a1-moverse.v.mapa",
+      "word": "mapa",
+      "article": "el",
+      "gender": "m",
+      "ru": "карта (города)",
+      "notes": {
+        "ru": "Кончается на «-a», но мужского рода: «el mapa». А «la carta» — это меню или письмо!"
+      },
+      "situation": "ciudad",
+      "image": "fluent:world-map"
+    },
+    {
+      "id": "es-a1-moverse.v.sierras",
+      "word": "sierras",
+      "article": "las",
+      "gender": "pl",
+      "ru": "горы (в Кордове)",
+      "notes": {
+        "ru": "Кордовцы говорят «ir a las sierras» — поехать в горы на выходные."
+      },
+      "situation": "ciudad",
+      "image": "fluent:mountain"
+    }
+  ],
+  "qa": [
+    {
+      "id": "es-a1-moverse.qa.adonde-lo-llevo",
+      "question": "Buenas. ¿Adónde lo llevo?",
+      "questionRu": "Добрый вечер. Куда вас отвезти?",
+      "accepted": [
+        {
+          "text": "A la terminal, por favor.",
+          "ru": "На автовокзал, пожалуйста."
+        },
+        {
+          "text": "Al centro, por favor.",
+          "ru": "В центр, пожалуйста."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "En la terminal, por favor.",
+          "ru": "В здании автовокзала, пожалуйста. (куда — «a», не «en»)"
+        },
+        {
+          "text": "Soy a la terminal.",
+          "ru": "Я есть на автовокзал. (лишнее «soy»)"
+        }
+      ],
+      "register": "usted",
+      "situation": "transporte",
+      "notes": {
+        "ru": "Куда едешь — всегда «a»: «a la terminal», «al centro»."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-moverse.qa.parada",
+      "question": "¿Sabés dónde está la parada del sesenta?",
+      "questionRu": "Знаешь, где остановка шестидесятого?",
+      "accepted": [
+        {
+          "text": "Sí, está a dos cuadras.",
+          "ru": "Да, в двух кварталах."
+        },
+        {
+          "text": "No sé, perdón.",
+          "ru": "Не знаю, извини."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, soy a dos cuadras.",
+          "ru": "Да, я есть в двух кварталах. (место — «está»)"
+        },
+        {
+          "text": "Sí, tomo el sesenta.",
+          "ru": "Да, я езжу на шестидесятом. (это не ответ «где»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "transporte",
+      "notes": {
+        "ru": "Где что находится — «está» или «queda»."
+      }
+    },
+    {
+      "id": "es-a1-moverse.qa.bajas",
+      "question": "¿Bajás en la próxima?",
+      "questionRu": "Ты выходишь на следующей?",
+      "accepted": [
+        {
+          "text": "Sí, bajo en la próxima.",
+          "ru": "Да, выхожу на следующей."
+        },
+        {
+          "text": "No, todavía no.",
+          "ru": "Нет, ещё нет."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, bajás en la próxima.",
+          "ru": "Да, ты выходишь на следующей. (о себе — «bajo»)"
+        },
+        {
+          "text": "Sí, bajar.",
+          "ru": "Да, выходить. (глагол надо спрягать)"
+        }
+      ],
+      "register": "tu",
+      "situation": "transporte",
+      "notes": {
+        "ru": "В тесном колективо так спрашивают, чтобы пройти к двери."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-moverse.qa.lejos",
+      "question": "¿Está lejos el subte?",
+      "questionRu": "Метро далеко?",
+      "accepted": [
+        {
+          "text": "No, está cerca, a tres cuadras.",
+          "ru": "Нет, близко, в трёх кварталах."
+        },
+        {
+          "text": "Sí, está re lejos.",
+          "ru": "Да, очень далеко."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, estoy cerca.",
+          "ru": "Нет, я рядом. (речь о метро — «está»)"
+        },
+        {
+          "text": "No, es en la esquina.",
+          "ru": "Нет, оно есть на углу. (место — «está»)"
+        }
+      ],
+      "register": "neutral",
+      "situation": "ciudad"
+    },
+    {
+      "id": "es-a1-moverse.qa.te-ayudo",
+      "question": "¿Te ayudo? ¿Adónde vas?",
+      "questionRu": "Тебе помочь? Куда идёшь?",
+      "accepted": [
+        {
+          "text": "Voy a la plaza San Martín.",
+          "ru": "Иду на площадь Сан-Мартин."
+        },
+        {
+          "text": "A la terminal. ¿Está lejos?",
+          "ru": "На автовокзал. Это далеко?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Voy en la plaza San Martín.",
+          "ru": "Иду в площади Сан-Мартин. (куда — «a», не «en»)"
+        },
+        {
+          "text": "Vas a la terminal.",
+          "ru": "Ты идёшь на автовокзал. (о себе — «voy»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "ciudad",
+      "notes": {
+        "ru": "Кордовцы помогут сами, если увидят тебя с картой: «¿te ayudo?»."
+      }
+    },
+    {
+      "id": "es-a1-moverse.qa.ida-o-vuelta",
+      "question": "¿Ida y vuelta o solo ida?",
+      "questionRu": "Туда и обратно или только туда?",
+      "accepted": [
+        {
+          "text": "Ida y vuelta, por favor.",
+          "ru": "Туда и обратно, пожалуйста."
+        },
+        {
+          "text": "Solo ida, por favor.",
+          "ru": "Только туда, пожалуйста."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Solo ida, de nada.",
+          "ru": "Только туда, не за что. (просят с «por favor»)"
+        },
+        {
+          "text": "Sí, por favor.",
+          "ru": "Да, пожалуйста. (это не ответ на «или»)"
+        }
+      ],
+      "register": "neutral",
+      "situation": "transporte",
+      "notes": {
+        "ru": "В кассе автовокзала Кордовы: выбираешь одно из двух."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-moverse.qa.cinco-mil",
+      "question": "Hasta la terminal son cinco mil pesos. ¿Está bien?",
+      "questionRu": "До автовокзала пять тысяч песо. Хорошо?",
+      "accepted": [
+        {
+          "text": "Sí, está bien.",
+          "ru": "Да, хорошо."
+        },
+        {
+          "text": "Bueno, vamos.",
+          "ru": "Ладно, поехали."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, es bien.",
+          "ru": "Да, есть хорошо. (здесь — «está bien»)"
+        },
+        {
+          "text": "Sí, cinco pesos.",
+          "ru": "Да, пять песо. (ты не расслышал «mil» — тысяч)"
+        }
+      ],
+      "register": "usted",
+      "situation": "transporte",
+      "notes": {
+        "ru": "«¿Está bien?» — «нормально?»; соглашаются «sí, está bien»."
+      },
+      "voice": "es-AR-TomasNeural"
+    }
+  ]
+}

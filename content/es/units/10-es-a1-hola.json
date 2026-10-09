@@ -1,0 +1,1020 @@
+{
+  "id": "es-a1-hola",
+  "order": 10,
+  "title": {
+    "ru": "Привет, че!"
+  },
+  "description": {
+    "ru": "Здороваться и прощаться, говорить на «vos», знакомиться и выживать, когда ничего не понятно. Знакомься: Мартин из Буэнос-Айреса и Флор из Кордовы."
+  },
+  "emoji": "👋",
+  "situation": "saludos",
+  "lessons": [
+    {
+      "id": "es-a1-hola.l.saludar",
+      "title": {
+        "ru": "Привет и пока"
+      },
+      "items": [
+        "es-a1-hola.hola",
+        "es-a1-hola.buen-dia",
+        "es-a1-hola.buenas-tardes",
+        "es-a1-hola.buenas-noches",
+        "es-a1-hola.v.dia",
+        "es-a1-hola.v.manana",
+        "es-a1-hola.v.noche",
+        "es-a1-hola.chau",
+        "es-a1-hola.nos-vemos",
+        "es-a1-hola.un-beso",
+        "es-a1-hola.v.beso",
+        "es-a1-hola.todo-bien",
+        "es-a1-hola.todo-bien-y-vos",
+        "es-a1-hola.que-haces",
+        "es-a1-hola.hola-che",
+        "es-a1-hola.qa.todo-bien",
+        "es-a1-hola.qa.que-haces"
+      ]
+    },
+    {
+      "id": "es-a1-hola.l.presentarse",
+      "title": {
+        "ru": "Кто ты и откуда?"
+      },
+      "items": [
+        "es-a1-hola.me-llamo-ivan",
+        "es-a1-hola.v.nombre",
+        "es-a1-hola.v.apellido",
+        "es-a1-hola.como-te-llamas",
+        "es-a1-hola.como-se-llama",
+        "es-a1-hola.vos-sos-martin",
+        "es-a1-hola.v.amigo",
+        "es-a1-hola.v.amiga",
+        "es-a1-hola.v.chico",
+        "es-a1-hola.v.chica",
+        "es-a1-hola.soy-de-rusia",
+        "es-a1-hola.v.rusia",
+        "es-a1-hola.v.pais",
+        "es-a1-hola.soy-ruso",
+        "es-a1-hola.v.ruso",
+        "es-a1-hola.de-donde-sos",
+        "es-a1-hola.v.argentina",
+        "es-a1-hola.v.ciudad",
+        "es-a1-hola.v.porteno",
+        "es-a1-hola.v.cordobes",
+        "es-a1-hola.flor-es-de-cordoba",
+        "es-a1-hola.mucho-gusto",
+        "es-a1-hola.igualmente",
+        "es-a1-hola.v.celular",
+        "es-a1-hola.qa.nombre",
+        "es-a1-hola.qa.como-se-llama",
+        "es-a1-hola.qa.de-donde"
+      ]
+    },
+    {
+      "id": "es-a1-hola.l.cortesia",
+      "title": {
+        "ru": "Спасибо, пожалуйста, извини"
+      },
+      "items": [
+        "es-a1-hola.gracias",
+        "es-a1-hola.muchas-gracias",
+        "es-a1-hola.de-nada",
+        "es-a1-hola.por-favor",
+        "es-a1-hola.perdon",
+        "es-a1-hola.permiso",
+        "es-a1-hola.disculpe",
+        "es-a1-hola.v.senor",
+        "es-a1-hola.v.senora",
+        "es-a1-hola.dale",
+        "es-a1-hola.qa.gracias",
+        "es-a1-hola.qa.perdon"
+      ]
+    },
+    {
+      "id": "es-a1-hola.l.no-entiendo",
+      "title": {
+        "ru": "Когда не понимаешь"
+      },
+      "items": [
+        "es-a1-hola.no-entiendo",
+        "es-a1-hola.como",
+        "es-a1-hola.mas-despacio",
+        "es-a1-hola.me-lo-repetis",
+        "es-a1-hola.v.palabra",
+        "es-a1-hola.como-se-dice",
+        "es-a1-hola.v.castellano",
+        "es-a1-hola.hablo-un-poquito",
+        "es-a1-hola.hablas-ingles",
+        "es-a1-hola.v.ingles",
+        "es-a1-hola.qa.entendes"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "es-a1-hola.hola",
+      "text": "¡Hola!",
+      "ru": "Привет! / Здравствуйте!",
+      "explanation": {
+        "ru": "Подходит всем: другу, продавцу, врачу. «h» в испанском всегда немая: «ола», а не «хола»."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.buen-dia",
+      "text": "¡Buen día!",
+      "ru": "Доброе утро! / Добрый день!",
+      "notes": {
+        "ru": "Аргентинцы до обеда говорят «buen día»; «buenos días» — это скорее Испания."
+      },
+      "explanation": {
+        "ru": "Утром — в лифте, в кафе, в киоске, всем подряд. Ударение: буэн ДИ-а."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.buenas-tardes",
+      "text": "¡Buenas tardes!",
+      "ru": "Добрый день!",
+      "explanation": {
+        "ru": "После обеда и до темноты. Каждая «о» и «а» звучит чётко, без русского «аканья»."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.buenas-noches",
+      "text": "¡Buenas noches!",
+      "ru": "Добрый вечер! / Спокойной ночи!",
+      "explanation": {
+        "ru": "Вечером: и когда приходишь, и когда уходишь. «ch» — как мягкое русское «ч»."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.chau",
+      "text": "¡Chau!",
+      "ru": "Пока!",
+      "notes": {
+        "ru": "Пришло из итальянского «ciao», но пишется по-испански."
+      },
+      "explanation": {
+        "ru": "Прощаешься с кем угодно, даже с продавцом в киоске. Звучит «чау»."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.nos-vemos",
+      "text": "¡Nos vemos!",
+      "ru": "Увидимся!",
+      "explanation": {
+        "ru": "Тому, кого скоро снова увидишь. «v» звучит как «б»: нос БЕ-мос."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.todo-bien",
+      "text": "¿Todo bien?",
+      "ru": "Как дела? Всё норм?",
+      "explanation": {
+        "ru": "Самое частое «как дела» в Аргентине, часто сразу после «hola». Вопрос делает интонация вверх."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.todo-bien-y-vos",
+      "text": "Todo bien, ¿y vos?",
+      "ru": "Всё хорошо, а ты?",
+      "notes": {
+        "ru": "Вместо «tú» в Аргентине говорят «vos». «Tú» поймут, но здесь так почти никто не говорит."
+      },
+      "explanation": {
+        "ru": "Ответ другу на «¿todo bien?». «vos» звучит «бос»: «b» и «v» читаются одинаково."
+      },
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.que-haces",
+      "text": "¿Qué hacés?",
+      "ru": "Привет, как ты?",
+      "literal": {
+        "ru": "Что ты делаешь?"
+      },
+      "notes": {
+        "ru": "В Кордове Флор скажет «¿qué hacé'?» — последняя «s» пропадает. Это то же приветствие."
+      },
+      "explanation": {
+        "ru": "Это приветствие, а не вопрос о делах: отвечай «bien, ¿y vos?». Ударение на конце: а-СЕС."
+      },
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.hola-che",
+      "text": "¡Hola, che!",
+      "ru": "Привет, дружище!",
+      "notes": {
+        "ru": "«Che» — дружеское «эй, слушай»; аргентинцы вставляют его куда угодно."
+      },
+      "explanation": {
+        "ru": "С друзьями и ровесниками, но не с врачом или полицейским. Звучит «че»."
+      },
+      "register": "tu",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.un-beso",
+      "text": "Un beso.",
+      "ru": "Целую! (на прощание)",
+      "notes": {
+        "ru": "При встрече здесь целуются в щёку один раз — даже друзья-мужчины."
+      },
+      "explanation": {
+        "ru": "В конце звонка или сообщения другу. «s» между гласными — чистое «с», не «з»."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.me-llamo-ivan",
+      "text": "Me llamo Iván.",
+      "ru": "Меня зовут Иван.",
+      "literal": {
+        "ru": "Я себя называю Иван."
+      },
+      "explanation": {
+        "ru": "Когда знакомишься. «ll» в Аргентине звучит как «ш»: ме ША-мо."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.como-te-llamas",
+      "text": "¿Cómo te llamás?",
+      "ru": "Как тебя зовут?",
+      "explanation": {
+        "ru": "Ровеснику на вечеринке или в хостеле. Ударение на конце: ша-МАС."
+      },
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.como-se-llama",
+      "text": "¿Cómo se llama usted?",
+      "ru": "Как вас зовут?",
+      "explanation": {
+        "ru": "Пожилому человеку или в официальной обстановке. Ударение уже в середине: ША-ма."
+      },
+      "register": "usted",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.vos-sos-martin",
+      "text": "Vos sos Martín, ¿no?",
+      "ru": "Ты ведь Мартин, да?",
+      "notes": {
+        "ru": "«Sos» — это «ты есть» для «vos»; «¿no?» в конце = «да?»."
+      },
+      "explanation": {
+        "ru": "Когда уточняешь, тот ли это человек. «vos sos» звучит «бос сос»."
+      },
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.soy-de-rusia",
+      "text": "Soy de Rusia.",
+      "ru": "Я из России.",
+      "explanation": {
+        "ru": "Ответ на «¿de dónde sos?». «r» в начале слова раскатистая, как в «ррраз»."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.de-donde-sos",
+      "text": "¿De dónde sos?",
+      "ru": "Ты откуда?",
+      "explanation": {
+        "ru": "Этот вопрос тебе зададут сто раз. «d» между гласными мягкая, почти как английское «th»."
+      },
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.soy-ruso",
+      "text": "Soy ruso.",
+      "ru": "Я русский.",
+      "notes": {
+        "ru": "Девушка скажет «soy rusa». Национальность пишется с маленькой буквы."
+      },
+      "explanation": {
+        "ru": "Когда спрашивают, откуда ты. Не путай: «ruso» — русский, «Rusia» — Россия."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.flor-es-de-cordoba",
+      "text": "Flor es de Córdoba.",
+      "ru": "Флор из Кордовы.",
+      "notes": {
+        "ru": "У кордовцев своя «тонада»: слог перед ударным они тянут, будто поют."
+      },
+      "explanation": {
+        "ru": "Когда рассказываешь о друзьях. «Córdoba» — ударение на первый слог: КОР-до-ба."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.mucho-gusto",
+      "text": "¡Mucho gusto!",
+      "ru": "Очень приятно!",
+      "explanation": {
+        "ru": "Сразу после знакомства, с кем угодно. «u» всегда «у»: МУ-чо ГУС-то."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.igualmente",
+      "text": "Igualmente.",
+      "ru": "Взаимно.",
+      "explanation": {
+        "ru": "Ответ на «¡mucho gusto!» или на добрые пожелания. Ударение: и-гуаль-МЕН-те."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.gracias",
+      "text": "Gracias.",
+      "ru": "Спасибо.",
+      "explanation": {
+        "ru": "Везде и всем. Но осторожно с мате: «gracias» там значит «мне больше не наливать»."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.muchas-gracias",
+      "text": "¡Muchas gracias!",
+      "ru": "Большое спасибо!",
+      "explanation": {
+        "ru": "Когда тебе реально помогли. «s» перед согласной часто звучит почти как «х»: МУ-чах."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.de-nada",
+      "text": "De nada.",
+      "ru": "Не за что.",
+      "notes": {
+        "ru": "Отвечает на «gracias». Русское «пожалуйста» в ответ на спасибо — это именно «de nada»."
+      },
+      "explanation": {
+        "ru": "Ответ на спасибо, с кем угодно. Ударение: де НА-да."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.por-favor",
+      "text": "Por favor.",
+      "ru": "Пожалуйста (прошу).",
+      "notes": {
+        "ru": "Только когда просишь. На «gracias» отвечают не «por favor», а «de nada»!"
+      },
+      "explanation": {
+        "ru": "В конце любой просьбы: «un café, por favor». Звучит «пор фа-БОР»."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.perdon",
+      "text": "Perdón.",
+      "ru": "Извини. / Извините.",
+      "explanation": {
+        "ru": "Наступил на ногу или перебил — говори это. Ударение на конце: пер-ДОН."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.permiso",
+      "text": "Permiso.",
+      "ru": "Разрешите (пройти).",
+      "notes": {
+        "ru": "Так говорят, когда протискиваются в колективо или заходят в чужой дом."
+      },
+      "explanation": {
+        "ru": "Пробираешься к выходу в автобусе или входишь в гости. пер-МИ-со."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.disculpe",
+      "text": "Disculpe.",
+      "ru": "Извините.",
+      "notes": {
+        "ru": "Другу скажешь «disculpá» или просто «perdón»."
+      },
+      "explanation": {
+        "ru": "Чтобы обратиться к незнакомому: водителю, полицейскому, пожилой сеньоре. дис-КУЛЬ-пе."
+      },
+      "register": "usted",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.dale",
+      "text": "¡Dale!",
+      "ru": "Давай! / Окей!",
+      "notes": {
+        "ru": "Главное аргентинское «да»: соглашаешься на всё, от мате до встречи."
+      },
+      "explanation": {
+        "ru": "С друзьями и почти везде, когда соглашаешься. Ударение на первый слог: ДА-ле."
+      },
+      "register": "neutral",
+      "situation": "saludos"
+    },
+    {
+      "id": "es-a1-hola.no-entiendo",
+      "text": "No entiendo.",
+      "ru": "Я не понимаю.",
+      "explanation": {
+        "ru": "Не стесняйся: аргентинцы тут же объяснят ещё раз. Ударение: эн-ТЬЕН-до."
+      },
+      "register": "neutral",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-hola.como",
+      "text": "¿Cómo?",
+      "ru": "Что? Как-как?",
+      "notes": {
+        "ru": "Вежливое «что?»; одно «¿qué?» звучит резковато."
+      },
+      "explanation": {
+        "ru": "Когда не расслышал. Короткое КО-мо с интонацией вверх."
+      },
+      "register": "neutral",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-hola.mas-despacio",
+      "text": "Más despacio, por favor.",
+      "ru": "Помедленнее, пожалуйста.",
+      "explanation": {
+        "ru": "Когда говорят слишком быстро — а портеньо говорят быстро. дес-ПА-сьо."
+      },
+      "register": "neutral",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-hola.me-lo-repetis",
+      "text": "¿Me lo repetís?",
+      "ru": "Повторишь, пожалуйста?",
+      "literal": {
+        "ru": "Ты мне это повторишь?"
+      },
+      "explanation": {
+        "ru": "Другу или молодому продавцу. Незнакомому взрослому — «¿me lo repite?». Ударение: ре-пе-ТИС."
+      },
+      "register": "tu",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-hola.como-se-dice",
+      "text": "¿Cómo se dice en castellano?",
+      "ru": "Как это по-испански?",
+      "notes": {
+        "ru": "В Аргентине испанский чаще называют «castellano»."
+      },
+      "explanation": {
+        "ru": "Показываешь на вещь и спрашиваешь. «ll» снова «ш»: кас-те-ША-но."
+      },
+      "register": "neutral",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-hola.hablo-un-poquito",
+      "text": "Hablo un poquito de castellano.",
+      "ru": "Я немного говорю по-испански.",
+      "explanation": {
+        "ru": "Предупреди сразу — и с тобой заговорят медленнее. «h» немая: АБ-ло."
+      },
+      "register": "neutral",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-hola.hablas-ingles",
+      "text": "¿Hablás inglés?",
+      "ru": "Ты говоришь по-английски?",
+      "explanation": {
+        "ru": "Запасной план. Незнакомому взрослому — «¿habla inglés?». Ударение: а-БЛАС, ин-ГЛЕС."
+      },
+      "register": "tu",
+      "situation": "no-entiendo"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "es-a1-hola.v.amigo",
+      "word": "amigo",
+      "article": "el",
+      "gender": "m",
+      "ru": "друг",
+      "situation": "presentarse",
+      "image": "fluent:people-hugging"
+    },
+    {
+      "id": "es-a1-hola.v.amiga",
+      "word": "amiga",
+      "article": "la",
+      "gender": "f",
+      "ru": "подруга",
+      "notes": {
+        "ru": "Почти все слова на «-o» мужского рода, на «-a» — женского."
+      },
+      "situation": "presentarse",
+      "image": "fluent:people-hugging"
+    },
+    {
+      "id": "es-a1-hola.v.chico",
+      "word": "chico",
+      "article": "el",
+      "gender": "m",
+      "ru": "парень",
+      "notes": {
+        "ru": "Ещё услышишь «pibe» — так в Буэнос-Айресе говорят о парне."
+      },
+      "situation": "presentarse",
+      "image": "fluent:boy"
+    },
+    {
+      "id": "es-a1-hola.v.chica",
+      "word": "chica",
+      "article": "la",
+      "gender": "f",
+      "ru": "девушка",
+      "notes": {
+        "ru": "Разговорное «mina» тоже значит «девушка», но говори его только среди друзей."
+      },
+      "situation": "presentarse",
+      "image": "fluent:girl"
+    },
+    {
+      "id": "es-a1-hola.v.senor",
+      "word": "señor",
+      "article": "el",
+      "gender": "m",
+      "ru": "господин, мужчина",
+      "notes": {
+        "ru": "«ñ» звучит как «нь»: се-НЬОР."
+      },
+      "situation": "saludos",
+      "image": "fluent:man"
+    },
+    {
+      "id": "es-a1-hola.v.senora",
+      "word": "señora",
+      "article": "la",
+      "gender": "f",
+      "ru": "госпожа, женщина",
+      "situation": "saludos",
+      "image": "fluent:woman"
+    },
+    {
+      "id": "es-a1-hola.v.nombre",
+      "word": "nombre",
+      "article": "el",
+      "gender": "m",
+      "ru": "имя",
+      "example": "es-a1-hola.me-llamo-ivan",
+      "situation": "presentarse",
+      "image": "fluent:name-badge"
+    },
+    {
+      "id": "es-a1-hola.v.apellido",
+      "word": "apellido",
+      "article": "el",
+      "gender": "m",
+      "ru": "фамилия",
+      "notes": {
+        "ru": "Ложный друг: «familia» — это семья, а фамилия — «apellido»."
+      },
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.v.pais",
+      "word": "país",
+      "article": "el",
+      "gender": "m",
+      "ru": "страна",
+      "notes": {
+        "ru": "Две гласные, ударение на «í»: па-ИС."
+      },
+      "situation": "presentarse",
+      "image": "fluent:globe-showing-americas"
+    },
+    {
+      "id": "es-a1-hola.v.ciudad",
+      "word": "ciudad",
+      "article": "la",
+      "gender": "f",
+      "ru": "город",
+      "situation": "presentarse",
+      "image": "fluent:cityscape"
+    },
+    {
+      "id": "es-a1-hola.v.rusia",
+      "word": "Rusia",
+      "gender": "f",
+      "ru": "Россия",
+      "example": "es-a1-hola.soy-de-rusia",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.v.argentina",
+      "word": "Argentina",
+      "gender": "f",
+      "ru": "Аргентина",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.v.ruso",
+      "word": "ruso",
+      "article": "el",
+      "gender": "m",
+      "ru": "русский (язык)",
+      "notes": {
+        "ru": "О себе — без артикля: «soy ruso», «soy rusa»."
+      },
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.v.castellano",
+      "word": "castellano",
+      "article": "el",
+      "gender": "m",
+      "ru": "испанский (язык)",
+      "example": "es-a1-hola.como-se-dice",
+      "situation": "no-entiendo",
+      "image": "fluent:speaking-head"
+    },
+    {
+      "id": "es-a1-hola.v.ingles",
+      "word": "inglés",
+      "article": "el",
+      "gender": "m",
+      "ru": "английский (язык)",
+      "example": "es-a1-hola.hablas-ingles",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-hola.v.palabra",
+      "word": "palabra",
+      "article": "la",
+      "gender": "f",
+      "ru": "слово",
+      "situation": "no-entiendo",
+      "image": "fluent:speech-balloon"
+    },
+    {
+      "id": "es-a1-hola.v.celular",
+      "word": "celular",
+      "article": "el",
+      "gender": "m",
+      "ru": "мобильный, телефон",
+      "notes": {
+        "ru": "Не «móvil», как в Испании: здесь все говорят «celu»."
+      },
+      "situation": "presentarse",
+      "image": "fluent:mobile-phone"
+    },
+    {
+      "id": "es-a1-hola.v.beso",
+      "word": "beso",
+      "article": "el",
+      "gender": "m",
+      "ru": "поцелуй",
+      "example": "es-a1-hola.un-beso",
+      "situation": "saludos",
+      "image": "fluent:kiss-mark"
+    },
+    {
+      "id": "es-a1-hola.v.dia",
+      "word": "día",
+      "article": "el",
+      "gender": "m",
+      "ru": "день",
+      "notes": {
+        "ru": "Кончается на «-a», но мужского рода: «el día», «buen día»."
+      },
+      "situation": "saludos",
+      "image": "fluent:sun"
+    },
+    {
+      "id": "es-a1-hola.v.manana",
+      "word": "mañana",
+      "article": "la",
+      "gender": "f",
+      "ru": "утро",
+      "notes": {
+        "ru": "Без артикля «mañana» значит «завтра»."
+      },
+      "situation": "saludos",
+      "image": "fluent:sunrise"
+    },
+    {
+      "id": "es-a1-hola.v.noche",
+      "word": "noche",
+      "article": "la",
+      "gender": "f",
+      "ru": "вечер, ночь",
+      "example": "es-a1-hola.buenas-noches",
+      "situation": "saludos",
+      "image": "fluent:night-with-stars"
+    },
+    {
+      "id": "es-a1-hola.v.porteno",
+      "word": "porteño",
+      "article": "el",
+      "gender": "m",
+      "ru": "портеньо (житель Буэнос-Айреса)",
+      "notes": {
+        "ru": "От «puerto» — порт. Жительница — «porteña»."
+      },
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-hola.v.cordobes",
+      "word": "cordobés",
+      "article": "el",
+      "gender": "m",
+      "ru": "кордовец",
+      "notes": {
+        "ru": "Жительница Кордовы — «cordobesa», как Флор."
+      },
+      "situation": "presentarse"
+    }
+  ],
+  "qa": [
+    {
+      "id": "es-a1-hola.qa.todo-bien",
+      "question": "¡Hola! ¿Todo bien?",
+      "questionRu": "Привет! Как дела?",
+      "accepted": [
+        {
+          "text": "Todo bien, ¿y vos?",
+          "ru": "Всё хорошо, а ты?"
+        },
+        {
+          "text": "¡Hola! Bien, gracias.",
+          "ru": "Привет! Хорошо, спасибо."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Soy bien, ¿y vos?",
+          "ru": "Я хороший, а ты? (о самочувствии — «estoy», не «soy»)"
+        },
+        {
+          "text": "Todo bien, ¿y tú?",
+          "ru": "Всё хорошо, а ты? (в Аргентине говорят «vos»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": {
+        "ru": "На «¿todo bien?» отвечают коротко и возвращают вопрос: «¿y vos?»."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-hola.qa.que-haces",
+      "question": "¡Hola, Iván! ¿Qué hacés?",
+      "questionRu": "Привет, Иван! Как ты?",
+      "accepted": [
+        {
+          "text": "¡Hola, Flor! Todo bien, ¿y vos?",
+          "ru": "Привет, Флор! Всё хорошо, а ты?"
+        },
+        {
+          "text": "Bien, bien. ¿Vos qué hacés?",
+          "ru": "Хорошо-хорошо. А ты как?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Hola, Flor. ¿Y tú qué haces?",
+          "ru": "Привет, Флор. А ты как? (это «tú», здесь говорят «vos»)"
+        },
+        {
+          "text": "Estoy Iván, gracias.",
+          "ru": "Я нахожусь Иван, спасибо. (о себе — «soy», и это не ответ)"
+        }
+      ],
+      "register": "tu",
+      "situation": "saludos",
+      "notes": {
+        "ru": "«¿Qué hacés?» (в Кордове «¿qué hacé'?») — это просто «привет, как ты?»."
+      }
+    },
+    {
+      "id": "es-a1-hola.qa.nombre",
+      "question": "¿Cómo te llamás?",
+      "questionRu": "Как тебя зовут?",
+      "accepted": [
+        {
+          "text": "Me llamo Iván.",
+          "ru": "Меня зовут Иван."
+        },
+        {
+          "text": "Soy Iván, ¿y vos?",
+          "ru": "Я Иван, а ты?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mi nombre Iván.",
+          "ru": "Моё имя Иван. (нет глагола: «mi nombre es Iván»)"
+        },
+        {
+          "text": "Te llamo Iván.",
+          "ru": "Я тебе позвоню, Иван."
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": {
+        "ru": "«Me llamo» — меня зовут; «te llamo» — я тебе позвоню."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-hola.qa.como-se-llama",
+      "question": "¿Cómo se llama usted?",
+      "questionRu": "Как вас зовут?",
+      "accepted": [
+        {
+          "text": "Me llamo Iván Petrov.",
+          "ru": "Меня зовут Иван Петров."
+        },
+        {
+          "text": "Iván Petrov, mucho gusto.",
+          "ru": "Иван Петров, очень приятно."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Se llama Iván.",
+          "ru": "Его зовут Иван."
+        },
+        {
+          "text": "¿Y vos cómo te llamás?",
+          "ru": "А тебя как зовут? (на «usted» так не переспрашивают)"
+        }
+      ],
+      "register": "usted",
+      "situation": "presentarse",
+      "notes": {
+        "ru": "В официальной обстановке называют имя и фамилию."
+      }
+    },
+    {
+      "id": "es-a1-hola.qa.de-donde",
+      "question": "¿De dónde sos?",
+      "questionRu": "Ты откуда?",
+      "accepted": [
+        {
+          "text": "Soy de Rusia.",
+          "ru": "Я из России."
+        },
+        {
+          "text": "Soy ruso, de Ekaterimburgo.",
+          "ru": "Я русский, из Екатеринбурга."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Estoy de Rusia.",
+          "ru": "Я нахожусь из России. (происхождение — «soy»)"
+        },
+        {
+          "text": "Soy en Rusia.",
+          "ru": "Я есть в России. (откуда — «de»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": {
+        "ru": "Откуда ты — всегда «ser de»: «soy de Rusia»."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-hola.qa.gracias",
+      "question": "¡Muchas gracias!",
+      "questionRu": "Большое спасибо!",
+      "accepted": [
+        {
+          "text": "De nada.",
+          "ru": "Не за что."
+        },
+        {
+          "text": "¡De nada, che!",
+          "ru": "Да не за что!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Por favor.",
+          "ru": "Пожалуйста (так только просят)."
+        },
+        {
+          "text": "Perdón.",
+          "ru": "Извини."
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": {
+        "ru": "Русское «пожалуйста» в ответ на спасибо — это «de nada», не «por favor»."
+      }
+    },
+    {
+      "id": "es-a1-hola.qa.perdon",
+      "question": "¡Ay, perdón!",
+      "questionRu": "Ой, извини!",
+      "accepted": [
+        {
+          "text": "No pasa nada.",
+          "ru": "Ничего страшного."
+        },
+        {
+          "text": "Tranqui, no pasa nada.",
+          "ru": "Спокойно, всё нормально."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "De nada.",
+          "ru": "Не за что. (это ответ на «gracias»)"
+        },
+        {
+          "text": "Por favor.",
+          "ru": "Пожалуйста (так только просят)."
+        }
+      ],
+      "register": "neutral",
+      "situation": "saludos",
+      "notes": {
+        "ru": "На извинение отвечают «no pasa nada»; «tranqui» — это «спокойно»."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-hola.qa.entendes",
+      "question": "¿Entendés?",
+      "questionRu": "Понимаешь?",
+      "accepted": [
+        {
+          "text": "No, no entiendo. Más despacio, por favor.",
+          "ru": "Нет, не понимаю. Помедленнее, пожалуйста."
+        },
+        {
+          "text": "Sí, entiendo.",
+          "ru": "Да, понимаю."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, no entiendes.",
+          "ru": "Нет, ты не понимаешь. (о себе — «entiendo»)"
+        },
+        {
+          "text": "Sí, yo entender.",
+          "ru": "Да, я понимать. (глагол надо спрягать)"
+        }
+      ],
+      "register": "tu",
+      "situation": "no-entiendo",
+      "notes": {
+        "ru": "Отвечай о себе: «entiendo» / «no entiendo»."
+      }
+    }
+  ]
+}

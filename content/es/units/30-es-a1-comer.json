@@ -1,0 +1,1052 @@
+{
+  "id": "es-a1-comer",
+  "order": 30,
+  "title": {
+    "ru": "Медиалуны, мате и асадо"
+  },
+  "description": {
+    "ru": "Кофе с медиалунами, ритуал мате, асадо и эмпанадас, счёт в кафе — и кордовская классика: фернет с колой и ломито."
+  },
+  "emoji": "🥟",
+  "situation": "comida",
+  "lessons": [
+    {
+      "id": "es-a1-comer.l.cafe",
+      "title": {
+        "ru": "Кофе и медиалуны"
+      },
+      "items": [
+        "es-a1-comer.v.cafe",
+        "es-a1-comer.v.leche",
+        "es-a1-comer.un-cafe-con-leche",
+        "es-a1-comer.v.medialuna",
+        "es-a1-comer.con-dos-medialunas",
+        "es-a1-comer.me-traes-un-cortado",
+        "es-a1-comer.v.agua",
+        "es-a1-comer.me-das-un-agua",
+        "es-a1-comer.con-gas",
+        "es-a1-comer.v.vaso",
+        "es-a1-comer.v.factura",
+        "es-a1-comer.una-docena-de-facturas",
+        "es-a1-comer.v.pan",
+        "es-a1-comer.v.manteca",
+        "es-a1-comer.que-me-recomendas",
+        "es-a1-comer.para-llevar",
+        "es-a1-comer.v.frutilla",
+        "es-a1-comer.v.helado",
+        "es-a1-comer.qa.que-vas-a-tomar",
+        "es-a1-comer.qa.algo-mas"
+      ]
+    },
+    {
+      "id": "es-a1-comer.l.mate",
+      "title": {
+        "ru": "Ритуал мате"
+      },
+      "items": [
+        "es-a1-comer.v.mate",
+        "es-a1-comer.tomamos-unos-mates",
+        "es-a1-comer.v.yerba",
+        "es-a1-comer.v.termo",
+        "es-a1-comer.v.bombilla",
+        "es-a1-comer.quien-ceba",
+        "es-a1-comer.me-pasas-el-termo",
+        "es-a1-comer.no-muevas-la-bombilla",
+        "es-a1-comer.esta-muy-caliente",
+        "es-a1-hola.gracias",
+        "es-a1-comer.uno-mas-y-listo",
+        "es-a1-comer.qa.otro-mate"
+      ]
+    },
+    {
+      "id": "es-a1-comer.l.asado",
+      "title": {
+        "ru": "Асадо, эмпанадас и миланеса"
+      },
+      "items": [
+        "es-a1-comer.v.asado",
+        "es-a1-comer.v.parrilla",
+        "es-a1-comer.hay-asado",
+        "es-a1-comer.v.carne",
+        "es-a1-comer.v.choripan",
+        "es-a1-comer.un-choripan",
+        "es-a1-comer.un-aplauso-para-el-asador",
+        "es-a1-comer.v.empanada",
+        "es-a1-comer.de-que-son-las-empanadas",
+        "es-a1-comer.v.pollo",
+        "es-a1-comer.v.queso",
+        "es-a1-comer.dos-de-carne-y-una-de-pollo",
+        "es-a1-comer.v.milanesa",
+        "es-a1-comer.v.papas-fritas",
+        "es-a1-comer.una-milanesa-con-papas-fritas",
+        "es-a1-comer.v.palta",
+        "es-a1-comer.soy-vegetariano",
+        "es-a1-comer.buen-provecho",
+        "es-a1-comer.esta-riquisimo",
+        "es-a1-comer.estoy-lleno",
+        "es-a1-comer.qa.carne-o-pollo",
+        "es-a1-comer.qa.que-tal-el-asado"
+      ]
+    },
+    {
+      "id": "es-a1-comer.l.cuenta-cordoba",
+      "title": {
+        "ru": "Счёт и вечер в Кордове"
+      },
+      "items": [
+        "es-a1-comer.v.mozo",
+        "es-a1-comer.la-cuenta",
+        "es-a1-comer.v.cuenta",
+        "es-a1-comer.me-cobras",
+        "es-a1-comer.v.birra",
+        "es-a1-comer.una-birra-bien-fria",
+        "es-a1-comer.v.vino",
+        "es-a1-comer.salud",
+        "es-a1-comer.v.fernet",
+        "es-a1-comer.un-fernet-con-coca",
+        "es-a1-comer.v.lomito",
+        "es-a1-comer.un-lomito-completo",
+        "es-a1-comer.v.alfajor",
+        "es-a1-comer.proba-este-alfajor",
+        "es-a1-comer.en-las-sierras-se-come-bien",
+        "es-a1-comer.qa.un-fernet",
+        "es-a1-comer.qa.la-cuenta"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "es-a1-comer.un-cafe-con-leche",
+      "text": "Un café con leche, por favor.",
+      "ru": "Кофе с молоком, пожалуйста.",
+      "explanation": {
+        "ru": "Классический аргентинский завтрак в кафе. «c» перед «a» — как «к»: ка-ФЕ."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.con-dos-medialunas",
+      "text": "Con dos medialunas.",
+      "ru": "И две медиалуны.",
+      "notes": {
+        "ru": "Медиалуна — маленький сладкий круассан; «de manteca» — на сливочном масле."
+      },
+      "explanation": {
+        "ru": "Добавляешь к кофе. ме-дья-ЛУ-нас: «медиа луна» — «полумесяц»."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.me-traes-un-cortado",
+      "text": "¿Me traés un cortado?",
+      "ru": "Принесёшь мне кортадо?",
+      "notes": {
+        "ru": "Кортадо — эспрессо с капелькой молока."
+      },
+      "explanation": {
+        "ru": "Молодому официанту в кафе. Ударение на конце: тра-ЭС."
+      },
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.me-das-un-agua",
+      "text": "¿Me das un agua sin gas?",
+      "ru": "Дашь воды без газа?",
+      "notes": {
+        "ru": "«Agua» женского рода, но говорят «el agua», «un agua» — так легче произносить."
+      },
+      "explanation": {
+        "ru": "Просишь в кафе или в киоске. «g» между гласными мягкая: А-гуа."
+      },
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.con-gas",
+      "text": "Con gas, por favor.",
+      "ru": "С газом, пожалуйста.",
+      "explanation": {
+        "ru": "Ответ на «¿con gas o sin gas?». «g» перед «a» — как русское «г»."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.una-docena-de-facturas",
+      "text": "Una docena de facturas, por favor.",
+      "ru": "Дюжину выпечки, пожалуйста.",
+      "notes": {
+        "ru": "«Facturas» — сладкая выпечка из пекарни; по воскресеньям её берут дюжинами к мате."
+      },
+      "explanation": {
+        "ru": "В пекарне. Не путай: «factura» здесь — булочка, а не счёт-фактура."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.que-me-recomendas",
+      "text": "¿Qué me recomendás?",
+      "ru": "Что посоветуешь?",
+      "explanation": {
+        "ru": "Когда не знаешь, что взять. Ударение на конце: ре-ко-мен-ДАС."
+      },
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.para-llevar",
+      "text": "Para llevar.",
+      "ru": "С собой.",
+      "explanation": {
+        "ru": "Когда берёшь еду или кофе навынос. «ll» как «ш»: ше-БАР."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.tomamos-unos-mates",
+      "text": "¿Tomamos unos mates?",
+      "ru": "Попьём мате?",
+      "notes": {
+        "ru": "Мате не «пьют», а «toman»; и почти всегда в компании."
+      },
+      "explanation": {
+        "ru": "Так зовут в гости и на разговор. МА-тес: ударение на первый слог."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.quien-ceba",
+      "text": "¿Quién ceba?",
+      "ru": "Кто разливает?",
+      "notes": {
+        "ru": "«Cebador» заваривает мате и передаёт его по кругу каждому по очереди."
+      },
+      "explanation": {
+        "ru": "Спрашиваешь в начале «ронды». «c» перед «e» — «с»: СЕ-ба."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.me-pasas-el-termo",
+      "text": "¿Me pasás el termo?",
+      "ru": "Передашь термос?",
+      "explanation": {
+        "ru": "Термос с горячей водой — всегда рядом с мате. па-САС, ТЕР-мо."
+      },
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.no-muevas-la-bombilla",
+      "text": "No muevas la bombilla.",
+      "ru": "Не крути трубочку.",
+      "notes": {
+        "ru": "Главное правило мате: трубочку не трогают, иначе забьётся травой."
+      },
+      "explanation": {
+        "ru": "Так тебе скажет Мартин, когда ты начнёшь мешать мате. «ll» — «ш»: бом-БИ-ша."
+      },
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.esta-muy-caliente",
+      "text": "¡Está muy caliente!",
+      "ru": "Очень горячо!",
+      "explanation": {
+        "ru": "Первый глоток мате обжигает. «caliente» — горячий: ка-ЛЬЕН-те."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.uno-mas-y-listo",
+      "text": "Uno más y listo.",
+      "ru": "Ещё один — и хватит.",
+      "explanation": {
+        "ru": "Когда хочешь последний мате. «listo» — готово, хватит: ЛИС-то."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.hay-asado",
+      "text": "El domingo hay asado.",
+      "ru": "В воскресенье асадо.",
+      "notes": {
+        "ru": "Асадо — мясо на углях и главный повод собраться с семьёй и друзьями."
+      },
+      "explanation": {
+        "ru": "Приглашение, от которого не отказываются. «h» немая: «ай»."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.un-aplauso-para-el-asador",
+      "text": "¡Un aplauso para el asador!",
+      "ru": "Аплодисменты асадору!",
+      "notes": {
+        "ru": "После асадо все хлопают тому, кто жарил мясо: это традиция."
+      },
+      "explanation": {
+        "ru": "Кричишь в конце обеда, все поддержат. а-ПЛАУ-со: «au» — одним слогом."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.un-choripan",
+      "text": "Un choripán, por favor.",
+      "ru": "Чорипан, пожалуйста.",
+      "notes": {
+        "ru": "Чорипан — колбаска чорисо в булке; самый быстрый перекус у стадиона."
+      },
+      "explanation": {
+        "ru": "У уличного гриля. Ударение на конце: чо-ри-ПАН."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.de-que-son-las-empanadas",
+      "text": "¿De qué son las empanadas?",
+      "ru": "С чем эмпанадас?",
+      "notes": {
+        "ru": "Начинка — с «de»: «de carne», «de pollo», «de jamón y queso»."
+      },
+      "explanation": {
+        "ru": "Спрашиваешь в пиццерии или на рынке. ем-па-НА-дас."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.dos-de-carne-y-una-de-pollo",
+      "text": "Dos de carne y una de pollo.",
+      "ru": "Две с мясом и одну с курицей.",
+      "explanation": {
+        "ru": "Заказываешь эмпанадас по штуке. «ll» в «pollo» — «ш»: ПО-шо."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.una-milanesa-con-papas-fritas",
+      "text": "Una milanesa con papas fritas.",
+      "ru": "Миланесу с картошкой фри.",
+      "notes": {
+        "ru": "Миланеса — отбивная в панировке, любимая еда всей страны. Картошка здесь — «papa»."
+      },
+      "explanation": {
+        "ru": "В любом бодегоне. ми-ла-НЕ-са, ПА-пас."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.soy-vegetariano",
+      "text": "Soy vegetariano.",
+      "ru": "Я вегетарианец.",
+      "notes": {
+        "ru": "На асадо это вызовет шок, но для тебя пожарят овощи и сыр «provoleta»."
+      },
+      "explanation": {
+        "ru": "Говоришь заранее, когда зовут на асадо. Девушка — «vegetariana»."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.esta-riquisimo",
+      "text": "¡Está riquísimo!",
+      "ru": "Очень вкусно!",
+      "notes": {
+        "ru": "«-ísimo» усиливает: «rico» — вкусный, «riquísimo» — очень вкусный."
+      },
+      "explanation": {
+        "ru": "Лучший комплимент хозяину. ри-КИ-си-мо."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.estoy-lleno",
+      "text": "Estoy lleno.",
+      "ru": "Я наелся.",
+      "notes": {
+        "ru": "Девушка скажет «estoy llena»."
+      },
+      "explanation": {
+        "ru": "Когда больше не лезет, а тебе несут ещё мясо. ШЕ-но."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.buen-provecho",
+      "text": "¡Buen provecho!",
+      "ru": "Приятного аппетита!",
+      "explanation": {
+        "ru": "Говоришь тем, кто ест, даже незнакомым за соседним столом. про-БЕ-чо."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.salud",
+      "text": "¡Salud!",
+      "ru": "За здоровье! / Будем!",
+      "explanation": {
+        "ru": "Тост, когда чокаются. «d» на конце почти не слышна: са-ЛУ."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.la-cuenta",
+      "text": "La cuenta, por favor.",
+      "ru": "Счёт, пожалуйста.",
+      "explanation": {
+        "ru": "Официант сам не принесёт счёт — надо попросить. КУЭН-та."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.me-cobras",
+      "text": "¿Me cobrás?",
+      "ru": "Посчитаешь меня?",
+      "notes": {
+        "ru": "Так просят рассчитать прямо у кассы или у официанта."
+      },
+      "explanation": {
+        "ru": "Хочешь заплатить и уйти. Ударение на конце: ко-БРАС."
+      },
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.una-birra-bien-fria",
+      "text": "Una birra bien fría, por favor.",
+      "ru": "Холодного пива, пожалуйста.",
+      "notes": {
+        "ru": "«Birra» — разговорное «пиво» (от итальянского); официально «cerveza»."
+      },
+      "explanation": {
+        "ru": "Жарким вечером с друзьями. БИ-рра: двойная «rr» раскатистая."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.un-fernet-con-coca",
+      "text": "Un fernet con coca, por favor.",
+      "ru": "Фернет с колой, пожалуйста.",
+      "notes": {
+        "ru": "Горький ликёр с колой — национальный напиток Кордовы; Флор считает его святым."
+      },
+      "explanation": {
+        "ru": "В баре в Кордове. Говори «coca», не «cola»: «cola» здесь — попа!"
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.un-lomito-completo",
+      "text": "Un lomito completo, por favor.",
+      "ru": "Ломито со всем, пожалуйста.",
+      "notes": {
+        "ru": "Ломито — огромный сэндвич с говядиной; «completo» — с ветчиной, сыром, яйцом и салатом."
+      },
+      "explanation": {
+        "ru": "Ночной перекус в Кордове. ло-МИ-то ком-ПЛЕ-то."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.proba-este-alfajor",
+      "text": "Probá este alfajor cordobés.",
+      "ru": "Попробуй этот кордовский альфахор.",
+      "notes": {
+        "ru": "Альфахор — печенье с начинкой дульсе де лече; кордовские — с фруктовой начинкой и глазурью."
+      },
+      "explanation": {
+        "ru": "Флор угощает тебя. «j» — «х»: аль-фа-ХОР."
+      },
+      "register": "tu",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.en-las-sierras-se-come-bien",
+      "text": "En las sierras se come re bien.",
+      "ru": "В горах кормят отлично.",
+      "explanation": {
+        "ru": "Про парриллу у реки в горах Кордовы. «re bien» — «очень хорошо»."
+      },
+      "register": "neutral",
+      "situation": "comida"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "es-a1-comer.v.medialuna",
+      "word": "medialuna",
+      "article": "la",
+      "gender": "f",
+      "ru": "медиалуна (сладкий круассан)",
+      "example": "es-a1-comer.con-dos-medialunas",
+      "situation": "comida",
+      "image": "fluent:croissant"
+    },
+    {
+      "id": "es-a1-comer.v.factura",
+      "word": "factura",
+      "article": "la",
+      "gender": "f",
+      "ru": "сладкая булочка",
+      "notes": {
+        "ru": "Обычно во множественном: «las facturas»."
+      },
+      "example": "es-a1-comer.una-docena-de-facturas",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.v.cafe",
+      "word": "café",
+      "article": "el",
+      "gender": "m",
+      "ru": "кофе",
+      "example": "es-a1-comer.un-cafe-con-leche",
+      "situation": "comida",
+      "image": "fluent:hot-beverage"
+    },
+    {
+      "id": "es-a1-comer.v.leche",
+      "word": "leche",
+      "article": "la",
+      "gender": "f",
+      "ru": "молоко",
+      "notes": {
+        "ru": "Женского рода: «la leche», не «el leche»."
+      },
+      "situation": "comida",
+      "image": "fluent:glass-of-milk"
+    },
+    {
+      "id": "es-a1-comer.v.agua",
+      "word": "agua",
+      "article": "el",
+      "gender": "f",
+      "ru": "вода",
+      "notes": {
+        "ru": "Женского рода, но с «el»: «el agua fría»."
+      },
+      "example": "es-a1-comer.me-das-un-agua",
+      "situation": "comida",
+      "image": "fluent:droplet"
+    },
+    {
+      "id": "es-a1-comer.v.mate",
+      "word": "mate",
+      "article": "el",
+      "gender": "m",
+      "ru": "мате",
+      "notes": {
+        "ru": "И напиток, и сам калабас, из которого его пьют."
+      },
+      "example": "es-a1-comer.tomamos-unos-mates",
+      "situation": "comida",
+      "image": "fluent:mate"
+    },
+    {
+      "id": "es-a1-comer.v.termo",
+      "word": "termo",
+      "article": "el",
+      "gender": "m",
+      "ru": "термос",
+      "example": "es-a1-comer.me-pasas-el-termo",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.v.yerba",
+      "word": "yerba",
+      "article": "la",
+      "gender": "f",
+      "ru": "йерба (трава для мате)",
+      "situation": "comida",
+      "image": "fluent:herb"
+    },
+    {
+      "id": "es-a1-comer.v.bombilla",
+      "word": "bombilla",
+      "article": "la",
+      "gender": "f",
+      "ru": "бомбилья (трубочка для мате)",
+      "notes": {
+        "ru": "Металлическая трубочка с ситечком."
+      },
+      "example": "es-a1-comer.no-muevas-la-bombilla",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.v.pan",
+      "word": "pan",
+      "article": "el",
+      "gender": "m",
+      "ru": "хлеб",
+      "situation": "comida",
+      "image": "fluent:bread"
+    },
+    {
+      "id": "es-a1-comer.v.empanada",
+      "word": "empanada",
+      "article": "la",
+      "gender": "f",
+      "ru": "эмпанада (пирожок)",
+      "example": "es-a1-comer.de-que-son-las-empanadas",
+      "situation": "comida",
+      "image": "fluent:dumpling"
+    },
+    {
+      "id": "es-a1-comer.v.asado",
+      "word": "asado",
+      "article": "el",
+      "gender": "m",
+      "ru": "асадо (мясо на углях)",
+      "example": "es-a1-comer.hay-asado",
+      "situation": "comida",
+      "image": "fluent:meat-on-bone"
+    },
+    {
+      "id": "es-a1-comer.v.parrilla",
+      "word": "parrilla",
+      "article": "la",
+      "gender": "f",
+      "ru": "гриль, парилья",
+      "notes": {
+        "ru": "И решётка над углями, и ресторан-гриль."
+      },
+      "situation": "comida",
+      "image": "fluent:fire"
+    },
+    {
+      "id": "es-a1-comer.v.choripan",
+      "word": "choripán",
+      "article": "el",
+      "gender": "m",
+      "ru": "чорипан",
+      "example": "es-a1-comer.un-choripan",
+      "situation": "comida",
+      "image": "fluent:hot-dog"
+    },
+    {
+      "id": "es-a1-comer.v.milanesa",
+      "word": "milanesa",
+      "article": "la",
+      "gender": "f",
+      "ru": "миланеса (отбивная в панировке)",
+      "example": "es-a1-comer.una-milanesa-con-papas-fritas",
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.v.carne",
+      "word": "carne",
+      "article": "la",
+      "gender": "f",
+      "ru": "мясо",
+      "situation": "comida",
+      "image": "fluent:cut-of-meat"
+    },
+    {
+      "id": "es-a1-comer.v.pollo",
+      "word": "pollo",
+      "article": "el",
+      "gender": "m",
+      "ru": "курица",
+      "notes": {
+        "ru": "Как блюдо — «pollo», живая птица — «gallina»."
+      },
+      "situation": "comida",
+      "image": "fluent:poultry-leg"
+    },
+    {
+      "id": "es-a1-comer.v.papas-fritas",
+      "word": "papas fritas",
+      "article": "las",
+      "gender": "pl",
+      "ru": "картошка фри",
+      "notes": {
+        "ru": "«Papa» — картошка, а «papá» с ударением — папа!"
+      },
+      "situation": "comida",
+      "image": "fluent:french-fries"
+    },
+    {
+      "id": "es-a1-comer.v.queso",
+      "word": "queso",
+      "article": "el",
+      "gender": "m",
+      "ru": "сыр",
+      "notes": {
+        "ru": "«qu» читается «к»: КЕ-со."
+      },
+      "situation": "comida",
+      "image": "fluent:cheese-wedge"
+    },
+    {
+      "id": "es-a1-comer.v.birra",
+      "word": "birra",
+      "article": "la",
+      "gender": "f",
+      "ru": "пиво",
+      "example": "es-a1-comer.una-birra-bien-fria",
+      "situation": "comida",
+      "image": "fluent:beer-mug"
+    },
+    {
+      "id": "es-a1-comer.v.vino",
+      "word": "vino",
+      "article": "el",
+      "gender": "m",
+      "ru": "вино",
+      "notes": {
+        "ru": "Мальбек из Мендосы — гордость страны."
+      },
+      "situation": "comida",
+      "image": "fluent:wine-glass"
+    },
+    {
+      "id": "es-a1-comer.v.fernet",
+      "word": "fernet",
+      "article": "el",
+      "gender": "m",
+      "ru": "фернет",
+      "example": "es-a1-comer.un-fernet-con-coca",
+      "situation": "comida",
+      "image": "fluent:tumbler-glass"
+    },
+    {
+      "id": "es-a1-comer.v.alfajor",
+      "word": "alfajor",
+      "article": "el",
+      "gender": "m",
+      "ru": "альфахор",
+      "example": "es-a1-comer.proba-este-alfajor",
+      "situation": "comida",
+      "image": "fluent:cookie"
+    },
+    {
+      "id": "es-a1-comer.v.lomito",
+      "word": "lomito",
+      "article": "el",
+      "gender": "m",
+      "ru": "ломито (сэндвич с говядиной)",
+      "example": "es-a1-comer.un-lomito-completo",
+      "situation": "comida",
+      "image": "fluent:sandwich"
+    },
+    {
+      "id": "es-a1-comer.v.cuenta",
+      "word": "cuenta",
+      "article": "la",
+      "gender": "f",
+      "ru": "счёт",
+      "example": "es-a1-comer.la-cuenta",
+      "situation": "comida",
+      "image": "fluent:receipt"
+    },
+    {
+      "id": "es-a1-comer.v.mozo",
+      "word": "mozo",
+      "article": "el",
+      "gender": "m",
+      "ru": "официант",
+      "notes": {
+        "ru": "Официантка — «moza». Подзывают «¡disculpá!» или поднятой рукой."
+      },
+      "situation": "comida"
+    },
+    {
+      "id": "es-a1-comer.v.vaso",
+      "word": "vaso",
+      "article": "el",
+      "gender": "m",
+      "ru": "стакан",
+      "situation": "comida",
+      "image": "fluent:cup-with-straw"
+    },
+    {
+      "id": "es-a1-comer.v.frutilla",
+      "word": "frutilla",
+      "article": "la",
+      "gender": "f",
+      "ru": "клубника",
+      "notes": {
+        "ru": "В Аргентине «frutilla», а не «fresa»."
+      },
+      "situation": "comida",
+      "image": "fluent:strawberry"
+    },
+    {
+      "id": "es-a1-comer.v.palta",
+      "word": "palta",
+      "article": "la",
+      "gender": "f",
+      "ru": "авокадо",
+      "notes": {
+        "ru": "Здесь «palta», а не «aguacate»."
+      },
+      "situation": "comida",
+      "image": "fluent:avocado"
+    },
+    {
+      "id": "es-a1-comer.v.manteca",
+      "word": "manteca",
+      "article": "la",
+      "gender": "f",
+      "ru": "сливочное масло",
+      "notes": {
+        "ru": "Здесь «manteca», а не «mantequilla»."
+      },
+      "situation": "comida",
+      "image": "fluent:butter"
+    },
+    {
+      "id": "es-a1-comer.v.helado",
+      "word": "helado",
+      "article": "el",
+      "gender": "m",
+      "ru": "мороженое",
+      "notes": {
+        "ru": "Аргентинцы обожают «helado de dulce de leche»."
+      },
+      "situation": "comida",
+      "image": "fluent:soft-ice-cream"
+    }
+  ],
+  "qa": [
+    {
+      "id": "es-a1-comer.qa.que-vas-a-tomar",
+      "question": "¿Qué vas a tomar?",
+      "questionRu": "Что будешь пить?",
+      "accepted": [
+        {
+          "text": "Un café con leche, por favor.",
+          "ru": "Кофе с молоком, пожалуйста."
+        },
+        {
+          "text": "Para mí, un cortado.",
+          "ru": "Мне кортадо."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Yo tomo el colectivo.",
+          "ru": "Я езжу на автобусе. («tomar» — и «пить», и «садиться на транспорт»)"
+        },
+        {
+          "text": "Un café con leche, de nada.",
+          "ru": "Кофе с молоком, не за что. (просят с «por favor»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": {
+        "ru": "«Tomar» значит и «пить», и «взять/сесть на»: смотри по контексту."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comer.qa.algo-mas",
+      "question": "¿Algo más?",
+      "questionRu": "Что-нибудь ещё?",
+      "accepted": [
+        {
+          "text": "No, nada más, gracias.",
+          "ru": "Нет, больше ничего, спасибо."
+        },
+        {
+          "text": "Sí, dos medialunas.",
+          "ru": "Да, две медиалуны."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, gracias, de nada.",
+          "ru": "Нет, спасибо, не за что. («de nada» — только ответ на спасибо)"
+        },
+        {
+          "text": "Sí, nada.",
+          "ru": "Да, ничего. (сам себе противоречишь)"
+        }
+      ],
+      "register": "neutral",
+      "situation": "comida",
+      "notes": {
+        "ru": "В пекарне в районе Гуэмес в Кордове так спросят у кассы."
+      }
+    },
+    {
+      "id": "es-a1-comer.qa.otro-mate",
+      "question": "¿Querés otro?",
+      "questionRu": "Будешь ещё один?",
+      "accepted": [
+        {
+          "text": "Sí, dale, uno más.",
+          "ru": "Да, давай, ещё один."
+        },
+        {
+          "text": "No, gracias, ya está.",
+          "ru": "Нет, спасибо, мне хватит."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, quiero otra.",
+          "ru": "Да, хочу ещё одну. (мате — «он»: «otro»)"
+        },
+        {
+          "text": "No, por favor.",
+          "ru": "Нет, пожалуйста. (звучит как «только не это!»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": {
+        "ru": "Скажешь «gracias» — и мате тебе больше не нальют: это значит «мне хватит»."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comer.qa.carne-o-pollo",
+      "question": "¿De carne o de pollo?",
+      "questionRu": "С мясом или с курицей?",
+      "accepted": [
+        {
+          "text": "De carne, por favor.",
+          "ru": "С мясом, пожалуйста."
+        },
+        {
+          "text": "Una de cada, por favor.",
+          "ru": "По одной каждой, пожалуйста."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Con carne, por favor.",
+          "ru": "С мясом, пожалуйста. (начинка — «de», не «con»)"
+        },
+        {
+          "text": "El carne, por favor.",
+          "ru": "Мясо, пожалуйста. («carne» — она: «la carne»)"
+        }
+      ],
+      "register": "neutral",
+      "situation": "comida",
+      "notes": {
+        "ru": "Русское «с мясом» по-испански — «de carne»."
+      }
+    },
+    {
+      "id": "es-a1-comer.qa.que-tal-el-asado",
+      "question": "¿Y? ¿Qué tal el asado?",
+      "questionRu": "Ну как асадо?",
+      "accepted": [
+        {
+          "text": "¡Está riquísimo!",
+          "ru": "Очень вкусно!"
+        },
+        {
+          "text": "¡Re rico, gracias!",
+          "ru": "Супер вкусно, спасибо!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¡Estoy riquísimo!",
+          "ru": "Я очень вкусный! (о еде — «está»)"
+        },
+        {
+          "text": "¡Muy rica la asado!",
+          "ru": "Очень вкусная асадо! («asado» — он: «el asado»)"
+        }
+      ],
+      "register": "neutral",
+      "situation": "comida",
+      "notes": {
+        "ru": "Похвали асадо и асадора — это святое."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comer.qa.un-fernet",
+      "question": "¿Un fernet con coca?",
+      "questionRu": "Фернет с колой?",
+      "accepted": [
+        {
+          "text": "¡Dale, uno!",
+          "ru": "Давай, один!"
+        },
+        {
+          "text": "No, gracias, prefiero una birra.",
+          "ru": "Нет, спасибо, лучше пиво."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, por favor, un fernet con cola.",
+          "ru": "Да, пожалуйста, фернет с… попой. (говори «coca»)"
+        },
+        {
+          "text": "Dale, una fernet.",
+          "ru": "Давай, одну фернет. («fernet» — он: «un fernet»)"
+        }
+      ],
+      "register": "neutral",
+      "situation": "comida",
+      "notes": {
+        "ru": "В Кордове от фернета отказываются только с хорошим оправданием."
+      }
+    },
+    {
+      "id": "es-a1-comer.qa.la-cuenta",
+      "question": "¿Algo más o te traigo la cuenta?",
+      "questionRu": "Ещё что-нибудь или принести счёт?",
+      "accepted": [
+        {
+          "text": "La cuenta, por favor.",
+          "ru": "Счёт, пожалуйста."
+        },
+        {
+          "text": "Nada más, gracias. La cuenta.",
+          "ru": "Больше ничего, спасибо. Счёт."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "La carta, por favor.",
+          "ru": "Меню, пожалуйста. («carta» — меню, счёт — «cuenta»)"
+        },
+        {
+          "text": "El cuento, por favor.",
+          "ru": "Сказку, пожалуйста. («cuento» — рассказ)"
+        }
+      ],
+      "register": "tu",
+      "situation": "comida",
+      "notes": {
+        "ru": "«La cuenta» — счёт, «la carta» — меню, «el cuento» — сказка."
+      },
+      "voice": "es-AR-TomasNeural"
+    }
+  ]
+}

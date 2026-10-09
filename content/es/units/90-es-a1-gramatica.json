@@ -1,0 +1,661 @@
+{
+  "id": "es-a1-gramatica",
+  "order": 90,
+  "title": {
+    "ru": "Грамматика A1"
+  },
+  "description": {
+    "ru": "Ровно столько, чтобы заговорить: артикли и род, ser и estar, «vos» и «usted», множественное число, gustar, планы и вопросы."
+  },
+  "emoji": "📘",
+  "situation": "gramatica",
+  "lessons": [
+    {
+      "id": "es-a1-gramatica.l.basico",
+      "title": {
+        "ru": "Грамматика без боли"
+      },
+      "items": [
+        "gram.es-a1-articulos",
+        "es-a1-comer.v.medialuna",
+        "es-a1-comer.v.agua",
+        "es-a1-moverse.v.mapa",
+        "gram.es-a1-ser-estar",
+        "es-a1-hola.soy-de-rusia",
+        "es-a1-comer.esta-riquisimo",
+        "gram.es-a1-vos",
+        "es-a1-hola.de-donde-sos",
+        "es-a1-moverse.toma-el-sesenta",
+        "gram.es-a1-usted",
+        "es-a1-moverse.me-lleva-a-la-terminal",
+        "gram.es-a1-plurales",
+        "es-a1-comer.una-docena-de-facturas",
+        "gram.es-a1-gustar",
+        "gram.es-a1-ir-a",
+        "es-a1-comer.tomamos-unos-mates",
+        "gram.es-a1-preguntas",
+        "es-a1-moverse.donde-esta-la-parada",
+        "es-a1-moverse.cuanto-sale"
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "id": "gram.es-a1-articulos",
+      "title": {
+        "ru": "Артикли и род: el, la, un, una"
+      },
+      "summary": {
+        "ru": "В русском артиклей нет, а в испанском они почти перед каждым существительным. И у каждого слова есть род: мужской или женский."
+      },
+      "points": [
+        {
+          "ru": "«el» / «la» — тот самый, известный: «el colectivo», «la parada»."
+        },
+        {
+          "ru": "«un» / «una» — какой-то, один: «un café», «una medialuna»."
+        },
+        {
+          "ru": "На «-o» обычно мужской род, на «-a» — женский: «el mate», «la birra»."
+        },
+        {
+          "ru": "Исключения учи с артиклем: «el día», «el mapa», «la mano», «la leche»."
+        },
+        {
+          "ru": "Женские слова на ударное «a-» берут «el»: «el agua», хотя она всё равно «fría»."
+        }
+      ],
+      "table": [
+        [
+          {
+            "ru": "род"
+          },
+          {
+            "ru": "тот самый"
+          },
+          {
+            "ru": "какой-то"
+          },
+          {
+            "ru": "пример"
+          }
+        ],
+        [
+          {
+            "ru": "мужской"
+          },
+          "el",
+          "un",
+          "el colectivo, un café"
+        ],
+        [
+          {
+            "ru": "женский"
+          },
+          "la",
+          "una",
+          "la parada, una medialuna"
+        ],
+        [
+          {
+            "ru": "мн. ч. м."
+          },
+          "los",
+          "unos",
+          "los mates"
+        ],
+        [
+          {
+            "ru": "мн. ч. ж."
+          },
+          "las",
+          "unas",
+          "las empanadas"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Quiero un café.",
+          "ru": "Я хочу кофе."
+        },
+        {
+          "text": "La leche está fría.",
+          "ru": "Молоко холодное."
+        },
+        {
+          "text": "El día está lindo.",
+          "ru": "День чудесный."
+        }
+      ]
+    },
+    {
+      "id": "gram.es-a1-ser-estar",
+      "title": {
+        "ru": "Два «быть»: ser и estar"
+      },
+      "summary": {
+        "ru": "По-русски «быть» одно, а в испанском два. «Ser» — кто ты и откуда, «estar» — где ты и как себя чувствуешь."
+      },
+      "points": [
+        {
+          "ru": "«ser»: имя, национальность, профессия, откуда: «soy ruso», «soy de Moscú»."
+        },
+        {
+          "ru": "«estar»: место и состояние: «estoy en Córdoba», «estoy cansado»."
+        },
+        {
+          "ru": "Вкус блюда прямо сейчас — тоже «estar»: «¡está riquísimo!»."
+        },
+        {
+          "ru": "Русское «я — Иван» без глагола по-испански не работает: «soy Iván»."
+        }
+      ],
+      "table": [
+        [
+          {
+            "ru": "кто"
+          },
+          "ser",
+          "estar"
+        ],
+        [
+          {
+            "ru": "yo (я)"
+          },
+          "soy",
+          "estoy"
+        ],
+        [
+          {
+            "ru": "vos (ты)"
+          },
+          "sos",
+          "estás"
+        ],
+        [
+          {
+            "ru": "él / ella / usted"
+          },
+          "es",
+          "está"
+        ],
+        [
+          {
+            "ru": "nosotros (мы)"
+          },
+          "somos",
+          "estamos"
+        ],
+        [
+          {
+            "ru": "ellos / ustedes"
+          },
+          "son",
+          "están"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Soy de Rusia.",
+          "ru": "Я из России."
+        },
+        {
+          "text": "Estoy en Córdoba.",
+          "ru": "Я в Кордове."
+        },
+        {
+          "text": "Flor es cordobesa, pero está en Buenos Aires.",
+          "ru": "Флор из Кордовы, но сейчас она в Буэнос-Айресе."
+        }
+      ]
+    },
+    {
+      "id": "gram.es-a1-vos",
+      "title": {
+        "ru": "«Vos» вместо «tú»"
+      },
+      "summary": {
+        "ru": "В Аргентине «ты» — это «vos», и у него свои формы глагола с ударением на конце. Учебники учат «tú», но здесь ты услышишь только «vos»."
+      },
+      "points": [
+        {
+          "ru": "Глаголы на «-ar», «-er», «-ir»: «hablás», «comés», «vivís» — ударение всегда на конце."
+        },
+        {
+          "ru": "Самые частые: «sos» (ты есть), «tenés», «podés», «querés»."
+        },
+        {
+          "ru": "Просьбы и команды тоже с ударением на конце: «mirá», «vení», «tomá», «decime»."
+        },
+        {
+          "ru": "«Tú tienes» поймут, но звучит как из сериала из Мадрида."
+        }
+      ],
+      "table": [
+        [
+          {
+            "ru": "глагол"
+          },
+          {
+            "ru": "vos"
+          },
+          {
+            "ru": "перевод"
+          }
+        ],
+        [
+          "hablar",
+          "vos hablás",
+          {
+            "ru": "ты говоришь"
+          }
+        ],
+        [
+          "comer",
+          "vos comés",
+          {
+            "ru": "ты ешь"
+          }
+        ],
+        [
+          "vivir",
+          "vos vivís",
+          {
+            "ru": "ты живёшь"
+          }
+        ],
+        [
+          "ser",
+          "vos sos",
+          {
+            "ru": "ты есть"
+          }
+        ],
+        [
+          "tener",
+          "vos tenés",
+          {
+            "ru": "у тебя есть"
+          }
+        ],
+        [
+          "querer",
+          "vos querés",
+          {
+            "ru": "ты хочешь"
+          }
+        ]
+      ],
+      "examples": [
+        {
+          "text": "¿Vos sos de Córdoba?",
+          "ru": "Ты из Кордовы?"
+        },
+        {
+          "text": "¿Tenés la SUBE?",
+          "ru": "У тебя есть SUBE?"
+        },
+        {
+          "text": "¡Mirá, el sesenta!",
+          "ru": "Смотри, шестидесятый!"
+        }
+      ]
+    },
+    {
+      "id": "gram.es-a1-usted",
+      "title": {
+        "ru": "«Usted» — вежливое «вы»"
+      },
+      "summary": {
+        "ru": "С врачом, полицейским, в банке и с пожилыми незнакомцами говорят «usted». Глагол стоит в той же форме, что для «он / она»."
+      },
+      "points": [
+        {
+          "ru": "«usted habla», «usted tiene», «¿me puede ayudar?»."
+        },
+        {
+          "ru": "Просьбы на «usted»: «disculpe», «pare acá», «¿me lleva?»."
+        },
+        {
+          "ru": "Аргентинцы переходят на «vos» быстро: в кафе и киоске почти всегда «vos»."
+        },
+        {
+          "ru": "Не смешивай: «¿usted tenés…?» — ошибка, нужно «¿usted tiene…?»."
+        }
+      ],
+      "table": [
+        [
+          {
+            "ru": "глагол"
+          },
+          "vos",
+          "usted"
+        ],
+        [
+          "ser",
+          "sos",
+          "es"
+        ],
+        [
+          "tener",
+          "tenés",
+          "tiene"
+        ],
+        [
+          "poder",
+          "podés",
+          "puede"
+        ],
+        [
+          {
+            "ru": "извините"
+          },
+          "disculpá",
+          "disculpe"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "¿Me puede ayudar?",
+          "ru": "Вы можете мне помочь?"
+        },
+        {
+          "text": "Disculpe, ¿usted es el médico?",
+          "ru": "Извините, вы врач?"
+        },
+        {
+          "text": "¿Me lleva a la terminal?",
+          "ru": "Отвезёте меня на автовокзал?"
+        }
+      ]
+    },
+    {
+      "id": "gram.es-a1-plurales",
+      "title": {
+        "ru": "Множественное число и «ustedes»"
+      },
+      "summary": {
+        "ru": "Множественное число делают окончанием «-s» или «-es», и прилагательное повторяет за существительным род и число."
+      },
+      "points": [
+        {
+          "ru": "После гласной «-s»: «medialuna» → «medialunas»."
+        },
+        {
+          "ru": "После согласной «-es»: «celular» → «celulares»."
+        },
+        {
+          "ru": "Прилагательное согласуется: «las facturas ricas», «los colectivos llenos»."
+        },
+        {
+          "ru": "«Вы» для нескольких людей — всегда «ustedes», и с друзьями тоже. «Vosotros» в Аргентине нет."
+        }
+      ],
+      "table": [
+        [
+          {
+            "ru": "одно"
+          },
+          {
+            "ru": "много"
+          }
+        ],
+        [
+          "el colectivo",
+          "los colectivos"
+        ],
+        [
+          "la medialuna",
+          "las medialunas"
+        ],
+        [
+          "el celular",
+          "los celulares"
+        ],
+        [
+          "la ciudad",
+          "las ciudades"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Dos medialunas, por favor.",
+          "ru": "Две медиалуны, пожалуйста."
+        },
+        {
+          "text": "¡Las empanadas están riquísimas!",
+          "ru": "Эмпанадас очень вкусные!"
+        },
+        {
+          "text": "¿Ustedes son de Córdoba?",
+          "ru": "Вы из Кордовы?"
+        }
+      ]
+    },
+    {
+      "id": "gram.es-a1-gustar",
+      "title": {
+        "ru": "Me gusta — «мне нравится»"
+      },
+      "summary": {
+        "ru": "«Gustar» работает как русское «нравится»: то, что нравится, — подлежащее. Одна вещь — «gusta», несколько — «gustan»."
+      },
+      "points": [
+        {
+          "ru": "«Me gusta el mate» — мне нравится мате."
+        },
+        {
+          "ru": "«Me gustan las empanadas» — мне нравятся эмпанадас."
+        },
+        {
+          "ru": "Кому: «me» (мне), «te» (тебе, «vos»), «le» (ему, ей, вам — «usted»)."
+        },
+        {
+          "ru": "Не говори «yo gusto»: это «я нравлюсь»."
+        }
+      ],
+      "table": [
+        [
+          {
+            "ru": "кому"
+          },
+          {
+            "ru": "одна вещь"
+          },
+          {
+            "ru": "несколько"
+          }
+        ],
+        [
+          {
+            "ru": "мне"
+          },
+          "me gusta",
+          "me gustan"
+        ],
+        [
+          {
+            "ru": "тебе (vos)"
+          },
+          "te gusta",
+          "te gustan"
+        ],
+        [
+          {
+            "ru": "ему / ей / вам (usted)"
+          },
+          "le gusta",
+          "le gustan"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Me gusta el fernet con coca.",
+          "ru": "Мне нравится фернет с колой."
+        },
+        {
+          "text": "¿Te gustan las medialunas?",
+          "ru": "Тебе нравятся медиалуны?"
+        },
+        {
+          "text": "No me gusta el mate amargo.",
+          "ru": "Мне не нравится горький мате."
+        }
+      ]
+    },
+    {
+      "id": "gram.es-a1-ir-a",
+      "title": {
+        "ru": "Планы: voy a + глагол"
+      },
+      "summary": {
+        "ru": "Чтобы сказать, что ты собираешься сделать, бери «ir a» и неизменяемый глагол. Это самое простое будущее, и в Аргентине им говорят постоянно."
+      },
+      "points": [
+        {
+          "ru": "«Voy a comer» — я буду есть / собираюсь поесть."
+        },
+        {
+          "ru": "«¿Vamos a…?» — предложение: «¿vamos a tomar unos mates?»."
+        },
+        {
+          "ru": "После «a» глагол не меняется: «voy a ir», «vamos a ver»."
+        }
+      ],
+      "table": [
+        [
+          {
+            "ru": "кто"
+          },
+          "ir a"
+        ],
+        [
+          {
+            "ru": "yo (я)"
+          },
+          "voy a comer"
+        ],
+        [
+          {
+            "ru": "vos (ты)"
+          },
+          "vas a comer"
+        ],
+        [
+          {
+            "ru": "él / ella / usted"
+          },
+          "va a comer"
+        ],
+        [
+          {
+            "ru": "nosotros (мы)"
+          },
+          "vamos a comer"
+        ],
+        [
+          {
+            "ru": "ellos / ustedes"
+          },
+          "van a comer"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "Voy a ir a Córdoba.",
+          "ru": "Я поеду в Кордову."
+        },
+        {
+          "text": "¿Vamos a comer empanadas?",
+          "ru": "Пойдём есть эмпанадас?"
+        },
+        {
+          "text": "Flor va a tomar el colectivo.",
+          "ru": "Флор поедет на автобусе."
+        }
+      ]
+    },
+    {
+      "id": "gram.es-a1-preguntas",
+      "title": {
+        "ru": "Вопросы: qué, dónde, cuánto…"
+      },
+      "summary": {
+        "ru": "Вопросительные слова пишутся с ударением, а вопрос открывается перевёрнутым знаком «¿». Часто вопрос делает одна интонация: «¿Tenés cambio?»."
+      },
+      "points": [
+        {
+          "ru": "«¿qué?» — что? какой?; «¿dónde?» — где?; «¿adónde?» — куда?"
+        },
+        {
+          "ru": "«¿cuánto?» — сколько?; «¿cómo?» — как?; «¿cuándo?» — когда?; «¿quién?» — кто?"
+        },
+        {
+          "ru": "Без вопросительного слова порядок слов не меняется — только голос идёт вверх."
+        }
+      ],
+      "table": [
+        [
+          {
+            "ru": "слово"
+          },
+          {
+            "ru": "значит"
+          },
+          {
+            "ru": "пример"
+          }
+        ],
+        [
+          "¿qué?",
+          {
+            "ru": "что? какой?"
+          },
+          "¿Qué colectivo va a Palermo?"
+        ],
+        [
+          "¿dónde?",
+          {
+            "ru": "где?"
+          },
+          "¿Dónde está la parada?"
+        ],
+        [
+          "¿cuánto?",
+          {
+            "ru": "сколько?"
+          },
+          "¿Cuánto sale?"
+        ],
+        [
+          "¿cómo?",
+          {
+            "ru": "как?"
+          },
+          "¿Cómo te llamás?"
+        ],
+        [
+          "¿quién?",
+          {
+            "ru": "кто?"
+          },
+          "¿Quién ceba?"
+        ]
+      ],
+      "examples": [
+        {
+          "text": "¿Cuándo vamos a las sierras?",
+          "ru": "Когда поедем в горы?"
+        },
+        {
+          "text": "¿Adónde vas?",
+          "ru": "Куда идёшь?"
+        },
+        {
+          "text": "¿Tenés cambio?",
+          "ru": "У тебя есть мелочь?"
+        }
+      ]
+    }
+  ]
+}
