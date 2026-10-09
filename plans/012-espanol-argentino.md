@@ -81,17 +81,17 @@ Worktree setup: npm ci
 - Outcome: units 40 comprar, 50 planes, 60 ayuda; pack = 181 phrases, 152 vocab, 40 Q&A, 25 lessons, 75 pictures; 0 duplicates — e9ae0454
 
 ## T154 — Dialogues (6) and stories (6)
-- Status: running
+- Status: done
 - Depends on: T153
 - Goal: Write the 6 dialogues (orders 1–6) and 6 stories (orders 1–6, files `a1-NN-<slug>.json`) from brief-es.md with A1 vocabulary, vos/usted as the scene needs, and Córdoba mixed through the order.
 - Context: Shared contract, docs/brief-es.md, `content/ru/dialogues/`, `content/ru/stories/` as format models.
 - Scope: may touch `content/es/dialogues/`, `content/es/stories/` / must not touch units, pack.json, other packs.
 - Done when:
   - 6 dialogues (about 7 turns, 3 options, Russian-speaker-mistake distractors, never differing only by punctuation or accents) and 6 stories (60–90 words, keywords, 3–4 questions); `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 6 stories (82–90 words, 4 inline vocab story-es-*) — 1bd637fb; 6 dialogues (7–8 turns, 3 options, usted in 2 and 6, Córdoba 2 and 5) — 2ee7b669
 
 ## T155 — es-AR audio, pictures and offline check
-- Status: pending
+- Status: running
 - Depends on: T150, T154
 - Goal: Generate the mp3s and pictures for the `es` pack and check it works offline in the built app, in Russian.
 - Context: CLAUDE.md commands `npm run audio`, `npm run images`, `--strict-audio`, `--strict-images`; plan 011 T147 outcome. Needs internet (edge-tts).
@@ -115,6 +115,8 @@ Worktree setup: npm ci
 - 2026-10-09 T151: options voiced by the first es voice unused by the natives (Mateo when Elena+Tomás speak); Córdoba ≈1/3 of every unit, dialogues/stories 2 and 5 in Córdoba; 'coger' warning note in unit 20, 'culiado' note in unit 50 (agent)
 - 2026-10-09 T152: numbers cero–diez as vocab in unit 20 for reuse; vocab ids <unit>.v.<slug>; ~10% over on phrases/vocab, so T153 aims lower (agent)
 - 2026-10-09 orchestrator: T154 run as two parallel agents (dialogues / stories), disjoint folders
+- 2026-10-09 T154: stories 82–90 words (guide warns under 80); extra kiosco character Sofi so every dialogue has Elena + Tomás natives (agents)
+- 2026-10-09 orchestrator: T155 run directly by the orchestrator on the Mac (edge-tts needs internet)
 
 ## Proposals (new scope)
 - 2026-10-09 orchestrator: growth of the deploy (audio is 279 MB / 16,299 files; repo 17,048 files, `.git` 245 MB): serve mp3s from Cloudflare R2 or similar (audio base URL, CORS, cross-origin SW cache and Range) and/or re-encode at a lower bitrate. Its own plan when needed.
@@ -132,3 +134,5 @@ Worktree setup: npm ci
 - 2026-10-09 T153 launched · attempt 1
 - 2026-10-09 T153 done → e9ae0454
 - 2026-10-09 T154 launched · attempt 1 (2 agents)
+- 2026-10-09 T154 done → 1bd637fb, 2ee7b669
+- 2026-10-09 T155 started (orchestrator)
