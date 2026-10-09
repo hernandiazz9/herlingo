@@ -1,0 +1,868 @@
+{
+  "id": "cba-plata",
+  "order": 50,
+  "title": "Plata, laburo y verbos de la calle",
+  "description": "Lucas, palos y mangos; laburo, changas y feriados; chorros, truchos y afanos, y los verbos que oirás a diario: zafar, bancar, colgarse, rajar.",
+  "emoji": "💸",
+  "situation": "plata",
+  "lessons": [
+    {
+      "id": "cba-plata.l.plata",
+      "title": "Plata, lucas y palos",
+      "items": [
+        "cba-plata.v.plata",
+        "cba-plata.no-tengo-un-mango",
+        "cba-plata.v.mango",
+        "cba-plata.ahora-no-hay-guita",
+        "cba-plata.v.guita",
+        "cba-plata.me-salio-diez-lucas",
+        "cba-plata.v.luca",
+        "cba-comida.cuanto-sale-la-frutilla",
+        "cba-plata.cobro-dos-palos",
+        "cba-plata.v.palo",
+        "cba-plata.vas-a-cobrar",
+        "cba-salir.hagamos-una-vaquita",
+        "cba-plata.baja-al-kiosco",
+        "cba-plata.v.kiosco",
+        "cba-plata.hay-un-almacen",
+        "cba-plata.v.almacen",
+        "cba-plata.me-da-la-boleta",
+        "cba-plata.qa.plata",
+        "cba-plata.qa.cuanto-salio"
+      ]
+    },
+    {
+      "id": "cba-plata.l.laburo",
+      "title": "Laburo, changas y feriados",
+      "items": [
+        "cba-plata.manana-laburo-temprano",
+        "cba-plata.v.laburo",
+        "cba-plata.x.vua-laburar",
+        "cba-plata.hago-changas",
+        "cba-plata.v.changa",
+        "cba-plata.eso-es-un-curro",
+        "cba-plata.v.curro",
+        "cba-plata.v.repositor",
+        "cba-plata.v.tachero",
+        "cba-plata.el-lunes-es-feriado",
+        "cba-plata.me-hice-la-chupina",
+        "cba-plata.v.faltazo",
+        "cba-plata.v.fiaca",
+        "cba-plata.es-al-vicio",
+        "cba-plata.estoy-hasta-las-manos",
+        "cba-plata.lo-rajaron-del-laburo",
+        "cba-plata.qa.laburo",
+        "cba-plata.qa.empezar"
+      ]
+    },
+    {
+      "id": "cba-plata.l.chorros",
+      "title": "Chorros, truchos y afanos",
+      "items": [
+        "cba-plata.esto-es-un-afano",
+        "cba-plata.me-lo-choreo-un-motochorro",
+        "cba-plata.v.chorro",
+        "cba-plata.un-reloj-trucho",
+        "cba-plata.v.trucho",
+        "cba-plata.una-excusa-re-berreta",
+        "cba-plata.v.berreta",
+        "cba-plata.quedo-un-cano",
+        "cba-plata.v.cano",
+        "cba-plata.v.changui",
+        "cba-plata.se-hace-el-chancho-rengo",
+        "cba-plata.cada-chancho-a-su-estaca",
+        "cba-plata.v.junar",
+        "cba-plata.v.chusmear",
+        "cba-plata.qa.reloj"
+      ]
+    },
+    {
+      "id": "cba-plata.l.verbos",
+      "title": "Zafar, bancar y colgarse",
+      "items": [
+        "cba-plata.zafamos-por-poquito",
+        "cba-plata.te-banco",
+        "cba-plata.v.bancar",
+        "cba-plata.me-clavo",
+        "cba-plata.me-colgue",
+        "cba-plata.me-mande-una-macana",
+        "cba-plata.v.mandarse",
+        "cba-plata.v.pegarla",
+        "cba-plata.v.arrugar",
+        "cba-plata.v.unar",
+        "cba-plata.v.rajar",
+        "cba-plata.v.tomarse-el-palo",
+        "cba-plata.v.picar",
+        "cba-plata.v.hacer-pata",
+        "cba-plata.v.meter-el-pecho",
+        "cba-plata.v.ir-a-los-bifes",
+        "cba-plata.v.quedarse-en-el-molde",
+        "cba-plata.recien-llegue",
+        "cba-plata.sabiamos-ir-a-la-feria",
+        "cba-plata.x.sabia-tener-un-puestito",
+        "cba-plata.qa.examen",
+        "cba-plata.qa.ayer"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "cba-plata.no-tengo-un-mango",
+      "text": "No tengo un mango.",
+      "es": "No tengo ni un duro. / Estoy sin blanca.",
+      "notes": "Coloquial. «Mango» es un peso; «no tener un mango» = estar pelado. Nada que ver con la fruta.",
+      "explanation": "Cuando te piden plata y no llevas. «Mango» con la ng suave, como en España.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.ahora-no-hay-guita",
+      "text": "Ahora no hay guita.",
+      "es": "Ahora no hay pasta.",
+      "notes": "Coloquial. «Guita» = dinero, como «pasta» o «pelas»; ojo, «pasta» aquí es solo comida.",
+      "explanation": "Para decir que no hay presupuesto, entre amigos o en casa. «Guita» con la u muda: GUI-ta.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.me-salio-diez-lucas",
+      "text": "Me salió diez lucas.",
+      "es": "Me ha costado diez mil pavos.",
+      "notes": "Coloquial. «Luca» = mil pesos; «salir» = costar («¿cuánto sale?»). En España dirías «diez mil pavos».",
+      "explanation": "Para contar lo que te costó algo. Sin -s final en habla relajada: «diez luca'».",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.cobro-dos-palos",
+      "text": "Cobró dos palos por el auto.",
+      "es": "Le dieron dos kilos por el coche.",
+      "notes": "Coloquial. «Un palo» = un millón de pesos, como el «kilo» de la España de las pesetas.",
+      "explanation": "Para hablar de cifras grandes (con la inflación, más de lo que crees). Acento en co-BRÓ.",
+      "register": "neutral",
+      "situation": "plata",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-plata.vas-a-cobrar",
+      "text": "Si seguís así, vas a cobrar.",
+      "es": "Como sigas así, te vas a llevar una hostia.",
+      "notes": "Coloquial. En el habla popular «cobrar» también es recibir golpes: es una amenaza medio en broma, no te van a pagar.",
+      "explanation": "Lo oirás a un amigo que se hace el duro. «Seguís» con la tónica en -GUÍS, sin la s final.",
+      "register": "tu",
+      "situation": "plata",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-plata.baja-al-kiosco",
+      "text": "Bajá al kiosco y comprame un alfajor.",
+      "es": "Baja a la tienda de chuches y cómprame un alfajor.",
+      "notes": "El kiosco es la tiendita de la esquina (golosinas, bebidas, cigarrillos, cargas del móvil), abierta hasta tarde; no vende periódicos.",
+      "explanation": "Para pedirle un favor a alguien de casa. «Bajá» y «comprame» con el acento del vos: ba-JÁ, COM-pra-me.",
+      "register": "tu",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.hay-un-almacen",
+      "text": "¿Hay un almacén por acá?",
+      "es": "¿Hay una tienda de ultramarinos por aquí?",
+      "notes": "El almacén (o la despensa) es la tienda de barrio de comestibles; no es un depósito.",
+      "explanation": "Cuando buscas comprar pan, yerba o leche cerca de casa. «Acá» en lugar de «aquí».",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.me-da-la-boleta",
+      "text": "¿Me da la boleta, por favor?",
+      "es": "¿Me da el tique, por favor?",
+      "notes": "«La boleta» es el tique de compra; «la factura» es la factura formal (y también la bollería).",
+      "explanation": "En una tienda, tras pagar, con usted. «Boleta» con la o abierta: bo-LE-ta.",
+      "register": "usted",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.manana-laburo-temprano",
+      "text": "Mañana laburo temprano.",
+      "es": "Mañana curro temprano.",
+      "notes": "«Laburar» = currar; «laburo» = curro. Todo el mundo lo dice, también en contextos normales.",
+      "explanation": "Para irte pronto de una juntada. «La-BU-ro»: la tonada estira la «la».",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.hago-changas",
+      "text": "Hago changas de albañil.",
+      "es": "Hago chapuzas de albañil.",
+      "notes": "Coloquial. Una «changa» es un trabajo suelto y temporal; el «changarín» es el peón que las hace.",
+      "explanation": "Para explicar que trabajas por encargos. «Changa» con ch de «chico».",
+      "register": "neutral",
+      "situation": "plata",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-plata.eso-es-un-curro",
+      "text": "Eso es un curro.",
+      "es": "Eso es un chanchullo.",
+      "notes": "Coloquial. Trampa: «curro» aquí es una estafa o un negocio turbio, no el trabajo. Si dices «voy al curro», entienden que vas a timar a alguien.",
+      "explanation": "Para desconfiar de un negocio que huele raro. «Curro» con la rr fuerte.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.el-lunes-es-feriado",
+      "text": "El lunes es feriado.",
+      "es": "El lunes es festivo.",
+      "notes": "«Feriado» = día festivo; un «finde largo» es un puente.",
+      "explanation": "Para planear una escapada a las sierras. «Fe-RIA-do», sin hacer hiato.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.me-hice-la-chupina",
+      "text": "Ayer me hice la chupina.",
+      "es": "Ayer hice pellas.",
+      "notes": "Coloquial. «Hacerse la chupina» = faltar a clase sin permiso; muy cordobés. En España, «hacer novillos» o «pellas».",
+      "explanation": "Para confesar que no fuiste a clase (o al laburo). «Chupina» con ch de «chico».",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.es-al-vicio",
+      "text": "Es al vicio lavar el auto si va a llover.",
+      "es": "No sirve de nada lavar el coche si va a llover.",
+      "notes": "Coloquial. «Al vicio» = en vano, para nada; también «estar al vicio» = sin hacer nada. Es la forma suave de «al pedo».",
+      "explanation": "Para decir que algo no vale la pena sin decir tacos. «Vicio» con s: VI-sio.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.estoy-hasta-las-manos",
+      "text": "Estoy hasta las manos con el laburo.",
+      "es": "Estoy hasta arriba de curro.",
+      "notes": "Coloquial. «Estar hasta las manos» = desbordado; con una persona, también «estar pilladísimo».",
+      "explanation": "Para excusarte cuando no llegas a todo. «Manos» con la -s casi muda: «ma-no'».",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.lo-rajaron-del-laburo",
+      "text": "Lo rajaron del laburo.",
+      "es": "Lo echaron del curro.",
+      "notes": "Coloquial. «Rajar» a alguien = echarlo; «rajar» solo = largarse. En España «rajarse» es echarse atrás: aquí eso es «arrugar».",
+      "explanation": "Para contar que despidieron a alguien. «Rajaron» con la j suave, casi aspirada.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.esto-es-un-afano",
+      "text": "¡Esto es un afano!",
+      "es": "¡Esto es un atraco! / ¡Qué robo!",
+      "notes": "Coloquial. «Afano» = robo; ante un precio abusivo es la queja de siempre. «Afanar» = robar, mangar.",
+      "explanation": "Cuando ves la cuenta o el precio. Sube el tono en «a-FA-no».",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.me-lo-choreo-un-motochorro",
+      "text": "Me lo choreó un motochorro.",
+      "es": "Me lo robó un chorizo que iba en moto.",
+      "notes": "Coloquial. «Chorro» = ladrón (el «chorizo» español), «chorear» = robar y el «motochorro» roba desde una moto.",
+      "explanation": "Para contar un robo en la calle. «Choreó» con ch de «chico» y la tónica en -Ó.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.un-reloj-trucho",
+      "text": "Es un reloj trucho.",
+      "es": "Es un reloj falso. / Es una imitación.",
+      "notes": "Coloquial. «Trucho» = falso, de imitación o ilegal (un billete trucho, un taxi trucho).",
+      "explanation": "En una feria, al dudar de una marca. «Trucho» con ch de «chico».",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.una-excusa-re-berreta",
+      "text": "Qué excusa más berreta.",
+      "es": "Qué excusa más cutre.",
+      "notes": "Coloquial. «Berreta» = cutre, de mala calidad; sirve para cosas y para excusas.",
+      "explanation": "Para burlarte con cariño de una mala excusa. «Be-RRE-ta», rr fuerte.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.quedo-un-cano",
+      "text": "El libro quedó un caño.",
+      "es": "El libro ha quedado de lujo.",
+      "notes": "Coloquial. «Un caño» = algo buenísimo o muy potente; también un golazo. Pretérito simple: «quedó», no «ha quedado».",
+      "explanation": "Para elogiar un trabajo terminado. «Caño» con ñ clara.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.se-hace-el-chancho-rengo",
+      "text": "Se hace el chancho rengo para no pagar.",
+      "es": "Se hace el longuis para no pagar.",
+      "notes": "Coloquial. «Hacerse el chancho rengo» (el cerdo cojo) = hacerse el despistado para escaquearse.",
+      "explanation": "Cuando alguien desaparece al llegar la cuenta. «Rengo» = cojo, con la g suave.",
+      "literal": "Se hace el cerdo cojo para no pagar.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.cada-chancho-a-su-estaca",
+      "text": "Bueno, cada chancho a su estaca.",
+      "es": "Bueno, cada mochuelo a su olivo.",
+      "notes": "Coloquial. Para cerrar una reunión o un día: cada uno a su casa o a lo suyo.",
+      "explanation": "Al final de la noche, para despedirte del grupo. «Chancho» = cerdo, con ch de «chico».",
+      "literal": "Bueno, cada cerdo a su estaca.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.zafamos-por-poquito",
+      "text": "Zafamos por poquito.",
+      "es": "Nos hemos librado por los pelos.",
+      "notes": "Coloquial. «Zafar» = librarse de algo o aprobar justo («zafé del examen»).",
+      "explanation": "Tras escaparte de un apuro. «Zafamos» con s: sa-FA-mos.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.te-banco",
+      "text": "Te banco a muerte.",
+      "es": "Te apoyo a muerte.",
+      "notes": "Coloquial. «Bancar» = apoyar a alguien; «no me lo banco» = no lo aguanto. No tiene nada que ver con el banco.",
+      "explanation": "Para apoyar a un amigo en una decisión. «Banco» con la a abierta y sin cantar demasiado.",
+      "register": "tu",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.me-clavo",
+      "text": "Me clavó, no vino.",
+      "es": "Me dio plantón, no vino.",
+      "notes": "Coloquial. «Clavar» a alguien = dejarlo plantado; «clavarse» un lomito = zampárselo.",
+      "explanation": "Cuando alguien no aparece a una cita. «Clavó» con la tónica al final.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.me-colgue",
+      "text": "Me colgué y no te llamé.",
+      "es": "Se me pasó y no te llamé.",
+      "notes": "Coloquial. «Colgarse» = olvidarse o distraerse (empanarse), no ahorcarse ni el ordenador.",
+      "explanation": "Para disculparte por un olvido. «Colgué» con la u muda, como en España.",
+      "register": "tu",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.me-mande-una-macana",
+      "text": "Me mandé una macana en el laburo.",
+      "es": "La he cagado en el curro. / He metido la pata en el curro.",
+      "notes": "Coloquial. «Mandarse una macana» o «un moco» = meter la pata; «mandarse» también es lanzarse o zamparse algo.",
+      "explanation": "Para confesar un error. «Macana» con las tres aes iguales, sin cantar.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.recien-llegue",
+      "text": "Recién llegué.",
+      "es": "Acabo de llegar.",
+      "notes": "«Recién» va solo, sin participio: «recién llegué» = acabo de llegar; «recién a las diez» = no antes de las diez.",
+      "explanation": "Al contestar el móvil cuando te preguntan dónde estás. «Re-SIÉN», con s.",
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.sabiamos-ir-a-la-feria",
+      "text": "Los domingos sabíamos ir a la feria.",
+      "es": "Los domingos solíamos ir al mercadillo.",
+      "notes": "Coloquial. En Córdoba y el interior «saber» + infinitivo = soler: «sabía venir» = solía venir. No es «saber hacer».",
+      "explanation": "Lo oirás a los mayores al contar recuerdos. «Sabíamos» con la tónica en -BÍ-.",
+      "register": "neutral",
+      "situation": "plata",
+      "voice": "es-AR-TomasNeural"
+    }
+  ],
+  "expressions": [
+    {
+      "id": "cba-plata.x.vua-laburar",
+      "text": "Mañana vuá laburar.",
+      "es": "Mañana voy a currar.",
+      "variety": "Cordobés popular",
+      "standard": "Mañana voy a laburar.",
+      "notes": "Coloquial. «Vuá» (o «viá») es «voy a» contraído, del habla popular; también «te gua» = te voy a. Entiéndelo, pero di «voy a»."
+    },
+    {
+      "id": "cba-plata.x.sabia-tener-un-puestito",
+      "text": "Sabía tener un puestito 'e choripán.",
+      "es": "Tenía un puestecillo de bocadillos de chorizo.",
+      "variety": "Cordobés popular",
+      "standard": "Sabía tener un puestito de choripán.",
+      "notes": "Coloquial. «Saber tener» = tener durante un tiempo, solía tener; con la «de» reducida a «'e», muy de barrio."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cba-plata.v.plata",
+      "word": "plata",
+      "article": "la",
+      "gender": "f",
+      "es": "el dinero, la pasta",
+      "notes": "La palabra normal para el dinero, en cualquier registro: «¿Tenés plata?».",
+      "example": "cba-plata.no-tengo-un-mango",
+      "situation": "plata",
+      "image": "fluent:money-bag"
+    },
+    {
+      "id": "cba-plata.v.guita",
+      "word": "guita",
+      "article": "la",
+      "gender": "f",
+      "es": "la pasta, las pelas",
+      "notes": "Coloquial. Lunfardo extendido por todo el país.",
+      "example": "cba-plata.ahora-no-hay-guita",
+      "situation": "plata",
+      "image": "fluent:dollar-banknote"
+    },
+    {
+      "id": "cba-plata.v.mango",
+      "word": "mango",
+      "article": "el",
+      "gender": "m",
+      "es": "el peso, el duro",
+      "notes": "Coloquial. Sobre todo en negativo: «no vale un mango».",
+      "example": "cba-plata.no-tengo-un-mango",
+      "situation": "plata",
+      "image": "fluent:coin"
+    },
+    {
+      "id": "cba-plata.v.luca",
+      "word": "luca",
+      "article": "la",
+      "gender": "f",
+      "plural": "lucas",
+      "es": "los mil pesos (mil pavos)",
+      "notes": "Coloquial. «Diez lucas» = diez mil pesos. Una «gamba» son cien.",
+      "example": "cba-plata.me-salio-diez-lucas",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.palo",
+      "word": "palo",
+      "article": "el",
+      "gender": "m",
+      "es": "el millón (un kilo)",
+      "notes": "Coloquial. «Dos palos» = dos millones de pesos; «tomarse el palo» es otra cosa: largarse.",
+      "example": "cba-plata.cobro-dos-palos",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.kiosco",
+      "word": "kiosco",
+      "article": "el",
+      "gender": "m",
+      "es": "la tienda de chuches de la esquina",
+      "notes": "Golosinas, bebidas, tabaco y alfajores; el que lo atiende es el «kiosquero».",
+      "example": "cba-plata.baja-al-kiosco",
+      "situation": "plata",
+      "image": "fluent:convenience-store"
+    },
+    {
+      "id": "cba-plata.v.almacen",
+      "word": "almacén",
+      "article": "el",
+      "gender": "m",
+      "es": "la tienda de ultramarinos",
+      "notes": "También «la despensa»: la tienda de comestibles del barrio.",
+      "example": "cba-plata.hay-un-almacen",
+      "situation": "plata",
+      "image": "fluent:shopping-cart"
+    },
+    {
+      "id": "cba-plata.v.laburo",
+      "word": "laburo",
+      "article": "el",
+      "gender": "m",
+      "es": "el curro, el trabajo",
+      "notes": "Y «laburar» = currar. Ojo: el «curro» de aquí es una estafa.",
+      "example": "cba-plata.manana-laburo-temprano",
+      "situation": "plata",
+      "image": "fluent:briefcase"
+    },
+    {
+      "id": "cba-plata.v.changa",
+      "word": "changa",
+      "article": "la",
+      "gender": "f",
+      "es": "la chapuza, el trabajillo",
+      "notes": "Coloquial. Trabajo suelto y temporal; el «changarín» es el peón que hace changas.",
+      "example": "cba-plata.hago-changas",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.curro",
+      "word": "curro",
+      "article": "el",
+      "gender": "m",
+      "es": "el chanchullo, la estafa",
+      "notes": "Coloquial. Falso amigo: no es el trabajo. «Currar» = estafar; para trabajar, «laburar».",
+      "example": "cba-plata.eso-es-un-curro",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.repositor",
+      "word": "repositor",
+      "article": "el",
+      "gender": "m",
+      "es": "el reponedor (del súper)",
+      "notes": "El que coloca la mercadería en las estanterías del supermercado.",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.tachero",
+      "word": "tachero",
+      "article": "el",
+      "gender": "m",
+      "es": "el taxista",
+      "notes": "Coloquial. El «tacho» es el taxi; el que maneja un remís es el «remisero».",
+      "situation": "plata",
+      "image": "fluent:oncoming-taxi"
+    },
+    {
+      "id": "cba-plata.v.faltazo",
+      "word": "faltazo",
+      "article": "el",
+      "gender": "m",
+      "es": "la falta (no ir), las pellas",
+      "notes": "Coloquial. «Me pegué un faltazo» = no fui a clase o al trabajo.",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.fiaca",
+      "word": "fiaca",
+      "article": "la",
+      "gender": "f",
+      "es": "la pereza, el palo",
+      "notes": "Coloquial. «Tengo una fiaca…» = qué pereza; muy de domingo a la siesta.",
+      "situation": "plata",
+      "image": "fluent:yawning-face"
+    },
+    {
+      "id": "cba-plata.v.chorro",
+      "word": "chorro",
+      "article": "el",
+      "gender": "m",
+      "es": "el chorizo, el ladrón",
+      "notes": "Coloquial. También «choro»; «chorear» = robar. El «chorro» de agua sigue existiendo.",
+      "example": "cba-plata.me-lo-choreo-un-motochorro",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.trucho",
+      "word": "trucho",
+      "es": "falso, de imitación",
+      "notes": "Coloquial. Adjetivo: un reloj trucho, una factura trucha.",
+      "example": "cba-plata.un-reloj-trucho",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.berreta",
+      "word": "berreta",
+      "es": "cutre, de pacotilla",
+      "notes": "Coloquial. Igual en masculino y femenino: un celular berreta, una excusa berreta.",
+      "example": "cba-plata.una-excusa-re-berreta",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.cano",
+      "word": "caño",
+      "article": "el",
+      "gender": "m",
+      "es": "la pasada (algo buenísimo)",
+      "notes": "Coloquial. «Es un caño» = es buenísimo; en el fútbol, el caño es pasar el balón entre las piernas.",
+      "example": "cba-plata.quedo-un-cano",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.changui",
+      "word": "changüí",
+      "article": "el",
+      "gender": "m",
+      "es": "el margen, la ventajilla",
+      "notes": "Coloquial. «Dame un changüí» = dame un poco más de tiempo o de ventaja.",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.junar",
+      "word": "junar",
+      "es": "fichar, mirar con atención",
+      "notes": "Coloquial. «Juná cómo labura ese» = fíjate cómo curra ese. Lunfardo.",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.chusmear",
+      "word": "chusmear",
+      "es": "cotillear, curiosear",
+      "notes": "Coloquial. «Estaba chusmeando el Insta» = cotilleando las redes; el «chusma» es el cotilla.",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.bancar",
+      "word": "bancar",
+      "es": "apoyar; aguantar",
+      "notes": "Coloquial. «Te banco» = te apoyo; «no me lo banco» = no lo soporto.",
+      "example": "cba-plata.te-banco",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.mandarse",
+      "word": "mandarse",
+      "es": "lanzarse; zamparse",
+      "notes": "Coloquial. «Se mandó dos choripanes» = se zampó dos; «mandate» = lánzate, atrévete.",
+      "example": "cba-plata.me-mande-una-macana",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.pegarla",
+      "word": "pegarla",
+      "es": "acertar, dar en el clavo",
+      "notes": "Coloquial. «¡La pegaste!» = ¡has acertado!",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.arrugar",
+      "word": "arrugar",
+      "es": "rajarse, echarse atrás",
+      "notes": "Coloquial. «No arrugués» = no te rajes. El «rajarse» español aquí se dice así.",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.rajar",
+      "word": "rajar",
+      "es": "largarse; echar (a alguien)",
+      "notes": "Coloquial. «Rajemos de acá» = larguémonos de aquí; «lo rajaron» = lo echaron.",
+      "example": "cba-plata.lo-rajaron-del-laburo",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.tomarse-el-palo",
+      "word": "tomarse el palo",
+      "es": "pirarse, largarse",
+      "notes": "Coloquial. «Se tomó el palo sin pagar» = se piró sin pagar.",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.picar",
+      "word": "picar",
+      "es": "irse, pirarse (cordobés)",
+      "notes": "Coloquial. «Nero, piquemos» = tío, vámonos; también «picar el champión» o «picar llanta».",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.hacer-pata",
+      "word": "hacer pata",
+      "es": "acompañar, hacer compañía",
+      "notes": "Coloquial. «Te hago pata» = te acompaño (a un trámite, a esperar).",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.meter-el-pecho",
+      "word": "meter el pecho",
+      "es": "echarle valor, plantar cara",
+      "notes": "Coloquial. «Le metió el pecho al problema» = le echó valor (en España, a menudo «echarle huevos»).",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.ir-a-los-bifes",
+      "word": "ir a los bifes",
+      "es": "ir al grano",
+      "notes": "Coloquial. «Vamos a los bifes» = vamos al grano (el bife es el filete).",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.quedarse-en-el-molde",
+      "word": "quedarse en el molde",
+      "es": "no meterse, quedarse quieto",
+      "notes": "Coloquial. «Me quedé en el molde» = no dije nada, no me metí.",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.v.unar",
+      "word": "uñar",
+      "es": "arañar",
+      "notes": "Coloquial. Del centro y el norte del país: «¡Me uñaste!» = ¡me has arañado!",
+      "situation": "plata"
+    }
+  ],
+  "qa": [
+    {
+      "id": "cba-plata.qa.plata",
+      "question": "¿Tenés plata para el cole?",
+      "questionEs": "¿Tienes dinero para el bus?",
+      "accepted": [
+        {
+          "text": "No tengo un mango, ¿me prestás?",
+          "es": "No tengo ni un duro, ¿me dejas?"
+        },
+        {
+          "text": "Sí, tengo guita, tranqui.",
+          "es": "Sí, llevo pasta, tranquilo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, no llevo pasta encima.",
+          "es": "Se entiende raro: «pasta» aquí es comida. Di «plata» o «guita»."
+        },
+        {
+          "text": "Sí, una plata de mi abuela.",
+          "es": "Aquí «plata» es el dinero, no el metal de la cubertería."
+        }
+      ],
+      "register": "tu",
+      "situation": "plata",
+      "notes": "«Prestar» es lo normal para «dejar» dinero."
+    },
+    {
+      "id": "cba-plata.qa.cuanto-salio",
+      "question": "¿Cuánto te salió la campera?",
+      "questionEs": "¿Cuánto te costó la chaqueta?",
+      "accepted": [
+        {
+          "text": "Me salió treinta lucas. ¡Un afano!",
+          "es": "Me costó treinta mil pesos. ¡Un robo!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Treinta mil pavos, una pasta.",
+          "es": "Se entiende, pero «pavos» y «una pasta» son de España."
+        },
+        {
+          "text": "Treinta palos, re barata.",
+          "es": "«Un palo» es un millón: treinta millones no es barato."
+        }
+      ],
+      "register": "tu",
+      "situation": "plata",
+      "notes": "«Salir» = costar; «luca» = mil pesos."
+    },
+    {
+      "id": "cba-plata.qa.laburo",
+      "question": "¿Y vos de qué laburás?",
+      "questionEs": "¿Y tú en qué curras?",
+      "accepted": [
+        {
+          "text": "Soy diseñador, laburo desde casa.",
+          "es": "Soy diseñador, trabajo desde casa."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Soy diseñador, curro desde casa.",
+          "es": "«Currar» aquí es estafar: sonaría a que timas desde casa."
+        },
+        {
+          "text": "Hago changas de diseñador en un curro.",
+          "es": "«Un curro» es un chanchullo, no una empresa."
+        }
+      ],
+      "register": "tu",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.qa.empezar",
+      "question": "¿Usted cuándo podría empezar?",
+      "questionEs": "¿Cuándo podría empezar usted?",
+      "accepted": [
+        {
+          "text": "Cuando usted diga. El lunes, si no es feriado.",
+          "es": "Cuando usted diga. El lunes, si no es festivo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Cuando sea, tío.",
+          "es": "«Tío» con el dueño del café suena a España y fuera de lugar: trátalo de usted."
+        },
+        {
+          "text": "Cuando vos digás, maestro.",
+          "es": "Con un jefe en una entrevista, el vos y «maestro» suenan demasiado confianzudos."
+        }
+      ],
+      "register": "usted",
+      "situation": "plata",
+      "notes": "En una entrevista, usted hasta que te ofrezcan el vos.",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-plata.qa.reloj",
+      "question": "¿Es original ese reloj?",
+      "questionEs": "¿Es auténtico ese reloj?",
+      "accepted": [
+        {
+          "text": "No, es trucho. Lo compré en la feria.",
+          "es": "No, es una imitación. Lo compré en el mercadillo."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, es un caño.",
+          "es": "«Un caño» es algo buenísimo, no algo falso."
+        },
+        {
+          "text": "Sí, es re berreta.",
+          "es": "«Berreta» es cutre: no encaja con decir que es original."
+        }
+      ],
+      "register": "neutral",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.qa.examen",
+      "question": "¿Cómo te fue en el examen?",
+      "questionEs": "¿Qué tal el examen?",
+      "accepted": [
+        {
+          "text": "Zafé por poquito.",
+          "es": "Aprobé por los pelos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "He aprobado por los pelos, tío.",
+          "es": "Se entiende, pero «he aprobado» y «tío» suenan a España: «zafé»."
+        },
+        {
+          "text": "Me hice la chupina y aprobé.",
+          "es": "«Hacerse la chupina» es faltar a clase: no encaja con aprobar."
+        }
+      ],
+      "register": "tu",
+      "situation": "plata"
+    },
+    {
+      "id": "cba-plata.qa.ayer",
+      "question": "Che, ¿por qué no me llamaste anoche?",
+      "questionEs": "Oye, ¿por qué no me llamaste anoche?",
+      "accepted": [
+        {
+          "text": "Perdón, me colgué.",
+          "es": "Perdona, se me pasó."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Perdona, se me fue la olla, tía.",
+          "es": "Se entiende, pero «se me fue la olla» y «tía» son de España."
+        },
+        {
+          "text": "Perdón, me la banqué.",
+          "es": "«Bancarse» es aguantar algo, no olvidarse."
+        }
+      ],
+      "register": "tu",
+      "situation": "plata"
+    }
+  ]
+}

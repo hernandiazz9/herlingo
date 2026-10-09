@@ -1,0 +1,1020 @@
+{
+  "id": "cba-trampas",
+  "order": 80,
+  "title": "Coger, concha, culiado: trampas e insultos",
+  "description": "Las palabras de España que aquí significan otra cosa (coger, pija, concha, acabar, vale), el «culiado» en sus cuatro grados, los insultos y los tacos, cada uno con su aviso de registro.",
+  "emoji": "⚠️",
+  "situation": "falsos-amigos",
+  "lessons": [
+    {
+      "id": "cba-trampas.l.falsos-amigos",
+      "title": "Coger, pija y concha: falsos amigos",
+      "items": [
+        "cba-trampas.v.coger",
+        "cba-trampas.agarra-la-campera",
+        "cba-trampas.v.campera",
+        "cba-trampas.v.concha",
+        "cba-trampas.v.pija",
+        "cba-trampas.un-barrio-re-cheto",
+        "cba-trampas.v.chulo",
+        "cba-trampas.v.acabar",
+        "cba-trampas.ya-terminaste-con-la-compu",
+        "cba-trampas.correte-un-poquito",
+        "cba-trampas.hace-la-fila",
+        "cba-trampas.le-dio-una-pina",
+        "cba-trampas.la-torta-de-cumpleanos",
+        "cba-trampas.v.tio",
+        "cba-trampas.v.vale",
+        "cba-trampas.v.pasta",
+        "cba-trampas.qa.bolsas",
+        "cba-trampas.qa.pasar-a-buscar",
+        "cba-trampas.qa.terminaste",
+        "cba-trampas.qa.abuela"
+      ]
+    },
+    {
+      "id": "cba-trampas.l.ropa-y-cosas",
+      "title": "Bombacha, remera y birome",
+      "items": [
+        "cba-trampas.una-bombacha-de-algodon",
+        "cba-trampas.v.bombacha",
+        "cba-trampas.v.pollera",
+        "cba-trampas.ponete-el-saco",
+        "cba-trampas.esa-remera-te-queda-barbara",
+        "cba-trampas.v.buzo",
+        "cba-trampas.v.ojota",
+        "cba-trampas.v.championes",
+        "cba-trampas.v.anteojos",
+        "cba-trampas.v.birome",
+        "cba-trampas.v.frazada",
+        "cba-trampas.v.arvejas",
+        "cba-trampas.v.morron",
+        "cba-trampas.v.gomeria",
+        "cba-trampas.qa.feria",
+        "cba-trampas.qa.boliche"
+      ]
+    },
+    {
+      "id": "cba-trampas.l.culiado",
+      "title": "Culiado en cuatro grados",
+      "items": [
+        "cba-trampas.v.culiado",
+        "cba-trampas.que-haces-culiado",
+        "cba-trampas.uh-culiado-que-calor",
+        "cba-trampas.que-culiado-se-gano-la-rifa",
+        "cba-trampas.ese-culiado-la-descose",
+        "cba-trampas.el-culiado-ese-me-cago",
+        "cba-trampas.pedazo-de-culiado",
+        "cba-trampas.boludo-cuanto-tiempo",
+        "cba-trampas.v.boludo",
+        "cba-trampas.deja-de-boludear",
+        "cba-trampas.v.tirar-la-goma",
+        "cba-trampas.v.pelotudo",
+        "cba-trampas.que-forro",
+        "cba-trampas.papudo",
+        "cba-trampas.la-puta-madre",
+        "cba-trampas.la-concha-de-la-lora",
+        "cba-trampas.v.conchudo",
+        "cba-trampas.x.te-gua-caga-a-trompada",
+        "cba-trampas.qa.culiado",
+        "cba-trampas.qa.arbitro"
+      ]
+    },
+    {
+      "id": "cba-trampas.l.insultos",
+      "title": "Insultos, piropos y tacos",
+      "items": [
+        "cba-trampas.no-seas-salame",
+        "cba-trampas.v.choto",
+        "cba-trampas.la-fiesta-estuvo-chomasa",
+        "cba-trampas.es-un-pajero",
+        "cba-trampas.sos-un-chancho",
+        "cba-trampas.v.cursiento",
+        "cba-trampas.velo-a-este",
+        "cba-trampas.lo-gorrearon",
+        "cba-trampas.v.negro-cabeza",
+        "cba-trampas.v.villero",
+        "cba-trampas.v.trolo",
+        "cba-trampas.v.mogolico",
+        "cba-trampas.tremendo-minon",
+        "cba-trampas.esta-re-fuerte",
+        "cba-trampas.es-un-potro",
+        "cba-trampas.que-lomazo",
+        "cba-trampas.estas-re-fachero",
+        "cba-trampas.v.mamasa",
+        "cba-trampas.v.yeguazon",
+        "cba-trampas.te-quedo-pipicucu",
+        "cba-trampas.v.orto",
+        "cba-trampas.v.lolas",
+        "cba-trampas.v.bolas",
+        "cba-trampas.me-chupa-un-huevo",
+        "cba-trampas.queda-en-la-loma-del-orto",
+        "cba-trampas.mas-claro-que-pendejo-de-albino",
+        "cba-trampas.mas-fuerte-que-pis-de-manana",
+        "cba-trampas.te-cagaste",
+        "cba-trampas.se-agarro-un-pedo"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "cba-trampas.agarra-la-campera",
+      "text": "Agarrá la campera, que refresca.",
+      "es": "Coge la chaqueta, que refresca.",
+      "notes": "Lo que en España se «coge» aquí se «agarra» (objetos, enfermedades) o se «toma» (el cole). «Coger» es follar.",
+      "explanation": "Al salir de noche en las sierras. «Agarrá» con acento al final: a-ga-RRÁ.",
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.un-barrio-re-cheto",
+      "text": "Es un barrio re cheto.",
+      "es": "Es un barrio muy pijo.",
+      "notes": "Lo pijo es «cheto» o «concheto». Nunca digas «pijo/pija»: «pija» es polla.",
+      "explanation": "Para hablar de un barrio o un boliche caro. «Cheto» con ch de «chico».",
+      "register": "neutral",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.ya-terminaste-con-la-compu",
+      "text": "¿Ya terminaste con la compu?",
+      "es": "¿Ya has acabado con el ordenador?",
+      "notes": "Di «terminar»: «acabar» también es tener un orgasmo. El ordenador es «la computadora» o «la compu».",
+      "explanation": "Para pedir el ordenador a alguien de casa. «Terminaste» sin la -s de en medio: ter-mi-NAS-te.",
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.correte-un-poquito",
+      "text": "Correte un poquito.",
+      "es": "Apártate un poco.",
+      "notes": "«Correrse» = apartarse, hacerse a un lado; aquí no tiene ningún sentido sexual.",
+      "explanation": "En un banco o en el sofá, para hacer sitio. «Correte» sin tilde: CO-rre-te.",
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.hace-la-fila",
+      "text": "Hacé la fila como todos.",
+      "es": "Haz cola como todo el mundo.",
+      "notes": "Ojo: «la cola» es el trasero; para esperar turno, «la fila». «Hacer cola» se entiende, pero se presta a bromas.",
+      "explanation": "En el súper o en la parada. «Hacé» con acento al final: ha-SÉ.",
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.le-dio-una-pina",
+      "text": "Le dio una piña.",
+      "es": "Le dio un puñetazo.",
+      "notes": "Coloquial. «Piña» = puñetazo; la fruta es el «ananá».",
+      "explanation": "Para contar una pelea. «Piña» con ñ clara.",
+      "register": "neutral",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.la-torta-de-cumpleanos",
+      "text": "La torta de cumpleaños la hizo mi vieja.",
+      "es": "La tarta de cumpleaños la hizo mi madre.",
+      "notes": "«Torta» = tarta o pastel dulce; «tarta» es la salada (de verduras). Como insulto, «torta» es ofensivo para una lesbiana.",
+      "explanation": "En un cumpleaños, para presumir de tu suegra. «Torta» con la r simple.",
+      "register": "neutral",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.una-bombacha-de-algodon",
+      "text": "Me compré una bombacha de algodón.",
+      "es": "Me compré unas bragas de algodón.",
+      "notes": "«Bombacha» = bragas (en singular); la «bombacha de campo» es el pantalón ancho del gaucho.",
+      "explanation": "Lo oirás en tiendas de ropa. «Bombacha» con ch de «chico».",
+      "register": "neutral",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.ponete-el-saco",
+      "text": "Ponete el saco para la boda.",
+      "es": "Ponte la americana para la boda.",
+      "notes": "El «saco» es la chaqueta de traje; la cazadora o el abrigo son la «campera».",
+      "explanation": "Antes de un evento formal. «Ponete» sin tilde: po-NE-te.",
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.esa-remera-te-queda-barbara",
+      "text": "Esa remera te queda bárbara.",
+      "es": "Esa camiseta te queda genial.",
+      "notes": "«Remera» = camiseta («camiseta» es la de fútbol o la interior); «bárbaro» = estupendo, nada violento.",
+      "explanation": "Para hacer un cumplido en una tienda. «Bárbara» con la tónica en la primera: BÁR-ba-ra.",
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.que-haces-culiado",
+      "text": "¿Qué hacés, culiado?",
+      "es": "¿Qué pasa, cabrón? (entre colegas)",
+      "notes": "Vulgar. Grado 1 de «culiado»: saludo cariñoso entre amigos, sobre todo hombres jóvenes. Úsalo solo cuando ellos lo usen contigo; nunca con mayores ni desconocidos.",
+      "explanation": "Entre colegas de confianza. Se dice «culiao» o «culiau», con la tónica en la a.",
+      "register": "tu",
+      "situation": "insultos",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-trampas.uh-culiado-que-calor",
+      "text": "Uh, culiado, ¡qué calor!",
+      "es": "¡Uf, tío, qué calor!",
+      "notes": "Vulgar. Grado 1 también: muletilla o exclamación entre amigos, sin insultar a nadie («uh, culia»).",
+      "explanation": "Para quejarte del calor con amigos cordobeses. Corto: «uh, culia».",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.que-culiado-se-gano-la-rifa",
+      "text": "¡Qué culiado, se ganó la rifa!",
+      "es": "¡Qué cabrón, le ha tocado la rifa!",
+      "notes": "Vulgar. Grado 2: admiración o envidia sana por la suerte de alguien, como el «¡qué cabrón!» español.",
+      "explanation": "Cuando un amigo tiene una suerte increíble. Tono de risa, no de enfado.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.ese-culiado-la-descose",
+      "text": "Ese culiado la descose.",
+      "es": "El muy cabrón lo borda.",
+      "notes": "Vulgar. Grado 2: elogio a quien hace algo de maravilla (un jugador, un músico).",
+      "explanation": "En la cancha o en el baile, admirando a alguien. «Descose» con s.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.el-culiado-ese-me-cago",
+      "text": "El culiado ese me cagó la plata.",
+      "es": "El cabrón ese me ha timado el dinero.",
+      "notes": "Vulgar. Grado 3: insulto a alguien por una mala acción; con «ese» detrás, ya no es cariñoso.",
+      "explanation": "Para quejarte de alguien que te estafó, entre amigos. Tono seco y enfadado.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.pedazo-de-culiado",
+      "text": "¡Pedazo de culiado, cobrá bien!",
+      "es": "¡Hijo de puta, pita bien!",
+      "notes": "Ofensivo. Grado 4: insulto grueso, gritado (al árbitro, en una pelea); igual que «culiadazo». Dicho a alguien en la cara, empieza una pelea.",
+      "explanation": "Lo oirás en la cancha; no lo digas tú fuera de ella. «Cobrá» = pita (una falta).",
+      "register": "tu",
+      "situation": "insultos",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-trampas.boludo-cuanto-tiempo",
+      "text": "¡Boludo, cuánto tiempo!",
+      "es": "¡Tío, cuánto tiempo!",
+      "notes": "Coloquial. Como vocativo, «boludo» es el «tío» argentino entre amigos; como insulto («¡qué boludo que sos!») es «gilipollas». Lo decide el tono.",
+      "explanation": "Al reencontrarte con un amigo. «Boludo» con la tónica en -LU-.",
+      "register": "tu",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.deja-de-boludear",
+      "text": "Dejá de boludear.",
+      "es": "Deja de hacer el tonto.",
+      "notes": "Vulgar. «Boludear» = perder el tiempo o hacer el tonto; «hacerse el boludo» = hacerse el sueco.",
+      "explanation": "Para meter prisa a un amigo. «Dejá» con acento al final: de-JÁ.",
+      "register": "tu",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.que-forro",
+      "text": "Qué forro, no me avisó.",
+      "es": "Qué capullo, no me avisó.",
+      "notes": "Vulgar. «Forro» = cabrón, mala persona (y también condón). Entre amigos, para quejarte de alguien ausente.",
+      "explanation": "Cuando alguien te deja colgado. «Forro» con la rr fuerte.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.papudo",
+      "text": "Te olvidaste la coca para el fernet, papudo.",
+      "es": "Se te ha olvidado la Coca-Cola para el fernet, gilipollas.",
+      "notes": "Vulgar. «Papudo» (o «paposo», «papazo») = gilipollas, muy cordobés; entre amigos y en broma, sí; a un desconocido, no.",
+      "explanation": "Para reñir en broma a un amigo. «Papudo» con la tónica en -PU-.",
+      "register": "tu",
+      "situation": "insultos",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-trampas.la-puta-madre",
+      "text": "¡La puta madre, perdí el bondi!",
+      "es": "¡Joder, he perdido el bus!",
+      "notes": "Vulgar. «¡La puta madre!» es el «¡joder!» argentino, una exclamación, no un insulto a nadie. «Hijo de puta» es igual que en España.",
+      "explanation": "Para soltar rabia cuando algo sale mal. No lo digas delante de Doña Chela.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.la-concha-de-la-lora",
+      "text": "¡La concha de la lora, otra vez perdimos!",
+      "es": "¡Me cago en la leche, otra vez hemos perdido!",
+      "notes": "Ofensivo. Exclamación muy grosera («concha» = coño). Dirigido a alguien, «la concha de tu madre» es el insulto más fuerte: provoca peleas.",
+      "explanation": "Lo oirás en la cancha. Entiéndelo; en tu boca, mejor «¡qué garrón!».",
+      "register": "neutral",
+      "situation": "insultos",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-trampas.no-seas-salame",
+      "text": "No seas salame.",
+      "es": "No seas memo.",
+      "notes": "Coloquial. «Salame», «nabo» o «zapallo» = tonto; suave y casi cariñoso.",
+      "explanation": "Para reñir con cariño. «Salame» con tres sílabas: sa-LA-me.",
+      "register": "tu",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.la-fiesta-estuvo-chomasa",
+      "text": "La fiesta estuvo chomasa.",
+      "es": "La fiesta fue un muermo.",
+      "notes": "Coloquial. «Chomaso/chomasa» (o «chome») = cutre, chungo, un rollo; muy cordobés y nada grosero.",
+      "explanation": "Para criticar un plan que salió mal. «Chomasa» con s: cho-MA-sa.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.es-un-pajero",
+      "text": "Es un pajero, no labura nunca.",
+      "es": "Es un vago, no da ni golpe.",
+      "notes": "Vulgar. «Pajero» = vago, inútil (literalmente, pajillero). Entre amigos, sí; delante de la familia, no.",
+      "explanation": "Para criticar a un vago entre amigos. «Pajero» con la j suave.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.sos-un-chancho",
+      "text": "Sos un chancho, limpiá.",
+      "es": "Eres un guarro, limpia.",
+      "notes": "Coloquial. «Chancho» = cerdo; dicho de una persona, guarro (o gordo, y entonces ofende).",
+      "explanation": "Para reñir a un compañero de piso. «Limpiá» con acento al final: lim-PIÁ.",
+      "register": "tu",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.velo-a-este",
+      "text": "¡Velo a este lo que dice!",
+      "es": "¡Mira a este lo que dice!",
+      "notes": "Coloquial. «Velo» = míralo, para burlarte de lo que alguien acaba de decir; muy de barrio cordobés.",
+      "explanation": "Para reírte de una fanfarronada. «Velo» con la e abierta: VE-lo.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.lo-gorrearon",
+      "text": "Al pobre lo gorrearon.",
+      "es": "Al pobre le pusieron los cuernos.",
+      "notes": "Vulgar. «Gorrear» = poner los cuernos; el cornudo es el «gorreado» (o «sombrero largo»).",
+      "explanation": "Para cotillear, en voz baja. «Gorrearon» con la rr fuerte.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.tremendo-minon",
+      "text": "Tremendo minón.",
+      "es": "Menudo pibón.",
+      "notes": "Coloquial. «Minón» = mujer guapísima; cosifica: entre amigos, no a la cara de nadie.",
+      "explanation": "Lo oirás entre chicos en un boliche. «Minón» con acento al final.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.esta-re-fuerte",
+      "text": "Esa chica está re fuerte.",
+      "es": "Esa chica está buenísima.",
+      "notes": "Coloquial. «Estar fuerte» (o «fuertona», «ricaza») = estar bueno o buena; ojo, no habla de músculos.",
+      "explanation": "Lo oirás entre amigos. Dicho a la cara de alguien suena a acoso.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.es-un-potro",
+      "text": "Ese pibe es un potro.",
+      "es": "Ese chaval es un buenorro.",
+      "notes": "Coloquial. «Potro» o «papi» = tío bueno; lo dicen sobre todo las chicas.",
+      "explanation": "Para comentar (en voz baja) quién te parece guapo. «Potro» con la r simple.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.que-lomazo",
+      "text": "¡Qué lomazo!",
+      "es": "¡Qué cuerpazo!",
+      "notes": "Coloquial. «Lomazo» = cuerpazo, de hombre o de mujer; piropo de confianza.",
+      "explanation": "Entre amigos, nunca a desconocidos. «Lomazo» con s: lo-MA-so.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.estas-re-fachero",
+      "text": "Estás re fachero hoy.",
+      "es": "Hoy vas muy guapo.",
+      "notes": "Coloquial. «Fachero» = guapo, con estilo; la «facha» es la pinta. Sin connotación política.",
+      "explanation": "Para hacer un cumplido a un amigo. «Fachero» con ch de «chico».",
+      "register": "tu",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.te-quedo-pipicucu",
+      "text": "Te quedó pipicucú el jardín.",
+      "es": "Te ha quedado monísimo el jardín.",
+      "notes": "Coloquial. «Pipicucú» = mono, cuco, precioso; muy cordobés y nada grosero.",
+      "explanation": "Para elogiar algo bonito y cuidado. Acento al final: pi-pi-cu-CÚ.",
+      "register": "tu",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.me-chupa-un-huevo",
+      "text": "Me chupa un huevo lo que digan.",
+      "es": "Me la suda lo que digan.",
+      "notes": "Vulgar. «Me chupa un huevo» = me importa una mierda; más grueso aún, «chupame la pinchila».",
+      "explanation": "Entre amigos, para mostrar indiferencia. Nunca con mayores ni en el trabajo.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.queda-en-la-loma-del-orto",
+      "text": "Eso queda en la loma del orto.",
+      "es": "Eso está donde Cristo perdió el mechero.",
+      "notes": "Vulgar. «La loma del orto» (o «del ocote») = lejísimos; «orto» es culo.",
+      "explanation": "Para quejarte de lo lejos que está algo, entre amigos. «Orto» con la r suave.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.mas-claro-que-pendejo-de-albino",
+      "text": "Más claro que pendejo de albino.",
+      "es": "Más claro, agua.",
+      "notes": "Vulgar. Aquí «pendejo» es el vello púbico: «clarísimo». Entre amigos y en broma.",
+      "explanation": "Para dar algo por obvio, entre colegas. «Albino» con la tónica en -BI-.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.mas-fuerte-que-pis-de-manana",
+      "text": "Este fernet está más fuerte que pis de mañana.",
+      "es": "Este fernet está cargadísimo.",
+      "notes": "Vulgar. Comparación cordobesa para algo muy fuerte (una bebida) o muy bueno.",
+      "explanation": "En la previa, al probar un fernet bien cargado. «Pis» con s final clara.",
+      "register": "neutral",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.te-cagaste",
+      "text": "Perdiste el último cole. Te cagaste.",
+      "es": "Has perdido el último bus. Te jodes.",
+      "notes": "Vulgar. «Te cagaste» = te fastidias, te jodes; «la cagaste» = la has fastidiado.",
+      "explanation": "Entre amigos, con un punto de burla. «Cagaste» sin la s de en medio: ca-GAS-te.",
+      "register": "tu",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.se-agarro-un-pedo",
+      "text": "Anoche se agarró un pedo bárbaro.",
+      "es": "Anoche se pilló una cogorza de campeonato.",
+      "notes": "Vulgar. «Agarrarse un pedo» o «ponerse en pedo» = emborracharse; «estar en pedo» = ir borracho.",
+      "explanation": "Para contar la noche de un amigo. «Pedo» con la e cerrada.",
+      "register": "neutral",
+      "situation": "insultos"
+    }
+  ],
+  "expressions": [
+    {
+      "id": "cba-trampas.x.te-gua-caga-a-trompada",
+      "text": "¡Te gua cagá' a trompada'!",
+      "es": "¡Te voy a partir la cara!",
+      "variety": "Cordobés popular",
+      "standard": "¡Te voy a cagar a trompadas!",
+      "notes": "Vulgar. Amenaza de pelea con la pronunciación de barrio («te gua» = te voy a, sin -r ni -s). Si te lo dicen en serio, vete."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cba-trampas.v.coger",
+      "word": "coger",
+      "es": "follar (no «coger» de España)",
+      "notes": "Vulgar. La trampa número uno: para objetos di «agarrar» y para el bus «tomar». «Me cogí el bus» hace reír a todo el mundo.",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.concha",
+      "word": "concha",
+      "article": "la",
+      "gender": "f",
+      "es": "el coño",
+      "notes": "Vulgar. Evita el nombre «Concha» y la «concha» marina (di «caracol» o «almeja»). En España es inocente; aquí, no.",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.pija",
+      "word": "pija",
+      "article": "la",
+      "gender": "f",
+      "es": "la polla",
+      "notes": "Vulgar. Por eso «pijo/pija» no sirve para lo pijo: di «cheto». Otras palabras para lo mismo: «choto», «pinchila».",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.chulo",
+      "word": "chulo",
+      "article": "el",
+      "gender": "m",
+      "es": "el proxeneta (no «guay»)",
+      "notes": "Ni «chulo», ni «guay», ni «mola»: aquí se dice «copado», «está bueno», «joya» o «re lindo».",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.acabar",
+      "word": "acabar",
+      "es": "terminar; (vulgar) correrse",
+      "notes": "Ojo: «¿acabaste?» puede sonar sexual. Más seguro: «terminar».",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.tio",
+      "word": "tío",
+      "article": "el",
+      "gender": "m",
+      "es": "el tío (solo el pariente)",
+      "notes": "Como «colega» no se usa: di «loco», «flaco», «chabón» o «nero». «¡Tío!» delante de un cordobés te delata como español.",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.vale",
+      "word": "vale",
+      "es": "¡vale! (aquí casi no se usa)",
+      "notes": "Para aceptar di «dale», «bueno» o «listo». «Vale» se entiende, pero es la marca española por excelencia.",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.pasta",
+      "word": "pasta",
+      "article": "la",
+      "gender": "f",
+      "es": "la pasta (comida, nunca dinero)",
+      "notes": "El dinero es «plata» o «guita»; «tener pasta» aquí es tener madera para algo.",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.campera",
+      "word": "campera",
+      "article": "la",
+      "gender": "f",
+      "es": "la chaqueta, la cazadora",
+      "notes": "Cualquier chaqueta de abrigo; la de traje es el «saco».",
+      "example": "cba-trampas.agarra-la-campera",
+      "situation": "falsos-amigos",
+      "image": "fluent:coat"
+    },
+    {
+      "id": "cba-trampas.v.bombacha",
+      "word": "bombacha",
+      "article": "la",
+      "gender": "f",
+      "es": "las bragas",
+      "notes": "En singular: «una bombacha». La «bombacha de campo» es el pantalón del gaucho.",
+      "example": "cba-trampas.una-bombacha-de-algodon",
+      "situation": "falsos-amigos",
+      "image": "fluent:briefs"
+    },
+    {
+      "id": "cba-trampas.v.pollera",
+      "word": "pollera",
+      "article": "la",
+      "gender": "f",
+      "es": "la falda",
+      "notes": "La «falda» aquí es un corte de carne; el «pollerudo» es el calzonazos.",
+      "situation": "falsos-amigos",
+      "image": "fluent:womans-clothes"
+    },
+    {
+      "id": "cba-trampas.v.buzo",
+      "word": "buzo",
+      "article": "el",
+      "gender": "m",
+      "es": "la sudadera",
+      "notes": "Y el jersey es el «pulóver». El buzo de submarinismo también existe.",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.ojota",
+      "word": "ojota",
+      "article": "la",
+      "gender": "f",
+      "es": "la chancla",
+      "notes": "«Las ojotas» para la pileta o el río.",
+      "situation": "falsos-amigos",
+      "image": "fluent:thong-sandal"
+    },
+    {
+      "id": "cba-trampas.v.championes",
+      "word": "championes",
+      "article": "los",
+      "gender": "pl",
+      "es": "las deportivas, las zapatillas",
+      "notes": "Cordobés (y uruguayo); en el resto del país, «zapatillas». «Atate los championes».",
+      "situation": "falsos-amigos",
+      "image": "fluent:running-shoe"
+    },
+    {
+      "id": "cba-trampas.v.anteojos",
+      "word": "anteojos",
+      "article": "los",
+      "gender": "pl",
+      "es": "las gafas",
+      "notes": "También «lentes»; «gafas» suena muy de España.",
+      "situation": "falsos-amigos",
+      "image": "fluent:glasses"
+    },
+    {
+      "id": "cba-trampas.v.birome",
+      "word": "birome",
+      "article": "la",
+      "gender": "f",
+      "es": "el boli, el bolígrafo",
+      "notes": "Por Biró, el inventor que lo patentó en Argentina; también «lapicera».",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.frazada",
+      "word": "frazada",
+      "article": "la",
+      "gender": "f",
+      "es": "la manta",
+      "notes": "Y el edredón es el «acolchado».",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.arvejas",
+      "word": "arvejas",
+      "article": "las",
+      "gender": "pl",
+      "es": "los guisantes",
+      "notes": "Más verdulería distinta: «chauchas» = judías verdes, «damasco» = albaricoque, «crema» = nata.",
+      "situation": "falsos-amigos",
+      "image": "fluent:pea-pod"
+    },
+    {
+      "id": "cba-trampas.v.morron",
+      "word": "morrón",
+      "article": "el",
+      "gender": "m",
+      "es": "el pimiento",
+      "notes": "«Morrón rojo», «morrón verde»; el «ají» es el picante.",
+      "situation": "falsos-amigos",
+      "image": "fluent:bell-pepper"
+    },
+    {
+      "id": "cba-trampas.v.gomeria",
+      "word": "gomería",
+      "article": "la",
+      "gender": "f",
+      "es": "el taller de neumáticos",
+      "notes": "Donde arreglan pinchazos; la rueda es «la goma».",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.v.culiado",
+      "word": "culiado",
+      "article": "el",
+      "gender": "m",
+      "es": "el cabrón (de colega a insulto)",
+      "notes": "Vulgar. LA palabra cordobesa (se dice «culiao», «culiau», «culia»). Cuatro grados: saludo de amigos, admiración, insulto por algo malo y, con «pedazo de» o «culiadazo», insulto grueso. Como «cabrón», depende del tono.",
+      "example": "cba-trampas.que-haces-culiado",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.boludo",
+      "word": "boludo",
+      "article": "el",
+      "gender": "m",
+      "es": "el gilipollas; (entre amigos) tío",
+      "notes": "Vulgar. Vocativo amistoso o insulto, según el tono; «pelotudo» es más fuerte.",
+      "example": "cba-trampas.boludo-cuanto-tiempo",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.pelotudo",
+      "word": "pelotudo",
+      "article": "el",
+      "gender": "m",
+      "es": "el imbécil",
+      "notes": "Vulgar. Más fuerte que «boludo» y sin uso cariñoso: «Pelotudo, casi me pisás».",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.conchudo",
+      "word": "conchudo",
+      "article": "el",
+      "gender": "m",
+      "es": "el cabrón (muy grosero)",
+      "notes": "Ofensivo. De «concha»; en femenino («conchuda») es un insulto machista muy fuerte. Dicho a alguien, es buscar pelea.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.choto",
+      "word": "choto",
+      "es": "cutre, malo; (sustantivo) la polla",
+      "notes": "Vulgar. «Un chiste choto» = un chiste malo; «¡chotazo!» = ¡qué tonto!",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.cursiento",
+      "word": "cursiento",
+      "es": "guarro, cerdo",
+      "notes": "Ofensivo. De «cursos» (diarrea): sucio, asqueroso. Dicho a alguien, ofende de verdad.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.negro-cabeza",
+      "word": "negro cabeza",
+      "article": "el",
+      "gender": "m",
+      "es": "insulto clasista y racista (sin equivalente)",
+      "notes": "Ofensivo. Como «negro de mierda» o «negro cuartetero», desprecia a la gente pobre de piel oscura. Nada que ver con el «negro» cariñoso: nunca lo digas.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.villero",
+      "word": "villero",
+      "article": "el",
+      "gender": "m",
+      "es": "el poligonero, el cani (clasista)",
+      "notes": "Ofensivo. Desprecio por quien vive en una villa; «groncho» y «grasa» (hortera) van en la misma línea. Ofende y mucho.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.trolo",
+      "word": "trolo",
+      "article": "el",
+      "gender": "m",
+      "es": "el maricón (homófobo)",
+      "notes": "Ofensivo. Igual que «puto»: insulto homófobo. Entiéndelo; usarlo te pone en un lío.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.mogolico",
+      "word": "mogólico",
+      "article": "el",
+      "gender": "m",
+      "es": "el subnormal (insulto)",
+      "notes": "Ofensivo. Insulto que ofende además a las personas con síndrome de Down; muy mal visto.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.mamasa",
+      "word": "mamasa",
+      "article": "la",
+      "gender": "f",
+      "es": "la tía buenísima (piropo)",
+      "notes": "Vulgar. Piropo callejero cosificante («¡Mamasa!»). Entiéndelo; no lo uses.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.yeguazon",
+      "word": "yeguazón",
+      "article": "el",
+      "gender": "m",
+      "es": "el mujerón (grosero)",
+      "notes": "Vulgar. Como «camionazo»: piropo machista y cosificante; si lo dices, quedas fatal.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.orto",
+      "word": "orto",
+      "article": "el",
+      "gender": "m",
+      "es": "el culo",
+      "notes": "Vulgar. «Se cayó de orto» = se cayó de culo; en cordobés también «ocote». Lo fino es «la cola».",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.lolas",
+      "word": "lolas",
+      "article": "las",
+      "gender": "pl",
+      "es": "las tetas (coloquial)",
+      "notes": "Coloquial, más suave que «tetas» (que es vulgar). Entre amigos.",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.bolas",
+      "word": "bolas",
+      "article": "las",
+      "gender": "pl",
+      "es": "los huevos, los cojones",
+      "notes": "Vulgar. «Me tenés las bolas llenas» = me tienes hasta los huevos; también «pelotas».",
+      "situation": "insultos"
+    },
+    {
+      "id": "cba-trampas.v.tirar-la-goma",
+      "word": "tirar la goma",
+      "es": "hacer la pelota; (literal) hacer una mamada",
+      "notes": "Vulgar. En sentido figurado es hacerle la pelota al jefe; el sentido literal es sexual, así que ni en broma delante de la familia.",
+      "situation": "insultos"
+    }
+  ],
+  "qa": [
+    {
+      "id": "cba-trampas.qa.bolsas",
+      "question": "Che, ¿me ayudás con las bolsas?",
+      "questionEs": "Oye, ¿me ayudas con las bolsas?",
+      "accepted": [
+        {
+          "text": "Dale, agarro estas dos.",
+          "es": "Venga, cojo estas dos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vale, cojo estas dos.",
+          "es": "«Coger» aquí es follar, y «vale» suena a España: «dale, agarro»."
+        },
+        {
+          "text": "Dale, me corro estas dos.",
+          "es": "«Correrse» es apartarse: no tiene sentido con las bolsas."
+        }
+      ],
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.qa.pasar-a-buscar",
+      "question": "¿Te paso a buscar a las nueve?",
+      "questionEs": "¿Te recojo a las nueve?",
+      "accepted": [
+        {
+          "text": "Dale, a las nueve estoy lista.",
+          "es": "Vale, a las nueve estoy lista."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vale, a las nueve estoy.",
+          "es": "Se entiende, pero «vale» es la marca española: aquí se dice «dale»."
+        },
+        {
+          "text": "Dale, vení a cogerme a las nueve.",
+          "es": "Desastre: «cogerme» aquí significa «follarme». Di «pasame a buscar»."
+        }
+      ],
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.qa.terminaste",
+      "question": "¿Terminaste con la compu?",
+      "questionEs": "¿Has acabado con el ordenador?",
+      "accepted": [
+        {
+          "text": "Sí, ya terminé. Tomá.",
+          "es": "Sí, ya he acabado. Toma."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, ya acabé.",
+          "es": "«Acabar» también es correrse: mejor «terminé»."
+        },
+        {
+          "text": "Sí, ya está, tío.",
+          "es": "Se entiende, pero «tío» suena a España."
+        }
+      ],
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.qa.abuela",
+      "question": "¿Y usted cómo la conoció a mi nieta?",
+      "questionEs": "¿Y usted cómo conoció a mi nieta?",
+      "accepted": [
+        {
+          "text": "La conocí en Madrid, señora. Ella estudiaba allá.",
+          "es": "La conocí en Madrid, señora. Ella estudiaba allí."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "En Madrid, tía.",
+          "es": "Aquí «tía» es solo la hermana de tu padre o tu madre: a la abuela, «señora»."
+        },
+        {
+          "text": "En Madrid. ¿Vos sos la abuela, negra?",
+          "es": "El vos y «negra» con Doña Chela son demasiada confianza: usted y «señora»."
+        }
+      ],
+      "register": "usted",
+      "situation": "falsos-amigos",
+      "notes": "Con la abuela de tu pareja, usted y nada de apelativos."
+    },
+    {
+      "id": "cba-trampas.qa.feria",
+      "question": "¿Qué te compraste en la feria?",
+      "questionEs": "¿Qué te compraste en el mercadillo?",
+      "accepted": [
+        {
+          "text": "Una remera y una campera.",
+          "es": "Una camiseta y una chaqueta."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Una bombacha para mí.",
+          "es": "«Bombacha» son unas bragas: risas aseguradas."
+        },
+        {
+          "text": "Una camiseta y una chaqueta.",
+          "es": "Se entiende, pero aquí «camiseta» es la de fútbol: «remera» y «campera»."
+        }
+      ],
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.qa.boliche",
+      "question": "¿Qué tal el boliche de anoche?",
+      "questionEs": "¿Qué tal la discoteca de anoche?",
+      "accepted": [
+        {
+          "text": "Re cheto, lleno de tinchos.",
+          "es": "Muy pijo, lleno de cayetanos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Muy pijo, lleno de pijas.",
+          "es": "«Pija» es polla: di «cheto»."
+        },
+        {
+          "text": "Muy chulo, tío.",
+          "es": "«Chulo» aquí es proxeneta y «tío» suena a España: «re copado»."
+        }
+      ],
+      "register": "tu",
+      "situation": "falsos-amigos"
+    },
+    {
+      "id": "cba-trampas.qa.culiado",
+      "question": "¿Qué hacés, culiado? ¿Todo bien?",
+      "questionEs": "¿Qué pasa, cabrón? ¿Todo bien?",
+      "accepted": [
+        {
+          "text": "¡Todo bien, Nico! ¿Y vos?",
+          "es": "¡Todo bien, Nico! ¿Y tú?"
+        },
+        {
+          "text": "¿Qué hacés, culiado? Acá andamos.",
+          "es": "¿Qué pasa, cabrón? Aquí estamos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¿Perdón? ¿Me estás insultando?",
+          "es": "Entre amigos, «culiado» es un saludo cariñoso, no un insulto."
+        },
+        {
+          "text": "¡Bien, tío! ¿Qué tal?",
+          "es": "Se entiende, pero «tío» suena a España: aquí, «¡Todo bien! ¿Y vos?»."
+        }
+      ],
+      "register": "tu",
+      "situation": "insultos",
+      "notes": "Grado 1: si Nico te lo dice, puedes devolvérselo.",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-trampas.qa.arbitro",
+      "question": "¿Viste lo que cobró el árbitro?",
+      "questionEs": "¿Has visto lo que ha pitado el árbitro?",
+      "accepted": [
+        {
+          "text": "¡Qué pelotudo! No vio el penal.",
+          "es": "¡Qué imbécil! No ha visto el penalti."
+        },
+        {
+          "text": "¡Un afano! No vio el penal.",
+          "es": "¡Un robo! No ha visto el penalti."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¡Qué cabrón, tío! No vio el penal.",
+          "es": "Se entiende, pero «cabrón» y «tío» suenan a España."
+        },
+        {
+          "text": "¡Qué capo el árbitro! No vio el penal.",
+          "es": "«Capo» es un elogio: no encaja con quejarte."
+        }
+      ],
+      "register": "tu",
+      "situation": "insultos",
+      "notes": "En la cancha, insultar al árbitro es parte del rito; fuera, no.",
+      "voice": "es-AR-TomasNeural"
+    }
+  ]
+}

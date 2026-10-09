@@ -1,0 +1,994 @@
+{
+  "id": "cba-lugares",
+  "order": 60,
+  "title": "Del centro a las sierras",
+  "description": "Cole, bondi y remís; cuadras, veredas y barrios; el dique, Carlos Paz y Cosquín; y la panza, la guardia y el turno con el médico, sin «coger» nada.",
+  "emoji": "🏞️",
+  "situation": "lugares",
+  "lessons": [
+    {
+      "id": "cba-lugares.l.transporte",
+      "title": "Cole, bondi y remís",
+      "items": [
+        "cba-lugares.toma-el-cole",
+        "cba-lugares.v.colectivo",
+        "cba-lugares.se-me-paso-el-bondi",
+        "cba-lugares.v.bondi",
+        "cba-lugares.v.trole",
+        "cba-lugares.el-omnibus-a-cosquin",
+        "cba-lugares.v.omnibus",
+        "cba-lugares.v.boleto",
+        "cba-lugares.pedite-un-remis",
+        "cba-lugares.v.remis",
+        "cba-lugares.v.auto",
+        "cba-lugares.v.manejar",
+        "cba-lugares.v.estacionar",
+        "cba-lugares.v.nafta",
+        "cba-lugares.v.patente",
+        "cba-lugares.el-coche-del-bebe",
+        "cba-lugares.v.coche",
+        "cba-lugares.v.baul",
+        "cba-lugares.v.ruta",
+        "cba-lugares.venia-al-mango",
+        "cba-lugares.salio-a-las-chapas",
+        "cba-lugares.qa.como-viniste",
+        "cba-lugares.qa.remis"
+      ]
+    },
+    {
+      "id": "cba-lugares.l.ciudad",
+      "title": "Cuadras, veredas y barrios",
+      "items": [
+        "cba-lugares.queda-a-tres-cuadras",
+        "cba-lugares.v.cuadra",
+        "cba-lugares.v.vereda",
+        "cba-lugares.en-colon-y-general-paz",
+        "cba-lugares.por-la-canada-hasta-guemes",
+        "cba-lugares.v.peatonal",
+        "cba-lugares.v.suquia",
+        "cba-lugares.v.alberdi",
+        "cba-lugares.v.alta-cordoba",
+        "cba-lugares.v.cerro",
+        "cba-lugares.v.kempes",
+        "cba-lugares.corro-en-el-parque-sarmiento",
+        "cba-lugares.le-dicen-la-docta",
+        "cba-lugares.a-la-siesta",
+        "cba-lugares.depto-en-nueva-cordoba",
+        "cba-lugares.v.departamento",
+        "cba-lugares.mi-pieza-da-al-living",
+        "cba-lugares.v.pieza",
+        "cba-lugares.v.living",
+        "cba-lugares.v.canilla",
+        "cba-lugares.v.heladera",
+        "cba-lugares.v.villa",
+        "cba-lugares.qa.queda-lejos",
+        "cba-lugares.qa.donde-vivis"
+      ]
+    },
+    {
+      "id": "cba-lugares.l.sierras",
+      "title": "Sierras, dique y Carlos Paz",
+      "items": [
+        "cba-lugares.me-voy-a-las-sierras",
+        "cba-lugares.v.sierras",
+        "cba-lugares.fuimos-a-carlos-paz",
+        "cba-lugares.vamos-al-dique",
+        "cba-lugares.v.dique",
+        "cba-lugares.nos-metimos-al-arroyo",
+        "cba-lugares.x.hasta-el-tobio",
+        "cba-lugares.v.balneario",
+        "cba-lugares.v.chaguar",
+        "cba-lugares.en-enero-cosquin",
+        "cba-lugares.qa.finde"
+      ]
+    },
+    {
+      "id": "cba-lugares.l.salud",
+      "title": "Panza, gamba y guardia",
+      "items": [
+        "cba-lugares.me-duele-la-panza",
+        "cba-lugares.v.panza",
+        "cba-lugares.v.pupo",
+        "cba-lugares.fuimos-a-pata",
+        "cba-lugares.v.gamba",
+        "cba-lugares.v.nata",
+        "cba-lugares.v.marote",
+        "cba-lugares.me-golpee-la-cola",
+        "cba-lugares.agarre-un-resfrio",
+        "cba-lugares.v.resfrio",
+        "cba-lugares.me-agarro-un-chucho",
+        "cba-lugares.v.curita",
+        "cba-lugares.v.remedio",
+        "cba-lugares.lo-llevaron-a-la-guardia",
+        "cba-lugares.v.guardia",
+        "cba-lugares.me-da-un-turno",
+        "cba-lugares.v.turno",
+        "cba-lugares.x.jui-al-dotor",
+        "cba-lugares.me-tiro-el-cuerito",
+        "cba-lugares.quede-limado",
+        "cba-lugares.v.fisurado",
+        "cba-lugares.cambiarle-el-agua-a-las-aceitunas",
+        "cba-lugares.qa.que-te-pasa",
+        "cba-lugares.qa.turno"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "cba-lugares.toma-el-cole",
+      "text": "Tomá el cole en la Colón.",
+      "es": "Coge el bus en la avenida Colón.",
+      "notes": "El autobús urbano es el «colectivo» o «cole», y se «toma», nunca se «coge»: «coger» aquí es follar.",
+      "explanation": "Para indicar a alguien cómo moverse. «Tomá» con el acento del vos: to-MÁ.",
+      "register": "tu",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.se-me-paso-el-bondi",
+      "text": "Se me pasó el bondi.",
+      "es": "Se me ha escapado el bus.",
+      "notes": "Coloquial. «Bondi» = autobús, en lunfardo; pretérito simple donde en España usarías «se me ha pasado».",
+      "explanation": "Para avisar de que llegas tarde. «Bondi» con la o abierta: BON-di.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.el-omnibus-a-cosquin",
+      "text": "¿De dónde sale el ómnibus a Cosquín?",
+      "es": "¿De dónde sale el autocar a Cosquín?",
+      "notes": "El «ómnibus» es el autobús de media o larga distancia, que sale de la terminal; el «boleto» es el billete.",
+      "explanation": "En la terminal, para viajar a las sierras. «Ómnibus» con acento en la primera: Ó-mni-bus.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.pedite-un-remis",
+      "text": "Pedite un remís, que es tarde.",
+      "es": "Pídete un taxi, que es tarde.",
+      "notes": "El «remís» es un coche con conductor que se pide a una agencia o por teléfono, con precio cerrado; parecido a un VTC.",
+      "explanation": "Para mandar a alguien a casa de noche. «Remís» con acento en la í: re-MÍS.",
+      "register": "tu",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.el-coche-del-bebe",
+      "text": "Poné el coche del bebé en el baúl.",
+      "es": "Mete el carrito del bebé en el maletero.",
+      "notes": "Trampa: el «coche» es el cochecito de bebé; el coche de España es el «auto». El maletero es el «baúl».",
+      "explanation": "Al cargar el auto para salir. «Poné» con acento en la é: po-NÉ.",
+      "register": "tu",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.venia-al-mango",
+      "text": "Venía al mango por la ruta.",
+      "es": "Iba a tope por la carretera.",
+      "notes": "Coloquial. «Al mango» = a tope (velocidad, volumen, ganas); la «ruta» es la carretera.",
+      "explanation": "Para contar que alguien conducía rapidísimo. «Ruta» con la r fuerte del principio.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.salio-a-las-chapas",
+      "text": "Salió a las chapas.",
+      "es": "Salió a toda leche.",
+      "notes": "Coloquial. «A las chapas» = rapidísimo; se dice de quien sale corriendo o conduce como un loco.",
+      "explanation": "Para contar que alguien se fue disparado. «Chapas» con ch de «chico».",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.queda-a-tres-cuadras",
+      "text": "Queda a tres cuadras.",
+      "es": "Está a unos trescientos metros.",
+      "notes": "La «cuadra» es el lado de una manzana, unos cien metros: las distancias se dan en cuadras. «Quedar» = estar (un sitio).",
+      "explanation": "Para dar una distancia a pie. «Cuadras» sin la -s final en habla relajada: «tre' cuadra'».",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.en-colon-y-general-paz",
+      "text": "Nos vemos en Colón y General Paz.",
+      "es": "Quedamos en la esquina de Colón con General Paz.",
+      "notes": "Las esquinas se nombran con las dos calles unidas por «y»: «Colón y General Paz», sin «la esquina de».",
+      "explanation": "Para quedar en el centro. «Colón» con acento en la ó y la «y» como «i».",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.por-la-canada-hasta-guemes",
+      "text": "Caminamos por la Cañada hasta Güemes.",
+      "es": "Bajamos por la avenida del arroyo hasta Güemes.",
+      "notes": "La Cañada es el arroyo canalizado entre muros de piedra que cruza el centro; Güemes, el barrio de bares, ferias y diseño.",
+      "explanation": "Para proponer un paseo de tarde. «Güemes» con la ü que suena: GÜE-mes.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.corro-en-el-parque-sarmiento",
+      "text": "Salgo a correr al Parque Sarmiento.",
+      "es": "Salgo a correr al gran parque de la ciudad.",
+      "notes": "El Parque Sarmiento es el gran parque urbano de Córdoba, junto a Nueva Córdoba: el Retiro de aquí.",
+      "explanation": "Para contar tu rutina. «Salgo a correr al» con «al», no «por el».",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.le-dicen-la-docta",
+      "text": "A Córdoba le dicen la Docta por la universidad.",
+      "es": "A Córdoba la llaman «la Docta» por su universidad.",
+      "notes": "La Universidad Nacional de Córdoba (1613) es la más antigua del país; la Manzana Jesuítica es Patrimonio Mundial. «Le dicen» = la llaman.",
+      "explanation": "Para presumir de ciudad delante de Cami. «Le dicen» con la e cerrada, como en España.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.a-la-siesta",
+      "text": "A la siesta está todo cerrado.",
+      "es": "A primera hora de la tarde está todo cerrado.",
+      "notes": "«A la siesta» es una franja horaria (de mediodía a media tarde), no solo dormir: fuera del centro, muchas tiendas cierran.",
+      "explanation": "Para explicar por qué no hay nada abierto a las tres. «Siesta» con s, nunca con z.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.depto-en-nueva-cordoba",
+      "text": "Alquilo un depto en Nueva Córdoba.",
+      "es": "Alquilo un piso en el barrio de los estudiantes.",
+      "notes": "«Departamento» o «depto» = piso; el «piso» aquí es la planta o el suelo. Nueva Córdoba es el barrio universitario.",
+      "explanation": "Para decir dónde vives. «Depto» se dice tal cual: DEP-to.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.mi-pieza-da-al-living",
+      "text": "Mi pieza da al living.",
+      "es": "Mi cuarto da al salón.",
+      "notes": "La «pieza» es el dormitorio, el «living» el salón y el «placard» el armario empotrado.",
+      "explanation": "Al enseñar tu casa. «Living» a la española: LI-ving, con la g casi muda.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.me-voy-a-las-sierras",
+      "text": "El finde me voy a las sierras, a Punilla.",
+      "es": "El fin de semana me voy a la sierra, al valle de Punilla.",
+      "notes": "«Las sierras» son las de Córdoba, el veraneo de siempre; Punilla, Calamuchita y Traslasierra son sus valles.",
+      "explanation": "Para contar tu plan de fin de semana. «Sierras» con s y la rr suave de algunos.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.fuimos-a-carlos-paz",
+      "text": "Fuimos a Carlos Paz a ver teatro.",
+      "es": "Hemos ido a Carlos Paz a ver una comedia.",
+      "notes": "Villa Carlos Paz, junto al lago San Roque, es famosa por su temporada de teatro de verano, el reloj cucú y la noche.",
+      "explanation": "Para contar una escapada. Pretérito simple: «fuimos», no «hemos ido».",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.vamos-al-dique",
+      "text": "Vamos al dique a tomar unos mates.",
+      "es": "Vamos al pantano a tomar unos mates.",
+      "notes": "«El dique» es el embalse (San Roque, Los Molinos): ir al dique es ir a pasar la tarde junto al agua.",
+      "explanation": "Para proponer un plan de domingo. «Dique» como en España, pero aquí es todo el lago.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.nos-metimos-al-arroyo",
+      "text": "Nos metimos al arroyo.",
+      "es": "Nos bañamos en el riachuelo.",
+      "notes": "En las sierras uno se baña en arroyos y ríos (en el «balneario»), no en el mar. «Meterse al» = meterse en.",
+      "explanation": "Para contar un día en las sierras. «Arroyo» con la y sonora, como la j francesa.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.en-enero-cosquin",
+      "text": "En enero vamos al festival de Cosquín.",
+      "es": "En enero vamos al festival de música folk de Cosquín.",
+      "notes": "El Festival Nacional de Folklore de Cosquín se celebra cada enero en el valle de Punilla: peñas, guitarras y empanadas.",
+      "explanation": "Para hablar del verano (que aquí es en enero). «Cosquín» con acento en la í.",
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.me-duele-la-panza",
+      "text": "Me duele la panza.",
+      "es": "Me duele la tripa.",
+      "notes": "«Panza» o «pancita» = barriga, tripa; lo dicen adultos y niños sin sonar vulgar.",
+      "explanation": "En la farmacia o con amigos. «Panza» con s: PAN-sa.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.fuimos-a-pata",
+      "text": "Fuimos a pata hasta el centro.",
+      "es": "Fuimos andando hasta el centro.",
+      "notes": "Coloquial. «Ir a pata» = ir a pie; la «pata» es el pie o la pierna, y la «gamba» la pierna.",
+      "explanation": "Para contar que no tomaste el cole. «Pata» sin exagerar la tonada.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.me-golpee-la-cola",
+      "text": "Me golpeé la cola.",
+      "es": "Me di en el culete.",
+      "notes": "Ojo: «la cola» es el trasero (palabra fina); para la fila de espera, mejor «la fila».",
+      "explanation": "Tras una caída. «Golpeé» con las dos ee: gol-pe-É.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.agarre-un-resfrio",
+      "text": "Agarré un resfrío.",
+      "es": "He pillado un resfriado.",
+      "notes": "«Resfrío» = resfriado; las enfermedades se «agarran» (nunca se «cogen»).",
+      "explanation": "Para excusarte de no salir. «Agarré» con la tónica al final: a-ga-RRÉ.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.me-agarro-un-chucho",
+      "text": "Me agarró un chucho de frío.",
+      "es": "Me dio un escalofrío.",
+      "notes": "Coloquial. Trampa: «chucho» es un escalofrío o un susto, no un perro. Al perro se le dice «perro» o «pichicho».",
+      "explanation": "En una noche fría en las sierras. «Chucho» con ch de «chico».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.lo-llevaron-a-la-guardia",
+      "text": "Lo llevaron a la guardia.",
+      "es": "Lo llevaron a urgencias.",
+      "notes": "«La guardia» son las urgencias del hospital o la clínica.",
+      "explanation": "Para contar una emergencia. «Guardia» con la u muda: GUAR-dia.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.me-da-un-turno",
+      "text": "¿Me da un turno para el lunes?",
+      "es": "¿Me da cita para el lunes?",
+      "notes": "El «turno» es la cita con el médico, la peluquería o un trámite: «sacar turno» = pedir cita.",
+      "explanation": "En la recepción de la clínica, con usted. «Turno» con la r simple.",
+      "register": "usted",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.me-tiro-el-cuerito",
+      "text": "La abuela me tiró el cuerito para el empacho.",
+      "es": "La abuela me hizo su remedio casero para la indigestión.",
+      "notes": "«Tirar el cuerito» es un remedio casero tradicional para el «empacho» (indigestión): tirar de la piel de la espalda.",
+      "explanation": "Lo oirás en casa de Doña Chela. «Cuerito» con la e abierta: cue-RI-to.",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.quede-limado",
+      "text": "Quedé limado del laburo.",
+      "es": "Acabé hecho polvo del curro.",
+      "notes": "Coloquial. «Limado» o «quemado» = agotado; «fisurado» es más bien colgado, tocado.",
+      "explanation": "Al llegar a casa reventado. «Quedé» en pretérito simple, no «me he quedado».",
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.cambiarle-el-agua-a-las-aceitunas",
+      "text": "Voy a cambiarle el agua a las aceitunas.",
+      "es": "Voy a cambiarle el agua al canario.",
+      "notes": "Coloquial. Forma graciosa de decir que vas a mear; para decirlo con finura, «voy al baño».",
+      "explanation": "En una juntada, al levantarte. «Aceitunas» con s: a-sei-TU-nas.",
+      "register": "neutral",
+      "situation": "salud",
+      "voice": "es-AR-TomasNeural"
+    }
+  ],
+  "expressions": [
+    {
+      "id": "cba-lugares.x.hasta-el-tobio",
+      "text": "Me metí hasta el tobío.",
+      "es": "Me metí hasta el tobillo.",
+      "variety": "Cordobés popular",
+      "standard": "Me metí hasta el tobillo.",
+      "notes": "Pronunciación popular: la ll entre vocales se relaja o se pierde (tobío, poio, cuchío). Entiéndelo; tú di «tobillo»."
+    },
+    {
+      "id": "cba-lugares.x.jui-al-dotor",
+      "text": "Jui al dotor.",
+      "es": "Fui al médico.",
+      "variety": "Cordobés popular",
+      "standard": "Fui al doctor.",
+      "notes": "Pronunciación popular y rural: «fui» suena «jui» y «doctor» pierde la c («dotor», «coletivo»). Reconócelo, no lo imites."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cba-lugares.v.colectivo",
+      "word": "colectivo",
+      "article": "el",
+      "gender": "m",
+      "es": "el autobús urbano",
+      "notes": "Casi siempre «el cole». Se toma («tomá el 10»), no se coge.",
+      "example": "cba-lugares.toma-el-cole",
+      "situation": "lugares",
+      "image": "fluent:bus"
+    },
+    {
+      "id": "cba-lugares.v.bondi",
+      "word": "bondi",
+      "article": "el",
+      "gender": "m",
+      "es": "el bus (coloquial)",
+      "notes": "Coloquial. Lunfardo para el colectivo.",
+      "example": "cba-lugares.se-me-paso-el-bondi",
+      "situation": "lugares",
+      "image": "fluent:oncoming-bus"
+    },
+    {
+      "id": "cba-lugares.v.trole",
+      "word": "trole",
+      "article": "el",
+      "gender": "m",
+      "es": "el trolebús",
+      "notes": "Córdoba conserva líneas de trolebús: «el trole de la línea A».",
+      "situation": "lugares",
+      "image": "fluent:trolleybus"
+    },
+    {
+      "id": "cba-lugares.v.omnibus",
+      "word": "ómnibus",
+      "article": "el",
+      "gender": "m",
+      "es": "el autocar (de media distancia)",
+      "notes": "El que sale de la terminal hacia las sierras u otras ciudades; en habla popular, «ónibo».",
+      "example": "cba-lugares.el-omnibus-a-cosquin",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.boleto",
+      "word": "boleto",
+      "article": "el",
+      "gender": "m",
+      "es": "el billete (de bus o tren)",
+      "notes": "En España «boleto» suena a lotería; aquí es el billete de transporte.",
+      "situation": "lugares",
+      "image": "fluent:ticket"
+    },
+    {
+      "id": "cba-lugares.v.remis",
+      "word": "remís",
+      "article": "el",
+      "gender": "m",
+      "es": "el coche con conductor de agencia (tipo VTC)",
+      "notes": "Sin taxímetro: el precio se pacta con la agencia. El conductor es el «remisero».",
+      "example": "cba-lugares.pedite-un-remis",
+      "situation": "lugares",
+      "image": "fluent:taxi"
+    },
+    {
+      "id": "cba-lugares.v.auto",
+      "word": "auto",
+      "article": "el",
+      "gender": "m",
+      "es": "el coche",
+      "notes": "La palabra normal para el coche: «vamos en auto».",
+      "situation": "lugares",
+      "image": "fluent:automobile"
+    },
+    {
+      "id": "cba-lugares.v.coche",
+      "word": "coche",
+      "article": "el",
+      "gender": "m",
+      "es": "el cochecito de bebé",
+      "notes": "Falso amigo: para el vehículo di «auto».",
+      "example": "cba-lugares.el-coche-del-bebe",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.manejar",
+      "word": "manejar",
+      "es": "conducir",
+      "notes": "«¿Manejás vos?» = ¿conduces tú? «Conducir» se entiende, pero suena a autoescuela.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.estacionar",
+      "word": "estacionar",
+      "es": "aparcar",
+      "notes": "«No hay dónde estacionar»; «aparcar» casi no se usa.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.nafta",
+      "word": "nafta",
+      "article": "la",
+      "gender": "f",
+      "es": "la gasolina",
+      "notes": "«Cargar nafta» = echar gasolina; la gasolinera es «la estación de servicio».",
+      "situation": "lugares",
+      "image": "fluent:fuel-pump"
+    },
+    {
+      "id": "cba-lugares.v.patente",
+      "word": "patente",
+      "article": "la",
+      "gender": "f",
+      "es": "la matrícula (del coche)",
+      "notes": "La placa con letras y números del auto.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.baul",
+      "word": "baúl",
+      "article": "el",
+      "gender": "m",
+      "es": "el maletero",
+      "notes": "El maletero del auto; no un arcón.",
+      "example": "cba-lugares.el-coche-del-bebe",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.ruta",
+      "word": "ruta",
+      "article": "la",
+      "gender": "f",
+      "es": "la carretera",
+      "notes": "«La ruta 20» lleva a Carlos Paz; no es un itinerario.",
+      "example": "cba-lugares.venia-al-mango",
+      "situation": "lugares",
+      "image": "fluent:motorway"
+    },
+    {
+      "id": "cba-lugares.v.cuadra",
+      "word": "cuadra",
+      "article": "la",
+      "gender": "f",
+      "es": "la manzana (unos cien metros)",
+      "notes": "Unidad de distancia a pie: «a dos cuadras».",
+      "example": "cba-lugares.queda-a-tres-cuadras",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.vereda",
+      "word": "vereda",
+      "article": "la",
+      "gender": "f",
+      "es": "la acera",
+      "notes": "«Caminá por la vereda» = ve por la acera; no es un sendero de campo.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.peatonal",
+      "word": "Peatonal",
+      "article": "la",
+      "gender": "f",
+      "es": "las calles peatonales del centro",
+      "notes": "«Nos vemos en la Peatonal»: el centro comercial a pie, junto a la Catedral y el Cabildo.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.suquia",
+      "word": "Suquía",
+      "article": "el",
+      "gender": "m",
+      "es": "el río de la ciudad (Río Primero)",
+      "notes": "Lo llaman simplemente «el río»; la Cañada desemboca en él.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.alberdi",
+      "word": "Alberdi",
+      "es": "el barrio del Belgrano",
+      "notes": "Barrio popular junto al centro; allí está el estadio del Belgrano, «el Gigante de Alberdi».",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.alta-cordoba",
+      "word": "Alta Córdoba",
+      "es": "el barrio del Instituto",
+      "notes": "Barrio al norte del centro, casa de Instituto, «la Gloria».",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.cerro",
+      "word": "Cerro",
+      "article": "el",
+      "gender": "m",
+      "es": "el barrio pijo (Cerro de las Rosas)",
+      "notes": "El Cerro de las Rosas y Urca son barrios acomodados: el estereotipo de lo «cheto», como el barrio de Salamanca.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.kempes",
+      "word": "Kempes",
+      "article": "el",
+      "gender": "m",
+      "es": "el gran estadio de Córdoba",
+      "notes": "Estadio Mario Alberto Kempes, antes Chateau Carreras: allí se juegan los partidos grandes.",
+      "situation": "lugares",
+      "image": "fluent:stadium"
+    },
+    {
+      "id": "cba-lugares.v.departamento",
+      "word": "departamento",
+      "article": "el",
+      "gender": "m",
+      "es": "el piso (la vivienda)",
+      "notes": "También «depto». El «piso» aquí es la planta o el suelo.",
+      "example": "cba-lugares.depto-en-nueva-cordoba",
+      "situation": "lugares",
+      "image": "fluent:office-building"
+    },
+    {
+      "id": "cba-lugares.v.pieza",
+      "word": "pieza",
+      "article": "la",
+      "gender": "f",
+      "es": "el cuarto, el dormitorio",
+      "notes": "«Mi pieza» = mi habitación.",
+      "example": "cba-lugares.mi-pieza-da-al-living",
+      "situation": "lugares",
+      "image": "fluent:bed"
+    },
+    {
+      "id": "cba-lugares.v.living",
+      "word": "living",
+      "article": "el",
+      "gender": "m",
+      "es": "el salón, la sala de estar",
+      "notes": "Y el armario empotrado es el «placard».",
+      "example": "cba-lugares.mi-pieza-da-al-living",
+      "situation": "lugares",
+      "image": "fluent:couch-and-lamp"
+    },
+    {
+      "id": "cba-lugares.v.canilla",
+      "word": "canilla",
+      "article": "la",
+      "gender": "f",
+      "es": "el grifo",
+      "notes": "«Cerrá la canilla» = cierra el grifo; el «grifo» no se usa.",
+      "situation": "lugares",
+      "image": "fluent:potable-water"
+    },
+    {
+      "id": "cba-lugares.v.heladera",
+      "word": "heladera",
+      "article": "la",
+      "gender": "f",
+      "es": "la nevera, el frigorífico",
+      "notes": "«Está en la heladera»; «nevera» suena muy de España.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.villa",
+      "word": "villa",
+      "article": "la",
+      "gender": "f",
+      "es": "el poblado chabolista",
+      "notes": "Ojo: «una villa» (villa miseria) es un barrio de chabolas, no un chalé; en nombres de ciudades (Villa Carlos Paz) es neutro.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.sierras",
+      "word": "sierras",
+      "article": "las",
+      "gender": "pl",
+      "es": "la sierra (de Córdoba)",
+      "notes": "Siempre en plural: «me voy a las sierras» = me voy de veraneo a la montaña.",
+      "example": "cba-lugares.me-voy-a-las-sierras",
+      "situation": "lugares",
+      "image": "fluent:mountain"
+    },
+    {
+      "id": "cba-lugares.v.dique",
+      "word": "dique",
+      "article": "el",
+      "gender": "m",
+      "es": "el pantano, el embalse",
+      "notes": "El dique San Roque (Carlos Paz) o Los Molinos: lagos para pasar el día.",
+      "example": "cba-lugares.vamos-al-dique",
+      "situation": "lugares",
+      "image": "fluent:water-wave"
+    },
+    {
+      "id": "cba-lugares.v.balneario",
+      "word": "balneario",
+      "article": "el",
+      "gender": "m",
+      "es": "la zona de baño del río",
+      "notes": "En las sierras es la orilla de un río preparada para bañarse, no un spa.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.chaguar",
+      "word": "chaguar",
+      "es": "estrujar, escurrir (frutos)",
+      "notes": "Del norte de la provincia: se chaguan el chañar o la tuna para hacer arrope.",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.v.panza",
+      "word": "panza",
+      "article": "la",
+      "gender": "f",
+      "es": "la barriga, la tripa",
+      "notes": "También «pancita»; normal en cualquier registro.",
+      "example": "cba-lugares.me-duele-la-panza",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.v.pupo",
+      "word": "pupo",
+      "article": "el",
+      "gender": "m",
+      "es": "el ombligo",
+      "notes": "Coloquial, casi infantil: «se le ve el pupo».",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.v.gamba",
+      "word": "gamba",
+      "article": "la",
+      "gender": "f",
+      "es": "la pierna",
+      "notes": "Coloquial. «Me duele la gamba» = la pierna; nada de marisco. En plata, una gamba son cien pesos.",
+      "situation": "salud",
+      "image": "fluent:leg"
+    },
+    {
+      "id": "cba-lugares.v.nata",
+      "word": "ñata",
+      "article": "la",
+      "gender": "f",
+      "es": "la napia",
+      "notes": "Coloquial. También «napia»; «ñato» es el de nariz chata.",
+      "situation": "salud",
+      "image": "fluent:nose"
+    },
+    {
+      "id": "cba-lugares.v.marote",
+      "word": "marote",
+      "article": "el",
+      "gender": "m",
+      "es": "el coco, el tarro (la cabeza)",
+      "notes": "Coloquial. «Usá el marote» = usa la cabeza; también «el bocho».",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.v.resfrio",
+      "word": "resfrío",
+      "article": "el",
+      "gender": "m",
+      "es": "el resfriado, el catarro",
+      "example": "cba-lugares.agarre-un-resfrio",
+      "situation": "salud",
+      "image": "fluent:sneezing-face"
+    },
+    {
+      "id": "cba-lugares.v.curita",
+      "word": "curita",
+      "article": "la",
+      "gender": "f",
+      "es": "la tirita",
+      "notes": "«¿Tenés una curita?» = ¿tienes una tirita?",
+      "situation": "salud",
+      "image": "fluent:adhesive-bandage"
+    },
+    {
+      "id": "cba-lugares.v.remedio",
+      "word": "remedio",
+      "article": "el",
+      "gender": "m",
+      "es": "la medicina, el medicamento",
+      "notes": "«Tomate el remedio» = tómate la medicina; no tiene por qué ser casero.",
+      "situation": "salud",
+      "image": "fluent:pill"
+    },
+    {
+      "id": "cba-lugares.v.guardia",
+      "word": "guardia",
+      "article": "la",
+      "gender": "f",
+      "es": "las urgencias",
+      "example": "cba-lugares.lo-llevaron-a-la-guardia",
+      "situation": "salud",
+      "image": "fluent:hospital"
+    },
+    {
+      "id": "cba-lugares.v.turno",
+      "word": "turno",
+      "article": "el",
+      "gender": "m",
+      "es": "la cita (médica)",
+      "notes": "«Sacar turno» = pedir cita.",
+      "example": "cba-lugares.me-da-un-turno",
+      "situation": "salud",
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "cba-lugares.v.fisurado",
+      "word": "fisurado",
+      "es": "colgado, tocado",
+      "notes": "Coloquial. De alguien que está mal de tanto cansancio, fiesta o algo más: «está medio fisurado».",
+      "situation": "salud"
+    }
+  ],
+  "qa": [
+    {
+      "id": "cba-lugares.qa.como-viniste",
+      "question": "¿Cómo viniste?",
+      "questionEs": "¿Cómo has venido?",
+      "accepted": [
+        {
+          "text": "Vine en bondi.",
+          "es": "He venido en bus."
+        },
+        {
+          "text": "Tomé el cole en la Colón.",
+          "es": "He cogido el bus en la avenida Colón."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Cogí el bus en la Colón.",
+          "es": "«Coger» aquí es follar: el colectivo se «toma»."
+        },
+        {
+          "text": "Vine en coche.",
+          "es": "Suena raro: aquí «coche» es el carrito del bebé. Di «en auto»."
+        }
+      ],
+      "register": "tu",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.qa.remis",
+      "question": "Buenas noches. ¿Adónde lo llevo?",
+      "questionEs": "Buenas noches. ¿Adónde le llevo?",
+      "accepted": [
+        {
+          "text": "A la terminal, por favor. ¿Cuánto me sale?",
+          "es": "A la estación de autobuses, por favor. ¿Cuánto me cuesta?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "A la terminal, y coja la ruta veinte, por favor.",
+          "es": "«Coja la ruta» suena fatal: «coger» es follar. Di «tome» o «agarre»."
+        },
+        {
+          "text": "A la estación de autobuses, ¿cuánto es, tío?",
+          "es": "Se entiende, pero «tío» al remisero suena a España y fuera de lugar."
+        }
+      ],
+      "register": "usted",
+      "situation": "lugares",
+      "notes": "Con el remisero, usted.",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-lugares.qa.queda-lejos",
+      "question": "¿Queda lejos la farmacia?",
+      "questionEs": "¿Está lejos la farmacia?",
+      "accepted": [
+        {
+          "text": "No, queda a dos cuadras.",
+          "es": "No, está a unos doscientos metros."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, está a dos veredas.",
+          "es": "La «vereda» es la acera: no sirve para medir distancias."
+        },
+        {
+          "text": "No, está aquí al lado, tía.",
+          "es": "Se entiende, pero «aquí» y «tía» suenan a España: «acá» y nada de «tía»."
+        }
+      ],
+      "register": "neutral",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.qa.donde-vivis",
+      "question": "¿Y dónde vivís acá?",
+      "questionEs": "¿Y dónde vives aquí?",
+      "accepted": [
+        {
+          "text": "Alquilo un depto en Nueva Córdoba.",
+          "es": "Alquilo un piso en Nueva Córdoba."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Vivo en una villa en Nueva Córdoba.",
+          "es": "Una «villa» es un barrio de chabolas, no un chalé."
+        },
+        {
+          "text": "Alquilo un piso en Nueva Córdoba.",
+          "es": "Se entiende, pero «piso» aquí es la planta: di «depto» o «departamento»."
+        }
+      ],
+      "register": "tu",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.qa.finde",
+      "question": "¿Qué hacés el finde largo?",
+      "questionEs": "¿Qué haces el puente?",
+      "accepted": [
+        {
+          "text": "Me voy a las sierras, a Carlos Paz.",
+          "es": "Me voy a la sierra, a Carlos Paz."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Me voy al dique a coger sol.",
+          "es": "«Coger sol» aquí suena sexual: di «tomar sol»."
+        },
+        {
+          "text": "Me piro a la sierra con la peña.",
+          "es": "Se entiende, pero «me piro» y «la peña» son jerga de España; la «peña» aquí es un local de folklore."
+        }
+      ],
+      "register": "tu",
+      "situation": "lugares"
+    },
+    {
+      "id": "cba-lugares.qa.que-te-pasa",
+      "question": "¿Qué te pasa? Tenés mala cara.",
+      "questionEs": "¿Qué te pasa? Tienes mala cara.",
+      "accepted": [
+        {
+          "text": "Me duele la panza, me empaché.",
+          "es": "Me duele la tripa, he comido demasiado."
+        },
+        {
+          "text": "Agarré un resfrío.",
+          "es": "He pillado un resfriado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Me duele la cola de tanto comer.",
+          "es": "«La cola» es el trasero: si te duele la barriga, di «la panza»."
+        },
+        {
+          "text": "He cogido un catarro.",
+          "es": "«Coger» aquí es follar: un resfrío se «agarra»."
+        }
+      ],
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "cba-lugares.qa.turno",
+      "question": "¿Usted tiene turno con el doctor?",
+      "questionEs": "¿Tiene usted cita con el médico?",
+      "accepted": [
+        {
+          "text": "Sí, saqué turno para las diez.",
+          "es": "Sí, pedí cita para las diez."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, trabajo en el turno de noche.",
+          "es": "Aquí «turno» es la cita médica, no un horario de trabajo."
+        },
+        {
+          "text": "Sí, tengo cita, vale.",
+          "es": "Se entiende, pero «cita» suena a quedar con alguien y «vale» es de España: «saqué turno»."
+        }
+      ],
+      "register": "usted",
+      "situation": "salud"
+    }
+  ]
+}

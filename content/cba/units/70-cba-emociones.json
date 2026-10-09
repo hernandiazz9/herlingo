@@ -1,0 +1,936 @@
+{
+  "id": "cba-emociones",
+  "order": 70,
+  "title": "¡Qué abuso! Emociones y muletillas",
+  "description": "Alegría, embole y garrón; quilombos y mambos; cómo decir que no (ni a palos, ni en pedo) y las muletillas cordobesas: tipo, qué sé yo, calorón y é lo qui hay.",
+  "emoji": "😮",
+  "situation": "emociones",
+  "lessons": [
+    {
+      "id": "cba-emociones.l.alegria",
+      "title": "¡Qué abuso! Alegría y ganas",
+      "items": [
+        "cba-emociones.que-abuso",
+        "cba-emociones.v.zarpado",
+        "cba-emociones.bien-ahi",
+        "cba-emociones.v.posta",
+        "cba-emociones.me-copa-el-plan",
+        "cba-emociones.v.de-cajon",
+        "cba-emociones.v.dale-que-va",
+        "cba-emociones.estoy-re-contento",
+        "cba-emociones.v.chocho",
+        "cba-emociones.habia-una-banda",
+        "cba-emociones.v.toco",
+        "cba-emociones.v.a-full",
+        "cba-emociones.alto-mocazo",
+        "cba-salir.estoy-re-manija",
+        "cba-emociones.qa.el-baile",
+        "cba-emociones.qa.aprobe",
+        "cba-emociones.qa.posta"
+      ]
+    },
+    {
+      "id": "cba-emociones.l.garron",
+      "title": "Garrón, embole y bajón",
+      "items": [
+        "cba-emociones.que-embole",
+        "cba-emociones.que-paja",
+        "cba-emociones.que-garron",
+        "cba-emociones.estoy-al-horno",
+        "cba-emociones.v.bajoneado",
+        "cba-emociones.v.mufado",
+        "cba-emociones.v.podrido",
+        "cba-emociones.v.empacado",
+        "cba-emociones.me-calente-mal",
+        "cba-emociones.no-te-enojes",
+        "cba-emociones.me-pegue-un-cagazo",
+        "cba-emociones.me-cago-de-risa",
+        "cba-emociones.es-al-pedo",
+        "cba-emociones.v.al-pedo",
+        "cba-emociones.qa.que-te-pasa",
+        "cba-emociones.qa.ultimo-cole"
+      ]
+    },
+    {
+      "id": "cba-emociones.l.quilombo",
+      "title": "Quilombo, mambo y gente sacada",
+      "items": [
+        "cba-emociones.se-armo-un-quilombon",
+        "cba-emociones.v.quilombo",
+        "cba-emociones.v.mambo",
+        "cba-emociones.v.del-tomate",
+        "cba-emociones.v.piantado",
+        "cba-emociones.v.pirucho",
+        "cba-emociones.v.tildado",
+        "cba-emociones.como-bola-sin-manija",
+        "cba-emociones.v.sacado",
+        "cba-emociones.rescatate",
+        "cba-emociones.v.bardear",
+        "cba-emociones.v.chumbar",
+        "cba-emociones.me-estas-cargando",
+        "cba-emociones.v.bolacear",
+        "cba-emociones.v.flashear",
+        "cba-emociones.v.mandar-fruta",
+        "cba-emociones.toman-mate-con-cuero",
+        "cba-gente.le-faltan-cinco"
+      ]
+    },
+    {
+      "id": "cba-emociones.l.ni-en-pedo",
+      "title": "Ni a palos: decir que no",
+      "items": [
+        "cba-emociones.ni-a-palos",
+        "cba-emociones.ni-en-pedo",
+        "cba-emociones.no-me-gusta-ni-ahi",
+        "cba-emociones.ni-bosta",
+        "cba-emociones.ni-tronco-de-bola",
+        "cba-emociones.ya-vas-a-ver-vos",
+        "cba-emociones.andate-de-una-vez",
+        "cba-emociones.x.vaia-iendo",
+        "cba-emociones.x.ah-ia-dijo",
+        "cba-saludos.x.segun-vo",
+        "cba-emociones.y-si-hijo",
+        "cba-emociones.x.e-lo-qui-hay",
+        "cba-emociones.qa.cancha-talleres",
+        "cba-emociones.qa.centro"
+      ]
+    },
+    {
+      "id": "cba-emociones.l.muletillas",
+      "title": "Tipo, maomeno y calorón",
+      "items": [
+        "cba-emociones.que-se-yo-tipo-ocho",
+        "cba-emociones.v.cualquiera",
+        "cba-emociones.x.maomeno",
+        "cba-emociones.v.muy-mucho",
+        "cba-emociones.v.pendorcho",
+        "cba-emociones.x.ahre",
+        "cba-emociones.x.atr",
+        "cba-emociones.v.calor",
+        "cba-emociones.que-calorononon",
+        "cba-emociones.v.friazon",
+        "cba-emociones.x.altroque",
+        "cba-emociones.x.ma-que",
+        "cba-emociones.x.porcachiva",
+        "cba-emociones.que-mala-leche",
+        "cba-emociones.de-puro-ocote",
+        "cba-emociones.me-da-ocote",
+        "cba-emociones.mas-alzado-que-primer-nieto",
+        "cba-emociones.esta-chau",
+        "cba-emociones.qa.cuanta-gente"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "cba-emociones.que-abuso",
+      "text": "¡Qué abuso de lugar!",
+      "es": "¡Qué pasada de sitio!",
+      "notes": "Coloquial. «¡Qué abuso!» es elogio, no queja: algo es tan bueno que «abusa». Muy cordobés.",
+      "explanation": "Cuando algo te encanta: un lomito, un paisaje, un baile. Estira la «bu»: ¡qué a-buu-so!",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.bien-ahi",
+      "text": "¡Bien ahí!",
+      "es": "¡Olé! / ¡Bien hecho!",
+      "notes": "Coloquial. Para celebrar un logro ajeno: «Aprobé.» «¡Bien ahí!».",
+      "explanation": "Cuando un amigo te cuenta una buena noticia. Dilo de un tirón: bien-a-HÍ.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.me-copa-el-plan",
+      "text": "Me copa el plan.",
+      "es": "Me mola el plan.",
+      "notes": "Coloquial. «Copar» = gustar mucho; «coparse» = venirse arriba. «Molar» y «guay» no se usan.",
+      "explanation": "Para apuntarte a algo con ganas. «Copa» con la o abierta.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.estoy-re-contento",
+      "text": "Estoy re contento, pegamos onda enseguida.",
+      "es": "Estoy contentísimo, hicimos buenas migas enseguida.",
+      "notes": "«Re» = muy («re contento»); «pegar onda» = conectar con alguien, caerse bien.",
+      "explanation": "Tras conocer a alguien que te cae genial. «Re» suelto y corto, como un prefijo.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.habia-una-banda",
+      "text": "Había una banda de gente.",
+      "es": "Había mogollón de gente.",
+      "notes": "Coloquial. «Una banda» = muchísimo; también «un montón», «un toco» o «un fangote».",
+      "explanation": "Para contar que un sitio estaba lleno. «Banda» con la a abierta, sin cantarla.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.alto-mocazo",
+      "text": "¡Alto mocazo te mandaste!",
+      "es": "¡Menuda metedura de pata!",
+      "notes": "Coloquial. «Alto» antepuesto = menudo, vaya; «mandarse un moco» o «un mocazo» = meter la pata a lo grande.",
+      "explanation": "Para reírte (con cariño) del error de un amigo. «Mocazo» con s: mo-CA-so.",
+      "register": "tu",
+      "situation": "emociones",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-emociones.que-embole",
+      "text": "¡Qué embole!",
+      "es": "¡Qué palo! / ¡Qué aburrimiento!",
+      "notes": "Coloquial. «Embole» = aburrimiento; «embolarse» = aburrirse. Nada que ver con bolas de verdad.",
+      "explanation": "En una reunión eterna o un domingo sin plan. «Embole» con la o abierta: em-BO-le.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.que-paja",
+      "text": "Qué paja ir ahora.",
+      "es": "Qué pereza ir ahora.",
+      "notes": "Coloquial. Ojo: «qué paja» es «qué pereza», no lo que entendería un español; nadie se ríe al oírlo.",
+      "explanation": "Cuando no te apetece moverte. «Paja» con la j suave, casi aspirada.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.que-garron",
+      "text": "¡Qué garrón!",
+      "es": "¡Qué marrón! / ¡Qué putada!",
+      "notes": "Coloquial. «Garrón» = fastidio, mala pata: perder el cole, que llueva el día del asado.",
+      "explanation": "Ante un contratiempo. «Garrón» con la rr fuerte y acento al final.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.estoy-al-horno",
+      "text": "Si no llego, estoy al horno.",
+      "es": "Si no llego, voy apañado. / Si no llego, estoy jodido.",
+      "notes": "Coloquial. «Estar al horno» o «en el horno» = estar en un apuro serio.",
+      "explanation": "Cuando vas tarde a algo importante. «Horno» con la h muda, como en España.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.me-calente-mal",
+      "text": "Me calenté mal con el árbitro.",
+      "es": "Me cabreé muchísimo con el árbitro.",
+      "notes": "Coloquial. Trampa: «calentarse» = cabrearse (y también ponerse cachondo); «estoy caliente» puede entenderse de las dos maneras. «Mal» = muchísimo.",
+      "explanation": "Para contar un enfado en el fútbol. «Calenté» con la tónica al final.",
+      "register": "neutral",
+      "situation": "emociones",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-emociones.no-te-enojes",
+      "text": "No te enojés, era una broma.",
+      "es": "No te enfades, era una broma.",
+      "notes": "«Enojarse» = enfadarse; «enfadarse» se entiende, pero suena a España. Voseo en negativa: «no te enojés».",
+      "explanation": "Para calmar a alguien tras una broma. «Enojés» con acento en la é: e-no-JÉS.",
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.me-pegue-un-cagazo",
+      "text": "Me pegué un cagazo bárbaro.",
+      "es": "Me llevé un susto de muerte. / Me acojoné.",
+      "notes": "Vulgar. «Cagazo» = susto enorme; entre amigos es normal, con la familia di «un julepe» o «un susto».",
+      "explanation": "Para contar un susto con amigos. «Cagazo» con s: ca-GA-so.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.me-cago-de-risa",
+      "text": "Me cago de risa con el Nico.",
+      "es": "Me parto con Nico. / Me descojono con Nico.",
+      "notes": "Vulgar. «Cagarse de risa» = partirse; también «cagarse de frío» o «de hambre». Entre amigos, sin problema.",
+      "explanation": "Para decir que alguien es graciosísimo. «Risa» con s: RI-sa.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.es-al-pedo",
+      "text": "Es al pedo ir ahora.",
+      "es": "No vale la pena ir ahora.",
+      "notes": "Vulgar. «Al pedo» = en vano; «estar al pedo» = no tener nada que hacer. Con mayores, mejor «al vicio» o «no vale la pena».",
+      "explanation": "Para desanimar un plan inútil entre amigos. «Pedo» con la e cerrada.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.se-armo-un-quilombon",
+      "text": "Se armó un quilombón.",
+      "es": "Se montó un follón enorme.",
+      "notes": "Coloquial. «Quilombo» = lío, follón (en origen, burdel; hoy no ofende); «quilombón» es el aumentativo cordobés.",
+      "explanation": "Para contar una pelea o un caos. «Quilombón» con la qu como k.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.rescatate",
+      "text": "Rescatate un poco, no te saqués.",
+      "es": "Céntrate un poco, no pierdas los papeles.",
+      "notes": "Coloquial. «Rescatarse» = calmarse, volver en sí; «sacarse» = perder los papeles («está sacado» = fuera de sí).",
+      "explanation": "Para calmar a un amigo que se pasa. «Rescatate» sin tilde: res-ca-TA-te.",
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.me-estas-cargando",
+      "text": "Me estás cargando.",
+      "es": "Me estás vacilando. / Me estás tomando el pelo.",
+      "notes": "Coloquial. «Cargar» (o «gastar») a alguien = tomarle el pelo; también «bolacear».",
+      "explanation": "Cuando no te crees lo que te cuentan. Sube el tono al final.",
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.toman-mate-con-cuero",
+      "text": "Se juntaron a tomar mate con cuero.",
+      "es": "Se juntaron a poner a parir a alguien.",
+      "notes": "Coloquial. «Tomar mate con cuero» = criticar a un ausente en la ronda de mate; el «cuero» es el pellejo del criticado.",
+      "explanation": "Para hablar de cotilleos entre vecinas o tías. «Cuero» con la e abierta.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.como-bola-sin-manija",
+      "text": "Anda como bola sin manija.",
+      "es": "Va como pollo sin cabeza.",
+      "notes": "Coloquial. «Como bola sin manija» = sin rumbo, perdido, de acá para allá sin saber qué hacer.",
+      "explanation": "Para hablar de alguien desorientado. «Manija» con la j suave: ma-NI-ja.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.ni-a-palos",
+      "text": "Ni a palos llego a las ocho.",
+      "es": "Ni de broma llego a las ocho.",
+      "notes": "Coloquial. «Ni a palos» = de ninguna manera; también «ni loco».",
+      "explanation": "Para avisar de que no llegas. «Palos» con la -s casi muda: «ni a palo'».",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.ni-en-pedo",
+      "text": "¿Ir con él? Ni en pedo.",
+      "es": "¿Ir con él? Ni de coña.",
+      "notes": "Vulgar. «Ni en pedo» = ni borracho, de ninguna manera; entre amigos es lo normal, con mayores di «ni a palos».",
+      "explanation": "Para negarte en redondo entre amigos. «Pedo» con la e cerrada y énfasis.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.no-me-gusta-ni-ahi",
+      "text": "No me gusta ni ahí.",
+      "es": "No me gusta nada. / No me gusta para nada.",
+      "notes": "Coloquial. «Ni ahí» = para nada, ni de lejos; también solo: «¿Te gusta?» «Ni ahí».",
+      "explanation": "Para rechazar algo sin rodeos. «Ahí» con acento en la í: a-Í.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.ni-bosta",
+      "text": "No hay ni bosta en la heladera.",
+      "es": "No hay nada de nada en la nevera.",
+      "notes": "Coloquial. «Ni bosta» (la bosta es la boñiga) = nada en absoluto; muy cordobés, algo grosero.",
+      "explanation": "Para quejarte de que no queda comida. «Bosta» con s: BOS-ta.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.ni-tronco-de-bola",
+      "text": "Le hablé toda la noche y ni tronco de bola.",
+      "es": "Le hablé toda la noche y ni puto caso.",
+      "notes": "Coloquial. «Ni tronco de bola» (dicho «ni tronco 'e bola») = ni caso; es «dar bola» llevado al extremo.",
+      "explanation": "Para contar que alguien te ignoró. Se dice casi sin la d: tron-co-'e-BO-la.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.ya-vas-a-ver-vos",
+      "text": "Ya vas a ver vos.",
+      "es": "Ya verás tú.",
+      "notes": "Coloquial. Amenaza medio en broma: «ya verás»; el «vos» del final la remata.",
+      "explanation": "Para picar a un amigo que te ganó. «Vos» al final, sin la -s en habla relajada.",
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.andate-de-una-vez",
+      "text": "¡Andate de una vez!",
+      "es": "¡Vete de una vez!",
+      "notes": "Coloquial. Imperativo de «irse» con vos: «andate» (nunca «vete»); en el habla popular, «¡ite!».",
+      "explanation": "Para echar a alguien (en broma o no). «Andate» sin tilde: AN-da-te.",
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.y-si-hijo",
+      "text": "Y sí, hijo.",
+      "es": "Pues sí, qué le vamos a hacer.",
+      "notes": "Coloquial. Asentimiento resignado, muy cordobés; el «hijo» no es literal, se le dice a cualquiera.",
+      "explanation": "Para aceptar algo inevitable. Alarga la «y sí» con tonada: «y siii, hijo».",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.que-se-yo-tipo-ocho",
+      "text": "Qué sé yo, tipo ocho.",
+      "es": "Yo qué sé, sobre las ocho.",
+      "notes": "Coloquial. «¿Qué sé yo?» = ni idea (en España, «yo qué sé»); «tipo» = más o menos, en plan.",
+      "explanation": "Para dar una hora aproximada. «Tipo» se dice rápido, sin pausa.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.que-calorononon",
+      "text": "¡Qué calorononón!",
+      "es": "¡Qué calor más bestia!",
+      "notes": "Coloquial. Triple aumentativo cordobés (-ón-on-ón) para exagerar con humor; también «friazononón».",
+      "explanation": "En pleno enero. Estira y canta la sílaba antes del final: ca-lo-ro-no-NÓN.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.que-mala-leche",
+      "text": "¡Qué mala leche!",
+      "es": "¡Qué mala suerte!",
+      "notes": "Coloquial. Trampa: «mala leche» aquí es mala suerte; la mala intención es «mala fe» o «mala onda».",
+      "explanation": "Cuando a alguien le sale algo mal por azar. No lo uses para hablar del carácter de nadie.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.de-puro-ocote",
+      "text": "De puro ocote no se hizo nada.",
+      "es": "De pura potra no se hizo nada.",
+      "notes": "Vulgar. «Ocote» = culo; «tener ocote» = tener potra, chorra. Entre amigos.",
+      "explanation": "Para contar que alguien se salvó por suerte. «Ocote» con la o abierta.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.me-da-ocote",
+      "text": "Me da ocote.",
+      "es": "Me da cosa. / Me da asco.",
+      "notes": "Vulgar. «Dar ocote» = dar asco, vergüenza o pena, según el contexto; muy cordobés.",
+      "explanation": "Ante algo que te da grima. Corto y con cara de asco.",
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.mas-alzado-que-primer-nieto",
+      "text": "Anda más alzado que primer nieto.",
+      "es": "Va más salido que el pico de una mesa.",
+      "notes": "Vulgar. «Alzado» = cachondo o subidito; el «primer nieto» es el que todos llevan en brazos. Se dice «alzao».",
+      "explanation": "Para burlarte de un amigo con ganas de ligar. «Alzado» suena «al-SAO».",
+      "register": "neutral",
+      "situation": "emociones",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-emociones.esta-chau",
+      "text": "Este celular ya está chau.",
+      "es": "Este móvil ya está muerto.",
+      "notes": "Coloquial. «Estar chau» (dicho «ta chau») = estar roto, acabado o fatal; «chau» es adiós.",
+      "explanation": "Cuando algo ya no tiene arreglo. «Chau» con la u bien marcada.",
+      "register": "neutral",
+      "situation": "emociones"
+    }
+  ],
+  "expressions": [
+    {
+      "id": "cba-emociones.x.vaia-iendo",
+      "text": "¡Vaia iendo!",
+      "es": "¡Anda ya! / ¡Vete a paseo!",
+      "variety": "Cordobés popular",
+      "standard": "¡Vaya yendo!",
+      "notes": "Coloquial. Rechazo con ironía, a veces con usted: «Vaia iendo usté con esos comentarios». La y suena casi «i»."
+    },
+    {
+      "id": "cba-emociones.x.ah-ia-dijo",
+      "text": "¡Ah, ia dijo!",
+      "es": "¡Sí, ya! / ¡Venga ya, no me lo creo!",
+      "variety": "Cordobés popular",
+      "standard": "¡Ah, ya dijo!",
+      "notes": "Coloquial. Para mostrar incredulidad: «¿Que vos cocinás? ¡Ah, ia dijo!». Reconócelo; tú di «¿posta?»."
+    },
+    {
+      "id": "cba-emociones.x.e-lo-qui-hay",
+      "text": "É lo qui hay.",
+      "es": "Es lo que hay (y punto).",
+      "variety": "Cordobés popular",
+      "standard": "Es lo que hay.",
+      "notes": "Coloquial. Con la pronunciación de barrio (é, qui) es casi un lema cordobés: «No quedó más fernet… é lo qui hay»."
+    },
+    {
+      "id": "cba-emociones.x.maomeno",
+      "text": "Había, digamo, maomeno quinientas.",
+      "es": "Había, o sea, unas quinientas, más o menos.",
+      "variety": "Cordobés popular",
+      "standard": "Había, digamos, más o menos quinientas.",
+      "notes": "Coloquial. «Maomeno» (más o menos) y «digamo» (muletilla de pausa) son pronunciaciones populares; entiéndelas, di la forma estándar."
+    },
+    {
+      "id": "cba-emociones.x.ahre",
+      "text": "Me encanta estudiar, ahre.",
+      "es": "Me encanta estudiar. Es broma.",
+      "variety": "Jerga juvenil",
+      "standard": "Me encanta estudiar (es broma).",
+      "notes": "Coloquial. «Ahre» al final marca ironía o broma, sobre todo en chats de jóvenes; dicho por ti sonaría impostado."
+    },
+    {
+      "id": "cba-emociones.x.atr",
+      "text": "¡Estuvimos atr!",
+      "es": "¡Lo dimos todo! / ¡Estuvimos a tope!",
+      "variety": "Jerga juvenil",
+      "standard": "¡Estuvimos a todo ritmo!",
+      "notes": "Coloquial. «Atr» (a todo ritmo) = a tope; jerga juvenil de moda, mejor reconocerla que usarla."
+    },
+    {
+      "id": "cba-emociones.x.altroque",
+      "text": "¡Altroqué calor!",
+      "es": "¡Ya te digo, qué calor!",
+      "variety": "Italianismo del este cordobés",
+      "standard": "¡Y qué calor!",
+      "notes": "Coloquial. Del italiano «altro che»: «y tanto», «ya te digo». Típico de San Francisco y la pampa gringa."
+    },
+    {
+      "id": "cba-emociones.x.ma-que",
+      "text": "¡Ma qué!",
+      "es": "¡Qué va! / ¡Anda ya!",
+      "variety": "Italianismo del este cordobés",
+      "standard": "¡Pero qué va!",
+      "notes": "Coloquial. «Ma qué» = qué va; «ma sí» = pues claro, venga. Herencia piamontesa del este de la provincia."
+    },
+    {
+      "id": "cba-emociones.x.porcachiva",
+      "text": "¡Desaprobé, la re porcachiva!",
+      "es": "¡He suspendido, mecachis!",
+      "variety": "Italianismo del este cordobés",
+      "standard": "¡Desaprobé, qué macana!",
+      "notes": "Vulgar suave. «Porcachiva» o «porca madonna» = ¡mecachis!, ¡joder!; italianismo del este, entre gente de confianza."
+    }
+  ],
+  "vocab": [
+    {
+      "id": "cba-emociones.v.zarpado",
+      "word": "zarpado",
+      "es": "pasado, flipante",
+      "notes": "Coloquial. Excesivo, para bien o para mal: «un sánguche zarpado», «estuvo zarpado lo que dijo».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.posta",
+      "word": "posta",
+      "es": "de verdad, en serio",
+      "notes": "Coloquial. «¿Posta?» = ¿en serio?; «la posta es que…» = la verdad es que…",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.de-cajon",
+      "word": "de cajón",
+      "es": "por supuesto, está clarísimo",
+      "notes": "Coloquial. Existe en España, pero aquí se oye a diario: «De cajón que vamos».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.dale-que-va",
+      "word": "dale que va",
+      "es": "¡venga, adelante!; (irónico) sí, sí",
+      "notes": "Coloquial. Para arrancar algo o, con retintín, para darle la razón a alguien sin creerle.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.chocho",
+      "word": "chocho",
+      "es": "encantado, como un niño con zapatos nuevos",
+      "notes": "Coloquial. «Está chocha con el nieto»: feliz, no chocha de vieja.",
+      "situation": "emociones",
+      "image": "fluent:smiling-face-with-hearts"
+    },
+    {
+      "id": "cba-emociones.v.toco",
+      "word": "toco",
+      "article": "el",
+      "gender": "m",
+      "es": "el montón (un toco = mogollón)",
+      "notes": "Coloquial. Siempre «un toco»; más popular aún, «un fangote».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.a-full",
+      "word": "a full",
+      "es": "a tope, al máximo",
+      "notes": "Coloquial. «Estoy a full con el laburo»; se dice «a ful».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.bajoneado",
+      "word": "bajoneado",
+      "es": "de bajón, depre",
+      "notes": "Coloquial. «Ando bajoneado» = estoy de bajón. (El «bajón» también es el hambre de después de la fiesta.)",
+      "situation": "emociones",
+      "image": "fluent:pensive-face"
+    },
+    {
+      "id": "cba-emociones.v.mufado",
+      "word": "mufado",
+      "es": "de mala leche, mosqueado",
+      "notes": "Coloquial. La «mufa» es el mal humor y también el gafe: «es mufa» = es gafe.",
+      "situation": "emociones",
+      "image": "fluent:pouting-face"
+    },
+    {
+      "id": "cba-emociones.v.podrido",
+      "word": "podrido",
+      "es": "harto, hasta las narices",
+      "notes": "Coloquial. «Estoy podrido de esperar»; no tiene que ver con la fruta.",
+      "situation": "emociones",
+      "image": "fluent:weary-face"
+    },
+    {
+      "id": "cba-emociones.v.empacado",
+      "word": "empacado",
+      "es": "enfurruñado",
+      "notes": "Coloquial. Sobre todo de niños: «el nene está empacado», no quiere moverse ni hablar.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.al-pedo",
+      "word": "al pedo",
+      "es": "para nada; sin hacer nada",
+      "notes": "Vulgar. «Estar al pedo» = estar tocándose las narices; «es al pedo» = no sirve de nada. Versión suave: «al vicio».",
+      "example": "cba-emociones.es-al-pedo",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.quilombo",
+      "word": "quilombo",
+      "article": "el",
+      "gender": "m",
+      "es": "el follón, el jaleo",
+      "notes": "Coloquial. También «bolonqui» (al revés). Ya no suena a burdel: lo dice todo el mundo.",
+      "example": "cba-emociones.se-armo-un-quilombon",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.mambo",
+      "word": "mambo",
+      "article": "el",
+      "gender": "m",
+      "es": "la rayada, el lío mental",
+      "notes": "Coloquial. «Tiene un mambo en la cabeza» = está rayado; no es el baile.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.del-tomate",
+      "word": "del tomate",
+      "es": "pirado, como una cabra",
+      "notes": "Coloquial. «Está del tomate» o «de la cabeza»; «rayado» también se usa.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.piantado",
+      "word": "piantado",
+      "es": "chiflado, pirado",
+      "notes": "Coloquial. Lunfardo, dicho «piantao»; tiene un punto cariñoso.",
+      "situation": "emociones",
+      "image": "fluent:zany-face"
+    },
+    {
+      "id": "cba-emociones.v.pirucho",
+      "word": "pirucho",
+      "es": "chalado, tocado del ala",
+      "notes": "Coloquial. Sinónimo suave de «piantado».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.tildado",
+      "word": "tildado",
+      "es": "colgado, bloqueado",
+      "notes": "Coloquial. Como un ordenador que se cuelga: «la vio y quedó tildado».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.sacado",
+      "word": "sacado",
+      "es": "fuera de sí, desquiciado",
+      "notes": "Coloquial. «Estaba sacado» = había perdido los papeles; también «re loco».",
+      "situation": "emociones",
+      "image": "fluent:face-with-steam-from-nose"
+    },
+    {
+      "id": "cba-emociones.v.bardear",
+      "word": "bardear",
+      "es": "meterse con alguien, provocar",
+      "notes": "Coloquial. «No me bardeés» = no te metas conmigo; el «bardo» es el lío.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.chumbar",
+      "word": "chumbar",
+      "es": "chinchar, picar a alguien",
+      "notes": "Coloquial. «Me está chumbando para que me saque» = me está picando para que explote.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.bolacear",
+      "word": "bolacear",
+      "es": "vacilar, exagerar, trolear",
+      "notes": "Coloquial. También «bolaciar»: «me estás bolaceando» = me estás vacilando.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.flashear",
+      "word": "flashear",
+      "es": "flipar, imaginarse cosas",
+      "notes": "Coloquial. «Estás flasheando» = estás flipando o te equivocas; los jóvenes cordobeses dicen «flayar».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.mandar-fruta",
+      "word": "mandar fruta",
+      "es": "hablar por hablar",
+      "notes": "Coloquial. Decir lo primero que se te ocurre sin saber: «ese manda fruta».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.cualquiera",
+      "word": "cualquiera",
+      "es": "un disparate, flipas",
+      "notes": "Coloquial. Como adjetivo: «lo que dijo es cualquiera» = es un disparate.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.muy-mucho",
+      "word": "muy mucho",
+      "es": "muchísimo",
+      "notes": "Coloquial. Redundante a propósito: «te quiero muy mucho»; suena tierno y cordobés.",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.pendorcho",
+      "word": "pendorcho",
+      "article": "el",
+      "gender": "m",
+      "es": "el chisme, el cacharro",
+      "notes": "Coloquial. Cualquier cosa sin nombre; también «el coso» o «el cuchuflo».",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.v.calor",
+      "word": "calorón",
+      "article": "el",
+      "gender": "m",
+      "es": "el calor que te mueres",
+      "notes": "Coloquial. Aumentativo cordobés; se dice también de 25 grados, con humor. «¡Qué calorón, culiado!».",
+      "situation": "emociones",
+      "image": "fluent:hot-face"
+    },
+    {
+      "id": "cba-emociones.v.friazon",
+      "word": "friazón",
+      "article": "el",
+      "gender": "m",
+      "es": "el frío que pela",
+      "notes": "Coloquial. Aumentativo de «frío»: «esta noche hace un friazón» (en las sierras, en invierno).",
+      "situation": "emociones",
+      "image": "fluent:cold-face"
+    }
+  ],
+  "qa": [
+    {
+      "id": "cba-emociones.qa.el-baile",
+      "question": "¿Qué tal el baile de anoche?",
+      "questionEs": "¿Qué tal el concierto de anoche?",
+      "accepted": [
+        {
+          "text": "¡Qué abuso! Estuvo zarpado.",
+          "es": "¡Una pasada! Fue increíble."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¡Una pasada, tío! Mola mazo.",
+          "es": "Se entiende, pero «tío», «mola» y «mazo» son de Madrid."
+        },
+        {
+          "text": "¡Qué abuso! Me pegué un embole.",
+          "es": "«Embole» es aburrimiento: contradice «¡qué abuso!»."
+        }
+      ],
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.qa.aprobe",
+      "question": "¡Aprobé el examen de manejo!",
+      "questionEs": "¡He aprobado el examen de conducir!",
+      "accepted": [
+        {
+          "text": "¡Bien ahí! ¡Felicitaciones!",
+          "es": "¡Olé! ¡Enhorabuena!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¡Olé, qué máquina, tía!",
+          "es": "Se entiende, pero «olé» y «tía» suenan a España."
+        },
+        {
+          "text": "¡Qué garrón!",
+          "es": "«¡Qué garrón!» es «¡qué putada!»: lo contrario de felicitar."
+        }
+      ],
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.qa.posta",
+      "question": "¿Posta que te quedás a vivir en Córdoba?",
+      "questionEs": "¿En serio te quedas a vivir en Córdoba?",
+      "accepted": [
+        {
+          "text": "Posta, me copa esto.",
+          "es": "En serio, me encanta esto."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "En serio, me mola mazo.",
+          "es": "Se entiende, pero «mola» y «mazo» no se usan aquí: «me copa»."
+        },
+        {
+          "text": "Ni ahí, me copa esto.",
+          "es": "«Ni ahí» es «para nada»: contradice que te quedas."
+        }
+      ],
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.qa.que-te-pasa",
+      "question": "¿Qué te pasa que estás así?",
+      "questionEs": "¿Qué te pasa? Te veo fatal.",
+      "accepted": [
+        {
+          "text": "Nada, ando medio bajoneado.",
+          "es": "Nada, estoy un poco de bajón."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Nada, estoy caliente.",
+          "es": "«Caliente» aquí es cabreado… o cachondo: si estás triste, no lo digas así."
+        },
+        {
+          "text": "Nada, estoy chocho.",
+          "es": "«Chocho» es encantado de la vida: no encaja con estar mal."
+        }
+      ],
+      "register": "tu",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.qa.ultimo-cole",
+      "question": "Se fue el último cole.",
+      "questionEs": "Se ha ido el último bus.",
+      "accepted": [
+        {
+          "text": "¡Qué garrón! Pidamos un remís.",
+          "es": "¡Qué marrón! Pidamos un taxi."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¡Qué marrón, tío! Cojamos un taxi.",
+          "es": "«Coger» aquí es follar, y «marrón» y «tío» son de España."
+        },
+        {
+          "text": "¡Qué abuso! Pidamos un remís.",
+          "es": "«¡Qué abuso!» es «¡qué pasada!»: aquí suena a que te alegras."
+        }
+      ],
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.qa.cancha-talleres",
+      "question": "¿Venís a la cancha con los de Talleres?",
+      "questionEs": "¿Vienes al campo con los del Talleres?",
+      "accepted": [
+        {
+          "text": "Ni a palos, soy de Belgrano.",
+          "es": "Ni de broma, soy del Belgrano."
+        },
+        {
+          "text": "¡Ni en pedo!",
+          "es": "¡Ni de coña!"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "¡Ni de coña, tío!",
+          "es": "Se entiende, pero «ni de coña» y «tío» suenan a España."
+        },
+        {
+          "text": "¡De cajón, soy de Belgrano!",
+          "es": "«De cajón» es «por supuesto que sí»: dices que vas."
+        }
+      ],
+      "register": "tu",
+      "situation": "emociones",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "cba-emociones.qa.centro",
+      "question": "Che, ¿vamos al centro ahora?",
+      "questionEs": "Oye, ¿vamos al centro ahora?",
+      "accepted": [
+        {
+          "text": "Es al pedo, a la siesta está todo cerrado.",
+          "es": "No vale la pena, a primera hora de la tarde está todo cerrado."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Qué palo, tía, está todo cerrado.",
+          "es": "Se entiende, pero «qué palo» y «tía» son de España."
+        },
+        {
+          "text": "Dale que va, está todo cerrado.",
+          "es": "«Dale que va» es «¡venga, adelante!»: no encaja con que esté cerrado."
+        }
+      ],
+      "register": "neutral",
+      "situation": "emociones"
+    },
+    {
+      "id": "cba-emociones.qa.cuanta-gente",
+      "question": "¿Cuánta gente había en el baile?",
+      "questionEs": "¿Cuánta gente había en el concierto?",
+      "accepted": [
+        {
+          "text": "Una banda, tipo quinientos.",
+          "es": "Mogollón, unos quinientos."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Mogollón, en plan quinientos.",
+          "es": "Se entiende, pero «mogollón» y «en plan» son de España."
+        },
+        {
+          "text": "Ni bosta, tipo quinientos.",
+          "es": "«Ni bosta» es «nada de nada»: contradice quinientos."
+        }
+      ],
+      "register": "neutral",
+      "situation": "emociones"
+    }
+  ]
+}
