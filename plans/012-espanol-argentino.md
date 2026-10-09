@@ -22,7 +22,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T149 — Multi-language glosses (generic)
-- Status: pending
+- Status: done
 - Depends on: none
 - Goal: Let a pack carry glosses and notes in several languages (`glossLangs`), let the learner pick one per pack, and show the chosen one everywhere a gloss is shown today, with no change for the existing packs.
 - Context: `src/lib/content/schema.ts` (PackMeta ~99–136, `es` at 162, 193, 208, 249, 327, 333, 379, 397, `questionEs` 217, `titleEs` 429, notes/grammar/descriptions), `src/lib/content/types.ts`, `index.ts`, `src/lib/exercises/types.ts` + `generate.ts`, `src/lib/game/index.ts`, `src/lib/stories/games.ts`, about 20 components that read `.es` (Round, DialoguePlayer, MatchExercise, StoryReader, WordList, PhraseList, ReviewView…), `scripts/content.ts`, docs/content-guide.md, `src/lib/backup/`, `src/lib/cloud-save/` (key lists). Prepárate: `api/_lib/prompts.ts`, `src/app/preparar/`. `MicTestView.tsx:120` (Spanish card hidden only for `es-ES`), `LevelInterview.tsx`, `SituationForm.tsx`.
@@ -35,10 +35,10 @@ Worktree setup: npm ci
   - Prepárate entry points are hidden for a pack whose gloss languages do not include `es` (its prompts write Spain Spanish glosses); this goes under Proposals for later.
   - The mic test does not show the extra "En español" card when the active pack's `speechLocale` already starts with `es-`; a pack with no placement questions onboards straight to its first unit.
   - A scratch `es` pack with `glossLangs: ["ru"]` and one lesson (not committed) shows Russian glosses in a lesson, a game round and the phrasebook; report how you checked. `npm run verify` → exit 0.
-- Outcome:
+- Outcome: glossLangs + sibling fields es/ru/en (questionRu, titleRu…) or {ru:…} maps; glossOf() in src/lib/content/gloss.ts, <Gloss>; key lang-lern:gloss:<lang>; register `usted` (badge 'Trato de vos'); Prepárate hidden without es glosses — d3b361a9
 
 ## T150 — Russian copy for the learning screens
-- Status: pending
+- Status: running
 - Depends on: T149
 - Goal: When the chosen gloss language is `ru`, the screens a beginner needs to learn (lesson exercises, review, game rounds, dialogue player, story reader and its games) show their instructions, feedback and buttons in Russian. The rest of the app stays Spain Spanish.
 - Context: T149's resolver and gloss setting; exercise and game components (`Round.tsx` 186–189 "lee en español", `SearchHeader.tsx:48`, `QuestionExercise.tsx:37` "Ver en español", lesson/review/dialogue/story views). Copy rules: CLAUDE.md (Spain Spanish UI with tú stays the default).
@@ -50,7 +50,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T151 — Spanish (Argentina) pack foundation and brief
-- Status: pending
+- Status: running
 - Depends on: T149
 - Goal: Create `content/es/pack.json` and `docs/brief-es.md` so the content tasks can run.
 - Context: Shared contract; docs/brief-ru.md and docs/brief-nl.md as brief models; `content/ru/pack.json` as the pack model; T149's documented gloss shape.
@@ -111,8 +111,14 @@ Worktree setup: npm ci
 - 2026-10-09 Hernán: Vercel weight: keep it on the free plan for now; if a limit is hit he pays rather than break the app. A plan for growth (e.g. audio outside Vercel) is a separate proposal.
 - 2026-10-09 orchestrator: Prepárate stays hidden for packs without `es` glosses in this plan; no placement test for a one-course A1 pack.
 
+- 2026-10-09 T149: gloss shape = sibling fields per language for es-named fields, {lang: text} map for the rest; new-pack welcome screen still shown once before the route (agent)
+
 ## Proposals (new scope)
 - 2026-10-09 orchestrator: growth of the deploy (audio is 279 MB / 16,299 files; repo 17,048 files, `.git` 245 MB): serve mp3s from Cloudflare R2 or similar (audio base URL, CORS, cross-origin SW cache and Range) and/or re-encode at a lower bitrate. Its own plan when needed.
 - 2026-10-09 orchestrator: later plans for the `es` pack: `en` and `es` glosses (text only, no new audio), Prepárate with the learner's gloss language, A2 level with placement.
 
 ## Log
+- 2026-10-09 T149 launched · attempt 1
+- 2026-10-09 T149 done → d3b361a9
+- 2026-10-09 T150 launched · attempt 1
+- 2026-10-09 T151 launched · attempt 1
