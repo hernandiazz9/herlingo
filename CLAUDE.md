@@ -60,7 +60,7 @@ src/lib/cloud-save/    "Guardado en la nube" (docs/cloud-save.md): the backup bl
                        undo.ts, sync loop + actions in index.ts, use-cloud-save.ts). Started by LeagueSync only when `leagueEnabled()`.
 src/components/cloud-save/  Its UI: CloudSaveHost (layout: restore offer, conflict dialog, undo panel), CloudSaveCard (Perfil).
 content/<lang>/        Learning content per language: pack.json, units/, dialogues/, extras/, stories/ (`getStories()`, `getStory()`, `getStoryKeywords()`).
-                       `it` (default pack, `"default": true`), `fr`, `en`, `ru`, `nl` (docs/brief-<lang>.md each). Ids are unique across packs.
+                       `it` (default pack, `"default": true`), `fr`, `en`, `ru`, `nl`, `es` (docs/brief-<lang>.md each). Ids are unique across packs.
                        Format, ids, order ranges and quality rules: docs/content-guide.md.
                        Code never hard-codes content.
 api/                   Prepárate backend only: Vercel functions (coach/*.ts, one per endpoint) + api/_lib/ (server modules,
