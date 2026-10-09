@@ -1,6 +1,6 @@
 # Plan 012 — Español argentino A1 (for Russian speakers): first pack with a gloss language other than Spain Spanish
 
-Status: active
+Status: done
 Created: 2026-10-09
 Base branch: main
 Goal: Add a small, fun **A1** Spanish pack (`content/es/`, es-AR) of Argentine Spanish (rioplatense base with Córdoba mixed in from the start), explained **in Russian**. This is the first pack whose learner does not speak Spain Spanish, so the code learns two generic things first: (1) a pack can carry glosses and notes in several languages (`ru` now; Spain Spanish `es` and English `en` later, reusing the same Spanish audio) and the learner picks one; (2) the learning screens (exercise instructions, feedback, lesson buttons) show in the chosen gloss language when it is Russian. Menus, Perfil and the rest of the UI stay Spain Spanish. Volume is deliberately small (about 800 mp3) to keep the deploy weight down. MVP speed: no automated tests; verification is `npm run verify`.
@@ -91,7 +91,7 @@ Worktree setup: npm ci
 - Outcome: 6 stories (82–90 words, 4 inline vocab story-es-*) — 1bd637fb; 6 dialogues (7–8 turns, 3 options, usted in 2 and 6, Córdoba 2 and 5) — 2ee7b669
 
 ## T155 — es-AR audio, pictures and offline check
-- Status: running
+- Status: done
 - Depends on: T150, T154
 - Goal: Generate the mp3s and pictures for the `es` pack and check it works offline in the built app, in Russian.
 - Context: CLAUDE.md commands `npm run audio`, `npm run images`, `--strict-audio`, `--strict-images`; plan 011 T147 outcome. Needs internet (edge-tts).
@@ -100,7 +100,7 @@ Worktree setup: npm ci
   - `npm run content:check -- --strict-audio --strict-images` → exit 0; report the es mp3 count and MB (target ≤ ~900 files, ≤ ~18 MB) and the repo's total file count.
   - `npm run verify` → exit 0; `out/sw.js` lists audio for `es`.
   - `git diff --stat main -- public/audio/it public/audio/fr public/audio/en public/audio/ru public/audio/nl` → empty.
-- Outcome:
+- Outcome: 780 es mp3 + manifest (13 MB), 10 picture files; strict audio/images pass; sw lists es audio; built app checked: route, lesson in Russian, mp3 plays, 781 files in lang-lern-audio-es; repo 17,079 tracked files before this commit — 011f9f0b
 
 ## Decisions
 - 2026-10-09 Hernán: Argentine Spanish pack, rioplatense base with Córdoba mixed in from the start (not mostly cordobés, not left for last); scenes in Buenos Aires, Córdoba capital, sierras and Carlos Paz.
@@ -121,6 +121,7 @@ Worktree setup: npm ci
 ## Proposals (new scope)
 - 2026-10-09 orchestrator: growth of the deploy (audio is 279 MB / 16,299 files; repo 17,048 files, `.git` 245 MB): serve mp3s from Cloudflare R2 or similar (audio base URL, CORS, cross-origin SW cache and Range) and/or re-encode at a lower bitrate. Its own plan when needed.
 - 2026-10-09 orchestrator: later plans for the `es` pack: `en` and `es` glosses (text only, no new audio), Prepárate with the learner's gloss language, A2 level with placement.
+- 2026-10-09 T155: the welcome screen (/bienvenida/) and Ruta chrome (headers, 'Empezar', Repaso, Liga card) are still Spain Spanish for a Russian learner; translate the first-run path via learnCopy.
 
 ## Log
 - 2026-10-09 T149 launched · attempt 1
@@ -136,3 +137,4 @@ Worktree setup: npm ci
 - 2026-10-09 T154 launched · attempt 1 (2 agents)
 - 2026-10-09 T154 done → 1bd637fb, 2ee7b669
 - 2026-10-09 T155 started (orchestrator)
+- 2026-10-09 T155 done → 011f9f0b; plan done
