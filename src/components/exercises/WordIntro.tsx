@@ -2,6 +2,7 @@
 
 import { Button, Picture, TargetText } from "@/components/ui";
 import { glossOf, type Vocab } from "@/lib/content";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { PlayControls, useLessonGloss, useLessonLang } from "./shared";
 
 /**
@@ -12,9 +13,10 @@ import { PlayControls, useLessonGloss, useLessonLang } from "./shared";
 export function WordIntro({ item, onContinue }: { item: Vocab; onContinue: () => void }) {
   const lang = useLessonLang();
   const gloss = useLessonGloss();
+  const copy = useLearnCopy();
   return (
     <div className="flex flex-1 flex-col gap-5">
-      <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">Palabra nueva</p>
+      <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">{copy.newWord}</p>
       <div className="flex flex-col items-center gap-5 pt-2 text-center">
         {item.image ? <Picture image={item.image} alt="" size="intro" /> : null}
         <div className="flex flex-col gap-1">
@@ -34,7 +36,7 @@ export function WordIntro({ item, onContinue }: { item: Vocab; onContinue: () =>
       </div>
       <div className="mt-auto pt-2">
         <Button fullWidth onClick={onContinue}>
-          Continuar
+          {copy.continue}
         </Button>
       </div>
     </div>

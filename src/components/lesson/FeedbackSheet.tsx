@@ -5,9 +5,9 @@ import { MiniPlay, useLessonGloss, useLessonLang } from "@/components/exercises"
 import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack } from "@/lib/content";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { diffWords, scriptRules, type DiffWord, type Exercise, type ExerciseOutcome } from "@/lib/exercises";
 
-const PRAISE = ["¡Genial!", "¡Muy bien!", "¡Perfecto!", "¡Eso es!", "¡Bravo!"];
 
 export interface FeedbackSheetProps {
   exercise: Exercise;
@@ -45,13 +45,14 @@ function Highlighted({ words, tone }: { words: DiffWord[]; tone: "fix" | "mistak
 export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSheetProps) {
   const lang = useLessonLang();
   const gloss = useLessonGloss();
+  const copy = useLearnCopy();
   const { correct } = outcome;
   const { solution } = exercise;
   const isMatch = exercise.type === "match";
   const matchMistakes = isMatch ? (outcome.wrongItemIds?.length ?? 0) : 0;
   const typo = correct && outcome.typo === true && !!outcome.given;
   const diff = typo && outcome.given ? diffWords(outcome.given, solution.text, scriptRules(getPack(lang).meta)) : null;
-  const title = !correct ? "Casi…" : typo ? "¡Casi perfecto!" : matchMistakes > 0 ? "¡Hecho!" : PRAISE[seq % PRAISE.length];
+  const title = !correct ? copy.almost : typo ? copy.almostPerfect : matchMistakes > 0 ? copy.done : copy.praise[seq % copy.praise.length];
   const button = useRef<HTMLButtonElement>(null);
   // Focus Continuar (keyboard: Enter goes on) without scrolling the lesson.
   useEffect(() => button.current?.focus({ preventScroll: true }), []);
@@ -85,7 +86,7 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
 
       {diff ? (
         <p className="text-base text-ink">
-          Te cuenta como bien, pero tienes un fallo de letra:{" "}
+          {copy.typoNote}{" "}
           <span lang={lang} className="font-bold">
             <Highlighted words={diff.given} tone="mistake" />
           </span>
@@ -93,19 +94,19 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
       ) : null}
 
       {outcome.accentNote ? (
-        <p className="text-base font-bold text-ink">Cuidado con el acento: fíjate en cómo se escribe.</p>
+        <p className="text-base font-bold text-ink">{copy.accentNote}</p>
       ) : null}
       {isMatch && matchMistakes > 0 ? (
         <p className="text-base text-ink">
-          {matchMistakes === 1 ? "Has fallado 1 pareja, pero ya las tienes todas." : `Has fallado ${matchMistakes} parejas, pero ya las tienes todas.`}
+          {copy.matchMistakes(matchMistakes)}
         </p>
       ) : null}
 
       {!isMatch ? (
         <div className="flex items-start gap-3">
-          {solution.audio ? <MiniPlay audio={solution.audio} label="Escuchar la respuesta" /> : null}
+          {solution.audio ? <MiniPlay audio={solution.audio} label={copy.listenAnswer} /> : null}
           <div className="flex min-w-0 flex-col">
-            {!correct ? <span className="text-sm font-bold uppercase tracking-wider text-error-deep">Solución</span> : null}
+            {!correct ? <span className="text-sm font-bold uppercase tracking-wider text-error-deep">{copy.solution}</span> : null}
             <span lang={lang} className="text-xl font-bold text-ink">
               <TargetText text={solution.text} lang={lang}>
                 {diff ? <Highlighted words={diff.expected} tone="fix" /> : solution.text}
@@ -123,12 +124,12 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
 
       {outcome.given && !correct ? (
         <p className="text-base text-ink-muted">
-          {exercise.type === "speak" ? "He entendido" : "Tu respuesta"}: <span className="font-bold text-ink">{outcome.given}</span>
+          {exercise.type === "speak" ? copy.heard : copy.yourAnswer}: <span className="font-bold text-ink">{outcome.given}</span>
         </p>
       ) : null}
       {outcome.given && correct && exercise.type === "speak" ? (
         <p className="text-base text-ink-muted">
-          He entendido: <span className="font-bold text-ink">{outcome.given}</span>
+          {copy.heard}: <span className="font-bold text-ink">{outcome.given}</span>
         </p>
       ) : null}
 
@@ -146,7 +147,7 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
               : "bg-error text-on-accent [--ledge:var(--error-ledge)]",
         )}
       >
-        Continuar
+        {copy.continue}
       </button>
     </section>
   );

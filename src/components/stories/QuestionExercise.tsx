@@ -4,6 +4,7 @@ import { useState } from "react";
 import { MiniPlay, PlayControls, Prompt, useLessonGloss, useLessonLang, type ExerciseProps } from "@/components/exercises";
 import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { AnswerExercise, ChoiceOption } from "@/lib/exercises";
 
 /** Comprehension: hear (and read) a question about the story, pick the right answer. */
@@ -12,6 +13,7 @@ export function QuestionExercise({ exercise, answered, onAnswer }: ExerciseProps
   const [showEs, setShowEs] = useState(false);
   const lang = useLessonLang();
   const gloss = useLessonGloss();
+  const copy = useLearnCopy();
 
   const choose = (option: ChoiceOption) => {
     if (answered || picked) return;
@@ -21,7 +23,7 @@ export function QuestionExercise({ exercise, answered, onAnswer }: ExerciseProps
 
   return (
     <div className="flex flex-col gap-6">
-      <Prompt>Responde sobre la historia</Prompt>
+      <Prompt>{copy.questionPrompt}</Prompt>
       <PlayControls audio={exercise.question} size="md" />
       <div className="flex flex-col gap-1">
         <p lang={lang} className="text-2xl font-bold text-sea-deep">
@@ -37,7 +39,7 @@ export function QuestionExercise({ exercise, answered, onAnswer }: ExerciseProps
             onClick={() => setShowEs(true)}
             className="self-start text-sm font-bold text-sea underline underline-offset-4"
           >
-            Ver en español
+            {copy.seeInGloss}
           </button>
         )}
       </div>
@@ -65,7 +67,7 @@ export function QuestionExercise({ exercise, answered, onAnswer }: ExerciseProps
               >
                 <TargetText text={option.label} lang={lang} />
               </button>
-              {option.audio ? <MiniPlay audio={option.audio} label={`Escuchar: ${option.label}`} /> : null}
+              {option.audio ? <MiniPlay audio={option.audio} label={copy.listenTo(option.label)} /> : null}
             </li>
           );
         })}

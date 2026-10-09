@@ -4,6 +4,7 @@ import { useState } from "react";
 import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack } from "@/lib/content";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { checkAnswer, scriptRules, type FillGapExercise as FillGap } from "@/lib/exercises";
 import { MiniPlay, Prompt, useLessonGloss, useLessonLang, type ExerciseProps } from "./shared";
 
@@ -13,6 +14,7 @@ export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<
   const gloss = useLessonGloss();
   const rules = scriptRules(getPack(lang).meta);
   const [picked, setPicked] = useState<string | null>(null);
+  const copy = useLearnCopy();
 
   const choose = (word: string) => {
     if (answered || picked) return;
@@ -24,7 +26,7 @@ export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<
 
   return (
     <div className="flex flex-col gap-6">
-      <Prompt>Completa la frase</Prompt>
+      <Prompt>{copy.fillGap}</Prompt>
       <p lang={gloss.tag} className="text-lg text-ink-muted">
         {exercise.gloss}
       </p>

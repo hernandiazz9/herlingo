@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Picture, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { MatchExercise as Match } from "@/lib/exercises";
 import { Prompt, useLessonGloss, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
@@ -26,6 +27,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
   const play = usePlay();
   const lang = useLessonLang();
   const gloss = useLessonGloss();
+  const copy = useLearnCopy();
   const pairs = new Map(exercise.pairs.map((p) => [p.id, p]));
   const pictures = exercise.pairs.every((p) => p.image);
 
@@ -89,7 +91,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
 
   return (
     <div className="flex flex-col gap-6">
-      <Prompt>{pictures ? "Une cada palabra con su imagen" : "Une las parejas"}</Prompt>
+      <Prompt>{pictures ? copy.matchPictures : copy.matchPairs}</Prompt>
       <div className="grid grid-cols-2 gap-3">
         <div className="flex flex-col gap-3">{exercise.textOrder.map((id) => cell("target", id, pairs.get(id)!.text))}</div>
         <div className="flex flex-col gap-3">{exercise.glossOrder.map((id) => cell("es", id, pairs.get(id)!.gloss))}</div>

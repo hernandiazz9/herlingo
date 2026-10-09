@@ -5,6 +5,7 @@ import { useState } from "react";
 import { getDialogue, getPack, getSituation, glossOf } from "@/lib/content";
 import { registerLabel } from "@/lib/content/register";
 import { useGlossLang } from "@/lib/content/use-gloss";
+import { LearnCopyProvider, useLearnCopyFor } from "@/lib/i18n/use-learn-copy";
 import { dialogueXp } from "@/lib/exercises";
 import { countPlay, recordActivity, repeatXp } from "@/lib/progress/activity";
 import { DialoguePlayer } from "./DialoguePlayer";
@@ -15,13 +16,15 @@ export function DialogueSimulator({ id, lang }: { id: string; lang: string }) {
   const dialogue = getDialogue(id, pack);
   const [xp, setXp] = useState<{ earned: number; repeat: boolean } | null>(null);
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopyFor(lang);
 
-  if (!dialogue) return <p className="text-ink-muted">No se ha encontrado este diálogo.</p>;
+  if (!dialogue) return <p className="text-ink-muted">{copy.dialogueNotFound}</p>;
 
   const situation = getSituation(dialogue.situation, pack);
   const answers = dialogue.turns.filter((t) => t.speaker === "learner").length;
 
   return (
+    <LearnCopyProvider lang={lang}>
     <DialoguePlayer
       dialogue={dialogue}
       lang={lang}
@@ -35,7 +38,7 @@ export function DialogueSimulator({ id, lang }: { id: string; lang: string }) {
         xp === null ? null : (
           <>
             <p className="mt-2 text-xl font-extrabold text-success-deep">+{xp.earned} XP</p>
-            {xp.repeat ? <p className="text-sm text-ink-muted">Ya lo habías hecho hoy: la mitad de XP.</p> : null}
+            {xp.repeat ? <p className="text-sm text-ink-muted">{copy.halfXp}</p> : null}
           </>
         )
       }
@@ -53,7 +56,7 @@ export function DialogueSimulator({ id, lang }: { id: string; lang: string }) {
             </p>
           ) : null}
           <p className="text-sm text-ink-muted">
-            {[registerLabel(dialogue.register, pack.meta.formalRegister), `${answers} respuestas`].filter(Boolean).join(" · ")}
+            {[registerLabel(dialogue.register, pack.meta.formalRegister), copy.answersCount(answers)].filter(Boolean).join(" · ")}
           </p>
         </>
       }
@@ -62,9 +65,10 @@ export function DialogueSimulator({ id, lang }: { id: string; lang: string }) {
           href="/dialogos/"
           className="pressable inline-flex min-h-14 items-center justify-center rounded-button bg-sea px-4 text-lg font-bold text-on-accent [--ledge:var(--sea-ledge)]"
         >
-          Otros diálogos
+          {copy.otherDialogues}
         </Link>
       }
     />
+    </LearnCopyProvider>
   );
 }

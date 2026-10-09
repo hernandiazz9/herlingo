@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui";
 import { LiveTranscript, MicButton, useListen } from "@/components/speech";
-import { getPack, languageName } from "@/lib/content";
+import { getPack } from "@/lib/content";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { checkAnswer, scriptRules, spellNumbers, type DictationExercise as Dictation } from "@/lib/exercises";
 import { PlayControls, Prompt, useLessonLang, type ExerciseProps } from "./shared";
 
@@ -15,6 +16,7 @@ import { PlayControls, Prompt, useLessonLang, type ExerciseProps } from "./share
 export function DictationExercise({ exercise, answered, onAnswer }: ExerciseProps<Dictation>) {
   const lang = useLessonLang();
   const { meta } = getPack(lang);
+  const copy = useLearnCopy();
   const [text, setText] = useState("");
   const listen = useListen({
     locale: meta.speechLocale,
@@ -45,11 +47,11 @@ export function DictationExercise({ exercise, answered, onAnswer }: ExerciseProp
         check();
       }}
     >
-      <Prompt>Escribe lo que oyes</Prompt>
+      <Prompt>{copy.dictation}</Prompt>
       <PlayControls audio={exercise.audio} />
       <div className="flex flex-col gap-3">
         <label className="flex flex-col gap-2">
-          <span className="sr-only">Lo que oyes, en {languageName(lang)}</span>
+          <span className="sr-only">{copy.dictationLabel}</span>
           <textarea
             lang={lang}
             value={value}
@@ -67,21 +69,21 @@ export function DictationExercise({ exercise, answered, onAnswer }: ExerciseProp
             autoComplete="off"
             spellCheck={false}
             placeholder={
-              listen.supported ? `Escribe o dicta en ${languageName(lang)}…` : `Escribe en ${languageName(lang)}…`
+              copy.dictationPlaceholder(listen.supported)
             }
             className="w-full resize-none rounded-card border-2 border-line bg-surface p-4 text-xl font-bold text-ink placeholder:font-normal placeholder:text-ink-muted focus:border-sea focus:outline-none"
           />
         </label>
         {!answered ? (
           <>
-            <MicButton listen={listen} size="sm" idleLabel="O díctalo en voz alta" className="self-start" />
+            <MicButton listen={listen} size="sm" idleLabel={copy.dictateAloud} className="self-start" />
             <LiveTranscript listen={listen} lang={lang} align="start" />
           </>
         ) : null}
       </div>
       <div className="mt-auto">
         <Button type="submit" fullWidth disabled={answered || listen.active || !text.trim()}>
-          Comprobar
+          {copy.check}
         </Button>
       </div>
     </form>

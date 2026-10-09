@@ -8,6 +8,7 @@ import { Button, Card, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { getItem, getPack, getStories, glossOf, type Story, type StoryKeyword } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { recordOutcome, type Exercise, type ExerciseOutcome, type ItemOutcome } from "@/lib/exercises";
 import { recordActivity } from "@/lib/progress/activity";
 import { buildStoryGames, markStoryDone, storyHref, storyXp, type StoryGame, type StoryStep } from "@/lib/stories";
@@ -37,6 +38,7 @@ interface RunData {
 export function StoryGames({ story, lang, onExit }: { story: Story; lang: string; onExit: () => void }) {
   const pack = getPack(lang);
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopy();
   const [games] = useState<StoryGame[]>(() => buildStoryGames(story, String(Date.now()), pack, gloss.lang));
   const [gameIdx, setGameIdx] = useState(0);
   const [stepIdx, setStepIdx] = useState(0);
@@ -152,15 +154,15 @@ export function StoryGames({ story, lang, onExit }: { story: Story; lang: string
           <header className="flex items-center gap-3 px-4 py-2">
             <button
               type="button"
-              aria-label="Salir de los juegos"
-              title="Salir de los juegos"
+              aria-label={copy.exitGames}
+              title={copy.exitGames}
               onClick={() => (phase.name === "done" ? leave() : setConfirmExit(true))}
               className="inline-flex size-11 shrink-0 items-center justify-center rounded-full text-ink-muted hover:bg-sand focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
             >
               <CloseIcon className="size-7" />
             </button>
             <ProgressBar
-              label="Progreso del juego"
+              label={copy.gameProgress}
               value={progress}
               max={phase.name === "done" ? 1 : total}
               tone={phase.name === "done" ? "success" : "lemon"}
@@ -171,16 +173,16 @@ export function StoryGames({ story, lang, onExit }: { story: Story; lang: string
             {phase.name === "intro" && game ? (
               <div className="flex flex-1 flex-col gap-5">
                 <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">
-                  Juego {gameIdx + 1} de {games.length}
+                  {copy.gameOf(gameIdx + 1, games.length)}
                 </p>
-                <h1 className="text-3xl font-extrabold tracking-tight text-ink">{game.title}</h1>
-                <p className="text-lg text-ink-muted">{game.description}</p>
+                <h1 className="text-3xl font-extrabold tracking-tight text-ink">{copy.storyGames[game.id].title}</h1>
+                <p className="text-lg text-ink-muted">{copy.storyGames[game.id].description}</p>
                 <div className="mt-auto flex flex-col gap-3">
                   <Button fullWidth onClick={startGame}>
-                    Empezar
+                    {copy.start}
                   </Button>
                   <Button fullWidth variant="secondary" onClick={() => goToGame(gameIdx + 1)}>
-                    Saltar este juego
+                    {copy.skipThisGame}
                   </Button>
                 </div>
               </div>
@@ -188,9 +190,9 @@ export function StoryGames({ story, lang, onExit }: { story: Story; lang: string
 
             {phase.name === "intro" && !game ? (
               <div className="flex flex-1 flex-col gap-5">
-                <p className="text-lg text-ink-muted">Esta historia no tiene juegos todavía.</p>
+                <p className="text-lg text-ink-muted">{copy.noGames}</p>
                 <Button fullWidth onClick={finish}>
-                  Terminar
+                  {copy.finish}
                 </Button>
               </div>
             ) : null}
@@ -206,7 +208,7 @@ export function StoryGames({ story, lang, onExit }: { story: Story; lang: string
                     }}
                     className="mb-3 self-end text-sm font-bold text-sea underline underline-offset-4"
                   >
-                    Saltar juego
+                    {copy.skipGame}
                   </button>
                 ) : null}
                 <div key={`${game.id}:${step.key}`}>{view(step)}</div>
@@ -230,8 +232,8 @@ export function StoryGames({ story, lang, onExit }: { story: Story; lang: string
           ) : null}
           {confirmExit ? (
             <ExitDialog
-              title="¿Salir de la historia?"
-              description="Si sales ahora, perderás lo que llevas de esta historia."
+              title={copy.storyExitTitle}
+              description={copy.storyExitDescription}
               onStay={() => setConfirmExit(false)}
               onLeave={() => {
                 setConfirmExit(false);
@@ -260,14 +262,15 @@ function StoryDone({
 }) {
   const perfect = summary.total > 0 && summary.right === summary.total;
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopy();
   return (
     <div className="flex flex-1 flex-col items-center gap-6 text-center">
       <p className="pt-6 text-6xl" aria-hidden="true">
         {perfect ? "🏆" : (story.emoji ?? "📖")}
       </p>
-      <h1 className="text-3xl font-extrabold tracking-tight text-ink">¡Historia completada!</h1>
+      <h1 className="text-3xl font-extrabold tracking-tight text-ink">{copy.storyDone}</h1>
       <p className="text-lg text-ink-muted">
-        {summary.played === 0 ? "Has leído la historia." : perfect ? "Sin un solo fallo. ¡Bravissimo!" : "Los fallos también enseñan. ¡Sigue así!"}
+        {summary.played === 0 ? copy.justRead : perfect ? copy.perfect : copy.keepGoing}
       </p>
       <div className="grid w-full grid-cols-2 gap-3">
         <Card tone="lemon" className="flex flex-col items-center gap-1 p-3">
@@ -278,17 +281,17 @@ function StoryDone({
           <span className="text-2xl font-extrabold text-ink">
             {summary.right}/{summary.total}
           </span>
-          <span className="text-sm font-bold text-ink-muted">a la primera</span>
+          <span className="text-sm font-bold text-ink-muted">{copy.firstTry}</span>
         </Card>
       </div>
       {summary.wrong.length ? (
         <Card className="flex w-full flex-col gap-3 text-left">
-          <p className="text-base font-bold text-ink">Palabras para repasar</p>
-          <p className="text-sm text-ink-muted">Volverán en Repaso para que no se te olviden.</p>
+          <p className="text-base font-bold text-ink">{copy.wordsToReview}</p>
+          <p className="text-sm text-ink-muted">{copy.wordsToReviewHint}</p>
           <ul className="flex flex-col gap-2">
             {summary.wrong.map((item) => (
               <li key={item.id} className="flex items-center gap-3">
-                <MiniPlay audio={item} label={`Escuchar: ${item.text}`} />
+                <MiniPlay audio={item} label={copy.listenTo(item.text)} />
                 <span className="flex min-w-0 flex-col">
                   <span lang={lang} className="text-base font-bold text-ink">
                     <TargetText text={item.text} lang={lang} />
@@ -308,17 +311,17 @@ function StoryDone({
             href={nextHref}
             className="pressable inline-flex min-h-14 w-full items-center justify-center rounded-button bg-sea px-6 text-lg font-bold tracking-wide text-on-accent [--ledge:var(--sea-ledge)]"
           >
-            Siguiente historia
+            {copy.nextStory}
           </Link>
         ) : null}
         <Link
           href="/historias/"
           className="pressable inline-flex min-h-14 w-full items-center justify-center rounded-button border-2 border-line bg-surface px-6 text-lg font-bold tracking-wide text-sea [--ledge:var(--line)]"
         >
-          Volver a Historias
+          {copy.backToStories}
         </Link>
         <Button fullWidth variant="secondary" onClick={onReread}>
-          Leer otra vez
+          {copy.readAgain}
         </Button>
       </div>
     </div>

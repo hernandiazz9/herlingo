@@ -5,6 +5,7 @@ import { SpeakPanel, useListen, WordFeedback } from "@/components/speech";
 import { Button, TargetText } from "@/components/ui";
 import { speak } from "@/lib/audio";
 import { getPack } from "@/lib/content";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { SpeakExercise as Speak } from "@/lib/exercises";
 import { SPEAKING_PAUSE_MINUTES, scoreHeard, type SpeechScore } from "@/lib/speech";
 import { PlayControls, Prompt, useLessonGloss, useLessonLang, type ExerciseProps } from "./shared";
@@ -28,6 +29,7 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
   const lang = useLessonLang();
   const gloss = useLessonGloss();
   const { meta } = getPack(lang);
+  const copy = useLearnCopy();
   const [preferSelf, setPreferSelf] = useState(false);
   const [tries, setTries] = useState(0);
   const [score, setScore] = useState<SpeechScore | null>(null);
@@ -55,7 +57,7 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      <Prompt>Dilo en voz alta</Prompt>
+      <Prompt>{copy.speakPrompt}</Prompt>
       <div className="flex flex-col gap-2">
         <p lang={lang} className="text-2xl font-bold text-sea-deep">
           <TargetText text={exercise.audio.text} lang={lang} />
@@ -71,9 +73,9 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
           {score && !listen.active ? (
             <div className="flex w-full flex-col gap-2 rounded-card border-2 border-line bg-surface px-4 py-3">
               <p className="text-base font-bold text-ink" aria-live="polite">
-                {score.passed ? "¡Bien dicho!" : answered
-                    ? "Así ha quedado:"
-                    : `Casi. ${MAX_TRIES - tries === 1 ? "Te queda un intento." : `Te quedan ${MAX_TRIES - tries} intentos.`}`}
+                {score.passed ? copy.wellSaid : answered
+                    ? copy.speakResult
+                    : copy.almostTries(MAX_TRIES - tries)}
               </p>
               <WordFeedback words={score.words} lang={lang} heard={score.heard} />
             </div>
@@ -82,10 +84,10 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
           {retryShown ? (
             <div className="flex flex-wrap justify-center gap-3">
               <Button size="md" onClick={listen.start}>
-                Reintentar
+                {copy.retry}
               </Button>
               <Button size="md" variant="secondary" onClick={() => void speak(exercise.audio, { lang })}>
-                Escuchar la frase
+                {copy.listenPhrase}
               </Button>
             </div>
           ) : null}
@@ -98,13 +100,13 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
 
           {!answered ? (
             <button type="button" onClick={toSelf} className={`${LINK} text-sea-deep`}>
-              Prefiero evaluarme yo
+              {copy.preferSelf}
             </button>
           ) : null}
         </div>
       ) : (
         <div className="flex flex-col gap-3">
-          <p className="text-base text-ink-muted">Escúchalo, dilo en voz alta y sé sincero:</p>
+          <p className="text-base text-ink-muted">{copy.selfHint}</p>
           <div className="grid grid-cols-2 gap-3">
             <button
               type="button"
@@ -112,15 +114,15 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
               onClick={() => onAnswer({ correct: true })}
               className="pressable min-h-12 rounded-button bg-success px-4 text-base font-bold text-on-accent [--ledge:var(--success-ledge)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep disabled:opacity-50"
             >
-              Me ha salido
+              {copy.selfYes}
             </button>
             <Button size="md" variant="secondary" disabled={answered} onClick={() => onAnswer({ correct: false })}>
-              No me ha salido
+              {copy.selfNo}
             </Button>
           </div>
           {listen.supported && !answered ? (
             <button type="button" onClick={() => setPreferSelf(false)} className={`${LINK} self-center text-sea-deep`}>
-              Usar el micrófono
+              {copy.useMic}
             </button>
           ) : null}
         </div>
@@ -135,7 +137,7 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
           }}
           className={`${LINK} mt-auto self-center text-ink-muted`}
         >
-          No puedo hablar ahora ({SPEAKING_PAUSE_MINUTES} min)
+          {copy.cannotSpeak(SPEAKING_PAUSE_MINUTES)}
         </button>
       ) : null}
     </div>

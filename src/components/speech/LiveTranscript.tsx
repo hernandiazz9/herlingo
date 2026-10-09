@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import { Button, ProgressBar } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { ListenStatus } from "@/lib/speech";
 import { useListenRemaining, type ListenControls } from "./use-listen";
 
@@ -21,11 +22,11 @@ export interface LiveTranscriptProps {
   className?: string;
 }
 
-const STATUS_COPY: Partial<Record<ListenStatus, string>> = {
-  starting: "Abriendo el micrófono…",
-  listening: "Habla ahora",
-  hearing: "Te escucho…",
-  processing: "Un momento…",
+const STATUS_COPY: Partial<Record<ListenStatus, "micStarting" | "statusListening" | "statusHearing" | "micWait">> = {
+  starting: "micStarting",
+  listening: "statusListening",
+  hearing: "statusHearing",
+  processing: "micWait",
 };
 
 /**
@@ -42,10 +43,12 @@ export function LiveTranscript({
   className,
 }: LiveTranscriptProps) {
   const remaining = useListenRemaining(listen);
+  const copy = useLearnCopy();
   if (!listen.supported) return null;
 
   const { status, interim, active, error, result } = listen;
-  const statusText = STATUS_COPY[status] ?? (status === "idle" ? idleHint : null);
+  const statusKey = STATUS_COPY[status];
+  const statusText = statusKey ? copy[statusKey] : status === "idle" ? idleHint : null;
   const center = align === "center";
 
   return (
@@ -68,7 +71,7 @@ export function LiveTranscript({
 
       {showResult && result ? (
         <p className="text-base text-ink-muted">
-          He entendido:{" "}
+          {copy.heard}:{" "}
           <span lang={lang} className="font-bold text-ink">
             «{result.transcript}»
           </span>
@@ -81,7 +84,7 @@ export function LiveTranscript({
             value={remaining}
             max={listen.timings.maxMs}
             tone="sea"
-            label="Tiempo para hablar"
+            label={copy.timeToSpeak}
             className="h-2"
           />
           <span className="shrink-0 text-sm tabular-nums text-ink-muted" aria-hidden="true">
@@ -99,18 +102,18 @@ export function LiveTranscript({
             "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
           )}
         >
-          Cancelar
+          {copy.cancel}
         </button>
       ) : null}
 
       {error ? (
         <div className={cn("flex w-full flex-col gap-3", center ? "items-center" : "items-start")}>
           <p role="alert" className="w-full rounded-card bg-error-soft px-4 py-3 text-base text-error-deep">
-            {error.message}
+            {copy.speechErrors[error.kind]}
           </p>
           <div className={cn("flex flex-wrap items-center gap-3", center && "justify-center")}>
             <Button variant="secondary" size="md" onClick={listen.start}>
-              Reintentar
+              {copy.retry}
             </Button>
             {errorActions}
           </div>

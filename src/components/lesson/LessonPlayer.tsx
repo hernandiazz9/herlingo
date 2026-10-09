@@ -7,6 +7,7 @@ import { Button, Card, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { getLesson, getPack, getUnit, glossOf, type Lesson, type Pack } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
+import { LearnCopyProvider, useLearnCopy, useLearnCopyFor } from "@/lib/i18n/use-learn-copy";
 import {
   buildResult,
   generateSession,
@@ -78,6 +79,7 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
   const lesson = adHoc ?? (lessonId ? getLesson(lessonId, pack) : undefined);
   const unit = lesson ? getUnit(lesson.unitId, pack) : undefined;
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopyFor(lang);
 
   const [phase, setPhase] = useState<Phase>({ name: "intro" });
   const [queue, setQueue] = useState<Entry[]>([]);
@@ -208,20 +210,21 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
 
   return (
     <LessonLangContext.Provider value={lang}>
+    <LearnCopyProvider lang={lang}>
       <div className="fixed inset-0 z-[60] flex justify-center bg-backdrop">
         <div className="relative flex w-full max-w-[var(--column-width)] flex-col overflow-hidden bg-cream pt-[calc(var(--safe-top)+0.75rem)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)]">
           <header className="flex items-center gap-3 px-4 py-2">
             <button
               type="button"
-              aria-label="Salir de la lección"
-              title="Salir de la lección"
+              aria-label={copy.exitLesson}
+              title={copy.exitLesson}
               onClick={requestExit}
               className="inline-flex size-11 shrink-0 items-center justify-center rounded-full text-ink-muted hover:bg-sand focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
             >
               <CloseIcon className="size-7" />
             </button>
             <ProgressBar
-              label="Progreso de la lección"
+              label={copy.lessonProgress}
               value={phase.name === "done" ? 1 : phase.name === "run" ? resolved.length : 0}
               max={phase.name === "run" ? Math.max(1, gradedKeys.size) : 1}
               tone={phase.name === "done" ? "success" : "lemon"}
@@ -240,25 +243,25 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
                 </h1>
                 <p className="text-lg text-ink-muted">
                   {intro ??
-                    "Unos 5 minutos: escuchar, entender, construir frases y decirlas en voz alta. Los fallos vuelven al final."}
+                    copy.lessonIntro}
                 </p>
                 {pausedUntil ? (
                   <Card tone="lemon" className="flex flex-col gap-3">
                     <p className="text-base text-ink">
-                      Los ejercicios de hablar están en pausa hasta las{" "}
+                      {copy.speakingPaused[0]}{" "}
                       <strong>
-                        {new Date(pausedUntil).toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })}
+                        {new Date(pausedUntil).toLocaleTimeString(copy.timeLocale, { hour: "2-digit", minute: "2-digit" })}
                       </strong>
-                      .
+                      {copy.speakingPaused[1]}
                     </p>
                     <Button size="md" variant="secondary" onClick={resumeSpeaking}>
-                      Ya puedo hablar
+                      {copy.canSpeakNow}
                     </Button>
                   </Card>
                 ) : null}
                 <div className="mt-auto">
                   <Button fullWidth onClick={start}>
-                    Empezar
+                    {copy.start}
                   </Button>
                 </div>
               </div>
@@ -273,7 +276,7 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
                 <>
                   {entry.attempt > 0 ? (
                     <p className="mb-3 self-start rounded-full bg-terracotta-soft px-3 py-1 text-sm font-bold text-terracotta-deep">
-                      Otra vez
+                      {copy.again}
                     </p>
                   ) : null}
                   <ExerciseView
@@ -305,6 +308,7 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
           ) : null}
         </div>
       </div>
+    </LearnCopyProvider>
     </LessonLangContext.Provider>
   );
 }
@@ -340,13 +344,14 @@ function formatDuration(ms: number): string {
 
 function LessonDone({ result, onContinue, onRepeat }: { result: LessonResult; onContinue: () => void; onRepeat: () => void }) {
   const perfect = result.exercises > 0 && result.firstTryCorrect === result.exercises;
+  const copy = useLearnCopy();
   return (
     <div className="flex flex-1 flex-col items-center gap-6 text-center">
       <p className="pt-6 text-6xl" aria-hidden="true">
         {perfect ? "🏆" : "🍋"}
       </p>
-      <h1 className="text-3xl font-extrabold tracking-tight text-ink">¡Lección completada!</h1>
-      <p className="text-lg text-ink-muted">{perfect ? "Sin un solo fallo. ¡Bravissimo!" : "Los fallos también enseñan. ¡Sigue así!"}</p>
+      <h1 className="text-3xl font-extrabold tracking-tight text-ink">{copy.lessonDone}</h1>
+      <p className="text-lg text-ink-muted">{perfect ? copy.perfect : copy.keepGoing}</p>
       <div className="grid w-full grid-cols-3 gap-3">
         <Card tone="lemon" className="flex flex-col items-center gap-1 p-3">
           <span className="text-2xl font-extrabold text-ink">+{result.xp}</span>
@@ -356,19 +361,19 @@ function LessonDone({ result, onContinue, onRepeat }: { result: LessonResult; on
           <span className="text-2xl font-extrabold text-ink">
             {result.firstTryCorrect}/{result.exercises}
           </span>
-          <span className="text-sm font-bold text-ink-muted">a la primera</span>
+          <span className="text-sm font-bold text-ink-muted">{copy.firstTry}</span>
         </Card>
         <Card tone="terracotta" className="flex flex-col items-center gap-1 p-3">
           <span className="text-2xl font-extrabold text-ink">{formatDuration(result.durationMs)}</span>
-          <span className="text-sm font-bold text-ink-muted">tiempo</span>
+          <span className="text-sm font-bold text-ink-muted">{copy.time}</span>
         </Card>
       </div>
       <div className="mt-auto flex w-full flex-col gap-3">
         <Button fullWidth onClick={onContinue}>
-          Continuar
+          {copy.continue}
         </Button>
         <Button fullWidth variant="secondary" onClick={onRepeat}>
-          Repetir lección
+          {copy.repeatLesson}
         </Button>
       </div>
     </div>

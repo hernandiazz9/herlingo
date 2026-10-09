@@ -19,9 +19,8 @@ export interface OrderStep {
 export type StoryStep = Exercise | OrderStep;
 
 export interface StoryGame {
+  /** Title and description: `LearnCopy.storyGames[id]` (`@/lib/i18n/learn-copy`). */
   id: StoryGameId;
-  title: string;
-  description: string;
   steps: StoryStep[];
 }
 
@@ -121,10 +120,10 @@ function orderGame(story: Story, rng: Rng): StoryStep[] {
 export function buildStoryGames(story: Story, seed: string, pack: Pack, gloss: GlossLang): StoryGame[] {
   const rng = createRng(`${story.id}:${seed}`);
   const games: StoryGame[] = [
-    { id: "keywords", title: "Palabras clave", description: "Une las parejas y elige lo que oyes.", steps: keywordGame(story, pack, rng, gloss) },
-    { id: "gaps", title: "Completa los huecos", description: "Elige la palabra que falta en cada frase.", steps: gapGame(story, rng, gloss) },
-    { id: "questions", title: "Comprensión", description: "Escucha las preguntas sobre la historia y responde.", steps: questionGame(story, gloss) },
-    { id: "order", title: "Ordena la historia", description: "Toca las frases en el orden en que pasan.", steps: orderGame(story, rng) },
+    { id: "keywords", steps: keywordGame(story, pack, rng, gloss) },
+    { id: "gaps", steps: gapGame(story, rng, gloss) },
+    { id: "questions", steps: questionGame(story, gloss) },
+    { id: "order", steps: orderGame(story, rng) },
   ];
   return games.filter((g) => g.steps.length > 0);
 }

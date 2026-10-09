@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { LiveTranscript } from "./LiveTranscript";
 import { MicButton } from "./MicButton";
 import type { ListenControls } from "./use-listen";
@@ -24,12 +25,14 @@ export interface SpeakPanelProps {
 export function SpeakPanel({
   listen,
   lang,
-  idleLabel = "Toca y habla",
+  idleLabel: ownIdleLabel,
   showResult,
   errorActions,
   disabled,
   className,
 }: SpeakPanelProps) {
+  const copy = useLearnCopy();
+  const idleLabel = ownIdleLabel ?? copy.tapAndSpeak;
   if (!listen.supported) return null;
   return (
     <div className={cn("flex flex-col items-center gap-3", className)}>

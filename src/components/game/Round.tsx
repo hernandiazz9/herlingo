@@ -4,11 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import { CloseIcon, MiniPlay, PlayControls } from "@/components/exercises/shared";
 import { Button, Card, IconButton, Picture, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { getPack, glossOf, languageName } from "@/lib/content";
+import { getPack, glossOf } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { cn } from "@/lib/cn";
 import type { Rng } from "@/lib/exercises";
 import {
+  MIX,
   POINTS,
   ROUND_MS,
   isPictureQuestion,
@@ -81,6 +83,7 @@ export function Round({
 }) {
   const pack = getPack(lang);
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopy();
   const { topic, aliases } = pool;
   const [g, setG] = useState<RoundState>(initial);
   const [now, setNow] = useState(0);
@@ -180,22 +183,17 @@ export function Round({
         <Card tone="terracotta" className="flex flex-col gap-3">
           <p className="text-sm font-bold uppercase tracking-wide text-terracotta-deep">
             {topic.emoji ? `${topic.emoji} ` : ""}
-            <span lang={gloss.tag}>{glossOf(topic.title, gloss.lang)}</span>
+            {topic.id === MIX ? copy.mix : <span lang={gloss.tag}>{glossOf(topic.title, gloss.lang)}</span>}
           </p>
-          <h2 className="text-2xl font-extrabold text-ink">Ronda rápida: 60 segundos</h2>
+          <h2 className="text-2xl font-extrabold text-ink">{copy.roundTitle}</h2>
           <p className="text-base text-ink">
-            {!topic.phrases.length
-              ? "Escucha la palabra o léela en español y elige su imagen."
-              : topic.words.length
-                ? `Escucha y elige qué significa, lee en español y elige la frase en ${languageName(lang)}, o elige la imagen de cada palabra.`
-                : `Escucha y elige qué significa, o lee en español y elige la frase en ${languageName(lang)}.`}{" "}
-            Encadena aciertos para multiplicar los puntos.
+            {copy.roundHow({ phrases: topic.phrases.length > 0, words: topic.words.length > 0 })}
           </p>
-          <p className="text-sm font-bold text-ink-muted">{record ? `Récord: ${record}` : "Aún sin récord"}</p>
+          <p className="text-sm font-bold text-ink-muted">{record ? copy.record(record) : copy.noRecordYet}</p>
         </Card>
-        <Button onClick={start}>Empezar</Button>
+        <Button onClick={start}>{copy.start}</Button>
         <Button variant="secondary" size="md" onClick={onExit}>
-          Cambiar de tema
+          {copy.changeTopic}
         </Button>
       </div>
     );
@@ -206,26 +204,26 @@ export function Round({
     return (
       <div className="flex flex-col gap-5 pb-6">
         <Card tone={newRecord ? "lemon" : "default"} className="flex flex-col items-center gap-2 text-center">
-          <p className="text-lg font-bold text-ink-muted">¡Tiempo!</p>
+          <p className="text-lg font-bold text-ink-muted">{copy.timeUp}</p>
           <p className="text-5xl font-extrabold tabular-nums text-ink">{g.score}</p>
-          <p className="text-base font-bold text-ink">puntos</p>
+          <p className="text-base font-bold text-ink">{copy.points(g.score)}</p>
           <p className={cn("text-base font-bold", newRecord ? "text-terracotta-deep" : "text-ink-muted")}>
-            {newRecord ? "¡Nuevo récord!" : `Récord: ${g.result.prev}`}
+            {newRecord ? copy.newRecord : copy.record(g.result.prev)}
           </p>
         </Card>
         <dl className="grid grid-cols-3 gap-3 text-center">
-          <Stat label="Aciertos" value={`${g.right}/${g.answered}`} />
-          <Stat label="Mejor racha" value={String(g.bestCombo)} />
+          <Stat label={copy.statRight} value={`${g.right}/${g.answered}`} />
+          <Stat label={copy.statCombo} value={String(g.bestCombo)} />
           <Stat label="XP" value={`+${g.result.xp}`} />
         </dl>
         {g.wrong.length ? (
           <section className="flex flex-col gap-3">
-            <h2 className="text-lg font-extrabold text-ink">Para repasar</h2>
-            <p className="text-sm text-ink-muted">Irán a tu repaso.</p>
+            <h2 className="text-lg font-extrabold text-ink">{copy.toReview}</h2>
+            <p className="text-sm text-ink-muted">{copy.toReviewHint}</p>
             <ul className="flex flex-col gap-2">
               {g.wrong.map((p) => (
                 <li key={p.id} className="flex items-center gap-3 rounded-card border-2 border-line bg-surface p-3">
-                  <MiniPlay audio={p} label={`Escuchar: ${p.text}`} />
+                  <MiniPlay audio={p} label={copy.listenTo(p.text)} />
                   {isWord(p) ? <Picture image={p.image} alt="" size="avatar" /> : null}
                   <span className="flex flex-col">
                     <span lang={lang} className="font-bold text-sea-deep">
@@ -240,9 +238,9 @@ export function Round({
             </ul>
           </section>
         ) : null}
-        <Button onClick={start}>Otra ronda</Button>
+        <Button onClick={start}>{copy.anotherRound}</Button>
         <Button variant="secondary" size="md" onClick={onExit}>
-          Cambiar de tema
+          {copy.changeTopic}
         </Button>
       </div>
     );
@@ -257,7 +255,7 @@ export function Round({
     <div className="flex flex-col gap-5 pb-6">
       <div className="flex items-center gap-3">
         <IconButton
-          label="Salir de la ronda"
+          label={copy.exitRound}
           icon={<CloseIcon />}
           onClick={() => {
             live.current = false;
@@ -266,7 +264,7 @@ export function Round({
             onExit();
           }}
         />
-        <ProgressBar value={left} max={ROUND_MS} label="Tiempo restante" tone={left < 10_000 ? "lemon" : "sea"} className="flex-1" />
+        <ProgressBar value={left} max={ROUND_MS} label={copy.timeLeft} tone={left < 10_000 ? "lemon" : "sea"} className="flex-1" />
         <span className="w-8 text-right text-lg font-extrabold tabular-nums text-ink" aria-hidden="true">
           {Math.ceil(left / 1000)}
         </span>
@@ -274,7 +272,7 @@ export function Round({
 
       <div className="flex items-center justify-between">
         <p className="text-lg font-extrabold tabular-nums text-ink" aria-live="polite">
-          {g.score} <span className="text-sm font-bold text-ink-muted">puntos</span>
+          {g.score} <span className="text-sm font-bold text-ink-muted">{copy.points(g.score)}</span>
         </p>
         <p
           className={cn(
@@ -282,28 +280,28 @@ export function Round({
             mult > 1 ? "bg-terracotta text-on-accent" : "bg-sand text-ink-muted",
           )}
         >
-          x{mult} · racha {g.combo}
+          {copy.streak(mult, g.combo)}
         </p>
       </div>
 
       {q.kind === "listen" || q.kind === "listen-picture" ? (
         <>
           <h2 className="text-2xl font-extrabold tracking-tight text-ink">
-            {q.kind === "listen" ? "Escucha y elige qué significa" : "Escucha y elige la imagen"}
+            {q.kind === "listen" ? copy.listenMeaning : copy.listenPicture}
           </h2>
           <PlayControls audio={q.card} />
         </>
       ) : q.kind === "es-picture" ? (
         <h2 className="text-2xl font-extrabold tracking-tight text-ink">
-          ¿Cuál es{" "}
+          {copy.whichIs[0]}{" "}
           <span lang={gloss.tag} className="text-sea-deep">
             «{glossOf(q.card, gloss.lang)}»
           </span>
-          ?
+          {copy.whichIs[1]}
         </h2>
       ) : (
         <>
-          <h2 className="text-2xl font-extrabold tracking-tight text-ink">¿Cómo se dice en {languageName(lang)}?</h2>
+          <h2 className="text-2xl font-extrabold tracking-tight text-ink">{copy.howDoYouSay}</h2>
           <p lang={gloss.tag} className="text-2xl font-bold text-sea-deep">
             {glossOf(q.card, gloss.lang)}
           </p>
@@ -379,7 +377,7 @@ export function Round({
                 >
                   {q.kind === "reverse" ? <TargetText text={label} lang={lang} /> : label}
                 </button>
-                {q.kind === "reverse" ? <MiniPlay audio={option} label={`Escuchar: ${option.text}`} /> : null}
+                {q.kind === "reverse" ? <MiniPlay audio={option} label={copy.listenTo(option.text)} /> : null}
               </li>
             );
           })}

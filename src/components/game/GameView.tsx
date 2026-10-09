@@ -8,6 +8,8 @@ import { coachAvailable } from "@/lib/coach/available";
 import { getPack, glossOf, type GlossLang } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
 import { useScreenLang } from "@/lib/content/use-active-lang";
+import type { LearnCopy } from "@/lib/i18n/learn-copy";
+import { LearnCopyProvider, useLearnCopyFor } from "@/lib/i18n/use-learn-copy";
 import { cn } from "@/lib/cn";
 import { createRng } from "@/lib/exercises";
 import {
@@ -30,13 +32,8 @@ type Stage = { step: "topics" } | { step: "discover" | "round"; pool: TopicPool;
 const empty = () => "";
 
 /** "12 frases · 4 palabras": phrase and pictured-word counts of a topic (non-zero ones only). */
-function countLabel(topic: Topic): string {
-  const parts: string[] = [];
-  const p = topic.phrases.length;
-  const w = topic.words.length;
-  if (p) parts.push(`${p} ${p === 1 ? "frase" : "frases"}`);
-  if (w) parts.push(`${w} ${w === 1 ? "palabra" : "palabras"}`);
-  return parts.join(" · ");
+function countLabel(topic: Topic, copy: LearnCopy): string {
+  return copy.topicCount(topic.phrases.length, topic.words.length);
 }
 
 /** /jugar: topic grid → discovery cards → 60-second round. */
@@ -48,10 +45,11 @@ export function GameView() {
 function Game({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const topics = useMemo(() => listTopics(pack), [pack]);
+  const copy = useLearnCopyFor(lang);
   const mixDetail = useMemo(() => {
     const mix = getTopicPool(MIX, pack)?.topic;
-    return mix ? countLabel(mix) : "";
-  }, [pack]);
+    return mix ? countLabel(mix, copy) : "";
+  }, [pack, copy]);
   const raw = useSyncExternalStore(subscribeGame, () => readGameRaw(lang), empty);
   const game = useMemo(() => parseGameState(raw), [raw]);
   const [stage, setStage] = useState<Stage>({ step: "topics" });
@@ -76,6 +74,7 @@ function Game({ lang }: { lang: string }) {
 
   return (
     <LessonLangContext.Provider value={lang}>
+    <LearnCopyProvider lang={lang}>
       {stage.step === "discover" ? (
         <Discover
           key={stage.pool.topic.id}
@@ -96,8 +95,10 @@ function Game({ lang }: { lang: string }) {
           gloss={gloss.lang}
           glossTag={gloss.tag}
           coach={coachAvailable(lang)}
+          copy={copy}
         />
       )}
+    </LearnCopyProvider>
     </LessonLangContext.Provider>
   );
 }
@@ -110,6 +111,7 @@ function TopicGrid({
   gloss,
   glossTag,
   coach,
+  copy,
 }: {
   topics: Topic[];
   mixDetail: string;
@@ -120,19 +122,21 @@ function TopicGrid({
   glossTag: string | undefined;
   /** Prepárate is offered for this pack (`coachAvailable`). */
   coach: boolean;
+  copy: LearnCopy;
 }) {
   return (
     <div className="flex flex-col gap-4 pb-6">
       {coach ? <EntryCard /> : null}
       <p className="text-base text-ink-muted">
-        Elige un tema: descubre sus palabras y frases con audio y luego juega una ronda de 60 segundos.
+        {copy.pickTopic}
       </p>
       <TopicButton
         tone="terracotta"
         emoji="🎲"
-        title="Mezcla"
-        detail={`Todos los temas · ${mixDetail}`}
+        title={copy.mix}
+        detail={copy.allTopics(mixDetail)}
         record={records[MIX]}
+        copy={copy}
         onClick={() => onOpen(MIX)}
         wide
       />
@@ -143,8 +147,9 @@ function TopicGrid({
               emoji={t.emoji}
               title={glossOf(t.title, gloss)}
               titleLang={glossTag}
-              detail={countLabel(t)}
+              detail={countLabel(t, copy)}
               record={records[t.id]}
+              copy={copy}
               onClick={() => onOpen(t.id)}
             />
           </li>
@@ -163,6 +168,7 @@ function TopicButton({
   onClick,
   tone = "default",
   wide = false,
+  copy,
 }: {
   emoji?: string;
   title: string;
@@ -173,6 +179,7 @@ function TopicButton({
   onClick: () => void;
   tone?: "default" | "terracotta";
   wide?: boolean;
+  copy: LearnCopy;
 }) {
   return (
     <button
@@ -198,7 +205,7 @@ function TopicButton({
         </span>
         <span className="text-sm text-ink-muted">{detail}</span>
         <span className={cn("text-sm font-bold", record ? "text-terracotta-deep" : "text-ink-muted")}>
-          {record ? `Récord: ${record}` : "Sin récord"}
+          {record ? copy.record(record) : copy.noRecord}
         </span>
       </span>
     </button>

@@ -2,6 +2,7 @@
 
 import { MicIcon, MicStopIcon } from "@/components/icons";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { useListenRemaining, type ListenControls } from "./use-listen";
 
 export type MicButtonSize = "lg" | "sm";
@@ -27,18 +28,19 @@ const RING_C = 2 * Math.PI * RING_R;
  */
 export function MicButton({ listen, size = "lg", idleLabel, disabled, className }: MicButtonProps) {
   const remaining = useListenRemaining(listen);
+  const copy = useLearnCopy();
   if (!listen.supported) return null;
 
   const { status } = listen;
   const open = status === "listening" || status === "hearing";
   const label =
     status === "starting"
-      ? "Abriendo el micrófono…"
+      ? copy.micStarting
       : open
-        ? "Terminar y usar lo que he dicho"
+        ? copy.micFinish
         : status === "processing"
-          ? "Un momento…"
-          : (idleLabel ?? (size === "lg" ? "Toca y habla" : "Dictar"));
+          ? copy.micWait
+          : (idleLabel ?? (size === "lg" ? copy.tapAndSpeak : copy.dictate));
   const tone = open
     ? "bg-terracotta text-on-accent [--ledge:var(--terracotta-ledge)]"
     : "bg-sea text-on-accent [--ledge:var(--sea-ledge)]";
@@ -64,7 +66,7 @@ export function MicButton({ listen, size = "lg", idleLabel, disabled, className 
         )}
       >
         <Icon width={18} height={18} className={cn(status === "starting" && "animate-pulse motion-reduce:animate-none")} />
-        {open ? "Terminar" : label}
+        {open ? copy.micStop : label}
         {seconds !== null ? <span className="tabular-nums font-normal">· {seconds} s</span> : null}
       </button>
     );

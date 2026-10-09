@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { getPack, getStory } from "@/lib/content";
+import { LearnCopyProvider } from "@/lib/i18n/use-learn-copy";
 import { StoryGames } from "./StoryGames";
 import { StoryReader } from "./StoryReader";
 
@@ -13,7 +14,7 @@ export function StoryView({ id, lang }: { id: string; lang: string }) {
   const [round, setRound] = useState(0);
   if (!story) return null;
   return (
-    <>
+    <LearnCopyProvider lang={lang}>
       <StoryReader
         story={story}
         lang={lang}
@@ -23,6 +24,6 @@ export function StoryView({ id, lang }: { id: string; lang: string }) {
         }}
       />
       {playing ? <StoryGames key={round} story={story} lang={lang} onExit={() => setPlaying(false)} /> : null}
-    </>
+    </LearnCopyProvider>
   );
 }

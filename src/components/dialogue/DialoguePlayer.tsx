@@ -18,14 +18,15 @@ import {
   type Playable,
 } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { bestOption, type SpeechScore } from "@/lib/speech";
 
 type Verdict = LearnerOption["verdict"];
 
-const VERDICT: Record<Verdict, { title: string; box: string; titleClass: string }> = {
-  correct: { title: "¡Genial!", box: "border-success bg-success-soft", titleClass: "text-success-deep" },
-  acceptable: { title: "Se entiende", box: "border-lemon bg-lemon-soft", titleClass: "text-ink" },
-  wrong: { title: "Mejor no", box: "border-error bg-error-soft", titleClass: "text-error-deep" },
+const VERDICT: Record<Verdict, { box: string; titleClass: string }> = {
+  correct: { box: "border-success bg-success-soft", titleClass: "text-success-deep" },
+  acceptable: { box: "border-lemon bg-lemon-soft", titleClass: "text-ink" },
+  wrong: { box: "border-error bg-error-soft", titleClass: "text-error-deep" },
 };
 
 function shuffled(n: number): number[] {
@@ -78,9 +79,9 @@ export interface DialoguePlayerProps {
 export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary }: DialoguePlayerProps) {
   const { meta } = getPack(lang);
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopy();
   const turns = dialogue.turns;
   const locale = meta.speechLocale;
-  const native = meta.name;
 
   const [phase, setPhase] = useState<"intro" | "running" | "done">("intro");
   const [pos, setPos] = useState(0);
@@ -181,11 +182,10 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
       <div className="flex flex-col gap-5">
         <div className="flex flex-col gap-2 rounded-card border-2 border-sea/30 bg-sea-soft p-5">{intro}</div>
         <p className="text-base text-ink-muted">
-          Sube el volumen. Escucharás a un {native.toLowerCase()} y tendrás que elegir{micAvailable ? " o decir" : ""} tu
-          respuesta. El texto está oculto: toca «Ver texto» si lo necesitas.
+          {copy.dialogueIntro(micAvailable)}
         </p>
         <Button onClick={start} fullWidth>
-          Empezar
+          {copy.start}
         </Button>
       </div>
     );
@@ -196,19 +196,19 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
     return (
       <div className="flex flex-col gap-5">
         <div className="rounded-card border-2 border-success bg-success-soft p-5 text-center">
-          <p className="text-2xl font-extrabold text-success-deep">¡Diálogo completado!</p>
+          <p className="text-2xl font-extrabold text-success-deep">{copy.dialogueDone}</p>
           <p className="text-ink">
-            Has acertado {firstTry} de {learnerTurns.length} a la primera.
+            {copy.dialogueScore(firstTry, learnerTurns.length)}
           </p>
           {summary}
         </div>
-        <h2 className="text-lg font-extrabold text-ink">Transcripción</h2>
+        <h2 className="text-lg font-extrabold text-ink">{copy.transcript}</h2>
         <ol className="flex flex-col gap-3">
           {turns.map((turn) =>
             turn.speaker === "native" ? (
               <li key={turn.id}>
                 <WithAvatar avatar={turn.avatar} compact>
-                  <TranscriptLine who={turn.name ?? native} item={turn} side="left" lang={meta.lang} />
+                  <TranscriptLine who={turn.name ?? meta.name} item={turn} side="left" lang={meta.lang} />
                 </WithAvatar>
               </li>
             ) : (
@@ -223,7 +223,7 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
         </ol>
         <div className="grid grid-cols-2 gap-3">
           <Button variant="secondary" onClick={start}>
-            Repetir
+            {copy.repeat}
           </Button>
           {exit}
         </div>
@@ -243,7 +243,7 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
                 <WithAvatar avatar={turn.avatar}>
                   <NativeBubble
                     turn={turn}
-                    name={turn.name ?? native}
+                    name={turn.name ?? meta.name}
                     lang={meta.lang}
                     shown={revealed.has(turn.id)}
                     onToggle={() => toggleReveal(turn.id)}
@@ -270,7 +270,7 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
               ))}
               {isCurrent && last && last.option >= 0 && turn.options[last.option].verdict === "wrong" ? (
                 <button type="button" onClick={() => retry(turn)} className="self-start font-bold text-sea underline">
-                  Intentarlo otra vez
+                  {copy.tryAgain}
                 </button>
               ) : null}
             </li>
@@ -280,7 +280,7 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
 
       {choosing && current?.speaker === "learner" ? (
         <div className="flex flex-col gap-3 rounded-card border-2 border-line bg-surface p-4">
-          <p className="text-sm font-bold tracking-wide text-ink-muted uppercase">Tu turno</p>
+          <p className="text-sm font-bold tracking-wide text-ink-muted uppercase">{copy.yourTurn}</p>
           <p lang={gloss.tag} className="text-lg font-bold text-ink">
             {glossOf(current.prompt, gloss.lang)}
           </p>
@@ -300,17 +300,16 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
           {miss && !listen.active ? (
             <div className="flex flex-col gap-2 rounded-card border-2 border-line bg-sand p-3" role="status">
               <p className="text-base text-ink">
-                He oído «<span lang={meta.lang}>{miss.heard}</span>», que no se parece bastante a ninguna
-                respuesta. La más cercana:
+                {copy.missHeard[0]}<span lang={meta.lang}>{miss.heard}</span>{copy.missHeard[1]}
               </p>
               <WordFeedback words={miss.words} lang={meta.lang} />
-              <p className="text-sm text-ink-muted">Prueba otra vez o toca una respuesta.</p>
+              <p className="text-sm text-ink-muted">{copy.missHint}</p>
             </div>
           ) : null}
           <SpeakPanel
             listen={listen}
             lang={meta.lang}
-            idleLabel={miss ? "Toca y dilo otra vez" : "O dilo en voz alta"}
+            idleLabel={miss ? copy.sayAgain : copy.orSayIt}
             className="pt-1"
           />
         </div>
@@ -318,7 +317,7 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
 
       {!choosing ? (
         <Button onClick={() => advanceFrom(pos)} fullWidth>
-          {pos >= turns.length - 1 ? "Ver resumen" : "Continuar"}
+          {pos >= turns.length - 1 ? copy.seeSummary : copy.continue}
         </Button>
       ) : null}
       <div ref={bottom} />
@@ -327,12 +326,13 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
 }
 
 function PlayButtons({ item, lang }: { item: Playable; lang: string }) {
+  const copy = useLearnCopy();
   return (
     <span className="flex shrink-0 gap-1">
       <button
         type="button"
         onClick={() => speak(item, { lang })}
-        aria-label="Escuchar otra vez"
+        aria-label={copy.listenAgain}
         className="inline-flex size-11 items-center justify-center rounded-full bg-sea text-on-accent"
       >
         <SpeakerIcon width={22} height={22} />
@@ -340,7 +340,7 @@ function PlayButtons({ item, lang }: { item: Playable; lang: string }) {
       <button
         type="button"
         onClick={() => speak(item, { lang, slow: true })}
-        aria-label="Escuchar despacio"
+        aria-label={copy.listenSlowly}
         className="inline-flex size-11 items-center justify-center rounded-full border-2 border-line bg-surface text-sea"
       >
         <SlowIcon width={22} height={22} />
@@ -377,6 +377,7 @@ function NativeBubble({
   onToggle: () => void;
 }) {
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopy();
   return (
     <div className="mr-8 flex flex-col gap-2 rounded-card rounded-tl-md border-2 border-line bg-surface p-4">
       <div className="flex items-center justify-between gap-2">
@@ -403,7 +404,7 @@ function NativeBubble({
         aria-pressed={shown}
         className="inline-flex items-center gap-1.5 self-start text-sm font-bold text-sea"
       >
-        <EyeIcon off={shown} width={18} height={18} /> {shown ? "Ocultar texto" : "Ver texto"}
+        <EyeIcon off={shown} width={18} height={18} /> {shown ? copy.hideText : copy.showText}
       </button>
     </div>
   );
@@ -423,12 +424,13 @@ function AnswerFeedback({
   const option = turn.options[attempt.option];
   const v = VERDICT[option.verdict];
   const ideal = correctOption(turn);
+  const copy = useLearnCopy();
   const gloss = useGlossLang(lang);
   return (
     <div className="flex flex-col gap-2">
       <div className="ml-8 flex items-start gap-2 rounded-card rounded-tr-md border-2 border-sea/30 bg-sea-soft p-4">
         <div className="flex-1">
-          {attempt.heard ? <p className="text-xs text-ink-muted">Has dicho: «{attempt.heard}»</p> : null}
+          {attempt.heard ? <p className="text-xs text-ink-muted">{copy.youSaid(attempt.heard)}</p> : null}
           <p lang={lang} className="text-lg font-bold text-ink">
             <TargetText text={option.text} lang={lang} />
           </p>
@@ -440,13 +442,13 @@ function AnswerFeedback({
       </div>
       {compact ? null : (
         <div className={cn("flex flex-col gap-1 rounded-card border-2 p-4", v.box)} role="status">
-          <p className={cn("text-lg font-extrabold", v.titleClass)}>{v.title}</p>
+          <p className={cn("text-lg font-extrabold", v.titleClass)}>{copy.verdicts[option.verdict]}</p>
           <p lang={gloss.tag} className="text-ink">
             {glossOf(option.feedback, gloss.lang)}
           </p>
           {option.verdict !== "correct" ? (
             <p className="text-ink">
-              Lo ideal:{" "}
+              {copy.ideal}:{" "}
               <button type="button" lang={lang} onClick={() => speak(ideal, { lang })} className="text-left align-top font-bold underline">
                 <TargetText text={ideal.text} lang={lang} />
               </button>
@@ -463,13 +465,14 @@ function FinalAnswer({ turn, attempts, lang }: { turn: LearnerTurn; attempts: At
   const last = done.at(-1);
   const option = last ? turn.options[last.option] : undefined;
   const ideal = correctOption(turn);
+  const copy = useLearnCopy();
   return (
     <>
       {option ? (
-        <TranscriptLine who="Tú" item={option} side="right" verdict={option.verdict} lang={lang} />
+        <TranscriptLine who={copy.you} item={option} side="right" verdict={option.verdict} lang={lang} />
       ) : null}
       {option?.verdict !== "correct" ? (
-        <TranscriptLine who="Lo ideal" item={ideal} side="right" verdict="correct" lang={lang} />
+        <TranscriptLine who={copy.ideal} item={ideal} side="right" verdict="correct" lang={lang} />
       ) : null}
     </>
   );

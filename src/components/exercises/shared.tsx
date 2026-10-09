@@ -7,6 +7,7 @@ import { getPack, type Playable } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useGlossLang, type GlossChoice } from "@/lib/content/use-gloss";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { Exercise, ExerciseOutcome } from "@/lib/exercises";
 
 /** Language pack of the running session (for audio, speech recognition and `lang` attributes). */
@@ -45,12 +46,13 @@ export function Prompt({ children }: { children: ReactNode }) {
 /** Big round play button plus a smaller "Lento" (slow) button. */
 export function PlayControls({ audio, size = "lg" }: { audio: Playable; size?: "lg" | "md" }) {
   const play = usePlay();
+  const copy = useLearnCopy();
   return (
     <div className="flex items-center gap-3">
       <button
         type="button"
-        aria-label="Escuchar"
-        title="Escuchar"
+        aria-label={copy.listen}
+        title={copy.listen}
         onClick={() => play(audio)}
         className={cn(
           "pressable inline-flex shrink-0 items-center justify-center rounded-full bg-sea text-on-accent [--ledge:var(--sea-ledge)]",
@@ -69,15 +71,17 @@ export function PlayControls({ audio, size = "lg" }: { audio: Playable; size?: "
         )}
       >
         <SlowIcon className="size-5" />
-        Lento
+        {copy.slow}
       </button>
     </div>
   );
 }
 
 /** Small inline play button (for a text line). */
-export function MiniPlay({ audio, label = "Escuchar" }: { audio: Playable; label?: string }) {
+export function MiniPlay({ audio, label: own }: { audio: Playable; label?: string }) {
   const play = usePlay();
+  const copy = useLearnCopy();
+  const label = own ?? copy.listen;
   return (
     <button
       type="button"

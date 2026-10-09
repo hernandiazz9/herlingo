@@ -7,6 +7,8 @@ import { Button, Card, TargetText } from "@/components/ui";
 import { getItem, getPack, glossOf, type Lesson } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
 import { useScreenLang } from "@/lib/content/use-active-lang";
+import type { LearnCopy } from "@/lib/i18n/learn-copy";
+import { useLearnCopyFor } from "@/lib/i18n/use-learn-copy";
 import { defaultSessionSize, type LessonResult } from "@/lib/exercises";
 import { dueItemIds, recordReviewResult } from "@/lib/progress";
 import { startOfDay } from "@/lib/progress/dates";
@@ -22,6 +24,7 @@ export function ReviewView() {
 function Review({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopyFor(lang);
   const progress = useProgress(lang);
   const now = useNow();
   const hydrated = useHydrated();
@@ -45,7 +48,7 @@ function Review({ lang }: { lang: string }) {
 
   const start = () => {
     const items = due.slice(0, REVIEW_SIZE);
-    setSession({ id: "review", title: `Repaso: ${items.length} ${items.length === 1 ? "cosa" : "cosas"}`, items, unitId: "", index: 0 });
+    setSession({ id: "review", title: copy.reviewTitle(items.length), items, unitId: "", index: 0 });
   };
 
   if (session) {
@@ -56,7 +59,7 @@ function Review({ lang }: { lang: string }) {
         lang={lang}
         lesson={session}
         sessionSize={size}
-        intro="Lo que fallaste y lo que toca recordar hoy: escucha, responde y dilo en voz alta. Los fallos vuelven al final."
+        intro={copy.reviewIntro}
         onComplete={complete}
         onExit={() => setSession(null)}
       />
@@ -70,17 +73,17 @@ function Review({ lang }: { lang: string }) {
         <p aria-hidden="true" className="text-5xl">
           {tracked ? "✅" : "🌱"}
         </p>
-        <p className="text-xl font-extrabold text-ink">{tracked ? "¡Todo al día!" : "Todavía no hay nada que repasar"}</p>
+        <p className="text-xl font-extrabold text-ink">{tracked ? copy.allDone : copy.nothingYet}</p>
         <p className="text-base text-ink">
           {tracked
-            ? `Lo siguiente vuelve ${whenLabel(next, now)}. Mientras, sigue con tu ruta.`
-            : "Cuando hagas lecciones, aquí volverá lo que falles y lo que te quede por practicar."}
+            ? copy.nextComes(whenLabel(next, now, copy))
+            : copy.reviewEmptyHint}
         </p>
         <Link
           href="/"
           className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
         >
-          Ir a la ruta
+          {copy.goToPath}
         </Link>
       </Card>
     );
@@ -92,24 +95,24 @@ function Review({ lang }: { lang: string }) {
     <>
       <Card tone="lemon" className="flex flex-col gap-4">
         <div className="flex flex-col gap-1">
-          <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">Para repasar hoy</p>
+          <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">{copy.dueToday}</p>
           <p className="text-3xl font-extrabold text-ink">{due.length}</p>
           <p className="text-base text-ink">
-            {[wrong ? `${wrong} que fallaste` : "", fresh ? `${fresh} sin practicar aún` : "", due.length - wrong - fresh > 0 ? `${due.length - wrong - fresh} a punto de olvidar` : ""]
+            {[wrong ? copy.dueWrong(wrong) : "", fresh ? copy.dueFresh(fresh) : "", due.length - wrong - fresh > 0 ? copy.dueFading(due.length - wrong - fresh) : ""]
               .filter(Boolean)
               .join(" · ")}
           </p>
         </div>
         <Button fullWidth onClick={start}>
-          Empezar repaso
+          {copy.startReview}
         </Button>
         {due.length > REVIEW_SIZE ? (
-          <p className="text-sm text-ink-muted">Cada repaso toma {REVIEW_SIZE}; puedes encadenar varios.</p>
+          <p className="text-sm text-ink-muted">{copy.reviewChunks(REVIEW_SIZE)}</p>
         ) : null}
       </Card>
       <section aria-labelledby="review-next" className="flex flex-col gap-2">
         <h2 id="review-next" className="text-lg font-bold text-ink">
-          En este repaso
+          {copy.inThisReview}
         </h2>
         <ul className="flex flex-col gap-2">
           {preview.map((item) => (
@@ -137,10 +140,10 @@ function Review({ lang }: { lang: string }) {
   );
 }
 
-function whenLabel(due: number | undefined, now: number): string {
-  if (!due) return "más adelante";
+function whenLabel(due: number | undefined, now: number, copy: LearnCopy): string {
+  if (!due) return copy.whenLater;
   const days = Math.round((startOfDay(due) - startOfDay(now)) / 86_400_000);
-  if (days <= 0) return "hoy mismo";
-  if (days === 1) return "mañana";
-  return `dentro de ${days} días`;
+  if (days <= 0) return copy.whenToday;
+  if (days === 1) return copy.whenTomorrow;
+  return copy.whenInDays(days);
 }

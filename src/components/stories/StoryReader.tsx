@@ -7,6 +7,7 @@ import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import { getPack, getStoryKeywords, glossOf, hasImage, type Story, type StoryKeyword } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { recordListen } from "@/lib/progress/activity";
 import { segmentStory } from "@/lib/stories";
 
@@ -25,6 +26,7 @@ interface Open {
 export function StoryReader({ story, lang, onPlay }: { story: Story; lang: string; onPlay: () => void }) {
   const pack = getPack(lang);
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopy();
   const keywords = useMemo(() => getStoryKeywords(story, pack), [story, pack]);
   const byId = useMemo(() => new Map<string, StoryKeyword>(keywords.map((k) => [k.id, k])), [keywords]);
   const segments = useMemo(() => segmentStory(story, keywords), [story, keywords]);
@@ -109,13 +111,13 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
       <div className="flex flex-wrap gap-2">
         <Button size="md" onClick={playAll} aria-pressed={playingAll}>
           <SpeakerIcon className="size-5" />
-          {playingAll ? "Parar" : "Escuchar todo"}
+          {playingAll ? copy.stop : copy.listenAll}
         </Button>
         <Button size="md" variant="secondary" onClick={toggleAll} aria-pressed={showAll}>
-          {showAll ? "Ocultar traducción" : "Ver traducción"}
+          {showAll ? copy.hideTranslation : copy.showTranslation}
         </Button>
       </div>
-      <p className="text-sm text-ink-muted">Toca una frase para escucharla y una palabra resaltada para ver qué significa.</p>
+      <p className="text-sm text-ink-muted">{copy.readerHint}</p>
 
       <ol className="flex flex-col gap-2">
         {story.sentences.map((s, i) => {
@@ -155,11 +157,11 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
                     )}
                   </TargetText>
                 </p>
-                <PlayButton label={`Escuchar la frase ${i + 1}`} onClick={() => playSentence(i)} />
+                <PlayButton label={copy.listenSentence(i + 1)} onClick={() => playSentence(i)} />
               </div>
               {kw ? (
                 <Card tone="terracotta" className="flex items-start gap-3 p-3">
-                  <PlayButton label={`Escuchar: ${kw.text}`} onClick={() => tapKeyword(s.id, kw.id, true)} />
+                  <PlayButton label={copy.listenTo(kw.text)} onClick={() => tapKeyword(s.id, kw.id, true)} />
                   <div className="flex min-w-0 flex-col">
                     <span lang={lang} className="text-lg font-bold text-ink">
                       <TargetText text={kw.text} lang={lang} />
@@ -192,7 +194,7 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
                   aria-expanded={es}
                   className="self-start text-sm font-bold text-sea underline underline-offset-4"
                 >
-                  {es ? "Ocultar traducción" : "Ver traducción"}
+                  {es ? copy.hideTranslation : copy.showTranslation}
                 </button>
               ) : null}
             </li>
@@ -201,8 +203,8 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
       </ol>
 
       <Card tone="sea" className="flex flex-col gap-3">
-        <p className="text-lg font-bold text-ink">¿Has terminado de leer?</p>
-        <p className="text-base text-ink-muted">Juega con las palabras y expresiones de la historia. Puedes saltar cualquier juego.</p>
+        <p className="text-lg font-bold text-ink">{copy.doneReading}</p>
+        <p className="text-base text-ink-muted">{copy.doneReadingHint}</p>
         <Button
           fullWidth
           onClick={() => {
@@ -212,7 +214,7 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
             onPlay();
           }}
         >
-          Jugar con la historia
+          {copy.playStory}
         </Button>
       </Card>
     </div>

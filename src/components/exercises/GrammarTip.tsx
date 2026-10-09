@@ -2,19 +2,21 @@
 
 import { Button, Card, TargetText } from "@/components/ui";
 import { glossOf, type GlossText, type GrammarCard } from "@/lib/content";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { MiniPlay, useLessonGloss, useLessonLang } from "./shared";
 
 /** Ungraded grammar card shown inside a lesson. */
 export function GrammarTip({ card, onContinue }: { card: GrammarCard; onContinue: () => void }) {
   const lang = useLessonLang();
   const gloss = useLessonGloss();
+  const copy = useLearnCopy();
   const g = (v: GlossText) => glossOf(v, gloss.lang);
   /** A map cell is a gloss; a plain one is shown as written. */
   const cellLang = (c: unknown) => (typeof c === "string" ? undefined : gloss.tag);
   const [header, ...rows] = card.table ?? [];
   return (
     <div className="flex flex-1 flex-col gap-5">
-      <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">Un apunte</p>
+      <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">{copy.grammarKicker}</p>
       <h2 lang={gloss.tag} className="text-2xl font-extrabold tracking-tight text-ink">
         {g(card.title)}
       </h2>
@@ -75,7 +77,7 @@ export function GrammarTip({ card, onContinue }: { card: GrammarCard; onContinue
       ) : null}
       <div className="mt-auto pt-2">
         <Button fullWidth onClick={onContinue}>
-          Entendido
+          {copy.gotIt}
         </Button>
       </div>
     </div>

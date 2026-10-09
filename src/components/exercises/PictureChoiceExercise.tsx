@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button, Picture, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { PictureChoiceExercise as PictureChoice, PictureOption } from "@/lib/exercises";
 import { PlayControls, Prompt, useLessonGloss, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
@@ -15,6 +16,7 @@ import { PlayControls, Prompt, useLessonGloss, useLessonLang, usePlay, type Exer
 export function PictureChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<PictureChoice>) {
   const lang = useLessonLang();
   const gloss = useLessonGloss();
+  const copy = useLearnCopy();
   const [picked, setPicked] = useState<string | null>(null);
   const play = usePlay();
   const listen = exercise.type === "picture-listen";
@@ -35,16 +37,16 @@ export function PictureChoiceExercise({ exercise, answered, onAnswer }: Exercise
     <div className="flex flex-col gap-6">
       {listen ? (
         <>
-          <Prompt>Escucha y elige la imagen</Prompt>
+          <Prompt>{copy.listenPicture}</Prompt>
           <PlayControls audio={exercise.audio} />
         </>
       ) : (
         <Prompt>
-          ¿Cuál es{" "}
+          {copy.whichIs[0]}{" "}
           <span lang={gloss.tag} className="text-sea-deep">
             «{exercise.gloss}»
           </span>
-          ?
+          {copy.whichIs[1]}
         </Prompt>
       )}
 
@@ -91,7 +93,7 @@ export function PictureChoiceExercise({ exercise, answered, onAnswer }: Exercise
 
       {!answered ? (
         <Button fullWidth disabled={!picked} onClick={check}>
-          Comprobar
+          {copy.check}
         </Button>
       ) : null}
     </div>

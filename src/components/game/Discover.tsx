@@ -6,7 +6,8 @@ import { Button, Card, IconButton, Picture, ProgressBar, TargetText } from "@/co
 import { speak, stop } from "@/lib/audio";
 import { glossOf } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
-import { explain, isWord, markKnown, type GameCard, type Topic } from "@/lib/game";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
+import { MIX, explain, isWord, markKnown, type GameCard, type Topic } from "@/lib/game";
 import { recordActivity } from "@/lib/progress/activity";
 
 /** XP for each card marked "La sé" for the first time. */
@@ -34,6 +35,7 @@ export function Discover({
   const [queue, setQueue] = useState(deck);
   const [known, setKnown] = useState(0);
   const gloss = useGlossLang(lang);
+  const copy = useLearnCopy();
   const card = queue[0];
 
   useEffect(() => () => stop(), []);
@@ -61,15 +63,15 @@ export function Discover({
   return (
     <div className="flex flex-col gap-5 pb-6">
       <div className="flex items-center gap-3">
-        <IconButton label="Salir al menú de temas" icon={<CloseIcon />} onClick={onExit} />
-        <ProgressBar value={known} max={deck.length} label="Tarjetas descubiertas" className="flex-1" />
+        <IconButton label={copy.exitToTopics} icon={<CloseIcon />} onClick={onExit} />
+        <ProgressBar value={known} max={deck.length} label={copy.cardsDiscovered} className="flex-1" />
         <span className="text-sm font-bold text-ink-muted tabular-nums">
           {known}/{deck.length}
         </span>
       </div>
 
       <p className="text-sm font-bold uppercase tracking-wide text-terracotta-deep">
-        {topic.emoji ? `${topic.emoji} ` : ""}Descubre · <span lang={gloss.tag}>{glossOf(topic.title, gloss.lang)}</span>
+        {topic.emoji ? `${topic.emoji} ` : ""}{copy.discover} · {topic.id === MIX ? copy.mix : <span lang={gloss.tag}>{glossOf(topic.title, gloss.lang)}</span>}
       </p>
 
       <Card className="flex flex-col gap-4">
@@ -83,7 +85,7 @@ export function Discover({
         </p>
         {!isWord(card) && card.literal ? (
           <p className="text-sm text-ink-muted">
-            Literal: «<span lang={gloss.tag}>{glossOf(card.literal, gloss.lang)}</span>»
+            {copy.literal}: «<span lang={gloss.tag}>{glossOf(card.literal, gloss.lang)}</span>»
           </p>
         ) : null}
         {explanation ? (
@@ -95,9 +97,9 @@ export function Discover({
 
       <div className="grid grid-cols-2 gap-3">
         <Button variant="secondary" onClick={again}>
-          Otra vez
+          {copy.showAgain}
         </Button>
-        <Button onClick={knowIt}>La sé</Button>
+        <Button onClick={knowIt}>{copy.knowIt}</Button>
       </div>
 
       <Button
@@ -108,7 +110,7 @@ export function Discover({
           onDone();
         }}
       >
-        Ir a la ronda rápida
+        {copy.toRound}
       </Button>
     </div>
   );

@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { Button, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { getPack, languageName } from "@/lib/content";
+import { getPack } from "@/lib/content";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { checkAnswer, scriptRules, type TilesExercise as Tiles } from "@/lib/exercises";
 import { Prompt, useLessonGloss, useLessonLang, type ExerciseProps } from "./shared";
 
@@ -15,6 +16,7 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
   const lang = useLessonLang();
   const gloss = useLessonGloss();
   const { meta } = getPack(lang);
+  const copy = useLearnCopy();
   // Indexes into exercise.tiles, in the order chosen.
   const [chosen, setChosen] = useState<number[]>([]);
 
@@ -28,14 +30,14 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
 
   return (
     <div className="flex flex-1 flex-col gap-6">
-      <Prompt>Tradúcelo al {languageName(lang)}</Prompt>
+      <Prompt>{copy.translateInto}</Prompt>
       <p lang={gloss.tag} className="text-xl font-bold text-ink">
         {exercise.gloss}
       </p>
 
       <div
         lang={lang}
-        aria-label="Tu respuesta"
+        aria-label={copy.yourAnswer}
         className="flex min-h-28 flex-wrap content-start gap-2 border-b-2 border-line pb-3"
       >
         {chosen.map((i) => (
@@ -65,7 +67,7 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
 
       <div className="mt-auto">
         <Button fullWidth onClick={check} disabled={answered || chosen.length === 0}>
-          Comprobar
+          {copy.check}
         </Button>
       </div>
     </div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { AnswerExercise, ChoiceOption, ListenMeaningExercise, ReadMeaningExercise } from "@/lib/exercises";
 import { MiniPlay, PlayControls, Prompt, useLessonGloss, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
@@ -15,6 +16,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
   const [picked, setPicked] = useState<string | null>(null);
   const [showQuestion, setShowQuestion] = useState(false);
   const play = usePlay();
+  const copy = useLearnCopy();
 
   const choose = (option: ChoiceOption) => {
     if (answered || picked) return;
@@ -27,13 +29,13 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
     <div className="flex flex-col gap-6">
       {exercise.type === "listen-meaning" && (
         <>
-          <Prompt>Escucha y elige qué significa</Prompt>
+          <Prompt>{copy.listenMeaning}</Prompt>
           <PlayControls audio={exercise.audio} />
         </>
       )}
       {exercise.type === "read-meaning" && (
         <>
-          <Prompt>¿Qué significa?</Prompt>
+          <Prompt>{copy.readMeaning}</Prompt>
           <div className="flex items-center gap-3">
             <MiniPlay audio={exercise.audio} />
             <p lang={lang} className="text-2xl font-bold text-sea-deep">
@@ -44,7 +46,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
       )}
       {exercise.type === "answer" && (
         <>
-          <Prompt>Te preguntan… ¿qué respondes?</Prompt>
+          <Prompt>{copy.answerPrompt}</Prompt>
           <PlayControls audio={exercise.question} />
           {showQuestion || answered ? (
             <p lang={lang} className="text-xl font-bold text-sea-deep">
@@ -58,7 +60,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
               onClick={() => setShowQuestion(true)}
               className="self-start text-base font-bold text-sea underline underline-offset-4"
             >
-              Ver la pregunta
+              {copy.showQuestion}
             </button>
           )}
         </>
@@ -88,7 +90,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
               >
                 {exercise.type === "answer" ? <TargetText text={option.label} lang={lang} /> : option.label}
               </button>
-              {exercise.type === "answer" && option.audio ? <MiniPlay audio={option.audio} label={`Escuchar: ${option.label}`} /> : null}
+              {exercise.type === "answer" && option.audio ? <MiniPlay audio={option.audio} label={copy.listenTo(option.label)} /> : null}
             </li>
           );
         })}

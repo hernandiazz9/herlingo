@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { MiniPlay, Prompt, useLessonLang, usePlay } from "@/components/exercises";
 import { Button, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { OrderStep } from "@/lib/stories";
 
 const FLASH_MS = 600;
@@ -16,6 +17,7 @@ export function OrderExercise({ step, onDone }: { step: OrderStep; onDone: (mist
   const button = useRef<HTMLButtonElement>(null);
   const play = usePlay();
   const lang = useLessonLang();
+  const copy = useLearnCopy();
   const byId = new Map(step.sentences.map((s) => [s.id, s]));
   const finished = placed.length === step.sentences.length;
 
@@ -38,8 +40,8 @@ export function OrderExercise({ step, onDone }: { step: OrderStep; onDone: (mist
 
   return (
     <div className="flex flex-col gap-6">
-      <Prompt>Ordena la historia</Prompt>
-      <p className="text-base text-ink-muted">Toca las frases en el orden en que pasan.</p>
+      <Prompt>{copy.orderPrompt}</Prompt>
+      <p className="text-base text-ink-muted">{copy.orderHint}</p>
 
       {placed.length ? (
         <ol className="flex flex-col gap-2">
@@ -53,7 +55,7 @@ export function OrderExercise({ step, onDone }: { step: OrderStep; onDone: (mist
                 <span lang={lang} className="flex-1 text-base font-bold text-success-deep">
                   <TargetText text={s.text} lang={lang} />
                 </span>
-                {finished ? <MiniPlay audio={s} label={`Escuchar la frase ${i + 1}`} /> : null}
+                {finished ? <MiniPlay audio={s} label={copy.listenSentence(i + 1)} /> : null}
               </li>
             );
           })}
@@ -85,14 +87,14 @@ export function OrderExercise({ step, onDone }: { step: OrderStep; onDone: (mist
         </ul>
       ) : (
         <div role="status" className="flex flex-col gap-3">
-          <p className="text-2xl font-extrabold text-success-deep">{mistakes === 0 ? "¡Perfecto!" : "¡Hecho!"}</p>
+          <p className="text-2xl font-extrabold text-success-deep">{mistakes === 0 ? copy.perfectShort : copy.done}</p>
           {mistakes > 0 ? (
             <p className="text-base text-ink">
-              {mistakes === 1 ? "Has fallado 1 vez, pero ya está en orden." : `Has fallado ${mistakes} veces, pero ya está en orden.`}
+              {copy.orderMistakes(mistakes)}
             </p>
           ) : null}
           <Button ref={button} fullWidth onClick={() => onDone(mistakes)}>
-            Continuar
+            {copy.continue}
           </Button>
         </div>
       )}
