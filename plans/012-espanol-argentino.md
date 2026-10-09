@@ -50,7 +50,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T151 — Spanish (Argentina) pack foundation and brief
-- Status: running
+- Status: done
 - Depends on: T149
 - Goal: Create `content/es/pack.json` and `docs/brief-es.md` so the content tasks can run.
 - Context: Shared contract; docs/brief-ru.md and docs/brief-nl.md as brief models; `content/ru/pack.json` as the pack model; T149's documented gloss shape.
@@ -58,10 +58,10 @@ Worktree setup: npm ci
 - Done when:
   - `docs/brief-es.md` lists the 6 units (ids, orders 10–60, situation, topics, Córdoba share per unit), the grammar unit's ~8 cards (order 90), 6 dialogue and 6 story topics with ids, at least 2 of each set in Córdoba/sierras/Carlos Paz and not all at the end, the cast (a Russian learner protagonist, a porteño friend and a cordobés friend from unit 1, names, roles, voices), register rules, the Argentine lexicon list, Córdoba rules ("culiado" only in a note), typical Russian-speaker mistakes, and the volume targets. Suggested units: greetings and che/vos, getting around (colectivo, subte, remís), food and drink (facturas, mate, asado, fernet), shopping and money (kiosco, plata), people and plans (boliche, cuarteto, "¿qué hacé'?"), help and health (farmacia, usted).
   - The `es` pack loads (hidden while it has no lessons, as today); `npm run verify` → exit 0.
-- Outcome:
+- Outcome: pack es (4 voices, glossLangs ru, situation titles as {ru} maps, new situation planes); units hola 10, moverse 20, comer 30, comprar 40, planes 50, ayuda 60, gramatica 90; cast Iván (ruso, Mateo), Martín (porteño, Tomás), Flor (cordobesa, Elena), Valentina narra — 0b4a01e7
 
 ## T152 — Units 1–3 and the grammar unit
-- Status: pending
+- Status: running
 - Depends on: T151
 - Goal: Write units 10, 20, 30 and the grammar unit 90 from brief-es.md, with Russian glosses and notes.
 - Context: Shared contract, docs/brief-es.md, `content/ru/units/` and `content/en/units/` as format models.
@@ -112,6 +112,7 @@ Worktree setup: npm ci
 - 2026-10-09 orchestrator: Prepárate stays hidden for packs without `es` glosses in this plan; no placement test for a one-course A1 pack.
 
 - 2026-10-09 T149: gloss shape = sibling fields per language for es-named fields, {lang: text} map for the rest; new-pack welcome screen still shown once before the route (agent)
+- 2026-10-09 T151: options voiced by the first es voice unused by the natives (Mateo when Elena+Tomás speak); Córdoba ≈1/3 of every unit, dialogues/stories 2 and 5 in Córdoba; 'coger' warning note in unit 20, 'culiado' note in unit 50 (agent)
 
 ## Proposals (new scope)
 - 2026-10-09 orchestrator: growth of the deploy (audio is 279 MB / 16,299 files; repo 17,048 files, `.git` 245 MB): serve mp3s from Cloudflare R2 or similar (audio base URL, CORS, cross-origin SW cache and Range) and/or re-encode at a lower bitrate. Its own plan when needed.
@@ -122,3 +123,5 @@ Worktree setup: npm ci
 - 2026-10-09 T149 done → d3b361a9
 - 2026-10-09 T150 launched · attempt 1
 - 2026-10-09 T151 launched · attempt 1
+- 2026-10-09 T151 done → 0b4a01e7
+- 2026-10-09 T152 launched · attempt 1
