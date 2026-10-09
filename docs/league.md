@@ -462,7 +462,7 @@ joining are rejected, so a fresh player has no last-week XP); the magic-link ema
 2. **Anonymous sign-ins.** Authentication → **Sign In / Providers** → enable **Allow anonymous
    sign-ins** → Save. Leave **Email** enabled (default) with "Confirm email" on.
 3. **URLs for the magic link.** Authentication → **URL Configuration**:
-   - **Site URL:** `https://<your-app>.vercel.app` (the production URL from `npx vercel@latest --prod`).
+   - **Site URL:** `https://<your-app>.vercel.app` (the production URL from `npx vercel@latest --prod --archive=tgz`).
    - **Redirect URLs** → Add: `https://<your-app>.vercel.app/liga/`,
      `http://localhost:3000/liga/` (`npm run dev`) and `http://localhost:4173/liga/` (`npm start`).
    - Emails: the default Supabase mailer is fine for now, but it only delivers to members of the
@@ -482,7 +482,7 @@ joining are rejected, so a fresh player has no last-week XP); the magic-link ema
    - Vercel: Project → Settings → **Environment Variables** → add `NEXT_PUBLIC_SUPABASE_URL` and
      `NEXT_PUBLIC_SUPABASE_ANON_KEY` for Production (and Preview), or
      `npx vercel@latest env add NEXT_PUBLIC_SUPABASE_URL production` (same for the key). Then
-     redeploy: `npx vercel@latest --prod` (the values are inlined at build time).
+     redeploy: `npx vercel@latest --prod --archive=tgz` (the values are inlined at build time).
 6. Open the app → Perfil → Liga. Without the two variables Liga simply does not appear.
 
 Useful SQL (dashboard → SQL Editor, runs as `postgres`): `select * from league.profiles;`,

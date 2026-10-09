@@ -630,7 +630,7 @@ Nothing here is done by agents: the real Vercel project and its variables are He
    (`"functions": { "api/coach/*.ts": { "maxDuration": 60, "includeFiles": "content/*/pack.json" } }`,
    Node.js runtime, Web-standard `export default { fetch }` handlers). 60 s fits the Hobby plan.
    The leading `_` keeps `api/_lib/` from becoming routes.
-6. **Deploy** after `npm run verify`: `npx vercel@latest --prod` (variables only reach new
+6. **Deploy** after `npm run verify`: `npx vercel@latest --prod --archive=tgz` (variables only reach new
    deployments, so redeploy after changing any of them).
 7. **Check** from a terminal (the code is typed at the prompt, not saved in history):
    `read -s CODE; curl -s -H "x-coach-code: $CODE" https://<your-app>.vercel.app/api/coach/usage/`

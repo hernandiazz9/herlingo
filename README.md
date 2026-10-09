@@ -75,14 +75,17 @@ The first time, from the repo folder:
 ```bash
 npx vercel@latest login          # opens the browser to sign in (or create the free account)
 npx vercel@latest link           # "Set up and deploy?" yes; pick your account; new project; accept defaults
-npx vercel@latest --prod         # builds on Vercel and prints the https://… production URL
+npx vercel@latest --prod --archive=tgz  # builds on Vercel and prints the https://… production URL
 ```
 
 Every update afterwards (after `npm run verify` passes and you have committed):
 
 ```bash
-npx vercel@latest --prod
+npx vercel@latest --prod --archive=tgz
 ```
+
+`--archive=tgz` is required: the committed audio puts the repo over Vercel's limit of 15000 files
+per upload, so the CLI must send it as one archive.
 
 The installed app notices the new version the next time you open it and shows
 "Hay una versión nueva de la app" → **Actualizar**.
