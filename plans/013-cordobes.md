@@ -46,17 +46,17 @@ Worktree setup: npm ci
 - Outcome: units 10 saludos, 20 gente, 30 comida, 40 salir, 90 tonada: 118 phrases (15 expressions), 126 vocab, 30 Q&A, 8 cards; lexicon §4.1 29/31, §4.2 52/62, §4.4 57/66, §4.5 35/40 + 22 §5 — 66802099
 
 ## T158 — Units 5–8 (pack complete)
-- Status: running
+- Status: done
 - Depends on: T157
 - Goal: Write units 5–8 so the pack reaches the totals and covers every alta/media lexicon row and expression that fits a unit.
 - Context: Shared contract, docs/brief-cba.md, docs/cordobes-lexico.md, T157's units.
 - Scope: may touch `content/cba/units/` (these units only) / must not touch pack.json, other units, other packs.
 - Done when:
   - Totals within ±10% of ~250 phrases, ~250 vocab, ~60 Q&A; an uncommitted script reports lexicon coverage (rows used / alta+media rows) and finds no duplicate normalized texts; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units 50 plata, 60 lugares, 70 emociones, 80 trampas; pack = 267 phrases (29 expressions), 267 vocab, 60 Q&A; lexicon coverage 522/557 alta+media rows (94%), 0 duplicates — 85f50f73
 
 ## T159 — Dialogues (8)
-- Status: pending
+- Status: running
 - Depends on: T158
 - Goal: Write 8 dialogues where a Spaniard copes in Córdoba; options include Spain-Spanish answers that are understood but sound foreign, and false-friend traps.
 - Context: Shared contract, docs/brief-cba.md, content/es/dialogues/ as format model.
@@ -65,7 +65,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T160 — Stories (8)
-- Status: pending
+- Status: running
 - Depends on: T158
 - Goal: Write 8 stories (90–130 words, files `NN-<slug>.json`) full of cordobés, with keywords pointing at unit items and comprehension questions.
 - Context: Shared contract, docs/brief-cba.md, content/es/stories/ as format model.
@@ -96,6 +96,7 @@ Worktree setup: npm ci
 - 2026-10-09 orchestrator: lexicon research first → docs/cordobes-lexico.md (523 rows, 81 expressions, 16 sources; doubtful: bobina, arroiar, pecho frío, choncaco, "noventa dos diez", fartusco).
 - 2026-10-10 orchestrator: brief-cba fixed to Hernán's choice: vulgar and offensive words are practised items with register tags (not recognition-only); expressions only for regional/social markers (~25)
 - 2026-10-10 T157: culiau, boludo (vocative), papudo moved to unit 80; skipped words identical in Spain, doubtful rows, politics (peroncho, trosco) and minor regional rows; popular-spelling-only forms as expressions (agent)
+- 2026-10-10 T158: vulgar/offensive items only in units 70 and 80; culiado = one phrase per degree + vocab; unused rows = identical in Spain, doubtful, dated or political (agent)
 
 ## Proposals (new scope)
 
@@ -105,3 +106,6 @@ Worktree setup: npm ci
 - 2026-10-10 T157 launched · attempt 1
 - 2026-10-10 T157 done → 66802099
 - 2026-10-10 T158 launched · attempt 1
+- 2026-10-10 T158 done → 85f50f73
+- 2026-10-10 T159 launched · attempt 1
+- 2026-10-10 T160 launched · attempt 1
