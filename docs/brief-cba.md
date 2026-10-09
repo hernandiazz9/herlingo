@@ -66,7 +66,7 @@ the unit of their topic (numbers = the `#` column).
 | 90 | `cba-tonada` | Tonada y gramática | `tonada` | §2 Fonética y tonada (18), §3.1, §3.3, §3.4, §3.5 | — | — | — | 1 (8 cards) |
 | | **Total** | | | | **250** | **250** | **60** | **38** |
 
-Phrase totals **include `expressions`** (recognition-only items, see "Register"): aim for about 40
+Phrase totals **include `expressions`** (recognition-only items, see "Register"): aim for about 25
 expressions across units 10–80. T157 writes units 10–40 and 90 (~118 phrases, ~126 vocab, ~30 Q&A,
 8 cards); T158 writes 50–80 and must cover every alta/media row and expression that fits a unit.
 A word that appears in two sections lives in the first unit that lists it; later units **reuse it
@@ -156,16 +156,20 @@ sound (tonada), not which voices exist.
   - **Coloquial**: any informal scene, units, dialogues, stories.
   - **Vulgar**: notes, units 40 / 70 / 80, informal scenes among friends (the stadium, the
     baile, Nico's lines); never in a formal scene, never addressed to Doña Chela or staff.
-  - **Ofensivo** (insults, "negro" as a slur, slurs of §4.3): **recognition only** = `expressions`
-    (or a note), only in unit 80 and the stadium story; never said by Álex, never in a correct
-    option, never in a formal scene.
-- **"Culiado"**: taught in unit 80 in its four degrees (§3.7), one expression per degree, best
-  Spain equivalent "cabrón"; the note says Álex should not start it (only answer when a cordobés
-  friend uses it with him). It may appear in Nico's lines in dialogues 1, 7 and stories 4, 5.
-- **Recognition only** (§7.1) = `expressions` (`variety`: "Cordobés popular", "Vulgar",
-  "Ofensivo" or "Italianismo del este"; `standard`: the standard rioplatense form): popular voseo
-  (tenís, querís, ¿qué cobrai?, ite), popular phonetics (jue, agora, los vamo'), vulgar and
-  offensive words, short-lived youth slang. Expressions get listening and reading exercises only.
+  - **Ofensivo** (insults, "negro" as a slur, slurs of §4.3): taught for understanding **and use**
+    (Hernán, 2026-10-10: "entender y usar todo, lo seguro y no seguro") as normal phrases/vocab in
+    unit 80 and informal scenes (the stadium, banter among friends), each with the `Ofensivo.` tag
+    and a clear note on when it would start a fight; never in a formal scene, never aimed at Doña
+    Chela or staff, never the only correct option in an exercise about politeness.
+- **"Culiado"**: taught in unit 80 in its four degrees (§3.7) as phrases the learner practises,
+  best Spain equivalent "cabrón"; the note explains the degrees and that with friends Álex can use
+  it once they use it with him. It may appear in Nico's and Álex's lines in dialogues 1, 7 and
+  stories 4, 5.
+- **Expressions (recognition only)** are now only for what a Spaniard should not reproduce because
+  it is a regional/social marker, not because it is rude: popular voseo (tenís, querís, ¿qué
+  cobrai?, ite), popular phonetics (jue, agora, los vamo'), short-lived youth slang, italianismos
+  del este (`variety` + `standard` as before). Vulgar and offensive words are ordinary items with
+  register tags. Aim for about 25 expressions.
 
 ## Spelling
 - Phrase, vocab and Q&A **text in standard spelling** ("¿Qué hacés?", "pollo", "Talleres") so

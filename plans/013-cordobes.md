@@ -23,7 +23,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T156 — Cordobés pack foundation and brief
-- Status: running
+- Status: done
 - Depends on: none
 - Goal: Create `content/cba/pack.json` and `docs/brief-cba.md`, and make the small generic fixes a same-language pack needs.
 - Context: docs/cordobes-lexico.md, docs/brief-es.md and content/es/pack.json as models, `src/lib/game/index.ts` and `src/lib/exercises/generate.ts` (distractor dedupe drops options whose gloss equals the text), Prepárate availability (`src/lib/coach/available.ts`, `api/_lib/prompts.ts`: written for learners of another language), `src/lib/i18n/learn-copy.ts` (strings like "lee en español").
@@ -33,10 +33,10 @@ Worktree setup: npm ci
   - Prepárate is hidden for a pack whose target language and gloss language are the same language family (generic flag or data map, not `cba` hard-coded), unless it already behaves sensibly (explain).
   - Copy that says "lee en español" or similar reads sensibly when target and gloss are both Spanish.
   - `npm run verify` → exit 0; the `cba` pack loads hidden while empty.
-- Outcome:
+- Outcome: pack cba (🧉, 4 voices), brief-cba (units 10 saludos, 20 gente, 30 comida, 40 salir, 50 plata, 60 lugares, 70 emociones, 80 trampas, 90 tonada; cast Álex from Madrid/Mateo, Cami/Elena, Nico/Tomás, narrator Valentina); glossIsTargetLanguage() hides Prepárate and switches learn copy to 'Equivalente en España' — 635e8cba
 
 ## T157 — Units 1–4 and the pronunciation/grammar unit
-- Status: pending
+- Status: running
 - Depends on: T156
 - Goal: Write the first four topic units and the pronunciation/grammar unit from brief-cba.md.
 - Context: Shared contract, docs/brief-cba.md, docs/cordobes-lexico.md (sections 2–4 for these topics), content/es/units/ as format model.
@@ -94,8 +94,11 @@ Worktree setup: npm ci
 ## Decisions
 - 2026-10-09 Hernán: own pack "Cordobés" (`cba`) for Spain-Spanish speakers, explanations in Spain Spanish with comparisons; medium size; teach everything including vulgar/offensive words (with register warnings); try to make a cordobés voice ourselves.
 - 2026-10-09 orchestrator: lexicon research first → docs/cordobes-lexico.md (523 rows, 81 expressions, 16 sources; doubtful: bobina, arroiar, pecho frío, choncaco, "noventa dos diez", fartusco).
+- 2026-10-10 orchestrator: brief-cba fixed to Hernán's choice: vulgar and offensive words are practised items with register tags (not recognition-only); expressions only for regional/social markers (~25)
 
 ## Proposals (new scope)
 
 ## Log
 - 2026-10-10 T156 launched · attempt 1
+- 2026-10-10 T156 done → 635e8cba
+- 2026-10-10 T157 launched · attempt 1
