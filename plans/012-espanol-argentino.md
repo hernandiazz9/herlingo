@@ -38,7 +38,7 @@ Worktree setup: npm ci
 - Outcome: glossLangs + sibling fields es/ru/en (questionRu, titleRu…) or {ru:…} maps; glossOf() in src/lib/content/gloss.ts, <Gloss>; key lang-lern:gloss:<lang>; register `usted` (badge 'Trato de vos'); Prepárate hidden without es glosses — d3b361a9
 
 ## T150 — Russian copy for the learning screens
-- Status: running
+- Status: done
 - Depends on: T149
 - Goal: When the chosen gloss language is `ru`, the screens a beginner needs to learn (lesson exercises, review, game rounds, dialogue player, story reader and its games) show their instructions, feedback and buttons in Russian. The rest of the app stays Spain Spanish.
 - Context: T149's resolver and gloss setting; exercise and game components (`Round.tsx` 186–189 "lee en español", `SearchHeader.tsx:48`, `QuestionExercise.tsx:37` "Ver en español", lesson/review/dialogue/story views). Copy rules: CLAUDE.md (Spain Spanish UI with tú stays the default).
@@ -47,7 +47,7 @@ Worktree setup: npm ci
   - With gloss `es` every learning screen shows exactly today's strings (same text, a dictionary lookup instead of a literal).
   - With gloss `ru` those screens are in natural Russian, including `aria-label`s; strings that name "español" as the gloss language now name the chosen gloss language instead.
   - `npm run verify` → exit 0; list the screens covered and those left in Spanish.
-- Outcome:
+- Outcome: learnCopy(packLang, gloss) in src/lib/i18n/learn-copy.ts + LearnCopyProvider/useLearnCopy; ru for lessons, review, games, dialogue player, story reader + games, mic UI; headers, tabs, Perfil, phrasebook lists, mic test stay Spanish — 8dfa2196
 
 ## T151 — Spanish (Argentina) pack foundation and brief
 - Status: done
@@ -125,3 +125,4 @@ Worktree setup: npm ci
 - 2026-10-09 T151 launched · attempt 1
 - 2026-10-09 T151 done → 0b4a01e7
 - 2026-10-09 T152 launched · attempt 1
+- 2026-10-09 T150 done → 8dfa2196
