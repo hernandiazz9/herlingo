@@ -1,0 +1,829 @@
+{
+  "id": "es-a1-planes",
+  "order": 50,
+  "title": {
+    "ru": "Люди и планы"
+  },
+  "description": {
+    "ru": "Звать друзей на превию и в боличе, дни недели и время, семья и «laburo», «me gusta» — и ночь куартето в Кордове с Флор."
+  },
+  "emoji": "🎉",
+  "situation": "planes",
+  "lessons": [
+    {
+      "id": "es-a1-planes.l.que-onda",
+      "title": {
+        "ru": "Че, какие планы?"
+      },
+      "items": [
+        "es-a1-planes.que-onda",
+        "es-a1-hola.que-haces",
+        "es-a1-planes.v.finde",
+        "es-a1-planes.que-haces-el-finde",
+        "es-a1-planes.vamos-a-tomar-algo",
+        "es-a1-planes.nos-juntamos-el-sabado",
+        "es-a1-planes.v.previa",
+        "es-a1-planes.hay-previa",
+        "es-a1-planes.v.boliche",
+        "es-a1-planes.vamos-al-boliche",
+        "es-a1-hola.dale",
+        "es-a1-planes.que-copado",
+        "es-a1-planes.qa.que-onda",
+        "es-a1-planes.qa.vamos-al-boliche"
+      ]
+    },
+    {
+      "id": "es-a1-planes.l.hora",
+      "title": {
+        "ru": "Дни недели и время"
+      },
+      "items": [
+        "es-a1-planes.v.lunes",
+        "es-a1-planes.v.martes",
+        "es-a1-planes.v.miercoles",
+        "es-a1-planes.v.jueves",
+        "es-a1-planes.v.viernes",
+        "es-a1-planes.v.sabado",
+        "es-a1-planes.v.domingo",
+        "es-a1-planes.v.semana",
+        "es-a1-planes.v.hora",
+        "es-a1-planes.que-hora-es",
+        "es-a1-planes.es-la-una",
+        "es-a1-planes.son-las-diez",
+        "es-a1-planes.a-las-once",
+        "es-a1-planes.a-que-hora-nos-vemos",
+        "es-a1-planes.qa.que-hora-es"
+      ]
+    },
+    {
+      "id": "es-a1-planes.l.familia",
+      "title": {
+        "ru": "Семья и работа"
+      },
+      "items": [
+        "es-a1-planes.v.familia",
+        "es-a1-planes.v.viejo",
+        "es-a1-planes.v.vieja",
+        "es-a1-planes.mi-vieja-me-llama",
+        "es-a1-planes.v.hermano",
+        "es-a1-planes.v.hermana",
+        "es-a1-planes.tengo-una-hermana",
+        "es-a1-planes.v.novio",
+        "es-a1-planes.v.novia",
+        "es-a1-planes.tenes-novia",
+        "es-a1-planes.v.laburo",
+        "es-a1-planes.de-que-laburas",
+        "es-a1-planes.soy-programador",
+        "es-a1-planes.laburo-desde-casa",
+        "es-a1-planes.no-puedo-tengo-laburo",
+        "es-a1-planes.qa.de-que-laburas",
+        "es-a1-planes.qa.hermanos"
+      ]
+    },
+    {
+      "id": "es-a1-planes.l.cuarteto",
+      "title": {
+        "ru": "Куартето и горы"
+      },
+      "items": [
+        "es-a1-planes.v.cuarteto",
+        "es-a1-planes.me-gusta-el-cuarteto",
+        "es-a1-planes.me-encantan-las-sierras",
+        "es-a1-planes.no-se-bailar",
+        "es-a1-planes.vamos-a-bailar-cuarteto",
+        "es-a1-planes.re-lindo",
+        "es-a1-planes.voy-a-ir-a-cordoba",
+        "es-a1-moverse.v.sierras",
+        "es-a1-planes.el-finde-vamos-a-las-sierras",
+        "es-a1-planes.no-entiendo-a-los-cordobeses",
+        "es-a1-planes.qa.te-gusta"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "es-a1-planes.que-onda",
+      "text": "¿Qué onda?",
+      "ru": "Как оно? Что как?",
+      "literal": {
+        "ru": "Какая волна?"
+      },
+      "explanation": {
+        "ru": "Другу при встрече или в сообщении. Только с друзьями, не с врачом!"
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.que-haces-el-finde",
+      "text": "¿Qué hacés el finde?",
+      "ru": "Что делаешь на выходных?",
+      "explanation": {
+        "ru": "Когда хочешь позвать друга куда-то. ФИН-де: ударение в начале."
+      },
+      "register": "tu",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.vamos-a-tomar-algo",
+      "text": "¿Vamos a tomar algo?",
+      "ru": "Пойдём выпьем чего-нибудь?",
+      "notes": {
+        "ru": "«Tomar algo» — это и кофе, и пиво: просто посидеть."
+      },
+      "explanation": {
+        "ru": "Приглашение друга или коллеги. «v» как мягкая «б»: БА-мос."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.nos-juntamos-el-sabado",
+      "text": "¿Nos juntamos el sábado?",
+      "ru": "Соберёмся в субботу?",
+      "notes": {
+        "ru": "«Juntarse» — встречаться компанией, любимый глагол аргентинцев."
+      },
+      "explanation": {
+        "ru": "В чате с друзьями. «j» — как «х»: хун-ТА-мос."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.hay-previa",
+      "text": "Hay previa en lo de Martín.",
+      "ru": "У Мартина собираемся перед клубом.",
+      "literal": {
+        "ru": "Есть превия у Мартина."
+      },
+      "notes": {
+        "ru": "«En lo de Martín» — «у Мартина дома»."
+      },
+      "explanation": {
+        "ru": "Зовёшь друзей на разогрев. ПРЕ-вья: ударение в начале."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.vamos-al-boliche",
+      "text": "Después vamos al boliche.",
+      "ru": "Потом идём в клуб.",
+      "notes": {
+        "ru": "В боличе идут после двух ночи, а уходят, когда светает."
+      },
+      "explanation": {
+        "ru": "План на ночь субботы. «a» + «el» = «al»: «al boliche»."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.que-copado",
+      "text": "¡Qué copado!",
+      "ru": "Как круто!",
+      "explanation": {
+        "ru": "Реакция на хороший план или вещь. ко-ПА-до: ударение на середину."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.que-hora-es",
+      "text": "¿Qué hora es?",
+      "ru": "Который час?",
+      "explanation": {
+        "ru": "Прохожему или другу. «h» немая: О-ра."
+      },
+      "register": "neutral",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.es-la-una",
+      "text": "Es la una.",
+      "ru": "Час дня. / Час ночи.",
+      "notes": {
+        "ru": "Только час — «es la una»; остальное — «son las dos, son las tres»."
+      },
+      "explanation": {
+        "ru": "Отвечаешь, который час. «una» — У-на, без русского «ы»."
+      },
+      "register": "neutral",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.son-las-diez",
+      "text": "Son las diez de la noche.",
+      "ru": "Десять вечера.",
+      "notes": {
+        "ru": "Утро — «de la mañana», день — «de la tarde», вечер и ночь — «de la noche»."
+      },
+      "explanation": {
+        "ru": "Говоришь время. «z» в Аргентине — как «с»: ДЬЕС."
+      },
+      "register": "neutral",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.a-las-once",
+      "text": "A las once en la plaza.",
+      "ru": "В одиннадцать на площади.",
+      "explanation": {
+        "ru": "Назначаешь встречу. ОН-се: «c» перед «e» — как «с»."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.a-que-hora-nos-vemos",
+      "text": "¿A qué hora nos vemos?",
+      "ru": "Во сколько встречаемся?",
+      "explanation": {
+        "ru": "Когда план уже есть, а время — нет. Аргентинцы часто опаздывают на полчаса!"
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.tengo-una-hermana",
+      "text": "Tengo una hermana y un hermano.",
+      "ru": "У меня есть сестра и брат.",
+      "literal": {
+        "ru": "Я имею сестру и брата."
+      },
+      "explanation": {
+        "ru": "Рассказываешь о семье. «h» немая: эр-МА-на."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.mi-vieja-me-llama",
+      "text": "Mi vieja me llama todos los domingos.",
+      "ru": "Мама звонит мне каждое воскресенье.",
+      "explanation": {
+        "ru": "Рассказ о семье в Екатеринбурге. ША-ма — «ll» по-портеньо."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.tenes-novia",
+      "text": "¿Tenés novia?",
+      "ru": "У тебя есть девушка?",
+      "notes": {
+        "ru": "Флор спрашивает это у Ивана в первый же вечер. Аргентинцы не стесняются."
+      },
+      "explanation": {
+        "ru": "Только с друзьями. те-НЕС: ударение на конце."
+      },
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.de-que-laburas",
+      "text": "¿De qué laburás?",
+      "ru": "Кем работаешь?",
+      "literal": {
+        "ru": "Из чего ты работаешь?"
+      },
+      "explanation": {
+        "ru": "Знакомясь с ровесником. ла-бу-РАС: ударение на конце."
+      },
+      "register": "tu",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.soy-programador",
+      "text": "Soy programador.",
+      "ru": "Я программист.",
+      "notes": {
+        "ru": "Профессия без артикля: не «soy un programador»."
+      },
+      "explanation": {
+        "ru": "Отвечаешь, кем работаешь. про-гра-ма-ДОР: ударение на конце."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.laburo-desde-casa",
+      "text": "Laburo desde casa.",
+      "ru": "Я работаю из дома.",
+      "explanation": {
+        "ru": "Рассказываешь про удалёнку. ДЕС-де КА-са."
+      },
+      "register": "neutral",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.no-puedo-tengo-laburo",
+      "text": "Hoy no puedo, tengo laburo.",
+      "ru": "Сегодня не могу, работа.",
+      "explanation": {
+        "ru": "Вежливо отказываешься от плана. «h» немая: ОЙ."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.me-gusta-el-cuarteto",
+      "text": "Me gusta el cuarteto.",
+      "ru": "Мне нравится куартето.",
+      "literal": {
+        "ru": "Мне нравится куартето."
+      },
+      "notes": {
+        "ru": "Как в русском: нравится мне, а не я нравлю."
+      },
+      "explanation": {
+        "ru": "Скажи это Флор — и ты друг навсегда. ме ГУС-та."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.me-encantan-las-sierras",
+      "text": "Me encantan las sierras.",
+      "ru": "Обожаю горы в Кордове.",
+      "notes": {
+        "ru": "Предмет во множественном — глагол тоже: «me encantan»."
+      },
+      "explanation": {
+        "ru": "О любимом месте. эн-КАН-тан."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.no-se-bailar",
+      "text": "¡No sé bailar!",
+      "ru": "Я не умею танцевать!",
+      "notes": {
+        "ru": "«Saber» + глагол — уметь: «no sé bailar», «no sé nadar»."
+      },
+      "explanation": {
+        "ru": "Иван в клубе в Кордове. бай-ЛАР: ударение на конце."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.vamos-a-bailar-cuarteto",
+      "text": "¡Vamos a bailar cuarteto!",
+      "ru": "Пошли танцевать куартето!",
+      "notes": {
+        "ru": "Ночь куартето в Кордове — танцуют по кругу против часовой стрелки."
+      },
+      "explanation": {
+        "ru": "Флор тащит Ивана танцевать. «v» и «b» звучат одинаково."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.re-lindo",
+      "text": "¡Re lindo!",
+      "ru": "Очень красиво!",
+      "explanation": {
+        "ru": "О месте, вещи или вечере. ррре ЛИН-до: «r» в начале раскатистая."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.voy-a-ir-a-cordoba",
+      "text": "Voy a ir a Córdoba.",
+      "ru": "Я поеду в Кордову.",
+      "notes": {
+        "ru": "«Ir a» + глагол — так говорят о планах: «voy a comer», «vamos a bailar»."
+      },
+      "explanation": {
+        "ru": "О планах на поездку. КОР-до-ба: ударение на первый слог."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.el-finde-vamos-a-las-sierras",
+      "text": "El finde vamos a las sierras.",
+      "ru": "На выходных едем в горы.",
+      "explanation": {
+        "ru": "План на выходные с Флор. СЬЕ-ррас: двойная «rr» раскатистая."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.no-entiendo-a-los-cordobeses",
+      "text": "No entiendo a los cordobeses.",
+      "ru": "Не понимаю кордовцев.",
+      "notes": {
+        "ru": "Если услышишь «culiado» — это очень крепкое кордовское словечко: друзья бросают его друг другу, но оно может и оскорбить. Понимай, но сам не говори."
+      },
+      "explanation": {
+        "ru": "Иван после ночи в Кордове. «a» перед людьми: «entiendo a Flor»."
+      },
+      "register": "neutral",
+      "situation": "planes"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "es-a1-planes.v.lunes",
+      "word": "lunes",
+      "article": "el",
+      "gender": "m",
+      "plural": "lunes",
+      "ru": "понедельник",
+      "notes": {
+        "ru": "Дни недели пишутся с маленькой буквы."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.v.martes",
+      "word": "martes",
+      "article": "el",
+      "gender": "m",
+      "plural": "martes",
+      "ru": "вторник",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.v.miercoles",
+      "word": "miércoles",
+      "article": "el",
+      "gender": "m",
+      "plural": "miércoles",
+      "ru": "среда",
+      "notes": {
+        "ru": "Мужского рода, хоть по-русски среда — «она»: «el miércoles»."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.v.jueves",
+      "word": "jueves",
+      "article": "el",
+      "gender": "m",
+      "plural": "jueves",
+      "ru": "четверг",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.v.viernes",
+      "word": "viernes",
+      "article": "el",
+      "gender": "m",
+      "plural": "viernes",
+      "ru": "пятница",
+      "notes": {
+        "ru": "«El viernes» — в пятницу, без предлога «en»."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.v.sabado",
+      "word": "sábado",
+      "article": "el",
+      "gender": "m",
+      "plural": "sábados",
+      "ru": "суббота",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.v.domingo",
+      "word": "domingo",
+      "article": "el",
+      "gender": "m",
+      "plural": "domingos",
+      "ru": "воскресенье",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-planes.v.semana",
+      "word": "semana",
+      "article": "la",
+      "gender": "f",
+      "ru": "неделя",
+      "situation": "numeros",
+      "image": "fluent:spiral-calendar"
+    },
+    {
+      "id": "es-a1-planes.v.hora",
+      "word": "hora",
+      "article": "la",
+      "gender": "f",
+      "ru": "час, время",
+      "example": "es-a1-planes.que-hora-es",
+      "situation": "numeros",
+      "image": "fluent:mantelpiece-clock"
+    },
+    {
+      "id": "es-a1-planes.v.finde",
+      "word": "finde",
+      "article": "el",
+      "gender": "m",
+      "ru": "выходные",
+      "notes": {
+        "ru": "Сокращение от «fin de semana»."
+      },
+      "example": "es-a1-planes.que-haces-el-finde",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.v.previa",
+      "word": "previa",
+      "article": "la",
+      "gender": "f",
+      "ru": "превия (разогрев у кого-то дома)",
+      "notes": {
+        "ru": "Собираются у друга выпить до клуба: раньше двух ночи в боличе никто не идёт."
+      },
+      "example": "es-a1-planes.hay-previa",
+      "situation": "planes",
+      "image": "fluent:clinking-beer-mugs"
+    },
+    {
+      "id": "es-a1-planes.v.boliche",
+      "word": "boliche",
+      "article": "el",
+      "gender": "m",
+      "ru": "ночной клуб",
+      "example": "es-a1-planes.vamos-al-boliche",
+      "situation": "planes",
+      "image": "fluent:mirror-ball"
+    },
+    {
+      "id": "es-a1-planes.v.cuarteto",
+      "word": "cuarteto",
+      "article": "el",
+      "gender": "m",
+      "ru": "куартето (танцевальная музыка Кордовы)",
+      "notes": {
+        "ru": "Короли жанра — La Mona Jiménez и Rodrigo. В Кордове его знают все."
+      },
+      "example": "es-a1-planes.me-gusta-el-cuarteto",
+      "situation": "planes",
+      "image": "fluent:musical-notes"
+    },
+    {
+      "id": "es-a1-planes.v.familia",
+      "word": "familia",
+      "article": "la",
+      "gender": "f",
+      "ru": "семья",
+      "notes": {
+        "ru": "Ложный друг: «familia» — семья, а фамилия — «apellido»."
+      },
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.v.viejo",
+      "word": "viejo",
+      "article": "el",
+      "gender": "m",
+      "ru": "папа (разг.)",
+      "notes": {
+        "ru": "«Mi viejo» — ласково «мой папа», а не «мой старик» в обидном смысле."
+      },
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.v.vieja",
+      "word": "vieja",
+      "article": "la",
+      "gender": "f",
+      "ru": "мама (разг.)",
+      "notes": {
+        "ru": "«Mi vieja» — «моя мама»; так говорят даже о молодой маме."
+      },
+      "example": "es-a1-planes.mi-vieja-me-llama",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.v.hermano",
+      "word": "hermano",
+      "article": "el",
+      "gender": "m",
+      "ru": "брат",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.v.hermana",
+      "word": "hermana",
+      "article": "la",
+      "gender": "f",
+      "ru": "сестра",
+      "example": "es-a1-planes.tengo-una-hermana",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.v.novio",
+      "word": "novio",
+      "article": "el",
+      "gender": "m",
+      "ru": "парень (бойфренд)",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.v.novia",
+      "word": "novia",
+      "article": "la",
+      "gender": "f",
+      "ru": "девушка (подруга)",
+      "example": "es-a1-planes.tenes-novia",
+      "situation": "presentarse"
+    },
+    {
+      "id": "es-a1-planes.v.laburo",
+      "word": "laburo",
+      "article": "el",
+      "gender": "m",
+      "ru": "работа",
+      "notes": {
+        "ru": "Разговорное «trabajo»; глагол — «laburar»."
+      },
+      "example": "es-a1-planes.no-puedo-tengo-laburo",
+      "situation": "presentarse",
+      "image": "fluent:briefcase"
+    }
+  ],
+  "qa": [
+    {
+      "id": "es-a1-planes.qa.que-onda",
+      "question": "¡Che, Iván! ¿Qué onda?",
+      "questionRu": "Че, Иван! Как оно?",
+      "accepted": [
+        {
+          "text": "Todo tranqui, ¿y vos?",
+          "ru": "Всё спокойно, а ты?"
+        },
+        {
+          "text": "Bien, acá laburando.",
+          "ru": "Нормально, вот работаю."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Soy bien, gracias.",
+          "ru": "Я есть хорошо. (о состоянии — «estoy bien»)"
+        },
+        {
+          "text": "Onda grande.",
+          "ru": "Большая волна. («¿qué onda?» — просто «как дела»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "planes",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-planes.qa.vamos-al-boliche",
+      "question": "¿Vamos al boliche el sábado?",
+      "questionRu": "Пойдём в клуб в субботу?",
+      "accepted": [
+        {
+          "text": "¡Dale! ¿A qué hora?",
+          "ru": "Давай! Во сколько?"
+        },
+        {
+          "text": "No puedo, el sábado laburo.",
+          "ru": "Не могу, в субботу работаю."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, vamos a boliche.",
+          "ru": "Да, пойдём в клуб. (нужен артикль: «al boliche»)"
+        },
+        {
+          "text": "Dale, vamos ayer.",
+          "ru": "Давай, пойдём вчера. (суббота впереди, «ayer» — это вчера)"
+        }
+      ],
+      "register": "tu",
+      "situation": "planes"
+    },
+    {
+      "id": "es-a1-planes.qa.que-hora-es",
+      "question": "Che, ¿qué hora es?",
+      "questionRu": "Слушай, который час?",
+      "accepted": [
+        {
+          "text": "Son las diez.",
+          "ru": "Десять."
+        },
+        {
+          "text": "Es la una y media.",
+          "ru": "Половина второго."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Es las diez.",
+          "ru": "Есть десять. (с часами больше одного — «son las»)"
+        },
+        {
+          "text": "Son la una.",
+          "ru": "Час. (час — единственное число: «es la una»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "numeros",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-planes.qa.de-que-laburas",
+      "question": "¿Y vos de qué laburás?",
+      "questionRu": "А ты кем работаешь?",
+      "accepted": [
+        {
+          "text": "Soy programador.",
+          "ru": "Я программист."
+        },
+        {
+          "text": "Laburo de programador, desde casa.",
+          "ru": "Работаю программистом, из дома."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Estoy programador.",
+          "ru": "Я есть программист. (профессия — с «ser»: «soy»)"
+        },
+        {
+          "text": "Soy de Rusia.",
+          "ru": "Я из России. (спросили о работе, а не откуда ты)"
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": {
+        "ru": "Флор спросит это на первой же превии."
+      }
+    },
+    {
+      "id": "es-a1-planes.qa.hermanos",
+      "question": "¿Tenés hermanos?",
+      "questionRu": "У тебя есть братья или сёстры?",
+      "accepted": [
+        {
+          "text": "Sí, tengo una hermana.",
+          "ru": "Да, есть сестра."
+        },
+        {
+          "text": "No, soy hijo único.",
+          "ru": "Нет, я единственный ребёнок."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, tengo una hermano.",
+          "ru": "Да, есть брат. (брат — мужского рода: «un hermano»)"
+        },
+        {
+          "text": "Sí, tengo veintinueve.",
+          "ru": "Да, мне двадцать девять. (это про возраст)"
+        }
+      ],
+      "register": "tu",
+      "situation": "presentarse",
+      "notes": {
+        "ru": "«Hermanos» — и братья, и братья с сёстрами вместе."
+      }
+    },
+    {
+      "id": "es-a1-planes.qa.te-gusta",
+      "question": "¿Te gusta el cuarteto?",
+      "questionRu": "Тебе нравится куартето?",
+      "accepted": [
+        {
+          "text": "¡Sí, me encanta!",
+          "ru": "Да, обожаю!"
+        },
+        {
+          "text": "Me gusta, pero no sé bailar.",
+          "ru": "Нравится, но я не умею танцевать."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, yo gusto el cuarteto.",
+          "ru": "Я нравлюсь куартето. (калька: «мне нравится» — «me gusta»)"
+        },
+        {
+          "text": "Sí, me gustan el cuarteto.",
+          "ru": "Да, мне нравятся куартето. (одна вещь — «me gusta»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "planes",
+      "notes": {
+        "ru": "Флор спрашивает с надеждой: в Кордове это почти вопрос о дружбе."
+      }
+    }
+  ]
+}

@@ -1,0 +1,843 @@
+{
+  "id": "es-a1-ayuda",
+  "order": 60,
+  "title": {
+    "ru": "Помощь и здоровье"
+  },
+  "description": {
+    "ru": "Аптека и врач на «usted», «me duele…» и температура, потерянный телефон и полиция — и солнечный ожог в Карлос-Пасе после прогулки по горам."
+  },
+  "emoji": "💊",
+  "situation": "salud",
+  "lessons": [
+    {
+      "id": "es-a1-ayuda.l.farmacia",
+      "title": {
+        "ru": "В аптеке"
+      },
+      "items": [
+        "es-a1-ayuda.v.farmacia",
+        "es-a1-ayuda.hay-una-farmacia",
+        "es-a1-ayuda.v.dolor",
+        "es-a1-ayuda.v.cabeza",
+        "es-a1-ayuda.me-duele-la-cabeza",
+        "es-a1-ayuda.v.garganta",
+        "es-a1-ayuda.me-duele-la-garganta",
+        "es-a1-ayuda.v.panza",
+        "es-a1-ayuda.me-duele-la-panza",
+        "es-a1-ayuda.v.fiebre",
+        "es-a1-ayuda.tengo-fiebre",
+        "es-a1-ayuda.v.tos",
+        "es-a1-ayuda.tengo-tos",
+        "es-a1-ayuda.v.remedio",
+        "es-a1-ayuda.v.pastilla",
+        "es-a1-ayuda.tiene-algo-para-la-garganta",
+        "es-a1-ayuda.v.receta",
+        "es-a1-ayuda.necesito-receta",
+        "es-a1-ayuda.cada-cuantas-horas",
+        "es-a1-ayuda.qa.que-le-pasa",
+        "es-a1-ayuda.qa.desde-cuando"
+      ]
+    },
+    {
+      "id": "es-a1-ayuda.l.medico",
+      "title": {
+        "ru": "Врач и неотложка"
+      },
+      "items": [
+        "es-a1-ayuda.me-siento-mal",
+        "es-a1-ayuda.estoy-mareado",
+        "es-a1-ayuda.v.medico",
+        "es-a1-ayuda.v.medica",
+        "es-a1-ayuda.necesito-un-medico",
+        "es-a1-ayuda.v.guardia",
+        "es-a1-ayuda.donde-esta-la-guardia",
+        "es-a1-ayuda.soy-alergico",
+        "es-a1-ayuda.v.ambulancia",
+        "es-a1-ayuda.llama-a-una-ambulancia",
+        "es-a1-ayuda.qa.alergico",
+        "es-a1-ayuda.qa.estas-bien"
+      ]
+    },
+    {
+      "id": "es-a1-ayuda.l.ayuda",
+      "title": {
+        "ru": "Помогите!"
+      },
+      "items": [
+        "es-a1-ayuda.ayuda",
+        "es-a1-ayuda.me-puede-ayudar",
+        "es-a1-ayuda.habla-ingles",
+        "es-a1-hola.no-entiendo",
+        "es-a1-hola.mas-despacio",
+        "es-a1-ayuda.me-lo-puede-escribir",
+        "es-a1-ayuda.v.policia",
+        "es-a1-hola.v.celular",
+        "es-a1-ayuda.perdi-el-celular",
+        "es-a1-ayuda.v.billetera",
+        "es-a1-ayuda.me-robaron-la-billetera",
+        "es-a1-ayuda.v.pasaporte",
+        "es-a1-ayuda.donde-esta-la-comisaria",
+        "es-a1-ayuda.qa.en-que-lo-ayudo"
+      ]
+    },
+    {
+      "id": "es-a1-ayuda.l.sierras",
+      "title": {
+        "ru": "Солнце и горы"
+      },
+      "items": [
+        "es-a1-moverse.v.sierras",
+        "es-a1-ayuda.v.sol",
+        "es-a1-ayuda.me-queme-con-el-sol",
+        "es-a1-ayuda.v.protector-solar",
+        "es-a1-ayuda.necesito-protector-solar",
+        "es-a1-ayuda.ponete-protector",
+        "es-a1-ayuda.v.gorra",
+        "es-a1-ayuda.v.curita",
+        "es-a1-moverse.me-perdi",
+        "es-a1-ayuda.no-tengo-senal",
+        "es-a1-ayuda.como-vuelvo-a-carlos-paz",
+        "es-a1-ayuda.qa.protector"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "es-a1-ayuda.hay-una-farmacia",
+      "text": "¿Hay una farmacia por acá?",
+      "ru": "Здесь есть аптека поблизости?",
+      "notes": {
+        "ru": "Аптеки в Буэнос-Айресе на каждом шагу, есть и круглосуточные — «de turno»."
+      },
+      "explanation": {
+        "ru": "Прохожему на улице. АЙ: «h» не читается."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.me-duele-la-cabeza",
+      "text": "Me duele la cabeza.",
+      "ru": "У меня болит голова.",
+      "literal": {
+        "ru": "Мне болит голова."
+      },
+      "notes": {
+        "ru": "Часть тела с артиклем «la», не «mi»: «me duele la cabeza»."
+      },
+      "explanation": {
+        "ru": "В аптеке или другу после боличе. ДУЭ-ле."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.me-duele-la-garganta",
+      "text": "Me duele la garganta.",
+      "ru": "У меня болит горло.",
+      "explanation": {
+        "ru": "Фармацевту. гар-ГАН-та: ударение на середину."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.me-duele-la-panza",
+      "text": "Me duele la panza.",
+      "ru": "У меня болит живот.",
+      "notes": {
+        "ru": "После третьего чорипана — классика."
+      },
+      "explanation": {
+        "ru": "Другу или в аптеке. ПАН-са: «z» как «с»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.tengo-fiebre",
+      "text": "Tengo fiebre.",
+      "ru": "У меня температура.",
+      "literal": {
+        "ru": "Я имею жар."
+      },
+      "notes": {
+        "ru": "Не «estoy fiebre»: температуру «имеют» — «tengo»."
+      },
+      "explanation": {
+        "ru": "Врачу или фармацевту. ФЬЕ-бре."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.tengo-tos",
+      "text": "Tengo tos.",
+      "ru": "У меня кашель.",
+      "explanation": {
+        "ru": "В аптеке. ТОС — коротко, «о» как «о»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.tiene-algo-para-la-garganta",
+      "text": "¿Tiene algo para la garganta?",
+      "ru": "У вас есть что-нибудь от горла?",
+      "literal": {
+        "ru": "Есть у вас что-то для горла?"
+      },
+      "notes": {
+        "ru": "«От» горла — «para» (для), а не «de»."
+      },
+      "explanation": {
+        "ru": "Фармацевту, на «usted». ТЬЕ-не: без «s» на конце — это «вы»."
+      },
+      "register": "usted",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.necesito-receta",
+      "text": "¿Necesito receta?",
+      "ru": "Нужен рецепт?",
+      "explanation": {
+        "ru": "Когда фармацевт достаёт лекарство. не-се-СИ-то ре-СЕ-та."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.cada-cuantas-horas",
+      "text": "¿Cada cuántas horas lo tomo?",
+      "ru": "Через сколько часов его пить?",
+      "notes": {
+        "ru": "Лекарство тоже «tomar», как мате и автобус."
+      },
+      "explanation": {
+        "ru": "Фармацевту о лекарстве. КА-да КУАН-тас О-рас."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.me-siento-mal",
+      "text": "Me siento mal.",
+      "ru": "Мне плохо.",
+      "literal": {
+        "ru": "Я себя чувствую плохо."
+      },
+      "explanation": {
+        "ru": "Другу или врачу. СЬЕН-то: «s» как «с»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.estoy-mareado",
+      "text": "Estoy mareado.",
+      "ru": "У меня кружится голова.",
+      "notes": {
+        "ru": "Женщина скажет «mareada». И при морской болезни тоже «mareado»."
+      },
+      "explanation": {
+        "ru": "Врачу или другу. ма-ре-А-до."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.necesito-un-medico",
+      "text": "Necesito un médico.",
+      "ru": "Мне нужен врач.",
+      "explanation": {
+        "ru": "Портье в отеле или прохожему. МЕ-ди-ко: ударение в начале."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.donde-esta-la-guardia",
+      "text": "¿Dónde está la guardia?",
+      "ru": "Где неотложка?",
+      "notes": {
+        "ru": "В государственных больницах неотложная помощь бесплатна и для иностранцев."
+      },
+      "explanation": {
+        "ru": "В больнице или на улице. ГУАР-дья: «gu» как «гу»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.soy-alergico",
+      "text": "Soy alérgico a la penicilina.",
+      "ru": "У меня аллергия на пенициллин.",
+      "literal": {
+        "ru": "Я аллергичен к пенициллину."
+      },
+      "notes": {
+        "ru": "Женщина скажет «alérgica»."
+      },
+      "explanation": {
+        "ru": "Врачу или фармацевту. а-ЛЕР-хи-ко: «g» перед «i» — как «х»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.llama-a-una-ambulancia",
+      "text": "¡Llamá a una ambulancia!",
+      "ru": "Вызови скорую!",
+      "notes": {
+        "ru": "Скорая в Буэнос-Айресе (SAME) — 107, общий номер экстренных служб — 911."
+      },
+      "explanation": {
+        "ru": "Другу в беде. ша-МА: ударение на конце."
+      },
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.ayuda",
+      "text": "¡Ayuda!",
+      "ru": "Помогите!",
+      "explanation": {
+        "ru": "Кричишь, когда нужна помощь. а-ШУ-да: «y» по-портеньо как «ш»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.me-puede-ayudar",
+      "text": "¿Me puede ayudar?",
+      "ru": "Вы можете мне помочь?",
+      "notes": {
+        "ru": "С незнакомым взрослым, полицейским, врачом — на «usted». Другу: «¿me ayudás?»."
+      },
+      "explanation": {
+        "ru": "Вежливая просьба. ПУЭ-де: без «s» — это «вы»."
+      },
+      "register": "usted",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-ayuda.habla-ingles",
+      "text": "¿Habla inglés?",
+      "ru": "Вы говорите по-английски?",
+      "notes": {
+        "ru": "Другу — «¿hablás inglés?», врачу — «¿habla inglés?»."
+      },
+      "explanation": {
+        "ru": "Врачу или в полиции. А-бла: «h» немая, ударение в начале."
+      },
+      "register": "usted",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-ayuda.me-lo-puede-escribir",
+      "text": "¿Me lo puede escribir?",
+      "ru": "Можете мне это написать?",
+      "notes": {
+        "ru": "Спасение, когда не понял название лекарства или адрес."
+      },
+      "explanation": {
+        "ru": "Врачу или фармацевту. эс-кри-БИР: «b» и «v» звучат одинаково."
+      },
+      "register": "usted",
+      "situation": "no-entiendo"
+    },
+    {
+      "id": "es-a1-ayuda.perdi-el-celular",
+      "text": "Perdí el celular.",
+      "ru": "Я потерял телефон.",
+      "notes": {
+        "ru": "Не путай: «me perdí» — я заблудился, «perdí el celular» — потерял телефон."
+      },
+      "explanation": {
+        "ru": "В полиции или другу. пер-ДИ: ударение на конце."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.me-robaron-la-billetera",
+      "text": "Me robaron la billetera.",
+      "ru": "У меня украли кошелёк.",
+      "literal": {
+        "ru": "Мне украли кошелёк."
+      },
+      "explanation": {
+        "ru": "В полиции. би-ше-ТЕ-ра: «ll» как «ш»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.donde-esta-la-comisaria",
+      "text": "¿Dónde está la comisaría?",
+      "ru": "Где полицейский участок?",
+      "notes": {
+        "ru": "Справка о краже из «comisaría» нужна для страховки."
+      },
+      "explanation": {
+        "ru": "Прохожему. ко-ми-са-РИ-а: ударение на «и»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.me-queme-con-el-sol",
+      "text": "Me quemé con el sol.",
+      "ru": "Я сгорел на солнце.",
+      "notes": {
+        "ru": "Солнце в горах Кордовы жжёт сильнее, чем кажется — Иван проверил."
+      },
+      "explanation": {
+        "ru": "В аптеке в Карлос-Пасе. ке-МЕ: ударение на конце."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.necesito-protector-solar",
+      "text": "Necesito protector solar.",
+      "ru": "Мне нужен солнцезащитный крем.",
+      "explanation": {
+        "ru": "В аптеке или в киоско у озера. про-тек-ТОР со-ЛАР."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.ponete-protector",
+      "text": "¡Ponete protector, Iván!",
+      "ru": "Намажься кремом, Иван!",
+      "literal": {
+        "ru": "Надень на себя защиту, Иван!"
+      },
+      "notes": {
+        "ru": "Флор говорит это каждое утро в Карлос-Пасе. Иван не слушает."
+      },
+      "explanation": {
+        "ru": "Так скажет друг. по-НЕ-те: в повелительном «vos» ударение на середину."
+      },
+      "register": "tu",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.no-tengo-senal",
+      "text": "No tengo señal.",
+      "ru": "У меня нет связи.",
+      "notes": {
+        "ru": "В горах связь пропадает — договорись о встрече заранее."
+      },
+      "explanation": {
+        "ru": "В горах Кордовы. се-НЬАЛЬ: «ñ» как «нь»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.como-vuelvo-a-carlos-paz",
+      "text": "¿Cómo vuelvo a Carlos Paz?",
+      "ru": "Как мне вернуться в Карлос-Пас?",
+      "explanation": {
+        "ru": "Местному на тропе в горах. ВУЭЛЬ-во: «v» мягкая, почти «б»."
+      },
+      "register": "neutral",
+      "situation": "salud"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "es-a1-ayuda.v.farmacia",
+      "word": "farmacia",
+      "article": "la",
+      "gender": "f",
+      "ru": "аптека",
+      "example": "es-a1-ayuda.hay-una-farmacia",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.remedio",
+      "word": "remedio",
+      "article": "el",
+      "gender": "m",
+      "ru": "лекарство",
+      "notes": {
+        "ru": "Так говорят чаще, чем «medicamento»."
+      },
+      "situation": "salud",
+      "image": "fluent:pill"
+    },
+    {
+      "id": "es-a1-ayuda.v.pastilla",
+      "word": "pastilla",
+      "article": "la",
+      "gender": "f",
+      "ru": "таблетка",
+      "situation": "salud",
+      "image": "fluent:pill"
+    },
+    {
+      "id": "es-a1-ayuda.v.receta",
+      "word": "receta",
+      "article": "la",
+      "gender": "f",
+      "ru": "рецепт (врача)",
+      "notes": {
+        "ru": "И рецепт врача, и рецепт блюда — одно слово."
+      },
+      "example": "es-a1-ayuda.necesito-receta",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.dolor",
+      "word": "dolor",
+      "article": "el",
+      "gender": "m",
+      "ru": "боль",
+      "notes": {
+        "ru": "Мужского рода: «el dolor», хоть по-русски боль — «она»."
+      },
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.cabeza",
+      "word": "cabeza",
+      "article": "la",
+      "gender": "f",
+      "ru": "голова",
+      "example": "es-a1-ayuda.me-duele-la-cabeza",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.garganta",
+      "word": "garganta",
+      "article": "la",
+      "gender": "f",
+      "ru": "горло",
+      "example": "es-a1-ayuda.me-duele-la-garganta",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.panza",
+      "word": "panza",
+      "article": "la",
+      "gender": "f",
+      "ru": "живот",
+      "notes": {
+        "ru": "Разговорное слово; врач скажет «el estómago»."
+      },
+      "example": "es-a1-ayuda.me-duele-la-panza",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.fiebre",
+      "word": "fiebre",
+      "article": "la",
+      "gender": "f",
+      "ru": "температура, жар",
+      "example": "es-a1-ayuda.tengo-fiebre",
+      "situation": "salud",
+      "image": "fluent:face-with-thermometer"
+    },
+    {
+      "id": "es-a1-ayuda.v.tos",
+      "word": "tos",
+      "article": "la",
+      "gender": "f",
+      "ru": "кашель",
+      "example": "es-a1-ayuda.tengo-tos",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.medico",
+      "word": "médico",
+      "article": "el",
+      "gender": "m",
+      "ru": "врач",
+      "example": "es-a1-ayuda.necesito-un-medico",
+      "situation": "salud",
+      "image": "fluent:man-health-worker"
+    },
+    {
+      "id": "es-a1-ayuda.v.medica",
+      "word": "médica",
+      "article": "la",
+      "gender": "f",
+      "ru": "врач (женщина)",
+      "situation": "salud",
+      "image": "fluent:woman-health-worker"
+    },
+    {
+      "id": "es-a1-ayuda.v.guardia",
+      "word": "guardia",
+      "article": "la",
+      "gender": "f",
+      "ru": "приёмный покой, неотложка",
+      "notes": {
+        "ru": "«La guardia» в больнице — отделение, куда идут без записи."
+      },
+      "example": "es-a1-ayuda.donde-esta-la-guardia",
+      "situation": "salud",
+      "image": "fluent:hospital"
+    },
+    {
+      "id": "es-a1-ayuda.v.ambulancia",
+      "word": "ambulancia",
+      "article": "la",
+      "gender": "f",
+      "ru": "скорая помощь",
+      "situation": "salud",
+      "image": "fluent:ambulance"
+    },
+    {
+      "id": "es-a1-ayuda.v.policia",
+      "word": "policía",
+      "article": "la",
+      "gender": "f",
+      "ru": "полиция",
+      "notes": {
+        "ru": "«La policía» — полиция; полицейский — «el policía»."
+      },
+      "situation": "salud",
+      "image": "fluent:police-officer"
+    },
+    {
+      "id": "es-a1-ayuda.v.billetera",
+      "word": "billetera",
+      "article": "la",
+      "gender": "f",
+      "ru": "кошелёк, бумажник",
+      "example": "es-a1-ayuda.me-robaron-la-billetera",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.pasaporte",
+      "word": "pasaporte",
+      "article": "el",
+      "gender": "m",
+      "ru": "паспорт",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.v.sol",
+      "word": "sol",
+      "article": "el",
+      "gender": "m",
+      "ru": "солнце",
+      "situation": "salud",
+      "image": "fluent:sun"
+    },
+    {
+      "id": "es-a1-ayuda.v.protector-solar",
+      "word": "protector solar",
+      "article": "el",
+      "gender": "m",
+      "ru": "солнцезащитный крем",
+      "example": "es-a1-ayuda.necesito-protector-solar",
+      "situation": "salud",
+      "image": "fluent:lotion-bottle"
+    },
+    {
+      "id": "es-a1-ayuda.v.gorra",
+      "word": "gorra",
+      "article": "la",
+      "gender": "f",
+      "ru": "кепка",
+      "situation": "salud",
+      "image": "fluent:billed-cap"
+    },
+    {
+      "id": "es-a1-ayuda.v.curita",
+      "word": "curita",
+      "article": "la",
+      "gender": "f",
+      "ru": "пластырь",
+      "situation": "salud",
+      "image": "fluent:adhesive-bandage"
+    }
+  ],
+  "qa": [
+    {
+      "id": "es-a1-ayuda.qa.que-le-pasa",
+      "question": "Buenas tardes. ¿Qué le pasa?",
+      "questionRu": "Добрый день. Что у вас случилось?",
+      "accepted": [
+        {
+          "text": "Me duele la garganta.",
+          "ru": "У меня болит горло."
+        },
+        {
+          "text": "Tengo fiebre y tos.",
+          "ru": "У меня температура и кашель."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Me duelo la garganta.",
+          "ru": "Я болю горло. (боль — «me duele»: болит она, а не ты)"
+        },
+        {
+          "text": "Estoy fiebre.",
+          "ru": "Я есть температура. (температуру «имеют»: «tengo fiebre»)"
+        }
+      ],
+      "register": "usted",
+      "situation": "salud",
+      "notes": {
+        "ru": "Фармацевт говорит на «usted» — отвечай вежливо."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-ayuda.qa.desde-cuando",
+      "question": "¿Desde cuándo tiene fiebre?",
+      "questionRu": "С какого времени у вас температура?",
+      "accepted": [
+        {
+          "text": "Desde ayer.",
+          "ru": "Со вчерашнего дня."
+        },
+        {
+          "text": "Desde anoche.",
+          "ru": "Со вчерашнего вечера."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Tengo treinta y ocho.",
+          "ru": "У меня тридцать восемь. (спросили «с каких пор», а не сколько)"
+        },
+        {
+          "text": "Hace ayer.",
+          "ru": "Вчера назад. («hace» — с количеством: «hace dos días»)"
+        }
+      ],
+      "register": "usted",
+      "situation": "salud"
+    },
+    {
+      "id": "es-a1-ayuda.qa.alergico",
+      "question": "¿Es alérgico a algún remedio?",
+      "questionRu": "У вас есть аллергия на лекарства?",
+      "accepted": [
+        {
+          "text": "No, a ninguno.",
+          "ru": "Нет, ни на какие."
+        },
+        {
+          "text": "Sí, a la penicilina.",
+          "ru": "Да, на пенициллин."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "No, yo alérgico no.",
+          "ru": "Нет, я аллергик нет. (пропущен глагол: «no soy alérgico»)"
+        },
+        {
+          "text": "No, soy alérgico.",
+          "ru": "Нет, у меня аллергия. (сам себе противоречишь)"
+        }
+      ],
+      "register": "usted",
+      "situation": "salud",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-ayuda.qa.estas-bien",
+      "question": "¡Iván! ¿Estás bien?",
+      "questionRu": "Иван! Ты в порядке?",
+      "accepted": [
+        {
+          "text": "Sí, tranqui, no es nada.",
+          "ru": "Да, спокойно, ничего страшного."
+        },
+        {
+          "text": "Más o menos, me siento mal.",
+          "ru": "Так себе, мне плохо."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, soy bien.",
+          "ru": "Да, я есть хорошо. (состояние — «estoy bien»)"
+        },
+        {
+          "text": "Sí, está bien.",
+          "ru": "Да, он в порядке. (про себя — «estoy»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": {
+        "ru": "Мартин всегда рядом, когда у Ивана мелкая катастрофа."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-ayuda.qa.en-que-lo-ayudo",
+      "question": "Buenas noches. ¿En qué lo puedo ayudar?",
+      "questionRu": "Добрый вечер. Чем могу вам помочь?",
+      "accepted": [
+        {
+          "text": "Perdí el celular.",
+          "ru": "Я потерял телефон."
+        },
+        {
+          "text": "Me robaron la billetera.",
+          "ru": "У меня украли кошелёк."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Me perdí el celular.",
+          "ru": "Я заблудился телефон. («me perdí» — я заблудился; телефон — «perdí el celular»)"
+        },
+        {
+          "text": "Yo perdido el celular.",
+          "ru": "Я потерянный телефон. (пропущен глагол: «perdí»)"
+        }
+      ],
+      "register": "usted",
+      "situation": "salud",
+      "notes": {
+        "ru": "Так встретят в «comisaría» — полицейском участке."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-ayuda.qa.protector",
+      "question": "¿Te pusiste protector?",
+      "questionRu": "Ты намазался кремом?",
+      "accepted": [
+        {
+          "text": "No… ¡me olvidé!",
+          "ru": "Нет… забыл!"
+        },
+        {
+          "text": "Sí, ¿querés un poco?",
+          "ru": "Да, хочешь немного?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, me pusiste.",
+          "ru": "Да, ты меня намазал. (про себя — «me puse»)"
+        },
+        {
+          "text": "No, me pongo ayer.",
+          "ru": "Нет, я мажусь вчера. (вчера — в прошлом: «me puse»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "salud",
+      "notes": {
+        "ru": "Флор спрашивает у озера в Карлос-Пасе, глядя на красного Ивана."
+      }
+    }
+  ]
+}

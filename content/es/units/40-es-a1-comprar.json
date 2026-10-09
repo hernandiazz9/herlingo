@@ -1,0 +1,867 @@
+{
+  "id": "es-a1-comprar",
+  "order": 40,
+  "title": {
+    "ru": "Киоско и деньги"
+  },
+  "description": {
+    "ru": "Числа до тысячи, песо и «plata», киоско Дона Хулио, наличные, карта или перевод — и торг на ремесленной ярмарке в Карлос-Пасе."
+  },
+  "emoji": "🛒",
+  "situation": "compras",
+  "lessons": [
+    {
+      "id": "es-a1-comprar.l.numeros",
+      "title": {
+        "ru": "Числа до тысячи"
+      },
+      "items": [
+        "es-a1-comprar.v.once",
+        "es-a1-comprar.v.doce",
+        "es-a1-comprar.v.quince",
+        "es-a1-comprar.v.veinte",
+        "es-a1-comprar.v.treinta",
+        "es-a1-comprar.v.cincuenta",
+        "es-a1-comprar.v.cien",
+        "es-a1-comprar.v.doscientos",
+        "es-a1-comprar.v.quinientos",
+        "es-a1-comprar.v.mil",
+        "es-a1-comprar.v.peso",
+        "es-a1-comprar.cuanto-es",
+        "es-a1-moverse.cuanto-sale",
+        "es-a1-comprar.son-dos-mil",
+        "es-a1-comprar.son-mil-quinientos"
+      ]
+    },
+    {
+      "id": "es-a1-comprar.l.kiosco",
+      "title": {
+        "ru": "В киоско у Дона Хулио"
+      },
+      "items": [
+        "es-a1-comprar.v.kiosco",
+        "es-a1-comer.v.alfajor",
+        "es-a1-comer.v.agua",
+        "es-a1-comprar.un-alfajor-y-un-agua",
+        "es-a1-comprar.v.chicle",
+        "es-a1-comprar.tenes-chicles",
+        "es-a1-comprar.me-cargas-la-sube",
+        "es-a1-comprar.v.billete",
+        "es-a1-comprar.v.moneda",
+        "es-a1-comprar.tenes-cambio",
+        "es-a1-comprar.no-tengo-cambio",
+        "es-a1-comprar.quedate-con-el-vuelto",
+        "es-a1-comprar.v.bolsa",
+        "es-a1-comprar.me-das-una-bolsa",
+        "es-a1-comprar.qa.que-te-doy",
+        "es-a1-comprar.qa.tenes-cambio"
+      ]
+    },
+    {
+      "id": "es-a1-comprar.l.pagar",
+      "title": {
+        "ru": "Наличные, карта или перевод"
+      },
+      "items": [
+        "es-a1-comprar.v.plata",
+        "es-a1-comprar.v.efectivo",
+        "es-a1-comprar.pago-en-efectivo",
+        "es-a1-comprar.solo-efectivo",
+        "es-a1-moverse.v.tarjeta",
+        "es-a1-comprar.puedo-pagar-con-tarjeta",
+        "es-a1-comprar.v.transferencia",
+        "es-a1-comprar.te-pago-por-transferencia",
+        "es-a1-comprar.me-pasas-el-alias",
+        "es-a1-comprar.v.almacen",
+        "es-a1-comprar.hay-un-almacen-por-aca",
+        "es-a1-comprar.v.super",
+        "es-a1-comprar.hasta-que-hora-esta-abierto",
+        "es-a1-comprar.qa.efectivo-o-tarjeta"
+      ]
+    },
+    {
+      "id": "es-a1-comprar.l.feria",
+      "title": {
+        "ru": "Ярмарка в Карлос-Пасе"
+      },
+      "items": [
+        "es-a1-comprar.v.feria",
+        "es-a1-comprar.es-artesanal",
+        "es-a1-comprar.esta-re-caro",
+        "es-a1-comprar.me-haces-un-descuento",
+        "es-a1-comprar.te-lo-dejo-en-mil",
+        "es-a1-comprar.tenes-algo-mas-barato",
+        "es-a1-comprar.llevo-dos",
+        "es-a1-comprar.v.remera",
+        "es-a1-comprar.v.campera",
+        "es-a1-comprar.v.zapatillas",
+        "es-a1-comprar.estoy-mirando",
+        "es-a1-comprar.v.talle",
+        "es-a1-comprar.tenes-un-talle-mas-grande",
+        "es-a1-comprar.me-la-puedo-probar",
+        "es-a1-comprar.me-queda-chica",
+        "es-a1-comprar.me-la-llevo",
+        "es-a1-comprar.qa.buscas-algo",
+        "es-a1-comprar.qa.que-talle",
+        "es-a1-comprar.qa.te-lo-llevas"
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "id": "es-a1-comprar.cuanto-es",
+      "text": "¿Cuánto es?",
+      "ru": "Сколько с меня?",
+      "explanation": {
+        "ru": "На кассе, когда всё уже выбрал. Ударение: КУАН-то."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.son-dos-mil",
+      "text": "Son dos mil pesos.",
+      "ru": "С тебя две тысячи песо.",
+      "explanation": {
+        "ru": "Так назовут сумму. «mil» не меняется: «dos mil», «tres mil»."
+      },
+      "register": "neutral",
+      "situation": "numeros",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comprar.son-mil-quinientos",
+      "text": "Son mil quinientos pesos.",
+      "ru": "Тысяча пятьсот песо.",
+      "notes": {
+        "ru": "Цены быстро растут, так что тысячи ты будешь слышать постоянно."
+      },
+      "explanation": {
+        "ru": "Цена альфахора в киоско. «quinientos» — ки-ньен-тос, «ñ» как «нь»."
+      },
+      "register": "neutral",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.un-alfajor-y-un-agua",
+      "text": "Un alfajor y un agua, por favor.",
+      "ru": "Альфахор и воду, пожалуйста.",
+      "notes": {
+        "ru": "«Agua» женского рода, но говорят «un agua» и «el agua» — для благозвучия."
+      },
+      "explanation": {
+        "ru": "Классический заказ в киоско. «y» между словами — просто «и»."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.tenes-chicles",
+      "text": "¿Tenés chicles?",
+      "ru": "У тебя есть жвачка?",
+      "explanation": {
+        "ru": "Спрашиваешь киоскеро. «ch» как русское «ч»: ЧИ-клес."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.me-cargas-la-sube",
+      "text": "¿Me cargás la SUBE?",
+      "ru": "Пополнишь мне SUBE?",
+      "notes": {
+        "ru": "Карту SUBE пополняют прямо в киоско: даёшь карту и деньги."
+      },
+      "explanation": {
+        "ru": "В киоско с наклейкой SUBE. Ударение на конце: кар-ГАС."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.tenes-cambio",
+      "text": "¿Tenés cambio?",
+      "ru": "Есть мелочь? / Сдача найдётся?",
+      "notes": {
+        "ru": "Мелочи вечно не хватает, поэтому спрашивают до того, как дать крупную купюру."
+      },
+      "explanation": {
+        "ru": "Перед тем как дать крупную купюру. «b» и «v» звучат одинаково: КАМ-био."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.no-tengo-cambio",
+      "text": "No tengo cambio.",
+      "ru": "У меня нет мелочи.",
+      "explanation": {
+        "ru": "Услышишь от продавца — плати переводом или картой. тен-го КАМ-био."
+      },
+      "register": "neutral",
+      "situation": "compras",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comprar.quedate-con-el-vuelto",
+      "text": "Quedate con el vuelto.",
+      "ru": "Сдачи не надо.",
+      "literal": {
+        "ru": "Оставайся со сдачей."
+      },
+      "notes": {
+        "ru": "«Vuelto» — сдача; в Испании сказали бы «la vuelta»."
+      },
+      "explanation": {
+        "ru": "Таксисту или киоскеро, когда сдача мелкая. ке-ДА-те: ударение на «да»."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.me-das-una-bolsa",
+      "text": "¿Me das una bolsa?",
+      "ru": "Дашь пакет?",
+      "explanation": {
+        "ru": "На кассе в магазине или в киоско. «b» мягкая, почти как «в»: БОЛЬ-са."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.pago-en-efectivo",
+      "text": "Pago en efectivo.",
+      "ru": "Я заплачу наличными.",
+      "explanation": {
+        "ru": "За наличные иногда дают скидку — спроси! э-фек-ТИ-во."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.solo-efectivo",
+      "text": "Solo efectivo.",
+      "ru": "Только наличные.",
+      "explanation": {
+        "ru": "Табличка или ответ продавца на ярмарке. СО-ло: «о» всегда «о», не «а»."
+      },
+      "register": "neutral",
+      "situation": "compras",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comprar.puedo-pagar-con-tarjeta",
+      "text": "¿Puedo pagar con tarjeta?",
+      "ru": "Можно картой?",
+      "explanation": {
+        "ru": "Перед покупкой в магазине или кафе. «j» — как русское «х»: тар-ХЕ-та."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.te-pago-por-transferencia",
+      "text": "¿Te pago por transferencia?",
+      "ru": "Могу перевести тебе?",
+      "notes": {
+        "ru": "В Аргентине переводы по телефону — обычное дело даже в киоско."
+      },
+      "explanation": {
+        "ru": "Когда нет наличных. транс-фе-РЕН-сья."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.me-pasas-el-alias",
+      "text": "¿Me pasás el alias?",
+      "ru": "Скинешь алиас?",
+      "notes": {
+        "ru": "«Alias» — короткое имя счёта (вроде «flor.mate.cordoba»), по нему переводят деньги."
+      },
+      "explanation": {
+        "ru": "Перед переводом. Ударение: А-льяс, па-САС."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.hay-un-almacen-por-aca",
+      "text": "¿Hay un almacén por acá?",
+      "ru": "Здесь поблизости есть продуктовый?",
+      "explanation": {
+        "ru": "Прохожему или соседу. «h» в «hay» не читается: АЙ."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.hasta-que-hora-esta-abierto",
+      "text": "¿Hasta qué hora está abierto?",
+      "ru": "До скольки открыто?",
+      "explanation": {
+        "ru": "В магазине или аптеке. «h» немая: АС-та. а-БЬЕР-то."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.es-artesanal",
+      "text": "¿Es artesanal?",
+      "ru": "Это ручная работа?",
+      "notes": {
+        "ru": "На ремесленной ярмарке в Карлос-Пасе продают калабасы для мате, ножи и сладости."
+      },
+      "explanation": {
+        "ru": "На ярмарке у прилавка. ар-те-са-НАЛЬ: ударение на конце."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.esta-re-caro",
+      "text": "¡Está re caro!",
+      "ru": "Очень дорого!",
+      "notes": {
+        "ru": "«Re» перед словом — «очень»: «re caro», «re lindo»."
+      },
+      "explanation": {
+        "ru": "Тихо другу, не продавцу. «r» в начале слова раскатистая: ррре."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.me-haces-un-descuento",
+      "text": "¿Me hacés un descuento?",
+      "ru": "Сделаешь скидку?",
+      "notes": {
+        "ru": "На ярмарке торговаться нормально, в супермаркете — нет."
+      },
+      "explanation": {
+        "ru": "На ярмарке или если платишь наличными. «h» немая: а-СЕС."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.te-lo-dejo-en-mil",
+      "text": "Te lo dejo en mil.",
+      "ru": "Отдам тебе за тысячу.",
+      "literal": {
+        "ru": "Оставляю тебе его в тысячу."
+      },
+      "explanation": {
+        "ru": "Так продавец уступает в цене. «j» — как «х»: ДЕ-хо."
+      },
+      "register": "tu",
+      "situation": "compras",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comprar.tenes-algo-mas-barato",
+      "text": "¿Tenés algo más barato?",
+      "ru": "Есть что-нибудь подешевле?",
+      "explanation": {
+        "ru": "Когда цена кусается. ба-РА-то: ударение на середину."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.llevo-dos",
+      "text": "Llevo dos.",
+      "ru": "Возьму две.",
+      "explanation": {
+        "ru": "Когда решил купить. «ll» в Буэнос-Айресе — как «ш»: ШЕ-во."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.estoy-mirando",
+      "text": "Solo estoy mirando, gracias.",
+      "ru": "Я просто смотрю, спасибо.",
+      "explanation": {
+        "ru": "Когда продавец спрашивает, что ищешь. «s» перед согласной мягкая: эх-ТОЙ."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.tenes-un-talle-mas-grande",
+      "text": "¿Tenés un talle más grande?",
+      "ru": "Есть размер побольше?",
+      "notes": {
+        "ru": "Размеры тут бывают маленькие: русскому «L» часто нужен «XL»."
+      },
+      "explanation": {
+        "ru": "В магазине одежды. ТА-ще: «ll» как «ш»."
+      },
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.me-la-puedo-probar",
+      "text": "¿Me la puedo probar?",
+      "ru": "Можно примерить?",
+      "literal": {
+        "ru": "Могу её себе примерить?"
+      },
+      "notes": {
+        "ru": "«La» — это «la remera» или «la campera»; для мужского рода — «me lo»."
+      },
+      "explanation": {
+        "ru": "Держа вещь в руках. про-БАР: ударение на конце."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.me-queda-chica",
+      "text": "Me queda chica.",
+      "ru": "Мне мала.",
+      "literal": {
+        "ru": "Мне остаётся маленькой."
+      },
+      "notes": {
+        "ru": "Большая — «me queda grande»; в самый раз — «me queda bien»."
+      },
+      "explanation": {
+        "ru": "Выходя из примерочной. ке-ДА ЧИ-ка."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.me-la-llevo",
+      "text": "Me la llevo.",
+      "ru": "Беру!",
+      "literal": {
+        "ru": "Я её уношу себе."
+      },
+      "explanation": {
+        "ru": "Когда решил купить вещь. ШЕ-во — по-портеньо."
+      },
+      "register": "neutral",
+      "situation": "compras"
+    }
+  ],
+  "vocab": [
+    {
+      "id": "es-a1-comprar.v.once",
+      "word": "once",
+      "ru": "одиннадцать",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.doce",
+      "word": "doce",
+      "ru": "двенадцать",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.quince",
+      "word": "quince",
+      "ru": "пятнадцать",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.veinte",
+      "word": "veinte",
+      "ru": "двадцать",
+      "notes": {
+        "ru": "21 — «veintiuno», одним словом, до 29 включительно."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.treinta",
+      "word": "treinta",
+      "ru": "тридцать",
+      "notes": {
+        "ru": "Дальше через «y»: «treinta y uno», «treinta y dos»."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.cincuenta",
+      "word": "cincuenta",
+      "ru": "пятьдесят",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.cien",
+      "word": "cien",
+      "ru": "сто",
+      "notes": {
+        "ru": "Ровно сто — «cien»; дальше «ciento»: «ciento diez»."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.doscientos",
+      "word": "doscientos",
+      "ru": "двести",
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.quinientos",
+      "word": "quinientos",
+      "ru": "пятьсот",
+      "notes": {
+        "ru": "Не «cincocientos»! Запомни как исключение."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.mil",
+      "word": "mil",
+      "ru": "тысяча",
+      "notes": {
+        "ru": "Без «un»: просто «mil pesos», а две тысячи — «dos mil»."
+      },
+      "situation": "numeros"
+    },
+    {
+      "id": "es-a1-comprar.v.peso",
+      "word": "peso",
+      "article": "el",
+      "gender": "m",
+      "ru": "песо",
+      "notes": {
+        "ru": "Знак — «$», как у доллара: не пугайся ценников."
+      },
+      "example": "es-a1-comprar.son-dos-mil",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.v.plata",
+      "word": "plata",
+      "article": "la",
+      "gender": "f",
+      "ru": "деньги",
+      "notes": {
+        "ru": "Буквально «серебро». В Аргентине деньги — «plata»; ещё услышишь «guita»."
+      },
+      "situation": "compras",
+      "image": "fluent:money-bag"
+    },
+    {
+      "id": "es-a1-comprar.v.efectivo",
+      "word": "efectivo",
+      "article": "el",
+      "gender": "m",
+      "ru": "наличные",
+      "example": "es-a1-comprar.pago-en-efectivo",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.v.transferencia",
+      "word": "transferencia",
+      "article": "la",
+      "gender": "f",
+      "ru": "перевод (банковский)",
+      "example": "es-a1-comprar.te-pago-por-transferencia",
+      "situation": "compras",
+      "image": "fluent:mobile-phone"
+    },
+    {
+      "id": "es-a1-comprar.v.billete",
+      "word": "billete",
+      "article": "el",
+      "gender": "m",
+      "ru": "купюра",
+      "notes": {
+        "ru": "Не билет! Билет на автобус — «pasaje»."
+      },
+      "situation": "compras",
+      "image": "fluent:dollar-banknote"
+    },
+    {
+      "id": "es-a1-comprar.v.moneda",
+      "word": "moneda",
+      "article": "la",
+      "gender": "f",
+      "ru": "монета",
+      "situation": "compras",
+      "image": "fluent:coin"
+    },
+    {
+      "id": "es-a1-comprar.v.kiosco",
+      "word": "kiosco",
+      "article": "el",
+      "gender": "m",
+      "ru": "киоско (ларёк со всякой всячиной)",
+      "notes": {
+        "ru": "Киоско на каждом углу: сладости, вода, сигареты и пополнение SUBE."
+      },
+      "situation": "compras",
+      "image": "fluent:convenience-store"
+    },
+    {
+      "id": "es-a1-comprar.v.chicle",
+      "word": "chicle",
+      "article": "el",
+      "gender": "m",
+      "ru": "жвачка",
+      "example": "es-a1-comprar.tenes-chicles",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.v.almacen",
+      "word": "almacén",
+      "article": "el",
+      "gender": "m",
+      "ru": "продуктовая лавка",
+      "notes": {
+        "ru": "Маленький супермаркет у дома часто зовут «el chino»."
+      },
+      "example": "es-a1-comprar.hay-un-almacen-por-aca",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.v.super",
+      "word": "súper",
+      "article": "el",
+      "gender": "m",
+      "ru": "супермаркет",
+      "situation": "compras",
+      "image": "fluent:shopping-cart"
+    },
+    {
+      "id": "es-a1-comprar.v.bolsa",
+      "word": "bolsa",
+      "article": "la",
+      "gender": "f",
+      "ru": "пакет, сумка",
+      "example": "es-a1-comprar.me-das-una-bolsa",
+      "situation": "compras",
+      "image": "fluent:shopping-bags"
+    },
+    {
+      "id": "es-a1-comprar.v.feria",
+      "word": "feria",
+      "article": "la",
+      "gender": "f",
+      "ru": "ярмарка, рынок",
+      "example": "es-a1-comprar.es-artesanal",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.v.remera",
+      "word": "remera",
+      "article": "la",
+      "gender": "f",
+      "ru": "футболка",
+      "notes": {
+        "ru": "В Испании — «camiseta», а тут только «remera»."
+      },
+      "situation": "compras",
+      "image": "fluent:t-shirt"
+    },
+    {
+      "id": "es-a1-comprar.v.campera",
+      "word": "campera",
+      "article": "la",
+      "gender": "f",
+      "ru": "куртка",
+      "situation": "compras",
+      "image": "fluent:coat"
+    },
+    {
+      "id": "es-a1-comprar.v.zapatillas",
+      "word": "zapatillas",
+      "article": "las",
+      "gender": "pl",
+      "ru": "кроссовки",
+      "situation": "compras",
+      "image": "fluent:running-shoe"
+    },
+    {
+      "id": "es-a1-comprar.v.talle",
+      "word": "talle",
+      "article": "el",
+      "gender": "m",
+      "ru": "размер (одежды)",
+      "example": "es-a1-comprar.tenes-un-talle-mas-grande",
+      "situation": "compras"
+    }
+  ],
+  "qa": [
+    {
+      "id": "es-a1-comprar.qa.que-te-doy",
+      "question": "Hola, pibe. ¿Qué te doy?",
+      "questionRu": "Привет, парень. Что тебе дать?",
+      "accepted": [
+        {
+          "text": "Un alfajor y un agua, por favor.",
+          "ru": "Альфахор и воду, пожалуйста."
+        },
+        {
+          "text": "¿Tenés chicles?",
+          "ru": "Жвачка есть?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Un alfajor y una agua.",
+          "ru": "Альфахор и воду. (перед ударной «a» говорят «un agua»)"
+        },
+        {
+          "text": "Doy un alfajor.",
+          "ru": "Я даю альфахор. (это он тебе даёт, а ты просишь)"
+        }
+      ],
+      "register": "tu",
+      "situation": "compras",
+      "notes": {
+        "ru": "Так Дон Хулио встречает всех в своём киоско. «Pibe» — «парень»."
+      },
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comprar.qa.tenes-cambio",
+      "question": "Son mil quinientos. ¿Tenés cambio?",
+      "questionRu": "С тебя полторы тысячи. Мелочь есть?",
+      "accepted": [
+        {
+          "text": "Sí, tomá.",
+          "ru": "Да, держи."
+        },
+        {
+          "text": "No, perdón, tengo un billete de diez mil.",
+          "ru": "Нет, извини, только купюра в десять тысяч."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Cambio dólares.",
+          "ru": "Меняю доллары. («cambio» тут — мелочь, а не обмен валюты)"
+        },
+        {
+          "text": "Sí, son mil quinientos.",
+          "ru": "Да, полторы тысячи. (повторяешь цену, а спросили про мелочь)"
+        }
+      ],
+      "register": "tu",
+      "situation": "compras",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "es-a1-comprar.qa.efectivo-o-tarjeta",
+      "question": "¿Efectivo o tarjeta?",
+      "questionRu": "Наличными или картой?",
+      "accepted": [
+        {
+          "text": "Efectivo.",
+          "ru": "Наличными."
+        },
+        {
+          "text": "Con tarjeta, por favor.",
+          "ru": "Картой, пожалуйста."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, gracias.",
+          "ru": "Да, спасибо. (это вопрос «или — или», «да» не подходит)"
+        },
+        {
+          "text": "Con el tarjeta.",
+          "ru": "Картой. («tarjeta» — женского рода: «la tarjeta»)"
+        }
+      ],
+      "register": "neutral",
+      "situation": "compras",
+      "notes": {
+        "ru": "Ещё могут предложить «transferencia» — перевод."
+      }
+    },
+    {
+      "id": "es-a1-comprar.qa.buscas-algo",
+      "question": "Hola, ¿buscás algo?",
+      "questionRu": "Привет, что-то ищешь?",
+      "accepted": [
+        {
+          "text": "Solo estoy mirando, gracias.",
+          "ru": "Просто смотрю, спасибо."
+        },
+        {
+          "text": "Sí, una remera.",
+          "ru": "Да, футболку."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Busco un magazine.",
+          "ru": "Ищу журнал. («magazine» — журнал; магазин — «negocio» или «tienda»)"
+        },
+        {
+          "text": "No, yo miro solo.",
+          "ru": "Нет, я смотрю один. (калька: «просто» — «solo» перед глаголом)"
+        }
+      ],
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.qa.que-talle",
+      "question": "¿Qué talle usás?",
+      "questionRu": "Какой у тебя размер?",
+      "accepted": [
+        {
+          "text": "Uso talle L.",
+          "ru": "Ношу L."
+        },
+        {
+          "text": "No sé, ¿me la puedo probar?",
+          "ru": "Не знаю, можно примерить?"
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Tengo veintinueve.",
+          "ru": "Мне двадцать девять. (спросили размер, а не возраст)"
+        },
+        {
+          "text": "Estoy L.",
+          "ru": "Я есть L. (тут нужен глагол «usar»)"
+        }
+      ],
+      "register": "tu",
+      "situation": "compras"
+    },
+    {
+      "id": "es-a1-comprar.qa.te-lo-llevas",
+      "question": "Te lo dejo en mil. ¿Te lo llevás?",
+      "questionRu": "Отдам за тысячу. Берёшь?",
+      "accepted": [
+        {
+          "text": "¡Dale, me lo llevo!",
+          "ru": "Давай, беру!"
+        },
+        {
+          "text": "Sí, me lo llevo, gracias.",
+          "ru": "Да, беру, спасибо."
+        }
+      ],
+      "distractors": [
+        {
+          "text": "Sí, te lo llevás.",
+          "ru": "Да, ты его берёшь. (про себя — «me lo llevo»)"
+        },
+        {
+          "text": "No, gracias, es re barato.",
+          "ru": "Нет, спасибо, это очень дёшево. (странная причина отказаться)"
+        }
+      ],
+      "register": "tu",
+      "situation": "compras",
+      "notes": {
+        "ru": "На ярмарке в Карлос-Пасе так заканчивается почти любой торг."
+      },
+      "voice": "es-AR-TomasNeural"
+    }
+  ]
+}
