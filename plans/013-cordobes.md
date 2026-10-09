@@ -56,22 +56,22 @@ Worktree setup: npm ci
 - Outcome: units 50 plata, 60 lugares, 70 emociones, 80 trampas; pack = 267 phrases (29 expressions), 267 vocab, 60 Q&A; lexicon coverage 522/557 alta+media rows (94%), 0 duplicates — 85f50f73
 
 ## T159 — Dialogues (8)
-- Status: running
+- Status: done
 - Depends on: T158
 - Goal: Write 8 dialogues where a Spaniard copes in Córdoba; options include Spain-Spanish answers that are understood but sound foreign, and false-friend traps.
 - Context: Shared contract, docs/brief-cba.md, content/es/dialogues/ as format model.
 - Scope: may touch `content/cba/dialogues/` / must not touch units, pack.json, other packs.
 - Done when: 8 dialogue files (about 9 turns, 3 options); `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 8 dialogues, 9 turns, 3 choice points × 3 options (cordobés / Spain '(igual en España)' / trap), culiao only in 1 and 7 — 39a0276a
 
 ## T160 — Stories (8)
-- Status: running
+- Status: done
 - Depends on: T158
 - Goal: Write 8 stories (90–130 words, files `NN-<slug>.json`) full of cordobés, with keywords pointing at unit items and comprehension questions.
 - Context: Shared contract, docs/brief-cba.md, content/es/stories/ as format model.
 - Scope: may touch `content/cba/stories/` / must not touch units, dialogues, pack.json, other packs.
 - Done when: 8 story files; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 8 stories 106–121 words, 7 inline vocab story-cba-*, culiau only in Nico's lines — 96a7de6b
 
 ## T161 — Cordobés voice
 - Status: blocked (Hernán picks an option after the test clips)
@@ -109,3 +109,5 @@ Worktree setup: npm ci
 - 2026-10-10 T158 done → 85f50f73
 - 2026-10-10 T159 launched · attempt 1
 - 2026-10-10 T160 launched · attempt 1
+- 2026-10-10 T160 done → 96a7de6b
+- 2026-10-10 T159 done → 39a0276a
