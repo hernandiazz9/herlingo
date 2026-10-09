@@ -1,0 +1,225 @@
+{
+  "id": "story.cba-llegada",
+  "order": 1,
+  "title": "¿Qué hacé', gallego?",
+  "titleEs": "¿Qué tal, españolito?",
+  "description": "Álex aterriza en Córdoba y contesta en serio a un «¿qué hacés?».",
+  "emoji": "✈️",
+  "situation": "saludos",
+  "level": "B1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "Álex aterriza en Córdoba un jueves de marzo, con sueño y una valija enorme.",
+      "es": "Álex aterriza en Córdoba un jueves de marzo, con sueño y una maleta enorme."
+    },
+    {
+      "id": "s2",
+      "text": "En la salida lo esperan la Cami, su novia, y el Nico, el primo.",
+      "es": "A la salida le esperan Cami, su novia, y Nico, su primo."
+    },
+    {
+      "id": "s3",
+      "text": "«¿Qué lo qué, nero? ¿Qué hacé'?»",
+      "es": "«¿Qué pasa, tío? ¿Qué tal?»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s4",
+      "text": "Álex le explica con todo detalle qué hace: busca un carrito para la valija.",
+      "es": "Álex le explica con todo detalle lo que está haciendo: busca un carrito para la maleta."
+    },
+    {
+      "id": "s5",
+      "text": "El Nico se tienta de risa y no puede parar.",
+      "es": "A Nico le entra la risa floja y no puede parar."
+    },
+    {
+      "id": "s6",
+      "text": "«Amor, “¿qué hacés?” es un saludo, como “¿qué tal?”. Contestá “acá andamos”.»",
+      "es": "«Cariño, “¿qué hacés?” es un saludo, como “¿qué tal?”. Contesta “aquí estamos”.»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s7",
+      "text": "«Ah… ¡Acá andamos!»",
+      "es": "«Ah… ¡Tirando!»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s8",
+      "text": "Afuera, el Nico mete la valija en el baúl de un remís.",
+      "es": "Fuera, Nico mete la maleta en el maletero de un taxi."
+    },
+    {
+      "id": "s9",
+      "text": "La Cami pregunta si van directo a Güemes, y Álex contesta: «Vale».",
+      "es": "Cami pregunta si van directamente a Güemes, y Álex contesta: «Vale»."
+    },
+    {
+      "id": "s10",
+      "text": "«¿Vale? Acá se dice “dale”, gallego.»",
+      "es": "«¿“Vale”? Aquí se dice “dale”, españolito.»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s11",
+      "text": "Y Álex repite «dale, dale, dale» todo el viaje, feliz como un nene.",
+      "es": "Y Álex repite «dale, dale, dale» todo el trayecto, feliz como un niño."
+    }
+  ],
+  "keywords": [
+    "cba-saludos.que-lo-que",
+    "cba-saludos.v.nero",
+    "cba-saludos.que-haces",
+    "cba-saludos.aca-andamos",
+    "cba-saludos.v.dale",
+    "cba-trampas.v.vale",
+    "cba-lugares.v.baul",
+    "cba-lugares.v.remis",
+    {
+      "id": "story-cba-valija",
+      "word": "valija",
+      "article": "la",
+      "gender": "f",
+      "es": "la maleta",
+      "notes": "En Córdoba (y en toda Argentina) la maleta es «la valija»; «maleta» se entiende, pero suena a España.",
+      "situation": "lugares"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Quiénes esperan a Álex en el aeropuerto?",
+      "es": "¿Quién espera a Álex en el aeropuerto?",
+      "options": [
+        {
+          "text": "La Cami y el Nico.",
+          "es": "Cami y Nico."
+        },
+        {
+          "text": "La abuela de la Cami.",
+          "es": "La abuela de Cami."
+        },
+        {
+          "text": "Un remisero con un cartel.",
+          "es": "Un taxista con un cartel."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "¿Qué hace Álex cuando el Nico le dice «¿qué hacés?»?",
+      "es": "¿Qué hace Álex cuando Nico le dice «¿qué hacés?»?",
+      "options": [
+        {
+          "text": "Le da un abrazo y se calla.",
+          "es": "Le da un abrazo y se calla."
+        },
+        {
+          "text": "Le explica qué está haciendo.",
+          "es": "Le explica lo que está haciendo."
+        },
+        {
+          "text": "Le contesta «acá andamos».",
+          "es": "Le contesta «tirando»."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "¿Qué significa «¿qué hacés?» en Córdoba?",
+      "es": "¿Qué significa «¿qué hacés?» en Córdoba?",
+      "options": [
+        {
+          "text": "Es una pregunta sobre el trabajo.",
+          "es": "Es una pregunta sobre el trabajo."
+        },
+        {
+          "text": "Es un insulto suave.",
+          "es": "Es un insulto suave."
+        },
+        {
+          "text": "Es un saludo, como «¿qué tal?».",
+          "es": "Es un saludo, como «¿qué tal?»."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Qué palabra le enseña el Nico en lugar de «vale»?",
+      "es": "¿Qué palabra le enseña Nico en lugar de «vale»?",
+      "options": [
+        {
+          "text": "Dale.",
+          "es": "Dale (= vale)."
+        },
+        {
+          "text": "Listo.",
+          "es": "Listo (= hecho)."
+        },
+        {
+          "text": "Bueno.",
+          "es": "Bueno (= venga)."
+        }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s1",
+      "answer": "story-cba-valija",
+      "gap": "valija",
+      "distractors": [
+        "maleta",
+        "maletín"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s3",
+      "answer": "cba-saludos.que-lo-que",
+      "gap": "Qué lo qué",
+      "distractors": [
+        "Qué pasa",
+        "Qué hay"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s7",
+      "answer": "cba-saludos.aca-andamos",
+      "gap": "Acá andamos",
+      "distractors": [
+        "Aquí estamos",
+        "Tirando"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s8",
+      "answer": "cba-lugares.v.baul",
+      "gap": "baúl",
+      "distractors": [
+        "maletero",
+        "capó"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s10",
+      "answer": "cba-saludos.v.dale",
+      "gap": "dale",
+      "distractors": [
+        "vale",
+        "venga"
+      ]
+    }
+  ]
+}

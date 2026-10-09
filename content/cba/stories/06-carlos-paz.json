@@ -1,0 +1,226 @@
+{
+  "id": "story.cba-carlos-paz",
+  "order": 6,
+  "title": "Finde en Carlos Paz",
+  "titleEs": "Fin de semana en Carlos Paz",
+  "description": "Verano en Villa Carlos Paz: el lago San Roque, el reloj cucú, el teatro y un calorononón.",
+  "emoji": "☀️",
+  "situation": "lugares",
+  "level": "B1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "En enero, la Cami y Álex se van el finde a Villa Carlos Paz.",
+      "es": "En enero, Cami y Álex se van el fin de semana a Villa Carlos Paz."
+    },
+    {
+      "id": "s2",
+      "text": "Toman el ómnibus en la terminal y en una hora están en las sierras.",
+      "es": "Cogen el autocar en la estación de autobuses y en una hora están en la sierra."
+    },
+    {
+      "id": "s3",
+      "text": "Hace un calor bárbaro: cuarenta grados a la siesta.",
+      "es": "Hace un calor tremendo: cuarenta grados a primera hora de la tarde."
+    },
+    {
+      "id": "s4",
+      "text": "«¡Qué calorononón! Vamos al lago San Roque.»",
+      "es": "«¡Qué calor más bestia! Vamos al lago San Roque.»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s5",
+      "text": "En el balneario, Álex se tira al agua con los anteojos de sol puestos.",
+      "es": "En la zona de baño, Álex se tira al agua con las gafas de sol puestas."
+    },
+    {
+      "id": "s6",
+      "text": "Sale sin anteojos y sin una ojota: el lago se los quedó.",
+      "es": "Sale sin gafas y sin una chancla: el lago se las ha quedado."
+    },
+    {
+      "id": "s7",
+      "text": "A la tarde ven el famoso reloj cucú, que canta cada hora.",
+      "es": "Por la tarde ven el famoso reloj de cuco, que canta cada hora."
+    },
+    {
+      "id": "s8",
+      "text": "A la noche van al teatro: una comedia con gente de la tele.",
+      "es": "Por la noche van al teatro: una comedia con famosos de la tele."
+    },
+    {
+      "id": "s9",
+      "text": "Álex no entiende la mitad de los chistes, pero se ríe igual.",
+      "es": "Álex no pilla la mitad de los chistes, pero se ríe igualmente."
+    },
+    {
+      "id": "s10",
+      "text": "«No entendí nada, pero Carlos Paz me copa.»",
+      "es": "«No me he enterado de nada, pero Carlos Paz me mola.»",
+      "voice": "es-UY-MateoNeural"
+    }
+  ],
+  "keywords": [
+    "cba-salir.v.finde",
+    "cba-lugares.v.omnibus",
+    {
+      "id": "story-cba-terminal",
+      "word": "terminal",
+      "article": "la",
+      "gender": "f",
+      "es": "la estación de autobuses",
+      "notes": "«La terminal» es la estación de ómnibus; de la de Córdoba salen los buses a Carlos Paz, Cosquín y todas las sierras.",
+      "situation": "lugares"
+    },
+    "cba-lugares.v.sierras",
+    "cba-emociones.que-calorononon",
+    "cba-lugares.v.balneario",
+    "cba-trampas.v.anteojos",
+    "cba-trampas.v.ojota",
+    {
+      "id": "story-cba-reloj-cucu",
+      "word": "reloj cucú",
+      "article": "el",
+      "gender": "m",
+      "es": "el reloj de cuco",
+      "notes": "El reloj cucú gigante es el símbolo de Villa Carlos Paz; los turistas se paran a esperar que salga el pájaro.",
+      "situation": "lugares"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Cómo van a Carlos Paz?",
+      "es": "¿Cómo van a Carlos Paz?",
+      "options": [
+        {
+          "text": "En auto.",
+          "es": "En coche."
+        },
+        {
+          "text": "En ómnibus.",
+          "es": "En autocar."
+        },
+        {
+          "text": "En remís.",
+          "es": "En taxi."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "¿Qué pierde Álex en el lago?",
+      "es": "¿Qué pierde Álex en el lago?",
+      "options": [
+        {
+          "text": "Los anteojos y una ojota.",
+          "es": "Las gafas y una chancla."
+        },
+        {
+          "text": "La campera.",
+          "es": "La chaqueta."
+        },
+        {
+          "text": "La plata.",
+          "es": "El dinero."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "¿Qué ven a la tarde?",
+      "es": "¿Qué ven por la tarde?",
+      "options": [
+        {
+          "text": "Un partido de fútbol.",
+          "es": "Un partido de fútbol."
+        },
+        {
+          "text": "Un baile de cuarteto.",
+          "es": "Un concierto de cuarteto."
+        },
+        {
+          "text": "El reloj cucú.",
+          "es": "El reloj de cuco."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Qué le pasa a Álex en el teatro?",
+      "es": "¿Qué le pasa a Álex en el teatro?",
+      "options": [
+        {
+          "text": "Se duerme enseguida.",
+          "es": "Se duerme enseguida."
+        },
+        {
+          "text": "No entiende la mitad de los chistes.",
+          "es": "No pilla la mitad de los chistes."
+        },
+        {
+          "text": "Se va antes del final.",
+          "es": "Se va antes del final."
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s2",
+      "answer": "cba-lugares.v.omnibus",
+      "gap": "ómnibus",
+      "distractors": [
+        "autocar",
+        "autobús"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s4",
+      "answer": "cba-emociones.que-calorononon",
+      "gap": "calorononón",
+      "distractors": [
+        "bochorno",
+        "solano"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s5",
+      "answer": "cba-lugares.v.balneario",
+      "gap": "balneario",
+      "distractors": [
+        "chiringuito",
+        "spa"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s6",
+      "answer": "cba-trampas.v.ojota",
+      "gap": "ojota",
+      "distractors": [
+        "chancla",
+        "sandalia"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s7",
+      "answer": "story-cba-reloj-cucu",
+      "gap": "reloj cucú",
+      "distractors": [
+        "reloj de cuco",
+        "reloj de pared"
+      ]
+    }
+  ]
+}

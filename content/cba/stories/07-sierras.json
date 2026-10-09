@@ -1,0 +1,220 @@
+{
+  "id": "story.cba-sierras",
+  "order": 7,
+  "title": "Una noche en las sierras",
+  "titleEs": "Una noche en la sierra",
+  "description": "Acampada en Punilla: mate con peperina, un friazón de noche y Álex pide «coger» la manta.",
+  "emoji": "⛰️",
+  "situation": "falsos-amigos",
+  "level": "B1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "En marzo, la Cami, el Nico y Álex se van a acampar a Punilla.",
+      "es": "En marzo, Cami, Nico y Álex se van de acampada al valle de Punilla."
+    },
+    {
+      "id": "s2",
+      "text": "Suben un cerro toda la mañana, con las mochilas y el equipo de mate.",
+      "es": "Suben un monte toda la mañana, con las mochilas y todo lo del mate."
+    },
+    {
+      "id": "s3",
+      "text": "Arriba, el Nico junta peperina y la pone en el mate.",
+      "es": "Arriba, Nico recoge poleo serrano y lo echa al mate."
+    },
+    {
+      "id": "s4",
+      "text": "«¿Quién ceba? Dale, gallego, que tenés que aprender.»",
+      "es": "«¿Quién sirve el mate? Venga, españolito, que tienes que aprender.»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s5",
+      "text": "A la noche llega un friazón terrible y Álex tiembla en la carpa.",
+      "es": "Por la noche llega un frío que pela y Álex tiembla en la tienda de campaña."
+    },
+    {
+      "id": "s6",
+      "text": "«Cami, ¿puedo coger tu frazada?»",
+      "es": "«Cami, ¿puedo coger tu manta?» (en Córdoba suena fatal)",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s7",
+      "text": "Silencio total. Después, el Nico se tira al suelo de la risa.",
+      "es": "Silencio total. Después, Nico se tira al suelo de la risa."
+    },
+    {
+      "id": "s8",
+      "text": "«¡Me cago de risa! Acá se dice agarrar, nero.»",
+      "es": "«¡Me parto! Aquí se dice “agarrar”, tío.»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s9",
+      "text": "«Agarrá la frazada, amor, y no digas más esa palabra.»",
+      "es": "«Coge la manta, cariño, y no vuelvas a decir esa palabra.»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s10",
+      "text": "Álex se tapa hasta el marote, colorado como un tomate.",
+      "es": "Álex se tapa hasta la cabeza, rojo como un tomate."
+    }
+  ],
+  "keywords": [
+    "cba-comida.v.peperina",
+    "cba-comida.quien-ceba",
+    "cba-emociones.v.friazon",
+    {
+      "id": "story-cba-carpa",
+      "word": "carpa",
+      "article": "la",
+      "gender": "f",
+      "es": "la tienda de campaña",
+      "notes": "En Argentina se acampa en «carpa»; «tienda» es solo la de comprar.",
+      "situation": "lugares"
+    },
+    "cba-trampas.v.frazada",
+    "cba-trampas.v.coger",
+    "cba-emociones.me-cago-de-risa",
+    "cba-saludos.v.nero",
+    "cba-lugares.v.marote"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Qué le pone el Nico al mate?",
+      "es": "¿Qué le echa Nico al mate?",
+      "options": [
+        {
+          "text": "Azúcar.",
+          "es": "Azúcar."
+        },
+        {
+          "text": "Peperina.",
+          "es": "Poleo serrano."
+        },
+        {
+          "text": "Fernet.",
+          "es": "Fernet."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "¿Cómo es la noche en las sierras?",
+      "es": "¿Cómo es la noche en la sierra?",
+      "options": [
+        {
+          "text": "Hace un friazón terrible.",
+          "es": "Hace un frío que pela."
+        },
+        {
+          "text": "Hace un calorón.",
+          "es": "Hace un calor que te mueres."
+        },
+        {
+          "text": "Llueve toda la noche.",
+          "es": "Llueve toda la noche."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "¿Por qué se ríe el Nico?",
+      "es": "¿Por qué se ríe Nico?",
+      "options": [
+        {
+          "text": "Porque Álex se cae de la carpa.",
+          "es": "Porque Álex se cae de la tienda."
+        },
+        {
+          "text": "Porque Álex no sabe cebar.",
+          "es": "Porque Álex no sabe servir el mate."
+        },
+        {
+          "text": "Porque Álex dice «coger».",
+          "es": "Porque Álex dice «coger»."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Qué verbo tiene que usar Álex en Córdoba?",
+      "es": "¿Qué verbo tiene que usar Álex en Córdoba?",
+      "options": [
+        {
+          "text": "Agarrar.",
+          "es": "Agarrar (= coger)."
+        },
+        {
+          "text": "Pillar.",
+          "es": "Pillar."
+        },
+        {
+          "text": "Tomar prestado.",
+          "es": "Tomar prestado."
+        }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s3",
+      "answer": "cba-comida.v.peperina",
+      "gap": "peperina",
+      "distractors": [
+        "menta",
+        "manzanilla"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s5",
+      "answer": "cba-emociones.v.friazon",
+      "gap": "friazón",
+      "distractors": [
+        "rasca",
+        "pelete"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s6",
+      "answer": "cba-trampas.v.frazada",
+      "gap": "frazada",
+      "distractors": [
+        "manta",
+        "colcha"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s8",
+      "answer": "cba-emociones.me-cago-de-risa",
+      "gap": "Me cago de risa",
+      "distractors": [
+        "Me parto",
+        "Me descojono"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s10",
+      "answer": "cba-lugares.v.marote",
+      "gap": "marote",
+      "distractors": [
+        "coco",
+        "tarro"
+      ]
+    }
+  ]
+}

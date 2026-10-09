@@ -1,0 +1,222 @@
+{
+  "id": "story.cba-domingo-alberdi",
+  "order": 3,
+  "title": "Domingo de asado en Alberdi",
+  "titleEs": "Barbacoa de domingo en Alberdi",
+  "description": "Asado en casa de los padres de Nico: «negra» es cariño, los apodos son «car'e…» y Álex se gana uno.",
+  "emoji": "🥩",
+  "situation": "gente",
+  "level": "B1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "El domingo hay asado en lo de los viejos del Nico, en barrio Alberdi.",
+      "es": "El domingo hay barbacoa en casa de los padres de Nico, en el barrio de Alberdi."
+    },
+    {
+      "id": "s2",
+      "text": "La mamá del Nico abraza a la Cami y la saluda.",
+      "es": "La madre de Nico abraza a Cami y la saluda."
+    },
+    {
+      "id": "s3",
+      "text": "«¿Cómo andás, negra? ¡Tanto tiempo!»",
+      "es": "«¿Qué tal, cariño? ¡Cuánto tiempo!»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s4",
+      "text": "Álex se asusta un poco, pero el Nico le explica que «negra» es puro cariño.",
+      "es": "Álex se asusta un poco, pero Nico le explica que «negra» es un apelativo cariñoso."
+    },
+    {
+      "id": "s5",
+      "text": "«Ese es el Gordo, ese el Flaco y aquel, Car'e Poio.»",
+      "es": "«Ese es el Gordo, ese el Flaco y aquel, Cara de Pollo.»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s6",
+      "text": "El papá del Nico pone en la parrilla chinchulines, achuras y mucha carne.",
+      "es": "El padre de Nico pone en la parrilla tripas, casquería y mucha carne."
+    },
+    {
+      "id": "s7",
+      "text": "Álex come como un guaso y repite tres veces.",
+      "es": "Álex come como un bruto y repite tres veces."
+    },
+    {
+      "id": "s8",
+      "text": "Al final está colorado, con la panza llena y la cara brillante.",
+      "es": "Al final está rojo, con la tripa llena y la cara brillante."
+    },
+    {
+      "id": "s9",
+      "text": "«Desde hoy sos Car'e Morrón, nero.»",
+      "es": "«Desde hoy eres Cara de Pimiento, tío.»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s10",
+      "text": "Todos aplauden, y Álex, chocho con su apodo, levanta el vaso de fernet.",
+      "es": "Todos aplauden, y Álex, encantado con su mote, levanta el vaso de fernet."
+    }
+  ],
+  "keywords": [
+    "cba-lugares.v.alberdi",
+    "cba-saludos.como-andas-negra",
+    "cba-saludos.v.negro",
+    "cba-gente.x.care-poio",
+    "cba-comida.v.chinchulines",
+    "cba-comida.v.achuras",
+    "cba-gente.v.guaso",
+    "cba-lugares.v.panza",
+    "cba-trampas.v.morron",
+    "cba-emociones.v.chocho"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Dónde es el asado?",
+      "es": "¿Dónde es la barbacoa?",
+      "options": [
+        {
+          "text": "En un restaurante de Güemes.",
+          "es": "En un restaurante de Güemes."
+        },
+        {
+          "text": "En lo de los viejos del Nico.",
+          "es": "En casa de los padres de Nico."
+        },
+        {
+          "text": "En las sierras.",
+          "es": "En la sierra."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "¿Por qué se asusta Álex?",
+      "es": "¿Por qué se asusta Álex?",
+      "options": [
+        {
+          "text": "Porque la mamá del Nico le dice «negra» a la Cami.",
+          "es": "Porque la madre de Nico llama «negra» a Cami."
+        },
+        {
+          "text": "Porque no le gustan los chinchulines.",
+          "es": "Porque no le gustan las tripas."
+        },
+        {
+          "text": "Porque el Nico se enoja.",
+          "es": "Porque Nico se enfada."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q3",
+      "question": "¿Cómo come Álex?",
+      "es": "¿Cómo come Álex?",
+      "options": [
+        {
+          "text": "Muy poquito.",
+          "es": "Muy poco."
+        },
+        {
+          "text": "Solo ensalada.",
+          "es": "Solo ensalada."
+        },
+        {
+          "text": "Como un guaso, y repite tres veces.",
+          "es": "Como un bruto, y repite tres veces."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Qué apodo le pone el Nico?",
+      "es": "¿Qué mote le pone Nico?",
+      "options": [
+        {
+          "text": "Car'e Poio.",
+          "es": "Cara de Pollo."
+        },
+        {
+          "text": "Car'e Morrón.",
+          "es": "Cara de Pimiento."
+        },
+        {
+          "text": "El Gordo.",
+          "es": "El Gordo."
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s3",
+      "answer": "cba-saludos.v.negro",
+      "gap": "negra",
+      "distractors": [
+        "cariño",
+        "guapa"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s6",
+      "answer": "cba-comida.v.chinchulines",
+      "gap": "chinchulines",
+      "distractors": [
+        "callos",
+        "morcillas"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s7",
+      "answer": "cba-gente.v.guaso",
+      "gap": "guaso",
+      "distractors": [
+        "bruto",
+        "cerdo"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s8",
+      "answer": "cba-lugares.v.panza",
+      "gap": "panza",
+      "distractors": [
+        "tripa",
+        "barriga"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s9",
+      "answer": "cba-trampas.v.morron",
+      "gap": "Morrón",
+      "distractors": [
+        "Pimiento",
+        "Tomate"
+      ]
+    },
+    {
+      "id": "g6",
+      "sentence": "s10",
+      "answer": "cba-emociones.v.chocho",
+      "gap": "chocho",
+      "distractors": [
+        "encantado",
+        "flipado"
+      ]
+    }
+  ]
+}

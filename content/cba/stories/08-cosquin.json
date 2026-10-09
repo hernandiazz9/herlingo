@@ -1,0 +1,217 @@
+{
+  "id": "story.cba-cosquin",
+  "order": 8,
+  "title": "Folklore en Cosquín",
+  "titleEs": "Festival de folk en Cosquín",
+  "description": "Con Doña Chela en el festival de Cosquín: tres meses después, Álex ya casi suena cordobés.",
+  "emoji": "🎸",
+  "situation": "tonada",
+  "level": "B1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "En enero, la Cami lleva a Álex a Cosquín, a lo de su abuela.",
+      "es": "En enero, Cami lleva a Álex a Cosquín, a casa de su abuela."
+    },
+    {
+      "id": "s2",
+      "text": "Doña Chela los espera con mate dulce y una docena de criollos.",
+      "es": "Doña Chela les espera con mate con azúcar y doce bollos salados."
+    },
+    {
+      "id": "s3",
+      "text": "«¿Usted es el españolito? Pase, mi hijo, pase.»",
+      "es": "«¿Es usted el españolito? Pase, hijo, pase.»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s4",
+      "text": "Álex trata de usted a doña Chela, como le enseñó la Cami.",
+      "es": "Álex trata de usted a doña Chela, como le ha enseñado Cami."
+    },
+    {
+      "id": "s5",
+      "text": "A la noche van al festival de folklore, con miles de personas.",
+      "es": "Por la noche van al festival de música folk, con miles de personas."
+    },
+    {
+      "id": "s6",
+      "text": "Después terminan en una peña, entre guitarras, empanadas y vino.",
+      "es": "Luego acaban en un local de folk, entre guitarras, empanadillas y vino."
+    },
+    {
+      "id": "s7",
+      "text": "Álex va solo a la barra, con un hambre bárbaro.",
+      "es": "Álex va solo a la barra, con un hambre tremenda."
+    },
+    {
+      "id": "s8",
+      "text": "«Che, maestro, ¿me cobra? Recién llegué y tengo un hambrezón.»",
+      "es": "«Oye, jefe, ¿me cobras? Acabo de llegar y tengo un hambre que me muero.»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s9",
+      "text": "Doña Chela lo escucha desde la mesa y se ríe.",
+      "es": "Doña Chela le oye desde la mesa y se ríe."
+    },
+    {
+      "id": "s10",
+      "text": "«¿Y el gallego dónde está? Este chico es cordobés.»",
+      "es": "«¿Y el español dónde está? Este chico es cordobés.»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s11",
+      "text": "Tres meses en Córdoba, y Álex ya habla re cordobés: ni vale ni tío.",
+      "es": "Tres meses en Córdoba, y Álex ya habla muy cordobés: ni «vale» ni «tío»."
+    }
+  ],
+  "keywords": [
+    "cba-saludos.v.dona",
+    "cba-comida.v.criollo",
+    "cba-salir.v.pena",
+    "cba-comida.v.empanada",
+    "cba-saludos.v.che",
+    "cba-saludos.maestro-me-cobra",
+    "cba-plata.recien-llegue",
+    "cba-comida.tengo-un-hambrezon",
+    "cba-trampas.v.vale",
+    "cba-trampas.v.tio"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Quién es Doña Chela?",
+      "es": "¿Quién es Doña Chela?",
+      "options": [
+        {
+          "text": "La abuela de la Cami.",
+          "es": "La abuela de Cami."
+        },
+        {
+          "text": "La mamá del Nico.",
+          "es": "La madre de Nico."
+        },
+        {
+          "text": "Una cantante de folklore.",
+          "es": "Una cantante de folk."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "¿Cómo le habla Álex a Doña Chela?",
+      "es": "¿Cómo le habla Álex a Doña Chela?",
+      "options": [
+        {
+          "text": "De vos.",
+          "es": "De tú."
+        },
+        {
+          "text": "De usted.",
+          "es": "De usted, con respeto."
+        },
+        {
+          "text": "En inglés.",
+          "es": "En inglés."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "¿Adónde van después del festival?",
+      "es": "¿Adónde van después del festival?",
+      "options": [
+        {
+          "text": "A un boliche.",
+          "es": "A una discoteca."
+        },
+        {
+          "text": "A lo de Doña Chela.",
+          "es": "A casa de Doña Chela."
+        },
+        {
+          "text": "A una peña.",
+          "es": "A un local de folk."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Por qué se ríe Doña Chela?",
+      "es": "¿Por qué se ríe Doña Chela?",
+      "options": [
+        {
+          "text": "Porque Álex ya habla como un cordobés.",
+          "es": "Porque Álex ya habla como un cordobés."
+        },
+        {
+          "text": "Porque Álex dice «coger».",
+          "es": "Porque Álex dice «coger»."
+        },
+        {
+          "text": "Porque Álex no tiene plata.",
+          "es": "Porque Álex no tiene dinero."
+        }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s2",
+      "answer": "cba-comida.v.criollo",
+      "gap": "criollos",
+      "distractors": [
+        "cruasanes",
+        "magdalenas"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s4",
+      "answer": "cba-saludos.v.dona",
+      "gap": "doña",
+      "distractors": [
+        "señora",
+        "tita"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s6",
+      "answer": "cba-salir.v.pena",
+      "gap": "peña",
+      "distractors": [
+        "tablao",
+        "bodega"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s8",
+      "answer": "cba-plata.recien-llegue",
+      "gap": "Recién llegué",
+      "distractors": [
+        "Acabo de llegar",
+        "He llegado ahora"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s11",
+      "answer": "cba-trampas.v.tio",
+      "gap": "tío",
+      "distractors": [
+        "colega",
+        "chaval"
+      ]
+    }
+  ]
+}

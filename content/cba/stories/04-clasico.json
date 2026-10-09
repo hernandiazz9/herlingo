@@ -1,0 +1,239 @@
+{
+  "id": "story.cba-clasico",
+  "order": 4,
+  "title": "Clásico en el Kempes",
+  "titleEs": "Derbi en el estadio Kempes",
+  "description": "Belgrano contra Talleres con Nico: «culiado» de saludo, de elogio y de insulto al árbitro.",
+  "emoji": "⚽",
+  "situation": "insultos",
+  "level": "B1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "El domingo hay clásico en el Kempes: Belgrano contra Talleres.",
+      "es": "El domingo hay derbi en el estadio Kempes: Belgrano contra Talleres."
+    },
+    {
+      "id": "s2",
+      "text": "El Nico es pirata de toda la vida y le presta a Álex una camiseta celeste.",
+      "es": "Nico es del Belgrano de toda la vida y le presta a Álex una camiseta celeste."
+    },
+    {
+      "id": "s3",
+      "text": "En la puerta, el Nico ve a un amigo del barrio.",
+      "es": "En la puerta, Nico ve a un amigo del barrio."
+    },
+    {
+      "id": "s4",
+      "text": "«¿Qué hacé', culiau? ¡Tanto tiempo!»",
+      "es": "«¿Qué pasa, cabrón? ¡Cuánto tiempo!»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s5",
+      "text": "Álex se asusta, pero el Nico le explica: entre amigos es como «tío».",
+      "es": "Álex se asusta, pero Nico le explica: entre amigos es como «tío» o «cabrón» con cariño."
+    },
+    {
+      "id": "s6",
+      "text": "A los diez minutos, el nueve de Belgrano mete un golazo de chilena.",
+      "es": "A los diez minutos, el delantero centro del Belgrano mete un golazo de chilena."
+    },
+    {
+      "id": "s7",
+      "text": "«¡Ese culiado la descose!»",
+      "es": "«¡El muy cabrón lo borda!»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s8",
+      "text": "Después, el árbitro anula un gol y el Nico se calienta mal.",
+      "es": "Luego, el árbitro anula un gol y Nico se cabrea muchísimo."
+    },
+    {
+      "id": "s9",
+      "text": "«¡Pedazo de culiado, cobrá bien!»",
+      "es": "«¡Hijo de puta, pita bien!»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s10",
+      "text": "Álex también quiere gritar y le dice «capullo» al árbitro.",
+      "es": "Álex también quiere gritar y llama «capullo» al árbitro."
+    },
+    {
+      "id": "s11",
+      "text": "Nadie se ofende: acá un capullo es solo una flor que no abrió.",
+      "es": "Nadie se ofende: aquí un capullo es solo una flor que no se ha abierto."
+    },
+    {
+      "id": "s12",
+      "text": "«¡Ganamos, gallego! Sos un capo, ya sos pirata.»",
+      "es": "«¡Hemos ganado, españolito! Eres un crack, ya eres del Belgrano.»",
+      "voice": "es-AR-TomasNeural"
+    }
+  ],
+  "keywords": [
+    {
+      "id": "story-cba-clasico",
+      "word": "clásico",
+      "article": "el",
+      "gender": "m",
+      "es": "el derbi",
+      "notes": "En Córdoba «el clásico» es Belgrano contra Talleres. En España «el Clásico» es solo el Madrid-Barça; para los demás se dice «el derbi».",
+      "situation": "salir"
+    },
+    "cba-lugares.v.kempes",
+    "cba-gente.v.pirata",
+    "cba-trampas.v.culiado",
+    "cba-trampas.ese-culiado-la-descose",
+    "cba-emociones.me-calente-mal",
+    "cba-trampas.pedazo-de-culiado",
+    "cba-saludos.v.capo"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿De qué equipo es el Nico?",
+      "es": "¿De qué equipo es Nico?",
+      "options": [
+        {
+          "text": "De Talleres.",
+          "es": "Del Talleres."
+        },
+        {
+          "text": "De Belgrano.",
+          "es": "Del Belgrano."
+        },
+        {
+          "text": "De Instituto.",
+          "es": "Del Instituto."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q2",
+      "question": "¿Qué significa «culiau» cuando el Nico saluda a su amigo?",
+      "es": "¿Qué significa «culiau» cuando Nico saluda a su amigo?",
+      "options": [
+        {
+          "text": "Es un insulto grueso.",
+          "es": "Es un insulto muy fuerte."
+        },
+        {
+          "text": "Es el nombre del amigo.",
+          "es": "Es el nombre del amigo."
+        },
+        {
+          "text": "Es como «tío», entre amigos.",
+          "es": "Es como «tío», entre amigos."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q3",
+      "question": "¿Por qué se calienta el Nico?",
+      "es": "¿Por qué se cabrea Nico?",
+      "options": [
+        {
+          "text": "Porque el árbitro anula un gol.",
+          "es": "Porque el árbitro anula un gol."
+        },
+        {
+          "text": "Porque Álex grita «capullo».",
+          "es": "Porque Álex grita «capullo»."
+        },
+        {
+          "text": "Porque Belgrano pierde.",
+          "es": "Porque el Belgrano pierde."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q4",
+      "question": "¿Por qué nadie se ofende con «capullo»?",
+      "es": "¿Por qué nadie se ofende con «capullo»?",
+      "options": [
+        {
+          "text": "Porque Álex lo dice muy bajito.",
+          "es": "Porque Álex lo dice muy bajito."
+        },
+        {
+          "text": "Porque en Córdoba es solo una flor.",
+          "es": "Porque en Córdoba es solo una flor."
+        },
+        {
+          "text": "Porque el árbitro es español.",
+          "es": "Porque el árbitro es español."
+        }
+      ],
+      "correct": 1
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s1",
+      "answer": "story-cba-clasico",
+      "gap": "clásico",
+      "distractors": [
+        "derbi",
+        "partidillo"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s2",
+      "answer": "cba-gente.v.pirata",
+      "gap": "pirata",
+      "distractors": [
+        "culé",
+        "colchonero"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s7",
+      "answer": "cba-trampas.ese-culiado-la-descose",
+      "gap": "la descose",
+      "distractors": [
+        "lo borda",
+        "lo peta"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s8",
+      "answer": "cba-emociones.me-calente-mal",
+      "gap": "se calienta mal",
+      "distractors": [
+        "se cabrea mucho",
+        "se mosquea mazo"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s9",
+      "answer": "cba-trampas.pedazo-de-culiado",
+      "gap": "cobrá",
+      "distractors": [
+        "pita",
+        "arbitra"
+      ]
+    },
+    {
+      "id": "g6",
+      "sentence": "s12",
+      "answer": "cba-saludos.v.capo",
+      "gap": "capo",
+      "distractors": [
+        "crack",
+        "máquina"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "id": "story.cba-el-baile",
+  "order": 5,
+  "title": "Noche de baile",
+  "titleEs": "Noche de cuarteto",
+  "description": "Previa con fernet, la ronda en la pista, el tunga-tunga y el primer «¡qué abuso!» de Álex.",
+  "emoji": "🎶",
+  "situation": "salir",
+  "level": "B1",
+  "voice": "es-UY-ValentinaNeural",
+  "sentences": [
+    {
+      "id": "s1",
+      "text": "El sábado hacen la previa en lo del Nico, con fernet y cuarteto.",
+      "es": "El sábado hacen botellón en casa de Nico, con fernet y cuarteto."
+    },
+    {
+      "id": "s2",
+      "text": "«¿Lo querés setenta treinta?»",
+      "es": "«¿Lo quieres con poco fernet y mucha cola?»",
+      "voice": "es-AR-TomasNeural"
+    },
+    {
+      "id": "s3",
+      "text": "Álex dice que sí sin entender, y el Nico le sirve un fernando bien cargado.",
+      "es": "Álex dice que sí sin entender nada, y Nico le sirve un cubata de fernet bien cargado."
+    },
+    {
+      "id": "s4",
+      "text": "A medianoche se toman el cole y van al baile.",
+      "es": "A medianoche cogen el bus y van al concierto de cuarteto."
+    },
+    {
+      "id": "s5",
+      "text": "En la pista, la gente baila en ronda, siempre para el mismo lado.",
+      "es": "En la pista, la gente baila en corro, siempre en la misma dirección."
+    },
+    {
+      "id": "s6",
+      "text": "Álex se pone a bailar al revés y choca con todo el mundo.",
+      "es": "Álex se pone a bailar en sentido contrario y se choca con todo el mundo."
+    },
+    {
+      "id": "s7",
+      "text": "La que lo rescata es la Yesi, la novia del Nico.",
+      "es": "Quien le rescata es Yesi, la novia de Nico."
+    },
+    {
+      "id": "s8",
+      "text": "«¡Para el otro lado, nero! Seguí el tunga-tunga.»",
+      "es": "«¡Hacia el otro lado, tío! Sigue el ritmo.»",
+      "voice": "es-AR-ElenaNeural"
+    },
+    {
+      "id": "s9",
+      "text": "Media hora después, Álex ya cuartetea como un cordobés más.",
+      "es": "Media hora después, Álex ya baila cuarteto como un cordobés más."
+    },
+    {
+      "id": "s10",
+      "text": "Cuando sale la banda, el lugar explota y Álex quiere decir «¡qué pasada!».",
+      "es": "Cuando sale el grupo, el sitio revienta y Álex quiere decir «¡qué pasada!»."
+    },
+    {
+      "id": "s11",
+      "text": "«¡Qué abuso de lugar!»",
+      "es": "«¡Qué pasada de sitio!»",
+      "voice": "es-UY-MateoNeural"
+    },
+    {
+      "id": "s12",
+      "text": "«¡Bien ahí! Ya sos cuartetero, gallego.»",
+      "es": "«¡Olé! Ya eres fan del cuarteto, españolito.»",
+      "voice": "es-AR-TomasNeural"
+    }
+  ],
+  "keywords": [
+    "cba-salir.v.previa",
+    "cba-comida.setenta-treinta",
+    "cba-comida.v.fernando",
+    "cba-salir.v.baile",
+    "cba-salir.v.pista",
+    "cba-salir.v.tunga-tunga",
+    "cba-salir.v.cuartetear",
+    "cba-emociones.que-abuso",
+    "cba-emociones.bien-ahi",
+    "cba-salir.v.cuartetero"
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "question": "¿Qué toman en la previa?",
+      "es": "¿Qué beben en el botellón previo?",
+      "options": [
+        {
+          "text": "Fernet.",
+          "es": "Fernet con cola."
+        },
+        {
+          "text": "Mate cocido.",
+          "es": "Infusión de yerba."
+        },
+        {
+          "text": "Solo gaseosa.",
+          "es": "Solo refresco."
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "id": "q2",
+      "question": "¿Cómo se baila en la pista?",
+      "es": "¿Cómo se baila en la pista?",
+      "options": [
+        {
+          "text": "En parejas quietas.",
+          "es": "En parejas, sin moverse del sitio."
+        },
+        {
+          "text": "En ronda, para el mismo lado.",
+          "es": "En corro, en la misma dirección."
+        },
+        {
+          "text": "Cada uno para donde quiere.",
+          "es": "Cada uno hacia donde quiere."
+        }
+      ],
+      "correct": 1
+    },
+    {
+      "id": "q3",
+      "question": "¿Quién ayuda a Álex a bailar?",
+      "es": "¿Quién ayuda a Álex a bailar?",
+      "options": [
+        {
+          "text": "La Cami.",
+          "es": "Cami."
+        },
+        {
+          "text": "Un patovica.",
+          "es": "Un portero de discoteca."
+        },
+        {
+          "text": "La Yesi.",
+          "es": "Yesi."
+        }
+      ],
+      "correct": 2
+    },
+    {
+      "id": "q4",
+      "question": "¿Qué dice Álex en vez de «¡qué pasada!»?",
+      "es": "¿Qué dice Álex en lugar de «¡qué pasada!»?",
+      "options": [
+        {
+          "text": "¡Qué abuso de lugar!",
+          "es": "¡Qué pasada de sitio!"
+        },
+        {
+          "text": "¡Qué embole!",
+          "es": "¡Qué palo!"
+        },
+        {
+          "text": "¡Qué garrón!",
+          "es": "¡Qué marrón!"
+        }
+      ],
+      "correct": 0
+    }
+  ],
+  "gaps": [
+    {
+      "id": "g1",
+      "sentence": "s1",
+      "answer": "cba-salir.v.previa",
+      "gap": "previa",
+      "distractors": [
+        "merienda",
+        "sobremesa"
+      ]
+    },
+    {
+      "id": "g2",
+      "sentence": "s3",
+      "answer": "cba-comida.v.fernando",
+      "gap": "fernando",
+      "distractors": [
+        "calimocho",
+        "cubata"
+      ]
+    },
+    {
+      "id": "g3",
+      "sentence": "s8",
+      "answer": "cba-salir.v.tunga-tunga",
+      "gap": "tunga-tunga",
+      "distractors": [
+        "chunda-chunda",
+        "pachanga"
+      ]
+    },
+    {
+      "id": "g4",
+      "sentence": "s11",
+      "answer": "cba-emociones.que-abuso",
+      "gap": "abuso",
+      "distractors": [
+        "pasada",
+        "flipe"
+      ]
+    },
+    {
+      "id": "g5",
+      "sentence": "s12",
+      "answer": "cba-salir.v.cuartetero",
+      "gap": "cuartetero",
+      "distractors": [
+        "flamenco",
+        "rockero"
+      ]
+    }
+  ]
+}
