@@ -71,17 +71,17 @@ Worktree setup: npm ci
 - Outcome: units 10 hola, 20 moverse, 30 comer, 90 gramatica: 99 phrases, 84 vocab (49 pictures), 22 Q&A, 8 cards — 07ceb5ec
 
 ## T153 — Units 4–6 (A1 complete)
-- Status: running
+- Status: done
 - Depends on: T152
 - Goal: Write units 40, 50, 60, reusing earlier items by id, so the pack reaches the A1 mini totals.
 - Context: Shared contract, docs/brief-es.md, T152's units.
 - Scope: may touch `content/es/units/` (these units only) / must not touch `content/es/pack.json`, other units, other packs.
 - Done when:
   - Totals within ±10% of ~180 phrases, ~150 vocab, ~40 Q&A; an uncommitted script finds no two phrases or vocab items with the same normalized text (report counts); `npm run verify` → exit 0.
-- Outcome:
+- Outcome: units 40 comprar, 50 planes, 60 ayuda; pack = 181 phrases, 152 vocab, 40 Q&A, 25 lessons, 75 pictures; 0 duplicates — e9ae0454
 
 ## T154 — Dialogues (6) and stories (6)
-- Status: pending
+- Status: running
 - Depends on: T153
 - Goal: Write the 6 dialogues (orders 1–6) and 6 stories (orders 1–6, files `a1-NN-<slug>.json`) from brief-es.md with A1 vocabulary, vos/usted as the scene needs, and Córdoba mixed through the order.
 - Context: Shared contract, docs/brief-es.md, `content/ru/dialogues/`, `content/ru/stories/` as format models.
@@ -114,6 +114,7 @@ Worktree setup: npm ci
 - 2026-10-09 T149: gloss shape = sibling fields per language for es-named fields, {lang: text} map for the rest; new-pack welcome screen still shown once before the route (agent)
 - 2026-10-09 T151: options voiced by the first es voice unused by the natives (Mateo when Elena+Tomás speak); Córdoba ≈1/3 of every unit, dialogues/stories 2 and 5 in Córdoba; 'coger' warning note in unit 20, 'culiado' note in unit 50 (agent)
 - 2026-10-09 T152: numbers cero–diez as vocab in unit 20 for reuse; vocab ids <unit>.v.<slug>; ~10% over on phrases/vocab, so T153 aims lower (agent)
+- 2026-10-09 orchestrator: T154 run as two parallel agents (dialogues / stories), disjoint folders
 
 ## Proposals (new scope)
 - 2026-10-09 orchestrator: growth of the deploy (audio is 279 MB / 16,299 files; repo 17,048 files, `.git` 245 MB): serve mp3s from Cloudflare R2 or similar (audio base URL, CORS, cross-origin SW cache and Range) and/or re-encode at a lower bitrate. Its own plan when needed.
@@ -129,3 +130,5 @@ Worktree setup: npm ci
 - 2026-10-09 T150 done → 8dfa2196
 - 2026-10-09 T152 done → 07ceb5ec
 - 2026-10-09 T153 launched · attempt 1
+- 2026-10-09 T153 done → e9ae0454
+- 2026-10-09 T154 launched · attempt 1 (2 agents)
