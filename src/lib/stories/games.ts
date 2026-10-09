@@ -3,7 +3,7 @@
  * Exercises reuse the lesson types from `@/lib/exercises` so the same components and feedback
  * sheet work; `itemIds` are key word ids (SRS), empty for comprehension and ordering.
  */
-import { getStoryKeywords, type Pack, type Story, type StorySentence } from "@/lib/content";
+import { getStoryKeywords, glossOf, type GlossLang, type Pack, type Story, type StorySentence } from "@/lib/content";
 import { createRng, type AnswerExercise, type Exercise, type Rng } from "@/lib/exercises";
 
 export type StoryGameId = "keywords" | "gaps" | "questions" | "order";
@@ -33,12 +33,13 @@ const MAX_QUESTIONS = 4;
 const MAX_ORDER = 5;
 const CHOICES = 4;
 
-function keywordGame(story: Story, pack: Pack, rng: Rng): StoryStep[] {
+function keywordGame(story: Story, pack: Pack, rng: Rng, gloss: GlossLang): StoryStep[] {
   const words = getStoryKeywords(story, pack);
+  const t = (item: object) => glossOf(item, gloss);
   const steps: StoryStep[] = [];
   const matched = rng.shuffle(words).slice(0, MAX_MATCH);
   if (matched.length >= 2) {
-    const pairs = matched.map((w) => ({ id: w.id, text: w.text, es: w.es, audio: w }));
+    const pairs = matched.map((w) => ({ id: w.id, text: w.text, gloss: t(w), audio: w }));
     steps.push({
       type: "match",
       key: "kw-match",
@@ -46,19 +47,20 @@ function keywordGame(story: Story, pack: Pack, rng: Rng): StoryStep[] {
       solution: { text: "" },
       pairs,
       textOrder: rng.shuffle(pairs.map((p) => p.id)),
-      esOrder: rng.shuffle(pairs.map((p) => p.id)),
+      glossOrder: rng.shuffle(pairs.map((p) => p.id)),
     });
   }
   // Wrong meanings: the other key words first, then other vocab of the pack.
-  const pool = [...new Set([...words.map((w) => w.es), ...rng.shuffle(pack.vocab).slice(0, 12).map((v) => v.es)])];
+  const pool = [...new Set([...words.map(t), ...rng.shuffle(pack.vocab).slice(0, 12).map(t)])];
   for (const w of rng.shuffle(words).slice(0, MAX_LISTEN)) {
-    const wrong = rng.shuffle(pool.filter((es) => es !== w.es)).slice(0, CHOICES - 1);
-    const options = rng.shuffle([w.es, ...wrong]).map((label, i) => ({ id: `o${i}`, label, correct: label === w.es }));
+    const meaning = t(w);
+    const wrong = rng.shuffle(pool.filter((m) => m !== meaning)).slice(0, CHOICES - 1);
+    const options = rng.shuffle([meaning, ...wrong]).map((label, i) => ({ id: `o${i}`, label, correct: label === meaning }));
     steps.push({
       type: "listen-meaning",
       key: `kw-listen-${w.id}`,
       itemIds: [w.id],
-      solution: { text: w.text, es: w.es, audio: w },
+      solution: { text: w.text, gloss: meaning, audio: w },
       audio: w,
       options,
     });
@@ -66,7 +68,7 @@ function keywordGame(story: Story, pack: Pack, rng: Rng): StoryStep[] {
   return steps;
 }
 
-function gapGame(story: Story, rng: Rng): StoryStep[] {
+function gapGame(story: Story, rng: Rng, gloss: GlossLang): StoryStep[] {
   const sentences = new Map(story.sentences.map((s) => [s.id, s]));
   return story.gaps.flatMap((g): StoryStep[] => {
     const s = sentences.get(g.sentence);
@@ -76,8 +78,8 @@ function gapGame(story: Story, rng: Rng): StoryStep[] {
         type: "fill-gap",
         key: `gap-${g.id}`,
         itemIds: [g.answer],
-        solution: { text: s.text, es: s.es, audio: s },
-        es: s.es,
+        solution: { text: s.text, gloss: glossOf(s, gloss), audio: s },
+        gloss: glossOf(s, gloss),
         before: g.before,
         after: g.after,
         gap: g.gap,
@@ -88,16 +90,16 @@ function gapGame(story: Story, rng: Rng): StoryStep[] {
   });
 }
 
-function questionGame(story: Story): StoryStep[] {
+function questionGame(story: Story, gloss: GlossLang): StoryStep[] {
   return story.questions.slice(0, MAX_QUESTIONS).map((q): AnswerExercise => {
     const right = q.options[q.correct] ?? q.options[0];
     return {
       type: "answer",
       key: `q-${q.id}`,
       itemIds: [],
-      solution: { text: right.text, es: right.es, audio: right, note: q.text },
+      solution: { text: right.text, gloss: glossOf(right, gloss), audio: right, note: q.text },
       question: q,
-      questionEs: q.es,
+      questionGloss: glossOf(q, gloss),
       options: q.options.map((o, i) => ({ id: `o${i}`, label: o.text, correct: i === q.correct, audio: o })),
     };
   });
@@ -115,12 +117,13 @@ function orderGame(story: Story, rng: Rng): StoryStep[] {
 }
 
 /** The games of a story, in play order; games with nothing to play are left out. */
-export function buildStoryGames(story: Story, seed: string, pack: Pack): StoryGame[] {
+/** `gloss` = the learner's gloss language (meanings shown in the games). */
+export function buildStoryGames(story: Story, seed: string, pack: Pack, gloss: GlossLang): StoryGame[] {
   const rng = createRng(`${story.id}:${seed}`);
   const games: StoryGame[] = [
-    { id: "keywords", title: "Palabras clave", description: "Une las parejas y elige lo que oyes.", steps: keywordGame(story, pack, rng) },
-    { id: "gaps", title: "Completa los huecos", description: "Elige la palabra que falta en cada frase.", steps: gapGame(story, rng) },
-    { id: "questions", title: "Comprensión", description: "Escucha las preguntas sobre la historia y responde.", steps: questionGame(story) },
+    { id: "keywords", title: "Palabras clave", description: "Une las parejas y elige lo que oyes.", steps: keywordGame(story, pack, rng, gloss) },
+    { id: "gaps", title: "Completa los huecos", description: "Elige la palabra que falta en cada frase.", steps: gapGame(story, rng, gloss) },
+    { id: "questions", title: "Comprensión", description: "Escucha las preguntas sobre la historia y responde.", steps: questionGame(story, gloss) },
     { id: "order", title: "Ordena la historia", description: "Toca las frases en el orden en que pasan.", steps: orderGame(story, rng) },
   ];
   return games.filter((g) => g.steps.length > 0);

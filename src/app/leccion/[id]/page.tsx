@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { findLessonPack, getAllLessons, getLesson, getPack, listLangs } from "@/lib/content";
+import { findLessonPack, getAllLessons, getLesson, getPack, glossLangsOf, glossOf, listLangs } from "@/lib/content";
 import { LessonRoute } from "./LessonRoute";
 
 // Static export: one page per lesson of every pack, nothing else (ids are unique across packs).
@@ -13,7 +13,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/leccion/[id]">): Promise<Metadata> {
   const id = decodeURIComponent((await params).id);
   const pack = findLessonPack(id);
-  return { title: (pack && getLesson(id, pack)?.title) ?? "Lección" };
+  const title = pack && getLesson(id, pack)?.title;
+  // The pack's default gloss language (the learner's choice is only known on the device).
+  return { title: (pack && title !== undefined && glossOf(title, glossLangsOf(pack.meta)[0])) || "Lección" };
 }
 
 /** Lesson session; the result is saved on the device (`LessonRoute`). */

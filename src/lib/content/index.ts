@@ -31,6 +31,16 @@ import type {
 
 export type * from "./types";
 export { audioKey } from "./keys";
+export {
+  DEFAULT_GLOSS_LANG,
+  GLOSS_LANGUAGES,
+  glossesOf,
+  glossLangsOf,
+  glossOf,
+  glossTag,
+  isGlossLang,
+  type GlossBase,
+} from "./gloss";
 export { foldText, romanize, stripStress, type ScriptRulesSource } from "./script";
 
 interface Bundle {

@@ -98,9 +98,10 @@ cast, voices). What changes:
 **pack.json**: `default?` (`true` on exactly one pack), `lang` (= folder name), `name` (in
 Spanish, "Francés"), `nativeName` ("Français"), `emoji?` (flag shown by the language picker, 🇫🇷),
 `speechLocale` (`it-IT`), `voices` (edge-tts voice names; the first is the default),
-`formalRegister` (`lei` | `vous` | `vy` | `u` | `formal`: the formal register this pack's items use;
+`formalRegister` (`lei` | `vous` | `vy` | `u` | `usted` | `formal`: the formal register this pack's items use;
 `vy` is Russian вы to one person, shown as "Trato de usted"; `u` is Dutch polite u, shown as
-"Trato de usted (u)"; `formal`
+"Trato de usted (u)"; `usted` is Spanish usted, shown as "Trato de usted", and its `tu` register
+is shown as "Trato de vos" (the `INFORMAL_PRONOUN` map in `src/lib/content/register.ts`); `formal`
 is the generic value for a language with no polite pronoun, like English, where it marks polite
 or formal wording), `articles?` (articles allowed in vocab `article`: Italian `il lo la l' i gli
 le`, French `le la l' les`, English `a an`, Dutch `de het`; omit it for a language without articles, like
@@ -108,7 +109,7 @@ Russian: vocab then has no `article`),
 `numberWords` (optional, `{ "40": "quaranta", … }`: speech recognition often returns digits, so
 spoken answers are compared with digits written out with these words), `situations`
 (`{ id, title, emoji? }`, phrasebook sections in display order). If you need a new situation, add
-one line here.
+one line here. `glossLangs?`: the languages of the pack's glosses, see "Gloss languages" below.
 
 - `levels?`: CEFR levels of a pack **split by level**, in order (`["A2", "B1"]`; values `A1` `A2`
   `B1` `B2` `C1` `C2`). With `levels`, every unit, dialogue, story and placement question must
@@ -228,6 +229,37 @@ Runtime: `getStories()` (sorted by `order`), `getStory(id)`, `getStoryKeywords(s
 items). Each gap comes with `gap`, `before` and `after` (`before + gap + after` = sentence text).
 Record SRS outcomes on key word ids (normal item ids).
 
+## Gloss languages
+
+A **gloss** is learner-facing text that explains the target language: translations, notes,
+explanations, grammar cards, unit / lesson / dialogue / story titles and descriptions, prompts and
+feedback. `pack.json` `glossLangs` lists the languages a pack's glosses are written in, in order
+(`["ru"]`, later `["ru", "es", "en"]`); **absent = `["es"]`**, Spain Spanish, as every pack before
+this field. Known codes: `es` (Spain Spanish), `en`, `ru` (`GLOSS_LANGUAGES` in
+`src/lib/content/gloss.ts`; a new one is added there and in the schema siblings).
+
+- **Fields named after the language** carry one sibling per gloss language: the translation `es` /
+  `ru` / `en` (phrases, vocab, expressions, Q&A replies, grammar examples, dialogue turns and
+  options, story sentences, story questions and options), `questionEs` / `questionRu` /
+  `questionEn` (Q&A), `titleEs` / `titleRu` / `titleEn` (stories). `es` always means Spain Spanish.
+- **Every other gloss field** is a string (= Spain Spanish) or a map with one text per gloss
+  language: situation `title`, unit `title` / `description`, lesson `title`, phrase `literal` /
+  `notes` / `explanation`, vocab / Q&A / expression `notes`, expression `variety`, grammar `title` /
+  `summary` / `points`, dialogue `title` / `description`, learner turn `prompt`, option `feedback`,
+  story `description`, placement `prompt`.
+- **Grammar table cells and placement options** may be either: a plain string is shown as written
+  in every gloss language (target-language forms), a map is a gloss.
+- `content:check` requires **exactly** the pack's gloss languages on every gloss present (a plain
+  string counts as `es`, so a pack without `es` must use maps).
+
+```json
+{ "id": "es-a1-hola", "text": "¡Hola, che!", "ru": "Привет!", "notes": { "ru": "«Че» — дружеское обращение." }, "register": "tu", "situation": "saludos" }
+```
+
+The learner picks one gloss language per pack on /perfil (shown only when the pack lists two or
+more; stored in `lang-lern:gloss:<lang>`, default the first listed). Code reads a gloss only through
+`glossOf(value, glossLang)` / `glossOf(item, glossLang, base?)` from `@/lib/content`.
+
 ## Audio keys
 
 Every playable text gets a stable key derived from ids (`src/lib/content/keys.ts`). `npm run audio`
@@ -334,6 +366,7 @@ Custom SVGs must sit next to Fluent Emoji Flat icons without looking foreign:
 
 Schema (types, required fields, non-empty text, id format), unique ids across every pack,
 exactly one default pack, `register` limited to `tu`, `neutral` and the pack's `formalRegister`,
+every gloss in exactly the pack's `glossLangs` (see "Gloss languages"),
 vocab `article` limited to the pack's `articles` (none without `articles`), the pack's `stress`
 rule on every target-language text (see "Non-Latin scripts"), `level` required on units, dialogues, stories
 and placement questions of a pack with `levels` (one of them) and not allowed on units, dialogues

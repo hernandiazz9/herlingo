@@ -5,7 +5,7 @@ import { SpeakerIcon } from "@/components/icons";
 import { speak } from "@/lib/audio";
 import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { getAllLessons, type Pack, type Phrase } from "@/lib/content";
+import { getAllLessons, glossOf, type GlossLang, type Pack, type Phrase } from "@/lib/content";
 import { useFavorites } from "@/lib/favorites/use-favorites";
 import { recordListen } from "@/lib/progress/activity";
 import { dedupeByText } from "@/lib/srs/dedupe";
@@ -13,7 +13,7 @@ import { ExpandIcon, SlowIcon, StarIcon } from "./icons";
 import { fold, matches, romanizedForSearch } from "./search";
 import { SearchHeader, situationChips, type Chip, type Filter } from "./SearchHeader";
 import { ShowMode } from "./ShowMode";
-import { useLessonLang } from "@/components/exercises";
+import { useLessonGloss, useLessonLang } from "@/components/exercises";
 
 interface Entry {
   phrase: Phrase;
@@ -26,7 +26,7 @@ interface Entry {
  * One entry per target-language text: of several ids with the same text, the one taught first on the
  * path wins (unused phrases after); entries keep the pack order.
  */
-function buildEntries(pack: Pack): Entry[] {
+function buildEntries(pack: Pack, gloss: GlossLang): Entry[] {
   const rank = new Map<string, number>();
   getAllLessons(pack).forEach((lesson, i) => lesson.items.forEach((id) => rank.has(id) || rank.set(id, i)));
   const byId = new Map(pack.phrases.map((p) => [p.id, p]));
@@ -46,7 +46,14 @@ function buildEntries(pack: Pack): Entry[] {
         ids,
         haystack: fold(
           all
-            .flatMap((p) => [p.text, ...romanizedForSearch([p.text], pack), p.es, p.literal, p.notes, ...(p.tags ?? [])])
+            .flatMap((p) => [
+              p.text,
+              ...romanizedForSearch([p.text], pack),
+              glossOf(p, gloss),
+              glossOf(p.literal, gloss),
+              glossOf(p.notes, gloss),
+              ...(p.tags ?? []),
+            ])
             .filter(Boolean)
             .join(" "),
         ),
@@ -70,7 +77,8 @@ export function PhraseList({ pack, query, onQuery, filter: rawFilter, onFilter }
   const [shown, setShown] = useState<Phrase | null>(null);
   const closeShow = useCallback(() => setShown(null), []);
 
-  const entries = useMemo(() => buildEntries(pack), [pack]);
+  const gloss = useLessonGloss();
+  const entries = useMemo(() => buildEntries(pack, gloss.lang), [pack, gloss.lang]);
   // A phrase is a favourite when any of its ids is (a favourite saved on a now hidden duplicate).
   const isFav = useCallback((e: Entry) => e.ids.some((id) => favorites.has(id)), [favorites]);
   const favCount = useMemo(() => entries.filter(isFav).length, [entries, isFav]);
@@ -109,7 +117,7 @@ export function PhraseList({ pack, query, onQuery, filter: rawFilter, onFilter }
   const chips: Chip[] = [
     { key: "all", label: "Todas", filter: { kind: "all" }, active: filter.kind === "all" },
     { key: "fav", label: `★ Favoritas (${favCount})`, filter: { kind: "fav" }, active: filter.kind === "fav" },
-    ...situationChips(situations, filter),
+    ...situationChips(situations, filter, gloss.lang),
   ];
 
   return (
@@ -132,7 +140,7 @@ export function PhraseList({ pack, query, onQuery, filter: rawFilter, onFilter }
         <section key={situation.id} className="flex flex-col gap-2">
           <h2 className="text-lg font-extrabold text-ink">
             {situation.emoji ? <span aria-hidden="true">{situation.emoji} </span> : null}
-            {situation.title}
+            <span lang={gloss.tag}>{glossOf(situation.title, gloss.lang)}</span>
           </h2>
           <ul className="flex flex-col gap-2">
             {rows.map((entry) => (
@@ -170,6 +178,7 @@ interface PhraseRowProps {
 
 function PhraseRow({ phrase, open, favorite, onPlay, onToggleFavorite, onShow }: PhraseRowProps) {
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   return (
     <li className={cn("rounded-card border-2 bg-surface", open ? "border-sea" : "border-line")}>
       <div className="flex items-start gap-1 p-2 pl-4">
@@ -183,7 +192,9 @@ function PhraseRow({ phrase, open, favorite, onPlay, onToggleFavorite, onShow }:
             <span lang={lang} className="block text-lg leading-snug font-bold text-ink">
               <TargetText text={phrase.text} lang={lang} />
             </span>
-            <span className="block text-base text-ink-muted">{phrase.es}</span>
+            <span lang={gloss.tag} className="block text-base text-ink-muted">
+              {glossOf(phrase, gloss.lang)}
+            </span>
           </span>
           <SpeakerIcon className="mt-1 shrink-0 text-sea" width={22} height={22} />
         </button>
@@ -204,10 +215,14 @@ function PhraseRow({ phrase, open, favorite, onPlay, onToggleFavorite, onShow }:
         <div className="flex flex-col gap-3 border-t-2 border-line px-4 py-3">
           {phrase.literal ? (
             <p className="text-sm text-ink-muted">
-              <span className="font-bold">Literal:</span> {phrase.literal}
+              <span className="font-bold">Literal:</span> <span lang={gloss.tag}>{glossOf(phrase.literal, gloss.lang)}</span>
             </p>
           ) : null}
-          {phrase.notes ? <p className="text-sm text-ink">{phrase.notes}</p> : null}
+          {phrase.notes ? (
+            <p lang={gloss.tag} className="text-sm text-ink">
+              {glossOf(phrase.notes, gloss.lang)}
+            </p>
+          ) : null}
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"

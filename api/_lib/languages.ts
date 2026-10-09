@@ -14,6 +14,8 @@ const PackMeta = z.object({
   nativeName: z.string(),
   speechLocale: z.string(),
   voices: z.array(z.string()).min(1),
+  /** Gloss languages (absent = Spain Spanish only). The prompts write Spain Spanish glosses: Prepárate needs "es". */
+  glossLangs: z.array(z.string()).optional(),
   /**
    * Written stress (optional, `pack.json` `stress`): `mark` after the stressed vowel of every word
    * with two or more `vowels`, none in words with a `selfStressed` letter. Shown to the learner,
@@ -44,6 +46,9 @@ function load(): Map<string, LanguageMeta> {
 export function getLanguage(lang: string): LanguageMeta {
   const meta = load().get(lang);
   if (!meta) throw new CoachError(400, "bad_request", "Ese idioma no está disponible.");
+  if (meta.glossLangs && !meta.glossLangs.includes("es")) {
+    throw new CoachError(400, "bad_request", "Prepárate todavía no está disponible para este idioma.");
+  }
   return meta;
 }
 

@@ -4,7 +4,8 @@ import { useDeferredValue, useMemo, useState } from "react";
 import { Picture, TargetText } from "@/components/ui";
 import { speak } from "@/lib/audio";
 import { cn } from "@/lib/cn";
-import { listVocab, type Pack, type Situation, type Vocab } from "@/lib/content";
+import { glossOf, listVocab, type GlossLang, type Pack, type Situation, type Vocab } from "@/lib/content";
+import { useGlossLang, type GlossChoice } from "@/lib/content/use-gloss";
 import { recordListen } from "@/lib/progress/activity";
 import { fold, matches, romanizedForSearch } from "./search";
 import { SearchHeader, situationChips, type Chip, type Filter } from "./SearchHeader";
@@ -25,7 +26,7 @@ interface WordGroup {
  * Words grouped by situation in pack order; inside each topic, pictured words first, then the
  * rest. One card per target-language text within a topic (a pictured duplicate wins).
  */
-function buildGroups(pack: Pack): WordGroup[] {
+function buildGroups(pack: Pack, gloss: GlossLang): WordGroup[] {
   const groups = new Map<string, WordEntry[]>();
   for (const vocab of listVocab({}, pack)) {
     const key = vocab.situation ?? "";
@@ -34,7 +35,7 @@ function buildGroups(pack: Pack): WordGroup[] {
     const entry = {
       vocab,
       haystack: fold(
-        [vocab.text, vocab.word, vocab.plural, ...romanizedForSearch([vocab.text, vocab.word, vocab.plural], pack), vocab.es]
+        [vocab.text, vocab.word, vocab.plural, ...romanizedForSearch([vocab.text, vocab.word, vocab.plural], pack), glossOf(vocab, gloss)]
           .filter(Boolean)
           .join(" "),
       ),
@@ -68,7 +69,8 @@ interface WordListProps {
 export function WordList({ pack, query, onQuery, filter: rawFilter, onFilter }: WordListProps) {
   const deferredQuery = useDeferredValue(query);
   const [openId, setOpenId] = useState<string | null>(null);
-  const all = useMemo(() => buildGroups(pack), [pack]);
+  const gloss = useGlossLang(pack.meta.lang);
+  const all = useMemo(() => buildGroups(pack, gloss.lang), [pack, gloss.lang]);
   const situations = useMemo(() => all.flatMap((g) => (g.situation ? [g.situation] : [])), [all]);
 
   // The filter is shared with Frases: favourites (phrases only) or a topic without words → "Todas".
@@ -88,7 +90,7 @@ export function WordList({ pack, query, onQuery, filter: rawFilter, onFilter }: 
 
   const chips: Chip[] = [
     { key: "all", label: "Todas", filter: { kind: "all" }, active: filter.kind === "all" },
-    ...situationChips(situations, filter),
+    ...situationChips(situations, filter, gloss.lang),
   ];
 
   const play = (vocab: Vocab) => {
@@ -118,7 +120,7 @@ export function WordList({ pack, query, onQuery, filter: rawFilter, onFilter }: 
           <section key={key} className="flex flex-col gap-2">
             <h2 className="text-lg font-extrabold text-ink">
               {situation?.emoji ? <span aria-hidden="true">{situation.emoji} </span> : null}
-              {situation?.title ?? "Otras palabras"}
+              {situation ? <span lang={gloss.tag}>{glossOf(situation.title, gloss.lang)}</span> : "Otras palabras"}
             </h2>
             {pictured.length ? (
               <ul className="grid grid-cols-3 gap-2">
@@ -127,6 +129,7 @@ export function WordList({ pack, query, onQuery, filter: rawFilter, onFilter }: 
                     key={vocab.id}
                     vocab={vocab}
                     lang={pack.meta.lang}
+                    gloss={gloss}
                     open={openId === vocab.id}
                     onPlay={() => play(vocab)}
                   />
@@ -140,6 +143,7 @@ export function WordList({ pack, query, onQuery, filter: rawFilter, onFilter }: 
                     key={vocab.id}
                     vocab={vocab}
                     lang={pack.meta.lang}
+                    gloss={gloss}
                     open={openId === vocab.id}
                     onPlay={() => play(vocab)}
                   />
@@ -156,6 +160,7 @@ export function WordList({ pack, query, onQuery, filter: rawFilter, onFilter }: 
 interface WordCardProps {
   vocab: Vocab;
   lang: string;
+  gloss: GlossChoice;
   open: boolean;
   onPlay: () => void;
 }
@@ -164,7 +169,7 @@ interface WordCardProps {
  * Picture (when the word has one) and the bare word; once tapped it plays and shows the word with
  * its article and the Spanish translation.
  */
-function WordCard({ vocab, lang, open, onPlay }: WordCardProps) {
+function WordCard({ vocab, lang, gloss, open, onPlay }: WordCardProps) {
   return (
     <li className="flex">
       <button
@@ -181,7 +186,11 @@ function WordCard({ vocab, lang, open, onPlay }: WordCardProps) {
         <span lang={lang} className="text-base leading-tight font-bold break-words text-ink">
           <TargetText text={open ? vocab.text : vocab.word} lang={lang} />
         </span>
-        {open ? <span className="text-sm leading-tight text-ink-muted">{vocab.es}</span> : null}
+        {open ? (
+          <span lang={gloss.tag} className="text-sm leading-tight text-ink-muted">
+            {glossOf(vocab, gloss.lang)}
+          </span>
+        ) : null}
       </button>
     </li>
   );

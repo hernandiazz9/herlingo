@@ -5,7 +5,8 @@ import { useRef, useState, useSyncExternalStore } from "react";
 import { CloseIcon, ExerciseView, GrammarTip, LessonLangContext, WordIntro } from "@/components/exercises";
 import { Button, Card, ProgressBar } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { getLesson, getPack, getUnit, type Lesson, type Pack } from "@/lib/content";
+import { getLesson, getPack, getUnit, glossOf, type Lesson, type Pack } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import {
   buildResult,
   generateSession,
@@ -76,6 +77,7 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
   const pack = getPack(lang);
   const lesson = adHoc ?? (lessonId ? getLesson(lessonId, pack) : undefined);
   const unit = lesson ? getUnit(lesson.unitId, pack) : undefined;
+  const gloss = useGlossLang(lang);
 
   const [phase, setPhase] = useState<Phase>({ name: "intro" });
   const [queue, setQueue] = useState<Entry[]>([]);
@@ -117,6 +119,7 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
       speaking: getSettings().speaking && !isSpeakingPaused(),
       size: sessionSize,
       known: (id) => known.has(id),
+      gloss: gloss.lang,
     });
     const q = steps.map((step) => ({ step, attempt: 0, uid: step.key }));
     run.current = { seed: s, startedAt: now(), firstTry: new Set(), items: new Map() };
@@ -230,9 +233,11 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
               <div className="flex flex-1 flex-col gap-5">
                 <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">
                   {unit?.emoji ? `${unit.emoji} ` : ""}
-                  {unit?.title}
+                  {unit ? <span lang={gloss.tag}>{glossOf(unit.title, gloss.lang)}</span> : null}
                 </p>
-                <h1 className="text-3xl font-extrabold tracking-tight text-ink">{lesson.title}</h1>
+                <h1 lang={gloss.tag} className="text-3xl font-extrabold tracking-tight text-ink">
+                  {glossOf(lesson.title, gloss.lang)}
+                </h1>
                 <p className="text-lg text-ink-muted">
                   {intro ??
                     "Unos 5 minutos: escuchar, entender, construir frases y decirlas en voz alta. Los fallos vuelven al final."}

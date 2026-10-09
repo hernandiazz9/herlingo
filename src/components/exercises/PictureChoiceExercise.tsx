@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button, Picture, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { PictureChoiceExercise as PictureChoice, PictureOption } from "@/lib/exercises";
-import { PlayControls, Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
+import { PlayControls, Prompt, useLessonGloss, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
 /**
  * Pick the picture among 4 cards (2×2), then "Comprobar".
@@ -14,6 +14,7 @@ import { PlayControls, Prompt, useLessonLang, usePlay, type ExerciseProps } from
  */
 export function PictureChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<PictureChoice>) {
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   const [picked, setPicked] = useState<string | null>(null);
   const play = usePlay();
   const listen = exercise.type === "picture-listen";
@@ -27,7 +28,7 @@ export function PictureChoiceExercise({ exercise, answered, onAnswer }: Exercise
   const check = () => {
     const option = exercise.options.find((o) => o.id === picked);
     if (answered || !option) return;
-    onAnswer({ correct: option.correct, given: listen ? option.es : option.text });
+    onAnswer({ correct: option.correct, given: listen ? option.gloss : option.text });
   };
 
   return (
@@ -39,7 +40,11 @@ export function PictureChoiceExercise({ exercise, answered, onAnswer }: Exercise
         </>
       ) : (
         <Prompt>
-          ¿Cuál es <span className="text-sea-deep">«{exercise.es}»</span>?
+          ¿Cuál es{" "}
+          <span lang={gloss.tag} className="text-sea-deep">
+            «{exercise.gloss}»
+          </span>
+          ?
         </Prompt>
       )}
 
@@ -55,7 +60,7 @@ export function PictureChoiceExercise({ exercise, answered, onAnswer }: Exercise
                 type="button"
                 disabled={answered}
                 aria-pressed={isPicked}
-                aria-label={showWord ? undefined : option.es}
+                aria-label={showWord ? undefined : option.gloss}
                 onClick={() => select(option)}
                 className={cn(
                   "pressable flex w-full flex-col items-center gap-2 rounded-card border-2 p-3",

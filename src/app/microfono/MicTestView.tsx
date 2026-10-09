@@ -117,7 +117,8 @@ export function MicTestView() {
         {supported ? (
           <>
             <TryCard title={`En ${meta.name.toLocaleLowerCase("es")}`} locale={meta.speechLocale} lang={lang} log={log} />
-            {meta.speechLocale !== SPANISH_LOCALE ? (
+            {/* A Spanish pack (any es-XX) already is the Spanish test. */}
+            {!meta.speechLocale.startsWith("es-") ? (
               <TryCard title="En español" locale={SPANISH_LOCALE} lang="es" log={log} />
             ) : null}
           </>

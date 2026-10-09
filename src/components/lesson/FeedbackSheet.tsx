@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { MiniPlay, useLessonLang } from "@/components/exercises";
+import { MiniPlay, useLessonGloss, useLessonLang } from "@/components/exercises";
 import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack } from "@/lib/content";
@@ -44,6 +44,7 @@ function Highlighted({ words, tone }: { words: DiffWord[]; tone: "fix" | "mistak
  */
 export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSheetProps) {
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   const { correct } = outcome;
   const { solution } = exercise;
   const isMatch = exercise.type === "match";
@@ -110,7 +111,11 @@ export function FeedbackSheet({ exercise, outcome, seq, onContinue }: FeedbackSh
                 {diff ? <Highlighted words={diff.expected} tone="fix" /> : solution.text}
               </TargetText>
             </span>
-            {solution.es ? <span className="text-base text-ink-muted">{solution.es}</span> : null}
+            {solution.gloss ? (
+              <span lang={gloss.tag} className="text-base text-ink-muted">
+                {solution.gloss}
+              </span>
+            ) : null}
             {solution.note ? <span className="mt-1 text-sm text-ink-muted">{solution.note}</span> : null}
           </div>
         </div>

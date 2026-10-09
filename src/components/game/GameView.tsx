@@ -4,7 +4,9 @@ import { useMemo, useState, useSyncExternalStore } from "react";
 import { EntryCard } from "@/components/coach/EntryCard";
 import { LessonLangContext } from "@/components/exercises/shared";
 import { speak } from "@/lib/audio";
-import { getPack } from "@/lib/content";
+import { coachAvailable } from "@/lib/coach/available";
+import { getPack, glossOf, type GlossLang } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { cn } from "@/lib/cn";
 import { createRng } from "@/lib/exercises";
@@ -53,6 +55,7 @@ function Game({ lang }: { lang: string }) {
   const raw = useSyncExternalStore(subscribeGame, () => readGameRaw(lang), empty);
   const game = useMemo(() => parseGameState(raw), [raw]);
   const [stage, setStage] = useState<Stage>({ step: "topics" });
+  const gloss = useGlossLang(lang);
 
   const go = (next: Stage) => {
     setStage(next);
@@ -85,7 +88,15 @@ function Game({ lang }: { lang: string }) {
       ) : stage.step === "round" ? (
         <Round lang={lang} pool={stage.pool} deck={stage.deck} record={game.records[stage.pool.topic.id] ?? 0} onExit={toTopics} />
       ) : (
-        <TopicGrid topics={topics} mixDetail={mixDetail} records={game.records} onOpen={open} />
+        <TopicGrid
+          topics={topics}
+          mixDetail={mixDetail}
+          records={game.records}
+          onOpen={open}
+          gloss={gloss.lang}
+          glossTag={gloss.tag}
+          coach={coachAvailable(lang)}
+        />
       )}
     </LessonLangContext.Provider>
   );
@@ -96,15 +107,23 @@ function TopicGrid({
   mixDetail,
   records,
   onOpen,
+  gloss,
+  glossTag,
+  coach,
 }: {
   topics: Topic[];
   mixDetail: string;
   records: Record<string, number>;
   onOpen: (id: string) => void;
+  /** The learner's gloss language (topic titles) and its `lang` attribute. */
+  gloss: GlossLang;
+  glossTag: string | undefined;
+  /** Prepárate is offered for this pack (`coachAvailable`). */
+  coach: boolean;
 }) {
   return (
     <div className="flex flex-col gap-4 pb-6">
-      <EntryCard />
+      {coach ? <EntryCard /> : null}
       <p className="text-base text-ink-muted">
         Elige un tema: descubre sus palabras y frases con audio y luego juega una ronda de 60 segundos.
       </p>
@@ -122,7 +141,8 @@ function TopicGrid({
           <li key={t.id} className="flex">
             <TopicButton
               emoji={t.emoji}
-              title={t.title}
+              title={glossOf(t.title, gloss)}
+              titleLang={glossTag}
               detail={countLabel(t)}
               record={records[t.id]}
               onClick={() => onOpen(t.id)}
@@ -137,6 +157,7 @@ function TopicGrid({
 function TopicButton({
   emoji,
   title,
+  titleLang,
   detail,
   record,
   onClick,
@@ -145,6 +166,8 @@ function TopicButton({
 }: {
   emoji?: string;
   title: string;
+  /** `lang` of the title when it is a gloss in another language than Spanish. */
+  titleLang?: string;
   detail: string;
   record?: number;
   onClick: () => void;
@@ -170,7 +193,9 @@ function TopicButton({
         </span>
       ) : null}
       <span className="flex flex-col gap-0.5">
-        <span className="text-lg font-extrabold leading-tight text-ink">{title}</span>
+        <span lang={titleLang} className="text-lg font-extrabold leading-tight text-ink">
+          {title}
+        </span>
         <span className="text-sm text-ink-muted">{detail}</span>
         <span className={cn("text-sm font-bold", record ? "text-terracotta-deep" : "text-ink-muted")}>
           {record ? `Récord: ${record}` : "Sin récord"}

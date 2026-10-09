@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ALL_LEVELS, LevelChips, type LevelFilter } from "@/components/level/LevelChips";
-import { getPack } from "@/lib/content";
+import { getPack, glossOf } from "@/lib/content";
 import { useLevel } from "@/lib/content/level-hook";
 import { useScreenLang } from "@/lib/content/use-active-lang";
+import { useGlossLang } from "@/lib/content/use-gloss";
 
 /**
  * Every dialogue of the active pack, grouped by situation (pack order). A pack with levels shows
@@ -19,6 +20,7 @@ export function DialogueList() {
 function PackDialogues({ lang }: { lang: string }) {
   const pack = getPack(lang);
   const { levels, level } = useLevel(lang);
+  const gloss = useGlossLang(lang);
   const [filter, setFilter] = useState<LevelFilter>(level ?? ALL_LEVELS);
   const shown = filter === ALL_LEVELS ? pack.dialogues : pack.dialogues.filter((d) => d.level === filter);
   const groups = pack.meta.situations
@@ -45,7 +47,7 @@ function PackDialogues({ lang }: { lang: string }) {
         <section key={situation.id} className="flex flex-col gap-2">
           <h2 className="text-lg font-extrabold text-ink">
             {situation.emoji ? <span aria-hidden="true">{situation.emoji} </span> : null}
-            {situation.title}
+            <span lang={gloss.tag}>{glossOf(situation.title, gloss.lang)}</span>
           </h2>
           <ul className="flex flex-col gap-2">
             {dialogues.map((d) => {
@@ -56,8 +58,14 @@ function PackDialogues({ lang }: { lang: string }) {
                     href={`/dialogos/${encodeURIComponent(d.id)}`}
                     className="pressable flex flex-col gap-1 rounded-card border-2 border-line bg-surface p-4 [--ledge:var(--line)]"
                   >
-                    <span className="text-lg font-bold text-ink">{d.title}</span>
-                    {d.description ? <span className="text-ink-muted">{d.description}</span> : null}
+                    <span lang={gloss.tag} className="text-lg font-bold text-ink">
+                      {glossOf(d.title, gloss.lang)}
+                    </span>
+                    {d.description ? (
+                      <span lang={gloss.tag} className="text-ink-muted">
+                        {glossOf(d.description, gloss.lang)}
+                      </span>
+                    ) : null}
                     <span className="text-sm font-bold text-sea-deep">
                       {answers === 1 ? "1 respuesta" : `${answers} respuestas`}
                     </span>

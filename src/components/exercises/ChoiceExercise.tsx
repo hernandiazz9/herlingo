@@ -4,13 +4,14 @@ import { useState } from "react";
 import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { AnswerExercise, ChoiceOption, ListenMeaningExercise, ReadMeaningExercise } from "@/lib/exercises";
-import { MiniPlay, PlayControls, Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
+import { MiniPlay, PlayControls, Prompt, useLessonGloss, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
 type ChoiceKind = ListenMeaningExercise | ReadMeaningExercise | AnswerExercise;
 
 /** Listen and pick the meaning / read and pick the meaning / answer the question. */
 export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<ChoiceKind>) {
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   const [picked, setPicked] = useState<string | null>(null);
   const [showQuestion, setShowQuestion] = useState(false);
   const play = usePlay();
@@ -73,7 +74,7 @@ export function ChoiceExercise({ exercise, answered, onAnswer }: ExerciseProps<C
                 type="button"
                 disabled={answered}
                 onClick={() => choose(option)}
-                lang={exercise.type === "answer" ? lang : undefined}
+                lang={exercise.type === "answer" ? lang : gloss.tag}
                 className={cn(
                   "pressable min-h-14 flex-1 rounded-button border-2 px-4 py-3 text-left text-lg font-bold",
                   "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",

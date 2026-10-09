@@ -3,20 +3,22 @@
 import { useEffect } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { Button, TargetText } from "@/components/ui";
-import type { Playable } from "@/lib/content";
+import { glossOf, type Playable } from "@/lib/content";
 import { speak, stop } from "@/lib/audio";
 import { recordListen } from "@/lib/progress/activity";
 import { CloseIcon, SlowIcon } from "./icons";
-import { useLessonLang } from "@/components/exercises";
+import { useLessonGloss, useLessonLang } from "@/components/exercises";
 
 export interface ShowModeProps {
-  item: Playable & { es: string };
+  /** Shown with its translation in the learner's gloss language. */
+  item: Playable;
   onClose: () => void;
 }
 
 /** Full-screen "show it to a native speaker" view: the phrase in huge type, with play buttons. */
 export function ShowMode({ item, onClose }: ShowModeProps) {
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -62,7 +64,9 @@ export function ShowMode({ item, onClose }: ShowModeProps) {
         <p lang={lang} className="text-[clamp(2.25rem,11vw,4.5rem)] leading-tight font-extrabold break-words text-ink">
           <TargetText text={item.text} lang={lang} />
         </p>
-        <p className="text-xl text-ink-muted">{item.es}</p>
+        <p lang={gloss.tag} className="text-xl text-ink-muted">
+          {glossOf(item, gloss.lang)}
+        </p>
       </button>
       <div className="mx-auto grid w-full max-w-[var(--column-width)] grid-cols-2 gap-3">
         <Button onClick={() => play()}>

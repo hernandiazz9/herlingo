@@ -20,6 +20,8 @@ import { LanguagePicker, pickablePacks, useChooseLanguage } from "@/components/l
 import { BackupSection } from "./BackupSection";
 import { CloudSaveSection } from "./CloudSaveSection";
 import { CoachSections } from "./CoachSections";
+import { GlossSection } from "./GlossSection";
+import { coachAvailable } from "@/lib/coach/available";
 
 /** Destructive button: error colours, same shape and press animation as `Button`. */
 const DANGER =
@@ -65,11 +67,13 @@ function Profile({ lang }: { lang: string }) {
 
       {pickablePacks().length > 1 ? <LanguageSection lang={lang} /> : null}
 
+      <GlossSection lang={lang} />
+
       <LevelSection lang={lang} />
 
       {leagueEnabled() ? <LeagueLink /> : null}
 
-      <CoachSections lang={lang} />
+      {coachAvailable(lang) ? <CoachSections lang={lang} /> : null}
 
       <section aria-labelledby="settings-title" className="flex flex-col gap-3">
         <h2 id="settings-title" className="text-2xl font-extrabold tracking-tight text-ink">
@@ -108,18 +112,20 @@ function Profile({ lang }: { lang: string }) {
           </div>
           <ThemeToggle />
         </Card>
-        <Card className="flex flex-col gap-3">
-          <div className="flex flex-col gap-1">
-            <h3 className="text-lg font-bold text-ink">Prueba de nivel</h3>
-            <p className="text-sm text-ink-muted">Unos 3 minutos. Marca como hechas las lecciones que ya dominas.</p>
-          </div>
-          <Link
-            href="/bienvenida/prueba/"
-            className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
-          >
-            Repetir la prueba de nivel
-          </Link>
-        </Card>
+        {pack.placement.length ? (
+          <Card className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
+              <h3 className="text-lg font-bold text-ink">Prueba de nivel</h3>
+              <p className="text-sm text-ink-muted">Unos 3 minutos. Marca como hechas las lecciones que ya dominas.</p>
+            </div>
+            <Link
+              href="/bienvenida/prueba/"
+              className="pressable inline-flex min-h-12 items-center justify-center rounded-button border-2 border-line bg-surface px-5 text-base font-bold text-sea [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
+            >
+              Repetir la prueba de nivel
+            </Link>
+          </Card>
+        ) : null}
         <Card className="flex flex-col gap-3">
           <div className="flex flex-col gap-1">
             <h3 className="text-lg font-bold text-ink">Instalar en el iPhone</h3>

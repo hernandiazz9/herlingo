@@ -130,6 +130,7 @@ plans/                 Orchestrator plans. Never edit.
   `getLessonItems()`, `getItem()`, `getDialogue()`, `getSituation()`, `listPlayables()`), never
   by importing `content/` JSON. Synchronous; works in server and client components. The app
   never imports zod (only `scripts/content.ts` does).
+- **Glosses** (translations, notes, grammar text, learner-facing titles) are read only through `glossOf(value | item, glossLang, base?)` from `@/lib/content`, with the learner's per-pack choice from `useGlossLang(lang)` (`@/lib/content/use-gloss`, key `lang-lern:gloss:<lang>`; `lang={gloss.tag}` on the element); a pack lists `glossLangs` (absent = `["es"]`). docs/content-guide.md, "Gloss languages".
 - **Several packs.** `listPacks()` = every pack's meta, default first (`DEFAULT_LANG` = the pack
   with `"default": true`). The learner's language is the **active** one: `getActiveLang()` /
   `setActiveLang()` / `subscribeActiveLang()` from `@/lib/content/active` (`lang-lern:active-lang`,

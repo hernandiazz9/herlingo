@@ -51,6 +51,7 @@ const CHANGE_EVENTS = [
   "lang-lern:game-change",
   "lang-lern:stories-change",
   "lang-lern:coach-change",
+  "lang-lern:gloss-change",
 ];
 
 /** Server tokens of the save RPCs (they reach the client as the `LeagueError` message). */

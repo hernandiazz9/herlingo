@@ -5,11 +5,12 @@ import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack } from "@/lib/content";
 import { checkAnswer, scriptRules, type FillGapExercise as FillGap } from "@/lib/exercises";
-import { MiniPlay, Prompt, useLessonLang, type ExerciseProps } from "./shared";
+import { MiniPlay, Prompt, useLessonGloss, useLessonLang, type ExerciseProps } from "./shared";
 
 /** Target-language sentence with a missing word: pick the word. */
 export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<FillGap>) {
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   const rules = scriptRules(getPack(lang).meta);
   const [picked, setPicked] = useState<string | null>(null);
 
@@ -24,7 +25,9 @@ export function FillGapExercise({ exercise, answered, onAnswer }: ExerciseProps<
   return (
     <div className="flex flex-col gap-6">
       <Prompt>Completa la frase</Prompt>
-      <p className="text-lg text-ink-muted">{exercise.es}</p>
+      <p lang={gloss.tag} className="text-lg text-ink-muted">
+        {exercise.gloss}
+      </p>
       <div className="flex items-start gap-3">
         {answered ? <MiniPlay audio={exercise.audio} /> : null}
         <p lang={lang} className="whitespace-pre-wrap text-2xl font-bold leading-relaxed text-ink">

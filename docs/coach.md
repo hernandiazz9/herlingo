@@ -257,6 +257,7 @@ side, change the other.
 | `usage.ts` | last usage summary seen (`getStoredUsage`), `formatUsd(3.2)` → "3,20 $" |
 | `audio.ts` | generated playables: `packLine(pack, text, speaker)`, `packPlayables`, `questionPlayable`, `cachePackAudio`, `coachVoices` |
 | `parse.ts`, `store.ts` | hand-written shape checks; storage keys and the change event |
+| `available.ts` | `coachAvailable(lang)`: Prepárate only for packs whose `glossLangs` include `es` (its prompts write Spain Spanish glosses); entry points hide otherwise and `getLanguage()` in `api/_lib/languages.ts` refuses the rest |
 
 - **Requests** go to `/api/coach/<endpoint>/` on the same origin with the stored code in
   `x-coach-code`, `cache: "no-store"` and a 75 s timeout. `generatePack`, `refinePack` and

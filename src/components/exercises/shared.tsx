@@ -5,6 +5,7 @@ import { SpeakerIcon } from "@/components/icons";
 import { speak } from "@/lib/audio";
 import { getPack, type Playable } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
+import { useGlossLang, type GlossChoice } from "@/lib/content/use-gloss";
 import { cn } from "@/lib/cn";
 import type { Exercise, ExerciseOutcome } from "@/lib/exercises";
 
@@ -16,6 +17,11 @@ export function useLessonLang(): string {
   const session = useContext(LessonLangContext);
   const screen = useScreenLang();
   return session ?? screen ?? getPack().meta.lang;
+}
+
+/** The learner's gloss language for the session's pack (`glossOf()` + the `lang` attribute of glosses). */
+export function useLessonGloss(): GlossChoice {
+  return useGlossLang(useLessonLang());
 }
 
 /** Plays a playable in the session language. Call it directly in a click handler (iOS). */

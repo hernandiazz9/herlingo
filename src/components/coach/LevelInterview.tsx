@@ -18,10 +18,12 @@ import {
   type InterviewTurn,
 } from "@/lib/coach";
 import { useCoachAccess, useCoachUsage, useLearnerProfile } from "@/lib/coach/use-coach";
+import { coachAvailable } from "@/lib/coach/available";
 import { getPack } from "@/lib/content";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { recordActivity } from "@/lib/progress/activity";
 import { CoachCodeForm, useHydrated } from "./AiUsagePanel";
+import { CoachUnavailable } from "./shared";
 
 /** XP for finishing the level interview. */
 const XP_INTERVIEW = 15;
@@ -96,6 +98,7 @@ type Phase =
  */
 export function LevelInterview() {
   const lang = useScreenLang();
+  if (lang && !coachAvailable(lang)) return <CoachUnavailable />;
   return lang ? <Interview key={lang} lang={lang} /> : null;
 }
 

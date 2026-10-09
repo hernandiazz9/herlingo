@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MiniPlay, PlayControls, Prompt, useLessonLang, type ExerciseProps } from "@/components/exercises";
+import { MiniPlay, PlayControls, Prompt, useLessonGloss, useLessonLang, type ExerciseProps } from "@/components/exercises";
 import { TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { AnswerExercise, ChoiceOption } from "@/lib/exercises";
@@ -11,6 +11,7 @@ export function QuestionExercise({ exercise, answered, onAnswer }: ExerciseProps
   const [picked, setPicked] = useState<string | null>(null);
   const [showEs, setShowEs] = useState(false);
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
 
   const choose = (option: ChoiceOption) => {
     if (answered || picked) return;
@@ -27,7 +28,9 @@ export function QuestionExercise({ exercise, answered, onAnswer }: ExerciseProps
           <TargetText text={exercise.question.text} lang={lang} />
         </p>
         {showEs || answered ? (
-          <p className="text-base text-ink-muted">{exercise.questionEs}</p>
+          <p lang={gloss.tag} className="text-base text-ink-muted">
+            {exercise.questionGloss}
+          </p>
         ) : (
           <button
             type="button"

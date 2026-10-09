@@ -2,32 +2,19 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { getDialogue, getPack, getSituation } from "@/lib/content";
+import { getDialogue, getPack, getSituation, glossOf } from "@/lib/content";
+import { registerLabel } from "@/lib/content/register";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { dialogueXp } from "@/lib/exercises";
 import { countPlay, recordActivity, repeatXp } from "@/lib/progress/activity";
 import { DialoguePlayer } from "./DialoguePlayer";
-
-/** Pronoun shown after "Trato de usted" for a Latin-script formal register; others show none. */
-const FORMAL_PRONOUN: Record<string, string> = { lei: "Lei", vous: "Vous", u: "u" };
-
-/**
- * "Trato de tú", or "Trato de usted (Lei)" / "(Vous)" / "(u)" / "Trato de usted" (`vy`) for the pack's
- * formal register; a pack whose formal register is the generic `formal` (no polite pronoun) says
- * "Registro informal" / "Registro formal"; neutral = none.
- */
-function registerLabel(register: string, formalRegister: string): string {
-  if (register === "neutral") return "";
-  if (formalRegister === "formal") return register === "tu" ? "Registro informal" : "Registro formal";
-  if (register === "tu") return "Trato de tú";
-  const pronoun = FORMAL_PRONOUN[register];
-  return pronoun ? `Trato de usted (${pronoun})` : "Trato de usted";
-}
 
 /** Plays a scripted dialogue of the content pack (see `DialoguePlayer`); every finish earns XP (half on repeats today). */
 export function DialogueSimulator({ id, lang }: { id: string; lang: string }) {
   const pack = getPack(lang);
   const dialogue = getDialogue(id, pack);
   const [xp, setXp] = useState<{ earned: number; repeat: boolean } | null>(null);
+  const gloss = useGlossLang(lang);
 
   if (!dialogue) return <p className="text-ink-muted">No se ha encontrado este diálogo.</p>;
 
@@ -57,10 +44,14 @@ export function DialogueSimulator({ id, lang }: { id: string; lang: string }) {
           {situation ? (
             <p className="text-sm font-bold text-sea-deep">
               {situation.emoji ? `${situation.emoji} ` : ""}
-              {situation.title}
+              <span lang={gloss.tag}>{glossOf(situation.title, gloss.lang)}</span>
             </p>
           ) : null}
-          {dialogue.description ? <p className="text-lg text-ink">{dialogue.description}</p> : null}
+          {dialogue.description ? (
+            <p lang={gloss.tag} className="text-lg text-ink">
+              {glossOf(dialogue.description, gloss.lang)}
+            </p>
+          ) : null}
           <p className="text-sm text-ink-muted">
             {[registerLabel(dialogue.register, pack.meta.formalRegister), `${answers} respuestas`].filter(Boolean).join(" · ")}
           </p>

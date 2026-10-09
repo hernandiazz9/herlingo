@@ -8,6 +8,9 @@
  */
 import type { z } from "zod";
 import type * as S from "./schema";
+import type { GlossText } from "./gloss";
+
+export type { GlossLang, GlossMap, GlossText } from "./gloss";
 
 export type Register = z.infer<typeof S.Register>;
 export type Situation = z.infer<typeof S.Situation>;
@@ -81,7 +84,8 @@ export type LessonItemKind = LessonItem["kind"];
 
 export interface Lesson {
   id: string;
-  title: string;
+  /** A gloss: read it with `glossOf()`. */
+  title: GlossText;
   /** Ids in teaching order; resolve with `getLessonItems(lesson)`. */
   items: string[];
   /** Id of the unit that contains it. */
@@ -93,8 +97,9 @@ export interface Lesson {
 export interface Unit {
   id: string;
   order: number;
-  title: string;
-  description?: string;
+  /** Glosses: read them with `glossOf()`. */
+  title: GlossText;
+  description?: GlossText;
   emoji?: string;
   situation: string;
   /** CEFR level (packs with `levels` only). */
@@ -145,7 +150,7 @@ export interface StoryGap {
   distractors: string[];
 }
 
-/** What a story key word resolves to: a playable pack item with `text` and `es`. */
+/** What a story key word resolves to: a playable pack item with `text` and a translation (`glossOf(item, lang)`). */
 export type StoryKeyword = Vocab | Phrase | Expression;
 
 export interface Story {
@@ -154,9 +159,11 @@ export interface Story {
   order: number;
   /** Target-language title. */
   title: string;
-  /** Spanish title. */
-  titleEs: string;
-  description?: string;
+  /** Translated title siblings: read with `glossOf(story, lang, "title")`. */
+  titleEs?: string;
+  titleEn?: string;
+  titleRu?: string;
+  description?: GlossText;
   emoji?: string;
   situation: string;
   level: Level;

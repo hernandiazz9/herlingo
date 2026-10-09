@@ -3,8 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { StoryView } from "@/components/stories/StoryView";
-import { LatinLine } from "@/components/ui";
-import { findStoryPack, getPack, getSituation, getStories, getStory, listLangs } from "@/lib/content";
+import { Gloss, LatinLine } from "@/components/ui";
+import { findStoryPack, getPack, getSituation, getStories, getStory, glossLangsOf, glossOf, listLangs } from "@/lib/content";
 
 export const dynamicParams = false;
 
@@ -16,7 +16,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/historias/[id]">): Promise<Metadata> {
   const id = decodeURIComponent((await params).id);
   const pack = findStoryPack(id);
-  return { title: (pack && getStory(id, pack)?.titleEs) ?? "Historia" };
+  const story = pack && getStory(id, pack);
+  // The pack's default gloss language (the learner's choice is only known on the device).
+  return { title: (pack && story && glossOf(story, glossLangsOf(pack.meta)[0], "title")) || "Historia" };
 }
 
 export default async function StoryPage({ params }: PageProps<"/historias/[id]">) {
@@ -36,8 +38,15 @@ export default async function StoryPage({ params }: PageProps<"/historias/[id]">
         subtitle={
           <>
             <LatinLine text={story.title} lang={pack.meta.lang} className="font-bold" />
-            {story.titleEs}
-            {situation ? ` · ${situation.emoji ? `${situation.emoji} ` : ""}${situation.title}` : ""}
+            <Gloss of={story} base="title" lang={pack.meta.lang} />
+            {situation ? (
+              <>
+                {` · ${situation.emoji ? `${situation.emoji} ` : ""}`}
+                <Gloss of={situation.title} lang={pack.meta.lang} />
+              </>
+            ) : (
+              ""
+            )}
           </>
         }
       />

@@ -5,7 +5,8 @@ import { SpeakerIcon } from "@/components/icons";
 import { Button, Card, Picture, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
-import { getPack, getStoryKeywords, hasImage, type Story, type StoryKeyword } from "@/lib/content";
+import { getPack, getStoryKeywords, glossOf, hasImage, type Story, type StoryKeyword } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { recordListen } from "@/lib/progress/activity";
 import { segmentStory } from "@/lib/stories";
 
@@ -23,6 +24,7 @@ interface Open {
  */
 export function StoryReader({ story, lang, onPlay }: { story: Story; lang: string; onPlay: () => void }) {
   const pack = getPack(lang);
+  const gloss = useGlossLang(lang);
   const keywords = useMemo(() => getStoryKeywords(story, pack), [story, pack]);
   const byId = useMemo(() => new Map<string, StoryKeyword>(keywords.map((k) => [k.id, k])), [keywords]);
   const segments = useMemo(() => segmentStory(story, keywords), [story, keywords]);
@@ -162,8 +164,14 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
                     <span lang={lang} className="text-lg font-bold text-ink">
                       <TargetText text={kw.text} lang={lang} />
                     </span>
-                    <span className="text-base text-ink">{kw.es}</span>
-                    {kw.notes ? <span className="mt-1 text-sm text-ink-muted">{kw.notes}</span> : null}
+                    <span lang={gloss.tag} className="text-base text-ink">
+                      {glossOf(kw, gloss.lang)}
+                    </span>
+                    {kw.notes ? (
+                      <span lang={gloss.tag} className="mt-1 text-sm text-ink-muted">
+                        {glossOf(kw.notes, gloss.lang)}
+                      </span>
+                    ) : null}
                   </div>
                   {hasImage(kw) ? (
                     <div className="ml-auto w-20 shrink-0">
@@ -172,7 +180,11 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
                   ) : null}
                 </Card>
               ) : null}
-              {es ? <p className="text-base text-ink-muted">{s.es}</p> : null}
+              {es ? (
+                <p lang={gloss.tag} className="text-base text-ink-muted">
+                  {glossOf(s, gloss.lang)}
+                </p>
+              ) : null}
               {!showAll ? (
                 <button
                   type="button"

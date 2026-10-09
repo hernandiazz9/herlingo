@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
 import { Card, ProgressBar } from "@/components/ui";
-import { getPack, getUnit } from "@/lib/content";
+import { getPack, getUnit, glossOf } from "@/lib/content";
+import { useGlossLang, type GlossChoice } from "@/lib/content/use-gloss";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useLevel } from "@/lib/content/level-hook";
 import { LevelChips } from "@/components/level/LevelChips";
@@ -37,6 +38,7 @@ function Path({ lang }: { lang: string }) {
   const progress = useProgress(lang);
   const now = useNow();
   const { levels, level, setLevel } = useLevel(lang);
+  const gloss = useGlossLang(lang);
   const path = useMemo(() => buildPath(pack, progress, level), [pack, progress, level]);
   const [sheet, setSheet] = useState<"grammar" | "expressions" | null>(null);
 
@@ -56,7 +58,7 @@ function Path({ lang }: { lang: string }) {
   const grammar = pack.grammar.filter(inLevel);
   const expressions = pack.expressions.filter(inLevel);
   const dialogueCount = pack.dialogues.filter(inLevel).length;
-  const varieties = [...new Set(expressions.map((e) => e.variety.toLowerCase()))];
+  const varieties = [...new Set(expressions.map((e) => glossOf(e.variety, gloss.lang).toLowerCase()))];
 
   return (
     <>
@@ -83,9 +85,11 @@ function Path({ lang }: { lang: string }) {
             <div className="flex flex-col gap-0.5">
               <p className="text-sm font-bold text-ink-muted">
                 {currentUnit?.emoji ? `${currentUnit.emoji} ` : ""}
-                {currentUnit?.title}
+                {currentUnit ? <span lang={gloss.tag}>{glossOf(currentUnit.title, gloss.lang)}</span> : null}
               </p>
-              <p className="text-xl font-extrabold text-ink">{current.title}</p>
+              <p lang={gloss.tag} className="text-xl font-extrabold text-ink">
+                {glossOf(current.title, gloss.lang)}
+              </p>
             </div>
             <Link
               href={lessonHref(current.id)}
@@ -131,7 +135,7 @@ function Path({ lang }: { lang: string }) {
       ) : null}
 
       {main.map((u) => (
-        <UnitSection key={u.unit.id} entry={u} />
+        <UnitSection key={u.unit.id} entry={u} gloss={gloss} />
       ))}
 
       {side.length || grammar.length || expressions.length ? (
@@ -156,7 +160,7 @@ function Path({ lang }: { lang: string }) {
             ) : null}
           </div>
           {side.map((u) => (
-            <UnitSection key={u.unit.id} entry={u} />
+            <UnitSection key={u.unit.id} entry={u} gloss={gloss} />
           ))}
         </section>
       ) : null}
@@ -228,8 +232,9 @@ function SideButton({ emoji, title, count, onClick }: { emoji: string; title: st
 /** Horizontal offsets of the lesson nodes: a gentle zigzag. */
 const OFFSETS = ["0rem", "1.5rem", "2.5rem", "1.5rem"];
 
-function UnitSection({ entry }: { entry: PathUnit }) {
+function UnitSection({ entry, gloss }: { entry: PathUnit; gloss: GlossChoice }) {
   const { unit, lessons, done } = entry;
+  const title = glossOf(unit.title, gloss.lang);
   const complete = done === lessons.length;
   return (
     <section aria-labelledby={`unit-${unit.id}`} className="flex flex-col gap-3">
@@ -241,21 +246,25 @@ function UnitSection({ entry }: { entry: PathUnit }) {
             </span>
           ) : null}
           <div className="flex min-w-0 flex-1 flex-col gap-0.5">
-            <h2 id={`unit-${unit.id}`} className="text-xl font-extrabold text-ink">
-              {unit.title}
+            <h2 id={`unit-${unit.id}`} lang={gloss.tag} className="text-xl font-extrabold text-ink">
+              {title}
             </h2>
-            {unit.description ? <p className="text-sm text-ink-muted">{unit.description}</p> : null}
+            {unit.description ? (
+              <p lang={gloss.tag} className="text-sm text-ink-muted">
+                {glossOf(unit.description, gloss.lang)}
+              </p>
+            ) : null}
           </div>
           <span className="shrink-0 text-sm font-bold text-ink-muted">
             {done}/{lessons.length}
           </span>
         </div>
-        <ProgressBar value={done} max={lessons.length} label={`Progreso de ${unit.title}`} tone={complete ? "success" : "sea"} className="h-2.5" />
+        <ProgressBar value={done} max={lessons.length} label={`Progreso de ${title}`} tone={complete ? "success" : "sea"} className="h-2.5" />
       </Card>
       <ol className="flex flex-col gap-2 px-1">
         {lessons.map((l, i) => (
           <li key={l.lesson.id} style={{ paddingLeft: OFFSETS[i % OFFSETS.length] }}>
-            <LessonNode entry={l} n={i + 1} />
+            <LessonNode entry={l} n={i + 1} gloss={gloss} />
           </li>
         ))}
       </ol>
@@ -277,8 +286,9 @@ const STATE_LABEL: Record<PathLesson["state"], string> = {
   locked: "bloqueada",
 };
 
-function LessonNode({ entry, n }: { entry: PathLesson; n: number }) {
+function LessonNode({ entry, n, gloss }: { entry: PathLesson; n: number; gloss: GlossChoice }) {
   const { lesson, state } = entry;
+  const title = glossOf(lesson.title, gloss.lang);
   const circle = (
     <span
       aria-hidden="true"
@@ -293,13 +303,15 @@ function LessonNode({ entry, n }: { entry: PathLesson; n: number }) {
   );
   const text = (
     <span className="flex min-w-0 flex-col">
-      <span className={cn("text-base font-bold", state === "locked" ? "text-ink-muted" : "text-ink")}>{lesson.title}</span>
+      <span lang={gloss.tag} className={cn("text-base font-bold", state === "locked" ? "text-ink-muted" : "text-ink")}>
+        {title}
+      </span>
       {state === "current" ? <span className="text-sm font-bold text-terracotta-deep">Tu siguiente lección</span> : null}
     </span>
   );
   if (state === "locked") {
     return (
-      <div className="flex items-center gap-3 py-1" aria-label={`${lesson.title} (${STATE_LABEL[state]})`}>
+      <div className="flex items-center gap-3 py-1" aria-label={`${title} (${STATE_LABEL[state]})`}>
         {circle}
         {text}
       </div>
@@ -308,7 +320,7 @@ function LessonNode({ entry, n }: { entry: PathLesson; n: number }) {
   return (
     <Link
       href={lessonHref(lesson.id)}
-      aria-label={`${lesson.title} (${STATE_LABEL[state]})`}
+      aria-label={`${title} (${STATE_LABEL[state]})`}
       aria-current={state === "current" ? "step" : undefined}
       className="group flex items-center gap-3 rounded-card py-1 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep"
     >

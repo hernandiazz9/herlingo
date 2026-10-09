@@ -5,7 +5,7 @@ import { Button, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { getPack, languageName } from "@/lib/content";
 import { checkAnswer, scriptRules, type TilesExercise as Tiles } from "@/lib/exercises";
-import { Prompt, useLessonLang, type ExerciseProps } from "./shared";
+import { Prompt, useLessonGloss, useLessonLang, type ExerciseProps } from "./shared";
 
 const TILE =
   "pressable min-h-12 rounded-xl border-2 border-line bg-surface px-3.5 text-lg font-bold text-ink [--ledge:var(--line)] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
@@ -13,6 +13,7 @@ const TILE =
 /** Spanish → target language by tapping word tiles. */
 export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Tiles>) {
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   const { meta } = getPack(lang);
   // Indexes into exercise.tiles, in the order chosen.
   const [chosen, setChosen] = useState<number[]>([]);
@@ -28,7 +29,9 @@ export function TilesExercise({ exercise, answered, onAnswer }: ExerciseProps<Ti
   return (
     <div className="flex flex-1 flex-col gap-6">
       <Prompt>Tradúcelo al {languageName(lang)}</Prompt>
-      <p className="text-xl font-bold text-ink">{exercise.es}</p>
+      <p lang={gloss.tag} className="text-xl font-bold text-ink">
+        {exercise.gloss}
+      </p>
 
       <div
         lang={lang}

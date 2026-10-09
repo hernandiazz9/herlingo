@@ -6,7 +6,8 @@ import { ChoiceExercise, CloseIcon, FillGapExercise, LessonLangContext, MatchExe
 import { ExitDialog, FeedbackSheet } from "@/components/lesson";
 import { Button, Card, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { getItem, getPack, getStories, type Story, type StoryKeyword } from "@/lib/content";
+import { getItem, getPack, getStories, glossOf, type Story, type StoryKeyword } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { recordOutcome, type Exercise, type ExerciseOutcome, type ItemOutcome } from "@/lib/exercises";
 import { recordActivity } from "@/lib/progress/activity";
 import { buildStoryGames, markStoryDone, storyHref, storyXp, type StoryGame, type StoryStep } from "@/lib/stories";
@@ -35,7 +36,8 @@ interface RunData {
 /** The games after reading (each skippable), then a summary that records the activity. */
 export function StoryGames({ story, lang, onExit }: { story: Story; lang: string; onExit: () => void }) {
   const pack = getPack(lang);
-  const [games] = useState<StoryGame[]>(() => buildStoryGames(story, String(Date.now()), pack));
+  const gloss = useGlossLang(lang);
+  const [games] = useState<StoryGame[]>(() => buildStoryGames(story, String(Date.now()), pack, gloss.lang));
   const [gameIdx, setGameIdx] = useState(0);
   const [stepIdx, setStepIdx] = useState(0);
   const [phase, setPhase] = useState<Phase>({ name: "intro" });
@@ -257,6 +259,7 @@ function StoryDone({
   onReread: () => void;
 }) {
   const perfect = summary.total > 0 && summary.right === summary.total;
+  const gloss = useGlossLang(lang);
   return (
     <div className="flex flex-1 flex-col items-center gap-6 text-center">
       <p className="pt-6 text-6xl" aria-hidden="true">
@@ -290,7 +293,9 @@ function StoryDone({
                   <span lang={lang} className="text-base font-bold text-ink">
                     <TargetText text={item.text} lang={lang} />
                   </span>
-                  <span className="text-sm text-ink-muted">{item.es}</span>
+                  <span lang={gloss.tag} className="text-sm text-ink-muted">
+                    {glossOf(item, gloss.lang)}
+                  </span>
                 </span>
               </li>
             ))}

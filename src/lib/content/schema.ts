@@ -8,6 +8,7 @@
  * See docs/content-guide.md for the human-readable version of this contract.
  */
 import { z } from "zod";
+import { GLOSS_LANG_CODES } from "./gloss";
 import { IMAGE_KEY_PATTERN } from "./keys";
 
 /** Stable id: lowercase ascii, words joined by single "-" or "." (e.g. `tren.biglietto-per`). */
@@ -18,6 +19,42 @@ export const Id = z.string().regex(ID_PATTERN, "id must be lowercase a-z0-9 join
 export const Text = z.string().trim().min(1, "must not be empty");
 export const Tags = z.array(Id).default([]);
 
+// ---------------------------------------------------------------------------------------------
+// Glosses (docs/content-guide.md, "Gloss languages"; resolver: `glossOf()` in ./gloss.ts)
+// ---------------------------------------------------------------------------------------------
+
+/** A gloss language code (`es` = Spain Spanish, `en`, `ru`). */
+export const GlossLang = z.enum(GLOSS_LANG_CODES);
+
+/** One text per gloss language (`{ "ru": "…" }`); which languages are required is checked by `content:check`. */
+export const GlossMap = z
+  .object({ es: Text.optional(), en: Text.optional(), ru: Text.optional() })
+  .strict()
+  .refine((m) => Object.keys(m).length > 0, "needs at least one gloss language");
+
+/**
+ * A learner-facing gloss field: a string (Spain Spanish, the only form before `glossLangs`) or one
+ * text per gloss language of the pack.
+ */
+export const Gloss = z.union([Text, GlossMap]);
+
+/**
+ * A table cell: a plain string is shown as written in every gloss language (target-language
+ * forms, names); a map is a gloss (one text per gloss language).
+ */
+export const GlossOrVerbatim = z.union([z.string(), GlossMap]);
+
+/**
+ * Translation siblings named after the language: `es` (Spain Spanish), `en`, `ru`. Each is
+ * optional here; `content:check` requires exactly the pack's `glossLangs` (default `["es"]`).
+ * A new gloss language adds a sibling here and in `GLOSS_LANGUAGES` (./gloss.ts).
+ */
+const Translation = { es: Text.optional(), en: Text.optional(), ru: Text.optional() };
+/** `questionEs` / `questionEn` / `questionRu` (Q&A), same rule as `Translation`. */
+const QuestionTranslation = { questionEs: Text.optional(), questionEn: Text.optional(), questionRu: Text.optional() };
+/** `titleEs` / `titleEn` / `titleRu` (stories), same rule as `Translation`. */
+const TitleTranslation = { titleEs: Text.optional(), titleEn: Text.optional(), titleRu: Text.optional() };
+
 /**
  * Picture key: `fluent:<icon>` (Fluent Emoji Flat icon name) or `custom:<slug>` (drawing in
  * `assets/images/custom/<slug>.svg`). See docs/content-guide.md, "Pictures".
@@ -27,18 +64,19 @@ export const ImageKey = z
   .regex(IMAGE_KEY_PATTERN, 'image must be "fluent:<icon-name>" or "custom:<slug>" (lowercase a-z0-9 joined by single "-")');
 
 /**
- * Target-language register: tu = informal, lei / vous / vy / u / formal = formal (each pack allows
+ * Target-language register: tu = informal, lei / vous / vy / u / usted / formal = formal (each pack allows
  * only its own `formalRegister`, checked by `content:check`), neutral = either.
  */
-export const Register = z.enum(["tu", "lei", "vous", "vy", "u", "formal", "neutral"]);
+export const Register = z.enum(["tu", "lei", "vous", "vy", "u", "usted", "formal", "neutral"]);
 
 /**
  * Formal register of a pack (`pack.json` `formalRegister`): Italian `lei`, French `vous`, a
  * language whose polite "you" is the plural pronoun romanized "vy", a language whose polite
- * "you" is written "u" (Dutch); `formal` for a language
+ * "you" is written "u" (Dutch); `usted` for Spanish (the pronoun shown for `tu` may differ per
+ * register, e.g. "vos": `INFORMAL_PRONOUN` in ./register.ts); `formal` for a language
  * without a polite pronoun (polite or formal wording instead).
  */
-export const FormalRegister = z.enum(["lei", "vous", "vy", "u", "formal"]);
+export const FormalRegister = z.enum(["lei", "vous", "vy", "u", "usted", "formal"]);
 
 /** CEFR level (stories; units, dialogues and placement questions of a pack with `levels`). */
 export const Level = z.enum(["A1", "A2", "B1", "B2", "C1", "C2"]);
@@ -52,8 +90,8 @@ const LowerText = Text.refine((s) => s === s.toLocaleLowerCase(), "must be lower
 
 export const Situation = z.object({
   id: Id,
-  /** Spanish label shown in the phrasebook / filters. */
-  title: Text,
+  /** Label shown in the phrasebook / filters (a gloss). */
+  title: Gloss,
   /** Single emoji used as a visual hint. */
   emoji: Text.optional(),
 });
@@ -124,6 +162,12 @@ export const PackMeta = z.object({
   /** The only formal register this pack's items may use (besides `tu` and `neutral`). */
   formalRegister: FormalRegister,
   /**
+   * Languages the pack's glosses (translations, notes, grammar cards…) are written in, in order;
+   * the first is the learner's default. Omitted = `["es"]` (Spain Spanish). Every gloss field
+   * carries exactly these languages (`content:check`).
+   */
+  glossLangs: z.array(GlossLang).min(1).optional(),
+  /**
    * Definite articles allowed in vocab `article`, as written ("il", "l'", …). Omitted for a
    * language without articles: vocab then has no `article`.
    */
@@ -158,17 +202,17 @@ export const Phrase = z.object({
   id: Id,
   /** Target-language text, as spoken ("Vorrei un biglietto per Catania."). */
   text: Text,
-  /** Natural Spain-Spanish translation. */
-  es: Text,
+  /** Natural translation: `es` = Spain Spanish, `ru` / `en` in a pack with those `glossLangs`. */
+  ...Translation,
   /** Word-for-word translation when it helps ("Querría un billete para Catania"). */
-  literal: Text.optional(),
-  /** Short usage note in Spanish. */
-  notes: Text.optional(),
+  literal: Gloss.optional(),
+  /** Short usage note. */
+  notes: Gloss.optional(),
   /**
    * Spanish ("tú"), 1–2 short lines: when to use it + one pronunciation tip
    * ("Se lo dices al revisor cuando…; «gli» suena como una «ll» suave."). Shown on game cards.
    */
-  explanation: Text.optional(),
+  explanation: Gloss.optional(),
   register: Register,
   /** Situation id from pack.json. */
   situation: Id,
@@ -189,9 +233,9 @@ export const Vocab = z.object({
   gender: Gender.optional(),
   /** Plural form when irregular or useful. */
   plural: Text.optional(),
-  /** Spanish translation, with article when it is a noun ("el billete"). */
-  es: Text,
-  notes: Text.optional(),
+  /** Translation (`es` / `ru` / `en`), with article when it is a noun ("el billete"). */
+  ...Translation,
+  notes: Gloss.optional(),
   /** Optional phrase id that uses the word. */
   example: Id.optional(),
   situation: Id.optional(),
@@ -204,8 +248,8 @@ export const Vocab = z.object({
 export const Reply = z.object({
   /** Target-language reply. */
   text: Text,
-  /** Spanish translation. */
-  es: Text,
+  /** Translation (`es` / `ru` / `en`). */
+  ...Translation,
 });
 
 /** Q&A pair for "answer" exercises: hear a typical question, pick or say a good reply. */
@@ -213,15 +257,15 @@ export const QA = z.object({
   id: Id,
   /** What the native speaker says/asks ("Di dove sei?"). */
   question: Text,
-  /** Spanish translation of the question. */
-  questionEs: Text,
+  /** Translation of the question: `questionEs` (Spain Spanish) / `questionRu` / `questionEn`. */
+  ...QuestionTranslation,
   /** Good replies. The first one is the model answer. */
   accepted: z.array(Reply).min(1),
   /** Plausible but wrong replies (≥ 2 so a multiple-choice has 3+ options). */
   distractors: z.array(Reply).min(2),
   register: Register,
   situation: Id,
-  notes: Text.optional(),
+  notes: Gloss.optional(),
   tags: Tags,
   /** Voice for the question (the native speaker). */
   voice: Text.optional(),
@@ -229,14 +273,17 @@ export const QA = z.object({
 
 export const GrammarCard = z.object({
   id: Id,
-  /** Spanish title ("Tú y Lei"). */
-  title: Text,
-  /** One or two sentences in Spanish: the rule, practical and short. */
-  summary: Text,
-  /** Extra bullet points in Spanish. */
-  points: z.array(Text).default([]),
-  /** Optional table, e.g. a conjugation: rows of cells; first row is the header. */
-  table: z.array(z.array(z.string())).optional(),
+  /** Title ("Tú y Lei"). */
+  title: Gloss,
+  /** One or two sentences: the rule, practical and short. */
+  summary: Gloss,
+  /** Extra bullet points. */
+  points: z.array(Gloss).default([]),
+  /**
+   * Optional table, e.g. a conjugation: rows of cells; first row is the header. A plain string
+   * cell is shown as written; a map cell is a gloss.
+   */
+  table: z.array(z.array(GlossOrVerbatim)).optional(),
   /** Target-language examples (playable). */
   examples: z.array(Reply).default([]),
   tags: Tags,
@@ -246,12 +293,12 @@ export const GrammarCard = z.object({
 export const Expression = z.object({
   id: Id,
   text: Text,
-  es: Text,
-  /** Variety or dialect in Spanish ("Siciliano"). */
-  variety: Text,
+  ...Translation,
+  /** Variety or dialect ("Siciliano"). */
+  variety: Gloss,
   /** Standard-language equivalent ("Andiamo!" for "Amunì!"). */
   standard: Text.optional(),
-  notes: Text.optional(),
+  notes: Gloss.optional(),
   tags: Tags,
   voice: Text.optional(),
 });
@@ -261,7 +308,7 @@ export const LESSON_ITEM_KINDS = ["phrase", "vocab", "qa", "grammar", "expressio
 
 export const Lesson = z.object({
   id: Id,
-  title: Text,
+  title: Gloss,
   /** Ids of phrases / vocab / qa / grammar cards / expressions, in teaching order. */
   items: z.array(Id).min(1, "a lesson needs at least one item"),
 });
@@ -284,9 +331,9 @@ export const UnitFile = z.object({
   id: Id,
   /** Sort key; ranges in docs/content-guide.md (10–19 survival, 20–29 getting around...). */
   order: z.number().int().min(0),
-  title: Text,
-  /** One-line Spanish description shown on the path. */
-  description: Text.optional(),
+  title: Gloss,
+  /** One-line description shown on the path. */
+  description: Gloss.optional(),
   emoji: Text.optional(),
   situation: Id,
   /** CEFR level: required when pack.json has `levels` (one of them), not allowed otherwise. */
@@ -297,12 +344,12 @@ export const UnitFile = z.object({
 
 export const PlacementQuestion = z.object({
   id: Id,
-  /** Spanish instruction/question shown to the learner ("¿Qué significa?"). */
-  prompt: Text,
+  /** Instruction/question shown to the learner ("¿Qué significa?"). */
+  prompt: Gloss,
   /** Optional target-language text shown and/or played. */
   text: Text.optional(),
-  /** Answer options (at least 2). */
-  options: z.array(Text).min(2),
+  /** Answer options (at least 2): plain = shown as written (target language), map = a gloss. */
+  options: z.array(z.union([Text, GlossMap])).min(2),
   /** Index of the correct option. */
   answer: z.number().int().min(0),
   /** Lesson ids marked as done when the learner answers correctly. */
@@ -324,32 +371,32 @@ export const NativeTurn = z.object({
   /** Optional character name shown above the bubble ("Bigliettaio"). */
   name: Text.optional(),
   text: Text,
-  es: Text,
+  ...Translation,
   voice: Text.optional(),
 });
 
 export const LearnerOption = z.object({
   text: Text,
-  es: Text,
+  ...Translation,
   /** correct = best answer; acceptable = works but not ideal; wrong = mistake. */
   verdict: z.enum(["correct", "acceptable", "wrong"]),
-  /** Spanish feedback shown after choosing it. */
-  feedback: Text,
+  /** Feedback shown after choosing it. */
+  feedback: Gloss,
 });
 
 export const LearnerTurn = z.object({
   id: Id,
   speaker: z.literal("learner"),
-  /** Spanish hint of what the learner wants to say ("Pide un billete a Catania"). */
-  prompt: Text,
+  /** Hint of what the learner wants to say ("Pide un billete a Catania"). */
+  prompt: Gloss,
   options: z.array(LearnerOption).min(2),
 });
 
 /** content/<lang>/dialogues/*.json — one dialogue per file. */
 export const DialogueFile = z.object({
   id: Id,
-  title: Text,
-  description: Text.optional(),
+  title: Gloss,
+  description: Gloss.optional(),
   situation: Id,
   /** Optional unit id: the dialogue belongs with that unit on the path. */
   unit: Id.optional(),
@@ -375,8 +422,8 @@ export const StorySentence = z.object({
   id: Id,
   /** Target-language sentence, as spoken. */
   text: Text,
-  /** Natural Spain-Spanish translation (shown on demand). */
-  es: Text,
+  /** Natural translation (shown on demand): `es` = Spain Spanish, `ru` / `en`. */
+  ...Translation,
   /** Voice for this sentence (e.g. a character's line); defaults to the story voice. */
   voice: Text.optional(),
 });
@@ -393,8 +440,8 @@ export const StoryQuestion = z.object({
   id: Id,
   /** Target-language comprehension question ("Dove va Hernán?"). */
   question: Text,
-  /** Spanish translation of the question. */
-  es: Text,
+  /** Translation of the question (`es` / `ru` / `en`). */
+  ...Translation,
   /** Target-language answers `{ text, es }` (≥ 3), exactly one right. */
   options: z.array(Reply).min(3),
   /** 0-based index of the right option. */
@@ -425,10 +472,10 @@ export const StoryFile = z.object({
   order: z.number().int().min(0),
   /** Target-language title ("Arrivo a Palermo"). */
   title: Text,
-  /** Spanish title ("Llegada a Palermo"). */
-  titleEs: Text,
-  /** One-line Spanish description shown in the list. */
-  description: Text.optional(),
+  /** Translated title: `titleEs` ("Llegada a Palermo") / `titleRu` / `titleEn`. */
+  ...TitleTranslation,
+  /** One-line description shown in the list. */
+  description: Gloss.optional(),
   emoji: Text.optional(),
   situation: Id,
   /** CEFR level; with pack.json `levels`, one of them. */

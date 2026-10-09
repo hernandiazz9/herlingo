@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/shell/PageHeader";
 import { Button } from "@/components/ui";
 import type { CoachPack } from "@/lib/coach";
 import { useCoachAccess, useCoachUsage, useSavedPacks } from "@/lib/coach/use-coach";
+import { coachAvailable } from "@/lib/coach/available";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useHydrated } from "@/lib/progress/use-progress";
 import { AccessCard } from "./AccessCard";
@@ -15,7 +16,7 @@ import { newPackJob, useGeneration } from "./generation";
 import { closePack, focusPageHeading, openPack, PACK_PARAM, PREPARE_SUBTITLE, PREPARE_TITLE } from "./nav";
 import { PackView } from "./PackView";
 import { SavedPacks } from "./SavedPacks";
-import { Notice, useOnline } from "./shared";
+import { CoachUnavailable, Notice, useOnline } from "./shared";
 import { SituationForm } from "./SituationForm";
 
 interface PackNotice {
@@ -36,6 +37,14 @@ function newest(saved: CoachPack | undefined, fresh: CoachPack | undefined): Coa
  */
 export function CoachView() {
   const lang = useScreenLang();
+  if (lang && !coachAvailable(lang)) {
+    return (
+      <>
+        <PageHeader title={PREPARE_TITLE} subtitle={PREPARE_SUBTITLE} />
+        <CoachUnavailable />
+      </>
+    );
+  }
   return lang ? <Coach key={lang} lang={lang} /> : <PageHeader title={PREPARE_TITLE} subtitle={PREPARE_SUBTITLE} />;
 }
 

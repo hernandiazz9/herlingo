@@ -5,7 +5,8 @@ import { useState } from "react";
 import { CloseIcon, PlayControls } from "@/components/exercises";
 import { Button, Card, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { getLesson, getLevels, getPack, type Level, type PlacementQuestion } from "@/lib/content";
+import { getLesson, getLevels, getPack, glossOf, type Level, type PlacementQuestion } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { setActiveLang } from "@/lib/content/active";
 import { setLevel, suggestLevel } from "@/lib/content/level";
 import { LevelChips } from "@/components/level/LevelChips";
@@ -81,6 +82,7 @@ function LanguageChoice({ current, onChoose }: { current: string | null; onChoos
 function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: boolean; onChangeLanguage?: () => void }) {
   const router = useRouter();
   const pack = getPack(lang);
+  const gloss = useGlossLang(lang);
   const questions = pack.placement;
   const [phase, setPhase] = useState<Phase>(retake && questions.length ? { name: "test", index: 0, answers: [] } : { name: "welcome" });
 
@@ -156,7 +158,10 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
   }
 
   if (phase.name === "result") {
-    const titles = phase.lessons.map((id) => getLesson(id, pack)?.title).filter((t): t is string => !!t);
+    const titles = phase.lessons.flatMap((id) => {
+      const lesson = getLesson(id, pack);
+      return lesson ? [glossOf(lesson.title, gloss.lang)] : [];
+    });
     const levels = getLevels(pack);
     const finish = () => {
       // The suggested (or chosen) level is stored only when confirmed here.
@@ -177,7 +182,7 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
             <p className="text-base font-bold text-ink">
               {titles.length === 1 ? "Hemos marcado como hecha esta lección:" : `Hemos marcado como hechas ${titles.length} lecciones:`}
             </p>
-            <ul className="flex list-disc flex-col gap-1 pl-5 text-base text-ink">
+            <ul lang={gloss.tag} className="flex list-disc flex-col gap-1 pl-5 text-base text-ink">
               {titles.map((t) => (
                 <li key={t}>{t}</li>
               ))}
@@ -226,7 +231,9 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
       <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">
         Pregunta {phase.index + 1} de {questions.length}
       </p>
-      <h1 className="text-2xl font-extrabold tracking-tight text-ink">{q.prompt}</h1>
+      <h1 lang={gloss.tag} className="text-2xl font-extrabold tracking-tight text-ink">
+        {glossOf(q.prompt, gloss.lang)}
+      </h1>
       {q.text ? (
         <Card className="flex flex-col gap-3">
           <p lang={pack.meta.lang} className="text-xl font-bold text-ink">
@@ -246,7 +253,11 @@ function Placement({ lang, retake, onChangeLanguage }: { lang: string; retake: b
                 "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
               )}
             >
-              <TargetText text={option} lang={pack.meta.lang} />
+              {typeof option === "string" ? (
+                <TargetText text={option} lang={pack.meta.lang} />
+              ) : (
+                <span lang={gloss.tag}>{glossOf(option, gloss.lang)}</span>
+              )}
             </button>
           </li>
         ))}

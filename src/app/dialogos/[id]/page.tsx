@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DialogueSimulator } from "@/components/dialogue/DialogueSimulator";
 import { PageHeader } from "@/components/shell/PageHeader";
-import { findDialoguePack, getDialogue, getPack, listLangs } from "@/lib/content";
+import { Gloss } from "@/components/ui";
+import { findDialoguePack, getDialogue, getPack, glossLangsOf, glossOf, listLangs } from "@/lib/content";
 
 export const dynamicParams = false;
 
@@ -15,7 +16,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps<"/dialogos/[id]">): Promise<Metadata> {
   const id = decodeURIComponent((await params).id);
   const pack = findDialoguePack(id);
-  return { title: (pack && getDialogue(id, pack)?.title) ?? "Diálogo" };
+  const title = pack && getDialogue(id, pack)?.title;
+  // The pack's default gloss language (the learner's choice is only known on the device).
+  return { title: (pack && title !== undefined && glossOf(title, glossLangsOf(pack.meta)[0])) || "Diálogo" };
 }
 
 export default async function DialoguePage({ params }: PageProps<"/dialogos/[id]">) {
@@ -29,7 +32,7 @@ export default async function DialoguePage({ params }: PageProps<"/dialogos/[id]
       <Link href="/dialogos/" className="self-start text-sm font-bold text-sea">
         ← Diálogos
       </Link>
-      <PageHeader title={dialogue.title} />
+      <PageHeader title={<Gloss of={dialogue.title} lang={pack.meta.lang} />} />
       <DialogueSimulator id={id} lang={pack.meta.lang} />
     </>
   );

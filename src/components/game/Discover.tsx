@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { CloseIcon, PlayControls } from "@/components/exercises/shared";
 import { Button, Card, IconButton, Picture, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
+import { glossOf } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { explain, isWord, markKnown, type GameCard, type Topic } from "@/lib/game";
 import { recordActivity } from "@/lib/progress/activity";
 
@@ -31,6 +33,7 @@ export function Discover({
 }) {
   const [queue, setQueue] = useState(deck);
   const [known, setKnown] = useState(0);
+  const gloss = useGlossLang(lang);
   const card = queue[0];
 
   useEffect(() => () => stop(), []);
@@ -53,7 +56,7 @@ export function Discover({
   const again = () => advance([...queue.slice(1), card]);
 
   if (!card) return null;
-  const explanation = explain(card);
+  const explanation = explain(card, gloss.lang);
 
   return (
     <div className="flex flex-col gap-5 pb-6">
@@ -66,7 +69,7 @@ export function Discover({
       </div>
 
       <p className="text-sm font-bold uppercase tracking-wide text-terracotta-deep">
-        {topic.emoji ? `${topic.emoji} ` : ""}Descubre · {topic.title}
+        {topic.emoji ? `${topic.emoji} ` : ""}Descubre · <span lang={gloss.tag}>{glossOf(topic.title, gloss.lang)}</span>
       </p>
 
       <Card className="flex flex-col gap-4">
@@ -75,9 +78,19 @@ export function Discover({
         <p lang={lang} className="text-3xl font-extrabold leading-tight text-sea-deep">
           <TargetText text={card.text} lang={lang} />
         </p>
-        <p className="text-xl font-bold text-ink">{card.es}</p>
-        {!isWord(card) && card.literal ? <p className="text-sm text-ink-muted">Literal: «{card.literal}»</p> : null}
-        {explanation ? <p className="rounded-button bg-lemon-soft px-4 py-3 text-base text-ink">{explanation}</p> : null}
+        <p lang={gloss.tag} className="text-xl font-bold text-ink">
+          {glossOf(card, gloss.lang)}
+        </p>
+        {!isWord(card) && card.literal ? (
+          <p className="text-sm text-ink-muted">
+            Literal: «<span lang={gloss.tag}>{glossOf(card.literal, gloss.lang)}</span>»
+          </p>
+        ) : null}
+        {explanation ? (
+          <p lang={gloss.tag} className="rounded-button bg-lemon-soft px-4 py-3 text-base text-ink">
+            {explanation}
+          </p>
+        ) : null}
       </Card>
 
       <div className="grid grid-cols-2 gap-3">

@@ -5,7 +5,8 @@ import { useState } from "react";
 import { ALL_LEVELS, LevelChips, type LevelFilter } from "@/components/level/LevelChips";
 import { ProgressBar, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { getPack, getSituation, getStories } from "@/lib/content";
+import { getPack, getSituation, getStories, glossOf } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { useLevel } from "@/lib/content/level-hook";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { storyHref, useStoriesDone } from "@/lib/stories";
@@ -21,6 +22,7 @@ export function StoryList() {
 
 function PackStories({ lang }: { lang: string }) {
   const pack = getPack(lang);
+  const gloss = useGlossLang(lang);
   const all = getStories(pack);
   const { levels, level } = useLevel(lang);
   const [filter, setFilter] = useState<LevelFilter>(level ?? ALL_LEVELS);
@@ -76,12 +78,14 @@ function PackStories({ lang }: { lang: string }) {
                   <span lang={pack.meta.lang} className="text-lg font-bold leading-tight text-ink">
                     <TargetText text={story.title} lang={pack.meta.lang} />
                   </span>
-                  <span className="text-ink-muted">{story.titleEs}</span>
+                  <span lang={gloss.tag} className="text-ink-muted">
+                    {glossOf(story, gloss.lang, "title")}
+                  </span>
                   <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm font-bold">
                     {situation ? (
                       <span className="text-sea-deep">
                         {situation.emoji ? <span aria-hidden="true">{situation.emoji} </span> : null}
-                        {situation.title}
+                        <span lang={gloss.tag}>{glossOf(situation.title, gloss.lang)}</span>
                       </span>
                     ) : null}
                     <span className="text-ink-muted">{story.level}</span>

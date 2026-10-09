@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { LessonPlayer } from "@/components/lesson";
 import { Button, Card, TargetText } from "@/components/ui";
-import { getItem, getPack, type Lesson } from "@/lib/content";
+import { getItem, getPack, glossOf, type Lesson } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { defaultSessionSize, type LessonResult } from "@/lib/exercises";
 import { dueItemIds, recordReviewResult } from "@/lib/progress";
@@ -20,6 +21,7 @@ export function ReviewView() {
 
 function Review({ lang }: { lang: string }) {
   const pack = getPack(lang);
+  const gloss = useGlossLang(lang);
   const progress = useProgress(lang);
   const now = useNow();
   const hydrated = useHydrated();
@@ -113,13 +115,18 @@ function Review({ lang }: { lang: string }) {
           {preview.map((item) => (
             <li key={item.id} className="rounded-card border-2 border-line bg-surface px-4 py-3">
               {item.kind === "grammar" ? (
-                <span className="font-bold text-ink">{item.title}</span>
+                <span lang={gloss.tag} className="font-bold text-ink">
+                  {glossOf(item.title, gloss.lang)}
+                </span>
               ) : (
                 <TargetText text={item.text} lang={pack.meta.lang}>
                   <span lang={pack.meta.lang} className="font-bold text-ink">
                     {item.text}
                   </span>
-                  <span className="text-ink-muted"> · {item.kind === "qa" ? item.questionEs : item.es}</span>
+                  <span className="text-ink-muted">
+                    {" · "}
+                    <span lang={gloss.tag}>{glossOf(item, gloss.lang, item.kind === "qa" ? "question" : undefined)}</span>
+                  </span>
                 </TargetText>
               )}
             </li>

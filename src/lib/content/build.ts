@@ -3,6 +3,7 @@
  * plus a list of errors. Used by `scripts/content.ts` only (the app never imports zod).
  */
 import type { z } from "zod";
+import { GLOSS_LANG_CODES, glossLangsOf, glossSuffix, type GlossBase, type GlossLang, type GlossMap, type GlossText } from "./gloss";
 import { audioKey, vocabText } from "./keys";
 import * as S from "./schema";
 import { stressIssues } from "./script";
@@ -174,6 +175,38 @@ export function buildPack(src: PackSources): BuildResult {
   };
   for (const [n, word] of Object.entries(meta.numberWords ?? {})) checkStress(word, `${src.meta.file}: numberWords "${n}"`);
 
+  // Glosses: every gloss field carries exactly the pack's gloss languages (docs/content-guide.md,
+  // "Gloss languages"). A plain string means Spain Spanish ("es").
+  const glossLangs = glossLangsOf(meta);
+  if (new Set(glossLangs).size !== glossLangs.length) errors.push(`${src.meta.file}: duplicate language in "glossLangs"`);
+  const quoted = (list: readonly string[]) => list.map((l) => `"${l}"`).join(", ");
+  const reportGloss = (present: string[], where: string, field: string, plain: boolean) => {
+    const missing = glossLangs.filter((l) => !present.includes(l));
+    const extra = present.filter((l) => !(glossLangs as readonly string[]).includes(l));
+    if (missing.length) errors.push(`${where}: ${field} needs ${quoted(missing)} (pack.json glossLangs: ${quoted(glossLangs)})`);
+    if (extra.length) {
+      const hint = plain ? ` (plain text means Spain Spanish; write a map like { "${glossLangs[0]}": "…" })` : "";
+      errors.push(`${where}: ${field} has ${quoted(extra)}, not in pack.json glossLangs${hint}`);
+    }
+  };
+  /** A gloss field: a string (Spain Spanish) or a per-language map. */
+  const checkGloss = (value: GlossText | undefined, where: string, field: string) => {
+    if (value === undefined) return;
+    reportGloss(typeof value === "string" ? ["es"] : Object.keys(value), where, field, typeof value === "string");
+  };
+  /** A table cell / placement option: plain strings are shown as written, maps are glosses. */
+  const checkGlossMap = (value: string | GlossMap, where: string, field: string) => {
+    if (typeof value !== "string") checkGloss(value, where, field);
+  };
+  /** Language-named siblings: `es` / `ru` / `en`, or `<base>Es` / `<base>Ru`… */
+  const checkTranslation = (item: object, where: string, base?: GlossBase) => {
+    const key = (l: GlossLang) => (base ? `${base}${glossSuffix(l)}` : l);
+    const map = item as Record<string, unknown>;
+    const present = GLOSS_LANG_CODES.filter((l) => typeof map[key(l)] === "string");
+    reportGloss(present, where, `translation (${GLOSS_LANG_CODES.map(key).join(" / ")})`, false);
+  };
+  for (const s of meta.situations) checkGloss(s.title, `${src.meta.file}: situation "${s.id}"`, "title");
+
   const phrases: Phrase[] = [];
   const vocab: Vocab[] = [];
   const qa: QA[] = [];
@@ -190,6 +223,8 @@ export function buildPack(src: PackSources): BuildResult {
     checkArticle(v.article, where);
     checkStress(v.word, where);
     checkStress(v.plural, `${where} plural`);
+    checkTranslation(v, where);
+    checkGloss(v.notes, where, "notes");
     const { image: imageKey, ...rest } = v;
     vocab.push({
       ...rest,
@@ -212,6 +247,10 @@ export function buildPack(src: PackSources): BuildResult {
       checkSituation(p.situation, where);
       checkRegister(p.register, where);
       checkStress(p.text, where);
+      checkTranslation(p, where);
+      checkGloss(p.literal, where, "literal");
+      checkGloss(p.notes, where, "notes");
+      checkGloss(p.explanation, where, "explanation");
       phrases.push({ ...p, ...lv, kind: "phrase", audioKey: audioKey(p.id), voice: checkVoice(p.voice, where) });
     }
     for (const v of f.vocab) addVocab(file, v, level);
@@ -221,6 +260,10 @@ export function buildPack(src: PackSources): BuildResult {
       checkSituation(q.situation, where);
       checkRegister(q.register, where);
       for (const t of [q.question, ...q.accepted.map((r) => r.text), ...q.distractors.map((r) => r.text)]) checkStress(t, where);
+      checkTranslation(q, where, "question");
+      checkGloss(q.notes, where, "notes");
+      q.accepted.forEach((r, i) => checkTranslation(r, `${where} accepted ${i + 1}`));
+      q.distractors.forEach((r, i) => checkTranslation(r, `${where} distractor ${i + 1}`));
       const voice = checkVoice(q.voice, where);
       qa.push({
         ...q,
@@ -235,7 +278,13 @@ export function buildPack(src: PackSources): BuildResult {
     }
     for (const g of f.grammar) {
       claim(g.id, "grammar", file);
-      for (const e of g.examples) checkStress(e.text, `${file}: grammar "${g.id}"`);
+      const where = `${file}: grammar "${g.id}"`;
+      for (const e of g.examples) checkStress(e.text, where);
+      checkGloss(g.title, where, "title");
+      checkGloss(g.summary, where, "summary");
+      g.points.forEach((p, i) => checkGloss(p, where, `points ${i + 1}`));
+      g.table?.forEach((row, r) => row.forEach((cell, c) => checkGlossMap(cell, where, `table cell ${r + 1}.${c + 1}`)));
+      g.examples.forEach((e, i) => checkTranslation(e, `${where} example ${i + 1}`));
       grammar.push({
         ...g,
         ...lv,
@@ -247,6 +296,9 @@ export function buildPack(src: PackSources): BuildResult {
       const where = `${file}: expression "${x.id}"`;
       claim(x.id, "expression", file);
       checkStress(x.text, where);
+      checkTranslation(x, where);
+      checkGloss(x.variety, where, "variety");
+      checkGloss(x.notes, where, "notes");
       expressions.push({ ...x, ...lv, kind: "expression", audioKey: audioKey(x.id), voice: checkVoice(x.voice, where) });
     }
   };
@@ -263,7 +315,12 @@ export function buildPack(src: PackSources): BuildResult {
     const clash = unitOrders.get(u.order);
     if (clash) errors.push(`${s.file}: unit order ${u.order} already used by unit "${clash}"`);
     unitOrders.set(u.order, u.id);
-    for (const l of u.lessons) claim(l.id, "lesson", s.file);
+    for (const l of u.lessons) {
+      claim(l.id, "lesson", s.file);
+      checkGloss(l.title, `${s.file}: lesson "${l.id}"`, "title");
+    }
+    checkGloss(u.title, `${s.file}: unit "${u.id}"`, "title");
+    checkGloss(u.description, `${s.file}: unit "${u.id}"`, "description");
     addItems(s.file, u, level);
     units.push({
       id: u.id,
@@ -300,6 +357,8 @@ export function buildPack(src: PackSources): BuildResult {
     checkSituation(d.situation, where);
     checkRegister(d.register, where);
     checkLevel(d.level, where);
+    checkGloss(d.title, where, "title");
+    checkGloss(d.description, where, "description");
     rawDialogueUnits.push({ file: s.file, id: d.id, unit: d.unit });
     const turnIds = new Set<string>();
     const turns: Dialogue["turns"] = d.turns.map((t) => {
@@ -307,6 +366,7 @@ export function buildPack(src: PackSources): BuildResult {
       turnIds.add(t.id);
       if (t.speaker === "native") {
         checkStress(t.text, `${where} turn "${t.id}"`);
+        checkTranslation(t, `${where} turn "${t.id}"`);
         return {
           ...t,
           audioKey: audioKey(d.id, t.id),
@@ -315,6 +375,11 @@ export function buildPack(src: PackSources): BuildResult {
         };
       }
       for (const o of t.options) checkStress(o.text, `${where} turn "${t.id}"`);
+      checkGloss(t.prompt, `${where} turn "${t.id}"`, "prompt");
+      t.options.forEach((o, i) => {
+        checkTranslation(o, `${where} turn "${t.id}" option ${i + 1}`);
+        checkGloss(o.feedback, `${where} turn "${t.id}" option ${i + 1}`, "feedback");
+      });
       if (!t.options.some((o) => o.verdict === "correct")) {
         errors.push(`${where}: learner turn "${t.id}" needs at least one "correct" option`);
       }
@@ -347,6 +412,8 @@ export function buildPack(src: PackSources): BuildResult {
     storyOrders.set(st.order, st.id);
     const voice = checkVoice(st.voice, where);
     checkStress(st.title, `${where} title`);
+    checkTranslation(st, where, "title");
+    checkGloss(st.description, where, "description");
     const localIds = new Set<string>();
     const local = (id: string) => {
       if (localIds.has(id)) errors.push(`${where}: duplicate local id "${id}" (sentences, questions and gaps share one namespace)`);
@@ -364,12 +431,15 @@ export function buildPack(src: PackSources): BuildResult {
     const sentences = st.sentences.map((x) => {
       local(x.id);
       checkStress(x.text, `${where} sentence "${x.id}"`);
+      checkTranslation(x, `${where} sentence "${x.id}"`);
       const v = x.voice ? checkVoice(x.voice, `${where} sentence "${x.id}"`) : voice;
       return { ...x, audioKey: audioKey(st.id, x.id), voice: v };
     });
     const questions = st.questions.map((q) => {
       local(q.id);
       for (const t of [q.question, ...q.options.map((o) => o.text)]) checkStress(t, `${where} question "${q.id}"`);
+      checkTranslation(q, `${where} question "${q.id}"`);
+      q.options.forEach((o, i) => checkTranslation(o, `${where} question "${q.id}" option ${i + 1}`));
       if (q.correct >= q.options.length) errors.push(`${where}: question "${q.id}": correct ${q.correct} is out of range`);
       return {
         ...q,
@@ -388,6 +458,8 @@ export function buildPack(src: PackSources): BuildResult {
       order: st.order,
       title: st.title,
       titleEs: st.titleEs,
+      ...(st.titleEn !== undefined ? { titleEn: st.titleEn } : {}),
+      ...(st.titleRu !== undefined ? { titleRu: st.titleRu } : {}),
       description: st.description,
       emoji: st.emoji,
       situation: st.situation,
@@ -428,7 +500,9 @@ export function buildPack(src: PackSources): BuildResult {
   for (const { file, q } of rawPlacement) {
     const where = `${file}: placement "${q.id}"`;
     if (q.answer >= q.options.length) errors.push(`${where}: answer ${q.answer} is out of range`);
-    for (const t of [q.text, ...q.options]) checkStress(t, where);
+    for (const t of [q.text, ...q.options]) if (typeof t !== "object") checkStress(t, where);
+    checkGloss(q.prompt, where, "prompt");
+    q.options.forEach((o, i) => checkGlossMap(o, where, `option ${i + 1}`));
     checkLevel(q.level, where);
     for (const l of q.lessons) if (kinds.get(l) !== "lesson") errors.push(`${where}: unknown lesson "${l}"`);
     const { voice, ...rest } = q;

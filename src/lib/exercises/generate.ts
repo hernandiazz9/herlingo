@@ -13,9 +13,11 @@
  */
 import {
   getLessonItems,
+  glossOf,
   hasImage,
   listVocab,
   type Expression,
+  type GlossLang,
   type Lesson,
   type LessonItem,
   type Pack,
@@ -30,6 +32,8 @@ import type { ChoiceOption, Exercise, ExerciseType, GrammarStep, IntroStep, Matc
 
 export interface GenerateOptions {
   seed: string;
+  /** The learner's gloss language: every meaning shown or compared is `glossOf(item, gloss)`. */
+  gloss: GlossLang;
   /** Include "say it aloud" exercises. */
   speaking?: boolean;
   /** Graded exercises wanted; defaults to 10 (short lessons) or 12. */
@@ -70,7 +74,7 @@ export function generateSession(lesson: Lesson, pack: Pack, options: GenerateOpt
   const items = all.filter((i): i is Practisable => i.kind !== "grammar");
   if (!items.length) return all.filter((i) => i.kind === "grammar").map((card) => ({ type: "grammar", key: `grammar:${card.id}`, card }));
 
-  const ctx = new Ctx(rng, pack, items);
+  const ctx = new Ctx(rng, pack, items, options.gloss);
   const target = options.size ?? defaultSessionSize(items.length);
 
   // 1. Match the pairs: with pictures when >= 3 lesson words have one; else vocab first, then
@@ -154,6 +158,7 @@ class Ctx {
     private rng: Rng,
     pack: Pack,
     private items: Practisable[],
+    private gloss: GlossLang,
   ) {
     const lessonPicturedIds = new Set(items.filter(hasImage).map((i) => i.id));
     this.lessonPictured = rng.shuffle(items.filter(hasImage));
@@ -175,6 +180,11 @@ class Ctx {
       seen.add(k);
       return true;
     });
+  }
+
+  /** The item's translation in the learner's gloss language. */
+  private t(item: object): string {
+    return glossOf(item, this.gloss);
   }
 
   private key(type: ExerciseType, ids: string[]) {
@@ -227,7 +237,7 @@ class Ctx {
 
   private build(item: Meaningful, type: ExerciseType): Exercise {
     const ids = [item.id];
-    const solution = { text: item.text, es: item.es, audio: item };
+    const solution = { text: item.text, gloss: this.t(item), audio: item };
     switch (type) {
       case "listen-meaning":
       case "read-meaning":
@@ -242,7 +252,7 @@ class Ctx {
           key: this.key(type, ids),
           itemIds: ids,
           solution,
-          es: item.es,
+          gloss: this.t(item),
           answer: item.text,
           tiles: this.rng.shuffle([...answerTiles, ...extra]),
           audio: item,
@@ -266,7 +276,7 @@ class Ctx {
           key: this.key(type, ids),
           itemIds: ids,
           solution,
-          es: item.es,
+          gloss: this.t(item),
           before,
           after,
           gap,
@@ -276,10 +286,10 @@ class Ctx {
       }
       case "dictation": {
         const accepted = item.kind === "vocab" ? unique([item.text, item.word]) : [item.text];
-        return { type, key: this.key(type, ids), itemIds: ids, solution, audio: item, accepted, es: item.es };
+        return { type, key: this.key(type, ids), itemIds: ids, solution, audio: item, accepted, gloss: this.t(item) };
       }
       case "speak":
-        return { type, key: this.key(type, ids), itemIds: ids, solution, audio: item, es: item.es };
+        return { type, key: this.key(type, ids), itemIds: ids, solution, audio: item, gloss: this.t(item) };
       case "picture-choice":
       case "picture-listen": {
         const distractors = hasImage(item) ? this.pictureDistractors(item) : [];
@@ -289,7 +299,7 @@ class Ctx {
         const option = (v: PicturedVocab, correct: boolean): PictureOption => ({
           id: v.id,
           text: v.text,
-          es: v.es,
+          gloss: this.t(v),
           image: v.image,
           audio: v,
           correct,
@@ -300,7 +310,7 @@ class Ctx {
           itemIds: ids,
           solution,
           audio: item,
-          es: item.es,
+          gloss: this.t(item),
           options: this.rng.shuffle([option(item, true), ...distractors.map((d) => option(d, false))]),
         };
       }
@@ -316,14 +326,14 @@ class Ctx {
   private pictureDistractors(item: PicturedVocab): PicturedVocab[] {
     const srcs = new Set([item.image.src]);
     const texts = new Set([normalizeAnswer(item.text, true)]);
-    const meanings = new Set([normalizeAnswer(item.es, true)]);
+    const meanings = new Set([normalizeAnswer(this.t(item), true)]);
     const sameSituation = this.packPictured.filter((v) => v.situation === item.situation);
     const rest = this.packPictured.filter((v) => v.situation !== item.situation);
     const out: PicturedVocab[] = [];
     for (const v of [...this.lessonPictured, ...this.rng.shuffle(sameSituation), ...this.rng.shuffle(rest)]) {
       if (out.length >= PICTURE_OPTIONS - 1) break;
       const t = normalizeAnswer(v.text, true);
-      const m = normalizeAnswer(v.es, true);
+      const m = normalizeAnswer(this.t(v), true);
       if (v.id === item.id || srcs.has(v.image.src) || texts.has(t) || meanings.has(m)) continue;
       srcs.add(v.image.src);
       texts.add(t);
@@ -334,20 +344,20 @@ class Ctx {
   }
 
   private meaningOptions(item: Meaningful): ChoiceOption[] {
-    const right = normalizeAnswer(item.es, true);
+    const right = normalizeAnswer(this.t(item), true);
     const seen = new Set([right]);
     const sameKind = this.meaningPool.filter((p) => p.kind === item.kind);
     const others = this.meaningPool.filter((p) => p.kind !== item.kind);
     const distractors: ChoiceOption[] = [];
     for (const p of [...sameKind, ...others]) {
       if (distractors.length >= 3) break;
-      const key = normalizeAnswer(p.es, true);
+      const key = normalizeAnswer(this.t(p), true);
       if (p.id === item.id || seen.has(key)) continue;
       seen.add(key);
-      distractors.push({ id: p.id, label: p.es, correct: false });
+      distractors.push({ id: p.id, label: this.t(p), correct: false });
     }
     this.meaningPool = rotate(this.meaningPool, 3);
-    return this.rng.shuffle([{ id: item.id, label: item.es, correct: true }, ...distractors]);
+    return this.rng.shuffle([{ id: item.id, label: this.t(item), correct: true }, ...distractors]);
   }
 
   private answer(item: QA): Exercise {
@@ -361,9 +371,9 @@ class Ctx {
       type: "answer",
       key: this.key("answer", ids),
       itemIds: ids,
-      solution: { text: reply.text, es: reply.es, audio: reply, note: `«${item.text}» = ${item.questionEs}` },
+      solution: { text: reply.text, gloss: this.t(reply), audio: reply, note: `«${item.text}» = ${glossOf(item, this.gloss, "question")}` },
       question: item,
-      questionEs: item.questionEs,
+      questionGloss: glossOf(item, this.gloss, "question"),
       options: this.rng.shuffle(options),
     };
   }
@@ -375,9 +385,9 @@ class Ctx {
       type: "speak",
       key: this.key("speak", ids),
       itemIds: ids,
-      solution: { text: reply.text, es: reply.es, audio: reply },
+      solution: { text: reply.text, gloss: this.t(reply), audio: reply },
       audio: reply,
-      es: reply.es,
+      gloss: this.t(reply),
     };
   }
 
@@ -392,7 +402,7 @@ class Ctx {
       if (srcs.has(item.image.src) || its.has(it)) continue;
       srcs.add(item.image.src);
       its.add(it);
-      pairs.push({ id: item.id, text: item.text, es: item.es, audio: item, image: item.image });
+      pairs.push({ id: item.id, text: item.text, gloss: this.t(item), audio: item, image: item.image });
     }
     if (pairs.length < MIN_PICTURE_MATCH_PAIRS) return undefined;
     const ids = pairs.map((p) => p.id);
@@ -400,25 +410,25 @@ class Ctx {
       type: "match",
       key: this.key("match", ids),
       itemIds: ids,
-      solution: { text: pairs.map((p) => `${p.text} = ${p.es}`).join(" · ") },
+      solution: { text: pairs.map((p) => `${p.text} = ${p.gloss}`).join(" · ") },
       pairs,
       textOrder: this.rng.shuffle(ids),
-      esOrder: this.rng.shuffle(ids),
+      glossOrder: this.rng.shuffle(ids),
     };
   }
 
   match(pool: Meaningful[]): Exercise | undefined {
     const pairs: MatchPair[] = [];
     const its = new Set<string>();
-    const ess = new Set<string>();
+    const meanings = new Set<string>();
     for (const item of pool) {
       if (pairs.length >= MATCH_PAIRS) break;
       const it = normalizeAnswer(item.text, true);
-      const es = normalizeAnswer(item.es, true);
-      if (its.has(it) || ess.has(es)) continue;
+      const meaning = normalizeAnswer(this.t(item), true);
+      if (its.has(it) || meanings.has(meaning)) continue;
       its.add(it);
-      ess.add(es);
-      pairs.push({ id: item.id, text: item.text, es: item.es, audio: item });
+      meanings.add(meaning);
+      pairs.push({ id: item.id, text: item.text, gloss: this.t(item), audio: item });
     }
     if (pairs.length < MIN_MATCH_PAIRS || this.items.length < MIN_MATCH_PAIRS) return undefined;
     const ids = pairs.map((p) => p.id);
@@ -426,10 +436,10 @@ class Ctx {
       type: "match",
       key: this.key("match", ids),
       itemIds: ids,
-      solution: { text: pairs.map((p) => `${p.text} = ${p.es}`).join(" · ") },
+      solution: { text: pairs.map((p) => `${p.text} = ${p.gloss}`).join(" · ") },
       pairs,
       textOrder: this.rng.shuffle(ids),
-      esOrder: this.rng.shuffle(ids),
+      glossOrder: this.rng.shuffle(ids),
     };
   }
 }

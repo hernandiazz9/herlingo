@@ -2,6 +2,7 @@ import { useSyncExternalStore, type ReactNode } from "react";
 import type { CoachPack } from "@/lib/coach";
 import { cn } from "@/lib/cn";
 import { getPack, hasPack } from "@/lib/content";
+import { informalLabel } from "@/lib/content/register";
 
 /** Focus ring of every Prepárate control (same as `Button`). */
 export const FOCUS = "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep";
@@ -20,7 +21,12 @@ export const DANGER = cn(
 export function registerBadge(pack: Pick<CoachPack, "lang" | "register">): string {
   const generic = hasPack(pack.lang) && getPack(pack.lang).meta.formalRegister === "formal";
   if (pack.register === "formal") return generic ? "Registro formal" : "Trato de usted";
-  return generic ? "Registro informal" : "Trato de tú";
+  return generic ? "Registro informal" : informalLabel(hasPack(pack.lang) ? getPack(pack.lang).meta.formalRegister : "");
+}
+
+/** Shown instead of Prepárate for a pack it does not support yet (`coachAvailable`). */
+export function CoachUnavailable() {
+  return <Notice tone="info">Prepárate todavía no está disponible para este curso.</Notice>;
 }
 
 /** Text field shell: the input inside is borderless. */

@@ -15,7 +15,8 @@ export type ExerciseType =
 /** What the feedback sheet shows as the right answer. */
 export interface Solution {
   text: string;
-  es?: string;
+  /** Translation in the learner's gloss language (`glossOf()`). */
+  gloss?: string;
   audio?: Playable;
   /** Extra context, e.g. the question that was asked. */
   note?: string;
@@ -23,7 +24,7 @@ export interface Solution {
 
 export interface ChoiceOption {
   id: string;
-  /** Shown text (Spanish meaning, or target-language reply). */
+  /** Shown text (meaning in the gloss language, or target-language reply). */
   label: string;
   correct: boolean;
   /** Target-language option that can be played (Q&A replies). */
@@ -55,7 +56,8 @@ export interface ReadMeaningExercise extends Base {
 /** Spanish → target language by tapping word tiles (answer words + distractors, shuffled). */
 export interface TilesExercise extends Base {
   type: "tiles";
-  es: string;
+  /** Gloss: the translation in the learner's gloss language. */
+  gloss: string;
   answer: string;
   tiles: string[];
   audio: Playable;
@@ -64,7 +66,8 @@ export interface TilesExercise extends Base {
 /** Target-language sentence with one word missing; pick the word. */
 export interface FillGapExercise extends Base {
   type: "fill-gap";
-  es: string;
+  /** Gloss: the translation in the learner's gloss language. */
+  gloss: string;
   before: string;
   after: string;
   gap: string;
@@ -78,14 +81,16 @@ export interface DictationExercise extends Base {
   audio: Playable;
   /** Accepted spellings (first = model answer). */
   accepted: string[];
-  es: string;
+  /** Gloss: the translation in the learner's gloss language. */
+  gloss: string;
 }
 
 /** Hear a typical question, pick the right reply. */
 export interface AnswerExercise extends Base {
   type: "answer";
   question: Playable;
-  questionEs: string;
+  /** The question's gloss. */
+  questionGloss: string;
   options: ChoiceOption[];
 }
 
@@ -93,9 +98,10 @@ export interface MatchPair {
   id: string;
   /** Target-language text (the left column). */
   text: string;
-  es: string;
+  /** Gloss: the translation in the learner's gloss language. */
+  gloss: string;
   audio: Playable;
-  /** Set on every pair of a picture match: the right column shows pictures instead of `es`. */
+  /** Set on every pair of a picture match: the right column shows pictures instead of `gloss`. */
   image?: ImageRef;
 }
 
@@ -105,14 +111,15 @@ export interface MatchExercise extends Base {
   pairs: MatchPair[];
   /** Pair ids in display order for each column. */
   textOrder: string[];
-  esOrder: string[];
+  glossOrder: string[];
 }
 
 /** Say the phrase aloud (speech recognition or self-evaluation). */
 export interface SpeakExercise extends Base {
   type: "speak";
   audio: Playable;
-  es: string;
+  /** Gloss: the translation in the learner's gloss language. */
+  gloss: string;
 }
 
 /** A picture card of a picture-choice exercise (a pictured vocab word). */
@@ -120,7 +127,8 @@ export interface PictureOption {
   id: string;
   /** Target-language word as spoken ("il caffè"), written under the picture. */
   text: string;
-  es: string;
+  /** Gloss: the translation in the learner's gloss language. */
+  gloss: string;
   image: ImageRef;
   audio: Playable;
   correct: boolean;
@@ -135,7 +143,8 @@ export interface PictureChoiceExercise extends Base {
   type: "picture-choice" | "picture-listen";
   /** The word asked (target-language audio). */
   audio: Playable;
-  es: string;
+  /** Gloss: the translation in the learner's gloss language. */
+  gloss: string;
   options: PictureOption[];
 }
 

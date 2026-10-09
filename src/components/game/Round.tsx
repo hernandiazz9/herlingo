@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { CloseIcon, MiniPlay, PlayControls } from "@/components/exercises/shared";
 import { Button, Card, IconButton, Picture, ProgressBar, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { getPack, languageName } from "@/lib/content";
+import { getPack, glossOf, languageName } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { cn } from "@/lib/cn";
 import type { Rng } from "@/lib/exercises";
 import {
@@ -79,6 +80,7 @@ export function Round({
   onExit: () => void;
 }) {
   const pack = getPack(lang);
+  const gloss = useGlossLang(lang);
   const { topic, aliases } = pool;
   const [g, setG] = useState<RoundState>(initial);
   const [now, setNow] = useState(0);
@@ -89,7 +91,7 @@ export function Round({
 
   const questionAt = (cursor: number): Question => {
     const r = rng.current!;
-    return makeQuestion(order.current[cursor % order.current.length], topic, pack, r);
+    return makeQuestion(order.current[cursor % order.current.length], topic, pack, r, gloss.lang);
   };
 
   const ask = (q: Question) => {
@@ -178,7 +180,7 @@ export function Round({
         <Card tone="terracotta" className="flex flex-col gap-3">
           <p className="text-sm font-bold uppercase tracking-wide text-terracotta-deep">
             {topic.emoji ? `${topic.emoji} ` : ""}
-            {topic.title}
+            <span lang={gloss.tag}>{glossOf(topic.title, gloss.lang)}</span>
           </p>
           <h2 className="text-2xl font-extrabold text-ink">Ronda rápida: 60 segundos</h2>
           <p className="text-base text-ink">
@@ -229,7 +231,9 @@ export function Round({
                     <span lang={lang} className="font-bold text-sea-deep">
                       <TargetText text={p.text} lang={lang} />
                     </span>
-                    <span className="text-sm text-ink-muted">{p.es}</span>
+                    <span lang={gloss.tag} className="text-sm text-ink-muted">
+                      {glossOf(p, gloss.lang)}
+                    </span>
                   </span>
                 </li>
               ))}
@@ -291,12 +295,18 @@ export function Round({
         </>
       ) : q.kind === "es-picture" ? (
         <h2 className="text-2xl font-extrabold tracking-tight text-ink">
-          ¿Cuál es <span className="text-sea-deep">«{q.card.es}»</span>?
+          ¿Cuál es{" "}
+          <span lang={gloss.tag} className="text-sea-deep">
+            «{glossOf(q.card, gloss.lang)}»
+          </span>
+          ?
         </h2>
       ) : (
         <>
           <h2 className="text-2xl font-extrabold tracking-tight text-ink">¿Cómo se dice en {languageName(lang)}?</h2>
-          <p className="text-2xl font-bold text-sea-deep">{q.card.es}</p>
+          <p lang={gloss.tag} className="text-2xl font-bold text-sea-deep">
+            {glossOf(q.card, gloss.lang)}
+          </p>
         </>
       )}
 
@@ -324,7 +334,7 @@ export function Round({
                   )}
                 >
                   {/* Listening: the Spanish name; reading the Spanish: the target-language word (the answer stays a test). */}
-                  <Picture image={option.image} alt={q.kind === "listen-picture" ? option.es : option.text} bordered={false} />
+                  <Picture image={option.image} alt={q.kind === "listen-picture" ? glossOf(option, gloss.lang) : option.text} bordered={false} />
                   {reveal || isPicked ? (
                     <span
                       lang={lang}
@@ -348,14 +358,14 @@ export function Round({
             const isRight = option.id === q.card.id;
             const reveal = g.picked !== null && isRight;
             const isPicked = g.picked === option.id;
-            const label = q.kind === "listen" ? option.es : option.text;
+            const label = q.kind === "listen" ? glossOf(option, gloss.lang) : option.text;
             return (
               <li key={option.id} className="flex items-center gap-2">
                 <button
                   type="button"
                   disabled={g.picked !== null}
                   onClick={() => answer(option)}
-                  lang={q.kind === "reverse" ? lang : undefined}
+                  lang={q.kind === "reverse" ? lang : gloss.tag}
                   className={cn(
                     "pressable min-h-14 flex-1 rounded-button border-2 px-4 py-3 text-left text-lg font-bold",
                     "focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",

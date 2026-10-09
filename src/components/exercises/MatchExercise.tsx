@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { Picture, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import type { MatchExercise as Match } from "@/lib/exercises";
-import { Prompt, useLessonLang, usePlay, type ExerciseProps } from "./shared";
+import { Prompt, useLessonGloss, useLessonLang, usePlay, type ExerciseProps } from "./shared";
 
 type Side = "target" | "es";
 interface Pick {
@@ -15,7 +15,7 @@ interface Pick {
 const FLASH_MS = 600;
 
 /**
- * Tap a target-language word and its Spanish meaning (either order). Mistakes are recorded per item.
+ * Tap a target-language word and its meaning in the gloss language (either order). Mistakes are recorded per item.
  * When every pair has an `image`, the right column shows the pictures instead of the meanings.
  */
 export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Match>) {
@@ -25,6 +25,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
   const mistakes = useRef(new Set<string>());
   const play = usePlay();
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   const pairs = new Map(exercise.pairs.map((p) => [p.id, p]));
   const pictures = exercise.pairs.every((p) => p.image);
 
@@ -60,7 +61,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
       <button
         key={`${side}:${id}`}
         type="button"
-        lang={side === "target" ? lang : undefined}
+        lang={side === "target" ? lang : gloss.tag}
         disabled={answered || isDone}
         aria-pressed={isSelected}
         aria-label={image ? label : undefined}
@@ -91,7 +92,7 @@ export function MatchExercise({ exercise, answered, onAnswer }: ExerciseProps<Ma
       <Prompt>{pictures ? "Une cada palabra con su imagen" : "Une las parejas"}</Prompt>
       <div className="grid grid-cols-2 gap-3">
         <div className="flex flex-col gap-3">{exercise.textOrder.map((id) => cell("target", id, pairs.get(id)!.text))}</div>
-        <div className="flex flex-col gap-3">{exercise.esOrder.map((id) => cell("es", id, pairs.get(id)!.es))}</div>
+        <div className="flex flex-col gap-3">{exercise.glossOrder.map((id) => cell("es", id, pairs.get(id)!.gloss))}</div>
       </div>
     </div>
   );

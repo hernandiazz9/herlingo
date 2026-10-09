@@ -2,7 +2,8 @@
 
 import { cn } from "@/lib/cn";
 import { useLessonLang } from "@/components/exercises";
-import { languageName, type Situation } from "@/lib/content";
+import { glossOf, languageName, type GlossLang, type Situation } from "@/lib/content";
+import { glossTag } from "@/lib/content/gloss";
 import { CloseIcon, SearchIcon } from "./icons";
 
 export type Filter = { kind: "all" } | { kind: "fav" } | { kind: "situation"; id: string };
@@ -10,15 +11,18 @@ export type Filter = { kind: "all" } | { kind: "fav" } | { kind: "situation"; id
 export interface Chip {
   key: string;
   label: string;
+  /** `lang` of the label when it is a gloss in another language than Spanish. */
+  lang?: string;
   filter: Filter;
   active: boolean;
 }
 
-/** One chip per situation, active when `filter` points at it. */
-export function situationChips(situations: Situation[], filter: Filter): Chip[] {
+/** One chip per situation (title in the gloss language), active when `filter` points at it. */
+export function situationChips(situations: Situation[], filter: Filter, gloss: GlossLang): Chip[] {
   return situations.map((s) => ({
     key: s.id,
-    label: s.emoji ? `${s.emoji} ${s.title}` : s.title,
+    label: s.emoji ? `${s.emoji} ${glossOf(s.title, gloss)}` : glossOf(s.title, gloss),
+    lang: glossTag(gloss),
     filter: { kind: "situation", id: s.id },
     active: filter.kind === "situation" && filter.id === s.id,
   }));
@@ -69,6 +73,7 @@ export function SearchHeader({ query, onQuery, label, chips, onFilter }: SearchH
             key={chip.key}
             type="button"
             aria-pressed={chip.active}
+            lang={chip.lang}
             onClick={() => onFilter(chip.filter)}
             className={cn(
               "shrink-0 rounded-full border-2 px-4 py-2 text-sm font-bold whitespace-nowrap",

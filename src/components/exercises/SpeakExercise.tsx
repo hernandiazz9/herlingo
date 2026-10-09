@@ -7,7 +7,7 @@ import { speak } from "@/lib/audio";
 import { getPack } from "@/lib/content";
 import type { SpeakExercise as Speak } from "@/lib/exercises";
 import { SPEAKING_PAUSE_MINUTES, scoreHeard, type SpeechScore } from "@/lib/speech";
-import { PlayControls, Prompt, useLessonLang, type ExerciseProps } from "./shared";
+import { PlayControls, Prompt, useLessonGloss, useLessonLang, type ExerciseProps } from "./shared";
 
 const MAX_TRIES = 2;
 
@@ -26,6 +26,7 @@ export interface SpeakExerciseProps extends ExerciseProps<Speak> {
  */
 export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: SpeakExerciseProps) {
   const lang = useLessonLang();
+  const gloss = useLessonGloss();
   const { meta } = getPack(lang);
   const [preferSelf, setPreferSelf] = useState(false);
   const [tries, setTries] = useState(0);
@@ -59,7 +60,9 @@ export function SpeakExercise({ exercise, answered, onAnswer, onCannotSpeak }: S
         <p lang={lang} className="text-2xl font-bold text-sea-deep">
           <TargetText text={exercise.audio.text} lang={lang} />
         </p>
-        <p className="text-lg text-ink-muted">{exercise.es}</p>
+        <p lang={gloss.tag} className="text-lg text-ink-muted">
+          {exercise.gloss}
+        </p>
       </div>
       <PlayControls audio={exercise.audio} size="md" />
 

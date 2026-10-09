@@ -4,7 +4,7 @@
  * topic). A card is a phrase or a pictured word; cards with the same text under two ids are shown
  * once and `aliases` gives the other ids (for SRS).
  */
-import { getSituation, listVocab, type Pack, type Phrase, type PicturedVocab } from "@/lib/content";
+import { getSituation, glossOf, listVocab, type GlossLang, type GlossText, type Pack, type Phrase, type PicturedVocab } from "@/lib/content";
 import { createRng, type Rng } from "@/lib/exercises";
 import { dedupeByText, textKey } from "@/lib/srs";
 
@@ -24,7 +24,7 @@ export const POINTS = 10;
 export const XP_ROUND = 5;
 export const OPTIONS = 4;
 
-/** What the game deals and asks: a phrase or a pictured word (both playable, with `text` and `es`). */
+/** What the game deals and asks: a phrase or a pictured word (both playable, with `text` and a translation). */
 export type GameCard = Phrase | PicturedVocab;
 
 export function isWord(card: GameCard): card is PicturedVocab {
@@ -33,7 +33,8 @@ export function isWord(card: GameCard): card is PicturedVocab {
 
 export interface Topic {
   id: string;
-  title: string;
+  /** The situation title (a gloss: `glossOf()`), or "Mezcla". */
+  title: GlossText;
   emoji?: string;
   /** Pictured words of the topic (dealt first in Descubrir). */
   words: PicturedVocab[];
@@ -51,7 +52,7 @@ export function topicCards(topic: Topic): GameCard[] {
   return [...topic.words, ...topic.phrases];
 }
 
-function pool(id: string, title: string, emoji: string | undefined, words: PicturedVocab[], phrases: Phrase[]): TopicPool {
+function pool(id: string, title: GlossText, emoji: string | undefined, words: PicturedVocab[], phrases: Phrase[]): TopicPool {
   const all: GameCard[] = [...words, ...phrases];
   const byId = new Map(all.map((c) => [c.id, c]));
   const { ids, aliases } = dedupeByText(
@@ -85,9 +86,9 @@ export function getTopicPool(id: string, pack: Pack): TopicPool | undefined {
   );
 }
 
-/** Short Spanish explanation for a card: `explanation`, else `notes`, else nothing. */
-export function explain(card: GameCard): string | undefined {
-  return (isWord(card) ? card.notes : card.explanation || card.notes) || undefined;
+/** Short explanation for a card in the gloss language: `explanation`, else `notes`, else nothing. */
+export function explain(card: GameCard, gloss: GlossLang): string | undefined {
+  return glossOf(isWord(card) ? card.notes : card.explanation || card.notes, gloss) || undefined;
 }
 
 /** Cards not marked "La sé" first (shuffled), then the known ones; at most `size`. */
@@ -140,7 +141,7 @@ export interface Question {
   kind: QuestionKind;
   card: GameCard;
   /**
-   * 4 cards (the right one included), shuffled. Label = `es` (listen) or `text` (reverse); picture
+   * 4 cards (the right one included), shuffled. Label = the gloss (listen) or `text` (reverse); picture
    * kinds show `image` (all pictured words, never two with the same `image.src`).
    */
   options: GameCard[];
@@ -150,16 +151,16 @@ export function isPictureQuestion(kind: QuestionKind): kind is "listen-picture" 
   return kind === "listen-picture" || kind === "es-picture";
 }
 
-/** Right card + distractors from each list in turn; no two share a Spanish or target-language text, or a `key`. */
-function fillOptions<T extends GameCard>(right: T, lists: T[][], rng: Rng, key?: (c: T) => string): T[] {
-  const seenEs = new Set([textKey(right.es)]);
+/** Right card + distractors from each list in turn; no two share a gloss or target-language text, or a `key`. */
+function fillOptions<T extends GameCard>(right: T, lists: T[][], rng: Rng, gloss: GlossLang, key?: (c: T) => string): T[] {
+  const seenEs = new Set([textKey(glossOf(right, gloss))]);
   const seenIt = new Set([textKey(right.text)]);
   const seenKey = new Set(key ? [key(right)] : []);
   const options = [right];
   for (const candidates of lists) {
     for (const c of rng.shuffle(candidates)) {
       if (options.length >= OPTIONS) break;
-      const es = textKey(c.es);
+      const es = textKey(glossOf(c, gloss));
       const it = textKey(c.text);
       const k = key?.(c);
       if (seenEs.has(es) || seenIt.has(it) || (k !== undefined && seenKey.has(k))) continue;
@@ -178,14 +179,14 @@ function fillOptions<T extends GameCard>(right: T, lists: T[][], rng: Rng, key?:
  * phrases, then the pack's. A word falls back to listen/reverse when the pack has fewer than
  * `OPTIONS` different pictures.
  */
-export function makeQuestion(card: GameCard, topic: Topic, pack: Pack, rng: Rng): Question {
+export function makeQuestion(card: GameCard, topic: Topic, pack: Pack, rng: Rng, gloss: GlossLang): Question {
   if (isWord(card)) {
-    const options = fillOptions(card, [topic.words, listVocab({ withImage: true }, pack)], rng, (c) => c.image.src);
+    const options = fillOptions(card, [topic.words, listVocab({ withImage: true }, pack)], rng, gloss, (c) => c.image.src);
     if (options.length >= OPTIONS) return { kind: rng.next() < 0.5 ? "listen-picture" : "es-picture", card, options };
   }
   const kind: QuestionKind = rng.next() < 0.5 ? "listen" : "reverse";
   const lists: GameCard[][] = isWord(card) ? [topic.words, topic.phrases, pack.phrases] : [topic.phrases, pack.phrases];
-  return { kind, card, options: fillOptions(card, lists, rng) };
+  return { kind, card, options: fillOptions(card, lists, rng, gloss) };
 }
 
 /** Combo multiplier: x1, then x2 from 3 right in a row, x3 from 6, x4 from 9. */

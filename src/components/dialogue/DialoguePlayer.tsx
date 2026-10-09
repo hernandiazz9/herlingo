@@ -9,6 +9,7 @@ import { speak, stop } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import {
   getPack,
+  glossOf,
   type Dialogue,
   type LearnerOption,
   type LearnerTurn,
@@ -16,6 +17,7 @@ import {
   type ImageRef,
   type Playable,
 } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { bestOption, type SpeechScore } from "@/lib/speech";
 
 type Verdict = LearnerOption["verdict"];
@@ -75,6 +77,7 @@ export interface DialoguePlayerProps {
 /** Plays a scripted dialogue turn by turn; the learner picks or says each answer. */
 export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary }: DialoguePlayerProps) {
   const { meta } = getPack(lang);
+  const gloss = useGlossLang(lang);
   const turns = dialogue.turns;
   const locale = meta.speechLocale;
   const native = meta.name;
@@ -205,12 +208,14 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
             turn.speaker === "native" ? (
               <li key={turn.id}>
                 <WithAvatar avatar={turn.avatar} compact>
-                  <TranscriptLine who={turn.name ?? native} item={turn} es={turn.es} side="left" lang={meta.lang} />
+                  <TranscriptLine who={turn.name ?? native} item={turn} side="left" lang={meta.lang} />
                 </WithAvatar>
               </li>
             ) : (
               <li key={turn.id} className="flex flex-col gap-2">
-                <p className="text-right text-sm text-ink-muted">{turn.prompt}</p>
+                <p lang={gloss.tag} className="text-right text-sm text-ink-muted">
+                  {glossOf(turn.prompt, gloss.lang)}
+                </p>
                 <FinalAnswer turn={turn} attempts={attempts[turn.id] ?? []} lang={meta.lang} />
               </li>
             ),
@@ -276,7 +281,9 @@ export function DialoguePlayer({ dialogue, lang, intro, exit, onFinish, summary 
       {choosing && current?.speaker === "learner" ? (
         <div className="flex flex-col gap-3 rounded-card border-2 border-line bg-surface p-4">
           <p className="text-sm font-bold tracking-wide text-ink-muted uppercase">Tu turno</p>
-          <p className="text-lg font-bold text-ink">{current.prompt}</p>
+          <p lang={gloss.tag} className="text-lg font-bold text-ink">
+            {glossOf(current.prompt, gloss.lang)}
+          </p>
           <div className="flex flex-col gap-2">
             {(orders[current.id] ?? current.options.map((_, k) => k)).map((k) => (
               <button
@@ -369,6 +376,7 @@ function NativeBubble({
   shown: boolean;
   onToggle: () => void;
 }) {
+  const gloss = useGlossLang(lang);
   return (
     <div className="mr-8 flex flex-col gap-2 rounded-card rounded-tl-md border-2 border-line bg-surface p-4">
       <div className="flex items-center justify-between gap-2">
@@ -380,7 +388,9 @@ function NativeBubble({
           <p lang={lang} className="text-lg font-bold text-ink">
             <TargetText text={turn.text} lang={lang} />
           </p>
-          <p className="text-ink-muted">{turn.es}</p>
+          <p lang={gloss.tag} className="text-ink-muted">
+            {glossOf(turn, gloss.lang)}
+          </p>
         </div>
       ) : (
         <p className="text-ink-muted" aria-hidden="true">
@@ -413,6 +423,7 @@ function AnswerFeedback({
   const option = turn.options[attempt.option];
   const v = VERDICT[option.verdict];
   const ideal = correctOption(turn);
+  const gloss = useGlossLang(lang);
   return (
     <div className="flex flex-col gap-2">
       <div className="ml-8 flex items-start gap-2 rounded-card rounded-tr-md border-2 border-sea/30 bg-sea-soft p-4">
@@ -421,14 +432,18 @@ function AnswerFeedback({
           <p lang={lang} className="text-lg font-bold text-ink">
             <TargetText text={option.text} lang={lang} />
           </p>
-          <p className="text-ink-muted">{option.es}</p>
+          <p lang={gloss.tag} className="text-ink-muted">
+            {glossOf(option, gloss.lang)}
+          </p>
         </div>
         <PlayButtons item={option} lang={lang} />
       </div>
       {compact ? null : (
         <div className={cn("flex flex-col gap-1 rounded-card border-2 p-4", v.box)} role="status">
           <p className={cn("text-lg font-extrabold", v.titleClass)}>{v.title}</p>
-          <p className="text-ink">{option.feedback}</p>
+          <p lang={gloss.tag} className="text-ink">
+            {glossOf(option.feedback, gloss.lang)}
+          </p>
           {option.verdict !== "correct" ? (
             <p className="text-ink">
               Lo ideal:{" "}
@@ -451,10 +466,10 @@ function FinalAnswer({ turn, attempts, lang }: { turn: LearnerTurn; attempts: At
   return (
     <>
       {option ? (
-        <TranscriptLine who="Tú" item={option} es={option.es} side="right" verdict={option.verdict} lang={lang} />
+        <TranscriptLine who="Tú" item={option} side="right" verdict={option.verdict} lang={lang} />
       ) : null}
       {option?.verdict !== "correct" ? (
-        <TranscriptLine who="Lo ideal" item={ideal} es={ideal.es} side="right" verdict="correct" lang={lang} />
+        <TranscriptLine who="Lo ideal" item={ideal} side="right" verdict="correct" lang={lang} />
       ) : null}
     </>
   );
@@ -463,18 +478,18 @@ function FinalAnswer({ turn, attempts, lang }: { turn: LearnerTurn; attempts: At
 function TranscriptLine({
   who,
   item,
-  es,
   side,
   verdict,
   lang,
 }: {
   who: string;
+  /** Played and shown with its translation in the learner's gloss language. */
   item: Playable;
-  es: string;
   side: "left" | "right";
   verdict?: Verdict;
   lang: string;
 }) {
+  const gloss = useGlossLang(lang);
   const mark = verdict === "correct" ? "✓" : verdict === "acceptable" ? "≈" : verdict === "wrong" ? "✗" : null;
   return (
     <div
@@ -500,7 +515,9 @@ function TranscriptLine({
         <p lang={lang} className="font-bold text-ink">
           <TargetText text={item.text} lang={lang} />
         </p>
-        <p className="text-sm text-ink-muted">{es}</p>
+        <p lang={gloss.tag} className="text-sm text-ink-muted">
+          {glossOf(item, gloss.lang)}
+        </p>
       </div>
       <PlayButtons item={item} lang={lang} />
     </div>
