@@ -1,0 +1,48 @@
+{
+  "id": "dlg.cba-laburo",
+  "title": "Buscando laburo en Nueva Córdoba",
+  "description": "Un café de Nueva Córdoba busca camarero para el fin de semana. Hablas con el dueño (de usted) y Cami te echa una mano.",
+  "situation": "plata",
+  "unit": "cba-plata",
+  "order": 5,
+  "register": "usted",
+  "avatars": { "Cami": "fluent:woman-curly-hair", "Hugo": "fluent:man-office-worker" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Cami", "text": "Mirá, ahí dice «Se busca mozo». ¡Preguntá vos!", "es": "Mira, ahí pone «Se busca camarero». ¡Pregunta tú!", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda al dueño y pregunta por el puesto, de usted.",
+      "options": [
+        { "text": "Buenas tardes. ¿Siguen buscando mozo?", "es": "Buenas tardes. ¿Siguen buscando camarero?", "verdict": "correct", "feedback": "Muy bien: «mozo» es el camarero, y con el dueño, trato de usted (y «ustedes» para el negocio)." },
+        { "text": "Hola, ¿estáis buscando camarero?", "es": "Hola, ¿estáis buscando camarero? (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero «estáis» (vosotros) no existe aquí y «camarero» suena a España. Di «¿están buscando mozo?»." },
+        { "text": "Che, maestro, ¿tenés laburo para mí?", "es": "Oye, jefe, ¿tienes curro para mí?", "verdict": "wrong", "feedback": "Demasiado confianzudo: con quien te va a contratar, usted y sin «che». «¿Tiene trabajo?» o «¿siguen buscando mozo?»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Hugo", "text": "Sí, buscamos a alguien para los findes. ¿Usted tiene experiencia?", "es": "Sí, buscamos a alguien para los fines de semana. ¿Tiene usted experiencia?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Explica que en Madrid trabajaste de camarero varios veranos.",
+      "options": [
+        { "text": "Sí, en Madrid trabajé de mozo varios veranos.", "es": "Sí, en Madrid he trabajado de camarero varios veranos.", "verdict": "correct", "feedback": "Perfecto: pretérito simple («trabajé», no «he trabajado») y «mozo»." },
+        { "text": "Sí, he trabajado de camarero muchos veranos.", "es": "Sí, he trabajado de camarero muchos veranos. (igual en España)", "verdict": "acceptable", "feedback": "Correcto, pero aquí se dice «trabajé», no «he trabajado», y «mozo» mejor que «camarero». Suena a gallego recién llegado." },
+        { "text": "Sí, en Madrid tenía un buen curro de camarero.", "es": "Sí, en Madrid tenía un buen trabajo de camarero (curro = estafa).", "verdict": "wrong", "feedback": "¡Ojo! «Curro» aquí es una estafa, un chanchullo: acabas de decir que tenías un buen timo. El trabajo es «trabajo» (o, informal, «laburo»)." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Hugo", "text": "Bárbaro. Pagamos por hora, en efectivo, y el sábado se labura mucho.", "es": "Estupendo. Pagamos por horas, en efectivo, y el sábado se curra mucho.", "voice": "es-AR-TomasNeural" },
+    { "id": "n4", "speaker": "native", "name": "Cami", "text": "Preguntale cuánto paga, Álex. ¡No seas tímido!", "es": "Pregúntale cuánto paga, Álex. ¡No seas tímido!", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pregunta al dueño, con educación, cuánto se paga la hora.",
+      "options": [
+        { "text": "¿Y de plata cuánto sería por hora?", "es": "¿Y de dinero cuánto sería por hora?", "verdict": "correct", "feedback": "Bien: «plata» es la palabra normal para el dinero, hasta en una entrevista. Y el condicional «sería» queda educado." },
+        { "text": "¿Y cuánta pasta es la hora?", "es": "¿Y cuánta pasta es la hora? (igual en España)", "verdict": "acceptable", "feedback": "Se entiende por el contexto, pero «pasta» aquí son los fideos, y además suena demasiado coloquial para una entrevista. Di «plata»." },
+        { "text": "¿Y cuántas lucas me vas a tirar, maestro?", "es": "¿Y cuántos pavos me vas a soltar, jefe?", "verdict": "wrong", "feedback": "Demasiado de barrio: «lucas» (miles de pesos) y el vos están bien entre amigos, pero al dueño se le habla de usted." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Hugo", "text": "Lo charlamos el sábado. Venga a la siesta, tipo tres, y hacemos una prueba.", "es": "Lo hablamos el sábado. Venga después de comer, sobre las tres, y hacemos una prueba.", "voice": "es-AR-TomasNeural" },
+    { "id": "n6", "speaker": "native", "name": "Cami", "text": "¡Bien ahí! Ya casi tenés laburo, gallego.", "es": "¡Olé! Ya casi tienes curro, español.", "voice": "es-AR-ElenaNeural" }
+  ]
+}

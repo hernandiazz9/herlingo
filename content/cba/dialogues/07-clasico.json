@@ -1,0 +1,48 @@
+{
+  "id": "dlg.cba-clasico",
+  "title": "El clásico: Belgrano contra Talleres",
+  "description": "En el estadio con Nico (de Belgrano) y la Yesi (de Talleres): «ni en pedo», «me re calenté», «¡qué abuso!» y el «culiao» en tres tonos.",
+  "situation": "emociones",
+  "unit": "cba-emociones",
+  "order": 7,
+  "register": "tu",
+  "avatars": { "Nico": "fluent:man-curly-hair", "la Yesi": "fluent:woman-red-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Nico", "text": "¡Llegamo', culiao! Hoy le ganamo' a la T, ¿viste?", "es": "¡Ya estamos, cabrón! Hoy le ganamos a Talleres, ¿eh?", "voice": "es-AR-TomasNeural" },
+    { "id": "n2", "speaker": "native", "name": "la Yesi", "text": "Ni en pedo, Nico. Hoy gana Talleres.", "es": "Ni de coña, Nico. Hoy gana Talleres.", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Ponte del lado de Nico y de Belgrano, con entusiasmo.",
+      "options": [
+        { "text": "¡Vamos, Belgrano! Ni a palos perdemos hoy.", "es": "¡Vamos, Belgrano! Ni de broma perdemos hoy.", "verdict": "correct", "feedback": "¡Ya eres pirata! «Ni a palos» = ni de broma, y en la cancha vale también «ni en pedo» (vulgar, pero allí es lo normal)." },
+        { "text": "¡Venga, Belgrano, que hoy ganamos!", "es": "¡Venga, Belgrano, que hoy ganamos! (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero «venga» te delata: aquí se anima con «¡vamos!» o «¡dale!»." },
+        { "text": "¡Yesi, sos una culiada!", "es": "¡Yesi, eres una cabrona! (insulto)", "verdict": "wrong", "feedback": "Vulgar y mal usado: el «culiao» amistoso es entre colegas y solo si el otro empieza. Gritado a la Yesi suena a insulto de verdad." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Nico", "text": "¡No cobró el penal! ¡Ese culiao del árbitro! Me re calenté.", "es": "¡No ha pitado el penalti! ¡El cabrón del árbitro! Me he cabreado muchísimo.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Dile a Nico que tú también te has cabreado muchísimo.",
+      "options": [
+        { "text": "¡Yo también me calenté mal con el árbitro!", "es": "¡Yo también me he cabreado mazo con el árbitro!", "verdict": "correct", "feedback": "¡Bien! «Calentarse» aquí es cabrearse, y «mal» = muchísimo (juvenil)." },
+        { "text": "¡Qué cabreo, tío! El árbitro es un sinvergüenza.", "es": "¡Qué cabreo, tío! El árbitro es un sinvergüenza. (igual en España)", "verdict": "acceptable", "feedback": "Te entienden, pero «cabreo» y «tío» suenan a España. Aquí: «¡me re calenté, loco!»." },
+        { "text": "¿Calentado? ¡Si hace un frío que pela!", "es": "¿Acalorado? ¡Si hace un frío que pela! (malentendido)", "verdict": "wrong", "feedback": "«Me calenté» no habla de temperatura: es «me he cabreado» (y, en otro contexto, «me he puesto cachondo»)." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "la Yesi", "text": "¡Gooool de Talleres! ¡Qué abuso, Nico!", "es": "¡Gol de Talleres! ¡Qué pasada, Nico!", "voice": "es-AR-ElenaNeural" },
+    { "id": "n5", "speaker": "native", "name": "Nico", "text": "Uh, qué culiao, ¡qué golazo! Hay que reconocerlo.", "es": "¡Uf, qué cabrón, qué golazo! Hay que reconocerlo.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Reconoce que el gol ha sido una pasada, pero pica a la Yesi.",
+      "options": [
+        { "text": "¡Qué abuso de gol! Pero igual no ganan.", "es": "¡Qué pasada de gol! Pero aun así no vais a ganar.", "verdict": "correct", "feedback": "¡Muy cordobés! «¡Qué abuso!» es un elogio (= ¡qué pasada!), «igual» = aun así, y «ganan» con ustedes: aquí no hay vosotros." },
+        { "text": "¡Vaya golazo! Pero no vais a ganar.", "es": "¡Vaya golazo! Pero no vais a ganar. (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero «vais» (vosotros) no existe aquí: «no van a ganar». Y «vaya» suena a España: «¡qué golazo!»." },
+        { "text": "¡Qué gol más chulo! Pero no ganan.", "es": "¡Qué gol más bonito! Pero no ganáis (chulo = proxeneta o chulesco).", "verdict": "wrong", "feedback": "«Chulo» aquí no es bonito: es un proxeneta o un creído. Para un gol: «¡qué golazo!», «¡qué abuso!» o «¡un caño!»." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "la Yesi", "text": "¡Ah, choro! El gallego ya habla como cordobé'.", "es": "¡Qué máquina! El español ya habla como un cordobés.", "voice": "es-AR-ElenaNeural" }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "dlg.cba-domingo-alberdi",
+  "title": "Domingo de asado en Alberdi",
+  "description": "Barrio Alberdi, casa de los padres de Nico: comida familiar del domingo. «La Cami», «el Negro», «Car'e Poio» y tu propio apodo.",
+  "situation": "gente",
+  "unit": "cba-gente",
+  "order": 2,
+  "register": "tu",
+  "avatars": { "Mirta": "fluent:woman-white-hair", "Nico": "fluent:man-curly-hair", "el Negro": "fluent:man-beard" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Mirta", "text": "¡Pasá, negrito! Vos sos el gallego de la Cami, ¿no?", "es": "¡Pasa, cariño! Tú eres el novio español de Cami, ¿no?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Confirma que eres el novio de Cami, como lo diría la familia.",
+      "options": [
+        { "text": "Sí, soy el novio de la Cami. ¡Encantado!", "es": "Sí, soy el novio de Cami. ¡Encantado!", "verdict": "correct", "feedback": "¡Bien! En Córdoba se pone artículo delante del nombre («la Cami», «el Nico») y suena cariñoso, no de pueblo como en España." },
+        { "text": "Sí, soy el novio de Camila. Encantado de conocerla.", "es": "Sí, soy el novio de Camila. Encantado de conocerla. (igual en España)", "verdict": "acceptable", "feedback": "Correcto, pero «Camila» a secas suena distante, de papeles oficiales. En familia, «la Cami»." },
+        { "text": "Sí, pero no me digás negrito, que no soy negro.", "es": "Sí, pero no me llames «negrito», que no soy negro.", "verdict": "wrong", "feedback": "«Negrito» en boca de la familia es puro cariño, como «cielo» o «cariño»: no habla del color de piel. Tómatelo como un abrazo." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Mirta", "text": "¡Ay, qué lindo cómo habla! Sentate, que ya sale el asao.", "es": "¡Ay, qué bonito habla! Siéntate, que ya está la carne a la brasa.", "voice": "es-AR-ElenaNeural" },
+    { "id": "n3", "speaker": "native", "name": "Nico", "text": "Mirá, nero: este es mi viejo. Acá todos le dicen el Negro.", "es": "Mira, tío: este es mi padre. Aquí todos le llaman «el Negro».", "voice": "es-AR-TomasNeural" },
+    { "id": "n4", "speaker": "native", "name": "el Negro", "text": "¡Bienvenido, gallego! Vos estás en tu casa, ¿eh?", "es": "¡Bienvenido, español! Estás en tu casa, ¿eh?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Saluda al padre de Nico y dale las gracias por invitarte.",
+      "options": [
+        { "text": "¡Un gusto, Negro! Gracias por invitarme.", "es": "¡Encantado, Negro! Gracias por invitarme.", "verdict": "correct", "feedback": "Muy bien: si él se presenta como «el Negro», es su apodo de toda la vida y usarlo es aceptar la confianza que te ofrece. «Un gusto» = encantado." },
+        { "text": "Encantado de conoceros a todos.", "es": "Encantado de conoceros a todos. (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero «os» no existe aquí: «encantado de conocerlos a todos». Para todo plural, ustedes." },
+        { "text": "¡Un gusto, negro cuartetero!", "es": "¡Encantado, negro cuartetero! (insulto clasista)", "verdict": "wrong", "feedback": "Ofensivo. «Negro» a secas, entre conocidos, es cariño; «negro cuartetero» es un insulto clasista. Al padre de Nico, en su casa: peor imposible." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Nico", "text": "¿Y vos, gallego? Si te quedás tres meses, te vamo' a poner apodo.", "es": "¿Y tú, español? Si te quedas tres meses, te vamos a poner un mote.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Acepta el mote con humor.",
+      "options": [
+        { "text": "¡Dale! Mientras no sea cara de pollo…", "es": "¡Venga! Mientras no sea «Cara de Pollo»…", "verdict": "correct", "feedback": "¡Genial! Aceptar el mote con humor es entrar en la familia. Los apodos con «car'e…» son de barrio y casi siempre van con cariño." },
+        { "text": "Vale, pero que sea guay, ¿eh?", "es": "Vale, pero que sea guay, ¿eh? (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero «vale» y «guay» delatan al gallego enseguida. Aquí: «dale, pero que sea copado»." },
+        { "text": "No, gracias. Llámenme Alejandro, por favor.", "es": "No, gracias. Llamadme Alejandro, por favor.", "verdict": "wrong", "feedback": "Correcto pero frío: rechazar el mote en un asado de barrio suena a estirado, casi a ofensa. Ríete y sigue la broma." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Mirta", "text": "¡Ya está! Vas a ser el Gallego. ¡A comer, que se enfría!", "es": "¡Hecho! Serás «el Gallego». ¡A comer, que se enfría!", "voice": "es-AR-ElenaNeural" }
+  ]
+}

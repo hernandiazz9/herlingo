@@ -1,0 +1,48 @@
+{
+  "id": "dlg.cba-remis-carlos-paz",
+  "title": "En remís a Carlos Paz",
+  "description": "De la terminal de Córdoba a Villa Carlos Paz: hablas con el remisero (de usted) sobre el precio, la maleta, el lago, el teatro y «la siesta».",
+  "situation": "lugares",
+  "unit": "cba-lugares",
+  "order": 6,
+  "register": "usted",
+  "avatars": { "Remisero": "fluent:man-white-hair", "Cami": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Remisero", "text": "Buen día. ¿Adónde los llevo?", "es": "Buenos días. ¿Adónde os llevo?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que vais a Villa Carlos Paz y pregunta el precio, de usted.",
+      "options": [
+        { "text": "A Carlos Paz, por favor. ¿Cuánto sale el viaje?", "es": "A Villa Carlos Paz, por favor. ¿Cuánto cuesta el trayecto?", "verdict": "correct", "feedback": "Muy bien: «¿cuánto sale?» = ¿cuánto cuesta?, y «Carlos Paz» a secas, como dice todo el mundo." },
+        { "text": "A Carlos Paz. ¿Cuánto nos cobras por la carrera?", "es": "A Carlos Paz. ¿Cuánto nos cobras por la carrera? (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero con un remisero mayor aquí va el usted («¿cuánto nos cobra?»): el tuteo de España suena confianzudo." },
+        { "text": "A Carlos Paz, flaco. ¿Cuánto me cobrás?", "es": "A Carlos Paz, tío. ¿Cuánto me cobras?", "verdict": "wrong", "feedback": "Demasiado confianzudo: «flaco» y el vos van con alguien de tu edad, no con un señor que te lleva en su auto. Usa usted." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Remisero", "text": "Le hago buen precio. Son cuarenta minutos por la ruta veinte.", "es": "Le hago buen precio. Son cuarenta minutos por la carretera veinte.", "voice": "es-AR-TomasNeural" },
+    { "id": "n3", "speaker": "native", "name": "Cami", "text": "Dale, vamos. Álex, ayudalo con las valijas.", "es": "Venga, vamos. Álex, ayúdale con las maletas.", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pregunta al remisero si puedes meter la maleta en el maletero.",
+      "options": [
+        { "text": "¿Puedo poner la valija en el baúl?", "es": "¿Puedo meter la maleta en el maletero?", "verdict": "correct", "feedback": "Perfecto: «valija» = maleta y «baúl» = maletero del auto." },
+        { "text": "¿Puedo meter la maleta en el maletero?", "es": "¿Puedo meter la maleta en el maletero? (igual en España)", "verdict": "acceptable", "feedback": "Te entiende, pero aquí se dice «valija» y «baúl»; «maletero» suena a España." },
+        { "text": "¿Pongo la valija dentro del coche?", "es": "¿Meto la maleta en el carrito del bebé? (coche = cochecito)", "verdict": "wrong", "feedback": "En Argentina «el coche» es sobre todo el cochecito del bebé: el vehículo es «el auto». Y la maleta va en «el baúl»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Remisero", "text": "En verano hay temporada de teatro y el lago está lindísimo. Eso sí: a la siesta está todo cerrado.", "es": "En verano hay temporada de teatro y el lago está precioso. Eso sí: después de comer, hasta media tarde, está todo cerrado.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Explica que después de comer iréis al lago y por la noche, al teatro.",
+      "options": [
+        { "text": "A la siesta vamos al lago, y a la noche, al teatro.", "es": "Después de comer vamos al lago y por la noche, al teatro.", "verdict": "correct", "feedback": "¡Muy bien! «A la siesta» = a primera hora de la tarde (no tiene que ver con dormir), y «a la noche» = por la noche." },
+        { "text": "Por la tarde iremos al lago y por la noche, al teatro.", "es": "Por la tarde iremos al lago y por la noche, al teatro. (igual en España)", "verdict": "acceptable", "feedback": "Correcto y se entiende perfecto; solo que aquí dirían «a la siesta», «a la noche» y «vamos a ir» antes que el futuro «iremos»." },
+        { "text": "¿A la siesta? No, gracias, nosotros no dormimos la siesta.", "es": "¿A la siesta? No, gracias, no dormimos la siesta (malentendido).", "verdict": "wrong", "feedback": "«A la siesta» aquí es una franja del día (después de comer), no echarse a dormir. El remisero solo te avisaba de que las tiendas cierran." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Cami", "text": "¡Y no te vayás sin ver el reloj cucú!", "es": "¡Y no te vayas sin ver el reloj de cuco!", "voice": "es-AR-ElenaNeural" },
+    { "id": "n6", "speaker": "native", "name": "Remisero", "text": "Bueno, llegamos. Bienvenidos a la Villa. ¡Que lo disfruten!", "es": "Bueno, ya hemos llegado. Bienvenidos a Carlos Paz. ¡Que lo disfrutéis!", "voice": "es-AR-TomasNeural" }
+  ]
+}

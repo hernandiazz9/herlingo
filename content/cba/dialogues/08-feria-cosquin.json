@@ -1,0 +1,48 @@
+{
+  "id": "dlg.cba-feria-cosquin",
+  "title": "La feria de artesanos de Cosquín",
+  "description": "Enero, festival de folclore de Cosquín: compras una remera y miras una campera con Cami. Cuidado con «coger», «pija», «bombacha» y «vale».",
+  "situation": "falsos-amigos",
+  "unit": "cba-trampas",
+  "order": 8,
+  "register": "tu",
+  "avatars": { "Artesano": "fluent:man-artist", "Cami": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Artesano", "text": "¡Buenas! Pasen y miren sin compromiso: remeras, camperas, mates…", "es": "¡Buenas! Pasad y mirad sin compromiso: camisetas, chaquetas, mates…", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide que te enseñe una camiseta del festival.",
+      "options": [
+        { "text": "¿Me mostrás esa remera del festival?", "es": "¿Me enseñas esa camiseta del festival?", "verdict": "correct", "feedback": "Perfecto: «remera» = camiseta y «mostrar» = enseñar. Con un artesano joven, vos sin problema." },
+        { "text": "¿Me enseñas esa camiseta del festival?", "es": "¿Me enseñas esa camiseta del festival? (igual en España)", "verdict": "acceptable", "feedback": "Te entiende, pero «camiseta» aquí es la de fútbol o la interior, y «enseñas» es de tú. Di «¿me mostrás esa remera?»." },
+        { "text": "¿Puedo coger esa camiseta del festival?", "es": "¿Puedo coger esa camiseta del festival? (aquí: follar)", "verdict": "wrong", "feedback": "¡Peligro! En Argentina «coger» es follar (vulgar). Para tocar algo: «¿puedo agarrar…?» o «¿me la pasás?»." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "Artesano", "text": "Dale, tomá. Es de algodón, re fresquita pa' este calorón.", "es": "Venga, toma. Es de algodón, muy fresquita para este calorazo.", "voice": "es-AR-TomasNeural" },
+    { "id": "n3", "speaker": "native", "name": "Cami", "text": "Y mirá esta campera de cuero, Álex. ¡Para las noches en las sierras!", "es": "Y mira esta cazadora de cuero, Álex. ¡Para las noches en la sierra!", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Di que la cazadora es bonita, pero demasiado pija para ti.",
+      "options": [
+        { "text": "Re linda, pero es muy cheta para mí.", "es": "Muy bonita, pero es muy pija para mí.", "verdict": "correct", "feedback": "¡Exacto! «Cheto/cheta» es el «pijo» de aquí, y «re linda» = muy bonita." },
+        { "text": "Es preciosa, pero demasiado elegante para mí.", "es": "Es preciosa, pero demasiado elegante para mí. (igual en España)", "verdict": "acceptable", "feedback": "Correcto y educado; un cordobés diría «re linda, pero muy cheta»." },
+        { "text": "Re linda, pero es muy pija para mí.", "es": "Muy bonita, pero es muy pija para mí (aquí, «pija» = polla).", "verdict": "wrong", "feedback": "¡Ojo! Vulgar: «pija» aquí es el pene. El «pijo» de España se dice «cheto»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Cami", "text": "Jaja, bueno. ¿Y a mí me regalás esa bombacha de campo?", "es": "Jaja, bueno. ¿Y a mí me regalas ese pantalón de gaucho?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Acepta regalarle a Cami los pantalones gauchos.",
+      "options": [
+        { "text": "¡Dale! Te regalo la bombacha de campo.", "es": "¡Venga! Te regalo el pantalón de gaucho.", "verdict": "correct", "feedback": "Bien: la «bombacha de campo» es el pantalón ancho de los gauchos. Ojo: «bombacha» a secas son las bragas." },
+        { "text": "¡Vale, te la regalo!", "es": "¡Vale, te la regalo! (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero «vale» aquí casi no se oye: «dale», «listo» o «de una»." },
+        { "text": "¿Bragas? ¿Acá, delante de todo el mundo?", "es": "¿Bragas? ¿Aquí, delante de todo el mundo? (malentendido)", "verdict": "wrong", "feedback": "«Bombacha de campo» es el pantalón gaucho, nada de ropa interior. Solo «bombacha» a secas son las bragas." }
+      ]
+    },
+    { "id": "n5", "speaker": "native", "name": "Artesano", "text": "Todo junto te hago precio. ¿Pagás en efectivo?", "es": "Si te lo llevas todo, te hago descuento. ¿Pagas en efectivo?", "voice": "es-AR-TomasNeural" },
+    { "id": "n6", "speaker": "native", "name": "Cami", "text": "¡Mirá vos, el gallego! Ya no dice «coger» ni «vale».", "es": "¡Mira tú el español! Ya no dice «coger» ni «vale».", "voice": "es-AR-ElenaNeural" }
+  ]
+}

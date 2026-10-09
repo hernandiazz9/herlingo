@@ -1,0 +1,48 @@
+{
+  "id": "dlg.cba-lomito",
+  "title": "Un lomito completo y un fernet",
+  "description": "Una lomitería cerca de La Cañada: pides con Cami a Don Rubén un lomito completo, un fernet setenta treinta y el postre.",
+  "situation": "comida",
+  "unit": "cba-comida",
+  "order": 3,
+  "register": "tu",
+  "avatars": { "Don Rubén": "fluent:man-cook", "Cami": "fluent:woman-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Don Rubén", "text": "¡Buenas noches, chicos! ¿Qué va a ser?", "es": "¡Buenas noches, chicos! ¿Qué os pongo?", "voice": "es-AR-TomasNeural" },
+    { "id": "n2", "speaker": "native", "name": "Cami", "text": "Para mí, un lomito completo. ¿Y vos, Álex?", "es": "Para mí, un pepito de lomo completo. ¿Y tú, Álex?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Pide lo mismo que Cami.",
+      "options": [
+        { "text": "Para mí también un lomito completo, por favor.", "es": "Para mí también un pepito de lomo completo, por favor.", "verdict": "correct", "feedback": "¡Perfecto! El lomito es el bocadillo cordobés por excelencia; «completo» = con jamón, queso, huevo, lechuga y tomate." },
+        { "text": "Ponme un bocadillo de lomo, porfa.", "es": "Ponme un bocadillo de lomo, porfa. (igual en España)", "verdict": "acceptable", "feedback": "Don Rubén te entiende, pero «bocadillo» aquí no se dice (es «sánguche») y «ponme» suena a barra madrileña. Mejor: «¿me da un lomito?»." },
+        { "text": "Che, viejo, tirame uno igual.", "es": "Oye, abuelo, échame otro igual.", "verdict": "wrong", "feedback": "Demasiado de barrio: «viejo» a un señor mayor que no conoces suena a falta de respeto. Con Don Rubén, «para mí también uno, por favor»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Don Rubén", "text": "Dos completos, listo. ¿Y pa' tomar? ¿Un fernecito?", "es": "Dos completos, marchando. ¿Y de beber? ¿Un fernet?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Pide un fernet con cola en la proporción clásica.",
+      "options": [
+        { "text": "Dale, un fernet con coca, setenta treinta.", "es": "Venga, un fernet con cola, setenta-treinta (70 % cola, 30 % fernet).", "verdict": "correct", "feedback": "¡Hablas como un cordobés! El «setenta treinta» es setenta de cola y treinta de fernet, con hielo." },
+        { "text": "Vale, ponme un cubata de fernet.", "es": "Vale, ponme un cubata de fernet. (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero «cubata» no existe aquí y «vale» suena a España. Di «un fernet con coca» o, de broma, «un fernando»." },
+        { "text": "Un fernet setenta treinta: setenta de fernet.", "es": "Un fernet setenta-treinta: setenta de fernet (al revés).", "verdict": "wrong", "feedback": "¡Al revés! Setenta de cola y treinta de fernet. Con setenta de fernet sale un jarabe amargo que te tumba." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Cami", "text": "¡Mirá vos! El gallego ya pide como cordobés.", "es": "¡Mira tú! El español ya pide como un cordobés.", "voice": "es-AR-ElenaNeural" },
+    { "id": "n5", "speaker": "native", "name": "Don Rubén", "text": "¿Y de postre? Tengo flan casero y ananá fresco.", "es": "¿Y de postre? Tengo flan casero y piña natural.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Pide un postre: fruta o flan.",
+      "options": [
+        { "text": "Un flan con dulce de leche, por favor.", "es": "Un flan con dulce de leche, por favor (el clásico de aquí).", "verdict": "correct", "feedback": "¡Muy bien! El flan con dulce de leche es el postre de bar argentino por excelencia." },
+        { "text": "Para mí, flan con nata.", "es": "Para mí, flan con nata. (igual en España)", "verdict": "acceptable", "feedback": "Te entiende por el contexto, pero aquí la nata es «crema»: «flan con crema» (o, mejor, con dulce de leche)." },
+        { "text": "Para mí, una piña, por favor.", "es": "Para mí, un puñetazo, por favor (piña = puñetazo).", "verdict": "wrong", "feedback": "¡Ja! «Piña» aquí es un puñetazo. La fruta es «ananá», como acaba de decir Don Rubén." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Cami", "text": "Jaja, ¡casi te comés una piña de Don Rubén!", "es": "Jaja, ¡casi te llevas un puñetazo de Don Rubén!", "voice": "es-AR-ElenaNeural" }
+  ]
+}

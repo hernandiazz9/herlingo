@@ -1,0 +1,48 @@
+{
+  "id": "dlg.cba-que-lo-que",
+  "title": "¿Qué lo qué? Conoces al Nico",
+  "description": "Barrio Güemes, un bar del Paseo de las Artes: Cami te presenta a su primo Nico. Saludos, fernet y tu primer «culiao».",
+  "situation": "saludos",
+  "unit": "cba-saludos",
+  "order": 1,
+  "register": "tu",
+  "avatars": { "Cami": "fluent:woman-curly-hair", "Nico": "fluent:man-curly-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Cami", "text": "¡Nico! Te presento a Álex, el gallego del que te hablé.", "es": "¡Nico! Te presento a Álex, el español del que te hablé.", "voice": "es-AR-ElenaNeural" },
+    { "id": "n2", "speaker": "native", "name": "Nico", "text": "¿Qué lo qué, Álex? ¿Qué hacé'? ¿Todo bien?", "es": "¿Qué pasa, Álex? ¿Qué tal? ¿Todo bien?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Saluda a Nico y devuélvele la pregunta.",
+      "options": [
+        { "text": "¡Todo bien! ¿Y vos, cómo andás?", "es": "¡Todo bien! ¿Y tú qué tal?", "verdict": "correct", "feedback": "¡Perfecto! «¿Qué hacés?» es un saludo, no una pregunta sobre lo que estás haciendo: se responde «todo bien» y se devuelve con «¿y vos?»." },
+        { "text": "¡Muy bien, tío! ¿Y tú qué tal?", "es": "¡Muy bien, tío! ¿Y tú qué tal? (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero aquí nadie dice «tú», y «tío» es solo el hermano de tu padre. Di «¿y vos?» y, si quieres un apelativo, «che» o «nero»." },
+        { "text": "Pues nada, aquí, tomándome una caña.", "es": "Pues nada, aquí, tomándome una caña (respuesta literal)", "verdict": "wrong", "feedback": "«¿Qué hacés?» no pide un informe: equivale a «¿qué tal?». Además, «caña» aquí no se usa: la cerveza de barril es un «chopp»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Nico", "text": "Acá andamo', tranqui. Che, ¿qué tomás? ¿Un fernecito?", "es": "Aquí estamos, tirando. Oye, ¿qué bebes? ¿Un fernet?", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Acepta el fernet con ganas.",
+      "options": [
+        { "text": "¡Dale! Un fernet con coca.", "es": "¡Venga, vale! Un fernet con cola.", "verdict": "correct", "feedback": "¡Eso es! «Dale» es el «vale» de aquí: sirve para aceptar, animar y meter prisa. Y el fernet se pide siempre «con coca»." },
+        { "text": "¡Vale, guay! Ponme uno.", "es": "¡Vale, guay! Ponme uno. (igual en España)", "verdict": "acceptable", "feedback": "Te entienden, pero «vale» casi no se oye y «guay» suena a serie española. Aquí: «¡dale!» o «¡de una!»." },
+        { "text": "¡Dale! Cogeme uno bien cargado.", "es": "¡Venga! Ponme uno bien cargado (con «coger»: aquí, follar)", "verdict": "wrong", "feedback": "Vulgar sin querer: en Argentina «coger» es follar, así que Nico se va a reír un buen rato. Para pedir: «¿me hacés uno?» o «pasame uno»." }
+      ]
+    },
+    { "id": "n4", "speaker": "native", "name": "Cami", "text": "Ojo, Nico, que en Madrid dice «vosotros» y «tío». ¡Enseñale!", "es": "Cuidado, Nico, que en Madrid dice «vosotros» y «tío». ¡Enséñale!", "voice": "es-AR-ElenaNeural" },
+    { "id": "n5", "speaker": "native", "name": "Nico", "text": "Tranqui, en una semana habla como cordobé'. ¡Bienvenido, culiao!", "es": "Tranquila, en una semana habla como un cordobés. ¡Bienvenido, cabrón!", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Nico te ha llamado «culiao» con una sonrisa. Reacciona.",
+      "options": [
+        { "text": "¡Jaja, gracias, nero!", "es": "¡Jaja, gracias, tío!", "verdict": "correct", "feedback": "Bien leído. Vulgar, pero entre colegas «culiao» con sonrisa es cariño, como «¿qué pasa, cabrón?». Tú responde con «nero» hasta que haya más confianza." },
+        { "text": "¡Gracias, colega!", "es": "¡Gracias, colega! (igual en España)", "verdict": "acceptable", "feedback": "Se entiende, pero «colega» suena muy de España. Aquí los apelativos de amigo son «nero», «loco», «che» o «guanaco»." },
+        { "text": "¿Cómo? ¡A mí no me insultés!", "es": "¿Cómo? ¡A mí no me insultes!", "verdict": "wrong", "feedback": "Calma: dicho por un amigo y sonriendo, «culiao» es un saludo cariñoso (grado 1), no un insulto. Ofenderte aquí sería pasarte de serio." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "Cami", "text": "Listo, Álex: si te dice culiao, es que te quiere.", "es": "Ya está, Álex: si te llama «culiao», es que te quiere.", "voice": "es-AR-ElenaNeural" }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "dlg.cba-el-baile",
+  "title": "La previa y el baile de cuarteto",
+  "description": "Un baile de cuarteto: previa en casa de Nico, la ronda y la Mona. La Yesi y Nico te enseñan a no hacer el ridículo.",
+  "situation": "salir",
+  "unit": "cba-salir",
+  "order": 4,
+  "register": "tu",
+  "avatars": { "Nico": "fluent:man-curly-hair", "la Yesi": "fluent:woman-red-hair" },
+  "turns": [
+    { "id": "n1", "speaker": "native", "name": "Nico", "text": "¡Llegó el gallego! Pasá, que estamo' haciendo la previa.", "es": "¡Ha llegado el español! Pasa, que estamos de precopa.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l1",
+      "speaker": "learner",
+      "prompt": "Di que has traído bebida para compartir.",
+      "options": [
+        { "text": "¡Traje un fernet y una coca para la previa!", "es": "¡He traído un fernet y una cola para la precopa!", "verdict": "correct", "feedback": "¡Ídolo! «Traje» en pretérito simple (en España, «he traído»), y la previa es beber en casa antes de salir." },
+        { "text": "He traído unas litronas para el botellón.", "es": "He traído unas litronas para el botellón. (igual en España)", "verdict": "acceptable", "feedback": "Más o menos se entiende, pero «litrona» y «botellón» no se dicen: aquí, «unas birras» para «la previa». Y se dice «traje», no «he traído»." },
+        { "text": "¿La previa? Pensé que el baile era hoy.", "es": "¿La víspera? Creía que la fiesta era hoy (malentendido).", "verdict": "wrong", "feedback": "La previa no es «la víspera»: es la reunión para beber antes del baile, la misma noche. Llegas justo a tiempo." }
+      ]
+    },
+    { "id": "n2", "speaker": "native", "name": "la Yesi", "text": "Esta noche toca la Mona. ¿Sabés bailar cuarteto?", "es": "Esta noche toca la Mona Jiménez. ¿Sabes bailar cuarteto?", "voice": "es-AR-ElenaNeural" },
+    {
+      "id": "l2",
+      "speaker": "learner",
+      "prompt": "Confiesa que no tienes ni idea, pero que tienes muchísimas ganas.",
+      "options": [
+        { "text": "Ni ahí, pero estoy re manija.", "es": "Ni de lejos, pero tengo unas ganas enormes.", "verdict": "correct", "feedback": "¡Cordobés puro! «Ni ahí» = para nada, y «estar re manija» = estar con muchísimas ganas." },
+        { "text": "Ni idea, tía, pero me mola mazo.", "es": "Ni idea, tía, pero me mola mazo. (igual en España)", "verdict": "acceptable", "feedback": "La Yesi se ríe: «tía» aquí es la hermana de tu madre, y «mola mazo» suena a tele española. Di «me re copa» o «estoy re manija»." },
+        { "text": "No, pero estoy re caliente con el baile.", "es": "No, pero estoy muy cachondo (o cabreado) con el baile.", "verdict": "wrong", "feedback": "¡Uy! «Estar caliente» aquí es estar cabreado… o cachondo. Para las ganas: «estoy re manija»." }
+      ]
+    },
+    { "id": "n3", "speaker": "native", "name": "Nico", "text": "Tranqui: en el baile se gira en ronda, todos pa'l mismo lado.", "es": "Tranquilo: en el baile se gira en corro, todos hacia el mismo lado.", "voice": "es-AR-TomasNeural" },
+    { "id": "n4", "speaker": "native", "name": "la Yesi", "text": "¡Ya empezó! ¿Escuchás el tunga-tunga?", "es": "¡Ya ha empezado! ¿Oyes el ritmo del cuarteto?", "voice": "es-AR-ElenaNeural" },
+    { "id": "n5", "speaker": "native", "name": "Nico", "text": "Dale, sacala a bailar a la Yesi, que yo voy por unos fernet.", "es": "Venga, saca a bailar a Yesi, que yo voy a por unos fernets.", "voice": "es-AR-TomasNeural" },
+    {
+      "id": "l3",
+      "speaker": "learner",
+      "prompt": "Invita a la Yesi a bailar.",
+      "options": [
+        { "text": "Che, Yesi, ¿bailás?", "es": "Oye, Yesi, ¿bailas?", "verdict": "correct", "feedback": "Así se saca a bailar en Córdoba: corto, con voseo y una sonrisa. «¿Bailás?»." },
+        { "text": "Yesi, ¿te apetece bailar?", "es": "Yesi, ¿te apetece bailar? (igual en España)", "verdict": "acceptable", "feedback": "Correcto, pero «apetecer» casi no se usa aquí y suena muy de España. Mejor «¿bailás?» o «¿te pinta bailar?»." },
+        { "text": "¡Mamasa! ¿Bailás?", "es": "¡Tía buena! ¿Bailas?", "verdict": "wrong", "feedback": "Vulgar. «¡Mamasa!» es un piropo grosero que cosifica: a la novia de tu amigo, ni se te ocurra." }
+      ]
+    },
+    { "id": "n6", "speaker": "native", "name": "la Yesi", "text": "¡Dale! Pero si me pisás, me pagás la entrada.", "es": "¡Venga! Pero si me pisas, me pagas la entrada.", "voice": "es-AR-ElenaNeural" }
+  ]
+}
