@@ -21,6 +21,7 @@ import { BackupSection } from "./BackupSection";
 import { CloudSaveSection } from "./CloudSaveSection";
 import { CoachSections } from "./CoachSections";
 import { GlossSection } from "./GlossSection";
+import { UpdateSection } from "./UpdateSection";
 import { coachAvailable } from "@/lib/coach/available";
 
 /** Destructive button: error colours, same shape and press animation as `Button`. */
@@ -126,6 +127,7 @@ function Profile({ lang }: { lang: string }) {
             </Link>
           </Card>
         ) : null}
+        <UpdateSection />
         <Card className="flex flex-col gap-3">
           <div className="flex flex-col gap-1">
             <h3 className="text-lg font-bold text-ink">Instalar en el iPhone</h3>

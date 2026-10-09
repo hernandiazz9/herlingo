@@ -10,6 +10,8 @@ import { getAudioProgress } from "./audio-cache";
 export const SW_URL = "/sw.js";
 
 let started = false;
+/** Shows the "new version" prompt for a waiting worker; set once the SW is registered. */
+let offerUpdate: ((worker: ServiceWorker) => void) | null = null;
 
 /**
  * Registers the SW once. `onUpdate(apply)` is called when a new version has been downloaded and
@@ -36,6 +38,7 @@ export function registerServiceWorker(onUpdate: (apply: () => void) => void): vo
       accepted = true;
       worker.postMessage({ type: "SKIP_WAITING" });
     });
+  offerUpdate = offer;
 
   sw.register(SW_URL)
     .then((reg) => {
@@ -57,6 +60,50 @@ export function registerServiceWorker(onUpdate: (apply: () => void) => void): vo
 
   // Ask the browser not to evict the offline copy (best effort).
   navigator.storage?.persist?.().catch(() => {});
+}
+
+export type UpdateCheck = "available" | "latest" | "offline" | "unavailable";
+
+/** Waits until `worker` finishes installing (true) or fails (false), at most `ms`. */
+function installed(worker: ServiceWorker, ms = 60_000): Promise<boolean> {
+  return new Promise((resolve) => {
+    const timer = setTimeout(() => resolve(worker.state === "installed"), ms);
+    const check = () => {
+      if (worker.state === "installed" || worker.state === "activated") {
+        clearTimeout(timer);
+        resolve(true);
+      } else if (worker.state === "redundant") {
+        clearTimeout(timer);
+        resolve(false);
+      }
+    };
+    worker.addEventListener("statechange", check);
+    check();
+  });
+}
+
+/**
+ * Asks the server for a new version now (the user tapped "Buscar actualización"). When one is
+ * found it is downloaded and the usual update prompt is shown again, even if it was dismissed.
+ */
+export async function checkForUpdate(): Promise<UpdateCheck> {
+  if (typeof navigator === "undefined" || !("serviceWorker" in navigator)) return "unavailable";
+  const sw = navigator.serviceWorker;
+  const reg = await sw.getRegistration();
+  if (!reg || !sw.controller) return "unavailable";
+  const offerWaiting = () => {
+    if (!reg.waiting) return false;
+    offerUpdate?.(reg.waiting);
+    return true;
+  };
+  if (offerWaiting()) return "available";
+  try {
+    await reg.update();
+  } catch {
+    return "offline";
+  }
+  if (reg.installing && !(await installed(reg.installing))) return "latest";
+  return offerWaiting() ? "available" : "latest";
 }
 
 export type OfflineStatus = "ready" | "downloading" | "unavailable";
