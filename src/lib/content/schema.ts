@@ -134,6 +134,23 @@ export const Romanization = z.object({
   alternatives: z.record(z.string().min(1), z.array(z.string().min(1)).min(1)).optional(),
 });
 
+/**
+ * How a pack voice is rendered by `npm run audio` when it is not the edge-tts voice of that name:
+ * another edge-tts voice, or an ElevenLabs voice (`model` defaults to `eleven_v3`).
+ */
+export const TtsVoice = z.discriminatedUnion("provider", [
+  z.object({ provider: z.literal("edge"), voice: Text }).strict(),
+  z
+    .object({
+      provider: z.literal("elevenlabs"),
+      voiceId: z.string().regex(/^[A-Za-z0-9]{10,40}$/),
+      model: Text.optional(),
+      /** Human name of the voice in the ElevenLabs account, for reference only. */
+      name: Text.optional(),
+    })
+    .strict(),
+]);
+
 export const PackMeta = z.object({
   /**
    * The default pack (exactly one pack sets `"default": true`): the app's fallback language and
@@ -150,6 +167,12 @@ export const PackMeta = z.object({
   speechLocale: z.string().regex(/^[a-z]{2,3}-[A-Z]{2}$/),
   /** Neural voices available for pre-generated mp3 (edge-tts names). First = default. */
   voices: z.array(Text).min(1),
+  /**
+   * Voices of `voices` rendered differently by `npm run audio` (content keeps the `voices` name).
+   * An ElevenLabs voice needs ELEVENLABS_API_KEY; without it, or out of credits, the line keeps
+   * the edge-tts mp3 of the `voices` name, so the pack can be upgraded in several runs.
+   */
+  ttsVoices: z.record(Text, TtsVoice).optional(),
   /**
    * Numbers written out ("40" → "quaranta"): speech recognition often returns digits, so spoken
    * answers are compared with the digits replaced by these words.

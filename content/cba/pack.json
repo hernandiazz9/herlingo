@@ -17,6 +17,27 @@
     "es-UY-MateoNeural",
     "es-UY-ValentinaNeural"
   ],
+  "ttsVoices": {
+    "es-AR-ElenaNeural": {
+      "provider": "elevenlabs",
+      "voiceId": "09MSHvGBzTf1qZiCA4Di",
+      "name": "Cordoba mujer"
+    },
+    "es-AR-TomasNeural": {
+      "provider": "elevenlabs",
+      "voiceId": "KCdS0abVxlDZ87xahwJW",
+      "name": "Cordoba Hombre"
+    },
+    "es-UY-ValentinaNeural": {
+      "provider": "elevenlabs",
+      "voiceId": "U4cagcTqfoIsneV9sxQv",
+      "name": "cordoba casero"
+    },
+    "es-UY-MateoNeural": {
+      "provider": "edge",
+      "voice": "es-ES-AlvaroNeural"
+    }
+  },
   "numberWords": {
     "0": "cero",
     "1": "uno",

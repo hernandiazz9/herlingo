@@ -74,13 +74,13 @@ Worktree setup: npm ci
 - Outcome: 8 stories 106–121 words, 7 inline vocab story-cba-*, culiau only in Nico's lines — 96a7de6b
 
 ## T161 — Cordobés voice
-- Status: blocked (Hernán is checking DaVinci AI voices; audio shipped with plain voices, override later for 50–100 key lines)
+- Status: done (partial: ElevenLabs credits)
 - Depends on: none
 - Goal: Make the audio sound as cordobés as possible within edge-tts, or with real recordings.
 - Context: test clips 2026-10-09 (Tomás/Elena: plain, cordobés spelling, lengthened pretonic vowels, slower and higher); scripts/audio/ (generate.ts, plan.ts, tts.py); `public/audio/<lang>/manifest.json`.
 - Scope: depends on the option: (a) a generic per-pack `ttsRespell` rule set or per-item `ttsText` used only for synthesis (display text unchanged) and per-pack rate/pitch; (b) a generic "recorded" audio source: files in `assets/audio/<lang>/` named by audioKey override the neural mp3 / must not change other packs' audio.
 - Done when: chosen option implemented generically; 10 sample lines generated and approved by Hernán; `npm run verify` → exit 0.
-- Outcome:
+- Outcome: generic pack.json `ttsVoices` (edge or ElevenLabs, edge-tts fallback, priority dialogue/story lines, --max-credits); cba: Elena→'Cordoba mujer', Tomás→'Cordoba Hombre', Valentina→'cordoba casero' (voices designed by Hernán in ElevenLabs), Mateo/Álex→es-ES-AlvaroNeural; 137 ElevenLabs lines (all dialogue native turns and story sentences, 7,310 chars) before the free 10,000 quota ran out; 932 lines (19,155 chars, mostly phrases/vocab) still on edge-tts — re-run `npm run audio` with credits to finish
 
 ## T162 — Audio, pictures and offline check
 - Status: done
@@ -99,6 +99,7 @@ Worktree setup: npm ci
 - 2026-10-10 T158: vulgar/offensive items only in units 70 and 80; culiado = one phrase per degree + vocab; unused rows = identical in Spain, doubtful, dated or political (agent)
 - 2026-10-10 Hernán: suggested DaVinci AI for the voice (audio generation 'soon' on its site, no public API seen; voice page needs his login)
 - 2026-10-10 orchestrator: T162 run with plain voices so the pack is not blocked; T161 becomes an override of key lines with recorded/DaVinci mp3s later
+- 2026-10-10 Hernán: designed 'Cordoba Hombre' and 'Cordoba mujer' in ElevenLabs Voice Design (free plan: no library voices or voice design via API); approved generating with them
 
 ## Proposals (new scope)
 - 2026-10-10 orchestrator: in cba-saludos the 'listen and choose the Spain equivalent' options are near-identical (four variants of '¿Qué tal?'), so the exercise is ambiguous; a content pass should make glosses within a lesson clearly distinct or exclude same-gloss items from each other's distractors (generic).
@@ -115,3 +116,4 @@ Worktree setup: npm ci
 - 2026-10-10 T160 done → 96a7de6b
 - 2026-10-10 T159 done → 39a0276a
 - 2026-10-10 T162 done → 9e666bc0
+- 2026-10-10 T161 ElevenLabs run: 137 lines, stopped at quota (27 credits left)
