@@ -74,7 +74,7 @@ Worktree setup: npm ci
 - Outcome: 8 stories 106–121 words, 7 inline vocab story-cba-*, culiau only in Nico's lines — 96a7de6b
 
 ## T161 — Cordobés voice
-- Status: blocked (Hernán picks an option after the test clips)
+- Status: blocked (Hernán is checking DaVinci AI voices; audio shipped with plain voices, override later for 50–100 key lines)
 - Depends on: none
 - Goal: Make the audio sound as cordobés as possible within edge-tts, or with real recordings.
 - Context: test clips 2026-10-09 (Tomás/Elena: plain, cordobés spelling, lengthened pretonic vowels, slower and higher); scripts/audio/ (generate.ts, plan.ts, tts.py); `public/audio/<lang>/manifest.json`.
@@ -83,13 +83,13 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T162 — Audio, pictures and offline check
-- Status: pending
-- Depends on: T159, T160, T161
+- Status: done
+- Depends on: T159, T160
 - Goal: Generate the `cba` mp3s and pictures and check the pack works offline in the built app.
 - Context: CLAUDE.md commands `npm run audio`, `npm run images`, `--strict-audio`, `--strict-images`; plan 012 T155 outcome.
 - Scope: may touch `public/audio/cba/**`, `public/images/**` (additions only), generic fixes in scripts / must not touch other languages' audio or content.
 - Done when: strict audio/images pass; report mp3 count and MB (target ≤ ~1400 files, ≤ ~25 MB); `npm run verify` → exit 0; other languages' audio unchanged.
-- Outcome:
+- Outcome: 1140 cba mp3 (20 MB) with plain es-AR/es-UY voices, 96 pictures; strict audio/images pass; sw lists cba; built app checked (welcome, route, lesson 'Escucha y elige cómo se dice en España') — 9e666bc0
 
 ## Decisions
 - 2026-10-09 Hernán: own pack "Cordobés" (`cba`) for Spain-Spanish speakers, explanations in Spain Spanish with comparisons; medium size; teach everything including vulgar/offensive words (with register warnings); try to make a cordobés voice ourselves.
@@ -97,8 +97,11 @@ Worktree setup: npm ci
 - 2026-10-10 orchestrator: brief-cba fixed to Hernán's choice: vulgar and offensive words are practised items with register tags (not recognition-only); expressions only for regional/social markers (~25)
 - 2026-10-10 T157: culiau, boludo (vocative), papudo moved to unit 80; skipped words identical in Spain, doubtful rows, politics (peroncho, trosco) and minor regional rows; popular-spelling-only forms as expressions (agent)
 - 2026-10-10 T158: vulgar/offensive items only in units 70 and 80; culiado = one phrase per degree + vocab; unused rows = identical in Spain, doubtful, dated or political (agent)
+- 2026-10-10 Hernán: suggested DaVinci AI for the voice (audio generation 'soon' on its site, no public API seen; voice page needs his login)
+- 2026-10-10 orchestrator: T162 run with plain voices so the pack is not blocked; T161 becomes an override of key lines with recorded/DaVinci mp3s later
 
 ## Proposals (new scope)
+- 2026-10-10 orchestrator: in cba-saludos the 'listen and choose the Spain equivalent' options are near-identical (four variants of '¿Qué tal?'), so the exercise is ambiguous; a content pass should make glosses within a lesson clearly distinct or exclude same-gloss items from each other's distractors (generic).
 
 ## Log
 - 2026-10-10 T156 launched · attempt 1
@@ -111,3 +114,4 @@ Worktree setup: npm ci
 - 2026-10-10 T160 launched · attempt 1
 - 2026-10-10 T160 done → 96a7de6b
 - 2026-10-10 T159 done → 39a0276a
+- 2026-10-10 T162 done → 9e666bc0
