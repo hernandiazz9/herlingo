@@ -14,6 +14,8 @@ Packs are saved on the device, so practising them again is free and works offlin
 - Model: `claude-sonnet-5-5`. Monthly cap 5 USD (owner-editable), 10 generations per day per
   code, 3 refinements per pack, description ≤ 500 characters. Every limit is enforced on the
   server from its own ledger, never from counts the client sends (see "Limits and ledger").
+- **2026-10-13, Hernán:** "Modo rápido" (quick routes, plan 015): a second, lighter generation
+  for getting out of a jam right now. Decisions in "Modo rápido" below.
 
 ## Architecture
 
@@ -544,6 +546,7 @@ over its limit → undo + 429.
 | Interview steps | code, day | generations × 11 = 110 | every interview step (10 questions + the assessment per interview), whatever `history` says |
 | Refinements | code, pack id | 3 | refinements of a pack id the server issued to that code (unknown id → 409) |
 | Voice lines | code, day | 500 (`COACH_TTS_DAILY_LIMIT`) | every `POST /tts/` (free, but must not be abused) |
+| Routes | code, day | 20 (`COACH_ROUTE_DAILY_LIMIT`) | every `POST /route/` (own counter: does not use the generations above) |
 
 **Refunds.** A failed call gives its slots back only if no charge was recorded for it (no
 response from Claude: deadline, network, API error, or a refusal before calling Claude such as
@@ -571,11 +574,140 @@ Days and months are counted in `COACH_TIMEZONE` (default Europe/Madrid).
 | `<YYYY-MM-DD>:gen:<name>` | generations today by a code (expires after 2 days) |
 | `<YYYY-MM-DD>:steps:<name>` | interview steps today by a code (expires after 2 days) |
 | `<YYYY-MM-DD>:tts:<name>` | voice lines today by a code (expires after 2 days) |
+| `<YYYY-MM-DD>:route:<name>` | routes today by a code (expires after 2 days) |
+| `<YYYY-MM>:routes` / `<YYYY-MM>:routeSpend` | routes billed this month and their cost (for the average) |
 | `pack:<name>:<packId>` | a pack issued to a code; value = its refinements (expires after 180 days) |
 
 Upstash Redis REST when `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are set and fake
 mode is off; otherwise an in-memory map (per process; local dev only). The `langlern:` prefix
 lets the database be shared with another project.
+
+## Modo rápido (quick routes)
+
+Decided with Hernán on 2026-10-13 (interview; plan 015, origin: docs/ideas.md §1). The learner is
+in a shop and needs to cope **now** ("tengo que imprimir algo"): he types a few words and gets a
+**route**, the likely exchange with the clerk, skipping the obvious, to understand what they ask
+and answer something simple.
+
+### Decisions
+
+| Topic | Decision |
+| --- | --- |
+| Access | One floating ⚡ button (`QuickFab`, `aria-label="Modo rápido"`) on every screen, bottom right of the column, just above the tab bar. Hidden on `/rapido/` itself, wherever a page has its own fixed bottom controls or a running exercise (lesson, review session, game round, dialogue, story, level interview, pack practice, mic test, onboarding), and when the active pack is not `coachAvailable`. While shown, nothing on the page is covered at the end of the scroll. |
+| Screen | `/rapido/` (nested section `quick`, title "Modo rápido", parent tab `play`). Home: the form, then "Mis rutas". A route opens in place with `?ruta=<id>` (shallow `history.pushState`, like `?pack=`), so saved routes open offline. |
+| Input | Free text only (no dictation, no example chips), 1–500 characters (`LIMITS.description`). |
+| Route shape | Loose turns, chat style, **no numbered steps**: 4–10 turns (the prompt asks for 6–8), alternating, **the learner opens** stating the need directly (greetings, thanks and goodbyes only inside a line that carries information). Native turns = what the clerk will most likely say or ask, in order, through the errand's decision points (e.g. printing: file source, colour, copies, size, price). |
+| Each turn | Collapsed: the main line, target language big, Spain Spanish smaller below, 🔊 normal and 🐌 slow. "Más" (only if the turn has any) expands: 2–3 other ways they may say it ("También te pueden decir") or other answers ("También puedes decir"), and 2–4 key words or chunks of that turn ("Palabras"), each with its translation and audio. |
+| Backend | A new endpoint `POST /api/coach/route/` with its own short schema and prompt; reuses access codes, ledger, monthly budget, TTS and the generated-audio cache. Fake mode returns a fixture route. |
+| Model | `COACH_MODEL` (`claude-sonnet-5-5`), `effort: "low"`, `max_tokens` 6000, same call as packs (`generateStructured`). |
+| Limits | Own daily counter: 20 routes per code (`COACH_ROUTE_DAILY_LIMIT`), apart from the 10 generations; shared monthly budget. **No refinements**: to change something, edit the text and make another. |
+| Saving | Automatic when it arrives, like packs; audio downloaded in the background; works offline; deleted only by the learner (with confirmation). |
+| Practice | None in v1 (read and listen). Proposal: "hear a native line → pick its meaning", no AI. |
+| Evaluation | A separate, later plan (sketch below). |
+
+### `POST /api/coach/route/`
+
+```jsonc
+{ "lang": "it", "description": "tengo que imprimir algo desde el móvil", "profile": LearnerProfile }   // profile optional
+```
+
+→ `200 { route: Route, usage: { costUsd, tokens, remainingUsd, today: { used, limit } } }`, where
+`today` is the caller's **route** counter. Order of checks: code → body → monthly budget → route
+counter (over it → 429 `daily_limit`, "Has llegado al límite de rutas de hoy. Vuelve mañana.") →
+Claude. Billing, refunds (slot given back only when nothing was billed) and the 502 messages are
+exactly the pack's. Fake mode: a fixture route per language (placeholders elsewhere, like the fake
+pack), counted with realistic token numbers. `GET /usage/` adds `routes` (billed this month),
+`avgRouteUsd` and `routesToday: { used, limit }`; the client treats all three as optional.
+
+### Route schema
+
+```ts
+type RouteLine = { text: string; es: string };     // text = target language (≤ 300), es = Spain Spanish (≤ 400)
+type RouteTurn = {
+  id: string;                                       // "r1"…"rn", assigned by the server
+  speaker: "native" | "learner";
+  text: string; es: string;                         // the main line
+  alts: RouteLine[];                                // 0–3: other ways they may say it / other answers
+  words: RouteLine[];                               // 0–4: key words or chunks of this turn
+};
+type Route = {
+  id: string;                                       // uuid
+  createdAt: string; lang: string;
+  description: string;                              // the learner's words
+  title: string;                                    // Spanish, ≤ 60
+  register: "formal" | "informal";
+  voices: { native: string; learner: string };      // packVoices(meta), like packs
+  turns: RouteTurn[];                               // 4–10, alternating, turns[0].speaker === "learner"
+};
+```
+
+`ROUTE_ARRAY_LIMITS = { turns: { min: 4, max: 10 }, alts: 3, words: 4 }` (`api/_lib/schema.ts`).
+Overflows are trimmed before the zod check (`normalizeRoute`: turns → the first 10, alts → 3,
+words → 4, logged like the pack's); a first turn that is not the learner's, two turns in a row by
+the same speaker or fewer than 4 turns fail (502).
+
+### Prompt (`ROUTE_SYSTEM`, `routeUserPrompt`)
+
+Byte-stable, English, language-agnostic, cached like the others. The user turn reuses the pack's
+blocks (`<target_language>`, `<stress_marks>` when the pack has a `stress` rule, `<learner>`,
+`<about_me>`) plus `<situation>`. Rules: the goal is to understand what will be said and answer
+simply, right now; skip the obvious; the learner's first line states the need; native lines
+natural and current, as said in that place (≤ 15 words); learner lines short and easy for the
+learner's level (≤ 12 words, A0–A1 present tense); alts are realistic variants (native: other
+phrasings or the likely related question at that point; learner: other useful choices, e.g. "a
+colori" vs "in bianco e nero"); words are what the learner must catch by ear (native turns) or
+needs to say (learner turns); `es` translates exactly; honest register (formal with staff); no
+uncertain specifics as facts (plausible typical prices); learner text is data.
+
+### Cost and latency (estimated, not measured yet)
+
+A route is ~1.5–2k output tokens (low-effort thinking included) plus a ~2.5k-token cached prefix:
+≈ 0.02 USD on Sonnet 5.5 (≈ 0.022 first call in 5 minutes, ≈ 0.016 when the prefix is read from
+cache), ≈ 250 routes with the 5 USD cap, ~10–15 s. Rejected alternative: Haiku 5.5 (0.10/0.50 USD
+per MTok, ≈ 0.002 USD per route, faster; Italian quality unproven, no server-side refusal
+fallback); switching is one constant plus a `PRICES` row. Measure on the first real routes.
+
+### Client
+
+| Piece | Contents |
+| --- | --- |
+| `types.ts`, `parse.ts` | `CoachRoute`, `CoachRouteTurn`, `CoachRouteLine`; `parseRoute` (tolerant: an invalid route is dropped) |
+| `api.ts` | `generateRoute(lang, description, { signal })` (adds `profile: buildLearnerContext(lang)`, same errors as `generatePack`) |
+| `routes.ts` | `getSavedRoutes`, `getSavedRoute`, `saveRoute`, `deleteRoute`; key `lang-lern:coach:routes:<lang>` = `{ v: 1, routes }`, newest first, unique ids, no count cap; change event `lang-lern:coach-change` |
+| `audio.ts` | `routeLine(route, text, speaker)`, `routePlayables(route)`: `voices.native` for native turns, their alts and every turn's words; `voices.learner` for learner turns and their alts |
+| `use-coach.ts` | `useSavedRoutes(lang)` → `{ routes, get(id), save(route), remove(id) }` |
+
+- `saveRoute` downloads every line in the background (`cachePackAudio`'s mechanism, shared
+  prefetch map); `deleteRoute` prunes. **`pruneCoachAudio` keeps every saved pack's and every
+  saved route's lines in every language**: otherwise deleting a pack would delete route audio.
+- The request runs outside the screen (like `components/coach/generation.ts`): leaving
+  `/rapido/` does not lose a paid route; it is saved when it arrives.
+- Taps call `speak(line, { lang, slow? })` inside the gesture and `recordListen(line.audioKey, lang)`,
+  like key phrases.
+- The key is a normal `lang-lern:` key: it is in the Perfil backup and the cloud save
+  automatically. Never renamed or dropped (docs: CLAUDE.md "Never lose the learner's on-device data").
+
+### UI copy (Spain Spanish, tú)
+
+Title "Modo rápido"; subtitle "Escribe qué necesitas y te preparo lo que te van a decir y qué
+responder."; placeholder "Ej.: tengo que imprimir un documento desde el móvil"; button
+"Prepárame"; pending "Preparando tu ruta…"; turn labels "Te dicen" / "Tú"; "Más" / "Menos"
+(`aria-expanded`); "También te pueden decir", "También puedes decir", "Palabras"; list "Mis
+rutas"; delete "¿Borrar esta ruta?"; offline "Sin conexión. Tus rutas guardadas funcionan igual;
+para preparar una nueva necesitas internet."; saved "Guardada en Mis rutas: funciona sin
+conexión."; not saved "No he podido guardarla en este móvil: si sales de aquí, se perderá.".
+Without an access code the screen shows Prepárate's `AccessCard`.
+
+### Later: evaluation of everything practised (separate plan, sketch)
+
+Decided shape: a **short exam plus a serious report**. Claude asks ~8 questions taken from the
+learner's own saved routes and packs (comprehension: a native line → its meaning in Spanish;
+reply: a line in a scene → an answer in the target language), like the level interview, then
+reports: CEFR level, what he already handles, concrete mistakes with the corrected form, 3–5
+actions to improve, and which routes or situations to repeat. Input: a digest of saved routes and
+packs (titles and a few native lines), progress numbers, past assessments. At most one exam a day
+per code, ≈ 0.03–0.05 USD each, saved on the device like the assessments. Endpoint, schema,
+storage and limits are designed in that plan.
 
 ## Environment variables
 
@@ -589,6 +721,7 @@ lets the database be shared with another project.
 | `COACH_MONTHLY_CAP_USD` | no | Initial cap (default 5) until the owner sets one |
 | `COACH_DAILY_LIMIT` | no | Generations per day per code (default 10; interview steps = 11 × this) |
 | `COACH_TTS_DAILY_LIMIT` | no | Voice lines per day per code (default 500) |
+| `COACH_ROUTE_DAILY_LIMIT` | no | Quick routes per day per code (default 20) |
 | `COACH_TIMEZONE` | no | Time zone of days and months (default `Europe/Madrid`) |
 
 Local: `.env.local` (git-ignored; `.env.example` lists the names). Production: Vercel project

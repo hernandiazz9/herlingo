@@ -4,6 +4,8 @@ Not planned yet. Each one becomes a plan (`plans/`) after a design session with 
 
 ## 1. Prepárate "Modo rápido": get out of a jam in a shop (2026-10-12)
 
+**Planned:** plan 015 (`plans/015-modo-rapido.md`); decisions in docs/coach.md "Modo rápido".
+
 **Real case.** Hernán walked into a shop to print something and had to use a translator. A
 literal translation of "imprimir" is not enough: it depends on the context (a copy, a document,
 from a USB stick, from the phone, black and white or colour...), and on how the words are put
