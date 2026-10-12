@@ -89,11 +89,12 @@ function ensureVenv() {
 execFileSync("npm", ["run", "--silent", "content:build"], { stdio: "inherit" });
 const bundle = JSON.parse(readFileSync(join(ROOT, "src/lib/content/generated/packs.json"), "utf8")) as {
   packs: Record<string, Pack>;
+  hiddenPacks?: Record<string, Pack>;
 };
 
 async function main() {
   let failed = false;
-  for (const pack of Object.values(bundle.packs)) {
+  for (const pack of [...Object.values(bundle.packs), ...Object.values(bundle.hiddenPacks ?? {})]) {
     const lang = pack.meta.lang;
     const dir = audioDir(ROOT, lang);
     const jobs = planAudio(pack);

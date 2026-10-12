@@ -1,5 +1,6 @@
 {
   "lang": "cba",
+  "hidden": true,
   "name": "Cordobés",
   "nativeName": "Cordobés",
   "speechLocale": "es-AR",

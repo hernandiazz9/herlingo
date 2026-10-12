@@ -17,7 +17,8 @@
  *
  * Several packs: ids are unique across every pack (routes like /leccion/<id>/ are shared), and
  * exactly one pack.json sets `"default": true` (written to the bundle as `defaultLang`). A pack
- * with no units yet is accepted (reported as empty).
+ * with no units yet is accepted (reported as empty). A pack with `"hidden": true` is validated and
+ * written to the bundle as `hiddenPacks` (read only by the audio and image scripts), not `packs`.
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, relative } from "node:path";
@@ -76,6 +77,7 @@ langs.sort((a, b) => Number(isDefault(b)) - Number(isDefault(a)));
 
 let failed = false;
 const packs: Record<string, Pack> = {};
+const hiddenPacks: Record<string, Pack> = {};
 /** Id → `<file>` of every pack checked so far, to reject an id reused by another pack. */
 const globalIds = new Map<string, string>();
 const defaults: string[] = [];
@@ -107,6 +109,7 @@ for (const lang of langs) {
     else globalIds.set(id, file);
   }
   if (pack?.meta.default) defaults.push(lang);
+  if (pack?.meta.default && pack.meta.hidden) errors.push(`content/${lang}/pack.json: the default pack cannot be hidden`);
   if (pack) builtPacks.push(pack);
   const images = pack ? checkImageKeys(pack, ROOT) : { errors: [], warnings: [] };
   for (const w of [...warnings, ...images.warnings]) console.warn(`⚠ ${w}`);
@@ -124,12 +127,12 @@ for (const lang of langs) {
     for (const e of all) console.error(`  - ${e}`);
     continue;
   }
-  packs[lang] = pack;
+  (pack.meta.hidden ? hiddenPacks : packs)[lang] = pack;
   const stats = Object.entries(packStats(pack))
     .map(([k, v]) => `${v} ${k}`)
     .join(", ");
   const empty = pack.units.length === 0 ? " (empty: no units yet)" : "";
-  console.log(`✓ content/${lang}${pack.meta.default ? " (default)" : ""}: ${stats}${empty}`);
+  console.log(`✓ content/${lang}${pack.meta.default ? " (default)" : ""}${pack.meta.hidden ? " (hidden)" : ""}: ${stats}${empty}`);
 }
 
 if (strictImages) {
@@ -155,6 +158,6 @@ if (failed) process.exit(1);
 
 if (mode === "build") {
   mkdirSync(join(OUT, ".."), { recursive: true });
-  writeFileSync(OUT, JSON.stringify({ defaultLang: defaults[0], packs }));
+  writeFileSync(OUT, JSON.stringify({ defaultLang: defaults[0], packs, hiddenPacks }));
   console.log(`→ ${relative(ROOT, OUT)}`);
 }

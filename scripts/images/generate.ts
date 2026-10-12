@@ -23,11 +23,14 @@ const ROOT = process.cwd();
 // Validate content and refresh the bundle, then read it.
 execFileSync("npm", ["run", "--silent", "content:build"], { stdio: "inherit" });
 const bundlePath = join(ROOT, "src/lib/content/generated/packs.json");
-const bundle = JSON.parse(readFileSync(bundlePath, "utf8")) as { packs: Record<string, Pack> };
+const bundle = JSON.parse(readFileSync(bundlePath, "utf8")) as {
+  packs: Record<string, Pack>;
+  hiddenPacks?: Record<string, Pack>;
+};
 
 const overrides = readBackdropOverrides(ROOT);
 const keys = new Map<string, string[]>();
-for (const pack of Object.values(bundle.packs)) {
+for (const pack of [...Object.values(bundle.packs), ...Object.values(bundle.hiddenPacks ?? {})]) {
   for (const [key, usedBy] of referencedImages(pack)) keys.set(key, [...(keys.get(key) ?? []), ...usedBy]);
 }
 

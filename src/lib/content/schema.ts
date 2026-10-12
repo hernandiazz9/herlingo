@@ -157,6 +157,11 @@ export const PackMeta = z.object({
    * the first one in pickers.
    */
   default: z.literal(true).optional(),
+  /**
+   * Hidden pack: validated and kept for `npm run audio` / `npm run images`, but left out of the
+   * app (no picker entry, no routes). For a pack being reworked. The default pack cannot be hidden.
+   */
+  hidden: z.literal(true).optional(),
   /** ISO 639-1 code, equals the folder name (`it`). */
   lang: z.string().regex(/^[a-z]{2,3}$/),
   /** Name of the language in Spanish ("Italiano", "Francés"). */

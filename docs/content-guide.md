@@ -25,6 +25,9 @@ parallel tasks never touch the same file. Name files after what they hold, e.g.
 `pack.json` sets `"default": true` (Italian): it is the app's fallback language and comes first
 in the language picker; `content:check` fails with zero or several defaults. A pack with no units
 yet is accepted (`content:check` reports it as empty). Situations are per pack.
+`"hidden": true` hides a pack being reworked (`cba` today): `content:check` still validates it and
+`npm run audio` / `npm run images` still keep its files, but the app never sees it (no picker
+entry, no routes). Remove the flag to show it again. The default pack cannot be hidden.
 
 The `sample` demo pack (files whose name contains `sample`) has been removed from `it`; do not
 ship sample files in a real pack.
@@ -121,7 +124,7 @@ one line here. `glossLangs?`: the languages of the pack's glosses, see "Gloss la
 - `equivalents?`: `{ "i'm": "i am", "don't": "do not", … }`, lower case, contracted form → full
   form. Answer and speech matching apply it to both sides, so "I am" and "I'm" count as the same.
 
-**Non-Latin scripts** (Russian, docs/brief-ru.md). Three optional fields make a pack in another
+**Non-Latin scripts** (written for a Russian pack, since removed; the fields stay). Three optional fields make a pack in another
 script work without any code for that language (helpers in `src/lib/content/script.ts`,
 exported from `@/lib/content`):
 
