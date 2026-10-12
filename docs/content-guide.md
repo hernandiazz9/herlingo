@@ -15,6 +15,7 @@ content/<lang>/
   extras/*.json        Items that belong to no unit (phrasebook-only phrases, Sicilian
                        expressions, placement questions...). Any number of files.
   stories/*.json       One short story per file (Historias), e.g. `stories/01-arrivo-a-palermo.json`.
+  verbs/*.json         One verb per file (Gramática), e.g. `verbs/essere.json`. See "Grammar reference".
 ```
 
 Files are discovered by glob: **there is no index to edit**. Adding a unit = adding a file, so
@@ -53,6 +54,7 @@ ship sample files in a real pack.
 | phrase / vocab | `<unit>.<slug>` | `tren.binario`, `tren.a-che-ora-parte` |
 | Q&A | `<unit>.qa.<slug>` | `tren.qa.biglietto` |
 | grammar card | `gram.<slug>` | `gram.vorrei` |
+| verb (Gramática) | `verb.<slug>` (other packs: `verb.<lang>-<slug>`) | `verb.essere`, `verb.fr-etre` |
 | expression | `sic.<slug>` | `sic.amuni` |
 | dialogue | `dlg.<slug>` | `dlg.biglietteria` |
 | placement | `placement.<slug>` | `placement.saludos` |
@@ -184,7 +186,8 @@ language picker until it has a unit.
   `accepted` (≥ 1 `{ text, es }`; the first is the model answer), `distractors` (≥ 2 `{ text, es }`,
   plausible but wrong), `register`, `situation`, `notes?`, `tags?`, `voice?` (of the question).
 - **Grammar card**: `id`, `title`, `summary` (1–2 practical sentences), `points?` (bullets),
-  `table?` (array of rows; first row is the header), `examples?` (`{ text, es }`), `tags?`.
+  `table?` (array of rows; first row is the header), `examples?` (`{ text, es }`), `tags?`, and
+  for Gramática `order?`, `verb?`, `drills?` (see "Grammar reference").
 - **Expression** (recognition only, e.g. Sicilian): `id`, `text`, `es`, `variety` ("Siciliano"),
   `standard?` (standard Italian equivalent), `notes?`, `tags?`, `voice?`.
 
@@ -231,6 +234,98 @@ Hernán's trip (persona in `units/32-persona-sobre-mi.json`). Spanish with "tú"
 Runtime: `getStories()` (sorted by `order`), `getStory(id)`, `getStoryKeywords(story)` (resolved
 items). Each gap comes with `gap`, `before` and `after` (`before + gap + after` = sentence text).
 Record SRS outcomes on key word ids (normal item ids).
+
+## Grammar reference
+
+The **Gramática** section (`/gramatica/`, feature doc: docs/grammar.md) is grammar to *read*:
+a grid of verb tiles and a list of topics. Decided with Hernán on 2026-10-12 (plan 014). It shows
+two kinds of entries, both read through `@/lib/content`:
+
+- **Verbs**: one file per verb in `verbs/`, the full conjugation of every tense the pack lists.
+- **Topics**: the pack's **grammar cards** (the same `gram.<slug>` cards lessons show as tips),
+  with three optional fields for the reference.
+
+**pack.json `grammar`** (optional; without it the pack has no verbs, only topics): the tenses
+the pack's verbs conjugate, in display order (the first one opens by default).
+
+```json
+"grammar": {
+  "tenses": [
+    { "id": "presente", "title": "Presente", "persons": ["io", "tu", "lui / lei / Lei", "noi", "voi", "loro"], "speak": ["io", "tu", "lui", "noi", "voi", "loro"] },
+    { "id": "passato-prossimo", "title": "Passato prossimo", "persons": ["io", "tu", "lui / lei / Lei", "noi", "voi", "loro"], "speak": ["io", "tu", "lui", "noi", "voi", "loro"] },
+    { "id": "condizionale", "title": "Condicional", "persons": ["io", "tu", "lui / lei / Lei", "noi", "voi", "loro"], "speak": ["io", "tu", "lui", "noi", "voi", "loro"] },
+    { "id": "imperativo", "title": "Imperativo", "persons": ["(tu)", "(Lei)", "(noi)", "(voi)"] }
+  ]
+}
+```
+
+- `id`: lower-case slug, unique in the pack. `title`: a gloss (string = Spain Spanish, or a map).
+- `persons`: target-language labels shown in the first column, one per row (plain strings).
+- `speak?`: same length as `persons`; the pronoun spoken before each form in its audio
+  ("io sono"). Without it (imperative) the audio is the form alone ("scusi").
+- Italian v1 tenses: presente, passato prossimo, condizionale, imperativo (tu, Lei, noi, voi).
+
+**Verb file** (`verbs/<slug>.json`, e.g. `verbs/essere.json`):
+
+| Field | Meaning |
+| --- | --- |
+| `id` | `verb.<slug>` (`verb.essere`); other packs prefix their language (`verb.fr-etre`). |
+| `order` | Position in the grid, unique among the pack's verbs (10, 20, 30… leave gaps). |
+| `infinitive` | The infinitive as written and spoken (`essere`). |
+| `es` | Gloss of the infinitive (`ser / estar`); one sibling per gloss language (`ru`, `en`). |
+| `irregular?` | `true` for a verb learners must memorise (badge on the tile). |
+| `notes?` | Gloss, 1–2 short lines: what is special (auxiliary, false friends, typical uses). |
+| `tenses` | Object keyed by the pack's tense ids. A tense the verb does not have in practice (Italian `potere` and `dovere` have no imperative) is left out and its chip is hidden. |
+
+Each tense: `{ forms, example, notes? }`.
+
+- `forms`: exactly one per `persons` entry of that tense, in the same order. Each form:
+  `{ form, es, irregular?, say? }`. `form` is what is shown ("sono andato/a", "vada"); `es` is
+  its gloss in the person it translates ("fui / he ido", "vaya (usted)"); `irregular: true`
+  only when the form departs from the regular pattern of its conjugation (it is shown in another
+  colour; do not mark every form of a fully irregular verb: the tile badge says it);
+  `say?` = the spoken text when `form` is not speakable as written ("sono andato" for
+  "sono andato/a"; the pronoun from `speak` is still added before it).
+- `example`: one short, useful sentence that uses a form of this tense, `{ text, es }`.
+- `notes?`: one short gloss line for this tense (the auxiliary in the passato prossimo:
+  "Con «essere»: el participio concuerda: sono andato / andata").
+
+**Topic fields on grammar cards** (all optional, any pack):
+
+- `order`: sort key in the Topics list (cards without it come after, in pack order).
+- `verb`: a verb id whose page covers this card (`"verb": "verb.essere"` on `gram.essere`). Such a
+  card stays in its lessons but is **not** listed as a topic (the verb tile replaces it).
+- `drills`: fill-the-gap sentences for the exercises, `[{ text, answer, distractors, es }]`.
+  `text` = the target-language sentence with the gap written as `___` exactly once
+  (`"Vado ___ Palermo in treno."`); `answer` = the text that fills it (`"a"`); `distractors` = ≥ 2
+  wrong options of the same kind, never also correct (`["in", "da"]`); `es` = gloss of the whole
+  sentence. 4–8 drills per topic card; one idea per drill; short sentences from the trip.
+  Verbs may have `drills` too (same shape), on top of the drills generated from their forms.
+
+**Audio keys** (generated by `npm run audio` like every playable):
+
+| Playable | Key | Spoken text |
+| --- | --- | --- |
+| verb infinitive | `<verbId>` | `infinitive` |
+| verb form n of a tense | `<verbId>--<tenseId>--<n>` | `speak[n]` + `say` (or `form`) |
+| verb tense example | `<verbId>--<tenseId>--e` | `example.text` |
+| drill n (card or verb) | `<id>--g<n>` | `text` with `___` replaced by `answer` |
+
+**Leído and exercises** (no content to write, for context): a topic or verb read at least once
+("Leído" button at the end of its page) enters spaced repetition; Repaso and lessons then show
+fill-the-gap exercises built from its `drills` and, for verbs, from its forms ("noi ___" →
+`andiamo` among other forms of the same tense). A card without drills and without verb forms is
+read-only (no exercises).
+
+**Accuracy.** Conjugation tables are written by one agent and checked blind by another
+(plan 014); doubts go to Hernán. Write standard Italian forms only (no regional variants), with
+accents (`è`, `può`, `andrò`) and apostrophes (`va'`, `fa'`, `da'`, `di'`, `sta'` where the
+imperative has them; write the most common form and mention the other in `notes`).
+
+`content:check` enforces: the `grammar` block shape (unique tense ids, `speak` length = `persons`
+length), verb ids and unique `order`, tense keys that exist in pack.json, exactly `persons.length`
+forms per tense, every gloss in the pack's gloss languages, card `verb` pointing to a verb, drills
+with exactly one `___`, an `answer` that is not one of its `distractors`, ≥ 2 distinct distractors.
 
 ## Gloss languages
 

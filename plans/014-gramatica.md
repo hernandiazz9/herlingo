@@ -1,0 +1,201 @@
+# Plan 014 — Gramática: a grammar reference to read, linked to the exercises
+
+Status: draft (interview done 2026-10-12; awaiting Hernán's approval before anything runs)
+Created: 2026-10-12
+Base branch: plan-014-gramatica
+Goal: Add **Gramática** (`/gramatica/`, nested under the Frases tab): a grid of 12 Italian "verbos rey" with full conjugations (presente, passato prossimo, condizionale, imperativo; gloss and audio per form, irregular forms highlighted, one example per tense) and a list of topics (tú/Lei, «vorrei», articles, prepositions, pronouns). A "Leído" button counts reads per entry (small daily-capped XP); read entries enter spaced repetition and show up as fill-the-gap drills in Repaso and lessons. Generic code and content format (any pack), Italian content only. MVP speed: no automated tests; verification is `npm run verify`.
+Test command: npm run verify
+Worktree setup: npm ci
+
+## Now
+- Updated: 2026-10-12 18:48Z 💻
+- Writer: 💻 desktop
+- Branch: plan-014-gramatica (local, not pushed yet)
+- Needs Hernán: approve the plan; say if content agents (T169–T172) may run on Sonnet to save tokens.
+- Next step: on approval launch T163 and T164 (max 2 agents). Final iPhone pass by Hernán after T174.
+
+## Shared contract (all tasks read this)
+
+- Read first: CLAUDE.md (and AGENTS.md: this Next.js differs, read `node_modules/next/dist/docs/` before writing routes), **docs/grammar.md** (the feature: UX, storage, XP, exercises), **docs/content-guide.md "Grammar reference"** (format, ids, audio keys, checks). docs/brief.md only for content tasks.
+- **Names every task uses** (T163 creates the content ones, T164 the storage ones; later tasks import, never redefine):
+  - `@/lib/content`: types `Verb`, `VerbTense`, `VerbForm` (a `Playable`), `GrammarDrill` (a `Playable`: full sentence), `GrammarTenseDef` (pack `grammar.tenses` entry); `listVerbs(pack)` (by `order`), `getVerb(id, pack)`, `listGrammarTopics(pack, level?)` (cards by `order` then pack order, minus cards with `verb`), `getGrammarEntry(id, pack)` → `{ kind: "verb", verb } | { kind: "topic", card } | undefined`, `findGrammarPack(id)`, `isDrillable(id, pack)` (verb, or card with `drills`). Grammar cards gain `order?`, `verb?`, `drills?`.
+  - `@/lib/grammar` (new, framework-free): `getGrammarReads(lang)`, `markGrammarRead(lang, id, now?)` → `{ count, xp }`, `subscribeGrammarReads`, `clearGrammarReads(lang)`, `parseGrammarReads(raw)`; constants `GRAMMAR_READ_XP = 3`, `GRAMMAR_DAILY_XP_CAP = 15`; hook `useGrammarReads(lang)` in `@/lib/grammar/use-grammar-reads`. XP source `"grammar"` (add to `XpSource`; Liga accepts any `^[a-z][a-z_-]{0,19}$`, no migration).
+  - `@/lib/exercises`: `grammarDrills(id, pack, gloss, rng, count)` → `FillGapExercise[]` with `itemIds: [id]` (T167).
+- **Storage**: one new key `lang-lern:grammar:<lang>` (shape in docs/grammar.md), versioned, tolerant parsing like `src/lib/stories/done.ts`. No other stored key renamed or reshaped (`progress.srs` entries keep their shape; grammar ids are just new keys in it). Never `localStorage.clear()`.
+- **UI**: learning-screen strings through learn copy (`src/lib/i18n/learn-copy.ts`, so the Russian-gloss `es` pack reads well); headings from `navigation.ts`; Spain Spanish with "tú"; design tokens only, both themes; audio only via `speak()` from a tap; pictures not needed. Static export, works offline (new routes are precached automatically).
+- **Generic code**: nothing in `src/` names Italian, a verb or a tense; tenses and persons come from pack.json `grammar`.
+- **Tokens (Hernán, 2026-10-12)**: no screenshots, browser previews or visual checks by agents, no code-review passes. Hand checks are the last Done-when bullet and go to the Visual queue for Hernán. Agents read files by line ranges, reply in ≤15 lines.
+- Verification: `npm run verify` → exit 0 for every task. One-off check scripts go to the scratchpad or `/tmp`, never committed.
+
+## Tasks
+
+## T163 — Content model for the grammar reference + verb.essere
+- Status: pending
+- Depends on: none
+- Where: any
+- Goal: Implement the format of docs/content-guide.md "Grammar reference": pack.json `grammar` tenses, `verbs/*.json`, card `order`/`verb`/`drills`, loader functions and types from the contract, audio keys in `listPlayables`, and the `content:check` rules. Prove it with the Italian tenses and one complete verb, `verb.essere`.
+- Context: docs/content-guide.md "Grammar reference"; `src/lib/content/schema.ts`, `types.ts`, `index.ts` (`listPlayables` ~L193, `findStoryPack` as the model for `findGrammarPack`), `keys.ts` (`audioKey`), `scripts/content.ts`; `content/it/extras/gramatica.json` (`gram.essere` table and examples as a starting point).
+- Scope: may touch `src/lib/content/**`, `scripts/content.ts`, `content/it/pack.json` (only the `grammar` block), `content/it/verbs/essere.json` (new), `content/it/extras/gramatica.json` (only `"verb": "verb.essere"` on `gram.essere`), docs/content-guide.md (only if the format must deviate; say why) / must not touch UI, `src/lib/progress/`, other packs, `public/`.
+- Done when:
+  - `npm run content:check` → ✓, reports 1 verb for `it`; temporary broken copies (wrong form count, unknown tense, drill without `___`, answer among distractors, `verb` to a missing id) each fail with a clear message (reverted after).
+  - A one-off `npx tsx` script: `listPlayables(getPack("it"))` holds `verb.essere` ("essere"), `verb.essere--presente--1` ("io sono"), `verb.essere--imperativo--1` (form only, no pronoun) and `verb.essere--presente--e`.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T164 — Read counts and XP for "Leído"
+- Status: pending
+- Depends on: none
+- Where: any
+- Goal: Create `src/lib/grammar/` (contract names): the versioned `lang-lern:grammar:<lang>` store, `markGrammarRead` (+1 read; 3 XP for the first read of an id per day, at most 15 XP a day, through `recordReviewResult(…, "grammar")` with no items so streak, activity log and Liga work as for any XP), the hook, and clearing on "Borrar progreso".
+- Context: docs/grammar.md "Leído"; `src/lib/stories/done.ts` (store pattern); `src/lib/progress/index.ts` (`XpSource` ~L184, `recordReviewResult` ~L312, `resetProgress` ~L342); `src/lib/backup/index.ts` `isBackupKey` (confirm the key is included; change nothing there).
+- Scope: may touch `src/lib/grammar/**` (new), `src/lib/progress/index.ts` (`XpSource` + clear on reset only), CLAUDE.md (one folder-layout line) / must not touch content, UI, other stored keys.
+- Done when:
+  - One-off `npx tsx` script with a fake localStorage: first read of an id → xp 3; second read same day → count 2, xp 0; six different ids in a day → 15 XP total; next day → 3 again; `parseGrammarReads` of garbage, `{}`, a future `v`, an entry with a bad count → never throws, keeps the valid entries.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T165 — Gramática pages (index, verb page, topic page)
+- Status: pending
+- Depends on: T163
+- Where: any
+- Goal: Nested section `grammar` (parent `phrasebook`) in `navigation.ts`; `/gramatica/` (Verbos grid + Temas list of the active language) and `/gramatica/[id]/` for every pack's verbs and topics (static params, owner via `findGrammarPack`), as described in docs/grammar.md. No "Leído" button and no entry points yet (T166).
+- Context: docs/grammar.md "Where", "Index", "Verb page", "Topic page"; `src/lib/navigation.ts`; `src/app/historias/[id]/page.tsx` (static params + owner pack + active language); `src/components/exercises/GrammarTip.tsx` (extract its card body into a shared component for the topic page, keep the lesson tip identical); `MiniPlay` in `src/components/exercises/shared`; `useActiveLang`; learn copy.
+- Scope: may touch `src/app/gramatica/**`, `src/components/grammar/**` (new), `src/lib/navigation.ts`, `src/components/exercises/GrammarTip.tsx` (extraction only), `src/lib/i18n/learn-copy.ts`, CLAUDE.md (folder-layout line) / must not touch `src/lib/progress/`, `src/lib/grammar/`, Frasario, Ruta, content.
+- Done when:
+  - `npm run build` writes `out/gramatica/index.html`, `out/gramatica/verb.essere/index.html` and a page for one Italian grammar card.
+  - `npm run verify` → exit 0.
+  - Hand check (PC): iPhone, light and dark: grid tiles, tense chips, row tap plays "io sono", irregular colour, example audio, topic page.
+- Outcome:
+
+## T166 — "Leído" button, read badges and entry points
+- Status: pending
+- Depends on: T164, T165
+- Where: any
+- Goal: The "Leído" button at the end of verb and topic pages (count, disabled until the page is left, XP feedback as elsewhere), "×n" badges on tiles and topics, the "Gramática" button at the top of the Frasario, and a section card on the Ruta replacing the "Fichas de gramática" sheet (expressions keep theirs). Entry points hidden for a pack with no verbs and no topics.
+- Context: docs/grammar.md "Leído", "Where"; `src/components/path/PathView.tsx` (grammar sheet ~L141–173, `SectionCard` ~L199); `src/components/phrasebook/Phrasebook.tsx`, `SearchHeader.tsx`; how other screens show XP (`subscribeXpAwards` users).
+- Scope: may touch `src/components/grammar/**`, `src/app/gramatica/**`, `src/components/path/PathView.tsx`, `src/components/phrasebook/**`, learn copy / must not touch `src/lib/grammar/` (use its API), content.
+- Done when:
+  - `npm run verify` → exit 0.
+  - Hand check (PC): iPhone: tap Leído → ×1 and XP once; again after leaving → ×2, no XP; Frasario button and Ruta card open /gramatica/; light and dark.
+- Outcome:
+
+## T167 — Grammar drills in Repaso, SRS on first read
+- Status: pending
+- Depends on: T163, T164
+- Where: any
+- Goal: `grammarDrills()` builds fill-gap drills from card/verb `drills` and from verb forms (docs/grammar.md "Exercises"); the first read of a drillable id adds it to `progress.srs` (box 0); `dueItemIds` and SRS scheduling accept drillable ids (today they skip `kind === "grammar"`); Repaso gives each due drillable id 2 drills and records outcomes on the id.
+- Context: docs/grammar.md "Exercises"; `src/lib/exercises/generate.ts`, `types.ts` (`FillGapExercise` ~L63); `src/lib/progress/index.ts` (`dueItemIds` ~L254, `applyResult` ~L269); `src/app/repaso/ReviewView.tsx`; `src/lib/srs/dedupe.ts`.
+- Scope: may touch `src/lib/exercises/**`, `src/lib/progress/index.ts`, `src/lib/grammar/**` (first read → SRS), `src/app/repaso/**`, `src/components/lesson/LessonPlayer.tsx` (only to pass drills through) / must not touch content, stored shapes.
+- Done when:
+  - One-off `npx tsx` script: after `markGrammarRead("it", "verb.essere")` the id is in SRS; a review built from it yields 2 fill-gap steps, answer among the options, options distinct, audio set; an unread verb never appears; non-grammar review sessions are unchanged for the same seed.
+  - `npm run verify` → exit 0.
+  - Hand check (PC): Repaso shows essere drills after reading it.
+- Outcome:
+
+## T168 — Grammar drills in lessons
+- Status: pending
+- Depends on: T167
+- Where: any
+- Goal: Lessons give up to 2 production slots to drills from read drillable entries (lapses first, then lowest box, then least read); same session length; no reads → identical sessions.
+- Context: docs/grammar.md "Exercises"; `src/lib/exercises/generate.ts` (production step); `src/app/leccion/[id]/` and `LessonPlayer.tsx` (where options are built).
+- Scope: may touch `src/lib/exercises/**`, `src/lib/grammar/**` (pick helper), `src/components/lesson/**`, `src/app/leccion/**` / must not touch content, stored shapes.
+- Done when:
+  - One-off `npx tsx` script: for 3 Italian lessons and a fixed seed, no reads → deep-equal to the session before this task (save it first); 2 read entries → same length, ≤ 2 fill-gap drills.
+  - `npm run verify` → exit 0.
+  - Hand check (PC): a lesson after reading two verbs shows their drills.
+- Outcome:
+
+## T169 — Italian verbs: avere, fare, andare, venire, stare, volere
+- Status: pending
+- Depends on: T163
+- Where: any
+- Goal: Six verb files in the format of `content/it/verbs/essere.json`: the four tenses (imperative only where it is used), glosses in Spain Spanish, `irregular` per the guide, a short trip-useful example per tense (trains, bars, directions, small talk), `notes` for auxiliaries and traps.
+- Context: docs/content-guide.md "Grammar reference" and "Quality rules"; `content/it/verbs/essere.json`; docs/brief.md (trip).
+- Scope: may touch `content/it/verbs/{avere,fare,andare,venire,stare,volere}.json` only / must not touch anything else (no `verb` links: T172).
+- Done when:
+  - `npm run content:check` → ✓ with 7 Italian verbs.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T170 — Italian verbs: potere, dovere, sapere, dire, prendere
+- Status: pending
+- Depends on: T163
+- Where: any
+- Goal: Same as T169 for these five (potere and dovere without imperative; prendere with participle "preso").
+- Context: as T169.
+- Scope: may touch `content/it/verbs/{potere,dovere,sapere,dire,prendere}.json` only.
+- Done when:
+  - `npm run content:check` → ✓ (12 verbs once T169 is in).
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T171 — Italian topics: articles and prepositions
+- Status: pending
+- Depends on: T163
+- Where: any
+- Goal: New grammar cards with tables, examples and 4–8 drills each: `gram.articoli-determinativi` (order 30), `gram.articoli-indeterminativi` (40), `gram.preposizioni` (50: a/in/da/di/su/per/con/tra with trip uses: "a Palermo", "in Sicilia", "in treno", "da Catania"), `gram.preposizioni-articolate` (60: al, del, dal, nel, sul… table). Article drills use words from the pack's vocab.
+- Context: docs/content-guide.md "Grammar reference" and "Quality rules"; `content/it/extras/gramatica.json` (card style); Italian vocab `article` fields (`content/it/units/*.json`).
+- Scope: may touch `content/it/extras/gramatica-temi.json` (new) only.
+- Done when:
+  - `npm run content:check` → ✓.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T172 — Italian topics: pronouns, plus the existing cards
+- Status: pending
+- Depends on: T163, T169, T170, T171
+- Where: any
+- Goal: Cards `gram.pronomi-diretti` (70), `gram.pronomi-indiretti` (80), `gram.ci-ne` (90: "c'è", "ci vado", "ne vorrei due", "ce l'ho") with drills, appended to `gramatica-temi.json`; in `gramatica.json`: `order` + 4–6 drills on `gram.tu-lei` (10) and `gram.vorrei` (20), and `verb` links on `gram.avere`, `gram.volere`, `gram.potere`, `gram.andare`.
+- Context: as T171; docs/grammar.md "Index".
+- Scope: may touch `content/it/extras/gramatica-temi.json`, `content/it/extras/gramatica.json` / nothing else.
+- Done when:
+  - `npm run content:check` → ✓; `listGrammarTopics(getPack("it"))` (one-off tsx) lists exactly 9 topics in order 10–90 and none of the verb cards.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T173 — Blind accuracy review of the Italian grammar content
+- Status: pending
+- Depends on: T169, T170, T172
+- Where: any
+- Goal: For each of the 12 verbs and 4 tenses, first write the expected forms from your own knowledge, then compare with the file; check every drill (exactly one right answer, distractors really wrong), glosses and accents. Fix only certain errors; list every doubt (form, file, why) in the final message for Hernán.
+- Context: docs/content-guide.md "Grammar reference" ("Accuracy"); `content/it/verbs/*.json`, `content/it/extras/gramatica*.json`.
+- Scope: may touch `content/it/verbs/**`, `content/it/extras/gramatica*.json` / nothing else.
+- Done when:
+  - Final message lists checked counts (verbs × tenses, drills), fixes made, doubts.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T174 — Audio for the Italian grammar reference
+- Status: pending
+- Depends on: T173
+- Where: pc (edge-tts needs internet and the `.venv`)
+- Goal: Generate the mp3s for every new Italian playable (infinitives, forms, examples, drills) and commit them.
+- Context: CLAUDE.md `npm run audio`; docs/content-guide.md "Audio keys".
+- Scope: may touch `public/audio/it/**` only.
+- Done when:
+  - `npm run audio` adds only Italian files; other packs' `public/audio/*` byte-identical.
+  - `npm run content:check -- --strict-audio` → exit 0.
+  - `npm run verify` → exit 0.
+  - Hand check (PC): final iPhone pass of the whole feature (Visual queue).
+- Outcome:
+
+## Review queue
+
+## Visual checks queue
+
+## Decisions
+- 2026-10-12 plan: Gramática lives at /gramatica/, nested under the Frases tab; entries from the Frasario and a Ruta card that replaces the "Fichas de gramática" sheet. (Hernán)
+- 2026-10-12 plan: v1 topics = verbs + articles + prepositions + pronouns + the existing tú/Lei and «vorrei» cards; 12 verbs (essere, avere, fare, andare, venire, stare, volere, potere, dovere, sapere, dire, prendere); tenses presente, passato prossimo, condizionale, imperativo. (Hernán)
+- 2026-10-12 plan: verb page = tense chips, gloss and audio per form, irregular forms highlighted, one example per tense. (Hernán)
+- 2026-10-12 plan: "Leído" = button at the end; counts every read; 3 XP first read per entry per day, cap 15 XP/day. (Hernán)
+- 2026-10-12 plan: read entries enter Repaso (SRS) and up to 2 lesson slots as fill-the-gap drills; unread entries never appear. (Hernán)
+- 2026-10-12 plan: generic code and format; Italian content only in this plan; one agent writes, another checks blind, doubts go to Hernán. (Hernán)
+- 2026-10-12 plan: topics are grammar cards (`order`, `verb`, `drills`); drills reuse the fill-gap exercise; no new exercise screen. (orchestrator, approved by Hernán)
+- 2026-10-12 plan: save tokens: no visual checks or code reviews by agents; Hernán drains both queues on his iPhone/Mac. Max 2 agents. (Hernán)
+- 2026-10-12 plan: work on branch plan-014-gramatica; no merge into main, PR or deploy without Hernán's explicit OK. (Hernán)
+
+## Proposals (new scope)
+- 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
+
+## Log
+- 2026-10-12 18:48Z 💻 plan written from the interview; not approved yet
