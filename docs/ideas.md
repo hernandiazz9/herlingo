@@ -1,19 +1,53 @@
 # Ideas pending (Hernán's backlog)
 
-Not planned yet. Turn each into a plan (`plans/`) when it is picked up.
+Not planned yet. Each one becomes a plan (`plans/`) after a design session with Hernán.
 
-## Prepárate: "what they may ask me" mode (2026-10-12)
+## 1. Prepárate "Modo rápido": get out of a jam in a shop (2026-10-12)
 
-Create a situation and get, above all, the questions the other person is likely to ask
-(waiter, receptionist, ticket office...), each with:
-- the question in the target language with audio (normal and slow), and its meaning;
-- one or two simple replies to give.
+**Real case.** Hernán walked into a shop to print something and had to use a translator. A
+literal translation of "imprimir" is not enough: it depends on the context (a copy, a document,
+from a USB stick, from the phone, black and white or colour...), and on how the words are put
+together in Italian. He wants to type quickly "tengo que imprimir algo" and get ready in a
+minute.
 
-Goal: **understand what I am asked** (listening comprehension first, production second).
-Possible practice: hear the question → pick what it means → pick or say a reply.
-Starting point: Prepárate (`docs/coach.md`, `api/coach/`, `src/lib/coach/`).
+**What he wants**
+- **Easy access**: one tap from the main screens, not buried in Prepárate.
+- He writes the situation in a few words → the AI generates a **route**: the ideal path of what
+  will happen, step by step, **skipping the obvious** (entering, greeting: he already knows
+  that). E.g. "Buongiorno, devo stampare un documento" → what they will ask → what to answer.
+- The route is **clearly marked and easy to scan** (one main line, step after step).
+- At each step there is **one clear main option**, and it can be **expanded** to see other
+  possible questions they may ask and other possible answers.
+- Every line: **target language first** (big), **Spanish below** (smaller), **with audio**
+  (normal and slow), like the rest of the app.
+- Goal: **understand what they ask him** and answer something simple, right now.
+- The route is **saved** (like today's saved situations) and works offline.
 
-## Grammar "in a particular way" (2026-10-12)
+**Later: evaluation with AI**
+- At some point he can **evaluate himself**. The evaluation uses AI again and is **based on
+  everything he practised** (saved routes, progress), it is **serious**, and it tells him
+  **how to do better**.
 
-Hernán wants to add grammar parts in a specific way. **Details to be defined with him.**
-Today: grammar cards inside lessons (`GrammarTip`, `content/<lang>/` grammar items).
+Starting point: Prepárate (`docs/coach.md`, `api/coach/`, `src/lib/coach/`,
+`src/components/coach/`, routes under `src/app/preparar/`).
+
+## 2. Grammar as a reference to read, not Duolingo games (2026-10-12)
+
+**What he does NOT want**: Duolingo-style games, the same mini-exercises again and again,
+grammar hidden inside games where you never get to *see* the verb.
+
+**What he wants**
+- An **interactive grammar section that is easy to browse**: e.g. a grid of **verb tiles**
+  ("verbo rey": essere, avere, fare, andare...). Tap one → **the full conjugation** with the
+  translation of every form (and audio). Same idea for other topics (articles, prepositions,
+  pronouns...).
+- **Reading counts**: he can read a card aloud / go through it; at the end it is marked
+  **"leído"**, and the app **counts how many times** he has read each one.
+- **Link to exercises**: depending on what he has read (and how often), the exercises start to
+  include that grammar (e.g. which form of the verb, which article goes with which word), so the
+  grammar is understood in use. Learn **well**, not just play.
+- Everything **quick and accessible**: if he wants to see a verb, he sees it and its
+  conjugations right away, then moves on.
+
+Today: grammar cards inside lessons (`GrammarTip`, `gram.<slug>` items in each level's grammar
+unit, docs/content-guide.md).
