@@ -29,7 +29,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T187 — Slow lines from the voice and byte access to generated audio
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a8150887220bfacf0 · since 16:40Z)
 - Depends on: none
 - Where: any
 - Goal: `/api/coach/tts/` can render a line at rate −30 % and the client can get any generated line as bytes (cache first), so episodes can include slow versions and be joined.
@@ -212,3 +212,4 @@ Worktree setup: npm ci
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
 - 2026-10-13 16:40Z 💻 approved by Hernán ("si comienza con el plan")
+- 2026-10-13 16:40Z 💻 T187 launched · attempt 1 · agent a8150887220bfacf0
