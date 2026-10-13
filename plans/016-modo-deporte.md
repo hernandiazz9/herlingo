@@ -108,7 +108,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T192 — Episode generation on the server
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a6c51a16e78d4a469 · since 17:28Z)
 - Depends on: T190
 - Where: any
 - Goal: Server modules that turn a description into a validated episode (fake or real Claude), no endpoint yet.
@@ -236,3 +236,4 @@ Worktree setup: npm ci
 - 2026-10-13 17:13Z 💻 T190 launched · attempt 1 · agent a4eddf1514188c1ad (+ edge-tts dialogue lines, no ±15 s handlers, Xing note in docs)
 - 2026-10-13 17:25Z 💻 T190 done · worktree-agent-a4eddf1514188c1ad → 93851d69 · verify ✓
 - 2026-10-13 17:28Z 💻 main fast-forwarded to 071ef416 with Hernán's OK; .vercel copied into ../lang_lern-deporte for the deploy
+- 2026-10-13 17:28Z 💻 T192 launched · attempt 1 · agent a6c51a16e78d4a469 (+ spoken strings ≤ 300)
