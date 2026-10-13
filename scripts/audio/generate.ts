@@ -162,12 +162,14 @@ async function generateGemini(jobs: AudioJob[], dir: string, locale: string): Pr
       if (res instanceof Error || !res.ok) {
         const body = res instanceof Error ? "" : await res.text();
         const status = res instanceof Error ? 0 : res.status;
-        const detail = res instanceof Error ? res.message : `${status} ${body.slice(0, 200)}`;
-        if (status === 429 && /PerDay/i.test(body)) geminiStopped = "daily quota reached";
-        else if (status === 429 || status === 0 || status >= 500) {
-          if (tries > 10) geminiStopped = detail;
+        const quota = [...body.matchAll(/"quotaId":\s*"([^"]+)"/g)].map((m) => m[1]).join(", ");
+        const detail = res instanceof Error ? res.message : `${status} ${quota || body.slice(0, 200)}`;
+        // Rate limits (per minute or per day): wait as told and retry; a limit that lasts ~15 minutes stops the run.
+        if (status === 429 || status === 0 || status >= 500) {
+          if (tries > 15) geminiStopped = detail;
           else {
-            const wait = Number(/"retryDelay":\s*"(\d+)/.exec(body)?.[1] ?? 20);
+            const wait = Number(/"retryDelay":\s*"(\d+)/.exec(body)?.[1] ?? 30);
+            if (tries === 3) console.log(`  gemini waiting (${detail})…`);
             await sleep((wait + 1) * 1000);
             continue;
           }
