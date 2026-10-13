@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 17:38Z 💻
+- Updated: 2026-10-13 17:43Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: T192 → T193 while Hernán deploys and checks T191 on the iPhone
+- Next step: nothing runnable: T191 (Hernán: deploy + iPhone check) unblocks T194 and T196
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: deploy (npx vercel --prod from ../lang_lern-deporte) + T191 iPhone check
+- Needs Hernán: deploy from ../lang_lern-deporte (includes T192–T193, not yet in main: OK to fast-forward main too?) + T191 iPhone check
 
 ## Shared contract (all tasks read this)
 
@@ -124,7 +124,7 @@ Worktree setup: npm ci
 - Outcome: EPISODE_TEXT_LIMITS (spoken strings ≤ 300) + EPISODE_ARRAY_LIMITS, GeneratedEpisode/Episode/EpisodeRequest, normalizeEpisode, EPISODE_SYSTEM + episodeUserPrompt (other prompts byte-identical), fakeEpisode (it supermarket: 3 parts, 8 steps), generateEpisode (low, 12000) · 51c87dfc · verify ✓ 💻 · not checked: real Claude call (tokens, latency vs the 50 s deadline, 12–16 steps)
 
 ## T193 — `POST /api/coach/episode/`, episode counter and usage
-- Status: running (attempt 1 · 💻 · agent ac9bbfe0cf04a6319 · since 17:38Z)
+- Status: done
 - Depends on: T192
 - Where: any
 - Goal: The endpoint with its own daily counter, billing and usage fields, exactly like `/api/coach/route/`.
@@ -135,7 +135,7 @@ Worktree setup: npm ci
   - `GET /usage/` adds `episodes`, `avgEpisodeUsd`, `episodesToday`.
   - Fake curl: 200 with a valid episode and `today.used` 1; a 6th call the same day → 429; usage shows the new fields; no code → 401.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: POST /api/coach/episode/ (checks/billing/refunds as /route/, reserveEpisode COACH_EPISODE_DAILY_LIMIT 5), /usage/ episodes + avgEpisodeUsd + episodesToday, per-call deadlineMs (episode 55 s), [coach] episode latency/tokens log · 97035912 · verify ✓ 💻 · fake curl ✓ (401/400/200×5/429, usage) · not checked: real Claude call, Upstash counters
 
 ## T194 — AI episodes on the device: create, save, download, list, delete
 - Status: pending
@@ -226,6 +226,7 @@ Worktree setup: npm ci
 - 2026-10-13 T192: src/lib/sport/types.ts comment still says es ≤ 400 (now ≤ 300)
 - 2026-10-13 T192: route es (schema ≤ 400) is spoken by «Escuchar todo» and route episodes, but /api/coach/tts/ caps text at 300: a 301–400 char meaning cannot play
 - 2026-10-13 T192: an episode is ~4–6k output tokens; packs measured ~135 tok/s (2k in 15 s) → ~30–45 s, close to claude.ts DEADLINE_MS 50 s; T193 gives the episode call its own deadline (≤ 55 s, function maxDuration 60) and logs latency
+- 2026-10-13 T193: as in route.ts, an Episode.parse failure after billing answers 500 internal instead of 502
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -242,3 +243,4 @@ Worktree setup: npm ci
 - 2026-10-13 17:28Z 💻 T192 launched · attempt 1 · agent a6c51a16e78d4a469 (+ spoken strings ≤ 300)
 - 2026-10-13 17:38Z 💻 T192 done · worktree-agent-a6c51a16e78d4a469 → 51c87dfc · verify ✓
 - 2026-10-13 17:38Z 💻 T193 launched · attempt 1 · agent ac9bbfe0cf04a6319 (+ episode deadline 55 s, latency log)
+- 2026-10-13 17:43Z 💻 T193 done · worktree-agent-ac9bbfe0cf04a6319 → 97035912 · verify ✓
