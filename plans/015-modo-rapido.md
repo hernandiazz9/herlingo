@@ -1,6 +1,6 @@
 # Plan 015 — Prepárate "Modo rápido": a quick route to get out of a jam in a shop
 
-Status: draft (interview done 2026-10-13; awaiting Hernán's approval before anything runs)
+Status: active
 Created: 2026-10-13
 Base branch: plan-015-modo-rapido
 Goal: Hernán types a few words ("tengo que imprimir algo") and in ~15 s gets a **route**: the likely exchange with the clerk, chat style, skipping the obvious, every line in the target language (big) with Spain Spanish below and audio (normal and slow), each turn expandable to other ways they may say it, other answers and key words. Reached from a floating ⚡ button on every screen; routes are saved and work offline. A new Vercel function `POST /api/coach/route/` (fake mode included) next to Prepárate's. The AI evaluation of everything practised is a later, separate plan. Save tokens: one agent at a time, no code reviews, no visual checks by agents (Hernán checks on his iPhone).
@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-12 22:26Z 💻
-- Writer: 💻 desktop
-- Branch: plan-015-modo-rapido · not pushed
-- Needs Hernán: approve the plan
-- Next step: on OK, commit `plan 015: approved`, launch T175; then one task at a time in order.
+- Updated: 2026-10-13 06:02Z 💻
+- Writer: released 06:02Z by 💻 desktop → continue on 💻 in the worktree `../lang_lern-rapido` (branch plan-015-modo-rapido; the main checkout runs plan 014)
+- Branch: plan-015-modo-rapido · pushed
+- Next step: a fresh session opened in `lang_lern-rapido` takes the writer lock and launches T175 (one agent at a time).
+- Gotchas: never switch branches in `lang_lern/` (plan 014 lives there); `.env.local` absent here on purpose (fake mode).
 
 ## Shared contract (all tasks read this)
 
@@ -148,3 +148,4 @@ Worktree setup: npm ci
 
 ## Log
 - 2026-10-12 22:26Z 💻 plan written from the interview; not approved yet
+- 2026-10-13 06:02Z 💻 approved by Hernán ("OK, en carpeta aparte"); worktree ../lang_lern-rapido created, npm ci done
