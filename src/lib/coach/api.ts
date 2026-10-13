@@ -4,10 +4,18 @@
  * whose `message` is Spain Spanish UI copy (the server's own message when it sent one).
  */
 import { clearAccessCode, getAccessCode, setAccessCode } from "./access";
-import { parseAssessment, parseGenerationUsage, parsePack, parseQuestion, parseUsage, isObject } from "./parse";
+import { parseAssessment, parseGenerationUsage, parsePack, parseQuestion, parseRoute, parseUsage, isObject } from "./parse";
 import { buildLearnerContext } from "./profile";
-import { noteGeneration, storeUsage } from "./usage";
-import { COACH_LIMITS, type CoachPack, type CoachUsage, type InterviewResult, type InterviewTurn, type PackResult } from "./types";
+import { noteGeneration, noteRoute, storeUsage } from "./usage";
+import {
+  COACH_LIMITS,
+  type CoachPack,
+  type CoachUsage,
+  type InterviewResult,
+  type InterviewTurn,
+  type PackResult,
+  type RouteResult,
+} from "./types";
 
 /** Same origin as the app (Vercel functions next to the static export, or `npm run dev:coach`). */
 export const COACH_API_BASE = "/api/coach/";
@@ -180,6 +188,21 @@ function packResult(data: unknown, newPack: boolean): PackResult {
 export async function generatePack(lang: string, description: string, opts: { signal?: AbortSignal } = {}): Promise<PackResult> {
   const body = { lang, description, profile: buildLearnerContext(lang) };
   return packResult(await callJson("pack", { method: "POST", body, signal: opts.signal }), true);
+}
+
+/**
+ * A quick route (Modo rápido) for `description` (the learner context is added). Uses its own daily
+ * counter on the server (429 `daily_limit` with the route message), never the generations; the
+ * other errors are `generatePack`'s. Not saved: see `saveRoute`.
+ */
+export async function generateRoute(lang: string, description: string, opts: { signal?: AbortSignal } = {}): Promise<RouteResult> {
+  const body = { lang, description, profile: buildLearnerContext(lang) };
+  const data = await callJson("route", { method: "POST", body, signal: opts.signal });
+  const route = isObject(data) ? parseRoute(data.route) : null;
+  if (!route || !isObject(data)) throw invalid();
+  const usage = parseGenerationUsage(data.usage);
+  noteRoute(usage);
+  return { route, usage };
 }
 
 /**

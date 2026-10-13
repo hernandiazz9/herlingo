@@ -47,6 +47,28 @@ export function noteGeneration(g: GenerationUsage, newPack: boolean): void {
   });
 }
 
+/**
+ * Applies a quick route's cost, the remaining budget and the route counter (`g.today` of a route
+ * response) to the stored summary; the generations counter (`today`) is left as it is.
+ */
+export function noteRoute(g: GenerationUsage): void {
+  const stored = getStoredUsage();
+  if (!stored) return;
+  const u = stored.usage;
+  const before = u.routes ?? 0;
+  const routes = before + 1;
+  const routesToday = g.today.limit > 0 ? g.today : u.routesToday;
+  storeUsage({
+    ...u,
+    spentUsd: u.spentUsd + g.costUsd,
+    mineUsd: u.mineUsd + g.costUsd,
+    remainingUsd: g.remainingUsd,
+    routes,
+    avgRouteUsd: ((u.avgRouteUsd ?? 0) * before + g.costUsd) / routes,
+    ...(routesToday ? { routesToday } : {}),
+  });
+}
+
 /** "3,20 $": Spain Spanish amount in US dollars. */
 export function formatUsd(amount: number, decimals = 2): string {
   const n = amount.toLocaleString("es-ES", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
