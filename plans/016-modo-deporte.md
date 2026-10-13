@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 21:01Z 💻
+- Updated: 2026-10-13 21:10Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: T194 (AI episodes on the device), then T195, T196; T197 = Hernán's check
+- Next step: T195 (routes → episodes, De tus rutas, Escuchar seguidos, XP), then T196; T197 = Hernán's check after a deploy
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
 - Needs Hernán: OK to fast-forward main to the deployed code (T192–T193) — not answered yet
 
@@ -138,7 +138,7 @@ Worktree setup: npm ci
 - Outcome: POST /api/coach/episode/ (checks/billing/refunds as /route/, reserveEpisode COACH_EPISODE_DAILY_LIMIT 5), /usage/ episodes + avgEpisodeUsd + episodesToday, per-call deadlineMs (episode 55 s), [coach] episode latency/tokens log · 97035912 · verify ✓ 💻 · fake curl ✓ (401/400/200×5/429, usage) · not checked: real Claude call, Upstash counters
 
 ## T194 — AI episodes on the device: create, save, download, list, delete
-- Status: running (attempt 1 · 💻 · agent ae24454bb01bbcc72 · since 20:59Z)
+- Status: done
 - Depends on: T193, T191
 - Where: any
 - Goal: From `/deporte/` Hernán types a situation, gets an episode saved with its audio downloaded in the background, and finds it under "Mis episodios".
@@ -150,7 +150,7 @@ Worktree setup: npm ci
   - `/deporte/` gets the form (free text 1–500 characters) with the pending state, the daily-limit and offline messages, and "Mis episodios" (newest first, delete with "¿Borrar este episodio?"); an AI episode opens in the T190 player.
   - Fake end-to-end through the client code paths compiles (`npm run verify`); the fake fixture compiles to a 6–12 minute estimate in the T188 check script.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: generateEpisode + parseEpisode (tolerant) + lang-lern:coach:episodes:<lang> + useSavedEpisodes; background download; pruneCoachAudio keeps episode/route/dialogue episode lines; /deporte/ form (placeholder 'Ej.: ir a un supermercado'), Mis episodios + delete; new episode opens in the player with a saved notice; usage fields parsed · 6d6160ad · verify ✓ 💻 · fake end-to-end ✓ (it fixture ≈ 6 min) · not checked: visuals, real episode, device
 
 ## T195 — Episodes from routes, «Escuchar seguidos» and XP
 - Status: pending
@@ -207,6 +207,7 @@ Worktree setup: npm ci
 ## Visual checks queue
 - [ ] T190 @93851d69 — /deporte/ list + player: light + dark, iPhone width, Jugar card (below the topic grid), preparing state, step highlight, Guardar mp3 (queued 2026-10-13 💻)
 - [ ] T198 @e4c0de27 — Jugar: Modo deporte card right under «Prepárate para una situación», light + dark (queued 2026-10-13 💻)
+- [ ] T194 @6d6160ad — /deporte/: form (pending, limit, offline), Mis episodios + delete dialog, new AI episode opening in the player with its notice; light + dark (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -240,6 +241,8 @@ Worktree setup: npm ci
 - 2026-10-13 T192: route es (schema ≤ 400) is spoken by «Escuchar todo» and route episodes, but /api/coach/tts/ caps text at 300: a 301–400 char meaning cannot play
 - 2026-10-13 T192: an episode is ~4–6k output tokens; packs measured ~135 tok/s (2k in 15 s) → ~30–45 s, close to claude.ts DEADLINE_MS 50 s; T193 gives the episode call its own deadline (≤ 55 s, function maxDuration 60) and logs latency
 - 2026-10-13 T193: as in route.ts, an Episode.parse failure after billing answers 500 internal instead of 502
+- 2026-10-13 T194: src/components/sport/generation.ts duplicates the job runner of components/coach/generation.ts; share one
+- 2026-10-13 T194: the Prepárate usage panel (AiUsagePanel) does not show the episode counters yet (the client parses them)
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -261,3 +264,4 @@ Worktree setup: npm ci
 - 2026-10-13 20:59Z 💻 T191 done (Hernán: "me fue bien"); next: AI episodes ("agreguemos lo de ia")
 - 2026-10-13 20:59Z 💻 T194 launched · attempt 1 · agent ae24454bb01bbcc72
 - 2026-10-13 21:01Z 💻 T198 done by the writer (card under EntryCard) → e4c0de27 · verify ✓
+- 2026-10-13 21:10Z 💻 T194 done · worktree-agent-ae24454bb01bbcc72 → 6d6160ad · verify ✓
