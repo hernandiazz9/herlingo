@@ -58,6 +58,9 @@ unit, docs/content-guide.md).
 
 ## 3. "Modo deporte": audio-only situations to listen to while running or cycling (2026-10-13)
 
+→ Designed with Hernán on 2026-10-13: docs/sport.md, plans/016-modo-deporte.md (listening only, one
+joined mp3 per episode so it plays with the screen locked).
+
 **What he wants**
 - Describe a situation (e.g. "ir a un supermercado en Italia") and get **only audio**: a guided
   walk through the whole situation, to play and go out running, cycling or walking without

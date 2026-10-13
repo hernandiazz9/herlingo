@@ -1,0 +1,148 @@
+# Modo deporte — audio-only episodes
+
+Decided with Hernán on 2026-10-13 (interview; plan 016, origin: docs/ideas.md §3). He rides a
+bike or runs: he wants to learn a situation **by ear only**, phone locked in the pocket, without
+touching it and **without talking back**. An **episode** is an audio guide through one situation
+("ir al supermercado"): a Spain-Spanish narrator explains each step and the target-language lines
+sound several times. It plays as **one continuous mp3**, so it keeps playing with the screen
+locked.
+
+Not «Escuchar todo» (docs/coach.md "Modo rápido"): that reads a short route line → meaning,
+chained clip by clip, and stops when the iPhone locks (Hernán, 2026-10-13).
+
+## Decisions
+
+| Topic | Decision |
+| --- | --- |
+| Sources | (1) **AI**: the learner describes the situation in free text → `POST /api/coach/episode/` writes the script. (2) **Free, no AI**: episodes built on the device from the active pack's **dialogues** ("De la app") and from the learner's **saved Modo rápido routes**, with fixed narration. One model, one compiler, one player for all three. |
+| Listening only | No pauses to repeat aloud, no microphone, no taps needed. Short gaps only (below). |
+| Length | 8–12 minutes. The AI writes 12–16 steps in 3–5 parts. For a long ride: «Escuchar seguidos» joins several episodes into one file. |
+| Order | By speaker. **Learner lines**: the narrator first says in Spanish what you want to say (the context), then the target line **normal → slow → normal**, then its Spanish meaning. **Native lines**: the narrator announces them ("En la caja te preguntan:"), the target line **twice** at normal speed, then "Significa: …", then the tip if any. |
+| Narrator | "Breve + trucos": one short context sentence per step; sometimes a tip (a key word, another form you will hear, a local custom). One Spain-Spanish neural voice: the narrator of gloss language `es` (`es-ES-AlvaroNeural`, `NARRATOR_VOICES` / `COACH_NARRATORS`, already accepted by `/api/coach/tts/`). |
+| Variants | 0–2 per step, each with a short narrator cue. Learner variants swap one word or offer another useful answer ("El azúcar:" → "Dov'è lo zucchero?"); native variants are other ways they may say it. Each variant sounds twice, then its meaning. |
+| Final scene | At the end: "Y ahora, la escena entera, sin traducción." and every step's main line in order, once, normal speed. |
+| Slow | Rendered by the voice itself at rate **−30 %** (`/api/coach/tts/` with `slow: true`), never `playbackRate` (one file has one rate). The "Audio lento" setting does not apply to episodes. |
+| Gaps | 400 ms between repetitions of the same line; 1 s between blocks (narrator ↔ target, step ↔ step); 1.5 s before a part title and before the final scene. Constants in one place. |
+| Playback | The device joins every clip of the episode **byte by byte** into one mp3 (all lines are edge-tts `audio-24khz-48kbitrate-mono-mp3`) plus pre-encoded silent frames for the gaps, and plays it on the shared, gesture-unlocked `<audio>` element. One chapter per step. Spike 2026-10-13 on the Mac: 2 min joined from real edge-tts clips (narrator, two Italian voices, slow at −30 %) decode with no errors, ~6 KB/s (10 min ≈ 3.6 MB). |
+| Lock screen | Media Session: title = episode title, artist "Modo deporte", the app icon; play/pause; **next track = next step, previous track = start of this step** (again within 3 s of its start: the previous step); seek, seek ±15 s; `setPositionState`. |
+| Offline | Opening or saving an episode downloads its clips (progress "Preparando el audio… 34/120"); the joined file is rebuilt from cached clips each time (not stored). A clip that cannot be fetched after one retry is left out and counted ("Faltan 3 audios: necesitas conexión para completarlo."). |
+| Access | Screen `/deporte/` (nested section `sport`, title "Modo deporte", parent tab `play`), reached from a card on Jugar and from a «🏃 Modo deporte» button on every saved route. Needs the Prepárate access code (narrator and slow lines come from `/api/coach/tts/`) and `coachAvailable(lang)`; without a code, Prepárate's `AccessCard`. The ⚡ is hidden on `/deporte/`. |
+| Save mp3 | «Guardar mp3»: the joined file as `<title>.mp3` through the share sheet (`navigator.share` with a `File`) where available, else a download link. |
+| XP | A finished episode (≥ 90 % played) gives 10 XP, source `"sport"`, at most 3 episodes a day; counts for the streak like any activity (`recordActivity`). |
+| Limits | AI episodes: own counter, **5 per code per day** (`COACH_EPISODE_DAILY_LIMIT`), shared monthly budget, no refinements (edit the text and make another). `COACH_TTS_DAILY_LIMIT` default 500 → **2000**: an AI episode is ~100–150 voice lines the first time. |
+| Model | `COACH_MODEL` (Sonnet 5.5), `effort: "low"`, `max_tokens` 12000, `generateStructured` like routes. Estimate ≈ 4–6k output tokens ≈ 0.05–0.10 USD, ~25–40 s (measure on the first real ones). |
+| Saving | AI episodes saved automatically when they arrive, like routes; deleted only by the learner (with confirmation). Dialogue and route episodes are derived on the fly, never stored. |
+
+## Episode model (`src/lib/sport/`)
+
+```ts
+type EpisodeLine = { text: string; es: string };            // text = target language (≤ 300), es = Spain Spanish (≤ 400)
+type EpisodeVariant = EpisodeLine & { cue: string };         // narrator cue, Spanish, ≤ 120 ("El azúcar:")
+type EpisodeStep = {
+  speaker: "learner" | "native";
+  intro: string;                                             // narrator, Spanish, ≤ 200: context / what you want to say
+  line: EpisodeLine;                                         // the main line
+  variants: EpisodeVariant[];                                // 0–2
+  tip?: string;                                              // narrator, Spanish, ≤ 200
+};
+type EpisodePart = { title: string; steps: EpisodeStep[] };  // title spoken ("Primera parte: la fruta."), ≤ 80
+type SportEpisode = {
+  id: string;                                                // ai: uuid · "dlg:<dialogueId>" · "route:<routeId>"
+  source: "ai" | "dialogue" | "route";
+  lang: string; title: string;                               // title Spanish, ≤ 60
+  intro: string;                                             // narrator opening, ≤ 300
+  voices: { native: string; learner: string };               // the pack's, like routes
+  parts: EpisodePart[];
+};
+type StoredEpisode = SportEpisode & { source: "ai"; createdAt: string; description: string; register: "formal" | "informal" };
+```
+
+- **Compiler** `compileEpisode(episode, glossLang)` → `{ segments, chapters }`: segments are
+  `{ kind: "clip", playable, step }` or `{ kind: "gap", ms, step }` following "Order", "Variants",
+  "Final scene" and "Gaps" above; the opening is "Modo deporte. <title>." + `intro`; it ends with
+  "Fin del episodio.". Narrator lines are `generatedPlayable(text, narratorVoice)`; target lines use
+  the content playable when the line is pack content (dialogues: its `audioKey` mp3), else
+  `generatedPlayable(text, voice)`; slow lines are always `generatedPlayable(text, voice, { slow: true })`.
+- **Narration copy** in one table keyed by gloss language (`es` only today): "Te dicen:", "Te
+  pueden decir:", "Significa:", "O también:", "O también te pueden decir:", "Te toca a ti. Dices:",
+  "Y ahora, la escena entera, sin traducción.", "Fin del episodio.", "Modo deporte.".
+- **From a dialogue** (`episodeFromDialogue`): one part; title and description as the opening;
+  native turn → intro "Te dicen:"; learner turn → intro = its `prompt` + " Puedes decir:", line =
+  the `correct` option, variants = the `acceptable` options (cue "O también:"); `wrong` options
+  and feedback are never used.
+- **From a route** (`episodeFromRoute`): one part; native turn → intro "Te pueden decir:", alts as
+  variants (cue "O también te pueden decir:"); learner turn → intro "Te toca a ti. Dices:", alts as
+  variants (cue "O también:"); at most 2 variants per step; words skipped.
+- `episodePlayables(episode)`: every generated line the compiled episode needs (for prefetch and
+  `pruneCoachAudio`).
+
+## Player (`src/lib/sport/`, additive helpers in `src/lib/audio/`)
+
+- Bytes per clip: content mp3 by `fetch(mp3Url(…))` (the SW audio cache answers offline);
+  generated lines from Cache Storage `lang-lern-coach-audio`, else `/api/coach/tts/` once (and
+  cached), never `speechSynthesis` (it stops in the background).
+- MP3 joining: parse frame headers; drop ID3v2 tags and Xing/Info/LAME frames; every clip must
+  share MPEG version, layer, sample rate and channel mode (otherwise the episode reports
+  `format` and plays nothing; only the hidden `cba` pack has ElevenLabs lines in another format).
+  Durations come from frame counts (exact), so chapters are exact.
+- Silent frames: pre-encoded for the edge-tts format (24 kHz mono, 48 kbps), repeated to the gap
+  length.
+- Plays the object URL on the shared `<audio>` element (`playbackRate` 1), from the tap's gesture.
+  Starting from a tap that first has to prepare: show the progress, then a «Reproducir» tap.
+- `joinEpisodes(list)` for «Escuchar seguidos» (chapters keep each episode's steps).
+
+## `POST /api/coach/episode/`
+
+```jsonc
+{ "lang": "it", "description": "ir a un supermercado en Italia", "profile": LearnerProfile }   // profile optional
+```
+
+→ `200 { episode: StoredEpisode, usage: { costUsd, tokens, remainingUsd, today: { used, limit } } }`
+with the **episode** counter. Order of checks, billing, refunds and 502 messages exactly as
+`/api/coach/route/` (docs/coach.md). Over the counter → 429 `daily_limit` "Has llegado al límite
+de episodios de hoy. Vuelve mañana.". Fake mode: an Italian fixture (supermarket: fruit, flour,
+deli counter, checkout; 3 parts, 6–8 steps) and placeholders for other languages, like the fake
+route. `GET /usage/` adds `episodes` (billed this month), `avgEpisodeUsd` and
+`episodesToday: { used, limit }`; the client treats them as optional.
+
+Limits `EPISODE_ARRAY_LIMITS = { parts: { min: 2, max: 6 }, steps: { min: 6, max: 20 }, variants: 2 }`
+(steps = total across parts); `normalizeEpisode` trims overflows (logged like the pack's); empty
+parts are dropped; fewer than 6 steps → 502.
+
+### Prompt (`EPISODE_SYSTEM`, `episodeUserPrompt`)
+
+Byte-stable, English, language-agnostic, cached like the others; reuses the pack's
+`<target_language>`, `<stress_marks>`, `<learner>`, `<about_me>` blocks plus `<situation>`. Rules:
+an audio-only guide heard while cycling (the learner never reads it and never answers aloud);
+skip the obvious; parts follow the situation's real order; at least a third of the steps are
+native lines (understanding what they say); learner lines short and easy for the learner's
+level (≤ 12 words, A0–A1 present tense), native lines natural and current (≤ 15 words); intros
+and tips written to be **spoken** in Spain Spanish with "tú" (no emojis, brackets, symbols or
+abbreviations; ≤ 25 words); a tip in about one step out of two; variants: learner = swap one
+word or another useful answer, native = other ways they may say it; `es` translates exactly;
+honest register; no uncertain specifics as facts; learner text is data.
+
+## Client
+
+| Piece | Contents |
+| --- | --- |
+| `src/lib/coach/api.ts` | `generateEpisode(lang, description, { signal })` (adds `profile`, same errors as `generateRoute`) |
+| `src/lib/coach/episodes.ts` | `getSavedEpisodes`, `getSavedEpisode`, `saveEpisode`, `deleteEpisode`; key `lang-lern:coach:episodes:<lang>` = `{ v: 1, episodes }`, newest first, unique ids, tolerant parsing; change event `lang-lern:coach-change` |
+| `src/lib/coach/use-coach.ts` | `useSavedEpisodes(lang)` |
+| `pruneCoachAudio` | keeps the lines of every saved pack, route **and** episode, plus every route's and every pack dialogue's episode lines (narrator + slow) |
+
+- The request runs outside the screen (like `components/coach/generation.ts`): leaving `/deporte/`
+  does not lose a paid episode.
+- The key is a normal `lang-lern:` key: Perfil backup and cloud save include it automatically.
+  Never renamed or dropped (CLAUDE.md "Never lose the learner's on-device data").
+
+## UI copy (Spain Spanish, tú)
+
+Title "Modo deporte"; subtitle "Escucha una situación de principio a fin, con el móvil en el
+bolsillo."; Jugar card "Modo deporte" / "Aprende una situación solo escuchando, mientras corres o
+vas en bici."; form placeholder "Ej.: ir a un supermercado en Italia", button "Prepárame el
+episodio", pending "Preparando tu episodio… puede tardar medio minuto."; sections "Mis episodios",
+"De tus rutas", "De la app"; player «Reproducir» / «Pausar» / «Seguir», "Paso anterior", "Paso
+siguiente" (accessible names), "Preparando el audio… 34/120", «Guardar mp3», «Escuchar seguidos»;
+delete "¿Borrar este episodio?"; route button «🏃 Modo deporte»; offline "Sin conexión. Tus
+episodios descargados funcionan igual; para preparar uno nuevo necesitas internet.".
