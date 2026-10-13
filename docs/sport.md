@@ -16,7 +16,7 @@ chained clip by clip, and stops when the iPhone locks (Hernán, 2026-10-13).
 | --- | --- |
 | Sources | (1) **AI**: the learner describes the situation in free text → `POST /api/coach/episode/` writes the script. (2) **Free, no AI**: episodes built on the device from the active pack's **dialogues** ("De la app") and from the learner's **saved Modo rápido routes**, with fixed narration. One model, one compiler, one player for all three. |
 | Listening only | No pauses to repeat aloud, no microphone, no taps needed. Short gaps only (below). |
-| Length | 8–12 minutes. The AI writes 12–16 steps in 3–5 parts. For a long ride: «Escuchar seguidos» joins several episodes into one file. |
+| Length | 8–12 minutes. The AI writes 12–16 steps in 3–5 parts. For a long ride: «Escuchar seguidos» (on each home section with 2 or more episodes) joins the section's **fully downloaded** episodes, in its order, into one file; the others are left out and counted (it never downloads a whole section). |
 | Order | By speaker. **Learner lines**: the narrator first says in Spanish what you want to say (the context), then the target line **normal → slow → normal**, then its Spanish meaning. **Native lines**: the narrator announces them ("En la caja te preguntan:"), the target line **twice** at normal speed, then "Significa: …", then the tip if any. |
 | Narrator | "Breve + trucos": one short context sentence per step; sometimes a tip (a key word, another form you will hear, a local custom). One Spain-Spanish neural voice: the narrator of gloss language `es` (`es-ES-AlvaroNeural`, `NARRATOR_VOICES` / `COACH_NARRATORS`, already accepted by `/api/coach/tts/`). |
 | Variants | 0–2 per step, each with a short narrator cue. Learner variants swap one word or offer another useful answer ("El azúcar:" → "Dov'è lo zucchero?"); native variants are other ways they may say it. Each variant sounds twice, then its meaning. |
@@ -28,7 +28,7 @@ chained clip by clip, and stops when the iPhone locks (Hernán, 2026-10-13).
 | Offline | Opening or saving an episode downloads its clips (progress "Preparando el audio… 34/120"); the joined file is rebuilt from cached clips each time (not stored). A clip that cannot be fetched after one retry is left out and counted ("Faltan 3 audios: necesitas conexión para completarlo."). |
 | Access | Screen `/deporte/` (nested section `sport`, title "Modo deporte", parent tab `play`), reached from a card on Jugar and from a «🏃 Modo deporte» button on every saved route. Needs the Prepárate access code (narrator and slow lines come from `/api/coach/tts/`) and `coachAvailable(lang)`; without a code, Prepárate's `AccessCard`. The ⚡ is hidden on `/deporte/`. |
 | Save mp3 | «Guardar mp3»: the joined file as `<title>.mp3` through the share sheet (`navigator.share` with a `File`) where available, else a download link. |
-| XP | A finished episode (≥ 90 % played) gives 10 XP, source `"sport"`, at most 3 episodes a day; counts for the streak like any activity (`recordActivity`). |
+| XP | A finished episode (≥ 90 % played) gives 10 XP, source `"sport"`, once per episode per day, at most 3 episodes a day; counts for the streak like any activity (`recordActivity`). "Played" = time that really sounded (seeks, step jumps and replays add nothing); in a joined file each episode counts on its own. |
 | Limits | AI episodes: own counter, **5 per code per day** (`COACH_EPISODE_DAILY_LIMIT`), shared monthly budget, no refinements (edit the text and make another). `COACH_TTS_DAILY_LIMIT` default 500 → **2000**: an AI episode is ~100–150 voice lines the first time. |
 | Model | `COACH_MODEL` (Sonnet 5.5), `effort: "low"`, `max_tokens` 12000, `generateStructured` like routes. Estimate ≈ 4–6k output tokens ≈ 0.05–0.10 USD, ~30–45 s at the measured ~135 tok/s, so the episode call has its own **55 s deadline** (`deadlineMs`; the others keep 50 s; `vercel.json` `maxDuration` stays 60). Each real call logs one `[coach] episode …` line (outcome, latency, output tokens, tok/s, model, lang; never the learner's text): measure on the first real ones. |
 | Dialogue lines | Dialogue episodes read their normal-speed target lines with edge-tts too (`generatedPlayable(text, voice)` in the content line's voice, the same voice as its slow line), not with the pack's Gemini content mp3s (2026-10-13): one voice engine for the whole episode. `DIALOGUE_LINES_FROM_CONTENT` (`src/lib/sport/compile.ts`) = `false`; one edit brings the content mp3s back. |
@@ -101,6 +101,16 @@ asks for much shorter ones.
 - Plays the object URL on the shared `<audio>` element (`playbackRate` 1), from the tap's gesture.
   Starting from a tap that first has to prepare: show the progress, then a «Reproducir» tap.
 - `joinEpisodes(list)` for «Escuchar seguidos» (chapters keep each episode's steps).
+- `downloadedEpisodes(list)`: the episodes whose every compiled clip is already on the device
+  (generated lines in Cache Storage `lang-lern-coach-audio`, at the path `generated.ts` gives
+  them, mirrored in `src/lib/sport/downloaded.ts`; content lines in any cache), so «Escuchar
+  seguidos» prepares without the network.
+- XP (`src/lib/sport/xp.ts`): `trackEpisodeXp(lang, prepared)` follows the player and, per episode
+  in the loaded file, adds up the time that really played (between two player states the position
+  may advance at most as much as the clock, so a locked phone still counts and seeks do not; a
+  part heard twice counts once); at ≥ 90 % of its span `awardFinishedEpisode` gives the XP. The
+  day's bookkeeping reuses the daily key `lang-lern:daily-xp:<lang>` (`countPlay`: `sport:<id>` per
+  episode, `sport` for the day's total): no new key.
 
 ## `POST /api/coach/episode/`
 
@@ -173,15 +183,25 @@ target-language sentences out of the Spanish fields.
   daily-limit / budget / failure message, "Te quedan N episodios hoy", an episode that arrived
   while you were away as "«…» ya está listo y guardado en Mis episodios." with «Abrir»), "Mis
   episodios" (`SavedEpisodes`: newest first, title, «description», "Unos N min · date", delete with
-  "¿Borrar este episodio?") and "De la app" (`AppEpisodes`: one card per dialogue of the active
-  pack, pack order, with its title, description and an estimate "Unos 6 min" from the compiled
-  clips' text and gaps).
+  "¿Borrar este episodio?"), "De tus rutas" (`RouteEpisodes`: one card per saved Modo rápido route,
+  newest first, title, «description», "Unos N min") and "De la app" (`AppEpisodes`: one card per
+  dialogue of the active pack, pack order, with its title, description and an estimate "Unos 6
+  min" from the compiled clips' text and gaps). Each section with 2 or more episodes has
+  «Escuchar seguidos».
 - A new AI episode opens in the player at once (like a new route), with a notice: saved in Mis
   episodios and its audio downloading (or, when the device could not store it, that leaving loses it).
 - `?ep=<id>` (`nav.ts`, shallow `pushState` like `?ruta=`; back works): `useEpisode` resolves
   `dlg:<id>` (a dialogue of the active pack), `route:<id>` (a saved route) and any other id as an AI
   episode (`?ep=<uuid>`: "Mis episodios", or the one just received when it could not be stored).
   Unknown → "Episodio no encontrado".
+- `?seguidos=mis|rutas|app` (`JoinedView`, same shallow navigation): the section's episodes as they
+  were when it opened (an episode saved meanwhile does not interrupt it), `downloadedEpisodes` →
+  `prepareEpisode` each → `joinEpisodes` → the same player; title = the section's, "Suenan N
+  episodios, uno tras otro.", the ones left out ("Quedan fuera N episodios que aún no están
+  descargados: ábrelos una vez con conexión para añadirlos."), "Los pasos" grouped by episode.
+  None downloaded → a notice.
+- XP: the player shows "¡Genial! +N XP." when an episode played to the end earned it.
+- Modo rápido's `RouteView` has «🏃 Modo deporte» under «Escuchar todo» → `/deporte/?ep=route:<id>`.
 - Player (`EpisodeView`): prepares on open (`useEpisodeAudio`: "Preparando el audio… n/N", then
   `episodePlayer.load`), «Reproducir» / «Pausar» / «Seguir» between "Paso anterior" / "Paso
   siguiente", progress bar with elapsed / total, "Falta 1 audio" / "Faltan n audios: necesitas

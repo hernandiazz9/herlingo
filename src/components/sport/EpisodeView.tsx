@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, type ReactNode } from "react";
+import { Fragment, useEffect, useMemo, useRef, type ReactNode } from "react";
 import { FOCUS, Notice, Spinner } from "@/components/coach/shared";
 import { PauseIcon, PlayIcon } from "@/components/quick/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
@@ -9,7 +9,7 @@ import { cn } from "@/lib/cn";
 import { compileEpisode, episodeMp3File, episodePlayer, type EpisodeChapter, type SportEpisode } from "@/lib/sport";
 import { clock } from "./episodes";
 import { NextStepIcon, PreviousStepIcon, SaveIcon } from "./icons";
-import { useEpisodeAudio, useEpisodePlayer, type EpisodeAudio } from "./use-episode-audio";
+import { useEpisodeAudio, useEpisodePlayer, useEpisodeXp, type EpisodeAudio } from "./use-episode-audio";
 
 export interface EpisodeViewProps {
   episode: SportEpisode;
@@ -37,9 +37,82 @@ const PLAYING = "border-lemon-deep bg-lemon-soft";
  */
 export function EpisodeView({ episode, subtitle, notice, onBack }: EpisodeViewProps) {
   const audio = useEpisodeAudio(episode);
+  const groups = useMemo(() => [{ episode, chapters: compileEpisode(episode).chapters }], [episode]);
+
+  return (
+    <>
+      <BackToSport onBack={onBack} />
+      <PageHeader title={episode.title} subtitle={subtitle || undefined} />
+      {notice}
+      <PlayerSection lang={episode.lang} title={episode.title} audio={audio} />
+      <StepsList groups={groups} />
+    </>
+  );
+}
+
+/** «← Modo deporte». */
+export function BackToSport({ onBack }: { onBack: () => void }) {
+  return (
+    <button type="button" onClick={onBack} className={cn("min-h-11 self-start text-sm font-bold text-sea", FOCUS)}>
+      ← Modo deporte
+    </button>
+  );
+}
+
+/**
+ * The player of the file `audio` prepares (one episode or several joined): its status, progress,
+ * controls, «Guardar mp3» (as `<title>.mp3`) and the XP of the episodes played to the end.
+ */
+export function PlayerSection({ lang, title, audio }: { lang: string; title: string; audio: EpisodeAudio }) {
   const player = useEpisodePlayer();
-  const chapters = useMemo(() => compileEpisode(episode).chapters, [episode]);
+  const prepared = audio.status === "ready" ? audio.prepared : undefined;
+  const earned = useEpisodeXp(lang, prepared);
+  return (
+    <section aria-label="Reproductor" className="flex flex-col gap-3">
+      <AudioStatus audio={audio} />
+      {player.loaded ? (
+        <div className="flex flex-col gap-1">
+          <ProgressBar value={player.timeSec} max={player.durationSec} label="Progreso del episodio" tone="sea" />
+          <p className="flex justify-between text-sm font-bold tabular-nums text-ink-muted">
+            <span>
+              <span className="sr-only">Llevas </span>
+              {clock(player.timeSec)}
+            </span>
+            <span>
+              <span className="sr-only">de </span>
+              {clock(player.durationSec)}
+            </span>
+          </p>
+        </div>
+      ) : null}
+      <Controls loaded={player.loaded} playing={player.playing} timeSec={player.timeSec} durationSec={player.durationSec} />
+      {player.loaded ? (
+        <p className="text-sm text-ink-muted">
+          Puedes bloquear el móvil: sigue sonando. Desde la pantalla de bloqueo o los auriculares, «siguiente» y
+          «anterior» cambian de paso.
+        </p>
+      ) : null}
+      {earned > 0 ? <Notice tone="success">¡Genial! +{earned} XP.</Notice> : null}
+      {prepared && prepared.durationSec > 0 ? <SaveButton blob={prepared.blob} title={title} /> : null}
+    </section>
+  );
+}
+
+/** A list of steps: one episode's chapters, under its title when `titled`. */
+export interface StepsGroup {
+  episode: SportEpisode;
+  chapters: readonly EpisodeChapter[];
+}
+
+/**
+ * "Los pasos": every chapter of the file in play order (opening, steps, final scene), grouped by
+ * episode (with the episode's title when there are several), the one playing highlighted and
+ * scrolled into view.
+ */
+export function StepsList({ groups }: { groups: readonly StepsGroup[] }) {
+  const player = useEpisodePlayer();
   const current = player.loaded ? player.step : -1;
+  const titled = groups.length > 1;
 
   const items = useRef(new Map<number, HTMLElement>());
   const register = (i: number) => (el: HTMLElement | null) => {
@@ -54,65 +127,49 @@ export function EpisodeView({ episode, subtitle, notice, onBack }: EpisodeViewPr
     items.current.get(current)?.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
   }, [current, player.playing]);
 
+  // Index in the file's chapters of each group's first one.
+  const firsts = groups.map((_, g) => groups.slice(0, g).reduce((n, group) => n + group.chapters.length, 0));
+
   return (
-    <>
-      <button type="button" onClick={onBack} className={cn("min-h-11 self-start text-sm font-bold text-sea", FOCUS)}>
-        ← Modo deporte
-      </button>
-      <PageHeader title={episode.title} subtitle={subtitle || undefined} />
-      {notice}
-
-      <section aria-label="Reproductor" className="flex flex-col gap-3">
-        <AudioStatus audio={audio} />
-        {player.loaded ? (
-          <div className="flex flex-col gap-1">
-            <ProgressBar value={player.timeSec} max={player.durationSec} label="Progreso del episodio" tone="sea" />
-            <p className="flex justify-between text-sm font-bold tabular-nums text-ink-muted">
-              <span>
-                <span className="sr-only">Llevas </span>
-                {clock(player.timeSec)}
-              </span>
-              <span>
-                <span className="sr-only">de </span>
-                {clock(player.durationSec)}
-              </span>
-            </p>
+    <section aria-labelledby="episode-steps-title" className="flex flex-col gap-3 pb-2">
+      <h2 id="episode-steps-title" className="text-xl font-extrabold text-ink">
+        Los pasos
+      </h2>
+      {groups.map(({ episode, chapters }, g) => {
+        const first = firsts[g];
+        const list = (
+          <ol className="flex flex-col gap-2">
+            {chapters.map((chapter, c) => {
+              const i = first + c;
+              return (
+                <li
+                  key={c}
+                  ref={register(i)}
+                  aria-current={i === current ? "step" : undefined}
+                  className={cn(
+                    "flex flex-col gap-1 rounded-card border-2 p-4 transition-colors motion-reduce:transition-none",
+                    SCROLL_MARGIN,
+                    i === current ? PLAYING : "border-line bg-surface",
+                  )}
+                >
+                  <ChapterBody episode={episode} chapter={chapter} />
+                </li>
+              );
+            })}
+          </ol>
+        );
+        if (!titled) return <Fragment key={g}>{list}</Fragment>;
+        return (
+          <div key={g} className="flex flex-col gap-2">
+            <h3 className="pt-1 text-lg font-extrabold leading-snug text-ink">
+              <span className="text-ink-muted">{g + 1}. </span>
+              {episode.title}
+            </h3>
+            {list}
           </div>
-        ) : null}
-        <Controls loaded={player.loaded} playing={player.playing} timeSec={player.timeSec} durationSec={player.durationSec} />
-        {player.loaded ? (
-          <p className="text-sm text-ink-muted">
-            Puedes bloquear el móvil: sigue sonando. Desde la pantalla de bloqueo o los auriculares, «siguiente» y
-            «anterior» cambian de paso.
-          </p>
-        ) : null}
-        {audio.status === "ready" && audio.prepared.durationSec > 0 ? (
-          <SaveButton blob={audio.prepared.blob} title={episode.title} />
-        ) : null}
-      </section>
-
-      <section aria-labelledby="episode-steps-title" className="flex flex-col gap-3 pb-2">
-        <h2 id="episode-steps-title" className="text-xl font-extrabold text-ink">
-          Los pasos
-        </h2>
-        <ol className="flex flex-col gap-2">
-          {chapters.map((chapter, i) => (
-            <li
-              key={i}
-              ref={register(i)}
-              aria-current={i === current ? "step" : undefined}
-              className={cn(
-                "flex flex-col gap-1 rounded-card border-2 p-4 transition-colors motion-reduce:transition-none",
-                SCROLL_MARGIN,
-                i === current ? PLAYING : "border-line bg-surface",
-              )}
-            >
-              <ChapterBody episode={episode} chapter={chapter} />
-            </li>
-          ))}
-        </ol>
-      </section>
-    </>
+        );
+      })}
+    </section>
   );
 }
 

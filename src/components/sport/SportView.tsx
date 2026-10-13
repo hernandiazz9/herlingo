@@ -17,7 +17,19 @@ import { EpisodeForm, episodesLeft, type EpisodesToday } from "./EpisodeForm";
 import { EpisodeView } from "./EpisodeView";
 import { useEpisode } from "./episodes";
 import { useEpisodeGeneration } from "./generation";
-import { closeEpisode, EPISODE_PARAM, openEpisode, SPORT_SUBTITLE, SPORT_TITLE } from "./nav";
+import { JoinedView } from "./JoinedView";
+import {
+  closeEpisode,
+  EPISODE_PARAM,
+  isJoinSection,
+  JOIN_PARAM,
+  openEpisode,
+  openJoined,
+  SPORT_SUBTITLE,
+  SPORT_TITLE,
+  type JoinSection,
+} from "./nav";
+import { RouteEpisodes } from "./RouteEpisodes";
 import { SavedEpisodes } from "./SavedEpisodes";
 
 const ACCESS_INTRO =
@@ -30,10 +42,11 @@ interface EpisodeNotice {
 }
 
 /**
- * /deporte/: the home (the offline notice, the form for an AI episode, "Mis episodios", "De la
- * app") or, with `?ep=<id>`, one episode's player. Needs `coachAvailable(lang)` and the Prepárate
- * access code (the AI episodes, narrator and slow lines come from the coach backend). Uses
- * `useSearchParams`: render inside a Suspense boundary.
+ * /deporte/: the home (the offline notice, the form for an AI episode, "Mis episodios", "De tus
+ * rutas", "De la app"), with `?ep=<id>` one episode's player, with `?seguidos=<section>` a
+ * section's downloaded episodes joined into one audio («Escuchar seguidos»). Needs
+ * `coachAvailable(lang)` and the Prepárate access code (the AI episodes, narrator and slow lines
+ * come from the coach backend). Uses `useSearchParams`: render inside a Suspense boundary.
  */
 export function SportView() {
   const lang = useScreenLang();
@@ -50,7 +63,10 @@ export function SportView() {
 
 function Sport({ lang }: { lang: string }) {
   const hydrated = useHydrated();
-  const episodeId = useSearchParams().get(EPISODE_PARAM);
+  const params = useSearchParams();
+  const episodeId = params.get(EPISODE_PARAM);
+  const joinParam = params.get(JOIN_PARAM);
+  const joined = episodeId ? null : isJoinSection(joinParam) ? joinParam : null;
   const { hasCode } = useCoachAccess();
   const online = useOnline();
   /** The AI episode just received: playable even when the device could not store it (lost when you leave). */
@@ -64,12 +80,13 @@ function Sport({ lang }: { lang: string }) {
   const accessNotice = job?.status === "error" && job.error.kind === "unauthorized" ? job.error.message : null;
 
   // Opening or closing an episode (taps, the back button) swaps the view in place: move focus to its title.
-  const shown = useRef(episodeId);
+  const view = episodeId ?? (joined && `${JOIN_PARAM}:${joined}`);
+  const shown = useRef(view);
   useEffect(() => {
-    if (shown.current === episodeId) return;
-    shown.current = episodeId;
+    if (shown.current === view) return;
+    shown.current = view;
     focusPageHeading();
-  }, [episodeId]);
+  }, [view]);
 
   if (!hydrated) return <PageHeader title={SPORT_TITLE} subtitle={SPORT_SUBTITLE} />;
 
@@ -90,6 +107,10 @@ function Sport({ lang }: { lang: string }) {
     setNotice(null);
     closeEpisode();
   };
+  const join = (section: JoinSection) => {
+    setNotice(null);
+    openJoined(section);
+  };
 
   if (episodeId) {
     return (
@@ -102,6 +123,8 @@ function Sport({ lang }: { lang: string }) {
       />
     );
   }
+
+  if (joined) return <JoinedView key={joined} lang={lang} section={joined} onBack={back} />;
 
   return (
     <>
@@ -136,8 +159,9 @@ function Sport({ lang }: { lang: string }) {
           });
         }}
       />
-      <SavedEpisodes lang={lang} onOpen={open} />
-      <AppEpisodes lang={lang} onOpen={open} />
+      <SavedEpisodes lang={lang} onOpen={open} onJoin={join} />
+      <RouteEpisodes lang={lang} onOpen={open} onJoin={join} />
+      <AppEpisodes lang={lang} onOpen={open} onJoin={join} />
     </>
   );
 }

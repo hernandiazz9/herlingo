@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { ChevronRightIcon, TrashIcon } from "@/components/coach/icons";
 import { ConfirmDialog } from "@/components/coach/ConfirmDialog";
@@ -7,12 +8,14 @@ import { DANGER, FOCUS, registerBadge } from "@/components/coach/shared";
 import { SpeakerIcon } from "@/components/icons";
 import { SlowIcon } from "@/components/phrasebook/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
+import { episodeHref } from "@/components/sport/nav";
 import { Button, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
 import { routeLine, type CoachRoute, type CoachRouteLine, type CoachRouteTurn, type RouteListenStep } from "@/lib/coach";
 import { cn } from "@/lib/cn";
 import type { Playable } from "@/lib/content";
 import { recordListen } from "@/lib/progress/activity";
+import { routeEpisodeId } from "@/lib/sport/sources";
 import { PauseIcon, PlayIcon } from "./icons";
 import { useListenAll, type ListenAll } from "./listen-all";
 
@@ -75,6 +78,16 @@ export function RouteView({ route, notice, onBack, onDelete }: RouteViewProps) {
           <p className="text-sm text-ink-muted">Toca el altavoz para oír cada frase; el caracol la dice más despacio.</p>
         </div>
         <ListenAllButton listen={listen} />
+        <Link
+          href={episodeHref(routeEpisodeId(route.id))}
+          className={cn(
+            "pressable inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-button border-2 border-line bg-surface px-5 text-base font-bold tracking-wide text-sea [--ledge:var(--line)]",
+            FOCUS,
+          )}
+        >
+          <span aria-hidden="true">🏃</span>
+          Modo deporte
+        </Link>
         <ol className="flex flex-col gap-3">
           {route.turns.map((turn) => (
             <TurnBubble

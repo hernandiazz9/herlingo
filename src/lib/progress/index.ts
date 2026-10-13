@@ -193,6 +193,7 @@ export type XpSource =
   | "placement"
   | "coach"
   | "grammar"
+  | "sport"
   | "activity";
 
 /** One XP award, reported after the progress holding it has been saved. */

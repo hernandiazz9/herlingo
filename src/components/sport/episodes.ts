@@ -5,6 +5,7 @@ import type { CoachRoute, StoredEpisode } from "@/lib/coach";
 import { useSavedEpisodes, useSavedRoutes } from "@/lib/coach/use-coach";
 import { getPack } from "@/lib/content";
 import { compileEpisode, dialogueEpisodeId, episodeFromDialogue, episodeFromRoute, routeEpisodeId, type SportEpisode } from "@/lib/sport";
+import type { JoinSection } from "./nav";
 
 /** Id prefixes of the free episodes ("dlg:", "route:"), from the ids `@/lib/sport` builds. */
 const DIALOGUE_PREFIX = dialogueEpisodeId("");
@@ -81,4 +82,18 @@ export function estimateMinutes(episode: SportEpisode): number {
 export function clock(sec: number): string {
   const total = Math.max(0, Math.floor(Number.isFinite(sec) ? sec : 0));
   return `${Math.floor(total / 60)}:${String(total % 60).padStart(2, "0")}`;
+}
+
+/**
+ * The episodes of a home section, live, in its order: "Mis episodios" (AI, newest first), "De tus
+ * rutas" (saved routes, newest first) or "De la app" (the pack's dialogues, pack order).
+ */
+export function useSectionEpisodes(lang: string, section: JoinSection): SportEpisode[] {
+  const { episodes } = useSavedEpisodes(lang);
+  const { routes } = useSavedRoutes(lang);
+  return useMemo(() => {
+    if (section === "mis") return episodes;
+    if (section === "rutas") return routes.map(episodeFromRoute);
+    return dialogueEpisodes(lang);
+  }, [section, episodes, routes, lang]);
 }

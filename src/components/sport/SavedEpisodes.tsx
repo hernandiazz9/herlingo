@@ -8,15 +8,27 @@ import type { StoredEpisode } from "@/lib/coach";
 import { useSavedEpisodes } from "@/lib/coach/use-coach";
 import { cn } from "@/lib/cn";
 import { estimateMinutes } from "./episodes";
-import { episodeHref } from "./nav";
+import { JoinButton } from "./JoinedView";
+import { episodeHref, type JoinSection } from "./nav";
 
 function shortDate(iso: string): string {
   const d = new Date(iso);
   return Number.isNaN(d.getTime()) ? "" : d.toLocaleDateString("es-ES", { day: "numeric", month: "short" });
 }
 
-/** "Mis episodios": the AI episodes saved on this device, newest first; open one or delete it (confirmed). */
-export function SavedEpisodes({ lang, onOpen }: { lang: string; onOpen: (id: string) => void }) {
+/**
+ * "Mis episodios": the AI episodes saved on this device, newest first; open one or delete it
+ * (confirmed); «Escuchar seguidos» with two or more.
+ */
+export function SavedEpisodes({
+  lang,
+  onOpen,
+  onJoin,
+}: {
+  lang: string;
+  onOpen: (id: string) => void;
+  onJoin: (section: JoinSection) => void;
+}) {
   const { episodes, remove } = useSavedEpisodes(lang);
   const minutes = useMemo(() => new Map(episodes.map((e) => [e.id, estimateMinutes(e)])), [episodes]);
   const [toDelete, setToDelete] = useState<StoredEpisode | null>(null);
@@ -35,6 +47,7 @@ export function SavedEpisodes({ lang, onOpen }: { lang: string; onOpen: (id: str
         </h2>
         <p className="text-sm text-ink-muted">Se guardan en este móvil con su audio: escucharlos no gasta nada y funcionan sin conexión.</p>
       </div>
+      {episodes.length > 1 ? <JoinButton section="mis" onJoin={onJoin} /> : null}
       {episodes.length === 0 ? (
         <p className="rounded-card border-2 border-dashed border-line p-6 text-center text-ink-muted">
           Aún no has preparado ningún episodio. Los que prepares aparecerán aquí.

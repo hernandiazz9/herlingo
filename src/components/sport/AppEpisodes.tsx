@@ -4,10 +4,22 @@ import { useMemo, type MouseEvent } from "react";
 import { FOCUS } from "@/components/coach/shared";
 import { cn } from "@/lib/cn";
 import { dialogueEpisodes, estimateMinutes } from "./episodes";
-import { episodeHref } from "./nav";
+import { JoinButton } from "./JoinedView";
+import { episodeHref, type JoinSection } from "./nav";
 
-/** "De la app": an episode per dialogue of the pack (title, description, estimated length). */
-export function AppEpisodes({ lang, onOpen }: { lang: string; onOpen: (id: string) => void }) {
+/**
+ * "De la app": an episode per dialogue of the pack (title, description, estimated length);
+ * «Escuchar seguidos» with two or more.
+ */
+export function AppEpisodes({
+  lang,
+  onOpen,
+  onJoin,
+}: {
+  lang: string;
+  onOpen: (id: string) => void;
+  onJoin: (section: JoinSection) => void;
+}) {
   const episodes = useMemo(
     () => dialogueEpisodes(lang).map((episode) => ({ episode, minutes: estimateMinutes(episode) })),
     [lang],
@@ -27,6 +39,7 @@ export function AppEpisodes({ lang, onOpen }: { lang: string; onOpen: (id: strin
         </h2>
         <p className="text-sm text-ink-muted">Los diálogos del curso, narrados paso a paso.</p>
       </div>
+      {episodes.length > 1 ? <JoinButton section="app" onJoin={onJoin} /> : null}
       {episodes.length === 0 ? (
         <p className="rounded-card border-2 border-dashed border-line p-6 text-center text-ink-muted">
           Este curso todavía no tiene diálogos.
