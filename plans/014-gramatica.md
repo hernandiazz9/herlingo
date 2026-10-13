@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:29Z 💻
+- Updated: 2026-10-13 06:36Z 💻
 - Writer: 💻 desktop
 - Branch: plan-014-gramatica (local, not pushed)
-- Next step: T163 + T164 running; then T165/T167/T169–T171 (2 at a time)
+- Next step: T165 + T167 running; then T169–T171 (Sonnet), T166, T168
 
 ## Shared contract (all tasks read this)
 
@@ -54,7 +54,7 @@ Worktree setup: npm ci
 - Outcome: src/lib/grammar/ (reads.ts store v1, markGrammarRead 3 XP/day/id cap 15 via recordReviewResult 'grammar', hook), cleared by resetProgress · 7de37571 · verify ✓ 💻 · not checked: none (no UI)
 
 ## T165 — Gramática pages (index, verb page, topic page)
-- Status: pending
+- Status: done
 - Depends on: T163
 - Where: any
 - Goal: Nested section `grammar` (parent `phrasebook`) in `navigation.ts`; `/gramatica/` (Verbos grid + Temas list of the active language) and `/gramatica/[id]/` for every pack's verbs and topics (static params, owner via `findGrammarPack`), as described in docs/grammar.md. No "Leído" button and no entry points yet (T166).
@@ -64,7 +64,7 @@ Worktree setup: npm ci
   - `npm run build` writes `out/gramatica/index.html`, `out/gramatica/verb.essere/index.html` and a page for one Italian grammar card.
   - `npm run verify` → exit 0.
   - Hand check (PC): iPhone, light and dark: grid tiles, tense chips, row tap plays "io sono", irregular colour, example audio, topic page.
-- Outcome:
+- Outcome: nested section grammar (parent phrasebook), /gramatica/ index + /gramatica/<id>/ for every visible pack (94 pages), tense chips, rows with normal + slow audio, irregular in terracotta, shared GrammarCardBody · 1860167a · verify ✓ 💻 · not checked: visual (queued)
 
 ## T166 — "Leído" button, read badges and entry points
 - Status: pending
@@ -79,7 +79,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T167 — Grammar drills in Repaso, SRS on first read
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent aeed9052586a45fcd · since 06:29Z)
 - Depends on: T163, T164
 - Where: any
 - Goal: `grammarDrills()` builds fill-gap drills from card/verb `drills` and from verb forms (docs/grammar.md "Exercises"); the first read of a drillable id adds it to `progress.srs` (box 0); `dueItemIds` and SRS scheduling accept drillable ids (today they skip `kind === "grammar"`); Repaso gives each due drillable id 2 drills and records outcomes on the id.
@@ -181,6 +181,7 @@ Worktree setup: npm ci
 ## Review queue
 
 ## Visual checks queue
+- [ ] T165 @1860167a — /gramatica/ grid + temas, verb.essere chips/rows/audio/irregular colour, gram.tu-lei page; light + dark, iPhone (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-12 plan: Gramática lives at /gramatica/, nested under the Frases tab; entries from the Frasario and a Ruta card that replaces the "Fichas de gramática" sheet. (Hernán)
@@ -195,6 +196,7 @@ Worktree setup: npm ci
 - 2026-10-13 plan: content tasks T169–T172 run on Sonnet to save tokens; T173 review and code tasks on Opus. (Hernán)
 - 2026-10-13 T164: XP recorded only when > 0; bad 'last' keeps the count; grammar XP shows no toast yet (T166 decides feedback). (agent)
 - 2026-10-13 T163: scripts/audio/plan.ts edited (outside scope) so npm run audio includes grammar playables; extra helper getGrammarTenses(pack); drill text = full sentence with before/after; essere marks only sii/siate irregular. (agent)
+- 2026-10-13 T165: every grammar card gets a page (verb-linked ones not listed); slow-audio snail button per row; chips shown even with one tense; levelled packs show current level only; grammarHref() in src/components/grammar/GrammarScreen.tsx. (agent)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -206,3 +208,6 @@ Worktree setup: npm ci
 - 2026-10-13 06:20Z 💻 T164 launched · attempt 1 · agent a909563e334169d27
 - 2026-10-13 06:24Z 💻 T164 done → 7de37571 · verify ✓
 - 2026-10-13 06:29Z 💻 T163 done → 37855e6a · verify ✓
+- 2026-10-13 06:29Z 💻 T165 launched · attempt 1 · agent a850158fa3794dd66
+- 2026-10-13 06:29Z 💻 T167 launched · attempt 1 · agent aeed9052586a45fcd
+- 2026-10-13 06:36Z 💻 T165 done → 1860167a · verify ✓
