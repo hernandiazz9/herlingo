@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:16Z 💻
+- Updated: 2026-10-13 11:31Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
-- Branch: plan-015-modo-rapido · pushed
+- Branch: plan-015-modo-rapido · pushed · main = this branch (T175–T180)
 - Next step: T181: Hernán checks on the iPhone (LAN fake mode: npm run build && COACH_LAN=1 npm run start:coach, code dev-owner); findings → fix tasks
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
 - Needs Hernán: T181 iPhone check; deploy only with his OK
@@ -173,3 +173,4 @@ Worktree setup: npm ci
 - 2026-10-13 11:10Z 💻 T179 done · worktree-agent-a4ed73769cf3d33c3 → db9e8c63 · verify ✓
 - 2026-10-13 11:10Z 💻 T180 launched · attempt 1 · agent a72726e9ceb59ebaf
 - 2026-10-13 11:16Z 💻 T180 done · worktree-agent-a72726e9ceb59ebaf → 328f9687 · verify ✓
+- 2026-10-13 11:31Z 💻 merged origin/main (docs/ideas.md) · verify ✓ · pushed to main with Hernán's OK (T175–T180; T181 still pending)
