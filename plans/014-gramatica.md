@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 13:31Z 💻
+- Updated: 2026-10-13 13:36Z 💻
 - Writer: released 11:47Z by 💻 → continue on 💻
 - Branch: main (plan-014-gramatica merged)
-- Next step: only T174 left (audio); then Hernán's iPhone pass and OK for merge/PR
+- Next step: T184 + T185 running; Gemini Italian audio running in Hernán's terminal (uncommitted public/audio/it)
 - Needs Hernán: visual queue (5) · T173 doubts (una amica…, l'accompagno) · push main with the audio?
 
 ## Shared contract (all tasks read this)
@@ -180,7 +180,7 @@ Worktree setup: npm ci
 - Outcome: 383 Italian mp3 (verbs, examples, drills) via edge-tts; 5 transient 403s retried; --strict-audio ✓ for it; cba untouched · 30fcf8e9 · not checked: iPhone pass (queue)
 
 ## T184 — «Escuchar todo» on grammar pages
-- Status: pending
+- Status: done
 - Depends on: T166
 - Where: any
 - Goal: An «Escuchar todo» button on every verb page (plays the selected tense: each form in row order, as its row plays it, then the tense example; the row playing is highlighted; a short pause between items) and every topic page (plays its examples in order). Tap again = stop; leaving the page, switching tense or tapping any other play button stops it. Hernán asked for it (2026-10-13).
@@ -189,10 +189,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run verify` → exit 0.
   - Hand check (PC): iPhone: Escuchar todo on essere (presente) plays io sono → … → loro sono → example with the row highlighted; stop works; topic page plays its examples; light and dark.
-- Outcome:
+- Outcome: play-all hook on speakSequence (600 ms pause, lemon frame on the playing row, stops on tap/tense change/leave); verb + topic pages; Modo rápido untouched · 1056f44e · verify ✓
 
 ## T185 — Italian grammar: more explanation and examples where needed
-- Status: pending
+- Status: done
 - Depends on: T173
 - Where: any
 - Goal: Read the 12 verbs and 9 topic cards as a Spanish-speaking A1–A2 learner and add text only where it helps (Hernán, 2026-10-13: "si ves la necesidad"): a clearer `summary`/`points` or tense `notes` (when to use the tense, the auxiliary, a trap for Spanish speakers), and 1–3 more `examples` on topic cards that have too few. Within the current schema; nothing everywhere "just because".
@@ -201,7 +201,7 @@ Worktree setup: npm ci
 - Done when:
   - Final message lists each change (file: what, why) in ≤ 15 lines.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: notes on essere/andare (sto bene, passato = he sido/fui, non + infinitivo), voi for groups in tu-lei, +5 examples (tu-lei, vorrei, pronomi-diretti) appended · d1101b02 · verify ✓ · audio for 5 new examples at next npm run audio
 
 ## Review queue
 
@@ -211,6 +211,7 @@ Worktree setup: npm ci
 - [ ] T166 @76c17b63 — Leído ×1 + XP once, ×2 no XP after leaving; badges; Frasario row and Ruta card open /gramatica/; light + dark (queued 2026-10-13 💻)
 - [ ] T168 @fd818012 — a lesson after reading two verbs shows one drill each at the end; length unchanged (queued 2026-10-13 💻)
 - [ ] T174 @30fcf8e9 — final iPhone pass of the whole Gramática feature with real audio (queued 2026-10-13 💻)
+- [ ] T184 @1056f44e — Escuchar todo on a verb (rows highlighted, then example) and a topic; stop; light + dark (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-12 plan: Gramática lives at /gramatica/, nested under the Frases tab; entries from the Frasario and a Ruta card that replaces the "Fichas de gramática" sheet. (Hernán)
@@ -274,3 +275,7 @@ Worktree setup: npm ci
 - 2026-10-13 11:47Z 💻 T174 blocked: all 405 Italian lines 403 from edge-tts; partial manifest change reverted
 - 2026-10-13 11:53Z 💻 merged origin/main (plan 015) into plan-014-gramatica: conflicts navigation.ts (grammar + quick sections) and ReviewView.tsx (drills + useHideQuickFab) resolved; verify ✓; main fast-forwarded and pushed
 - 2026-10-13 12:24Z 💻 T174 done (Hernán ran npm run audio; orchestrator retried 4 failed lines)
+- 2026-10-13 13:32Z 💻 T184 launched · agent aea97f0357358c3f7
+- 2026-10-13 13:32Z 💻 T185 launched (Sonnet) · agent a8a65c75d0d3b6dc3
+- 2026-10-13 13:35Z 💻 T185 done → d1101b02
+- 2026-10-13 13:36Z 💻 T184 done → 1056f44e
