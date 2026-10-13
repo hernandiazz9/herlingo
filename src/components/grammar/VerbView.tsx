@@ -1,23 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState, type Ref } from "react";
 import { MiniPlay, SlowIcon } from "@/components/exercises/shared";
 import { SpeakerIcon } from "@/components/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Card, TargetText } from "@/components/ui";
-import { speak } from "@/lib/audio";
+import { speak, type SequenceLine } from "@/lib/audio";
 import { cn } from "@/lib/cn";
 import { getGrammarTenses, getPack, getVerb, glossOf, type Verb, type VerbForm } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
 import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { GrammarScreen } from "./GrammarScreen";
+import { PLAYING_FRAME, PlayAllButton, usePlayAll } from "./play-all";
 import { GrammarReadButton } from "./ReadButton";
 
 /**
  * A verb page of pack `lang`: the infinitive (tap = audio), its gloss and notes, then one chip per
  * tense the verb has (pack.json order, the first selected) and that tense's forms. Tapping a row
  * plays it ("io sono"; snail = slow); irregular forms are in another colour. Below the table: the
- * tense notes and its example with audio. "Leído" at the end.
+ * tense notes and its example with audio. «Escuchar todo» plays the selected tense: each form in
+ * row order, then the example, the line playing highlighted. "Leído" at the end.
  */
 export function VerbView({ id, lang }: { id: string; lang: string }) {
   const verb = getVerb(id, getPack(lang));
@@ -35,6 +37,12 @@ function VerbPage({ verb, lang }: { verb: Verb; lang: string }) {
   const titles = new Map(getGrammarTenses(getPack(lang)).map((t) => [t.id, t.title]));
   const [tenseId, setTenseId] = useState(verb.tenses[0]?.id);
   const tense = verb.tenses.find((t) => t.id === tenseId) ?? verb.tenses[0];
+  /** The forms in row order (as each row plays them), then the example: line `forms.length`. */
+  const lines = useMemo<SequenceLine[]>(
+    () => (tense ? [...tense.forms, tense.example].map((input) => ({ input, options: { lang } })) : []),
+    [tense, lang],
+  );
+  const player = usePlayAll(lines);
 
   return (
     <div className="flex flex-col gap-5">
@@ -80,7 +88,10 @@ function VerbPage({ verb, lang }: { verb: Verb; lang: string }) {
                 key={t.id}
                 type="button"
                 aria-pressed={active}
-                onClick={() => setTenseId(t.id)}
+                onClick={() => {
+                  if (!active) player.cancel();
+                  setTenseId(t.id);
+                }}
                 lang={gloss.tag}
                 className={cn(
                   "min-h-11 shrink-0 rounded-full border-2 px-4 text-base font-bold whitespace-nowrap",
@@ -97,9 +108,10 @@ function VerbPage({ verb, lang }: { verb: Verb; lang: string }) {
 
       {tense ? (
         <>
+          <PlayAllButton player={player} />
           <ul className="flex flex-col gap-2">
-            {tense.forms.map((form) => (
-              <FormRow key={form.audioKey} form={form} lang={lang} />
+            {tense.forms.map((form, i) => (
+              <FormRow key={form.audioKey} form={form} lang={lang} playing={player.playing === i} rowRef={player.itemRef(i)} />
             ))}
           </ul>
           {tense.forms.some((f) => f.irregular) ? (
@@ -115,7 +127,13 @@ function VerbPage({ verb, lang }: { verb: Verb; lang: string }) {
               {glossOf(tense.notes, gloss.lang)}
             </p>
           ) : null}
-          <Card className="flex flex-col gap-2 p-4">
+          <div
+            ref={player.itemRef(tense.forms.length)}
+            className={cn(
+              "flex flex-col gap-2 rounded-card border-2 p-4",
+              player.playing === tense.forms.length ? PLAYING_FRAME : "border-line bg-surface",
+            )}
+          >
             <p className="text-sm font-bold uppercase tracking-wider text-terracotta-deep">{copy.grammarExample}</p>
             <div className="flex items-center gap-3">
               <MiniPlay audio={tense.example} />
@@ -130,7 +148,7 @@ function VerbPage({ verb, lang }: { verb: Verb; lang: string }) {
                 </TargetText>
               </span>
             </div>
-          </Card>
+          </div>
         </>
       ) : null}
       <GrammarReadButton key={verb.id} id={verb.id} lang={lang} />
@@ -138,12 +156,25 @@ function VerbPage({ verb, lang }: { verb: Verb; lang: string }) {
   );
 }
 
-/** One form: person · form (big) · gloss (small). Tap = audio; the snail plays it slowly. */
-function FormRow({ form, lang }: { form: VerbForm; lang: string }) {
+/** One form: person · form (big) · gloss (small). Tap = audio; the snail plays it slowly. `playing`: «Escuchar todo» is on it. */
+function FormRow({
+  form,
+  lang,
+  playing,
+  rowRef,
+}: {
+  form: VerbForm;
+  lang: string;
+  playing: boolean;
+  rowRef: Ref<HTMLLIElement>;
+}) {
   const gloss = useGlossLang(lang);
   const copy = useLearnCopy();
   return (
-    <li className="flex items-center gap-1 rounded-card border-2 border-line bg-surface pr-2">
+    <li
+      ref={rowRef}
+      className={cn("flex items-center gap-1 rounded-card border-2 pr-2", playing ? PLAYING_FRAME : "border-line bg-surface")}
+    >
       <button
         type="button"
         onClick={() => void speak(form, { lang })}

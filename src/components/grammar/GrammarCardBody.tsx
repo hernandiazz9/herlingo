@@ -2,15 +2,26 @@
 
 import { Card, TargetText } from "@/components/ui";
 import { MiniPlay, useLessonGloss, useLessonLang } from "@/components/exercises/shared";
+import { cn } from "@/lib/cn";
 import { glossOf, type GlossText, type GrammarCard } from "@/lib/content";
+import { PLAYING_FRAME, PlayAllButton, type PlayAll } from "./play-all";
 
 /**
  * A grammar card's content (title, summary, points, table, examples with audio), as a fragment for
  * a flex column. Shared by the lesson tip (`GrammarTip`) and the Gramática topic page, which shows
  * the title in its page header (`heading={false}`). Language and gloss from the enclosing session
- * (`LessonLangContext`), else the screen's.
+ * (`LessonLangContext`), else the screen's. With `player` (the topic page), «Escuchar todo» above
+ * the examples plays them in order (`player` built on `card.examples`), the one playing highlighted.
  */
-export function GrammarCardBody({ card, heading = true }: { card: GrammarCard; heading?: boolean }) {
+export function GrammarCardBody({
+  card,
+  heading = true,
+  player,
+}: {
+  card: GrammarCard;
+  heading?: boolean;
+  player?: PlayAll;
+}) {
   const lang = useLessonLang();
   const gloss = useLessonGloss();
   const g = (v: GlossText) => glossOf(v, gloss.lang);
@@ -60,10 +71,19 @@ export function GrammarCardBody({ card, heading = true }: { card: GrammarCard; h
           </table>
         </Card>
       ) : null}
+      {card.examples.length && player ? <PlayAllButton player={player} /> : null}
       {card.examples.length ? (
-        <ul className="flex flex-col gap-2">
-          {card.examples.map((ex) => (
-            <li key={ex.audioKey} className="flex items-center gap-3">
+        <ul className={cn("flex flex-col", player ? "gap-1" : "gap-2")}>
+          {card.examples.map((ex, i) => (
+            <li
+              key={ex.audioKey}
+              ref={player?.itemRef(i)}
+              className={cn(
+                "flex items-center gap-3",
+                player && "-mx-2.5 rounded-card border-2 px-2 py-1",
+                player && (player.playing === i ? PLAYING_FRAME : "border-transparent"),
+              )}
+            >
               <MiniPlay audio={ex} />
               <span>
                 <TargetText text={ex.text} lang={lang}>

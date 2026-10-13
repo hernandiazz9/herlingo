@@ -39,12 +39,17 @@ el hueco".
   selected. One row per form: person · form (big) · gloss (small); tapping a row plays it
   ("io sono"), with the usual normal/slow audio. Irregular forms in another colour (tokens only).
   Below the table: the tense `notes` and its example sentence with audio.
+- **«Escuchar todo»** above the table plays the selected tense hands-free: each form in row order
+  (as its row plays it), then the tense example, a short pause between them, the line playing
+  highlighted (lemon, like the story reader). Tap again («Parar»), switching tense, tapping any
+  other play button or leaving the page stops it.
 - "Leído" button at the end (below).
 
 ## Topic page
 
 The grammar card as lessons show it (title, summary, points, table, examples with audio), full
-page, plus the "Leído" button. No drills on the page: drills are exercises.
+page, plus the "Leído" button. No drills on the page: drills are exercises. «Escuchar todo» above
+the examples plays them in order, with the same rules as on a verb page.
 
 ## "Leído"
 
