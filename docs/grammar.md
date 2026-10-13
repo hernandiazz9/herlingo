@@ -68,11 +68,18 @@ page, plus the "Leído" button. No drills on the page: drills are exercises.
   - verb forms: before = person label, gap = the form, options = other forms of the same tense
     (distinct texts), gloss = the form's gloss ("nosotros vamos"); tenses mixed, the first tense
     weighted more.
-- **Repaso**: due drillable ids join the due items; each gives 2 drills. Outcomes are recorded on
-  the entry id (SRS as any item).
-- **Lessons**: up to 2 production slots of each lesson are given to drills from read entries,
-  picking first the ones with lapses, then the lowest SRS box, then the least read. Lesson length
-  stays the same. Nothing read → lessons are unchanged.
+- **Repaso**: due drillable ids join the due items (they count among the review's entries). Each
+  gives 2 drills **on top of** the review size, which is computed from the other items only; the
+  drills are spread among the production exercises. Outcomes are recorded on the entry id (SRS as
+  any item).
+- **Lessons**: up to 2 production slots of each pack lesson (never more than half of them) are
+  given to drills, so lesson length stays the same. Candidates are all the read drillable entries
+  of the pack, due or not, ranked by most lapses, then the lowest SRS box, then the fewest reads
+  (`lessonDrillIds()` in `@/lib/grammar`). Slots go one drill per entry from the top (two entries
+  read → one drill each; one entry → both drills from it), spread among the production exercises;
+  outcomes are recorded on the entry id as in Repaso. The drills use their own random seed, so
+  the rest of the lesson is the session it would have been minus its last production exercises.
+  Nothing read → lessons are unchanged. Repaso sessions get only their own drills.
 
 ## Out of scope (v1)
 

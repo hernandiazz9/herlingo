@@ -12,7 +12,8 @@
  * a new-word card comes before the first exercise of each vocab word never seen before.
  *
  * Gramática: with `drills` (read, due drillable entries), each entry adds `REVIEW_DRILLS` fill-gap
- * drills, spread among the production exercises (docs/grammar.md, "Exercises").
+ * drills, spread among the production exercises (docs/grammar.md, "Exercises"). With `lessonDrills`
+ * (read drillable entries, best first), up to `LESSON_DRILLS` production slots become their drills.
  */
 import {
   getLessonItems,
@@ -29,7 +30,7 @@ import {
   type QA,
   type Vocab,
 } from "@/lib/content";
-import { grammarDrills, REVIEW_DRILLS } from "./grammar";
+import { grammarDrills, LESSON_DRILLS, REVIEW_DRILLS } from "./grammar";
 import { normalizeAnswer, toTiles } from "./normalize";
 import { createRng, type Rng } from "./random";
 import type { ChoiceOption, Exercise, ExerciseType, GrammarStep, IntroStep, MatchPair, PictureOption, SessionStep } from "./types";
@@ -53,6 +54,13 @@ export interface GenerateOptions {
    * with or without them. Keep them out of the lesson's `items`.
    */
   drills?: readonly string[];
+  /**
+   * Read drillable Gramática entries, best first (`lessonDrillIds()` from `@/lib/grammar`): their
+   * fill-gap drills take up to `LESSON_DRILLS` production slots (at most half of them), one per
+   * entry while there are entries. Same session length; drawn with their own rng, so an empty list
+   * gives exactly the session without it. Keep them out of the lesson's `items`.
+   */
+  lessonDrills?: readonly string[];
 }
 
 type Meaningful = Phrase | Vocab | Expression;
@@ -110,18 +118,22 @@ export function generateSession(lesson: Lesson, pack: Pack, options: GenerateOpt
   const rec = recItems.map((i) => ctx.recognition(i));
   const covered = new Set([...recItems.map((i) => i.id), ...matched]);
 
-  // 3. Production: uncovered items first (teaching order), then the rest shuffled, cycling.
+  // 3. Production: uncovered items first (teaching order), then the rest shuffled, cycling. Read
+  // Gramática entries take up to `LESSON_DRILLS` of these slots (own rng: the rest is unchanged).
+  const prodSlots = slots - rec.length;
+  const drillRng = createRng(`${lesson.id}|${options.seed}|drills`);
+  const inLesson = slotDrills(options.lessonDrills ?? [], pack, options.gloss, drillRng, Math.min(LESSON_DRILLS, Math.floor(prodSlots / 2)));
   const prod: Exercise[] = [];
   const firstRound = [...items.filter((i) => !covered.has(i.id)), ...rng.shuffle(items.filter((i) => covered.has(i.id)))];
-  for (let round = 0; prod.length < slots - rec.length && round < 6; round++) {
+  for (let round = 0; prod.length < prodSlots - inLesson.length && round < 6; round++) {
     const order = round === 0 ? firstRound : rng.shuffle(items);
     for (const item of order) {
-      if (prod.length >= slots - rec.length) break;
+      if (prod.length >= prodSlots - inLesson.length) break;
       prod.push(ctx.production(item, speaking));
     }
   }
 
-  const exercises: Exercise[] = [...rec, ...(match ? [match] : []), ...spread(prod, drillsFor())];
+  const exercises: Exercise[] = [...rec, ...(match ? [match] : []), ...spread(spread(prod, inLesson), drillsFor())];
 
   // 4. Grammar tips: after the last recognition exercise that comes before the card in teaching order.
   const steps: SessionStep[] = [...exercises];
@@ -465,6 +477,20 @@ class Ctx {
 function entryDrills(ids: readonly string[], pack: Pack, gloss: GlossLang, rng: Rng): Exercise[] {
   const per = ids.map((id) => grammarDrills(id, pack, gloss, rng, REVIEW_DRILLS));
   return Array.from({ length: REVIEW_DRILLS }, (_, n) => per.flatMap((list) => list[n] ?? [])).flat();
+}
+
+/**
+ * Up to `slots` drills for lesson production slots from the entries `ids` (best first): one per
+ * entry in order, then a second round…; entries without usable drills are skipped.
+ */
+function slotDrills(ids: readonly string[], pack: Pack, gloss: GlossLang, rng: Rng, slots: number): Exercise[] {
+  const per: Exercise[][] = [];
+  for (const id of ids) {
+    if (per.length >= slots) break;
+    const list = grammarDrills(id, pack, gloss, rng, slots);
+    if (list.length) per.push(list);
+  }
+  return Array.from({ length: slots }, (_, n) => per.flatMap((list) => list[n] ?? [])).flat().slice(0, slots);
 }
 
 /** `extra` spread evenly among `list` (none before its first entry). */

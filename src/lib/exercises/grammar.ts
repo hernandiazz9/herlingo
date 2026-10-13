@@ -14,6 +14,8 @@ import type { FillGapExercise } from "./types";
 
 /** Drills each due drillable entry gets in a review session. */
 export const REVIEW_DRILLS = 2;
+/** Most production slots of a lesson given to drills of read entries (never more than half of them). */
+export const LESSON_DRILLS = 2;
 
 /** Most options of a drill, the answer included. */
 const MAX_OPTIONS = 4;

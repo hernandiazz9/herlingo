@@ -17,6 +17,7 @@ import {
   type LessonResult,
   type SessionStep,
 } from "@/lib/exercises";
+import { lessonDrillIds } from "@/lib/grammar";
 import { getProgress, type Progress } from "@/lib/progress";
 import { getSettings } from "@/lib/progress/settings";
 import {
@@ -50,7 +51,11 @@ export interface LessonPlayerProps {
   sessionSize?: number;
   /** Intro copy under the title (default: the lesson one). */
   intro?: string;
-  /** Gramática entry ids to drill on top of the lesson items (`GenerateOptions.drills`; Repaso). */
+  /**
+   * Gramática entry ids to drill on top of the lesson items (`GenerateOptions.drills`; Repaso).
+   * A pack lesson (`lessonId`, no `lesson`) instead gives up to 2 production slots to drills of
+   * the entries read (`GenerateOptions.lessonDrills`).
+   */
   drills?: readonly string[];
 }
 
@@ -125,6 +130,7 @@ export function LessonPlayer({ lessonId, lesson: adHoc, lang, seed, onComplete, 
       known: (id) => known.has(id),
       gloss: gloss.lang,
       drills,
+      lessonDrills: adHoc ? undefined : lessonDrillIds(lang),
     });
     const q = steps.map((step) => ({ step, attempt: 0, uid: step.key }));
     run.current = { seed: s, startedAt: now(), firstTry: new Set(), items: new Map() };

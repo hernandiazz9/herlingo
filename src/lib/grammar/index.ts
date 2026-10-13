@@ -2,10 +2,11 @@
  * Gramática "Leído" (docs/grammar.md): read counts per grammar entry and the small daily-capped
  * reading XP. Framework-free; React reads it with `useGrammarReads()` from `./use-grammar-reads`.
  */
-import { getPack, hasPack, isDrillable } from "@/lib/content";
-import { recordReviewResult, startReviewing } from "@/lib/progress";
+import { getPack, hasPack, isDrillable, type Pack } from "@/lib/content";
+import { getProgress, recordReviewResult, startReviewing } from "@/lib/progress";
 import { dayKey } from "@/lib/progress/dates";
-import { getGrammarReads, writeGrammarReads } from "./reads";
+import type { SrsEntry } from "@/lib/srs";
+import { getGrammarReads, writeGrammarReads, type GrammarReads } from "./reads";
 
 export {
   clearGrammarReads,
@@ -59,4 +60,23 @@ export function markGrammarRead(lang: string, id: string, now = Date.now()): { c
     );
   }
   return { count, xp };
+}
+
+/**
+ * The read drillable entries of `pack` (a verb, or a card with `drills`), best first for lesson
+ * drills (docs/grammar.md "Exercises"): most lapses, then the lowest SRS box, then the least read
+ * (ties by id). An entry with no SRS state counts as box 0 without lapses.
+ */
+export function rankDrillEntries(reads: GrammarReads, srs: Readonly<Record<string, SrsEntry>>, pack: Pack): string[] {
+  const ranked = Object.entries(reads.reads)
+    .filter(([id]) => isDrillable(id, pack))
+    .map(([id, read]) => ({ id, n: read.n, lapses: srs[id]?.lapses ?? 0, box: srs[id]?.box ?? 0 }));
+  ranked.sort((a, b) => b.lapses - a.lapses || a.box - b.box || a.n - b.n || a.id.localeCompare(b.id));
+  return ranked.map((e) => e.id);
+}
+
+/** `rankDrillEntries` for pack `lang` from this device's reads and progress (empty when nothing is read). */
+export function lessonDrillIds(lang: string): string[] {
+  if (!lang || !hasPack(lang)) return [];
+  return rankDrillEntries(getGrammarReads(lang), getProgress(lang).srs, getPack(lang));
 }
