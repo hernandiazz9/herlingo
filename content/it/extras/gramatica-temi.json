@@ -322,6 +322,239 @@
         }
       ],
       "tags": ["preposizione", "articolo"]
+    },
+    {
+      "id": "gram.pronomi-diretti",
+      "order": 70,
+      "title": "Pronombres de objeto directo: mi, ti, lo, la, ci, vi, li, le",
+      "summary": "Sustituyen a la cosa o la persona de la que hablas, como «lo, la, los, las» en español, y van antes del verbo: «Lo prendo» (me lo llevo), «Li ho comprati» (los he comprado).",
+      "points": [
+        "«lo» (masculino) y «la» (femenino) en singular; «li» (masculino) y «le» (femenino) en plural: «il caffè → lo», «la camicia → la», «i biglietti → li», «le olive → le».",
+        "Van delante del verbo conjugado: «Lo prendo», «Non li trovo». Con un infinitivo se pegan a él (sin la «e» final): «Vorrei visitarlo».",
+        "«lo» y «la» pierden la vocal delante de «ho, hai, ha, hanno»: «L'ho perso», «L'ho comprata». «li» y «le» no se apostrofan: «Li ho comprati».",
+        "Con «ho, hai, ha…» el participio concuerda con el pronombre: «Li ho comprati» (biglietti, masculino plural), «Le ho comprate» (olive, femenino plural).",
+        "«mi, ti, ci, vi» son me, te, nos, os: «Mi aiuta?», «Ti chiamo domani», «Ci aspetta alla stazione».",
+        "«La» con mayúscula puede ser usted: «La ringrazio» (le doy las gracias)."
+      ],
+      "table": [
+        ["pronombre", "significa", "ejemplo"],
+        ["mi", "me", "Mi aiuta?"],
+        ["ti", "te", "Ti chiamo domani."],
+        ["lo", "lo (masculino)", "Il caffè? Lo prendo."],
+        ["la", "la (femenino)", "La camicia? La prendo."],
+        ["ci", "nos", "Ci aspetta alla stazione."],
+        ["vi", "os", "Vi aspetto qui."],
+        ["li", "los (masculino plural)", "I biglietti? Li ho comprati."],
+        ["le", "las (femenino plural)", "Le olive? Le prendo."]
+      ],
+      "examples": [
+        { "text": "Il caffè? Lo prendo.", "es": "¿El café? Lo tomo." },
+        { "text": "Non trovo il passaporto: l'ho perso.", "es": "No encuentro el pasaporte: lo he perdido." },
+        { "text": "Dove sono i biglietti? Non li trovo.", "es": "¿Dónde están los billetes? No los encuentro." },
+        { "text": "Mi aiuta, per favore?", "es": "¿Me ayuda, por favor?" },
+        { "text": "Ti chiamo domani.", "es": "Te llamo mañana." }
+      ],
+      "drills": [
+        {
+          "text": "Il caffè? Sì, ___ prendo, grazie.",
+          "answer": "lo",
+          "distractors": ["la", "li", "le"],
+          "es": "¿El café? Sí, lo tomo, gracias."
+        },
+        {
+          "text": "Questa camicia mi piace: ___ compro.",
+          "answer": "la",
+          "distractors": ["lo", "li", "le"],
+          "es": "Esta camisa me gusta: me la compro."
+        },
+        {
+          "text": "Dove sono i biglietti? Non ___ trovo.",
+          "answer": "li",
+          "distractors": ["lo", "la", "le"],
+          "es": "¿Dónde están los billetes? No los encuentro."
+        },
+        {
+          "text": "Le olive sono buonissime: ___ prendo.",
+          "answer": "le",
+          "distractors": ["li", "la", "lo"],
+          "es": "Las aceitunas están buenísimas: me las llevo."
+        },
+        {
+          "text": "Dov'è il mio passaporto? Non so dove ___ messo.",
+          "answer": "l'ho",
+          "distractors": ["lo ho", "li ho", "la ho"],
+          "es": "¿Dónde está mi pasaporte? No sé dónde lo he puesto."
+        },
+        {
+          "text": "Ecco i biglietti: ___ comprati ieri.",
+          "answer": "li ho",
+          "distractors": ["l'ho", "le ho", "lo ho"],
+          "es": "Aquí están los billetes: los compré ayer."
+        },
+        {
+          "text": "Il museo è bellissimo: vorrei ___ domani.",
+          "answer": "visitarlo",
+          "distractors": ["visitarla", "visitarli", "visitare lo"],
+          "es": "El museo es precioso: querría visitarlo mañana."
+        }
+      ],
+      "tags": ["pronome"]
+    },
+    {
+      "id": "gram.pronomi-indiretti",
+      "order": 80,
+      "title": "Pronombres de objeto indirecto: mi, ti, gli, le, ci, vi",
+      "summary": "Equivalen a «me, te, le, nos, os, les» cuando algo se da, se dice, se pide o gusta «a alguien»: «Mi porta il conto?» (¿me trae la cuenta?), «Le piace la Sicilia?» (¿le gusta Sicilia?). Van antes del verbo.",
+      "points": [
+        "«gli» = a él (y, en el habla de cada día, a ellos o ellas); «le» = a ella; «Le» con mayúscula = a usted: «Le piace il caffè?».",
+        "Los verbos del viaje: «dare» (Mi dà il conto?), «portare» (Mi porta un'acqua?), «dire» (Mi può dire…?), «chiedere», «telefonare» (Gli telefono stasera).",
+        "«Piacere» funciona como «gustar»: lo que gusta es el sujeto y el verbo concuerda con él: «Mi piace il mare», «Mi piacciono le olive».",
+        "Con un infinitivo se pegan a él (sin la «e» final): «Può dirmi dov'è la stazione?», igual que «Mi può dire…».",
+        "Junto a «lo, la, li, le, ne» cambian: mi → «me», ti → «te», ci → «ce», vi → «ve», gli y le → «glielo, gliela…» (siempre juntos): «Me lo porta?», «Glielo dico»."
+      ],
+      "table": [
+        ["pronombre", "a quién", "ejemplo"],
+        ["mi", "a mí", "Mi porta il conto?"],
+        ["ti", "a ti", "Ti piace la Sicilia?"],
+        ["gli", "a él (también a ellos)", "Gli telefono stasera."],
+        ["le", "a ella", "Le porto un'acqua."],
+        ["Le", "a usted", "Le piace il caffè?"],
+        ["ci", "a nosotros", "Ci porta due caffè?"],
+        ["vi", "a vosotros", "Vi piace il mare?"],
+        ["me lo, te lo, ce lo…", "a mí/ti/nosotros + lo", "Me lo porta, per favore?"]
+      ],
+      "examples": [
+        { "text": "Mi porta il conto, per favore?", "es": "¿Me trae la cuenta, por favor?" },
+        { "text": "Scusi, mi può dire dov'è la stazione?", "es": "Perdone, ¿me puede decir dónde está la estación?" },
+        { "text": "Mi piacciono le olive siciliane.", "es": "Me gustan las aceitunas sicilianas." },
+        { "text": "Le piace la Sicilia?", "es": "¿Le gusta Sicilia?" },
+        { "text": "Ti scrivo domani.", "es": "Te escribo mañana." }
+      ],
+      "drills": [
+        {
+          "text": "Maria è stanca: ___ porto un'acqua.",
+          "answer": "le",
+          "distractors": ["gli", "ti", "vi"],
+          "es": "María está cansada: le traigo un agua."
+        },
+        {
+          "text": "Ai miei amici ___ telefono stasera.",
+          "answer": "gli",
+          "distractors": ["le", "mi", "ti"],
+          "es": "Esta noche llamo a mis amigos."
+        },
+        {
+          "text": "Signora, ___ piace la Sicilia?",
+          "answer": "Le",
+          "distractors": ["gli", "mi", "vi"],
+          "es": "Señora, ¿le gusta Sicilia?"
+        },
+        {
+          "text": "Marco, ___ piace la Sicilia?",
+          "answer": "ti",
+          "distractors": ["mi", "gli", "vi"],
+          "es": "Marco, ¿te gusta Sicilia?"
+        },
+        {
+          "text": "Mi ___ molto le olive.",
+          "answer": "piacciono",
+          "distractors": ["piace", "piaci", "piacete"],
+          "es": "Me gustan mucho las aceitunas."
+        },
+        {
+          "text": "Scusi, può ___ dov'è la stazione?",
+          "answer": "dirmi",
+          "distractors": ["dire mi", "mi dire", "dirlo"],
+          "es": "Perdone, ¿puede decirme dónde está la estación?"
+        },
+        {
+          "text": "Scusi, il conto: ___ porta, per favore?",
+          "answer": "me lo",
+          "distractors": ["mi lo", "lo mi", "me la"],
+          "es": "Perdone, la cuenta: ¿me la trae, por favor?"
+        }
+      ],
+      "tags": ["pronome"]
+    },
+    {
+      "id": "gram.ci-ne",
+      "order": 90,
+      "title": "«Ci» y «ne»: c'è, ci vado, ne vorrei due, ce l'ho",
+      "summary": "Dos palabras pequeñas que oirás a todas horas. «Ci» es «allí» o parte de «hay» («c'è», «ci sono»); «ne» sustituye a lo que cuentas o pides («Ne vorrei due» = querría dos).",
+      "points": [
+        "«C'è» = hay (un solo elemento): «C'è un bagno?». «Ci sono» = hay (varios): «Ci sono posti liberi?».",
+        "«Ci» = allí, el lugar del que ya habláis: «Palermo? Ci vado domani» (voy mañana). Va antes del verbo.",
+        "«Ne» = de eso, de ellos: se usa al decir la cantidad sin repetir el nombre. «Cannoli? Ne vorrei due», «Hai fratelli? Ne ho due».",
+        "«Ci» + «lo, la, li, le» → «ce lo, ce la, ce li, ce le»; con «avere»: «Ce l'ho» = lo tengo, «Non ce l'ho» = no lo tengo, «Ce l'ha?» = ¿lo tiene?",
+        "«Ci» + «ne» → «ce ne»: «Quanti bagni ci sono? Ce ne sono due» (hay dos)."
+      ],
+      "table": [
+        ["expresión", "significa", "ejemplo"],
+        ["c'è", "hay (singular)", "C'è un bagno qui vicino?"],
+        ["ci sono", "hay (plural)", "Ci sono posti liberi?"],
+        ["ci + verbo", "allí (un lugar ya dicho)", "Palermo? Ci vado domani."],
+        ["ne + cantidad", "de eso / de ellos", "Ne vorrei due, per favore."],
+        ["ce l'ho, ce l'ha…", "lo/la tengo, lo/la tiene…", "Non ce l'ho, mi dispiace."],
+        ["ce ne", "hay (tantos) de ellos", "Ce ne sono due."]
+      ],
+      "examples": [
+        { "text": "C'è un bagno qui vicino?", "es": "¿Hay un baño por aquí cerca?" },
+        { "text": "Ci sono posti liberi?", "es": "¿Hay sitios libres?" },
+        { "text": "Palermo? Ci vado domani.", "es": "¿Palermo? Voy mañana." },
+        { "text": "Cannoli? Ne vorrei due, per favore.", "es": "¿Cannoli? Querría dos, por favor." },
+        { "text": "Non ce l'ho, mi dispiace.", "es": "No lo tengo, lo siento." }
+      ],
+      "drills": [
+        {
+          "text": "Scusi, ___ un bagno qui vicino?",
+          "answer": "c'è",
+          "distractors": ["ci sono", "ci siamo", "ci sei"],
+          "es": "Perdone, ¿hay un baño por aquí cerca?"
+        },
+        {
+          "text": "Al mercato ___ molte olive.",
+          "answer": "ci sono",
+          "distractors": ["c'è", "ci siamo", "ci siete"],
+          "es": "En el mercado hay muchas aceitunas."
+        },
+        {
+          "text": "Palermo? Domani ___ vado in treno.",
+          "answer": "ci",
+          "distractors": ["ne", "lo", "la"],
+          "es": "¿Palermo? Mañana voy en tren."
+        },
+        {
+          "text": "Cannoli? Sì, ___ vorrei due, grazie.",
+          "answer": "ne",
+          "distractors": ["ci", "lo", "li"],
+          "es": "¿Cannoli? Sí, querría dos, gracias."
+        },
+        {
+          "text": "Hai fratelli? Sì, ___ ho due.",
+          "answer": "ne",
+          "distractors": ["lo", "li", "la"],
+          "es": "¿Tienes hermanos? Sí, tengo dos."
+        },
+        {
+          "text": "Hai il passaporto? Sì, ___.",
+          "answer": "ce l'ho",
+          "distractors": ["ci l'ho", "lo ho", "ne ho"],
+          "es": "¿Tienes el pasaporte? Sí, lo tengo."
+        },
+        {
+          "text": "Scusi, ___ più piccolo?",
+          "answer": "ce l'ha",
+          "distractors": ["ci l'ha", "lo ha", "ne ha"],
+          "es": "Perdone, ¿lo tiene más pequeño?"
+        },
+        {
+          "text": "Quanti bagni ci sono? Beh, ___ sono due.",
+          "answer": "ce ne",
+          "distractors": ["ci ne", "ne ci", "c'è ne"],
+          "es": "¿Cuántos baños hay? Pues hay dos."
+        }
+      ],
+      "tags": ["pronome"]
     }
   ]
 }
