@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 12:24Z 💻
+- Updated: 2026-10-13 13:31Z 💻
 - Writer: released 11:47Z by 💻 → continue on 💻
 - Branch: main (plan-014-gramatica merged)
 - Next step: only T174 left (audio); then Hernán's iPhone pass and OK for merge/PR
@@ -179,6 +179,30 @@ Worktree setup: npm ci
   - Hand check (PC): final iPhone pass of the whole feature (Visual queue).
 - Outcome: 383 Italian mp3 (verbs, examples, drills) via edge-tts; 5 transient 403s retried; --strict-audio ✓ for it; cba untouched · 30fcf8e9 · not checked: iPhone pass (queue)
 
+## T184 — «Escuchar todo» on grammar pages
+- Status: pending
+- Depends on: T166
+- Where: any
+- Goal: An «Escuchar todo» button on every verb page (plays the selected tense: each form in row order, as its row plays it, then the tense example; the row playing is highlighted; a short pause between items) and every topic page (plays its examples in order). Tap again = stop; leaving the page, switching tense or tapping any other play button stops it. Hernán asked for it (2026-10-13).
+- Context: docs/grammar.md "Verb page", "Topic page"; `src/components/grammar/**` (pages from T165/T166); plan 015's «Escuchar todo» player `src/components/quick/listen-all.ts` and its use in `src/components/quick/` (already solves sequential audio on iOS after one tap): reuse it, generalising it into a shared module only if needed without changing Modo rápido's behaviour; `@/lib/audio` (`speak`, `stop`); learn copy for the label (es + ru).
+- Scope: may touch `src/components/grammar/**`, `src/components/quick/listen-all.ts` (generalise only), a new shared module under `src/lib/audio/` or `src/components/`, `src/lib/i18n/learn-copy.ts`, docs/grammar.md / must not touch content, stored keys, Modo rápido behaviour.
+- Done when:
+  - `npm run verify` → exit 0.
+  - Hand check (PC): iPhone: Escuchar todo on essere (presente) plays io sono → … → loro sono → example with the row highlighted; stop works; topic page plays its examples; light and dark.
+- Outcome:
+
+## T185 — Italian grammar: more explanation and examples where needed
+- Status: pending
+- Depends on: T173
+- Where: any
+- Goal: Read the 12 verbs and 9 topic cards as a Spanish-speaking A1–A2 learner and add text only where it helps (Hernán, 2026-10-13: "si ves la necesidad"): a clearer `summary`/`points` or tense `notes` (when to use the tense, the auxiliary, a trap for Spanish speakers), and 1–3 more `examples` on topic cards that have too few. Within the current schema; nothing everywhere "just because".
+- Context: docs/content-guide.md "Grammar reference" and "Quality rules"; `content/it/verbs/*.json`, `content/it/extras/gramatica.json` (only cards listed as topics: gram.tu-lei, gram.vorrei), `content/it/extras/gramatica-temi.json`.
+- Scope: may touch those files only / must not touch forms, drills or ids (T173 checked them), `public/audio/` (audio comes from the next `npm run audio`).
+- Done when:
+  - Final message lists each change (file: what, why) in ≤ 15 lines.
+  - `npm run verify` → exit 0.
+- Outcome:
+
 ## Review queue
 
 ## Visual checks queue
@@ -212,6 +236,7 @@ Worktree setup: npm ci
 - 2026-10-13 T173: irregular-mark rule: presente vs regular endings (essere none); passato/condizionale never per form (notes); imperativo tu/noi/voi when ≠ present, Lei when ≠ present lui form with last vowel changed. (agent)
 - 2026-10-13 T174: run by the orchestrator in the main checkout (one command, saves an agent); --max-credits=0 and cba changes discarded, so only public/audio/it is committed. (orchestrator)
 - 2026-10-13 plan: merged into main and pushed at Hernán's request (2026-10-13), with main's plan 015 brought in first; T174 audio and the visual queue still open. (Hernán)
+- 2026-10-13 plan: T184 «Escuchar todo» on grammar pages and T185 extra explanation/examples added at Hernán's request. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
