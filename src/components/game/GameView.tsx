@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { EntryCard } from "@/components/coach/EntryCard";
+import { SportEntryCard } from "@/components/sport/SportEntryCard";
 import { useHideQuickFab } from "@/components/shell/QuickFab";
 import { LessonLangContext } from "@/components/exercises/shared";
 import { speak } from "@/lib/audio";
@@ -130,6 +131,7 @@ function TopicGrid({
   return (
     <div className="flex flex-col gap-4 pb-6">
       {coach ? <EntryCard /> : null}
+      {coach ? <SportEntryCard /> : null}
       <p className="text-base text-ink-muted">
         {copy.pickTopic}
       </p>

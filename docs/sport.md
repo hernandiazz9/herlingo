@@ -178,8 +178,8 @@ target-language sentences out of the Spanish fields.
   conexión para completarlo.", «Guardar mp3», then "Los pasos" (opening, every step, the final
   scene) with the one playing highlighted (`aria-current="step"`, scrolled into view, smooth only
   without reduced motion). Leaving the episode cancels the download and unloads the player.
-- Jugar card (`SportEntryCard`) sits under the game's topics in `src/app/jugar/page.tsx` (above the
-  game it would push a running round down the screen).
+- Jugar card (`SportEntryCard`) sits right under Prepárate's `EntryCard` at the top of the topic list
+  (`src/components/game/GameView.tsx`; only on the topics step, never over a running round). (Hernán)
 
 ## UI copy (Spain Spanish, tú)
 
