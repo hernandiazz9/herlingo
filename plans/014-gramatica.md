@@ -1,6 +1,6 @@
 # Plan 014 — Gramática: a grammar reference to read, linked to the exercises
 
-Status: draft (interview done 2026-10-12; awaiting Hernán's approval before anything runs)
+Status: active
 Created: 2026-10-12
 Base branch: plan-014-gramatica
 Goal: Add **Gramática** (`/gramatica/`, nested under the Frases tab): a grid of 12 Italian "verbos rey" with full conjugations (presente, passato prossimo, condizionale, imperativo; gloss and audio per form, irregular forms highlighted, one example per tense) and a list of topics (tú/Lei, «vorrei», articles, prepositions, pronouns). A "Leído" button counts reads per entry (small daily-capped XP); read entries enter spaced repetition and show up as fill-the-gap drills in Repaso and lessons. Generic code and content format (any pack), Italian content only. MVP speed: no automated tests; verification is `npm run verify`.
@@ -8,11 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-12 18:48Z 💻
+- Updated: 2026-10-13 06:19Z 💻
 - Writer: 💻 desktop
-- Branch: plan-014-gramatica (local, not pushed yet)
-- Needs Hernán: approve the plan; say if content agents (T169–T172) may run on Sonnet to save tokens.
-- Next step: on approval launch T163 and T164 (max 2 agents). Final iPhone pass by Hernán after T174.
+- Branch: plan-014-gramatica (local, not pushed)
+- Next step: T163 + T164 running; then T165/T167/T169–T171 (2 at a time)
 
 ## Shared contract (all tasks read this)
 
@@ -193,9 +192,11 @@ Worktree setup: npm ci
 - 2026-10-12 plan: topics are grammar cards (`order`, `verb`, `drills`); drills reuse the fill-gap exercise; no new exercise screen. (orchestrator, approved by Hernán)
 - 2026-10-12 plan: save tokens: no visual checks or code reviews by agents; Hernán drains both queues on his iPhone/Mac. Max 2 agents. (Hernán)
 - 2026-10-12 plan: work on branch plan-014-gramatica; no merge into main, PR or deploy without Hernán's explicit OK. (Hernán)
+- 2026-10-13 plan: content tasks T169–T172 run on Sonnet to save tokens; T173 review and code tasks on Opus. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
 
 ## Log
 - 2026-10-12 18:48Z 💻 plan written from the interview; not approved yet
+- 2026-10-13 06:19Z 💻 plan approved by Hernán
