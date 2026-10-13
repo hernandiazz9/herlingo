@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 17:28Z 💻
+- Updated: 2026-10-13 17:38Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
 - Next step: T192 → T193 while Hernán deploys and checks T191 on the iPhone
@@ -108,7 +108,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T192 — Episode generation on the server
-- Status: running (attempt 1 · 💻 · agent a6c51a16e78d4a469 · since 17:28Z)
+- Status: done
 - Depends on: T190
 - Where: any
 - Goal: Server modules that turn a description into a validated episode (fake or real Claude), no endpoint yet.
@@ -121,7 +121,7 @@ Worktree setup: npm ci
   - Throwaway `npx tsx` check: fakes for `it` and one other language pass `GeneratedEpisode`; an overflowing object is trimmed and passes; a 4-step one fails.
   - `git diff` shows the three existing system prompts unchanged.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: EPISODE_TEXT_LIMITS (spoken strings ≤ 300) + EPISODE_ARRAY_LIMITS, GeneratedEpisode/Episode/EpisodeRequest, normalizeEpisode, EPISODE_SYSTEM + episodeUserPrompt (other prompts byte-identical), fakeEpisode (it supermarket: 3 parts, 8 steps), generateEpisode (low, 12000) · 51c87dfc · verify ✓ 💻 · not checked: real Claude call (tokens, latency vs the 50 s deadline, 12–16 steps)
 
 ## T193 — `POST /api/coach/episode/`, episode counter and usage
 - Status: pending
@@ -223,6 +223,9 @@ Worktree setup: npm ci
 - 2026-10-13 T189: generatedBytes and prefetchGenerated send text to TTS without stripStress (no pack uses stress marks today)
 - 2026-10-13 T190: the Jugar card sits under the topic grid (top of Jugar is GameView); moving it next to EntryCard needs a GameView edit
 - 2026-10-13 T190: 'De la app' is one flat list (en has 48 dialogues): group by situation
+- 2026-10-13 T192: src/lib/sport/types.ts comment still says es ≤ 400 (now ≤ 300)
+- 2026-10-13 T192: route es (schema ≤ 400) is spoken by «Escuchar todo» and route episodes, but /api/coach/tts/ caps text at 300: a 301–400 char meaning cannot play
+- 2026-10-13 T192: an episode is ~4–6k output tokens; packs measured ~135 tok/s (2k in 15 s) → ~30–45 s, close to claude.ts DEADLINE_MS 50 s; T193 gives the episode call its own deadline (≤ 55 s, function maxDuration 60) and logs latency
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -237,3 +240,4 @@ Worktree setup: npm ci
 - 2026-10-13 17:25Z 💻 T190 done · worktree-agent-a4eddf1514188c1ad → 93851d69 · verify ✓
 - 2026-10-13 17:28Z 💻 main fast-forwarded to 071ef416 with Hernán's OK; .vercel copied into ../lang_lern-deporte for the deploy
 - 2026-10-13 17:28Z 💻 T192 launched · attempt 1 · agent a6c51a16e78d4a469 (+ spoken strings ≤ 300)
+- 2026-10-13 17:38Z 💻 T192 done · worktree-agent-a6c51a16e78d4a469 → 51c87dfc · verify ✓
