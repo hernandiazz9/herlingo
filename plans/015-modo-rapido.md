@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:40Z 💻
-- Writer: released 06:40Z by 💻 (paused: token budget) → a fresh session in lang_lern-rapido takes it
+- Updated: 2026-10-13 10:57Z 💻
+- Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
 - Branch: plan-015-modo-rapido · pushed
-- Next step: launch T178 on base ff9c4110 (one agent at a time; prompts force fake mode)
+- Next step: integrate T178 when its agent finishes, then launch T179 (one agent at a time)
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
 
 ## Shared contract (all tasks read this)
@@ -72,7 +72,7 @@ Worktree setup: npm ci
 - Outcome: CoachRoute* types, parseRoute, generateRoute, saved routes (routes.ts), shared prefetch + pruneCoachAudio moved to saved-audio.ts, useSavedRoutes · ff9c4110 · verify ✓ 💻 · not checked: offline playback on a device
 
 ## T178 — `/rapido/` screen: route view and Mis rutas
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a30137a72c732fb63 · since 10:57Z)
 - Depends on: T177
 - Where: any
 - Goal: The screen that lists saved routes and shows one (chat-style turns, audio, «Más»), reachable by URL.
@@ -160,3 +160,5 @@ Worktree setup: npm ci
 - 2026-10-13 06:33Z 💻 T177 launched · attempt 1 · agent a5e61f984ab6d53dd
 - 2026-10-13 06:40Z 💻 T177 done · worktree-agent-a5e61f984ab6d53dd → ff9c4110 · verify ✓
 - 2026-10-13 06:40Z 💻 paused at Hernán's request (token budget) · nothing running
+- 2026-10-13 10:57Z 💻 resumed on 💻 (same session, Hernán asked) · writer lock retaken
+- 2026-10-13 10:57Z 💻 T178 launched · attempt 1 · agent a30137a72c732fb63
