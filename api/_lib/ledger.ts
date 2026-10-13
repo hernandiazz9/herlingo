@@ -8,17 +8,20 @@
  *   langlern:coach:<YYYY-MM>:tokens:<kind>      input | output | cacheWrite | cacheRead
  *   langlern:coach:<YYYY-MM>:packs              new packs generated (refinements excluded)
  *   langlern:coach:<YYYY-MM>:packSpend          what those packs cost
+ *   langlern:coach:<YYYY-MM>:routes             quick routes billed (Modo rápido)
+ *   langlern:coach:<YYYY-MM>:routeSpend         what those routes cost
  *   langlern:coach:<YYYY-MM-DD>:gen:<name>      generations today by one code (expires in 2 days)
  *   langlern:coach:<YYYY-MM-DD>:steps:<name>    interview steps today by one code (expires in 2 days)
  *   langlern:coach:<YYYY-MM-DD>:tts:<name>      voice lines today by one code (expires in 2 days)
+ *   langlern:coach:<YYYY-MM-DD>:route:<name>    quick routes today by one code (expires in 2 days)
  *   langlern:coach:pack:<name>:<packId>         a pack this server issued to one code, and its
  *                                               refinements (expires in 180 days)
  *
- * A slot (generation, step, refinement) is given back only when the call failed before Claude
+ * A slot (generation, step, refinement, route) is given back only when the call failed before Claude
  * billed anything: once a response has been charged, the slot stays used.
  */
 import type { Caller } from "./access.js";
-import { dailyLimit, defaultCapUsd, timeZone, ttsDailyLimit } from "./config.js";
+import { dailyLimit, defaultCapUsd, routeDailyLimit, timeZone, ttsDailyLimit } from "./config.js";
 import { CoachError } from "./http.js";
 import { costMicroUsd, sumUsage, type Charge } from "./model.js";
 import { LIMITS } from "./schema.js";
@@ -30,7 +33,7 @@ const DAY_TTL = 2 * 24 * 3600;
 const REFINE_TTL = 180 * 24 * 3600;
 const TOKEN_KINDS = ["input", "output", "cacheWrite", "cacheRead"] as const;
 
-export type CallKind = "pack" | "refine" | "interview";
+export type CallKind = "pack" | "refine" | "interview" | "route";
 
 function periods(now = new Date()): { month: string; day: string } {
   const day = new Intl.DateTimeFormat("en-CA", {
@@ -49,9 +52,12 @@ const keys = {
   tokens: (month: string, kind: string) => `${PREFIX}:${month}:tokens:${kind}`,
   packs: (month: string) => `${PREFIX}:${month}:packs`,
   packSpend: (month: string) => `${PREFIX}:${month}:packSpend`,
+  routes: (month: string) => `${PREFIX}:${month}:routes`,
+  routeSpend: (month: string) => `${PREFIX}:${month}:routeSpend`,
   generations: (day: string, name: string) => `${PREFIX}:${day}:gen:${name}`,
   steps: (day: string, name: string) => `${PREFIX}:${day}:steps:${name}`,
   tts: (day: string, name: string) => `${PREFIX}:${day}:tts:${name}`,
+  route: (day: string, name: string) => `${PREFIX}:${day}:route:${name}`,
   pack: (name: string, packId: string) => `${PREFIX}:pack:${name}:${packId}`,
 };
 
@@ -95,6 +101,18 @@ const dailyLimitError = () => new CoachError(429, "daily_limit", DAILY_LIMIT_MES
 /** Takes one of today's generations for this code (429 when none is left). Returns a refund. */
 export async function reserveGeneration(caller: Caller): Promise<Refund> {
   return (await take(keys.generations(periods().day, caller.name), dailyLimit(), DAY_TTL, dailyLimitError)).refund;
+}
+
+/**
+ * Takes one of today's quick routes for this code (its own counter: routes never use the
+ * generations). 429 `daily_limit` when none is left. Returns a refund.
+ */
+export async function reserveRoute(caller: Caller): Promise<Refund> {
+  return (
+    await take(keys.route(periods().day, caller.name), routeDailyLimit(), DAY_TTL, () => {
+      return new CoachError(429, "daily_limit", "Has llegado al límite de rutas de hoy. Vuelve mañana.");
+    })
+  ).refund;
 }
 
 /** Billed interview steps a code may take per day: one whole interview (questions + assessment) per generation. */
@@ -150,6 +168,7 @@ export async function recordCall(caller: Caller, kind: CallKind, charges: Charge
     ...TOKEN_KINDS.filter((k) => usage[k] > 0).map((k) => store.incrby(keys.tokens(month, k), usage[k])),
   ];
   if (kind === "pack") writes.push(store.incrby(keys.packs(month), 1), store.incrby(keys.packSpend(month), cost));
+  if (kind === "route") writes.push(store.incrby(keys.routes(month), 1), store.incrby(keys.routeSpend(month), cost));
   await Promise.all(writes);
   return cost;
 }
@@ -162,7 +181,13 @@ export interface UsageSummary {
   tokens: { input: number; output: number; cacheRead: number; cacheWrite: number };
   packs: number;
   avgPackUsd: number;
+  /** The caller's generations today (packs, refinements, first interview steps); routes not included. */
   today: { used: number; limit: number };
+  /** Quick routes billed this month (a failed attempt counts, since it was paid) and their average cost. */
+  routes: number;
+  avgRouteUsd: number;
+  /** The caller's quick routes today (their own counter). */
+  routesToday: { used: number; limit: number };
   isOwner: boolean;
   /** Spent this month by the caller's own code. */
   mineUsd: number;
@@ -171,7 +196,7 @@ export interface UsageSummary {
 export async function readUsage(caller: Caller): Promise<UsageSummary> {
   const store = getStore();
   const { month, day } = periods();
-  const [spent, mine, input, output, cacheWrite, cacheRead, packs, packSpend, used] = (
+  const [spent, mine, input, output, cacheWrite, cacheRead, packs, packSpend, used, routes, routeSpend, routesUsed] = (
     await store.mget([
       keys.spend(month),
       keys.spendBy(month, caller.name),
@@ -179,6 +204,9 @@ export async function readUsage(caller: Caller): Promise<UsageSummary> {
       keys.packs(month),
       keys.packSpend(month),
       keys.generations(day, caller.name),
+      keys.routes(month),
+      keys.routeSpend(month),
+      keys.route(day, caller.name),
     ])
   ).map((v) => v ?? 0);
   const cap = await capMicro();
@@ -191,6 +219,9 @@ export async function readUsage(caller: Caller): Promise<UsageSummary> {
     packs,
     avgPackUsd: packs > 0 ? toUsd(packSpend / packs) : 0,
     today: { used: Math.min(used, dailyLimit()), limit: dailyLimit() },
+    routes,
+    avgRouteUsd: routes > 0 ? toUsd(routeSpend / routes) : 0,
+    routesToday: { used: Math.min(routesUsed, routeDailyLimit()), limit: routeDailyLimit() },
     isOwner: caller.isOwner,
     mineUsd: toUsd(mine),
   };

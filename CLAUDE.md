@@ -50,6 +50,7 @@ src/lib/audio/         speak() / stop(): the only way to play target-language au
 src/lib/pwa/           Web app manifest (manifest.ts), SW registration + update prompt (register.ts, UpdatePrompt.tsx).
 src/lib/coach/         Prepárate client: API client + typed errors (CoachApiError), saved packs, learner profile and
                        buildLearnerContext(), usage (`lang-lern:coach:*`); hooks in use-coach.ts. docs/coach.md "Client".
+src/components/quick/  Modo rápido screen /rapido/ (under Jugar; `?ruta=<id>` opens a saved route in place): QuickView, RouteView, SavedRoutes.
 src/lib/progress/      On-device progress (`lang-lern:progress:<lang>`, versioned, tolerant parsing), settings,
                        path model; hooks in use-progress.ts. src/lib/srs/ = Leitner spaced repetition.
 src/lib/grammar/       Gramática "Leído" (docs/grammar.md): read counts per entry (`lang-lern:grammar:<lang>`) and the

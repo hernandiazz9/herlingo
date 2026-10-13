@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { CloudSaveHost } from "@/components/cloud-save/CloudSaveHost";
 import { LeagueSync } from "@/components/league/LeagueSync";
 import { InstallPrompt } from "@/components/shell/InstallPrompt";
+import { QuickFab } from "@/components/shell/QuickFab";
 import { XpToast } from "@/components/shell/XpToast";
 import { TabBar } from "@/components/shell/TabBar";
 import { ThemeSync } from "@/components/shell/ThemeSync";
@@ -57,12 +58,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             className="pointer-events-none fixed inset-x-0 top-0 z-50 mx-auto h-1.5 w-full max-w-[var(--column-width)] bg-[linear-gradient(90deg,var(--lemon)_0_33.3%,var(--sea)_33.3%_66.6%,var(--terracotta)_66.6%_100%)]"
           />
           <main
-            className="flex flex-1 flex-col gap-5 pt-[calc(1.5rem+var(--safe-top))] pb-[calc(var(--tabbar-height)+var(--safe-bottom)+1.5rem)] pl-[calc(1.25rem+env(safe-area-inset-left))] pr-[calc(1.25rem+env(safe-area-inset-right))]"
+            className="flex flex-1 flex-col gap-5 pt-[calc(1.5rem+var(--safe-top))] pb-[calc(var(--tabbar-height)+var(--safe-bottom)+1.5rem+var(--quick-fab-space))] pl-[calc(1.25rem+env(safe-area-inset-left))] pr-[calc(1.25rem+env(safe-area-inset-right))]"
           >
             {children}
           </main>
           <TabBar />
-          <UpdatePrompt />
+          {/* ⚡ to Modo rápido; adds --quick-fab-space under <main> while shown (globals.css). */}
+          <QuickFab />
+          {/* data-update-prompt: the ⚡ button hides while the prompt (same spot) is showing (globals.css). */}
+          <div data-update-prompt="" className="contents">
+            <UpdatePrompt />
+          </div>
           <InstallPrompt />
           <CloudSaveHost />
         </div>

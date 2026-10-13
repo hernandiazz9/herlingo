@@ -1,35 +1,52 @@
 "use client";
 
 /**
- * Pack generations that outlive the screen that started them. The server bills a generation
- * whether or not anyone is still looking, so leaving the form (opening a saved pack, another tab)
- * never aborts the request: it finishes here, the pack is saved ("Mis situaciones", or replaced
- * in place for a refinement) and the result waits for the screen to come back. Only an explicit
- * "Cancelar" aborts (the UI says it still counts). In memory: closing the app loses a running one.
+ * Generations that outlive the screen that started them: Prepárate packs and Modo rápido routes.
+ * The server bills a generation whether or not anyone is still looking, so leaving the form
+ * (opening a saved pack or route, another tab) never aborts the request: it finishes here, the
+ * result is saved ("Mis situaciones" / "Mis rutas", or a pack replaced in place for a refinement)
+ * and waits for the screen to come back. Only an explicit "Cancelar" aborts (the UI says it still
+ * counts). In memory: closing the app loses a running one.
  */
 import { useEffect, useRef, useSyncExternalStore } from "react";
 import {
   generatePack,
+  generateRoute,
   refinePack,
   replacePack,
   savePack,
+  saveRoute,
   toCoachApiError,
   type CoachApiError,
   type CoachPack,
-  type PackResult,
+  type CoachRoute,
+  type GenerationUsage,
 } from "@/lib/coach";
 
-export type GenerationResult =
-  | { status: "done"; pack: CoachPack; saved: boolean; input: string }
+/** A finished job: `P` is what it produced (`{ pack }` for packs, `{ route, usage }` for routes). */
+export type JobResult<P extends object> =
+  | ({ status: "done"; saved: boolean; input: string } & P)
   | { status: "error"; error: CoachApiError; input: string };
 
-/** `input`: the description (new pack) or the instruction (refinement, "" = "Generar otra vez"). */
-export type Generation = { status: "pending"; input: string; ctrl: AbortController } | GenerationResult;
+export type Job<P extends object> = { status: "pending"; input: string; ctrl: AbortController } | JobResult<P>;
 
-const jobs = new Map<string, Generation>();
+export type JobDone<P extends object> = Extract<JobResult<P>, { status: "done" }>;
+
+type PackPayload = { pack: CoachPack };
+type RoutePayload = { route: CoachRoute; usage: GenerationUsage };
+
+/** `input`: the description (new pack) or the instruction (refinement, "" = "Generar otra vez"). */
+export type GenerationResult = JobResult<PackPayload>;
+export type Generation = Job<PackPayload>;
+
+/** A Modo rápido route job (`input` = the description); `usage.today` is the route counter. */
+export type RouteGenerationResult = JobResult<RoutePayload>;
+export type RouteGeneration = Job<RoutePayload>;
+
+const jobs = new Map<string, Job<object>>();
 const listeners = new Set<() => void>();
-/** The mounted screen of each job: it gets the finished pack at once instead of it waiting. */
-const consumers = new Map<string, (result: Extract<GenerationResult, { status: "done" }>) => void>();
+/** The mounted screen of each job: it gets the finished result at once instead of it waiting. */
+const consumers = new Map<string, (result: JobDone<object>) => void>();
 
 function notify() {
   for (const l of listeners) l();
@@ -42,8 +59,14 @@ function subscribe(onChange: () => void): () => void {
 
 export const newPackJob = (lang: string) => `new\n${lang}`;
 export const refineJob = (pack: CoachPack) => `refine\n${pack.lang}\n${pack.id}`;
+export const routeJob = (lang: string) => `route\n${lang}`;
 
-function run(key: string, input: string, request: (signal: AbortSignal) => Promise<PackResult>, store: (pack: CoachPack) => boolean) {
+function run<P extends object>(
+  key: string,
+  input: string,
+  request: (signal: AbortSignal) => Promise<P>,
+  store: (payload: P) => boolean,
+) {
   if (jobs.get(key)?.status === "pending") return;
   const ctrl = new AbortController();
   const current = () => {
@@ -53,11 +76,11 @@ function run(key: string, input: string, request: (signal: AbortSignal) => Promi
   jobs.set(key, { status: "pending", input, ctrl });
   notify();
   request(ctrl.signal).then(
-    ({ pack }) => {
+    (payload) => {
       // Saved even if the job was cancelled after the answer arrived: it is already paid for.
-      const saved = store(pack);
+      const saved = store(payload);
       if (!current()) return;
-      const result = { status: "done", pack, saved, input } as const;
+      const result = { ...payload, status: "done", saved, input } as JobDone<P>;
       const consumer = consumers.get(key);
       if (consumer) {
         jobs.delete(key);
@@ -79,19 +102,52 @@ function run(key: string, input: string, request: (signal: AbortSignal) => Promi
 }
 
 /**
+ * True while a finished result the device could not store waits under `key` to be opened or
+ * dismissed (`clearGeneration`): it is paid for and exists nowhere else, so a new request must not
+ * overwrite it.
+ */
+function holdsUnsaved(key: string): boolean {
+  const job = jobs.get(key);
+  return job?.status === "done" && !job.saved;
+}
+
+/**
  * Starts a new pack for `description`. No-op while one is running for `lang`, and while a finished
- * one the device could not store waits to be opened or dismissed (`clearGeneration`): it is paid
- * for and exists nowhere else, so a new request must not overwrite it.
+ * one the device could not store waits to be opened or dismissed.
  */
 export function startNewPack(lang: string, description: string): void {
-  const job = jobs.get(newPackJob(lang));
-  if (job?.status === "done" && !job.saved) return;
-  run(newPackJob(lang), description, (signal) => generatePack(lang, description, { signal }), savePack);
+  if (holdsUnsaved(newPackJob(lang))) return;
+  run<PackPayload>(
+    newPackJob(lang),
+    description,
+    (signal) => generatePack(lang, description, { signal }).then(({ pack }) => ({ pack })),
+    ({ pack }) => savePack(pack),
+  );
 }
 
 /** Starts "Ajustar" (`instruction`) or "Generar otra vez" (`""`) of a pack. */
 export function startRefine(pack: CoachPack, instruction: string): void {
-  run(refineJob(pack), instruction, (signal) => refinePack(pack, instruction, { signal }), replacePack);
+  run<PackPayload>(
+    refineJob(pack),
+    instruction,
+    (signal) => refinePack(pack, instruction, { signal }).then((result) => ({ pack: result.pack })),
+    (payload) => replacePack(payload.pack),
+  );
+}
+
+/**
+ * Starts a Modo rápido route for `description` (saved in "Mis rutas" when it arrives). No-op
+ * while one is running for `lang`, and while a finished one the device could not store waits to be
+ * opened or dismissed.
+ */
+export function startRoute(lang: string, description: string): void {
+  if (holdsUnsaved(routeJob(lang))) return;
+  run<RoutePayload>(
+    routeJob(lang),
+    description,
+    (signal) => generateRoute(lang, description, { signal }).then(({ route, usage }) => ({ route, usage })),
+    ({ route }) => saveRoute(route),
+  );
 }
 
 /** "Cancelar": aborts the request (the server may still bill it) and forgets the job. */
@@ -120,16 +176,8 @@ export function clearGeneration(key: string): void {
   notify();
 }
 
-/**
- * The job under `key`, live (undefined when none). While mounted, `onDone` receives a pack that
- * finishes at once (the job is then forgotten); one that finished while unmounted stays as the
- * returned `done` job until `clearGeneration`.
- */
-export function useGeneration(
-  key: string,
-  onDone?: (result: Extract<GenerationResult, { status: "done" }>) => void,
-): Generation | undefined {
-  const job = useSyncExternalStore(subscribe, () => jobs.get(key), () => undefined);
+function useJob<P extends object>(key: string, onDone?: (result: JobDone<P>) => void): Job<P> | undefined {
+  const job = useSyncExternalStore(subscribe, () => jobs.get(key) as Job<P> | undefined, () => undefined);
   const callback = useRef(onDone);
   useEffect(() => {
     callback.current = onDone;
@@ -137,11 +185,28 @@ export function useGeneration(
   const consumes = onDone !== undefined;
   useEffect(() => {
     if (!consumes) return;
-    const fn: NonNullable<typeof onDone> = (result) => callback.current?.(result);
+    const fn = (result: JobDone<object>) => callback.current?.(result as JobDone<P>);
     consumers.set(key, fn);
     return () => {
       if (consumers.get(key) === fn) consumers.delete(key);
     };
   }, [key, consumes]);
   return job;
+}
+
+/**
+ * The pack job under `key`, live (undefined when none). While mounted, `onDone` receives a pack
+ * that finishes at once (the job is then forgotten); one that finished while unmounted stays as
+ * the returned `done` job until `clearGeneration`.
+ */
+export function useGeneration(key: string, onDone?: (result: JobDone<PackPayload>) => void): Generation | undefined {
+  return useJob<PackPayload>(key, onDone);
+}
+
+/** The route job of `lang`, live: same contract as `useGeneration` (clear it with `routeJob(lang)`). */
+export function useRouteGeneration(
+  lang: string,
+  onDone?: (result: JobDone<RoutePayload>) => void,
+): RouteGeneration | undefined {
+  return useJob<RoutePayload>(routeJob(lang), onDone);
 }

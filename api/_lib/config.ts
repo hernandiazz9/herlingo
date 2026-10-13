@@ -36,6 +36,7 @@ export function ownerName(): string | undefined {
 export const DEFAULT_CAP_USD = 5;
 export const DAILY_GENERATIONS = 10;
 export const DAILY_TTS_LINES = 500;
+export const DAILY_ROUTES = 20;
 
 /** Initial monthly cap until the owner changes it from the app. */
 export function defaultCapUsd(): number {
@@ -52,6 +53,12 @@ export function dailyLimit(): number {
 export function ttsDailyLimit(): number {
   const value = Number(process.env.COACH_TTS_DAILY_LIMIT);
   return Number.isInteger(value) && value > 0 ? value : DAILY_TTS_LINES;
+}
+
+/** Quick routes (Modo rápido) per day per code: their own counter, apart from the generations. */
+export function routeDailyLimit(): number {
+  const value = Number(process.env.COACH_ROUTE_DAILY_LIMIT);
+  return Number.isInteger(value) && value > 0 ? value : DAILY_ROUTES;
 }
 
 /** Days and months of the limits and the ledger are counted in this time zone. */

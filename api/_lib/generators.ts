@@ -1,20 +1,31 @@
-/** Pack and interview generators: fake (canned) or real (Claude, prompts in prompts.ts). */
+/** Pack, quick route and interview generators: fake (canned) or real (Claude, prompts in prompts.ts). */
 import { generateStructured } from "./claude.js";
 import { isFake } from "./config.js";
-import { FAKE_INTERVIEW_USAGE, FAKE_PACK_USAGE, fakeInterviewStep, fakePack } from "./fake.js";
+import { FAKE_INTERVIEW_USAGE, FAKE_PACK_USAGE, FAKE_ROUTE_USAGE, fakeInterviewStep, fakePack, fakeRoute } from "./fake.js";
 import type { LanguageMeta } from "./languages.js";
 import { COACH_MODEL, type Charge } from "./model.js";
-import { normalizeAssessment, normalizeInterviewStep, normalizePack } from "./normalize.js";
-import { INTERVIEW_SYSTEM, PACK_SYSTEM, interviewUserPrompt, packUserPrompt, type PackInput } from "./prompts.js";
-import { Assessment, GeneratedPack, InterviewStep, LIMITS, type InterviewRequest } from "./schema.js";
+import { normalizeAssessment, normalizeInterviewStep, normalizePack, normalizeRoute } from "./normalize.js";
+import {
+  INTERVIEW_SYSTEM,
+  PACK_SYSTEM,
+  ROUTE_SYSTEM,
+  interviewUserPrompt,
+  packUserPrompt,
+  routeUserPrompt,
+  type PackInput,
+  type RouteInput,
+} from "./prompts.js";
+import { Assessment, GeneratedPack, GeneratedRoute, InterviewStep, LIMITS, type InterviewRequest } from "./schema.js";
 
 export type OnUsage = (charges: Charge[]) => Promise<unknown>;
 
 /**
- * Low effort for both: content generation is Sonnet 5.5's `low` use case, and a pack must come back
- * well inside the functions' 60 s. Output caps sit far above a normal answer (~3k pack, ~0.5k step).
+ * Low effort for all: content generation is Sonnet 5.5's `low` use case, and a pack must come back
+ * well inside the functions' 60 s. Output caps sit far above a normal answer (~3k pack, ~2k route,
+ * ~0.5k step).
  */
 const PACK = { effort: "low", maxTokens: 8000 } as const;
+const ROUTE = { effort: "low", maxTokens: 6000 } as const;
 const INTERVIEW = { effort: "low", maxTokens: 4000 } as const;
 
 export async function generatePack(input: PackInput, onUsage: OnUsage): Promise<GeneratedPack> {
@@ -23,6 +34,15 @@ export async function generatePack(input: PackInput, onUsage: OnUsage): Promise<
     return fakePack(input.meta, input.description, input.refine?.instruction);
   }
   return generateStructured({ ...PACK, system: PACK_SYSTEM, user: packUserPrompt(input), schema: GeneratedPack, normalize: normalizePack, onUsage });
+}
+
+/** A quick route (Modo rápido); its own prompt and schema, the pack's call. */
+export async function generateRoute(input: RouteInput, onUsage: OnUsage): Promise<GeneratedRoute> {
+  if (isFake()) {
+    await onUsage([{ model: COACH_MODEL, usage: FAKE_ROUTE_USAGE }]);
+    return fakeRoute(input.meta, input.description);
+  }
+  return generateStructured({ ...ROUTE, system: ROUTE_SYSTEM, user: routeUserPrompt(input), schema: GeneratedRoute, normalize: normalizeRoute, onUsage });
 }
 
 export async function generateInterviewStep(req: InterviewRequest, meta: LanguageMeta, onUsage: OnUsage): Promise<InterviewStep> {

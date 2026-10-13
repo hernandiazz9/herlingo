@@ -4,6 +4,8 @@ Not planned yet. Each one becomes a plan (`plans/`) after a design session with 
 
 ## 1. Prepárate "Modo rápido": get out of a jam in a shop (2026-10-12)
 
+**Planned:** plan 015 (`plans/015-modo-rapido.md`); decisions in docs/coach.md "Modo rápido".
+
 **Real case.** Hernán walked into a shop to print something and had to use a translator. A
 literal translation of "imprimir" is not enough: it depends on the context (a copy, a document,
 from a USB stick, from the phone, black and white or colour...), and on how the words are put
@@ -53,3 +55,30 @@ grammar hidden inside games where you never get to *see* the verb.
 
 Today: grammar cards inside lessons (`GrammarTip`, `gram.<slug>` items in each level's grammar
 unit, docs/content-guide.md).
+
+## 3. "Modo deporte": audio-only situations to listen to while running or cycling (2026-10-13)
+
+**What he wants**
+- Describe a situation (e.g. "ir a un supermercado en Italia") and get **only audio**: a guided
+  walk through the whole situation, to play and go out running, cycling or walking without
+  looking at the phone.
+- The audio tours the situation step by step: greeting people, looking for certain fruit,
+  asking for a product, the checkout, paying... whatever the situation needs.
+- Each step: a **Spanish narrator explains** what you want to do ("Para preguntar si tienen
+  este tipo de harina, puedes decir:"), then the **target-language line** (e.g. Italian),
+  with examples and variants ("o, si quieres preguntar por otra cosa…").
+- **Saved situations** form a library: put on "modo deporte", press play, go out.
+
+**Things to settle in the design session**
+- Audio while the phone is locked (iOS PWA): likely needs one continuous audio file per
+  situation (stitched mp3) and lock-screen / headphone controls (Media Session), not a chain of
+  short clips driven by JS. Spike it on the iPhone first.
+- Step structure and pacing: narration → line → pause to repeat aloud → line again (slow?) →
+  meaning? Repetitions and pause length as settings.
+- Built-in episodes from existing content (no AI cost, `npm run audio`) and/or custom ones
+  generated with AI (Prepárate backend, Spanish narrator voice + target voices, cost per episode).
+- Relation to Prepárate "Modo rápido" (section 1): the same route could have a "Escuchar en
+  modo deporte" button.
+
+Starting point: `src/lib/audio/`, "Escuchar todo" in `src/components/stories/StoryReader.tsx`,
+Prepárate (`docs/coach.md`, `api/coach/`, generated audio in `src/lib/audio/generated.ts`).

@@ -3,8 +3,10 @@
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { clearAccessCode, parseAccessCode, readAccessRaw } from "./access";
 import { checkAccessCode, fetchUsage, toCoachApiError, updateMonthlyCap, type CoachApiError } from "./api";
-import { deletePack, parseSavedPacks, readPacksRaw, replacePack, savePack } from "./packs";
+import { deletePack, readPacksRaw, replacePack, savePack } from "./packs";
+import { parseSavedPacks, parseSavedRoutes } from "./parse";
 import { clearAssessments, parseLearnerProfile, readProfileRaw, saveAssessment, setAbout } from "./profile";
+import { deleteRoute, readRoutesRaw, saveRoute } from "./routes";
 import { subscribeCoach } from "./store";
 import type { CoachAssessment, CoachUsage } from "./types";
 import { parseStoredUsage, readUsageRaw } from "./usage";
@@ -33,6 +35,19 @@ export function useSavedPacks(lang: string) {
   const remove = useCallback((id: string) => deletePack(lang, id), [lang]);
   const get = useCallback((id: string) => packs.find((p) => p.id === id), [packs]);
   return useMemo(() => ({ packs, get, save: savePack, replace: replacePack, remove }), [packs, get, remove]);
+}
+
+/**
+ * "Mis rutas" (Modo rápido) of a language pack, live, newest first. `save` puts a route at the
+ * top (false when storage failed) and starts caching its audio; `remove` deletes it and its
+ * unused audio.
+ */
+export function useSavedRoutes(lang: string) {
+  const raw = useSyncExternalStore(subscribeCoach, () => readRoutesRaw(lang), empty);
+  const routes = useMemo(() => parseSavedRoutes(raw), [raw]);
+  const remove = useCallback((id: string) => deleteRoute(lang, id), [lang]);
+  const get = useCallback((id: string) => routes.find((r) => r.id === id), [routes]);
+  return useMemo(() => ({ routes, get, save: saveRoute, remove }), [routes, get, remove]);
 }
 
 /** "Sobre mí" notes and interview results of a language pack, live; `latest` = newest assessment. */

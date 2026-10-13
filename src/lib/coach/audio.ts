@@ -6,7 +6,7 @@
 import { generatedPlayable, prefetchGenerated, setGeneratedAudioSource, type PrefetchResult } from "@/lib/audio";
 import { getPack, type Playable } from "@/lib/content";
 import { CoachApiError, fetchSpeech } from "./api";
-import type { CoachPack, InterviewQuestion } from "./types";
+import type { CoachPack, CoachRoute, InterviewQuestion } from "./types";
 
 /**
  * The coach TTS endpoint as the generated-audio source. Over the day's voice allowance (429
@@ -43,6 +43,23 @@ export function packPlayables(pack: CoachPack): Playable[] {
   return lines;
 }
 
+/**
+ * A line of a quick route: `voices.native` for native turns, their alts and every turn's words;
+ * `voices.learner` for learner turns and their alts.
+ */
+export function routeLine(route: CoachRoute, text: string, speaker: "native" | "learner" = "native"): Playable {
+  return generatedPlayable(text, route.voices[speaker]);
+}
+
+/** Every playable line of a route: each turn's main line, its alts and its words. */
+export function routePlayables(route: CoachRoute): Playable[] {
+  return route.turns.flatMap((turn) => [
+    routeLine(route, turn.text, turn.speaker),
+    ...turn.alts.map((alt) => routeLine(route, alt.text, turn.speaker)),
+    ...turn.words.map((word) => routeLine(route, word.text, "native")),
+  ]);
+}
+
 /** The interview question's target-language line (native voice), if it has one. */
 export function questionPlayable(lang: string, question: InterviewQuestion): Playable | undefined {
   return question.text ? generatedPlayable(question.text, coachVoices(lang).native) : undefined;
@@ -51,4 +68,9 @@ export function questionPlayable(lang: string, question: InterviewQuestion): Pla
 /** Downloads every line of a pack that is not on the device yet, so it plays offline. Never rejects. */
 export function cachePackAudio(pack: CoachPack, signal?: AbortSignal): Promise<PrefetchResult> {
   return prefetchGenerated(packPlayables(pack), signal);
+}
+
+/** Downloads every line of a route that is not on the device yet, so it plays offline. Never rejects. */
+export function cacheRouteAudio(route: CoachRoute, signal?: AbortSignal): Promise<PrefetchResult> {
+  return prefetchGenerated(routePlayables(route), signal);
 }

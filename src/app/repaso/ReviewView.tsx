@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { LessonPlayer } from "@/components/lesson";
+import { useHideQuickFab } from "@/components/shell/QuickFab";
 import { Button, Card, TargetText } from "@/components/ui";
 import { getItem, getPack, getVerb, glossOf, isDrillable, type Lesson } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
@@ -32,6 +33,8 @@ function Review({ lang }: { lang: string }) {
   const now = useNow();
   const hydrated = useHydrated();
   const [session, setSession] = useState<{ lesson: Lesson; drills: string[] } | null>(null);
+  // A running review session: no ⚡ button.
+  useHideQuickFab(session !== null);
 
   if (!hydrated || !now) return null;
 

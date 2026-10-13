@@ -68,6 +68,51 @@ export interface CoachPack {
   refinements: number;
 }
 
+/** Mirror of the server's `ROUTE_ARRAY_LIMITS` (api/_lib/schema.ts): item counts of a quick route. */
+export const COACH_ROUTE_LIMITS = {
+  turns: { min: 4, max: 10 },
+  alts: 3,
+  words: 4,
+} as const;
+
+/** A target-language line of a quick route and its Spain Spanish translation (an alternative or a key word). */
+export interface CoachRouteLine {
+  /** Target-language text. */
+  text: string;
+  es: string;
+}
+
+/** One turn of a quick route: the main line, other ways to say it and its key words. */
+export interface CoachRouteTurn {
+  /** "r1"…"rn", assigned by the server. */
+  id: string;
+  speaker: "native" | "learner";
+  /** The main line (target language). */
+  text: string;
+  es: string;
+  /** 0–3: other ways they may say it (native) or other answers (learner). */
+  alts: CoachRouteLine[];
+  /** 0–4: key words or chunks of this turn. */
+  words: CoachRouteLine[];
+}
+
+/** A quick route (Modo rápido) as the server returns it and the device stores it. */
+export interface CoachRoute {
+  id: string;
+  /** ISO date it was generated. */
+  createdAt: string;
+  lang: string;
+  /** The learner's own words. */
+  description: string;
+  /** Spanish. */
+  title: string;
+  register: "formal" | "informal";
+  /** TTS voices: `native` for native turns, their alts and every turn's words; `learner` for learner turns and their alts. */
+  voices: { native: string; learner: string };
+  /** Alternating, the learner first (4–10 from the server). */
+  turns: CoachRouteTurn[];
+}
+
 export type CoachLevel = "A0" | "A1" | "A2" | "B1" | "B2" | "C1" | "C2";
 
 /** Result of the level interview (Spanish texts). */
@@ -127,9 +172,15 @@ export interface CoachUsage {
   isOwner: boolean;
   /** Spent this month by the caller's code. */
   mineUsd: number;
+  /** Quick routes billed this month (absent from servers and stored summaries without routes). */
+  routes?: number;
+  /** Their average cost (absent like `routes`). */
+  avgRouteUsd?: number;
+  /** Quick routes today by the caller's code: their own counter, apart from `today` (absent like `routes`). */
+  routesToday?: { used: number; limit: number };
 }
 
-/** The `usage` part of a generation response. */
+/** The `usage` part of a generation response (for a route, `today` is the route counter). */
 export interface GenerationUsage {
   costUsd: number;
   remainingUsd: number;
@@ -138,6 +189,11 @@ export interface GenerationUsage {
 
 export interface PackResult {
   pack: CoachPack;
+  usage: GenerationUsage;
+}
+
+export interface RouteResult {
+  route: CoachRoute;
   usage: GenerationUsage;
 }
 
