@@ -61,7 +61,7 @@ Worktree setup: npm ci
 - Outcome: src/lib/sport/ (types, NARRATION table, EPISODE_GAPS, compileEpisode → segments+chapters, episodeFromDialogue/Route, episodePlayables); estimates: Italian dialogues 3:43–6:46, fake route 5:11 · 1d162735 · verify ✓ 💻 · not checked: real durations
 
 ## T189 — Joined player: one mp3 per episode, chapters, lock-screen controls
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a1001fa71713095c5 · since 16:57Z)
 - Depends on: T188
 - Where: any
 - Goal: Prepare an episode (download every clip with progress), join it byte by byte into one mp3 with silent frames for the gaps, and play it on the shared element with Media Session controls that jump between steps.
@@ -221,3 +221,4 @@ Worktree setup: npm ci
 - 2026-10-13 16:49Z 💻 T187 done · worktree-agent-a8150887220bfacf0 → 58fa3d04 · verify ✓
 - 2026-10-13 16:49Z 💻 T188 launched · attempt 1 · agent af9c75698b24a05f4
 - 2026-10-13 16:57Z 💻 T188 done · worktree-agent-af9c75698b24a05f4 → 1d162735 · verify ✓
+- 2026-10-13 16:57Z 💻 T189 launched · attempt 1 · agent a1001fa71713095c5
