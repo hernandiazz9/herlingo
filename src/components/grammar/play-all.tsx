@@ -1,16 +1,18 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { Button } from "@/components/ui";
-import { speakSequence, stop, type SequenceLine } from "@/lib/audio";
+import type { SequenceLine } from "@/lib/audio";
+import { useSequencePlayer } from "@/lib/audio/use-sequence-player";
 import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
+import { getTab } from "@/lib/navigation";
 
 /** Silence between two lines of «Escuchar todo» on a grammar page. */
 const GAP_MS = 600;
 
 export interface PlayAll {
-  /** Index of the line playing (or coming after the pause); null when idle. */
+  /** Index of the line playing (or paused from the lock screen); null when idle. */
   playing: number | null;
   /** The «Escuchar todo» / «Parar» button: starts from the first line, again = stop. Call it inside the tap. */
   toggle: () => void;
@@ -22,51 +24,20 @@ export interface PlayAll {
 
 /**
  * «Escuchar todo» of a grammar page: `lines` one after another (each as its own play button plays
- * it), `GAP_MS` apart, through `speakSequence` (sequential audio on iOS after one tap). Any other
- * `speak()` (a row, an example, the infinitive) ends it; leaving the page stops it.
+ * it), `GAP_MS` apart: one joined file when every line has an mp3 (it keeps playing with the
+ * screen locked; lock screen: `title`, "Gramática"), else clip after clip (`useSequencePlayer`).
+ * Any other `speak()` (a row, an example, the infinitive) ends it; leaving the page stops it.
  */
-export function usePlayAll(lines: readonly SequenceLine[]): PlayAll {
-  const [playing, setPlaying] = useState<number | null>(null);
-  /** Bumped by every start and stop: a stale sequence never touches the state. */
-  const run = useRef(0);
-  const on = useRef(false);
+export function usePlayAll(lines: readonly SequenceLine[], title: string): PlayAll {
+  const steps = useMemo(() => lines.map((line) => [line]), [lines]);
+  const player = useSequencePlayer(steps, { gapMs: GAP_MS, title, artist: getTab("grammar").title });
+  const playing = player.step;
   const items = useRef(new Map<number, HTMLElement>());
 
-  const cancel = () => {
-    if (!on.current) return;
-    run.current++;
-    on.current = false;
-    stop();
-    setPlaying(null);
-  };
-
   const toggle = () => {
-    if (on.current) return cancel();
-    if (!lines.length) return;
-    const token = ++run.current;
-    on.current = true;
-    setPlaying(0);
-    void speakSequence(lines, {
-      gapMs: GAP_MS,
-      onLine: (i) => {
-        if (run.current === token) setPlaying(i);
-      },
-    }).then(() => {
-      if (run.current !== token) return;
-      on.current = false;
-      setPlaying(null);
-    });
+    if (player.status !== "idle") return player.stop();
+    if (lines.length) player.play(0);
   };
-
-  // Leaving the page stops the sequence (and only the sequence).
-  useEffect(
-    () => () => {
-      run.current++;
-      if (on.current) stop();
-      on.current = false;
-    },
-    [],
-  );
 
   // The line playing scrolls into view.
   useEffect(() => {
@@ -80,7 +51,7 @@ export function usePlayAll(lines: readonly SequenceLine[]): PlayAll {
     else items.current.delete(i);
   };
 
-  return { playing, toggle, cancel, itemRef };
+  return { playing, toggle, cancel: player.stop, itemRef };
 }
 
 /** Frame of a line that «Escuchar todo» is playing (lemon, like the story reader). */

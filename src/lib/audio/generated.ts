@@ -279,16 +279,27 @@ async function memoBlob(key: string): Promise<Blob | undefined> {
   }
 }
 
+export interface GeneratedBytesOptions {
+  /** Only what is already on the device (memory, Cache Storage): never the source. */
+  cachedOnly?: boolean;
+}
+
 /**
- * The mp3 of a generated line as bytes (Modo deporte joins clips into one file): memory, else
- * Cache Storage, else the source once (then cached; shared with taps and downloads in flight,
- * bounded like them). `null` when there is none this time (offline and not cached, declined,
- * source failure, `signal` aborted): never the device voice. Content playables are not its job
- * (`null`). Never rejects.
+ * The mp3 of a generated line as bytes (Modo deporte and «Escuchar todo» join clips into one
+ * file): memory, else Cache Storage, else the source once (then cached; shared with taps and
+ * downloads in flight, bounded like them; not with `cachedOnly`). `null` when there is none this
+ * time (offline and not cached, declined, source failure, `signal` aborted): never the device
+ * voice. Content playables are not its job (`null`). Never rejects.
  */
-export async function generatedBytes(p: Playable, signal?: AbortSignal): Promise<Uint8Array<ArrayBuffer> | null> {
+export async function generatedBytes(
+  p: Playable,
+  signal?: AbortSignal,
+  options: GeneratedBytesOptions = {},
+): Promise<Uint8Array<ArrayBuffer> | null> {
   if (!isGenerated(p) || signal?.aborted) return null;
-  const blob = (await memoBlob(p.audioKey)) ?? (await loadBlob(p, signal));
+  const blob =
+    (await memoBlob(p.audioKey)) ??
+    (options.cachedOnly ? await cachedBlob(await openCache(), p.audioKey) : await loadBlob(p, signal));
   if (!blob?.size) return null;
   try {
     return new Uint8Array(await blob.arrayBuffer());

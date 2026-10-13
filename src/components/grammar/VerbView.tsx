@@ -42,7 +42,8 @@ function VerbPage({ verb, lang }: { verb: Verb; lang: string }) {
     () => (tense ? [...tense.forms, tense.example].map((input) => ({ input, options: { lang } })) : []),
     [tense, lang],
   );
-  const player = usePlayAll(lines);
+  const tenseTitle = tense ? titles.get(tense.id) : undefined;
+  const player = usePlayAll(lines, tenseTitle ? `${verb.infinitive} · ${glossOf(tenseTitle, gloss.lang)}` : verb.infinitive);
 
   return (
     <div className="flex flex-col gap-5">

@@ -2,7 +2,8 @@
 
 import { useMemo } from "react";
 import type { SequenceLine } from "@/lib/audio";
-import { getGrammarEntry, getPack, type GrammarCard } from "@/lib/content";
+import { getGrammarEntry, getPack, glossOf, type GrammarCard } from "@/lib/content";
+import { useGlossLang } from "@/lib/content/use-gloss";
 import { GrammarCardBody } from "./GrammarCardBody";
 import { GrammarScreen } from "./GrammarScreen";
 import { usePlayAll } from "./play-all";
@@ -24,8 +25,9 @@ export function TopicView({ id, lang }: { id: string; lang: string }) {
 }
 
 function TopicPage({ card, lang }: { card: GrammarCard; lang: string }) {
+  const gloss = useGlossLang(lang);
   const lines = useMemo<SequenceLine[]>(() => card.examples.map((input) => ({ input, options: { lang } })), [card, lang]);
-  const player = usePlayAll(lines);
+  const player = usePlayAll(lines, glossOf(card.title, gloss.lang));
   return (
     <div className="flex flex-col gap-5">
       <GrammarCardBody card={card} heading={false} player={player} />

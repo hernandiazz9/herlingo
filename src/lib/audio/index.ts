@@ -22,8 +22,10 @@
  *   (`@/lib/progress/settings`), everything plays slow.
  * - `locale` marks a line that is not in the pack's language (a meaning read aloud in the
  *   learner's language): its device voice uses that locale and no stress marks are stripped.
- * - `speakSequence(lines, { gapMs })` plays lines one after another (a whole route hands-free) and
- *   ends as soon as anything else calls `speak()` or `stop()`.
+ * - `speakSequence(lines, { gapMs })` plays lines one after another and ends as soon as anything
+ *   else calls `speak()` or `stop()`. «Escuchar todo» (routes, stories, grammar) prefers one joined
+ *   file (`joinLines`, played by `useSequencePlayer` from `./use-sequence-player`), which keeps
+ *   playing with the screen locked; the chain is its fallback.
  * - Long media (Modo deporte's joined episode, `@/lib/sport`): `mp3Media(url, events)` on the same
  *   shared element, with play/pause/seek; `speak()` and `stop()` release it. `generatedBytes` and
  *   `mp3UrlWhenReady` give the clips it is joined from.
@@ -41,6 +43,7 @@ export {
   GENERATED_AUDIO_CACHE,
   generatedBytes,
   generatedKey,
+  type GeneratedBytesOptions,
   generatedPlayable,
   isGenerated,
   prefetchGenerated,
@@ -49,6 +52,7 @@ export {
   type GeneratedAudioSource,
   type PrefetchResult,
 } from "./generated";
+export { joinLines, type JoinedLines, type JoinLinesOptions } from "./joined";
 export { mp3Media, mp3UrlWhenReady, type Mp3Media, type Mp3MediaEvents } from "./mp3";
 
 export type SpeakInput = Playable | string;
@@ -152,6 +156,16 @@ export function speakSequence(lines: readonly SequenceLine[], options: SequenceO
     };
     step(from);
   });
+}
+
+/**
+ * A check that stays true until anything calls `speak()` or `stop()` (a tap on one line, leaving a
+ * screen): tells audio that starts after a wait, or long media that stopped, whether it was
+ * interrupted.
+ */
+export function audioTurn(): () => boolean {
+  const mine = generation;
+  return () => mine === generation;
 }
 
 /** Stops any audio that is playing. */

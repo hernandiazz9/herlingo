@@ -3,11 +3,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { SpeakerIcon } from "@/components/icons";
 import { Button, Card, Picture, TargetText } from "@/components/ui";
-import { speak, stop } from "@/lib/audio";
+import { speak, stop, type SequenceLine } from "@/lib/audio";
+import { useSequencePlayer } from "@/lib/audio/use-sequence-player";
 import { cn } from "@/lib/cn";
 import { getPack, getStoryKeywords, glossOf, hasImage, type Story, type StoryKeyword } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
 import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
+import { getTab } from "@/lib/navigation";
 import { recordListen } from "@/lib/progress/activity";
 import { segmentStory } from "@/lib/stories";
 
@@ -21,7 +23,9 @@ interface Open {
 
 /**
  * Sentence-by-sentence reader: tap to hear, Spanish on demand, key words with their meaning.
- * Every sentence or key word heard earns listening XP (`recordListen`).
+ * Every sentence or key word heard earns listening XP (`recordListen`). "Escuchar todo" plays the
+ * sentences in order: one joined file when every sentence has an mp3 (it keeps playing with the
+ * screen locked), else one after another (`useSequencePlayer`).
  */
 export function StoryReader({ story, lang, onPlay }: { story: Story; lang: string; onPlay: () => void }) {
   const pack = getPack(lang);
@@ -33,12 +37,22 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
   const [showAll, setShowAll] = useState(false);
   const [shown, setShown] = useState<string[]>([]);
   const [open, setOpen] = useState<Open | null>(null);
-  const [current, setCurrent] = useState<number | null>(null);
-  const [playingAll, setPlayingAll] = useState(false);
+  /** The sentence a single tap is playing. */
+  const [tapped, setTapped] = useState<number | null>(null);
   const run = useRef(0);
   const refs = useRef<(HTMLLIElement | null)[]>([]);
+  /** One step per sentence. */
+  const steps = useMemo<SequenceLine[][]>(() => story.sentences.map((input) => [{ input, options: { lang } }]), [story, lang]);
+  const all = useSequencePlayer(steps, {
+    gapMs: GAP_MS,
+    title: story.title,
+    artist: getTab("stories").title,
+    onStepDone: (i) => recordListen(story.sentences[i].audioKey, lang),
+  });
+  const playingAll = all.status !== "idle";
+  const current = all.step ?? tapped;
 
-  // Leaving the page stops "Escuchar todo".
+  // Leaving the page stops "Escuchar todo" and any sentence.
   useEffect(
     () => () => {
       run.current++;
@@ -47,54 +61,42 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
     [],
   );
 
+  // The sentence "Escuchar todo" reaches scrolls into view.
+  useEffect(() => {
+    if (all.step === null) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    refs.current[all.step]?.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
+  }, [all.step]);
+
   const cancelAll = () => {
     run.current++;
-    setPlayingAll(false);
+    all.stop();
+    setTapped(null);
   };
 
   const playSentence = (i: number) => {
     cancelAll();
-    setCurrent(i);
+    setTapped(i);
     const token = run.current;
     recordListen(story.sentences[i].audioKey, lang);
     void speak(story.sentences[i], { lang }).then(() => {
-      if (run.current === token) setCurrent(null);
+      if (run.current === token) setTapped(null);
     });
   };
 
   const playAll = () => {
     if (playingAll) {
       cancelAll();
-      stop();
-      setCurrent(null);
       return;
     }
-    const token = ++run.current;
-    setPlayingAll(true);
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const step = (i: number) => {
-      if (run.current !== token) return;
-      if (i >= story.sentences.length) {
-        setPlayingAll(false);
-        setCurrent(null);
-        return;
-      }
-      setCurrent(i);
-      refs.current[i]?.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
-      void speak(story.sentences[i], { lang }).then(() => {
-        if (run.current !== token) return;
-        recordListen(story.sentences[i].audioKey, lang);
-        window.setTimeout(() => step(i + 1), GAP_MS);
-      });
-    };
-    step(0);
+    cancelAll();
+    all.play(0);
   };
 
   const tapKeyword = (sentence: string, id: string, keepOpen = false) => {
     const k = byId.get(id);
     if (!k) return;
     cancelAll();
-    setCurrent(null);
     if (!keepOpen) setOpen(open?.sentence === sentence && open.keyword === id ? null : { sentence, keyword: id });
     void speak(k, { lang });
     recordListen(k.audioKey, lang);
@@ -210,7 +212,6 @@ export function StoryReader({ story, lang, onPlay }: { story: Story; lang: strin
           onClick={() => {
             cancelAll();
             stop();
-            setCurrent(null);
             onPlay();
           }}
         >

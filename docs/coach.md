@@ -727,9 +727,23 @@ fallback); switching is one constant plus a `PRICES` row. Measure on the first r
 
 - **Order**: `routeListenSteps(route)`: for each turn its main line, then each of its alts; each
   step = the target-language line (the route's voices, as on tap) followed by its meaning (`es`).
-  Words are skipped. `speakSequence` (`@/lib/audio`) plays them one after another with 800 ms of
-  silence between lines (`GAP_MS` in `src/components/quick/listen-all.ts`), played on the shared
-  audio element when possible so the media session keeps running, else a timer.
+  Words are skipped. 800 ms of silence between lines (`GAP_MS` in `src/components/quick/listen-all.ts`).
+- **One joined file** (added 2026-10-13, plan 016 T196: chained clips stopped when the iPhone
+  locked): `useSequencePlayer` (`src/lib/audio/use-sequence-player.ts`) prepares the file ahead, on
+  mount, from what is on the device (`joinLines` in `src/lib/audio/joined.ts`: each line's mp3 as
+  `speak()` would play it, generated lines from Cache Storage only, no TTS request; Modo deporte's
+  MP3 frame parser, silent frames and Xing frame from `src/lib/sport/mp3-frames.ts`), and plays it
+  on Modo deporte's player (`episodePlayer`: the shared, gesture-unlocked element, rate 1, one
+  chapter per step), so the tap starts it synchronously and it keeps playing with the screen
+  locked. The step highlighted comes from the chapters. Stories ("Escuchar todo" in the reader,
+  350 ms gaps, `recordListen` per sentence heard to its end, as before) and grammar pages (600 ms,
+  `src/components/grammar/play-all.tsx`) use the same player, one step per line.
+- **Fallback: the chain** (`speakSequence`, clip after clip, played on the shared audio element
+  when possible, else a timer) when a line has no mp3 to join (the device voice would read it, it
+  is not on the device yet, or its mp3 is in another format), when the file is not ready 2 s after
+  the tap (`WAIT_MS`), and whenever the "Audio lento" setting is on (one file has one
+  rate; slow lines are not rendered). The chain prefetches the generated lines ahead (in order) and
+  then prepares the file again, so the next start («Seguir» included) plays the file.
 - **Narrator**: every meaning is read by one Spain Spanish neural voice, the narrator of gloss
   language `es`: `es-ES-AlvaroNeural`, declared once per side in a language-agnostic map
   (`NARRATOR_VOICES` on the server, accepted by `/api/coach/tts/` explicitly; its mirror
@@ -742,14 +756,17 @@ fallback); switching is one constant plus a `PRICES` row. Measure on the first r
   when paused (goes on from the paused step's target line); back to «Escuchar todo» at the end. The
   step playing is highlighted (lemon, `aria-current`) and scrolled into view (`smooth`, `auto` with
   `prefers-reduced-motion`); reaching an alt opens that turn's «Más». A tap on a single line's 🔊/🐌
-  (any other `speak()`) stops the sequence, which stays paused where it was; leaving the route or
-  the screen stops it. One `recordListen` per start from the top (the first line), none per line.
+  (any other `speak()`) stops the sequence, which stays paused where it was (on stories and
+  grammar pages it ends it); leaving the route or the screen stops it. One `recordListen` per start from the top (the first line), none per line.
 - **Offline**: `saveRoute` downloads the meanings with the rest; routes saved before this existed
   fetch them on the first «Escuchar todo» (online, the remaining steps are prefetched in order) and
   cache them, and `pruneCoachAudio` keeps them. Offline without them, the device voice reads them.
 - **Media Session** (where supported): title = the route title, artist "Modo rápido", the app
   icon; play/pause handlers (lock screen, headphones) and `playbackState`; cleared when the
-  sequence ends or the route closes.
+  sequence ends or the route closes. With the joined file: the episode player's session (plus
+  position state, seek and previous/next step), its metadata replaced by the route's (stories:
+  the story title, "Historias"; grammar: the verb and tense or the topic, "Gramática"). A pause
+  from the lock screen or headphones leaves it paused («Seguir»).
 - **Voice lines**: each meaning is one more TTS request the first time (counted in
   `COACH_TTS_DAILY_LIMIT`); identical meanings share one mp3 (cached by voice + text).
 
