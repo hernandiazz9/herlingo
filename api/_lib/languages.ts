@@ -73,7 +73,15 @@ export function stripStressForVoice(text: string, voice: string): string {
   return out;
 }
 
-/** Every voice any pack declares: the TTS endpoint accepts only these. */
+/**
+ * The narrator of each gloss language: the one voice that reads a line's meaning aloud (Modo
+ * rápido «Escuchar todo» reads each route line's Spain Spanish `es`). Accepted by the TTS endpoint
+ * on its own, not through a pack (no pack declares it). Mirror: `COACH_NARRATORS` in
+ * src/lib/coach/audio.ts.
+ */
+export const NARRATOR_VOICES: Readonly<Record<string, string>> = { es: "es-ES-AlvaroNeural" };
+
+/** Every voice any pack declares, plus the narrator voices: the TTS endpoint accepts only these. */
 export function allowedVoices(): Set<string> {
-  return new Set([...load().values()].flatMap((m) => m.voices));
+  return new Set([...[...load().values()].flatMap((m) => m.voices), ...Object.values(NARRATOR_VOICES)]);
 }

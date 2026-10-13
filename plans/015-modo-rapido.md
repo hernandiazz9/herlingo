@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:31Z 💻
+- Updated: 2026-10-13 12:27Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
 - Branch: plan-015-modo-rapido · pushed · main = this branch (T175–T180)
-- Next step: T181: Hernán checks on the iPhone (LAN fake mode: npm run build && COACH_LAN=1 npm run start:coach, code dev-owner); findings → fix tasks
+- Next step: T183: Hernán checks «Escuchar todo» on the iPhone (deployed app); findings → fix tasks
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
-- Needs Hernán: T181 iPhone check; deploy only with his OK
+- Needs Hernán: T183 iPhone check
 
 ## Shared contract (all tasks read this)
 
@@ -116,7 +116,7 @@ Worktree setup: npm ci
 - Outcome: QuickFab ⚡ (sea, pressable, above tab bar + safe area), hidden per contract (paths + useHideQuickFab in game/review; list in the component comment), main bottom space via :has(), hides while UpdatePrompt shows · 328f9687 · verify ✓ 💻 · not checked: iPhone position/overlap, themes, widths
 
 ## T181 — iPhone check (Hernán, by hand)
-- Status: pending
+- Status: done
 - Depends on: T179, T180
 - Where: pc (Hernán on his iPhone; never an agent)
 - Goal: Hernán checks the whole flow on the phone; findings become fix tasks.
@@ -126,6 +126,37 @@ Worktree setup: npm ci
   - ⚡ on every tab, light and dark, not covering content or prompts; hidden inside lessons, games, dialogues, stories.
   - Type a situation → route in place; bubbles readable at phone width; 🔊/🐌 respond; «Más» opens and closes; "Mis rutas" lists it; delete asks first.
   - Airplane mode: a saved route still opens (on the deployed https app).
+- Outcome: Hernán checked the deployed app: Modo rápido works; wants a general play for the whole route → T182
+
+## T182 — «Escuchar todo»: play a whole route hands-free
+- Status: done
+- Depends on: T181
+- Where: any
+- Goal: One big ▶ on a route plays the whole route in a row, each target-language line followed by its Spanish meaning spoken aloud, so Hernán can listen while walking without touching the phone.
+- Context: Hernán, 2026-10-13: Modo rápido stays as is; add a general play for the whole route ("frase y significado"). Models: "Escuchar todo" in `src/components/stories/StoryReader.tsx` (sequential playback), `src/components/quick/RouteView.tsx`, `src/lib/coach/{routes,saved-audio,audio}.ts`, `src/lib/audio/{index,generated}.ts`, `api/_lib/{languages,tts}.ts`, docs/coach.md "Modo rápido", "POST /api/coach/tts/", "Generated audio".
+- Scope: may touch `src/components/quick/**`, `src/lib/coach/**` (audio lists only; no stored key or shape change), `src/lib/audio/**` (only additive: a way to await or chain lines), `api/_lib/languages.ts` (+ `tts.ts` only if needed) to accept one explicit Spanish narrator voice, docs/coach.md ("Modo rápido" + the tts voice rule) / must not touch the prompts (`PACK_SYSTEM`, `INTERVIEW_SYSTEM`, `ROUTE_SYSTEM`), `content/`, other screens.
+- Done when:
+  - A route shows a big «Escuchar todo» button above the turns (≥ 44 px, `pressable`, tokens only). Tap → plays, in order, for each turn: the target line, then its Spanish meaning; then each of that turn's alts ("También te pueden decir" / "También puedes decir"): target, then meaning. Words are skipped. Short gap (~0.8 s) between lines. The button turns into «Pausar» / «Seguir»; at the end it returns to «Escuchar todo».
+  - The line playing is highlighted and scrolled into view (respect `prefers-reduced-motion`); a single-line 🔊/🐌 tap or leaving the route/screen stops the chain; `recordListen` is not spammed (once per play-all at most).
+  - Spanish meanings are spoken by one Spain-Spanish neural voice (`es-ES-AlvaroNeural`), declared once as the narrator voice for gloss language `es` (language-agnostic map, no Italian names), accepted by `/api/coach/tts/` explicitly (not through the hidden `cba` pack); device fallback `speechSynthesis` in `es-ES`.
+  - Offline: `saveRoute`'s background download includes the meaning lines; `pruneCoachAudio` keeps them; routes saved before this task fetch them on first play (online) and cache them.
+  - Where the browser supports it, Media Session gets the route title and play/pause handlers (lock screen / headphones); not claimed, Hernán checks.
+  - docs/coach.md "Modo rápido" gains the decision and the narrator voice; the tts section names the extra accepted voice.
+  - Fake check: `PORT=3107 npm run dev:coach` (fake, keys emptied) + curl `/api/coach/tts/` with `es-ES-AlvaroNeural` → 200; an unknown voice still → 400.
+  - `npm run verify` → exit 0.
+- Outcome: «Escuchar todo» (line → meaning, alts, 800 ms gaps, Pausar/Seguir, highlight + scroll), speakSequence + locale fallback, NARRATOR_VOICES es-ES-AlvaroNeural accepted by /tts/, meanings in routePlayables (offline) · 8d5187ac · verify ✓ 💻 · fake curl ✓ · not checked: visuals, real voice, Media Session, locked screen
+
+## T183 — iPhone check of «Escuchar todo» (Hernán, by hand)
+- Status: pending
+- Depends on: T182
+- Where: pc (Hernán on his iPhone; never an agent)
+- Goal: Hernán listens to a whole route on the deployed app; findings become fix tasks.
+- Context: deployed https app (real voices); a route generated after the deploy and one saved before it.
+- Scope: none (no code).
+- Done when:
+  - ▶ plays the whole route with the screen on: Italian → Spanish meaning, alts included, pause/resume works.
+  - Screen locked / phone in the pocket: note whether it keeps playing (if not → a follow-up task).
+  - Airplane mode: a saved route still plays all its lines.
 - Outcome:
 
 ## Review queue
@@ -134,6 +165,7 @@ Worktree setup: npm ci
 - [ ] T178 @2c3ecad3 — /rapido/ Mis rutas + a route (?ruta=): light + dark, iPhone width, 🔊/🐌, «Más», delete, back (queued 2026-10-13 💻)
 - [ ] T179 @db9e8c63 — /rapido/ form: type → Prepárame → route opens with notice; leave mid-request and come back; offline notice; Rutas rápidas row in Prepárate usage (queued 2026-10-13 💻)
 - [ ] T180 @328f9687 — ⚡ on every tab (light + dark), not over content/prompts/Jugar button; hidden in lessons, games, review, dialogues, stories, /rapido/ (queued 2026-10-13 💻)
+- [ ] T182 @8d5187ac — «Escuchar todo» on a route: plays line → Spanish meaning, alts; Pausar/Seguir; highlight; locked screen; offline (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Access = one global floating ⚡ button (no cards on Ruta, Frasario or Jugar). (Hernán)
@@ -144,6 +176,7 @@ Worktree setup: npm ci
 - 2026-10-13 plan: No practice in v1; the AI evaluation (short exam + serious report, sketch in docs/coach.md) is a separate later plan. (Hernán)
 - 2026-10-13 plan: Save tokens: one agent at a time, no code reviews, no visual checks by agents; Hernán checks on his iPhone (T181). (Hernán)
 - 2026-10-13 plan: Work on branch `plan-015-modo-rapido`; pushes only there with `guarded_push.sh`; no merge into main, PR or deploy without Hernán's explicit OK. (Hernán)
+- 2026-10-13 Hernán: Modo rápido stays as is; add «Escuchar todo» (target line → Spanish meaning spoken, alts included, words skipped). Modo deporte (bike, narrator) stays in docs/ideas.md for later
 
 ## Proposals (new scope)
 - 2026-10-13 plan: Light practice after a route, no AI: hear a native line (main or alt) → pick its meaning among 3.
@@ -154,6 +187,8 @@ Worktree setup: npm ci
 - 2026-10-13 T177: the offline error message of generateRoute still says 'situaciones'; the route screen's own offline copy must come from the UI (T179)
 - 2026-10-13 T179: offline, AccessCard's code check shows the client's 'situaciones' message (shared client copy)
 - 2026-10-13 T180: Frasario ShowMode, the Ruta side sheet and dialogs only cover the ⚡ (z-order); keyboard focus can still reach it behind them, as with the tab bar
+- 2026-10-13 T182: meanings add ~20–40 voice lines per route; heavy use could reach COACH_TTS_DAILY_LIMIT (500/day)
+- 2026-10-13 T182: a single-line 🔊/🐌 tap pauses the sequence (resumable with «Seguir») instead of stopping it
 
 ## Log
 - 2026-10-12 22:26Z 💻 plan written from the interview; not approved yet
@@ -174,3 +209,7 @@ Worktree setup: npm ci
 - 2026-10-13 11:10Z 💻 T180 launched · attempt 1 · agent a72726e9ceb59ebaf
 - 2026-10-13 11:16Z 💻 T180 done · worktree-agent-a72726e9ceb59ebaf → 328f9687 · verify ✓
 - 2026-10-13 11:31Z 💻 merged origin/main (docs/ideas.md) · verify ✓ · pushed to main with Hernán's OK (T175–T180; T181 still pending)
+- 2026-10-13 12:11Z 💻 plan revised with Hernán's approval: T182 «Escuchar todo», T183 iPhone check
+- 2026-10-13 12:12Z 💻 T182 launched · attempt 1 · agent aeeaa62e6aea0237f
+- 2026-10-13 12:26Z 💻 T182 done · worktree-agent-aeeaa62e6aea0237f → 8d5187ac · verify ✓
+- 2026-10-13 12:27Z 💻 merged origin/main (plan 014 Gramática, clean) · verify ✓ · T182 pushed to main with Hernán's OK

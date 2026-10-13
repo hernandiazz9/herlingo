@@ -31,12 +31,17 @@ export { clearAccessCode, getAccessCode, setAccessCode } from "./access";
 export {
   cachePackAudio,
   cacheRouteAudio,
+  COACH_NARRATORS,
   coachVoices,
   packLine,
   packPlayables,
   questionPlayable,
   routeLine,
+  routeListenSteps,
+  routeMeaning,
+  routeMeaningOptions,
   routePlayables,
+  type RouteListenStep,
 } from "./audio";
 export { deletePack, getSavedPack, getSavedPacks, replacePack, savePack } from "./packs";
 export { parseRoute } from "./parse";

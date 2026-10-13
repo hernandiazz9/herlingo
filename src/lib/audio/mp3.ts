@@ -75,6 +75,40 @@ export function mp3Play(url: string, rate: number): Promise<Mp3Result> {
   });
 }
 
+const silences = new Map<number, string>();
+
+/**
+ * Object URL of `ms` of silence (8 kHz 8-bit mono WAV, ~8 KB per second), made once per length,
+ * for `mp3Play`. Undefined where there is no audio element.
+ */
+export function mp3Silence(ms: number): string | undefined {
+  if (!mp3Available() || typeof URL.createObjectURL !== "function") return undefined;
+  const length = Math.max(1, Math.round(ms));
+  const known = silences.get(length);
+  if (known) return known;
+  const samples = Math.round((8000 * length) / 1000);
+  const bytes = new Uint8Array(44 + samples);
+  const view = new DataView(bytes.buffer);
+  const ascii = (at: number, s: string) => [...s].forEach((c, i) => view.setUint8(at + i, c.charCodeAt(0)));
+  ascii(0, "RIFF");
+  view.setUint32(4, 36 + samples, true);
+  ascii(8, "WAVE");
+  ascii(12, "fmt ");
+  view.setUint32(16, 16, true); // fmt chunk size
+  view.setUint16(20, 1, true); // PCM
+  view.setUint16(22, 1, true); // mono
+  view.setUint32(24, 8000, true); // sample rate
+  view.setUint32(28, 8000, true); // byte rate
+  view.setUint16(32, 1, true); // block align
+  view.setUint16(34, 8, true); // bits per sample
+  ascii(36, "data");
+  view.setUint32(40, samples, true);
+  bytes.fill(0x80, 44); // 8-bit PCM silence is the midpoint
+  const url = URL.createObjectURL(new Blob([bytes], { type: "audio/wav" }));
+  silences.set(length, url);
+  return url;
+}
+
 export function mp3Stop(): void {
   const s = settle;
   settle = null;
