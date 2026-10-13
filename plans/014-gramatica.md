@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 13:36Z 💻
+- Updated: 2026-10-13 15:04Z 💻
 - Writer: released 11:47Z by 💻 → continue on 💻
 - Branch: main (plan-014-gramatica merged)
 - Next step: T184 + T185 running; Gemini Italian audio running in Hernán's terminal (uncommitted public/audio/it)
@@ -203,6 +203,19 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome: notes on essere/andare (sto bene, passato = he sido/fui, non + infinitivo), voi for groups in tu-lei, +5 examples (tu-lei, vorrei, pronomi-diretti) appended · d1101b02 · verify ✓ · audio for 5 new examples at next npm run audio
 
+## T186 — Voice rotation (4 free Italian voices) and audio without Gemini
+- Status: pending
+- Depends on: T184
+- Where: any
+- Goal: Hernán (2026-10-13): Italian uses its 4 free edge-tts voices, varied by who speaks. Add pack.json `voiceRotation?: boolean` (Italian only: true; add `it-IT-GiuseppeMultilingualNeural` as 4th voice). With it, every playable whose content has no explicit `voice` gets a deterministic voice from `voices` (stable hash, so audio never churns between runs): phrases, vocab, expressions, placement by item id; Q&A question one voice and its replies a different one; dialogue native speakers one voice per speaker name (different speakers differ), learner options keep today's rule; story narrator by story id (sentence voices that are explicit stay); a verb's infinitive, forms and examples share one voice per verb; a grammar card's examples share one per card; drills by drill key. Explicit `voice` always wins. Also `npm run audio -- --no-gemini`: skip Gemini generation (existing Gemini mp3s keep being used; other lines get their edge-tts mp3). Keep the `ttsVoices` Gemini mapping as is.
+- Context: where Playables get their default voice (`src/lib/content/`, find it), `scripts/audio/plan.ts` and `generate.ts` (Gemini path), `src/lib/content/schema.ts` (pack meta), docs/content-guide.md "Audio keys" / pack.json, CLAUDE.md (`npm run audio` row).
+- Scope: may touch `src/lib/content/**`, `scripts/audio/**`, `content/it/pack.json`, docs/content-guide.md, CLAUDE.md / must not touch other packs' content or audio, `public/audio/**`, stored keys.
+- Done when:
+  - `npm run audio -- --dry-run --lang=it --no-gemini` works; a one-off script prints how many Italian playables each of the 4 voices gets (roughly even) and confirms Q&A question ≠ replies and two speakers of one dialogue differ.
+  - `npm run audio -- --dry-run` shows 0 to generate and 0 manifest changes for every other pack (no churn).
+  - `npm run verify` → exit 0.
+- Outcome:
+
 ## Review queue
 
 ## Visual checks queue
@@ -238,6 +251,7 @@ Worktree setup: npm ci
 - 2026-10-13 T174: run by the orchestrator in the main checkout (one command, saves an agent); --max-credits=0 and cba changes discarded, so only public/audio/it is committed. (orchestrator)
 - 2026-10-13 plan: merged into main and pushed at Hernán's request (2026-10-13), with main's plan 015 brought in first; T174 audio and the visual queue still open. (Hernán)
 - 2026-10-13 plan: T184 «Escuchar todo» on grammar pages and T185 extra explanation/examples added at Hernán's request. (Hernán)
+- 2026-10-13 plan: Italian audio = 4 free edge-tts voices with deterministic rotation (Q&A asker ≠ answerer, one voice per dialogue speaker); keep the 77 Gemini clips, no more Gemini generation (100/day cap). (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
