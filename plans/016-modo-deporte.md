@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 16:57Z 💻
+- Updated: 2026-10-13 17:13Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
 - Next step: T188, then T189–T190 one at a time; T191 is Hernán's iPhone check (gate)
@@ -61,7 +61,7 @@ Worktree setup: npm ci
 - Outcome: src/lib/sport/ (types, NARRATION table, EPISODE_GAPS, compileEpisode → segments+chapters, episodeFromDialogue/Route, episodePlayables); estimates: Italian dialogues 3:43–6:46, fake route 5:11 · 1d162735 · verify ✓ 💻 · not checked: real durations
 
 ## T189 — Joined player: one mp3 per episode, chapters, lock-screen controls
-- Status: running (attempt 1 · 💻 · agent a1001fa71713095c5 · since 16:57Z)
+- Status: done
 - Depends on: T188
 - Where: any
 - Goal: Prepare an episode (download every clip with progress), join it byte by byte into one mp3 with silent frames for the gaps, and play it on the shared element with Media Session controls that jump between steps.
@@ -76,7 +76,7 @@ Worktree setup: npm ci
   - `episodeMp3File(blob, title)` → a `File` named after the title (for «Guardar mp3»).
   - Throwaway `npx tsx` check on bytes only: join 3 mp3s from `public/audio/it/` + gaps → frame count and duration match the sum; if `ffprobe`/`ffmpeg` exist, the output decodes without errors.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: prepareEpisode (downloads, missing counted, format error), MP3 frame parser + new Xing frame on the joined file, joinEpisodes, player (load/play/pause/seek/steps, Media Session), episodeMp3File; mp3Media on the shared element · b4fa000b · verify ✓ 💻 · joined Gemini+edge clips: frames/duration exact, ffmpeg + afconvert decode clean · not checked: lock screen, headphones, iOS blob play/seek
 
 ## T190 — `/deporte/` screen with free episodes, player view and the Jugar card
 - Status: pending
@@ -205,6 +205,9 @@ Worktree setup: npm ci
 - 2026-10-13 plan: Save tokens: one agent at a time, no code reviews, no visual checks by agents; Hernán checks on his iPhone (T191, T197). (Hernán, standing rule)
 - 2026-10-13 plan: Work on branch `plan-016-modo-deporte` in ../lang_lern-deporte; pushes only there with `guarded_push.sh`; no merge into main, PR or deploy without Hernán's explicit OK. (plan)
 - 2026-10-13 plan: Numbering: P015's Proposals named the evaluation plan "Plan 016"; Modo deporte takes 016 and the evaluation gets the next free number. (plan)
+- 2026-10-13 T189: the joined file starts with its own Xing frame (frame count, bytes, seek table) so mixed 48/64 kbps seeks land right; docs/sport.md 'Player' to say so (T190). (plan)
+- 2026-10-13 T189: lock screen = previous/next track (steps) only: no seekbackward/seekforward handlers, since iOS shows ±15 s instead of track buttons when they exist; seekto kept (T190). (plan)
+- 2026-10-13 T188: dialogue episodes use edge-tts for normal and slow lines (same voice), one constant to switch back to the Gemini content mp3s; default until Hernán answers. (plan)
 
 ## Proposals (new scope)
 - 2026-10-13 plan: Episodes from the pack's units (key phrases of a lesson as a short listening review), no AI.
@@ -213,6 +216,7 @@ Worktree setup: npm ci
 - 2026-10-13 T187: per-line load deadline 8 s (LOAD_DEADLINE_MS) and request timeout 7 s (SPEECH_TIMEOUT_MS): preparing an episode with real slow lines may need retries
 - 2026-10-13 T188: Italian content mp3s are Gemini voices (ttsVoices: Kore/Charon/Leda, 64 kbps) while slow lines are edge-tts (48 kbps): a dialogue's normal and slow lines sound like different people → asked Hernán
 - 2026-10-13 T188: episode es/intro/tip allow ≤ 400 chars but /api/coach/tts/ accepts ≤ 300 (COACH_LIMITS.ttsText) → T192 caps episode narration and meanings at 300
+- 2026-10-13 T189: generatedBytes and prefetchGenerated send text to TTS without stripStress (no pack uses stress marks today)
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -222,3 +226,4 @@ Worktree setup: npm ci
 - 2026-10-13 16:49Z 💻 T188 launched · attempt 1 · agent af9c75698b24a05f4
 - 2026-10-13 16:57Z 💻 T188 done · worktree-agent-af9c75698b24a05f4 → 1d162735 · verify ✓
 - 2026-10-13 16:57Z 💻 T189 launched · attempt 1 · agent a1001fa71713095c5
+- 2026-10-13 17:13Z 💻 T189 done · worktree-agent-a1001fa71713095c5 → b4fa000b · verify ✓
