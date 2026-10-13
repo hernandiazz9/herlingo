@@ -8,9 +8,9 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:47Z 💻
+- Updated: 2026-10-13 11:53Z 💻
 - Writer: released 11:47Z by 💻 → continue on 💻
-- Branch: plan-014-gramatica (local, not pushed)
+- Branch: main (plan-014-gramatica merged)
 - Next step: only T174 left (audio); then Hernán's iPhone pass and OK for merge/PR
 - Needs Hernán: T174: retry 'npm run audio -- --max-credits=0' later or upgrade edge-tts when fixed · T173 doubts: 'una amica/una acqua/la uscita' as wrong options (kept); venire example 'l'accompagno' = 'la acompaño' (lo/la?) · visual queue (4)
 
@@ -210,6 +210,7 @@ Worktree setup: npm ci
 - 2026-10-13 T172: drills avoid register-only distractors; elided answers carry the next word. (agent)
 - 2026-10-13 T173: irregular-mark rule: presente vs regular endings (essere none); passato/condizionale never per form (notes); imperativo tu/noi/voi when ≠ present, Lei when ≠ present lui form with last vowel changed. (agent)
 - 2026-10-13 T174: run by the orchestrator in the main checkout (one command, saves an agent); --max-credits=0 and cba changes discarded, so only public/audio/it is committed. (orchestrator)
+- 2026-10-13 plan: merged into main and pushed at Hernán's request (2026-10-13), with main's plan 015 brought in first; T174 audio and the visual queue still open. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -245,3 +246,4 @@ Worktree setup: npm ci
 - 2026-10-13 11:26Z 💻 T173 done → 5301ff93 · verify ✓
 - 2026-10-13 11:26Z 💻 T174 started in main checkout
 - 2026-10-13 11:47Z 💻 T174 blocked: all 405 Italian lines 403 from edge-tts; partial manifest change reverted
+- 2026-10-13 11:53Z 💻 merged origin/main (plan 015) into plan-014-gramatica: conflicts navigation.ts (grammar + quick sections) and ReviewView.tsx (drills + useHideQuickFab) resolved; verify ✓; main fast-forwarded and pushed
