@@ -124,7 +124,7 @@ Worktree setup: npm ci
 - Outcome: EPISODE_TEXT_LIMITS (spoken strings ≤ 300) + EPISODE_ARRAY_LIMITS, GeneratedEpisode/Episode/EpisodeRequest, normalizeEpisode, EPISODE_SYSTEM + episodeUserPrompt (other prompts byte-identical), fakeEpisode (it supermarket: 3 parts, 8 steps), generateEpisode (low, 12000) · 51c87dfc · verify ✓ 💻 · not checked: real Claude call (tokens, latency vs the 50 s deadline, 12–16 steps)
 
 ## T193 — `POST /api/coach/episode/`, episode counter and usage
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ac9bbfe0cf04a6319 · since 17:38Z)
 - Depends on: T192
 - Where: any
 - Goal: The endpoint with its own daily counter, billing and usage fields, exactly like `/api/coach/route/`.
@@ -241,3 +241,4 @@ Worktree setup: npm ci
 - 2026-10-13 17:28Z 💻 main fast-forwarded to 071ef416 with Hernán's OK; .vercel copied into ../lang_lern-deporte for the deploy
 - 2026-10-13 17:28Z 💻 T192 launched · attempt 1 · agent a6c51a16e78d4a469 (+ spoken strings ≤ 300)
 - 2026-10-13 17:38Z 💻 T192 done · worktree-agent-a6c51a16e78d4a469 → 51c87dfc · verify ✓
+- 2026-10-13 17:38Z 💻 T193 launched · attempt 1 · agent ac9bbfe0cf04a6319 (+ episode deadline 55 s, latency log)
