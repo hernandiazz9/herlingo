@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 21:42Z 💻
+- Updated: 2026-10-13 21:43Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
 - Next step: T197: deploy (Hernán's OK) + Hernán's check on the bike; then plan done when the visual queue is empty
@@ -275,3 +275,4 @@ Worktree setup: npm ci
 - 2026-10-13 21:23Z 💻 T195 done · worktree-agent-aa039354ce92863d9 → 9418fa65 · verify ✓
 - 2026-10-13 21:23Z 💻 T196 launched · attempt 1 · agent a0c13b2cdac9c4346
 - 2026-10-13 21:42Z 💻 T196 done · worktree-agent-a0c13b2cdac9c4346 → 130a01ca · verify ✓
+- 2026-10-13 21:43Z 💻 merged origin/main (a952b70e: msedge-tts 2.1.0, update download progress) into plan-016 → 0257a6de, no conflicts · npm ci · verify ✓ · slow TTS (rate -30%) still works on msedge-tts 2.1.0
