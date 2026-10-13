@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:19Z 💻
+- Updated: 2026-10-13 06:24Z 💻
 - Writer: 💻 desktop
 - Branch: plan-014-gramatica (local, not pushed)
 - Next step: T163 + T164 running; then T165/T167/T169–T171 (2 at a time)
@@ -29,7 +29,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T163 — Content model for the grammar reference + verb.essere
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a5414467c5dd30344 · since 06:20Z)
 - Depends on: none
 - Where: any
 - Goal: Implement the format of docs/content-guide.md "Grammar reference": pack.json `grammar` tenses, `verbs/*.json`, card `order`/`verb`/`drills`, loader functions and types from the contract, audio keys in `listPlayables`, and the `content:check` rules. Prove it with the Italian tenses and one complete verb, `verb.essere`.
@@ -42,7 +42,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T164 — Read counts and XP for "Leído"
-- Status: pending
+- Status: done
 - Depends on: none
 - Where: any
 - Goal: Create `src/lib/grammar/` (contract names): the versioned `lang-lern:grammar:<lang>` store, `markGrammarRead` (+1 read; 3 XP for the first read of an id per day, at most 15 XP a day, through `recordReviewResult(…, "grammar")` with no items so streak, activity log and Liga work as for any XP), the hook, and clearing on "Borrar progreso".
@@ -51,7 +51,7 @@ Worktree setup: npm ci
 - Done when:
   - One-off `npx tsx` script with a fake localStorage: first read of an id → xp 3; second read same day → count 2, xp 0; six different ids in a day → 15 XP total; next day → 3 again; `parseGrammarReads` of garbage, `{}`, a future `v`, an entry with a bad count → never throws, keeps the valid entries.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: src/lib/grammar/ (reads.ts store v1, markGrammarRead 3 XP/day/id cap 15 via recordReviewResult 'grammar', hook), cleared by resetProgress · 7de37571 · verify ✓ 💻 · not checked: none (no UI)
 
 ## T165 — Gramática pages (index, verb page, topic page)
 - Status: pending
@@ -193,6 +193,7 @@ Worktree setup: npm ci
 - 2026-10-12 plan: save tokens: no visual checks or code reviews by agents; Hernán drains both queues on his iPhone/Mac. Max 2 agents. (Hernán)
 - 2026-10-12 plan: work on branch plan-014-gramatica; no merge into main, PR or deploy without Hernán's explicit OK. (Hernán)
 - 2026-10-13 plan: content tasks T169–T172 run on Sonnet to save tokens; T173 review and code tasks on Opus. (Hernán)
+- 2026-10-13 T164: XP recorded only when > 0; bad 'last' keeps the count; grammar XP shows no toast yet (T166 decides feedback). (agent)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -200,3 +201,6 @@ Worktree setup: npm ci
 ## Log
 - 2026-10-12 18:48Z 💻 plan written from the interview; not approved yet
 - 2026-10-13 06:19Z 💻 plan approved by Hernán
+- 2026-10-13 06:20Z 💻 T163 launched · attempt 1 · agent a5414467c5dd30344
+- 2026-10-13 06:20Z 💻 T164 launched · attempt 1 · agent a909563e334169d27
+- 2026-10-13 06:24Z 💻 T164 done → 7de37571 · verify ✓
