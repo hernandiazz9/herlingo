@@ -317,7 +317,7 @@
         {
           "text": "Mi fa male la gola, vado ___ medico.",
           "answer": "dal",
-          "distractors": ["al", "del", "nel"],
+          "distractors": ["sul", "del", "nel"],
           "es": "Me duele la garganta, voy al médico."
         }
       ],

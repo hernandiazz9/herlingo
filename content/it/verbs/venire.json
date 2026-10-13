@@ -44,7 +44,7 @@
     },
     "imperativo": {
       "forms": [
-        { "form": "vieni", "es": "ven", "irregular": true },
+        { "form": "vieni", "es": "ven" },
         { "form": "venga", "es": "venga (usted)", "irregular": true },
         { "form": "veniamo", "es": "vengamos" },
         { "form": "venite", "es": "venid" }

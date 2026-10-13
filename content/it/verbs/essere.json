@@ -45,7 +45,7 @@
     "imperativo": {
       "forms": [
         { "form": "sii", "es": "sé / estate", "irregular": true },
-        { "form": "sia", "es": "sea / esté (usted)" },
+        { "form": "sia", "es": "sea / esté (usted)", "irregular": true },
         { "form": "siamo", "es": "seamos / estemos" },
         { "form": "siate", "es": "sed / estad", "irregular": true }
       ],

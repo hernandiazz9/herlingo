@@ -45,7 +45,7 @@
     "imperativo": {
       "forms": [
         { "form": "abbi", "es": "ten", "irregular": true },
-        { "form": "abbia", "es": "tenga (usted)" },
+        { "form": "abbia", "es": "tenga (usted)", "irregular": true },
         { "form": "abbiamo", "es": "tengamos" },
         { "form": "abbiate", "es": "tened", "irregular": true }
       ],

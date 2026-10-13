@@ -45,7 +45,7 @@
     "imperativo": {
       "forms": [
         { "form": "sappi", "es": "sabe / ten presente", "irregular": true },
-        { "form": "sappia", "es": "sepa (usted)" },
+        { "form": "sappia", "es": "sepa (usted)", "irregular": true },
         { "form": "sappiamo", "es": "sepamos" },
         { "form": "sappiate", "es": "sabed / tened presente", "irregular": true }
       ],

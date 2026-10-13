@@ -9,7 +9,7 @@
     "presente": {
       "forms": [
         { "form": "sto", "es": "estoy" },
-        { "form": "stai", "es": "estás" },
+        { "form": "stai", "es": "estás", "irregular": true },
         { "form": "sta", "es": "está" },
         { "form": "stiamo", "es": "estamos" },
         { "form": "state", "es": "estáis" },
@@ -40,7 +40,7 @@
         { "form": "starebbero", "es": "estarían / se quedarían" }
       ],
       "example": { "text": "Starei qui ancora una notte, è possibile?", "es": "Me quedaría aquí una noche más, ¿es posible?" },
-      "notes": "Regular: raíz «star-». Muy útil para alargar una estancia."
+      "notes": "Raíz «star-»: conserva la «a» del infinitivo (como «farei»), no «sterei». Muy útil para alargar una estancia."
     },
     "imperativo": {
       "forms": [

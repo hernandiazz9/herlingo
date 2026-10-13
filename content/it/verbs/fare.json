@@ -9,7 +9,7 @@
     "presente": {
       "forms": [
         { "form": "faccio", "es": "hago", "irregular": true },
-        { "form": "fai", "es": "haces" },
+        { "form": "fai", "es": "haces", "irregular": true },
         { "form": "fa", "es": "hace" },
         { "form": "facciamo", "es": "hacemos", "irregular": true },
         { "form": "fate", "es": "hacéis" },
@@ -45,7 +45,7 @@
     "imperativo": {
       "forms": [
         { "form": "fa'", "es": "haz", "irregular": true },
-        { "form": "faccia", "es": "haga (usted)" },
+        { "form": "faccia", "es": "haga (usted)", "irregular": true },
         { "form": "facciamo", "es": "hagamos" },
         { "form": "fate", "es": "haced" }
       ],
