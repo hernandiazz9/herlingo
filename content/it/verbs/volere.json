@@ -1,0 +1,46 @@
+{
+  "id": "verb.volere",
+  "order": 65,
+  "infinitive": "volere",
+  "es": "querer",
+  "irregular": true,
+  "notes": "Para pedir, mejor el condicional «vorrei» (quisiera) que «voglio», que suena brusco. Sin imperativo útil: solo aparece en fórmulas muy formales («voglia scusarmi»).",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "voglio", "es": "quiero", "irregular": true },
+        { "form": "vuoi", "es": "quieres", "irregular": true },
+        { "form": "vuole", "es": "quiere", "irregular": true },
+        { "form": "vogliamo", "es": "queremos", "irregular": true },
+        { "form": "volete", "es": "queréis" },
+        { "form": "vogliono", "es": "quieren", "irregular": true }
+      ],
+      "example": { "text": "Vogliamo prenotare un tavolo per stasera.", "es": "Queremos reservar una mesa para esta noche." },
+      "notes": "Va con infinitivo sin preposición: «voglio andare», «vuoi venire?»."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "ho voluto", "es": "quise / he querido" },
+        { "form": "hai voluto", "es": "quisiste / has querido" },
+        { "form": "ha voluto", "es": "quiso / ha querido" },
+        { "form": "abbiamo voluto", "es": "quisimos / hemos querido" },
+        { "form": "avete voluto", "es": "quisisteis / habéis querido" },
+        { "form": "hanno voluto", "es": "quisieron / han querido" }
+      ],
+      "example": { "text": "Ho voluto provare la granita al limone.", "es": "Quise probar la granita de limón." },
+      "notes": "Con «avere» (no concuerda). Delante de un infinitivo suele tomar el auxiliar de ese verbo: «sono voluto andare»."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "vorrei", "es": "querría / quisiera" },
+        { "form": "vorresti", "es": "querrías / quisieras" },
+        { "form": "vorrebbe", "es": "querría / quisiera" },
+        { "form": "vorremmo", "es": "querríamos / quisiéramos" },
+        { "form": "vorreste", "es": "querríais / quisierais" },
+        { "form": "vorrebbero", "es": "querrían / quisieran" }
+      ],
+      "example": { "text": "Vorrei un caffè, per favore.", "es": "Quisiera un café, por favor." },
+      "notes": "Raíz «vorr-» en todas las personas. «Vorrei…» es la forma educada de pedir: la más útil del viaje."
+    }
+  }
+}

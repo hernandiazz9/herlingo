@@ -1,0 +1,56 @@
+{
+  "id": "verb.avere",
+  "order": 20,
+  "infinitive": "avere",
+  "es": "tener / haber",
+  "irregular": true,
+  "notes": "Es tener y el auxiliar de la mayoría de los verbos en el passato prossimo («ho mangiato»). Ojo: «ho fame», «ho sete», «ho freddo» = tengo hambre, sed, frío.",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "ho", "es": "tengo", "irregular": true },
+        { "form": "hai", "es": "tienes", "irregular": true },
+        { "form": "ha", "es": "tiene", "irregular": true },
+        { "form": "abbiamo", "es": "tenemos", "irregular": true },
+        { "form": "avete", "es": "tenéis" },
+        { "form": "hanno", "es": "tienen", "irregular": true }
+      ],
+      "example": { "text": "Ho una prenotazione per due notti.", "es": "Tengo una reserva para dos noches." },
+      "notes": "La «h» es muda: «ha» suena «a» y «hanno» suena «anno». No los confundas con «a» (a) ni «anno» (año)."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "ho avuto", "es": "tuve / he tenido" },
+        { "form": "hai avuto", "es": "tuviste / has tenido" },
+        { "form": "ha avuto", "es": "tuvo / ha tenido" },
+        { "form": "abbiamo avuto", "es": "tuvimos / hemos tenido" },
+        { "form": "avete avuto", "es": "tuvisteis / habéis tenido" },
+        { "form": "hanno avuto", "es": "tuvieron / han tenido" }
+      ],
+      "example": { "text": "Ho avuto un problema con il biglietto.", "es": "He tenido un problema con el billete." },
+      "notes": "Con «avere»: el participio «avuto» no concuerda."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "avrei", "es": "tendría / habría" },
+        { "form": "avresti", "es": "tendrías / habrías" },
+        { "form": "avrebbe", "es": "tendría / habría" },
+        { "form": "avremmo", "es": "tendríamos / habríamos" },
+        { "form": "avreste", "es": "tendríais / habríais" },
+        { "form": "avrebbero", "es": "tendrían / habrían" }
+      ],
+      "example": { "text": "Avrebbe un tavolo per due?", "es": "¿Tendría una mesa para dos?" },
+      "notes": "Raíz «avr-» en todas las personas. «Avrebbe…?» es una forma educada de preguntar si hay algo."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "abbi", "es": "ten", "irregular": true },
+        { "form": "abbia", "es": "tenga (usted)" },
+        { "form": "abbiamo", "es": "tengamos" },
+        { "form": "abbiate", "es": "tened", "irregular": true }
+      ],
+      "example": { "text": "Abbia pazienza, parlo ancora poco italiano.", "es": "Tenga paciencia, todavía hablo poco italiano." },
+      "notes": "«Abbia pazienza» es la frase útil. «Abbi» y «abbiate» no se parecen al presente."
+    }
+  }
+}
