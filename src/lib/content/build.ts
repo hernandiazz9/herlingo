@@ -7,6 +7,7 @@ import { GLOSS_LANG_CODES, glossLangsOf, glossSuffix, type GlossBase, type Gloss
 import { audioKey, vocabText } from "./keys";
 import * as S from "./schema";
 import { stressIssues } from "./script";
+import { otherVoice, rotatedVoice, speakerVoices } from "./voices";
 import type {
   Dialogue,
   Expression,
@@ -124,6 +125,8 @@ export function buildPack(src: PackSources): BuildResult {
   if (meta.lang !== src.lang) errors.push(`${src.meta.file}: lang "${meta.lang}" must equal folder name "${src.lang}"`);
 
   const defaultVoice = meta.voices[0];
+  const rotation = meta.voiceRotation === true;
+  if (rotation && meta.voices.length < 2) errors.push(`${src.meta.file}: "voiceRotation" needs at least 2 "voices"`);
   const situations = new Set<string>();
   for (const s of meta.situations) {
     if (situations.has(s.id)) errors.push(`${src.meta.file}: duplicate situation "${s.id}"`);
@@ -145,6 +148,11 @@ export function buildPack(src: PackSources): BuildResult {
     if (voice && !meta.voices.includes(voice)) errors.push(`${where}: voice "${voice}" is not in pack.json voices`);
     return voice ?? defaultVoice;
   };
+  /** The voice a playable without an explicit `voice` gets: the first one, or its rotated one (pack.json `voiceRotation`). */
+  const autoVoice = (key: string) => (rotation ? rotatedVoice(meta.voices, key) : defaultVoice);
+  /** An explicit `voice` (validated) always wins; else `autoVoice(key)`. */
+  const voiceOf = (voice: string | undefined, where: string, key: string) =>
+    voice ? checkVoice(voice, where) : autoVoice(key);
   const checkSituation = (situation: string | undefined, where: string) => {
     if (situation && !situations.has(situation)) errors.push(`${where}: unknown situation "${situation}"`);
   };
@@ -249,7 +257,8 @@ export function buildPack(src: PackSources): BuildResult {
       const before = gap < 0 ? text : text.slice(0, gap);
       const after = gap < 0 ? "" : text.slice(gap + DRILL_GAP.length);
       for (const t of [before + d.answer + after, ...d.distractors]) checkStress(t, at);
-      return { ...d, text: before + d.answer + after, before, after, audioKey: audioKey(id, `g${i + 1}`), voice: defaultVoice };
+      const key = audioKey(id, `g${i + 1}`);
+      return { ...d, text: before + d.answer + after, before, after, audioKey: key, voice: autoVoice(key) };
     });
 
   const phrases: Phrase[] = [];
@@ -279,7 +288,7 @@ export function buildPack(src: PackSources): BuildResult {
       kind: "vocab",
       text: vocabText(v.word, v.article),
       audioKey: audioKey(v.id),
-      voice: checkVoice(v.voice, where),
+      voice: voiceOf(v.voice, where, v.id),
       imageKey,
       image: resolveImage(imageKey),
     });
@@ -298,7 +307,7 @@ export function buildPack(src: PackSources): BuildResult {
       checkGloss(p.literal, where, "literal");
       checkGloss(p.notes, where, "notes");
       checkGloss(p.explanation, where, "explanation");
-      phrases.push({ ...p, ...lv, kind: "phrase", audioKey: audioKey(p.id), voice: checkVoice(p.voice, where) });
+      phrases.push({ ...p, ...lv, kind: "phrase", audioKey: audioKey(p.id), voice: voiceOf(p.voice, where, p.id) });
     }
     for (const v of f.vocab) addVocab(file, v, level);
     for (const q of f.qa) {
@@ -311,7 +320,9 @@ export function buildPack(src: PackSources): BuildResult {
       checkGloss(q.notes, where, "notes");
       q.accepted.forEach((r, i) => checkTranslation(r, `${where} accepted ${i + 1}`));
       q.distractors.forEach((r, i) => checkTranslation(r, `${where} distractor ${i + 1}`));
-      const voice = checkVoice(q.voice, where);
+      const voice = voiceOf(q.voice, where, q.id);
+      // Replies sound different from the question; all replies of one Q&A share a voice.
+      const replyVoice = rotation ? otherVoice(meta.voices, voice, `${q.id}--r`) : defaultVoice;
       qa.push({
         ...q,
         ...lv,
@@ -319,8 +330,8 @@ export function buildPack(src: PackSources): BuildResult {
         text: q.question,
         audioKey: audioKey(q.id, "q"),
         voice,
-        accepted: q.accepted.map((r, i) => ({ ...r, audioKey: audioKey(q.id, `a${i + 1}`), voice: defaultVoice })),
-        distractors: q.distractors.map((r, i) => ({ ...r, audioKey: audioKey(q.id, `d${i + 1}`), voice: defaultVoice })),
+        accepted: q.accepted.map((r, i) => ({ ...r, audioKey: audioKey(q.id, `a${i + 1}`), voice: replyVoice })),
+        distractors: q.distractors.map((r, i) => ({ ...r, audioKey: audioKey(q.id, `d${i + 1}`), voice: replyVoice })),
       });
     }
     for (const g of f.grammar) {
@@ -334,11 +345,12 @@ export function buildPack(src: PackSources): BuildResult {
       g.examples.forEach((e, i) => checkTranslation(e, `${where} example ${i + 1}`));
       if (g.verb) cardVerbs.push({ where, verb: g.verb });
       const { drills, ...card } = g;
+      const cardVoice = autoVoice(g.id); // a card's examples share one voice
       grammar.push({
         ...card,
         ...lv,
         kind: "grammar",
-        examples: g.examples.map((e, i) => ({ ...e, audioKey: audioKey(g.id, `e${i + 1}`), voice: defaultVoice })),
+        examples: g.examples.map((e, i) => ({ ...e, audioKey: audioKey(g.id, `e${i + 1}`), voice: cardVoice })),
         ...(drills ? { drills: buildDrills(g.id, drills, where) } : {}),
       });
     }
@@ -349,7 +361,7 @@ export function buildPack(src: PackSources): BuildResult {
       checkTranslation(x, where);
       checkGloss(x.variety, where, "variety");
       checkGloss(x.notes, where, "notes");
-      expressions.push({ ...x, ...lv, kind: "expression", audioKey: audioKey(x.id), voice: checkVoice(x.voice, where) });
+      expressions.push({ ...x, ...lv, kind: "expression", audioKey: audioKey(x.id), voice: voiceOf(x.voice, where, x.id) });
     }
   };
 
@@ -411,6 +423,15 @@ export function buildPack(src: PackSources): BuildResult {
     checkGloss(d.description, where, "description");
     rawDialogueUnits.push({ file: s.file, id: d.id, unit: d.unit });
     const turnIds = new Set<string>();
+    // voiceRotation: one voice per native speaker name; different speakers get different voices.
+    const speakers = new Map<string, { name: string; explicit?: string }>();
+    for (const t of d.turns) {
+      if (t.speaker !== "native") continue;
+      const sp = speakers.get(t.name ?? "") ?? { name: t.name ?? "" };
+      if (t.voice && !sp.explicit) sp.explicit = t.voice;
+      speakers.set(sp.name, sp);
+    }
+    const speakerVoice = rotation ? speakerVoices(meta.voices, d.id, [...speakers.values()]) : undefined;
     const turns: Dialogue["turns"] = d.turns.map((t) => {
       if (turnIds.has(t.id)) errors.push(`${where}: duplicate turn id "${t.id}"`);
       turnIds.add(t.id);
@@ -420,7 +441,9 @@ export function buildPack(src: PackSources): BuildResult {
         return {
           ...t,
           audioKey: audioKey(d.id, t.id),
-          voice: checkVoice(t.voice, `${where} turn "${t.id}"`),
+          voice: t.voice
+            ? checkVoice(t.voice, `${where} turn "${t.id}"`)
+            : (speakerVoice?.get(t.name ?? "") ?? defaultVoice),
           avatar: resolveImage(t.name ? d.avatars?.[t.name] : undefined),
         };
       }
@@ -460,7 +483,7 @@ export function buildPack(src: PackSources): BuildResult {
     const clash = storyOrders.get(st.order);
     if (clash) errors.push(`${where}: order ${st.order} already used by story "${clash}"`);
     storyOrders.set(st.order, st.id);
-    const voice = checkVoice(st.voice, where);
+    const voice = voiceOf(st.voice, where, st.id);
     checkStress(st.title, `${where} title`);
     checkTranslation(st, where, "title");
     checkGloss(st.description, where, "description");
@@ -541,6 +564,7 @@ export function buildPack(src: PackSources): BuildResult {
     checkTranslation(v, where);
     checkGloss(v.notes, where, "notes");
     const { tenses: rawTenses, drills, ...verb } = v;
+    const verbVoice = autoVoice(v.id); // infinitive, forms and examples of a verb share one voice
     if (!meta.grammar) errors.push(`${where}: verbs need pack.json "grammar" (the tenses they conjugate)`);
     else {
       for (const id of Object.keys(rawTenses)) {
@@ -568,7 +592,7 @@ export function buildPack(src: PackSources): BuildResult {
           person: def.persons[i] ?? "",
           text: pronoun ? `${pronoun} ${spoken}` : spoken,
           audioKey: audioKey(v.id, def.id, i + 1),
-          voice: defaultVoice,
+          voice: verbVoice,
         };
       });
       checkStress(t.example.text, `${at} example`);
@@ -577,7 +601,7 @@ export function buildPack(src: PackSources): BuildResult {
       tenses.push({
         id: def.id,
         forms,
-        example: { ...t.example, audioKey: audioKey(v.id, def.id, "e"), voice: defaultVoice },
+        example: { ...t.example, audioKey: audioKey(v.id, def.id, "e"), voice: verbVoice },
         ...(t.notes !== undefined ? { notes: t.notes } : {}),
       });
     }
@@ -586,7 +610,7 @@ export function buildPack(src: PackSources): BuildResult {
       kind: "verb",
       text: v.infinitive,
       audioKey: audioKey(v.id),
-      voice: defaultVoice,
+      voice: verbVoice,
       tenses,
       ...(drills ? { drills: buildDrills(v.id, drills, where) } : {}),
     });
@@ -629,7 +653,7 @@ export function buildPack(src: PackSources): BuildResult {
     const { voice, ...rest } = q;
     placement.push({
       ...rest,
-      audio: q.text ? { text: q.text, audioKey: audioKey(q.id), voice: checkVoice(voice, where) } : undefined,
+      audio: q.text ? { text: q.text, audioKey: audioKey(q.id), voice: voiceOf(voice, where, q.id) } : undefined,
     });
   }
 

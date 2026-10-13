@@ -7,7 +7,8 @@
   "emoji": "🇮🇹",
   "formalRegister": "lei",
   "articles": ["il", "lo", "la", "l'", "i", "gli", "le"],
-  "voices": ["it-IT-ElsaNeural", "it-IT-DiegoNeural", "it-IT-IsabellaNeural"],
+  "voices": ["it-IT-ElsaNeural", "it-IT-DiegoNeural", "it-IT-IsabellaNeural", "it-IT-GiuseppeMultilingualNeural"],
+  "voiceRotation": true,
   "ttsVoices": {
     "it-IT-ElsaNeural": { "provider": "gemini", "voice": "Kore" },
     "it-IT-DiegoNeural": { "provider": "gemini", "voice": "Charon" },

@@ -213,6 +213,11 @@ export const PackMeta = z.object({
   /** Neural voices available for pre-generated mp3 (edge-tts names). First = default. */
   voices: z.array(Text).min(1),
   /**
+   * Voice rotation: every playable whose content names no `voice` gets a deterministic voice from
+   * `voices` (stable hash of an id; see `voices.ts`) instead of always the first one. Needs ≥ 2 voices.
+   */
+  voiceRotation: z.boolean().optional(),
+  /**
    * Voices of `voices` rendered differently by `npm run audio` (content keeps the `voices` name).
    * An ElevenLabs voice needs ELEVENLABS_API_KEY; without it, or out of credits, the line keeps
    * the edge-tts mp3 of the `voices` name, so the pack can be upgraded in several runs.

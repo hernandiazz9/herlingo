@@ -24,6 +24,10 @@
  * then left on its edge-tts mp3. Daily quota or key problems stop Gemini for the run; the next run
  * continues. Interrupting is safe: finished mp3s stay and are reused.
  *
+ * `--no-gemini` skips Gemini generation (no API calls, no ffmpeg): Gemini mp3s that already exist
+ * keep being used, every other Gemini line gets (and keeps) its edge-tts mp3, so the manifest is
+ * complete without a key. A later run without the flag generates the missing Gemini lines.
+ *
  * `--lang=it` (comma list) limits the run to those packs; the others are not touched.
  */
 import { execFileSync, spawnSync } from "node:child_process";
@@ -37,6 +41,7 @@ const VENV = join(ROOT, ".venv");
 const PY = join(VENV, "bin", "python");
 const HERE = join(ROOT, "scripts", "audio");
 const DRY_RUN = process.argv.includes("--dry-run");
+const NO_GEMINI = process.argv.includes("--no-gemini");
 const MAX_CREDITS = Number(process.argv.find((a) => a.startsWith("--max-credits="))?.split("=")[1] ?? Infinity);
 const ELEVENLABS_FORMAT = "mp3_22050_32";
 const ONLY = process.argv.find((a) => a.startsWith("--lang="))?.slice("--lang=".length).split(",").filter(Boolean);
@@ -241,15 +246,23 @@ async function main() {
       );
       const toPrune = present.filter((f) => !wanted.has(f));
       const old = readManifest(dir);
+      // --no-gemini: a Gemini line without its own mp3 stays on its edge-tts fallback.
+      const willPlay = (j: AudioJob) =>
+        NO_GEMINI && j.render.provider === "gemini" && j.fallback && !existsSync(join(dir, j.file)) ? j.fallback.file : j.file;
       const changedKeys =
-        jobs.filter((j) => old[j.key] !== j.file).length + Object.keys(old).filter((k) => !jobs.some((j) => j.key === k)).length;
+        jobs.filter((j) => old[j.key] !== willPlay(j)).length + Object.keys(old).filter((k) => !jobs.some((j) => j.key === k)).length;
       const eleven = jobs.filter((j) => j.render.provider === "elevenlabs" && !existsSync(join(dir, j.file)));
       const gemini = jobs.filter((j) => j.render.provider === "gemini" && !existsSync(join(dir, j.file)));
+      const geminiNote = NO_GEMINI
+        ? `; Gemini skipped (--no-gemini): ${gemini.length} line(s) on edge-tts`
+        : gemini.length
+          ? `; Gemini ${gemini.length} lines, ${gemini.reduce((n, j) => n + j.text.length, 0)} characters`
+          : "";
       console.log(
         `${relative(ROOT, dir)}: ${jobs.length} keys, would generate ${toGenerate.size} with edge-tts, keep ${present.length - toPrune.length}, ` +
           `prune ${toPrune.length}, manifest entries changed ${changedKeys}` +
           (eleven.length ? `; ElevenLabs ${eleven.length} lines, ${eleven.reduce((n, j) => n + j.text.length, 0)} characters` : "") +
-          (gemini.length ? `; Gemini ${gemini.length} lines, ${gemini.reduce((n, j) => n + j.text.length, 0)} characters` : ""),
+          geminiNote,
       );
       continue;
     }
@@ -264,7 +277,7 @@ async function main() {
       elevenDone = await generateElevenLabs(elevenTodo, dir, pack.meta.speechLocale.slice(0, 2));
     }
     const geminiTodo = jobs
-      .filter((j) => j.render.provider === "gemini" && !existsSync(join(dir, j.file)))
+      .filter((j) => !NO_GEMINI && j.render.provider === "gemini" && !existsSync(join(dir, j.file)))
       .sort((a, b) => a.priority - b.priority || a.key.localeCompare(b.key));
     if (geminiTodo.length) {
       console.log(`${lang}: Gemini ${geminiTodo.length} lines (${geminiTodo.reduce((n, j) => n + j.text.length, 0)} characters)…`);

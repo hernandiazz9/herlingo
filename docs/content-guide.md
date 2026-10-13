@@ -102,7 +102,9 @@ cast, voices). What changes:
 
 **pack.json**: `default?` (`true` on exactly one pack), `lang` (= folder name), `name` (in
 Spanish, "Francés"), `nativeName` ("Français"), `emoji?` (flag shown by the language picker, 🇫🇷),
-`speechLocale` (`it-IT`), `voices` (edge-tts voice names; the first is the default),
+`speechLocale` (`it-IT`), `voices` (edge-tts voice names; the first is the default), `voiceRotation?` (`true` = a playable
+without an explicit `voice` gets a deterministic voice from `voices` instead of the first one; see
+"Audio keys"; needs ≥ 2 voices; Italian only for now),
 `formalRegister` (`lei` | `vous` | `vy` | `u` | `usted` | `formal`: the formal register this pack's items use;
 `vy` is Russian вы to one person, shown as "Trato de usted"; `u` is Dutch polite u, shown as
 "Trato de usted (u)"; `usted` is Spanish usted, shown as "Trato de usted", and its `tu` register
@@ -219,7 +221,7 @@ plus `placement`:
 | `description?`, `emoji?` | One Spanish line for the list; one emoji. |
 | `situation` | Situation id from pack.json. |
 | `level` | `A1` \| `A2` \| `B1` \| `B2` \| `C1` \| `C2`; in a pack with `levels`, one of them. |
-| `voice?` | Narrator voice (sentences, questions, options); default = first pack voice. |
+| `voice?` | Narrator voice (sentences, questions, options); default = first pack voice (with `voiceRotation`: the voice its id hashes to). |
 | `sentences` | `[{ id, text, es, voice? }]` in reading order. `text` = one target-language sentence (≤ ~15 words); `es` = natural Spain-Spanish translation; `voice?` for a character's line (a pack voice other than the narrator's). |
 | `keywords` | Key words/expressions. Each entry is either **an existing item id** (vocab, phrase or expression anywhere in the pack: look it up and reuse it) or **a new vocab item written inline** (same fields as Vocab, id `story-<slug>`). Inline items become normal pack vocab: another story reuses them by id. |
 | `questions` | Comprehension: `[{ id, question, es, options: [{ text, es }] (≥ 3), correct }]`. `question` and options in the target language; `correct` = 0-based index; exactly one right option, the others plausible from the story. |
@@ -370,6 +372,26 @@ to its file in `public/audio/<lang>/manifest.json`. Run it after every content c
 writes nothing.
 Dialogue learner options are voiced with a pack voice that no native turn of that dialogue uses.
 
+**Voice rotation** (pack.json `voiceRotation: true`, Italian: its 4 free edge-tts voices). An item
+whose content has no explicit `voice` gets a deterministic voice from `voices`: a stable hash
+(`src/lib/content/voices.ts`) of the ids below, so the same content always sounds the same and
+`npm run audio` never regenerates unchanged lines. An explicit `voice` always wins. Without
+`voiceRotation` the first voice is the default (every other pack).
+
+| Playable | Voice by |
+| --- | --- |
+| phrase, vocab, expression, placement text | its id |
+| Q&A question / its replies | question: its id; replies: one voice, never the question's |
+| dialogue native turn | speaker `name` (one voice per name; different speakers of a dialogue differ) |
+| dialogue learner option | today's rule: a voice no native turn of the dialogue uses |
+| story sentence, question, option | story id (a sentence with its own `voice` keeps it) |
+| verb infinitive, forms, tense examples | verb id (one voice per verb) |
+| grammar example n | card id (one voice per card) |
+| drill n (card or verb) | the drill's key `<id>--g<n>` |
+
+`npm run audio -- --no-gemini` skips Gemini generation: Gemini mp3s that already exist keep being
+used, every other line of a Gemini voice gets its edge-tts mp3 (see `ttsVoices`).
+
 | Playable | Key |
 | --- | --- |
 | phrase, vocab, expression, placement text | `<id>` |
@@ -384,7 +406,7 @@ Gap chips are not voiced (play the whole sentence instead).
 
 `n` is 1-based, so reordering replies or options changes their keys: run `npm run audio` after that
 (the mp3s themselves are reused; only the manifest changes).
-`voice` must be one of `pack.json` `voices`; when missing, the first one is used.
+`voice` must be one of `pack.json` `voices`; when missing, the first one is used (or the rotated one, see above).
 
 ## Pictures
 
