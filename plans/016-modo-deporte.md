@@ -1,6 +1,6 @@
 # Plan 016 — "Modo deporte": audio-only episodes to learn a situation while cycling
 
-Status: draft (interview done 2026-10-13; awaiting Hernán's approval before anything runs)
+Status: active
 Created: 2026-10-13
 Base branch: plan-016-modo-deporte
 Goal: Hernán picks or describes a situation ("ir a un supermercado en Italia") and gets an **episode**: an 8–12 minute audio guide where a Spain-Spanish narrator explains each step and the target-language lines sound several times (his lines normal → slow → normal, theirs twice, then the meaning and short tips), ending with the whole scene untranslated. Listening only: no pauses to speak, no taps. The device joins the episode into **one mp3** so it keeps playing with the iPhone locked (lock-screen and headphone controls jump between steps). Episodes come from AI (`POST /api/coach/episode/`) and, free, from the pack's dialogues and his saved Modo rápido routes. Phase 1 proves the locked-screen playback on his iPhone with free episodes before any AI work. Save tokens: one agent at a time, no code reviews, no visual checks by agents (Hernán checks on his iPhone).
@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 16:31Z 💻
-- Writer: me (💻 desktop session in lang_lern-rapido, drafting)
-- Branch: plan-016-modo-deporte @ draft · worktree ../lang_lern-deporte (from origin/main 487747ed)
-- Next step: Hernán approves the plan; then npm ci + copy .env.local into ../lang_lern-deporte and run from a session there
-- Needs Hernán: approval
+- Updated: 2026-10-13 16:40Z 💻
+- Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
+- Branch: plan-016-modo-deporte · pushed
+- Next step: T187, then T188–T190 one at a time; T191 is Hernán's iPhone check (gate)
+- Gotchas: integrate in ../lang_lern-deporte (git worktree of lang_lern); agent worktrees come from the session's repo → step 1 resets them to the plan's HEAD; agents force fake mode (COACH_FAKE=1, keys emptied)
 
 ## Shared contract (all tasks read this)
 
@@ -211,3 +211,4 @@ Worktree setup: npm ci
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
+- 2026-10-13 16:40Z 💻 approved by Hernán ("si comienza con el plan")
