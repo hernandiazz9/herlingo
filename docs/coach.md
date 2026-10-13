@@ -519,8 +519,8 @@ line, 6 of 53 lessons). Costs are the ledger's (price table in `api/_lib/model.t
 ## Voice (TTS)
 
 `api/_lib/tts.ts` reads a line with Microsoft Edge's read-aloud voices (edge-tts: free, no key,
-a WebSocket to `speech.platform.bing.com`), the same service `npm run audio` uses for the static
-content.
+a WebSocket to `api.msedgeservices.com`; `speech.platform.bing.com` until 2026-10), the same
+service `npm run audio` uses for the static content.
 
 - **Same voices and settings as `npm run audio`** (`scripts/audio/tts.py`, Python edge-tts
   defaults): output `audio-24khz-48kbitrate-mono-mp3`, rate `+0%`, pitch `+0Hz`, volume `+0%`
@@ -539,10 +539,14 @@ content.
   If it stops working everywhere, update `msedge-tts` (`npm i msedge-tts@latest`), the same fix
   as bumping `edge-tts` in `scripts/audio/requirements.txt`. The app keeps working meanwhile
   (device voice).
+  **Happened on 2026-10-13:** the old endpoint answered every handshake with 403, so every coach
+  line played with the device voice; `msedge-tts` 2.1.0 (same day) moved to the new endpoint and
+  fixed it with no code change. Quick check: `synthesize()` from `api/_lib/tts.ts` run with `tsx`
+  (a 403 shows as `Unexpected server response: 403`). Vercel Hobby keeps runtime logs ~1 h only.
 - Locally the real voice needs fake mode off (`ANTHROPIC_API_KEY` set in `.env.local`, no
   `COACH_FAKE`); fake mode answers the silent mp3. In production it needs no env var.
 
-**Package: `msedge-tts`** (MIT, ^2.0.8). Chosen on 2026-10-02 among the Node edge-tts ports:
+**Package: `msedge-tts`** (MIT, ^2.1.0 since 2026-10-13). Chosen on 2026-10-02 among the Node edge-tts ports:
 
 | Package | Verdict |
 | --- | --- |

@@ -3,21 +3,23 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui";
 import { startAudioSync } from "./audio-cache";
-import { registerServiceWorker } from "./register";
+import { registerServiceWorker, useUpdateStatus } from "./register";
 
 /**
  * Registers the service worker, keeps the active language's audio offline (`startAudioSync`) and,
- * when a new version is ready, offers to reload into it.
+ * when a new version is ready, offers to reload into it ("Luego" hides it for that version; the
+ * "Actualizaciones" card on /perfil still offers it).
  */
 export function UpdatePrompt() {
-  const [apply, setApply] = useState<(() => void) | null>(null);
+  const status = useUpdateStatus();
+  const [dismissed, setDismissed] = useState<ServiceWorker | null>(null);
 
   useEffect(() => {
-    registerServiceWorker((fn) => setApply(() => fn));
+    registerServiceWorker();
     startAudioSync();
   }, []);
 
-  if (!apply) return null;
+  if (status.state !== "ready" || status.worker === dismissed) return null;
 
   return (
     <div className="fixed inset-x-0 bottom-[calc(var(--tabbar-height)+var(--safe-bottom)+0.75rem)] z-50 mx-auto w-full max-w-[var(--column-width)] px-4">
@@ -28,12 +30,12 @@ export function UpdatePrompt() {
         <p className="min-w-0 flex-1 text-base font-bold text-ink">Hay una versión nueva de la app.</p>
         <button
           type="button"
-          onClick={() => setApply(null)}
+          onClick={() => setDismissed(status.worker)}
           className="min-h-12 px-2 text-sm font-bold text-ink-muted focus-visible:outline-3 focus-visible:outline-lemon-deep"
         >
           Luego
         </button>
-        <Button size="md" onClick={apply}>
+        <Button size="md" onClick={status.apply}>
           Actualizar
         </Button>
       </div>

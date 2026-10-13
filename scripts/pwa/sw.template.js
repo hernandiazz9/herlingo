@@ -4,7 +4,9 @@
  * audio names, and writes it to out/sw.js.
  *
  * - install: downloads everything into a versioned cache. Content-addressed files (/_next/static/)
- *   are copied from the previous version's cache instead of downloaded again. Then every listed
+ *   are copied from the previous version's cache instead of downloaded again. Progress goes to
+ *   every page as { type: INSTALL_PROGRESS, version, done, total } (files stored so far; the
+ *   "Actualizaciones" card on /perfil shows it, src/lib/pwa/register.ts). Then every listed
  *   audio file an older cache already holds (a precache from before per-language audio) is copied
  *   into its language's audio cache, so this update never downloads that audio again.
  * - Audio: one cache per language, AUDIO_PREFIX + lang (no version: mp3 names are content
@@ -33,6 +35,7 @@ const AUDIO_LIST_DIR = "__AUDIO_LIST_DIR__";
 const AUDIO_LANGS = /* __AUDIO_LANGS__ */ [];
 const AUDIO_SET_LANG = "AUDIO_SET_LANG";
 const AUDIO_PROGRESS = "AUDIO_PROGRESS";
+const INSTALL_PROGRESS = "INSTALL_PROGRESS";
 const PREFIX = "lang-lern-";
 const CACHE = PREFIX + VERSION;
 const IMMUTABLE = /^\/(_next\/static\/|audio\/.+\/[0-9a-f]{8,}\.mp3$)/;
@@ -44,26 +47,53 @@ self.addEventListener("install", (event) => {
 
 async function precache() {
   const cache = await caches.open(CACHE);
+  const total = PRECACHE.length;
+  let done = 0;
   const todo = [];
   for (const url of PRECACHE) {
     if (IMMUTABLE.test(url)) {
       const hit = await caches.match(url, { ignoreVary: true });
       if (hit) {
         await cache.put(url, hit);
+        done++;
         continue;
       }
     }
     todo.push(url);
   }
-  for (let i = 0; i < todo.length; i += BATCH) {
-    await Promise.all(
-      todo.slice(i, i + BATCH).map(async (url) => {
+  reportInstall(done, total, true);
+  // BATCH downloads at a time; each one that ends starts the next (no waiting for a whole batch).
+  let next = 0;
+  let failed = false;
+  const download = async () => {
+    while (!failed && next < todo.length) {
+      const url = todo[next++];
+      try {
         const res = await fetch(new Request(url, { cache: "reload" }));
         if (!res.ok) throw new Error(`Precache failed: ${url} (${res.status})`);
         await cache.put(url, await clean(res));
-      }),
-    );
-  }
+      } catch (err) {
+        failed = true;
+        throw err;
+      }
+      reportInstall(++done, total);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(BATCH, todo.length) }, download));
+  reportInstall(total, total, true);
+}
+
+let lastInstallReport = 0;
+
+/** install: tells the pages how much of this version is stored (at most every 250 ms). */
+function reportInstall(done, total, force = false) {
+  const now = Date.now();
+  if (!force && now - lastInstallReport < 250) return;
+  lastInstallReport = now;
+  self.clients
+    .matchAll({ includeUncontrolled: true, type: "window" })
+    .then((clients) => clients.forEach((c) => c.postMessage({ type: INSTALL_PROGRESS, version: VERSION, done, total })))
+    .catch(() => {});
 }
 
 /** Safari refuses redirected responses for navigations: store a clean copy. */
