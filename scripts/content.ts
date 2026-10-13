@@ -12,8 +12,8 @@
  * exists in public/images/ (scripts/images/plan.ts). Unknown Fluent icons are errors; custom
  * drawings that do not exist yet are ⚠ warnings.
  *
- * Layout per pack: pack.json, units/*.json, dialogues/*.json, extras/*.json, stories/*.json
- * (see docs/content-guide.md). Guideline misses (story length, counts) print as ⚠ warnings only.
+ * Layout per pack: pack.json, units/*.json, dialogues/*.json, extras/*.json, stories/*.json,
+ * verbs/*.json (see docs/content-guide.md). Guideline misses (story length, counts) print as ⚠ warnings only.
  *
  * Several packs: ids are unique across every pack (routes like /leccion/<id>/ are shared), and
  * exactly one pack.json sets `"default": true` (written to the bundle as `defaultLang`). A pack
@@ -100,6 +100,7 @@ for (const lang of langs) {
     dialogues: readDir(join(dir, "dialogues"), readErrors),
     extras: readDir(join(dir, "extras"), readErrors),
     stories: readDir(join(dir, "stories"), readErrors),
+    verbs: readDir(join(dir, "verbs"), readErrors),
     resolveImage: imageResolver(ROOT),
   });
   const crossPack: string[] = [];

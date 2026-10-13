@@ -71,10 +71,55 @@ export type QA = Omit<z.infer<typeof S.QA>, "voice" | "accepted" | "distractors"
   Playable &
   Levelled & { kind: "qa"; accepted: Reply[]; distractors: Reply[] };
 
-export type GrammarCard = Omit<z.infer<typeof S.GrammarCard>, "examples"> &
+/**
+ * A fill-the-gap sentence of a grammar card or verb (`drills`). `text` is the FULL sentence as
+ * spoken (the gap filled with `answer`; audio key `<id>--g<n>`); `before + answer + after` = `text`.
+ * `distractors` are the wrong options (≥ 2); the gloss of the sentence is `glossOf(drill, lang)`.
+ */
+export type GrammarDrill = Omit<z.infer<typeof S.GrammarDrill>, "text"> & Playable & { before: string; after: string };
+
+/**
+ * Gramática topic fields (all optional): `order` (Topics list sort key), `verb` (a verb id whose
+ * page covers the card: not listed as a topic) and `drills`.
+ */
+export type GrammarCard = Omit<z.infer<typeof S.GrammarCard>, "examples" | "drills"> &
   Levelled & {
   kind: "grammar";
   examples: Reply[];
+  drills?: GrammarDrill[];
+};
+
+/** A tense of pack.json `grammar.tenses` (`id`, `title` gloss, `persons`, `speak?`). */
+export type GrammarTenseDef = z.infer<typeof S.GrammarTense>;
+
+/**
+ * One conjugated form. `form` is shown; `text` is spoken (the tense's `speak` pronoun + the form,
+ * "io sono"; the form alone without `speak`, e.g. the imperative), audio key
+ * `<verbId>--<tenseId>--<n>` (n 1-based). `person` = the tense's `persons` label of its row.
+ * The gloss is `glossOf(form, lang)`.
+ */
+export type VerbForm = Omit<z.infer<typeof S.VerbForm>, "say"> & Playable & { person: string };
+
+/** A verb's tense: `id` = pack.json tense id; `example` audio key `<verbId>--<tenseId>--e`. */
+export interface VerbTense {
+  id: string;
+  /** One per `persons` entry of the tense, in order. */
+  forms: VerbForm[];
+  example: Reply;
+  /** A gloss: read it with `glossOf()`. */
+  notes?: GlossText;
+}
+
+/**
+ * A verb of the Gramática reference (`verbs/*.json`). Playable: `text` = the infinitive, audio key
+ * = the verb id. `tenses` are in pack.json `grammar.tenses` order, only the ones the verb has.
+ * The gloss of the infinitive is `glossOf(verb, lang)`; `notes` is a gloss.
+ */
+export type Verb = Omit<z.infer<typeof S.VerbFile>, "tenses" | "drills"> &
+  Playable & {
+  kind: "verb";
+  tenses: VerbTense[];
+  drills?: GrammarDrill[];
 };
 
 export type Expression = Omit<z.infer<typeof S.Expression>, "voice"> & Playable & Levelled & { kind: "expression" };
@@ -193,4 +238,6 @@ export interface Pack {
   grammar: GrammarCard[];
   expressions: Expression[];
   placement: PlacementQuestion[];
+  /** Gramática verbs, sorted by `order` (none without pack.json `grammar`). */
+  verbs: Verb[];
 }

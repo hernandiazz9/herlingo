@@ -18,6 +18,7 @@
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
+import { grammarPlayables } from "../../src/lib/content/grammar";
 import { stripStress } from "../../src/lib/content/script";
 import type { Pack, Playable } from "../../src/lib/content/types";
 
@@ -102,6 +103,8 @@ export function planAudio(pack: Pack): AudioJob[] {
       q.options.forEach((p) => add(p));
     }
   }
+  // Gramática: verb infinitives, forms, tense examples, drills.
+  grammarPlayables(pack).forEach((p) => add(p));
   return [...jobs.values()].sort((a, b) => a.key.localeCompare(b.key));
 }
 

@@ -1,0 +1,56 @@
+{
+  "id": "verb.essere",
+  "order": 10,
+  "infinitive": "essere",
+  "es": "ser / estar",
+  "irregular": true,
+  "notes": "Es ser y, muchas veces, estar («sono stanco»). También es el auxiliar del passato prossimo de los verbos de movimiento y cambio: «sono andato».",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "sono", "es": "soy / estoy" },
+        { "form": "sei", "es": "eres / estás" },
+        { "form": "è", "es": "es / está" },
+        { "form": "siamo", "es": "somos / estamos" },
+        { "form": "siete", "es": "sois / estáis" },
+        { "form": "sono", "es": "son / están" }
+      ],
+      "example": { "text": "Sono in vacanza.", "es": "Estoy de vacaciones." },
+      "notes": "«Sono» vale para «io» y para «loro»: el contexto lo aclara."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "sono stato/a", "say": "sono stato", "es": "he sido / he estado" },
+        { "form": "sei stato/a", "say": "sei stato", "es": "has sido / has estado" },
+        { "form": "è stato/a", "say": "è stato", "es": "ha sido / ha estado" },
+        { "form": "siamo stati/e", "say": "siamo stati", "es": "hemos sido / hemos estado" },
+        { "form": "siete stati/e", "say": "siete stati", "es": "habéis sido / habéis estado" },
+        { "form": "sono stati/e", "say": "sono stati", "es": "han sido / han estado" }
+      ],
+      "example": { "text": "Ieri siamo stati a Siracusa.", "es": "Ayer estuvimos en Siracusa." },
+      "notes": "Con «essere» y el participio «stato» (el mismo de «stare»), que concuerda: sono stato / stata."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "sarei", "es": "sería / estaría" },
+        { "form": "saresti", "es": "serías / estarías" },
+        { "form": "sarebbe", "es": "sería / estaría" },
+        { "form": "saremmo", "es": "seríamos / estaríamos" },
+        { "form": "sareste", "es": "seríais / estaríais" },
+        { "form": "sarebbero", "es": "serían / estarían" }
+      ],
+      "example": { "text": "Sarebbe possibile cambiare il biglietto?", "es": "¿Sería posible cambiar el billete?" },
+      "notes": "Raíz «sar-». «Sarebbe possibile…?» es una forma educada de pedir algo."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "sii", "es": "sé / estate", "irregular": true },
+        { "form": "sia", "es": "sea / esté (usted)" },
+        { "form": "siamo", "es": "seamos / estemos" },
+        { "form": "siate", "es": "sed / estad", "irregular": true }
+      ],
+      "example": { "text": "Sii puntuale domani!", "es": "¡Sé puntual mañana!" },
+      "notes": "«Sii» y «siate» no se parecen al presente: apréndelos tal cual."
+    }
+  }
+}

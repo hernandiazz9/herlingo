@@ -12,6 +12,9 @@
  *   story sentence                            <storyId>--<sentenceId>
  *   story question / option n                 <storyId>--<questionId>, <storyId>--<questionId>--<n>
  *   story key word                            its item id (vocab / phrase / expression)
+ *   verb infinitive                           <verbId>
+ *   verb form n of a tense / tense example    <verbId>--<tenseId>--<n>, <verbId>--<tenseId>--e
+ *   grammar drill n (card or verb)            <id>--g<n>
  */
 export function audioKey(id: string, ...parts: (string | number)[]): string {
   return [id, ...parts].join("--");
