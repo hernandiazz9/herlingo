@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 15:04Z 💻
+- Updated: 2026-10-13 15:10Z 💻
 - Writer: released 11:47Z by 💻 → continue on 💻
 - Branch: main (plan-014-gramatica merged)
 - Next step: T184 + T185 running; Gemini Italian audio running in Hernán's terminal (uncommitted public/audio/it)
@@ -204,7 +204,7 @@ Worktree setup: npm ci
 - Outcome: notes on essere/andare (sto bene, passato = he sido/fui, non + infinitivo), voi for groups in tu-lei, +5 examples (tu-lei, vorrei, pronomi-diretti) appended · d1101b02 · verify ✓ · audio for 5 new examples at next npm run audio
 
 ## T186 — Voice rotation (4 free Italian voices) and audio without Gemini
-- Status: pending
+- Status: done
 - Depends on: T184
 - Where: any
 - Goal: Hernán (2026-10-13): Italian uses its 4 free edge-tts voices, varied by who speaks. Add pack.json `voiceRotation?: boolean` (Italian only: true; add `it-IT-GiuseppeMultilingualNeural` as 4th voice). With it, every playable whose content has no explicit `voice` gets a deterministic voice from `voices` (stable hash, so audio never churns between runs): phrases, vocab, expressions, placement by item id; Q&A question one voice and its replies a different one; dialogue native speakers one voice per speaker name (different speakers differ), learner options keep today's rule; story narrator by story id (sentence voices that are explicit stay); a verb's infinitive, forms and examples share one voice per verb; a grammar card's examples share one per card; drills by drill key. Explicit `voice` always wins. Also `npm run audio -- --no-gemini`: skip Gemini generation (existing Gemini mp3s keep being used; other lines get their edge-tts mp3). Keep the `ttsVoices` Gemini mapping as is.
@@ -214,7 +214,7 @@ Worktree setup: npm ci
   - `npm run audio -- --dry-run --lang=it --no-gemini` works; a one-off script prints how many Italian playables each of the 4 voices gets (roughly even) and confirms Q&A question ≠ replies and two speakers of one dialogue differ.
   - `npm run audio -- --dry-run` shows 0 to generate and 0 manifest changes for every other pack (no churn).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: voiceRotation (FNV hash, Q&A asker≠answerer, one voice per dialogue speaker/verb/card), Giuseppe 4th voice, --no-gemini; other packs no churn · 88168e2b · verify ✓
 
 ## Review queue
 
@@ -293,3 +293,4 @@ Worktree setup: npm ci
 - 2026-10-13 13:32Z 💻 T185 launched (Sonnet) · agent a8a65c75d0d3b6dc3
 - 2026-10-13 13:35Z 💻 T185 done → d1101b02
 - 2026-10-13 13:36Z 💻 T184 done → 1056f44e
+- 2026-10-13 15:10Z 💻 T186 done → 88168e2b
