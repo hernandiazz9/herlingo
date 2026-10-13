@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 17:43Z 💻
+- Updated: 2026-10-13 20:18Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
 - Next step: nothing runnable: T191 (Hernán: deploy + iPhone check) unblocks T194 and T196
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: deploy from ../lang_lern-deporte (includes T192–T193, not yet in main: OK to fast-forward main too?) + T191 iPhone check
+- Needs Hernán: T191 iPhone check on the deployed app · OK to fast-forward main to the deployed code (T192–T193)
 
 ## Shared contract (all tasks read this)
 
@@ -244,3 +244,4 @@ Worktree setup: npm ci
 - 2026-10-13 17:38Z 💻 T192 done · worktree-agent-a6c51a16e78d4a469 → 51c87dfc · verify ✓
 - 2026-10-13 17:38Z 💻 T193 launched · attempt 1 · agent ac9bbfe0cf04a6319 (+ episode deadline 55 s, latency log)
 - 2026-10-13 17:43Z 💻 T193 done · worktree-agent-ac9bbfe0cf04a6319 → 97035912 · verify ✓
+- 2026-10-13 20:18Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ ead2b57a, includes T192–T193 not yet in main) → https://langlern-iota.vercel.app
