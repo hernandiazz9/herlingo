@@ -167,7 +167,7 @@ Worktree setup: npm ci
 - Outcome: «🏃 Modo deporte» on saved routes → ?ep=route:<id>; De tus rutas section; «Escuchar seguidos» (?seguidos=mis|rutas|app, downloaded episodes only, joined); XP 10 'sport' at 90 % actually played, once/episode/day, ≤ 3/day via countPlay (no new key) · 9418fa65 · verify ✓ 💻 · tsx checks ✓ · not checked: visuals, joined lock-screen jumps, XP while locked
 
 ## T196 — «Escuchar todo» keeps playing with the screen locked
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a0c13b2cdac9c4346 · since 21:23Z)
 - Depends on: T191
 - Where: any
 - Goal: Fix the T183 finding: «Escuchar todo» on routes (and on stories and grammar pages, which use the same chain) plays one joined file instead of chained clips, so locking the iPhone does not stop it.
@@ -270,3 +270,4 @@ Worktree setup: npm ci
 - 2026-10-13 21:10Z 💻 T194 done · worktree-agent-ae24454bb01bbcc72 → 6d6160ad · verify ✓
 - 2026-10-13 21:11Z 💻 T195 launched · attempt 1 · agent aa039354ce92863d9
 - 2026-10-13 21:23Z 💻 T195 done · worktree-agent-aa039354ce92863d9 → 9418fa65 · verify ✓
+- 2026-10-13 21:23Z 💻 T196 launched · attempt 1 · agent a0c13b2cdac9c4346
