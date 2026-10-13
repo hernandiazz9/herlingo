@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 20:59Z 💻
+- Updated: 2026-10-13 21:01Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
 - Next step: T194 (AI episodes on the device), then T195, T196; T197 = Hernán's check
@@ -190,10 +190,23 @@ Worktree setup: npm ci
   - An AI episode is 8–12 minutes, natural Italian, useful tips; a route episode and «Escuchar seguidos» play locked; XP appears once; «Escuchar todo» keeps playing locked.
 - Outcome:
 
+## T198 — Fix: Modo deporte card next to Prepárate's at the top of Jugar
+- Status: done
+- Depends on: T190
+- Where: any
+- Goal: Hernán wants the Modo deporte card at the top of Jugar, next to «Prepárate para una situación» (above or below).
+- Context: Hernán 2026-10-13 ("arriba o abajo"); T190 put it under the topic grid; `src/components/game/GameView.tsx` renders `EntryCard` only on the topics step.
+- Scope: may touch `src/components/game/GameView.tsx`, `src/app/jugar/page.tsx`, docs/sport.md / must not touch the rest.
+- Done when:
+  - `SportEntryCard` renders right under `EntryCard` on the topics step (never during discovery or a round); removed from the page bottom.
+  - `npm run verify` → exit 0.
+- Outcome: done by the writer (3-line change, no agent, to save tokens) · e4c0de27 · verify ✓ 💻 · not checked: visual
+
 ## Review queue
 
 ## Visual checks queue
 - [ ] T190 @93851d69 — /deporte/ list + player: light + dark, iPhone width, Jugar card (below the topic grid), preparing state, step highlight, Guardar mp3 (queued 2026-10-13 💻)
+- [ ] T198 @e4c0de27 — Jugar: Modo deporte card right under «Prepárate para una situación», light + dark (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -247,3 +260,4 @@ Worktree setup: npm ci
 - 2026-10-13 20:18Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ ead2b57a, includes T192–T193 not yet in main) → https://langlern-iota.vercel.app
 - 2026-10-13 20:59Z 💻 T191 done (Hernán: "me fue bien"); next: AI episodes ("agreguemos lo de ia")
 - 2026-10-13 20:59Z 💻 T194 launched · attempt 1 · agent ae24454bb01bbcc72
+- 2026-10-13 21:01Z 💻 T198 done by the writer (card under EntryCard) → e4c0de27 · verify ✓
