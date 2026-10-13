@@ -4,11 +4,10 @@
  * (`episodeFromDialogue`, `episodeFromRoute`), the joined mp3 (`prepareEpisode`, `joinEpisodes`,
  * `episodeMp3File`) and its player (`episodePlayer`).
  */
-export { compileEpisode, episodePlayables } from "./compile";
+export { compileEpisode, DIALOGUE_LINES_FROM_CONTENT, episodePlayables } from "./compile";
 export {
   episodePlayer,
   RESTART_WINDOW_SEC,
-  SEEK_OFFSET_SEC,
   type EpisodePlayerMeta,
   type EpisodePlayerState,
 } from "./player";

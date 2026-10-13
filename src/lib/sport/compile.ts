@@ -7,9 +7,11 @@
  *             meaning ("Significa:" before a native one) · tip · each variant: cue, twice, meaning
  *   final     "Y ahora, la escena entera, sin traducción." · every main line once · "Fin del episodio."
  *
- * Narrator lines are generated with the gloss language's narrator voice; target lines use their
- * content mp3 when they are pack content, else a generated line in the episode's voice for the
- * speaker; slow lines are always generated (read slower by the voice). Never `speechSynthesis`.
+ * Narrator lines are generated with the gloss language's narrator voice; target lines are
+ * generated in the episode's voice for the speaker, or in the content line's own voice when they
+ * are pack content (a dialogue's turns and options: their content mp3 only with
+ * `DIALOGUE_LINES_FROM_CONTENT`); slow lines are always generated (read slower by the voice).
+ * Never `speechSynthesis`.
  */
 import { generatedPlayable, isGenerated } from "@/lib/audio/generated";
 import { COACH_NARRATORS } from "@/lib/coach/audio";
@@ -17,6 +19,14 @@ import { DEFAULT_GLOSS_LANG, type GlossLang, type Playable } from "@/lib/content
 import { EPISODE_GAPS, narrationCopy, sentence } from "./narration";
 import { contentLines, MAX_VARIANTS } from "./sources";
 import type { CompiledEpisode, EpisodeChapter, EpisodeLine, EpisodeSegment, EpisodeStep, SportEpisode } from "./types";
+
+/**
+ * Whether a dialogue episode plays its normal-speed target lines from the pack's content mp3s
+ * (true) or as edge-tts lines in the same voice (false, today: like its slow lines, one voice
+ * engine for the whole episode instead of the content's Gemini mp3s next to edge-tts slow ones).
+ * One edit brings the content mp3s back.
+ */
+export const DIALOGUE_LINES_FROM_CONTENT = false;
 
 /** The narrator voice of `glossLang` (the Spain Spanish one when it has none). */
 function narratorVoice(glossLang: GlossLang): string {
@@ -31,9 +41,12 @@ export function compileEpisode(episode: SportEpisode, glossLang: GlossLang = DEF
   const chapters: EpisodeChapter[] = [];
 
   const narrator = (text: string) => generatedPlayable(text.trim(), narratorVoiceName);
-  const target = (speaker: EpisodeStep["speaker"], text: string): Playable =>
-    content(speaker, text) ?? generatedPlayable(text, episode.voices[speaker]);
-  /** Slow lines are always generated, in the voice of the normal line (its content voice if any). */
+  const target = (speaker: EpisodeStep["speaker"], text: string): Playable => {
+    const line = content(speaker, text);
+    if (line && DIALOGUE_LINES_FROM_CONTENT) return line;
+    return generatedPlayable(text, line?.voice ?? episode.voices[speaker]);
+  };
+  /** Slow lines are always generated, in the voice of the normal line. */
   const slow = (normal: Playable) => generatedPlayable(normal.text, normal.voice, { slow: true });
 
   const chapter = () => chapters.length - 1;

@@ -30,7 +30,8 @@ function findDialogue(dialogueId: string): Dialogue | undefined {
  * description as the opening. A native turn is a native step ("Te dicen:"); a learner turn is a
  * learner step whose intro is its prompt + "Puedes decir:", whose line is the `correct` option and
  * whose variants are the `acceptable` ones ("O también:"). `wrong` options and feedback are never
- * used. Its lines keep their content mp3s (`episodeContentPlayable`).
+ * used. Its lines keep their content voices (`contentLines`; their content mp3s only with
+ * `DIALOGUE_LINES_FROM_CONTENT`).
  */
 export function episodeFromDialogue(dialogueId: string): SportEpisode | undefined {
   const pack = findDialoguePack(dialogueId);

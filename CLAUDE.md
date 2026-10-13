@@ -51,6 +51,10 @@ src/lib/pwa/           Web app manifest (manifest.ts), SW registration + update 
 src/lib/coach/         Prepárate client: API client + typed errors (CoachApiError), saved packs, learner profile and
                        buildLearnerContext(), usage (`lang-lern:coach:*`); hooks in use-coach.ts. docs/coach.md "Client".
 src/components/quick/  Modo rápido screen /rapido/ (under Jugar; `?ruta=<id>` opens a saved route in place): QuickView, RouteView, SavedRoutes.
+src/lib/sport/         Modo deporte (docs/sport.md): episode model, compileEpisode, free episodes (episodeFromDialogue/Route),
+                       prepareEpisode/joinEpisodes (one joined mp3 from the clips), episodePlayer (shared element, Media Session).
+src/components/sport/  Modo deporte screen /deporte/ (under Jugar; `?ep=<id>` opens an episode's player in place): SportView,
+                       AppEpisodes ("De la app"), EpisodeView (player), SportEntryCard (the Jugar card).
 src/lib/progress/      On-device progress (`lang-lern:progress:<lang>`, versioned, tolerant parsing), settings,
                        path model; hooks in use-progress.ts. src/lib/srs/ = Leitner spaced repetition.
 src/lib/grammar/       Gramática "Leído" (docs/grammar.md): read counts per entry (`lang-lern:grammar:<lang>`) and the

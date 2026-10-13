@@ -15,6 +15,7 @@ const QUICK = getTab("quick");
  */
 const HIDDEN_PREFIXES: readonly string[] = [
   QUICK.href, // /rapido/ (and ?ruta=)
+  getTab("sport").href, // /deporte/ (and ?ep=): the episode player
   "/leccion/", // a lesson
   "/preparar/nivel/", // the level interview
   "/preparar/dialogo/", // pack practice (role-play)
@@ -72,7 +73,7 @@ export function useHideQuickFab(hide = true): void {
  * Hidden:
  * - before the active language is ready, on first launch (no active language) and when the active
  *   pack is not `coachAvailable`;
- * - on `/rapido/` itself;
+ * - on `/rapido/` itself and on `/deporte/` (Modo deporte);
  * - in flows with fixed bottom controls or a running exercise: a lesson (`/leccion/…`), a dialogue
  *   (`/dialogos/<id>/`), a story (`/historias/<id>/`), the level interview (`/preparar/nivel/`), pack
  *   practice (`/preparar/dialogo/`), the mic test (`/microfono/`), onboarding and the placement test

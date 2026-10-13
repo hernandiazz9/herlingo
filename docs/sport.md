@@ -24,13 +24,14 @@ chained clip by clip, and stops when the iPhone locks (Hernán, 2026-10-13).
 | Slow | Rendered by the voice itself at rate **−30 %** (`/api/coach/tts/` with `slow: true`), never `playbackRate` (one file has one rate). The "Audio lento" setting does not apply to episodes. |
 | Gaps | 400 ms between repetitions of the same line; 1 s between blocks (narrator ↔ target, step ↔ step); 1.5 s before a part title and before the final scene. Constants in one place. |
 | Playback | The device joins every clip of the episode **byte by byte** into one mp3 (all lines are edge-tts `audio-24khz-48kbitrate-mono-mp3`) plus pre-encoded silent frames for the gaps, and plays it on the shared, gesture-unlocked `<audio>` element. One chapter per step. Spike 2026-10-13 on the Mac: 2 min joined from real edge-tts clips (narrator, two Italian voices, slow at −30 %) decode with no errors, ~6 KB/s (10 min ≈ 3.6 MB). |
-| Lock screen | Media Session: title = episode title, artist "Modo deporte", the app icon; play/pause; **next track = next step, previous track = start of this step** (again within 3 s of its start: the previous step); seek, seek ±15 s; `setPositionState`. |
+| Lock screen | Media Session: title = episode title, artist "Modo deporte", the app icon; play/pause; **next track = next step, previous track = start of this step** (again within 3 s of its start: the previous step); seek (`seekto`); `setPositionState`. No seek ±15 s (2026-10-13): with those handlers iOS shows ±15 s buttons instead of previous/next track, the steps. |
 | Offline | Opening or saving an episode downloads its clips (progress "Preparando el audio… 34/120"); the joined file is rebuilt from cached clips each time (not stored). A clip that cannot be fetched after one retry is left out and counted ("Faltan 3 audios: necesitas conexión para completarlo."). |
 | Access | Screen `/deporte/` (nested section `sport`, title "Modo deporte", parent tab `play`), reached from a card on Jugar and from a «🏃 Modo deporte» button on every saved route. Needs the Prepárate access code (narrator and slow lines come from `/api/coach/tts/`) and `coachAvailable(lang)`; without a code, Prepárate's `AccessCard`. The ⚡ is hidden on `/deporte/`. |
 | Save mp3 | «Guardar mp3»: the joined file as `<title>.mp3` through the share sheet (`navigator.share` with a `File`) where available, else a download link. |
 | XP | A finished episode (≥ 90 % played) gives 10 XP, source `"sport"`, at most 3 episodes a day; counts for the streak like any activity (`recordActivity`). |
 | Limits | AI episodes: own counter, **5 per code per day** (`COACH_EPISODE_DAILY_LIMIT`), shared monthly budget, no refinements (edit the text and make another). `COACH_TTS_DAILY_LIMIT` default 500 → **2000**: an AI episode is ~100–150 voice lines the first time. |
 | Model | `COACH_MODEL` (Sonnet 5.5), `effort: "low"`, `max_tokens` 12000, `generateStructured` like routes. Estimate ≈ 4–6k output tokens ≈ 0.05–0.10 USD, ~25–40 s (measure on the first real ones). |
+| Dialogue lines | Dialogue episodes read their normal-speed target lines with edge-tts too (`generatedPlayable(text, voice)` in the content line's voice, the same voice as its slow line), not with the pack's Gemini content mp3s (2026-10-13): one voice engine for the whole episode. `DIALOGUE_LINES_FROM_CONTENT` (`src/lib/sport/compile.ts`) = `false`; one edit brings the content mp3s back. |
 | Saving | AI episodes saved automatically when they arrive, like routes; deleted only by the learner (with confirmation). Dialogue and route episodes are derived on the fly, never stored. |
 
 ## Episode model (`src/lib/sport/`)
@@ -60,9 +61,10 @@ type StoredEpisode = SportEpisode & { source: "ai"; createdAt: string; descripti
 - **Compiler** `compileEpisode(episode, glossLang)` → `{ segments, chapters }`: segments are
   `{ kind: "clip", playable, step }` or `{ kind: "gap", ms, step }` following "Order", "Variants",
   "Final scene" and "Gaps" above; the opening is "Modo deporte. <title>." + `intro`; it ends with
-  "Fin del episodio.". Narrator lines are `generatedPlayable(text, narratorVoice)`; target lines use
-  the content playable when the line is pack content (dialogues: its `audioKey` mp3), else
-  `generatedPlayable(text, voice)`; slow lines are always `generatedPlayable(text, voice, { slow: true })`.
+  "Fin del episodio.". Narrator lines are `generatedPlayable(text, narratorVoice)`; target lines are
+  `generatedPlayable(text, voice)`, in the content line's own voice when the line is pack content
+  (dialogues; its `audioKey` mp3 instead only with `DIALOGUE_LINES_FROM_CONTENT`, "Dialogue lines"
+  above); slow lines are always `generatedPlayable(text, voice, { slow: true })`.
 - **Narration copy** in one table keyed by gloss language (`es` only today): "Te dicen:", "Te
   pueden decir:", "Significa:", "O también:", "O también te pueden decir:", "Te toca a ti. Dices:",
   "Y ahora, la escena entera, sin traducción.", "Fin del episodio.", "Modo deporte.".
@@ -84,7 +86,11 @@ type StoredEpisode = SportEpisode & { source: "ai"; createdAt: string; descripti
 - MP3 joining: parse frame headers; drop ID3v2 tags and Xing/Info/LAME frames; every clip must
   share MPEG version, layer, sample rate and channel mode (otherwise the episode reports
   `format` and plays nothing; only the hidden `cba` pack has ElevenLabs lines in another format).
-  Durations come from frame counts (exact), so chapters are exact.
+  Bitrates may differ (edge-tts 48 kbps, the pack's Gemini lines 64 kbps). Durations come from
+  frame counts (exact), so chapters are exact.
+- The joined file starts with its own Xing frame (`xingFrame`: frame count, byte count, 100-entry
+  seek table), so browsers know its exact duration and seek right although clips of 48 and 64 kbps
+  are mixed; a decoder that ignores it plays it as one silent frame.
 - Silent frames: pre-encoded for the edge-tts format (24 kHz mono, 48 kbps), repeated to the gap
   length.
 - Plays the object URL on the shared `<audio>` element (`playbackRate` 1), from the tap's gesture.
@@ -129,12 +135,30 @@ honest register; no uncertain specifics as facts; learner text is data.
 | `src/lib/coach/api.ts` | `generateEpisode(lang, description, { signal })` (adds `profile`, same errors as `generateRoute`) |
 | `src/lib/coach/episodes.ts` | `getSavedEpisodes`, `getSavedEpisode`, `saveEpisode`, `deleteEpisode`; key `lang-lern:coach:episodes:<lang>` = `{ v: 1, episodes }`, newest first, unique ids, tolerant parsing; change event `lang-lern:coach-change` |
 | `src/lib/coach/use-coach.ts` | `useSavedEpisodes(lang)` |
-| `pruneCoachAudio` | keeps the lines of every saved pack, route **and** episode, plus every route's and every pack dialogue's episode lines (narrator + slow) |
+| `pruneCoachAudio` | keeps the lines of every saved pack, route **and** episode, plus every route's and every pack dialogue's episode lines (`episodePlayables`: narrator, slow and generated target lines) |
 
 - The request runs outside the screen (like `components/coach/generation.ts`): leaving `/deporte/`
   does not lose a paid episode.
 - The key is a normal `lang-lern:` key: Perfil backup and cloud save include it automatically.
   Never renamed or dropped (CLAUDE.md "Never lose the learner's on-device data").
+
+## Screen (`src/components/sport/`)
+
+- `/deporte/` (`SportView`): without `coachAvailable(lang)` a notice; without the access code
+  Prepárate's `AccessCard`; else the offline notice and "De la app" (`AppEpisodes`: one card per
+  dialogue of the active pack, pack order, with its title, description and an estimate "Unos 6 min"
+  from the compiled clips' text and gaps).
+- `?ep=<id>` (`nav.ts`, shallow `pushState` like `?ruta=`; back works): `useEpisode` resolves
+  `dlg:<id>` (a dialogue of the active pack) and `route:<id>` (a saved route); AI ids come with
+  "Mis episodios". Unknown → "Episodio no encontrado".
+- Player (`EpisodeView`): prepares on open (`useEpisodeAudio`: "Preparando el audio… n/N", then
+  `episodePlayer.load`), «Reproducir» / «Pausar» / «Seguir» between "Paso anterior" / "Paso
+  siguiente", progress bar with elapsed / total, "Falta 1 audio" / "Faltan n audios: necesitas
+  conexión para completarlo.", «Guardar mp3», then "Los pasos" (opening, every step, the final
+  scene) with the one playing highlighted (`aria-current="step"`, scrolled into view, smooth only
+  without reduced motion). Leaving the episode cancels the download and unloads the player.
+- Jugar card (`SportEntryCard`) sits under the game's topics in `src/app/jugar/page.tsx` (above the
+  game it would push a running round down the screen).
 
 ## UI copy (Spain Spanish, tú)
 

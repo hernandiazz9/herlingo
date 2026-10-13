@@ -30,8 +30,6 @@ export interface EpisodePlayerMeta {
   durationSec: number;
 }
 
-/** Lock screen / headphones seek backward and forward. */
-export const SEEK_OFFSET_SEC = 15;
 /** «Paso anterior» within this many seconds of a step's start goes to the previous step. */
 export const RESTART_WINDOW_SEC = 3;
 
@@ -43,8 +41,6 @@ const ACTIONS: MediaSessionAction[] = [
   "nexttrack",
   "previoustrack",
   "seekto",
-  "seekbackward",
-  "seekforward",
 ];
 
 const IDLE: EpisodePlayerState = { loaded: false, playing: false, timeSec: 0, durationSec: 0, step: 0 };
@@ -114,7 +110,10 @@ function updateSession(): void {
   }
 }
 
-/** Lock screen and headphones: title, play/pause, next/previous step, seek, ±15 s. */
+/**
+ * Lock screen and headphones: title, play/pause, next/previous step, seek. No seek ±15 s: with
+ * those handlers iOS shows ±15 s buttons instead of previous/next track (the steps).
+ */
 function showSession(): void {
   const session = mediaSession();
   if (!session || !meta) return;
@@ -134,8 +133,6 @@ function showSession(): void {
     setAction(session, "seekto", (d) => {
       if (d.seekTime !== undefined) seek(d.seekTime);
     });
-    setAction(session, "seekbackward", (d) => seek(now() - (d.seekOffset ?? SEEK_OFFSET_SEC)));
-    setAction(session, "seekforward", (d) => seek(now() + (d.seekOffset ?? SEEK_OFFSET_SEC)));
   }
   updateSession();
 }
