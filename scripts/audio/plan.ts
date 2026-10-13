@@ -9,9 +9,10 @@
  * Dialogue learner options are voiced by a pack voice that none of the dialogue's native turns
  * uses, so the two sides of a conversation always sound different.
  *
- * pack.json `ttsVoices` can render a voice with another edge-tts voice or with ElevenLabs. An
- * ElevenLabs line also has a `fallback`: the edge-tts mp3 of the voice name, used (and kept) until
- * the ElevenLabs mp3 exists, so running out of credits never leaves a line without audio.
+ * pack.json `ttsVoices` can render a voice with another edge-tts voice, with ElevenLabs or with
+ * Gemini TTS. An ElevenLabs or Gemini line also has a `fallback`: the edge-tts mp3 of the voice
+ * name, used (and kept) until its own mp3 exists, so running out of credits or quota never leaves
+ * a line without audio.
  *
  * Kept free of `@/lib/content` (which needs the generated bundle): it walks the Pack itself.
  */
@@ -30,8 +31,11 @@ export interface AudioJob {
   /** File name inside public/audio/<lang>/. */
   file: string;
   /** How `file` is rendered. */
-  render: { provider: "edge"; voice: string } | { provider: "elevenlabs"; voiceId: string; model: string };
-  /** ElevenLabs lines only: the edge-tts mp3 of `voice`, used until `file` exists. */
+  render:
+    | { provider: "edge"; voice: string }
+    | { provider: "elevenlabs"; voiceId: string; model: string }
+    | { provider: "gemini"; voice: string; model: string };
+  /** ElevenLabs and Gemini lines only: the edge-tts mp3 of `voice`, used until `file` exists. */
   fallback?: { file: string; voice: string };
   /** Lower = generated first when credits are limited (dialogue and story lines before the rest). */
   priority: number;
@@ -50,6 +54,7 @@ export function audioFile(text: string, voice: string): string {
 }
 
 export const ELEVENLABS_DEFAULT_MODEL = "eleven_v3";
+export const GEMINI_DEFAULT_MODEL = "gemini-3.8-flash-tts";
 
 /** One job per audio key, sorted by key. */
 export function planAudio(pack: Pack): AudioJob[] {
@@ -68,6 +73,17 @@ export function planAudio(pack: Pack): AudioJob[] {
         voice,
         file: audioFile(text, `elevenlabs:${tts.voiceId}:${model}`),
         render: { provider: "elevenlabs", voiceId: tts.voiceId, model },
+        fallback: { file: audioFile(text, voice), voice },
+        priority,
+      };
+    } else if (tts?.provider === "gemini") {
+      const model = tts.model ?? GEMINI_DEFAULT_MODEL;
+      job = {
+        key: p.audioKey,
+        text,
+        voice,
+        file: audioFile(text, `gemini:${tts.voice}:${model}`),
+        render: { provider: "gemini", voice: tts.voice, model },
         fallback: { file: audioFile(text, voice), voice },
         priority,
       };

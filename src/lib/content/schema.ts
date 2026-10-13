@@ -136,10 +136,12 @@ export const Romanization = z.object({
 
 /**
  * How a pack voice is rendered by `npm run audio` when it is not the edge-tts voice of that name:
- * another edge-tts voice, or an ElevenLabs voice (`model` defaults to `eleven_v3`).
+ * another edge-tts voice, an ElevenLabs voice (`model` defaults to `eleven_v3`) or a Gemini TTS
+ * prebuilt voice (`voice` = "Kore", "Charon"…; `model` defaults to `gemini-3.8-flash-tts`).
  */
 export const TtsVoice = z.discriminatedUnion("provider", [
   z.object({ provider: z.literal("edge"), voice: Text }).strict(),
+  z.object({ provider: z.literal("gemini"), voice: z.string().regex(/^[A-Z][a-z]+$/), model: Text.optional() }).strict(),
   z
     .object({
       provider: z.literal("elevenlabs"),

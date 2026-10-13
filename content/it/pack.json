@@ -8,6 +8,11 @@
   "formalRegister": "lei",
   "articles": ["il", "lo", "la", "l'", "i", "gli", "le"],
   "voices": ["it-IT-ElsaNeural", "it-IT-DiegoNeural", "it-IT-IsabellaNeural"],
+  "ttsVoices": {
+    "it-IT-ElsaNeural": { "provider": "gemini", "voice": "Kore" },
+    "it-IT-DiegoNeural": { "provider": "gemini", "voice": "Charon" },
+    "it-IT-IsabellaNeural": { "provider": "gemini", "voice": "Leda" }
+  },
   "numberWords": {
     "0": "zero", "1": "uno", "2": "due", "3": "tre", "4": "quattro", "5": "cinque", "6": "sei", "7": "sette",
     "8": "otto", "9": "nove", "10": "dieci", "11": "undici", "12": "dodici", "13": "tredici", "14": "quattordici", "15": "quindici",
