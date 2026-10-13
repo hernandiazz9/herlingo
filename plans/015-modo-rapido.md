@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 10:57Z 💻
+- Updated: 2026-10-13 11:03Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
 - Branch: plan-015-modo-rapido · pushed
-- Next step: integrate T178 when its agent finishes, then launch T179 (one agent at a time)
+- Next step: integrate T179 when its agent finishes, then launch T180 (one agent at a time)
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
 
 ## Shared contract (all tasks read this)
@@ -72,7 +72,7 @@ Worktree setup: npm ci
 - Outcome: CoachRoute* types, parseRoute, generateRoute, saved routes (routes.ts), shared prefetch + pruneCoachAudio moved to saved-audio.ts, useSavedRoutes · ff9c4110 · verify ✓ 💻 · not checked: offline playback on a device
 
 ## T178 — `/rapido/` screen: route view and Mis rutas
-- Status: running (attempt 1 · 💻 · agent a30137a72c732fb63 · since 10:57Z)
+- Status: done
 - Depends on: T177
 - Where: any
 - Goal: The screen that lists saved routes and shows one (chat-style turns, audio, «Más»), reachable by URL.
@@ -83,10 +83,10 @@ Worktree setup: npm ci
   - A route: title, «description», turns as chat bubbles ("Te dicen" native / "Tú" learner, distinct token colours), target text big + Spanish below, 🔊 and 🐌 per line, «Más»/«Menos» (`aria-expanded`) only when the turn has alts or words, showing "También te pueden decir" / "También puedes decir" and "Palabras", each with audio; taps call `recordListen`.
   - Delete with confirmation from the list and the route view.
   - `npm run verify` → exit 0 and `out/rapido/index.html` exists.
-- Outcome:
+- Outcome: /rapido/ (NESTED quick under Jugar), Mis rutas, ?ruta= route view: chat bubbles, 🔊/🐌, «Más», delete with confirm · 2c3ecad3 · verify ✓ 💻 · not checked: both themes, 375 px, audio, focus, back button
 
 ## T179 — Quick form and generation
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a4ed73769cf3d33c3 · since 11:03Z)
 - Depends on: T178
 - Where: any
 - Goal: Typing a situation on `/rapido/` produces, saves and opens a route.
@@ -130,6 +130,7 @@ Worktree setup: npm ci
 ## Review queue
 
 ## Visual checks queue
+- [ ] T178 @2c3ecad3 — /rapido/ Mis rutas + a route (?ruta=): light + dark, iPhone width, 🔊/🐌, «Más», delete, back (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Access = one global floating ⚡ button (no cards on Ruta, Frasario or Jugar). (Hernán)
@@ -162,3 +163,5 @@ Worktree setup: npm ci
 - 2026-10-13 06:40Z 💻 paused at Hernán's request (token budget) · nothing running
 - 2026-10-13 10:57Z 💻 resumed on 💻 (same session, Hernán asked) · writer lock retaken
 - 2026-10-13 10:57Z 💻 T178 launched · attempt 1 · agent a30137a72c732fb63
+- 2026-10-13 11:03Z 💻 T178 done · worktree-agent-a30137a72c732fb63 → 2c3ecad3 · verify ✓
+- 2026-10-13 11:03Z 💻 T179 launched · attempt 1 · agent a4ed73769cf3d33c3
