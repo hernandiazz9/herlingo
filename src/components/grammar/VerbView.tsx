@@ -11,12 +11,13 @@ import { getGrammarTenses, getPack, getVerb, glossOf, type Verb, type VerbForm }
 import { useGlossLang } from "@/lib/content/use-gloss";
 import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { GrammarScreen } from "./GrammarScreen";
+import { GrammarReadButton } from "./ReadButton";
 
 /**
  * A verb page of pack `lang`: the infinitive (tap = audio), its gloss and notes, then one chip per
  * tense the verb has (pack.json order, the first selected) and that tense's forms. Tapping a row
  * plays it ("io sono"; snail = slow); irregular forms are in another colour. Below the table: the
- * tense notes and its example with audio.
+ * tense notes and its example with audio. "Leído" at the end.
  */
 export function VerbView({ id, lang }: { id: string; lang: string }) {
   const verb = getVerb(id, getPack(lang));
@@ -132,6 +133,7 @@ function VerbPage({ verb, lang }: { verb: Verb; lang: string }) {
           </Card>
         </>
       ) : null}
+      <GrammarReadButton key={verb.id} id={verb.id} lang={lang} />
     </div>
   );
 }

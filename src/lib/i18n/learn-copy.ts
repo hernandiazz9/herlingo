@@ -213,6 +213,14 @@ export interface LearnCopy {
   grammarTenses: string;
   grammarExample: string;
   grammarEmpty: string;
+  /** The "Leído" button at the end of a verb or topic page. */
+  grammarRead: string;
+  /** The button after the tap: "Leído · ×4". */
+  grammarReadCount: (n: number) => string;
+  /** Under the button when the entry was read on an earlier visit. */
+  grammarReadBefore: (n: number) => string;
+  /** Read aloud with the "×n" badge of a tile or topic. */
+  grammarReadTimes: (n: number) => string;
 
   // Mic UI (lessons and dialogues)
   micStarting: string;
@@ -469,6 +477,10 @@ function esBase(target: string, glossName: string): LearnCopy {
     grammarTenses: "Tiempos verbales",
     grammarExample: "Ejemplo",
     grammarEmpty: "Todavía no hay gramática para este idioma.",
+    grammarRead: "Leído",
+    grammarReadCount: (n) => `Leído · ×${n}`,
+    grammarReadBefore: (n) => (n === 1 ? "Ya lo has leído 1 vez." : `Ya lo has leído ${n} veces.`),
+    grammarReadTimes: (n) => (n === 1 ? "leído 1 vez" : `leído ${n} veces`),
 
     micStarting: "Abriendo el micrófono…",
     micFinish: "Terminar y usar lo que he dicho",
@@ -710,6 +722,10 @@ function ru({ lang }: Ctx): LearnCopy {
     grammarTenses: "Времена",
     grammarExample: "Пример",
     grammarEmpty: "Для этого языка грамматики пока нет.",
+    grammarRead: "Прочитано",
+    grammarReadCount: (n) => `Прочитано · ×${n}`,
+    grammarReadBefore: (n) => `Уже прочитано раз: ${n}.`,
+    grammarReadTimes: (n) => `прочитано раз: ${n}`,
 
     micStarting: "Включаю микрофон…",
     micFinish: "Закончить и использовать сказанное",

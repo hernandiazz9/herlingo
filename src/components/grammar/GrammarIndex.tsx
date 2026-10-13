@@ -6,12 +6,15 @@ import { getPack, glossOf, listGrammarTopics, listVerbs } from "@/lib/content";
 import { useLevel } from "@/lib/content/level-hook";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import { useGlossLang } from "@/lib/content/use-gloss";
+import { useGrammarReads } from "@/lib/grammar/use-grammar-reads";
 import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import { GrammarScreen, grammarHref } from "./GrammarScreen";
+import { GrammarReadBadge } from "./ReadButton";
 
 /**
  * `/gramatica/`: the active language's verbs (a grid of tiles in `order`) and topics (its grammar
  * cards minus the ones a verb covers; a levelled pack shows the learner's level, as the Ruta does).
+ * Read entries carry a "×n" badge.
  */
 export function GrammarIndex() {
   const lang = useScreenLang();
@@ -27,6 +30,7 @@ function PackGrammar({ lang }: { lang: string }) {
   const gloss = useGlossLang(lang);
   const copy = useLearnCopy();
   const { level } = useLevel(lang);
+  const { reads } = useGrammarReads(lang);
   const verbs = listVerbs(pack);
   const topics = listGrammarTopics(pack, level);
 
@@ -54,9 +58,16 @@ function PackGrammar({ lang }: { lang: string }) {
                   <span lang={gloss.tag} className="text-sm leading-snug text-ink-muted">
                     {glossOf(verb, gloss.lang)}
                   </span>
-                  {verb.irregular ? (
-                    <span className="mt-auto self-start rounded-full bg-terracotta-soft px-2.5 py-0.5 text-xs font-bold text-terracotta-deep">
-                      {copy.grammarIrregular}
+                  {verb.irregular || reads[verb.id] ? (
+                    <span className="mt-auto flex items-center gap-2 pt-1">
+                      {verb.irregular ? (
+                        <span className="rounded-full bg-terracotta-soft px-2.5 py-0.5 text-xs font-bold text-terracotta-deep">
+                          {copy.grammarIrregular}
+                        </span>
+                      ) : null}
+                      <span className="ml-auto">
+                        <GrammarReadBadge n={reads[verb.id]?.n ?? 0} />
+                      </span>
                     </span>
                   ) : null}
                 </Link>
@@ -86,6 +97,7 @@ function PackGrammar({ lang }: { lang: string }) {
                       {glossOf(card.summary, gloss.lang)}
                     </span>
                   </span>
+                  <GrammarReadBadge n={reads[card.id]?.n ?? 0} />
                   <span aria-hidden="true" className="shrink-0 text-2xl text-ink-muted">
                     ›
                   </span>
