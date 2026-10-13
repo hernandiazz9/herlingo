@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 21:23Z 💻
+- Updated: 2026-10-13 21:42Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: T196 («Escuchar todo» on the joined player), then a deploy (Hernán's OK) for T197
+- Next step: T197: deploy (Hernán's OK) + Hernán's check on the bike; then plan done when the visual queue is empty
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: OK to fast-forward main to the deployed code (T192–T193) — not answered yet
+- Needs Hernán: OK to fast-forward main to plan-016 and deploy · T197 check · visual queue (5)
 
 ## Shared contract (all tasks read this)
 
@@ -167,7 +167,7 @@ Worktree setup: npm ci
 - Outcome: «🏃 Modo deporte» on saved routes → ?ep=route:<id>; De tus rutas section; «Escuchar seguidos» (?seguidos=mis|rutas|app, downloaded episodes only, joined); XP 10 'sport' at 90 % actually played, once/episode/day, ≤ 3/day via countPlay (no new key) · 9418fa65 · verify ✓ 💻 · tsx checks ✓ · not checked: visuals, joined lock-screen jumps, XP while locked
 
 ## T196 — «Escuchar todo» keeps playing with the screen locked
-- Status: running (attempt 1 · 💻 · agent a0c13b2cdac9c4346 · since 21:23Z)
+- Status: done
 - Depends on: T191
 - Where: any
 - Goal: Fix the T183 finding: «Escuchar todo» on routes (and on stories and grammar pages, which use the same chain) plays one joined file instead of chained clips, so locking the iPhone does not stop it.
@@ -177,7 +177,7 @@ Worktree setup: npm ci
   - Each «Escuchar todo» prepares its lines (all mp3 available → one joined file, highlight from chapters, Pausar/Seguir as today); if any line has no mp3 (device-voice fallback), it falls back to today's chain.
   - Media Session as today plus position state.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: useSequencePlayer + src/lib/audio/joined.ts: route/story/grammar «Escuchar todo» join on-device mp3s into one file on episodePlayer (chapters drive the highlight, lock-screen position + steps); chain kept when a line lacks an mp3, the file is not ready 2 s after the tap, or Audio lento is on · 130a01ca · verify ✓ 💻 · tsx join check ✓ (it/fr/en/nl/es stories) · not checked: iPhone locked playback, lock screen, Audio lento path, visuals
 
 ## T197 — iPhone check of AI episodes, routes, XP and «Escuchar todo» (Hernán, by hand)
 - Status: pending
@@ -209,6 +209,7 @@ Worktree setup: npm ci
 - [ ] T198 @e4c0de27 — Jugar: Modo deporte card right under «Prepárate para una situación», light + dark (queued 2026-10-13 💻)
 - [ ] T194 @6d6160ad — /deporte/: form (pending, limit, offline), Mis episodios + delete dialog, new AI episode opening in the player with its notice; light + dark (queued 2026-10-13 💻)
 - [ ] T195 @9418fa65 — route «🏃 Modo deporte» button; /deporte/ De tus rutas; «Escuchar seguidos» joined view; '+10 XP' notice; light + dark (queued 2026-10-13 💻)
+- [ ] T196 @130a01ca — «Escuchar todo» on a route, a story and a grammar page: keeps playing locked, highlight follows, Pausar/Seguir, lock-screen title (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -246,6 +247,8 @@ Worktree setup: npm ci
 - 2026-10-13 T194: the Prepárate usage panel (AiUsagePanel) does not show the episode counters yet (the client parses them)
 - 2026-10-13 T195: src/lib/sport/downloaded.ts copies generated.ts's private cache path; export an 'is cached' helper from src/lib/audio/generated.ts
 - 2026-10-13 T195: XpToast does not list source 'sport' (no floating +XP; the player shows its own notice)
+- 2026-10-13 T196: episodePlayer hard-codes artist 'Modo deporte' (useSequencePlayer overwrites it after play()); add an optional artist to EpisodePlayerMeta
+- 2026-10-13 T196: docs/sport.md 'Player' does not say «Escuchar todo» now uses the episode player
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -271,3 +274,4 @@ Worktree setup: npm ci
 - 2026-10-13 21:11Z 💻 T195 launched · attempt 1 · agent aa039354ce92863d9
 - 2026-10-13 21:23Z 💻 T195 done · worktree-agent-aa039354ce92863d9 → 9418fa65 · verify ✓
 - 2026-10-13 21:23Z 💻 T196 launched · attempt 1 · agent a0c13b2cdac9c4346
+- 2026-10-13 21:42Z 💻 T196 done · worktree-agent-a0c13b2cdac9c4346 → 130a01ca · verify ✓
