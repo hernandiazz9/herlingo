@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:21Z 💻
+- Updated: 2026-10-13 06:29Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, since 06:21Z)
 - Branch: plan-015-modo-rapido · pushed
-- Next step: integrate T175 when its agent finishes, then launch T176 (one agent at a time)
+- Next step: integrate T176 when its agent finishes, then launch T177 (one agent at a time)
 - Gotchas: never switch branches in `lang_lern/` (plan 014 lives there); `.env.local` absent here on purpose (fake mode).
 
 ## Shared contract (all tasks read this)
@@ -28,7 +28,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T175 — Route generation on the server
-- Status: running (attempt 1 · 💻 · agent a80b78e238b64f1ac · since 06:21Z)
+- Status: done
 - Depends on: none
 - Where: any
 - Goal: Server modules that turn a description into a validated `Route` (fake or real Claude), no endpoint yet.
@@ -41,10 +41,10 @@ Worktree setup: npm ci
   - A throwaway `npx tsx` check (not committed): the fake for `it` and for one other pack language passes `GeneratedRoute`; a 12-turn object with 5 alts is trimmed and passes; a native first turn and two learner turns in a row fail.
   - `git diff` shows `PACK_SYSTEM` and `INTERVIEW_SYSTEM` unchanged.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: Route schema/limits, normalizeRoute, ROUTE_SYSTEM + routeUserPrompt, fakeRoute (it fixture + placeholders), generateRoute · 36a576d8 · verify ✓ 💻 · not checked: real Claude call (quality, token counts)
 
 ## T176 — `POST /api/coach/route/`, route counter and usage
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a39ee618c4d4ecc01 · since 06:29Z)
 - Depends on: T175
 - Where: any
 - Goal: The endpoint, its own daily counter and the usage additions, working in fake mode.
@@ -145,9 +145,12 @@ Worktree setup: npm ci
 - 2026-10-13 plan: Light practice after a route, no AI: hear a native line (main or alt) → pick its meaning among 3.
 - 2026-10-13 plan: Measure the first real routes (tokens, cost, latency) and record them in docs/coach.md; compare Haiku 5.5 on 3 situations if Sonnet feels slow.
 - 2026-10-13 plan: Plan 016: evaluation of everything practised (short exam + report), per docs/coach.md "Later".
+- 2026-10-13 T175: GeneratedRoute title accepts ≤80 chars while the prompt asks ≤60 (pack-style headroom so a long title isn't a paid 502)
 
 ## Log
 - 2026-10-12 22:26Z 💻 plan written from the interview; not approved yet
 - 2026-10-13 06:02Z 💻 approved by Hernán ("OK, en carpeta aparte"); worktree ../lang_lern-rapido created, npm ci done
 - 2026-10-13 06:21Z 💻 resume on 💻 (lang_lern-rapido) · writer lock taken
 - 2026-10-13 06:21Z 💻 T175 launched · attempt 1 · agent a80b78e238b64f1ac
+- 2026-10-13 06:29Z 💻 T175 done · worktree-agent-a80b78e238b64f1ac → 36a576d8 · verify ✓
+- 2026-10-13 06:29Z 💻 T176 launched · attempt 1 · agent a39ee618c4d4ecc01
