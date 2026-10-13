@@ -8,11 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:10Z 💻
+- Updated: 2026-10-13 11:16Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
 - Branch: plan-015-modo-rapido · pushed
-- Next step: integrate T180 when its agent finishes; then only T181 remains (Hernán on the iPhone)
+- Next step: T181: Hernán checks on the iPhone (LAN fake mode: npm run build && COACH_LAN=1 npm run start:coach, code dev-owner); findings → fix tasks
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
+- Needs Hernán: T181 iPhone check; deploy only with his OK
 
 ## Shared contract (all tasks read this)
 
@@ -101,7 +102,7 @@ Worktree setup: npm ci
 - Outcome: QuickForm (500 limit, Prepárame, pending, offline, AccessCard on 401), generation.ts generalised (startRoute/useRouteGeneration), saved/not-saved notice + 'Te quedan N rutas hoy', Rutas rápidas row in AiUsagePanel · db9e8c63 · verify ✓ 💻 · fake curl ✓ · not checked: UI on a phone (leave during request, 401, offline)
 
 ## T180 — Floating ⚡ button
-- Status: running (attempt 1 · 💻 · agent a72726e9ceb59ebaf · since 11:10Z)
+- Status: done
 - Depends on: T178
 - Where: any
 - Goal: One tap to Modo rápido from every screen.
@@ -112,7 +113,7 @@ Worktree setup: npm ci
   - Hidden per the contract (on `/rapido/`, flows with fixed bottom controls or a running exercise, packs without `coachAvailable`, before the active language is ready); the final list is written in the component's comment.
   - While visible, `<main>` gets extra bottom space so the last item is never covered; it never overlaps the update or install prompts.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: QuickFab ⚡ (sea, pressable, above tab bar + safe area), hidden per contract (paths + useHideQuickFab in game/review; list in the component comment), main bottom space via :has(), hides while UpdatePrompt shows · 328f9687 · verify ✓ 💻 · not checked: iPhone position/overlap, themes, widths
 
 ## T181 — iPhone check (Hernán, by hand)
 - Status: pending
@@ -132,6 +133,7 @@ Worktree setup: npm ci
 ## Visual checks queue
 - [ ] T178 @2c3ecad3 — /rapido/ Mis rutas + a route (?ruta=): light + dark, iPhone width, 🔊/🐌, «Más», delete, back (queued 2026-10-13 💻)
 - [ ] T179 @db9e8c63 — /rapido/ form: type → Prepárame → route opens with notice; leave mid-request and come back; offline notice; Rutas rápidas row in Prepárate usage (queued 2026-10-13 💻)
+- [ ] T180 @328f9687 — ⚡ on every tab (light + dark), not over content/prompts/Jugar button; hidden in lessons, games, review, dialogues, stories, /rapido/ (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Access = one global floating ⚡ button (no cards on Ruta, Frasario or Jugar). (Hernán)
@@ -151,6 +153,7 @@ Worktree setup: npm ci
 - 2026-10-13 T177: docs/coach.md Client tables still place pruneCoachAudio in packs.ts (now saved-audio.ts) and omit the routes key
 - 2026-10-13 T177: the offline error message of generateRoute still says 'situaciones'; the route screen's own offline copy must come from the UI (T179)
 - 2026-10-13 T179: offline, AccessCard's code check shows the client's 'situaciones' message (shared client copy)
+- 2026-10-13 T180: Frasario ShowMode, the Ruta side sheet and dialogs only cover the ⚡ (z-order); keyboard focus can still reach it behind them, as with the tab bar
 
 ## Log
 - 2026-10-12 22:26Z 💻 plan written from the interview; not approved yet
@@ -169,3 +172,4 @@ Worktree setup: npm ci
 - 2026-10-13 11:03Z 💻 T179 launched · attempt 1 · agent a4ed73769cf3d33c3
 - 2026-10-13 11:10Z 💻 T179 done · worktree-agent-a4ed73769cf3d33c3 → db9e8c63 · verify ✓
 - 2026-10-13 11:10Z 💻 T180 launched · attempt 1 · agent a72726e9ceb59ebaf
+- 2026-10-13 11:16Z 💻 T180 done · worktree-agent-a72726e9ceb59ebaf → 328f9687 · verify ✓
