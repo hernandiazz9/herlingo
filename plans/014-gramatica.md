@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 15:10Z 💻
+- Updated: 2026-10-13 16:22Z 💻
 - Writer: released 11:47Z by 💻 → continue on 💻
 - Branch: main (plan-014-gramatica merged)
 - Next step: T184 + T185 running; Gemini Italian audio running in Hernán's terminal (uncommitted public/audio/it)
@@ -294,3 +294,4 @@ Worktree setup: npm ci
 - 2026-10-13 13:35Z 💻 T185 done → d1101b02
 - 2026-10-13 13:36Z 💻 T184 done → 1056f44e
 - 2026-10-13 15:10Z 💻 T186 done → 88168e2b
+- 2026-10-13 16:22Z 💻 Italian audio regenerated: 4 edge-tts voices (rotation), 77 Gemini kept; --strict-audio ✓ it
