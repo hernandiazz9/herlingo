@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 20:18Z 💻
+- Updated: 2026-10-13 20:59Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: nothing runnable: T191 (Hernán: deploy + iPhone check) unblocks T194 and T196
+- Next step: T194 (AI episodes on the device), then T195, T196; T197 = Hernán's check
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: T191 iPhone check on the deployed app · OK to fast-forward main to the deployed code (T192–T193)
+- Needs Hernán: OK to fast-forward main to the deployed code (T192–T193) — not answered yet
 
 ## Shared contract (all tasks read this)
 
@@ -95,7 +95,7 @@ Worktree setup: npm ci
 - Outcome: /deporte/ (nested sport under Jugar): De la app (dialogue episodes, ~min estimate), ?ep= player (play/pause/steps, progress, step list, preparing n/N, missing notice, Guardar mp3), Jugar card, ⚡ hidden; dialogue lines on edge-tts (DIALOGUE_LINES_FROM_CONTENT=false); no ±15 s handlers; docs/sport.md Player/Lock screen/Screen · 93851d69 · verify ✓ 💻 · not checked: visuals, iPhone lock screen, share sheet, offline
 
 ## T191 — iPhone check: does it keep playing with the screen locked? (Hernán, by hand)
-- Status: pending
+- Status: done
 - Depends on: T190
 - Where: pc (Hernán on his iPhone; a deployed build: merge to main or a Vercel preview, with his OK)
 - Goal: Prove the joined-mp3 approach on the installed app before any AI work. Gate for T192 onwards.
@@ -105,7 +105,7 @@ Worktree setup: npm ci
   - A dialogue episode plays to the end with the screen locked and the phone in a pocket; lock-screen title and progress show; play/pause, next and previous step from the lock screen and from the headphones work; the format sounds right (normal → slow → normal, twice for theirs, meanings, final scene).
   - After one full download it plays in airplane mode; «Guardar mp3» saves a file that plays in Archivos.
   - Findings become fix tasks; if locked playback fails, stop and decide with Hernán (e.g. «Guardar mp3» + another player as the main path) before T192.
-- Outcome:
+- Outcome: Hernán on the iPhone (deployed app): "me fue bien" — dialogue episode plays with the screen locked; joined-mp3 approach confirmed · no code · verify n/a
 
 ## T192 — Episode generation on the server
 - Status: done
@@ -245,3 +245,4 @@ Worktree setup: npm ci
 - 2026-10-13 17:38Z 💻 T193 launched · attempt 1 · agent ac9bbfe0cf04a6319 (+ episode deadline 55 s, latency log)
 - 2026-10-13 17:43Z 💻 T193 done · worktree-agent-ac9bbfe0cf04a6319 → 97035912 · verify ✓
 - 2026-10-13 20:18Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ ead2b57a, includes T192–T193 not yet in main) → https://langlern-iota.vercel.app
+- 2026-10-13 20:59Z 💻 T191 done (Hernán: "me fue bien"); next: AI episodes ("agreguemos lo de ia")
