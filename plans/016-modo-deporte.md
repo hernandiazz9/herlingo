@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 17:13Z 💻
+- Updated: 2026-10-13 17:25Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: T188, then T189–T190 one at a time; T191 is Hernán's iPhone check (gate)
+- Next step: T191: merge plan-016 into main + deploy (Hernán's OK), then Hernán's iPhone check
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: dialogue episodes: Gemini normal + edge-tts slow (two timbres) vs edge-tts for both (default: edge-tts for both)
+- Needs Hernán: OK to merge into main and deploy for T191 · dialogue voice A/B (default A: edge-tts both)
 
 ## Shared contract (all tasks read this)
 
@@ -79,7 +79,7 @@ Worktree setup: npm ci
 - Outcome: prepareEpisode (downloads, missing counted, format error), MP3 frame parser + new Xing frame on the joined file, joinEpisodes, player (load/play/pause/seek/steps, Media Session), episodeMp3File; mp3Media on the shared element · b4fa000b · verify ✓ 💻 · joined Gemini+edge clips: frames/duration exact, ffmpeg + afconvert decode clean · not checked: lock screen, headphones, iOS blob play/seek
 
 ## T190 — `/deporte/` screen with free episodes, player view and the Jugar card
-- Status: running (attempt 1 · 💻 · agent a4eddf1514188c1ad · since 17:13Z)
+- Status: done
 - Depends on: T189
 - Where: any
 - Goal: Hernán opens Modo deporte, picks a dialogue episode, waits for "Preparando el audio…", taps «Reproducir», locks the phone and listens.
@@ -92,7 +92,7 @@ Worktree setup: npm ci
   - CLAUDE.md folder layout names `src/lib/sport/` and `src/components/sport/`.
   - `npm run verify` → exit 0.
   - Hand check (PC): see T191.
-- Outcome:
+- Outcome: /deporte/ (nested sport under Jugar): De la app (dialogue episodes, ~min estimate), ?ep= player (play/pause/steps, progress, step list, preparing n/N, missing notice, Guardar mp3), Jugar card, ⚡ hidden; dialogue lines on edge-tts (DIALOGUE_LINES_FROM_CONTENT=false); no ±15 s handlers; docs/sport.md Player/Lock screen/Screen · 93851d69 · verify ✓ 💻 · not checked: visuals, iPhone lock screen, share sheet, offline
 
 ## T191 — iPhone check: does it keep playing with the screen locked? (Hernán, by hand)
 - Status: pending
@@ -193,6 +193,7 @@ Worktree setup: npm ci
 ## Review queue
 
 ## Visual checks queue
+- [ ] T190 @93851d69 — /deporte/ list + player: light + dark, iPhone width, Jugar card (below the topic grid), preparing state, step highlight, Guardar mp3 (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -217,6 +218,8 @@ Worktree setup: npm ci
 - 2026-10-13 T188: Italian content mp3s are Gemini voices (ttsVoices: Kore/Charon/Leda, 64 kbps) while slow lines are edge-tts (48 kbps): a dialogue's normal and slow lines sound like different people → asked Hernán
 - 2026-10-13 T188: episode es/intro/tip allow ≤ 400 chars but /api/coach/tts/ accepts ≤ 300 (COACH_LIMITS.ttsText) → T192 caps episode narration and meanings at 300
 - 2026-10-13 T189: generatedBytes and prefetchGenerated send text to TTS without stripStress (no pack uses stress marks today)
+- 2026-10-13 T190: the Jugar card sits under the topic grid (top of Jugar is GameView); moving it next to EntryCard needs a GameView edit
+- 2026-10-13 T190: 'De la app' is one flat list (en has 48 dialogues): group by situation
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -228,3 +231,4 @@ Worktree setup: npm ci
 - 2026-10-13 16:57Z 💻 T189 launched · attempt 1 · agent a1001fa71713095c5
 - 2026-10-13 17:13Z 💻 T189 done · worktree-agent-a1001fa71713095c5 → b4fa000b · verify ✓
 - 2026-10-13 17:13Z 💻 T190 launched · attempt 1 · agent a4eddf1514188c1ad (+ edge-tts dialogue lines, no ±15 s handlers, Xing note in docs)
+- 2026-10-13 17:25Z 💻 T190 done · worktree-agent-a4eddf1514188c1ad → 93851d69 · verify ✓
