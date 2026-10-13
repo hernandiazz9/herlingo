@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:33Z 💻
-- Writer: me (💻 desktop session in lang_lern-rapido, since 06:21Z)
+- Updated: 2026-10-13 06:40Z 💻
+- Writer: released 06:40Z by 💻 (paused: token budget) → a fresh session in lang_lern-rapido takes it
 - Branch: plan-015-modo-rapido · pushed
-- Next step: integrate T177 when its agent finishes, then launch T178 (one agent at a time)
+- Next step: launch T178 on base ff9c4110 (one agent at a time; prompts force fake mode)
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
 
 ## Shared contract (all tasks read this)
@@ -58,7 +58,7 @@ Worktree setup: npm ci
 - Outcome: POST /api/coach/route/ (pack flow), reserveRoute + COACH_ROUTE_DAILY_LIMIT (20), routes/avgRouteUsd/routesToday in usage · 4ee0be7f · verify ✓ 💻 · fake-mode curl ✓ (200/429/401/400) · not checked: real Claude route
 
 ## T177 — Client: route types, API call, storage and audio
-- Status: running (attempt 1 · 💻 · agent a5e61f984ab6d53dd · since 06:33Z)
+- Status: done
 - Depends on: T176
 - Where: any
 - Goal: `@/lib/coach` support for routes, per the contract's "Client" table.
@@ -69,7 +69,7 @@ Worktree setup: npm ci
   - `saveRoute` downloads the route's audio in the background (shared prefetch); `deleteRoute` prunes; `pruneCoachAudio` keeps every saved pack's and route's lines in every language.
   - Tolerant parsing: a corrupt value or invalid route is dropped, never thrown; the usage parser accepts `routes`, `avgRouteUsd`, `routesToday` as optional (an old stored usage still parses).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: CoachRoute* types, parseRoute, generateRoute, saved routes (routes.ts), shared prefetch + pruneCoachAudio moved to saved-audio.ts, useSavedRoutes · ff9c4110 · verify ✓ 💻 · not checked: offline playback on a device
 
 ## T178 — `/rapido/` screen: route view and Mis rutas
 - Status: pending
@@ -146,6 +146,8 @@ Worktree setup: npm ci
 - 2026-10-13 plan: Measure the first real routes (tokens, cost, latency) and record them in docs/coach.md; compare Haiku 5.5 on 3 situations if Sonnet feels slow.
 - 2026-10-13 plan: Plan 016: evaluation of everything practised (short exam + report), per docs/coach.md "Later".
 - 2026-10-13 T175: GeneratedRoute title accepts ≤80 chars while the prompt asks ≤60 (pack-style headroom so a long title isn't a paid 502)
+- 2026-10-13 T177: docs/coach.md Client tables still place pruneCoachAudio in packs.ts (now saved-audio.ts) and omit the routes key
+- 2026-10-13 T177: the offline error message of generateRoute still says 'situaciones'; the route screen's own offline copy must come from the UI (T179)
 
 ## Log
 - 2026-10-12 22:26Z 💻 plan written from the interview; not approved yet
@@ -156,3 +158,5 @@ Worktree setup: npm ci
 - 2026-10-13 06:29Z 💻 T176 launched · attempt 1 · agent a39ee618c4d4ecc01
 - 2026-10-13 06:33Z 💻 T176 done · worktree-agent-a39ee618c4d4ecc01 → 4ee0be7f · verify ✓
 - 2026-10-13 06:33Z 💻 T177 launched · attempt 1 · agent a5e61f984ab6d53dd
+- 2026-10-13 06:40Z 💻 T177 done · worktree-agent-a5e61f984ab6d53dd → ff9c4110 · verify ✓
+- 2026-10-13 06:40Z 💻 paused at Hernán's request (token budget) · nothing running
