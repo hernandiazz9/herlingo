@@ -61,6 +61,9 @@
   --tabbar-height: 4.25rem;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+  /* Floating ⚡ button (QuickFab) and the extra bottom space of <main> while it is shown (below). */
+  --quick-fab-size: 3.5rem;
+  --quick-fab-space: 0px;
 
   color-scheme: light;
 }
@@ -192,6 +195,19 @@ body {
   background: var(--backdrop);
   color: var(--ink);
   font-family: var(--font-sans);
+}
+
+/*
+ * Floating ⚡ button (src/components/shell/QuickFab.tsx). While it is on screen, <main> ends higher
+ * (the same 1.5rem gap above it as above the tab bar), so it never covers the end of a page. It
+ * steps aside while the update prompt, which sits in the same spot, is showing.
+ */
+:root:has([data-quick-fab]) {
+  --quick-fab-space: calc(var(--quick-fab-size) + 0.75rem);
+}
+
+:root:has([data-update-prompt] > *) [data-quick-fab] {
+  display: none;
 }
 
 /*

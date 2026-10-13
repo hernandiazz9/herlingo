@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { EntryCard } from "@/components/coach/EntryCard";
+import { useHideQuickFab } from "@/components/shell/QuickFab";
 import { LessonLangContext } from "@/components/exercises/shared";
 import { speak } from "@/lib/audio";
 import { coachAvailable } from "@/lib/coach/available";
@@ -54,6 +55,8 @@ function Game({ lang }: { lang: string }) {
   const game = useMemo(() => parseGameState(raw), [raw]);
   const [stage, setStage] = useState<Stage>({ step: "topics" });
   const gloss = useGlossLang(lang);
+  // Discovery cards and the round have their own bottom controls: no ⚡ button over them.
+  useHideQuickFab(stage.step !== "topics");
 
   const go = (next: Stage) => {
     setStage(next);
