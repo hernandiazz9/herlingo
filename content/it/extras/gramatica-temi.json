@@ -352,7 +352,8 @@
         { "text": "Non trovo il passaporto: l'ho perso.", "es": "No encuentro el pasaporte: lo he perdido." },
         { "text": "Dove sono i biglietti? Non li trovo.", "es": "¿Dónde están los billetes? No los encuentro." },
         { "text": "Mi aiuta, per favore?", "es": "¿Me ayuda, por favor?" },
-        { "text": "Ti chiamo domani.", "es": "Te llamo mañana." }
+        { "text": "Ti chiamo domani.", "es": "Te llamo mañana." },
+        { "text": "La ringrazio, è molto gentile.", "es": "Se lo agradezco, es muy amable." }
       ],
       "drills": [
         {

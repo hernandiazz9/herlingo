@@ -4,7 +4,7 @@
   "infinitive": "essere",
   "es": "ser / estar",
   "irregular": true,
-  "notes": "Es ser y, muchas veces, estar («sono stanco»). También es el auxiliar del passato prossimo de los verbos de movimiento y cambio: «sono andato».",
+  "notes": "Es ser y, muchas veces, estar («sono stanco»), pero «estoy bien» es «sto bene» (verbo «stare»), no «sono bene». También es el auxiliar del passato prossimo de verbos de movimiento: «sono andato».",
   "tenses": {
     "presente": {
       "forms": [
@@ -28,7 +28,7 @@
         { "form": "sono stati/e", "say": "sono stati", "es": "han sido / han estado" }
       ],
       "example": { "text": "Ieri siamo stati a Siracusa.", "es": "Ayer estuvimos en Siracusa." },
-      "notes": "Con «essere» y el participio «stato» (el mismo de «stare»), que concuerda: sono stato / stata."
+      "notes": "Con «essere» y el participio «stato» (el mismo de «stare»), que concuerda: sono stato / stata. Vale para «he sido» y para «fui»: «ieri siamo stati» = ayer estuvimos."
     },
     "condizionale": {
       "forms": [

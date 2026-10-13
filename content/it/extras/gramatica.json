@@ -9,6 +9,7 @@
         "«Lei» usa el verbo como «él/ella»: «Lei è di qui?», «Come sta?».",
         "Si alguien te tutea («Di dove sei?»), puedes tutearle tú también.",
         "En la duda, «Lei»: nunca queda mal.",
+        "Con varias personas, tuteadas o no, se usa «voi»: «Come state?», «Scusate!». No hay un «ustedes» aparte.",
         "«Possiamo darci del tu?» = ¿nos tuteamos?"
       ],
       "table": [
@@ -22,7 +23,9 @@
       "examples": [
         { "text": "Come sta?", "es": "¿Cómo está (usted)?" },
         { "text": "Come stai?", "es": "¿Cómo estás?" },
-        { "text": "Senta, scusi…", "es": "Oiga, perdone…" }
+        { "text": "Senta, scusi…", "es": "Oiga, perdone…" },
+        { "text": "Possiamo darci del tu?", "es": "¿Nos tuteamos?" },
+        { "text": "Come state, ragazzi?", "es": "¿Cómo estáis, chicos?" }
       ],
       "drills": [
         {
@@ -80,7 +83,9 @@
       ],
       "examples": [
         { "text": "Vorrei un biglietto per Catania.", "es": "Quería un billete para Catania." },
-        { "text": "Vorremmo un tavolo per due.", "es": "Queríamos una mesa para dos." }
+        { "text": "Vorremmo un tavolo per due.", "es": "Queríamos una mesa para dos." },
+        { "text": "Vorrei pagare con la carta.", "es": "Quería pagar con tarjeta." },
+        { "text": "Mi dà un caffè, per favore?", "es": "¿Me da un café, por favor?" }
       ],
       "drills": [
         {
