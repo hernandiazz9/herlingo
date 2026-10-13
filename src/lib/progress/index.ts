@@ -10,6 +10,7 @@
 import { getItem, getLesson, getLessonItems, getPack, listLangs, type Pack } from "@/lib/content";
 import type { LessonResult } from "@/lib/exercises";
 import { clearGame } from "@/lib/game/storage";
+import { clearGrammarReads } from "@/lib/grammar/reads";
 import { clearStoriesDone } from "@/lib/stories/done";
 import { dueIds, newEntry, parseEntry, schedule, type SrsEntry } from "@/lib/srs";
 import { clearDaily } from "./daily";
@@ -191,6 +192,7 @@ export type XpSource =
   | "discover"
   | "placement"
   | "coach"
+  | "grammar"
   | "activity";
 
 /** One XP award, reported after the progress holding it has been saved. */
@@ -335,8 +337,9 @@ export function completeOnboarding(lang: string): Progress {
 }
 
 /**
- * Deletes all progress of the pack, plus its game records/known phrases, finished stories, today's
- * XP bookkeeping and its days in the global activity log (settings and other languages are kept).
+ * Deletes all progress of the pack, plus its game records/known phrases, finished stories, grammar
+ * reads, today's XP bookkeeping and its days in the global activity log (settings and other
+ * languages are kept).
  * The welcome shows again.
  */
 export function resetProgress(lang: string): void {
@@ -349,6 +352,7 @@ export function resetProgress(lang: string): void {
   }
   clearGame(lang);
   clearStoriesDone(lang);
+  clearGrammarReads(lang);
   removeActivityLang(lang, langStreaks);
   clearDaily(lang);
   window.dispatchEvent(new Event(EVENT));
