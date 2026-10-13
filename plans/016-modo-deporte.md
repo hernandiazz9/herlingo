@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 21:10Z 💻
+- Updated: 2026-10-13 21:11Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
 - Next step: T195 (routes → episodes, De tus rutas, Escuchar seguidos, XP), then T196; T197 = Hernán's check after a deploy
@@ -153,7 +153,7 @@ Worktree setup: npm ci
 - Outcome: generateEpisode + parseEpisode (tolerant) + lang-lern:coach:episodes:<lang> + useSavedEpisodes; background download; pruneCoachAudio keeps episode/route/dialogue episode lines; /deporte/ form (placeholder 'Ej.: ir a un supermercado'), Mis episodios + delete; new episode opens in the player with a saved notice; usage fields parsed · 6d6160ad · verify ✓ 💻 · fake end-to-end ✓ (it fixture ≈ 6 min) · not checked: visuals, real episode, device
 
 ## T195 — Episodes from routes, «Escuchar seguidos» and XP
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent aa039354ce92863d9 · since 21:11Z)
 - Depends on: T194
 - Where: any
 - Goal: Every saved Modo rápido route becomes a free episode, several episodes can play as one long file, and a finished episode earns XP.
@@ -265,3 +265,4 @@ Worktree setup: npm ci
 - 2026-10-13 20:59Z 💻 T194 launched · attempt 1 · agent ae24454bb01bbcc72
 - 2026-10-13 21:01Z 💻 T198 done by the writer (card under EntryCard) → e4c0de27 · verify ✓
 - 2026-10-13 21:10Z 💻 T194 done · worktree-agent-ae24454bb01bbcc72 → 6d6160ad · verify ✓
+- 2026-10-13 21:11Z 💻 T195 launched · attempt 1 · agent aa039354ce92863d9
