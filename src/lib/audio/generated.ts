@@ -286,7 +286,7 @@ async function memoBlob(key: string): Promise<Blob | undefined> {
  * source failure, `signal` aborted): never the device voice. Content playables are not its job
  * (`null`). Never rejects.
  */
-export async function generatedBytes(p: Playable, signal?: AbortSignal): Promise<Uint8Array | null> {
+export async function generatedBytes(p: Playable, signal?: AbortSignal): Promise<Uint8Array<ArrayBuffer> | null> {
   if (!isGenerated(p) || signal?.aborted) return null;
   const blob = (await memoBlob(p.audioKey)) ?? (await loadBlob(p, signal));
   if (!blob?.size) return null;

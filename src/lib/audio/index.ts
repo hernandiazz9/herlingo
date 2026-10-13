@@ -24,6 +24,9 @@
  *   learner's language): its device voice uses that locale and no stress marks are stripped.
  * - `speakSequence(lines, { gapMs })` plays lines one after another (a whole route hands-free) and
  *   ends as soon as anything else calls `speak()` or `stop()`.
+ * - Long media (Modo deporte's joined episode, `@/lib/sport`): `mp3Media(url, events)` on the same
+ *   shared element, with play/pause/seek; `speak()` and `stop()` release it. `generatedBytes` and
+ *   `mp3UrlWhenReady` give the clips it is joined from.
  * - The first tap/key anywhere unlocks audio for iOS (see `unlockOnFirstGesture`).
  */
 import { getPack, stripStress, type Playable } from "@/lib/content";
@@ -36,6 +39,7 @@ import { ttsAvailable, ttsSpeak, ttsStop } from "./speech-synthesis";
 export {
   clearGeneratedAudio,
   GENERATED_AUDIO_CACHE,
+  generatedBytes,
   generatedKey,
   generatedPlayable,
   isGenerated,
@@ -45,6 +49,7 @@ export {
   type GeneratedAudioSource,
   type PrefetchResult,
 } from "./generated";
+export { mp3Media, mp3UrlWhenReady, type Mp3Media, type Mp3MediaEvents } from "./mp3";
 
 export type SpeakInput = Playable | string;
 
