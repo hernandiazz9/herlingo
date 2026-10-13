@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:03Z 💻
+- Updated: 2026-10-13 11:09Z 💻
 - Writer: 💻 desktop
 - Branch: plan-014-gramatica (local, not pushed)
-- Next step: T169 + T170 running (Sonnet); then T171, T168, T172, T173, T174 (pc)
+- Next step: T172 running; then T173 (Opus, blind review), T174 audio (pc)
 
 ## Shared contract (all tasks read this)
 
@@ -92,7 +92,7 @@ Worktree setup: npm ci
 - Outcome: grammarDrills() (fill-gap from drills + verb forms, 2 tenses per verb, ≤4 options), startReviewing on read, dueItemIds/SRS accept drillable ids, Repaso 2 drills per due entry; 78/78 non-grammar sessions unchanged · 57b5233e · verify ✓ 💻 · not checked: visual (queued)
 
 ## T168 — Grammar drills in lessons
-- Status: running (attempt 2 · 💻 · agent a683ae414881fd113 · since 11:03Z)
+- Status: done
 - Depends on: T167
 - Where: any
 - Goal: Lessons give up to 2 production slots to drills from read drillable entries (lapses first, then lowest box, then least read); same session length; no reads → identical sessions.
@@ -102,7 +102,7 @@ Worktree setup: npm ci
   - One-off `npx tsx` script: for 3 Italian lessons and a fixed seed, no reads → deep-equal to the session before this task (save it first); 2 read entries → same length, ≤ 2 fill-gap drills.
   - `npm run verify` → exit 0.
   - Hand check (PC): a lesson after reading two verbs shows their drills.
-- Outcome:
+- Outcome: lessonDrillIds/rankDrillEntries: ≤2 drills from read entries (lapses, box, reads), own seed, same length; no reads → 6/6 sessions deep-equal; docs/grammar.md updated · fd818012 · verify ✓ 💻 · not checked: visual (queued)
 
 ## T169 — Italian verbs: avere, fare, andare, venire, stare, volere
 - Status: done
@@ -129,7 +129,7 @@ Worktree setup: npm ci
 - Outcome: potere 70, dovere 80, sapere 90, dire 100, prendere 110 (no imperative for potere/dovere; di' say 'di') · 4832fc7c · verify ✓ 💻 · not checked: accuracy (T173)
 
 ## T171 — Italian topics: articles and prepositions
-- Status: running (attempt 1 · 💻 · agent a958b89e98253e87b · since 11:02Z)
+- Status: done
 - Depends on: T163
 - Where: any
 - Goal: New grammar cards with tables, examples and 4–8 drills each: `gram.articoli-determinativi` (order 30), `gram.articoli-indeterminativi` (40), `gram.preposizioni` (50: a/in/da/di/su/per/con/tra with trip uses: "a Palermo", "in Sicilia", "in treno", "da Catania"), `gram.preposizioni-articolate` (60: al, del, dal, nel, sul… table). Article drills use words from the pack's vocab.
@@ -138,10 +138,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: gramatica-temi.json: articoli det/indet, preposizioni, preposizioni articolate (order 30–60, 8 drills each; elided answers include the noun) · 7965ff94 · verify ✓ 💻 · not checked: accuracy (T173)
 
 ## T172 — Italian topics: pronouns, plus the existing cards
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a1d526e70e81209cf · since 11:09Z)
 - Depends on: T163, T169, T170, T171
 - Where: any
 - Goal: Cards `gram.pronomi-diretti` (70), `gram.pronomi-indiretti` (80), `gram.ci-ne` (90: "c'è", "ci vado", "ne vorrei due", "ce l'ho") with drills, appended to `gramatica-temi.json`; in `gramatica.json`: `order` + 4–6 drills on `gram.tu-lei` (10) and `gram.vorrei` (20), and `verb` links on `gram.avere`, `gram.volere`, `gram.potere`, `gram.andare`.
@@ -184,6 +184,7 @@ Worktree setup: npm ci
 - [ ] T165 @1860167a — /gramatica/ grid + temas, verb.essere chips/rows/audio/irregular colour, gram.tu-lei page; light + dark, iPhone (queued 2026-10-13 💻)
 - [ ] T167 @57b5233e — Repaso after reading essere: 2 fill-gap drills, options, audio, verb listed in the preview (queued 2026-10-13 💻)
 - [ ] T166 @76c17b63 — Leído ×1 + XP once, ×2 no XP after leaving; badges; Frasario row and Ruta card open /gramatica/; light + dark (queued 2026-10-13 💻)
+- [ ] T168 @fd818012 — a lesson after reading two verbs shows one drill each at the end; length unchanged (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-12 plan: Gramática lives at /gramatica/, nested under the Frases tab; entries from the Frasario and a Ruta card that replaces the "Fichas de gramática" sheet. (Hernán)
@@ -203,6 +204,8 @@ Worktree setup: npm ci
 - 2026-10-13 T166: XpToast shows grammar XP (one line outside scope); Ruta 'Para saber más' only with side units or expressions. (agent)
 - 2026-10-13 T170: per-form irregular only where a tense mixes regular and irregular forms; uniform irregularity explained in tense notes. (agent)
 - 2026-10-13 T169: tense-wide irregularity (participles, future/conditional stems) goes in tense notes, not per form; passato glosses give preterite / perfect. (agent)
+- 2026-10-13 T171: normaliser ignores apostrophes, so near-duplicate options were replaced; new topic cards are in no lesson (Gramática only). (agent)
+- 2026-10-13 T168: lessons drill any read entry (due or not); one drill per entry, at most half the production slots; pack lessons only. (agent)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -229,3 +232,6 @@ Worktree setup: npm ci
 - 2026-10-13 11:02Z 💻 T171 launched (Sonnet) · agent a958b89e98253e87b
 - 2026-10-13 11:03Z 💻 T169 done → 048f7e61 · verify ✓ (12 Italian verbs)
 - 2026-10-13 11:03Z 💻 T168 launched · attempt 2 · agent a683ae414881fd113
+- 2026-10-13 11:09Z 💻 T171 done → 7965ff94 · verify ✓
+- 2026-10-13 11:09Z 💻 T168 done → fd818012 · verify ✓
+- 2026-10-13 11:09Z 💻 T172 launched (Sonnet) · agent a1d526e70e81209cf
