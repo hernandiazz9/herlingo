@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 12:11Z 💻
+- Updated: 2026-10-13 12:12Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
 - Branch: plan-015-modo-rapido · pushed · main = this branch (T175–T180)
-- Next step: T181: Hernán checks on the iPhone (LAN fake mode: npm run build && COACH_LAN=1 npm run start:coach, code dev-owner); findings → fix tasks
+- Next step: integrate T182, verify, push the branch and main (Hernán's OK), then T183 on his iPhone
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
 - Needs Hernán: T183 iPhone check after T182; push to main approved by Hernán for this change
 
@@ -129,7 +129,7 @@ Worktree setup: npm ci
 - Outcome: Hernán checked the deployed app: Modo rápido works; wants a general play for the whole route → T182
 
 ## T182 — «Escuchar todo»: play a whole route hands-free
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent aeeaa62e6aea0237f · since 12:12Z)
 - Depends on: T181
 - Where: any
 - Goal: One big ▶ on a route plays the whole route in a row, each target-language line followed by its Spanish meaning spoken aloud, so Hernán can listen while walking without touching the phone.
@@ -207,3 +207,4 @@ Worktree setup: npm ci
 - 2026-10-13 11:16Z 💻 T180 done · worktree-agent-a72726e9ceb59ebaf → 328f9687 · verify ✓
 - 2026-10-13 11:31Z 💻 merged origin/main (docs/ideas.md) · verify ✓ · pushed to main with Hernán's OK (T175–T180; T181 still pending)
 - 2026-10-13 12:11Z 💻 plan revised with Hernán's approval: T182 «Escuchar todo», T183 iPhone check
+- 2026-10-13 12:12Z 💻 T182 launched · attempt 1 · agent aeeaa62e6aea0237f
