@@ -5,11 +5,13 @@
  */
 import type { LanguageMeta } from "./languages.js";
 import type { TokenUsage } from "./model.js";
-import type { Assessment, GeneratedPack, InterviewQuestion, InterviewStep } from "./schema.js";
+import type { Assessment, GeneratedPack, GeneratedRoute, InterviewQuestion, InterviewStep } from "./schema.js";
 
 /** Plausible token counts of a real call, so the ledger and the usage panel show real-looking numbers. */
 export const FAKE_PACK_USAGE: TokenUsage = { input: 1400, output: 2600, cacheWrite: 0, cacheRead: 2100 };
 export const FAKE_INTERVIEW_USAGE: TokenUsage = { input: 900, output: 350, cacheWrite: 0, cacheRead: 1800 };
+/** A route: the first call in 5 minutes (prefix written to the cache), docs/coach.md "Modo rápido". */
+export const FAKE_ROUTE_USAGE: TokenUsage = { input: 500, output: 1700, cacheWrite: 2500, cacheRead: 0 };
 
 const IT_PACK: GeneratedPack = {
   title: "Pedir un granizado en el bar",
@@ -196,8 +198,129 @@ const FR_PACK: GeneratedPack = {
   },
 };
 
+const IT_ROUTE: GeneratedRoute = {
+  title: "Imprimir un documento desde el móvil",
+  register: "formal",
+  turns: [
+    {
+      speaker: "learner",
+      text: "Buongiorno, devo stampare un documento dal telefono.",
+      es: "Buenos días, tengo que imprimir un documento desde el móvil.",
+      alts: [
+        { text: "Salve, posso stampare una cosa dal cellulare?", es: "Hola, ¿puedo imprimir una cosa desde el móvil?" },
+        { text: "Buongiorno, fate stampe dal telefono?", es: "Buenos días, ¿hacéis impresiones desde el móvil?" },
+      ],
+      words: [
+        { text: "devo stampare", es: "tengo que imprimir" },
+        { text: "dal telefono", es: "desde el móvil" },
+        { text: "cellulare", es: "móvil" },
+      ],
+    },
+    {
+      speaker: "native",
+      text: "Certo. Me lo manda per email o su WhatsApp?",
+      es: "Claro. ¿Me lo manda por correo o por WhatsApp?",
+      alts: [
+        { text: "Ce l'ha su una chiavetta?", es: "¿Lo tiene en un pendrive?" },
+        { text: "Lo mandi a questo indirizzo.", es: "Mándelo a esta dirección." },
+      ],
+      words: [
+        { text: "me lo manda", es: "me lo envía" },
+        { text: "per email", es: "por correo electrónico" },
+        { text: "chiavetta", es: "pendrive" },
+      ],
+    },
+    {
+      speaker: "learner",
+      text: "Per email. Qual è l'indirizzo?",
+      es: "Por correo. ¿Cuál es la dirección?",
+      alts: [
+        { text: "Su WhatsApp, va bene?", es: "Por WhatsApp, ¿vale?" },
+        { text: "Ce l'ho su una chiavetta.", es: "Lo tengo en un pendrive." },
+      ],
+      words: [
+        { text: "qual è", es: "cuál es" },
+        { text: "l'indirizzo", es: "la dirección" },
+        { text: "ce l'ho", es: "lo tengo" },
+      ],
+    },
+    {
+      speaker: "native",
+      text: "È questo qui. A colori o in bianco e nero?",
+      es: "Es esta de aquí. ¿En color o en blanco y negro?",
+      alts: [
+        { text: "Lo vuole a colori?", es: "¿Lo quiere en color?" },
+        { text: "Fronte e retro o solo fronte?", es: "¿A doble cara o solo por una cara?" },
+      ],
+      words: [
+        { text: "a colori", es: "en color" },
+        { text: "in bianco e nero", es: "en blanco y negro" },
+        { text: "fronte e retro", es: "a doble cara" },
+      ],
+    },
+    {
+      speaker: "learner",
+      text: "In bianco e nero, per favore.",
+      es: "En blanco y negro, por favor.",
+      alts: [
+        { text: "A colori, per favore.", es: "En color, por favor." },
+        { text: "Quanto costa a colori?", es: "¿Cuánto cuesta en color?" },
+      ],
+      words: [
+        { text: "in bianco e nero", es: "en blanco y negro" },
+        { text: "a colori", es: "en color" },
+        { text: "quanto costa", es: "cuánto cuesta" },
+      ],
+    },
+    {
+      speaker: "native",
+      text: "Quante copie? In A4 va bene?",
+      es: "¿Cuántas copias? ¿En A4 le va bien?",
+      alts: [
+        { text: "Quante copie le servono?", es: "¿Cuántas copias necesita?" },
+        { text: "Tutte le pagine?", es: "¿Todas las páginas?" },
+      ],
+      words: [
+        { text: "quante copie", es: "cuántas copias" },
+        { text: "le servono", es: "necesita" },
+        { text: "tutte le pagine", es: "todas las páginas" },
+      ],
+    },
+    {
+      speaker: "learner",
+      text: "Due copie in A4. Quant'è?",
+      es: "Dos copias en A4. ¿Cuánto es?",
+      alts: [
+        { text: "Una copia sola, grazie.", es: "Solo una copia, gracias." },
+        { text: "Solo la prima pagina.", es: "Solo la primera página." },
+      ],
+      words: [
+        { text: "due copie", es: "dos copias" },
+        { text: "quant'è", es: "cuánto es" },
+        { text: "una copia sola", es: "solo una copia" },
+      ],
+    },
+    {
+      speaker: "native",
+      text: "Sono sessanta centesimi. Contanti o carta?",
+      es: "Son sesenta céntimos. ¿Efectivo o tarjeta?",
+      alts: [
+        { text: "Fanno sessanta centesimi.", es: "Son sesenta céntimos." },
+        { text: "Si paga alla cassa.", es: "Se paga en la caja." },
+      ],
+      words: [
+        { text: "sessanta centesimi", es: "sesenta céntimos" },
+        { text: "contanti", es: "efectivo" },
+        { text: "carta", es: "tarjeta" },
+      ],
+    },
+  ],
+};
+
 interface Fixture {
   pack: GeneratedPack;
+  /** Quick route (Modo rápido); a language without one gets placeholder lines. */
+  route?: GeneratedRoute;
   /** Interview questions before the personal one (that one names the language, see `questionsFor`). */
   questions: InterviewQuestion[];
   assessment: Assessment;
@@ -207,6 +330,7 @@ interface Fixture {
 const FIXTURES: Record<string, Fixture> = {
   it: {
     pack: IT_PACK,
+    route: IT_ROUTE,
     questions: [
       { kind: "comprehension", prompt: "Escucha y di qué te preguntan.", text: "Di dove sei?" },
       { kind: "reply", prompt: "El revisor te dice esto. ¿Qué le contestas?", text: "Biglietto, prego." },
@@ -300,6 +424,26 @@ export function fakePack(meta: LanguageMeta, description: string, refinement?: s
   const pack = fixture ? structuredClone(fixture.pack) : placeholderPack(meta, description);
   if (refinement !== undefined) pack.title = `${pack.title} (${refinement || "otra versión"})`.slice(0, 80);
   return pack;
+}
+
+function placeholderRoute(meta: LanguageMeta, description: string): GeneratedRoute {
+  const say = (n: number) => placeholderLine(meta, n);
+  return {
+    title: description.slice(0, 60),
+    register: "formal",
+    turns: Array.from({ length: 6 }, (_, i) => ({
+      speaker: i % 2 === 0 ? ("learner" as const) : ("native" as const),
+      text: say(i + 1),
+      es: `Línea ${i + 1}`,
+      alts: [{ text: say(i + 11), es: `Otra forma ${i + 1}` }],
+      words: [{ text: say(i + 21), es: `Palabra ${i + 1}` }],
+    })),
+  };
+}
+
+export function fakeRoute(meta: LanguageMeta, description: string): GeneratedRoute {
+  const route = FIXTURES[meta.lang]?.route;
+  return route ? structuredClone(route) : placeholderRoute(meta, description);
 }
 
 export function fakeInterviewStep(meta: LanguageMeta, answered: number): InterviewStep {

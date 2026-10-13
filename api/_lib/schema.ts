@@ -1,7 +1,7 @@
 /**
- * Prepárate wire schemas (zod), server only: the pack, the learner context, every request body
- * and the interview. The only definition of the pack schema; docs/coach.md mirrors it for the
- * client, which gets plain TypeScript types (src/ never imports zod).
+ * Prepárate wire schemas (zod), server only: the pack, the quick route, the learner context, every
+ * request body and the interview. The only definition of the pack and route schemas; docs/coach.md
+ * mirrors them for the client, which gets plain TypeScript types (src/ never imports zod).
  */
 import { z } from "zod";
 
@@ -26,8 +26,15 @@ export const PACK_ARRAY_LIMITS = {
   turns: { min: 6, max: 10 },
 } as const;
 export const ASSESSMENT_ARRAY_LIMITS = { strengths: 8, weakPoints: 8, facts: 10 } as const;
+/** Item counts of a quick route (Modo rápido); trimmed like the pack's by normalize.ts. */
+export const ROUTE_ARRAY_LIMITS = {
+  turns: { min: 4, max: 10 },
+  alts: 3,
+  words: 4,
+} as const;
 const P = PACK_ARRAY_LIMITS;
 const A = ASSESSMENT_ARRAY_LIMITS;
+const R = ROUTE_ARRAY_LIMITS;
 
 const es = z.string().min(1).max(400);
 const line = z.string().min(1).max(300);
@@ -128,6 +135,68 @@ export const Pack = GeneratedPack.extend({
 });
 export type Pack = z.infer<typeof Pack>;
 
+// ---- Quick route (Modo rápido): the part Claude writes (structured output) ----
+
+/** A target-language line and its Spain Spanish translation (an alternative or a key word). */
+export const RouteLine = z.object({ text: line, es });
+
+export const GeneratedRouteTurn = z.object({
+  speaker: z.enum(["native", "learner"]),
+  /** The main line, in the target language, and its translation. */
+  text: line,
+  es,
+  alts: z
+    .array(RouteLine)
+    .max(R.alts)
+    .describe(`Usually 2 or 3 other realistic lines for this point; never more than ${R.alts}.`),
+  words: z
+    .array(RouteLine)
+    .max(R.words)
+    .describe(`2 to 4 key words or short chunks of this turn; never more than ${R.words}.`),
+});
+type GeneratedRouteTurn = z.infer<typeof GeneratedRouteTurn>;
+
+/** What the counts cannot say: the learner opens, and speakers alternate (never two in a row). */
+function checkRouteTurns(turns: GeneratedRouteTurn[], ctx: z.RefinementCtx): void {
+  if (turns.length && turns[0].speaker !== "learner") {
+    ctx.addIssue({ code: "custom", path: [0, "speaker"], message: "the learner must open the route" });
+  }
+  turns.forEach((turn, i) => {
+    if (i > 0 && turns[i - 1].speaker === turn.speaker) {
+      ctx.addIssue({ code: "custom", path: [i, "speaker"], message: `two ${turn.speaker} turns in a row` });
+    }
+  });
+}
+
+export const GeneratedRoute = z.object({
+  title: z.string().min(1).max(80).describe("A few Spanish words, at most 60 characters."),
+  register: z.enum(["formal", "informal"]),
+  turns: z
+    .array(GeneratedRouteTurn)
+    .min(R.turns.min)
+    .max(R.turns.max)
+    .superRefine(checkRouteTurns)
+    .describe(
+      `6 to 8 entries (each line is one entry), alternating learner and native, the learner first; never fewer than ${R.turns.min} or more than ${R.turns.max}.`,
+    ),
+});
+export type GeneratedRoute = z.infer<typeof GeneratedRoute>;
+
+// ---- Quick route: what the server returns and the device stores ----
+
+export const RouteTurn = GeneratedRouteTurn.extend({ id: z.string().min(1) });
+
+export const Route = GeneratedRoute.extend({
+  id: z.string().min(1).max(64),
+  createdAt: z.string().min(1),
+  lang: z.string().min(2).max(10),
+  description: z.string().min(1).max(LIMITS.description),
+  /** Voices for the coach TTS: native turns, their alts and every turn's words use `native`; learner turns and their alts `learner`. */
+  voices: z.object({ native: z.string().min(1), learner: z.string().min(1) }),
+  turns: z.array(RouteTurn).min(R.turns.min).max(R.turns.max).superRefine(checkRouteTurns),
+});
+export type Route = z.infer<typeof Route>;
+
 // ---- Learner context (built on the device) ----
 
 export const Level = z.enum(["A0", "A1", "A2", "B1", "B2", "C1", "C2"]);
@@ -174,6 +243,13 @@ export const PackRequest = z.object({
     .optional(),
 });
 export type PackRequest = z.infer<typeof PackRequest>;
+
+export const RouteRequest = z.object({
+  lang,
+  description: z.string().trim().min(1).max(LIMITS.description),
+  profile: LearnerProfile.default({}),
+});
+export type RouteRequest = z.infer<typeof RouteRequest>;
 
 export const InterviewQuestion = z.object({
   kind: z.enum(["comprehension", "reply", "personal"]),

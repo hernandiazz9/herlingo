@@ -1,13 +1,13 @@
 /**
  * Recoverable overflows in Claude's structured output, fixed before the zod check. Structured
- * outputs do not enforce `maxItems` (the SDK sends it as a description), so a pack can come back
- * with more turns, phrases or steps than the schema allows; the call is already billed, so a
+ * outputs do not enforce `maxItems` (the SDK sends it as a description), so a pack or a route can
+ * come back with more turns, phrases, steps or alternatives than the schema allows; the call is already billed, so a
  * too-long array is trimmed to its limit instead of failing the generation. Too few items, wrong
  * shapes or broken alternation are left as they are and still fail the zod check.
  *
  * Works on the raw JSON (unknown): anything that does not look as expected is passed through.
  */
-import { PACK_ARRAY_LIMITS as P, ASSESSMENT_ARRAY_LIMITS as A } from "./schema.js";
+import { PACK_ARRAY_LIMITS as P, ASSESSMENT_ARRAY_LIMITS as A, ROUTE_ARRAY_LIMITS as R } from "./schema.js";
 
 type Json = Record<string, unknown>;
 
@@ -80,6 +80,25 @@ export function normalizePack(raw: unknown): unknown {
     }
   }
   if (trims.length) console.warn("[coach] trimmed pack overflow", trims.join(", "));
+  return raw;
+}
+
+/**
+ * Generated quick route: `turns` → its first 10 (a prefix of an alternating list still alternates
+ * and still opens with the learner), then each turn's `alts` → 3 and `words` → 4.
+ */
+export function normalizeRoute(raw: unknown): unknown {
+  if (!isObject(raw)) return raw;
+  const trims: Trims = [];
+  trimArray(raw, "turns", R.turns.max, "turns", trims);
+  if (Array.isArray(raw.turns)) {
+    raw.turns.forEach((turn, i) => {
+      if (!isObject(turn)) return;
+      trimArray(turn, "alts", R.alts, `turns.${i}.alts`, trims);
+      trimArray(turn, "words", R.words, `turns.${i}.words`, trims);
+    });
+  }
+  if (trims.length) console.warn("[coach] trimmed route overflow", trims.join(", "));
   return raw;
 }
 
