@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 12:12Z 💻
+- Updated: 2026-10-13 12:26Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
 - Branch: plan-015-modo-rapido · pushed · main = this branch (T175–T180)
-- Next step: integrate T182, verify, push the branch and main (Hernán's OK), then T183 on his iPhone
+- Next step: T183: Hernán checks «Escuchar todo» on the iPhone (deployed app); findings → fix tasks
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
-- Needs Hernán: T183 iPhone check after T182; push to main approved by Hernán for this change
+- Needs Hernán: T183 iPhone check
 
 ## Shared contract (all tasks read this)
 
@@ -129,7 +129,7 @@ Worktree setup: npm ci
 - Outcome: Hernán checked the deployed app: Modo rápido works; wants a general play for the whole route → T182
 
 ## T182 — «Escuchar todo»: play a whole route hands-free
-- Status: running (attempt 1 · 💻 · agent aeeaa62e6aea0237f · since 12:12Z)
+- Status: done
 - Depends on: T181
 - Where: any
 - Goal: One big ▶ on a route plays the whole route in a row, each target-language line followed by its Spanish meaning spoken aloud, so Hernán can listen while walking without touching the phone.
@@ -144,7 +144,7 @@ Worktree setup: npm ci
   - docs/coach.md "Modo rápido" gains the decision and the narrator voice; the tts section names the extra accepted voice.
   - Fake check: `PORT=3107 npm run dev:coach` (fake, keys emptied) + curl `/api/coach/tts/` with `es-ES-AlvaroNeural` → 200; an unknown voice still → 400.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: «Escuchar todo» (line → meaning, alts, 800 ms gaps, Pausar/Seguir, highlight + scroll), speakSequence + locale fallback, NARRATOR_VOICES es-ES-AlvaroNeural accepted by /tts/, meanings in routePlayables (offline) · 8d5187ac · verify ✓ 💻 · fake curl ✓ · not checked: visuals, real voice, Media Session, locked screen
 
 ## T183 — iPhone check of «Escuchar todo» (Hernán, by hand)
 - Status: pending
@@ -165,6 +165,7 @@ Worktree setup: npm ci
 - [ ] T178 @2c3ecad3 — /rapido/ Mis rutas + a route (?ruta=): light + dark, iPhone width, 🔊/🐌, «Más», delete, back (queued 2026-10-13 💻)
 - [ ] T179 @db9e8c63 — /rapido/ form: type → Prepárame → route opens with notice; leave mid-request and come back; offline notice; Rutas rápidas row in Prepárate usage (queued 2026-10-13 💻)
 - [ ] T180 @328f9687 — ⚡ on every tab (light + dark), not over content/prompts/Jugar button; hidden in lessons, games, review, dialogues, stories, /rapido/ (queued 2026-10-13 💻)
+- [ ] T182 @8d5187ac — «Escuchar todo» on a route: plays line → Spanish meaning, alts; Pausar/Seguir; highlight; locked screen; offline (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Access = one global floating ⚡ button (no cards on Ruta, Frasario or Jugar). (Hernán)
@@ -186,6 +187,8 @@ Worktree setup: npm ci
 - 2026-10-13 T177: the offline error message of generateRoute still says 'situaciones'; the route screen's own offline copy must come from the UI (T179)
 - 2026-10-13 T179: offline, AccessCard's code check shows the client's 'situaciones' message (shared client copy)
 - 2026-10-13 T180: Frasario ShowMode, the Ruta side sheet and dialogs only cover the ⚡ (z-order); keyboard focus can still reach it behind them, as with the tab bar
+- 2026-10-13 T182: meanings add ~20–40 voice lines per route; heavy use could reach COACH_TTS_DAILY_LIMIT (500/day)
+- 2026-10-13 T182: a single-line 🔊/🐌 tap pauses the sequence (resumable with «Seguir») instead of stopping it
 
 ## Log
 - 2026-10-12 22:26Z 💻 plan written from the interview; not approved yet
@@ -208,3 +211,4 @@ Worktree setup: npm ci
 - 2026-10-13 11:31Z 💻 merged origin/main (docs/ideas.md) · verify ✓ · pushed to main with Hernán's OK (T175–T180; T181 still pending)
 - 2026-10-13 12:11Z 💻 plan revised with Hernán's approval: T182 «Escuchar todo», T183 iPhone check
 - 2026-10-13 12:12Z 💻 T182 launched · attempt 1 · agent aeeaa62e6aea0237f
+- 2026-10-13 12:26Z 💻 T182 done · worktree-agent-aeeaa62e6aea0237f → 8d5187ac · verify ✓
