@@ -45,7 +45,7 @@ Worktree setup: npm ci
 - Outcome: tts slow:true (rate -30%, 400 on non-boolean), generatedPlayable(…, { slow }) own key (normal keys unchanged), generatedBytes(playable) cache→source→null, COACH_TTS_DAILY_LIMIT 2000 · 58fa3d04 · verify ✓ 💻 · fake curl ✓ · not checked: real slow voice, device
 
 ## T188 — Episode model, compiler and free episodes from dialogues and routes
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent af9c75698b24a05f4 · since 16:49Z)
 - Depends on: T187
 - Where: any
 - Goal: Pure logic in `src/lib/sport/` that turns any episode (AI, dialogue or route) into the ordered list of clips and gaps the player joins, following the decided format.
@@ -216,3 +216,4 @@ Worktree setup: npm ci
 - 2026-10-13 16:40Z 💻 approved by Hernán ("si comienza con el plan")
 - 2026-10-13 16:40Z 💻 T187 launched · attempt 1 · agent a8150887220bfacf0
 - 2026-10-13 16:49Z 💻 T187 done · worktree-agent-a8150887220bfacf0 → 58fa3d04 · verify ✓
+- 2026-10-13 16:49Z 💻 T188 launched · attempt 1 · agent af9c75698b24a05f4
