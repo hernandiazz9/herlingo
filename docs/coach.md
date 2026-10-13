@@ -94,7 +94,7 @@ show it as is.
 | 401 | `unauthorized` | Missing or wrong code → the app asks for the code again |
 | 403 | `forbidden` | `PUT /usage/` by a code that is not the owner |
 | 405 | `method_not_allowed` | Wrong method |
-| 429 | `daily_limit` | "Has llegado al límite de hoy. Vuelve mañana." |
+| 429 | `daily_limit` | "Has llegado al límite de hoy. Vuelve mañana." (routes: "…de rutas de hoy…", episodes: "…de episodios de hoy…") |
 | 429 | `budget` | "Se ha agotado el presupuesto de este mes." |
 | 429 | `refine_limit` | "Ya has ajustado esta situación 3 veces." |
 | 429 | `tts_limit` | "Has llegado al límite de audio de hoy. Vuelve mañana." The client never shows it: that line plays with `speechSynthesis` and is not requested again this session |
@@ -189,6 +189,10 @@ above normal use.
   "mineUsd": 0.29             // spent this month by the caller's code
 }
 ```
+
+Plus `routes`, `avgRouteUsd`, `routesToday` (Modo rápido, below) and `episodes`, `avgEpisodeUsd`,
+`episodesToday` (Modo deporte, docs/sport.md): same meaning as the pack fields, each with its own
+daily counter.
 
 `PUT { capUsd: 0–1000 }` sets the monthly cap (owner only, else 403) and returns the same summary.
 "Remaining" is cap − spent this month: Anthropic does not report a balance. The panel links to
@@ -382,7 +386,10 @@ One non-streaming `client.beta.messages.create` per generation:
   prompts are byte-stable and language-agnostic, longer than Sonnet 5.5's minimum cacheable
   prefix, so a refinement or the next interview step within 5 minutes reads them from cache.
 - Deadline: 50 s for the whole call, SDK retries included (`AbortSignal.timeout`), so a slow
-  answer fails cleanly before Vercel stops the function at 60 s.
+  answer fails cleanly before Vercel stops the function at 60 s. A request may set its own
+  `deadlineMs`: Modo deporte episodes get 55 s (~4–6k output tokens ≈ 30–45 s at ~135 tok/s);
+  packs, routes and the interview keep 50 s. Every real episode call logs one line
+  `[coach] episode <ok|failed> <ms> ms, <n> output tokens (<rate> tok/s), model <id>, lang <lang>`.
 
 Billing comes first: as soon as a response arrives its tokens go to the ledger, per model
 attempt (a fallback-served response is billed from `usage.iterations`, the declined attempt at
@@ -397,7 +404,7 @@ then rejected (refusal, `max_tokens`, invalid JSON) was paid, so its slots stay 
 | `stop_reason: "refusal"` | "No puedo preparar esto. Prueba a contarlo de otra forma." |
 | `stop_reason: "max_tokens"` | "La respuesta ha salido demasiado larga. Inténtalo de nuevo." |
 | Not JSON, or JSON that fails the zod schema after trimming overflows | "La respuesta ha llegado con errores. Inténtalo de nuevo." |
-| Deadline (50 s) | "La IA ha tardado demasiado. Inténtalo de nuevo." |
+| Deadline (50 s; episodes 55 s) | "La IA ha tardado demasiado. Inténtalo de nuevo." |
 | 429 / 529 after the SDK's retries | "La IA está saturada ahora mismo. Inténtalo en unos minutos." |
 | Any other API or network error | "No he podido hablar con la IA. Inténtalo de nuevo." |
 
@@ -570,6 +577,7 @@ over its limit → undo + 429.
 | Refinements | code, pack id | 3 | refinements of a pack id the server issued to that code (unknown id → 409) |
 | Voice lines | code, day | 2000 (`COACH_TTS_DAILY_LIMIT`) | every `POST /tts/` (free, but must not be abused) |
 | Routes | code, day | 20 (`COACH_ROUTE_DAILY_LIMIT`) | every `POST /route/` (own counter: does not use the generations above) |
+| Episodes | code, day | 5 (`COACH_EPISODE_DAILY_LIMIT`) | every `POST /episode/` (Modo deporte; own counter: does not use the generations or the routes) |
 
 **Refunds.** A failed call gives its slots back only if no charge was recorded for it (no
 response from Claude: deadline, network, API error, or a refusal before calling Claude such as
@@ -599,6 +607,8 @@ Days and months are counted in `COACH_TIMEZONE` (default Europe/Madrid).
 | `<YYYY-MM-DD>:tts:<name>` | voice lines today by a code (expires after 2 days) |
 | `<YYYY-MM-DD>:route:<name>` | routes today by a code (expires after 2 days) |
 | `<YYYY-MM>:routes` / `<YYYY-MM>:routeSpend` | routes billed this month and their cost (for the average) |
+| `<YYYY-MM-DD>:episode:<name>` | AI episodes today by a code (expires after 2 days) |
+| `<YYYY-MM>:episodes` / `<YYYY-MM>:episodeSpend` | AI episodes billed this month and their cost (for the average) |
 | `pack:<name>:<packId>` | a pack issued to a code; value = its refinements (expires after 180 days) |
 
 Upstash Redis REST when `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are set and fake
@@ -779,6 +789,7 @@ storage and limits are designed in that plan.
 | `COACH_DAILY_LIMIT` | no | Generations per day per code (default 10; interview steps = 11 × this) |
 | `COACH_TTS_DAILY_LIMIT` | no | Voice lines per day per code (default 2000) |
 | `COACH_ROUTE_DAILY_LIMIT` | no | Quick routes per day per code (default 20) |
+| `COACH_EPISODE_DAILY_LIMIT` | no | Modo deporte AI episodes per day per code (default 5) |
 | `COACH_TIMEZONE` | no | Time zone of days and months (default `Europe/Madrid`) |
 
 Local: `.env.local` (git-ignored; `.env.example` lists the names). Production: Vercel project

@@ -12,7 +12,10 @@ import { COACH_MODEL, type Charge } from "./model.js";
 
 let client: Anthropic | undefined;
 
-/** Whole call, SDK retries included: the functions are stopped at 60 s (vercel.json). */
+/**
+ * Whole call, SDK retries included: the functions are stopped at 60 s (vercel.json). A request may
+ * set its own `deadlineMs` (episodes: 55 s); it must leave a few seconds for the ledger and the reply.
+ */
 const DEADLINE_MS = 50_000;
 
 export interface StructuredRequest<T extends z.ZodType> {
@@ -22,6 +25,8 @@ export interface StructuredRequest<T extends z.ZodType> {
   schema: T;
   effort: "low" | "medium";
   maxTokens: number;
+  /** Deadline of the whole call in ms; default `DEADLINE_MS` (50 s). */
+  deadlineMs?: number;
   /** Fixes recoverable overflows in the parsed JSON before the zod check (normalize.ts); logs what it changed. */
   normalize?: (raw: unknown) => unknown;
   /** Called as soon as a response arrives, also when it is then rejected: every call is billed. */
@@ -93,7 +98,7 @@ export async function generateStructured<T extends z.ZodType>(req: StructuredReq
         messages: [{ role: "user", content: req.user }],
         output_config: { effort: req.effort, format: betaZodOutputFormat(req.schema) },
       },
-      { signal: AbortSignal.timeout(DEADLINE_MS) },
+      { signal: AbortSignal.timeout(req.deadlineMs ?? DEADLINE_MS) },
     );
   } catch (error) {
     if (error instanceof Anthropic.APIUserAbortError || error instanceof Anthropic.APIConnectionTimeoutError) {

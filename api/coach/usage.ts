@@ -1,6 +1,6 @@
 /**
- * GET /api/coach/usage/: this month's spend, today's generations and today's quick routes (their
- * own counter). PUT { capUsd }: owner only.
+ * GET /api/coach/usage/: this month's spend, today's generations, today's quick routes and today's
+ * AI episodes (their own counters). PUT { capUsd }: owner only.
  */
 import { authenticate } from "../_lib/access.js";
 import { CoachError, json, readBody, route } from "../_lib/http.js";

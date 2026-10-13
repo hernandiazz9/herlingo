@@ -10,18 +10,21 @@
  *   langlern:coach:<YYYY-MM>:packSpend          what those packs cost
  *   langlern:coach:<YYYY-MM>:routes             quick routes billed (Modo rápido)
  *   langlern:coach:<YYYY-MM>:routeSpend         what those routes cost
+ *   langlern:coach:<YYYY-MM>:episodes           AI episodes billed (Modo deporte)
+ *   langlern:coach:<YYYY-MM>:episodeSpend       what those episodes cost
  *   langlern:coach:<YYYY-MM-DD>:gen:<name>      generations today by one code (expires in 2 days)
  *   langlern:coach:<YYYY-MM-DD>:steps:<name>    interview steps today by one code (expires in 2 days)
  *   langlern:coach:<YYYY-MM-DD>:tts:<name>      voice lines today by one code (expires in 2 days)
  *   langlern:coach:<YYYY-MM-DD>:route:<name>    quick routes today by one code (expires in 2 days)
+ *   langlern:coach:<YYYY-MM-DD>:episode:<name>  AI episodes today by one code (expires in 2 days)
  *   langlern:coach:pack:<name>:<packId>         a pack this server issued to one code, and its
  *                                               refinements (expires in 180 days)
  *
- * A slot (generation, step, refinement, route) is given back only when the call failed before Claude
+ * A slot (generation, step, refinement, route, episode) is given back only when the call failed before Claude
  * billed anything: once a response has been charged, the slot stays used.
  */
 import type { Caller } from "./access.js";
-import { dailyLimit, defaultCapUsd, routeDailyLimit, timeZone, ttsDailyLimit } from "./config.js";
+import { dailyLimit, defaultCapUsd, episodeDailyLimit, routeDailyLimit, timeZone, ttsDailyLimit } from "./config.js";
 import { CoachError } from "./http.js";
 import { costMicroUsd, sumUsage, type Charge } from "./model.js";
 import { LIMITS } from "./schema.js";
@@ -33,7 +36,7 @@ const DAY_TTL = 2 * 24 * 3600;
 const REFINE_TTL = 180 * 24 * 3600;
 const TOKEN_KINDS = ["input", "output", "cacheWrite", "cacheRead"] as const;
 
-export type CallKind = "pack" | "refine" | "interview" | "route";
+export type CallKind = "pack" | "refine" | "interview" | "route" | "episode";
 
 function periods(now = new Date()): { month: string; day: string } {
   const day = new Intl.DateTimeFormat("en-CA", {
@@ -54,10 +57,13 @@ const keys = {
   packSpend: (month: string) => `${PREFIX}:${month}:packSpend`,
   routes: (month: string) => `${PREFIX}:${month}:routes`,
   routeSpend: (month: string) => `${PREFIX}:${month}:routeSpend`,
+  episodes: (month: string) => `${PREFIX}:${month}:episodes`,
+  episodeSpend: (month: string) => `${PREFIX}:${month}:episodeSpend`,
   generations: (day: string, name: string) => `${PREFIX}:${day}:gen:${name}`,
   steps: (day: string, name: string) => `${PREFIX}:${day}:steps:${name}`,
   tts: (day: string, name: string) => `${PREFIX}:${day}:tts:${name}`,
   route: (day: string, name: string) => `${PREFIX}:${day}:route:${name}`,
+  episode: (day: string, name: string) => `${PREFIX}:${day}:episode:${name}`,
   pack: (name: string, packId: string) => `${PREFIX}:pack:${name}:${packId}`,
 };
 
@@ -111,6 +117,18 @@ export async function reserveRoute(caller: Caller): Promise<Refund> {
   return (
     await take(keys.route(periods().day, caller.name), routeDailyLimit(), DAY_TTL, () => {
       return new CoachError(429, "daily_limit", "Has llegado al límite de rutas de hoy. Vuelve mañana.");
+    })
+  ).refund;
+}
+
+/**
+ * Takes one of today's AI episodes (Modo deporte) for this code (its own counter: episodes never
+ * use the generations or the routes). 429 `daily_limit` when none is left. Returns a refund.
+ */
+export async function reserveEpisode(caller: Caller): Promise<Refund> {
+  return (
+    await take(keys.episode(periods().day, caller.name), episodeDailyLimit(), DAY_TTL, () => {
+      return new CoachError(429, "daily_limit", "Has llegado al límite de episodios de hoy. Vuelve mañana.");
     })
   ).refund;
 }
@@ -169,6 +187,7 @@ export async function recordCall(caller: Caller, kind: CallKind, charges: Charge
   ];
   if (kind === "pack") writes.push(store.incrby(keys.packs(month), 1), store.incrby(keys.packSpend(month), cost));
   if (kind === "route") writes.push(store.incrby(keys.routes(month), 1), store.incrby(keys.routeSpend(month), cost));
+  if (kind === "episode") writes.push(store.incrby(keys.episodes(month), 1), store.incrby(keys.episodeSpend(month), cost));
   await Promise.all(writes);
   return cost;
 }
@@ -181,13 +200,18 @@ export interface UsageSummary {
   tokens: { input: number; output: number; cacheRead: number; cacheWrite: number };
   packs: number;
   avgPackUsd: number;
-  /** The caller's generations today (packs, refinements, first interview steps); routes not included. */
+  /** The caller's generations today (packs, refinements, first interview steps); routes and episodes not included. */
   today: { used: number; limit: number };
   /** Quick routes billed this month (a failed attempt counts, since it was paid) and their average cost. */
   routes: number;
   avgRouteUsd: number;
   /** The caller's quick routes today (their own counter). */
   routesToday: { used: number; limit: number };
+  /** AI episodes (Modo deporte) billed this month (a failed attempt counts, since it was paid) and their average cost. */
+  episodes: number;
+  avgEpisodeUsd: number;
+  /** The caller's AI episodes today (their own counter). */
+  episodesToday: { used: number; limit: number };
   isOwner: boolean;
   /** Spent this month by the caller's own code. */
   mineUsd: number;
@@ -196,7 +220,23 @@ export interface UsageSummary {
 export async function readUsage(caller: Caller): Promise<UsageSummary> {
   const store = getStore();
   const { month, day } = periods();
-  const [spent, mine, input, output, cacheWrite, cacheRead, packs, packSpend, used, routes, routeSpend, routesUsed] = (
+  const [
+    spent,
+    mine,
+    input,
+    output,
+    cacheWrite,
+    cacheRead,
+    packs,
+    packSpend,
+    used,
+    routes,
+    routeSpend,
+    routesUsed,
+    episodes,
+    episodeSpend,
+    episodesUsed,
+  ] = (
     await store.mget([
       keys.spend(month),
       keys.spendBy(month, caller.name),
@@ -207,6 +247,9 @@ export async function readUsage(caller: Caller): Promise<UsageSummary> {
       keys.routes(month),
       keys.routeSpend(month),
       keys.route(day, caller.name),
+      keys.episodes(month),
+      keys.episodeSpend(month),
+      keys.episode(day, caller.name),
     ])
   ).map((v) => v ?? 0);
   const cap = await capMicro();
@@ -222,6 +265,9 @@ export async function readUsage(caller: Caller): Promise<UsageSummary> {
     routes,
     avgRouteUsd: routes > 0 ? toUsd(routeSpend / routes) : 0,
     routesToday: { used: Math.min(routesUsed, routeDailyLimit()), limit: routeDailyLimit() },
+    episodes,
+    avgEpisodeUsd: episodes > 0 ? toUsd(episodeSpend / episodes) : 0,
+    episodesToday: { used: Math.min(episodesUsed, episodeDailyLimit()), limit: episodeDailyLimit() },
     isOwner: caller.isOwner,
     mineUsd: toUsd(mine),
   };

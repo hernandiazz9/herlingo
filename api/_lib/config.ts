@@ -37,6 +37,7 @@ export const DEFAULT_CAP_USD = 5;
 export const DAILY_GENERATIONS = 10;
 export const DAILY_TTS_LINES = 2000;
 export const DAILY_ROUTES = 20;
+export const DAILY_EPISODES = 5;
 
 /** Initial monthly cap until the owner changes it from the app. */
 export function defaultCapUsd(): number {
@@ -59,6 +60,12 @@ export function ttsDailyLimit(): number {
 export function routeDailyLimit(): number {
   const value = Number(process.env.COACH_ROUTE_DAILY_LIMIT);
   return Number.isInteger(value) && value > 0 ? value : DAILY_ROUTES;
+}
+
+/** AI episodes (Modo deporte) per day per code: their own counter, apart from generations and routes. */
+export function episodeDailyLimit(): number {
+  const value = Number(process.env.COACH_EPISODE_DAILY_LIMIT);
+  return Number.isInteger(value) && value > 0 ? value : DAILY_EPISODES;
 }
 
 /** Days and months of the limits and the ledger are counted in this time zone. */

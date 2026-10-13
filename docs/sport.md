@@ -30,7 +30,7 @@ chained clip by clip, and stops when the iPhone locks (Hernán, 2026-10-13).
 | Save mp3 | «Guardar mp3»: the joined file as `<title>.mp3` through the share sheet (`navigator.share` with a `File`) where available, else a download link. |
 | XP | A finished episode (≥ 90 % played) gives 10 XP, source `"sport"`, at most 3 episodes a day; counts for the streak like any activity (`recordActivity`). |
 | Limits | AI episodes: own counter, **5 per code per day** (`COACH_EPISODE_DAILY_LIMIT`), shared monthly budget, no refinements (edit the text and make another). `COACH_TTS_DAILY_LIMIT` default 500 → **2000**: an AI episode is ~100–150 voice lines the first time. |
-| Model | `COACH_MODEL` (Sonnet 5.5), `effort: "low"`, `max_tokens` 12000, `generateStructured` like routes. Estimate ≈ 4–6k output tokens ≈ 0.05–0.10 USD, ~25–40 s (measure on the first real ones). |
+| Model | `COACH_MODEL` (Sonnet 5.5), `effort: "low"`, `max_tokens` 12000, `generateStructured` like routes. Estimate ≈ 4–6k output tokens ≈ 0.05–0.10 USD, ~30–45 s at the measured ~135 tok/s, so the episode call has its own **55 s deadline** (`deadlineMs`; the others keep 50 s; `vercel.json` `maxDuration` stays 60). Each real call logs one `[coach] episode …` line (outcome, latency, output tokens, tok/s, model, lang; never the learner's text): measure on the first real ones. |
 | Dialogue lines | Dialogue episodes read their normal-speed target lines with edge-tts too (`generatedPlayable(text, voice)` in the content line's voice, the same voice as its slow line), not with the pack's Gemini content mp3s (2026-10-13): one voice engine for the whole episode. `DIALOGUE_LINES_FROM_CONTENT` (`src/lib/sport/compile.ts`) = `false`; one edit brings the content mp3s back. |
 | Saving | AI episodes saved automatically when they arrive, like routes; deleted only by the learner (with confirmation). Dialogue and route episodes are derived on the fly, never stored. |
 
@@ -128,7 +128,8 @@ Server modules (`api/_lib/`):
 | `normalize.ts` | `normalizeEpisode`: parts without steps dropped, `parts` → first 6, steps → the first 20 across parts in order (a part the cut leaves empty is dropped), each step's `variants` → 2; logged as `[coach] trimmed episode overflow empty parts: 7→6, steps: 23→20, parts.0.steps.0.variants: 4→2` (paths and counts, never text). Fewer than 2 parts or 6 steps, wrong shapes or too-long strings still fail. |
 | `prompts.ts` | `EPISODE_SYSTEM`, `episodeUserPrompt({ meta, description, profile })` (below). |
 | `fake.ts` | `fakeEpisode(meta, description)`: the Italian supermarket fixture (3 parts: fruit and flour, deli counter, checkout; 8 steps, half native) or, for any other language, 3 placeholder parts of 2 steps; `FAKE_EPISODE_USAGE` (≈ 3k cache write, 5k output). |
-| `generators.ts` | `generateEpisode(input, onUsage)`: fake → the usage, then `fakeEpisode`; real → `generateStructured` (`effort: "low"`, `maxTokens: 12000`, `normalizeEpisode`). |
+| `generators.ts` | `generateEpisode(input, onUsage)`: fake → the usage, then `fakeEpisode`; real → `generateStructured` (`effort: "low"`, `maxTokens: 12000`, `deadlineMs: 55_000`, `normalizeEpisode`) and one `[coach] episode …` log line. |
+| `ledger.ts`, `config.ts` | `reserveEpisode` (key `<YYYY-MM-DD>:episode:<name>`, `COACH_EPISODE_DAILY_LIMIT` default 5), `recordCall(…, "episode", …)` (monthly `episodes` / `episodeSpend`), `readUsage` → `episodes`, `avgEpisodeUsd`, `episodesToday`. Endpoint: `api/coach/episode.ts`. |
 
 ### Prompt (`EPISODE_SYSTEM`, `episodeUserPrompt`)
 

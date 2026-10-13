@@ -12,7 +12,7 @@ import {
   fakeRoute,
 } from "./fake.js";
 import type { LanguageMeta } from "./languages.js";
-import { COACH_MODEL, type Charge } from "./model.js";
+import { COACH_MODEL, sumUsage, type Charge } from "./model.js";
 import { normalizeAssessment, normalizeEpisode, normalizeInterviewStep, normalizePack, normalizeRoute } from "./normalize.js";
 import {
   EPISODE_SYSTEM,
@@ -46,7 +46,11 @@ export type OnUsage = (charges: Charge[]) => Promise<unknown>;
  */
 const PACK = { effort: "low", maxTokens: 8000 } as const;
 const ROUTE = { effort: "low", maxTokens: 6000 } as const;
-const EPISODE = { effort: "low", maxTokens: 12000 } as const;
+/**
+ * An episode is ~4–6k output tokens, ~30–45 s at ~135 tok/s: close to the default 50 s deadline, so
+ * it gets 55 s (vercel.json stops the function at 60 s; packs, routes and the interview keep 50 s).
+ */
+const EPISODE = { effort: "low", maxTokens: 12000, deadlineMs: 55_000 } as const;
 const INTERVIEW = { effort: "low", maxTokens: 4000 } as const;
 
 export async function generatePack(input: PackInput, onUsage: OnUsage): Promise<GeneratedPack> {
@@ -66,20 +70,42 @@ export async function generateRoute(input: RouteInput, onUsage: OnUsage): Promis
   return generateStructured({ ...ROUTE, system: ROUTE_SYSTEM, user: routeUserPrompt(input), schema: GeneratedRoute, normalize: normalizeRoute, onUsage });
 }
 
-/** A Modo deporte episode (docs/sport.md); its own prompt and schema, the pack's call. */
+/**
+ * A Modo deporte episode (docs/sport.md); its own prompt and schema, the pack's call. Every real
+ * call logs one `[coach] episode …` line: latency until the response (or the failure), output
+ * tokens, the model that answered and the outcome (never the learner's text).
+ */
 export async function generateEpisode(input: EpisodeInput, onUsage: OnUsage): Promise<GeneratedEpisode> {
   if (isFake()) {
     await onUsage([{ model: COACH_MODEL, usage: FAKE_EPISODE_USAGE }]);
     return fakeEpisode(input.meta, input.description);
   }
-  return generateStructured({
-    ...EPISODE,
-    system: EPISODE_SYSTEM,
-    user: episodeUserPrompt(input),
-    schema: GeneratedEpisode,
-    normalize: normalizeEpisode,
-    onUsage,
-  });
+  const started = Date.now();
+  let answeredMs: number | undefined;
+  let charges: Charge[] = [];
+  let outcome = "failed";
+  try {
+    const episode = await generateStructured({
+      ...EPISODE,
+      system: EPISODE_SYSTEM,
+      user: episodeUserPrompt(input),
+      schema: GeneratedEpisode,
+      normalize: normalizeEpisode,
+      onUsage: (call) => {
+        answeredMs = Date.now() - started;
+        charges = call;
+        return onUsage(call);
+      },
+    });
+    outcome = "ok";
+    return episode;
+  } finally {
+    const ms = answeredMs ?? Date.now() - started;
+    const output = sumUsage(charges).output;
+    const model = charges.at(-1)?.model ?? "none";
+    const rate = answeredMs && output ? Math.round(output / (answeredMs / 1000)) : 0;
+    console.log(`[coach] episode ${outcome} ${ms} ms, ${output} output tokens (${rate} tok/s), model ${model}, lang ${input.meta.lang}`);
+  }
 }
 
 export async function generateInterviewStep(req: InterviewRequest, meta: LanguageMeta, onUsage: OnUsage): Promise<InterviewStep> {
