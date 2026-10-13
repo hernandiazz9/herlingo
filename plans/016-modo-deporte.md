@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 17:25Z 💻
+- Updated: 2026-10-13 17:28Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: T191: merge plan-016 into main + deploy (Hernán's OK), then Hernán's iPhone check
+- Next step: T192 → T193 while Hernán deploys and checks T191 on the iPhone
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: OK to merge into main and deploy for T191 · dialogue voice A/B (default A: edge-tts both)
+- Needs Hernán: deploy (npx vercel --prod from ../lang_lern-deporte) + T191 iPhone check
 
 ## Shared contract (all tasks read this)
 
@@ -109,7 +109,7 @@ Worktree setup: npm ci
 
 ## T192 — Episode generation on the server
 - Status: pending
-- Depends on: T191
+- Depends on: T190
 - Where: any
 - Goal: Server modules that turn a description into a validated episode (fake or real Claude), no endpoint yet.
 - Context: docs/sport.md "POST /api/coach/episode/", "Prompt", "Episode model"; models: the route's code in `api/_lib/{schema,normalize,prompts,fake,generators}.ts`.
@@ -139,7 +139,7 @@ Worktree setup: npm ci
 
 ## T194 — AI episodes on the device: create, save, download, list, delete
 - Status: pending
-- Depends on: T193
+- Depends on: T193, T191
 - Where: any
 - Goal: From `/deporte/` Hernán types a situation, gets an episode saved with its audio downloaded in the background, and finds it under "Mis episodios".
 - Context: docs/sport.md "Client", "UI copy"; models: `src/lib/coach/{api,routes,saved-audio,parse,types,use-coach}.ts`, `src/components/coach/generation.ts`, `src/components/quick/{QuickForm,SavedRoutes}.tsx`.
@@ -209,6 +209,9 @@ Worktree setup: npm ci
 - 2026-10-13 T189: the joined file starts with its own Xing frame (frame count, bytes, seek table) so mixed 48/64 kbps seeks land right; docs/sport.md 'Player' to say so (T190). (plan)
 - 2026-10-13 T189: lock screen = previous/next track (steps) only: no seekbackward/seekforward handlers, since iOS shows ±15 s instead of track buttons when they exist; seekto kept (T190). (plan)
 - 2026-10-13 T188: dialogue episodes use edge-tts for normal and slow lines (same voice), one constant to switch back to the Gemini content mp3s; default until Hernán answers. (plan)
+- 2026-10-13 plan: merged into main (fast-forward 487747ed..071ef416) with Hernán's OK ("si pasa a main"); deploy = Hernán. (Hernán)
+- 2026-10-13 T188: dialogue episodes keep edge-tts for normal and slow lines ("me gustan las voces"). (Hernán)
+- 2026-10-13 plan: gate relaxed after "continúa con lo que sigue": server tasks T192–T193 run before T191; T194 onwards still waits for T191. (Hernán + plan)
 
 ## Proposals (new scope)
 - 2026-10-13 plan: Episodes from the pack's units (key phrases of a lesson as a short listening review), no AI.
@@ -232,3 +235,4 @@ Worktree setup: npm ci
 - 2026-10-13 17:13Z 💻 T189 done · worktree-agent-a1001fa71713095c5 → b4fa000b · verify ✓
 - 2026-10-13 17:13Z 💻 T190 launched · attempt 1 · agent a4eddf1514188c1ad (+ edge-tts dialogue lines, no ±15 s handlers, Xing note in docs)
 - 2026-10-13 17:25Z 💻 T190 done · worktree-agent-a4eddf1514188c1ad → 93851d69 · verify ✓
+- 2026-10-13 17:28Z 💻 main fast-forwarded to 071ef416 with Hernán's OK; .vercel copied into ../lang_lern-deporte for the deploy
