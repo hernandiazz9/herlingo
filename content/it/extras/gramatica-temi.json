@@ -1,0 +1,327 @@
+{
+  "grammar": [
+    {
+      "id": "gram.articoli-determinativi",
+      "order": 30,
+      "title": "El artículo determinado: il, lo, la, l', i, gli, le",
+      "summary": "Equivale a «el, la, los, las», pero tiene siete formas: cambia con el género, el número y la primera letra de la palabra que sigue. Lo normal es «il» (masculino) y «la» (femenino).",
+      "points": [
+        "Masculino singular: «il» delante de consonante (il biglietto); «lo» delante de z, s + consonante, gn y ps (lo zaino, lo scontrino); «l'» delante de vocal (l'orario).",
+        "Femenino singular: «la» delante de consonante (la stazione); «l'» delante de vocal (l'uscita).",
+        "Plural: il → «i» (i biglietti); lo y l' masculinos → «gli» (gli zaini, gli orari); la y l' femeninos → «le» (le valigie, le uscite).",
+        "El artículo va con la palabra que sigue: si pones un adjetivo delante, puede cambiar («il biglietto» → «lo stesso biglietto»).",
+        "El género no siempre coincide con el español: «il latte» (la leche), «il sale» (la sal), «la zanzara» (el mosquito)."
+      ],
+      "table": [
+        ["delante de…", "singular", "plural", "ejemplo"],
+        ["masculino: consonante", "il", "i", "il biglietto → i biglietti"],
+        ["masculino: z, s + consonante, gn, ps", "lo", "gli", "lo zaino → gli zaini"],
+        ["masculino: vocal", "l'", "gli", "l'orario → gli orari"],
+        ["femenino: consonante", "la", "le", "la valigia → le valigie"],
+        ["femenino: vocal", "l'", "le", "l'uscita → le uscite"]
+      ],
+      "examples": [
+        { "text": "Dov'è la stazione?", "es": "¿Dónde está la estación?" },
+        { "text": "Ho perso il passaporto.", "es": "He perdido el pasaporte." },
+        { "text": "Vorrei lo scontrino, per favore.", "es": "Quería el tique, por favor." },
+        { "text": "Scusi, dov'è l'uscita?", "es": "Perdone, ¿dónde está la salida?" },
+        { "text": "Controllo gli orari del treno.", "es": "Miro los horarios del tren." }
+      ],
+      "drills": [
+        {
+          "text": "Dov'è ___ stazione?",
+          "answer": "la",
+          "distractors": ["il", "lo", "le"],
+          "es": "¿Dónde está la estación?"
+        },
+        {
+          "text": "Ho perso ___ passaporto.",
+          "answer": "il",
+          "distractors": ["lo", "la", "i"],
+          "es": "He perdido el pasaporte."
+        },
+        {
+          "text": "Vorrei ___ scontrino, per favore.",
+          "answer": "lo",
+          "distractors": ["il", "la", "gli"],
+          "es": "Quería el tique, por favor."
+        },
+        {
+          "text": "Scusi, dov'è ___?",
+          "answer": "l'uscita",
+          "distractors": ["la uscita", "il uscita"],
+          "es": "Perdone, ¿dónde está la salida?"
+        },
+        {
+          "text": "Quanto costano ___ biglietti?",
+          "answer": "i",
+          "distractors": ["gli", "le", "il"],
+          "es": "¿Cuánto cuestan los billetes?"
+        },
+        {
+          "text": "Controllo ___ orari del treno.",
+          "answer": "gli",
+          "distractors": ["i", "le", "il"],
+          "es": "Miro los horarios del tren."
+        },
+        {
+          "text": "Dove sono ___ valigie?",
+          "answer": "le",
+          "distractors": ["la", "i", "gli"],
+          "es": "¿Dónde están las maletas?"
+        },
+        {
+          "text": "Quando parte ___ per Siracusa?",
+          "answer": "l'autobus",
+          "distractors": ["il autobus", "la autobus"],
+          "es": "¿Cuándo sale el autobús para Siracusa?"
+        }
+      ],
+      "tags": ["articolo"]
+    },
+    {
+      "id": "gram.articoli-indeterminativi",
+      "order": 40,
+      "title": "El artículo indeterminado: un, uno, una, un'",
+      "summary": "Equivale a «un, una». Solo hay cuatro formas: «un» y «uno» para el masculino, «una» y «un'» para el femenino. Ojo: solo el femenino lleva apóstrofo.",
+      "points": [
+        "Masculino: «un» casi siempre (un biglietto, un caffè, un amico); «uno» delante de z, s + consonante, gn y ps (uno zaino, uno scontrino).",
+        "Femenino: «una» delante de consonante (una valigia); «un'» delante de vocal (un'acqua, un'amica).",
+        "Masculino delante de vocal NO lleva apóstrofo: «un amico», no «un'amico».",
+        "Para pedir: «Vorrei un caffè», «Un biglietto per Palermo, per favore».",
+        "El plural («unos, unas») se dice «dei / degli / delle» o se omite: «Vorrei delle olive» o «Vorrei olive»."
+      ],
+      "table": [
+        ["delante de…", "masculino", "femenino"],
+        ["consonante", "un biglietto", "una valigia"],
+        ["vocal", "un amico", "un'amica"],
+        ["z, s + consonante, gn, ps", "uno zaino", "una zanzara"]
+      ],
+      "examples": [
+        { "text": "Vorrei un caffè, per favore.", "es": "Quería un café, por favor." },
+        { "text": "Un biglietto per Palermo, per favore.", "es": "Un billete para Palermo, por favor." },
+        { "text": "Ho uno zaino e una valigia.", "es": "Tengo una mochila y una maleta." },
+        { "text": "Vorrei un'acqua naturale.", "es": "Quería un agua sin gas." },
+        { "text": "Sono con un'amica.", "es": "Estoy con una amiga." }
+      ],
+      "drills": [
+        {
+          "text": "Vorrei ___ caffè, per favore.",
+          "answer": "un",
+          "distractors": ["uno", "una"],
+          "es": "Quería un café, por favor."
+        },
+        {
+          "text": "Ho ___ valigia grande.",
+          "answer": "una",
+          "distractors": ["un", "uno"],
+          "es": "Tengo una maleta grande."
+        },
+        {
+          "text": "Ho ___ zaino nero.",
+          "answer": "uno",
+          "distractors": ["un", "una"],
+          "es": "Tengo una mochila negra."
+        },
+        {
+          "text": "Sono con ___ di Palermo.",
+          "answer": "un'amica",
+          "distractors": ["una amica", "uno amica"],
+          "es": "Estoy con una amiga de Palermo."
+        },
+        {
+          "text": "Vorrei ___ naturale, per favore.",
+          "answer": "un'acqua",
+          "distractors": ["una acqua", "uno acqua"],
+          "es": "Quería un agua sin gas, por favor."
+        },
+        {
+          "text": "Mi dà ___ scontrino, per favore?",
+          "answer": "uno",
+          "distractors": ["un", "una"],
+          "es": "¿Me da un tique, por favor?"
+        },
+        {
+          "text": "Ho ___ amico a Siracusa.",
+          "answer": "un",
+          "distractors": ["uno", "una"],
+          "es": "Tengo un amigo en Siracusa."
+        },
+        {
+          "text": "Vorrei ___ e un caffè.",
+          "answer": "un'arancina",
+          "distractors": ["una arancina", "uno arancina"],
+          "es": "Quería una arancina y un café."
+        }
+      ],
+      "tags": ["articolo"]
+    },
+    {
+      "id": "gram.preposizioni",
+      "order": 50,
+      "title": "Preposiciones: a, in, da, di, su, per, con, tra",
+      "summary": "Las ocho preposiciones simples no coinciden una a una con el español: «a Palermo» (a / en Palermo), «in treno» (en tren), «da Catania» (desde / de Catania). Aprende las combinaciones del viaje.",
+      "points": [
+        "«a» con ciudades y lugares pequeños: «a Palermo», «a casa». «in» con regiones, países e islas: «in Sicilia», «in Italia».",
+        "«in» con el transporte: «in treno», «in autobus», «in aereo», «in taxi». Andando: «a piedi».",
+        "«da» = desde, de dónde sales: «Il treno parte da Catania». Con personas = en casa o en la consulta de: «da Marco», «dal medico».",
+        "«di» = pertenencia, contenido y origen: «un bicchiere di vino», «Sono di Madrid» (soy de Madrid). Para decir de dónde vienes ahora: «Vengo da Madrid».",
+        "«per» = destino, para quién, duración: «un biglietto per Catania», «un tavolo per due», «per una settimana».",
+        "«tra» = entre, y dentro de (tiempo): «tra due ore». «fra» significa lo mismo."
+      ],
+      "table": [
+        ["preposición", "para qué sirve", "ejemplo"],
+        ["a", "ciudades y lugares pequeños (a / en)", "a Palermo, a casa"],
+        ["in", "regiones, países, islas; transporte (en)", "in Sicilia, in treno"],
+        ["da", "de dónde sales; casa o consulta de alguien", "da Catania, da Marco"],
+        ["di", "pertenencia, origen, contenido (de)", "di Madrid, un bicchiere di vino"],
+        ["su", "sobre, en (casi siempre con artículo: sul, sulla…)", "su WhatsApp"],
+        ["per", "destino, para quién, duración (para, por)", "un biglietto per Catania"],
+        ["con", "compañía o medio (con)", "con la carta"],
+        ["tra / fra", "entre; dentro de (tiempo)", "tra due ore"]
+      ],
+      "examples": [
+        { "text": "Vado a Palermo in treno.", "es": "Voy a Palermo en tren." },
+        { "text": "Sono in Sicilia per una settimana.", "es": "Estoy en Sicilia una semana." },
+        { "text": "Il treno parte da Catania.", "es": "El tren sale de Catania." },
+        { "text": "Un biglietto per Siracusa, per favore.", "es": "Un billete para Siracusa, por favor." },
+        { "text": "Sono di Madrid, e tu?", "es": "Soy de Madrid, ¿y tú?" },
+        { "text": "Pago con la carta.", "es": "Pago con tarjeta." },
+        { "text": "Il treno parte tra dieci minuti.", "es": "El tren sale dentro de diez minutos." }
+      ],
+      "drills": [
+        {
+          "text": "Domani vado ___ Palermo.",
+          "answer": "a",
+          "distractors": ["in", "da", "di"],
+          "es": "Mañana voy a Palermo."
+        },
+        {
+          "text": "Questa settimana sono ___ Sicilia.",
+          "answer": "in",
+          "distractors": ["a", "da", "su"],
+          "es": "Esta semana estoy en Sicilia."
+        },
+        {
+          "text": "Vado a Catania ___ treno.",
+          "answer": "in",
+          "distractors": ["con", "a", "su"],
+          "es": "Voy a Catania en tren."
+        },
+        {
+          "text": "Il treno parte ___ Catania.",
+          "answer": "da",
+          "distractors": ["di", "con"],
+          "es": "El tren sale de Catania."
+        },
+        {
+          "text": "Un biglietto ___ Siracusa, per favore.",
+          "answer": "per",
+          "distractors": ["a", "in", "con"],
+          "es": "Un billete para Siracusa, por favor."
+        },
+        {
+          "text": "Pago ___ la carta.",
+          "answer": "con",
+          "distractors": ["in", "da", "di"],
+          "es": "Pago con tarjeta."
+        },
+        {
+          "text": "Sono ___ Madrid, e tu?",
+          "answer": "di",
+          "distractors": ["da", "in", "con"],
+          "es": "Soy de Madrid, ¿y tú?"
+        },
+        {
+          "text": "Il bar è ___ la stazione e la piazza.",
+          "answer": "tra",
+          "distractors": ["con", "in", "da"],
+          "es": "El bar está entre la estación y la plaza."
+        }
+      ],
+      "tags": ["preposizione"]
+    },
+    {
+      "id": "gram.preposizioni-articolate",
+      "order": 60,
+      "title": "Preposiciones con artículo: al, del, dal, nel, sul…",
+      "summary": "Cuando «a, di, da, in, su» van delante de un artículo determinado, se funden con él en una sola palabra: a + il = «al», in + la = «nella». Con «con» y «per» no suele pasar.",
+      "points": [
+        "Se funden «a, di, da, in, su» con el artículo: «al mercato», «del treno», «dal medico», «nel bagno», «sul biglietto».",
+        "Delante de vocal se elide: «all'aeroporto», «dell'autobus», «nell'albergo».",
+        "La hora lleva «a» + artículo: «alle otto» (a las ocho), pero «all'una» (a la una).",
+        "«con» y «per» se escriben normalmente separadas: «con il latte», «per la stazione».",
+        "Muchos lugares cotidianos van con «in» sin artículo: «in farmacia», «in banca», «in centro», «in spiaggia».",
+        "«di» + artículo también es «algo de»: «Vorrei del pane», «Vorrei dell'acqua»."
+      ],
+      "table": [
+        ["", "il", "lo", "l'", "la", "i", "gli", "le"],
+        ["a", "al", "allo", "all'", "alla", "ai", "agli", "alle"],
+        ["di", "del", "dello", "dell'", "della", "dei", "degli", "delle"],
+        ["da", "dal", "dallo", "dall'", "dalla", "dai", "dagli", "dalle"],
+        ["in", "nel", "nello", "nell'", "nella", "nei", "negli", "nelle"],
+        ["su", "sul", "sullo", "sull'", "sulla", "sui", "sugli", "sulle"]
+      ],
+      "examples": [
+        { "text": "Il treno parte alle otto.", "es": "El tren sale a las ocho." },
+        { "text": "Vado al mercato.", "es": "Voy al mercado." },
+        { "text": "L'autobus parte dalla stazione.", "es": "El autobús sale de la estación." },
+        { "text": "Sono all'aeroporto.", "es": "Estoy en el aeropuerto." },
+        { "text": "Il portafoglio è nello zaino.", "es": "La cartera está en la mochila." },
+        { "text": "Il posto è scritto sul biglietto.", "es": "El asiento está escrito en el billete." },
+        { "text": "Sono in farmacia.", "es": "Estoy en la farmacia." }
+      ],
+      "drills": [
+        {
+          "text": "Il treno parte ___ otto.",
+          "answer": "alle",
+          "distractors": ["le", "alla", "agli"],
+          "es": "El tren sale a las ocho."
+        },
+        {
+          "text": "Vado ___ mercato.",
+          "answer": "al",
+          "distractors": ["del", "dal", "allo"],
+          "es": "Voy al mercado."
+        },
+        {
+          "text": "L'autobus parte ___ stazione.",
+          "answer": "dalla",
+          "distractors": ["della", "dal", "dallo"],
+          "es": "El autobús sale de la estación."
+        },
+        {
+          "text": "Il portafoglio è ___ zaino.",
+          "answer": "nello",
+          "distractors": ["nel", "nella", "negli"],
+          "es": "La cartera está en la mochila."
+        },
+        {
+          "text": "Sono ___ e aspetto il volo.",
+          "answer": "all'aeroporto",
+          "distractors": ["al aeroporto", "allo aeroporto", "nel aeroporto"],
+          "es": "Estoy en el aeropuerto y espero el vuelo."
+        },
+        {
+          "text": "Il posto è scritto ___ biglietto.",
+          "answer": "sul",
+          "distractors": ["sullo", "sulla", "sui"],
+          "es": "El asiento está escrito en el billete."
+        },
+        {
+          "text": "Qual è l'orario ___ per Siracusa?",
+          "answer": "dell'autobus",
+          "distractors": ["del autobus", "dello autobus", "della autobus"],
+          "es": "¿Cuál es el horario del autobús para Siracusa?"
+        },
+        {
+          "text": "Mi fa male la gola, vado ___ medico.",
+          "answer": "dal",
+          "distractors": ["al", "del", "nel"],
+          "es": "Me duele la garganta, voy al médico."
+        }
+      ],
+      "tags": ["preposizione", "articolo"]
+    }
+  ]
+}
