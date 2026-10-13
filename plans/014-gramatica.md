@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:36Z 💻
+- Updated: 2026-10-13 06:38Z 💻
 - Writer: 💻 desktop
 - Branch: plan-014-gramatica (local, not pushed)
 - Next step: T165 + T167 running; then T169–T171 (Sonnet), T166, T168
@@ -67,7 +67,7 @@ Worktree setup: npm ci
 - Outcome: nested section grammar (parent phrasebook), /gramatica/ index + /gramatica/<id>/ for every visible pack (94 pages), tense chips, rows with normal + slow audio, irregular in terracotta, shared GrammarCardBody · 1860167a · verify ✓ 💻 · not checked: visual (queued)
 
 ## T166 — "Leído" button, read badges and entry points
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a7f76fd2debe0bff4 · since 06:36Z)
 - Depends on: T164, T165
 - Where: any
 - Goal: The "Leído" button at the end of verb and topic pages (count, disabled until the page is left, XP feedback as elsewhere), "×n" badges on tiles and topics, the "Gramática" button at the top of the Frasario, and a section card on the Ruta replacing the "Fichas de gramática" sheet (expressions keep theirs). Entry points hidden for a pack with no verbs and no topics.
@@ -79,7 +79,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T167 — Grammar drills in Repaso, SRS on first read
-- Status: running (attempt 1 · 💻 · agent aeed9052586a45fcd · since 06:29Z)
+- Status: done
 - Depends on: T163, T164
 - Where: any
 - Goal: `grammarDrills()` builds fill-gap drills from card/verb `drills` and from verb forms (docs/grammar.md "Exercises"); the first read of a drillable id adds it to `progress.srs` (box 0); `dueItemIds` and SRS scheduling accept drillable ids (today they skip `kind === "grammar"`); Repaso gives each due drillable id 2 drills and records outcomes on the id.
@@ -89,7 +89,7 @@ Worktree setup: npm ci
   - One-off `npx tsx` script: after `markGrammarRead("it", "verb.essere")` the id is in SRS; a review built from it yields 2 fill-gap steps, answer among the options, options distinct, audio set; an unread verb never appears; non-grammar review sessions are unchanged for the same seed.
   - `npm run verify` → exit 0.
   - Hand check (PC): Repaso shows essere drills after reading it.
-- Outcome:
+- Outcome: grammarDrills() (fill-gap from drills + verb forms, 2 tenses per verb, ≤4 options), startReviewing on read, dueItemIds/SRS accept drillable ids, Repaso 2 drills per due entry; 78/78 non-grammar sessions unchanged · 57b5233e · verify ✓ 💻 · not checked: visual (queued)
 
 ## T168 — Grammar drills in lessons
 - Status: pending
@@ -182,6 +182,7 @@ Worktree setup: npm ci
 
 ## Visual checks queue
 - [ ] T165 @1860167a — /gramatica/ grid + temas, verb.essere chips/rows/audio/irregular colour, gram.tu-lei page; light + dark, iPhone (queued 2026-10-13 💻)
+- [ ] T167 @57b5233e — Repaso after reading essere: 2 fill-gap drills, options, audio, verb listed in the preview (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-12 plan: Gramática lives at /gramatica/, nested under the Frases tab; entries from the Frasario and a Ruta card that replaces the "Fichas de gramática" sheet. (Hernán)
@@ -197,6 +198,7 @@ Worktree setup: npm ci
 - 2026-10-13 T164: XP recorded only when > 0; bad 'last' keeps the count; grammar XP shows no toast yet (T166 decides feedback). (agent)
 - 2026-10-13 T163: scripts/audio/plan.ts edited (outside scope) so npm run audio includes grammar playables; extra helper getGrammarTenses(pack); drill text = full sentence with before/after; essere marks only sii/siate irregular. (agent)
 - 2026-10-13 T165: every grammar card gets a page (verb-linked ones not listed); slow-audio snail button per row; chips shown even with one tense; levelled packs show current level only; grammarHref() in src/components/grammar/GrammarScreen.tsx. (agent)
+- 2026-10-13 T167: Repaso drills come on top of the session size (2 per due entry); every read (not only the first) adds a missing drillable to SRS; startReviewing(lang, id) in progress. (agent)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -211,3 +213,5 @@ Worktree setup: npm ci
 - 2026-10-13 06:29Z 💻 T165 launched · attempt 1 · agent a850158fa3794dd66
 - 2026-10-13 06:29Z 💻 T167 launched · attempt 1 · agent aeed9052586a45fcd
 - 2026-10-13 06:36Z 💻 T165 done → 1860167a · verify ✓
+- 2026-10-13 06:36Z 💻 T166 launched · attempt 1 · agent a7f76fd2debe0bff4
+- 2026-10-13 06:38Z 💻 T167 done → 57b5233e · verify ✓
