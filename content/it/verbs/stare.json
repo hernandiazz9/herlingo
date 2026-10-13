@@ -1,0 +1,56 @@
+{
+  "id": "verb.stare",
+  "order": 60,
+  "infinitive": "stare",
+  "es": "estar / quedarse",
+  "irregular": true,
+  "notes": "Para cómo se encuentra alguien: «Come sta?», «Sto bene». También es quedarse («sto qui») y forma el gerundio: «sto arrivando». Para decir dónde está algo se usa «essere».",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "sto", "es": "estoy" },
+        { "form": "stai", "es": "estás", "irregular": true },
+        { "form": "sta", "es": "está" },
+        { "form": "stiamo", "es": "estamos" },
+        { "form": "state", "es": "estáis" },
+        { "form": "stanno", "es": "están", "irregular": true }
+      ],
+      "example": { "text": "Sto bene, grazie. E Lei?", "es": "Estoy bien, gracias. ¿Y usted?" },
+      "notes": "Para preguntar cómo está alguien: «Come sta?» (usted), «Come stai?» (tú), «Come state?» (vosotros)."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "sono stato/a", "say": "sono stato", "es": "estuve / he estado" },
+        { "form": "sei stato/a", "say": "sei stato", "es": "estuviste / has estado" },
+        { "form": "è stato/a", "say": "è stato", "es": "estuvo / ha estado" },
+        { "form": "siamo stati/e", "say": "siamo stati", "es": "estuvimos / hemos estado" },
+        { "form": "siete stati/e", "say": "siete stati", "es": "estuvisteis / habéis estado" },
+        { "form": "sono stati/e", "say": "sono stati", "es": "estuvieron / han estado" }
+      ],
+      "example": { "text": "Siamo stati benissimo in questo hotel.", "es": "Hemos estado muy bien en este hotel." },
+      "notes": "Con «essere»; el participio «stato» es el mismo que el de «essere» y concuerda: sono stato / stata."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "starei", "es": "estaría / me quedaría" },
+        { "form": "staresti", "es": "estarías / te quedarías" },
+        { "form": "starebbe", "es": "estaría / se quedaría" },
+        { "form": "staremmo", "es": "estaríamos / nos quedaríamos" },
+        { "form": "stareste", "es": "estaríais / os quedaríais" },
+        { "form": "starebbero", "es": "estarían / se quedarían" }
+      ],
+      "example": { "text": "Starei qui ancora una notte, è possibile?", "es": "Me quedaría aquí una noche más, ¿es posible?" },
+      "notes": "Raíz «star-»: conserva la «a» del infinitivo (como «farei»), no «sterei». Muy útil para alargar una estancia."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "sta'", "es": "quédate / estate", "irregular": true },
+        { "form": "stia", "es": "esté (usted)", "irregular": true },
+        { "form": "stiamo", "es": "estemos" },
+        { "form": "state", "es": "estad / quedaos" }
+      ],
+      "example": { "text": "Stia tranquillo, non c'è problema.", "es": "Esté tranquilo, no hay problema." },
+      "notes": "Para «tú» también se dice «stai». «Stia attento» = tenga cuidado."
+    }
+  }
+}

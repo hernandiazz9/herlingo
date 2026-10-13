@@ -5,7 +5,7 @@ import { useState } from "react";
 import { LessonPlayer } from "@/components/lesson";
 import { useHideQuickFab } from "@/components/shell/QuickFab";
 import { Button, Card, TargetText } from "@/components/ui";
-import { getItem, getPack, glossOf, type Lesson } from "@/lib/content";
+import { getItem, getPack, getVerb, glossOf, isDrillable, type Lesson } from "@/lib/content";
 import { useGlossLang } from "@/lib/content/use-gloss";
 import { useScreenLang } from "@/lib/content/use-active-lang";
 import type { LearnCopy } from "@/lib/i18n/learn-copy";
@@ -16,7 +16,10 @@ import { startOfDay } from "@/lib/progress/dates";
 import { useHydrated, useNow, useProgress } from "@/lib/progress/use-progress";
 import { REVIEW_SIZE, dedupeByText, nextDue } from "@/lib/srs";
 
-/** Due items (spaced repetition) and a review session through the lesson player. */
+/**
+ * Due items (spaced repetition) and a review session through the lesson player. Due Gramática
+ * entries (read verbs and topics with drills) get fill-gap drills instead of lesson exercises.
+ */
 export function ReviewView() {
   const lang = useScreenLang();
   return lang ? <Review key={lang} lang={lang} /> : null;
@@ -29,7 +32,7 @@ function Review({ lang }: { lang: string }) {
   const progress = useProgress(lang);
   const now = useNow();
   const hydrated = useHydrated();
-  const [session, setSession] = useState<Lesson | null>(null);
+  const [session, setSession] = useState<{ lesson: Lesson; drills: string[] } | null>(null);
   // A running review session: no ⚡ button.
   useHideQuickFab(session !== null);
 
@@ -50,17 +53,22 @@ function Review({ lang }: { lang: string }) {
   const next = nextDue(progress.srs, now);
 
   const start = () => {
-    const items = due.slice(0, REVIEW_SIZE);
-    setSession({ id: "review", title: copy.reviewTitle(items.length), items, unitId: "", index: 0 });
+    const ids = due.slice(0, REVIEW_SIZE);
+    // Gramática entries are drilled (2 fill-gap drills each), not taught as lesson items.
+    const drills = ids.filter((id) => isDrillable(id, pack));
+    const items = ids.filter((id) => !drills.includes(id));
+    setSession({ lesson: { id: "review", title: copy.reviewTitle(ids.length), items, unitId: "", index: 0 }, drills });
   };
 
   if (session) {
-    // Short reviews stay short: about two exercises per item.
-    const size = Math.min(defaultSessionSize(session.items.length), Math.max(4, session.items.length * 2));
+    // Short reviews stay short: about two exercises per item (the drills come on top).
+    const n = session.lesson.items.length;
+    const size = Math.min(defaultSessionSize(n), Math.max(4, n * 2));
     return (
       <LessonPlayer
         lang={lang}
-        lesson={session}
+        lesson={session.lesson}
+        drills={session.drills}
         sessionSize={size}
         intro={copy.reviewIntro}
         onComplete={complete}
@@ -92,7 +100,10 @@ function Review({ lang }: { lang: string }) {
     );
   }
 
-  const preview = due.slice(0, REVIEW_SIZE).map((id) => getItem(id, pack)).filter((i) => !!i);
+  const preview = due
+    .slice(0, REVIEW_SIZE)
+    .map((id) => getItem(id, pack) ?? getVerb(id, pack))
+    .filter((i) => !!i);
 
   return (
     <>

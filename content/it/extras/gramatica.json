@@ -2,6 +2,7 @@
   "grammar": [
     {
       "id": "gram.tu-lei",
+      "order": 10,
       "title": "Tú o Lei",
       "summary": "Con desconocidos y personal (camareros, revisores, farmacéuticos) se habla de «Lei», en tercera persona, como nuestro «usted». Con gente de tu edad en plan informal, «tu».",
       "points": [
@@ -23,10 +24,43 @@
         { "text": "Come stai?", "es": "¿Cómo estás?" },
         { "text": "Senta, scusi…", "es": "Oiga, perdone…" }
       ],
+      "drills": [
+        {
+          "text": "Scusi, ___ è di qui?",
+          "answer": "Lei",
+          "distractors": ["tu", "io", "noi"],
+          "es": "Perdone, ¿es usted de aquí?"
+        },
+        {
+          "text": "E ___, di dove sei?",
+          "answer": "tu",
+          "distractors": ["Lei", "lui", "io"],
+          "es": "Y tú, ¿de dónde eres?"
+        },
+        {
+          "text": "Senta, Lei ___ dov'è la posta?",
+          "answer": "sa",
+          "distractors": ["sai", "so", "sapete"],
+          "es": "Oiga, ¿sabe usted dónde está correos?"
+        },
+        {
+          "text": "Senti, tu ___ dov'è la stazione?",
+          "answer": "sai",
+          "distractors": ["sa", "so", "sappiamo"],
+          "es": "Oye, ¿sabes dónde está la estación?"
+        },
+        {
+          "text": "Signora, Lei ___ ripetere, per favore?",
+          "answer": "può",
+          "distractors": ["puoi", "posso", "possiamo"],
+          "es": "Señora, ¿puede repetir, por favor?"
+        }
+      ],
       "tags": ["registro"]
     },
     {
       "id": "gram.vorrei",
+      "order": 20,
       "title": "«Vorrei»: la palabra mágica para pedir",
       "summary": "«Vorrei» (querría) es la forma educada de pedir cualquier cosa. «Voglio» (quiero) suena exigente cuando le pides algo a alguien.",
       "points": [
@@ -48,10 +82,49 @@
         { "text": "Vorrei un biglietto per Catania.", "es": "Quería un billete para Catania." },
         { "text": "Vorremmo un tavolo per due.", "es": "Queríamos una mesa para dos." }
       ],
+      "drills": [
+        {
+          "text": "Noi ___ due caffè, per favore.",
+          "answer": "vorremmo",
+          "distractors": ["vorrei", "vorrebbe", "vorreste"],
+          "es": "Queríamos dos cafés, por favor."
+        },
+        {
+          "text": "Io ___ un biglietto per Catania.",
+          "answer": "vorrei",
+          "distractors": ["vorresti", "vorrebbe", "vorremmo"],
+          "es": "Quería un billete para Catania."
+        },
+        {
+          "text": "Lei ___ un caffè?",
+          "answer": "vorrebbe",
+          "distractors": ["vorrei", "vorresti", "vorremmo"],
+          "es": "¿Querría (usted) un café?"
+        },
+        {
+          "text": "E tu, cosa ___ ordinare?",
+          "answer": "vorresti",
+          "distractors": ["vorrei", "vorrebbe", "vorreste"],
+          "es": "Y tú, ¿qué querrías pedir?"
+        },
+        {
+          "text": "Vorrei ___ un tavolo per stasera.",
+          "answer": "prenotare",
+          "distractors": ["prenoto", "prenotato", "prenotando"],
+          "es": "Quería reservar una mesa para esta noche."
+        },
+        {
+          "text": "I miei amici ___ pagare con la carta.",
+          "answer": "vorrebbero",
+          "distractors": ["vorrebbe", "vorremmo", "vorreste"],
+          "es": "Mis amigos querrían pagar con tarjeta."
+        }
+      ],
       "tags": ["pedir"]
     },
     {
       "id": "gram.essere",
+      "verb": "verb.essere",
       "title": "Essere (ser / estar)",
       "summary": "«Essere» es ser y, muchas veces, estar: «sono stanco» (estoy cansado), «è chiuso» (está cerrado). Para «¿cómo estás?» se usa «stare»: «Come stai?».",
       "points": [
@@ -77,6 +150,7 @@
     },
     {
       "id": "gram.avere",
+      "verb": "verb.avere",
       "title": "Avere (tener / haber)",
       "summary": "«Avere» es tener. Como en español, el hambre, la sed, el calor y el frío se «tienen»: «ho fame», «ho caldo».",
       "points": [
@@ -103,6 +177,7 @@
     },
     {
       "id": "gram.volere",
+      "verb": "verb.volere",
       "title": "Volere (querer)",
       "summary": "«Volere» es querer. Úsalo para planes y deseos; para pedirle algo a alguien, mejor «vorrei».",
       "points": [
@@ -127,6 +202,7 @@
     },
     {
       "id": "gram.potere",
+      "verb": "verb.potere",
       "title": "Potere (poder)",
       "summary": "«Potere» + infinitivo sirve para pedir permiso y favores: «Posso…?» (¿puedo…?), «Può…?» (¿puede…?, de Lei).",
       "points": [
@@ -151,6 +227,7 @@
     },
     {
       "id": "gram.andare",
+      "verb": "verb.andare",
       "title": "Andare (ir)",
       "summary": "«Andare» es ir: «Vado a Palermo» (voy a Palermo), «Andiamo!» (¡vamos!). Con transportes se usa «in»: «in treno», «in autobus».",
       "points": [

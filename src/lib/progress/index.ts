@@ -7,9 +7,10 @@
  * Parsing is tolerant: empty, corrupt or partly invalid values give an empty progress or drop
  * just the bad entries. Nothing here throws.
  */
-import { getItem, getLesson, getLessonItems, getPack, listLangs, type Pack } from "@/lib/content";
+import { getItem, getLesson, getLessonItems, getPack, isDrillable, listLangs, type Pack } from "@/lib/content";
 import type { LessonResult } from "@/lib/exercises";
 import { clearGame } from "@/lib/game/storage";
+import { clearGrammarReads } from "@/lib/grammar/reads";
 import { clearStoriesDone } from "@/lib/stories/done";
 import { dueIds, newEntry, parseEntry, schedule, type SrsEntry } from "@/lib/srs";
 import { clearDaily } from "./daily";
@@ -191,6 +192,7 @@ export type XpSource =
   | "discover"
   | "placement"
   | "coach"
+  | "grammar"
   | "activity";
 
 /** One XP award, reported after the progress holding it has been saved. */
@@ -250,12 +252,21 @@ export function wordsLearned(p: Progress, pack: Pack): number {
   return words.size;
 }
 
-/** Items due for review (most urgent first), skipping ids no longer in the content. */
+/**
+ * Whether SRS entry `id` is practised in exercises: a lesson item other than a grammar card, or a
+ * drillable Gramática entry (a verb, or a card with `drills`; docs/grammar.md "Exercises").
+ */
+function isPractisable(id: string, pack: Pack): boolean {
+  const item = getItem(id, pack);
+  return (!!item && item.kind !== "grammar") || isDrillable(id, pack);
+}
+
+/**
+ * Items due for review (most urgent first), skipping ids no longer in the content. Includes the
+ * drillable Gramática entries in SRS (read at least once): a review drills them.
+ */
 export function dueItemIds(p: Progress, pack: Pack, now: number): string[] {
-  return dueIds(p.srs, now, (id) => {
-    const item = getItem(id, pack);
-    return !!item && item.kind !== "grammar";
-  });
+  return dueIds(p.srs, now, (id) => isPractisable(id, pack));
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -272,8 +283,7 @@ function applyResult(p: Progress, result: LessonResult, pack: Pack, now: number)
   p.xp += Math.max(0, Math.round(result.xp));
   p.streak = bumpStreak(p.streak, dayKey(new Date(now)));
   for (const o of result.items) {
-    const item = getItem(o.itemId, pack);
-    if (!item || item.kind === "grammar" || o.attempts <= 0) continue;
+    if (o.attempts <= 0 || !isPractisable(o.itemId, pack)) continue;
     p.srs[o.itemId] = schedule(p.srs[o.itemId], o.mistakes === 0, now);
   }
 }
@@ -314,6 +324,18 @@ export function recordReviewResult(result: LessonResult, source: XpSource = "rev
 }
 
 /**
+ * Starts spaced repetition of `id` (box 0, due now) unless it is already tracked; for entries that
+ * no lesson adds, e.g. a drillable Gramática entry on its first read. Returns true when added.
+ */
+export function startReviewing(lang: string, id: string, now = Date.now()): boolean {
+  if (!lang || !id || getProgress(lang).srs[id]) return false;
+  update(lang, (p) => {
+    if (!p.srs[id]) p.srs[id] = newEntry(now);
+  });
+  return true;
+}
+
+/**
  * Placement test result: marks `lessonIds` done. Lessons marked by an earlier placement test
  * and never played are unmarked when not passed again; played lessons are never touched.
  */
@@ -335,8 +357,9 @@ export function completeOnboarding(lang: string): Progress {
 }
 
 /**
- * Deletes all progress of the pack, plus its game records/known phrases, finished stories, today's
- * XP bookkeeping and its days in the global activity log (settings and other languages are kept).
+ * Deletes all progress of the pack, plus its game records/known phrases, finished stories, grammar
+ * reads, today's XP bookkeeping and its days in the global activity log (settings and other
+ * languages are kept).
  * The welcome shows again.
  */
 export function resetProgress(lang: string): void {
@@ -349,6 +372,7 @@ export function resetProgress(lang: string): void {
   }
   clearGame(lang);
   clearStoriesDone(lang);
+  clearGrammarReads(lang);
   removeActivityLang(lang, langStreaks);
   clearDaily(lang);
   window.dispatchEvent(new Event(EVENT));

@@ -151,6 +151,44 @@ export const TtsVoice = z.discriminatedUnion("provider", [
     .strict(),
 ]);
 
+// ---------------------------------------------------------------------------------------------
+// Grammar reference (Gramática): docs/content-guide.md, "Grammar reference"
+// ---------------------------------------------------------------------------------------------
+
+/** Tense id: lower-case slug joined by single "-" (`passato-prossimo`); part of verb audio keys. */
+export const TENSE_ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+/** One tense the pack's verbs conjugate (`pack.json` `grammar.tenses`), in display order. */
+export const GrammarTense = z.object({
+  id: z.string().regex(TENSE_ID_PATTERN, "tense id must be lowercase a-z0-9 joined by single '-'"),
+  /** Chip label (a gloss: "Presente", "Condicional"). */
+  title: Gloss,
+  /** Target-language person labels, one per row ("io", "lui / lei / Lei", "(tu)"). */
+  persons: z.array(Text).min(1),
+  /**
+   * The pronoun spoken before each form in its audio ("io" → "io sono"), one per `persons`
+   * entry. Omitted (imperative) = the audio is the form alone.
+   */
+  speak: z.array(Text).optional(),
+});
+
+/** `pack.json` `grammar`: what the pack's verb files conjugate. Omitted = no verbs, only topics. */
+export const GrammarMeta = z.object({
+  tenses: z.array(GrammarTense).min(1),
+});
+
+/**
+ * A fill-the-gap sentence (grammar card or verb `drills`): `text` holds the gap `___` exactly
+ * once, `answer` fills it, `distractors` are wrong options of the same kind (≥ 2, never also
+ * correct), `es` / `ru` / `en` = gloss of the whole sentence.
+ */
+export const GrammarDrill = z.object({
+  text: Text,
+  answer: Text,
+  distractors: z.array(Text).min(2),
+  ...Translation,
+});
+
 export const PackMeta = z.object({
   /**
    * The default pack (exactly one pack sets `"default": true`): the app's fallback language and
@@ -220,6 +258,8 @@ export const PackMeta = z.object({
    * letter it counts as. Applied to both sides (`foldText()`).
    */
   fold: z.record(Char, Char).optional(),
+  /** Tenses conjugated by the pack's verbs (`verbs/*.json`, Gramática). Omitted = no verbs. */
+  grammar: GrammarMeta.optional(),
 });
 
 // ---------------------------------------------------------------------------------------------
@@ -315,6 +355,12 @@ export const GrammarCard = z.object({
   /** Target-language examples (playable). */
   examples: z.array(Reply).default([]),
   tags: Tags,
+  /** Gramática: sort key in the Topics list (cards without it come after, in pack order). */
+  order: z.number().int().min(0).optional(),
+  /** Gramática: id of the verb whose page covers this card (the card is then not listed as a topic). */
+  verb: Id.optional(),
+  /** Gramática: fill-the-gap sentences for the exercises (4–8 per topic card). */
+  drills: z.array(GrammarDrill).min(1).optional(),
 });
 
 /** Recognition-only expression (e.g. Sicilian): the learner should understand it, not produce it. */
@@ -442,6 +488,51 @@ export const DialogueFile = z.object({
 });
 
 // ---------------------------------------------------------------------------------------------
+// Verbs: content/<lang>/verbs/*.json (Gramática)
+// ---------------------------------------------------------------------------------------------
+
+/** One conjugated form, in the person of its row. */
+export const VerbForm = z.object({
+  /** Shown as written ("sono", "sono andato/a", "va'"). */
+  form: Text,
+  /** Gloss in the person it translates (`es` / `ru` / `en`): "soy / estoy", "vaya (usted)". */
+  ...Translation,
+  /** Departs from the regular pattern of its conjugation (shown in another colour). */
+  irregular: z.boolean().optional(),
+  /** Spoken text when `form` is not speakable as written ("sono andato" for "sono andato/a"). */
+  say: Text.optional(),
+});
+
+export const VerbTense = z.object({
+  /** Exactly one form per `persons` entry of the tense (pack.json `grammar.tenses`), same order. */
+  forms: z.array(VerbForm).min(1),
+  /** One short sentence that uses a form of this tense. */
+  example: Reply,
+  /** One short gloss line about this tense (e.g. the auxiliary of the passato prossimo). */
+  notes: Gloss.optional(),
+});
+
+/** content/<lang>/verbs/*.json — one verb per file (`verbs/essere.json`). */
+export const VerbFile = z.object({
+  /** `verb.<slug>` (`verb.essere`); other packs prefix their language (`verb.fr-etre`). */
+  id: Id,
+  /** Position in the Gramática grid, unique among the pack's verbs (10, 20, 30…). */
+  order: z.number().int().min(0),
+  /** Infinitive as written and spoken ("essere"). */
+  infinitive: Text,
+  /** Gloss of the infinitive (`es` / `ru` / `en`): "ser / estar". */
+  ...Translation,
+  /** A verb learners must memorise (badge on the tile). */
+  irregular: z.boolean().optional(),
+  /** 1–2 short lines: what is special (auxiliary, false friends, typical uses). */
+  notes: Gloss.optional(),
+  /** Keyed by pack.json tense id; a tense the verb lacks in practice is left out. */
+  tenses: z.record(z.string(), VerbTense),
+  /** Extra fill-the-gap sentences, on top of the drills generated from the forms. */
+  drills: z.array(GrammarDrill).min(1).optional(),
+});
+
+// ---------------------------------------------------------------------------------------------
 // Stories: content/<lang>/stories/*.json
 // ---------------------------------------------------------------------------------------------
 
@@ -521,3 +612,4 @@ export type UnitFileInput = z.infer<typeof UnitFile>;
 export type ExtrasFileInput = z.infer<typeof ExtrasFile>;
 export type DialogueFileInput = z.infer<typeof DialogueFile>;
 export type StoryFileInput = z.infer<typeof StoryFile>;
+export type VerbFileInput = z.infer<typeof VerbFile>;

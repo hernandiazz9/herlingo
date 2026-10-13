@@ -53,6 +53,10 @@ src/lib/coach/         Prepárate client: API client + typed errors (CoachApiErr
 src/components/quick/  Modo rápido screen /rapido/ (under Jugar; `?ruta=<id>` opens a saved route in place): QuickView, RouteView, SavedRoutes.
 src/lib/progress/      On-device progress (`lang-lern:progress:<lang>`, versioned, tolerant parsing), settings,
                        path model; hooks in use-progress.ts. src/lib/srs/ = Leitner spaced repetition.
+src/lib/grammar/       Gramática "Leído" (docs/grammar.md): read counts per entry (`lang-lern:grammar:<lang>`) and the
+                       daily-capped reading XP (`markGrammarRead`, source "grammar"); hook in use-grammar-reads.ts.
+src/components/grammar/ Gramática pages (/gramatica/, nested under Frases): GrammarIndex (verb tiles + topics), VerbView,
+                       TopicView; GrammarCardBody = a grammar card's content, shared with the lesson tip (GrammarTip).
 src/lib/backup/        Perfil "Copia de seguridad": export/import every `lang-lern:*` key (except the coach access code)
                        as a JSON file; validates before writing, rolls back on a failed write.
 src/lib/league/        Liga (docs/league.md): config.ts (`leagueEnabled()`), client.ts (lazy supabase-js, `leagueRpc`),

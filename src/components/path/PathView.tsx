@@ -19,12 +19,14 @@ import { canPersist, dueItemIds, getProgress } from "@/lib/progress";
 import { buildPath, lessonHref, type PathLesson, type PathUnit } from "@/lib/progress/path";
 import { useAppPoints, useNow, useProgress } from "@/lib/progress/use-progress";
 import { BoltIcon, CheckIcon, FlameIcon, LockIcon, PlayIcon } from "./icons";
-import { ExpressionView, GrammarCardView, SideSheet } from "./SideSheet";
+import { ExpressionView, SideSheet } from "./SideSheet";
+import { GrammarIcon, grammarCounts, grammarCountsLabel } from "@/components/grammar/entry";
 
 export { WELCOME_HREF };
 
 const review = getTab("review");
 const dialogues = getTab("dialogues");
+const grammarTab = getTab("grammar");
 
 /** Home: stats, the next lesson, units with their lesson nodes, and side content. */
 export function PathView() {
@@ -40,7 +42,7 @@ function Path({ lang }: { lang: string }) {
   const { levels, level, setLevel } = useLevel(lang);
   const gloss = useGlossLang(lang);
   const path = useMemo(() => buildPath(pack, progress, level), [pack, progress, level]);
-  const [sheet, setSheet] = useState<"grammar" | "expressions" | null>(null);
+  const [sheet, setSheet] = useState<"expressions" | null>(null);
 
   // First launch: welcome + placement test (only when progress can be saved, or it would loop).
   useEffect(() => {
@@ -53,9 +55,9 @@ function Path({ lang }: { lang: string }) {
   const currentUnit = current ? getUnit(current.unitId, pack) : undefined;
   const main = path.units.filter((u) => !u.side);
   const side = path.units.filter((u) => u.side);
-  // A levelled pack shows the level's grammar cards, expressions and dialogues (unlevelled extras too).
+  // A levelled pack shows the level's grammar topics, expressions and dialogues (unlevelled extras too).
   const inLevel = (x: { level?: string }) => !level || !x.level || x.level === level;
-  const grammar = pack.grammar.filter(inLevel);
+  const grammar = grammarCounts(pack, level);
   const expressions = pack.expressions.filter(inLevel);
   const dialogueCount = pack.dialogues.filter(inLevel).length;
   const varieties = [...new Set(expressions.map((e) => glossOf(e.variety, gloss.lang).toLowerCase()))];
@@ -124,6 +126,15 @@ function Path({ lang }: { lang: string }) {
           title={dialogues.title}
           detail={`${dialogueCount} ${dialogueCount === 1 ? "conversación" : "conversaciones"}`}
         />
+        {grammar.verbs || grammar.topics ? (
+          <SectionCard
+            href={grammarTab.href}
+            icon={<GrammarIcon className="size-7" />}
+            title={grammarTab.title}
+            detail={grammarCountsLabel(grammar)}
+            className="col-span-2"
+          />
+        ) : null}
       </div>
 
       <RutaLeagueCard lang={lang} />
@@ -138,7 +149,7 @@ function Path({ lang }: { lang: string }) {
         <UnitSection key={u.unit.id} entry={u} gloss={gloss} />
       ))}
 
-      {side.length || grammar.length || expressions.length ? (
+      {side.length || expressions.length ? (
         <section aria-labelledby="side-title" className="flex flex-col gap-4 pt-2">
           <div className="flex flex-col gap-1">
             <h2 id="side-title" className="text-2xl font-extrabold tracking-tight text-ink">
@@ -147,9 +158,6 @@ function Path({ lang }: { lang: string }) {
             <p className="text-base text-ink-muted">Cuando quieras, sin orden: no bloquean la ruta.</p>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {grammar.length ? (
-              <SideButton emoji="📘" title="Fichas de gramática" count={grammar.length} onClick={() => setSheet("grammar")} />
-            ) : null}
             {expressions.length ? (
               <SideButton
                 emoji="👂"
@@ -165,13 +173,6 @@ function Path({ lang }: { lang: string }) {
         </section>
       ) : null}
 
-      {sheet === "grammar" ? (
-        <SideSheet title="Fichas de gramática" onClose={() => setSheet(null)}>
-          {grammar.map((card) => (
-            <GrammarCardView key={card.id} card={card} />
-          ))}
-        </SideSheet>
-      ) : null}
       {sheet === "expressions" ? (
         <SideSheet title={`Expresiones en ${varieties.join(" y ")}`} onClose={() => setSheet(null)}>
           <p className="text-base text-ink-muted">Para reconocerlas cuando las oigas, no hace falta que las digas.</p>
@@ -196,14 +197,29 @@ function Stat({ icon, value, label }: { icon: ReactNode; value: number; label: s
   );
 }
 
-/** Link card to a section that has no tab of its own (Repaso, Diálogos). */
-function SectionCard({ href, icon, title, detail, highlight = false }: { href: string; icon: ReactNode; title: string; detail: string; highlight?: boolean }) {
+/** Link card to a section that has no tab of its own (Repaso, Diálogos, Gramática). */
+function SectionCard({
+  href,
+  icon,
+  title,
+  detail,
+  highlight = false,
+  className,
+}: {
+  href: string;
+  icon: ReactNode;
+  title: string;
+  detail: string;
+  highlight?: boolean;
+  className?: string;
+}) {
   return (
     <Link
       href={href}
       className={cn(
         "pressable flex flex-col items-start gap-1 rounded-card border-2 p-4 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-lemon-deep",
         highlight ? "border-sea bg-sea-soft [--ledge:var(--sea-ledge)]" : "border-line bg-surface [--ledge:var(--line)]",
+        className,
       )}
     >
       <span className={highlight ? "text-sea-deep" : "text-ink-muted"}>{icon}</span>

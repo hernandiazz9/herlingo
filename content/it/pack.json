@@ -41,5 +41,13 @@
     { "id": "restaurante", "title": "En el restaurante", "emoji": "🍝" },
     { "id": "siciliano", "title": "Siciliano", "emoji": "🍋" },
     { "id": "gramatica", "title": "Gramática", "emoji": "📘" }
-  ]
+  ],
+  "grammar": {
+    "tenses": [
+      { "id": "presente", "title": "Presente", "persons": ["io", "tu", "lui / lei / Lei", "noi", "voi", "loro"], "speak": ["io", "tu", "lui", "noi", "voi", "loro"] },
+      { "id": "passato-prossimo", "title": "Passato prossimo", "persons": ["io", "tu", "lui / lei / Lei", "noi", "voi", "loro"], "speak": ["io", "tu", "lui", "noi", "voi", "loro"] },
+      { "id": "condizionale", "title": "Condicional", "persons": ["io", "tu", "lui / lei / Lei", "noi", "voi", "loro"], "speak": ["io", "tu", "lui", "noi", "voi", "loro"] },
+      { "id": "imperativo", "title": "Imperativo", "persons": ["(tu)", "(Lei)", "(noi)", "(voi)"] }
+    ]
+  }
 }

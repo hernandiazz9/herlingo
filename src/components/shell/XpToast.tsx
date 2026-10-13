@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { subscribeXpAwards, type XpSource } from "@/lib/progress";
 
 /** Sources without a summary screen of their own: their XP shows as a small floating "+N XP". */
-const TOASTED: Partial<Record<XpSource, string>> = { listen: "🎧", discover: "💡" };
+const TOASTED: Partial<Record<XpSource, string>> = { listen: "🎧", discover: "💡", grammar: "📖" };
 const SHOW_MS = 1600;
 
 interface Toast {

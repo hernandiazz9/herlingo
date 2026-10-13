@@ -11,6 +11,7 @@ import type {
   Dialogue,
   Expression,
   GrammarCard,
+  GrammarDrill,
   ImageRef,
   LessonItemKind,
   Level,
@@ -22,8 +23,16 @@ import type {
   StoryGap,
   StoryKeyword,
   Unit,
+  Verb,
+  VerbTense,
   Vocab,
 } from "./types";
+
+/** Prefix of every verb id (`verb.essere`; other packs add their language: `verb.fr-etre`). */
+export const VERB_ID_PREFIX = "verb.";
+
+/** The gap marker of a grammar drill sentence. */
+export const DRILL_GAP = "___";
 
 /** Story guidelines: outside these ranges `content:check` warns (never fails). */
 export const STORY_GUIDE = {
@@ -75,6 +84,8 @@ export interface PackSources {
   dialogues: SourceFile[];
   extras: SourceFile[];
   stories: SourceFile[];
+  /** `verbs/*.json` (Gramática); omitted = none. */
+  verbs?: SourceFile[];
   /**
    * Resolves a picture key to its public file (`scripts/content.ts` reads
    * `public/images/manifest.json`). Returns undefined when the file does not exist yet: the item
@@ -121,7 +132,7 @@ export function buildPack(src: PackSources): BuildResult {
 
   // One id namespace for everything in the pack.
   const owners = new Map<string, string>();
-  const kinds = new Map<string, LessonItemKind | "unit" | "lesson" | "dialogue" | "placement" | "story">();
+  const kinds = new Map<string, LessonItemKind | "unit" | "lesson" | "dialogue" | "placement" | "story" | "verb">();
   const claim = (id: string, kind: Parameters<typeof kinds.set>[1], file: string) => {
     const prev = owners.get(id);
     if (prev) errors.push(`${file}: duplicate id "${id}" (already used in ${prev})`);
@@ -207,12 +218,48 @@ export function buildPack(src: PackSources): BuildResult {
   };
   for (const s of meta.situations) checkGloss(s.title, `${src.meta.file}: situation "${s.id}"`, "title");
 
+  // Gramática (docs/content-guide.md, "Grammar reference"): the tenses verbs conjugate.
+  const tenseDefs = new Map<string, z.infer<typeof S.GrammarTense>>();
+  for (const t of meta.grammar?.tenses ?? []) {
+    const where = `${src.meta.file}: grammar tense "${t.id}"`;
+    if (tenseDefs.has(t.id)) errors.push(`${src.meta.file}: duplicate grammar tense "${t.id}"`);
+    tenseDefs.set(t.id, t);
+    checkGloss(t.title, where, "title");
+    if (t.speak && t.speak.length !== t.persons.length) {
+      errors.push(`${where}: "speak" has ${t.speak.length} entries but "persons" has ${t.persons.length} (one spoken pronoun per person)`);
+    }
+    for (const p of [...t.persons, ...(t.speak ?? [])]) checkStress(p, where);
+  }
+  const tenseList = [...tenseDefs.keys()].map((t) => `"${t}"`).join(", ");
+  const sameText = (a: string, b: string) => a.trim().toLocaleLowerCase() === b.trim().toLocaleLowerCase();
+  /** Grammar card / verb `drills` → runtime drills (audio key `<id>--g<n>`, full sentence spoken). */
+  const buildDrills = (id: string, drills: z.infer<typeof S.GrammarDrill>[] | undefined, where: string): GrammarDrill[] | undefined =>
+    drills?.map(({ text, ...d }, i) => {
+      const at = `${where} drill ${i + 1}`;
+      const gaps = text.match(/_+/g) ?? [];
+      if (gaps.length !== 1 || gaps[0] !== DRILL_GAP) {
+        errors.push(`${at}: "text" must hold the gap "${DRILL_GAP}" exactly once (found ${gaps.length ? gaps.map((g) => `"${g}"`).join(", ") : "none"})`);
+      }
+      if (d.distractors.some((x) => sameText(x, d.answer))) errors.push(`${at}: the answer "${d.answer}" is also among its distractors`);
+      if (new Set(d.distractors.map((x) => x.trim().toLocaleLowerCase())).size !== d.distractors.length) {
+        errors.push(`${at}: repeated distractor (needs ≥ 2 distinct ones)`);
+      }
+      checkTranslation(d, at);
+      const gap = text.indexOf(DRILL_GAP);
+      const before = gap < 0 ? text : text.slice(0, gap);
+      const after = gap < 0 ? "" : text.slice(gap + DRILL_GAP.length);
+      for (const t of [before + d.answer + after, ...d.distractors]) checkStress(t, at);
+      return { ...d, text: before + d.answer + after, before, after, audioKey: audioKey(id, `g${i + 1}`), voice: defaultVoice };
+    });
+
   const phrases: Phrase[] = [];
   const vocab: Vocab[] = [];
   const qa: QA[] = [];
   const grammar: GrammarCard[] = [];
   const expressions: Expression[] = [];
   const placement: PlacementQuestion[] = [];
+  /** Grammar cards' `verb` links, checked once every verb is registered. */
+  const cardVerbs: { where: string; verb: string }[] = [];
 
   const resolveImage = (key: string | undefined) => (key ? src.resolveImage?.(key) : undefined);
 
@@ -285,11 +332,14 @@ export function buildPack(src: PackSources): BuildResult {
       g.points.forEach((p, i) => checkGloss(p, where, `points ${i + 1}`));
       g.table?.forEach((row, r) => row.forEach((cell, c) => checkGlossMap(cell, where, `table cell ${r + 1}.${c + 1}`)));
       g.examples.forEach((e, i) => checkTranslation(e, `${where} example ${i + 1}`));
+      if (g.verb) cardVerbs.push({ where, verb: g.verb });
+      const { drills, ...card } = g;
       grammar.push({
-        ...g,
+        ...card,
         ...lv,
         kind: "grammar",
         examples: g.examples.map((e, i) => ({ ...e, audioKey: audioKey(g.id, `e${i + 1}`), voice: defaultVoice })),
+        ...(drills ? { drills: buildDrills(g.id, drills, where) } : {}),
       });
     }
     for (const x of f.expressions) {
@@ -475,6 +525,73 @@ export function buildPack(src: PackSources): BuildResult {
     rawStories.push({ file: s.file, story, raw: st });
   }
 
+  // Verbs (Gramática): one file each, every tense of pack.json `grammar.tenses` they have.
+  const verbs: Verb[] = [];
+  const verbOrders = new Map<number, string>();
+  for (const s of src.verbs ?? []) {
+    const v = parse(S.VerbFile, s, schemaErrors);
+    if (!v) continue;
+    const where = `${s.file}: verb "${v.id}"`;
+    claim(v.id, "verb", s.file);
+    if (!v.id.startsWith(VERB_ID_PREFIX)) errors.push(`${where}: id must start with "${VERB_ID_PREFIX}" (${VERB_ID_PREFIX}<slug>)`);
+    const clash = verbOrders.get(v.order);
+    if (clash) errors.push(`${where}: order ${v.order} already used by verb "${clash}"`);
+    verbOrders.set(v.order, v.id);
+    checkStress(v.infinitive, where);
+    checkTranslation(v, where);
+    checkGloss(v.notes, where, "notes");
+    const { tenses: rawTenses, drills, ...verb } = v;
+    if (!meta.grammar) errors.push(`${where}: verbs need pack.json "grammar" (the tenses they conjugate)`);
+    else {
+      for (const id of Object.keys(rawTenses)) {
+        if (!tenseDefs.has(id)) errors.push(`${where}: unknown tense "${id}" (pack.json grammar.tenses: ${tenseList})`);
+      }
+    }
+    if (Object.keys(rawTenses).length === 0) errors.push(`${where}: needs at least one tense`);
+    const tenses: VerbTense[] = [];
+    for (const def of tenseDefs.values()) {
+      const t = rawTenses[def.id];
+      if (!t) continue;
+      const at = `${where} tense "${def.id}"`;
+      if (t.forms.length !== def.persons.length) {
+        errors.push(`${at}: ${t.forms.length} form(s), expected ${def.persons.length} (one per pack.json persons: ${def.persons.join(", ")})`);
+      }
+      const forms = t.forms.map(({ say, ...f }, i) => {
+        const fat = `${at} form ${i + 1}`;
+        checkStress(f.form, fat);
+        checkStress(say, fat);
+        checkTranslation(f, fat);
+        const pronoun = def.speak?.[i];
+        const spoken = say ?? f.form;
+        return {
+          ...f,
+          person: def.persons[i] ?? "",
+          text: pronoun ? `${pronoun} ${spoken}` : spoken,
+          audioKey: audioKey(v.id, def.id, i + 1),
+          voice: defaultVoice,
+        };
+      });
+      checkStress(t.example.text, `${at} example`);
+      checkTranslation(t.example, `${at} example`);
+      checkGloss(t.notes, at, "notes");
+      tenses.push({
+        id: def.id,
+        forms,
+        example: { ...t.example, audioKey: audioKey(v.id, def.id, "e"), voice: defaultVoice },
+        ...(t.notes !== undefined ? { notes: t.notes } : {}),
+      });
+    }
+    verbs.push({
+      ...verb,
+      kind: "verb",
+      text: v.infinitive,
+      audioKey: audioKey(v.id),
+      voice: defaultVoice,
+      tenses,
+      ...(drills ? { drills: buildDrills(v.id, drills, where) } : {}),
+    });
+  }
+
   // A file that failed its schema was skipped: checking references now would only add
   // misleading "unknown id" errors. Fix the schema errors first.
   if (schemaErrors.length) return { pack: null, ids: owners, errors: [...schemaErrors, ...errors], warnings };
@@ -496,6 +613,10 @@ export function buildPack(src: PackSources): BuildResult {
   }
   for (const d of rawDialogueUnits) {
     if (d.unit && kinds.get(d.unit) !== "unit") errors.push(`${d.file}: dialogue "${d.id}": unknown unit "${d.unit}"`);
+  }
+  for (const { where, verb } of cardVerbs) {
+    const kind = kinds.get(verb);
+    if (kind !== "verb") errors.push(`${where}: verb "${verb}" ${kind ? `is a ${kind}, not a verb` : "is not a verb of this pack (verbs/*.json)"}`);
   }
   for (const { file, q } of rawPlacement) {
     const where = `${file}: placement "${q.id}"`;
@@ -572,8 +693,9 @@ export function buildPack(src: PackSources): BuildResult {
   units.sort((a, b) => a.order - b.order);
   dialogues.sort((a, b) => a.order - b.order || a.id.localeCompare(b.id));
   stories.sort((a, b) => a.order - b.order);
+  verbs.sort((a, b) => a.order - b.order);
 
-  const pack: Pack = { meta, units, dialogues, stories, phrases, vocab, qa, grammar, expressions, placement };
+  const pack: Pack = { meta, units, dialogues, stories, phrases, vocab, qa, grammar, expressions, placement, verbs };
   return { pack: errors.length ? null : pack, ids: owners, errors, warnings };
 }
 
@@ -590,6 +712,7 @@ export function packStats(p: Pack) {
     dialogues: p.dialogues.length,
     placement: p.placement.length,
     stories: p.stories.length,
+    verbs: p.verbs.length,
     explanations: p.phrases.filter((x) => x.explanation).length,
     pictures: p.vocab.filter((x) => x.image).length,
   };

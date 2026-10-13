@@ -202,6 +202,26 @@ export interface LearnCopy {
   perfectShort: string;
   orderMistakes: (n: number) => string;
 
+  // Gramática (reference pages)
+  grammarVerbs: string;
+  grammarTopics: string;
+  /** Badge on an irregular verb's tile; also read after an irregular form. */
+  grammarIrregular: string;
+  /** Under a tense table that has irregular forms (they are in another colour). */
+  grammarIrregularLegend: string;
+  /** Accessible name of the tense chips. */
+  grammarTenses: string;
+  grammarExample: string;
+  grammarEmpty: string;
+  /** The "Leído" button at the end of a verb or topic page. */
+  grammarRead: string;
+  /** The button after the tap: "Leído · ×4". */
+  grammarReadCount: (n: number) => string;
+  /** Under the button when the entry was read on an earlier visit. */
+  grammarReadBefore: (n: number) => string;
+  /** Read aloud with the "×n" badge of a tile or topic. */
+  grammarReadTimes: (n: number) => string;
+
   // Mic UI (lessons and dialogues)
   micStarting: string;
   micFinish: string;
@@ -450,6 +470,18 @@ function esBase(target: string, glossName: string): LearnCopy {
     orderMistakes: (n) =>
       n === 1 ? "Has fallado 1 vez, pero ya está en orden." : `Has fallado ${n} veces, pero ya está en orden.`,
 
+    grammarVerbs: "Verbos",
+    grammarTopics: "Temas",
+    grammarIrregular: "irregular",
+    grammarIrregularLegend: "En color, las formas irregulares.",
+    grammarTenses: "Tiempos verbales",
+    grammarExample: "Ejemplo",
+    grammarEmpty: "Todavía no hay gramática para este idioma.",
+    grammarRead: "Leído",
+    grammarReadCount: (n) => `Leído · ×${n}`,
+    grammarReadBefore: (n) => (n === 1 ? "Ya lo has leído 1 vez." : `Ya lo has leído ${n} veces.`),
+    grammarReadTimes: (n) => (n === 1 ? "leído 1 vez" : `leído ${n} veces`),
+
     micStarting: "Abriendo el micrófono…",
     micFinish: "Terminar y usar lo que he dicho",
     micWait: "Un momento…",
@@ -682,6 +714,18 @@ function ru({ lang }: Ctx): LearnCopy {
     orderHint: "Нажимай на фразы в том порядке, в каком всё происходит.",
     perfectShort: "Идеально!",
     orderMistakes: (n) => `Ошибок: ${n}, но теперь всё по порядку.`,
+
+    grammarVerbs: "Глаголы",
+    grammarTopics: "Темы",
+    grammarIrregular: "неправильный",
+    grammarIrregularLegend: "Цветом выделены неправильные формы.",
+    grammarTenses: "Времена",
+    grammarExample: "Пример",
+    grammarEmpty: "Для этого языка грамматики пока нет.",
+    grammarRead: "Прочитано",
+    grammarReadCount: (n) => `Прочитано · ×${n}`,
+    grammarReadBefore: (n) => `Уже прочитано раз: ${n}.`,
+    grammarReadTimes: (n) => `прочитано раз: ${n}`,
 
     micStarting: "Включаю микрофон…",
     micFinish: "Закончить и использовать сказанное",

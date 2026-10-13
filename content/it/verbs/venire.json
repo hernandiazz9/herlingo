@@ -1,0 +1,56 @@
+{
+  "id": "verb.venire",
+  "order": 50,
+  "infinitive": "venire",
+  "es": "venir",
+  "irregular": true,
+  "notes": "Es venir, pero a veces se traduce «ir»: «Vengo subito» = «Voy enseguida». «Venire da» = ser de: «Da dove viene?» (¿De dónde es?).",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "vengo", "es": "vengo", "irregular": true },
+        { "form": "vieni", "es": "vienes", "irregular": true },
+        { "form": "viene", "es": "viene", "irregular": true },
+        { "form": "veniamo", "es": "venimos" },
+        { "form": "venite", "es": "venís" },
+        { "form": "vengono", "es": "vienen", "irregular": true }
+      ],
+      "example": { "text": "Vieni con noi stasera?", "es": "¿Vienes con nosotros esta noche?" },
+      "notes": "Como en español, la raíz cambia (ven- / vien-) y aparece una «g» en «vengo» y «vengono»."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "sono venuto/a", "say": "sono venuto", "es": "vine / he venido" },
+        { "form": "sei venuto/a", "say": "sei venuto", "es": "viniste / has venido" },
+        { "form": "è venuto/a", "say": "è venuto", "es": "vino / ha venido" },
+        { "form": "siamo venuti/e", "say": "siamo venuti", "es": "vinimos / hemos venido" },
+        { "form": "siete venuti/e", "say": "siete venuti", "es": "vinisteis / habéis venido" },
+        { "form": "sono venuti/e", "say": "sono venuti", "es": "vinieron / han venido" }
+      ],
+      "example": { "text": "Siamo venuti in treno da Catania.", "es": "Hemos venido en tren desde Catania." },
+      "notes": "Con «essere»: el participio «venuto» concuerda: sono venuto / venuta."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "verrei", "es": "vendría" },
+        { "form": "verresti", "es": "vendrías" },
+        { "form": "verrebbe", "es": "vendría" },
+        { "form": "verremmo", "es": "vendríamos" },
+        { "form": "verreste", "es": "vendríais" },
+        { "form": "verrebbero", "es": "vendrían" }
+      ],
+      "example": { "text": "Verrei volentieri con voi.", "es": "Vendría con mucho gusto con vosotros." },
+      "notes": "Raíz «verr-» en todas las personas (no «venirei»)."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "vieni", "es": "ven" },
+        { "form": "venga", "es": "venga (usted)", "irregular": true },
+        { "form": "veniamo", "es": "vengamos" },
+        { "form": "venite", "es": "venid" }
+      ],
+      "example": { "text": "Venga con me, l'accompagno alla fermata.", "es": "Venga conmigo, la acompaño a la parada." },
+      "notes": "«Vieni» (tú) es igual que el presente. «Venga» es la forma de cortesía."
+    }
+  }
+}

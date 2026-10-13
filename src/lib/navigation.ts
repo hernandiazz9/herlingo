@@ -6,7 +6,7 @@
 /** Sections with their own button in the tab bar, in bar order. */
 export type TabId = "path" | "stories" | "play" | "phrasebook" | "profile";
 /** Every section with a heading: the tabs plus the ones reached from another tab's page. */
-export type SectionId = TabId | "review" | "dialogues" | "prepare" | "quick" | "league" | "microphone";
+export type SectionId = TabId | "review" | "dialogues" | "grammar" | "prepare" | "quick" | "league" | "microphone";
 
 export interface Section {
   id: SectionId;
@@ -36,6 +36,7 @@ export const TABS: readonly Tab[] = [
 const NESTED: readonly (Section & { parent: TabId })[] = [
   { id: "review", href: "/repaso/", label: "Repaso", title: "Repaso", parent: "path" },
   { id: "dialogues", href: "/dialogos/", label: "Diálogos", title: "Diálogos", parent: "path" },
+  { id: "grammar", href: "/gramatica/", label: "Gramática", title: "Gramática", parent: "phrasebook" },
   { id: "prepare", href: "/preparar/", label: "Prepárate", title: "Prepárate", parent: "play" },
   { id: "quick", href: "/rapido/", label: "Rápido", title: "Modo rápido", parent: "play" },
   { id: "league", href: "/liga/", label: "Liga", title: "Liga", parent: "profile" },
@@ -61,7 +62,7 @@ function owns(href: string, path: string): boolean {
 
 /**
  * The tab that owns a pathname: exact match for "/", prefix match for the rest.
- * Nested sections (Repaso, Diálogos, Prepárate, Modo rápido, Liga, Probar micrófono) light up their parent tab.
+ * Nested sections (Repaso, Diálogos, Gramática, Prepárate, Modo rápido, Liga, Probar micrófono) light up their parent tab.
  */
 export function activeTabFor(pathname: string): Tab | undefined {
   const path = normalizePath(pathname);

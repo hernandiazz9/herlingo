@@ -1,0 +1,56 @@
+{
+  "id": "verb.fare",
+  "order": 30,
+  "infinitive": "fare",
+  "es": "hacer",
+  "irregular": true,
+  "notes": "Es hacer y sale en muchísimas expresiones: «fare colazione» (desayunar), «fare una foto», «fa caldo» (hace calor).",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "faccio", "es": "hago", "irregular": true },
+        { "form": "fai", "es": "haces", "irregular": true },
+        { "form": "fa", "es": "hace" },
+        { "form": "facciamo", "es": "hacemos", "irregular": true },
+        { "form": "fate", "es": "hacéis" },
+        { "form": "fanno", "es": "hacen", "irregular": true }
+      ],
+      "example": { "text": "Che cosa fai stasera?", "es": "¿Qué haces esta noche?" },
+      "notes": "«Fa» también significa «hace» en el tiempo: «due giorni fa» (hace dos días)."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "ho fatto", "es": "hice / he hecho" },
+        { "form": "hai fatto", "es": "hiciste / has hecho" },
+        { "form": "ha fatto", "es": "hizo / ha hecho" },
+        { "form": "abbiamo fatto", "es": "hicimos / hemos hecho" },
+        { "form": "avete fatto", "es": "hicisteis / habéis hecho" },
+        { "form": "hanno fatto", "es": "hicieron / han hecho" }
+      ],
+      "example": { "text": "Ieri abbiamo fatto una gita a Cefalù.", "es": "Ayer hicimos una excursión a Cefalù." },
+      "notes": "Con «avere» y el participio irregular «fatto» (no concuerda)."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "farei", "es": "haría" },
+        { "form": "faresti", "es": "harías" },
+        { "form": "farebbe", "es": "haría" },
+        { "form": "faremmo", "es": "haríamos" },
+        { "form": "fareste", "es": "haríais" },
+        { "form": "farebbero", "es": "harían" }
+      ],
+      "example": { "text": "Ci farebbe una foto, per favore?", "es": "¿Nos haría una foto, por favor?" },
+      "notes": "Raíz «far-» (se pierde la «e» del infinitivo)."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "fa'", "es": "haz", "irregular": true },
+        { "form": "faccia", "es": "haga (usted)", "irregular": true },
+        { "form": "facciamo", "es": "hagamos" },
+        { "form": "fate", "es": "haced" }
+      ],
+      "example": { "text": "Mi faccia sapere, per favore.", "es": "Avíseme, por favor." },
+      "notes": "Para «tú» también se dice «fai». «Faccia attenzione» = tenga cuidado."
+    }
+  }
+}

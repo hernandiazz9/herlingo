@@ -35,6 +35,8 @@ Starting point: Prepárate (`docs/coach.md`, `api/coach/`, `src/lib/coach/`,
 
 ## 2. Grammar as a reference to read, not Duolingo games (2026-10-12)
 
+→ Designed with Hernán on 2026-10-12: docs/grammar.md, plans/014-gramatica.md.
+
 **What he does NOT want**: Duolingo-style games, the same mini-exercises again and again,
 grammar hidden inside games where you never get to *see* the verb.
 

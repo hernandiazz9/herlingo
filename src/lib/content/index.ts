@@ -12,8 +12,11 @@
  * build and typecheck; git-ignored). Never import JSON from `content/` directly.
  */
 import bundle from "./generated/packs.json";
+import { grammarPlayables } from "./grammar";
 import type {
   Dialogue,
+  GrammarCard,
+  GrammarTenseDef,
   ImageRef,
   Lesson,
   LessonItem,
@@ -26,6 +29,7 @@ import type {
   Story,
   StoryKeyword,
   Unit,
+  Verb,
   Vocab,
 } from "./types";
 
@@ -104,6 +108,7 @@ interface Index {
   dialogues: Map<string, Dialogue>;
   stories: Map<string, Story>;
   situations: Map<string, Situation>;
+  verbs: Map<string, Verb>;
 }
 
 const indexes = new WeakMap<Pack, Index>();
@@ -122,6 +127,7 @@ function index(pack: Pack): Index {
       dialogues: new Map(pack.dialogues.map((d) => [d.id, d])),
       stories: new Map(pack.stories.map((s) => [s.id, s])),
       situations: new Map(pack.meta.situations.map((s) => [s.id, s])),
+      verbs: new Map(pack.verbs.map((v) => [v.id, v])),
     };
     indexes.set(pack, idx);
   }
@@ -182,13 +188,19 @@ export function findStoryPack(id: string): Pack | undefined {
   return findPack((idx) => idx.stories.has(id));
 }
 
+/** The pack that owns Gramática entry `id` (a verb or a grammar card), or undefined. */
+export function findGrammarPack(id: string): Pack | undefined {
+  return findPack((idx) => idx.verbs.has(id) || idx.items.get(id)?.kind === "grammar");
+}
+
 export function getSituation(id: string, pack: Pack = getPack()): Situation | undefined {
   return index(pack).situations.get(id);
 }
 
 /**
- * Every playable text in the pack, deduplicated by audio key. Used by the mp3 generator (T03);
- * the UI normally passes items straight to `speak()`.
+ * Every playable text in the pack, deduplicated by audio key (Gramática verbs and drills
+ * included). Mirrors `planAudio()` in scripts/audio/plan.ts, which writes the mp3s; the UI
+ * normally passes items straight to `speak()`.
  */
 export function listPlayables(pack: Pack = getPack()): Playable[] {
   const out = new Map<string, Playable>();
@@ -218,7 +230,58 @@ export function listPlayables(pack: Pack = getPack()): Playable[] {
       q.options.forEach(add);
     }
   }
+  grammarPlayables(pack).forEach(add);
   return [...out.values()];
+}
+
+// ---------------------------------------------------------------------------------------------
+// Gramática (docs/grammar.md; format: docs/content-guide.md, "Grammar reference")
+// ---------------------------------------------------------------------------------------------
+
+/** A Gramática page: a verb, or a topic (a grammar card). */
+export type GrammarEntry = { kind: "verb"; verb: Verb } | { kind: "topic"; card: GrammarCard };
+
+/** The pack's verbs in grid order (`order`); empty for a pack without verbs. */
+export function listVerbs(pack: Pack = getPack()): Verb[] {
+  return pack.verbs;
+}
+
+export function getVerb(id: string, pack: Pack = getPack()): Verb | undefined {
+  return index(pack).verbs.get(id);
+}
+
+/** The tenses the pack's verbs conjugate (pack.json `grammar.tenses`), in display order; [] without. */
+export function getGrammarTenses(pack: Pack = getPack()): GrammarTenseDef[] {
+  return pack.meta.grammar?.tenses ?? [];
+}
+
+/**
+ * The Topics list: the pack's grammar cards by `order` (cards without it after, in pack order),
+ * minus cards with `verb` (their verb tile covers them). With `level` (a levelled pack), only that
+ * level's cards and unlevelled ones (extras), as the Ruta shows them.
+ */
+export function listGrammarTopics(pack: Pack = getPack(), level?: Level | null): GrammarCard[] {
+  return pack.grammar
+    .filter((c) => !c.verb && (!level || !c.level || c.level === level))
+    .sort((a, b) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER));
+}
+
+/**
+ * A verb or a grammar card by id, or undefined. Every grammar card resolves (also one with `verb`,
+ * which is not listed as a topic).
+ */
+export function getGrammarEntry(id: string, pack: Pack = getPack()): GrammarEntry | undefined {
+  const verb = index(pack).verbs.get(id);
+  if (verb) return { kind: "verb", verb };
+  const card = index(pack).items.get(id);
+  return card?.kind === "grammar" ? { kind: "topic", card } : undefined;
+}
+
+/** True when entry `id` has exercises: a verb (its forms), or a grammar card with `drills`. */
+export function isDrillable(id: string, pack: Pack = getPack()): boolean {
+  const entry = getGrammarEntry(id, pack);
+  if (!entry) return false;
+  return entry.kind === "verb" || (entry.card.drills?.length ?? 0) > 0;
 }
 
 /** Every story, in trip order (`order`). */

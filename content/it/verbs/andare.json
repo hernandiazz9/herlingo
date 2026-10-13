@@ -1,0 +1,56 @@
+{
+  "id": "verb.andare",
+  "order": 40,
+  "infinitive": "andare",
+  "es": "ir",
+  "irregular": true,
+  "notes": "Es ir: «vado a Palermo», «vado in treno». En el passato prossimo usa «essere» como auxiliar.",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "vado", "es": "voy", "irregular": true },
+        { "form": "vai", "es": "vas", "irregular": true },
+        { "form": "va", "es": "va", "irregular": true },
+        { "form": "andiamo", "es": "vamos" },
+        { "form": "andate", "es": "vais" },
+        { "form": "vanno", "es": "van", "irregular": true }
+      ],
+      "example": { "text": "Vado a Palermo in treno.", "es": "Voy a Palermo en tren." },
+      "notes": "Solo «andiamo» y «andate» conservan la raíz «and-»; el resto usa «va-»."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "sono andato/a", "say": "sono andato", "es": "fui / he ido" },
+        { "form": "sei andato/a", "say": "sei andato", "es": "fuiste / has ido" },
+        { "form": "è andato/a", "say": "è andato", "es": "fue / ha ido" },
+        { "form": "siamo andati/e", "say": "siamo andati", "es": "fuimos / hemos ido" },
+        { "form": "siete andati/e", "say": "siete andati", "es": "fuisteis / habéis ido" },
+        { "form": "sono andati/e", "say": "sono andati", "es": "fueron / han ido" }
+      ],
+      "example": { "text": "Ieri sono andato a Taormina in autobus.", "es": "Ayer fui a Taormina en autobús." },
+      "notes": "Con «essere»: el participio concuerda: sono andato / andata, siamo andati / andate."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "andrei", "es": "iría" },
+        { "form": "andresti", "es": "irías" },
+        { "form": "andrebbe", "es": "iría" },
+        { "form": "andremmo", "es": "iríamos" },
+        { "form": "andreste", "es": "iríais" },
+        { "form": "andrebbero", "es": "irían" }
+      ],
+      "example": { "text": "Andrei volentieri a Ortigia.", "es": "Iría encantado a Ortigia." },
+      "notes": "Raíz «andr-» en todas las personas (no «andarei»)."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "va'", "es": "ve", "irregular": true },
+        { "form": "vada", "es": "vaya (usted)", "irregular": true },
+        { "form": "andiamo", "es": "vamos" },
+        { "form": "andate", "es": "id" }
+      ],
+      "example": { "text": "Vada dritto fino al semaforo.", "es": "Siga recto hasta el semáforo." },
+      "notes": "Para «tú» también se dice «vai». Lo oirás sobre todo en indicaciones: «Vada dritto»."
+    }
+  }
+}
