@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 21:11Z 💻
+- Updated: 2026-10-13 21:23Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: T195 (routes → episodes, De tus rutas, Escuchar seguidos, XP), then T196; T197 = Hernán's check after a deploy
+- Next step: T196 («Escuchar todo» on the joined player), then a deploy (Hernán's OK) for T197
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
 - Needs Hernán: OK to fast-forward main to the deployed code (T192–T193) — not answered yet
 
@@ -153,7 +153,7 @@ Worktree setup: npm ci
 - Outcome: generateEpisode + parseEpisode (tolerant) + lang-lern:coach:episodes:<lang> + useSavedEpisodes; background download; pruneCoachAudio keeps episode/route/dialogue episode lines; /deporte/ form (placeholder 'Ej.: ir a un supermercado'), Mis episodios + delete; new episode opens in the player with a saved notice; usage fields parsed · 6d6160ad · verify ✓ 💻 · fake end-to-end ✓ (it fixture ≈ 6 min) · not checked: visuals, real episode, device
 
 ## T195 — Episodes from routes, «Escuchar seguidos» and XP
-- Status: running (attempt 1 · 💻 · agent aa039354ce92863d9 · since 21:11Z)
+- Status: done
 - Depends on: T194
 - Where: any
 - Goal: Every saved Modo rápido route becomes a free episode, several episodes can play as one long file, and a finished episode earns XP.
@@ -164,7 +164,7 @@ Worktree setup: npm ci
   - «Escuchar seguidos» on a section joins its fully downloaded episodes in order (`joinEpisodes`), with chapters across episodes.
   - Playing ≥ 90 % of an episode records 10 XP, source `"sport"`, once per episode per day, at most 3 a day (state in an existing-compatible way: a new `lang-lern:` key only if needed, versioned).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: «🏃 Modo deporte» on saved routes → ?ep=route:<id>; De tus rutas section; «Escuchar seguidos» (?seguidos=mis|rutas|app, downloaded episodes only, joined); XP 10 'sport' at 90 % actually played, once/episode/day, ≤ 3/day via countPlay (no new key) · 9418fa65 · verify ✓ 💻 · tsx checks ✓ · not checked: visuals, joined lock-screen jumps, XP while locked
 
 ## T196 — «Escuchar todo» keeps playing with the screen locked
 - Status: pending
@@ -208,6 +208,7 @@ Worktree setup: npm ci
 - [ ] T190 @93851d69 — /deporte/ list + player: light + dark, iPhone width, Jugar card (below the topic grid), preparing state, step highlight, Guardar mp3 (queued 2026-10-13 💻)
 - [ ] T198 @e4c0de27 — Jugar: Modo deporte card right under «Prepárate para una situación», light + dark (queued 2026-10-13 💻)
 - [ ] T194 @6d6160ad — /deporte/: form (pending, limit, offline), Mis episodios + delete dialog, new AI episode opening in the player with its notice; light + dark (queued 2026-10-13 💻)
+- [ ] T195 @9418fa65 — route «🏃 Modo deporte» button; /deporte/ De tus rutas; «Escuchar seguidos» joined view; '+10 XP' notice; light + dark (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -243,6 +244,8 @@ Worktree setup: npm ci
 - 2026-10-13 T193: as in route.ts, an Episode.parse failure after billing answers 500 internal instead of 502
 - 2026-10-13 T194: src/components/sport/generation.ts duplicates the job runner of components/coach/generation.ts; share one
 - 2026-10-13 T194: the Prepárate usage panel (AiUsagePanel) does not show the episode counters yet (the client parses them)
+- 2026-10-13 T195: src/lib/sport/downloaded.ts copies generated.ts's private cache path; export an 'is cached' helper from src/lib/audio/generated.ts
+- 2026-10-13 T195: XpToast does not list source 'sport' (no floating +XP; the player shows its own notice)
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -266,3 +269,4 @@ Worktree setup: npm ci
 - 2026-10-13 21:01Z 💻 T198 done by the writer (card under EntryCard) → e4c0de27 · verify ✓
 - 2026-10-13 21:10Z 💻 T194 done · worktree-agent-ae24454bb01bbcc72 → 6d6160ad · verify ✓
 - 2026-10-13 21:11Z 💻 T195 launched · attempt 1 · agent aa039354ce92863d9
+- 2026-10-13 21:23Z 💻 T195 done · worktree-agent-aa039354ce92863d9 → 9418fa65 · verify ✓
