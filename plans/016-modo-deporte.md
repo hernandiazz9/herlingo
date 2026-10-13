@@ -138,7 +138,7 @@ Worktree setup: npm ci
 - Outcome: POST /api/coach/episode/ (checks/billing/refunds as /route/, reserveEpisode COACH_EPISODE_DAILY_LIMIT 5), /usage/ episodes + avgEpisodeUsd + episodesToday, per-call deadlineMs (episode 55 s), [coach] episode latency/tokens log · 97035912 · verify ✓ 💻 · fake curl ✓ (401/400/200×5/429, usage) · not checked: real Claude call, Upstash counters
 
 ## T194 — AI episodes on the device: create, save, download, list, delete
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ae24454bb01bbcc72 · since 20:59Z)
 - Depends on: T193, T191
 - Where: any
 - Goal: From `/deporte/` Hernán types a situation, gets an episode saved with its audio downloaded in the background, and finds it under "Mis episodios".
@@ -246,3 +246,4 @@ Worktree setup: npm ci
 - 2026-10-13 17:43Z 💻 T193 done · worktree-agent-ac9bbfe0cf04a6319 → 97035912 · verify ✓
 - 2026-10-13 20:18Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ ead2b57a, includes T192–T193 not yet in main) → https://langlern-iota.vercel.app
 - 2026-10-13 20:59Z 💻 T191 done (Hernán: "me fue bien"); next: AI episodes ("agreguemos lo de ia")
+- 2026-10-13 20:59Z 💻 T194 launched · attempt 1 · agent ae24454bb01bbcc72
