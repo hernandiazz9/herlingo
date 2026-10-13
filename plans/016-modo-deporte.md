@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 16:40Z 💻
+- Updated: 2026-10-13 16:49Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: T187, then T188–T190 one at a time; T191 is Hernán's iPhone check (gate)
-- Gotchas: integrate in ../lang_lern-deporte (git worktree of lang_lern); agent worktrees come from the session's repo → step 1 resets them to the plan's HEAD; agents force fake mode (COACH_FAKE=1, keys emptied)
+- Next step: T188, then T189–T190 one at a time; T191 is Hernán's iPhone check (gate)
+- Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
 
 ## Shared contract (all tasks read this)
 
@@ -29,7 +29,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T187 — Slow lines from the voice and byte access to generated audio
-- Status: running (attempt 1 · 💻 · agent a8150887220bfacf0 · since 16:40Z)
+- Status: done
 - Depends on: none
 - Where: any
 - Goal: `/api/coach/tts/` can render a line at rate −30 % and the client can get any generated line as bytes (cache first), so episodes can include slow versions and be joined.
@@ -42,7 +42,7 @@ Worktree setup: npm ci
   - `COACH_TTS_DAILY_LIMIT` default 2000 (docs and `.env.example` comment updated).
   - Fake check: `/api/coach/tts/` with `slow: true` → 200; an unknown voice → 400; a non-boolean `slow` → 400.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: tts slow:true (rate -30%, 400 on non-boolean), generatedPlayable(…, { slow }) own key (normal keys unchanged), generatedBytes(playable) cache→source→null, COACH_TTS_DAILY_LIMIT 2000 · 58fa3d04 · verify ✓ 💻 · fake curl ✓ · not checked: real slow voice, device
 
 ## T188 — Episode model, compiler and free episodes from dialogues and routes
 - Status: pending
@@ -208,8 +208,11 @@ Worktree setup: npm ci
 ## Proposals (new scope)
 - 2026-10-13 plan: Episodes from the pack's units (key phrases of a lesson as a short listening review), no AI.
 - 2026-10-13 plan: Narrator for other gloss languages (only `es` today).
+- 2026-10-13 T187: a slow line without mp3 falls back to the device voice at speak()'s rate, not slow (rate set in src/lib/audio/index.ts)
+- 2026-10-13 T187: per-line load deadline 8 s (LOAD_DEADLINE_MS) and request timeout 7 s (SPEECH_TIMEOUT_MS): preparing an episode with real slow lines may need retries
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
 - 2026-10-13 16:40Z 💻 approved by Hernán ("si comienza con el plan")
 - 2026-10-13 16:40Z 💻 T187 launched · attempt 1 · agent a8150887220bfacf0
+- 2026-10-13 16:49Z 💻 T187 done · worktree-agent-a8150887220bfacf0 → 58fa3d04 · verify ✓
