@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:09Z 💻
+- Updated: 2026-10-13 11:16Z 💻
 - Writer: 💻 desktop
 - Branch: plan-014-gramatica (local, not pushed)
-- Next step: T172 running; then T173 (Opus, blind review), T174 audio (pc)
+- Next step: T173 running; then T174 audio (pc, here)
 
 ## Shared contract (all tasks read this)
 
@@ -141,7 +141,7 @@ Worktree setup: npm ci
 - Outcome: gramatica-temi.json: articoli det/indet, preposizioni, preposizioni articolate (order 30–60, 8 drills each; elided answers include the noun) · 7965ff94 · verify ✓ 💻 · not checked: accuracy (T173)
 
 ## T172 — Italian topics: pronouns, plus the existing cards
-- Status: running (attempt 1 · 💻 · agent a1d526e70e81209cf · since 11:09Z)
+- Status: done
 - Depends on: T163, T169, T170, T171
 - Where: any
 - Goal: Cards `gram.pronomi-diretti` (70), `gram.pronomi-indiretti` (80), `gram.ci-ne` (90: "c'è", "ci vado", "ne vorrei due", "ce l'ho") with drills, appended to `gramatica-temi.json`; in `gramatica.json`: `order` + 4–6 drills on `gram.tu-lei` (10) and `gram.vorrei` (20), and `verb` links on `gram.avere`, `gram.volere`, `gram.potere`, `gram.andare`.
@@ -150,10 +150,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓; `listGrammarTopics(getPack("it"))` (one-off tsx) lists exactly 9 topics in order 10–90 and none of the verb cards.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: pronomi diretti/indiretti, ci-ne (70–90) in gramatica-temi.json; order + drills on tu-lei (10) and vorrei (20); verb links on avere/volere/potere/andare; 9 topics, 12 verbs · 53ce69e7 · verify ✓ 💻 · not checked: accuracy (T173)
 
 ## T173 — Blind accuracy review of the Italian grammar content
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a3b557d8bb2ca46fb · since 11:16Z)
 - Depends on: T169, T170, T172
 - Where: any
 - Goal: For each of the 12 verbs and 4 tenses, first write the expected forms from your own knowledge, then compare with the file; check every drill (exactly one right answer, distractors really wrong), glosses and accents. Fix only certain errors; list every doubt (form, file, why) in the final message for Hernán.
@@ -206,6 +206,7 @@ Worktree setup: npm ci
 - 2026-10-13 T169: tense-wide irregularity (participles, future/conditional stems) goes in tense notes, not per form; passato glosses give preterite / perfect. (agent)
 - 2026-10-13 T171: normaliser ignores apostrophes, so near-duplicate options were replaced; new topic cards are in no lesson (Gramática only). (agent)
 - 2026-10-13 T168: lessons drill any read entry (due or not); one drill per entry, at most half the production slots; pack lessons only. (agent)
+- 2026-10-13 T172: drills avoid register-only distractors; elided answers carry the next word. (agent)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -235,3 +236,5 @@ Worktree setup: npm ci
 - 2026-10-13 11:09Z 💻 T171 done → 7965ff94 · verify ✓
 - 2026-10-13 11:09Z 💻 T168 done → fd818012 · verify ✓
 - 2026-10-13 11:09Z 💻 T172 launched (Sonnet) · agent a1d526e70e81209cf
+- 2026-10-13 11:16Z 💻 T172 done → 53ce69e7 · verify ✓
+- 2026-10-13 11:16Z 💻 T173 launched (Opus) · agent a3b557d8bb2ca46fb
