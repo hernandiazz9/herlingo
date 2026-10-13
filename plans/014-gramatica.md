@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:42Z 💻
-- Writer: released 06:42Z by 💻 → continue on 💻 or ☁️
+- Updated: 2026-10-13 11:02Z 💻
+- Writer: 💻 desktop
 - Branch: plan-014-gramatica (local, not pushed)
-- Next step: paused for tokens. Resume: T168, T169–T171 (Sonnet), then T172, T173, T174 (pc)
+- Next step: T169 + T170 running (Sonnet); then T171, T168, T172, T173, T174 (pc)
 
 ## Shared contract (all tasks read this)
 
@@ -105,7 +105,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T169 — Italian verbs: avere, fare, andare, venire, stare, volere
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a54946f4499d23216 · since 10:57Z)
 - Depends on: T163
 - Where: any
 - Goal: Six verb files in the format of `content/it/verbs/essere.json`: the four tenses (imperative only where it is used), glosses in Spain Spanish, `irregular` per the guide, a short trip-useful example per tense (trains, bars, directions, small talk), `notes` for auxiliaries and traps.
@@ -117,7 +117,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T170 — Italian verbs: potere, dovere, sapere, dire, prendere
-- Status: pending
+- Status: done
 - Depends on: T163
 - Where: any
 - Goal: Same as T169 for these five (potere and dovere without imperative; prendere with participle "preso").
@@ -126,10 +126,10 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ (12 verbs once T169 is in).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: potere 70, dovere 80, sapere 90, dire 100, prendere 110 (no imperative for potere/dovere; di' say 'di') · 4832fc7c · verify ✓ 💻 · not checked: accuracy (T173)
 
 ## T171 — Italian topics: articles and prepositions
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a958b89e98253e87b · since 11:02Z)
 - Depends on: T163
 - Where: any
 - Goal: New grammar cards with tables, examples and 4–8 drills each: `gram.articoli-determinativi` (order 30), `gram.articoli-indeterminativi` (40), `gram.preposizioni` (50: a/in/da/di/su/per/con/tra with trip uses: "a Palermo", "in Sicilia", "in treno", "da Catania"), `gram.preposizioni-articolate` (60: al, del, dal, nel, sul… table). Article drills use words from the pack's vocab.
@@ -201,6 +201,7 @@ Worktree setup: npm ci
 - 2026-10-13 T165: every grammar card gets a page (verb-linked ones not listed); slow-audio snail button per row; chips shown even with one tense; levelled packs show current level only; grammarHref() in src/components/grammar/GrammarScreen.tsx. (agent)
 - 2026-10-13 T167: Repaso drills come on top of the session size (2 per due entry); every read (not only the first) adds a missing drillable to SRS; startReviewing(lang, id) in progress. (agent)
 - 2026-10-13 T166: XpToast shows grammar XP (one line outside scope); Ruta 'Para saber más' only with side units or expressions. (agent)
+- 2026-10-13 T170: per-form irregular only where a tense mixes regular and irregular forms; uniform irregularity explained in tense notes. (agent)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -221,3 +222,7 @@ Worktree setup: npm ci
 - 2026-10-13 06:38Z 💻 T168 launched · attempt 1 · agent af8d21a232fa84515
 - 2026-10-13 06:40Z 💻 T168 stopped at Hernán's request (tokens); worktree gone, back to pending
 - 2026-10-13 06:42Z 💻 T166 done → 76c17b63 · verify ✓
+- 2026-10-13 10:57Z 💻 resumed by Hernán; T169 launched (Sonnet) · agent a54946f4499d23216
+- 2026-10-13 10:57Z 💻 T170 launched (Sonnet) · agent aaffd503674f180f5; verb orders: T169 20–65, T170 70–110
+- 2026-10-13 11:02Z 💻 T170 done → 4832fc7c · verify ✓
+- 2026-10-13 11:02Z 💻 T171 launched (Sonnet) · agent a958b89e98253e87b
