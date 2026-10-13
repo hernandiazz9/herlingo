@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:03Z 💻
+- Updated: 2026-10-13 11:10Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
 - Branch: plan-015-modo-rapido · pushed
-- Next step: integrate T179 when its agent finishes, then launch T180 (one agent at a time)
+- Next step: integrate T180 when its agent finishes; then only T181 remains (Hernán on the iPhone)
 - Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
 
 ## Shared contract (all tasks read this)
@@ -86,7 +86,7 @@ Worktree setup: npm ci
 - Outcome: /rapido/ (NESTED quick under Jugar), Mis rutas, ?ruta= route view: chat bubbles, 🔊/🐌, «Más», delete with confirm · 2c3ecad3 · verify ✓ 💻 · not checked: both themes, 375 px, audio, focus, back button
 
 ## T179 — Quick form and generation
-- Status: running (attempt 1 · 💻 · agent a4ed73769cf3d33c3 · since 11:03Z)
+- Status: done
 - Depends on: T178
 - Where: any
 - Goal: Typing a situation on `/rapido/` produces, saves and opens a route.
@@ -98,10 +98,10 @@ Worktree setup: npm ci
   - After a route: "Te quedan N rutas hoy" from `usage.today`.
   - Fake end-to-end of the API with `PORT=3107 npm run dev:coach` + curl still green; the UI path checked by reading the code (no browser).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: QuickForm (500 limit, Prepárame, pending, offline, AccessCard on 401), generation.ts generalised (startRoute/useRouteGeneration), saved/not-saved notice + 'Te quedan N rutas hoy', Rutas rápidas row in AiUsagePanel · db9e8c63 · verify ✓ 💻 · fake curl ✓ · not checked: UI on a phone (leave during request, 401, offline)
 
 ## T180 — Floating ⚡ button
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a72726e9ceb59ebaf · since 11:10Z)
 - Depends on: T178
 - Where: any
 - Goal: One tap to Modo rápido from every screen.
@@ -131,6 +131,7 @@ Worktree setup: npm ci
 
 ## Visual checks queue
 - [ ] T178 @2c3ecad3 — /rapido/ Mis rutas + a route (?ruta=): light + dark, iPhone width, 🔊/🐌, «Más», delete, back (queued 2026-10-13 💻)
+- [ ] T179 @db9e8c63 — /rapido/ form: type → Prepárame → route opens with notice; leave mid-request and come back; offline notice; Rutas rápidas row in Prepárate usage (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-13 plan: Access = one global floating ⚡ button (no cards on Ruta, Frasario or Jugar). (Hernán)
@@ -149,6 +150,7 @@ Worktree setup: npm ci
 - 2026-10-13 T175: GeneratedRoute title accepts ≤80 chars while the prompt asks ≤60 (pack-style headroom so a long title isn't a paid 502)
 - 2026-10-13 T177: docs/coach.md Client tables still place pruneCoachAudio in packs.ts (now saved-audio.ts) and omit the routes key
 - 2026-10-13 T177: the offline error message of generateRoute still says 'situaciones'; the route screen's own offline copy must come from the UI (T179)
+- 2026-10-13 T179: offline, AccessCard's code check shows the client's 'situaciones' message (shared client copy)
 
 ## Log
 - 2026-10-12 22:26Z 💻 plan written from the interview; not approved yet
@@ -165,3 +167,5 @@ Worktree setup: npm ci
 - 2026-10-13 10:57Z 💻 T178 launched · attempt 1 · agent a30137a72c732fb63
 - 2026-10-13 11:03Z 💻 T178 done · worktree-agent-a30137a72c732fb63 → 2c3ecad3 · verify ✓
 - 2026-10-13 11:03Z 💻 T179 launched · attempt 1 · agent a4ed73769cf3d33c3
+- 2026-10-13 11:10Z 💻 T179 done · worktree-agent-a4ed73769cf3d33c3 → db9e8c63 · verify ✓
+- 2026-10-13 11:10Z 💻 T180 launched · attempt 1 · agent a72726e9ceb59ebaf
