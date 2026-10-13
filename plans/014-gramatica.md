@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:02Z 💻
+- Updated: 2026-10-13 11:03Z 💻
 - Writer: 💻 desktop
 - Branch: plan-014-gramatica (local, not pushed)
 - Next step: T169 + T170 running (Sonnet); then T171, T168, T172, T173, T174 (pc)
@@ -92,7 +92,7 @@ Worktree setup: npm ci
 - Outcome: grammarDrills() (fill-gap from drills + verb forms, 2 tenses per verb, ≤4 options), startReviewing on read, dueItemIds/SRS accept drillable ids, Repaso 2 drills per due entry; 78/78 non-grammar sessions unchanged · 57b5233e · verify ✓ 💻 · not checked: visual (queued)
 
 ## T168 — Grammar drills in lessons
-- Status: pending
+- Status: running (attempt 2 · 💻 · agent a683ae414881fd113 · since 11:03Z)
 - Depends on: T167
 - Where: any
 - Goal: Lessons give up to 2 production slots to drills from read drillable entries (lapses first, then lowest box, then least read); same session length; no reads → identical sessions.
@@ -105,7 +105,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T169 — Italian verbs: avere, fare, andare, venire, stare, volere
-- Status: running (attempt 1 · 💻 · agent a54946f4499d23216 · since 10:57Z)
+- Status: done
 - Depends on: T163
 - Where: any
 - Goal: Six verb files in the format of `content/it/verbs/essere.json`: the four tenses (imperative only where it is used), glosses in Spain Spanish, `irregular` per the guide, a short trip-useful example per tense (trains, bars, directions, small talk), `notes` for auxiliaries and traps.
@@ -114,7 +114,7 @@ Worktree setup: npm ci
 - Done when:
   - `npm run content:check` → ✓ with 7 Italian verbs.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: avere 20, fare 30, andare 40, venire 50, stare 60, volere 65 (no imperative for volere; fa'/va'/sta' with fai/vai/stai in notes) · 048f7e61 · verify ✓ 💻 · not checked: accuracy (T173)
 
 ## T170 — Italian verbs: potere, dovere, sapere, dire, prendere
 - Status: done
@@ -202,6 +202,7 @@ Worktree setup: npm ci
 - 2026-10-13 T167: Repaso drills come on top of the session size (2 per due entry); every read (not only the first) adds a missing drillable to SRS; startReviewing(lang, id) in progress. (agent)
 - 2026-10-13 T166: XpToast shows grammar XP (one line outside scope); Ruta 'Para saber más' only with side units or expressions. (agent)
 - 2026-10-13 T170: per-form irregular only where a tense mixes regular and irregular forms; uniform irregularity explained in tense notes. (agent)
+- 2026-10-13 T169: tense-wide irregularity (participles, future/conditional stems) goes in tense notes, not per form; passato glosses give preterite / perfect. (agent)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -226,3 +227,5 @@ Worktree setup: npm ci
 - 2026-10-13 10:57Z 💻 T170 launched (Sonnet) · agent aaffd503674f180f5; verb orders: T169 20–65, T170 70–110
 - 2026-10-13 11:02Z 💻 T170 done → 4832fc7c · verify ✓
 - 2026-10-13 11:02Z 💻 T171 launched (Sonnet) · agent a958b89e98253e87b
+- 2026-10-13 11:03Z 💻 T169 done → 048f7e61 · verify ✓ (12 Italian verbs)
+- 2026-10-13 11:03Z 💻 T168 launched · attempt 2 · agent a683ae414881fd113
