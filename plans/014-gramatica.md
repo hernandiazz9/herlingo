@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:24Z 💻
+- Updated: 2026-10-13 06:29Z 💻
 - Writer: 💻 desktop
 - Branch: plan-014-gramatica (local, not pushed)
 - Next step: T163 + T164 running; then T165/T167/T169–T171 (2 at a time)
@@ -29,7 +29,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T163 — Content model for the grammar reference + verb.essere
-- Status: running (attempt 1 · 💻 · agent a5414467c5dd30344 · since 06:20Z)
+- Status: done
 - Depends on: none
 - Where: any
 - Goal: Implement the format of docs/content-guide.md "Grammar reference": pack.json `grammar` tenses, `verbs/*.json`, card `order`/`verb`/`drills`, loader functions and types from the contract, audio keys in `listPlayables`, and the `content:check` rules. Prove it with the Italian tenses and one complete verb, `verb.essere`.
@@ -39,7 +39,7 @@ Worktree setup: npm ci
   - `npm run content:check` → ✓, reports 1 verb for `it`; temporary broken copies (wrong form count, unknown tense, drill without `___`, answer among distractors, `verb` to a missing id) each fail with a clear message (reverted after).
   - A one-off `npx tsx` script: `listPlayables(getPack("it"))` holds `verb.essere` ("essere"), `verb.essere--presente--1` ("io sono"), `verb.essere--imperativo--1` (form only, no pronoun) and `verb.essere--presente--e`.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: schema/types/loader (src/lib/content/grammar.ts: grammarPlayables, listVerbs, getVerb, listGrammarTopics, getGrammarEntry, findGrammarPack, isDrillable, getGrammarTenses), content:check rules, it pack.json tenses, verb.essere; audio plan uses grammarPlayables · 37855e6a · verify ✓ 💻 · not checked: --strict-audio fails for it until T174
 
 ## T164 — Read counts and XP for "Leído"
 - Status: done
@@ -194,6 +194,7 @@ Worktree setup: npm ci
 - 2026-10-12 plan: work on branch plan-014-gramatica; no merge into main, PR or deploy without Hernán's explicit OK. (Hernán)
 - 2026-10-13 plan: content tasks T169–T172 run on Sonnet to save tokens; T173 review and code tasks on Opus. (Hernán)
 - 2026-10-13 T164: XP recorded only when > 0; bad 'last' keeps the count; grammar XP shows no toast yet (T166 decides feedback). (agent)
+- 2026-10-13 T163: scripts/audio/plan.ts edited (outside scope) so npm run audio includes grammar playables; extra helper getGrammarTenses(pack); drill text = full sentence with before/after; essere marks only sii/siate irregular. (agent)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
@@ -204,3 +205,4 @@ Worktree setup: npm ci
 - 2026-10-13 06:20Z 💻 T163 launched · attempt 1 · agent a5414467c5dd30344
 - 2026-10-13 06:20Z 💻 T164 launched · attempt 1 · agent a909563e334169d27
 - 2026-10-13 06:24Z 💻 T164 done → 7de37571 · verify ✓
+- 2026-10-13 06:29Z 💻 T163 done → 37855e6a · verify ✓
