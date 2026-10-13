@@ -153,10 +153,12 @@ target-language sentences out of the Spanish fields.
 
 | Piece | Contents |
 | --- | --- |
-| `src/lib/coach/api.ts` | `generateEpisode(lang, description, { signal })` (adds `profile`, same errors as `generateRoute`) |
-| `src/lib/coach/episodes.ts` | `getSavedEpisodes`, `getSavedEpisode`, `saveEpisode`, `deleteEpisode`; key `lang-lern:coach:episodes:<lang>` = `{ v: 1, episodes }`, newest first, unique ids, tolerant parsing; change event `lang-lern:coach-change` |
-| `src/lib/coach/use-coach.ts` | `useSavedEpisodes(lang)` |
+| `src/lib/coach/api.ts` | `generateEpisode(lang, description, { signal })` (adds `profile`, same errors as `generateRoute`; patches the stored usage with `noteEpisode`) |
+| `src/lib/coach/parse.ts` | `parseEpisode` (tolerant: identity fields must be valid; invalid steps and variants skipped, empty parts dropped, at most 6 parts / 20 steps / 2 variants; null when no step is left; missing intros and part titles = "", not spoken), `parseSavedEpisodes`; `parseUsage` reads `episodes`, `avgEpisodeUsd`, `episodesToday` as optional |
+| `src/lib/coach/episodes.ts` | `getSavedEpisodes`, `getSavedEpisode`, `saveEpisode`, `deleteEpisode`, `cacheEpisodeAudio`; key `lang-lern:coach:episodes:<lang>` = `{ v: 1, episodes }`, newest first, unique ids, tolerant parsing; change event `lang-lern:coach-change`. Saving downloads `episodePlayables` in the background (the shared prefetch, kind `"episode"`); deleting stops it and prunes |
+| `src/lib/coach/use-coach.ts` | `useSavedEpisodes(lang)` → `{ episodes, get, save, remove }` |
 | `pruneCoachAudio` | keeps the lines of every saved pack, route **and** episode, plus every route's and every pack dialogue's episode lines (`episodePlayables`: narrator, slow and generated target lines) |
+| `src/components/sport/generation.ts` | `startEpisode(lang, description)`, `useEpisodeGeneration(lang, onDone?)`, `clearEpisodeGeneration(lang)`: one job per language, same contract as `components/coach/generation.ts` |
 
 - The request runs outside the screen (like `components/coach/generation.ts`): leaving `/deporte/`
   does not lose a paid episode.
@@ -166,12 +168,20 @@ target-language sentences out of the Spanish fields.
 ## Screen (`src/components/sport/`)
 
 - `/deporte/` (`SportView`): without `coachAvailable(lang)` a notice; without the access code
-  Prepárate's `AccessCard`; else the offline notice and "De la app" (`AppEpisodes`: one card per
-  dialogue of the active pack, pack order, with its title, description and an estimate "Unos 6 min"
-  from the compiled clips' text and gaps).
+  Prepárate's `AccessCard` (with the 401 message of a failed episode); else the offline notice, the
+  form (`EpisodeForm`, like Modo rápido's: free text 1–500 characters, pending state, the server's
+  daily-limit / budget / failure message, "Te quedan N episodios hoy", an episode that arrived
+  while you were away as "«…» ya está listo y guardado en Mis episodios." with «Abrir»), "Mis
+  episodios" (`SavedEpisodes`: newest first, title, «description», "Unos N min · date", delete with
+  "¿Borrar este episodio?") and "De la app" (`AppEpisodes`: one card per dialogue of the active
+  pack, pack order, with its title, description and an estimate "Unos 6 min" from the compiled
+  clips' text and gaps).
+- A new AI episode opens in the player at once (like a new route), with a notice: saved in Mis
+  episodios and its audio downloading (or, when the device could not store it, that leaving loses it).
 - `?ep=<id>` (`nav.ts`, shallow `pushState` like `?ruta=`; back works): `useEpisode` resolves
-  `dlg:<id>` (a dialogue of the active pack) and `route:<id>` (a saved route); AI ids come with
-  "Mis episodios". Unknown → "Episodio no encontrado".
+  `dlg:<id>` (a dialogue of the active pack), `route:<id>` (a saved route) and any other id as an AI
+  episode (`?ep=<uuid>`: "Mis episodios", or the one just received when it could not be stored).
+  Unknown → "Episodio no encontrado".
 - Player (`EpisodeView`): prepares on open (`useEpisodeAudio`: "Preparando el audio… n/N", then
   `episodePlayer.load`), «Reproducir» / «Pausar» / «Seguir» between "Paso anterior" / "Paso
   siguiente", progress bar with elapsed / total, "Falta 1 audio" / "Faltan n audios: necesitas
@@ -185,8 +195,9 @@ target-language sentences out of the Spanish fields.
 
 Title "Modo deporte"; subtitle "Escucha una situación de principio a fin, con el móvil en el
 bolsillo."; Jugar card "Modo deporte" / "Aprende una situación solo escuchando, mientras corres o
-vas en bici."; form placeholder "Ej.: ir a un supermercado en Italia", button "Prepárame el
-episodio", pending "Preparando tu episodio… puede tardar medio minuto."; sections "Mis episodios",
+vas en bici."; form placeholder "Ej.: ir a un supermercado" (no country: it shows for every
+pack), button "Prepárame el episodio", pending "Preparando tu episodio… Puede tardar medio
+minuto."; sections "Mis episodios",
 "De tus rutas", "De la app"; player «Reproducir» / «Pausar» / «Seguir», "Paso anterior", "Paso
 siguiente" (accessible names), "Preparando el audio… 34/120", «Guardar mp3», «Escuchar seguidos»;
 delete "¿Borrar este episodio?"; route button «🏃 Modo deporte»; offline "Sin conexión. Tus

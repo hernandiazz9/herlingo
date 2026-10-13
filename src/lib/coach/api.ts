@@ -4,13 +4,23 @@
  * whose `message` is Spain Spanish UI copy (the server's own message when it sent one).
  */
 import { clearAccessCode, getAccessCode, setAccessCode } from "./access";
-import { parseAssessment, parseGenerationUsage, parsePack, parseQuestion, parseRoute, parseUsage, isObject } from "./parse";
+import {
+  parseAssessment,
+  parseEpisode,
+  parseGenerationUsage,
+  parsePack,
+  parseQuestion,
+  parseRoute,
+  parseUsage,
+  isObject,
+} from "./parse";
 import { buildLearnerContext } from "./profile";
-import { noteGeneration, noteRoute, storeUsage } from "./usage";
+import { noteEpisode, noteGeneration, noteRoute, storeUsage } from "./usage";
 import {
   COACH_LIMITS,
   type CoachPack,
   type CoachUsage,
+  type EpisodeResult,
   type InterviewResult,
   type InterviewTurn,
   type PackResult,
@@ -203,6 +213,21 @@ export async function generateRoute(lang: string, description: string, opts: { s
   const usage = parseGenerationUsage(data.usage);
   noteRoute(usage);
   return { route, usage };
+}
+
+/**
+ * An AI episode (Modo deporte) for `description` (the learner context is added). Uses its own
+ * daily counter on the server (429 `daily_limit` with the episode message), never the generations
+ * or the routes; the other errors are `generateRoute`'s. Not saved: see `saveEpisode`.
+ */
+export async function generateEpisode(lang: string, description: string, opts: { signal?: AbortSignal } = {}): Promise<EpisodeResult> {
+  const body = { lang, description, profile: buildLearnerContext(lang) };
+  const data = await callJson("episode", { method: "POST", body, signal: opts.signal });
+  const episode = isObject(data) ? parseEpisode(data.episode) : null;
+  if (!episode || !isObject(data)) throw invalid();
+  const usage = parseGenerationUsage(data.usage);
+  noteEpisode(usage);
+  return { episode, usage };
 }
 
 /**

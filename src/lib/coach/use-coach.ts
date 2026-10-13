@@ -3,8 +3,9 @@
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { clearAccessCode, parseAccessCode, readAccessRaw } from "./access";
 import { checkAccessCode, fetchUsage, toCoachApiError, updateMonthlyCap, type CoachApiError } from "./api";
+import { deleteEpisode, readEpisodesRaw, saveEpisode } from "./episodes";
 import { deletePack, readPacksRaw, replacePack, savePack } from "./packs";
-import { parseSavedPacks, parseSavedRoutes } from "./parse";
+import { parseSavedEpisodes, parseSavedPacks, parseSavedRoutes } from "./parse";
 import { clearAssessments, parseLearnerProfile, readProfileRaw, saveAssessment, setAbout } from "./profile";
 import { deleteRoute, readRoutesRaw, saveRoute } from "./routes";
 import { subscribeCoach } from "./store";
@@ -48,6 +49,19 @@ export function useSavedRoutes(lang: string) {
   const remove = useCallback((id: string) => deleteRoute(lang, id), [lang]);
   const get = useCallback((id: string) => routes.find((r) => r.id === id), [routes]);
   return useMemo(() => ({ routes, get, save: saveRoute, remove }), [routes, get, remove]);
+}
+
+/**
+ * "Mis episodios" (Modo deporte) of a language pack, live, newest first. `save` puts an AI episode
+ * at the top (false when storage failed) and starts caching its audio; `remove` deletes it and its
+ * unused audio.
+ */
+export function useSavedEpisodes(lang: string) {
+  const raw = useSyncExternalStore(subscribeCoach, () => readEpisodesRaw(lang), empty);
+  const episodes = useMemo(() => parseSavedEpisodes(raw), [raw]);
+  const remove = useCallback((id: string) => deleteEpisode(lang, id), [lang]);
+  const get = useCallback((id: string) => episodes.find((e) => e.id === id), [episodes]);
+  return useMemo(() => ({ episodes, get, save: saveEpisode, remove }), [episodes, get, remove]);
 }
 
 /** "Sobre mí" notes and interview results of a language pack, live; `latest` = newest assessment. */

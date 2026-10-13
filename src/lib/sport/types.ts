@@ -5,7 +5,7 @@
  */
 import type { Playable } from "@/lib/content";
 
-/** A target-language line (`text`, ≤ 300) and its Spain Spanish meaning (`es`, ≤ 400). */
+/** A target-language line (`text`, ≤ 300) and its Spain Spanish meaning (`es`, ≤ 300): each one `/api/coach/tts/` line. */
 export interface EpisodeLine {
   text: string;
   es: string;

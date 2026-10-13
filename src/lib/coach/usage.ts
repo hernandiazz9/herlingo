@@ -69,6 +69,28 @@ export function noteRoute(g: GenerationUsage): void {
   });
 }
 
+/**
+ * Applies an AI episode's cost, the remaining budget and the episode counter (`g.today` of an
+ * episode response) to the stored summary; the other counters are left as they are.
+ */
+export function noteEpisode(g: GenerationUsage): void {
+  const stored = getStoredUsage();
+  if (!stored) return;
+  const u = stored.usage;
+  const before = u.episodes ?? 0;
+  const episodes = before + 1;
+  const episodesToday = g.today.limit > 0 ? g.today : u.episodesToday;
+  storeUsage({
+    ...u,
+    spentUsd: u.spentUsd + g.costUsd,
+    mineUsd: u.mineUsd + g.costUsd,
+    remainingUsd: g.remainingUsd,
+    episodes,
+    avgEpisodeUsd: ((u.avgEpisodeUsd ?? 0) * before + g.costUsd) / episodes,
+    ...(episodesToday ? { episodesToday } : {}),
+  });
+}
+
 /** "3,20 $": Spain Spanish amount in US dollars. */
 export function formatUsd(amount: number, decimals = 2): string {
   const n = amount.toLocaleString("es-ES", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });

@@ -6,6 +6,7 @@
  *   lang-lern:coach:usage            { v, at, usage }              last usage summary seen
  *   lang-lern:coach:packs:<lang>     { v, packs: CoachPack[] }     "Mis situaciones", newest first
  *   lang-lern:coach:routes:<lang>    { v, routes: CoachRoute[] }   "Mis rutas" (Modo rápido), newest first
+ *   lang-lern:coach:episodes:<lang>  { v, episodes: StoredEpisode[] }  "Mis episodios" (Modo deporte), newest first
  *   lang-lern:coach:profile:<lang>   { v, about, assessments }     "Sobre mí" + interview results
  *   lang-lern:coach:practice:<lang>  { v, day, packs: id[] }       packs whose role-play earned XP that day
  */
@@ -17,6 +18,7 @@ export const COACH_KEYS = {
   usage: `${COACH_PREFIX}usage`,
   packs: (lang: string) => `${COACH_PREFIX}packs:${lang}`,
   routes: (lang: string) => `${COACH_PREFIX}routes:${lang}`,
+  episodes: (lang: string) => `${COACH_PREFIX}episodes:${lang}`,
   profile: (lang: string) => `${COACH_PREFIX}profile:${lang}`,
   practice: (lang: string) => `${COACH_PREFIX}practice:${lang}`,
 };

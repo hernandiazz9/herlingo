@@ -3,6 +3,10 @@
  * (api/_lib/schema.ts, the only definition; docs/coach.md documents both). src/ never imports
  * zod or api/ code.
  */
+import type { StoredEpisode } from "@/lib/sport/types";
+
+/** An AI episode (Modo deporte): its model lives with the episode compiler (`@/lib/sport`). */
+export type { StoredEpisode };
 
 /** Mirror of the server's `LIMITS` (api/_lib/schema.ts): input limits and per-pack refinements. */
 export const COACH_LIMITS = {
@@ -178,9 +182,15 @@ export interface CoachUsage {
   avgRouteUsd?: number;
   /** Quick routes today by the caller's code: their own counter, apart from `today` (absent like `routes`). */
   routesToday?: { used: number; limit: number };
+  /** AI episodes (Modo deporte) billed this month (absent from servers and stored summaries without episodes). */
+  episodes?: number;
+  /** Their average cost (absent like `episodes`). */
+  avgEpisodeUsd?: number;
+  /** AI episodes today by the caller's code: their own counter (absent like `episodes`). */
+  episodesToday?: { used: number; limit: number };
 }
 
-/** The `usage` part of a generation response (for a route, `today` is the route counter). */
+/** The `usage` part of a generation response (for a route or an episode, `today` is its own counter). */
 export interface GenerationUsage {
   costUsd: number;
   remainingUsd: number;
@@ -194,6 +204,20 @@ export interface PackResult {
 
 export interface RouteResult {
   route: CoachRoute;
+  usage: GenerationUsage;
+}
+
+/** Mirror of the server's `EPISODE_ARRAY_LIMITS` (api/_lib/schema.ts): item counts of an AI episode. */
+export const COACH_EPISODE_LIMITS = {
+  parts: { min: 2, max: 6 },
+  /** Across all parts. */
+  steps: { min: 6, max: 20 },
+  variants: 2,
+} as const;
+
+export interface EpisodeResult {
+  episode: StoredEpisode;
+  /** `today` is the episode counter. */
   usage: GenerationUsage;
 }
 

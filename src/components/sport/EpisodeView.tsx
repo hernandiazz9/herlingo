@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, type ReactNode } from "react";
 import { FOCUS, Notice, Spinner } from "@/components/coach/shared";
 import { PauseIcon, PlayIcon } from "@/components/quick/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
@@ -15,6 +15,8 @@ export interface EpisodeViewProps {
   episode: SportEpisode;
   /** Under the title: the dialogue's description, the route's request… */
   subtitle?: string;
+  /** Under the title: e.g. where a new AI episode was saved. */
+  notice?: ReactNode;
   onBack: () => void;
 }
 
@@ -33,7 +35,7 @@ const PLAYING = "border-lemon-deep bg-lemon-soft";
  * between steps, the list shows where it is, «Guardar mp3» shares or downloads the file. Leaving
  * stops it. Mount with `key={episode.id}`.
  */
-export function EpisodeView({ episode, subtitle, onBack }: EpisodeViewProps) {
+export function EpisodeView({ episode, subtitle, notice, onBack }: EpisodeViewProps) {
   const audio = useEpisodeAudio(episode);
   const player = useEpisodePlayer();
   const chapters = useMemo(() => compileEpisode(episode).chapters, [episode]);
@@ -58,6 +60,7 @@ export function EpisodeView({ episode, subtitle, onBack }: EpisodeViewProps) {
         ← Modo deporte
       </button>
       <PageHeader title={episode.title} subtitle={subtitle || undefined} />
+      {notice}
 
       <section aria-label="Reproductor" className="flex flex-col gap-3">
         <AudioStatus audio={audio} />

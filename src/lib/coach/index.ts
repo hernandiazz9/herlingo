@@ -7,6 +7,8 @@
  *   speak(packLine(pack, pack.keyPhrases[0].text), { lang: pack.lang });  // @/lib/audio
  *   const { route } = await generateRoute(lang, description);  // Modo rápido (own daily counter)
  *   saveRoute(route);                                          // "Mis rutas" + audio cache
+ *   const { episode } = await generateEpisode(lang, description);  // Modo deporte (own daily counter)
+ *   saveEpisode(episode);                                      // "Mis episodios" + audio cache
  *
  * Storage keys `lang-lern:coach:*` (./store.ts). Errors: `CoachApiError` with `kind` offline |
  * unauthorized | limit | failed | aborted | other, a server `code` (`unknown_pack`, `tts_limit`…)
@@ -19,6 +21,7 @@ export {
   CoachApiError,
   fetchSpeech,
   fetchUsage,
+  generateEpisode,
   generatePack,
   generateRoute,
   interviewStep,
@@ -43,8 +46,9 @@ export {
   routePlayables,
   type RouteListenStep,
 } from "./audio";
+export { cacheEpisodeAudio, deleteEpisode, getSavedEpisode, getSavedEpisodes, saveEpisode } from "./episodes";
 export { deletePack, getSavedPack, getSavedPacks, replacePack, savePack } from "./packs";
-export { parseRoute } from "./parse";
+export { parseEpisode, parseRoute } from "./parse";
 export { deleteRoute, getSavedRoute, getSavedRoutes, saveRoute } from "./routes";
 export { pruneCoachAudio } from "./saved-audio";
 export { awardPracticeXp, packDialogue } from "./practice";

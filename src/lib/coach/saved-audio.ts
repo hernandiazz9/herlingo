@@ -1,30 +1,48 @@
 /**
- * Audio of what is saved on the device (packs and quick routes): one background download per
- * saved item (a shared map, so saving a newer version aborts the older download) and the cache
- * tidy-up, which keeps every saved pack's and every saved route's lines in every language.
- * It reads the saved lists straight from storage, not through packs.ts / routes.ts (they import
- * this module).
+ * Audio of what is saved on the device (packs, quick routes, AI episodes): one background download
+ * per saved item (a shared map, so saving a newer version aborts the older download) and the cache
+ * tidy-up, which keeps every saved pack's, route's and episode's lines in every language, plus the
+ * Modo deporte lines of the episodes derived on the fly (every saved route's and every pack
+ * dialogue's). It reads the saved lists straight from storage, not through packs.ts / routes.ts /
+ * episodes.ts (they import this module).
  */
 import { pruneGenerated } from "@/lib/audio";
-import { listLangs } from "@/lib/content";
+import { getPack, listLangs, type Playable } from "@/lib/content";
+import { episodePlayables } from "@/lib/sport/compile";
+import { episodeFromDialogue, episodeFromRoute } from "@/lib/sport/sources";
 import { packPlayables, routePlayables } from "./audio";
-import { parseSavedPacks, parseSavedRoutes } from "./parse";
+import { parseSavedEpisodes, parseSavedPacks, parseSavedRoutes } from "./parse";
 import { COACH_KEYS, readRaw } from "./store";
 
-/** Deletes cached mp3s that no saved pack or route (any language) uses. Never rejects. */
+/** The Modo deporte lines of pack `lang`'s dialogues (narrator, slow and generated target lines). */
+function dialogueEpisodeLines(lang: string): Playable[] {
+  return getPack(lang).dialogues.flatMap((d) => {
+    const episode = episodeFromDialogue(d.id);
+    return episode ? episodePlayables(episode) : [];
+  });
+}
+
+/**
+ * Deletes cached mp3s that nothing on the device uses: no saved pack, route or AI episode (any
+ * language), and no episode of a saved route or of a pack dialogue. Never rejects.
+ */
 export function pruneCoachAudio(): Promise<void> {
   const keep = new Set<string>();
   for (const lang of listLangs()) {
+    const routes = parseSavedRoutes(readRaw(COACH_KEYS.routes(lang)));
     const lines = [
       ...parseSavedPacks(readRaw(COACH_KEYS.packs(lang))).flatMap(packPlayables),
-      ...parseSavedRoutes(readRaw(COACH_KEYS.routes(lang))).flatMap(routePlayables),
+      ...routes.flatMap(routePlayables),
+      ...routes.flatMap((route) => episodePlayables(episodeFromRoute(route))),
+      ...parseSavedEpisodes(readRaw(COACH_KEYS.episodes(lang))).flatMap((episode) => episodePlayables(episode)),
+      ...dialogueEpisodeLines(lang),
     ];
     for (const line of lines) keep.add(line.audioKey);
   }
   return pruneGenerated(keep);
 }
 
-export type SavedKind = "pack" | "route";
+export type SavedKind = "pack" | "route" | "episode";
 
 /** The background audio download of each saved item (by kind + language + id) while it runs. */
 const prefetches = new Map<string, { ctrl: AbortController; done: Promise<unknown> }>();

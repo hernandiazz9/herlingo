@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo } from "react";
-import type { CoachRoute } from "@/lib/coach";
-import { useSavedRoutes } from "@/lib/coach/use-coach";
+import type { CoachRoute, StoredEpisode } from "@/lib/coach";
+import { useSavedEpisodes, useSavedRoutes } from "@/lib/coach/use-coach";
 import { getPack } from "@/lib/content";
 import { compileEpisode, dialogueEpisodeId, episodeFromDialogue, episodeFromRoute, routeEpisodeId, type SportEpisode } from "@/lib/sport";
 
@@ -17,18 +17,27 @@ export interface EpisodeToPlay {
 }
 
 /**
- * The episode `id` names in pack `lang`, live (a saved route deleted elsewhere turns it
+ * The episode `id` names in pack `lang`, live (a saved route or episode deleted elsewhere turns it
  * undefined): `dlg:<dialogueId>` = one of the pack's dialogues, `route:<routeId>` = a saved Modo
- * rápido route. Undefined for an unknown id, another pack's dialogue or (until they exist on the
- * device) an AI episode.
+ * rápido route, any other id = an AI episode in "Mis episodios" (or `fresh`, the one just
+ * received when the device could not store it). Undefined for an unknown id or another pack's
+ * dialogue.
  */
-export function useEpisode(lang: string, id: string): EpisodeToPlay | undefined {
-  const { get } = useSavedRoutes(lang);
-  const route = id.startsWith(ROUTE_PREFIX) ? get(id.slice(ROUTE_PREFIX.length)) : undefined;
-  // Every change to the saved routes parses them again (new objects): the episode keeps its
-  // identity while its route's data is the same, so the player is not prepared again mid-play.
+export function useEpisode(lang: string, id: string, fresh?: StoredEpisode | null): EpisodeToPlay | undefined {
+  const routes = useSavedRoutes(lang);
+  const episodes = useSavedEpisodes(lang);
+  const route = id.startsWith(ROUTE_PREFIX) ? routes.get(id.slice(ROUTE_PREFIX.length)) : undefined;
+  const isFree = id.startsWith(ROUTE_PREFIX) || id.startsWith(DIALOGUE_PREFIX);
+  const ai = isFree ? undefined : (episodes.get(id) ?? (fresh?.id === id && fresh.lang === lang ? fresh : undefined));
+  // Every change to the saved routes or episodes parses them again (new objects): the episode
+  // keeps its identity while its data is the same, so the player is not prepared again mid-play.
   const routeJson = route ? JSON.stringify(route) : null;
+  const aiJson = ai ? JSON.stringify(ai) : null;
   return useMemo(() => {
+    if (aiJson) {
+      const saved = JSON.parse(aiJson) as StoredEpisode;
+      return { episode: saved, subtitle: `«${saved.description}»` };
+    }
     if (routeJson) {
       const saved = JSON.parse(routeJson) as CoachRoute;
       return { episode: episodeFromRoute(saved), subtitle: `«${saved.description}»` };
@@ -36,7 +45,7 @@ export function useEpisode(lang: string, id: string): EpisodeToPlay | undefined 
     if (!id.startsWith(DIALOGUE_PREFIX)) return undefined;
     const episode = episodeFromDialogue(id.slice(DIALOGUE_PREFIX.length));
     return episode?.lang === lang ? { episode, subtitle: episode.intro } : undefined;
-  }, [id, lang, routeJson]);
+  }, [id, lang, routeJson, aiJson]);
 }
 
 /** "De la app": an episode per dialogue of pack `lang`, in pack order. */
