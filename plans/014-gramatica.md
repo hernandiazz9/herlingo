@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:53Z 💻
+- Updated: 2026-10-13 12:24Z 💻
 - Writer: released 11:47Z by 💻 → continue on 💻
 - Branch: main (plan-014-gramatica merged)
 - Next step: only T174 left (audio); then Hernán's iPhone pass and OK for merge/PR
-- Needs Hernán: T174: retry 'npm run audio -- --max-credits=0' later or upgrade edge-tts when fixed · T173 doubts: 'una amica/una acqua/la uscita' as wrong options (kept); venire example 'l'accompagno' = 'la acompaño' (lo/la?) · visual queue (4)
+- Needs Hernán: visual queue (5) · T173 doubts (una amica…, l'accompagno) · push main with the audio?
 
 ## Shared contract (all tasks read this)
 
@@ -166,7 +166,7 @@ Worktree setup: npm ci
 - Outcome: 252 forms × 45 tables all matched blind; 65 card drills checked; fixes: irregular marks (fai, stai, sia, abbia, faccia, sappia; vieni unmarked), stare condizionale note, 'vado ___ medico' distractor al→sul · 5301ff93 · verify ✓ 💻 · doubts for Hernán (Needs Hernán)
 
 ## T174 — Audio for the Italian grammar reference
-- Status: blocked (edge-tts 7.2.8, latest on pip, gets 403 from speech.platform.bing.com; clock OK; not the sandbox)
+- Status: done
 - Depends on: T173
 - Where: pc (edge-tts needs internet and the `.venv`)
 - Goal: Generate the mp3s for every new Italian playable (infinitives, forms, examples, drills) and commit them.
@@ -177,7 +177,7 @@ Worktree setup: npm ci
   - `npm run content:check -- --strict-audio` → exit 0.
   - `npm run verify` → exit 0.
   - Hand check (PC): final iPhone pass of the whole feature (Visual queue).
-- Outcome:
+- Outcome: 383 Italian mp3 (verbs, examples, drills) via edge-tts; 5 transient 403s retried; --strict-audio ✓ for it; cba untouched · 30fcf8e9 · not checked: iPhone pass (queue)
 
 ## Review queue
 
@@ -186,6 +186,7 @@ Worktree setup: npm ci
 - [ ] T167 @57b5233e — Repaso after reading essere: 2 fill-gap drills, options, audio, verb listed in the preview (queued 2026-10-13 💻)
 - [ ] T166 @76c17b63 — Leído ×1 + XP once, ×2 no XP after leaving; badges; Frasario row and Ruta card open /gramatica/; light + dark (queued 2026-10-13 💻)
 - [ ] T168 @fd818012 — a lesson after reading two verbs shows one drill each at the end; length unchanged (queued 2026-10-13 💻)
+- [ ] T174 @30fcf8e9 — final iPhone pass of the whole Gramática feature with real audio (queued 2026-10-13 💻)
 
 ## Decisions
 - 2026-10-12 plan: Gramática lives at /gramatica/, nested under the Frases tab; entries from the Frasario and a Ruta card that replaces the "Fichas de gramática" sheet. (Hernán)
@@ -247,3 +248,4 @@ Worktree setup: npm ci
 - 2026-10-13 11:26Z 💻 T174 started in main checkout
 - 2026-10-13 11:47Z 💻 T174 blocked: all 405 Italian lines 403 from edge-tts; partial manifest change reverted
 - 2026-10-13 11:53Z 💻 merged origin/main (plan 015) into plan-014-gramatica: conflicts navigation.ts (grammar + quick sections) and ReviewView.tsx (drills + useHideQuickFab) resolved; verify ✓; main fast-forwarded and pushed
+- 2026-10-13 12:24Z 💻 T174 done (Hernán ran npm run audio; orchestrator retried 4 failed lines)
