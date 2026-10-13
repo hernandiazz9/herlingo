@@ -78,8 +78,9 @@ function formatTime(epochMs: number): string {
 const formatInt = (n: number) => Math.round(n).toLocaleString("es-ES");
 
 /**
- * "Uso de IA": this month's spend against the cap, what is left, tokens, average cost per pack and
- * today's generations, from the last summary seen (refreshed on mount). The owner can change the
+ * "Uso de IA": this month's spend against the cap, what is left, tokens, average cost per pack,
+ * quick routes and their average (when the server reports them) and today's generations, from the
+ * last summary seen (refreshed on mount). The owner can change the
  * monthly cap and gets the Anthropic billing link.
  */
 export function AiUsagePanel() {
@@ -139,6 +140,13 @@ export function AiUsagePanel() {
           value={formatInt(usage.packs)}
           note={usage.packs ? `media ${formatUsd(usage.avgPackUsd, 3)}` : "este mes"}
         />
+        {usage.routes !== undefined ? (
+          <UsageStat
+            label="Rutas rápidas"
+            value={formatInt(usage.routes)}
+            note={usage.routes && usage.avgRouteUsd !== undefined ? `media ${formatUsd(usage.avgRouteUsd, 3)}` : "este mes"}
+          />
+        ) : null}
       </dl>
 
       <div className="flex flex-col gap-1">
