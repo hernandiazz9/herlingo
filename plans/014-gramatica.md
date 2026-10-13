@@ -8,10 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 11:16Z 💻
-- Writer: 💻 desktop
+- Updated: 2026-10-13 11:47Z 💻
+- Writer: released 11:47Z by 💻 → continue on 💻
 - Branch: plan-014-gramatica (local, not pushed)
-- Next step: T173 running; then T174 audio (pc, here)
+- Next step: only T174 left (audio); then Hernán's iPhone pass and OK for merge/PR
+- Needs Hernán: T174: retry 'npm run audio -- --max-credits=0' later or upgrade edge-tts when fixed · T173 doubts: 'una amica/una acqua/la uscita' as wrong options (kept); venire example 'l'accompagno' = 'la acompaño' (lo/la?) · visual queue (4)
 
 ## Shared contract (all tasks read this)
 
@@ -153,7 +154,7 @@ Worktree setup: npm ci
 - Outcome: pronomi diretti/indiretti, ci-ne (70–90) in gramatica-temi.json; order + drills on tu-lei (10) and vorrei (20); verb links on avere/volere/potere/andare; 9 topics, 12 verbs · 53ce69e7 · verify ✓ 💻 · not checked: accuracy (T173)
 
 ## T173 — Blind accuracy review of the Italian grammar content
-- Status: running (attempt 1 · 💻 · agent a3b557d8bb2ca46fb · since 11:16Z)
+- Status: done
 - Depends on: T169, T170, T172
 - Where: any
 - Goal: For each of the 12 verbs and 4 tenses, first write the expected forms from your own knowledge, then compare with the file; check every drill (exactly one right answer, distractors really wrong), glosses and accents. Fix only certain errors; list every doubt (form, file, why) in the final message for Hernán.
@@ -162,10 +163,10 @@ Worktree setup: npm ci
 - Done when:
   - Final message lists checked counts (verbs × tenses, drills), fixes made, doubts.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: 252 forms × 45 tables all matched blind; 65 card drills checked; fixes: irregular marks (fai, stai, sia, abbia, faccia, sappia; vieni unmarked), stare condizionale note, 'vado ___ medico' distractor al→sul · 5301ff93 · verify ✓ 💻 · doubts for Hernán (Needs Hernán)
 
 ## T174 — Audio for the Italian grammar reference
-- Status: pending
+- Status: blocked (edge-tts 7.2.8, latest on pip, gets 403 from speech.platform.bing.com; clock OK; not the sandbox)
 - Depends on: T173
 - Where: pc (edge-tts needs internet and the `.venv`)
 - Goal: Generate the mp3s for every new Italian playable (infinitives, forms, examples, drills) and commit them.
@@ -207,10 +208,13 @@ Worktree setup: npm ci
 - 2026-10-13 T171: normaliser ignores apostrophes, so near-duplicate options were replaced; new topic cards are in no lesson (Gramática only). (agent)
 - 2026-10-13 T168: lessons drill any read entry (due or not); one drill per entry, at most half the production slots; pack lessons only. (agent)
 - 2026-10-13 T172: drills avoid register-only distractors; elided answers carry the next word. (agent)
+- 2026-10-13 T173: irregular-mark rule: presente vs regular endings (essere none); passato/condizionale never per form (notes); imperativo tu/noi/voi when ≠ present, Lei when ≠ present lui form with last vowel changed. (agent)
+- 2026-10-13 T174: run by the orchestrator in the main checkout (one command, saves an agent); --max-credits=0 and cba changes discarded, so only public/audio/it is committed. (orchestrator)
 
 ## Proposals (new scope)
 - 2026-10-12 plan: futuro and imperfetto; more verbs; verbs and drills for fr/en/nl/es; Frasario search finds verbs; "ver todas las formas" link from lesson grammar tips; read aloud with the microphone.
 - 2026-10-13 T166: remove dead GrammarCardView export in src/components/path/SideSheet.tsx
+- 2026-10-13 T173: state the irregular-mark rule in docs/content-guide.md
 
 ## Log
 - 2026-10-12 18:48Z 💻 plan written from the interview; not approved yet
@@ -238,3 +242,6 @@ Worktree setup: npm ci
 - 2026-10-13 11:09Z 💻 T172 launched (Sonnet) · agent a1d526e70e81209cf
 - 2026-10-13 11:16Z 💻 T172 done → 53ce69e7 · verify ✓
 - 2026-10-13 11:16Z 💻 T173 launched (Opus) · agent a3b557d8bb2ca46fb
+- 2026-10-13 11:26Z 💻 T173 done → 5301ff93 · verify ✓
+- 2026-10-13 11:26Z 💻 T174 started in main checkout
+- 2026-10-13 11:47Z 💻 T174 blocked: all 405 Italian lines 403 from edge-tts; partial manifest change reverted
