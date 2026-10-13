@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 12:26Z 💻
+- Updated: 2026-10-13 12:27Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, resumed 10:57Z)
 - Branch: plan-015-modo-rapido · pushed · main = this branch (T175–T180)
 - Next step: T183: Hernán checks «Escuchar todo» on the iPhone (deployed app); findings → fix tasks
@@ -212,3 +212,4 @@ Worktree setup: npm ci
 - 2026-10-13 12:11Z 💻 plan revised with Hernán's approval: T182 «Escuchar todo», T183 iPhone check
 - 2026-10-13 12:12Z 💻 T182 launched · attempt 1 · agent aeeaa62e6aea0237f
 - 2026-10-13 12:26Z 💻 T182 done · worktree-agent-aeeaa62e6aea0237f → 8d5187ac · verify ✓
+- 2026-10-13 12:27Z 💻 merged origin/main (plan 014 Gramática, clean) · verify ✓ · T182 pushed to main with Hernán's OK
