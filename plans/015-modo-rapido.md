@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:29Z 💻
+- Updated: 2026-10-13 06:33Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido, since 06:21Z)
 - Branch: plan-015-modo-rapido · pushed
-- Next step: integrate T176 when its agent finishes, then launch T177 (one agent at a time)
-- Gotchas: never switch branches in `lang_lern/` (plan 014 lives there); `.env.local` absent here on purpose (fake mode).
+- Next step: integrate T177 when its agent finishes, then launch T178 (one agent at a time)
+- Gotchas: never switch branches in lang_lern/ (plan 014); agent worktrees live in lang_lern/.claude/worktrees/ and get its real .env.local via .worktreeinclude → prompts force fake mode (COACH_FAKE=1, keys emptied)
 
 ## Shared contract (all tasks read this)
 
@@ -44,7 +44,7 @@ Worktree setup: npm ci
 - Outcome: Route schema/limits, normalizeRoute, ROUTE_SYSTEM + routeUserPrompt, fakeRoute (it fixture + placeholders), generateRoute · 36a576d8 · verify ✓ 💻 · not checked: real Claude call (quality, token counts)
 
 ## T176 — `POST /api/coach/route/`, route counter and usage
-- Status: running (attempt 1 · 💻 · agent a39ee618c4d4ecc01 · since 06:29Z)
+- Status: done
 - Depends on: T175
 - Where: any
 - Goal: The endpoint, its own daily counter and the usage additions, working in fake mode.
@@ -55,10 +55,10 @@ Worktree setup: npm ci
   - Fake mode (`PORT=3107 npm run dev:coach`, `x-coach-code: dev-owner`): POST `/api/coach/route/` `{"lang":"it","description":"tengo que imprimir algo"}` → 200, `route.turns[0].speaker == "learner"`, ids `r1…`, `voices` set, `usage.today` = route counter; with `COACH_ROUTE_DAILY_LIMIT=2` the third call → 429 `daily_limit` with the route message; no code → 401; `"description":""` → 400; `GET /usage/` shows the three new fields and `today` (generations) unchanged by routes.
   - `.env.example` lists `COACH_ROUTE_DAILY_LIMIT` (name only).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: POST /api/coach/route/ (pack flow), reserveRoute + COACH_ROUTE_DAILY_LIMIT (20), routes/avgRouteUsd/routesToday in usage · 4ee0be7f · verify ✓ 💻 · fake-mode curl ✓ (200/429/401/400) · not checked: real Claude route
 
 ## T177 — Client: route types, API call, storage and audio
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a5e61f984ab6d53dd · since 06:33Z)
 - Depends on: T176
 - Where: any
 - Goal: `@/lib/coach` support for routes, per the contract's "Client" table.
@@ -154,3 +154,5 @@ Worktree setup: npm ci
 - 2026-10-13 06:21Z 💻 T175 launched · attempt 1 · agent a80b78e238b64f1ac
 - 2026-10-13 06:29Z 💻 T175 done · worktree-agent-a80b78e238b64f1ac → 36a576d8 · verify ✓
 - 2026-10-13 06:29Z 💻 T176 launched · attempt 1 · agent a39ee618c4d4ecc01
+- 2026-10-13 06:33Z 💻 T176 done · worktree-agent-a39ee618c4d4ecc01 → 4ee0be7f · verify ✓
+- 2026-10-13 06:33Z 💻 T177 launched · attempt 1 · agent a5e61f984ab6d53dd
