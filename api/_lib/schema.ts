@@ -1,7 +1,8 @@
 /**
- * Prepárate wire schemas (zod), server only: the pack, the quick route, the learner context, every
- * request body and the interview. The only definition of the pack and route schemas; docs/coach.md
- * mirrors them for the client, which gets plain TypeScript types (src/ never imports zod).
+ * Prepárate wire schemas (zod), server only: the pack, the quick route, the Modo deporte episode, the
+ * learner context, every request body and the interview. The only definition of the pack, route and
+ * episode schemas; docs/coach.md and docs/sport.md mirror them for the client, which gets plain
+ * TypeScript types (src/ never imports zod).
  */
 import { z } from "zod";
 
@@ -197,6 +198,97 @@ export const Route = GeneratedRoute.extend({
 });
 export type Route = z.infer<typeof Route>;
 
+// ---- Modo deporte episode (docs/sport.md): the part Claude writes (structured output) ----
+
+/**
+ * Longest text per field of an episode. Every one is spoken as one `/api/coach/tts/` line, so
+ * none goes over `LIMITS.ttsText` (300); the prompt asks for much less.
+ */
+export const EPISODE_TEXT_LIMITS = {
+  title: 60,
+  intro: 300,
+  partTitle: 80,
+  stepIntro: 200,
+  tip: 200,
+  cue: 120,
+  text: LIMITS.ttsText,
+  es: LIMITS.ttsText,
+} as const;
+const T = EPISODE_TEXT_LIMITS;
+
+/** `steps` = total across parts. Trimmed like the pack's by normalize.ts; empty parts are dropped. */
+export const EPISODE_ARRAY_LIMITS = {
+  parts: { min: 2, max: 6 },
+  steps: { min: 6, max: 20 },
+  variants: 2,
+} as const;
+const E = EPISODE_ARRAY_LIMITS;
+
+/** A target-language line (`text`) and its Spain Spanish meaning (`es`), both spoken. */
+export const EpisodeLine = z.object({
+  text: z.string().min(1).max(T.text),
+  es: z.string().min(1).max(T.es),
+});
+
+export const EpisodeVariant = EpisodeLine.extend({
+  cue: z.string().min(1).max(T.cue).describe('A few Spanish words the narrator says before it, ending with a colon ("O también:").'),
+});
+
+export const EpisodeStep = z.object({
+  speaker: z.enum(["learner", "native"]),
+  intro: z.string().min(1).max(T.stepIntro),
+  line: EpisodeLine,
+  variants: z
+    .array(EpisodeVariant)
+    .max(E.variants)
+    .describe(`0 to ${E.variants} other ways to say it; never more than ${E.variants}.`),
+  tip: z.string().max(T.tip).optional(),
+});
+
+export const EpisodePart = z.object({
+  title: z.string().min(1).max(T.partTitle),
+  steps: z.array(EpisodeStep).min(1).describe("2 to 5 steps, in the order they happen."),
+});
+type EpisodePart = z.infer<typeof EpisodePart>;
+
+/** What the per-part counts cannot say: the number of steps across all parts. */
+function checkEpisodeSteps(parts: EpisodePart[], ctx: z.RefinementCtx): void {
+  const total = parts.reduce((sum, part) => sum + part.steps.length, 0);
+  if (total < E.steps.min || total > E.steps.max) {
+    ctx.addIssue({ code: "custom", message: `${total} steps in total, expected ${E.steps.min} to ${E.steps.max}` });
+  }
+}
+
+const episodeParts = z
+  .array(EpisodePart)
+  .min(E.parts.min)
+  .max(E.parts.max)
+  .superRefine(checkEpisodeSteps)
+  .describe(
+    `3 to 5 parts in the order things happen, never fewer than ${E.parts.min} or more than ${E.parts.max}; 12 to 16 steps in total across all parts, never fewer than ${E.steps.min} or more than ${E.steps.max}.`,
+  );
+
+export const GeneratedEpisode = z.object({
+  title: z.string().min(1).max(T.title).describe("A few Spanish words, at most 50 characters."),
+  register: z.enum(["formal", "informal"]),
+  intro: z.string().min(1).max(T.intro),
+  parts: episodeParts,
+});
+export type GeneratedEpisode = z.infer<typeof GeneratedEpisode>;
+
+// ---- Modo deporte episode: what the server returns and the device stores (`StoredEpisode`) ----
+
+export const Episode = GeneratedEpisode.extend({
+  id: z.string().min(1).max(64),
+  source: z.literal("ai"),
+  createdAt: z.string().min(1),
+  lang: z.string().min(2).max(10),
+  description: z.string().min(1).max(LIMITS.description),
+  /** Voices for the coach TTS, like routes: native lines and their variants use `native`, learner ones `learner`. */
+  voices: z.object({ native: z.string().min(1), learner: z.string().min(1) }),
+});
+export type Episode = z.infer<typeof Episode>;
+
 // ---- Learner context (built on the device) ----
 
 export const Level = z.enum(["A0", "A1", "A2", "B1", "B2", "C1", "C2"]);
@@ -250,6 +342,13 @@ export const RouteRequest = z.object({
   profile: LearnerProfile.default({}),
 });
 export type RouteRequest = z.infer<typeof RouteRequest>;
+
+export const EpisodeRequest = z.object({
+  lang,
+  description: z.string().trim().min(1).max(LIMITS.description),
+  profile: LearnerProfile.default({}),
+});
+export type EpisodeRequest = z.infer<typeof EpisodeRequest>;
 
 export const InterviewQuestion = z.object({
   kind: z.enum(["comprehension", "reply", "personal"]),

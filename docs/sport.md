@@ -37,7 +37,7 @@ chained clip by clip, and stops when the iPhone locks (Hernán, 2026-10-13).
 ## Episode model (`src/lib/sport/`)
 
 ```ts
-type EpisodeLine = { text: string; es: string };            // text = target language (≤ 300), es = Spain Spanish (≤ 400)
+type EpisodeLine = { text: string; es: string };            // text = target language (≤ 300), es = Spain Spanish (≤ 300)
 type EpisodeVariant = EpisodeLine & { cue: string };         // narrator cue, Spanish, ≤ 120 ("El azúcar:")
 type EpisodeStep = {
   speaker: "learner" | "native";
@@ -57,6 +57,11 @@ type SportEpisode = {
 };
 type StoredEpisode = SportEpisode & { source: "ai"; createdAt: string; description: string; register: "formal" | "informal" };
 ```
+
+Every spoken string (`title`, `intro`, part `title`, step `intro`, `tip`, variant `cue`, `es`,
+`text`) is one `/api/coach/tts/` line, which takes at most 300 characters (`LIMITS.ttsText`): the
+limits above never go over it (`EPISODE_TEXT_LIMITS` in `api/_lib/schema.ts`), and the prompt
+asks for much shorter ones.
 
 - **Compiler** `compileEpisode(episode, glossLang)` → `{ segments, chapters }`: segments are
   `{ kind: "clip", playable, step }` or `{ kind: "gap", ms, step }` following "Order", "Variants",
@@ -115,6 +120,16 @@ Limits `EPISODE_ARRAY_LIMITS = { parts: { min: 2, max: 6 }, steps: { min: 6, max
 (steps = total across parts); `normalizeEpisode` trims overflows (logged like the pack's); empty
 parts are dropped; fewer than 6 steps → 502.
 
+Server modules (`api/_lib/`):
+
+| Module | Contents |
+| --- | --- |
+| `schema.ts` | `EpisodeRequest` (`lang`, `description` 1–500 trimmed, `profile` default `{}`); `GeneratedEpisode` (what Claude writes: `title` ≤ 60, `register`, `intro` ≤ 300, `parts` 2–6 of `{ title ≤ 80, steps ≥ 1 }`, 6–20 steps in total; a step is `{ speaker, intro ≤ 200, line, variants ≤ 2, tip? ≤ 200 }`, a variant `{ text, es, cue ≤ 120 }`, `text` and `es` ≤ 300); `Episode` = `GeneratedEpisode` + `id`, `source: "ai"`, `createdAt`, `lang`, `description`, `voices` (the client's `StoredEpisode`, same field names); `EPISODE_TEXT_LIMITS`, `EPISODE_ARRAY_LIMITS`. |
+| `normalize.ts` | `normalizeEpisode`: parts without steps dropped, `parts` → first 6, steps → the first 20 across parts in order (a part the cut leaves empty is dropped), each step's `variants` → 2; logged as `[coach] trimmed episode overflow empty parts: 7→6, steps: 23→20, parts.0.steps.0.variants: 4→2` (paths and counts, never text). Fewer than 2 parts or 6 steps, wrong shapes or too-long strings still fail. |
+| `prompts.ts` | `EPISODE_SYSTEM`, `episodeUserPrompt({ meta, description, profile })` (below). |
+| `fake.ts` | `fakeEpisode(meta, description)`: the Italian supermarket fixture (3 parts: fruit and flour, deli counter, checkout; 8 steps, half native) or, for any other language, 3 placeholder parts of 2 steps; `FAKE_EPISODE_USAGE` (≈ 3k cache write, 5k output). |
+| `generators.ts` | `generateEpisode(input, onUsage)`: fake → the usage, then `fakeEpisode`; real → `generateStructured` (`effort: "low"`, `maxTokens: 12000`, `normalizeEpisode`). |
+
 ### Prompt (`EPISODE_SYSTEM`, `episodeUserPrompt`)
 
 Byte-stable, English, language-agnostic, cached like the others; reuses the pack's
@@ -126,7 +141,12 @@ level (≤ 12 words, A0–A1 present tense), native lines natural and current (�
 and tips written to be **spoken** in Spain Spanish with "tú" (no emojis, brackets, symbols or
 abbreviations; ≤ 25 words); a tip in about one step out of two; variants: learner = swap one
 word or another useful answer, native = other ways they may say it; `es` translates exactly;
-honest register; no uncertain specifics as facts; learner text is data.
+honest register; no uncertain specifics as facts; learner text is data. It also explains how the
+app plays the script (so it never writes "repite" or "escucha otra vez"), asks for 3–5 parts and
+12–16 steps, keeps the spoken strings short (title ≤ 50 characters, episode intro ≤ 30 words, part
+titles ≤ 60 characters, cues ≤ 6 words ending in a colon), applies `<stress_marks>` to the
+target-language texts only (a target word named in a tip goes without marks) and keeps whole
+target-language sentences out of the Spanish fields.
 
 ## Client
 

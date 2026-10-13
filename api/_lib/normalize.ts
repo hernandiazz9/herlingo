@@ -1,13 +1,19 @@
 /**
  * Recoverable overflows in Claude's structured output, fixed before the zod check. Structured
- * outputs do not enforce `maxItems` (the SDK sends it as a description), so a pack or a route can
- * come back with more turns, phrases, steps or alternatives than the schema allows; the call is already billed, so a
+ * outputs do not enforce `maxItems` (the SDK sends it as a description), so a pack, a route or an
+ * episode can come back with more turns, phrases, steps, parts, variants or alternatives than the
+ * schema allows; the call is already billed, so a
  * too-long array is trimmed to its limit instead of failing the generation. Too few items, wrong
  * shapes or broken alternation are left as they are and still fail the zod check.
  *
  * Works on the raw JSON (unknown): anything that does not look as expected is passed through.
  */
-import { PACK_ARRAY_LIMITS as P, ASSESSMENT_ARRAY_LIMITS as A, ROUTE_ARRAY_LIMITS as R } from "./schema.js";
+import {
+  PACK_ARRAY_LIMITS as P,
+  ASSESSMENT_ARRAY_LIMITS as A,
+  ROUTE_ARRAY_LIMITS as R,
+  EPISODE_ARRAY_LIMITS as E,
+} from "./schema.js";
 
 type Json = Record<string, unknown>;
 
@@ -99,6 +105,48 @@ export function normalizeRoute(raw: unknown): unknown {
     });
   }
   if (trims.length) console.warn("[coach] trimmed route overflow", trims.join(", "));
+  return raw;
+}
+
+const stepsOf = (part: unknown): unknown[] | undefined =>
+  isObject(part) && Array.isArray(part.steps) ? part.steps : undefined;
+
+/**
+ * Generated Modo deporte episode: parts with no steps are dropped, then `parts` → its first 6,
+ * the steps → the first 20 across parts (in order; a part left with none by the cut is dropped
+ * too), and each step's `variants` → 2. Fewer than 6 steps or 2 parts still fail the zod check.
+ */
+export function normalizeEpisode(raw: unknown): unknown {
+  if (!isObject(raw) || !Array.isArray(raw.parts)) return raw;
+  const trims: Trims = [];
+  const nonEmpty = raw.parts.filter((part) => stepsOf(part)?.length !== 0);
+  if (nonEmpty.length < raw.parts.length) trims.push(`empty parts: ${raw.parts.length}→${nonEmpty.length}`);
+  raw.parts = nonEmpty;
+  trimArray(raw, "parts", E.parts.max, "parts", trims);
+
+  const parts = raw.parts as unknown[];
+  const total = parts.reduce<number>((sum, part) => sum + (stepsOf(part)?.length ?? 0), 0);
+  if (total > E.steps.max) {
+    let left: number = E.steps.max;
+    const kept = parts.filter((part) => {
+      const steps = stepsOf(part);
+      if (!steps) return true;
+      if (left <= 0) return false;
+      if (steps.length > left) (part as Json).steps = steps.slice(0, left);
+      left -= Math.min(steps.length, left);
+      return true;
+    });
+    trims.push(`steps: ${total}→${E.steps.max}`);
+    if (kept.length < parts.length) trims.push(`parts after the steps cut: ${parts.length}→${kept.length}`);
+    raw.parts = kept;
+  }
+
+  (raw.parts as unknown[]).forEach((part, i) => {
+    stepsOf(part)?.forEach((step, j) => {
+      if (isObject(step)) trimArray(step, "variants", E.variants, `parts.${i}.steps.${j}.variants`, trims);
+    });
+  });
+  if (trims.length) console.warn("[coach] trimmed episode overflow", trims.join(", "));
   return raw;
 }
 

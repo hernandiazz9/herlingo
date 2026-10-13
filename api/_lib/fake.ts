@@ -5,13 +5,15 @@
  */
 import type { LanguageMeta } from "./languages.js";
 import type { TokenUsage } from "./model.js";
-import type { Assessment, GeneratedPack, GeneratedRoute, InterviewQuestion, InterviewStep } from "./schema.js";
+import type { Assessment, GeneratedEpisode, GeneratedPack, GeneratedRoute, InterviewQuestion, InterviewStep } from "./schema.js";
 
 /** Plausible token counts of a real call, so the ledger and the usage panel show real-looking numbers. */
 export const FAKE_PACK_USAGE: TokenUsage = { input: 1400, output: 2600, cacheWrite: 0, cacheRead: 2100 };
 export const FAKE_INTERVIEW_USAGE: TokenUsage = { input: 900, output: 350, cacheWrite: 0, cacheRead: 1800 };
 /** A route: the first call in 5 minutes (prefix written to the cache), docs/coach.md "Modo rápido". */
 export const FAKE_ROUTE_USAGE: TokenUsage = { input: 500, output: 1700, cacheWrite: 2500, cacheRead: 0 };
+/** A Modo deporte episode: the first call in 5 minutes, docs/sport.md "Model". */
+export const FAKE_EPISODE_USAGE: TokenUsage = { input: 500, output: 5000, cacheWrite: 3000, cacheRead: 0 };
 
 const IT_PACK: GeneratedPack = {
   title: "Pedir un granizado en el bar",
@@ -317,10 +319,97 @@ const IT_ROUTE: GeneratedRoute = {
   ],
 };
 
+const IT_EPISODE: GeneratedEpisode = {
+  title: "Hacer la compra en el supermercado",
+  register: "formal",
+  intro:
+    "Vas a hacer la compra en un supermercado: pesas la fruta, buscas la harina, pides embutido en el mostrador y pagas en la caja.",
+  parts: [
+    {
+      title: "Primera parte: la fruta y la harina.",
+      steps: [
+        {
+          speaker: "learner",
+          intro: "En la fruta ves una báscula. Quieres saber si la fruta la pesas tú. Preguntas:",
+          line: { text: "Scusi, la frutta la peso io?", es: "Perdone, ¿la fruta la peso yo?" },
+          variants: [{ cue: "Los guantes:", text: "Scusi, dove sono i guanti?", es: "Perdone, ¿dónde están los guantes?" }],
+        },
+        {
+          speaker: "native",
+          intro: "Un dependiente te contesta:",
+          line: { text: "Sì, usi la bilancia e metta l'etichetta sul sacchetto.", es: "Sí, use la báscula y ponga la etiqueta en la bolsa." },
+          variants: [{ cue: "O también te pueden decir:", text: "La bilancia è lì, in fondo.", es: "La báscula está allí, al fondo." }],
+          tip: "Para tocar la fruta, usa los guantes de plástico que suele haber al lado.",
+        },
+        {
+          speaker: "learner",
+          intro: "Ahora buscas la harina. Le preguntas al dependiente:",
+          line: { text: "Scusi, dov'è la farina?", es: "Perdone, ¿dónde está la harina?" },
+          variants: [
+            { cue: "El azúcar:", text: "Scusi, dov'è lo zucchero?", es: "Perdone, ¿dónde está el azúcar?" },
+            { cue: "La leche:", text: "Scusi, dov'è il latte?", es: "Perdone, ¿dónde está la leche?" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Segunda parte: el mostrador de embutidos.",
+      steps: [
+        {
+          speaker: "native",
+          intro: "En el mostrador de embutidos, cuando sale tu número, te dicen:",
+          line: { text: "Prego, cosa le do?", es: "Dígame, ¿qué le pongo?" },
+          variants: [{ cue: "O también te pueden decir:", text: "Il prossimo! Cosa desidera?", es: "¡El siguiente! ¿Qué desea?" }],
+          tip: "Antes de pedir, coge un número en la máquina y espera tu turno.",
+        },
+        {
+          speaker: "learner",
+          intro: "Quieres doscientos gramos de jamón cocido. Dices:",
+          line: { text: "Due etti di prosciutto cotto, per favore.", es: "Doscientos gramos de jamón cocido, por favor." },
+          variants: [
+            { cue: "Cien gramos de jamón curado:", text: "Un etto di prosciutto crudo, per favore.", es: "Cien gramos de jamón curado, por favor." },
+          ],
+          tip: "Un etto son cien gramos: así se pide el embutido.",
+        },
+        {
+          speaker: "native",
+          intro: "Te da el paquete y te pregunta:",
+          line: { text: "Ecco a lei. Altro?", es: "Aquí tiene. ¿Algo más?" },
+          variants: [
+            { cue: "O también te pueden decir:", text: "Le serve altro?", es: "¿Necesita algo más?" },
+            { cue: "O también te pueden decir:", text: "Basta così?", es: "¿Es todo?" },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Tercera parte: la caja.",
+      steps: [
+        {
+          speaker: "native",
+          intro: "En la caja, la cajera te pregunta:",
+          line: { text: "Buongiorno, ha la carta fedeltà?", es: "Buenos días, ¿tiene la tarjeta de cliente?" },
+          variants: [{ cue: "O también te pueden decir:", text: "Ha la tessera del supermercato?", es: "¿Tiene la tarjeta del supermercado?" }],
+          tip: "Es la tarjeta de puntos del supermercado. Si no la tienes, basta con decir que no.",
+        },
+        {
+          speaker: "learner",
+          intro: "No la tienes y quieres una bolsa. Dices:",
+          line: { text: "No, grazie. Mi dà anche una busta?", es: "No, gracias. ¿Me da también una bolsa?" },
+          variants: [{ cue: "Para pagar con tarjeta:", text: "No, grazie. Posso pagare con la carta?", es: "No, gracias. ¿Puedo pagar con tarjeta?" }],
+          tip: "Las bolsas se pagan aparte y suelen costar unos céntimos.",
+        },
+      ],
+    },
+  ],
+};
+
 interface Fixture {
   pack: GeneratedPack;
   /** Quick route (Modo rápido); a language without one gets placeholder lines. */
   route?: GeneratedRoute;
+  /** Modo deporte episode; a language without one gets placeholder lines. */
+  episode?: GeneratedEpisode;
   /** Interview questions before the personal one (that one names the language, see `questionsFor`). */
   questions: InterviewQuestion[];
   assessment: Assessment;
@@ -331,6 +420,7 @@ const FIXTURES: Record<string, Fixture> = {
   it: {
     pack: IT_PACK,
     route: IT_ROUTE,
+    episode: IT_EPISODE,
     questions: [
       { kind: "comprehension", prompt: "Escucha y di qué te preguntan.", text: "Di dove sei?" },
       { kind: "reply", prompt: "El revisor te dice esto. ¿Qué le contestas?", text: "Biglietto, prego." },
@@ -444,6 +534,37 @@ function placeholderRoute(meta: LanguageMeta, description: string): GeneratedRou
 export function fakeRoute(meta: LanguageMeta, description: string): GeneratedRoute {
   const route = FIXTURES[meta.lang]?.route;
   return route ? structuredClone(route) : placeholderRoute(meta, description);
+}
+
+const PART_TITLES = ["Primera parte.", "Segunda parte.", "Tercera parte."];
+
+/** 3 parts of 2 steps, learner and native in turn, each step with one variant and every other one a tip. */
+function placeholderEpisode(meta: LanguageMeta, description: string): GeneratedEpisode {
+  const say = (n: number) => placeholderLine(meta, n);
+  return {
+    title: description.slice(0, 60),
+    register: "formal",
+    intro: "Episodio de prueba.",
+    parts: PART_TITLES.map((title, p) => ({
+      title,
+      steps: [0, 1].map((s) => {
+        const n = p * 2 + s + 1;
+        const learner = s === 0;
+        return {
+          speaker: learner ? ("learner" as const) : ("native" as const),
+          intro: learner ? `Paso ${n}. Dices:` : `Paso ${n}. Te dicen:`,
+          line: { text: say(n), es: `Línea ${n}.` },
+          variants: [{ cue: learner ? "O también:" : "O también te pueden decir:", text: say(n + 10), es: `Otra forma ${n}.` }],
+          ...(n % 2 ? { tip: `Consejo ${n}.` } : {}),
+        };
+      }),
+    })),
+  };
+}
+
+export function fakeEpisode(meta: LanguageMeta, description: string): GeneratedEpisode {
+  const episode = FIXTURES[meta.lang]?.episode;
+  return episode ? structuredClone(episode) : placeholderEpisode(meta, description);
 }
 
 export function fakeInterviewStep(meta: LanguageMeta, answered: number): InterviewStep {
