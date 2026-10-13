@@ -1,0 +1,56 @@
+{
+  "id": "verb.sapere",
+  "order": 90,
+  "infinitive": "sapere",
+  "es": "saber",
+  "irregular": true,
+  "notes": "Saber un dato o saber hacer algo: «Non so», «So nuotare». Para conocer personas o lugares se usa «conoscere». Con «Lei»: «Sa dov'è…?».",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "so", "es": "sé", "irregular": true },
+        { "form": "sai", "es": "sabes", "irregular": true },
+        { "form": "sa", "es": "sabe", "irregular": true },
+        { "form": "sappiamo", "es": "sabemos", "irregular": true },
+        { "form": "sapete", "es": "sabéis" },
+        { "form": "sanno", "es": "saben", "irregular": true }
+      ],
+      "example": { "text": "Non so dov'è la stazione.", "es": "No sé dónde está la estación." },
+      "notes": "«Non lo so» = no lo sé. «Sa…?» es la forma de «Lei»: «Sa dov'è la fermata?»."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "ho saputo", "es": "he sabido / me he enterado" },
+        { "form": "hai saputo", "es": "has sabido / te has enterado" },
+        { "form": "ha saputo", "es": "ha sabido / se ha enterado" },
+        { "form": "abbiamo saputo", "es": "hemos sabido / nos hemos enterado" },
+        { "form": "avete saputo", "es": "habéis sabido / os habéis enterado" },
+        { "form": "hanno saputo", "es": "han sabido / se han enterado" }
+      ],
+      "example": { "text": "Ho saputo che lo sciopero è domani.", "es": "Me he enterado de que la huelga es mañana." },
+      "notes": "Con «avere». «Ho saputo che…» suele significar «me he enterado de que…»."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "saprei", "es": "sabría" },
+        { "form": "sapresti", "es": "sabrías" },
+        { "form": "saprebbe", "es": "sabría" },
+        { "form": "sapremmo", "es": "sabríamos" },
+        { "form": "sapreste", "es": "sabríais" },
+        { "form": "saprebbero", "es": "sabrían" }
+      ],
+      "example": { "text": "Saprebbe dirmi dov'è la fermata?", "es": "¿Sabría decirme dónde está la parada?" },
+      "notes": "Raíz «sapr-» (sin la «e»). «Saprebbe dirmi…?» es una forma muy educada de preguntar."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "sappi", "es": "sabe / ten presente", "irregular": true },
+        { "form": "sappia", "es": "sepa (usted)" },
+        { "form": "sappiamo", "es": "sepamos" },
+        { "form": "sappiate", "es": "sabed / tened presente", "irregular": true }
+      ],
+      "example": { "text": "Sappi che domani parto presto.", "es": "Que sepas que mañana salgo temprano." },
+      "notes": "Se usa sobre todo en «sappi che…» y «sappia che…» (que sepas / sepa que…). Para pedir información se dice «Mi sa dire…?»."
+    }
+  }
+}

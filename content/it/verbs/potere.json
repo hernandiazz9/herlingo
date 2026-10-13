@@ -1,0 +1,46 @@
+{
+  "id": "verb.potere",
+  "order": 70,
+  "infinitive": "potere",
+  "es": "poder",
+  "irregular": true,
+  "notes": "Siempre va con otro verbo en infinitivo: «Posso entrare?». Sirve para pedir permiso y favores: «Può ripetere?». No tiene imperativo.",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "posso", "es": "puedo", "irregular": true },
+        { "form": "puoi", "es": "puedes", "irregular": true },
+        { "form": "può", "es": "puede", "irregular": true },
+        { "form": "possiamo", "es": "podemos", "irregular": true },
+        { "form": "potete", "es": "podéis" },
+        { "form": "possono", "es": "pueden", "irregular": true }
+      ],
+      "example": { "text": "Posso pagare con la carta?", "es": "¿Puedo pagar con tarjeta?" },
+      "notes": "«Può» lleva acento. Con «Lei» se usa para pedir favores: «Può ripetere, per favore?»."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "ho potuto", "es": "he podido" },
+        { "form": "hai potuto", "es": "has podido" },
+        { "form": "ha potuto", "es": "ha podido" },
+        { "form": "abbiamo potuto", "es": "hemos podido" },
+        { "form": "avete potuto", "es": "habéis podido" },
+        { "form": "hanno potuto", "es": "han podido" }
+      ],
+      "example": { "text": "Non ho potuto prendere il treno.", "es": "No he podido coger el tren." },
+      "notes": "Con «avere». Si el infinitivo que sigue lleva «essere», se usa también «essere»: «sono potuto andare» (y «ho potuto andare» se acepta)."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "potrei", "es": "podría" },
+        { "form": "potresti", "es": "podrías" },
+        { "form": "potrebbe", "es": "podría" },
+        { "form": "potremmo", "es": "podríamos" },
+        { "form": "potreste", "es": "podríais" },
+        { "form": "potrebbero", "es": "podrían" }
+      ],
+      "example": { "text": "Potrebbe aiutarmi, per favore?", "es": "¿Podría ayudarme, por favor?" },
+      "notes": "Raíz «potr-» (sin la «e»). «Potrei…?» y «Potrebbe…?» piden con mucha cortesía."
+    }
+  }
+}

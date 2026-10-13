@@ -1,0 +1,46 @@
+{
+  "id": "verb.dovere",
+  "order": 80,
+  "infinitive": "dovere",
+  "es": "deber / tener que",
+  "irregular": true,
+  "notes": "Con un infinitivo es «tener que»: «Devo andare». Con un sustantivo es «deber» (dinero): «Quanto Le devo?». No tiene imperativo.",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "devo", "es": "debo / tengo que", "irregular": true },
+        { "form": "devi", "es": "debes / tienes que", "irregular": true },
+        { "form": "deve", "es": "debe / tiene que", "irregular": true },
+        { "form": "dobbiamo", "es": "debemos / tenemos que", "irregular": true },
+        { "form": "dovete", "es": "debéis / tenéis que" },
+        { "form": "devono", "es": "deben / tienen que", "irregular": true }
+      ],
+      "example": { "text": "Devo scendere alla prossima fermata.", "es": "Tengo que bajarme en la próxima parada." },
+      "notes": "También se oyen «debbo» y «debbono», más raros. Para pagar: «Quanto Le devo?» (¿cuánto le debo?)."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "ho dovuto", "es": "he tenido que" },
+        { "form": "hai dovuto", "es": "has tenido que" },
+        { "form": "ha dovuto", "es": "ha tenido que" },
+        { "form": "abbiamo dovuto", "es": "hemos tenido que" },
+        { "form": "avete dovuto", "es": "habéis tenido que" },
+        { "form": "hanno dovuto", "es": "han tenido que" }
+      ],
+      "example": { "text": "Ho dovuto cambiare treno a Messina.", "es": "He tenido que cambiar de tren en Mesina." },
+      "notes": "Con «avere». Si el infinitivo que sigue lleva «essere», se usa también «essere»: «sono dovuto partire» (y «ho dovuto partire» se acepta)."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "dovrei", "es": "debería / tendría que" },
+        { "form": "dovresti", "es": "deberías / tendrías que" },
+        { "form": "dovrebbe", "es": "debería / tendría que" },
+        { "form": "dovremmo", "es": "deberíamos / tendríamos que" },
+        { "form": "dovreste", "es": "deberíais / tendríais que" },
+        { "form": "dovrebbero", "es": "deberían / tendrían que" }
+      ],
+      "example": { "text": "Dovremmo partire presto domani.", "es": "Deberíamos salir pronto mañana." },
+      "notes": "Raíz «dovr-» (sin la «e»). Sirve para aconsejar: «Dovresti provare i cannoli»."
+    }
+  }
+}

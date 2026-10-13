@@ -1,0 +1,56 @@
+{
+  "id": "verb.dire",
+  "order": 100,
+  "infinitive": "dire",
+  "es": "decir",
+  "irregular": true,
+  "notes": "Viene de «dicere»: por eso la raíz «dic-». En tiendas y bares oirás «Mi dica!» (¡dígame!).",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "dico", "es": "digo", "irregular": true },
+        { "form": "dici", "es": "dices", "irregular": true },
+        { "form": "dice", "es": "dice", "irregular": true },
+        { "form": "diciamo", "es": "decimos", "irregular": true },
+        { "form": "dite", "es": "decís" },
+        { "form": "dicono", "es": "dicen", "irregular": true }
+      ],
+      "example": { "text": "Cosa dice il cartello?", "es": "¿Qué dice el cartel?" },
+      "notes": "«Dite» es la única forma sin «dic-». «Come si dice…?» = ¿cómo se dice…?"
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "ho detto", "es": "he dicho" },
+        { "form": "hai detto", "es": "has dicho" },
+        { "form": "ha detto", "es": "ha dicho" },
+        { "form": "abbiamo detto", "es": "hemos dicho" },
+        { "form": "avete detto", "es": "habéis dicho" },
+        { "form": "hanno detto", "es": "han dicho" }
+      ],
+      "example": { "text": "Mi hanno detto che è chiuso.", "es": "Me han dicho que está cerrado." },
+      "notes": "Con «avere». Participio irregular: «detto» (como el español «dicho»)."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "direi", "es": "diría" },
+        { "form": "diresti", "es": "dirías" },
+        { "form": "direbbe", "es": "diría" },
+        { "form": "diremmo", "es": "diríamos" },
+        { "form": "direste", "es": "diríais" },
+        { "form": "direbbero", "es": "dirían" }
+      ],
+      "example": { "text": "Direi di sì.", "es": "Diría que sí." },
+      "notes": "Regular: raíz «dir-». «Direi che…» suaviza una opinión."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "di'", "say": "di", "es": "di", "irregular": true },
+        { "form": "dica", "es": "diga (usted)" },
+        { "form": "diciamo", "es": "digamos" },
+        { "form": "dite", "es": "decid" }
+      ],
+      "example": { "text": "Mi dica pure.", "es": "Dígame, adelante." },
+      "notes": "«Di'» lleva apóstrofo y se une a «mi»: «dimmi» (dime). «Mi dica» es la forma de «Lei»."
+    }
+  }
+}

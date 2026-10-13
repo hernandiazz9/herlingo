@@ -1,0 +1,56 @@
+{
+  "id": "verb.prendere",
+  "order": 110,
+  "infinitive": "prendere",
+  "es": "tomar / coger",
+  "irregular": true,
+  "notes": "Presente y condicional son regulares; lo que hay que memorizar es el participio «preso». En Italia se «prende» el tren, el autobús, un café o una calle.",
+  "tenses": {
+    "presente": {
+      "forms": [
+        { "form": "prendo", "es": "tomo / cojo" },
+        { "form": "prendi", "es": "tomas / coges" },
+        { "form": "prende", "es": "toma / coge" },
+        { "form": "prendiamo", "es": "tomamos / cogemos" },
+        { "form": "prendete", "es": "tomáis / cogéis" },
+        { "form": "prendono", "es": "toman / cogen" }
+      ],
+      "example": { "text": "Prendo il treno per Palermo.", "es": "Cojo el tren a Palermo." },
+      "notes": "Sirve para transportes y consumiciones: «prendo un caffè» (tomo un café), «prendo l'autobus» (cojo el autobús)."
+    },
+    "passato-prossimo": {
+      "forms": [
+        { "form": "ho preso", "es": "he tomado / he cogido" },
+        { "form": "hai preso", "es": "has tomado / has cogido" },
+        { "form": "ha preso", "es": "ha tomado / ha cogido" },
+        { "form": "abbiamo preso", "es": "hemos tomado / hemos cogido" },
+        { "form": "avete preso", "es": "habéis tomado / habéis cogido" },
+        { "form": "hanno preso", "es": "han tomado / han cogido" }
+      ],
+      "example": { "text": "Ho preso il treno sbagliato.", "es": "He cogido el tren equivocado." },
+      "notes": "Con «avere». Participio irregular: «preso» (no «prenduto»)."
+    },
+    "condizionale": {
+      "forms": [
+        { "form": "prenderei", "es": "tomaría / cogería" },
+        { "form": "prenderesti", "es": "tomarías / cogerías" },
+        { "form": "prenderebbe", "es": "tomaría / cogería" },
+        { "form": "prenderemmo", "es": "tomaríamos / cogeríamos" },
+        { "form": "prendereste", "es": "tomaríais / cogeríais" },
+        { "form": "prenderebbero", "es": "tomarían / cogerían" }
+      ],
+      "example": { "text": "Prenderei un caffè, grazie.", "es": "Tomaría un café, gracias." },
+      "notes": "Regular. «Prenderei…» es otra forma educada de pedir en un bar, como «vorrei»."
+    },
+    "imperativo": {
+      "forms": [
+        { "form": "prendi", "es": "toma / coge" },
+        { "form": "prenda", "es": "tome / coja (usted)" },
+        { "form": "prendiamo", "es": "tomemos / cojamos" },
+        { "form": "prendete", "es": "tomad / coged" }
+      ],
+      "example": { "text": "Prenda la prima a destra.", "es": "Tome la primera a la derecha." },
+      "notes": "Regular. Para indicar el camino a alguien: «Prenda la prima a destra»."
+    }
+  }
+}
