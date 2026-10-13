@@ -8,11 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 16:49Z 💻
+- Updated: 2026-10-13 16:57Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
 - Next step: T188, then T189–T190 one at a time; T191 is Hernán's iPhone check (gate)
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
+- Needs Hernán: dialogue episodes: Gemini normal + edge-tts slow (two timbres) vs edge-tts for both (default: edge-tts for both)
 
 ## Shared contract (all tasks read this)
 
@@ -45,7 +46,7 @@ Worktree setup: npm ci
 - Outcome: tts slow:true (rate -30%, 400 on non-boolean), generatedPlayable(…, { slow }) own key (normal keys unchanged), generatedBytes(playable) cache→source→null, COACH_TTS_DAILY_LIMIT 2000 · 58fa3d04 · verify ✓ 💻 · fake curl ✓ · not checked: real slow voice, device
 
 ## T188 — Episode model, compiler and free episodes from dialogues and routes
-- Status: running (attempt 1 · 💻 · agent af9c75698b24a05f4 · since 16:49Z)
+- Status: done
 - Depends on: T187
 - Where: any
 - Goal: Pure logic in `src/lib/sport/` that turns any episode (AI, dialogue or route) into the ordered list of clips and gaps the player joins, following the decided format.
@@ -57,7 +58,7 @@ Worktree setup: npm ci
   - `episodePlayables(episode)` lists every generated line (narrator, slow, route lines) once.
   - Throwaway `npx tsx` check: one Italian dialogue and the fake route fixture compile; print segment counts, the first 15 segments as text, and an estimated duration (≈ 15 characters per second spoken + gaps); a dialogue episode lands in 2–5 minutes.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: src/lib/sport/ (types, NARRATION table, EPISODE_GAPS, compileEpisode → segments+chapters, episodeFromDialogue/Route, episodePlayables); estimates: Italian dialogues 3:43–6:46, fake route 5:11 · 1d162735 · verify ✓ 💻 · not checked: real durations
 
 ## T189 — Joined player: one mp3 per episode, chapters, lock-screen controls
 - Status: pending
@@ -210,6 +211,8 @@ Worktree setup: npm ci
 - 2026-10-13 plan: Narrator for other gloss languages (only `es` today).
 - 2026-10-13 T187: a slow line without mp3 falls back to the device voice at speak()'s rate, not slow (rate set in src/lib/audio/index.ts)
 - 2026-10-13 T187: per-line load deadline 8 s (LOAD_DEADLINE_MS) and request timeout 7 s (SPEECH_TIMEOUT_MS): preparing an episode with real slow lines may need retries
+- 2026-10-13 T188: Italian content mp3s are Gemini voices (ttsVoices: Kore/Charon/Leda, 64 kbps) while slow lines are edge-tts (48 kbps): a dialogue's normal and slow lines sound like different people → asked Hernán
+- 2026-10-13 T188: episode es/intro/tip allow ≤ 400 chars but /api/coach/tts/ accepts ≤ 300 (COACH_LIMITS.ttsText) → T192 caps episode narration and meanings at 300
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -217,3 +220,4 @@ Worktree setup: npm ci
 - 2026-10-13 16:40Z 💻 T187 launched · attempt 1 · agent a8150887220bfacf0
 - 2026-10-13 16:49Z 💻 T187 done · worktree-agent-a8150887220bfacf0 → 58fa3d04 · verify ✓
 - 2026-10-13 16:49Z 💻 T188 launched · attempt 1 · agent af9c75698b24a05f4
+- 2026-10-13 16:57Z 💻 T188 done · worktree-agent-af9c75698b24a05f4 → 1d162735 · verify ✓
