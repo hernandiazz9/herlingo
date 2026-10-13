@@ -23,6 +23,7 @@ export {
 } from "./normalize";
 export { createRng, hashSeed, type Rng } from "./random";
 export { defaultSessionSize, generateSession, type GenerateOptions } from "./generate";
+export { grammarDrills, REVIEW_DRILLS } from "./grammar";
 export {
   XP_DIALOGUE,
   XP_LESSON,

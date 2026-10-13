@@ -10,6 +10,9 @@
  * Pictures: vocab words with an `image` can also get "pick the picture" exercises (Spanish prompt or
  * target-language audio only), and the match uses pictures when >= 3 lesson words have one. With `known`,
  * a new-word card comes before the first exercise of each vocab word never seen before.
+ *
+ * Gramática: with `drills` (read, due drillable entries), each entry adds `REVIEW_DRILLS` fill-gap
+ * drills, spread among the production exercises (docs/grammar.md, "Exercises").
  */
 import {
   getLessonItems,
@@ -26,6 +29,7 @@ import {
   type QA,
   type Vocab,
 } from "@/lib/content";
+import { grammarDrills, REVIEW_DRILLS } from "./grammar";
 import { normalizeAnswer, toTiles } from "./normalize";
 import { createRng, type Rng } from "./random";
 import type { ChoiceOption, Exercise, ExerciseType, GrammarStep, IntroStep, MatchPair, PictureOption, SessionStep } from "./types";
@@ -43,6 +47,12 @@ export interface GenerateOptions {
    * that is not known gets a new-word intro step before its first exercise.
    */
   known?: (itemId: string) => boolean;
+  /**
+   * Gramática entry ids to drill (drillable, read and due: a review): each adds `REVIEW_DRILLS`
+   * fill-gap drills on top of `size`. Drawn after the rest, so the other exercises are the same
+   * with or without them. Keep them out of the lesson's `items`.
+   */
+  drills?: readonly string[];
 }
 
 type Meaningful = Phrase | Vocab | Expression;
@@ -72,7 +82,11 @@ export function generateSession(lesson: Lesson, pack: Pack, options: GenerateOpt
   const speaking = options.speaking ?? true;
   const all = getLessonItems(lesson, pack);
   const items = all.filter((i): i is Practisable => i.kind !== "grammar");
-  if (!items.length) return all.filter((i) => i.kind === "grammar").map((card) => ({ type: "grammar", key: `grammar:${card.id}`, card }));
+  const drillsFor = () => entryDrills(options.drills ?? [], pack, options.gloss, rng);
+  if (!items.length) {
+    const tips: SessionStep[] = all.filter((i) => i.kind === "grammar").map((card) => ({ type: "grammar", key: `grammar:${card.id}`, card }));
+    return [...tips, ...drillsFor()];
+  }
 
   const ctx = new Ctx(rng, pack, items, options.gloss);
   const target = options.size ?? defaultSessionSize(items.length);
@@ -107,7 +121,7 @@ export function generateSession(lesson: Lesson, pack: Pack, options: GenerateOpt
     }
   }
 
-  const exercises: Exercise[] = [...rec, ...(match ? [match] : []), ...prod];
+  const exercises: Exercise[] = [...rec, ...(match ? [match] : []), ...spread(prod, drillsFor())];
 
   // 4. Grammar tips: after the last recognition exercise that comes before the card in teaching order.
   const steps: SessionStep[] = [...exercises];
@@ -442,6 +456,23 @@ class Ctx {
       glossOrder: this.rng.shuffle(ids),
     };
   }
+}
+
+/**
+ * `REVIEW_DRILLS` drills per Gramática entry: every entry's first drill, then every entry's second
+ * one…, so the drills of one entry are apart.
+ */
+function entryDrills(ids: readonly string[], pack: Pack, gloss: GlossLang, rng: Rng): Exercise[] {
+  const per = ids.map((id) => grammarDrills(id, pack, gloss, rng, REVIEW_DRILLS));
+  return Array.from({ length: REVIEW_DRILLS }, (_, n) => per.flatMap((list) => list[n] ?? [])).flat();
+}
+
+/** `extra` spread evenly among `list` (none before its first entry). */
+function spread<T>(list: readonly T[], extra: readonly T[]): T[] {
+  const out = [...list];
+  // Back to front, so the positions still to fill are not shifted.
+  for (let k = extra.length - 1; k >= 0; k--) out.splice(Math.ceil(((k + 1) * list.length) / (extra.length + 1)), 0, extra[k]);
+  return out;
 }
 
 /** Tiles with the sentence-initial capital removed, so capitals do not give the order away. */
