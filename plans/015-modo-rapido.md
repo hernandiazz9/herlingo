@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 06:02Z 💻
-- Writer: released 06:02Z by 💻 desktop → continue on 💻 in the worktree `../lang_lern-rapido` (branch plan-015-modo-rapido; the main checkout runs plan 014)
+- Updated: 2026-10-13 06:21Z 💻
+- Writer: me (💻 desktop session in lang_lern-rapido, since 06:21Z)
 - Branch: plan-015-modo-rapido · pushed
-- Next step: a fresh session opened in `lang_lern-rapido` takes the writer lock and launches T175 (one agent at a time).
+- Next step: integrate T175 when its agent finishes, then launch T176 (one agent at a time)
 - Gotchas: never switch branches in `lang_lern/` (plan 014 lives there); `.env.local` absent here on purpose (fake mode).
 
 ## Shared contract (all tasks read this)
@@ -28,7 +28,7 @@ Worktree setup: npm ci
 ## Tasks
 
 ## T175 — Route generation on the server
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a80b78e238b64f1ac · since 06:21Z)
 - Depends on: none
 - Where: any
 - Goal: Server modules that turn a description into a validated `Route` (fake or real Claude), no endpoint yet.
@@ -149,3 +149,5 @@ Worktree setup: npm ci
 ## Log
 - 2026-10-12 22:26Z 💻 plan written from the interview; not approved yet
 - 2026-10-13 06:02Z 💻 approved by Hernán ("OK, en carpeta aparte"); worktree ../lang_lern-rapido created, npm ci done
+- 2026-10-13 06:21Z 💻 resume on 💻 (lang_lern-rapido) · writer lock taken
+- 2026-10-13 06:21Z 💻 T175 launched · attempt 1 · agent a80b78e238b64f1ac
