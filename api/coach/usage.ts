@@ -1,4 +1,7 @@
-/** GET /api/coach/usage/: this month's spend and today's generations. PUT { capUsd }: owner only. */
+/**
+ * GET /api/coach/usage/: this month's spend, today's generations and today's quick routes (their
+ * own counter). PUT { capUsd }: owner only.
+ */
 import { authenticate } from "../_lib/access.js";
 import { CoachError, json, readBody, route } from "../_lib/http.js";
 import { readUsage, setCapUsd } from "../_lib/ledger.js";
