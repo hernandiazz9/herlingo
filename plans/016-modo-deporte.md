@@ -79,7 +79,7 @@ Worktree setup: npm ci
 - Outcome: prepareEpisode (downloads, missing counted, format error), MP3 frame parser + new Xing frame on the joined file, joinEpisodes, player (load/play/pause/seek/steps, Media Session), episodeMp3File; mp3Media on the shared element · b4fa000b · verify ✓ 💻 · joined Gemini+edge clips: frames/duration exact, ffmpeg + afconvert decode clean · not checked: lock screen, headphones, iOS blob play/seek
 
 ## T190 — `/deporte/` screen with free episodes, player view and the Jugar card
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a4eddf1514188c1ad · since 17:13Z)
 - Depends on: T189
 - Where: any
 - Goal: Hernán opens Modo deporte, picks a dialogue episode, waits for "Preparando el audio…", taps «Reproducir», locks the phone and listens.
@@ -227,3 +227,4 @@ Worktree setup: npm ci
 - 2026-10-13 16:57Z 💻 T188 done · worktree-agent-af9c75698b24a05f4 → 1d162735 · verify ✓
 - 2026-10-13 16:57Z 💻 T189 launched · attempt 1 · agent a1001fa71713095c5
 - 2026-10-13 17:13Z 💻 T189 done · worktree-agent-a1001fa71713095c5 → b4fa000b · verify ✓
+- 2026-10-13 17:13Z 💻 T190 launched · attempt 1 · agent a4eddf1514188c1ad (+ edge-tts dialogue lines, no ±15 s handlers, Xing note in docs)
