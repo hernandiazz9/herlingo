@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 21:43Z 💻
+- Updated: 2026-10-13 22:10Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed
-- Next step: T197: deploy (Hernán's OK) + Hernán's check on the bike; then plan done when the visual queue is empty
+- Next step: T197: Hernán's check on the bike (deployed); then plan done when the visual queue is empty
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
 - Needs Hernán: OK to fast-forward main to plan-016 and deploy · T197 check · visual queue (5)
 
@@ -276,3 +276,4 @@ Worktree setup: npm ci
 - 2026-10-13 21:23Z 💻 T196 launched · attempt 1 · agent a0c13b2cdac9c4346
 - 2026-10-13 21:42Z 💻 T196 done · worktree-agent-a0c13b2cdac9c4346 → 130a01ca · verify ✓
 - 2026-10-13 21:43Z 💻 merged origin/main (a952b70e: msedge-tts 2.1.0, update download progress) into plan-016 → 0257a6de, no conflicts · npm ci · verify ✓ · slow TTS (rate -30%) still works on msedge-tts 2.1.0
+- 2026-10-13 22:10Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ 99a8e4ad: T187–T198 + main a952b70e) → https://langlern-iota.vercel.app; main not fast-forwarded yet
