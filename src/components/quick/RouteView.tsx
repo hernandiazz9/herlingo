@@ -1,18 +1,20 @@
 "use client";
 
-import { useEffect, useId, useState, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import { ChevronRightIcon, TrashIcon } from "@/components/coach/icons";
 import { ConfirmDialog } from "@/components/coach/ConfirmDialog";
 import { DANGER, FOCUS, registerBadge } from "@/components/coach/shared";
 import { SpeakerIcon } from "@/components/icons";
 import { SlowIcon } from "@/components/phrasebook/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
-import { TargetText } from "@/components/ui";
+import { Button, TargetText } from "@/components/ui";
 import { speak, stop } from "@/lib/audio";
-import { routeLine, type CoachRoute, type CoachRouteLine, type CoachRouteTurn } from "@/lib/coach";
+import { routeLine, type CoachRoute, type CoachRouteLine, type CoachRouteTurn, type RouteListenStep } from "@/lib/coach";
 import { cn } from "@/lib/cn";
 import type { Playable } from "@/lib/content";
 import { recordListen } from "@/lib/progress/activity";
+import { PauseIcon, PlayIcon } from "./icons";
+import { useListenAll, type ListenAll } from "./listen-all";
 
 export interface RouteViewProps {
   route: CoachRoute;
@@ -23,10 +25,36 @@ export interface RouteViewProps {
   onDelete: () => void;
 }
 
-/** A quick route: the likely exchange as chat bubbles, each line with audio, «Más» for variants and words. */
+/** Where a step of «Escuchar todo» is on screen: the turn's main line, or one of its alts. */
+const spotOf = (step: RouteListenStep | null) => (step ? (step.alt === undefined ? step.turnId : `${step.turnId}:${step.alt}`) : null);
+
+/**
+ * Highlighted lines stop clear of the fixed tab bar (and the top edge) when scrolled into view.
+ * Literal, so Tailwind generates it.
+ */
+const SCROLL_MARGIN = "scroll-mt-4 scroll-mb-[calc(var(--tabbar-height)+var(--safe-bottom)+1rem)]";
+
+/**
+ * A quick route: «Escuchar todo» (every line and its meaning, hands-free), then the likely
+ * exchange as chat bubbles, each line with audio, «Más» for variants and words.
+ */
 export function RouteView({ route, notice, onBack, onDelete }: RouteViewProps) {
   const [confirming, setConfirming] = useState(false);
   useEffect(() => () => stop(), []);
+  const listen = useListenAll(route);
+  const spot = spotOf(listen.step);
+  const spots = useRef(new Map<string, HTMLElement>());
+  const register = (key: string) => (el: HTMLElement | null) => {
+    if (el) spots.current.set(key, el);
+    else spots.current.delete(key);
+  };
+
+  // The line «Escuchar todo» reaches scrolls into view (after its «Más» panel opened).
+  useEffect(() => {
+    if (!spot || listen.status !== "playing") return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    spots.current.get(spot)?.scrollIntoView({ block: "nearest", behavior: reduce ? "auto" : "smooth" });
+  }, [spot, listen.status]);
 
   return (
     <>
@@ -46,9 +74,16 @@ export function RouteView({ route, notice, onBack, onDelete }: RouteViewProps) {
           </h2>
           <p className="text-sm text-ink-muted">Toca el altavoz para oír cada frase; el caracol la dice más despacio.</p>
         </div>
+        <ListenAllButton listen={listen} />
         <ol className="flex flex-col gap-3">
           {route.turns.map((turn) => (
-            <TurnBubble key={turn.id} route={route} turn={turn} />
+            <TurnBubble
+              key={turn.id}
+              route={route}
+              turn={turn}
+              playing={listen.step?.turnId === turn.id ? (listen.step.alt ?? "main") : undefined}
+              register={register}
+            />
           ))}
         </ol>
       </section>
@@ -79,25 +114,67 @@ const SPEAKER = {
   native: {
     label: "Te dicen",
     altsTitle: "También te pueden decir",
-    bubble: "mr-8 rounded-tl-md border-line bg-surface",
+    bubble: "mr-8 rounded-tl-md",
+    tone: "border-line bg-surface",
     labelClass: "text-terracotta-deep",
   },
   learner: {
     label: "Tú",
     altsTitle: "También puedes decir",
-    bubble: "ml-8 rounded-tr-md border-sea/30 bg-sea-soft",
+    bubble: "ml-8 rounded-tr-md",
+    tone: "border-sea/30 bg-sea-soft",
     labelClass: "text-sea-deep",
   },
 } as const;
 
-function TurnBubble({ route, turn }: { route: CoachRoute; turn: CoachRouteTurn }) {
+/** The big «Escuchar todo» / «Pausar» / «Seguir» button above the turns. */
+function ListenAllButton({ listen }: { listen: ListenAll }) {
+  const playing = listen.status === "playing";
+  const label = playing ? "Pausar" : listen.status === "paused" ? "Seguir" : "Escuchar todo";
+  return (
+    <div className="flex flex-col gap-1">
+      <Button fullWidth onClick={listen.toggle}>
+        {playing ? <PauseIcon width={24} height={24} /> : <PlayIcon width={24} height={24} />}
+        {label}
+      </Button>
+      <p className="text-sm text-ink-muted">Cada frase y luego su significado, una tras otra, sin tocar nada.</p>
+    </div>
+  );
+}
+
+/** A highlighted line of «Escuchar todo» (lemon, like the story reader). */
+const PLAYING = "border-lemon-deep bg-lemon-soft";
+
+function TurnBubble({
+  route,
+  turn,
+  playing,
+  register,
+}: {
+  route: CoachRoute;
+  turn: CoachRouteTurn;
+  /** What «Escuchar todo» is on in this turn: its main line or the index of an alt. */
+  playing?: "main" | number;
+  register: (key: string) => (el: HTMLElement | null) => void;
+}) {
   const [open, setOpen] = useState(false);
+  // «Escuchar todo» reaching an alt opens «Más», so the line playing is on screen.
+  if (typeof playing === "number" && !open) setOpen(true);
   const panelId = useId();
   const style = SPEAKER[turn.speaker];
   const hasMore = turn.alts.length > 0 || turn.words.length > 0;
 
   return (
-    <li className={cn("flex flex-col gap-2 rounded-card border-2 p-4", style.bubble)}>
+    <li
+      ref={register(turn.id)}
+      aria-current={playing === "main" ? "true" : undefined}
+      className={cn(
+        "flex flex-col gap-2 rounded-card border-2 p-4 transition-colors motion-reduce:transition-none",
+        SCROLL_MARGIN,
+        style.bubble,
+        playing === "main" ? PLAYING : style.tone,
+      )}
+    >
       <p className={cn("text-sm font-bold", style.labelClass)}>{style.label}</p>
       <div>
         <p lang={route.lang} className="text-xl font-bold leading-snug text-ink">
@@ -127,7 +204,14 @@ function TurnBubble({ route, turn }: { route: CoachRoute; turn: CoachRouteTurn }
       {hasMore ? (
         <div id={panelId} hidden={!open} className="flex flex-col gap-3 border-t-2 border-line pt-3">
           {turn.alts.length > 0 ? (
-            <LineGroup title={style.altsTitle} route={route} lines={turn.alts} speaker={turn.speaker} />
+            <LineGroup
+              title={style.altsTitle}
+              route={route}
+              lines={turn.alts}
+              speaker={turn.speaker}
+              playing={typeof playing === "number" ? playing : undefined}
+              spot={(i) => register(`${turn.id}:${i}`)}
+            />
           ) : null}
           {turn.words.length > 0 ? <LineGroup title="Palabras" route={route} lines={turn.words} speaker="native" /> : null}
         </div>
@@ -136,17 +220,24 @@ function TurnBubble({ route, turn }: { route: CoachRoute; turn: CoachRouteTurn }
   );
 }
 
-/** Variants or key words of a turn, each with its translation and audio (`speaker` = the voice). */
+/**
+ * Variants or key words of a turn, each with its translation and audio (`speaker` = the voice).
+ * Alts take part in «Escuchar todo»: `playing` = the index highlighted, `spot` registers each one.
+ */
 function LineGroup({
   title,
   route,
   lines,
   speaker,
+  playing,
+  spot,
 }: {
   title: string;
   route: CoachRoute;
   lines: CoachRouteLine[];
   speaker: CoachRouteTurn["speaker"];
+  playing?: number;
+  spot?: (i: number) => (el: HTMLElement | null) => void;
 }) {
   const titleId = useId();
   return (
@@ -156,7 +247,16 @@ function LineGroup({
       </h3>
       <ul aria-labelledby={titleId} className="flex flex-col gap-2">
         {lines.map((line, i) => (
-          <li key={i} className="flex items-start gap-2">
+          <li
+            key={i}
+            ref={spot?.(i)}
+            aria-current={playing === i ? "true" : undefined}
+            className={cn(
+              "-mx-2 flex items-start gap-2 rounded-button border-2 px-2 py-1 transition-colors motion-reduce:transition-none",
+              SCROLL_MARGIN,
+              playing === i ? PLAYING : "border-transparent",
+            )}
+          >
             <span className="min-w-0 flex-1 pt-1">
               <span lang={route.lang} className="block text-lg font-bold leading-snug text-ink">
                 <TargetText text={line.text} lang={route.lang} />

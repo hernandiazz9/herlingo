@@ -51,13 +51,61 @@ export function routeLine(route: CoachRoute, text: string, speaker: "native" | "
   return generatedPlayable(text, route.voices[speaker]);
 }
 
-/** Every playable line of a route: each turn's main line, its alts and its words. */
-export function routePlayables(route: CoachRoute): Playable[] {
+/**
+ * The narrator of each gloss language: the one neural voice that reads a line's meaning aloud,
+ * and the device-voice locale when there is no mp3. Mirror of the server's `NARRATOR_VOICES`
+ * (api/_lib/languages.ts), which the TTS endpoint accepts on its own (no pack declares it).
+ */
+export const COACH_NARRATORS = {
+  es: { voice: "es-ES-AlvaroNeural", locale: "es-ES" },
+} as const satisfies Readonly<Record<string, { voice: string; locale: string }>>;
+
+/** Route meanings are the Spain Spanish `es` of each line. */
+const ROUTE_NARRATOR = COACH_NARRATORS.es;
+
+/** Options for `speak()` / `speakSequence()` of a route meaning: the route's pack, the narrator's locale. */
+export const routeMeaningOptions = (route: CoachRoute) => ({ lang: route.lang, locale: ROUTE_NARRATOR.locale });
+
+/** A route line's meaning (its `es`) read aloud by the Spanish narrator. Play it with `routeMeaningOptions`. */
+export function routeMeaning(es: string): Playable {
+  return generatedPlayable(es, ROUTE_NARRATOR.voice);
+}
+
+/** One step of «Escuchar todo»: a target-language line and its meaning. */
+export interface RouteListenStep {
+  turnId: string;
+  /** Index in `turn.alts`; absent for the turn's main line. */
+  alt?: number;
+  line: Playable;
+  meaning: Playable;
+}
+
+/** «Escuchar todo», in order: each turn's main line, then each of its alts, each with its meaning. Words are skipped. */
+export function routeListenSteps(route: CoachRoute): RouteListenStep[] {
   return route.turns.flatMap((turn) => [
-    routeLine(route, turn.text, turn.speaker),
-    ...turn.alts.map((alt) => routeLine(route, alt.text, turn.speaker)),
-    ...turn.words.map((word) => routeLine(route, word.text, "native")),
+    { turnId: turn.id, line: routeLine(route, turn.text, turn.speaker), meaning: routeMeaning(turn.es) },
+    ...turn.alts.map((alt, i) => ({
+      turnId: turn.id,
+      alt: i,
+      line: routeLine(route, alt.text, turn.speaker),
+      meaning: routeMeaning(alt.es),
+    })),
   ]);
+}
+
+/**
+ * Every playable line of a route: each turn's main line, its alts and its words, then the meanings
+ * «Escuchar todo» reads (downloaded with the rest, kept by `pruneCoachAudio`).
+ */
+export function routePlayables(route: CoachRoute): Playable[] {
+  return [
+    ...route.turns.flatMap((turn) => [
+      routeLine(route, turn.text, turn.speaker),
+      ...turn.alts.map((alt) => routeLine(route, alt.text, turn.speaker)),
+      ...turn.words.map((word) => routeLine(route, word.text, "native")),
+    ]),
+    ...routeListenSteps(route).map((step) => step.meaning),
+  ];
 }
 
 /** The interview question's target-language line (native voice), if it has one. */
@@ -70,7 +118,7 @@ export function cachePackAudio(pack: CoachPack, signal?: AbortSignal): Promise<P
   return prefetchGenerated(packPlayables(pack), signal);
 }
 
-/** Downloads every line of a route that is not on the device yet, so it plays offline. Never rejects. */
+/** Downloads every line of a route (meanings included) not on the device yet, so it plays offline. Never rejects. */
 export function cacheRouteAudio(route: CoachRoute, signal?: AbortSignal): Promise<PrefetchResult> {
   return prefetchGenerated(routePlayables(route), signal);
 }

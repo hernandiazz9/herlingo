@@ -97,6 +97,7 @@ function Quick({ lang }: { lang: string }) {
     }
     return (
       <RouteView
+        key={route.id}
         route={route}
         notice={notice?.id === route.id ? <Notice tone={notice.tone}>{notice.text}</Notice> : null}
         onBack={back}

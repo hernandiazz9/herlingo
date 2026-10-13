@@ -158,8 +158,11 @@ type Assessment = {
 
 `{ text (1–300 chars, trimmed), voice }` → `200 audio/mpeg` (`Cache-Control: private,
 max-age=31536000, immutable`: a line never changes, the client caches it by voice + text).
-`voice` must be one of the `voices` of a content pack, else 400; packs carry the two to use in
-`pack.voices`. The mp3 is read by that Microsoft neural voice (see "Voice (TTS)"); if the voice
+`voice` must be one of the `voices` of a content pack or a narrator voice, else 400; packs carry
+the two to use in `pack.voices`. The narrator voices (`NARRATOR_VOICES` in `api/_lib/languages.ts`,
+one per gloss language, mirrored by `COACH_NARRATORS` in `src/lib/coach/audio.ts`) are accepted on
+their own, not through a pack: today only `es-ES-AlvaroNeural` (gloss language `es`), which reads
+the Spanish meanings of Modo rápido's «Escuchar todo». The mp3 is read by that Microsoft neural voice (see "Voice (TTS)"); if the voice
 service fails → 503 `tts_unavailable` and the client falls back to the device voice
 (`speechSynthesis`). When a pack that declares `voice` has a `stress` rule, its `stress.mark` is
 removed from `text` before reading (the client still caches the line by its marked text; nothing
@@ -500,7 +503,9 @@ content.
   text escaped the same way (control characters → spaces, `& < >` as entities; the input is
   never read as SSML). The voices are the content pack's: native turns and key phrases use
   `pack.voices.native`, learner options `pack.voices.learner` (different, like the static
-  dialogues). The endpoint accepts only voices some `content/<lang>/pack.json` declares.
+  dialogues). The endpoint accepts only voices some `content/<lang>/pack.json` declares, plus
+  the narrator voices (`NARRATOR_VOICES`: `es-ES-AlvaroNeural` for gloss language `es`, see
+  "POST /api/coach/tts/" and Modo rápido "«Escuchar todo»").
 - One WebSocket per request (no shared state between invocations), 10 s timeout per attempt, 2
   attempts, empty audio counts as a failure. Then 503 `tts_unavailable` (logged as
   `[coach] edge-tts failed`) and the client plays the line with the device voice. Worst case
@@ -603,6 +608,7 @@ and answer something simple.
 | Limits | Own daily counter: 20 routes per code (`COACH_ROUTE_DAILY_LIMIT`), apart from the 10 generations; shared monthly budget. **No refinements**: to change something, edit the text and make another. |
 | Saving | Automatic when it arrives, like packs; audio downloaded in the background; works offline; deleted only by the learner (with confirmation). |
 | Practice | None in v1 (read and listen). Proposal: "hear a native line → pick its meaning", no AI. |
+| «Escuchar todo» | Added 2026-10-13 (plan 015, T182): one big button above the turns plays the whole route hands-free (listening while walking): for each turn its main line, then its Spanish meaning spoken aloud, then each alt ("También te pueden decir" / "También puedes decir") with its meaning; words are skipped; ~0.8 s of silence between lines. Details below. |
 | Evaluation | A separate, later plan (sketch below). |
 
 ### `POST /api/coach/route/`
@@ -674,7 +680,7 @@ fallback); switching is one constant plus a `PRICES` row. Measure on the first r
 | `types.ts`, `parse.ts` | `CoachRoute`, `CoachRouteTurn`, `CoachRouteLine`; `parseRoute` (tolerant: an invalid route is dropped) |
 | `api.ts` | `generateRoute(lang, description, { signal })` (adds `profile: buildLearnerContext(lang)`, same errors as `generatePack`) |
 | `routes.ts` | `getSavedRoutes`, `getSavedRoute`, `saveRoute`, `deleteRoute`; key `lang-lern:coach:routes:<lang>` = `{ v: 1, routes }`, newest first, unique ids, no count cap; change event `lang-lern:coach-change` |
-| `audio.ts` | `routeLine(route, text, speaker)`, `routePlayables(route)`: `voices.native` for native turns, their alts and every turn's words; `voices.learner` for learner turns and their alts |
+| `audio.ts` | `routeLine(route, text, speaker)`, `routePlayables(route)`: `voices.native` for native turns, their alts and every turn's words; `voices.learner` for learner turns and their alts; plus the meanings «Escuchar todo» reads (`routeMeaning(es)`, `routeListenSteps(route)`, `routeMeaningOptions(route)`, `COACH_NARRATORS`) |
 | `use-coach.ts` | `useSavedRoutes(lang)` → `{ routes, get(id), save(route), remove(id) }` |
 
 - `saveRoute` downloads every line in the background (`cachePackAudio`'s mechanism, shared
@@ -684,8 +690,40 @@ fallback); switching is one constant plus a `PRICES` row. Measure on the first r
   `/rapido/` does not lose a paid route; it is saved when it arrives.
 - Taps call `speak(line, { lang, slow? })` inside the gesture and `recordListen(line.audioKey, lang)`,
   like key phrases.
+- `saveRoute`'s download and `pruneCoachAudio` include the meaning lines (they are in
+  `routePlayables`, after the target-language lines).
 - The key is a normal `lang-lern:` key: it is in the Perfil backup and the cloud save
   automatically. Never renamed or dropped (docs: CLAUDE.md "Never lose the learner's on-device data").
+
+### «Escuchar todo»
+
+- **Order**: `routeListenSteps(route)`: for each turn its main line, then each of its alts; each
+  step = the target-language line (the route's voices, as on tap) followed by its meaning (`es`).
+  Words are skipped. `speakSequence` (`@/lib/audio`) plays them one after another with 800 ms of
+  silence between lines (`GAP_MS` in `src/components/quick/listen-all.ts`), played on the shared
+  audio element when possible so the media session keeps running, else a timer.
+- **Narrator**: every meaning is read by one Spain Spanish neural voice, the narrator of gloss
+  language `es`: `es-ES-AlvaroNeural`, declared once per side in a language-agnostic map
+  (`NARRATOR_VOICES` on the server, accepted by `/api/coach/tts/` explicitly; its mirror
+  `COACH_NARRATORS` on the client with the device locale `es-ES`). It is not taken from any pack
+  (the hidden `cba` pack only maps one of its voices to it for `npm run audio`). Meanings play with
+  `speak(meaning, { lang: route.lang, locale: "es-ES" })`: without an mp3 the device voice reads them
+  in `es-ES`, and the pack's stress marks are not stripped from them. The "Audio lento" setting
+  applies to them like to every line.
+- **Button**: «Escuchar todo» (full width, above the turns) → «Pausar» while playing → «Seguir»
+  when paused (goes on from the paused step's target line); back to «Escuchar todo» at the end. The
+  step playing is highlighted (lemon, `aria-current`) and scrolled into view (`smooth`, `auto` with
+  `prefers-reduced-motion`); reaching an alt opens that turn's «Más». A tap on a single line's 🔊/🐌
+  (any other `speak()`) stops the sequence, which stays paused where it was; leaving the route or
+  the screen stops it. One `recordListen` per start from the top (the first line), none per line.
+- **Offline**: `saveRoute` downloads the meanings with the rest; routes saved before this existed
+  fetch them on the first «Escuchar todo» (online, the remaining steps are prefetched in order) and
+  cache them, and `pruneCoachAudio` keeps them. Offline without them, the device voice reads them.
+- **Media Session** (where supported): title = the route title, artist "Modo rápido", the app
+  icon; play/pause handlers (lock screen, headphones) and `playbackState`; cleared when the
+  sequence ends or the route closes.
+- **Voice lines**: each meaning is one more TTS request the first time (counted in
+  `COACH_TTS_DAILY_LIMIT`); identical meanings share one mp3 (cached by voice + text).
 
 ### UI copy (Spain Spanish, tú)
 
@@ -695,8 +733,9 @@ responder."; placeholder "Ej.: tengo que imprimir un documento desde el móvil";
 (`aria-expanded`); "También te pueden decir", "También puedes decir", "Palabras"; list "Mis
 rutas"; delete "¿Borrar esta ruta?"; offline "Sin conexión. Tus rutas guardadas funcionan igual;
 para preparar una nueva necesitas internet."; saved "Guardada en Mis rutas: funciona sin
-conexión."; not saved "No he podido guardarla en este móvil: si sales de aquí, se perderá.".
-Without an access code the screen shows Prepárate's `AccessCard`.
+conexión."; not saved "No he podido guardarla en este móvil: si sales de aquí, se perderá.";
+play all "Escuchar todo" / "Pausar" / "Seguir", hint "Cada frase y luego su significado, una tras
+otra, sin tocar nada.". Without an access code the screen shows Prepárate's `AccessCard`.
 
 ### Later: evaluation of everything practised (separate plan, sketch)
 
