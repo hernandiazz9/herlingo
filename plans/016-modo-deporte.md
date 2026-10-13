@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 22:10Z 💻
+- Updated: 2026-10-13 22:30Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
-- Branch: plan-016-modo-deporte · pushed
+- Branch: plan-016-modo-deporte · pushed · main = this branch
 - Next step: T197: Hernán's check on the bike (deployed); then plan done when the visual queue is empty
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: OK to fast-forward main to plan-016 and deploy · T197 check · visual queue (5)
+- Needs Hernán: T197 check on the bike · visual queue (5)
 
 ## Shared contract (all tasks read this)
 
@@ -228,6 +228,7 @@ Worktree setup: npm ci
 - 2026-10-13 plan: merged into main (fast-forward 487747ed..071ef416) with Hernán's OK ("si pasa a main"); deploy = Hernán. (Hernán)
 - 2026-10-13 T188: dialogue episodes keep edge-tts for normal and slow lines ("me gustan las voces"). (Hernán)
 - 2026-10-13 plan: gate relaxed after "continúa con lo que sigue": server tasks T192–T193 run before T191; T194 onwards still waits for T191. (Hernán + plan)
+- 2026-10-13 plan: main fast-forwarded to plan-016 (deployed code, T187–T198) with Hernán's OK ("pasalo a main"). (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-13 plan: Episodes from the pack's units (key phrases of a lesson as a short listening review), no AI.
@@ -277,3 +278,4 @@ Worktree setup: npm ci
 - 2026-10-13 21:42Z 💻 T196 done · worktree-agent-a0c13b2cdac9c4346 → 130a01ca · verify ✓
 - 2026-10-13 21:43Z 💻 merged origin/main (a952b70e: msedge-tts 2.1.0, update download progress) into plan-016 → 0257a6de, no conflicts · npm ci · verify ✓ · slow TTS (rate -30%) still works on msedge-tts 2.1.0
 - 2026-10-13 22:10Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ 99a8e4ad: T187–T198 + main a952b70e) → https://langlern-iota.vercel.app; main not fast-forwarded yet
+- 2026-10-13 22:30Z 💻 main fast-forwarded to 82ad12f5 with Hernán's OK
