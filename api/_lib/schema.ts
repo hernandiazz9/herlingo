@@ -283,6 +283,8 @@ export type InterviewStep = z.infer<typeof InterviewStep>;
 export const TtsRequest = z.object({
   text: z.string().trim().min(1).max(LIMITS.ttsText),
   voice: z.string().min(1).max(80),
+  /** Read at rate −30 % (Modo deporte's slow lines); absent or false = normal rate. */
+  slow: z.boolean().optional(),
 });
 
 export const CapRequest = z.object({

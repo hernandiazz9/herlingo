@@ -11,11 +11,11 @@ import type { CoachPack, CoachRoute, InterviewQuestion } from "./types";
 /**
  * The coach TTS endpoint as the generated-audio source. Over the day's voice allowance (429
  * `tts_limit`) the line is declined for the session: the device voice plays it silently, without
- * asking the server again for that line.
+ * asking the server again for that line. A slow line is requested with `slow: true`.
  */
-setGeneratedAudioSource(async (text, voice, signal) => {
+setGeneratedAudioSource(async (text, voice, signal, options) => {
   try {
-    return await fetchSpeech(text, voice, signal);
+    return await fetchSpeech(text, voice, signal, { slow: options?.slow === true });
   } catch (e) {
     if (e instanceof CoachApiError && e.code === "tts_limit") return null;
     throw e;

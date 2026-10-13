@@ -156,8 +156,11 @@ type Assessment = {
 
 ### `POST /api/coach/tts/`
 
-`{ text (1–300 chars, trimmed), voice }` → `200 audio/mpeg` (`Cache-Control: private,
-max-age=31536000, immutable`: a line never changes, the client caches it by voice + text).
+`{ text (1–300 chars, trimmed), voice, slow? (boolean) }` → `200 audio/mpeg` (`Cache-Control: private,
+max-age=31536000, immutable`: a line never changes, the client caches it by voice + text, plus
+the slow flag for a slow line). `slow: true` = the voice itself reads the line at rate −30 %
+(pitch and volume unchanged; Modo deporte's slow lines, docs/sport.md "Slow"); absent or `false`
+= normal rate, exactly as before; any other value (`"yes"`, `1`) → 400.
 `voice` must be one of the `voices` of a content pack or a narrator voice, else 400; packs carry
 the two to use in `pack.voices`. The narrator voices (`NARRATOR_VOICES` in `api/_lib/languages.ts`,
 one per gloss language, mirrored by `COACH_NARRATORS` in `src/lib/coach/audio.ts`) are accepted on
@@ -168,8 +171,9 @@ service fails → 503 `tts_unavailable` and the client falls back to the device 
 removed from `text` before reading (the client still caches the line by its marked text; nothing
 changes for other voices); text that is empty after that → 400. Fake mode: a ~0.26 s silent mp3, no network. Requires the code; does not
 count as a generation and costs nothing, but every request (also a failed one) counts as one of
-the code's daily voice lines (`COACH_TTS_DAILY_LIMIT`, default 500): over it → 429 `tts_limit`
-and the client reads the line with the device voice. The client caches each line, so 500 is far
+the code's daily voice lines (`COACH_TTS_DAILY_LIMIT`, default 2000): over it → 429 `tts_limit`
+and the client reads the line with the device voice. The client caches each line; 2000 leaves
+room for Modo deporte (an AI episode is ~100–150 voice lines the first time) and is still far
 above normal use.
 
 ### `GET /api/coach/usage/` and `PUT /api/coach/usage/`
@@ -326,6 +330,19 @@ voice for interview lines). `speak()` then:
 5. Over the day's voice allowance (429 `tts_limit`) the coach source resolves `null`: that line
    is declined for the session (in memory), so later taps go straight to `speechSynthesis` inside
    the gesture, with no request and no message.
+
+**Slow lines** (Modo deporte): `generatedPlayable(text, voice, { slow: true })` has its own key,
+`gen:<hash of voice + slow flag + text>` (normal lines keep their keys byte for byte), carries
+`slow: true`, and the coach source requests it with `slow: true` (the voice reads it at −30 %).
+`speak()` plays a slow line at rate 1 whatever `slow` / "Audio lento" say (the mp3 is already
+slow; its device-voice fallback keeps `speak()`'s rate). A key made slow in this session is
+always requested slow, even from a copy of the playable without the flag.
+
+**Bytes** (to join clips into one mp3, docs/sport.md "Player"): `generatedBytes(playable,
+signal?)` in `src/lib/audio/generated.ts` → `Uint8Array | null`: the object URL in memory, else
+Cache Storage, else the source once (then cached; shared with taps and prefetches in flight,
+same deadline), never `speechSynthesis`. `null` for a content playable (fetch its `mp3Url`), a
+declined line, offline without a cached copy, a failed download or an aborted `signal`.
 
 `savePack` and `replacePack` download every line of the pack in the background
 (`cachePackAudio`, 3 at a time, deduplicated with taps in flight), so a saved pack plays offline.
@@ -499,7 +516,8 @@ a WebSocket to `speech.platform.bing.com`), the same service `npm run audio` use
 content.
 
 - **Same voices and settings as `npm run audio`** (`scripts/audio/tts.py`, Python edge-tts
-  defaults): output `audio-24khz-48kbitrate-mono-mp3`, rate `+0%`, pitch `+0Hz`, volume `+0%`,
+  defaults): output `audio-24khz-48kbitrate-mono-mp3`, rate `+0%`, pitch `+0Hz`, volume `+0%`
+  (a slow line, `slow: true`: rate `-30%`, the rest the same; `SLOW_PROSODY` in `api/_lib/tts.ts`),
   text escaped the same way (control characters → spaces, `& < >` as entities; the input is
   never read as SSML). The voices are the content pack's: native turns and key phrases use
   `pack.voices.native`, learner options `pack.voices.learner` (different, like the static
@@ -550,7 +568,7 @@ over its limit → undo + 429.
 | Generations | code, day | 10 (`COACH_DAILY_LIMIT`) | new pack, refinement, first interview step |
 | Interview steps | code, day | generations × 11 = 110 | every interview step (10 questions + the assessment per interview), whatever `history` says |
 | Refinements | code, pack id | 3 | refinements of a pack id the server issued to that code (unknown id → 409) |
-| Voice lines | code, day | 500 (`COACH_TTS_DAILY_LIMIT`) | every `POST /tts/` (free, but must not be abused) |
+| Voice lines | code, day | 2000 (`COACH_TTS_DAILY_LIMIT`) | every `POST /tts/` (free, but must not be abused) |
 | Routes | code, day | 20 (`COACH_ROUTE_DAILY_LIMIT`) | every `POST /route/` (own counter: does not use the generations above) |
 
 **Refunds.** A failed call gives its slots back only if no charge was recorded for it (no
@@ -759,7 +777,7 @@ storage and limits are designed in that plan.
 | `COACH_FAKE` | no | `1` = canned data everywhere |
 | `COACH_MONTHLY_CAP_USD` | no | Initial cap (default 5) until the owner sets one |
 | `COACH_DAILY_LIMIT` | no | Generations per day per code (default 10; interview steps = 11 × this) |
-| `COACH_TTS_DAILY_LIMIT` | no | Voice lines per day per code (default 500) |
+| `COACH_TTS_DAILY_LIMIT` | no | Voice lines per day per code (default 2000) |
 | `COACH_ROUTE_DAILY_LIMIT` | no | Quick routes per day per code (default 20) |
 | `COACH_TIMEZONE` | no | Time zone of days and months (default `Europe/Madrid`) |
 

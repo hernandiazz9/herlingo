@@ -298,9 +298,15 @@ export async function checkAccessCode(code: string, opts: { signal?: AbortSignal
 
 /**
  * The mp3 of one line (`POST /api/coach/tts/`) within `SPEECH_TIMEOUT_MS`, body included; rejects
- * on any failure (the caller uses the device voice).
+ * on any failure (the caller uses the device voice). `slow`: the voice reads it at rate −30 %
+ * (sent as `slow: true`; a normal line's body is `{ text, voice }` as always).
  */
-export async function fetchSpeech(text: string, voice: string, signal?: AbortSignal): Promise<Blob> {
+export async function fetchSpeech(
+  text: string,
+  voice: string,
+  signal?: AbortSignal,
+  options: { slow?: boolean } = {},
+): Promise<Blob> {
   return call(
     "tts",
     async (res) => {
@@ -308,6 +314,11 @@ export async function fetchSpeech(text: string, voice: string, signal?: AbortSig
       if (!type.startsWith("audio/")) throw invalid();
       return res.blob();
     },
-    { method: "POST", body: { text, voice }, signal, timeoutMs: SPEECH_TIMEOUT_MS },
+    {
+      method: "POST",
+      body: options.slow ? { text, voice, slow: true } : { text, voice },
+      signal,
+      timeoutMs: SPEECH_TIMEOUT_MS,
+    },
   );
 }

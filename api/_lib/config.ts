@@ -35,7 +35,7 @@ export function ownerName(): string | undefined {
 
 export const DEFAULT_CAP_USD = 5;
 export const DAILY_GENERATIONS = 10;
-export const DAILY_TTS_LINES = 500;
+export const DAILY_TTS_LINES = 2000;
 export const DAILY_ROUTES = 20;
 
 /** Initial monthly cap until the owner changes it from the app. */
