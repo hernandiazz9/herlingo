@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:22Z 💻
+- Updated: 2026-10-14 06:28Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
-- Next step: redeploy (Hernán) for T199 + the rest of T197
+- Next step: Hernán: T197 rest + T199/T200 on the iPhone (deployed); main fast-forward when he says
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: OK to fast-forward main to T199 + deploy · rest of T197 · visual queue (6)
+- Needs Hernán: OK to fast-forward main (T199–T200, deployed) · rest of T197 · visual queue (7)
 
 ## Shared contract (all tasks read this)
 
@@ -316,3 +316,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:07Z 💻 T199 launched · attempt 1 · agent a41df0d4e5b604d4a
 - 2026-10-14 06:18Z 💻 T199 done · worktree-agent-a41df0d4e5b604d4a → 3d8dc568 · verify ✓
 - 2026-10-14 06:22Z 💻 T200 done by the writer (lock hint + home update pill) → 05f1cf42 · verify ✓
+- 2026-10-14 06:28Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ e7259f78: T199 + T200) → https://langlern-iota.vercel.app; main not fast-forwarded yet
