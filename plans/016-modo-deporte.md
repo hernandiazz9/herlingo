@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:36Z 💻
+- Updated: 2026-10-14 06:39Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
-- Next step: T201, then T202; then a deploy
+- Next step: T201 (running) → T203 (clips under busy Cache Storage) → T202; then a deploy
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
 - Needs Hernán: rest of T197 + T199/T200 on the iPhone · visual queue (7) · which proposals to build next
 
@@ -248,7 +248,7 @@ Worktree setup: npm ci
 
 ## T202 — Cleanup: shared job runner, cache helper, lock-screen artist, 502 on a bad AI answer
 - Status: pending
-- Depends on: T201
+- Depends on: T203
 - Where: any
 - Goal: Remove the duplications and small inaccuracies found during plan 016, with no visible change except the lock-screen artist of «Escuchar todo».
 - Context: Proposals of plan 016 picked by Hernán 2026-10-14. (1) `src/components/sport/generation.ts` copies the job runner of `src/components/coach/generation.ts`. (2) `src/lib/sport/downloaded.ts` copies the private cache path of `src/lib/audio/generated.ts`. (3) `episodePlayer` (`src/lib/sport/player.ts`) hard-codes the artist "Modo deporte" and `useSequencePlayer` (`src/lib/audio/use-sequence-player.ts`) overwrites it after `play()`. (4) `api/coach/episode.ts` and `api/coach/route.ts` answer 500 `internal` when the stored-shape parse fails after billing; it should be the 502 of an invalid AI answer (same message, billed as today). (5) A slow generated line that falls back to the device voice plays at normal rate (`src/lib/audio/index.ts`): use `SLOW_RATE` for it. (6) docs/sport.md "Player" does not say «Escuchar todo» uses the episode player (T196).
@@ -259,6 +259,21 @@ Worktree setup: npm ci
   - `EpisodePlayerMeta` takes an optional `artist` (default "Modo deporte"); «Escuchar todo» passes its own and the overwrite is gone.
   - A parse failure after billing → 502 with the invalid-answer message, billed as today (fake curl or a throwaway check).
   - A slow generated line on the device-voice fallback uses `SLOW_RATE`.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T203 — Fix: clips go missing while Cache Storage is busy (right after an app update)
+- Status: pending
+- Depends on: T201
+- Where: any
+- Goal: An episode's clips download whenever the network works, even while Cache Storage is slow (an app update precaching ~4.7k files and the audio sync), and the notice says why clips are missing.
+- Context: Hernán 2026-10-14: "Faltan 53 audios", «Completar audio» does not complete. Vercel request logs (iPhone): 06:34 = 4731 static requests (new version precaching), 06:35:58–06:36:05 = 21 `/api/coach/tts/` requests, all 200, then none; the 05:59 case (74 missing) also came right after an update. Reading: in `src/lib/audio/generated.ts` `startJob` the 8 s `LOAD_DEADLINE_MS` covers `openCache()` + `cachedBlob()` + the download + `await cache.put(...)`; with Cache Storage busy, jobs time out before fetching (no request) or after fetching (a 200 whose bytes are dropped). `prepareEpisode` (`src/lib/sport/prepare.ts`) then counts them missing.
+- Scope: may touch `src/lib/audio/generated.ts`, `src/lib/sport/**`, `src/components/sport/**` (the missing notice), docs/sport.md, docs/coach.md ("Generated audio") / must not touch `api/`, the SW, stored shapes.
+- Done when:
+  - The cache lookup has its own short bound (≈ 1.5 s: past it, go to the network) and the 8 s deadline covers only the download; `cache.put` never delays returning a downloaded blob (written in the background, failures ignored); bytes downloaded this session stay in memory (bounded) so a retry or «Completar» does not depend on the cache.
+  - `prepareEpisode` reports why clips are missing (counts by reason: network/timeout, declined/limit, offline) and the notice shows a short muted line with it (Spain Spanish), so a screenshot tells what happened.
+  - Taps, prefetch and «Escuchar todo» keep their behaviour (shared jobs, dedupe, declined lines).
+  - A throwaway `npx tsx` check with a stub cache whose `match`/`put` hang: clips still download through the stub source and `missing` is 0; with a failing source they are counted with the network reason.
   - `npm run verify` → exit 0.
 - Outcome:
 
@@ -352,3 +367,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:28Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ e7259f78: T199 + T200) → https://langlern-iota.vercel.app; main not fast-forwarded yet
 - 2026-10-14 06:34Z 💻 main fast-forwarded to 62cbd125 with Hernán's OK
 - 2026-10-14 06:36Z 💻 T201 launched · attempt 1 · agent ac99e01d221853fce
+- 2026-10-14 06:39Z 💻 T197 finding (Hernán): 'Faltan 53', «Completar» does not complete → logs: 4731 precache requests at 06:34, then 21 tts 200s and none → fix task T203 (before T202)
