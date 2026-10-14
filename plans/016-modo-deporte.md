@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:34Z 💻
+- Updated: 2026-10-14 06:36Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
-- Next step: Hernán: T197 rest + T199/T200 on the iPhone (deployed); main fast-forward when he says
+- Next step: T201, then T202; then a deploy
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
 - Needs Hernán: rest of T197 + T199/T200 on the iPhone · visual queue (7) · which proposals to build next
 
@@ -231,6 +231,37 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome: done by the writer (small change, no agent) · 05f1cf42 · verify ✓ 💻 · not checked: visual
 
+## T201 — Fix: long meanings are silent, XP restarts on completion, no floating +XP in Modo deporte
+- Status: pending
+- Depends on: T200
+- Where: any
+- Goal: Every spoken line plays whatever its length, the XP of an episode counts everything actually heard, and a Modo deporte award shows the same floating +XP as the rest of the app.
+- Context: Proposals of plan 016 picked by Hernán 2026-10-14. (1) `/api/coach/tts/` reads ≤ 300 characters (`COACH_LIMITS.ttsText`) but route meanings allow ≤ 400 (and content `es` has no cap): a longer one is never voiced, in «Escuchar todo» (`routeListenSteps`/`routeMeaning`/`routePlayables` in `src/lib/coach/audio.ts`) and in route/dialogue episodes (`narrate` in `src/lib/sport/compile.ts`). (2) T199: loading a completed file restarts that file's XP count (`src/lib/sport/xp.ts`, `src/components/sport/use-episode-audio.ts`). (3) T195: the XP toast does not list source `"sport"` (find it with `grep -rn XpToast src`).
+- Scope: may touch `src/lib/coach/audio.ts`, `src/lib/sport/**`, `src/lib/audio/**` (a shared text-splitting helper only), `src/components/sport/**`, the XP toast component, docs/sport.md, docs/coach.md / must not touch `api/`, stored shapes, prompts.
+- Done when:
+  - One helper splits a spoken text longer than 300 characters into chunks ≤ 300 at sentence, then clause (`;:,`), then word boundaries; the compiler and «Escuchar todo» voice each chunk in order (no gap between chunks of one text); `episodePlayables`/`routePlayables` list every chunk, so prefetch, offline and `pruneCoachAudio` keep them. Texts ≤ 300 keep today's single playable and key (no re-download).
+  - The XP tracker keeps the seconds already heard of an episode when its file is reloaded (completion), keyed by episode id; the 90 % rule, once per episode per day and 3 a day are unchanged.
+  - The floating +XP shows for source `"sport"` with 🏃, like the other sources; the player's own notice stays or goes, say which.
+  - A throwaway `npx tsx` check: a 650-character meaning → 3 chunks ≤ 300, joined text equals the original modulo spaces; a 280-character one → 1 chunk, same key as before; XP across a reload counts both halves.
+  - `npm run verify` → exit 0.
+- Outcome:
+
+## T202 — Cleanup: shared job runner, cache helper, lock-screen artist, 502 on a bad AI answer
+- Status: pending
+- Depends on: T201
+- Where: any
+- Goal: Remove the duplications and small inaccuracies found during plan 016, with no visible change except the lock-screen artist of «Escuchar todo».
+- Context: Proposals of plan 016 picked by Hernán 2026-10-14. (1) `src/components/sport/generation.ts` copies the job runner of `src/components/coach/generation.ts`. (2) `src/lib/sport/downloaded.ts` copies the private cache path of `src/lib/audio/generated.ts`. (3) `episodePlayer` (`src/lib/sport/player.ts`) hard-codes the artist "Modo deporte" and `useSequencePlayer` (`src/lib/audio/use-sequence-player.ts`) overwrites it after `play()`. (4) `api/coach/episode.ts` and `api/coach/route.ts` answer 500 `internal` when the stored-shape parse fails after billing; it should be the 502 of an invalid AI answer (same message, billed as today). (5) A slow generated line that falls back to the device voice plays at normal rate (`src/lib/audio/index.ts`): use `SLOW_RATE` for it. (6) docs/sport.md "Player" does not say «Escuchar todo» uses the episode player (T196).
+- Scope: may touch the files named in Context, `src/lib/coach/**` (if the shared runner lives there), docs/sport.md, docs/coach.md / must not touch stored shapes, prompts, other screens.
+- Done when:
+  - One job runner serves Prepárate packs, Modo rápido routes (if they use it) and episodes; behaviour unchanged (a request survives leaving the screen, saved on arrival).
+  - `src/lib/audio/generated.ts` exports a cached-check helper; `downloaded.ts` uses it.
+  - `EpisodePlayerMeta` takes an optional `artist` (default "Modo deporte"); «Escuchar todo» passes its own and the overwrite is gone.
+  - A parse failure after billing → 502 with the invalid-answer message, billed as today (fake curl or a throwaway check).
+  - A slow generated line on the device-voice fallback uses `SLOW_RATE`.
+  - `npm run verify` → exit 0.
+- Outcome:
+
 ## Review queue
 
 ## Visual checks queue
@@ -261,6 +292,7 @@ Worktree setup: npm ci
 - 2026-10-13 plan: gate relaxed after "continúa con lo que sigue": server tasks T192–T193 run before T191; T194 onwards still waits for T191. (Hernán + plan)
 - 2026-10-13 plan: main fast-forwarded to plan-016 (deployed code, T187–T198) with Hernán's OK ("pasalo a main"). (Hernán)
 - 2026-10-14 plan: main fast-forwarded to plan-016 (T199–T200, deployed) with Hernán's OK ("sisi avanza y agreguemos todo"). (Hernán)
+- 2026-10-14 plan: Hernán picked from the proposals: visible fixes (T201: long meanings, XP across completion, +XP toast) and code cleanup (T202); not now: «De la app» grouped by situation, episodes in the usage panel. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-13 plan: Episodes from the pack's units (key phrases of a lesson as a short listening review), no AI.
