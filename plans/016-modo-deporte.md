@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 07:01Z 💻
+- Updated: 2026-10-14 07:10Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
-- Next step: T202 running; T201+T203 ready to deploy now (Hernán)
+- Next step: all code done: deploy (Hernán) + rest of T197; plan done when T197 and the visual queue are closed
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: rest of T197 + T199/T200 on the iPhone · visual queue (7) · which proposals to build next
+- Needs Hernán: deploy T201–T203 + OK to fast-forward main · rest of T197 · visual queue (9)
 
 ## Shared contract (all tasks read this)
 
@@ -247,7 +247,7 @@ Worktree setup: npm ci
 - Outcome: lines > 300 chars: the coach TTS source requests splitSpokenText pieces and joins them (concatMp3) into the line's one mp3 (same key; ≤ 300 unchanged); XP HeardLog per episode survives a reload; XpToast 🏃 for 'sport' (player notice kept) · 68c132f9 · verify ✓ 💻 · tsx + fake server ✓ · not checked: real long lines on the iPhone, visuals
 
 ## T202 — Cleanup: shared job runner, cache helper, lock-screen artist, 502 on a bad AI answer
-- Status: running (attempt 1 · 💻 · agent ac8d16ac2a33a6244 · since 07:01Z)
+- Status: done
 - Depends on: T203
 - Where: any
 - Goal: Remove the duplications and small inaccuracies found during plan 016, with no visible change except the lock-screen artist of «Escuchar todo».
@@ -260,7 +260,7 @@ Worktree setup: npm ci
   - A parse failure after billing → 502 with the invalid-answer message, billed as today (fake curl or a throwaway check).
   - A slow generated line on the device-voice fallback uses `SLOW_RATE`.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: shared runJob/useJob (coach generation.ts, sport layer thin); generatedOnDeviceCheck() (cache or memory, keys() bounded) used by downloaded.ts; EpisodePlayerMeta.artist (Escuchar todo passes its own); slow fallback at SLOW_RATE; storedShape() → 502 on a bad stored shape for episode + route (billed as before) · 224df4c1 · verify ✓ 💻 · fake curl 502 ✓ · not checked: lock-screen artist on device
 
 ## T203 — Fix: clips go missing while Cache Storage is busy (right after an app update)
 - Status: done
@@ -336,6 +336,7 @@ Worktree setup: npm ci
 - 2026-10-14 T201: docs/league.md (~L414) still names only Listening and Discover as XP toast sources
 - 2026-10-14 T203: downloadedEpisodes («Escuchar seguidos») waits on cache.keys() with no bound and ignores clips kept only in memory
 - 2026-10-14 T203: prepareEpisode's fetch of content clips has no timeout (unused while DIALOGUE_LINES_FROM_CONTENT is false)
+- 2026-10-14 T202: api/coach/pack.ts still answers 500 internal when Pack.parse fails after billing; route it through storedShape()
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -377,3 +378,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:48Z 💻 T203 launched · attempt 1 · agent a517f50333da2d9f5
 - 2026-10-14 07:01Z 💻 T203 done · worktree-agent-a517f50333da2d9f5 → f73924d1 · verify ✓
 - 2026-10-14 07:01Z 💻 T202 launched · attempt 1 · agent ac8d16ac2a33a6244 (+ downloaded.ts: memory clips, bounded keys())
+- 2026-10-14 07:10Z 💻 T202 done · worktree-agent-ac8d16ac2a33a6244 → 224df4c1 · verify ✓
