@@ -61,7 +61,11 @@ type StoredEpisode = SportEpisode & { source: "ai"; createdAt: string; descripti
 Every spoken string (`title`, `intro`, part `title`, step `intro`, `tip`, variant `cue`, `es`,
 `text`) is one `/api/coach/tts/` line, which takes at most 300 characters (`LIMITS.ttsText`): the
 limits above never go over it (`EPISODE_TEXT_LIMITS` in `api/_lib/schema.ts`), and the prompt
-asks for much shorter ones.
+asks for much shorter ones. Lines of route and dialogue episodes may be longer (a route meaning
+has up to 400 characters, a dialogue's gloss has no cap): such a line keeps its one playable and
+key, and the coach source reads it in pieces of at most 300 (`splitSpokenText`: sentence ends,
+then `; : ,`, then words) joined with no gap into its one mp3 (docs/coach.md "Generated audio",
+T201, 2026-10-14). Before, it was never voiced: left out of the episode as a missing clip.
 
 - **Compiler** `compileEpisode(episode, glossLang)` → `{ segments, chapters }`: segments are
   `{ kind: "clip", playable, step }` or `{ kind: "gap", ms, step }` following "Order", "Variants",
@@ -114,7 +118,11 @@ asks for much shorter ones.
   may advance at most as much as the clock, so a locked phone still counts and seeks do not; a
   part heard twice counts once); at ≥ 90 % of its span `awardFinishedEpisode` gives the XP. The
   day's bookkeeping reuses the daily key `lang-lern:daily-xp:<lang>` (`countPlay`: `sport:<id>` per
-  episode, `sport` for the day's total): no new key.
+  episode, `sport` for the day's total): no new key. A file prepared again and reloaded (missing
+  clips completed, "Offline" above) keeps what was already heard (T201, 2026-10-14; before, the
+  count restarted): the player screen keeps a `HeardLog` in memory (`createHeardLog`, never
+  stored), keyed by episode id, with the seconds heard of each of the episode's chapters; the new
+  file's tracker starts from it, and a chapter heard in both files counts once (the longer).
 
 ## `POST /api/coach/episode/`
 
@@ -204,7 +212,10 @@ target-language sentences out of the Spanish fields.
   episodios, uno tras otro.", the ones left out ("Quedan fuera N episodios que aún no están
   descargados: ábrelos una vez con conexión para añadirlos."), "Los pasos" grouped by episode.
   None downloaded → a notice.
-- XP: the player shows "¡Genial! +N XP." when an episode played to the end earned it.
+- XP: the player shows "¡Genial! +N XP." when an episode played to the end earned it, and the app's
+  floating "🏃 +N XP" (`XpToast`, source `"sport"`) pops up like for every other source without a
+  summary screen (T201). The notice stays: the phone is often locked when an episode ends, and the
+  floating one is gone after 1.6 s.
 - Modo rápido's `RouteView` has «🏃 Modo deporte» under «Escuchar todo» → `/deporte/?ep=route:<id>`.
 - Player (`EpisodeView`): prepares on open (`useEpisodeAudio`: "Preparando el audio… n/N", then
   `episodePlayer.load`), «Reproducir» / «Pausar» / «Seguir» between "Paso anterior" / "Paso

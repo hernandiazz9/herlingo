@@ -335,6 +335,19 @@ voice for interview lines). `speak()` then:
    is declined for the session (in memory), so later taps go straight to `speechSynthesis` inside
    the gesture, with no request and no message.
 
+**Long lines** (T201, 2026-10-14): `/api/coach/tts/` reads at most 300 characters
+(`LIMITS.ttsText`), but some lines are longer (a route meaning has up to 400; content glosses read
+in Modo deporte have no cap); before, such a line was never voiced (400 from the endpoint). Now
+the coach source (`src/lib/coach/audio.ts`) splits it with `splitSpokenText`
+(`src/lib/audio/split.ts`: pieces of at most `SPOKEN_TEXT_MAX` = 300, cut at sentence ends, else
+at `; : ,`, else between words; as few as those boundaries allow), requests every piece at once
+(each one counts as a voice line in `COACH_TTS_DAILY_LIMIT`; one failing fails the line) and
+joins their mp3s in order with no gap into one (`concatMp3` in `src/lib/sport/mp3-frames.ts`:
+frames only, behind a Xing frame in the edge-tts format). The line keeps its one playable, key
+and cache entry, so `speak()`, «Escuchar todo»'s joined file, Modo deporte, prefetch, offline and
+`pruneCoachAudio` treat it like any other line. A line of 300 characters or fewer (trimmed) is
+one request, exactly as before.
+
 **Slow lines** (Modo deporte): `generatedPlayable(text, voice, { slow: true })` has its own key,
 `gen:<hash of voice + slow flag + text>` (normal lines keep their keys byte for byte), carries
 `slow: true`, and the coach source requests it with `slow: true` (the voice reads it at −30 %).
@@ -772,7 +785,9 @@ fallback); switching is one constant plus a `PRICES` row. Measure on the first r
   the story title, "Historias"; grammar: the verb and tense or the topic, "Gramática"). A pause
   from the lock screen or headphones leaves it paused («Seguir»).
 - **Voice lines**: each meaning is one more TTS request the first time (counted in
-  `COACH_TTS_DAILY_LIMIT`); identical meanings share one mp3 (cached by voice + text).
+  `COACH_TTS_DAILY_LIMIT`); identical meanings share one mp3 (cached by voice + text). A meaning
+  over 300 characters is read in 2 pieces (up to 400) joined into its one mp3, with no gap between
+  them ("Generated audio", "Long lines").
 
 ### UI copy (Spain Spanish, tú)
 

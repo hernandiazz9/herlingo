@@ -19,6 +19,8 @@ export const FINISHED_SHARE = 0.9;
 
 /** Seconds a position may run ahead of the clock between two observations (event timing). */
 const SLACK_SEC = 0.5;
+/** A player state whose duration differs from the tracked file's by more than this is another file. */
+const SAME_FILE_SEC = 0.001;
 
 const DAY_TOTAL = "sport";
 const dayId = (episodeId: string) => `sport:${episodeId}`;
@@ -35,22 +37,44 @@ export function awardFinishedEpisode(lang: string, episodeId: string): number {
   return SPORT_XP;
 }
 
+/**
+ * What has been heard of each episode, kept across the files of one player screen (in memory, never
+ * stored): when the file is prepared again (missing clips completed) and reloaded, its tracker
+ * starts from the seconds already heard of each chapter of the same episode (opening, steps, final
+ * scene), keyed by episode id. The new file's positions differ; its chapters are the same, and a
+ * chapter heard in both files counts once (the longer of the two). One per player screen.
+ */
+export type HeardLog = Map<string, { chapterSec: number[]; finished: boolean }>;
+
+export function createHeardLog(): HeardLog {
+  return new Map();
+}
+
 interface EpisodeSpan {
   episodeId: string;
   startSec: number;
   endSec: number;
+  /** Its chapters' ranges [start, end] in this file (s), in order. */
+  chapters: [number, number][];
+  /** Seconds of each chapter heard in earlier files (`HeardLog`), at most its length here. */
+  before: number[];
   finished: boolean;
 }
 
 /** Each episode's span in a prepared file (one, or several joined), from its chapters. */
 function spans(chapters: readonly PreparedChapter[], durationSec: number): EpisodeSpan[] {
   const out: EpisodeSpan[] = [];
-  for (const chapter of chapters) {
-    const last = out[out.length - 1];
-    if (last?.episodeId === chapter.episodeId) continue;
-    if (last) last.endSec = chapter.startSec;
-    out.push({ episodeId: chapter.episodeId, startSec: out.length ? chapter.startSec : 0, endSec: durationSec, finished: false });
-  }
+  chapters.forEach((chapter, i) => {
+    const startSec = i === 0 ? 0 : chapter.startSec;
+    const endSec = chapters[i + 1]?.startSec ?? durationSec;
+    let span = out[out.length - 1];
+    if (span?.episodeId !== chapter.episodeId) {
+      span = { episodeId: chapter.episodeId, startSec, endSec, chapters: [], before: [], finished: false };
+      out.push(span);
+    }
+    span.endSec = endSec;
+    span.chapters.push([startSec, endSec]);
+  });
   return out;
 }
 
@@ -80,18 +104,26 @@ function coveredSec(list: readonly [number, number][], start: number, end: numbe
  * Only time that really played counts: between two observations while playing, the position may
  * advance at most as much as the clock did, so seeks, step jumps and replays add nothing (a part
  * heard twice counts once). Observations may be minutes apart (a locked phone): the clock bounds
- * them too.
+ * them too. With `heard` (one per player screen), what earlier files of the same episodes played
+ * counts too, and what this one plays is written to it for the next file; states of another file
+ * (another duration) are ignored.
  */
 export function createListenTracker(
   prepared: Pick<PreparedEpisode, "chapters" | "durationSec">,
   onFinished: (episodeId: string) => void,
+  heard: HeardLog = createHeardLog(),
 ) {
   const list = spans(prepared.chapters, prepared.durationSec);
+  for (const span of list) {
+    const earlier = heard.get(span.episodeId);
+    span.finished = earlier?.finished ?? false;
+    span.before = span.chapters.map(([a, b], k) => Math.min(b - a, earlier?.chapterSec[k] ?? 0));
+  }
   let played: [number, number][] = [];
   let last: { playing: boolean; timeSec: number; at: number } | null = null;
 
-  function observe(state: Pick<EpisodePlayerState, "loaded" | "playing" | "timeSec">, at = Date.now()): void {
-    if (!state.loaded) {
+  function observe(state: Pick<EpisodePlayerState, "loaded" | "playing" | "timeSec" | "durationSec">, at = Date.now()): void {
+    if (!state.loaded || Math.abs(state.durationSec - prepared.durationSec) > SAME_FILE_SEC) {
       last = null;
       return;
     }
@@ -103,10 +135,10 @@ export function createListenTracker(
         for (const span of list) {
           const length = span.endSec - span.startSec;
           if (span.finished || length <= 0) continue;
-          if (coveredSec(played, span.startSec, span.endSec) >= FINISHED_SHARE * length) {
-            span.finished = true;
-            onFinished(span.episodeId);
-          }
+          const chapterSec = span.chapters.map(([a, b], k) => Math.max(span.before[k], coveredSec(played, a, b)));
+          span.finished = chapterSec.reduce((sum, sec) => sum + sec, 0) >= FINISHED_SHARE * length;
+          heard.set(span.episodeId, { chapterSec, finished: span.finished });
+          if (span.finished) onFinished(span.episodeId);
         }
       }
     }
@@ -118,15 +150,25 @@ export function createListenTracker(
 
 /**
  * Awards the XP of every episode of `prepared` (pack `lang`) that gets played to the end on the
- * episode player (`prepared` must be the file loaded in it). `onAward(xp)` after each award.
+ * episode player (`prepared` must be the file loaded in it). `onAward(xp)` after each award. Pass
+ * the screen's `heard` log so a reloaded file (missing clips completed) keeps what was heard.
  * Returns the unsubscribe function.
  */
-export function trackEpisodeXp(lang: string, prepared: PreparedEpisode, onAward?: (xp: number) => void): () => void {
+export function trackEpisodeXp(
+  lang: string,
+  prepared: PreparedEpisode,
+  onAward?: (xp: number) => void,
+  heard?: HeardLog,
+): () => void {
   if (prepared.durationSec <= 0) return () => {};
-  const tracker = createListenTracker(prepared, (episodeId) => {
-    const xp = awardFinishedEpisode(lang, episodeId);
-    if (xp > 0) onAward?.(xp);
-  });
+  const tracker = createListenTracker(
+    prepared,
+    (episodeId) => {
+      const xp = awardFinishedEpisode(lang, episodeId);
+      if (xp > 0) onAward?.(xp);
+    },
+    heard,
+  );
   tracker.observe(episodePlayer.getState());
   return episodePlayer.subscribe((state) => tracker.observe(state));
 }
