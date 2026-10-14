@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:48Z 💻
+- Updated: 2026-10-14 07:01Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
 - Next step: T201 (running) → T203 (clips under busy Cache Storage) → T202; then a deploy
@@ -263,7 +263,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T203 — Fix: clips go missing while Cache Storage is busy (right after an app update)
-- Status: running (attempt 1 · 💻 · agent a517f50333da2d9f5 · since 06:48Z)
+- Status: done
 - Depends on: T201
 - Where: any
 - Goal: An episode's clips download whenever the network works, even while Cache Storage is slow (an app update precaching ~4.7k files and the audio sync), and the notice says why clips are missing.
@@ -275,7 +275,7 @@ Worktree setup: npm ci
   - Taps, prefetch and «Escuchar todo» keep their behaviour (shared jobs, dedupe, declined lines).
   - A throwaway `npx tsx` check with a stub cache whose `match`/`put` hang: clips still download through the stub source and `missing` is 0; with a failing source they are counted with the network reason.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: cache lookup bounded at 1.5 s (CACHE_LOOKUP_MS) then network; 8 s deadline = download only; cache.put in background; session memory of clip bytes (24 MB LRU); generatedClip() with reasons; missingBy {network, declined, offline} + muted 'Causa: …' line · f73924d1 · verify ✓ 💻 · tsx with hanging cache ✓ · not checked: iPhone right after an update, visuals
 
 ## Review queue
 
@@ -288,6 +288,7 @@ Worktree setup: npm ci
 - [ ] T199 @3d8dc568 — episode prepared with the screen locked midway completes on unlock; «Completar audio» button + notice (online/offline); screen stays on while preparing (queued 2026-10-14 💻)
 - [ ] T200 @05f1cf42 — episode preparing hint; home «Descargando actualización… N %» pill during an update (light + dark) (queued 2026-10-14 💻)
 - [ ] T201 @68c132f9 — a long route meaning plays whole (Escuchar todo + episode); 🏃 +XP pill (light + dark) (queued 2026-10-14 💻)
+- [ ] T203 @f73924d1 — right after an app update: a new episode prepares complete; if anything is missing, the 'Causa: …' line (light + dark) (queued 2026-10-14 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -333,6 +334,8 @@ Worktree setup: npm ci
 - 2026-10-14 T199: loading a completed file restarts that file's XP count (time heard before the swap is not counted)
 - 2026-10-14 T199: cacheEpisodeAudio (src/lib/coach/episodes.ts) still fails silently while locked (harmless: the player downloads)
 - 2026-10-14 T201: docs/league.md (~L414) still names only Listening and Discover as XP toast sources
+- 2026-10-14 T203: downloadedEpisodes («Escuchar seguidos») waits on cache.keys() with no bound and ignores clips kept only in memory
+- 2026-10-14 T203: prepareEpisode's fetch of content clips has no timeout (unused while DIALOGUE_LINES_FROM_CONTENT is false)
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -372,3 +375,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:39Z 💻 T197 finding (Hernán): 'Faltan 53', «Completar» does not complete → logs: 4731 precache requests at 06:34, then 21 tts 200s and none → fix task T203 (before T202)
 - 2026-10-14 06:48Z 💻 T201 done · worktree-agent-ac99e01d221853fce → 68c132f9 · verify ✓
 - 2026-10-14 06:48Z 💻 T203 launched · attempt 1 · agent a517f50333da2d9f5
+- 2026-10-14 07:01Z 💻 T203 done · worktree-agent-a517f50333da2d9f5 → f73924d1 · verify ✓
