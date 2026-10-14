@@ -324,16 +324,36 @@ from a user gesture. A generated playable is a plain `Playable` whose `audioKey`
 phrases and native turns, `pack.voices.learner` for learner options, the pack language's first
 voice for interview lines). `speak()` then:
 
-1. plays the object URL kept in memory (synchronously, inside the gesture), else
+1. plays the object URL kept in memory, or the mp3 bytes kept in memory this session
+   (synchronously, inside the gesture), else
 2. reads the mp3 from Cache Storage `lang-lern-coach-audio` (entries `/coach-audio/<hash>.mp3`,
-   never requested over the network), else
-3. fetches it once from `POST /api/coach/tts/` (skipped offline or without a code) and caches it,
+   never requested over the network; at most 1.5 s, see "Busy Cache Storage"), else
+3. fetches it once from `POST /api/coach/tts/` (skipped offline or without a code; at most 8 s)
+   and caches it in the background,
 4. and falls back to `speechSynthesis` in the pack's `speechLocale` on any failure (no mp3, TTS
    503/400/401, playback error). Cases 2–4 start after an async step on the audio element that
    the first tap unlocked (iOS), like the existing fallback.
 5. Over the day's voice allowance (429 `tts_limit`) the coach source resolves `null`: that line
    is declined for the session (in memory), so later taps go straight to `speechSynthesis` inside
    the gesture, with no request and no message.
+
+**Busy Cache Storage** (T203, 2026-10-14): right after an app update the service worker precaches
+thousands of files, and Cache Storage can then take seconds per call. Before, one 8 s deadline
+covered the cache lookup, the download and the cache write, so lines timed out before their
+request or after a 200 whose bytes were then dropped (Modo deporte: "Faltan 53 audios", and
+«Completar audio» could not complete). Now, in `src/lib/audio/generated.ts`:
+
+- the cache lookup (open + match + body) has its own bound, `CACHE_LOOKUP_MS` = 1.5 s: past it the
+  line is fetched from the source (a line that was in the cache is then downloaded again: one more
+  voice line of the day's allowance);
+- `LOAD_DEADLINE_MS` = 8 s covers only the download;
+- `cache.put` runs in the background (failures ignored): a downloaded mp3 is returned at once;
+- the mp3s read or downloaded this session stay in memory (`KEPT_BYTES` = 24 MB, least recently
+  used dropped first): taps, prefetch, «Escuchar todo» and a retry or «Completar audio» find them
+  there first, without Cache Storage.
+
+Jobs stay shared per line (taps, prefetch, bytes; deduplicated while in flight; aborted once no
+caller waits) and a declined line is still not asked for again this session.
 
 **Long lines** (T201, 2026-10-14): `/api/coach/tts/` reads at most 300 characters
 (`LIMITS.ttsText`), but some lines are longer (a route meaning has up to 400; content glosses read
@@ -356,10 +376,14 @@ slow; its device-voice fallback keeps `speak()`'s rate). A key made slow in this
 always requested slow, even from a copy of the playable without the flag.
 
 **Bytes** (to join clips into one mp3, docs/sport.md "Player"): `generatedBytes(playable,
-signal?)` in `src/lib/audio/generated.ts` → `Uint8Array | null`: the object URL in memory, else
-Cache Storage, else the source once (then cached; shared with taps and prefetches in flight,
-same deadline), never `speechSynthesis`. `null` for a content playable (fetch its `mp3Url`), a
-declined line, offline without a cached copy, a failed download or an aborted `signal`.
+signal?)` in `src/lib/audio/generated.ts` → `Uint8Array | null`: memory, else Cache Storage,
+else the source once (then cached; shared with taps and prefetches in flight, same bounds), never
+`speechSynthesis`. `null` for a content playable (fetch its `mp3Url`), a declined line, offline
+without a cached copy, a failed download or an aborted `signal`. `generatedClip(playable,
+signal?)` is the same with the reason when there is none: `{ bytes }` or `{ bytes: null, reason }`,
+reason `offline`, `declined` (the day's allowance) or `network` (failed, empty or over 8 s);
+`null` for a content playable or an aborted `signal`. Modo deporte counts its missing clips with
+it (docs/sport.md "Offline").
 
 `savePack` and `replacePack` download every line of the pack in the background
 (`cachePackAudio`, 3 at a time, deduplicated with taps in flight), so a saved pack plays offline.

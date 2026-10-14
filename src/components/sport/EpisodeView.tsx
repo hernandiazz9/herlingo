@@ -6,7 +6,16 @@ import { PauseIcon, PlayIcon } from "@/components/quick/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Button, IconButton, ProgressBar, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { compileEpisode, episodeMp3File, episodePlayer, type EpisodeChapter, type SportEpisode } from "@/lib/sport";
+import {
+  compileEpisode,
+  episodeMp3File,
+  episodePlayer,
+  MISSING_REASONS,
+  type EpisodeChapter,
+  type MissingClips,
+  type MissingReason,
+  type SportEpisode,
+} from "@/lib/sport";
 import { clock } from "./episodes";
 import { NextStepIcon, PreviousStepIcon, SaveIcon } from "./icons";
 import { useEpisodeAudio, useEpisodePlayer, useEpisodeXp, type Completion, type EpisodeAudio } from "./use-episode-audio";
@@ -194,24 +203,43 @@ function AudioStatus({ audio }: { audio: EpisodeAudio }) {
       </div>
     );
   }
-  const { missing } = audio.prepared;
-  return missing > 0 ? <Missing missing={missing} completion={audio.completion} /> : null;
+  const { missing, missingBy } = audio.prepared;
+  return missing > 0 ? <Missing missing={missing} by={missingBy} completion={audio.completion} /> : null;
+}
+
+/** Why clips are missing, as the notice's muted line says it. */
+const CAUSE: Record<MissingReason, string> = {
+  network: "por error de red o tiempo agotado",
+  declined: "por el límite de audio de hoy",
+  offline: "sin conexión",
+};
+
+/** "Causa: 50 por error de red o tiempo agotado, 3 por el límite de audio de hoy." (reasons with clips only). */
+function missingCause(by: MissingClips): string {
+  return `Causa: ${MISSING_REASONS.filter((r) => by[r] > 0)
+    .map((r) => `${by[r]} ${CAUSE[r]}`)
+    .join(", ")}.`;
 }
 
 /**
- * Clips left out of the file: online, «Completar audio» (it also runs by itself when you come back
- * to the app); offline, they complete when the connection returns.
+ * Clips left out of the file, and why (a muted line, so a screenshot tells what happened): online,
+ * «Completar audio» (it also runs by itself when you come back to the app); offline, they complete
+ * when the connection returns.
  */
-function Missing({ missing, completion }: { missing: number; completion?: Completion }) {
+function Missing({ missing, by, completion }: { missing: number; by: MissingClips; completion?: Completion }) {
   const online = useOnline();
   const one = missing === 1;
+  const cause = <p className="text-sm text-ink-muted">{missingCause(by)}</p>;
   if (!online) {
     return (
-      <Notice tone="info">
-        {one
-          ? "Sin conexión: falta 1 audio. Se completará cuando vuelvas a tener internet."
-          : `Sin conexión: faltan ${missing} audios. Se completarán cuando vuelvas a tener internet.`}
-      </Notice>
+      <div className="flex flex-col gap-2">
+        <Notice tone="info">
+          {one
+            ? "Sin conexión: falta 1 audio. Se completará cuando vuelvas a tener internet."
+            : `Sin conexión: faltan ${missing} audios. Se completarán cuando vuelvas a tener internet.`}
+        </Notice>
+        {cause}
+      </div>
     );
   }
   const completing = completion?.completing === true;
@@ -222,6 +250,7 @@ function Missing({ missing, completion }: { missing: number; completion?: Comple
           ? "Falta 1 audio. Toca «Completar audio» para descargarlo."
           : `Faltan ${missing} audios. Toca «Completar audio» para descargarlos.`}
       </Notice>
+      {cause}
       {completion ? (
         <Button variant="secondary" size="md" fullWidth disabled={completing} aria-busy={completing} onClick={completion.complete}>
           {completing ? (

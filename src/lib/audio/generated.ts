@@ -5,14 +5,21 @@
  * A generated playable is a plain `Playable` whose `audioKey` is `generatedKey(voice, text)`
  * ("gen:<hash of voice + text>"), so it travels through the same types as content playables.
  * Its mp3 is looked up in memory, then in Cache Storage (`GENERATED_AUDIO_CACHE`, which the
- * service worker never deletes), then fetched once through the source and cached. No mp3 →
- * the caller falls back to speechSynthesis. A line the source declines (`null`, e.g. the day's
- * voice allowance is used up) is not asked for again this session: it goes straight to the
- * device voice, inside the gesture.
+ * service worker never deletes; at most `CACHE_LOOKUP_MS`), then fetched once through the source
+ * (at most `LOAD_DEADLINE_MS`) and written to the cache in the background. No mp3 → the caller
+ * falls back to speechSynthesis. A line the source declines (`null`, e.g. the day's voice
+ * allowance is used up) is not asked for again this session: it goes straight to the device
+ * voice, inside the gesture.
+ *
+ * Cache Storage can stall for a long time (right after an app update the service worker precaches
+ * thousands of files): a slow lookup never holds a line back (past its bound the source is asked),
+ * a downloaded mp3 is returned before it is written to the cache, and the mp3s read or downloaded
+ * this session stay in memory (`KEPT_BYTES`), so a retry does not depend on the cache.
  *
  * A slow line (`generatedPlayable(text, voice, { slow: true })`, Modo deporte) is read slower by
  * the voice itself (the source asks for it with `slow: true`), so it has its own key and mp3 and
- * always plays at rate 1. `generatedBytes()` gives a line's mp3 as bytes (to join clips).
+ * always plays at rate 1. `generatedBytes()` gives a line's mp3 as bytes (to join clips);
+ * `generatedClip()` also says why there is none.
  */
 import type { Playable } from "@/lib/content";
 import { mp3Play } from "./mp3";
@@ -25,10 +32,18 @@ const KEY_PREFIX = "gen:";
 const CACHE_PATH = "/coach-audio/";
 /** Object URLs kept in memory (least recently used dropped first). */
 const MEMO_SIZE = 64;
+/** mp3 bytes kept in memory this session (cache hits and downloads; least recently used dropped first). */
+const KEPT_BYTES = 24 * 1024 * 1024;
 const PREFETCH_CONCURRENCY = 3;
 /**
- * Upper bound for one line's cache lookup + download: past it the job settles empty (the player
- * falls back to the device voice) and the download is aborted, even if a source never settles.
+ * Upper bound for one line's Cache Storage lookup (open + match + body): past it the line is
+ * fetched from the source instead, so a busy Cache Storage never holds a line back.
+ */
+const CACHE_LOOKUP_MS = 1_500;
+/**
+ * Upper bound for one line's download (the source call only, not the cache): past it the job
+ * settles empty (the player falls back to the device voice) and the download is aborted, even if
+ * a source never settles.
  */
 const LOAD_DEADLINE_MS = 8_000;
 
@@ -53,8 +68,26 @@ export type GeneratedAudioSource = (
 /** A generated playable; `slow: true` marks a line the voice reads slower (its own key and mp3). */
 export type GeneratedPlayable = Playable & { slow?: true };
 
+/**
+ * Why a generated line has no mp3 this time: `offline` (no connection), `declined` (the source
+ * will not give it this session: the day's voice allowance is used up), `network` (the download
+ * failed, came back empty or took longer than `LOAD_DEADLINE_MS`).
+ */
+export type GeneratedMissReason = "offline" | "declined" | "network";
+
+/** A generated line's mp3 as bytes, or why there is none this time. */
+export type GeneratedClip =
+  | { bytes: Uint8Array<ArrayBuffer>; reason?: undefined }
+  | { bytes: null; reason: GeneratedMissReason };
+
+/** One line's load: its mp3, or why there is none. */
+type Load = { blob: Blob; reason?: undefined } | { blob?: undefined; reason: GeneratedMissReason };
+
 let source: GeneratedAudioSource | undefined;
 const memo = new Map<string, string>();
+/** mp3s read or downloaded this session (`KEPT_BYTES` at most), most recently used last. */
+const kept = new Map<string, Blob>();
+let keptBytes = 0;
 /** Keys of lines the source declined (`null`): device voice for the rest of the session. */
 const declined = new Set<string>();
 /**
@@ -64,7 +97,7 @@ const declined = new Set<string>();
 const slowKeys = new Set<string>();
 /** One shared job per line, aborted once every caller has given up (a player never gives up). */
 interface Job {
-  promise: Promise<Blob | undefined>;
+  promise: Promise<Load>;
   ctrl: AbortController;
   /** Callers still waiting: players (no signal) and callers whose signal has not aborted. */
   waiting: number;
@@ -121,6 +154,8 @@ export function isSlowGenerated(p: Playable): boolean {
 
 const cacheUrl = (key: string) => `${CACHE_PATH}${key.slice(KEY_PREFIX.length)}.mp3`;
 
+const offline = () => typeof navigator !== "undefined" && navigator.onLine === false;
+
 /** Cache Storage only exists in secure contexts (https, localhost); elsewhere nothing is cached. */
 async function openCache(): Promise<Cache | undefined> {
   if (typeof caches === "undefined") return undefined;
@@ -140,49 +175,119 @@ async function cachedBlob(cache: Cache | undefined, key: string): Promise<Blob |
   }
 }
 
-async function download(p: Playable, cache: Cache | undefined, signal?: AbortSignal): Promise<Blob | undefined> {
-  if (!source || (typeof navigator !== "undefined" && navigator.onLine === false)) return undefined;
-  const blob = isSlowGenerated(p)
-    ? await source(p.text, p.voice, signal, { slow: true })
-    : await source(p.text, p.voice, signal);
-  if (blob === null) {
-    declined.add(p.audioKey);
-    return undefined;
+/** `promise`, or `fallback` once `ms` have passed (the promise goes on, ignored). */
+function within<T>(promise: Promise<T>, ms: number, fallback: T): Promise<T> {
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const late = new Promise<T>((resolve) => {
+    timer = setTimeout(() => resolve(fallback), ms);
+  });
+  return Promise.race([promise, late]).finally(() => clearTimeout(timer));
+}
+
+/** The line's mp3 from Cache Storage; undefined when it is not there or the lookup takes over `CACHE_LOOKUP_MS`. */
+function lookup(key: string): Promise<Blob | undefined> {
+  return within(
+    openCache().then((cache) => cachedBlob(cache, key)),
+    CACHE_LOOKUP_MS,
+    undefined,
+  );
+}
+
+/** Keeps `blob` in memory for the session (least recently used dropped past `KEPT_BYTES`). */
+function keepBlob(key: string, blob: Blob): Blob {
+  const old = kept.get(key);
+  if (old) {
+    kept.delete(key);
+    keptBytes -= old.size;
   }
-  if (!blob.size) return undefined;
-  const headers = { "Content-Type": blob.type || "audio/mpeg" };
-  await cache?.put(cacheUrl(p.audioKey), new Response(blob, { headers })).catch(() => {});
+  if (blob.size > KEPT_BYTES) return blob;
+  kept.set(key, blob);
+  keptBytes += blob.size;
+  for (const [k, b] of kept) {
+    if (keptBytes <= KEPT_BYTES) break;
+    kept.delete(k);
+    keptBytes -= b.size;
+  }
   return blob;
+}
+
+/** The line's mp3 kept in memory this session (counted as a use). */
+function keptBlob(key: string): Blob | undefined {
+  const blob = kept.get(key);
+  if (blob) {
+    kept.delete(key);
+    kept.set(key, blob);
+  }
+  return blob;
+}
+
+/** Writes a downloaded mp3 to Cache Storage in the background: a busy cache never delays the caller; failures ignored. */
+function store(key: string, blob: Blob): void {
+  const headers = { "Content-Type": blob.type || "audio/mpeg" };
+  void openCache()
+    .then((cache) => cache?.put(cacheUrl(key), new Response(blob, { headers })))
+    .catch(() => {});
+}
+
+/**
+ * One download through the source, bounded by `LOAD_DEADLINE_MS` (then `ctrl` aborts it). The mp3
+ * is returned at once (and kept in memory); it is written to the cache in the background.
+ */
+async function download(p: Playable, ctrl: AbortController): Promise<Load> {
+  const fetchLine = source;
+  if (!fetchLine) return { reason: "network" };
+  if (offline()) return { reason: "offline" };
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const deadline = new Promise<Load>((resolve) => {
+    timer = setTimeout(() => {
+      ctrl.abort();
+      resolve({ reason: "network" });
+    }, LOAD_DEADLINE_MS);
+  });
+  const fetched = (async (): Promise<Load> => {
+    const blob = isSlowGenerated(p)
+      ? await fetchLine(p.text, p.voice, ctrl.signal, { slow: true })
+      : await fetchLine(p.text, p.voice, ctrl.signal);
+    if (blob === null) {
+      declined.add(p.audioKey);
+      return { reason: "declined" };
+    }
+    if (!blob.size) return { reason: "network" };
+    store(p.audioKey, blob);
+    return { blob: keepBlob(p.audioKey, blob) };
+  })().catch((): Load => ({ reason: offline() ? "offline" : "network" }));
+  try {
+    return await Promise.race([fetched, deadline]);
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 function startJob(p: Playable): Job {
   const ctrl = new AbortController();
-  let timer: ReturnType<typeof setTimeout> | undefined;
-  const deadline = new Promise<undefined>((resolve) => {
-    timer = setTimeout(() => {
-      ctrl.abort();
-      resolve(undefined);
-    }, LOAD_DEADLINE_MS);
-  });
-  const work = (async () => {
-    const cache = await openCache();
-    return (await cachedBlob(cache, p.audioKey)) ?? (await download(p, cache, ctrl.signal));
-  })().catch(() => undefined);
-  const job: Job = { ctrl, waiting: 0, promise: Promise.race([work, deadline]) };
-  void job.promise.then(() => {
-    clearTimeout(timer);
+  const work = (async (): Promise<Load> => {
+    const hit = await lookup(p.audioKey);
+    if (hit) return { blob: keepBlob(p.audioKey, hit) };
+    return download(p, ctrl);
+  })().catch((): Load => ({ reason: "network" }));
+  const job: Job = { ctrl, waiting: 0, promise: work };
+  void work.then(() => {
     if (inflight.get(p.audioKey) === job) inflight.delete(p.audioKey);
   });
   return job;
 }
 
 /**
- * The mp3 of a line: Cache Storage, else one download (deduplicated while in flight, bounded by
- * `LOAD_DEADLINE_MS`). With `signal`, this caller stops waiting (undefined) when it aborts; the
- * shared download is aborted only once no caller waits for it any more.
+ * The mp3 of a line: memory, else Cache Storage (bounded by `CACHE_LOOKUP_MS`), else one download
+ * (deduplicated while in flight, bounded by `LOAD_DEADLINE_MS`); else why there is none. With
+ * `signal`, this caller stops waiting (undefined) when it aborts; the shared download is aborted
+ * only once no caller waits for it any more.
  */
-function loadBlob(p: Playable, signal?: AbortSignal): Promise<Blob | undefined> {
-  if (signal?.aborted || declined.has(p.audioKey)) return Promise.resolve(undefined);
+function load(p: Playable, signal?: AbortSignal): Promise<Load | undefined> {
+  if (signal?.aborted) return Promise.resolve(undefined);
+  const blob = keptBlob(p.audioKey);
+  if (blob) return Promise.resolve({ blob });
+  if (declined.has(p.audioKey)) return Promise.resolve({ reason: "declined" });
   let job = inflight.get(p.audioKey);
   if (!job) {
     job = startJob(p);
@@ -200,9 +305,9 @@ function loadBlob(p: Playable, signal?: AbortSignal): Promise<Blob | undefined> 
       resolve(undefined);
     };
     signal.addEventListener("abort", onAbort, { once: true });
-    void shared.promise.then((blob) => {
+    void shared.promise.then((loaded) => {
       signal.removeEventListener("abort", onAbort);
-      resolve(blob);
+      resolve(loaded);
     });
   });
 }
@@ -227,10 +332,18 @@ function remember(key: string, blob: Blob): string {
   return url;
 }
 
+/** The object URL of a line already in memory (synchronous, so a tap plays it inside its gesture). */
+function urlInMemory(key: string): string | undefined {
+  const hit = remembered(key);
+  if (hit) return hit;
+  const blob = keptBlob(key);
+  return blob ? remember(key, blob) : undefined;
+}
+
 async function generatedUrl(p: Playable): Promise<string | undefined> {
-  const blob = await loadBlob(p);
-  if (!blob) return undefined;
-  return remembered(p.audioKey) ?? remember(p.audioKey, blob);
+  const loaded = await load(p);
+  if (!loaded?.blob) return undefined;
+  return remembered(p.audioKey) ?? remember(p.audioKey, loaded.blob);
 }
 
 /**
@@ -254,7 +367,7 @@ export function playGenerated(
       if (result === "failed" && isCurrent()) return fallback();
     });
   };
-  const hit = remembered(p.audioKey);
+  const hit = urlInMemory(p.audioKey);
   if (hit || declined.has(p.audioKey)) return Promise.resolve(play(hit));
   return generatedUrl(p).then(play);
 }
@@ -279,9 +392,40 @@ async function memoBlob(key: string): Promise<Blob | undefined> {
   }
 }
 
+/** A line's mp3 already in memory: the bytes kept this session, else its object URL. */
+async function inMemory(key: string): Promise<Blob | undefined> {
+  return keptBlob(key) ?? (await memoBlob(key));
+}
+
+async function bytesOf(blob: Blob | undefined): Promise<Uint8Array<ArrayBuffer> | null> {
+  if (!blob?.size) return null;
+  try {
+    return new Uint8Array(await blob.arrayBuffer());
+  } catch {
+    return null;
+  }
+}
+
 export interface GeneratedBytesOptions {
   /** Only what is already on the device (memory, Cache Storage): never the source. */
   cachedOnly?: boolean;
+}
+
+/**
+ * The mp3 of a generated line as bytes, or why there is none this time (Modo deporte counts its
+ * missing clips by reason): memory, else Cache Storage (bounded by `CACHE_LOOKUP_MS`), else the
+ * source once (shared with taps and downloads in flight, bounded like them; written to the cache
+ * in the background). Never the device voice. `null` for a content playable or when `signal`
+ * aborts. Never rejects.
+ */
+export async function generatedClip(p: Playable, signal?: AbortSignal): Promise<GeneratedClip | null> {
+  if (!isGenerated(p) || signal?.aborted) return null;
+  const memory = await inMemory(p.audioKey);
+  const loaded: Load | undefined = memory ? { blob: memory } : await load(p, signal);
+  if (!loaded || signal?.aborted) return null;
+  if (!loaded.blob) return { bytes: null, reason: loaded.reason };
+  const bytes = await bytesOf(loaded.blob);
+  return bytes ? { bytes } : { bytes: null, reason: "network" };
 }
 
 /**
@@ -296,16 +440,12 @@ export async function generatedBytes(
   signal?: AbortSignal,
   options: GeneratedBytesOptions = {},
 ): Promise<Uint8Array<ArrayBuffer> | null> {
+  if (!options.cachedOnly) return (await generatedClip(p, signal))?.bytes ?? null;
   if (!isGenerated(p) || signal?.aborted) return null;
-  const blob =
-    (await memoBlob(p.audioKey)) ??
-    (options.cachedOnly ? await cachedBlob(await openCache(), p.audioKey) : await loadBlob(p, signal));
-  if (!blob?.size) return null;
-  try {
-    return new Uint8Array(await blob.arrayBuffer());
-  } catch {
-    return null;
-  }
+  const memory = await inMemory(p.audioKey);
+  if (memory) return bytesOf(memory);
+  const hit = await cachedBlob(await openCache(), p.audioKey);
+  return bytesOf(hit && keepBlob(p.audioKey, hit));
 }
 
 /** Downloads and caches every line not cached yet (for offline use). Never rejects. */
@@ -315,8 +455,8 @@ export async function prefetchGenerated(list: readonly Playable[], signal?: Abor
   let next = 0;
   const worker = async () => {
     while (next < todo.length && !signal?.aborted) {
-      const blob = await loadBlob(todo[next++], signal);
-      if (blob) result.ready++;
+      const loaded = await load(todo[next++], signal);
+      if (loaded?.blob) result.ready++;
       else result.failed++;
     }
   };
@@ -343,6 +483,8 @@ export async function pruneGenerated(keep: ReadonlySet<string>): Promise<void> {
 export async function clearGeneratedAudio(): Promise<void> {
   for (const url of memo.values()) URL.revokeObjectURL(url);
   memo.clear();
+  kept.clear();
+  keptBytes = 0;
   declined.clear();
   if (typeof caches === "undefined") return;
   await caches.delete(GENERATED_AUDIO_CACHE).catch(() => false);

@@ -5,14 +5,16 @@
  * time; nothing here is stored.
  *
  * Content lines come from their mp3 (`fetch`: the service worker's audio cache answers offline);
- * generated lines (narrator, slow, Prepárate lines) from `generatedBytes` (Cache Storage, else
- * `/api/coach/tts/` once). Never the device voice.
+ * generated lines (narrator, slow, Prepárate lines) from `generatedClip` (memory, Cache Storage
+ * within a short bound, else `/api/coach/tts/` once). Never the device voice.
  *
  * While the page is hidden (screen locked, app in the background) no clip starts, and a clip that
  * failed while it was hidden is fetched again once it is visible (iOS fails fetches at once in the
- * background): only failures while visible count towards `missing`.
+ * background): only failures while visible count towards `missing`, each with its reason
+ * (`missingBy`), so the notice can say why.
  */
-import { generatedBytes, isGenerated, mp3UrlWhenReady } from "@/lib/audio";
+import { mp3UrlWhenReady } from "@/lib/audio";
+import { generatedClip, isGenerated } from "@/lib/audio/generated";
 import { DEFAULT_GLOSS_LANG, type GlossLang, type Playable } from "@/lib/content";
 import { compileEpisode } from "./compile";
 import {
@@ -42,7 +44,28 @@ export interface PreparedEpisode {
   durationSec: number;
   /** Clips (distinct lines) that could not be fetched and were left out. */
   missing: number;
+  /** Why they were left out (the counts add up to `missing`). */
+  missingBy: MissingClips;
 }
+
+/**
+ * Missing clips by reason (each clip counted once, with the reason of its last attempt):
+ * `network` = the download failed, came back unusable or took too long; `declined` = the day's
+ * voice allowance is used up (the line is not asked for again this session); `offline` = no
+ * connection.
+ */
+export interface MissingClips {
+  network: number;
+  declined: number;
+  offline: number;
+}
+
+export type MissingReason = keyof MissingClips;
+
+/** Every reason, in the order the notice lists them. */
+export const MISSING_REASONS: readonly MissingReason[] = ["network", "declined", "offline"];
+
+const noneMissing = (): MissingClips => ({ network: 0, declined: 0, offline: 0 });
 
 export interface PrepareProgress {
   /** Clips settled so far (fetched or given up). */
@@ -88,11 +111,12 @@ const FRAME_SEC = frameSeconds(SILENCE_FORMAT);
 const seconds = (frames: number) => Math.round(frames * FRAME_SEC * 1000) / 1000;
 
 /** The joined file: Xing frame + frames; its sizes kept for `joinEpisodes`. */
-function build(parts: BlobPart[], sizes: number[], chapters: PreparedChapter[], missing: number): PreparedEpisode {
+function build(parts: BlobPart[], sizes: number[], chapters: PreparedChapter[], missingBy: MissingClips): PreparedEpisode {
   const layout = Uint16Array.from(sizes);
   const blob = new Blob([xingFrame(layout), ...parts], { type: "audio/mpeg" });
   layouts.set(blob, layout);
-  return { blob, chapters, durationSec: seconds(sizes.length), missing };
+  const missing = missingBy.network + missingBy.declined + missingBy.offline;
+  return { blob, chapters, durationSec: seconds(sizes.length), missing, missingBy };
 }
 
 function pushSilence(parts: BlobPart[], sizes: number[], ms: number): void {
@@ -101,39 +125,47 @@ function pushSilence(parts: BlobPart[], sizes: number[], ms: number): void {
   for (let i = 0; i < frames; i++) sizes.push(SILENT_FRAME_BYTES);
 }
 
-/** One attempt at a clip's bytes; null when there are none this time. Never rejects. */
-async function clipBytes(p: Playable, lang: string, signal: AbortSignal): Promise<Uint8Array<ArrayBuffer> | null> {
-  if (isGenerated(p)) return generatedBytes(p, signal);
+/** A clip's bytes, or why there are none this time. */
+type ClipResult = { bytes: Uint8Array<ArrayBuffer>; reason?: undefined } | { bytes: null; reason: MissingReason };
+
+const offline = () => typeof navigator !== "undefined" && navigator.onLine === false;
+const failedFetch = (): ClipResult => ({ bytes: null, reason: offline() ? "offline" : "network" });
+
+/** One attempt at a clip's bytes; null when `signal` aborts. Never rejects. */
+async function clipBytes(p: Playable, lang: string, signal: AbortSignal): Promise<ClipResult | null> {
+  if (isGenerated(p)) return generatedClip(p, signal);
   const url = await mp3UrlWhenReady(lang, p.audioKey);
-  if (!url || signal.aborted) return null;
+  if (signal.aborted) return null;
+  if (!url) return failedFetch();
   try {
     const res = await fetch(url, { signal });
-    return res.ok ? new Uint8Array(await res.arrayBuffer()) : null;
+    return res.ok ? { bytes: new Uint8Array(await res.arrayBuffer()) } : failedFetch();
   } catch {
-    return null;
+    return signal.aborted ? null : failedFetch();
   }
 }
 
 /**
- * A clip's bytes, or null after `ATTEMPTS` failed attempts (or when `signal` aborts). Each attempt
- * starts only while the page is visible; one that fails while the page is hidden, or that it went
- * hidden during, does not count and is made again once the page is visible.
+ * A clip's bytes, or why there are none after `ATTEMPTS` failed attempts (the last one's reason);
+ * null when `signal` aborts. Each attempt starts only while the page is visible; one that fails
+ * while the page is hidden, or that it went hidden during, does not count and is made again once
+ * the page is visible.
  */
-async function fetchClip(
-  p: Playable,
-  lang: string,
-  signal: AbortSignal,
-  hides: () => number,
-): Promise<Uint8Array<ArrayBuffer> | null> {
+async function fetchClip(p: Playable, lang: string, signal: AbortSignal, hides: () => number): Promise<ClipResult | null> {
+  let last: ClipResult = { bytes: null, reason: "network" };
   for (let failed = 0; failed < ATTEMPTS; ) {
     await whenPageVisible(signal);
     if (signal.aborted) return null;
     const before = hides();
-    const bytes = await clipBytes(p, lang, signal);
-    if (bytes || signal.aborted) return bytes;
-    if (!pageHidden() && hides() === before) failed++;
+    const result = await clipBytes(p, lang, signal);
+    if (!result || signal.aborted) return null;
+    if (result.bytes) return result;
+    if (!pageHidden() && hides() === before) {
+      failed++;
+      last = result;
+    }
   }
-  return null;
+  return last;
 }
 
 const aborted = () => new DOMException("The episode was not prepared.", "AbortError");
@@ -141,7 +173,7 @@ const aborted = () => new DOMException("The episode was not prepared.", "AbortEr
 /**
  * Downloads every clip of `episode` (3 at a time, one retry each, paused while the page is hidden)
  * and joins them into one mp3. A clip that cannot be fetched while the page is visible is left
- * out (its gaps merge) and counted in `missing`. Rejects with
+ * out (its gaps merge) and counted in `missing` (by reason in `missingBy`). Rejects with
  * `EpisodeAudioError` "format" when a clip is not in the episode format, with an `AbortError`
  * when `signal` aborts.
  */
@@ -155,6 +187,7 @@ export async function prepareEpisode(episode: SportEpisode, options: PrepareOpti
     ...new Map(segments.flatMap((s) => (s.kind === "clip" ? [[s.playable.audioKey, s.playable] as const] : []))).values(),
   ];
   const clips = new Map<string, Mp3Clip>();
+  const missingBy = noneMissing();
   const ctrl = new AbortController();
   const stopAll = () => ctrl.abort();
   signal?.addEventListener("abort", stopAll, { once: true });
@@ -166,12 +199,14 @@ export async function prepareEpisode(episode: SportEpisode, options: PrepareOpti
   const worker = async () => {
     while (next < todo.length && !ctrl.signal.aborted) {
       const p = todo[next++];
-      const bytes = await fetchClip(p, episode.lang, ctrl.signal, hides.count);
-      if (ctrl.signal.aborted) return;
+      const result = await fetchClip(p, episode.lang, ctrl.signal, hides.count);
+      if (!result || ctrl.signal.aborted) return;
       try {
-        const clip = bytes && parseMp3(bytes);
+        const clip = result.bytes && parseMp3(result.bytes);
         if (clip && !sameFormat(clip.format, SILENCE_FORMAT)) throw new Mp3FormatError("Another mp3 format.");
         if (clip) clips.set(p.audioKey, clip);
+        // No frames in the bytes: an unusable download.
+        else missingBy[result.reason ?? "network"]++;
       } catch (e) {
         if (!(e instanceof Mp3FormatError)) throw e;
         failure = new EpisodeAudioError("format", `The audio of "${p.text}" is in another format.`);
@@ -220,7 +255,7 @@ export async function prepareEpisode(episode: SportEpisode, options: PrepareOpti
     parts,
     sizes,
     chapters.map((chapter, c) => ({ ...chapter, startSec: seconds(startFrames[c]), episodeId: episode.id })),
-    todo.length - clips.size,
+    missingBy,
   );
 }
 
@@ -234,7 +269,7 @@ export function joinEpisodes(list: readonly PreparedEpisode[]): PreparedEpisode 
   const parts: BlobPart[] = [];
   const sizes: number[] = [];
   const chapters: PreparedChapter[] = [];
-  let missing = 0;
+  const missingBy = noneMissing();
   for (const prepared of list) {
     const layout = layouts.get(prepared.blob);
     if (!layout) throw new EpisodeAudioError("format", "Only episodes made by prepareEpisode can be joined.");
@@ -245,9 +280,9 @@ export function joinEpisodes(list: readonly PreparedEpisode[]): PreparedEpisode 
     }
     parts.push(prepared.blob.slice(SILENT_FRAME_BYTES));
     for (const size of layout) sizes.push(size);
-    missing += prepared.missing;
+    for (const reason of MISSING_REASONS) missingBy[reason] += prepared.missingBy[reason];
   }
-  return build(parts, sizes, chapters, missing);
+  return build(parts, sizes, chapters, missingBy);
 }
 
 /** Characters a file name cannot hold on some system. */
