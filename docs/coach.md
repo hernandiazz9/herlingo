@@ -99,7 +99,7 @@ show it as is.
 | 429 | `refine_limit` | "Ya has ajustado esta situación 3 veces." |
 | 429 | `tts_limit` | "Has llegado al límite de audio de hoy. Vuelve mañana." The client never shows it: that line plays with `speechSynthesis` and is not requested again this session |
 | 409 | `unknown_pack` | Refinement of a pack id this server never issued to this code (or older than 180 days): "No puedo ajustar esta situación. Prepara una nueva." The client shows "Esta situación ya no se puede ajustar; crea una nueva." in the Ajustar card and disables it for that pack this session (`canRefine(pack)`); the pack still plays and practises |
-| 502 | `generation_failed` | Claude refused, hit `max_tokens`, returned invalid JSON, or API error. Nothing is stored |
+| 502 | `generation_failed` | Claude refused, hit `max_tokens`, returned invalid JSON, or API error; for routes and episodes also an answer the stored shape rejects. Nothing is stored |
 | 503 | `not_configured` | No access codes or no Anthropic key in production |
 | 503 | `tts_unavailable` | Real TTS not available → the client uses `speechSynthesis` |
 | 500 | `internal` | Unexpected |
@@ -372,8 +372,9 @@ one request, exactly as before.
 `gen:<hash of voice + slow flag + text>` (normal lines keep their keys byte for byte), carries
 `slow: true`, and the coach source requests it with `slow: true` (the voice reads it at −30 %).
 `speak()` plays a slow line at rate 1 whatever `slow` / "Audio lento" say (the mp3 is already
-slow; its device-voice fallback keeps `speak()`'s rate). A key made slow in this session is
-always requested slow, even from a copy of the playable without the flag.
+slow); its device-voice fallback reads at `SLOW_RATE` (plan 016 T202; before, at `speak()`'s rate,
+so normal speed). A key made slow in this session is always requested slow, even from a copy of
+the playable without the flag.
 
 **Bytes** (to join clips into one mp3, docs/sport.md "Player"): `generatedBytes(playable,
 signal?)` in `src/lib/audio/generated.ts` → `Uint8Array | null`: memory, else Cache Storage,
@@ -383,7 +384,10 @@ without a cached copy, a failed download or an aborted `signal`. `generatedClip(
 signal?)` is the same with the reason when there is none: `{ bytes }` or `{ bytes: null, reason }`,
 reason `offline`, `declined` (the day's allowance) or `network` (failed, empty or over 8 s);
 `null` for a content playable or an aborted `signal`. Modo deporte counts its missing clips with
-it (docs/sport.md "Offline").
+it (docs/sport.md "Offline"). `generatedOnDeviceCheck()` → a check `(playable) => boolean` of
+which generated lines are on the device now (kept in memory, or in Cache Storage: one
+`cache.keys()` listing bounded by 1.5 s, past it only memory counts); Modo deporte's
+`downloadedEpisodes` uses it.
 
 `savePack` and `replacePack` download every line of the pack in the background
 (`cachePackAudio`, 3 at a time, deduplicated with taps in flight), so a saved pack plays offline.
@@ -690,7 +694,9 @@ and answer something simple.
 `today` is the caller's **route** counter. Order of checks: code → body → monthly budget → route
 counter (over it → 429 `daily_limit`, "Has llegado al límite de rutas de hoy. Vuelve mañana.") →
 Claude. Billing, refunds (slot given back only when nothing was billed) and the 502 messages are
-exactly the pack's. Fake mode: a fixture route per language (placeholders elsewhere, like the fake
+exactly the pack's. An answer that passed the schema but not the stored `Route` (built with its ids,
+voices and date) is the 502 of an invalid answer too, "La respuesta ha llegado con errores.
+Inténtalo de nuevo.", billed (`storedShape` in `api/_lib/claude.ts`; episodes the same). Fake mode: a fixture route per language (placeholders elsewhere, like the fake
 pack), counted with realistic token numbers. `GET /usage/` adds `routes` (billed this month),
 `avgRouteUsd` and `routesToday: { used, limit }`; the client treats all three as optional.
 
@@ -805,8 +811,9 @@ fallback); switching is one constant plus a `PRICES` row. Measure on the first r
 - **Media Session** (where supported): title = the route title, artist "Modo rápido", the app
   icon; play/pause handlers (lock screen, headphones) and `playbackState`; cleared when the
   sequence ends or the route closes. With the joined file: the episode player's session (plus
-  position state, seek and previous/next step), its metadata replaced by the route's (stories:
-  the story title, "Historias"; grammar: the verb and tense or the topic, "Gramática"). A pause
+  position state, seek and previous/next step) under the route's title and artist, passed to
+  `episodePlayer.load` (`EpisodePlayerMeta.artist`; stories: the story title, "Historias";
+  grammar: the verb and tense or the topic, "Gramática"). A pause
   from the lock screen or headphones leaves it paused («Seguir»).
 - **Voice lines**: each meaning is one more TTS request the first time (counted in
   `COACH_TTS_DAILY_LIMIT`); identical meanings share one mp3 (cached by voice + text). A meaning

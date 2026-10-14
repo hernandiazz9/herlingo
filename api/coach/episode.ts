@@ -5,6 +5,7 @@
  */
 import { randomUUID } from "node:crypto";
 import { authenticate } from "../_lib/access.js";
+import { storedShape } from "../_lib/claude.js";
 import { generateEpisode } from "../_lib/generators.js";
 import { json, readBody, route } from "../_lib/http.js";
 import { getLanguage, packVoices } from "../_lib/languages.js";
@@ -32,15 +33,19 @@ export default route({
           costMicro += await recordCall(caller, "episode", call);
         },
       );
-      const episode = Episode.parse({
-        ...generated,
-        id: randomUUID(),
-        source: "ai",
-        createdAt: new Date().toISOString(),
-        lang: meta.lang,
-        description: body.description,
-        voices: packVoices(meta),
-      });
+      const episode = storedShape(
+        Episode,
+        {
+          ...generated,
+          id: randomUUID(),
+          source: "ai",
+          createdAt: new Date().toISOString(),
+          lang: meta.lang,
+          description: body.description,
+          voices: packVoices(meta),
+        },
+        "episode",
+      );
       const summary = await readUsage(caller);
       return json({
         episode,

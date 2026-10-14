@@ -109,11 +109,17 @@ T201, 2026-10-14). Before, it was never voiced: left out of the episode as a mis
   `keepScreenAwake()` holds the Screen Wake Lock until released.
 - Plays the object URL on the shared `<audio>` element (`playbackRate` 1), from the tap's gesture.
   Starting from a tap that first has to prepare: show the progress, then a «Reproducir» tap.
+- One player for the app (`episodePlayer`, `src/lib/sport/player.ts`): «Escuchar todo» (routes,
+  stories, grammar pages; docs/coach.md "«Escuchar todo»") plays its joined file on it too (plan
+  016 T196), one chapter per step. `EpisodePlayerMeta` gives the lock screen's `title` and an
+  optional `artist` (default "Modo deporte"; «Escuchar todo» passes its section: "Modo rápido",
+  "Historias", "Gramática").
 - `joinEpisodes(list)` for «Escuchar seguidos» (chapters keep each episode's steps).
 - `downloadedEpisodes(list)`: the episodes whose every compiled clip is already on the device
-  (generated lines in Cache Storage `lang-lern-coach-audio`, at the path `generated.ts` gives
-  them, mirrored in `src/lib/sport/downloaded.ts`; content lines in any cache), so «Escuchar
-  seguidos» prepares without the network.
+  (generated lines kept in memory this session or in Cache Storage `lang-lern-coach-audio`:
+  `generatedOnDeviceCheck()` from `src/lib/audio/generated.ts`, one listing of the cache bounded
+  by 1.5 s like a line's lookup, past it only the lines in memory count; content lines in any
+  cache), so «Escuchar seguidos» prepares without the network.
 - XP (`src/lib/sport/xp.ts`): `trackEpisodeXp(lang, prepared)` follows the player and, per episode
   in the loaded file, adds up the time that really played (between two player states the position
   may advance at most as much as the clock, so a locked phone still counts and seeks do not; a
@@ -181,7 +187,7 @@ target-language sentences out of the Spanish fields.
 | `src/lib/coach/episodes.ts` | `getSavedEpisodes`, `getSavedEpisode`, `saveEpisode`, `deleteEpisode`, `cacheEpisodeAudio`; key `lang-lern:coach:episodes:<lang>` = `{ v: 1, episodes }`, newest first, unique ids, tolerant parsing; change event `lang-lern:coach-change`. Saving downloads `episodePlayables` in the background (the shared prefetch, kind `"episode"`); deleting stops it and prunes |
 | `src/lib/coach/use-coach.ts` | `useSavedEpisodes(lang)` → `{ episodes, get, save, remove }` |
 | `pruneCoachAudio` | keeps the lines of every saved pack, route **and** episode, plus every route's and every pack dialogue's episode lines (`episodePlayables`: narrator, slow and generated target lines) |
-| `src/components/sport/generation.ts` | `startEpisode(lang, description)`, `useEpisodeGeneration(lang, onDone?)`, `clearEpisodeGeneration(lang)`: one job per language, same contract as `components/coach/generation.ts` |
+| `src/components/sport/generation.ts` | `startEpisode(lang, description)`, `useEpisodeGeneration(lang, onDone?)`, `clearEpisodeGeneration(lang)`: one job per language, on the job runner of `components/coach/generation.ts` (`runJob`, `holdsUnsaved`, `useJob`, `clearGeneration`; the one runner for packs, routes and episodes) |
 
 - The request runs outside the screen (like `components/coach/generation.ts`): leaving `/deporte/`
   does not lose a paid episode.

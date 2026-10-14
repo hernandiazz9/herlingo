@@ -1,12 +1,13 @@
 "use client";
 
 /**
- * Generations that outlive the screen that started them: Prepárate packs and Modo rápido routes.
- * The server bills a generation whether or not anyone is still looking, so leaving the form
- * (opening a saved pack or route, another tab) never aborts the request: it finishes here, the
- * result is saved ("Mis situaciones" / "Mis rutas", or a pack replaced in place for a refinement)
- * and waits for the screen to come back. Only an explicit "Cancelar" aborts (the UI says it still
- * counts). In memory: closing the app loses a running one.
+ * Generations that outlive the screen that started them: Prepárate packs, Modo rápido routes and
+ * (through `runJob` / `useJob`, `components/sport/generation.ts`) Modo deporte episodes: the one
+ * job runner. The server bills a generation whether or not anyone is still looking, so leaving the
+ * form (opening a saved pack or route, another tab) never aborts the request: it finishes here, the
+ * result is saved ("Mis situaciones" / "Mis rutas" / "Mis episodios", or a pack replaced in place
+ * for a refinement) and waits for the screen to come back. Only an explicit "Cancelar" aborts (the
+ * UI says it still counts). In memory: closing the app loses a running one.
  */
 import { useEffect, useRef, useSyncExternalStore } from "react";
 import {
@@ -61,7 +62,12 @@ export const newPackJob = (lang: string) => `new\n${lang}`;
 export const refineJob = (pack: CoachPack) => `refine\n${pack.lang}\n${pack.id}`;
 export const routeJob = (lang: string) => `route\n${lang}`;
 
-function run<P extends object>(
+/**
+ * Starts the job `key` (`input` = what the learner asked for): `request` runs outside any screen,
+ * `store` saves its payload as soon as it arrives (true = stored) even if the job was cancelled
+ * meanwhile. No-op while `key` is running.
+ */
+export function runJob<P extends object>(
   key: string,
   input: string,
   request: (signal: AbortSignal) => Promise<P>,
@@ -106,7 +112,7 @@ function run<P extends object>(
  * dismissed (`clearGeneration`): it is paid for and exists nowhere else, so a new request must not
  * overwrite it.
  */
-function holdsUnsaved(key: string): boolean {
+export function holdsUnsaved(key: string): boolean {
   const job = jobs.get(key);
   return job?.status === "done" && !job.saved;
 }
@@ -117,7 +123,7 @@ function holdsUnsaved(key: string): boolean {
  */
 export function startNewPack(lang: string, description: string): void {
   if (holdsUnsaved(newPackJob(lang))) return;
-  run<PackPayload>(
+  runJob<PackPayload>(
     newPackJob(lang),
     description,
     (signal) => generatePack(lang, description, { signal }).then(({ pack }) => ({ pack })),
@@ -127,7 +133,7 @@ export function startNewPack(lang: string, description: string): void {
 
 /** Starts "Ajustar" (`instruction`) or "Generar otra vez" (`""`) of a pack. */
 export function startRefine(pack: CoachPack, instruction: string): void {
-  run<PackPayload>(
+  runJob<PackPayload>(
     refineJob(pack),
     instruction,
     (signal) => refinePack(pack, instruction, { signal }).then((result) => ({ pack: result.pack })),
@@ -142,7 +148,7 @@ export function startRefine(pack: CoachPack, instruction: string): void {
  */
 export function startRoute(lang: string, description: string): void {
   if (holdsUnsaved(routeJob(lang))) return;
-  run<RoutePayload>(
+  runJob<RoutePayload>(
     routeJob(lang),
     description,
     (signal) => generateRoute(lang, description, { signal }).then(({ route, usage }) => ({ route, usage })),
@@ -176,7 +182,12 @@ export function clearGeneration(key: string): void {
   notify();
 }
 
-function useJob<P extends object>(key: string, onDone?: (result: JobDone<P>) => void): Job<P> | undefined {
+/**
+ * The job under `key`, live (undefined when none). While mounted, `onDone` receives a result that
+ * finishes at once (the job is then forgotten); one that finished while unmounted stays as the
+ * returned `done` job until `clearGeneration`.
+ */
+export function useJob<P extends object>(key: string, onDone?: (result: JobDone<P>) => void): Job<P> | undefined {
   const job = useSyncExternalStore(subscribe, () => jobs.get(key) as Job<P> | undefined, () => undefined);
   const callback = useRef(onDone);
   useEffect(() => {
@@ -194,11 +205,7 @@ function useJob<P extends object>(key: string, onDone?: (result: JobDone<P>) => 
   return job;
 }
 
-/**
- * The pack job under `key`, live (undefined when none). While mounted, `onDone` receives a pack
- * that finishes at once (the job is then forgotten); one that finished while unmounted stays as
- * the returned `done` job until `clearGeneration`.
- */
+/** The pack job under `key`, live: `useJob`'s contract. */
 export function useGeneration(key: string, onDone?: (result: JobDone<PackPayload>) => void): Generation | undefined {
   return useJob<PackPayload>(key, onDone);
 }

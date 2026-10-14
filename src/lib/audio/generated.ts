@@ -18,8 +18,9 @@
  *
  * A slow line (`generatedPlayable(text, voice, { slow: true })`, Modo deporte) is read slower by
  * the voice itself (the source asks for it with `slow: true`), so it has its own key and mp3 and
- * always plays at rate 1. `generatedBytes()` gives a line's mp3 as bytes (to join clips);
- * `generatedClip()` also says why there is none.
+ * always plays at rate 1 (`speak()` reads its device-voice fallback at `SLOW_RATE`). `generatedBytes()` gives a line's mp3 as bytes (to join clips);
+ * `generatedClip()` also says why there is none; `generatedOnDeviceCheck()` tells which lines
+ * are already on the device (memory or Cache Storage).
  */
 import type { Playable } from "@/lib/content";
 import { mp3Play } from "./mp3";
@@ -446,6 +447,29 @@ export async function generatedBytes(
   if (memory) return bytesOf(memory);
   const hit = await cachedBlob(await openCache(), p.audioKey);
   return bytesOf(hit && keepBlob(p.audioKey, hit));
+}
+
+/** Paths of every generated mp3 in Cache Storage (empty without Cache Storage or when listing fails). */
+async function cachedPaths(): Promise<Set<string>> {
+  const cache = await openCache();
+  if (!cache) return new Set();
+  try {
+    return new Set((await cache.keys()).map((r) => new URL(r.url).pathname));
+  } catch {
+    return new Set();
+  }
+}
+
+/**
+ * A check of which generated lines are on the device now, for many lines at once (Modo deporte's
+ * downloaded episodes): their mp3 kept in memory this session, or in Cache Storage. One listing of
+ * the cache, bounded by `CACHE_LOOKUP_MS` (past it, or without Cache Storage, only the lines in
+ * memory count). False for content playables. Never rejects.
+ */
+export async function generatedOnDeviceCheck(): Promise<(p: Playable) => boolean> {
+  const listed = await within(cachedPaths(), CACHE_LOOKUP_MS, new Set<string>());
+  return (p) =>
+    isGenerated(p) && (kept.has(p.audioKey) || memo.has(p.audioKey) || listed.has(cacheUrl(p.audioKey)));
 }
 
 /** Downloads and caches every line not cached yet (for offline use). Never rejects. */
