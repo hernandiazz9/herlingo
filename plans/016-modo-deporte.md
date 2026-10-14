@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-13 22:30Z 💻
+- Updated: 2026-10-14 06:07Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
-- Next step: T197: Hernán's check on the bike (deployed); then plan done when the visual queue is empty
+- Next step: T199 (episode preparation survives a locked screen + «Completar audio»), then redeploy for Hernán
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: T197 check on the bike · visual queue (5)
+- Needs Hernán: workaround meanwhile: reopen the episode with the screen on · rest of T197 · visual queue (5)
 
 ## Shared contract (all tasks read this)
 
@@ -202,6 +202,22 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome: done by the writer (3-line change, no agent, to save tokens) · e4c0de27 · verify ✓ 💻 · not checked: visual
 
+## T199 — Fix: an episode prepared while the phone locks ends with dozens of missing clips
+- Status: pending
+- Depends on: T197
+- Where: any
+- Goal: Preparing an episode survives the screen locking or the app going to the background, and missing clips get completed without leaving the episode, so a native line's "Significa:" is never followed by silence.
+- Context: Hernán 2026-10-14 (T197): a new AI episode said "Faltan 74 audios: necesitas conexión…" while online, and a "Significa:" had no meaning after it. Vercel request logs: the episode arrived 05:59:05, the phone then made 22 `/api/coach/tts/` requests in 7 s (all 200, ~3 at a time) and none after 05:59:12. Reading: the page went to the background (screen locked during "Preparando el audio…"); iOS fails its fetches instantly while JS still runs, so `prepareEpisode` (`src/lib/sport/prepare.ts`, one retry per clip) burned through the remaining clips as missing; `useEpisodeAudio` (`src/components/sport/use-episode-audio.ts`) prepares only once per mount, so nothing retries until the episode is reopened; the notice in `src/components/sport/EpisodeView.tsx` blames the connection.
+- Scope: may touch `src/lib/sport/**`, `src/components/sport/**`, `src/lib/audio/generated.ts` (only if a visibility-aware wait belongs there), docs/sport.md / must not touch `api/`, stored shapes, other screens.
+- Done when:
+  - While `document.visibilityState === "hidden"`, preparation pauses: no new clip starts, and a clip that failed while hidden is retried once the page is visible again (not counted as missing). Same for «Escuchar seguidos» preparation if it shares the path.
+  - A Screen Wake Lock (`navigator.wakeLock.request("screen")`, feature-detected, errors ignored) is held while an episode prepares and released when it is ready, fails or unmounts.
+  - Ready with `missing > 0`: the player retries the missing clips automatically when the page becomes visible or the browser goes back online (only while not playing), and shows a «Completar audio» button; after completion the new file loads at the start of the chapter that was current. Notice copy: online → "Faltan N audios. Toca «Completar audio» para descargarlos."; offline → "Sin conexión: faltan N audios. Se completarán cuando vuelvas a tener internet.".
+  - A throwaway `npx tsx` check simulates: clips failing while "hidden" are retried after "visible" and the result has `missing: 0`; a clip that truly fails stays missing once.
+  - docs/sport.md "Offline" and "UI copy" updated.
+  - `npm run verify` → exit 0.
+- Outcome:
+
 ## Review queue
 
 ## Visual checks queue
@@ -279,3 +295,4 @@ Worktree setup: npm ci
 - 2026-10-13 21:43Z 💻 merged origin/main (a952b70e: msedge-tts 2.1.0, update download progress) into plan-016 → 0257a6de, no conflicts · npm ci · verify ✓ · slow TTS (rate -30%) still works on msedge-tts 2.1.0
 - 2026-10-13 22:10Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ 99a8e4ad: T187–T198 + main a952b70e) → https://langlern-iota.vercel.app; main not fast-forwarded yet
 - 2026-10-13 22:30Z 💻 main fast-forwarded to 82ad12f5 with Hernán's OK
+- 2026-10-14 06:07Z 💻 T197 finding (Hernán): 'Faltan 74 audios' while online + 'Significa:' with no meaning → logs show downloads stopped 7 s after the episode arrived (page backgrounded) → fix task T199
