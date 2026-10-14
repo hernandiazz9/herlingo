@@ -167,11 +167,16 @@ export async function reserveRefinement(caller: Caller, packId: string): Promise
   );
 }
 
-/** Counts one voice line for the code today (429 `tts_limit` when the day's allowance is used up). */
-export async function reserveTts(caller: Caller): Promise<void> {
-  await take(keys.tts(periods().day, caller.name), ttsDailyLimit(), DAY_TTL, () => {
-    return new CoachError(429, "tts_limit", "Has llegado al límite de audio de hoy. Vuelve mañana.");
-  });
+/**
+ * Counts one voice line for the code today (429 `tts_limit` when the day's allowance is used up).
+ * Returns a refund for a line the voice could not read.
+ */
+export async function reserveTts(caller: Caller): Promise<Refund> {
+  return (
+    await take(keys.tts(periods().day, caller.name), ttsDailyLimit(), DAY_TTL, () => {
+      return new CoachError(429, "tts_limit", "Has llegado al límite de audio de hoy. Vuelve mañana.");
+    })
+  ).refund;
 }
 
 /** Adds one Claude call (every model attempt in it) to the ledger. Returns its cost in micro-dollars. */

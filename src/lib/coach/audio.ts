@@ -3,22 +3,41 @@
  * the mp3 comes from the device cache, else from `/api/coach/tts/` once (then cached), else the
  * device voice. Importing this module registers the coach TTS endpoint as that source.
  */
-import { generatedPlayable, prefetchGenerated, setGeneratedAudioSource, type PrefetchResult } from "@/lib/audio";
+import {
+  GeneratedAudioError,
+  generatedPlayable,
+  prefetchGenerated,
+  setGeneratedAudioSource,
+  type GeneratedFailure,
+  type PrefetchResult,
+} from "@/lib/audio";
 import { getPack, type Playable } from "@/lib/content";
 import { CoachApiError, fetchSpeech } from "./api";
 import type { CoachPack, CoachRoute, InterviewQuestion } from "./types";
 
+/** Why a TTS request failed, as the generated-audio backend names it. */
+function failureOf(e: unknown): GeneratedFailure {
+  if (!(e instanceof CoachApiError)) return "other";
+  if (e.code === "timeout") return "timeout";
+  if (e.kind === "offline") return typeof navigator !== "undefined" && navigator.onLine === false ? "offline" : "network";
+  if (e.kind === "unauthorized") return "access";
+  if (e.kind === "limit") return "limit";
+  if (e.code === "tts_unavailable") return "voice";
+  return e.status >= 500 ? "server" : "other";
+}
+
 /**
  * The coach TTS endpoint as the generated-audio source. Over the day's voice allowance (429
  * `tts_limit`) the line is declined for the session: the device voice plays it silently, without
- * asking the server again for that line. A slow line is requested with `slow: true`.
+ * asking the server again for that line. A slow line is requested with `slow: true`. Any other
+ * failure rejects with a `GeneratedAudioError` that says why.
  */
 setGeneratedAudioSource(async (text, voice, signal, options) => {
   try {
-    return await fetchSpeech(text, voice, signal, { slow: options?.slow === true });
+    return await fetchSpeech(text, voice, signal, { slow: options?.slow === true, timeoutMs: options?.timeoutMs });
   } catch (e) {
     if (e instanceof CoachApiError && e.code === "tts_limit") return null;
-    throw e;
+    throw new GeneratedAudioError(failureOf(e));
   }
 });
 

@@ -2,7 +2,8 @@
  * POST /api/coach/tts/ { text, voice, slow? } → audio/mpeg read by a neural voice (edge-tts); with
  * `slow: true` the voice reads at rate −30 % (Modo deporte's slow lines). Fake mode
  * returns a short silent mp3 with no network; if the voice service fails → 503 and the client
- * falls back to the device voice. Every request counts against the code's daily voice lines.
+ * falls back to the device voice. Every line read counts against the code's daily voice lines
+ * (a line the voice could not read is given back).
  * The stress marks of a pack with a `stress` rule (the pack that declares the voice) are removed
  * before reading.
  */
@@ -24,8 +25,14 @@ export default route({
     // Written stress marks are for the eyes: never read aloud (the client caches by the marked text).
     const text = stripStressForVoice(body.text, voice).trim();
     if (!text) throw new CoachError(400, "bad_request", "La petición no es válida.");
-    await reserveTts(caller);
-    const audio = isFake() ? silentMp3() : await synthesize(text, voice, { slow: body.slow === true });
+    const refund = await reserveTts(caller);
+    let audio: Uint8Array;
+    try {
+      audio = isFake() ? silentMp3() : await synthesize(text, voice, { slow: body.slow === true });
+    } catch (error) {
+      await refund().catch(() => {});
+      throw error;
+    }
     return new Response(audio as BodyInit, {
       headers: { "Content-Type": "audio/mpeg", "Cache-Control": "private, max-age=31536000, immutable" },
     });

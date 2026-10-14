@@ -12,7 +12,8 @@
  *
  * A slow line (`generatedPlayable(text, voice, { slow: true })`, Modo deporte) is read slower by
  * the voice itself (the source asks for it with `slow: true`), so it has its own key and mp3 and
- * always plays at rate 1. `generatedBytes()` gives a line's mp3 as bytes (to join clips).
+ * always plays at rate 1. `generatedBytes()` gives a line's mp3 as bytes (to join clips);
+ * `generatedFailure()` says why a line's last download failed.
  */
 import type { Playable } from "@/lib/content";
 import { mp3Play } from "./mp3";
@@ -31,23 +32,51 @@ const PREFETCH_CONCURRENCY = 3;
  * falls back to the device voice) and the download is aborted, even if a source never settles.
  */
 const LOAD_DEADLINE_MS = 8_000;
+/**
+ * A line nobody is waiting to hear (a file prepared in the background, `patient`): the source may
+ * take `PATIENT_TIMEOUT_MS` (the server tries the voice twice, 10 s each, after a cold start) and
+ * the whole job `PATIENT_DEADLINE_MS`.
+ */
+const PATIENT_TIMEOUT_MS = 25_000;
+const PATIENT_DEADLINE_MS = 30_000;
 
 /** How a generated line is read: `slow` = by the voice itself at a slower rate (never `playbackRate`). */
 export interface GeneratedLineOptions {
   slow?: boolean;
 }
 
+/** How the source fetches a line: `timeoutMs` = how long it may take (absent: its own, short, for a tap). */
+export interface GeneratedSourceOptions extends GeneratedLineOptions {
+  timeoutMs?: number;
+}
+
+/**
+ * Why a generated line has no mp3 this time: `timeout` too slow, `limit` the day's voice allowance
+ * is used up (a declined line), `voice` the voice service failed, `server` another server error,
+ * `network` the server could not be reached, `offline` no connection, `access` the access code,
+ * `other` anything else.
+ */
+export type GeneratedFailure = "timeout" | "limit" | "voice" | "server" | "network" | "offline" | "access" | "other";
+
+/** What a source rejects with to say why it failed (any other rejection counts as `other`). */
+export class GeneratedAudioError extends Error {
+  constructor(readonly reason: GeneratedFailure) {
+    super(`The generated line failed: ${reason}.`);
+    this.name = "GeneratedAudioError";
+  }
+}
+
 /**
  * Fetches the mp3 of one line (read slower by the voice when `options.slow`); rejects when it
- * cannot this time (the caller falls back to the device voice and a later tap tries again),
- * resolves `null` when it will not this session (the line then always uses the device voice,
- * without asking the source again).
+ * cannot this time (the caller falls back to the device voice and a later tap tries again;
+ * a `GeneratedAudioError` says why), resolves `null` when it will not this session (the line then
+ * always uses the device voice, without asking the source again).
  */
 export type GeneratedAudioSource = (
   text: string,
   voice: string,
   signal?: AbortSignal,
-  options?: GeneratedLineOptions,
+  options?: GeneratedSourceOptions,
 ) => Promise<Blob | null>;
 
 /** A generated playable; `slow: true` marks a line the voice reads slower (its own key and mp3). */
@@ -57,6 +86,8 @@ let source: GeneratedAudioSource | undefined;
 const memo = new Map<string, string>();
 /** Keys of lines the source declined (`null`): device voice for the rest of the session. */
 const declined = new Set<string>();
+/** Why each line's last download failed (deleted when one succeeds). */
+const failures = new Map<string, GeneratedFailure>();
 /**
  * Keys of slow lines made this session: a slow key is always requested slow, even from a copy
  * of its playable that lost the `slow` flag (its cached mp3 must never be a normal-rate one).
@@ -140,34 +171,58 @@ async function cachedBlob(cache: Cache | undefined, key: string): Promise<Blob |
   }
 }
 
-async function download(p: Playable, cache: Cache | undefined, signal?: AbortSignal): Promise<Blob | undefined> {
-  if (!source || (typeof navigator !== "undefined" && navigator.onLine === false)) return undefined;
-  const blob = isSlowGenerated(p)
-    ? await source(p.text, p.voice, signal, { slow: true })
-    : await source(p.text, p.voice, signal);
-  if (blob === null) {
-    declined.add(p.audioKey);
+async function download(
+  p: Playable,
+  cache: Cache | undefined,
+  signal: AbortSignal,
+  timeoutMs: number | undefined,
+): Promise<Blob | undefined> {
+  if (!source || (typeof navigator !== "undefined" && navigator.onLine === false)) {
+    failures.set(p.audioKey, source ? "offline" : "other");
     return undefined;
   }
-  if (!blob.size) return undefined;
+  const options: GeneratedSourceOptions = {};
+  if (isSlowGenerated(p)) options.slow = true;
+  if (timeoutMs) options.timeoutMs = timeoutMs;
+  const blob = await source(p.text, p.voice, signal, options);
+  if (blob === null) {
+    declined.add(p.audioKey);
+    failures.set(p.audioKey, "limit");
+    return undefined;
+  }
+  if (!blob.size) {
+    failures.set(p.audioKey, "other");
+    return undefined;
+  }
+  failures.delete(p.audioKey);
   const headers = { "Content-Type": blob.type || "audio/mpeg" };
   await cache?.put(cacheUrl(p.audioKey), new Response(blob, { headers })).catch(() => {});
   return blob;
 }
 
-function startJob(p: Playable): Job {
+function startJob(p: Playable, patient: boolean): Job {
   const ctrl = new AbortController();
   let timer: ReturnType<typeof setTimeout> | undefined;
   const deadline = new Promise<undefined>((resolve) => {
-    timer = setTimeout(() => {
-      ctrl.abort();
-      resolve(undefined);
-    }, LOAD_DEADLINE_MS);
+    timer = setTimeout(
+      () => {
+        failures.set(p.audioKey, "timeout");
+        ctrl.abort();
+        resolve(undefined);
+      },
+      patient ? PATIENT_DEADLINE_MS : LOAD_DEADLINE_MS,
+    );
   });
   const work = (async () => {
     const cache = await openCache();
-    return (await cachedBlob(cache, p.audioKey)) ?? (await download(p, cache, ctrl.signal));
-  })().catch(() => undefined);
+    return (
+      (await cachedBlob(cache, p.audioKey)) ??
+      (await download(p, cache, ctrl.signal, patient ? PATIENT_TIMEOUT_MS : undefined))
+    );
+  })().catch((e: unknown) => {
+    if (!ctrl.signal.aborted) failures.set(p.audioKey, e instanceof GeneratedAudioError ? e.reason : "other");
+    return undefined;
+  });
   const job: Job = { ctrl, waiting: 0, promise: Promise.race([work, deadline]) };
   void job.promise.then(() => {
     clearTimeout(timer);
@@ -178,14 +233,15 @@ function startJob(p: Playable): Job {
 
 /**
  * The mp3 of a line: Cache Storage, else one download (deduplicated while in flight, bounded by
- * `LOAD_DEADLINE_MS`). With `signal`, this caller stops waiting (undefined) when it aborts; the
- * shared download is aborted only once no caller waits for it any more.
+ * `LOAD_DEADLINE_MS`, or `PATIENT_DEADLINE_MS` when `patient` starts it). With `signal`, this
+ * caller stops waiting (undefined) when it aborts; the shared download is aborted only once no
+ * caller waits for it any more.
  */
-function loadBlob(p: Playable, signal?: AbortSignal): Promise<Blob | undefined> {
+function loadBlob(p: Playable, signal?: AbortSignal, patient = false): Promise<Blob | undefined> {
   if (signal?.aborted || declined.has(p.audioKey)) return Promise.resolve(undefined);
   let job = inflight.get(p.audioKey);
   if (!job) {
-    job = startJob(p);
+    job = startJob(p, patient);
     inflight.set(p.audioKey, job);
   }
   const shared = job;
@@ -282,6 +338,11 @@ async function memoBlob(key: string): Promise<Blob | undefined> {
 export interface GeneratedBytesOptions {
   /** Only what is already on the device (memory, Cache Storage): never the source. */
   cachedOnly?: boolean;
+  /**
+   * Nobody is waiting to hear it (a file prepared in the background): a download it starts may
+   * take `PATIENT_DEADLINE_MS` instead of a tap's `LOAD_DEADLINE_MS`.
+   */
+  patient?: boolean;
 }
 
 /**
@@ -299,13 +360,20 @@ export async function generatedBytes(
   if (!isGenerated(p) || signal?.aborted) return null;
   const blob =
     (await memoBlob(p.audioKey)) ??
-    (options.cachedOnly ? await cachedBlob(await openCache(), p.audioKey) : await loadBlob(p, signal));
+    (options.cachedOnly
+      ? await cachedBlob(await openCache(), p.audioKey)
+      : await loadBlob(p, signal, options.patient === true));
   if (!blob?.size) return null;
   try {
     return new Uint8Array(await blob.arrayBuffer());
   } catch {
     return null;
   }
+}
+
+/** Why the last download of `p` failed; undefined after a success or when it was never tried. */
+export function generatedFailure(p: Playable): GeneratedFailure | undefined {
+  return failures.get(p.audioKey);
 }
 
 /** Downloads and caches every line not cached yet (for offline use). Never rejects. */
@@ -344,6 +412,7 @@ export async function clearGeneratedAudio(): Promise<void> {
   for (const url of memo.values()) URL.revokeObjectURL(url);
   memo.clear();
   declined.clear();
+  failures.clear();
   if (typeof caches === "undefined") return;
   await caches.delete(GENERATED_AUDIO_CACHE).catch(() => false);
 }

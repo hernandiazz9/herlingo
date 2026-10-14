@@ -18,6 +18,7 @@ export {
   joinEpisodes,
   prepareEpisode,
   type EpisodeAudioErrorCode,
+  type MissingReasons,
   type PreparedChapter,
   type PreparedEpisode,
   type PrepareOptions,

@@ -170,8 +170,8 @@ service fails → 503 `tts_unavailable` and the client falls back to the device 
 (`speechSynthesis`). When a pack that declares `voice` has a `stress` rule, its `stress.mark` is
 removed from `text` before reading (the client still caches the line by its marked text; nothing
 changes for other voices); text that is empty after that → 400. Fake mode: a ~0.26 s silent mp3, no network. Requires the code; does not
-count as a generation and costs nothing, but every request (also a failed one) counts as one of
-the code's daily voice lines (`COACH_TTS_DAILY_LIMIT`, default 2000): over it → 429 `tts_limit`
+count as a generation and costs nothing, but every line read counts as one of the code's daily
+voice lines (a line the voice could not read, 503, is given back) (`COACH_TTS_DAILY_LIMIT`, default 2000): over it → 429 `tts_limit`
 and the client reads the line with the device voice. The client caches each line; 2000 leaves
 room for Modo deporte (an AI episode is ~100–150 voice lines the first time) and is still far
 above normal use.
@@ -345,8 +345,12 @@ always requested slow, even from a copy of the playable without the flag.
 **Bytes** (to join clips into one mp3, docs/sport.md "Player"): `generatedBytes(playable,
 signal?)` in `src/lib/audio/generated.ts` → `Uint8Array | null`: the object URL in memory, else
 Cache Storage, else the source once (then cached; shared with taps and prefetches in flight,
-same deadline), never `speechSynthesis`. `null` for a content playable (fetch its `mp3Url`), a
-declined line, offline without a cached copy, a failed download or an aborted `signal`.
+same deadline; `{ patient: true }` for a file prepared in the background: a download it starts
+may take 25 s per request and 30 s in all instead of a tap's 7 s / 8 s), never `speechSynthesis`.
+`null` for a content playable (fetch its `mp3Url`), a declined line, offline without a cached
+copy, a failed download or an aborted `signal`; `generatedFailure(playable)` then says why
+(`GeneratedFailure`: timeout, limit, voice, server, network, offline, access, other; the coach
+source rejects with a `GeneratedAudioError` carrying it).
 
 `savePack` and `replacePack` download every line of the pack in the background
 (`cachePackAudio`, 3 at a time, deduplicated with taps in flight), so a saved pack plays offline.

@@ -41,15 +41,19 @@ import { ttsAvailable, ttsSpeak, ttsStop } from "./speech-synthesis";
 export {
   clearGeneratedAudio,
   GENERATED_AUDIO_CACHE,
+  GeneratedAudioError,
   generatedBytes,
+  generatedFailure,
   generatedKey,
   type GeneratedBytesOptions,
+  type GeneratedFailure,
   generatedPlayable,
   isGenerated,
   prefetchGenerated,
   pruneGenerated,
   setGeneratedAudioSource,
   type GeneratedAudioSource,
+  type GeneratedSourceOptions,
   type PrefetchResult,
 } from "./generated";
 export { joinLines, type JoinedLines, type JoinLinesOptions } from "./joined";

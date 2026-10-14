@@ -6,7 +6,14 @@ import { PauseIcon, PlayIcon } from "@/components/quick/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Button, IconButton, ProgressBar, TargetText } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { compileEpisode, episodeMp3File, episodePlayer, type EpisodeChapter, type SportEpisode } from "@/lib/sport";
+import {
+  compileEpisode,
+  episodeMp3File,
+  episodePlayer,
+  type EpisodeChapter,
+  type MissingReasons,
+  type SportEpisode,
+} from "@/lib/sport";
 import { clock } from "./episodes";
 import { NextStepIcon, PreviousStepIcon, SaveIcon } from "./icons";
 import { useEpisodeAudio, useEpisodePlayer, useEpisodeXp, type Completion, type EpisodeAudio } from "./use-episode-audio";
@@ -194,24 +201,51 @@ function AudioStatus({ audio }: { audio: EpisodeAudio }) {
       </div>
     );
   }
-  const { missing } = audio.prepared;
-  return missing > 0 ? <Missing missing={missing} completion={audio.completion} /> : null;
+  const { missing, reasons } = audio.prepared;
+  return missing > 0 ? <Missing missing={missing} reasons={reasons} completion={audio.completion} /> : null;
+}
+
+/** Why a clip is missing, as the learner reads it (docs/sport.md "UI copy"). */
+const REASON_LABELS: Record<keyof MissingReasons, string> = {
+  limit: "límite de audio de hoy",
+  timeout: "el servidor tardó demasiado",
+  voice: "el servicio de voz no respondió",
+  server: "error del servidor",
+  network: "no se pudo conectar con el servidor",
+  offline: "sin conexión",
+  access: "código de acceso no válido",
+  other: "otro error",
+};
+
+/** "Motivo: límite de audio de hoy (12), el servidor tardó demasiado (3)." Most frequent first. */
+function reasonsText(reasons: MissingReasons): string {
+  const list = (Object.keys(REASON_LABELS) as (keyof MissingReasons)[])
+    .map((reason) => ({ reason, count: reasons[reason] ?? 0 }))
+    .filter(({ count }) => count > 0)
+    .sort((a, b) => b.count - a.count)
+    .map(({ reason, count }) => `${REASON_LABELS[reason]} (${count})`);
+  return list.length ? `${list.length === 1 ? "Motivo" : "Motivos"}: ${list.join(", ")}.` : "";
 }
 
 /**
- * Clips left out of the file: online, «Completar audio» (it also runs by itself when you come back
- * to the app); offline, they complete when the connection returns.
+ * Clips left out of the file and why: online, «Completar audio» (it also runs by itself when you
+ * come back to the app); offline, they complete when the connection returns.
  */
-function Missing({ missing, completion }: { missing: number; completion?: Completion }) {
+function Missing({ missing, reasons, completion }: { missing: number; reasons: MissingReasons; completion?: Completion }) {
   const online = useOnline();
   const one = missing === 1;
+  const why = reasonsText(reasons);
+  const reasonLine = why ? <p className="text-sm text-ink-muted">{why}</p> : null;
   if (!online) {
     return (
-      <Notice tone="info">
-        {one
-          ? "Sin conexión: falta 1 audio. Se completará cuando vuelvas a tener internet."
-          : `Sin conexión: faltan ${missing} audios. Se completarán cuando vuelvas a tener internet.`}
-      </Notice>
+      <div className="flex flex-col gap-2">
+        <Notice tone="info">
+          {one
+            ? "Sin conexión: falta 1 audio. Se completará cuando vuelvas a tener internet."
+            : `Sin conexión: faltan ${missing} audios. Se completarán cuando vuelvas a tener internet.`}
+        </Notice>
+        {reasonLine}
+      </div>
     );
   }
   const completing = completion?.completing === true;
@@ -222,6 +256,7 @@ function Missing({ missing, completion }: { missing: number; completion?: Comple
           ? "Falta 1 audio. Toca «Completar audio» para descargarlo."
           : `Faltan ${missing} audios. Toca «Completar audio» para descargarlos.`}
       </Notice>
+      {reasonLine}
       {completion ? (
         <Button variant="secondary" size="md" fullWidth disabled={completing} aria-busy={completing} onClick={completion.complete}>
           {completing ? (
