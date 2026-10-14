@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:18Z 💻
+- Updated: 2026-10-14 06:22Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
 - Next step: redeploy (Hernán) for T199 + the rest of T197
@@ -218,6 +218,19 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome: prepare pauses while hidden (hidden failures retried after visible), keepScreenAwake() wake lock while preparing, auto-complete on visible/online when not playing + «Completar audio» (reloads at the current step), honest notice copy; same path for «Escuchar seguidos» · 3d8dc568 · verify ✓ 💻 · tsx check ✓ · not checked: locked iPhone, wake lock on device, visuals
 
+## T200 — Lock hint while an episode prepares; update pill on the home screen
+- Status: done
+- Depends on: T199
+- Where: any
+- Goal: Hernán (2026-10-14): warn that locking or leaving the app pauses the episode download; on the home screen, a small "Descargando actualización…" notice while a new version downloads (as on Perfil).
+- Context: `src/components/sport/EpisodeView.tsx` (preparing state), `useUpdateStatus` in `src/lib/pwa/register.ts` (state "downloading" with done/total), `src/app/page.tsx`.
+- Scope: may touch `src/components/sport/EpisodeView.tsx`, `src/lib/pwa/UpdateDownloading.tsx` (new), `src/app/page.tsx`, CLAUDE.md, docs/sport.md / must not touch the rest.
+- Done when:
+  - While preparing: "Deja la pantalla encendida hasta que termine: si bloqueas el móvil o sales de la app, la descarga se pausa." under the progress bar.
+  - Home: a small sea pill "Descargando actualización… N %" (role status, tokens only) under the header only while the status is "downloading".
+  - `npm run verify` → exit 0.
+- Outcome: done by the writer (small change, no agent) · 05f1cf42 · verify ✓ 💻 · not checked: visual
+
 ## Review queue
 
 ## Visual checks queue
@@ -227,6 +240,7 @@ Worktree setup: npm ci
 - [ ] T195 @9418fa65 — route «🏃 Modo deporte» button; /deporte/ De tus rutas; «Escuchar seguidos» joined view; '+10 XP' notice; light + dark (queued 2026-10-13 💻)
 - [ ] T196 @130a01ca — «Escuchar todo» on a route, a story and a grammar page: keeps playing locked, highlight follows, Pausar/Seguir, lock-screen title (queued 2026-10-13 💻)
 - [ ] T199 @3d8dc568 — episode prepared with the screen locked midway completes on unlock; «Completar audio» button + notice (online/offline); screen stays on while preparing (queued 2026-10-14 💻)
+- [ ] T200 @05f1cf42 — episode preparing hint; home «Descargando actualización… N %» pill during an update (light + dark) (queued 2026-10-14 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -301,3 +315,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:07Z 💻 T197 finding (Hernán): 'Faltan 74 audios' while online + 'Significa:' with no meaning → logs show downloads stopped 7 s after the episode arrived (page backgrounded) → fix task T199
 - 2026-10-14 06:07Z 💻 T199 launched · attempt 1 · agent a41df0d4e5b604d4a
 - 2026-10-14 06:18Z 💻 T199 done · worktree-agent-a41df0d4e5b604d4a → 3d8dc568 · verify ✓
+- 2026-10-14 06:22Z 💻 T200 done by the writer (lock hint + home update pill) → 05f1cf42 · verify ✓
