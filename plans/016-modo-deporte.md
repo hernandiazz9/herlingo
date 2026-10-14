@@ -203,7 +203,7 @@ Worktree setup: npm ci
 - Outcome: done by the writer (3-line change, no agent, to save tokens) · e4c0de27 · verify ✓ 💻 · not checked: visual
 
 ## T199 — Fix: an episode prepared while the phone locks ends with dozens of missing clips
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a41df0d4e5b604d4a · since 06:07Z)
 - Depends on: T196
 - Where: any
 - Goal: Preparing an episode survives the screen locking or the app going to the background, and missing clips get completed without leaving the episode, so a native line's "Significa:" is never followed by silence.
@@ -296,3 +296,4 @@ Worktree setup: npm ci
 - 2026-10-13 22:10Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ 99a8e4ad: T187–T198 + main a952b70e) → https://langlern-iota.vercel.app; main not fast-forwarded yet
 - 2026-10-13 22:30Z 💻 main fast-forwarded to 82ad12f5 with Hernán's OK
 - 2026-10-14 06:07Z 💻 T197 finding (Hernán): 'Faltan 74 audios' while online + 'Significa:' with no meaning → logs show downloads stopped 7 s after the episode arrived (page backgrounded) → fix task T199
+- 2026-10-14 06:07Z 💻 T199 launched · attempt 1 · agent a41df0d4e5b604d4a
