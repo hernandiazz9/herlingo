@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:28Z 💻
+- Updated: 2026-10-14 06:34Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
 - Next step: Hernán: T197 rest + T199/T200 on the iPhone (deployed); main fast-forward when he says
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: OK to fast-forward main (T199–T200, deployed) · rest of T197 · visual queue (7)
+- Needs Hernán: rest of T197 + T199/T200 on the iPhone · visual queue (7) · which proposals to build next
 
 ## Shared contract (all tasks read this)
 
@@ -260,6 +260,7 @@ Worktree setup: npm ci
 - 2026-10-13 T188: dialogue episodes keep edge-tts for normal and slow lines ("me gustan las voces"). (Hernán)
 - 2026-10-13 plan: gate relaxed after "continúa con lo que sigue": server tasks T192–T193 run before T191; T194 onwards still waits for T191. (Hernán + plan)
 - 2026-10-13 plan: main fast-forwarded to plan-016 (deployed code, T187–T198) with Hernán's OK ("pasalo a main"). (Hernán)
+- 2026-10-14 plan: main fast-forwarded to plan-016 (T199–T200, deployed) with Hernán's OK ("sisi avanza y agreguemos todo"). (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-13 plan: Episodes from the pack's units (key phrases of a lesson as a short listening review), no AI.
@@ -317,3 +318,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:18Z 💻 T199 done · worktree-agent-a41df0d4e5b604d4a → 3d8dc568 · verify ✓
 - 2026-10-14 06:22Z 💻 T200 done by the writer (lock hint + home update pill) → 05f1cf42 · verify ✓
 - 2026-10-14 06:28Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ e7259f78: T199 + T200) → https://langlern-iota.vercel.app; main not fast-forwarded yet
+- 2026-10-14 06:34Z 💻 main fast-forwarded to 62cbd125 with Hernán's OK
