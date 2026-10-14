@@ -47,7 +47,8 @@ src/lib/speech/        Speech recognition engine (createListenSession; only plat
 src/components/speech/ The one mic UI: useListen hook, MicButton, LiveTranscript, SpeakPanel, WordFeedback.
 src/lib/audio/         speak() / stop(): the only way to play target-language audio (content mp3s; generated.ts =
                        Prepárate lines: Cache Storage, else /api/coach/tts/ once, else speechSynthesis).
-src/lib/pwa/           Web app manifest (manifest.ts), SW registration + update prompt (register.ts, UpdatePrompt.tsx).
+src/lib/pwa/           Web app manifest (manifest.ts), SW registration + update prompt (register.ts, UpdatePrompt.tsx),
+                       home "Descargando actualización…" pill (UpdateDownloading.tsx).
 src/lib/coach/         Prepárate client: API client + typed errors (CoachApiError), saved packs, learner profile and
                        buildLearnerContext(), usage (`lang-lern:coach:*`); hooks in use-coach.ts. docs/coach.md "Client".
 src/components/quick/  Modo rápido screen /rapido/ (under Jugar; `?ruta=<id>` opens a saved route in place): QuickView, RouteView, SavedRoutes.

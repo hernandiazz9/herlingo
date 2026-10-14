@@ -187,6 +187,10 @@ function AudioStatus({ audio }: { audio: EpisodeAudio }) {
           </span>
         </p>
         <ProgressBar value={audio.done} max={audio.total || 1} label="Audio preparado" tone="sea" />
+        <p className="text-sm text-ink-muted">
+          Deja la pantalla encendida hasta que termine: si bloqueas el móvil o sales de la app, la descarga se
+          pausa.
+        </p>
       </div>
     );
   }

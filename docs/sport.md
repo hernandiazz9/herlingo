@@ -225,7 +225,8 @@ vas en bici."; form placeholder "Ej.: ir a un supermercado" (no country: it show
 pack), button "Prepárame el episodio", pending "Preparando tu episodio… Puede tardar medio
 minuto."; sections "Mis episodios",
 "De tus rutas", "De la app"; player «Reproducir» / «Pausar» / «Seguir», "Paso anterior", "Paso
-siguiente" (accessible names), "Preparando el audio… 34/120", missing clips "Falta 1 audio. Toca
+siguiente" (accessible names), "Preparando el audio… 34/120" with the hint "Deja la pantalla encendida hasta que termine: si bloqueas
+el móvil o sales de la app, la descarga se pausa.", missing clips "Falta 1 audio. Toca
 «Completar audio» para descargarlo." / "Faltan N audios. Toca «Completar audio» para
 descargarlos.", offline "Sin conexión: falta 1 audio. Se completará cuando vuelvas a tener
 internet." / "Sin conexión: faltan N audios. Se completarán cuando vuelvas a tener internet.",
