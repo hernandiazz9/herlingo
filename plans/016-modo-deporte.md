@@ -204,7 +204,7 @@ Worktree setup: npm ci
 
 ## T199 — Fix: an episode prepared while the phone locks ends with dozens of missing clips
 - Status: pending
-- Depends on: T197
+- Depends on: T196
 - Where: any
 - Goal: Preparing an episode survives the screen locking or the app going to the background, and missing clips get completed without leaving the episode, so a native line's "Significa:" is never followed by silence.
 - Context: Hernán 2026-10-14 (T197): a new AI episode said "Faltan 74 audios: necesitas conexión…" while online, and a "Significa:" had no meaning after it. Vercel request logs: the episode arrived 05:59:05, the phone then made 22 `/api/coach/tts/` requests in 7 s (all 200, ~3 at a time) and none after 05:59:12. Reading: the page went to the background (screen locked during "Preparando el audio…"); iOS fails its fetches instantly while JS still runs, so `prepareEpisode` (`src/lib/sport/prepare.ts`, one retry per clip) burned through the remaining clips as missing; `useEpisodeAudio` (`src/components/sport/use-episode-audio.ts`) prepares only once per mount, so nothing retries until the episode is reopened; the notice in `src/components/sport/EpisodeView.tsx` blames the connection.
