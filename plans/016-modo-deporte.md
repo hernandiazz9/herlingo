@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:07Z 💻
+- Updated: 2026-10-14 06:18Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
-- Next step: T199 (episode preparation survives a locked screen + «Completar audio»), then redeploy for Hernán
+- Next step: redeploy (Hernán) for T199 + the rest of T197
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: workaround meanwhile: reopen the episode with the screen on · rest of T197 · visual queue (5)
+- Needs Hernán: OK to fast-forward main to T199 + deploy · rest of T197 · visual queue (6)
 
 ## Shared contract (all tasks read this)
 
@@ -203,7 +203,7 @@ Worktree setup: npm ci
 - Outcome: done by the writer (3-line change, no agent, to save tokens) · e4c0de27 · verify ✓ 💻 · not checked: visual
 
 ## T199 — Fix: an episode prepared while the phone locks ends with dozens of missing clips
-- Status: running (attempt 1 · 💻 · agent a41df0d4e5b604d4a · since 06:07Z)
+- Status: done
 - Depends on: T196
 - Where: any
 - Goal: Preparing an episode survives the screen locking or the app going to the background, and missing clips get completed without leaving the episode, so a native line's "Significa:" is never followed by silence.
@@ -216,7 +216,7 @@ Worktree setup: npm ci
   - A throwaway `npx tsx` check simulates: clips failing while "hidden" are retried after "visible" and the result has `missing: 0`; a clip that truly fails stays missing once.
   - docs/sport.md "Offline" and "UI copy" updated.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: prepare pauses while hidden (hidden failures retried after visible), keepScreenAwake() wake lock while preparing, auto-complete on visible/online when not playing + «Completar audio» (reloads at the current step), honest notice copy; same path for «Escuchar seguidos» · 3d8dc568 · verify ✓ 💻 · tsx check ✓ · not checked: locked iPhone, wake lock on device, visuals
 
 ## Review queue
 
@@ -226,6 +226,7 @@ Worktree setup: npm ci
 - [ ] T194 @6d6160ad — /deporte/: form (pending, limit, offline), Mis episodios + delete dialog, new AI episode opening in the player with its notice; light + dark (queued 2026-10-13 💻)
 - [ ] T195 @9418fa65 — route «🏃 Modo deporte» button; /deporte/ De tus rutas; «Escuchar seguidos» joined view; '+10 XP' notice; light + dark (queued 2026-10-13 💻)
 - [ ] T196 @130a01ca — «Escuchar todo» on a route, a story and a grammar page: keeps playing locked, highlight follows, Pausar/Seguir, lock-screen title (queued 2026-10-13 💻)
+- [ ] T199 @3d8dc568 — episode prepared with the screen locked midway completes on unlock; «Completar audio» button + notice (online/offline); screen stays on while preparing (queued 2026-10-14 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -266,6 +267,8 @@ Worktree setup: npm ci
 - 2026-10-13 T195: XpToast does not list source 'sport' (no floating +XP; the player shows its own notice)
 - 2026-10-13 T196: episodePlayer hard-codes artist 'Modo deporte' (useSequencePlayer overwrites it after play()); add an optional artist to EpisodePlayerMeta
 - 2026-10-13 T196: docs/sport.md 'Player' does not say «Escuchar todo» now uses the episode player
+- 2026-10-14 T199: loading a completed file restarts that file's XP count (time heard before the swap is not counted)
+- 2026-10-14 T199: cacheEpisodeAudio (src/lib/coach/episodes.ts) still fails silently while locked (harmless: the player downloads)
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -297,3 +300,4 @@ Worktree setup: npm ci
 - 2026-10-13 22:30Z 💻 main fast-forwarded to 82ad12f5 with Hernán's OK
 - 2026-10-14 06:07Z 💻 T197 finding (Hernán): 'Faltan 74 audios' while online + 'Significa:' with no meaning → logs show downloads stopped 7 s after the episode arrived (page backgrounded) → fix task T199
 - 2026-10-14 06:07Z 💻 T199 launched · attempt 1 · agent a41df0d4e5b604d4a
+- 2026-10-14 06:18Z 💻 T199 done · worktree-agent-a41df0d4e5b604d4a → 3d8dc568 · verify ✓
