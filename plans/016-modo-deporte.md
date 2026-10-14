@@ -11,7 +11,7 @@ Worktree setup: npm ci
 - Updated: 2026-10-14 07:01Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
-- Next step: T201 (running) → T203 (clips under busy Cache Storage) → T202; then a deploy
+- Next step: T202 running; T201+T203 ready to deploy now (Hernán)
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
 - Needs Hernán: rest of T197 + T199/T200 on the iPhone · visual queue (7) · which proposals to build next
 
@@ -247,7 +247,7 @@ Worktree setup: npm ci
 - Outcome: lines > 300 chars: the coach TTS source requests splitSpokenText pieces and joins them (concatMp3) into the line's one mp3 (same key; ≤ 300 unchanged); XP HeardLog per episode survives a reload; XpToast 🏃 for 'sport' (player notice kept) · 68c132f9 · verify ✓ 💻 · tsx + fake server ✓ · not checked: real long lines on the iPhone, visuals
 
 ## T202 — Cleanup: shared job runner, cache helper, lock-screen artist, 502 on a bad AI answer
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ac8d16ac2a33a6244 · since 07:01Z)
 - Depends on: T203
 - Where: any
 - Goal: Remove the duplications and small inaccuracies found during plan 016, with no visible change except the lock-screen artist of «Escuchar todo».
@@ -376,3 +376,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:48Z 💻 T201 done · worktree-agent-ac99e01d221853fce → 68c132f9 · verify ✓
 - 2026-10-14 06:48Z 💻 T203 launched · attempt 1 · agent a517f50333da2d9f5
 - 2026-10-14 07:01Z 💻 T203 done · worktree-agent-a517f50333da2d9f5 → f73924d1 · verify ✓
+- 2026-10-14 07:01Z 💻 T202 launched · attempt 1 · agent ac8d16ac2a33a6244 (+ downloaded.ts: memory clips, bounded keys())
