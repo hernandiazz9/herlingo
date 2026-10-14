@@ -232,7 +232,7 @@ Worktree setup: npm ci
 - Outcome: done by the writer (small change, no agent) · 05f1cf42 · verify ✓ 💻 · not checked: visual
 
 ## T201 — Fix: long meanings are silent, XP restarts on completion, no floating +XP in Modo deporte
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ac99e01d221853fce · since 06:36Z)
 - Depends on: T200
 - Where: any
 - Goal: Every spoken line plays whatever its length, the XP of an episode counts everything actually heard, and a Modo deporte award shows the same floating +XP as the rest of the app.
@@ -351,3 +351,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:22Z 💻 T200 done by the writer (lock hint + home update pill) → 05f1cf42 · verify ✓
 - 2026-10-14 06:28Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ e7259f78: T199 + T200) → https://langlern-iota.vercel.app; main not fast-forwarded yet
 - 2026-10-14 06:34Z 💻 main fast-forwarded to 62cbd125 with Hernán's OK
+- 2026-10-14 06:36Z 💻 T201 launched · attempt 1 · agent ac99e01d221853fce
