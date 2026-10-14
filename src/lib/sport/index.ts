@@ -2,8 +2,8 @@
  * Modo deporte (docs/sport.md): audio-only episodes. The model (`./types`), the compiler
  * (`compileEpisode`, `episodePlayables`), the free episodes built on the device
  * (`episodeFromDialogue`, `episodeFromRoute`), the joined mp3 (`prepareEpisode`, `joinEpisodes`,
- * `episodeMp3File`, `downloadedEpisodes` for «Escuchar seguidos»), its player (`episodePlayer`)
- * and the XP of a finished episode (`trackEpisodeXp`).
+ * `episodeMp3File`, `downloadedEpisodes` for «Escuchar seguidos»; `keepScreenAwake` while it
+ * prepares), its player (`episodePlayer`) and the XP of a finished episode (`trackEpisodeXp`).
  */
 export { compileEpisode, DIALOGUE_LINES_FROM_CONTENT, episodePlayables } from "./compile";
 export {
@@ -26,6 +26,7 @@ export {
 export { EPISODE_GAPS, NARRATION, narrationCopy, type NarrationCopy } from "./narration";
 export { dialogueEpisodeId, episodeFromDialogue, episodeFromRoute, MAX_VARIANTS, routeEpisodeId } from "./sources";
 export { downloadedEpisodes, episodeClipCount } from "./downloaded";
+export { keepScreenAwake, pageHidden } from "./page";
 export {
   awardFinishedEpisode,
   createListenTracker,

@@ -7,6 +7,10 @@
  * Content lines come from their mp3 (`fetch`: the service worker's audio cache answers offline);
  * generated lines (narrator, slow, Prepárate lines) from `generatedBytes` (Cache Storage, else
  * `/api/coach/tts/` once). Never the device voice.
+ *
+ * While the page is hidden (screen locked, app in the background) no clip starts, and a clip that
+ * failed while it was hidden is fetched again once it is visible (iOS fails fetches at once in the
+ * background): only failures while visible count towards `missing`.
  */
 import { generatedBytes, isGenerated, mp3UrlWhenReady } from "@/lib/audio";
 import { DEFAULT_GLOSS_LANG, type GlossLang, type Playable } from "@/lib/content";
@@ -23,6 +27,7 @@ import {
   type Mp3Clip,
 } from "./mp3-frames";
 import { EPISODE_GAPS } from "./narration";
+import { countHides, pageHidden, whenPageVisible } from "./page";
 import type { EpisodeChapter, SportEpisode } from "./types";
 
 /** A chapter of a prepared file: where it starts (s) and which episode it belongs to. */
@@ -73,6 +78,8 @@ export class EpisodeAudioError extends Error {
 
 /** Clips downloaded at the same time. */
 const CONCURRENCY = 3;
+/** Failed attempts after which a clip is left out (one retry); attempts the hidden page spoiled do not count. */
+const ATTEMPTS = 2;
 
 /** Frame sizes of each prepared blob (its body = the blob minus the Xing frame), for `joinEpisodes`. */
 const layouts = new WeakMap<Blob, Uint16Array>();
@@ -107,11 +114,34 @@ async function clipBytes(p: Playable, lang: string, signal: AbortSignal): Promis
   }
 }
 
+/**
+ * A clip's bytes, or null after `ATTEMPTS` failed attempts (or when `signal` aborts). Each attempt
+ * starts only while the page is visible; one that fails while the page is hidden, or that it went
+ * hidden during, does not count and is made again once the page is visible.
+ */
+async function fetchClip(
+  p: Playable,
+  lang: string,
+  signal: AbortSignal,
+  hides: () => number,
+): Promise<Uint8Array<ArrayBuffer> | null> {
+  for (let failed = 0; failed < ATTEMPTS; ) {
+    await whenPageVisible(signal);
+    if (signal.aborted) return null;
+    const before = hides();
+    const bytes = await clipBytes(p, lang, signal);
+    if (bytes || signal.aborted) return bytes;
+    if (!pageHidden() && hides() === before) failed++;
+  }
+  return null;
+}
+
 const aborted = () => new DOMException("The episode was not prepared.", "AbortError");
 
 /**
- * Downloads every clip of `episode` (3 at a time, one retry each) and joins them into one mp3. A
- * clip that cannot be fetched is left out (its gaps merge) and counted in `missing`. Rejects with
+ * Downloads every clip of `episode` (3 at a time, one retry each, paused while the page is hidden)
+ * and joins them into one mp3. A clip that cannot be fetched while the page is visible is left
+ * out (its gaps merge) and counted in `missing`. Rejects with
  * `EpisodeAudioError` "format" when a clip is not in the episode format, with an `AbortError`
  * when `signal` aborts.
  */
@@ -128,6 +158,7 @@ export async function prepareEpisode(episode: SportEpisode, options: PrepareOpti
   const ctrl = new AbortController();
   const stopAll = () => ctrl.abort();
   signal?.addEventListener("abort", stopAll, { once: true });
+  const hides = countHides();
   let failure: EpisodeAudioError | undefined;
   let done = 0;
   let next = 0;
@@ -135,9 +166,7 @@ export async function prepareEpisode(episode: SportEpisode, options: PrepareOpti
   const worker = async () => {
     while (next < todo.length && !ctrl.signal.aborted) {
       const p = todo[next++];
-      const bytes =
-        (await clipBytes(p, episode.lang, ctrl.signal)) ??
-        (ctrl.signal.aborted ? null : await clipBytes(p, episode.lang, ctrl.signal));
+      const bytes = await fetchClip(p, episode.lang, ctrl.signal, hides.count);
       if (ctrl.signal.aborted) return;
       try {
         const clip = bytes && parseMp3(bytes);
@@ -156,6 +185,7 @@ export async function prepareEpisode(episode: SportEpisode, options: PrepareOpti
     await Promise.all(Array.from({ length: CONCURRENCY }, worker));
   } finally {
     signal?.removeEventListener("abort", stopAll);
+    hides.stop();
   }
   if (failure) throw failure;
   if (signal?.aborted) throw aborted();

@@ -25,7 +25,7 @@ chained clip by clip, and stops when the iPhone locks (Hernán, 2026-10-13).
 | Gaps | 400 ms between repetitions of the same line; 1 s between blocks (narrator ↔ target, step ↔ step); 1.5 s before a part title and before the final scene. Constants in one place. |
 | Playback | The device joins every clip of the episode **byte by byte** into one mp3 (all lines are edge-tts `audio-24khz-48kbitrate-mono-mp3`) plus pre-encoded silent frames for the gaps, and plays it on the shared, gesture-unlocked `<audio>` element. One chapter per step. Spike 2026-10-13 on the Mac: 2 min joined from real edge-tts clips (narrator, two Italian voices, slow at −30 %) decode with no errors, ~6 KB/s (10 min ≈ 3.6 MB). |
 | Lock screen | Media Session: title = episode title, artist "Modo deporte", the app icon; play/pause; **next track = next step, previous track = start of this step** (again within 3 s of its start: the previous step); seek (`seekto`); `setPositionState`. No seek ±15 s (2026-10-13): with those handlers iOS shows ±15 s buttons instead of previous/next track, the steps. |
-| Offline | Opening or saving an episode downloads its clips (progress "Preparando el audio… 34/120"); the joined file is rebuilt from cached clips each time (not stored). A clip that cannot be fetched after one retry is left out and counted ("Faltan 3 audios: necesitas conexión para completarlo."). |
+| Offline | Opening or saving an episode downloads its clips (progress "Preparando el audio… 34/120"); the joined file is rebuilt from cached clips each time (not stored). While the page is hidden (screen locked, app in the background: iOS fails every fetch at once there although scripts still run) preparation pauses: no clip starts, and a clip that failed while hidden is fetched again once the page is visible, without counting as a failure (T199, 2026-10-14: an episode prepared while the phone locked ended with 74 missing clips). A Screen Wake Lock (`keepScreenAwake`, feature-detected, errors ignored, asked again when the page comes back) keeps the screen on while an episode prepares or completes. A clip that cannot be fetched while visible after one retry is left out and counted; the player then retries the missing clips by itself when the page becomes visible or the browser goes back online (only while not playing) and offers «Completar audio» ("Faltan 3 audios. Toca «Completar audio» para descargarlos."; offline "Sin conexión: faltan 3 audios. Se completarán cuando vuelvas a tener internet."). A completed file loads at the start of the step that was current (from the start after the end); one completed while playing waits for the next pause. |
 | Access | Screen `/deporte/` (nested section `sport`, title "Modo deporte", parent tab `play`), reached from a card on Jugar and from a «🏃 Modo deporte» button on every saved route. Needs the Prepárate access code (narrator and slow lines come from `/api/coach/tts/`) and `coachAvailable(lang)`; without a code, Prepárate's `AccessCard`. The ⚡ is hidden on `/deporte/`. |
 | Save mp3 | «Guardar mp3»: the joined file as `<title>.mp3` through the share sheet (`navigator.share` with a `File`) where available, else a download link. |
 | XP | A finished episode (≥ 90 % played) gives 10 XP, source `"sport"`, once per episode per day, at most 3 episodes a day; counts for the streak like any activity (`recordActivity`). "Played" = time that really sounded (seeks, step jumps and replays add nothing); in a joined file each episode counts on its own. |
@@ -98,6 +98,10 @@ asks for much shorter ones.
   are mixed; a decoder that ignores it plays it as one silent frame.
 - Silent frames: pre-encoded for the edge-tts format (24 kHz mono, 48 kbps), repeated to the gap
   length.
+- Hidden page (`src/lib/sport/page.ts`): `prepareEpisode` waits for the page to be visible before
+  each clip and does not count an attempt that failed while the page was hidden or went hidden
+  during it (it is made again once visible); «Escuchar seguidos» shares the path.
+  `keepScreenAwake()` holds the Screen Wake Lock until released.
 - Plays the object URL on the shared `<audio>` element (`playbackRate` 1), from the tap's gesture.
   Starting from a tap that first has to prepare: show the progress, then a «Reproducir» tap.
 - `joinEpisodes(list)` for «Escuchar seguidos» (chapters keep each episode's steps).
@@ -204,8 +208,10 @@ target-language sentences out of the Spanish fields.
 - Modo rápido's `RouteView` has «🏃 Modo deporte» under «Escuchar todo» → `/deporte/?ep=route:<id>`.
 - Player (`EpisodeView`): prepares on open (`useEpisodeAudio`: "Preparando el audio… n/N", then
   `episodePlayer.load`), «Reproducir» / «Pausar» / «Seguir» between "Paso anterior" / "Paso
-  siguiente", progress bar with elapsed / total, "Falta 1 audio" / "Faltan n audios: necesitas
-  conexión para completarlo.", «Guardar mp3», then "Los pasos" (opening, every step, the final
+  siguiente", progress bar with elapsed / total, missing clips (online "Faltan n audios. Toca
+  «Completar audio» para descargarlos." + «Completar audio», pending "Completando el audio…";
+  offline "Sin conexión: faltan n audios. Se completarán cuando vuelvas a tener internet."; also
+  for «Escuchar seguidos»), «Guardar mp3», then "Los pasos" (opening, every step, the final
   scene) with the one playing highlighted (`aria-current="step"`, scrolled into view, smooth only
   without reduced motion). Leaving the episode cancels the download and unloads the player.
 - Jugar card (`SportEntryCard`) sits right under Prepárate's `EntryCard` at the top of the topic list
@@ -219,6 +225,10 @@ vas en bici."; form placeholder "Ej.: ir a un supermercado" (no country: it show
 pack), button "Prepárame el episodio", pending "Preparando tu episodio… Puede tardar medio
 minuto."; sections "Mis episodios",
 "De tus rutas", "De la app"; player «Reproducir» / «Pausar» / «Seguir», "Paso anterior", "Paso
-siguiente" (accessible names), "Preparando el audio… 34/120", «Guardar mp3», «Escuchar seguidos»;
+siguiente" (accessible names), "Preparando el audio… 34/120", missing clips "Falta 1 audio. Toca
+«Completar audio» para descargarlo." / "Faltan N audios. Toca «Completar audio» para
+descargarlos.", offline "Sin conexión: falta 1 audio. Se completará cuando vuelvas a tener
+internet." / "Sin conexión: faltan N audios. Se completarán cuando vuelvas a tener internet.",
+«Completar audio» (pending "Completando el audio…"), «Guardar mp3», «Escuchar seguidos»;
 delete "¿Borrar este episodio?"; route button «🏃 Modo deporte»; offline "Sin conexión. Tus
 episodios descargados funcionan igual; para preparar uno nuevo necesitas internet.".

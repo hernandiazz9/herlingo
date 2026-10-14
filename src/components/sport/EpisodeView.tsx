@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, useEffect, useMemo, useRef, type ReactNode } from "react";
-import { FOCUS, Notice, Spinner } from "@/components/coach/shared";
+import { FOCUS, Notice, Spinner, useOnline } from "@/components/coach/shared";
 import { PauseIcon, PlayIcon } from "@/components/quick/icons";
 import { PageHeader } from "@/components/shell/PageHeader";
 import { Button, IconButton, ProgressBar, TargetText } from "@/components/ui";
@@ -9,7 +9,7 @@ import { cn } from "@/lib/cn";
 import { compileEpisode, episodeMp3File, episodePlayer, type EpisodeChapter, type SportEpisode } from "@/lib/sport";
 import { clock } from "./episodes";
 import { NextStepIcon, PreviousStepIcon, SaveIcon } from "./icons";
-import { useEpisodeAudio, useEpisodePlayer, useEpisodeXp, type EpisodeAudio } from "./use-episode-audio";
+import { useEpisodeAudio, useEpisodePlayer, useEpisodeXp, type Completion, type EpisodeAudio } from "./use-episode-audio";
 
 export interface EpisodeViewProps {
   episode: SportEpisode;
@@ -173,7 +173,7 @@ export function StepsList({ groups }: { groups: readonly StepsGroup[] }) {
   );
 }
 
-/** "Preparando el audio… n/N", then what could not be prepared. */
+/** "Preparando el audio… n/N", then what could not be prepared (and «Completar audio»). */
 function AudioStatus({ audio }: { audio: EpisodeAudio }) {
   if (audio.status === "error") return <Notice>{audio.message}</Notice>;
   if (audio.status === "preparing") {
@@ -190,18 +190,48 @@ function AudioStatus({ audio }: { audio: EpisodeAudio }) {
       </div>
     );
   }
-  const { missing, durationSec } = audio.prepared;
-  if (durationSec <= 0) {
-    return <Notice tone="info">No he podido descargar el audio: necesitas conexión para prepararlo.</Notice>;
-  }
-  if (missing > 0) {
+  const { missing } = audio.prepared;
+  return missing > 0 ? <Missing missing={missing} completion={audio.completion} /> : null;
+}
+
+/**
+ * Clips left out of the file: online, «Completar audio» (it also runs by itself when you come back
+ * to the app); offline, they complete when the connection returns.
+ */
+function Missing({ missing, completion }: { missing: number; completion?: Completion }) {
+  const online = useOnline();
+  const one = missing === 1;
+  if (!online) {
     return (
       <Notice tone="info">
-        {missing === 1 ? "Falta 1 audio" : `Faltan ${missing} audios`}: necesitas conexión para completarlo.
+        {one
+          ? "Sin conexión: falta 1 audio. Se completará cuando vuelvas a tener internet."
+          : `Sin conexión: faltan ${missing} audios. Se completarán cuando vuelvas a tener internet.`}
       </Notice>
     );
   }
-  return null;
+  const completing = completion?.completing === true;
+  return (
+    <div className="flex flex-col gap-2">
+      <Notice tone="info">
+        {one
+          ? "Falta 1 audio. Toca «Completar audio» para descargarlo."
+          : `Faltan ${missing} audios. Toca «Completar audio» para descargarlos.`}
+      </Notice>
+      {completion ? (
+        <Button variant="secondary" size="md" fullWidth disabled={completing} aria-busy={completing} onClick={completion.complete}>
+          {completing ? (
+            <>
+              <Spinner className="size-5" />
+              Completando el audio…
+            </>
+          ) : (
+            "Completar audio"
+          )}
+        </Button>
+      ) : null}
+    </div>
+  );
 }
 
 /** «Paso anterior» · «Reproducir» / «Pausar» / «Seguir» · «Paso siguiente». */
