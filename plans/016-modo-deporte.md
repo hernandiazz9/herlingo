@@ -8,7 +8,7 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:39Z 💻
+- Updated: 2026-10-14 06:48Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
 - Next step: T201 (running) → T203 (clips under busy Cache Storage) → T202; then a deploy
@@ -232,7 +232,7 @@ Worktree setup: npm ci
 - Outcome: done by the writer (small change, no agent) · 05f1cf42 · verify ✓ 💻 · not checked: visual
 
 ## T201 — Fix: long meanings are silent, XP restarts on completion, no floating +XP in Modo deporte
-- Status: running (attempt 1 · 💻 · agent ac99e01d221853fce · since 06:36Z)
+- Status: done
 - Depends on: T200
 - Where: any
 - Goal: Every spoken line plays whatever its length, the XP of an episode counts everything actually heard, and a Modo deporte award shows the same floating +XP as the rest of the app.
@@ -244,7 +244,7 @@ Worktree setup: npm ci
   - The floating +XP shows for source `"sport"` with 🏃, like the other sources; the player's own notice stays or goes, say which.
   - A throwaway `npx tsx` check: a 650-character meaning → 3 chunks ≤ 300, joined text equals the original modulo spaces; a 280-character one → 1 chunk, same key as before; XP across a reload counts both halves.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: lines > 300 chars: the coach TTS source requests splitSpokenText pieces and joins them (concatMp3) into the line's one mp3 (same key; ≤ 300 unchanged); XP HeardLog per episode survives a reload; XpToast 🏃 for 'sport' (player notice kept) · 68c132f9 · verify ✓ 💻 · tsx + fake server ✓ · not checked: real long lines on the iPhone, visuals
 
 ## T202 — Cleanup: shared job runner, cache helper, lock-screen artist, 502 on a bad AI answer
 - Status: pending
@@ -287,6 +287,7 @@ Worktree setup: npm ci
 - [ ] T196 @130a01ca — «Escuchar todo» on a route, a story and a grammar page: keeps playing locked, highlight follows, Pausar/Seguir, lock-screen title (queued 2026-10-13 💻)
 - [ ] T199 @3d8dc568 — episode prepared with the screen locked midway completes on unlock; «Completar audio» button + notice (online/offline); screen stays on while preparing (queued 2026-10-14 💻)
 - [ ] T200 @05f1cf42 — episode preparing hint; home «Descargando actualización… N %» pill during an update (light + dark) (queued 2026-10-14 💻)
+- [ ] T201 @68c132f9 — a long route meaning plays whole (Escuchar todo + episode); 🏃 +XP pill (light + dark) (queued 2026-10-14 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -331,6 +332,7 @@ Worktree setup: npm ci
 - 2026-10-13 T196: docs/sport.md 'Player' does not say «Escuchar todo» now uses the episode player
 - 2026-10-14 T199: loading a completed file restarts that file's XP count (time heard before the swap is not counted)
 - 2026-10-14 T199: cacheEpisodeAudio (src/lib/coach/episodes.ts) still fails silently while locked (harmless: the player downloads)
+- 2026-10-14 T201: docs/league.md (~L414) still names only Listening and Discover as XP toast sources
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -368,3 +370,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:34Z 💻 main fast-forwarded to 62cbd125 with Hernán's OK
 - 2026-10-14 06:36Z 💻 T201 launched · attempt 1 · agent ac99e01d221853fce
 - 2026-10-14 06:39Z 💻 T197 finding (Hernán): 'Faltan 53', «Completar» does not complete → logs: 4731 precache requests at 06:34, then 21 tts 200s and none → fix task T203 (before T202)
+- 2026-10-14 06:48Z 💻 T201 done · worktree-agent-ac99e01d221853fce → 68c132f9 · verify ✓
