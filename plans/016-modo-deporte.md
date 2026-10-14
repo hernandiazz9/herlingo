@@ -263,7 +263,7 @@ Worktree setup: npm ci
 - Outcome:
 
 ## T203 — Fix: clips go missing while Cache Storage is busy (right after an app update)
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a517f50333da2d9f5 · since 06:48Z)
 - Depends on: T201
 - Where: any
 - Goal: An episode's clips download whenever the network works, even while Cache Storage is slow (an app update precaching ~4.7k files and the audio sync), and the notice says why clips are missing.
@@ -371,3 +371,4 @@ Worktree setup: npm ci
 - 2026-10-14 06:36Z 💻 T201 launched · attempt 1 · agent ac99e01d221853fce
 - 2026-10-14 06:39Z 💻 T197 finding (Hernán): 'Faltan 53', «Completar» does not complete → logs: 4731 precache requests at 06:34, then 21 tts 200s and none → fix task T203 (before T202)
 - 2026-10-14 06:48Z 💻 T201 done · worktree-agent-ac99e01d221853fce → 68c132f9 · verify ✓
+- 2026-10-14 06:48Z 💻 T203 launched · attempt 1 · agent a517f50333da2d9f5
