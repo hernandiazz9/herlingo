@@ -30,8 +30,10 @@ export { downloadedEpisodes, episodeClipCount } from "./downloaded";
 export { keepScreenAwake, pageHidden } from "./page";
 export {
   awardFinishedEpisode,
+  createHeardLog,
   createListenTracker,
   FINISHED_SHARE,
+  type HeardLog,
   SPORT_XP,
   SPORT_XP_DAILY_EPISODES,
   trackEpisodeXp,

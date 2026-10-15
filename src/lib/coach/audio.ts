@@ -11,7 +11,9 @@ import {
   type GeneratedFailure,
   type PrefetchResult,
 } from "@/lib/audio";
+import { splitSpokenText } from "@/lib/audio/split";
 import { getPack, type Playable } from "@/lib/content";
+import { concatMp3 } from "@/lib/sport/mp3-frames";
 import { CoachApiError, fetchSpeech } from "./api";
 import type { CoachPack, CoachRoute, InterviewQuestion } from "./types";
 
@@ -27,14 +29,49 @@ function failureOf(e: unknown): GeneratedFailure {
 }
 
 /**
+ * A line longer than the endpoint reads (`SPOKEN_TEXT_MAX`, e.g. a long route meaning): each piece
+ * of `splitSpokenText` read at once, their mp3s joined in order with no gap into the line's one
+ * mp3 (same key, cached as one). Any piece failing fails the line (the others are cancelled).
+ */
+async function fetchLongSpeech(
+  pieces: readonly string[],
+  voice: string,
+  signal: AbortSignal | undefined,
+  options: { slow: boolean; timeoutMs?: number },
+): Promise<Blob> {
+  const ctrl = new AbortController();
+  const cancel = () => ctrl.abort();
+  if (signal?.aborted) cancel();
+  signal?.addEventListener("abort", cancel, { once: true });
+  try {
+    const blobs = await Promise.all(
+      pieces.map((piece) =>
+        fetchSpeech(piece, voice, ctrl.signal, options).catch((e: unknown) => {
+          ctrl.abort();
+          throw e;
+        }),
+      ),
+    );
+    const files = await Promise.all(blobs.map(async (blob) => new Uint8Array(await blob.arrayBuffer())));
+    return new Blob([concatMp3(files)], { type: "audio/mpeg" });
+  } finally {
+    signal?.removeEventListener("abort", cancel);
+  }
+}
+
+/**
  * The coach TTS endpoint as the generated-audio source. Over the day's voice allowance (429
  * `tts_limit`) the line is declined for the session: the device voice plays it silently, without
- * asking the server again for that line. A slow line is requested with `slow: true`. Any other
- * failure rejects with a `GeneratedAudioError` that says why.
+ * asking the server again for that line. A slow line is requested with `slow: true`. A line longer
+ * than one request reads comes in pieces joined into one mp3 (`fetchLongSpeech`); a line that fits
+ * is one request, as before. Any other failure rejects with a `GeneratedAudioError` that says why.
  */
 setGeneratedAudioSource(async (text, voice, signal, options) => {
+  const request = { slow: options?.slow === true, timeoutMs: options?.timeoutMs };
   try {
-    return await fetchSpeech(text, voice, signal, { slow: options?.slow === true, timeoutMs: options?.timeoutMs });
+    const pieces = splitSpokenText(text);
+    if (pieces.length > 1) return await fetchLongSpeech(pieces, voice, signal, request);
+    return await fetchSpeech(text, voice, signal, request);
   } catch (e) {
     if (e instanceof CoachApiError && e.code === "tts_limit") return null;
     throw new GeneratedAudioError(failureOf(e));

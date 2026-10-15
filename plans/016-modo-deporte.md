@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-10-14 06:34Z 💻
+- Updated: 2026-10-14 07:19Z 💻
 - Writer: me (💻 desktop session in lang_lern-rapido; plan checkout ../lang_lern-deporte)
 - Branch: plan-016-modo-deporte · pushed · main = this branch
-- Next step: Hernán: T197 rest + T199/T200 on the iPhone (deployed); main fast-forward when he says
+- Next step: Hernán: new episode right after «Actualizar» + rest of T197; main fast-forward when he says
 - Gotchas: integrate in ../lang_lern-deporte; agent worktrees (lang_lern/.claude/worktrees/) reset to the plan HEAD in step 1 and hold the real .env.local → fake server as COACH_FAKE=1 ANTHROPIC_API_KEY= COACH_ACCESS_CODES= UPSTASH_REDIS_REST_URL= UPSTASH_REDIS_REST_TOKEN=; generatedBytes lives in @/lib/audio/generated (not re-exported yet)
-- Needs Hernán: rest of T197 + T199/T200 on the iPhone · visual queue (7) · which proposals to build next
+- Needs Hernán: OK to fast-forward main (T201–T203, deployed) · rest of T197 · visual queue (9)
 
 ## Shared contract (all tasks read this)
 
@@ -231,6 +231,52 @@ Worktree setup: npm ci
   - `npm run verify` → exit 0.
 - Outcome: done by the writer (small change, no agent) · 05f1cf42 · verify ✓ 💻 · not checked: visual
 
+## T201 — Fix: long meanings are silent, XP restarts on completion, no floating +XP in Modo deporte
+- Status: done
+- Depends on: T200
+- Where: any
+- Goal: Every spoken line plays whatever its length, the XP of an episode counts everything actually heard, and a Modo deporte award shows the same floating +XP as the rest of the app.
+- Context: Proposals of plan 016 picked by Hernán 2026-10-14. (1) `/api/coach/tts/` reads ≤ 300 characters (`COACH_LIMITS.ttsText`) but route meanings allow ≤ 400 (and content `es` has no cap): a longer one is never voiced, in «Escuchar todo» (`routeListenSteps`/`routeMeaning`/`routePlayables` in `src/lib/coach/audio.ts`) and in route/dialogue episodes (`narrate` in `src/lib/sport/compile.ts`). (2) T199: loading a completed file restarts that file's XP count (`src/lib/sport/xp.ts`, `src/components/sport/use-episode-audio.ts`). (3) T195: the XP toast does not list source `"sport"` (find it with `grep -rn XpToast src`).
+- Scope: may touch `src/lib/coach/audio.ts`, `src/lib/sport/**`, `src/lib/audio/**` (a shared text-splitting helper only), `src/components/sport/**`, the XP toast component, docs/sport.md, docs/coach.md / must not touch `api/`, stored shapes, prompts.
+- Done when:
+  - One helper splits a spoken text longer than 300 characters into chunks ≤ 300 at sentence, then clause (`;:,`), then word boundaries; the compiler and «Escuchar todo» voice each chunk in order (no gap between chunks of one text); `episodePlayables`/`routePlayables` list every chunk, so prefetch, offline and `pruneCoachAudio` keep them. Texts ≤ 300 keep today's single playable and key (no re-download).
+  - The XP tracker keeps the seconds already heard of an episode when its file is reloaded (completion), keyed by episode id; the 90 % rule, once per episode per day and 3 a day are unchanged.
+  - The floating +XP shows for source `"sport"` with 🏃, like the other sources; the player's own notice stays or goes, say which.
+  - A throwaway `npx tsx` check: a 650-character meaning → 3 chunks ≤ 300, joined text equals the original modulo spaces; a 280-character one → 1 chunk, same key as before; XP across a reload counts both halves.
+  - `npm run verify` → exit 0.
+- Outcome: lines > 300 chars: the coach TTS source requests splitSpokenText pieces and joins them (concatMp3) into the line's one mp3 (same key; ≤ 300 unchanged); XP HeardLog per episode survives a reload; XpToast 🏃 for 'sport' (player notice kept) · 68c132f9 · verify ✓ 💻 · tsx + fake server ✓ · not checked: real long lines on the iPhone, visuals
+
+## T202 — Cleanup: shared job runner, cache helper, lock-screen artist, 502 on a bad AI answer
+- Status: done
+- Depends on: T203
+- Where: any
+- Goal: Remove the duplications and small inaccuracies found during plan 016, with no visible change except the lock-screen artist of «Escuchar todo».
+- Context: Proposals of plan 016 picked by Hernán 2026-10-14. (1) `src/components/sport/generation.ts` copies the job runner of `src/components/coach/generation.ts`. (2) `src/lib/sport/downloaded.ts` copies the private cache path of `src/lib/audio/generated.ts`. (3) `episodePlayer` (`src/lib/sport/player.ts`) hard-codes the artist "Modo deporte" and `useSequencePlayer` (`src/lib/audio/use-sequence-player.ts`) overwrites it after `play()`. (4) `api/coach/episode.ts` and `api/coach/route.ts` answer 500 `internal` when the stored-shape parse fails after billing; it should be the 502 of an invalid AI answer (same message, billed as today). (5) A slow generated line that falls back to the device voice plays at normal rate (`src/lib/audio/index.ts`): use `SLOW_RATE` for it. (6) docs/sport.md "Player" does not say «Escuchar todo» uses the episode player (T196).
+- Scope: may touch the files named in Context, `src/lib/coach/**` (if the shared runner lives there), docs/sport.md, docs/coach.md / must not touch stored shapes, prompts, other screens.
+- Done when:
+  - One job runner serves Prepárate packs, Modo rápido routes (if they use it) and episodes; behaviour unchanged (a request survives leaving the screen, saved on arrival).
+  - `src/lib/audio/generated.ts` exports a cached-check helper; `downloaded.ts` uses it.
+  - `EpisodePlayerMeta` takes an optional `artist` (default "Modo deporte"); «Escuchar todo» passes its own and the overwrite is gone.
+  - A parse failure after billing → 502 with the invalid-answer message, billed as today (fake curl or a throwaway check).
+  - A slow generated line on the device-voice fallback uses `SLOW_RATE`.
+  - `npm run verify` → exit 0.
+- Outcome: shared runJob/useJob (coach generation.ts, sport layer thin); generatedOnDeviceCheck() (cache or memory, keys() bounded) used by downloaded.ts; EpisodePlayerMeta.artist (Escuchar todo passes its own); slow fallback at SLOW_RATE; storedShape() → 502 on a bad stored shape for episode + route (billed as before) · 224df4c1 · verify ✓ 💻 · fake curl 502 ✓ · not checked: lock-screen artist on device
+
+## T203 — Fix: clips go missing while Cache Storage is busy (right after an app update)
+- Status: done
+- Depends on: T201
+- Where: any
+- Goal: An episode's clips download whenever the network works, even while Cache Storage is slow (an app update precaching ~4.7k files and the audio sync), and the notice says why clips are missing.
+- Context: Hernán 2026-10-14: "Faltan 53 audios", «Completar audio» does not complete. Vercel request logs (iPhone): 06:34 = 4731 static requests (new version precaching), 06:35:58–06:36:05 = 21 `/api/coach/tts/` requests, all 200, then none; the 05:59 case (74 missing) also came right after an update. Reading: in `src/lib/audio/generated.ts` `startJob` the 8 s `LOAD_DEADLINE_MS` covers `openCache()` + `cachedBlob()` + the download + `await cache.put(...)`; with Cache Storage busy, jobs time out before fetching (no request) or after fetching (a 200 whose bytes are dropped). `prepareEpisode` (`src/lib/sport/prepare.ts`) then counts them missing.
+- Scope: may touch `src/lib/audio/generated.ts`, `src/lib/sport/**`, `src/components/sport/**` (the missing notice), docs/sport.md, docs/coach.md ("Generated audio") / must not touch `api/`, the SW, stored shapes.
+- Done when:
+  - The cache lookup has its own short bound (≈ 1.5 s: past it, go to the network) and the 8 s deadline covers only the download; `cache.put` never delays returning a downloaded blob (written in the background, failures ignored); bytes downloaded this session stay in memory (bounded) so a retry or «Completar» does not depend on the cache.
+  - `prepareEpisode` reports why clips are missing (counts by reason: network/timeout, declined/limit, offline) and the notice shows a short muted line with it (Spain Spanish), so a screenshot tells what happened.
+  - Taps, prefetch and «Escuchar todo» keep their behaviour (shared jobs, dedupe, declined lines).
+  - A throwaway `npx tsx` check with a stub cache whose `match`/`put` hang: clips still download through the stub source and `missing` is 0; with a failing source they are counted with the network reason.
+  - `npm run verify` → exit 0.
+- Outcome: cache lookup bounded at 1.5 s (CACHE_LOOKUP_MS) then network; 8 s deadline = download only; cache.put in background; session memory of clip bytes (24 MB LRU); generatedClip() with reasons; missingBy {network, declined, offline} + muted 'Causa: …' line · f73924d1 · verify ✓ 💻 · tsx with hanging cache ✓ · not checked: iPhone right after an update, visuals
+
 ## Review queue
 
 ## Visual checks queue
@@ -241,6 +287,8 @@ Worktree setup: npm ci
 - [ ] T196 @130a01ca — «Escuchar todo» on a route, a story and a grammar page: keeps playing locked, highlight follows, Pausar/Seguir, lock-screen title (queued 2026-10-13 💻)
 - [ ] T199 @3d8dc568 — episode prepared with the screen locked midway completes on unlock; «Completar audio» button + notice (online/offline); screen stays on while preparing (queued 2026-10-14 💻)
 - [ ] T200 @05f1cf42 — episode preparing hint; home «Descargando actualización… N %» pill during an update (light + dark) (queued 2026-10-14 💻)
+- [ ] T201 @68c132f9 — a long route meaning plays whole (Escuchar todo + episode); 🏃 +XP pill (light + dark) (queued 2026-10-14 💻)
+- [ ] T203 @f73924d1 — right after an app update: a new episode prepares complete; if anything is missing, the 'Causa: …' line (light + dark) (queued 2026-10-14 💻)
 
 ## Decisions
 - 2026-10-13 plan: Sources = AI episodes from a description + free episodes from the pack's dialogues and saved Modo rápido routes, one player for all. (Hernán)
@@ -261,6 +309,7 @@ Worktree setup: npm ci
 - 2026-10-13 plan: gate relaxed after "continúa con lo que sigue": server tasks T192–T193 run before T191; T194 onwards still waits for T191. (Hernán + plan)
 - 2026-10-13 plan: main fast-forwarded to plan-016 (deployed code, T187–T198) with Hernán's OK ("pasalo a main"). (Hernán)
 - 2026-10-14 plan: main fast-forwarded to plan-016 (T199–T200, deployed) with Hernán's OK ("sisi avanza y agreguemos todo"). (Hernán)
+- 2026-10-14 plan: Hernán picked from the proposals: visible fixes (T201: long meanings, XP across completion, +XP toast) and code cleanup (T202); not now: «De la app» grouped by situation, episodes in the usage panel. (Hernán)
 
 ## Proposals (new scope)
 - 2026-10-13 plan: Episodes from the pack's units (key phrases of a lesson as a short listening review), no AI.
@@ -284,6 +333,10 @@ Worktree setup: npm ci
 - 2026-10-13 T196: docs/sport.md 'Player' does not say «Escuchar todo» now uses the episode player
 - 2026-10-14 T199: loading a completed file restarts that file's XP count (time heard before the swap is not counted)
 - 2026-10-14 T199: cacheEpisodeAudio (src/lib/coach/episodes.ts) still fails silently while locked (harmless: the player downloads)
+- 2026-10-14 T201: docs/league.md (~L414) still names only Listening and Discover as XP toast sources
+- 2026-10-14 T203: downloadedEpisodes («Escuchar seguidos») waits on cache.keys() with no bound and ignores clips kept only in memory
+- 2026-10-14 T203: prepareEpisode's fetch of content clips has no timeout (unused while DIALOGUE_LINES_FROM_CONTENT is false)
+- 2026-10-14 T202: api/coach/pack.ts still answers 500 internal when Pack.parse fails after billing; route it through storedShape()
 
 ## Log
 - 2026-10-13 16:31Z 💻 plan written from the interview (two demo mp3s + a byte-join spike with real edge-tts voices); not approved yet
@@ -319,3 +372,11 @@ Worktree setup: npm ci
 - 2026-10-14 06:22Z 💻 T200 done by the writer (lock hint + home update pill) → 05f1cf42 · verify ✓
 - 2026-10-14 06:28Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ e7259f78: T199 + T200) → https://langlern-iota.vercel.app; main not fast-forwarded yet
 - 2026-10-14 06:34Z 💻 main fast-forwarded to 62cbd125 with Hernán's OK
+- 2026-10-14 06:36Z 💻 T201 launched · attempt 1 · agent ac99e01d221853fce
+- 2026-10-14 06:39Z 💻 T197 finding (Hernán): 'Faltan 53', «Completar» does not complete → logs: 4731 precache requests at 06:34, then 21 tts 200s and none → fix task T203 (before T202)
+- 2026-10-14 06:48Z 💻 T201 done · worktree-agent-ac99e01d221853fce → 68c132f9 · verify ✓
+- 2026-10-14 06:48Z 💻 T203 launched · attempt 1 · agent a517f50333da2d9f5
+- 2026-10-14 07:01Z 💻 T203 done · worktree-agent-a517f50333da2d9f5 → f73924d1 · verify ✓
+- 2026-10-14 07:01Z 💻 T202 launched · attempt 1 · agent ac8d16ac2a33a6244 (+ downloaded.ts: memory clips, bounded keys())
+- 2026-10-14 07:10Z 💻 T202 done · worktree-agent-ac8d16ac2a33a6244 → 224df4c1 · verify ✓
+- 2026-10-14 07:19Z 💻 deployed by Hernán from ../lang_lern-deporte (plan-016 @ 64eb601e: T201–T203) → https://langlern-iota.vercel.app; main not fast-forwarded yet

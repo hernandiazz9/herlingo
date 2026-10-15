@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 import {
+  createHeardLog,
   downloadedEpisodes,
   EpisodeAudioError,
   episodeClipCount,
@@ -294,13 +295,15 @@ export function useJoinedAudio(episodes: readonly SportEpisode[], title: string)
 
 /**
  * The XP of the episodes in `prepared` (the file loaded in the episode player) that get played to
- * the end (docs/sport.md "XP"): returns the XP earned since it was loaded.
+ * the end (docs/sport.md "XP"): returns the XP earned on this screen. A file prepared again
+ * (missing clips completed) keeps what was already heard of each episode (`HeardLog`).
  */
 export function useEpisodeXp(lang: string, prepared: PreparedEpisode | undefined): number {
   const [earned, setEarned] = useState(0);
+  const [heard] = useState(createHeardLog);
   useEffect(() => {
     if (!prepared) return;
-    return trackEpisodeXp(lang, prepared, (xp) => setEarned((n) => n + xp));
-  }, [lang, prepared]);
+    return trackEpisodeXp(lang, prepared, (xp) => setEarned((n) => n + xp), heard);
+  }, [lang, prepared, heard]);
   return earned;
 }

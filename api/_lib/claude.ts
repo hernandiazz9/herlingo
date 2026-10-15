@@ -47,6 +47,21 @@ const MESSAGES: Record<Reason, string> = {
 const failed = (reason: Reason) => new CoachError(502, "generation_failed", MESSAGES[reason]);
 
 /**
+ * `value` as `schema` (the stored shape an endpoint builds from a parsed answer). An answer that
+ * does not fit is, like one that fails `generateStructured`'s check, the 502 of an invalid answer
+ * (logged with `what`; already billed), never a 500.
+ */
+export function storedShape<T extends z.ZodType>(schema: T, value: unknown, what: string): z.infer<T> {
+  const parsed = schema.safeParse(value);
+  if (!parsed.success) {
+    const issue = parsed.error.issues[0];
+    console.error(`[coach] ${what} does not match the stored shape`, issue?.path.join("."), issue?.message);
+    throw failed("invalid");
+  }
+  return parsed.data;
+}
+
+/**
  * Tokens per model attempt. Top-level `usage` covers only the attempt that produced the message,
  * so a response served by a fallback model is billed from `usage.iterations`.
  */

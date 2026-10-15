@@ -3,8 +3,12 @@
 import { useEffect, useRef, useState } from "react";
 import { subscribeXpAwards, type XpSource } from "@/lib/progress";
 
-/** Sources without a summary screen of their own: their XP shows as a small floating "+N XP". */
-const TOASTED: Partial<Record<XpSource, string>> = { listen: "🎧", discover: "💡", grammar: "📖" };
+/**
+ * Sources without a summary screen of their own: their XP shows as a small floating "+N XP".
+ * Modo deporte's player also keeps its "¡Genial! +N XP." notice (the phone is often locked when an
+ * episode ends: the notice is still there when you look).
+ */
+const TOASTED: Partial<Record<XpSource, string>> = { listen: "🎧", discover: "💡", grammar: "📖", sport: "🏃" };
 const SHOW_MS = 1600;
 
 interface Toast {

@@ -166,7 +166,7 @@ export function useSequencePlayer(steps: readonly (readonly SequenceLine[])[], o
     run.current++;
     mode.current = "idle"; // its own load and seek are not playback
     if (loaded.current !== joined) {
-      episodePlayer.load(joined.blob, chapters(joined), { title, durationSec: joined.durationSec });
+      episodePlayer.load(joined.blob, chapters(joined), { title, artist, durationSec: joined.durationSec });
       loaded.current = joined;
     }
     episodePlayer.seek(joined.starts[plan.firstLine[step]] ?? 0);
@@ -174,15 +174,6 @@ export function useSequencePlayer(steps: readonly (readonly SequenceLine[])[], o
     mode.current = "file";
     void episodePlayer.play();
     turn.current = audioTurn();
-    // The episode player names itself "Modo deporte" on the lock screen: this is the section's.
-    const session = mediaSession();
-    if (session && typeof MediaMetadata !== "undefined") {
-      try {
-        session.metadata = new MediaMetadata({ title, artist, artwork: ARTWORK });
-      } catch {
-        // No metadata: the controls still work.
-      }
-    }
     show("playing", step, false);
   };
 

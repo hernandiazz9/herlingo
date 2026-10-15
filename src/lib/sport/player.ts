@@ -1,7 +1,8 @@
 /**
  * The Modo deporte player (docs/sport.md "Player", "Lock screen"): one prepared episode (or several
  * joined) on the shared, gesture-unlocked audio element, its chapters as steps, and the Media
- * Session controls (lock screen, headphones). Client-only; one player for the app.
+ * Session controls (lock screen, headphones). Client-only; one player for the app: «Escuchar todo»
+ * (`useSequencePlayer`) plays its joined file on it too, under its own title and artist.
  *
  *   const prepared = await prepareEpisode(episode, { onProgress });
  *   episodePlayer.load(prepared.blob, prepared.chapters, { title, durationSec: prepared.durationSec });
@@ -24,8 +25,10 @@ export interface EpisodePlayerState {
 }
 
 export interface EpisodePlayerMeta {
-  /** Lock screen title: the episode's. */
+  /** Lock screen title: the episode's (or the route, story, verb or topic of «Escuchar todo»). */
   title: string;
+  /** Lock screen artist: `DEFAULT_ARTIST` unless given («Escuchar todo» names its section). */
+  artist?: string;
   /** Exact duration (`PreparedEpisode.durationSec`). */
   durationSec: number;
 }
@@ -33,7 +36,7 @@ export interface EpisodePlayerMeta {
 /** «Paso anterior» within this many seconds of a step's start goes to the previous step. */
 export const RESTART_WINDOW_SEC = 3;
 
-const ARTIST = "Modo deporte";
+const DEFAULT_ARTIST = "Modo deporte";
 const ARTWORK: MediaImage[] = [{ src: "/icons/icon-512.png", sizes: "512x512", type: "image/png" }];
 const ACTIONS: MediaSessionAction[] = [
   "play",
@@ -121,7 +124,11 @@ function showSession(): void {
     sessionOn = true;
     try {
       if (typeof MediaMetadata !== "undefined") {
-        session.metadata = new MediaMetadata({ title: meta.title, artist: ARTIST, artwork: ARTWORK });
+        session.metadata = new MediaMetadata({
+          title: meta.title,
+          artist: meta.artist ?? DEFAULT_ARTIST,
+          artwork: ARTWORK,
+        });
       }
     } catch {
       // No metadata: the controls still work.

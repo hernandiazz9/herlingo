@@ -1,9 +1,11 @@
 /**
  * POST /api/coach/route/: a quick route (Modo rápido, docs/coach.md). Its own daily counter
- * (`reserveRoute`), never the generations; shared monthly budget; no refinements.
+ * (`reserveRoute`), never the generations; shared monthly budget; no refinements. An answer the
+ * stored shape rejects is the 502 of an invalid answer (`storedShape`), billed like any answer.
  */
 import { randomUUID } from "node:crypto";
 import { authenticate } from "../_lib/access.js";
+import { storedShape } from "../_lib/claude.js";
 import { generateRoute } from "../_lib/generators.js";
 import { json, readBody, route } from "../_lib/http.js";
 import { getLanguage, packVoices } from "../_lib/languages.js";
@@ -31,15 +33,19 @@ export default route({
           costMicro += await recordCall(caller, "route", call);
         },
       );
-      const quick = Route.parse({
-        ...generated,
-        id: randomUUID(),
-        createdAt: new Date().toISOString(),
-        lang: meta.lang,
-        description: body.description,
-        voices: packVoices(meta),
-        turns: generated.turns.map((turn, i) => ({ ...turn, id: `r${i + 1}` })),
-      });
+      const quick = storedShape(
+        Route,
+        {
+          ...generated,
+          id: randomUUID(),
+          createdAt: new Date().toISOString(),
+          lang: meta.lang,
+          description: body.description,
+          voices: packVoices(meta),
+          turns: generated.turns.map((turn, i) => ({ ...turn, id: `r${i + 1}` })),
+        },
+        "route",
+      );
       const summary = await readUsage(caller);
       return json({
         route: quick,

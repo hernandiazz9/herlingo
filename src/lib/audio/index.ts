@@ -19,7 +19,9 @@
  *   coach TTS endpoint, see `./generated`) and caches it; no mp3 → speechSynthesis.
  * - The pack's stress marks (`pack.json` `stress`) are stripped from every text sent to a voice.
  * - `slow: true` plays at `SLOW_RATE` (mp3 keeps its pitch). With the "Audio lento" setting on
- *   (`@/lib/progress/settings`), everything plays slow.
+ *   (`@/lib/progress/settings`), everything plays slow. A slow generated line
+ *   (`generatedPlayable(text, voice, { slow: true })`) plays its mp3 at rate 1 (already slow) and
+ *   its device-voice fallback at `SLOW_RATE`.
  * - `locale` marks a line that is not in the pack's language (a meaning read aloud in the
  *   learner's language): its device voice uses that locale and no stress marks are stripped.
  * - `speakSequence(lines, { gapMs })` plays lines one after another and ends as soon as anything
@@ -34,7 +36,7 @@
 import { getPack, stripStress, type Playable } from "@/lib/content";
 import { getActiveLang, subscribeActiveLang } from "@/lib/content/active";
 import { getSettings } from "@/lib/progress/settings";
-import { isGenerated, playGenerated } from "./generated";
+import { isGenerated, isSlowGenerated, playGenerated } from "./generated";
 import { mp3Available, mp3Play, mp3Silence, mp3Stop, mp3Url, preloadManifest, unlockOnFirstGesture } from "./mp3";
 import { ttsAvailable, ttsSpeak, ttsStop } from "./speech-synthesis";
 
@@ -47,6 +49,7 @@ export {
   generatedKey,
   type GeneratedBytesOptions,
   type GeneratedFailure,
+  generatedOnDeviceCheck,
   generatedPlayable,
   isGenerated,
   prefetchGenerated,
@@ -98,7 +101,9 @@ export function speak(input: SpeakInput, options: SpeakOptions = {}): Promise<vo
   const locale = options.locale ?? meta.speechLocale;
   const rate = options.slow || getSettings().slowAudio ? SLOW_RATE : 1;
   if (typeof input !== "string" && isGenerated(input)) {
-    return playGenerated({ ...input, text }, rate, () => my === generation, () => ttsSpeak(text, locale, rate));
+    // A slow line's mp3 is already slow (it plays at rate 1); the device voice has to slow it down.
+    const voiceRate = isSlowGenerated(input) ? SLOW_RATE : rate;
+    return playGenerated({ ...input, text }, rate, () => my === generation, () => ttsSpeak(text, locale, voiceRate));
   }
   const url = typeof input === "string" ? undefined : mp3Url(meta.lang, input.audioKey);
   if (!url) return ttsSpeak(text, locale, rate);

@@ -99,7 +99,7 @@ show it as is.
 | 429 | `refine_limit` | "Ya has ajustado esta situación 3 veces." |
 | 429 | `tts_limit` | "Has llegado al límite de audio de hoy. Vuelve mañana." The client never shows it: that line plays with `speechSynthesis` and is not requested again this session |
 | 409 | `unknown_pack` | Refinement of a pack id this server never issued to this code (or older than 180 days): "No puedo ajustar esta situación. Prepara una nueva." The client shows "Esta situación ya no se puede ajustar; crea una nueva." in the Ajustar card and disables it for that pack this session (`canRefine(pack)`); the pack still plays and practises |
-| 502 | `generation_failed` | Claude refused, hit `max_tokens`, returned invalid JSON, or API error. Nothing is stored |
+| 502 | `generation_failed` | Claude refused, hit `max_tokens`, returned invalid JSON, or API error; for routes and episodes also an answer the stored shape rejects. Nothing is stored |
 | 503 | `not_configured` | No access codes or no Anthropic key in production |
 | 503 | `tts_unavailable` | Real TTS not available → the client uses `speechSynthesis` |
 | 500 | `internal` | Unexpected |
@@ -324,10 +324,12 @@ from a user gesture. A generated playable is a plain `Playable` whose `audioKey`
 phrases and native turns, `pack.voices.learner` for learner options, the pack language's first
 voice for interview lines). `speak()` then:
 
-1. plays the object URL kept in memory (synchronously, inside the gesture), else
+1. plays the object URL kept in memory, or the mp3 bytes kept in memory this session
+   (synchronously, inside the gesture), else
 2. reads the mp3 from Cache Storage `lang-lern-coach-audio` (entries `/coach-audio/<hash>.mp3`,
-   never requested over the network), else
-3. fetches it once from `POST /api/coach/tts/` (skipped offline or without a code) and caches it,
+   never requested over the network; at most 1.5 s, see "Busy Cache Storage"), else
+3. fetches it once from `POST /api/coach/tts/` (skipped offline or without a code; at most 8 s)
+   and caches it in the background,
 4. and falls back to `speechSynthesis` in the pack's `speechLocale` on any failure (no mp3, TTS
    503/400/401, playback error). Cases 2–4 start after an async step on the audio element that
    the first tap unlocked (iOS), like the existing fallback.
@@ -335,22 +337,59 @@ voice for interview lines). `speak()` then:
    is declined for the session (in memory), so later taps go straight to `speechSynthesis` inside
    the gesture, with no request and no message.
 
+**Busy Cache Storage** (T203, 2026-10-14): right after an app update the service worker precaches
+thousands of files, and Cache Storage can then take seconds per call. Before, one 8 s deadline
+covered the cache lookup, the download and the cache write, so lines timed out before their
+request or after a 200 whose bytes were then dropped (Modo deporte: "Faltan 53 audios", and
+«Completar audio» could not complete). Now, in `src/lib/audio/generated.ts`:
+
+- the cache lookup (open + match + body) has its own bound, `CACHE_LOOKUP_MS` = 1.5 s: past it the
+  line is fetched from the source (a line that was in the cache is then downloaded again: one more
+  voice line of the day's allowance);
+- `LOAD_DEADLINE_MS` = 8 s covers only the download (`PATIENT_DEADLINE_MS` = 30 s for a file prepared
+  in the background);
+- `cache.put` runs in the background (failures ignored): a downloaded mp3 is returned at once;
+- the mp3s read or downloaded this session stay in memory (`KEPT_BYTES` = 24 MB, least recently
+  used dropped first): taps, prefetch, «Escuchar todo» and a retry or «Completar audio» find them
+  there first, without Cache Storage.
+
+Jobs stay shared per line (taps, prefetch, bytes; deduplicated while in flight; aborted once no
+caller waits) and a declined line is still not asked for again this session.
+
+**Long lines** (T201, 2026-10-14): `/api/coach/tts/` reads at most 300 characters
+(`LIMITS.ttsText`), but some lines are longer (a route meaning has up to 400; content glosses read
+in Modo deporte have no cap); before, such a line was never voiced (400 from the endpoint). Now
+the coach source (`src/lib/coach/audio.ts`) splits it with `splitSpokenText`
+(`src/lib/audio/split.ts`: pieces of at most `SPOKEN_TEXT_MAX` = 300, cut at sentence ends, else
+at `; : ,`, else between words; as few as those boundaries allow), requests every piece at once
+(each one counts as a voice line in `COACH_TTS_DAILY_LIMIT`; one failing fails the line) and
+joins their mp3s in order with no gap into one (`concatMp3` in `src/lib/sport/mp3-frames.ts`:
+frames only, behind a Xing frame in the edge-tts format). The line keeps its one playable, key
+and cache entry, so `speak()`, «Escuchar todo»'s joined file, Modo deporte, prefetch, offline and
+`pruneCoachAudio` treat it like any other line. A line of 300 characters or fewer (trimmed) is
+one request, exactly as before.
+
 **Slow lines** (Modo deporte): `generatedPlayable(text, voice, { slow: true })` has its own key,
 `gen:<hash of voice + slow flag + text>` (normal lines keep their keys byte for byte), carries
 `slow: true`, and the coach source requests it with `slow: true` (the voice reads it at −30 %).
 `speak()` plays a slow line at rate 1 whatever `slow` / "Audio lento" say (the mp3 is already
-slow; its device-voice fallback keeps `speak()`'s rate). A key made slow in this session is
-always requested slow, even from a copy of the playable without the flag.
+slow); its device-voice fallback reads at `SLOW_RATE` (plan 016 T202; before, at `speak()`'s rate,
+so normal speed). A key made slow in this session is always requested slow, even from a copy of
+the playable without the flag.
 
 **Bytes** (to join clips into one mp3, docs/sport.md "Player"): `generatedBytes(playable,
-signal?)` in `src/lib/audio/generated.ts` → `Uint8Array | null`: the object URL in memory, else
-Cache Storage, else the source once (then cached; shared with taps and prefetches in flight,
-same deadline; `{ patient: true }` for a file prepared in the background: a download it starts
-may take 25 s per request and 30 s in all instead of a tap's 7 s / 8 s), never `speechSynthesis`.
-`null` for a content playable (fetch its `mp3Url`), a declined line, offline without a cached
-copy, a failed download or an aborted `signal`; `generatedFailure(playable)` then says why
-(`GeneratedFailure`: timeout, limit, voice, server, network, offline, access, other; the coach
-source rejects with a `GeneratedAudioError` carrying it).
+signal?, options?)` in `src/lib/audio/generated.ts` → `Uint8Array | null`: memory, else Cache
+Storage (bounded like a line's lookup), else the source once (then cached in the background;
+shared with taps and prefetches in flight, same deadline; `{ patient: true }` for a file prepared
+in the background: a download it starts may take 25 s per request and 30 s in all instead of a
+tap's 7 s / 8 s), never `speechSynthesis`. `null` for a content playable (fetch its `mp3Url`), a
+declined line, offline without a cached copy, a failed download or an aborted `signal`;
+`generatedFailure(playable)` then says why (`GeneratedFailure`: timeout, limit, voice, server,
+network, offline, access, other; the coach source rejects with a `GeneratedAudioError` carrying
+it). Modo deporte counts its missing clips by reason with it (docs/sport.md "Offline").
+`generatedOnDeviceCheck()` → a check `(playable) => boolean` of which generated lines are on the
+device now (kept in memory, or in Cache Storage: one `cache.keys()` listing bounded by 1.5 s, past
+it only memory counts); Modo deporte's `downloadedEpisodes` uses it.
 
 `savePack` and `replacePack` download every line of the pack in the background
 (`cachePackAudio`, 3 at a time, deduplicated with taps in flight), so a saved pack plays offline.
@@ -657,7 +696,9 @@ and answer something simple.
 `today` is the caller's **route** counter. Order of checks: code → body → monthly budget → route
 counter (over it → 429 `daily_limit`, "Has llegado al límite de rutas de hoy. Vuelve mañana.") →
 Claude. Billing, refunds (slot given back only when nothing was billed) and the 502 messages are
-exactly the pack's. Fake mode: a fixture route per language (placeholders elsewhere, like the fake
+exactly the pack's. An answer that passed the schema but not the stored `Route` (built with its ids,
+voices and date) is the 502 of an invalid answer too, "La respuesta ha llegado con errores.
+Inténtalo de nuevo.", billed (`storedShape` in `api/_lib/claude.ts`; episodes the same). Fake mode: a fixture route per language (placeholders elsewhere, like the fake
 pack), counted with realistic token numbers. `GET /usage/` adds `routes` (billed this month),
 `avgRouteUsd` and `routesToday: { used, limit }`; the client treats all three as optional.
 
@@ -772,11 +813,14 @@ fallback); switching is one constant plus a `PRICES` row. Measure on the first r
 - **Media Session** (where supported): title = the route title, artist "Modo rápido", the app
   icon; play/pause handlers (lock screen, headphones) and `playbackState`; cleared when the
   sequence ends or the route closes. With the joined file: the episode player's session (plus
-  position state, seek and previous/next step), its metadata replaced by the route's (stories:
-  the story title, "Historias"; grammar: the verb and tense or the topic, "Gramática"). A pause
+  position state, seek and previous/next step) under the route's title and artist, passed to
+  `episodePlayer.load` (`EpisodePlayerMeta.artist`; stories: the story title, "Historias";
+  grammar: the verb and tense or the topic, "Gramática"). A pause
   from the lock screen or headphones leaves it paused («Seguir»).
 - **Voice lines**: each meaning is one more TTS request the first time (counted in
-  `COACH_TTS_DAILY_LIMIT`); identical meanings share one mp3 (cached by voice + text).
+  `COACH_TTS_DAILY_LIMIT`); identical meanings share one mp3 (cached by voice + text). A meaning
+  over 300 characters is read in 2 pieces (up to 400) joined into its one mp3, with no gap between
+  them ("Generated audio", "Long lines").
 
 ### UI copy (Spain Spanish, tú)
 

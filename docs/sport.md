@@ -25,7 +25,7 @@ chained clip by clip, and stops when the iPhone locks (Hernán, 2026-10-13).
 | Gaps | 400 ms between repetitions of the same line; 1 s between blocks (narrator ↔ target, step ↔ step); 1.5 s before a part title and before the final scene. Constants in one place. |
 | Playback | The device joins every clip of the episode **byte by byte** into one mp3 (all lines are edge-tts `audio-24khz-48kbitrate-mono-mp3`) plus pre-encoded silent frames for the gaps, and plays it on the shared, gesture-unlocked `<audio>` element. One chapter per step. Spike 2026-10-13 on the Mac: 2 min joined from real edge-tts clips (narrator, two Italian voices, slow at −30 %) decode with no errors, ~6 KB/s (10 min ≈ 3.6 MB). |
 | Lock screen | Media Session: title = episode title, artist "Modo deporte", the app icon; play/pause; **next track = next step, previous track = start of this step** (again within 3 s of its start: the previous step); seek (`seekto`); `setPositionState`. No seek ±15 s (2026-10-13): with those handlers iOS shows ±15 s buttons instead of previous/next track, the steps. |
-| Offline | Opening or saving an episode downloads its clips (progress "Preparando el audio… 34/120"); the joined file is rebuilt from cached clips each time (not stored). While the page is hidden (screen locked, app in the background: iOS fails every fetch at once there although scripts still run) preparation pauses: no clip starts, and a clip that failed while hidden is fetched again once the page is visible, without counting as a failure (T199, 2026-10-14: an episode prepared while the phone locked ended with 74 missing clips). A Screen Wake Lock (`keepScreenAwake`, feature-detected, errors ignored, asked again when the page comes back) keeps the screen on while an episode prepares or completes. A clip is tried up to 3 times while visible (pauses of 2 s and 6 s between attempts; at once for the day's voice limit, the access code or no connection), each voice line with a patient deadline (25 s request, 30 s in all: the server may take ~20 s; a tap keeps 7–8 s); after 5 clips left out in a row the rest are left out without trying (the voice service is down or the day's limit is reached). A clip left out is counted with its reason (`PreparedEpisode.reasons`: timeout, limit, voice, server, network, offline, access, other) and the player names the reasons under the notice ("Motivos: límite de audio de hoy (12), el servidor tardó demasiado (3)."; 2026-10-14: the last clips of new episodes kept going missing with no way to tell why). The player then retries the missing clips by itself when the page becomes visible or the browser goes back online (only while not playing) and offers «Completar audio» ("Faltan 3 audios. Toca «Completar audio» para descargarlos."; offline "Sin conexión: faltan 3 audios. Se completarán cuando vuelvas a tener internet."). A completed file loads at the start of the step that was current (from the start after the end); one completed while playing waits for the next pause. |
+| Offline | Opening or saving an episode downloads its clips (progress "Preparando el audio… 34/120"); the joined file is rebuilt from cached clips each time (not stored). While the page is hidden (screen locked, app in the background: iOS fails every fetch at once there although scripts still run) preparation pauses: no clip starts, and a clip that failed while hidden is fetched again once the page is visible, without counting as a failure (T199, 2026-10-14: an episode prepared while the phone locked ended with 74 missing clips). A Screen Wake Lock (`keepScreenAwake`, feature-detected, errors ignored, asked again when the page comes back) keeps the screen on while an episode prepares or completes. A clip is tried up to 3 times while visible (pauses of 2 s and 6 s between attempts; at once for the day's voice limit, the access code or no connection), each voice line with a patient deadline (25 s request, 30 s in all: the server may take ~20 s; a tap keeps 7–8 s); after 5 clips left out in a row the rest are left out without trying (the voice service is down or the day's limit is reached). A clip left out is counted with its reason (`PreparedEpisode.reasons`: timeout, limit, voice, server, network, offline, access, other) and the player names the reasons under the notice ("Motivos: límite de audio de hoy (12), el servidor tardó demasiado (3)."; 2026-10-14: the last clips of new episodes kept going missing with no way to tell why). A busy Cache Storage (right after an app update) no longer loses clips: its lookup is bounded at 1.5 s, the cache write runs in the background and this session's clips stay in memory, so «Completar audio» does not depend on the cache (T203, 2026-10-14; docs/coach.md "Busy Cache Storage"). The player then retries the missing clips by itself when the page becomes visible or the browser goes back online (only while not playing) and offers «Completar audio» ("Faltan 3 audios. Toca «Completar audio» para descargarlos."; offline "Sin conexión: faltan 3 audios. Se completarán cuando vuelvas a tener internet."). A completed file loads at the start of the step that was current (from the start after the end); one completed while playing waits for the next pause. |
 | Access | Screen `/deporte/` (nested section `sport`, title "Modo deporte", parent tab `play`), reached from a card on Jugar and from a «🏃 Modo deporte» button on every saved route. Needs the Prepárate access code (narrator and slow lines come from `/api/coach/tts/`) and `coachAvailable(lang)`; without a code, Prepárate's `AccessCard`. The ⚡ is hidden on `/deporte/`. |
 | Save mp3 | «Guardar mp3»: the joined file as `<title>.mp3` through the share sheet (`navigator.share` with a `File`) where available, else a download link. |
 | XP | A finished episode (≥ 90 % played) gives 10 XP, source `"sport"`, once per episode per day, at most 3 episodes a day; counts for the streak like any activity (`recordActivity`). "Played" = time that really sounded (seeks, step jumps and replays add nothing); in a joined file each episode counts on its own. |
@@ -61,7 +61,11 @@ type StoredEpisode = SportEpisode & { source: "ai"; createdAt: string; descripti
 Every spoken string (`title`, `intro`, part `title`, step `intro`, `tip`, variant `cue`, `es`,
 `text`) is one `/api/coach/tts/` line, which takes at most 300 characters (`LIMITS.ttsText`): the
 limits above never go over it (`EPISODE_TEXT_LIMITS` in `api/_lib/schema.ts`), and the prompt
-asks for much shorter ones.
+asks for much shorter ones. Lines of route and dialogue episodes may be longer (a route meaning
+has up to 400 characters, a dialogue's gloss has no cap): such a line keeps its one playable and
+key, and the coach source reads it in pieces of at most 300 (`splitSpokenText`: sentence ends,
+then `; : ,`, then words) joined with no gap into its one mp3 (docs/coach.md "Generated audio",
+T201, 2026-10-14). Before, it was never voiced: left out of the episode as a missing clip.
 
 - **Compiler** `compileEpisode(episode, glossLang)` → `{ segments, chapters }`: segments are
   `{ kind: "clip", playable, step }` or `{ kind: "gap", ms, step }` following "Order", "Variants",
@@ -86,8 +90,10 @@ asks for much shorter ones.
 ## Player (`src/lib/sport/`, additive helpers in `src/lib/audio/`)
 
 - Bytes per clip: content mp3 by `fetch(mp3Url(…))` (the SW audio cache answers offline);
-  generated lines from Cache Storage `lang-lern-coach-audio`, else `/api/coach/tts/` once (and
-  cached), never `speechSynthesis` (it stops in the background).
+  generated lines by `generatedBytes(p, signal, { patient: true })` (memory, else Cache Storage
+  `lang-lern-coach-audio` within 1.5 s, else `/api/coach/tts/` once with the patient deadline,
+  cached in the background; `generatedFailure(p)` says why there is none), never `speechSynthesis`
+  (it stops in the background).
 - MP3 joining: parse frame headers; drop ID3v2 tags and Xing/Info/LAME frames; every clip must
   share MPEG version, layer, sample rate and channel mode (otherwise the episode reports
   `format` and plays nothing; only the hidden `cba` pack has ElevenLabs lines in another format).
@@ -107,17 +113,27 @@ asks for much shorter ones.
   reason from `generatedFailure(p)`; `reasons` add up to `missing` (`joinEpisodes` sums them).
 - Plays the object URL on the shared `<audio>` element (`playbackRate` 1), from the tap's gesture.
   Starting from a tap that first has to prepare: show the progress, then a «Reproducir» tap.
+- One player for the app (`episodePlayer`, `src/lib/sport/player.ts`): «Escuchar todo» (routes,
+  stories, grammar pages; docs/coach.md "«Escuchar todo»") plays its joined file on it too (plan
+  016 T196), one chapter per step. `EpisodePlayerMeta` gives the lock screen's `title` and an
+  optional `artist` (default "Modo deporte"; «Escuchar todo» passes its section: "Modo rápido",
+  "Historias", "Gramática").
 - `joinEpisodes(list)` for «Escuchar seguidos» (chapters keep each episode's steps).
 - `downloadedEpisodes(list)`: the episodes whose every compiled clip is already on the device
-  (generated lines in Cache Storage `lang-lern-coach-audio`, at the path `generated.ts` gives
-  them, mirrored in `src/lib/sport/downloaded.ts`; content lines in any cache), so «Escuchar
-  seguidos» prepares without the network.
+  (generated lines kept in memory this session or in Cache Storage `lang-lern-coach-audio`:
+  `generatedOnDeviceCheck()` from `src/lib/audio/generated.ts`, one listing of the cache bounded
+  by 1.5 s like a line's lookup, past it only the lines in memory count; content lines in any
+  cache), so «Escuchar seguidos» prepares without the network.
 - XP (`src/lib/sport/xp.ts`): `trackEpisodeXp(lang, prepared)` follows the player and, per episode
   in the loaded file, adds up the time that really played (between two player states the position
   may advance at most as much as the clock, so a locked phone still counts and seeks do not; a
   part heard twice counts once); at ≥ 90 % of its span `awardFinishedEpisode` gives the XP. The
   day's bookkeeping reuses the daily key `lang-lern:daily-xp:<lang>` (`countPlay`: `sport:<id>` per
-  episode, `sport` for the day's total): no new key.
+  episode, `sport` for the day's total): no new key. A file prepared again and reloaded (missing
+  clips completed, "Offline" above) keeps what was already heard (T201, 2026-10-14; before, the
+  count restarted): the player screen keeps a `HeardLog` in memory (`createHeardLog`, never
+  stored), keyed by episode id, with the seconds heard of each of the episode's chapters; the new
+  file's tracker starts from it, and a chapter heard in both files counts once (the longer).
 
 ## `POST /api/coach/episode/`
 
@@ -175,7 +191,7 @@ target-language sentences out of the Spanish fields.
 | `src/lib/coach/episodes.ts` | `getSavedEpisodes`, `getSavedEpisode`, `saveEpisode`, `deleteEpisode`, `cacheEpisodeAudio`; key `lang-lern:coach:episodes:<lang>` = `{ v: 1, episodes }`, newest first, unique ids, tolerant parsing; change event `lang-lern:coach-change`. Saving downloads `episodePlayables` in the background (the shared prefetch, kind `"episode"`); deleting stops it and prunes |
 | `src/lib/coach/use-coach.ts` | `useSavedEpisodes(lang)` → `{ episodes, get, save, remove }` |
 | `pruneCoachAudio` | keeps the lines of every saved pack, route **and** episode, plus every route's and every pack dialogue's episode lines (`episodePlayables`: narrator, slow and generated target lines) |
-| `src/components/sport/generation.ts` | `startEpisode(lang, description)`, `useEpisodeGeneration(lang, onDone?)`, `clearEpisodeGeneration(lang)`: one job per language, same contract as `components/coach/generation.ts` |
+| `src/components/sport/generation.ts` | `startEpisode(lang, description)`, `useEpisodeGeneration(lang, onDone?)`, `clearEpisodeGeneration(lang)`: one job per language, on the job runner of `components/coach/generation.ts` (`runJob`, `holdsUnsaved`, `useJob`, `clearGeneration`; the one runner for packs, routes and episodes) |
 
 - The request runs outside the screen (like `components/coach/generation.ts`): leaving `/deporte/`
   does not lose a paid episode.
@@ -207,7 +223,10 @@ target-language sentences out of the Spanish fields.
   episodios, uno tras otro.", the ones left out ("Quedan fuera N episodios que aún no están
   descargados: ábrelos una vez con conexión para añadirlos."), "Los pasos" grouped by episode.
   None downloaded → a notice.
-- XP: the player shows "¡Genial! +N XP." when an episode played to the end earned it.
+- XP: the player shows "¡Genial! +N XP." when an episode played to the end earned it, and the app's
+  floating "🏃 +N XP" (`XpToast`, source `"sport"`) pops up like for every other source without a
+  summary screen (T201). The notice stays: the phone is often locked when an episode ends, and the
+  floating one is gone after 1.6 s.
 - Modo rápido's `RouteView` has «🏃 Modo deporte» under «Escuchar todo» → `/deporte/?ep=route:<id>`.
 - Player (`EpisodeView`): prepares on open (`useEpisodeAudio`: "Preparando el audio… n/N", then
   `episodePlayer.load`), «Reproducir» / «Pausar» / «Seguir» between "Paso anterior" / "Paso

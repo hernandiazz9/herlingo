@@ -12,6 +12,7 @@
  *   bit reservoir) to a gap's length.
  * - `xingFrame` writes the header frame of the joined file (frame count, byte count, seek table),
  *   so browsers know its exact duration and seek well although frames have different bitrates.
+ * - `concatMp3` puts the pieces of one long voice line back together (docs/coach.md "Generated audio").
  */
 
 export interface Mp3Format {
@@ -260,4 +261,36 @@ export function xingFrame(sizes: ArrayLike<number>): Uint8Array<ArrayBuffer> {
     frame[at + 16 + i] = Math.min(255, Math.floor((offset * 256) / total));
   }
   return frame;
+}
+
+/**
+ * Several mp3 files as one, played back to back with no silence added (the pieces of one long
+ * voice line, `splitSpokenText`): their audio frames without tags or header frames, behind a Xing
+ * frame when they are in SILENCE_FORMAT (edge-tts). Files that are not mp3s of one format are
+ * just concatenated (a browser still plays them; Modo deporte's joiner then reports `format`).
+ */
+export function concatMp3(files: readonly Uint8Array<ArrayBuffer>[]): Uint8Array<ArrayBuffer> {
+  let clips: Mp3Clip[] | null = [];
+  for (const file of files) {
+    let clip: Mp3Clip | null = null;
+    try {
+      clip = parseMp3(file);
+    } catch (e) {
+      if (!(e instanceof Mp3FormatError)) throw e;
+    }
+    if (!clip || (clips.length && !sameFormat(clip.format, clips[0].format))) {
+      clips = null;
+      break;
+    }
+    clips.push(clip);
+  }
+  const chunks: Uint8Array<ArrayBuffer>[] = clips ? clips.flatMap((clip) => clip.parts) : [...files];
+  if (clips?.length && sameFormat(clips[0].format, SILENCE_FORMAT)) chunks.unshift(xingFrame(clips.flatMap((clip) => clip.sizes)));
+  const out = new Uint8Array(chunks.reduce((sum, chunk) => sum + chunk.length, 0));
+  let at = 0;
+  for (const chunk of chunks) {
+    out.set(chunk, at);
+    at += chunk.length;
+  }
+  return out;
 }
