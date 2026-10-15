@@ -1,7 +1,7 @@
 /**
  * `npm run db:check`: validates the Liga SQL on the local Postgres without touching anything else.
  *
- *   1. creates a throwaway database with a unique name (lang_lern_dbcheck_<time>_<random>);
+ *   1. creates a throwaway database with a unique name (herlingo_dbcheck_<time>_<random>);
  *   2. creates the roles anon/authenticated/service_role only if the cluster lacks them
  *      (and drops exactly those again at the end);
  *   3. applies scripts/db/auth-stub.sql (minimal `auth` schema + Supabase's default grants),
@@ -58,7 +58,7 @@ function sql(db: string, command: string): Run {
 
 const ident = (s: string) => `"${s.replace(/"/g, '""')}"`;
 
-const db = `lang_lern_dbcheck_${Date.now()}_${randomBytes(4).toString("hex")}`;
+const db = `herlingo_dbcheck_${Date.now()}_${randomBytes(4).toString("hex")}`;
 const createdRoles: string[] = [];
 let failed = false;
 

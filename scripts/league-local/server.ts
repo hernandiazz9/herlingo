@@ -1,6 +1,6 @@
 /**
  * The local fake Supabase: just the endpoints `@supabase/supabase-js` calls for Liga
- * (src/lib/league/client.ts, account.ts), backed by `lang_lern_league_local`.
+ * (src/lib/league/client.ts, account.ts), backed by `herlingo_league_local`.
  *
  *   Auth (GoTrue-shaped): POST /auth/v1/signup (anonymous), POST /auth/v1/token?grant_type=refresh_token,
  *   GET|PUT /auth/v1/user, POST /auth/v1/otp, GET /auth/v1/verify, POST /auth/v1/logout, GET /auth/v1/settings.
@@ -420,7 +420,7 @@ function cors(req: IncomingMessage, res: ServerResponse) {
 async function route(req: IncomingMessage): Promise<Reply> {
   const url = new URL(req.url ?? "/", LOCAL_URL);
   const path = url.pathname.replace(/\/+$/, "") || "/";
-  if (path === "/" || path === "/health") return { status: 200, body: { name: "lang-lern league local", anon_key: ANON_KEY } };
+  if (path === "/" || path === "/health") return { status: 200, body: { name: "herlingo league local", anon_key: ANON_KEY } };
   if (path.startsWith("/auth/v1/")) {
     if (path !== "/auth/v1/verify" && !req.headers.apikey) {
       return { status: 401, body: { message: "No API key found in request" } };

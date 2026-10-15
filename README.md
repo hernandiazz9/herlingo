@@ -1,4 +1,4 @@
-# lang_lern
+# Herlingo
 
 Personal, mobile-first language trainer (Italian first, for a trip to Sicily). A Next.js app
 exported as static files, installable on the iPhone and usable offline: lesson path, spaced

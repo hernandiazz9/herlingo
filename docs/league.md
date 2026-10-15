@@ -507,7 +507,7 @@ max over stats, deletion (every membership) and the RLS/privilege denials. `DB_C
 Before the real project exists (or to play with fake friends), `scripts/league-local/` imitates the
 parts of Supabase the app uses, on the local Postgres (same requirements as `db:check`: Postgres on
 the default socket and `psql`; Node built-ins only, no Docker). It uses its own database
-`lang_lern_league_local` and never touches any other one.
+`herlingo_league_local` and never touches any other one.
 
 1. **`npm run league:local`** (add `-- --reset` to start from an empty database): creates the
    database if missing (auth stub + `scripts/league-local/local-auth.sql` + every migration; new
@@ -544,4 +544,4 @@ like the real one.
 own localStorage), so open the app in a normal window, a private window and another browser, join
 with different nicknames and use code `PRUEBA` to share a group. To start over in one window,
 "Salir de la Liga y borrar mis datos". Inspect the data with
-`psql lang_lern_league_local -c 'select * from league.profiles;'`.
+`psql herlingo_league_local -c 'select * from league.profiles;'`.

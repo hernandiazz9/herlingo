@@ -10,11 +10,11 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 
 export const ROOT = process.cwd();
-export const DB = "lang_lern_league_local";
+export const DB = "herlingo_league_local";
 export const PORT = Number(process.env.LEAGUE_LOCAL_PORT ?? 54321);
 export const ADMIN_DB = process.env.DB_CHECK_ADMIN_DB ?? "postgres";
 /** Local only, never used by a real project: the anon key below is derived from it. */
-export const JWT_SECRET = "lang-lern-league-local-secret-not-for-production";
+export const JWT_SECRET = "herlingo-league-local-secret-not-for-production";
 export const ACCESS_TOKEN_SECONDS = Number(process.env.LEAGUE_LOCAL_JWT_SECONDS ?? 3600);
 
 const MIGRATIONS = join(ROOT, "supabase/migrations");
@@ -63,7 +63,7 @@ export function psql(db: string, script: string, vars: Record<string, string> = 
       args.push("-v", `${k}=${v}`);
       continue;
     }
-    dir ??= mkdtempSync(join(tmpdir(), "lang-lern-psql-"));
+    dir ??= mkdtempSync(join(tmpdir(), "herlingo-psql-"));
     const file = join(dir, k);
     writeFileSync(file, v);
     pre += `\\set ${k} \`cat '${file}'\`\n`;
@@ -115,7 +115,7 @@ export async function mustRun(db: string, step: string, script: string, vars: Re
 const ident = (s: string) => `"${s.replace(/"/g, '""')}"`;
 
 /**
- * Makes sure `lang_lern_league_local` exists with the auth stub, the local auth tables and every
+ * Makes sure `herlingo_league_local` exists with the auth stub, the local auth tables and every
  * migration (new migration files are applied on the next run). `reset` drops it first. Never
  * touches any other database; creates the API roles only if the cluster lacks them.
  */

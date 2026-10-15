@@ -209,7 +209,7 @@ Same fake Supabase as Liga (`docs/league.md`, "Try it locally"):
 3. Two devices = two browser profiles or a private window. Link an email (the magic link is printed
    in the `league:local` terminal) and "Entrar con mi email" on the other one to get the restore
    offer or the conflict dialog.
-4. Inspect: `psql lang_lern_league_local -c 'select user_id, rev, size, updated_at, window_writes from league.saves;'`.
+4. Inspect: `psql herlingo_league_local -c 'select user_id, rev, size, updated_at, window_writes from league.saves;'`.
 5. `npm run league:local:check` covers the save RPCs over HTTP (null head/get, put with null base →
    rev 1, stale put → conflict and data unchanged, another user cannot read it, `save_invalid`,
    `save_too_large`, delete → head null, `league_delete_me` removes the save). `npm run db:check`

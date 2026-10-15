@@ -5,7 +5,7 @@
  * RPCs (league_status, league_ranking, league_podium, leave by code, group limit), email linking
  * through the printed magic link, sign in by email, sign-out, the cloud save RPCs (put → get →
  * stale put = conflict → head → delete, too large, invalid, delete_me removes the copy), delete_me. Starts its own server on a
- * free port against `lang_lern_league_local` (created if missing) and removes its users at the end.
+ * free port against `herlingo_league_local` (created if missing) and removes its users at the end.
  */
 import { randomUUID } from "node:crypto";
 import { readFileSync } from "node:fs";

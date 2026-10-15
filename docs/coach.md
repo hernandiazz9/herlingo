@@ -869,7 +869,7 @@ settings. Never in the repo or in client code.
 Nothing here is done by agents: the real Vercel project and its variables are Hernán's.
 
 1. **Anthropic** (https://platform.claude.com):
-   - Settings → API keys → **Create key** (name it `lang-lern-coach`). Copy it once.
+   - Settings → API keys → **Create key** (name it `herlingo-coach`). Copy it once.
    - Settings → Limits: set a monthly **spend limit** (e.g. 10 USD) as a safety net above the
      app's own 5 USD cap (a call cut by the 50 s deadline is not in the app's ledger).
 2. **Upstash** (https://console.upstash.com):
@@ -883,7 +883,7 @@ Nothing here is done by agents: the real Vercel project and its variables are He
 3. **Access codes:** one random code per person, easy to type on a phone, e.g.
    `openssl rand -hex 8` (16 characters). Write them as `hernan:<code>,<name>:<code>` (no spaces;
    names are ledger keys: lowercase letters). The owner entry's name goes in `COACH_OWNER`.
-4. **Vercel** → the lang_lern project → Settings → **Environment Variables**, environment
+4. **Vercel** → the herlingo project → Settings → **Environment Variables**, environment
    **Production** (also Preview only if you want preview deploys to spend), each marked
    *Sensitive*:
 

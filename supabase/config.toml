@@ -1,8 +1,8 @@
-# Supabase CLI settings (only the parts lang_lern relies on; the CLI fills in the rest).
+# Supabase CLI settings (only the parts herlingo relies on; the CLI fills in the rest).
 # Used by `npx supabase link` / `npx supabase db push` (docs/league.md) and by a local
 # `npx supabase start` if you ever want one. The real project's Auth settings are set in the
 # dashboard; the values below mirror them.
-project_id = "lang_lern"
+project_id = "herlingo"
 
 [api]
 # `league` (the Liga tables) is deliberately NOT exposed: clients only call public.league_* RPCs.

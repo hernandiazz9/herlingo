@@ -1,7 +1,7 @@
 /**
  * `npm run league:local [-- --reset]`: the local fake Supabase for trying Liga without a real
  * project (docs/league.md → "Try it locally"). Creates (or with --reset recreates) the database
- * `lang_lern_league_local` on the local Postgres and serves http://localhost:54321.
+ * `herlingo_league_local` on the local Postgres and serves http://localhost:54321.
  */
 import { ANON_KEY, DB, ensureDatabase, LOCAL_URL, PORT, wantsReset } from "./shared";
 import { createLeagueServer } from "./server";

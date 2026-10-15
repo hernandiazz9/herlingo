@@ -1,5 +1,5 @@
 /**
- * `npm run league:seed [-- --reset]`: fills the local fake Supabase (`lang_lern_league_local`) with
+ * `npm run league:seed [-- --reset]`: fills the local fake Supabase (`herlingo_league_local`) with
  * 15 clearly fake players ("Bot …") with XP this week and last week in every content language plus
  * `it` and `fr` (the Liga sums them), and two groups (codes PRUEBA and BANDA2) of 5 bots each, two
  * of them in both. Idempotent: does nothing when the bots exist; --reset deletes the bots and both

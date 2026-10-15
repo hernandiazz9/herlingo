@@ -100,11 +100,11 @@ export function serializeBackup(backup: Backup): string {
   return `${JSON.stringify(backup, null, 2)}\n`;
 }
 
-/** `lang-lern-copia-YYYY-MM-DD.json` (local date); `label` goes after "copia" ("anterior"). */
+/** `herlingo-copia-YYYY-MM-DD.json` (local date); `label` goes after "copia" ("anterior"). */
 export function backupFileName(date: Date = new Date(), label?: string): string {
   const pad = (n: number) => String(n).padStart(2, "0");
   const day = `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
-  return `lang-lern-copia-${label ? `${label}-` : ""}${day}.json`;
+  return `herlingo-copia-${label ? `${label}-` : ""}${day}.json`;
 }
 
 /** Validates a backup file's text. Nothing is written. */

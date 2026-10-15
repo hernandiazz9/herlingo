@@ -1,6 +1,6 @@
 @AGENTS.md
 
-# lang_lern — personal language trainer (Italian first)
+# Herlingo — personal language trainer (Italian first)
 
 Mobile-first, offline-capable Next.js PWA for Hernán to learn spoken Italian before a trip to
 Sicily. **Read `docs/brief.md` before any task**: it holds every product decision.
@@ -22,7 +22,7 @@ Sicily. **Read `docs/brief.md` before any task**: it holds every product decisio
 | `npm run images` | Writes every referenced picture (vocab `image`, dialogue `avatars`: `fluent:<icon>` from the `@iconify-json/fluent-emoji-flat` devDependency, `custom:<slug>` from `assets/images/custom/`) minified to `public/images/{fluent,custom}/`; prunes unused files, flags near-black ones for the dark backdrop, skips custom drawings not drawn yet. Run after image changes and commit `public/images/`. `npm run content:check -- --strict-images` fails if any is missing or stale. |
 | `npm run pwa:icons` | Redraws `public/icons/*.png` (same design as `src/app/icon.svg`). Only if the icon changes. |
 | `npm run db:check` | Liga SQL check on the local Postgres (`psql` on the default socket): throwaway database ← `scripts/db/auth-stub.sql` + every `supabase/migrations/*.sql` + `scripts/db/smoke.sql`, then dropped. Exit 1 on any failure. Not part of `verify`; run it after any SQL change. |
-| `npm run league:local` | Local fake Supabase on http://localhost:54321 (database `lang_lern_league_local`, `-- --reset` to recreate); prints the two env values for `.env.local`. Magic links are printed, never emailed. docs/league.md, "Try it locally". |
+| `npm run league:local` | Local fake Supabase on http://localhost:54321 (database `herlingo_league_local`, `-- --reset` to recreate); prints the two env values for `.env.local`. Magic links are printed, never emailed. docs/league.md, "Try it locally". |
 | `npm run league:seed` | 15 fake players with XP this week and last week + group code `PRUEBA` in the local fake Supabase (`-- --reset` to reseed). |
 | `npm run league:local:check` | HTTP check of the local fake Supabase with two throwaway users (sign-up → profile → XP → groups → rankings → email link → delete). Exit 1 on failure. |
 | `npm run verify` | lint → content:check → typecheck → build. Must exit 0 before a task is done. |
@@ -108,6 +108,13 @@ plans/                 Orchestrator plans. Never edit.
   anything but its own precache. Only explicit user actions ("Borrar progreso", deleting a pack)
   remove data. Never tell Hernán to "clear site data" on the production origin; to reset fake
   audio use `clearGeneratedAudio()`.
+- **Name: Herlingo** (`APP_NAME` in `src/lib/app-config.ts`; renamed from lang_lern on 2026-10-15).
+  Internal identifiers keep the old name on purpose and are never renamed: localStorage keys
+  `lang-lern:*` (and `lang_lern:speaking-paused-until`), Cache Storage `lang-lern-*`, the
+  backup/cloud-save tag `app: "lang-lern"` (old files and the SQL check expect it), the Upstash
+  prefix `langlern:coach`, applied migrations. Every address has its own on-device data, so the
+  old production address `https://langlern-iota.vercel.app` stays alive (installed iPhones use it)
+  next to `https://herlingo.vercel.app`; never redirect one to the other.
 - **Liga (Supabase)** is the other cloud feature: the client only calls the `public.league_*` RPCs
   (contract, caps and setup in `docs/league.md`); tables live in the private `league` schema with
   RLS and no grants. SQL changes = a new file in `supabase/migrations/` + `npm run db:check`;
