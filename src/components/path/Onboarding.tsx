@@ -12,6 +12,7 @@ import { setLevel, suggestLevel } from "@/lib/content/level";
 import { LevelChips } from "@/components/level/LevelChips";
 import { useActiveLang, useScreenLang } from "@/lib/content/use-active-lang";
 import { LanguagePicker, pickablePacks } from "@/components/language/LanguagePicker";
+import { MoveIn } from "@/components/move/MoveIn";
 import { cn } from "@/lib/cn";
 import { applyPlacement, completeOnboarding, getProgress } from "@/lib/progress";
 import { recordActivity } from "@/lib/progress/activity";
@@ -74,6 +75,8 @@ function LanguageChoice({ current, onChoose }: { current: string | null; onChoos
       </p>
       <h1 className="text-3xl font-extrabold tracking-tight text-ink">¿Qué idioma quieres aprender?</h1>
       <p className="text-lg text-ink">Elige uno para empezar. Puedes cambiarlo cuando quieras desde tu perfil o tu ruta.</p>
+      {/* First launch only (not «Cambiar de idioma»): bring a backup from Lang Lern or another phone. */}
+      {current === null ? <MoveIn /> : null}
       <LanguagePicker current={current} onChoose={onChoose} label="Idiomas que puedes estudiar" />
     </div>
   );

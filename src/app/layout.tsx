@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { CloudSaveHost } from "@/components/cloud-save/CloudSaveHost";
+import { Analytics } from "@/components/shell/Analytics";
 import { LeagueSync } from "@/components/league/LeagueSync";
 import { InstallPrompt } from "@/components/shell/InstallPrompt";
 import { QuickFab } from "@/components/shell/QuickFab";
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <InstallPrompt />
           <CloudSaveHost />
         </div>
+        <Analytics />
       </body>
     </html>
   );

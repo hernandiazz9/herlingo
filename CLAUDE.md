@@ -63,7 +63,10 @@ src/lib/grammar/       Gramática "Leído" (docs/grammar.md): read counts per en
 src/components/grammar/ Gramática pages (/gramatica/, nested under Frases): GrammarIndex (verb tiles + topics), VerbView,
                        TopicView; GrammarCardBody = a grammar card's content, shared with the lesson tip (GrammarTip).
 src/lib/backup/        Perfil "Copia de seguridad": export/import every `lang-lern:*` key (except the coach access code)
-                       as a JSON file; validates before writing, rolls back on a failed write.
+                       as a JSON file; validates before writing, rolls back on a failed write. file.ts = save/read steps.
+src/lib/move.ts        "Herlingo se muda": old address check (`LEGACY_HOSTS` in app-config.ts), the route card's snooze.
+src/components/move/   Old address: MoveNotice (route card), MoveSection (Perfil steps). New address: MoveIn
+                       («Traer mis datos» on the first-launch language screen).
 src/lib/league/        Liga (docs/league.md): config.ts (`leagueEnabled()`), client.ts (lazy supabase-js, `leagueRpc`),
                        account.ts (cached account, actions, change event), use-league-account.ts. Route /liga/ (under Perfil).
 src/lib/cloud-save/    "Guardado en la nube" (docs/cloud-save.md): the backup blob per Liga account via `league_save_*` (blob.ts,
@@ -114,7 +117,12 @@ plans/                 Orchestrator plans. Never edit.
   backup/cloud-save tag `app: "lang-lern"` (old files and the SQL check expect it), the Upstash
   prefix `langlern:coach`, applied migrations. Every address has its own on-device data, so the
   old production address `https://langlern-iota.vercel.app` stays alive (installed iPhones use it)
-  next to `https://herlingo.vercel.app`; never redirect one to the other.
+  next to `https://herlingo.vercel.app`; never redirect one to the other. On an old address the
+  route shows "Herlingo se muda" and Perfil the steps (backup file → install the new address → «Traer
+  mis datos» on its first launch); the move is always the learner's choice.
+- **Analytics:** Vercel Web Analytics (`src/components/shell/Analytics.tsx`, no cookies) sends the
+  address and path only (query and hash dropped: ids, Liga sign-in tokens); the SW never handles
+  `/_vercel/`. Never send content, answers or anything typed.
 - **Liga (Supabase)** is the other cloud feature: the client only calls the `public.league_*` RPCs
   (contract, caps and setup in `docs/league.md`); tables live in the private `league` schema with
   RLS and no grants. SQL changes = a new file in `supabase/migrations/` + `npm run db:check`;

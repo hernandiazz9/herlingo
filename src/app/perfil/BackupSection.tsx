@@ -3,25 +3,12 @@
 import { useRef, useState, type ChangeEvent } from "react";
 import { ConfirmDialog } from "@/components/coach/ConfirmDialog";
 import { Button, Card } from "@/components/ui";
-import {
-  BACKUP_ERRORS,
-  MAX_BACKUP_BYTES,
-  announceStorageReplaced,
-  applyBackup,
-  backupFileName,
-  collectBackup,
-  parseBackup,
-  serializeBackup,
-  type Backup,
-} from "@/lib/backup";
-import { saveFile } from "@/lib/backup/file";
-import { languageName, listPacks } from "@/lib/content";
+import { BACKUP_ERRORS, announceStorageReplaced, applyBackup, backupFileName, serializeBackup, type Backup } from "@/lib/backup";
+import { EXPORT_READ_ERROR, exportBackupFile, exportedMessage, readBackupFile, saveFile } from "@/lib/backup/file";
+import { backupSummary, formatBackupDate } from "@/lib/backup/summary";
 import { leagueEnabled } from "@/lib/league/config";
-import { parseProgress } from "@/lib/progress";
 
 type Notice = { kind: "error" | "info"; text: string } | { kind: "restored"; previous: Backup };
-
-const dateFormat = new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long", year: "numeric", hour: "2-digit", minute: "2-digit" });
 
 /** Perfil → "Copia de seguridad": save everything on the device to a file, or restore one. */
 export function BackupSection() {
@@ -30,16 +17,13 @@ export function BackupSection() {
   const [notice, setNotice] = useState<Notice | null>(null);
 
   const exportNow = async () => {
-    let text: string;
-    try {
-      text = serializeBackup(collectBackup(window.localStorage));
-    } catch {
-      setNotice({ kind: "error", text: "No se ha podido leer el progreso de este dispositivo." });
+    const saved = await exportBackupFile();
+    if (!saved) {
+      setNotice({ kind: "error", text: EXPORT_READ_ERROR });
       return;
     }
-    const outcome = await saveFile(text, backupFileName());
-    if (outcome === "downloaded") setNotice({ kind: "info", text: `Copia descargada: ${backupFileName()}. Guárdala en un sitio seguro.` });
-    else if (outcome === "shared") setNotice({ kind: "info", text: "Copia lista. Comprueba que se ha guardado donde elegiste." });
+    const text = exportedMessage(saved);
+    if (text) setNotice({ kind: "info", text });
   };
 
   const pick = async (e: ChangeEvent<HTMLInputElement>) => {
@@ -48,18 +32,7 @@ export function BackupSection() {
     e.target.value = "";
     if (!file) return;
     setNotice(null);
-    if (file.size > MAX_BACKUP_BYTES) {
-      setNotice({ kind: "error", text: BACKUP_ERRORS.tooBig });
-      return;
-    }
-    let text: string;
-    try {
-      text = await file.text();
-    } catch {
-      setNotice({ kind: "error", text: BACKUP_ERRORS.unreadable });
-      return;
-    }
-    const result = parseBackup(text);
+    const result = await readBackupFile(file);
     if (result.ok) setPending(result.backup);
     else setNotice({ kind: "error", text: result.error });
   };
@@ -85,7 +58,7 @@ export function BackupSection() {
     void saveFile(serializeBackup(previous), backupFileName(new Date(previous.exportedAt), "anterior"));
   };
 
-  const pendingSummary = pending ? summarize(pending) : "";
+  const pendingSummary = pending ? backupSummary(pending) : "";
 
   return (
     <section aria-labelledby="backup-title" className="flex flex-col gap-3">
@@ -159,31 +132,10 @@ export function BackupSection() {
 
       {pending ? (
         <ConfirmDialog title="¿Restaurar esta copia?" confirmLabel="Sí, reemplazar" onConfirm={restore} onCancel={() => setPending(null)}>
-          Esto reemplazará el progreso de este dispositivo por la copia del {formatDate(pending.exportedAt)}
+          Esto reemplazará el progreso de este dispositivo por la copia del {formatBackupDate(pending.exportedAt)}
           {pendingSummary ? ` (${pendingSummary})` : ""}. Podrás descargar lo que hay ahora justo después.
         </ConfirmDialog>
       ) : null}
     </section>
   );
-}
-
-/** Every language with progress in the backup: "italiano: 1200 XP, francés: 40 XP". */
-function summarize(backup: Backup): string {
-  return listPacks()
-    .flatMap((meta) => {
-      const raw = backup.data[`lang-lern:progress:${meta.lang}`];
-      if (!raw) return [];
-      const p = parseProgress(raw);
-      if (!p.onboarded && p.xp === 0) return [];
-      return [`${languageName(meta.lang)}: ${p.xp} XP`];
-    })
-    .join(", ");
-}
-
-function formatDate(iso: string): string {
-  try {
-    return dateFormat.format(new Date(iso));
-  } catch {
-    return iso;
-  }
 }

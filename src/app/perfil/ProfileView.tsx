@@ -17,6 +17,7 @@ import { getTab } from "@/lib/navigation";
 import { resetProgress, updateSettings, wordsLearned } from "@/lib/progress";
 import { useAppPoints, useProgress, useSettings, type AppPoints } from "@/lib/progress/use-progress";
 import { LanguagePicker, pickablePacks, useChooseLanguage } from "@/components/language/LanguagePicker";
+import { MoveSection } from "@/components/move/MoveSection";
 import { BackupSection } from "./BackupSection";
 import { CloudSaveSection } from "./CloudSaveSection";
 import { CoachSections } from "./CoachSections";
@@ -54,6 +55,8 @@ function Profile({ lang }: { lang: string }) {
 
   return (
     <>
+      <MoveSection />
+
       <div className="grid grid-cols-2 gap-3">
         <Stat value={points.monthXp} label={points.month ? `XP de ${points.month}` : "XP del mes"} note="Todos los idiomas" />
         <Stat value={points.streak} label={points.streak === 1 ? "día seguido" : "días seguidos"} note={`Récord: ${points.best}`} />

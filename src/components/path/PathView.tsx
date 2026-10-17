@@ -21,6 +21,7 @@ import { useAppPoints, useNow, useProgress } from "@/lib/progress/use-progress";
 import { BoltIcon, CheckIcon, FlameIcon, LockIcon, PlayIcon } from "./icons";
 import { ExpressionView, SideSheet } from "./SideSheet";
 import { GrammarIcon, grammarCounts, grammarCountsLabel } from "@/components/grammar/entry";
+import { MoveNotice } from "@/components/move/MoveNotice";
 
 export { WELCOME_HREF };
 
@@ -64,6 +65,8 @@ function Path({ lang }: { lang: string }) {
 
   return (
     <>
+      <MoveNotice />
+
       <LanguageSwitch lang={lang} />
 
       {levels.length && level ? (
