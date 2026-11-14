@@ -7,8 +7,9 @@ aloud, Claude corrects against his own model answer and, in a mock interview, a 
 asks follow-ups. Owner only; the deck never touches the repo or the build.
 
 This document is the contract of plan 017 and is kept current by each task. Built so far: the
-deck (schema, text store, `GET`/`PUT /api/coach/deck/`, `npm run deck:push`, the fake deck; T206).
-Everything else below is the contract its task builds.
+deck (schema, text store, `GET`/`PUT /api/coach/deck/`, `npm run deck:push`, the fake deck; T206);
+the two models, Haiku 5.5 in the price table, Mi entrevista's budget and counters, the `mock`
+block of `/usage/` (T207). Everything else below is the contract its task builds.
 
 ## Decisions
 
@@ -123,8 +124,12 @@ blocks × 3 cards, one `pending` card per block; a `PUT` replaces it until the s
 ## API
 
 All owner only: any other code → 403 `forbidden` "Mi entrevista es solo para la cuenta del dueño.".
-Checks in order: code (401) → owner (403) → body (400) → deck/card → Mi entrevista budget → its
-daily counter → Claude → bill → refund only if nothing was billed (as Prepárate). Errors and 502
+Checks in order: code (401) → owner (403) → body (400) → the role's model (`interviewerModel()` /
+`feedbackModel()` in `api/_lib/config.ts`: an id missing from `PRICES` → 503 `not_configured` "Mi
+entrevista no está configurada todavía.") → deck/card → Mi entrevista budget (`assertMockBudget()`)
+→ its daily counter (`reserveMockAnswer()` / `reserveMockTurn()`) → Claude (`generateStructured({
+model })`) → bill (`recordCall(caller, "turn" | "answer" | "report", …)`) → refund only if nothing
+was billed (as Prepárate). Errors and 502
 messages as docs/coach.md, with the mock budget message "Se ha agotado el presupuesto de Mi
 entrevista de este mes." and the daily one "Has llegado al límite de respuestas de hoy. Vuelve
 mañana.".
@@ -202,31 +207,49 @@ asked from Claude).
 - User turns: `<learner>`, `<card>` (title, question asked, model answer, anchors, pending
   note), `<history>`, `<answer>` (+ seconds and target seconds); learner text is data, `<` → `‹`
   like the other prompts.
-- `generateStructured` gains an optional `model` (default `COACH_MODEL`); server-side
-  `fallbacks` only for models that support it (not Haiku 5.5). `max_tokens`: turn 1500, answer
-  4000, report 3000.
+- `generateStructured` has an optional `model` (default `COACH_MODEL`; built, T207); the
+  fallback beta and `fallbacks: "default"` are sent only when `supportsFallback(model)`
+  (`api/_lib/model.ts`: Sonnet 5.5, Opus 5.5, Opus 5, Fable 5.1, Fable 5.2; never Haiku 5.5, which
+  has no server-side fallback). `max_tokens`: turn 1500, answer 4000, report 3000.
 - `PACK_SYSTEM`, `INTERVIEW_SYSTEM`, `ROUTE_SYSTEM`, `EPISODE_SYSTEM` stay byte-identical (prompt
   cache).
 
 ## Ledger (`api/_lib/ledger.ts`)
 
-`CallKind` += `"turn" | "answer" | "report"`. Keys (prefix `langlern:coach:`):
+Built (T207). `CallKind` += `"turn" | "answer" | "report"` (`MockCallKind`). Keys (prefix
+`langlern:coach:`):
 
 | Key | Value |
 | --- | --- |
 | `mock:deck:<name>` | the deck, one JSON string `{ updatedAt, deck }` (not a counter; built in T206) |
-| `<YYYY-MM>:mockSpend` | Mi entrevista's spend this month (micro-USD) |
-| `mockCap` | its monthly cap (micro-USD) |
-| `<YYYY-MM-DD>:mock:<name>` | answers + reports today by a code |
-| `<YYYY-MM-DD>:mockturn:<name>` | interviewer turns today by a code |
-| `<YYYY-MM>:answers` / `answerSpend`, `turns` / `turnSpend`, `reports` / `reportSpend` | counts and cost this month (for the averages) |
+| `<YYYY-MM>:mockSpend` | Mi entrevista's spend this month (micro-USD); also added to `<YYYY-MM>:spend`, never to `<YYYY-MM>:spend:<name>` (Prepárate's per code) |
+| `mockCap` | its monthly cap (micro-USD; default `COACH_MOCK_MONTHLY_CAP_USD` or 10) |
+| `<YYYY-MM-DD>:mock:<name>` | answers + reports today by a code (limit `COACH_MOCK_DAILY_LIMIT`, 60; expires after 2 days) |
+| `<YYYY-MM-DD>:mockturn:<name>` | interviewer turns today by a code (limit 2 × the above; expires after 2 days) |
+| `<YYYY-MM>:answers` / `answerSpend`, `turns` / `turnSpend`, `reports` / `reportSpend` | calls billed this month and their cost (for the averages; a failed attempt counts, since it was paid) |
 
-`assertBudget()` (Prepárate) compares `spend − mockSpend` with its cap; `assertMockBudget()`
-compares `mockSpend` with `mockCap`. `GET /usage/` adds `mock: { spentUsd, capUsd, answers,
-avgAnswerUsd, turns, avgTurnUsd, reports, today }`; `PUT /usage/` accepts `mockCapUsd` (owner).
-`PRICES` gets Haiku 5.5 and is reviewed against the pricing page (2026-11: Sonnet 5.5 cache reads
-listed at 0.10 USD/MTok, the table has 0.2). Prepárate's budget, counters and messages are
-otherwise unchanged.
+- **Budgets.** `assertBudget()` (Prepárate) compares `spend − mockSpend` with `cap`;
+  `assertMockBudget()` compares `mockSpend` with `mockCap` → 429 `budget` "Se ha agotado el
+  presupuesto de Mi entrevista de este mes.". Neither feature's spend blocks the other.
+  `recordCall()` writes `mockSpend` before `spend`, so Prepárate never counts a Mi entrevista call,
+  not even for a moment. Same overshoot as Prepárate (read, then act; docs/coach.md "Budget
+  overshoot").
+- **Daily counters.** `reserveMockAnswer(caller)` (an answer's feedback or a report) and
+  `reserveMockTurn(caller)` (`mockTurnsPerDay()` = 2 × `mockDailyLimit()`), each over its limit →
+  429 `daily_limit` "Has llegado al límite de respuestas de hoy. Vuelve mañana."; each returns a
+  refund, used only when nothing was billed. A call with `followUpsLeft: 0` takes no turn.
+- **`GET /usage/`.** The top-level `spentUsd`, `remainingUsd` and `mineUsd` are Prepárate's (Mi
+  entrevista left out), so its panel and its budget agree; `tokens` stays every call's. The owner
+  also gets `mock: { spentUsd, capUsd, remainingUsd, answers, avgAnswerUsd, turns, avgTurnUsd,
+  reports, avgReportUsd, today: { used, limit } }` (`today` = answers + reports); any other code
+  gets no `mock`.
+- **`PUT /usage/`** (owner only, else 403) takes `{ capUsd?, mockCapUsd? }`, 0–1000 each, at least
+  one (else 400 "La petición no es válida (capUsd)."), and returns the same summary.
+- **Prices.** `PRICES` reviewed against the pricing page on 2026-11-14: Haiku 5.5 added (0.10
+  input, 0.50 output, 0.125 cache write, 0.01 cache read USD/MTok; a request whose prompt is over
+  100 000 tokens pays 0.50 / 2.50 / 0.625 / 0.05), Sonnet 5.5 cache reads corrected to 0.10 (was
+  0.2). `COACH_INTERVIEWER_MODEL` / `COACH_FEEDBACK_MODEL` must be in `PRICES` (503 otherwise).
+- Prepárate's budget, counters and messages are otherwise unchanged.
 
 ## Device (`src/lib/mock-interview/`)
 

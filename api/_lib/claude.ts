@@ -1,14 +1,15 @@
 /**
  * The one place that calls Claude: structured output (JSON schema from zod), cached stable system
- * prompt, low/medium effort, server-side fallbacks, `stop_reason` checks before parsing, and an
- * optional normalizer that trims recoverable overflows before the zod check.
+ * prompt, low/medium effort, server-side fallbacks where the model supports them, `stop_reason`
+ * checks before parsing, and an optional normalizer that trims recoverable overflows before the zod
+ * check.
  */
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import type { z } from "zod";
 import { requireAnthropicKey } from "./config.js";
 import { CoachError } from "./http.js";
-import { COACH_MODEL, type Charge } from "./model.js";
+import { COACH_MODEL, supportsFallback, type Charge } from "./model.js";
 
 let client: Anthropic | undefined;
 
@@ -19,6 +20,8 @@ let client: Anthropic | undefined;
 const DEADLINE_MS = 50_000;
 
 export interface StructuredRequest<T extends z.ZodType> {
+  /** Model id; default `COACH_MODEL` (Prepárate). Server-side fallbacks only where `supportsFallback`. */
+  model?: string;
   /** Stable across calls (cached): never put per-request data here. */
   system: string;
   user: string;
@@ -63,16 +66,17 @@ export function storedShape<T extends z.ZodType>(schema: T, value: unknown, what
 
 /**
  * Tokens per model attempt. Top-level `usage` covers only the attempt that produced the message,
- * so a response served by a fallback model is billed from `usage.iterations`.
+ * so a response served by a fallback model is billed from `usage.iterations` (`model` = the one
+ * requested, for an iteration that does not name its own).
  */
-function chargesOf(response: Anthropic.Beta.Messages.BetaMessage): Charge[] {
+function chargesOf(response: Anthropic.Beta.Messages.BetaMessage, model: string): Charge[] {
   const iterations = response.usage.iterations ?? [];
   if (iterations.some((it) => it.type === "fallback_message")) {
     return iterations.flatMap((it) =>
       it.type === "message" || it.type === "fallback_message"
         ? [
             {
-              model: it.model ?? COACH_MODEL,
+              model: it.model ?? model,
               usage: {
                 input: it.input_tokens,
                 output: it.output_tokens,
@@ -101,14 +105,15 @@ function chargesOf(response: Anthropic.Beta.Messages.BetaMessage): Charge[] {
 export async function generateStructured<T extends z.ZodType>(req: StructuredRequest<T>): Promise<z.infer<T>> {
   requireAnthropicKey();
   client ??= new Anthropic();
+  const model = req.model ?? COACH_MODEL;
   let response;
   try {
     response = await client.beta.messages.create(
       {
-        model: COACH_MODEL,
+        model,
         max_tokens: req.maxTokens,
-        betas: ["server-side-fallback-2026-07-01"],
-        fallbacks: "default",
+        // Haiku 5.5 has no server-side fallback: neither the beta nor the parameter is sent for it.
+        ...(supportsFallback(model) ? { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" as const } : {}),
         system: [{ type: "text", text: req.system, cache_control: { type: "ephemeral" } }],
         messages: [{ role: "user", content: req.user }],
         output_config: { effort: req.effort, format: betaZodOutputFormat(req.schema) },
@@ -126,7 +131,7 @@ export async function generateStructured<T extends z.ZodType>(req: StructuredReq
     }
     throw error;
   }
-  await req.onUsage(chargesOf(response));
+  await req.onUsage(chargesOf(response, model));
   if (response.stop_reason === "refusal") {
     console.error("[coach] refusal", response.model, response.stop_details?.category ?? null);
     throw failed("refusal");

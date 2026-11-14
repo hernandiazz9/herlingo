@@ -25,9 +25,9 @@ Packs are saved on the device, so practising them again is free and works offlin
 out/                 static export (unchanged), served by Vercel as before
 api/coach/*.ts       one Vercel function per endpoint (Web-standard `export default { fetch }`)
 api/_lib/            shared server modules; the leading "_" keeps them from becoming routes
-  model.ts           model id + price table (the only place for both)
+  model.ts           model ids (Prepárate, Mi entrevista's two roles) + price table (the only place for both)
   schema.ts          zod schemas: pack, learner profile, requests, interview, Mi entrevista's deck (the only pack schema)
-  claude.ts          the only Claude call: structured output, cached system prompt, fallbacks
+  claude.ts          the only Claude call: structured output, cached system prompt, fallbacks where supported
   generators.ts      pack / interview generators (fake or real)
   prompts.ts         system prompts and user turns (see "Claude calls and prompt design")
   tts.ts             neural voice: edge-tts through `msedge-tts` (see "Voice (TTS)")
@@ -102,13 +102,13 @@ owner only, own budget) are specified in docs/mock-interview.md "API".
 | 403 | `forbidden` | `PUT /usage/` by a code that is not the owner; any Mi entrevista endpoint by a code that is not the owner: "Mi entrevista es solo para la cuenta del dueño." |
 | 404 | `no_deck` | `GET /deck/` before any `npm run deck:push`: "Todavía no hay tarjetas. Súbelas con npm run deck:push." |
 | 405 | `method_not_allowed` | Wrong method |
-| 429 | `daily_limit` | "Has llegado al límite de hoy. Vuelve mañana." (routes: "…de rutas de hoy…", episodes: "…de episodios de hoy…") |
-| 429 | `budget` | "Se ha agotado el presupuesto de este mes." |
+| 429 | `daily_limit` | "Has llegado al límite de hoy. Vuelve mañana." (routes: "…de rutas de hoy…", episodes: "…de episodios de hoy…", Mi entrevista: "…de respuestas de hoy…") |
+| 429 | `budget` | "Se ha agotado el presupuesto de este mes." (Mi entrevista's own budget: "Se ha agotado el presupuesto de Mi entrevista de este mes.") |
 | 429 | `refine_limit` | "Ya has ajustado esta situación 3 veces." |
 | 429 | `tts_limit` | "Has llegado al límite de audio de hoy. Vuelve mañana." The client never shows it: that line plays with `speechSynthesis` and is not requested again this session |
 | 409 | `unknown_pack` | Refinement of a pack id this server never issued to this code (or older than 180 days): "No puedo ajustar esta situación. Prepara una nueva." The client shows "Esta situación ya no se puede ajustar; crea una nueva." in the Ajustar card and disables it for that pack this session (`canRefine(pack)`); the pack still plays and practises |
 | 502 | `generation_failed` | Claude refused, hit `max_tokens`, returned invalid JSON, or API error; for routes and episodes also an answer the stored shape rejects. Nothing is stored |
-| 503 | `not_configured` | No access codes or no Anthropic key in production |
+| 503 | `not_configured` | No access codes or no Anthropic key in production; a Mi entrevista model (`COACH_INTERVIEWER_MODEL` / `COACH_FEEDBACK_MODEL`) missing from the price table |
 | 503 | `tts_unavailable` | Real TTS not available → the client uses `speechSynthesis` |
 | 500 | `internal` | Unexpected |
 
@@ -202,7 +202,12 @@ Plus `routes`, `avgRouteUsd`, `routesToday` (Modo rápido, below) and `episodes`
 `episodesToday` (Modo deporte, docs/sport.md): same meaning as the pack fields, each with its own
 daily counter.
 
-`PUT { capUsd: 0–1000 }` sets the monthly cap (owner only, else 403) and returns the same summary.
+`spentUsd`, `remainingUsd` and `mineUsd` are Prepárate's: Mi entrevista's spend is left out (it has
+its own budget); `tokens` counts every Claude call. The owner's summary also carries `mock` (Mi
+entrevista's budget, averages and today's answers; docs/mock-interview.md "Ledger").
+
+`PUT { capUsd?, mockCapUsd? }` (each 0–1000, at least one) sets Prepárate's monthly cap and/or Mi
+entrevista's (owner only, else 403) and returns the same summary.
 "Remaining" is cap − spent this month: Anthropic does not report a balance. The panel links to
 the Anthropic billing page: https://platform.claude.com/settings/billing
 
@@ -421,9 +426,12 @@ coach audio survives every app update.
 
 One non-streaming `client.beta.messages.create` per generation:
 
-- `model: COACH_MODEL` (`claude-sonnet-5-5`), `fallbacks: "default"` (beta
-  `server-side-fallback-2026-07-01`: a "cyber" or "frontier_llm" decline is re-run on Claude
-  Sonnet 5 inside the same call; other declines come back as refusals).
+- `model`: the request's `model`, default `COACH_MODEL` (`claude-sonnet-5-5`; every Prepárate call
+  uses the default; Mi entrevista passes its role's model). `fallbacks: "default"` (beta
+  `server-side-fallback-2026-07-01`: on Sonnet 5.5 a "cyber" or "frontier_llm" decline is re-run
+  on Claude Sonnet 5 inside the same call; other declines come back as refusals), sent only when
+  `supportsFallback(model)` (`api/_lib/model.ts`): Haiku 5.5 has no server-side fallback, so
+  neither the beta nor the parameter is sent for it.
 - `output_config.format` = JSON schema from the zod schema (`betaZodOutputFormat`). The SDK sends
   only what structured outputs enforce: lengths, item counts and `enum`/`const` values travel as
   schema *descriptions* (the model sees them, the API does not enforce them; only `minItems` 0/1
@@ -444,8 +452,8 @@ One non-streaming `client.beta.messages.create` per generation:
 
 Billing comes first: as soon as a response arrives its tokens go to the ledger, per model
 attempt (a fallback-served response is billed from `usage.iterations`, the declined attempt at
-Sonnet 5.5 prices and the serving one at Sonnet 5's; otherwise top-level `usage` and the model
-that answered). Then every failure is a 502 `generation_failed` with a Spanish message and
+the requested model's prices and the serving one at the fallback's, e.g. Sonnet 5.5 then Sonnet 5;
+otherwise top-level `usage` and the model that answered). Then every failure is a 502 `generation_failed` with a Spanish message and
 nothing is stored. Slots (daily generation, interview step, refinement) are given back only when
 nothing was billed (no response: deadline, network or API error); a response that arrived and was
 then rejected (refusal, `max_tokens`, invalid JSON) was paid, so its slots stay used:
@@ -620,13 +628,15 @@ of `api/coach/tts.ts` run with production env (no `COACH_DEV`, no Anthropic key)
 
 ## Limits and ledger
 
-Checked in this order on every generation: access code → body → monthly budget (spent ≥ cap →
-429) → daily counters of the code → refinements of the pack → Claude. Each counter is an `incr`;
-over its limit → undo + 429.
+Checked in this order on every generation: access code → body → monthly budget (Prepárate's
+spent ≥ cap → 429) → daily counters of the code → refinements of the pack → Claude. Each counter
+is an `incr`; over its limit → undo + 429. Mi entrevista has its own budget and counters
+(docs/mock-interview.md "Ledger"): Prepárate's budget check counts this month's spend minus Mi
+entrevista's (`spend − mockSpend`), so neither feature's spend blocks the other.
 
 | Limit | Counted per | Default | Applies to |
 | --- | --- | --- | --- |
-| Monthly budget | all codes | 5 USD (`COACH_MONTHLY_CAP_USD`, then the owner's setting) | every Claude call |
+| Monthly budget | all codes | 5 USD (`COACH_MONTHLY_CAP_USD`, then the owner's setting) | every Prepárate Claude call (Mi entrevista: its own 10 USD, docs/mock-interview.md) |
 | Generations | code, day | 10 (`COACH_DAILY_LIMIT`) | new pack, refinement, first interview step |
 | Interview steps | code, day | generations × 11 = 110 | every interview step (10 questions + the assessment per interview), whatever `history` says |
 | Refinements | code, pack id | 3 | refinements of a pack id the server issued to that code (unknown id → 409) |
@@ -648,13 +658,14 @@ spend limit is the hard stop above it.
 Money is integer micro-dollars (1 USD = 1 000 000), added with `incrby`. Cost of a call =
 `input × input price + output × output price + cache write × write price + cache read × read
 price` (per million tokens), using the price of the model that answered (`api/_lib/model.ts`:
-source URL and review date at the top; an unknown model is priced at the most expensive entry).
+source URL and review date at the top; an unknown model is priced at the most expensive entry;
+Haiku 5.5 has a second set of prices for a request whose prompt is over 100 000 tokens).
 Days and months are counted in `COACH_TIMEZONE` (default Europe/Madrid).
 
 | Key (all prefixed `langlern:coach:`) | Value |
 | --- | --- |
-| `cap` | monthly cap, micro-USD (default `COACH_MONTHLY_CAP_USD` or 5) |
-| `<YYYY-MM>:spend` / `<YYYY-MM>:spend:<name>` | spent this month, total / per code |
+| `cap` | Prepárate's monthly cap, micro-USD (default `COACH_MONTHLY_CAP_USD` or 5) |
+| `<YYYY-MM>:spend` / `<YYYY-MM>:spend:<name>` | spent this month, total (Prepárate + Mi entrevista) / Prepárate per code |
 | `<YYYY-MM>:tokens:<input\|output\|cacheWrite\|cacheRead>` | tokens this month |
 | `<YYYY-MM>:packs` / `<YYYY-MM>:packSpend` | new packs and their cost (for the average) |
 | `<YYYY-MM-DD>:gen:<name>` | generations today by a code (expires after 2 days) |
@@ -666,6 +677,7 @@ Days and months are counted in `COACH_TIMEZONE` (default Europe/Madrid).
 | `<YYYY-MM>:episodes` / `<YYYY-MM>:episodeSpend` | AI episodes billed this month and their cost (for the average) |
 | `pack:<name>:<packId>` | a pack issued to a code; value = its refinements (expires after 180 days) |
 | `mock:deck:<name>` | Mi entrevista's deck, one JSON string (not a counter; docs/mock-interview.md "Deck") |
+| `mockCap`, `<YYYY-MM>:mockSpend`, `<YYYY-MM-DD>:mock:<name>`, `<YYYY-MM-DD>:mockturn:<name>`, `<YYYY-MM>:answers` … | Mi entrevista's cap, spend and counters (docs/mock-interview.md "Ledger") |
 
 Upstash Redis REST when `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are set and fake
 mode is off; otherwise an in-memory map (per process; local dev only). The `langlern:` prefix
@@ -757,7 +769,8 @@ A route is ~1.5–2k output tokens (low-effort thinking included) plus a ~2.5k-t
 ≈ 0.02 USD on Sonnet 5.5 (≈ 0.022 first call in 5 minutes, ≈ 0.016 when the prefix is read from
 cache), ≈ 250 routes with the 5 USD cap, ~10–15 s. Rejected alternative: Haiku 5.5 (0.10/0.50 USD
 per MTok, ≈ 0.002 USD per route, faster; Italian quality unproven, no server-side refusal
-fallback); switching is one constant plus a `PRICES` row. Measure on the first real routes.
+fallback); switching is the `model` option of `generateStructured` (Haiku 5.5 is in `PRICES` and
+gets no fallback parameter since plan 017). Measure on the first real routes.
 
 ### Client
 
@@ -868,6 +881,10 @@ storage and limits are designed in that plan.
 | `COACH_TTS_DAILY_LIMIT` | no | Voice lines per day per code (default 2000) |
 | `COACH_ROUTE_DAILY_LIMIT` | no | Quick routes per day per code (default 20) |
 | `COACH_EPISODE_DAILY_LIMIT` | no | Modo deporte AI episodes per day per code (default 5) |
+| `COACH_MOCK_MONTHLY_CAP_USD` | no | Mi entrevista's initial monthly cap (default 10, apart from Prepárate's) until the owner sets one |
+| `COACH_MOCK_DAILY_LIMIT` | no | Mi entrevista's corrected answers + reports per day per code (default 60; interviewer turns = 2 × this) |
+| `COACH_INTERVIEWER_MODEL` | no | Mi entrevista's interviewer model (default `claude-haiku-5-5`; must be in `PRICES`, else 503) |
+| `COACH_FEEDBACK_MODEL` | no | Mi entrevista's corrector model (default `claude-sonnet-5-5`; must be in `PRICES`, else 503) |
 | `COACH_TIMEZONE` | no | Time zone of days and months (default `Europe/Madrid`) |
 
 Local: `.env.local` (git-ignored; `.env.example` lists the names). Production: Vercel project

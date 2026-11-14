@@ -1,5 +1,6 @@
 /** Environment of the coach functions. Read lazily so the local dev server can set env first. */
 import { CoachError } from "./http.js";
+import { FEEDBACK_MODEL, INTERVIEWER_MODEL, isPriced } from "./model.js";
 
 export interface AccessEntry {
   name: string;
@@ -44,6 +45,9 @@ export const DAILY_GENERATIONS = 10;
 export const DAILY_TTS_LINES = 2000;
 export const DAILY_ROUTES = 20;
 export const DAILY_EPISODES = 5;
+/** Mi entrevista (docs/mock-interview.md "Budget"): its own monthly cap and answers per day. */
+export const DEFAULT_MOCK_CAP_USD = 10;
+export const DAILY_MOCK_ANSWERS = 60;
 
 /** Initial monthly cap until the owner changes it from the app. */
 export function defaultCapUsd(): number {
@@ -73,6 +77,37 @@ export function episodeDailyLimit(): number {
   const value = Number(process.env.COACH_EPISODE_DAILY_LIMIT);
   return Number.isInteger(value) && value > 0 ? value : DAILY_EPISODES;
 }
+
+/** Mi entrevista's initial monthly cap (apart from Prepárate's) until the owner changes it. */
+export function defaultMockCapUsd(): number {
+  const value = Number(process.env.COACH_MOCK_MONTHLY_CAP_USD);
+  return Number.isFinite(value) && value >= 0 && process.env.COACH_MOCK_MONTHLY_CAP_USD ? value : DEFAULT_MOCK_CAP_USD;
+}
+
+/** Mi entrevista's corrected answers + reports per day per code (interviewer turns: 2 × this). */
+export function mockDailyLimit(): number {
+  const value = Number(process.env.COACH_MOCK_DAILY_LIMIT);
+  return Number.isInteger(value) && value > 0 ? value : DAILY_MOCK_ANSWERS;
+}
+
+/**
+ * The model of a Mi entrevista role: the variable, else the default. One the price table does not
+ * list could not be billed exactly, so it is refused: 503 `not_configured`.
+ */
+function mockModel(variable: "COACH_INTERVIEWER_MODEL" | "COACH_FEEDBACK_MODEL", fallback: string): string {
+  const model = process.env[variable]?.trim() || fallback;
+  if (!isPriced(model)) {
+    console.error(`[coach] ${variable} is not in the price table`, model);
+    throw new CoachError(503, "not_configured", "Mi entrevista no está configurada todavía.");
+  }
+  return model;
+}
+
+/** The interviewer (follow-up turns): `COACH_INTERVIEWER_MODEL`, default Haiku 5.5. */
+export const interviewerModel = (): string => mockModel("COACH_INTERVIEWER_MODEL", INTERVIEWER_MODEL);
+
+/** The corrector (an answer's feedback and the simulacro report): `COACH_FEEDBACK_MODEL`, default Sonnet 5.5. */
+export const feedbackModel = (): string => mockModel("COACH_FEEDBACK_MODEL", FEEDBACK_MODEL);
 
 /** Days and months of the limits and the ledger are counted in this time zone. */
 export function timeZone(): string {

@@ -2,9 +2,9 @@
  * Spend ledger and limits. Every key starts with `langlern:` (the Upstash database may be shared).
  * Money is stored as integer micro-dollars (1 USD = 1 000 000) and only ever `incrby`'d.
  *
- *   langlern:coach:cap                          monthly cap (micro-USD), set by the owner
- *   langlern:coach:<YYYY-MM>:spend              spent this month, all codes
- *   langlern:coach:<YYYY-MM>:spend:<name>       spent this month by one access code
+ *   langlern:coach:cap                          Prepárate's monthly cap (micro-USD), set by the owner
+ *   langlern:coach:<YYYY-MM>:spend              spent this month, all codes, Prepárate + Mi entrevista
+ *   langlern:coach:<YYYY-MM>:spend:<name>       spent this month on Prepárate by one access code
  *   langlern:coach:<YYYY-MM>:tokens:<kind>      input | output | cacheWrite | cacheRead
  *   langlern:coach:<YYYY-MM>:packs              new packs generated (refinements excluded)
  *   langlern:coach:<YYYY-MM>:packSpend          what those packs cost
@@ -19,12 +19,34 @@
  *   langlern:coach:<YYYY-MM-DD>:episode:<name>  AI episodes today by one code (expires in 2 days)
  *   langlern:coach:pack:<name>:<packId>         a pack this server issued to one code, and its
  *                                               refinements (expires in 180 days)
+ *   langlern:coach:mock:deck:<name>             Mi entrevista's deck, one JSON string (deck.ts; not a counter)
  *
- * A slot (generation, step, refinement, route, episode) is given back only when the call failed before Claude
- * billed anything: once a response has been charged, the slot stays used.
+ * Mi entrevista (docs/mock-interview.md "Ledger"), its own budget and counters:
+ *   langlern:coach:mockCap                      its monthly cap (micro-USD), set by the owner
+ *   langlern:coach:<YYYY-MM>:mockSpend          its spend this month (also in `spend`, never in `spend:<name>`)
+ *   langlern:coach:<YYYY-MM>:answers            corrected answers billed / answerSpend = their cost
+ *   langlern:coach:<YYYY-MM>:turns              interviewer turns billed / turnSpend = their cost
+ *   langlern:coach:<YYYY-MM>:reports            simulacro reports billed / reportSpend = their cost
+ *   langlern:coach:<YYYY-MM-DD>:mock:<name>     answers + reports today by one code (expires in 2 days)
+ *   langlern:coach:<YYYY-MM-DD>:mockturn:<name> interviewer turns today by one code (expires in 2 days)
+ *
+ * Prepárate's budget is `spend − mockSpend` against `cap`; Mi entrevista's is `mockSpend` against
+ * `mockCap`: neither feature's spend blocks the other.
+ *
+ * A slot (generation, step, refinement, route, episode, answer, turn) is given back only when the call failed
+ * before Claude billed anything: once a response has been charged, the slot stays used.
  */
 import type { Caller } from "./access.js";
-import { dailyLimit, defaultCapUsd, episodeDailyLimit, routeDailyLimit, timeZone, ttsDailyLimit } from "./config.js";
+import {
+  dailyLimit,
+  defaultCapUsd,
+  defaultMockCapUsd,
+  episodeDailyLimit,
+  mockDailyLimit,
+  routeDailyLimit,
+  timeZone,
+  ttsDailyLimit,
+} from "./config.js";
 import { CoachError } from "./http.js";
 import { costMicroUsd, sumUsage, type Charge } from "./model.js";
 import { LIMITS } from "./schema.js";
@@ -36,7 +58,11 @@ const DAY_TTL = 2 * 24 * 3600;
 const REFINE_TTL = 180 * 24 * 3600;
 const TOKEN_KINDS = ["input", "output", "cacheWrite", "cacheRead"] as const;
 
-export type CallKind = "pack" | "refine" | "interview" | "route" | "episode";
+export type CallKind = "pack" | "refine" | "interview" | "route" | "episode" | MockCallKind;
+/** Mi entrevista's calls: an interviewer turn, an answer's feedback, a simulacro report. */
+export type MockCallKind = "turn" | "answer" | "report";
+
+const isMock = (kind: CallKind): kind is MockCallKind => kind === "turn" || kind === "answer" || kind === "report";
 
 function periods(now = new Date()): { month: string; day: string } {
   const day = new Intl.DateTimeFormat("en-CA", {
@@ -65,6 +91,13 @@ const keys = {
   route: (day: string, name: string) => `${PREFIX}:${day}:route:${name}`,
   episode: (day: string, name: string) => `${PREFIX}:${day}:episode:${name}`,
   pack: (name: string, packId: string) => `${PREFIX}:pack:${name}:${packId}`,
+  mockCap: () => `${PREFIX}:mockCap`,
+  mockSpend: (month: string) => `${PREFIX}:${month}:mockSpend`,
+  /** Per Mi entrevista call kind: billed calls this month and their cost. */
+  mockCount: (month: string, kind: MockCallKind) => `${PREFIX}:${month}:${kind}s`,
+  mockKindSpend: (month: string, kind: MockCallKind) => `${PREFIX}:${month}:${kind}Spend`,
+  mock: (day: string, name: string) => `${PREFIX}:${day}:mock:${name}`,
+  mockTurn: (day: string, name: string) => `${PREFIX}:${day}:mockturn:${name}`,
 };
 
 const toUsd = (micro: number) => Math.round(micro) / MICRO;
@@ -77,12 +110,28 @@ export async function setCapUsd(capUsd: number): Promise<void> {
   await getStore().set(keys.cap(), Math.round(capUsd * MICRO));
 }
 
-/** 429 once this month's spend has reached the cap. */
+async function mockCapMicro(): Promise<number> {
+  return (await getStore().get(keys.mockCap())) ?? Math.round(defaultMockCapUsd() * MICRO);
+}
+
+export async function setMockCapUsd(capUsd: number): Promise<void> {
+  await getStore().set(keys.mockCap(), Math.round(capUsd * MICRO));
+}
+
+/** Prepárate: 429 once this month's spend without Mi entrevista's has reached the cap. */
 export async function assertBudget(): Promise<void> {
-  const store = getStore();
-  const [spent, cap] = await Promise.all([store.get(keys.spend(periods().month)), capMicro()]);
-  if ((spent ?? 0) >= cap) {
+  const { month } = periods();
+  const [[spent, mock], cap] = await Promise.all([getStore().mget([keys.spend(month), keys.mockSpend(month)]), capMicro()]);
+  if ((spent ?? 0) - (mock ?? 0) >= cap) {
     throw new CoachError(429, "budget", "Se ha agotado el presupuesto de este mes.");
+  }
+}
+
+/** Mi entrevista: 429 once its own spend this month has reached its own cap. */
+export async function assertMockBudget(): Promise<void> {
+  const [spent, cap] = await Promise.all([getStore().get(keys.mockSpend(periods().month)), mockCapMicro()]);
+  if ((spent ?? 0) >= cap) {
+    throw new CoachError(429, "budget", "Se ha agotado el presupuesto de Mi entrevista de este mes.");
   }
 }
 
@@ -144,6 +193,32 @@ export async function reserveInterviewStep(caller: Caller): Promise<Refund> {
   return (await take(keys.steps(periods().day, caller.name), interviewStepsPerDay(), DAY_TTL, dailyLimitError)).refund;
 }
 
+const MOCK_DAILY_MESSAGE = "Has llegado al límite de respuestas de hoy. Vuelve mañana.";
+
+/**
+ * Takes one of today's Mi entrevista answers for this code: an answer's feedback or a simulacro
+ * report. 429 `daily_limit` when none is left. Returns a refund.
+ */
+export async function reserveMockAnswer(caller: Caller): Promise<Refund> {
+  return (
+    await take(keys.mock(periods().day, caller.name), mockDailyLimit(), DAY_TTL, () => {
+      return new CoachError(429, "daily_limit", MOCK_DAILY_MESSAGE);
+    })
+  ).refund;
+}
+
+/** Interviewer turns a code may take per day: two per answer. */
+export const mockTurnsPerDay = (): number => mockDailyLimit() * 2;
+
+/** Takes one of today's interviewer turns for this code (429 `daily_limit` when none is left). Returns a refund. */
+export async function reserveMockTurn(caller: Caller): Promise<Refund> {
+  return (
+    await take(keys.mockTurn(periods().day, caller.name), mockTurnsPerDay(), DAY_TTL, () => {
+      return new CoachError(429, "daily_limit", MOCK_DAILY_MESSAGE);
+    })
+  ).refund;
+}
+
 /** Records a pack id this server just issued to the code: only those can be refined. */
 export async function registerPack(caller: Caller, packId: string): Promise<void> {
   await getStore().set(keys.pack(caller.name, packId), 0, REFINE_TTL);
@@ -179,15 +254,22 @@ export async function reserveTts(caller: Caller): Promise<Refund> {
   ).refund;
 }
 
-/** Adds one Claude call (every model attempt in it) to the ledger. Returns its cost in micro-dollars. */
+/**
+ * Adds one Claude call (every model attempt in it) to the ledger. Returns its cost in micro-dollars.
+ * A Mi entrevista call goes to `spend` and `mockSpend` (never to `spend:<name>`, Prepárate's per
+ * code); `mockSpend` is written first, so Prepárate's `spend − mockSpend` never counts it, even for a moment.
+ */
 export async function recordCall(caller: Caller, kind: CallKind, charges: Charge[]): Promise<number> {
   const store = getStore();
   const { month } = periods();
   const cost = charges.reduce((sum, c) => sum + costMicroUsd(c.model, c.usage), 0);
   const usage = sumUsage(charges);
+  if (isMock(kind)) await store.incrby(keys.mockSpend(month), cost);
   const writes: Promise<number>[] = [
     store.incrby(keys.spend(month), cost),
-    store.incrby(keys.spendBy(month, caller.name), cost),
+    ...(isMock(kind)
+      ? [store.incrby(keys.mockCount(month, kind), 1), store.incrby(keys.mockKindSpend(month, kind), cost)]
+      : [store.incrby(keys.spendBy(month, caller.name), cost)]),
     ...TOKEN_KINDS.filter((k) => usage[k] > 0).map((k) => store.incrby(keys.tokens(month, k), usage[k])),
   ];
   if (kind === "pack") writes.push(store.incrby(keys.packs(month), 1), store.incrby(keys.packSpend(month), cost));
@@ -197,11 +279,29 @@ export async function recordCall(caller: Caller, kind: CallKind, charges: Charge
   return cost;
 }
 
-export interface UsageSummary {
-  month: string;
+/** Mi entrevista's part of `GET /usage/` (owner only): its own budget, averages and today's answers. */
+export interface MockUsage {
   spentUsd: number;
   capUsd: number;
   remainingUsd: number;
+  /** Billed this month (a failed attempt counts, since it was paid) and their average cost. */
+  answers: number;
+  avgAnswerUsd: number;
+  turns: number;
+  avgTurnUsd: number;
+  reports: number;
+  avgReportUsd: number;
+  /** The caller's answers + reports today (interviewer turns have their own, larger counter). */
+  today: { used: number; limit: number };
+}
+
+export interface UsageSummary {
+  month: string;
+  /** Prepárate's: spend, cap and remaining leave Mi entrevista out (it has its own, in `mock`). */
+  spentUsd: number;
+  capUsd: number;
+  remainingUsd: number;
+  /** Every Claude call this month, both features. */
   tokens: { input: number; output: number; cacheRead: number; cacheWrite: number };
   packs: number;
   avgPackUsd: number;
@@ -218,15 +318,48 @@ export interface UsageSummary {
   /** The caller's AI episodes today (their own counter). */
   episodesToday: { used: number; limit: number };
   isOwner: boolean;
-  /** Spent this month by the caller's own code. */
+  /** Spent on Prepárate this month by the caller's own code. */
   mineUsd: number;
+  /** Mi entrevista (owner only, like the feature): absent for any other code. */
+  mock?: MockUsage;
+}
+
+const average = (spend: number, count: number) => (count > 0 ? toUsd(spend / count) : 0);
+
+async function readMockUsage(caller: Caller, month: string, day: string): Promise<MockUsage> {
+  const [spent, answers, answerSpend, turns, turnSpend, reports, reportSpend, used] = (
+    await getStore().mget([
+      keys.mockSpend(month),
+      keys.mockCount(month, "answer"),
+      keys.mockKindSpend(month, "answer"),
+      keys.mockCount(month, "turn"),
+      keys.mockKindSpend(month, "turn"),
+      keys.mockCount(month, "report"),
+      keys.mockKindSpend(month, "report"),
+      keys.mock(day, caller.name),
+    ])
+  ).map((v) => v ?? 0);
+  const cap = await mockCapMicro();
+  return {
+    spentUsd: toUsd(spent),
+    capUsd: toUsd(cap),
+    remainingUsd: toUsd(Math.max(cap - spent, 0)),
+    answers,
+    avgAnswerUsd: average(answerSpend, answers),
+    turns,
+    avgTurnUsd: average(turnSpend, turns),
+    reports,
+    avgReportUsd: average(reportSpend, reports),
+    today: { used: Math.min(used, mockDailyLimit()), limit: mockDailyLimit() },
+  };
 }
 
 export async function readUsage(caller: Caller): Promise<UsageSummary> {
   const store = getStore();
   const { month, day } = periods();
   const [
-    spent,
+    total,
+    mockSpent,
     mine,
     input,
     output,
@@ -244,6 +377,7 @@ export async function readUsage(caller: Caller): Promise<UsageSummary> {
   ] = (
     await store.mget([
       keys.spend(month),
+      keys.mockSpend(month),
       keys.spendBy(month, caller.name),
       ...TOKEN_KINDS.map((k) => keys.tokens(month, k)),
       keys.packs(month),
@@ -257,7 +391,8 @@ export async function readUsage(caller: Caller): Promise<UsageSummary> {
       keys.episode(day, caller.name),
     ])
   ).map((v) => v ?? 0);
-  const cap = await capMicro();
+  const [cap, mock] = await Promise.all([capMicro(), caller.isOwner ? readMockUsage(caller, month, day) : undefined]);
+  const spent = Math.max(total - mockSpent, 0);
   return {
     month,
     spentUsd: toUsd(spent),
@@ -265,15 +400,16 @@ export async function readUsage(caller: Caller): Promise<UsageSummary> {
     remainingUsd: toUsd(Math.max(cap - spent, 0)),
     tokens: { input, output, cacheRead, cacheWrite },
     packs,
-    avgPackUsd: packs > 0 ? toUsd(packSpend / packs) : 0,
+    avgPackUsd: average(packSpend, packs),
     today: { used: Math.min(used, dailyLimit()), limit: dailyLimit() },
     routes,
-    avgRouteUsd: routes > 0 ? toUsd(routeSpend / routes) : 0,
+    avgRouteUsd: average(routeSpend, routes),
     routesToday: { used: Math.min(routesUsed, routeDailyLimit()), limit: routeDailyLimit() },
     episodes,
-    avgEpisodeUsd: episodes > 0 ? toUsd(episodeSpend / episodes) : 0,
+    avgEpisodeUsd: average(episodeSpend, episodes),
     episodesToday: { used: Math.min(episodesUsed, episodeDailyLimit()), limit: episodeDailyLimit() },
     isOwner: caller.isOwner,
     mineUsd: toUsd(mine),
+    ...(mock ? { mock } : {}),
   };
 }
