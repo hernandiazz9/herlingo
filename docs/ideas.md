@@ -85,3 +85,26 @@ joined mp3 per episode so it plays with the screen locked).
 
 Starting point: `src/lib/audio/`, "Escuchar todo" in `src/components/stories/StoryReader.tsx`,
 Prepárate (`docs/coach.md`, `api/coach/`, generated audio in `src/lib/audio/generated.ts`).
+
+## 4. "Mi entrevista": an AI interviewer to practise job interviews in English by voice (2026-11-14)
+
+→ Designed with Hernán on 2026-11-14: plans/017-mi-entrevista.md (approved the same day). The contract
+moves to docs/mock-interview.md in its first server task.
+
+**What he wants**
+- An interviewer with an **Australian-English voice** asks one of his prepared interview questions;
+  he **answers aloud**, the app transcribes it, Claude **corrects** the answer (mistakes, anything
+  claimed that is not in his model answer, fluency, a better version read aloud) and **follows up**
+  like a real interviewer ("tell me more", "what was the result?").
+- Two modes: practise one card, and a mock interview of 5–8 questions with the corrections at the end.
+- What is hardest for him: speaking fluently without getting stuck, and explaining technical work.
+- 30–45 minutes a day, plus listening while running (Modo deporte).
+- Measured like the rest of the AI features: cost per answer, latency and seeded evals of the
+  correction quality.
+
+**Privacy**: his cards and answers are personal and this repo is public: they live only in a
+private deck on the server (owner's code) and on his device, never in git or the build.
+
+Starting point: the cards and the correction prompt of the HDDev centre's English panel (outside
+this repo), Prepárate (`docs/coach.md`, `api/_lib/claude.ts`, the ledger), speech input
+(`docs/speech.md`), live TTS (`api/_lib/tts.ts`) and Modo deporte (`docs/sport.md`).
