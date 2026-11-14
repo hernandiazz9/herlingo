@@ -15,3 +15,5 @@ next-env.d.ts
 .vercel
 npm-debug.log*
 src/lib/content/generated/
+# Mi entrevista evals: real cases and outputs stay local (docs/mock-interview.md "Evals")
+evals/**/private/

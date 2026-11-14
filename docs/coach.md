@@ -16,6 +16,8 @@ Packs are saved on the device, so practising them again is free and works offlin
   server from its own ledger, never from counts the client sends (see "Limits and ledger").
 - **2026-10-13, Hernán:** "Modo rápido" (quick routes, plan 015): a second, lighter generation
   for getting out of a jam right now. Decisions in "Modo rápido" below.
+- **2026-11-14, Hernán:** "Mi entrevista" (plan 017): an AI mock interviewer by voice over a
+  private deck, owner only, with its own budget. Contract and endpoints in docs/mock-interview.md.
 
 ## Architecture
 
@@ -24,17 +26,19 @@ out/                 static export (unchanged), served by Vercel as before
 api/coach/*.ts       one Vercel function per endpoint (Web-standard `export default { fetch }`)
 api/_lib/            shared server modules; the leading "_" keeps them from becoming routes
   model.ts           model id + price table (the only place for both)
-  schema.ts          zod schemas: pack, learner profile, requests, interview (the only pack schema)
+  schema.ts          zod schemas: pack, learner profile, requests, interview, Mi entrevista's deck (the only pack schema)
   claude.ts          the only Claude call: structured output, cached system prompt, fallbacks
   generators.ts      pack / interview generators (fake or real)
   prompts.ts         system prompts and user turns (see "Claude calls and prompt design")
   tts.ts             neural voice: edge-tts through `msedge-tts` (see "Voice (TTS)")
   fake.ts            fake-mode fixtures and the silent mp3
   access.ts          x-coach-code check
-  ledger.ts, store.ts  spend ledger and limits (Upstash Redis or in-memory)
+  ledger.ts, store.ts  spend ledger and limits (Upstash Redis or in-memory); store.ts also keeps text (the deck)
+  deck.ts            Mi entrevista's private deck: owner check, load/save, PUT body (docs/mock-interview.md)
   languages.ts       language metadata from content/<lang>/pack.json (voices, locale)
   config.ts, http.ts env, JSON responses, error handling
 scripts/coach/dev.ts local server: app + /api on one origin (npm run dev:coach / start:coach)
+scripts/mock-interview/push-deck.ts  npm run deck:push: the private deck → PUT /api/coach/deck/
 ```
 
 - `src/` never imports zod at runtime, `@anthropic-ai/sdk`, `@upstash/redis` or anything under
@@ -88,11 +92,15 @@ trailing-slash form; the local server accepts both).
 Errors: `{ "error": { "code": string, "message": string } }`. `message` is Spain Spanish UI copy:
 show it as is.
 
+Mi entrevista's endpoints (`/api/coach/deck/`, `/api/coach/interviewer/`, `/api/coach/feedback/`;
+owner only, own budget) are specified in docs/mock-interview.md "API".
+
 | Status | `code` | When |
 | --- | --- | --- |
-| 400 | `bad_request` | Invalid body (too long, unknown language, disallowed voice, refine mismatch) |
+| 400 | `bad_request` | Invalid body (too long, unknown language, disallowed voice, refine mismatch; a deck over 512 KB or invalid) |
 | 401 | `unauthorized` | Missing or wrong code → the app asks for the code again |
-| 403 | `forbidden` | `PUT /usage/` by a code that is not the owner |
+| 403 | `forbidden` | `PUT /usage/` by a code that is not the owner; any Mi entrevista endpoint by a code that is not the owner: "Mi entrevista es solo para la cuenta del dueño." |
+| 404 | `no_deck` | `GET /deck/` before any `npm run deck:push`: "Todavía no hay tarjetas. Súbelas con npm run deck:push." |
 | 405 | `method_not_allowed` | Wrong method |
 | 429 | `daily_limit` | "Has llegado al límite de hoy. Vuelve mañana." (routes: "…de rutas de hoy…", episodes: "…de episodios de hoy…") |
 | 429 | `budget` | "Se ha agotado el presupuesto de este mes." |
@@ -657,6 +665,7 @@ Days and months are counted in `COACH_TIMEZONE` (default Europe/Madrid).
 | `<YYYY-MM-DD>:episode:<name>` | AI episodes today by a code (expires after 2 days) |
 | `<YYYY-MM>:episodes` / `<YYYY-MM>:episodeSpend` | AI episodes billed this month and their cost (for the average) |
 | `pack:<name>:<packId>` | a pack issued to a code; value = its refinements (expires after 180 days) |
+| `mock:deck:<name>` | Mi entrevista's deck, one JSON string (not a counter; docs/mock-interview.md "Deck") |
 
 Upstash Redis REST when `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are set and fake
 mode is off; otherwise an in-memory map (per process; local dev only). The `langlern:` prefix

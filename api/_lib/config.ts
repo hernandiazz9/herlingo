@@ -33,6 +33,12 @@ export function ownerName(): string | undefined {
   return process.env.COACH_OWNER?.trim() || undefined;
 }
 
+/** The owner entry's code (`npm run deck:push` uploads with it); undefined unless both variables name it. */
+export function ownerCode(): string | undefined {
+  const owner = ownerName();
+  return owner ? accessEntries().find((entry) => entry.name === owner)?.code : undefined;
+}
+
 export const DEFAULT_CAP_USD = 5;
 export const DAILY_GENERATIONS = 10;
 export const DAILY_TTS_LINES = 2000;

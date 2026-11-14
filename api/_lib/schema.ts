@@ -1,8 +1,9 @@
 /**
  * Prepárate wire schemas (zod), server only: the pack, the quick route, the Modo deporte episode, the
- * learner context, every request body and the interview. The only definition of the pack, route and
- * episode schemas; docs/coach.md and docs/sport.md mirror them for the client, which gets plain
- * TypeScript types (src/ never imports zod).
+ * learner context, every request body, the interview and Mi entrevista's deck. The only definition
+ * of the pack, route, episode and deck schemas; docs/coach.md, docs/sport.md and
+ * docs/mock-interview.md mirror them for the client, which gets plain TypeScript types (src/ never
+ * imports zod).
  */
 import { z } from "zod";
 
@@ -389,3 +390,93 @@ export const TtsRequest = z.object({
 export const CapRequest = z.object({
   capUsd: z.number().min(0).max(1000),
 });
+
+// ---- Mi entrevista: the private deck (docs/mock-interview.md "Deck") ----
+
+/**
+ * Sizes of the interview deck. Every English line (question, variant, model-answer sentence,
+ * phrase) is spoken as one `/api/coach/tts/` line, so none goes over `LIMITS.ttsText` (300).
+ */
+export const DECK_LIMITS = {
+  /** `PUT /api/coach/deck/` body, in bytes (UTF-8). */
+  bytes: 512 * 1024,
+  id: 64,
+  learner: 600,
+  blocks: 20,
+  cards: 200,
+  title: 80,
+  intro: 400,
+  variants: 5,
+  answer: { min: 1, max: 20 },
+  anchors: 8,
+  anchor: 80,
+  phrases: 10,
+  note: 300,
+  tip: 600,
+  pending: 600,
+  seconds: { min: 10, max: 300 },
+} as const;
+const D = DECK_LIMITS;
+
+const deckId = z
+  .string()
+  .min(1)
+  .max(D.id)
+  .regex(/^[A-Za-z0-9_-]+$/, "letters, digits, - and _ only");
+/** An English line read aloud (question, variant, sentence, phrase). */
+const spoken = z.string().min(1).max(LIMITS.ttsText);
+/** One sentence of the model answer or a key phrase: English and its Spain Spanish meaning. */
+const deckLine = z.object({ en: spoken, es: z.string().min(1).max(LIMITS.ttsText) });
+
+export const DeckBlock = z.object({
+  id: deckId,
+  title: z.string().min(1).max(D.title),
+  intro: z.string().max(D.intro).optional(),
+});
+export type DeckBlock = z.infer<typeof DeckBlock>;
+
+export const DeckCard = z.object({
+  id: deckId,
+  block: deckId,
+  title: z.string().min(1).max(D.title),
+  question: spoken,
+  variants: z.array(spoken).max(D.variants),
+  answer: z.array(deckLine).min(D.answer.min).max(D.answer.max),
+  anchors: z.array(z.string().min(1).max(D.anchor)).max(D.anchors),
+  phrases: z.array(deckLine.extend({ note: z.string().max(D.note).optional() })).max(D.phrases),
+  tip: z.string().max(D.tip).optional(),
+  /** Part of the model answer is not confirmed yet: «Falta un dato», and the corrector is told. */
+  pending: z.string().max(D.pending).nullable().optional(),
+  /** Target length of a spoken answer. */
+  seconds: z.number().int().min(D.seconds.min).max(D.seconds.max).optional(),
+});
+export type DeckCard = z.infer<typeof DeckCard>;
+
+/** What the counts cannot say: ids are unique and every card's block exists. */
+function checkDeck(deck: { blocks: DeckBlock[]; cards: DeckCard[] }, ctx: z.RefinementCtx): void {
+  const blocks = new Set<string>();
+  deck.blocks.forEach((block, i) => {
+    if (blocks.has(block.id)) ctx.addIssue({ code: "custom", path: ["blocks", i, "id"], message: "duplicate block id" });
+    blocks.add(block.id);
+  });
+  const cards = new Set<string>();
+  deck.cards.forEach((card, i) => {
+    if (cards.has(card.id)) ctx.addIssue({ code: "custom", path: ["cards", i, "id"], message: "duplicate card id" });
+    cards.add(card.id);
+    if (!blocks.has(card.block)) ctx.addIssue({ code: "custom", path: ["cards", i, "block"], message: "unknown block" });
+  });
+}
+
+/** The owner's private deck: uploaded by `npm run deck:push`, kept in Upstash and on the device. */
+export const InterviewDeck = z
+  .object({
+    version: z.literal(1),
+    /** ISO date of the source file. */
+    generated: z.string().min(1).max(40),
+    /** Neutral description of the learner for the prompts; absent → a generic one. */
+    learner: z.string().max(D.learner).optional(),
+    blocks: z.array(DeckBlock).min(1).max(D.blocks),
+    cards: z.array(DeckCard).min(1).max(D.cards),
+  })
+  .superRefine(checkDeck);
+export type InterviewDeck = z.infer<typeof InterviewDeck>;

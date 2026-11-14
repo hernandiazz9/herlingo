@@ -26,6 +26,7 @@
     "league:local": "tsx scripts/league-local/local.ts",
     "league:seed": "tsx scripts/league-local/seed.ts",
     "league:local:check": "tsx scripts/league-local/check.ts",
+    "deck:push": "tsx scripts/mock-interview/push-deck.ts",
     "verify": "npm run lint && npm run content:check && npm run typecheck && npm run build"
   },
   "dependencies": {

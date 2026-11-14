@@ -5,7 +5,15 @@
  */
 import type { LanguageMeta } from "./languages.js";
 import type { TokenUsage } from "./model.js";
-import type { Assessment, GeneratedEpisode, GeneratedPack, GeneratedRoute, InterviewQuestion, InterviewStep } from "./schema.js";
+import type {
+  Assessment,
+  GeneratedEpisode,
+  GeneratedPack,
+  GeneratedRoute,
+  InterviewDeck,
+  InterviewQuestion,
+  InterviewStep,
+} from "./schema.js";
 
 /** Plausible token counts of a real call, so the ledger and the usage panel show real-looking numbers. */
 export const FAKE_PACK_USAGE: TokenUsage = { input: 1400, output: 2600, cacheWrite: 0, cacheRead: 2100 };
@@ -571,6 +579,206 @@ export function fakeInterviewStep(meta: LanguageMeta, answered: number): Intervi
   const questions = questionsFor(meta);
   if (answered < questions.length) return { done: false, question: questions[answered] };
   return { done: true, assessment: FIXTURES[meta.lang]?.assessment ?? PLACEHOLDER_ASSESSMENT };
+}
+
+/**
+ * Mi entrevista's deck in fake mode (docs/mock-interview.md "Deck"): an invented, generic persona (a
+ * QA analyst at a made-up company), 2 blocks × 3 cards, one card per block with `pending`. Never
+ * anyone's real cards: the real deck lives only in Upstash and on the owner's device.
+ */
+const FAKE_DECK: InterviewDeck = {
+  version: 1,
+  generated: "2026-11-14",
+  learner: "A Spanish-speaking QA analyst with four years of experience; B2 English.",
+  blocks: [
+    { id: "start", title: "Para empezar", intro: "Las preguntas con las que suele abrirse una entrevista." },
+    { id: "star", title: "Situaciones (STAR)", intro: "Un caso real: situación, tarea, acción y resultado." },
+  ],
+  cards: [
+    {
+      id: "start-overview",
+      block: "start",
+      title: "Tu trayectoria",
+      question: "Could you give me a quick overview of your background?",
+      variants: ["Walk me through your career so far.", "How did you end up working in quality assurance?"],
+      answer: [
+        {
+          en: "I'm a QA analyst, and I've spent the last four years testing web and mobile apps.",
+          es: "Soy analista de QA y llevo cuatro años probando apps web y móviles.",
+        },
+        {
+          en: "At Larkspur Freight, a small logistics company, I looked after the regression suite for the booking app.",
+          es: "En Larkspur Freight, una pequeña empresa de logística, me ocupaba de la batería de regresión de la app de reservas.",
+        },
+        {
+          en: "Before that, I worked on a hotel front desk, which taught me to stay calm with unhappy customers.",
+          es: "Antes trabajé en la recepción de un hotel, donde aprendí a mantener la calma con clientes descontentos.",
+        },
+        { en: "Now I'd like to move into test automation.", es: "Ahora me gustaría pasar a la automatización de pruebas." },
+      ],
+      anchors: ["QA analyst", "four years", "regression suite", "hotel front desk", "test automation"],
+      phrases: [
+        { en: "I've spent the last four years …", es: "Llevo cuatro años …" },
+        { en: "I looked after …", es: "Me ocupaba de …", note: "Más natural que «I was in charge of» para el día a día." },
+        { en: "… which taught me to …", es: "… lo que me enseñó a …" },
+        { en: "Now I'd like to move into …", es: "Ahora me gustaría pasar a …" },
+      ],
+      tip: "Presente, pasado y futuro, en menos de un minuto.",
+      pending: null,
+      seconds: 60,
+    },
+    {
+      id: "start-why",
+      block: "start",
+      title: "Por qué este puesto",
+      question: "What made you apply for this position?",
+      variants: ["Why does this role appeal to you?"],
+      answer: [
+        {
+          en: "Your team builds its own automation framework, and that's exactly what I want to learn.",
+          es: "Vuestro equipo construye su propio framework de automatización, y eso es justo lo que quiero aprender.",
+        },
+        {
+          en: "I also like that testers work inside the product teams, not at the end of the process.",
+          es: "También me gusta que los testers trabajen dentro de los equipos de producto, no al final del proceso.",
+        },
+      ],
+      anchors: ["automation framework", "learn", "inside the product teams"],
+      phrases: [
+        { en: "That's exactly what I want to …", es: "Es justo lo que quiero …" },
+        { en: "I also like that …", es: "También me gusta que …" },
+      ],
+      tip: "Habla de ellos, no solo de ti: menciona algo concreto del puesto.",
+      pending: null,
+      seconds: 45,
+    },
+    {
+      id: "start-strength",
+      block: "start",
+      title: "Tu punto fuerte",
+      question: "What would your last manager say you're best at?",
+      variants: ["What's your biggest strength?"],
+      answer: [
+        {
+          en: "She'd probably say I'm good at writing bug reports that developers can act on straight away.",
+          es: "Probablemente diría que se me da bien escribir informes de errores con los que los desarrolladores pueden ponerse a trabajar enseguida.",
+        },
+        {
+          en: "I always include the steps, the expected result and a short screen recording.",
+          es: "Siempre incluyo los pasos, el resultado esperado y una grabación corta de la pantalla.",
+        },
+        {
+          en: "Over a few months, fewer of my reports were sent back for more detail.",
+          es: "En unos meses, me devolvieron menos informes para pedir más detalle.",
+        },
+      ],
+      anchors: ["bug reports", "steps", "expected result", "screen recording"],
+      phrases: [
+        { en: "She'd probably say …", es: "Probablemente diría …" },
+        { en: "… that developers can act on", es: "… con los que los desarrolladores pueden ponerse a trabajar", note: "«Act on» = actuar a partir de algo." },
+        { en: "fewer … were sent back", es: "me devolvieron menos …" },
+      ],
+      tip: "Un punto fuerte y una prueba concreta, sin inventar cifras.",
+      pending: "Falta la cifra de informes devueltos: no des un número hasta confirmarlo.",
+      seconds: 45,
+    },
+    {
+      id: "star-late-bug",
+      block: "star",
+      title: "Un error a última hora",
+      question: "Tell me about a time you found a serious bug just before a release.",
+      variants: ["Have you ever had to stop a release? What happened?"],
+      answer: [
+        {
+          en: "Two days before a release, I noticed that bookings made after midnight were saved with the wrong date.",
+          es: "Dos días antes de una versión, vi que las reservas hechas después de medianoche se guardaban con la fecha equivocada.",
+        },
+        { en: "My job was to make sure the team understood the risk quickly.", es: "Mi tarea era que el equipo entendiera el riesgo rápidamente." },
+        {
+          en: "I wrote down the exact steps, showed them to the lead developer and suggested a test for every time zone we support.",
+          es: "Apunté los pasos exactos, se los enseñé al desarrollador principal y propuse una prueba para cada zona horaria que soportamos.",
+        },
+        {
+          en: "We delayed the release by one day, fixed it, and that test is still part of the suite.",
+          es: "Retrasamos la versión un día, lo arreglamos, y esa prueba sigue en la batería.",
+        },
+      ],
+      anchors: ["after midnight", "wrong date", "exact steps", "time zone", "one day"],
+      phrases: [
+        { en: "I noticed that …", es: "Vi que …" },
+        { en: "My job was to …", es: "Mi tarea era …" },
+        { en: "We delayed the release by one day.", es: "Retrasamos la versión un día." },
+        { en: "… is still part of the suite.", es: "… sigue en la batería de pruebas." },
+      ],
+      tip: "Termina con el resultado y con lo que cambió después.",
+      pending: null,
+      seconds: 90,
+    },
+    {
+      id: "star-disagree",
+      block: "star",
+      title: "Un desacuerdo",
+      question: "Describe a situation where you disagreed with a developer.",
+      variants: ["How do you handle conflict with teammates?", "Tell me about a disagreement at work."],
+      answer: [
+        {
+          en: "A developer closed one of my bugs because it worked on his machine.",
+          es: "Un desarrollador cerró uno de mis errores porque en su máquina funcionaba.",
+        },
+        {
+          en: "Instead of reopening it straight away, I asked if we could look at it together for ten minutes.",
+          es: "En vez de reabrirlo enseguida, le pregunté si podíamos mirarlo juntos diez minutos.",
+        },
+        {
+          en: "We found it only happened on older phones, so we agreed to add one to the test devices.",
+          es: "Vimos que solo pasaba en móviles antiguos, así que acordamos añadir uno a los dispositivos de prueba.",
+        },
+      ],
+      anchors: ["his machine", "together", "older phones", "test devices"],
+      phrases: [
+        { en: "Instead of …, I …", es: "En vez de …, …" },
+        { en: "I asked if we could …", es: "Le pregunté si podíamos …" },
+        { en: "… so we agreed to …", es: "… así que acordamos …" },
+      ],
+      tip: "Que se note la colaboración, no quién tenía razón.",
+      pending: null,
+      seconds: 75,
+    },
+    {
+      id: "star-new-tool",
+      block: "star",
+      title: "Aprender algo rápido",
+      question: "Tell me about a time you had to pick up a new tool quickly.",
+      variants: ["How do you get up to speed with new technologies?"],
+      answer: [
+        {
+          en: "When our team switched to a new test management tool, I had a week to move our test cases.",
+          es: "Cuando el equipo cambió a una herramienta nueva de gestión de pruebas, tuve una semana para pasar nuestros casos de prueba.",
+        },
+        {
+          en: "I did the official tutorial, moved one small project first and wrote a one-page guide for the others.",
+          es: "Hice el tutorial oficial, pasé primero un proyecto pequeño y escribí una guía de una página para los demás.",
+        },
+        {
+          en: "We finished on time, and new starters still use that guide.",
+          es: "Terminamos a tiempo, y la gente nueva sigue usando esa guía.",
+        },
+      ],
+      anchors: ["new tool", "a week", "small project first", "one-page guide"],
+      phrases: [
+        { en: "I had a week to …", es: "Tuve una semana para …" },
+        { en: "I … first.", es: "Primero …" },
+        { en: "new starters", es: "la gente nueva", note: "Así se dice en Australia y Reino Unido; en EE. UU., «new hires»." },
+      ],
+      tip: "Explica cómo aprendes, no solo que aprendiste.",
+      pending: "Falta confirmar si fue una semana o dos.",
+      seconds: 75,
+    },
+  ],
+};
+
+export function fakeDeck(): InterviewDeck {
+  return structuredClone(FAKE_DECK);
 }
 
 /**
