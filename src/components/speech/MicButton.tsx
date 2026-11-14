@@ -3,7 +3,7 @@
 import { MicIcon, MicStopIcon } from "@/components/icons";
 import { cn } from "@/lib/cn";
 import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
-import { useListenRemaining, type ListenControls } from "./use-listen";
+import { remainingLabel, useListenRemaining, type ListenControls } from "./use-listen";
 
 export type MicButtonSize = "lg" | "sm";
 
@@ -49,7 +49,7 @@ export function MicButton({ listen, size = "lg", idleLabel, disabled, className 
   const busy = status === "starting" || status === "processing";
 
   if (size === "sm") {
-    const seconds = remaining === null ? null : Math.ceil(remaining / 1000);
+    const left = remaining === null ? null : remainingLabel(remaining, listen.timings.maxMs);
     return (
       <button
         type="button"
@@ -67,7 +67,7 @@ export function MicButton({ listen, size = "lg", idleLabel, disabled, className 
       >
         <Icon width={18} height={18} className={cn(status === "starting" && "animate-pulse motion-reduce:animate-none")} />
         {open ? copy.micStop : label}
-        {seconds !== null ? <span className="tabular-nums font-normal">· {seconds} s</span> : null}
+        {left !== null ? <span className="tabular-nums font-normal">· {left}</span> : null}
       </button>
     );
   }

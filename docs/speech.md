@@ -15,7 +15,7 @@ Everything else is imported from `@/lib/speech`.
 
 | File | Contents |
 | --- | --- |
-| `session.ts` | `createListenSession()`, `cancelListening()`, `LISTEN_TIMINGS`, state types. |
+| `session.ts` | `createListenSession()`, `cancelListening()`, `LISTEN_TIMINGS`, `ANSWER_MAX_CONTINUATIONS`, state types. |
 | `messages.ts` | `ListenErrorKind`, `LISTEN_ERROR_MESSAGES` (the one Spanish message table), `listenErrorMessage()`. |
 | `log.ts` | Diagnostics log: `readSpeechLog()`, `clearSpeechLog()`, `subscribeSpeechLog()`, `SPEECH_LOG_KEY`. |
 | `platform.ts` | `canRecognize()`, `isStandalone()`, `browserFamily()`, the recognizer constructor. |
@@ -31,10 +31,12 @@ session.cancel();  // stop and discard (settles as error "aborted")
 const end = await session.result; // never rejects: { status: "done", result } | { status: "error", error }
 ```
 
-Options: `locale` (required), `mode: "phrase" | "long"` (default `"phrase"`), and optional
-overrides `silenceMs`, `maxMs`, `noSpeechMs`, `startTimeoutMs`, `endGraceMs`, `continuous`
-(default false for `phrase`, true for `long`), `maxAlternatives` (default 5). `interimResults` is
-always on. `session.timings` holds the effective values; `session.state` the current state.
+Options: `locale` (required), `mode: "phrase" | "long" | "answer"` (default `"phrase"`), and
+optional overrides `silenceMs`, `maxMs`, `noSpeechMs`, `startTimeoutMs`, `endGraceMs`, `continuous`
+(default false for `phrase`, true for `long` and `answer`), `maxAlternatives` (default 5).
+`interimResults` is always on. `session.timings` holds the effective values; `session.state` the
+current state. `answer` (a spoken answer of 30 s – 3 min, Mi entrevista) also continues when the
+browser stops on its own: see "Continuation".
 
 ### States
 
@@ -45,7 +47,7 @@ always on. `session.timings` holds the effective values; `session.state` the cur
 | `listening` | `onstart` / `onaudiostart` fired. `listeningAt` (epoch ms) is set: count down to `maxMs` from it. |
 | `hearing` | `onspeechstart` or the first result. |
 | `processing` | `finish()`, silence or the cap: `stop()` was called, waiting for the final result. |
-| `done` | `result: { transcript, alternatives[], durationMs }`. `transcript` is never empty. |
+| `done` | `result: { transcript, alternatives[], durationMs }` (+ `continuations`, `continued?` in `answer` mode). `transcript` is never empty. |
 | `error` | `error: { kind, message }`. |
 
 Every state carries `interim` (all results so far joined, best alternative) and `listeningAt`.
@@ -59,18 +61,37 @@ to the background (`visibilitychange` → hidden) cancels the session.
 
 ### Timings
 
-| | `phrase` | `long` |
-| --- | --- | --- |
-| `silenceMs`: silence after the last result that ends the session | 1500 | 2500 |
-| `maxMs`: hard cap from `listening` | 10 000 | 45 000 |
-| `noSpeechMs`: no speech since `listening` → error `no-speech` | 4000 | 4000 |
-| `startTimeoutMs`: `starting` never reaches `listening` → error `start-timeout` | 5000 | 5000 |
-| `endGraceMs`: after `stop()`, wait for `onend`, then `abort()` and settle with what was heard | 1500 | 1500 |
+| | `phrase` | `long` | `answer` |
+| --- | --- | --- | --- |
+| `silenceMs`: silence after the last result that ends the session | 1500 | 2500 | 5000 |
+| `maxMs`: hard cap from `listening` | 10 000 | 45 000 | 180 000 |
+| `noSpeechMs`: no speech since `listening` → error `no-speech` | 4000 | 4000 | 8000 |
+| `startTimeoutMs`: `starting` never reaches `listening` → error `start-timeout` | 5000 | 5000 | 5000 |
+| `endGraceMs`: after `stop()`, wait for `onend`, then `abort()` and settle with what was heard | 1500 | 1500 | 1500 |
 
 Silence is timed from the last `onresult` (Safari does not reliably fire `onspeechend`, so it is
 ignored). If `onspeechstart` fires but no words arrive, the session stops after
 `max(silenceMs, noSpeechMs)` and ends as `no-speech`. Every path settles: timers, `onend`, errors,
 `finish()`, `cancel()`, hiding the page.
+
+### Continuation (`answer` mode only)
+
+Browsers stop a continuous session on their own (Chrome after about a minute; iOS at its own
+pace). In `answer` mode, when the recognizer ends (`onend`, or the browser's own `no-speech` error
+that precedes it) after `listening` and before the cap, `finish()` or a stop, the engine creates a
+new recognizer with the same settings and starts it (a **continuation**); the session stays
+`listening`/`hearing` and the UI notices nothing. The continuation's text is appended to what was
+heard with a space (`interim` and every alternative = earlier best transcript + " " + the new
+text). The cap (from the first `listening`), the no-speech timer and the silence timer (from the
+last result) run across continuations: silence still ends the answer 5 s after the last word.
+
+At most `ANSWER_MAX_CONTINUATIONS` (5). The session settles as `done` with what was heard and
+`result.continued: "failed"` (the UI then offers «Seguir hablando») when listening cannot
+continue: the continuation's constructor or `start()` throws, it reports an error or ends before
+any event of its own, it is still not alive when the silence timer or `startTimeoutMs` runs out,
+or the browser ends again after the 5th. With nothing heard it settles as an error as before.
+`result.continuations` = continuations started (including a failed one); the log entry gets the
+same count. `phrase` and `long` never continue: the browser's end settles them as before.
 
 ### Error kinds
 
@@ -101,6 +122,7 @@ The one mic UI over the engine; screens never create sessions themselves. Import
 | `<LiveTranscript listen lang? idleHint? showResult? errorActions? align? />` | State line (`role="status"`, aria-live), live text, countdown bar + seconds, "Cancelar", and on error the engine message + "Reintentar" (+ `errorActions`). |
 | `<SpeakPanel listen lang? idleLabel? showResult? errorActions? disabled? />` | `MicButton` + `LiveTranscript`, centred: for "say this phrase" screens. |
 | `useListenRemaining(listen)` | Ms left before the cap while listening (null otherwise). |
+| `remainingLabel(ms, maxMs)` | Countdown text: "38 s", or "2:59" when the cap is over a minute (`answer`). Used by `LiveTranscript` and the small `MicButton`. |
 | `<WordFeedback words lang? heard? />` | The expected phrase word by word from `scoreHeard(...).words` (ok / missing / wrong) + "He entendido: «…»". Lessons and dialogues. |
 
 Behaviour:
@@ -171,7 +193,7 @@ dialogue Dice ≥ 0.6 match).
 | Dialogue turn (`DialoguePlayer`) | `phrase`, pack `speechLocale` | `<SpeakPanel>` under the options ("O dilo en voz alta"); `bestOption` picks the option. A miss shows what was heard and `<WordFeedback>` of the closest option; tapping an option resets the mic first. |
 | Prepárate situation (`SituationForm`) | `long`, `es-ES` | "Dictar en español": text appended to what is typed, cut at the field limit, editable. Submit / "No lo sé" cancel an open session. |
 | Prepárate level interview (`LevelInterview`) | `long`, `es-ES` or the pack locale | Same as the situation, per answer ("Dictar en <idioma>"). |
-| Probar micrófono (`/microfono/`) | `phrase`, pack locale and `es-ES` | Below. |
+| Probar micrófono (`/microfono/`) | `phrase`, pack locale and `es-ES`; `answer`, `en-AU` | Below. |
 
 ## Diagnostics log: `lang-lern:speech-log`
 
@@ -183,7 +205,7 @@ Only this key is ever written or removed (`clearSpeechLog()`). No transcript tex
 {
   "at": "2026-10-06T09:12:03.120Z",   // start() time
   "locale": "it-IT",
-  "mode": "phrase",
+  "mode": "phrase",     // phrase | long | answer
   "timings": { "listening": 420, "hearing": 1310, "processing": 3900, "end": 4210 }, // ms since start(); absent = not reached
   "reason": "silence",  // silence | finish | cap | ended | end-timeout | no-speech | start-timeout | cancel | replaced | hidden | error
   "outcome": "done",    // done | error
@@ -192,7 +214,8 @@ Only this key is ever written or removed (`clearSpeechLog()`). No transcript tex
   "chars": 18,          // length of the transcript (0 on error)
   "alternatives": 3,
   "standalone": true,   // installed app vs browser tab
-  "browser": "ios-safari" // ios-safari | ios-chrome | ios-other | android-chrome | android-other | edge | chrome | safari | firefox | other
+  "browser": "ios-safari", // ios-safari | ios-chrome | ios-other | android-chrome | android-other | edge | chrome | safari | firefox | other
+  "continuations": 1    // answer mode only: continuations started; absent on older entries and other modes
 }
 ```
 
@@ -211,7 +234,11 @@ Diagnostics screen under Perfil (`NESTED` id `microphone`, linked from /perfil).
 recognition exists, installed app vs browser tab and the browser family; one try card for the
 active pack's `speechLocale` and one for `es-ES` (`useListen` phrase mode + `<SpeakPanel>`), with
 the steps lit live and, once settled, the per-state timings and end reason of that session's log
-entry; the last 15 log entries in plain Spanish (newest first); "Copiar registro" (clipboard JSON
+entry (the newest entry of that locale and mode); a third card «Respuesta larga (inglés, en-AU)»
+(`answer` mode, `en-AU`, `lang="en"`): 3-minute countdown (`m:ss` once the cap is over a minute,
+`remainingLabel()`), live text, and at the end words, seconds, words per minute and continuations
+(plus a note when `continued` is `"failed"`); the last 15 log entries in plain Spanish (newest
+first, with the mode and any continuations); "Copiar registro" (clipboard JSON
 `{ key, copiedAt, supported, standalone, browser, entries }`, with a read-only textarea fallback
 when the clipboard fails); "Borrar registro" (confirm, then `clearSpeechLog()`: only
 `lang-lern:speech-log`); iPhone tips. The log is read live through `subscribeSpeechLog`.
@@ -240,4 +267,8 @@ Para Hernán, en su iPhone. Hazlas dos veces: con la **app instalada** (pantalla
 - [ ] **Terminar antes**: toca el micro otra vez mientras hablas → se queda lo dicho.
 - [ ] **Cancelar**: toca "Cancelar" → no se guarda nada y vuelve al estado inicial.
 - [ ] **Límite**: habla sin parar → se corta a los 10 s (frase) o 45 s (Prepárate); la cuenta atrás se ve.
+- [ ] **Respuesta larga** (Probar micrófono, en inglés): habla 1–3 min → la cuenta atrás baja desde
+      3:00, el texto aparece mientras hablas y no se corta al minuto (si el navegador corta, sigue
+      solo); al final salen palabras, segundos, palabras por minuto y continuaciones. Calla 5 s →
+      termina con lo dicho.
 - [ ] **Tema claro y oscuro**: el botón, la cuenta atrás y las palabras marcadas se leen bien en los dos.

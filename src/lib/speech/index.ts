@@ -3,6 +3,7 @@
  * and the "No puedo hablar ahora" pause. Audio output lives in `@/lib/audio`.
  */
 export {
+  ANSWER_MAX_CONTINUATIONS,
   LISTEN_TIMINGS,
   cancelListening,
   createListenSession,

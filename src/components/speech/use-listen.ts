@@ -160,6 +160,13 @@ export function useListen(options: UseListenOptions): ListenControls {
   };
 }
 
+/** Countdown text: "38 s", or "2:59" when the cap is over a minute (the `answer` mode's 3 min). */
+export function remainingLabel(remainingMs: number, maxMs: number): string {
+  const s = Math.ceil(remainingMs / 1000);
+  if (maxMs <= 60_000) return `${s} s`;
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
+
 /**
  * Ms left before the cap while listening (ticks ~4×/s), null when not counting.
  * Reads `listeningAt` + `timings.maxMs` from the controls.

@@ -16,12 +16,16 @@ import {
   type BrowserFamily,
   type ListenEndReason,
   type ListenErrorKind,
+  type ListenMode,
+  type ListenResult,
   type ListenStatus,
   type SpeechLogEntry,
 } from "@/lib/speech";
 import { useSpeechLog } from "./use-speech-log";
 
 const SPANISH_LOCALE = "es-ES";
+/** The «Respuesta larga» test: an interview answer in English, like Mi entrevista (`answer` mode). */
+const ANSWER_LOCALE = "en-AU";
 /** Attempts listed on screen (the log keeps more; "Copiar registro" copies all of them). */
 const SHOWN = 15;
 
@@ -79,6 +83,17 @@ function seconds(ms: number): string {
   return `${(ms / 1000).toLocaleString("es-ES", { maximumFractionDigits: 1 })} s`;
 }
 
+/** "10 s", or "3 min" for whole minutes. */
+function duration(ms: number): string {
+  return ms >= 60_000 && ms % 60_000 === 0 ? `${ms / 60_000} min` : seconds(ms);
+}
+
+const MODE_NAMES: Record<ListenMode, string> = {
+  phrase: "frase corta",
+  long: "respuesta larga",
+  answer: "respuesta de entrevista",
+};
+
 /** "Italiano (it-IT)", "Español (es-ES)", or the code itself. */
 function localeName(locale: string): string {
   if (locale === SPANISH_LOCALE) return `Español (${locale})`;
@@ -121,6 +136,14 @@ export function MicTestView() {
             {!meta.speechLocale.startsWith("es-") ? (
               <TryCard title="En español" locale={SPANISH_LOCALE} lang="es" log={log} />
             ) : null}
+            <TryCard
+              title="Respuesta larga (inglés, en-AU)"
+              locale={ANSWER_LOCALE}
+              lang="en"
+              mode="answer"
+              hint="Responde en inglés como en una entrevista, de 30 segundos a 3 minutos. Si el navegador corta antes, sigue escuchando solo."
+              log={log}
+            />
           </>
         ) : (
           <Card>
@@ -168,29 +191,36 @@ function TryCard({
   title,
   locale,
   lang,
+  mode = "phrase",
+  hint,
   log,
 }: {
   title: string;
   locale: string;
   lang: string;
+  mode?: ListenMode;
+  hint?: string;
   log: readonly SpeechLogEntry[];
 }) {
-  const listen = useListen({ locale, mode: "phrase" });
+  const listen = useListen({ locale, mode });
   const settled = listen.status === "done" || listen.status === "error";
-  const last = settled ? [...log].reverse().find((e) => e.locale === locale) : undefined;
+  const last = settled ? [...log].reverse().find((e) => e.locale === locale && e.mode === mode) : undefined;
   const current = STEPS.findIndex((s) => s.status === listen.status);
 
   return (
     <Card className="flex flex-col gap-4">
       <div className="flex flex-col gap-1">
         <h3 className="text-lg font-bold text-ink">{title}</h3>
+        {hint ? <p className="text-sm text-ink">{hint}</p> : null}
         <p className="text-sm text-ink-muted">
           {localeName(locale)} · se para tras {seconds(listen.timings.silenceMs)} de silencio, máximo{" "}
-          {seconds(listen.timings.maxMs)}.
+          {duration(listen.timings.maxMs)}.
         </p>
       </div>
 
       <SpeakPanel listen={listen} lang={lang} idleLabel="Toca y habla" showResult />
+
+      {mode === "answer" && listen.result ? <AnswerStats result={listen.result} /> : null}
 
       {listen.active || last ? (
         <ol aria-label="Pasos de la escucha" className="flex flex-col gap-1 rounded-button bg-sand p-3 text-sm">
@@ -220,6 +250,36 @@ function TryCard({
         </ol>
       ) : null}
     </Card>
+  );
+}
+
+/** After a long answer: words, seconds, words per minute and continuations. */
+function AnswerStats({ result }: { result: ListenResult }) {
+  const words = result.transcript.split(/\s+/).filter(Boolean).length;
+  const wpm = result.durationMs > 0 ? Math.round(words / (result.durationMs / 60_000)) : 0;
+  const continuations = result.continuations ?? 0;
+  const stats: readonly [string, string][] = [
+    ["Palabras", String(words)],
+    ["Segundos", seconds(result.durationMs)],
+    ["Palabras por minuto", String(wpm)],
+    ["Continuaciones", String(continuations)],
+  ];
+  return (
+    <div className="flex flex-col gap-2">
+      <dl className="grid grid-cols-2 gap-2">
+        {stats.map(([label, value]) => (
+          <div key={label} className="flex flex-col rounded-button bg-sand p-3">
+            <dt className="text-sm text-ink-muted">{label}</dt>
+            <dd className="text-xl font-extrabold tabular-nums text-ink">{value}</dd>
+          </div>
+        ))}
+      </dl>
+      {result.continued === "failed" ? (
+        <p className="rounded-card bg-terracotta-soft px-4 py-3 text-sm text-terracotta-deep">
+          El navegador cortó la escucha y no pudo seguir: se queda lo que dijiste hasta ahí.
+        </p>
+      ) : null}
+    </div>
   );
 }
 
@@ -389,8 +449,9 @@ function LogEntry({ entry }: { entry: SpeechLogEntry }) {
           <span className="text-xs text-ink-muted">{when(entry.at)}</span>
         </div>
         <p className="text-sm text-ink">
-          {localeName(entry.locale)} · {entry.mode === "long" ? "respuesta larga" : "frase corta"} ·{" "}
+          {localeName(entry.locale)} · {MODE_NAMES[entry.mode] ?? entry.mode} ·{" "}
           {entry.standalone ? "app instalada" : "navegador"}, {BROWSER_NAMES[entry.browser] ?? entry.browser}
+          {entry.continuations ? ` · ${entry.continuations} ${entry.continuations === 1 ? "continuación" : "continuaciones"}` : null}
         </p>
         <p className="text-sm text-ink-muted">
           Terminó porque {REASONS[entry.reason] ?? entry.reason}. {stepsText ? `${stepsText.charAt(0).toLocaleUpperCase("es")}${stepsText.slice(1)}.` : null}

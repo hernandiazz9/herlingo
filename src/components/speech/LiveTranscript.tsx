@@ -5,7 +5,7 @@ import { Button, ProgressBar } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { useLearnCopy } from "@/lib/i18n/use-learn-copy";
 import type { ListenStatus } from "@/lib/speech";
-import { useListenRemaining, type ListenControls } from "./use-listen";
+import { remainingLabel, useListenRemaining, type ListenControls } from "./use-listen";
 
 export interface LiveTranscriptProps {
   listen: ListenControls;
@@ -88,7 +88,7 @@ export function LiveTranscript({
             className="h-2"
           />
           <span className="shrink-0 text-sm tabular-nums text-ink-muted" aria-hidden="true">
-            {Math.ceil(remaining / 1000)} s
+            {remainingLabel(remaining, listen.timings.maxMs)}
           </span>
         </div>
       ) : null}

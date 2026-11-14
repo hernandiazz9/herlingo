@@ -29,7 +29,7 @@ export interface SpeechLogEntry {
   /** ISO time the session started. */
   at: string;
   locale: string;
-  mode: "phrase" | "long";
+  mode: "phrase" | "long" | "answer";
   /** Milliseconds from start() to entering each state (absent = never reached). */
   timings: Partial<Record<"listening" | "hearing" | "processing" | "end", number>>;
   reason: ListenEndReason;
@@ -42,6 +42,8 @@ export interface SpeechLogEntry {
   alternatives: number;
   standalone: boolean;
   browser: BrowserFamily;
+  /** `answer` mode only: continuation sessions started after the browser ended on its own. */
+  continuations?: number;
 }
 
 interface Stored {
@@ -55,7 +57,7 @@ function isEntry(e: unknown): e is SpeechLogEntry {
   return (
     typeof o.at === "string" &&
     typeof o.locale === "string" &&
-    (o.mode === "phrase" || o.mode === "long") &&
+    (o.mode === "phrase" || o.mode === "long" || o.mode === "answer") &&
     typeof o.reason === "string" &&
     (o.outcome === "done" || o.outcome === "error") &&
     !!o.timings &&
