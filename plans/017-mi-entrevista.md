@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-11-14 12:35Z 💻
+- Updated: 2026-11-14 12:43Z 💻
 - Writer: me (💻 desktop session; plan checkout ../herlingo-entrevista)
 - Branch: plan-017-mi-entrevista · checkout /Users/heralc/Desktop/HDDev/herlingo-entrevista
-- Next step: integrate T209; then T212 (client) while T205 and T210 wait for Hernán
+- Next step: integrate T212; T213 waits for T205 (iPhone mic check); T210 waits for Hernán's OK to spend ≈ 1 USD
 - Gotchas: public repo: no card text, answer, transcript or personal fact in code, fixtures, docs, commits or logs; `/api/coach/interview/` is the level interview (this feature: `deck`, `interviewer`, `feedback`, `mock`); agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits; no `.env.local` there (fake mode)
 - Needs Hernán: deploy ../herlingo-deploy (@1b4f4ade) + T205 iPhone check · OK to spend ≈ 1 USD on evals (T210, runnable now) · model choice (T211) · Anthropic console limit ≥ 15 USD before T216
 
@@ -215,7 +215,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - Outcome: InterviewerTurn/AnswerFeedback/MockReport zod + normalizers, INTERVIEWER_SYSTEM (~700 tok), FEEDBACK_SYSTEM (~1.4k), REPORT_SYSTEM (~600), user turns with ‹ escaping, generateTurn/Feedback/Report (fake: 0.0004/0.012/0.011 USD), four old prompts byte-identical · 7c124b99 · verify ✓ 💻 · tsx ✓ · no card text (scan) · not checked: real model behaviour, Haiku cache minimum
 
 ## T209 — `POST /api/coach/interviewer/`, `POST /api/coach/feedback/` and the interview voices
-- Status: running (attempt 1 · 💻 · agent ae7f1ed1515ba8611 · since 12:35Z)
+- Status: done
 - Depends on: T208
 - Where: any
 - Goal: The endpoints, owner only, reading the card from the stored deck, billed to Mi entrevista's budget.
@@ -226,7 +226,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
   - `/api/coach/tts/` accepts `MOCK_VOICES` (`en-AU-NatashaNeural`, `en-AU-WilliamMultilingualNeural`); other voices unchanged.
   - Fake curl: turn / answer / report 200; `dev-guest` 403; `COACH_MOCK_DAILY_LIMIT=2` → the 3rd answer 429; unknown card 400; tts with Natasha 200, an unknown voice 400.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: interviewer + feedback endpoints (owner only, card from the stored deck, canned move_on without Claude, mock budget/counters, usage with model/cost/latency, [coach] mock log), MOCK_VOICES accepted by /tts/ · aed827e9 · verify ✓ 💻 · fake curl ✓ (200/403/401/400/405/429) · stand-in Claude API ✓ · not checked: real Claude, real edge-tts en-AU voices
 
 ## T210 — Evals: seeded cases, runner, first measurement (Hernán's OK: ≈ 1 USD)
 - Status: pending
@@ -255,7 +255,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - Outcome:
 
 ## T212 — Client: deck sync, storage, API calls, attempts, export
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ab488bc8fc3e140c2 · since 12:43Z)
 - Depends on: T209
 - Where: any
 - Goal: `src/lib/mock-interview/` holds everything the screens need, with tolerant storage and no change to existing keys.
@@ -325,6 +325,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - [ ] T206 @1b4f4ade — deck endpoint + push script (privacy, owner check) (queued 2026-11-14 💻)
 - [ ] T207 @59b81dcb — ledger budget split + usage shape (queued 2026-11-14 💻)
 - [ ] T208 @7c124b99 — prompts (privacy, rules vs PERFIL-style 'never invent') (queued 2026-11-14 💻)
+- [ ] T209 @aed827e9 — endpoints: checks order, refunds, owner 403 (queued 2026-11-14 💻)
 
 ## Visual checks queue
 - [ ] T204 @2ccdbd96 — /microfono/ «Respuesta larga» card: countdown, live text, words/wpm/continuations; log rows with mode; light + dark (T205 covers the device) (queued 2026-11-14 💻)
@@ -345,6 +346,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 T206: deck:push skips cards without question or model answer and empty blocks; trims variants/anchors/phrases to the limits (counted), never the model answer; extra limits: ids 1–64 [A-Za-z0-9_-], titles ≤ 80, intros ≤ 400, tip/pending ≤ 600; Upstash value { updatedAt, deck }. (plan)
 - 2026-11-14 T207: usage top-level spentUsd/remainingUsd/mineUsd = Prepárate only (tokens = all calls); mock block owner only with remainingUsd + avgReportUsd; mock spend never in spend:<name>; turns over the limit get the answers message. (plan)
 - 2026-11-14 T208: an invented claim caps the score at 3; the interviewer re-asks more simply after a non-answer and never follows up on a pending part; score written last in the schema; normalizer clamps score, cuts improved at the last sentence ≤ 1200, drops a line on move_on; canned move-on 'Okay, let's move on.' (plan)
+- 2026-11-14 T209: unknown card → 400 'Esa tarjeta ya no existe. Toca «Actualizar tarjetas».'; usage.today = answers + reports in every response; latencyMs = Claude time only; canned move_on skips budget and counter; asked ≤ 300, seconds 0–3600. (plan)
 
 ## Proposals (new scope)
 - 2026-11-14 plan: Real pronunciation scores: record the answer and send it to a speech service with pronunciation assessment (e.g. Azure, `en-AU`), measured against the inferred pronunciation of the transcript.
@@ -358,6 +360,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 T208: improved ≤ 1200 chars (prompt asks ≤ 170 words) is shorter than a 3-minute answer: check in T210/T216 whether it should grow
 - 2026-11-14 T208: betaZodOutputFormat drops a .describe() placed after .optional() (fixed in the new schemas; old ones unaffected)
 - 2026-11-14 T208: INTERVIEWER_SYSTEM (~700 tokens) may be under Haiku 5.5's minimum cacheable prefix: check cache_read in T210 (cost is tiny either way)
+- 2026-11-14 T209: card lookup + no_deck repeated in both endpoints; move to api/_lib/deck.ts
 
 ## Log
 - 2026-11-14 11:25Z 💻 plan written from the design session (8 decisions in two rounds of questions); not approved yet
@@ -373,3 +376,5 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 12:24Z 💻 T208 launched · attempt 1 · agent a484e41a3dce68221 (plan checkout, no isolation)
 - 2026-11-14 12:35Z 💻 T208 done · plan checkout → 7c124b99 · verify ✓
 - 2026-11-14 12:35Z 💻 T209 launched · attempt 1 · agent ae7f1ed1515ba8611 (plan checkout, no isolation)
+- 2026-11-14 12:42Z 💻 T209 done · plan checkout → aed827e9 · verify ✓
+- 2026-11-14 12:43Z 💻 T212 launched · attempt 1 · agent ab488bc8fc3e140c2 (plan checkout, no isolation)
