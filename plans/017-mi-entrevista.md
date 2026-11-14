@@ -9,9 +9,9 @@ Worktree setup: npm ci
 
 ## Now
 - Updated: 2026-11-14 12:56Z 💻
-- Writer: me (💻 desktop session; plan checkout ../herlingo-entrevista)
+- Writer: released (relay to a fresh 💻 session after 6 integrated tasks; plan checkout ../herlingo-entrevista)
 - Branch: plan-017-mi-entrevista · checkout /Users/heralc/Desktop/HDDev/herlingo-entrevista
-- Next step: T213 waits for T205 (deploy + iPhone mic check); T210 waits for Hernán's OK; T215 (deck episodes) runnable
+- Next step: new session: start ritual, take the lock; T215 runnable now; T210 after Hernán's OK (≈ 1 USD, key in ../herlingo/.env.local: check the name only); T213 after T205
 - Gotchas: public repo: no card text, answer, transcript or personal fact in code, fixtures, docs, commits or logs; `/api/coach/interview/` is the level interview (this feature: `deck`, `interviewer`, `feedback`, `mock`); agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits; no `.env.local` there (fake mode)
 - Needs Hernán: deploy ../herlingo-deploy (@1b4f4ade) + T205 iPhone check · OK to spend ≈ 1 USD on evals (T210, runnable now) · model choice (T211) · Anthropic console limit ≥ 15 USD before T216
 
@@ -384,3 +384,4 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 12:43Z 💻 T212 launched · attempt 1 · agent ab488bc8fc3e140c2 (plan checkout, no isolation)
 - 2026-11-14 12:56Z 💻 T212 done · plan checkout → 24b72bd7 · verify ✓
 - 2026-11-14 12:56Z 💻 T212 writer fix → 29084538: deck excluded by isBackupKey (privacy + cloud 2 MB), CHANGE_EVENTS += mock-interview-change · verify ✓
+- 2026-11-14 12:56Z 💻 relay: T204, T206–T209, T212 integrated in this session · writer released · nothing running
