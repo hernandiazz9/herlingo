@@ -1,39 +1,69 @@
-/** Pack, quick route, episode and interview generators: fake (canned) or real (Claude, prompts in prompts.ts). */
+/**
+ * Pack, quick route, episode and interview generators, and Mi entrevista's interviewer, corrector and
+ * report: fake (canned) or real (Claude, prompts in prompts.ts).
+ */
 import { generateStructured } from "./claude.js";
 import { isFake } from "./config.js";
 import {
+  FAKE_ANSWER_USAGE,
   FAKE_EPISODE_USAGE,
   FAKE_INTERVIEW_USAGE,
   FAKE_PACK_USAGE,
+  FAKE_REPORT_USAGE,
   FAKE_ROUTE_USAGE,
+  FAKE_TURN_USAGE,
   fakeEpisode,
+  fakeFeedback,
   fakeInterviewStep,
   fakePack,
+  fakeReport,
   fakeRoute,
+  fakeTurn,
 } from "./fake.js";
 import type { LanguageMeta } from "./languages.js";
 import { COACH_MODEL, sumUsage, type Charge } from "./model.js";
-import { normalizeAssessment, normalizeEpisode, normalizeInterviewStep, normalizePack, normalizeRoute } from "./normalize.js";
+import {
+  normalizeAssessment,
+  normalizeEpisode,
+  normalizeFeedback,
+  normalizeInterviewerTurn,
+  normalizeInterviewStep,
+  normalizePack,
+  normalizeReport,
+  normalizeRoute,
+} from "./normalize.js";
 import {
   EPISODE_SYSTEM,
+  FEEDBACK_SYSTEM,
   INTERVIEW_SYSTEM,
+  INTERVIEWER_SYSTEM,
   PACK_SYSTEM,
+  REPORT_SYSTEM,
   ROUTE_SYSTEM,
   episodeUserPrompt,
+  feedbackUserPrompt,
+  interviewerUserPrompt,
   interviewUserPrompt,
   packUserPrompt,
+  reportUserPrompt,
   routeUserPrompt,
   type EpisodeInput,
+  type FeedbackInput,
   type PackInput,
+  type ReportInput,
   type RouteInput,
+  type TurnInput,
 } from "./prompts.js";
 import {
+  AnswerFeedback,
   Assessment,
   GeneratedEpisode,
   GeneratedPack,
   GeneratedRoute,
+  InterviewerTurn,
   InterviewStep,
   LIMITS,
+  MockReport,
   type InterviewRequest,
 } from "./schema.js";
 
@@ -117,4 +147,74 @@ export async function generateInterviewStep(req: InterviewRequest, meta: Languag
   const common = { ...INTERVIEW, system: INTERVIEW_SYSTEM, user: interviewUserPrompt(meta, req, final), onUsage };
   if (final) return { done: true, assessment: await generateStructured({ ...common, schema: Assessment, normalize: normalizeAssessment }) };
   return generateStructured({ ...common, schema: InterviewStep, normalize: normalizeInterviewStep });
+}
+
+// ---- Mi entrevista (docs/mock-interview.md) ----
+
+/**
+ * Low effort for every role (docs/mock-interview.md "Models"). Output caps far above a normal
+ * answer (~0.3k turn, ~1k feedback, ~0.8k report, thinking included), so `max_tokens` means a
+ * runaway answer.
+ */
+const TURN = { effort: "low", maxTokens: 1500 } as const;
+const ANSWER = { effort: "low", maxTokens: 4000 } as const;
+const REPORT = { effort: "low", maxTokens: 3000 } as const;
+
+/**
+ * What the interviewer says without asking Claude when no follow-up is left (`followUpsLeft: 0`):
+ * move on, no call, no counter.
+ */
+export function cannedMoveOn(): InterviewerTurn {
+  return { kind: "move_on", ack: "Okay, let's move on." };
+}
+
+/** The interviewer's decision after an answer, on `model` (`interviewerModel()`). */
+export async function generateTurn(input: TurnInput, model: string, onUsage: OnUsage): Promise<InterviewerTurn> {
+  if (isFake()) {
+    await onUsage([{ model, usage: FAKE_TURN_USAGE }]);
+    return fakeTurn(input);
+  }
+  return generateStructured({
+    ...TURN,
+    model,
+    system: INTERVIEWER_SYSTEM,
+    user: interviewerUserPrompt(input),
+    schema: InterviewerTurn,
+    normalize: normalizeInterviewerTurn,
+    onUsage,
+  });
+}
+
+/** One answer's feedback, on `model` (`feedbackModel()`). */
+export async function generateFeedback(input: FeedbackInput, model: string, onUsage: OnUsage): Promise<AnswerFeedback> {
+  if (isFake()) {
+    await onUsage([{ model, usage: FAKE_ANSWER_USAGE }]);
+    return fakeFeedback(input);
+  }
+  return generateStructured({
+    ...ANSWER,
+    model,
+    system: FEEDBACK_SYSTEM,
+    user: feedbackUserPrompt(input),
+    schema: AnswerFeedback,
+    normalize: normalizeFeedback,
+    onUsage,
+  });
+}
+
+/** The simulacro's report, on `model` (`feedbackModel()`). */
+export async function generateReport(input: ReportInput, model: string, onUsage: OnUsage): Promise<MockReport> {
+  if (isFake()) {
+    await onUsage([{ model, usage: FAKE_REPORT_USAGE }]);
+    return fakeReport(input);
+  }
+  return generateStructured({
+    ...REPORT,
+    model,
+    system: REPORT_SYSTEM,
+    user: reportUserPrompt(input),
+    schema: MockReport,
+    normalize: normalizeReport,
+    onUsage,
+  });
 }

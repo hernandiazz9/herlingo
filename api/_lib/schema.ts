@@ -480,3 +480,117 @@ export const InterviewDeck = z
   })
   .superRefine(checkDeck);
 export type InterviewDeck = z.infer<typeof InterviewDeck>;
+
+// ---- Mi entrevista: interviewer turn, answer feedback, simulacro report (docs/mock-interview.md "Schemas") ----
+
+/**
+ * Sizes of what Claude writes for Mi entrevista. Structured outputs do not enforce them, so the
+ * prompts and the schema descriptions repeat them; normalize.ts trims a list over its maximum (and
+ * `improved` over its length) before the zod check. The interviewer's line is never trimmed: a
+ * line over its limit fails.
+ */
+export const MOCK_LIMITS = {
+  /** Interviewer: one spoken follow-up question and the short reaction before it. */
+  line: 200,
+  lineWords: 25,
+  ack: 80,
+  /** Answer feedback. */
+  mistakes: 6,
+  pronunciation: 4,
+  invented: 4,
+  fillers: 5,
+  fluencyNote: 200,
+  improved: 1200,
+  /** Simulacro report. */
+  reportList: 4,
+} as const;
+const M = MOCK_LIMITS;
+
+export const MockTone = z.enum(["friendly", "tough"]);
+export type MockTone = z.infer<typeof MockTone>;
+
+const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
+
+/** 1 (no real answer) to 5 (natural, clear, correct); normalize.ts clamps a value outside. */
+const score = z.number().int().min(1).max(5).describe("An integer from 1 to 5.");
+/** A learner-facing sentence or two in Spain Spanish. */
+const esText = (max: number) => z.string().min(1).max(max);
+
+/** The interviewer's decision after an answer: one follow-up question, or move on. */
+export const InterviewerTurn = z
+  .object({
+    kind: z.enum(["followup", "move_on"]),
+    line: z
+      .string()
+      .min(1)
+      .max(M.line)
+      .describe(
+        `Only with "followup": the one question to ask, in spoken English, at most ${M.lineWords} words and ${M.line} characters. Leave it out with "move_on".`,
+      )
+      .optional(),
+    ack: z
+      .string()
+      .min(1)
+      .max(M.ack)
+      .describe(`A short spoken reaction in English, at most 8 words and never more than ${M.ack} characters.`),
+  })
+  .superRefine((turn, ctx) => {
+    if (turn.kind === "followup" && !turn.line) {
+      ctx.addIssue({ code: "custom", path: ["line"], message: "a follow-up needs a line" });
+    }
+    if (turn.line && wordCount(turn.line) > M.lineWords) {
+      ctx.addIssue({ code: "custom", path: ["line"], message: `more than ${M.lineWords} words` });
+    }
+  });
+export type InterviewerTurn = z.infer<typeof InterviewerTurn>;
+
+/**
+ * The correction of one spoken answer, with the same meaning as the cards panel's keys (`nota`,
+ * `resumen`, `errores`, `pronunciacion`, `contenido`, `version`, `siguiente`) plus `invented` and
+ * `fluency`. The analysis comes before `score` and `summary`, so they are written last.
+ */
+export const AnswerFeedback = z.object({
+  invented: z
+    .array(z.object({ claim: z.string().min(1).max(300), why: esText(300) }))
+    .max(M.invented)
+    .describe(`Claims the model answer does not support, the most serious first; an empty list if none; never more than ${M.invented}.`),
+  mistakes: z
+    .array(z.object({ said: z.string().min(1).max(300), better: z.string().min(1).max(300), why: esText(300) }))
+    .max(M.mistakes)
+    .describe(`The most important first; an empty list if none; never more than ${M.mistakes}.`),
+  pronunciation: z
+    .array(esText(200))
+    .max(M.pronunciation)
+    .describe(`Possible issues only; an empty list if nothing suggests one; never more than ${M.pronunciation}.`),
+  fluency: z.object({
+    fillers: z
+      .array(z.string().min(1).max(80))
+      .max(M.fillers)
+      .describe(`Quoted as they appear, the most frequent first; an empty list if none; never more than ${M.fillers}.`),
+    note: z.string().max(M.fluencyNote).describe(`One short sentence, at most ${M.fluencyNote} characters.`),
+  }),
+  content: esText(800).describe("1 or 2 sentences."),
+  score,
+  summary: esText(500).describe("1 or 2 short sentences."),
+  improved: z
+    .string()
+    .min(1)
+    .max(M.improved)
+    .describe(`Spoken English, at most 170 words and never more than ${M.improved} characters.`),
+  next: esText(400).describe("One concrete thing, one sentence."),
+});
+export type AnswerFeedback = z.infer<typeof AnswerFeedback>;
+
+/** The simulacro's overall report, written from the answers' corrections (Spain Spanish). */
+export const MockReport = z.object({
+  invented: z
+    .array(esText(300))
+    .max(M.reportList)
+    .describe(`Only claims the corrections list, the most serious first; an empty list if none; never more than ${M.reportList}.`),
+  strengths: z.array(esText(200)).max(M.reportList).describe(`2 to ${M.reportList} items; never more than ${M.reportList}.`),
+  weakPoints: z.array(esText(200)).max(M.reportList).describe(`2 to ${M.reportList} items, the most important first; never more than ${M.reportList}.`),
+  score,
+  summary: esText(600).describe("2 or 3 sentences."),
+  next: esText(400).describe("One concrete thing, one sentence."),
+});
+export type MockReport = z.infer<typeof MockReport>;

@@ -5,14 +5,20 @@
  */
 import type { LanguageMeta } from "./languages.js";
 import type { TokenUsage } from "./model.js";
-import type {
-  Assessment,
-  GeneratedEpisode,
-  GeneratedPack,
-  GeneratedRoute,
-  InterviewDeck,
-  InterviewQuestion,
-  InterviewStep,
+import type { FeedbackInput, ReportInput, TurnInput } from "./prompts.js";
+import {
+  MOCK_LIMITS,
+  type AnswerFeedback,
+  type Assessment,
+  type DeckCard,
+  type GeneratedEpisode,
+  type GeneratedPack,
+  type GeneratedRoute,
+  type InterviewDeck,
+  type InterviewerTurn,
+  type InterviewQuestion,
+  type InterviewStep,
+  type MockReport,
 } from "./schema.js";
 
 /** Plausible token counts of a real call, so the ledger and the usage panel show real-looking numbers. */
@@ -22,6 +28,14 @@ export const FAKE_INTERVIEW_USAGE: TokenUsage = { input: 900, output: 350, cache
 export const FAKE_ROUTE_USAGE: TokenUsage = { input: 500, output: 1700, cacheWrite: 2500, cacheRead: 0 };
 /** A Modo deporte episode: the first call in 5 minutes, docs/sport.md "Model". */
 export const FAKE_EPISODE_USAGE: TokenUsage = { input: 500, output: 5000, cacheWrite: 3000, cacheRead: 0 };
+/**
+ * Mi entrevista, with the system prompt read from the cache (a practice session makes several calls
+ * within 5 minutes): an interviewer turn on Haiku 5.5 (≈ 0.0004 USD), an answer's feedback and a
+ * report on Sonnet 5.5 (≈ 0.012 and ≈ 0.011 USD), docs/mock-interview.md "Decisions".
+ */
+export const FAKE_TURN_USAGE: TokenUsage = { input: 700, output: 600, cacheWrite: 0, cacheRead: 1300 };
+export const FAKE_ANSWER_USAGE: TokenUsage = { input: 900, output: 1000, cacheWrite: 0, cacheRead: 2300 };
+export const FAKE_REPORT_USAGE: TokenUsage = { input: 1400, output: 800, cacheWrite: 0, cacheRead: 1500 };
 
 const IT_PACK: GeneratedPack = {
   title: "Pedir un granizado en el bar",
@@ -779,6 +793,116 @@ const FAKE_DECK: InterviewDeck = {
 
 export function fakeDeck(): InterviewDeck {
   return structuredClone(FAKE_DECK);
+}
+
+// ---- Mi entrevista: interviewer, corrector and report for the fake deck (invented persona) ----
+
+const wordsOf = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
+const modelAnswer = (card: DeckCard) => card.answer.map((s) => s.en).join(" ");
+
+/** One follow-up per fake card, answerable from its model answer; other cards get the generic one. */
+const FAKE_FOLLOW_UPS: Record<string, string> = {
+  "start-overview": "And what would you like to do next in your career?",
+  "start-why": "What do you like about the way our testers work?",
+  "start-strength": "What do you put in a bug report to make it easy to act on?",
+  "star-late-bug": "So what happened in the end, and what changed afterwards?",
+  "star-disagree": "How did you sort it out with him in the end?",
+  "star-new-tool": "How did you help the rest of the team with the new tool?",
+};
+
+/**
+ * Fake interviewer: the first answer to a question gets a follow-up when it is shorter than the
+ * model answer; anything else moves on.
+ */
+export function fakeTurn(input: TurnInput): InterviewerTurn {
+  const tough = input.tone === "tough";
+  if (input.history.length === 0 && wordsOf(input.answer) < wordsOf(modelAnswer(input.card))) {
+    return {
+      kind: "followup",
+      line: FAKE_FOLLOW_UPS[input.card.id] ?? "What was the result in the end?",
+      ack: tough ? "Okay." : "Thanks, that's helpful.",
+    };
+  }
+  return { kind: "move_on", ack: tough ? "Right. Next question." : "Great, thanks for that." };
+}
+
+/** An invented claim per card for two fake cards, so the «Inventado» block has something to show. */
+const FAKE_INVENTED: Record<string, AnswerFeedback["invented"][number]> = {
+  "start-strength": {
+    claim: "thirty percent fewer of my reports were sent back",
+    why: "Tu respuesta modelo no da ninguna cifra: está sin confirmar. Di «fewer of my reports» sin número.",
+  },
+  "star-late-bug": {
+    claim: "I found it with an automated test",
+    why: "Tu respuesta modelo no dice cómo lo encontraste, solo que lo viste («I noticed»).",
+  },
+};
+
+/** The first sentences of the model answer that fit in `improved` (a real deck may be longer). */
+function fakeImproved(card: DeckCard): string {
+  let text = "";
+  for (const { en } of card.answer) {
+    const next = text ? `${text} ${en}` : en;
+    if (next.length > MOCK_LIMITS.improved) break;
+    text = next;
+  }
+  return text || card.answer[0].en.slice(0, MOCK_LIMITS.improved);
+}
+
+/**
+ * Fake correction: typical Spanish-speaker mistakes, the card's model answer as the improved
+ * version, an invented claim on two fake cards (score 3), score 2 for an answer under 15 words.
+ */
+export function fakeFeedback(input: FeedbackInput): AnswerFeedback {
+  const invented = FAKE_INVENTED[input.card.id];
+  const short = wordsOf(input.answer) < 15;
+  const score = short ? 2 : invented ? 3 : 4;
+  const asked = input.isFollowUp ? "la repregunta" : "la pregunta";
+  return {
+    invented: invented ? [invented] : [],
+    mistakes: [
+      {
+        said: "I am working here since four years",
+        better: "I've been working here for four years",
+        why: "Con una duración se usa «for» y el present perfect, no «since» con presente.",
+      },
+      {
+        said: "I was in charge of to test the app",
+        better: "I was in charge of testing the app",
+        why: "Después de «of» el verbo va en -ing.",
+      },
+    ],
+    pronunciation: ["Posible: salió «tree» donde querías decir «three»; la «th» se pone con la lengua entre los dientes."],
+    fluency: { fillers: ["um", "you know"], note: "Algunas muletillas al empezar las frases; haz una pausa corta en su lugar." },
+    content: short
+      ? `Respondes a ${asked}, pero muy corto: falta el resultado y lo que hiciste tú.`
+      : `Respondes a ${asked} con una estructura clara; te falta cerrar con el resultado, como en tu respuesta modelo.`,
+    score,
+    summary: short
+      ? "Vas por buen camino, pero la respuesta se queda corta. Cuenta qué hiciste y qué pasó al final."
+      : invented
+        ? "La respuesta se entiende bien, pero añades algo que no está en tu respuesta modelo. Cíñete a lo que puedes defender."
+        : "Respuesta clara y bien ordenada. Cuida «for» y «since» con las duraciones.",
+    improved: fakeImproved(input.card),
+    next: "Practica cerrar cada respuesta con el resultado en una frase.",
+  };
+}
+
+/** Fake report: the answers' average score, their invented claims, fixed strengths and weak points. */
+export function fakeReport(input: ReportInput): MockReport {
+  const scores = input.answers.map((a) => a.score);
+  const average = scores.length ? scores.reduce((sum, s) => sum + s, 0) / scores.length : 3;
+  const invented = input.answers.flatMap((a) => a.invented.map((claim) => `Dijiste «${claim}» en «${a.card.title}», y no está en tu respuesta modelo.`));
+  return {
+    invented: invented.slice(0, MOCK_LIMITS.reportList),
+    strengths: ["Respondes a lo que te preguntan, sin rodeos.", "Ordenas bien los casos: situación, acción y resultado."],
+    weakPoints: invented.length
+      ? ["Añades datos que no están en tus respuestas modelo.", "Se te escapa «since» con duraciones."]
+      : ["Algunas respuestas terminan sin el resultado.", "Se te escapa «since» con duraciones."],
+    score: Math.min(5, Math.max(1, Math.round(average))),
+    summary: `Simulacro de ${input.answers.length} respuestas${input.tone === "tough" ? " con un entrevistador exigente" : ""}. Te explicas con claridad; antes de una entrevista real, cierra cada caso con el resultado.`,
+    next: "Repasa las tarjetas con nota baja y di cada una en voz alta dos veces.",
+  };
 }
 
 /**

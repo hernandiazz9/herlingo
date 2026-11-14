@@ -1,8 +1,8 @@
 /**
  * Recoverable overflows in Claude's structured output, fixed before the zod check. Structured
- * outputs do not enforce `maxItems` (the SDK sends it as a description), so a pack, a route or an
- * episode can come back with more turns, phrases, steps, parts, variants or alternatives than the
- * schema allows; the call is already billed, so a
+ * outputs do not enforce `maxItems` (the SDK sends it as a description), so a pack, a route, an
+ * episode or a Mi entrevista correction can come back with more turns, phrases, steps, parts,
+ * variants, alternatives or mistakes than the schema allows; the call is already billed, so a
  * too-long array is trimmed to its limit instead of failing the generation. Too few items, wrong
  * shapes or broken alternation are left as they are and still fail the zod check.
  *
@@ -13,6 +13,7 @@ import {
   ASSESSMENT_ARRAY_LIMITS as A,
   ROUTE_ARRAY_LIMITS as R,
   EPISODE_ARRAY_LIMITS as E,
+  MOCK_LIMITS as M,
 } from "./schema.js";
 
 type Json = Record<string, unknown>;
@@ -171,5 +172,83 @@ export function normalizeInterviewStep(raw: unknown): unknown {
   const trims: Trims = [];
   trimAssessment(raw.assessment, "assessment.", trims);
   if (trims.length) console.warn("[coach] trimmed interview step overflow", trims.join(", "));
+  return raw;
+}
+
+// ---- Mi entrevista (docs/mock-interview.md "Schemas") ----
+
+/** A score outside 1–5 (or not an integer) becomes the nearest integer in range. */
+function clampScore(owner: Json, path: string, trims: Trims): void {
+  const value = owner.score;
+  if (typeof value !== "number" || !Number.isFinite(value)) return;
+  const clamped = Math.min(5, Math.max(1, Math.round(value)));
+  if (clamped !== value) {
+    trims.push(`${path}: clamped to 1–5`);
+    owner.score = clamped;
+  }
+}
+
+/**
+ * A text over `max` characters is cut after its last sentence that fits (else at the last space,
+ * with "…"). Only for `improved`, whose natural length follows the learner's (a long answer, a long
+ * rewrite); the prompt asks for much less.
+ */
+function trimText(owner: Json, key: string, max: number, path: string, trims: Trims): void {
+  const text = owner[key];
+  if (typeof text !== "string" || text.length <= max) return;
+  let end = -1;
+  for (let i = max - 1; i > max / 2; i--) {
+    if (/[.!?]/.test(text[i]) && /\s/.test(text[i + 1] ?? " ")) {
+      end = i + 1;
+      break;
+    }
+  }
+  let cut: string;
+  if (end > 0) {
+    cut = text.slice(0, end);
+  } else {
+    const space = text.lastIndexOf(" ", max - 1);
+    cut = `${(space > 0 ? text.slice(0, space) : text.slice(0, max - 1)).trimEnd()}…`;
+  }
+  trims.push(`${path}: ${text.length}→${cut.length} chars`);
+  owner[key] = cut;
+}
+
+/**
+ * The interviewer's turn: a `line` sent with `move_on` is dropped (nothing would read it). A line
+ * over its length is not cut: it fails the zod check.
+ */
+export function normalizeInterviewerTurn(raw: unknown): unknown {
+  if (!isObject(raw)) return raw;
+  if (raw.kind === "move_on" && "line" in raw) {
+    delete raw.line;
+    console.warn("[coach] dropped the line of a move_on turn");
+  }
+  return raw;
+}
+
+/** An answer's feedback: its lists → their maximum, `score` → 1–5, `improved` → 1200 characters. */
+export function normalizeFeedback(raw: unknown): unknown {
+  if (!isObject(raw)) return raw;
+  const trims: Trims = [];
+  trimArray(raw, "invented", M.invented, "invented", trims);
+  trimArray(raw, "mistakes", M.mistakes, "mistakes", trims);
+  trimArray(raw, "pronunciation", M.pronunciation, "pronunciation", trims);
+  if (isObject(raw.fluency)) trimArray(raw.fluency, "fillers", M.fillers, "fluency.fillers", trims);
+  clampScore(raw, "score", trims);
+  trimText(raw, "improved", M.improved, "improved", trims);
+  if (trims.length) console.warn("[coach] trimmed feedback overflow", trims.join(", "));
+  return raw;
+}
+
+/** The simulacro report: its lists → 4, `score` → 1–5. */
+export function normalizeReport(raw: unknown): unknown {
+  if (!isObject(raw)) return raw;
+  const trims: Trims = [];
+  trimArray(raw, "invented", M.reportList, "invented", trims);
+  trimArray(raw, "strengths", M.reportList, "strengths", trims);
+  trimArray(raw, "weakPoints", M.reportList, "weakPoints", trims);
+  clampScore(raw, "score", trims);
+  if (trims.length) console.warn("[coach] trimmed report overflow", trims.join(", "));
   return raw;
 }

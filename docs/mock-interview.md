@@ -9,7 +9,9 @@ asks follow-ups. Owner only; the deck never touches the repo or the build.
 This document is the contract of plan 017 and is kept current by each task. Built so far: the
 deck (schema, text store, `GET`/`PUT /api/coach/deck/`, `npm run deck:push`, the fake deck; T206);
 the two models, Haiku 5.5 in the price table, Mi entrevista's budget and counters, the `mock`
-block of `/usage/` (T207). Everything else below is the contract its task builds.
+block of `/usage/` (T207); the interviewer, corrector and report schemas, prompts, normalizers,
+fakes and generators, with no endpoint yet (T208). Everything else below is the contract its task
+builds.
 
 ## Decisions
 
@@ -150,15 +152,17 @@ mañana.".
 
 `{ cardId, tone: "friendly"|"tough", asked: string, history: { asked, answer }[] (≤ 3, this
 question only), answer: string (1–3000), seconds, followUpsLeft: 0–2 }` → `200 { next:
-InterviewerTurn, usage }`. `followUpsLeft: 0` → `move_on` with a canned acknowledgement, no
-Claude call, no counter.
+InterviewerTurn, usage }`. `followUpsLeft: 0` → `move_on` with a canned acknowledgement
+(`cannedMoveOn()` in `api/_lib/generators.ts`: "Okay, let's move on."), no Claude call, no
+counter.
 
 ### `POST /api/coach/feedback/`
 
 - `{ kind: "answer", cardId, asked, isFollowUp, answer (1–3000), seconds, stuck }` → `200 {
   feedback: AnswerFeedback, usage }`.
 - `{ kind: "report", tone, answers: { cardId, asked, score, summary, invented[], mistakes (≤ 3)
-  }[] (1–24) }` → `200 { report: MockReport, usage }`.
+  }[] (1–24) }` → `200 { report: MockReport, usage }`. `invented` = the claims (`claim`) of that
+  answer's feedback.
 
 The server reads the card (model answer, anchors, pending) from the stored deck by `cardId`
 (unknown → 400): the client never sends the "facts". `usage` = `{ costUsd, model, latencyMs,
@@ -190,6 +194,37 @@ type MockReport = { score: 1|2|3|4|5; summary: string; strengths: string[]; weak
 Words per minute = words / seconds × 60, computed on the device and stored with the attempt (not
 asked from Claude).
 
+Built (T208): zod `InterviewerTurn`, `AnswerFeedback`, `MockReport` and `MockTone` in
+`api/_lib/schema.ts`, sizes in `MOCK_LIMITS`. Structured outputs enforce none of the lengths and
+counts (they travel as descriptions, in plain words, and the prompts repeat them), so the server's
+zod check decides:
+
+| Field | Limit |
+| --- | --- |
+| `InterviewerTurn.line` | 1–200 characters and ≤ 25 words; required with `followup` |
+| `InterviewerTurn.ack` | 1–80 characters (the prompt asks ≤ 8 words) |
+| `score` (feedback, report) | integer 1–5 |
+| `mistakes` (`said`, `better`, `why` ≤ 300 each) | ≤ 6 |
+| `pronunciation` (each ≤ 200) | ≤ 4 |
+| `invented` (`claim`, `why` ≤ 300 each) | ≤ 4 |
+| `fluency.fillers` (each ≤ 80), `fluency.note` | ≤ 5; note ≤ 200 (may be empty) |
+| `summary`, `content`, `next` (feedback) | 1–500, 1–800, 1–400 |
+| `improved` | 1–1200 (the prompt asks ≤ 170 words) |
+| report `invented` / `strengths` / `weakPoints` (each ≤ 300 / 200 / 200) | ≤ 4 each (the prompt asks 2–4 strengths and weak points) |
+| report `summary`, `next` | 1–600, 1–400 |
+
+The feedback object lists the analysis first (`invented`, `mistakes`, `pronunciation`, `fluency`,
+`content`) and `score`, `summary`, `improved`, `next` last, so the score is written after the
+findings; the report likewise (`invented`, `strengths`, `weakPoints`, then `score`, `summary`,
+`next`). Key order does not matter to the client.
+
+**Normalizers** (`api/_lib/normalize.ts`, before the zod check, like the pack's; the log line
+carries paths and counts only): `normalizeFeedback` trims each list to its maximum, clamps `score`
+to 1–5 and cuts an `improved` over 1200 characters after its last sentence that fits;
+`normalizeReport` trims its lists to 4 and clamps `score`; `normalizeInterviewerTurn` drops a
+`line` sent with `move_on`. The interviewer's line is never cut: over 200 characters or 25 words
+it fails (502, billed).
+
 ## Prompts (`api/_lib/prompts.ts`, English, byte-stable)
 
 - `FEEDBACK_SYSTEM`: an interview coach for a Spanish-speaking learner (described in
@@ -213,6 +248,70 @@ asked from Claude).
   has no server-side fallback). `max_tokens`: turn 1500, answer 4000, report 3000.
 - `PACK_SYSTEM`, `INTERVIEW_SYSTEM`, `ROUTE_SYSTEM`, `EPISODE_SYSTEM` stay byte-identical (prompt
   cache).
+
+Built (T208). `INTERVIEWER_SYSTEM` (~700 tokens), `FEEDBACK_SYSTEM` (~1.4k) and `REPORT_SYSTEM`
+(~600), each cached like the others (both models cache prefixes from 512 tokens). The corrector
+keeps the cards panel's correction rules and the meaning of its keys; the panel's description of
+its learner was not copied: who the learner is comes only from the deck's `learner` line (else
+`DEFAULT_MOCK_LEARNER`, "a Spanish-speaking professional, B2 English"), in the user turn. Rules
+beyond the list above:
+
+- **Interviewer.** A non-answer (empty, in Spanish, about something else) gets one follow-up that
+  asks the main point again, more simply. Never asks about the card's unconfirmed part or for
+  something already said; after two follow-ups on a question, always `move_on`. `ack`: a neutral
+  spoken reaction, never a verdict. `tough`: shorter, direct, specifics and results, still polite.
+- **Corrector.** `invented` = claims about the learner's own experience that the model answer does
+  not support (a new employer, role, tool, number, date, result or event, a changed figure, a
+  stronger claim); paraphrases, opinions, motivation and courtesy are not. Any specific detail for
+  the card's unconfirmed part is invented. **An answer with any invented claim scores 3 at most.**
+  Score scale: 5 natural, clear, correct, answers well · 4 a few mistakes that do not get in the way
+  · 3 several mistakes or a clear content gap · 2 hard to follow, very short or mostly beside the
+  question · 1 no real answer. Possible transcription slips go to `pronunciation`, never to
+  `mistakes`; fillers may be missing from a transcript, so none proves nothing; words per minute are
+  never estimated. A follow-up answer is judged against the follow-up; «Me he bloqueado» does not
+  lower the score. `improved` keeps the learner's content, order and roughly their length (≤ 170
+  words), keeps the unconfirmed part vague and drops invented claims; for an answer with nothing
+  usable it is a short answer built only from the model answer. English: `said`, `better`,
+  `claim`, `fillers`, `improved`; everything else Spain Spanish with "tú", English inside «»,
+  gender-neutral unless `<learner>` says otherwise.
+- **Report.** Built only from the corrections (no model answers in its prompt): invented claims
+  only as listed there, weak points are patterns across answers (repeated invented claims first),
+  the score is usually close to the average and lower when invented claims or one serious problem
+  repeat; `tough` holds the answers to that standard.
+
+User turns (`interviewerUserPrompt`, `feedbackUserPrompt`, `reportUserPrompt`; every quoted text
+`<` → `‹`, deck text included):
+
+- `<learner>` · `<card>`: `Title:`, `Main question:`, `Model answer:` (the English sentences,
+  numbered), `Key points:` (anchors), `Unconfirmed:` (the `pending` note, when set), `Target
+  length: about N seconds.` (when set) · interviewer only: `<history>` (earlier exchanges on this
+  question, or "none") · `<question>` (what was asked) · `<answer>` (or "(empty)") and `Time
+  spoken: N seconds (target about M seconds).` ("not measured" for 0) · then the interviewer's
+  `<tone>` and the count of follow-ups already asked, or the corrector's notes (follow-up, stuck) and
+  "Correct this answer.".
+- Report: `<learner>`, `<tone>`, `<answers>` (per answer: card title, asked, score, summary, its
+  mistakes `said → better (why)`, its invented claims), "Write the report of this mock
+  interview.".
+
+Inputs (`api/_lib/prompts.ts`): `TurnInput { learner?, card, tone, asked, history, answer,
+seconds }`, `FeedbackInput { learner?, card, asked, isFollowUp, answer, seconds, stuck }`,
+`ReportInput { learner?, tone, answers: { card, asked, score, summary, invented: string[],
+mistakes }[] }`: the request body with the card looked up by `cardId` and the deck's `learner`.
+
+### Generators (`api/_lib/generators.ts`, built T208)
+
+`generateTurn(input, model, onUsage)`, `generateFeedback(input, model, onUsage)`,
+`generateReport(input, model, onUsage)`: the endpoint passes its role's model
+(`interviewerModel()` / `feedbackModel()`, resolved before the deck, for the 503 order). Real:
+`generateStructured({ model, effort: "low", maxTokens })` with 1500 / 4000 / 3000, the role's
+system prompt, schema and normalizer. Fake: bills that model with plausible cached-prompt usage
+(`FAKE_TURN_USAGE` ≈ 0.0004 USD on Haiku 5.5, `FAKE_ANSWER_USAGE` ≈ 0.012 and `FAKE_REPORT_USAGE`
+≈ 0.011 on Sonnet 5.5) and returns fixtures for the fake deck (`api/_lib/fake.ts`): the first answer
+to a question gets that card's follow-up when it has fewer words than the model answer, otherwise
+`move_on`; feedback has two typical Spanish-speaker mistakes, a possible pronunciation issue, two
+fillers, the model answer as `improved`, an invented claim on two cards (score 3) and score 2 under
+15 words; the report averages the scores and lists the answers' invented claims. Other decks'
+cards get the same fixtures with a generic follow-up.
 
 ## Ledger (`api/_lib/ledger.ts`)
 
