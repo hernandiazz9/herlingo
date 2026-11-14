@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-11-14 12:24Z 💻
+- Updated: 2026-11-14 12:35Z 💻
 - Writer: me (💻 desktop session; plan checkout ../herlingo-entrevista)
 - Branch: plan-017-mi-entrevista · checkout /Users/heralc/Desktop/HDDev/herlingo-entrevista
-- Next step: integrate T208, then T209; Hernán deploys ../herlingo-deploy (@1b4f4ade) for T205
+- Next step: integrate T209; then T212 (client) while T205 and T210 wait for Hernán
 - Gotchas: public repo: no card text, answer, transcript or personal fact in code, fixtures, docs, commits or logs; `/api/coach/interview/` is the level interview (this feature: `deck`, `interviewer`, `feedback`, `mock`); agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits; no `.env.local` there (fake mode)
-- Needs Hernán: OK to deploy a preview/production build with T204 for T205 (iPhone check) · OK to spend ≈ 1 USD on evals (T210) · model choice (T211) · Anthropic console limit ≥ 15 USD before T216
+- Needs Hernán: deploy ../herlingo-deploy (@1b4f4ade) + T205 iPhone check · OK to spend ≈ 1 USD on evals (T210, runnable now) · model choice (T211) · Anthropic console limit ≥ 15 USD before T216
 
 ## Shared contract (all tasks read this)
 
@@ -199,7 +199,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - Outcome: PRICES from the pricing page 2026-11-14 (Haiku 5.5 incl. > 100k tier; Sonnet 5.5 cache read 0.10), generateStructured({ model }) with fallbacks only where supported, COACH_INTERVIEWER_MODEL/COACH_FEEDBACK_MODEL (unpriced → 503), mock budget 10 USD + mockSpend split, answers 60/day + turns 120/day, usage.mock (owner only), PUT mockCapUsd · 59b81dcb · verify ✓ 💻 · tsx ledger ✓ · stub Messages API ✓ · fake curl ✓ · not checked: real Haiku call (effort low + structured output)
 
 ## T208 — Interviewer and corrector: prompts, schemas, fakes, generators
-- Status: running (attempt 1 · 💻 · agent a484e41a3dce68221 · since 12:24Z)
+- Status: done
 - Depends on: T207
 - Where: any
 - Goal: Server modules that turn a card + an answer into a validated follow-up decision, feedback or report (fake or real Claude), no endpoints yet.
@@ -212,10 +212,10 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
   - Throwaway `npx tsx` check: fakes pass the schemas; an overflowing feedback is trimmed and passes; a follow-up line over 200 chars fails.
   - `git diff` shows the existing system prompts unchanged.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: InterviewerTurn/AnswerFeedback/MockReport zod + normalizers, INTERVIEWER_SYSTEM (~700 tok), FEEDBACK_SYSTEM (~1.4k), REPORT_SYSTEM (~600), user turns with ‹ escaping, generateTurn/Feedback/Report (fake: 0.0004/0.012/0.011 USD), four old prompts byte-identical · 7c124b99 · verify ✓ 💻 · tsx ✓ · no card text (scan) · not checked: real model behaviour, Haiku cache minimum
 
 ## T209 — `POST /api/coach/interviewer/`, `POST /api/coach/feedback/` and the interview voices
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent ae7f1ed1515ba8611 · since 12:35Z)
 - Depends on: T208
 - Where: any
 - Goal: The endpoints, owner only, reading the card from the stored deck, billed to Mi entrevista's budget.
@@ -324,6 +324,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 ## Review queue
 - [ ] T206 @1b4f4ade — deck endpoint + push script (privacy, owner check) (queued 2026-11-14 💻)
 - [ ] T207 @59b81dcb — ledger budget split + usage shape (queued 2026-11-14 💻)
+- [ ] T208 @7c124b99 — prompts (privacy, rules vs PERFIL-style 'never invent') (queued 2026-11-14 💻)
 
 ## Visual checks queue
 - [ ] T204 @2ccdbd96 — /microfono/ «Respuesta larga» card: countdown, live text, words/wpm/continuations; log rows with mode; light + dark (T205 covers the device) (queued 2026-11-14 💻)
@@ -343,6 +344,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 T204: continued: "failed" also when the browser ends a 6th time or silence runs out while a continuation starts; in answer mode a browser no-speech after listening counts as the browser ending (continues). (plan)
 - 2026-11-14 T206: deck:push skips cards without question or model answer and empty blocks; trims variants/anchors/phrases to the limits (counted), never the model answer; extra limits: ids 1–64 [A-Za-z0-9_-], titles ≤ 80, intros ≤ 400, tip/pending ≤ 600; Upstash value { updatedAt, deck }. (plan)
 - 2026-11-14 T207: usage top-level spentUsd/remainingUsd/mineUsd = Prepárate only (tokens = all calls); mock block owner only with remainingUsd + avgReportUsd; mock spend never in spend:<name>; turns over the limit get the answers message. (plan)
+- 2026-11-14 T208: an invented claim caps the score at 3; the interviewer re-asks more simply after a non-answer and never follows up on a pending part; score written last in the schema; normalizer clamps score, cuts improved at the last sentence ≤ 1200, drops a line on move_on; canned move-on 'Okay, let's move on.' (plan)
 
 ## Proposals (new scope)
 - 2026-11-14 plan: Real pronunciation scores: record the answer and send it to a speech service with pronunciation assessment (e.g. Azure, `en-AU`), measured against the inferred pronunciation of the transcript.
@@ -353,6 +355,9 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 T206: the ledger.ts header key list lacks mock:deck:<name> (T207 touches ledger.ts)
 - 2026-11-14 T206: 12 question-less cards (3 blocks of phrases/vocabulary) are skipped: a phrase-only card kind would bring them to Modo deporte (ask Hernán)
 - 2026-11-14 T207: docs/coach.md measured-cost table still uses the old 0.2 cache-read price (historical numbers)
+- 2026-11-14 T208: improved ≤ 1200 chars (prompt asks ≤ 170 words) is shorter than a 3-minute answer: check in T210/T216 whether it should grow
+- 2026-11-14 T208: betaZodOutputFormat drops a .describe() placed after .optional() (fixed in the new schemas; old ones unaffected)
+- 2026-11-14 T208: INTERVIEWER_SYSTEM (~700 tokens) may be under Haiku 5.5's minimum cacheable prefix: check cache_read in T210 (cost is tiny either way)
 
 ## Log
 - 2026-11-14 11:25Z 💻 plan written from the design session (8 decisions in two rounds of questions); not approved yet
@@ -366,3 +371,5 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 12:24Z 💻 T207 done · plan checkout → 59b81dcb · verify ✓
 - 2026-11-14 12:24Z 💻 deploy folder ../herlingo-deploy detached at 1b4f4ade (T204+T206) with the herlingo .vercel link; Hernán runs the deploy (his choice)
 - 2026-11-14 12:24Z 💻 T208 launched · attempt 1 · agent a484e41a3dce68221 (plan checkout, no isolation)
+- 2026-11-14 12:35Z 💻 T208 done · plan checkout → 7c124b99 · verify ✓
+- 2026-11-14 12:35Z 💻 T209 launched · attempt 1 · agent ae7f1ed1515ba8611 (plan checkout, no isolation)
