@@ -97,10 +97,10 @@ owner only, own budget) are specified in docs/mock-interview.md "API".
 
 | Status | `code` | When |
 | --- | --- | --- |
-| 400 | `bad_request` | Invalid body (too long, unknown language, disallowed voice, refine mismatch; a deck over 512 KB or invalid) |
+| 400 | `bad_request` | Invalid body (too long, unknown language, disallowed voice, refine mismatch; a deck over 512 KB or invalid; a Mi entrevista `cardId` the stored deck does not have: "Esa tarjeta ya no existe. Toca «Actualizar tarjetas».") |
 | 401 | `unauthorized` | Missing or wrong code → the app asks for the code again |
 | 403 | `forbidden` | `PUT /usage/` by a code that is not the owner; any Mi entrevista endpoint by a code that is not the owner: "Mi entrevista es solo para la cuenta del dueño." |
-| 404 | `no_deck` | `GET /deck/` before any `npm run deck:push`: "Todavía no hay tarjetas. Súbelas con npm run deck:push." |
+| 404 | `no_deck` | `GET /deck/`, `/interviewer/` or `/feedback/` before any `npm run deck:push`: "Todavía no hay tarjetas. Súbelas con npm run deck:push." |
 | 405 | `method_not_allowed` | Wrong method |
 | 429 | `daily_limit` | "Has llegado al límite de hoy. Vuelve mañana." (routes: "…de rutas de hoy…", episodes: "…de episodios de hoy…", Mi entrevista: "…de respuestas de hoy…") |
 | 429 | `budget` | "Se ha agotado el presupuesto de este mes." (Mi entrevista's own budget: "Se ha agotado el presupuesto de Mi entrevista de este mes.") |
@@ -169,11 +169,14 @@ max-age=31536000, immutable`: a line never changes, the client caches it by voic
 the slow flag for a slow line). `slow: true` = the voice itself reads the line at rate −30 %
 (pitch and volume unchanged; Modo deporte's slow lines, docs/sport.md "Slow"); absent or `false`
 = normal rate, exactly as before; any other value (`"yes"`, `1`) → 400.
-`voice` must be one of the `voices` of a content pack or a narrator voice, else 400; packs carry
-the two to use in `pack.voices`. The narrator voices (`NARRATOR_VOICES` in `api/_lib/languages.ts`,
-one per gloss language, mirrored by `COACH_NARRATORS` in `src/lib/coach/audio.ts`) are accepted on
-their own, not through a pack: today only `es-ES-AlvaroNeural` (gloss language `es`), which reads
-the Spanish meanings of Modo rápido's «Escuchar todo». The mp3 is read by that Microsoft neural voice (see "Voice (TTS)"); if the voice
+`voice` must be one of the `voices` of a content pack, a narrator voice or a Mi entrevista voice,
+else 400; packs carry the two to use in `pack.voices`. The narrator voices (`NARRATOR_VOICES` in
+`api/_lib/languages.ts`, one per gloss language, mirrored by `COACH_NARRATORS` in
+`src/lib/coach/audio.ts`) are accepted on their own, not through a pack: today only
+`es-ES-AlvaroNeural` (gloss language `es`), which reads the Spanish meanings of Modo rápido's
+«Escuchar todo». So are Mi entrevista's two (`MOCK_VOICES`, same file): `en-AU-NatashaNeural` (the
+interviewer) and `en-AU-WilliamMultilingualNeural` (the model answers); docs/mock-interview.md
+"Voices". The mp3 is read by that Microsoft neural voice (see "Voice (TTS)"); if the voice
 service fails → 503 `tts_unavailable` and the client falls back to the device voice
 (`speechSynthesis`). When a pack that declares `voice` has a `stress` rule, its `stress.mark` is
 removed from `text` before reading (the client still caches the line by its marked text; nothing
@@ -589,7 +592,8 @@ service `npm run audio` uses for the static content.
   `pack.voices.native`, learner options `pack.voices.learner` (different, like the static
   dialogues). The endpoint accepts only voices some `content/<lang>/pack.json` declares, plus
   the narrator voices (`NARRATOR_VOICES`: `es-ES-AlvaroNeural` for gloss language `es`, see
-  "POST /api/coach/tts/" and Modo rápido "«Escuchar todo»").
+  "POST /api/coach/tts/" and Modo rápido "«Escuchar todo»") and Mi entrevista's two
+  (`MOCK_VOICES`: `en-AU-NatashaNeural`, `en-AU-WilliamMultilingualNeural`).
 - One WebSocket per request (no shared state between invocations), 10 s timeout per attempt, 2
   attempts, empty audio counts as a failure. Then 503 `tts_unavailable` (logged as
   `[coach] edge-tts failed`) and the client plays the line with the device voice. Worst case

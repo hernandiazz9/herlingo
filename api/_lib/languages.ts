@@ -81,7 +81,21 @@ export function stripStressForVoice(text: string, voice: string): string {
  */
 export const NARRATOR_VOICES: Readonly<Record<string, string>> = { es: "es-ES-AlvaroNeural" };
 
-/** Every voice any pack declares, plus the narrator voices: the TTS endpoint accepts only these. */
+/**
+ * Mi entrevista's two voices (docs/mock-interview.md "Voices"), Australian English: the interviewer
+ * who asks (Natasha) and the one who reads the model answers (William). Accepted by the TTS endpoint
+ * on their own, like the narrators (no pack declares them). Mirrored on the client.
+ */
+export const MOCK_VOICES = {
+  interviewer: "en-AU-NatashaNeural",
+  answer: "en-AU-WilliamMultilingualNeural",
+} as const;
+
+/** Every voice any pack declares, plus the narrator and Mi entrevista voices: the TTS endpoint accepts only these. */
 export function allowedVoices(): Set<string> {
-  return new Set([...[...load().values()].flatMap((m) => m.voices), ...Object.values(NARRATOR_VOICES)]);
+  return new Set([
+    ...[...load().values()].flatMap((m) => m.voices),
+    ...Object.values(NARRATOR_VOICES),
+    ...Object.values(MOCK_VOICES),
+  ]);
 }

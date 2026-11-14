@@ -10,7 +10,8 @@ This document is the contract of plan 017 and is kept current by each task. Buil
 deck (schema, text store, `GET`/`PUT /api/coach/deck/`, `npm run deck:push`, the fake deck; T206);
 the two models, Haiku 5.5 in the price table, Mi entrevista's budget and counters, the `mock`
 block of `/usage/` (T207); the interviewer, corrector and report schemas, prompts, normalizers,
-fakes and generators, with no endpoint yet (T208). Everything else below is the contract its task
+fakes and generators (T208); `POST /api/coach/interviewer/`, `POST /api/coach/feedback/` and the
+two interview voices in `/api/coach/tts/` (T209). Everything else below is the contract its task
 builds.
 
 ## Decisions
@@ -136,6 +137,20 @@ messages as docs/coach.md, with the mock budget message "Se ha agotado el presup
 entrevista de este mes." and the daily one "Has llegado al límite de respuestas de hoy. Vuelve
 mañana.".
 
+Built (T209): `api/coach/interviewer.ts` and `api/coach/feedback.ts` do code → owner → body → model
+→ deck and card, then `runMockCall(caller, kind, model, call)` (`api/_lib/ledger.ts`) does the rest:
+budget → counter (`turn` → interviewer turns; `answer`, `report` → answers) → the generator with an
+`onUsage` that bills → the slot back only when nothing was billed. Deck and card errors:
+
+- No deck uploaded → 404 `no_deck` (the message of `GET /deck/`).
+- A `cardId` the stored deck does not have (the device's deck is older than the server's) → 400
+  `bad_request` "Esa tarjeta ya no existe. Toca «Actualizar tarjetas».".
+
+Every **real** call (not fake mode) logs one line, never text: `[coach] mock <turn|answer|report>
+<ok|failed> <ms> ms, <output> output tokens (<input> input, <cache read> cache read, <cache write>
+cache write), model <id>`; `ms` runs until Claude's response (or the failure), `input` counts the
+whole prompt (cached tokens included), the model is the one that answered (else the one asked).
+
 ### `GET /api/coach/deck/` and `PUT /api/coach/deck/` (built, T206)
 
 - `GET` → `200 { deck: InterviewDeck, updatedAt }` · none uploaded → 404 `no_deck` "Todavía no hay
@@ -148,30 +163,52 @@ mañana.".
   `readDeckBody` in `api/_lib/deck.ts` (the other Mi entrevista endpoints reuse `assertOwner` and
   `loadDeck`).
 
-### `POST /api/coach/interviewer/`
+### `POST /api/coach/interviewer/` (built, T209)
 
 `{ cardId, tone: "friendly"|"tough", asked: string, history: { asked, answer }[] (≤ 3, this
 question only), answer: string (1–3000), seconds, followUpsLeft: 0–2 }` → `200 { next:
 InterviewerTurn, usage }`. `followUpsLeft: 0` → `move_on` with a canned acknowledgement
 (`cannedMoveOn()` in `api/_lib/generators.ts`: "Okay, let's move on."), no Claude call, no
-counter.
+counter: after the deck and card checks it answers at once, even with the budget or the turns
+used up, with `usage` `{ costUsd: 0, model: null, latencyMs: 0, tokens: 0s, … }` (`noMockCall()`).
 
-### `POST /api/coach/feedback/`
+Body limits: `cardId` 1–64; `asked` and each `history[].asked` 1–300 after trimming (a spoken
+line); `answer` 1–3000 after trimming; `history[].answer` 0–3000 (an empty one reads "(empty)");
+`seconds` 0–3600 (0 = not measured); `followUpsLeft` an integer 0–2. Billed as `turn`.
+
+### `POST /api/coach/feedback/` (built, T209)
 
 - `{ kind: "answer", cardId, asked, isFollowUp, answer (1–3000), seconds, stuck }` → `200 {
-  feedback: AnswerFeedback, usage }`.
+  feedback: AnswerFeedback, usage }`. Billed as `answer`.
 - `{ kind: "report", tone, answers: { cardId, asked, score, summary, invented[], mistakes (≤ 3)
   }[] (1–24) }` → `200 { report: MockReport, usage }`. `invented` = the claims (`claim`) of that
-  answer's feedback.
+  answer's feedback. Billed as `report`; it takes one of the day's answers, like an answer.
+
+Body limits: `kind` picks the shape (anything else → 400 "(kind)"); `asked` 1–300 after trimming,
+`answer` 1–3000 after trimming, `seconds` 0–3600, `isFollowUp` and `stuck` booleans. Report
+answers: `score` an integer 1–5, `summary` 1–500, `invented` ≤ 4 (each 1–300), `mistakes` ≤ 3
+(`said`, `better`, `why` 1–300 each), the same limits as `AnswerFeedback`. Every `cardId` of a
+report must be in the stored deck (one unknown → 400).
 
 The server reads the card (model answer, anchors, pending) from the stored deck by `cardId`
 (unknown → 400): the client never sends the "facts". `usage` = `{ costUsd, model, latencyMs,
-tokens, today: { used, limit }, remainingUsd }`.
+tokens, today: { used, limit }, remainingUsd }` for all three calls:
 
-### Voices
+- `model`: the model that answered (the role's, or a server-side fallback); `null` when no call
+  was made (the canned move-on).
+- `latencyMs`: from the request to Claude until its response (not the whole endpoint).
+- `tokens`: `{ input, output, cacheWrite, cacheRead }` of the call.
+- `today`: the caller's **answers + reports** today, the same figure as `/usage/` `mock.today`,
+  also in an interviewer response (turns have their own, larger counter, never shown).
+- `remainingUsd`: what is left of Mi entrevista's budget this month (not Prepárate's).
 
-`/api/coach/tts/` also accepts the two interview voices (`MOCK_VOICES` in
-`api/_lib/languages.ts`, mirrored on the client), like the narrator voices.
+### Voices (built, T209)
+
+`/api/coach/tts/` also accepts the two interview voices, like the narrator voices: `MOCK_VOICES` in
+`api/_lib/languages.ts` = `{ interviewer: "en-AU-NatashaNeural", answer:
+"en-AU-WilliamMultilingualNeural" }` (Natasha asks, William reads the model answers), mirrored on
+the client (T212). Same rules as every line: ≤ 300 characters, the code's daily voice lines, any
+code (only the deck is owner only). Any other voice that no pack declares → 400.
 
 ## Schemas
 

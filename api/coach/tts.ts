@@ -5,7 +5,8 @@
  * falls back to the device voice. Every line read counts against the code's daily voice lines
  * (a line the voice could not read is given back).
  * The stress marks of a pack with a `stress` rule (the pack that declares the voice) are removed
- * before reading.
+ * before reading. Voices: those the content packs declare, the narrators and Mi entrevista's two
+ * (`allowedVoices()`); any other → 400.
  */
 import { authenticate } from "../_lib/access.js";
 import { isFake } from "../_lib/config.js";

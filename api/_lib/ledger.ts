@@ -42,13 +42,14 @@ import {
   defaultCapUsd,
   defaultMockCapUsd,
   episodeDailyLimit,
+  isFake,
   mockDailyLimit,
   routeDailyLimit,
   timeZone,
   ttsDailyLimit,
 } from "./config.js";
 import { CoachError } from "./http.js";
-import { costMicroUsd, sumUsage, type Charge } from "./model.js";
+import { costMicroUsd, sumUsage, type Charge, type TokenUsage } from "./model.js";
 import { LIMITS } from "./schema.js";
 import { getStore } from "./store.js";
 
@@ -412,4 +413,83 @@ export async function readUsage(caller: Caller): Promise<UsageSummary> {
     mineUsd: toUsd(mine),
     ...(mock ? { mock } : {}),
   };
+}
+
+// ---- Mi entrevista's calls (docs/mock-interview.md "API") ----
+
+/** The `usage` of a Mi entrevista endpoint (`/interviewer/`, `/feedback/`). */
+export interface MockCallUsage {
+  costUsd: number;
+  /** The model that answered (the role's, or a server-side fallback); null when no call was made. */
+  model: string | null;
+  /** From the request to Claude until its response; 0 when no call was made. */
+  latencyMs: number;
+  tokens: TokenUsage;
+  /** The caller's answers + reports today: the same figure as `/usage/` `mock.today`, for every kind. */
+  today: { used: number; limit: number };
+  /** What is left of Mi entrevista's budget this month. */
+  remainingUsd: number;
+}
+
+async function mockCallUsage(caller: Caller, call: Omit<MockCallUsage, "today" | "remainingUsd">): Promise<MockCallUsage> {
+  const { month, day } = periods();
+  const { today, remainingUsd } = await readMockUsage(caller, month, day);
+  return { ...call, today, remainingUsd };
+}
+
+/** The `usage` of an answer given without Claude (the interviewer's canned move-on): nothing spent. */
+export function noMockCall(caller: Caller): Promise<MockCallUsage> {
+  return mockCallUsage(caller, { costUsd: 0, model: null, latencyMs: 0, tokens: sumUsage([]) });
+}
+
+const tokensLine = (u: TokenUsage) =>
+  `${u.output} output tokens (${u.input + u.cacheWrite + u.cacheRead} input, ${u.cacheRead} cache read, ${u.cacheWrite} cache write)`;
+
+/**
+ * One billed Mi entrevista call, after the endpoint's own checks (code, owner, body, model, deck and
+ * card): its budget (`assertMockBudget`) → its daily counter (`turn` → interviewer turns; `answer`,
+ * `report` → answers) → `call` on the role's `model`, whose `onUsage` bills it as `kind` → the slot
+ * back only when nothing was billed. Every real call logs one line, never text:
+ * `[coach] mock <kind> <ok|failed> <ms> ms, <tokens>, model <id>` (`ms` until the response or the
+ * failure; the model that answered, else the one asked).
+ */
+export async function runMockCall<T>(
+  caller: Caller,
+  kind: MockCallKind,
+  model: string,
+  call: (onUsage: (charges: Charge[]) => Promise<void>) => Promise<T>,
+): Promise<{ result: T; usage: MockCallUsage }> {
+  await assertMockBudget();
+  const refund = await (kind === "turn" ? reserveMockTurn(caller) : reserveMockAnswer(caller));
+  const started = Date.now();
+  let answeredMs: number | undefined;
+  let charges: Charge[] = [];
+  let costMicro = 0;
+  let charged = false;
+  let outcome = "failed";
+  try {
+    const result = await call(async (billed) => {
+      answeredMs ??= Date.now() - started;
+      charged = true;
+      charges = billed;
+      costMicro += await recordCall(caller, kind, billed);
+    });
+    outcome = "ok";
+    const usage = await mockCallUsage(caller, {
+      costUsd: costMicro / MICRO,
+      model: charges.at(-1)?.model ?? model,
+      latencyMs: answeredMs ?? Date.now() - started,
+      tokens: sumUsage(charges),
+    });
+    return { result, usage };
+  } catch (error) {
+    // A billed call keeps its slot: only a call that cost nothing (no response) gives it back.
+    if (!charged) await refund();
+    throw error;
+  } finally {
+    if (!isFake()) {
+      const ms = answeredMs ?? Date.now() - started;
+      console.log(`[coach] mock ${kind} ${outcome} ${ms} ms, ${tokensLine(sumUsage(charges))}, model ${charges.at(-1)?.model ?? model}`);
+    }
+  }
 }
