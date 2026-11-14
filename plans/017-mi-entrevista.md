@@ -8,11 +8,11 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-11-14 11:33Z 💻
-- Writer: none (approved; nothing launched yet)
-- Branch: plan-017-mi-entrevista · not created
-- Next step: T204 and T206 (independent: speech mode and private deck), when Hernán says to start
-- Gotchas: the GitHub repo is **public**: no card text, answer, transcript or personal fact anywhere in code, fixtures, docs, commit messages or logs (see "Privacy"); `/api/coach/interview/` already exists (the level interview): this feature uses `deck`, `interviewer`, `feedback` and the `mock` prefix instead
+- Updated: 2026-11-14 11:35Z 💻
+- Writer: me (💻 desktop session; plan checkout ../herlingo-entrevista)
+- Branch: plan-017-mi-entrevista · checkout /Users/heralc/Desktop/HDDev/herlingo-entrevista
+- Next step: T204 (agent in the plan checkout, no isolation), then T206
+- Gotchas: public repo: no card text, answer, transcript or personal fact in code, fixtures, docs, commits or logs; `/api/coach/interview/` is the level interview (this feature: `deck`, `interviewer`, `feedback`, `mock`); agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits; no `.env.local` there (fake mode)
 - Needs Hernán: T205 iPhone check · OK to spend ≈ 1 USD on the first eval run (T210) · model choice per role (T211) · Anthropic console spend limit ≥ 15 USD before T216
 
 ## Shared contract (all tasks read this)
@@ -230,7 +230,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 
 ## T210 — Evals: seeded cases, runner, first measurement (Hernán's OK: ≈ 1 USD)
 - Status: pending
-- Depends on: T208 (T209 not needed)
+- Depends on: T208
 - Where: pc (real key in `.env.local`, Hernán's real deck file, his OK to spend)
 - Goal: Measure correction and follow-up quality, cost and latency for Sonnet 5.5 and Haiku 5.5 before any UI.
 - Context: Design "Evals"; `api/_lib/{prompts,schema,generators,claude,model}.ts` (the runner imports the production prompts and schemas; relative `.js` imports work under `tsx`).
@@ -347,3 +347,4 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 ## Log
 - 2026-11-14 11:25Z 💻 plan written from the design session (8 decisions in two rounds of questions); not approved yet
 - 2026-11-14 11:33Z 💻 approved by Hernán ("Sí, apruebo")
+- 2026-11-14 11:35Z 💻 resume on 💻 · branch plan-017-mi-entrevista from main @49563803 · plan checkout ../herlingo-entrevista · npm ci
