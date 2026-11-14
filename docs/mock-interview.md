@@ -11,8 +11,9 @@ deck (schema, text store, `GET`/`PUT /api/coach/deck/`, `npm run deck:push`, the
 the two models, Haiku 5.5 in the price table, Mi entrevista's budget and counters, the `mock`
 block of `/usage/` (T207); the interviewer, corrector and report schemas, prompts, normalizers,
 fakes and generators (T208); `POST /api/coach/interviewer/`, `POST /api/coach/feedback/` and the
-two interview voices in `/api/coach/tts/` (T209). Everything else below is the contract its task
-builds.
+two interview voices in `/api/coach/tts/` (T209); the client in `src/lib/mock-interview/`: deck
+sync, storage, API calls, attempts, reports, export, voices (T212). Everything else below is the
+contract its task builds.
 
 ## Decisions
 
@@ -207,7 +208,7 @@ tokens, today: { used, limit }, remainingUsd }` for all three calls:
 `/api/coach/tts/` also accepts the two interview voices, like the narrator voices: `MOCK_VOICES` in
 `api/_lib/languages.ts` = `{ interviewer: "en-AU-NatashaNeural", answer:
 "en-AU-WilliamMultilingualNeural" }` (Natasha asks, William reads the model answers), mirrored on
-the client (T212). Same rules as every line: ≤ 300 characters, the code's daily voice lines, any
+the client as `MOCK_VOICES` in `src/lib/mock-interview/audio.ts` (T212). Same rules as every line: ≤ 300 characters, the code's daily voice lines, any
 code (only the deck is owner only). Any other voice that no pack declares → 400.
 
 ## Schemas
@@ -399,10 +400,40 @@ dropped.
   feedback?, feedbackError?, rating?: { useful?: boolean; myScore?: 1–5 }, model?, costUsd? }`.
   From 400 attempts the screen suggests exporting; nothing is dropped automatically (attempts are
   deleted only by an explicit action).
-- `lang-lern:mock-interview:reports` `{ v: 1, reports }`: `{ id, at, tone, cardIds, report,
-  costUsd }`.
+- `lang-lern:mock-interview:reports` `{ v: 1, reports }`: `{ id, at, tone, sessionId?, cardIds,
+  report, costUsd, model? }`.
 - Per-card state is derived (attempts, last score, best, «Dominada» = last two scores ≥ 4), never
   stored.
+
+Built (T212). Framework-free modules exported from `@/lib/mock-interview`; React hooks in
+`@/lib/mock-interview/use-mock-interview`. The types are written by hand from the server's zod
+schemas (`types.ts`; `MOCK_REQUEST_LIMITS` mirrors the request limits of the two endpoints): change
+one side, change the other.
+
+| Module | Contents |
+| --- | --- |
+| `api.ts` | `fetchDeck()` (stores it; `saved: false` when storage failed, the deck still returned), `takeTurn(req)`, `getFeedback(req)`, `getReport(req)`. Errors are `CoachApiError`s (`@/lib/coach`); bodies trimmed and clamped to the server's limits first (an answer over 3000 characters is cut at a word); an empty answer rejects with code `empty_answer` and a report without corrected answers with `no_answers`, before any request. Offline and "no backend here" get Mi entrevista's own message. Every response's `usage` updates the stored usage summary's `mock` block (`noteMockCall`). |
+| `deck.ts` | the stored deck (`getStoredDeck`, `storeDeck`), `getCard`, `blockCards`, `cardQuestions(card)` (question + variants) and `questionToAsk(card, answers)`, which rotates them |
+| `attempts.ts` | `addAttempt(input)` (id, date, words and words per minute added; null when storage failed), `correctAttempt(id)` (feedback, model and cost stored on the attempt, or the error's message in `feedbackError`; an aborted request stores nothing), `setAttemptFeedback`, `setAttemptFeedbackError`, `rateAttempt(id, { useful?, myScore? })` (merged; a key passed as `undefined` clears it), `deleteAttempt`, `deleteAllAttempts`, `sessionAttempts(attempts, sessionId)` (oldest first), `cardStats(attempts)`, `EMPTY_CARD_STATS`, `EXPORT_SUGGESTED_AT` (400) |
+| `reports.ts` | `addReport`, `deleteReport`, `reportAnswers(attempts)` (score, summary, invented claims, first 3 mistakes; at most 24), `createReport(sessionId, tone)` (the simulacro's corrected attempts → `getReport` → stored with its `sessionId`) |
+| `export.ts` | `exportAttempts()`: «Exportar intentos», `herlingo-entrevista-intentos-YYYY-MM-DD.json` = `{ app: "lang-lern", kind: "mock-interview-attempts", format: 1, exportedAt, attempts, reports }`, through the backup's `saveFile` (share sheet on phones, else a download; call it straight from the tap). Nothing is deleted. Not a backup file: Perfil's import refuses it. |
+| `audio.ts` | `MOCK_VOICES`, `mockPlayable(text, "interviewer" \| "model")` (Natasha / William), `MOCK_SPEAK_OPTIONS` (`{ locale: "en-AU" }`: the device-voice fallback speaks Australian English whatever the active pack) |
+| `words.ts` | `countWords(text)` (tokens with a letter or digit), `wordsPerMinute(words, seconds)` (rounded; 0 when not measured) |
+| `store.ts`, `parse.ts` | the keys, `writeStored` (never overwrites a value of a newer version, `v` > 1) and the change event `lang-lern:mock-interview-change`; hand-written shape checks (invalid items dropped, nothing throws, stored texts never cut) |
+| `use-mock-interview.ts` | `useDeck()` (`{ deck, updatedAt, fetchedAt, loading, error, refresh }`: downloads on mount when a code is stored), `useAttempts()` (`attempts`, `stats`, `statsFor(cardId)`, `suggestExport`, and the actions), `useReports()` (`reports`, `get`, `forSession`, `create`, `remove`) |
+
+- **Per-card stats** (`CardStats`): `answers` (to the card's own question; a card rotates its
+  question and variants by this count), `followUps` (answers to its follow-ups, counted apart),
+  `lastScore`, `bestScore` and «Dominada» (`mastered`: the two newest corrected answers to the
+  card's question scored ≥ 4) from those answers only, `lastAt` (newest attempt, follow-ups
+  included).
+- **Backup and cloud save.** The three keys are ordinary `lang-lern:*` keys: they pass `isBackupKey`
+  and `isCloudSaveKey`, so they travel in the Perfil file and the cloud save (the deck too, up to
+  512 KB against the cloud copy's 2 MB). A restored backup re-reads them (the `storage` event with
+  a null key).
+- **Usage.** `CoachUsage.mock` (`@/lib/coach`, optional: owner only, absent from older servers and
+  stored summaries) mirrors `/usage/`'s `mock` block; `updateMockCap(mockCapUsd)` is the owner's
+  `PUT /usage/` for Mi entrevista's cap.
 
 ## Listening (`answer` mode, `src/lib/speech/`)
 

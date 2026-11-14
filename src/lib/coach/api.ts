@@ -310,6 +310,11 @@ export async function updateMonthlyCap(capUsd: number): Promise<CoachUsage> {
   return usageFrom(await callJson("usage", { method: "PUT", body: { capUsd } }));
 }
 
+/** Owner only (others get kind "other", status 403): sets Mi entrevista's monthly cap in USD (`usage.mock.capUsd`). */
+export async function updateMockCap(mockCapUsd: number): Promise<CoachUsage> {
+  return usageFrom(await callJson("usage", { method: "PUT", body: { mockCapUsd } }));
+}
+
 /** Checks a code with the server; when valid, stores it and returns its usage. */
 export async function checkAccessCode(code: string, opts: { signal?: AbortSignal } = {}): Promise<CoachUsage> {
   const trimmed = code.trim();
@@ -347,3 +352,10 @@ export async function fetchSpeech(
     },
   );
 }
+
+/**
+ * For the other features on the coach backend (Mi entrevista, `@/lib/mock-interview`): one JSON
+ * request to `/api/coach/<path>/` with the stored code, and the "invalid response" error, exactly
+ * as Prepárate's own calls use them.
+ */
+export { callJson as coachJson, invalid as invalidCoachResponse, type CallOptions as CoachCallOptions };

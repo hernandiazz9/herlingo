@@ -10,6 +10,7 @@ import {
   COACH_ROUTE_LIMITS,
   type CoachAssessment,
   type CoachLevel,
+  type CoachMockUsage,
   type CoachOption,
   type CoachPack,
   type CoachRoute,
@@ -270,6 +271,23 @@ export function parseUsage(v: unknown): CoachUsage | null {
     ...(isNum(v.episodes) ? { episodes: v.episodes } : {}),
     ...(isNum(v.avgEpisodeUsd) ? { avgEpisodeUsd: v.avgEpisodeUsd } : {}),
     ...(isObject(v.episodesToday) ? { episodesToday: today(v.episodesToday) } : {}),
+    // Owner only: Mi entrevista's own block (absent for other codes, older servers and stored summaries).
+    ...(isObject(v.mock) ? { mock: parseMockUsage(v.mock) } : {}),
+  };
+}
+
+function parseMockUsage(v: Obj): CoachMockUsage {
+  return {
+    spentUsd: num(v.spentUsd),
+    capUsd: num(v.capUsd),
+    remainingUsd: num(v.remainingUsd),
+    answers: num(v.answers),
+    avgAnswerUsd: num(v.avgAnswerUsd),
+    turns: num(v.turns),
+    avgTurnUsd: num(v.avgTurnUsd),
+    reports: num(v.reports),
+    avgReportUsd: num(v.avgReportUsd),
+    today: today(v.today),
   };
 }
 

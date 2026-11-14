@@ -91,6 +91,51 @@ export function noteEpisode(g: GenerationUsage): void {
   });
 }
 
+/** What `noteMockCall` reads of a Mi entrevista response's `usage` (`MockCallUsage` in `@/lib/mock-interview`). */
+export interface MockCallNote {
+  costUsd: number;
+  /** Null when no call was made (the interviewer's canned move-on): nothing billed, nothing counted. */
+  model: string | null;
+  remainingUsd: number;
+  today: { used: number; limit: number };
+}
+
+const MOCK_COUNTS = {
+  turn: ["turns", "avgTurnUsd"],
+  answer: ["answers", "avgAnswerUsd"],
+  report: ["reports", "avgReportUsd"],
+} as const;
+
+/**
+ * Applies a Mi entrevista call (`kind` as billed: an interviewer turn, an answer's feedback or a
+ * report) to the stored summary's `mock` block: its spend, count and average, the remaining budget
+ * and today's answers. Prepárate's figures are left as they are; nothing happens without a stored
+ * `mock` block (not the owner, or never fetched).
+ */
+export function noteMockCall(call: MockCallNote, kind: keyof typeof MOCK_COUNTS): void {
+  const stored = getStoredUsage();
+  const mock = stored?.usage.mock;
+  if (!stored || !mock) return;
+  const today = call.today.limit > 0 ? call.today : mock.today;
+  if (call.model === null) {
+    storeUsage({ ...stored.usage, mock: { ...mock, remainingUsd: call.remainingUsd, today } });
+    return;
+  }
+  const [count, avg] = MOCK_COUNTS[kind];
+  const before = mock[count];
+  storeUsage({
+    ...stored.usage,
+    mock: {
+      ...mock,
+      spentUsd: mock.spentUsd + call.costUsd,
+      remainingUsd: call.remainingUsd,
+      today,
+      [count]: before + 1,
+      [avg]: (mock[avg] * before + call.costUsd) / (before + 1),
+    },
+  });
+}
+
 /** "3,20 $": Spain Spanish amount in US dollars. */
 export function formatUsd(amount: number, decimals = 2): string {
   const n = amount.toLocaleString("es-ES", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });

@@ -188,6 +188,26 @@ export interface CoachUsage {
   avgEpisodeUsd?: number;
   /** AI episodes today by the caller's code: their own counter (absent like `episodes`). */
   episodesToday?: { used: number; limit: number };
+  /** Mi entrevista's own budget and counters: the owner only (absent for other codes, older servers and stored summaries). */
+  mock?: CoachMockUsage;
+}
+
+/** Mi entrevista's part of `GET /api/coach/usage/` (docs/mock-interview.md "Ledger"), apart from Prepárate's figures. */
+export interface CoachMockUsage {
+  spentUsd: number;
+  capUsd: number;
+  remainingUsd: number;
+  /** Corrected answers billed this month and their average cost. */
+  answers: number;
+  avgAnswerUsd: number;
+  /** Interviewer turns billed this month and their average cost. */
+  turns: number;
+  avgTurnUsd: number;
+  /** Simulacro reports billed this month and their average cost. */
+  reports: number;
+  avgReportUsd: number;
+  /** The caller's answers + reports today (interviewer turns have their own counter, never shown). */
+  today: { used: number; limit: number };
 }
 
 /** The `usage` part of a generation response (for a route or an episode, `today` is its own counter). */
