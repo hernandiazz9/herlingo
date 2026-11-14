@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-11-14 11:35Z 💻
+- Updated: 2026-11-14 11:36Z 💻
 - Writer: me (💻 desktop session; plan checkout ../herlingo-entrevista)
 - Branch: plan-017-mi-entrevista · checkout /Users/heralc/Desktop/HDDev/herlingo-entrevista
-- Next step: T204 (agent in the plan checkout, no isolation), then T206
+- Next step: integrate T204, then launch T206
 - Gotchas: public repo: no card text, answer, transcript or personal fact in code, fixtures, docs, commits or logs; `/api/coach/interview/` is the level interview (this feature: `deck`, `interviewer`, `feedback`, `mock`); agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits; no `.env.local` there (fake mode)
 - Needs Hernán: T205 iPhone check · OK to spend ≈ 1 USD on the first eval run (T210) · model choice per role (T211) · Anthropic console spend limit ≥ 15 USD before T216
 
@@ -141,7 +141,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 ## Tasks
 
 ## T204 — Listening `answer` mode and a «Respuesta larga» test on Probar micrófono
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a3a8ec0ea5a338539 · since 11:36Z)
 - Depends on: none
 - Where: any
 - Goal: The speech engine can take a 30 s – 3 min spoken answer, continuing when the browser stops on its own, and Hernán can test it on his iPhone before anything else is built.
@@ -348,3 +348,4 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 11:25Z 💻 plan written from the design session (8 decisions in two rounds of questions); not approved yet
 - 2026-11-14 11:33Z 💻 approved by Hernán ("Sí, apruebo")
 - 2026-11-14 11:35Z 💻 resume on 💻 · branch plan-017-mi-entrevista from main @49563803 · plan checkout ../herlingo-entrevista · npm ci
+- 2026-11-14 11:36Z 💻 T204 launched · attempt 1 · agent a3a8ec0ea5a338539 (plan checkout, no isolation)
