@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-11-14 11:58Z 💻
+- Updated: 2026-11-14 12:24Z 💻
 - Writer: me (💻 desktop session; plan checkout ../herlingo-entrevista)
 - Branch: plan-017-mi-entrevista · checkout /Users/heralc/Desktop/HDDev/herlingo-entrevista
-- Next step: integrate T207, then T208; T205 waits for Hernán's OK to deploy
+- Next step: integrate T208, then T209; Hernán deploys ../herlingo-deploy (@1b4f4ade) for T205
 - Gotchas: public repo: no card text, answer, transcript or personal fact in code, fixtures, docs, commits or logs; `/api/coach/interview/` is the level interview (this feature: `deck`, `interviewer`, `feedback`, `mock`); agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits; no `.env.local` there (fake mode)
 - Needs Hernán: OK to deploy a preview/production build with T204 for T205 (iPhone check) · OK to spend ≈ 1 USD on evals (T210) · model choice (T211) · Anthropic console limit ≥ 15 USD before T216
 
@@ -185,7 +185,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - Outcome: InterviewDeck zod, Store getText/setText, GET/PUT /api/coach/deck/ (owner only, 404 no_deck, 512 KB), deck:push (counts only, --dry), fake deck (invented persona), docs/mock-interview.md · 1b4f4ade · verify ✓ 💻 · fake curl ✓ · --dry on the real file: 6 blocks, 42 cards (13 pending), 12 question-less cards skipped · no card text in the repo (scan) · not checked: real Upstash, production upload
 
 ## T207 — Two models, Haiku in the price table, Mi entrevista budget and counters
-- Status: running (attempt 1 · 💻 · agent ad90c020f30eec05c · since 11:58Z)
+- Status: done
 - Depends on: T206
 - Where: any
 - Goal: The ledger can pay for two model roles out of a separate monthly budget, with their own daily counters, without changing Prepárate.
@@ -196,10 +196,10 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
   - Mock budget and counters per Design; `assertBudget()` = `spend − mockSpend` vs cap; refunds as today; `GET /usage/` `mock` block; `PUT /usage/` `mockCapUsd` (owner only).
   - Throwaway `npx tsx` check on the memory store: mock spend does not block Prepárate and vice versa; the 61st answer → 429; usage numbers add up.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: PRICES from the pricing page 2026-11-14 (Haiku 5.5 incl. > 100k tier; Sonnet 5.5 cache read 0.10), generateStructured({ model }) with fallbacks only where supported, COACH_INTERVIEWER_MODEL/COACH_FEEDBACK_MODEL (unpriced → 503), mock budget 10 USD + mockSpend split, answers 60/day + turns 120/day, usage.mock (owner only), PUT mockCapUsd · 59b81dcb · verify ✓ 💻 · tsx ledger ✓ · stub Messages API ✓ · fake curl ✓ · not checked: real Haiku call (effort low + structured output)
 
 ## T208 — Interviewer and corrector: prompts, schemas, fakes, generators
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a484e41a3dce68221 · since 12:24Z)
 - Depends on: T207
 - Where: any
 - Goal: Server modules that turn a card + an answer into a validated follow-up decision, feedback or report (fake or real Claude), no endpoints yet.
@@ -323,6 +323,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 
 ## Review queue
 - [ ] T206 @1b4f4ade — deck endpoint + push script (privacy, owner check) (queued 2026-11-14 💻)
+- [ ] T207 @59b81dcb — ledger budget split + usage shape (queued 2026-11-14 💻)
 
 ## Visual checks queue
 - [ ] T204 @2ccdbd96 — /microfono/ «Respuesta larga» card: countdown, live text, words/wpm/continuations; log rows with mode; light + dark (T205 covers the device) (queued 2026-11-14 💻)
@@ -341,6 +342,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 plan: Work on branch `plan-017-mi-entrevista`; no merge into main, PR, deploy or real API spend without Hernán's explicit OK. (plan)
 - 2026-11-14 T204: continued: "failed" also when the browser ends a 6th time or silence runs out while a continuation starts; in answer mode a browser no-speech after listening counts as the browser ending (continues). (plan)
 - 2026-11-14 T206: deck:push skips cards without question or model answer and empty blocks; trims variants/anchors/phrases to the limits (counted), never the model answer; extra limits: ids 1–64 [A-Za-z0-9_-], titles ≤ 80, intros ≤ 400, tip/pending ≤ 600; Upstash value { updatedAt, deck }. (plan)
+- 2026-11-14 T207: usage top-level spentUsd/remainingUsd/mineUsd = Prepárate only (tokens = all calls); mock block owner only with remainingUsd + avgReportUsd; mock spend never in spend:<name>; turns over the limit get the answers message. (plan)
 
 ## Proposals (new scope)
 - 2026-11-14 plan: Real pronunciation scores: record the answer and send it to a speech service with pronunciation assessment (e.g. Azure, `en-AU`), measured against the inferred pronunciation of the transcript.
@@ -350,6 +352,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 T206: CLAUDE.md does not list deck:push or scripts/mock-interview/ (add with T212/T213 layout lines)
 - 2026-11-14 T206: the ledger.ts header key list lacks mock:deck:<name> (T207 touches ledger.ts)
 - 2026-11-14 T206: 12 question-less cards (3 blocks of phrases/vocabulary) are skipped: a phrase-only card kind would bring them to Modo deporte (ask Hernán)
+- 2026-11-14 T207: docs/coach.md measured-cost table still uses the old 0.2 cache-read price (historical numbers)
 
 ## Log
 - 2026-11-14 11:25Z 💻 plan written from the design session (8 decisions in two rounds of questions); not approved yet
@@ -360,3 +363,6 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 11:45Z 💻 T206 launched · attempt 1 · agent a60b73857c56d59ae (plan checkout, no isolation)
 - 2026-11-14 11:58Z 💻 T206 done · plan checkout → 1b4f4ade · verify ✓
 - 2026-11-14 11:58Z 💻 T207 launched · attempt 1 · agent ad90c020f30eec05c (plan checkout, no isolation)
+- 2026-11-14 12:24Z 💻 T207 done · plan checkout → 59b81dcb · verify ✓
+- 2026-11-14 12:24Z 💻 deploy folder ../herlingo-deploy detached at 1b4f4ade (T204+T206) with the herlingo .vercel link; Hernán runs the deploy (his choice)
+- 2026-11-14 12:24Z 💻 T208 launched · attempt 1 · agent a484e41a3dce68221 (plan checkout, no isolation)
