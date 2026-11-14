@@ -28,6 +28,12 @@ const LEAGUE_AUTH_PREFIX = `${BACKUP_PREFIX}league-auth`;
 const LEAGUE_PREFIX = `${BACKUP_PREFIX}league-`;
 /** Cloud save bookkeeping (`src/lib/cloud-save/`): about this device and account, never in a copy. */
 export const CLOUD_SAVE_KEY = `${BACKUP_PREFIX}cloud-save`;
+/**
+ * Mi entrevista's private deck (plan 017): downloaded again from the server with the owner's code,
+ * so it never travels in a backup file or the cloud copy (and an import never touches it).
+ * The learner's attempts and reports do travel.
+ */
+const MOCK_DECK_KEY = `${BACKUP_PREFIX}mock-interview:deck`;
 /** Kept on the device when the backup lacks them (the theme is overwritten when the file has one). */
 const KEEP_ON_IMPORT = new Set([ACCESS_KEY, `${BACKUP_PREFIX}theme`]);
 
@@ -63,7 +69,7 @@ const isObject = (v: unknown): v is Record<string, unknown> => !!v && typeof v =
 
 /** True for keys that belong in a backup. */
 export function isBackupKey(key: string): boolean {
-  if (!key.startsWith(BACKUP_PREFIX) || key === ACCESS_KEY || key === CLOUD_SAVE_KEY) return false;
+  if (!key.startsWith(BACKUP_PREFIX) || key === ACCESS_KEY || key === CLOUD_SAVE_KEY || key === MOCK_DECK_KEY) return false;
   if (key.startsWith(LEAGUE_AUTH_PREFIX)) return false;
   return !key.slice(BACKUP_PREFIX.length).split(":").some((segment) => segment.startsWith("__"));
 }

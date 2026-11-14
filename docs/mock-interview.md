@@ -25,7 +25,7 @@ contract its task builds.
 | Models | Two roles. **Interviewer** (decides the follow-up, one short line): `COACH_INTERVIEWER_MODEL`, default `claude-haiku-5-5`. **Corrector** (feedback per answer and the simulacro report): `COACH_FEEDBACK_MODEL`, default `claude-sonnet-5-5`. Both `effort: "low"`. The evals (T210) say whether Haiku is enough for correcting too; Hernán picks (T211). |
 | Budget | Mi entrevista has its **own monthly cap, 10 USD** (`COACH_MOCK_MONTHLY_CAP_USD`, owner-editable), separate from Prepárate's 5 USD; **60 answers a day** (`COACH_MOCK_DAILY_LIMIT`; an answer's feedback and a report take one each), interviewer turns ≤ 2 × that. Estimate: ≈ 0.01 USD per corrected answer on Sonnet 5.5, ≈ 0.0005 per interviewer turn on Haiku 5.5, a full simulacro ≈ 0.10–0.15 USD, 30 answers a day ≈ 9 USD a month. |
 | Feedback | The cards panel's schema (score 1–5, summary, mistakes said → better + why, inferred pronunciation, content, improved version, next step) **plus two fields**: `invented` (claims not in his model answer: the most serious finding) and `fluency` (fillers and cut-off sentences seen by Claude; words per minute computed on the device). Same meaning as the panel's keys, so both can be compared. |
-| Attempts | On the device (they travel in the Perfil backup and the cloud save, his own account). «Exportar intentos» writes a JSON file. After each correction «¿Te sirvió?» 👍/👎 and «Tu nota» 1–5 are stored with the attempt (quality signal for later). |
+| Attempts | On the device (they travel in the Perfil backup and the cloud save, his own account; the deck does not: it is downloaded again from the server). «Exportar intentos» writes a JSON file. After each correction «¿Te sirvió?» 👍/👎 and «Tu nota» 1–5 are stored with the attempt (quality signal for later). |
 | Evals | **Seeded cases only** for now: ≥ 20 answers written with known defects (labels by construction), frozen, run against both models per role with deterministic checks first and Claude Opus 5.5 as judge only where a rule cannot decide. Local, outside `verify`, ≤ 1 USD a run. |
 | Modo deporte | Free episodes from the deck, one per block, all English: Natasha asks → a gap to answer aloud while running → William reads the model answer sentence by sentence → "Key phrases." and the card's phrases. Same player (locked screen, offline). |
 
@@ -427,10 +427,12 @@ one side, change the other.
   `lastScore`, `bestScore` and «Dominada» (`mastered`: the two newest corrected answers to the
   card's question scored ≥ 4) from those answers only, `lastAt` (newest attempt, follow-ups
   included).
-- **Backup and cloud save.** The three keys are ordinary `lang-lern:*` keys: they pass `isBackupKey`
-  and `isCloudSaveKey`, so they travel in the Perfil file and the cloud save (the deck too, up to
-  512 KB against the cloud copy's 2 MB). A restored backup re-reads them (the `storage` event with
-  a null key).
+- **Backup and cloud save.** Attempts and reports are ordinary `lang-lern:*` keys: they pass
+  `isBackupKey` and `isCloudSaveKey`, so they travel in the Perfil file and the cloud save, and the
+  cloud save listens to `lang-lern:mock-interview-change`. The deck (`lang-lern:mock-interview:deck`)
+  is excluded by `isBackupKey` (T212 writer fix): it is downloaded again from the server, so it never
+  travels in a copy, an import never removes or overwrites it, and it does not use the cloud copy's
+  2 MB. A restored backup re-reads the others (the `storage` event with a null key).
 - **Usage.** `CoachUsage.mock` (`@/lib/coach`, optional: owner only, absent from older servers and
   stored summaries) mirrors `/usage/`'s `mock` block; `updateMockCap(mockCapUsd)` is the owner's
   `PUT /usage/` for Mi entrevista's cap.

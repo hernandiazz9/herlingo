@@ -52,6 +52,7 @@ const CHANGE_EVENTS = [
   "lang-lern:stories-change",
   "lang-lern:coach-change",
   "lang-lern:gloss-change",
+  "lang-lern:mock-interview-change",
 ];
 
 /** Server tokens of the save RPCs (they reach the client as the `LeagueError` message). */
