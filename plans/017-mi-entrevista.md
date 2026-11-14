@@ -8,10 +8,10 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-11-14 12:43Z 💻
+- Updated: 2026-11-14 12:56Z 💻
 - Writer: me (💻 desktop session; plan checkout ../herlingo-entrevista)
 - Branch: plan-017-mi-entrevista · checkout /Users/heralc/Desktop/HDDev/herlingo-entrevista
-- Next step: integrate T212; T213 waits for T205 (iPhone mic check); T210 waits for Hernán's OK to spend ≈ 1 USD
+- Next step: T213 waits for T205 (deploy + iPhone mic check); T210 waits for Hernán's OK; T215 (deck episodes) runnable
 - Gotchas: public repo: no card text, answer, transcript or personal fact in code, fixtures, docs, commits or logs; `/api/coach/interview/` is the level interview (this feature: `deck`, `interviewer`, `feedback`, `mock`); agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits; no `.env.local` there (fake mode)
 - Needs Hernán: deploy ../herlingo-deploy (@1b4f4ade) + T205 iPhone check · OK to spend ≈ 1 USD on evals (T210, runnable now) · model choice (T211) · Anthropic console limit ≥ 15 USD before T216
 
@@ -255,7 +255,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - Outcome:
 
 ## T212 — Client: deck sync, storage, API calls, attempts, export
-- Status: running (attempt 1 · 💻 · agent ab488bc8fc3e140c2 · since 12:43Z)
+- Status: done
 - Depends on: T209
 - Where: any
 - Goal: `src/lib/mock-interview/` holds everything the screens need, with tolerant storage and no change to existing keys.
@@ -265,7 +265,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
   - Types mirroring Design; `fetchDeck`/`useDeck` (keeps the stored deck on failure or offline); `takeTurn`, `getFeedback`, `getReport` with `CoachApiError`; attempts and reports stores + hooks; `rateAttempt`; derived per-card stats; `wordsPerMinute`; `exportAttempts()` (a JSON file through the backup's save step); `mockPlayable(text, "interviewer"|"model")`; the usage parser accepts `mock` as optional.
   - The new keys are in the Perfil backup and the cloud save (checked against `isCloudSaveKey`); corrupt values are dropped, never thrown.
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: src/lib/mock-interview/ (deck sync, takeTurn/getFeedback/getReport, attempts + reports stores and hooks, rateAttempt, cardStats, exportAttempts, wordsPerMinute, mockPlayable, MOCK_VOICES), coach usage.mock + updateMockCap · 24b72bd7 + writer fix 29084538 (deck out of backup/cloud save, cloud save listens to mock changes) · verify ✓ 💻 · tsx ✓ · fake API ✓ · not checked: hooks in React, share sheet
 
 ## T213 — `/entrevista/`: the deck, practise a card, feedback view
 - Status: pending
@@ -326,6 +326,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - [ ] T207 @59b81dcb — ledger budget split + usage shape (queued 2026-11-14 💻)
 - [ ] T208 @7c124b99 — prompts (privacy, rules vs PERFIL-style 'never invent') (queued 2026-11-14 💻)
 - [ ] T209 @aed827e9 — endpoints: checks order, refunds, owner 403 (queued 2026-11-14 💻)
+- [ ] T212 @24b72bd7..29084538 — client stores, parsing, backup exclusion (queued 2026-11-14 💻)
 
 ## Visual checks queue
 - [ ] T204 @2ccdbd96 — /microfono/ «Respuesta larga» card: countdown, live text, words/wpm/continuations; log rows with mode; light + dark (T205 covers the device) (queued 2026-11-14 💻)
@@ -347,6 +348,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 T207: usage top-level spentUsd/remainingUsd/mineUsd = Prepárate only (tokens = all calls); mock block owner only with remainingUsd + avgReportUsd; mock spend never in spend:<name>; turns over the limit get the answers message. (plan)
 - 2026-11-14 T208: an invented claim caps the score at 3; the interviewer re-asks more simply after a non-answer and never follows up on a pending part; score written last in the schema; normalizer clamps score, cuts improved at the last sentence ≤ 1200, drops a line on move_on; canned move-on 'Okay, let's move on.' (plan)
 - 2026-11-14 T209: unknown card → 400 'Esa tarjeta ya no existe. Toca «Actualizar tarjetas».'; usage.today = answers + reports in every response; latencyMs = Claude time only; canned move_on skips budget and counter; asked ≤ 300, seconds 0–3600. (plan)
+- 2026-11-14 T212: the deck never travels in a backup or the cloud copy (re-downloaded with the code; an import never touches it); attempts and reports do. Answers > 3000 chars cut at a word; export includes reports; writeStored never overwrites v > 1. (plan)
 
 ## Proposals (new scope)
 - 2026-11-14 plan: Real pronunciation scores: record the answer and send it to a speech service with pronunciation assessment (e.g. Azure, `en-AU`), measured against the inferred pronunciation of the transcript.
@@ -361,6 +363,8 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 T208: betaZodOutputFormat drops a .describe() placed after .optional() (fixed in the new schemas; old ones unaffected)
 - 2026-11-14 T208: INTERVIEWER_SYSTEM (~700 tokens) may be under Haiku 5.5's minimum cacheable prefix: check cache_read in T210 (cost is tiny either way)
 - 2026-11-14 T209: card lookup + no_deck repeated in both endpoints; move to api/_lib/deck.ts
+- 2026-11-14 T212: ~400 attempts with feedback approach the cloud save's 2 MB cap: trim feedback of old attempts in the cloud copy or cap there
+- 2026-11-14 T212: CLAUDE.md layout and docs/coach.md Client table lack src/lib/mock-interview and updateMockCap (T213 adds the layout lines)
 
 ## Log
 - 2026-11-14 11:25Z 💻 plan written from the design session (8 decisions in two rounds of questions); not approved yet
@@ -378,3 +382,5 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 12:35Z 💻 T209 launched · attempt 1 · agent ae7f1ed1515ba8611 (plan checkout, no isolation)
 - 2026-11-14 12:42Z 💻 T209 done · plan checkout → aed827e9 · verify ✓
 - 2026-11-14 12:43Z 💻 T212 launched · attempt 1 · agent ab488bc8fc3e140c2 (plan checkout, no isolation)
+- 2026-11-14 12:56Z 💻 T212 done · plan checkout → 24b72bd7 · verify ✓
+- 2026-11-14 12:56Z 💻 T212 writer fix → 29084538: deck excluded by isBackupKey (privacy + cloud 2 MB), CHANGE_EVENTS += mock-interview-change · verify ✓
