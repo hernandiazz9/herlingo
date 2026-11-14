@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-11-14 11:36Z 💻
+- Updated: 2026-11-14 11:45Z 💻
 - Writer: me (💻 desktop session; plan checkout ../herlingo-entrevista)
 - Branch: plan-017-mi-entrevista · checkout /Users/heralc/Desktop/HDDev/herlingo-entrevista
-- Next step: integrate T204, then launch T206
+- Next step: integrate T206, then T207; T205 needs a deployed build (Hernán's OK)
 - Gotchas: public repo: no card text, answer, transcript or personal fact in code, fixtures, docs, commits or logs; `/api/coach/interview/` is the level interview (this feature: `deck`, `interviewer`, `feedback`, `mock`); agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits; no `.env.local` there (fake mode)
-- Needs Hernán: T205 iPhone check · OK to spend ≈ 1 USD on the first eval run (T210) · model choice per role (T211) · Anthropic console spend limit ≥ 15 USD before T216
+- Needs Hernán: OK to deploy a preview/production build with T204 for T205 (iPhone check) · OK to spend ≈ 1 USD on evals (T210) · model choice (T211) · Anthropic console limit ≥ 15 USD before T216
 
 ## Shared contract (all tasks read this)
 
@@ -141,7 +141,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 ## Tasks
 
 ## T204 — Listening `answer` mode and a «Respuesta larga» test on Probar micrófono
-- Status: running (attempt 1 · 💻 · agent a3a8ec0ea5a338539 · since 11:36Z)
+- Status: done
 - Depends on: none
 - Where: any
 - Goal: The speech engine can take a 30 s – 3 min spoken answer, continuing when the browser stops on its own, and Hernán can test it on his iPhone before anything else is built.
@@ -154,7 +154,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
   - A throwaway `npx tsx` check with a fake recognizer: a session ended by the browser at 60 s continues and returns both parts; one whose restart throws settles `done` with `continued: "failed"`.
   - docs/speech.md updated (mode, continuation, screen).
   - `npm run verify` → exit 0.
-- Outcome:
+- Outcome: answer mode (silence 5 s, cap 180 s, ≤ 5 continuations, continued: failed), optional log continuations, /microfono/ «Respuesta larga (inglés, en-AU)» card · 2ccdbd96 · verify ✓ 💻 · tsx ✓ (phrase/long identical in 36 scenarios) · not checked: iPhone continuations, themes
 
 ## T205 — iPhone check: does a 2-minute English answer get transcribed? (Hernán, by hand)
 - Status: pending
@@ -169,7 +169,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - Outcome:
 
 ## T206 — Private deck: schema, text store, `GET`/`PUT /api/coach/deck/`, push script, fake deck
-- Status: pending
+- Status: running (attempt 1 · 💻 · agent a60b73857c56d59ae · since 11:45Z)
 - Depends on: none
 - Where: any
 - Goal: Hernán's cards reach the server under his owner code and nothing personal touches the repo.
@@ -324,6 +324,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 ## Review queue
 
 ## Visual checks queue
+- [ ] T204 @2ccdbd96 — /microfono/ «Respuesta larga» card: countdown, live text, words/wpm/continuations; log rows with mode; light + dark (T205 covers the device) (queued 2026-11-14 💻)
 
 ## Decisions
 - 2026-11-14 plan: Listening = browser speech recognition (`en-AU`) in a new `answer` mode, editable text, keyboard dictation or typing as the fallback; pronunciation only inferred from the transcript. iPhone check (T205) gates the speaking UI. (Hernán)
@@ -337,6 +338,7 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 plan: Defaults (not asked): `/entrevista/` under Jugar, owner-only card in any language; 5 XP per corrected answer, ≤ 12 a day; simulacro answers not editable; follow-ups only about what the model answer contains. (plan)
 - 2026-11-14 plan: Save tokens: one agent at a time, no code reviews, no visual checks by agents; Hernán checks on his iPhone (T205, T216). (plan, standing rule of plans 015–016)
 - 2026-11-14 plan: Work on branch `plan-017-mi-entrevista`; no merge into main, PR, deploy or real API spend without Hernán's explicit OK. (plan)
+- 2026-11-14 T204: continued: "failed" also when the browser ends a 6th time or silence runs out while a continuation starts; in answer mode a browser no-speech after listening counts as the browser ending (continues). (plan)
 
 ## Proposals (new scope)
 - 2026-11-14 plan: Real pronunciation scores: record the answer and send it to a speech service with pronunciation assessment (e.g. Azure, `en-AU`), measured against the inferred pronunciation of the transcript.
@@ -349,3 +351,5 @@ Jugar card «🎤 Mi entrevista» · "Practica tus respuestas de entrevista en i
 - 2026-11-14 11:33Z 💻 approved by Hernán ("Sí, apruebo")
 - 2026-11-14 11:35Z 💻 resume on 💻 · branch plan-017-mi-entrevista from main @49563803 · plan checkout ../herlingo-entrevista · npm ci
 - 2026-11-14 11:36Z 💻 T204 launched · attempt 1 · agent a3a8ec0ea5a338539 (plan checkout, no isolation)
+- 2026-11-14 11:45Z 💻 T204 done · plan checkout → 2ccdbd96 · verify ✓
+- 2026-11-14 11:45Z 💻 T206 launched · attempt 1 · agent a60b73857c56d59ae (plan checkout, no isolation)
