@@ -108,3 +108,7 @@ private deck on the server (owner's code) and on his device, never in git or the
 Starting point: the cards and the correction prompt of the HDDev centre's English panel (outside
 this repo), Prepárate (`docs/coach.md`, `api/_lib/claude.ts`, the ledger), speech input
 (`docs/speech.md`), live TTS (`api/_lib/tts.ts`) and Modo deporte (`docs/sport.md`).
+
+## 5. «Biblioteca» in Modo deporte: import the listening library (2026-11-14)
+
+Import the English episodes written in bulk by `scripts/listening/` (`listening-out/scripts/*.json`, format `herlingo-listening/1`, close to `SportEpisode`; mp3s already rendered) as a private «Biblioteca» section of Modo deporte, never in git or the build (scripts/listening/README.md).
