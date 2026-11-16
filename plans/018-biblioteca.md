@@ -1,6 +1,6 @@
 # Plan 018 — «Biblioteca»: the English listening library inside Modo deporte
 
-Status: draft (interview done 2026-11-16; awaiting Hernán's approval before anything runs)
+Status: active
 Created: 2026-11-16
 Base branch: plan-018-biblioteca
 Goal: Hernán listens to the 244 English episodes written in bulk by `scripts/listening/` (82 interviews, 81 English at work, 81 stories; format `herlingo-listening/1`) inside Modo deporte, as a private «Biblioteca» section, instead of Telegram: with the screen locked, one chapter per line, offline once downloaded, with progress (heard, favourites, XP) and a list of the key phrases. The scripts reach the app like Mi entrevista's deck: `npm run library:push` uploads them to the server's private store under the owner's code (only new or changed ones), never to git or the build. The audio is **rebuilt on the device** with the existing Modo deporte pipeline: every line read by the same edge-tts voices on the server (`/api/coach/tts/`; narrator `en-GB-SoniaNeural`, Natasha and William, never the device voice), joined byte by byte with exact chapters. One play order for the batch mp3s and the app. Runs in parallel with plan 017: server, push and device data now; the screens after P017·T215 is merged into this branch. Save tokens: one agent at a time, no code reviews, no visual checks by agents (Hernán checks on his iPhone).
@@ -8,12 +8,12 @@ Test command: npm run verify
 Worktree setup: npm ci
 
 ## Now
-- Updated: 2026-11-16 16:55Z 💻
-- Writer: 💻 desktop · since 16:50Z (draft)
-- Branch: plan-018-biblioteca @ (draft commit) · checkout /Users/heralc/Desktop/HDDev/herlingo-biblioteca
-- Next step: Hernán approves → `Status: active`; T217 runnable at once (cloud or 💻)
+- Updated: 2026-11-16 17:01Z 💻
+- Writer: released 17:01Z by 💻 desktop → continue on ☁️ or 💻
+- Branch: plan-018-biblioteca · pushed · checkout /Users/heralc/Desktop/HDDev/herlingo-biblioteca (no node_modules yet: `npm ci` first on the Mac)
+- Next step: new session: start ritual, take the lock; T217 runnable now, then T218 and T219
 - Gotchas: agents run in the plan checkout without `isolation` (in HDDev it would branch the centre repo), one at a time, no commits: the writer verifies and commits · `listening-out/` lives only on the Mac in ../herlingo-escucha (git-ignored) · T220 waits for P017·T215, merged here first (Shared contract, "Branches") · plan 017 is also active on this branch: run `plan_status.py plans/018-biblioteca.md`
-- Needs Hernán: approve the plan · later: deploy the server + the real push (T224)
+- Needs Hernán: later: deploy the server + the real push (T224)
 
 ## Shared contract (all tasks read this)
 
@@ -244,3 +244,4 @@ type LibraryEntry = { id; topic; number; title; description; level; register; st
 
 ## Log
 - 2026-11-16 16:55Z 💻 plan written from the interview (5 questions, all recommended options); base plan-017-mi-entrevista @ cb3e99c4 (its last integration verified ✓); not approved yet
+- 2026-11-16 17:01Z 💻 approved by Hernán; Status active; Writer released
